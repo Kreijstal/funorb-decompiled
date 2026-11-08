@@ -72,20 +72,20 @@ final class AgeValidator extends TextFieldValidator {
             if (param1 >= -62) {
               field_j = (int[]) null;
             }
-            var9 = ic.field_d.getGraphics();
-            if (null == ar.field_b) {
-              ar.field_b = new java.awt.Font("Helvetica", 1, 13);
+            var9 = RegistrationRequestState.field_d.getGraphics();
+            if (null == BrowserUiSupport.field_b) {
+              BrowserUiSupport.field_b = new java.awt.Font("Helvetica", 1, 13);
             }
             if (param0) {
               var9.setColor(java.awt.Color.black);
-              var9.fillRect(0, 0, f.field_d, ReceivedAuctionItem.field_B);
+              var9.fillRect(0, 0, SpriteNumberPainter.field_d, ReceivedAuctionItem.field_B);
             }
             if (param3 == null) {
               param3 = new java.awt.Color(140, 17, 17);
             }
             try {
               if (QuickChatCategoryCache.field_i == null) {
-                QuickChatCategoryCache.field_i = ic.field_d.createImage(304, 34);
+                QuickChatCategoryCache.field_i = RegistrationRequestState.field_d.createImage(304, 34);
               }
               var10 = QuickChatCategoryCache.field_i.getGraphics();
               var10.setColor(param3);
@@ -94,14 +94,14 @@ final class AgeValidator extends TextFieldValidator {
               var10.setColor(java.awt.Color.black);
               var10.drawRect(1, 1, 301, 31);
               var10.fillRect(2 + 3 * param4, 2, -(3 * param4) + 300, 30);
-              var10.setFont(ar.field_b);
+              var10.setFont(BrowserUiSupport.field_b);
               var10.setColor(java.awt.Color.white);
               var10.drawString(param2, (-(param2.length() * 6) + 304) / 2, 22);
-              var9.drawImage(QuickChatCategoryCache.field_i, f.field_d / 2 - 152, ReceivedAuctionItem.field_B / 2 - 18, (java.awt.image.ImageObserver) null);
+              var9.drawImage(QuickChatCategoryCache.field_i, SpriteNumberPainter.field_d / 2 - 152, ReceivedAuctionItem.field_B / 2 - 18, (java.awt.image.ImageObserver) null);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var6 = (Exception) (Object) decompiledCaughtException;
-              var7 = f.field_d / 2 - 152;
+              var7 = SpriteNumberPainter.field_d / 2 - 152;
               var8 = ReceivedAuctionItem.field_B / 2 - 18;
               var9.setColor(param3);
               var9.drawRect(var7, var8, 303, 33);
@@ -109,21 +109,21 @@ final class AgeValidator extends TextFieldValidator {
               var9.setColor(java.awt.Color.black);
               var9.drawRect(var7 + 1, 1 + var8, 301, 31);
               var9.fillRect(3 * param4 + (2 + var7), 2 + var8, 300 - param4 * 3, 30);
-              var9.setFont(ar.field_b);
+              var9.setFont(BrowserUiSupport.field_b);
               var9.setColor(java.awt.Color.white);
               var9.drawString(param2, var7 + (304 - 6 * param2.length()) / 2, var8 + 22);
             }
             if (AuctionsScreen.field_I == null) {
               return;
             }
-            var9.setFont(ar.field_b);
+            var9.setFont(BrowserUiSupport.field_b);
             var9.setColor(java.awt.Color.white);
-            var9.drawString(AuctionsScreen.field_I, f.field_d / 2 - AuctionsScreen.field_I.length() * 6 / 2, -26 + ReceivedAuctionItem.field_B / 2);
+            var9.drawString(AuctionsScreen.field_I, SpriteNumberPainter.field_d / 2 - AuctionsScreen.field_I.length() * 6 / 2, -26 + ReceivedAuctionItem.field_B / 2);
             return;
           } catch (java.lang.Exception decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
             var5 = (Exception) (Object) decompiledCaughtException;
-            ic.field_d.repaint();
+            RegistrationRequestState.field_d.repaint();
             return;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
@@ -170,7 +170,7 @@ final class AgeValidator extends TextFieldValidator {
             return stackIn_5_0;
           }
           var5 = (CharSequence) ((Object) param0);
-          var3_int = rr.a(10, var5);
+          var3_int = TextEntrySupport.parseDecimalInt(10, var5);
           if (var3_int > 0 &&
             130 >= var3_int) {
             stackIn_12_0 = LobbyPlayerRow.field_yb;

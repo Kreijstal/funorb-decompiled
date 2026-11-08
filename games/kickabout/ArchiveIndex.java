@@ -28,7 +28,7 @@ final class ArchiveIndex {
         if (param0 != 640) {
           return false;
         }
-        stackIn_9_0 = !(ArrayWidgetContainer.field_x >= 0) || !(640 > ArrayWidgetContainer.field_x) || !(us.field_j >= 0) || !(g.field_a.field_T >= us.field_j);
+        stackIn_9_0 = !(ArrayWidgetContainer.field_x >= 0) || !(640 > ArrayWidgetContainer.field_x) || !(TutorialCaptionSupport.field_j >= 0) || !(GrayscalePaletteSupport.field_a.field_T >= TutorialCaptionSupport.field_j);
         return stackIn_9_0;
     }
 

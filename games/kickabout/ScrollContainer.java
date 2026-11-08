@@ -27,7 +27,7 @@ final class ScrollContainer extends UiLayoutNode {
     }
 
     ScrollContainer(String param0, UiLayoutNode param1, UiLayoutNode param2, ScrollBar param3) {
-        this(vb.a(0, (CharSequence) ((Object) param0)), param1, param2, param3);
+        this(vb.hashString31(0, (CharSequence) ((Object) param0)), param1, param2, param3);
     }
 
     final void advanceScroll(int param0, boolean param1, byte param2, int param3) {

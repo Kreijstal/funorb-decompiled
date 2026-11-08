@@ -19,7 +19,7 @@ final class LongPlusOneCommand extends ConsoleCommand {
     }
 
     final static String h(int param0) {
-        if (PlayerModelPreview.field_f == wk.field_f) {
+        if (PlayerModelPreview.field_f == ClubStateFactory.field_f) {
           return AccountRegistrationResponse.field_i;
         }
         if (param0 != 10326) {
@@ -39,7 +39,7 @@ final class LongPlusOneCommand extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 == 84) {
-            stackIn_4_0 = new ConsoleValue(wq.a(param1[0].asLong(true), -126));
+            stackIn_4_0 = new ConsoleValue(DiagnosticsOverlaySupport.increment(param1[0].asLong(true), -126));
             return stackIn_4_0;
           }
           stackIn_2_0 = (ConsoleValue) null;
@@ -82,7 +82,7 @@ final class LongPlusOneCommand extends ConsoleCommand {
         int var12Lifetime2;
         int var15Lifetime1;
         int var16Lifetime1;
-        gg.a(param2, 0, param0.field_V);
+        SocialPlayerRow.a(param2, 0, param0.field_V);
         int var3_int = ug.a(0, param0.field_V.pixelX(true));
         int var4 = IntKeyLookup.a((byte) -110, param0.field_V.pixelY(879306160));
         SoftwareRasterizer.drawLineBlendedInclusive(var3_int, var4, ug.a(0, TriangleMesh.field_B[0]), IntKeyLookup.a((byte) -70, or.field_a[0]), 16777215, 64);

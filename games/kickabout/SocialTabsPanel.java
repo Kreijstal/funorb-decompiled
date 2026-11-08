@@ -45,7 +45,7 @@ final class SocialTabsPanel {
           HelpTipDialog.field_I[0][8] = new AnimationClip(param2, "characters", "ka_tank_diving_header");
           HelpTipDialog.field_I[0][16] = new AnimationClip(param2, "characters", "ka_tank_aeroplane");
           HelpTipDialog.field_I[0][9] = new AnimationClip(param2, "characters", "ka_tank_celebrate_new");
-          sk.a(94, 6, 1);
+          LoadingProgressSupport.reportStageProgress(94, 6, 1);
           HelpTipDialog.field_I[3][0] = new AnimationClip(param2, "characters", "ka_scout_aggressive_tackle");
           if (param0 != 20113) {
             var9 = (ResourceArchive) null;
@@ -59,7 +59,7 @@ final class SocialTabsPanel {
           HelpTipDialog.field_I[3][7] = new AnimationClip(param2, "characters", "ka_scout_tackle_delay");
           HelpTipDialog.field_I[3][16] = new AnimationClip(param2, "characters", "ka_scout_aeroplane");
           HelpTipDialog.field_I[3][9] = new AnimationClip(param2, "characters", "ka_scout_celebrate_new");
-          sk.a(-113, 6, 2);
+          LoadingProgressSupport.reportStageProgress(-113, 6, 2);
           HelpTipDialog.field_I[2][0] = new AnimationClip(param2, "characters", "ka_specialist_aggressive_tackle");
           HelpTipDialog.field_I[2][1] = new AnimationClip(param2, "characters", "ka_specialist_fall");
           HelpTipDialog.field_I[2][2] = new AnimationClip(param2, "characters", "ka_specialist_fall_stand");
@@ -68,7 +68,7 @@ final class SocialTabsPanel {
           HelpTipDialog.field_I[2][6] = new AnimationClip(param2, "characters", "ka_specialist_tackle_stand");
           HelpTipDialog.field_I[2][16] = new AnimationClip(param2, "characters", "ka_specialist_aeroplane");
           HelpTipDialog.field_I[2][9] = new AnimationClip(param2, "characters", "ka_specialist_celebrate_new");
-          sk.a(param0 ^ -20164, 6, 3);
+          LoadingProgressSupport.reportStageProgress(param0 ^ -20164, 6, 3);
           HelpTipDialog.field_I[1][0] = new AnimationClip(param2, "characters", "ka_striker_aggressive_tackle");
           HelpTipDialog.field_I[1][1] = new AnimationClip(param2, "characters", "ka_striker_fall");
           HelpTipDialog.field_I[1][2] = new AnimationClip(param2, "characters", "ka_striker_fall_stand");
@@ -77,7 +77,7 @@ final class SocialTabsPanel {
           HelpTipDialog.field_I[1][6] = new AnimationClip(param2, "characters", "ka_striker_tackle_stand");
           HelpTipDialog.field_I[1][16] = new AnimationClip(param2, "characters", "ka_striker_aeroplane");
           HelpTipDialog.field_I[1][9] = new AnimationClip(param2, "characters", "ka_striker_celebrate_new");
-          sk.a(80, 6, 4);
+          LoadingProgressSupport.reportStageProgress(80, 6, 4);
           HelpTipDialog.field_I[4][10] = new AnimationClip(param2, "characters", "ka_keeper_basic_catch");
           HelpTipDialog.field_I[4][11] = new AnimationClip(param2, "characters", "ka_keeper_l_dive_stand");
           HelpTipDialog.field_I[4][12] = new AnimationClip(param2, "characters", "ka_keeper_l_dive_static");
@@ -89,7 +89,7 @@ final class SocialTabsPanel {
           HelpTipDialog.field_I[4][15] = new AnimationClip(param2, "characters", "ka_keeper_l_shuffle");
           HelpTipDialog.field_I[4][0] = new AnimationClip(param2, "characters", "ka_keeper_aggressive_tackle");
           HelpTipDialog.field_I[4][6] = new AnimationClip(param2, "characters", "ka_keeper_tackle_stand");
-          sk.a(89, 6, 5);
+          LoadingProgressSupport.reportStageProgress(89, 6, 5);
           hq.field_b[0] = new AnimationClip(param2, "fans", "fan01_cheer");
           hq.field_b[1] = new AnimationClip(param2, "fans", "fan02_cheer");
           hq.field_b[2] = new AnimationClip(param2, "fans", "fan03_cheer");
@@ -136,11 +136,11 @@ final class SocialTabsPanel {
         int var6 = 24;
         int var7 = 5;
         this.tabs.a(true, param3, param0, var6, var7, param2, param1);
-        MarkerSliderPainter.field_f.setBounds(true, TriangleMesh.field_R.field_q, 0, 0, sh.field_c);
+        MarkerSliderPainter.field_f.setBounds(true, TriangleMesh.field_R.field_q, 0, 0, LineupPositionSupport.field_c);
         int var8 = 17 % ((-10 - param4) / 63);
-        AlphaContainer.field_E.setBounds(true, -2 - TeamSelectionAgent.field_f + (TriangleMesh.field_R.field_q - 80) - 2, 0, 2 + sh.field_c, 18);
-        ph.field_f.setBounds(true, 82 + TeamSelectionAgent.field_f, -80 + (-TeamSelectionAgent.field_f + TriangleMesh.field_R.field_q) - 2, sh.field_c + 2, 18);
-        RotaryDialPainter.field_d.a(TeamSelectionAgent.field_f, -sh.field_c + (TriangleMesh.field_R.field_mb - 22), 20, 20 + sh.field_c + 2, TriangleMesh.field_R.field_q, 92, 2, 0);
+        AlphaContainer.field_E.setBounds(true, -2 - TeamSelectionAgent.field_f + (TriangleMesh.field_R.field_q - 80) - 2, 0, 2 + LineupPositionSupport.field_c, 18);
+        AudioOutputSupport.field_f.setBounds(true, 82 + TeamSelectionAgent.field_f, -80 + (-TeamSelectionAgent.field_f + TriangleMesh.field_R.field_q) - 2, LineupPositionSupport.field_c + 2, 18);
+        RotaryDialPainter.field_d.a(TeamSelectionAgent.field_f, -LineupPositionSupport.field_c + (TriangleMesh.field_R.field_mb - 22), 20, 20 + LineupPositionSupport.field_c + 2, TriangleMesh.field_R.field_q, 92, 2, 0);
         TournamentChampionDialog.field_F.a(2, TeamSelectionAgent.field_f, (byte) 19, 20);
     }
 
@@ -197,12 +197,12 @@ final class SocialTabsPanel {
           PlayerStatSortCriterion.field_n = new int[16];
           TrinketUnlockNotice.field_a = new byte[16][];
           for (var3Lifetime2 = 0; var3Lifetime2 < 210; var3Lifetime2++) {
-            LoginKind.field_b[var3Lifetime2] = eo.a(var13, var3Lifetime2, 210);
+            LoginKind.field_b[var3Lifetime2] = SoftwareDrawingSupport.a(var13, var3Lifetime2, 210);
           }
           var4Lifetime2 = -20 % ((param0 + 71) / 47);
           for (var3Lifetime3 = 0; var3Lifetime3 < 16; var3Lifetime3++) {
             PlayerStatSortCriterion.field_n[var3Lifetime3] = (-(90 * var3Lifetime3) + 1440 >> 4) + 72;
-            TrinketUnlockNotice.field_a[var3Lifetime3] = eo.a(var14, var3Lifetime3, 16, PlayerStatSortCriterion.field_n[var3Lifetime3]);
+            TrinketUnlockNotice.field_a[var3Lifetime3] = SoftwareDrawingSupport.a(var14, var3Lifetime3, 16, PlayerStatSortCriterion.field_n[var3Lifetime3]);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -254,9 +254,9 @@ final class SocialTabsPanel {
 
     final static int[] a(int param0, int param1, int param2) {
         int var3 = RotaryDialPainter.sine(param0, (byte) -23);
-        int var4 = we.cosine(param0, false);
+        int var4 = ClientUiUpdateSupport.cosine(param0, false);
         int var5 = RotaryDialPainter.sine(param2, (byte) -23);
-        int var6 = we.cosine(param2, false);
+        int var6 = ClientUiUpdateSupport.cosine(param2, false);
         int var7 = (int)((long)var5 * (long)var3 >> 16);
         int var8 = (int)((long)var6 * (long)var3 >> 16);
         int var9 = (int)((long)var4 * (long)var5 >> 16);

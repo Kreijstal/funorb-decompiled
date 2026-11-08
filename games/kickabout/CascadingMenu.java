@@ -283,7 +283,7 @@ final class CascadingMenu extends UiLayoutNode {
             this.setSlideProgress(-117, 0);
             this.field_Cb = param0;
             this.field_Kb = this.field_Ob[this.field_Cb];
-            ds.a(-1, this.field_Kb);
+            ModelMaterialDecoder.attachQuickChatSubmenu(-1, this.field_Kb);
             this.field_Kb.setSlideProgress(-94, 12);
           } else {
             if (this.field_Jb[param0] != -1) {
@@ -293,17 +293,17 @@ final class CascadingMenu extends UiLayoutNode {
                 PlayerContextMenu.field_i != null) {
                 var6 = 1;
               }
-              if (r.a(0, var6) == 2) {
+              if (ClientProtocolStage.a(0, var6) == 2) {
                 ListingRowCache.a(21, 1, var6, param2);
               }
               String var8 = (String) null;
               PasswordLoginCredentials.a(var5, -128, NodeHashTableIterator.field_b, param3, TrinketTile.field_Kb, (String) null);
-              gk.a(TrinketTile.field_Kb, var5, IntDoubleCommand.field_A, NodeHashTableIterator.field_b, (byte) -51);
-              fa.b(125);
+              ChatComposeSupport.prepareChatSend(TrinketTile.field_Kb, var5, IntDoubleCommand.field_A, NodeHashTableIterator.field_b, (byte) -51);
+              fa.closeQuickChat(125);
               DelayedServerPacket.b(68);
             } else {
               gw.a(8);
-              fa.b(-123);
+              fa.closeQuickChat(-123);
             }
           }
         }
@@ -332,12 +332,12 @@ final class CascadingMenu extends UiLayoutNode {
           return this.field_Kb.handleKeyShortcut(param0, param1, (byte) -18);
         }
         if (null == this.field_Kb &&
-          dr.field_g == this &&
+          ClassNameSupport.field_g == this &&
           var4 != 0) {
-          fa.b(98);
+          fa.closeQuickChat(98);
           return true;
         }
-        var5 = il.field_c;
+        var5 = ClassDescriptorSupport.field_c;
         var6 = -4 / ((param2 - 25) / 38);
         if (var5 <= 0) {
           return false;

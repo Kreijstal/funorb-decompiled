@@ -68,8 +68,8 @@ final class AuctionsHelpScreen extends PagedHelpScreen {
         var5 = var24;
         var6 = (short)param3;
         var7 = (short)param1;
-        var8 = new MeshData(of.field_f, param2, false, true, true);
-        var29 = of.field_f.field_p;
+        var8 = new MeshData(FriendRemovalSupport.field_f, param2, false, true, true);
+        var29 = FriendRemovalSupport.field_f.field_p;
         var12 = var8.field_p;
         var13 = 0;
         for (var14 = 0; var14 < var25.length; var14++) {
@@ -131,11 +131,11 @@ final class AuctionsHelpScreen extends PagedHelpScreen {
         super.drawScreen(param0, param1);
         if (this.pageIndex == 0) {
           SoftwareRasterizer.fillRoundedRectangleBlended(this.slideOffsetX + 40, 198, 560, 200, 10, 65793, 128);
-          ms.a(wa.field_b, this.slideOffsetX + 40, 560, false, 0, 126);
-          un.field_d.a(c.field_h.toLowerCase(), 56 + this.slideOffsetX, 222, 16777215, -1);
+          MusicVolumeSupport.drawMessagePanel(SpriteResourceSupport.field_b, this.slideOffsetX + 40, 560, false, 0, 126);
+          un.field_d.a(ClientPacketFlushSupport.field_h.toLowerCase(), 56 + this.slideOffsetX, 222, 16777215, -1);
           for (var3 = 0; var3 < 3; var3++) {
             IsSixCommand.field_C.c(CipherPacketBuffer.field_t[var3], 150 + this.slideOffsetX, 256 + 50 * var3, 16777215, -1);
-            IsSixCommand.field_C.a(jq.field_a[var3], this.slideOffsetX + 170, 243 + var3 * 50, 420, 300, 16777215, -1, 0, 0, 16);
+            IsSixCommand.field_C.a(AuctionHelpResources.field_a[var3], this.slideOffsetX + 170, 243 + var3 * 50, 420, 300, 16777215, -1, 0, 0, 16);
           }
         } else {
           if (this.pageIndex == 1) {
@@ -197,7 +197,7 @@ final class AuctionsHelpScreen extends PagedHelpScreen {
           if (param0 >= -35) {
             AuctionsHelpScreen.c(true);
           }
-          CheckboxPainter.field_c.a(-21174, ts.b(ArchiveManager.field_m, BytePlusOneCommand.field_A, 16756), ts.b(ReceivedAuctionItem.field_y, HighScoreSubmission.field_q, 16756));
+          CheckboxPainter.field_c.a(-21174, PitchCoordinateSupport.hitTestMenuRows(ArchiveManager.field_m, BytePlusOneCommand.field_A, 16756), PitchCoordinateSupport.hitTestMenuRows(ReceivedAuctionItem.field_y, HighScoreSubmission.field_q, 16756));
           if (CheckboxPainter.field_c.c(-1)) {
             var1_int = 1;
           }

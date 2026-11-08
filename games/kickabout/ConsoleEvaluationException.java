@@ -48,7 +48,7 @@ final class ConsoleEvaluationException extends Exception {
             }
           } else {
             if (ArchiveIndex.field_h == null) {
-              SplashScreen.field_m = gf.a(oo.field_c, param1 + 0, 480, 0, 640, 0);
+              SplashScreen.field_m = ModelMaterial.createFullscreenCanvas(oo.field_c, param1 + 0, 480, 0, 640, 0);
               if (null == SplashScreen.field_m) {
                 var2 = 3;
               } else {
@@ -62,7 +62,7 @@ final class ConsoleEvaluationException extends Exception {
               return;
             }
             SplashScreen.field_m = ArchiveIndex.field_h.enterFullscreen(30182);
-            ar.a(500, 2);
+            BrowserUiSupport.notifyBrowserResize(500, 2);
             if (null != SplashScreen.field_m) {
               var2 = 2;
               CanvasInputBindings.attachInputHandlers(SplashScreen.field_m, (byte) -64);
@@ -95,10 +95,10 @@ final class ConsoleEvaluationException extends Exception {
             return;
           }
           if (ArchiveIndex.field_h == null) {
-            SplashScreen.field_m = gf.a(oo.field_c, param1 + 0, 480, 0, 640, 0);
+            SplashScreen.field_m = ModelMaterial.createFullscreenCanvas(oo.field_c, param1 + 0, 480, 0, 640, 0);
           } else {
             SplashScreen.field_m = ArchiveIndex.field_h.enterFullscreen(30182);
-            ar.a(500, 2);
+            BrowserUiSupport.notifyBrowserResize(500, 2);
           }
           if (null == SplashScreen.field_m) {
             var2 = 3;

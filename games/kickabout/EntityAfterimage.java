@@ -80,8 +80,8 @@ final class EntityAfterimage {
 
     final static Boolean takePendingBooleanResult(int param0) {
         int var2 = -80 % ((1 - param0) / 56);
-        Boolean var1 = ep.field_f;
-        ep.field_f = null;
+        Boolean var1 = TutorialMessages.field_f;
+        TutorialMessages.field_f = null;
         return var1;
     }
 

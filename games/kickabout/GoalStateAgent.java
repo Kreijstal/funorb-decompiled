@@ -101,7 +101,7 @@ final class GoalStateAgent extends MatchAgent {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!cu.a(param1, param2, param0, 114)) {
+          if (!cu.decodeSpriteSheetFromArchive(param1, param2, param0, 114)) {
             stackIn_2_0 = null;
             return (IndexedSprite[]) (stackIn_2_0);
           }
@@ -144,10 +144,10 @@ final class GoalStateAgent extends MatchAgent {
 
     final int computeChecksum(int param0) {
         int var2 = 0;
-        var2 = fj.a(-40, this.score[param0] ^ var2);
-        var2 = fj.a(-40, this.score[1] ^ var2);
-        var2 = fj.a(-40, var2 ^ this.goalCount);
-        var2 = fj.a(-40, var2 ^ this.goalScorer);
+        var2 = fj.rotateLeftFourBits(-40, this.score[param0] ^ var2);
+        var2 = fj.rotateLeftFourBits(-40, this.score[1] ^ var2);
+        var2 = fj.rotateLeftFourBits(-40, var2 ^ this.goalCount);
+        var2 = fj.rotateLeftFourBits(-40, var2 ^ this.goalScorer);
         return var2;
     }
 

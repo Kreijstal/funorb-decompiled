@@ -36,7 +36,7 @@ final class FullscreenErrorDialog extends ResizableModalPanel implements ButtonL
           BallAgent.field_u = true;
           LeaguesScreen.field_E = ServerTextTemplate.a("benches", "park", 2, QuickChatKeysHelpPanel.field_Cb);
           ConsoleCommand.field_w = QuickChatPhraseDefinition.a("park", QuickChatKeysHelpPanel.field_Cb, (byte) 70, "hotdog");
-          pi.field_a = QuickChatPhraseDefinition.a("park", QuickChatKeysHelpPanel.field_Cb, (byte) 59, "swing");
+          PlayerMeshFactory.field_a = QuickChatPhraseDefinition.a("park", QuickChatKeysHelpPanel.field_Cb, (byte) 59, "swing");
           RandomAccessCacheFile.field_c = QuickChatPhraseDefinition.a("park", QuickChatKeysHelpPanel.field_Cb, (byte) 114, "slide");
           ServerTextTemplate.field_j = ServerTextTemplate.a("trees", "park", 2, QuickChatKeysHelpPanel.field_Cb);
           gw.field_d = ServerTextTemplate.a("stains", "park", 2, QuickChatKeysHelpPanel.field_Cb);
@@ -163,8 +163,8 @@ final class FullscreenErrorDialog extends ResizableModalPanel implements ButtonL
                 this.field_i = this.field_i + 20;
               }
             } else {
-              if (ds.field_d == param1) {
-                var3 = dr.field_b;
+              if (ModelMaterialDecoder.field_d == param1) {
+                var3 = ClassNameSupport.field_b;
                 this.field_i = this.field_i + 30;
               }
             }
@@ -255,9 +255,9 @@ final class FullscreenErrorDialog extends ResizableModalPanel implements ButtonL
           }
           var6 = 0;
           var2Lifetime1 = var6;
-          while (bk.field_c.length > var6) {
-            if (null != bk.field_c[var6]) {
-              bk.field_c[var6].tickFade(0);
+          while (CalendarSupport.field_c.length > var6) {
+            if (null != CalendarSupport.field_c[var6]) {
+              CalendarSupport.field_c[var6].tickFade(0);
             }
             var6++;
           }

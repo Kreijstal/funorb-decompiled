@@ -286,7 +286,7 @@ final class MusicPatchPcmStream extends PcmStream {
             IntValueNode.field_e[incrementValue$3] = new WorldSpriteDecoration(RandomAccessCacheFile.field_c, -100, -100);
             incrementValue$4 = var1_int;
             var1_int++;
-            IntValueNode.field_e[incrementValue$4] = new WorldSpriteDecoration(pi.field_a, 60, -180);
+            IntValueNode.field_e[incrementValue$4] = new WorldSpriteDecoration(PlayerMeshFactory.field_a, 60, -180);
             incrementValue$5 = var1_int;
             var1_int++;
             IntValueNode.field_e[incrementValue$5] = new WorldSpriteDecoration(ServerTextTemplate.field_j[0], 280, -280);
@@ -295,10 +295,10 @@ final class MusicPatchPcmStream extends PcmStream {
             IntValueNode.field_e[incrementValue$6] = new WorldSpriteDecoration(RandomAccessCacheFile.field_c, -190, 1184);
             incrementValue$7 = var1_int;
             var1_int++;
-            IntValueNode.field_e[incrementValue$7] = new WorldSpriteDecoration(pi.field_a, -280, 994);
+            IntValueNode.field_e[incrementValue$7] = new WorldSpriteDecoration(PlayerMeshFactory.field_a, -280, 994);
             incrementValue$8 = var1_int;
             var1_int++;
-            IntValueNode.field_e[incrementValue$8] = new WorldSpriteDecoration(pi.field_a, -160, 1047);
+            IntValueNode.field_e[incrementValue$8] = new WorldSpriteDecoration(PlayerMeshFactory.field_a, -160, 1047);
             incrementValue$9 = var1_int;
             var1_int++;
             IntValueNode.field_e[incrementValue$9] = new WorldSpriteDecoration(ServerTextTemplate.field_j[0], 660, -260);

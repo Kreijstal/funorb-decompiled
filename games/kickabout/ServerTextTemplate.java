@@ -37,7 +37,7 @@ final class ServerTextTemplate {
         var15 = new IndexedSprite[6];
         var6 = var15;
         if (!NanoTickClock.field_n) {
-          var7_ref_kg = eo.toIndexedSprite(QuickChatCategoryCache.buildStadiumSeatColumn(-126, param4, param3));
+          var7_ref_kg = SoftwareDrawingSupport.toIndexedSprite(QuickChatCategoryCache.buildStadiumSeatColumn(-126, param4, param3));
           for (var8_int = 0; 6 > var8_int; var8_int++) {
             var15[var8_int] = var7_ref_kg;
           }
@@ -56,7 +56,7 @@ final class ServerTextTemplate {
               var12 = LoggedPossession.a((byte) -24, 5);
               var13 = var12 + (var9 * 36 + 20);
               if (!param4) {
-                var13 = ph.field_e[0][0].field_i - var13;
+                var13 = AudioOutputSupport.field_e[0][0].field_i - var13;
               }
               var8.addLast(new PlayerModelPreview(var13, var10_int * 26 + 63 + 11 * var9, var7, var11), 3);
             }
@@ -72,7 +72,7 @@ final class ServerTextTemplate {
             var17 = (PlayerModelPreview) (var8.c(33));
           }
           TeamManagementScreen.e(121);
-          var6[var9Lifetime1] = eo.toIndexedSprite(var10);
+          var6[var9Lifetime1] = SoftwareDrawingSupport.toIndexedSprite(var10);
         }
         return var6;
     }

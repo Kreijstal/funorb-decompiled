@@ -41,11 +41,11 @@ final class IntValueNode extends IntrusiveNode {
         if (param0 < 13) {
           IntValueNode.a(-87);
           QuickChatCategoryCache.field_i = null;
-          ar.field_b = null;
+          BrowserUiSupport.field_b = null;
           return;
         }
         QuickChatCategoryCache.field_i = null;
-        ar.field_b = null;
+        BrowserUiSupport.field_b = null;
     }
 
     IntValueNode(int param0) {

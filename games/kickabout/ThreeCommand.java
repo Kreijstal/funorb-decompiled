@@ -77,19 +77,19 @@ final class ThreeCommand extends ConsoleCommand {
         if (ServerMessageScreen.field_D == null) {
           TextFieldNode.field_Bb = new PcmStreamMixer();
           ServerMessageScreen.field_D = new ReverbPcmStream(TextFieldNode.field_Bb);
-          pi.field_b.addSubStream(ServerMessageScreen.field_D);
+          PlayerMeshFactory.field_b.addSubStream(ServerMessageScreen.field_D);
           IndexedSpriteState.field_c = new IntrusiveDeque();
         } else {
           if (null == TextFieldNode.field_Bb) {
             TextFieldNode.field_Bb = new PcmStreamMixer();
             ServerMessageScreen.field_D = new ReverbPcmStream(TextFieldNode.field_Bb);
-            pi.field_b.addSubStream(ServerMessageScreen.field_D);
+            PlayerMeshFactory.field_b.addSubStream(ServerMessageScreen.field_D);
             IndexedSpriteState.field_c = new IntrusiveDeque();
           } else {
             if (null == IndexedSpriteState.field_c) {
               TextFieldNode.field_Bb = new PcmStreamMixer();
               ServerMessageScreen.field_D = new ReverbPcmStream(TextFieldNode.field_Bb);
-              pi.field_b.addSubStream(ServerMessageScreen.field_D);
+              PlayerMeshFactory.field_b.addSubStream(ServerMessageScreen.field_D);
               IndexedSpriteState.field_c = new IntrusiveDeque();
             }
           }

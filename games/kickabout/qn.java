@@ -23,7 +23,7 @@ final class qn {
         var14 = Kickabout.field_G;
         try {
           var6_int = 487 + (param3 + (8 + param5) + 8);
-          uf.field_b.setBounds(true, -6 + var6_int, 3, 3, -6 + g.field_a.field_mb);
+          uf.field_b.setBounds(true, -6 + var6_int, 3, 3, -6 + GrayscalePaletteSupport.field_a.field_mb);
           var7 = -5 + uf.field_b.field_mb;
           if (param0 != -24823) {
             field_c = (String) null;
@@ -36,23 +36,23 @@ final class qn {
           if (null != PlayArea.field_a) {
             PlayArea.field_a.setBounds(AuctionSettingsDialog.field_G.field_mb, param0 ^ -24824, AuctionSettingsDialog.field_G.field_s, AuctionSettingsDialog.field_G.field_q, AuctionSettingsDialog.field_G.field_J);
           }
-          var8 = -var6_int + (-param3 + g.field_a.field_q);
+          var8 = -var6_int + (-param3 + GrayscalePaletteSupport.field_a.field_q);
           var9 = var8 / 2;
           var10 = param1 + var9 + param3;
           var11 = 0;
           for (var12 = 0; var12 < 6; var12++) {
             if (var12 >= 5 ||
               null != ValidatedTextWidget.field_W[var12]) {
-              var13 = (g.field_a.field_mb - 4) * var11 / (1 + MatchPhaseView.field_e) + 3;
+              var13 = (GrayscalePaletteSupport.field_a.field_mb - 4) * var11 / (1 + MatchPhaseView.field_e) + 3;
               var11++;
-              var7Lifetime1 = -var13 + (var11 * (-4 + g.field_a.field_mb) / (MatchPhaseView.field_e + 1) + 3 - 2);
+              var7Lifetime1 = -var13 + (var11 * (-4 + GrayscalePaletteSupport.field_a.field_mb) / (MatchPhaseView.field_e + 1) + 3 - 2);
               if (var12 >= 5) {
-                uq.field_a.setBounds(true, var8, var6_int, var13, var7Lifetime1);
+                ChatInputState.field_a.setBounds(true, var8, var6_int, var13, var7Lifetime1);
               } else {
                 ValidatedTextWidget.field_W[var12].setBounds(true, var8, var6_int, var13, var7Lifetime1);
                 BlackFadeScreen.field_m[var12].setBounds(true, -param3 + var9, param3, 0, var7Lifetime1);
                 SocketConnector.field_b[var12].setBounds(true, param1, var9, param2, -param2 + (var7Lifetime1 - param2));
-                ds.field_a[var12].setBounds(true, -var10 - param3 + var8, var10, param2, -param2 - param2 + var7Lifetime1);
+                ModelMaterialDecoder.field_a[var12].setBounds(true, -var10 - param3 + var8, var10, param2, -param2 - param2 + var7Lifetime1);
               }
             }
           }

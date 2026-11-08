@@ -64,19 +64,19 @@ final class DisplayModeSupport {
         BytePlusOneCommand.a(param0, false, (ScrollPane) null, param2, (String) null, (int[]) null, 0L, (String) null, -1);
         if (param2 == 0) {
           var9 = TextButton.field_v;
-          var11 = il.field_d[0];
+          var11 = ClassDescriptorSupport.field_d[0];
           var29 = var11;
           var29Lifetime3 = var11;
           var10 = ig.field_b;
           var9.field_j.addItemWithIcon(var10, param1, 11, var11);
           var12 = TextButton.field_v;
-          var14 = il.field_d[1];
+          var14 = ClassDescriptorSupport.field_d[1];
           var29Lifetime4 = var14;
           var29Lifetime5 = var14;
           var13 = IntValueNode.field_h;
           var12.field_j.addItemWithIcon(var13, param1, 12, var14);
           var15 = TextButton.field_v;
-          var17 = il.field_d[2];
+          var17 = ClassDescriptorSupport.field_d[2];
           var29Lifetime6 = var17;
           var29Lifetime7 = var17;
           var16 = ConsoleParseException.field_a;
@@ -84,19 +84,19 @@ final class DisplayModeSupport {
         }
         if (param2 == 1) {
           var18 = TextButton.field_v;
-          var20 = il.field_d[0];
+          var20 = ClassDescriptorSupport.field_d[0];
           var29Lifetime1 = var20;
           var29Lifetime1Lifetime1 = var20;
           var19 = AnimationFrameset.field_p;
           var18.field_j.addItemWithIcon(var19, true, 11, var20);
           var21 = TextButton.field_v;
-          var23 = il.field_d[1];
+          var23 = ClassDescriptorSupport.field_d[1];
           var29Lifetime1Lifetime2 = var23;
           var29Lifetime1Lifetime3 = var23;
           var22 = QuickChatKeysHelpPanel.field_Bb;
           var21.field_j.addItemWithIcon(var22, true, 12, var23);
           var24 = TextButton.field_v;
-          var26 = il.field_d[2];
+          var26 = ClassDescriptorSupport.field_d[2];
           var29Lifetime1Lifetime4 = var26;
           var29Lifetime1Lifetime5 = var26;
           var25 = GameModeDefinition.field_a;
@@ -104,15 +104,15 @@ final class DisplayModeSupport {
         }
         if (param2 == 2) {
           var27 = TextButton.field_v;
-          var29Lifetime2 = il.field_d[0];
+          var29Lifetime2 = ClassDescriptorSupport.field_d[0];
           var28 = ValidationIndicator.field_I;
           var27.field_j.addItemWithIcon(var28, param1, 11, var29Lifetime2);
           var30 = TextButton.field_v;
-          var32 = il.field_d[1];
-          var31 = fh.field_c;
+          var32 = ClassDescriptorSupport.field_d[1];
+          var31 = SharedSpriteTables.field_c;
           var30.field_j.addItemWithIcon(var31, param1, 12, var32);
           var33 = TextButton.field_v;
-          var35 = il.field_d[2];
+          var35 = ClassDescriptorSupport.field_d[2];
           var34 = TextWidgetPainter.field_g;
           var33.field_j.addItemWithIcon(var34, true, 13, var35);
         }
@@ -197,7 +197,7 @@ final class DisplayModeSupport {
           if (13 != param1) {
             return null;
           }
-          stackIn_42_0 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, ep.field_g, new String[]{param0});
+          stackIn_42_0 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, TutorialMessages.field_g, new String[]{param0});
           return stackIn_42_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

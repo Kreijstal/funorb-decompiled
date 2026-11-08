@@ -25,9 +25,9 @@ final class tt {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         int stackIn_12_0 = 0;
-        gg stackIn_61_0 = null;
+        SocialPlayerRow stackIn_61_0 = null;
         int stackIn_61_1 = 0;
-        gg stackIn_61_2 = null;
+        SocialPlayerRow stackIn_61_2 = null;
         RuntimeException decompiledCaughtException = null;
         CipherPacketBuffer var1 = null;
         RuntimeException var1_ref = null;
@@ -37,15 +37,15 @@ final class tt {
         String var4_ref_String = null;
         int var4 = 0;
         String var5 = null;
-        gg var6 = null;
+        SocialPlayerRow var6 = null;
         String var7 = null;
-        gg var7_ref = null;
+        SocialPlayerRow var7_ref = null;
         String var8 = null;
         int var9 = 0;
         Object var3Lifetime1;
         String var4_ref_StringLifetime1;
         String var5Lifetime1;
-        gg var6Lifetime1;
+        SocialPlayerRow var6Lifetime1;
         var9 = Kickabout.field_G;
         try {
           var1 = un.field_e;
@@ -78,33 +78,33 @@ final class tt {
               }
             }
             if (var6 == null) {
-              var6 = new gg();
+              var6 = new SocialPlayerRow();
               HighScoreQuery.field_m.a(var6, (byte) -4, (long)var8.hashCode());
               fieldTemp$0 = StripedProgressBar.field_y;
               StripedProgressBar.field_y = StripedProgressBar.field_y + 1;
-              var6.field_Cb = fieldTemp$0;
+              var6.listIndex = fieldTemp$0;
               qn.field_b.addLast(var6, 3);
             }
             var6.field_Eb = var7;
             var6.field_yb = var5;
-            var6.field_Gb = var4_ref_String;
+            var6.name = var4_ref_String;
             return;
           }
           if (1 != var2) {
             if (var2 == 2) {
-              if (1 == ts.field_d) {
-                ts.field_d = 2;
+              if (1 == PitchCoordinateSupport.field_d) {
+                PitchCoordinateSupport.field_d = 2;
               }
               return;
             }
             if (var2 == 3) {
-              if (2 == ts.field_d) {
-                ts.field_d = 1;
+              if (2 == PitchCoordinateSupport.field_d) {
+                PitchCoordinateSupport.field_d = 1;
               }
               return;
             }
             if (var2 == 4) {
-              ts.field_d = 1;
+              PitchCoordinateSupport.field_d = 1;
               var3 = var1.readString(111);
               BufferedSocket.field_h = ((String) (var3)).intern();
               var4 = var1.readUnsignedByte((byte) -115);
@@ -136,11 +136,11 @@ final class tt {
             }
           }
           if (null == var6Lifetime1) {
-            var6Lifetime1 = new gg();
+            var6Lifetime1 = new SocialPlayerRow();
             AvailabilityCheckRequest.field_b.a(var6Lifetime1, (byte) -4, (long)MatchAgent.a(0, (CharSequence) ((Object) var4_ref_StringLifetime1)).hashCode());
             fieldTemp$1 = ListingRow.field_d;
             ListingRow.field_d = ListingRow.field_d + 1;
-            var6Lifetime1.field_Cb = fieldTemp$1;
+            var6Lifetime1.listIndex = fieldTemp$1;
             GameplayHelpScreen.field_I.addLast(var6Lifetime1, 3);
           }
           if (var3Lifetime1 != null) {
@@ -148,9 +148,9 @@ final class tt {
           }
           var6Lifetime1.field_Eb = var5Lifetime1;
           var6Lifetime1.field_zb = (String) (var3Lifetime1);
-          var6Lifetime1.field_Gb = var4_ref_StringLifetime1;
+          var6Lifetime1.name = var4_ref_StringLifetime1;
           var6Lifetime1.c((byte) -109);
-          var7_ref = (gg) (GameplayHelpScreen.field_I.g(24009));
+          var7_ref = (SocialPlayerRow) (GameplayHelpScreen.field_I.g(24009));
           scanLoop1: while (true) {
             boolean decompiledFrameRemainder0 = true;
             if (null != var7_ref) {
@@ -160,7 +160,7 @@ final class tt {
               decompiledFrameRemainder0 = (var9 == 0);
               if ((decompiledFrameRemainder0) &&
                 (po.$cfr$intArgs$a$d1a766881558(stackIn_61_0, stackIn_61_1, stackIn_61_2))) {
-                var7_ref = (gg) (GameplayHelpScreen.field_I.c(33));
+                var7_ref = (SocialPlayerRow) (GameplayHelpScreen.field_I.c(33));
                 continue;
               }
             }

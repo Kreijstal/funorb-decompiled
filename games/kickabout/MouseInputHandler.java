@@ -12,7 +12,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
         SoftwareRasterizer.fillRoundedRectangleBlended(param2 - 8, param4 - 11, MarkerSliderPainter.field_n, 20, 6, param5, param1);
-        String var6 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, !QuickChatCategoryCache.field_e ? SoundStreamHandle.field_l : QuickChatMenuBuilder.field_a, new String[]{mk.field_b[il.field_h]});
+        String var6 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, !QuickChatCategoryCache.field_e ? SoundStreamHandle.field_l : QuickChatMenuBuilder.field_a, new String[]{mk.field_b[ClassDescriptorSupport.field_h]});
         ConsoleTokenCursor.field_d.a(var6, param2, param4, param0, param3);
     }
 
@@ -28,7 +28,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           }
           TextHotspotWidget.field_M = 0;
           BuyPitchDialog.field_G = param0.getX();
-          gf.field_b = param0.getY();
+          ModelMaterial.field_b = param0.getY();
           PasswordFieldPainter.field_A = true;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -122,7 +122,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           }
           TextHotspotWidget.field_M = 0;
           BuyPitchDialog.field_G = param0.getX();
-          gf.field_b = param0.getY();
+          ModelMaterial.field_b = param0.getY();
           PasswordFieldPainter.field_A = true;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -172,7 +172,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           if (null != ProxyAuthenticationRequiredException.field_e) {
             TextHotspotWidget.field_M = 0;
             BuyPitchDialog.field_G = -1;
-            gf.field_b = -1;
+            ModelMaterial.field_b = -1;
             PasswordFieldPainter.field_A = true;
           }
         } catch (RuntimeException runtimeException) {
@@ -243,7 +243,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           }
           TextHotspotWidget.field_M = 0;
           BuyPitchDialog.field_G = param0.getX();
-          gf.field_b = param0.getY();
+          ModelMaterial.field_b = param0.getY();
           PasswordFieldPainter.field_A = true;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -262,7 +262,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
 
     final static void a(String param0, int param1, boolean param2) {
         try {
-          wq.field_g = true;
+          DiagnosticsOverlaySupport.field_g = true;
           if (param1 != 4) {
             field_a = (String) null;
           }

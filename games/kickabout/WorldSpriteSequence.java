@@ -73,7 +73,7 @@ final class WorldSpriteSequence {
         if (!param1) {
           this.drawFrame(-41, true);
         }
-        int var4 = go.a(this.field_b - 64, (byte) -56);
+        int var4 = PitchProjectionSupport.worldToScreenY(this.field_b - 64, (byte) -56);
         Sprite var5 = this.field_c[param0];
         if (InstrumentNoteMask.field_i == 256) {
           var5.c(var3, var4);

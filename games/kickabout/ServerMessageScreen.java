@@ -53,10 +53,10 @@ final class ServerMessageScreen extends ButtonMenuScreen {
         RuntimeException var9 = null;
         var22 = Kickabout.field_G;
         try {
-          var13 = go.a(param4, param0, 0, GameModesHelpScreen.field_F);
-          var14 = go.a(param4, param0, 0, IntrusiveDeque.field_g);
-          var15 = go.a(param4, param0, 0, RenderedFootballer.field_fb);
-          var16 = go.a(param4, param0, 0, RandomAccessCacheFile.field_i);
+          var13 = PitchProjectionSupport.colorBoxLowerMoment(param4, param0, 0, GameModesHelpScreen.field_F);
+          var14 = PitchProjectionSupport.colorBoxLowerMoment(param4, param0, 0, IntrusiveDeque.field_g);
+          var15 = PitchProjectionSupport.colorBoxLowerMoment(param4, param0, 0, RenderedFootballer.field_fb);
+          var16 = PitchProjectionSupport.colorBoxLowerMoment(param4, param0, 0, RandomAccessCacheFile.field_i);
           var19 = 0.0;
           ReceivedAuctionItemRow.field_Mb = -1;
           if (param2 != -99) {

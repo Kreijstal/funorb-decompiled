@@ -46,10 +46,10 @@ final class PlayArea {
         try {
           MyKitScreen.field_O = true;
           et.field_d = param0;
-          if (null == ss.field_b) {
-            ss.field_b = ParticipantStatus.c(0);
+          if (null == UiKeyRoutingSupport.field_b) {
+            UiKeyRoutingSupport.field_b = ParticipantStatus.c(0);
           }
-          ld.field_f = (RenderedFootballer) (et.field_d.field_P[0][3]);
+          AccountInputValidationResult.field_f = (RenderedFootballer) (et.field_d.field_P[0][3]);
           fc.field_c = (RenderedFootballer) (et.field_d.field_P[0][4]);
           TickClock.field_a = 0;
           AuctionLogEntry.field_g = 640;
@@ -129,7 +129,7 @@ final class PlayArea {
     }
 
     final static void a(boolean param0) {
-        ad.a(gk.field_h, (byte) -49);
+        LocalizedTextLoader.showQuickChatMenu(ChatComposeSupport.field_h, (byte) -49);
         if (!param0) {
           field_e = (Sprite) null;
         }

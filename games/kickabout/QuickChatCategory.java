@@ -140,8 +140,8 @@ final class QuickChatCategory extends DualLinkNode {
           }
           if (ArrayWidgetContainer.field_x > TextLayoutLine.field_e &&
             LoginDialog.field_cb.field_q + TextLayoutLine.field_e > ArrayWidgetContainer.field_x &&
-            ArchiveNetworkClient.field_i < us.field_j &&
-            AccountChoicePanel.field_C.field_w * CachedArchiveSource.field_s + (ArchiveNetworkClient.field_i + LoginDialog.field_cb.field_w + MarkerSliderPainter.field_i.field_w) > us.field_j) {
+            ArchiveNetworkClient.field_i < TutorialCaptionSupport.field_j &&
+            AccountChoicePanel.field_C.field_w * CachedArchiveSource.field_s + (ArchiveNetworkClient.field_i + LoginDialog.field_cb.field_w + MarkerSliderPainter.field_i.field_w) > TutorialCaptionSupport.field_j) {
             GameQuickChatResolver.a(PortraitCacheOrder.field_d, RankingRowNode.field_Db, (byte) -113);
           }
           return;
@@ -170,8 +170,8 @@ final class QuickChatCategory extends DualLinkNode {
             }
             if (ArrayWidgetContainer.field_x > TextLayoutLine.field_e &&
               LoginDialog.field_cb.field_q + TextLayoutLine.field_e > ArrayWidgetContainer.field_x &&
-              ArchiveNetworkClient.field_i < us.field_j &&
-              AccountChoicePanel.field_C.field_w * CachedArchiveSource.field_s + (ArchiveNetworkClient.field_i + LoginDialog.field_cb.field_w + MarkerSliderPainter.field_i.field_w) > us.field_j) {
+              ArchiveNetworkClient.field_i < TutorialCaptionSupport.field_j &&
+              AccountChoicePanel.field_C.field_w * CachedArchiveSource.field_s + (ArchiveNetworkClient.field_i + LoginDialog.field_cb.field_w + MarkerSliderPainter.field_i.field_w) > TutorialCaptionSupport.field_j) {
               GameQuickChatResolver.a(PortraitCacheOrder.field_d, RankingRowNode.field_Db, (byte) -113);
             }
             return;
@@ -197,8 +197,8 @@ final class QuickChatCategory extends DualLinkNode {
           }
           if (ArrayWidgetContainer.field_x > TextLayoutLine.field_e &&
             LoginDialog.field_cb.field_q + TextLayoutLine.field_e > ArrayWidgetContainer.field_x &&
-            ArchiveNetworkClient.field_i < us.field_j &&
-            AccountChoicePanel.field_C.field_w * CachedArchiveSource.field_s + (ArchiveNetworkClient.field_i + LoginDialog.field_cb.field_w + MarkerSliderPainter.field_i.field_w) > us.field_j) {
+            ArchiveNetworkClient.field_i < TutorialCaptionSupport.field_j &&
+            AccountChoicePanel.field_C.field_w * CachedArchiveSource.field_s + (ArchiveNetworkClient.field_i + LoginDialog.field_cb.field_w + MarkerSliderPainter.field_i.field_w) > TutorialCaptionSupport.field_j) {
             GameQuickChatResolver.a(PortraitCacheOrder.field_d, RankingRowNode.field_Db, (byte) -113);
             return;
           }
@@ -210,8 +210,8 @@ final class QuickChatCategory extends DualLinkNode {
             CachedArchiveSource.field_s = CachedArchiveSource.field_s - 1;
             if (ArrayWidgetContainer.field_x > TextLayoutLine.field_e &&
               LoginDialog.field_cb.field_q + TextLayoutLine.field_e > ArrayWidgetContainer.field_x &&
-              ArchiveNetworkClient.field_i < us.field_j &&
-              AccountChoicePanel.field_C.field_w * CachedArchiveSource.field_s + (ArchiveNetworkClient.field_i + LoginDialog.field_cb.field_w + MarkerSliderPainter.field_i.field_w) > us.field_j) {
+              ArchiveNetworkClient.field_i < TutorialCaptionSupport.field_j &&
+              AccountChoicePanel.field_C.field_w * CachedArchiveSource.field_s + (ArchiveNetworkClient.field_i + LoginDialog.field_cb.field_w + MarkerSliderPainter.field_i.field_w) > TutorialCaptionSupport.field_j) {
               GameQuickChatResolver.a(PortraitCacheOrder.field_d, RankingRowNode.field_Db, (byte) -113);
             }
             return;
@@ -221,8 +221,8 @@ final class QuickChatCategory extends DualLinkNode {
             CachedArchiveSource.field_s = CachedArchiveSource.field_s + 1;
             if (ArrayWidgetContainer.field_x > TextLayoutLine.field_e &&
               LoginDialog.field_cb.field_q + TextLayoutLine.field_e > ArrayWidgetContainer.field_x &&
-              ArchiveNetworkClient.field_i < us.field_j &&
-              AccountChoicePanel.field_C.field_w * CachedArchiveSource.field_s + (ArchiveNetworkClient.field_i + LoginDialog.field_cb.field_w + MarkerSliderPainter.field_i.field_w) > us.field_j) {
+              ArchiveNetworkClient.field_i < TutorialCaptionSupport.field_j &&
+              AccountChoicePanel.field_C.field_w * CachedArchiveSource.field_s + (ArchiveNetworkClient.field_i + LoginDialog.field_cb.field_w + MarkerSliderPainter.field_i.field_w) > TutorialCaptionSupport.field_j) {
               GameQuickChatResolver.a(PortraitCacheOrder.field_d, RankingRowNode.field_Db, (byte) -113);
             }
             return;
@@ -234,8 +234,8 @@ final class QuickChatCategory extends DualLinkNode {
         if (LoginDialog.field_cb.field_q + TextLayoutLine.field_e <= ArrayWidgetContainer.field_x) {
           return;
         }
-        if (ArchiveNetworkClient.field_i < us.field_j &&
-          AccountChoicePanel.field_C.field_w * CachedArchiveSource.field_s + (ArchiveNetworkClient.field_i + LoginDialog.field_cb.field_w + MarkerSliderPainter.field_i.field_w) > us.field_j) {
+        if (ArchiveNetworkClient.field_i < TutorialCaptionSupport.field_j &&
+          AccountChoicePanel.field_C.field_w * CachedArchiveSource.field_s + (ArchiveNetworkClient.field_i + LoginDialog.field_cb.field_w + MarkerSliderPainter.field_i.field_w) > TutorialCaptionSupport.field_j) {
           GameQuickChatResolver.a(PortraitCacheOrder.field_d, RankingRowNode.field_Db, (byte) -113);
           return;
         }
@@ -322,7 +322,7 @@ final class QuickChatCategory extends DualLinkNode {
           param3 = 0;
         }
         ThreeCommand.a(ValidationState.field_c[param2][param3][2], -88, ValidationState.field_c[param2][param3][5], ValidationState.field_c[param2][param3][4], ValidationState.field_c[param2][param3][1], ValidationState.field_c[param2][param3][0], ValidationState.field_c[param2][param3][3]);
-        ic.a(ValidationState.field_c[param2][param3][4], ValidationState.field_c[param2][param3][5], ValidationState.field_c[param2][param3][3], ValidationState.field_c[param2][param3][0], ValidationState.field_c[param2][param3][2], (byte) -113, ValidationState.field_c[param2][param3][1]);
+        RegistrationRequestState.configureGameReverb(ValidationState.field_c[param2][param3][4], ValidationState.field_c[param2][param3][5], ValidationState.field_c[param2][param3][3], ValidationState.field_c[param2][param3][0], ValidationState.field_c[param2][param3][2], (byte) -113, ValidationState.field_c[param2][param3][1]);
         if (param1 != 8710) {
           FootballerAgent var5 = (FootballerAgent) null;
           QuickChatCategory.advanceToPoint(117, (byte) -18, -15, (FootballerAgent) null, 51);

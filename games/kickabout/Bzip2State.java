@@ -272,7 +272,7 @@ final class Bzip2State {
                 if (stackIn_56_0 <= stackIn_56_1) {
                   NumericDateInputWidget.field_M[var23Lifetime2] = var27Lifetime1 / var29Lifetime1 + var21Lifetime2;
                   WaitForPlayersView.field_k[var23Lifetime2] = var28Lifetime1 / var29Lifetime1 + var22Lifetime2;
-                  ld.field_e[var23Lifetime2] = var29Lifetime1;
+                  AccountInputValidationResult.field_e[var23Lifetime2] = var29Lifetime1;
                   if (var29Lifetime1 > var8) {
                     var8 = var29Lifetime1;
                   }
@@ -280,12 +280,12 @@ final class Bzip2State {
                     var7_int = var29Lifetime1;
                   }
                 } else {
-                  ld.field_e[var23Lifetime2] = -2147483648;
+                  AccountInputValidationResult.field_e[var23Lifetime2] = -2147483648;
                 }
                 if (param1) {
                   BuyPitchDialog.field_M[var23Lifetime2] = var27Lifetime1 >> ListRow.field_yb;
                   MatchTransitionScreen.field_B[var23Lifetime2] = var28Lifetime1 >> ListRow.field_yb;
-                  bw.field_f[var23Lifetime2] = var29Lifetime1;
+                  SceneSpriteFactory.field_f[var23Lifetime2] = var29Lifetime1;
                 }
                 var23Lifetime2++;
                 continue;

@@ -134,7 +134,7 @@ final class TeamSelectionView extends MatchPhaseView {
             if (!WriteIntegersCommand.field_C) {
               TextFieldNode.field_Wb = true;
             } else {
-              hp.b(0);
+              ChatComposeMode.setComposeMode(0);
             }
           }
           if (TextFieldNode.field_Wb) {
@@ -177,7 +177,7 @@ final class TeamSelectionView extends MatchPhaseView {
     }
 
     private final void a(byte param0, int param1) {
-        this.field_a.enqueueEvent(mg.createTeamEvent(this.field_g, (byte) 0, param1), -125);
+        this.field_a.enqueueEvent(PlayerInputFactory.createTeamEvent(this.field_g, (byte) 0, param1), -125);
         if (param0 >= -95) {
           return;
         }
@@ -266,12 +266,12 @@ final class TeamSelectionView extends MatchPhaseView {
           MusicPatchNode.field_u = new ArgbSprite[32];
           for (var1_int = 0; var1_int < 32; var1_int++) {
             var2 = -(var1_int << 11) / 32;
-            MusicPatchNode.field_u[var1_int] = wa.a(-116, var2);
+            MusicPatchNode.field_u[var1_int] = SpriteResourceSupport.createRingSprite(-116, var2);
           }
           if (param0 != -47) {
             field_u = 99;
           }
-          ar.field_c = EmailSyntaxValidator.g(-22976);
+          BrowserUiSupport.field_c = EmailSyntaxValidator.g(-22976);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "wb.J(" + param0 + ')');
         }

@@ -43,20 +43,20 @@ final class KitStyleTile extends UiLayoutNode implements PopupCard {
                 if (!HoverTooltip.field_Eb) {
                   mj.a(200.0, 60, (double)EmailAvailabilityValidator.field_k.pixelX(param0 - 13564), (double)(EmailAvailabilityValidator.field_k.pixelY(true) - 55));
                 } else {
-                  mj.a(160.0, 60, (double)(ld.field_f.pixelX(-119) + EmailAvailabilityValidator.field_k.pixelX(-118) >> 1), (double)(ld.field_f.pixelY(true) + EmailAvailabilityValidator.field_k.pixelY(true) >> 1));
+                  mj.a(160.0, 60, (double)(AccountInputValidationResult.field_f.pixelX(-119) + EmailAvailabilityValidator.field_k.pixelX(-118) >> 1), (double)(AccountInputValidationResult.field_f.pixelY(true) + EmailAvailabilityValidator.field_k.pixelY(true) >> 1));
                 }
               } else {
                 if (5 != HuffmanCodec.field_e) {
                   if (6 == HuffmanCodec.field_e) {
-                    mj.a(180.0, 60, (double)(EmailAvailabilityValidator.field_k.pixelX(-99) + ld.field_f.pixelX(-97) >> 1), (double)EmailAvailabilityValidator.field_k.pixelY(true));
+                    mj.a(180.0, 60, (double)(EmailAvailabilityValidator.field_k.pixelX(-99) + AccountInputValidationResult.field_f.pixelX(-97) >> 1), (double)EmailAvailabilityValidator.field_k.pixelY(true));
                   } else {
                     if (HuffmanCodec.field_e == 7) {
                       var2_ref_nl = et.field_d.field_P[1][4];
-                      mj.a(220.0, 60, (double)(ld.field_f.pixelX(-107) + var2_ref_nl.pixelX(-89) >> 1), (double)(ld.field_f.pixelY(true) + var2_ref_nl.pixelY(true) >> 1));
+                      mj.a(220.0, 60, (double)(AccountInputValidationResult.field_f.pixelX(-107) + var2_ref_nl.pixelX(-89) >> 1), (double)(AccountInputValidationResult.field_f.pixelY(true) + var2_ref_nl.pixelY(true) >> 1));
                     } else {
                       if (HuffmanCodec.field_e != 8) {
                         if (HuffmanCodec.field_e == 9) {
-                          mj.a(220.0, 60, (double)(EmailAvailabilityValidator.field_k.pixelX(-128) + ld.field_f.pixelX(-121) >> 1), (double)EmailAvailabilityValidator.field_k.pixelY(true));
+                          mj.a(220.0, 60, (double)(EmailAvailabilityValidator.field_k.pixelX(-128) + AccountInputValidationResult.field_f.pixelX(-121) >> 1), (double)EmailAvailabilityValidator.field_k.pixelY(true));
                         } else {
                           if (HuffmanCodec.field_e != 10) {
                             if (HuffmanCodec.field_e != 11) {
@@ -87,7 +87,7 @@ final class KitStyleTile extends UiLayoutNode implements PopupCard {
                           }
                         }
                       } else {
-                        var2 = ld.field_f.pixelY(true);
+                        var2 = AccountInputValidationResult.field_f.pixelY(true);
                         var3 = 0;
                         if (var2 <= 810) {
                           if (var2 > 400) {
@@ -97,18 +97,18 @@ final class KitStyleTile extends UiLayoutNode implements PopupCard {
                           var3 = 2;
                         }
                         if (!HoverTooltip.field_Eb) {
-                          mj.a(190.0, 60, (double)ld.field_f.pixelX(-92), (double)te.field_a[var3]);
+                          mj.a(190.0, 60, (double)AccountInputValidationResult.field_f.pixelX(-92), (double)te.field_a[var3]);
                         } else {
-                          mj.a(256.0, 60, (double)ld.field_f.pixelX(param0 ^ -13551), (double)ld.field_f.pixelY(true));
+                          mj.a(256.0, 60, (double)AccountInputValidationResult.field_f.pixelX(param0 ^ -13551), (double)AccountInputValidationResult.field_f.pixelY(true));
                         }
                       }
                     }
                   }
                 } else {
                   if (HoverTooltip.field_Eb) {
-                    mj.a(160.0, 60, (double)ld.field_f.pixelX(-124), (double)ld.field_f.pixelY(true));
+                    mj.a(160.0, 60, (double)AccountInputValidationResult.field_f.pixelX(-124), (double)AccountInputValidationResult.field_f.pixelY(true));
                   } else {
-                    mj.a(200.0, 60, (double)ld.field_f.pixelX(-118), (double)(ld.field_f.pixelY(true) - 55));
+                    mj.a(200.0, 60, (double)AccountInputValidationResult.field_f.pixelX(-118), (double)(AccountInputValidationResult.field_f.pixelY(true) - 55));
                   }
                 }
               }
@@ -138,10 +138,10 @@ final class KitStyleTile extends UiLayoutNode implements PopupCard {
 
     public final void drawCentered(int param0, int param1, int param2) {
         AppScreen.renderModelToSprite(this.field_Eb, this.field_Db, PlayArea.field_e, -83);
-        eo.a(PlayArea.field_e, 131586);
-        eo.a(PlayArea.field_e, 16777215);
-        eo.a(PlayArea.field_e, 13421772);
-        eo.a(PlayArea.field_e, 11184810);
+        SoftwareDrawingSupport.a(PlayArea.field_e, 131586);
+        SoftwareDrawingSupport.a(PlayArea.field_e, 16777215);
+        SoftwareDrawingSupport.a(PlayArea.field_e, 13421772);
+        SoftwareDrawingSupport.a(PlayArea.field_e, 11184810);
         if (param1 != 23) {
           PcmStreamMixer var5 = (PcmStreamMixer) null;
           KitStyleTile.a(-77, (ResourceArchive) null, 47, (PcmStreamMixer) null);
@@ -216,31 +216,31 @@ final class KitStyleTile extends UiLayoutNode implements PopupCard {
             if (var3 == 0) {
               if (this.field_Fb == 15 ||
                 15 == this.field_Ab) {
-                eo.a(PlayArea.field_e, 16777215);
-                eo.a(PlayArea.field_e, 7829367);
+                SoftwareDrawingSupport.a(PlayArea.field_e, 16777215);
+                SoftwareDrawingSupport.a(PlayArea.field_e, 7829367);
               }
             } else {
-              eo.a(PlayArea.field_e, 131586);
-              eo.a(PlayArea.field_e, 65793);
+              SoftwareDrawingSupport.a(PlayArea.field_e, 131586);
+              SoftwareDrawingSupport.a(PlayArea.field_e, 65793);
             }
           } else {
-            eo.a(PlayArea.field_e, 131586);
-            eo.a(PlayArea.field_e, 16777215);
-            eo.a(PlayArea.field_e, 13421772);
-            eo.a(PlayArea.field_e, 11184810);
+            SoftwareDrawingSupport.a(PlayArea.field_e, 131586);
+            SoftwareDrawingSupport.a(PlayArea.field_e, 16777215);
+            SoftwareDrawingSupport.a(PlayArea.field_e, 13421772);
+            SoftwareDrawingSupport.a(PlayArea.field_e, 11184810);
           }
           PlayArea.field_e.drawHalfSize(this.field_Jb.field_F + (-50 + this.field_Jb.field_q >> 1), (this.field_Jb.field_mb - 50 >> 1) + this.field_Jb.field_T);
         }
         var5 = (this.field_Jb.field_q >> 1) + this.field_Jb.field_F;
         var6 = this.field_Jb.field_mb + this.field_Jb.field_T + 5;
         if (this.field_Kb) {
-          var10 = sh.field_g;
+          var10 = LineupPositionSupport.field_g;
           var10.c(-(var10.field_q >> 1) + var5, var6 - (var10.field_w >> 1));
           var8 = new ArgbSprite(18, 13);
           PacketBuffer.a(param0 ^ -24576, var8);
           ConsoleTokenCursor.field_d.d("10", SoftwareRasterizer.field_g >> 1, SoftwareRasterizer.field_f - 2, -1, -1);
-          eo.a(var8, -16711423);
-          eo.a(var8, 1996554497);
+          SoftwareDrawingSupport.a(var8, -16711423);
+          SoftwareDrawingSupport.a(var8, 1996554497);
           TeamManagementScreen.e(122);
           ((Sprite) ((Object) var8)).c(-(((Sprite) ((Object) var8)).field_o >> 1) + var5, -(((Sprite) ((Object) var8)).field_v >> 1) + var6);
         }
@@ -257,7 +257,7 @@ final class KitStyleTile extends UiLayoutNode implements PopupCard {
           GameAppletShell.a(param1, (byte) 60);
           StripedProgressBar.a((byte) 49, param1);
           CipherPacketBuffer.a(3, param1);
-          ip.a(false);
+          RasterGammaSupport.initializeIntensityLookup(false);
           Trinket.d((byte) -128);
           PlayerStats.field_p = 0 - ButtonMenuScreen.field_l;
           int var4_int = -119 / ((param2 + 39) / 58);
@@ -306,7 +306,7 @@ final class KitStyleTile extends UiLayoutNode implements PopupCard {
         if (this.field_gb) {
           if (this.field_Cb.field_k != -1) {
             if (GoalkeeperAiSupport.field_a[this.field_Cb.field_k] &&
-              !c.a(this.field_Cb.field_k, 0, BufferedSocket.field_f)) {
+              !ClientPacketFlushSupport.isBitSet(this.field_Cb.field_k, 0, BufferedSocket.field_f)) {
               IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, MyKitScreen.field_W.toLowerCase());
             } else {
               stackIn_23_0 = -67;
@@ -323,7 +323,7 @@ final class KitStyleTile extends UiLayoutNode implements PopupCard {
             stackIn_29_0 = -67;
             stackIn_29_1 = -18;
             if (!this.field_Kb) {
-              stackIn_30_2 = bk.field_h;
+              stackIn_30_2 = CalendarSupport.field_h;
             } else {
               stackIn_30_2 = TickClock.field_l;
             }
@@ -375,7 +375,7 @@ final class KitStyleTile extends UiLayoutNode implements PopupCard {
                 field_yb = (byte[]) null;
               }
               var4 = param0.getCodeBase();
-              var3 = qr.a(param0, var4, 3).getFile();
+              var3 = SessionUrlSupport.decorateSessionUrl(param0, var4, 3).getFile();
               AppletJavaScriptBridge.a(new Object[]{"home", var3 + "home.ws"}, param0, "updatelinks", 25449);
               AppletJavaScriptBridge.a(new Object[]{"gamelist", var3 + "togamelist.ws"}, param0, "updatelinks", 25449);
               AppletJavaScriptBridge.a(new Object[]{"serverlist", var3 + "toserverlist.ws"}, param0, "updatelinks", 25449);

@@ -146,10 +146,10 @@ final class JaggrabDownloader implements Runnable {
           if (nc.field_a) {
             return null;
           }
-          if (us.field_e > StreetSceneryLoader.field_i) {
+          if (TutorialCaptionSupport.field_e > StreetSceneryLoader.field_i) {
             return null;
           }
-          if (StreetSceneryLoader.field_i < GameModeDefinition.field_i + us.field_e) {
+          if (StreetSceneryLoader.field_i < GameModeDefinition.field_i + TutorialCaptionSupport.field_e) {
             return EmailAvailabilityValidator.field_o;
           }
           return null;
@@ -157,10 +157,10 @@ final class JaggrabDownloader implements Runnable {
         if (nc.field_a) {
           return null;
         }
-        if (us.field_e > StreetSceneryLoader.field_i) {
+        if (TutorialCaptionSupport.field_e > StreetSceneryLoader.field_i) {
           return null;
         }
-        if (StreetSceneryLoader.field_i < GameModeDefinition.field_i + us.field_e) {
+        if (StreetSceneryLoader.field_i < GameModeDefinition.field_i + TutorialCaptionSupport.field_e) {
           return EmailAvailabilityValidator.field_o;
         }
         return null;

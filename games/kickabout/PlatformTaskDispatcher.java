@@ -301,7 +301,7 @@ final class PlatformTaskDispatcher implements Runnable {
                     }
                     try {
                       if (false) throw (ProxyAuthenticationRequiredException) null;
-                      var8.field_b = ql.a((String) (var8.field_g), var8.field_d, -13067).a(1);
+                      var8.field_b = ql.createSocketConnector((String) (var8.field_g), var8.field_d, -13067).a(1);
                     } catch (ProxyAuthenticationRequiredException decompiledCaughtParameter2) {
                       decompiledCaughtException = decompiledCaughtParameter2;
                       var3_ref3 = (ProxyAuthenticationRequiredException) (Object) decompiledCaughtException;

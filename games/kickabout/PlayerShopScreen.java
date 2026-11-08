@@ -68,7 +68,7 @@ final class PlayerShopScreen extends TeamManagementScreen {
         super.enterScreen(0, param1, param2);
         this.field_I = new IntrusiveDeque();
         this.field_Q.field_jb = new IntrusiveDeque();
-        this.field_T = new SquadGridWidget(ic.field_h);
+        this.field_T = new SquadGridWidget(RegistrationRequestState.field_h);
         SquadSlotWidget[] var8 = this.field_T.field_Eb;
         SquadSlotWidget[] var4 = var8;
         for (var5 = param0; var8.length > var5; var5++) {
@@ -102,7 +102,7 @@ final class PlayerShopScreen extends TeamManagementScreen {
           this.field_O = this.field_O - 1;
         }
         var3 = this.field_J.h((byte) -38);
-        QuickChatCategory.a(ic.field_h.field_x, 5464);
+        QuickChatCategory.a(RegistrationRequestState.field_h.field_x, 5464);
         this.field_J.a(param1, false);
         this.field_L.field_s = this.slideOffsetX;
         this.field_L.updateInput(0, param1);
@@ -117,19 +117,19 @@ final class PlayerShopScreen extends TeamManagementScreen {
         }
         if (this.field_T.field_Fb != -1 &&
           this.field_U.field_sb == 1) {
-          var4 = ic.field_h.field_q[this.field_T.field_Fb];
-          DoSomethingCommand.a(64, ic.field_h.squad[var4], var4);
+          var4 = RegistrationRequestState.field_h.field_q[this.field_T.field_Fb];
+          DoSomethingCommand.a(64, RegistrationRequestState.field_h.squad[var4], var4);
         }
         var5 = 63 % ((param0 - 38) / 60);
         var7 = 0;
         var4Lifetime1 = var7;
         while (var7 < this.field_F.length) {
           stackIn_15_0 = this.field_F[var7].field_Mb;
-          stackIn_16_1 = !(ic.field_h.field_x < this.field_F[var7].field_Gb);
+          stackIn_16_1 = !(RegistrationRequestState.field_h.field_x < this.field_F[var7].field_Gb);
           stackIn_15_0.field_lb = stackIn_16_1;
           if (this.field_F[var7].field_Mb.field_sb != 0) {
-            if (ic.field_h.hasEmptySquadSlot((byte) -86)) {
-              pi.a(6022, this.field_F[var7]);
+            if (RegistrationRequestState.field_h.hasEmptySquadSlot((byte) -86)) {
+              PlayerMeshFactory.enqueueBuyPlayerDialog(6022, this.field_F[var7]);
             } else {
               SocketArchiveNetworkClient.a((byte) 126, 0);
             }
@@ -173,7 +173,7 @@ final class PlayerShopScreen extends TeamManagementScreen {
             return;
           }
           while (var1_int < 4) {
-            var2 = sh.field_a.field_P[AccountRegistrationPanel.field_G][1 + var1_int];
+            var2 = LineupPositionSupport.field_a.field_P[AccountRegistrationPanel.field_G][1 + var1_int];
             if (0 < var2.dashCooldown &&
               var2.action != 4) {
               IconButtonPainter.field_b[var1_int] = 16;
@@ -214,11 +214,11 @@ final class PlayerShopScreen extends TeamManagementScreen {
           if (6 >= var3) {
             if (AuctionLogEntry.e(15137) ||
               var3 != -1) {
-              if (ic.field_h.field_t < var3) {
+              if (RegistrationRequestState.field_h.field_t < var3) {
                 break scanLoop1;
               }
               for (var4_int = 0; var4_int < 8; var4_int++) {
-                var5 = WelcomeDialog.a(ic.field_h.field_e, var4_int, ic.field_h.field_N[var4_int + 8 * var3 + 8], -84, var3);
+                var5 = WelcomeDialog.a(RegistrationRequestState.field_h.field_e, var4_int, RegistrationRequestState.field_h.field_N[var4_int + 8 * var3 + 8], -84, var3);
                 stackIn_16_0 = (~BufferedSocket.field_k != ~var3) ? 0 : 1;
                 var6 = stackIn_16_0;
                 var7 = (IntValueNode) (this.field_I.g(24009));
@@ -274,7 +274,7 @@ final class PlayerShopScreen extends TeamManagementScreen {
         this.field_L.addChild((byte) -110, (UiLayoutNode) (this.field_J));
         this.field_L.addChild((byte) -111, this.field_Q);
         this.field_L.addChild((byte) -111, this.field_G);
-        this.field_U = eo.a(MyKitScreen.field_M, 15147554);
+        this.field_U = SoftwareDrawingSupport.a(MyKitScreen.field_M, 15147554);
         this.field_U.field_J = 56;
         this.field_U.field_s = 66 - (this.field_U.field_q >> 1);
     }

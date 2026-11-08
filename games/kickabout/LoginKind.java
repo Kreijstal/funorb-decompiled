@@ -49,13 +49,13 @@ final class LoginKind {
             }
           }
           var6_long = MonotonicClock.monotonicMillis(-53);
-          if (-bk.field_b + var6_long < 80L) {
+          if (-CalendarSupport.field_b + var6_long < 80L) {
             return null;
           }
           if (GameModesHelpScreen.field_G != null) {
             return null;
           }
-          bk.field_b = var6_long;
+          CalendarSupport.field_b = var6_long;
           NamedValueEntry.field_f[63].renderPortrait(param1 + 184, param3, param0, param2, param5, param4);
           PortraitCacheOrder.moveToFront(63, (byte) 88);
           stackIn_21_0 = NamedValueEntry.field_f[0].portrait;

@@ -49,7 +49,7 @@ final class ChatMessage {
             if (this.field_d == AnimationPlayer.field_c) {
               return 1;
             }
-            if (ts.field_d != 2) {
+            if (PitchCoordinateSupport.field_d != 2) {
               return 0;
             }
             if (IntKeyLookup.a(this.field_q, param0 + 18)) {
@@ -62,7 +62,7 @@ final class ChatMessage {
         if (this.field_d == AnimationPlayer.field_c) {
           return 1;
         }
-        if (ts.field_d != 2) {
+        if (PitchCoordinateSupport.field_d != 2) {
           return 0;
         }
         if (!IntKeyLookup.a(this.field_q, param0 + 18)) {
@@ -80,7 +80,7 @@ final class ChatMessage {
         if (!param0) {
           this.field_r = null;
         } else {
-          this.field_r = gk.field_b;
+          this.field_r = ChatComposeSupport.field_b;
         }
         this.field_c = RegistrationRequestDialog.field_ob;
         this.field_j = FindingOpponentScreen.field_E;

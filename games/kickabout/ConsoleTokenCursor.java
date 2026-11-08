@@ -31,7 +31,7 @@ final class ConsoleTokenCursor {
           PasswordFieldPainter.field_x = param5;
           AnimationPlayer.field_c = -1L;
           PlayerStatSortCriterion.field_p = param8;
-          ss.field_j = param5.length;
+          UiKeyRoutingSupport.field_j = param5.length;
           InstrumentNoteMask.field_k = false;
           TextHotspotRegion.field_h = new byte[(7 + PlayerStatSortCriterion.field_p) / 8];
           PlayerContextMenu.field_i = null;
@@ -51,7 +51,7 @@ final class ConsoleTokenCursor {
           DelayedServerPacket.field_h = 0;
           mi.field_d = -1;
           MusicPatchNode.field_o = -1;
-          fh.field_b = 0;
+          SharedSpriteTables.field_b = 0;
           if (param6.field_jb == null) {
             param6.field_jb = new IntrusiveDeque();
           }
@@ -64,7 +64,7 @@ final class ConsoleTokenCursor {
           ProxyAuthenticationRequiredException.field_d = param4.field_jb;
           ProxyAuthenticationRequiredException.field_d.clear(22997);
           TrinketSlot.field_Eb = new DualLinkHashTable(param3);
-          mg.field_c = param7;
+          PlayerInputFactory.field_c = param7;
           TextFieldNode.field_Ib = 0L;
           if (param1 <= 114) {
             ConsoleTokenCursor.a(123, 125, 58, -75, 34, -38, 61, 107, -70);

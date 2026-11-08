@@ -3,7 +3,7 @@
  */
 abstract class ContentTransitionDialog extends ResizableModalPanel {
     private int field_W;
-    private ic field_X;
+    private RegistrationRequestState field_X;
     private UiWidget field_V;
     static String field_S;
     private int field_T;
@@ -20,7 +20,7 @@ abstract class ContentTransitionDialog extends ResizableModalPanel {
             this.field_ab.c((byte) -109);
           }
           if (param1 <= 50) {
-            this.field_X = (ic) null;
+            this.field_X = (RegistrationRequestState) null;
           }
           if (param0 == null) {
             this.field_ab = new AlphaContainer();
@@ -96,11 +96,11 @@ abstract class ContentTransitionDialog extends ResizableModalPanel {
           ContentTransitionDialog.a(-65, false, -66, (MusicTrack) null, -42, true);
         }
         if (param2 < 0 ||
-          param2 >= sk.field_d.field_o) {
+          param2 >= LoadingProgressSupport.field_d.field_o) {
           return;
         }
         try {
-          sk.field_d.a(param1, 1000000, param3, -9017, param2, param4, param0);
+          LoadingProgressSupport.field_d.a(param1, 1000000, param3, -9017, param2, param4, param0);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "mu.D(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
         }

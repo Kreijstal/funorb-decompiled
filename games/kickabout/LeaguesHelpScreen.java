@@ -80,7 +80,7 @@ final class LeaguesHelpScreen extends PagedHelpScreen {
         }
         if (TeamSelectionView.field_p == null) {
           TeamSelectionView.field_p = new WidgetTheme();
-          TeamSelectionView.field_p.initializeRenderers(gf.field_a, 3422);
+          TeamSelectionView.field_p.initializeRenderers(ModelMaterial.field_a, 3422);
           TeamSelectionView.field_p.field_a = EmailSyntaxValidator.field_k;
           TeamSelectionView.field_p.field_m = 0;
           TeamSelectionView.field_p.field_p = 4;
@@ -112,9 +112,9 @@ final class LeaguesHelpScreen extends PagedHelpScreen {
         var10 = Kickabout.field_G;
         super.drawScreen(param0, param1);
         if (0 == this.pageIndex) {
-          ms.a(cd.field_b, 40 + this.slideOffsetX, 280, true, 0, 263);
+          MusicVolumeSupport.drawMessagePanel(GuestLoginSupport.field_b, 40 + this.slideOffsetX, 280, true, 0, 263);
           SoftwareRasterizer.fillRoundedRectangleBlended(350 + this.slideOffsetX, 144, 226, 232, 10, 65793, 140);
-          un.field_d.a(ic.field_b.toLowerCase(), 370 + this.slideOffsetX, 172, 16777215, -1);
+          un.field_d.a(RegistrationRequestState.field_b.toLowerCase(), 370 + this.slideOffsetX, 172, 16777215, -1);
           var3 = this.slideOffsetX + 370;
           SoftwareRasterizer.fillRectangleAlpha(var3, 186, 184, 174, 16777215, 30);
           SoftwareRasterizer.drawRectangleAlpha(var3 - 1, 185, 186, 176, 16777215, 128);
@@ -176,7 +176,7 @@ final class LeaguesHelpScreen extends PagedHelpScreen {
         var9 = Kickabout.field_G;
         try {
           for (var1_int = 0; var1_int < IconButtonPainter.field_b.length; var1_int++) {
-            var2_ref_gm = (RenderedFootballer) (sh.field_a.field_P[AccountRegistrationPanel.field_G][1 + var1_int]);
+            var2_ref_gm = (RenderedFootballer) (LineupPositionSupport.field_a.field_P[AccountRegistrationPanel.field_G][1 + var1_int]);
             var3 = null;
             var4 = 0;
             if (var2_ref_gm.dashCooldown > 0) {
@@ -194,11 +194,11 @@ final class LeaguesHelpScreen extends PagedHelpScreen {
               var6 = IntKeyLookup.a((byte) -114, var2_ref_gm.field_bb >> 16);
               if (InstrumentNoteMask.field_i == 256) {
                 var7 = var4 >> 1;
-                eo.a((byte[]) (var3), -var7 + var5Lifetime1, -var7 + var6, var4);
+                SoftwareDrawingSupport.a((byte[]) (var3), -var7 + var5Lifetime1, -var7 + var6, var4);
               } else {
                 var7 = InstrumentNoteMask.field_i * var4 >> 8;
                 var8 = var7 >> 1;
-                eo.a((byte[]) (var3), -var8 + var5Lifetime1, -var8 + var6, var4, var7);
+                SoftwareDrawingSupport.a((byte[]) (var3), -var8 + var5Lifetime1, -var8 + var6, var4, var7);
               }
             }
           }

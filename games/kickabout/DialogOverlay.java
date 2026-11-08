@@ -168,9 +168,9 @@ final class DialogOverlay implements OverlayLayer {
         var41 = Kickabout.field_G;
         try {
           stackIn_3_0 = ShopPlayerSlot.field_Jb;
-          stackIn_3_1 = param5 * (sh.field_c * 4 + 8);
+          stackIn_3_1 = param5 * (LineupPositionSupport.field_c * 4 + 8);
           stackIn_4_2 = (ig.field_f == ShopPlayerSlot.field_Jb);
-          var7_int = ((ScrollPane) (Object) stackIn_3_0).a(stackIn_3_1, stackIn_4_2, param0, 2, param1, (2 + sh.field_c) * 2) ? 1 : 0;
+          var7_int = ((ScrollPane) (Object) stackIn_3_0).a(stackIn_3_1, stackIn_4_2, param0, 2, param1, (2 + LineupPositionSupport.field_c) * 2) ? 1 : 0;
           var8 = ShopPlayerSlot.field_Jb.field_Ab.field_jb;
           var9 = MonotonicClock.monotonicMillis(97);
           var11 = null;
@@ -210,7 +210,7 @@ final class DialogOverlay implements OverlayLayer {
               }
               stackIn_10_0.field_zb = new UiLayoutNode(stackIn_10_3, stackIn_11_4);
               var12.addChild((byte) -120, var12.field_zb);
-              var12.field_Sb = new UiLayoutNode[ss.field_j];
+              var12.field_Sb = new UiLayoutNode[UiKeyRoutingSupport.field_j];
               var12.field_Pb = new UiLayoutNode(0L, (UiLayoutNode) null);
               if ((var14 & 1 << TeamSelectionView.field_u) != 0) {
                 var12.field_zb.addChild((byte) -119, var12.field_Pb);
@@ -234,7 +234,7 @@ final class DialogOverlay implements OverlayLayer {
               var43.field_p = 1;
               var44.field_p = 1;
               var45.field_p = 1;
-              for (var18_int = 0; ss.field_j > var18_int; var18_int++) {
+              for (var18_int = 0; UiKeyRoutingSupport.field_j > var18_int; var18_int++) {
                 var12.field_Sb[var18_int] = new UiLayoutNode(0L, (UiLayoutNode) null);
                 if ((var14 & 1 << var18_int + ResourceArchive.field_h) != 0) {
                   var12.field_zb.addChild((byte) -122, var12.field_Sb[var18_int]);
@@ -300,7 +300,7 @@ final class DialogOverlay implements OverlayLayer {
             var21 = var12.field_zb;
             var12.field_zb.field_mb = 0;
             var21.field_q = 0;
-            for (var22_int = 0; var22_int < ss.field_j; var22_int++) {
+            for (var22_int = 0; var22_int < UiKeyRoutingSupport.field_j; var22_int++) {
               var12.field_Sb[var22_int].field_N = null;
               var23 = var12.field_Sb[var22_int];
               var12.field_Sb[var22_int].field_mb = 0;
@@ -371,7 +371,7 @@ final class DialogOverlay implements OverlayLayer {
                   }
                   else {
                     if (2 != var12.field_Mb) {
-                      var12.field_Ib.field_E = ph.field_d;
+                      var12.field_Ib.field_E = AudioOutputSupport.field_d;
                     } else {
                       var12.field_Lb.field_E = TextPromptDialog.field_Hb;
                     }
@@ -379,14 +379,14 @@ final class DialogOverlay implements OverlayLayer {
                 }
               }
               if (null != var12.field_Lb.field_E) {
-                var12.field_Lb.setBounds(true, 68, 0, var31, sh.field_c);
+                var12.field_Lb.setBounds(true, 68, 0, var31, LineupPositionSupport.field_c);
               } else {
-                var12.field_Ib.setBounds(true, 68, 0, var31, sh.field_c);
+                var12.field_Ib.setBounds(true, 68, 0, var31, LineupPositionSupport.field_c);
               }
               var12.field_Jb.field_E = BitmapFont.a(var12.field_Jb.field_X, var32, 78);
               stackIn_64_0 = var12.field_Jb;
               stackIn_65_1 = !(param1);
-              ((UiLayoutNode) (Object) stackIn_64_0).setBounds(stackIn_65_1, 78, 70, var31, sh.field_c);
+              ((UiLayoutNode) (Object) stackIn_64_0).setBounds(stackIn_65_1, 78, 70, var31, LineupPositionSupport.field_c);
               if (var12.field_Jb.field_gb &&
                 !var12.field_Jb.field_E.equals(var32)) {
                 UrlRequest.field_e = var32;
@@ -394,19 +394,19 @@ final class DialogOverlay implements OverlayLayer {
               var12.field_kc.field_E = Integer.toString(var12.field_gc);
               if (!var12.field_ic) {
                 var12.field_kc.field_A = 1;
-                var12.field_kc.setBounds(true, 48, 150, var31, sh.field_c);
+                var12.field_kc.setBounds(true, 48, 150, var31, LineupPositionSupport.field_c);
               } else {
                 var12.field_kc.field_A = 2;
                 var12.field_jc.field_E = "/" + var12.field_bc;
                 var33_int = (-var12.field_jc.field_X.a("/") + 348) / 2;
-                var12.field_kc.setBounds(true, var33_int - 150, 150, var31, sh.field_c);
-                var12.field_jc.setBounds(true, -var33_int + 198, var33_int, var31, sh.field_c);
+                var12.field_kc.setBounds(true, var33_int - 150, 150, var31, LineupPositionSupport.field_c);
+                var12.field_jc.setBounds(true, -var33_int + 198, var33_int, var31, LineupPositionSupport.field_c);
               }
               var12.field_Hb.field_E = Integer.toString(var12.field_Ob);
-              var12.field_Hb.setBounds(true, 48, 200, var31, sh.field_c);
+              var12.field_Hb.setBounds(true, 48, 200, var31, LineupPositionSupport.field_c);
               stackIn_75_0 = (NetworkArchiveRequest.field_t) ? 250 : 200;
               var33_intLifetime1 = stackIn_75_0;
-              var12.field_zb.setBounds(true, -var33_intLifetime1 + 365 - 2, var33_intLifetime1, var31, sh.field_c);
+              var12.field_zb.setBounds(true, -var33_intLifetime1 + 365 - 2, var33_intLifetime1, var31, LineupPositionSupport.field_c);
               var34_int = mj.field_b;
               if ((var14Lifetime1 & 1 << TeamSelectionView.field_u) != 0) {
                 var50_ref = TextFieldValidator.field_d[var12.field_Wb];
@@ -454,11 +454,11 @@ final class DialogOverlay implements OverlayLayer {
                 ((UiLayoutNode) (Object) stackIn_101_0).setBounds(stackIn_102_1, var53_ref.field_o, var34_int, 0, var12.field_zb.field_mb);
                 var34_int = var34_int + (var53_ref.field_o + mj.field_b);
               }
-              if (fh.field_a != null) {
-                for (var36Lifetime1 = 0; ss.field_j > var36Lifetime1; var36Lifetime1++) {
-                  if (fh.field_a[var36Lifetime1] != null &&
+              if (SharedSpriteTables.field_a != null) {
+                for (var36Lifetime1 = 0; UiKeyRoutingSupport.field_j > var36Lifetime1; var36Lifetime1++) {
+                  if (SharedSpriteTables.field_a[var36Lifetime1] != null &&
                     (1 << var36Lifetime1 + ResourceArchive.field_h & var14Lifetime1) != 0) {
-                    var42 = fh.field_a[var36Lifetime1][255 & var12.field_Eb[var36Lifetime1]];
+                    var42 = SharedSpriteTables.field_a[var36Lifetime1][255 & var12.field_Eb[var36Lifetime1]];
                     var54 = var42;
                     var12.field_Sb[var36Lifetime1].field_N = var42;
                     var12.field_Sb[var36Lifetime1].setBounds(true, var54.field_o, var34_int, 0, var12.field_zb.field_mb);
@@ -472,7 +472,7 @@ final class DialogOverlay implements OverlayLayer {
                 var12.field_Rb.field_s = var12.field_Rb.field_s + var36Lifetime2;
                 var12.field_Gb.field_s = var12.field_Gb.field_s + var36Lifetime2;
                 var12.field_cc.field_s = var12.field_cc.field_s + var36Lifetime2;
-                for (var37_int = 0; var37_int < ss.field_j; var37_int++) {
+                for (var37_int = 0; var37_int < UiKeyRoutingSupport.field_j; var37_int++) {
                   dupTemp$0 = var12.field_Sb[var37_int];
                   dupTemp$0.field_s = dupTemp$0.field_s + var36Lifetime2;
                 }
@@ -493,8 +493,8 @@ final class DialogOverlay implements OverlayLayer {
                   var12.field_Zb.field_E = var40 + ":" + var39 / 10 + var39 % 10 + ":" + var38_int / 10 + var38_int % 10;
                 }
               }
-              var12.field_Zb.setBounds(true, -365 + var12.field_q, 365, var31, sh.field_c);
-              var31 = var31 + sh.field_c;
+              var12.field_Zb.setBounds(true, -365 + var12.field_q, 365, var31, LineupPositionSupport.field_c);
+              var31 = var31 + LineupPositionSupport.field_c;
               if (var12.field_Kb != null) {
                 var31 += 2;
                 var37 = new StringBuilder(64);
@@ -507,18 +507,18 @@ final class DialogOverlay implements OverlayLayer {
                 var38 = var37.toString();
                 var12.field_fc.field_E = var38;
                 var39Lifetime1 = var12.field_fc.field_X.b(var38, -(var12.field_fc.field_kb * 2) + var12.field_q);
-                var12.field_fc.setBounds(true, var12.field_q, 0, var31, sh.field_c * var39Lifetime1);
-                var31 = var31 + sh.field_c * var39Lifetime1;
+                var12.field_fc.setBounds(true, var12.field_q, 0, var31, LineupPositionSupport.field_c * var39Lifetime1);
+                var31 = var31 + LineupPositionSupport.field_c * var39Lifetime1;
               }
               if (var12.field_hc) {
                 var12.field_dc.field_E = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, TextButton.field_x, new String[]{var32});
-                var12.field_dc.setBounds(true, -(2 * DiskCacheWorker.field_b) + var12.field_q, DiskCacheWorker.field_b, var31, sh.field_c);
-                var31 = var31 + sh.field_c;
+                var12.field_dc.setBounds(true, -(2 * DiskCacheWorker.field_b) + var12.field_q, DiskCacheWorker.field_b, var31, LineupPositionSupport.field_c);
+                var31 = var31 + LineupPositionSupport.field_c;
               }
               if (var12.field_Tb) {
                 var12.field_Yb.field_E = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, SetLagCommand.field_C, new String[]{var32});
-                var12.field_Yb.setBounds(true, var12.field_q - 2 * DiskCacheWorker.field_b, DiskCacheWorker.field_b, var31, sh.field_c);
-                var31 = var31 + sh.field_c;
+                var12.field_Yb.setBounds(true, var12.field_q - 2 * DiskCacheWorker.field_b, DiskCacheWorker.field_b, var31, LineupPositionSupport.field_c);
+                var31 = var31 + LineupPositionSupport.field_c;
               }
             }
             var33 = AuctionLogEntry.a(var12.field_Ab, var32, (byte) 112);
@@ -527,9 +527,9 @@ final class DialogOverlay implements OverlayLayer {
             if (var33 != null) {
               var34_intLifetime1 = var12.field_Bb.field_X.b(var33, var12.field_q - (DiskCacheWorker.field_b + DiskCacheWorker.field_b));
               var12.field_Bb.field_E = var33;
-              var12.field_Bb.field_U = 256 * var12.field_Db / mg.field_c;
-              var12.field_Bb.setBounds(true, -(DiskCacheWorker.field_b * 2) + var12.field_q, DiskCacheWorker.field_b, var31, var34_intLifetime1 * sh.field_c);
-              var31 = var31 + sh.field_c * var34_intLifetime1;
+              var12.field_Bb.field_U = 256 * var12.field_Db / PlayerInputFactory.field_c;
+              var12.field_Bb.setBounds(true, -(DiskCacheWorker.field_b * 2) + var12.field_q, DiskCacheWorker.field_b, var31, var34_intLifetime1 * LineupPositionSupport.field_c);
+              var31 = var31 + LineupPositionSupport.field_c * var34_intLifetime1;
             }
             if (var7_int == 0) {
               var12.field_L = var31 - var12.field_mb;
@@ -537,7 +537,7 @@ final class DialogOverlay implements OverlayLayer {
             if (var13 != 0) {
               ShopPlayerSlot.field_Jb.field_Ab.positionAfter(true, 2, var12, (UiLayoutNode) (var11));
             }
-            for (var34_intLifetime2 = 0; ss.field_j > var34_intLifetime2; var34_intLifetime2++) {
+            for (var34_intLifetime2 = 0; UiKeyRoutingSupport.field_j > var34_intLifetime2; var34_intLifetime2++) {
               if (var12.field_Sb[var34_intLifetime2].field_gb) {
                 if (null != ca.field_g) {
                   if (null != ca.field_g[var34_intLifetime2]) {
@@ -561,13 +561,13 @@ final class DialogOverlay implements OverlayLayer {
               } else {
                 var34Lifetime2 = vj.field_f;
               }
-              UrlRequest.field_e = dr.field_e + " - " + var34Lifetime2;
+              UrlRequest.field_e = ClassNameSupport.field_e + " - " + var34Lifetime2;
             }
             if (var12.field_cc.field_gb) {
               if (var12.field_Ub) {
                 stackIn_168_0 = qn.field_d;
               } else {
-                stackIn_168_0 = gf.field_i;
+                stackIn_168_0 = ModelMaterial.field_i;
               }
               UrlRequest.field_e = stackIn_168_0;
             }
@@ -575,12 +575,12 @@ final class DialogOverlay implements OverlayLayer {
               if (!var12.field_Xb &&
                 !var12.field_hc) {
                 if (var12.field_ic) {
-                  stackIn_176_0 = gf.field_f;
+                  stackIn_176_0 = ModelMaterial.field_f;
                 } else {
                   stackIn_176_0 = PagedHelpScreen.field_B;
                 }
               } else {
-                stackIn_176_0 = ar.field_f;
+                stackIn_176_0 = BrowserUiSupport.field_f;
               }
               UrlRequest.field_e = stackIn_176_0;
             }
@@ -636,7 +636,7 @@ final class DialogOverlay implements OverlayLayer {
         RuntimeException decompiledCaughtException = null;
         var6 = Kickabout.field_G;
         try {
-          if (param0.equals(ck.field_e)) {
+          if (param0.equals(TextPromptState.field_e)) {
             stackIn_3_0 = SortCriterion.field_a;
             return stackIn_3_0;
           }
@@ -654,7 +654,7 @@ final class DialogOverlay implements OverlayLayer {
             var3[incrementValue$1] = var5;
             var5 = (ConsoleExpression) (var2.c(33));
           }
-          ck.field_e = param0;
+          TextPromptState.field_e = param0;
           SortCriterion.field_a = var3;
           stackIn_11_0 = var3;
           return stackIn_11_0;
@@ -693,7 +693,7 @@ final class DialogOverlay implements OverlayLayer {
         PcmSampleStream var5;
         var4 = Kickabout.field_G;
         if (NineSlicePanelPainter.field_e ||
-          ds.field_g) {
+          ModelMaterialDecoder.field_g) {
           var3 = (PopupDialog) (ScrollPane.field_Jb.g(param0 ^ -24018));
           while (var3 != null) {
             if (var3 instanceof AuctionBidDialog ||
@@ -712,7 +712,7 @@ final class DialogOverlay implements OverlayLayer {
         if (su.field_c == null) {
           stackIn_22_0 = param1;
           if (stackIn_22_0 &&
-            vd.a((byte) 82)) {
+            AccountNameCheckState.a((byte) 82)) {
             su.field_c = (PopupDialog) (ScrollPane.field_Jb.removeFirst((byte) 125));
           }
         } else {

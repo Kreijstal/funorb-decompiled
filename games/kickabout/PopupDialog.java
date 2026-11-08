@@ -32,7 +32,7 @@ abstract class PopupDialog extends IntrusiveNode {
           return;
         }
         this.onUpdate(3, param1);
-        this.field_j.a(param0 ^ 4642, this.a(true, us.field_j, ArrayWidgetContainer.field_x), this.a(true, TabStrip.field_Eb, TrinketIcon.field_yb));
+        this.field_j.a(param0 ^ 4642, this.a(true, TutorialCaptionSupport.field_j, ArrayWidgetContainer.field_x), this.a(true, TabStrip.field_Eb, TrinketIcon.field_yb));
         if (this.field_n == 0 &&
           0 == this.field_m) {
           ShopPlayerSlot.c(this.getOpenSoundId(false), -104);
@@ -258,7 +258,7 @@ abstract class PopupDialog extends IntrusiveNode {
           var5 = -(95 * var4_int) - 5 * (var4_int - 1) + 640 >> 1;
           for (var6 = 0; this.field_i.length > var6; var6++) {
             param1[var6] = param1[var6].toLowerCase();
-            this.field_i[var6] = eo.createRenderedButton(param1[var6], 7126504, un.field_d, 90, false);
+            this.field_i[var6] = SoftwareDrawingSupport.createRenderedButton(param1[var6], 7126504, un.field_d, 90, false);
             var7 = this.field_k + this.field_r + (-this.field_i[var6].field_mb - 10);
             this.field_i[var6].field_s = 100 * var6 + var5;
             this.field_i[var6].field_J = var7;

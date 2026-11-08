@@ -261,7 +261,7 @@ abstract class MeshObject {
           }
           if (StreetSceneryLoader.field_k) {
             ReceivedAuctionItem.f((byte) 119);
-            vr.a(-2);
+            PitchSurfaceLoader.a(-2);
             RasterStateSnapshot.a(0);
             StreetSceneryLoader.field_k = false;
           }

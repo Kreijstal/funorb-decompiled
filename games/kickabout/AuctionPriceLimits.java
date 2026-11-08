@@ -1,0 +1,51 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class AuctionPriceLimits {
+    static int[] field_b;
+    static OffscreenPlayerArrow[] field_a;
+    static String field_c;
+    static UiLayoutNode field_d;
+
+    final static int maximumAuctionPrice(PlayerStats param0, int param1) {
+        int var2_int = 0;
+        RuntimeException var2 = null;
+        int stackIn_4_0 = 0;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_8_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          var2_int = 5 * PasswordLoginCredentials.a(param0, -576054046) / 3;
+          if (param1 < ~var2_int) {
+            var2_int = 30;
+          }
+          stackIn_4_0 = var2_int;
+          return stackIn_4_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          stackIn_7_0 = var2;
+          stackIn_7_1 = new StringBuilder().append("af.B(");
+          if (param0 == null) {
+            stackIn_8_2 = "null";
+          } else {
+            stackIn_8_2 = "{...}";
+          }
+          throw GameSoundEffect.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+        }
+    }
+
+    public static void releaseStatics(byte param0) {
+        field_d = null;
+        field_c = null;
+        field_b = null;
+        field_a = null;
+        int var1 = -21 / ((param0 - 9) / 34);
+    }
+
+    static {
+        field_b = new int[]{156, 154};
+        field_c = "<%0> is not on your friend list.";
+    }
+}

@@ -1042,9 +1042,9 @@ final class MidiPcmStream extends PcmStream {
           var2 = null;
           var3 = MySquadScreen.c(-93, 359);
           if (param0) {
-            stackIn_7_0 = go.a(0, (byte) -56);
+            stackIn_7_0 = PitchProjectionSupport.worldToScreenY(0, (byte) -56);
           } else {
-            stackIn_7_0 = go.a(1344, (byte) -56);
+            stackIn_7_0 = PitchProjectionSupport.worldToScreenY(1344, (byte) -56);
           }
           var4 = stackIn_7_0;
           if (RankingsScreen.field_C != 0) {
@@ -1108,7 +1108,7 @@ final class MidiPcmStream extends PcmStream {
           }
           if (param0 &&
             3 == RankingsScreen.field_C) {
-            var5 = go.a(-87, (byte) -56);
+            var5 = PitchProjectionSupport.worldToScreenY(-87, (byte) -56);
             for (var6 = 0; var6 < 5; var6++) {
               ListRow.a(-12376, MySquadScreen.c(-121, (-5 + MatchingTextValidator.field_k.field_o) * var6 - 32), var5, MatchingTextValidator.field_k);
             }
@@ -1119,9 +1119,9 @@ final class MidiPcmStream extends PcmStream {
             stackIn_48_0 = (!param0) ? 0 : 3;
             var7 = stackIn_48_0;
             for (var8 = 0; 5 > var8; var8++) {
-              var9 = go.a(var8 * 290 - 40, (byte) -56);
-              ListRow.a(-12376, var5Lifetime1, var9, so.field_d[0 + var7]);
-              ListRow.a(-12376, var6Lifetime1, var9, so.field_d[1 + var7]);
+              var9 = PitchProjectionSupport.worldToScreenY(var8 * 290 - 40, (byte) -56);
+              ListRow.a(-12376, var5Lifetime1, var9, AppletContextSupport.field_d[0 + var7]);
+              ListRow.a(-12376, var6Lifetime1, var9, AppletContextSupport.field_d[1 + var7]);
             }
           }
           ListRow.a(-12376, var3, var4, (Sprite) (var2));
@@ -1130,7 +1130,7 @@ final class MidiPcmStream extends PcmStream {
           }
           if (!param0 &&
             3 == RankingsScreen.field_C) {
-            var5Lifetime2 = go.a(1384, (byte) -56);
+            var5Lifetime2 = PitchProjectionSupport.worldToScreenY(1384, (byte) -56);
             for (var6Lifetime2 = 0; var6Lifetime2 < 5; var6Lifetime2++) {
               ListRow.a(param1 - 12262, MySquadScreen.c(-126, var6Lifetime2 * (-5 + MatchingTextValidator.field_k.field_o) - 32), var5Lifetime2, MatchingTextValidator.field_k);
             }

@@ -83,7 +83,7 @@ final class mi {
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!cb.a(param3, param1, (byte) -75, param4, param0)) {
+          if (!PitchPurchaseSupport.a(param3, param1, (byte) -75, param4, param0)) {
             return false;
           }
           if (1 == param3) {
@@ -97,8 +97,8 @@ final class mi {
             field_d = -66;
           }
           IntDoubleCommand.field_A = param0;
-          var6 = te.a(-94, NameSuggestionsPanel.field_E, param4, ic.field_a, FullscreenErrorDialog.field_S);
-          ad.a(var6, (byte) -115);
+          var6 = te.a(-94, NameSuggestionsPanel.field_E, param4, RegistrationRequestState.field_a, FullscreenErrorDialog.field_S);
+          LocalizedTextLoader.showQuickChatMenu(var6, (byte) -115);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -148,24 +148,24 @@ final class TooltipOverlay implements OverlayLayer {
           return;
         }
         var2 = ArrayWidgetContainer.field_x;
-        var3 = us.field_j + 18;
+        var3 = TutorialCaptionSupport.field_j + 18;
         var5 = 44 / ((param0 - 50) / 45);
         var4 = ConsoleTokenCursor.field_d;
         if (AuctionItem.field_e == 2) {
           var6 = new String[3];
-          var6[0] = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, LoadingProgressDialog.field_Z, new String[]{ad.formatCurrencyAmount(ReflectionCheck.field_k, 26300)});
+          var6[0] = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, LoadingProgressDialog.field_Z, new String[]{LocalizedTextLoader.formatCurrencyAmount(ReflectionCheck.field_k, 26300)});
           if (SoundStreamHandle.field_h != 0) {
             stackIn_20_0 = var6;
             stackIn_20_1 = 1;
             if (0 >= SoundStreamHandle.field_h) {
-              stackIn_21_2 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, DualLinkDequeIterator.field_b, new String[]{ad.formatCurrencyAmount(Math.abs(SoundStreamHandle.field_h), 26300)});
+              stackIn_21_2 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, DualLinkDequeIterator.field_b, new String[]{LocalizedTextLoader.formatCurrencyAmount(Math.abs(SoundStreamHandle.field_h), 26300)});
             } else {
-              stackIn_21_2 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, HighScoreQuery.field_h, new String[]{ad.formatCurrencyAmount(Math.abs(SoundStreamHandle.field_h), 26300)});
+              stackIn_21_2 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, HighScoreQuery.field_h, new String[]{LocalizedTextLoader.formatCurrencyAmount(Math.abs(SoundStreamHandle.field_h), 26300)});
             }
             stackIn_20_0[stackIn_20_1] = stackIn_21_2;
           }
           if (SoundStreamHandle.field_h != 0) {
-            var6[2] = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, PromotionDialog.field_F, new String[]{ad.formatCurrencyAmount(SoundStreamHandle.field_h + ReflectionCheck.field_k, 26300)});
+            var6[2] = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, PromotionDialog.field_F, new String[]{LocalizedTextLoader.formatCurrencyAmount(SoundStreamHandle.field_h + ReflectionCheck.field_k, 26300)});
           }
           var7 = 0;
           var8 = 0;
@@ -204,13 +204,13 @@ final class TooltipOverlay implements OverlayLayer {
             AccountTermsPanel.field_G.a((byte) 77, 3 + var2, ok.field_c, VerticalScrollbar.field_Ib, MessageDialog.field_x, LinkTextPainter.field_c, var3 + 3, CachedListingRow.field_j);
           } else {
             if (AuctionItem.field_e == 6) {
-              var6_int = pc.field_a.getWidth(0) + 6;
-              var7 = pc.field_a.getHeight(15) + 7;
+              var6_int = DisplayNameUiSupport.field_a.getWidth(0) + 6;
+              var7 = DisplayNameUiSupport.field_a.getHeight(15) + 7;
               var26 = GameModesHelpScreen.a(var2, var7, var6_int, 0, var3);
               var2 = var26[0];
               var3 = var26[1];
               SoftwareRasterizer.fillRoundedRectangleBlended(-2 + var2, var3 - 2, var6_int + 4, var7 + 4, 6, 65793, 200);
-              pc.field_a.drawCentered((var7 >> 1) + var3, 23, var2 + (var6_int >> 1));
+              DisplayNameUiSupport.field_a.drawCentered((var7 >> 1) + var3, 23, var2 + (var6_int >> 1));
             } else {
               if (AuctionItem.field_e == 1) {
                 var6_int = ((BitmapFont) ((Object) var4)).b(LeaderboardParticipant.field_h, 200);

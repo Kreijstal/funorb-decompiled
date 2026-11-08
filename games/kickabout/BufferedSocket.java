@@ -93,7 +93,7 @@ final class BufferedSocket implements Runnable {
         if (!param0) {
           return;
         }
-        fj.a(-45);
+        fj.showLoadingProgressDialog(-45);
         IndexedSpriteState.b(38, 4);
     }
 

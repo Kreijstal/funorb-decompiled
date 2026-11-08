@@ -7,7 +7,7 @@ final class AuctionListingDialog extends MessageDialog {
     static String field_K;
     private boolean field_G;
     static int field_I;
-    static r field_H;
+    static ClientProtocolStage field_H;
     static String field_F;
 
     AuctionListingDialog(AuctionListing param0, boolean param1) {
@@ -25,7 +25,7 @@ final class AuctionListingDialog extends MessageDialog {
           dupTemp$0.field_s = dupTemp$0.field_s - 30;
           var4 = pg.a(false, 21)[1];
           var5 = 20 + un.field_d.a(var4);
-          this.field_i[1] = eo.createRenderedButton(var4, 7126504, un.field_d, var5, false);
+          this.field_i[1] = SoftwareDrawingSupport.createRenderedButton(var4, 7126504, un.field_d, var5, false);
           this.field_i[1].field_J = this.field_i[0].field_J;
           this.field_i[1].field_s = this.field_i[0].field_s + (this.field_i[0].field_q + 20);
         } catch (RuntimeException runtimeException) {
@@ -80,7 +80,7 @@ final class AuctionListingDialog extends MessageDialog {
           field_L[var0] = new IntrusiveNodeHashTable(256);
         }
         field_K = "Waiting to receive the game state...";
-        field_H = new r();
+        field_H = new ClientProtocolStage();
         field_F = "Find opponents";
     }
 }

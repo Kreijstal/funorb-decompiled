@@ -64,9 +64,9 @@ final class DropTargetWidget extends SingleChildContainer {
     final static java.awt.Canvas l(int param0) {
         if (param0 != 64) {
           field_B = (int[]) null;
-          return SplashScreen.field_m == null ? ic.field_d : (java.awt.Canvas) ((Object) SplashScreen.field_m);
+          return SplashScreen.field_m == null ? RegistrationRequestState.field_d : (java.awt.Canvas) ((Object) SplashScreen.field_m);
         }
-        return SplashScreen.field_m == null ? ic.field_d : (java.awt.Canvas) ((Object) SplashScreen.field_m);
+        return SplashScreen.field_m == null ? RegistrationRequestState.field_d : (java.awt.Canvas) ((Object) SplashScreen.field_m);
     }
 
     public static void k(int param0) {

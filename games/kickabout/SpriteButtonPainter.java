@@ -140,10 +140,10 @@ final class SpriteButtonPainter extends TextWidgetPainter {
           while (var5 < 4) {
             incrementValue$4 = var4;
             var4++;
-            ws.field_b[param0][var5] = Integer.parseInt(var3[incrementValue$4]);
+            AccountNameCharacterSupport.field_b[param0][var5] = Integer.parseInt(var3[incrementValue$4]);
             incrementValue$5 = var4;
             var4++;
-            ws.field_d[param0][var5] = Integer.parseInt(var3[incrementValue$5]);
+            AccountNameCharacterSupport.field_d[param0][var5] = Integer.parseInt(var3[incrementValue$5]);
             var5++;
           }
           return;

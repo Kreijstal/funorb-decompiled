@@ -15,7 +15,7 @@ final class vb {
     static byte[][] field_g;
     static Sprite field_l;
 
-    final static long a(int param0, CharSequence param1) {
+    final static long hashString31(int param0, CharSequence param1) {
         int var5 = 0;
         int var2_int = 0;
         RuntimeException var2 = null;
@@ -49,7 +49,7 @@ final class vb {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_f = null;
         field_i = null;
         field_l = null;
@@ -61,7 +61,7 @@ final class vb {
         }
     }
 
-    final static boolean b(int param0) {
+    final static boolean hasSavedInputLayout(int param0) {
         if (param0 < 117) {
           return false;
         }
@@ -137,7 +137,7 @@ final class vb {
             }
           }
           if (!param0) {
-            vb.b(-46);
+            vb.hasSavedInputLayout(-46);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -46,7 +46,7 @@ final class vp implements OverlayLayer {
           if (FormationAgent.field_l != 0 &&
             FormationAgent.field_l != 1) {
             BuyPitchDialog.field_K = new byte[5][][][];
-            cb.field_b = new byte[5][][];
+            PitchPurchaseSupport.field_b = new byte[5][][];
             var3 = 5;
             for (var4 = 0; var4 < 5; var4++) {
               var3 = var3 + HelpTipDialog.field_I[var4][5].field_e.length / 3;
@@ -59,10 +59,10 @@ final class vp implements OverlayLayer {
               var6 = HelpTipDialog.field_I[var5][5];
               var7 = HelpTipDialog.field_I[var5][3];
               var12.a(var7, (byte) -107);
-              cb.field_b[var5] = new byte[8][];
+              PitchPurchaseSupport.field_b[var5] = new byte[8][];
               for (var8 = 0; var8 < 8; var8++) {
                 CanvasResizePolicy.a(var5, var12, var8 << 8, false, 2150);
-                cb.field_b[var5][var8] = MatchingTextValidator.a(16, BuyPitchDialog.field_F);
+                PitchPurchaseSupport.field_b[var5][var8] = MatchingTextValidator.a(16, BuyPitchDialog.field_F);
               }
               var12.a(var6, (byte) -107);
               var8Lifetime1 = (2 + var6.field_e.length) / 3;
@@ -82,7 +82,7 @@ final class vp implements OverlayLayer {
           }
           hq.field_a = true;
           BuyPitchDialog.field_K = (byte[][][][]) null;
-          cb.field_b = (byte[][][]) null;
+          PitchPurchaseSupport.field_b = (byte[][][]) null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -167,7 +167,7 @@ final class vp implements OverlayLayer {
             }
           } else {
             NetworkArchiveRequest.h(-15396);
-            ReceivedAuctionItem.a(qr.field_g, -1);
+            ReceivedAuctionItem.a(SessionUrlSupport.field_g, -1);
             AuctionTableWidget.a(6356832, (byte) -25);
           }
           this.field_i = this.field_i + 1;

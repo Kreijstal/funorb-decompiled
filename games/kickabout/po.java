@@ -32,7 +32,7 @@ final class po {
         field_d = null;
     }
 
-    final static boolean a(gg param0, byte param1, gg param2) {
+    final static boolean a(SocialPlayerRow param0, byte param1, SocialPlayerRow param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -44,7 +44,7 @@ final class po {
         RuntimeException decompiledCaughtException = null;
         var4 = Kickabout.field_G;
         try {
-          var3_int = param2.field_Cb - param0.field_Cb;
+          var3_int = param2.listIndex - param0.listIndex;
           if (param1 != -21) {
             return true;
           }
@@ -209,7 +209,7 @@ final class po {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static boolean $cfr$intArgs$a$d1a766881558(gg param0, int param1, gg param2) {
+    final static boolean $cfr$intArgs$a$d1a766881558(SocialPlayerRow param0, int param1, SocialPlayerRow param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -221,7 +221,7 @@ final class po {
         RuntimeException decompiledCaughtException = null;
         var4 = Kickabout.field_G;
         try {
-          var3_int = param2.field_Cb - param0.field_Cb;
+          var3_int = param2.listIndex - param0.listIndex;
           if (param1 != -21) {
             return true;
           }

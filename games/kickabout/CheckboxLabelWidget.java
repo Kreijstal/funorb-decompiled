@@ -27,7 +27,7 @@ final class CheckboxLabelWidget extends UiLayoutNode {
         if (Character.isISOControl(param0)) {
           return false;
         }
-        if (vt.a(param0, true)) {
+        if (AsciiCharacterSupport.isAsciiAlphanumeric(param0, true)) {
           return true;
         }
         if (param0 == 45) {
@@ -69,7 +69,7 @@ final class CheckboxLabelWidget extends UiLayoutNode {
           }
           et.field_d.participantStatus[0].controlledSlot = 0;
           HuffmanCodec.field_e = param0;
-          ic.field_i = false;
+          RegistrationRequestState.field_i = false;
           et.field_d.participantStatus[1].controlledSlot = 0;
           if (HuffmanCodec.field_e == 1) {
             EmailAvailabilityValidator.field_k.setPosition(29360128, false, 0, 107085824);
@@ -83,7 +83,7 @@ final class CheckboxLabelWidget extends UiLayoutNode {
                 if (4 != HuffmanCodec.field_e) {
                   if (HuffmanCodec.field_e != 5) {
                     if (6 == HuffmanCodec.field_e) {
-                      ld.field_f.setPosition(655360, param1, 0, 19005440);
+                      AccountInputValidationResult.field_f.setPosition(655360, param1, 0, 19005440);
                       vb.field_d = 1;
                       var5 = 0;
                       var2_intLifetime1 = var5;
@@ -99,7 +99,7 @@ final class CheckboxLabelWidget extends UiLayoutNode {
                         var8.setPosition(-13107200, false, 0, 22937600);
                         et.field_d.participantStatus[1].controlledSlot = 4;
                         var8.directionMask = 8;
-                        ld.field_f.directionMask = 4;
+                        AccountInputValidationResult.field_f.directionMask = 4;
                       } else {
                         if (HuffmanCodec.field_e == 8) {
                           vb.field_d = 3;
@@ -142,7 +142,7 @@ final class CheckboxLabelWidget extends UiLayoutNode {
                     vb.field_d = 3;
                   }
                 } else {
-                  ld.field_f.setPosition(42270720, false, 0, 41287680);
+                  AccountInputValidationResult.field_f.setPosition(42270720, false, 0, 41287680);
                   vb.field_d = 1;
                 }
               } else {
@@ -219,7 +219,7 @@ final class CheckboxLabelWidget extends UiLayoutNode {
                 if (!this.field_lb) {
                   stackIn_9_0 = SaveChangesDialog.field_F;
                 } else {
-                  stackIn_9_0 = gk.field_a;
+                  stackIn_9_0 = ChatComposeSupport.field_a;
                 }
                 stackIn_12_1 = (!this.field_Gb) ? 0 : 1;
                 var6 = stackIn_9_0[stackIn_12_1];
@@ -244,7 +244,7 @@ final class CheckboxLabelWidget extends UiLayoutNode {
               if (!this.field_lb) {
                 stackIn_24_0 = SaveChangesDialog.field_F;
               } else {
-                stackIn_24_0 = gk.field_a;
+                stackIn_24_0 = ChatComposeSupport.field_a;
               }
               stackIn_27_1 = (!this.field_Gb) ? 0 : 1;
               var6 = stackIn_24_0[stackIn_27_1];
@@ -261,7 +261,7 @@ final class CheckboxLabelWidget extends UiLayoutNode {
           if (!this.field_lb) {
             stackIn_48_0 = SaveChangesDialog.field_F;
           } else {
-            stackIn_48_0 = gk.field_a;
+            stackIn_48_0 = ChatComposeSupport.field_a;
           }
           stackIn_51_1 = (!this.field_Gb) ? 0 : 1;
           var6 = stackIn_48_0[stackIn_51_1];

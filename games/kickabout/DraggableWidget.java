@@ -70,9 +70,9 @@ final class DraggableWidget extends SingleChildContainer {
             SoftwareRasterizer.clearFramebuffer();
             var7.c(4, 4);
             SpritePixelSupport.adjustSpriteHsv(LobbyGameRecord.field_m, 0.0, 1.3, 1.2);
-            eo.a(LobbyGameRecord.field_m, 65793);
-            eo.a(LobbyGameRecord.field_m, 16777215);
-            eo.a(LobbyGameRecord.field_m, 7829367);
+            SoftwareDrawingSupport.a(LobbyGameRecord.field_m, 65793);
+            SoftwareDrawingSupport.a(LobbyGameRecord.field_m, 16777215);
+            SoftwareDrawingSupport.a(LobbyGameRecord.field_m, 7829367);
             AuctionListing.a(95, -22914, 14, 88, 22);
             var12 = new int[255];
             var11 = var12;
@@ -306,20 +306,20 @@ final class DraggableWidget extends SingleChildContainer {
           return;
         }
         LeaguesHelpScreen.field_E.updateInput(0, param2);
-        int var4 = dr.field_g.h(-113) ? 1 : 0;
+        int var4 = ClassNameSupport.field_g.h(-113) ? 1 : 0;
         if (WidgetContainer.field_A != 0 &&
           var4 == 0) {
           param2 = false;
           hq.b((byte) 114);
         }
         if (param2) {
-          dr.field_g.processClicks(param3, param0, (byte) -127);
+          ClassNameSupport.field_g.processClicks(param3, param0, (byte) -127);
         }
         int var6 = -116 % ((param1 - 17) / 36);
         if (var4 != 0) {
           LeaguesHelpScreen.field_E.updateInput(0, param2);
         }
-        int var5 = dr.field_g.getTotalWidth((byte) 49) + dr.field_g.field_F;
+        int var5 = ClassNameSupport.field_g.getTotalWidth((byte) 49) + ClassNameSupport.field_g.field_F;
         if (var5 > 640) {
           NumericDateInputWidget.field_I = NumericDateInputWidget.field_I + 5;
         } else {

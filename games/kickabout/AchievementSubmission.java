@@ -20,14 +20,14 @@ final class AchievementSubmission extends IntrusiveNode {
         RuntimeException var1 = null;
         var3 = Kickabout.field_G;
         try {
-          ad.field_c = new Sprite[AnimationSkeleton.field_g.length];
+          LocalizedTextLoader.field_c = new Sprite[AnimationSkeleton.field_g.length];
           if (param0 != 65280) {
             field_l = -68;
           }
           for (var1_int = 0; var1_int < AnimationSkeleton.field_g.length; var1_int++) {
-            ad.field_c[var1_int] = new Sprite(94, 84);
-            var2 = AuctionsHelpScreen.a(var1_int, (int) wk.a(255, 63), true, (int) wk.a(65280, param0 - 65217)).createModelMesh(100, 728, 20, -56, -20);
-            pe.a(var2, ad.field_c[var1_int], var1_int, 40);
+            LocalizedTextLoader.field_c[var1_int] = new Sprite(94, 84);
+            var2 = AuctionsHelpScreen.a(var1_int, (int) ClubStateFactory.a(255, 63), true, (int) ClubStateFactory.a(65280, param0 - 65217)).createModelMesh(100, 728, 20, -56, -20);
+            pe.a(var2, LocalizedTextLoader.field_c[var1_int], var1_int, 40);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -49,7 +49,7 @@ final class AchievementSubmission extends IntrusiveNode {
 
     final static void applyAndQueueManagerAction(ManagerAction param0, int param1) {
         try {
-          ic.field_h.applyAction(param0, AuctionLogEntry.e(15137), 0);
+          RegistrationRequestState.field_h.applyAction(param0, AuctionLogEntry.e(15137), 0);
           MusicPatchNode.field_h.addLast(param0, 3);
           if (param1 < 47) {
             field_h = (String) null;

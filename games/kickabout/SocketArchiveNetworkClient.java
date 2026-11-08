@@ -401,18 +401,18 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
         UiLayoutNode var7 = null;
         UiLayoutNode var3 = null;
         try {
-          DirectByteStorage.field_n = wa.a((byte) 126, "basic", param1, "display_name_changed");
-          RotaryDialPainter.field_d = new FriendsListPanel(0L, BroadcastServerCommand.field_D, le.field_a, ButtonMenuScreen.field_k);
+          DirectByteStorage.field_n = SpriteResourceSupport.loadNamedSprite((byte) 126, "basic", param1, "display_name_changed");
+          RotaryDialPainter.field_d = new FriendsListPanel(0L, BroadcastServerCommand.field_D, ExceptionTextSupport.field_a, ButtonMenuScreen.field_k);
           TournamentChampionDialog.field_F = new FriendsListPanel(0L, BroadcastServerCommand.field_D, CheatCodeListener.field_j, IsSixCommand.field_D);
           TriangleMesh.field_R = new UiLayoutNode(0L, (UiLayoutNode) null);
           MarkerSliderPainter.field_f = new UiLayoutNode(0L, ConsoleEvaluationException.field_e);
           MarkerSliderPainter.field_f.field_A = 1;
           AlphaContainer.field_E = new UiLayoutNode(0L, TrinketIcon.field_zb, WorldSpriteDecoration.field_h);
-          ph.field_f = new UiLayoutNode(0L, SquadPickerDialog.field_P, TextFieldNode.field_Vb);
+          AudioOutputSupport.field_f = new UiLayoutNode(0L, SquadPickerDialog.field_P, TextFieldNode.field_Vb);
           BlankScreen.field_h = new UiLayoutNode(0L, ul.field_c);
           TriangleMesh.field_R.addChild((byte) -109, MarkerSliderPainter.field_f);
           TriangleMesh.field_R.addChild((byte) -122, AlphaContainer.field_E);
-          TriangleMesh.field_R.addChild((byte) -108, ph.field_f);
+          TriangleMesh.field_R.addChild((byte) -108, AudioOutputSupport.field_f);
           TriangleMesh.field_R.addChild((byte) -124, (UiLayoutNode) (RotaryDialPainter.field_d));
           TriangleMesh.field_R.addChild((byte) -108, BlankScreen.field_h);
           RotaryDialPainter.field_d.field_Cb.field_zb.applyStyle(ConsoleEvaluationException.field_e, (byte) 87);

@@ -98,25 +98,25 @@ abstract class LoginCredentials {
     }
 
     final static boolean a(int param0) {
-        if (ms.field_b == -1) {
+        if (MusicVolumeSupport.field_b == -1) {
           if (!SetLagCommand.a((byte) 52, 1)) {
             return false;
           }
-          ms.field_b = un.field_e.readUnsignedByte((byte) -106);
+          MusicVolumeSupport.field_b = un.field_e.readUnsignedByte((byte) -106);
           un.field_e.field_n = 0;
         }
         if (param0 != 180) {
           return false;
         }
-        if (ms.field_b != -2) {
-          return SetLagCommand.a((byte) -114, ms.field_b);
+        if (MusicVolumeSupport.field_b != -2) {
+          return SetLagCommand.a((byte) -114, MusicVolumeSupport.field_b);
         }
         if (!SetLagCommand.a((byte) 29, 2)) {
           return false;
         }
-        ms.field_b = un.field_e.readUnsignedShort((byte) 81);
+        MusicVolumeSupport.field_b = un.field_e.readUnsignedShort((byte) 81);
         un.field_e.field_n = 0;
-        return SetLagCommand.a((byte) -114, ms.field_b);
+        return SetLagCommand.a((byte) -114, MusicVolumeSupport.field_b);
     }
 
     abstract LoginKind getLoginKind(byte param0);

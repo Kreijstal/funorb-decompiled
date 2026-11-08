@@ -27,10 +27,10 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
     }
 
     private final void submitLogin(int param0) {
-        if (cd.a(3) ||
+        if (GuestLoginSupport.isGuestLoginEnabled(3) ||
           !(this.field_N.field_q.length() <= 0) &&
           !(this.field_J.field_q.length() <= 0)) {
-          ss.a(this.field_J.field_q, (byte) -118, this.field_N.field_q);
+          UiKeyRoutingSupport.a(this.field_J.field_q, (byte) -118, this.field_N.field_q);
         }
         if (param0 != 60) {
           field_E = (Random) null;
@@ -82,7 +82,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
 
     final void drawLayer(int param0, int param1, int param2, int param3) {
         if (this.field_D != null) {
-          gf.field_a.a(this.field_D, 20 + param2 + this.field_t, 15 + param3 + this.field_g, -40 + this.field_n, this.field_i, 16777215, -1, 1, 0, gf.field_a.field_G);
+          ModelMaterial.field_a.a(this.field_D, 20 + param2 + this.field_t, 15 + param3 + this.field_g, -40 + this.field_n, this.field_i, 16777215, -1, 1, 0, ModelMaterial.field_a.field_G);
         }
         if (null != this.field_L) {
           SoftwareRasterizer.drawHorizontalLine(param2 + 10, param3 + 134, -20 + this.field_n, 4210752);
@@ -281,7 +281,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
             this.field_L.field_r = (WidgetPainter) ((Object) var6);
           }
           if (null != this.field_L) {
-            this.field_L.field_u = so.field_c;
+            this.field_L.field_u = AppletContextSupport.field_c;
           }
           if (!this.field_H) {
             if (!this.field_C) {
@@ -294,12 +294,12 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
             this.field_F.field_u = DebugConsole.field_x;
           }
           this.field_g = 15;
-          var7 = gf.field_a;
+          var7 = ModelMaterial.field_a;
           if (this.field_D != null) {
             this.field_g = this.field_g + (5 + var7.paragraphHeight(this.field_D, -40 + this.field_n, var7.field_G));
           }
           var8 = GameplayHelpScreen.field_J;
-          var9 = TournamentLobbyScreen.a(so.a(104), -7465);
+          var9 = TournamentLobbyScreen.a(AppletContextSupport.getActiveApplet(104), -7465);
           if (IsSixCommand.field_F == var9) {
             var8 = SetLagCommand.field_A;
           } else {
@@ -424,8 +424,8 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
               stackIn_11_0 = hq.field_e;
             }
             var9 = stackIn_11_0;
-            AuctionsScreen.a(-840618968, var2, var8[var5], go.a(var6, (byte) -56));
-            AuctionsScreen.a(-840618968, var3, var9[var5], go.a(var6, (byte) -56));
+            AuctionsScreen.a(-840618968, var2, var8[var5], PitchProjectionSupport.worldToScreenY(var6, (byte) -56));
+            AuctionsScreen.a(-840618968, var3, var9[var5], PitchProjectionSupport.worldToScreenY(var6, (byte) -56));
             var6 = var6 + var4;
           }
           return;

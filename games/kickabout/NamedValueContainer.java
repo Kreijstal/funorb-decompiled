@@ -126,12 +126,12 @@ final class NamedValueContainer {
         AuctionListing.a(SoftwareRasterizer.field_g + 640 >> 1, -22914, -640 + SoftwareRasterizer.field_g >> 1, SoftwareRasterizer.field_f, 0);
         if (0 < ns.field_a) {
           if (IntrusiveDeque.field_e != null) {
-            IntrusiveDeque.field_e.d(ss.field_c.field_s, 0);
-            stackIn_5_0 = ss.field_c;
+            IntrusiveDeque.field_e.d(UiKeyRoutingSupport.field_c.field_s, 0);
+            stackIn_5_0 = UiKeyRoutingSupport.field_c;
             stackIn_5_1 = 65;
             stackIn_6_2 = (param1) && (!TextWidgetPainter.field_f);
             ((UiLayoutNode) (Object) stackIn_5_0).draw(stackIn_5_1, stackIn_6_2);
-            stackIn_9_0 = af.field_d;
+            stackIn_9_0 = AuctionPriceLimits.field_d;
             stackIn_9_1 = 121;
             stackIn_10_2 = (param1) && (!TextWidgetPainter.field_f);
             ((UiLayoutNode) (Object) stackIn_9_0).draw(stackIn_9_1, stackIn_10_2);
@@ -194,11 +194,11 @@ final class NamedValueContainer {
             TeamManagementScreen.e(param0 + 62);
             return;
           }
-          stackIn_63_0 = ss.field_c;
+          stackIn_63_0 = UiKeyRoutingSupport.field_c;
           stackIn_63_1 = 65;
           stackIn_64_2 = (param1) && (!TextWidgetPainter.field_f);
           ((UiLayoutNode) (Object) stackIn_63_0).draw(stackIn_63_1, stackIn_64_2);
-          stackIn_67_0 = af.field_d;
+          stackIn_67_0 = AuctionPriceLimits.field_d;
           stackIn_67_1 = 121;
           stackIn_68_2 = (param1) && (!TextWidgetPainter.field_f);
           ((UiLayoutNode) (Object) stackIn_67_0).draw(stackIn_67_1, stackIn_68_2);

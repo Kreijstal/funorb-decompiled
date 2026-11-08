@@ -31,7 +31,7 @@ final class ClubState {
     private boolean field_P;
     private int field_C;
     static int field_y;
-    static r field_c;
+    static ClientProtocolStage field_c;
     int[] field_N;
     int field_E;
     private int field_u;
@@ -379,7 +379,7 @@ final class ClubState {
         var14 = var1Lifetime17 + "\n";
         var1Lifetime18 = var14;
         var1Lifetime19 = var14;
-        var15 = var14 + "Money - " + ad.formatCurrencyAmount(this.field_x, 26300) + "\n";
+        var15 = var14 + "Money - " + LocalizedTextLoader.formatCurrencyAmount(this.field_x, 26300) + "\n";
         var1Lifetime20 = var15;
         var1Lifetime21 = var15;
         var16 = var15 + "\n";
@@ -926,7 +926,7 @@ final class ClubState {
                     var9 = GeneratedPanelPainter.field_g[var7];
                     var10 = GeneratedPanelPainter.field_g[var21[var6Lifetime1]];
                     if (var9.field_h == 73 &&
-                      !il.b((byte) 115)) {
+                      !ClassDescriptorSupport.b((byte) 115)) {
                       throw new IllegalStateException("User tried to use the Halloween Costume trinket when we haven't released it yet " + param0.toString());
                     }
                     if (var9.field_k != var10.field_k) {
@@ -1348,7 +1348,7 @@ final class ClubState {
 
     static {
         field_v = "This is <%0>'s RuneScape clan if they have one.";
-        field_c = new r();
+        field_c = new ClientProtocolStage();
         field_Q = "On";
         field_l = new String[]{"Character", "Class", "Stats", "Trinkets", "Time left", "Bid", "Buyout"};
     }

@@ -96,7 +96,7 @@ final class RotaryDialPainter implements WidgetPainter {
         int stackIn_25_0 = 0;
         int stackIn_28_0 = 0;
         int stackIn_31_0 = 0;
-        gf stackIn_39_0 = null;
+        ModelMaterial stackIn_39_0 = null;
         int stackIn_45_0 = 0;
         int stackIn_49_0 = 0;
         RuntimeException stackIn_54_0 = null;
@@ -113,7 +113,7 @@ final class RotaryDialPainter implements WidgetPainter {
         int var18 = 0;
         int var19 = 0;
         int var20 = 0;
-        gf var21 = null;
+        ModelMaterial var21 = null;
         int var22 = 0;
         int var23 = 0;
         int var24 = 0;
@@ -153,7 +153,7 @@ final class RotaryDialPainter implements WidgetPainter {
           if (null != var44.field_G &&
             1 < var44.field_u) {
             var60 = var44.field_G;
-            th.a(param5 ^ -125, 0, var60, ContextMenuItem.field_zb, 0);
+            FadingSoundSupport.a(param5 ^ -125, 0, var60, ContextMenuItem.field_zb, 0);
           } else {
             or.b(false);
           }
@@ -239,7 +239,7 @@ final class RotaryDialPainter implements WidgetPainter {
               var28 = var54[var18];
               var29 = var64[var18];
               if (var21 != null) {
-                stackIn_49_0 = var21.field_g;
+                stackIn_49_0 = var21.color;
               } else {
                 stackIn_49_0 = 8355711;
               }
@@ -257,7 +257,7 @@ final class RotaryDialPainter implements WidgetPainter {
               var32 = var64[var19];
               var33 = var64[var20];
               if (var21 != null) {
-                stackIn_45_0 = var21.field_g;
+                stackIn_45_0 = var21.color;
               } else {
                 stackIn_45_0 = 8355711;
               }
@@ -294,9 +294,9 @@ final class RotaryDialPainter implements WidgetPainter {
         }
         param0 = param0 & 8191;
         if (4096 <= param0) {
-          return param0 < 6144 ? -mg.field_b[param0 - 4096] : -mg.field_b[8192 - param0];
+          return param0 < 6144 ? -PlayerInputFactory.field_b[param0 - 4096] : -PlayerInputFactory.field_b[8192 - param0];
         }
-        return param0 >= 2048 ? mg.field_b[-param0 + 4096] : mg.field_b[param0];
+        return param0 >= 2048 ? PlayerInputFactory.field_b[-param0 + 4096] : PlayerInputFactory.field_b[param0];
     }
 
     RotaryDialPainter(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
@@ -317,7 +317,7 @@ final class RotaryDialPainter implements WidgetPainter {
     final static void a(boolean param0, boolean param1) {
         TextHotspotRegion.drawContentTransition((byte) 71, param0);
         if (null != UrlRequest.field_e) {
-          ar.a(15707, UrlRequest.field_e);
+          BrowserUiSupport.drawPlainTooltip(15707, UrlRequest.field_e);
         }
         if (param1) {
           field_n = true;

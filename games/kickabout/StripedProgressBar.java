@@ -65,7 +65,7 @@ final class StripedProgressBar extends UiWidget {
           var10 = var8;
           var3 = var10.readUnsignedByte((byte) -109);
           var10.p(-111);
-          SaveChangesDialog.field_H = ds.a(var10, (byte) -4);
+          SaveChangesDialog.field_H = ModelMaterialDecoder.decodeMaterials(var10, (byte) -4);
           HighScoreSubmission.field_l = new int[var3][];
           TrinketCountSortCriterion.field_n = new TriangleMesh[var3];
           for (var4 = 0; var4 < var3; var4++) {
@@ -160,11 +160,11 @@ final class StripedProgressBar extends UiWidget {
         if (param0 != 0) {
           StripedProgressBar.a(-7);
         }
-        wq.field_g = false;
+        DiagnosticsOverlaySupport.field_g = false;
         AuctionBidDialog.field_G = false;
         IndexedSpriteState.b(38, -1);
         mj.field_a = vj.field_a;
-        wk.field_f = vj.field_a;
+        ClubStateFactory.field_f = vj.field_a;
     }
 
     final void setColors(byte param0, int param1, int param2) {

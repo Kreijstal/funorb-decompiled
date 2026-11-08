@@ -124,7 +124,7 @@ final class ScrollBar extends UiLayoutNode {
             if (!TrinketCatalog.field_b) {
               return;
             }
-            SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.field_g, g.field_a.field_T);
+            SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.field_g, GrayscalePaletteSupport.field_a.field_T);
             tn.field_f.draw(125, param1);
             return;
           }
@@ -132,7 +132,7 @@ final class ScrollBar extends UiLayoutNode {
             if (!TrinketCatalog.field_b) {
               return;
             }
-            SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.field_g, g.field_a.field_T);
+            SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.field_g, GrayscalePaletteSupport.field_a.field_T);
             tn.field_f.draw(125, param1);
             return;
           }
@@ -140,7 +140,7 @@ final class ScrollBar extends UiLayoutNode {
             return;
           }
           if (TrinketCatalog.field_b) {
-            SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.field_g, g.field_a.field_T);
+            SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.field_g, GrayscalePaletteSupport.field_a.field_T);
             tn.field_f.draw(125, param1);
           }
           return;
@@ -157,7 +157,7 @@ final class ScrollBar extends UiLayoutNode {
             return;
           }
         } else {
-          SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.field_g, g.field_a.field_T);
+          SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.field_g, GrayscalePaletteSupport.field_a.field_T);
           TriangleMesh.field_j.draw(77, param1);
           if (param0 <= 10) {
             field_Eb = (String) null;
@@ -175,7 +175,7 @@ final class ScrollBar extends UiLayoutNode {
             }
           }
         }
-        SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.field_g, g.field_a.field_T);
+        SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.field_g, GrayscalePaletteSupport.field_a.field_T);
         tn.field_f.draw(125, param1);
     }
 
@@ -461,7 +461,7 @@ final class ScrollBar extends UiLayoutNode {
     }
 
     ScrollBar(String param0, UiLayoutNode param1, UiLayoutNode param2, UiLayoutNode param3, UiLayoutNode param4, boolean param5) {
-        this(vb.a(0, (CharSequence) ((Object) param0)), param1, param2, param3, param4, param5);
+        this(vb.hashString31(0, (CharSequence) ((Object) param0)), param1, param2, param3, param4, param5);
     }
 
     final int getDraggedOffsetVertical(int param0, boolean param1, byte param2, int param3) {
@@ -680,7 +680,7 @@ final class ScrollBar extends UiLayoutNode {
     }
 
     final static void k(int param0) {
-        th.a((byte) -99);
+        FadingSoundSupport.detachAllFadingSounds((byte) -99);
         if (param0 != 0) {
           field_Eb = (String) null;
           StrongCacheEntry.field_z.clear(22997);

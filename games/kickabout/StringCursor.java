@@ -24,7 +24,7 @@ final class StringCursor {
         String var5_ref_String = null;
         int var5 = 0;
         int var6 = 0;
-        gg var3 = ModalStack.a(param0, 2, param2);
+        SocialPlayerRow var3 = ModalStack.a(param0, 2, param2);
         PlayerContextMenu var4Lifetime1;
         if (!param1) {
           if (var3 != null) {
@@ -59,7 +59,7 @@ final class StringCursor {
 
     final static void a(boolean param0, byte param1, int param2, int param3) {
         um.field_b = true;
-        gk.field_g = param3;
+        ChatComposeSupport.field_g = param3;
         SquadGridWidget.field_Db = null;
         TeamSelectionView.field_j = param0 ? true : false;
         FullscreenFailureReason.field_f = param2;
@@ -91,8 +91,8 @@ final class StringCursor {
         BufferedSocket.field_i[11] = TutorialChoiceDialog.field_F;
         BufferedSocket.field_i[19] = LoginMethod.field_f;
         if (param0 < -121) {
-          BufferedSocket.field_i[9] = we.field_e;
-          BufferedSocket.field_i[20] = vr.field_a;
+          BufferedSocket.field_i[9] = ClientUiUpdateSupport.field_e;
+          BufferedSocket.field_i[20] = PitchSurfaceLoader.field_a;
           BufferedSocket.field_i[4] = AuctionItem.field_n;
           BufferedSocket.field_i[13] = ParticipantStatus.field_o;
           BufferedSocket.field_i[7] = ca.field_b;
@@ -102,8 +102,8 @@ final class StringCursor {
           return;
         }
         field_e = (String) null;
-        BufferedSocket.field_i[9] = we.field_e;
-        BufferedSocket.field_i[20] = vr.field_a;
+        BufferedSocket.field_i[9] = ClientUiUpdateSupport.field_e;
+        BufferedSocket.field_i[20] = PitchSurfaceLoader.field_a;
         BufferedSocket.field_i[4] = AuctionItem.field_n;
         BufferedSocket.field_i[13] = ParticipantStatus.field_o;
         BufferedSocket.field_i[7] = ca.field_b;

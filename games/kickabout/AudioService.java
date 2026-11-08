@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class AudioService implements Runnable {
-    static r field_h;
+    static ClientProtocolStage field_h;
     static String field_a;
     static UiLayoutNode field_g;
     volatile boolean field_c;
@@ -107,7 +107,7 @@ final class AudioService implements Runnable {
           return MyPitchScreen.pollServerConnection((byte) 66);
         }
         if (param0 != 522) {
-          field_h = (r) null;
+          field_h = (ClientProtocolStage) null;
           return 0;
         }
         return 0;
@@ -122,6 +122,6 @@ final class AudioService implements Runnable {
     static {
         field_a = "The Final has begun";
         field_d = new long[32];
-        field_h = new r();
+        field_h = new ClientProtocolStage();
     }
 }

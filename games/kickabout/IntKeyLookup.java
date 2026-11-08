@@ -13,7 +13,7 @@ final class IntKeyLookup {
         if (FaceNormal.field_c) {
           param1 = -param1 + 1344;
         }
-        return go.a(param1, (byte) -56);
+        return PitchProjectionSupport.worldToScreenY(param1, (byte) -56);
     }
 
     final static boolean a(String param0, int param1) {

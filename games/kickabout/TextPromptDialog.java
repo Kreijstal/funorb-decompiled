@@ -48,7 +48,7 @@ final class TextPromptDialog extends UiLayoutNode {
           var9 = 0;
           if (!PacketBuffer.field_l &&
             var5 < TrinketTile.field_Hb) {
-            var10_int = r.a(0, var8_ref_tv.field_c);
+            var10_int = ClientProtocolStage.a(0, var8_ref_tv.field_c);
             if (var10_int <= var8_ref_tv.b(80) && (var8_ref_tv.field_m ||
               !DiskCacheRequest.a(param2 ^ 26, var8_ref_tv.field_q))) {
               var9 = 1;
@@ -457,16 +457,16 @@ final class TextPromptDialog extends UiLayoutNode {
             this.field_Gb.setBounds(true, var19 + 13 + 13, 0, 0, 24);
             this.field_Ab.setBounds(true, 15, -20 + this.field_Gb.field_q, 5, 15);
             var21 = 10;
-            this.field_Cb.setBounds(true, var19, 13, var21, 2 * sh.field_c);
-            var21 = var21 + sh.field_c * 2;
-            this.field_Lb.setBounds(true, var19, 13, var21, 2 * sh.field_c);
-            var21 = var21 + (10 + 2 * sh.field_c);
-            this.field_Fb.setBounds(true, 0, 0, var21, sh.field_c);
-            var21 = var21 + (10 + sh.field_c);
+            this.field_Cb.setBounds(true, var19, 13, var21, 2 * LineupPositionSupport.field_c);
+            var21 = var21 + LineupPositionSupport.field_c * 2;
+            this.field_Lb.setBounds(true, var19, 13, var21, 2 * LineupPositionSupport.field_c);
+            var21 = var21 + (10 + 2 * LineupPositionSupport.field_c);
+            this.field_Fb.setBounds(true, 0, 0, var21, LineupPositionSupport.field_c);
+            var21 = var21 + (10 + LineupPositionSupport.field_c);
             if (null != this.field_zb) {
               var20Lifetime3 = this.field_zb.b(0, 4);
-              this.field_zb.a(4, var21, sh.field_c, var20Lifetime3, 13 + (var19 - var20Lifetime3) / 2, -10481);
-              var21 = var21 + (10 + sh.field_c);
+              this.field_zb.a(4, var21, LineupPositionSupport.field_c, var20Lifetime3, 13 + (var19 - var20Lifetime3) / 2, -10481);
+              var21 = var21 + (10 + LineupPositionSupport.field_c);
             }
             var28[0].setBounds(true, var16Lifetime2, 13, var21, var17Lifetime5);
             var28[1].setBounds(true, var16Lifetime2, var16Lifetime2 + 13 + 13, var21, var17Lifetime5);
@@ -488,8 +488,8 @@ final class TextPromptDialog extends UiLayoutNode {
           var15_int = 226;
           var16Lifetime1 = 10;
           var17Lifetime1 = this.field_Cb.field_X.b(this.field_Cb.field_E, var15_int);
-          this.field_Cb.setBounds(true, var15_int, 13, var16Lifetime1, var17Lifetime1 * sh.field_c);
-          var16Lifetime1 = var16Lifetime1 + var17Lifetime1 * sh.field_c;
+          this.field_Cb.setBounds(true, var15_int, 13, var16Lifetime1, var17Lifetime1 * LineupPositionSupport.field_c);
+          var16Lifetime1 = var16Lifetime1 + var17Lifetime1 * LineupPositionSupport.field_c;
           this.field_Nb.setBounds(true, 13 + var15_int + 13, 0, 24, var16Lifetime1 + 10);
           this.field_Nb.field_R = fs.a(this.field_Nb.field_mb, 3, 2105376, 11579568, 8421504, (byte) 96);
           var18Lifetime1 = var15_int + 13 + 13;

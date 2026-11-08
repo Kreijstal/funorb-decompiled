@@ -57,9 +57,9 @@ final class TriangleMesh {
           if (param0 != -101) {
             field_R = (UiLayoutNode) null;
           }
-          IsSixCommand.field_E = new LoginForm(ep.field_b, (String) null, AuctionBidDialog.field_G, param2, param1);
-          we.field_a = new LoginDialog(RankingsRequest.field_l, IsSixCommand.field_E);
-          RankingsRequest.field_l.a(we.field_a, false);
+          IsSixCommand.field_E = new LoginForm(TutorialMessages.field_b, (String) null, AuctionBidDialog.field_G, param2, param1);
+          ClientUiUpdateSupport.field_a = new LoginDialog(RankingsRequest.field_l, IsSixCommand.field_E);
+          RankingsRequest.field_l.a(ClientUiUpdateSupport.field_a, false);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "kk.A(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
@@ -257,7 +257,7 @@ final class TriangleMesh {
           if (param2 >= -43) {
             field_B = (int[]) null;
           }
-          if (cu.a(param3, param1, param0, 112)) {
+          if (cu.decodeSpriteSheetFromArchive(param3, param1, param0, 112)) {
             stackIn_6_0 = MarkerSliderWidget.a(-109, param4.b(param0, -32669, param3));
             return stackIn_6_0;
           }
@@ -318,9 +318,9 @@ final class TriangleMesh {
           if (param0 != -101) {
             field_R = (UiLayoutNode) null;
           }
-          IsSixCommand.field_E = new LoginForm(ep.field_b, (String) null, AuctionBidDialog.field_G, param2, param1);
-          we.field_a = new LoginDialog(RankingsRequest.field_l, IsSixCommand.field_E);
-          RankingsRequest.field_l.a(we.field_a, false);
+          IsSixCommand.field_E = new LoginForm(TutorialMessages.field_b, (String) null, AuctionBidDialog.field_G, param2, param1);
+          ClientUiUpdateSupport.field_a = new LoginDialog(RankingsRequest.field_l, IsSixCommand.field_E);
+          RankingsRequest.field_l.a(ClientUiUpdateSupport.field_a, false);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "kk.A(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }

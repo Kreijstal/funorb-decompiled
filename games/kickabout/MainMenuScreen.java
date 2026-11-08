@@ -10,7 +10,7 @@ final class MainMenuScreen extends ButtonMenuScreen {
     static String[] field_D;
 
     final void buildWidgets(int param0) {
-        this.field_B = eo.createRenderedButton("", 7126504, un.field_d, -1, false);
+        this.field_B = SoftwareDrawingSupport.createRenderedButton("", 7126504, un.field_d, -1, false);
         if (param0 != -38) {
           this.field_B = (UiLayoutNode) null;
         }
@@ -31,12 +31,12 @@ final class MainMenuScreen extends ButtonMenuScreen {
 
     private final void layoutQuickPlayWidget(int param0) {
         if (param0 == 20378) {
-          this.field_B.setBounds(true, this.field_B.field_q, -180 + f.field_d, 50 + (ReceivedAuctionItem.field_B >> 1), this.field_B.field_mb);
+          this.field_B.setBounds(true, this.field_B.field_q, -180 + SpriteNumberPainter.field_d, 50 + (ReceivedAuctionItem.field_B >> 1), this.field_B.field_mb);
           return;
         }
         AppScreen var3 = (AppScreen) null;
         this.setTransitionProgress(59, false, 46, (AppScreen) null);
-        this.field_B.setBounds(true, this.field_B.field_q, -180 + f.field_d, 50 + (ReceivedAuctionItem.field_B >> 1), this.field_B.field_mb);
+        this.field_B.setBounds(true, this.field_B.field_q, -180 + SpriteNumberPainter.field_d, 50 + (ReceivedAuctionItem.field_B >> 1), this.field_B.field_mb);
     }
 
     final void drawOverlay(boolean param0, int param1) {
@@ -45,7 +45,7 @@ final class MainMenuScreen extends ButtonMenuScreen {
           super.drawOverlay(param0, 110);
           SoftwareRasterizer.fillRoundedRectangleBlended(this.field_B.field_F - 10, this.field_B.field_T - 20, 20 + this.field_B.field_q, 100 + this.field_B.field_mb, 8, 65793, this.field_E >> 1);
           this.field_B.draw(76, param0);
-          un.field_d.c(sk.field_b, this.field_B.field_F + (this.field_B.field_q >> 1), (this.field_B.field_mb >> 1) + (this.field_B.field_T - 28), 16777215, -1, this.field_E);
+          un.field_d.c(LoadingProgressSupport.field_b, this.field_B.field_F + (this.field_B.field_q >> 1), (this.field_B.field_mb >> 1) + (this.field_B.field_T - 28), 16777215, -1, this.field_E);
           un.field_d.c(TextFieldValidator.field_e.toUpperCase(), (this.field_B.field_q >> 1) + this.field_B.field_F, 6 + this.field_B.field_T + (this.field_B.field_mb >> 1), 16777215, -1, this.field_E);
           un.field_d.a(BeveledTextPainter.field_v.toLowerCase(), this.field_B.field_F, this.field_B.field_mb + this.field_B.field_T, this.field_B.field_q, 80, 16777215, -1, this.field_E, 1, 1, 0);
           if (!GameLoopApplet.field_E.field_J[0]) {
@@ -61,7 +61,7 @@ final class MainMenuScreen extends ButtonMenuScreen {
         super.drawOverlay(param0, 110);
         SoftwareRasterizer.fillRoundedRectangleBlended(this.field_B.field_F - 10, this.field_B.field_T - 20, 20 + this.field_B.field_q, 100 + this.field_B.field_mb, 8, 65793, this.field_E >> 1);
         this.field_B.draw(76, param0);
-        un.field_d.c(sk.field_b, this.field_B.field_F + (this.field_B.field_q >> 1), (this.field_B.field_mb >> 1) + (this.field_B.field_T - 28), 16777215, -1, this.field_E);
+        un.field_d.c(LoadingProgressSupport.field_b, this.field_B.field_F + (this.field_B.field_q >> 1), (this.field_B.field_mb >> 1) + (this.field_B.field_T - 28), 16777215, -1, this.field_E);
         un.field_d.c(TextFieldValidator.field_e.toUpperCase(), (this.field_B.field_q >> 1) + this.field_B.field_F, 6 + this.field_B.field_T + (this.field_B.field_mb >> 1), 16777215, -1, this.field_E);
         un.field_d.a(BeveledTextPainter.field_v.toLowerCase(), this.field_B.field_F, this.field_B.field_mb + this.field_B.field_T, this.field_B.field_q, 80, 16777215, -1, this.field_E, 1, 1, 0);
         if (!GameLoopApplet.field_E.field_J[0]) {

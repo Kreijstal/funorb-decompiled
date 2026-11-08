@@ -7,7 +7,7 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
     private boolean field_nb;
     private boolean field_pb;
     static int field_ob;
-    static r field_rb;
+    static ClientProtocolStage field_rb;
     static int field_kb;
     private AccountRegistrationPanel field_mb;
 
@@ -140,7 +140,7 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
           WorldSpriteDecoration.a(-87);
           this.closeDialog(-96);
           if (param3 <= 64) {
-            field_rb = (r) null;
+            field_rb = (ClientProtocolStage) null;
           }
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "jn.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
@@ -172,14 +172,14 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
                   var4 = GameSoundEffect.field_g;
                   this.field_nb = true;
                 } else {
-                  pc.a(536870912);
+                  DisplayNameUiSupport.a(536870912);
                   var4 = GameSoundEffect.field_g;
                   this.field_nb = true;
                 }
               }
             }
           } else {
-            var4 = cb.field_e;
+            var4 = PitchPurchaseSupport.field_e;
           }
           if (param2 != -71) {
             return;
@@ -229,6 +229,6 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
     }
 
     static {
-        field_rb = new r();
+        field_rb = new ClientProtocolStage();
     }
 }

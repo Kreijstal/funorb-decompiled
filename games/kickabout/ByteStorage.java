@@ -4,7 +4,7 @@
 abstract class ByteStorage {
     static ArgbSprite field_b;
     static String field_a;
-    static r field_e;
+    static ClientProtocolStage field_e;
     static int[] field_d;
     static boolean field_c;
 
@@ -67,7 +67,7 @@ abstract class ByteStorage {
 
     static {
         field_a = "<%0> and <%1> have equal game stats. <%2> wins the tournament by a random 50/50 chance.";
-        field_e = new r();
+        field_e = new ClientProtocolStage();
         field_c = true;
     }
 }

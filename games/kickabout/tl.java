@@ -3,7 +3,7 @@
  */
 final class tl {
     static String field_b;
-    static r field_c;
+    static ClientProtocolStage field_c;
     static String[] field_a;
 
     public static void releaseStatics(int param0) {
@@ -11,7 +11,7 @@ final class tl {
         field_c = null;
         field_a = null;
         if (param0 != 0) {
-          field_c = (r) null;
+          field_c = (ClientProtocolStage) null;
         }
     }
 
@@ -256,6 +256,6 @@ final class tl {
 
     static {
         field_b = "FORMATION";
-        field_c = new r();
+        field_c = new ClientProtocolStage();
     }
 }

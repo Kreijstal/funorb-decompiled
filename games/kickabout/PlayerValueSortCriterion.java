@@ -113,11 +113,11 @@ final class PlayerValueSortCriterion extends SortCriterion {
           var25 = new int[2];
           var22 = var25;
           var7 = var22;
-          for (var8 = 0; var8 < vt.field_c.field_g.length; var8++) {
-            dupTemp$0 = vt.field_c.field_g[var8].team;
+          for (var8 = 0; var8 < AsciiCharacterSupport.field_c.field_g.length; var8++) {
+            dupTemp$0 = AsciiCharacterSupport.field_c.field_g[var8].team;
             var5[dupTemp$0] = var5[dupTemp$0] + 1;
           }
-          stackIn_6_0 = vt.field_c.field_g;
+          stackIn_6_0 = AsciiCharacterSupport.field_c.field_g;
           if (ContextMenuItem.field_Cb != -2) {
             stackIn_7_1 = ContextMenuItem.field_Cb;
           } else {
@@ -135,29 +135,29 @@ final class PlayerValueSortCriterion extends SortCriterion {
           for (var9Lifetime1 = 0; 2 > var9Lifetime1; var9Lifetime1++) {
             SoftwareRasterizer.fillRoundedRectangleBlended(-et.field_c + 644, var25[var9Lifetime1], et.field_c, var24[var9Lifetime1], 2, 0, param1);
             SoftwareRasterizer.fillRoundedRectangleBlended(643 - (et.field_c + VertexNormal.field_c + 2), var25[var9Lifetime1], VertexNormal.field_c + 1, var24[var9Lifetime1], 2, 0, param1);
-            var10 = vt.field_c.field_X.score[var9Lifetime1];
+            var10 = AsciiCharacterSupport.field_c.field_X.score[var9Lifetime1];
             if (var10 > 99) {
               var10 = 99;
             }
             ((BitmapFont) ((Object) var4)).d(Integer.toString(var10), -2 + (-VertexNormal.field_c + 644 - et.field_c + (VertexNormal.field_c >> 1)) + 1, (var24[var9Lifetime1] + VertexNormal.field_c >> 1) + var25[var9Lifetime1] - 2, 16777215, -1);
             var11 = 0;
-            for (var12 = 0; vt.field_c.playerCount > var12; var12++) {
-              if (~var9Lifetime1 == ~vt.field_c.field_g[var12].team) {
+            for (var12 = 0; AsciiCharacterSupport.field_c.playerCount > var12; var12++) {
+              if (~var9Lifetime1 == ~AsciiCharacterSupport.field_c.field_g[var12].team) {
                 var13 = 1 + (TextPromptDialog.field_yb + var11 * VertexNormal.field_c) + (var25[var9Lifetime1] + 2) + 3;
                 var14 = param0[var12];
                 var15 = SingleChildContainer.a(true, var14);
                 if (JaggrabDownloader.field_c &&
                   644 - et.field_c < ArrayWidgetContainer.field_x &&
                   ArrayWidgetContainer.field_x < 640 &&
-                  us.field_j > var13 - VertexNormal.field_c &&
-                  us.field_j < var13) {
-                  wa.a((byte) 52, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, "<%0>: <%1>ms", new String[]{TrinketPickerDialog.field_G[var12], var14 + ""}));
+                  TutorialCaptionSupport.field_j > var13 - VertexNormal.field_c &&
+                  TutorialCaptionSupport.field_j < var13) {
+                  SpriteResourceSupport.showTextTooltip((byte) 52, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, "<%0>: <%1>ms", new String[]{TrinketPickerDialog.field_G[var12], var14 + ""}));
                 }
-                stackIn_29_0 = (vt.field_c.participantStatus[var12].isActive(3511)) ? 16777215 : 11184810;
+                stackIn_29_0 = (AsciiCharacterSupport.field_c.participantStatus[var12].isActive(3511)) ? 16777215 : 11184810;
                 var16 = stackIn_29_0;
                 ((BitmapFont) ((Object) var4)).a(TrinketPickerDialog.field_G[var12], -et.field_c + 644 + 10, var13, var16, -1);
-                if (vt.field_c.participantStatus[var12].isActive(3511)) {
-                  if (vt.field_c.participantStatus[var12].offerDraw) {
+                if (AsciiCharacterSupport.field_c.participantStatus[var12].isActive(3511)) {
+                  if (AsciiCharacterSupport.field_c.participantStatus[var12].offerDraw) {
                     var17 = ((BitmapFont) ((Object) var4)).a(AlphaContainer.field_A) + 12;
                     AuctionListing.a(-VertexNormal.field_c + (-et.field_c + 642) - 1, -22914, 0, 480, 0);
                     SoftwareRasterizer.fillRoundedRectangleBlended(642 - (et.field_c + (VertexNormal.field_c + var17)), var13 - VertexNormal.field_c + 3, var17 + 4, VertexNormal.field_c - 2, 6, 65793, param1);

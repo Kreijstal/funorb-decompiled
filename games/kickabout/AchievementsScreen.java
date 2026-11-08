@@ -74,7 +74,7 @@ final class AchievementsScreen extends ButtonMenuScreen {
         if (var5 == -1) {
           stackIn_12_0 = 0;
         } else {
-          stackIn_12_0 = c.a(var5, 0, var21) ? 1 : 0;
+          stackIn_12_0 = ClientPacketFlushSupport.isBitSet(var5, 0, var21) ? 1 : 0;
         }
         var6 = stackIn_12_0;
         var7 = 142 + this.slideOffsetX;
@@ -86,12 +86,12 @@ final class AchievementsScreen extends ButtonMenuScreen {
           if (!PlayArea.a(100)) {
             IsSixCommand.field_C.a(StatChoiceDialog.field_K, var7, 250, var9, 200, 16777215, -1, 1, 1, 0);
           } else {
-            IsSixCommand.field_C.a(sh.field_b, var7, 250, var9, 200, 16777215, -1, 1, 1, 0);
+            IsSixCommand.field_C.a(LineupPositionSupport.field_b, var7, 250, var9, 200, 16777215, -1, 1, 1, 0);
           }
           return;
         }
         if (var6 == 0 &&
-          !pc.field_e) {
+          !DisplayNameUiSupport.field_e) {
           if (var5 == 32 &&
             TextFieldValidator.f(-1)) {
             GameModesHelpScreen.field_L.c(5 + this.slideOffsetX, 290);
@@ -100,7 +100,7 @@ final class AchievementsScreen extends ButtonMenuScreen {
             ConsoleTokenCursor.field_d.d(QuickChatKeysHelpPanel.field_Db.toLowerCase(), (var9 >> 1) + var7, var11 + 6, 16711680, -1);
             var11 += 10;
             var12 = ProxyAuthenticationRequiredException.field_a[var5];
-            if (th.field_a[var5]) {
+            if (FadingSoundSupport.field_a[var5]) {
               var12 = field_A;
             }
             var11 += 16;
@@ -128,7 +128,7 @@ final class AchievementsScreen extends ButtonMenuScreen {
           ConsoleTokenCursor.field_d.d(QuickChatKeysHelpPanel.field_Db.toLowerCase(), (var9 >> 1) + var7, var11Lifetime2 + 6, 16711680, -1);
           var11Lifetime2 += 10;
           var12Lifetime2 = ProxyAuthenticationRequiredException.field_a[var5];
-          if (th.field_a[var5]) {
+          if (FadingSoundSupport.field_a[var5]) {
             var12Lifetime2 = field_A;
           }
           var11Lifetime2 += 16;
@@ -157,7 +157,7 @@ final class AchievementsScreen extends ButtonMenuScreen {
           ConsoleTokenCursor.field_d.d(QuickChatKeysHelpPanel.field_Db.toLowerCase(), (var9 >> 1) + var7, var11Lifetime1 + 6, 16711680, -1);
           var11Lifetime1 += 10;
           var12Lifetime1 = ProxyAuthenticationRequiredException.field_a[var5];
-          if (th.field_a[var5]) {
+          if (FadingSoundSupport.field_a[var5]) {
             var12Lifetime1 = field_A;
           }
           var11Lifetime1 += 16;
@@ -172,7 +172,7 @@ final class AchievementsScreen extends ButtonMenuScreen {
           }
         } else {
           var12Lifetime1 = ProxyAuthenticationRequiredException.field_a[var5];
-          if (th.field_a[var5] &&
+          if (FadingSoundSupport.field_a[var5] &&
             var6 == 0) {
             var12Lifetime1 = field_A;
           }
@@ -200,8 +200,8 @@ final class AchievementsScreen extends ButtonMenuScreen {
         int var2 = 0;
         UiLayoutNode var3 = null;
         int var4 = Kickabout.field_G;
-        bq.field_d = eo.a(false);
-        ModalPanel.field_D = eo.a(true);
+        bq.field_d = SoftwareDrawingSupport.a(false);
+        ModalPanel.field_D = SoftwareDrawingSupport.a(true);
         for (var2 = 0; 2 > var2; var2++) {
           var3 = var2 == 0 ? bq.field_d : ModalPanel.field_D;
           var3.field_N.rotateClockwise();
@@ -414,14 +414,14 @@ final class AchievementsScreen extends ButtonMenuScreen {
         return 88080384 + (100 * param1 + 500 << 16);
     }
 
-    final static gg a(String param0, int param1) {
+    final static SocialPlayerRow a(String param0, int param1) {
         String var2 = null;
-        gg var3 = null;
+        SocialPlayerRow var3 = null;
         String var4 = null;
         int var5 = 0;
         CharSequence var6 = null;
         CharSequence var7 = null;
-        gg stackIn_18_0 = null;
+        SocialPlayerRow stackIn_18_0 = null;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         String stackIn_24_2 = null;
@@ -440,18 +440,18 @@ final class AchievementsScreen extends ButtonMenuScreen {
           if (var2 == null) {
             var2 = param0;
           }
-          var3 = (gg) (HighScoreQuery.field_m.a(-3611, (long)var2.hashCode()));
+          var3 = (SocialPlayerRow) (HighScoreQuery.field_m.a(-3611, (long)var2.hashCode()));
           while (var3 != null) {
-            var7 = (CharSequence) ((Object) var3.field_Gb);
+            var7 = (CharSequence) ((Object) var3.name);
             var4 = MatchAgent.a(0, var7);
             if (var4 == null) {
-              var4 = var3.field_Gb;
+              var4 = var3.name;
             }
             if (var4.equals(var2)) {
               stackIn_18_0 = var3;
               return stackIn_18_0;
             }
-            var3 = (gg) (HighScoreQuery.field_m.a((byte) 117));
+            var3 = (SocialPlayerRow) (HighScoreQuery.field_m.a((byte) 117));
           }
           return null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

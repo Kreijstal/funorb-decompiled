@@ -27,10 +27,10 @@ final class MusicPatch extends IntrusiveNode {
           field_g = (int[]) null;
         }
         var1 = MonotonicClock.monotonicMillis(-128);
-        var3 = var1 - pc.field_c;
+        var3 = var1 - DisplayNameUiSupport.field_c;
         if (30000L < var3) {
           MeshObject.field_d = 0;
-          pc.field_c = var1;
+          DisplayNameUiSupport.field_c = var1;
           return true;
         }
         var5 = 3000;
@@ -48,7 +48,7 @@ final class MusicPatch extends IntrusiveNode {
         if ((long)var5 >= var3) {
           return false;
         }
-        pc.field_c = var1;
+        DisplayNameUiSupport.field_c = var1;
         MeshObject.field_d = MeshObject.field_d + 1;
         return true;
     }
@@ -221,7 +221,7 @@ final class MusicPatch extends IntrusiveNode {
     }
 
     final static void showAccountChoice(byte param0) {
-        we.field_a.a((byte) -124, (UiWidget) (new AccountChoicePanel()));
+        ClientUiUpdateSupport.field_a.a((byte) -124, (UiWidget) (new AccountChoicePanel()));
         if (param0 > -119) {
           MusicPatch.tryAcquireChatSendPermit(114);
         }

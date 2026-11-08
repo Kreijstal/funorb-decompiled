@@ -41,13 +41,13 @@ final class FadingSoundPlayer extends IntrusiveNode {
         try {
           for (var2_int = 0; var2_int < param1.length; var2_int++) {
             var3 = param1[var2_int].field_a;
-            var5 = (AuctionLogEntry) (ic.field_h.auctionLog.g(24009));
+            var5 = (AuctionLogEntry) (RegistrationRequestState.field_h.auctionLog.g(24009));
             while (var5 != null) {
               if (~var5.auctionId == ~var3) {
                 MessageDialog.field_A[var5.slotIndex] = param1[var2_int];
                 break;
               }
-              var5 = (AuctionLogEntry) (ic.field_h.auctionLog.c(33));
+              var5 = (AuctionLogEntry) (RegistrationRequestState.field_h.auctionLog.c(33));
             }
           }
           ValidationIndicator.field_F = true;

@@ -32,7 +32,7 @@ final class IntTripleCommand extends ConsoleCommand {
         if (param0 > -7) {
           return -31;
         }
-        return -GameSoundEffect.field_k + so.field_e;
+        return -GameSoundEffect.field_k + AppletContextSupport.field_e;
     }
 
     final ConsoleValue execute(byte param0, ConsoleValue[] param1) {

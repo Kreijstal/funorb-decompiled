@@ -74,7 +74,7 @@ final class ig {
             var3Lifetime2Lifetime1 = 0;
             while (var4Lifetime1Lifetime1 > 0) {
               if (PortraitCacheOrder.field_d < 0) {
-                wk.field_d[var4Lifetime1Lifetime1 % 10].c(param0 - wk.field_d[0].field_q * var3Lifetime2Lifetime1 + (140 + TextLayoutLine.field_e), -36 - (-(2 * CachedArchiveSource.field_s) - (24 + ArchiveNetworkClient.field_i)));
+                ClubStateFactory.field_d[var4Lifetime1Lifetime1 % 10].c(param0 - ClubStateFactory.field_d[0].field_q * var3Lifetime2Lifetime1 + (140 + TextLayoutLine.field_e), -36 - (-(2 * CachedArchiveSource.field_s) - (24 + ArchiveNetworkClient.field_i)));
               } else {
                 ValidationIndicator.field_G[var4Lifetime1Lifetime1 % 10].c(param0 + TextLayoutLine.field_e + (140 - ValidationIndicator.field_G[0].field_q * var3Lifetime2Lifetime1), 24 + ArchiveNetworkClient.field_i - (18 - CachedArchiveSource.field_s) * 2);
               }
@@ -107,18 +107,18 @@ final class ig {
         }
     }
 
-    final static int a(int param0, int param1) {
+    final static int screenToWorldY(int param0, int param1) {
         if (param1 != 4620) {
           field_h = (String) null;
         }
         return (int)(MyPitchScreen.field_G + (ReceivedAuctionItemRow.field_Gb + (double)((-240 + param0 << 8) / InstrumentNoteMask.field_i)));
     }
 
-    final static void a(boolean param0, byte param1, int param2, int param3) {
+    final static void moveTutorialPlayerToLineup(boolean param0, byte param1, int param2, int param3) {
         if (param1 < 15) {
           return;
         }
-        int var4 = sh.a(70, param2);
+        int var4 = LineupPositionSupport.lineupSlotX(70, param2);
         int var5 = AchievementsScreen.a((byte) -27, param3);
         RenderedFootballer var6 = (RenderedFootballer) (et.field_d.field_P[param3][param2]);
         int var7 = !param0 ? 80 + TextLayoutLine.a(-6779, 480) : TextLayoutLine.a(-6779, 0) - 50;
@@ -128,14 +128,14 @@ final class ig {
         }
     }
 
-    final static void a(long param0, String param1, byte param2) {
+    final static void beginPrivateMessage(long param0, String param1, byte param2) {
         CharSequence var6 = null;
         try {
           NodeHashTableIterator.field_b = 2;
           TrinketTile.field_Kb = param1;
           if (param2 <= 46) {
             String var5 = (String) null;
-            ig.a(127L, (String) null, (byte) 87);
+            ig.beginPrivateMessage(127L, (String) null, (byte) 87);
           }
           var6 = (CharSequence) ((Object) param1);
           PlayerStatSortCriterion.field_o = MatchAgent.a(0, var6);
@@ -234,7 +234,7 @@ final class ig {
           }
           var9 = 20 + (var4 + var8Lifetime2 + 65);
           var10Lifetime1 = TextPromptDialog.field_yb * (var6.length + 1) + 20;
-          var11 = -6 + (-var10Lifetime1 + (473 - VertexNormal.field_c * vt.field_c.playerCount) - 22);
+          var11 = -6 + (-var10Lifetime1 + (473 - VertexNormal.field_c * AsciiCharacterSupport.field_c.playerCount) - 22);
           SoftwareRasterizer.fillRoundedRectangleBlended(-var9 + 644, var11, var9, var10Lifetime1, 2, 0, param2);
           var12Lifetime1 = 619 - (var4 + 20);
           var13 = 6 + var11 + TextPromptDialog.field_yb;
@@ -254,7 +254,7 @@ final class ig {
         }
     }
 
-    final static int a(byte param0, int param1) {
+    final static int ceilPowerOfTwo(byte param0, int param1) {
         param1--;
         param1 = param1 | param1 >>> 1;
         if (param0 != 6) {

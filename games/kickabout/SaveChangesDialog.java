@@ -2,14 +2,14 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class SaveChangesDialog extends MessageDialog {
-    static gf[] field_H;
+    static ModelMaterial[] field_H;
     static boolean field_G;
     static Sprite[] field_F;
 
     final static boolean b(int param0, int param1, int param2) {
         int var3 = null != ArchiveSource.field_b ? 1 : 0;
         if (FixedQuaternion.field_e == 9 &&
-          cb.a(GameOverView.field_z, mv.field_a, (byte) -64, PlayerShopScreen.field_S, PlayerModelPreview.field_r)) {
+          PitchPurchaseSupport.a(GameOverView.field_z, mv.field_a, (byte) -64, PlayerShopScreen.field_S, PlayerModelPreview.field_r)) {
           if (GameOverView.field_z != 2 &&
             var3 != 0) {
             return false;
@@ -21,7 +21,7 @@ final class SaveChangesDialog extends MessageDialog {
           if (var3 != 0) {
             return false;
           }
-          hp.b(0);
+          ChatComposeMode.setComposeMode(0);
           return true;
         }
         if (11 == FixedQuaternion.field_e &&
@@ -64,13 +64,13 @@ final class SaveChangesDialog extends MessageDialog {
           }
         }
         if (param0 <= 60) {
-          field_H = (gf[]) null;
+          field_H = (ModelMaterial[]) null;
         }
     }
 
     public static void g(int param0) {
         if (param0 != 13) {
-          field_H = (gf[]) null;
+          field_H = (ModelMaterial[]) null;
         }
         field_H = null;
         field_F = null;

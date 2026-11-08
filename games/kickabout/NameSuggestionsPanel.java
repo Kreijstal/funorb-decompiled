@@ -80,7 +80,7 @@ final class NameSuggestionsPanel extends WidgetContainer implements ButtonListen
             if (param1 >= -27) {
               this.field_H = (String[]) null;
             }
-            var4 = new LinkTextPainter(gf.field_a, 0, 1);
+            var4 = new LinkTextPainter(ModelMaterial.field_a, 0, 1);
             this.field_F = new TextButton[var3_int + 1];
             for (var5 = 0; var3_int > var5; var5++) {
               this.field_F[var5] = new TextButton(this.field_H[var5], (UiListener) (this));
@@ -163,7 +163,7 @@ final class NameSuggestionsPanel extends WidgetContainer implements ButtonListen
         if (param0 != -76) {
           field_B = (String) null;
         }
-        we.field_a.a((byte) -118, (UiWidget) (CachedArchiveSource.field_u));
+        ClientUiUpdateSupport.field_a.a((byte) -118, (UiWidget) (CachedArchiveSource.field_u));
     }
 
     final static TextWidgetPainter h(byte param0) {
@@ -181,7 +181,7 @@ final class NameSuggestionsPanel extends WidgetContainer implements ButtonListen
         if (0 != param0) {
           return;
         }
-        BitmapFont var5 = gf.field_a;
+        BitmapFont var5 = ModelMaterial.field_a;
         if (null != this.field_H) {
           var5.a(CheatCodeListener.field_d, param2 + this.field_t, param3 + this.field_g, this.field_n, 20, 16777215, -1, 0, 0, var5.field_G + var5.field_p);
         }

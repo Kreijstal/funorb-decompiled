@@ -30,12 +30,12 @@ final class UnreadMessagesScreen extends ButtonMenuScreen {
           }
         } else {
           if (null == SplashScreen.field_m) {
-            AuctionLogEntry.openSubscribePage(so.a(-98), (byte) 126);
+            AuctionLogEntry.openSubscribePage(AppletContextSupport.getActiveApplet(-98), (byte) 126);
             var4 = 62 / ((38 - param0) / 60);
             return;
           } else {
             UiWidget.h(0);
-            AuctionLogEntry.openSubscribePage(so.a(-98), (byte) 126);
+            AuctionLogEntry.openSubscribePage(AppletContextSupport.getActiveApplet(-98), (byte) 126);
           }
         }
         if (var3 == 2) {
@@ -69,7 +69,7 @@ final class UnreadMessagesScreen extends ButtonMenuScreen {
         int var2;
         var2 = Kickabout.field_G;
         CachedTextLayout.field_m = null;
-        wq.field_g = false;
+        DiagnosticsOverlaySupport.field_g = false;
         if (param0 != -1) {
           return;
         }
@@ -86,7 +86,7 @@ final class UnreadMessagesScreen extends ButtonMenuScreen {
             CachedTextLayout.field_m = DisplayModeSupport.concatenate(new CharSequence[]{(CharSequence) ((Object) CachedTextLayout.field_m), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) LobbyPlayerRow.field_Kb)}, false);
           }
           WorldSpriteSequence.field_f.closeDialog(-105);
-          fj.a(param0 ^ 44);
+          fj.showLoadingProgressDialog(param0 ^ 44);
         }
     }
 
@@ -114,7 +114,7 @@ final class UnreadMessagesScreen extends ButtonMenuScreen {
           try {
             var3 = "";
             if (param1 != null) {
-              var3 = le.a(true, param1);
+              var3 = ExceptionTextSupport.formatCompactStackTrace(true, param1);
             }
             if (param0 != null) {
               if (param1 != null) {
@@ -135,14 +135,14 @@ final class UnreadMessagesScreen extends ButtonMenuScreen {
             stackIn_13_2 = null;
             stackIn_13_3 = ug.field_a.getCodeBase();
             stackIn_13_4 = new StringBuilder().append("clienterror.ws?c=").append(RotaryDialPainter.field_e).append("&u=");
-            if (null == ds.field_b) {
+            if (null == ModelMaterialDecoder.field_b) {
               stackIn_14_1 = null;
               stackIn_14_2 = null;
               stackIn_14_5 = "" + tn.field_a;
             } else {
               stackIn_14_1 = null;
               stackIn_14_2 = null;
-              stackIn_14_5 = ds.field_b;
+              stackIn_14_5 = ModelMaterialDecoder.field_b;
             }
             var4 = ((PlatformTaskDispatcher) (Object) stackIn_13_0).requestUrl(new java.net.URL(stackIn_13_3, ((StringBuilder) (Object) stackIn_13_4).append(stackIn_14_5).append("&v1=").append(PlatformTaskDispatcher.field_u).append("&v2=").append(PlatformTaskDispatcher.field_r).append("&e=").append(var10).toString()), (byte) -29);
             while (var4.field_a == 0) {

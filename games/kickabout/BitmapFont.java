@@ -440,7 +440,7 @@ abstract class BitmapFont extends DualLinkNode {
                               } else {
                                 try {
                                   var13 = (CharSequence) ((Object) var9_ref_String.substring(4));
-                                  var10 = rr.a(10, var13);
+                                  var10 = TextEntrySupport.parseDecimalInt(10, var13);
                                   var11_ref_qd = this.field_F[var10];
                                   if (this.field_H == null) {
                                     stackIn_27_0 = var11_ref_qd.field_a;
@@ -604,7 +604,7 @@ abstract class BitmapFont extends DualLinkNode {
                 }
               } else {
                 var4 = (CharSequence) ((Object) param0.substring(6));
-                field_t = rr.a(10, var4);
+                field_t = TextEntrySupport.parseDecimalInt(10, var4);
               }
             } else {
               field_v = field_y;
@@ -771,7 +771,7 @@ abstract class BitmapFont extends DualLinkNode {
                               if (!(!var8.startsWith("img="))) {
                                 try {
                                   var10 = (CharSequence) ((Object) var8.substring(4));
-                                  var9_int = rr.a(10, var10);
+                                  var9_int = TextEntrySupport.parseDecimalInt(10, var10);
                                   var4 = var4 + this.field_F[var9_int].field_i;
                                   var3 = 0;
                                 } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -884,7 +884,7 @@ abstract class BitmapFont extends DualLinkNode {
                                 if (var15.startsWith("img=")) {
                                   try {
                                     var18 = (CharSequence) ((Object) var15.substring(4));
-                                    var16_int = rr.a(10, var18);
+                                    var16_int = TextEntrySupport.parseDecimalInt(10, var18);
                                     var4 = var4 + this.field_F[var16_int].field_i;
                                     var10 = 0;
                                   } catch (java.lang.Exception decompiledCaughtParameter0) {

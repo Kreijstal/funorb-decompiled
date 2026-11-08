@@ -45,7 +45,7 @@ final class ClientUiOverlay implements OverlayLayer {
         var2 = stackIn_6_0;
         var4 = 125 / ((param0 - 50) / 45);
         SortCriterion.a(var2 != 0, (byte) -89);
-        var3 = g.field_a.field_T;
+        var3 = GrayscalePaletteSupport.field_a.field_T;
         if (!this.capturesInput((byte) 103) &&
           480 > var3) {
           SoftwareRasterizer.drawHorizontalLineAlpha(0, var3, 640, 0, 128);
@@ -62,11 +62,11 @@ final class ClientUiOverlay implements OverlayLayer {
         if (param0 != 0) {
           field_f = (String[]) null;
         }
-        String var6 = "(" + PagedHelpScreen.field_A + " " + TeamSelectionView.field_n + " " + SquadSlotWidget.field_Ab + ") " + so.field_b;
+        String var6 = "(" + PagedHelpScreen.field_A + " " + TeamSelectionView.field_n + " " + SquadSlotWidget.field_Ab + ") " + AppletContextSupport.field_b;
         String var1 = var6;
-        if (ms.field_b > 0) {
+        if (MusicVolumeSupport.field_b > 0) {
           var1 = var6 + ":";
-          for (var2 = 0; var2 < ms.field_b; var2++) {
+          for (var2 = 0; var2 < MusicVolumeSupport.field_b; var2++) {
             var7 = var1 + ' ';
             var3 = un.field_e.field_f[var2] & 255;
             var4 = var3 >> 4;
@@ -185,15 +185,15 @@ final class ClientUiOverlay implements OverlayLayer {
         }
     }
 
-    final static gg a(String param0, byte param1) {
+    final static SocialPlayerRow a(String param0, byte param1) {
         String var2 = null;
-        gg var3 = null;
+        SocialPlayerRow var3 = null;
         String var4 = null;
         int var5 = 0;
         CharSequence var6 = null;
         CharSequence var7 = null;
         Object stackIn_12_0 = null;
-        gg stackIn_19_0 = null;
+        SocialPlayerRow stackIn_19_0 = null;
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
         String stackIn_25_2 = null;
@@ -217,17 +217,17 @@ final class ClientUiOverlay implements OverlayLayer {
           }
           if (var2 == null) {
             stackIn_12_0 = null;
-            return (gg) (stackIn_12_0);
+            return (SocialPlayerRow) (stackIn_12_0);
           }
-          var3 = (gg) (AvailabilityCheckRequest.field_b.a(param1 ^ -3635, (long)var2.hashCode()));
+          var3 = (SocialPlayerRow) (AvailabilityCheckRequest.field_b.a(param1 ^ -3635, (long)var2.hashCode()));
           while (var3 != null) {
-            var7 = (CharSequence) ((Object) var3.field_Gb);
+            var7 = (CharSequence) ((Object) var3.name);
             var4 = MatchAgent.a(param1 ^ 40, var7);
             if (var4.equals(var2)) {
               stackIn_19_0 = var3;
               return stackIn_19_0;
             }
-            var3 = (gg) (AvailabilityCheckRequest.field_b.a((byte) 103));
+            var3 = (SocialPlayerRow) (AvailabilityCheckRequest.field_b.a((byte) 103));
           }
           return null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -323,9 +323,9 @@ final class ClientUiOverlay implements OverlayLayer {
             or.field_d.b(50, (byte) 105);
             gs.field_e = false;
           }
-          if (mg.field_f) {
+          if (PlayerInputFactory.field_f) {
             or.field_d.b(10, (byte) -97);
-            mg.field_f = false;
+            PlayerInputFactory.field_f = false;
           }
         } else {
           DirectByteStorage.c((byte) 51);
@@ -364,7 +364,7 @@ final class ClientUiOverlay implements OverlayLayer {
         if (!this.capturesInput((byte) 73)) {
           return false;
         }
-        return ss.a((byte) 88, 12, 15, 13);
+        return UiKeyRoutingSupport.routeKeyInput((byte) 88, 12, 15, 13);
     }
 
     static {

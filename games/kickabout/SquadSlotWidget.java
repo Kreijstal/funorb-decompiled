@@ -90,12 +90,12 @@ final class SquadSlotWidget extends UiLayoutNode {
         this.field_Db.renderModel(var3[this.field_Eb.archetype], 0, SoftwareRasterizer.field_g >> 1, SoftwareRasterizer.field_f - 8, (byte) -122);
         TeamManagementScreen.e(117);
         if (this.field_zb) {
-          eo.a(PortraitCacheOrder.field_b, 1);
-          eo.a(PortraitCacheOrder.field_b, 2);
+          SoftwareDrawingSupport.a(PortraitCacheOrder.field_b, 1);
+          SoftwareDrawingSupport.a(PortraitCacheOrder.field_b, 2);
         } else {
           if (this.field_Kb) {
-            eo.a(PortraitCacheOrder.field_b, 1);
-            eo.a(PortraitCacheOrder.field_b, 2);
+            SoftwareDrawingSupport.a(PortraitCacheOrder.field_b, 1);
+            SoftwareDrawingSupport.a(PortraitCacheOrder.field_b, 2);
             PortraitCacheOrder.field_b.drawHalfSize(this.field_F, this.field_T);
             if (this.field_Hb) {
               SoftwareRasterizer.fillRoundedRectangleBlended(this.field_F + 1, -22 + this.field_mb + this.field_T, this.field_q - 2, 19, 7, 65793, 170);

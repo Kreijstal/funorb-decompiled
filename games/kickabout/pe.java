@@ -11,10 +11,10 @@ final class pe {
           return 0;
         }
         if (ArchiveRequest.field_r == 0) {
-          if (!bw.field_b.ensureIndex(-93)) {
+          if (!SceneSpriteFactory.field_b.ensureIndex(-93)) {
             return 20;
           }
-          if (!bw.field_b.a(false, "commonui")) {
+          if (!SceneSpriteFactory.field_b.a(false, "commonui")) {
             return 40;
           }
           if (!gs.field_c.ensureIndex(-58)) {
@@ -41,10 +41,10 @@ final class pe {
               return 29;
             }
           }
-          if (!bw.field_b.ensureIndex(-107)) {
+          if (!SceneSpriteFactory.field_b.ensureIndex(-107)) {
             return 43;
           }
-          if (!bw.field_b.a(false, "commonui")) {
+          if (!SceneSpriteFactory.field_b.a(false, "commonui")) {
             return 57;
           }
           if (!gs.field_c.ensureIndex(-66)) {
@@ -86,7 +86,7 @@ final class pe {
           }
           ValidatedTextWidget.field_Z.n(2);
           while (TexturedPanelPainter.$cfr$intArgs$b$c4997cb15529(-59)) {
-            ValidatedTextWidget.field_Z.dispatchKeyInput(il.field_c, (byte) -91, FixedQuaternion.field_e);
+            ValidatedTextWidget.field_Z.dispatchKeyInput(ClassDescriptorSupport.field_c, (byte) -91, FixedQuaternion.field_e);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

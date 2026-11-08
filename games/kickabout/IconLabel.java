@@ -105,10 +105,10 @@ final class IconLabel extends UiLayoutNode {
             return;
           }
           var3 = var8.readInt(4);
-          var4 = (BlobSubmission) (le.field_d.g(24009));
+          var4 = (BlobSubmission) (ExceptionTextSupport.field_d.g(24009));
           while (var4 != null) {
             if (var4.requestCrc != var3) {
-              var4 = (BlobSubmission) (le.field_d.c(33));
+              var4 = (BlobSubmission) (ExceptionTextSupport.field_d.c(33));
               continue;
             }
             break;

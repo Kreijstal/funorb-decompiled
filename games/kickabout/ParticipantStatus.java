@@ -32,16 +32,16 @@ final class ParticipantStatus extends MatchAgent {
           if (param2 < 96) {
             field_h = (int[][][][]) null;
           }
-          var4_int = ws.field_c[param3][param0 - 1][2];
-          var5 = ws.field_c[param3][-1 + param0][3];
+          var4_int = AccountNameCharacterSupport.field_c[param3][param0 - 1][2];
+          var5 = AccountNameCharacterSupport.field_c[param3][-1 + param0][3];
           var6 = var4_int * ql.field_a[0] / 896;
           var7 = var5 * ql.field_a[1] / 1344;
           if (param1 == 0) {
-            var8 = var6 + ws.field_c[param3][-1 + param0][0];
-            var9 = var7 + ws.field_c[param3][param0 - 1][1];
+            var8 = var6 + AccountNameCharacterSupport.field_c[param3][-1 + param0][0];
+            var9 = var7 + AccountNameCharacterSupport.field_c[param3][param0 - 1][1];
           } else {
-            var9 = var7 + (-var5 + 1344 - ws.field_c[param3][-1 + param0][1]);
-            var8 = var6 - var4_int + (896 - ws.field_c[param3][param0 - 1][0]);
+            var9 = var7 + (-var5 + 1344 - AccountNameCharacterSupport.field_c[param3][-1 + param0][1]);
+            var8 = var6 - var4_int + (896 - AccountNameCharacterSupport.field_c[param3][param0 - 1][0]);
           }
           MatchingTextValidator.field_m[0] = Math.min(896, Math.max(0, var8));
           MatchingTextValidator.field_m[1] = Math.min(1344, Math.max(0, var9));

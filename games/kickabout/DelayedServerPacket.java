@@ -63,11 +63,11 @@ final class DelayedServerPacket extends IntrusiveNode {
     final static void b(int param0) {
         if (param0 <= 25) {
           DelayedServerPacket.a(111);
-          pc.field_c = MonotonicClock.monotonicMillis(82);
+          DisplayNameUiSupport.field_c = MonotonicClock.monotonicMillis(82);
           MeshObject.field_d = 0;
           return;
         }
-        pc.field_c = MonotonicClock.monotonicMillis(82);
+        DisplayNameUiSupport.field_c = MonotonicClock.monotonicMillis(82);
         MeshObject.field_d = 0;
     }
 
@@ -125,7 +125,7 @@ final class DelayedServerPacket extends IntrusiveNode {
           }
           boolean decompiledFrameRemainder0 = true;
           if (AuctionLogEntry.field_h.screenId == 12) {
-            if (sk.a((byte) 97) == GameLoopApplet.field_E.field_p &&
+            if (LoadingProgressSupport.a((byte) 97) == GameLoopApplet.field_E.field_p &&
               IntrusiveNode.b((byte) -110) == GameLoopApplet.field_E.field_F) {
               stackIn_31_0 = (GameLoopApplet.field_E.field_A) ? 0 : 1;
               if (stackIn_31_0 != (RotaryDialPainter.field_n ? 1 : 0)) {
@@ -157,7 +157,7 @@ final class DelayedServerPacket extends IntrusiveNode {
               if (255 < var4Lifetime1) {
                 var4Lifetime1 = 255;
               }
-              var5 = sk.a((byte) 97);
+              var5 = LoadingProgressSupport.a((byte) 97);
               if (var5 > 255) {
                 var5 = 255;
               }
@@ -167,7 +167,7 @@ final class DelayedServerPacket extends IntrusiveNode {
                 or.field_d.writeByte(param2 ^ -113, var4Lifetime1);
                 or.field_d.writeByte(param2 + 119, var3_int);
               }
-              GameLoopApplet.field_E.field_p = sk.a((byte) 97);
+              GameLoopApplet.field_E.field_p = LoadingProgressSupport.a((byte) 97);
               GameLoopApplet.field_E.field_F = IntrusiveNode.b((byte) -95);
               GameLoopApplet.field_E.field_d = ByteStorage.field_c;
               GameLoopApplet.field_E.field_A = RotaryDialPainter.field_n;
@@ -228,8 +228,8 @@ final class DelayedServerPacket extends IntrusiveNode {
         }
         PlayerStats.field_b = var3 + 25L;
         float var5 = (float)param2 / (float)param0;
-        int var6 = vr.a(-2, PlayerArchetypeSortCriterion.field_r);
-        int var7 = vr.a(-2, 1 + PlayerArchetypeSortCriterion.field_r);
+        int var6 = PitchSurfaceLoader.a(-2, PlayerArchetypeSortCriterion.field_r);
+        int var7 = PitchSurfaceLoader.a(-2, 1 + PlayerArchetypeSortCriterion.field_r);
         if (param1 == 9863) {
           var8 = var7 - var6;
           TextInputWidget.field_R = (float)var6 + (float)var8 * var5;

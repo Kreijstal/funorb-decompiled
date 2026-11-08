@@ -7,7 +7,7 @@ final class ModalStack extends SingleChildContainer {
     static String field_B;
 
     public ModalStack() {
-        super(0, 0, il.field_b, ListRow.field_Ab, (WidgetPainter) null, (UiListener) null);
+        super(0, 0, ClassDescriptorSupport.field_b, ListRow.field_Ab, (WidgetPainter) null, (UiListener) null);
         this.field_A = new IntrusiveDeque();
     }
 
@@ -92,11 +92,11 @@ final class ModalStack extends SingleChildContainer {
         }
     }
 
-    final static gg a(boolean param0, int param1, int param2) {
+    final static SocialPlayerRow a(boolean param0, int param1, int param2) {
         ScrollPane stackIn_4_0 = null;
         int stackIn_4_1 = 0;
         boolean stackIn_5_2 = false;
-        gg stackIn_9_0 = null;
+        SocialPlayerRow stackIn_9_0 = null;
         UiLayoutNode stackIn_36_0 = null;
         String stackIn_37_1 = null;
         UiLayoutNode stackIn_40_0 = null;
@@ -105,13 +105,13 @@ final class ModalStack extends SingleChildContainer {
         Object stackIn_86_0 = null;
         Object stackIn_103_0 = null;
         RuntimeException decompiledCaughtException = null;
-        gg stackOut_8_0;
+        SocialPlayerRow stackOut_8_0;
         int var3_int = 0;
         RuntimeException var3 = null;
         IntrusiveDeque var4 = null;
         Object var5 = null;
         Object var6 = null;
-        gg var7 = null;
+        SocialPlayerRow var7 = null;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
@@ -129,18 +129,18 @@ final class ModalStack extends SingleChildContainer {
         var19 = Kickabout.field_G;
         try {
           stackIn_4_0 = RotaryDialPainter.field_d.field_Cb;
-          stackIn_4_1 = (sh.field_c * 3 + 6) * param2;
+          stackIn_4_1 = (LineupPositionSupport.field_c * 3 + 6) * param2;
           stackIn_5_2 = (RotaryDialPainter.field_d.field_Cb == ig.field_f);
           boolean decompiledFrameRemainder0 = true;
-          var3_int = ((ScrollPane) (Object) stackIn_4_0).a(stackIn_4_1, stackIn_5_2, param0, 2, false, param1 + sh.field_c) ? 1 : 0;
+          var3_int = ((ScrollPane) (Object) stackIn_4_0).a(stackIn_4_1, stackIn_5_2, param0, 2, false, param1 + LineupPositionSupport.field_c) ? 1 : 0;
           var4 = RotaryDialPainter.field_d.field_yb.field_jb;
           var5 = null;
-          if (ts.field_d == 2) {
+          if (PitchCoordinateSupport.field_d == 2) {
             TriangleMesh.field_R.field_lb = true;
             MarkerSliderPainter.field_f.field_E = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, uf.field_d, new String[]{BufferedSocket.field_h});
             RotaryDialPainter.field_d.field_Cb.field_zb.field_E = null;
             var6 = null;
-            var7 = (gg) (var4.g(24009));
+            var7 = (SocialPlayerRow) (var4.g(24009));
             boolean decompiledNaturalLoopExit0 = false;
             while (!(decompiledNaturalLoopExit0 = (var7 == null))) {
               var8 = 0;
@@ -179,7 +179,7 @@ final class ModalStack extends SingleChildContainer {
                   var7.field_Fb.field_ub = var11;
                   var7.field_Fb.field_N = DirectByteStorage.field_n;
                   var12 = 1;
-                  var7.field_Fb.setBounds(true, 3 + DirectByteStorage.field_n.field_o, 0, var9, sh.field_c);
+                  var7.field_Fb.setBounds(true, 3 + DirectByteStorage.field_n.field_o, 0, var9, LineupPositionSupport.field_c);
                 }
                 var7.field_Ab.field_H = var11;
                 var7.field_Bb.field_H = var11;
@@ -197,12 +197,12 @@ final class ModalStack extends SingleChildContainer {
                 }
                 stackIn_36_0 = var7.field_Bb;
                 if (var14 > 0) {
-                  stackIn_37_1 = BitmapFont.a(var7.field_Bb.field_X, var7.field_Gb, var14);
+                  stackIn_37_1 = BitmapFont.a(var7.field_Bb.field_X, var7.name, var14);
                 } else {
-                  stackIn_37_1 = var7.field_Gb;
+                  stackIn_37_1 = var7.name;
                 }
                 stackIn_36_0.field_E = stackIn_37_1;
-                var7.field_Bb.setBounds(true, var14, var13, var9, sh.field_c);
+                var7.field_Bb.setBounds(true, var14, var13, var9, LineupPositionSupport.field_c);
                 stackIn_40_0 = var7.field_Ab;
                 if (var7.field_zb == null) {
                   stackIn_41_1 = TextInputWidget.field_K;
@@ -210,10 +210,10 @@ final class ModalStack extends SingleChildContainer {
                   stackIn_41_1 = var7.field_zb;
                 }
                 stackIn_40_0.field_E = stackIn_41_1;
-                var7.field_Ab.setBounds(true, 80, var7.field_q - 80, var9, sh.field_c);
-                stackIn_45_0 = (var7.field_Bb.field_E.equals(var7.field_Gb)) ? 0 : 1;
+                var7.field_Ab.setBounds(true, 80, var7.field_q - 80, var9, LineupPositionSupport.field_c);
+                stackIn_45_0 = (var7.field_Bb.field_E.equals(var7.name)) ? 0 : 1;
                 var15 = stackIn_45_0;
-                var9 = var9 + sh.field_c;
+                var9 = var9 + LineupPositionSupport.field_c;
                 if (var3_int == 0) {
                   var7.field_L = -var7.field_mb + var9;
                 }
@@ -225,7 +225,7 @@ final class ModalStack extends SingleChildContainer {
                   var7.field_Fb.field_gb) {
                   UrlRequest.field_e = var7.field_Eb;
                 } else if (var7.field_sb != 0) {
-                  var16 = var7.field_Gb;
+                  var16 = var7.name;
                   BytePlusOneCommand.a(var7, false, RotaryDialPainter.field_d.field_Cb, -1, var16, (int[]) null, 0L, (String) null, -1);
                   var5 = var7;
                   if (null != var7.field_zb &&
@@ -243,10 +243,10 @@ final class ModalStack extends SingleChildContainer {
                 } else {
                   if (var7.field_Bb.field_gb &&
                     var15 != 0) {
-                    UrlRequest.field_e = var7.field_Gb;
+                    UrlRequest.field_e = var7.name;
                   }
                 }
-                var7 = (gg) (var4.c(33));
+                var7 = (SocialPlayerRow) (var4.c(33));
                 continue;
               }
               break;
@@ -267,7 +267,7 @@ final class ModalStack extends SingleChildContainer {
           else {
             MarkerSliderPainter.field_f.field_E = uf.field_a;
             TriangleMesh.field_R.field_lb = false;
-            if (ts.field_d == 1) {
+            if (PitchCoordinateSupport.field_d == 1) {
               RotaryDialPainter.field_d.field_Cb.field_zb.field_E = TutorialChoiceDialog.field_I;
               if (var19 != 0) {
                 RotaryDialPainter.field_d.field_Cb.field_zb.field_E = CheckboxLabelWidget.field_yb;
@@ -278,7 +278,7 @@ final class ModalStack extends SingleChildContainer {
             DateInputValidator.a(true, RotaryDialPainter.field_d.field_yb);
           }
           stackIn_103_0 = var5;
-          return (gg) (stackIn_103_0);
+          return (SocialPlayerRow) (stackIn_103_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;

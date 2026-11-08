@@ -32,7 +32,7 @@ final class TrinketShopDialog extends MessageDialog {
           var5 = GeneratedPanelPainter.field_g[var4];
           if (this.field_J == var5.field_k &&
             0 != var5.field_h && ((72 != var5.field_h ||
-            (1 & ic.field_h.field_n >> 0) == 1) &&
+            (1 & RegistrationRequestState.field_h.field_n >> 0) == 1) &&
             (var5.field_h != 73 ||
             LoginMethod.b(0)))) {
             var6 = new TrinketTile(var4);
@@ -108,7 +108,7 @@ final class TrinketShopDialog extends MessageDialog {
           SoftwareRasterizer.fillRoundedRectangleBlended(-(var8 >> 1) + var6 - 10, -(var9 >> 1) + (var7 - 10), 20 + var8, var9 + 40, 10, 65793, 128);
           this.field_H.field_Cb.drawCentered(var7, 23, var6);
           IsSixCommand.field_C.d(this.field_H.field_Eb, var6, 20 + ((var9 >> 1) + var7), this.field_H.c(true), -1);
-          if (!(this.field_H.field_Db <= ic.field_h.field_x)) {
+          if (!(this.field_H.field_Db <= RegistrationRequestState.field_h.field_x)) {
             IsSixCommand.field_C.d(AnimationFrameset.field_n, var6, 62 + ((var9 >> 1) + var7), 16777215, -1);
           }
         }
@@ -162,7 +162,7 @@ final class TrinketShopDialog extends MessageDialog {
           var4 = (TrinketTile) (this.field_L.field_Db.field_jb.c(param0 + 30));
         }
         stackIn_23_0 = this.field_i[0];
-        stackIn_24_1 = (this.field_H != null) && (this.field_H.field_Db <= ic.field_h.field_x);
+        stackIn_24_1 = (this.field_H != null) && (this.field_H.field_Db <= RegistrationRequestState.field_h.field_x);
         stackIn_23_0.field_lb = stackIn_24_1;
     }
 
@@ -173,7 +173,7 @@ final class TrinketShopDialog extends MessageDialog {
         this.field_K = 0;
         this.field_I = param1;
         CharSequence var5 = (CharSequence) ((Object) "trinkets");
-        this.field_L = new ScrollContainer(vb.a(0, var5), this.g((byte) -119), ConsolePanel.field_q, rr.field_b, ParticipantAgent.field_m);
+        this.field_L = new ScrollContainer(vb.hashString31(0, var5), this.g((byte) -119), ConsolePanel.field_q, TextEntrySupport.field_b, ParticipantAgent.field_m);
         this.field_L.setLayout(15, 0, 2, (byte) 2, 240, 210, 0);
         this.field_i[0].field_lb = false;
     }

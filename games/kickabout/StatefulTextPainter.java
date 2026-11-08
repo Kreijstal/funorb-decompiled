@@ -4,7 +4,7 @@
 final class StatefulTextPainter extends TextWidgetPainter {
     static byte[] field_u;
     private PainterStyle[] field_w;
-    static r field_t;
+    static ClientProtocolStage field_t;
     private PainterStyle field_x;
     static ResourceArchive field_y;
     static String field_r;
@@ -85,7 +85,7 @@ final class StatefulTextPainter extends TextWidgetPainter {
         String stackIn_20_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!ws.a(param2, (byte) 121)) {
+          if (!AccountNameCharacterSupport.isAllowedAccountNameCharacter(param2, (byte) 121)) {
             return false;
           }
           if (param1 == null) {
@@ -95,7 +95,7 @@ final class StatefulTextPainter extends TextWidgetPainter {
           if (var3_int >= 12) {
             return false;
           }
-          if (!ca.a(param0, param2)) {
+          if (!ca.isNameSeparator(param0, param2)) {
             return true;
           }
           if (var3_int != 0) {
@@ -188,15 +188,15 @@ final class StatefulTextPainter extends TextWidgetPainter {
         int var9Lifetime1;
         var13 = Kickabout.field_G;
         try {
-          sk.field_a = ModalStack.a(param3, -9, "commonui", "frame_top");
+          LoadingProgressSupport.field_a = ModalStack.a(param3, -9, "commonui", "frame_top");
           vb.field_a = ModalStack.a(param3, -120, "commonui", "frame_bottom");
-          KeyedLoginCredentials.field_f = wa.a((byte) 112, "commonui", param3, "jagex_logo_grey");
+          KeyedLoginCredentials.field_f = SpriteResourceSupport.loadNamedSprite((byte) 112, "commonui", param3, "jagex_logo_grey");
           IntrusiveDequeCursor.field_a = ModalStack.a(param3, -29, "commonui", "button");
           LoggedPlayer.field_g = ServerTextTemplate.a("validation", "commonui", 2, param3);
           EmailSyntaxValidator.field_k = (BitmapFont) ((Object) RenderedFootballer.a(param1, 10, "arezzo12", param3, "commonui"));
-          gf.field_a = (BitmapFont) ((Object) RenderedFootballer.a(param1, 10, "arezzo14", param3, "commonui"));
+          ModelMaterial.field_a = (BitmapFont) ((Object) RenderedFootballer.a(param1, 10, "arezzo14", param3, "commonui"));
           fj.field_b = (BitmapFont) ((Object) RenderedFootballer.a(param1, 10, "arezzo14bold", param3, "commonui"));
-          var17 = new Sprite(param0.takeFileByName("", "button.gif", 34), (java.awt.Component) ((Object) ic.field_d));
+          var17 = new Sprite(param0.takeFileByName("", "button.gif", 34), (java.awt.Component) ((Object) RegistrationRequestState.field_d));
           stackIn_3_0 = (ResourceArchive) (param3);
           stackIn_3_1 = "commonui";
           stackIn_4_2 = !(param2);
@@ -433,7 +433,7 @@ final class StatefulTextPainter extends TextWidgetPainter {
 
     static {
         field_u = new byte[520];
-        field_t = new r();
+        field_t = new ClientProtocolStage();
         field_r = "Your rating is <%0>";
     }
 }

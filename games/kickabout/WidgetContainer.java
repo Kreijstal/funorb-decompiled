@@ -530,10 +530,10 @@ class WidgetContainer extends UiWidget implements UiContainerMarker {
           if (param0 != -336184828) {
             return;
           }
-          wa.b((byte) -105);
+          SpriteResourceSupport.clearTemporaryRaster((byte) -105);
           if (param1.field_u > 0 &&
             param1.field_G != null) {
-            qr.a(82);
+            SessionUrlSupport.clearSharedRaster(82);
           }
           ShopPlayerSlot.field_Ob = 0;
           var8 = 0;
@@ -556,11 +556,11 @@ class WidgetContainer extends UiWidget implements UiContainerMarker {
               }
               if (!stackIn_12_0 ||
                 !(var17 * var14 - var15 * var16 >= 0)) {
-                var12Lifetime1 = ld.field_e[var9];
+                var12Lifetime1 = AccountInputValidationResult.field_e[var9];
                 if (var12Lifetime1 != -2147483648) {
-                  var13Lifetime1 = ld.field_e[var10];
+                  var13Lifetime1 = AccountInputValidationResult.field_e[var10];
                   if (var13Lifetime1 != -2147483648) {
-                    var14 = ld.field_e[var11];
+                    var14 = AccountInputValidationResult.field_e[var11];
                     if (-2147483648 != var14) {
                       var15 = var14 + var12Lifetime1 - (-var13Lifetime1 + var6);
                       stackIn_31_0 = -1;

@@ -42,7 +42,7 @@ final class BuyPlayerDialog extends MessageDialog {
         }
         super.handleResult(95, param1);
         if (param1 == 0) {
-          ld.a((byte) -25, this.field_H, this.field_J);
+          AccountInputValidationResult.a((byte) -25, this.field_H, this.field_J);
         }
     }
 

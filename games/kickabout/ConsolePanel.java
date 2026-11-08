@@ -94,7 +94,7 @@ abstract class ConsolePanel implements OverlayLayer {
           SoftwareRasterizer.fillRectangleAlpha(this.field_l.field_F, this.field_l.field_T + this.field_l.field_mb, this.field_l.field_q, -this.field_l.field_mb + ReceivedAuctionItem.field_B - this.field_l.field_T, 0, var2 >> 1);
           var3 = 5 + (this.field_l.field_mb + this.field_l.field_J);
           for (var4 = 0; 6 > var4; var4++) {
-            SoftwareRasterizer.drawHorizontalLineAlpha(0, var3, f.field_d, 0, var4 << 5);
+            SoftwareRasterizer.drawHorizontalLineAlpha(0, var3, SpriteNumberPainter.field_d, 0, var4 << 5);
             var3--;
           }
           this.field_l.draw(127, 0 == (this.field_n & 8) ? true : false);
@@ -414,7 +414,7 @@ abstract class ConsolePanel implements OverlayLayer {
         int var1;
         int var2;
         boolean stackIn_10_0 = false;
-        var1 = bk.a(2);
+        var1 = CalendarSupport.currentMonthIndex(2);
         var2 = PlayerStatSortCriterion.a(false);
         if (param0 < 45) {
           field_q = (UiLayoutNode) null;
@@ -525,7 +525,7 @@ abstract class ConsolePanel implements OverlayLayer {
           var11 = this.a(4, 2263074);
           var12 = this.a(65793, 200, 2236962);
           this.field_l = new UiLayoutNode(0L, var5);
-          this.field_l.setBounds(true, f.field_d, 0, -200, 200);
+          this.field_l.setBounds(true, SpriteNumberPainter.field_d, 0, -200, 200);
           var13 = new VerticalScrollbar(0L, var8, var8, var9, var10);
           var14 = new UiLayoutNode();
           var14.field_jb = new IntrusiveDeque();

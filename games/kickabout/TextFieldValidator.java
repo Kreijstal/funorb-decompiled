@@ -60,7 +60,7 @@ abstract class TextFieldValidator extends DebouncedValidationProvider implements
         }
         if (!param1) {
           ee.field_a = gw.a(80, (byte) -96, var8);
-          gk.field_b = null;
+          ChatComposeSupport.field_b = null;
           if (param0 > 84) {
             return new ChatMessage(param1);
           }
@@ -76,13 +76,13 @@ abstract class TextFieldValidator extends DebouncedValidationProvider implements
           } else {
             stackIn_22_0 = var9.field_n;
           }
-          gk.field_b = stackIn_22_0;
+          ChatComposeSupport.field_b = stackIn_22_0;
         } catch (java.lang.Exception decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = (Exception) (Object) decompiledCaughtException;
           UnreadMessagesScreen.a("CC1", (Throwable) ((Object) var6), 1);
           ee.field_a = null;
-          gk.field_b = null;
+          ChatComposeSupport.field_b = null;
           if (param0 > 84) {
             return new ChatMessage(param1);
           }
@@ -247,7 +247,7 @@ abstract class TextFieldValidator extends DebouncedValidationProvider implements
         }
         if (!param1) {
           ee.field_a = gw.a(80, (byte) -96, var8);
-          gk.field_b = null;
+          ChatComposeSupport.field_b = null;
           if (param0 > 84) {
             return new ChatMessage(param1);
           }
@@ -263,13 +263,13 @@ abstract class TextFieldValidator extends DebouncedValidationProvider implements
           } else {
             stackIn_22_0 = var9.field_n;
           }
-          gk.field_b = stackIn_22_0;
+          ChatComposeSupport.field_b = stackIn_22_0;
         } catch (java.lang.Exception decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = (Exception) (Object) decompiledCaughtException;
           UnreadMessagesScreen.a("CC1", (Throwable) ((Object) var6), 1);
           ee.field_a = null;
-          gk.field_b = null;
+          ChatComposeSupport.field_b = null;
           if (param0 > 84) {
             return new ChatMessage(param1);
           }

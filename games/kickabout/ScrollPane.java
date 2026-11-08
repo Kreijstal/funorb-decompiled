@@ -152,7 +152,7 @@ final class ScrollPane extends UiLayoutNode {
 
     final static boolean h(byte param0) {
         int var1 = -35 % ((-48 - param0) / 50);
-        return TickClock.a(wq.field_d, true);
+        return TickClock.a(DiagnosticsOverlaySupport.field_d, true);
     }
 
     private final void layoutViewport(int param0, byte param1, int param2) {
@@ -272,7 +272,7 @@ final class ScrollPane extends UiLayoutNode {
         if (param0 != -1) {
           return;
         }
-        if (we.field_c == WeightedLruCache.field_a) {
+        if (ClientUiUpdateSupport.field_c == WeightedLruCache.field_a) {
           fieldTemp$1 = LoginDialog.field_bb;
           LoginDialog.field_bb = LoginDialog.field_bb + 1;
           if (fieldTemp$1 < 16) {

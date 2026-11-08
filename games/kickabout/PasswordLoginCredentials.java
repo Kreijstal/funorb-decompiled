@@ -29,7 +29,7 @@ final class PasswordLoginCredentials extends LoginCredentials {
         SoundStreamHandle var1Lifetime1;
         var2 = Kickabout.field_G;
         try {
-          cb.field_d.serviceOutput();
+          PitchPurchaseSupport.field_d.serviceOutput();
           if (param0 != -28) {
             PasswordLoginCredentials.c(-80);
           }
@@ -65,24 +65,24 @@ final class PasswordLoginCredentials extends LoginCredentials {
     }
 
     final static void a(boolean param0, byte param1) {
-        g.field_a.draw(97, param0);
+        GrayscalePaletteSupport.field_a.draw(97, param0);
         DateOfBirthPanel var2 = PlayArea.field_a;
         if (param1 >= -27) {
           PasswordLoginCredentials.b((byte) 111);
         }
         if (var2 != null) {
-          var2.renderWidgetPassesAndTooltip(g.field_a.field_T, g.field_a.field_F, (byte) -120);
+          var2.renderWidgetPassesAndTooltip(GrayscalePaletteSupport.field_a.field_T, GrayscalePaletteSupport.field_a.field_F, (byte) -120);
         }
     }
 
-    final static ld a(byte param0, String param1) {
-        ld stackIn_4_0 = null;
-        ld stackIn_8_0 = null;
-        ld stackIn_14_0 = null;
+    final static AccountInputValidationResult a(byte param0, String param1) {
+        AccountInputValidationResult stackIn_4_0 = null;
+        AccountInputValidationResult stackIn_8_0 = null;
+        AccountInputValidationResult stackIn_14_0 = null;
         int stackIn_22_0 = 0;
-        ld stackIn_26_0 = null;
-        ld stackIn_39_0 = null;
-        ld stackIn_44_0 = null;
+        AccountInputValidationResult stackIn_26_0 = null;
+        AccountInputValidationResult stackIn_39_0 = null;
+        AccountInputValidationResult stackIn_44_0 = null;
         RuntimeException stackIn_50_0 = null;
         StringBuilder stackIn_50_1 = null;
         String stackIn_51_2 = null;
@@ -102,7 +102,7 @@ final class PasswordLoginCredentials extends LoginCredentials {
           var3 = -34 % ((param0 - 38) / 57);
           var2_int = param1.length();
           if (0 == var2_int) {
-            stackIn_4_0 = ld.field_b;
+            stackIn_4_0 = AccountInputValidationResult.field_b;
             return stackIn_4_0;
           }
           if (var2_int > 64) {
@@ -184,19 +184,19 @@ final class PasswordLoginCredentials extends LoginCredentials {
         String stackIn_26_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (wk.field_f != vj.field_a) {
+          if (ClubStateFactory.field_f != vj.field_a) {
             return false;
           }
           var8 = new RegistrationRequestDialog(RankingsRequest.field_l, param4);
           RankingsRequest.field_l.a(var8, false);
-          if (!wq.c((byte) 59)) {
+          if (!DiagnosticsOverlaySupport.c((byte) 59)) {
             ArchiveIndex.field_a = null;
             ArchiveManager.field_c = param2;
             tn.field_b = param5;
             AccountRegistrationResponse.field_i = param6;
-            wk.field_f = PlayerModelPreview.field_f;
-            ld.field_a = param1;
-            qr.field_f = param3;
+            ClubStateFactory.field_f = PlayerModelPreview.field_f;
+            AccountInputValidationResult.field_a = param1;
+            SessionUrlSupport.field_f = param3;
           } else {
             var8.t(17);
           }
@@ -254,7 +254,7 @@ final class PasswordLoginCredentials extends LoginCredentials {
           if (param5 == null) {
             var9.writeShort(-1207444472, param0);
           } else {
-            cu.a((byte) 104, param5, var9);
+            cu.writeHuffmanString((byte) 104, param5, var9);
           }
           var9.backpatchByteLength(62, -var7 + var9.field_n);
         } catch (RuntimeException runtimeException) {

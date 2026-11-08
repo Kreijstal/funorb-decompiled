@@ -40,7 +40,7 @@ final class VertexNormal {
         RuntimeException var4 = null;
         CipherPacketBuffer var5 = null;
         int var6 = 0;
-        gg var7 = null;
+        SocialPlayerRow var7 = null;
         CharSequence var8 = null;
         String stackIn_3_0 = null;
         String stackIn_7_0 = null;
@@ -58,7 +58,7 @@ final class VertexNormal {
             stackIn_3_0 = SquadSlotWidget.field_Ib;
             return stackIn_3_0;
           }
-          if (param1 != ts.field_d) {
+          if (param1 != PitchCoordinateSupport.field_d) {
             stackIn_7_0 = ShopPlayerSlot.field_Db;
             return stackIn_7_0;
           }

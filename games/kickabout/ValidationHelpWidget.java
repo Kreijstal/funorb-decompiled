@@ -210,7 +210,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
             stackIn_2_0 = (Sprite) null;
             return stackIn_2_0;
           }
-          if (!cu.a(param1, param2, param0, param3 ^ -105)) {
+          if (!cu.decodeSpriteSheetFromArchive(param1, param2, param0, param3 ^ -105)) {
             return null;
           }
           stackIn_7_0 = MatchAgent.b(param3 + 9);
@@ -235,7 +235,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
         }
         try {
           InstrumentNoteMask.field_j = param0;
-          ts.field_b = param1;
+          PitchCoordinateSupport.field_b = param1;
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "ju.U(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -280,7 +280,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
         field_V[0] = 0L;
         for (var0 = 1; var0 <= 10; var0++) {
             var1 = -8 + 8 * var0;
-            field_V[var0] = sd.a(mg.a(255L, field_W[7][var1 + 7]), sd.a(mg.a(65280L, field_W[6][var1 + 6]), sd.a(sd.a(mg.a(4278190080L, field_W[4][4 + var1]), sd.a(sd.a(mg.a(field_W[2][var1 + 2], 280375465082880L), sd.a(mg.a(71776119061217280L, field_W[1][1 + var1]), mg.a(field_W[0][var1], -72057594037927936L))), mg.a(1095216660480L, field_W[3][var1 + 3]))), mg.a(field_W[5][var1 + 5], 16711680L))));
+            field_V[var0] = SpriteBackgroundSupport.xor(PlayerInputFactory.and(255L, field_W[7][var1 + 7]), SpriteBackgroundSupport.xor(PlayerInputFactory.and(65280L, field_W[6][var1 + 6]), SpriteBackgroundSupport.xor(SpriteBackgroundSupport.xor(PlayerInputFactory.and(4278190080L, field_W[4][4 + var1]), SpriteBackgroundSupport.xor(SpriteBackgroundSupport.xor(PlayerInputFactory.and(field_W[2][var1 + 2], 280375465082880L), SpriteBackgroundSupport.xor(PlayerInputFactory.and(71776119061217280L, field_W[1][1 + var1]), PlayerInputFactory.and(field_W[0][var1], -72057594037927936L))), PlayerInputFactory.and(1095216660480L, field_W[3][var1 + 3]))), PlayerInputFactory.and(field_W[5][var1 + 5], 16711680L))));
         }
         field_P = "Log in";
     }

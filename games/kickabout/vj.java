@@ -3,7 +3,7 @@
  */
 final class vj {
     static int field_c;
-    static vd field_a;
+    static AccountNameCheckState field_a;
     static String field_f;
     static UiLayoutNode field_g;
     static String field_d;
@@ -93,7 +93,7 @@ final class vj {
     }
 
     static {
-        field_a = new vd();
+        field_a = new AccountNameCheckState();
         field_d = "to keep fullscreen or";
         field_f = "RuneScape clan";
         field_e = "select this pitch";

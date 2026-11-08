@@ -107,7 +107,7 @@ abstract class SpriteState extends DualLinkNode {
               var9_ref_String = PlayerContextMenu.field_i.field_ec;
               IterableDualLinkDeque.field_h.field_E = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, AccountNameAvailabilityValidator.field_m, new String[]{var9_ref_String}).toUpperCase();
               MarkerSliderWidget.field_F.setBounds(true, AuctionItem.field_p.field_q, 0, AuctionItem.field_p.field_mb - 40, 40);
-              MarkerSliderWidget.field_F.field_E = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, wa.field_c, new String[]{var9_ref_String});
+              MarkerSliderWidget.field_F.field_E = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, SpriteResourceSupport.field_c, new String[]{var9_ref_String});
               var8 = MarkerSliderWidget.field_F;
             } else {
               IterableDualLinkDeque.field_h.field_E = TabStrip.field_zb.toUpperCase();
@@ -121,11 +121,11 @@ abstract class SpriteState extends DualLinkNode {
                 DualLinkHashTable.field_d.field_lb = true;
               }
               DualLinkHashTable.field_d.field_R = TextFieldNode.field_Qb.field_R;
-              if (fh.field_b > 0) {
-                if (fh.field_b == 1) {
+              if (SharedSpriteTables.field_b > 0) {
+                if (SharedSpriteTables.field_b == 1) {
                   var10_ref_String = LobbyGameRecord.field_i;
                 } else {
-                  var10_ref_String = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, PopupDialog.field_f, new String[]{Integer.toString(fh.field_b)});
+                  var10_ref_String = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, PopupDialog.field_f, new String[]{Integer.toString(SharedSpriteTables.field_b)});
                 }
                 DualLinkHashTable.field_d.field_E = DualLinkHashTable.field_d.field_E + "<br>" + var10_ref_String;
                 if ((16 & GameKeyHandler.field_c) == 0 &&
@@ -142,10 +142,10 @@ abstract class SpriteState extends DualLinkNode {
               var10 = 2;
               if (PlayArea.field_k != null) {
                 if (SumIntegersCommand.field_G == null) {
-                  WhirlpoolHasher.field_f = new boolean[ss.field_j];
-                  SumIntegersCommand.field_G = new byte[ss.field_j];
+                  WhirlpoolHasher.field_f = new boolean[UiKeyRoutingSupport.field_j];
+                  SumIntegersCommand.field_G = new byte[UiKeyRoutingSupport.field_j];
                 }
-                for (var11_int = 0; ss.field_j > var11_int; var11_int++) {
+                for (var11_int = 0; UiKeyRoutingSupport.field_j > var11_int; var11_int++) {
                   WhirlpoolHasher.field_f[var11_int] = false;
                 }
                 var10 = 0;
@@ -210,20 +210,20 @@ abstract class SpriteState extends DualLinkNode {
                 }
               }
               if (var10 >= 2) {
-                if ((null != ds.field_h ||
+                if ((null != ModelMaterialDecoder.field_h ||
                   null != BroadcastServerCommand.field_E ||
-                  null != so.field_f ||
+                  null != AppletContextSupport.field_f ||
                   null != SumIntegersCommand.field_D)) {
                   var11_intLifetime1 = 0;
                   var12Lifetime1 = 0;
                   var13_int = 0;
                   var14_intLifetime1 = 0;
                   var15Lifetime1 = 0;
-                  for (var16Lifetime1 = 0; var16Lifetime1 < ss.field_j; var16Lifetime1++) {
+                  for (var16Lifetime1 = 0; var16Lifetime1 < UiKeyRoutingSupport.field_j; var16Lifetime1++) {
                     var17_intLifetime1 = 255 & PlayerContextMenu.field_i.field_Eb[var16Lifetime1];
-                    if (null != ds.field_h &&
-                      ds.field_h[var16Lifetime1] != null &&
-                      ds.field_h[var16Lifetime1][var17_intLifetime1]) {
+                    if (null != ModelMaterialDecoder.field_h &&
+                      ModelMaterialDecoder.field_h[var16Lifetime1] != null &&
+                      ModelMaterialDecoder.field_h[var16Lifetime1][var17_intLifetime1]) {
                       var11_intLifetime1 = 1;
                     }
                     if (BroadcastServerCommand.field_E != null &&
@@ -238,15 +238,15 @@ abstract class SpriteState extends DualLinkNode {
                       }
                     }
                     regionExit3: {
-                      if (null != so.field_f) {
-                        if (so.field_f[var16Lifetime1] == null) {
+                      if (null != AppletContextSupport.field_f) {
+                        if (AppletContextSupport.field_f[var16Lifetime1] == null) {
                           if (((null != SumIntegersCommand.field_D)) &&
                             ((null != SumIntegersCommand.field_D[var16Lifetime1]))) {
                             var15Lifetime1 = var15Lifetime1 | SumIntegersCommand.field_D[var16Lifetime1][var17_intLifetime1];
                           }
                           break regionExit3;
                         }
-                        var18_intLifetime1 = so.field_f[var16Lifetime1][var17_intLifetime1];
+                        var18_intLifetime1 = AppletContextSupport.field_f[var16Lifetime1][var17_intLifetime1];
                         if (var18_intLifetime1 > var14_intLifetime1) {
                           var14_intLifetime1 = var18_intLifetime1;
                         }
@@ -302,7 +302,7 @@ abstract class SpriteState extends DualLinkNode {
                     GoalStateAgent.field_k.field_lb = false;
                     if (!(!GoalStateAgent.field_k.field_Q)) {
                       if (HighScoreQuery.field_l.tabs.field_Db != 0) {
-                        UrlRequest.field_e = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, TrinketSlot.field_Fb, new String[]{c.field_d});
+                        UrlRequest.field_e = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, TrinketSlot.field_Fb, new String[]{ClientPacketFlushSupport.field_d});
                       } else {
                         UrlRequest.field_e = MusicPatchPcmStream.field_m;
                       }
@@ -316,7 +316,7 @@ abstract class SpriteState extends DualLinkNode {
                 if (GoalStateAgent.field_k.field_Q) {
                   var11 = null;
                   var12Lifetime2 = 0;
-                  for (var13_intLifetime1 = 0; ss.field_j > var13_intLifetime1; var13_intLifetime1++) {
+                  for (var13_intLifetime1 = 0; UiKeyRoutingSupport.field_j > var13_intLifetime1; var13_intLifetime1++) {
                     if (WhirlpoolHasher.field_f[var13_intLifetime1]) {
                       var24 = "<col=A00000>" + ok.field_b[var13_intLifetime1] + "</col>";
                       if (var11 == null) {
@@ -352,7 +352,7 @@ abstract class SpriteState extends DualLinkNode {
               if (var9 < 1) {
                 var9 = 1;
               }
-              var8.field_E = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, gf.field_h, new String[]{Integer.toString(var9)});
+              var8.field_E = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, ModelMaterial.field_h, new String[]{Integer.toString(var9)});
             }
             GameQuickChatResolver.field_c.field_E = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, DateOfBirthPanel.field_F, new String[]{Integer.toString(PlayerContextMenu.field_i.field_gc), Integer.toString(PlayerContextMenu.field_i.field_bc)});
           }

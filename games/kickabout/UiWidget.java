@@ -98,7 +98,7 @@ class UiWidget extends IntrusiveNode {
             return stackIn_44_0;
           }
           if (param1) {
-            stackIn_34_0 = cd.field_a[ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(-123, cd.field_a.length, LoginForm.field_E)];
+            stackIn_34_0 = GuestLoginSupport.field_a[ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(-123, GuestLoginSupport.field_a.length, LoginForm.field_E)];
             return stackIn_34_0;
           }
           if (param3) {
@@ -106,7 +106,7 @@ class UiWidget extends IntrusiveNode {
             return stackIn_42_0;
           }
           if (param4) {
-            stackIn_40_0 = qr.field_e[ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(120, qr.field_e.length, LoginForm.field_E)];
+            stackIn_40_0 = SessionUrlSupport.field_e[ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(120, SessionUrlSupport.field_e.length, LoginForm.field_E)];
             return stackIn_40_0;
           }
           stackIn_38_0 = ConsoleTokenCursor.field_e[ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(95, ConsoleTokenCursor.field_e.length, LoginForm.field_E)];
@@ -318,7 +318,7 @@ class UiWidget extends IntrusiveNode {
         if (null != ArchiveIndex.field_h) {
           ArchiveIndex.field_h.restoreSavedSize(0);
         }
-        ic.field_d.requestFocus();
+        RegistrationRequestState.field_d.requestFocus();
     }
 
     public static void g(byte param0) {
@@ -514,7 +514,7 @@ class UiWidget extends IntrusiveNode {
         }
         String var5 = JaggrabDownloader.a(true);
         if (var5 != null) {
-          GameSoundEffect.field_i.drawTooltip(ws.field_e, (byte) 115, TrinketCatalog.field_d, var5);
+          GameSoundEffect.field_i.drawTooltip(AccountNameCharacterSupport.field_e, (byte) 115, TrinketCatalog.field_d, var5);
         }
     }
 

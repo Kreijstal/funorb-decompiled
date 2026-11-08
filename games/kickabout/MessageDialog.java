@@ -414,7 +414,7 @@ class MessageDialog extends PopupDialog {
         try {
           this.field_y = param0;
           this.a(param3, param1, MusicPatchNode.b(2, this.field_y), -125, param2);
-          this.open(ds.a(this.field_y, 1), pg.a(false, this.field_y), 1054928844);
+          this.open(ModelMaterialDecoder.messageButtonCount(this.field_y, 1), pg.a(false, this.field_y), 1054928844);
           if (this.field_y == 8) {
             this.setOptionLabels(AlternateKeyedLoginCredentials.field_j, (byte) 90);
           }

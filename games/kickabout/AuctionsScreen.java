@@ -37,8 +37,8 @@ final class AuctionsScreen extends ButtonMenuScreen {
         if (param0 != -38) {
           this.field_B = (ReceivedAuctionItemRow[]) null;
         }
-        this.field_R = eo.createRenderedButton(ThreeCommand.field_B, 7126504, un.field_d, 162, true);
-        this.field_P = eo.createRenderedButton(vd.field_b, 16679959, un.field_d, 162, true);
+        this.field_R = SoftwareDrawingSupport.createRenderedButton(ThreeCommand.field_B, 7126504, un.field_d, 162, true);
+        this.field_P = SoftwareDrawingSupport.createRenderedButton(AccountNameCheckState.field_b, 16679959, un.field_d, 162, true);
         this.field_R.field_s = 10;
         this.field_R.field_J = 56;
         this.field_P.field_J = 86;
@@ -62,7 +62,7 @@ final class AuctionsScreen extends ButtonMenuScreen {
             var5[var3] = ClientException.field_a;
           }
         }
-        this.field_G = new AuctionTableWidget(gk.field_f, ClubState.field_l, var6, 50);
+        this.field_G = new AuctionTableWidget(ChatComposeSupport.field_f, ClubState.field_l, var6, 50);
         this.field_G.a(300, (byte) -116, 122, 7);
         this.field_B = new ReceivedAuctionItemRow[]{};
         this.field_G.a(this.field_B, 0);
@@ -137,7 +137,7 @@ final class AuctionsScreen extends ButtonMenuScreen {
         }
         var3 = this.field_G.h((byte) 123);
         stackIn_5_0 = param1;
-        stackIn_6_1 = (ds.field_g) ? 0 : 1;
+        stackIn_6_1 = (ModelMaterialDecoder.field_g) ? 0 : 1;
         stackIn_9_2 = (NineSlicePanelPainter.field_e) ? 0 : 1;
         stackIn_11_1 = stackIn_6_1 & stackIn_9_2;
         stackIn_12_2 = (PlayArea.a(100)) ? 0 : 1;
@@ -276,7 +276,7 @@ final class AuctionsScreen extends ButtonMenuScreen {
               un.field_d.d(var14, (SoftwareRasterizer.field_g >> 1) + var12, 18 + var12, 65793, -1);
             }
             TeamManagementScreen.e(120);
-            sd.a(var13, (byte) -51);
+            SpriteBackgroundSupport.fillTransparentBackground(var13, (byte) -51);
             var7[var8 >> 3][TextLayoutLine.b(3, var8 >> 1)][TextLayoutLine.b(var8, 1)] = var13;
           }
           stackIn_28_0 = var7;
@@ -314,7 +314,7 @@ final class AuctionsScreen extends ButtonMenuScreen {
         this.field_C = 0;
         this.field_D = 0;
         if (!NineSlicePanelPainter.field_e) {
-          if (ds.field_g) {
+          if (ModelMaterialDecoder.field_g) {
             return;
           }
           this.requestAuctionRefresh(30353);
@@ -392,7 +392,7 @@ final class AuctionsScreen extends ButtonMenuScreen {
         if (PlayArea.a(param0 ^ -97)) {
           SoftwareRasterizer.fillRectangleAlpha(this.slideOffsetX, 48, 640, 383, 0, 196);
         }
-        if (ds.field_g ||
+        if (ModelMaterialDecoder.field_g ||
           NineSlicePanelPainter.field_e) {
           SoftwareRasterizer.fillRectangleAlpha(this.slideOffsetX, 48, 640, 383, 0, 196);
           IsSixCommand.field_C.a(BufferedCacheFile.field_d, this.slideOffsetX, 0, 640, 480, 16777215, -1, 1, 1, 0);
@@ -482,7 +482,7 @@ final class AuctionsScreen extends ButtonMenuScreen {
                   var17.addLast(var10_ref_jr, 3);
                   var8++;
                 }
-                var10_ref_jrLifetime2 = new ReceivedAuctionItemRow(var18, gk.field_f);
+                var10_ref_jrLifetime2 = new ReceivedAuctionItemRow(var18, ChatComposeSupport.field_f);
                 var10_ref_jrLifetime2.field_y = 16777215;
                 var10_ref_jrLifetime2.field_mb = 50;
                 var10_ref_jrLifetime2.field_X = (BitmapFont) ((Object) IsSixCommand.field_C);
@@ -508,7 +508,7 @@ final class AuctionsScreen extends ButtonMenuScreen {
             if (this.containsAuction(NetworkArchiveRequest.field_w[var9], (byte) 117)) {
               this.replaceAuctionEntry(NetworkArchiveRequest.field_w[var9], 640);
             }
-            var10_ref_jrLifetime1 = new ReceivedAuctionItemRow(NetworkArchiveRequest.field_w[var9], gk.field_f);
+            var10_ref_jrLifetime1 = new ReceivedAuctionItemRow(NetworkArchiveRequest.field_w[var9], ChatComposeSupport.field_f);
             var10_ref_jrLifetime1.field_mb = 50;
             var10_ref_jrLifetime1.field_X = (BitmapFont) ((Object) IsSixCommand.field_C);
             var10_ref_jrLifetime1.field_y = 16777215;
@@ -535,7 +535,7 @@ final class AuctionsScreen extends ButtonMenuScreen {
           this.field_B = new ReceivedAuctionItemRow[var9Lifetime1 + (var6 - (-var8 - var10))];
           var11 = var9Lifetime1;
           for (var12 = 0; var11 > var12; var12++) {
-            this.field_B[var12] = new ReceivedAuctionItemRow(gk.field_f);
+            this.field_B[var12] = new ReceivedAuctionItemRow(ChatComposeSupport.field_f);
             this.field_B[var12].field_mb = 50;
             this.field_B[var12].field_X = (BitmapFont) ((Object) IsSixCommand.field_C);
             this.field_B[var12].field_y = 16777215;
@@ -547,7 +547,7 @@ final class AuctionsScreen extends ButtonMenuScreen {
             var11++;
           }
           for (var12Lifetime1 = var11; var12Lifetime1 < this.field_B.length; var12Lifetime1++) {
-            this.field_B[var12Lifetime1] = new ReceivedAuctionItemRow(gk.field_f);
+            this.field_B[var12Lifetime1] = new ReceivedAuctionItemRow(ChatComposeSupport.field_f);
             this.field_B[var12Lifetime1].field_mb = 50;
             this.field_B[var12Lifetime1].field_X = (BitmapFont) ((Object) IsSixCommand.field_C);
             this.field_B[var12Lifetime1].field_y = 16777215;
@@ -588,7 +588,7 @@ final class AuctionsScreen extends ButtonMenuScreen {
         long var2 = 0L;
         if (!PlayArea.a(100)) {
           if (NineSlicePanelPainter.field_e ||
-            ds.field_g) {
+            ModelMaterialDecoder.field_g) {
             return;
           }
           or.field_d.b(84, (byte) 112);
@@ -614,7 +614,7 @@ final class AuctionsScreen extends ButtonMenuScreen {
         var4 = Kickabout.field_G;
         stackIn_2_0 = this.field_R;
         stackIn_3_1 = (NineSlicePanelPainter.field_e) ? 0 : 1;
-        stackIn_6_2 = (ds.field_g) ? 0 : 1;
+        stackIn_6_2 = (ModelMaterialDecoder.field_g) ? 0 : 1;
         stackIn_2_0.field_lb = (stackIn_3_1 & stackIn_6_2) != 0;
         if (this.field_R.field_gb) {
           IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, QuickChatPhraseDefinition.field_v);
@@ -677,19 +677,19 @@ final class AuctionsScreen extends ButtonMenuScreen {
         int var8 = Kickabout.field_G;
         try {
           PlayerPortraitCacheEntry.field_g = null;
-          var9 = wq.field_d == 0L ? gw.field_b : ArchiveSource.field_e;
+          var9 = DiagnosticsOverlaySupport.field_d == 0L ? gw.field_b : ArchiveSource.field_e;
           String var2 = var9;
           var3 = new String[]{var9, PasswordFieldPainter.field_D};
           if (param0 != 10) {
             field_A = -58;
           }
-          var4 = wk.a(true, true);
+          var4 = ClubStateFactory.createLocalClub(true, true);
           var4.field_k = 15;
           var4.field_w = 0;
           var4.field_R = 15;
           var5 = GameLoopApplet.field_E;
           if (param1) {
-            var10 = wk.a(false, true);
+            var10 = ClubStateFactory.createLocalClub(false, true);
             var5 = var10;
             var10.field_o = 2;
             var10.field_K = 0;
@@ -771,7 +771,7 @@ final class AuctionsScreen extends ButtonMenuScreen {
         }
         if (!PlayArea.a(100)) {
           if (NineSlicePanelPainter.field_e ||
-            ds.field_g) {
+            ModelMaterialDecoder.field_g) {
             return;
           }
           if (this.field_D - 5 <= this.field_T.a(false)) {

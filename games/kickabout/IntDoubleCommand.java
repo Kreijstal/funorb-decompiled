@@ -84,7 +84,7 @@ final class IntDoubleCommand extends ConsoleCommand {
         int var13Lifetime3;
         var14 = et.field_d.field_P[1][param6 + 1];
         var8 = var14;
-        var9 = th.field_c[param6];
+        var9 = FadingSoundSupport.field_c[param6];
         var10 = te.field_a[param6];
         if ((param5 - 5) <= param1 &&
           (param7 + 5) >= param1 &&
@@ -108,11 +108,11 @@ final class IntDoubleCommand extends ConsoleCommand {
           if (var14.action != 3 &&
             var14.action != 12) {
             if (var11 == 0) {
-              if (ld.field_f.action != 9 &&
-                7 != ld.field_f.action &&
-                ld.field_f.action != 12 &&
-                ld.field_f.action != 3 &&
-                ld.field_f.action != 10) {
+              if (AccountInputValidationResult.field_f.action != 9 &&
+                7 != AccountInputValidationResult.field_f.action &&
+                AccountInputValidationResult.field_f.action != 12 &&
+                AccountInputValidationResult.field_f.action != 3 &&
+                AccountInputValidationResult.field_f.action != 10) {
                 stackIn_34_0 = 1;
               } else {
                 stackIn_34_0 = 0;
@@ -127,11 +127,11 @@ final class IntDoubleCommand extends ConsoleCommand {
               return;
             }
             if (0 != et.field_d.field_V.possessorTeam) {
-              if (ld.field_f.action != 9 &&
-                7 != ld.field_f.action &&
-                ld.field_f.action != 12 &&
-                ld.field_f.action != 3 &&
-                ld.field_f.action != 10) {
+              if (AccountInputValidationResult.field_f.action != 9 &&
+                7 != AccountInputValidationResult.field_f.action &&
+                AccountInputValidationResult.field_f.action != 12 &&
+                AccountInputValidationResult.field_f.action != 3 &&
+                AccountInputValidationResult.field_f.action != 10) {
                 stackIn_56_0 = 1;
               } else {
                 stackIn_56_0 = 0;
@@ -165,11 +165,11 @@ final class IntDoubleCommand extends ConsoleCommand {
             var13Lifetime2 = param1 - var14.pixelX(-124);
             if (var12Lifetime2 * var12Lifetime2 + var13Lifetime2 * var13Lifetime2 < 3600) {
               var14.startTackle(0, -1);
-              if (ld.field_f.action != 9 &&
-                7 != ld.field_f.action &&
-                ld.field_f.action != 12 &&
-                ld.field_f.action != 3 &&
-                ld.field_f.action != 10) {
+              if (AccountInputValidationResult.field_f.action != 9 &&
+                7 != AccountInputValidationResult.field_f.action &&
+                AccountInputValidationResult.field_f.action != 12 &&
+                AccountInputValidationResult.field_f.action != 3 &&
+                AccountInputValidationResult.field_f.action != 10) {
                 stackIn_78_0 = 1;
               } else {
                 stackIn_78_0 = 0;
@@ -192,11 +192,11 @@ final class IntDoubleCommand extends ConsoleCommand {
               TournamentChampionDialog.a(stackIn_85_0, stackIn_85_1, stackIn_85_2, stackIn_86_3, (byte) 69, var9);
               return;
             }
-            if (ld.field_f.action != 9 &&
-              7 != ld.field_f.action &&
-              ld.field_f.action != 12 &&
-              ld.field_f.action != 3 &&
-              ld.field_f.action != 10) {
+            if (AccountInputValidationResult.field_f.action != 9 &&
+              7 != AccountInputValidationResult.field_f.action &&
+              AccountInputValidationResult.field_f.action != 12 &&
+              AccountInputValidationResult.field_f.action != 3 &&
+              AccountInputValidationResult.field_f.action != 10) {
               stackIn_96_0 = 1;
             } else {
               stackIn_96_0 = 0;

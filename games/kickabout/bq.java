@@ -47,7 +47,7 @@ final class bq {
           }
           ConsoleEvaluationException.a(stackIn_3_0, stackIn_4_1);
           HighScoreQuery.field_l.layout(0, TrinketIcon.field_Cb.field_q, 0, -2 + (-40 + TrinketIcon.field_Cb.field_mb), (byte) -80);
-          GameQuickChatResolver.field_c.setBounds(true, AchievementsScreen.field_C.field_q, 0, 0, sh.field_c);
+          GameQuickChatResolver.field_c.setBounds(true, AchievementsScreen.field_C.field_q, 0, 0, LineupPositionSupport.field_c);
           stackIn_6_0 = BufferedSocket.field_u;
           stackIn_6_1 = true;
           stackIn_6_2 = AchievementsScreen.field_C.field_q;
@@ -56,13 +56,13 @@ final class bq {
           } else {
             stackIn_7_3 = 2 + (TeamSelectionAgent.field_f + 40 + 2);
           }
-          ((UiLayoutNode) (Object) stackIn_6_0).setBounds(stackIn_6_1, stackIn_6_2 - stackIn_7_3, 0, sh.field_c + 2, 18);
-          DoSomethingCommand.field_D.setBounds(true, TeamSelectionAgent.field_f + 42, -40 - TeamSelectionAgent.field_f + (AchievementsScreen.field_C.field_q - 2), 2 + sh.field_c, 18);
-          ClientException.field_c.setLayout(2, 124, -20 - sh.field_c + AchievementsScreen.field_C.field_mb - 2, 2 + sh.field_c + 20, 0, AchievementsScreen.field_C.field_q, TeamSelectionAgent.field_f);
+          ((UiLayoutNode) (Object) stackIn_6_0).setBounds(stackIn_6_1, stackIn_6_2 - stackIn_7_3, 0, LineupPositionSupport.field_c + 2, 18);
+          DoSomethingCommand.field_D.setBounds(true, TeamSelectionAgent.field_f + 42, -40 - TeamSelectionAgent.field_f + (AchievementsScreen.field_C.field_q - 2), 2 + LineupPositionSupport.field_c, 18);
+          ClientException.field_c.setLayout(2, 124, -20 - LineupPositionSupport.field_c + AchievementsScreen.field_C.field_mb - 2, 2 + LineupPositionSupport.field_c + 20, 0, AchievementsScreen.field_C.field_q, TeamSelectionAgent.field_f);
           TrinketUnlockNotice.field_b.setBounds(true, TrinketIcon.field_Cb.field_q, 0, -40 + TrinketIcon.field_Cb.field_mb, 40);
           IterableDualLinkDeque.field_h.setBounds(true, AuctionItem.field_p.field_q, 0, 0, 30);
           sg.field_a.setBounds(true, AuctionItem.field_p.field_q, 0, 30, -40 + (AuctionItem.field_p.field_mb - 2) - 30);
-          var2_int = 3 + ss.field_j;
+          var2_int = 3 + UiKeyRoutingSupport.field_j;
           if (VertexNormal.field_d.length < 2) {
             var2_int--;
           }
@@ -82,14 +82,14 @@ final class bq {
           }
           MouseInputHandler.field_d.setBounds(true, -10 + sg.field_a.field_q, 5, 5, var4);
           var5 = var4 + 5 + 2;
-          for (var6 = 0; var6 < ss.field_j + 4; var6++) {
+          for (var6 = 0; var6 < UiKeyRoutingSupport.field_j + 4; var6++) {
             if ((var6 != 1 ||
               !(VertexNormal.field_d.length < 2)) && (var6 != 3 ||
               !(MouseInputHandler.field_f <= 1))) {
               if (!param1 &&
                 var6 == 3) {
-                var14 = qr.field_b[var6];
-                qr.field_b[var6].field_mb = 0;
+                var14 = SessionUrlSupport.field_b[var6];
+                SessionUrlSupport.field_b[var6].field_mb = 0;
                 var14.field_q = 0;
                 for (var8 = 0; SocialTabsPanel.field_c[var6].length > var8; var8++) {
                   if (SocialTabsPanel.field_c[var6][var8] != null) {
@@ -100,8 +100,8 @@ final class bq {
                 }
               } else if (param1 &&
                 var6 == 0) {
-                var15 = qr.field_b[var6];
-                qr.field_b[var6].field_mb = 0;
+                var15 = SessionUrlSupport.field_b[var6];
+                SessionUrlSupport.field_b[var6].field_mb = 0;
                 var15.field_q = 0;
                 for (var8 = 0; SocialTabsPanel.field_c[var6].length > var8; var8++) {
                   if (null != SocialTabsPanel.field_c[var6][var8]) {
@@ -126,8 +126,8 @@ final class bq {
                 }
                 var7 = stackIn_49_0;
                 if (var7 != 0) {
-                  var8_ref_hd = qr.field_b[var6];
-                  qr.field_b[var6].field_mb = 0;
+                  var8_ref_hd = SessionUrlSupport.field_b[var6];
+                  SessionUrlSupport.field_b[var6].field_mb = 0;
                   var8_ref_hd.field_q = 0;
                   var16 = 0;
                   var9_int = var16;
@@ -140,7 +140,7 @@ final class bq {
                     var16++;
                   }
                 } else {
-                  qr.field_b[var6].setBounds(true, 103, 5, var5, var3);
+                  SessionUrlSupport.field_b[var6].setBounds(true, 103, 5, var5, var3);
                   var8 = 110;
                   if (!param1) {
                     if (null != SocialTabsPanel.field_c[var6][0]) {
@@ -209,7 +209,7 @@ final class bq {
                 var4 = var4 + var2.substring(var3);
               }
               var5 = new java.net.URL(param1.getCodeBase(), var4);
-              param1.getAppletContext().showDocument(qr.a(param1, var5, 3), "_self");
+              param1.getAppletContext().showDocument(SessionUrlSupport.decorateSessionUrl(param1, var5, 3), "_self");
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var2_ref = (Exception) (Object) decompiledCaughtException;

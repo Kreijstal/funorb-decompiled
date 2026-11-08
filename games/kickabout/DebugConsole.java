@@ -88,7 +88,7 @@ final class DebugConsole extends ConsolePanel {
             (param0 < 160 ||
             255 < param0)) {
             if (param0 != 0) {
-              var6 = ts.field_c;
+              var6 = PitchCoordinateSupport.field_c;
               var2 = var6;
               for (var3 = 0; var3 < var6.length; var3++) {
                 var4 = var6[var3];

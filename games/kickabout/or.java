@@ -89,10 +89,10 @@ final class or {
           var5 = var30.pixelX(-110);
           var6 = var30.pixelY(true);
           var7 = param0.field_r[param2];
-          var8 = ws.field_c[var7][-1 + param1][2];
-          var9 = ws.field_c[var7][-1 + param1][3];
-          var10 = ws.field_c[var7][param1 - 1][0];
-          var11 = ws.field_c[var7][-1 + param1][1];
+          var8 = AccountNameCharacterSupport.field_c[var7][-1 + param1][2];
+          var9 = AccountNameCharacterSupport.field_c[var7][-1 + param1][3];
+          var10 = AccountNameCharacterSupport.field_c[var7][param1 - 1][0];
+          var11 = AccountNameCharacterSupport.field_c[var7][-1 + param1][1];
           InstrumentEnvelope.buildBoundaryCameraLookup(6711, param0);
           if (param2 == 1) {
             var11 = -var9 + 1344 - var11;
@@ -120,8 +120,8 @@ final class or {
           }
           var20 = InstrumentNoteMask.field_i * (var20 << 1) >> 8;
           var21 = InstrumentNoteMask.field_i * (var21 << 1) >> 8;
-          eo.drawRectangleOutline(ug.a(0, var10), IntKeyLookup.a((byte) -126, var11), InstrumentNoteMask.field_i * var8 >> 8, InstrumentNoteMask.field_i * var9 >> 8, var19, 100);
-          var22 = in.field_c[param2][-1 + param1];
+          SoftwareDrawingSupport.drawRectangleOutline(ug.a(0, var10), IntKeyLookup.a((byte) -126, var11), InstrumentNoteMask.field_i * var8 >> 8, InstrumentNoteMask.field_i * var9 >> 8, var19, 100);
+          var22 = UiInputRoutingSupport.field_c[param2][-1 + param1];
           for (var23 = 0; 4 > var23; var23++) {
             for (var24 = 0; var24 < -1 + var22[var23].length; var24++) {
               var25 = ug.a(param3 ^ 99, var22[var23][var24][0]);
@@ -131,7 +131,7 @@ final class or {
               SoftwareRasterizer.drawLineBlendedInclusive(var25, var26, var27, var28, var19, 128);
             }
           }
-          eo.b(var14, var15, var16, 16777045);
+          SoftwareDrawingSupport.b(var14, var15, var16, 16777045);
           SoftwareRasterizer.drawLineBlendedInclusive(var12, var13, var14, var15, 16776960, 160);
           SoftwareRasterizer.drawRectangleAlpha(var12 - (var20 >> 1), var13 - (var21 >> 1), var20, var21, 16776960, 160);
           SoftwareRasterizer.fillRect(var12 - (var18 >> 1), 10 + var13, var18, 6, 65793);

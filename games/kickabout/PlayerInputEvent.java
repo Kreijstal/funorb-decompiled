@@ -33,14 +33,14 @@ final class PlayerInputEvent extends DualLinkNode {
           if (!LoginRequiredDialog.field_H.ensureIndex(-42)) {
             return HuffmanCodec.field_g;
           }
-          return ep.field_e;
+          return TutorialMessages.field_e;
         }
         int var1 = 27 % ((param0 + 48) / 56);
-        if (!bw.field_b.ensureIndex(-78)) {
+        if (!SceneSpriteFactory.field_b.ensureIndex(-78)) {
           return CommonGame.field_M;
         }
-        if (!bw.field_b.a(false, "commonui")) {
-          return BufferedSocket.field_q + " - " + bw.field_b.getGroupProgressByName("commonui", -16248) + "%";
+        if (!SceneSpriteFactory.field_b.a(false, "commonui")) {
+          return BufferedSocket.field_q + " - " + SceneSpriteFactory.field_b.getGroupProgressByName("commonui", -16248) + "%";
         }
         if (!gs.field_c.ensureIndex(-122)) {
           return te.field_b;

@@ -35,7 +35,7 @@ final class ca {
           var2.writeByte(124, AuctionLogEntry.a(1315216324));
           return;
         }
-        ca.a(false, 'F');
+        ca.isNameSeparator(false, 'F');
         var2Lifetime1 = or.field_d;
         var2Lifetime1.b(param1, (byte) 119);
         var2Lifetime1.writeByte(124, 2);
@@ -94,19 +94,19 @@ final class ca {
         }
     }
 
-    final static void a(ReceivedAuctionItem param0, int param1) {
+    final static void enqueueAuctionBidDialog(ReceivedAuctionItem param0, int param1) {
         try {
           ScrollPane.field_Jb.addLast(new AuctionBidDialog(param0, 37), param1 ^ 252);
           if (param1 != 255) {
             ReceivedAuctionItem var3 = (ReceivedAuctionItem) null;
-            ca.a((ReceivedAuctionItem) null, 5);
+            ca.enqueueAuctionBidDialog((ReceivedAuctionItem) null, 5);
           }
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "ca.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final static boolean a(boolean param0, char param1) {
+    final static boolean isNameSeparator(boolean param0, char param1) {
         if (param0) {
           return false;
         }

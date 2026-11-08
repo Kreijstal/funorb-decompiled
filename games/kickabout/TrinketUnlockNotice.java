@@ -24,8 +24,8 @@ final class TrinketUnlockNotice implements OverlayLayer {
         int var2Lifetime1;
         if (field_c != -1) {
           var2 = -AuctionsScreen.field_A + 20;
-          SoftwareRasterizer.drawRoundedRectangle(-1 + var2, 19, 2 + sh.field_d, 50, 10, 16777215);
-          SoftwareRasterizer.fillRoundedRectangleBlended(var2, 20, sh.field_d, 48, 10, 65793, 160);
+          SoftwareRasterizer.drawRoundedRectangle(-1 + var2, 19, 2 + LineupPositionSupport.field_d, 50, 10, 16777215);
+          SoftwareRasterizer.fillRoundedRectangleBlended(var2, 20, LineupPositionSupport.field_d, 48, 10, 65793, 160);
           if (ArchivePreloader.field_i != null) {
             ArchivePreloader.field_i[PacketBuffer.field_e[field_c]].drawQuarterSize(var2, 28);
           }
@@ -65,11 +65,11 @@ final class TrinketUnlockNotice implements OverlayLayer {
           TextLine.field_f = TextLine.field_f - 1;
           if (TextLine.field_f < 16) {
             var3 = 16 - TextLine.field_f;
-            AuctionsScreen.field_A = var3 * (sh.field_d + 20) * var3 >> 8;
+            AuctionsScreen.field_A = var3 * (LineupPositionSupport.field_d + 20) * var3 >> 8;
           } else {
             if (!(319 >= TextLine.field_f)) {
               var3 = -319 + TextLine.field_f;
-              AuctionsScreen.field_A = var3 * ((sh.field_d + 20) * var3) >> 8;
+              AuctionsScreen.field_A = var3 * ((LineupPositionSupport.field_d + 20) * var3) >> 8;
             }
           }
         } else {
@@ -80,8 +80,8 @@ final class TrinketUnlockNotice implements OverlayLayer {
           if (var5 != null) {
             field_c = var5.field_j;
             TextLine.field_f = 335;
-            sh.field_d = un.field_d.a(AvailabilityCheckRequest.field_c[field_c]) + 56;
-            AuctionsScreen.field_A = 20 + sh.field_d;
+            LineupPositionSupport.field_d = un.field_d.a(AvailabilityCheckRequest.field_c[field_c]) + 56;
+            AuctionsScreen.field_A = 20 + LineupPositionSupport.field_d;
             if (param0 == -25) {
               return;
             }

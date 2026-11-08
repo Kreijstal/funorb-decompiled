@@ -98,7 +98,7 @@ final class PainterStyle {
             if (var7 != 0) {
               if (var7 >= 128 &&
                 var7 < 160) {
-                var8 = ts.field_c[var7 - 128];
+                var8 = PitchCoordinateSupport.field_c[var7 - 128];
                 if (var8 == 0) {
                   var8 = 63;
                 }

@@ -102,14 +102,14 @@ final class MatchingTextValidator extends TextFieldValidator {
     final static void a(FadingChatMessage param0, boolean param1) {
         int var2_int = 0;
         int var3 = Kickabout.field_G;
-        for (var2_int = bk.field_c.length - 1; 1 <= var2_int; var2_int--) {
-          bk.field_c[var2_int] = bk.field_c[var2_int - 1];
+        for (var2_int = CalendarSupport.field_c.length - 1; 1 <= var2_int; var2_int--) {
+          CalendarSupport.field_c[var2_int] = CalendarSupport.field_c[var2_int - 1];
         }
         if (param1) {
           return;
         }
         try {
-          bk.field_c[0] = param0;
+          CalendarSupport.field_c[0] = param0;
           SplashScreen.field_j = 0;
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "ge.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

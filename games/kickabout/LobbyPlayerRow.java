@@ -123,8 +123,8 @@ final class LobbyPlayerRow extends UiLayoutNode {
     }
 
     final static String a(int param0) {
-        if (PlayerModelPreview.field_f == wk.field_f) {
-          return ld.field_a;
+        if (PlayerModelPreview.field_f == ClubStateFactory.field_f) {
+          return AccountInputValidationResult.field_a;
         }
         if (param0 != 320) {
           PcmSampleStream var2 = (PcmSampleStream) null;
@@ -136,7 +136,7 @@ final class LobbyPlayerRow extends UiLayoutNode {
         if (mj.field_a == PlayerModelPreview.field_f) {
           return DualLinkDequeIterator.field_e.getQuery(param0 ^ 323);
         }
-        return ep.field_b;
+        return TutorialMessages.field_b;
     }
 
     final static void i(int param0) {
@@ -153,7 +153,7 @@ final class LobbyPlayerRow extends UiLayoutNode {
         RuntimeException var1 = null;
         var9 = Kickabout.field_G;
         try {
-          if (null != af.field_a &&
+          if (null != AuctionPriceLimits.field_a &&
             IntrusiveDequeCursor.field_b.participantStatus[TrinketShopDialog.field_G].isActive(3511)) {
             var10 = (RenderedFootballer) (IntrusiveDequeCursor.field_b.getControlledFootballer((byte) -76, TrinketShopDialog.field_G));
             var2 = ug.a(param0, var10.field_kb >> 16);
@@ -162,7 +162,7 @@ final class LobbyPlayerRow extends UiLayoutNode {
               var2 = 320;
               var3 = 240;
             }
-            var4 = af.field_a;
+            var4 = AuctionPriceLimits.field_a;
             for (var5 = 0; var5 < var4.length; var5++) {
               var6 = var4[var5];
               var7 = -1;

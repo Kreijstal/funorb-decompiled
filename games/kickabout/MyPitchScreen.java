@@ -67,13 +67,13 @@ final class MyPitchScreen extends TeamManagementScreen {
         boolean stackIn_13_1 = false;
         var7 = Kickabout.field_G;
         super.enterScreen(0, param1, param2);
-        this.field_F = gf.a(KitStyleTile.field_yb, param0, ScrollContainer.field_Ib, 3231);
-        this.field_I = gf.a(KitStyleTile.field_yb, 1, ScrollContainer.field_Ib, 3231);
+        this.field_F = ModelMaterial.testGameModeMask(KitStyleTile.field_yb, param0, ScrollContainer.field_Ib, 3231);
+        this.field_I = ModelMaterial.testGameModeMask(KitStyleTile.field_yb, 1, ScrollContainer.field_Ib, 3231);
         RankingRowNode.field_Gb.field_jb = new IntrusiveDeque();
         for (var4 = 0; 3 > var4; var4++) {
           for (var5 = 0; 4 > var5; var5++) {
             boolean decompiledFrameRemainder0 = true;
-            var6 = new PitchOptionTile(ic.field_h, var4, var5);
+            var6 = new PitchOptionTile(RegistrationRequestState.field_h, var4, var5);
             var6.field_J = var4 * (2 + var6.field_mb);
             var6.field_s = var5 * (5 + var6.field_q);
             stackIn_11_0 = var6;
@@ -120,18 +120,18 @@ final class MyPitchScreen extends TeamManagementScreen {
         if (!this.field_F) {
           SoftwareRasterizer.fillRoundedRectangleBlended(var3, 207, 348, 102, 10, 65793, 228);
           for (var4Lifetime1 = 0; var4Lifetime1 < 3; var4Lifetime1++) {
-            sh.field_g.c(30 + (var3 - var4Lifetime1), 241 - var4Lifetime1 * 2);
+            LineupPositionSupport.field_g.c(30 + (var3 - var4Lifetime1), 241 - var4Lifetime1 * 2);
           }
           IsSixCommand.field_C.a(TooltipOverlay.field_c, 70 + var3, 261, 16777215, -1);
-          IsSixCommand.field_C.a(we.field_d, var3, 269, 348, 40, 16777215, -1, 1, 1, 0);
+          IsSixCommand.field_C.a(ClientUiUpdateSupport.field_d, var3, 269, 348, 40, 16777215, -1, 1, 1, 0);
         }
         if (!this.field_I) {
           SoftwareRasterizer.fillRoundedRectangleBlended(var3, 314, 348, 100, 10, 65793, 228);
           for (var4Lifetime2 = 0; var4Lifetime2 < 3; var4Lifetime2++) {
-            sh.field_g.c(-var4Lifetime2 + (30 + var3), -(2 * var4Lifetime2) + 348);
+            LineupPositionSupport.field_g.c(-var4Lifetime2 + (30 + var3), -(2 * var4Lifetime2) + 348);
           }
           IsSixCommand.field_C.a(TooltipOverlay.field_c, var3 + 70, 368, 16777215, -1);
-          IsSixCommand.field_C.a(we.field_d, var3, 376, 348, 40, 16777215, -1, 1, 1, 0);
+          IsSixCommand.field_C.a(ClientUiUpdateSupport.field_d, var3, 376, 348, 40, 16777215, -1, 1, 1, 0);
         }
         un.field_d.a(ca.field_a, this.slideOffsetX + 25, 115, 16777215, -1);
         un.field_d.a(FormationView.field_j, 25 + this.slideOffsetX, 223, 16777215, -1);
@@ -166,7 +166,7 @@ final class MyPitchScreen extends TeamManagementScreen {
           var3_ref_jt.c(3784, param1);
           if (var3_ref_jt.field_Ab != null &&
             var3_ref_jt.field_Ab.field_sb != 0) {
-            cb.a(var3_ref_jt, (byte) 125);
+            PitchPurchaseSupport.enqueueBuyPitchDialog(var3_ref_jt, (byte) 125);
           } else {
             if (var3_ref_jt.field_sb != 0 &&
               var3_ref_jt.i(-29050)) {
@@ -179,7 +179,7 @@ final class MyPitchScreen extends TeamManagementScreen {
           }
           var3_ref_jt = (PitchOptionTile) (RankingRowNode.field_Gb.field_jb.c(33));
         }
-        QuickChatCategory.a(ic.field_h.field_x, 5464);
+        QuickChatCategory.a(RegistrationRequestState.field_h.field_x, 5464);
         var3 = 4 % ((param0 - 38) / 60);
     }
 
@@ -213,7 +213,7 @@ final class MyPitchScreen extends TeamManagementScreen {
             }
             if (IterableDualLinkDeque.field_a == 1) {
               if (iv.field_o.field_a == 2) {
-                stackIn_16_0 = vk.a(-120, -1);
+                stackIn_16_0 = ArchiveReconnectSupport.retryArchiveConnection(-120, -1);
                 return stackIn_16_0;
               }
               if (1 == iv.field_o.field_a) {
@@ -225,7 +225,7 @@ final class MyPitchScreen extends TeamManagementScreen {
               var2 = new PacketBuffer(13);
               ImageProducerRasterBuffer.a(or.field_c, GzipDecoder.field_f, var2, -3210, AlternateKeyedLoginCredentials.field_k);
               var2.writeByte(param0 + 52, 15);
-              var2.writeInt(param0 ^ -44, gg.field_Db);
+              var2.writeInt(param0 ^ -44, SocialPlayerRow.field_Db);
               AnimationSkeleton.field_e.write(13, (byte) -127, 0, var2.field_f);
               IterableDualLinkDeque.field_a = IterableDualLinkDeque.field_a + 1;
               LoginRequiredDialog.field_I = 30000L + MonotonicClock.monotonicMillis(93);
@@ -233,13 +233,13 @@ final class MyPitchScreen extends TeamManagementScreen {
             if (IterableDualLinkDeque.field_a == 3) {
               if (AnimationSkeleton.field_e.a((byte) 63) <= 0) {
                 if (MonotonicClock.monotonicMillis(param0 ^ 102) > LoginRequiredDialog.field_I) {
-                  stackIn_32_0 = vk.a(-126, -2);
+                  stackIn_32_0 = ArchiveReconnectSupport.retryArchiveConnection(-126, -2);
                   return stackIn_32_0;
                 }
               } else {
                 var1_int = AnimationSkeleton.field_e.b(1);
                 if (var1_int != 0) {
-                  stackIn_27_0 = vk.a(param0 - 182, var1_int);
+                  stackIn_27_0 = ArchiveReconnectSupport.retryArchiveConnection(param0 - 182, var1_int);
                   return stackIn_27_0;
                 }
                 IterableDualLinkDeque.field_a = IterableDualLinkDeque.field_a + 1;
@@ -258,7 +258,7 @@ final class MyPitchScreen extends TeamManagementScreen {
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var1 = (IOException) (Object) decompiledCaughtException;
-            return vk.a(-125, -3);
+            return ArchiveReconnectSupport.retryArchiveConnection(-125, -3);
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

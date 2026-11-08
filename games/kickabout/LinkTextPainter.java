@@ -8,7 +8,7 @@ final class LinkTextPainter implements WidgetPainter {
     private int field_i;
     static String field_g;
     static int field_c;
-    static vd field_d;
+    static AccountNameCheckState field_d;
     static String field_f;
     static NineSlicePanelPainter field_e;
 
@@ -26,7 +26,7 @@ final class LinkTextPainter implements WidgetPainter {
     }
 
     public LinkTextPainter() {
-        this.field_h = gf.field_a;
+        this.field_h = ModelMaterial.field_a;
         this.field_i = 1;
         this.field_a = 1;
     }
@@ -126,7 +126,7 @@ final class LinkTextPainter implements WidgetPainter {
     static {
         field_g = "Cancel";
         field_b = new QuickChatCommandType(12, 0, 1, 0);
-        field_d = new vd();
+        field_d = new AccountNameCheckState();
         field_f = "Concluded";
     }
 }

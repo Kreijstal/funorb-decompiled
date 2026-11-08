@@ -71,7 +71,7 @@ final class MarkerSliderWidget extends TextButton {
         }
         MessageDialog.field_B = param2;
         cu.field_c = param4;
-        if (param3 != go.field_b) {
+        if (param3 != PitchProjectionSupport.field_b) {
           if (0 == param0) {
             DualLinkNode.field_g = null;
           }
@@ -85,7 +85,7 @@ final class MarkerSliderWidget extends TextButton {
           }
         }
         WhirlpoolHasher.field_a = param1;
-        go.field_b = param0;
+        PitchProjectionSupport.field_b = param0;
     }
 
     final int getMarkerPosition(byte param0, int param1) {

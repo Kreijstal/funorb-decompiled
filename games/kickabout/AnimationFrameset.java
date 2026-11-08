@@ -37,7 +37,7 @@ final class AnimationFrameset extends DualLinkNode {
             if (param0.length() <= var2_int) {
               return true;
             }
-            if (ws.a(param0.charAt(var2_int), (byte) 121)) {
+            if (AccountNameCharacterSupport.isAllowedAccountNameCharacter(param0.charAt(var2_int), (byte) 121)) {
               var2_int++;
               continue;
             }

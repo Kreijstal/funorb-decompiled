@@ -14,21 +14,21 @@ final class FixedQuaternion {
           return;
         }
         if (var2 < 65535) {
-          var2 = pc.a(var2, -524289);
-          this.field_a = bw.a((long)var2, 249299984, (long)this.field_a);
-          this.field_b = bw.a((long)var2, 249299984, (long)this.field_b);
-          this.field_c = bw.a((long)var2, 249299984, (long)this.field_c);
-          this.field_d = bw.a((long)var2, 249299984, (long)this.field_d);
+          var2 = DisplayNameUiSupport.a(var2, -524289);
+          this.field_a = SceneSpriteFactory.fixedRatio16((long)var2, 249299984, (long)this.field_a);
+          this.field_b = SceneSpriteFactory.fixedRatio16((long)var2, 249299984, (long)this.field_b);
+          this.field_c = SceneSpriteFactory.fixedRatio16((long)var2, 249299984, (long)this.field_c);
+          this.field_d = SceneSpriteFactory.fixedRatio16((long)var2, 249299984, (long)this.field_d);
           return;
         }
         if (65537 >= var2) {
           return;
         }
-        var2 = pc.a(var2, -524289);
-        this.field_a = bw.a((long)var2, 249299984, (long)this.field_a);
-        this.field_b = bw.a((long)var2, 249299984, (long)this.field_b);
-        this.field_c = bw.a((long)var2, 249299984, (long)this.field_c);
-        this.field_d = bw.a((long)var2, 249299984, (long)this.field_d);
+        var2 = DisplayNameUiSupport.a(var2, -524289);
+        this.field_a = SceneSpriteFactory.fixedRatio16((long)var2, 249299984, (long)this.field_a);
+        this.field_b = SceneSpriteFactory.fixedRatio16((long)var2, 249299984, (long)this.field_b);
+        this.field_c = SceneSpriteFactory.fixedRatio16((long)var2, 249299984, (long)this.field_c);
+        this.field_d = SceneSpriteFactory.fixedRatio16((long)var2, 249299984, (long)this.field_d);
     }
 
     final void a(FixedQuaternion param0, int param1) {

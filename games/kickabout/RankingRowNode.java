@@ -98,11 +98,11 @@ final class RankingRowNode extends UiLayoutNode {
         int var7 = 0;
         int var7Lifetime1;
         LeaguesHelpScreen.field_E.setBounds(true, param2, param3, param6, param5);
-        if (null == dr.field_g) {
+        if (null == ClassNameSupport.field_g) {
           var7 = 80 / ((68 - param0) / 48);
           return;
         }
-        dr.field_g.setLayout(false, param4, param4 - NumericDateInputWidget.field_I, param1, param5, param5);
+        ClassNameSupport.field_g.setLayout(false, param4, param4 - NumericDateInputWidget.field_I, param1, param5, param5);
         var7Lifetime1 = 80 / ((68 - param0) / 48);
     }
 

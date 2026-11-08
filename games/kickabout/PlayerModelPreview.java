@@ -17,7 +17,7 @@ final class PlayerModelPreview extends IntrusiveNode {
     static long field_r;
     static String field_m;
     static int field_e;
-    static vd field_f;
+    static AccountNameCheckState field_f;
     static String field_k;
 
     final static void a(int param0, int param1, byte param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, BitmapFont param10, BitmapFont param11, NineSlicePanelPainter param12, int param13, int param14, int param15, NineSlicePanelPainter param16, int param17, int param18, NineSlicePanelPainter param19, int param20) {
@@ -181,6 +181,6 @@ final class PlayerModelPreview extends IntrusiveNode {
         field_q = new GameKeyHandler();
         field_m = "This option cannot be combined with the current settings for:  ";
         field_k = "Sprint";
-        field_f = new vd();
+        field_f = new AccountNameCheckState();
     }
 }

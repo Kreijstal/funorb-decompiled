@@ -594,10 +594,10 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
                     var17 = 0;
                     var13Lifetime1 = var17;
                     while (var9 > var17) {
-                      var12[var17] = il.a(param2 - 106, var10[var17]);
+                      var12[var17] = ClassDescriptorSupport.resolveClassDescriptor(param2 - 106, var10[var17]);
                       var17++;
                     }
-                    var18.methodTasks[var5] = param3.requestDeclaredMethod(-30971, var12, il.a(-113, var20), var21);
+                    var18.methodTasks[var5] = param3.requestDeclaredMethod(-30971, var12, ClassDescriptorSupport.resolveClassDescriptor(-113, var20), var21);
                     var18.serializedArguments[var5] = var22;
                   }
                 } else {
@@ -611,7 +611,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
                   }
                   var18.operationTypes[var5] = var6_int;
                   var18.fieldSetValues[var5] = var9;
-                  var18.fieldTasks[var5] = param3.requestDeclaredField(var15, il.a(98, var16), 0);
+                  var18.fieldTasks[var5] = param3.requestDeclaredField(var15, ClassDescriptorSupport.resolveClassDescriptor(98, var16), 0);
                 }
               } catch (java.lang.ClassNotFoundException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;

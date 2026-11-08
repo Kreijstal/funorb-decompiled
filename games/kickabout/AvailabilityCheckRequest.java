@@ -33,25 +33,25 @@ final class AvailabilityCheckRequest {
         DiskCacheWorker.field_i[1] = (ArgbSprite) (QuickChatPhraseDefinition.a("stadium", QuickChatKeysHelpPanel.field_Cb, (byte) 86, "top_right_seats"));
         DiskCacheWorker.field_i[2] = (ArgbSprite) (QuickChatPhraseDefinition.a("stadium", QuickChatKeysHelpPanel.field_Cb, (byte) 46, "bot_left_seats"));
         DiskCacheWorker.field_i[3] = (ArgbSprite) (QuickChatPhraseDefinition.a("stadium", QuickChatKeysHelpPanel.field_Cb, (byte) 115, "bot_right_seats"));
-        ph.field_e = new IndexedSprite[4][3];
-        ph.field_e[0][0] = MyPitchScreen.a(QuickChatKeysHelpPanel.field_Cb, "stadium", true, "left_seats_1");
-        ph.field_e[0][1] = MyPitchScreen.a(QuickChatKeysHelpPanel.field_Cb, "stadium", true, "left_seats_2");
-        ph.field_e[0][2] = MyPitchScreen.a(QuickChatKeysHelpPanel.field_Cb, "stadium", true, "left_seats_3");
+        AudioOutputSupport.field_e = new IndexedSprite[4][3];
+        AudioOutputSupport.field_e[0][0] = MyPitchScreen.a(QuickChatKeysHelpPanel.field_Cb, "stadium", true, "left_seats_1");
+        AudioOutputSupport.field_e[0][1] = MyPitchScreen.a(QuickChatKeysHelpPanel.field_Cb, "stadium", true, "left_seats_2");
+        AudioOutputSupport.field_e[0][2] = MyPitchScreen.a(QuickChatKeysHelpPanel.field_Cb, "stadium", true, "left_seats_3");
         MatchingTextValidator.field_k = QuickChatPhraseDefinition.a("stadium", QuickChatKeysHelpPanel.field_Cb, (byte) 68, "ad_top");
         MusicPatchNode.field_m = QuickChatPhraseDefinition.a("stadium", QuickChatKeysHelpPanel.field_Cb, (byte) 83, "ad_right");
         ManagerAction.field_f = QuickChatPhraseDefinition.a("stadium", QuickChatKeysHelpPanel.field_Cb, (byte) 108, "ad_left");
-        ph.field_e[1][0] = MyPitchScreen.a(QuickChatKeysHelpPanel.field_Cb, "stadium", true, "top_seats_1");
-        ph.field_e[1][1] = MyPitchScreen.a(QuickChatKeysHelpPanel.field_Cb, "stadium", true, "top_seats_2");
-        ph.field_e[1][2] = MyPitchScreen.a(QuickChatKeysHelpPanel.field_Cb, "stadium", true, "top_seats_3");
-        ph.field_e[3][0] = MyPitchScreen.a(QuickChatKeysHelpPanel.field_Cb, "stadium", true, "bot_seats_1");
+        AudioOutputSupport.field_e[1][0] = MyPitchScreen.a(QuickChatKeysHelpPanel.field_Cb, "stadium", true, "top_seats_1");
+        AudioOutputSupport.field_e[1][1] = MyPitchScreen.a(QuickChatKeysHelpPanel.field_Cb, "stadium", true, "top_seats_2");
+        AudioOutputSupport.field_e[1][2] = MyPitchScreen.a(QuickChatKeysHelpPanel.field_Cb, "stadium", true, "top_seats_3");
+        AudioOutputSupport.field_e[3][0] = MyPitchScreen.a(QuickChatKeysHelpPanel.field_Cb, "stadium", true, "bot_seats_1");
         if (param0 != 28) {
           return -11;
         }
-        ph.field_e[3][1] = MyPitchScreen.a(QuickChatKeysHelpPanel.field_Cb, "stadium", true, "bot_seats_2");
-        ph.field_e[3][2] = MyPitchScreen.a(QuickChatKeysHelpPanel.field_Cb, "stadium", true, "bot_seats_3");
-        ph.field_e[2][0] = MyPitchScreen.a(QuickChatKeysHelpPanel.field_Cb, "stadium", true, "right_seats_1");
-        ph.field_e[2][1] = MyPitchScreen.a(QuickChatKeysHelpPanel.field_Cb, "stadium", true, "right_seats_2");
-        ph.field_e[2][2] = MyPitchScreen.a(QuickChatKeysHelpPanel.field_Cb, "stadium", true, "right_seats_3");
+        AudioOutputSupport.field_e[3][1] = MyPitchScreen.a(QuickChatKeysHelpPanel.field_Cb, "stadium", true, "bot_seats_2");
+        AudioOutputSupport.field_e[3][2] = MyPitchScreen.a(QuickChatKeysHelpPanel.field_Cb, "stadium", true, "bot_seats_3");
+        AudioOutputSupport.field_e[2][0] = MyPitchScreen.a(QuickChatKeysHelpPanel.field_Cb, "stadium", true, "right_seats_1");
+        AudioOutputSupport.field_e[2][1] = MyPitchScreen.a(QuickChatKeysHelpPanel.field_Cb, "stadium", true, "right_seats_2");
+        AudioOutputSupport.field_e[2][2] = MyPitchScreen.a(QuickChatKeysHelpPanel.field_Cb, "stadium", true, "right_seats_3");
         LineupView.field_s = new IndexedSprite[3][];
         LineupView.field_s[0] = DemoIntegersCommand.a(QuickChatKeysHelpPanel.field_Cb, TrinketShopDialog.b((int) param0, 17349), "stadium", "top_seats_1_mask");
         LineupView.field_s[1] = DemoIntegersCommand.a(QuickChatKeysHelpPanel.field_Cb, 17369, "stadium", "top_seats_2_mask");
@@ -153,18 +153,18 @@ final class AvailabilityCheckRequest {
         int var3;
         var3 = Kickabout.field_G;
         if (!EmailSyntaxValidator.c((byte) -42)) {
-          if (!dr.field_a) {
+          if (!ClassNameSupport.field_a) {
             ArrayWidgetContainer.field_x = BytePlusOneCommand.field_A;
-            us.field_j = ArchiveManager.field_m;
+            TutorialCaptionSupport.field_j = ArchiveManager.field_m;
             if (param1 >= -99) {
               AvailabilityCheckRequest.releaseStatics((byte) -40);
             }
-            vd.field_c = FootballerAgent.field_p;
+            AccountNameCheckState.field_c = FootballerAgent.field_p;
             TrinketIcon.field_yb = HighScoreSubmission.field_q;
-            ip.field_a = WidgetContainer.field_A;
+            RasterGammaSupport.field_a = WidgetContainer.field_A;
             TabStrip.field_Eb = ReceivedAuctionItem.field_y;
-            if (dr.field_a &&
-              1 == vd.field_c) {
+            if (ClassNameSupport.field_a &&
+              1 == AccountNameCheckState.field_c) {
               stackIn_39_0 = 1;
             } else {
               stackIn_39_0 = 0;
@@ -176,12 +176,12 @@ final class AvailabilityCheckRequest {
               if (param1 >= -99) {
                 AvailabilityCheckRequest.releaseStatics((byte) -40);
               }
-              vd.field_c = FootballerAgent.field_p;
+              AccountNameCheckState.field_c = FootballerAgent.field_p;
               TrinketIcon.field_yb = HighScoreSubmission.field_q;
-              ip.field_a = WidgetContainer.field_A;
+              RasterGammaSupport.field_a = WidgetContainer.field_A;
               TabStrip.field_Eb = ReceivedAuctionItem.field_y;
-              if (dr.field_a &&
-                1 == vd.field_c) {
+              if (ClassNameSupport.field_a &&
+                1 == AccountNameCheckState.field_c) {
                 stackIn_10_0 = 1;
               } else {
                 stackIn_10_0 = 0;
@@ -189,11 +189,11 @@ final class AvailabilityCheckRequest {
               var2 = stackIn_10_0;
             } else {
               ArrayWidgetContainer.field_x = ArrayWidgetContainer.field_x + (BytePlusOneCommand.field_A - 320);
-              us.field_j = us.field_j + (-240 + ArchiveManager.field_m);
+              TutorialCaptionSupport.field_j = TutorialCaptionSupport.field_j + (-240 + ArchiveManager.field_m);
               ArrayWidgetContainer.field_x = Math.max(0, Math.min(639, ArrayWidgetContainer.field_x));
-              us.field_j = Math.max(0, Math.min(479, us.field_j));
+              TutorialCaptionSupport.field_j = Math.max(0, Math.min(479, TutorialCaptionSupport.field_j));
               if (SplashScreen.field_m == null) {
-                stackIn_20_0 = ic.field_d;
+                stackIn_20_0 = RegistrationRequestState.field_d;
               } else {
                 stackIn_20_0 = SplashScreen.field_m;
               }
@@ -202,12 +202,12 @@ final class AvailabilityCheckRequest {
               if (param1 >= -99) {
                 AvailabilityCheckRequest.releaseStatics((byte) -40);
               }
-              vd.field_c = FootballerAgent.field_p;
+              AccountNameCheckState.field_c = FootballerAgent.field_p;
               TrinketIcon.field_yb = HighScoreSubmission.field_q;
-              ip.field_a = WidgetContainer.field_A;
+              RasterGammaSupport.field_a = WidgetContainer.field_A;
               TabStrip.field_Eb = ReceivedAuctionItem.field_y;
-              if (dr.field_a &&
-                1 == vd.field_c) {
+              if (ClassNameSupport.field_a &&
+                1 == AccountNameCheckState.field_c) {
                 stackIn_26_0 = 1;
               } else {
                 stackIn_26_0 = 0;
@@ -217,20 +217,20 @@ final class AvailabilityCheckRequest {
           }
         } else {
           if (param0 &&
-            !dr.field_a) {
+            !ClassNameSupport.field_a) {
             RankingsScreen.a(false);
-            if (!dr.field_a) {
+            if (!ClassNameSupport.field_a) {
               ArrayWidgetContainer.field_x = BytePlusOneCommand.field_A;
-              us.field_j = ArchiveManager.field_m;
+              TutorialCaptionSupport.field_j = ArchiveManager.field_m;
             } else {
               if (320 != BytePlusOneCommand.field_A ||
                 ArchiveManager.field_m != 240) {
                 ArrayWidgetContainer.field_x = ArrayWidgetContainer.field_x + (BytePlusOneCommand.field_A - 320);
-                us.field_j = us.field_j + (-240 + ArchiveManager.field_m);
+                TutorialCaptionSupport.field_j = TutorialCaptionSupport.field_j + (-240 + ArchiveManager.field_m);
                 ArrayWidgetContainer.field_x = Math.max(0, Math.min(639, ArrayWidgetContainer.field_x));
-                us.field_j = Math.max(0, Math.min(479, us.field_j));
+                TutorialCaptionSupport.field_j = Math.max(0, Math.min(479, TutorialCaptionSupport.field_j));
                 if (SplashScreen.field_m == null) {
-                  stackIn_126_0 = ic.field_d;
+                  stackIn_126_0 = RegistrationRequestState.field_d;
                 } else {
                   stackIn_126_0 = SplashScreen.field_m;
                 }
@@ -241,40 +241,40 @@ final class AvailabilityCheckRequest {
             if (param1 >= -99) {
               AvailabilityCheckRequest.releaseStatics((byte) -40);
             }
-            vd.field_c = FootballerAgent.field_p;
+            AccountNameCheckState.field_c = FootballerAgent.field_p;
             TrinketIcon.field_yb = HighScoreSubmission.field_q;
-            ip.field_a = WidgetContainer.field_A;
+            RasterGammaSupport.field_a = WidgetContainer.field_A;
             TabStrip.field_Eb = ReceivedAuctionItem.field_y;
-            if (dr.field_a &&
-              1 == vd.field_c) {
+            if (ClassNameSupport.field_a &&
+              1 == AccountNameCheckState.field_c) {
               stackIn_134_0 = 1;
             } else {
               stackIn_134_0 = 0;
             }
             var2 = stackIn_134_0;
             if (var2 != 0 &&
-              us.field_k < 6) {
-              us.field_k = us.field_k + 2;
+              TutorialCaptionSupport.field_k < 6) {
+              TutorialCaptionSupport.field_k = TutorialCaptionSupport.field_k + 2;
             }
             if (var2 == 0 &&
-              us.field_k > 0) {
-              us.field_k = us.field_k - 2;
+              TutorialCaptionSupport.field_k > 0) {
+              TutorialCaptionSupport.field_k = TutorialCaptionSupport.field_k - 2;
             }
             return;
           }
           if (param0) {
-            if (!dr.field_a) {
+            if (!ClassNameSupport.field_a) {
               ArrayWidgetContainer.field_x = BytePlusOneCommand.field_A;
-              us.field_j = ArchiveManager.field_m;
+              TutorialCaptionSupport.field_j = ArchiveManager.field_m;
               if (param1 >= -99) {
                 AvailabilityCheckRequest.releaseStatics((byte) -40);
               }
-              vd.field_c = FootballerAgent.field_p;
+              AccountNameCheckState.field_c = FootballerAgent.field_p;
               TrinketIcon.field_yb = HighScoreSubmission.field_q;
-              ip.field_a = WidgetContainer.field_A;
+              RasterGammaSupport.field_a = WidgetContainer.field_A;
               TabStrip.field_Eb = ReceivedAuctionItem.field_y;
-              if (dr.field_a &&
-                1 == vd.field_c) {
+              if (ClassNameSupport.field_a &&
+                1 == AccountNameCheckState.field_c) {
                 stackIn_88_0 = 1;
               } else {
                 stackIn_88_0 = 0;
@@ -286,12 +286,12 @@ final class AvailabilityCheckRequest {
                 if (param1 >= -99) {
                   AvailabilityCheckRequest.releaseStatics((byte) -40);
                 }
-                vd.field_c = FootballerAgent.field_p;
+                AccountNameCheckState.field_c = FootballerAgent.field_p;
                 TrinketIcon.field_yb = HighScoreSubmission.field_q;
-                ip.field_a = WidgetContainer.field_A;
+                RasterGammaSupport.field_a = WidgetContainer.field_A;
                 TabStrip.field_Eb = ReceivedAuctionItem.field_y;
-                if (dr.field_a &&
-                  1 == vd.field_c) {
+                if (ClassNameSupport.field_a &&
+                  1 == AccountNameCheckState.field_c) {
                   stackIn_59_0 = 1;
                 } else {
                   stackIn_59_0 = 0;
@@ -299,11 +299,11 @@ final class AvailabilityCheckRequest {
                 var2 = stackIn_59_0;
               } else {
                 ArrayWidgetContainer.field_x = ArrayWidgetContainer.field_x + (BytePlusOneCommand.field_A - 320);
-                us.field_j = us.field_j + (-240 + ArchiveManager.field_m);
+                TutorialCaptionSupport.field_j = TutorialCaptionSupport.field_j + (-240 + ArchiveManager.field_m);
                 ArrayWidgetContainer.field_x = Math.max(0, Math.min(639, ArrayWidgetContainer.field_x));
-                us.field_j = Math.max(0, Math.min(479, us.field_j));
+                TutorialCaptionSupport.field_j = Math.max(0, Math.min(479, TutorialCaptionSupport.field_j));
                 if (SplashScreen.field_m == null) {
-                  stackIn_69_0 = ic.field_d;
+                  stackIn_69_0 = RegistrationRequestState.field_d;
                 } else {
                   stackIn_69_0 = SplashScreen.field_m;
                 }
@@ -312,12 +312,12 @@ final class AvailabilityCheckRequest {
                 if (param1 >= -99) {
                   AvailabilityCheckRequest.releaseStatics((byte) -40);
                 }
-                vd.field_c = FootballerAgent.field_p;
+                AccountNameCheckState.field_c = FootballerAgent.field_p;
                 TrinketIcon.field_yb = HighScoreSubmission.field_q;
-                ip.field_a = WidgetContainer.field_A;
+                RasterGammaSupport.field_a = WidgetContainer.field_A;
                 TabStrip.field_Eb = ReceivedAuctionItem.field_y;
-                if (dr.field_a &&
-                  1 == vd.field_c) {
+                if (ClassNameSupport.field_a &&
+                  1 == AccountNameCheckState.field_c) {
                   stackIn_75_0 = 1;
                 } else {
                   stackIn_75_0 = 0;
@@ -326,20 +326,20 @@ final class AvailabilityCheckRequest {
               }
             }
           } else {
-            if (dr.field_a) {
+            if (ClassNameSupport.field_a) {
               ListRow.h(634588072);
-              if (!dr.field_a) {
+              if (!ClassNameSupport.field_a) {
                 ArrayWidgetContainer.field_x = BytePlusOneCommand.field_A;
-                us.field_j = ArchiveManager.field_m;
+                TutorialCaptionSupport.field_j = ArchiveManager.field_m;
               } else {
                 if (320 != BytePlusOneCommand.field_A ||
                   ArchiveManager.field_m != 240) {
                   ArrayWidgetContainer.field_x = ArrayWidgetContainer.field_x + (BytePlusOneCommand.field_A - 320);
-                  us.field_j = us.field_j + (-240 + ArchiveManager.field_m);
+                  TutorialCaptionSupport.field_j = TutorialCaptionSupport.field_j + (-240 + ArchiveManager.field_m);
                   ArrayWidgetContainer.field_x = Math.max(0, Math.min(639, ArrayWidgetContainer.field_x));
-                  us.field_j = Math.max(0, Math.min(479, us.field_j));
+                  TutorialCaptionSupport.field_j = Math.max(0, Math.min(479, TutorialCaptionSupport.field_j));
                   if (SplashScreen.field_m == null) {
-                    stackIn_104_0 = ic.field_d;
+                    stackIn_104_0 = RegistrationRequestState.field_d;
                   } else {
                     stackIn_104_0 = SplashScreen.field_m;
                   }
@@ -350,53 +350,53 @@ final class AvailabilityCheckRequest {
               if (param1 >= -99) {
                 AvailabilityCheckRequest.releaseStatics((byte) -40);
               }
-              vd.field_c = FootballerAgent.field_p;
+              AccountNameCheckState.field_c = FootballerAgent.field_p;
               TrinketIcon.field_yb = HighScoreSubmission.field_q;
-              ip.field_a = WidgetContainer.field_A;
+              RasterGammaSupport.field_a = WidgetContainer.field_A;
               TabStrip.field_Eb = ReceivedAuctionItem.field_y;
-              if (dr.field_a &&
-                1 == vd.field_c) {
+              if (ClassNameSupport.field_a &&
+                1 == AccountNameCheckState.field_c) {
                 stackIn_112_0 = 1;
               } else {
                 stackIn_112_0 = 0;
               }
               var2 = stackIn_112_0;
             } else {
-              if (!dr.field_a) {
+              if (!ClassNameSupport.field_a) {
                 ArrayWidgetContainer.field_x = BytePlusOneCommand.field_A;
-                us.field_j = ArchiveManager.field_m;
+                TutorialCaptionSupport.field_j = ArchiveManager.field_m;
                 if (param1 >= -99) {
                   AvailabilityCheckRequest.releaseStatics((byte) -40);
                 }
-                vd.field_c = FootballerAgent.field_p;
+                AccountNameCheckState.field_c = FootballerAgent.field_p;
                 TrinketIcon.field_yb = HighScoreSubmission.field_q;
-                ip.field_a = WidgetContainer.field_A;
+                RasterGammaSupport.field_a = WidgetContainer.field_A;
                 TabStrip.field_Eb = ReceivedAuctionItem.field_y;
-                if (dr.field_a &&
-                  1 == vd.field_c) {
+                if (ClassNameSupport.field_a &&
+                  1 == AccountNameCheckState.field_c) {
                   stackIn_195_0 = 1;
                 } else {
                   stackIn_195_0 = 0;
                 }
                 var2 = stackIn_195_0;
                 if (var2 != 0 &&
-                  us.field_k < 6) {
-                  us.field_k = us.field_k + 2;
+                  TutorialCaptionSupport.field_k < 6) {
+                  TutorialCaptionSupport.field_k = TutorialCaptionSupport.field_k + 2;
                 }
                 if (var2 == 0 &&
-                  us.field_k > 0) {
-                  us.field_k = us.field_k - 2;
+                  TutorialCaptionSupport.field_k > 0) {
+                  TutorialCaptionSupport.field_k = TutorialCaptionSupport.field_k - 2;
                   return;
                 }
                 return;
               }
               if (320 != BytePlusOneCommand.field_A) {
                 ArrayWidgetContainer.field_x = ArrayWidgetContainer.field_x + (BytePlusOneCommand.field_A - 320);
-                us.field_j = us.field_j + (-240 + ArchiveManager.field_m);
+                TutorialCaptionSupport.field_j = TutorialCaptionSupport.field_j + (-240 + ArchiveManager.field_m);
                 ArrayWidgetContainer.field_x = Math.max(0, Math.min(639, ArrayWidgetContainer.field_x));
-                us.field_j = Math.max(0, Math.min(479, us.field_j));
+                TutorialCaptionSupport.field_j = Math.max(0, Math.min(479, TutorialCaptionSupport.field_j));
                 if (SplashScreen.field_m == null) {
-                  stackIn_146_0 = ic.field_d;
+                  stackIn_146_0 = RegistrationRequestState.field_d;
                 } else {
                   stackIn_146_0 = SplashScreen.field_m;
                 }
@@ -405,12 +405,12 @@ final class AvailabilityCheckRequest {
                 if (param1 >= -99) {
                   AvailabilityCheckRequest.releaseStatics((byte) -40);
                 }
-                vd.field_c = FootballerAgent.field_p;
+                AccountNameCheckState.field_c = FootballerAgent.field_p;
                 TrinketIcon.field_yb = HighScoreSubmission.field_q;
-                ip.field_a = WidgetContainer.field_A;
+                RasterGammaSupport.field_a = WidgetContainer.field_A;
                 TabStrip.field_Eb = ReceivedAuctionItem.field_y;
-                if (dr.field_a &&
-                  1 == vd.field_c) {
+                if (ClassNameSupport.field_a &&
+                  1 == AccountNameCheckState.field_c) {
                   stackIn_152_0 = 1;
                 } else {
                   stackIn_152_0 = 0;
@@ -421,12 +421,12 @@ final class AvailabilityCheckRequest {
                   if (param1 >= -99) {
                     AvailabilityCheckRequest.releaseStatics((byte) -40);
                   }
-                  vd.field_c = FootballerAgent.field_p;
+                  AccountNameCheckState.field_c = FootballerAgent.field_p;
                   TrinketIcon.field_yb = HighScoreSubmission.field_q;
-                  ip.field_a = WidgetContainer.field_A;
+                  RasterGammaSupport.field_a = WidgetContainer.field_A;
                   TabStrip.field_Eb = ReceivedAuctionItem.field_y;
-                  if (dr.field_a &&
-                    1 == vd.field_c) {
+                  if (ClassNameSupport.field_a &&
+                    1 == AccountNameCheckState.field_c) {
                     stackIn_182_0 = 1;
                   } else {
                     stackIn_182_0 = 0;
@@ -434,11 +434,11 @@ final class AvailabilityCheckRequest {
                   var2 = stackIn_182_0;
                 } else {
                   ArrayWidgetContainer.field_x = ArrayWidgetContainer.field_x + (BytePlusOneCommand.field_A - 320);
-                  us.field_j = us.field_j + (-240 + ArchiveManager.field_m);
+                  TutorialCaptionSupport.field_j = TutorialCaptionSupport.field_j + (-240 + ArchiveManager.field_m);
                   ArrayWidgetContainer.field_x = Math.max(0, Math.min(639, ArrayWidgetContainer.field_x));
-                  us.field_j = Math.max(0, Math.min(479, us.field_j));
+                  TutorialCaptionSupport.field_j = Math.max(0, Math.min(479, TutorialCaptionSupport.field_j));
                   if (SplashScreen.field_m == null) {
-                    stackIn_163_0 = ic.field_d;
+                    stackIn_163_0 = RegistrationRequestState.field_d;
                   } else {
                     stackIn_163_0 = SplashScreen.field_m;
                   }
@@ -447,12 +447,12 @@ final class AvailabilityCheckRequest {
                   if (param1 >= -99) {
                     AvailabilityCheckRequest.releaseStatics((byte) -40);
                   }
-                  vd.field_c = FootballerAgent.field_p;
+                  AccountNameCheckState.field_c = FootballerAgent.field_p;
                   TrinketIcon.field_yb = HighScoreSubmission.field_q;
-                  ip.field_a = WidgetContainer.field_A;
+                  RasterGammaSupport.field_a = WidgetContainer.field_A;
                   TabStrip.field_Eb = ReceivedAuctionItem.field_y;
-                  if (dr.field_a &&
-                    1 == vd.field_c) {
+                  if (ClassNameSupport.field_a &&
+                    1 == AccountNameCheckState.field_c) {
                     stackIn_169_0 = 1;
                   } else {
                     stackIn_169_0 = 0;
@@ -464,12 +464,12 @@ final class AvailabilityCheckRequest {
           }
         }
         if (var2 != 0 &&
-          us.field_k < 6) {
-          us.field_k = us.field_k + 2;
+          TutorialCaptionSupport.field_k < 6) {
+          TutorialCaptionSupport.field_k = TutorialCaptionSupport.field_k + 2;
         }
         if (var2 == 0 &&
-          us.field_k > 0) {
-          us.field_k = us.field_k - 2;
+          TutorialCaptionSupport.field_k > 0) {
+          TutorialCaptionSupport.field_k = TutorialCaptionSupport.field_k - 2;
         }
     }
 

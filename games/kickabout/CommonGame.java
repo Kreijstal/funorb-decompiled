@@ -72,7 +72,7 @@ final class CommonGame {
             CommonGame.b(false);
           }
           param0.p(-103);
-          this.phaseTime = sk.a(param1 ^ -19886, 8, 0, 4, param0, 16) - 1;
+          this.phaseTime = LoadingProgressSupport.readFourRangeBits(param1 ^ -19886, 8, 0, 4, param0, 16) - 1;
           var3_int = 0;
           do {
             if (var3_int >= this.playerCount) {
@@ -842,8 +842,8 @@ final class CommonGame {
                             }
                           }
                           this.field_V.a((MatchAgent) (var4_ref_nlLifetime2), (byte) 84);
-                          var10Lifetime2 = pc.a(this.field_V.horizontalSpeedSquared(3), -524289) >> 8;
-                          this.field_V.velocityX = (we.cosine(var8_intLifetime1, false) >> 8) * var10Lifetime2;
+                          var10Lifetime2 = DisplayNameUiSupport.a(this.field_V.horizontalSpeedSquared(3), -524289) >> 8;
+                          this.field_V.velocityX = (ClientUiUpdateSupport.cosine(var8_intLifetime1, false) >> 8) * var10Lifetime2;
                           this.field_V.velocityY = var10Lifetime2 * (RotaryDialPainter.sine(var8_intLifetime1, (byte) -23) >> 8);
                           this.field_V.stepPhysics((byte) -78, this.surface, this.field_B);
                           if (var4_ref_nlLifetime2.field_o < 15) {
@@ -901,7 +901,7 @@ final class CommonGame {
                           if (var8_intLifetime1Lifetime1 < 1600) {
                             this.field_V.a((MatchAgent) (var5), (byte) 84);
                             var9Lifetime1 = (4 * var5.stats.effectivePower(var5.member, 0) << 16) / 100 + 524288;
-                            var10_long = (long)(var9Lifetime1 + Math.max(var5.field_q, pc.a(this.field_V.horizontalSpeedSquared(-127), -524289)));
+                            var10_long = (long)(var9Lifetime1 + Math.max(var5.field_q, DisplayNameUiSupport.a(this.field_V.horizontalSpeedSquared(-127), -524289)));
                             this.field_V.uncatchable = 5;
                             this.field_V.velocityY = (int)((long)var5.field_m * var10_long / (long)var5.field_q);
                             this.field_V.velocityX = (int)(var10_long * (long)var5.field_k / (long)var5.field_q);
@@ -1210,9 +1210,9 @@ final class CommonGame {
         RuntimeException decompiledCaughtException = null;
         var4 = Kickabout.field_G;
         try {
-          if (null != af.field_a &&
+          if (null != AuctionPriceLimits.field_a &&
             IntrusiveDequeCursor.field_b.participantStatus[TrinketShopDialog.field_G].isActive(3511)) {
-            var1 = af.field_a;
+            var1 = AuctionPriceLimits.field_a;
             var2 = 0;
             if (param0) {
               CommonGame.b(false);
@@ -1781,12 +1781,12 @@ final class CommonGame {
                   if ((var5 != 0 ||
                     !this.disableLocal) && (var5 == 0 ||
                     !this.disableOpponent)) {
-                    var6.positionX = ts.a(var4_int, param0, var3_int, 448) << 16;
+                    var6.positionX = PitchCoordinateSupport.formationX(var4_int, param0, var3_int, 448) << 16;
                     var6.positionY = AudioService.formationY((byte) 21, var4_int, var3_int, param0) << 16;
                     decompiledFrameRemainder0 = false;
                   }
                   else {
-                    var6.positionX = sh.a(70, var4_int);
+                    var6.positionX = LineupPositionSupport.lineupSlotX(70, var4_int);
                     var6.positionY = AchievementsScreen.a((byte) -27, var3_int);
                   }
                   var4_int++;
@@ -2255,7 +2255,7 @@ final class CommonGame {
           if (param4 > -6) {
             field_D = (String) null;
           }
-          var9 = (var7_int >> 8) * we.cosine(var8, false) >> 8;
+          var9 = (var7_int >> 8) * ClientUiUpdateSupport.cosine(var8, false) >> 8;
           var10 = (var7_int >> 8) * RotaryDialPainter.sine(var8, (byte) -23) >> 8;
           if (param2 &&
             !param1 &&
@@ -3161,7 +3161,7 @@ final class CommonGame {
           if (stackIn_85_0 != stackIn_85_1) {
             return;
           }
-          this.phaseTime = -1 + sk.a(19881, 8, 0, 4, param0, 16);
+          this.phaseTime = -1 + LoadingProgressSupport.readFourRangeBits(19881, 8, 0, 4, param0, 16);
           var4_int = 0;
           scanLoop2: while (true) {
             if (var4_int < this.playerCount) {
@@ -3280,7 +3280,7 @@ final class CommonGame {
         this.field_y = false;
         this.field_Y = false;
         this.bigHeadMode = false;
-        this.field_x = wk.field_g;
+        this.field_x = ClubStateFactory.field_g;
         try {
           this.field_W = param7;
           this.field_S = param0;

@@ -61,7 +61,7 @@ final class ug {
         RuntimeException var3 = null;
         IntrusiveDeque var4 = null;
         Object var5 = null;
-        gg var6 = null;
+        SocialPlayerRow var6 = null;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
@@ -76,12 +76,12 @@ final class ug {
         var15 = Kickabout.field_G;
         try {
           stackIn_3_0 = TournamentChampionDialog.field_F.field_Cb;
-          stackIn_3_1 = (3 * sh.field_c + 6) * param0;
+          stackIn_3_1 = (3 * LineupPositionSupport.field_c + 6) * param0;
           stackIn_4_2 = (TournamentChampionDialog.field_F.field_Cb == ig.field_f);
-          var3_int = ((ScrollPane) (Object) stackIn_3_0).a(stackIn_3_1, stackIn_4_2, param2, param1, false, 2 + sh.field_c) ? 1 : 0;
+          var3_int = ((ScrollPane) (Object) stackIn_3_0).a(stackIn_3_1, stackIn_4_2, param2, param1, false, 2 + LineupPositionSupport.field_c) ? 1 : 0;
           var4 = TournamentChampionDialog.field_F.field_yb.field_jb;
-          if (ts.field_d != 2 &&
-            1 != ts.field_d) {
+          if (PitchCoordinateSupport.field_d != 2 &&
+            1 != PitchCoordinateSupport.field_d) {
             TournamentChampionDialog.field_F.field_Cb.field_zb.field_E = CheckboxLabelWidget.field_yb;
             TournamentChampionDialog.field_F.field_lb = false;
             DateInputValidator.a(true, TournamentChampionDialog.field_F.field_yb);
@@ -90,7 +90,7 @@ final class ug {
           TournamentChampionDialog.field_F.field_lb = true;
           TournamentChampionDialog.field_F.field_Cb.field_zb.field_E = null;
           var5 = null;
-          var6 = (gg) (var4.g(24009));
+          var6 = (SocialPlayerRow) (var4.g(24009));
           while (var6 != null) {
             var7 = 0;
             if (null == var6.field_jb) {
@@ -102,13 +102,13 @@ final class ug {
               var7 = 1;
             }
             var6.field_q = TournamentChampionDialog.field_F.field_yb.field_q;
-            var6.field_Bb.setBounds(true, var6.field_q, 0, 0, sh.field_c);
+            var6.field_Bb.setBounds(true, var6.field_q, 0, 0, LineupPositionSupport.field_c);
             var8 = 0;
             if (null != var6.field_Eb &&
               !var6.field_Eb.equals("")) {
               var6.field_Fb.field_ub = 16737894;
               var6.field_Fb.field_N = DirectByteStorage.field_n;
-              var6.field_Fb.setBounds(true, 3 + DirectByteStorage.field_n.field_o, 0, 0, sh.field_c);
+              var6.field_Fb.setBounds(true, 3 + DirectByteStorage.field_n.field_o, 0, 0, LineupPositionSupport.field_c);
               var8 = 1;
             }
             var9 = 0;
@@ -119,16 +119,16 @@ final class ug {
             }
             stackIn_18_0 = var6.field_Bb;
             if (0 < var10) {
-              stackIn_19_1 = BitmapFont.a(var6.field_Bb.field_X, var6.field_Gb, var10);
+              stackIn_19_1 = BitmapFont.a(var6.field_Bb.field_X, var6.name, var10);
             } else {
-              stackIn_19_1 = var6.field_Gb;
+              stackIn_19_1 = var6.name;
             }
             stackIn_18_0.field_E = stackIn_19_1;
-            stackIn_22_0 = (var6.field_Bb.field_E.equals(var6.field_Gb)) ? 0 : 1;
+            stackIn_22_0 = (var6.field_Bb.field_E.equals(var6.name)) ? 0 : 1;
             var11 = stackIn_22_0;
-            var6.field_Bb.setBounds(true, var10, var9, 0, sh.field_c);
+            var6.field_Bb.setBounds(true, var10, var9, 0, LineupPositionSupport.field_c);
             if (var3_int == 0) {
-              var6.field_L = -var6.field_mb + sh.field_c;
+              var6.field_L = -var6.field_mb + LineupPositionSupport.field_c;
             }
             if (var7 != 0) {
               TournamentChampionDialog.field_F.field_yb.positionAfter(true, 2, var6, (UiLayoutNode) (var5));
@@ -139,11 +139,11 @@ final class ug {
             } else {
               if (var6.field_Bb.field_gb &&
                 var11 != 0) {
-                UrlRequest.field_e = var6.field_Gb;
+                UrlRequest.field_e = var6.name;
               }
             }
             if (var6.field_sb != 0) {
-              BytePlusOneCommand.a(var6, false, TournamentChampionDialog.field_F.field_Cb, -1, var6.field_yb, (int[]) null, 0L, var6.field_Gb, -1);
+              BytePlusOneCommand.a(var6, false, TournamentChampionDialog.field_F.field_Cb, -1, var6.field_yb, (int[]) null, 0L, var6.name, -1);
               var16 = TextButton.field_v;
               var13_ref_String = IsSixCommand.field_D;
               var16.field_j.addItem(0, 7, var13_ref_String);
@@ -153,7 +153,7 @@ final class ug {
               var17.field_j.layoutItems(0, 0, var13, var14, 0);
             }
             var5 = var6;
-            var6 = (gg) (var4.c(33));
+            var6 = (SocialPlayerRow) (var4.c(33));
           }
           if (TournamentChampionDialog.field_F.field_Eb.field_sb != 0) {
             StreetSceneryLoader.field_m = new HoverTooltip(TournamentChampionDialog.field_F.field_Eb.field_F, TournamentChampionDialog.field_F.field_Eb.field_T, TournamentChampionDialog.field_F.field_Eb.field_q, TournamentChampionDialog.field_F.field_Eb.field_mb, ParticipantStatus.field_j, StrongCacheEntry.field_u, ConsoleEvaluationException.field_e, ConsoleEvaluationException.field_e);

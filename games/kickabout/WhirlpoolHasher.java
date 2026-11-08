@@ -41,7 +41,7 @@ final class WhirlpoolHasher {
         var2 = 0;
         var3 = 0;
         while (var2 < 8) {
-          this.field_k[var2] = sd.a(mg.a(255L, (long)this.field_e[7 + var3]), sd.a(mg.a((long)this.field_e[var3 + 6], 255L) << 8, sd.a(mg.a(255L, (long)this.field_e[var3 + 5]) << 16, sd.a(mg.a((long)this.field_e[var3 + 4], 255L) << 24, sd.a(sd.a(mg.a((long)this.field_e[var3 + 2], 255L) << 40, sd.a(mg.a(71776119061217280L, (long)this.field_e[1 + var3] << 48), (long)this.field_e[var3] << 56)), mg.a(1095216660480L, (long)this.field_e[var3 + 3] << 32))))));
+          this.field_k[var2] = SpriteBackgroundSupport.xor(PlayerInputFactory.and(255L, (long)this.field_e[7 + var3]), SpriteBackgroundSupport.xor(PlayerInputFactory.and((long)this.field_e[var3 + 6], 255L) << 8, SpriteBackgroundSupport.xor(PlayerInputFactory.and(255L, (long)this.field_e[var3 + 5]) << 16, SpriteBackgroundSupport.xor(PlayerInputFactory.and((long)this.field_e[var3 + 4], 255L) << 24, SpriteBackgroundSupport.xor(SpriteBackgroundSupport.xor(PlayerInputFactory.and((long)this.field_e[var3 + 2], 255L) << 40, SpriteBackgroundSupport.xor(PlayerInputFactory.and(71776119061217280L, (long)this.field_e[1 + var3] << 48), (long)this.field_e[var3] << 56)), PlayerInputFactory.and(1095216660480L, (long)this.field_e[var3 + 3] << 32))))));
           var2++;
           var3 += 8;
         }
@@ -49,7 +49,7 @@ final class WhirlpoolHasher {
           dupTemp$0 = this.field_n[var2Lifetime1];
           arrayValue$1 = this.field_k[var2Lifetime1];
           this.field_p[var2Lifetime1] = dupTemp$0;
-          this.field_c[var2Lifetime1] = sd.a(arrayValue$1, dupTemp$0);
+          this.field_c[var2Lifetime1] = SpriteBackgroundSupport.xor(arrayValue$1, dupTemp$0);
         }
         if (param0 != 18) {
           field_b = (String) null;
@@ -60,7 +60,7 @@ final class WhirlpoolHasher {
             var4 = 0;
             var5 = 56;
             while (8 > var4) {
-              this.field_g[var3Lifetime1] = sd.a(this.field_g[var3Lifetime1], ValidationHelpWidget.field_W[var4][TextLayoutLine.b((int)(this.field_p[TextLayoutLine.b(-var4 + var3Lifetime1, 7)] >>> var5), 255)]);
+              this.field_g[var3Lifetime1] = SpriteBackgroundSupport.xor(this.field_g[var3Lifetime1], ValidationHelpWidget.field_W[var4][TextLayoutLine.b((int)(this.field_p[TextLayoutLine.b(-var4 + var3Lifetime1, 7)] >>> var5), 255)]);
               var5 -= 8;
               var4++;
             }
@@ -68,14 +68,14 @@ final class WhirlpoolHasher {
           for (var3Lifetime1Lifetime1 = 0; var3Lifetime1Lifetime1 < 8; var3Lifetime1Lifetime1++) {
             this.field_p[var3Lifetime1Lifetime1] = this.field_g[var3Lifetime1Lifetime1];
           }
-          this.field_p[0] = sd.a(this.field_p[0], ValidationHelpWidget.field_V[var2Lifetime2]);
+          this.field_p[0] = SpriteBackgroundSupport.xor(this.field_p[0], ValidationHelpWidget.field_V[var2Lifetime2]);
           for (var3Lifetime1Lifetime2 = 0; var3Lifetime1Lifetime2 < 8; var3Lifetime1Lifetime2++) {
             this.field_g[var3Lifetime1Lifetime2] = this.field_p[var3Lifetime1Lifetime2];
             var7 = 0;
             var4Lifetime1 = var7;
             var5Lifetime1 = 56;
             while (var7 < 8) {
-              this.field_g[var3Lifetime1Lifetime2] = sd.a(this.field_g[var3Lifetime1Lifetime2], ValidationHelpWidget.field_W[var7][TextLayoutLine.b(255, (int)(this.field_c[TextLayoutLine.b(-var7 + var3Lifetime1Lifetime2, 7)] >>> var5Lifetime1))]);
+              this.field_g[var3Lifetime1Lifetime2] = SpriteBackgroundSupport.xor(this.field_g[var3Lifetime1Lifetime2], ValidationHelpWidget.field_W[var7][TextLayoutLine.b(255, (int)(this.field_c[TextLayoutLine.b(-var7 + var3Lifetime1Lifetime2, 7)] >>> var5Lifetime1))]);
               var5Lifetime1 -= 8;
               var7++;
             }
@@ -85,7 +85,7 @@ final class WhirlpoolHasher {
           }
         }
         for (var2Lifetime3 = 0; 8 > var2Lifetime3; var2Lifetime3++) {
-          this.field_n[var2Lifetime3] = sd.a(this.field_n[var2Lifetime3], sd.a(this.field_k[var2Lifetime3], this.field_c[var2Lifetime3]));
+          this.field_n[var2Lifetime3] = SpriteBackgroundSupport.xor(this.field_n[var2Lifetime3], SpriteBackgroundSupport.xor(this.field_k[var2Lifetime3], this.field_c[var2Lifetime3]));
         }
     }
 
@@ -195,8 +195,8 @@ final class WhirlpoolHasher {
             stackIn_5_0 = -1;
             return stackIn_5_0;
           }
-          if (un.field_c == sd.field_d) {
-            ep.field_f = null;
+          if (un.field_c == SpriteBackgroundSupport.field_d) {
+            TutorialMessages.field_f = null;
             or.field_d.field_n = 0;
             if (param5 == null) {
               InstrumentEnvelope.field_a.field_n = 0;
@@ -239,7 +239,7 @@ final class WhirlpoolHasher {
               or.field_d.writeByte(123, 18);
               or.field_d.field_n = or.field_d.field_n + 2;
               var10 = or.field_d.field_n;
-              var11_ref_String = DelegatingCanvas.a(so.a(50), (byte) 123);
+              var11_ref_String = DelegatingCanvas.a(AppletContextSupport.getActiveApplet(50), (byte) 123);
               if (var11_ref_String == null) {
                 var11_ref_String = "";
               }
@@ -247,7 +247,7 @@ final class WhirlpoolHasher {
               IconLabel.a(ManagerAction.field_h, or.field_d, (byte) -94, InstrumentEnvelope.field_a, CascadingMenu.field_Nb);
               or.field_d.backpatchShortLength(-var10 + or.field_d.field_n, 62);
             }
-            c.a(-1, false);
+            ClientPacketFlushSupport.flushPackets(-1, false);
             un.field_c = ByteStorage.field_e;
           }
           if (ByteStorage.field_e == un.field_c &&
@@ -260,8 +260,8 @@ final class WhirlpoolHasher {
               ValidatedTextWidget.field_X = new String[-100 + var9Lifetime1];
             } else {
               if (var9Lifetime1 == 248) {
-                WidgetTheme.a((byte) -50, so.a(-71));
-                ListingRowCache.field_b = ld.field_i;
+                WidgetTheme.a((byte) -50, AppletContextSupport.getActiveApplet(-71));
+                ListingRowCache.field_b = AccountInputValidationResult.field_i;
                 FormationView.b((byte) -116);
                 ContextMenuItem.field_Db = false;
                 stackIn_35_0 = var9Lifetime1;
@@ -269,12 +269,12 @@ final class WhirlpoolHasher {
               }
               if (var9Lifetime1 == 99) {
                 SetLagCommand.a((byte) 51, lt.a((byte) 40));
-                ep.field_f = new Boolean(PlayerInputEvent.a(un.field_e, (byte) 93));
+                TutorialMessages.field_f = new Boolean(PlayerInputEvent.a(un.field_e, (byte) 93));
                 un.field_e.field_n = 0;
               } else {
-                so.field_b = var9Lifetime1;
+                AppletContextSupport.field_b = var9Lifetime1;
                 un.field_c = TournamentLobbyScreen.field_N;
-                ms.field_b = -1;
+                MusicVolumeSupport.field_b = -1;
               }
             }
           }
@@ -297,17 +297,17 @@ final class WhirlpoolHasher {
           }
           if (TournamentLobbyScreen.field_N == un.field_c &&
             LoginCredentials.a(180)) {
-            if (so.field_b != 255) {
+            if (AppletContextSupport.field_b != 255) {
               ListingRowCache.field_b = un.field_e.readString(61);
             } else {
               var9_ref_String = un.field_e.a(true);
               if (var9_ref_String != null) {
-                BlobSubmission.writeSettingsCookie(so.a(62), true, var9_ref_String);
+                BlobSubmission.writeSettingsCookie(AppletContextSupport.getActiveApplet(62), true, var9_ref_String);
               }
             }
             FormationView.b((byte) -116);
             ContextMenuItem.field_Db = false;
-            stackIn_53_0 = so.field_b;
+            stackIn_53_0 = AppletContextSupport.field_b;
             return stackIn_53_0;
           }
           if (param6) {
@@ -317,7 +317,7 @@ final class WhirlpoolHasher {
           if (null == SpriteButtonPainter.field_y) {
             if (ContextMenuItem.field_Db) {
               if (30000L >= KeyedLoginCredentials.millisSinceSessionStart(29680)) {
-                ListingRowCache.field_b = ic.field_e;
+                ListingRowCache.field_b = RegistrationRequestState.field_e;
               } else {
                 ListingRowCache.field_b = CheatCodeListener.field_h;
               }

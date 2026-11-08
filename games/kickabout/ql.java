@@ -7,7 +7,7 @@ final class ql {
     static String[] field_c;
     static String field_b;
 
-    final static int a(int param0, byte param1) {
+    final static int alignToEight(int param0, byte param1) {
         int var2 = 0;
         int var3 = -123 % ((param1 - 43) / 55);
         if (0 != (param0 & 7)) {
@@ -17,7 +17,7 @@ final class ql {
         return var4;
     }
 
-    final static void a(int param0) {
+    final static void enqueueWelcomeDialog(int param0) {
         if (param0 == 31663) {
           ScrollPane.field_Jb.addLast(new WelcomeDialog(), 3);
           return;
@@ -27,7 +27,7 @@ final class ql {
         ScrollPane.field_Jb.addLast(new WelcomeDialog(), 3);
     }
 
-    final static SocketConnector a(String param0, int param1, int param2) {
+    final static SocketConnector createSocketConnector(String param0, int param1, int param2) {
         ProxySocketConnector var3 = null;
         RuntimeException var3_ref = null;
         String var4 = null;
@@ -69,13 +69,13 @@ final class ql {
           return;
         }
         String var2 = (String) null;
-        ql.a((String) null, 72, 40);
+        ql.createSocketConnector((String) null, 72, 40);
         field_c = null;
     }
 
     final static void a(byte param0, boolean param1, String param2) {
         try {
-          WeightedLruCache.field_a = we.field_c;
+          WeightedLruCache.field_a = ClientUiUpdateSupport.field_c;
           SaveChangesDialog.field_G = param1 ? true : false;
           if (param0 <= 11) {
             String var4 = (String) null;
@@ -91,7 +91,7 @@ final class ql {
           return;
         }
         try {
-          ep.field_b = param2;
+          TutorialMessages.field_b = param2;
           NetworkGameClient.field_y = param1;
           MouseInputHandler.a(ImageProducerRasterBuffer.field_g, 4, param0);
         } catch (RuntimeException runtimeException) {
@@ -111,11 +111,11 @@ final class ql {
             field_d = (String) null;
           }
           var3_int = FriendsListPanel.a(false, (byte) 71);
-          if (4 == vt.field_c.phase) {
-            sk.a(1, var3_int);
-            PlayerValueSortCriterion.a(param2, var3_int, vt.field_c.participantStatus, 14839);
+          if (4 == AsciiCharacterSupport.field_c.phase) {
+            LoadingProgressSupport.drawActiveMatchTimer(1, var3_int);
+            PlayerValueSortCriterion.a(param2, var3_int, AsciiCharacterSupport.field_c.participantStatus, 14839);
             if (ContextMenuItem.field_Cb == -2 ||
-              !vt.field_c.participantStatus[ContextMenuItem.field_Cb].isActive(3511)) {
+              !AsciiCharacterSupport.field_c.participantStatus[ContextMenuItem.field_Cb].isActive(3511)) {
               ig.a(param1, 16777215, var3_int);
             }
           }
@@ -138,7 +138,7 @@ final class ql {
         }
     }
 
-    final static void a(Object[] param0, SortCriterion param1, byte param2) {
+    final static void sortByCriterion(Object[] param0, SortCriterion param1, byte param2) {
         try {
           WorldSpriteDecoration.a(param1, -1 + param0.length, param0, 29921, 0);
           int var3_int = -63 % ((77 - param2) / 37);

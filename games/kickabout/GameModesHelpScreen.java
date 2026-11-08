@@ -375,7 +375,7 @@ final class GameModesHelpScreen extends PagedHelpScreen {
                 stackIn_62_0 = stackIn_59_0[stackIn_59_1[stackIn_60_2]];
               }
               var24 = stackIn_62_0;
-              eo.a(var22, var23, var24, -(var15Lifetime1Lifetime1 >> 1) + var12Lifetime2Lifetime1, var13Lifetime2Lifetime1 - (var16Lifetime1 >> 1), var15Lifetime1Lifetime1, var16Lifetime1);
+              SoftwareDrawingSupport.a(var22, var23, var24, -(var15Lifetime1Lifetime1 >> 1) + var12Lifetime2Lifetime1, var13Lifetime2Lifetime1 - (var16Lifetime1 >> 1), var15Lifetime1Lifetime1, var16Lifetime1);
               SoftwareRasterizer.drawLineBlendedInclusive(-(var15Lifetime1Lifetime1 >> 1) + var12Lifetime2Lifetime1, var13Lifetime2Lifetime1 - (var16Lifetime1 >> 1), (var15Lifetime1Lifetime1 >> 1) + var12Lifetime2Lifetime1, -(var16Lifetime1 >> 1) + var13Lifetime2Lifetime1, 11184810, 128);
               SoftwareRasterizer.drawLineBlendedInclusive(var12Lifetime2Lifetime1 - (var15Lifetime1Lifetime1 >> 1), (var16Lifetime1 >> 1) + var13Lifetime2Lifetime1, var12Lifetime2Lifetime1 + (var15Lifetime1Lifetime1 >> 1), var13Lifetime2Lifetime1 + (var16Lifetime1 >> 1), 11184810, 128);
               SoftwareRasterizer.drawLineBlendedInclusive(var12Lifetime2Lifetime1 - (var15Lifetime1Lifetime1 >> 1), -(var16Lifetime1 >> 1) + (var13Lifetime2Lifetime1 + 1), -(var15Lifetime1Lifetime1 >> 1) + var12Lifetime2Lifetime1, -1 + ((var16Lifetime1 >> 1) + var13Lifetime2Lifetime1), 11184810, 128);

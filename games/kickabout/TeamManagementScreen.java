@@ -33,7 +33,7 @@ abstract class TeamManagementScreen extends ButtonMenuScreen {
         int var9Lifetime1;
         var10 = Kickabout.field_G;
         try {
-          var7_int = ql.a(param2, (byte) 122);
+          var7_int = ql.alignToEight(param2, (byte) 122);
           if (PopupDialog.field_g == null) {
             PopupDialog.field_g = new java.security.SecureRandom();
           }
@@ -102,9 +102,9 @@ abstract class TeamManagementScreen extends ButtonMenuScreen {
 
     void enterScreen(int param0, int param1, boolean param2) {
         super.enterScreen(param0 + param0, param1, param2);
-        ic.field_h.copyFrom(GameLoopApplet.field_E, (byte) 120);
+        RegistrationRequestState.field_h.copyFrom(GameLoopApplet.field_E, (byte) 120);
         MusicPatchNode.field_h.clear(22997);
-        IntrusiveNodeHashTable.a(ic.field_h.field_x, 415422632);
+        IntrusiveNodeHashTable.a(RegistrationRequestState.field_h.field_x, 415422632);
     }
 
     final static void e(int param0) {
@@ -125,7 +125,7 @@ abstract class TeamManagementScreen extends ButtonMenuScreen {
     void updateScreen(byte param0, boolean param1) {
         super.updateScreen((byte) -36, param1);
         int var3 = 31 / ((38 - param0) / 60);
-        QuickChatCategory.a(ic.field_h.field_x, 5464);
+        QuickChatCategory.a(RegistrationRequestState.field_h.field_x, 5464);
     }
 
     public static void g(byte param0) {

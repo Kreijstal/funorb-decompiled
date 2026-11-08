@@ -33,10 +33,10 @@ final class ReceivedAuctionItemRow extends ListRow {
           }
           var3 = stackIn_8_0;
           stackIn_18_0 = this.field_Cb;
-          stackIn_19_1 = (!PlayArea.a(100)) && (!NineSlicePanelPainter.field_e) && (!ds.field_g) && (var3 == 0) && (!GameLoopApplet.field_E.hasOwnEntry(1, this.field_Hb.field_a)) && (this.field_Hb.field_r) && (!this.field_Hb.field_j) && (!this.field_Hb.field_h) && (!this.field_Hb.field_q);
+          stackIn_19_1 = (!PlayArea.a(100)) && (!NineSlicePanelPainter.field_e) && (!ModelMaterialDecoder.field_g) && (var3 == 0) && (!GameLoopApplet.field_E.hasOwnEntry(1, this.field_Hb.field_a)) && (this.field_Hb.field_r) && (!this.field_Hb.field_j) && (!this.field_Hb.field_h) && (!this.field_Hb.field_q);
           stackIn_18_0.field_lb = stackIn_19_1;
           stackIn_29_0 = this.field_Jb;
-          stackIn_30_1 = (!PlayArea.a(100)) && (!NineSlicePanelPainter.field_e) && (!ds.field_g) && (var3 == 0) && (!GameLoopApplet.field_E.hasOwnEntry(1, this.field_Hb.field_a)) && (-1L != this.field_Hb.field_k) && (!this.field_Hb.field_j) && (!this.field_Hb.field_h) && (!GameLoopApplet.field_E.hasBidOrBuyEntry(this.field_Hb.field_a, (byte) -79));
+          stackIn_30_1 = (!PlayArea.a(100)) && (!NineSlicePanelPainter.field_e) && (!ModelMaterialDecoder.field_g) && (var3 == 0) && (!GameLoopApplet.field_E.hasOwnEntry(1, this.field_Hb.field_a)) && (-1L != this.field_Hb.field_k) && (!this.field_Hb.field_j) && (!this.field_Hb.field_h) && (!GameLoopApplet.field_E.hasBidOrBuyEntry(this.field_Hb.field_a, (byte) -79));
           stackIn_29_0.field_lb = stackIn_30_1;
           if (param1) {
             for (var4 = 0; var4 < this.field_Eb.length; var4++) {
@@ -77,7 +77,7 @@ final class ReceivedAuctionItemRow extends ListRow {
                 SocketArchiveNetworkClient.a((byte) 126, 4);
                 ShopPlayerSlot.c(53, -113);
               } else {
-                ca.a(this.field_Hb, 255);
+                ca.enqueueAuctionBidDialog(this.field_Hb, 255);
               }
             } else {
               if (!GameLoopApplet.field_E.hasOwnEntry(param0 + 1, this.field_Hb.field_a)) {
@@ -185,7 +185,7 @@ final class ReceivedAuctionItemRow extends ListRow {
                   ConsoleTokenCursor.field_d.c(NumericDateInputWidget.field_O.toUpperCase(), -10 + var4, -7 + this.field_mb + this.field_T, 16777028, -1);
                 }
               } else {
-                ConsoleTokenCursor.field_d.c(bk.field_g.toUpperCase(), -10 + var4, this.field_T - (-this.field_mb + 7), 16737894, -1);
+                ConsoleTokenCursor.field_d.c(CalendarSupport.field_g.toUpperCase(), -10 + var4, this.field_T - (-this.field_mb + 7), 16737894, -1);
               }
             }
             this.field_X.a(uf.field_e[var12.archetype], 12 + var4, this.field_T + (this.field_mb >> 1) + 4, this.field_y, -1);
@@ -218,7 +218,7 @@ final class ReceivedAuctionItemRow extends ListRow {
               stackIn_44_2 = var9_int;
               stackIn_44_3 = var7;
               stackIn_46_4 = (this.field_gb) || (param1 == 2);
-              eo.a(stackIn_44_0, stackIn_44_1, stackIn_44_2, stackIn_44_3, stackIn_46_4, var10);
+              SoftwareDrawingSupport.a(stackIn_44_0, stackIn_44_1, stackIn_44_2, stackIn_44_3, stackIn_46_4, var10);
             }
             var4 = var4 + this.field_Db[2];
             if (this.field_Hb.playerStats.trinketIds.length == 0) {
@@ -232,14 +232,14 @@ final class ReceivedAuctionItemRow extends ListRow {
               this.field_X.d(ql.field_c[this.field_Hb.field_s], (this.field_Db[4] >> 1) + var4, 4 + ((this.field_mb >> 1) + this.field_T), var7Lifetime1, -1);
             }
             var4 = var4 + this.field_Db[4];
-            this.field_X.d(ad.formatCurrencyAmount(this.field_Hb.field_i, 26300), (this.field_Db[5] >> 1) + var4, -7 + ((this.field_mb >> 1) + this.field_T), this.field_y, -1);
+            this.field_X.d(LocalizedTextLoader.formatCurrencyAmount(this.field_Hb.field_i, 26300), (this.field_Db[5] >> 1) + var4, -7 + ((this.field_mb >> 1) + this.field_T), this.field_y, -1);
             var4 = var4 + this.field_Db[5];
             var8Lifetime1 = -1;
             if (this.field_Hb.field_r) {
               var8Lifetime1 = this.field_Hb.field_t;
             }
             if (-1 != var8Lifetime1) {
-              stackIn_58_0 = ad.formatCurrencyAmount(var8Lifetime1, 26300);
+              stackIn_58_0 = LocalizedTextLoader.formatCurrencyAmount(var8Lifetime1, 26300);
             } else {
               stackIn_58_0 = ListRow.field_zb;
             }
@@ -358,7 +358,7 @@ final class ReceivedAuctionItemRow extends ListRow {
         int var11 = 0;
         int var12 = 0;
         try {
-          var3 = (ReceivedAuctionItemRow) (bk.field_f.removeFirst((byte) 126));
+          var3 = (ReceivedAuctionItemRow) (CalendarSupport.field_f.removeFirst((byte) 126));
           if (var3 == null) {
             var3 = new ReceivedAuctionItemRow();
           }
@@ -381,8 +381,8 @@ final class ReceivedAuctionItemRow extends ListRow {
             stackIn_14_0 = un.field_d;
           }
           var5 = stackIn_14_0;
-          this.field_Jb = eo.createRenderedButton(LobbyPlayerRow.field_Eb, 7126504, (BitmapFont) (var5), 50, true);
-          this.field_Cb = eo.createRenderedButton(TickClock.field_f, 7126504, (BitmapFont) (var5), 50, true);
+          this.field_Jb = SoftwareDrawingSupport.createRenderedButton(LobbyPlayerRow.field_Eb, 7126504, (BitmapFont) (var5), 50, true);
+          this.field_Cb = SoftwareDrawingSupport.createRenderedButton(TickClock.field_f, 7126504, (BitmapFont) (var5), 50, true);
           this.addChild((byte) -117, this.field_Jb);
           this.addChild((byte) -120, this.field_Cb);
           this.field_Jb.field_J = this.field_T + 20;

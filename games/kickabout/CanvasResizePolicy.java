@@ -142,11 +142,11 @@ final class CanvasResizePolicy {
     }
 
     final FullscreenFocusCanvas enterFullscreen(int param0) {
-        this.field_v = f.field_d;
+        this.field_v = SpriteNumberPainter.field_d;
         this.field_f = ReceivedAuctionItem.field_B;
         this.resizeListener.resizeCanvas(111, this.field_u, this.field_b);
         SquadGridWidget.field_Ib = false;
-        FullscreenFocusCanvas var2 = gf.a(oo.field_c, 0, this.field_b, 0, this.field_u, 0);
+        FullscreenFocusCanvas var2 = ModelMaterial.createFullscreenCanvas(oo.field_c, 0, this.field_b, 0, this.field_u, 0);
         if (param0 != 30182) {
           this.updateCanvasSize(119);
           if (var2 == null) {
@@ -197,14 +197,14 @@ final class CanvasResizePolicy {
           }
           return;
         }
-        if (this.field_o > f.field_d) {
-          BytePlusOneCommand.field_H = (this.field_o - f.field_d) / 2;
+        if (this.field_o > SpriteNumberPainter.field_d) {
+          BytePlusOneCommand.field_H = (this.field_o - SpriteNumberPainter.field_d) / 2;
         } else {
           if (0 < this.field_o) {
             BytePlusOneCommand.field_H = 0;
           }
         }
-        if (f.field_d == this.field_d &&
+        if (SpriteNumberPainter.field_d == this.field_d &&
           this.field_a == ReceivedAuctionItem.field_B) {
           return;
         }
@@ -277,7 +277,7 @@ final class CanvasResizePolicy {
               var4 = (int)((float)var3 * this.field_n + 0.5f);
               if (var4 > var2) {
                 var3 = (int)((float)var2 / this.field_n);
-                if (f.field_d != var2) {
+                if (SpriteNumberPainter.field_d != var2) {
                   this.resizeListener.resizeCanvas(101, var2, var3);
                 } else {
                   if (ReceivedAuctionItem.field_B != var3) {
@@ -285,7 +285,7 @@ final class CanvasResizePolicy {
                   }
                 }
                 if (this.field_o > 0) {
-                  BytePlusOneCommand.field_H = (this.field_o - f.field_d) / 2;
+                  BytePlusOneCommand.field_H = (this.field_o - SpriteNumberPainter.field_d) / 2;
                 }
                 return;
               }
@@ -295,7 +295,7 @@ final class CanvasResizePolicy {
             }
           }
         }
-        if (f.field_d != var2) {
+        if (SpriteNumberPainter.field_d != var2) {
           this.resizeListener.resizeCanvas(101, var2, var3);
         } else {
           if (ReceivedAuctionItem.field_B != var3) {
@@ -303,7 +303,7 @@ final class CanvasResizePolicy {
           }
         }
         if (this.field_o > 0) {
-          BytePlusOneCommand.field_H = (this.field_o - f.field_d) / 2;
+          BytePlusOneCommand.field_H = (this.field_o - SpriteNumberPainter.field_d) / 2;
         }
     }
 

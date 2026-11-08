@@ -366,26 +366,26 @@ final class mk {
             if (1 != var2_int) {
               if (2 == var2_int) {
                 IndexedSpriteState.a(-78, var4, new java.awt.Point[]{new java.awt.Point(354, 226), new java.awt.Point(542, 226), new java.awt.Point(542, 784), new java.awt.Point(354, 784)});
-                var4.addLast(bw.a(448, 0, false, 544, 9103, true), 3);
-                var4.addLast(ss.field_b, 3);
+                var4.addLast(SceneSpriteFactory.createSceneSprite(448, 0, false, 544, 9103, true), 3);
+                var4.addLast(UiKeyRoutingSupport.field_b, 3);
               } else {
                 if (var2_int == 3) {
                   IndexedSpriteState.a(-55, var4, new java.awt.Point[]{new java.awt.Point(376, 206), new java.awt.Point(864, 206), new java.awt.Point(864, 634), new java.awt.Point(214, 634), new java.awt.Point(214, 786), new java.awt.Point(404, 786), new java.awt.Point(404, 1046), new java.awt.Point(864, 1046), new java.awt.Point(864, 1046), new java.awt.Point(864, 1174), new java.awt.Point(296, 1174), new java.awt.Point(296, 914), new java.awt.Point(6, 914), new java.awt.Point(6, 456), new java.awt.Point(586, 456), new java.awt.Point(586, 334), new java.awt.Point(376, 334)});
-                  var4.addLast(bw.a(680, 1, false, 310, 9103, false), param0 + 1625);
-                  var4.addLast(bw.a(670, 2, false, 540, 9103, false), 3);
-                  var4.addLast(bw.a(130, 3, true, 570, 9103, false), 3);
-                  var4.addLast(bw.a(140, 2, true, 820, param0 ^ -9691, false), 3);
-                  var4.addLast(ss.field_b, param0 ^ -1623);
+                  var4.addLast(SceneSpriteFactory.createSceneSprite(680, 1, false, 310, 9103, false), param0 + 1625);
+                  var4.addLast(SceneSpriteFactory.createSceneSprite(670, 2, false, 540, 9103, false), 3);
+                  var4.addLast(SceneSpriteFactory.createSceneSprite(130, 3, true, 570, 9103, false), 3);
+                  var4.addLast(SceneSpriteFactory.createSceneSprite(140, 2, true, 820, param0 ^ -9691, false), 3);
+                  var4.addLast(UiKeyRoutingSupport.field_b, param0 ^ -1623);
                 } else {
                   if (var2_int == 4) {
-                    var4.addLast(ss.field_b, param0 ^ -1623);
+                    var4.addLast(UiKeyRoutingSupport.field_b, param0 ^ -1623);
                   } else {
                     if (var2_int == 5) {
                       if (!HoverTooltip.field_Eb) {
                         for (var2_int = 720; var2_int < 826; var2_int += 24) {
                           var4.addLast(TrinketShopDialog.b(true, var2_int, 920), 3);
                         }
-                        var4.addLast(ss.field_b, 3);
+                        var4.addLast(UiKeyRoutingSupport.field_b, 3);
                         var2 = ParticipantStatus.c(0);
                         var2.setSpritePosition(896, 940, -51);
                         var4.addLast(var2, param0 + 1625);
@@ -398,14 +398,14 @@ final class mk {
                             return;
                           }
                           AccountRequestDialog.a((byte) -108, 28, var4, new java.awt.Point[]{new java.awt.Point(-4, 186), new java.awt.Point(334, 186), new java.awt.Point(334, 86), new java.awt.Point(662, 86), new java.awt.Point(662, 186), new java.awt.Point(874, 186), new java.awt.Point(874, 724), new java.awt.Point(572, 724), new java.awt.Point(572, 824), new java.awt.Point(244, 824), new java.awt.Point(244, 724), new java.awt.Point(124, 724), new java.awt.Point(124, 986), new java.awt.Point(284, 986), new java.awt.Point(284, 886), new java.awt.Point(762, 886), new java.awt.Point(762, 986), new java.awt.Point(874, 986), new java.awt.Point(874, 1114), new java.awt.Point(762, 1114), new java.awt.Point(762, 1214), new java.awt.Point(284, 1214), new java.awt.Point(284, 1114), new java.awt.Point(-4, 1114), new java.awt.Point(-4, 596), new java.awt.Point(244, 596), new java.awt.Point(244, 496), new java.awt.Point(572, 496), new java.awt.Point(572, 596), new java.awt.Point(746, 596), new java.awt.Point(746, 314), new java.awt.Point(662, 314), new java.awt.Point(662, 414), new java.awt.Point(334, 414), new java.awt.Point(334, 314), new java.awt.Point(-4, 314)});
-                          var4.addLast(bw.a(130, 1, false, 250, 9103, true), 3);
-                          var4.addLast(bw.a(610, 0, false, 310, 9103, false), param0 ^ -1623);
-                          var4.addLast(bw.a(610, 2, true, 210, 9103, false), param0 + 1625);
-                          var4.addLast(bw.a(815, 2, false, 330, 9103, true), 3);
-                          var4.addLast(bw.a(800, 2, false, 630, 9103, false), 3);
-                          var4.addLast(bw.a(70, 3, true, 700, 9103, false), 3);
-                          var4.addLast(bw.a(80, 2, true, 1030, 9103, false), param0 + 1625);
-                          var4.addLast(ss.field_b, 3);
+                          var4.addLast(SceneSpriteFactory.createSceneSprite(130, 1, false, 250, 9103, true), 3);
+                          var4.addLast(SceneSpriteFactory.createSceneSprite(610, 0, false, 310, 9103, false), param0 ^ -1623);
+                          var4.addLast(SceneSpriteFactory.createSceneSprite(610, 2, true, 210, 9103, false), param0 + 1625);
+                          var4.addLast(SceneSpriteFactory.createSceneSprite(815, 2, false, 330, 9103, true), 3);
+                          var4.addLast(SceneSpriteFactory.createSceneSprite(800, 2, false, 630, 9103, false), 3);
+                          var4.addLast(SceneSpriteFactory.createSceneSprite(70, 3, true, 700, 9103, false), 3);
+                          var4.addLast(SceneSpriteFactory.createSceneSprite(80, 2, true, 1030, 9103, false), param0 + 1625);
+                          var4.addLast(UiKeyRoutingSupport.field_b, 3);
                           break;
                         case 12:
                         case 13:
@@ -417,7 +417,7 @@ final class mk {
                                 break;
                               }
                               AnimationClip.a(916, 28, 544, 544, -20, var4, (byte) -65);
-                              var4.addLast(ss.field_b, param0 ^ -1623);
+                              var4.addLast(UiKeyRoutingSupport.field_b, param0 ^ -1623);
                               break;
                             }
                             if (var2_int != 13) {
@@ -427,25 +427,25 @@ final class mk {
                             if (HoverTooltip.field_Eb) {
                               break;
                             }
-                            var4.addLast(ss.field_b, param0 ^ -1623);
+                            var4.addLast(UiKeyRoutingSupport.field_b, param0 ^ -1623);
                             break;
                           }
                           if (!HoverTooltip.field_Eb) {
                             IndexedSpriteState.a(-48, var4, new java.awt.Point[]{new java.awt.Point(286, 452), new java.awt.Point(864, 452), new java.awt.Point(864, 660), new java.awt.Point(286, 660)});
                           }
-                          var4.addLast(ss.field_b, 3);
+                          var4.addLast(UiKeyRoutingSupport.field_b, 3);
                           break;
                         case 9:
-                          var4.addLast(ss.field_b, param0 + 1625);
+                          var4.addLast(UiKeyRoutingSupport.field_b, param0 + 1625);
                           break;
                         case 7:
                           if (!HoverTooltip.field_Eb) {
                             IndexedSpriteState.a(-109, var4, new java.awt.Point[]{new java.awt.Point(46, 236), new java.awt.Point(314, 236), new java.awt.Point(314, 714), new java.awt.Point(46, 714)});
                           }
-                          var4.addLast(ss.field_b, 3);
+                          var4.addLast(UiKeyRoutingSupport.field_b, 3);
                           break;
                         case 6:
-                          var4.addLast(ss.field_b, 3);
+                          var4.addLast(UiKeyRoutingSupport.field_b, 3);
                           break;
                       }
                     }
@@ -454,10 +454,10 @@ final class mk {
               }
             } else {
               IndexedSpriteState.a(param0 ^ 1543, var4, new java.awt.Point[]{new java.awt.Point(354, 586), new java.awt.Point(542, 586), new java.awt.Point(542, 1214), new java.awt.Point(354, 1214)});
-              var4.addLast(bw.a(490, 0, false, 1020, 9103, true), param0 ^ -1623);
-              var4.addLast(bw.a(400, 0, false, 1020, 9103, true), param0 ^ -1623);
-              var4.addLast(bw.a(448, 0, false, 820, 9103, true), param0 ^ -1623);
-              var4.addLast(ss.field_b, 3);
+              var4.addLast(SceneSpriteFactory.createSceneSprite(490, 0, false, 1020, 9103, true), param0 ^ -1623);
+              var4.addLast(SceneSpriteFactory.createSceneSprite(400, 0, false, 1020, 9103, true), param0 ^ -1623);
+              var4.addLast(SceneSpriteFactory.createSceneSprite(448, 0, false, 820, 9103, true), param0 ^ -1623);
+              var4.addLast(UiKeyRoutingSupport.field_b, 3);
             }
             um.field_e.a((byte) -119, var4);
             return;

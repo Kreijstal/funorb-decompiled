@@ -40,7 +40,7 @@ final class GameplayHelpScreen extends PagedHelpScreen {
         var3 = ca.field_f.length;
         if (!LoginMethod.b(param0 - 15) ||
           !AccountRegistrationResponse.a((byte) 50) &&
-          !c.a(QuickChatKeysHelpPanel.field_Ab[32], 0, BufferedSocket.field_f)) {
+          !ClientPacketFlushSupport.isBitSet(QuickChatKeysHelpPanel.field_Ab[32], 0, BufferedSocket.field_f)) {
           var3--;
         }
         for (var4 = 0; var4 < var3; var4++) {
@@ -51,7 +51,7 @@ final class GameplayHelpScreen extends PagedHelpScreen {
           var6 = ca.field_f[var4];
           for (var7 = 0; var7 < ca.field_f[var4]; var7++) {
             if (GoalkeeperAiSupport.field_a[QuickChatKeysHelpPanel.field_Ab[var2 + var7]] &&
-              !c.a(QuickChatKeysHelpPanel.field_Ab[var7 + var2], 0, BufferedSocket.field_f)) {
+              !ClientPacketFlushSupport.isBitSet(QuickChatKeysHelpPanel.field_Ab[var7 + var2], 0, BufferedSocket.field_f)) {
               var6--;
             }
           }
@@ -59,7 +59,7 @@ final class GameplayHelpScreen extends PagedHelpScreen {
           for (var8 = 0; var8 < ca.field_f[var4]; var8++) {
             var9 = 0;
             if (GoalkeeperAiSupport.field_a[QuickChatKeysHelpPanel.field_Ab[var2]] &&
-              !c.a(QuickChatKeysHelpPanel.field_Ab[var2], 0, BufferedSocket.field_f)) {
+              !ClientPacketFlushSupport.isBitSet(QuickChatKeysHelpPanel.field_Ab[var2], 0, BufferedSocket.field_f)) {
               var9 = 1;
             }
             if (var9 == 0) {
@@ -113,46 +113,46 @@ final class GameplayHelpScreen extends PagedHelpScreen {
         var9 = Kickabout.field_G;
         super.updateScreen((byte) -106, param1);
         if (this.pageIndex == 0) {
-          bk.field_a[1].directionMask = 0;
-          var10 = bk.field_a[0];
+          CalendarSupport.field_a[1].directionMask = 0;
+          var10 = CalendarSupport.field_a[0];
           var5_ref_gm = var10;
           var5_ref_gmLifetime1 = var10;
           var3_ref_gm = var10;
           var10.directionMask = 0;
           if (field_G[TextPromptDialog.field_Kb]) {
-            dupTemp$0 = bk.field_a[0];
+            dupTemp$0 = CalendarSupport.field_a[0];
             dupTemp$0.directionMask = dupTemp$0.directionMask | 4;
           }
           if (field_G[PlayerContextMenu.field_e]) {
-            dupTemp$1 = bk.field_a[0];
+            dupTemp$1 = CalendarSupport.field_a[0];
             dupTemp$1.directionMask = dupTemp$1.directionMask | 2;
           }
           if (field_G[ArchivePreloadEntry.field_e]) {
-            dupTemp$2 = bk.field_a[0];
+            dupTemp$2 = CalendarSupport.field_a[0];
             dupTemp$2.directionMask = dupTemp$2.directionMask | 1;
           }
           if (field_G[IsSixCommand.field_A]) {
-            dupTemp$3 = bk.field_a[0];
+            dupTemp$3 = CalendarSupport.field_a[0];
             dupTemp$3.directionMask = dupTemp$3.directionMask | 8;
           }
           if (field_G[98]) {
-            dupTemp$4 = bk.field_a[1];
+            dupTemp$4 = CalendarSupport.field_a[1];
             dupTemp$4.directionMask = dupTemp$4.directionMask | 4;
           }
           if (field_G[96]) {
-            dupTemp$5 = bk.field_a[1];
+            dupTemp$5 = CalendarSupport.field_a[1];
             dupTemp$5.directionMask = dupTemp$5.directionMask | 2;
           }
           if (field_G[99]) {
-            dupTemp$6 = bk.field_a[1];
+            dupTemp$6 = CalendarSupport.field_a[1];
             dupTemp$6.directionMask = dupTemp$6.directionMask | 1;
           }
           if (field_G[97]) {
-            dupTemp$7 = bk.field_a[1];
+            dupTemp$7 = CalendarSupport.field_a[1];
             dupTemp$7.directionMask = dupTemp$7.directionMask | 8;
           }
           for (var4 = 0; var4 < 2; var4++) {
-            var5_ref_gmLifetime2 = bk.field_a[var4];
+            var5_ref_gmLifetime2 = CalendarSupport.field_a[var4];
             var5_ref_gmLifetime2.stepMovement(2, (PlayArea[]) null, false, false);
             var5_ref_gmLifetime2.resetPose((byte) 126);
             if (var5_ref_gmLifetime2.action != 0 &&
@@ -165,21 +165,21 @@ final class GameplayHelpScreen extends PagedHelpScreen {
         var3 = 2147483647;
         var4Lifetime1 = -13 / ((38 - param0) / 60);
         if (this.pageIndex == 2) {
-          for (var5 = 0; ip.field_b.length > var5; var5++) {
+          for (var5 = 0; RasterGammaSupport.field_b.length > var5; var5++) {
             var6 = -ChatMessage.field_f[var5][0] + ArrayWidgetContainer.field_x;
-            var7 = us.field_j - ChatMessage.field_f[var5][1];
+            var7 = TutorialCaptionSupport.field_j - ChatMessage.field_f[var5][1];
             var8 = var7 * var7 + var6 * var6;
             if (var3 > var8) {
               var3 = var8;
               ArchiveManager.field_d = var5;
             }
           }
-          for (var5Lifetime2 = 0; var5Lifetime2 < ip.field_b.length; var5Lifetime2++) {
-            ip.field_b[var5Lifetime2].resetPose((byte) 125);
+          for (var5Lifetime2 = 0; var5Lifetime2 < RasterGammaSupport.field_b.length; var5Lifetime2++) {
+            RasterGammaSupport.field_b[var5Lifetime2].resetPose((byte) 125);
           }
         }
         if (ArrayWidgetContainer.field_x == -1 ||
-          us.field_j == -1 ||
+          TutorialCaptionSupport.field_j == -1 ||
           4900 < var3) {
           ArchiveManager.field_d = -1;
         }
@@ -236,7 +236,7 @@ final class GameplayHelpScreen extends PagedHelpScreen {
         if (param0 != 330) {
           return;
         }
-        for (var2 = 0; ip.field_b.length > var2; var2++) {
+        for (var2 = 0; RasterGammaSupport.field_b.length > var2; var2++) {
           PacketBuffer.a(73, UrlRequest.field_k);
           SoftwareRasterizer.clearFramebuffer();
           if (var2 != 3 &&
@@ -248,23 +248,23 @@ final class GameplayHelpScreen extends PagedHelpScreen {
           var3 = stackIn_9_0;
           var4 = SoftwareRasterizer.field_g >> 1;
           var5 = SoftwareRasterizer.field_f - 15;
-          ip.field_b[var2].renderModel(var3, 128, var4, var5, (byte) -87);
+          RasterGammaSupport.field_b[var2].renderModel(var3, 128, var4, var5, (byte) -87);
           TeamManagementScreen.e(param0 - 204);
           var6 = ChatMessage.field_f[var2][0] + this.slideOffsetX;
           var7 = ChatMessage.field_f[var2][1];
           if (var2 == ArchiveManager.field_d) {
-            eo.a(UrlRequest.field_k, 65793);
-            eo.a(UrlRequest.field_k, 11184810);
-            eo.a(UrlRequest.field_k, 12303291);
-            eo.a(UrlRequest.field_k, 8947848);
-            eo.a(UrlRequest.field_k, 4473924);
+            SoftwareDrawingSupport.a(UrlRequest.field_k, 65793);
+            SoftwareDrawingSupport.a(UrlRequest.field_k, 11184810);
+            SoftwareDrawingSupport.a(UrlRequest.field_k, 12303291);
+            SoftwareDrawingSupport.a(UrlRequest.field_k, 8947848);
+            SoftwareDrawingSupport.a(UrlRequest.field_k, 4473924);
           }
           UrlRequest.field_k.drawHalfSize(-(UrlRequest.field_k.field_o >> 2) + var6, var7 - (UrlRequest.field_k.field_v >> 2));
         }
         if (ArchiveManager.field_d < 0) {
-          ic.a(280, QuickChatPhraseDefinition.field_q, false, (String) null, 240, false, true, 330 + this.slideOffsetX);
+          RegistrationRequestState.drawCaptionedMessage(280, QuickChatPhraseDefinition.field_q, false, (String) null, 240, false, true, 330 + this.slideOffsetX);
         } else {
-          ic.a(280, dr.field_c[ArchiveManager.field_d], false, AchievementQuery.field_h[ArchiveManager.field_d], 240, false, true, this.slideOffsetX + 330);
+          RegistrationRequestState.drawCaptionedMessage(280, ClassNameSupport.field_c[ArchiveManager.field_d], false, AchievementQuery.field_h[ArchiveManager.field_d], 240, false, true, this.slideOffsetX + 330);
         }
         return;
     }
@@ -355,7 +355,7 @@ final class GameplayHelpScreen extends PagedHelpScreen {
         if (param0 != -128) {
           GameplayHelpScreen.j((byte) 0);
         }
-        IsSixCommand.field_C.a(gf.field_d, 150 + this.slideOffsetX, 360, 300, 43, 16777215, -1, 0, 1, 16);
+        IsSixCommand.field_C.a(ModelMaterial.field_d, 150 + this.slideOffsetX, 360, 300, 43, 16777215, -1, 0, 1, 16);
         if (var2 != 0) {
           var10 = 0;
           var4Lifetime1 = var10;
@@ -374,8 +374,8 @@ final class GameplayHelpScreen extends PagedHelpScreen {
         int var5 = Kickabout.field_G;
         int var3_intLifetime1;
         int var3_intLifetime2;
-        ip.field_b = new RenderedFootballer[5];
-        for (var2 = 0; var2 < ip.field_b.length; var2++) {
+        RasterGammaSupport.field_b = new RenderedFootballer[5];
+        for (var2 = 0; var2 < RasterGammaSupport.field_b.length; var2++) {
           var3_int = 0;
           if (var2 == 1) {
             var3_int = 4;
@@ -389,18 +389,18 @@ final class GameplayHelpScreen extends PagedHelpScreen {
           if (var2 == 4) {
             var3_int = 2;
           }
-          ip.field_b[var2] = new RenderedFootballer(AuctionItem.a(11, 16, 0, var3_int, 0, 0, 31, false, false, false), var3_int, true);
-          ip.field_b[var2].archetype = var3_int;
-          ip.field_b[var2].resetPose((byte) 127);
-          ip.field_b[var2].field_mb.a(ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(79, ip.field_b[var2].field_mb.a(true), new Random()), -61);
+          RasterGammaSupport.field_b[var2] = new RenderedFootballer(AuctionItem.a(11, 16, 0, var3_int, 0, 0, 31, false, false, false), var3_int, true);
+          RasterGammaSupport.field_b[var2].archetype = var3_int;
+          RasterGammaSupport.field_b[var2].resetPose((byte) 127);
+          RasterGammaSupport.field_b[var2].field_mb.a(ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(79, RasterGammaSupport.field_b[var2].field_mb.a(true), new Random()), -61);
         }
-        bk.field_a = new RenderedFootballer[2];
+        CalendarSupport.field_a = new RenderedFootballer[2];
         PlayerStats var6 = new PlayerStats();
         var6.archetype = 0;
         var6.speed = 100;
         for (var3_intLifetime1 = 0; var3_intLifetime1 < 2; var3_intLifetime1++) {
-          bk.field_a[var3_intLifetime1] = new RenderedFootballer(AuctionItem.a(4, 16, var3_intLifetime1, 0, var3_intLifetime1, var3_intLifetime1, 31, false, false, false), 0, true);
-          bk.field_a[var3_intLifetime1].applyPlayerStats(true, var6, 3);
+          CalendarSupport.field_a[var3_intLifetime1] = new RenderedFootballer(AuctionItem.a(4, 16, var3_intLifetime1, 0, var3_intLifetime1, var3_intLifetime1, 31, false, false, false), 0, true);
+          CalendarSupport.field_a[var3_intLifetime1].applyPlayerStats(true, var6, 3);
         }
         UrlRequest.field_k = new Sprite(200, 300);
         for (var3_intLifetime2 = 0; 9 > var3_intLifetime2; var3_intLifetime2++) {
@@ -447,7 +447,7 @@ final class GameplayHelpScreen extends PagedHelpScreen {
         var3.speed = 35;
         UiLayoutNode var4 = new UiLayoutNode();
         var4.setBounds(true, 350, 0, 0, 350);
-        this.field_E = new ScrollContainer(0L, var4, new UiLayoutNode(), rr.field_b);
+        this.field_E = new ScrollContainer(0L, var4, new UiLayoutNode(), TextEntrySupport.field_b);
         this.field_E.setLayout(15, 220 + this.slideOffsetX, 0, (byte) 6, 220, this.field_E.field_Db.field_q + 15, 180);
     }
 
@@ -521,9 +521,9 @@ final class GameplayHelpScreen extends PagedHelpScreen {
           un.field_d.a(DelegatingCanvas.field_d[var4].toUpperCase(), var3 + 20, 180, 16777215, -1);
           PacketBuffer.a(param0 ^ -19, UrlRequest.field_k);
           SoftwareRasterizer.clearFramebuffer();
-          bk.field_a[var4].renderModel(950, 300, SoftwareRasterizer.field_g >> 1, (SoftwareRasterizer.field_f >> 1) + 60, (byte) -71);
+          CalendarSupport.field_a[var4].renderModel(950, 300, SoftwareRasterizer.field_g >> 1, (SoftwareRasterizer.field_f >> 1) + 60, (byte) -71);
           TeamManagementScreen.e(param0 ^ 24);
-          var6 = bk.field_a[var4].directionMask;
+          var6 = CalendarSupport.field_a[var4].directionMask;
           array$0 = new boolean[4];
           stackIn_12_0 = array$0;
           stackIn_12_1 = array$0;
@@ -564,8 +564,8 @@ final class GameplayHelpScreen extends PagedHelpScreen {
             stackIn_32_2 = 0;
           }
           ((BinaryBitmapFont) (Object) stackIn_31_0).a(stackIn_31_1, stackIn_32_2 + 10 + var3, 185, 160, 70, 16777215, -1, 1, 1, 16);
-          if (bk.field_a[var4].action == 4) {
-            stackIn_38_0 = (bk.field_a[var4].actionTime > BuyPitchDialog.field_I[4] - 13) ? 1 : 0;
+          if (CalendarSupport.field_a[var4].action == 4) {
+            stackIn_38_0 = (CalendarSupport.field_a[var4].actionTime > BuyPitchDialog.field_I[4] - 13) ? 1 : 0;
           } else {
             stackIn_38_0 = 0;
           }
@@ -600,15 +600,15 @@ final class GameplayHelpScreen extends PagedHelpScreen {
               return true;
             }
             if (param0 == 83) {
-              if (bk.field_a[0].action == 0) {
-                bk.field_a[0].setAction((byte) -31, 4);
+              if (CalendarSupport.field_a[0].action == 0) {
+                CalendarSupport.field_a[0].setAction((byte) -31, 4);
               }
               return true;
             }
             decompiledFrameRemainder0 = (param0 == 82);
             if (decompiledFrameRemainder0) {
-              if (0 == bk.field_a[1].action) {
-                bk.field_a[1].setAction((byte) -31, 4);
+              if (0 == CalendarSupport.field_a[1].action) {
+                CalendarSupport.field_a[1].setAction((byte) -31, 4);
               }
               return true;
             }
@@ -632,7 +632,7 @@ final class GameplayHelpScreen extends PagedHelpScreen {
         int[][] var3 = new int[][]{new int[]{0, 1, 2, 3}, new int[]{4, 36, 80, 87}};
         for (var4 = 0; var4 < 2; var4++) {
           SoftwareRasterizer.fillRoundedRectangleBlended(var2, 190, 275, 208, 10, 65793, 140);
-          un.field_d.a(gf.field_e[var4].toLowerCase(), var2 + 10, 212, 16777215, -1);
+          un.field_d.a(ModelMaterial.field_e[var4].toLowerCase(), var2 + 10, 212, 16777215, -1);
           for (var5 = 0; var5 < 4; var5++) {
             GeneratedPanelPainter.field_g[var3[var4][var5]].d(false).c(110 + (var2 + var5 * 40), 200);
           }
@@ -679,7 +679,7 @@ final class GameplayHelpScreen extends PagedHelpScreen {
           this.field_K[var3Lifetime1].h((byte) -122);
         }
         SoftwareRasterizer.fillRoundedRectangleBlended(this.slideOffsetX + 40, 120, 560, 50, 10, 65793, 140);
-        IsSixCommand.field_C.a(sh.field_e, 70 + this.slideOffsetX, 126, 500, 40, 16777215, -1, 0, 1, 16);
+        IsSixCommand.field_C.a(LineupPositionSupport.field_e, 70 + this.slideOffsetX, 126, 500, 40, 16777215, -1, 0, 1, 16);
         SoftwareRasterizer.fillRoundedRectangleBlended(this.slideOffsetX + 210, 178, 390, 225, 10, 65793, 140);
         this.field_E.draw(94, false);
         AuctionListing.a(this.field_E.field_Gb.field_q + this.field_E.field_F, -22914, this.field_E.field_F, this.field_E.field_T + this.field_E.field_Gb.field_mb, this.field_E.field_T);
@@ -688,7 +688,7 @@ final class GameplayHelpScreen extends PagedHelpScreen {
         var5 = var4;
         for (var6 = 0; var6 < 4; var6++) {
           un.field_d.a(LobbyMatchPreview.field_d[var6].toLowerCase(), var3Lifetime2 - 6, var5, 16777215, -1);
-          eo.a(200 + var3Lifetime2, -12 + var5, 10 + 17 * ((1 + var6) % 4) % 30, var6, true, 0);
+          SoftwareDrawingSupport.a(200 + var3Lifetime2, -12 + var5, 10 + 17 * ((1 + var6) % 4) % 30, var6, true, 0);
           var5 += 6;
           var5 = var5 + IsSixCommand.field_C.a(ServerTextTemplate.field_k[var6], var3Lifetime2 - 5, var5, 340, 1000, 14540253, -1, 0, 0, 17) * 17;
           var5 += 50;

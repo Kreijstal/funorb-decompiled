@@ -42,8 +42,8 @@ final class CaptionedContainer extends SingleChildContainer {
           }
           if (decompiledFrameRemainder0) {
             if (!nc.field_a) {
-              if (us.field_e <= StreetSceneryLoader.field_i) {
-                stackIn_19_0 = (StreetSceneryLoader.field_i < us.field_e + GameModeDefinition.field_i) ? 1 : 0;
+              if (TutorialCaptionSupport.field_e <= StreetSceneryLoader.field_i) {
+                stackIn_19_0 = (StreetSceneryLoader.field_i < TutorialCaptionSupport.field_e + GameModeDefinition.field_i) ? 1 : 0;
               } else {
                 stackIn_19_0 = 0;
               }
@@ -55,17 +55,17 @@ final class CaptionedContainer extends SingleChildContainer {
               StreetSceneryLoader.field_i = 0;
             } else {
               if (nc.field_a) {
-                StreetSceneryLoader.field_i = us.field_e;
+                StreetSceneryLoader.field_i = TutorialCaptionSupport.field_e;
               } else {
                 if (var2_int == 0) {
                   StreetSceneryLoader.field_i = 0;
                 } else {
-                  StreetSceneryLoader.field_i = us.field_e;
+                  StreetSceneryLoader.field_i = TutorialCaptionSupport.field_e;
                 }
               }
             }
             TrinketCatalog.field_d = TextLine.field_h;
-            ws.field_e = ScrollBar.field_Hb;
+            AccountNameCharacterSupport.field_e = ScrollBar.field_Hb;
             if (param0 == null) {
               if (var2_int != 0) {
                 nc.field_a = true;
@@ -75,15 +75,15 @@ final class CaptionedContainer extends SingleChildContainer {
             }
           }
           if (!nc.field_a &&
-            us.field_e > StreetSceneryLoader.field_i &&
+            TutorialCaptionSupport.field_e > StreetSceneryLoader.field_i &&
             BytePlusOneCommand.field_C) {
             StreetSceneryLoader.field_i = 0;
             TrinketCatalog.field_d = TextLine.field_h;
-            ws.field_e = ScrollBar.field_Hb;
+            AccountNameCharacterSupport.field_e = ScrollBar.field_Hb;
           }
           EmailAvailabilityValidator.field_o = param0;
           if (nc.field_a &&
-            StreetSceneryLoader.field_i == nd.field_b) {
+            StreetSceneryLoader.field_i == PitchBoundaryCacheState.field_b) {
             StreetSceneryLoader.field_i = 0;
             nc.field_a = false;
           }

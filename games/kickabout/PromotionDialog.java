@@ -15,7 +15,7 @@ final class PromotionDialog extends MessageDialog {
         String var4 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, ListingRowCache.field_e[10], new String[]{var6, var3});
         Sprite var5 = WriteIntegersCommand.field_E[param0];
         this.a(var4, this.field_t, var5, -110, this.field_u);
-        this.open(ds.a(this.field_y, 1), pg.a(false, 10), 1054928844);
+        this.open(ModelMaterialDecoder.messageButtonCount(this.field_y, 1), pg.a(false, 10), 1054928844);
     }
 
     final static void a(int param0, byte param1) {
@@ -65,7 +65,7 @@ final class PromotionDialog extends MessageDialog {
           var1_int = -43 % ((param0 + 39) / 43);
           RankingsRequest.field_l.n(2);
           while (TexturedPanelPainter.$cfr$intArgs$b$c4997cb15529(-59)) {
-            RankingsRequest.field_l.dispatchKeyInput(il.field_c, (byte) -88, FixedQuaternion.field_e);
+            RankingsRequest.field_l.dispatchKeyInput(ClassDescriptorSupport.field_c, (byte) -88, FixedQuaternion.field_e);
           }
           if (BlackFadeScreen.field_j != -1) {
             var2 = BlackFadeScreen.field_j;
@@ -73,7 +73,7 @@ final class PromotionDialog extends MessageDialog {
             stackIn_7_0 = var2;
             return stackIn_7_0;
           }
-          if (wq.field_g) {
+          if (DiagnosticsOverlaySupport.field_g) {
             stackIn_10_0 = 3;
             return stackIn_10_0;
           }
@@ -85,7 +85,7 @@ final class PromotionDialog extends MessageDialog {
             stackIn_18_0 = 1;
             return stackIn_18_0;
           }
-          if (wk.field_f != PlayerModelPreview.field_f) {
+          if (ClubStateFactory.field_f != PlayerModelPreview.field_f) {
             stackIn_23_0 = -1;
             return stackIn_23_0;
           }

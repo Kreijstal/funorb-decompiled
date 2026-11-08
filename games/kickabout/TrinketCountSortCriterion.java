@@ -128,8 +128,8 @@ final class TrinketCountSortCriterion extends SortCriterion {
         var9 = Kickabout.field_G;
         try {
           AccountChoicePanel.field_D = true;
-          ck.field_a = param2;
-          if (ck.field_a == 0) {
+          TextPromptState.field_a = param2;
+          if (TextPromptState.field_a == 0) {
             var3_int = SpriteState.a(MeshObject.field_f, tt.field_a, -46, TeamManagementScreen.field_C, vp.field_k);
             var4 = 3 + var3_int;
             AchievementQuery.field_g = new int[var4];
@@ -137,18 +137,18 @@ final class TrinketCountSortCriterion extends SortCriterion {
             for (var5 = 0; var4 > var5; var5++) {
               AchievementQuery.field_g[var5] = -1;
             }
-            sh.field_f = new int[2];
+            LineupPositionSupport.field_f = new int[2];
             for (var5 = 0; var5 < var3_int; var5++) {
               WeightedLruCache.field_c[var5] = TeamManagementScreen.field_C[var5];
             }
             WeightedLruCache.field_c[-3 + var4] = "";
             WeightedLruCache.field_c[var4 - 2] = ScrollContainer.field_Jb;
             AchievementQuery.field_g[-2 + var4] = 0;
-            sh.field_f[0] = 4;
+            LineupPositionSupport.field_f[0] = 4;
             WeightedLruCache.field_c[var4 - 1] = pg.field_c;
             AchievementQuery.field_g[-1 + var4] = 1;
-            sh.field_f[1] = 5;
-          } else if (ck.field_a == 1) {
+            LineupPositionSupport.field_f[1] = 5;
+          } else if (TextPromptState.field_a == 1) {
             var3_int = SpriteState.a(MeshObject.field_f, tt.field_a, param1 ^ -44, TeamManagementScreen.field_C, vp.field_k);
             var4 = 2 + var3_int;
             WeightedLruCache.field_c = new String[var4];
@@ -156,16 +156,16 @@ final class TrinketCountSortCriterion extends SortCriterion {
             for (var5 = 0; var5 < var4; var5++) {
               AchievementQuery.field_g[var5] = -1;
             }
-            sh.field_f = new int[1];
+            LineupPositionSupport.field_f = new int[1];
             for (var5 = 0; var3_int > var5; var5++) {
               WeightedLruCache.field_c[var5] = TeamManagementScreen.field_C[var5];
             }
             WeightedLruCache.field_c[-2 + var4] = "";
             WeightedLruCache.field_c[var4 - 1] = pg.field_c;
             AchievementQuery.field_g[-1 + var4] = 0;
-            sh.field_f[0] = 5;
-          } else if (2 != ck.field_a) {
-            if (ck.field_a == 3) {
+            LineupPositionSupport.field_f[0] = 5;
+          } else if (2 != TextPromptState.field_a) {
+            if (TextPromptState.field_a == 3) {
               if (!oo.field_c.field_l) {
                 var3_int = SpriteState.a(MeshObject.field_f, ValidatedTextWidget.field_bb, -46, TeamManagementScreen.field_C, vp.field_k);
               } else {
@@ -177,15 +177,15 @@ final class TrinketCountSortCriterion extends SortCriterion {
               for (var5 = 0; var4 > var5; var5++) {
                 AchievementQuery.field_g[var5] = -1;
               }
-              sh.field_f = new int[1];
+              LineupPositionSupport.field_f = new int[1];
               for (var5 = 0; var3_int > var5; var5++) {
                 WeightedLruCache.field_c[var5] = TeamManagementScreen.field_C[var5];
               }
               WeightedLruCache.field_c[-2 + var4] = "";
               WeightedLruCache.field_c[var4 - 1] = pg.field_c;
               AchievementQuery.field_g[-1 + var4] = 0;
-              sh.field_f[0] = 5;
-            } else if (ck.field_a == 4) {
+              LineupPositionSupport.field_f[0] = 5;
+            } else if (TextPromptState.field_a == 4) {
               var3_int = SpriteState.a(MeshObject.field_f, AnimationSkeleton.field_n, -46, TeamManagementScreen.field_C, vp.field_k);
               var4 = var3_int + 2;
               AchievementQuery.field_g = new int[var4];
@@ -193,36 +193,36 @@ final class TrinketCountSortCriterion extends SortCriterion {
               for (var5 = 0; var4 > var5; var5++) {
                 AchievementQuery.field_g[var5] = -1;
               }
-              sh.field_f = new int[1];
+              LineupPositionSupport.field_f = new int[1];
               for (var5 = 0; var3_int > var5; var5++) {
                 WeightedLruCache.field_c[var5] = TeamManagementScreen.field_C[var5];
               }
               WeightedLruCache.field_c[var4 - 2] = "";
               WeightedLruCache.field_c[var4 - 1] = pg.field_c;
               AchievementQuery.field_g[-1 + var4] = 0;
-              sh.field_f[0] = 5;
+              LineupPositionSupport.field_f[0] = 5;
             } else {
-              if (ck.field_a != 5) {
+              if (TextPromptState.field_a != 5) {
                 throw new IllegalArgumentException();
               }
-              var3_int = SpriteState.a(MeshObject.field_f, dr.field_b, -46, TeamManagementScreen.field_C, vp.field_k);
+              var3_int = SpriteState.a(MeshObject.field_f, ClassNameSupport.field_b, -46, TeamManagementScreen.field_C, vp.field_k);
               var4 = 3 + var3_int;
               WeightedLruCache.field_c = new String[var4];
               AchievementQuery.field_g = new int[var4];
               for (var5 = 0; var4 > var5; var5++) {
                 AchievementQuery.field_g[var5] = -1;
               }
-              sh.field_f = new int[2];
+              LineupPositionSupport.field_f = new int[2];
               for (var5 = 0; var3_int > var5; var5++) {
                 WeightedLruCache.field_c[var5] = TeamManagementScreen.field_C[var5];
               }
               WeightedLruCache.field_c[-3 + var4] = "";
               WeightedLruCache.field_c[var4 - 2] = mi.field_c;
               AchievementQuery.field_g[var4 - 2] = 0;
-              sh.field_f[0] = 3;
+              LineupPositionSupport.field_f[0] = 3;
               WeightedLruCache.field_c[-1 + var4] = pg.field_c;
               AchievementQuery.field_g[-1 + var4] = 1;
-              sh.field_f[1] = 5;
+              LineupPositionSupport.field_f[1] = 5;
             }
           } else {
             var3_int = SpriteState.a(MeshObject.field_f, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, TextFieldNode.field_Kb, new String[]{"<br><%0><br>"}), -46, TeamManagementScreen.field_C, vp.field_k);
@@ -275,7 +275,7 @@ final class TrinketCountSortCriterion extends SortCriterion {
             for (var8 = 0; var8 < var7; var8++) {
               AchievementQuery.field_g[var8] = -1;
             }
-            sh.field_f = new int[2];
+            LineupPositionSupport.field_f = new int[2];
             WeightedLruCache.field_c[1] = IconButtonPainter.field_f;
             WeightedLruCache.field_c[0] = LoginText.field_a;
             AchievementQuery.field_g[1] = 0;
@@ -283,8 +283,8 @@ final class TrinketCountSortCriterion extends SortCriterion {
             WeightedLruCache.field_c[5] = "";
             WeightedLruCache.field_c[2] = vj.field_d;
             WeightedLruCache.field_c[4] = ChatMessage.field_k;
-            sh.field_f[1] = 2;
-            sh.field_f[0] = 5;
+            LineupPositionSupport.field_f[1] = 2;
+            LineupPositionSupport.field_f[0] = 5;
             WeightedLruCache.field_c[3] = LinkTextPainter.field_g;
             for (var8Lifetime2 = 0; var8Lifetime2 < var5; var8Lifetime2++) {
               stackIn_32_0 = WeightedLruCache.field_c;
@@ -312,7 +312,7 @@ final class TrinketCountSortCriterion extends SortCriterion {
             }
             PlayingView.field_o = MonotonicClock.monotonicMillis(90);
           }
-          DirectByteStorage.field_k.itemCount = sh.field_f.length;
+          DirectByteStorage.field_k.itemCount = LineupPositionSupport.field_f.length;
           var3_intLifetime1 = 0;
           if (param1 != 6) {
             return;
@@ -326,7 +326,7 @@ final class TrinketCountSortCriterion extends SortCriterion {
               var3_intLifetime1 = var5Lifetime1;
             }
           }
-          if (2 == ck.field_a) {
+          if (2 == TextPromptState.field_a) {
             var10 = TrinketIcon.field_Eb;
             var4_ref_String__ = var10;
             for (var5Lifetime2 = 0; var10.length > var5Lifetime2; var5Lifetime2++) {
@@ -357,10 +357,10 @@ final class TrinketCountSortCriterion extends SortCriterion {
             }
             BufferedSocket.field_j = stackIn_114_0 + stackIn_115_1;
           }
-          uq.field_c = -(BufferedSocket.field_j >> 1) + SocketArchiveNetworkClient.field_s;
-          ld.field_j = new int[WeightedLruCache.field_c.length][];
+          ChatInputState.field_c = -(BufferedSocket.field_j >> 1) + SocketArchiveNetworkClient.field_s;
+          AccountInputValidationResult.field_j = new int[WeightedLruCache.field_c.length][];
           var4Lifetime3 = 0;
-          var5Lifetime3 = uq.field_c;
+          var5Lifetime3 = ChatInputState.field_c;
           while (WeightedLruCache.field_c.length > var4Lifetime3) {
             var6Lifetime1 = AchievementQuery.field_g[var4Lifetime3];
             if (var6Lifetime1 < 0) {
@@ -369,16 +369,16 @@ final class TrinketCountSortCriterion extends SortCriterion {
               var7Lifetime2 = MatchTransitionScreen.a(10, WeightedLruCache.field_c[var4Lifetime3], true);
               var8Lifetime1 = TeamManagementScreen.field_A - (var7Lifetime2 >> 1);
               var5Lifetime3 = var5Lifetime3 + ThreadSleepSupport.field_a;
-              ld.field_j[var4Lifetime3] = new int[4];
-              ld.field_j[var4Lifetime3][0] = -DiskCacheWorker.field_d + var8Lifetime1;
-              ld.field_j[var4Lifetime3][1] = var5Lifetime3;
-              ld.field_j[var4Lifetime3][2] = (DiskCacheWorker.field_d << 1) + var7Lifetime2;
+              AccountInputValidationResult.field_j[var4Lifetime3] = new int[4];
+              AccountInputValidationResult.field_j[var4Lifetime3][0] = -DiskCacheWorker.field_d + var8Lifetime1;
+              AccountInputValidationResult.field_j[var4Lifetime3][1] = var5Lifetime3;
+              AccountInputValidationResult.field_j[var4Lifetime3][2] = (DiskCacheWorker.field_d << 1) + var7Lifetime2;
               var5Lifetime3 = var5Lifetime3 + (PlayerModelPreview.field_j + ((pr.field_d << 1) + ThreadSleepSupport.field_a));
-              ld.field_j[var4Lifetime3][3] = PlayerModelPreview.field_j + (pr.field_d << 1);
+              AccountInputValidationResult.field_j[var4Lifetime3][3] = PlayerModelPreview.field_j + (pr.field_d << 1);
             }
             var4Lifetime3++;
           }
-          if (ck.field_a == 2) {
+          if (TextPromptState.field_a == 2) {
             DirectByteStorage.field_k.a(-1, 0, -1, param0);
           } else {
             DirectByteStorage.field_k.a(ResourceArchive.a(BytePlusOneCommand.field_A, ArchiveManager.field_m, (byte) -127), param1 ^ 6, 0, param0);

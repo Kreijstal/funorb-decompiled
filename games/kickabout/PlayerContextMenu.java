@@ -20,7 +20,7 @@ final class PlayerContextMenu {
 
     private final boolean openFriendPrompt(int param0, int param1, int param2) {
         if (param2 == 17) {
-          ck.field_b = new TextPromptDialog(this.field_g.field_F, this.field_g.field_T, this.field_g.field_q, this.field_g.field_mb, param1, ChatMessage.field_e, AccountTermsPanel.field_H, DateInputValidator.field_f, ConsoleEvaluationException.field_e, MatchPhaseView.field_d, ul.field_c, this.field_k, this.field_b);
+          TextPromptState.field_b = new TextPromptDialog(this.field_g.field_F, this.field_g.field_T, this.field_g.field_q, this.field_g.field_mb, param1, ChatMessage.field_e, AccountTermsPanel.field_H, DateInputValidator.field_f, ConsoleEvaluationException.field_e, MatchPhaseView.field_d, ul.field_c, this.field_k, this.field_b);
           return true;
         }
         if (param0 == -8985) {
@@ -48,17 +48,17 @@ final class PlayerContextMenu {
             return 0;
           }
           if (param0 >= 0) {
-            return vd.a(param0, 11277, param1);
+            return AccountNameCheckState.a(param0, 11277, param1);
           }
-          return -vd.a(-param0, 11277, param1);
+          return -AccountNameCheckState.a(-param0, 11277, param1);
         }
         if (param0 == 0) {
           return 4096;
         }
         if (param0 < 0) {
-          return vd.a(-param0, param2 ^ 11279, -param1) - 4096;
+          return AccountNameCheckState.a(-param0, param2 ^ 11279, -param1) - 4096;
         }
-        return -vd.a(param0, 11277, -param1) + 4096;
+        return -AccountNameCheckState.a(param0, 11277, -param1) + 4096;
     }
 
     final static int a(boolean param0, int param1, int param2) {
@@ -163,7 +163,7 @@ final class PlayerContextMenu {
 
     final static void a(int param0, byte param1, int param2) {
         int var3 = -112 % ((param1 - 14) / 60);
-        c.a(31, param0, param2, 0);
+        ClientPacketFlushSupport.a(31, param0, param2, 0);
     }
 
     final void showMenu(int param0) {
@@ -192,11 +192,11 @@ final class PlayerContextMenu {
         var5 = Kickabout.field_G;
         var4 = -30 % ((param1 - 2) / 48);
         if (param0 == 8) {
-          ig.a(this.field_b, this.field_k, (byte) 88);
+          ig.beginPrivateMessage(this.field_b, this.field_k, (byte) 88);
           return true;
         }
         if (param0 == 18) {
-          rr.a(this.field_k, (byte) -70, this.field_b);
+          TextEntrySupport.a(this.field_k, (byte) -70, this.field_b);
           return true;
         }
         if (param0 == 11) {
@@ -212,11 +212,11 @@ final class PlayerContextMenu {
           return true;
         }
         if (param0 == 14) {
-          uq.a((byte) -122);
+          ChatInputState.enableChatInput((byte) -122);
           return true;
         }
         if (20 == param0) {
-          hp.b(0);
+          ChatComposeMode.setComposeMode(0);
           return true;
         }
         if (param0 != 19) {
@@ -249,9 +249,9 @@ final class PlayerContextMenu {
               PlayerContextMenu.a(39, 24, true, 46, 63, true, -76, 49, (PlatformTaskDispatcher) null, 107, -22L, -59, -43, (String) null);
             }
             ParticipantAgent.field_n = param5;
-            il.field_g = param6;
+            ClassDescriptorSupport.field_g = param6;
             PlayerArchetypeSortCriterion.field_o = param3;
-            il.field_f = param10;
+            ClassDescriptorSupport.field_f = param10;
             StrongCacheEntry.field_y = param11;
             LoginMethod.field_c = param8;
             IntTripleCommand.field_E = param13;
@@ -325,7 +325,7 @@ final class PlayerContextMenu {
           return true;
         }
         if (param0 == 5) {
-          var5 = of.a(param1, (byte) 87, this.field_k);
+          var5 = FriendRemovalSupport.requestFriendRemoval(param1, (byte) 87, this.field_k);
           var4_ref = var5;
           if (var5 != null) {
             TextButton.a((String) null, this.field_k, 0, 2, var5, -128);
@@ -337,7 +337,7 @@ final class PlayerContextMenu {
           return true;
         }
         if (param0 == 6) {
-          var10 = il.a(this.field_k, param1, (byte) 126);
+          var10 = ClassDescriptorSupport.requestIgnore(this.field_k, param1, (byte) 126);
           var4_refLifetime1 = var10;
           if (var10 != null) {
             TextButton.a((String) null, this.field_k, 0, 2, var10, -128);
@@ -562,7 +562,7 @@ final class PlayerContextMenu {
         int var4_int = 0;
         RuntimeException var4 = null;
         String var5 = null;
-        gg var6 = null;
+        SocialPlayerRow var6 = null;
         int var7 = 0;
         try {
           var4_int = -124 % ((param1 + 43) / 36);
@@ -571,7 +571,7 @@ final class PlayerContextMenu {
               param0 != 2) {
               return;
             }
-            if (ts.field_d == 2) {
+            if (PitchCoordinateSupport.field_d == 2) {
               var5 = this.getDisplayName(-26719);
               var6 = ClientUiOverlay.a(this.field_k, (byte) 40);
               var7 = DiskCacheRequest.a(0, this.field_k) ? 1 : 0;
@@ -635,13 +635,13 @@ final class PlayerContextMenu {
           this.field_l = param0.field_c;
           if (param0.field_c == 0) {
             if (ServerTextTemplate.field_a == 0) {
-              this.field_j.addItem(param1 - 11, 12, sd.field_c);
+              this.field_j.addItem(param1 - 11, 12, SpriteBackgroundSupport.field_c);
             }
             this.field_j.addItem(0, 13, ConsoleParseException.field_a);
           }
           if (param0.field_c == 1) {
             if (0 == ConsoleTokenCursor.field_b) {
-              this.field_j.addItem(param1 ^ 11, 12, mg.field_d);
+              this.field_j.addItem(param1 ^ 11, 12, PlayerInputFactory.field_d);
             }
             this.field_j.addItem(param1 - 11, 13, GameModeDefinition.field_a);
           }

@@ -421,7 +421,7 @@ final class PlayerStats implements PopupCard {
     final static void a(int param0, byte param1) {
         int var2 = 0;
         int var3 = 0;
-        c.field_c = param0;
+        ClientPacketFlushSupport.field_c = param0;
         if (TextPromptDialog.field_Bb != pg.field_b) {
           var2 = TextPromptDialog.field_Bb * TextPromptDialog.field_Bb;
           var3 = -(pg.field_b * pg.field_b) + var2;
@@ -430,7 +430,7 @@ final class PlayerStats implements PopupCard {
         if (param1 >= -65) {
           PlayerStats.a(-79, -94);
         }
-        g.field_a.setBounds(true, 640, AuctionsHelpScreen.field_H, param0, 120);
+        GrayscalePaletteSupport.field_a.setBounds(true, 640, AuctionsHelpScreen.field_H, param0, 120);
         RankingRowNode.a(119, mj.field_b, 640, 5, DiskCacheWorker.field_b, VerticalScrollbar.field_Ab - 24, 0);
     }
 
@@ -1008,13 +1008,13 @@ final class PlayerStats implements PopupCard {
               }
             }
             if (this.f(13467)) {
-              eo.darkenRectangle(1 + param1, 1 + param6, var13, var26[2] - 1);
+              SoftwareDrawingSupport.darkenRectangle(1 + param1, 1 + param6, var13, var26[2] - 1);
               SoftwareRasterizer.drawVerticalLine(-1 + var13 + param1, param6, var26[2] + 1, 65793);
               ConsoleTokenCursor.field_d.d(oo.field_h, (var13 >> 1) + param1, -4 + var26[2] + param6, 16777215, 65793);
             }
             param6 = param6 + var26[2];
             if (param2) {
-              var17 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, NamedValueContainer.field_g, new String[]{ad.formatCurrencyAmount(ImageProducerRasterBuffer.a(this, true), 26300)});
+              var17 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, NamedValueContainer.field_g, new String[]{LocalizedTextLoader.formatCurrencyAmount(ImageProducerRasterBuffer.a(this, true), 26300)});
               ConsoleTokenCursor.field_d.a(var17, param1 + 10, param6 + 15, 16777215, 65793);
             }
             return;
@@ -1047,7 +1047,7 @@ final class PlayerStats implements PopupCard {
             }
           }
           var19Lifetime1 = stackIn_58_0;
-          eo.a(param1 + (-100 + var13 >> 1), 9 + (param6 + 16 * var17_int), var18Lifetime1, var17_int, true, var19Lifetime1);
+          SoftwareDrawingSupport.a(param1 + (-100 + var13 >> 1), 9 + (param6 + 16 * var17_int), var18Lifetime1, var17_int, true, var19Lifetime1);
           var17_int++;
         }
     }

@@ -26,10 +26,10 @@ final class LobbyGameRecord {
         RuntimeException var2_ref = null;
         var3 = Kickabout.field_G;
         try {
-          var4 = (AchievementSubmission) (il.field_a.g(24009));
+          var4 = (AchievementSubmission) (ClassDescriptorSupport.field_a.g(24009));
           while (var4 != null) {
             te.writeAchievementSubmission(param0, var4, (byte) -112);
-            var4 = (AchievementSubmission) (il.field_a.c(33));
+            var4 = (AchievementSubmission) (ClassDescriptorSupport.field_a.c(33));
           }
           var2 = MatchScreen.field_j.g(24009);
           while (var2 != null) {

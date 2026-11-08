@@ -325,7 +325,7 @@ class UiLayoutNode extends iv {
     }
 
     final void updateInput(int param0, boolean param1) {
-        ic.field_f = !param1 ? true : false;
+        RegistrationRequestState.field_f = !param1 ? true : false;
         UnreadMessagesScreen.field_D = !param1 ? true : false;
         this.updateInputTree(0, ~param0, true, SoftwareRasterizer.field_f, param0, SoftwareRasterizer.field_g);
     }
@@ -384,14 +384,14 @@ class UiLayoutNode extends iv {
               var4_ref_String = AuctionLogEntry.field_m.toString();
               if (SocketArchiveNetworkClient.a(var4_ref_String, -125)) {
                 TextButton.a((String) null, (String) null, 0, 2, ServerTextTemplate.field_i, -125);
-                TextButton.a((String) null, (String) null, 0, 2, mg.field_e, -126);
+                TextButton.a((String) null, (String) null, 0, 2, PlayerInputFactory.field_e, -126);
               } else {
                 var5 = NodeHashTableIterator.field_b;
                 if (var5 == 0 &&
                   PlayerContextMenu.field_i != null) {
                   var5 = 1;
                 }
-                if (r.a(0, var5) == 2) {
+                if (ClientProtocolStage.a(0, var5) == 2) {
                   ListingRowCache.a(-117, 1, var5, param2);
                 }
                 PasswordLoginCredentials.a(-1, 82, NodeHashTableIterator.field_b, param1, TrinketTile.field_Kb, var4_ref_String);
@@ -408,8 +408,8 @@ class UiLayoutNode extends iv {
           }
           return true;
         }
-        var4 = il.field_c;
-        if (!rr.a(-108, (char) var4)) {
+        var4 = ClassDescriptorSupport.field_c;
+        if (!TextEntrySupport.isPrintableClientCharacter(-108, (char) var4)) {
           return false;
         }
         if (var3 != 0 &&
@@ -536,7 +536,7 @@ class UiLayoutNode extends iv {
         var11 = SoftwareRasterizer.field_h;
         SoftwareRasterizer.intersectClip(this.field_F, this.field_T, this.field_F + this.field_q, this.field_mb + this.field_T);
         var12 = 0;
-        if (!ic.field_f &&
+        if (!RegistrationRequestState.field_f &&
           param2 &&
           WidgetContainer.field_A != 0 &&
           SoftwareRasterizer.field_b <= HighScoreSubmission.field_q &&
@@ -572,7 +572,7 @@ class UiLayoutNode extends iv {
           UnreadMessagesScreen.field_D = true;
         }
         if (var12 != 0) {
-          ic.field_f = true;
+          RegistrationRequestState.field_f = true;
         }
         SoftwareRasterizer.setClip(var8, var9, var10, var11);
         if (this.field_qb != 0 &&

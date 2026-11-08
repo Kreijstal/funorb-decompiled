@@ -120,13 +120,13 @@ final class LookupRecordUpdate extends IntrusiveNode {
               var15.drawScaled(0, 0, var2_intLifetime1, var3Lifetime1);
               TeamManagementScreen.e(118);
             }
-            stackIn_20_0 = (qr.a(0, (byte) -1) >= 0) ? 0 : 1;
+            stackIn_20_0 = (SessionUrlSupport.screenToWorldX(0, (byte) -1) >= 0) ? 0 : 1;
             var2_intLifetime1Lifetime1 = stackIn_20_0;
-            stackIn_23_0 = (896 >= qr.a(640, (byte) -1)) ? 0 : 1;
+            stackIn_23_0 = (896 >= SessionUrlSupport.screenToWorldX(640, (byte) -1)) ? 0 : 1;
             var3Lifetime1Lifetime1 = stackIn_23_0;
-            stackIn_26_0 = (ig.a(0, param0 + 4668) >= 0) ? 0 : 1;
+            stackIn_26_0 = (ig.screenToWorldY(0, param0 + 4668) >= 0) ? 0 : 1;
             var4_intLifetime1 = stackIn_26_0;
-            stackIn_29_0 = (ig.a(480, 4620) <= 1344) ? 0 : 1;
+            stackIn_29_0 = (ig.screenToWorldY(480, 4620) <= 1344) ? 0 : 1;
             var5Lifetime1 = stackIn_29_0;
             if (var2_intLifetime1Lifetime1 != 0) {
               var6Lifetime1 = MySquadScreen.c(param0 - 26, -15 - var15.field_o);
@@ -145,12 +145,12 @@ final class LookupRecordUpdate extends IntrusiveNode {
               }
               var8Lifetime1 = stackIn_36_0 + stackIn_37_1;
               while (var7Lifetime1 < var8Lifetime1) {
-                MyKitScreen.field_S.d(var6Lifetime1, go.a(var7Lifetime1, (byte) -56));
+                MyKitScreen.field_S.d(var6Lifetime1, PitchProjectionSupport.worldToScreenY(var7Lifetime1, (byte) -56));
                 var7Lifetime1 = var7Lifetime1 + var15.field_v;
               }
             }
             if (var4_intLifetime1 != 0) {
-              var6Lifetime1Lifetime1 = go.a(-var15.field_v - 15, (byte) -56);
+              var6Lifetime1Lifetime1 = PitchProjectionSupport.worldToScreenY(-var15.field_v - 15, (byte) -56);
               for (var7Lifetime1Lifetime1 = -15; var7Lifetime1Lifetime1 < 896; var7Lifetime1Lifetime1 = var7Lifetime1Lifetime1 + var15.field_o) {
                 MyKitScreen.field_S.d(MySquadScreen.c(-44, var7Lifetime1Lifetime1), var6Lifetime1Lifetime1);
               }
@@ -159,7 +159,7 @@ final class LookupRecordUpdate extends IntrusiveNode {
               for (var6Lifetime1Lifetime2 = -15; var6Lifetime1Lifetime2 + var15.field_v < 1344; var6Lifetime1Lifetime2 = var6Lifetime1Lifetime2 + var15.field_v) {
               }
               for (var7Lifetime1Lifetime2 = 0; var7Lifetime1Lifetime2 < 2; var7Lifetime1Lifetime2++) {
-                var8Lifetime1Lifetime1 = go.a(var6Lifetime1Lifetime2, (byte) -56);
+                var8Lifetime1Lifetime1 = PitchProjectionSupport.worldToScreenY(var6Lifetime1Lifetime2, (byte) -56);
                 for (var9Lifetime1 = -15; 896 > var9Lifetime1; var9Lifetime1 = var9Lifetime1 + var15.field_o) {
                   MyKitScreen.field_S.d(MySquadScreen.c(-16, var9Lifetime1), var8Lifetime1Lifetime1);
                 }
@@ -185,7 +185,7 @@ final class LookupRecordUpdate extends IntrusiveNode {
                 }
                 var10Lifetime1 = stackIn_66_0 + 1359;
                 while (var9Lifetime1Lifetime1 < var10Lifetime1) {
-                  MyKitScreen.field_S.d(var8Lifetime1Lifetime2, go.a(var9Lifetime1Lifetime1, (byte) -56));
+                  MyKitScreen.field_S.d(var8Lifetime1Lifetime2, PitchProjectionSupport.worldToScreenY(var9Lifetime1Lifetime1, (byte) -56));
                   var9Lifetime1Lifetime1 = var9Lifetime1Lifetime1 + var15.field_v;
                 }
                 var6Lifetime1Lifetime3 = var6Lifetime1Lifetime3 + var15.field_o;
@@ -196,7 +196,7 @@ final class LookupRecordUpdate extends IntrusiveNode {
           }
           if (DebouncedValidationProvider.field_a != null) {
             var2_intLifetime2 = MySquadScreen.c(-29, -15);
-            var3Lifetime2 = go.a(-15, (byte) -56);
+            var3Lifetime2 = PitchProjectionSupport.worldToScreenY(-15, (byte) -56);
             if (InstrumentNoteMask.field_i == 256) {
               DebouncedValidationProvider.field_a.d(var2_intLifetime2, var3Lifetime2);
             } else {

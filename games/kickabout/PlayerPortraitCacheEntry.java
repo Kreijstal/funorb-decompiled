@@ -113,13 +113,13 @@ final class PlayerPortraitCacheEntry {
             var9 = this.playerStats.initialIndex % 7;
             var11 = 31;
           }
-          var12 = mg.a(this.playerStats, var9, var10, this.field_j, var11, (byte) 108);
+          var12 = PlayerInputFactory.createRenderedPlayer(this.playerStats, var9, var10, this.field_j, var11, (byte) 108);
           var12.field_mb.a(0, 99);
           PacketBuffer.a(-81, ConsoleCommand.field_u);
           SoftwareRasterizer.clearFramebuffer();
           var12.renderModel(var8[this.playerStats.archetype], 0, SoftwareRasterizer.field_g >> 1, var17[this.playerStats.archetype], (byte) -118);
           TeamManagementScreen.e(122);
-          eo.downscaleByHalf(ConsoleCommand.field_u, this.portrait);
+          SoftwareDrawingSupport.downscaleByHalf(ConsoleCommand.field_u, this.portrait);
           var13 = (this.portrait.field_v - 2) * this.portrait.field_o;
           for (var14 = -this.portrait.field_o; 0 > var14; var14++) {
             var15 = this.portrait.field_y[var13];
@@ -168,7 +168,7 @@ final class PlayerPortraitCacheEntry {
           if (param2 < 76) {
             return;
           }
-          wk.field_f = LinkTextPainter.field_d;
+          ClubStateFactory.field_f = LinkTextPainter.field_d;
           if (param3 == 255) {
             stackIn_12_0 = !(tn.field_b >= 13);
             ArchiveIndex.field_a = SquadGridWidget.a(stackIn_12_0, 124);

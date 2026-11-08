@@ -66,7 +66,7 @@ final class FormationView extends MatchPhaseView {
             var2_ref_String = br.field_b;
           }
         } else {
-          var2_ref_String = cb.field_a;
+          var2_ref_String = PitchPurchaseSupport.field_a;
         }
         stackIn_20_0 = (!this.isButtonEnabled(0, 50)) ? 0 : 1;
         var3_intLifetime1 = stackIn_20_0;
@@ -86,8 +86,8 @@ final class FormationView extends MatchPhaseView {
         un.field_d.d(var3, 293, 351, 16777215, -1);
         TextLayoutLine.field_f.c(220, 100);
         for (var4Lifetime2 = 0; 4 > var4Lifetime2; var4Lifetime2++) {
-          var5Lifetime1 = -(RowRangeRequest.field_f.field_o >> 1) + 147 * ws.field_b[var2][var4Lifetime2] / 896 + 220;
-          var6Lifetime1 = -(RowRangeRequest.field_f.field_v >> 1) + ws.field_d[var2][var4Lifetime2] * 220 / 1344 + 100;
+          var5Lifetime1 = -(RowRangeRequest.field_f.field_o >> 1) + 147 * AccountNameCharacterSupport.field_b[var2][var4Lifetime2] / 896 + 220;
+          var6Lifetime1 = -(RowRangeRequest.field_f.field_v >> 1) + AccountNameCharacterSupport.field_d[var2][var4Lifetime2] * 220 / 1344 + 100;
           RowRangeRequest.field_f.c(var5Lifetime1, var6Lifetime1);
         }
         if (this.isButtonEnabled(0, param0 + 49)) {
@@ -115,8 +115,8 @@ final class FormationView extends MatchPhaseView {
         int var5 = 0;
         try {
           this.field_c[0] = new MenuButton(-4, 7126504, 41);
-          this.field_k = eo.a(false);
-          this.field_p = eo.a(true);
+          this.field_k = SoftwareDrawingSupport.a(false);
+          this.field_p = SoftwareDrawingSupport.a(true);
           var4_int = this.field_k.field_N.field_o;
           var5 = this.field_k.field_N.field_v;
           this.field_k.field_s = -3 - var4_int + (this.buttonX(127, 0) - (this.field_c[0].width >> 1));
@@ -177,7 +177,7 @@ final class FormationView extends MatchPhaseView {
           if (param0 != 2) {
             return true;
           }
-          if (var4 != ws.field_b.length - 1) {
+          if (var4 != AccountNameCharacterSupport.field_b.length - 1) {
             stackIn_16_0 = true;
             decompiledFrameRemainder0 = false;
           }

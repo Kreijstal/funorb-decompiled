@@ -92,7 +92,7 @@ final class ShopPlayerSlot extends ListRow {
             PlayerContextMenu.a(56 + this.field_F, (byte) 95, 39 + this.field_T);
             var3 = ConsoleTokenCursor.field_d.a(WeightedLruCache.field_b);
             ConsoleTokenCursor.field_d.a(WeightedLruCache.field_b, 70 + this.field_F, this.field_T + 44, 16763955, 5583616);
-            c.a(31, 28 + (this.field_F + 56 + var3), this.field_T + 39, 8000);
+            ClientPacketFlushSupport.a(31, 28 + (this.field_F + 56 + var3), this.field_T + 39, 8000);
           }
           var3Lifetime1 = this.field_F;
           var4 = TriangleMesh.a(this.field_Sb, param0 + 0, false);
@@ -133,7 +133,7 @@ final class ShopPlayerSlot extends ListRow {
             stackIn_24_2 = var8;
             stackIn_24_3 = var6;
             stackIn_26_4 = (this.field_gb) || (param1 == 2);
-            eo.a(stackIn_24_0, stackIn_24_1, stackIn_24_2, stackIn_24_3, stackIn_26_4, var9);
+            SoftwareDrawingSupport.a(stackIn_24_0, stackIn_24_1, stackIn_24_2, stackIn_24_3, stackIn_26_4, var9);
           }
           var3Lifetime1 = var3Lifetime1 + this.field_Pb[2];
           if (this.field_Sb.trinketIds.length == 0) {
@@ -281,7 +281,7 @@ final class ShopPlayerSlot extends ListRow {
           this.field_X = (BitmapFont) ((Object) IsSixCommand.field_C);
           this.field_Pb = param1;
           this.field_Qb = param3;
-          this.field_Mb = eo.createDefaultButtonNode();
+          this.field_Mb = SoftwareDrawingSupport.createDefaultButtonNode();
           this.addChild((byte) -121, this.field_Mb);
           this.field_Mb.field_s = this.field_Pb[-1 + this.field_Pb.length] - this.field_Mb.field_q >> 1;
           for (var6_int = 0; var6_int < this.field_Pb.length - 1; var6_int++) {
@@ -292,7 +292,7 @@ final class ShopPlayerSlot extends ListRow {
           if (this.field_Fb == -1) {
             this.field_Gb = 0;
           }
-          this.field_Nb = ad.formatCurrencyAmount(this.field_Gb, 26300);
+          this.field_Nb = LocalizedTextLoader.formatCurrencyAmount(this.field_Gb, 26300);
           var6_intLifetime1 = this.field_Pb[0] + this.field_Pb[1] + (this.field_Pb[2] + (this.field_Pb[3] >> 1));
           var7 = this.field_mb >> 1;
           this.field_Ib = new TrinketSlot[this.field_Sb.trinketIds.length];

@@ -43,7 +43,7 @@ final class BlackFadeScreen extends AppScreen {
     }
 
     final static void b(byte param0) {
-        cd.a((byte) -128, g.field_a.field_J, 15);
+        GuestLoginSupport.a((byte) -128, GrayscalePaletteSupport.field_a.field_J, 15);
         if (param0 != -85) {
           field_j = 82;
         }

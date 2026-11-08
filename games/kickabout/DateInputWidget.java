@@ -16,7 +16,7 @@ abstract class DateInputWidget extends WidgetContainer implements ValidationProv
     final static void a(int param0, int param1, int param2, int param3, boolean param4, int param5, boolean param6) {
         String var7 = null;
         if (NodeHashTableIterator.field_b == 2) {
-          var7 = ds.field_e;
+          var7 = ModelMaterialDecoder.field_e;
         } else {
           var7 = LoginDialog.field_db;
         }

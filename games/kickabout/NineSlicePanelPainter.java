@@ -65,7 +65,7 @@ class NineSlicePanelPainter {
           var7 = ",";
         }
         if (2 == param4) {
-          var8 = hp.field_a;
+          var8 = ChatComposeMode.field_a;
           var7 = ",";
         }
         if (3 == param4) {

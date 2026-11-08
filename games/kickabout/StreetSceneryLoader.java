@@ -20,24 +20,24 @@ final class StreetSceneryLoader extends IntrusiveNode {
     }
 
     final static int loadStreetScenery(int param0) {
-        if (vk.field_b) {
+        if (ArchiveReconnectSupport.field_b) {
           return -1;
         }
         if (param0 > -121) {
           StreetSceneryLoader.enqueuePromotionDialog(true, -119);
           if (QuickChatKeysHelpPanel.field_Cb.a(false, "street")) {
-            vk.field_b = true;
+            ArchiveReconnectSupport.field_b = true;
             oo.field_b = ServerTextTemplate.a("cars", "street", 2, QuickChatKeysHelpPanel.field_Cb);
-            so.field_d = ServerTextTemplate.a("signs", "street", 2, QuickChatKeysHelpPanel.field_Cb);
+            AppletContextSupport.field_d = ServerTextTemplate.a("signs", "street", 2, QuickChatKeysHelpPanel.field_Cb);
             PacketBuffer.field_h = ServerTextTemplate.a("cracks", "street", 2, QuickChatKeysHelpPanel.field_Cb);
             return -1;
           }
           return QuickChatKeysHelpPanel.field_Cb.getGroupProgressByName("street", -16248);
         }
         if (QuickChatKeysHelpPanel.field_Cb.a(false, "street")) {
-          vk.field_b = true;
+          ArchiveReconnectSupport.field_b = true;
           oo.field_b = ServerTextTemplate.a("cars", "street", 2, QuickChatKeysHelpPanel.field_Cb);
-          so.field_d = ServerTextTemplate.a("signs", "street", 2, QuickChatKeysHelpPanel.field_Cb);
+          AppletContextSupport.field_d = ServerTextTemplate.a("signs", "street", 2, QuickChatKeysHelpPanel.field_Cb);
           PacketBuffer.field_h = ServerTextTemplate.a("cracks", "street", 2, QuickChatKeysHelpPanel.field_Cb);
           return -1;
         }

@@ -3,7 +3,7 @@
  */
 final class un {
     static ButtonMenuScreen[] field_b;
-    static r field_c;
+    static ClientProtocolStage field_c;
     static CoverageBitmapFont field_d;
     static int[] field_a;
     static CipherPacketBuffer field_e;
@@ -30,7 +30,7 @@ final class un {
         var4 = Kickabout.field_G;
         try {
           AccountRegistrationPanel.field_G = param1;
-          sh.field_a = param0;
+          LineupPositionSupport.field_a = param0;
           if (param2 <= 45) {
             return;
           }
@@ -97,25 +97,25 @@ final class un {
         if (param0 != 100) {
           if (param0 != 5000) {
             if (30000 == param0 &&
-              ep.field_d > 0) {
-              fieldTemp$2 = vt.field_d;
-              fieldTemp$3 = ep.field_d - 1;
-              ep.field_d = ep.field_d - 1;
+              TutorialMessages.field_d > 0) {
+              fieldTemp$2 = AsciiCharacterSupport.field_d;
+              fieldTemp$3 = TutorialMessages.field_d - 1;
+              TutorialMessages.field_d = TutorialMessages.field_d - 1;
               var2_ref_byte__ = fieldTemp$2[fieldTemp$3];
-              vt.field_d[ep.field_d] = null;
+              AsciiCharacterSupport.field_d[TutorialMessages.field_d] = null;
               return var2_ref_byte__;
             }
-            if (null == le.field_e) {
+            if (null == ExceptionTextSupport.field_e) {
               return new byte[param0];
             }
-            for (var2 = 0; us.field_i.length > var2; var2++) {
-              if (us.field_i[var2] == param0 &&
+            for (var2 = 0; TutorialCaptionSupport.field_i.length > var2; var2++) {
+              if (TutorialCaptionSupport.field_i[var2] == param0 &&
                 SetLagCommand.field_D[var2] > 0) {
                 dupTemp$4 = SetLagCommand.field_D[var2] - 1;
-                arrayValue$5 = le.field_e[var2];
+                arrayValue$5 = ExceptionTextSupport.field_e[var2];
                 SetLagCommand.field_D[var2] = dupTemp$4;
                 var3 = arrayValue$5[dupTemp$4];
-                le.field_e[var2][SetLagCommand.field_D[var2]] = null;
+                ExceptionTextSupport.field_e[var2][SetLagCommand.field_D[var2]] = null;
                 return var3;
               }
             }
@@ -129,25 +129,25 @@ final class un {
             return var2_ref_byte__Lifetime5;
           }
           if (30000 == param0 &&
-            ep.field_d > 0) {
-            fieldTemp$7 = vt.field_d;
-            fieldTemp$8 = ep.field_d - 1;
-            ep.field_d = ep.field_d - 1;
+            TutorialMessages.field_d > 0) {
+            fieldTemp$7 = AsciiCharacterSupport.field_d;
+            fieldTemp$8 = TutorialMessages.field_d - 1;
+            TutorialMessages.field_d = TutorialMessages.field_d - 1;
             var2_ref_byte__Lifetime6 = fieldTemp$7[fieldTemp$8];
-            vt.field_d[ep.field_d] = null;
+            AsciiCharacterSupport.field_d[TutorialMessages.field_d] = null;
             return var2_ref_byte__Lifetime6;
           }
-          if (null == le.field_e) {
+          if (null == ExceptionTextSupport.field_e) {
             return new byte[param0];
           }
-          for (var2Lifetime4 = 0; us.field_i.length > var2Lifetime4; var2Lifetime4++) {
-            if (us.field_i[var2Lifetime4] == param0 &&
+          for (var2Lifetime4 = 0; TutorialCaptionSupport.field_i.length > var2Lifetime4; var2Lifetime4++) {
+            if (TutorialCaptionSupport.field_i[var2Lifetime4] == param0 &&
               SetLagCommand.field_D[var2Lifetime4] > 0) {
               dupTemp$9 = SetLagCommand.field_D[var2Lifetime4] - 1;
-              arrayValue$10 = le.field_e[var2Lifetime4];
+              arrayValue$10 = ExceptionTextSupport.field_e[var2Lifetime4];
               SetLagCommand.field_D[var2Lifetime4] = dupTemp$9;
               var3Lifetime4 = arrayValue$10[dupTemp$9];
-              le.field_e[var2Lifetime4][SetLagCommand.field_D[var2Lifetime4]] = null;
+              ExceptionTextSupport.field_e[var2Lifetime4][SetLagCommand.field_D[var2Lifetime4]] = null;
               return var3Lifetime4;
             }
           }
@@ -162,23 +162,23 @@ final class un {
         }
         if (param0 != 5000) {
           if (30000 == param0 &&
-            ep.field_d > 0) {
-            fieldTemp$19 = vt.field_d;
-            fieldTemp$20 = ep.field_d - 1;
-            ep.field_d = ep.field_d - 1;
+            TutorialMessages.field_d > 0) {
+            fieldTemp$19 = AsciiCharacterSupport.field_d;
+            fieldTemp$20 = TutorialMessages.field_d - 1;
+            TutorialMessages.field_d = TutorialMessages.field_d - 1;
             var2_ref_byte__Lifetime2 = fieldTemp$19[fieldTemp$20];
-            vt.field_d[ep.field_d] = null;
+            AsciiCharacterSupport.field_d[TutorialMessages.field_d] = null;
             return var2_ref_byte__Lifetime2;
           }
-          if (null != le.field_e) {
-            for (var2Lifetime1 = 0; us.field_i.length > var2Lifetime1; var2Lifetime1++) {
-              if (us.field_i[var2Lifetime1] == param0 &&
+          if (null != ExceptionTextSupport.field_e) {
+            for (var2Lifetime1 = 0; TutorialCaptionSupport.field_i.length > var2Lifetime1; var2Lifetime1++) {
+              if (TutorialCaptionSupport.field_i[var2Lifetime1] == param0 &&
                 SetLagCommand.field_D[var2Lifetime1] > 0) {
                 dupTemp$21 = SetLagCommand.field_D[var2Lifetime1] - 1;
-                arrayValue$22 = le.field_e[var2Lifetime1];
+                arrayValue$22 = ExceptionTextSupport.field_e[var2Lifetime1];
                 SetLagCommand.field_D[var2Lifetime1] = dupTemp$21;
                 var3Lifetime1 = arrayValue$22[dupTemp$21];
-                le.field_e[var2Lifetime1][SetLagCommand.field_D[var2Lifetime1]] = null;
+                ExceptionTextSupport.field_e[var2Lifetime1][SetLagCommand.field_D[var2Lifetime1]] = null;
                 return var3Lifetime1;
               }
             }
@@ -193,41 +193,41 @@ final class un {
           return var2_ref_byte__Lifetime3;
         }
         if (30000 != param0) {
-          if (null == le.field_e) {
+          if (null == ExceptionTextSupport.field_e) {
             return new byte[param0];
           }
-          for (var2Lifetime2 = 0; us.field_i.length > var2Lifetime2; var2Lifetime2++) {
-            if (us.field_i[var2Lifetime2] == param0 &&
+          for (var2Lifetime2 = 0; TutorialCaptionSupport.field_i.length > var2Lifetime2; var2Lifetime2++) {
+            if (TutorialCaptionSupport.field_i[var2Lifetime2] == param0 &&
               SetLagCommand.field_D[var2Lifetime2] > 0) {
               dupTemp$17 = SetLagCommand.field_D[var2Lifetime2] - 1;
-              arrayValue$18 = le.field_e[var2Lifetime2];
+              arrayValue$18 = ExceptionTextSupport.field_e[var2Lifetime2];
               SetLagCommand.field_D[var2Lifetime2] = dupTemp$17;
               var3Lifetime2 = arrayValue$18[dupTemp$17];
-              le.field_e[var2Lifetime2][SetLagCommand.field_D[var2Lifetime2]] = null;
+              ExceptionTextSupport.field_e[var2Lifetime2][SetLagCommand.field_D[var2Lifetime2]] = null;
               return var3Lifetime2;
             }
           }
           return new byte[param0];
         }
-        if (ep.field_d > 0) {
-          fieldTemp$15 = vt.field_d;
-          fieldTemp$16 = ep.field_d - 1;
-          ep.field_d = ep.field_d - 1;
+        if (TutorialMessages.field_d > 0) {
+          fieldTemp$15 = AsciiCharacterSupport.field_d;
+          fieldTemp$16 = TutorialMessages.field_d - 1;
+          TutorialMessages.field_d = TutorialMessages.field_d - 1;
           var2_ref_byte__Lifetime4 = fieldTemp$15[fieldTemp$16];
-          vt.field_d[ep.field_d] = null;
+          AsciiCharacterSupport.field_d[TutorialMessages.field_d] = null;
           return var2_ref_byte__Lifetime4;
         }
-        if (null == le.field_e) {
+        if (null == ExceptionTextSupport.field_e) {
           return new byte[param0];
         }
-        for (var2Lifetime3 = 0; us.field_i.length > var2Lifetime3; var2Lifetime3++) {
-          if (us.field_i[var2Lifetime3] == param0 &&
+        for (var2Lifetime3 = 0; TutorialCaptionSupport.field_i.length > var2Lifetime3; var2Lifetime3++) {
+          if (TutorialCaptionSupport.field_i[var2Lifetime3] == param0 &&
             SetLagCommand.field_D[var2Lifetime3] > 0) {
             dupTemp$13 = SetLagCommand.field_D[var2Lifetime3] - 1;
-            arrayValue$14 = le.field_e[var2Lifetime3];
+            arrayValue$14 = ExceptionTextSupport.field_e[var2Lifetime3];
             SetLagCommand.field_D[var2Lifetime3] = dupTemp$13;
             var3Lifetime3 = arrayValue$14[dupTemp$13];
-            le.field_e[var2Lifetime3][SetLagCommand.field_D[var2Lifetime3]] = null;
+            ExceptionTextSupport.field_e[var2Lifetime3][SetLagCommand.field_D[var2Lifetime3]] = null;
             return var3Lifetime3;
           }
         }

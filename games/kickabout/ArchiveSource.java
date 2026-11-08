@@ -24,7 +24,7 @@ abstract class ArchiveSource {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!cu.a(param3, param0, param1, 101)) {
+          if (!cu.decodeSpriteSheetFromArchive(param3, param0, param1, 101)) {
             return null;
           }
           if (param2 > 4) {

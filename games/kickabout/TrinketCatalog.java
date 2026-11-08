@@ -700,27 +700,27 @@ final class TrinketCatalog {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, boolean param5) {
-        eo.a(param4, param2);
-        eo.a(448 + param1, param0 + 672, 134, param3);
+        SoftwareDrawingSupport.a(param4, param2);
+        SoftwareDrawingSupport.a(448 + param1, param0 + 672, 134, param3);
         AuctionListing.a(param1 + 896, -22914, param1, 1344 + param0, param0 + 268);
-        eo.a(param1 + 448, 73 + param0, 241, param3);
+        SoftwareDrawingSupport.a(param1 + 448, 73 + param0, 241, param3);
         TeamManagementScreen.e(124);
         AuctionListing.a(param1 + 896, -22914, param1, 1076 + param0, param0);
-        eo.a(param1 + 448, param0 + 1344 - 482 + 168 + 241, 241, param3);
+        SoftwareDrawingSupport.a(param1 + 448, param0 + 1344 - 482 + 168 + 241, 241, param3);
         TeamManagementScreen.e(127);
         AuctionListing.a(param1 + 896, -22914, param1, 1344 + param0, param0);
-        eo.a(param1 + param3, param3 + param0, 33, param3);
-        eo.a(-param3 + param1 + 896, param3 + param0, 33, param3);
-        eo.a(param3 + param1, 1344 + param0 - param3, 33, param3);
+        SoftwareDrawingSupport.a(param1 + param3, param3 + param0, 33, param3);
+        SoftwareDrawingSupport.a(-param3 + param1 + 896, param3 + param0, 33, param3);
+        SoftwareDrawingSupport.a(param3 + param1, 1344 + param0 - param3, 33, param3);
         if (!param5) {
-          eo.a(param1 + 896 - param3, param0 + 1344 - param3, 33, param3);
+          SoftwareDrawingSupport.a(param1 + 896 - param3, param0 + 1344 - param3, 33, param3);
           TeamManagementScreen.e(121);
-          eo.b(param1, param0, 896, 1344, param3);
-          eo.c(param1, (1344 - param3 >> 1) + param0, 896, param3);
-          eo.b(314 + param1, param0, 268, 122, param3);
-          eo.b(param1 + 314, 1344 + (param0 - 122), 268, 122, param3);
-          eo.b(param1 + 179, param0, 537, 268, param3);
-          eo.b(179 + param1, 1076 + param0, 537, 268, param3);
+          SoftwareDrawingSupport.b(param1, param0, 896, 1344, param3);
+          SoftwareDrawingSupport.c(param1, (1344 - param3 >> 1) + param0, 896, param3);
+          SoftwareDrawingSupport.b(314 + param1, param0, 268, 122, param3);
+          SoftwareDrawingSupport.b(param1 + 314, 1344 + (param0 - 122), 268, 122, param3);
+          SoftwareDrawingSupport.b(param1 + 179, param0, 537, 268, param3);
+          SoftwareDrawingSupport.b(179 + param1, 1076 + param0, 537, 268, param3);
           vj.a(0);
           return;
         }

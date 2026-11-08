@@ -148,7 +148,7 @@ abstract class RasterBuffer {
             stackIn_4_0 = new String[]{};
             return stackIn_4_0;
           }
-          PagedHelpScreen.a(0, ' ', -11407, c.field_a);
+          PagedHelpScreen.a(0, ' ', -11407, ClientPacketFlushSupport.field_a);
           var3_int = 0;
           var4 = 0;
           var5 = -1;
@@ -159,31 +159,31 @@ abstract class RasterBuffer {
           for (var10 = 0; var10 < var9; var10++) {
             var11_int = param0.charAt(var10);
             if (var11_int != 0) {
-              discarded$0 = c.field_a.append((char) var11_int);
+              discarded$0 = ClientPacketFlushSupport.field_a.append((char) var11_int);
               var3_int++;
               var11_int = (char)(255 & SquadGridWidget.a((char) var11_int, (byte) -104));
             }
             if (var11_int == 32) {
-              var5 = c.field_a.length();
+              var5 = ClientPacketFlushSupport.field_a.length();
               var7 = 1;
               var6 = var3_int;
             }
             if (var3_int > param1 &&
               var5 >= 0) {
-              ArchiveManager.field_f[var8] = c.field_a.toString().substring(var4, var5 - var7);
+              ArchiveManager.field_f[var8] = ClientPacketFlushSupport.field_a.toString().substring(var4, var5 - var7);
               var8++;
               var4 = var5;
               var3_int = var3_int - var6;
               var5 = -1;
             }
             if (var11_int == 45) {
-              var5 = c.field_a.length();
+              var5 = ClientPacketFlushSupport.field_a.length();
               var7 = 0;
               var6 = var3_int;
             }
           }
-          if (var4 < c.field_a.length()) {
-            ArchiveManager.field_f[var8] = c.field_a.toString().substring(var4, c.field_a.length());
+          if (var4 < ClientPacketFlushSupport.field_a.length()) {
+            ArchiveManager.field_f[var8] = ClientPacketFlushSupport.field_a.toString().substring(var4, ClientPacketFlushSupport.field_a.length());
             var8++;
           }
           var10Lifetime1 = -13 % ((param2 - 77) / 44);

@@ -5,7 +5,7 @@ final class AccountRegistrationResponse {
     boolean success;
     int responseCode;
     String message;
-    static ic field_b;
+    static RegistrationRequestState field_b;
     boolean needsTerms;
     String[] nameSuggestions;
     static String field_i;
@@ -18,7 +18,7 @@ final class AccountRegistrationResponse {
         if (!ConsolePanel.e((byte) 127)) {
           return false;
         }
-        if (f.field_c) {
+        if (SpriteNumberPainter.field_c) {
           return true;
         }
         return false;
@@ -74,7 +74,7 @@ final class AccountRegistrationResponse {
     }
 
     static {
-        field_b = new ic();
+        field_b = new RegistrationRequestState();
         field_h = "Tournament Game";
     }
 }

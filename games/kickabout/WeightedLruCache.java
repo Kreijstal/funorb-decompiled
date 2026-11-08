@@ -31,8 +31,8 @@ final class WeightedLruCache {
     final static void a(int param0) {
         int var1 = TextPromptDialog.field_Bb * TextPromptDialog.field_Bb;
         int var2 = -(pg.field_b * pg.field_b) + var1;
-        int var3 = c.field_c + var2 * (-c.field_c + VerticalScrollbar.field_Ab) / var1;
-        g.field_a.setBounds(true, 640, AuctionsHelpScreen.field_H, var3, 120);
+        int var3 = ClientPacketFlushSupport.field_c + var2 * (-ClientPacketFlushSupport.field_c + VerticalScrollbar.field_Ab) / var1;
+        GrayscalePaletteSupport.field_a.setBounds(true, 640, AuctionsHelpScreen.field_H, var3, 120);
         RankingRowNode.a(124, mj.field_b, 640, 5, DiskCacheWorker.field_b, VerticalScrollbar.field_Ab - 24, param0);
     }
 
@@ -45,10 +45,10 @@ final class WeightedLruCache {
           if (GameplayHelpScreen.k((byte) -55)) {
             return true;
           }
-          if (ck.field_b != null) {
+          if (TextPromptState.field_b != null) {
             return true;
           }
-          if (!in.a((byte) 79)) {
+          if (!UiInputRoutingSupport.hasInputPopup((byte) 79)) {
             return false;
           }
           return true;
@@ -59,10 +59,10 @@ final class WeightedLruCache {
         if (GameplayHelpScreen.k((byte) -55)) {
           return true;
         }
-        if (ck.field_b != null) {
+        if (TextPromptState.field_b != null) {
           return true;
         }
-        if (!in.a((byte) 79)) {
+        if (!UiInputRoutingSupport.hasInputPopup((byte) 79)) {
           return false;
         }
         return true;

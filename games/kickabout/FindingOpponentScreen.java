@@ -10,7 +10,7 @@ final class FindingOpponentScreen extends ButtonMenuScreen {
     static LeaderboardParticipant[] field_F;
 
     final void buildWidgets(int param0) {
-        this.field_A = eo.createRenderedButton("", 7126504, un.field_d, -1, false);
+        this.field_A = SoftwareDrawingSupport.createRenderedButton("", 7126504, un.field_d, -1, false);
         if (param0 != -38) {
           this.updateScreen((byte) -76, false);
         }
@@ -76,16 +76,16 @@ final class FindingOpponentScreen extends ButtonMenuScreen {
 
     final static void g(byte param0) {
         if (param0 < -112) {
-          eo.b(ug.a(0, (int)CachedArchiveSource.field_C), IntKeyLookup.a((byte) -125, (int)AuctionLogEntry.field_f), 10, 16711680);
+          SoftwareDrawingSupport.b(ug.a(0, (int)CachedArchiveSource.field_C), IntKeyLookup.a((byte) -125, (int)AuctionLogEntry.field_f), 10, 16711680);
           return;
         }
         FindingOpponentScreen.releaseStatics(70);
-        eo.b(ug.a(0, (int)CachedArchiveSource.field_C), IntKeyLookup.a((byte) -125, (int)AuctionLogEntry.field_f), 10, 16711680);
+        SoftwareDrawingSupport.b(ug.a(0, (int)CachedArchiveSource.field_C), IntKeyLookup.a((byte) -125, (int)AuctionLogEntry.field_f), 10, 16711680);
     }
 
     private final void a(boolean param0) {
         if (!param0) {
-          this.field_A.setBounds(true, this.field_A.field_q, (f.field_d >> 1) - (this.field_A.field_q >> 1), 100 + (ReceivedAuctionItem.field_B >> 1), this.field_A.field_mb);
+          this.field_A.setBounds(true, this.field_A.field_q, (SpriteNumberPainter.field_d >> 1) - (this.field_A.field_q >> 1), 100 + (ReceivedAuctionItem.field_B >> 1), this.field_A.field_mb);
           return;
         }
     }

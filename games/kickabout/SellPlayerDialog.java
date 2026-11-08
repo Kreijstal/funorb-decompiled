@@ -108,14 +108,14 @@ final class SellPlayerDialog extends MessageDialog {
           boolean decompiledFrameRemainder0 = true;
           if (HuffmanCodec.field_e == 7) {
             for (var4Lifetime1 = 1; var4Lifetime1 < 4; var4Lifetime1++) {
-              ig.a(true, (byte) 85, var4Lifetime1, 1);
+              ig.moveTutorialPlayerToLineup(true, (byte) 85, var4Lifetime1, 1);
             }
-            ig.a(false, (byte) 23, 1, 0);
+            ig.moveTutorialPlayerToLineup(false, (byte) 23, 1, 0);
             var4_ref_nl = et.field_d.field_P[1][4];
             if (0 == et.field_d.field_V.possessorTeam &&
               var4_ref_nl.action == 0) {
-              var5_int = var4_ref_nl.pixelX(-111) - ld.field_f.pixelX(-124);
-              var6 = var4_ref_nl.pixelY(true) - ld.field_f.pixelY(true);
+              var5_int = var4_ref_nl.pixelX(-111) - AccountInputValidationResult.field_f.pixelX(-124);
+              var6 = var4_ref_nl.pixelY(true) - AccountInputValidationResult.field_f.pixelY(true);
               if (!(var5_int * var5_int + var6 * var6 >= 3600)) {
                 var4_ref_nl.startTackle(0, -1);
                 var4_ref_nl.directionMask = 0;
@@ -127,9 +127,9 @@ final class SellPlayerDialog extends MessageDialog {
                 var4_ref_nl.action == 0) {
                 QuickChatCategory.advanceToPoint(12, (byte) 109, 11796480, var4_ref_nl, 36044800);
                 if (HoverTooltip.field_Eb &&
-                  ld.field_f.action == 0) {
-                  ld.field_f.directionMask = 0;
-                  ld.field_f.setDirectionFromMask(1, 26214);
+                  AccountInputValidationResult.field_f.action == 0) {
+                  AccountInputValidationResult.field_f.directionMask = 0;
+                  AccountInputValidationResult.field_f.setDirectionFromMask(1, 26214);
                 }
               }
             }
@@ -144,12 +144,12 @@ final class SellPlayerDialog extends MessageDialog {
               IntDoubleCommand.a((byte) -118, var4Lifetime2, 1200, var5_intLifetime1, 900, 298, 2, 748);
               IntDoubleCommand.a((byte) 45, var4Lifetime2, 1200, var5_intLifetime1, 900, 298, 3, 748);
             } else {
-              ig.a(false, (byte) 109, 4, 1);
+              ig.moveTutorialPlayerToLineup(false, (byte) 109, 4, 1);
             }
           }
           if (HuffmanCodec.field_e == 9) {
             for (var4Lifetime3 = 1; var4Lifetime3 < 3; var4Lifetime3++) {
-              ig.a(true, (byte) 83, var4Lifetime3, 1);
+              ig.moveTutorialPlayerToLineup(true, (byte) 83, var4Lifetime3, 1);
             }
             for (var4Lifetime3Lifetime1 = 3; var4Lifetime3Lifetime1 < 5; var4Lifetime3Lifetime1++) {
               if (!HoverTooltip.field_Eb &&
@@ -161,12 +161,12 @@ final class SellPlayerDialog extends MessageDialog {
           }
           var4Lifetime4 = -97 / ((param0 - 88) / 34);
           if (HuffmanCodec.field_e == 10) {
-            ig.a(false, (byte) 124, 3, 1);
-            ig.a(false, (byte) 90, 4, 1);
-            ig.a(false, (byte) 52, 3, 0);
+            ig.moveTutorialPlayerToLineup(false, (byte) 124, 3, 1);
+            ig.moveTutorialPlayerToLineup(false, (byte) 90, 4, 1);
+            ig.moveTutorialPlayerToLineup(false, (byte) 52, 3, 0);
           }
           if (HuffmanCodec.field_e == 11) {
-            ig.a(false, (byte) 85, 1, 0);
+            ig.moveTutorialPlayerToLineup(false, (byte) 85, 1, 0);
           }
           if (HuffmanCodec.field_e == 12 &&
             et.field_d.field_X.goalCount > 25) {
@@ -234,20 +234,20 @@ final class SellPlayerDialog extends MessageDialog {
         }
     }
 
-    final static ld a(String param0, int param1) {
+    final static AccountInputValidationResult a(String param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         String[] var3 = null;
         String[] var4 = null;
         int var5 = 0;
         String var6 = null;
-        ld var7 = null;
+        AccountInputValidationResult var7 = null;
         int var8 = 0;
-        ld stackIn_3_0 = null;
-        ld stackIn_7_0 = null;
-        ld stackIn_10_0 = null;
-        ld stackIn_15_0 = null;
-        ld stackIn_18_0 = null;
+        AccountInputValidationResult stackIn_3_0 = null;
+        AccountInputValidationResult stackIn_7_0 = null;
+        AccountInputValidationResult stackIn_10_0 = null;
+        AccountInputValidationResult stackIn_15_0 = null;
+        AccountInputValidationResult stackIn_18_0 = null;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
         String stackIn_22_2 = null;
@@ -256,7 +256,7 @@ final class SellPlayerDialog extends MessageDialog {
         try {
           var2_int = param0.length();
           if (var2_int == 0) {
-            stackIn_3_0 = ld.field_b;
+            stackIn_3_0 = AccountInputValidationResult.field_b;
             return stackIn_3_0;
           }
           if (var2_int > 255) {
@@ -265,7 +265,7 @@ final class SellPlayerDialog extends MessageDialog {
           }
           var3 = FormationAgent.a(param0, 2, '.');
           if (var3.length < 2) {
-            stackIn_10_0 = ld.field_b;
+            stackIn_10_0 = AccountInputValidationResult.field_b;
             return stackIn_10_0;
           }
           var4 = var3;
@@ -315,7 +315,7 @@ final class SellPlayerDialog extends MessageDialog {
           this.field_I = param0;
           var6 = param1.getDisplayName(100);
           String var3 = var6;
-          var4 = ad.formatCurrencyAmount(ImageProducerRasterBuffer.a(param1, true), 26300);
+          var4 = LocalizedTextLoader.formatCurrencyAmount(ImageProducerRasterBuffer.a(param1, true), 26300);
           var5 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, ListingRowCache.field_e[34], new String[]{var6, var4});
           this.a(var5, this.field_t, this.field_D, -71, this.field_u);
         } catch (RuntimeException runtimeException) {

@@ -143,7 +143,7 @@ final class WorldDrawEntry extends IntrusiveNode {
             var5 = MonotonicClock.monotonicMillis(param0 - 126);
             var7 = (int)(var5 % 1050L);
             if (var7 < 700) {
-              var8 = (65536 + we.cosine((var7 << 13) / 700, false) >> 11) + 192;
+              var8 = (65536 + ClientUiUpdateSupport.cosine((var7 << 13) / 700, false) >> 11) + 192;
               var4Lifetime1 = var8 * var4Lifetime1 >> 8;
             }
             var8Lifetime1 = (int)((var5 << 16) / 2600L);

@@ -111,14 +111,14 @@ final class IntrusiveDequeCursor {
 
     final static void a(int param0, Sprite param1) {
         try {
-          bw.field_e = new Sprite[4];
-          bw.field_e[1] = param1;
-          bw.field_e[0] = param1.copy();
-          bw.field_e[0].flipVertically();
-          bw.field_e[2] = param1.copy();
+          SceneSpriteFactory.field_e = new Sprite[4];
+          SceneSpriteFactory.field_e[1] = param1;
+          SceneSpriteFactory.field_e[0] = param1.copy();
+          SceneSpriteFactory.field_e[0].flipVertically();
+          SceneSpriteFactory.field_e[2] = param1.copy();
           int var2_int = 50 % ((-82 - param0) / 42);
-          bw.field_e[2].rotateClockwise();
-          bw.field_e[3] = bw.field_e[2].copyFlippedHorizontally();
+          SceneSpriteFactory.field_e[2].rotateClockwise();
+          SceneSpriteFactory.field_e[3] = SceneSpriteFactory.field_e[2].copyFlippedHorizontally();
           MarkerSliderPainter.field_e = param1.field_q;
           CheckboxPainter.field_k = param1.field_w;
           AvailabilityCheckRequest.field_h = MarkerSliderPainter.field_e >> 1;

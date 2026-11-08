@@ -138,13 +138,13 @@ final class NodeHashTableIterator implements Iterator {
           return true;
         }
         if (FixedQuaternion.field_e == 102) {
-          dr.field_g.resetSelection(5075);
+          ClassNameSupport.field_g.resetSelection(5075);
           return true;
         }
-        if (null == dr.field_g) {
+        if (null == ClassNameSupport.field_g) {
           return false;
         }
-        if (dr.field_g.handleKeyShortcut(param0, param2, (byte) -101)) {
+        if (ClassNameSupport.field_g.handleKeyShortcut(param0, param2, (byte) -101)) {
           return true;
         }
         return false;

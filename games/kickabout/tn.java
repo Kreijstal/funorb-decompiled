@@ -11,7 +11,7 @@ final class tn {
     static UiLayoutNode field_f;
     private static String field_z;
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_f = null;
         field_c = null;
         field_d = null;
@@ -20,7 +20,7 @@ final class tn {
           field_e = null;
           return;
         }
-        tn.a(false);
+        tn.releaseStatics(false);
         field_g = (String[][]) null;
         field_e = null;
     }

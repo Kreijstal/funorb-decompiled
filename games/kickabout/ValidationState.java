@@ -3,7 +3,7 @@
  */
 final class ValidationState {
     static String[] field_b;
-    static ic field_e;
+    static RegistrationRequestState field_e;
     static float[][][] field_c;
     static String[] field_d;
     static String field_a;
@@ -213,7 +213,7 @@ final class ValidationState {
 
     static {
         field_b = new String[]{"Empty", "POW +2", "POW +4", "POW +7", "TCK +2", "TCK +4", "TCK +7", "SPD +2", "SPD +4", "SPD +7", "POW +2 TCK -2", "POW +4 TCK -2", "POW +4 TCK +2", "POW +7 TCK -2", "POW +7 TCK +2", "POW +7 TCK +4", "POW +2 SPD -2", "POW +4 SPD -2", "POW +4 SPD +2", "POW +7 SPD -2", "POW +7 SPD +2", "POW +7 SPD +4", "SPD +2 TCK -2", "SPD +4 TCK -2", "SPD +4 TCK +2", "SPD +7 TCK -2", "SPD +7 TCK +2", "SPD +7 TCK +4", "SPD +2 POW -2", "SPD +4 POW -2", "SPD +4 POW +2", "SPD +7 POW -2", "SPD +7 POW +2", "SPD +7 POW +4", "TCK +2 SPD -2", "TCK +4 SPD -2", "TCK +4 SPD +2", "TCK +7 SPD -2", "TCK +7 SPD +2", "TCK +7 SPD +4", "TCK +2 POW -2", "TCK +4 POW -2", "TCK +4 POW +2", "TCK +7 POW -2", "TCK +7 POW +2", "TCK +7 POW +4", "EXP +2%", "EXP +4%", "EXP +6%", "EXP +8%", "MONEY +1%", "MONEY +2%", "MONEY +3%", "MONEY +4%", "SAFE TACKLER", "IMMUNITY", "SHIN PADS", "STUDS UP", "KNOCK-OUT", "TANK CLONE", "HOTSHOT CLONE", "RANGER CLONE", "SLALOM", "CHEAT: WHEREAMI", "CHEAT: MUSHROOM", "CHEAT: MOONWALK", "CHEAT: AIRPLANE", "CHEAT: ATOMBALL", "CHEAT: TRAMLINE", "CHEAT: TORQUING", "CHEAT: MOONBALL", "CHEAT: ASTEROID", "CHEAT: PUMPKINS", "COSTUME: HORROR"};
-        field_e = new ic();
+        field_e = new RegistrationRequestState();
         field_c = new float[3][4][6];
         field_c[0][0][4] = 2.0f;
         field_c[0][0][5] = 1.0f;

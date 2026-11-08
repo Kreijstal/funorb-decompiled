@@ -38,9 +38,9 @@ final class QuickChatCategoryCache {
     final static Sprite buildStadiumSeatColumn(int param0, boolean param1, int param2) {
         int var8 = 0;
         int var9 = Kickabout.field_G;
-        int var3 = af.field_b[param1 ? 0 : 1];
+        int var3 = AuctionPriceLimits.field_b[param1 ? 0 : 1];
         int[] var4 = HighScoreSubmission.field_o[param1 ? 0 : 1];
-        IndexedSprite[] var5 = ph.field_e[param1 ? 0 : 2];
+        IndexedSprite[] var5 = AudioOutputSupport.field_e[param1 ? 0 : 2];
         if (param0 > -125) {
           return (Sprite) null;
         }
@@ -132,21 +132,21 @@ final class QuickChatCategoryCache {
           if (HuffmanCodec.field_e == 4) {
             var2 = 1;
             var2 = var2 != 0 & QuickChatCategory.advanceToPoint(4, (byte) 121, 53084160, EmailAvailabilityValidator.field_k, 72744960) ? 1 : 0;
-            var2 = var2 != 0 & QuickChatCategory.advanceToPoint(1, (byte) 93, 49152000, ld.field_f, 55050240) ? 1 : 0;
+            var2 = var2 != 0 & QuickChatCategory.advanceToPoint(1, (byte) 93, 49152000, AccountInputValidationResult.field_f, 55050240) ? 1 : 0;
             stackIn_70_0 = var2;
             return stackIn_70_0 != 0;
           }
           if (HuffmanCodec.field_e == 5) {
             var2Lifetime1 = 1;
             var2Lifetime1 = var2Lifetime1 != 0 & QuickChatCategory.advanceToPoint(1, (byte) 122, 53084160, EmailAvailabilityValidator.field_k, 55050240) ? 1 : 0;
-            var2Lifetime1 = var2Lifetime1 != 0 & QuickChatCategory.advanceToPoint(4, (byte) 89, 49152000, ld.field_f, 72744960) ? 1 : 0;
+            var2Lifetime1 = var2Lifetime1 != 0 & QuickChatCategory.advanceToPoint(4, (byte) 89, 49152000, AccountInputValidationResult.field_f, 72744960) ? 1 : 0;
             stackIn_11_0 = var2Lifetime1;
             return stackIn_11_0 != 0;
           }
           if (6 == HuffmanCodec.field_e) {
             var2Lifetime2 = 1;
             var2Lifetime2 = var2Lifetime2 != 0 & QuickChatCategory.advanceToPoint(2, (byte) 116, 52428800, EmailAvailabilityValidator.field_k, 43909120) ? 1 : 0;
-            var2Lifetime2 = var2Lifetime2 != 0 & QuickChatCategory.advanceToPoint(8, (byte) 84, 13107200, ld.field_f, 43909120) ? 1 : 0;
+            var2Lifetime2 = var2Lifetime2 != 0 & QuickChatCategory.advanceToPoint(8, (byte) 84, 13107200, AccountInputValidationResult.field_f, 43909120) ? 1 : 0;
             stackIn_14_0 = var2Lifetime2;
             return stackIn_14_0 != 0;
           }
@@ -158,8 +158,8 @@ final class QuickChatCategoryCache {
           if (HuffmanCodec.field_e == 8) {
             var2Lifetime3 = 1;
             stackIn_50_0 = var2Lifetime3;
-            if (ld.field_f.action == 0 &&
-              QuickChatCategory.advanceToPoint(8, (byte) 114, 3932160, ld.field_f, 16384000)) {
+            if (AccountInputValidationResult.field_f.action == 0 &&
+              QuickChatCategory.advanceToPoint(8, (byte) 114, 3932160, AccountInputValidationResult.field_f, 16384000)) {
               stackIn_51_1 = 1;
             } else {
               stackIn_51_1 = 0;
@@ -175,7 +175,7 @@ final class QuickChatCategoryCache {
             if (var2Lifetime3Lifetime2 != 0) {
               for (var3 = 0; var3 < 4; var3++) {
                 var4 = (RenderedFootballer) (et.field_d.field_P[1][1 + var3]);
-                var4.setPosition(th.field_c[var3] << 16, false, 0, te.field_a[var3] << 16);
+                var4.setPosition(FadingSoundSupport.field_c[var3] << 16, false, 0, te.field_a[var3] << 16);
                 var4.directionMask = 0;
                 stackIn_60_0 = var4;
                 if (var3 == 1) {
@@ -191,7 +191,7 @@ final class QuickChatCategoryCache {
           }
           if (HuffmanCodec.field_e == 9) {
             var2Lifetime4 = 1;
-            var2Lifetime4 = var2Lifetime4 != 0 & QuickChatCategory.advanceToPoint(2, (byte) 119, 49152000, ld.field_f, 55050240) ? 1 : 0;
+            var2Lifetime4 = var2Lifetime4 != 0 & QuickChatCategory.advanceToPoint(2, (byte) 119, 49152000, AccountInputValidationResult.field_f, 55050240) ? 1 : 0;
             var2Lifetime4 = var2Lifetime4 != 0 & QuickChatCategory.advanceToPoint(8, (byte) 82, 20971520, EmailAvailabilityValidator.field_k, 55050240) ? 1 : 0;
             var2Lifetime4 = var2Lifetime4 != 0 & QuickChatCategory.advanceToPoint(1, (byte) 119, 31457280, et.field_d.field_P[1][3], 54067200) ? 1 : 0;
             var2Lifetime4 = var2Lifetime4 != 0 & QuickChatCategory.advanceToPoint(1, (byte) 123, 31457280, et.field_d.field_P[1][4], 56033280) ? 1 : 0;

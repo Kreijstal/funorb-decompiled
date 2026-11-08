@@ -6,7 +6,7 @@ final class fj {
     static volatile int field_c;
     static BitmapFont field_b;
 
-    public static void b(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_b = null;
         if (!param0) {
           String var2 = (String) null;
@@ -22,14 +22,14 @@ final class fj {
         }
     }
 
-    final static String a(boolean param0) {
+    final static String readServerString(boolean param0) {
         if (param0) {
           return (String) null;
         }
         return un.field_e.readString(-108);
     }
 
-    final static int a(int param0, int param1) {
+    final static int rotateLeftFourBits(int param0, int param1) {
         if (param0 == -40) {
           return param1 >>> 28 | param1 << 4;
         }
@@ -37,7 +37,7 @@ final class fj {
         return param1 >>> 28 | param1 << 4;
     }
 
-    final static void a(int param0) {
+    final static void showLoadingProgressDialog(int param0) {
         RankingsRequest.field_l.k(119);
         if (AnimationClip.field_d == null) {
           AnimationClip.field_d = new LoadingProgressDialog(RankingsRequest.field_l, CachedTextLayout.field_m);

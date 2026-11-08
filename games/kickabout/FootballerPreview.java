@@ -66,22 +66,22 @@ final class FootballerPreview {
         int var4 = this.field_b.field_R;
         if (FaceNormal.field_c) {
           this.field_b.field_R = (this.field_b.field_R + 1024) % 2048;
-          PacketBuffer.a(param0 + 39, wa.field_a);
+          PacketBuffer.a(param0 + 39, SpriteResourceSupport.field_a);
           SoftwareRasterizer.clearFramebuffer();
           this.field_b.renderModel(1200, 300, 48, 90, (byte) -105);
           TeamManagementScreen.e(127);
-          wa.field_a.drawHalfSize(param2 - param0, -47 + param1);
+          SpriteResourceSupport.field_a.drawHalfSize(param2 - param0, -47 + param1);
           if (FaceNormal.field_c) {
             this.field_b.field_R = var4;
             return;
           }
           return;
         }
-        PacketBuffer.a(param0 + 39, wa.field_a);
+        PacketBuffer.a(param0 + 39, SpriteResourceSupport.field_a);
         SoftwareRasterizer.clearFramebuffer();
         this.field_b.renderModel(1200, 300, 48, 90, (byte) -105);
         TeamManagementScreen.e(127);
-        wa.field_a.drawHalfSize(param2 - param0, -47 + param1);
+        SpriteResourceSupport.field_a.drawHalfSize(param2 - param0, -47 + param1);
         if (!FaceNormal.field_c) {
           return;
         }

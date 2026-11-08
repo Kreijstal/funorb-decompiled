@@ -143,11 +143,11 @@ final class OffscreenPlayerArrow {
         } else {
           var2 = this.field_g + 155;
           var3 = 1600 - (1200 * var2 >> 8);
-          var4 = we.cosine(this.field_a, false) * 40 >> 17;
+          var4 = ClientUiUpdateSupport.cosine(this.field_a, false) * 40 >> 17;
           var5 = RotaryDialPainter.sine(this.field_a, (byte) -23) * 40 >> 17;
-          var6 = we.cosine(this.field_a - var3, false) * var2 * 40 >> 24;
+          var6 = ClientUiUpdateSupport.cosine(this.field_a - var3, false) * var2 * 40 >> 24;
           var7 = var2 * RotaryDialPainter.sine(-var3 + this.field_a, (byte) -23) * 40 >> 24;
-          var8 = 40 * (var2 * we.cosine(var3 + this.field_a, false)) >> 24;
+          var8 = 40 * (var2 * ClientUiUpdateSupport.cosine(var3 + this.field_a, false)) >> 24;
           var9 = 40 * var2 * RotaryDialPainter.sine(var3 + this.field_a, (byte) -23) >> 24;
           if (0 == SocketArchiveNetworkClient.field_v) {
             TriangleRasterizer.useRasterClip();

@@ -38,17 +38,17 @@ class BallAgent extends MatchAgent {
     final int computeChecksum(int param0) {
         int var3 = 18 / ((81 - param0) / 37);
         int var2 = 0;
-        var2 = fj.a(-40, var2 ^ this.positionX);
-        var2 = fj.a(-40, this.positionY ^ var2);
-        var2 = fj.a(-40, this.height ^ var2);
-        var2 = fj.a(-40, this.velocityX ^ var2);
-        var2 = fj.a(-40, var2 ^ this.velocityY);
-        var2 = fj.a(-40, var2 ^ this.verticalVelocity);
-        var2 = fj.a(-40, this.possessorTeam ^ var2);
-        var2 = fj.a(-40, this.possessorSlot ^ var2);
-        var2 = fj.a(-40, var2 ^ this.uncatchable);
-        var2 = fj.a(-40, this.highFriction ^ var2);
-        var2 = fj.a(-40, this.modelId ^ var2);
+        var2 = fj.rotateLeftFourBits(-40, var2 ^ this.positionX);
+        var2 = fj.rotateLeftFourBits(-40, this.positionY ^ var2);
+        var2 = fj.rotateLeftFourBits(-40, this.height ^ var2);
+        var2 = fj.rotateLeftFourBits(-40, this.velocityX ^ var2);
+        var2 = fj.rotateLeftFourBits(-40, var2 ^ this.velocityY);
+        var2 = fj.rotateLeftFourBits(-40, var2 ^ this.verticalVelocity);
+        var2 = fj.rotateLeftFourBits(-40, this.possessorTeam ^ var2);
+        var2 = fj.rotateLeftFourBits(-40, this.possessorSlot ^ var2);
+        var2 = fj.rotateLeftFourBits(-40, var2 ^ this.uncatchable);
+        var2 = fj.rotateLeftFourBits(-40, this.highFriction ^ var2);
+        var2 = fj.rotateLeftFourBits(-40, this.modelId ^ var2);
         return var2;
     }
 
@@ -347,7 +347,7 @@ class BallAgent extends MatchAgent {
             this.field_y = true;
           }
           if (var17[5] != this.verticalVelocity) {
-            this.verticalVelocity = d.a(true, CheckboxLabelWidget.a(var8, var17[5], (byte) 105));
+            this.verticalVelocity = d.decelerateFixedVelocity(true, CheckboxLabelWidget.a(var8, var17[5], (byte) 105));
             if (this.verticalVelocity == 0) {
               this.height = 0;
             }

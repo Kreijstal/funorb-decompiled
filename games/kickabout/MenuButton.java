@@ -37,7 +37,7 @@ final class MenuButton {
           if (this.kind == 0) {
             if (GameLoopApplet.field_E.d((byte) 91)) {
               if (GameLoopApplet.field_E.field_J[0]) {
-                vr.b((byte) -124);
+                PitchSurfaceLoader.enqueueTutorialChoice((byte) -124);
               } else {
                 AuctionsScreen.startComputerMatch(10, true);
               }
@@ -142,7 +142,7 @@ final class MenuButton {
                                                                                         SocketArchiveNetworkClient.field_v = stackIn_76_0;
                                                                                       } else {
                                                                                         if (this.kind == 15) {
-                                                                                          AppScreen.openQuitPage(20338, so.a(101));
+                                                                                          AppScreen.openQuitPage(20338, AppletContextSupport.getActiveApplet(101));
                                                                                         }
                                                                                       }
                                                                                     }
@@ -244,7 +244,7 @@ final class MenuButton {
         }
         int var3 = DateInputWidget.k(256);
         int var4 = var3 >> 3;
-        int var5 = 17 != this.kind ? IntrusiveNode.b((byte) -99) : sk.a((byte) 97);
+        int var5 = 17 != this.kind ? IntrusiveNode.b((byte) -99) : LoadingProgressSupport.a((byte) 97);
         var5 = var5 + (param0 ? -var4 : var4);
         if (var5 < 0) {
           var5 = 0;
@@ -272,7 +272,7 @@ final class MenuButton {
           this.activate(-1, true);
         }
         if (null != this.field_b) {
-          this.field_b.updatePose(17 == this.kind ? sk.a((byte) 97) : IntrusiveNode.b((byte) -124), 1);
+          this.field_b.updatePose(17 == this.kind ? LoadingProgressSupport.a((byte) 97) : IntrusiveNode.b((byte) -124), 1);
         }
         if (this.field_r &&
           param2 &&
@@ -364,7 +364,7 @@ final class MenuButton {
             var10 = QuickChatPhraseDefinition.a("instructions", QuickChatKeysHelpPanel.field_Cb, (byte) 43, "key");
             AccountRegistrationPanel.field_C = AuctionsScreen.a(3, var9);
             DebugConsole.field_y = new Sprite[][]{et.a(0, oo.field_a, var10, var10.field_o), et.a(0, tn.field_c, var10, 62)};
-            lt.field_d = new Sprite[]{et.a(0, ip.field_d[0], var10, 50)[1], et.a(param0 - 2, ip.field_d[1], var10, 50)[1]};
+            lt.field_d = new Sprite[]{et.a(0, RasterGammaSupport.field_d[0], var10, 50)[1], et.a(param0 - 2, RasterGammaSupport.field_d[1], var10, 50)[1]};
             DirectByteStorage.field_g = QuickChatPhraseDefinition.a("instructions", QuickChatKeysHelpPanel.field_Cb, (byte) 78, "mouse");
             RegistrationRequestDialog.field_qb = QuickChatPhraseDefinition.a("instructions", QuickChatKeysHelpPanel.field_Cb, (byte) 108, "mouse_left");
             PlayerInputEvent.field_q = QuickChatPhraseDefinition.a("instructions", QuickChatKeysHelpPanel.field_Cb, (byte) 103, "mouse_right");
@@ -403,8 +403,8 @@ final class MenuButton {
         }
         if (param1 - (this.width >> 1) < ArrayWidgetContainer.field_x &&
           ArrayWidgetContainer.field_x < param1 + (this.width >> 1) &&
-          param0 - (this.height >> 1) < us.field_j &&
-          us.field_j < param0 + (this.height >> 1)) {
+          param0 - (this.height >> 1) < TutorialCaptionSupport.field_j &&
+          TutorialCaptionSupport.field_j < param0 + (this.height >> 1)) {
           if (49 == this.kind) {
             IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, PlayerPortraitCacheEntry.field_l);
           }
@@ -418,7 +418,7 @@ final class MenuButton {
         stackIn_18_0 = (this.field_g) ? 1 : 0;
         var4 = stackIn_18_0;
         if (this.field_g &&
-          1 == vd.field_c) {
+          1 == AccountNameCheckState.field_c) {
           var4 = 2;
         }
         this.field_n[var4].c(param1 - (this.width >> 1), -(this.height >> 1) + param0);
@@ -441,7 +441,7 @@ final class MenuButton {
                 if (um.field_e != null &&
                   um.field_e.localSeat >= 0 &&
                   um.field_e.matchState.participantStatus[um.field_e.localSeat].offerDraw) {
-                  this.field_p = wq.field_b.toLowerCase();
+                  this.field_p = DiagnosticsOverlaySupport.field_b.toLowerCase();
                 }
               }
             }
@@ -463,7 +463,7 @@ final class MenuButton {
           if (this.kind != 17) {
             stackIn_46_0 = IntrusiveNode.b((byte) -61);
           } else {
-            stackIn_46_0 = sk.a((byte) 97);
+            stackIn_46_0 = LoadingProgressSupport.a((byte) 97);
           }
           var7 = stackIn_46_0;
           var8 = var7 * AlternateKeyedLoginCredentials.field_m / DateInputWidget.k(256);
@@ -620,11 +620,11 @@ final class MenuButton {
               }
             }
           } else {
-            this.field_n = (Sprite[]) ((Object) eo.field_c[0]);
+            this.field_n = (Sprite[]) ((Object) SoftwareDrawingSupport.field_c[0]);
             this.field_p = null;
           }
         } else {
-          this.field_n = (Sprite[]) ((Object) eo.field_r[0]);
+          this.field_n = (Sprite[]) ((Object) SoftwareDrawingSupport.field_r[0]);
           this.field_p = null;
         }
         this.height = this.field_n[0].field_v;

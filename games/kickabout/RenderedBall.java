@@ -99,7 +99,7 @@ final class RenderedBall extends BallAgent {
               var5Lifetime1 = 41;
               var6 = GameLoopApplet.fixedPointDistance(var3_intLifetime1, var4, -23146);
               var7 = var6 >> 10;
-              LobbyPlayerRow.a(128, false, 240, we.field_f + var7, var5Lifetime1);
+              LobbyPlayerRow.a(128, false, 240, ClientUiUpdateSupport.field_f + var7, var5Lifetime1);
             }
           } else {
             if (ih.field_c != 0) {
@@ -222,7 +222,7 @@ final class RenderedBall extends BallAgent {
             stackIn_3_0 = 0;
             return stackIn_3_0;
           }
-          var2 = ep.field_c[param0];
+          var2 = TutorialMessages.field_c[param0];
           var5 = 26 / ((param1 + 55) / 54);
           var3 = IsSixCommand.field_C;
           var4 = 300;
@@ -446,7 +446,7 @@ final class RenderedBall extends BallAgent {
 
     private final void setRotationMatrix(byte param0, int param1, int param2) {
         int var4 = RotaryDialPainter.sine(param2, (byte) -23);
-        int var5 = we.cosine(param2, false);
+        int var5 = ClientUiUpdateSupport.cosine(param2, false);
         this.field_J = param1;
         this.field_D[3] = 65536;
         this.field_D[1] = var4 * param1 >> 16;

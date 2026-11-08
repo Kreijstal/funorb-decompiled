@@ -28,7 +28,7 @@ final class oa {
         int var7Lifetime1;
         int var8Lifetime1;
         if (param2 > 94) {
-          var10 = ph.field_e[!param0 ? 3 : 1];
+          var10 = AudioOutputSupport.field_e[!param0 ? 3 : 1];
           var17 = var10;
           var4 = var10[0].field_a;
           var15 = new int[]{var10[0].field_i, var10[1].field_i, var10[2].field_i};
@@ -47,7 +47,7 @@ final class oa {
           return var16;
         }
         oa.b(-53);
-        var10 = ph.field_e[!param0 ? 3 : 1];
+        var10 = AudioOutputSupport.field_e[!param0 ? 3 : 1];
         IndexedSprite[] var14 = var10;
         var4Lifetime1 = var10[0].field_a;
         int[] var12 = new int[]{var10[0].field_i, var10[1].field_i, var10[2].field_i};

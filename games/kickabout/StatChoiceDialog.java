@@ -110,7 +110,7 @@ final class StatChoiceDialog extends MessageDialog {
             stackIn_11_0Lifetime1 = this;
             stackIn_11_6 = false;
           }
-          this.field_I = mg.a(stackIn_10_1, stackIn_10_2, stackIn_10_3, ((PlayerStats) (Object) stackIn_10_4).c((byte) stackIn_10_5, stackIn_11_6), var6.field_R, (byte) 120);
+          this.field_I = PlayerInputFactory.createRenderedPlayer(stackIn_10_1, stackIn_10_2, stackIn_10_3, ((PlayerStats) (Object) stackIn_10_4).c((byte) stackIn_10_5, stackIn_11_6), var6.field_R, (byte) 120);
           this.field_i[0].field_lb = false;
           this.field_I.field_nb = true;
           return;
@@ -327,16 +327,16 @@ final class StatChoiceDialog extends MessageDialog {
         this.field_L.field_J = 95 + param2;
         this.field_L.field_s = param1 + 180;
         this.field_L.updateInput(0, true);
-        PacketBuffer.a(-65, c.field_b);
+        PacketBuffer.a(-65, ClientPacketFlushSupport.field_b);
         SoftwareRasterizer.clearFramebuffer();
         this.field_I.renderModel(1200, 0, SoftwareRasterizer.field_g >> 1, SoftwareRasterizer.field_f - 10, (byte) -68);
         if (param0 >= -11) {
           this.field_P = 5;
         }
         TeamManagementScreen.e(123);
-        c.field_b.drawHalfSize(40 + param1, param2 + 80);
+        ClientPacketFlushSupport.field_b.drawHalfSize(40 + param1, param2 + 80);
         IsSixCommand.field_C.d(this.field_J.getDisplayName(100), param1 + 90, param2 + 190, 16777215, -1);
-        eo.a(param1 + 40, 200 + param2, this.field_J.experience, 3, true, 0);
+        SoftwareDrawingSupport.a(param1 + 40, 200 + param2, this.field_J.experience, 3, true, 0);
         for (var4 = 0; var4 < 3; var4++) {
           var5 = this.field_O[var4].field_F;
           var6 = this.field_O[var4].field_T;
@@ -366,7 +366,7 @@ final class StatChoiceDialog extends MessageDialog {
           if (var4 == 2) {
             var9 = this.field_J.trinketTackleBonus((byte) 120, IntValueNode.b(27));
           }
-          eo.a(16 + var5, 9 + var6, this.field_M[var4], var4, true, var9);
+          SoftwareDrawingSupport.a(16 + var5, 9 + var6, this.field_M[var4], var4, true, var9);
         }
     }
 

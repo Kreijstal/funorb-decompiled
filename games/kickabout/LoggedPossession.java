@@ -19,7 +19,7 @@ final class LoggedPossession {
           LoggedPossession.releaseStatics(-10);
         }
         boolean decompiledFrameRemainder0 = true;
-        et.field_d.field_x = wk.field_g;
+        et.field_d.field_x = ClubStateFactory.field_g;
         if (HuffmanCodec.field_e == 1) {
           et.field_d.field_x = new PlayArea[]{new PlayArea(368, 600, 528, 1200)};
           et.field_d.field_B = et.field_d.field_x;

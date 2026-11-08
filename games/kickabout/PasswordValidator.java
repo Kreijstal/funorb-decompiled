@@ -176,7 +176,7 @@ final class PasswordValidator extends TextFieldValidator {
             field_j = (int[]) null;
           }
           var9 = AccountRegistrationResponse.field_j.field_o;
-          DelegatingCanvas.field_e = -(var9 * we.cosine(var8Lifetime1, false)) >> 17;
+          DelegatingCanvas.field_e = -(var9 * ClientUiUpdateSupport.cosine(var8Lifetime1, false)) >> 17;
           FormationView.field_m = var9 * RotaryDialPainter.sine(var8Lifetime1, (byte) -23) >> 17;
           AccountRegistrationResponse.field_j.rotateNearest(AccountRegistrationResponse.field_j.field_o << 3, AccountRegistrationResponse.field_j.field_v << 3, SoftwareRasterizer.field_g << 3, SoftwareRasterizer.field_f << 3, var8Lifetime1 << 3, 4096);
           TeamManagementScreen.e(118);
@@ -287,11 +287,11 @@ final class PasswordValidator extends TextFieldValidator {
             return stackIn_18_0;
           }
           if (0 >= var6.length()) {
-            stackIn_32_0 = jq.field_c;
+            stackIn_32_0 = AuctionHelpResources.field_c;
             return stackIn_32_0;
           }
           if (FootballerPreview.containsForwardOrReversed((byte) 71, var6, var5)) {
-            stackIn_22_0 = we.field_b;
+            stackIn_22_0 = ClientUiUpdateSupport.field_b;
             return stackIn_22_0;
           }
           if (SetLagCommand.a(68, var5, var6)) {
@@ -301,7 +301,7 @@ final class PasswordValidator extends TextFieldValidator {
           if (!TextLine.a((byte) 69, var6, var5)) {
             return MySquadScreen.field_M;
           }
-          stackIn_30_0 = we.field_b;
+          stackIn_30_0 = ClientUiUpdateSupport.field_b;
           return stackIn_30_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -397,7 +397,7 @@ final class PasswordValidator extends TextFieldValidator {
           }
           for (var5 = 0; param0.length > var5; var5++) {
             if (!param0[var5].field_b) {
-              discarded$1 = var7.append(dr.a(-117, param0[var5].field_d.getClass()));
+              discarded$1 = var7.append(ClassNameSupport.shortClassName(-117, param0[var5].field_d.getClass()));
             } else {
               discarded$2 = var7.append(RankingsScreen.a(param0[var5].field_d, (byte) 106).toString());
             }

@@ -29,7 +29,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
 
     final static int a(int param0, byte param1) {
         int var2 = 33 % ((param1 + 15) / 62);
-        return pc.a(param0, -524289) >> 8;
+        return DisplayNameUiSupport.a(param0, -524289) >> 8;
     }
 
     public final synchronized void focusLost(java.awt.event.FocusEvent param0) {
@@ -124,35 +124,35 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
           var3 = 3 * DateInputValidator.field_e[0].field_a;
           var4 = 146 * InstrumentNoteMask.field_i >> 8;
           var5 = InstrumentNoteMask.field_i * 140 >> 8;
-          stackIn_4_0 = (qr.a(0, (byte) -1) >= -var2 + 896 >> 1) ? 0 : 1;
+          stackIn_4_0 = (SessionUrlSupport.screenToWorldX(0, (byte) -1) >= -var2 + 896 >> 1) ? 0 : 1;
           var6 = stackIn_4_0;
-          stackIn_7_0 = (ig.a(0, 4620) >= 1344 - var3 >> 1) ? 0 : 1;
+          stackIn_7_0 = (ig.screenToWorldY(0, 4620) >= 1344 - var3 >> 1) ? 0 : 1;
           var7 = stackIn_7_0;
-          stackIn_10_0 = (896 + var2 >> 1 >= qr.a(640, (byte) -1)) ? 0 : 1;
+          stackIn_10_0 = (896 + var2 >> 1 >= SessionUrlSupport.screenToWorldX(640, (byte) -1)) ? 0 : 1;
           var8 = stackIn_10_0;
-          stackIn_13_0 = (ig.a(480, 4620) <= 1344 + var3 >> 1) ? 0 : 1;
+          stackIn_13_0 = (ig.screenToWorldY(480, 4620) <= 1344 + var3 >> 1) ? 0 : 1;
           var9 = stackIn_13_0;
           var10 = MySquadScreen.c(-75, 448);
-          var11 = go.a(672, (byte) -56);
+          var11 = PitchProjectionSupport.worldToScreenY(672, (byte) -56);
           var12 = DualLinkNode.field_h[0].field_i * InstrumentNoteMask.field_i >> 8;
           var13 = InstrumentNoteMask.field_i * DateInputValidator.field_e[0].field_a >> 8;
           var14 = var10 + (-(1 * var12) + 0);
           var15 = -(1 * var13) + (var11 - (var13 >> 1));
           var16 = var12 * 2 + var14;
           var17 = var13 * 3 + var15;
-          var18 = c.field_f[0].field_v * InstrumentNoteMask.field_i >> 8;
+          var18 = ClientPacketFlushSupport.field_f[0].field_v * InstrumentNoteMask.field_i >> 8;
           var20 = 84 % ((30 - param0) / 34);
-          var19 = c.field_f[0].field_o * InstrumentNoteMask.field_i >> 8;
+          var19 = ClientPacketFlushSupport.field_f[0].field_o * InstrumentNoteMask.field_i >> 8;
           var21 = InstrumentNoteMask.field_i * (LoggedGoal.field_o.field_o + 78) >> 8;
           if (var6 != 0 &&
             var7 != 0) {
             ListRow.a(-12376, -var21 + var14, var15 - var5, FadingSoundPlayer.field_p);
-            ListRow.a(-12376, var14 - var19, var15 - var18, c.field_f[0]);
+            ListRow.a(-12376, var14 - var19, var15 - var18, ClientPacketFlushSupport.field_f[0]);
           }
           if (var8 != 0 &&
             var7 != 0) {
             ListRow.a(-12376, var16, var15 - var5, ConsoleCommand.field_z);
-            ListRow.a(-12376, var16, -var18 + var15, c.field_f[1]);
+            ListRow.a(-12376, var16, -var18 + var15, ClientPacketFlushSupport.field_f[1]);
           }
           for (var22 = 0; var22 < 2; var22++) {
             if (var7 != 0) {
@@ -177,17 +177,17 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
           if (var6 != 0 &&
             var9 != 0) {
             ListRow.a(-12376, -var21 + var14, var17, LineupView.field_x);
-            ListRow.a(-12376, var14 - var19, var17, c.field_f[2]);
+            ListRow.a(-12376, var14 - var19, var17, ClientPacketFlushSupport.field_f[2]);
           }
           if (var8 != 0 &&
             var9 != 0) {
             ListRow.a(-12376, var16, var17, ByteStorage.field_b);
-            ListRow.a(-12376, var16, var17, c.field_f[3]);
+            ListRow.a(-12376, var16, var17, ClientPacketFlushSupport.field_f[3]);
           }
           var22Lifetime2 = MySquadScreen.c(-82, -130);
           var23 = MySquadScreen.c(-70, 998);
           for (var24 = 0; var24 < 8; var24++) {
-            var25 = go.a(40 + (-22 + ManagerAction.field_f.field_v) * var24, (byte) -56);
+            var25 = PitchProjectionSupport.worldToScreenY(40 + (-22 + ManagerAction.field_f.field_v) * var24, (byte) -56);
             ListRow.a(-12376, var22Lifetime2, var25, ManagerAction.field_f);
             ListRow.a(-12376, var23, var25, MusicPatchNode.field_m);
           }

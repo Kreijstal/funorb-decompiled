@@ -130,9 +130,9 @@ final class BytePlusOneCommand extends ConsoleCommand {
           var13[2] = 7368816;
           var16 = new Sprite[9];
           var16[4] = var12;
-          g.field_a = new UiLayoutNode(0L, param7);
+          GrayscalePaletteSupport.field_a = new UiLayoutNode(0L, param7);
           uf.field_b = new UiLayoutNode(0L, param6);
-          g.field_a.addChild((byte) -121, uf.field_b);
+          GrayscalePaletteSupport.field_a.addChild((byte) -121, uf.field_b);
           var17 = new UiLayoutNode(0L, (UiLayoutNode) null);
           var17.field_jb = new IntrusiveDeque();
           AuctionSettingsDialog.field_G = new ScrollPane(0L, var17, param1, param3);
@@ -146,7 +146,7 @@ final class BytePlusOneCommand extends ConsoleCommand {
           WeightedCacheEntry.field_s = new UiLayoutNode(0L, (UiLayoutNode) null);
           WeightedCacheEntry.field_s.field_R = var16;
           DebugConsole.field_z.addChild((byte) -106, WeightedCacheEntry.field_s);
-          ds.field_a = new UiLayoutNode[5];
+          ModelMaterialDecoder.field_a = new UiLayoutNode[5];
           ValidatedTextWidget.field_W = new UiLayoutNode[5];
           BlackFadeScreen.field_m = new UiLayoutNode[5];
           SocketConnector.field_b = new UiLayoutNode[5];
@@ -165,7 +165,7 @@ final class BytePlusOneCommand extends ConsoleCommand {
                 var19 = stackIn_13_0;
               } else if (var18 == 1 &&
                 uk.field_d) {
-                var19 = c.field_d;
+                var19 = ClientPacketFlushSupport.field_d;
               } else {
                 decompiledFrameRemainder0 = (var18 == 2);
                 if (decompiledFrameRemainder0) {
@@ -177,13 +177,13 @@ final class BytePlusOneCommand extends ConsoleCommand {
                 BlackFadeScreen.field_m[var18] = new UiLayoutNode(0L, ArchiveRequest.field_o, var19);
                 SocketConnector.field_b[var18] = new UiLayoutNode(0L, (UiLayoutNode) null);
                 SocketConnector.field_b[var18].field_p = 1;
-                ds.field_a[var18] = new UiLayoutNode(0L, ArchiveRequest.field_o);
-                ds.field_a[var18].field_p = 1;
+                ModelMaterialDecoder.field_a[var18] = new UiLayoutNode(0L, ArchiveRequest.field_o);
+                ModelMaterialDecoder.field_a[var18].field_p = 1;
                 ValidatedTextWidget.field_W[var18].addChild((byte) -126, BlackFadeScreen.field_m[var18]);
                 ValidatedTextWidget.field_W[var18].addChild((byte) -113, SocketConnector.field_b[var18]);
-                ValidatedTextWidget.field_W[var18].addChild((byte) -127, ds.field_a[var18]);
+                ValidatedTextWidget.field_W[var18].addChild((byte) -127, ModelMaterialDecoder.field_a[var18]);
                 ValidatedTextWidget.field_W[var18].invalidateChildren(false);
-                g.field_a.addChild((byte) -104, ValidatedTextWidget.field_W[var18]);
+                GrayscalePaletteSupport.field_a.addChild((byte) -104, ValidatedTextWidget.field_W[var18]);
                 MatchPhaseView.field_e = MatchPhaseView.field_e + 1;
               }
               var18++;
@@ -192,9 +192,9 @@ final class BytePlusOneCommand extends ConsoleCommand {
             break;
           }
           if (decompiledNaturalLoopExit0) {
-            uq.field_a = new UiLayoutNode(0L, param2);
-            uq.field_a.field_E = ig.field_i;
-            g.field_a.addChild((byte) -104, uq.field_a);
+            ChatInputState.field_a = new UiLayoutNode(0L, param2);
+            ChatInputState.field_a.field_E = ig.field_i;
+            GrayscalePaletteSupport.field_a.addChild((byte) -104, ChatInputState.field_a);
             stackIn_31_0 = WorldSpriteDecoration.b(-14954) ? 1 : 0;
           }
           if (stackIn_31_0 != 0 &&

@@ -19,7 +19,7 @@ final class TexturedPanelPainter extends NineSlicePanelPainter {
             return false;
           }
           FixedQuaternion.field_e = QuickChatCategoryCache.field_a[LineupAgent.field_n];
-          il.field_c = PlayerStats.field_a[LineupAgent.field_n];
+          ClassDescriptorSupport.field_c = PlayerStats.field_a[LineupAgent.field_n];
           LineupAgent.field_n = 127 & 1 + LineupAgent.field_n;
           stackIn_8_0 = true;
         }
@@ -37,7 +37,7 @@ final class TexturedPanelPainter extends NineSlicePanelPainter {
         int var7 = 0;
         int var8 = Kickabout.field_G;
         int var7Lifetime1;
-        eo.drawSpriteClipped(mk.field_a, param0, param2, param3, param1, 256, mk.field_a.field_v - param1);
+        SoftwareDrawingSupport.drawSpriteClipped(mk.field_a, param0, param2, param3, param1, 256, mk.field_a.field_v - param1);
         int[] var11 = new int[4];
         int[] var10 = var11;
         int[] var9 = var10;
@@ -77,7 +77,7 @@ final class TexturedPanelPainter extends NineSlicePanelPainter {
         ManagerAction var2 = null;
         int var3 = Kickabout.field_G;
         if (PlayArea.a(param0 + 156)) {
-          wk.a(50);
+          ClubStateFactory.applyPendingManagerActions(50);
           return;
         }
         if (param0 != -56) {
@@ -120,7 +120,7 @@ final class TexturedPanelPainter extends NineSlicePanelPainter {
             return false;
           }
           FixedQuaternion.field_e = QuickChatCategoryCache.field_a[LineupAgent.field_n];
-          il.field_c = PlayerStats.field_a[LineupAgent.field_n];
+          ClassDescriptorSupport.field_c = PlayerStats.field_a[LineupAgent.field_n];
           LineupAgent.field_n = 127 & 1 + LineupAgent.field_n;
           stackIn_8_0 = true;
         }

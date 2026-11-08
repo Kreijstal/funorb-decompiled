@@ -239,7 +239,7 @@ final class PlayingView extends MatchPhaseView {
           this.field_a.field_X.goalCount < 40) {
           stackIn_61_1 = (var6 != 0);
           this.field_L = stackIn_61_1;
-          so.a(RankingsScreen.field_C, NanoTickClock.field_n, true, this.field_L);
+          AppletContextSupport.a(RankingsScreen.field_C, NanoTickClock.field_n, true, this.field_L);
         }
         if (NanoTickClock.field_n) {
           if (RankingsScreen.field_C == 1 ||
@@ -305,7 +305,7 @@ final class PlayingView extends MatchPhaseView {
           stackIn_116_1 = NanoTickClock.field_n;
           stackIn_116_2 = true;
           stackIn_117_3 = (var5 == 0);
-          so.a(stackIn_116_0, stackIn_116_1, stackIn_116_2, stackIn_117_3);
+          AppletContextSupport.a(stackIn_116_0, stackIn_116_1, stackIn_116_2, stackIn_117_3);
           if (NanoTickClock.field_n) {
             if (RankingsScreen.field_C == 1) {
               stackIn_122_0 = false;
@@ -509,7 +509,7 @@ final class PlayingView extends MatchPhaseView {
               this.field_q = 128;
             }
           }
-          if (var2[f.field_a]) {
+          if (var2[SpriteNumberPainter.field_a]) {
             this.field_q = this.field_q + 16;
             if (this.field_q > 256) {
               this.field_q = 256;
@@ -545,7 +545,7 @@ final class PlayingView extends MatchPhaseView {
           if (var2[SquadSlotWidget.field_Jb]) {
             var10 -= 16;
           }
-          if (var2[f.field_a]) {
+          if (var2[SpriteNumberPainter.field_a]) {
             var10 += 16;
           }
           ResourceArchive.a((double)var9, (byte) 127, (double)var8, (double)var10);
@@ -569,23 +569,23 @@ final class PlayingView extends MatchPhaseView {
           !this.b((byte) -65)) {
           return;
         }
-        if (2 == ip.field_a) {
+        if (2 == RasterGammaSupport.field_a) {
           this.field_m = true;
         }
-        if (ip.field_a == 1) {
+        if (RasterGammaSupport.field_a == 1) {
           this.field_k = true;
         }
         stackIn_10_1 = this.field_k;
-        stackIn_11_2 = (vd.field_c == 1);
+        stackIn_11_2 = (AccountNameCheckState.field_c == 1);
         this.field_k = stackIn_10_1 & stackIn_11_2;
         stackIn_13_1 = this.field_m;
-        stackIn_14_2 = (vd.field_c == 2);
+        stackIn_14_2 = (AccountNameCheckState.field_c == 2);
         this.field_m = stackIn_13_1 & stackIn_14_2;
         if (param0 != 16623) {
           this.field_n = true;
         }
         if (!this.isLocalParticipantActive((byte) 13)) {
-          if (2 == ip.field_a) {
+          if (2 == RasterGammaSupport.field_a) {
             stackIn_58_1 = !(this.field_l);
             this.field_l = stackIn_58_1;
           }
@@ -599,12 +599,12 @@ final class PlayingView extends MatchPhaseView {
             if (0 == this.field_I ||
               var2 != 0) {
               if (ArrayWidgetContainer.field_x == -1 &&
-                us.field_j == -1) {
+                TutorialCaptionSupport.field_j == -1) {
                 this.field_z = -1;
                 this.field_G = -1;
               } else {
                 this.field_z = AccountTermsPanel.a(ArrayWidgetContainer.field_x, 6784) - var4.pixelX(-103);
-                this.field_G = TextLayoutLine.a(-6779, us.field_j) - var4.pixelY(true);
+                this.field_G = TextLayoutLine.a(-6779, TutorialCaptionSupport.field_j) - var4.pixelY(true);
               }
             }
             if (var4.action == 1) {
@@ -614,7 +614,7 @@ final class PlayingView extends MatchPhaseView {
               }
             } else {
               if (-1 != ArrayWidgetContainer.field_x ||
-                us.field_j != -1) {
+                TutorialCaptionSupport.field_j != -1) {
                 if (!this.field_a.c(this.field_g, -115)) {
                   if (var2 != 0 &&
                     var4.d((byte) 102)) {
@@ -622,7 +622,7 @@ final class PlayingView extends MatchPhaseView {
                     this.field_k = false;
                   }
                   if (this.field_m) {
-                    this.switchToNearestTeammate(TextLayoutLine.a(-6779, us.field_j), AccountTermsPanel.a(ArrayWidgetContainer.field_x, 6784), 1);
+                    this.switchToNearestTeammate(TextLayoutLine.a(-6779, TutorialCaptionSupport.field_j), AccountTermsPanel.a(ArrayWidgetContainer.field_x, 6784), 1);
                     this.field_m = false;
                   }
                 } else {
@@ -1117,7 +1117,7 @@ final class PlayingView extends MatchPhaseView {
           return (java.awt.Container) ((Object) ServerMessageScreen.field_A);
         }
         int var1 = 25 % ((46 - param0) / 33);
-        return (java.awt.Container) ((Object) so.a(-120));
+        return (java.awt.Container) ((Object) AppletContextSupport.getActiveApplet(-120));
     }
 
     PlayingView(CommonGame param0, int param1, CommonGame param2, boolean param3, boolean param4) {
@@ -1186,7 +1186,7 @@ final class PlayingView extends MatchPhaseView {
     }
 
     private final void b(boolean param0) {
-        this.queueInputEvent(param0, mg.createKeyheldEvent(param0, this.field_H, this.field_g));
+        this.queueInputEvent(param0, PlayerInputFactory.createKeyheldEvent(param0, this.field_H, this.field_g));
         if (this.field_f) {
           or.field_d.b(68, (byte) -65);
           or.field_d.writeByte(123, this.field_H);

@@ -62,7 +62,7 @@ final class AccountTermsPanel extends WidgetContainer implements TextHotspotList
           this.field_I.field_r = (WidgetPainter) ((Object) new SpriteButtonPainter());
           var7 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, NodeHashTableIterator.field_a, new String[]{this.k(107), this.m(-1522433695)});
           var3 = 20;
-          var4 = new TextWidgetPainter(gf.field_a, 0, 0, 0, 0, 16777215, -1, 3, 0, gf.field_a.field_G, -1, 2147483647, true);
+          var4 = new TextWidgetPainter(ModelMaterial.field_a, 0, 0, 0, 0, 16777215, -1, 3, 0, ModelMaterial.field_a.field_G, -1, 2147483647, true);
           this.field_D = new TextHotspotWidget(var7, var4);
           this.field_D.field_u = "";
           this.field_D.a(fa.field_e, 0, 12082);
@@ -201,7 +201,7 @@ final class AccountTermsPanel extends WidgetContainer implements TextHotspotList
     }
 
     final static int a(int param0, int param1) {
-        int var2 = qr.a(param0, (byte) -1);
+        int var2 = SessionUrlSupport.screenToWorldX(param0, (byte) -1);
         if (FaceNormal.field_c) {
           var2 = -var2 + 896;
         }

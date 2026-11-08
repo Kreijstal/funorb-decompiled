@@ -16,7 +16,7 @@ final class TournamentChampionDialog extends MessageDialog {
     }
 
     final static boolean a(boolean param0, String param1, long param2) {
-        gg var4 = null;
+        SocialPlayerRow var4 = null;
         RuntimeException var4_ref = null;
         boolean stackIn_11_0 = false;
         RuntimeException stackIn_14_0 = null;
@@ -115,7 +115,7 @@ final class TournamentChampionDialog extends MessageDialog {
           var2 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, ListingRowCache.field_e[42], new String[]{param0});
           var3 = WriteIntegersCommand.field_E[6];
           this.a(var2, this.field_t, var3, -99, this.field_u);
-          this.open(ds.a(this.field_y, 1), pg.a(false, 42), 1054928844);
+          this.open(ModelMaterialDecoder.messageButtonCount(this.field_y, 1), pg.a(false, 42), 1054928844);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "nq.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

@@ -159,16 +159,16 @@ final class LeagueWinnerDialog extends MessageDialog {
         or.field_d.b(78, (byte) 113);
     }
 
-    final static ld a(String param0, int param1) {
+    final static AccountInputValidationResult a(String param0, int param1) {
         int var3 = 0;
         int var2_int = 0;
         int var4 = 0;
         int var5 = 0;
-        ld stackIn_3_0 = null;
-        ld stackIn_7_0 = null;
-        ld stackIn_10_0 = null;
-        ld stackIn_19_0 = null;
-        ld stackIn_23_0 = null;
+        AccountInputValidationResult stackIn_3_0 = null;
+        AccountInputValidationResult stackIn_7_0 = null;
+        AccountInputValidationResult stackIn_10_0 = null;
+        AccountInputValidationResult stackIn_19_0 = null;
+        AccountInputValidationResult stackIn_23_0 = null;
         RuntimeException stackIn_28_0 = null;
         StringBuilder stackIn_28_1 = null;
         String stackIn_29_2 = null;
@@ -178,7 +178,7 @@ final class LeagueWinnerDialog extends MessageDialog {
         try {
           var2_int = param0.length();
           if (var2_int == 0) {
-            stackIn_3_0 = ld.field_b;
+            stackIn_3_0 = AccountInputValidationResult.field_b;
             return stackIn_3_0;
           }
           if (var2_int > 63) {
@@ -186,7 +186,7 @@ final class LeagueWinnerDialog extends MessageDialog {
             return stackIn_7_0;
           }
           if (param1 != 134217728) {
-            stackIn_10_0 = (ld) null;
+            stackIn_10_0 = (AccountInputValidationResult) null;
             return stackIn_10_0;
           }
           for (var3 = 0; var3 < var2_int; var3++) {

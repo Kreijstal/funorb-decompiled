@@ -85,14 +85,14 @@ final class TrinketIcon extends UiLayoutNode {
         if (!param2) {
           TrinketIcon.c(false);
         }
-        if (ck.field_b != null) {
-          var3 = ck.field_b.a(param0, 0);
+        if (TextPromptState.field_b != null) {
+          var3 = TextPromptState.field_b.a(param0, 0);
           if (var3 != -2) {
             if (-1 != var3) {
-              var4 = ck.field_b.b(26) ? 1 : 0;
-              CommonGame.a(119, ck.field_b.field_Eb, var3, param1, var4 != 0, ck.field_b.a(-15596));
+              var4 = TextPromptState.field_b.b(26) ? 1 : 0;
+              CommonGame.a(119, TextPromptState.field_b.field_Eb, var3, param1, var4 != 0, TextPromptState.field_b.a(-15596));
             }
-            ck.field_b = null;
+            TextPromptState.field_b = null;
             MusicPatchNode.b(108);
           }
         }

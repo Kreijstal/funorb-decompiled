@@ -8,7 +8,7 @@ class AccountRequestDialog extends ContentTransitionDialog implements ButtonList
     private boolean field_gb;
     private StripedProgressBar field_jb;
     private boolean field_hb;
-    static r field_fb;
+    static ClientProtocolStage field_fb;
     private BitmapFont field_eb;
     static String field_bb;
 
@@ -70,7 +70,7 @@ class AccountRequestDialog extends ContentTransitionDialog implements ButtonList
           SetLagCommand.b(true);
         } else {
           if (this.field_db) {
-            vr.c(-3);
+            PitchSurfaceLoader.c(-3);
           }
         }
         if (param0 >= -75) {
@@ -91,7 +91,7 @@ class AccountRequestDialog extends ContentTransitionDialog implements ButtonList
             this.onAction(-123, (TextButton) null, 56, (byte) 64, 43);
           }
           if (!this.field_cb) {
-            ListRow.openUrlInBrowser(so.a(-79), 126, "tochangedisplayname.ws");
+            ListRow.openUrlInBrowser(AppletContextSupport.getActiveApplet(-79), 126, "tochangedisplayname.ws");
           } else {
             IndexedSpriteState.b(38, 3);
             this.closeDialog(-97);
@@ -246,6 +246,6 @@ class AccountRequestDialog extends ContentTransitionDialog implements ButtonList
 
     static {
         field_bb = "This game option has not yet been unlocked for use.";
-        field_fb = new r();
+        field_fb = new ClientProtocolStage();
     }
 }

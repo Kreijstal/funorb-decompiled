@@ -84,11 +84,11 @@ final class MonotonicClock {
     final synchronized static long monotonicMillis(int param0) {
         long var1 = System.currentTimeMillis();
         if (!(AuctionTableWidget.field_Kb <= var1)) {
-          in.field_b = in.field_b + (-var1 + AuctionTableWidget.field_Kb);
+          UiInputRoutingSupport.field_b = UiInputRoutingSupport.field_b + (-var1 + AuctionTableWidget.field_Kb);
         }
         int var3 = -67 / ((param0 + 10) / 32);
         AuctionTableWidget.field_Kb = var1;
-        return var1 + in.field_b;
+        return var1 + UiInputRoutingSupport.field_b;
     }
 
     public static void releaseStatics(byte param0) {

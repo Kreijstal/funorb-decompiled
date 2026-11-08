@@ -113,17 +113,17 @@ final class InstrumentEnvelope {
             var12 = (CommonGame) null;
             InstrumentEnvelope.buildBoundaryCameraLookup(-102, (CommonGame) null);
           }
-          if (in.field_c == null) {
-            in.field_c = new int[2][4][4][10][2];
+          if (UiInputRoutingSupport.field_c == null) {
+            UiInputRoutingSupport.field_c = new int[2][4][4][10][2];
           }
-          if (nd.field_d == param1) {
+          if (PitchBoundaryCacheState.field_d == param1) {
             return;
           }
-          nd.field_d = param1;
+          PitchBoundaryCacheState.field_d = param1;
           for (var2_int = 0; var2_int < 2; var2_int++) {
             for (var3 = 0; var3 < 4; var3++) {
               for (var4 = 0; 4 > var4; var4++) {
-                var5 = in.field_c[var2_int][var3][var4].length;
+                var5 = UiInputRoutingSupport.field_c[var2_int][var3][var4].length;
                 for (var6 = 0; var5 > var6; var6++) {
                   if (var4 != 0) {
                     if (var4 != 2) {
@@ -151,8 +151,8 @@ final class InstrumentEnvelope {
                   param1.field_V.positionX = var9;
                   param1.field_V.positionY = var10;
                   ParticipantStatus.a(var3 + 1, var2_int, (byte) 112, param1.field_r[var2_int]);
-                  in.field_c[var2_int][var3][var4][var6][0] = MatchingTextValidator.field_m[0];
-                  in.field_c[var2_int][var3][var4][var6][1] = MatchingTextValidator.field_m[1];
+                  UiInputRoutingSupport.field_c[var2_int][var3][var4][var6][0] = MatchingTextValidator.field_m[0];
+                  UiInputRoutingSupport.field_c[var2_int][var3][var4][var6][1] = MatchingTextValidator.field_m[1];
                 }
               }
             }

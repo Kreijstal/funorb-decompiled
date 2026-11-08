@@ -23,17 +23,17 @@ final class d {
           TrinketCatalog.field_d = -1;
           nc.field_a = false;
           EmailAvailabilityValidator.field_o = null;
-          ws.field_e = -1;
+          AccountNameCharacterSupport.field_e = -1;
           return;
         }
         d.a((byte) -102);
         TrinketCatalog.field_d = -1;
         nc.field_a = false;
         EmailAvailabilityValidator.field_o = null;
-        ws.field_e = -1;
+        AccountNameCharacterSupport.field_e = -1;
     }
 
-    final static int a(boolean param0, int param1) {
+    final static int decelerateFixedVelocity(boolean param0, int param1) {
         if (param1 < 0) {
           param1 = Math.min(param1 + 91750, 0);
         } else {
@@ -45,7 +45,7 @@ final class d {
           }
           return param1;
         }
-        d.a(true, -93);
+        d.decelerateFixedVelocity(true, -93);
         if (Math.abs(param1) < 58982) {
           param1 = 0;
         }

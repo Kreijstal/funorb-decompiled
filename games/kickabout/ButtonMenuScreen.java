@@ -454,7 +454,7 @@ class ButtonMenuScreen extends AppScreen {
             return stackIn_56_0 != 0;
           }
           if (8 == HuffmanCodec.field_e) {
-            stackIn_28_0 = (et.field_d.field_V.possessorTeam == 0) && (ld.field_f.pixelX(-115) > 760) && (ld.field_f.pixelY(true) > 1000);
+            stackIn_28_0 = (et.field_d.field_V.possessorTeam == 0) && (AccountInputValidationResult.field_f.pixelX(-115) > 760) && (AccountInputValidationResult.field_f.pixelY(true) > 1000);
             return stackIn_28_0;
           }
           if (9 == HuffmanCodec.field_e) {
@@ -537,7 +537,7 @@ class ButtonMenuScreen extends AppScreen {
           this.buttonSelection.selectedIndex = -1;
         }
         if (param1) {
-          var3 = this.buttonIndexAt(ArrayWidgetContainer.field_x, us.field_j, (byte) 30);
+          var3 = this.buttonIndexAt(ArrayWidgetContainer.field_x, TutorialCaptionSupport.field_j, (byte) 30);
           this.buttonSelection.a(-21174, var3, this.buttonIndexAt(TrinketIcon.field_yb, TabStrip.field_Eb, (byte) 110));
           if (var3 == -1) {
             stackIn_11_0 = -1;

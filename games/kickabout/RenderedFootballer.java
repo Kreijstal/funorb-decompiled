@@ -134,7 +134,7 @@ final class RenderedFootballer extends FootballerAgent {
             } else {
               ((Sprite) ((Object) var4)).c(var5 - (((Sprite) ((Object) var4)).field_o >> 1), var6 - (((Sprite) ((Object) var4)).field_v >> 1));
             }
-            var7 = ad.formatCurrencyAmount(ImageProducerRasterBuffer.a(param3.field_Eb, true), 26300);
+            var7 = LocalizedTextLoader.formatCurrencyAmount(ImageProducerRasterBuffer.a(param3.field_Eb, true), 26300);
             var8 = Math.max(param2.field_F + 15, 66 + (param2.field_F - (IsSixCommand.field_C.a(var7) >> 1)));
             IsSixCommand.field_C.a(var7, var8, param2.field_T + 51, 16777215, -1);
             if (!param1) {
@@ -243,7 +243,7 @@ final class RenderedFootballer extends FootballerAgent {
         var4 = IsaacRandom.a(true);
         if (512 > Math.abs((this.positionX >> 16) - var3) &&
           Math.abs(-var4 + (this.positionY >> 16)) < 512) {
-          var5 = ad.a(-var3 + (this.positionX >> 16), true, (this.positionY >> 16) - var4);
+          var5 = LocalizedTextLoader.approximateHypotenuse(-var3 + (this.positionX >> 16), true, (this.positionY >> 16) - var4);
           var6 = -var5 + 512 >> 3;
           if (var6 < 16) {
             var6 = 0;
@@ -314,7 +314,7 @@ final class RenderedFootballer extends FootballerAgent {
         var5 = InstrumentNoteMask.field_i * 40 >> 8;
         var6 = InstrumentNoteMask.field_i * 70 >> 8;
         var7 = InstrumentNoteMask.field_i * 10 >> 8;
-        if (th.field_d &&
+        if (FadingSoundSupport.field_d &&
           this.stats.archetype != 4) {
           var8_ref_String__ = new String[]{"action:", "action_time:", "dash_delay"};
           var9_ref_String__ = new String[]{Integer.toString(this.action), Integer.toString(this.actionTime), Integer.toString(this.dashCooldown)};
@@ -387,11 +387,11 @@ final class RenderedFootballer extends FootballerAgent {
           this.renderModel(var2, var8, 128, 190, (byte) -91);
           TeamManagementScreen.e(119);
           if (this.field_T) {
-            eo.a(AvailabilityCheckRequest.field_f, -16777215);
-            eo.a(AvailabilityCheckRequest.field_f, -16777214);
-            eo.a(AvailabilityCheckRequest.field_f, -16777215);
-            eo.a(AvailabilityCheckRequest.field_f, -16777214);
-            eo.a(AvailabilityCheckRequest.field_f, -16777215);
+            SoftwareDrawingSupport.a(AvailabilityCheckRequest.field_f, -16777215);
+            SoftwareDrawingSupport.a(AvailabilityCheckRequest.field_f, -16777214);
+            SoftwareDrawingSupport.a(AvailabilityCheckRequest.field_f, -16777215);
+            SoftwareDrawingSupport.a(AvailabilityCheckRequest.field_f, -16777214);
+            SoftwareDrawingSupport.a(AvailabilityCheckRequest.field_f, -16777215);
             for (var9_int = 0; AvailabilityCheckRequest.field_f.field_y.length > var9_int; var9_int++) {
               if (AvailabilityCheckRequest.field_f.field_y[var9_int] > 0) {
                 AvailabilityCheckRequest.field_f.field_y[var9_int] = 0;
@@ -824,7 +824,7 @@ final class RenderedFootballer extends FootballerAgent {
     final static void a(int param0, int param1, boolean param2, int param3, int param4, int param5, boolean param6, int param7, int param8, boolean param9, boolean param10, boolean param11, int param12, int param13) {
         UrlRequest.field_e = null;
         NetworkGameClient.b(true);
-        param11 = in.a(param4, 50, param5, param11, param13, param12, param1);
+        param11 = UiInputRoutingSupport.routePointerInput(param4, 50, param5, param11, param13, param12, param1);
         MatchTransitionScreen.a(false, param7, param9, param8, param10, param6, param5, param11, param3, param2);
         StringCursor.a(param9, false, param8);
         if (param0 >= -42) {
@@ -902,7 +902,7 @@ final class RenderedFootballer extends FootballerAgent {
             var7 = this.field_bb - this.positionY >> 16;
             var8 = -this.height + this.field_X >> 16;
             var9 = var8 * var8 + (var6 * var6 + var7 * var7);
-            if (var9 > ds.field_c) {
+            if (var9 > ModelMaterialDecoder.field_c) {
               this.field_Z = true;
               return;
             }

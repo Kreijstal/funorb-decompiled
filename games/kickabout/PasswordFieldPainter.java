@@ -217,14 +217,14 @@ final class PasswordFieldPainter extends BeveledTextPainter {
 
     final static QuickChatCommandType[] getQuickChatCommandTypes(int param0) {
         if (param0 == -27666) {
-          return new QuickChatCommandType[]{DiskCacheWorker.field_c, IconLabel.field_yb, um.field_c, SocketArchiveNetworkClient.field_t, FormationAgent.field_h, ConsoleParseException.field_e, vp.field_o, MatchingTextValidator.field_j, DebugConsole.field_r, IconButtonPainter.field_e, LinkTextPainter.field_b, uq.field_d, BallAgent.field_z, StreetSceneryLoader.field_l};
+          return new QuickChatCommandType[]{DiskCacheWorker.field_c, IconLabel.field_yb, um.field_c, SocketArchiveNetworkClient.field_t, FormationAgent.field_h, ConsoleParseException.field_e, vp.field_o, MatchingTextValidator.field_j, DebugConsole.field_r, IconButtonPainter.field_e, LinkTextPainter.field_b, ChatInputState.field_d, BallAgent.field_z, StreetSceneryLoader.field_l};
         }
         field_A = true;
-        return new QuickChatCommandType[]{DiskCacheWorker.field_c, IconLabel.field_yb, um.field_c, SocketArchiveNetworkClient.field_t, FormationAgent.field_h, ConsoleParseException.field_e, vp.field_o, MatchingTextValidator.field_j, DebugConsole.field_r, IconButtonPainter.field_e, LinkTextPainter.field_b, uq.field_d, BallAgent.field_z, StreetSceneryLoader.field_l};
+        return new QuickChatCommandType[]{DiskCacheWorker.field_c, IconLabel.field_yb, um.field_c, SocketArchiveNetworkClient.field_t, FormationAgent.field_h, ConsoleParseException.field_e, vp.field_o, MatchingTextValidator.field_j, DebugConsole.field_r, IconButtonPainter.field_e, LinkTextPainter.field_b, ChatInputState.field_d, BallAgent.field_z, StreetSceneryLoader.field_l};
     }
 
     PasswordFieldPainter(int param0) {
-        this(gf.field_a, param0);
+        this(ModelMaterial.field_a, param0);
     }
 
     public static void releaseStatics(int param0) {

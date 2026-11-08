@@ -73,14 +73,14 @@ abstract class GameLoopApplet extends NetworkGameClient implements OverlayLayer 
         if (SplashScreen.field_m != null &&
           SplashScreen.field_m.field_b) {
           UiWidget.h(0);
-          ph.a((byte) -122);
+          AudioOutputSupport.a((byte) -122);
         }
         stackIn_6_1 = 0;
         stackIn_7_2 = (SplashScreen.field_m != null);
         this.c(stackIn_6_1, stackIn_7_2);
-        if (nd.field_c) {
+        if (PitchBoundaryCacheState.field_c) {
           NetworkGameClient.field_t.bindArchives(7312);
-          nd.field_c = false;
+          PitchBoundaryCacheState.field_c = false;
         }
         if (uf.c(608)) {
           this.n(-93);
@@ -141,7 +141,7 @@ abstract class GameLoopApplet extends NetworkGameClient implements OverlayLayer 
             var3 = 0;
           }
           if (var3 != 0) {
-            ws.a((byte) -113);
+            AccountNameCharacterSupport.a((byte) -113);
           }
         }
     }
@@ -198,7 +198,7 @@ abstract class GameLoopApplet extends NetworkGameClient implements OverlayLayer 
                 if (var3 != 2) {
                   this.update(param0 ^ -18870, false);
                 } else {
-                  AppScreen.openQuitPage(param0 + 1477, so.a(-79));
+                  AppScreen.openQuitPage(param0 + 1477, AppletContextSupport.getActiveApplet(-79));
                   this.update(param0 ^ -18870, false);
                 }
               }
@@ -232,7 +232,7 @@ abstract class GameLoopApplet extends NetworkGameClient implements OverlayLayer 
                     }
                     var4 = 0;
                     while (UrlRequest.field_g.size() > var4) {
-                      if (((OverlayLayer) (UrlRequest.field_g.elementAt(var4))).handleKeyTyped(param0 - 7345, FixedQuaternion.field_e, il.field_c)) {
+                      if (((OverlayLayer) (UrlRequest.field_g.elementAt(var4))).handleKeyTyped(param0 - 7345, FixedQuaternion.field_e, ClassDescriptorSupport.field_c)) {
                         break;
                       }
                       var4++;
@@ -312,13 +312,13 @@ abstract class GameLoopApplet extends NetworkGameClient implements OverlayLayer 
         RuntimeException var1 = null;
         var2 = Kickabout.field_G;
         try {
-          wk.field_d = new Sprite[ig.field_a.length];
+          ClubStateFactory.field_d = new Sprite[ig.field_a.length];
           ValidationIndicator.field_G = new Sprite[ig.field_a.length];
           if (param0 != -10) {
             return;
           }
           for (var1_int = 0; ig.field_a.length > var1_int; var1_int++) {
-            wk.field_d[var1_int] = AnimationClip.a(16729156, TrinketShopDialog.b((int) param0, 85), ig.field_a[var1_int]);
+            ClubStateFactory.field_d[var1_int] = AnimationClip.a(16729156, TrinketShopDialog.b((int) param0, 85), ig.field_a[var1_int]);
             ValidationIndicator.field_G[var1_int] = AnimationClip.a(4521796, -92, ig.field_a[var1_int]);
           }
           return;
@@ -337,7 +337,7 @@ abstract class GameLoopApplet extends NetworkGameClient implements OverlayLayer 
         }
         param0 = param0 >> 8;
         param1 = param1 >> 8;
-        return pc.a(param1 * param1 + param0 * param0, -524289);
+        return DisplayNameUiSupport.a(param1 * param1 + param0 * param0, -524289);
     }
 
     public static void q(int param0) {
@@ -355,8 +355,8 @@ abstract class GameLoopApplet extends NetworkGameClient implements OverlayLayer 
         int var2;
         int var3;
         var3 = Kickabout.field_G;
-        while (dr.a(-125, IntTripleCommand.field_A)) {
-          if (this.handlePacket(so.field_b, un.field_e, 1)) {
+        while (ClassNameSupport.a(-125, IntTripleCommand.field_A)) {
+          if (this.handlePacket(AppletContextSupport.field_b, un.field_e, 1)) {
             continue;
           }
           this.dispatchServerPacket(95);

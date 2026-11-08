@@ -43,7 +43,7 @@ final class et {
             var7 = stackIn_12_0;
             un.field_d.d(param1.toLowerCase(), var7 + (SoftwareRasterizer.field_g >> 1), -13 + (SoftwareRasterizer.field_f + var7), 0, -1);
             TeamManagementScreen.e(123);
-            sd.a(var9[var5], (byte) -51);
+            SpriteBackgroundSupport.fillTransparentBackground(var9[var5], (byte) -51);
           }
           stackIn_14_0 = var4;
           return stackIn_14_0;

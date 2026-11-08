@@ -18,7 +18,7 @@ final class LineupView extends MatchPhaseView {
     private int field_l;
     static IndexedSprite[][] field_s;
     private int field_w;
-    static ic field_m;
+    static RegistrationRequestState field_m;
     static ArgbSprite field_x;
     static String field_n;
 
@@ -111,8 +111,8 @@ final class LineupView extends MatchPhaseView {
     private final UiLayoutNode a(int param0, int param1, byte param2) {
         UiLayoutNode var5 = new UiLayoutNode();
         UiLayoutNode var4 = var5;
-        var5.field_s = ws.field_b[param0][param1] * 147 / 896 - 26;
-        var5.field_J = ws.field_d[param0][param1] * 220 / 1344 - 37;
+        var5.field_s = AccountNameCharacterSupport.field_b[param0][param1] * 147 / 896 - 26;
+        var5.field_J = AccountNameCharacterSupport.field_d[param0][param1] * 220 / 1344 - 37;
         var4.field_mb = 75;
         var4.field_q = 52;
         if (param2 != -75) {
@@ -137,7 +137,7 @@ final class LineupView extends MatchPhaseView {
             var5 = (java.applet.Applet) null;
             LineupView.a(43, (String[]) null, 37, (java.applet.Applet) null, -63, -56);
           }
-          var4 = us.field_j;
+          var4 = TutorialCaptionSupport.field_j;
           stackIn_8_0 = (var3_int > param1.field_F) && (param1.field_T < var4) && (var3_int < param1.field_F + param1.field_q) && (param1.field_mb + param1.field_T > var4);
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -198,8 +198,8 @@ final class LineupView extends MatchPhaseView {
               !var11.field_Gb) {
               var11.field_F = -(var11.field_q >> 1) + ArrayWidgetContainer.field_x;
               var11.field_s = -(var11.field_q >> 1) + ArrayWidgetContainer.field_x;
-              var11.field_T = us.field_j - (var11.field_mb >> 1);
-              var11.field_J = us.field_j - (var11.field_mb >> 1);
+              var11.field_T = TutorialCaptionSupport.field_j - (var11.field_mb >> 1);
+              var11.field_J = TutorialCaptionSupport.field_j - (var11.field_mb >> 1);
               this.field_l = var3;
               this.field_p = var3;
             } else {
@@ -457,7 +457,7 @@ final class LineupView extends MatchPhaseView {
             SoftwareRasterizer.clearFramebuffer();
             ConsoleTokenCursor.field_d.d(this.field_a.field_S[var5_int].toLowerCase(), SoftwareRasterizer.field_g >> 1, -1 + SoftwareRasterizer.field_f, 16777062, -1);
             TeamManagementScreen.e(param0 + 116);
-            eo.a(QuickChatCommandType.field_b, 65793);
+            SoftwareDrawingSupport.a(QuickChatCommandType.field_b, 65793);
             QuickChatCommandType.field_b.c(-(QuickChatCommandType.field_b.field_o >> 1) + var6, var7 - QuickChatCommandType.field_b.field_v);
           }
         }
@@ -494,7 +494,7 @@ final class LineupView extends MatchPhaseView {
               }
             }
             if (var7 != -1) {
-              var5 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, ss.field_i, new String[]{Integer.toString(1 + var6), Integer.toString(var7 + 1)});
+              var5 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, UiKeyRoutingSupport.field_i, new String[]{Integer.toString(1 + var6), Integer.toString(var7 + 1)});
             } else {
               var5 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, HighScoreSubmission.field_p, new String[]{Integer.toString(var6 + 1)});
             }
@@ -537,7 +537,7 @@ final class LineupView extends MatchPhaseView {
           var6 = param3.getParameter("currency");
           if (var6 != null &&
             ClubState.a((byte) 15, (CharSequence) ((Object) var6))) {
-            rr.a(10, (CharSequence) ((Object) var6));
+            TextEntrySupport.parseDecimalInt(10, (CharSequence) ((Object) var6));
           }
           StringCursor.field_b = new Sprite[param1.length];
           for (var7 = 0; param1.length > var7; var7++) {
@@ -588,7 +588,7 @@ final class LineupView extends MatchPhaseView {
 
     final boolean handleKey(char param0, int param1, int param2) {
         if (param1 != 1670) {
-          field_m = (ic) null;
+          field_m = (RegistrationRequestState) null;
         }
         if (this.isLocalParticipantActive((byte) 13) && GameplayHelpScreen.field_G[82] &&
           param2 == 48) {
@@ -723,7 +723,7 @@ final class LineupView extends MatchPhaseView {
 
     static {
         field_y = new ListingRowCache();
-        field_m = new ic();
+        field_m = new RegistrationRequestState();
         field_n = "Press TAB to chat or F10 to open Quick Chat.";
     }
 }

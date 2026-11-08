@@ -198,9 +198,9 @@ final class SetLagCommand extends ConsoleCommand {
         }
         String var1 = TextFieldNode.a(-110);
         IsSixCommand.field_E = new LoginForm(var1, (String) null, param0, false, false);
-        RankingsRequest.field_l.a(we.field_a, false);
-        we.field_a.a((byte) -126, (UiWidget) (IsSixCommand.field_E));
-        we.field_a.finishTransition(4000);
+        RankingsRequest.field_l.a(ClientUiUpdateSupport.field_a, false);
+        ClientUiUpdateSupport.field_a.a((byte) -126, (UiWidget) (IsSixCommand.field_E));
+        ClientUiUpdateSupport.field_a.finishTransition(4000);
     }
 
     final static ResourceArchive a(int param0, byte param1, int param2, boolean param3, boolean param4, boolean param5) {

@@ -10,10 +10,10 @@ final class fa extends IntrusiveNode {
     static String field_e;
     static String[] field_g;
 
-    final static void b(int param0) {
+    final static void closeQuickChat(int param0) {
         DebugConsole.field_s = false;
-        if (dr.field_g != null) {
-          dr.field_g.resetSelection(5075);
+        if (ClassNameSupport.field_g != null) {
+          ClassNameSupport.field_g.resetSelection(5075);
         }
         int var1 = -60 % ((-56 - param0) / 56);
         if (0 != NodeHashTableIterator.field_b) {
@@ -26,7 +26,7 @@ final class fa extends IntrusiveNode {
         throw new Error();
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_g = null;
         field_k = null;
         field_h = null;
@@ -48,7 +48,7 @@ final class fa extends IntrusiveNode {
             stackIn_2_0 = (Sprite[]) null;
             return stackIn_2_0;
           }
-          if (cu.a(param2, param3, param0, 122)) {
+          if (cu.decodeSpriteSheetFromArchive(param2, param3, param0, 122)) {
             stackIn_7_0 = ModalPanel.i((byte) 78);
             return stackIn_7_0;
           }

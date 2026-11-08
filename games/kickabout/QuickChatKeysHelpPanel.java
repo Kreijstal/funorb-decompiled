@@ -147,10 +147,10 @@ final class QuickChatKeysHelpPanel extends UiLayoutNode {
           var9.field_A = 1;
           var10 = 50;
           var11 = 0;
-          for (var12 = 0; var12 < r.field_b.length; var12++) {
+          for (var12 = 0; var12 < ClientProtocolStage.field_b.length; var12++) {
             var13 = new UiLayoutNode(0L, param3, MatchTransitionScreen.field_A[var12]);
-            var14 = new UiLayoutNode(0L, param3, r.field_b[var12]);
-            var15 = param3.field_X.a(r.field_b[var12]);
+            var14 = new UiLayoutNode(0L, param3, ClientProtocolStage.field_b[var12]);
+            var15 = param3.field_X.a(ClientProtocolStage.field_b[var12]);
             if (var15 > var11) {
               var11 = var15;
             }

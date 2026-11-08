@@ -55,7 +55,7 @@ final class HighScoreSubmission extends IntrusiveNode {
               FormationView.b((byte) -116);
               return;
             }
-            var6 = -var2.field_n + ms.field_b;
+            var6 = -var2.field_n + MusicVolumeSupport.field_b;
             var12 = var5.resultValues;
             var11 = var12;
             var7 = var11;

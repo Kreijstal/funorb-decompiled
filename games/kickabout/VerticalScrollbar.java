@@ -173,9 +173,9 @@ final class VerticalScrollbar extends UiLayoutNode {
         }
         WhirlpoolHasher.field_m.addChild((byte) -114, TickClock.field_d);
         tn.field_d = new SocialTabsPanel(ButtonMenuScreen.field_z, WhirlpoolHasher.field_m);
-        ss.field_c = new UiLayoutNode((long)param0, (UiLayoutNode) null);
-        ss.field_c.addChild((byte) -127, (UiLayoutNode) (tn.field_d.tabs));
-        ss.field_c.addChild((byte) -116, MouseWheelInput.field_a);
+        UiKeyRoutingSupport.field_c = new UiLayoutNode((long)param0, (UiLayoutNode) null);
+        UiKeyRoutingSupport.field_c.addChild((byte) -127, (UiLayoutNode) (tn.field_d.tabs));
+        UiKeyRoutingSupport.field_c.addChild((byte) -116, MouseWheelInput.field_a);
         CipherPacketBuffer.c(false);
     }
 
@@ -335,9 +335,9 @@ final class VerticalScrollbar extends UiLayoutNode {
         int var10 = 0;
         var10 = Kickabout.field_G;
         try {
-          var1_int = -GameSoundEffect.field_k + so.field_e;
+          var1_int = -GameSoundEffect.field_k + AppletContextSupport.field_e;
           GameSoundEffect.field_k = RasterStateSnapshot.field_k - (var1_int >> 1);
-          so.field_e = GameSoundEffect.field_k + var1_int;
+          AppletContextSupport.field_e = GameSoundEffect.field_k + var1_int;
           SumIntegersCommand.field_I = -(NameSuggestionsPanel.field_G >> 1) + GameResourceLoader.field_e;
           var2 = SumIntegersCommand.field_I;
           for (var3 = param0; FootballerPreview.field_a.length > var3; var3++) {
@@ -362,7 +362,7 @@ final class VerticalScrollbar extends UiLayoutNode {
                 stackIn_15_0 = WorldSpriteDecoration.field_d;
               }
               var9 = stackIn_15_0;
-              var2 = var2 + of.field_a;
+              var2 = var2 + FriendRemovalSupport.field_a;
               if (var9 != null) {
                 var9.drawPanel(var8 - TextFieldNode.field_zb, ScrollContainer.field_zb + (IsSixCommand.field_H << 1), var2, (TextFieldNode.field_zb << 1) + var7, 3);
               }
@@ -373,7 +373,7 @@ final class VerticalScrollbar extends UiLayoutNode {
               var2 = var2 + AccountMessagePanel.field_H;
             } else {
               UrlRequest.field_a.a(var6, var8, var2 + SoundStreamHandle.field_g, var5, -1);
-              var2 = var2 + (IsSixCommand.field_H + of.field_a + ScrollContainer.field_zb);
+              var2 = var2 + (IsSixCommand.field_H + FriendRemovalSupport.field_a + ScrollContainer.field_zb);
             }
           }
           return;
@@ -575,11 +575,11 @@ final class VerticalScrollbar extends UiLayoutNode {
               var26 = PasswordValidator.a(var3Lifetime1, false);
               if (var26 != null) {
                 if (var26.field_Fb) {
-                  fh.field_b = fh.field_b - 1;
+                  SharedSpriteTables.field_b = SharedSpriteTables.field_b - 1;
                   var26.field_Fb = false;
                 }
                 if (var5 != 0) {
-                  var26.field_Jb = mg.field_c;
+                  var26.field_Jb = PlayerInputFactory.field_c;
                   var26.field_Mb = var5;
                 } else {
                   var26.c((byte) -109);
@@ -595,14 +595,14 @@ final class VerticalScrollbar extends UiLayoutNode {
                 var15.unlinkSecondary(-5);
                 var15 = (LobbyPlayerRow) (PasswordFieldPainter.field_B.c(33));
               }
-              fh.field_b = 0;
+              SharedSpriteTables.field_b = 0;
               return;
             }
             if (var2 == 8) {
               var3_int = ((PacketBuffer) ((Object) var1)).readUnsignedShort((byte) 81);
               var4_ref_qb = (GameSetupPanel) (SortCriterion.field_f.a(-3611, (long)var3_int));
               if (var4_ref_qb == null) {
-                var4_ref_qb = new GameSetupPanel(ss.field_j);
+                var4_ref_qb = new GameSetupPanel(UiKeyRoutingSupport.field_j);
                 SortCriterion.field_f.a(var4_ref_qb, (byte) -4, (long)var3_int);
               }
               GameModesHelpScreen.a(true, 116, var1, var4_ref_qb);
@@ -616,7 +616,7 @@ final class VerticalScrollbar extends UiLayoutNode {
               if (var31 != null) {
                 if (var4 != 0) {
                   var31.field_Ab = var4;
-                  var31.field_Db = mg.field_c;
+                  var31.field_Db = PlayerInputFactory.field_c;
                 } else {
                   var31.c((byte) -109);
                 }
@@ -647,7 +647,7 @@ final class VerticalScrollbar extends UiLayoutNode {
                 var6_ref = var13;
                 if (var4Lifetime1 != 0) {
                   var23_ref.field_Ab = var4Lifetime1;
-                  var23_ref.field_Db = mg.field_c;
+                  var23_ref.field_Db = PlayerInputFactory.field_c;
                 }
                 var13.field_hc = false;
                 FullscreenErrorDialog.a(var23_ref, (byte) -119);
@@ -687,7 +687,7 @@ final class VerticalScrollbar extends UiLayoutNode {
                     }
                     if (var5Lifetime1 != 0) {
                       var22.field_Mb = var5Lifetime1;
-                      var22.field_Jb = mg.field_c;
+                      var22.field_Jb = PlayerInputFactory.field_c;
                     } else {
                       var22.c((byte) -109);
                     }
@@ -728,12 +728,12 @@ final class VerticalScrollbar extends UiLayoutNode {
                 if (var12 != null) {
                   if (var5Lifetime1Lifetime1 != 0) {
                     var12.field_Mb = var5Lifetime1Lifetime1;
-                    var12.field_Jb = mg.field_c;
+                    var12.field_Jb = PlayerInputFactory.field_c;
                   }
                   if (var2 != 15) {
                     if (var19.field_Fb) {
                       var19.field_Fb = false;
-                      fh.field_b = fh.field_b - 1;
+                      SharedSpriteTables.field_b = SharedSpriteTables.field_b - 1;
                     }
                   } else {
                     var12.field_Gb = false;
@@ -748,7 +748,7 @@ final class VerticalScrollbar extends UiLayoutNode {
                 if (14 != var2) {
                   if (!var18.field_Fb) {
                     var18.field_Fb = true;
-                    fh.field_b = fh.field_b + 1;
+                    SharedSpriteTables.field_b = SharedSpriteTables.field_b + 1;
                   }
                 } else {
                   var18.field_Gb = true;
@@ -782,7 +782,7 @@ final class VerticalScrollbar extends UiLayoutNode {
             if (var3_ref_heLifetime1.field_Gb ||
               var3_ref_heLifetime1.field_Fb) {
               if (var3_ref_heLifetime1.field_Fb) {
-                fh.field_b = fh.field_b - 1;
+                SharedSpriteTables.field_b = SharedSpriteTables.field_b - 1;
                 var3_ref_heLifetime1.field_Fb = false;
               }
               var3_ref_heLifetime1.field_Gb = false;
@@ -798,7 +798,7 @@ final class VerticalScrollbar extends UiLayoutNode {
             PlayerContextMenu.field_i = null;
           } else {
             var3_intLifetime1 = ((PacketBuffer) ((Object) var1)).readUnsignedShort((byte) 81);
-            PlayerContextMenu.field_i = new GameSetupPanel(ss.field_j);
+            PlayerContextMenu.field_i = new GameSetupPanel(UiKeyRoutingSupport.field_j);
             PlayerContextMenu.field_i.a((long)var3_intLifetime1, (byte) -113);
             GameModesHelpScreen.a(false, 114, var1, PlayerContextMenu.field_i);
             TextFieldNode.field_Ib = 0L;
@@ -808,7 +808,7 @@ final class VerticalScrollbar extends UiLayoutNode {
             ArchiveSource.field_b = null;
           } else {
             if (null == ArchiveSource.field_b) {
-              ArchiveSource.field_b = new GameSetupPanel(ss.field_j);
+              ArchiveSource.field_b = new GameSetupPanel(UiKeyRoutingSupport.field_j);
             }
           }
           if (var2 != 3) {

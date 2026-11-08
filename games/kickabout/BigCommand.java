@@ -6,8 +6,8 @@ final class BigCommand extends ConsoleCommand {
         if (param0 != -26370) {
           return (String) null;
         }
-        if (PlayerModelPreview.field_f == wk.field_f) {
-          return qr.field_f;
+        if (PlayerModelPreview.field_f == ClubStateFactory.field_f) {
+          return SessionUrlSupport.field_f;
         }
         if (PlayerModelPreview.field_f == mj.field_a) {
           return pr.field_c;
@@ -15,7 +15,7 @@ final class BigCommand extends ConsoleCommand {
         if (!DualLinkDequeIterator.field_e.isComplete((byte) -80)) {
           return pr.field_c;
         }
-        return ep.field_b;
+        return TutorialMessages.field_b;
     }
 
     final ConsoleValue execute(byte param0, ConsoleValue[] param1) {

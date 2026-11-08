@@ -126,7 +126,7 @@ final class GoalkeeperAiSupport {
             if (ArrayWidgetContainer.tryKeeperDive(param1.field_V, var19, (byte) -75, param2)) {
               return;
             }
-            gg.a(param2, 0, param1.field_V);
+            SocialPlayerRow.a(param2, 0, param1.field_V);
             NamedValueEntry.steerTowardsPoint(4, TrinketSlot.field_zb[0], var18, TrinketSlot.field_zb[1]);
             if (var19.action == 0 &&
               0 == var19.directionMask) {
@@ -173,7 +173,7 @@ final class GoalkeeperAiSupport {
           AuctionLogEntry.field_e = param0;
           AccountRegistrationPanel.field_D = QuickChatMenuBuilder.getNewestChatMessage(17475);
           AppScreen.field_d = new IntrusiveDeque();
-          bk.field_c = new FadingChatMessage[6];
+          CalendarSupport.field_c = new FadingChatMessage[6];
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "hv.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

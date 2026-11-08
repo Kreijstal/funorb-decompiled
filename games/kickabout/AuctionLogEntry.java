@@ -75,7 +75,7 @@ final class AuctionLogEntry extends IntrusiveNode {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!cu.a(param2, param4, param3, 123)) {
+          if (!cu.decodeSpriteSheetFromArchive(param2, param4, param3, 123)) {
             return null;
           }
           if (param0 != 10) {
@@ -112,7 +112,7 @@ final class AuctionLogEntry extends IntrusiveNode {
           }
           try {
             var2 = new java.net.URL(param0.getCodeBase(), "subscribe.ws");
-            param0.getAppletContext().showDocument(qr.a(param0, var2, 3), "_top");
+            param0.getAppletContext().showDocument(SessionUrlSupport.decorateSessionUrl(param0, var2, 3), "_top");
           } catch (Exception exception) {
             exception.printStackTrace();
           }
@@ -163,7 +163,7 @@ final class AuctionLogEntry extends IntrusiveNode {
             return stackIn_20_0;
           }
           if (param0 == 11) {
-            stackIn_24_0 = go.field_a;
+            stackIn_24_0 = PitchProjectionSupport.field_a;
             return stackIn_24_0;
           }
           if (param2 < 101) {

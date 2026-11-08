@@ -44,10 +44,10 @@ final class TournamentLobbyScreen extends AppScreen {
     private int field_E;
     private int field_u;
     static int field_V;
-    static r field_N;
+    static ClientProtocolStage field_N;
     private int field_n;
     private int field_k;
-    static ld field_F;
+    static AccountInputValidationResult field_F;
 
     private final void drawTabButtons(int param0) {
         int var3 = 0;
@@ -57,7 +57,7 @@ final class TournamentLobbyScreen extends AppScreen {
         if (null == this.field_X) {
           return;
         }
-        SoftwareRasterizer.fillRoundedRectangleBlended(40, g.field_a.field_J - 42, 140 * this.field_X.length, 50, 8, 65793, 128);
+        SoftwareRasterizer.fillRoundedRectangleBlended(40, GrayscalePaletteSupport.field_a.field_J - 42, 140 * this.field_X.length, 50, 8, 65793, 128);
         var2 = -9 / ((param0 - 35) / 36);
         for (var3 = 0; var3 < this.field_X.length; var3++) {
           if (this.a(var3, -1)) {
@@ -83,7 +83,7 @@ final class TournamentLobbyScreen extends AppScreen {
         var6 = Kickabout.field_G;
         try {
           if (param1 != -7465) {
-            field_N = (r) null;
+            field_N = (ClientProtocolStage) null;
           }
           var2 = MonotonicClock.readCookie(0, "jagex-last-login-method", param0);
           if (var2 == null) {
@@ -116,16 +116,16 @@ final class TournamentLobbyScreen extends AppScreen {
 
     private final void selectStatTab(int param0, boolean param1) {
         if (param0 == 54) {
-          ph.field_a = 0;
+          AudioOutputSupport.field_a = 0;
         }
         if (param0 == 53) {
-          ph.field_a = 1;
+          AudioOutputSupport.field_a = 1;
         }
         if (param1) {
           return;
         }
         if (param0 == 52) {
-          ph.field_a = 2;
+          AudioOutputSupport.field_a = 2;
         }
         AchievementSubmission.a((byte) -121);
     }
@@ -139,7 +139,7 @@ final class TournamentLobbyScreen extends AppScreen {
           this.field_Q = new String[var3_int];
           this.field_H = new int[var3_int];
           if (param1) {
-            field_F = (ld) null;
+            field_F = (AccountInputValidationResult) null;
           }
           for (var4 = 0; this.field_Q.length > var4; var4++) {
             this.field_Q[var4] = param0.readString(47);
@@ -209,19 +209,19 @@ final class TournamentLobbyScreen extends AppScreen {
         SoftwareRasterizer.fillRoundedRectangleBlended(-(-60 + this.field_A >> 1) + 320, 10 + var2, -60 + this.field_A, 30, 8, 65793, 128);
         un.field_d.d(ProxyAuthenticationRequiredException.field_f.toUpperCase(), 320, var2 + 30, 16777215, -1);
         var2 += 120;
-        eo.a(250, var2, ArchivePreloader.field_j, this.field_O, (String[]) null, 160, 21, this.field_Q.length, this.field_Q, -1);
+        SoftwareDrawingSupport.a(250, var2, ArchivePreloader.field_j, this.field_O, (String[]) null, 160, 21, this.field_Q.length, this.field_Q, -1);
         var2 = var2 + 32 * this.field_O.length;
         var2 += 20;
         SoftwareRasterizer.fillRoundedRectangleBlended(320 - (this.field_A - 60 >> 1), var2 + 10, -60 + this.field_A, 30, 8, 65793, 128);
-        un.field_d.d(ad.field_b.toUpperCase(), 320, 30 + var2, 16777215, -1);
+        un.field_d.d(LocalizedTextLoader.field_b.toUpperCase(), 320, 30 + var2, 16777215, -1);
         var2 += 120;
-        eo.a(250, var2, d.field_c, this.field_D, (String[]) null, 160, 21, this.field_Q.length, this.field_Q, -1);
+        SoftwareDrawingSupport.a(250, var2, d.field_c, this.field_D, (String[]) null, 160, 21, this.field_Q.length, this.field_Q, -1);
         var2 = var2 + this.field_D.length * param0;
         var2 += 20;
         SoftwareRasterizer.fillRoundedRectangleBlended(320 - (-60 + this.field_A >> 1), var2 + 10, this.field_A - 60, 30, 8, 65793, 128);
         un.field_d.d(TeamSelectionAgent.field_j.toUpperCase(), 320, var2 + 30, 16777215, -1);
         var2 += 120;
-        eo.a(250, var2, SortCriterion.field_g, this.field_Y, new String[]{"", "%"}, 160, 21, this.field_Q.length, this.field_Q, -1);
+        SoftwareDrawingSupport.a(250, var2, SortCriterion.field_g, this.field_Y, new String[]{"", "%"}, 160, 21, this.field_Q.length, this.field_Q, -1);
         var2 = var2 + this.field_Y.length * 32;
         var2 += 20;
         TeamManagementScreen.e(117);
@@ -288,13 +288,13 @@ final class TournamentLobbyScreen extends AppScreen {
         if (0 != this.field_x) {
           this.field_r = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, HuffmanCodec.field_f, new String[]{"<col=FF0000>" + Integer.toString(this.field_x / 50 + 1) + "</col>"});
         }
-        if (0 == ph.field_a) {
+        if (0 == AudioOutputSupport.field_a) {
           this.field_L = 400;
           this.field_C = 560;
         }
         PlayerSurnameSortCriterion.field_o = -1;
         PortraitCacheOrder.field_c = -1;
-        if (ph.field_a == 1) {
+        if (AudioOutputSupport.field_a == 1) {
           if (-1 == PlayerSurnameSortCriterion.field_o) {
             if (null != this.field_T) {
               stackIn_25_0 = this.field_T.length;
@@ -313,7 +313,7 @@ final class TournamentLobbyScreen extends AppScreen {
           }
           this.field_C = stackIn_28_1 + 440;
         }
-        if (ph.field_a == 2) {
+        if (AudioOutputSupport.field_a == 2) {
           this.field_C = 600;
           this.field_L = 400;
         }
@@ -334,7 +334,7 @@ final class TournamentLobbyScreen extends AppScreen {
           }
         }
         if (param1) {
-          this.field_Z.a(-21174, this.tabIndexAt(ArrayWidgetContainer.field_x, 77, us.field_j), this.tabIndexAt(TrinketIcon.field_yb, 88, TabStrip.field_Eb));
+          this.field_Z.a(-21174, this.tabIndexAt(ArrayWidgetContainer.field_x, 77, TutorialCaptionSupport.field_j), this.tabIndexAt(TrinketIcon.field_yb, 88, TabStrip.field_Eb));
           if (this.field_Z.selectedIndex >= 0 &&
             this.field_Z.c(-1)) {
             this.selectStatTab(this.field_X[this.field_Z.selectedIndex].kind, false);
@@ -376,7 +376,7 @@ final class TournamentLobbyScreen extends AppScreen {
           }
           this.field_T[var5_intLifetime4].copyFrom(false, this.field_S[var5_intLifetime4]);
         }
-        if (ph.field_a == 0) {
+        if (AudioOutputSupport.field_a == 0) {
           if (null != this.field_y &&
             this.field_T != null) {
             var5_intLifetime5 = this.field_T.length - 1;
@@ -408,7 +408,7 @@ final class TournamentLobbyScreen extends AppScreen {
             }
           }
         } else {
-          if (ph.field_a == 2) {
+          if (AudioOutputSupport.field_a == 2) {
             stackIn_84_1 = (param1) && (BytePlusOneCommand.field_A >= this.field_m) && (570 + this.field_m >= BytePlusOneCommand.field_A) && (ArchiveManager.field_m >= this.field_u) && (12 + this.field_u >= ArchiveManager.field_m);
             this.field_i = stackIn_84_1;
             if (this.field_h != AchievementSubmission.field_l) {
@@ -511,11 +511,11 @@ final class TournamentLobbyScreen extends AppScreen {
           DelayedServerPacket.a(var4_int, false, -2);
           return true;
         }
-        if (param0 == il.field_h) {
+        if (param0 == ClassDescriptorSupport.field_h) {
           stackIn_10_0 = !(QuickChatCategoryCache.field_e);
           QuickChatCategoryCache.field_e = stackIn_10_0;
         }
-        if (ph.field_a == 2) {
+        if (AudioOutputSupport.field_a == 2) {
           var8 = GameplayHelpScreen.field_G;
           var4 = var8;
           if (!var8[TextPromptDialog.field_Kb]) {
@@ -611,7 +611,7 @@ final class TournamentLobbyScreen extends AppScreen {
               this.field_X[var3] = new MenuButton(120, 7126504, var5[var3]);
             }
             this.field_Z = new MenuSelection(this.field_X.length);
-            this.field_Z.a(true, this.tabIndexAt(ArrayWidgetContainer.field_x, 98, us.field_j), (byte) -127);
+            this.field_Z.a(true, this.tabIndexAt(ArrayWidgetContainer.field_x, 98, TutorialCaptionSupport.field_j), (byte) -127);
           }
           this.readPlayerNames(param0, false);
           this.a(-85, param0);
@@ -799,7 +799,7 @@ final class TournamentLobbyScreen extends AppScreen {
         if (param0 != 8) {
           this.field_x = -76;
         }
-        return -20 + g.field_a.field_J;
+        return -20 + GrayscalePaletteSupport.field_a.field_J;
     }
 
     private final void e(int param0) {
@@ -835,7 +835,7 @@ final class TournamentLobbyScreen extends AppScreen {
         ((CoverageBitmapFont) (Object) stackIn_2_0).d(((StringBuilder) (Object) stackIn_2_1).append(stackIn_3_2).toString(), 320, 50, 16777215, -1);
         AuctionListing.a(640, -22914, 0, 88, 60);
         SoftwareRasterizer.fillRoundedRectangleBlended(224, 66, 372, 50, 8, 65793, 196);
-        un.field_d.d(LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, wk.field_e, new String[]{LobbyGameRecord.field_g[this.field_W].toLowerCase()}), 410, 82, 16777215, -1);
+        un.field_d.d(LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, ClubStateFactory.field_e, new String[]{LobbyGameRecord.field_g[this.field_W].toLowerCase()}), 410, 82, 16777215, -1);
         var2 = 46;
         SoftwareRasterizer.fillRoundedRectangleBlended(var2, 66, 175, 50, 8, 65793, 196);
         un.field_d.d(TexturedPanelPainter.field_g, var2 + 87, 82, 16777215, -1);
@@ -1104,7 +1104,7 @@ final class TournamentLobbyScreen extends AppScreen {
                 stackIn_72_0 = stackIn_69_0[stackIn_69_1[stackIn_70_2]];
               }
               var17_ref_String = stackIn_72_0;
-              eo.a(var15_ref_kp, var16_ref_String, var17_ref_String, var11 - (var5 >> 1), var12 - (var6 >> 1), var5, var6);
+              SoftwareDrawingSupport.a(var15_ref_kp, var16_ref_String, var17_ref_String, var11 - (var5 >> 1), var12 - (var6 >> 1), var5, var6);
             }
           }
           if (var2 - 1 != var14_int) {
@@ -1209,9 +1209,9 @@ final class TournamentLobbyScreen extends AppScreen {
         int var9;
         var9 = Kickabout.field_G;
         AuctionListing.a(-(this.field_A >> 1) + 320 + this.field_A, param0 - 22909, -(this.field_A >> 1) + 320, this.field_n + 20, 20);
-        if (0 != ph.field_a) {
-          if (ph.field_a != 1) {
-            if (ph.field_a == 2) {
+        if (0 != AudioOutputSupport.field_a) {
+          if (AudioOutputSupport.field_a != 1) {
+            if (AudioOutputSupport.field_a == 2) {
               this.drawStatsPanel(32);
             }
           } else {
@@ -1223,13 +1223,13 @@ final class TournamentLobbyScreen extends AppScreen {
         TeamManagementScreen.e(121);
         this.drawTabButtons(param0 ^ 28);
         var3 = 70;
-        var4 = -42 + g.field_a.field_J;
+        var4 = -42 + GrayscalePaletteSupport.field_a.field_J;
         if (param0 != -5) {
           return;
         }
         if (!this.field_K) {
           AuctionListing.a(MarkerSliderPainter.field_n + var3 - 10, -22914, -10 + var3, var4, -18 + var4);
-          cd.a((byte) -127, var4, var3);
+          GuestLoginSupport.a((byte) -127, var4, var3);
           TeamManagementScreen.e(123);
         } else {
           var5 = Math.abs(255 - (int)(MonotonicClock.monotonicMillis(96) / 5L % 512L));
@@ -1239,7 +1239,7 @@ final class TournamentLobbyScreen extends AppScreen {
           SoftwareRasterizer.fillRoundedRectangleBlended(var3, var4 - 11, 33 + MarkerSliderPainter.field_n, 20, 6, var6, FriendsListPanel.a(false, (byte) -96));
           ScrollPane.a(var4, -123, 14 + var3);
           ScrollPane.a(var4, param0 + 113, MarkerSliderPainter.field_n + (30 + var3));
-          var8 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, NanoTickClock.field_o, new String[]{mk.field_b[il.field_h]});
+          var8 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, NanoTickClock.field_o, new String[]{mk.field_b[ClassDescriptorSupport.field_h]});
           ConsoleTokenCursor.field_d.a(var8, var3 + 20, var4, var7, -1);
           TeamManagementScreen.e(118);
         }
@@ -1249,7 +1249,7 @@ final class TournamentLobbyScreen extends AppScreen {
         field_F = null;
         field_N = null;
         if (!param0) {
-          field_F = (ld) null;
+          field_F = (AccountInputValidationResult) null;
         }
         field_j = null;
     }
@@ -1320,7 +1320,7 @@ final class TournamentLobbyScreen extends AppScreen {
     }
 
     static {
-        field_N = new r();
-        field_F = new ld();
+        field_N = new ClientProtocolStage();
+        field_F = new AccountInputValidationResult();
     }
 }

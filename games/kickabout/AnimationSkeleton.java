@@ -39,7 +39,7 @@ final class AnimationSkeleton extends IntrusiveNode {
         }
         try {
           AuctionItem.field_e = 6;
-          pc.field_a = param1;
+          DisplayNameUiSupport.field_a = param1;
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "je.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -83,8 +83,8 @@ final class AnimationSkeleton extends IntrusiveNode {
               return 10;
             }
             if (!HoverTooltip.field_Eb &&
-              ld.field_f.pixelX(-120) < 248 &&
-              400 > ld.field_f.pixelY(true)) {
+              AccountInputValidationResult.field_f.pixelX(-120) < 248 &&
+              400 > AccountInputValidationResult.field_f.pixelY(true)) {
               return 11;
             }
           } else {

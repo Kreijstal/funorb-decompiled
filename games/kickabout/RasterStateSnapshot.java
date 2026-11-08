@@ -144,7 +144,7 @@ final class RasterStateSnapshot extends IntrusiveNode {
             var1Lifetime1.unlinkSecondary(param0 - 106);
             var1Lifetime1 = HighScoreQuery.field_m.a(0);
           }
-          ts.field_d = param0;
+          PitchCoordinateSupport.field_d = param0;
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "qg.A(" + param0 + ')');
         }

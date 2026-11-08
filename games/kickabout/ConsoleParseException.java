@@ -52,7 +52,7 @@ final class ConsoleParseException extends Exception {
             if (!WriteIntegersCommand.field_C) {
               var5 = LineupView.field_n;
             } else {
-              var5 = hp.field_c;
+              var5 = ChatComposeMode.field_c;
             }
           }
           var7 = (String) null;
@@ -74,7 +74,7 @@ final class ConsoleParseException extends Exception {
           if (param2 != 14594) {
             field_e = (QuickChatCommandType) null;
           }
-          InstrumentEnvelope.field_c = new UiLayoutNode(0L, ArchiveRequest.field_o, rr.field_h);
+          InstrumentEnvelope.field_c = new UiLayoutNode(0L, ArchiveRequest.field_o, TextEntrySupport.field_h);
           MySquadScreen.field_N = new UiLayoutNode(0L, ArchiveRequest.field_o);
           ContentTransitionDialog.field_Y.addChild((byte) -111, QuickChatMenuBuilder.field_e);
           ContentTransitionDialog.field_Y.addChild((byte) -121, PagedHelpScreen.field_D);

@@ -14,23 +14,23 @@ final class gs {
         if (param0 != -106) {
           gs.a((byte) -44);
         }
-        if (!dr.field_a) {
+        if (!ClassNameSupport.field_a) {
           return;
         }
         if (ArrayWidgetContainer.field_x != -1) {
-          bw.field_e[2].c(us.field_k + (-CheckboxPainter.field_k + ArrayWidgetContainer.field_x - 6 + 1), -1 + (us.field_j - AvailabilityCheckRequest.field_h));
-          bw.field_e[3].c(ArrayWidgetContainer.field_x + 6 - us.field_k, -AvailabilityCheckRequest.field_h + (us.field_j - 1));
-          bw.field_e[0].c(-AvailabilityCheckRequest.field_h + (ArrayWidgetContainer.field_x - 1), 1 + (us.field_k - 6) + (-CheckboxPainter.field_k + us.field_j));
-          bw.field_e[1].c(-AvailabilityCheckRequest.field_h + (ArrayWidgetContainer.field_x - 1), -us.field_k + 6 + us.field_j);
+          SceneSpriteFactory.field_e[2].c(TutorialCaptionSupport.field_k + (-CheckboxPainter.field_k + ArrayWidgetContainer.field_x - 6 + 1), -1 + (TutorialCaptionSupport.field_j - AvailabilityCheckRequest.field_h));
+          SceneSpriteFactory.field_e[3].c(ArrayWidgetContainer.field_x + 6 - TutorialCaptionSupport.field_k, -AvailabilityCheckRequest.field_h + (TutorialCaptionSupport.field_j - 1));
+          SceneSpriteFactory.field_e[0].c(-AvailabilityCheckRequest.field_h + (ArrayWidgetContainer.field_x - 1), 1 + (TutorialCaptionSupport.field_k - 6) + (-CheckboxPainter.field_k + TutorialCaptionSupport.field_j));
+          SceneSpriteFactory.field_e[1].c(-AvailabilityCheckRequest.field_h + (ArrayWidgetContainer.field_x - 1), -TutorialCaptionSupport.field_k + 6 + TutorialCaptionSupport.field_j);
           return;
         }
-        if (us.field_j == -1) {
+        if (TutorialCaptionSupport.field_j == -1) {
           return;
         }
-        bw.field_e[2].c(us.field_k + (-CheckboxPainter.field_k + ArrayWidgetContainer.field_x - 6 + 1), -1 + (us.field_j - AvailabilityCheckRequest.field_h));
-        bw.field_e[3].c(ArrayWidgetContainer.field_x + 6 - us.field_k, -AvailabilityCheckRequest.field_h + (us.field_j - 1));
-        bw.field_e[0].c(-AvailabilityCheckRequest.field_h + (ArrayWidgetContainer.field_x - 1), 1 + (us.field_k - 6) + (-CheckboxPainter.field_k + us.field_j));
-        bw.field_e[1].c(-AvailabilityCheckRequest.field_h + (ArrayWidgetContainer.field_x - 1), -us.field_k + 6 + us.field_j);
+        SceneSpriteFactory.field_e[2].c(TutorialCaptionSupport.field_k + (-CheckboxPainter.field_k + ArrayWidgetContainer.field_x - 6 + 1), -1 + (TutorialCaptionSupport.field_j - AvailabilityCheckRequest.field_h));
+        SceneSpriteFactory.field_e[3].c(ArrayWidgetContainer.field_x + 6 - TutorialCaptionSupport.field_k, -AvailabilityCheckRequest.field_h + (TutorialCaptionSupport.field_j - 1));
+        SceneSpriteFactory.field_e[0].c(-AvailabilityCheckRequest.field_h + (ArrayWidgetContainer.field_x - 1), 1 + (TutorialCaptionSupport.field_k - 6) + (-CheckboxPainter.field_k + TutorialCaptionSupport.field_j));
+        SceneSpriteFactory.field_e[1].c(-AvailabilityCheckRequest.field_h + (ArrayWidgetContainer.field_x - 1), -TutorialCaptionSupport.field_k + 6 + TutorialCaptionSupport.field_j);
     }
 
     final static void d(int param0) {

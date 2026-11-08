@@ -37,7 +37,7 @@ final class BlobSubmission extends IntrusiveNode {
           String var5Lifetime5;
           String var5Lifetime6;
           try {
-            wk.field_b = param2;
+            ClubStateFactory.field_b = param2;
             try {
               var7 = param0.getParameter("cookieprefix");
               var5 = var7;

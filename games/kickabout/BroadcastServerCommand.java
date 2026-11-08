@@ -51,8 +51,8 @@ final class BroadcastServerCommand extends ConsoleCommand {
             stackIn_2_0 = SquadSlotWidget.field_Ib;
             return stackIn_2_0;
           }
-          if (ts.field_d != 2) {
-            stackIn_6_0 = ss.field_h;
+          if (PitchCoordinateSupport.field_d != 2) {
+            stackIn_6_0 = UiKeyRoutingSupport.field_h;
             return stackIn_6_0;
           }
           if (SumIntegersCommand.a((byte) 82, param2)) {

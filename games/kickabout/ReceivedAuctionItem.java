@@ -93,8 +93,8 @@ final class ReceivedAuctionItem extends AuctionItem {
     final static void f(byte param0) {
         MusicPatchNode.b(67);
         GameModesHelpScreen.i((byte) -90);
-        ck.field_b = null;
-        fa.b(47);
+        TextPromptState.field_b = null;
+        fa.closeQuickChat(47);
         if (param0 != 119) {
           ReceivedAuctionItem.b(104);
         }
@@ -123,7 +123,7 @@ final class ReceivedAuctionItem extends AuctionItem {
             return;
           }
           var9 = et.field_d.field_V;
-          if (ic.field_i) {
+          if (RegistrationRequestState.field_i) {
             var2 = et.field_d.participantStatus[0].controlledSlot;
             if (var9.possessorTeam == 1) {
               var9.possessorTeam = -1;
@@ -134,7 +134,7 @@ final class ReceivedAuctionItem extends AuctionItem {
             }
             if (0 == var9.possessorTeam &&
               var9.possessorSlot == var2) {
-              ic.field_i = false;
+              RegistrationRequestState.field_i = false;
               return;
             }
             var3 = et.field_d.field_P[0][var2];
@@ -163,7 +163,7 @@ final class ReceivedAuctionItem extends AuctionItem {
                 if (262144 <= var9.horizontalSpeedSquared(-111)) {
                   return;
                 }
-                ic.field_i = true;
+                RegistrationRequestState.field_i = true;
               }
               return;
             }
@@ -197,7 +197,7 @@ final class ReceivedAuctionItem extends AuctionItem {
         int var3 = 0;
         var4 = Kickabout.field_G;
         try {
-          AlternateKeyedLoginCredentials.drawFootballerOverlay(ar.field_c, (RenderedFootballer) (NotCommand.field_F.getBallCarrier((byte) -96)), (byte) 118, 256);
+          AlternateKeyedLoginCredentials.drawFootballerOverlay(BrowserUiSupport.field_c, (RenderedFootballer) (NotCommand.field_F.getBallCarrier((byte) -96)), (byte) 118, 256);
           if (param0 != 45) {
             ReceivedAuctionItem.i((byte) 21);
           }
@@ -230,7 +230,7 @@ final class ReceivedAuctionItem extends AuctionItem {
         CachedTextLayout.field_q = QuickChatPhraseDefinition.a("beach", QuickChatKeysHelpPanel.field_Cb, (byte) 45, "parasol");
         ns.field_c = QuickChatPhraseDefinition.a("beach", QuickChatKeysHelpPanel.field_Cb, (byte) 92, "ball");
         AnimationSkeleton.field_h = QuickChatPhraseDefinition.a("beach", QuickChatKeysHelpPanel.field_Cb, (byte) 68, "bucket");
-        c.field_e = QuickChatPhraseDefinition.a("beach", QuickChatKeysHelpPanel.field_Cb, (byte) 76, "palmtree");
+        ClientPacketFlushSupport.field_e = QuickChatPhraseDefinition.a("beach", QuickChatKeysHelpPanel.field_Cb, (byte) 76, "palmtree");
         FullscreenFocusCanvas.field_a = QuickChatPhraseDefinition.a("beach", QuickChatKeysHelpPanel.field_Cb, (byte) 76, "starfish");
         BytePlusOneCommand.field_D = QuickChatPhraseDefinition.a("beach", QuickChatKeysHelpPanel.field_Cb, (byte) 93, "icecream");
         int var1 = 88 % ((65 - param0) / 42);

@@ -61,7 +61,7 @@ final class MatchScreen extends AppScreen {
         int var4Lifetime2;
         var8 = Kickabout.field_G;
         try {
-          sk.a(param0 - 15, 5, 1);
+          LoadingProgressSupport.reportStageProgress(param0 - 15, 5, 1);
           var9 = new String[]{"tank", "striker", "specialist", "scout", "keeper"};
           for (var3_int = 0; var3_int < 5; var3_int++) {
             PacketBuffer.field_m[var3_int] = MeshData.load(param1, "", "Characters/" + var9[var3_int] + "_body");
@@ -70,7 +70,7 @@ final class MatchScreen extends AppScreen {
             }
             WriteIntegersCommand.field_B[var3_int] = DualLinkDeque.a(107, new MeshData(new MeshData[]{PacketBuffer.field_m[var3_int], WidgetContainer.field_v[var3_int][0]}, 2));
           }
-          sk.a(param0 + 111, 5, 2);
+          LoadingProgressSupport.reportStageProgress(param0 + 111, 5, 2);
           var3 = new MeshData[9];
           var3[0] = MeshData.load(param1, "", "balls/skin_football");
           var3[1] = MeshData.load(param1, "", "balls/skin_beachball");
@@ -81,7 +81,7 @@ final class MatchScreen extends AppScreen {
           var3[8] = MeshData.load(param1, "", "balls/sphere_halloween");
           var3[6] = MeshData.load(param1, "", "balls/planet2");
           var3[7] = MeshData.load(param1, "", "balls/asteroid_craters_3");
-          sk.a(-104, 5, 3);
+          LoadingProgressSupport.reportStageProgress(-104, 5, 3);
           if (param0 != -34) {
             MatchScreen.a(true);
           }
@@ -95,13 +95,13 @@ final class MatchScreen extends AppScreen {
               EmailSyntaxValidator.field_l[var4Lifetime1] = (ModelMesh) (var3[var4Lifetime1].createModel(110, 131072, 1, 1, 1));
             }
           }
-          sk.a(72, 5, 4);
+          LoadingProgressSupport.reportStageProgress(72, 5, 4);
           gw.field_f[0] = MeshData.load(param1, "", "fans/fan_01");
           gw.field_f[1] = MeshData.load(param1, "", "fans/fan_02");
           gw.field_f[2] = MeshData.load(param1, "", "fans/fan_03");
           gw.field_f[3] = MeshData.load(param1, "", "fans/fan_04");
           gw.field_f[4] = MeshData.load(param1, "", "fans/fan_05");
-          of.field_f = MeshData.load(param1, "", "characters/torso");
+          FriendRemovalSupport.field_f = MeshData.load(param1, "", "characters/torso");
           RowRangeRequest.field_k = MeshData.load(param1, "", "characters/keeper_body_halloween");
           IndexedSpriteState.field_j = new MeshData[5];
           for (var4Lifetime2 = 0; 5 > var4Lifetime2; var4Lifetime2++) {
@@ -134,9 +134,9 @@ final class MatchScreen extends AppScreen {
         if (!this.isSpectator(-2) &&
           this.matchState.participantStatus[this.localSeat].isActive(3511) &&
           ArrayWidgetContainer.field_x >= 0 &&
-          us.field_j >= 0 &&
+          TutorialCaptionSupport.field_j >= 0 &&
           ArrayWidgetContainer.field_x < 640 &&
-          us.field_j < 480 && (((PlayingView) (this.phaseController)).b((byte) -82) ||
+          TutorialCaptionSupport.field_j < 480 && (((PlayingView) (this.phaseController)).b((byte) -82) ||
           !ArchiveIndex.b(640))) {
           stackIn_16_0 = true;
           decompiledFrameRemainder0 = false;
@@ -166,7 +166,7 @@ final class MatchScreen extends AppScreen {
           }
           try {
             var2 = new java.net.URL(param0.getCodeBase(), "tosupport.ws");
-            param0.getAppletContext().showDocument(qr.a(param0, var2, param1 ^ 3), "_top");
+            param0.getAppletContext().showDocument(SessionUrlSupport.decorateSessionUrl(param0, var2, param1 ^ 3), "_top");
           } catch (Exception exception) {
             exception.printStackTrace();
           }
@@ -429,7 +429,7 @@ final class MatchScreen extends AppScreen {
           var5.departed) {
           if (!var7.resigned &&
             var5.resigned) {
-            var6 = r.field_e;
+            var6 = ClientProtocolStage.field_e;
           } else {
             var6 = ValidatedTextWidget.field_F;
           }
@@ -608,7 +608,7 @@ final class MatchScreen extends AppScreen {
             var5Lifetime1.a(-2943, 16711680);
           }
         }
-        us.drawTutorialCaption((byte) -121);
+        TutorialCaptionSupport.drawTutorialCaption((byte) -121);
         if (0 < this.field_E) {
           WorldSpriteSequence.field_h.b(0, 0, this.field_E);
         }
@@ -731,7 +731,7 @@ final class MatchScreen extends AppScreen {
           DelayedServerPacket.a(var4, false, -2);
           return true;
         }
-        if (param0 == il.field_h) {
+        if (param0 == ClassDescriptorSupport.field_h) {
           QuickChatCategoryCache.field_e = !QuickChatCategoryCache.field_e ? true : false;
         }
         if (param1 > -5) {

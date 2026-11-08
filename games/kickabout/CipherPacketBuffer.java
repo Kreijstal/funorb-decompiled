@@ -33,7 +33,7 @@ final class CipherPacketBuffer extends PacketBuffer {
         int var3 = 0;
         int var4 = 0;
         try {
-          var2 = new Sprite(param1.takeFileByName("", "final_frame.jpg", 8), (java.awt.Component) ((Object) ic.field_d));
+          var2 = new Sprite(param1.takeFileByName("", "final_frame.jpg", 8), (java.awt.Component) ((Object) RegistrationRequestState.field_d));
           var3 = var2.field_q;
           var4 = var2.field_w;
           ClientUiOverlay.pushRasterState(-12974);
@@ -163,9 +163,9 @@ final class CipherPacketBuffer extends PacketBuffer {
         ColorQuantizationBox.field_a = SoftwareRasterizer.field_g;
         BufferedSocket.field_s = SoftwareRasterizer.field_f;
         GeneratedPanelPainter.b((byte) 92);
-        tn.field_d.layout(0, ss.field_c.field_q, 0, -2 + ss.field_c.field_mb - 40, (byte) -123);
-        ConsoleValue.field_a.setBounds(true, WhirlpoolHasher.field_m.field_q, 0, 0, sh.field_c);
-        var1 = sh.field_c + 2;
+        tn.field_d.layout(0, UiKeyRoutingSupport.field_c.field_q, 0, -2 + UiKeyRoutingSupport.field_c.field_mb - 40, (byte) -123);
+        ConsoleValue.field_a.setBounds(true, WhirlpoolHasher.field_m.field_q, 0, 0, LineupPositionSupport.field_c);
+        var1 = LineupPositionSupport.field_c + 2;
         if (param0) {
           var4 = (ResourceArchive) null;
           CipherPacketBuffer.a(-41, (ResourceArchive) null);
@@ -187,11 +187,11 @@ final class CipherPacketBuffer extends PacketBuffer {
         }
         ((UiLayoutNode) (Object) stackIn_4_0).setBounds(stackIn_5_1, stackIn_7_2, stackIn_7_3, stackIn_8_4, stackIn_10_5 - stackIn_11_6);
         ClientException.a(0);
-        MouseWheelInput.field_a.setBounds(true, ss.field_c.field_q, 0, ss.field_c.field_mb - 40, 40);
-        AuctionItem.field_o.setBounds(true, af.field_d.field_q, 0, 0, 30);
+        MouseWheelInput.field_a.setBounds(true, UiKeyRoutingSupport.field_c.field_q, 0, UiKeyRoutingSupport.field_c.field_mb - 40, 40);
+        AuctionItem.field_o.setBounds(true, AuctionPriceLimits.field_d.field_q, 0, 0, 30);
         stackIn_13_0 = QuickChatCategoryCache.field_b;
         stackIn_14_1 = (param0) ? false : true;
-        ((UiLayoutNode) (Object) stackIn_13_0).setBounds(stackIn_14_1, af.field_d.field_q, 0, 30, -2 + (-40 + (af.field_d.field_mb - 30)));
+        ((UiLayoutNode) (Object) stackIn_13_0).setBounds(stackIn_14_1, AuctionPriceLimits.field_d.field_q, 0, 30, -2 + (-40 + (AuctionPriceLimits.field_d.field_mb - 30)));
         PlayingView.field_w.setBounds(true, 68, 5, 5, 30);
         LoginRequiredDialog.field_G.setBounds(true, 78, 75, 5, 30);
         TextWidgetPainter.field_n.setBounds(true, 48, 155, 5, 30);
@@ -201,25 +201,25 @@ final class CipherPacketBuffer extends PacketBuffer {
         stackIn_19_0 = DateInputWidget.field_D;
         stackIn_20_1 = (param0) ? false : true;
         ((UiLayoutNode) (Object) stackIn_19_0).setBounds(stackIn_20_1, -var2 + 363, var2 + 5, 5, 30);
-        RegistrationRequestDialog.field_lb.setBounds(true, -370 + (-5 + af.field_d.field_q), 370, 5, 30);
+        RegistrationRequestDialog.field_lb.setBounds(true, -370 + (-5 + AuctionPriceLimits.field_d.field_q), 370, 5, 30);
         ShopPlayerSlot.field_Jb.setLayout(2, 55, -10 + (QuickChatCategoryCache.field_b.field_mb - 32), 37, 5, -5 + QuickChatCategoryCache.field_b.field_q - 5, TeamSelectionAgent.field_f);
-        var3 = (2 + af.field_d.field_q) / 2;
-        dr.field_d.setBounds(true, var3 - 2, 0, -40 + af.field_d.field_mb, 40);
+        var3 = (2 + AuctionPriceLimits.field_d.field_q) / 2;
+        ClassNameSupport.field_d.setBounds(true, var3 - 2, 0, -40 + AuctionPriceLimits.field_d.field_mb, 40);
         if (!NetworkArchiveRequest.field_t) {
           var3 = 0;
         }
-        LoginCredentials.field_b.setBounds(true, -var3 + af.field_d.field_q, var3, -40 + af.field_d.field_mb, 40);
+        LoginCredentials.field_b.setBounds(true, -var3 + AuctionPriceLimits.field_d.field_q, var3, -40 + AuctionPriceLimits.field_d.field_mb, 40);
     }
 
     final static void k(int param0, int param1) {
         if (param0 != 61) {
           CipherPacketBuffer.m(-70);
         }
-        if (!(sk.field_c <= param1)) {
+        if (!(LoadingProgressSupport.field_c <= param1)) {
           return;
         }
-        sk.field_c = param1;
-        sk.a(101, 1, 0);
+        LoadingProgressSupport.field_c = param1;
+        LoadingProgressSupport.reportStageProgress(101, 1, 0);
     }
 
     CipherPacketBuffer(byte[] param0) {

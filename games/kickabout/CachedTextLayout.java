@@ -8,7 +8,7 @@ final class CachedTextLayout extends TextLayout {
     private boolean field_h;
     private int field_n;
     private String field_p;
-    static ld field_j;
+    static AccountInputValidationResult field_j;
     static Sprite field_q;
     private int field_e;
     static String field_m;
@@ -326,7 +326,7 @@ final class CachedTextLayout extends TextLayout {
     }
 
     static {
-        field_j = new ld();
+        field_j = new AccountInputValidationResult();
         field_o = "IO error - unable to communicate reliably with the data server. Please check any firewall/antivirus/filtering software.";
         field_m = null;
         field_d = "Loading models";

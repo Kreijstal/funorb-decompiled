@@ -45,7 +45,7 @@ final class DisplayNameForm extends WidgetContainer implements NameSuggestionLis
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var11 = new CaptionedContainer(20, param5, param1 + 120, 25, param3, false, 120, 3, gf.field_a, 16777215, param0);
+          var11 = new CaptionedContainer(20, param5, param1 + 120, 25, param3, false, 120, 3, ModelMaterial.field_a, 16777215, param0);
           this.a(-55, var11);
           var9 = new ValidationHelpWidget(((ValidationProvider) ((Object) param3)).a((byte) -120), param6, 126, var11.field_i + param5, param1 + 25, param2);
           var9.field_k = (UiListener) (this);
@@ -155,10 +155,10 @@ final class DisplayNameForm extends WidgetContainer implements NameSuggestionLis
     public DisplayNameForm() {
         super(0, 0, 496, 0, (WidgetPainter) null);
         this.field_C = new ValidatedTextWidget("", (UiListener) null, 12);
-        TextWidgetPainter var1 = new TextWidgetPainter(EmailSyntaxValidator.field_k, 0, 0, 0, 0, 16777215, -1, 3, 0, gf.field_a.field_G, -1, 2147483647, true);
-        UiWidget var2 = new UiWidget(vt.field_b, var1, (UiListener) null);
+        TextWidgetPainter var1 = new TextWidgetPainter(EmailSyntaxValidator.field_k, 0, 0, 0, 0, 16777215, -1, 3, 0, ModelMaterial.field_a.field_G, -1, 2147483647, true);
+        UiWidget var2 = new UiWidget(AsciiCharacterSupport.field_b, var1, (UiListener) null);
         this.field_B = new TextButton(MatchScreen.field_x, (UiListener) null);
-        this.field_E = new TextButton(vt.field_a, (UiListener) null);
+        this.field_E = new TextButton(AsciiCharacterSupport.field_a, (UiListener) null);
         this.field_C.field_u = SortCriterion.field_b;
         this.field_C.a(6, new AccountNameAvailabilityValidator(this.field_C));
         this.field_B.field_y = false;

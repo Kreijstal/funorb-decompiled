@@ -75,17 +75,17 @@ final class AuctionBidDialog extends MessageDialog {
           var3 = var5;
           if (param1 == 19) {
             this.field_N = param0.field_i;
-            this.field_v = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, this.field_v, new String[]{ad.formatCurrencyAmount(this.field_N, 26300), var5});
+            this.field_v = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, this.field_v, new String[]{LocalizedTextLoader.formatCurrencyAmount(this.field_N, 26300), var5});
             this.field_J = 52;
           } else {
             if (param1 == 32) {
               this.field_N = param0.field_t;
-              this.field_v = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, this.field_v, new String[]{ad.formatCurrencyAmount(this.field_N, 26300), var5});
+              this.field_v = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, this.field_v, new String[]{LocalizedTextLoader.formatCurrencyAmount(this.field_N, 26300), var5});
               this.field_J = 66;
             } else {
               if (param1 == 37) {
                 this.field_N = param0.field_t;
-                this.field_v = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, this.field_v, new String[]{ad.formatCurrencyAmount(this.field_N, 26300), ad.formatCurrencyAmount(param0.field_v, 26300), var5});
+                this.field_v = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, this.field_v, new String[]{LocalizedTextLoader.formatCurrencyAmount(this.field_N, 26300), LocalizedTextLoader.formatCurrencyAmount(param0.field_v, 26300), var5});
                 this.field_J = 66;
               }
             }
@@ -114,7 +114,7 @@ final class AuctionBidDialog extends MessageDialog {
         if (NineSlicePanelPainter.field_e) {
           return;
         }
-        if (ds.field_g) {
+        if (ModelMaterialDecoder.field_g) {
           return;
         }
         if (0 == param1) {

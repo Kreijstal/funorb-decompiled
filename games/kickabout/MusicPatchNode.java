@@ -86,7 +86,7 @@ final class MusicPatchNode extends IntrusiveNode {
           return TickClock.field_k[1];
         }
         if (param1 == 36) {
-          return (Sprite) ((Object) sh.field_g);
+          return (Sprite) ((Object) LineupPositionSupport.field_g);
         }
         if (param1 == 38) {
           return TickClock.field_k[1];
@@ -144,7 +144,7 @@ final class MusicPatchNode extends IntrusiveNode {
           StatefulTextPainter.a(param0, param3, false, param2);
           IntKeyLookup.a(-93);
           mj.field_a = vj.field_a;
-          wk.field_f = vj.field_a;
+          ClubStateFactory.field_f = vj.field_a;
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "da.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }

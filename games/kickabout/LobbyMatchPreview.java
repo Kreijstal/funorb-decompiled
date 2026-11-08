@@ -103,7 +103,7 @@ final class LobbyMatchPreview {
         stackIn_32_1 = stackIn_29_1[stackIn_30_2];
         stackIn_32_2 = this.field_g;
         stackIn_33_3 = (this.field_e.field_d) ? 0 : 1;
-        eo.a(stackIn_29_0, stackIn_32_1, stackIn_32_2[stackIn_33_3], this.field_l, this.field_b + 123, 80, 32);
+        SoftwareDrawingSupport.a(stackIn_29_0, stackIn_32_1, stackIn_32_2[stackIn_33_3], this.field_l, this.field_b + 123, 80, 32);
     }
 
     final static void a(boolean param0, boolean param1, byte param2) {
@@ -171,7 +171,7 @@ final class LobbyMatchPreview {
             this.field_i = false;
           }
           if (this.field_f) {
-            IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, ds.field_f);
+            IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, ModelMaterialDecoder.field_f);
           }
           if (this.field_i) {
             if (QuickChatPhraseCache.field_d) {

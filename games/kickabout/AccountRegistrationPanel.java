@@ -143,7 +143,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
           var18 = new Sprite(var5.field_o, var5.field_v);
           var5 = var18;
           PacketBuffer.a(-45, var18);
-          eo.a(var19, 0, 0, 230);
+          SoftwareDrawingSupport.a(var19, 0, 0, 230);
           AuctionListing.a(-3 + SoftwareRasterizer.field_g, -22914, 3, SoftwareRasterizer.field_f - 3, 3);
           var23 = new int[64];
           var20 = var23;
@@ -196,7 +196,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
           if (param2 != 21621) {
             this.field_Q = (TextButton) null;
           }
-          var6 = new CaptionedContainer(20, param3, param0 + 120, 25, param4, false, 120, 3, gf.field_a, 16777215, param1);
+          var6 = new CaptionedContainer(20, param3, param0 + 120, 25, param4, false, 120, 3, ModelMaterial.field_a, 16777215, param1);
           this.a(-54, var6);
           stackIn_3_0 = var6.field_i;
           return stackIn_3_0;
@@ -230,7 +230,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
         this.field_J = new ValidatedTextWidget("", (UiListener) null, 3);
         int var1 = 1;
         this.field_O = new Checkbox("", (UiListener) null, var1 != 0);
-        this.field_Q = new TextButton(ph.field_c, (UiListener) null);
+        this.field_Q = new TextButton(AudioOutputSupport.field_c, (UiListener) null);
         this.field_F = new TextButton(vb.field_e, (UiListener) null);
         this.field_E.field_u = SortCriterion.field_b;
         this.field_S.field_u = ColourSwatchTile.field_Bb;
@@ -238,7 +238,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
         this.field_T.field_u = PlayerValueSortCriterion.field_o;
         this.field_N.field_u = UiLayoutNode.field_Z;
         this.field_J.field_u = SpriteState.field_r;
-        this.field_O.field_u = le.field_b;
+        this.field_O.field_u = ExceptionTextSupport.field_b;
         this.field_E.a(6, new AccountNameAvailabilityValidator(this.field_E));
         this.field_S.a(6, new EmailSyntaxValidator(this.field_S));
         this.field_K.a(6, new EmailAvailabilityValidator(this.field_K, this.field_S));
@@ -268,7 +268,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
         CaptionedContainer var4 = new CaptionedContainer(46, var3, -90 + this.field_n, 25, this.field_O, true, this.field_n - 120, 5, EmailSyntaxValidator.field_k, 11579568, StrongCacheEntry.field_v);
         this.a(-35, var4);
         var3 = var3 + var4.field_i;
-        TextWidgetPainter var5 = new TextWidgetPainter(gf.field_a, 0, 0, 0, 0, 16777215, -1, 0, 0, gf.field_a.field_G, -1, 2147483647, true);
+        TextWidgetPainter var5 = new TextWidgetPainter(ModelMaterial.field_a, 0, 0, 0, 0, 16777215, -1, 0, 0, ModelMaterial.field_a.field_G, -1, 2147483647, true);
         this.field_R = new TextHotspotWidget(var2, var5);
         this.field_R.field_u = "";
         this.field_R.a(fa.field_e, 0, 12082);
@@ -306,7 +306,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var10 = new CaptionedContainer(20, param6, 120 + param4, 25, param3, false, 120, 3, gf.field_a, 16777215, param2);
+          var10 = new CaptionedContainer(20, param6, 120 + param4, 25, param3, false, 120, 3, ModelMaterial.field_a, 16777215, param2);
           if (!param1) {
             stackIn_2_0 = -97;
             return stackIn_2_0;
@@ -562,7 +562,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
         RuntimeException decompiledCaughtException = null;
         try {
           var6_int = 94 / ((10 - param4) / 49);
-          var7 = new CaptionedContainer(20, param0, param2 + 120, 25, param3, false, 120, 3, gf.field_a, 16777215, param1);
+          var7 = new CaptionedContainer(20, param0, param2 + 120, 25, param3, false, 120, 3, ModelMaterial.field_a, 16777215, param1);
           this.a(-111, var7);
           var8 = new ValidationIndicator(((ValidationProvider) ((Object) param3)).a((byte) -117));
           this.a(-48, var8);

@@ -22,19 +22,19 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
           var4 = MarkerSliderWidget.field_E[BufferedCacheFile.field_a];
           var5 = ButtonMenuScreen.field_r[BufferedCacheFile.field_a];
           mj.a(256.0, 60, (double)var4, (double)var5);
-          gg.h((byte) 93);
+          SocialPlayerRow.resetCameraToTarget((byte) 93);
           DelayedServerPacket.a(ig.field_d, false, -2);
           return;
         }
-        if (ih.field_c != gk.field_g) {
-          AnimationClip.a(FullscreenFailureReason.field_f, -76, TeamSelectionView.field_j, gk.field_g);
+        if (ih.field_c != ChatComposeSupport.field_g) {
+          AnimationClip.a(FullscreenFailureReason.field_f, -76, TeamSelectionView.field_j, ChatComposeSupport.field_g);
         } else {
           if (FullscreenFailureReason.field_f != RankingsScreen.field_C) {
-            AnimationClip.a(FullscreenFailureReason.field_f, -76, TeamSelectionView.field_j, gk.field_g);
+            AnimationClip.a(FullscreenFailureReason.field_f, -76, TeamSelectionView.field_j, ChatComposeSupport.field_g);
           } else {
             stackIn_9_0 = (NanoTickClock.field_n) ? 0 : 1;
             if (stackIn_9_0 == (TeamSelectionView.field_j ? 1 : 0)) {
-              AnimationClip.a(FullscreenFailureReason.field_f, -76, TeamSelectionView.field_j, gk.field_g);
+              AnimationClip.a(FullscreenFailureReason.field_f, -76, TeamSelectionView.field_j, ChatComposeSupport.field_g);
             }
           }
         }
@@ -45,7 +45,7 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
         if (MyKitScreen.field_O) {
           KitStyleTile.j(13459);
         }
-        gg.h((byte) -125);
+        SocialPlayerRow.resetCameraToTarget((byte) -125);
         System.gc();
         AnimationPlayer.a((byte) 98);
         DelayedServerPacket.a(-1, false, -2);
@@ -299,10 +299,10 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
           AuctionsHelpScreen.field_H = ModalPanel.field_B;
           ParticipantStatus.a(param4, 1);
           if (ns.field_a > 0) {
-            we.a(param7, param4, (byte) -119, param6);
+            ClientUiUpdateSupport.updateCommonClientUi(param7, param4, (byte) -119, param6);
           }
           MarkerSliderWidget.field_F.field_A = 1;
-          MarkerSliderWidget.field_F.field_kb = ip.field_c.field_kb;
+          MarkerSliderWidget.field_F.field_kb = RasterGammaSupport.field_c.field_kb;
           if (fj.field_a > 0) {
             BeveledTextPainter.a(102, param4, param7, param6);
           }
@@ -333,10 +333,10 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
                   }
                   ParticipantStatus.a(param4, 1);
                   if (ns.field_a > 0) {
-                    we.a(param7, param4, (byte) -119, param6);
+                    ClientUiUpdateSupport.updateCommonClientUi(param7, param4, (byte) -119, param6);
                   }
                   MarkerSliderWidget.field_F.field_A = 1;
-                  MarkerSliderWidget.field_F.field_kb = ip.field_c.field_kb;
+                  MarkerSliderWidget.field_F.field_kb = RasterGammaSupport.field_c.field_kb;
                   if (fj.field_a > 0) {
                     BeveledTextPainter.a(102, param4, param7, param6);
                   }
@@ -367,10 +367,10 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
               AuctionsHelpScreen.field_H = (ColorQuantizationBox.field_a - 640) / 2;
               ParticipantStatus.a(param4, 1);
               if (ns.field_a > 0) {
-                we.a(param7, param4, (byte) -119, param6);
+                ClientUiUpdateSupport.updateCommonClientUi(param7, param4, (byte) -119, param6);
               }
               MarkerSliderWidget.field_F.field_A = 1;
-              MarkerSliderWidget.field_F.field_kb = ip.field_c.field_kb;
+              MarkerSliderWidget.field_F.field_kb = RasterGammaSupport.field_c.field_kb;
               if (fj.field_a > 0) {
                 BeveledTextPainter.a(102, param4, param7, param6);
               }
@@ -391,10 +391,10 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
               AuctionsHelpScreen.field_H = ModalPanel.field_B;
               ParticipantStatus.a(param4, 1);
               if (ns.field_a > 0) {
-                we.a(param7, param4, (byte) -119, param6);
+                ClientUiUpdateSupport.updateCommonClientUi(param7, param4, (byte) -119, param6);
               }
               MarkerSliderWidget.field_F.field_A = 1;
-              MarkerSliderWidget.field_F.field_kb = ip.field_c.field_kb;
+              MarkerSliderWidget.field_F.field_kb = RasterGammaSupport.field_c.field_kb;
               if (fj.field_a > 0) {
                 BeveledTextPainter.a(102, param4, param7, param6);
               }
@@ -426,10 +426,10 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
                   }
                   ParticipantStatus.a(param4, 1);
                   if (ns.field_a > 0) {
-                    we.a(param7, param4, (byte) -119, param6);
+                    ClientUiUpdateSupport.updateCommonClientUi(param7, param4, (byte) -119, param6);
                   }
                   MarkerSliderWidget.field_F.field_A = 1;
-                  MarkerSliderWidget.field_F.field_kb = ip.field_c.field_kb;
+                  MarkerSliderWidget.field_F.field_kb = RasterGammaSupport.field_c.field_kb;
                   if (fj.field_a > 0) {
                     BeveledTextPainter.a(102, param4, param7, param6);
                   }
@@ -460,10 +460,10 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
               AuctionsHelpScreen.field_H = (ColorQuantizationBox.field_a - 640) / 2;
               ParticipantStatus.a(param4, 1);
               if (ns.field_a > 0) {
-                we.a(param7, param4, (byte) -119, param6);
+                ClientUiUpdateSupport.updateCommonClientUi(param7, param4, (byte) -119, param6);
               }
               MarkerSliderWidget.field_F.field_A = 1;
-              MarkerSliderWidget.field_F.field_kb = ip.field_c.field_kb;
+              MarkerSliderWidget.field_F.field_kb = RasterGammaSupport.field_c.field_kb;
               if (fj.field_a > 0) {
                 BeveledTextPainter.a(102, param4, param7, param6);
               }
@@ -484,10 +484,10 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
               AuctionsHelpScreen.field_H = ModalPanel.field_B;
               ParticipantStatus.a(param4, 1);
               if (ns.field_a > 0) {
-                we.a(param7, param4, (byte) -119, param6);
+                ClientUiUpdateSupport.updateCommonClientUi(param7, param4, (byte) -119, param6);
               }
               MarkerSliderWidget.field_F.field_A = 1;
-              MarkerSliderWidget.field_F.field_kb = ip.field_c.field_kb;
+              MarkerSliderWidget.field_F.field_kb = RasterGammaSupport.field_c.field_kb;
               if (fj.field_a > 0) {
                 BeveledTextPainter.a(102, param4, param7, param6);
                 if (ee.field_b > 0) {
@@ -566,13 +566,13 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
             if (FixedQuaternion.field_e != 80) {
               return false;
             }
-            if (!ph.a(true)) {
+            if (!AudioOutputSupport.a(true)) {
               return false;
             }
             TextFieldNode.field_Wb = true;
             return true;
           }
-          if (!ph.a(true)) {
+          if (!AudioOutputSupport.a(true)) {
             return false;
           }
           stackIn_44_0 = (!UiLayoutNode.a(false, param1, param0)) ? 0 : 1;
@@ -603,13 +603,13 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
             if (FixedQuaternion.field_e != 80) {
               return false;
             }
-            if (!ph.a(true)) {
+            if (!AudioOutputSupport.a(true)) {
               return false;
             }
             TextFieldNode.field_Wb = true;
             return true;
           }
-          if (!ph.a(true)) {
+          if (!AudioOutputSupport.a(true)) {
             return false;
           }
           stackIn_11_0 = (!UiLayoutNode.a(false, param1, param0)) ? 0 : 1;

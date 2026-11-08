@@ -76,7 +76,7 @@ abstract class AppScreen {
           }
           PlayerModelPreview.field_e = param4;
           GameSoundEffect.field_b = param7;
-          gg.field_Db = param6;
+          SocialPlayerRow.field_Db = param6;
           GzipDecoder.field_f = param1;
           AlternateKeyedLoginCredentials.field_k = param5;
           or.field_c = param3;
@@ -127,17 +127,17 @@ abstract class AppScreen {
               stackIn_6_0 = -1;
               return stackIn_6_0;
             }
-            if (sd.field_d == un.field_c) {
+            if (SpriteBackgroundSupport.field_d == un.field_c) {
               if (param3) {
                 var10 = (String) null;
-                FullscreenFocusCanvas.field_h = NamedValueContainer.a(param4, wq.field_d, (byte) 30, false, (String) null);
+                FullscreenFocusCanvas.field_h = NamedValueContainer.a(param4, DiagnosticsOverlaySupport.field_d, (byte) 30, false, (String) null);
               } else {
                 FullscreenFocusCanvas.field_h = LeaderboardParticipant.a(-111, param4, false, param1);
               }
               or.field_d.field_n = 0;
               or.field_d.writeByte(108, 14);
               or.field_d.writeByte(124, FullscreenFocusCanvas.field_h.getLoginKind((byte) -104).field_a);
-              c.a(-1, false);
+              ClientPacketFlushSupport.flushPackets(-1, false);
               un.field_c = uk.field_c;
             }
             if (un.field_c == uk.field_c &&
@@ -146,15 +146,15 @@ abstract class AppScreen {
               if (var6_int == 0) {
                 un.field_c = tl.field_c;
               } else {
-                ms.field_b = -1;
-                so.field_b = var6_int;
+                MusicVolumeSupport.field_b = -1;
+                AppletContextSupport.field_b = var6_int;
                 un.field_c = AccountRequestDialog.field_fb;
               }
               un.field_e.field_n = 0;
             }
             if (un.field_c == tl.field_c &&
               SetLagCommand.a((byte) 115, 8)) {
-              ld.field_c = un.field_e.readLong((byte) -124);
+              AccountInputValidationResult.field_c = un.field_e.readLong((byte) -124);
               un.field_e.field_n = 0;
               nc.a(param2, param3, FullscreenFocusCanvas.field_h, -16161, param5);
               un.field_c = ClubState.field_c;
@@ -163,13 +163,13 @@ abstract class AppScreen {
             if (un.field_c == ClubState.field_c &&
               SetLagCommand.a((byte) -127, 1)) {
               var6_intLifetime1 = un.field_e.readUnsignedByte((byte) -105);
-              so.field_b = var6_intLifetime1;
+              AppletContextSupport.field_b = var6_intLifetime1;
               BroadcastServerCommand.field_A = null;
               un.field_e.field_n = 0;
               if (var6_intLifetime1 != 0 &&
                 1 != var6_intLifetime1) {
                 if (8 != var6_intLifetime1) {
-                  ms.field_b = -1;
+                  MusicVolumeSupport.field_b = -1;
                   un.field_c = AccountRequestDialog.field_fb;
                   decompiledFrameRemainder0 = false;
                 }
@@ -182,12 +182,12 @@ abstract class AppScreen {
               }
               if (decompiledFrameRemainder0) {
                 un.field_c = AuctionListingDialog.field_H;
-                ms.field_b = -1;
+                MusicVolumeSupport.field_b = -1;
               }
             }
             if (AuctionListingDialog.field_H == un.field_c &&
               LoginCredentials.a(180)) {
-              wq.field_d = un.field_e.readLong((byte) -124);
+              DiagnosticsOverlaySupport.field_d = un.field_e.readLong((byte) -124);
               LoginMethod.field_e = param4;
               ScrollContainer.field_Ib = un.field_e.readUnsignedByte((byte) -118);
               LobbyMatchPreview.field_c = un.field_e.readUnsignedByte((byte) -112);
@@ -240,26 +240,26 @@ abstract class AppScreen {
               un.field_c = RegistrationRequestDialog.field_rb;
               if (FullscreenFocusCanvas.field_h.getLoginKind((byte) -109) != LoginRequiredDialog.field_K) {
                 if (FullscreenFocusCanvas.field_h.getLoginKind((byte) -115) == MatchScreen.field_w) {
-                  AccountRegistrationPanel.field_I.saveLastLoginMethod(-122, so.a(-115));
+                  AccountRegistrationPanel.field_I.saveLastLoginMethod(-122, AppletContextSupport.getActiveApplet(-115));
                 }
               } else {
-                IsSixCommand.field_F.saveLastLoginMethod(-123, so.a(36));
+                IsSixCommand.field_F.saveLastLoginMethod(-123, AppletContextSupport.getActiveApplet(36));
               }
               ContextMenuItem.field_Db = false;
               if (var11 != null) {
-                BlobSubmission.writeSettingsCookie(so.a(47), true, var11);
+                BlobSubmission.writeSettingsCookie(AppletContextSupport.getActiveApplet(47), true, var11);
               }
               if (WeightedLruCache.field_d <= 0 &&
                 !fc.field_f) {
                 try {
-                  AppletJavaScriptBridge.a(30858, "unzap", so.a(-110));
+                  AppletJavaScriptBridge.a(30858, "unzap", AppletContextSupport.getActiveApplet(-110));
                 } catch (java.lang.Throwable decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var8_ref_Throwable = decompiledCaughtException;
                 }
               } else {
                 try {
-                  AppletJavaScriptBridge.a(new Object[]{QuickChatPhraseDefinition.decodeBase37Name((byte) 112, wq.field_d)}, so.a(param0 - 122), "zap", param0 + 25449);
+                  AppletJavaScriptBridge.a(new Object[]{QuickChatPhraseDefinition.decodeBase37Name((byte) 112, DiagnosticsOverlaySupport.field_d)}, AppletContextSupport.getActiveApplet(param0 - 122), "zap", param0 + 25449);
                 } catch (java.lang.Throwable decompiledCaughtParameter1) {
                   decompiledCaughtException = decompiledCaughtParameter1;
                   var8_ref_Throwable = decompiledCaughtException;
@@ -273,24 +273,24 @@ abstract class AppScreen {
                 UrlRequest.field_f[var8Lifetime1] = UrlRequest.field_f[var8Lifetime1] + 50;
               }
               un.field_e.installCipher((byte) 125, UrlRequest.field_f);
-              stackIn_91_0 = so.field_b;
+              stackIn_91_0 = AppletContextSupport.field_b;
               return stackIn_91_0;
             }
             if (AccountRequestDialog.field_fb == un.field_c &&
               LoginCredentials.a(180)) {
               FormationView.b((byte) -116);
-              if (so.field_b == 7 &&
+              if (AppletContextSupport.field_b == 7 &&
                 !ContextMenuItem.field_Db) {
                 ContextMenuItem.field_Db = true;
                 stackIn_97_0 = -1;
                 return stackIn_97_0;
               }
-              if (7 == so.field_b) {
-                so.field_b = 3;
+              if (7 == AppletContextSupport.field_b) {
+                AppletContextSupport.field_b = 3;
               }
               ListingRowCache.field_b = un.field_e.readString(4);
               ContextMenuItem.field_Db = false;
-              stackIn_102_0 = so.field_b;
+              stackIn_102_0 = AppletContextSupport.field_b;
               return stackIn_102_0;
             }
             if (param0 != 0) {
@@ -299,7 +299,7 @@ abstract class AppScreen {
             if (SpriteButtonPainter.field_y == null) {
               if (ContextMenuItem.field_Db) {
                 if (30000L >= KeyedLoginCredentials.millisSinceSessionStart(29680)) {
-                  ListingRowCache.field_b = ic.field_e;
+                  ListingRowCache.field_b = RegistrationRequestState.field_e;
                 } else {
                   ListingRowCache.field_b = CheatCodeListener.field_h;
                 }
@@ -349,7 +349,7 @@ abstract class AppScreen {
           }
           try {
             var2 = new java.net.URL(param1.getCodeBase(), "quit.ws");
-            param1.getAppletContext().showDocument(qr.a(param1, var2, 3), "_top");
+            param1.getAppletContext().showDocument(SessionUrlSupport.decorateSessionUrl(param1, var2, 3), "_top");
           } catch (Exception exception) {
             exception.printStackTrace();
           }

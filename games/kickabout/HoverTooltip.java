@@ -39,10 +39,10 @@ final class HoverTooltip extends UiLayoutNode {
           this.field_Db.field_V = "|";
           this.field_yb = new StringBuilder(12);
           var9_int = this.field_Cb.getPreferredWidth((byte) 116);
-          this.field_Cb.setBounds(true, var9_int, 5, 3, sh.field_c);
-          this.field_Db.setBounds(true, var9_int, 5, sh.field_c + 3, sh.field_c);
+          this.field_Cb.setBounds(true, var9_int, 5, 3, LineupPositionSupport.field_c);
+          this.field_Db.setBounds(true, var9_int, 5, LineupPositionSupport.field_c + 3, LineupPositionSupport.field_c);
           var10 = 5 + var9_int + 5;
-          var11 = 3 + (sh.field_c * 2 + 3);
+          var11 = 3 + (LineupPositionSupport.field_c * 2 + 3);
           var12 = StripedProgressBar.b(var10, param0, param2, 127);
           var13 = MonotonicClock.placePopupVertically(param1, param3, var11, 29079);
           this.setBounds(true, var10, var12, var13, var11);
@@ -135,19 +135,19 @@ final class HoverTooltip extends UiLayoutNode {
             0 < this.field_yb.length()) {
             PagedHelpScreen.a(-1 + this.field_yb.length(), ' ', -11407, this.field_yb);
           }
-          if (StatefulTextPainter.a(false, (CharSequence) ((Object) this.field_yb), il.field_c)) {
-            discarded$1 = this.field_yb.append(il.field_c);
+          if (StatefulTextPainter.a(false, (CharSequence) ((Object) this.field_yb), ClassDescriptorSupport.field_c)) {
+            discarded$1 = this.field_yb.append(ClassDescriptorSupport.field_c);
           } else {
             if (this.field_yb.length() == 0 &&
-              91 == il.field_c) {
-              discarded$2 = this.field_yb.append(il.field_c);
+              91 == ClassDescriptorSupport.field_c) {
+              discarded$2 = this.field_yb.append(ClassDescriptorSupport.field_c);
             } else {
               if (this.field_yb.length() == 1 &&
-                35 == il.field_c) {
-                discarded$3 = this.field_yb.append(il.field_c);
+                35 == ClassDescriptorSupport.field_c) {
+                discarded$3 = this.field_yb.append(ClassDescriptorSupport.field_c);
               } else {
-                if (93 == il.field_c) {
-                  discarded$4 = this.field_yb.append(il.field_c);
+                if (93 == ClassDescriptorSupport.field_c) {
+                  discarded$4 = this.field_yb.append(ClassDescriptorSupport.field_c);
                 }
               }
             }
@@ -202,7 +202,7 @@ final class HoverTooltip extends UiLayoutNode {
         }
         if (FixedQuaternion.field_e != 85) {
           if (this.field_yb.length() < 12) {
-            var2 = Character.toLowerCase(il.field_c);
+            var2 = Character.toLowerCase(ClassDescriptorSupport.field_c);
             if (32 == var2) {
               var2 = 95;
               if (var2 == 95 &&
@@ -265,7 +265,7 @@ final class HoverTooltip extends UiLayoutNode {
         }
         if (this.field_yb.length() <= 0) {
           if (this.field_yb.length() < 12) {
-            var2Lifetime1 = Character.toLowerCase(il.field_c);
+            var2Lifetime1 = Character.toLowerCase(ClassDescriptorSupport.field_c);
             if (32 == var2Lifetime1) {
               var2Lifetime1 = 95;
               if (var2Lifetime1 == 95 &&
@@ -343,7 +343,7 @@ final class HoverTooltip extends UiLayoutNode {
           this.field_Fb = 1;
           return true;
         }
-        var2Lifetime3 = Character.toLowerCase(il.field_c);
+        var2Lifetime3 = Character.toLowerCase(ClassDescriptorSupport.field_c);
         if (32 == var2Lifetime3) {
           var2Lifetime3 = 95;
           if (var2Lifetime3 == 95 &&

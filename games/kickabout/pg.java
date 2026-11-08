@@ -8,7 +8,7 @@ final class pg {
     static String[] field_a;
 
     final static void a(int param0, boolean param1) {
-        HighScoreQuery.field_l = param1 ? new SocialTabsPanel(TextHotspotWidget.field_H, DialogOverlay.field_e) : new SocialTabsPanel(c.field_d, AchievementsScreen.field_C);
+        HighScoreQuery.field_l = param1 ? new SocialTabsPanel(TextHotspotWidget.field_H, DialogOverlay.field_e) : new SocialTabsPanel(ClientPacketFlushSupport.field_d, AchievementsScreen.field_C);
         TrinketIcon.field_Cb = new UiLayoutNode(0L, (UiLayoutNode) null);
         if (param0 == -35) {
           TrinketIcon.field_Cb.addChild((byte) -110, (UiLayoutNode) (HighScoreQuery.field_l.tabs));
@@ -70,7 +70,7 @@ final class pg {
           var3 = 0;
           if (var1_int != 0 &&
             DirectByteStorage.field_k.selectedIndex >= 0) {
-            var3 = sh.field_f[DirectByteStorage.field_k.selectedIndex];
+            var3 = LineupPositionSupport.field_f[DirectByteStorage.field_k.selectedIndex];
             if (var3 == 2) {
               ArchivePreloadEntry.clearAccountChoiceResources((byte) -43);
             } else if (var3 == 5) {
@@ -78,12 +78,12 @@ final class pg {
             }
           } else {
             if (var2 != 0 &&
-              ck.field_a != 2) {
+              TextPromptState.field_a != 2) {
               ArchivePreloadEntry.clearAccountChoiceResources((byte) -16);
             }
           }
           if (var3 == 0 &&
-            ck.field_a == 2) {
+            TextPromptState.field_a == 2) {
             var4 = -PlayingView.field_o + MonotonicClock.monotonicMillis(param0 ^ -51);
             var6 = (int)((-var4 + 10999L) / 1000L);
             if (var6 <= 0) {
@@ -202,7 +202,7 @@ final class pg {
           stackIn_8_4 = -107;
           stackIn_9_5 = !(param2.f(13467));
           stackIn_13_3 = (((PlayerStats) (Object) stackIn_8_3).c((byte) stackIn_8_4, stackIn_9_5)) && (AccountRegistrationResponse.a((byte) 34));
-          stackIn_14_0 = mg.a(stackIn_8_0, stackIn_8_1, stackIn_8_2, stackIn_13_3, param0, (byte) 106);
+          stackIn_14_0 = PlayerInputFactory.createRenderedPlayer(stackIn_8_0, stackIn_8_1, stackIn_8_2, stackIn_13_3, param0, (byte) 106);
           return stackIn_14_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -1,0 +1,158 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class ClientUiUpdateSupport {
+    static LoginDialog field_a;
+    static String field_b;
+    static String field_d;
+    static String field_e;
+    static int field_c;
+    static int field_f;
+
+    public static void releaseStatics(byte param0) {
+        field_e = null;
+        if (param0 == -43) {
+          field_d = null;
+          field_b = null;
+          field_a = null;
+          return;
+        }
+        ClientUiUpdateSupport.releaseStatics((byte) 95);
+        field_d = null;
+        field_b = null;
+        field_a = null;
+    }
+
+    final static int cosine(int param0, boolean param1) {
+        int stackIn_5_0 = 0;
+        int stackIn_9_0 = 0;
+        int stackIn_15_0 = 0;
+        int stackIn_19_0 = 0;
+        if (!param1) {
+          param0 = param0 & 8191;
+          if (param0 < 4096) {
+            if (param0 < 2048) {
+              stackIn_19_0 = PlayerInputFactory.field_b[2048 - param0];
+            } else {
+              stackIn_19_0 = -PlayerInputFactory.field_b[param0 - 2048];
+            }
+            return stackIn_19_0;
+          }
+          if (param0 < 6144) {
+            stackIn_15_0 = -PlayerInputFactory.field_b[6144 - param0];
+          } else {
+            stackIn_15_0 = PlayerInputFactory.field_b[-6144 + param0];
+          }
+          return stackIn_15_0;
+        }
+        ClientUiUpdateSupport.releaseStatics((byte) 50);
+        param0 = param0 & 8191;
+        if (param0 < 4096) {
+          if (param0 < 2048) {
+            stackIn_9_0 = PlayerInputFactory.field_b[2048 - param0];
+          } else {
+            stackIn_9_0 = -PlayerInputFactory.field_b[param0 - 2048];
+          }
+          return stackIn_9_0;
+        }
+        if (param0 < 6144) {
+          stackIn_5_0 = -PlayerInputFactory.field_b[6144 - param0];
+        } else {
+          stackIn_5_0 = PlayerInputFactory.field_b[-6144 + param0];
+        }
+        return stackIn_5_0;
+    }
+
+    final static void updateCommonClientUi(boolean param0, boolean param1, byte param2, int param3) {
+        UiLayoutNode stackIn_7_0 = null;
+        int stackIn_7_1 = 0;
+        boolean stackIn_8_2 = false;
+        UiLayoutNode stackIn_16_0 = null;
+        int stackIn_16_1 = 0;
+        boolean stackIn_17_2 = false;
+        UiLayoutNode stackIn_21_0 = null;
+        int stackIn_21_1 = 0;
+        boolean stackIn_22_2 = false;
+        UiLayoutNode stackIn_51_0 = null;
+        int stackIn_51_1 = 0;
+        boolean stackIn_52_2 = false;
+        UiLayoutNode stackIn_60_0 = null;
+        int stackIn_60_1 = 0;
+        boolean stackIn_61_2 = false;
+        UiLayoutNode stackIn_65_0 = null;
+        int stackIn_65_1 = 0;
+        boolean stackIn_66_2 = false;
+        GeneratedPanelPainter.b((byte) 123);
+        if (mi.field_d >= 0) {
+          ConsoleValue.field_a.field_E = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, StatefulTextPainter.field_r, new String[]{Integer.toString(mi.field_d)});
+          stackIn_51_0 = UiKeyRoutingSupport.field_c;
+          stackIn_51_1 = 0;
+          stackIn_52_2 = (param0) && (!param1) && (!TextWidgetPainter.field_f) && (PlayerContextMenu.field_i == null) && (null == ArchiveSource.field_b);
+          ((UiLayoutNode) (Object) stackIn_51_0).updateInput(stackIn_51_1, stackIn_52_2);
+          if (param2 > -37) {
+            ClientUiUpdateSupport.releaseStatics((byte) -81);
+          }
+          stackIn_60_0 = AuctionPriceLimits.field_d;
+          stackIn_60_1 = 0;
+          stackIn_61_2 = (param0) && (!param1) && (!TextWidgetPainter.field_f) && (PlayerContextMenu.field_i == null) && (ArchiveSource.field_b == null);
+          ((UiLayoutNode) (Object) stackIn_60_0).updateInput(stackIn_60_1, stackIn_61_2);
+          stackIn_65_0 = TriangleMesh.field_j;
+          stackIn_65_1 = 0;
+          stackIn_66_2 = (param0) && (!param1) && (TextWidgetPainter.field_f);
+          ((UiLayoutNode) (Object) stackIn_65_0).updateInput(stackIn_65_1, stackIn_66_2);
+        } else {
+          ConsoleValue.field_a.field_E = null;
+          stackIn_7_0 = UiKeyRoutingSupport.field_c;
+          stackIn_7_1 = 0;
+          stackIn_8_2 = (param0) && (!param1) && (!TextWidgetPainter.field_f) && (PlayerContextMenu.field_i == null) && (null == ArchiveSource.field_b);
+          ((UiLayoutNode) (Object) stackIn_7_0).updateInput(stackIn_7_1, stackIn_8_2);
+          if (param2 > -37) {
+            ClientUiUpdateSupport.releaseStatics((byte) -81);
+          }
+          stackIn_16_0 = AuctionPriceLimits.field_d;
+          stackIn_16_1 = 0;
+          stackIn_17_2 = (param0) && (!param1) && (!TextWidgetPainter.field_f) && (PlayerContextMenu.field_i == null) && (ArchiveSource.field_b == null);
+          ((UiLayoutNode) (Object) stackIn_16_0).updateInput(stackIn_16_1, stackIn_17_2);
+          stackIn_21_0 = TriangleMesh.field_j;
+          stackIn_21_1 = 0;
+          stackIn_22_2 = (param0) && (!param1) && (TextWidgetPainter.field_f);
+          ((UiLayoutNode) (Object) stackIn_21_0).updateInput(stackIn_21_1, stackIn_22_2);
+        }
+        tn.field_d.tabs.h((byte) 47);
+        if (MouseWheelInput.field_a.field_sb != 0) {
+          PlayerInputFactory.field_f = true;
+        }
+        if (ClassNameSupport.field_d.field_sb != 0) {
+          if (TooltipOverlay.field_d) {
+            NodeHashTableIterator.a(-43, param3);
+          } else {
+            if (WeightedLruCache.field_d > 0) {
+              NodeHashTableIterator.a(-43, param3);
+            } else {
+              if (ScrollContainer.field_Ib >= 2 &&
+                GameplayHelpScreen.field_G[12]) {
+                NodeHashTableIterator.a(-43, param3);
+              }
+            }
+          }
+        }
+        if (LoginCredentials.field_b.field_sb != 0) {
+          if (1 == VertexNormal.field_d.length &&
+            VertexNormal.field_d[0] != ThreeCommand.field_D) {
+            ThreeCommand.field_D = VertexNormal.field_d[0];
+          }
+          oa.a(false, param3, ThreeCommand.field_D, true, 0, LeagueWinnerDialog.field_J);
+        }
+        if (RandomAccessCacheFile.field_a.field_sb != 0) {
+          TextWidgetPainter.field_f = false;
+        }
+    }
+
+    static {
+        field_b = "This password contains your Player Name, and would be easy to guess";
+        field_e = "Encouraging rule breaking";
+        field_c = 1;
+        field_d = "Go to the Orb Downloads section of FunOrb.com to purchase this item";
+        field_f = 0;
+    }
+}

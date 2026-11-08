@@ -73,7 +73,7 @@ final class LoginDialog extends ContentTransitionDialog {
                 continue;
               }
               var5++;
-              var8 = rr.a(10, (CharSequence) ((Object) var7_ref_String));
+              var8 = TextEntrySupport.parseDecimalInt(10, (CharSequence) ((Object) var7_ref_String));
               var4 = var4 + (param2[var8].length() + (var6_int - var5));
               continue;
             }
@@ -110,7 +110,7 @@ final class LoginDialog extends ContentTransitionDialog {
               continue;
             }
             var5Lifetime1++;
-            var10 = rr.a(10, (CharSequence) ((Object) var9));
+            var10 = TextEntrySupport.parseDecimalInt(10, (CharSequence) ((Object) var9));
             discarded$0 = var6.append(param1.substring(var7, var8Lifetime1));
             discarded$1 = var6.append(param2[var10]);
             var7 = var5Lifetime1;
@@ -366,7 +366,7 @@ final class LoginDialog extends ContentTransitionDialog {
                 continue;
               }
               var5++;
-              var8 = rr.a(10, (CharSequence) ((Object) var7_ref_String));
+              var8 = TextEntrySupport.parseDecimalInt(10, (CharSequence) ((Object) var7_ref_String));
               var4 = var4 + (param2[var8].length() + (var6_int - var5));
               continue;
             }
@@ -403,7 +403,7 @@ final class LoginDialog extends ContentTransitionDialog {
               continue;
             }
             var5Lifetime1++;
-            var10 = rr.a(10, (CharSequence) ((Object) var9));
+            var10 = TextEntrySupport.parseDecimalInt(10, (CharSequence) ((Object) var9));
             discarded$0 = var6.append(param1.substring(var7, var8Lifetime1));
             discarded$1 = var6.append(param2[var10]);
             var7 = var5Lifetime1;

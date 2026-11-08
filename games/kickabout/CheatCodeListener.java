@@ -44,13 +44,13 @@ final class CheatCodeListener implements OverlayLayer {
         var1 = 0;
         if (ArchiveManager.a(false)) {
           var1 = 1;
-          gg.a(-32053);
+          SocialPlayerRow.a(-32053);
         } else {
           if (!ServerTextTemplate.a(param0 ^ 27302)) {
             if (NanoTickClock.c(2915)) {
               SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.field_g, SoftwareRasterizer.field_f);
               var1 = 1;
-              ph.b(true);
+              AudioOutputSupport.b(true);
             }
           } else {
             var1 = 1;

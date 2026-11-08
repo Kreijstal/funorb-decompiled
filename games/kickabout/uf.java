@@ -165,7 +165,7 @@ final class uf {
           if (PlayerArchetypeSortCriterion.field_n <= 0) {
             return false;
           }
-          if (!vr.d(1)) {
+          if (!PitchSurfaceLoader.d(1)) {
             return true;
           }
           return false;
@@ -179,7 +179,7 @@ final class uf {
         if (PlayerArchetypeSortCriterion.field_n <= 0) {
           return false;
         }
-        if (!vr.d(1)) {
+        if (!PitchSurfaceLoader.d(1)) {
           return true;
         }
         return false;
@@ -226,7 +226,7 @@ final class uf {
               var8.rotateNearest(608, 736, 608, 736, var6, 4096);
             }
             DialogOverlay.field_f[-var3 + 5] = new ArgbSprite(38, 46);
-            eo.downscaleByHalf(var2, DialogOverlay.field_f[5 - var3]);
+            SoftwareDrawingSupport.downscaleByHalf(var2, DialogOverlay.field_f[5 - var3]);
           }
           TeamManagementScreen.e(param0 ^ -100);
           return;
@@ -249,14 +249,14 @@ final class uf {
     }
 
     final static AccountRegistrationResponse a(int param0) {
-        if (vj.field_a == wk.field_f) {
+        if (vj.field_a == ClubStateFactory.field_f) {
           throw new IllegalStateException();
         }
         if (param0 != -1460) {
           return (AccountRegistrationResponse) null;
         }
-        if (wk.field_f == LinkTextPainter.field_d) {
-          wk.field_f = vj.field_a;
+        if (ClubStateFactory.field_f == LinkTextPainter.field_d) {
+          ClubStateFactory.field_f = vj.field_a;
           return ArchiveIndex.field_a;
         }
         return null;

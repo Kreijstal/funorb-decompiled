@@ -21,7 +21,7 @@ final class TrinketTile extends UiLayoutNode {
           ResourceArchive var3 = (ResourceArchive) null;
           TrinketTile.a((BitmapFont) null, (ResourceArchive) null, (byte) 38);
         }
-        return ic.field_h.field_x >= this.field_Db ? 16777215 : 16711680;
+        return RegistrationRequestState.field_h.field_x >= this.field_Db ? 16777215 : 16711680;
     }
 
     final static void a(BitmapFont param0, ResourceArchive param1, byte param2) {
@@ -67,7 +67,7 @@ final class TrinketTile extends UiLayoutNode {
           TeamSelectionAgent.a((byte) -45, var4);
           var12 = (BitmapFont) null;
           FullscreenErrorDialog.field_S = su.a(5138823, 2245737, 1513239, true, 65793, (BitmapFont) null, 65793, 65793, 4020342, 8947848, 0, 1513239, 1127256);
-          ic.field_a = su.a(0, 0, 0, true, 0, param0, 0, 0, 0, 0, 16764006, 0, 0);
+          RegistrationRequestState.field_a = su.a(0, 0, 0, true, 0, param0, 0, 0, 0, 0, 16764006, 0, 0);
           NameSuggestionsPanel.field_E = su.a(0, 0, 0, true, 0, param0, 0, 0, 0, 0, 16777215, 0, 0);
           var5 = SoftwareRasterizer.field_g;
           var6 = SoftwareRasterizer.field_f;
@@ -78,7 +78,7 @@ final class TrinketTile extends UiLayoutNode {
             SoftwareRasterizer.drawVerticalLine(var8, 1 + var8, -(var8 << 1) + 14, 16777215);
           }
           SoftwareRasterizer.a(var16, var5, var6);
-          gk.field_h = QuickChatMenuBuilder.buildCategoryMenu(param2 ^ -32, var4, FullscreenErrorDialog.field_S, NameSuggestionsPanel.field_E, ic.field_a);
+          ChatComposeSupport.field_h = QuickChatMenuBuilder.buildCategoryMenu(param2 ^ -32, var4, FullscreenErrorDialog.field_S, NameSuggestionsPanel.field_E, RegistrationRequestState.field_a);
           LeaguesHelpScreen.field_E.field_jb = new IntrusiveDeque();
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -123,7 +123,7 @@ final class TrinketTile extends UiLayoutNode {
         this.field_Db = var3.field_e;
         this.field_B = 5;
         this.field_D = 5;
-        this.field_Eb = ad.formatCurrencyAmount(this.field_Db, 26300);
+        this.field_Eb = LocalizedTextLoader.formatCurrencyAmount(this.field_Db, 26300);
         this.field_zb = var3.getName((byte) -1).toLowerCase();
         this.addChild((byte) -115, (UiLayoutNode) (this.field_Cb));
         this.field_Cb.field_s = 8;

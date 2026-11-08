@@ -94,22 +94,22 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
           for (var3_int = 0; var3_int < RankingsRequest.field_n.length; var3_int++) {
             RankingsRequest.field_n[var3_int] = 256;
           }
-          cb.field_d = PcmPlayerService.createPlayer(param0, param2, 0, 22050);
+          PitchPurchaseSupport.field_d = PcmPlayerService.createPlayer(param0, param2, 0, 22050);
           pg.field_d = PcmPlayerService.createPlayer(param0, param2, 1, 1024);
           if (param1 != 23) {
             FullscreenFocusCanvas.releaseStatics((byte) 30);
           }
-          sk.field_d = new MusicTrackMixer(3);
-          sk.field_d.a(param1 - 23, 128, 9);
+          LoadingProgressSupport.field_d = new MusicTrackMixer(3);
+          LoadingProgressSupport.field_d.a(param1 - 23, 128, 9);
           var5 = 0;
           var3_intLifetime1 = var5;
           while (3 > var5) {
-            sk.field_d.a(var5, RankingsRequest.field_n[var5], (byte) -85);
+            LoadingProgressSupport.field_d.a(var5, RankingsRequest.field_n[var5], (byte) -85);
             var5++;
           }
-          cb.field_d.setRootStream(sk.field_d);
-          pi.field_b = new PcmStreamMixer();
-          pg.field_d.setRootStream(pi.field_b);
+          PitchPurchaseSupport.field_d.setRootStream(LoadingProgressSupport.field_d);
+          PlayerMeshFactory.field_b = new PcmStreamMixer();
+          pg.field_d.setRootStream(PlayerMeshFactory.field_b);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "vq.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

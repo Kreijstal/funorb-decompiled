@@ -102,7 +102,7 @@ final class AccountChoicePanel extends WidgetContainer implements ButtonListener
         this.field_J.field_k = (UiListener) (this);
         this.field_E.field_k = (UiListener) (this);
         this.field_H.field_k = (UiListener) (this);
-        this.field_E.field_u = so.field_c;
+        this.field_E.field_u = AppletContextSupport.field_c;
         this.field_H.field_u = HelpTipDialog.field_G;
         this.a(-59, this.field_J);
         this.a(-121, this.field_E);
@@ -150,7 +150,7 @@ final class AccountChoicePanel extends WidgetContainer implements ButtonListener
     final void drawLayer(int param0, int param1, int param2, int param3) {
         int var5 = param2 + this.field_t;
         int var6 = param3 + this.field_g;
-        gf.field_a.a(vb.field_i, 20 + var5, 20 + var6, this.field_n - 40, this.field_i - 50, 16777215, -1, 1, 0, gf.field_a.field_G);
+        ModelMaterial.field_a.a(vb.field_i, 20 + var5, 20 + var6, this.field_n - 40, this.field_i - 50, 16777215, -1, 1, 0, ModelMaterial.field_a.field_G);
         super.drawLayer(param0, (int) (char)param1, param2, param3);
     }
 

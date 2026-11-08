@@ -176,15 +176,15 @@ class BeveledTextPainter extends TextWidgetPainter {
           boolean decompiledFrameRemainder0 = true;
           var21 = DemoIntegersCommand.a(param4, 17369, "lobby", "crowns");
           var5 = var21;
-          bk.field_e = var21.length;
+          CalendarSupport.field_e = var21.length;
           if (param3 != null) {
-            var6_array = new IndexedSprite[param3.length + bk.field_e];
-            for (var7_int = 0; var7_int < bk.field_e; var7_int++) {
+            var6_array = new IndexedSprite[param3.length + CalendarSupport.field_e];
+            for (var7_int = 0; var7_int < CalendarSupport.field_e; var7_int++) {
               var6_array[var7_int] = var21[var7_int];
             }
             var5 = var6_array;
             for (var7_int = 0; param3.length > var7_int; var7_int++) {
-              var6_array[var7_int + bk.field_e] = param3[var7_int];
+              var6_array[var7_int + CalendarSupport.field_e] = param3[var7_int];
             }
             var24 = new int[var5.length];
             var22 = var24;
@@ -201,14 +201,14 @@ class BeveledTextPainter extends TextWidgetPainter {
             var23 = var25;
             var6 = var23;
             var7_int = 0;
-            decompiledFrameRemainder0 = !(bk.field_e <= var7_int);
+            decompiledFrameRemainder0 = !(CalendarSupport.field_e <= var7_int);
             if (decompiledFrameRemainder0) {
               var24[var7_int] = 10;
               var7_int++;
             }
           }
           if (decompiledFrameRemainder0) {
-            while (bk.field_e > var7_int) {
+            while (CalendarSupport.field_e > var7_int) {
               var24[var7_int] = 10;
               var7_int++;
             }
@@ -216,15 +216,15 @@ class BeveledTextPainter extends TextWidgetPainter {
           if (param3 != null) {
             if (param1 != null) {
               for (var7_intLifetime1 = 0; param3.length > var7_intLifetime1; var7_intLifetime1++) {
-                var6[var7_intLifetime1 + bk.field_e] = param1[var7_intLifetime1];
+                var6[var7_intLifetime1 + CalendarSupport.field_e] = param1[var7_intLifetime1];
               }
             } else {
               for (var7_intLifetime1 = 0; var7_intLifetime1 < param3.length; var7_intLifetime1++) {
-                var6[var7_intLifetime1 + bk.field_e] = param3[var7_intLifetime1].field_a;
+                var6[var7_intLifetime1 + CalendarSupport.field_e] = param3[var7_intLifetime1].field_a;
               }
             }
           }
-          sh.field_c = 15;
+          LineupPositionSupport.field_c = 15;
           DiskCacheWorker.field_b = 4;
           ig.field_c = 11;
           BytePlusOneCommand.field_I = 2;
@@ -238,7 +238,7 @@ class BeveledTextPainter extends TextWidgetPainter {
           var8 = new UiLayoutNode(0L, (UiLayoutNode) null);
           var8.field_y = 16777215;
           var8.field_X = (BitmapFont) ((Object) var7);
-          var8.field_xb = sh.field_c;
+          var8.field_xb = LineupPositionSupport.field_c;
           var8.field_p = 1;
           var9 = var8;
           var9.field_A = 1;
@@ -249,7 +249,7 @@ class BeveledTextPainter extends TextWidgetPainter {
             BeveledTextPainter.updateIdleMovement((byte) -76, -14, (CommonGame) null, 71);
           }
           var10.field_X = (BitmapFont) ((Object) ServerMessageScreen.field_E);
-          var10.field_xb = sh.field_c;
+          var10.field_xb = LineupPositionSupport.field_c;
           var10.field_p = 1;
           var11 = var10;
           var11.field_A = 1;
@@ -257,8 +257,8 @@ class BeveledTextPainter extends TextWidgetPainter {
           LeaguesHelpScreen.field_H.field_R = ClientException.a(ModalStack.a(param4, -22, "lobby", "heading"), (byte) 86);
           DoSomethingCommand.field_B = new UiLayoutNode(0L, (UiLayoutNode) null);
           DoSomethingCommand.field_B.field_R = NotCommand.a(120, false, 8421504, 4210752, false, (byte) -46);
-          r.field_c = new UiLayoutNode(0L, (UiLayoutNode) null);
-          r.field_c.field_R = fs.a(114, 3, 1, 6316128, 6316128, (byte) 92);
+          ClientProtocolStage.field_c = new UiLayoutNode(0L, (UiLayoutNode) null);
+          ClientProtocolStage.field_c.field_R = fs.a(114, 3, 1, 6316128, 6316128, (byte) 92);
           StrongCacheEntry.field_u = new UiLayoutNode(0L, (UiLayoutNode) null);
           StrongCacheEntry.field_u.field_R = ClientException.a(ModalStack.a(param4, 81, "lobby", "popup"), (byte) 63);
           var12 = ClientException.a(ModalStack.a(param4, -125, "lobby", "popup_mouseover"), (byte) -4);
@@ -267,8 +267,8 @@ class BeveledTextPainter extends TextWidgetPainter {
           AccountTermsPanel.field_H = new UiLayoutNode(0L, var8);
           AccountTermsPanel.field_H.field_R = var14;
           DateInputValidator.field_f = new UiLayoutNode(0L, (UiLayoutNode) null);
-          DateInputValidator.field_f.field_N = wa.a((byte) 127, "lobby", param4, "closebutton");
-          DateInputValidator.field_f.field_vb = wa.a((byte) 114, "lobby", param4, "closebutton_mouseover");
+          DateInputValidator.field_f.field_N = SpriteResourceSupport.loadNamedSprite((byte) 127, "lobby", param4, "closebutton");
+          DateInputValidator.field_f.field_vb = SpriteResourceSupport.loadNamedSprite((byte) 114, "lobby", param4, "closebutton_mouseover");
           IntValueNode.field_i = new UiLayoutNode(0L, var8);
           IntValueNode.field_i.field_R = NotCommand.a(40, true, 3815994, 2039583, true, (byte) -46);
           TrinketIcon.field_zb = new UiLayoutNode(0L, var10);
@@ -283,7 +283,7 @@ class BeveledTextPainter extends TextWidgetPainter {
           ConsoleEvaluationException.field_e = new UiLayoutNode(0L, (UiLayoutNode) null);
           ConsoleEvaluationException.field_e.field_X = (BitmapFont) ((Object) ServerMessageScreen.field_E);
           ConsoleEvaluationException.field_e.field_y = 13421772;
-          ConsoleEvaluationException.field_e.field_xb = sh.field_c;
+          ConsoleEvaluationException.field_e.field_xb = LineupPositionSupport.field_c;
           ConsoleEvaluationException.field_e.field_p = 1;
           ul.field_c = new UiLayoutNode(0L, ConsoleEvaluationException.field_e);
           ul.field_c.field_hb = 8421504;
@@ -294,19 +294,19 @@ class BeveledTextPainter extends TextWidgetPainter {
           var15 = new UiLayoutNode(0L, ul.field_c);
           var15.field_y = 16777215;
           var15.field_X = (BitmapFont) ((Object) var7);
-          var15.field_xb = sh.field_c;
-          ip.field_c = new UiLayoutNode(0L, ConsoleEvaluationException.field_e);
-          ip.field_c.field_R = NotCommand.a(16, false, 2236962, 2236962, false, (byte) -46);
-          ip.field_c.field_kb = 2;
+          var15.field_xb = LineupPositionSupport.field_c;
+          RasterGammaSupport.field_c = new UiLayoutNode(0L, ConsoleEvaluationException.field_e);
+          RasterGammaSupport.field_c.field_R = NotCommand.a(16, false, 2236962, 2236962, false, (byte) -46);
+          RasterGammaSupport.field_c.field_kb = 2;
           DisplayModeSupport.field_b = new UiLayoutNode(0L, ConsoleEvaluationException.field_e);
           DisplayModeSupport.field_b.field_R = NotCommand.a(16, false, 1513239, 1513239, false, (byte) -46);
           DisplayModeSupport.field_b.field_kb = 2;
-          AuctionSettingsDialog.field_J = new UiLayoutNode(0L, ip.field_c);
+          AuctionSettingsDialog.field_J = new UiLayoutNode(0L, RasterGammaSupport.field_c);
           AuctionSettingsDialog.field_J.applyStyle(ul.field_c, (byte) -100);
           BlobSubmission.field_f = new UiLayoutNode(0L, DisplayModeSupport.field_b);
           BlobSubmission.field_f.applyStyle(ul.field_c, (byte) -85);
           var16 = ModalStack.a(param4, 108, "lobby", "button_mouseover");
-          su.field_b = new ContextMenu(StrongCacheEntry.field_u, var12, ConsoleEvaluationException.field_e, ul.field_c, 3, 2, mj.field_b, 3, sh.field_c);
+          su.field_b = new ContextMenu(StrongCacheEntry.field_u, var12, ConsoleEvaluationException.field_e, ul.field_c, 3, 2, mj.field_b, 3, LineupPositionSupport.field_c);
           MouseWheelInput.field_e = new UiLayoutNode(0L, ul.field_c);
           MouseWheelInput.field_e.field_R = var13;
           MouseWheelInput.field_e.field_eb = 1;
@@ -388,26 +388,26 @@ class BeveledTextPainter extends TextWidgetPainter {
           var17 = ModalStack.a(param4, -121, "lobby", "checkbox");
           MatchPhaseView.field_d = new IconLabel(0L, var17[1], var17[0], 1, ul.field_c, (String) null);
           ScrollPane.field_Hb = new UiLayoutNode(0L, (UiLayoutNode) null);
-          ScrollPane.field_Hb.field_R = CanvasResizePolicy.centerOnlyPanelSlices((byte) -83, wa.a((byte) 98, "lobby", param4, "slideregion"));
-          ScrollPane.field_Hb.field_S = CanvasResizePolicy.centerOnlyPanelSlices((byte) -96, wa.a((byte) 113, "lobby", param4, "slideregion_mouseover"));
-          ScrollPane.field_Hb.field_rb = CanvasResizePolicy.centerOnlyPanelSlices((byte) -86, wa.a((byte) 116, "lobby", param4, "slideregion_mouseheld"));
-          ScrollPane.field_Hb.field_tb = CanvasResizePolicy.centerOnlyPanelSlices((byte) -108, wa.a((byte) 127, "lobby", param4, "slideregion_disabled"));
-          ts.field_a = new UiLayoutNode(0L, (UiLayoutNode) null);
-          ts.field_a.field_R = ClientException.a(ModalStack.a(param4, 108, "lobby", "dragbar"), (byte) 8);
-          ts.field_a.field_S = ClientException.a(ModalStack.a(param4, 46, "lobby", "dragbar_mouseover"), (byte) -24);
-          ts.field_a.field_rb = ClientException.a(ModalStack.a(param4, -119, "lobby", "dragbar_mouseheld"), (byte) -123);
-          ts.field_a.field_tb = ClientException.a(ModalStack.a(param4, -27, "lobby", "dragbar_disabled"), (byte) -127);
-          sd.field_a = new UiLayoutNode(0L, (UiLayoutNode) null);
-          sd.field_a.field_N = wa.a((byte) 110, "lobby", param4, "upbutton");
-          sd.field_a.field_vb = wa.a((byte) 116, "lobby", param4, "upbutton_mouseover");
-          sd.field_a.field_r = wa.a((byte) 117, "lobby", param4, "upbutton_mouseheld");
-          sd.field_a.field_t = wa.a((byte) 99, "lobby", param4, "upbutton_disabled");
+          ScrollPane.field_Hb.field_R = CanvasResizePolicy.centerOnlyPanelSlices((byte) -83, SpriteResourceSupport.loadNamedSprite((byte) 98, "lobby", param4, "slideregion"));
+          ScrollPane.field_Hb.field_S = CanvasResizePolicy.centerOnlyPanelSlices((byte) -96, SpriteResourceSupport.loadNamedSprite((byte) 113, "lobby", param4, "slideregion_mouseover"));
+          ScrollPane.field_Hb.field_rb = CanvasResizePolicy.centerOnlyPanelSlices((byte) -86, SpriteResourceSupport.loadNamedSprite((byte) 116, "lobby", param4, "slideregion_mouseheld"));
+          ScrollPane.field_Hb.field_tb = CanvasResizePolicy.centerOnlyPanelSlices((byte) -108, SpriteResourceSupport.loadNamedSprite((byte) 127, "lobby", param4, "slideregion_disabled"));
+          PitchCoordinateSupport.field_a = new UiLayoutNode(0L, (UiLayoutNode) null);
+          PitchCoordinateSupport.field_a.field_R = ClientException.a(ModalStack.a(param4, 108, "lobby", "dragbar"), (byte) 8);
+          PitchCoordinateSupport.field_a.field_S = ClientException.a(ModalStack.a(param4, 46, "lobby", "dragbar_mouseover"), (byte) -24);
+          PitchCoordinateSupport.field_a.field_rb = ClientException.a(ModalStack.a(param4, -119, "lobby", "dragbar_mouseheld"), (byte) -123);
+          PitchCoordinateSupport.field_a.field_tb = ClientException.a(ModalStack.a(param4, -27, "lobby", "dragbar_disabled"), (byte) -127);
+          SpriteBackgroundSupport.field_a = new UiLayoutNode(0L, (UiLayoutNode) null);
+          SpriteBackgroundSupport.field_a.field_N = SpriteResourceSupport.loadNamedSprite((byte) 110, "lobby", param4, "upbutton");
+          SpriteBackgroundSupport.field_a.field_vb = SpriteResourceSupport.loadNamedSprite((byte) 116, "lobby", param4, "upbutton_mouseover");
+          SpriteBackgroundSupport.field_a.field_r = SpriteResourceSupport.loadNamedSprite((byte) 117, "lobby", param4, "upbutton_mouseheld");
+          SpriteBackgroundSupport.field_a.field_t = SpriteResourceSupport.loadNamedSprite((byte) 99, "lobby", param4, "upbutton_disabled");
           IterableDualLinkDeque.field_b = new UiLayoutNode(0L, (UiLayoutNode) null);
-          IterableDualLinkDeque.field_b.field_N = wa.a((byte) 108, "lobby", param4, "downbutton");
-          IterableDualLinkDeque.field_b.field_vb = wa.a((byte) 108, "lobby", param4, "downbutton_mouseover");
-          IterableDualLinkDeque.field_b.field_r = wa.a((byte) 115, "lobby", param4, "downbutton_mouseheld");
-          IterableDualLinkDeque.field_b.field_t = wa.a((byte) 119, "lobby", param4, "downbutton_disabled");
-          uk.field_b = new VerticalScrollbar(0L, sd.field_a, IterableDualLinkDeque.field_b, ScrollPane.field_Hb, ts.field_a);
+          IterableDualLinkDeque.field_b.field_N = SpriteResourceSupport.loadNamedSprite((byte) 108, "lobby", param4, "downbutton");
+          IterableDualLinkDeque.field_b.field_vb = SpriteResourceSupport.loadNamedSprite((byte) 108, "lobby", param4, "downbutton_mouseover");
+          IterableDualLinkDeque.field_b.field_r = SpriteResourceSupport.loadNamedSprite((byte) 115, "lobby", param4, "downbutton_mouseheld");
+          IterableDualLinkDeque.field_b.field_t = SpriteResourceSupport.loadNamedSprite((byte) 119, "lobby", param4, "downbutton_disabled");
+          uk.field_b = new VerticalScrollbar(0L, SpriteBackgroundSupport.field_a, IterableDualLinkDeque.field_b, ScrollPane.field_Hb, PitchCoordinateSupport.field_a);
           BroadcastServerCommand.field_D = new FriendsListPanel(0L, (UiLayoutNode) null, SoundCache.field_b, uk.field_b, um.field_d, (String) null, (String) null);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -519,7 +519,7 @@ class BeveledTextPainter extends TextWidgetPainter {
     }
 
     BeveledTextPainter(int param0) {
-        this(gf.field_a, param0);
+        this(ModelMaterial.field_a, param0);
     }
 
     final static void a(int param0, boolean param1, boolean param2, int param3) {
@@ -610,7 +610,7 @@ class BeveledTextPainter extends TextWidgetPainter {
             GoalStateAgent.field_k.field_lb = true;
             if (InstrumentNoteMask.field_k) {
               TrinketUnlockNotice.field_b.field_lb = false;
-              DialogOverlay.field_e.field_E = qr.field_c;
+              DialogOverlay.field_e.field_E = SessionUrlSupport.field_c;
               if (var9 == 0) {
                 stackIn_54_0 = ColorQuantizationBox.field_g;
               } else {
@@ -633,7 +633,7 @@ class BeveledTextPainter extends TextWidgetPainter {
                 var10 = (String) (var10) + "...";
               }
               MarkerSliderWidget.field_F.field_E = (String) (var10);
-              GoalStateAgent.field_k.field_E = vt.field_a.toUpperCase();
+              GoalStateAgent.field_k.field_E = AsciiCharacterSupport.field_a.toUpperCase();
             } else {
               stackIn_23_0 = GoalStateAgent.field_k;
               if (var9 != 0) {
@@ -647,7 +647,7 @@ class BeveledTextPainter extends TextWidgetPainter {
               if (var9 != 0) {
                 stackIn_27_2 = MenuSelection.field_j;
               } else {
-                stackIn_27_2 = vr.field_b;
+                stackIn_27_2 = PitchSurfaceLoader.field_b;
               }
               stackIn_26_0.field_E = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(stackIn_26_1, stackIn_27_2, new String[]{GoalStateAgent.field_k.field_E});
               MarkerSliderWidget.field_F.field_E = CheckboxLabelWidget.field_Db;
@@ -657,16 +657,16 @@ class BeveledTextPainter extends TextWidgetPainter {
                 ee.field_e = false;
                 tt.field_c = false;
                 if (SumIntegersCommand.field_G == null) {
-                  WhirlpoolHasher.field_f = new boolean[ss.field_j];
-                  SumIntegersCommand.field_G = new byte[ss.field_j];
+                  WhirlpoolHasher.field_f = new boolean[UiKeyRoutingSupport.field_j];
+                  SumIntegersCommand.field_G = new byte[UiKeyRoutingSupport.field_j];
                 }
                 var14 = 0;
                 var10_intLifetime1 = var14;
-                while (var14 < ss.field_j) {
+                while (var14 < UiKeyRoutingSupport.field_j) {
                   WhirlpoolHasher.field_f[var14] = false;
                   var14++;
                 }
-                pl.a(0, ss.field_j, ArchiveSource.field_b, -1, (byte) -121, -1, -1, true);
+                pl.a(0, UiKeyRoutingSupport.field_j, ArchiveSource.field_b, -1, (byte) -121, -1, -1, true);
                 if (!(2 > ScrollContainer.field_Ib) &&
                   GameplayHelpScreen.field_G[12]) {
                   tt.field_c = true;
@@ -683,7 +683,7 @@ class BeveledTextPainter extends TextWidgetPainter {
                     var12Lifetime1 = var10;
                     var10 = var12Lifetime1;
                   }
-                  for (var11Lifetime1 = 0; var11Lifetime1 < ss.field_j; var11Lifetime1++) {
+                  for (var11Lifetime1 = 0; var11Lifetime1 < UiKeyRoutingSupport.field_j; var11Lifetime1++) {
                     if (WhirlpoolHasher.field_f[var11Lifetime1]) {
                       var12_ref = "<col=A00000>" + ok.field_b[var11Lifetime1] + "</col>";
                       var10 = var12_ref;

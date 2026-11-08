@@ -160,7 +160,7 @@ final class NamedValueEntry extends IntrusiveNode {
             var4 = 115;
             if (75 >= var1_int) {
               if (var1_int > 50) {
-                var5 = 65536 - we.cosine((-25 + (var1_int - 25) << 12) / 25, false);
+                var5 = 65536 - ClientUiUpdateSupport.cosine((-25 + (var1_int - 25) << 12) / 25, false);
                 var4 = var4 - (115 * var5 >> 17);
               }
             } else {
@@ -218,14 +218,14 @@ final class NamedValueEntry extends IntrusiveNode {
             stackIn_47_0 = (var5Lifetime1 == 0) ? 0 : 1;
             if (stackIn_47_0 != DemoIntegersCommand.field_F.field_X.goalScorer) {
               TextLayout.$cfr$intArgs$a$8e2a9e3a0d15(-91, 180, 295, var7Lifetime1, var3);
-              f.$cfr$intArgs$a$8e2a9e3a0d15(125, var8, var3, var4 + 180, 355);
+              SpriteNumberPainter.drawNumberDigits(125, var8, var3, var4 + 180, 355);
               stackIn_54_0 = 122;
               if (var10 == 0) {
                 stackIn_55_1 = var8 - 1;
               } else {
                 stackIn_55_1 = var8;
               }
-              f.$cfr$intArgs$a$8e2a9e3a0d15(stackIn_54_0, stackIn_55_1, var3, 180 + (var4 - 115), 355);
+              SpriteNumberPainter.drawNumberDigits(stackIn_54_0, stackIn_55_1, var3, 180 + (var4 - 115), 355);
             } else {
               TextLayout.$cfr$intArgs$a$8e2a9e3a0d15(-72, var4 + 180, 295, var7Lifetime1, var3);
               stackIn_50_0 = -69;
@@ -237,7 +237,7 @@ final class NamedValueEntry extends IntrusiveNode {
                 stackIn_51_3 = var7Lifetime1 - 1;
               }
               TextLayout.$cfr$intArgs$a$8e2a9e3a0d15(stackIn_50_0, stackIn_50_1, stackIn_50_2, stackIn_51_3, var3);
-              f.$cfr$intArgs$a$8e2a9e3a0d15(119, var8, var3, 180, 355);
+              SpriteNumberPainter.drawNumberDigits(119, var8, var3, 180, 355);
             }
           }
           TeamManagementScreen.e(121);

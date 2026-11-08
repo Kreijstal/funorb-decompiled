@@ -93,9 +93,9 @@ final class MyKitScreen extends TeamManagementScreen {
         if (var4Lifetime1 != 0) {
           this.stepSelection(-75, var4Lifetime1);
         }
-        if (this.field_bb != ic.field_h.field_w ||
-          this.field_N != ic.field_h.field_k ||
-          ic.field_h.field_R != this.field_Q) {
+        if (this.field_bb != RegistrationRequestState.field_h.field_w ||
+          this.field_N != RegistrationRequestState.field_h.field_k ||
+          RegistrationRequestState.field_h.field_R != this.field_Q) {
           this.refreshPlayerPreview(-3);
         }
     }
@@ -122,8 +122,8 @@ final class MyKitScreen extends TeamManagementScreen {
         var5_ref_rd__ = AnimationSkeleton.field_f;
         for (var6_int = 0; var5_ref_rd__.length > var6_int; var6_int++) {
           var7_ref_rd = var5_ref_rd__[var6_int];
-          if (var7_ref_rd.a(ic.field_h.field_e, param0 + 109, ScrollContainer.field_Ib)) {
-            var11.addLast(new KitStyleTile(ic.field_h, var7_ref_rd), 3);
+          if (var7_ref_rd.a(RegistrationRequestState.field_h.field_e, param0 + 109, ScrollContainer.field_Ib)) {
+            var11.addLast(new KitStyleTile(RegistrationRequestState.field_h, var7_ref_rd), 3);
           }
         }
         this.field_F.field_jb = var11;
@@ -139,8 +139,8 @@ final class MyKitScreen extends TeamManagementScreen {
         this.field_F.field_s = 0;
         this.field_V = param0;
         this.field_F.field_q = var5 - 12 + 10;
-        var10 = ic.field_h.squad;
-        var6_array = ic.field_h.squad;
+        var10 = RegistrationRequestState.field_h.squad;
+        var6_array = RegistrationRequestState.field_h.squad;
         for (var7 = 0; var7 < var10.length; var7++) {
           var8 = var10[var7];
           if (!var8.isEmpty(-2)) {
@@ -270,7 +270,7 @@ final class MyKitScreen extends TeamManagementScreen {
           SoftwareRasterizer.fillRoundedRectangleBlended(var3_ref_hd.field_F, var3_ref_hd.field_T, var3_ref_hd.field_q, var3_ref_hd.field_mb, 10, 65793, 96);
           var3_ref_hd = (UiLayoutNode) (this.field_P.field_jb.c(33));
         }
-        un.field_d.a(le.field_c, -26 + this.field_G.field_F, this.field_G.field_T - 16, 16777215, -1);
+        un.field_d.a(ExceptionTextSupport.field_c, -26 + this.field_G.field_F, this.field_G.field_T - 16, 16777215, -1);
         for (var3 = 0; var3 < 2; var3++) {
           un.field_d.a(ImageProducerRasterBuffer.field_j[var3], 6 + this.field_J[var3].field_F, -8 + this.field_J[var3].field_T, 16777215, -1);
         }
@@ -315,8 +315,8 @@ final class MyKitScreen extends TeamManagementScreen {
         this.field_P.addChild((byte) -113, var7);
         this.field_F = new UiLayoutNode();
         this.field_G = new UiLayoutNode();
-        this.field_eb = eo.a(false);
-        this.field_H = eo.a(true);
+        this.field_eb = SoftwareDrawingSupport.a(false);
+        this.field_H = SoftwareDrawingSupport.a(true);
         this.field_eb.field_s = 5;
         this.field_H.field_s = this.field_X.field_q - (this.field_H.field_q + 5);
         this.field_H.field_J = -this.field_eb.field_mb + this.field_X.field_mb >> 1;
@@ -331,7 +331,7 @@ final class MyKitScreen extends TeamManagementScreen {
         for (var3 = 0; var3 < 2; var3++) {
           this.field_J[var3] = new UiLayoutNode();
           for (var4_int = 0; var4_int < 32; var4_int++) {
-            var5 = new ColourSwatchTile(ic.field_h, var3, var4_int);
+            var5 = new ColourSwatchTile(RegistrationRequestState.field_h, var3, var4_int);
             var5.setBounds(true, 22, 22 * (var4_int % 16), var4_int / 16 * 22, 22);
             this.field_J[var3].addChild((byte) -110, (UiLayoutNode) (var5));
           }
@@ -340,8 +340,8 @@ final class MyKitScreen extends TeamManagementScreen {
         }
         UiLayoutNode dupTemp$0 = this.field_J[1];
         dupTemp$0.field_J = dupTemp$0.field_J + ((var7.field_mb >> 1) - 6);
-        this.field_Y = eo.a(false);
-        this.field_K = eo.a(true);
+        this.field_Y = SoftwareDrawingSupport.a(false);
+        this.field_K = SoftwareDrawingSupport.a(true);
         var3Lifetime1 = 5;
         this.field_Y.field_s = -this.field_Y.field_q + (-var3Lifetime1 + 532);
         this.field_K.field_s = 532 + var3Lifetime1;
@@ -385,7 +385,7 @@ final class MyKitScreen extends TeamManagementScreen {
         var4 = 0;
         scanLoop1: while (true) {
           if (var4 < 9) {
-            var5 = ic.field_h.squad[ic.field_h.field_q[var4]];
+            var5 = RegistrationRequestState.field_h.squad[RegistrationRequestState.field_h.field_q[var4]];
             if (!var5.isEmpty(param0 ^ 3)) {
               if (var2 == 0) {
                 var3 = var5;
@@ -403,10 +403,10 @@ final class MyKitScreen extends TeamManagementScreen {
         } else {
           stackIn_15_0 = this;
           stackIn_15_1 = 109;
-          stackIn_15_2 = ic.field_h.field_R;
-          stackIn_15_3 = ic.field_h.field_k;
+          stackIn_15_2 = RegistrationRequestState.field_h.field_R;
+          stackIn_15_3 = RegistrationRequestState.field_h.field_k;
           stackIn_15_4 = var3;
-          stackIn_15_5 = ic.field_h.field_w;
+          stackIn_15_5 = RegistrationRequestState.field_h.field_w;
           stackIn_15_6 = var3;
           stackIn_15_7 = -107;
           stackIn_16_8 = !(TextFieldValidator.f(-1));
@@ -422,11 +422,11 @@ final class MyKitScreen extends TeamManagementScreen {
           if (decompiledFrameRemainder0) {
             stackIn_20_6 = false;
           }
-          this.field_db = pi.a(stackIn_15_1, stackIn_15_2, stackIn_15_3, (PlayerStats) (stackIn_15_4), stackIn_15_5, stackIn_20_6);
+          this.field_db = PlayerMeshFactory.createPlayerMesh(stackIn_15_1, stackIn_15_2, stackIn_15_3, (PlayerStats) (stackIn_15_4), stackIn_15_5, stackIn_20_6);
           this.field_T = 1 + this.field_U + ": " + ((PlayerStats) (var3)).getDisplayName(100);
-          this.field_N = ic.field_h.field_k;
-          this.field_bb = ic.field_h.field_w;
-          this.field_Q = ic.field_h.field_R;
+          this.field_N = RegistrationRequestState.field_h.field_k;
+          this.field_bb = RegistrationRequestState.field_h.field_w;
+          this.field_Q = RegistrationRequestState.field_h.field_R;
           this.field_cb.a(HelpTipDialog.field_I[((PlayerStats) (var3)).archetype][3], (byte) -107);
           this.field_cb.a(30, -81);
           if (((PlayerStats) (var3)).archetype == 2) {
@@ -481,7 +481,7 @@ final class MyKitScreen extends TeamManagementScreen {
         if (param0 <= 100) {
           MyKitScreen.ensureSoundLoaded(98, 120);
         }
-        if (!sk.field_d.field_k[0].prepareTrackSamples(1, 176400, vp.field_j, bq.field_a, ad.field_d[param1])) {
+        if (!LoadingProgressSupport.field_d.field_k[0].prepareTrackSamples(1, 176400, vp.field_j, bq.field_a, LocalizedTextLoader.field_d[param1])) {
           AnimationPlayer.a((byte) 113);
           return false;
         }

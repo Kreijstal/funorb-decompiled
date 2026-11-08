@@ -65,13 +65,13 @@ final class GeneratedPanelPainter extends NineSlicePanelPainter {
         int var2 = TextPromptDialog.field_Bb * TextPromptDialog.field_Bb;
         int var3 = var2 - ns.field_a * ns.field_a;
         if (param0 > 81) {
-          ss.field_c.setBounds(true, 199, var1 - 199 * var3 / var2, 90, -90 + (SoftwareRasterizer.field_f - 124));
-          af.field_d.setBounds(true, 438, 202 + var1 + 438 * var3 / var2, 0, -4 + (-120 + SoftwareRasterizer.field_f));
+          UiKeyRoutingSupport.field_c.setBounds(true, 199, var1 - 199 * var3 / var2, 90, -90 + (SoftwareRasterizer.field_f - 124));
+          AuctionPriceLimits.field_d.setBounds(true, 438, 202 + var1 + 438 * var3 / var2, 0, -4 + (-120 + SoftwareRasterizer.field_f));
           return;
         }
         field_j = (String) null;
-        ss.field_c.setBounds(true, 199, var1 - 199 * var3 / var2, 90, -90 + (SoftwareRasterizer.field_f - 124));
-        af.field_d.setBounds(true, 438, 202 + var1 + 438 * var3 / var2, 0, -4 + (-120 + SoftwareRasterizer.field_f));
+        UiKeyRoutingSupport.field_c.setBounds(true, 199, var1 - 199 * var3 / var2, 90, -90 + (SoftwareRasterizer.field_f - 124));
+        AuctionPriceLimits.field_d.setBounds(true, 438, 202 + var1 + 438 * var3 / var2, 0, -4 + (-120 + SoftwareRasterizer.field_f));
     }
 
     static {

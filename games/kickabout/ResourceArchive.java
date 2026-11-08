@@ -626,7 +626,7 @@ final class ResourceArchive {
             field_f = (ResourceArchive) null;
           }
           var3_int = 0;
-          var4 = uq.field_c;
+          var4 = ChatInputState.field_c;
           while (WeightedLruCache.field_c.length > var3_int) {
             var5 = AchievementQuery.field_g[var3_int];
             if (var5 >= 0) {

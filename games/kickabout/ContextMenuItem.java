@@ -206,15 +206,15 @@ final class ContextMenuItem extends UiLayoutNode {
 
     final static void a(boolean param0, boolean param1) {
         if (null != UrlRequest.field_e) {
-          ar.a(15707, UrlRequest.field_e);
+          BrowserUiSupport.drawPlainTooltip(15707, UrlRequest.field_e);
         }
         if (param0) {
           if (TextButton.field_v != null) {
             TextButton.field_v.hideMenu(param1, false);
           }
           MonotonicClock.drawActiveDialog(param1, -128);
-          if (null != ck.field_b) {
-            ck.field_b.draw(104, param1);
+          if (null != TextPromptState.field_b) {
+            TextPromptState.field_b.draw(104, param1);
           }
           NumericDateInputWidget.a(30521, param1);
           return;
@@ -224,8 +224,8 @@ final class ContextMenuItem extends UiLayoutNode {
           TextButton.field_v.hideMenu(param1, false);
         }
         MonotonicClock.drawActiveDialog(param1, -128);
-        if (null != ck.field_b) {
-          ck.field_b.draw(104, param1);
+        if (null != TextPromptState.field_b) {
+          TextPromptState.field_b.draw(104, param1);
         }
         NumericDateInputWidget.a(30521, param1);
     }

@@ -230,7 +230,7 @@ abstract class ResizableModalPanel extends ModalPanel {
           var8Lifetime1++;
         }
         KeyedLoginCredentials.field_f.c(-90 + this.field_n + param0, param2 + 10);
-        ValidationHelpWidget.a(5 + param0, -127, 35 + param2, sk.field_a, -10 + this.field_n);
+        ValidationHelpWidget.a(5 + param0, -127, 35 + param2, LoadingProgressSupport.field_a, -10 + this.field_n);
         ValidationHelpWidget.a(param0, -125, -22 + (this.field_i + param2), vb.field_a, this.field_n);
         var4Lifetime2 = this.field_i - 79;
         var6Lifetime2 = 127;

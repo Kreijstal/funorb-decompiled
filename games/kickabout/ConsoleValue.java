@@ -14,10 +14,10 @@ final class ConsoleValue {
     final static void a(int param0, byte param1) {
         if (param1 < 8) {
           ConsoleValue.releaseStatics((byte) -49);
-          ms.a(0, param0);
+          MusicVolumeSupport.setMusicVolume(0, param0);
           return;
         }
-        ms.a(0, param0);
+        MusicVolumeSupport.setMusicVolume(0, param0);
     }
 
     public final String toString() {

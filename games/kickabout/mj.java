@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class mj {
-    static vd field_a;
+    static AccountNameCheckState field_a;
     static int field_b;
 
     final static void a(byte param0, int param1) {
@@ -16,15 +16,15 @@ final class mj {
         hq.field_e = ServerTextTemplate.a(30, param1, param0 ^ 111, 11, false, 60);
         DualLinkNode.field_h = SortCriterion.a(60, param1, true, (byte) -67, 80, 11);
         ModalPanel.field_G = SortCriterion.a(80, param1, false, (byte) -120, 95, 11);
-        c.field_f = (Sprite[]) ((Object) new ArgbSprite[4]);
+        ClientPacketFlushSupport.field_f = (Sprite[]) ((Object) new ArgbSprite[4]);
         if (param0 != -39) {
           return;
         }
         try {
           for (var2_int = 0; var2_int < 4; var2_int++) {
             var3 = DiskCacheWorker.field_i[var2_int];
-            c.field_f[var2_int] = ih.field_c == 0 ? (Sprite) ((Object) var3) : (Sprite) ((Object) var3.copyArgb());
-            LoginForm.a(c.field_f[var2_int], 20684);
+            ClientPacketFlushSupport.field_f[var2_int] = ih.field_c == 0 ? (Sprite) ((Object) var3) : (Sprite) ((Object) var3.copyArgb());
+            LoginForm.a(ClientPacketFlushSupport.field_f[var2_int], 20684);
             DelayedServerPacket.a(100, 9863, var2_int + 96);
           }
           var7 = FriendsListPanel.field_Bb[ih.field_c];
@@ -37,9 +37,9 @@ final class mj {
           SpritePixelSupport.adjustHsv(LineupView.field_x.field_y, var7[0], var7[1], var7[2]);
           SpritePixelSupport.adjustHsv(LoggedGoal.field_o.field_y, var7[0], var7[1], var7[2]);
           SpritePixelSupport.adjustHsv(PlayerValueSortCriterion.field_p.field_y, var7[0], var7[1], var7[2]);
-          FadingSoundPlayer.field_p = eo.mirrorVertically(LineupView.field_x);
-          ConsoleCommand.field_z = eo.mirrorHorizontally(FadingSoundPlayer.field_p);
-          ByteStorage.field_b = eo.mirrorVertically(ConsoleCommand.field_z);
+          FadingSoundPlayer.field_p = SoftwareDrawingSupport.mirrorVertically(LineupView.field_x);
+          ConsoleCommand.field_z = SoftwareDrawingSupport.mirrorHorizontally(FadingSoundPlayer.field_p);
+          ByteStorage.field_b = SoftwareDrawingSupport.mirrorVertically(ConsoleCommand.field_z);
           mt.field_d = new Sprite(ConsoleCommand.field_z.field_o, LoggedGoal.field_o.field_v);
           TextLayoutLine.field_a = new Sprite(PlayerValueSortCriterion.field_p.field_o, LineupView.field_x.field_v);
           PacketBuffer.a(-70, mt.field_d);
@@ -65,7 +65,7 @@ final class mj {
           if (!param0) {
             mj.a(-0.3391155972284911, 69, -1.3430351906994813, -0.23628554021572995);
           }
-          pi.field_b.removeSubstream(param1);
+          PlayerMeshFactory.field_b.removeSubstream(param1);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "mj.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

@@ -55,7 +55,7 @@ final class DateInputValidator extends DebouncedValidationProvider implements Te
           var2_int = this.dateInput.getDay(92);
           var3 = this.dateInput.getMonthIndex((byte) 48);
           var4 = this.dateInput.getYear(param0);
-          var5 = th.b((byte) 113);
+          var5 = FadingSoundSupport.currentYear((byte) 113);
           if (var4 >= 1890 &&
             var4 <= var5 - 3) {
             if (FullscreenDisplayMode.isValidCalendarDate(true, var4, var2_int, var3)) {
@@ -69,7 +69,7 @@ final class DateInputValidator extends DebouncedValidationProvider implements Te
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = (NumberFormatException) (Object) decompiledCaughtException;
         }
-        return rr.field_c;
+        return TextEntrySupport.field_c;
     }
 
     public static void releaseStatics(int param0) {
@@ -98,7 +98,7 @@ final class DateInputValidator extends DebouncedValidationProvider implements Te
           var2_int = this.dateInput.getDay(94);
           var3 = this.dateInput.getMonthIndex((byte) 48);
           var4 = this.dateInput.getYear(-1);
-          var5 = th.b((byte) 108);
+          var5 = FadingSoundSupport.currentYear((byte) 108);
           if (var4 < 1890) {
             stackIn_3_0 = PitchOptionTile.field_Bb;
             return stackIn_3_0;

@@ -27,7 +27,7 @@ final class fc {
         int var4 = 0;
         try {
           po.field_f = false;
-          wq.field_g = false;
+          DiagnosticsOverlaySupport.field_g = false;
           int var3_int = 123 / ((param2 - 22) / 47);
           if (null != WorldSpriteSequence.field_f) {
             if (!WorldSpriteSequence.field_f.field_C) {
@@ -38,14 +38,14 @@ final class fc {
             } else {
               param1 = 2;
               if (!AuctionBidDialog.field_G) {
-                param0 = cb.field_f;
+                param0 = PitchPurchaseSupport.field_f;
               } else {
                 param0 = OffscreenPlayerArrow.field_j;
               }
-              IsSixCommand.field_E.setUsername(ep.field_b, (byte) 120);
+              IsSixCommand.field_E.setUsername(TutorialMessages.field_b, (byte) 120);
             }
             if (param1 == 10) {
-              pc.a((byte) -126);
+              DisplayNameUiSupport.showDisplayNameForm((byte) -126);
               var4 = 0;
             }
             if (var4 != 0) {

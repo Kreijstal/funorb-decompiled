@@ -273,39 +273,39 @@ class FootballerAgent extends MatchAgent {
 
     final int computeChecksum(byte param0) {
         int var2 = this.stats.computeChecksum(0);
-        var2 = fj.a(-40, var2 ^ this.field_A);
-        var2 = fj.a(-40, this.field_g ^ var2);
-        var2 = fj.a(-40, var2 ^ this.field_q);
-        var2 = fj.a(-40, var2 ^ this.field_D);
-        var2 = fj.a(-40, var2 ^ this.positionX);
+        var2 = fj.rotateLeftFourBits(-40, var2 ^ this.field_A);
+        var2 = fj.rotateLeftFourBits(-40, this.field_g ^ var2);
+        var2 = fj.rotateLeftFourBits(-40, var2 ^ this.field_q);
+        var2 = fj.rotateLeftFourBits(-40, var2 ^ this.field_D);
+        var2 = fj.rotateLeftFourBits(-40, var2 ^ this.positionX);
         if (param0 > -61) {
           this.setAction((byte) -7, -29);
         }
-        var2 = fj.a(-40, this.positionY ^ var2);
-        var2 = fj.a(-40, var2 ^ this.height);
-        var2 = fj.a(-40, var2 ^ this.verticalVelocity);
-        var2 = fj.a(-40, this.aiWait ^ var2);
-        var2 = fj.a(-40, var2 ^ this.field_o);
-        var2 = fj.a(-40, var2 ^ this.field_t);
-        var2 = fj.a(-40, this.directionMask ^ var2);
-        var2 = fj.a(-40, this.field_h ^ var2);
-        var2 = fj.a(-40, var2 ^ this.directionX);
-        var2 = fj.a(-40, var2 ^ this.directionY);
-        var2 = fj.a(-40, var2 ^ this.action);
-        var2 = fj.a(-40, this.actionTime ^ var2);
-        var2 = fj.a(-40, this.dashCooldown ^ var2);
-        var2 = fj.a(-40, var2 ^ this.field_z);
-        var2 = fj.a(-40, this.field_x ^ var2);
-        var2 = fj.a(-40, this.field_P ^ var2);
-        var2 = fj.a(-40, var2 ^ (!this.field_O ? 0 : 1));
-        var2 = fj.a(-40, var2 ^ this.field_k);
-        var2 = fj.a(-40, var2 ^ this.field_m);
-        var2 = fj.a(-40, var2 ^ (!this.field_s ? 0 : 1));
-        var2 = fj.a(-40, var2 ^ this.field_r);
-        var2 = fj.a(-40, var2 ^ this.field_B);
-        var2 = fj.a(-40, this.archetype ^ var2);
-        var2 = fj.a(-40, var2 ^ (this.member ? 1 : 0));
-        var2 = fj.a(-40, var2 ^ (this.megamode ? 1 : 0));
+        var2 = fj.rotateLeftFourBits(-40, this.positionY ^ var2);
+        var2 = fj.rotateLeftFourBits(-40, var2 ^ this.height);
+        var2 = fj.rotateLeftFourBits(-40, var2 ^ this.verticalVelocity);
+        var2 = fj.rotateLeftFourBits(-40, this.aiWait ^ var2);
+        var2 = fj.rotateLeftFourBits(-40, var2 ^ this.field_o);
+        var2 = fj.rotateLeftFourBits(-40, var2 ^ this.field_t);
+        var2 = fj.rotateLeftFourBits(-40, this.directionMask ^ var2);
+        var2 = fj.rotateLeftFourBits(-40, this.field_h ^ var2);
+        var2 = fj.rotateLeftFourBits(-40, var2 ^ this.directionX);
+        var2 = fj.rotateLeftFourBits(-40, var2 ^ this.directionY);
+        var2 = fj.rotateLeftFourBits(-40, var2 ^ this.action);
+        var2 = fj.rotateLeftFourBits(-40, this.actionTime ^ var2);
+        var2 = fj.rotateLeftFourBits(-40, this.dashCooldown ^ var2);
+        var2 = fj.rotateLeftFourBits(-40, var2 ^ this.field_z);
+        var2 = fj.rotateLeftFourBits(-40, this.field_x ^ var2);
+        var2 = fj.rotateLeftFourBits(-40, this.field_P ^ var2);
+        var2 = fj.rotateLeftFourBits(-40, var2 ^ (!this.field_O ? 0 : 1));
+        var2 = fj.rotateLeftFourBits(-40, var2 ^ this.field_k);
+        var2 = fj.rotateLeftFourBits(-40, var2 ^ this.field_m);
+        var2 = fj.rotateLeftFourBits(-40, var2 ^ (!this.field_s ? 0 : 1));
+        var2 = fj.rotateLeftFourBits(-40, var2 ^ this.field_r);
+        var2 = fj.rotateLeftFourBits(-40, var2 ^ this.field_B);
+        var2 = fj.rotateLeftFourBits(-40, this.archetype ^ var2);
+        var2 = fj.rotateLeftFourBits(-40, var2 ^ (this.member ? 1 : 0));
+        var2 = fj.rotateLeftFourBits(-40, var2 ^ (this.megamode ? 1 : 0));
         return var2;
     }
 
@@ -521,7 +521,7 @@ class FootballerAgent extends MatchAgent {
 
     final void startTackle(int param0, int param1) {
         this.setAction((byte) -31, 3);
-        this.field_k = (we.cosine(param0, false) >> 8) * (this.field_q >> 8);
+        this.field_k = (ClientUiUpdateSupport.cosine(param0, false) >> 8) * (this.field_q >> 8);
         this.field_m = (RotaryDialPainter.sine(param0, (byte) -23) >> 8) * (this.field_q >> 8);
         if (this.directionMask == 0) {
           this.setDirectionFromMask(PlayerSurnameSortCriterion.b(param0, -25147), 26214);
@@ -576,7 +576,7 @@ class FootballerAgent extends MatchAgent {
             stackIn_9_0 = this.archetype;
           }
           var5 = stackIn_9_0;
-          this.field_q = g.field_b[var5] + (-g.field_b[var5] + HelpTipDialog.field_J[var5]) * this.stats.effectiveTackle(this.member, param2 - 3) / 100;
+          this.field_q = GrayscalePaletteSupport.field_b[var5] + (-GrayscalePaletteSupport.field_b[var5] + HelpTipDialog.field_J[var5]) * this.stats.effectiveTackle(this.member, param2 - 3) / 100;
           if (param2 != 3) {
             this.field_m = 74;
           }
@@ -628,7 +628,7 @@ class FootballerAgent extends MatchAgent {
         }
         if (128 <= var2 &&
           var2 < 160) {
-          var3 = ts.field_c[-128 + var2];
+          var3 = PitchCoordinateSupport.field_c[-128 + var2];
           if (0 == var3) {
             var3 = 63;
           }

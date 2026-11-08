@@ -47,7 +47,7 @@ final class cu {
           return var6_ref;
         }
         var7 = (PacketBuffer) null;
-        cu.a((byte) 95, (String) null, (PacketBuffer) null);
+        cu.writeHuffmanString((byte) 95, (String) null, (PacketBuffer) null);
         var6_refLifetime1 = (RankingRowNode) (field_a.removeFirst((byte) -32));
         if (var6_refLifetime1 == null) {
           var6_refLifetime1 = new RankingRowNode();
@@ -68,7 +68,7 @@ final class cu {
         return var6_refLifetime1;
     }
 
-    final static boolean a(int param0, ResourceArchive param1, int param2, int param3) {
+    final static boolean decodeSpriteSheetFromArchive(int param0, ResourceArchive param1, int param2, int param3) {
         byte[] var4 = null;
         RuntimeException var4_ref = null;
         byte[] var5 = null;
@@ -129,7 +129,7 @@ final class cu {
         int var4 = -22 / ((param0 - 36) / 39);
     }
 
-    final static int a(byte param0, String param1, PacketBuffer param2) {
+    final static int writeHuffmanString(byte param0, String param1, PacketBuffer param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         byte[] var4 = null;

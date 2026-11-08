@@ -180,9 +180,9 @@ final class TextFieldNode extends UiLayoutNode {
         int var6Lifetime1;
         var7 = Kickabout.field_G;
         try {
-          if (go.field_b != 0) {
+          if (PitchProjectionSupport.field_b != 0) {
             var2_long = MonotonicClock.monotonicMillis(param1 - 75);
-            var4 = go.field_b;
+            var4 = PitchProjectionSupport.field_b;
             if (0.0 != WhirlpoolHasher.field_a) {
               var4 = (int)((double)var4 + TrinketUnlockNotice.field_d.nextGaussian() * WhirlpoolHasher.field_a);
               if (0 > var4) {
@@ -215,7 +215,7 @@ final class TextFieldNode extends UiLayoutNode {
               or.field_d.field_n = var13.opcode;
             }
           }
-          c.a(param0, false);
+          ClientPacketFlushSupport.flushPackets(param0, false);
           if (param1 != 0) {
             field_Qb = (UiLayoutNode) null;
           }
@@ -306,7 +306,7 @@ final class TextFieldNode extends UiLayoutNode {
         if (param1 != 31900) {
           field_Qb = (UiLayoutNode) null;
         }
-        ep.field_e = ss.field_a[param0];
+        TutorialMessages.field_e = UiKeyRoutingSupport.field_a[param0];
     }
 
     private final void cutSelection(byte param0) {
@@ -499,7 +499,7 @@ final class TextFieldNode extends UiLayoutNode {
           return this.field_Mb;
         }
         for (var4 = this.field_Mb + 1; var4 < var2; var4++) {
-          if (!pi.a(-41, this.field_Ub.charAt(-1 + var4))) {
+          if (!PlayerMeshFactory.isSpaceOrParenthesis(-41, this.field_Ub.charAt(-1 + var4))) {
             continue;
           }
           break;
@@ -525,7 +525,7 @@ final class TextFieldNode extends UiLayoutNode {
           var2 = NamedValueEntry.f((byte) 99);
         }
         if (0 == var2.length()) {
-          var2 = pc.field_d;
+          var2 = DisplayNameUiSupport.field_d;
         }
         return var2;
     }
@@ -551,7 +551,7 @@ final class TextFieldNode extends UiLayoutNode {
           return this.field_Mb;
         }
         for (var2 = this.field_Mb - 1; var2 > 0; var2--) {
-          if (!pi.a(-41, this.field_Ub.charAt(-1 + var2))) {
+          if (!PlayerMeshFactory.isSpaceOrParenthesis(-41, this.field_Ub.charAt(-1 + var2))) {
             continue;
           }
           break;

@@ -29,9 +29,9 @@ final class FaceNormal {
     final static PcmStreamMixer getSoundMixer(int param0) {
         if (param0 != 55) {
           FaceNormal.releaseStatics((byte) 3);
-          return mg.field_a;
+          return PlayerInputFactory.field_a;
         }
-        return mg.field_a;
+        return PlayerInputFactory.field_a;
     }
 
     public static void releaseStatics(byte param0) {

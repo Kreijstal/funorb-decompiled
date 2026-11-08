@@ -261,7 +261,7 @@ final class PitchOptionTile extends UiLayoutNode implements PopupCard {
           this.field_Db = param1;
           this.field_Cb = param0;
           this.field_q = 80;
-          this.field_Eb = ad.formatCurrencyAmount(ResizableModalPanel.field_M[this.field_zb], 26300);
+          this.field_Eb = LocalizedTextLoader.formatCurrencyAmount(ResizableModalPanel.field_M[this.field_zb], 26300);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "jt.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
@@ -657,7 +657,7 @@ final class PitchOptionTile extends UiLayoutNode implements PopupCard {
             if (param0.disableOpponent) {
               var7 = 0;
             }
-            go.moveToTarget(AudioService.formationY((byte) 21, param2, param3, var7), param0, 0, param3, param2, ts.a(param2, var7, param3, 448));
+            PitchProjectionSupport.moveToTarget(AudioService.formationY((byte) 21, param2, param3, var7), param0, 0, param3, param2, PitchCoordinateSupport.formationX(param2, var7, param3, 448));
           }
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -727,7 +727,7 @@ final class PitchOptionTile extends UiLayoutNode implements PopupCard {
           } else {
             if (var3 == 0 &&
               var5 == 0) {
-              this.field_Ab = eo.createDefaultButtonNode();
+              this.field_Ab = SoftwareDrawingSupport.createDefaultButtonNode();
               this.addChild((byte) -123, this.field_Ab);
               this.field_Ab.field_J = (-this.field_Ab.field_J + this.field_mb >> 1) - 3;
               this.field_Ab.field_s = -this.field_Ab.field_q + this.field_q >> 1;
@@ -762,7 +762,7 @@ final class PitchOptionTile extends UiLayoutNode implements PopupCard {
           } else {
             if (var3 == 0 &&
               var5 == 0) {
-              this.field_Ab = eo.createDefaultButtonNode();
+              this.field_Ab = SoftwareDrawingSupport.createDefaultButtonNode();
               this.addChild((byte) -123, this.field_Ab);
               this.field_Ab.field_J = (-this.field_Ab.field_J + this.field_mb >> 1) - 3;
               this.field_Ab.field_s = -this.field_Ab.field_q + this.field_q >> 1;
@@ -852,7 +852,7 @@ final class PitchOptionTile extends UiLayoutNode implements PopupCard {
         } else {
           if (var3 == 0 &&
             var5 == 0) {
-            this.field_Ab = eo.createDefaultButtonNode();
+            this.field_Ab = SoftwareDrawingSupport.createDefaultButtonNode();
             this.addChild((byte) -123, this.field_Ab);
             this.field_Ab.field_J = (-this.field_Ab.field_J + this.field_mb >> 1) - 3;
             this.field_Ab.field_s = -this.field_Ab.field_q + this.field_q >> 1;

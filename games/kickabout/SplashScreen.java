@@ -98,15 +98,15 @@ final class SplashScreen extends AppScreen {
           var6 = 0;
           var7 = 0;
           var8 = 0;
-          if (null != PlayerContextMenu.field_i && (null != ds.field_h ||
+          if (null != PlayerContextMenu.field_i && (null != ModelMaterialDecoder.field_h ||
             BroadcastServerCommand.field_E != null ||
-            null != so.field_f ||
+            null != AppletContextSupport.field_f ||
             SumIntegersCommand.field_D != null)) {
-            for (var9 = 0; var9 < ss.field_j; var9++) {
+            for (var9 = 0; var9 < UiKeyRoutingSupport.field_j; var9++) {
               var10_int = PlayerContextMenu.field_i.field_Eb[var9] & 255;
-              if (ds.field_h != null &&
-                null != ds.field_h[var9] &&
-                ds.field_h[var9][var10_int]) {
+              if (ModelMaterialDecoder.field_h != null &&
+                null != ModelMaterialDecoder.field_h[var9] &&
+                ModelMaterialDecoder.field_h[var9][var10_int]) {
                 var5_int = 1;
               }
               if (BroadcastServerCommand.field_E != null &&
@@ -124,9 +124,9 @@ final class SplashScreen extends AppScreen {
                 null != SumIntegersCommand.field_D[var9]) {
                 var8 = var8 | SumIntegersCommand.field_D[var9][var10_int];
               }
-              if (null != so.field_f &&
-                null != so.field_f[var9]) {
-                var11_intLifetime1 = so.field_f[var9][var10_int];
+              if (null != AppletContextSupport.field_f &&
+                null != AppletContextSupport.field_f[var9]) {
+                var11_intLifetime1 = AppletContextSupport.field_f[var9][var10_int];
                 if (0 != var11_intLifetime1 &&
                   !TooltipOverlay.field_d) {
                   var5_int = 1;
@@ -138,9 +138,9 @@ final class SplashScreen extends AppScreen {
             }
           }
           stackIn_44_0 = (ScrollPane) (param0);
-          stackIn_44_1 = param1 * (4 * sh.field_c + 8);
+          stackIn_44_1 = param1 * (4 * LineupPositionSupport.field_c + 8);
           stackIn_45_2 = (ig.field_f == param0);
-          stackIn_48_0 = (!((ScrollPane) (Object) stackIn_44_0).a(stackIn_44_1, stackIn_45_2, param2, 2, false, (sh.field_c + 2) * 2)) ? 0 : 1;
+          stackIn_48_0 = (!((ScrollPane) (Object) stackIn_44_0).a(stackIn_44_1, stackIn_45_2, param2, 2, false, (LineupPositionSupport.field_c + 2) * 2)) ? 0 : 1;
           var9Lifetime1 = stackIn_48_0;
           var10 = param0.field_Ab.field_jb;
           if (param4 < 0) {
@@ -203,7 +203,7 @@ final class SplashScreen extends AppScreen {
                 var20 = "<img=" + (var12.field_Sb - 1) + ">" + var33;
               }
             } else {
-              var20 = "<img=" + (bk.field_e + var12.field_Sb - 4) + ">" + var33;
+              var20 = "<img=" + (CalendarSupport.field_e + var12.field_Sb - 4) + ">" + var33;
             }
             boolean decompiledFrameRemainder0 = true;
             var12.field_Lb.field_E = var20;
@@ -232,7 +232,7 @@ final class SplashScreen extends AppScreen {
               var12.field_Tb.field_ub = var24_int;
               if (param0 == ClientException.field_c) {
                 if (!PlayerContextMenu.field_i.field_Cb) {
-                  var12.field_Hb.field_E = wk.field_a;
+                  var12.field_Hb.field_E = ClubStateFactory.field_a;
                 }
               } else {
                 if (!var12.field_Gb) {
@@ -245,7 +245,7 @@ final class SplashScreen extends AppScreen {
                   }
                 } else {
                   var12.field_Lb.field_E = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, ug.field_d, new String[]{var20});
-                  var12.field_Hb.field_E = vt.field_a;
+                  var12.field_Hb.field_E = AsciiCharacterSupport.field_a;
                 }
               }
               var25_int = 0;
@@ -254,7 +254,7 @@ final class SplashScreen extends AppScreen {
                 ~var12.field_Ab != ~AnimationPlayer.field_c) {
                 if (null != var12.field_Tb.field_E) {
                   var26 = var12.field_Tb.getPreferredWidth((byte) 122) + DiskCacheWorker.field_b * 2;
-                  var12.field_Tb.setBounds(true, var26, var25_int, var19, sh.field_c);
+                  var12.field_Tb.setBounds(true, var26, var25_int, var19, LineupPositionSupport.field_c);
                   var25_int = var25_int + var26;
                 }
                 if (null != var12.field_Hb.field_E) {
@@ -263,7 +263,7 @@ final class SplashScreen extends AppScreen {
                   } else {
                     var26Lifetime2 = 40;
                   }
-                  var12.field_Hb.setBounds(true, var26Lifetime2, var25_int, var19, sh.field_c);
+                  var12.field_Hb.setBounds(true, var26Lifetime2, var25_int, var19, LineupPositionSupport.field_c);
                   var25_int = var25_int + var26Lifetime2;
                 }
               }
@@ -275,10 +275,10 @@ final class SplashScreen extends AppScreen {
               } else {
                 stackIn_99_3 = 0;
               }
-              ((UiLayoutNode) (Object) stackIn_98_0).setBounds(stackIn_98_1, stackIn_98_2 - stackIn_99_3 + var12.field_q, var25_int, var19, sh.field_c);
+              ((UiLayoutNode) (Object) stackIn_98_0).setBounds(stackIn_98_1, stackIn_98_2 - stackIn_99_3 + var12.field_q, var25_int, var19, LineupPositionSupport.field_c);
               var12.field_Ob.field_E = Integer.toString(var12.field_Qb);
-              var12.field_Ob.setBounds(true, 40, -40 + var12.field_q, var19, sh.field_c);
-              var19 = var19 + sh.field_c;
+              var12.field_Ob.setBounds(true, 40, -40 + var12.field_q, var19, LineupPositionSupport.field_c);
+              var19 = var19 + LineupPositionSupport.field_c;
               if (var12.field_Lb.field_gb &&
                 var22 != 0) {
                 UrlRequest.field_e = var12.field_Nb;
@@ -304,9 +304,9 @@ final class SplashScreen extends AppScreen {
             if (var23 != null) {
               var24_intLifetime1 = var12.field_zb.field_X.b(var23, -DiskCacheWorker.field_b + var12.field_q - DiskCacheWorker.field_b);
               var12.field_zb.field_E = var23;
-              var12.field_zb.field_U = var12.field_Jb * 256 / mg.field_c;
-              var12.field_zb.setBounds(true, -(2 * DiskCacheWorker.field_b) + var12.field_q, DiskCacheWorker.field_b, var19, sh.field_c * var24_intLifetime1);
-              var19 = var19 + var24_intLifetime1 * sh.field_c;
+              var12.field_zb.field_U = var12.field_Jb * 256 / PlayerInputFactory.field_c;
+              var12.field_zb.setBounds(true, -(2 * DiskCacheWorker.field_b) + var12.field_q, DiskCacheWorker.field_b, var19, LineupPositionSupport.field_c * var24_intLifetime1);
+              var19 = var19 + var24_intLifetime1 * LineupPositionSupport.field_c;
             }
             if (var9Lifetime1 == 0) {
               var12.field_L = var19 - var12.field_mb;
@@ -349,7 +349,7 @@ final class SplashScreen extends AppScreen {
                     } else {
                       if ((~var12.field_Pb & var8) != 0) {
                         var25_int = LoginCredentials.a((byte) -86, ~var12.field_Pb & var8);
-                        var24Lifetime2 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, il.field_e, new String[]{var20});
+                        var24Lifetime2 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, ClassDescriptorSupport.field_e, new String[]{var20});
                         if (var25_int > 0 &&
                           null != um.field_a &&
                           var25_int <= um.field_a.length &&
@@ -361,9 +361,9 @@ final class SplashScreen extends AppScreen {
                   } else {
                     var25_int = -var12.field_Db + var7;
                     if (var25_int == 1) {
-                      var24Lifetime2 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, qr.field_d, new String[]{var20});
+                      var24Lifetime2 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, SessionUrlSupport.field_d, new String[]{var20});
                     }
-                    var24Lifetime2 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, rr.field_e, new String[]{var20, Integer.toString(var25_int)});
+                    var24Lifetime2 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, TextEntrySupport.field_e, new String[]{var20, Integer.toString(var25_int)});
                   }
                 }
               } else {
@@ -390,7 +390,7 @@ final class SplashScreen extends AppScreen {
                         }
                       }
                     } else {
-                      var24Lifetime2 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, ic.field_c, new String[]{null, Integer.toString(var6)});
+                      var24Lifetime2 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, RegistrationRequestState.field_c, new String[]{null, Integer.toString(var6)});
                     }
                   }
                 }
@@ -404,12 +404,12 @@ final class SplashScreen extends AppScreen {
                 var25 = var30_refLifetime1;
                 var25 = null;
                 var26Lifetime1 = 0;
-                for (var27_int = 0; var27_int < ss.field_j; var27_int++) {
+                for (var27_int = 0; var27_int < UiKeyRoutingSupport.field_j; var27_int++) {
                   var28 = PlayerContextMenu.field_i.field_Eb[var27_int] & 255;
                   var29 = 0;
-                  if (ds.field_h != null &&
-                    null != ds.field_h[var27_int] &&
-                    ds.field_h[var27_int][var28] &&
+                  if (ModelMaterialDecoder.field_h != null &&
+                    null != ModelMaterialDecoder.field_h[var27_int] &&
+                    ModelMaterialDecoder.field_h[var27_int][var28] &&
                     !var12.field_Cb) {
                     var29 = 1;
                   }
@@ -425,9 +425,9 @@ final class SplashScreen extends AppScreen {
                       var29 = 1;
                     }
                   }
-                  if (null != so.field_f &&
-                    null != so.field_f[var27_int]) {
-                    var30_intLifetime1 = so.field_f[var27_int][var28];
+                  if (null != AppletContextSupport.field_f &&
+                    null != AppletContextSupport.field_f[var27_int]) {
+                    var30_intLifetime1 = AppletContextSupport.field_f[var27_int][var28];
                     if (0 != var30_intLifetime1 &&
                       !TooltipOverlay.field_d &&
                       !var12.field_Cb) {
@@ -519,7 +519,7 @@ final class SplashScreen extends AppScreen {
           AppScreen var3 = (AppScreen) null;
           this.setTransitionProgress(-112, true, 15, (AppScreen) null);
         }
-        mg.a((byte) -25);
+        PlayerInputFactory.a((byte) -25);
         mv.$cfr$intArgs$a$6121ff5511c4(122);
         DelayedServerPacket.a(0, false, param0 + 255);
     }
@@ -563,7 +563,7 @@ final class SplashScreen extends AppScreen {
           fieldTemp$1 = this.field_l - 1;
           this.field_l = this.field_l - 1;
           if (fieldTemp$1 <= 0 ||
-            ip.field_a != 0) {
+            RasterGammaSupport.field_a != 0) {
             this.leaveSplash(-257);
           }
         }

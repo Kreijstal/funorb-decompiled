@@ -24,7 +24,7 @@ final class ContextMenu extends UiLayoutNode {
         if (param1 != 60) {
           return;
         }
-        sk.field_d.field_n[param0] = -param2;
+        LoadingProgressSupport.field_d.field_n[param0] = -param2;
     }
 
     final static boolean b(int param0) {

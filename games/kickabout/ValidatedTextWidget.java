@@ -141,15 +141,15 @@ final class ValidatedTextWidget extends TextInputWidget implements ValidationPro
         return this.field_u;
     }
 
-    final static ld a(int param0, String param1) {
+    final static AccountInputValidationResult a(int param0, String param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
-        ld stackIn_3_0 = null;
+        AccountInputValidationResult stackIn_3_0 = null;
         Object stackIn_10_0 = null;
-        ld stackIn_13_0 = null;
+        AccountInputValidationResult stackIn_13_0 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
@@ -158,7 +158,7 @@ final class ValidatedTextWidget extends TextInputWidget implements ValidationPro
         try {
           var2_int = param1.length();
           if (param0 != 6) {
-            stackIn_3_0 = (ld) null;
+            stackIn_3_0 = (AccountInputValidationResult) null;
             return stackIn_3_0;
           }
           var3 = 0;
@@ -178,7 +178,7 @@ final class ValidatedTextWidget extends TextInputWidget implements ValidationPro
             break;
           }
           stackIn_10_0 = null;
-          return (ld) (stackIn_10_0);
+          return (AccountInputValidationResult) (stackIn_10_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;

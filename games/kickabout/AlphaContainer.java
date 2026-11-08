@@ -51,7 +51,7 @@ final class AlphaContainer extends SingleChildContainer {
             field_D = (String) null;
           }
           TeamManagementScreen.e(120);
-          stackIn_13_0 = eo.toIndexedSprite(var5);
+          stackIn_13_0 = SoftwareDrawingSupport.toIndexedSprite(var5);
           return stackIn_13_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

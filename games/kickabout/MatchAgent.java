@@ -38,7 +38,7 @@ abstract class MatchAgent {
         String stackIn_22_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!gk.field_e &&
+          if (!ChatComposeSupport.field_e &&
             this.field_c < 64) {
             if (param1.field_b > this.field_b &&
               param3 == this.field_e &&
@@ -344,14 +344,14 @@ abstract class MatchAgent {
           var2_int = param0;
           var3 = param1.length();
           while (var2_int < var3) {
-            if (ca.a(false, param1.charAt(var2_int))) {
+            if (ca.isNameSeparator(false, param1.charAt(var2_int))) {
               var2_int++;
               continue;
             }
             break;
           }
           while (var2_int < var3) {
-            if (ca.a(false, param1.charAt(-1 + var3))) {
+            if (ca.isNameSeparator(false, param1.charAt(-1 + var3))) {
               var3--;
               continue;
             }
@@ -368,7 +368,7 @@ abstract class MatchAgent {
           var5 = new StringBuilder(var4);
           for (var6 = var2_int; var6 < var3; var6++) {
             var7 = param1.charAt(var6);
-            if (ws.a((char) var7, (byte) 121)) {
+            if (AccountNameCharacterSupport.isAllowedAccountNameCharacter((char) var7, (byte) 121)) {
               var8 = BuyPitchDialog.a((byte) -67, (char) var7);
               if (var8 != 0) {
                 discarded$0 = var5.append((char) var8);

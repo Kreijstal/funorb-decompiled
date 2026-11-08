@@ -18,16 +18,16 @@ final class SquadGridWidget extends UiLayoutNode {
         int var2_int = 0;
         int var3 = Kickabout.field_G;
         try {
-          gk.field_a = param0;
+          ChatComposeSupport.field_a = param0;
           SaveChangesDialog.field_F = new Sprite[2];
           for (var2_int = 0; 2 > var2_int; var2_int++) {
-            SaveChangesDialog.field_F[var2_int] = gk.field_a[var2_int].copy();
+            SaveChangesDialog.field_F[var2_int] = ChatComposeSupport.field_a[var2_int].copy();
             SpritePixelSupport.adjustSpriteHsv(SaveChangesDialog.field_F[var2_int], 0.0, 0.0, 1.0);
           }
           if (!param1) {
             field_Ib = true;
           }
-          vb.field_l = gk.field_a[2];
+          vb.field_l = ChatComposeSupport.field_a[2];
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "mf.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -72,7 +72,7 @@ final class SquadGridWidget extends UiLayoutNode {
           if (!var3_ref_kq.field_Eb.isEmpty(-2) &&
             var3_ref_kq.field_qb != 0) {
             var3_ref_kq.field_s = -var3_ref_kq.field_bb + (-this.field_F + ArrayWidgetContainer.field_x);
-            var3_ref_kq.field_J = -var3_ref_kq.field_M - this.field_T + us.field_j;
+            var3_ref_kq.field_J = -var3_ref_kq.field_M - this.field_T + TutorialCaptionSupport.field_j;
             var5 = 10 + (this.field_q - var3_ref_kq.field_q);
             var6 = 10 - var3_ref_kq.field_mb + this.field_mb;
             if (var5 < var3_ref_kq.field_s) {
@@ -101,7 +101,7 @@ final class SquadGridWidget extends UiLayoutNode {
                   this.field_Bb = this.field_Hb.createOrderSwapAction(var9, -123, var2);
                   this.field_Hb.applyAction(this.field_Bb, AuctionLogEntry.e(15137), 0);
                 } else {
-                  di.a(var2, true, var9);
+                  SquadOrderSupport.swapSquadOrder(var2, true, var9);
                 }
                 this.field_Eb[var2] = this.field_Eb[var9];
                 this.field_Eb[var9] = var3_ref_kq;
@@ -409,9 +409,9 @@ final class SquadGridWidget extends UiLayoutNode {
           if (param0 > -99) {
             return;
           }
-          for (var2 = 0; var2 < bk.field_c.length; var2++) {
-            if (null != bk.field_c[var2]) {
-              bk.field_c[var2].draw(-65, var1_int);
+          for (var2 = 0; var2 < CalendarSupport.field_c.length; var2++) {
+            if (null != CalendarSupport.field_c[var2]) {
+              CalendarSupport.field_c[var2].draw(-65, var1_int);
               var1_int -= 18;
               continue;
             }
@@ -612,7 +612,7 @@ final class SquadGridWidget extends UiLayoutNode {
         AuctionsHelpScreen.field_F[7] = DisplayModeSupport.field_c;
         fs.field_a = new String[]{RotaryDialWidget.field_F, MouseInputHandler.field_a};
         GameModeDefinition.field_e = new String[]{RenderedFootballer.field_Q};
-        AuctionsHelpScreen.field_F[1] = uq.field_f;
+        AuctionsHelpScreen.field_F[1] = ChatInputState.field_f;
         AuctionsHelpScreen.field_F[4] = DisplayModeSupport.field_d;
         AuctionsHelpScreen.field_F[6] = SquadPickerDialog.field_M;
         AuctionsHelpScreen.field_F[0] = PlayerShopScreen.field_H;
@@ -625,7 +625,7 @@ final class SquadGridWidget extends UiLayoutNode {
         AuctionItem.field_u = new String[]{RotaryDialWidget.field_F};
         AuctionsHelpScreen.field_F[2] = WhirlpoolHasher.field_i;
         AuctionsHelpScreen.field_F[5] = fc.field_e;
-        AccountChoicePanel.field_I = new String[]{RenderedBall.field_H, in.field_a, MouseInputHandler.field_a};
+        AccountChoicePanel.field_I = new String[]{RenderedBall.field_H, UiInputRoutingSupport.field_a, MouseInputHandler.field_a};
         MatchingTextValidator.field_o[10] = MonotonicClock.field_b;
         MatchingTextValidator.field_o[12] = ns.field_b;
         MatchingTextValidator.field_o[3] = HoverTooltip.field_zb;
@@ -646,16 +646,16 @@ final class SquadGridWidget extends UiLayoutNode {
         MatchingTextValidator.field_o[24] = GameAppletShell.field_f;
         MatchingTextValidator.field_o[18] = DualLinkDeque.field_b;
         MatchingTextValidator.field_o[23] = GameSoundEffect.field_h;
-        MatchingTextValidator.field_o[40] = ms.field_a;
+        MatchingTextValidator.field_o[40] = MusicVolumeSupport.field_a;
         MatchingTextValidator.field_o[14] = FadingSoundPlayer.field_h;
         MatchingTextValidator.field_o[43] = TrinketTile.field_Fb;
-        MatchingTextValidator.field_o[45] = us.field_g;
-        MatchingTextValidator.field_o[39] = wq.field_f;
+        MatchingTextValidator.field_o[45] = TutorialCaptionSupport.field_g;
+        MatchingTextValidator.field_o[39] = DiagnosticsOverlaySupport.field_f;
         MatchingTextValidator.field_o[41] = ConsoleExpression.field_i;
         MatchingTextValidator.field_o[19] = MenuButton.field_c;
         MatchingTextValidator.field_o[38] = HoverTooltip.field_Ab;
         MatchingTextValidator.field_o[47] = HighScoreQuery.field_e;
-        MatchingTextValidator.field_o[36] = di.field_a;
+        MatchingTextValidator.field_o[36] = SquadOrderSupport.field_a;
         MatchingTextValidator.field_o[11] = MonotonicClock.field_c;
         MatchingTextValidator.field_o[22] = TrinketIcon.field_Db;
         MatchingTextValidator.field_o[33] = FullscreenFailureReason.field_a;
@@ -692,12 +692,12 @@ final class SquadGridWidget extends UiLayoutNode {
         fa.field_g[26] = StrongCacheEntry.field_C;
         fa.field_g[46] = TextLayout.field_b;
         ValidationState.field_d = new String[24];
-        fa.field_g[48] = ep.field_a;
-        fa.field_g[45] = nd.field_a;
+        fa.field_g[48] = TutorialMessages.field_a;
+        fa.field_g[45] = PitchBoundaryCacheState.field_a;
         ValidationState.field_d[18] = AnimationFrameset.field_s;
         ValidationState.field_d[1] = DemoIntegersCommand.field_C;
         ValidationState.field_d[4] = AudioService.field_a;
-        ValidationState.field_d[7] = rr.field_a;
+        ValidationState.field_d[7] = TextEntrySupport.field_a;
         LobbyGameRecord.field_g = new String[4];
         ValidationState.field_d[22] = HighScoreQuery.field_n;
         ValidationState.field_d[0] = ValidationState.field_a;
@@ -706,7 +706,7 @@ final class SquadGridWidget extends UiLayoutNode {
         ValidationState.field_d[17] = ParticipantStatus.field_r;
         ValidationState.field_d[20] = ParticipantStatus.field_m;
         ValidationState.field_d[21] = ByteStorage.field_a;
-        ValidationState.field_d[15] = dr.field_f;
+        ValidationState.field_d[15] = ClassNameSupport.field_f;
         ValidationState.field_d[16] = Checkbox.field_F;
         ValidationState.field_d[23] = ThreadSleepSupport.field_d;
         ValidationState.field_d[6] = MessageDialog.field_w;
@@ -717,8 +717,8 @@ final class SquadGridWidget extends UiLayoutNode {
         ValidationState.field_d[14] = TickClock.field_c;
         ValidationState.field_d[2] = mt.field_c;
         ValidationState.field_d[8] = MusicPatch.field_o;
-        ValidationState.field_d[13] = ld.field_d;
-        ValidationState.field_d[11] = bw.field_c;
+        ValidationState.field_d[13] = AccountInputValidationResult.field_d;
+        ValidationState.field_d[11] = SceneSpriteFactory.field_c;
         LobbyGameRecord.field_g[0] = lt.field_b;
         LobbyGameRecord.field_g[2] = WeightedCacheEntry.field_n;
         LobbyGameRecord.field_g[3] = AccountMessagePanel.field_C;

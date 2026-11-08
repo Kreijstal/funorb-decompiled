@@ -214,7 +214,7 @@ final class LoginMethod {
         if (param0 != 0) {
           LoginMethod.a(-68, -48, 74, 38, -61);
         }
-        stackIn_6_0 = (il.b((byte) 100)) && (c.field_g);
+        stackIn_6_0 = (ClassDescriptorSupport.b((byte) 100)) && (ClientPacketFlushSupport.field_g);
         return stackIn_6_0;
     }
 

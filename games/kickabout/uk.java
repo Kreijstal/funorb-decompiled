@@ -3,7 +3,7 @@
  */
 final class uk {
     static boolean field_d;
-    static r field_c;
+    static ClientProtocolStage field_c;
     static VerticalScrollbar field_b;
     static int field_a;
     private static String field_z;
@@ -18,6 +18,6 @@ final class uk {
 
     static {
         field_z = "uk.A(";
-        field_c = new r();
+        field_c = new ClientProtocolStage();
     }
 }

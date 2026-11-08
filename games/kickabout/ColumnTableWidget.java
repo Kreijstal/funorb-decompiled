@@ -233,7 +233,7 @@ class ColumnTableWidget extends UiLayoutNode {
         RuntimeException var3 = null;
         var7 = Kickabout.field_G;
         try {
-          ql.a(this.field_Fb, param0, (byte) 124);
+          ql.sortByCriterion(this.field_Fb, param0, (byte) 124);
           var3_int = 5;
           var4_ref_im__ = this.field_Fb;
           for (var5 = 0; var5 < var4_ref_im__.length; var5++) {
@@ -333,12 +333,12 @@ class ColumnTableWidget extends UiLayoutNode {
             var10 = this.field_zb[this.field_Db];
             if (var10.directionCount(-113) == 2) {
               if (1 == var10.field_i) {
-                eo.field_b.c(var8, var9 - 1);
+                SoftwareDrawingSupport.field_b.c(var8, var9 - 1);
               } else {
-                eo.field_b.drawVerticalFlip(var8, var9);
+                SoftwareDrawingSupport.field_b.drawVerticalFlip(var8, var9);
               }
             } else {
-              var11 = eo.field_l[var10.field_i % 3];
+              var11 = SoftwareDrawingSupport.field_l[var10.field_i % 3];
               if (var10.field_i >= 3) {
                 var11.drawVerticalFlip(var8, -1 + var9);
               } else {
@@ -440,7 +440,7 @@ class ColumnTableWidget extends UiLayoutNode {
             this.addChild((byte) -106, var8);
           }
           this.field_Ab = new UiLayoutNode();
-          this.field_Cb = new ScrollContainer(0L, this.field_Ab, new UiLayoutNode(), rr.field_b);
+          this.field_Cb = new ScrollContainer(0L, this.field_Ab, new UiLayoutNode(), TextEntrySupport.field_b);
           this.addChild((byte) -110, (UiLayoutNode) (this.field_Cb));
           this.field_q = 15 + (var5_int + 10);
           return;

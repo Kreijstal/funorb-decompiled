@@ -172,10 +172,10 @@ abstract class MatchPhaseView {
               }
             }
             if (param2 == 2) {
-              var16Lifetime5 = (short)ad.field_e[param8][0];
+              var16Lifetime5 = (short)LocalizedTextLoader.field_e[param8][0];
               for (var21Lifetime5 = 0; var21Lifetime5 < var33.length; var21Lifetime5++) {
                 if (~var33[var21Lifetime5] == ~var16Lifetime5) {
-                  var19[var21Lifetime5] = (short)ad.field_e[param8][param5];
+                  var19[var21Lifetime5] = (short)LocalizedTextLoader.field_e[param8][param5];
                 }
               }
             }
@@ -258,7 +258,7 @@ abstract class MatchPhaseView {
           return;
         }
         if (param1) {
-          this.field_i.a(-21174, this.a(ArrayWidgetContainer.field_x, us.field_j, -74), this.a(TrinketIcon.field_yb, TabStrip.field_Eb, -106));
+          this.field_i.a(-21174, this.a(ArrayWidgetContainer.field_x, TutorialCaptionSupport.field_j, -74), this.a(TrinketIcon.field_yb, TabStrip.field_Eb, -106));
           if (this.field_i.selectedIndex >= 0 &&
             this.field_i.c(-1)) {
             this.onButtonClick(111, this.field_c[this.field_i.selectedIndex].kind);
@@ -301,7 +301,7 @@ abstract class MatchPhaseView {
           field_d = (IconLabel) null;
         }
         this.field_i = new MenuSelection(this.field_c.length);
-        this.field_i.a(true, this.a(ArrayWidgetContainer.field_x, us.field_j, -93), (byte) -127);
+        this.field_i.a(true, this.a(ArrayWidgetContainer.field_x, TutorialCaptionSupport.field_j, -93), (byte) -127);
     }
 
     public static void b(int param0) {

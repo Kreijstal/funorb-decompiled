@@ -66,11 +66,11 @@ final class DelegatingCanvas extends java.awt.Canvas {
               decompiledCaughtException = decompiledCaughtParameter0;
               var2 = decompiledCaughtException;
             }
-            if (wk.field_b == null) {
+            if (ClubStateFactory.field_b == null) {
               stackIn_15_0 = param0.getParameter("settings");
               return stackIn_15_0;
             }
-            stackIn_13_0 = wk.field_b;
+            stackIn_13_0 = ClubStateFactory.field_b;
             return stackIn_13_0;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;

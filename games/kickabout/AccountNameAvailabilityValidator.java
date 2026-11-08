@@ -364,7 +364,7 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
             }
           }
           LeaderboardParticipant.a(IntTripleCommand.field_C, RandomAccessCacheFile.field_i, GameModesHelpScreen.field_F, 121, RenderedFootballer.field_fb, IntrusiveDeque.field_g);
-          ld.a(RandomAccessCacheFile.field_i, RenderedFootballer.field_fb, IntTripleCommand.field_C, GameModesHelpScreen.field_F, IntrusiveDeque.field_g, false);
+          AccountInputValidationResult.buildSummedColorMoments(RandomAccessCacheFile.field_i, RenderedFootballer.field_fb, IntTripleCommand.field_C, GameModesHelpScreen.field_F, IntrusiveDeque.field_g, false);
           var14 = var26[0];
           var26[0].field_k = 0;
           var15 = var26[0];

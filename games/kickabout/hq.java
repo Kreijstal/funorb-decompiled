@@ -58,7 +58,7 @@ final class hq {
 
     final static void b(byte param0) {
         if (DebugConsole.field_s) {
-          fa.b(-127);
+          fa.closeQuickChat(-127);
         }
         if (param0 < 108) {
           hq.a((byte) 11);

@@ -263,7 +263,7 @@ class TextInputWidget extends TextButton {
           if (param1 <= 108) {
             field_U = (String) null;
           }
-          pi.field_b.addSubStream(param0);
+          PlayerMeshFactory.field_b.addSubStream(param0);
           stackIn_3_0 = var2;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

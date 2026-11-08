@@ -76,17 +76,17 @@ final class DemoIntegersCommand extends ConsoleCommand {
             pg.field_b = pg.field_b + 1;
           }
           if (VerticalScrollbar.field_Ab != ColorQuantizationBox.field_f.field_e) {
-            c.field_c = c.field_c + (ColorQuantizationBox.field_f.field_e - VerticalScrollbar.field_Ab);
+            ClientPacketFlushSupport.field_c = ClientPacketFlushSupport.field_c + (ColorQuantizationBox.field_f.field_e - VerticalScrollbar.field_Ab);
             VerticalScrollbar.field_Ab = ColorQuantizationBox.field_f.field_e;
           }
           if (pg.field_b <= 0) {
             return;
           }
           WeightedLruCache.a(0);
-          g.field_a.updateInput(0, param0);
+          GrayscalePaletteSupport.field_a.updateInput(0, param0);
           if (null != PlayArea.field_a) {
             if (PacketBuffer.field_l) {
-              PlayArea.field_a.processPointerFrame(g.field_a.field_T, 31947, g.field_a.field_F, param0);
+              PlayArea.field_a.processPointerFrame(GrayscalePaletteSupport.field_a.field_T, 31947, GrayscalePaletteSupport.field_a.field_F, param0);
             } else {
               PlayArea.field_a = null;
             }
@@ -98,15 +98,15 @@ final class DemoIntegersCommand extends ConsoleCommand {
               if (var6.field_sb != 0) {
                 DisplayModeSupport.a(var6, true, var5_int);
               }
-              var7 = r.a(0, var5_int);
-              SocketConnector.field_b[var5_int].field_N = il.field_d[var7];
-              ds.field_a[var5_int].field_E = IntrusiveDeque.field_h[var7];
+              var7 = ClientProtocolStage.a(0, var5_int);
+              SocketConnector.field_b[var5_int].field_N = ClassDescriptorSupport.field_d[var7];
+              ModelMaterialDecoder.field_a[var5_int].field_E = IntrusiveDeque.field_h[var7];
             }
           }
-          if (0 != uq.field_a.field_sb) {
-            ck.field_b = new TextPromptDialog(uq.field_a.field_F, uq.field_a.field_T, uq.field_a.field_q, uq.field_a.field_mb, param2, ChatMessage.field_e, AccountTermsPanel.field_H, DateInputValidator.field_f, ConsoleEvaluationException.field_e, MatchPhaseView.field_d, ul.field_c, (String) null, 0L);
+          if (0 != ChatInputState.field_a.field_sb) {
+            TextPromptState.field_b = new TextPromptDialog(ChatInputState.field_a.field_F, ChatInputState.field_a.field_T, ChatInputState.field_a.field_q, ChatInputState.field_a.field_mb, param2, ChatMessage.field_e, AccountTermsPanel.field_H, DateInputValidator.field_f, ConsoleEvaluationException.field_e, MatchPhaseView.field_d, ul.field_c, (String) null, 0L);
           }
-          var9 = TextPromptDialog.a(param1, sh.field_c, (byte) 26, DiskCacheWorker.field_b);
+          var9 = TextPromptDialog.a(param1, LineupPositionSupport.field_c, (byte) 26, DiskCacheWorker.field_b);
           if (var9 != null) {
             LineupView.a(var9, (byte) -60);
           }

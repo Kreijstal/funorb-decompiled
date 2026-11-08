@@ -45,9 +45,9 @@ final class CheckboxPainter implements WidgetPainter {
         int var8Lifetime1;
         var10 = Kickabout.field_G;
         try {
-          var1_int = uq.field_c;
+          var1_int = ChatInputState.field_c;
           var2 = param0;
-          if (ck.field_a == 2) {
+          if (TextPromptState.field_a == 2) {
             var3_long = -PlayingView.field_o + MonotonicClock.monotonicMillis(-50);
             var2 = (int)((10999L - var3_long) / 1000L);
             if (var2 < 0) {
@@ -66,7 +66,7 @@ final class CheckboxPainter implements WidgetPainter {
               }
             }
             var6 = WeightedLruCache.field_c[var3];
-            if (ck.field_a == 2 &&
+            if (TextPromptState.field_a == 2 &&
               1 == var2) {
               if (StrongCacheEntry.field_D.length <= TrinketIcon.field_Eb.length) {
                 stackIn_18_0 = TrinketIcon.field_Eb.length;
@@ -158,8 +158,8 @@ final class CheckboxPainter implements WidgetPainter {
           AuctionItem.field_f = AuctionItem.field_f - 256;
         }
         if (FadingSoundPlayer.field_q) {
-          vd.a(0, 0);
-          var1 = vr.a(RankingsScreen.field_C, ih.field_c, (byte) -110);
+          AccountNameCheckState.a(0, 0);
+          var1 = PitchSurfaceLoader.loadPitchSurface(RankingsScreen.field_C, ih.field_c, (byte) -110);
           if (var1 != -1) {
             DelayedServerPacket.a(100, 9863, var1);
             return;
@@ -168,7 +168,7 @@ final class CheckboxPainter implements WidgetPainter {
             DelayedServerPacket.a(2, 9863, 1);
             return;
           }
-          vd.a(0, 1);
+          AccountNameCheckState.a(0, 1);
           if (0 != ih.field_c) {
             if (ih.field_c == 1) {
               var1Lifetime1 = ReceivedAuctionItem.b(123);
@@ -192,7 +192,7 @@ final class CheckboxPainter implements WidgetPainter {
               return;
             }
           }
-          vd.a(0, 2);
+          AccountNameCheckState.a(0, 2);
           if (2 != RankingsScreen.field_C) {
             if (RankingsScreen.field_C == 3) {
               var1Lifetime2 = AvailabilityCheckRequest.loadStadiumScenery((byte) 28);
@@ -207,18 +207,18 @@ final class CheckboxPainter implements WidgetPainter {
               return;
             }
           }
-          vd.a(0, 3);
+          AccountNameCheckState.a(0, 3);
           var1Lifetime3 = GrowableIntList.a(5464, ih.field_c, RankingsScreen.field_C);
           if (var1Lifetime3 != -1) {
             DelayedServerPacket.a(100, 9863, var1Lifetime3);
             return;
           }
-          vd.a(0, 4);
+          AccountNameCheckState.a(0, 4);
           if (!MyKitScreen.ensureSoundLoaded(120, TrinketPickerDialog.a(ih.field_c, 121, NanoTickClock.field_n, RankingsScreen.field_C))) {
             DelayedServerPacket.a(4, 9863, 0);
             return;
           }
-          vd.a(0, 5);
+          AccountNameCheckState.a(0, 5);
           if (RankingsScreen.field_C == 2) {
             if (!MyKitScreen.ensureSoundLoaded(108, 4)) {
               DelayedServerPacket.a(2, 9863, 0);
@@ -245,8 +245,8 @@ final class CheckboxPainter implements WidgetPainter {
             DualLinkNode.field_h = null;
             ModalPanel.field_G = null;
             hq.field_e = null;
-            c.field_f = null;
-            vd.a(0, 6);
+            ClientPacketFlushSupport.field_f = null;
+            AccountNameCheckState.a(0, 6);
             if (0 == RankingsScreen.field_C) {
               UiLayoutNode.a(15, 6, 50, 0);
             }
@@ -259,16 +259,16 @@ final class CheckboxPainter implements WidgetPainter {
             if (3 == RankingsScreen.field_C) {
               UiLayoutNode.a(15, 3, 256, 0);
             }
-            vd.a(0, 7);
+            AccountNameCheckState.a(0, 7);
             if (RankingsScreen.field_C == 2) {
-              in.a(true, 128);
+              UiInputRoutingSupport.buildSliderTrackSprites(true, 128);
             }
             if (RankingsScreen.field_C == 3) {
               mj.a((byte) -39, 128);
             }
-            vd.a(0, 8);
+            AccountNameCheckState.a(0, 8);
             vb.a(true);
-            vd.a(0, 9);
+            AccountNameCheckState.a(0, 9);
             if (0 == ih.field_c) {
               MusicPatchPcmStream.b(1);
             }
@@ -278,7 +278,7 @@ final class CheckboxPainter implements WidgetPainter {
             if (ih.field_c == 2) {
               MeshObject.a(11383);
             }
-            vd.a(0, 10);
+            AccountNameCheckState.a(0, 10);
             vp.a(-4121, RankingsScreen.field_C);
             ArchiveIndex.field_t = false;
           }

@@ -7,7 +7,7 @@ final class ul {
     static String field_a;
 
     final static void a(boolean param0, int param1, int param2, boolean param3) {
-        DateInputWidget.a(DiskCacheWorker.field_b, BytePlusOneCommand.field_I, sh.field_c, param2, false, param1, param3);
+        DateInputWidget.a(DiskCacheWorker.field_b, BytePlusOneCommand.field_I, LineupPositionSupport.field_c, param2, false, param1, param3);
         if (!param0) {
           int[] var5 = (int[]) null;
           ul.a((IndexedSprite) null, (byte) -34, (int[]) null);
@@ -97,18 +97,18 @@ final class ul {
           TeamManagementScreen.e(122);
           var5 = AnimationSkeleton.a(false);
           if (var5 != -1) {
-            of.field_e = 1;
+            FriendRemovalSupport.field_e = 1;
             if (var5 == 6 ||
               8 <= var5 &&
               var5 <= 13) {
-              of.field_e = 3;
+              FriendRemovalSupport.field_e = 3;
             }
             if (var5 >= 15) {
-              of.field_e = 4;
+              FriendRemovalSupport.field_e = 4;
             }
           }
           AuctionListing.a(-20 + (var2_int + TickClock.field_a), param0 ^ 23036, var2_int + 22 - 12, 112 + var3, var3);
-          LoginKind.getPlayerPortrait(et.field_d.field_H[0], param0 ^ -126, et.field_d.field_P[0][of.field_e].stats, et.field_d.field_Q[0], et.field_d.field_d[0], false).c(12 + var2_int, var3 + 40);
+          LoginKind.getPlayerPortrait(et.field_d.field_H[0], param0 ^ -126, et.field_d.field_P[0][FriendRemovalSupport.field_e].stats, et.field_d.field_Q[0], et.field_d.field_d[0], false).c(12 + var2_int, var3 + 40);
           TeamManagementScreen.e(120);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -138,72 +138,72 @@ final class ul {
           return;
         }
         if (1 == HuffmanCodec.field_e) {
-          ss.field_b.setSpritePosition(var5.pixelX(true), var5.pixelY(879306160), -100);
+          UiKeyRoutingSupport.field_b.setSpritePosition(var5.pixelX(true), var5.pixelY(879306160), -100);
           return;
         }
         if (2 == HuffmanCodec.field_e) {
           if (EmailAvailabilityValidator.field_k.pixelY(true) <= 477) {
-            ss.field_b.setSpritePosition(448, 282, -76);
+            UiKeyRoutingSupport.field_b.setSpritePosition(448, 282, -76);
           } else {
-            ss.field_b.setSpritePosition(448, 477, param0 - 82);
+            UiKeyRoutingSupport.field_b.setSpritePosition(448, 477, param0 - 82);
           }
           return;
         }
         if (HuffmanCodec.field_e == 3) {
-          ss.field_b.setSpritePosition(810, 1110, param0 ^ -105);
+          UiKeyRoutingSupport.field_b.setSpritePosition(810, 1110, param0 ^ -105);
           return;
         }
         if (HuffmanCodec.field_e == 4) {
-          ss.field_b.setSpritePosition(ld.field_f.pixelX(param0 - 102), ld.field_f.pixelY(true), -93);
+          UiKeyRoutingSupport.field_b.setSpritePosition(AccountInputValidationResult.field_f.pixelX(param0 - 102), AccountInputValidationResult.field_f.pixelY(true), -93);
           return;
         }
         if (HuffmanCodec.field_e == 5) {
           if (HoverTooltip.field_Eb) {
-            ss.field_b.setSpritePosition(0, 0, -102);
+            UiKeyRoutingSupport.field_b.setSpritePosition(0, 0, -102);
           } else {
-            ss.field_b.setSpritePosition(EmailAvailabilityValidator.field_k.pixelX(-107), EmailAvailabilityValidator.field_k.pixelY(true), param0 - 84);
+            UiKeyRoutingSupport.field_b.setSpritePosition(EmailAvailabilityValidator.field_k.pixelX(-107), EmailAvailabilityValidator.field_k.pixelY(true), param0 - 84);
           }
           return;
         }
         if (HuffmanCodec.field_e == 6) {
-          ss.field_b.setSpritePosition(ld.field_f.pixelX(-106), ld.field_f.pixelY(true), -49);
+          UiKeyRoutingSupport.field_b.setSpritePosition(AccountInputValidationResult.field_f.pixelX(-106), AccountInputValidationResult.field_f.pixelY(true), -49);
           return;
         }
         if (HuffmanCodec.field_e == 7) {
-          ss.field_b.setSpritePosition(var5.pixelX(true), var5.pixelY(879306160), -87);
+          UiKeyRoutingSupport.field_b.setSpritePosition(var5.pixelX(true), var5.pixelY(879306160), -87);
           return;
         }
         if (HuffmanCodec.field_e == 8) {
           if (et.field_d.field_V.possessorTeam != 0) {
-            ss.field_b.setSpritePosition(var5.pixelX(true), var5.pixelY(879306160), -112);
+            UiKeyRoutingSupport.field_b.setSpritePosition(var5.pixelX(true), var5.pixelY(879306160), -112);
           } else {
-            ss.field_b.setSpritePosition(810, 1050, -108);
+            UiKeyRoutingSupport.field_b.setSpritePosition(810, 1050, -108);
           }
           return;
         }
         if (HuffmanCodec.field_e == 9) {
-          ss.field_b.setSpritePosition(EmailAvailabilityValidator.field_k.pixelX(-92), EmailAvailabilityValidator.field_k.pixelY(true), -72);
+          UiKeyRoutingSupport.field_b.setSpritePosition(EmailAvailabilityValidator.field_k.pixelX(-92), EmailAvailabilityValidator.field_k.pixelY(true), -72);
           return;
         }
         if (HuffmanCodec.field_e == 10) {
-          ss.field_b.setSpritePosition(fc.field_c.pixelX(param0 ^ -104), fc.field_c.pixelY(true), -109);
+          UiKeyRoutingSupport.field_b.setSpritePosition(fc.field_c.pixelX(param0 ^ -104), fc.field_c.pixelY(true), -109);
           return;
         }
         if (HuffmanCodec.field_e == 11) {
-          ss.field_b.setSpritePosition(var5.pixelX(true), var5.pixelY(879306160), -87);
+          UiKeyRoutingSupport.field_b.setSpritePosition(var5.pixelX(true), var5.pixelY(879306160), -87);
           return;
         }
         if (HuffmanCodec.field_e == 12) {
           if (var5.possessorTeam == 0) {
-            ss.field_b.setSpritePosition(448, -20, -57);
+            UiKeyRoutingSupport.field_b.setSpritePosition(448, -20, -57);
           } else {
             if (var5.horizontalSpeedSquared(param0 ^ 112) >= 1638400) {
-              ss.field_b.setSpritePosition(448, -20, -57);
+              UiKeyRoutingSupport.field_b.setSpritePosition(448, -20, -57);
             } else {
               if (var5.positionY <= 0) {
-                ss.field_b.setSpritePosition(448, -20, -57);
+                UiKeyRoutingSupport.field_b.setSpritePosition(448, -20, -57);
               } else {
-                ss.field_b.setSpritePosition(var5.pixelX(true), var5.pixelY(879306160), -117);
+                UiKeyRoutingSupport.field_b.setSpritePosition(var5.pixelX(true), var5.pixelY(879306160), -117);
               }
             }
           }
@@ -213,22 +213,22 @@ final class ul {
           return;
         }
         if (var5.positionY < 0) {
-          ss.field_b.setSpritePosition(0, 1344, -90);
+          UiKeyRoutingSupport.field_b.setSpritePosition(0, 1344, -90);
           return;
         }
         if (var5.horizontalSpeedSquared(54) > 1638400) {
-          ss.field_b.setSpritePosition(0, 1344, -90);
+          UiKeyRoutingSupport.field_b.setSpritePosition(0, 1344, -90);
           return;
         }
         if (var5.possessorTeam != 0) {
-          ss.field_b.setSpritePosition(var5.pixelX(true), var5.pixelY(param0 ^ 879306171), param0 - 72);
+          UiKeyRoutingSupport.field_b.setSpritePosition(var5.pixelX(true), var5.pixelY(param0 ^ 879306171), param0 - 72);
           return;
         }
         stackIn_49_0 = (et.field_d.field_P[1][0].positionX <= 29360128) ? 0 : 1;
         var2 = stackIn_49_0;
         stackIn_52_0 = (var2 == 0) ? 515 : 380;
         var3 = stackIn_52_0;
-        ss.field_b.setSpritePosition(var3, -4, -87);
+        UiKeyRoutingSupport.field_b.setSpritePosition(var3, -4, -87);
         return;
     }
 

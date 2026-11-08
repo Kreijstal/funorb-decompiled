@@ -266,7 +266,7 @@ final class Trinket {
               if ((var5 == 3 ||
                 var5 == 5) && (255 & param0.field_R) == 0) {
                 if (var5 == 3) {
-                  var6_ref_byte__ = cb.field_b[var4][param0.field_R >> 8];
+                  var6_ref_byte__ = PitchPurchaseSupport.field_b[var4][param0.field_R >> 8];
                 }
                 if (var5 != 3 ||
                   var9 != 0) {
@@ -274,13 +274,13 @@ final class Trinket {
                 }
                 boolean decompiledSharedTail0 = (InstrumentNoteMask.field_i != 256);
                 if (!decompiledSharedTail0) {
-                  eo.b(var6_ref_byte__, -48 + var2_int, var3 - 48, 96, 96);
+                  SoftwareDrawingSupport.b(var6_ref_byte__, -48 + var2_int, var3 - 48, 96, 96);
                   decompiledSharedTail0 = (var9 != 0);
                 }
                 if (decompiledSharedTail0) {
                   var7 = 96 * InstrumentNoteMask.field_i >> 8;
                   var8 = 48 * InstrumentNoteMask.field_i >> 8;
-                  eo.a(var6_ref_byte__, var2_int - var8, var3 - var8, 96, 96, var7, var7);
+                  SoftwareDrawingSupport.a(var6_ref_byte__, var2_int - var8, var3 - var8, 96, 96, var7, var7);
                 }
                 if (var9 == 0) {
                   return;
@@ -473,9 +473,9 @@ final class Trinket {
             RankingsRequest.field_n[2] = param0;
             break;
           }
-          if (null != sk.field_d) {
-            sk.field_d.a(1, param0, (byte) -85);
-            sk.field_d.a(2, param0, (byte) -85);
+          if (null != LoadingProgressSupport.field_d) {
+            LoadingProgressSupport.field_d.a(1, param0, (byte) -85);
+            LoadingProgressSupport.field_d.a(2, param0, (byte) -85);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -556,11 +556,11 @@ final class Trinket {
             !LoggedPlayer.b(param0 - 3194)) {
             boolean decompiledSharedTail1 = !(IntKeyLookup.a(PlayerStatSortCriterion.field_o, -39));
             if (!decompiledSharedTail1) {
-              var2 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, gk.field_c, new String[]{TrinketTile.field_Kb});
+              var2 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, ChatComposeSupport.field_c, new String[]{TrinketTile.field_Kb});
               decompiledSharedTail1 = (var10 != 0);
             }
             if (decompiledSharedTail1) {
-              var2 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, ar.field_a, new String[]{TrinketTile.field_Kb});
+              var2 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, BrowserUiSupport.field_a, new String[]{TrinketTile.field_Kb});
             }
             if (DebugConsole.field_s) {
               TextButton.a((String) null, (String) null, 0, 2, (String) (var2), -115);
@@ -612,7 +612,7 @@ final class Trinket {
                   var6 = 1;
                 }
               }
-              if (!vb.b(118)) {
+              if (!vb.hasSavedInputLayout(118)) {
                 stackIn_63_0 = "<img=3>: ";
               } else {
                 stackIn_63_0 = ": ";
@@ -631,7 +631,7 @@ final class Trinket {
                 var5 = "";
               }
               var9 = FootballerAgent.field_i.a(var4);
-              if (!vb.b(119)) {
+              if (!vb.hasSavedInputLayout(119)) {
                 if (RotaryDialPainter.field_b.field_gb &&
                   BytePlusOneCommand.field_A - RotaryDialPainter.field_b.field_F < var9) {
                   if (!PacketBuffer.field_l) {
@@ -643,7 +643,7 @@ final class Trinket {
                 if (RotaryDialPainter.field_b.field_sb != 0 &&
                   RotaryDialPainter.field_b.field_bb < var9 &&
                   !PacketBuffer.field_l) {
-                  hp.b(0);
+                  ChatComposeMode.setComposeMode(0);
                 }
               }
             }
@@ -703,7 +703,7 @@ final class Trinket {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         try {
-          stackIn_1_0 = wq.field_a[this.field_k] + " [" + ValidationState.field_b[this.field_h] + "]";
+          stackIn_1_0 = DiagnosticsOverlaySupport.field_a[this.field_k] + " [" + ValidationState.field_b[this.field_h] + "]";
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

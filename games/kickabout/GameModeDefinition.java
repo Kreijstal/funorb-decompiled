@@ -124,7 +124,7 @@ final class GameModeDefinition {
           if (this.field_g == -1) {
             return false;
           }
-          stackIn_10_0 = !(gf.a(param1, this.field_g, param0, 3231));
+          stackIn_10_0 = !(ModelMaterial.testGameModeMask(param1, this.field_g, param0, 3231));
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -153,7 +153,7 @@ final class GameModeDefinition {
           }
           if (param0 < 2 &&
             this.field_k != -1) {
-            stackIn_10_0 = !(c.a(this.field_k, 0, param2));
+            stackIn_10_0 = !(ClientPacketFlushSupport.isBitSet(this.field_k, 0, param2));
             return stackIn_10_0;
           }
           return false;

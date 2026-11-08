@@ -30,12 +30,12 @@ abstract class ListRow extends UiLayoutNode {
 
     final static void h(int param0) {
         java.awt.Canvas var1 = null;
-        if (dr.field_a) {
-          dr.field_a = false;
+        if (ClassNameSupport.field_a) {
+          ClassNameSupport.field_a = false;
           var1 = DropTargetWidget.l(param0 ^ 634588136);
-          oo.field_c.a((byte) 53, us.field_j, ArrayWidgetContainer.field_x, (java.awt.Component) ((Object) var1));
+          oo.field_c.a((byte) 53, TutorialCaptionSupport.field_j, ArrayWidgetContainer.field_x, (java.awt.Component) ((Object) var1));
           oo.field_c.a(-118, (java.awt.Component) ((Object) var1), true);
-          ArchiveManager.field_m = us.field_j;
+          ArchiveManager.field_m = TutorialCaptionSupport.field_j;
           BytePlusOneCommand.field_A = ArrayWidgetContainer.field_x;
         }
         if (param0 == 634588072) {
@@ -90,7 +90,7 @@ abstract class ListRow extends UiLayoutNode {
                 return;
               }
               var3 = new java.net.URL(param0.getCodeBase(), param2);
-              var3 = qr.a(param0, var3, 3);
+              var3 = SessionUrlSupport.decorateSessionUrl(param0, var3, 3);
               AccountNameAvailabilityValidator.openExternalUrl(0, var3.toString(), true, param0);
               return;
             } catch (java.lang.Exception decompiledCaughtParameter0) {
