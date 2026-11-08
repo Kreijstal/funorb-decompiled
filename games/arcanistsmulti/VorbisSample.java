@@ -143,7 +143,7 @@ final class VorbisSample extends IntrusiveNode {
             var5 = var5 + var6_int;
           } while (var6_int >= 255);
           var6 = new byte[var5];
-          var2.a((byte) 53, 0, var6, var5);
+          var2.readBytes((byte) 53, 0, var6, var5);
           this.field_j[var4] = var6;
         }
     }

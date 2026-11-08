@@ -99,7 +99,7 @@ final class nl extends kc {
         }
     }
 
-    public static void e(int param0) {
+    public static void releaseStatics(int param0) {
         field_Ib = null;
         field_Bb = null;
         field_Fb = null;

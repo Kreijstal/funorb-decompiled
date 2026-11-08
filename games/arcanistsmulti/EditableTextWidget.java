@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class rn extends ag {
+class EditableTextWidget extends TextButton {
     private boolean field_R;
     private int field_O;
     static kc field_S;
@@ -14,7 +14,7 @@ class rn extends ag {
     static String field_K;
     private int field_J;
 
-    private final int f(int param0) {
+    private final int previousWordBoundary(int param0) {
         int var2;
         int var3;
         var3 = ArcanistsMulti.field_G ? 1 : 0;
@@ -89,38 +89,38 @@ class rn extends ag {
         }
     }
 
-    final void a(byte param0, int param1, int param2, int param3) {
-        ac var5 = null;
+    final void drawLayer(byte param0, int param1, int param2, int param3) {
+        WidgetTextLayout var5 = null;
         long var6 = 0L;
         if (param0 > -52) {
           return;
         }
         if (this.field_r != null &&
           param2 == 0) {
-          this.field_r.a((qm) (this), 5592405, param1, param3, this.field_B);
-          if (this.field_r instanceof ac) {
-            var5 = (ac) ((Object) this.field_r);
+          this.field_r.a((UiComponent) (this), 5592405, param1, param3, this.field_B);
+          if (this.field_r instanceof WidgetTextLayout) {
+            var5 = (WidgetTextLayout) ((Object) this.field_r);
             if (this.field_N != this.field_J) {
-              var5.a(param3, (qm) (this), param1, 6600, this.field_N, this.field_J);
+              var5.a(param3, (UiComponent) (this), param1, 6600, this.field_N, this.field_J);
             }
             var6 = qj.b(-26572);
             if ((-this.field_Q + var6) % 1000L < 500L) {
-              var5.a(79, param3, param1, this.field_N, (qm) (this));
+              var5.a(79, param3, param1, this.field_N, (UiComponent) (this));
             }
           }
         }
     }
 
-    void l(int param0) {
-        if (this.field_o instanceof bn) {
-          ((bn) (this.field_o)).a(this, -20626);
+    void notifyTextChanged(int param0) {
+        if (this.field_o instanceof TextInputListener) {
+          ((TextInputListener) (this.field_o)).onTextChanged(this, -20626);
         }
         if (param0 != -22706) {
-          this.c(false);
+          this.notifyTextSubmitted(false);
         }
     }
 
-    private final void j(int param0) {
+    private final void deleteSelection(int param0) {
         int var2 = 0;
         int var3 = 0;
         if (param0 != -10292) {
@@ -132,12 +132,12 @@ class rn extends ag {
           this.field_J = var2;
           this.field_N = var2;
           this.field_g = this.field_g.substring(0, var2) + this.field_g.substring(var3, this.field_g.length());
-          this.l(-22706);
+          this.notifyTextChanged(-22706);
         }
     }
 
-    void a(qm param0, int param1, int param2, int param3) {
-        ac var5 = null;
+    void updatePointer(UiComponent param0, int param1, int param2, int param3) {
+        WidgetTextLayout var5 = null;
         int var6 = 0;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
@@ -145,12 +145,12 @@ class rn extends ag {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5_ref = null;
         try {
-          super.a(param0, param1, param2, param3);
-          this.h((byte) -100);
+          super.updatePointer(param0, param1, param2, param3);
+          this.updateScrollOffset((byte) -100);
           if (this.field_t == 1) {
-            if (this.field_r instanceof ac) {
-              var5 = (ac) ((Object) this.field_r);
-              var6 = var5.b(param1, (qm) (this), me.field_I, an.field_g, param3, param2 ^ 2364);
+            if (this.field_r instanceof WidgetTextLayout) {
+              var5 = (WidgetTextLayout) ((Object) this.field_r);
+              var6 = var5.b(param1, (UiComponent) (this), me.field_I, an.field_g, param3, param2 ^ 2364);
               if (var6 != -1) {
                 if (this.field_R &&
                   var6 < this.field_O &&
@@ -177,22 +177,22 @@ class rn extends ag {
         }
     }
 
-    private final void a(int param0, int param1) {
+    private final void setCaret(int param0, int param1) {
         this.field_N = param1;
         if (!ri.field_b[param0]) {
           this.field_J = this.field_N;
         }
     }
 
-    final void g(int param0) {
+    final void clearText(int param0) {
         int discarded$0 = 0;
         this.field_N = 0;
         if (param0 != 3545) {
-          discarded$0 = this.f(39);
+          discarded$0 = this.previousWordBoundary(39);
         }
         this.field_g = "";
         this.field_J = 0;
-        this.l(-22706);
+        this.notifyTextChanged(-22706);
     }
 
     final static void i(byte param0) {
@@ -208,7 +208,7 @@ class rn extends ag {
           DirectByteStorage.field_f = null;
           if (param0 >= -97) {
             var3 = (CipherPacketBuffer) null;
-            rn.a(true, (CipherPacketBuffer) null);
+            EditableTextWidget.a(true, (CipherPacketBuffer) null);
           }
           if (null != gm.field_j) {
             gm.field_j.clear(-124);
@@ -242,15 +242,15 @@ class rn extends ag {
         }
     }
 
-    private final void j(byte param0) {
-        this.g((byte) 56);
+    private final void cutSelection(byte param0) {
+        this.copySelection((byte) 56);
         if (param0 < 107) {
           return;
         }
-        this.j(-10292);
+        this.deleteSelection(-10292);
     }
 
-    private final void h(int param0) {
+    private final void pasteClipboard(int param0) {
         try {
           Throwable decompiledCaughtException = null;
           String var2 = null;
@@ -260,8 +260,8 @@ class rn extends ag {
             if (param0 != -9711) {
               return;
             }
-            this.j(-10292);
-            this.a(var2, (byte) -34);
+            this.deleteSelection(-10292);
+            this.insertText(var2, (byte) -34);
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var2_ref = (Exception) (Object) decompiledCaughtException;
@@ -273,7 +273,7 @@ class rn extends ag {
         }
     }
 
-    rn(String param0, wc param1, int param2) {
+    EditableTextWidget(String param0, UiListener param1, int param2) {
         super(param0, param1);
         this.field_R = false;
         this.field_O = -1;
@@ -281,7 +281,7 @@ class rn extends ag {
         try {
           this.field_r = MusicCrossfadeStream.field_n.field_l;
           this.field_H = param2;
-          this.a(true, param0, false);
+          this.setText(true, param0, false);
           this.field_M = true;
           this.field_Q = qj.b(-26572);
         } catch (RuntimeException runtimeException) {
@@ -289,16 +289,16 @@ class rn extends ag {
         }
     }
 
-    public static void n(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 1) {
-          rn.m(-26);
+          EditableTextWidget.m(-26);
         }
         field_L = null;
         field_K = null;
         field_S = null;
     }
 
-    final boolean a(qm param0, byte param1, char param2, int param3) {
+    final boolean handleKeyInput(UiComponent param0, byte param1, char param2, int param3) {
         int dupTemp$0 = 0;
         int stackIn_45_1 = 0;
         int stackIn_46_2 = 0;
@@ -319,7 +319,7 @@ class rn extends ag {
             if (param2 >= 32 &&
               param2 <= 126) {
               if (this.field_N != this.field_J) {
-                this.j(-10292);
+                this.deleteSelection(-10292);
               }
               if (-1 == this.field_H ||
                 !(this.field_g.length() >= this.field_H)) {
@@ -333,25 +333,25 @@ class rn extends ag {
                   this.field_N = this.field_N + 1;
                   this.field_J = this.field_N;
                 }
-                this.l(-22706);
+                this.notifyTextChanged(-22706);
               }
               return true;
             }
             if (param3 == 85) {
               if (this.field_N != this.field_J) {
-                this.j(-10292);
+                this.deleteSelection(-10292);
                 return true;
               }
               if (this.field_N <= 0) {
                 return false;
               }
               this.field_J = -1 + this.field_N;
-              this.j(-10292);
+              this.deleteSelection(-10292);
               return true;
             }
             if (param3 != 101) {
               if (param3 == 13) {
-                this.g(3545);
+                this.clearText(3545);
                 return true;
               }
               if (param3 != 96) {
@@ -361,37 +361,37 @@ class rn extends ag {
                     if (!ri.field_b[82]) {
                       stackIn_74_2 = 1 + this.field_N;
                     } else {
-                      stackIn_74_2 = this.i(-9125);
+                      stackIn_74_2 = this.nextWordBoundary(-9125);
                     }
-                    this.a(stackIn_73_1, stackIn_74_2);
+                    this.setCaret(stackIn_73_1, stackIn_74_2);
                     return true;
                   }
                 } else {
                   if (param3 == 102) {
-                    this.a(81, 0);
+                    this.setCaret(81, 0);
                     return true;
                   }
                   if (param3 == 103) {
-                    this.a(81, this.field_g.length());
+                    this.setCaret(81, this.field_g.length());
                     return true;
                   }
                   if (param3 == 84) {
-                    this.c(false);
+                    this.notifyTextSubmitted(false);
                     return true;
                   }
                   if (ri.field_b[82] &&
                     param3 == 65) {
-                    this.j((byte) 122);
+                    this.cutSelection((byte) 122);
                     return true;
                   }
                   if (ri.field_b[82] &&
                     66 == param3) {
-                    this.g((byte) 56);
+                    this.copySelection((byte) 56);
                     return true;
                   }
                   if (ri.field_b[82] &&
                     67 == param3) {
-                    this.h(-9711);
+                    this.pasteClipboard(-9711);
                     return true;
                   }
                 }
@@ -399,22 +399,22 @@ class rn extends ag {
                 if (this.field_N > 0) {
                   stackIn_45_1 = 81;
                   if (ri.field_b[82]) {
-                    stackIn_46_2 = this.f(1000);
+                    stackIn_46_2 = this.previousWordBoundary(1000);
                   } else {
                     stackIn_46_2 = this.field_N - 1;
                   }
-                  this.a(stackIn_45_1, stackIn_46_2);
+                  this.setCaret(stackIn_45_1, stackIn_46_2);
                   return true;
                 }
               }
             } else {
               if (this.field_J != this.field_N) {
-                this.j(-10292);
+                this.deleteSelection(-10292);
                 return true;
               }
               if (this.field_N < this.field_g.length()) {
                 this.field_J = 1 + this.field_N;
-                this.j(-10292);
+                this.deleteSelection(-10292);
                 return true;
               }
             }
@@ -435,27 +435,27 @@ class rn extends ag {
         }
     }
 
-    private final void h(byte param0) {
+    private final void updateScrollOffset(byte param0) {
         kh var3;
         int var4;
         int var5;
         int var6;
         int var7;
         int var8;
-        ac var9;
+        WidgetTextLayout var9;
         var8 = ArcanistsMulti.field_G ? 1 : 0;
         if (!this.field_M) {
           this.field_i = 0;
           this.field_h = 0;
           return;
         }
-        if (!(this.field_r instanceof ac)) {
+        if (!(this.field_r instanceof WidgetTextLayout)) {
           return;
         }
-        var9 = (ac) ((Object) this.field_r);
-        var3 = var9.a((qm) (this), -46);
+        var9 = (WidgetTextLayout) ((Object) this.field_r);
+        var3 = var9.a((UiComponent) (this), -46);
         var4 = var3.b((byte) 121);
-        var5 = var9.a((qm) (this), (byte) 101);
+        var5 = var9.a((UiComponent) (this), (byte) 101);
         if (param0 > -38) {
           return;
         }
@@ -482,13 +482,13 @@ class rn extends ag {
         }
     }
 
-    private final int i(int param0) {
+    private final int nextWordBoundary(int param0) {
         int var2;
         int var3;
         int var4;
         var4 = ArcanistsMulti.field_G ? 1 : 0;
         if (param0 != -9125) {
-          this.h(99);
+          this.pasteClipboard(99);
         }
         var2 = this.field_g.length();
         if (var2 == this.field_N) {
@@ -503,16 +503,16 @@ class rn extends ag {
         return var3;
     }
 
-    private final void c(boolean param0) {
-        if (this.field_o instanceof bn) {
-          ((bn) (this.field_o)).b(this, 117);
+    private final void notifyTextSubmitted(boolean param0) {
+        if (this.field_o instanceof TextInputListener) {
+          ((TextInputListener) (this.field_o)).onTextSubmitted(this, 117);
         }
         if (param0) {
-          this.a((byte) -7, 102, 2, -128);
+          this.drawLayer((byte) -7, 102, 2, -128);
         }
     }
 
-    final void a(boolean param0, String param1, boolean param2) {
+    final void setText(boolean param0, String param1, boolean param2) {
         int dupTemp$1 = 0;
         int var4_int = 0;
         RuntimeException stackIn_14_0 = null;
@@ -534,10 +534,10 @@ class rn extends ag {
           this.field_J = dupTemp$1;
           this.field_N = dupTemp$1;
           if (!param0) {
-            this.l(-22706);
+            this.notifyTextChanged(-22706);
           }
           if (param2) {
-            this.a(-16, 109);
+            this.setCaret(-16, 109);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -554,7 +554,7 @@ class rn extends ag {
         }
     }
 
-    private final void a(String param0, byte param1) {
+    private final void insertText(String param0, byte param1) {
         int var3_int = 0;
         if (this.field_H != -1) {
           var3_int = this.field_H - this.field_g.length();
@@ -574,7 +574,7 @@ class rn extends ag {
           return;
         }
         try {
-          this.l(-22706);
+          this.notifyTextChanged(-22706);
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "rn.MA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -664,18 +664,18 @@ class rn extends ag {
         }
     }
 
-    private final void g(byte param0) {
+    private final void copySelection(byte param0) {
         if (param0 != 56) {
-          qm var3 = (qm) null;
-          this.a(84, 58, (qm) null, 100, 126, 7, -93);
+          UiComponent var3 = (UiComponent) null;
+          this.handlePointerPress(84, 58, (UiComponent) null, 100, 126, 7, -93);
         }
-        String var2 = this.k(param0 - 23972);
+        String var2 = this.getSelectedText(param0 - 23972);
         if (var2.length() > 0) {
-          java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().setContents((java.awt.datatransfer.Transferable) ((Object) new java.awt.datatransfer.StringSelection(this.k(-23916))), (java.awt.datatransfer.ClipboardOwner) null);
+          java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().setContents((java.awt.datatransfer.Transferable) ((Object) new java.awt.datatransfer.StringSelection(this.getSelectedText(-23916))), (java.awt.datatransfer.ClipboardOwner) null);
         }
     }
 
-    private final String k(int param0) {
+    private final String getSelectedText(int param0) {
         int var2 = this.field_J >= this.field_N ? this.field_N : this.field_J;
         if (param0 != -23916) {
           return (String) null;
@@ -684,7 +684,7 @@ class rn extends ag {
         return this.field_g.substring(var2, var3);
     }
 
-    final boolean a(int param0, int param1, qm param2, int param3, int param4, int param5, int param6) {
+    final boolean handlePointerPress(int param0, int param1, UiComponent param2, int param3, int param4, int param5, int param6) {
         int stackIn_5_1 = 0;
         int stackIn_6_2 = 0;
         boolean stackIn_9_1 = false;
@@ -698,26 +698,26 @@ class rn extends ag {
         long var9 = 0L;
         try {
           var8_int = 49 % ((param4 + 42) / 35);
-          if (!super.a(param0, param1, param2, param3, -78, param5, param6)) {
+          if (!super.handlePointerPress(param0, param1, param2, param3, -78, param5, param6)) {
             return false;
           }
-          if (!(this.field_r instanceof ac)) {
+          if (!(this.field_r instanceof WidgetTextLayout)) {
             return false;
           }
-          var9_int = ((ac) ((Object) this.field_r)).b(param6, (qm) (this), me.field_I, an.field_g, param3, 2454);
+          var9_int = ((WidgetTextLayout) ((Object) this.field_r)).b(param6, (UiComponent) (this), me.field_I, an.field_g, param3, 2454);
           stackIn_5_1 = 81;
           if (var9_int != -1) {
             stackIn_6_2 = var9_int;
           } else {
             stackIn_6_2 = 0;
           }
-          this.a(stackIn_5_1, stackIn_6_2);
+          this.setCaret(stackIn_5_1, stackIn_6_2);
           var9 = qj.b(-26572);
           stackIn_9_1 = !(-this.field_P + var9 >= 250L);
           this.field_R = stackIn_9_1;
           if (this.field_R) {
-            this.field_J = this.f(1000);
-            this.field_N = this.i(-9125);
+            this.field_J = this.previousWordBoundary(1000);
+            this.field_N = this.nextWordBoundary(-9125);
             if (this.field_N > 0 &&
               32 == this.field_g.charAt(-1 + this.field_N)) {
               this.field_N = this.field_N - 1;

@@ -14,7 +14,7 @@ final class r {
           ResourceArchive var2 = (ResourceArchive) null;
           r.a(51, -102, 48, (ResourceArchive) null);
         }
-        oc.a(112, nn.field_p, ArchiveProvider.field_a[0].field_n, dh.field_Gb, ImageProducerRasterBuffer.field_r, ra.field_h);
+        IntrusiveDequeCursor.a(112, nn.field_p, ArchiveProvider.field_a[0].field_n, dh.field_Gb, ImageProducerRasterBuffer.field_r, ra.field_h);
     }
 
     final static Sprite a(int param0, int param1, int param2, ResourceArchive param3) {
@@ -49,7 +49,7 @@ final class r {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_c = null;
         field_a = null;
         field_b = null;
@@ -71,7 +71,7 @@ final class r {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 256) {
-            r.a(121);
+            r.releaseStatics(121);
           }
           if (sk.field_a == hb.field_Gb) {
             return null;

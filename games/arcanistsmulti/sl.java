@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sl extends kl {
+final class sl extends ArrayWidgetContainer {
     static String field_R;
     static kc field_S;
     static int[] field_H;
@@ -38,15 +38,15 @@ final class sl extends kl {
         try {
           this.field_U = param0 ? true : false;
           this.field_O = param2;
-          this.field_z[param1] = (qm) ((Object) param2);
+          this.field_z[param1] = (UiComponent) ((Object) param2);
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "sl.H(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void a(qm param0, int param1, int param2, int param3) {
+    final void updatePointer(UiComponent param0, int param1, int param2, int param3) {
         try {
-          super.a(param0, param1, param2, param3);
+          super.updatePointer(param0, param1, param2, param3);
           this.h(1);
           this.f(-2023111216);
         } catch (RuntimeException runtimeException) {
@@ -54,19 +54,19 @@ final class sl extends kl {
         }
     }
 
-    final boolean a(qm param0, byte param1, char param2, int param3) {
+    final boolean handleKeyInput(UiComponent param0, byte param1, char param2, int param3) {
         RuntimeException var5 = null;
-        qm var6 = null;
+        UiComponent var6 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 >= -120) {
-            var6 = (qm) null;
-            this.a((qm) null, -13, 8, -25);
+            var6 = (UiComponent) null;
+            this.updatePointer((UiComponent) null, -13, 8, -25);
           }
-          if (!super.a(param0, (byte) -122, param2, param3)) {
+          if (!super.handleKeyInput(param0, (byte) -122, param2, param3)) {
             return false;
           }
           this.f(-2023111216);
@@ -85,7 +85,7 @@ final class sl extends kl {
         }
     }
 
-    final boolean a(int param0, int param1, int param2, int param3, int param4, int param5, qm param6) {
+    final boolean handleMouseWheel(int param0, int param1, int param2, int param3, int param4, int param5, UiComponent param6) {
         RuntimeException var8 = null;
         boolean stackIn_8_0 = false;
         RuntimeException stackIn_11_0 = null;
@@ -93,10 +93,10 @@ final class sl extends kl {
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (super.a(param0, param1, param2, param3, param4, param5 + param5, param6)) {
+          if (super.handleMouseWheel(param0, param1, param2, param3, param4, param5 + param5, param6)) {
             return true;
           }
-          stackIn_8_0 = (this.d(param5 - 2116)) && (this.a(true, param4));
+          stackIn_8_0 = (this.isFocused(param5 - 2116)) && (this.a(true, param4));
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -113,24 +113,24 @@ final class sl extends kl {
     }
 
     private final void f(int param0) {
-        qm var3 = null;
-        qm var3Lifetime1;
-        qm var3Lifetime2;
-        qm var3Lifetime3;
+        UiComponent var3 = null;
+        UiComponent var3Lifetime1;
+        UiComponent var3Lifetime2;
+        UiComponent var3Lifetime3;
         if (null != this.field_O) {
           this.field_P.field_B.field_j = -(int)((long)this.field_O.field_L * (long)(-this.field_P.field_k + this.field_P.field_B.field_k) >> 16);
           if (null == this.field_Q) {
             if (param0 == -2023111216) {
               return;
             }
-            var3 = (qm) null;
-            this.a(0, -108, -7, 118, 43, -16, (qm) null);
+            var3 = (UiComponent) null;
+            this.handleMouseWheel(0, -108, -7, 118, 43, -16, (UiComponent) null);
             return;
           }
           this.field_P.field_B.field_n = -(int)((long)this.field_Q.field_Z * (long)(this.field_P.field_B.field_v - this.field_P.field_v) >> 16);
           if (param0 != -2023111216) {
-            var3Lifetime3 = (qm) null;
-            this.a(0, -108, -7, 118, 43, -16, (qm) null);
+            var3Lifetime3 = (UiComponent) null;
+            this.handleMouseWheel(0, -108, -7, 118, 43, -16, (UiComponent) null);
             return;
           }
           return;
@@ -140,15 +140,15 @@ final class sl extends kl {
           if (param0 == -2023111216) {
             return;
           }
-          var3Lifetime1 = (qm) null;
-          this.a(0, -108, -7, 118, 43, -16, (qm) null);
+          var3Lifetime1 = (UiComponent) null;
+          this.handleMouseWheel(0, -108, -7, 118, 43, -16, (UiComponent) null);
           return;
         }
         if (param0 == -2023111216) {
           return;
         }
-        var3Lifetime2 = (qm) null;
-        this.a(0, -108, -7, 118, 43, -16, (qm) null);
+        var3Lifetime2 = (UiComponent) null;
+        this.handleMouseWheel(0, -108, -7, 118, 43, -16, (UiComponent) null);
     }
 
     private final void h(int param0) {
@@ -185,21 +185,21 @@ final class sl extends kl {
         }
     }
 
-    sl(int param0, int param1, int param2, int param3, pf param4, qm param5, pf param6) {
+    sl(int param0, int param1, int param2, int param3, WidgetPainter param4, UiComponent param5, WidgetPainter param6) {
         super(param0, param1, param2, param3, param4);
         wm dupTemp$0 = null;
         try {
-          this.field_z = new qm[3];
+          this.field_z = new UiComponent[3];
           dupTemp$0 = new wm(param0, param1, param2, param3, param6, param5);
           this.field_P = dupTemp$0;
-          this.field_z[2] = (qm) ((Object) dupTemp$0);
-          this.e(123);
+          this.field_z[2] = (UiComponent) ((Object) dupTemp$0);
+          this.layoutChildren(123);
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "sl.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void e(int param0) {
+    final void layoutChildren(int param0) {
         int stackIn_6_0 = 0;
         int stackIn_9_0 = 0;
         ma stackIn_13_0;
@@ -301,7 +301,7 @@ final class sl extends kl {
                 stackIn_9_0 = this.field_k;
               }
               var5 = stackIn_9_0;
-              this.field_P.a(var5, var3, var4, var2, -101);
+              this.field_P.setBounds(var5, var3, var4, var2, -101);
               if (null != this.field_O) {
                 stackIn_13_0 = this.field_O;
                 stackIn_13_1 = this.field_P.field_k;
@@ -312,7 +312,7 @@ final class sl extends kl {
                 } else {
                   stackIn_14_4 = -this.field_O.field_v + this.field_v;
                 }
-                ((ma) (Object) stackIn_13_0).a(stackIn_13_1, stackIn_13_2, stackIn_13_3, stackIn_14_4, -87);
+                ((ma) (Object) stackIn_13_0).setBounds(stackIn_13_1, stackIn_13_2, stackIn_13_3, stackIn_14_4, -87);
               }
               if (param0 < 17) {
                 this.field_Q = (ma) null;
@@ -325,7 +325,7 @@ final class sl extends kl {
                 } else {
                   stackIn_21_2 = 0;
                 }
-                ((ma) (Object) stackIn_20_0).a(stackIn_20_1, stackIn_21_2, this.field_P.field_v, this.field_P.field_n, -107);
+                ((ma) (Object) stackIn_20_0).setBounds(stackIn_20_1, stackIn_21_2, this.field_P.field_v, this.field_P.field_n, -107);
               }
               this.h(1);
               return;
@@ -345,7 +345,7 @@ final class sl extends kl {
             stackIn_31_0 = this.field_k;
           }
           var5 = stackIn_31_0;
-          this.field_P.a(var5, var3, var4, var2, -101);
+          this.field_P.setBounds(var5, var3, var4, var2, -101);
           if (null != this.field_O) {
             stackIn_35_0 = this.field_O;
             stackIn_35_1 = this.field_P.field_k;
@@ -356,7 +356,7 @@ final class sl extends kl {
             } else {
               stackIn_36_4 = -this.field_O.field_v + this.field_v;
             }
-            ((ma) (Object) stackIn_35_0).a(stackIn_35_1, stackIn_35_2, stackIn_35_3, stackIn_36_4, -87);
+            ((ma) (Object) stackIn_35_0).setBounds(stackIn_35_1, stackIn_35_2, stackIn_35_3, stackIn_36_4, -87);
           }
           if (param0 >= 17) {
             if (null != this.field_Q) {
@@ -367,7 +367,7 @@ final class sl extends kl {
               } else {
                 stackIn_42_2 = 0;
               }
-              ((ma) (Object) stackIn_41_0).a(stackIn_41_1, stackIn_42_2, this.field_P.field_v, this.field_P.field_n, -107);
+              ((ma) (Object) stackIn_41_0).setBounds(stackIn_41_1, stackIn_42_2, this.field_P.field_v, this.field_P.field_n, -107);
             }
           } else {
             this.field_Q = (ma) null;
@@ -379,7 +379,7 @@ final class sl extends kl {
               } else {
                 stackIn_48_2 = 0;
               }
-              ((ma) (Object) stackIn_47_0).a(stackIn_47_1, stackIn_48_2, this.field_P.field_v, this.field_P.field_n, -107);
+              ((ma) (Object) stackIn_47_0).setBounds(stackIn_47_1, stackIn_48_2, this.field_P.field_v, this.field_P.field_n, -107);
             }
           }
         } else {
@@ -402,7 +402,7 @@ final class sl extends kl {
                   stackIn_116_0 = this.field_k;
                 }
                 var5 = stackIn_116_0;
-                this.field_P.a(var5, var3, var4, var2, -101);
+                this.field_P.setBounds(var5, var3, var4, var2, -101);
                 if (null != this.field_O) {
                   stackIn_120_0 = this.field_O;
                   stackIn_120_1 = this.field_P.field_k;
@@ -413,7 +413,7 @@ final class sl extends kl {
                   } else {
                     stackIn_121_4 = -this.field_O.field_v + this.field_v;
                   }
-                  ((ma) (Object) stackIn_120_0).a(stackIn_120_1, stackIn_120_2, stackIn_120_3, stackIn_121_4, -87);
+                  ((ma) (Object) stackIn_120_0).setBounds(stackIn_120_1, stackIn_120_2, stackIn_120_3, stackIn_121_4, -87);
                 }
                 if (param0 >= 17) {
                   if (null != this.field_Q) {
@@ -424,7 +424,7 @@ final class sl extends kl {
                     } else {
                       stackIn_127_2 = 0;
                     }
-                    ((ma) (Object) stackIn_126_0).a(stackIn_126_1, stackIn_127_2, this.field_P.field_v, this.field_P.field_n, -107);
+                    ((ma) (Object) stackIn_126_0).setBounds(stackIn_126_1, stackIn_127_2, this.field_P.field_v, this.field_P.field_n, -107);
                   }
                 } else {
                   this.field_Q = (ma) null;
@@ -436,7 +436,7 @@ final class sl extends kl {
                     } else {
                       stackIn_133_2 = 0;
                     }
-                    ((ma) (Object) stackIn_132_0).a(stackIn_132_1, stackIn_133_2, this.field_P.field_v, this.field_P.field_n, -107);
+                    ((ma) (Object) stackIn_132_0).setBounds(stackIn_132_1, stackIn_133_2, this.field_P.field_v, this.field_P.field_n, -107);
                   }
                 }
                 this.h(1);
@@ -457,7 +457,7 @@ final class sl extends kl {
               stackIn_144_0 = this.field_k;
             }
             var5 = stackIn_144_0;
-            this.field_P.a(var5, var3, var4, var2, -101);
+            this.field_P.setBounds(var5, var3, var4, var2, -101);
             if (null != this.field_O) {
               stackIn_148_0 = this.field_O;
               stackIn_148_1 = this.field_P.field_k;
@@ -468,7 +468,7 @@ final class sl extends kl {
               } else {
                 stackIn_149_4 = -this.field_O.field_v + this.field_v;
               }
-              ((ma) (Object) stackIn_148_0).a(stackIn_148_1, stackIn_148_2, stackIn_148_3, stackIn_149_4, -87);
+              ((ma) (Object) stackIn_148_0).setBounds(stackIn_148_1, stackIn_148_2, stackIn_148_3, stackIn_149_4, -87);
             }
             if (param0 >= 17) {
               if (null != this.field_Q) {
@@ -479,7 +479,7 @@ final class sl extends kl {
                 } else {
                   stackIn_155_2 = 0;
                 }
-                ((ma) (Object) stackIn_154_0).a(stackIn_154_1, stackIn_155_2, this.field_P.field_v, this.field_P.field_n, -107);
+                ((ma) (Object) stackIn_154_0).setBounds(stackIn_154_1, stackIn_155_2, this.field_P.field_v, this.field_P.field_n, -107);
               }
             } else {
               this.field_Q = (ma) null;
@@ -491,7 +491,7 @@ final class sl extends kl {
                 } else {
                   stackIn_161_2 = 0;
                 }
-                ((ma) (Object) stackIn_160_0).a(stackIn_160_1, stackIn_161_2, this.field_P.field_v, this.field_P.field_n, -107);
+                ((ma) (Object) stackIn_160_0).setBounds(stackIn_160_1, stackIn_161_2, this.field_P.field_v, this.field_P.field_n, -107);
               }
             }
             this.h(1);
@@ -515,7 +515,7 @@ final class sl extends kl {
                 stackIn_60_0 = this.field_k;
               }
               var5 = stackIn_60_0;
-              this.field_P.a(var5, var3, var4, var2, -101);
+              this.field_P.setBounds(var5, var3, var4, var2, -101);
               if (null != this.field_O) {
                 stackIn_64_0 = this.field_O;
                 stackIn_64_1 = this.field_P.field_k;
@@ -526,7 +526,7 @@ final class sl extends kl {
                 } else {
                   stackIn_65_4 = -this.field_O.field_v + this.field_v;
                 }
-                ((ma) (Object) stackIn_64_0).a(stackIn_64_1, stackIn_64_2, stackIn_64_3, stackIn_65_4, -87);
+                ((ma) (Object) stackIn_64_0).setBounds(stackIn_64_1, stackIn_64_2, stackIn_64_3, stackIn_65_4, -87);
               }
               if (param0 >= 17) {
                 if (null != this.field_Q) {
@@ -537,7 +537,7 @@ final class sl extends kl {
                   } else {
                     stackIn_71_2 = 0;
                   }
-                  ((ma) (Object) stackIn_70_0).a(stackIn_70_1, stackIn_71_2, this.field_P.field_v, this.field_P.field_n, -107);
+                  ((ma) (Object) stackIn_70_0).setBounds(stackIn_70_1, stackIn_71_2, this.field_P.field_v, this.field_P.field_n, -107);
                 }
               } else {
                 this.field_Q = (ma) null;
@@ -549,7 +549,7 @@ final class sl extends kl {
                   } else {
                     stackIn_77_2 = 0;
                   }
-                  ((ma) (Object) stackIn_76_0).a(stackIn_76_1, stackIn_77_2, this.field_P.field_v, this.field_P.field_n, -107);
+                  ((ma) (Object) stackIn_76_0).setBounds(stackIn_76_1, stackIn_77_2, this.field_P.field_v, this.field_P.field_n, -107);
                 }
               }
               this.h(1);
@@ -570,7 +570,7 @@ final class sl extends kl {
             stackIn_88_0 = this.field_k;
           }
           var5 = stackIn_88_0;
-          this.field_P.a(var5, var3, var4, var2, -101);
+          this.field_P.setBounds(var5, var3, var4, var2, -101);
           if (null != this.field_O) {
             stackIn_92_0 = this.field_O;
             stackIn_92_1 = this.field_P.field_k;
@@ -581,7 +581,7 @@ final class sl extends kl {
             } else {
               stackIn_93_4 = -this.field_O.field_v + this.field_v;
             }
-            ((ma) (Object) stackIn_92_0).a(stackIn_92_1, stackIn_92_2, stackIn_92_3, stackIn_93_4, -87);
+            ((ma) (Object) stackIn_92_0).setBounds(stackIn_92_1, stackIn_92_2, stackIn_92_3, stackIn_93_4, -87);
           }
           if (param0 >= 17) {
             if (null != this.field_Q) {
@@ -592,7 +592,7 @@ final class sl extends kl {
               } else {
                 stackIn_99_2 = 0;
               }
-              ((ma) (Object) stackIn_98_0).a(stackIn_98_1, stackIn_99_2, this.field_P.field_v, this.field_P.field_n, -107);
+              ((ma) (Object) stackIn_98_0).setBounds(stackIn_98_1, stackIn_99_2, this.field_P.field_v, this.field_P.field_n, -107);
             }
           } else {
             this.field_Q = (ma) null;
@@ -604,7 +604,7 @@ final class sl extends kl {
               } else {
                 stackIn_105_2 = 0;
               }
-              ((ma) (Object) stackIn_104_0).a(stackIn_104_1, stackIn_105_2, this.field_P.field_v, this.field_P.field_n, -107);
+              ((ma) (Object) stackIn_104_0).setBounds(stackIn_104_1, stackIn_105_2, this.field_P.field_v, this.field_P.field_n, -107);
             }
           }
         }

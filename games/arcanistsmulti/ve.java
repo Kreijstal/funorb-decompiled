@@ -106,7 +106,7 @@ abstract class ve extends DualLinkNode {
           ImageProducerRasterBuffer.field_r = 15;
           dh.field_Gb = 4;
           mm.field_p = 2;
-          oc.field_i = 11;
+          IntrusiveDequeCursor.field_i = 11;
           ra.field_h = 2;
           var7 = rc.a(param4, -24755, "lobby", "largefont", param1);
           ea.field_w = rc.a(param4, param0 - 24755, "lobby", "generalfont", param1);
@@ -149,9 +149,9 @@ abstract class ve extends DualLinkNode {
           vf.field_u = new kc(0L, var10);
           vf.field_u.field_t = 2;
           vf.field_u.field_v = rb.a(true, false, 652, 2039583, 3815994, 30);
-          rn.field_S = new kc(0L, var10);
-          rn.field_S.field_t = 2;
-          rn.field_S.field_v = rb.a(false, false, param0 ^ 652, 2039583, 3815994, 30);
+          EditableTextWidget.field_S = new kc(0L, var10);
+          EditableTextWidget.field_S.field_t = 2;
+          EditableTextWidget.field_S.field_v = rb.a(false, false, param0 ^ 652, 2039583, 3815994, 30);
           vf.field_i = new kc((long)param0, var10);
           vf.field_i.field_t = 2;
           vf.field_i.field_v = rb.a(false, true, 652, 2039583, 3815994, 30);
@@ -182,17 +182,17 @@ abstract class ve extends DualLinkNode {
           qa.field_j.a(nj.field_d, (byte) 119);
           var16 = qe.a(param1, "button_mouseover", "lobby", param0 + 91);
           ml.field_H = new pe(ck.field_a, var12, IntrusiveNode.field_c, nj.field_d, 3, 2, mm.field_p, 3, ImageProducerRasterBuffer.field_r);
-          rn.field_L = new kc(0L, nj.field_d);
-          rn.field_L.field_Y = 1;
-          rn.field_L.field_wb = 1;
-          rn.field_L.field_v = var13;
-          rn.field_L.field_S = 1;
-          rn.field_L.field_ib = 1;
-          rn.field_L.field_Ab = var16;
-          rn.field_L.field_xb = qe.a(param1, "button_mouseheld", "lobby", 89);
-          rn.field_L.field_hb = qe.a(param1, "button_active", "lobby", param0 + 62);
-          rn.field_L.field_K = qe.a(param1, "button_disabled", "lobby", 117);
-          rn.field_L.field_X = 1;
+          EditableTextWidget.field_L = new kc(0L, nj.field_d);
+          EditableTextWidget.field_L.field_Y = 1;
+          EditableTextWidget.field_L.field_wb = 1;
+          EditableTextWidget.field_L.field_v = var13;
+          EditableTextWidget.field_L.field_S = 1;
+          EditableTextWidget.field_L.field_ib = 1;
+          EditableTextWidget.field_L.field_Ab = var16;
+          EditableTextWidget.field_L.field_xb = qe.a(param1, "button_mouseheld", "lobby", 89);
+          EditableTextWidget.field_L.field_hb = qe.a(param1, "button_active", "lobby", param0 + 62);
+          EditableTextWidget.field_L.field_K = qe.a(param1, "button_disabled", "lobby", 117);
+          EditableTextWidget.field_L.field_X = 1;
           ub.field_c = new kc(0L, nj.field_d);
           ub.field_c.field_X = 1;
           ub.field_c.field_v = ic.a(qe.a(param1, "tab_inactive", "lobby", 52), (byte) -124);
@@ -327,7 +327,7 @@ abstract class ve extends DualLinkNode {
           ce.field_o = param7;
           qe.field_h = param3;
           if (param0 > -55) {
-            ve.d(116);
+            ve.releaseStatics(116);
           }
           jd.field_g = param8;
           jl.field_c = (lk) ((Object) new ef());
@@ -342,7 +342,7 @@ abstract class ve extends DualLinkNode {
 
     abstract byte[] c(int param0);
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         field_s = null;
         field_t = null;
         field_r = null;
@@ -364,7 +364,7 @@ abstract class ve extends DualLinkNode {
               fn.a(118, var4 != 0, db.field_a.f((byte) 51), db.field_a.field_Fb, var3, param0);
             }
             db.field_a = null;
-            oc.a(false);
+            IntrusiveDequeCursor.a(false);
           }
         }
         var3Lifetime1 = 66 / ((param2 + 32) / 62);

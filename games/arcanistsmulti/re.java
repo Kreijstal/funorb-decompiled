@@ -392,7 +392,7 @@ final class re extends kh {
         }
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_t = null;
         field_k = null;
         field_j = null;

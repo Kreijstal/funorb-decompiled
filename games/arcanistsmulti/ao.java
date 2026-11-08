@@ -60,7 +60,7 @@ final class ao {
           if (param1 > 68) {
             return;
           }
-          ao.b(-83);
+          ao.releaseStatics(-83);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -120,7 +120,7 @@ final class ao {
 
     final static void a(int param0) {
         if (param0 != 5623) {
-          ao.b(-55);
+          ao.releaseStatics(-55);
         }
     }
 
@@ -209,7 +209,7 @@ final class ao {
         }
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 == 0) {
           field_e = null;
           field_h = null;

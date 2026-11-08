@@ -16,7 +16,7 @@ final class oh extends IntrusiveNode {
     byte[][][] field_l;
     static kc field_h;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_k = null;
         field_q = null;
         if (param0 == -791) {

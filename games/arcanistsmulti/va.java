@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class va implements pf {
+final class va implements WidgetPainter {
     static String field_a;
     static ResourceArchive field_c;
     static String field_b;
     static String field_d;
     static String field_e;
 
-    public final void a(qm param0, int param1, int param2, int param3, boolean param4) {
+    public final void a(UiComponent param0, int param1, int param2, int param3, boolean param4) {
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         String stackIn_20_2 = null;
@@ -85,7 +85,7 @@ final class va implements pf {
           ua.field_S = Js5ArchiveManager.a(var7, param1 ^ -14);
           gg.field_e = param0;
           var6 = ff.a(param2, 49, gl.field_c, mj.field_z, CipherPacketBuffer.field_p);
-          ag.a(var6, (byte) -104);
+          TextButton.a(var6, (byte) -104);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -107,7 +107,7 @@ final class va implements pf {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_c = null;
         field_e = null;
         if (param0 < 110) {

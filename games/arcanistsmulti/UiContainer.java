@@ -3,20 +3,20 @@
  */
 import java.util.*;
 
-class df extends qm implements a {
+class UiContainer extends UiComponent implements UiContainerMarker {
     static String field_A;
     IntrusiveDeque field_B;
     static int field_y;
     static String field_x;
     static CipherPacketBuffer field_z;
 
-    final boolean b(int param0, qm param1) {
+    final boolean focusNextChild(int param0, UiComponent param1) {
         RuntimeException var3 = null;
-        qm var4 = null;
-        oc var5 = null;
-        qm var6 = null;
+        UiComponent var4 = null;
+        IntrusiveDequeCursor var5 = null;
+        UiComponent var6 = null;
         int var7 = 0;
-        oc var8 = null;
+        IntrusiveDequeCursor var8 = null;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         String stackIn_23_2 = null;
@@ -26,24 +26,24 @@ class df extends qm implements a {
           if (this.field_B.isEmpty(true)) {
             return false;
           }
-          var8 = new oc(this.field_B);
-          var4 = (qm) (var8.b(-73));
+          var8 = new IntrusiveDequeCursor(this.field_B);
+          var4 = (UiComponent) (var8.first(-73));
           if (param0 != 2) {
             this.field_B = (IntrusiveDeque) null;
           }
           while (var4 != null) {
-            if (var4.d(-2116)) {
-              var5 = new oc(this.field_B);
-              var5.a(false, var4);
-              var6 = (qm) (var5.d(-18502));
+            if (var4.isFocused(-2116)) {
+              var5 = new IntrusiveDequeCursor(this.field_B);
+              var5.startForwardFrom(false, var4);
+              var6 = (UiComponent) (var5.next(-18502));
               while (var6 != null) {
-                if (var6.a(0, param1)) {
+                if (var6.focusNext(0, param1)) {
                   return true;
                 }
-                var6 = (qm) (var5.d(param0 ^ -18504));
+                var6 = (UiComponent) (var5.next(param0 ^ -18504));
               }
             }
-            var4 = (qm) (var8.d(-18502));
+            var4 = (UiComponent) (var8.next(-18502));
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -60,12 +60,12 @@ class df extends qm implements a {
         }
     }
 
-    boolean a(qm param0, byte param1, char param2, int param3) {
+    boolean handleKeyInput(UiComponent param0, byte param1, char param2, int param3) {
         RuntimeException var5 = null;
         int var6 = 0;
         int var7 = 0;
-        qm var8 = null;
-        oc var9 = null;
+        UiComponent var8 = null;
+        IntrusiveDequeCursor var9 = null;
         boolean stackIn_14_0 = false;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
@@ -73,15 +73,15 @@ class df extends qm implements a {
         RuntimeException decompiledCaughtException = null;
         var7 = ArcanistsMulti.field_G ? 1 : 0;
         try {
-          var9 = new oc(this.field_B);
-          var8 = (qm) (var9.b(-127));
+          var9 = new IntrusiveDequeCursor(this.field_B);
+          var8 = (UiComponent) (var9.first(-127));
           while (var8 != null) {
             if (var8.isLinked((byte) -66)) {
-              if (var8.d(-2116) &&
-                var8.a(param0, (byte) -122, param2, param3)) {
+              if (var8.isFocused(-2116) &&
+                var8.handleKeyInput(param0, (byte) -122, param2, param3)) {
                 return true;
               }
-              var8 = (qm) (var9.d(-18502));
+              var8 = (UiComponent) (var9.next(-18502));
               continue;
             }
             break;
@@ -89,9 +89,9 @@ class df extends qm implements a {
           var6 = param3;
           if (var6 == 80) {
             if (ri.field_b[81]) {
-              stackIn_14_0 = this.a(param0, 9555);
+              stackIn_14_0 = this.focusPreviousChild(param0, 9555);
             } else {
-              stackIn_14_0 = this.b(2, param0);
+              stackIn_14_0 = this.focusNextChild(2, param0);
             }
             return stackIn_14_0;
           }
@@ -114,16 +114,16 @@ class df extends qm implements a {
         }
     }
 
-    void d(byte param0) {
+    void blur(byte param0) {
         int var4 = ArcanistsMulti.field_G ? 1 : 0;
-        oc var2 = new oc(this.field_B);
+        IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.field_B);
         if (param0 != 29) {
           return;
         }
-        qm var3 = (qm) (var2.b(-34));
+        UiComponent var3 = (UiComponent) (var2.first(-34));
         while (var3 != null) {
-          var3.d((byte) 29);
-          var3 = (qm) (var2.d(-18502));
+          var3.blur((byte) 29);
+          var3 = (UiComponent) (var2.next(-18502));
         }
     }
 
@@ -134,7 +134,7 @@ class df extends qm implements a {
         try {
           cb.field_a = true;
           if (param0 != 1) {
-            df.c(true);
+            UiContainer.c(true);
           }
           var2 = "tuhstatbut";
           var3 = "rvnadlm";
@@ -145,14 +145,14 @@ class df extends qm implements a {
         }
     }
 
-    private final void a(Hashtable param0, int param1, StringBuilder param2, boolean param3) {
+    private final void appendDebugChildren(Hashtable param0, int param1, StringBuilder param2, boolean param3) {
         StringBuilder discarded$3 = null;
         int var7 = 0;
         StringBuilder discarded$4 = null;
-        qm var6 = null;
+        UiComponent var6 = null;
         int var8 = 0;
-        qm var9 = null;
-        oc var10 = null;
+        UiComponent var9 = null;
+        IntrusiveDequeCursor var10 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -162,19 +162,19 @@ class df extends qm implements a {
         RuntimeException var5 = null;
         var8 = ArcanistsMulti.field_G ? 1 : 0;
         try {
-          var10 = new oc(this.field_B);
+          var10 = new IntrusiveDequeCursor(this.field_B);
           if (!param3) {
-            var9 = (qm) null;
-            this.a((qm) null, 121, -97, 14);
+            var9 = (UiComponent) null;
+            this.updatePointer((UiComponent) null, 121, -97, 14);
           }
-          var6 = (qm) (var10.b(-51));
+          var6 = (UiComponent) (var10.first(-51));
           while (var6 != null) {
             discarded$3 = param2.append('\n');
             for (var7 = 0; param1 >= var7; var7++) {
               discarded$4 = param2.append(' ');
             }
-            var6.a(param2, param1 + 1, param0, (byte) 113);
-            var6 = (qm) (var10.d(-18502));
+            var6.appendDebugTree(param2, param1 + 1, param0, (byte) 113);
+            var6 = (UiComponent) (var10.next(-18502));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -197,29 +197,29 @@ class df extends qm implements a {
         }
     }
 
-    qm e(int param0) {
-        oc var2;
-        qm var3;
+    UiComponent getFocusedChild(int param0) {
+        IntrusiveDequeCursor var2;
+        UiComponent var3;
         int var4;
         var4 = ArcanistsMulti.field_G ? 1 : 0;
         if (param0 != 852710177) {
           field_x = (String) null;
         }
-        var2 = new oc(this.field_B);
-        var3 = (qm) (var2.b(-70));
+        var2 = new IntrusiveDequeCursor(this.field_B);
+        var3 = (UiComponent) (var2.first(-70));
         while (var3 != null) {
-          if (var3.d(param0 - 852712293)) {
+          if (var3.isFocused(param0 - 852712293)) {
             return var3;
           }
-          var3 = (qm) (var2.d(-18502));
+          var3 = (UiComponent) (var2.next(-18502));
         }
         return null;
     }
 
-    boolean a(int param0, qm param1) {
-        oc var3 = null;
+    boolean focusNext(int param0, UiComponent param1) {
+        IntrusiveDequeCursor var3 = null;
         RuntimeException var3_ref = null;
-        qm var4 = null;
+        UiComponent var4 = null;
         int var5 = 0;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
@@ -227,13 +227,13 @@ class df extends qm implements a {
         RuntimeException decompiledCaughtException = null;
         var5 = ArcanistsMulti.field_G ? 1 : 0;
         try {
-          var3 = new oc(this.field_B);
-          var4 = (qm) (var3.b(-74));
+          var3 = new IntrusiveDequeCursor(this.field_B);
+          var4 = (UiComponent) (var3.first(-74));
           while (var4 != null) {
-            if (var4.a(0, param1)) {
+            if (var4.focusNext(0, param1)) {
               return true;
             }
-            var4 = (qm) (var3.d(param0 ^ -18502));
+            var4 = (UiComponent) (var3.next(param0 ^ -18502));
           }
           if (param0 == 0) {
             return false;
@@ -253,25 +253,25 @@ class df extends qm implements a {
         }
     }
 
-    df(int param0, int param1, int param2, int param3, pf param4) {
-        super(param0, param1, param2, param3, param4, (wc) null);
+    UiContainer(int param0, int param1, int param2, int param3, WidgetPainter param4) {
+        super(param0, param1, param2, param3, param4, (UiListener) null);
         this.field_B = new IntrusiveDeque();
     }
 
-    void a(byte param0, int param1, int param2, int param3) {
+    void drawLayer(byte param0, int param1, int param2, int param3) {
         int var7 = ArcanistsMulti.field_G ? 1 : 0;
         if (param0 > -52) {
           field_A = (String) null;
         }
         if (param2 == 0 &&
           null != this.field_r) {
-          this.field_r.a((qm) (this), 5592405, param1, param3, true);
+          this.field_r.a((UiComponent) (this), 5592405, param1, param3, true);
         }
-        oc var5 = new oc(this.field_B);
-        qm var6 = (qm) (var5.c(-116));
+        IntrusiveDequeCursor var5 = new IntrusiveDequeCursor(this.field_B);
+        UiComponent var6 = (UiComponent) (var5.last(-116));
         while (var6 != null) {
-          var6.a((byte) -64, this.field_n + param1, param2, param3 + this.field_j);
-          var6 = (qm) (var5.c(true));
+          var6.drawLayer((byte) -64, this.field_n + param1, param2, param3 + this.field_j);
+          var6 = (UiComponent) (var5.previous(true));
         }
     }
 
@@ -282,7 +282,7 @@ class df extends qm implements a {
         co.c(112);
     }
 
-    final void c(int param0, qm param1) {
+    final void addChild(int param0, UiComponent param1) {
         if (param0 >= -63) {
           return;
         }
@@ -293,12 +293,12 @@ class df extends qm implements a {
         }
     }
 
-    boolean a(int param0, int param1, qm param2, int param3, int param4, int param5, int param6) {
+    boolean handlePointerPress(int param0, int param1, UiComponent param2, int param3, int param4, int param5, int param6) {
         RuntimeException var8 = null;
         int var9 = 0;
-        qm var10 = null;
+        UiComponent var10 = null;
         int var11 = 0;
-        oc var12 = null;
+        IntrusiveDequeCursor var12 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
@@ -306,14 +306,14 @@ class df extends qm implements a {
         var11 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           var9 = 67 / ((-42 - param4) / 35);
-          var12 = new oc(this.field_B);
-          var10 = (qm) (var12.b(-46));
+          var12 = new IntrusiveDequeCursor(this.field_B);
+          var10 = (UiComponent) (var12.first(-46));
           while (var10 != null) {
             if (var10.isLinked((byte) -105)) {
-              if (var10.a(param0, param1, param2, param3 + this.field_j, 89, param5, this.field_n + param6)) {
+              if (var10.handlePointerPress(param0, param1, param2, param3 + this.field_j, 89, param5, this.field_n + param6)) {
                 return true;
               }
-              var10 = (qm) (var12.d(-18502));
+              var10 = (UiComponent) (var12.next(-18502));
               continue;
             }
             break;
@@ -333,12 +333,12 @@ class df extends qm implements a {
         }
     }
 
-    void a(int param0, int param1, int param2, int param3, int param4) {
-        super.a(param0, param1, param2, param3, -125);
-        this.f(-28475);
+    void setBounds(int param0, int param1, int param2, int param3, int param4) {
+        super.setBounds(param0, param1, param2, param3, -125);
+        this.refreshChildLayouts(-28475);
         if (param4 >= -49) {
           Hashtable var7 = (Hashtable) null;
-          this.a((StringBuilder) null, 92, (Hashtable) null, (byte) 58);
+          this.appendDebugTree((StringBuilder) null, 92, (Hashtable) null, (byte) 58);
         }
     }
 
@@ -512,51 +512,51 @@ class df extends qm implements a {
         }
     }
 
-    String b(boolean param0) {
-        oc var2;
-        qm var3;
+    String getTooltip(boolean param0) {
+        IntrusiveDequeCursor var2;
+        UiComponent var3;
         String var4;
         int var5;
         var5 = ArcanistsMulti.field_G ? 1 : 0;
         if (param0) {
           field_y = 66;
         }
-        var2 = new oc(this.field_B);
-        var3 = (qm) (var2.b(-53));
+        var2 = new IntrusiveDequeCursor(this.field_B);
+        var3 = (UiComponent) (var2.first(-53));
         while (var3 != null) {
-          var4 = var3.b(param0);
+          var4 = var3.getTooltip(param0);
           if (var4 != null) {
             return var4;
           }
-          var3 = (qm) (var2.d(-18502));
+          var3 = (UiComponent) (var2.next(-18502));
         }
         return null;
     }
 
-    private final void f(int param0) {
+    private final void refreshChildLayouts(int param0) {
         int var4 = ArcanistsMulti.field_G ? 1 : 0;
-        oc var2 = new oc(this.field_B);
-        qm var3 = (qm) (var2.b(-97));
+        IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.field_B);
+        UiComponent var3 = (UiComponent) (var2.first(-97));
         while (var3 != null) {
-          var3.e((byte) 112);
-          var3 = (qm) (var2.d(-18502));
+          var3.refreshLayout((byte) 112);
+          var3 = (UiComponent) (var2.next(-18502));
         }
         if (param0 != -28475) {
           field_x = (String) null;
         }
     }
 
-    boolean d(int param0) {
+    boolean isFocused(int param0) {
         if (param0 != -2116) {
           this.field_B = (IntrusiveDeque) null;
         }
-        return this.e(852710177) != null ? true : false;
+        return this.getFocusedChild(852710177) != null ? true : false;
     }
 
-    void a(qm param0, int param1, int param2, int param3) {
+    void updatePointer(UiComponent param0, int param1, int param2, int param3) {
         RuntimeException runtimeException = null;
-        oc var5 = null;
-        qm var6 = null;
+        IntrusiveDequeCursor var5 = null;
+        UiComponent var6 = null;
         int var7 = 0;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -564,13 +564,13 @@ class df extends qm implements a {
         RuntimeException decompiledCaughtException = null;
         var7 = ArcanistsMulti.field_G ? 1 : 0;
         try {
-          super.a(param0, param1, param2, param3);
-          var5 = new oc(this.field_B);
-          var6 = (qm) (var5.b(-83));
+          super.updatePointer(param0, param1, param2, param3);
+          var5 = new IntrusiveDequeCursor(this.field_B);
+          var6 = (UiComponent) (var5.first(-83));
           while (var6 != null) {
             if (var6.isLinked((byte) -121)) {
-              var6.a(param0, param1 + this.field_n, 170, param3 + this.field_j);
-              var6 = (qm) (var5.d(-18502));
+              var6.updatePointer(param0, param1 + this.field_n, 170, param3 + this.field_j);
+              var6 = (UiComponent) (var5.next(-18502));
               continue;
             }
             break;
@@ -590,23 +590,23 @@ class df extends qm implements a {
         }
     }
 
-    final int c(int param0) {
+    final int getTopLayer(int param0) {
         int var5 = 0;
         int var6 = ArcanistsMulti.field_G ? 1 : 0;
         int var2 = param0;
-        oc var3 = new oc(this.field_B);
-        qm var4 = (qm) (var3.b(param0 - 46));
+        IntrusiveDequeCursor var3 = new IntrusiveDequeCursor(this.field_B);
+        UiComponent var4 = (UiComponent) (var3.first(param0 - 46));
         while (var4 != null) {
-          var5 = var4.c(0);
+          var5 = var4.getTopLayer(0);
           if (var5 > var2) {
             var2 = var5;
           }
-          var4 = (qm) (var3.d(-18502));
+          var4 = (UiComponent) (var3.next(-18502));
         }
         return var2;
     }
 
-    final StringBuilder a(StringBuilder param0, int param1, Hashtable param2, byte param3) {
+    final StringBuilder appendDebugTree(StringBuilder param0, int param1, Hashtable param2, byte param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         StringBuilder stackIn_3_0 = null;
@@ -618,9 +618,9 @@ class df extends qm implements a {
         RuntimeException decompiledCaughtException = null;
         try {
           var5_int = -70 / ((param3 - 50) / 60);
-          if (this.a(param0, (byte) -90, param2, param1)) {
-            this.a(param0, param1, param2, 1);
-            this.a(param2, param1, param0, true);
+          if (this.beginDebugEntry(param0, (byte) -90, param2, param1)) {
+            this.appendDebugSummary(param0, param1, param2, 1);
+            this.appendDebugChildren(param2, param1, param0, true);
           }
           stackIn_3_0 = (StringBuilder) (param0);
           return stackIn_3_0;
@@ -644,9 +644,9 @@ class df extends qm implements a {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, qm param5) {
-        oc var7 = null;
-        qm var8 = null;
+    final void handlePointerRelease(int param0, int param1, int param2, int param3, int param4, UiComponent param5) {
+        IntrusiveDequeCursor var7 = null;
+        UiComponent var8 = null;
         int var9 = 0;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -655,18 +655,18 @@ class df extends qm implements a {
         RuntimeException var7_ref = null;
         var9 = ArcanistsMulti.field_G ? 1 : 0;
         try {
-          var7 = new oc(this.field_B);
-          var8 = (qm) (var7.b(-78));
+          var7 = new IntrusiveDequeCursor(this.field_B);
+          var8 = (UiComponent) (var7.first(-78));
           while (var8 != null) {
             if (var8.isLinked((byte) -99)) {
-              var8.a(param0, -20592, param2, this.field_j + param3, this.field_n + param4, param5);
-              var8 = (qm) (var7.d(-18502));
+              var8.handlePointerRelease(param0, -20592, param2, this.field_j + param3, this.field_n + param4, param5);
+              var8 = (UiComponent) (var7.next(-18502));
               continue;
             }
             break;
           }
           if (param1 != -20592) {
-            this.a(102, 115, 115, -112, 24);
+            this.setBounds(102, 115, 115, -112, 24);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -685,20 +685,20 @@ class df extends qm implements a {
 
     public static void c(boolean param0) {
         if (!param0) {
-          df.a((byte) -32, -73);
+          UiContainer.a((byte) -32, -73);
         }
         field_x = null;
         field_A = null;
         field_z = null;
     }
 
-    final boolean a(qm param0, int param1) {
+    final boolean focusPreviousChild(UiComponent param0, int param1) {
         RuntimeException var3 = null;
-        qm var4 = null;
-        oc var5 = null;
-        qm var6 = null;
+        UiComponent var4 = null;
+        IntrusiveDequeCursor var5 = null;
+        UiComponent var6 = null;
         int var7 = 0;
-        oc var8 = null;
+        IntrusiveDequeCursor var8 = null;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         String stackIn_24_2 = null;
@@ -711,21 +711,21 @@ class df extends qm implements a {
           if (param1 != 9555) {
             field_A = (String) null;
           }
-          var8 = new oc(this.field_B);
-          var4 = (qm) (var8.c(114));
+          var8 = new IntrusiveDequeCursor(this.field_B);
+          var4 = (UiComponent) (var8.last(114));
           while (var4 != null) {
-            if (var4.d(param1 - 11671)) {
-              var5 = new oc(this.field_B);
-              var5.a(402, var4);
-              var6 = (qm) (var5.c(true));
+            if (var4.isFocused(param1 - 11671)) {
+              var5 = new IntrusiveDequeCursor(this.field_B);
+              var5.startBackwardFrom(402, var4);
+              var6 = (UiComponent) (var5.previous(true));
               while (var6 != null) {
-                if (var6.a(param1 - 9555, param0)) {
+                if (var6.focusNext(param1 - 9555, param0)) {
                   return true;
                 }
-                var6 = (qm) (var5.c(true));
+                var6 = (UiComponent) (var5.previous(true));
               }
             }
-            var4 = (qm) (var8.c(true));
+            var4 = (UiComponent) (var8.previous(true));
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -742,10 +742,10 @@ class df extends qm implements a {
         }
     }
 
-    final boolean a(int param0, int param1, int param2, int param3, int param4, int param5, qm param6) {
-        oc var8 = null;
+    final boolean handleMouseWheel(int param0, int param1, int param2, int param3, int param4, int param5, UiComponent param6) {
+        IntrusiveDequeCursor var8 = null;
         RuntimeException var8_ref = null;
-        qm var9 = null;
+        UiComponent var9 = null;
         int var10 = 0;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
@@ -754,17 +754,17 @@ class df extends qm implements a {
         var10 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           if (param5 != 0) {
-            this.e(117);
+            this.getFocusedChild(117);
           }
-          var8 = new oc(this.field_B);
-          var9 = (qm) (var8.b(-113));
+          var8 = new IntrusiveDequeCursor(this.field_B);
+          var9 = (UiComponent) (var8.first(-113));
           while (var9 != null) {
             if (var9.isLinked((byte) -80)) {
-              if (var9.d(-2116) &&
-                var9.a(param0, param1, param2, param3, param4, 0, param6)) {
+              if (var9.isFocused(-2116) &&
+                var9.handleMouseWheel(param0, param1, param2, param3, param4, 0, param6)) {
                 return true;
               }
-              var9 = (qm) (var8.d(-18502));
+              var9 = (UiComponent) (var8.next(-18502));
               continue;
             }
             break;

@@ -181,7 +181,7 @@ final class tk extends DualLinkNode {
         String var6;
         CharSequence var7;
         if (param0 != 0) {
-          tk.c(-48);
+          tk.releaseStatics(-48);
         }
         if (tc.field_A != null) {
           var3 = tc.field_A.b(false, param1);
@@ -271,7 +271,7 @@ final class tk extends DualLinkNode {
         }
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         field_p = null;
         field_s = null;
         if (param0 != -1016755547) {

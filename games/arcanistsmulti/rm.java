@@ -291,7 +291,7 @@ final class rm {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_l = (String[][]) null;
         field_a = null;
         field_d = null;
@@ -338,7 +338,7 @@ final class rm {
         Throwable decompiledCaughtException = null;
         try {
           try {
-            var3_int = param0.f(128);
+            var3_int = param0.readUnsignedSmart(128);
             if (var3_int > param1) {
               var3_int = param1;
             }

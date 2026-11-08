@@ -54,7 +54,7 @@ final class hb extends kc {
           var9 = new PacketBuffer(param1);
           var3 = var9.readUnsignedByte((byte) 73);
           if (param0) {
-            hb.e(127);
+            hb.releaseStatics(127);
           }
           var4 = var9.readInt(-10674);
           if (var4 >= 0 && (ub.field_a == 0 ||
@@ -63,7 +63,7 @@ final class hb extends kc {
               var12 = new byte[var4];
               var10 = var12;
               var5_ref_byte__ = var10;
-              var9.a((byte) 114, 0, var12, var4);
+              var9.readBytes((byte) 114, 0, var12, var4);
               stackIn_9_0 = var5_ref_byte__;
               return stackIn_9_0;
             }
@@ -131,7 +131,7 @@ final class hb extends kc {
           var6.writeInt(param0.field_n, (byte) -101);
           var6.writeInt(param0.field_o, (byte) -101);
           var6.writeInt(param0.field_k, (byte) -101);
-          var6.a(true, var4);
+          var6.appendCrc32(true, var4);
           var6.writeByteLengthAtMark(-var4 + var6.position, (byte) 43);
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "hb.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
@@ -165,7 +165,7 @@ final class hb extends kc {
         this(param0, param1, param1.field_Db.field_Hb, param1.field_Db.field_Eb, param1.field_Jb, param2, param3);
     }
 
-    public static void e(int param0) {
+    public static void releaseStatics(int param0) {
         field_Ib = null;
         field_Gb = null;
         if (param0 != 0) {

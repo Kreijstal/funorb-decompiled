@@ -91,7 +91,7 @@ final class ArchiveIndex {
             if (7 > var4) {
               this.field_w = var17.readUnsignedShort(param1 ^ -110);
             } else {
-              this.field_w = var17.a((byte) -29);
+              this.field_w = var17.readUnsignedShortOrInt((byte) -29);
             }
             var8 = 0;
             if (param1 != 12) {
@@ -110,7 +110,7 @@ final class ArchiveIndex {
               }
             } else {
               for (var10 = 0; this.field_w > var10; var10++) {
-                dupTemp$1 = var8 + var17.a((byte) -29);
+                dupTemp$1 = var8 + var17.readUnsignedShortOrInt((byte) -29);
                 var8 = dupTemp$1;
                 this.field_r[var10] = dupTemp$1;
                 if (var9 < this.field_r[var10]) {
@@ -147,7 +147,7 @@ final class ArchiveIndex {
             } else {
               for (var10Lifetime3 = 0; this.field_w > var10Lifetime3; var10Lifetime3++) {
                 var21 = new byte[64];
-                var17.a((byte) 45, 0, var21, 64);
+                var17.readBytes((byte) 45, 0, var21, 64);
                 this.field_k[this.field_r[var10Lifetime3]] = var21;
               }
               for (var10Lifetime3 = 0; var10Lifetime3 < this.field_w; var10Lifetime3++) {
@@ -156,7 +156,7 @@ final class ArchiveIndex {
             }
             if (7 <= var4) {
               for (var10Lifetime4 = 0; this.field_w > var10Lifetime4; var10Lifetime4++) {
-                this.field_b[this.field_r[var10Lifetime4]] = var17.a((byte) -29);
+                this.field_b[this.field_r[var10Lifetime4]] = var17.readUnsignedShortOrInt((byte) -29);
               }
               for (var10Lifetime4 = 0; this.field_w > var10Lifetime4; var10Lifetime4++) {
                 var11 = this.field_r[var10Lifetime4];
@@ -166,7 +166,7 @@ final class ArchiveIndex {
                 this.field_e[var11] = array$2;
                 var13 = -1;
                 for (var14 = 0; var12 > var14; var14++) {
-                  dupTemp$3 = var8Lifetime1 + var17.a((byte) -29);
+                  dupTemp$3 = var8Lifetime1 + var17.readUnsignedShortOrInt((byte) -29);
                   var8Lifetime1 = dupTemp$3;
                   dupTemp$4 = this.field_e[var11];
                   dupTemp$4[var14] = dupTemp$3;
@@ -247,7 +247,7 @@ final class ArchiveIndex {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_m = null;
         field_a = null;
         field_d = null;

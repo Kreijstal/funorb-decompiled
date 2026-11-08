@@ -8,7 +8,7 @@ final class n {
     static String field_h;
     static int field_a;
     static kc field_g;
-    static oc field_d;
+    static IntrusiveDequeCursor field_d;
     static String field_e;
 
     public static void a(int param0) {
@@ -244,7 +244,7 @@ final class n {
         field_c = "RuneScape clan";
         field_h = "Unrated game";
         field_b = new ri();
-        field_d = new oc();
+        field_d = new IntrusiveDequeCursor();
         field_e = "Game interface:";
     }
 }

@@ -718,7 +718,7 @@ final class lc {
                           var3 = var3 + (tj.field_t.field_C * tj.field_t.drawParagraph(var2, var5, var3, var6, 352, 16777215, 0, 0, 0, tj.field_t.field_C) + 8);
                           var2 = GzipDecoder.field_c;
                           var3 = var3 + (8 + (mi.field_B.field_m + mi.field_B.field_C) * mi.field_B.drawParagraph(var2, var5, var3, 512, 352, 0, -1, 0, 0, mi.field_B.field_C + mi.field_B.field_m));
-                          var2 = kl.field_F;
+                          var2 = ArrayWidgetContainer.field_F;
                           var3 = var3 + ((mi.field_B.field_C + mi.field_B.field_m) * mi.field_B.drawParagraph(var2, var5, var3, var6, 352, 0, -1, 0, 0, mi.field_B.field_m + mi.field_B.field_C) + 6);
                           var11 = new int[]{16711935, 16711680, 16746632, 16776960, 65535, 34816, 16777215, 4521762, 1364125, 16755302};
                           var2 = uh.field_q;
@@ -782,7 +782,7 @@ final class lc {
                                 var2 = sc.field_S;
                                 mi.field_B.drawParagraph(var2, 320 + bi.field_I, var3, 256, 120, 0, -1, 0, 1, mi.field_B.field_C + mi.field_B.field_m);
                                 bb.field_g[29].drawTransparent(var4, 120 + (-40 + var3));
-                                var2 = wn.field_A;
+                                var2 = SingleChildContainer.field_A;
                                 var3 += 128;
                                 var3 = var3 + (8 + tj.field_t.field_C * tj.field_t.drawParagraph(var2, var5, var3, var6, 352, 16777215, 0, 0, 0, tj.field_t.field_C));
                                 this.a(var3, var4, (byte) -86, 5);
@@ -867,7 +867,7 @@ final class lc {
                       fe.field_g.drawTransparent(106 + bi.field_I, -32 + var3);
                       SoftwareRasterizer.resetClip();
                       tg.field_b[7].draw(var4, -2 + var3);
-                      mi.field_B.drawText("= 1" + wn.field_x, 20 + var4, 20 + var3, 16776960, 0);
+                      mi.field_B.drawText("= 1" + SingleChildContainer.field_x, 20 + var4, 20 + var3, 16776960, 0);
                       tg.field_b[8].draw(var4 + 100, -2 + var3);
                       mi.field_B.drawText("= 5" + CanvasRasterBuffer.field_g, 20 + var4 + 100, var3 + 20, 16776960, 0);
                       var2 = an.field_n;
@@ -893,7 +893,7 @@ final class lc {
               var3 = var3 + (tj.field_t.field_C * tj.field_t.drawParagraph(var2, var5, var3, var6, 352, 16777215, 0, 0, 0, tj.field_t.field_C) + 8);
               var2 = md.field_e;
               var3 = var3 + (16 + (mi.field_B.field_C + mi.field_B.field_m) * mi.field_B.drawParagraph(var2, var5, var3, 512, 352, 0, -1, 0, 0, mi.field_B.field_m + mi.field_B.field_C));
-              var2 = qm.field_l;
+              var2 = UiComponent.field_l;
               var3 = var3 + (tj.field_t.field_C * tj.field_t.drawParagraph(var2, var5, var3, var6, 352, 16777215, 0, 0, 0, tj.field_t.field_C) + 8);
               var2 = cc.field_b;
               var2 = tj.a(118, new String[]{fn.field_g[84], fn.field_g[85], fn.field_g[82], fn.field_g[81]}, var2);
@@ -6158,7 +6158,7 @@ final class lc {
                                 if (var29 == -1) {
                                     /* Inlined CFG state: 670. */
                                     {
-                                        var18 = tj.a(123, new String[]{rb.field_n[var27]}, kl.field_y);
+                                        var18 = tj.a(123, new String[]{rb.field_n[var27]}, ArrayWidgetContainer.field_y);
                                         statePc = 671;
                                         continue scanLoop1;
                                     }
@@ -7908,7 +7908,7 @@ final class lc {
                                                 this.field_g.field_h = 1;
                                               }
                                             }
-                                            df.a((byte) 120, var6);
+                                            UiContainer.a((byte) 120, var6);
                                             return;
                                           }
                                         }
@@ -7933,7 +7933,7 @@ final class lc {
                                                   this.field_g.field_h = 0;
                                                 }
                                               }
-                                              df.a((byte) -127, var6);
+                                              UiContainer.a((byte) -127, var6);
                                               return;
                                             }
                                           }
@@ -7948,7 +7948,7 @@ final class lc {
                                               if (!this.field_g.b(true)) {
                                                 return;
                                               }
-                                              df.a((byte) 89, 7);
+                                              UiContainer.a((byte) 89, 7);
                                               return;
                                             }
                                             if (var6 != 29) {
@@ -8904,13 +8904,13 @@ final class lc {
           if (var4 >= 0) {
             if (var2.field_V.field_d) {
               if (0 == var4) {
-                discarded$0 = var14.append(rn.field_K + b.field_d + "<br><br>");
+                discarded$0 = var14.append(EditableTextWidget.field_K + b.field_d + "<br><br>");
               }
               if (1 == var4) {
-                discarded$1 = var14.append(rn.field_K + cn.field_I + "<br><br>");
+                discarded$1 = var14.append(EditableTextWidget.field_K + cn.field_I + "<br><br>");
               }
             } else {
-              discarded$2 = var14.append(rn.field_K + var2.field_V.field_k[var4] + "<br><br>");
+              discarded$2 = var14.append(EditableTextWidget.field_K + var2.field_V.field_k[var4] + "<br><br>");
             }
           } else {
             if (-2 == var4) {
@@ -10422,7 +10422,7 @@ final class lc {
                 }
                 if (Math.abs(this.field_i) == 3) {
                   var13 = hm.field_d;
-                  var14_ref_String = df.field_x;
+                  var14_ref_String = UiContainer.field_x;
                 }
                 if (Math.abs(this.field_i) == 4) {
                   var13 = tk.field_r;
@@ -10471,7 +10471,7 @@ final class lc {
                       var15_ref_String = MusicCrossfadeStream.field_z;
                     }
                     if (3 == this.field_h) {
-                      var15_ref_String = df.field_x;
+                      var15_ref_String = UiContainer.field_x;
                     }
                     if (this.field_h == 4) {
                       var15_ref_String = fh.field_d;
@@ -10520,7 +10520,7 @@ final class lc {
                       }
                       if (3 == Math.abs(this.field_h)) {
                         var13 = ec.field_h + var3;
-                        var14_ref_String = df.field_x;
+                        var14_ref_String = UiContainer.field_x;
                       }
                       if (Math.abs(this.field_h) == 4) {
                         var14_ref_String = fh.field_d;
@@ -11453,7 +11453,7 @@ final class lc {
           }
           var3Lifetime4 = -208 + an.field_f;
           var4Lifetime3 = an.field_j - 40;
-          var5Lifetime3 = 200 * (wn.field_C + jo.field_c + be.field_f) / 127;
+          var5Lifetime3 = 200 * (SingleChildContainer.field_C + jo.field_c + be.field_f) / 127;
           var6Lifetime2 = 11176106;
           var7Lifetime2 = 34;
           if (200 > var5Lifetime3) {
@@ -11776,7 +11776,7 @@ final class lc {
             dm.g((byte) -96);
           }
           if (!kh.field_b &&
-            !oc.field_g) {
+            !IntrusiveDequeCursor.field_g) {
             while (true) {
               if (ib.b(false)) {
                 stackIn_46_0 = IntrusiveDeque.field_d;

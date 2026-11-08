@@ -50,7 +50,7 @@ final class k implements Runnable {
         }
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         field_q = null;
         field_k = null;
         field_f = null;
@@ -293,11 +293,11 @@ final class k implements Runnable {
         if (param0 != 0) {
           field_k = (String[]) null;
         }
-        if (!wn.field_z.a((byte) -106)) {
-          return wn.field_z.a(true);
+        if (!SingleChildContainer.field_z.a((byte) -106)) {
+          return SingleChildContainer.field_z.a(true);
         }
         if (hb.field_Gb == sk.field_a) {
-          return wn.field_z.a(true);
+          return SingleChildContainer.field_z.a(true);
         }
         return ge.field_g;
     }

@@ -54,7 +54,7 @@ final class we {
         }
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         field_d = null;
         int var1 = -7 % ((param0 + 28) / 61);
         field_e = null;
@@ -104,7 +104,7 @@ final class we {
 
     final static boolean a(byte param0) {
         if (param0 != -80) {
-          we.c(84);
+          we.releaseStatics(84);
           if (null == pm.field_b) {
             return oj.field_i ? true : false;
           }
@@ -156,9 +156,9 @@ final class we {
             ue.field_c = new PacketBuffer(var7_int);
           }
           ue.field_c.position = 0;
-          ue.field_c.a(param2, param4, (byte) -86, param6);
+          ue.field_c.writeBytes(param2, param4, (byte) -86, param6);
           ue.field_c.padTo(var7_int, (byte) 83);
-          ue.field_c.a(param1 ^ 127, var13);
+          ue.field_c.xteaEncrypt(param1 ^ 127, var13);
           if (KeyboardInputHandler.field_b == null ||
             !(KeyboardInputHandler.field_b.payload.length >= 100)) {
             KeyboardInputHandler.field_b = new PacketBuffer(100);
@@ -172,9 +172,9 @@ final class we {
             var11++;
           }
           KeyboardInputHandler.field_b.writeShort(param6, (byte) -60);
-          KeyboardInputHandler.field_b.a(param0, (byte) 95, param5);
-          param3.a(KeyboardInputHandler.field_b.payload, 0, (byte) -86, KeyboardInputHandler.field_b.position);
-          param3.a(ue.field_c.payload, param1, (byte) -86, ue.field_c.position);
+          KeyboardInputHandler.field_b.rsaEncrypt(param0, (byte) 95, param5);
+          param3.writeBytes(KeyboardInputHandler.field_b.payload, 0, (byte) -86, KeyboardInputHandler.field_b.position);
+          param3.writeBytes(ue.field_c.payload, param1, (byte) -86, ue.field_c.position);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

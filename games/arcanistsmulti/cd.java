@@ -24,7 +24,7 @@ final class cd extends jm {
         return (java.applet.Applet) ((Object) IsaacCipher.field_k);
     }
 
-    public final void a(qm param0, int param1, int param2, int param3, boolean param4) {
+    public final void a(UiComponent param0, int param1, int param2, int param3, boolean param4) {
         int stackIn_6_0 = 0;
         int stackIn_12_0 = 0;
         int stackIn_15_0 = 0;
@@ -41,17 +41,17 @@ final class cd extends jm {
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
-        qm var14 = null;
+        UiComponent var14 = null;
         try {
           SoftwareRasterizer.drawRectangle(param0.field_n + param2, param0.field_j + param3, param0.field_v, param0.field_k, 10197915);
           if (param4) {
-            stackIn_6_0 = (((ag) (param0)).field_z) ? 1 : 0;
+            stackIn_6_0 = (((TextButton) (param0)).field_z) ? 1 : 0;
           } else {
             stackIn_6_0 = 0;
           }
           var6_int = stackIn_6_0;
           if (param4) {
-            stackIn_12_0 = (param0.d(-2116)) ? 1 : 0;
+            stackIn_12_0 = (param0.isFocused(-2116)) ? 1 : 0;
           } else {
             stackIn_12_0 = 0;
           }
@@ -74,8 +74,8 @@ final class cd extends jm {
           if (param1 == 5592405) {
             return;
           }
-          var14 = (qm) null;
-          this.a((qm) null, 3, -30, -126, true);
+          var14 = (UiComponent) null;
+          this.a((UiComponent) null, 3, -30, -126, true);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

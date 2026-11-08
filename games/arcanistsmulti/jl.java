@@ -126,7 +126,7 @@ final class jl {
           }
           if (2 == nj.field_c &&
             !wm.c(false)) {
-            boolean decompiledSharedTail1 = !(!kl.a(ua.field_S, 1));
+            boolean decompiledSharedTail1 = !(!ArrayWidgetContainer.a(ua.field_S, 1));
             if (!decompiledSharedTail1) {
               var2 = tj.a(125, new String[]{so.field_p}, qc.field_b);
               decompiledSharedTail1 = (var10 != 0);
@@ -159,7 +159,7 @@ final class jl {
             if (var6 == 2) {
               var4 = tj.a(-99, new String[]{so.field_p}, ge.field_n);
               var8 = tj.a(-51, new String[]{var3}, pk.field_f);
-              var7 = -485 + (sa.field_Cb.field_x + wn.field_D.field_x + oo.field_x.textWidth(var8)) - oo.field_x.textWidth(var4);
+              var7 = -485 + (sa.field_Cb.field_x + SingleChildContainer.field_D.field_x + oo.field_x.textWidth(var8)) - oo.field_x.textWidth(var4);
               if (0 > var7) {
                 var7 = 0;
               }
@@ -204,16 +204,16 @@ final class jl {
               }
               var9 = oo.field_x.textWidth(var4);
               if (!tk.f((byte) -113)) {
-                if (wn.field_D.field_C &&
-                  (-wn.field_D.field_V + an.field_g) < var9) {
+                if (SingleChildContainer.field_D.field_C &&
+                  (-SingleChildContainer.field_D.field_V + an.field_g) < var9) {
                   if (!wh.field_g) {
                     var1 = sb.field_b;
                   } else {
                     var1 = "Broken!";
                   }
                 }
-                if (wn.field_D.field_U != 0 &&
-                  wn.field_D.field_cb < var9 &&
+                if (SingleChildContainer.field_D.field_U != 0 &&
+                  SingleChildContainer.field_D.field_cb < var9 &&
                   !wh.field_g) {
                   gj.a((byte) 104);
                 }

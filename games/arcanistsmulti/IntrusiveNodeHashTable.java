@@ -244,7 +244,7 @@ final class IntrusiveNodeHashTable {
         }
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         field_l = null;
         if (param0 != 0) {
           IntrusiveNodeHashTable.b(31);

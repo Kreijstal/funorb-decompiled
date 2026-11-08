@@ -11,7 +11,7 @@ final class sb {
     static String field_d;
     static int field_e;
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         field_b = null;
         field_h = null;
         field_c = null;
@@ -246,7 +246,7 @@ final class sb {
             }
             var4 = 0;
             var5Lifetime1 = 0;
-            var6 = mi.field_B.getWrappedWidth(IntrusiveNodeHashTable.field_f, kl.field_A - 32);
+            var6 = mi.field_B.getWrappedWidth(IntrusiveNodeHashTable.field_f, ArrayWidgetContainer.field_A - 32);
             var7 = 32 + mi.field_B.field_C * mi.field_B.wrappedLineCount(IntrusiveNodeHashTable.field_f, -32 + var6);
             var6 += 32;
             var8 = Math.min(-var6 + an.field_f, an.field_f / 2 + 54);

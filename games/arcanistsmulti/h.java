@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class h extends wn {
+final class h extends SingleChildContainer {
     static aj field_G;
     static String field_E;
     private IntrusiveDeque field_H;
@@ -9,26 +9,26 @@ final class h extends wn {
     static Sprite[] field_I;
     static int field_J;
 
-    final qm a(int param0) {
-        oc var2;
+    final UiComponent getFocusedChild(int param0) {
+        IntrusiveDequeCursor var2;
         vi var3;
         int var4;
         var4 = ArcanistsMulti.field_G ? 1 : 0;
         if (param0 <= 31) {
           this.field_H = (IntrusiveDeque) null;
         }
-        var2 = new oc(this.field_H);
-        var3 = (vi) (var2.b(-109));
+        var2 = new IntrusiveDequeCursor(this.field_H);
+        var3 = (vi) (var2.first(-109));
         while (var3 != null) {
           if (var3.field_G) {
-            return var3.e(852710177);
+            return var3.getFocusedChild(852710177);
           }
-          var3 = (vi) (var2.d(-18502));
+          var3 = (vi) (var2.next(-18502));
         }
         return null;
     }
 
-    public static void h(int param0) {
+    public static void releaseStatics(int param0) {
         field_K = null;
         field_E = null;
         if (param0 != 1) {
@@ -40,11 +40,11 @@ final class h extends wn {
 
     final void f(int param0) {
         int var4 = ArcanistsMulti.field_G ? 1 : 0;
-        oc var2 = new oc(this.field_H);
-        vi var3 = (vi) (var2.b(-82));
+        IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.field_H);
+        vi var3 = (vi) (var2.first(-82));
         while (var3 != null) {
           var3.field_G = false;
-          var3 = (vi) (var2.d(-18502));
+          var3 = (vi) (var2.next(-18502));
         }
         if (param0 >= -105) {
           return;
@@ -53,23 +53,23 @@ final class h extends wn {
     }
 
     public h() {
-        super(0, 0, SoundCache.field_c, mf.field_c, (pf) null, (wc) null);
+        super(0, 0, SoundCache.field_c, mf.field_c, (WidgetPainter) null, (UiListener) null);
         this.field_H = new IntrusiveDeque();
     }
 
-    final void a(byte param0, int param1, int param2, int param3) {
+    final void drawLayer(byte param0, int param1, int param2, int param3) {
         int var7 = ArcanistsMulti.field_G ? 1 : 0;
         if (null != this.field_r) {
-          this.field_r.a((qm) (this), 5592405, param1, param3, true);
+          this.field_r.a((UiComponent) (this), 5592405, param1, param3, true);
         }
-        oc var5 = new oc(this.field_H);
+        IntrusiveDequeCursor var5 = new IntrusiveDequeCursor(this.field_H);
         if (param0 >= -52) {
           return;
         }
-        qm var6 = (qm) (var5.c(121));
+        UiComponent var6 = (UiComponent) (var5.last(121));
         while (var6 != null) {
-          var6.a((byte) -53, param1 + this.field_n, param2, this.field_j + param3);
-          var6 = (qm) (var5.c(true));
+          var6.drawLayer((byte) -53, param1 + this.field_n, param2, this.field_j + param3);
+          var6 = (UiComponent) (var5.previous(true));
         }
     }
 
@@ -101,32 +101,32 @@ final class h extends wn {
           this.field_H = (IntrusiveDeque) null;
         }
         int var5 = (param2 - this.field_k) / 2;
-        oc var6 = new oc(this.field_H);
-        vi var7 = (vi) (var6.b(-103));
+        IntrusiveDequeCursor var6 = new IntrusiveDequeCursor(this.field_H);
+        vi var7 = (vi) (var6.first(-103));
         while (var7 != null) {
           var7.field_j = var7.field_j + var5;
           var7.field_n = var7.field_n + var4;
-          var7 = (vi) (var6.d(-18502));
+          var7 = (vi) (var6.next(-18502));
         }
         this.field_k = param2;
         this.field_v = param1;
     }
 
     final vi g(int param0) {
-        oc var2;
+        IntrusiveDequeCursor var2;
         vi var3;
         int var4;
         var4 = ArcanistsMulti.field_G ? 1 : 0;
-        var2 = new oc(this.field_H);
+        var2 = new IntrusiveDequeCursor(this.field_H);
         if (param0 != 7213) {
           return (vi) null;
         }
-        var3 = (vi) (var2.b(-37));
+        var3 = (vi) (var2.first(-37));
         while (var3 != null) {
           if (var3.field_G) {
             return var3;
           }
-          var3 = (vi) (var2.d(-18502));
+          var3 = (vi) (var2.next(-18502));
         }
         return null;
     }
@@ -166,7 +166,7 @@ final class h extends wn {
         }
     }
 
-    final void b(qm param0, int param1) {
+    final void b(UiComponent param0, int param1) {
         vi var3 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -180,7 +180,7 @@ final class h extends wn {
           var3 = (vi) (param0);
           this.field_H.addFirst((IntrusiveNode) (var3), (byte) -58);
           var3.field_G = true;
-          var3.a(0, (qm) (this));
+          var3.focusNext(0, (UiComponent) (this));
           if (param1 != 15637) {
             this.field_H = (IntrusiveDeque) null;
           }
@@ -201,32 +201,32 @@ final class h extends wn {
 
     final void i(int param0) {
         int var4 = ArcanistsMulti.field_G ? 1 : 0;
-        oc var2 = new oc(this.field_H);
-        vi var3 = (vi) (var2.b(param0 ^ -68));
+        IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.field_H);
+        vi var3 = (vi) (var2.first(param0 ^ -68));
         while (var3 != null) {
           if (var3.a((byte) 112)) {
             var3.unlink(true);
           }
-          var3 = (vi) (var2.d(param0 ^ -18498));
+          var3 = (vi) (var2.next(param0 ^ -18498));
         }
         if (param0 != 4) {
-          this.a((byte) -84, -8, -8, 19);
+          this.drawLayer((byte) -84, -8, -8, 19);
         }
-        this.field_B = (qm) ((Object) this.g(7213));
+        this.field_B = (UiComponent) ((Object) this.g(7213));
     }
 
     final void h(byte param0) {
         int var4 = ArcanistsMulti.field_G ? 1 : 0;
-        oc var2 = new oc(this.field_H);
+        IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.field_H);
         if (param0 != 83) {
           return;
         }
-        vi var3 = (vi) (var2.b(param0 - 131));
+        vi var3 = (vi) (var2.first(param0 - 131));
         while (var3 != null) {
           if (var3.g((byte) 45)) {
             var3.unlink(true);
           }
-          var3 = (vi) (var2.d(-18502));
+          var3 = (vi) (var2.next(-18502));
         }
     }
 

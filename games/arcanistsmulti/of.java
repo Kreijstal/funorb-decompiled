@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class of implements pf {
+final class of implements WidgetPainter {
     private int field_g;
     private int field_i;
     private BitmapFont field_d;
@@ -128,7 +128,7 @@ final class of implements pf {
         }
     }
 
-    public final void a(qm param0, int param1, int param2, int param3, boolean param4) {
+    public final void a(UiComponent param0, int param1, int param2, int param3, boolean param4) {
         RuntimeException var6 = null;
         int var7 = 0;
         int var8 = 0;
@@ -137,7 +137,7 @@ final class of implements pf {
         int var12 = 0;
         int var13 = 0;
         rk var14 = null;
-        qm stackIn_3_0 = null;
+        UiComponent stackIn_3_0 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -149,7 +149,7 @@ final class of implements pf {
           if (!(param0 instanceof rk)) {
             stackIn_3_0 = null;
           } else {
-            stackIn_3_0 = (qm) (param0);
+            stackIn_3_0 = (UiComponent) (param0);
           }
           var14 = (rk) (stackIn_3_0);
           if (param1 != 5592405) {
@@ -192,7 +192,7 @@ final class of implements pf {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 >= -4) {
           return;
         }

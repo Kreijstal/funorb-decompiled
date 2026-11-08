@@ -17,7 +17,7 @@ final class oe {
         return ub.field_i[param2];
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 <= 119) {
           field_d = (IndexedSprite[]) null;
           field_d = null;
@@ -82,7 +82,7 @@ final class oe {
           var9.position = var9.position + 1;
           var5 = var9.position;
           var9.writeByte(1, (byte) -118);
-          var9.a(param0, 23333);
+          var9.writeString(param0, 23333);
           var9.writeByteLengthAtMark(var9.position - var5, (byte) 43);
           stackIn_21_0 = null;
           return (String) (stackIn_21_0);

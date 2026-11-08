@@ -13,7 +13,7 @@ final class mm extends jm {
     static int field_p;
     static String field_t;
 
-    public final void a(qm param0, int param1, int param2, int param3, boolean param4) {
+    public final void a(UiComponent param0, int param1, int param2, int param3, boolean param4) {
         int stackIn_6_0 = 0;
         int stackIn_13_0 = 0;
         int stackIn_18_0 = 0;
@@ -27,13 +27,13 @@ final class mm extends jm {
         int var8 = 0;
         try {
           if (!param0.field_w) {
-            stackIn_6_0 = (param0.d(-2116)) ? 1 : 0;
+            stackIn_6_0 = (param0.isFocused(-2116)) ? 1 : 0;
           } else {
             stackIn_6_0 = 1;
           }
           var6_int = stackIn_6_0;
-          if (param0 instanceof ag) {
-            param4 = param4 & ((ag) (param0)).field_B;
+          if (param0 instanceof TextButton) {
+            param4 = param4 & ((TextButton) (param0)).field_B;
           }
           if (param4) {
             if (var6_int != 0) {

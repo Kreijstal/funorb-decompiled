@@ -99,7 +99,7 @@ final class oo extends DualLinkNode {
         }
     }
 
-    public static void e(int param0) {
+    public static void releaseStatics(int param0) {
         field_C = null;
         field_t = null;
         field_r = null;

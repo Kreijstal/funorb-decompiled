@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wm extends wn {
+final class wm extends SingleChildContainer {
     static int field_I;
     static String field_G;
     static Sprite[] field_H;
     static String field_F;
     static String field_J;
 
-    public static void f(int param0) {
+    public static void releaseStatics(int param0) {
         field_H = null;
         field_F = null;
         field_G = null;
@@ -18,27 +18,27 @@ final class wm extends wn {
         field_J = null;
     }
 
-    final void a(byte param0, int param1, int param2, int param3) {
+    final void drawLayer(byte param0, int param1, int param2, int param3) {
         if (param0 >= -52) {
           return;
         }
         if (0 == param2 &&
           this.field_r != null) {
-          this.field_r.a((qm) (this), 5592405, param1, param3, true);
+          this.field_r.a((UiComponent) (this), 5592405, param1, param3, true);
         }
         if (this.field_v != 0 &&
           0 != this.field_k) {
           MusicCrossfadeStream.field_n.a(param3 - (-this.field_j - this.field_k), this.field_v + this.field_n + param1, 3, param3 + this.field_j, this.field_n + param1);
-          this.field_B.a((byte) -99, param1 + this.field_n, param2, param3 + this.field_j);
+          this.field_B.drawLayer((byte) -99, param1 + this.field_n, param2, param3 + this.field_j);
           MusicCrossfadeStream.field_n.a(114);
         }
     }
 
-    final void a(byte param0) {
+    final void refreshChildLayout(byte param0) {
         if (param0 != -75) {
           return;
         }
-        this.field_B.e((byte) 87);
+        this.field_B.refreshLayout((byte) 87);
     }
 
     final static boolean c(boolean param0) {
@@ -48,8 +48,8 @@ final class wm extends wn {
         return kg.a(gg.field_e, true, ua.field_S);
     }
 
-    wm(int param0, int param1, int param2, int param3, pf param4, qm param5) {
-        super(param0, param1, param2, param3, param4, (wc) null);
+    wm(int param0, int param1, int param2, int param3, WidgetPainter param4, UiComponent param5) {
+        super(param0, param1, param2, param3, param4, (UiListener) null);
         try {
           this.field_B = param5;
         } catch (RuntimeException runtimeException) {
@@ -105,7 +105,7 @@ final class wm extends wn {
         SoundCache.field_a = SoundCache.field_a + 1;
     }
 
-    final boolean a(int param0, int param1, qm param2, int param3, int param4, int param5, int param6) {
+    final boolean handlePointerPress(int param0, int param1, UiComponent param2, int param3, int param4, int param5, int param6) {
         int var8_int = 0;
         RuntimeException var8 = null;
         boolean stackIn_4_0 = false;
@@ -115,7 +115,7 @@ final class wm extends wn {
         RuntimeException decompiledCaughtException = null;
         try {
           var8_int = -43 / ((-42 - param4) / 35);
-          stackIn_4_0 = (this.a((byte) -47, param3, param0, param6, param5)) && (super.a(param0, param1, param2, param3, -111, param5, param6));
+          stackIn_4_0 = (this.containsPoint((byte) -47, param3, param0, param6, param5)) && (super.handlePointerPress(param0, param1, param2, param3, -111, param5, param6));
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

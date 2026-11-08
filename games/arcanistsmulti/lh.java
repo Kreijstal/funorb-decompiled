@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lh implements pf {
+final class lh implements WidgetPainter {
     private int field_k;
     private int field_f;
     private int field_m;
@@ -17,9 +17,9 @@ final class lh implements pf {
     static String field_a;
     static String[] field_e;
 
-    public final void a(qm param0, int param1, int param2, int param3, boolean param4) {
+    public final void a(UiComponent param0, int param1, int param2, int param3, boolean param4) {
         int var10 = 0;
-        qm stackIn_4_0 = null;
+        UiComponent stackIn_4_0 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -35,7 +35,7 @@ final class lh implements pf {
           if (!(param0 instanceof wg)) {
             stackIn_4_0 = null;
           } else {
-            stackIn_4_0 = (qm) (param0);
+            stackIn_4_0 = (UiComponent) (param0);
           }
           var12 = (wg) (stackIn_4_0);
           SoftwareRasterizer.fillRectangle(param0.field_n + param2, param3 + param0.field_j, param0.field_v, param0.field_k, this.field_k);
@@ -70,7 +70,7 @@ final class lh implements pf {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_c = null;
         field_h = null;
         field_e = null;

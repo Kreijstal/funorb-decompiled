@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ln extends df implements pj, vb, ro {
+final class ln extends UiContainer implements pj, ButtonListener, ro {
     static String field_L;
     static String field_R;
     private bi field_K;
@@ -14,8 +14,8 @@ final class ln extends df implements pj, vb, ro {
     private bi field_D;
     private ej field_S;
     static String field_Q;
-    private ag field_O;
-    private ag field_C;
+    private TextButton field_O;
+    private TextButton field_C;
     static byte[][] field_I;
     private bi field_H;
     private bi field_N;
@@ -63,7 +63,7 @@ final class ln extends df implements pj, vb, ro {
         }
     }
 
-    public static void g(int param0) {
+    public static void releaseStatics(int param0) {
         field_I = (byte[][]) null;
         int var1 = -76 / ((68 - param0) / 58);
         field_U = null;
@@ -118,7 +118,7 @@ final class ln extends df implements pj, vb, ro {
         return false;
     }
 
-    private final int a(int param0, qm param1, String param2, int param3, int param4, String param5) {
+    private final int a(int param0, UiComponent param1, String param2, int param3, int param4, String param5) {
         int var7_int = 0;
         RuntimeException var7 = null;
         int stackIn_1_0 = 0;
@@ -176,24 +176,24 @@ final class ln extends df implements pj, vb, ro {
             field_T = (String) null;
           }
           var4 = param0;
-          ((rn) ((Object) var3)).a(false, var4, false);
+          ((EditableTextWidget) ((Object) var3)).setText(false, var4, false);
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "ln.O(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     public ln() {
-        super(0, 0, 496, 0, (pf) null);
-        this.field_K = new bi("", (wc) null, 12);
-        this.field_N = new bi("", (wc) null, 100);
-        this.field_D = new bi("", (wc) null, 100);
-        this.field_P = new bi("", (wc) null, 20);
-        this.field_E = new bi("", (wc) null, 20);
-        this.field_H = new bi("", (wc) null, 3);
+        super(0, 0, 496, 0, (WidgetPainter) null);
+        this.field_K = new bi("", (UiListener) null, 12);
+        this.field_N = new bi("", (UiListener) null, 100);
+        this.field_D = new bi("", (UiListener) null, 100);
+        this.field_P = new bi("", (UiListener) null, 20);
+        this.field_E = new bi("", (UiListener) null, 20);
+        this.field_H = new bi("", (UiListener) null, 3);
         int var1 = 1;
-        this.field_F = new bk("", (wc) null, var1 != 0);
-        this.field_C = new ag(wm.field_G, (wc) null);
-        this.field_O = new ag(kn.field_rb, (wc) null);
+        this.field_F = new bk("", (UiListener) null, var1 != 0);
+        this.field_C = new TextButton(wm.field_G, (UiListener) null);
+        this.field_O = new TextButton(kn.field_rb, (UiListener) null);
         this.field_K.field_q = eh.field_b;
         this.field_N.field_q = ArchiveIndex.field_s;
         this.field_D.field_q = dn.field_Fb;
@@ -208,17 +208,17 @@ final class ln extends df implements pj, vb, ro {
         this.field_E.a(new mn(this.field_E, this.field_P), (byte) -128);
         this.field_H.a(new lo(this.field_H), (byte) 39);
         this.field_C.field_B = false;
-        this.field_C.field_r = (pf) ((Object) new mm());
-        this.field_O.field_r = (pf) ((Object) new gm());
-        this.field_K.field_r = (pf) ((Object) new ib(10000536));
+        this.field_C.field_r = (WidgetPainter) ((Object) new mm());
+        this.field_O.field_r = (WidgetPainter) ((Object) new gm());
+        this.field_K.field_r = (WidgetPainter) ((Object) new ib(10000536));
         ib dupTemp$0 = new ib(10000536);
-        this.field_D.field_r = (pf) ((Object) dupTemp$0);
-        this.field_N.field_r = (pf) ((Object) dupTemp$0);
-        this.field_H.field_r = (pf) ((Object) new ib(10000536));
-        this.field_F.field_r = (pf) ((Object) new ii());
+        this.field_D.field_r = (WidgetPainter) ((Object) dupTemp$0);
+        this.field_N.field_r = (WidgetPainter) ((Object) dupTemp$0);
+        this.field_H.field_r = (WidgetPainter) ((Object) new ib(10000536));
+        this.field_F.field_r = (WidgetPainter) ((Object) new ii());
         tc dupTemp$1 = new tc(10000536);
-        this.field_E.field_r = (pf) ((Object) dupTemp$1);
-        this.field_P.field_r = (pf) ((Object) dupTemp$1);
+        this.field_E.field_r = (WidgetPainter) ((Object) dupTemp$1);
+        this.field_P.field_r = (WidgetPainter) ((Object) dupTemp$1);
         String var2 = tj.a(-23, new String[]{this.g((byte) 34), this.e(false)}, fn.field_d);
         int var3 = 20;
         var3 = var3 + this.a(this.field_N, bk.field_K, var3, 170, 109);
@@ -228,32 +228,32 @@ final class ln extends df implements pj, vb, ro {
         var3 = var3 + (5 + this.a(var3, this.field_K, bj.field_kb, -67, 170, ch.field_h));
         var3 = var3 + this.a(ka.field_n, this.field_H, (byte) -71, 170, var3);
         ke var4 = new ke(46, var3, this.field_v - 90, 25, this.field_F, true, this.field_v - 120, 5, vc.field_e, 11579568, AudioService.field_c);
-        this.c(-114, var4);
+        this.addChild(-114, var4);
         var3 = var3 + var4.field_k;
         jm var5 = new jm(ia.field_c, 0, 0, 0, 0, 16777215, -1, 0, 0, ia.field_c.field_C, -1, 2147483647, true);
         this.field_S = new ej(var2, var5);
         this.field_S.field_q = "";
         this.field_S.a(0, 0, mm.field_s);
         this.field_S.a(1, 0, mm.field_s);
-        this.field_S.field_o = (wc) (this);
+        this.field_S.field_o = (UiListener) (this);
         this.field_S.a(46, (byte) -4, this.field_v - 90, var3);
         var3 = var3 + (this.field_S.field_k + 15);
-        this.c(-66, this.field_S);
+        this.addChild(-66, this.field_S);
         int var6 = 4;
         int var7 = 200;
-        this.field_C.a(40, var3, var7, -var7 + 496 >> 1, -87);
-        this.field_O.a(40, 15 + var3, 60, 3 + var6, -100);
-        this.field_O.field_o = (wc) (this);
-        this.field_C.field_o = (wc) (this);
-        this.c(-85, this.field_C);
-        this.c(-96, this.field_O);
+        this.field_C.setBounds(40, var3, var7, -var7 + 496 >> 1, -87);
+        this.field_O.setBounds(40, 15 + var3, 60, 3 + var6, -100);
+        this.field_O.field_o = (UiListener) (this);
+        this.field_C.field_o = (UiListener) (this);
+        this.addChild(-85, this.field_C);
+        this.addChild(-96, this.field_O);
         this.field_G = new li((ro) (this));
-        this.field_G.a(150, this.field_K.field_j + 20, -60 + (this.field_v + (-this.field_K.field_n - this.field_K.field_v)), 60 + (this.field_K.field_n + this.field_K.field_v), -127);
-        this.c(-99, this.field_G);
-        this.a(var3 - (-55 - var6), 0, 496, 0, -107);
+        this.field_G.setBounds(150, this.field_K.field_j + 20, -60 + (this.field_v + (-this.field_K.field_n - this.field_K.field_v)), 60 + (this.field_K.field_n + this.field_K.field_v), -127);
+        this.addChild(-99, this.field_G);
+        this.setBounds(var3 - (-55 - var6), 0, 496, 0, -107);
     }
 
-    public final void a(boolean param0, int param1, int param2, int param3, ag param4) {
+    public final void a(boolean param0, int param1, int param2, int param3, TextButton param4) {
         boolean discarded$1 = false;
         RuntimeException var6 = null;
         RuntimeException stackIn_10_0 = null;
@@ -300,7 +300,7 @@ final class ln extends df implements pj, vb, ro {
         return bb.a(this.field_P.field_g, this.field_K.field_g, var3, this, -30001, this.field_N.field_g, this.field_F.field_z);
     }
 
-    final boolean a(qm param0, byte param1, char param2, int param3) {
+    final boolean handleKeyInput(UiComponent param0, byte param1, char param2, int param3) {
         RuntimeException var5 = null;
         boolean stackIn_7_0 = false;
         boolean stackIn_10_0 = false;
@@ -309,20 +309,20 @@ final class ln extends df implements pj, vb, ro {
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (super.a(param0, (byte) -121, param2, param3)) {
+          if (super.handleKeyInput(param0, (byte) -121, param2, param3)) {
             return true;
           }
           if (param1 > -120) {
-            this.field_O = (ag) null;
+            this.field_O = (TextButton) null;
           }
           if (param3 == 98) {
-            stackIn_7_0 = this.a(param0, 9555);
+            stackIn_7_0 = this.focusPreviousChild(param0, 9555);
             return stackIn_7_0;
           }
           if (param3 != 99) {
             return false;
           }
-          stackIn_10_0 = this.b(2, param0);
+          stackIn_10_0 = this.focusNextChild(2, param0);
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -338,9 +338,9 @@ final class ln extends df implements pj, vb, ro {
         }
     }
 
-    final void a(qm param0, int param1, int param2, int param3) {
+    final void updatePointer(UiComponent param0, int param1, int param2, int param3) {
         try {
-          super.a(param0, param1, param2, param3);
+          super.updatePointer(param0, param1, param2, param3);
           this.field_C.field_B = this.h(0);
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "ln.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
@@ -393,7 +393,7 @@ final class ln extends df implements pj, vb, ro {
         return "</col></u>";
     }
 
-    private final int a(String param0, qm param1, int param2, int param3, int param4, String param5, int param6) {
+    private final int a(String param0, UiComponent param1, int param2, int param3, int param4, String param5, int param6) {
         RuntimeException var8 = null;
         sc var9 = null;
         ke var10 = null;
@@ -408,10 +408,10 @@ final class ln extends df implements pj, vb, ro {
         RuntimeException decompiledCaughtException = null;
         try {
           var10 = new ke(20, param6, 120 + param4, param2, param1, false, 120, 3, ia.field_c, 16777215, param5);
-          this.c(-75, var10);
+          this.addChild(-75, var10);
           var9 = new sc(((el) ((Object) param1)).a(0), param0, 126, param6 + var10.field_k, param4 + 50, param3);
-          var9.field_o = (wc) (this);
-          this.c(-127, var9);
+          var9.field_o = (UiListener) (this);
+          this.addChild(-127, var9);
           stackIn_1_0 = var9.field_k + var10.field_k;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -447,7 +447,7 @@ final class ln extends df implements pj, vb, ro {
         ((dg) (this.field_K.a(0))).e(126);
     }
 
-    private final int a(String param0, qm param1, byte param2, int param3, int param4) {
+    private final int a(String param0, UiComponent param1, byte param2, int param3, int param4) {
         RuntimeException var6 = null;
         mk var7 = null;
         ke var8 = null;
@@ -465,10 +465,10 @@ final class ln extends df implements pj, vb, ro {
             stackIn_2_0 = 93;
             return stackIn_2_0;
           }
-          this.c(param2 ^ 13, var8);
+          this.addChild(param2 ^ 13, var8);
           var7 = new mk(((el) ((Object) param1)).a(0));
-          this.c(-94, var7);
-          var7.a(15, var8.field_j + (-15 + var8.field_k >> 1), 15, 3 + var8.field_v + var8.field_n, param2 - 48);
+          this.addChild(-94, var7);
+          var7.setBounds(15, var8.field_j + (-15 + var8.field_k >> 1), 15, 3 + var8.field_v + var8.field_n, param2 - 48);
           stackIn_4_0 = var8.field_k;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -491,7 +491,7 @@ final class ln extends df implements pj, vb, ro {
         }
     }
 
-    private final int a(qm param0, String param1, int param2, int param3, int param4) {
+    private final int a(UiComponent param0, String param1, int param2, int param3, int param4) {
         String discarded$1 = null;
         ke var6 = null;
         RuntimeException var6_ref = null;
@@ -507,7 +507,7 @@ final class ln extends df implements pj, vb, ro {
             discarded$1 = this.g((byte) -39);
           }
           var6 = new ke(20, param2, param3 + 120, 25, param0, false, 120, 3, ia.field_c, 16777215, param1);
-          this.c(-66, var6);
+          this.addChild(-66, var6);
           stackIn_3_0 = var6.field_k;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

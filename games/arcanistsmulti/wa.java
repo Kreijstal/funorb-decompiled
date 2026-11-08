@@ -18,7 +18,7 @@ final class wa extends kc {
     String field_Ib;
     static boolean field_Ob;
 
-    public static void f(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 >= -62) {
           CharSequence var2 = (CharSequence) null;
           wa.a(';', (CharSequence) null, (byte) -35);

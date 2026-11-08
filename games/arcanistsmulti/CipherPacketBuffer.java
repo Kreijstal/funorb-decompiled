@@ -23,7 +23,7 @@ final class CipherPacketBuffer extends PacketBuffer {
           var3.field_e = param2;
           var3.field_a = param1;
           if (param0 != 0) {
-            CipherPacketBuffer.q(55);
+            CipherPacketBuffer.releaseStatics(55);
           }
           stackIn_3_0 = var3;
           return stackIn_3_0;
@@ -75,7 +75,7 @@ final class CipherPacketBuffer extends PacketBuffer {
         }
     }
 
-    public static void q(int param0) {
+    public static void releaseStatics(int param0) {
         field_r = null;
         field_p = null;
         field_s = null;

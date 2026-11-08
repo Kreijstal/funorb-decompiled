@@ -54,11 +54,11 @@ final class aj {
         if (param0 == 28139) {
           return param1 >= 2 ? true : false;
         }
-        aj.a(120);
+        aj.releaseStatics(120);
         return param1 >= 2 ? true : false;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_h = null;
         field_f = null;
         if (param0 != 20028) {

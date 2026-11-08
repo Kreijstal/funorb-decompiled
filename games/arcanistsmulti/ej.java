@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class ej extends ag {
+class ej extends TextButton {
     private vl field_K;
     static String field_Q;
     private IntrusiveDeque field_O;
@@ -13,22 +13,22 @@ class ej extends ag {
     static String field_L;
     static String field_P;
 
-    void a(byte param0, int param1, int param2, int param3) {
+    void drawLayer(byte param0, int param1, int param2, int param3) {
         int var7 = 0;
         int var8 = 0;
-        super.a((byte) -111, param1, param2, param3);
+        super.drawLayer((byte) -111, param1, param2, param3);
         if (param2 != 0) {
           return;
         }
         if (param0 >= -52) {
-          ej.f(-92);
+          ej.releaseStatics(-92);
         }
-        ac var9 = (ac) ((Object) this.field_r);
+        WidgetTextLayout var9 = (WidgetTextLayout) ((Object) this.field_r);
         vl var6 = this.field_K;
         if (var6 == null) {
         } else {
-          var7 = var9.a((qm) (this), (byte) -90, param1);
-          var8 = var9.a(param3, -13372, (qm) (this));
+          var7 = var9.a((UiComponent) (this), (byte) -90, param1);
+          var8 = var9.a(param3, -13372, (UiComponent) (this));
           do {
             oj.a(-32171, var8 - (-var6.field_m + 2), var7 + (var6.field_o - 2), var6.field_n + 2, var6.field_g + 2);
             var6 = var6.field_h;
@@ -36,7 +36,7 @@ class ej extends ag {
         }
     }
 
-    boolean a(int param0, qm param1) {
+    boolean focusNext(int param0, UiComponent param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -106,14 +106,14 @@ class ej extends ag {
     }
 
     final void a(int param0, byte param1, int param2, int param3) {
-        this.a(((ac) ((Object) this.field_r)).b((qm) (this), 1), param3, param2, param0, -123);
+        this.setBounds(((WidgetTextLayout) ((Object) this.field_r)).b((UiComponent) (this), 1), param3, param2, param0, -123);
         if (param1 != -4) {
-          qm var6 = (qm) null;
-          this.a((qm) null, 33, 61, 69);
+          UiComponent var6 = (UiComponent) null;
+          this.updatePointer((UiComponent) null, 33, 61, 69);
         }
     }
 
-    public static void f(int param0) {
+    public static void releaseStatics(int param0) {
         field_Q = null;
         field_H = null;
         field_R = null;
@@ -131,7 +131,7 @@ class ej extends ag {
         int stackIn_9_0 = 0;
         int stackIn_14_0 = 0;
         int var2;
-        ac var3;
+        WidgetTextLayout var3;
         kh var4;
         int var5;
         String var6;
@@ -151,8 +151,8 @@ class ej extends ag {
         }
         this.field_O = new IntrusiveDeque();
         var2 = 0;
-        var3 = (ac) ((Object) this.field_r);
-        var4 = var3.a((qm) (this), -127);
+        var3 = (WidgetTextLayout) ((Object) this.field_r);
+        var4 = var3.a((UiComponent) (this), -127);
         while (true) {
           var5 = this.field_g.indexOf("<hotspot=", var2);
           if (var5 == -1) {
@@ -270,8 +270,8 @@ class ej extends ag {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4) {
-        super.a(param0, param1, param2, param3, -111);
+    final void setBounds(int param0, int param1, int param2, int param3, int param4) {
+        super.setBounds(param0, param1, param2, param3, -111);
         this.g((byte) 63);
         if (param4 >= -49) {
           this.field_K = (vl) null;
@@ -289,7 +289,7 @@ class ej extends ag {
         oh.field_h.a(438, 202 + (var2 + 438 * var4 / var3), 0, -4 + SoftwareRasterizer.field_j - 120, (byte) -120);
     }
 
-    String b(boolean param0) {
+    String getTooltip(boolean param0) {
         if (null == this.field_K) {
           return null;
         }
@@ -305,8 +305,8 @@ class ej extends ag {
         return this.field_I[this.field_K.field_j];
     }
 
-    ej(String param0, pf param1) {
-        super(param0, (wc) null);
+    ej(String param0, WidgetPainter param1) {
+        super(param0, (UiListener) null);
         this.field_K = null;
         try {
           this.field_r = param1;
@@ -569,7 +569,7 @@ class ej extends ag {
             if (mf.field_g > -1) {
               var3Lifetime2 = 75;
               if (hc.field_f) {
-                kl.field_A = 256;
+                ArrayWidgetContainer.field_A = 256;
                 IntrusiveNodeHashTable.field_f = vm.field_d[lm.field_f[mf.field_g]];
               }
               var4Lifetime2 = -50 + var2_int;
@@ -800,11 +800,11 @@ class ej extends ag {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void activate(int param0, int param1, int param2, int param3) {
         if (param0 > -99) {
           return;
         }
-        super.a(-114, param1, param2, param3);
+        super.activate(-114, param1, param2, param3);
         int var5 = -this.field_n + param1;
         int var6 = -this.field_j + param3;
         vl var7 = this.a(var5, (byte) 102, var6);
@@ -814,7 +814,7 @@ class ej extends ag {
         }
     }
 
-    void a(qm param0, int param1, int param2, int param3) {
+    void updatePointer(UiComponent param0, int param1, int param2, int param3) {
         int var5_int = 0;
         int var6 = 0;
         RuntimeException stackIn_7_0 = null;
@@ -823,7 +823,7 @@ class ej extends ag {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         try {
-          super.a(param0, param1, param2 ^ 0, param3);
+          super.updatePointer(param0, param1, param2 ^ 0, param3);
           this.field_K = null;
           if (this.field_w) {
             var5_int = -param1 + (an.field_g - this.field_n);

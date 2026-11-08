@@ -216,7 +216,7 @@ abstract class hg {
         return mk.field_O.b((byte) -52);
     }
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 >= -97) {
           hg.a(48, true, false);
         }
@@ -229,7 +229,7 @@ abstract class hg {
     final static void a(boolean param0) {
         u.b(6);
         if (on.field_c != null) {
-          qm.a(on.field_c, (byte) 91);
+          UiComponent.attachInputListeners(on.field_c, (byte) 91);
         }
         mh.g((byte) 45);
         ng.a((byte) -23);
@@ -248,7 +248,7 @@ abstract class hg {
           }
           Bzip2State.a(md.field_b, mi.field_A, nj.field_d, ml.field_S, MouseWheelHandler.field_c, param1, j.field_f, th.field_k, 27874, MouseWheelHandler.field_d, IntrusiveNode.field_c, IntrusiveDeque.field_i);
           ArchiveProvider.field_a = qe.a(param2, "chatfilter", "lobby", 119);
-          cf.field_b[2] = ag.field_A;
+          cf.field_b[2] = TextButton.field_A;
           cf.field_b[1] = u.field_d;
           cf.field_b[0] = GzipDecoder.field_e;
           hj.a(ea.field_w, param0, 3896);

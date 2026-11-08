@@ -32,7 +32,7 @@ class IntrusiveNode {
         this.next = null;
     }
 
-    public static void c(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_f = null;
         if (param0 != -115) {
           IntrusiveNode.b(117);
@@ -66,10 +66,10 @@ class IntrusiveNode {
         int var11Lifetime1;
         var12 = ArcanistsMulti.field_G ? 1 : 0;
         try {
-          var13 = df.field_z;
+          var13 = UiContainer.field_z;
           var15 = var13;
           if (param0 > -37) {
-            IntrusiveNode.c((byte) -12);
+            IntrusiveNode.releaseStatics((byte) -12);
           }
           var2 = var15.readUnsignedByte((byte) -118);
           var3 = (nk) (pe.field_Lb.first(12623));
@@ -98,10 +98,10 @@ class IntrusiveNode {
                 var3.field_h = fo.field_a;
                 var3.field_k = kj.field_c;
                 var3.field_i = qj.field_g;
-                var3.field_s = oc.field_j;
-                PacketBuffer.a(-1, kj.field_c, var6_intLifetime1, fo.field_a, qj.field_g, oc.field_j);
+                var3.field_s = IntrusiveDequeCursor.field_j;
+                PacketBuffer.a(-1, kj.field_c, var6_intLifetime1, fo.field_a, qj.field_g, IntrusiveDequeCursor.field_j);
               } else {
-                PacketBuffer.a(-1, kj.field_c, var6_intLifetime1, fo.field_a, qj.field_g, oc.field_j);
+                PacketBuffer.a(-1, kj.field_c, var6_intLifetime1, fo.field_a, qj.field_g, IntrusiveDequeCursor.field_j);
               }
             }
             bi.a((byte) -113, var5);

@@ -342,7 +342,7 @@ final class v {
         int fieldTemp$1 = 0;
         int fieldTemp$0 = 0;
         if (param0 != 93) {
-          v.b(1);
+          v.releaseStatics(1);
           if (ka.field_m != null) {
             return;
           }
@@ -412,7 +412,7 @@ final class v {
         this.field_a.a(this.field_o, this.field_e, param0 ^ -4);
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 == -18033) {
           field_g = null;
           field_n = null;

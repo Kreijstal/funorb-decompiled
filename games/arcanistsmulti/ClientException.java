@@ -69,7 +69,7 @@ final class ClientException extends RuntimeException {
         he.field_e.writeByte(param5, (byte) -128);
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_b = null;
         if (param0 != -46) {
           return;

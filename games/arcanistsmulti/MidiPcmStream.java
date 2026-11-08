@@ -4,7 +4,7 @@
 final class MidiPcmStream extends PcmStream {
     private int[] field_p;
     private int[] field_R;
-    static oc field_D;
+    static IntrusiveDequeCursor field_D;
     private int[] field_J;
     private int[] field_k;
     private int[] field_q;
@@ -27,7 +27,7 @@ final class MidiPcmStream extends PcmStream {
     private int[] field_P;
     private int[] field_I;
     private int[] field_y;
-    static oc field_L;
+    static IntrusiveDequeCursor field_L;
     static int[] field_l;
     static String field_z;
     static String field_o;
@@ -70,7 +70,7 @@ final class MidiPcmStream extends PcmStream {
 
     final synchronized void a(int param0, byte param1) {
         if (param1 != -66) {
-          MidiPcmStream.d((byte) 98);
+          MidiPcmStream.releaseStatics((byte) 98);
         }
         this.field_v = param0;
     }
@@ -1000,7 +1000,7 @@ final class MidiPcmStream extends PcmStream {
     final synchronized void b(int param0, byte param1) {
         this.field_r = param0;
         if (param1 >= -84) {
-          field_D = (oc) null;
+          field_D = (IntrusiveDequeCursor) null;
         }
     }
 
@@ -1172,7 +1172,7 @@ final class MidiPcmStream extends PcmStream {
         }
     }
 
-    public static void d(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 < 49) {
           Sprite[] var2 = (Sprite[]) null;
           MidiPcmStream.a(-77, (BitmapFont) null, 44, (BitmapFont) null, 50, -28, 27, 16, 26, 104, 12, -16, (Sprite[]) null, -80, -75, (byte) -94, -15, (Sprite[]) null, 47, (Sprite[]) null, 87);
@@ -1368,10 +1368,10 @@ final class MidiPcmStream extends PcmStream {
 
     static {
         field_O = "Auto-respond to <%0>";
-        field_D = new oc();
+        field_D = new IntrusiveDequeCursor();
         field_l = new int[]{2, 20, 21, 6, 5, 9};
         field_z = "Reject <%0> from this game";
-        field_L = new oc();
+        field_L = new IntrusiveDequeCursor();
         field_o = "Now, clicking near yourself will cause an explosion of arcane energy. Try using it on the target. If you miss, move closer and try again.";
     }
 }

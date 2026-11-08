@@ -8,7 +8,7 @@ final class pn {
     static Sprite field_c;
     static Sprite field_e;
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_c = null;
         field_e = null;
         int var1 = -20 / ((34 - param0) / 57);
@@ -108,7 +108,7 @@ final class pn {
             i.field_i = CipherPacketBuffer.a(0, param1, param3);
           } else {
             stackIn_6_0 = 32517;
-            stackIn_7_1 = !(qm.field_u >= 13);
+            stackIn_7_1 = !(UiComponent.field_u >= 13);
             i.field_i = oj.a(stackIn_6_0, stackIn_7_1);
           }
           return;
@@ -137,15 +137,15 @@ final class pn {
           if (!pe.a((byte) -86, 1)) {
             return false;
           }
-          fj.field_h = df.field_z.readUnsignedByte((byte) -108);
-          df.field_z.position = 0;
+          fj.field_h = UiContainer.field_z.readUnsignedByte((byte) -108);
+          UiContainer.field_z.position = 0;
         }
         if (fj.field_h == -2) {
           if (!pe.a((byte) -86, 2)) {
             return false;
           }
-          fj.field_h = df.field_z.readUnsignedShort(-98);
-          df.field_z.position = 0;
+          fj.field_h = UiContainer.field_z.readUnsignedShort(-98);
+          UiContainer.field_z.position = 0;
         }
         if (param0 != -12564) {
           return false;

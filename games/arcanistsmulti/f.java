@@ -266,7 +266,7 @@ final class f extends IntrusiveNode {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_i = null;
         if (param0 != -1) {
           return;
@@ -281,7 +281,7 @@ final class f extends IntrusiveNode {
         fn.a(param9, param3, param7, param0, param5, param12, param10, param13, param6, 83);
         IntrusiveNodeHashTable.a(1, param10, param7);
         if (param4 >= -28) {
-          f.a(-1);
+          f.releaseStatics(-1);
         } else {
           kn.a(param1, param7, false, param3);
           return;

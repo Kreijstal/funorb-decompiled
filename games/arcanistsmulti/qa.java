@@ -35,7 +35,7 @@ final class qa extends IntrusiveNode {
         return var5;
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_i = null;
         field_l = null;
         field_h = null;
@@ -94,7 +94,7 @@ final class qa extends IntrusiveNode {
           }
           go.field_i = param2;
           if (go.field_i == 0) {
-            var3_int = hf.a(qg.field_a, oc.field_d, eb.field_a, mg.field_C, param1 + 25923);
+            var3_int = hf.a(qg.field_a, IntrusiveDequeCursor.field_d, eb.field_a, mg.field_C, param1 + 25923);
             var4 = 3 + var3_int;
             ib.field_v = new String[var4];
             oe.field_c = new int[var4];
@@ -113,7 +113,7 @@ final class qa extends IntrusiveNode {
             oe.field_c[var4 - 1] = 1;
             hn.field_k[1] = 5;
           } else if (go.field_i == 1) {
-            var3_int = hf.a(qg.field_a, oc.field_d, eb.field_a, mg.field_C, param1 + 25923);
+            var3_int = hf.a(qg.field_a, IntrusiveDequeCursor.field_d, eb.field_a, mg.field_C, param1 + 25923);
             var4 = 2 + var3_int;
             ib.field_v = new String[var4];
             oe.field_c = new int[var4];

@@ -8,7 +8,7 @@ final class um {
     static int[][] field_a;
     static String field_c;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 == 0) {
           field_e = null;
           field_a = (int[][]) null;

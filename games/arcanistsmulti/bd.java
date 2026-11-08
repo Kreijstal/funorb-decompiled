@@ -7,7 +7,7 @@ abstract class bd {
     static String field_d;
     static String field_b;
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_d = null;
         if (param0 != 0) {
           return;
@@ -31,7 +31,7 @@ abstract class bd {
               return true;
             }
             if (param0 >= -50) {
-              bd.b(117);
+              bd.releaseStatics(117);
             }
             return false;
           }

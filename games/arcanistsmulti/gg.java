@@ -13,7 +13,7 @@ final class gg {
     static String field_g;
     static MusicCrossfadeStream field_h;
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = null;
         field_h = null;
         field_i = null;

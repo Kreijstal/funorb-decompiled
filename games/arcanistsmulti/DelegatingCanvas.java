@@ -49,7 +49,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
                 qn.field_ob.field_B = true;
                 IntrusiveNodeHashTable.field_f = ic.field_c;
                 i.b(-127);
-                kl.field_A = 400;
+                ArrayWidgetContainer.field_A = 400;
               } else {
                 if (rm.field_k != 3) {
                   if (4 == rm.field_k) {
@@ -61,7 +61,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
                     if (co.a(-20675) <= 2) {
                       rm.field_k = 5;
                     }
-                    kl.field_A = 400;
+                    ArrayWidgetContainer.field_A = 400;
                   } else {
                     if (rm.field_k == 5) {
                       IntrusiveNodeHashTable.field_f = oi.field_b;
@@ -78,7 +78,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
                   if (ti.field_N == 12) {
                     rm.field_k = 4;
                   }
-                  kl.field_A = 500;
+                  ArrayWidgetContainer.field_A = 500;
                   IntrusiveNodeHashTable.field_f = we.field_a;
                 }
               }
@@ -91,7 +91,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
             IntrusiveNodeHashTable.field_f = vc.field_f;
             qn.field_ob.field_B = true;
             i.b(97);
-            kl.field_A = 400;
+            ArrayWidgetContainer.field_A = 400;
           }
         }
         if (mj.field_p == 1) {
@@ -102,13 +102,13 @@ final class DelegatingCanvas extends java.awt.Canvas {
             IntrusiveNodeHashTable.field_f = re.field_m;
             qn.field_ob.field_B = true;
             i.b(-115);
-            kl.field_A = 400;
+            ArrayWidgetContainer.field_A = 400;
           } else {
             if (rm.field_k == 1) {
               if (ti.field_N == 14) {
                 rm.field_k = 2;
               }
-              kl.field_A = 500;
+              ArrayWidgetContainer.field_A = 500;
               IntrusiveNodeHashTable.field_f = ie.field_Mb;
             } else {
               if (2 != rm.field_k) {
@@ -131,7 +131,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
                 if (co.a(param0 - 20672) <= 2) {
                   rm.field_k = 3;
                 }
-                kl.field_A = 400;
+                ArrayWidgetContainer.field_A = 400;
               }
             }
           }
@@ -144,7 +144,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
             IntrusiveNodeHashTable.field_f = td.field_D;
             qn.field_ob.field_B = true;
             i.b(-128);
-            kl.field_A = 400;
+            ArrayWidgetContainer.field_A = 400;
           } else {
             if (rm.field_k != 1) {
               if (rm.field_k != 2) {
@@ -179,21 +179,21 @@ final class DelegatingCanvas extends java.awt.Canvas {
                   if (co.a(-20675) <= 2) {
                     rm.field_k = 5;
                   }
-                  kl.field_A = 320;
+                  ArrayWidgetContainer.field_A = 320;
                 }
               } else {
                 IntrusiveNodeHashTable.field_f = nj.field_h;
                 if (0 != ti.field_N) {
                   rm.field_k = 1;
                 }
-                kl.field_A = 400;
+                ArrayWidgetContainer.field_A = 400;
                 if (qn.field_ob.field_s != -1000) {
                   rm.field_k = 3;
                 }
               }
             } else {
               IntrusiveNodeHashTable.field_f = mk.field_N;
-              kl.field_A = 500;
+              ArrayWidgetContainer.field_A = 500;
               if (ti.field_N == 0) {
                 rm.field_k = 2;
               }
@@ -222,7 +222,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
               if (co.a(param0 ^ 20672) <= 2) {
                 rm.field_k = 2;
               }
-              kl.field_A = 400;
+              ArrayWidgetContainer.field_A = 400;
             } else {
               if (2 == rm.field_k) {
                 IntrusiveNodeHashTable.field_f = be.field_h;
@@ -247,17 +247,17 @@ final class DelegatingCanvas extends java.awt.Canvas {
           }
           if (0 != rm.field_k) {
             if (rm.field_k == 1) {
-              IntrusiveNodeHashTable.field_f = ag.field_x;
+              IntrusiveNodeHashTable.field_f = TextButton.field_x;
               qn.field_ob.field_B = true;
               i.b(param0 - 113);
-              kl.field_A = 500;
+              ArrayWidgetContainer.field_A = 500;
             } else {
               if (2 == rm.field_k) {
                 IntrusiveNodeHashTable.field_f = gn.field_f;
                 if (rk.field_O.a(0, true).field_lb > 1300) {
                   rm.field_k = 3;
                 }
-                kl.field_A = 300;
+                ArrayWidgetContainer.field_A = 300;
                 i.b(-128);
               } else {
                 if (rm.field_k != 3) {
@@ -304,7 +304,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
                   if (ti.field_N == 10) {
                     rm.field_k = 4;
                   }
-                  kl.field_A = 320;
+                  ArrayWidgetContainer.field_A = 320;
                   IntrusiveNodeHashTable.field_f = e.field_D;
                 }
               }
@@ -313,7 +313,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
             qn.field_ob.field_B = true;
             IntrusiveNodeHashTable.field_f = qe.field_n;
             i.b(19);
-            kl.field_A = 400;
+            ArrayWidgetContainer.field_A = 400;
           }
           if (rk.field_O.a(0, true).field_db > 800) {
             rm.field_k = -Math.abs(rm.field_k);
@@ -329,7 +329,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
               }
             }
             i.b(param0 + 36);
-            kl.field_A = 400;
+            ArrayWidgetContainer.field_A = 400;
           }
         }
         if (mj.field_p == 5) {
@@ -343,7 +343,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
           }
           var4 = rk.field_O.a(qn.field_ob.field_bb, true);
           if (0 == rm.field_k) {
-            kl.field_A = 400;
+            ArrayWidgetContainer.field_A = 400;
             if (ti.field_N == 6) {
               rm.field_k = 1;
             }
@@ -414,7 +414,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
                   if (120 == ti.field_N) {
                     rm.field_k = 4;
                   }
-                  kl.field_A = 460;
+                  ArrayWidgetContainer.field_A = 460;
                 }
               }
             } else {
@@ -422,7 +422,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
               if (rk.field_O.b(12) >= 3) {
                 rm.field_k = 2;
               }
-              kl.field_A = 400;
+              ArrayWidgetContainer.field_A = 400;
             }
           }
           if (rk.field_O.a(0, true).field_db > 800) {
@@ -443,7 +443,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
                 rk.field_O.a(0, true).field_ib = 250;
               }
             }
-            kl.field_A = 400;
+            ArrayWidgetContainer.field_A = 400;
           }
           if (rk.field_O.a(0, true).field_ib < 250) {
             rm.field_k = -Math.abs(rm.field_k);
@@ -467,7 +467,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
             i.b(45);
             qn.field_ob.field_H = false;
             qn.field_ob.field_X = false;
-            kl.field_A = 400;
+            ArrayWidgetContainer.field_A = 400;
             qn.field_ob.field_g = false;
           } else {
             if (rm.field_k == 1) {
@@ -480,7 +480,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
             } else {
               if (2 != rm.field_k) {
                 if (3 == rm.field_k) {
-                  kl.field_A = 280;
+                  ArrayWidgetContainer.field_A = 280;
                   qn.field_ob.field_z = 6000;
                   IntrusiveNodeHashTable.field_f = jl.field_e;
                   qn.field_ob.field_B = true;
@@ -490,7 +490,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
                     qn.field_ob.field_z = 6000;
                     qn.field_ob.field_B = true;
                     IntrusiveNodeHashTable.field_f = bb.field_d;
-                    kl.field_A = 280;
+                    ArrayWidgetContainer.field_A = 280;
                     i.b(-18);
                   } else {
                     if (rm.field_k != 5 &&
@@ -529,12 +529,12 @@ final class DelegatingCanvas extends java.awt.Canvas {
           qn.field_ob.field_B = true;
         } else {
           if (!param1) {
-            IntrusiveNodeHashTable.field_f = oc.field_h;
+            IntrusiveNodeHashTable.field_f = IntrusiveDequeCursor.field_h;
           }
         }
         var5 = rk.field_O.a(qn.field_ob.field_bb, true);
         if (rm.field_k < 0) {
-          kl.field_A = 400;
+          ArrayWidgetContainer.field_A = 400;
           if (var5 != null &&
             var5.field_jb != 0 ||
             ti.field_N != -1) {
@@ -587,7 +587,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
           }
           var5 = (CharSequence) ((Object) param2);
           var4 = go.a(var5, (byte) -82);
-          param0.d(var4.length, (byte) -124);
+          param0.writeUnsignedSmart(var4.length, (byte) -124);
           param0.position = param0.position + kh.field_g.a(param0.payload, var4.length, var4, param0.position, 1, 0);
           stackIn_3_0 = -var3_int + param0.position;
           return stackIn_3_0;
@@ -689,7 +689,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_c = null;
         if (param0 <= 24) {
           field_f = 116;

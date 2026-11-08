@@ -9,7 +9,7 @@ class DualLinkNode extends IntrusiveNode {
     static Sprite[] field_j;
     DualLinkNode secondaryNext;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_h = null;
         field_j = null;
         if (param0 <= 17) {

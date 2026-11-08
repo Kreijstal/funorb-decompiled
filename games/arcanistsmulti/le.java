@@ -73,10 +73,10 @@ final class le {
         RuntimeException var1 = null;
         var2 = ArcanistsMulti.field_G ? 1 : 0;
         try {
-          ClientException.field_b.a(mk.field_S, dn.field_Jb, true, (byte) -100);
+          ClientException.field_b.processPointerInput(mk.field_S, dn.field_Jb, true, (byte) -100);
           ClientException.field_b.i(4);
           while (ib.b(false)) {
-            ClientException.field_b.a(ed.field_Bb, (byte) -89, IntrusiveDeque.field_d);
+            ClientException.field_b.processKey(ed.field_Bb, (byte) -89, IntrusiveDeque.field_d);
           }
           if (qg.field_c != -1) {
             var1_int = qg.field_c;
@@ -96,7 +96,7 @@ final class le {
             stackIn_18_0 = 1;
             return stackIn_18_0;
           }
-          if (!wn.field_z.a((byte) -88)) {
+          if (!SingleChildContainer.field_z.a((byte) -88)) {
             stackIn_21_0 = 1;
             return stackIn_21_0;
           }
@@ -161,7 +161,7 @@ final class le {
           var5 = new hl();
           var5.field_k = param1;
           var6 = new byte[param0];
-          param2.a((byte) 123, 0, var6, param0);
+          param2.readBytes((byte) 123, 0, var6, param0);
           var5.field_j = new PacketBuffer(var6);
           var5.field_g = SpriteState.field_v;
           if (param3) {
@@ -1126,7 +1126,7 @@ final class le {
         int var7Lifetime2;
         var11 = ArcanistsMulti.field_G ? 1 : 0;
         try {
-          kl.field_A = 320;
+          ArrayWidgetContainer.field_A = 320;
           this.field_H = true;
           this.field_B = false;
           this.field_X = true;
@@ -1170,7 +1170,7 @@ final class le {
                 }
                 IntrusiveNodeHashTable.field_f = tj.a(-44, new String[]{Integer.toString(var6)}, IntrusiveNodeHashTable.field_f);
               }
-              kl.field_A = 270;
+              ArrayWidgetContainer.field_A = 270;
             }
           }
           if (qg.a(-114)) {
@@ -2017,7 +2017,7 @@ final class le {
           if (param0 >= -75) {
             this.g(66);
           }
-          stackIn_3_0 = this.a(df.field_z, on.field_g, 0, fj.field_h);
+          stackIn_3_0 = this.a(UiContainer.field_z, on.field_g, 0, fj.field_h);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -4849,7 +4849,7 @@ final class le {
           this.field_cb = new IntrusiveDeque();
           if (!this.field_ab) {
             k.a(this, true);
-            df.a((byte) 83, 0);
+            UiContainer.a((byte) 83, 0);
             this.field_V.field_sb = cf.field_h;
             this.field_V.field_rb = FullscreenFocusCanvas.field_g;
           } else {

@@ -5,7 +5,7 @@ final class ki extends rl {
     static String field_x;
     static int field_q;
     static String field_w;
-    static oc field_v;
+    static IntrusiveDequeCursor field_v;
     static String field_u;
     static String field_t;
     static ResourceArchive field_s;
@@ -46,11 +46,11 @@ final class ki extends rl {
         }
     }
 
-    ki(rn param0) {
+    ki(EditableTextWidget param0) {
         super(param0);
     }
 
-    public static void d(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_x = null;
         field_s = null;
         field_v = null;
@@ -105,7 +105,7 @@ final class ki extends rl {
     static {
         field_x = " turns left";
         field_w = "Unfortunately there was a focus problem while setting fullscreen mode. You could try disabling any multiple monitor drivers or window enhancements, if you have any enabled.";
-        field_v = new oc();
+        field_v = new IntrusiveDequeCursor();
         field_t = "Cancel";
         field_u = "Quit to website";
     }

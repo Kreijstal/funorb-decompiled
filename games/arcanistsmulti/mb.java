@@ -21,7 +21,7 @@ final class mb extends mh {
     static String field_N;
     static int field_bb;
 
-    final boolean a(byte param0, int param1, int param2, int param3, int param4) {
+    final boolean containsPoint(byte param0, int param1, int param2, int param3, int param4) {
         this.field_Q = -1;
         if (!this.field_X.field_G) {
           return false;
@@ -30,7 +30,7 @@ final class mb extends mh {
           return false;
         }
         if (this.field_W == null) {
-          return super.a((byte) -47, param1, param2, param3, param4);
+          return super.containsPoint((byte) -47, param1, param2, param3, param4);
         }
         param4 = param4 - (this.field_n + param3);
         param2 = param2 - (param1 + this.field_j);
@@ -57,7 +57,7 @@ final class mb extends mh {
         return true;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_N = null;
         field_cb = null;
         field_L = (long[][]) null;
@@ -105,8 +105,8 @@ final class mb extends mh {
         return ((int[]) (((Object[]) (this.field_W[1]))[7]))[21];
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
-        super.a(-105, param1, param2, param3);
+    final void activate(int param0, int param1, int param2, int param3) {
+        super.activate(-105, param1, param2, param3);
         param1 = param1 - this.field_n;
         if (param0 >= -99) {
           return;
@@ -136,7 +136,7 @@ final class mb extends mh {
 
     final Object g(int param0) {
         if (param0 < 125) {
-          this.a((byte) -47, ((int[]) (this.field_W[4]))[0], ((int[]) (this.field_W[3]))[0], 2);
+          this.drawLayer((byte) -47, ((int[]) (this.field_W[4]))[0], ((int[]) (this.field_W[3]))[0], 2);
           if (this.field_W == null) {
             return null;
           }
@@ -154,7 +154,7 @@ final class mb extends mh {
         return null;
     }
 
-    final void a(byte param0, int param1, int param2, int param3) {
+    final void drawLayer(byte param0, int param1, int param2, int param3) {
         int var8 = 0;
         Object var9 = null;
         String var10 = null;

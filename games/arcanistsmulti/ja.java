@@ -12,7 +12,7 @@ final class ja extends rl {
     static String field_w;
     static String field_r;
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         field_r = null;
         field_t = null;
         if (param0 != 0) {
@@ -114,7 +114,7 @@ final class ja extends rl {
         return lf.field_b.field_Cb;
     }
 
-    ja(rn param0, rn param1) {
+    ja(EditableTextWidget param0, EditableTextWidget param1) {
         super(param0);
         this.field_x = false;
         this.field_q = "";

@@ -105,7 +105,7 @@ final class qc {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_c = null;
         field_f = null;
         field_b = null;

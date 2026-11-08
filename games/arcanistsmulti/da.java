@@ -48,7 +48,7 @@ final class da {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_d = null;
         int var1 = -45 % ((-64 - param0) / 54);
         field_b = null;
@@ -61,7 +61,7 @@ final class da {
         ff.field_c = tj.field_t.textWidth(ce.field_g[20]);
         int var1 = tj.field_t.textWidth(ce.field_g[21]);
         if (param0 != -101) {
-          da.a(6);
+          da.releaseStatics(6);
           if (ff.field_c < var1) {
             ff.field_c = var1;
             return;

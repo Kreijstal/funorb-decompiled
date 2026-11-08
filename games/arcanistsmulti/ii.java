@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ii implements pf {
+final class ii implements WidgetPainter {
     static boolean field_f;
     static kc field_b;
     static Sprite field_d;
@@ -9,7 +9,7 @@ final class ii implements pf {
     static int field_a;
     static String field_e;
 
-    public final void a(qm param0, int param1, int param2, int param3, boolean param4) {
+    public final void a(UiComponent param0, int param1, int param2, int param3, boolean param4) {
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
@@ -26,11 +26,11 @@ final class ii implements pf {
           var7 = param3 + param0.field_j;
           kh.a(param0.field_v, var6_int, var7, param0.field_k, param1 - 5592532);
           var8 = qk.field_lb[1];
-          if (param0 instanceof ag &&
-            ((ag) (param0)).field_z) {
+          if (param0 instanceof TextButton &&
+            ((TextButton) (param0)).field_z) {
             var8.drawAdditive((-var8.field_n + param0.field_v >> 1) + 1 + var6_int, (param0.field_k - var8.field_w >> 1) + (var7 + 1), 256);
           }
-          if (!param0.d(param1 ^ -5594391)) {
+          if (!param0.isFocused(param1 ^ -5594391)) {
             return;
           }
           oj.a(param1 - 5624576, var7 + 2, var6_int + 2, param0.field_k - 4, -4 + param0.field_v);
@@ -135,7 +135,7 @@ final class ii implements pf {
         }
     }
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_b = null;
         field_e = null;
         field_d = null;

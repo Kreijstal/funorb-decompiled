@@ -5,7 +5,7 @@ final class u {
     private byte[] field_a;
     static boolean field_k;
     static int[] field_h;
-    static oc field_f;
+    static IntrusiveDequeCursor field_f;
     private int[] field_c;
     static int field_b;
     private int[] field_e;
@@ -64,7 +64,7 @@ final class u {
           var7_int = 0;
           var8 = param5;
           if (param1 > -113) {
-            u.a(-33);
+            u.releaseStatics(-33);
           }
           scanLoop1: while (true) {
             var9 = param4[var8];
@@ -421,7 +421,7 @@ final class u {
           if (param0 > -45) {
             return;
           }
-          var1 = df.field_z;
+          var1 = UiContainer.field_z;
           var2 = ((PacketBuffer) ((Object) var1)).readUnsignedByte((byte) -110);
           if (var2 != 0 &&
             var2 != 1 &&
@@ -727,7 +727,7 @@ final class u {
         if (ka.field_m == null) {
           return;
         }
-        qm.a(ka.field_m, (byte) 122);
+        UiComponent.attachInputListeners(ka.field_m, (byte) 122);
         ka.field_m.a(fi.field_d, (byte) 67);
         ka.field_m = null;
         if (ob.field_Y != null) {
@@ -736,7 +736,7 @@ final class u {
         on.field_c.requestFocus();
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 1) {
           field_k = true;
         }
@@ -935,7 +935,7 @@ final class u {
         field_k = false;
         field_h = new int[]{76, 77, 78};
         field_m = "Armageddon counter";
-        field_f = new oc();
+        field_f = new IntrusiveDequeCursor();
         field_i = 0;
         field_d = "Friends";
     }

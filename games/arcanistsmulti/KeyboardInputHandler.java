@@ -15,7 +15,7 @@ final class KeyboardInputHandler implements java.awt.event.KeyListener, java.awt
     static Sprite[] field_c;
     static String field_i;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != -733) {
           return;
         }

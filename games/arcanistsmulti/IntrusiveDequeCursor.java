@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class oc {
+final class IntrusiveDequeCursor {
     static aj field_b;
     static int field_j;
     static String field_h;
@@ -13,7 +13,7 @@ final class oc {
     static boolean field_g;
     static char[] field_a;
 
-    final IntrusiveNode d(int param0) {
+    final IntrusiveNode next(int param0) {
         IntrusiveNode var2 = this.field_c;
         if (this.field_e.sentinel == var2) {
           this.field_c = null;
@@ -26,7 +26,7 @@ final class oc {
         return var2;
     }
 
-    final IntrusiveNode a(boolean param0, IntrusiveNode param1) {
+    final IntrusiveNode startForwardFrom(boolean param0, IntrusiveNode param1) {
         IntrusiveNode var3 = null;
         RuntimeException var3_ref = null;
         IntrusiveNode stackIn_2_0 = null;
@@ -71,7 +71,7 @@ final class oc {
     final static boolean a(int param0) {
         boolean stackIn_9_0 = false;
         if (param0 != -15576) {
-          oc.a(-109, -10, 3, -53, 6, 89);
+          IntrusiveDequeCursor.a(-109, -10, 3, -53, 6, 89);
         }
         boolean decompiledFrameRemainder0 = true;
         if (ih.field_f >= 20 &&
@@ -86,7 +86,7 @@ final class oc {
         return stackIn_9_0;
     }
 
-    final IntrusiveNode c(boolean param0) {
+    final IntrusiveNode previous(boolean param0) {
         if (!param0) {
           this.field_e = (IntrusiveDeque) null;
         }
@@ -99,7 +99,7 @@ final class oc {
         return var2;
     }
 
-    final void a(byte param0, IntrusiveDeque param1) {
+    final void setDeque(byte param0, IntrusiveDeque param1) {
         try {
           if (param0 < 24) {
             field_d = (String) null;
@@ -110,7 +110,7 @@ final class oc {
         }
     }
 
-    final IntrusiveNode c(int param0) {
+    final IntrusiveNode last(int param0) {
         int var3 = -11 / ((param0 - 41) / 60);
         IntrusiveNode var2 = this.field_e.sentinel.previous;
         if (this.field_e.sentinel == var2) {
@@ -128,7 +128,7 @@ final class oc {
         field_f = null;
         field_b = null;
         if (param0) {
-          oc.a(-17, -79, -45, -100, -45, 122);
+          IntrusiveDequeCursor.a(-17, -79, -45, -100, -45, 122);
         }
     }
 
@@ -140,13 +140,13 @@ final class oc {
         dd.field_h = null;
         eo.field_c = null;
         if (param0) {
-          oc.a(-89);
+          IntrusiveDequeCursor.a(-89);
         }
     }
 
-    final IntrusiveNode b(int param0) {
+    final IntrusiveNode first(int param0) {
         if (param0 > -30) {
-          oc.a(-35);
+          IntrusiveDequeCursor.a(-35);
         }
         IntrusiveNode var2 = this.field_e.sentinel.next;
         if (this.field_e.sentinel == var2) {
@@ -176,12 +176,12 @@ final class oc {
           lj.field_t.a(var6_int - 6, 3, 3, n.field_g.field_I - 6, (byte) -120);
           var7 = -5 + lj.field_t.field_I;
           ch.field_d.a(2 + (485 + param3) + param1, 5, -param4 + var7, param4, (byte) -120);
-          wn.field_D.a(-sa.field_Cb.field_x - param3 + ch.field_d.field_x, param3, 0, param4, (byte) -120);
-          sa.field_Cb.a(sa.field_Cb.field_x, param3 + wn.field_D.field_x, 0, param4, (byte) -120);
+          SingleChildContainer.field_D.a(-sa.field_Cb.field_x - param3 + ch.field_d.field_x, param3, 0, param4, (byte) -120);
+          sa.field_Cb.a(sa.field_Cb.field_x, param3 + SingleChildContainer.field_D.field_x, 0, param4, (byte) -120);
           var7 = var7 - (2 + param4);
           qo.field_f.a(5, param1, param1 + param3 + 487, false, 5, var7 - 5, 2);
           if (ln.field_U != null) {
-            ln.field_U.a(qo.field_f.field_I, qo.field_f.field_db, qo.field_f.field_x, qo.field_f.field_T, -104);
+            ln.field_U.setBounds(qo.field_f.field_I, qo.field_f.field_db, qo.field_f.field_x, qo.field_f.field_T, -104);
           }
           var8 = -param3 + (n.field_g.field_x - var6_int);
           var9 = var8 / 2;
@@ -204,7 +204,7 @@ final class oc {
             }
           }
           if (param0 <= 79) {
-            oc.a(true);
+            IntrusiveDequeCursor.a(true);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -214,7 +214,7 @@ final class oc {
         }
     }
 
-    final IntrusiveNode a(int param0, IntrusiveNode param1) {
+    final IntrusiveNode startBackwardFrom(int param0, IntrusiveNode param1) {
         IntrusiveNode var3 = null;
         RuntimeException var3_ref = null;
         Object stackIn_6_0 = null;
@@ -254,10 +254,10 @@ final class oc {
         }
     }
 
-    public oc() {
+    public IntrusiveDequeCursor() {
     }
 
-    oc(IntrusiveDeque param0) {
+    IntrusiveDequeCursor(IntrusiveDeque param0) {
         try {
           this.field_e = param0;
         } catch (RuntimeException runtimeException) {

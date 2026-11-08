@@ -10,7 +10,7 @@ final class dg extends rl {
     static boolean field_s;
     private boolean field_w;
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 == -1) {
           field_t = null;
           field_q = null;
@@ -101,7 +101,7 @@ final class dg extends rl {
         return param0 & param1;
     }
 
-    dg(rn param0) {
+    dg(EditableTextWidget param0) {
         super(param0);
         this.field_w = false;
     }

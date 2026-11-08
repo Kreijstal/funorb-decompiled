@@ -217,7 +217,7 @@ final class in extends kc {
         var19Lifetime1.field_I = var8;
     }
 
-    public static void g(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_Jb = null;
         field_Nb = null;
         field_Kb = null;

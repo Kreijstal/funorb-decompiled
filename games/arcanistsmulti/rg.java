@@ -842,7 +842,7 @@ final class rg {
                 }
                 var2 = tj.a("reqachievement", param1 - 128);
                 if (null != var2) {
-                  kl.field_y = sc.a((byte) 119, var2);
+                  ArrayWidgetContainer.field_y = sc.a((byte) 119, var2);
                 }
                 var2 = tj.a("needthetimebook", -125);
                 if (null != var2) {
@@ -2692,7 +2692,7 @@ final class rg {
                 }
                 var2 = tj.a("stormbook", -101);
                 if (var2 != null) {
-                  df.field_x = sc.a((byte) 120, var2);
+                  UiContainer.field_x = sc.a((byte) 120, var2);
                 }
                 var2 = tj.a("stonedisc", -99);
                 if (var2 != null) {
@@ -2871,7 +2871,7 @@ final class rg {
                 }
                 var2 = tj.a("winnerdash", -84);
                 if (null != var2) {
-                  rn.field_K = sc.a((byte) 116, var2);
+                  EditableTextWidget.field_K = sc.a((byte) 116, var2);
                 }
                 var2 = tj.a("pressstart", -94);
                 if (null != var2) {
@@ -2895,7 +2895,7 @@ final class rg {
                 }
                 var2 = tj.a("ins52", -111);
                 if (var2 != null) {
-                  wn.field_A = sc.a((byte) 127, var2);
+                  SingleChildContainer.field_A = sc.a((byte) 127, var2);
                 }
                 var2 = tj.a("ins51", param1 ^ -93);
                 if (null != var2) {
@@ -2951,7 +2951,7 @@ final class rg {
                 }
                 var2 = tj.a("spacewand", param1 - 97);
                 if (null != var2) {
-                  wn.field_x = sc.a((byte) 118, var2);
+                  SingleChildContainer.field_x = sc.a((byte) 118, var2);
                 }
                 var2 = tj.a("ins39", param1 - 122);
                 if (null != var2) {
@@ -3087,7 +3087,7 @@ final class rg {
                 }
                 var2 = tj.a("ins7", -79);
                 if (var2 != null) {
-                  qm.field_l = sc.a((byte) 105, var2);
+                  UiComponent.field_l = sc.a((byte) 105, var2);
                 }
                 var2 = tj.a("ins6", -94);
                 if (var2 != null) {
@@ -3191,7 +3191,7 @@ final class rg {
                 }
                 var2 = tj.a("tut52", -107);
                 if (var2 != null) {
-                  oc.field_h = sc.a((byte) 123, var2);
+                  IntrusiveDequeCursor.field_h = sc.a((byte) 123, var2);
                 }
                 var2 = tj.a("tut51", param1 - 121);
                 if (var2 != null) {
@@ -3299,7 +3299,7 @@ final class rg {
                 }
                 var2 = tj.a("tut25", -115);
                 if (null != var2) {
-                  ag.field_x = sc.a((byte) 110, var2);
+                  TextButton.field_x = sc.a((byte) 110, var2);
                 }
                 var2 = tj.a("tut24", -88);
                 if (var2 != null) {
@@ -3689,7 +3689,7 @@ final class rg {
                 }
                 var2 = tj.a("whensummoning", -121);
                 if (var2 != null) {
-                  kl.field_F = sc.a((byte) 109, var2);
+                  ArrayWidgetContainer.field_F = sc.a((byte) 109, var2);
                 }
                 var2 = tj.a("optionscreen", param1 - 110);
                 if (var2 != null) {

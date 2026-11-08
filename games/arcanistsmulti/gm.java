@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gm implements pf {
+final class gm implements WidgetPainter {
     static int[] field_g;
     static String field_i;
     private BitmapFont field_m;
@@ -17,7 +17,7 @@ final class gm implements pf {
     static String field_b;
     static boolean field_c;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_n = null;
         field_j = null;
         field_i = null;
@@ -49,7 +49,7 @@ final class gm implements pf {
         throw new IllegalStateException("NGR");
     }
 
-    public final void a(qm param0, int param1, int param2, int param3, boolean param4) {
+    public final void a(UiComponent param0, int param1, int param2, int param3, boolean param4) {
         int stackIn_5_0 = 0;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
@@ -65,14 +65,14 @@ final class gm implements pf {
         var11 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           if (!param0.field_w &&
-            !param0.d(-2116)) {
+            !param0.isFocused(-2116)) {
             stackIn_5_0 = 2188450;
           } else {
             stackIn_5_0 = 3249872;
           }
           var6_int = stackIn_5_0;
           this.field_m.drawParagraph("<u=" + Integer.toString(var6_int, 16) + ">" + param0.field_g + "</u>", param2 + param0.field_n, param3 + param0.field_j, param0.field_v, param0.field_k, var6_int, -1, this.field_k, this.field_e, this.field_m.field_C + this.field_m.field_m);
-          if (param0.d(-2116)) {
+          if (param0.isFocused(-2116)) {
             var7 = this.field_m.textWidth(param0.field_g);
             var8 = this.field_m.field_C + this.field_m.field_m;
             var9 = param0.field_n + param2;

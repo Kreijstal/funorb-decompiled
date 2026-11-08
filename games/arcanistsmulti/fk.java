@@ -11,7 +11,7 @@ final class fk extends IntrusiveNode {
     static int[] field_h;
     static String field_j;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != -1333592895) {
           field_j = (String) null;
         }
@@ -245,7 +245,7 @@ final class fk extends IntrusiveNode {
           if (param0 != -20) {
             return;
           }
-          var13 = df.field_z;
+          var13 = UiContainer.field_z;
           var2 = var13.readUnsignedByte((byte) 54);
           if (var2 == 0) {
             var10 = la.b((byte) 12);
@@ -365,7 +365,7 @@ final class fk extends IntrusiveNode {
           var8 = ql.a(param0 + 10, 20, var6, var3);
           SoftwareRasterizer.drawRectangle(var7, var8, var5, var6, 0);
           SoftwareRasterizer.fillRectangle(var7 + 1, 1 + var8, -2 + var5, -2 + var6, 16777088);
-          IntrusiveNode.field_c.field_Z.drawParagraph(param1, var7 + 3, 1 + (var8 + oc.field_i - IntrusiveNode.field_c.field_Z.field_C), 500, 1000, 0, -1, param0, 0, ImageProducerRasterBuffer.field_r);
+          IntrusiveNode.field_c.field_Z.drawParagraph(param1, var7 + 3, 1 + (var8 + IntrusiveDequeCursor.field_i - IntrusiveNode.field_c.field_Z.field_C), 500, 1000, 0, -1, param0, 0, ImageProducerRasterBuffer.field_r);
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "fk.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

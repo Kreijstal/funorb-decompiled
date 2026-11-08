@@ -25,7 +25,7 @@ final class w extends kc {
           if (null != eo.field_c &&
             eo.field_c.a(param4, param2, param6, param3, param0 ^ 12815)) {
             param4 = false;
-            oc.a(false);
+            IntrusiveDequeCursor.a(false);
           }
           tk.a(0, param4, param3);
           ve.a(param1, param4, (byte) 59);
@@ -407,7 +407,7 @@ final class w extends kc {
         return true;
     }
 
-    public static void g(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_Qb = null;
         field_Jb = null;
         if (param0 <= 80) {

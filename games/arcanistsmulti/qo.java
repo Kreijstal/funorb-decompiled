@@ -17,12 +17,12 @@ final class qo {
         int var5 = var4.position;
         var4.writeByte(6, (byte) -32);
         if (param1 < -61) {
-          var4.a(param2, (byte) 72);
+          var4.writeLong(param2, (byte) 72);
           var4.writeByteLengthAtMark(var4.position - var5, (byte) 43);
           return;
         }
         field_e = -61;
-        var4.a(param2, (byte) 72);
+        var4.writeLong(param2, (byte) 72);
         var4.writeByteLengthAtMark(var4.position - var5, (byte) 43);
     }
 
@@ -47,30 +47,30 @@ final class qo {
         int var4Lifetime1;
         jf.field_a.position = 0;
         jf.field_a.writeByte(12, (byte) -45);
-        jf.field_a.writeInt(ag.field_D.nextInt(), (byte) -101);
-        jf.field_a.writeInt(ag.field_D.nextInt(), (byte) -101);
+        jf.field_a.writeInt(TextButton.field_D.nextInt(), (byte) -101);
+        jf.field_a.writeInt(TextButton.field_D.nextInt(), (byte) -101);
         jf.field_a.writeByte(param0, (byte) -10);
         if (param3 < -125) {
           jf.field_a.writeByte(param1, (byte) -50);
           jf.field_a.writeShort(param2, (byte) -66);
-          jf.field_a.a(q.field_K, (byte) 98, nl.field_Jb);
+          jf.field_a.rsaEncrypt(q.field_K, (byte) 98, nl.field_Jb);
           he.field_e.writeOpcode((byte) -25, 18);
           fieldTemp$0 = he.field_e.position + 1;
           he.field_e.position = he.field_e.position + 1;
           var4 = fieldTemp$0;
-          he.field_e.a(jf.field_a.payload, 0, (byte) -86, jf.field_a.position);
+          he.field_e.writeBytes(jf.field_a.payload, 0, (byte) -86, jf.field_a.position);
           he.field_e.writeByteLengthAtMark(he.field_e.position - var4, (byte) 43);
           return;
         }
         qo.a(5, 14, 54, (byte) 68);
         jf.field_a.writeByte(param1, (byte) -50);
         jf.field_a.writeShort(param2, (byte) -66);
-        jf.field_a.a(q.field_K, (byte) 98, nl.field_Jb);
+        jf.field_a.rsaEncrypt(q.field_K, (byte) 98, nl.field_Jb);
         he.field_e.writeOpcode((byte) -25, 18);
         int fieldTemp$1 = he.field_e.position + 1;
         he.field_e.position = he.field_e.position + 1;
         var4Lifetime1 = fieldTemp$1;
-        he.field_e.a(jf.field_a.payload, 0, (byte) -86, jf.field_a.position);
+        he.field_e.writeBytes(jf.field_a.payload, 0, (byte) -86, jf.field_a.position);
         he.field_e.writeByteLengthAtMark(he.field_e.position - var4Lifetime1, (byte) 43);
     }
 
@@ -108,7 +108,7 @@ final class qo {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 == 6) {
           field_g = null;
           field_d = null;

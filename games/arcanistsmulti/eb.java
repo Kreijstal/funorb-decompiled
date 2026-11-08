@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class eb implements pf {
+final class eb implements WidgetPainter {
     static mc[] field_b;
     static Sprite field_d;
     static String field_c;
@@ -26,7 +26,7 @@ final class eb implements pf {
           fj.a(-26971, var6, param3);
           return var6;
         }
-        eb.a((byte) -57);
+        eb.releaseStatics((byte) -57);
         while (var4 != null) {
           if (param2 == var4.field_p) {
             return var4;
@@ -42,7 +42,7 @@ final class eb implements pf {
         return var7;
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_b = null;
         field_c = null;
         if (param0 != 49) {
@@ -51,7 +51,7 @@ final class eb implements pf {
         field_d = null;
     }
 
-    public final void a(qm param0, int param1, int param2, int param3, boolean param4) {
+    public final void a(UiComponent param0, int param1, int param2, int param3, boolean param4) {
         try {
           if (param1 != 5592405) {
             jg var7 = (jg) null;

@@ -40,7 +40,7 @@ final class GzipDecoder {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_e = null;
         field_c = null;
         int var1 = 80 % ((8 - param0) / 56);

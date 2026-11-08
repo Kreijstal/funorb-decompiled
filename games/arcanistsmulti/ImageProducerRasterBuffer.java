@@ -12,13 +12,13 @@ final class ImageProducerRasterBuffer extends CanvasRasterBuffer implements java
     private java.awt.image.ImageConsumer field_p;
     static int field_r;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_t = null;
         field_q = null;
         field_n = null;
         field_s = null;
         if (param0 != -109) {
-          ImageProducerRasterBuffer.a((byte) -48);
+          ImageProducerRasterBuffer.releaseStatics((byte) -48);
         }
     }
 
@@ -101,7 +101,7 @@ final class ImageProducerRasterBuffer extends CanvasRasterBuffer implements java
         if (param0 != 3236) {
           return false;
         }
-        return !wn.field_z.a((byte) -84) ? true : false;
+        return !SingleChildContainer.field_z.a((byte) -84) ? true : false;
     }
 
     public final synchronized void removeConsumer(java.awt.image.ImageConsumer param0) {

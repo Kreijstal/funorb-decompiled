@@ -16,15 +16,15 @@ final class an extends bd {
 
     final void a(PacketBuffer param0, int param1) {
         try {
-          param0.a(this.field_k, (byte) -89);
+          param0.writeVersionedString(this.field_k, (byte) -89);
           int var3_int = 124 / ((-35 - param1) / 36);
-          param0.a((byte) 7, this.field_i);
+          param0.writeBase38Name((byte) 7, this.field_i);
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "an.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_e = null;
         field_n = null;
         field_o = null;

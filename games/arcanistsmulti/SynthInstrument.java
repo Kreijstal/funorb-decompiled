@@ -301,16 +301,16 @@ final class SynthInstrument {
           this.field_h.decode(param0);
         }
         for (var3 = 0; var3 < 10; var3++) {
-          var4 = param0.f(128);
+          var4 = param0.readUnsignedSmart(128);
           if (var4 == 0) {
             break;
           }
           this.field_k[var3] = var4;
-          this.field_x[var3] = param0.i(-1);
-          this.field_a[var3] = param0.f(128);
+          this.field_x[var3] = param0.readSignedSmart(-1);
+          this.field_a[var3] = param0.readUnsignedSmart(128);
         }
-        this.field_n = param0.f(128);
-        this.field_w = param0.f(128);
+        this.field_n = param0.readUnsignedSmart(128);
+        this.field_w = param0.readUnsignedSmart(128);
         this.field_s = param0.readUnsignedShort(-98);
         this.field_p = param0.readUnsignedShort(-98);
         this.field_q = new AudioFilter();

@@ -186,11 +186,11 @@ final class fj extends IntrusiveNode {
         String var1 = ho.b((byte) 103);
         wh.field_f = new e(var1, (String) null, true, false, false);
         ClientException.field_b.b(g.field_e, 15637);
-        g.field_e.a((byte) -92, (qm) (wh.field_f));
+        g.field_e.a((byte) -92, (UiComponent) (wh.field_f));
         g.field_e.a(111);
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 <= 74) {
           return;
         }

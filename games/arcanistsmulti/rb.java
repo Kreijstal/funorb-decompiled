@@ -14,7 +14,7 @@ final class rb extends IntrusiveNode {
     int field_h;
 
     final static void a(String param0, boolean param1, float param2) {
-        kl.field_C = param0;
+        ArrayWidgetContainer.field_C = param0;
         if (param1) {
           return;
         }
@@ -251,7 +251,7 @@ final class rb extends IntrusiveNode {
         byte[] var12 = null;
         var6 = ArcanistsMulti.field_G ? 1 : 0;
         try {
-          var10 = df.field_z;
+          var10 = UiContainer.field_z;
           var2 = var10.readUnsignedByte((byte) 81);
           if (param0 > -22) {
             var7 = (String) null;
@@ -292,10 +292,10 @@ final class rb extends IntrusiveNode {
             var11 = var12;
             var8 = var11;
             var5 = var8;
-            var10.a((byte) 100, 0, var12, var4);
+            var10.readBytes((byte) 100, 0, var12, var4);
           }
           var10.position = var10.position + 4;
-          if (!var10.c(true)) {
+          if (!var10.verifyCrc32(true)) {
             ka.b(false);
             return;
           }
@@ -312,14 +312,14 @@ final class rb extends IntrusiveNode {
 
     final static void a(int param0, String param1, int param2, String param3, int param4) {
         try {
-          wn.field_D.field_x = wn.field_D.field_x + sa.field_Cb.field_x;
-          wn.field_D.field_ob = param0;
-          wn.field_D.field_L = param3;
-          wn.field_D.field_rb = param1;
+          SingleChildContainer.field_D.field_x = SingleChildContainer.field_D.field_x + sa.field_Cb.field_x;
+          SingleChildContainer.field_D.field_ob = param0;
+          SingleChildContainer.field_D.field_L = param3;
+          SingleChildContainer.field_D.field_rb = param1;
           sa.field_Cb.field_T = sa.field_Cb.field_T + sa.field_Cb.field_x;
           int var5_int = 76 % ((-4 - param4) / 63);
           sa.field_Cb.field_x = param2;
-          wn.field_D.field_x = wn.field_D.field_x - sa.field_Cb.field_x;
+          SingleChildContainer.field_D.field_x = SingleChildContainer.field_D.field_x - sa.field_Cb.field_x;
           sa.field_Cb.field_T = sa.field_Cb.field_T - sa.field_Cb.field_x;
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "rb.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');

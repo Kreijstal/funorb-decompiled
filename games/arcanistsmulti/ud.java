@@ -32,7 +32,7 @@ abstract class ud extends GameAppletShell {
         nh.a(false, gm.field_f);
         na.a(this.field_B, param2, this.field_l, 0, this.field_s, this.field_q, param4, this.field_x, gm.field_f, 5000, this.field_v, this.field_C, fi.field_d, param0);
         ve.a((byte) -81, gm.field_f, this.field_C, this.field_x, fi.field_d, param2, this.field_B, this.field_l, this.field_q);
-        ag.a((byte) -60);
+        TextButton.initializeKeyCodeMap((byte) -60);
         nh.field_w = qj.a((byte) -86);
         n.a(on.field_c, (byte) 122);
         sa.field_Bb = param6;
@@ -171,7 +171,7 @@ abstract class ud extends GameAppletShell {
           int var5_intLifetime1;
           int var5_intLifetime2;
           var8 = ArcanistsMulti.field_G ? 1 : 0;
-          var4 = tg.a(wn.field_y, param2, gm.field_f, 17);
+          var4 = tg.a(SingleChildContainer.field_y, param2, gm.field_f, 17);
           if (var4 == 0) {
             throw new IllegalStateException();
           }
@@ -204,7 +204,7 @@ abstract class ud extends GameAppletShell {
             if (param1) {
               kg.field_f = false;
             } else {
-              var5_intLifetime2 = wn.a(this.field_m, 57, this.field_t, ed.k(-952), false, hc.b((byte) -108));
+              var5_intLifetime2 = SingleChildContainer.a(this.field_m, 57, this.field_t, ed.k(-952), false, hc.b((byte) -108));
               if (-1 != var5_intLifetime2) {
                 if (var5_intLifetime2 != 0) {
                   oa.a(!param0, var5_intLifetime2, me.field_E);
@@ -314,7 +314,7 @@ abstract class ud extends GameAppletShell {
               wm.g((byte) 27);
             } else {
               if (0 != fj.field_j) {
-                ia.a(-14296, wn.field_y);
+                ia.a(-14296, SingleChildContainer.field_y);
               } else {
                 discarded$2 = this.a(false, false, false);
               }
@@ -343,7 +343,7 @@ abstract class ud extends GameAppletShell {
         if (kg.field_f) {
           return -1;
         }
-        var2 = wn.a(this.field_m, 85, this.field_t, ed.k(-952), true, hc.b((byte) -112));
+        var2 = SingleChildContainer.a(this.field_m, 85, this.field_t, ed.k(-952), true, hc.b((byte) -112));
         if (var2 == -1) {
           return -1;
         }
@@ -444,7 +444,7 @@ abstract class ud extends GameAppletShell {
                         this.f(-18075);
                       } else {
                         if (var2 == 8) {
-                          qe.a(fi.field_d, fj.field_h, df.field_z, 0);
+                          qe.a(fi.field_d, fj.field_h, UiContainer.field_z, 0);
                         } else {
                           if (var2 != 16) {
                             if (var2 != 11 &&
@@ -478,7 +478,7 @@ abstract class ud extends GameAppletShell {
                 }
               }
             } else {
-              df.d(false);
+              UiContainer.d(false);
             }
           } else {
             eh.b((byte) -128);
@@ -519,12 +519,12 @@ abstract class ud extends GameAppletShell {
         }
         j.a(24);
         vm.a(0);
-        if (!oc.a(-15576) &&
+        if (!IntrusiveDequeCursor.a(-15576) &&
           fj.field_j != 11) {
           i.a(0);
         }
         if (null != nh.field_w) {
-          wn.field_y = nh.field_w.a(-1);
+          SingleChildContainer.field_y = nh.field_w.a(-1);
         }
         if (td.a(-97)) {
           var3 = gm.b(-2) * 1200;
@@ -655,7 +655,7 @@ abstract class ud extends GameAppletShell {
           eh.a(18306, ho.field_g)) {
           rk.f(-73);
           cj.b(-128);
-          kl.field_C = hn.field_l;
+          ArrayWidgetContainer.field_C = hn.field_l;
           lh.field_n = false;
           th.a(da.field_b, ho.field_g, ea.field_C, (byte) -40, lk.field_d);
           if (af.field_Ib ||
@@ -715,7 +715,7 @@ abstract class ud extends GameAppletShell {
         }
         if (!param1 &&
           jm.field_j) {
-          qm.a(on.field_c, (byte) 117);
+          UiComponent.attachInputListeners(on.field_c, (byte) 117);
           this.a(-11232);
           n.a(on.field_c, (byte) 125);
         }
@@ -726,14 +726,14 @@ abstract class ud extends GameAppletShell {
 
     private final void c(boolean param0) {
         int discarded$0 = 0;
-        int var2 = df.field_z.readUnsignedByte((byte) 97);
+        int var2 = UiContainer.field_z.readUnsignedByte((byte) 97);
         int var3 = (1 & var2) != 0 ? 1 : 0;
         int var4 = -1 + fj.field_h;
         byte[] var5 = new byte[var4];
         if (param0) {
           discarded$0 = this.a(false, true, false);
         }
-        df.field_z.a(var5, (byte) 108, 0, var4);
+        UiContainer.field_z.a(var5, (byte) 108, 0, var4);
         DelegatingCanvas.a(sc.a((byte) 113, var5), cd.e(127), var3 != 0, (byte) -116);
     }
 

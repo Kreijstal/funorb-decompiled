@@ -93,7 +93,7 @@ final class hf {
             return true;
           }
           if (param0 != 0) {
-            var6 = oc.field_a;
+            var6 = IntrusiveDequeCursor.field_a;
             var2 = var6;
             var3 = 0;
             while (var3 < var6.length) {
@@ -116,7 +116,7 @@ final class hf {
 
     final static void c(int param0) {
         wh.field_g = false;
-        ld.field_p = df.field_z.readUnsignedByte((byte) 88) == 0 ? true : false;
+        ld.field_p = UiContainer.field_z.readUnsignedByte((byte) 88) == 0 ? true : false;
         if (param0 < 15) {
           hf.a(true);
         }
@@ -316,7 +316,7 @@ final class hf {
           if (param3 != 10068666) {
             field_t = (kc) null;
           }
-          var5.a(param0, 23333);
+          var5.writeString(param0, 23333);
           var5.writeByteLengthAtMark(-var6 + var5.position, (byte) 43);
           stackIn_13_0 = null;
           return (String) (stackIn_13_0);

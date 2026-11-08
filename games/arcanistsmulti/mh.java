@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class mh extends ag {
-    private qm field_J;
+class mh extends TextButton {
+    private UiComponent field_J;
     static int field_H;
     static long field_K;
     static String field_I;
@@ -12,13 +12,13 @@ class mh extends ag {
         if (mj.field_p >= 6) {
           if (7 != mj.field_p) {
             gj.a(true, true, 14, mn.field_r);
-            df.a((byte) 120, mj.field_p + 1);
+            UiContainer.a((byte) 120, mj.field_p + 1);
           }
         } else {
           if (co.a(-20675) == 0 &&
             7 != mj.field_p) {
             gj.a(true, true, 14, mn.field_r);
-            df.a((byte) 120, mj.field_p + 1);
+            UiContainer.a((byte) 120, mj.field_p + 1);
           }
         }
         if (param0 == 74) {
@@ -27,7 +27,7 @@ class mh extends ag {
         mh.g((byte) 11);
     }
 
-    final boolean a(int param0, qm param1) {
+    final boolean focusNext(int param0, UiComponent param1) {
         RuntimeException var3 = null;
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_6_0 = null;
@@ -36,9 +36,9 @@ class mh extends ag {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 0) {
-            this.field_J = (qm) null;
+            this.field_J = (UiComponent) null;
           }
-          stackIn_3_0 = this.field_J.a(param0 + 0, param1);
+          stackIn_3_0 = this.field_J.focusNext(param0 + 0, param1);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -54,7 +54,7 @@ class mh extends ag {
         }
     }
 
-    mh(qm param0) {
+    mh(UiComponent param0) {
         try {
           this.field_J = param0;
         } catch (RuntimeException runtimeException) {
@@ -62,7 +62,7 @@ class mh extends ag {
         }
     }
 
-    public static void h(byte param0) {
+    public static void releaseStatics(byte param0) {
         int var1 = 53 % ((33 - param0) / 61);
         field_I = null;
     }

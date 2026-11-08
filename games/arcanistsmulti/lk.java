@@ -130,7 +130,7 @@ abstract class lk {
         }
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         field_h = null;
         field_l = null;
         field_j = null;

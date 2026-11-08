@@ -11,7 +11,7 @@ final class fi {
     static int[] field_c;
     static PlatformTaskDispatcher field_d;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_g = null;
         field_d = null;
         field_c = null;
@@ -19,7 +19,7 @@ final class fi {
         field_a = null;
         field_b = null;
         if (param0 != 5) {
-          fi.a((byte) -81);
+          fi.releaseStatics((byte) -81);
         }
     }
 

@@ -42,7 +42,7 @@ final class bb {
           }
           ln.field_Q = param1;
           i.field_i = null;
-          qm.field_u = param2;
+          UiComponent.field_u = param2;
           in.field_Gb = sk.field_a;
           on.field_d = param5;
           bj.field_mb = param6;
@@ -333,7 +333,7 @@ final class bb {
         return new byte[param0];
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_i = null;
         field_b = null;
         field_c = null;
@@ -418,7 +418,7 @@ final class bb {
             vf.field_k.h(77);
           }
           wh.field_f = new e(param0, param2, false, true, true);
-          g.field_e.a((byte) -92, (qm) (wh.field_f));
+          g.field_e.a((byte) -92, (UiComponent) (wh.field_f));
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "bb.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

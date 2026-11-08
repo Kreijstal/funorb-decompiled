@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dm extends wn {
+final class dm extends SingleChildContainer {
     int field_K;
     static String field_I;
     static String field_J;
@@ -15,7 +15,7 @@ final class dm extends wn {
         int var1 = -115 / ((param0 - 8) / 53);
     }
 
-    final void a(byte param0, int param1, int param2, int param3) {
+    final void drawLayer(byte param0, int param1, int param2, int param3) {
         Sprite var8 = null;
         if (0 != param2) {
           return;
@@ -27,13 +27,13 @@ final class dm extends wn {
           return;
         }
         if (this.field_K == 256) {
-          this.field_B.a((byte) -66, param1 + this.field_n, param2, this.field_j + param3);
+          this.field_B.drawLayer((byte) -66, param1 + this.field_n, param2, this.field_j + param3);
           return;
         }
         if (param0 < -52) {
           var8 = new Sprite(this.field_B.field_v, this.field_B.field_k);
           fk.a(var8, -23095);
-          this.field_B.a((byte) -128, 0, param2, 0);
+          this.field_B.drawLayer((byte) -128, 0, param2, 0);
           oo.c(-15405);
           var8.drawAlpha(param1 + this.field_n, this.field_j + param3, this.field_K);
           return;
@@ -41,7 +41,7 @@ final class dm extends wn {
         dm.h((byte) -53);
         Sprite var7 = new Sprite(this.field_B.field_v, this.field_B.field_k);
         fk.a(var7, -23095);
-        this.field_B.a((byte) -128, 0, param2, 0);
+        this.field_B.drawLayer((byte) -128, 0, param2, 0);
         oo.c(-15405);
         var7.drawAlpha(param1 + this.field_n, this.field_j + param3, this.field_K);
     }
@@ -89,14 +89,14 @@ final class dm extends wn {
     }
 
     public dm() {
-        super(0, 0, 0, 0, (pf) null, (wc) null);
+        super(0, 0, 0, 0, (WidgetPainter) null, (UiListener) null);
         this.field_K = 256;
     }
 
-    dm(qm param0) {
-        super(param0.field_n, param0.field_j, param0.field_v, param0.field_k, (pf) null, (wc) null);
+    dm(UiComponent param0) {
+        super(param0.field_n, param0.field_j, param0.field_v, param0.field_k, (WidgetPainter) null, (UiListener) null);
         try {
-          param0.a(this.field_k, 0, this.field_v, 0, -81);
+          param0.setBounds(this.field_k, 0, this.field_v, 0, -81);
           this.field_B = param0;
           this.field_K = 256;
         } catch (RuntimeException runtimeException) {

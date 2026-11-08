@@ -91,10 +91,10 @@ final class qj {
         if (param0 != 10040319) {
           qj.b(-91);
         }
-        return df.field_z.readString(-1);
+        return UiContainer.field_z.readString(-1);
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         field_h = null;
         field_e = null;
         field_i = null;

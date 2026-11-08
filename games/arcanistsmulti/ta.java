@@ -34,7 +34,7 @@ final class ta {
         return 3;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = null;
         if (param0 != 5) {
           field_e = -50;

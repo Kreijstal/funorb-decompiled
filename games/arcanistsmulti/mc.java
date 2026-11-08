@@ -10,7 +10,7 @@ final class mc {
         ib.a(param3, 2);
         BoundedRandomAccessFile.a(param3, param0, -32507, param1);
         if (param2 > -79) {
-          mc.a(55);
+          mc.releaseStatics(55);
         }
     }
 
@@ -80,11 +80,11 @@ final class mc {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_b = null;
         field_a = null;
         if (param0 < 70) {
-          mc.a(113);
+          mc.releaseStatics(113);
         }
     }
 

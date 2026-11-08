@@ -14,13 +14,13 @@ final class sc extends ej {
     static String field_T;
     static String field_bb;
 
-    final void a(byte param0, int param1, int param2, int param3) {
+    final void drawLayer(byte param0, int param1, int param2, int param3) {
         String var17 = null;
-        ac var35 = null;
+        WidgetTextLayout var35 = null;
         Sprite var19 = null;
         Sprite var20 = null;
         Sprite var21 = null;
-        ac var36 = null;
+        WidgetTextLayout var36 = null;
         Sprite var23 = null;
         Sprite var24 = null;
         Sprite var29 = null;
@@ -53,14 +53,14 @@ final class sc extends ej {
             this.field_g = var17;
             this.g((byte) 63);
           }
-          super.a((byte) -58, param1, param2, param3);
+          super.drawLayer((byte) -58, param1, param2, param3);
           if (param0 > -52) {
             this.field_Y = (Sprite) null;
           }
           var6 = this.field_J.a(-103);
-          var35 = (ac) ((Object) this.field_r);
+          var35 = (WidgetTextLayout) ((Object) this.field_r);
           var9 = this.field_n + param1;
-          var10 = var35.a(param3, -13372, (qm) (this)) + (var35.a((qm) (this), -126).a((byte) -58) >> 1);
+          var10 = var35.a(param3, -13372, (UiComponent) (this)) + (var35.a((UiComponent) (this), -126).a((byte) -58) >> 1);
           if (da.field_f != var6 &&
             IsaacCipher.field_c != var6) {
             if (var6 == ra.field_k) {
@@ -121,12 +121,12 @@ final class sc extends ej {
           this.field_g = var5;
           this.g((byte) 63);
         }
-        super.a((byte) -58, param1, param2, param3);
+        super.drawLayer((byte) -58, param1, param2, param3);
         if (param0 <= -52) {
           var6 = this.field_J.a(-103);
-          var36 = (ac) ((Object) this.field_r);
+          var36 = (WidgetTextLayout) ((Object) this.field_r);
           var9Lifetime1 = this.field_n + param1;
-          var10Lifetime1 = var36.a(param3, -13372, (qm) (this)) + (var36.a((qm) (this), -126).a((byte) -58) >> 1);
+          var10Lifetime1 = var36.a(param3, -13372, (UiComponent) (this)) + (var36.a((UiComponent) (this), -126).a((byte) -58) >> 1);
           if (da.field_f == var6) {
             var23 = qk.field_lb[0];
             var11Lifetime1 = var23.field_n << 1;
@@ -212,9 +212,9 @@ final class sc extends ej {
         }
         this.field_Y = (Sprite) null;
         var6 = this.field_J.a(-103);
-        ac var37 = (ac) ((Object) this.field_r);
+        WidgetTextLayout var37 = (WidgetTextLayout) ((Object) this.field_r);
         var9Lifetime2 = this.field_n + param1;
-        var10Lifetime2 = var37.a(param3, -13372, (qm) (this)) + (var37.a((qm) (this), -126).a((byte) -58) >> 1);
+        var10Lifetime2 = var37.a(param3, -13372, (UiComponent) (this)) + (var37.a((UiComponent) (this), -126).a((byte) -58) >> 1);
         if (da.field_f != var6 &&
           IsaacCipher.field_c != var6) {
           if (var6 == ra.field_k) {
@@ -551,7 +551,7 @@ final class sc extends ej {
         field_bb = null;
     }
 
-    final String b(boolean param0) {
+    final String getTooltip(boolean param0) {
         if (!param0) {
           return null;
         }
@@ -559,10 +559,10 @@ final class sc extends ej {
         return null;
     }
 
-    final void a(qm param0, int param1, int param2, int param3) {
+    final void updatePointer(UiComponent param0, int param1, int param2, int param3) {
         try {
           this.field_X = this.field_X + 1;
-          super.a(param0, param1, param2 + 0, param3);
+          super.updatePointer(param0, param1, param2 + 0, param3);
           if (param2 != 170) {
             sc.g(-45);
           }
@@ -645,7 +645,7 @@ final class sc extends ej {
         try {
           this.field_J = param0;
           this.field_ab = param1;
-          this.a(param5, param3, param4, param2, -83);
+          this.setBounds(param5, param3, param4, param2, -83);
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "sc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
@@ -684,7 +684,7 @@ final class sc extends ej {
         }
     }
 
-    final boolean a(int param0, qm param1) {
+    final boolean focusNext(int param0, UiComponent param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;

@@ -10,7 +10,7 @@ abstract class ArchiveProvider {
     static lc[] field_f;
     static String field_b;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_c = null;
         if (param0 < -17) {
           field_a = null;
@@ -41,7 +41,7 @@ abstract class ArchiveProvider {
           if (param0 >= -52) {
             ArchiveProvider.c((byte) -27);
           }
-          var5 = kl.field_B;
+          var5 = ArrayWidgetContainer.field_B;
           var1 = var5;
           var2 = 0;
           var3 = var5.length;
@@ -125,7 +125,7 @@ abstract class ArchiveProvider {
 
     final static String b(byte param0) {
         if (param0 < 95) {
-          ArchiveProvider.a((byte) 55);
+          ArchiveProvider.releaseStatics((byte) 55);
           return vi.field_F;
         }
         return vi.field_F;

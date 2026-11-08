@@ -1,20 +1,20 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cn extends kl implements vb {
+final class cn extends ArrayWidgetContainer implements ButtonListener {
     static String field_H;
     static IndexedSprite[] field_S;
     static String field_K;
     private wl field_P;
     static String field_I;
-    private ag field_L;
+    private TextButton field_L;
     static int[] field_M;
     static byte[] field_O;
     static IndexedSprite[] field_N;
     static String field_J;
     static String field_Q;
 
-    public final void a(boolean param0, int param1, int param2, int param3, ag param4) {
+    public final void a(boolean param0, int param1, int param2, int param3, TextButton param4) {
         if (this.field_P.a(0).a(-114) != nn.field_s) {
           return;
         }
@@ -25,17 +25,17 @@ final class cn extends kl implements vb {
         }
     }
 
-    final void a(qm param0, int param1, int param2, int param3) {
+    final void updatePointer(UiComponent param0, int param1, int param2, int param3) {
         try {
-          super.a(param0, param1, param2, param3);
+          super.updatePointer(param0, param1, param2, param3);
           this.field_L.field_B = this.field_P.a(0).a(param2 - 287) == nn.field_s ? true : false;
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "cn.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
-    final void a(byte param0, int param1, int param2, int param3) {
-        super.a((byte) -94, param1, param2, param3);
+    final void drawLayer(byte param0, int param1, int param2, int param3) {
+        super.drawLayer((byte) -94, param1, param2, param3);
         vc.field_e.drawText(sm.field_b, 4 + param1 + this.field_n, vc.field_e.field_C + (param3 + (this.field_j + 4)), 16777215, -1);
         if (param0 > -52) {
           field_J = (String) null;
@@ -43,29 +43,29 @@ final class cn extends kl implements vb {
     }
 
     cn(int param0, int param1, int param2, int param3) {
-        super(param0, param1, param2, param3, (pf) null);
-        this.field_P = new wl(new ib(10000536), ag.field_E, 0, 0, 140, 25);
+        super(param0, param1, param2, param3, (WidgetPainter) null);
+        this.field_P = new wl(new ib(10000536), TextButton.field_E, 0, 0, 140, 25);
         this.field_P.a(new bl(), (byte) -48);
-        this.field_L = new ag(qn.field_lb, (wc) (this));
-        this.field_z = new qm[]{(qm) ((Object) this.field_P), (qm) ((Object) this.field_L)};
-        this.field_L.field_r = (pf) ((Object) new mm());
-        this.e((byte) 45);
+        this.field_L = new TextButton(qn.field_lb, (UiListener) (this));
+        this.field_z = new UiComponent[]{(UiComponent) ((Object) this.field_P), (UiComponent) ((Object) this.field_L)};
+        this.field_L.field_r = (WidgetPainter) ((Object) new mm());
+        this.refreshLayout((byte) 45);
     }
 
-    final void e(int param0) {
+    final void layoutChildren(int param0) {
         int var2 = 0;
         int var2Lifetime1;
         if (param0 > 17) {
           var2 = 250;
-          this.field_P.a(25, this.field_k - 5 >> 1, 140, this.field_v - var2 >> 1, -126);
-          this.field_L.a(30, 2 + (-30 + (20 + this.field_k) >> 1), 100, (-var2 + this.field_v >> 1) + 150, -118);
+          this.field_P.setBounds(25, this.field_k - 5 >> 1, 140, this.field_v - var2 >> 1, -126);
+          this.field_L.setBounds(30, 2 + (-30 + (20 + this.field_k) >> 1), 100, (-var2 + this.field_v >> 1) + 150, -118);
           return;
         }
-        ag var3 = (ag) null;
-        this.a(true, -29, 36, -108, (ag) null);
+        TextButton var3 = (TextButton) null;
+        this.a(true, -29, 36, -108, (TextButton) null);
         var2Lifetime1 = 250;
-        this.field_P.a(25, this.field_k - 5 >> 1, 140, this.field_v - var2Lifetime1 >> 1, -126);
-        this.field_L.a(30, 2 + (-30 + (20 + this.field_k) >> 1), 100, (-var2Lifetime1 + this.field_v >> 1) + 150, -118);
+        this.field_P.setBounds(25, this.field_k - 5 >> 1, 140, this.field_v - var2Lifetime1 >> 1, -126);
+        this.field_L.setBounds(30, 2 + (-30 + (20 + this.field_k) >> 1), 100, (-var2Lifetime1 + this.field_v >> 1) + 150, -118);
     }
 
     public static void g(byte param0) {

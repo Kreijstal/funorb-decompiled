@@ -73,7 +73,7 @@ final class gd extends ob {
           this.field_sb = false;
           this.field_V = false;
           this.field_ob.field_I = true;
-          this.c(-78, this.field_ob);
+          this.addChild(-78, this.field_ob);
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "gd.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -237,7 +237,7 @@ final class gd extends ob {
         }
     }
 
-    public static void g(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 == 103) {
           field_pb = null;
           field_mb = null;

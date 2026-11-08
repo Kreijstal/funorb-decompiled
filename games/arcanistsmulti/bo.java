@@ -39,7 +39,7 @@ final class bo {
             stackIn_9_0 = BufferedRandomAccessFile.field_l;
             return stackIn_9_0;
           }
-          if (kl.a(param0, 1)) {
+          if (ArrayWidgetContainer.a(param0, 1)) {
             stackIn_13_0 = tj.a(-30, new String[]{param0}, gj.field_e);
             return stackIn_13_0;
           }
@@ -53,7 +53,7 @@ final class bo {
             return stackIn_21_0;
           }
           if (param1 != -26) {
-            bo.a(9);
+            bo.releaseStatics(9);
           }
           if (sa.a(param0, 320)) {
             stackIn_26_0 = tj.a(125, new String[]{param0}, r.field_a);
@@ -64,7 +64,7 @@ final class bo {
           var5.position = var5.position + 1;
           var4 = var5.position;
           var5.writeByte(0, (byte) -80);
-          var5.a(param0, param1 ^ -23357);
+          var5.writeString(param0, param1 ^ -23357);
           var5.writeByteLengthAtMark(-var4 + var5.position, (byte) 43);
           stackIn_28_0 = null;
           return (String) (stackIn_28_0);
@@ -164,7 +164,7 @@ final class bo {
         return true;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_b = null;
         field_a = null;
         int var1 = -126 % ((-64 - param0) / 53);

@@ -535,11 +535,11 @@ class kc extends to {
         }
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         field_M = null;
         field_kb = null;
         if (param0 != -21224) {
-          kc.d(53);
+          kc.releaseStatics(53);
         }
         field_N = null;
     }

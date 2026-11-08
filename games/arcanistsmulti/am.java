@@ -48,9 +48,9 @@ final class am {
               var4_ref_qe.field_q < var2_long) {
               var4_ref_qe.unlink(true);
               fj.field_h = var4_ref_qe.field_k.length;
-              df.field_z.position = 0;
+              UiContainer.field_z.position = 0;
               for (var5_int = 0; var5_int < fj.field_h; var5_int++) {
-                df.field_z.payload[var5_int] = var4_ref_qe.field_k[var5_int];
+                UiContainer.field_z.payload[var5_int] = var4_ref_qe.field_k[var5_int];
               }
               ve.field_m = nf.field_W;
               nf.field_W = se.field_I;
@@ -61,12 +61,12 @@ final class am {
           }
           while (true) {
             if (0 > so.field_d) {
-              df.field_z.position = 0;
+              UiContainer.field_z.position = 0;
               if (!pe.a((byte) -86, 1)) {
                 return false;
               }
-              so.field_d = df.field_z.readOpcode((byte) 62);
-              df.field_z.position = 0;
+              so.field_d = UiContainer.field_z.readOpcode((byte) 62);
+              UiContainer.field_z.position = 0;
               fj.field_h = param1[so.field_d];
             }
             if (!pn.b(-12564)) {
@@ -82,14 +82,14 @@ final class am {
             }
             var4 = ob.field_ab;
             if (0.0 != hb.field_Cb) {
-              var4 = (int)((double)var4 + ag.field_D.nextGaussian() * hb.field_Cb);
+              var4 = (int)((double)var4 + TextButton.field_D.nextGaussian() * hb.field_Cb);
               if (var4 < 0) {
                 var4 = 0;
               }
             }
             var5 = new qe(var2_long + (long)var4, so.field_d, new byte[fj.field_h]);
             for (var6 = 0; fj.field_h > var6; var6++) {
-              var5.field_k[var6] = df.field_z.payload[var6];
+              var5.field_k[var6] = UiContainer.field_z.payload[var6];
             }
             uf.field_a.addLast(var5, -1);
             so.field_d = -1;

@@ -28,7 +28,7 @@ final class wh {
         return 1 + param0;
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_b = null;
         if (param0 > -83) {
           wh.a(-29);
@@ -48,7 +48,7 @@ final class wh {
         if (param0 != 117) {
           wh.a(89);
         }
-        wn.field_z.a(param1, (byte) -127);
+        SingleChildContainer.field_z.a(param1, (byte) -127);
     }
 
     final static Sprite a(int param0) {

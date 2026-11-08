@@ -331,7 +331,7 @@ final class af extends kc {
         return -111;
     }
 
-    public static void e(int param0) {
+    public static void releaseStatics(int param0) {
         field_Kb = null;
         field_Gb = null;
         field_Bb = null;

@@ -108,7 +108,7 @@ final class tg {
         return;
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         field_e = null;
         field_f = null;
         field_b = null;

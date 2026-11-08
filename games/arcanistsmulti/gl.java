@@ -62,14 +62,14 @@ final class gl {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_d = null;
         field_f = null;
         field_a = null;
         field_c = null;
         field_b = null;
         if (param0 != 15) {
-          gl.a((byte) -4);
+          gl.releaseStatics((byte) -4);
         }
     }
 

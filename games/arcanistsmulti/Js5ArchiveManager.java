@@ -47,7 +47,7 @@ final class Js5ArchiveManager {
         var13 = new byte[-var10.position + var10.payload.length];
         var11 = var13;
         var4 = var11;
-        var10.a((byte) 74, 0, var4, var13.length);
+        var10.readBytes((byte) 74, 0, var4, var13.length);
         if (null != this.field_j &&
           this.field_i != null) {
           var12 = new java.math.BigInteger(var13);
@@ -108,7 +108,7 @@ final class Js5ArchiveManager {
             var6_int = this.field_d.readInt(-10674);
             var7 = this.field_d.readInt(-10674);
             var13 = new byte[64];
-            this.field_d.a((byte) 92, 0, var13, 64);
+            this.field_d.readBytes((byte) 92, 0, var13, 64);
             var9 = new tj(param4, param3, param0, this.field_l, this.field_e, var6_int, var13, var7, param1);
             this.field_b[param4] = var9;
             stackIn_14_0 = var9;
@@ -135,7 +135,7 @@ final class Js5ArchiveManager {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_k = null;
         field_c = null;
         field_g = null;

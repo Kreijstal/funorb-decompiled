@@ -1,23 +1,23 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class e extends df implements bn, vb {
+final class e extends UiContainer implements TextInputListener, ButtonListener {
     static int field_Q;
     private boolean field_R;
     static String field_D;
-    private ag field_L;
-    private rn field_O;
+    private TextButton field_L;
+    private EditableTextWidget field_O;
     static IndexedSprite[] field_M;
-    private ag field_P;
+    private TextButton field_P;
     static IndexedSprite[] field_I;
     private String field_E;
     static String field_C;
-    private ag field_J;
+    private TextButton field_J;
     private boolean field_N;
-    private rn field_G;
+    private EditableTextWidget field_G;
     private boolean field_F;
 
-    public final void a(rn param0, int param1) {
+    public final void onTextChanged(EditableTextWidget param0, int param1) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -65,7 +65,7 @@ final class e extends df implements bn, vb {
         }
     }
 
-    public final void b(rn param0, int param1) {
+    public final void onTextSubmitted(EditableTextWidget param0, int param1) {
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
@@ -73,13 +73,13 @@ final class e extends df implements bn, vb {
         RuntimeException var3 = null;
         try {
           if (this.field_O == param0) {
-            this.field_G.a(0, (qm) (this));
+            this.field_G.focusNext(0, (UiComponent) (this));
           }
           if (this.field_G == param0) {
             this.a((byte) -83);
           }
           if (param1 < 73) {
-            this.a((rn) null, 105);
+            this.onTextChanged((EditableTextWidget) null, 105);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -96,7 +96,7 @@ final class e extends df implements bn, vb {
         }
     }
 
-    final boolean a(qm param0, byte param1, char param2, int param3) {
+    final boolean handleKeyInput(UiComponent param0, byte param1, char param2, int param3) {
         RuntimeException var5 = null;
         boolean stackIn_10_0 = false;
         boolean stackIn_15_0 = false;
@@ -105,18 +105,18 @@ final class e extends df implements bn, vb {
         String stackIn_22_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (super.a(param0, (byte) -123, param2, param3)) {
+          if (super.handleKeyInput(param0, (byte) -123, param2, param3)) {
             return true;
           }
           if (param1 > -120) {
-            this.field_P = (ag) null;
+            this.field_P = (TextButton) null;
           }
           if (param3 == 98) {
-            stackIn_10_0 = this.a(param0, 9555);
+            stackIn_10_0 = this.focusPreviousChild(param0, 9555);
             return stackIn_10_0;
           }
           if (param3 == 99) {
-            stackIn_15_0 = this.b(2, param0);
+            stackIn_15_0 = this.focusNextChild(2, param0);
             return stackIn_15_0;
           }
           return false;
@@ -136,7 +136,7 @@ final class e extends df implements bn, vb {
 
     final void a(int param0, String param1) {
         RuntimeException runtimeException = null;
-        rn var3 = null;
+        EditableTextWidget var3 = null;
         String var4 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -145,11 +145,11 @@ final class e extends df implements bn, vb {
         try {
           var3 = this.field_O;
           var4 = param1;
-          var3.a(false, var4, false);
+          var3.setText(false, var4, false);
           if (param0 != 26152) {
-            this.field_G = (rn) null;
+            this.field_G = (EditableTextWidget) null;
           }
-          this.field_G.g(3545);
+          this.field_G.clearText(3545);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -418,17 +418,17 @@ final class e extends df implements bn, vb {
 
     final void f(boolean param0) {
         try {
-          this.field_O.g(3545);
-          this.field_G.g(3545);
+          this.field_O.clearText(3545);
+          this.field_G.clearText(3545);
           if (!param0) {
-            this.field_G = (rn) null;
+            this.field_G = (EditableTextWidget) null;
           }
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "e.M(" + param0 + ')');
         }
     }
 
-    final void a(byte param0, int param1, int param2, int param3) {
+    final void drawLayer(byte param0, int param1, int param2, int param3) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         try {
@@ -438,7 +438,7 @@ final class e extends df implements bn, vb {
           if (this.field_J != null) {
             SoftwareRasterizer.drawHorizontalLine(param1 + 10, param3 + 134, this.field_v - 20, 4210752);
           }
-          super.a((byte) -62, param1, param2, param3);
+          super.drawLayer((byte) -62, param1, param2, param3);
           if (param0 >= -52) {
             e.a(-70);
           }
@@ -451,13 +451,13 @@ final class e extends df implements bn, vb {
     }
 
     e(String param0, String param1, boolean param2, boolean param3, boolean param4) {
-        super(0, 0, 310, 190, (pf) null);
+        super(0, 0, 310, 190, (WidgetPainter) null);
         ke dupTemp$0 = null;
         ke dupTemp$1 = null;
-        ag stackIn_17_1 = null;
-        ag stackIn_17_2 = null;
-        ag stackIn_18_1 = null;
-        ag stackIn_18_2 = null;
+        TextButton stackIn_17_1 = null;
+        TextButton stackIn_17_2 = null;
+        TextButton stackIn_18_1 = null;
+        TextButton stackIn_18_2 = null;
         String stackIn_18_3 = null;
         RuntimeException stackIn_91_0 = null;
         StringBuilder stackIn_91_1 = null;
@@ -484,16 +484,16 @@ final class e extends df implements bn, vb {
             throw new IllegalStateException();
           }
           boolean decompiledFrameRemainder0 = true;
-          this.field_O = (rn) ((Object) new bi(param0, (wc) (this), 100));
-          this.field_G = (rn) ((Object) new bi("", (wc) (this), 20));
+          this.field_O = (EditableTextWidget) ((Object) new bi(param0, (UiListener) (this), 100));
+          this.field_G = (EditableTextWidget) ((Object) new bi("", (UiListener) (this), 20));
           if (this.field_F) {
-            this.field_P = new ag(sk.field_b, (wc) null);
-            this.field_L = new ag(ki.field_u, (wc) null);
+            this.field_P = new TextButton(sk.field_b, (UiListener) null);
+            this.field_L = new TextButton(ki.field_u, (UiListener) null);
             this.field_O.field_B = false;
             decompiledFrameRemainder0 = (var11 != 0);
           }
           if (decompiledFrameRemainder0) {
-            this.field_P = new ag(w.field_Qb, (wc) null);
+            this.field_P = new TextButton(w.field_Qb, (UiListener) null);
             stackIn_17_1 = null;
             stackIn_17_2 = null;
             if (this.field_N) {
@@ -505,20 +505,20 @@ final class e extends df implements bn, vb {
               stackIn_18_2 = null;
               stackIn_18_3 = ae.field_b;
             }
-            this.field_L = new ag(stackIn_18_3, (wc) null);
+            this.field_L = new TextButton(stackIn_18_3, (UiListener) null);
             if (this.field_R) {
-              this.field_J = new ag(ib.field_t, (wc) (this));
+              this.field_J = new TextButton(ib.field_t, (UiListener) (this));
             }
           }
-          this.field_O.field_r = (pf) ((Object) new ib(10000536));
-          this.field_G.field_r = (pf) ((Object) new tc(10000536));
+          this.field_O.field_r = (WidgetPainter) ((Object) new ib(10000536));
+          this.field_G.field_r = (WidgetPainter) ((Object) new tc(10000536));
           var6 = new mm();
-          this.field_P.field_r = (pf) ((Object) var6);
+          this.field_P.field_r = (WidgetPainter) ((Object) var6);
           if (null != this.field_L) {
-            this.field_L.field_r = (pf) ((Object) var6);
+            this.field_L.field_r = (WidgetPainter) ((Object) var6);
           }
           if (this.field_J != null) {
-            this.field_J.field_r = (pf) ((Object) var6);
+            this.field_J.field_r = (WidgetPainter) ((Object) var6);
           }
           this.field_O.field_q = ln.field_L;
           if (this.field_J != null) {
@@ -528,23 +528,23 @@ final class e extends df implements bn, vb {
             this.field_L.field_q = fo.field_e;
             if (var11 != 0) {
               if (!this.field_N) {
-                this.field_L.field_r = (pf) ((Object) new gm());
+                this.field_L.field_r = (WidgetPainter) ((Object) new gm());
                 this.field_L.field_q = hj.field_c;
-                this.field_L.field_r = (pf) ((Object) new gm());
+                this.field_L.field_r = (WidgetPainter) ((Object) new gm());
               } else {
                 this.field_L.field_q = hj.field_c;
-                this.field_L.field_r = (pf) ((Object) new gm());
+                this.field_L.field_r = (WidgetPainter) ((Object) new gm());
               }
             }
           } else {
             boolean decompiledSharedTail2 = (this.field_N);
             if (!decompiledSharedTail2) {
-              this.field_L.field_r = (pf) ((Object) new gm());
+              this.field_L.field_r = (WidgetPainter) ((Object) new gm());
               decompiledSharedTail2 = (var11 != 0);
             }
             if (decompiledSharedTail2) {
               this.field_L.field_q = hj.field_c;
-              this.field_L.field_r = (pf) ((Object) new gm());
+              this.field_L.field_r = (WidgetPainter) ((Object) new gm());
             }
           }
           this.field_j = 15;
@@ -567,53 +567,53 @@ final class e extends df implements bn, vb {
           }
           dupTemp$0 = new ke(10, this.field_j, this.field_v - 20, 25, this.field_O, false, 80, 3, var7, 16777215, var8);
           var10 = dupTemp$0;
-          this.c(-108, dupTemp$0);
-          this.field_j = this.field_j + (((qm) ((Object) var10)).field_k + 5);
+          this.addChild(-108, dupTemp$0);
+          this.field_j = this.field_j + (((UiComponent) ((Object) var10)).field_k + 5);
           dupTemp$1 = new ke(10, this.field_j, this.field_v - 20, 25, this.field_G, false, 80, 3, var7, 16777215, eh.field_a);
           var10Lifetime1 = dupTemp$1;
-          this.c(-108, dupTemp$1);
-          this.field_P.field_o = (wc) (this);
-          this.field_j = this.field_j + (((qm) ((Object) var10Lifetime1)).field_k + 5);
+          this.addChild(-108, dupTemp$1);
+          this.field_P.field_o = (UiListener) (this);
+          this.field_j = this.field_j + (((UiComponent) ((Object) var10Lifetime1)).field_k + 5);
           if (this.field_J != null) {
-            this.field_J.field_o = (wc) (this);
+            this.field_J.field_o = (UiListener) (this);
           }
           if (null != this.field_L) {
-            this.field_L.field_o = (wc) (this);
+            this.field_L.field_o = (UiListener) (this);
           }
           boolean decompiledSharedTail1 = (this.field_J != null);
           if (!decompiledSharedTail1) {
-            this.field_P.a(30, this.field_j, -10 + (this.field_v - 6), 8, -80);
+            this.field_P.setBounds(30, this.field_j, -10 + (this.field_v - 6), 8, -80);
             this.field_j = this.field_j + 35;
             decompiledSharedTail1 = (var11 != 0);
           }
           if (decompiledSharedTail1) {
-            this.field_P.a(30, this.field_j, -95 + this.field_v, 85, -126);
+            this.field_P.setBounds(30, this.field_j, -95 + this.field_v, 85, -126);
             this.field_j = this.field_j + 60;
           }
           if (null != this.field_J) {
-            this.field_J.a(30, this.field_j, -10 + (-6 + this.field_v), 8, -78);
+            this.field_J.setBounds(30, this.field_j, -10 + (-6 + this.field_v), 8, -78);
             this.field_j = this.field_j + 35;
           }
           if (this.field_L != null) {
             boolean decompiledSharedTail0 = (!(this.field_F) &&
               !(this.field_N));
             if (!decompiledSharedTail0) {
-              this.field_L.a(30, this.field_j, this.field_v - 16, 8, -51);
+              this.field_L.setBounds(30, this.field_j, this.field_v - 16, 8, -51);
               this.field_j = this.field_j + 35;
               decompiledSharedTail0 = (var11 != 0);
             }
             if (decompiledSharedTail0) {
-              this.field_L.a(20, this.field_j, 40, 8, -100);
+              this.field_L.setBounds(20, this.field_j, 40, 8, -100);
               this.field_j = this.field_j + 25;
             }
           }
-          this.a(3 + this.field_j, 0, this.field_v, 0, -111);
-          this.c(-105, this.field_P);
+          this.setBounds(3 + this.field_j, 0, this.field_v, 0, -111);
+          this.addChild(-105, this.field_P);
           if (null != this.field_J) {
-            this.c(-93, this.field_J);
+            this.addChild(-93, this.field_J);
           }
           if (null != this.field_L) {
-            this.c(-100, this.field_L);
+            this.addChild(-100, this.field_L);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -655,7 +655,7 @@ final class e extends df implements bn, vb {
         }
     }
 
-    public final void a(boolean param0, int param1, int param2, int param3, ag param4) {
+    public final void a(boolean param0, int param1, int param2, int param3, TextButton param4) {
         int var7 = 0;
         RuntimeException stackIn_35_0 = null;
         StringBuilder stackIn_35_1 = null;
@@ -734,7 +734,7 @@ final class e extends df implements bn, vb {
         RuntimeException decompiledCaughtException = null;
         try {
           if (!param0) {
-            this.field_G = (rn) null;
+            this.field_G = (EditableTextWidget) null;
           }
           if (this.field_O.field_g == null) {
             stackIn_7_0 = "";

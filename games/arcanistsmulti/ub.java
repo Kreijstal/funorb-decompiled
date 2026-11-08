@@ -80,10 +80,10 @@ final class ub {
         var2.writeByte(qn.k((byte) -14), (byte) -57);
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_f = null;
         if (param0 > -63) {
-          ub.a(-21);
+          ub.releaseStatics(-21);
         }
         field_d = null;
         field_e = null;

@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mk extends ag {
+final class mk extends TextButton {
     private pd field_T;
     static String field_M;
     static String field_I;
     private int field_H;
-    static oc field_J;
+    static IntrusiveDequeCursor field_J;
     static String field_K;
     static Js5ArchiveManager field_O;
     static String field_R;
@@ -16,7 +16,7 @@ final class mk extends ag {
     static int field_Q;
     static String field_L;
 
-    public static void g(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_K = null;
         field_O = null;
         field_N = null;
@@ -38,7 +38,7 @@ final class mk extends ag {
         field_P = null;
     }
 
-    final String b(boolean param0) {
+    final String getTooltip(boolean param0) {
         if (this.field_w) {
           return this.field_T.c(26146);
         }
@@ -49,16 +49,16 @@ final class mk extends ag {
         return null;
     }
 
-    final void a(qm param0, int param1, int param2, int param3) {
+    final void updatePointer(UiComponent param0, int param1, int param2, int param3) {
         try {
           this.field_H = this.field_H + 1;
-          super.a(param0, param1, param2, param3);
+          super.updatePointer(param0, param1, param2, param3);
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "mk.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
-    final void a(byte param0, int param1, int param2, int param3) {
+    final void drawLayer(byte param0, int param1, int param2, int param3) {
         int var5;
         int var6;
         eh var8;
@@ -72,7 +72,7 @@ final class mk extends ag {
         int var9Lifetime1;
         int var10Lifetime1;
         var11 = ArcanistsMulti.field_G ? 1 : 0;
-        super.a((byte) -58, param1, param2, param3);
+        super.drawLayer((byte) -58, param1, param2, param3);
         if (param0 >= -52) {
           return;
         }
@@ -146,7 +146,7 @@ final class mk extends ag {
         ArchiveIndex.field_o.drawAdditive(var5 - var15.field_n, var6 - var15.field_w, 256);
     }
 
-    final boolean a(int param0, qm param1) {
+    final boolean focusNext(int param0, UiComponent param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -183,7 +183,7 @@ final class mk extends ag {
         field_I = "Decline invitation to <%0>'s game";
         field_K = "You are offering an unrated rematch.";
         field_M = "Minions can only be summoned when the summoning circle is green; you cannot summon over terrain or too far away from yourself.<br>Click to summon your Imps!";
-        field_J = new oc();
+        field_J = new IntrusiveDequeCursor();
         field_R = "This spell explodes five seconds after being cast, allowing you to bounce it off the terrain to hit those hard to reach targets. Try destroying one of the three targets in the arena.";
         field_N = "Select the Arcane Arrow spell below.";
         field_P = new String[]{"By rating", "By win percentage"};

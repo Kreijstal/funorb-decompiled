@@ -55,11 +55,11 @@ final class vg {
         }
         if (IntrusiveDeque.field_d == 71 &&
           mj.field_p > 0) {
-          df.a((byte) 65, mj.field_p - 1);
+          UiContainer.a((byte) 65, mj.field_p - 1);
         }
         if (IntrusiveDeque.field_d == 72 &&
           mj.field_p < 7) {
-          df.a((byte) -125, mj.field_p + 1);
+          UiContainer.a((byte) -125, mj.field_p + 1);
         }
         if (IntrusiveDeque.field_d == 33 &&
           0 < ed.field_Cb) {
@@ -87,7 +87,7 @@ final class vg {
         this.a(false);
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 40) {
           return;
         }

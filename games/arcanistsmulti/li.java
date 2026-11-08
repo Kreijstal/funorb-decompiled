@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class li extends df implements vb {
+final class li extends UiContainer implements ButtonListener {
     private ro field_D;
     static String field_H;
     private String[] field_K;
     static String field_I;
     static String field_G;
     static byte[] field_E;
-    private ag[] field_J;
+    private TextButton[] field_J;
     static BinaryBitmapFont field_F;
 
     final static void a(int param0, int param1) {
@@ -27,22 +27,22 @@ final class li extends df implements vb {
         }
     }
 
-    final void a(byte param0, int param1, int param2, int param3) {
-        super.a((byte) -109, param1, param2, param3);
+    final void drawLayer(byte param0, int param1, int param2, int param3) {
+        super.drawLayer((byte) -109, param1, param2, param3);
         if (param2 != 0) {
           return;
         }
         BitmapFont var5 = ia.field_c;
         if (param0 >= -52) {
-          qm var6 = (qm) null;
-          this.a((qm) null, (byte) -28, 'ￒ', -66);
+          UiComponent var6 = (UiComponent) null;
+          this.handleKeyInput((UiComponent) null, (byte) -28, 'ￒ', -66);
         }
         if (null != this.field_K) {
           var5.drawParagraph(KeyboardInputHandler.field_f, this.field_n + param1, param3 + this.field_j, this.field_v, 20, 16777215, -1, 0, 0, var5.field_C + var5.field_m);
         }
     }
 
-    final boolean a(qm param0, byte param1, char param2, int param3) {
+    final boolean handleKeyInput(UiComponent param0, byte param1, char param2, int param3) {
         RuntimeException var5 = null;
         boolean stackIn_8_0 = false;
         boolean stackIn_11_0 = false;
@@ -51,20 +51,20 @@ final class li extends df implements vb {
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (super.a(param0, (byte) -124, param2, param3)) {
+          if (super.handleKeyInput(param0, (byte) -124, param2, param3)) {
             return true;
           }
           if (param1 >= -120) {
             this.field_D = (ro) null;
           }
           if (param3 == 98) {
-            stackIn_8_0 = this.a(param0, 9555);
+            stackIn_8_0 = this.focusPreviousChild(param0, 9555);
             return stackIn_8_0;
           }
           if (param3 != 99) {
             return false;
           }
-          stackIn_11_0 = this.b(2, param0);
+          stackIn_11_0 = this.focusNextChild(2, param0);
           return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -120,7 +120,7 @@ final class li extends df implements vb {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 1313) {
           return;
         }
@@ -131,7 +131,7 @@ final class li extends df implements vb {
         field_F = null;
     }
 
-    public final void a(boolean param0, int param1, int param2, int param3, ag param4) {
+    public final void a(boolean param0, int param1, int param2, int param3, TextButton param4) {
         int var6_int = 0;
         int var7 = 0;
         RuntimeException stackIn_16_0 = null;
@@ -168,7 +168,7 @@ final class li extends df implements vb {
     }
 
     li(ro param0) {
-        super(0, 0, 0, 0, (pf) null);
+        super(0, 0, 0, 0, (WidgetPainter) null);
         try {
           this.field_D = param0;
         } catch (RuntimeException runtimeException) {
@@ -199,19 +199,19 @@ final class li extends df implements vb {
               this.field_K[var4_int] = qo.a((byte) 80, (CharSequence) ((Object) param0[var4_int])).replace(' ', ' ');
             }
             var4 = new gm(ia.field_c, 0, 1);
-            this.field_J = new ag[var3_int + 1];
+            this.field_J = new TextButton[var3_int + 1];
             for (var5 = 0; var5 < var3_int; var5++) {
-              this.field_J[var5] = new ag(this.field_K[var5], (wc) (this));
-              this.field_J[var5].field_r = (pf) ((Object) var4);
+              this.field_J[var5] = new TextButton(this.field_K[var5], (UiListener) (this));
+              this.field_J[var5].field_r = (WidgetPainter) ((Object) var4);
               this.field_J[var5].field_q = si.field_q;
-              this.field_J[var5].a(15, var5 * 16 + 20, 80, 0, -80);
-              this.c(-82, this.field_J[var5]);
+              this.field_J[var5].setBounds(15, var5 * 16 + 20, 80, 0, -80);
+              this.addChild(-82, this.field_J[var5]);
             }
             var6 = 11 / ((6 - param1) / 42);
-            this.field_J[var3_int] = new ag(pc.field_d, (wc) (this));
-            this.field_J[var3_int].field_r = (pf) ((Object) var4);
-            this.field_J[var3_int].a(15, (1 + var3_int) * 16 + 20, 100, 0, -60);
-            this.c(-87, this.field_J[var3_int]);
+            this.field_J[var3_int] = new TextButton(pc.field_d, (UiListener) (this));
+            this.field_J[var3_int].field_r = (WidgetPainter) ((Object) var4);
+            this.field_J[var3_int].setBounds(15, (1 + var3_int) * 16 + 20, 100, 0, -60);
+            this.addChild(-87, this.field_J[var3_int]);
             return;
           }
           this.field_K = null;

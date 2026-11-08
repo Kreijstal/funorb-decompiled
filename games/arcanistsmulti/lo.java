@@ -26,7 +26,7 @@ final class lo extends rl {
         return true;
     }
 
-    lo(rn param0) {
+    lo(EditableTextWidget param0) {
         super(param0);
     }
 

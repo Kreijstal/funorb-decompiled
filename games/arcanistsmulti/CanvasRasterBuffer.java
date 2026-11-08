@@ -47,7 +47,7 @@ abstract class CanvasRasterBuffer {
         if (param0) {
           SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_e, SoftwareRasterizer.field_j, 0, 192);
         }
-        pm.field_e.a(0, true, 0);
+        pm.field_e.drawLayersAndTooltip(0, true, 0);
     }
 
     final static void a(String param0, byte param1, boolean param2, int param3, boolean param4) {

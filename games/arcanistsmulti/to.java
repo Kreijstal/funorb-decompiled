@@ -78,8 +78,8 @@ class to extends DualLinkNode {
         try {
           var5_int = 0;
           scanLoop1: while (true) {
-            if (kl.field_B.length > var5_int) {
-              param3 = kl.field_B[var5_int];
+            if (ArrayWidgetContainer.field_B.length > var5_int) {
+              param3 = ArrayWidgetContainer.field_B[var5_int];
               stackIn_13_0 = var5_int << 4;
               if (var7 != 0) {
                 break scanLoop1;

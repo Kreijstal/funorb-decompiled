@@ -24,13 +24,13 @@ final class fn {
         int var9_int = 495;
         int var10 = 5;
         ck.field_d.a(-10 + var9_int, 5, var10, param2, (byte) -120);
-        wn.field_D.a(-sa.field_Cb.field_x + ck.field_d.field_x, 0, 0, param2, (byte) -120);
+        SingleChildContainer.field_D.a(-sa.field_Cb.field_x + ck.field_d.field_x, 0, 0, param2, (byte) -120);
         if (param4 != -104) {
           return;
         }
         try {
           var10 = var10 + (param6 + param2);
-          sa.field_Cb.a(sa.field_Cb.field_x, wn.field_D.field_x, 0, param2, (byte) -120);
+          sa.field_Cb.a(sa.field_Cb.field_x, SingleChildContainer.field_D.field_x, 0, param2, (byte) -120);
           hf.field_f.a(hf.field_f.c(-25921), 5, var10, param3, (byte) -120);
           var11 = ih.field_d.c(-25921);
           ih.field_d.a(var11, -5 + (var9_int - var11), var10, param3, (byte) -120);
@@ -266,7 +266,7 @@ final class fn {
           var6 = 0;
           var7 = 0;
           if (!param4) {
-            fn.a((byte) -126);
+            fn.releaseStatics((byte) -126);
           }
           var8 = 0;
           if (DirectByteStorage.field_f != null && (dh.field_Hb != null ||
@@ -510,7 +510,7 @@ final class fn {
                     if (var25_int == 1) {
                       var24Lifetime2 = kj.field_a;
                     }
-                    var24Lifetime2 = tj.a(117, new String[]{null, Integer.toString(var25_int)}, df.field_A);
+                    var24Lifetime2 = tj.a(117, new String[]{null, Integer.toString(var25_int)}, UiContainer.field_A);
                     var30Lifetime1 = var24Lifetime2;
                     var25 = var30Lifetime1;
                     var24Lifetime2 = var25;
@@ -536,7 +536,7 @@ final class fn {
               } else {
                 if (var5_int != 0 &&
                   !var12.field_Jb) {
-                  var24Lifetime2 = tj.a(-39, new String[]{var20}, qm.field_p);
+                  var24Lifetime2 = tj.a(-39, new String[]{var20}, UiComponent.field_p);
                 } else {
                   if (var7 > var12.field_Vb) {
                     var25_int = var7 - var12.field_Vb;
@@ -669,8 +669,8 @@ final class fn {
           he.field_e.writeOpcode((byte) -48, param5);
           he.field_e.position = he.field_e.position + 1;
           var7_int = he.field_e.position;
-          he.field_e.a(param3, (byte) 85);
-          he.field_e.a(param2, 23333);
+          he.field_e.writeLong(param3, (byte) 85);
+          he.field_e.writeString(param2, 23333);
           he.field_e.writeByte(param4, (byte) -84);
           he.field_e.writeByte(!param1 ? 0 : 1, (byte) -52);
           int var8 = 106 % ((param0 - 32) / 56);
@@ -680,7 +680,7 @@ final class fn {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_e = null;
         field_i = null;
         field_h = null;

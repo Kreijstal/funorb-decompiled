@@ -16,7 +16,7 @@ final class SoundCache {
     private NodeHashTable field_d;
     static String field_j;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_i = null;
         field_j = null;
         field_f = null;

@@ -122,7 +122,7 @@ final class vd {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_j = null;
         field_b = null;
         field_a = null;
@@ -143,7 +143,7 @@ final class vd {
     final int b(int param0) {
         int stackIn_7_0 = 0;
         if (param0 > -107) {
-          vd.a(-125);
+          vd.releaseStatics(-125);
         }
         if (this.field_f != null &&
           0 != this.field_f.length) {

@@ -21,9 +21,9 @@ final class ol {
         RuntimeException var1 = null;
         var4 = ArcanistsMulti.field_G ? 1 : 0;
         try {
-          var1_int = kl.field_B[0];
-          for (var2 = 1; var2 < kl.field_B.length; var2++) {
-            var3 = kl.field_B[var2];
+          var1_int = ArrayWidgetContainer.field_B[0];
+          for (var2 = 1; var2 < ArrayWidgetContainer.field_B.length; var2++) {
+            var3 = ArrayWidgetContainer.field_B[var2];
             ArraySupport.copyInts(w.field_Lb, var2 << 4, w.field_Lb, var1_int, var3);
             var1_int = var1_int + var3;
           }
@@ -52,7 +52,7 @@ final class ol {
         var8 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           if (param2) {
-            ol.b(64);
+            ol.releaseStatics(64);
           }
           while (true) {
             param4--;
@@ -89,7 +89,7 @@ final class ol {
         }
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_b = null;
         field_f = null;
         field_c = null;

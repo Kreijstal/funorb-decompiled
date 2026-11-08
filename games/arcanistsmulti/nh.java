@@ -137,7 +137,7 @@ final class nh extends nn {
         wa var6Lifetime1;
         var9 = ArcanistsMulti.field_G ? 1 : 0;
         try {
-          var1 = df.field_z;
+          var1 = UiContainer.field_z;
           var2 = var1.readUnsignedByte((byte) -107);
           if (0 == var2) {
             if (uc.field_c == null) {

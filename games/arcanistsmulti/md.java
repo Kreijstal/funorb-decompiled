@@ -20,7 +20,7 @@ final class md {
         try {
           var3_int = 0;
           if (param0) {
-            md.a((byte) 28);
+            md.releaseStatics((byte) 28);
           }
           for (var4 = 0; var4 < 58; var4++) {
             if ((param1 & 1L << var4) != 0L) {
@@ -36,7 +36,7 @@ final class md {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_b = null;
         int var1 = 17 % ((param0 - 37) / 56);
         field_f = null;

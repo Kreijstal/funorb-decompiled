@@ -3,11 +3,11 @@
  */
 import java.util.*;
 
-class qm extends IntrusiveNode {
+class UiComponent extends IntrusiveNode {
     int field_t;
     static String field_l;
     String field_q;
-    pf field_r;
+    WidgetPainter field_r;
     int field_h;
     int field_n;
     String field_g;
@@ -16,13 +16,13 @@ class qm extends IntrusiveNode {
     int field_j;
     static int field_u;
     static String field_p;
-    wc field_o;
+    UiListener field_o;
     boolean field_w;
     int field_k;
     static String field_m;
     int field_i;
 
-    void a(byte param0, int param1, int param2, int param3) {
+    void drawLayer(byte param0, int param1, int param2, int param3) {
         if (param0 > -52) {
           return;
         }
@@ -35,7 +35,7 @@ class qm extends IntrusiveNode {
         }
     }
 
-    final boolean a(StringBuilder param0, byte param1, Hashtable param2, int param3) {
+    final boolean beginDebugEntry(StringBuilder param0, byte param1, Hashtable param2, int param3) {
         StringBuilder discarded$1 = null;
         RuntimeException var5 = null;
         RuntimeException stackIn_9_0 = null;
@@ -46,7 +46,7 @@ class qm extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != -90) {
-            this.a('ﾬ', (byte) 20, -10);
+            this.processKey('ﾬ', (byte) 20, -10);
           }
           if (param2.containsKey(this)) {
             discarded$1 = param0.append("<circular [0x").append(Integer.toHexString(this.hashCode())).append("]>");
@@ -74,7 +74,7 @@ class qm extends IntrusiveNode {
         }
     }
 
-    boolean a(int param0, int param1, int param2, int param3, int param4, int param5, qm param6) {
+    boolean handleMouseWheel(int param0, int param1, int param2, int param3, int param4, int param5, UiComponent param6) {
         RuntimeException var8 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -82,7 +82,7 @@ class qm extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param5 != 0) {
-            qm.f((byte) -21);
+            UiComponent.releaseStatics((byte) -21);
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -99,7 +99,7 @@ class qm extends IntrusiveNode {
         }
     }
 
-    boolean a(byte param0, int param1, int param2, int param3, int param4) {
+    boolean containsPoint(byte param0, int param1, int param2, int param3, int param4) {
         boolean stackIn_18_0 = false;
         if (param0 != -47) {
           this.field_j = -27;
@@ -127,14 +127,14 @@ class qm extends IntrusiveNode {
         return stackIn_18_0;
     }
 
-    int c(int param0) {
+    int getTopLayer(int param0) {
         if (param0 != 0) {
           return -80;
         }
         return 0;
     }
 
-    void a(int param0, int param1, int param2, int param3, int param4) {
+    void setBounds(int param0, int param1, int param2, int param3, int param4) {
         this.field_k = param0;
         this.field_v = param2;
         this.field_j = param1;
@@ -144,16 +144,16 @@ class qm extends IntrusiveNode {
         }
     }
 
-    final void a(int param0, boolean param1, int param2) {
+    final void drawLayersAndTooltip(int param0, boolean param1, int param2) {
         int var4;
         int var5_int;
         String var5;
         int var6;
         var6 = ArcanistsMulti.field_G ? 1 : 0;
-        var4 = this.c(0);
+        var4 = this.getTopLayer(0);
         var5_int = 0;
         while (var5_int <= var4) {
-          this.a((byte) -99, param0, var5_int, param2);
+          this.drawLayer((byte) -99, param0, var5_int, param2);
           var5_int++;
           if (var6 == 0) {
             continue;
@@ -169,7 +169,7 @@ class qm extends IntrusiveNode {
         }
     }
 
-    boolean a(int param0, qm param1) {
+    boolean focusNext(int param0, UiComponent param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -195,7 +195,7 @@ class qm extends IntrusiveNode {
         }
     }
 
-    public static void f(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_p = null;
         field_m = null;
         if (param0 != -17) {
@@ -204,29 +204,29 @@ class qm extends IntrusiveNode {
         field_l = null;
     }
 
-    boolean d(int param0) {
+    boolean isFocused(int param0) {
         if (param0 != -2116) {
-          this.c(8);
+          this.getTopLayer(8);
           return false;
         }
         return false;
     }
 
-    final void e(byte param0) {
+    final void refreshLayout(byte param0) {
         if (param0 > 44) {
-          this.a(this.field_k, this.field_j, this.field_v, this.field_n, -114);
+          this.setBounds(this.field_k, this.field_j, this.field_v, this.field_n, -114);
           return;
         }
         Hashtable var3 = (Hashtable) null;
-        this.a((StringBuilder) null, -107, (Hashtable) null, (byte) 106);
-        this.a(this.field_k, this.field_j, this.field_v, this.field_n, -114);
+        this.appendDebugTree((StringBuilder) null, -107, (Hashtable) null, (byte) 106);
+        this.setBounds(this.field_k, this.field_j, this.field_v, this.field_n, -114);
     }
 
-    final boolean a(char param0, byte param1, int param2) {
+    final boolean processKey(char param0, byte param1, int param2) {
         int var4 = 0;
         int var4Lifetime1;
-        if (this.d(-2116)) {
-          if (this.a(this, (byte) -123, param0, param2)) {
+        if (this.isFocused(-2116)) {
+          if (this.handleKeyInput(this, (byte) -123, param0, param2)) {
             return true;
           }
           var4 = param2;
@@ -234,17 +234,17 @@ class qm extends IntrusiveNode {
             var4 = 123 % ((87 - param1) / 35);
             return false;
           }
-          return this.a(0, this);
+          return this.focusNext(0, this);
         }
         var4Lifetime1 = param2;
         if (var4Lifetime1 != 80) {
           var4Lifetime1 = 123 % ((87 - param1) / 35);
           return false;
         }
-        return this.a(0, this);
+        return this.focusNext(0, this);
     }
 
-    final boolean a(int param0, int param1, boolean param2, byte param3) {
+    final boolean processPointerInput(int param0, int param1, boolean param2, byte param3) {
         int var5;
         int var7;
         se var8;
@@ -260,22 +260,22 @@ class qm extends IntrusiveNode {
         if (param3 >= -75) {
           return false;
         }
-        this.a(this, param0, 170, param1);
-        var5 = this.d(-2116) ? 1 : 0;
+        this.updatePointer(this, param0, 170, param1);
+        var5 = this.isFocused(-2116) ? 1 : 0;
         if (!param2) {
           if (var5 != 0 &&
             re.field_r != 0) {
-            this.d((byte) 29);
+            this.blur((byte) 29);
           }
           la.field_f = PacketBuffer.field_m;
-          qg.a(38, this.b(false));
+          qg.a(38, this.getTooltip(false));
           return param2;
         }
-        if (wn.field_y == 0) {
+        if (SingleChildContainer.field_y == 0) {
           if (0 == re.field_r) {
             if (0 == PacketBuffer.field_m &&
               la.field_f != 0) {
-              this.a(me.field_I, -20592, an.field_g, param1, param0, this);
+              this.handlePointerRelease(me.field_I, -20592, an.field_g, param1, param0, this);
               var8 = so.field_i;
               if (var8 != null) {
                 if (var8.field_o instanceof em) {
@@ -286,18 +286,18 @@ class qm extends IntrusiveNode {
               if (var7 != 0 &&
                 var5 != 0 &&
                 re.field_r != 0) {
-                this.d((byte) 29);
+                this.blur((byte) 29);
               }
             }
             la.field_f = PacketBuffer.field_m;
-            qg.a(38, this.b(false));
+            qg.a(38, this.getTooltip(false));
             return param2;
           }
-          if (!this.a(ja.field_s, re.field_r, this, param1, 10, pb.field_h, param0)) {
+          if (!this.handlePointerPress(ja.field_s, re.field_r, this, param1, 10, pb.field_h, param0)) {
             if (var5 == 0) {
               if (0 == PacketBuffer.field_m &&
                 la.field_f != 0) {
-                this.a(me.field_I, -20592, an.field_g, param1, param0, this);
+                this.handlePointerRelease(me.field_I, -20592, an.field_g, param1, param0, this);
                 var9 = so.field_i;
                 if (var9 != null) {
                   if (!(var9.field_o instanceof em)) {
@@ -310,14 +310,14 @@ class qm extends IntrusiveNode {
                 if (var7 != 0 &&
                   var5 != 0 &&
                   re.field_r != 0) {
-                  this.d((byte) 29);
+                  this.blur((byte) 29);
                 }
               }
               la.field_f = PacketBuffer.field_m;
-              qg.a(38, this.b(false));
+              qg.a(38, this.getTooltip(false));
               return param2;
             }
-            this.d((byte) 29);
+            this.blur((byte) 29);
             if (var7 != 0) {
               param2 = false;
             }
@@ -326,15 +326,15 @@ class qm extends IntrusiveNode {
           }
           if (0 != PacketBuffer.field_m) {
             la.field_f = PacketBuffer.field_m;
-            qg.a(38, this.b(false));
+            qg.a(38, this.getTooltip(false));
             return param2;
           }
           if (la.field_f == 0) {
             la.field_f = PacketBuffer.field_m;
-            qg.a(38, this.b(false));
+            qg.a(38, this.getTooltip(false));
             return param2;
           }
-          this.a(me.field_I, -20592, an.field_g, param1, param0, this);
+          this.handlePointerRelease(me.field_I, -20592, an.field_g, param1, param0, this);
           var10 = so.field_i;
           if (var10 != null) {
             if (var10.field_o instanceof em) {
@@ -345,17 +345,17 @@ class qm extends IntrusiveNode {
           if (var7 != 0 &&
             var5 != 0 &&
             re.field_r != 0) {
-            this.d((byte) 29);
+            this.blur((byte) 29);
           }
           la.field_f = PacketBuffer.field_m;
-          qg.a(38, this.b(false));
+          qg.a(38, this.getTooltip(false));
           return param2;
         }
         if (var5 == 0) {
           if (0 == re.field_r) {
             if (0 == PacketBuffer.field_m &&
               la.field_f != 0) {
-              this.a(me.field_I, -20592, an.field_g, param1, param0, this);
+              this.handlePointerRelease(me.field_I, -20592, an.field_g, param1, param0, this);
               var11 = so.field_i;
               if (var11 != null) {
                 if (var11.field_o instanceof em) {
@@ -366,17 +366,17 @@ class qm extends IntrusiveNode {
               if (var7 != 0 &&
                 var5 != 0 &&
                 re.field_r != 0) {
-                this.d((byte) 29);
+                this.blur((byte) 29);
               }
             }
             la.field_f = PacketBuffer.field_m;
-            qg.a(38, this.b(false));
+            qg.a(38, this.getTooltip(false));
             return param2;
           }
-          if (!this.a(ja.field_s, re.field_r, this, param1, 10, pb.field_h, param0)) {
+          if (!this.handlePointerPress(ja.field_s, re.field_r, this, param1, 10, pb.field_h, param0)) {
             if (0 == PacketBuffer.field_m &&
               la.field_f != 0) {
-              this.a(me.field_I, -20592, an.field_g, param1, param0, this);
+              this.handlePointerRelease(me.field_I, -20592, an.field_g, param1, param0, this);
               var12 = so.field_i;
               if (var12 != null) {
                 if (!(var12.field_o instanceof em)) {
@@ -389,25 +389,25 @@ class qm extends IntrusiveNode {
               if (var7 != 0 &&
                 var5 != 0 &&
                 re.field_r != 0) {
-                this.d((byte) 29);
+                this.blur((byte) 29);
               }
             }
             la.field_f = PacketBuffer.field_m;
-            qg.a(38, this.b(false));
+            qg.a(38, this.getTooltip(false));
             return param2;
           }
           param2 = false;
           if (0 != PacketBuffer.field_m) {
             la.field_f = PacketBuffer.field_m;
-            qg.a(38, this.b(false));
+            qg.a(38, this.getTooltip(false));
             return param2;
           }
           if (la.field_f == 0) {
             la.field_f = PacketBuffer.field_m;
-            qg.a(38, this.b(false));
+            qg.a(38, this.getTooltip(false));
             return param2;
           }
-          this.a(me.field_I, -20592, an.field_g, param1, param0, this);
+          this.handlePointerRelease(me.field_I, -20592, an.field_g, param1, param0, this);
           var13 = so.field_i;
           if (var13 != null) {
             if (var13.field_o instanceof em) {
@@ -418,17 +418,17 @@ class qm extends IntrusiveNode {
           if (var7 != 0 &&
             var5 != 0 &&
             re.field_r != 0) {
-            this.d((byte) 29);
+            this.blur((byte) 29);
           }
           la.field_f = PacketBuffer.field_m;
-          qg.a(38, this.b(false));
+          qg.a(38, this.getTooltip(false));
           return param2;
         }
-        this.a(param1, param0, an.field_g, me.field_I, wn.field_y, 0, this);
+        this.handleMouseWheel(param1, param0, an.field_g, me.field_I, SingleChildContainer.field_y, 0, this);
         if (0 == re.field_r) {
           if (0 == PacketBuffer.field_m &&
             la.field_f != 0) {
-            this.a(me.field_I, -20592, an.field_g, param1, param0, this);
+            this.handlePointerRelease(me.field_I, -20592, an.field_g, param1, param0, this);
             var14 = so.field_i;
             if (var14 != null) {
               if (var14.field_o instanceof em) {
@@ -439,15 +439,15 @@ class qm extends IntrusiveNode {
             if (var7 != 0 &&
               var5 != 0 &&
               re.field_r != 0) {
-              this.d((byte) 29);
+              this.blur((byte) 29);
             }
           }
           la.field_f = PacketBuffer.field_m;
-          qg.a(38, this.b(false));
+          qg.a(38, this.getTooltip(false));
           return param2;
         }
-        if (!this.a(ja.field_s, re.field_r, this, param1, 10, pb.field_h, param0)) {
-          this.d((byte) 29);
+        if (!this.handlePointerPress(ja.field_s, re.field_r, this, param1, 10, pb.field_h, param0)) {
+          this.blur((byte) 29);
           if (var7 != 0) {
             param2 = false;
           }
@@ -456,15 +456,15 @@ class qm extends IntrusiveNode {
         }
         if (0 != PacketBuffer.field_m) {
           la.field_f = PacketBuffer.field_m;
-          qg.a(38, this.b(false));
+          qg.a(38, this.getTooltip(false));
           return param2;
         }
         if (la.field_f == 0) {
           la.field_f = PacketBuffer.field_m;
-          qg.a(38, this.b(false));
+          qg.a(38, this.getTooltip(false));
           return param2;
         }
-        this.a(me.field_I, -20592, an.field_g, param1, param0, this);
+        this.handlePointerRelease(me.field_I, -20592, an.field_g, param1, param0, this);
         var16 = so.field_i;
         if (var16 != null) {
           if (var16.field_o instanceof em) {
@@ -475,14 +475,14 @@ class qm extends IntrusiveNode {
         if (var7 != 0 &&
           var5 != 0 &&
           re.field_r != 0) {
-          this.d((byte) 29);
+          this.blur((byte) 29);
         }
         la.field_f = PacketBuffer.field_m;
-        qg.a(38, this.b(false));
+        qg.a(38, this.getTooltip(false));
         return param2;
     }
 
-    boolean a(qm param0, byte param1, char param2, int param3) {
+    boolean handleKeyInput(UiComponent param0, byte param1, char param2, int param3) {
         RuntimeException var5 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -492,7 +492,7 @@ class qm extends IntrusiveNode {
           if (param1 < -120) {
             return false;
           }
-          this.field_o = (wc) null;
+          this.field_o = (UiListener) null;
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -508,7 +508,7 @@ class qm extends IntrusiveNode {
         }
     }
 
-    void a(int param0, int param1, int param2, int param3, int param4, qm param5) {
+    void handlePointerRelease(int param0, int param1, int param2, int param3, int param4, UiComponent param5) {
         try {
           if (param1 != -20592) {
             this.field_q = (String) null;
@@ -519,13 +519,13 @@ class qm extends IntrusiveNode {
         }
     }
 
-    void d(byte param0) {
+    void blur(byte param0) {
         if (param0 != 29) {
-          this.a((byte) -10, 57, 127, -111);
+          this.drawLayer((byte) -10, 57, 127, -111);
         }
     }
 
-    StringBuilder a(StringBuilder param0, int param1, Hashtable param2, byte param3) {
+    StringBuilder appendDebugTree(StringBuilder param0, int param1, Hashtable param2, byte param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         StringBuilder stackIn_3_0 = null;
@@ -536,8 +536,8 @@ class qm extends IntrusiveNode {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.a(param0, (byte) -90, param2, param1)) {
-            this.a(param0, param1, param2, 1);
+          if (this.beginDebugEntry(param0, (byte) -90, param2, param1)) {
+            this.appendDebugSummary(param0, param1, param2, 1);
           }
           var5_int = -122 % ((param3 - 50) / 60);
           stackIn_3_0 = (StringBuilder) (param0);
@@ -563,10 +563,10 @@ class qm extends IntrusiveNode {
     }
 
     public final String toString() {
-        return this.a(new StringBuilder(), 0, new Hashtable(), (byte) -32).toString();
+        return this.appendDebugTree(new StringBuilder(), 0, new Hashtable(), (byte) -32).toString();
     }
 
-    boolean a(int param0, int param1, qm param2, int param3, int param4, int param5, int param6) {
+    boolean handlePointerPress(int param0, int param1, UiComponent param2, int param3, int param4, int param5, int param6) {
         int var8_int = 0;
         RuntimeException var8 = null;
         RuntimeException stackIn_6_0 = null;
@@ -574,7 +574,7 @@ class qm extends IntrusiveNode {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.a((byte) -47, param3, param0, param6, param5)) {
+          if (this.containsPoint((byte) -47, param3, param0, param6, param5)) {
             this.field_t = param1;
           }
           var8_int = 106 % ((param4 + 42) / 35);
@@ -593,7 +593,7 @@ class qm extends IntrusiveNode {
         }
     }
 
-    final void a(StringBuilder param0, int param1, Hashtable param2, int param3) {
+    final void appendDebugSummary(StringBuilder param0, int param1, Hashtable param2, int param3) {
         StringBuilder discarded$0 = null;
         StringBuilder discarded$1 = null;
         StringBuilder discarded$2 = null;
@@ -619,24 +619,24 @@ class qm extends IntrusiveNode {
           if (this.field_w) {
             discarded$2 = param0.append(" mouseover");
           }
-          if (this.d(param3 - 2117)) {
+          if (this.isFocused(param3 - 2117)) {
             discarded$3 = param0.append(" focused");
           }
           if (null != this.field_r) {
             discarded$4 = param0.append(" renderer=");
-            if (!(this.field_r instanceof qm)) {
+            if (!(this.field_r instanceof UiComponent)) {
               discarded$5 = param0.append(this.field_r);
               if (var6 != 0) {
-                param0 = this.a(param0, param1 + 1, param2, (byte) 117);
+                param0 = this.appendDebugTree(param0, param1 + 1, param2, (byte) 117);
               }
             } else {
-              param0 = this.a(param0, param1 + 1, param2, (byte) 117);
+              param0 = this.appendDebugTree(param0, param1 + 1, param2, (byte) 117);
             }
           }
           if (this.field_o != null) {
             discarded$6 = param0.append(" listener=");
-            if (this.field_o instanceof qm) {
-              param0 = this.a(param0, 1 + param1, param2, (byte) -77);
+            if (this.field_o instanceof UiComponent) {
+              param0 = this.appendDebugTree(param0, 1 + param1, param2, (byte) -77);
               if (var6 != 0) {
                 discarded$7 = param0.append(this.field_o);
               }
@@ -645,7 +645,7 @@ class qm extends IntrusiveNode {
             }
           }
           if (param3 != 1) {
-            this.a(-66, 16, 33, 3, 108);
+            this.setBounds(-66, 16, 33, 3, 108);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -668,9 +668,9 @@ class qm extends IntrusiveNode {
         }
     }
 
-    String b(boolean param0) {
+    String getTooltip(boolean param0) {
         if (param0) {
-          this.a('ﾗ', (byte) 86, -60);
+          this.processKey('ﾗ', (byte) 86, -60);
           if (this.field_w) {
             return this.field_q;
           }
@@ -682,7 +682,7 @@ class qm extends IntrusiveNode {
         return null;
     }
 
-    void a(qm param0, int param1, int param2, int param3) {
+    void updatePointer(UiComponent param0, int param1, int param2, int param3) {
         int var5_int = 0;
         int stackIn_4_0 = 0;
         int stackIn_5_1 = 0;
@@ -693,7 +693,7 @@ class qm extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         try {
-          var5_int = this.a((byte) -47, param3, me.field_I, param1, an.field_g) ? 1 : 0;
+          var5_int = this.containsPoint((byte) -47, param3, me.field_I, param1, an.field_g) ? 1 : 0;
           if (param2 != 170) {
             field_p = (String) null;
           }
@@ -728,7 +728,7 @@ class qm extends IntrusiveNode {
         }
     }
 
-    final static void a(java.awt.Canvas param0, byte param1) {
+    final static void attachInputListeners(java.awt.Canvas param0, byte param1) {
         try {
           fj.a((java.awt.Component) ((Object) param0), 115);
           so.a((java.awt.Component) ((Object) param0), 0);
@@ -741,25 +741,25 @@ class qm extends IntrusiveNode {
         }
     }
 
-    qm(String param0, wc param1) {
+    UiComponent(String param0, UiListener param1) {
         this(param0, MusicCrossfadeStream.field_n.field_r, param1);
     }
 
-    protected qm() {
+    protected UiComponent() {
         this.field_h = 0;
         this.field_i = 0;
     }
 
-    qm(String param0, pf param1, wc param2) {
-        ac var4 = null;
+    UiComponent(String param0, WidgetPainter param1, UiListener param2) {
+        WidgetTextLayout var4 = null;
         this.field_h = 0;
         this.field_i = 0;
         try {
           this.field_o = param2;
           this.field_g = param0;
           this.field_r = param1;
-          if (this.field_r instanceof ac) {
-            var4 = (ac) ((Object) this.field_r);
+          if (this.field_r instanceof WidgetTextLayout) {
+            var4 = (WidgetTextLayout) ((Object) this.field_r);
             this.field_v = var4.a((byte) 124, this);
             this.field_k = var4.b(this, 1);
           }
@@ -768,7 +768,7 @@ class qm extends IntrusiveNode {
         }
     }
 
-    qm(int param0, int param1, int param2, int param3, pf param4, wc param5) {
+    UiComponent(int param0, int param1, int param2, int param3, WidgetPainter param4, UiListener param5) {
         this.field_h = 0;
         this.field_i = 0;
         try {

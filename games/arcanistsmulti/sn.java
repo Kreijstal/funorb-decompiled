@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sn extends df implements ro, vb {
+final class sn extends UiContainer implements ro, ButtonListener {
     static byte[][] field_F;
     li field_M;
     static String field_J;
-    private ag field_O;
+    private TextButton field_O;
     static int[] field_H;
     static String field_L;
     static IndexedSprite[] field_E;
@@ -13,9 +13,9 @@ final class sn extends df implements ro, vb {
     private bi field_D;
     static int field_G;
     static int field_K;
-    private ag field_I;
+    private TextButton field_I;
 
-    private final int a(String param0, int param1, byte param2, qm param3, String param4, int param5, int param6) {
+    private final int a(String param0, int param1, byte param2, UiComponent param3, String param4, int param5, int param6) {
         int discarded$1 = 0;
         RuntimeException var8 = null;
         sc var9 = null;
@@ -33,13 +33,13 @@ final class sn extends df implements ro, vb {
         try {
           if (param2 != -123) {
             var10 = (String) null;
-            discarded$1 = this.a((String) null, -25, (byte) -96, (qm) null, (String) null, 57, 33);
+            discarded$1 = this.a((String) null, -25, (byte) -96, (UiComponent) null, (String) null, 57, 33);
           }
           var11 = new ke(20, param5, 120 + param6, 25, param3, false, 120, 3, ia.field_c, 16777215, param0);
-          this.c(-108, var11);
+          this.addChild(-108, var11);
           var9 = new sc(((el) ((Object) param3)).a(0), param4, 126, param5 + var11.field_k, 25 + param6, param1);
-          var9.field_o = (wc) (this);
-          this.c(-113, var9);
+          var9.field_o = (UiListener) (this);
+          this.addChild(-113, var9);
           stackIn_3_0 = var9.field_k + var11.field_k;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -68,7 +68,7 @@ final class sn extends df implements ro, vb {
         }
     }
 
-    final boolean a(qm param0, byte param1, char param2, int param3) {
+    final boolean handleKeyInput(UiComponent param0, byte param1, char param2, int param3) {
         boolean discarded$1 = false;
         RuntimeException var5 = null;
         el var6 = null;
@@ -79,15 +79,15 @@ final class sn extends df implements ro, vb {
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (super.a(param0, (byte) -121, param2, param3)) {
+          if (super.handleKeyInput(param0, (byte) -121, param2, param3)) {
             return true;
           }
           if (param3 == 98) {
-            stackIn_5_0 = this.a(param0, 9555);
+            stackIn_5_0 = this.focusPreviousChild(param0, 9555);
             return stackIn_5_0;
           }
           if (param3 == 99) {
-            stackIn_8_0 = this.b(2, param0);
+            stackIn_8_0 = this.focusNextChild(2, param0);
             return stackIn_8_0;
           }
           if (param1 < -120) {
@@ -110,7 +110,7 @@ final class sn extends df implements ro, vb {
         }
     }
 
-    private final int a(int param0, String param1, int param2, qm param3, String param4, int param5) {
+    private final int a(int param0, String param1, int param2, UiComponent param3, String param4, int param5) {
         RuntimeException var7 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -123,7 +123,7 @@ final class sn extends df implements ro, vb {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param5 >= -9) {
-            this.field_O = (ag) null;
+            this.field_O = (TextButton) null;
           }
           stackIn_3_0 = this.a(param4, 35, (byte) -123, param3, param1, param0, param2);
           return stackIn_3_0;
@@ -170,7 +170,7 @@ final class sn extends df implements ro, vb {
         ((dg) (this.field_D.a(0))).e(127);
     }
 
-    public static void g(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_F = (byte[][]) null;
         if (param0 < 125) {
           field_K = 82;
@@ -217,35 +217,35 @@ final class sn extends df implements ro, vb {
     }
 
     public sn() {
-        super(0, 0, 496, 0, (pf) null);
-        this.field_D = new bi("", (wc) null, 12);
+        super(0, 0, 496, 0, (WidgetPainter) null);
+        this.field_D = new bi("", (UiListener) null, 12);
         jm var1 = new jm(vc.field_e, 0, 0, 0, 0, 16777215, -1, 3, 0, ia.field_c.field_C, -1, 2147483647, true);
-        qm var2 = new qm(wl.field_H, var1, (wc) null);
-        this.field_O = new ag(im.field_f, (wc) null);
-        this.field_I = new ag(sa.field_Eb, (wc) null);
+        UiComponent var2 = new UiComponent(wl.field_H, var1, (UiListener) null);
+        this.field_O = new TextButton(im.field_f, (UiListener) null);
+        this.field_I = new TextButton(sa.field_Eb, (UiListener) null);
         this.field_D.field_q = eh.field_b;
         this.field_D.a(new dg(this.field_D), (byte) 69);
         this.field_O.field_B = false;
-        this.field_O.field_r = (pf) ((Object) new mm());
-        this.field_I.field_r = (pf) ((Object) new gm());
-        this.field_D.field_r = (pf) ((Object) new ib(10000536));
+        this.field_O.field_r = (WidgetPainter) ((Object) new mm());
+        this.field_I.field_r = (WidgetPainter) ((Object) new gm());
+        this.field_D.field_r = (WidgetPainter) ((Object) new ib(10000536));
         int var3 = 20;
         int var4 = 4;
         int var5 = 200;
-        var2.a(50, var3, 270, 20, -85);
-        this.c(-85, var2);
+        var2.setBounds(50, var3, 270, 20, -85);
+        this.addChild(-85, var2);
         var3 += 50;
         var3 = var3 + (5 + this.a(var3, bj.field_kb, 170, this.field_D, ch.field_h, -124));
-        this.field_O.a(40, var3, var5, -var5 + 496 >> 1, -67);
-        this.field_I.a(40, var3 + 15, 60, 3 + var4, -126);
-        this.field_I.field_o = (wc) (this);
-        this.field_O.field_o = (wc) (this);
-        this.c(-71, this.field_O);
-        this.c(-84, this.field_I);
+        this.field_O.setBounds(40, var3, var5, -var5 + 496 >> 1, -67);
+        this.field_I.setBounds(40, var3 + 15, 60, 3 + var4, -126);
+        this.field_I.field_o = (UiListener) (this);
+        this.field_O.field_o = (UiListener) (this);
+        this.addChild(-71, this.field_O);
+        this.addChild(-84, this.field_I);
         this.field_M = new li((ro) (this));
-        this.field_M.a(150, 20, -this.field_D.field_n + this.field_v - this.field_D.field_v - 60, this.field_D.field_n + this.field_D.field_v + 60, -118);
-        this.c(-84, this.field_M);
-        this.a(55 + var3 + var4, 0, 496, 0, -76);
+        this.field_M.setBounds(150, 20, -this.field_D.field_n + this.field_v - this.field_D.field_v - 60, this.field_D.field_n + this.field_D.field_v + 60, -118);
+        this.addChild(-84, this.field_M);
+        this.setBounds(55 + var3 + var4, 0, 496, 0, -76);
     }
 
     private final void e(boolean param0) {
@@ -258,7 +258,7 @@ final class sn extends df implements ro, vb {
         }
     }
 
-    public final void a(boolean param0, int param1, int param2, int param3, ag param4) {
+    public final void a(boolean param0, int param1, int param2, int param3, TextButton param4) {
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -301,19 +301,19 @@ final class sn extends df implements ro, vb {
             discarded$0 = this.a(77, (el) null);
           }
           var4 = param0;
-          ((rn) ((Object) var3)).a(false, var4, false);
+          ((EditableTextWidget) ((Object) var3)).setText(false, var4, false);
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "sn.O(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final void a(qm param0, int param1, int param2, int param3) {
+    final void updatePointer(UiComponent param0, int param1, int param2, int param3) {
         try {
           if (param2 != 170) {
-            ag var6 = (ag) null;
-            this.a(false, -6, 41, -17, (ag) null);
+            TextButton var6 = (TextButton) null;
+            this.a(false, -6, 41, -17, (TextButton) null);
           }
-          super.a(param0, param1, param2 + 0, param3);
+          super.updatePointer(param0, param1, param2 + 0, param3);
           this.field_O.field_B = this.a(16777215);
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "sn.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');

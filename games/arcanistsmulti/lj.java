@@ -50,7 +50,7 @@ final class lj extends hg {
 
     final static boolean b(boolean param0) {
         if (!param0) {
-          lj.c(-97);
+          lj.releaseStatics(-97);
         }
         return MusicPatchPcmStream.field_s;
     }
@@ -246,7 +246,7 @@ final class lj extends hg {
         rk.g(491697968);
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         field_j = null;
         field_m = null;
         field_n = null;

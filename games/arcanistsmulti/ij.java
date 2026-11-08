@@ -364,7 +364,7 @@ final class ij extends kc {
         return false;
     }
 
-    public static void g(int param0) {
+    public static void releaseStatics(int param0) {
         field_Ob = null;
         if (param0 != 12) {
           field_Cb = (String) null;

@@ -47,7 +47,7 @@ final class pk implements Iterable {
             param1.unlink(true);
           }
           if (param0 > -17) {
-            pk.a(75);
+            pk.releaseStatics(75);
           }
           var5 = this.field_c[(int)(param2 & (long)(-1 + this.field_d))];
           param1.previous = var5.previous;
@@ -60,7 +60,7 @@ final class pk implements Iterable {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_g = null;
         field_a = null;
         field_f = null;

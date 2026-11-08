@@ -149,15 +149,15 @@ final class Bzip2State {
           lj.field_t.a(qo.field_f, 96);
           ch.field_d = new kc(0L, param6);
           lj.field_t.a(ch.field_d, 61);
-          wn.field_D = new kc(0L, param10);
-          wn.field_D.field_Z = oo.field_x;
-          ch.field_d.a(wn.field_D, 24);
+          SingleChildContainer.field_D = new kc(0L, param10);
+          SingleChildContainer.field_D.field_Z = oo.field_x;
+          ch.field_d.a(SingleChildContainer.field_D, 24);
           ch.field_d.e((byte) 20);
           sa.field_Cb = new kc(0L, (kc) null);
           sa.field_Cb.field_v = var16;
           ch.field_d.a(sa.field_Cb, 112);
           ta.field_i = new kc[5];
-          oc.field_f = new kc[5];
+          IntrusiveDequeCursor.field_f = new kc[5];
           ia.field_b = new kc[5];
           mn.field_s = new kc[5];
           var18 = 0;
@@ -171,7 +171,7 @@ final class Bzip2State {
                 if (hm.field_c) {
                   stackIn_13_0 = lj.field_p;
                 } else {
-                  stackIn_13_0 = qm.field_m;
+                  stackIn_13_0 = UiComponent.field_m;
                 }
                 var19 = stackIn_13_0;
               } else if (var18 == 1 &&
@@ -188,11 +188,11 @@ final class Bzip2State {
                 ta.field_i[var18] = new kc(0L, nf.field_A, var19);
                 ia.field_b[var18] = new kc(0L, (kc) null);
                 ia.field_b[var18].field_gb = 1;
-                oc.field_f[var18] = new kc(0L, nf.field_A);
-                oc.field_f[var18].field_gb = 1;
+                IntrusiveDequeCursor.field_f[var18] = new kc(0L, nf.field_A);
+                IntrusiveDequeCursor.field_f[var18].field_gb = 1;
                 mn.field_s[var18].a(ta.field_i[var18], param8 - 27777);
                 mn.field_s[var18].a(ia.field_b[var18], 81);
-                mn.field_s[var18].a(oc.field_f[var18], 102);
+                mn.field_s[var18].a(IntrusiveDequeCursor.field_f[var18], 102);
                 mn.field_s[var18].e((byte) 20);
                 n.field_g.a(mn.field_s[var18], 73);
                 lf.field_g = lf.field_g + 1;

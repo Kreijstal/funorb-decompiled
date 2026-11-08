@@ -19,7 +19,7 @@ final class ec {
         }
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_g = null;
         field_e = null;
         field_d = null;

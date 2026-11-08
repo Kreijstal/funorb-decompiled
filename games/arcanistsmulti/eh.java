@@ -68,7 +68,7 @@ final class eh {
           ka.b(false);
           return;
         }
-        CipherPacketBuffer var3 = df.field_z;
+        CipherPacketBuffer var3 = UiContainer.field_z;
         var3.readInt(-10674);
         var3.readInt(-10674);
         var3.readInt(-10674);
@@ -81,7 +81,7 @@ final class eh {
           eh.b((byte) -111);
         }
         if (wh.field_g) {
-          return ln.field_U.a(ed.field_Bb, (byte) 123, IntrusiveDeque.field_d);
+          return ln.field_U.processKey(ed.field_Bb, (byte) 123, IntrusiveDeque.field_d);
         }
         if (oj.field_i) {
           return rg.a(param3, -14, param2);
@@ -138,7 +138,7 @@ final class eh {
             stackIn_19_0 = nh.field_u;
             return stackIn_19_0;
           }
-          if (kl.a(param2, 1)) {
+          if (ArrayWidgetContainer.a(param2, 1)) {
             stackIn_23_0 = tj.a(114, new String[]{param2}, ImageProducerRasterBuffer.field_q);
             return stackIn_23_0;
           }
@@ -151,7 +151,7 @@ final class eh {
             var5 = (String) null;
             eh.a(false, '￞', (String) null);
           }
-          var6.a(param2, 23333);
+          var6.writeString(param2, 23333);
           var6.writeByteLengthAtMark(-var4 + var6.position, (byte) 43);
           stackIn_27_0 = null;
           return (String) (stackIn_27_0);
@@ -169,7 +169,7 @@ final class eh {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_g = null;
         int var1 = -93 % ((78 - param0) / 43);
         field_d = null;
@@ -188,7 +188,7 @@ final class eh {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 18306) {
-            eh.a((byte) 21);
+            eh.releaseStatics((byte) 21);
           }
           stackIn_3_0 = param1.a(-27);
           return stackIn_3_0;

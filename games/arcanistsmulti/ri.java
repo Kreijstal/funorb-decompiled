@@ -48,7 +48,7 @@ final class ri {
           var10 = (int)((long)var6 * (long)var4 >> 16);
           return new int[]{0, 0, 0, var6, 0, var5, var7, var4, -var8, -var9, var3, var10};
         }
-        ri.a((byte) -82);
+        ri.releaseStatics((byte) -82);
         var6 = j.a(param0, -101);
         var7 = (int)((long)var5 * (long)var3 >> 16);
         var8 = (int)((long)var3 * (long)var6 >> 16);
@@ -67,7 +67,7 @@ final class ri {
         return fj.field_j == 11 ? true : false;
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 < 49) {
           return;
         }

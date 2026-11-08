@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class se extends wn {
+final class se extends SingleChildContainer {
     private int field_F;
     private boolean field_N;
     static kc field_H;
@@ -71,7 +71,7 @@ final class se extends wn {
         }
     }
 
-    final void a(qm param0, int param1, int param2, int param3) {
+    final void updatePointer(UiComponent param0, int param1, int param2, int param3) {
         int stackIn_11_1 = 0;
         int stackIn_12_2 = 0;
         int stackIn_18_1 = 0;
@@ -84,8 +84,8 @@ final class se extends wn {
         RuntimeException var5 = null;
         int var6 = 0;
         try {
-          if ((!(this.field_B instanceof ag) ||
-            ((ag) (this.field_B)).field_B) &&
+          if ((!(this.field_B instanceof TextButton) ||
+            ((TextButton) (this.field_B)).field_B) &&
             this.field_t == 1) {
             var5_int = an.field_g - this.field_F - param1;
             var6 = -param3 + me.field_I - this.field_O;
@@ -129,7 +129,7 @@ final class se extends wn {
               }
             }
           }
-          super.a(param0, param1, param2, param3);
+          super.updatePointer(param0, param1, param2, param3);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -145,7 +145,7 @@ final class se extends wn {
         }
     }
 
-    final boolean a(int param0, int param1, qm param2, int param3, int param4, int param5, int param6) {
+    final boolean handlePointerPress(int param0, int param1, UiComponent param2, int param3, int param4, int param5, int param6) {
         int var8_int = 0;
         RuntimeException var8 = null;
         int var9 = 0;
@@ -156,12 +156,12 @@ final class se extends wn {
         RuntimeException decompiledCaughtException = null;
         try {
           var9 = 120 % ((param4 + 42) / 35);
-          var8_int = super.a(param0, param1, param2, param3, 40, param5, param6) ? 1 : 0;
+          var8_int = super.handlePointerPress(param0, param1, param2, param3, 40, param5, param6) ? 1 : 0;
           if (var8_int != 0 &&
             this.field_N) {
             return true;
           }
-          if (!this.a((byte) -47, param3, param0, param6, param5)) {
+          if (!this.containsPoint((byte) -47, param3, param0, param6, param5)) {
             stackIn_5_0 = var8_int;
             return stackIn_5_0 != 0;
           }
@@ -414,7 +414,7 @@ final class se extends wn {
         ao.field_g = 2147483647;
     }
 
-    public static void f(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 < -88) {
           field_H = null;
           field_J = null;
@@ -427,23 +427,23 @@ final class se extends wn {
         field_L = null;
     }
 
-    final void a(byte param0) {
-        super.a(param0);
-        this.field_B.a(this.field_k, 0, this.field_v, 0, -90);
+    final void refreshChildLayout(byte param0) {
+        super.refreshChildLayout(param0);
+        this.field_B.setBounds(this.field_k, 0, this.field_v, 0, -90);
         this.field_M = this.field_n;
         this.field_G = this.field_j;
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, qm param5) {
+    final void handlePointerRelease(int param0, int param1, int param2, int param3, int param4, UiComponent param5) {
         try {
-          super.a(param0, param1, param2, param3, param4, param5);
+          super.handlePointerRelease(param0, param1, param2, param3, param4, param5);
           this.field_t = 0;
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "se.IA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 
-    se(int param0, int param1, int param2, int param3, pf param4, wc param5, qm param6, boolean param7, boolean param8) {
+    se(int param0, int param1, int param2, int param3, WidgetPainter param4, UiListener param5, UiComponent param6, boolean param7, boolean param8) {
         super(param0, param1, param2, param3, param4, param5);
         this.field_M = 2147483647;
         this.field_G = 2147483647;
@@ -456,7 +456,7 @@ final class se extends wn {
         }
     }
 
-    final StringBuilder a(StringBuilder param0, int param1, Hashtable param2, byte param3) {
+    final StringBuilder appendDebugTree(StringBuilder param0, int param1, Hashtable param2, byte param3) {
         StringBuilder discarded$64 = null;
         StringBuilder discarded$65 = null;
         int var5_int = 0;
@@ -469,9 +469,9 @@ final class se extends wn {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.a(param0, (byte) -90, param2, param1)) {
-            this.a(param0, param1, param2, 1);
-            this.a(0, param2, param0, param1);
+          if (this.beginDebugEntry(param0, (byte) -90, param2, param1)) {
+            this.appendDebugSummary(param0, param1, param2, 1);
+            this.appendDebugChild(0, param2, param0, param1);
             discarded$64 = param0.append(" revert=").append(this.field_K);
             if (2147483647 != this.field_M &&
               this.field_G != 2147483647) {

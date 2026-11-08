@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class rl extends ee implements bn {
+abstract class rl extends ee implements TextInputListener {
     static int field_o;
     static int[] field_h;
     static boolean[][] field_p;
-    private rn field_k;
+    private EditableTextWidget field_k;
     static int field_m;
     static String field_i;
     static String field_n;
@@ -25,7 +25,7 @@ abstract class rl extends ee implements bn {
         return true;
     }
 
-    public final void b(rn param0, int param1) {
+    public final void onTextSubmitted(EditableTextWidget param0, int param1) {
         try {
           if (param1 <= 73) {
             field_o = 48;
@@ -65,7 +65,7 @@ abstract class rl extends ee implements bn {
         field_l = null;
     }
 
-    public final void a(rn param0, int param1) {
+    public final void onTextChanged(EditableTextWidget param0, int param1) {
         try {
           this.b(-17444);
           if (param1 != -20626) {
@@ -86,7 +86,7 @@ abstract class rl extends ee implements bn {
         return -1;
     }
 
-    rl(rn param0) {
+    rl(EditableTextWidget param0) {
         try {
           this.field_k = param0;
         } catch (RuntimeException runtimeException) {

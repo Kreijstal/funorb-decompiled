@@ -9,10 +9,10 @@ final class cb {
     static boolean field_b;
     static String field_c;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_d = null;
         if (param0 <= 19) {
-          cb.a((byte) 112);
+          cb.releaseStatics((byte) 112);
           field_c = null;
           return;
         }

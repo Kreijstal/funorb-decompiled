@@ -33,7 +33,7 @@ final class jg {
           return 1;
         }
         if (SpriteState.field_t == 2 &&
-          kl.a(this.field_n, 1)) {
+          ArrayWidgetContainer.a(this.field_n, 1)) {
           return 1;
         }
         if (param0 <= -19) {
@@ -72,7 +72,7 @@ final class jg {
         ce.field_g[10] = cn.field_K;
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         field_p = null;
         field_j = null;
         field_l = null;

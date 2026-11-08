@@ -36,7 +36,7 @@ final class vk extends ve {
         return this.field_A.payload;
     }
 
-    public static void f(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_v = null;
         field_z = null;
         field_B = null;

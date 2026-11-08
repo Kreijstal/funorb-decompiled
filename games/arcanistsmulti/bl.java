@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bl extends ee implements bn, ak {
+final class bl extends ee implements TextInputListener, ak {
     static int[] field_i;
     mg field_h;
 
@@ -184,7 +184,7 @@ final class bl extends ee implements bn, ak {
         }
     }
 
-    public final void a(rn param0, int param1) {
+    public final void onTextChanged(EditableTextWidget param0, int param1) {
         try {
           this.b(-17444);
           if (param1 != -20626) {
@@ -245,12 +245,12 @@ final class bl extends ee implements bn, ak {
         return this.field_h.j(-28612);
     }
 
-    public static void c(byte param0) {
+    public static void releaseStatics(byte param0) {
         int var1 = 48 % ((-29 - param0) / 33);
         field_i = null;
     }
 
-    public final void b(rn param0, int param1) {
+    public final void onTextSubmitted(EditableTextWidget param0, int param1) {
         try {
           if (param1 < 73) {
             this.field_h = (mg) null;
@@ -309,7 +309,7 @@ final class bl extends ee implements bn, ak {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
-        rn var6 = null;
+        EditableTextWidget var6 = null;
         eh stackIn_2_0 = null;
         eh stackIn_5_0 = null;
         eh stackIn_11_0 = null;
@@ -328,8 +328,8 @@ final class bl extends ee implements bn, ak {
             return stackIn_5_0;
           }
           if (param0 != -66) {
-            var6 = (rn) null;
-            this.a((rn) null, -112);
+            var6 = (EditableTextWidget) null;
+            this.onTextChanged((EditableTextWidget) null, -112);
           }
           if (!tn.a(var3, (byte) 115, var4, var2_int)) {
             stackIn_11_0 = ra.field_k;

@@ -32,7 +32,7 @@ final class ue {
 
     final static void a(byte param0, le param1) {
         try {
-          kl.field_A = 320;
+          ArrayWidgetContainer.field_A = 320;
           if (param0 > -26) {
             ue.b(-27);
           }

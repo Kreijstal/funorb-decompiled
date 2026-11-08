@@ -3,11 +3,11 @@
  */
 import java.util.*;
 
-abstract class kl extends qm implements a {
+abstract class ArrayWidgetContainer extends UiComponent implements UiContainerMarker {
     static String field_x;
     static String field_C;
     static String field_F;
-    qm[] field_z;
+    UiComponent[] field_z;
     static IndexedSprite[] field_G;
     static String field_y;
     static int field_A;
@@ -15,15 +15,15 @@ abstract class kl extends qm implements a {
     static Sprite[] field_E;
     static String field_D;
 
-    private final void a(int param0, int param1, StringBuilder param2, Hashtable param3) {
+    private final void appendDebugChildren(int param0, int param1, StringBuilder param2, Hashtable param3) {
         int var6 = 0;
         StringBuilder discarded$6 = null;
         int var8 = 0;
         StringBuilder discarded$8 = null;
         StringBuilder discarded$7 = null;
-        qm var7 = null;
+        UiComponent var7 = null;
         int var9 = 0;
-        qm[] var10 = null;
+        UiComponent[] var10 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;
@@ -34,7 +34,7 @@ abstract class kl extends qm implements a {
         var9 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           if (param0 != 31115) {
-            this.field_z = (qm[]) null;
+            this.field_z = (UiComponent[]) null;
           }
           if (null == this.field_z) {
             return;
@@ -47,7 +47,7 @@ abstract class kl extends qm implements a {
               discarded$8 = param2.append(' ');
             }
             if (var7 != null) {
-              var7.a(param2, param1 + 1, param3, (byte) 110);
+              var7.appendDebugTree(param2, param1 + 1, param3, (byte) 110);
             } else {
               discarded$7 = param2.append("null");
             }
@@ -73,11 +73,11 @@ abstract class kl extends qm implements a {
         }
     }
 
-    final boolean a(int param0, qm param1, byte param2) {
+    final boolean focusBackwardBy(int param0, UiComponent param1, byte param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
-        qm var5 = null;
-        qm var6 = null;
+        UiComponent var5 = null;
+        UiComponent var6 = null;
         int var7 = 0;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
@@ -95,11 +95,11 @@ abstract class kl extends qm implements a {
           while (var4_int >= 0) {
             var5 = this.field_z[var4_int];
             if (var5 != null &&
-              var5.d(-2116)) {
+              var5.isFocused(-2116)) {
               for (var4_int = var4_int - param0; var4_int >= 0; var4_int = var4_int - param0) {
                 var6 = this.field_z[var4_int];
                 if (var6 != null &&
-                  var6.a(0, param1)) {
+                  var6.focusNext(0, param1)) {
                   return true;
                 }
               }
@@ -121,13 +121,13 @@ abstract class kl extends qm implements a {
         }
     }
 
-    boolean a(int param0, qm param1) {
+    boolean focusNext(int param0, UiComponent param1) {
         int var4 = 0;
-        qm[] var3 = null;
+        UiComponent[] var3 = null;
         RuntimeException var3_ref = null;
-        qm var5 = null;
+        UiComponent var5 = null;
         int var6 = 0;
-        qm[] var7 = null;
+        UiComponent[] var7 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -139,7 +139,7 @@ abstract class kl extends qm implements a {
           for (var4 = param0; var4 < var7.length; var4++) {
             var5 = var7[var4];
             if (var5 != null &&
-              var5.a(0, param1)) {
+              var5.focusNext(0, param1)) {
               return true;
             }
           }
@@ -158,9 +158,9 @@ abstract class kl extends qm implements a {
         }
     }
 
-    final boolean a(qm param0, int param1) {
+    final boolean focusPreviousChild(UiComponent param0, int param1) {
         RuntimeException var3 = null;
-        qm var4 = null;
+        UiComponent var4 = null;
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -168,10 +168,10 @@ abstract class kl extends qm implements a {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 >= -8) {
-            var4 = (qm) null;
-            this.a((qm) null, 31, -110, 42);
+            var4 = (UiComponent) null;
+            this.updatePointer((UiComponent) null, 31, -110, 42);
           }
-          stackIn_3_0 = this.a(1, param0, (byte) 9);
+          stackIn_3_0 = this.focusBackwardBy(1, param0, (byte) 9);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -187,24 +187,24 @@ abstract class kl extends qm implements a {
         }
     }
 
-    kl(int param0, int param1, int param2, int param3, pf param4) {
-        super(param0, param1, param2, param3, param4, (wc) null);
+    ArrayWidgetContainer(int param0, int param1, int param2, int param3, WidgetPainter param4) {
+        super(param0, param1, param2, param3, param4, (UiListener) null);
     }
 
-    void a(byte param0, int param1, int param2, int param3) {
+    void drawLayer(byte param0, int param1, int param2, int param3) {
         int var5 = 0;
-        qm var6;
+        UiComponent var6;
         int var7;
         var7 = ArcanistsMulti.field_G ? 1 : 0;
         if (0 == param2 &&
           null != this.field_r) {
-          this.field_r.a((qm) (this), 5592405, param1, param3, true);
+          this.field_r.a((UiComponent) (this), 5592405, param1, param3, true);
         }
         if (null != this.field_z) {
           for (var5 = this.field_z.length - 1; 0 <= var5; var5--) {
             var6 = this.field_z[var5];
             if (var6 != null) {
-              var6.a((byte) -112, param1 + this.field_n, param2, param3 + this.field_j);
+              var6.drawLayer((byte) -112, param1 + this.field_n, param2, param3 + this.field_j);
             }
           }
         }
@@ -213,12 +213,12 @@ abstract class kl extends qm implements a {
         }
     }
 
-    private final qm a(int param0) {
+    private final UiComponent getFocusedChild(int param0) {
         int var3 = 0;
-        qm[] var2;
-        qm var4;
+        UiComponent[] var2;
+        UiComponent var4;
         int var5;
-        qm[] var6;
+        UiComponent[] var6;
         var5 = ArcanistsMulti.field_G ? 1 : 0;
         if (null == this.field_z) {
           return null;
@@ -228,19 +228,19 @@ abstract class kl extends qm implements a {
         for (var3 = param0; var3 < var6.length; var3++) {
           var4 = var6[var3];
           if (var4 != null &&
-            var4.d(-2116)) {
+            var4.isFocused(-2116)) {
             return var4;
           }
         }
         return null;
     }
 
-    void a(qm param0, int param1, int param2, int param3) {
+    void updatePointer(UiComponent param0, int param1, int param2, int param3) {
         int var6 = 0;
-        qm[] var5 = null;
-        qm var7 = null;
+        UiComponent[] var5 = null;
+        UiComponent var7 = null;
         int var8 = 0;
-        qm[] var9 = null;
+        UiComponent[] var9 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
@@ -248,7 +248,7 @@ abstract class kl extends qm implements a {
         RuntimeException var5_ref = null;
         var8 = ArcanistsMulti.field_G ? 1 : 0;
         try {
-          super.a(param0, param1, param2, param3);
+          super.updatePointer(param0, param1, param2, param3);
           if (this.field_z == null) {
             return;
           }
@@ -257,7 +257,7 @@ abstract class kl extends qm implements a {
           for (var6 = 0; var9.length > var6; var6++) {
             var7 = var9[var6];
             if (var7 != null) {
-              var7.a(param0, param1 + this.field_n, 170, param3 + this.field_j);
+              var7.updatePointer(param0, param1 + this.field_n, 170, param3 + this.field_j);
             }
           }
           return;
@@ -275,18 +275,18 @@ abstract class kl extends qm implements a {
         }
     }
 
-    final boolean a(int param0, int param1, qm param2) {
+    final boolean focusForwardBy(int param0, int param1, UiComponent param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
-        qm var5 = null;
-        qm var6 = null;
+        UiComponent var5 = null;
+        UiComponent var6 = null;
         int var7 = 0;
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
         String stackIn_25_2 = null;
         RuntimeException decompiledCaughtException = null;
-        qm var6Lifetime1;
-        qm var6Lifetime2;
+        UiComponent var6Lifetime1;
+        UiComponent var6Lifetime2;
         var7 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           if (this.field_z == null) {
@@ -301,11 +301,11 @@ abstract class kl extends qm implements a {
             var6 = var5;
             var6Lifetime1 = var5;
             if (null != var5 &&
-              var5.d(param0 - 31903)) {
+              var5.isFocused(param0 - 31903)) {
               for (var4_int = var4_int + param1; var4_int < this.field_z.length; var4_int = var4_int + param1) {
                 var6Lifetime2 = this.field_z[var4_int];
                 if (null != var6Lifetime2 &&
-                  var6Lifetime2.a(0, param2)) {
+                  var6Lifetime2.focusNext(0, param2)) {
                   return true;
                 }
               }
@@ -338,7 +338,7 @@ abstract class kl extends qm implements a {
         try {
           if (param1 != 1) {
             var3 = (String) null;
-            kl.a((String) null, -51);
+            ArrayWidgetContainer.a((String) null, -51);
           }
           stackIn_5_0 = (im.a(0, param0) != null);
           return stackIn_5_0;
@@ -356,11 +356,11 @@ abstract class kl extends qm implements a {
         }
     }
 
-    final int c(int param0) {
+    final int getTopLayer(int param0) {
         int var4 = 0;
         int var2;
-        qm[] var3;
-        qm var5;
+        UiComponent[] var3;
+        UiComponent var5;
         int var7;
         int var6;
         var7 = ArcanistsMulti.field_G ? 1 : 0;
@@ -369,7 +369,7 @@ abstract class kl extends qm implements a {
         for (var4 = param0; var3.length > var4; var4++) {
           var5 = var3[var4];
           if (var5 != null) {
-            var6 = var5.c(0);
+            var6 = var5.getTopLayer(0);
             if (var2 < var6) {
               var2 = var6;
             }
@@ -378,7 +378,7 @@ abstract class kl extends qm implements a {
         return var2;
     }
 
-    final StringBuilder a(StringBuilder param0, int param1, Hashtable param2, byte param3) {
+    final StringBuilder appendDebugTree(StringBuilder param0, int param1, Hashtable param2, byte param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         StringBuilder stackIn_3_0 = null;
@@ -389,9 +389,9 @@ abstract class kl extends qm implements a {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.a(param0, (byte) -90, param2, param1)) {
-            this.a(param0, param1, param2, 1);
-            this.a(31115, param1, param0, param2);
+          if (this.beginDebugEntry(param0, (byte) -90, param2, param1)) {
+            this.appendDebugSummary(param0, param1, param2, 1);
+            this.appendDebugChildren(31115, param1, param0, param2);
           }
           var5_int = 76 % ((50 - param3) / 60);
           stackIn_3_0 = (StringBuilder) (param0);
@@ -416,13 +416,13 @@ abstract class kl extends qm implements a {
         }
     }
 
-    boolean a(int param0, int param1, int param2, int param3, int param4, int param5, qm param6) {
+    boolean handleMouseWheel(int param0, int param1, int param2, int param3, int param4, int param5, UiComponent param6) {
         int var9 = 0;
-        qm[] var8 = null;
+        UiComponent[] var8 = null;
         RuntimeException var8_ref = null;
-        qm var10 = null;
+        UiComponent var10 = null;
         int var11 = 0;
-        qm[] var12 = null;
+        UiComponent[] var12 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;
@@ -437,8 +437,8 @@ abstract class kl extends qm implements a {
           for (var9 = param5; var12.length > var9; var9++) {
             var10 = var12[var9];
             if (var10 != null &&
-              var10.d(-2116) &&
-              var10.a(param0, param1, param2, param3, param4, 0, param6)) {
+              var10.isFocused(-2116) &&
+              var10.handleMouseWheel(param0, param1, param2, param3, param4, 0, param6)) {
               return true;
             }
           }
@@ -457,14 +457,14 @@ abstract class kl extends qm implements a {
         }
     }
 
-    boolean a(qm param0, byte param1, char param2, int param3) {
+    boolean handleKeyInput(UiComponent param0, byte param1, char param2, int param3) {
         int var6 = 0;
-        qm[] var5 = null;
+        UiComponent[] var5 = null;
         int var5_int = 0;
         RuntimeException var5_ref = null;
-        qm var7 = null;
+        UiComponent var7 = null;
         int var8 = 0;
-        qm[] var9 = null;
+        UiComponent[] var9 = null;
         boolean stackIn_16_0 = false;
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
@@ -480,8 +480,8 @@ abstract class kl extends qm implements a {
           for (var6 = 0; var6 < var9.length; var6++) {
             var7 = var9[var6];
             if (var7 != null &&
-              var7.d(-2116) &&
-              var7.a(param0, (byte) -124, param2, param3)) {
+              var7.isFocused(-2116) &&
+              var7.handleKeyInput(param0, (byte) -124, param2, param3)) {
               return true;
             }
           }
@@ -493,9 +493,9 @@ abstract class kl extends qm implements a {
             return true;
           }
           if (!ri.field_b[81]) {
-            stackIn_16_0 = this.a((byte) -127, param0);
+            stackIn_16_0 = this.focusNextChild((byte) -127, param0);
           } else {
-            stackIn_16_0 = this.a(param0, -55);
+            stackIn_16_0 = this.focusPreviousChild(param0, -55);
           }
           return stackIn_16_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -512,7 +512,7 @@ abstract class kl extends qm implements a {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_D = null;
         field_F = null;
         if (param0 != -90) {
@@ -526,14 +526,14 @@ abstract class kl extends qm implements a {
         field_B = null;
     }
 
-    boolean a(int param0, int param1, qm param2, int param3, int param4, int param5, int param6) {
-        qm[] var8 = null;
+    boolean handlePointerPress(int param0, int param1, UiComponent param2, int param3, int param4, int param5, int param6) {
+        UiComponent[] var8 = null;
         RuntimeException var8_ref = null;
         int var9 = 0;
         int var10 = 0;
-        qm var11 = null;
+        UiComponent var11 = null;
         int var12 = 0;
-        qm[] var13 = null;
+        UiComponent[] var13 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -550,7 +550,7 @@ abstract class kl extends qm implements a {
           while (var9 < var13.length) {
             var11 = var13[var9];
             if (var11 != null &&
-              var11.a(param0, param1, param2, this.field_j + param3, 34, param5, this.field_n + param6)) {
+              var11.handlePointerPress(param0, param1, param2, this.field_j + param3, 34, param5, this.field_n + param6)) {
               return true;
             }
             var9++;
@@ -570,9 +570,9 @@ abstract class kl extends qm implements a {
         }
     }
 
-    final boolean a(byte param0, qm param1) {
+    final boolean focusNextChild(byte param0, UiComponent param1) {
         RuntimeException var3 = null;
-        qm var4 = null;
+        UiComponent var4 = null;
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -580,10 +580,10 @@ abstract class kl extends qm implements a {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 > -126) {
-            var4 = (qm) null;
-            this.a(-118, 91, 35, -86, 59, 78, (qm) null);
+            var4 = (UiComponent) null;
+            this.handleMouseWheel(-118, 91, 35, -86, 59, 78, (UiComponent) null);
           }
-          stackIn_3_0 = this.a(29787, 1, param1);
+          stackIn_3_0 = this.focusForwardBy(29787, 1, param1);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -599,14 +599,14 @@ abstract class kl extends qm implements a {
         }
     }
 
-    abstract void e(int param0);
+    abstract void layoutChildren(int param0);
 
-    final void a(int param0, int param1, int param2, int param3, int param4, qm param5) {
+    final void handlePointerRelease(int param0, int param1, int param2, int param3, int param4, UiComponent param5) {
         int var8 = 0;
-        qm[] var7 = null;
-        qm var9 = null;
+        UiComponent[] var7 = null;
+        UiComponent var9 = null;
         int var10 = 0;
-        qm[] var11 = null;
+        UiComponent[] var11 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -625,7 +625,7 @@ abstract class kl extends qm implements a {
           for (var8 = 0; var11.length > var8; var8++) {
             var9 = var11[var8];
             if (var9 != null) {
-              var9.a(param0, -20592, param2, this.field_j + param3, param4 + this.field_n, param5);
+              var9.handlePointerRelease(param0, -20592, param2, this.field_j + param3, param4 + this.field_n, param5);
             }
           }
           return;
@@ -643,10 +643,10 @@ abstract class kl extends qm implements a {
         }
     }
 
-    final String b(boolean param0) {
+    final String getTooltip(boolean param0) {
         int var3 = 0;
-        qm[] var2;
-        qm var4;
+        UiComponent[] var2;
+        UiComponent var4;
         int var6;
         String var5;
         String var7;
@@ -658,7 +658,7 @@ abstract class kl extends qm implements a {
         for (var3 = 0; var2.length > var3; var3++) {
           var4 = var2[var3];
           if (var4 != null) {
-            var5 = var4.b(param0);
+            var5 = var4.getTooltip(param0);
             if (var5 != null) {
               return var5;
             }
@@ -668,44 +668,44 @@ abstract class kl extends qm implements a {
           return null;
         }
         var7 = (String) null;
-        kl.a((String) null, 33);
+        ArrayWidgetContainer.a((String) null, 33);
         return null;
     }
 
-    void a(int param0, int param1, int param2, int param3, int param4) {
+    void setBounds(int param0, int param1, int param2, int param3, int param4) {
         if (param4 >= -49) {
           return;
         }
-        super.a(param0, param1, param2, param3, -57);
-        this.e(106);
+        super.setBounds(param0, param1, param2, param3, -57);
+        this.layoutChildren(106);
     }
 
-    final boolean d(int param0) {
+    final boolean isFocused(int param0) {
         if (param0 != -2116) {
           field_D = (String) null;
         }
-        return null != this.a(0) ? true : false;
+        return null != this.getFocusedChild(0) ? true : false;
     }
 
-    final void d(byte param0) {
+    final void blur(byte param0) {
         int var3 = 0;
-        qm[] var2;
-        qm var4;
+        UiComponent[] var2;
+        UiComponent var4;
         int var5;
-        qm[] var7;
-        qm var6;
+        UiComponent[] var7;
+        UiComponent var6;
         var5 = ArcanistsMulti.field_G ? 1 : 0;
         var7 = this.field_z;
         var2 = var7;
         for (var3 = 0; var7.length > var3; var3++) {
           var4 = var7[var3];
           if (var4 != null) {
-            var4.d((byte) 29);
+            var4.blur((byte) 29);
           }
         }
         if (param0 != 29) {
-          var6 = (qm) null;
-          this.a(-1, (qm) null, (byte) -103);
+          var6 = (UiComponent) null;
+          this.focusBackwardBy(-1, (UiComponent) null, (byte) -103);
         }
     }
 

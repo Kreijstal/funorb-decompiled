@@ -28,7 +28,7 @@ final class pe extends kc {
           if (param0 != -86) {
             pe.a(-103, 27, (byte) -56, 44);
           }
-          if (param1 <= df.field_z.position) {
+          if (param1 <= UiContainer.field_z.position) {
             return true;
           }
           if (null == ch.field_c) {
@@ -36,16 +36,16 @@ final class pe extends kc {
           }
           int var2_int = ch.field_c.b(0);
           if (var2_int > 0) {
-            if (!(param1 - df.field_z.position >= var2_int)) {
-              var2_int = param1 - df.field_z.position;
+            if (!(param1 - UiContainer.field_z.position >= var2_int)) {
+              var2_int = param1 - UiContainer.field_z.position;
             }
-            ch.field_c.a(df.field_z.payload, (byte) -127, df.field_z.position, var2_int);
+            ch.field_c.a(UiContainer.field_z.payload, (byte) -127, UiContainer.field_z.position, var2_int);
             hi.field_d = qj.b(-26572);
-            df.field_z.position = df.field_z.position + var2_int;
-            if (param1 > df.field_z.position) {
+            UiContainer.field_z.position = UiContainer.field_z.position + var2_int;
+            if (param1 > UiContainer.field_z.position) {
               return false;
             }
-            df.field_z.position = 0;
+            UiContainer.field_z.position = 0;
             return true;
           }
           try {
@@ -360,7 +360,7 @@ final class pe extends kc {
                   }
                   else {
                     if (2 != var12.field_Fb) {
-                      var12.field_Gb.field_rb = kl.field_x;
+                      var12.field_Gb.field_rb = ArrayWidgetContainer.field_x;
                     } else {
                       var12.field_Zb.field_rb = ol.field_b;
                     }
@@ -633,13 +633,13 @@ final class pe extends kc {
     final static boolean a(int param0, int param1, byte param2, int param3) {
         if (null != eo.field_c &&
           eo.field_c.b((byte) 49)) {
-          oc.a(false);
+          IntrusiveDequeCursor.a(false);
           return true;
         }
         if (db.field_a != null &&
           db.field_a.i((byte) 2)) {
           db.field_a = null;
-          oc.a(false);
+          IntrusiveDequeCursor.a(false);
           return true;
         }
         if (lo.e(false)) {
@@ -666,7 +666,7 @@ final class pe extends kc {
         if (!param0) {
           return null;
         }
-        pe.g(-113);
+        pe.releaseStatics(-113);
         return null;
     }
 
@@ -842,7 +842,7 @@ final class pe extends kc {
         }
     }
 
-    public static void g(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 0) {
           pe.h(-36);
         }

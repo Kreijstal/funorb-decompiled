@@ -302,22 +302,22 @@ final class cj {
             he.field_e.position = 0;
             if (param6 == null) {
               jf.field_a.position = 0;
-              jf.field_a.writeInt(ag.field_D.nextInt(), (byte) -101);
-              jf.field_a.writeInt(ag.field_D.nextInt(), (byte) -101);
+              jf.field_a.writeInt(TextButton.field_D.nextInt(), (byte) -101);
+              jf.field_a.writeInt(TextButton.field_D.nextInt(), (byte) -101);
               stackIn_18_0 = jf.field_a;
               if (param5.a(true)) {
                 stackIn_19_1 = var15;
               } else {
                 stackIn_19_1 = "";
               }
-              ((PacketBuffer) (Object) stackIn_18_0).a(stackIn_19_1, (byte) -115);
+              ((PacketBuffer) (Object) stackIn_18_0).writeVersionedString(stackIn_19_1, (byte) -115);
               stackIn_21_0 = jf.field_a;
               if (param3.a(true)) {
                 stackIn_22_1 = var8;
               } else {
                 stackIn_22_1 = "";
               }
-              ((PacketBuffer) (Object) stackIn_21_0).a(stackIn_22_1, (byte) -92);
+              ((PacketBuffer) (Object) stackIn_21_0).writeVersionedString(stackIn_22_1, (byte) -92);
               he.field_e.writeByte(16, (byte) -75);
               he.field_e.position = he.field_e.position + 1;
               var9 = he.field_e.position;
@@ -329,12 +329,12 @@ final class cj {
               if (param0) {
                 var9 = var9 | 1;
               }
-              jf.field_a.writeInt(ag.field_D.nextInt(), (byte) -101);
-              jf.field_a.writeInt(ag.field_D.nextInt(), (byte) -101);
-              jf.field_a.a(var15, (byte) -100);
-              jf.field_a.a(var8, (byte) -96);
+              jf.field_a.writeInt(TextButton.field_D.nextInt(), (byte) -101);
+              jf.field_a.writeInt(TextButton.field_D.nextInt(), (byte) -101);
+              jf.field_a.writeVersionedString(var15, (byte) -100);
+              jf.field_a.writeVersionedString(var8, (byte) -96);
               var17 = (CharSequence) ((Object) param6);
-              jf.field_a.a(vl.a((byte) 106, var17), (byte) -92);
+              jf.field_a.writeVersionedString(vl.a((byte) 106, var17), (byte) -92);
               jf.field_a.writeShort(param4, (byte) -73);
               jf.field_a.writeByte(param2, (byte) -118);
               jf.field_a.writeByte(var9, (byte) -62);
@@ -345,7 +345,7 @@ final class cj {
               if (var11_ref_StringLifetime4 == null) {
                 var11_ref_StringLifetime4 = "";
               }
-              he.field_e.a(var11_ref_StringLifetime4, 23333);
+              he.field_e.writeString(var11_ref_StringLifetime4, 23333);
               vd.a(false, he.field_e, nl.field_Jb, jf.field_a, q.field_K);
               he.field_e.writeShortLengthAtMark(he.field_e.position - var10, -19571);
             }
@@ -354,15 +354,15 @@ final class cj {
           }
           if (ob.field_eb == sb.field_f &&
             pe.a((byte) -86, 1)) {
-            var9Lifetime1 = df.field_z.readUnsignedByte((byte) 56);
-            df.field_z.position = 0;
+            var9Lifetime1 = UiContainer.field_z.readUnsignedByte((byte) 56);
+            UiContainer.field_z.position = 0;
             if (var9Lifetime1 >= 100 &&
               var9Lifetime1 <= 105) {
               ob.field_eb = ej.field_R;
               Bzip2State.field_M = new String[-100 + var9Lifetime1];
             } else {
               if (var9Lifetime1 == 248) {
-                df.a(1, cd.e(param1 ^ -40));
+                UiContainer.a(1, cd.e(param1 ^ -40));
                 me.field_E = fo.field_c;
                 ka.b(false);
                 bb.field_h = false;
@@ -375,20 +375,20 @@ final class cj {
                 on.field_g = var9Lifetime1;
               } else {
                 pe.a((byte) -86, oi.b(88));
-                kj.field_e = new Boolean(jo.a(df.field_z, param1 + 89));
-                df.field_z.position = 0;
+                kj.field_e = new Boolean(jo.a(UiContainer.field_z, param1 + 89));
+                UiContainer.field_z.position = 0;
               }
             }
           }
           if (ob.field_eb == ej.field_R) {
             var9Lifetime2 = 2;
             if (pe.a((byte) -86, var9Lifetime2)) {
-              var10Lifetime1 = df.field_z.readUnsignedShort(-98);
-              df.field_z.position = 0;
+              var10Lifetime1 = UiContainer.field_z.readUnsignedShort(-98);
+              UiContainer.field_z.position = 0;
               if (pe.a((byte) -86, var10Lifetime1)) {
                 var11 = Bzip2State.field_M.length;
                 for (var12 = 0; var11 > var12; var12++) {
-                  Bzip2State.field_M[var12] = df.field_z.e(-32461);
+                  Bzip2State.field_M[var12] = UiContainer.field_z.readVersionedString(-32461);
                 }
                 ka.b(false);
                 bb.field_h = false;
@@ -400,9 +400,9 @@ final class cj {
           if (ob.field_eb == NodeHashTable.field_i &&
             pn.b(-12564)) {
             if (on.field_g != 255) {
-              me.field_E = df.field_z.readString(param1 + 90);
+              me.field_E = UiContainer.field_z.readString(param1 + 90);
             } else {
-              var9_ref_String = df.field_z.readOptionalString(-112);
+              var9_ref_String = UiContainer.field_z.readOptionalString(-112);
               if (var9_ref_String != null) {
                 jf.a(var9_ref_String, cd.e(110), 0);
               }

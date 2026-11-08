@@ -22,7 +22,7 @@ final class hn implements Runnable {
     static int field_p;
     static String field_e;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_k = null;
         field_l = null;
         field_i = null;

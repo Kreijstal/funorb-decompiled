@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class jm implements pf, ac {
+class jm implements WidgetPainter, WidgetTextLayout {
     static volatile boolean field_j;
     private int field_c;
     int field_l;
@@ -18,7 +18,7 @@ class jm implements pf, ac {
     int field_d;
     int field_o;
 
-    public final int a(int param0, int param1, qm param2) {
+    public final int a(int param0, int param1, UiComponent param2) {
         RuntimeException var4 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -279,7 +279,7 @@ class jm implements pf, ac {
         }
     }
 
-    public final void a(int param0, qm param1, int param2, int param3, int param4, int param5) {
+    public final void a(int param0, UiComponent param1, int param2, int param3, int param4, int param5) {
         int var12 = 0;
         int stackIn_14_0 = 0;
         int stackIn_19_0 = 0;
@@ -306,7 +306,7 @@ class jm implements pf, ac {
           if (param3 != 6600) {
             this.field_g = (BitmapFont) null;
           }
-          if (param1.d(-2116)) {
+          if (param1.isFocused(-2116)) {
             var17 = this.a(param1, -118);
             var18 = var17;
             if (param4 > param5) {
@@ -357,7 +357,7 @@ class jm implements pf, ac {
         }
     }
 
-    private final int a(int param0, int param1, int param2, qm param3) {
+    private final int a(int param0, int param1, int param2, UiComponent param3) {
         RuntimeException var5 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -384,7 +384,7 @@ class jm implements pf, ac {
         }
     }
 
-    public final void a(int param0, int param1, int param2, int param3, qm param4) {
+    public final void a(int param0, int param1, int param2, int param3, UiComponent param4) {
         kh var13 = null;
         kh var14 = null;
         int var7 = 0;
@@ -397,7 +397,7 @@ class jm implements pf, ac {
           return;
         }
         try {
-          if (param4.d(-2116)) {
+          if (param4.isFocused(-2116)) {
             var13 = this.a(param4, -128);
             var14 = var13;
             var7 = var14.a((byte) -109, param3);
@@ -417,13 +417,13 @@ class jm implements pf, ac {
 
     public final int a(int param0) {
         if (param0 != 27184) {
-          qm var3 = (qm) null;
-          this.a((qm) null, (byte) -41, 24);
+          UiComponent var3 = (UiComponent) null;
+          this.a((UiComponent) null, (byte) -41, 24);
         }
         return this.field_g.field_m + this.field_g.field_C;
     }
 
-    public void a(qm param0, int param1, int param2, int param3, boolean param4) {
+    public void a(UiComponent param0, int param1, int param2, int param3, boolean param4) {
         if (this.field_g == null) {
           return;
         }
@@ -437,7 +437,7 @@ class jm implements pf, ac {
         }
     }
 
-    public final int b(int param0, qm param1, int param2, int param3, int param4, int param5) {
+    public final int b(int param0, UiComponent param1, int param2, int param3, int param4, int param5) {
         RuntimeException var7 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -467,11 +467,11 @@ class jm implements pf, ac {
         }
     }
 
-    private final void a(int param0, int param1, qm param2, byte param3) {
+    private final void a(int param0, int param1, UiComponent param2, byte param3) {
         try {
           if (param3 != -89) {
-            qm var6 = (qm) null;
-            this.b((byte) -88, (qm) null);
+            UiComponent var6 = (UiComponent) null;
+            this.b((byte) -88, (UiComponent) null);
           }
           this.a(0, param3 + 23123, this.field_k, 0, param2, param0, param1, this.field_c);
         } catch (RuntimeException runtimeException) {
@@ -479,7 +479,7 @@ class jm implements pf, ac {
         }
     }
 
-    public final int a(qm param0, byte param1) {
+    public final int a(UiComponent param0, byte param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int stackIn_1_0 = 0;
@@ -505,7 +505,7 @@ class jm implements pf, ac {
         }
     }
 
-    String a(boolean param0, qm param1) {
+    String a(boolean param0, UiComponent param1) {
         RuntimeException var3 = null;
         String stackIn_2_0 = null;
         String stackIn_4_0 = null;
@@ -534,7 +534,7 @@ class jm implements pf, ac {
         }
     }
 
-    public final int a(byte param0, qm param1) {
+    public final int a(byte param0, UiComponent param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int stackIn_1_0 = 0;
@@ -565,7 +565,7 @@ class jm implements pf, ac {
         this(param0, param1, param1, param2, param2, param3, param4, param5, param6, param7, -1, 2147483647, false);
     }
 
-    private final void b(byte param0, qm param1) {
+    private final void b(byte param0, UiComponent param1) {
         RuntimeException stackIn_33_0 = null;
         StringBuilder stackIn_33_1 = null;
         String stackIn_34_2 = null;
@@ -638,7 +638,7 @@ class jm implements pf, ac {
         }
     }
 
-    private final void a(int param0, int param1, int param2, int param3, qm param4, int param5, int param6, int param7) {
+    private final void a(int param0, int param1, int param2, int param3, UiComponent param4, int param5, int param6, int param7) {
         RuntimeException stackIn_27_0 = null;
         StringBuilder stackIn_27_1 = null;
         String stackIn_28_2 = null;
@@ -707,7 +707,7 @@ class jm implements pf, ac {
         }
     }
 
-    public final kh a(qm param0, int param1) {
+    public final kh a(UiComponent param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         kh stackIn_7_0 = null;
@@ -741,7 +741,7 @@ class jm implements pf, ac {
         }
     }
 
-    public final int b(qm param0, int param1) {
+    public final int b(UiComponent param0, int param1) {
         RuntimeException var3 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -787,7 +787,7 @@ class jm implements pf, ac {
         }
     }
 
-    private final int a(qm param0, boolean param1) {
+    private final int a(UiComponent param0, boolean param1) {
         RuntimeException var3 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -819,9 +819,9 @@ class jm implements pf, ac {
     protected jm() {
     }
 
-    private final int a(int param0, int param1, byte param2, qm param3) {
+    private final int a(int param0, int param1, byte param2, UiComponent param3) {
         RuntimeException var5 = null;
-        qm var6 = null;
+        UiComponent var6 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -829,8 +829,8 @@ class jm implements pf, ac {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 != 120) {
-            var6 = (qm) null;
-            this.a((qm) null, (byte) 0, -49);
+            var6 = (UiComponent) null;
+            this.a((UiComponent) null, (byte) 0, -49);
           }
           stackIn_3_0 = param1 + (this.field_f + param0) + param3.field_j + param3.field_i;
           return stackIn_3_0;
@@ -848,7 +848,7 @@ class jm implements pf, ac {
         }
     }
 
-    public final int a(qm param0, byte param1, int param2) {
+    public final int a(UiComponent param0, byte param1, int param2) {
         RuntimeException var4 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -897,7 +897,7 @@ class jm implements pf, ac {
         }
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         field_b = null;
         int var1 = -67 % ((param0 - 25) / 37);
     }

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class j implements pf {
+final class j implements WidgetPainter {
     static String field_c;
     static String field_e;
     static Sprite field_a;
@@ -10,7 +10,7 @@ final class j implements pf {
     private ti field_d;
     static volatile int field_g;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_a = null;
         field_c = null;
         field_f = null;
@@ -111,12 +111,12 @@ final class j implements pf {
           if (null != IntrusiveNode.field_f) {
             try {
               IntrusiveNode.field_f.a(0L, -101);
-              IntrusiveNode.field_f.a((byte) -53, df.field_z.position, df.field_z.payload, 24);
+              IntrusiveNode.field_f.a((byte) -53, UiContainer.field_z.position, UiContainer.field_z.payload, 24);
             } catch (Exception exception) {
             }
           }
           int var1 = 125 / ((param0 - 27) / 38);
-          df.field_z.position = df.field_z.position + 24;
+          UiContainer.field_z.position = UiContainer.field_z.position + 24;
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -173,7 +173,7 @@ final class j implements pf {
         }
     }
 
-    public final void a(qm param0, int param1, int param2, int param3, boolean param4) {
+    public final void a(UiComponent param0, int param1, int param2, int param3, boolean param4) {
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -189,7 +189,7 @@ final class j implements pf {
           var6_int = param0.field_n + param2;
           var7 = param0.field_j + param3;
           kh.a(param0.field_v, var6_int, var7, param0.field_k, 83);
-          if (param0.d(-2116)) {
+          if (param0.isFocused(-2116)) {
             oj.a(-32171, var7 + 2, var6_int + 2, -4 + param0.field_k, param0.field_v - 4);
           }
           SoftwareRasterizer.setClip(var6_int, var7, -2 + (var6_int + param0.field_v), param0.field_k + var7);
@@ -197,7 +197,7 @@ final class j implements pf {
           if (var8 != null) {
             var9 = var8.toString();
             this.field_d.field_Q.drawText(var9, var6_int + 2, -1 + (this.field_d.field_Q.field_C + param0.field_k >> 1) + var7, 10000536, -1);
-            if (this.field_d.d(-2116) &&
+            if (this.field_d.isFocused(-2116) &&
               var9.startsWith(this.field_d.field_D)) {
               var10 = this.field_d.field_Q.textWidth(this.field_d.field_D);
               SoftwareRasterizer.fillRectangleAlpha(var6_int + 2, 2 + var7, var10, -4 + param0.field_k, 2188450, 100);

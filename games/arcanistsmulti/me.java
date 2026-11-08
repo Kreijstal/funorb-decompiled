@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class me extends df implements vb {
+final class me extends UiContainer implements ButtonListener {
     static IntrusiveDeque field_O;
     private String field_J;
     static String field_Q;
@@ -18,11 +18,11 @@ final class me extends df implements vb {
     static String field_P;
     static int[] field_H;
     private int[] field_S;
-    private ag[] field_M;
+    private TextButton[] field_M;
     static int field_I;
 
     me(ed param0, BitmapFont param1, String param2) {
-        super(0, 0, 288, 0, (pf) null);
+        super(0, 0, 288, 0, (WidgetPainter) null);
         int var4_int = 0;
         this.field_K = 0;
         try {
@@ -30,7 +30,7 @@ final class me extends df implements vb {
           this.field_J = param2;
           this.field_G = param0;
           var4_int = this.field_J == null ? 0 : this.field_D.paragraphHeight(this.field_J, 260, this.field_D.field_C);
-          this.a(22 + var4_int, 0, 288, 0, -51);
+          this.setBounds(22 + var4_int, 0, 288, 0, -51);
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "me.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -41,7 +41,7 @@ final class me extends df implements vb {
         try {
           var4_int = this.field_K;
           this.a(-84, 1 + var4_int);
-          this.field_M[var4_int] = this.a(121, param0, (wc) (this));
+          this.field_M[var4_int] = this.a(121, param0, (UiListener) (this));
           this.field_S[var4_int] = param2;
           int var5 = 64 / ((71 - param1) / 35);
         } catch (RuntimeException runtimeException) {
@@ -49,12 +49,12 @@ final class me extends df implements vb {
         }
     }
 
-    final ag a(int param0, String param1, wc param2) {
-        ag var4 = null;
+    final TextButton a(int param0, String param1, UiListener param2) {
+        TextButton var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
-        ag stackIn_2_0 = null;
-        ag stackIn_4_0 = null;
+        TextButton stackIn_2_0 = null;
+        TextButton stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -62,16 +62,16 @@ final class me extends df implements vb {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4 = new ag(param1, param2);
-          var4.field_r = (pf) ((Object) new mm());
+          var4 = new TextButton(param1, param2);
+          var4.field_r = (WidgetPainter) ((Object) new mm());
           if (param0 < 71) {
-            stackIn_2_0 = (ag) null;
+            stackIn_2_0 = (TextButton) null;
             return stackIn_2_0;
           }
           var5 = this.field_k - 2;
-          this.a(this.field_k + 34, 0, this.field_v, 0, -57);
-          var4.a(30, var5, -14 + this.field_v, 7, -85);
-          this.c(-104, var4);
+          this.setBounds(this.field_k + 34, 0, this.field_v, 0, -57);
+          var4.setBounds(30, var5, -14 + this.field_v, 7, -85);
+          this.addChild(-104, var4);
           stackIn_4_0 = var4;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -94,8 +94,8 @@ final class me extends df implements vb {
         }
     }
 
-    final void a(byte param0, int param1, int param2, int param3) {
-        super.a((byte) -100, param1, param2, param3);
+    final void drawLayer(byte param0, int param1, int param2, int param3) {
+        super.drawLayer((byte) -100, param1, param2, param3);
         if (param0 >= -52) {
           this.field_S = (int[]) null;
         }
@@ -108,8 +108,8 @@ final class me extends df implements vb {
         if (this.field_K >= param1) {
           return;
         }
-        ag[] var8 = new ag[param1];
-        ag[] var3 = var8;
+        TextButton[] var8 = new TextButton[param1];
+        TextButton[] var3 = var8;
         int[] var4 = new int[param1];
         int var5 = 114 % ((84 - param0) / 42);
         for (var6 = 0; var6 < this.field_K; var6++) {
@@ -121,7 +121,7 @@ final class me extends df implements vb {
         this.field_S = var4;
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_O = null;
         if (param0 <= 88) {
           ResourceArchive var2 = (ResourceArchive) null;
@@ -222,7 +222,7 @@ final class me extends df implements vb {
         }
     }
 
-    public final void a(boolean param0, int param1, int param2, int param3, ag param4) {
+    public final void a(boolean param0, int param1, int param2, int param3, TextButton param4) {
         int var6_int = 0;
         int var7 = 0;
         int var8 = 0;

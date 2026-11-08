@@ -12,7 +12,7 @@ final class kg {
     private ResourceArchive field_i;
     static boolean field_a;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_h = null;
         field_d = (int[][]) null;
         field_c = null;

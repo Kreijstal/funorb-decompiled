@@ -473,10 +473,10 @@ final class so {
 
     final static aj[] c(int param0) {
         if (param0 == 96) {
-          return new aj[]{sc.field_W, vk.field_B, oc.field_b, td.field_G, om.field_M, h.field_G, ib.field_q, gl.field_b, um.field_b, gg.field_b, fc.field_b, q.field_G, ng.field_I, GameAppletShell.field_e};
+          return new aj[]{sc.field_W, vk.field_B, IntrusiveDequeCursor.field_b, td.field_G, om.field_M, h.field_G, ib.field_q, gl.field_b, um.field_b, gg.field_b, fc.field_b, q.field_G, ng.field_I, GameAppletShell.field_e};
         }
         field_i = (se) null;
-        return new aj[]{sc.field_W, vk.field_B, oc.field_b, td.field_G, om.field_M, h.field_G, ib.field_q, gl.field_b, um.field_b, gg.field_b, fc.field_b, q.field_G, ng.field_I, GameAppletShell.field_e};
+        return new aj[]{sc.field_W, vk.field_B, IntrusiveDequeCursor.field_b, td.field_G, om.field_M, h.field_G, ib.field_q, gl.field_b, um.field_b, gg.field_b, fc.field_b, q.field_G, ng.field_I, GameAppletShell.field_e};
     }
 
     final void d(int param0) {

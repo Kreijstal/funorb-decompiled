@@ -86,7 +86,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != -10338) {
           return;
         }
@@ -181,13 +181,13 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         try {
           kj.field_c = param1.readUnsignedShort(-98) << 5;
           var2_int = param1.readUnsignedByte((byte) 99);
-          oc.field_j = var2_int << 18 & 1835008;
+          IntrusiveDequeCursor.field_j = var2_int << 18 & 1835008;
           kj.field_c = kj.field_c + (var2_int >> 3);
           int var3 = 13 / ((71 - param0) / 52);
-          oc.field_j = oc.field_j + (param1.readUnsignedShort(-98) << 2);
+          IntrusiveDequeCursor.field_j = IntrusiveDequeCursor.field_j + (param1.readUnsignedShort(-98) << 2);
           var2_intLifetime1 = param1.readUnsignedByte((byte) -97);
           fo.field_a = var2_intLifetime1 << 15 & 2064384;
-          oc.field_j = oc.field_j + (var2_intLifetime1 >> 6);
+          IntrusiveDequeCursor.field_j = IntrusiveDequeCursor.field_j + (var2_intLifetime1 >> 6);
           fo.field_a = fo.field_a + (param1.readUnsignedByte((byte) -93) << 7);
           var2_intLifetime2 = param1.readUnsignedByte((byte) -97);
           fo.field_a = fo.field_a + (var2_intLifetime2 >> 1);

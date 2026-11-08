@@ -193,9 +193,9 @@ public final class ArcanistsMulti extends ud {
             ja.field_y = false;
           }
           SpriteState.field_v = SpriteState.field_v + 1;
-          if (oc.a(-15576)) {
+          if (IntrusiveDequeCursor.a(-15576)) {
             this.d(-107);
-            if (oc.a(-15576)) {
+            if (IntrusiveDequeCursor.a(-15576)) {
               if (ue.a(123)) {
                 discarded$0 = this.a(123, false);
               }
@@ -249,9 +249,9 @@ public final class ArcanistsMulti extends ud {
                 }
                 this.a((byte) -89, true);
                 if (var27 != 0) {
-                  rn.m(0);
+                  EditableTextWidget.m(0);
                   if (var27 != 0) {
-                    ia.a(-14296, wn.field_y);
+                    ia.a(-14296, SingleChildContainer.field_y);
                     if (this.a(-109, true)) {
                       ue.field_e = true;
                     }
@@ -259,16 +259,16 @@ public final class ArcanistsMulti extends ud {
                 }
               }
             } else {
-              rn.m(0);
+              EditableTextWidget.m(0);
               if (var27 != 0) {
-                ia.a(-14296, wn.field_y);
+                ia.a(-14296, SingleChildContainer.field_y);
                 if (this.a(-109, true)) {
                   ue.field_e = true;
                 }
               }
             }
           } else {
-            ia.a(-14296, wn.field_y);
+            ia.a(-14296, SingleChildContainer.field_y);
             if (this.a(-109, true)) {
               ue.field_e = true;
             }
@@ -296,15 +296,15 @@ public final class ArcanistsMulti extends ud {
                   continue;
                 }
                 if (79 == on.field_g) {
-                  bc.field_b = df.field_z.readUnsignedByte((byte) 100);
-                  mf.field_a = df.field_z.readUnsignedByte((byte) 50);
+                  bc.field_b = UiContainer.field_z.readUnsignedByte((byte) 100);
+                  mf.field_a = UiContainer.field_z.readUnsignedByte((byte) 50);
                   continue;
                 }
                 if (on.field_g == 9) {
                   lf.a((byte) 80);
                   kh.field_b = false;
                   mn.field_r = 9;
-                  jm.field_b = df.field_z.readString(-1);
+                  jm.field_b = UiContainer.field_z.readString(-1);
                   continue;
                 }
                 if (on.field_g == 14) {
@@ -331,7 +331,7 @@ public final class ArcanistsMulti extends ud {
                     bc.a((byte) -50);
                   }
                   kh.field_b = false;
-                  oc.field_g = false;
+                  IntrusiveDequeCursor.field_g = false;
                   continue;
                 }
                 if (on.field_g == 10 &&
@@ -340,14 +340,14 @@ public final class ArcanistsMulti extends ud {
                   continue;
                 }
                 if (73 == on.field_g) {
-                  var2_intLifetime1 = df.field_z.readUnsignedByte((byte) -122);
+                  var2_intLifetime1 = UiContainer.field_z.readUnsignedByte((byte) -122);
                   var3_ref_int__ = new int[var2_intLifetime1];
                   var4 = 0;
                   scanLoop1: while (true) {
                     stackIn_137_0 = var2_intLifetime1;
                     stackIn_137_1 = var4;
                     if (stackIn_137_0 > stackIn_137_1) {
-                      var3_ref_int__[var4] = df.field_z.readInt(-10674);
+                      var3_ref_int__[var4] = UiContainer.field_z.readInt(-10674);
                       var3_ref_int__[var4] = dg.a(var3_ref_int__[var4], ~ad.field_f[var4]);
                       stackIn_99_0 = pe.field_Jb;
                       if (stackIn_99_0) {
@@ -373,13 +373,13 @@ public final class ArcanistsMulti extends ud {
                 }
                 if (on.field_g == 74) {
                   if (!td.e(true)) {
-                    jf.field_j = df.field_z.readUnsignedShort(-98);
-                    cb.field_e = df.field_z.readLong(-943038560);
-                    ad.field_d = df.field_z.readUnsignedByte((byte) -100);
+                    jf.field_j = UiContainer.field_z.readUnsignedShort(-98);
+                    cb.field_e = UiContainer.field_z.readLong(-943038560);
+                    ad.field_d = UiContainer.field_z.readUnsignedByte((byte) -100);
                   } else {
-                    var2_intLifetime1 = df.field_z.readUnsignedShort(-98);
-                    var3_long = df.field_z.readLong(-943038560);
-                    ad.field_d = df.field_z.readUnsignedByte((byte) 62);
+                    var2_intLifetime1 = UiContainer.field_z.readUnsignedShort(-98);
+                    var3_long = UiContainer.field_z.readLong(-943038560);
+                    ad.field_d = UiContainer.field_z.readUnsignedByte((byte) 62);
                     if (var2_intLifetime1 > jf.field_j) {
                       jf.field_j = var2_intLifetime1;
                     }
@@ -393,16 +393,16 @@ public final class ArcanistsMulti extends ud {
                 if (on.field_g == 57 ||
                   on.field_g == 58) {
                   lf.a((byte) 80);
-                  var2_intLifetime1 = df.field_z.readUnsignedByte((byte) -124);
-                  var3 = df.field_z.readUnsignedByte((byte) -101);
-                  stackIn_173_0 = (0 == df.field_z.readUnsignedByte((byte) 106)) ? 0 : 1;
+                  var2_intLifetime1 = UiContainer.field_z.readUnsignedByte((byte) -124);
+                  var3 = UiContainer.field_z.readUnsignedByte((byte) -101);
+                  stackIn_173_0 = (0 == UiContainer.field_z.readUnsignedByte((byte) 106)) ? 0 : 1;
                   var4Lifetime2 = stackIn_173_0;
-                  stackIn_177_0 = (df.field_z.readUnsignedByte((byte) 111) == 0) ? 0 : 1;
+                  stackIn_177_0 = (UiContainer.field_z.readUnsignedByte((byte) 111) == 0) ? 0 : 1;
                   var5Lifetime1 = stackIn_177_0;
-                  var6Lifetime1 = df.field_z.readUnsignedShort(-98);
-                  var7 = new String[df.field_z.readUnsignedByte((byte) 115)];
+                  var6Lifetime1 = UiContainer.field_z.readUnsignedShort(-98);
+                  var7 = new String[UiContainer.field_z.readUnsignedByte((byte) 115)];
                   var8 = -2;
-                  var8Lifetime1 = df.field_z.readByte(6);
+                  var8Lifetime1 = UiContainer.field_z.readByte(6);
                   var9 = new int[var7.length][18];
                   var10 = new int[var7.length][16];
                   var11 = new int[var7.length];
@@ -410,7 +410,7 @@ public final class ArcanistsMulti extends ud {
                   var13 = 0;
                   var14 = 0;
                   while (var7.length > var14) {
-                    var7[var14] = df.field_z.e(-32461);
+                    var7[var14] = UiContainer.field_z.readVersionedString(-32461);
                     stackIn_209_0 = 0;
                     var15 = stackIn_209_0;
                     scanLoop2: while (true) {
@@ -418,7 +418,7 @@ public final class ArcanistsMulti extends ud {
                         while (true) {
                           var15 = 0;
                           while (var15 < 16) {
-                            var16 = df.field_z.readUnsignedByte((byte) 109) & 255;
+                            var16 = UiContainer.field_z.readUnsignedByte((byte) 109) & 255;
                             stackIn_183_0 = var10[var14];
                             stackIn_183_1 = var15;
                             stackIn_183_2 = -256;
@@ -436,7 +436,7 @@ public final class ArcanistsMulti extends ud {
                       }
                       stackIn_183_0Lifetime1 = var9[var14];
                       stackIn_183_1Lifetime1 = var15;
-                      stackIn_183_2Lifetime1 = df.field_z.readUnsignedByte((byte) -88);
+                      stackIn_183_2Lifetime1 = UiContainer.field_z.readUnsignedByte((byte) -88);
                       stackIn_183_3Lifetime1 = 255;
                       while (true) {
                         stackIn_183_0Lifetime1[stackIn_183_1Lifetime1] = dg.a(stackIn_183_2Lifetime1, stackIn_183_3Lifetime1);
@@ -445,10 +445,10 @@ public final class ArcanistsMulti extends ud {
                       }
 
                     }
-                    var11[var14] = df.field_z.readUnsignedByte((byte) 76);
+                    var11[var14] = UiContainer.field_z.readUnsignedByte((byte) 76);
                     stackIn_196_0 = var12;
                     stackIn_196_1 = var14;
-                    stackIn_197_2 = (df.field_z.readUnsignedByte((byte) 123) == 1);
+                    stackIn_197_2 = (UiContainer.field_z.readUnsignedByte((byte) 123) == 1);
                     stackIn_196_0[stackIn_196_1] = stackIn_197_2;
                     if (var12[var14] &&
                       0 == var10[var14][0] &&
@@ -475,8 +475,8 @@ public final class ArcanistsMulti extends ud {
                     }
                     var14++;
                   }
-                  var14Lifetime1 = df.field_z.readInt(-10674);
-                  stackIn_209_0Lifetime1 = df.field_z.readUnsignedByte((byte) -118);
+                  var14Lifetime1 = UiContainer.field_z.readInt(-10674);
+                  stackIn_209_0Lifetime1 = UiContainer.field_z.readUnsignedByte((byte) -118);
                   var15Lifetime1 = stackIn_209_0Lifetime1;
                   stackIn_213_0 = ((var15Lifetime1 & 128) == 0) ? 0 : 1;
                   var16Lifetime1 = stackIn_213_0;
@@ -515,7 +515,7 @@ public final class ArcanistsMulti extends ud {
                   stackIn_233_0 = (var16Lifetime1 == 0) ? 5 : -1;
                   mn.field_r = stackIn_233_0;
                   MusicCrossfadeStream.field_A = true;
-                  oc.field_g = false;
+                  IntrusiveDequeCursor.field_g = false;
                   continue;
                 }
                 if (on.field_g == 59) {
@@ -535,7 +535,7 @@ public final class ArcanistsMulti extends ud {
                     vh.field_t = 0;
                     bc.a((byte) -50);
                   }
-                  oc.field_g = false;
+                  IntrusiveDequeCursor.field_g = false;
                   continue;
                 }
                 var2 = null;
@@ -579,7 +579,7 @@ public final class ArcanistsMulti extends ud {
                 pi.a(true);
                 if (var3Lifetime1 == 1) {
                   kh.field_b = true;
-                  oc.field_g = true;
+                  IntrusiveDequeCursor.field_g = true;
                 }
                 if (var3Lifetime1 != 1 ||
                   var27 != 0) {
@@ -603,7 +603,7 @@ public final class ArcanistsMulti extends ud {
                     hi.field_a = false;
                     bc.a((byte) -50);
                   }
-                  oc.field_g = false;
+                  IntrusiveDequeCursor.field_g = false;
                   kh.field_b = false;
                 }}
               var4Lifetime1 = 0;
@@ -612,7 +612,7 @@ public final class ArcanistsMulti extends ud {
               }
               if (wa.field_Ob ||
                 kh.field_b ||
-                oc.field_g) {
+                IntrusiveDequeCursor.field_g) {
                 var4Lifetime1 = 1;
               }
               if (!ka.c((byte) -44)) {
@@ -927,7 +927,7 @@ public final class ArcanistsMulti extends ud {
               KeyboardInputHandler.field_h = qe.a(ue.field_d, "gaurdianangel", "", 69);
               ae.field_a = qe.a(ue.field_d, "clockwork", "", 93);
               wg.field_J = qe.a(ue.field_d, "aura", "", 124);
-              kl.field_E = qe.a(ue.field_d, "clockworkaura", "", 75);
+              ArrayWidgetContainer.field_E = qe.a(ue.field_d, "clockworkaura", "", 75);
               jg.field_c = pk.a("", 0, "runes", ue.field_d);
               rm.field_o = qe.a(ue.field_d, "spellbooks", "", 93);
               bk.a(2);
@@ -973,7 +973,7 @@ public final class ArcanistsMulti extends ud {
               this.updateClient((byte) -89);
               rc.field_a.field_f = 0;
               ud.field_D.field_f = 0;
-              wn.a((byte) 111, rc.a(ud.field_D, -24755, "lobby", "chatfont", rc.field_a));
+              SingleChildContainer.setDefaultFont((byte) 111, rc.a(ud.field_D, -24755, "lobby", "chatfont", rc.field_a));
               rc.field_a.field_f = 1;
               ud.field_D.field_f = 1;
               var4 = pk.a("", 0, "minibonushats", ue.field_d);
@@ -1130,317 +1130,317 @@ public final class ArcanistsMulti extends ud {
         RuntimeException var2 = null;
         try {
           ArcanistsMulti.h((byte) -91);
-          fn.a((byte) -60);
-          qa.a((byte) 92);
+          fn.releaseStatics((byte) -60);
+          qa.releaseStatics((byte) 92);
           IntrusiveDeque.e(true);
-          cb.a((byte) 44);
-          ik.a(0);
-          c.a(30);
+          cb.releaseStatics((byte) 44);
+          ik.releaseStatics(0);
+          c.releaseStatics(30);
           to.c(false);
-          kc.d(-21224);
-          KeyboardInputHandler.a(-733);
-          bh.a(-97);
-          bc.a(1);
-          ci.a(0);
-          uf.a((byte) -81);
+          kc.releaseStatics(-21224);
+          KeyboardInputHandler.releaseStatics(-733);
+          bh.releaseStatics(-97);
+          bc.releaseStatics(1);
+          ci.releaseStatics(0);
+          uf.releaseStatics((byte) -81);
           ud.d(true);
-          ClientException.a((byte) -46);
+          ClientException.releaseStatics((byte) -46);
           GameAppletShell.a(false);
-          hn.a(66);
-          MouseInputHandler.a(-10338);
-          MouseWheelHandler.b(1);
+          hn.releaseStatics(66);
+          MouseInputHandler.releaseStatics(-10338);
+          MouseWheelHandler.releaseStatics(1);
           SoftwareRasterizer.releaseStatics();
           ResourceArchive.a(false);
           BitmapFont.releaseStatics();
           rg.a(35);
-          PacketBuffer.b(true);
-          qj.c(-13019);
+          PacketBuffer.releaseStatics(true);
+          qj.releaseStatics(-13019);
           ra.b(64);
-          oj.a(1);
-          uc.a((byte) -58);
+          oj.releaseStatics(1);
+          uc.releaseStatics((byte) -58);
           ck.b((byte) 85);
-          hm.a(124);
-          ub.a(-70);
-          um.a(0);
-          ad.a(96);
-          jg.c(-25776);
+          hm.releaseStatics(124);
+          ub.releaseStatics(-70);
+          um.releaseStatics(0);
+          ad.releaseStatics(96);
+          jg.releaseStatics(-25776);
           mf.a(-1);
-          md.a((byte) 115);
-          hg.b((byte) -105);
+          md.releaseStatics((byte) 115);
+          hg.releaseStatics((byte) -105);
           CanvasRasterBuffer.b(false);
-          rc.a(-1);
-          FullscreenFocusCanvas.a(115);
-          v.b(-18033);
-          SoundCache.a((byte) 59);
+          rc.releaseStatics(-1);
+          FullscreenFocusCanvas.releaseStatics(115);
+          v.releaseStatics(-18033);
+          SoundCache.releaseStatics((byte) 59);
           lc.c(true);
           le.f((byte) 95);
           pm.a(0);
-          kf.a((byte) -121);
+          kf.releaseStatics((byte) -121);
           hf.a(false);
-          lk.d(11959);
+          lk.releaseStatics(11959);
           pa.a(32336);
-          Js5ArchiveManager.a((byte) -90);
-          BufferedRandomAccessFile.b(-1);
-          k.c(11138);
-          nf.r(0);
-          IntrusiveNode.c((byte) -115);
-          pn.b((byte) 122);
-          cc.a((byte) 107);
+          Js5ArchiveManager.releaseStatics((byte) -90);
+          BufferedRandomAccessFile.releaseStatics(-1);
+          k.releaseStatics(11138);
+          nf.releaseStatics(0);
+          IntrusiveNode.releaseStatics((byte) -115);
+          pn.releaseStatics((byte) 122);
+          cc.releaseStatics((byte) 107);
           so.a(param0);
-          MidiPcmStream.d((byte) 115);
-          NodeHashTable.b(13);
+          MidiPcmStream.releaseStatics((byte) 115);
+          NodeHashTable.releaseStatics(13);
           MusicPatchNode.c(true);
           MidiFileReader.releaseMessageTable();
           MusicPatchPcmStream.b(!param0);
           AudioOutput.releaseStatics();
-          MusicCrossfadeStream.c(118);
+          MusicCrossfadeStream.releaseStatics(118);
           fo.a(0);
-          ec.b(0);
+          ec.releaseStatics(0);
           kj.a(true);
-          lf.a(-15);
-          ArchiveIndex.a(0);
-          GzipDecoder.a(-79);
-          ArchiveProvider.a((byte) -51);
+          lf.releaseStatics(-15);
+          ArchiveIndex.releaseStatics(0);
+          GzipDecoder.releaseStatics(-79);
+          ArchiveProvider.releaseStatics((byte) -51);
           ml.h(false);
-          qc.a(54);
-          DualLinkNode.a(49);
+          qc.releaseStatics(54);
+          DualLinkNode.releaseStatics(49);
           mi.g(2);
-          oc.b(false);
-          hi.a((byte) 60);
-          jd.d((byte) -109);
+          IntrusiveDequeCursor.b(false);
+          hi.releaseStatics((byte) 60);
+          jd.releaseStatics((byte) -109);
           VorbisSample.releaseStatics();
           VorbisFloor.releaseStatics();
           SynthInstrument.releaseStatics();
           ah.a(false);
-          r.a(8);
-          oi.a(103);
+          r.releaseStatics(8);
+          oi.releaseStatics(103);
           vi.h((byte) 62);
-          h.h(1);
-          ie.m((byte) 25);
-          gd.g(103);
-          no.l((byte) -11);
-          ed.i(-29222);
-          ln.g(10);
-          td.a((byte) 115);
+          h.releaseStatics(1);
+          ie.releaseStatics((byte) 25);
+          gd.releaseStatics(103);
+          no.releaseStatics((byte) -11);
+          ed.releaseStatics(-29222);
+          ln.releaseStatics(10);
+          td.releaseStatics((byte) 115);
           e.a(-1);
-          sn.g((byte) 127);
+          sn.releaseStatics((byte) 127);
           hc.a((byte) -60);
-          vh.b(-60);
+          vh.releaseStatics(-60);
           fb.a(!param0);
           pc.a(false);
           dd.a(-5451);
           ue.a((byte) 62);
           g.a(30586);
-          tm.b(-79);
-          cf.a((byte) 83);
-          nl.e(-10765);
-          dn.e(1);
-          af.e(93);
-          in.g((byte) -120);
-          pe.g(0);
-          hb.e(0);
-          ne.c(-14);
-          w.g((byte) 126);
+          tm.releaseStatics(-79);
+          cf.releaseStatics((byte) 83);
+          nl.releaseStatics(-10765);
+          dn.releaseStatics(1);
+          af.releaseStatics(93);
+          in.releaseStatics((byte) -120);
+          pe.releaseStatics(0);
+          hb.releaseStatics(0);
+          ne.releaseStatics(-14);
+          w.releaseStatics((byte) 126);
           cg.e(param0);
-          i.a((byte) 6);
+          i.releaseStatics((byte) 6);
           na.g((byte) 120);
-          SpriteState.c(122);
-          we.c(120);
+          SpriteState.releaseStatics(122);
+          we.releaseStatics(120);
           wj.a(0);
-          IntrusiveNodeHashTable.c(0);
-          tg.c(-92);
-          mc.a(73);
-          ao.b(0);
-          sb.c(-1);
-          IndexedSpriteState.a((byte) -109);
+          IntrusiveNodeHashTable.releaseStatics(0);
+          tg.releaseStatics(-92);
+          mc.releaseStatics(73);
+          ao.releaseStatics(0);
+          sb.releaseStatics(-1);
+          IndexedSpriteState.releaseStatics((byte) -109);
           bm.a(false);
-          fc.a((byte) -71);
-          nm.a(-1);
+          fc.releaseStatics((byte) -71);
+          nm.releaseStatics(-1);
           ph.a((byte) -42);
-          fi.a((byte) 5);
+          fi.releaseStatics((byte) 5);
           gj.a(false);
           ch.a(false);
-          bd.b(0);
-          CipherPacketBuffer.q(21657);
-          da.a(-121);
-          u.a(1);
-          vm.a((byte) -75);
-          IsaacCipher.a(109);
-          ic.a(0);
-          ge.a(-117);
+          bd.releaseStatics(0);
+          CipherPacketBuffer.releaseStatics(21657);
+          da.releaseStatics(-121);
+          u.releaseStatics(1);
+          vm.releaseStatics((byte) -75);
+          IsaacCipher.releaseStatics(109);
+          ic.releaseStatics(0);
+          ge.releaseStatics(-117);
           cn.g((byte) 112);
           qn.h(1);
           cj.a(param0);
-          sa.e(26820);
-          jn.a((byte) -99);
-          AudioService.a((byte) -94);
-          oh.a(-791);
-          BoundedRandomAccessFile.d(255);
+          sa.releaseStatics(26820);
+          jn.releaseStatics((byte) -99);
+          AudioService.releaseStatics((byte) -94);
+          oh.releaseStatics(-791);
+          BoundedRandomAccessFile.releaseStatics(255);
           ff.a((byte) 46);
-          si.b((byte) 36);
-          mj.a((byte) -95);
-          of.a(-56);
-          lh.a(2);
-          jm.c(63);
-          qm.f((byte) -17);
-          wn.e(23123);
-          kh.a(6481);
-          kn.h(3);
+          si.releaseStatics((byte) 36);
+          mj.releaseStatics((byte) -95);
+          of.releaseStatics(-56);
+          lh.releaseStatics(2);
+          jm.releaseStatics(63);
+          UiComponent.releaseStatics((byte) -17);
+          SingleChildContainer.releaseStatics(23123);
+          kh.releaseStatics(6481);
+          kn.releaseStatics(3);
           uj.a(true);
-          qo.a(6);
+          qo.releaseStatics(6);
           ob.f(false);
-          ti.k(0);
-          ag.e(-125);
-          ua.f(-1);
-          df.c(true);
-          kl.a((byte) -90);
-          ae.a((byte) -125);
-          qf.a((byte) 92);
-          ef.g(-1);
-          vk.f((byte) 20);
-          be.a((byte) -60);
-          ea.f((byte) 78);
+          ti.releaseStatics(0);
+          TextButton.releaseStatics(-125);
+          ua.releaseStatics(-1);
+          UiContainer.c(true);
+          ArrayWidgetContainer.releaseStatics((byte) -90);
+          ae.releaseStatics((byte) -125);
+          qf.releaseStatics((byte) 92);
+          ef.releaseStatics(-1);
+          vk.releaseStatics((byte) 20);
+          be.releaseStatics((byte) -60);
+          ea.releaseStatics((byte) 78);
           tj.b(107);
-          jo.a(0);
-          ve.d(2039583);
-          b.a(67);
+          jo.releaseStatics(0);
+          ve.releaseStatics(2039583);
+          b.releaseStatics(67);
           MeshRasterState.releaseStatics();
-          gl.a((byte) 15);
-          vg.a(40);
-          bo.a(120);
-          he.a(-31399);
-          oa.a((byte) 98);
-          wd.a(0);
-          rd.a(0);
-          lm.a(-888);
-          pi.a((byte) -68);
-          DelegatingCanvas.a((byte) 87);
-          eo.a(-14449);
+          gl.releaseStatics((byte) 15);
+          vg.releaseStatics(40);
+          bo.releaseStatics(120);
+          he.releaseStatics(-31399);
+          oa.releaseStatics((byte) 98);
+          wd.releaseStatics(0);
+          rd.releaseStatics(0);
+          lm.releaseStatics(-888);
+          pi.releaseStatics((byte) -68);
+          DelegatingCanvas.releaseStatics((byte) 87);
+          eo.releaseStatics(-14449);
           n.a(8577);
           ByteStorage.a((byte) -79);
           Bzip2Decoder.releaseSharedState();
           Bzip2State.a(4);
-          bb.a((byte) -127);
+          bb.releaseStatics((byte) -127);
           fl.a(true);
-          wh.a((byte) -118);
-          sk.b(121);
-          la.a((byte) 49);
-          hd.a((byte) 107);
-          ij.g(12);
-          kg.a(0);
-          gn.a((byte) -122);
-          oo.e(31908);
-          tk.c(-1016755547);
+          wh.releaseStatics((byte) -118);
+          sk.releaseStatics(121);
+          la.releaseStatics((byte) 49);
+          hd.releaseStatics((byte) 107);
+          ij.releaseStatics(12);
+          kg.releaseStatics(0);
+          gn.releaseStatics((byte) -122);
+          oo.releaseStatics(31908);
+          tk.releaseStatics(-1016755547);
           ig.a(0);
           go.a(false);
-          hj.a((byte) 111);
-          lj.c(-80);
-          ImageProducerRasterBuffer.a((byte) -109);
+          hj.releaseStatics((byte) 111);
+          lj.releaseStatics(-80);
+          ImageProducerRasterBuffer.releaseStatics((byte) -109);
           vf.a(27494);
           ia.a(!param0);
           rb.a(37);
-          oe.a(120);
-          rm.a(-6566);
+          oe.releaseStatics(120);
+          rm.releaseStatics(-6566);
           MusicPatch.b(param0);
-          PatchEnvelopeSet.a((byte) 94);
+          PatchEnvelopeSet.releaseStatics((byte) 94);
           AudioFilter.releaseStatics();
-          ke.f(2);
-          bi.o(0);
-          rn.n(1);
-          qk.g(0);
-          om.a((byte) -127);
-          li.a(1313);
-          ej.f(20445);
-          mk.g((byte) -125);
+          ke.releaseStatics(2);
+          bi.releaseStatics(0);
+          EditableTextWidget.releaseStatics(1);
+          qk.releaseStatics(0);
+          om.releaseStatics((byte) -127);
+          li.releaseStatics(1313);
+          ej.releaseStatics(20445);
+          mk.releaseStatics((byte) -125);
           sc.g(15428);
-          bk.f(0);
+          bk.releaseStatics(0);
           rl.c((byte) -114);
-          gg.b(28);
-          ng.a(40);
-          rk.h(-116);
+          gg.releaseStatics(28);
+          ng.releaseStatics(40);
+          rk.releaseStatics(-116);
           wg.d(param0);
-          tn.f((byte) -97);
-          dh.f((byte) 77);
-          fd.a(-1);
-          bl.c((byte) -79);
+          tn.releaseStatics((byte) -97);
+          dh.releaseStatics((byte) 77);
+          fd.releaseStatics(-1);
+          bl.releaseStatics((byte) -79);
           wl.k(0);
-          nj.a((byte) -72);
-          mg.i(42);
+          nj.releaseStatics((byte) -72);
+          mg.releaseStatics(42);
           sl.g(123);
           jl.c(-125);
-          re.b(0);
-          se.f(-114);
+          re.releaseStatics(0);
+          se.releaseStatics(-114);
           q.f(-1764031359);
           bj.l((byte) -46);
-          gf.k((byte) -108);
-          wm.f(-5903);
-          ma.g((byte) 54);
-          DirectByteStorage.a(92);
-          pk.a(-14987);
-          gb.b((byte) 33);
-          nn.c(63);
-          aj.a(20028);
+          gf.releaseStatics((byte) -108);
+          wm.releaseStatics(-5903);
+          ma.releaseStatics((byte) 54);
+          DirectByteStorage.releaseStatics(92);
+          pk.releaseStatics(-14987);
+          gb.releaseStatics((byte) 33);
+          nn.releaseStatics(63);
+          aj.releaseStatics(20028);
           nh.h((byte) -102);
-          ka.a(-1);
+          ka.releaseStatics(-1);
           sm.a(false);
-          jf.a((byte) -120);
-          fh.a((byte) 88);
-          fk.a(-1333592895);
+          jf.releaseStatics((byte) -120);
+          fh.releaseStatics((byte) 88);
+          fk.releaseStatics(-1333592895);
           nk.a(30025);
           ce.b(false);
           mm.d(2188450);
-          gm.a(-9922);
+          gm.releaseStatics(-9922);
           ib.a(true);
-          tc.b((byte) 25);
-          ii.b((byte) 106);
+          tc.releaseStatics((byte) 25);
+          ii.releaseStatics((byte) 106);
           dm.c(true);
           cd.a((byte) 99);
           rf.a(85);
-          fj.a(90);
+          fj.releaseStatics(90);
           on.a(3);
-          wa.f((byte) -121);
-          ta.a(5);
-          ol.b(-23971);
-          hl.a(-1513388336);
+          wa.releaseStatics((byte) -121);
+          ta.releaseStatics(5);
+          ol.releaseStatics(-23971);
+          hl.releaseStatics(-1513388336);
           fe.a(32369);
-          cm.a(49);
-          pb.a((byte) 126);
-          f.a(-1);
-          qg.b(83);
-          co.b(-62);
-          ho.b(0);
-          km.b(400);
+          cm.releaseStatics(49);
+          pb.releaseStatics((byte) 126);
+          f.releaseStatics(-1);
+          qg.releaseStatics(83);
+          co.releaseStatics(-62);
+          ho.releaseStatics(0);
+          km.releaseStatics(400);
           am.a(false);
-          qe.c(-100);
-          me.a((byte) 115);
+          qe.releaseStatics(-100);
+          me.releaseStatics((byte) 115);
           uh.a(-69);
-          fm.a(0);
-          th.a((byte) -113);
-          ql.a((byte) -107);
+          fm.releaseStatics(0);
+          th.releaseStatics((byte) -113);
+          ql.releaseStatics((byte) -107);
           im.a((byte) -14);
-          ld.b((byte) 13);
-          an.a((byte) -104);
-          ih.a((byte) 48);
+          ld.releaseStatics((byte) 13);
+          an.releaseStatics((byte) -104);
+          ih.releaseStatics((byte) 48);
           vc.b(202);
-          vd.a(0);
-          va.a(121);
-          eb.a((byte) 49);
-          j.a((byte) -122);
-          mh.h((byte) 114);
-          mb.a(122);
+          vd.releaseStatics(0);
+          va.releaseStatics(121);
+          eb.releaseStatics((byte) 49);
+          j.releaseStatics((byte) -122);
+          mh.releaseStatics((byte) 114);
+          mb.releaseStatics(122);
           aa.b(false);
-          ko.a(32);
-          dg.d(-1);
-          ui.d(70);
-          ki.d((byte) 90);
-          ja.d(0);
+          ko.releaseStatics(32);
+          dg.releaseStatics(-1);
+          ui.releaseStatics(70);
+          ki.releaseStatics((byte) 90);
+          ja.releaseStatics(0);
           lo.d(15672);
-          mn.d((byte) -119);
-          db.a(255);
-          vl.a((byte) -76);
-          eh.a((byte) 121);
+          mn.releaseStatics((byte) -119);
+          db.releaseStatics(255);
+          vl.releaseStatics((byte) -76);
+          eh.releaseStatics((byte) 121);
           ee.c(true);
-          ri.a((byte) 76);
+          ri.releaseStatics((byte) 76);
           this.field_q = null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1611,7 +1611,7 @@ public final class ArcanistsMulti extends ud {
             }
             if ((decompiledFrameCompleted0) && (wa.field_Ob &&
               !kh.field_b &&
-              !oc.field_g)) {
+              !IntrusiveDequeCursor.field_g)) {
               var5_int = var4;
               if (hi.field_a &&
                 ef.field_r) {
@@ -1794,7 +1794,7 @@ public final class ArcanistsMulti extends ud {
           }
           if (mn.field_r == -5) {
             qc.a(false, DirectByteStorage.field_f.h((byte) 72), 11);
-            oc.field_g = true;
+            IntrusiveDequeCursor.field_g = true;
             mn.field_r = si.field_g;
           }
           return;
@@ -1927,7 +1927,7 @@ public final class ArcanistsMulti extends ud {
           if (obfuscationGuard != -89) {
             ArcanistsMulti.a(66, (int[]) null, (dn) null, (String) null, 78L, -15, 110, (String) null, (kc) null);
           }
-          if (oc.a(-15576)) {
+          if (IntrusiveDequeCursor.a(-15576)) {
             kh.a((byte) 14, (java.awt.Canvas) (var2), MusicPatchPcmStream.c(0));
             return;
           }
@@ -2208,7 +2208,7 @@ public final class ArcanistsMulti extends ud {
               var2.endBitAccess(param1 + 80);
               break;
             }
-            oo.field_u[var4] = rn.a(true, var2);
+            oo.field_u[var4] = EditableTextWidget.a(true, var2);
             var4++;
           } while (var7 == 0);
           var4 = 0;
@@ -2286,255 +2286,255 @@ public final class ArcanistsMulti extends ud {
             }
             return;
           }
-          if (wn.field_C < 52) {
-            if (wn.field_C != 0 ||
+          if (SingleChildContainer.field_C < 52) {
+            if (SingleChildContainer.field_C != 0 ||
               !ue.field_d.a(true, "imp", "streamed")) {
-              if (wn.field_C == 1 &&
+              if (SingleChildContainer.field_C == 1 &&
                 ue.field_d.a(true, "arcaneexplosion", "streamed")) {
                 cn.field_N = pk.a("streamed", param0 ^ 15433, "arcaneexplosion", ue.field_d);
-                wn.field_C = wn.field_C + 1;
+                SingleChildContainer.field_C = SingleChildContainer.field_C + 1;
                 if (var3 == 0) {
                   return;
                 }
               }
-              if (wn.field_C == 2 &&
+              if (SingleChildContainer.field_C == 2 &&
                 ue.field_d.a(true, "flameexplosion", "streamed")) {
                 sn.field_E = pk.a("streamed", 0, "flameexplosion", ue.field_d);
-                wn.field_C = wn.field_C + 1;
+                SingleChildContainer.field_C = SingleChildContainer.field_C + 1;
                 if (var3 == 0) {
                   return;
                 }
               }
-              if (wn.field_C != 3 ||
+              if (SingleChildContainer.field_C != 3 ||
                 !ue.field_d.a(true, "smokeexplosion", "streamed")) {
-                if (wn.field_C == 4 &&
+                if (SingleChildContainer.field_C == 4 &&
                   ue.field_d.a(true, "flamepuff", "streamed")) {
                   ee.field_b = pk.a("streamed", param0 - 15433, "flamepuff", ue.field_d);
-                  wn.field_C = wn.field_C + 1;
+                  SingleChildContainer.field_C = SingleChildContainer.field_C + 1;
                   if (var3 == 0) {
                     return;
                   }
                 }
-                if (wn.field_C == 5 &&
+                if (SingleChildContainer.field_C == 5 &&
                   ue.field_d.a(true, "smokepuff", "streamed")) {
                   vi.field_M = pk.a("streamed", 0, "smokepuff", ue.field_d);
-                  wn.field_C = wn.field_C + 1;
+                  SingleChildContainer.field_C = SingleChildContainer.field_C + 1;
                   if (var3 == 0) {
                     return;
                   }
                 }
-                if (wn.field_C != 6 ||
+                if (SingleChildContainer.field_C != 6 ||
                   !ue.field_d.a(true, "stormpuff", "streamed")) {
-                  if (wn.field_C == 7 &&
+                  if (SingleChildContainer.field_C == 7 &&
                     ue.field_d.a(true, "stormexplosion", "streamed")) {
                     u.field_j = pk.a("streamed", param0 - 15433, "stormexplosion", ue.field_d);
-                    wn.field_C = wn.field_C + 1;
+                    SingleChildContainer.field_C = SingleChildContainer.field_C + 1;
                     if (var3 == 0) {
                       return;
                     }
                   }
-                  if (wn.field_C == 8 &&
+                  if (SingleChildContainer.field_C == 8 &&
                     ue.field_d.a(true, "cyclopstest", "streamed")) {
                     gb.field_c = pk.a("streamed", 0, "cyclopstest", ue.field_d);
-                    wn.field_C = wn.field_C + 1;
+                    SingleChildContainer.field_C = SingleChildContainer.field_C + 1;
                     if (var3 == 0) {
                       return;
                     }
                   }
-                  if (wn.field_C != 9 ||
+                  if (SingleChildContainer.field_C != 9 ||
                     !ue.field_d.a(true, "sylph", "streamed")) {
-                    if (wn.field_C == 10 &&
+                    if (SingleChildContainer.field_C == 10 &&
                       ue.field_d.a(true, "frostgiant", "streamed")) {
                       ea.field_v = pk.a("streamed", 0, "frostgiant", ue.field_d);
-                      wn.field_C = wn.field_C + 1;
+                      SingleChildContainer.field_C = SingleChildContainer.field_C + 1;
                       pi.field_e = vm.field_f;
                       if (var3 == 0) {
                         return;
                       }
                     }
-                    if (wn.field_C != 11 ||
+                    if (SingleChildContainer.field_C != 11 ||
                       !ue.field_d.a(true, "dwarf", "streamed")) {
-                      if (12 != wn.field_C ||
+                      if (12 != SingleChildContainer.field_C ||
                         !ue.field_d.a(true, "clockworkrecallsoldier", "streamed")) {
-                        if (wn.field_C != 13 ||
+                        if (SingleChildContainer.field_C != 13 ||
                           !ue.field_d.a(true, "golem", "streamed")) {
-                          if (wn.field_C != 14 ||
+                          if (SingleChildContainer.field_C != 14 ||
                             !ue.field_d.a(true, "flamedragon", "streamed")) {
-                            if (15 != wn.field_C ||
+                            if (15 != SingleChildContainer.field_C ||
                               !ue.field_d.a(true, "frostdragon", "streamed")) {
-                              if (wn.field_C == 16 &&
+                              if (SingleChildContainer.field_C == 16 &&
                                 ue.field_d.a(true, "stormdragon", "streamed")) {
                                 ArchiveIndex.field_m = pk.a("streamed", 0, "stormdragon", ue.field_d);
-                                wn.field_C = wn.field_C + 1;
+                                SingleChildContainer.field_C = SingleChildContainer.field_C + 1;
                                 if (var3 == 0) {
                                   return;
                                 }
                               }
-                              if (wn.field_C != 17 ||
+                              if (SingleChildContainer.field_C != 17 ||
                                 !ue.field_d.a(true, "zombiedragon", "streamed")) {
-                                if (wn.field_C == 18 &&
+                                if (SingleChildContainer.field_C == 18 &&
                                   ue.field_d.a(true, "clockworkdragon", "streamed")) {
                                   ub.field_e = pk.a("streamed", 0, "clockworkdragon", ue.field_d);
-                                  wn.field_C = wn.field_C + 1;
+                                  SingleChildContainer.field_C = SingleChildContainer.field_C + 1;
                                   if (var3 == 0) {
                                     return;
                                   }
                                 }
-                                if (wn.field_C != 19 ||
+                                if (SingleChildContainer.field_C != 19 ||
                                   !ue.field_d.a(true, "brinegoblin", "streamed")) {
-                                  if (20 != wn.field_C ||
+                                  if (20 != SingleChildContainer.field_C ||
                                     !ue.field_d.a(true, "ent", "streamed")) {
-                                    if (wn.field_C != 21 ||
+                                    if (SingleChildContainer.field_C != 21 ||
                                       !ue.field_d.a(true, "elf", "streamed")) {
-                                      if (wn.field_C != 22 ||
+                                      if (SingleChildContainer.field_C != 22 ||
                                         !ue.field_d.a(true, "monkey", "streamed")) {
-                                        if (wn.field_C != 23 ||
+                                        if (SingleChildContainer.field_C != 23 ||
                                           !ue.field_d.a(true, "darkknight", "streamed")) {
-                                          if (wn.field_C == 24 &&
+                                          if (SingleChildContainer.field_C == 24 &&
                                             ue.field_d.a(true, "wraith", "streamed")) {
                                             pm.field_d = pk.a("streamed", 0, "wraith", ue.field_d);
-                                            wn.field_C = wn.field_C + 1;
+                                            SingleChildContainer.field_C = SingleChildContainer.field_C + 1;
                                             if (var3 == 0) {
                                               return;
                                             }
                                           }
-                                          if (wn.field_C != 25 ||
+                                          if (SingleChildContainer.field_C != 25 ||
                                             !ue.field_d.a(true, "swarm", "streamed")) {
-                                            if (26 != wn.field_C ||
+                                            if (26 != SingleChildContainer.field_C ||
                                               !ue.field_d.a(true, "pixies", "streamed")) {
-                                              if (27 == wn.field_C &&
+                                              if (27 == SingleChildContainer.field_C &&
                                                 ue.field_d.a(true, "paladin", "streamed")) {
                                                 qj.field_d = pk.a("streamed", 0, "paladin", ue.field_d);
-                                                wn.field_C = wn.field_C + 1;
+                                                SingleChildContainer.field_C = SingleChildContainer.field_C + 1;
                                                 if (var3 == 0) {
                                                   return;
                                                 }
                                               }
-                                              if (wn.field_C != 28 ||
+                                              if (SingleChildContainer.field_C != 28 ||
                                                 !ue.field_d.a(true, "pegasus", "streamed")) {
-                                                if (29 == wn.field_C &&
+                                                if (29 == SingleChildContainer.field_C &&
                                                   ue.field_d.a(true, "phoenix", "streamed")) {
                                                   SoundCache.field_m = pk.a("streamed", param0 - 15433, "phoenix", ue.field_d);
-                                                  wn.field_C = wn.field_C + 1;
+                                                  SingleChildContainer.field_C = SingleChildContainer.field_C + 1;
                                                   if (var3 == 0) {
                                                     return;
                                                   }
                                                 }
-                                                if (wn.field_C != 30 ||
+                                                if (SingleChildContainer.field_C != 30 ||
                                                   !ue.field_d.a(true, "watertroll", "streamed")) {
-                                                  if (wn.field_C == 31 &&
+                                                  if (SingleChildContainer.field_C == 31 &&
                                                     ue.field_d.a(true, "freshwatertroll", "streamed")) {
                                                     c.field_a = pk.a("streamed", 0, "freshwatertroll", ue.field_d);
-                                                    wn.field_C = wn.field_C + 1;
+                                                    SingleChildContainer.field_C = SingleChildContainer.field_C + 1;
                                                     if (var3 == 0) {
                                                       return;
                                                     }
                                                   }
-                                                  if (wn.field_C == 32 &&
+                                                  if (SingleChildContainer.field_C == 32 &&
                                                     ue.field_d.a(true, "hardwatertroll", "streamed")) {
                                                     vm.field_g = pk.a("streamed", 0, "hardwatertroll", ue.field_d);
-                                                    wn.field_C = wn.field_C + 1;
+                                                    SingleChildContainer.field_C = SingleChildContainer.field_C + 1;
                                                     if (var3 == 0) {
                                                       return;
                                                     }
                                                   }
-                                                  if (wn.field_C != 33 ||
+                                                  if (SingleChildContainer.field_C != 33 ||
                                                     !ue.field_d.a(true, "waterlord", "streamed")) {
-                                                    if (wn.field_C != 34 ||
+                                                    if (SingleChildContainer.field_C != 34 ||
                                                       !ue.field_d.a(true, "flameshield", "streamed")) {
-                                                      if (wn.field_C != 35 ||
+                                                      if (SingleChildContainer.field_C != 35 ||
                                                         !ue.field_d.a(true, "clockworkexplosion", "streamed")) {
-                                                        if (wn.field_C == 36 &&
+                                                        if (SingleChildContainer.field_C == 36 &&
                                                           ue.field_d.a(true, "clockworkpuff", "streamed")) {
                                                           wh.field_k = pk.a("streamed", param0 ^ 15433, "clockworkpuff", ue.field_d);
-                                                          wn.field_C = wn.field_C + 1;
+                                                          SingleChildContainer.field_C = SingleChildContainer.field_C + 1;
                                                           if (var3 == 0) {
                                                             return;
                                                           }
                                                         }
-                                                        if (wn.field_C == 37 &&
+                                                        if (SingleChildContainer.field_C == 37 &&
                                                           ue.field_d.a(true, "windshield", "streamed")) {
                                                           pk.field_a = pk.a("streamed", 0, "windshield", ue.field_d);
-                                                          wn.field_C = wn.field_C + 1;
+                                                          SingleChildContainer.field_C = SingleChildContainer.field_C + 1;
                                                           if (var3 == 0) {
                                                             return;
                                                           }
                                                         }
-                                                        if (wn.field_C == 38 &&
+                                                        if (SingleChildContainer.field_C == 38 &&
                                                           ue.field_d.a(true, "stormshield", "streamed")) {
                                                           i.field_a = pk.a("streamed", 0, "stormshield", ue.field_d);
-                                                          wn.field_C = wn.field_C + 1;
+                                                          SingleChildContainer.field_C = SingleChildContainer.field_C + 1;
                                                           if (var3 == 0) {
                                                             return;
                                                           }
                                                         }
-                                                        if (wn.field_C == 39 &&
+                                                        if (SingleChildContainer.field_C == 39 &&
                                                           ue.field_d.a(true, "flamewall", "streamed")) {
                                                           cj.field_f = pk.a("streamed", param0 - 15433, "flamewall", ue.field_d);
-                                                          wn.field_C = wn.field_C + 1;
+                                                          SingleChildContainer.field_C = SingleChildContainer.field_C + 1;
                                                           if (var3 == 0) {
                                                             return;
                                                           }
                                                         }
-                                                        if (40 == wn.field_C &&
+                                                        if (40 == SingleChildContainer.field_C &&
                                                           ue.field_d.a(true, "stonepuff", "streamed")) {
                                                           nm.field_c = pk.a("streamed", 0, "stonepuff", ue.field_d);
-                                                          wn.field_C = wn.field_C + 1;
+                                                          SingleChildContainer.field_C = SingleChildContainer.field_C + 1;
                                                           if (var3 == 0) {
                                                             return;
                                                           }
                                                         }
-                                                        if (41 != wn.field_C ||
+                                                        if (41 != SingleChildContainer.field_C ||
                                                           !ue.field_d.a(true, "frostpuff", "streamed")) {
-                                                          if (wn.field_C != 42 ||
+                                                          if (SingleChildContainer.field_C != 42 ||
                                                             !ue.field_d.a(true, "underexplosion", "streamed")) {
-                                                            if (43 == wn.field_C &&
+                                                            if (43 == SingleChildContainer.field_C &&
                                                               ue.field_d.a(true, "skullexplosion", "streamed")) {
                                                               MusicPatchNode.field_E = pk.a("streamed", 0, "skullexplosion", ue.field_d);
-                                                              wn.field_C = wn.field_C + 1;
+                                                              SingleChildContainer.field_C = SingleChildContainer.field_C + 1;
                                                               if (var3 == 0) {
                                                                 return;
                                                               }
                                                             }
-                                                            if (wn.field_C == 44 &&
+                                                            if (SingleChildContainer.field_C == 44 &&
                                                               ue.field_d.a(true, "thornexplosion", "streamed")) {
                                                               si.field_p = pk.a("streamed", 0, "thornexplosion", ue.field_d);
-                                                              wn.field_C = wn.field_C + 1;
+                                                              SingleChildContainer.field_C = SingleChildContainer.field_C + 1;
                                                               if (var3 == 0) {
                                                                 return;
                                                               }
                                                             }
-                                                            if (wn.field_C != 45 ||
+                                                            if (SingleChildContainer.field_C != 45 ||
                                                               !ue.field_d.a(true, "vineexplosion", "streamed")) {
-                                                              if (wn.field_C == 46 &&
+                                                              if (SingleChildContainer.field_C == 46 &&
                                                                 ue.field_d.a(true, "vinepuff", "streamed")) {
                                                                 vl.field_i = pk.a("streamed", param0 ^ 15433, "vinepuff", ue.field_d);
-                                                                wn.field_C = wn.field_C + 1;
+                                                                SingleChildContainer.field_C = SingleChildContainer.field_C + 1;
                                                                 if (var3 == 0) {
                                                                   return;
                                                                 }
                                                               }
-                                                              if (47 != wn.field_C ||
+                                                              if (47 != SingleChildContainer.field_C ||
                                                                 !ue.field_d.a(true, "waterexplosion", "streamed")) {
-                                                                if (48 == wn.field_C &&
+                                                                if (48 == SingleChildContainer.field_C &&
                                                                   ue.field_d.a(true, "brineexplosion", "streamed")) {
                                                                   ea.field_H = pk.a("streamed", 0, "brineexplosion", ue.field_d);
-                                                                  wn.field_C = wn.field_C + 1;
+                                                                  SingleChildContainer.field_C = SingleChildContainer.field_C + 1;
                                                                   if (var3 == 0) {
                                                                     return;
                                                                   }
                                                                 }
-                                                                if (49 == wn.field_C &&
+                                                                if (49 == SingleChildContainer.field_C &&
                                                                   ue.field_d.a(true, "stoneexplosion", "streamed")) {
                                                                   ie.field_Tb = pk.a("streamed", 0, "stoneexplosion", ue.field_d);
-                                                                  wn.field_C = wn.field_C + 1;
+                                                                  SingleChildContainer.field_C = SingleChildContainer.field_C + 1;
                                                                   if (var3 == 0) {
                                                                     return;
                                                                   }
                                                                 }
-                                                                if (wn.field_C != 50 ||
+                                                                if (SingleChildContainer.field_C != 50 ||
                                                                   !ue.field_d.a(true, "frostexplosion", "streamed")) {
-                                                                  if (wn.field_C != 51) {
+                                                                  if (SingleChildContainer.field_C != 51) {
                                                                     return;
                                                                   }
                                                                   if (!ue.field_d.a(true, "watersplash", "streamed")) {
@@ -2542,169 +2542,169 @@ public final class ArcanistsMulti extends ud {
                                                                   }
                                                                   ob.field_db = pk.a("streamed", 0, "watersplash", ue.field_d);
                                                                   pi.field_e = vi.field_Q;
-                                                                  wn.field_C = wn.field_C + 1;
+                                                                  SingleChildContainer.field_C = SingleChildContainer.field_C + 1;
                                                                   if (var3 == 0) {
                                                                     return;
                                                                   }
                                                                 }
                                                                 lf.field_e = pk.a("streamed", 0, "frostexplosion", ue.field_d);
-                                                                wn.field_C = wn.field_C + 1;
+                                                                SingleChildContainer.field_C = SingleChildContainer.field_C + 1;
                                                                 if (var3 == 0) {
                                                                   return;
                                                                 }
                                                               }
                                                               mb.field_cb = pk.a("streamed", param0 - 15433, "waterexplosion", ue.field_d);
-                                                              wn.field_C = wn.field_C + 1;
+                                                              SingleChildContainer.field_C = SingleChildContainer.field_C + 1;
                                                               if (var3 == 0) {
                                                                 return;
                                                               }
                                                             }
                                                             rf.field_j = pk.a("streamed", param0 - 15433, "vineexplosion", ue.field_d);
-                                                            wn.field_C = wn.field_C + 1;
+                                                            SingleChildContainer.field_C = SingleChildContainer.field_C + 1;
                                                             if (var3 == 0) {
                                                               return;
                                                             }
                                                           }
                                                           jg.field_l = pk.a("streamed", 0, "underexplosion", ue.field_d);
-                                                          wn.field_C = wn.field_C + 1;
+                                                          SingleChildContainer.field_C = SingleChildContainer.field_C + 1;
                                                           if (var3 == 0) {
                                                             return;
                                                           }
                                                         }
-                                                        kl.field_G = pk.a("streamed", 0, "frostpuff", ue.field_d);
-                                                        wn.field_C = wn.field_C + 1;
+                                                        ArrayWidgetContainer.field_G = pk.a("streamed", 0, "frostpuff", ue.field_d);
+                                                        SingleChildContainer.field_C = SingleChildContainer.field_C + 1;
                                                         if (var3 == 0) {
                                                           return;
                                                         }
                                                       }
                                                       MouseInputHandler.field_a = pk.a("streamed", 0, "clockworkexplosion", ue.field_d);
-                                                      wn.field_C = wn.field_C + 1;
+                                                      SingleChildContainer.field_C = SingleChildContainer.field_C + 1;
                                                       if (var3 == 0) {
                                                         return;
                                                       }
                                                     }
                                                     cn.field_S = pk.a("streamed", param0 ^ 15433, "flameshield", ue.field_d);
-                                                    wn.field_C = wn.field_C + 1;
+                                                    SingleChildContainer.field_C = SingleChildContainer.field_C + 1;
                                                     if (var3 == 0) {
                                                       return;
                                                     }
                                                   }
                                                   nj.field_k = pk.a("streamed", param0 - 15433, "waterlord", ue.field_d);
-                                                  wn.field_C = wn.field_C + 1;
+                                                  SingleChildContainer.field_C = SingleChildContainer.field_C + 1;
                                                   if (var3 == 0) {
                                                     return;
                                                   }
                                                 }
                                                 g.field_f = pk.a("streamed", param0 ^ 15433, "watertroll", ue.field_d);
-                                                wn.field_C = wn.field_C + 1;
+                                                SingleChildContainer.field_C = SingleChildContainer.field_C + 1;
                                                 if (var3 == 0) {
                                                   return;
                                                 }
                                               }
                                               ra.field_c = pk.a("streamed", 0, "pegasus", ue.field_d);
-                                              wn.field_C = wn.field_C + 1;
+                                              SingleChildContainer.field_C = SingleChildContainer.field_C + 1;
                                               if (var3 == 0) {
                                                 return;
                                               }
                                             }
                                             oe.field_d = pk.a("streamed", 0, "pixies", ue.field_d);
-                                            wn.field_C = wn.field_C + 1;
+                                            SingleChildContainer.field_C = SingleChildContainer.field_C + 1;
                                             if (var3 == 0) {
                                               return;
                                             }
                                           }
                                           wl.field_U = pk.a("streamed", 0, "swarm", ue.field_d);
-                                          wn.field_C = wn.field_C + 1;
+                                          SingleChildContainer.field_C = SingleChildContainer.field_C + 1;
                                           if (var3 == 0) {
                                             return;
                                           }
                                         }
                                         ra.field_j = pk.a("streamed", param0 - 15433, "darkknight", ue.field_d);
-                                        wn.field_C = wn.field_C + 1;
+                                        SingleChildContainer.field_C = SingleChildContainer.field_C + 1;
                                         if (var3 == 0) {
                                           return;
                                         }
                                       }
                                       e.field_I = pk.a("streamed", 0, "monkey", ue.field_d);
-                                      wn.field_C = wn.field_C + 1;
+                                      SingleChildContainer.field_C = SingleChildContainer.field_C + 1;
                                       if (var3 == 0) {
                                         return;
                                       }
                                     }
                                     ArchiveIndex.field_n = pk.a("streamed", 0, "elf", ue.field_d);
-                                    wn.field_C = wn.field_C + 1;
+                                    SingleChildContainer.field_C = SingleChildContainer.field_C + 1;
                                     if (var3 == 0) {
                                       return;
                                     }
                                   }
                                   vk.field_w = pk.a("streamed", 0, "ent", ue.field_d);
-                                  wn.field_C = wn.field_C + 1;
+                                  SingleChildContainer.field_C = SingleChildContainer.field_C + 1;
                                   if (var3 == 0) {
                                     return;
                                   }
                                 }
                                 ml.field_v = pk.a("streamed", 0, "brinegoblin", ue.field_d);
-                                wn.field_C = wn.field_C + 1;
+                                SingleChildContainer.field_C = SingleChildContainer.field_C + 1;
                                 if (var3 == 0) {
                                   return;
                                 }
                               }
                               ff.field_b = pk.a("streamed", 0, "zombiedragon", ue.field_d);
-                              wn.field_C = wn.field_C + 1;
+                              SingleChildContainer.field_C = SingleChildContainer.field_C + 1;
                               if (var3 == 0) {
                                 return;
                               }
                             }
                             bk.field_L = pk.a("streamed", param0 ^ 15433, "frostdragon", ue.field_d);
-                            wn.field_C = wn.field_C + 1;
+                            SingleChildContainer.field_C = SingleChildContainer.field_C + 1;
                             if (var3 == 0) {
                               return;
                             }
                           }
                           rc.field_d = pk.a("streamed", 0, "flamedragon", ue.field_d);
-                          wn.field_C = wn.field_C + 1;
+                          SingleChildContainer.field_C = SingleChildContainer.field_C + 1;
                           if (var3 == 0) {
                             return;
                           }
                         }
                         i.field_g = pk.a("streamed", param0 ^ 15433, "golem", ue.field_d);
-                        wn.field_C = wn.field_C + 1;
+                        SingleChildContainer.field_C = SingleChildContainer.field_C + 1;
                         if (var3 == 0) {
                           return;
                         }
                       }
                       fe.field_h = pk.a("streamed", 0, "clockworkrecallsoldier", ue.field_d);
-                      wn.field_C = wn.field_C + 1;
+                      SingleChildContainer.field_C = SingleChildContainer.field_C + 1;
                       if (var3 == 0) {
                         return;
                       }
                     }
                     dh.field_Jb = pk.a("streamed", 0, "dwarf", ue.field_d);
-                    wn.field_C = wn.field_C + 1;
+                    SingleChildContainer.field_C = SingleChildContainer.field_C + 1;
                     if (var3 == 0) {
                       return;
                     }
                   }
                   bj.field_ob = pk.a("streamed", 0, "sylph", ue.field_d);
-                  wn.field_C = wn.field_C + 1;
+                  SingleChildContainer.field_C = SingleChildContainer.field_C + 1;
                   if (var3 == 0) {
                     return;
                   }
                 }
                 fd.field_j = pk.a("streamed", 0, "stormpuff", ue.field_d);
-                wn.field_C = wn.field_C + 1;
+                SingleChildContainer.field_C = SingleChildContainer.field_C + 1;
                 if (var3 == 0) {
                   return;
                 }
               }
               pa.field_a = pk.a("streamed", 0, "smokeexplosion", ue.field_d);
-              wn.field_C = wn.field_C + 1;
+              SingleChildContainer.field_C = SingleChildContainer.field_C + 1;
               if (var3 == 0) {
                 return;
               }
             }
             fb.field_a = pk.a("streamed", 0, "imp", ue.field_d);
-            wn.field_C = wn.field_C + 1;
+            SingleChildContainer.field_C = SingleChildContainer.field_C + 1;
             return;
           }
           if (be.field_f >= 56) {

@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-class ag extends qm {
+class TextButton extends UiComponent {
     private boolean field_y;
     static Random field_D;
     int field_F;
@@ -15,7 +15,7 @@ class ag extends qm {
     private boolean field_G;
     static String field_x;
 
-    ag(String param0, pf param1, wc param2) {
+    TextButton(String param0, WidgetPainter param1, UiListener param2) {
         super(param0, param1, param2);
         this.field_F = 0;
         this.field_B = true;
@@ -23,7 +23,7 @@ class ag extends qm {
         this.field_y = false;
     }
 
-    boolean a(qm param0, byte param1, char param2, int param3) {
+    boolean handleKeyInput(UiComponent param0, byte param1, char param2, int param3) {
         RuntimeException var5 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
@@ -33,9 +33,9 @@ class ag extends qm {
           if (param1 >= -120) {
             return false;
           }
-          if (this.d(-2116) && (param3 == 84 ||
+          if (this.isFocused(-2116) && (param3 == 84 ||
             param3 == 83)) {
-            this.a(-122, -1, 1, -1);
+            this.activate(-122, -1, 1, -1);
             return true;
           }
           return false;
@@ -53,7 +53,7 @@ class ag extends qm {
         }
     }
 
-    void a(int param0, int param1, int param2, int param3) {
+    void activate(int param0, int param1, int param2, int param3) {
         this.field_F = param2;
         if (param0 >= -99) {
           return;
@@ -61,13 +61,13 @@ class ag extends qm {
         if (null == this.field_o) {
           return;
         }
-        if (this.field_o instanceof vb) {
-          ((vb) (this.field_o)).a(true, param3, param1, param2, this);
+        if (this.field_o instanceof ButtonListener) {
+          ((ButtonListener) (this.field_o)).a(true, param3, param1, param2, this);
           return;
         }
     }
 
-    boolean a(int param0, int param1, qm param2, int param3, int param4, int param5, int param6) {
+    boolean handlePointerPress(int param0, int param1, UiComponent param2, int param3, int param4, int param5, int param6) {
         int var8_int = 0;
         RuntimeException var8 = null;
         RuntimeException stackIn_11_0 = null;
@@ -77,12 +77,12 @@ class ag extends qm {
         try {
           var8_int = 48 / ((-42 - param4) / 35);
           if (this.field_B &&
-            this.a((byte) -47, param3, param0, param6, param5)) {
-            this.a(0, param2);
+            this.containsPoint((byte) -47, param3, param0, param6, param5)) {
+            this.focusNext(0, param2);
             this.field_t = param1;
             if (null != this.field_o &&
-              this.field_o instanceof cl) {
-              ((cl) (this.field_o)).a(31017, this, param0, param3, param6, param5, param1);
+              this.field_o instanceof ButtonPointerListener) {
+              ((ButtonPointerListener) (this.field_o)).a(31017, this, param0, param3, param6, param5, param1);
             }
             return true;
           }
@@ -101,14 +101,14 @@ class ag extends qm {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, qm param5) {
+    final void handlePointerRelease(int param0, int param1, int param2, int param3, int param4, UiComponent param5) {
         try {
           if (param1 != -20592) {
             field_A = (String) null;
           }
           if (this.field_o != null &&
-            this.field_o instanceof cl) {
-            ((cl) (this.field_o)).a(param0, false, param4, param2, this, param3);
+            this.field_o instanceof ButtonPointerListener) {
+            ((ButtonPointerListener) (this.field_o)).a(param0, false, param4, param2, this, param3);
           }
           this.field_t = 0;
         } catch (RuntimeException runtimeException) {
@@ -116,28 +116,28 @@ class ag extends qm {
         }
     }
 
-    void a(qm param0, int param1, int param2, int param3) {
+    void updatePointer(UiComponent param0, int param1, int param2, int param3) {
         try {
-          super.a(param0, param1, param2, param3);
+          super.updatePointer(param0, param1, param2, param3);
           this.field_F = 0;
           if (0 != this.field_t &&
             PacketBuffer.field_m != this.field_t) {
-            if (this.a((byte) -47, param3, me.field_I, param1, an.field_g) &&
+            if (this.containsPoint((byte) -47, param3, me.field_I, param1, an.field_g) &&
               PacketBuffer.field_m == 0) {
-              this.a(-102, -param1 + an.field_g, this.field_t, me.field_I - param3);
+              this.activate(-102, -param1 + an.field_g, this.field_t, me.field_I - param3);
             }
-            this.a(me.field_I, -20592, an.field_g, param3, param1, param0);
+            this.handlePointerRelease(me.field_I, -20592, an.field_g, param3, param1, param0);
           }
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "ag.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
-    ag(String param0, wc param1) {
+    TextButton(String param0, UiListener param1) {
         this(param0, MusicCrossfadeStream.field_n.field_u, param1);
     }
 
-    ag(int param0, int param1, int param2, int param3, pf param4, wc param5) {
+    TextButton(int param0, int param1, int param2, int param3, WidgetPainter param4, UiListener param5) {
         super(param0, param1, param2, param3, param4, param5);
         this.field_F = 0;
         this.field_B = true;
@@ -145,9 +145,9 @@ class ag extends qm {
         this.field_y = false;
     }
 
-    boolean a(int param0, qm param1) {
+    boolean focusNext(int param0, UiComponent param1) {
         RuntimeException var3 = null;
-        qm var4 = null;
+        UiComponent var4 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
@@ -155,15 +155,15 @@ class ag extends qm {
         try {
           if (this.field_B &&
             this.field_G) {
-            param1.d((byte) 29);
+            param1.blur((byte) 29);
             this.field_y = true;
             if (param0 != 0) {
-              var4 = (qm) null;
-              this.a((qm) null, (byte) 125, 'B', 9);
+              var4 = (UiComponent) null;
+              this.handleKeyInput((UiComponent) null, (byte) 125, 'B', 9);
             }
             if (this.field_o != null &&
-              this.field_o instanceof wb) {
-              ((wb) (this.field_o)).a(false, this.field_y, (qm) (this));
+              this.field_o instanceof ButtonFocusListener) {
+              ((ButtonFocusListener) (this.field_o)).a(false, this.field_y, (UiComponent) (this));
             }
             return true;
           }
@@ -182,7 +182,7 @@ class ag extends qm {
         }
     }
 
-    final static void a(byte param0) {
+    final static void initializeKeyCodeMap(byte param0) {
         sb.field_h[92] = 74;
         sb.field_h[46] = 72;
         sb.field_h[93] = 43;
@@ -198,14 +198,14 @@ class ag extends qm {
           sb.field_h[45] = 26;
           return;
         }
-        ag.a((byte) -28);
+        TextButton.initializeKeyCodeMap((byte) -28);
         sb.field_h[520] = 59;
         sb.field_h[44] = 71;
         sb.field_h[47] = 73;
         sb.field_h[45] = 26;
     }
 
-    final StringBuilder a(StringBuilder param0, int param1, Hashtable param2, byte param3) {
+    final StringBuilder appendDebugTree(StringBuilder param0, int param1, Hashtable param2, byte param3) {
         StringBuilder discarded$2 = null;
         StringBuilder discarded$3 = null;
         int var5_int = 0;
@@ -218,8 +218,8 @@ class ag extends qm {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.a(param0, (byte) -90, param2, param1)) {
-            this.a(param0, param1, param2, 1);
+          if (this.beginDebugEntry(param0, (byte) -90, param2, param1)) {
+            this.appendDebugSummary(param0, param1, param2, 1);
             if (this.field_z) {
               discarded$2 = param0.append(" active");
             }
@@ -250,7 +250,7 @@ class ag extends qm {
         }
     }
 
-    final void d(byte param0) {
+    final void blur(byte param0) {
         if (param0 != 29) {
           return;
         }
@@ -261,8 +261,8 @@ class ag extends qm {
         if (null == this.field_o) {
           return;
         }
-        if (this.field_o instanceof wb) {
-          ((wb) (this.field_o)).a(false, this.field_y, (qm) (this));
+        if (this.field_o instanceof ButtonFocusListener) {
+          ((ButtonFocusListener) (this.field_o)).a(false, this.field_y, (UiComponent) (this));
           return;
         }
     }
@@ -284,7 +284,7 @@ class ag extends qm {
         }
     }
 
-    final boolean d(int param0) {
+    final boolean isFocused(int param0) {
         if (param0 != -2116) {
           field_x = (String) null;
           return this.field_y;
@@ -292,7 +292,7 @@ class ag extends qm {
         return this.field_y;
     }
 
-    public static void e(int param0) {
+    public static void releaseStatics(int param0) {
         field_C = null;
         field_x = null;
         if (param0 >= -97) {
@@ -302,7 +302,7 @@ class ag extends qm {
         field_A = null;
     }
 
-    public ag() {
+    public TextButton() {
         this.field_F = 0;
         this.field_B = true;
         this.field_G = true;

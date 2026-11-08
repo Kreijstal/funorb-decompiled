@@ -70,7 +70,7 @@ final class NodeHashTable {
         return this.c(-107);
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_n = null;
         field_c = null;
         field_l = null;

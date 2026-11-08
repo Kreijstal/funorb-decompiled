@@ -1,22 +1,22 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bj extends ob implements vb {
+final class bj extends ob implements ButtonListener {
     static String field_jb;
     private long field_V;
     static String field_sb;
     static String field_pb;
-    private ag field_lb;
-    private qm field_rb;
+    private TextButton field_lb;
+    private UiComponent field_rb;
     static boolean field_mb;
-    private ag field_nb;
+    private TextButton field_nb;
     static int field_tb;
     static String field_kb;
     static IndexedSprite[] field_ob;
     static String field_qb;
     static boolean field_ub;
 
-    final boolean a(qm param0, byte param1, char param2, int param3) {
+    final boolean handleKeyInput(UiComponent param0, byte param1, char param2, int param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         boolean stackIn_17_0 = false;
@@ -28,17 +28,17 @@ final class bj extends ob implements vb {
           var5_int = param3;
           if (var5_int == 99 &&
             !ArcanistsMulti.field_G) {
-            this.field_lb.a(0, (qm) (this));
+            this.field_lb.focusNext(0, (UiComponent) (this));
             return true;
           }
           if (var5_int == 98) {
-            this.field_nb.a(0, (qm) (this));
+            this.field_nb.focusNext(0, (UiComponent) (this));
             return true;
           }
           if (param1 > -120) {
             bj.a(-60, 57, 53, -57, -90, -4, -1);
           }
-          stackIn_17_0 = super.a(param0, (byte) -125, param2, param3);
+          stackIn_17_0 = super.handleKeyInput(param0, (byte) -125, param2, param3);
           return stackIn_17_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -57,29 +57,29 @@ final class bj extends ob implements vb {
     bj(h param0) {
         super(param0, 200, 200);
         RuntimeException runtimeException = null;
-        qm var2 = null;
+        UiComponent var2 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           this.field_V = qj.b(-26572);
-          var2 = new qm(qj.field_i, (wc) null);
+          var2 = new UiComponent(qj.field_i, (UiListener) null);
           var2.field_k = 100;
           var2.field_v = this.field_v;
           var2.field_n = 0;
           var2.field_j = 50;
-          var2.field_r = (pf) ((Object) new jm(vc.field_e, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
-          this.c(-67, var2);
-          this.field_rb = new qm(qj.field_i, (wc) null);
+          var2.field_r = (WidgetPainter) ((Object) new jm(vc.field_e, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
+          this.addChild(-67, var2);
+          this.field_rb = new UiComponent(qj.field_i, (UiListener) null);
           this.field_rb.field_j = 20 + var2.field_k + var2.field_j;
           this.field_rb.field_v = this.field_v;
           this.field_rb.field_n = 0;
           this.field_rb.field_k = 80;
-          this.field_rb.field_r = (pf) ((Object) new jm(go.field_k, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
-          this.c(-108, this.field_rb);
-          this.field_nb = this.a((wc) (this), ln.field_R, true);
-          this.field_lb = this.a((wc) (this), ki.field_t, true);
+          this.field_rb.field_r = (WidgetPainter) ((Object) new jm(go.field_k, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
+          this.addChild(-108, this.field_rb);
+          this.field_nb = this.a((UiListener) (this), ln.field_R, true);
+          this.field_lb = this.a((UiListener) (this), ki.field_t, true);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -152,7 +152,7 @@ final class bj extends ob implements vb {
         }
     }
 
-    final void a(qm param0, int param1, int param2, int param3) {
+    final void updatePointer(UiComponent param0, int param1, int param2, int param3) {
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
         String stackIn_27_2 = null;
@@ -161,9 +161,9 @@ final class bj extends ob implements vb {
         RuntimeException var5 = null;
         int var7 = 0;
         try {
-          super.a(param0, param1, param2, param3);
+          super.updatePointer(param0, param1, param2, param3);
           if (ArchiveProvider.field_d) {
-            param0.d((byte) 29);
+            param0.blur((byte) 29);
           }
           var5_long = qj.b(-26572) - this.field_V;
           var7 = (int)((-var5_long + 10999L) / 1000L);
@@ -387,7 +387,7 @@ final class bj extends ob implements vb {
         }
     }
 
-    public final void a(boolean param0, int param1, int param2, int param3, ag param4) {
+    public final void a(boolean param0, int param1, int param2, int param3, TextButton param4) {
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
@@ -406,7 +406,7 @@ final class bj extends ob implements vb {
             this.k((byte) 86);
           }
           if (!param0) {
-            this.a((qm) null, (byte) 73, 'ﾻ', -7);
+            this.handleKeyInput((UiComponent) null, (byte) 73, 'ﾻ', -7);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -488,11 +488,11 @@ final class bj extends ob implements vb {
         }
     }
 
-    private final ag a(wc param0, String param1, boolean param2) {
-        ag var4 = null;
+    private final TextButton a(UiListener param0, String param1, boolean param2) {
+        TextButton var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
-        ag stackIn_4_0 = null;
+        TextButton stackIn_4_0 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -500,16 +500,16 @@ final class bj extends ob implements vb {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4 = new ag(param1, param0);
-          var4.field_r = (pf) ((Object) new mm());
+          var4 = new TextButton(param1, param0);
+          var4.field_r = (WidgetPainter) ((Object) new mm());
           if (!param2) {
             field_mb = true;
           }
           var5 = -6 + this.field_k;
           this.field_k = this.field_k + 38;
-          var4.a(30, var5, this.field_v - 30, 15, -76);
-          this.c(-96, var4);
-          this.e((byte) 84);
+          var4.setBounds(30, var5, this.field_v - 30, 15, -76);
+          this.addChild(-96, var4);
+          this.refreshLayout((byte) 84);
           stackIn_4_0 = var4;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

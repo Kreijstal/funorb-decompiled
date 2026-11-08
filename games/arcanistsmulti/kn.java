@@ -1,32 +1,32 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kn extends ob implements vb {
+final class kn extends ob implements ButtonListener {
     static long[] field_tb;
     private boolean field_nb;
-    private ag[] field_vb;
+    private TextButton[] field_vb;
     private uj[] field_V;
-    private ag field_kb;
+    private TextButton field_kb;
     private ti field_zb;
     static String field_sb;
-    private ag field_ub;
+    private TextButton field_ub;
     static String field_rb;
     private boolean field_wb;
-    private ag field_lb;
+    private TextButton field_lb;
     private boolean field_yb;
-    private ag field_mb;
+    private TextButton field_mb;
     static String field_pb;
-    private ag field_xb;
-    private ag field_jb;
+    private TextButton field_xb;
+    private TextButton field_jb;
     static IntrusiveNodeHashTable field_qb;
     private ua field_ob;
 
-    final void a(qm param0, int param1, int param2, int param3) {
+    final void updatePointer(UiComponent param0, int param1, int param2, int param3) {
         int var6 = 0;
-        ag[] var5 = null;
-        ag var7 = null;
+        TextButton[] var5 = null;
+        TextButton var7 = null;
         int var8 = 0;
-        ag[] var9 = null;
+        TextButton[] var9 = null;
         boolean stackIn_14_0 = false;
         int stackIn_15_1 = 0;
         RuntimeException stackIn_20_0 = null;
@@ -36,15 +36,15 @@ final class kn extends ob implements vb {
         RuntimeException var5_ref = null;
         var8 = ArcanistsMulti.field_G ? 1 : 0;
         try {
-          super.a(param0, param1, param2, param3);
+          super.updatePointer(param0, param1, param2, param3);
           if (ArchiveProvider.field_d) {
-            param0.d((byte) 29);
+            param0.blur((byte) 29);
             var9 = this.field_vb;
             var5 = var9;
             for (var6 = 0; var9.length > var6; var6++) {
               var7 = var9[var6];
               if (var7.field_w) {
-                var7.a(0, (qm) (this));
+                var7.focusNext(0, (UiComponent) (this));
               }
             }
           }
@@ -93,7 +93,7 @@ final class kn extends ob implements vb {
         RuntimeException decompiledCaughtException = null;
         try {
           if (!param2) {
-            kn.h(-104);
+            kn.releaseStatics(-104);
           }
           if (fc.a(-123, param0, param1, param3)) {
             stackIn_6_0 = ge.a(param4.b(param3, 26219, param1), 3417);
@@ -152,8 +152,8 @@ final class kn extends ob implements vb {
         String[] var5_ref_String__ = null;
         int var6_int = 0;
         String var6 = null;
-        ag var6_ref = null;
-        qm var7 = null;
+        TextButton var6_ref = null;
+        UiComponent var7 = null;
         uj var8 = null;
         String var10 = null;
         Object stackIn_51_0Lifetime1;
@@ -242,21 +242,21 @@ final class kn extends ob implements vb {
             stackIn_52_2Lifetime1 = null;
             stackIn_52_4 = 58;
           }
-          this.field_ob = new ua(stackIn_51_3, stackIn_52_4, 410, 105, (pf) null, var3Lifetime1, 1);
+          this.field_ob = new ua(stackIn_51_3, stackIn_52_4, 410, 105, (WidgetPainter) null, var3Lifetime1, 1);
           this.field_ob.field_R = 83;
           this.field_ob.d(0, 5, 5);
-          this.c(-123, this.field_ob);
-          this.field_jb = this.a(-1, ci.field_b, oa.field_d, (wc) (this));
+          this.addChild(-123, this.field_ob);
+          this.field_jb = this.a(-1, ci.field_b, oa.field_d, (UiListener) (this));
           if (var2_intLifetime1 != 0) {
-            this.field_mb = this.a(-1, fo.field_f, MusicPatch.field_k, (wc) (this));
+            this.field_mb = this.a(-1, fo.field_f, MusicPatch.field_k, (UiListener) (this));
           }
-          this.field_lb = this.a(-1, oj.field_g, qj.field_j, (wc) (this));
+          this.field_lb = this.a(-1, oj.field_g, qj.field_j, (UiListener) (this));
           if (var2_intLifetime1 != 0) {
             stackIn_57_1 = 3;
           } else {
             stackIn_57_1 = 2;
           }
-          this.field_vb = new ag[stackIn_57_1];
+          this.field_vb = new TextButton[stackIn_57_1];
           this.field_vb[1] = this.field_lb;
           if (var2_intLifetime1 != 0) {
             this.field_vb[2] = this.field_mb;
@@ -276,14 +276,14 @@ final class kn extends ob implements vb {
               var5_ref_String__[var7_int] = var8.field_g + "<times>" + var8.field_e;
             }
             this.field_zb = new ti(var5_ref_String__, var6_int, 150);
-            this.field_zb.a(18, this.field_lb.field_k + (this.field_lb.field_j + (this.field_ob.field_j - 19)), 126, this.field_ob.field_n + this.field_lb.field_n, -54);
+            this.field_zb.setBounds(18, this.field_lb.field_k + (this.field_lb.field_j + (this.field_ob.field_j - 19)), 126, this.field_ob.field_n + this.field_lb.field_n, -54);
             this.field_B.addFirst((IntrusiveNode) (this.field_zb), (byte) -58);
           }
-          this.field_kb = this.a((wc) (this), lm.field_a, 410);
+          this.field_kb = this.a((UiListener) (this), lm.field_a, 410);
           var5Lifetime1 = this.field_kb.field_v / 2 + this.field_kb.field_n;
           this.field_kb.field_v = 150;
           this.field_kb.field_n = var5Lifetime1 - (20 + this.field_kb.field_v);
-          this.field_ub = this.a((wc) (this), hj.field_e, 410);
+          this.field_ub = this.a((UiListener) (this), hj.field_e, 410);
           this.field_ub.field_B = false;
           this.field_ub.field_v = this.field_kb.field_v;
           this.field_ub.field_n = var5Lifetime1 + 20;
@@ -296,13 +296,13 @@ final class kn extends ob implements vb {
             }
             var10 = stackIn_74_0;
             var6 = var10;
-            var7 = new qm(var10, (wc) null);
+            var7 = new UiComponent(var10, (UiListener) null);
             var7.field_j = 163;
             var7.field_k = 80;
             var7.field_v = this.field_v;
             var7.field_n = 0;
-            var7.field_r = (pf) ((Object) new jm(ia.field_c, 20, 20, 0, 10, 16777215, -1, 0, 0, 16, 0, 0, true));
-            this.c(-96, var7);
+            var7.field_r = (WidgetPainter) ((Object) new jm(ia.field_c, 20, 20, 0, 10, 16777215, -1, 0, 0, 16, 0, 0, true));
+            this.addChild(-96, var7);
           }
           this.field_nb = false;
           var6_ref = this.j(2);
@@ -333,7 +333,7 @@ final class kn extends ob implements vb {
         }
     }
 
-    public static void h(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 3) {
           return;
         }
@@ -380,12 +380,12 @@ final class kn extends ob implements vb {
         }
     }
 
-    private final ag a(wc param0, String param1, int param2) {
-        ag discarded$1 = null;
-        ag var4 = null;
+    private final TextButton a(UiListener param0, String param1, int param2) {
+        TextButton discarded$1 = null;
+        TextButton var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
-        ag stackIn_3_0 = null;
+        TextButton stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -396,11 +396,11 @@ final class kn extends ob implements vb {
           if (param2 != 410) {
             discarded$1 = this.j(-10);
           }
-          var4 = new ag(param1, param0);
-          var4.field_r = (pf) ((Object) new mm());
+          var4 = new TextButton(param1, param0);
+          var4.field_r = (WidgetPainter) ((Object) new mm());
           var5 = -46 + this.field_k;
-          var4.a(30, var5, -30 + this.field_v, 15, -92);
-          this.c(param2 - 526, var4);
+          var4.setBounds(30, var5, -30 + this.field_v, 15, -92);
+          this.addChild(param2 - 526, var4);
           stackIn_3_0 = var4;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -453,7 +453,7 @@ final class kn extends ob implements vb {
             if (!wh.field_g) {
               ln.field_U = null;
             } else {
-              ln.field_U.a(n.field_g.field_V, n.field_g.field_nb, param3, (byte) -104);
+              ln.field_U.processPointerInput(n.field_g.field_V, n.field_g.field_nb, param3, (byte) -104);
             }
           }
           for (var4_int = 0; var4_int < 5; var4_int++) {
@@ -464,7 +464,7 @@ final class kn extends ob implements vb {
               }
               var6 = oh.a((byte) 119, var4_int);
               ia.field_b[var4_int].field_W = ArchiveProvider.field_a[var6];
-              oc.field_f[var4_int].field_rb = cf.field_b[var6];
+              IntrusiveDequeCursor.field_f[var4_int].field_rb = cf.field_b[var6];
             }
           }
           if (g.field_g.field_U != 0) {
@@ -533,7 +533,7 @@ final class kn extends ob implements vb {
         k.field_o = 0;
     }
 
-    public final void a(boolean param0, int param1, int param2, int param3, ag param4) {
+    public final void a(boolean param0, int param1, int param2, int param3, TextButton param4) {
         int stackIn_12_0 = 0;
         RuntimeException stackIn_28_0 = null;
         StringBuilder stackIn_28_1 = null;
@@ -579,7 +579,7 @@ final class kn extends ob implements vb {
             this.g(-1);
           }
           if (!param0) {
-            this.field_xb = (ag) null;
+            this.field_xb = (TextButton) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -598,10 +598,10 @@ final class kn extends ob implements vb {
 
     private final void i(int param0) {
         int var3 = 0;
-        ag var4 = null;
+        TextButton var4 = null;
         int var5 = ArcanistsMulti.field_G ? 1 : 0;
-        ag[] var6 = this.field_vb;
-        ag[] var2 = var6;
+        TextButton[] var6 = this.field_vb;
+        TextButton[] var2 = var6;
         if (param0 > -95) {
           return;
         }
@@ -611,13 +611,13 @@ final class kn extends ob implements vb {
         }
     }
 
-    private final ag a(int param0, String param1, IndexedSprite[] param2, wc param3) {
-        ag var5 = null;
+    private final TextButton a(int param0, String param1, IndexedSprite[] param2, UiListener param3) {
+        TextButton var5 = null;
         RuntimeException var5_ref = null;
         ua var6 = null;
-        ag var7 = null;
-        ag stackIn_2_0 = null;
-        ag stackIn_4_0 = null;
+        TextButton var7 = null;
+        TextButton stackIn_2_0 = null;
+        TextButton stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -627,16 +627,16 @@ final class kn extends ob implements vb {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5 = new ag(param1, param3);
-          var5.field_r = (pf) ((Object) new cd(param2));
+          var5 = new TextButton(param1, param3);
+          var5.field_r = (WidgetPainter) ((Object) new cd(param2));
           if (param0 != -1) {
-            stackIn_2_0 = (ag) null;
+            stackIn_2_0 = (TextButton) null;
             return stackIn_2_0;
           }
           var6 = this.field_ob;
           var7 = var5;
           var6.a(var7, param0 ^ -123, var6.field_R);
-          this.field_ob.e((byte) 64);
+          this.field_ob.refreshLayout((byte) 64);
           stackIn_4_0 = var5;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -665,9 +665,9 @@ final class kn extends ob implements vb {
         }
     }
 
-    private final ag j(int param0) {
+    private final TextButton j(int param0) {
         if (param0 != 2) {
-          return (ag) null;
+          return (TextButton) null;
         }
         if (null != ka.field_m) {
           return this.field_lb;
@@ -690,7 +690,7 @@ final class kn extends ob implements vb {
         }
     }
 
-    final boolean a(qm param0, byte param1, char param2, int param3) {
+    final boolean handleKeyInput(UiComponent param0, byte param1, char param2, int param3) {
         boolean stackIn_74_0 = false;
         Object stackIn_77_0 = null;
         StringBuilder stackIn_77_1 = null;
@@ -702,18 +702,18 @@ final class kn extends ob implements vb {
         var7 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           var5 = null;
-          if (this.field_jb.d(-2116)) {
+          if (this.field_jb.isFocused(-2116)) {
             var5 = this.field_jb;
           } else {
             if (this.field_mb != null &&
-              this.field_mb.d(-2116)) {
+              this.field_mb.isFocused(-2116)) {
               var5 = this.field_mb;
             } else {
-              if (this.field_lb.d(-2116)) {
+              if (this.field_lb.isFocused(-2116)) {
                 var5 = this.field_lb;
               } else {
-                if (!this.field_kb.d(-2116)) {
-                  if (this.field_ub.d(-2116)) {
+                if (!this.field_kb.isFocused(-2116)) {
+                  if (this.field_ub.isFocused(-2116)) {
                     var5 = this.field_ub;
                   } else {
                     if (this.field_jb.field_z) {
@@ -736,36 +736,36 @@ final class kn extends ob implements vb {
             }
           }
           if (param1 >= -120) {
-            this.field_xb = (ag) null;
+            this.field_xb = (TextButton) null;
           }
           var6 = param3;
           switch (var6) {
             case 97:
               if (this.field_jb == var5) {
                 if (null == this.field_mb) {
-                  this.field_lb.a(0, (qm) (this));
+                  this.field_lb.focusNext(0, (UiComponent) (this));
                 } else {
-                  this.field_mb.a(0, (qm) (this));
+                  this.field_mb.focusNext(0, (UiComponent) (this));
                 }
                 return true;
               }
               if (this.field_mb == var5) {
-                this.field_lb.a(0, (qm) (this));
+                this.field_lb.focusNext(0, (UiComponent) (this));
                 return true;
               }
               if (this.field_kb == var5 &&
                 this.field_ub.field_B) {
-                this.field_ub.a(0, (qm) (this));
+                this.field_ub.focusNext(0, (UiComponent) (this));
                 return true;
               }
               break;
             case 98:
               if (this.field_kb == var5) {
-                this.field_jb.a(0, (qm) (this));
+                this.field_jb.focusNext(0, (UiComponent) (this));
                 return true;
               }
               if (this.field_ub == var5) {
-                this.field_lb.a(0, (qm) (this));
+                this.field_lb.focusNext(0, (UiComponent) (this));
                 return true;
               }
               break;
@@ -776,36 +776,36 @@ final class kn extends ob implements vb {
                   break;
                 }
                 if (!this.field_ub.field_B) {
-                  this.field_kb.a(0, (qm) (this));
+                  this.field_kb.focusNext(0, (UiComponent) (this));
                 } else {
-                  this.field_ub.a(0, (qm) (this));
+                  this.field_ub.focusNext(0, (UiComponent) (this));
                 }
                 return true;
               }
-              this.field_kb.a(0, (qm) (this));
+              this.field_kb.focusNext(0, (UiComponent) (this));
               return true;
             case 96:
               if (var5 == this.field_lb) {
                 if (this.field_mb != null) {
-                  this.field_mb.a(0, (qm) (this));
+                  this.field_mb.focusNext(0, (UiComponent) (this));
                   return true;
                 }
-                this.field_jb.a(0, (qm) (this));
+                this.field_jb.focusNext(0, (UiComponent) (this));
                 return true;
               }
               if (var5 == this.field_mb) {
-                this.field_jb.a(0, (qm) (this));
+                this.field_jb.focusNext(0, (UiComponent) (this));
                 return true;
               }
               if (this.field_ub == var5) {
-                this.field_kb.a(0, (qm) (this));
+                this.field_kb.focusNext(0, (UiComponent) (this));
                 return true;
               }
               break;
             default:
               break;
           }
-          stackIn_74_0 = super.a(param0, (byte) -122, param2, param3);
+          stackIn_74_0 = super.handleKeyInput(param0, (byte) -122, param2, param3);
           return stackIn_74_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -821,11 +821,11 @@ final class kn extends ob implements vb {
         }
     }
 
-    private final void a(ag param0, int param1) {
-        ag var3 = null;
+    private final void a(TextButton param0, int param1) {
+        TextButton var3 = null;
         int var4 = 0;
         uj var5 = null;
-        ag stackIn_2_0 = null;
+        TextButton stackIn_2_0 = null;
         boolean stackIn_3_1 = false;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
@@ -834,7 +834,7 @@ final class kn extends ob implements vb {
         RuntimeException var3_ref = null;
         try {
           this.field_xb = param0;
-          param0.a(param1, (qm) (this));
+          param0.focusNext(param1, (UiComponent) (this));
           var3 = this.j(2);
           stackIn_2_0 = this.field_ub;
           stackIn_3_1 = (var3 != param0);

@@ -480,13 +480,13 @@ final class ef extends lk {
         }
     }
 
-    public static void g(int param0) {
+    public static void releaseStatics(int param0) {
         field_u = null;
         field_q = null;
         field_s = null;
         field_v = null;
         if (param0 != -1) {
-          ef.g(65);
+          ef.releaseStatics(65);
         }
     }
 

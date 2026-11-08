@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class ed extends qk implements vb {
+class ed extends qk implements ButtonListener {
     static String field_tb;
     static char field_Bb;
     static String field_xb;
@@ -19,9 +19,9 @@ class ed extends qk implements vb {
     static Sprite field_vb;
     static int field_Hb;
 
-    final boolean a(qm param0, byte param1, char param2, int param3) {
+    final boolean handleKeyInput(UiComponent param0, byte param1, char param2, int param3) {
         RuntimeException var5 = null;
-        qm var6 = null;
+        UiComponent var6 = null;
         boolean stackIn_6_0 = false;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -29,11 +29,11 @@ class ed extends qk implements vb {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 >= -120) {
-            var6 = (qm) null;
-            this.a((qm) null, (byte) -14, 'Y', 108);
+            var6 = (UiComponent) null;
+            this.handleKeyInput((UiComponent) null, (byte) -14, 'Y', 108);
           }
           if (param3 != 13) {
-            stackIn_6_0 = super.a(param0, (byte) -122, param2, param3);
+            stackIn_6_0 = super.handleKeyInput(param0, (byte) -122, param2, param3);
             return stackIn_6_0;
           }
           this.h(77);
@@ -80,7 +80,7 @@ class ed extends qk implements vb {
           this.field_zb = false;
           this.field_ub = new om(13, 50, 274, 30, 15, 2113632, 4210752);
           this.field_ub.field_I = true;
-          this.c(-105, this.field_ub);
+          this.addChild(-105, this.field_ub);
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "ed.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
@@ -223,7 +223,7 @@ class ed extends qk implements vb {
         }
     }
 
-    public static void i(int param0) {
+    public static void releaseStatics(int param0) {
         field_yb = null;
         field_xb = null;
         field_Ib = null;
@@ -232,7 +232,7 @@ class ed extends qk implements vb {
         field_tb = null;
         field_Eb = null;
         if (param0 != -29222) {
-          ed.i(-73);
+          ed.releaseStatics(-73);
         }
     }
 
@@ -240,7 +240,7 @@ class ed extends qk implements vb {
         this.field_ub.b(4210752, param0, 2121792);
         me var2 = new me(this, this.field_wb, Bzip2State.field_k);
         var2.a(r.field_e, (byte) 3, 15);
-        this.a((byte) -92, (qm) (var2));
+        this.a((byte) -92, (UiComponent) (var2));
     }
 
     final void a(boolean param0, String param1, int param2) {
@@ -270,7 +270,7 @@ class ed extends qk implements vb {
           var4 = var6;
           if (5 != param2) {
             if (256 == param2) {
-              var6.a(118, sk.field_b, (wc) (this));
+              var6.a(118, sk.field_b, (UiListener) (this));
             } else {
               stackIn_14_0 = var6;
               if (!this.field_Ab) {
@@ -292,14 +292,14 @@ class ed extends qk implements vb {
                 var6.a(ea.field_B, (byte) -114, 9);
               } else {
                 if (param2 == 9) {
-                  var6.a(81, fk.field_j, (wc) (this));
+                  var6.a(81, fk.field_j, (UiListener) (this));
                 }
               }
             }
           } else {
             var6.a(bd.field_b, (byte) 110, 7);
           }
-          this.a((byte) -92, (qm) (var6));
+          this.a((byte) -92, (UiComponent) (var6));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -324,7 +324,7 @@ class ed extends qk implements vb {
           if (hb.field_Gb == sk.field_a) {
             return KeyboardInputHandler.field_j;
           }
-          if (!wn.field_z.a((byte) -81)) {
+          if (!SingleChildContainer.field_z.a((byte) -81)) {
             return KeyboardInputHandler.field_j;
           }
           return ge.field_g;
@@ -335,7 +335,7 @@ class ed extends qk implements vb {
         if (hb.field_Gb == sk.field_a) {
           return KeyboardInputHandler.field_j;
         }
-        if (!wn.field_z.a((byte) -81)) {
+        if (!SingleChildContainer.field_z.a((byte) -81)) {
           return KeyboardInputHandler.field_j;
         }
         return ge.field_g;
@@ -355,7 +355,7 @@ class ed extends qk implements vb {
         }
     }
 
-    public void a(boolean param0, int param1, int param2, int param3, ag param4) {
+    public void a(boolean param0, int param1, int param2, int param3, TextButton param4) {
         RuntimeException var6 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;

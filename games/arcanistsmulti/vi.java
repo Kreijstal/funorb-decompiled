@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class vi extends df {
+abstract class vi extends UiContainer {
     static ih field_C;
     h field_H;
     static int field_L;
@@ -85,14 +85,14 @@ abstract class vi extends df {
     abstract void a(int param0, byte param1, int param2);
 
     final void a(int param0, int param1, int param2) {
-        this.a(param2, -param2 + mf.field_c >> 1, param0, -param0 + SoundCache.field_c >> 1, -112);
+        this.setBounds(param2, -param2 + mf.field_c >> 1, param0, -param0 + SoundCache.field_c >> 1, -112);
         if (param1 != 0) {
-          this.a((byte) -50, 71, 43, -75);
+          this.drawLayer((byte) -50, 71, 43, -75);
         }
     }
 
     vi(h param0, int param1, int param2) {
-        super(-param1 + SoundCache.field_c >> 1, mf.field_c - param2 >> 1, param1, param2, (pf) null);
+        super(-param1 + SoundCache.field_c >> 1, mf.field_c - param2 >> 1, param1, param2, (WidgetPainter) null);
         try {
           this.field_H = param0;
           this.field_G = false;
@@ -102,7 +102,7 @@ abstract class vi extends df {
         }
     }
 
-    final void a(byte param0, int param1, int param2, int param3) {
+    final void drawLayer(byte param0, int param1, int param2, int param3) {
         if (0 == this.field_S) {
           return;
         }
@@ -111,7 +111,7 @@ abstract class vi extends df {
             return;
           }
           this.a(param1 + this.field_n, (byte) -117, param3 + this.field_j);
-          super.a((byte) -76, param1, param2, param3);
+          super.drawLayer((byte) -76, param1, param2, param3);
           return;
         }
         if (null == ed.field_vb) {
@@ -131,7 +131,7 @@ abstract class vi extends df {
         fk.a(ed.field_vb, -23095);
         SoftwareRasterizer.clear();
         this.a(0, (byte) -117, 0);
-        super.a((byte) -117, -param1 - this.field_n, param2, -this.field_j - param3);
+        super.drawLayer((byte) -117, -param1 - this.field_n, param2, -this.field_j - param3);
         oo.c(-15405);
         ed.field_vb.drawAlpha(param1 + this.field_n, param3 + this.field_j, this.field_S);
     }
@@ -179,12 +179,12 @@ abstract class vi extends df {
         return stackIn_35_0;
     }
 
-    final qm e(int param0) {
-        qm var2 = super.e(param0);
+    final UiComponent getFocusedChild(int param0) {
+        UiComponent var2 = super.getFocusedChild(param0);
         if (var2 != null) {
           return var2;
         }
-        return (qm) (this);
+        return (UiComponent) (this);
     }
 
     boolean g(byte param0) {

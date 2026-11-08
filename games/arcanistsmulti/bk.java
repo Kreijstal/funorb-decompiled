@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bk extends ag {
+final class bk extends TextButton {
     static IndexedSprite[] field_L;
     static int field_I;
     static String field_K;
@@ -9,16 +9,16 @@ final class bk extends ag {
     static kc field_M;
     static nf field_J;
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void activate(int param0, int param1, int param2, int param3) {
         this.field_z = !this.field_z ? true : false;
-        super.a(-121, param1, param2, param3);
+        super.activate(-121, param1, param2, param3);
         if (param0 > -99) {
           bk.a(-47);
           return;
         }
     }
 
-    bk(String param0, wc param1, boolean param2) {
+    bk(String param0, UiListener param1, boolean param2) {
         this(param0, param1);
         try {
           this.field_z = param2 ? true : false;
@@ -27,7 +27,7 @@ final class bk extends ag {
         }
     }
 
-    public static void f(int param0) {
+    public static void releaseStatics(int param0) {
         field_H = null;
         field_J = null;
         field_K = null;
@@ -42,7 +42,7 @@ final class bk extends ag {
 
     final static int a(int param0, int param1, int param2) {
         if (param1 != 1021) {
-          bk.f(44);
+          bk.releaseStatics(44);
           if (2 <= param0) {
             return 2;
           }
@@ -60,7 +60,7 @@ final class bk extends ag {
         return 1;
     }
 
-    private bk(String param0, wc param1) {
+    private bk(String param0, UiListener param1) {
         this(param0, MusicCrossfadeStream.field_n.field_u, param1);
         try {
           this.field_r = MusicCrossfadeStream.field_n.field_b;
@@ -91,7 +91,7 @@ final class bk extends ag {
         }
     }
 
-    private bk(String param0, pf param1, wc param2) {
+    private bk(String param0, WidgetPainter param1, UiListener param2) {
         super(param0, param1, param2);
         try {
           this.field_r = MusicCrossfadeStream.field_n.field_b;

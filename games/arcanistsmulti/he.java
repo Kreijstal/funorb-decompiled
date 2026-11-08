@@ -10,7 +10,7 @@ final class he {
     static String field_c;
     static String field_d;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_e = null;
         field_b = null;
         field_f = null;

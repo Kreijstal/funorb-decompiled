@@ -146,7 +146,7 @@ final class gn {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_c = null;
         field_j = null;
         field_e = null;

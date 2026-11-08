@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rk extends ag {
+final class rk extends TextButton {
     int field_T;
     static String field_H;
     static volatile int field_K;
@@ -229,7 +229,7 @@ final class rk extends ag {
         return false;
     }
 
-    final boolean a(int param0, int param1, qm param2, int param3, int param4, int param5, int param6) {
+    final boolean handlePointerPress(int param0, int param1, UiComponent param2, int param3, int param4, int param5, int param6) {
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         String stackIn_21_2 = null;
@@ -243,7 +243,7 @@ final class rk extends ag {
         var13 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           var8_int = -57 / ((param4 + 42) / 35);
-          if (!super.a(param0, param1, param2, param3, 92, param5, param6)) {
+          if (!super.handlePointerPress(param0, param1, param2, param3, 92, param5, param6)) {
             return false;
           }
           var9 = -this.field_T - this.field_n - (param6 - param5);
@@ -289,7 +289,7 @@ final class rk extends ag {
         return stackIn_7_0;
     }
 
-    public static void h(int param0) {
+    public static void releaseStatics(int param0) {
         field_R = null;
         field_O = null;
         field_J = null;

@@ -145,7 +145,7 @@ final class ql {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 >= -61) {
           return;
         }
@@ -241,7 +241,7 @@ final class ql {
     }
 
     final static void a(boolean param0) {
-        ah.field_b = df.field_z.readString(-1);
+        ah.field_b = UiContainer.field_z.readString(-1);
         CharSequence var2 = (CharSequence) ((Object) ah.field_b);
         nm.field_b = Js5ArchiveManager.a(var2, -13);
         if (!param0) {

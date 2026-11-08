@@ -20,7 +20,7 @@ final class ea extends ve {
 
     final static void a(int param0, int param1, boolean param2, int param3) {
         if (!param2) {
-          ea.f((byte) 111);
+          ea.releaseStatics((byte) 111);
           if (0 == param3) {
             if (param1 == on.field_h) {
               if (param3 != 1) {
@@ -153,7 +153,7 @@ final class ea extends ve {
         return this.field_z;
     }
 
-    public static void f(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_v = null;
         field_B = null;
         field_u = null;

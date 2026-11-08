@@ -13,7 +13,7 @@ final class fd {
     static int[] field_h;
     static Sprite field_f;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != -1) {
           field_h = (int[]) null;
         }
@@ -35,7 +35,7 @@ final class fd {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0) {
-            fd.a(-96);
+            fd.releaseStatics(-96);
           }
           stackIn_3_0 = rl.a(param1.field_d, 29424);
           return stackIn_3_0;

@@ -20,7 +20,7 @@ final class no extends qk {
         }
     }
 
-    public static void l(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_ub = null;
         if (param0 != -11) {
           no.b(-63, (byte) 100, -16);
@@ -46,7 +46,7 @@ final class no extends qk {
         return null;
     }
 
-    no(h param0, qm param1) {
+    no(h param0, UiComponent param1) {
         super(param0, param1, 33, 20, 30);
     }
 
@@ -105,7 +105,7 @@ final class no extends qk {
             var1Lifetime1 = (cg) (ph.field_a.next(0));
           }
           if (param0 != -1) {
-            no.l((byte) 65);
+            no.releaseStatics((byte) 65);
             return;
           }
           return;
@@ -127,7 +127,7 @@ final class no extends qk {
         jm.field_j = true;
     }
 
-    final void a(byte param0, qm param1) {
+    final void a(byte param0, UiComponent param1) {
         try {
           super.a(param0, param1);
         } catch (RuntimeException runtimeException) {

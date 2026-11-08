@@ -78,7 +78,7 @@ final class lf {
           }
           if (wa.field_Kb) {
             ho.a(0);
-            rn.i((byte) -123);
+            EditableTextWidget.i((byte) -123);
             qn.i(param0 ^ 110);
             wa.field_Kb = false;
           }
@@ -91,7 +91,7 @@ final class lf {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_f = null;
         field_a = null;
         if (param0 != -15) {

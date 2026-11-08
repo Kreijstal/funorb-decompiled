@@ -137,7 +137,7 @@ abstract class ByteStorage {
         n.field_g.a(param0, true);
         cn var2 = ln.field_U;
         if (var2 != null) {
-          var2.a(n.field_g.field_V, true, n.field_g.field_nb);
+          var2.drawLayersAndTooltip(n.field_g.field_V, true, n.field_g.field_nb);
           if (param1 > -11) {
             ByteStorage.a(97, -65);
             return;

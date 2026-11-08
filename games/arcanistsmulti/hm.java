@@ -63,7 +63,7 @@ final class hm {
         }
         if (128 <= var3 &&
           160 > var3) {
-          var4 = oc.field_a[var3 - 128];
+          var4 = IntrusiveDequeCursor.field_a[var3 - 128];
           if (var4 == 0) {
             var4 = 63;
           }
@@ -72,7 +72,7 @@ final class hm {
         return (char)var3;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         int var1 = -47 / ((82 - param0) / 42);
         field_a = null;
         field_b = null;

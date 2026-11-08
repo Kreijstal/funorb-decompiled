@@ -3,9 +3,9 @@
  */
 final class ui extends rl {
     static String field_u;
-    private rn field_t;
+    private EditableTextWidget field_t;
     static String field_q;
-    private rn field_r;
+    private EditableTextWidget field_r;
     static boolean field_v;
     static boolean field_s;
     static String field_w;
@@ -92,7 +92,7 @@ final class ui extends rl {
         }
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         field_u = null;
         field_w = null;
         if (param0 < 15) {
@@ -103,7 +103,7 @@ final class ui extends rl {
         field_q = null;
     }
 
-    ui(rn param0, rn param1, rn param2) {
+    ui(EditableTextWidget param0, EditableTextWidget param1, EditableTextWidget param2) {
         super(param0);
         try {
           this.field_t = param1;

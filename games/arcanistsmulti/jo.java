@@ -23,7 +23,7 @@ final class jo {
           ce.field_h = ce.field_h - 1;
         }
         if (!param0) {
-          jo.a(19);
+          jo.releaseStatics(19);
         }
         if (ce.field_h > 0) {
           vc.a((byte) 37);
@@ -102,7 +102,7 @@ final class jo {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 0) {
           jo.a(68, (byte) 21, -121);
         }

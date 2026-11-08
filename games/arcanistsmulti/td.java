@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class td extends df implements vb {
+final class td extends UiContainer implements ButtonListener {
     static k field_E;
-    private ag field_H;
-    private ag field_C;
+    private TextButton field_H;
+    private TextButton field_C;
     static aj field_G;
     static String field_D;
-    private ag field_F;
+    private TextButton field_F;
 
     final static void a(boolean param0, int param1, int param2) {
         vd.field_l = param2;
@@ -17,44 +17,44 @@ final class td extends df implements vb {
         }
     }
 
-    final void a(byte param0, int param1, int param2, int param3) {
+    final void drawLayer(byte param0, int param1, int param2, int param3) {
         int var5 = 0;
         int var6 = 0;
         if (param0 < -52) {
           var5 = param1 + this.field_n;
           var6 = this.field_j + param3;
           ia.field_c.drawParagraph(qe.field_j, 20 + var5, var6 + 20, this.field_v - 40, -50 + this.field_k, 16777215, -1, 1, 0, ia.field_c.field_C);
-          super.a((byte) -60, param1, param2, param3);
+          super.drawLayer((byte) -60, param1, param2, param3);
           return;
         }
     }
 
     public td() {
-        super(0, 0, 476, 225, (pf) null);
-        this.field_C = new ag(ib.field_t, (wc) null);
-        this.field_F = new ag(kn.field_rb, (wc) null);
-        this.field_H = new ag(rc.field_n, (wc) null);
+        super(0, 0, 476, 225, (WidgetPainter) null);
+        this.field_C = new TextButton(ib.field_t, (UiListener) null);
+        this.field_F = new TextButton(kn.field_rb, (UiListener) null);
+        this.field_H = new TextButton(rc.field_n, (UiListener) null);
         mm var1 = new mm();
-        this.field_C.field_r = (pf) ((Object) var1);
-        this.field_F.field_r = (pf) ((Object) var1);
-        this.field_H.field_r = (pf) ((Object) var1);
+        this.field_C.field_r = (WidgetPainter) ((Object) var1);
+        this.field_F.field_r = (WidgetPainter) ((Object) var1);
+        this.field_H.field_r = (WidgetPainter) ((Object) var1);
         int var2 = 4;
         int var3 = 326;
         int var4 = -var2 + var3 >> 1;
-        this.field_F.a(30, -var2 + (this.field_k - 48), var4, -var3 + this.field_v >> 1, -50);
-        this.field_H.a(30, -var2 + (this.field_k - 48), var4, var4 + (-var3 + this.field_v >> 1) + var2, -73);
-        this.field_C.a(30, this.field_k - 78 - var2 * 2, var3, -var3 + this.field_v >> 1, -103);
-        this.field_F.field_o = (wc) (this);
-        this.field_C.field_o = (wc) (this);
+        this.field_F.setBounds(30, -var2 + (this.field_k - 48), var4, -var3 + this.field_v >> 1, -50);
+        this.field_H.setBounds(30, -var2 + (this.field_k - 48), var4, var4 + (-var3 + this.field_v >> 1) + var2, -73);
+        this.field_C.setBounds(30, this.field_k - 78 - var2 * 2, var3, -var3 + this.field_v >> 1, -103);
+        this.field_F.field_o = (UiListener) (this);
+        this.field_C.field_o = (UiListener) (this);
         this.field_C.field_q = dh.field_Bb;
-        this.field_H.field_o = (wc) (this);
+        this.field_H.field_o = (UiListener) (this);
         this.field_H.field_q = hj.field_c;
-        this.c(-102, this.field_F);
-        this.c(-109, this.field_C);
-        this.c(-76, this.field_H);
+        this.addChild(-102, this.field_F);
+        this.addChild(-109, this.field_C);
+        this.addChild(-76, this.field_H);
     }
 
-    public final void a(boolean param0, int param1, int param2, int param3, ag param4) {
+    public final void a(boolean param0, int param1, int param2, int param3, TextButton param4) {
         RuntimeException var6 = null;
         int var7 = 0;
         RuntimeException stackIn_12_0 = null;
@@ -95,7 +95,7 @@ final class td extends df implements vb {
 
     final static boolean a(int param0) {
         if (param0 > -76) {
-          td.a((byte) 111);
+          td.releaseStatics((byte) 111);
           if (null == ch.field_c) {
             return false;
           }
@@ -159,7 +159,7 @@ final class td extends df implements vb {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_E = null;
         if (param0 != 115) {
           return;
@@ -168,7 +168,7 @@ final class td extends df implements vb {
         field_G = null;
     }
 
-    final boolean a(qm param0, byte param1, char param2, int param3) {
+    final boolean handleKeyInput(UiComponent param0, byte param1, char param2, int param3) {
         RuntimeException var5 = null;
         boolean stackIn_10_0 = false;
         boolean stackIn_14_0 = false;
@@ -180,17 +180,17 @@ final class td extends df implements vb {
           if (param1 >= -120) {
             return true;
           }
-          if (super.a(param0, (byte) -127, param2, param3)) {
+          if (super.handleKeyInput(param0, (byte) -127, param2, param3)) {
             return true;
           }
           if (param3 == 98) {
-            stackIn_10_0 = this.a(param0, 9555);
+            stackIn_10_0 = this.focusPreviousChild(param0, 9555);
             return stackIn_10_0;
           }
           if (param3 != 99) {
             return false;
           }
-          stackIn_14_0 = this.b(2, param0);
+          stackIn_14_0 = this.focusNextChild(2, param0);
           return stackIn_14_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

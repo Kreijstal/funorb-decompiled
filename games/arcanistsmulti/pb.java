@@ -291,7 +291,7 @@ final class pb extends IntrusiveNode {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_l = null;
         if (param0 < 52) {
           field_h = -34;
@@ -319,11 +319,11 @@ final class pb extends IntrusiveNode {
           var6.writeByte(1, (byte) -89);
           if (param2.field_k != null) {
             var6.writeByte(param2.field_k.length, (byte) -64);
-            var6.a(param2.field_k, 0, (byte) -86, param2.field_k.length);
+            var6.writeBytes(param2.field_k, 0, (byte) -86, param2.field_k.length);
           } else {
             var6.writeByte(0, (byte) -92);
           }
-          var6.a(true, var4);
+          var6.appendCrc32(true, var4);
           var6.position = var6.position - 4;
           param2.field_j = var6.readInt(-10674);
           var6.writeByteLengthAtMark(var6.position - var4, (byte) 43);

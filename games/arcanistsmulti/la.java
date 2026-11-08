@@ -9,7 +9,7 @@ final class la implements ok {
     static kc field_c;
     static int field_d;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         int var1 = 2 / ((-60 - param0) / 56);
         field_e = null;
         field_b = null;

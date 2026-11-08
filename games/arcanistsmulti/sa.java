@@ -157,7 +157,7 @@ final class sa extends kc {
         return stackIn_9_0;
     }
 
-    public static void e(int param0) {
+    public static void releaseStatics(int param0) {
         field_Eb = null;
         field_Cb = null;
         field_Gb = null;

@@ -50,7 +50,7 @@ final class ld extends im {
         tc.field_A = null;
     }
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_o = null;
         field_n = (int[][]) null;
         field_j = null;

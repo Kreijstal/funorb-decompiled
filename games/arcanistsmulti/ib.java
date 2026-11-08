@@ -81,11 +81,11 @@ class ib extends jm {
           if (param0 != 2) {
             ib.a(false, 33);
           }
-          if (wn.field_z.a((byte) -94) &&
-            !param1.equals(wn.field_z.a(true))) {
-            wn.field_z = nj.a(param1, -100);
+          if (SingleChildContainer.field_z.a((byte) -94) &&
+            !param1.equals(SingleChildContainer.field_z.a(true))) {
+            SingleChildContainer.field_z = nj.a(param1, -100);
           }
-          stackIn_7_0 = wn.field_z;
+          stackIn_7_0 = SingleChildContainer.field_z;
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -127,7 +127,7 @@ class ib extends jm {
         super(param0, 4, 2, 2, 2, param1, -1, 0, 1, param0.field_C, -1, 2147483647, false);
     }
 
-    public final void a(qm param0, int param1, int param2, int param3, boolean param4) {
+    public final void a(UiComponent param0, int param1, int param2, int param3, boolean param4) {
         try {
           if (param4) {
             kh.a(param0.field_v, param0.field_n + param2, param3 + param0.field_j, param0.field_k, 82);

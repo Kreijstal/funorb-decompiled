@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class ie extends ed implements vb {
+final class ie extends ed implements ButtonListener {
     static String field_Lb;
     private ln field_Kb;
     static String field_Ub;
@@ -40,7 +40,7 @@ final class ie extends ed implements vb {
         return true;
     }
 
-    public final void a(boolean param0, int param1, int param2, int param3, ag param4) {
+    public final void a(boolean param0, int param1, int param2, int param3, TextButton param4) {
         if (!param0) {
           field_Tb = (IndexedSprite[]) null;
         }
@@ -129,11 +129,11 @@ final class ie extends ed implements vb {
         }
     }
 
-    public static void m(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_Qb = null;
         field_Lb = null;
         if (param0 <= 13) {
-          ie.m((byte) 103);
+          ie.releaseStatics((byte) 103);
         }
         field_Jb = null;
         field_Nb = null;
@@ -184,10 +184,10 @@ final class ie extends ed implements vb {
           var5 = new me((ed) (this), go.field_k, var4);
           if (param0.field_f) {
             if (param0.field_h) {
-              this.a((byte) -92, (qm) (new ng(this)));
+              this.a((byte) -92, (UiComponent) (new ng(this)));
               return;
             }
-            var5.a(73, qn.field_lb, (wc) (this));
+            var5.a(73, qn.field_lb, (UiListener) (this));
           } else {
             if (!this.field_Wb) {
               if (5 != param0.field_a) {
@@ -197,7 +197,7 @@ final class ie extends ed implements vb {
                 var5.a(ki.field_u, (byte) 10, 17);
               }
             } else {
-              var5.a(116, qn.field_lb, (wc) (this));
+              var5.a(116, qn.field_lb, (UiListener) (this));
             }
             if (3 == param0.field_a) {
               var5.a(bd.field_b, (byte) 10, 7);
@@ -207,7 +207,7 @@ final class ie extends ed implements vb {
               }
             }
           }
-          this.a((byte) -92, (qm) (var5));
+          this.a((byte) -92, (UiComponent) (var5));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

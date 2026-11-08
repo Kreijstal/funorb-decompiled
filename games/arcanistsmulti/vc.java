@@ -112,7 +112,7 @@ final class vc {
         }
     }
 
-    final void a(int param0, mj param1, byte param2, qm param3, int param4) {
+    final void a(int param0, mj param1, byte param2, UiComponent param3, int param4) {
         BitmapFont stackIn_19_0 = null;
         String stackIn_19_1 = null;
         int stackIn_19_2 = 0;
@@ -238,7 +238,7 @@ final class vc {
         fn.field_e.a(438, 202 + (var1 + 438 * var4 / var2), 0, -120 + SoftwareRasterizer.field_j - 4, (byte) -120);
     }
 
-    final void a(qm param0, int param1, vc param2, mj param3, int param4, int param5) {
+    final void a(UiComponent param0, int param1, vc param2, mj param3, int param4, int param5) {
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         String stackIn_24_2 = null;

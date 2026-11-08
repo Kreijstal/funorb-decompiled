@@ -9,7 +9,7 @@ final class ih {
     static char[] field_c;
     static int field_b;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_e = null;
         field_c = null;
         field_d = null;

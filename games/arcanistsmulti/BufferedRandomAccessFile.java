@@ -423,7 +423,7 @@ final class BufferedRandomAccessFile {
           var7 = var9.position;
           var9.writeByte(param4, (byte) -71);
           if (param4 == 2) {
-            var9.a(param5, 23333);
+            var9.writeString(param5, 23333);
           }
           if (param1 == null) {
             var9.writeShort(param0, (byte) -119);
@@ -436,7 +436,7 @@ final class BufferedRandomAccessFile {
         }
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_g = null;
         if (param0 != -1) {
           return;

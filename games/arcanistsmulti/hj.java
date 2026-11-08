@@ -64,7 +64,7 @@ final class hj extends IOException {
             SoftwareRasterizer.drawVerticalLine(var8, 1 + var8, -(var8 << 1) + 14, 16777215);
           }
           SoftwareRasterizer.setTarget(var16, var5, var6);
-          ag.field_C = bl.a(true, gl.field_c, CipherPacketBuffer.field_p, var4, mj.field_z);
+          TextButton.field_C = bl.a(true, gl.field_c, CipherPacketBuffer.field_p, var4, mj.field_z);
           co.field_f.field_G = new IntrusiveDeque();
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -281,7 +281,7 @@ final class hj extends IOException {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_a = null;
         if (param0 <= 93) {
           nf var2 = (nf) null;

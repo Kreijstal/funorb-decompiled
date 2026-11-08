@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ua extends kl {
+final class ua extends ArrayWidgetContainer {
     static String field_H;
     static ResourceArchive field_K;
     static boolean field_J;
@@ -22,7 +22,7 @@ final class ua extends kl {
           field_K = (ResourceArchive) null;
         }
         int var4 = null != this.field_O ? this.field_O.length : 0;
-        qm[] var5 = new qm[var4 * param2];
+        UiComponent[] var5 = new UiComponent[var4 * param2];
         if (null != this.field_z &&
           0 < this.field_z.length &&
           0 < var5.length &&
@@ -56,7 +56,7 @@ final class ua extends kl {
 
     private final void b(int param0, int param1, int param2) {
         int var4 = null == this.field_L ? 0 : this.field_L.length;
-        qm[] var5 = new qm[param0 * var4];
+        UiComponent[] var5 = new UiComponent[param0 * var4];
         if (this.field_z != null &&
           this.field_z.length > 0 &&
           var5.length > 0 &&
@@ -70,14 +70,14 @@ final class ua extends kl {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4) {
+    final void setBounds(int param0, int param1, int param2, int param3, int param4) {
         if (param4 > -49) {
           return;
         }
-        super.a(param0, param1, param2, param3, -79);
+        super.setBounds(param0, param1, param2, param3, -79);
     }
 
-    final void a(qm param0, int param1, int param2) {
+    final void a(UiComponent param0, int param1, int param2) {
         int var5 = 0;
         int var4_int = this.field_N % this.field_L.length;
         if (param1 <= 115) {
@@ -96,18 +96,18 @@ final class ua extends kl {
         }
     }
 
-    final void e(int param0) {
+    final void layoutChildren(int param0) {
         int incrementValue$0 = 0;
         int var2;
         int var3;
         int var4;
         int var6;
-        qm var5;
+        UiComponent var5;
         var6 = ArcanistsMulti.field_G ? 1 : 0;
         var2 = 0;
         var3 = 0;
         if (param0 < 17) {
-          ua.f(-24);
+          ua.releaseStatics(-24);
         }
         while (this.field_z.length > var2) {
           if (var3 < this.field_O.length) {
@@ -178,7 +178,7 @@ final class ua extends kl {
         }
     }
 
-    private final void a(int param0, qm param1, int param2, int param3) {
+    private final void a(int param0, UiComponent param1, int param2, int param3) {
         int stackIn_5_0 = 0;
         int stackIn_6_1 = 0;
         int stackIn_9_0 = 0;
@@ -276,7 +276,7 @@ final class ua extends kl {
           }
           var18 = this.field_Q;
           var19 = this.field_M;
-          param1.a(-(var19 * 2) + var17, var19 + var15Lifetime1, var16 - var18 * 2, var18 + var14Lifetime1, -109);
+          param1.setBounds(-(var19 * 2) + var17, var19 + var15Lifetime1, var16 - var18 * 2, var18 + var14Lifetime1, -109);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -292,7 +292,7 @@ final class ua extends kl {
         }
     }
 
-    final boolean a(qm param0, byte param1, char param2, int param3) {
+    final boolean handleKeyInput(UiComponent param0, byte param1, char param2, int param3) {
         int var5_int = 0;
         int var6 = 0;
         boolean stackIn_12_0 = false;
@@ -306,24 +306,24 @@ final class ua extends kl {
         RuntimeException var5 = null;
         var6 = ArcanistsMulti.field_G ? 1 : 0;
         try {
-          if (super.a(param0, (byte) -122, param2, param3)) {
+          if (super.handleKeyInput(param0, (byte) -122, param2, param3)) {
             return true;
           }
           var5_int = param3;
           if (var5_int == 98) {
-            stackIn_12_0 = this.a(this.field_L.length, param0, (byte) 9);
+            stackIn_12_0 = this.focusBackwardBy(this.field_L.length, param0, (byte) 9);
             return stackIn_12_0;
           }
           if (99 == var5_int) {
-            stackIn_14_0 = this.a(29787, this.field_L.length, param0);
+            stackIn_14_0 = this.focusForwardBy(29787, this.field_L.length, param0);
             return stackIn_14_0;
           }
           if (var5_int == 96) {
-            stackIn_16_0 = this.a(param0, -103);
+            stackIn_16_0 = this.focusPreviousChild(param0, -103);
             return stackIn_16_0;
           }
           if (var5_int == 97) {
-            stackIn_18_0 = this.a((byte) -128, param0);
+            stackIn_18_0 = this.focusNextChild((byte) -128, param0);
             return stackIn_18_0;
           }
           if (param1 < -120) {
@@ -370,7 +370,7 @@ final class ua extends kl {
         }
     }
 
-    ua(int param0, int param1, int param2, int param3, pf param4, int param5, int param6) {
+    ua(int param0, int param1, int param2, int param3, WidgetPainter param4, int param5, int param6) {
         super(param0, param1, param2, param3, param4);
         int[] var10 = null;
         int[] var9 = null;
@@ -389,7 +389,7 @@ final class ua extends kl {
         }
     }
 
-    final boolean a(int param0, int param1, qm param2, int param3, int param4, int param5, int param6) {
+    final boolean handlePointerPress(int param0, int param1, UiComponent param2, int param3, int param4, int param5, int param6) {
         int var8_int = 0;
         RuntimeException var8 = null;
         boolean stackIn_1_0 = false;
@@ -399,7 +399,7 @@ final class ua extends kl {
         RuntimeException decompiledCaughtException = null;
         try {
           var8_int = 71 % ((-42 - param4) / 35);
-          stackIn_1_0 = super.a(param0, param1, param2, param3, 91, param5, param6);
+          stackIn_1_0 = super.handlePointerPress(param0, param1, param2, param3, 91, param5, param6);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -443,7 +443,7 @@ final class ua extends kl {
         }
     }
 
-    public static void f(int param0) {
+    public static void releaseStatics(int param0) {
         field_S = null;
         field_H = null;
         field_K = null;

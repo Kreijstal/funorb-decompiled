@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ng extends df implements pj, vb {
+final class ng extends UiContainer implements pj, ButtonListener {
     static aj field_I;
     static int field_G;
     static String field_H;
     private ej field_J;
-    private ag field_F;
+    private TextButton field_F;
     static byte[] field_D;
     static int field_K;
     private ie field_E;
@@ -27,8 +27,8 @@ final class ng extends df implements pj, vb {
 
     private final String g(int param0) {
         if (param0 != -7) {
-          qm var3 = (qm) null;
-          this.a((qm) null, (byte) 70, 'ﾘ', 107);
+          UiComponent var3 = (UiComponent) null;
+          this.handleKeyInput((UiComponent) null, (byte) 70, 'ﾘ', 107);
         }
         return "<u=2164A2><col=2164A2>";
     }
@@ -250,7 +250,7 @@ final class ng extends df implements pj, vb {
         }
     }
 
-    public final void a(boolean param0, int param1, int param2, int param3, ag param4) {
+    public final void a(boolean param0, int param1, int param2, int param3, TextButton param4) {
         String discarded$1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -280,7 +280,7 @@ final class ng extends df implements pj, vb {
         }
     }
 
-    final boolean a(qm param0, byte param1, char param2, int param3) {
+    final boolean handleKeyInput(UiComponent param0, byte param1, char param2, int param3) {
         RuntimeException var5 = null;
         boolean stackIn_8_0 = false;
         boolean stackIn_12_0 = false;
@@ -292,17 +292,17 @@ final class ng extends df implements pj, vb {
           if (param1 > -120) {
             ng.a((byte) -91);
           }
-          if (super.a(param0, (byte) -122, param2, param3)) {
+          if (super.handleKeyInput(param0, (byte) -122, param2, param3)) {
             return true;
           }
           if (98 == param3) {
-            stackIn_8_0 = this.a(param0, 9555);
+            stackIn_8_0 = this.focusPreviousChild(param0, 9555);
             return stackIn_8_0;
           }
           if (99 != param3) {
             return false;
           }
-          stackIn_12_0 = this.b(2, param0);
+          stackIn_12_0 = this.focusNextChild(2, param0);
           return stackIn_12_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -356,7 +356,7 @@ final class ng extends df implements pj, vb {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         int var1 = 96 % ((param0 + 43) / 49);
         field_I = null;
         field_H = null;
@@ -384,7 +384,7 @@ final class ng extends df implements pj, vb {
     }
 
     ng(ie param0) {
-        super(0, 0, 288, 0, (pf) null);
+        super(0, 0, 288, 0, (WidgetPainter) null);
         String var7 = null;
         int var3 = 0;
         jm var4 = null;
@@ -392,8 +392,8 @@ final class ng extends df implements pj, vb {
         int var6 = 0;
         try {
           this.field_E = param0;
-          this.field_F = new ag(qn.field_lb, (wc) null);
-          this.field_F.field_r = (pf) ((Object) new mm());
+          this.field_F = new TextButton(qn.field_lb, (UiListener) null);
+          this.field_F.field_r = (WidgetPainter) ((Object) new mm());
           var7 = tj.a(125, new String[]{this.g(-7), this.g((byte) 94)}, ud.field_r);
           var3 = 20;
           var4 = new jm(ia.field_c, 0, 0, 0, 0, 16777215, -1, 3, 0, ia.field_c.field_C, -1, 2147483647, true);
@@ -401,17 +401,17 @@ final class ng extends df implements pj, vb {
           this.field_J.field_q = "";
           this.field_J.a(0, 0, mm.field_s);
           this.field_J.a(1, 0, mm.field_s);
-          this.field_J.field_o = (wc) (this);
+          this.field_J.field_o = (UiListener) (this);
           this.field_J.field_v = -40 + this.field_v;
           this.field_J.a(26, (byte) -4, this.field_v - 40, var3);
           var3 = var3 + (this.field_J.field_k + 15);
-          this.c(-111, this.field_J);
+          this.addChild(-111, this.field_J);
           var5 = 4;
           var6 = 200;
-          this.field_F.a(40, var3, var6, 300 - var6 >> 1, -69);
-          this.field_F.field_o = (wc) (this);
-          this.c(-109, this.field_F);
-          this.a(var5 + (var3 + 55), 0, 300, 0, -67);
+          this.field_F.setBounds(40, var3, var6, 300 - var6 >> 1, -69);
+          this.field_F.field_o = (UiListener) (this);
+          this.addChild(-109, this.field_F);
+          this.setBounds(var5 + (var3 + 55), 0, 300, 0, -67);
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "ng.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

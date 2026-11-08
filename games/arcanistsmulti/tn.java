@@ -135,7 +135,7 @@ final class tn extends kc {
         }
     }
 
-    public static void f(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_Db = null;
         field_Lb = null;
         field_Ib = null;
@@ -164,7 +164,7 @@ final class tn extends kc {
         }
         this.field_Jb.a(this.field_x, 0, param1, this.field_I - param1, (byte) -120);
         if (param0 != 1) {
-          tn.f((byte) 87);
+          tn.releaseStatics((byte) 87);
         }
         var8 = 0;
         var4Lifetime1 = var8;

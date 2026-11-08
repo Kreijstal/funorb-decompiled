@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class si implements pf {
+final class si implements WidgetPainter {
     private BitmapFont field_h;
     private int field_o;
     static IndexedSprite[] field_p;
@@ -20,14 +20,14 @@ final class si implements pf {
     private int field_i;
     static int field_g;
 
-    public final void a(qm param0, int param1, int param2, int param3, boolean param4) {
+    public final void a(UiComponent param0, int param1, int param2, int param3, boolean param4) {
         RuntimeException var6 = null;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
         bk var11 = null;
-        qm stackIn_3_0 = null;
+        UiComponent stackIn_3_0 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
@@ -36,7 +36,7 @@ final class si implements pf {
           if (!(param0 instanceof bk)) {
             stackIn_3_0 = null;
           } else {
-            stackIn_3_0 = (qm) (param0);
+            stackIn_3_0 = (UiComponent) (param0);
           }
           var11 = (bk) (stackIn_3_0);
           if (var11 != null) {
@@ -75,7 +75,7 @@ final class si implements pf {
         }
     }
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 != 36) {
           return;
         }
@@ -188,7 +188,7 @@ final class si implements pf {
                 if (decompiledFrameRemainder0) {
                   var7 = new StringBuilder(var6);
                   if (param0 <= 102) {
-                    si.b((byte) -35);
+                    si.releaseStatics((byte) -35);
                   }
                   discarded$0 = var7.append(var5.substring(0, var6));
                   if (param3 > 0) {

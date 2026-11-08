@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class om extends qm {
+final class om extends UiComponent {
     private Sprite field_F;
     private Sprite field_D;
     int field_O;
@@ -20,17 +20,17 @@ final class om extends qm {
     private int field_K;
     private int field_y;
 
-    final void a(int param0, int param1, int param2, int param3, int param4) {
+    final void setBounds(int param0, int param1, int param2, int param3, int param4) {
         if (param4 > -49) {
           this.field_G = 79;
         }
-        super.a(param0, param1, param2, param3, -125);
+        super.setBounds(param0, param1, param2, param3, -125);
         this.e(-385446591);
     }
 
     final void b(int param0, boolean param1, int param2) {
         if (!param1) {
-          this.a((byte) 89, 89, 4, 126);
+          this.drawLayer((byte) 89, 89, 4, 126);
         }
         this.field_y = param0;
         this.field_J = (16711422 & param0) >> 1;
@@ -59,7 +59,7 @@ final class om extends qm {
           if (param0 != 29) {
             field_x = (na) null;
           }
-          var9 = df.field_z;
+          var9 = UiContainer.field_z;
           var2 = var9.readUnsignedByte((byte) 105);
           var3 = var9.readUnsignedByte((byte) 89);
           if (var2 == 0) {
@@ -82,7 +82,7 @@ final class om extends qm {
             return;
           }
           if (1 == var2) {
-            var4_int = var9.i(-1);
+            var4_int = var9.readSignedSmart(-1);
             var5_ref_ko = (ko) (lc.field_j.first(param0 + 12594));
             while (var5_ref_ko != null) {
               if (var5_ref_ko.field_i != var3 ||
@@ -156,7 +156,7 @@ final class om extends qm {
         Sprite var3 = new Sprite(var2, this.field_k);
         fk.a(var3, -23095);
         if (param0 != 1) {
-          this.a(-3, -8, -52, -69, 66);
+          this.setBounds(-3, -8, -52, -69, 66);
         }
         for (var4 = 0; this.field_k > var4; var4++) {
           for (var5 = 0; var5 < var2; var5++) {
@@ -275,7 +275,7 @@ final class om extends qm {
         this.field_A = new Sprite(this.field_k >> 1, this.field_k);
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_M = null;
         if (param0 > -124) {
           return;
@@ -289,7 +289,7 @@ final class om extends qm {
         this(param0, param1, param2, param3, param4, param5, param6, param5 >> 1 & 8355711, (16711422 & param6) >> 1);
     }
 
-    final void a(byte param0, int param1, int param2, int param3) {
+    final void drawLayer(byte param0, int param1, int param2, int param3) {
         if (0 != param2) {
           return;
         }
@@ -306,7 +306,7 @@ final class om extends qm {
         }
     }
 
-    final void a(qm param0, int param1, int param2, int param3) {
+    final void updatePointer(UiComponent param0, int param1, int param2, int param3) {
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -343,7 +343,7 @@ final class om extends qm {
         this.field_J = param8;
         this.field_y = param6;
         this.field_z = param4;
-        this.a(param3, param1, param2, param0, -85);
+        this.setBounds(param3, param1, param2, param0, -85);
     }
 
     static {

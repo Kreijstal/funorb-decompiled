@@ -1,15 +1,15 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ti extends df implements vb {
+final class ti extends UiContainer implements ButtonListener {
     private int field_K;
     mb field_P;
     String field_D;
     static String field_F;
-    private ag field_O;
+    private TextButton field_O;
     static int field_N;
     BitmapFont field_Q;
-    private ag field_E;
+    private TextButton field_E;
     static String field_C;
     boolean field_G;
     private int field_R;
@@ -19,31 +19,31 @@ final class ti extends df implements vb {
     private boolean field_J;
 
     ti(Object[] param0, int param1, int param2) {
-        super(0, 0, 0, 0, (pf) null);
+        super(0, 0, 0, 0, (WidgetPainter) null);
         this.field_D = "";
         this.field_Q = ia.field_c;
         try {
           this.field_P = new mb(this, this.field_Q, param0, param1);
           this.field_G = false;
-          this.field_P.field_o = (wc) (this);
+          this.field_P.field_o = (UiListener) (this);
           this.field_R = param2;
-          this.field_O = new ag("", new j(this), (wc) (this));
-          this.field_E = new ag();
-          this.field_E.field_r = (pf) ((Object) new va());
-          this.field_E.field_o = (wc) (this);
-          this.c(-83, this.field_O);
-          this.c(-74, this.field_E);
+          this.field_O = new TextButton("", new j(this), (UiListener) (this));
+          this.field_E = new TextButton();
+          this.field_E.field_r = (WidgetPainter) ((Object) new va());
+          this.field_E.field_o = (UiListener) (this);
+          this.addChild(-83, this.field_O);
+          this.addChild(-74, this.field_E);
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "ti.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
-    final boolean d(int param0) {
+    final boolean isFocused(int param0) {
         boolean stackIn_7_0 = false;
         if (param0 != -2116) {
           this.g(69);
         }
-        stackIn_7_0 = (this.field_J) || (super.d(-2116));
+        stackIn_7_0 = (this.field_J) || (super.isFocused(-2116));
         return stackIn_7_0;
     }
 
@@ -51,8 +51,8 @@ final class ti extends df implements vb {
         if (this.j(param0 + 2)) {
           this.b(this.field_n, this.field_v, this.field_K, this.field_j, 65);
           if (param0 != 0) {
-            qm var3 = (qm) null;
-            this.a((qm) null, -14, -32, 91);
+            UiComponent var3 = (UiComponent) null;
+            this.updatePointer((UiComponent) null, -14, -32, 91);
           }
           this.field_G = false;
           this.field_H.unlink(true);
@@ -60,15 +60,15 @@ final class ti extends df implements vb {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4) {
+    final void setBounds(int param0, int param1, int param2, int param3, int param4) {
         if (param4 >= -49) {
-          this.field_E = (ag) null;
+          this.field_E = (TextButton) null;
         }
         this.field_K = param0;
         this.b(param3, param2, param0, param1, 107);
     }
 
-    final boolean a(qm param0, byte param1, char param2, int param3) {
+    final boolean handleKeyInput(UiComponent param0, byte param1, char param2, int param3) {
         boolean stackIn_58_0 = false;
         RuntimeException stackIn_61_0 = null;
         StringBuilder stackIn_61_1 = null;
@@ -82,7 +82,7 @@ final class ti extends df implements vb {
         int var6_intLifetime1;
         var7 = ArcanistsMulti.field_G ? 1 : 0;
         try {
-          if (!this.d(-2116)) {
+          if (!this.isFocused(-2116)) {
             return false;
           }
           boolean decompiledFrameRemainder0 = true;
@@ -156,10 +156,10 @@ final class ti extends df implements vb {
             }
           }
           if (param1 > -120) {
-            this.d(59);
+            this.isFocused(59);
           }
           if (param3 != 80) {
-            stackIn_58_0 = super.a(param0, (byte) -125, param2, param3);
+            stackIn_58_0 = super.handleKeyInput(param0, (byte) -125, param2, param3);
             return stackIn_58_0;
           }
           this.i(0);
@@ -178,8 +178,8 @@ final class ti extends df implements vb {
         }
     }
 
-    public final void a(boolean param0, int param1, int param2, int param3, ag param4) {
-        qm var7 = null;
+    public final void a(boolean param0, int param1, int param2, int param3, TextButton param4) {
+        UiComponent var7 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -187,8 +187,8 @@ final class ti extends df implements vb {
         RuntimeException var6 = null;
         try {
           if (!param0) {
-            var7 = (qm) null;
-            this.a(-2, (qm) null);
+            var7 = (UiComponent) null;
+            this.focusNext(-2, (UiComponent) null);
           }
           if (!this.j(2)) {
             this.g(-107);
@@ -350,9 +350,9 @@ final class ti extends df implements vb {
         }
     }
 
-    final void a(qm param0, int param1, int param2, int param3) {
+    final void updatePointer(UiComponent param0, int param1, int param2, int param3) {
         try {
-          super.a(param0, param1, param2, param3);
+          super.updatePointer(param0, param1, param2, param3);
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "ti.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
@@ -461,7 +461,7 @@ final class ti extends df implements vb {
         }
     }
 
-    final boolean a(int param0, qm param1) {
+    final boolean focusNext(int param0, UiComponent param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -471,12 +471,12 @@ final class ti extends df implements vb {
           if (param0 != 0) {
             this.field_Q = (BitmapFont) null;
           }
-          param1.d((byte) 29);
+          param1.blur((byte) 29);
           this.field_D = "";
           this.field_J = true;
           if (null != this.field_o &&
-            this.field_o instanceof wb) {
-            ((wb) (this.field_o)).a(false, this.field_J, (qm) (this));
+            this.field_o instanceof ButtonFocusListener) {
+            ((ButtonFocusListener) (this.field_o)).a(false, this.field_J, (UiComponent) (this));
           }
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -503,14 +503,14 @@ final class ti extends df implements vb {
     }
 
     private final void b(int param0, int param1, int param2, int param3, int param4) {
-        super.a(param2, param3, param1, param0, -76);
-        this.field_O.a(this.field_K, 0, param1 - 20, 0, -89);
-        this.field_E.a(this.field_K, 0, 20, param1 - 20, -73);
+        super.setBounds(param2, param3, param1, param0, -76);
+        this.field_O.setBounds(this.field_K, 0, param1 - 20, 0, -89);
+        this.field_E.setBounds(this.field_K, 0, 20, param1 - 20, -73);
         if (this.field_G) {
-          this.field_H.a(-this.field_K + param2, this.field_K, param1, 0, -110);
+          this.field_H.setBounds(-this.field_K + param2, this.field_K, param1, 0, -110);
         }
         if (param4 < 27) {
-          this.b(false);
+          this.getTooltip(false);
         }
     }
 
@@ -541,7 +541,7 @@ final class ti extends df implements vb {
         }
     }
 
-    final String b(boolean param0) {
+    final String getTooltip(boolean param0) {
         int discarded$0 = 0;
         if (!this.field_w) {
           return null;
@@ -558,7 +558,7 @@ final class ti extends df implements vb {
         if (this.field_P.g(126) != null) {
           return this.field_P.g(127).toString();
         }
-        return super.b(false);
+        return super.getTooltip(false);
     }
 
     private final void g(int param0) {
@@ -570,14 +570,14 @@ final class ti extends df implements vb {
           var3 = this.field_R;
         }
         this.b(this.field_n, this.field_v, var3 + this.field_K, this.field_j, 55);
-        this.field_P.a(var2, 0, this.field_v, 0, -50);
-        this.field_H = new sl(0, 0, 0, 0, new eb(), this.field_P, (pf) null);
+        this.field_P.setBounds(var2, 0, this.field_v, 0, -50);
+        this.field_H = new sl(0, 0, 0, 0, new eb(), this.field_P, (WidgetPainter) null);
         if (var4 != 0) {
           this.field_H.a(true, 1, rd.b(-15438));
         }
-        this.field_H.a(this.field_k - this.field_K, this.field_K, this.field_v, 0, -114);
+        this.field_H.setBounds(this.field_k - this.field_K, this.field_K, this.field_v, 0, -114);
         this.field_G = true;
-        this.c(-90, this.field_H);
+        this.addChild(-90, this.field_H);
         this.h(11149);
         if (param0 >= -38) {
           this.field_D = (String) null;
@@ -630,14 +630,14 @@ final class ti extends df implements vb {
         }
     }
 
-    final void d(byte param0) {
+    final void blur(byte param0) {
         this.field_J = false;
-        super.d(param0);
+        super.blur(param0);
     }
 
     final int g(byte param0) {
         if (param0 != 37) {
-          this.field_O = (ag) null;
+          this.field_O = (TextButton) null;
         }
         return this.field_P.field_Y;
     }
@@ -651,7 +651,7 @@ final class ti extends df implements vb {
         return this.field_G;
     }
 
-    final boolean a(int param0, int param1, qm param2, int param3, int param4, int param5, int param6) {
+    final boolean handlePointerPress(int param0, int param1, UiComponent param2, int param3, int param4, int param5, int param6) {
         int var8_int = 0;
         RuntimeException var8 = null;
         boolean stackIn_1_0 = false;
@@ -661,7 +661,7 @@ final class ti extends df implements vb {
         RuntimeException decompiledCaughtException = null;
         try {
           var8_int = -94 / ((-42 - param4) / 35);
-          stackIn_1_0 = super.a(param0, param1, param2, param3, -105, param5, param6);
+          stackIn_1_0 = super.handlePointerPress(param0, param1, param2, param3, -105, param5, param6);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -677,7 +677,7 @@ final class ti extends df implements vb {
         }
     }
 
-    public static void k(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 0) {
           nf var2 = (nf) null;
           ti.a(64, -6, true, (Sprite) null, (IndexedSprite) null, (nf) null, 111);

@@ -6,10 +6,10 @@ final class ic {
     static int field_a;
     static String field_b;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_b = null;
         if (param0 != 0) {
-          ic.a(52);
+          ic.releaseStatics(52);
           field_c = null;
           return;
         }

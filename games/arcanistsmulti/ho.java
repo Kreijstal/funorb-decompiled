@@ -134,12 +134,12 @@ final class ho {
                       param1.writeByte(0, (byte) -66);
                     } else if (var10 instanceof Number) {
                       param1.writeByte(1, (byte) -64);
-                      param1.a(((Number) (var10)).longValue(), (byte) 78);
+                      param1.writeLong(((Number) (var10)).longValue(), (byte) 78);
                     } else if (!(var10 instanceof String)) {
                       param1.writeByte(4, (byte) -115);
                     } else {
                       param1.writeByte(2, (byte) -118);
-                      param1.a((String) (var10), 23333);
+                      param1.writeString((String) (var10), 23333);
                     }
                   } else {
                     if (var6_int == 4) {
@@ -202,7 +202,7 @@ final class ho {
                 param1.writeByte(var17.field_j[var5], (byte) -67);
               }
             }
-            param1.a(true, var4);
+            param1.appendCrc32(true, var4);
             var17.unlink(true);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter12) {
@@ -233,7 +233,7 @@ final class ho {
     }
 
     final static void a(int param0) {
-        oc.a(false);
+        IntrusiveDequeCursor.a(false);
         if (param0 != 0) {
           return;
         }
@@ -298,7 +298,7 @@ final class ho {
         this.field_f = param0 ? true : false;
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_d = null;
         field_i = null;
         if (param0 != 0) {

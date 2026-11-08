@@ -88,8 +88,8 @@ final class ig {
                       } else {
                         stackIn_30_0 = var15 >> var7;
                       }
-                      var16 = -stackIn_30_0 + (-1 + kl.field_B.length);
-                      var17 = kl.field_B[var16];
+                      var16 = -stackIn_30_0 + (-1 + ArrayWidgetContainer.field_B.length);
+                      var17 = ArrayWidgetContainer.field_B[var16];
                       while (true) {
                         if (0 != var17 >> 4) {
                           var16--;
@@ -99,14 +99,14 @@ final class ig {
                             System.err.println("Out of range!");
                             break;
                           }
-                          var17 = kl.field_B[var16];
+                          var17 = ArrayWidgetContainer.field_B[var16];
                           continue;
                         }
                         stackIn_40_0Lifetime1 = var17;
                         stackIn_40_1Lifetime1 = var16 << 4;
                         var18 = stackIn_40_0Lifetime1 + stackIn_40_1Lifetime1;
                         w.field_Lb[var18] = var8;
-                        kl.field_B[var16] = 1 + var17;
+                        ArrayWidgetContainer.field_B[var16] = 1 + var17;
                         if (param1.field_F > 0 &&
                           null != param1.field_H) {
                           dupTemp$0 = param1.field_H[var8];

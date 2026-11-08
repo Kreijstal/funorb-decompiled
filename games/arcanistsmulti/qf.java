@@ -8,7 +8,7 @@ final class qf {
     static int[][] field_c;
     private static String field_z;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_b = null;
         int var1 = -26 % ((48 - param0) / 33);
         field_c = (int[][]) null;

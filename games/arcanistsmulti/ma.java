@@ -1,30 +1,30 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ma extends kl implements vb {
+final class ma extends ArrayWidgetContainer implements ButtonListener {
     int field_Z;
     int field_L;
     static String field_S;
     private boolean field_Y;
-    private ag field_H;
+    private TextButton field_H;
     static String field_I;
     private boolean field_Q;
     private se field_db;
     private int field_V;
     private int field_bb;
-    private ag field_cb;
+    private TextButton field_cb;
     static String[][] field_P;
     static int field_M;
     private int field_W;
-    private ag field_R;
-    private ag field_O;
+    private TextButton field_R;
+    private TextButton field_O;
     int field_T;
     private int field_J;
     private boolean field_X;
     private int field_eb;
     static int field_N;
     static int field_U;
-    private ag field_ab;
+    private TextButton field_ab;
 
     private final void a(int param0, int param1) {
         this.a((byte) -6, param1);
@@ -38,27 +38,27 @@ final class ma extends kl implements vb {
     }
 
     private final void a(int param0, boolean param1) {
-        ag stackIn_8_0 = null;
+        TextButton stackIn_8_0 = null;
         boolean stackIn_9_1 = false;
-        ag stackIn_13_0 = null;
+        TextButton stackIn_13_0 = null;
         boolean stackIn_14_1 = false;
-        ag stackIn_18_0 = null;
+        TextButton stackIn_18_0 = null;
         boolean stackIn_21_1 = false;
-        ag stackIn_26_0 = null;
+        TextButton stackIn_26_0 = null;
         boolean stackIn_27_1 = false;
-        ag stackIn_31_0 = null;
+        TextButton stackIn_31_0 = null;
         boolean stackIn_32_1 = false;
-        ag stackIn_39_0 = null;
+        TextButton stackIn_39_0 = null;
         boolean stackIn_41_1 = false;
-        ag stackIn_48_0 = null;
+        TextButton stackIn_48_0 = null;
         boolean stackIn_49_1 = false;
-        ag stackIn_53_0 = null;
+        TextButton stackIn_53_0 = null;
         boolean stackIn_54_1 = false;
-        ag stackIn_62_0 = null;
+        TextButton stackIn_62_0 = null;
         boolean stackIn_64_1 = false;
-        ag stackIn_69_0 = null;
+        TextButton stackIn_69_0 = null;
         boolean stackIn_70_1 = false;
-        ag stackIn_74_0 = null;
+        TextButton stackIn_74_0 = null;
         boolean stackIn_75_1 = false;
         stackIn_39_0 = this.field_cb;
         if (param1) {
@@ -67,8 +67,8 @@ final class ma extends kl implements vb {
           if (this.field_Y) {
             stackIn_39_0.field_B = true;
             boolean decompiledFrameRemainder1 = true;
-            if (this.field_db.field_B instanceof ag) {
-              stackIn_18_0 = (ag) (this.field_db.field_B);
+            if (this.field_db.field_B instanceof TextButton) {
+              stackIn_18_0 = (TextButton) (this.field_db.field_B);
               if (param1) {
                 stackIn_18_0.field_B = true;
                 if (null != this.field_O) {
@@ -114,8 +114,8 @@ final class ma extends kl implements vb {
         }
         stackIn_39_0.field_B = stackIn_41_1;
         boolean decompiledFrameRemainder0 = true;
-        if (this.field_db.field_B instanceof ag) {
-          stackIn_62_0 = (ag) (this.field_db.field_B);
+        if (this.field_db.field_B instanceof TextButton) {
+          stackIn_62_0 = (TextButton) (this.field_db.field_B);
           if (param1) {
             stackIn_64_1 = true;
           } else {
@@ -164,7 +164,7 @@ final class ma extends kl implements vb {
         int var4Lifetime1;
         int var4Lifetime2;
         if (param1 <= param0) {
-          this.field_db.a(this.field_db.field_k, this.field_db.field_j, this.field_cb.field_v, this.field_db.field_n, -68);
+          this.field_db.setBounds(this.field_db.field_k, this.field_db.field_j, this.field_cb.field_v, this.field_db.field_n, -68);
           this.a(0, false);
           var4 = 44 / ((param2 - 86) / 32);
           this.g(-1844589680);
@@ -174,16 +174,16 @@ final class ma extends kl implements vb {
         if (var4Lifetime1 < this.field_W) {
           var4Lifetime1 = this.field_W;
         }
-        this.field_db.a(this.field_db.field_k, this.field_db.field_j, var4Lifetime1, this.field_db.field_n, -121);
+        this.field_db.setBounds(this.field_db.field_k, this.field_db.field_j, var4Lifetime1, this.field_db.field_n, -121);
         this.a(0, true);
         var4Lifetime2 = 44 / ((param2 - 86) / 32);
         this.g(-1844589680);
     }
 
-    final boolean a(int param0, qm param1) {
+    final boolean focusNext(int param0, UiComponent param1) {
         se var3 = null;
         RuntimeException var3_ref = null;
-        qm var4 = null;
+        UiComponent var4 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -191,11 +191,11 @@ final class ma extends kl implements vb {
         try {
           var3 = this.field_db;
           if (param0 != 0) {
-            var4 = (qm) null;
-            this.a((qm) null, 32, -61, -41);
+            var4 = (UiComponent) null;
+            this.updatePointer((UiComponent) null, 32, -61, -41);
           }
           if (var3 != null &&
-            ((qm) ((Object) var3)).a(0, param1)) {
+            ((UiComponent) ((Object) var3)).focusNext(0, param1)) {
             return true;
           }
           return false;
@@ -220,7 +220,7 @@ final class ma extends kl implements vb {
           if (var4 < this.field_J) {
             var4 = this.field_J;
           }
-          this.field_db.a(var4, this.field_db.field_j, this.field_db.field_v, this.field_db.field_n, -125);
+          this.field_db.setBounds(var4, this.field_db.field_j, this.field_db.field_v, this.field_db.field_n, -125);
           this.b(8, true);
           this.h((byte) -128);
           if (param1 != -42) {
@@ -229,7 +229,7 @@ final class ma extends kl implements vb {
           }
           return;
         }
-        this.field_db.a(this.field_cb.field_k, this.field_db.field_j, this.field_db.field_v, this.field_db.field_n, -54);
+        this.field_db.setBounds(this.field_cb.field_k, this.field_db.field_j, this.field_db.field_v, this.field_db.field_n, -54);
         this.b(8, false);
         this.h((byte) -128);
         if (param1 != -42) {
@@ -238,21 +238,21 @@ final class ma extends kl implements vb {
         }
     }
 
-    final boolean a(qm param0, byte param1, char param2, int param3) {
+    final boolean handleKeyInput(UiComponent param0, byte param1, char param2, int param3) {
         RuntimeException stackIn_50_0 = null;
         StringBuilder stackIn_50_1 = null;
         String stackIn_51_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         try {
-          if (super.a(param0, (byte) -127, param2, param3)) {
+          if (super.handleKeyInput(param0, (byte) -127, param2, param3)) {
             return true;
           }
           if (param1 > -120) {
             this.field_db = (se) null;
           }
           if (this.field_X) {
-            if (!this.field_db.d(-2116)) {
+            if (!this.field_db.isFocused(-2116)) {
               return false;
             }
             if (98 == param3) {
@@ -318,7 +318,7 @@ final class ma extends kl implements vb {
         }
     }
 
-    final void a(qm param0, int param1, int param2, int param3) {
+    final void updatePointer(UiComponent param0, int param1, int param2, int param3) {
         RuntimeException stackIn_40_0 = null;
         StringBuilder stackIn_40_1 = null;
         String stackIn_41_2 = null;
@@ -331,9 +331,9 @@ final class ma extends kl implements vb {
         int var5_intLifetime2;
         var7 = ArcanistsMulti.field_G ? 1 : 0;
         try {
-          super.a(param0, param1, param2, param3);
-          if ((!(this.field_db.field_B instanceof ag) ||
-            ((ag) (this.field_db.field_B)).field_B) && this.field_db.field_t == 1) {
+          super.updatePointer(param0, param1, param2, param3);
+          if ((!(this.field_db.field_B instanceof TextButton) ||
+            ((TextButton) (this.field_db.field_B)).field_B) && this.field_db.field_t == 1) {
             if (!this.field_Q) {
               this.g(-1844589680);
             } else {
@@ -407,32 +407,32 @@ final class ma extends kl implements vb {
     }
 
     private final void b(int param0, boolean param1) {
-        ag stackIn_8_0 = null;
-        ag stackIn_13_0 = null;
+        TextButton stackIn_8_0 = null;
+        TextButton stackIn_13_0 = null;
         boolean stackIn_14_1 = false;
-        ag stackIn_18_0 = null;
+        TextButton stackIn_18_0 = null;
         boolean stackIn_21_1 = false;
-        ag stackIn_27_0 = null;
+        TextButton stackIn_27_0 = null;
         boolean stackIn_28_1 = false;
-        ag stackIn_34_0 = null;
+        TextButton stackIn_34_0 = null;
         boolean stackIn_35_1 = false;
-        ag stackIn_39_0 = null;
+        TextButton stackIn_39_0 = null;
         boolean stackIn_40_1 = false;
-        ag stackIn_44_0 = null;
+        TextButton stackIn_44_0 = null;
         boolean stackIn_46_1 = false;
-        ag stackIn_53_0 = null;
+        TextButton stackIn_53_0 = null;
         boolean stackIn_54_1 = false;
-        ag stackIn_58_0 = null;
+        TextButton stackIn_58_0 = null;
         boolean stackIn_59_1 = false;
-        ag stackIn_67_0 = null;
+        TextButton stackIn_67_0 = null;
         boolean stackIn_68_1 = false;
-        ag stackIn_72_0 = null;
+        TextButton stackIn_72_0 = null;
         boolean stackIn_74_1 = false;
-        ag stackIn_78_0 = null;
+        TextButton stackIn_78_0 = null;
         boolean stackIn_79_1 = false;
-        ag stackIn_83_0 = null;
+        TextButton stackIn_83_0 = null;
         boolean stackIn_84_1 = false;
-        ag stackIn_92_0 = null;
+        TextButton stackIn_92_0 = null;
         boolean stackIn_93_1 = false;
         stackIn_44_0 = this.field_cb;
         if (param1) {
@@ -440,8 +440,8 @@ final class ma extends kl implements vb {
         } else {
           if (this.field_Q) {
             stackIn_44_0.field_B = true;
-            if (this.field_db.field_B instanceof ag) {
-              stackIn_18_0 = (ag) (this.field_db.field_B);
+            if (this.field_db.field_B instanceof TextButton) {
+              stackIn_18_0 = (TextButton) (this.field_db.field_B);
               if (param1) {
                 stackIn_18_0.field_B = true;
                 if (this.field_ab != null) {
@@ -488,8 +488,8 @@ final class ma extends kl implements vb {
           stackIn_46_1 = false;
         }
         stackIn_44_0.field_B = stackIn_46_1;
-        if (this.field_db.field_B instanceof ag) {
-          stackIn_72_0 = (ag) (this.field_db.field_B);
+        if (this.field_db.field_B instanceof TextButton) {
+          stackIn_72_0 = (TextButton) (this.field_db.field_B);
           if (param1) {
             stackIn_74_1 = true;
           } else {
@@ -564,10 +564,10 @@ final class ma extends kl implements vb {
         this.b(1, var2Lifetime1 >= var3Lifetime1 ? 0 : (this.field_db.field_n - var2Lifetime1 << 16) / (var3Lifetime1 - var2Lifetime1));
     }
 
-    ma(int param0, int param1, int param2, int param3, pf param4, pf param5, pf param6, int param7, int param8, int param9, int param10, boolean param11, boolean param12, int param13, int param14) {
+    ma(int param0, int param1, int param2, int param3, WidgetPainter param4, WidgetPainter param5, WidgetPainter param6, int param7, int param8, int param9, int param10, boolean param11, boolean param12, int param13, int param14) {
         super(param0, param1, param2, param3, param4);
         se dupTemp$0 = null;
-        ag dupTemp$1 = null;
+        TextButton dupTemp$1 = null;
         boolean stackIn_4_1 = false;
         boolean stackIn_7_1 = false;
         RuntimeException stackIn_11_0 = null;
@@ -589,13 +589,13 @@ final class ma extends kl implements vb {
         this.field_J = 0;
         this.field_X = true;
         try {
-          this.field_z = new qm[6];
-          dupTemp$0 = new se(param0, param1, param7, param8, (pf) null, (wc) null, new ag(0, 0, param7, param8, param6, (wc) null), false, false);
+          this.field_z = new UiComponent[6];
+          dupTemp$0 = new se(param0, param1, param7, param8, (WidgetPainter) null, (UiListener) null, new TextButton(0, 0, param7, param8, param6, (UiListener) null), false, false);
           this.field_db = dupTemp$0;
-          this.field_z[0] = (qm) ((Object) dupTemp$0);
-          dupTemp$1 = new ag(param0, param1, param7, param8, param5, (wc) null);
+          this.field_z[0] = (UiComponent) ((Object) dupTemp$0);
+          dupTemp$1 = new TextButton(param0, param1, param7, param8, param5, (UiListener) null);
           this.field_cb = dupTemp$1;
-          this.field_z[1] = (qm) ((Object) dupTemp$1);
+          this.field_z[1] = (UiComponent) ((Object) dupTemp$1);
           stackIn_4_1 = (param11);
           this.field_Q = stackIn_4_1;
           this.field_J = param10;
@@ -604,7 +604,7 @@ final class ma extends kl implements vb {
           this.field_W = param9;
           this.b(1, param13);
           this.a((byte) -6, param14);
-          this.a(param3, param1, param2, param0, -59);
+          this.setBounds(param3, param1, param2, param0, -59);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -632,13 +632,13 @@ final class ma extends kl implements vb {
         }
     }
 
-    final void e(int param0) {
+    final void layoutChildren(int param0) {
         int var3;
-        qm var4;
+        UiComponent var4;
         var3 = ArcanistsMulti.field_G ? 1 : 0;
         if (param0 < 17) {
-          var4 = (qm) null;
-          this.a(11, (qm) null);
+          var4 = (UiComponent) null;
+          this.focusNext(11, (UiComponent) null);
         }
         if (this.field_O == null) {
           this.field_cb.field_n = 0;
@@ -686,7 +686,7 @@ final class ma extends kl implements vb {
           this.field_db.field_k = this.field_cb.field_k;
           this.field_db.field_j = 0;
         }
-        this.field_db.e((byte) 127);
+        this.field_db.refreshLayout((byte) 127);
     }
 
     private final void b(int param0, int param1) {
@@ -721,7 +721,7 @@ final class ma extends kl implements vb {
         this.g(param0 - 1844589681);
     }
 
-    public static void g(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_S = null;
         field_P = (String[][]) null;
         field_I = null;
@@ -844,21 +844,21 @@ final class ma extends kl implements vb {
           vf.field_k.h(77);
         }
         oa.field_c = new sn();
-        g.field_e.a((byte) -92, (qm) (oa.field_c));
+        g.field_e.a((byte) -92, (UiComponent) (oa.field_c));
     }
 
     final void a(byte param0, int param1) {
-        qm var5 = null;
+        UiComponent var5 = null;
         int var4 = ArcanistsMulti.field_G ? 1 : 0;
-        qm var5Lifetime1;
-        qm var5Lifetime2;
+        UiComponent var5Lifetime1;
+        UiComponent var5Lifetime2;
         if (param1 >= 0) {
           if (param1 > 65536) {
             this.field_L = 65536;
             this.h((byte) -126);
             if (param0 != -6) {
-              var5 = (qm) null;
-              this.a((qm) null, (byte) -4, 'i', 61);
+              var5 = (UiComponent) null;
+              this.handleKeyInput((UiComponent) null, (byte) -4, 'i', 61);
               return;
             }
             return;
@@ -866,8 +866,8 @@ final class ma extends kl implements vb {
           this.field_L = param1;
           this.h((byte) -126);
           if (param0 != -6) {
-            var5Lifetime2 = (qm) null;
-            this.a((qm) null, (byte) -4, 'i', 61);
+            var5Lifetime2 = (UiComponent) null;
+            this.handleKeyInput((UiComponent) null, (byte) -4, 'i', 61);
             return;
           }
           return;
@@ -877,8 +877,8 @@ final class ma extends kl implements vb {
         if (param0 == -6) {
           return;
         }
-        var5Lifetime1 = (qm) null;
-        this.a((qm) null, (byte) -4, 'i', 61);
+        var5Lifetime1 = (UiComponent) null;
+        this.handleKeyInput((UiComponent) null, (byte) -4, 'i', 61);
     }
 
     private final int i(byte param0) {
@@ -889,14 +889,14 @@ final class ma extends kl implements vb {
         return (this.field_db.field_k << 16) / this.field_cb.field_k;
     }
 
-    public final void a(boolean param0, int param1, int param2, int param3, ag param4) {
+    public final void a(boolean param0, int param1, int param2, int param3, TextButton param4) {
         int var7 = 0;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         String stackIn_24_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var6 = null;
-        qm var8 = null;
+        UiComponent var8 = null;
         var7 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           if (param3 == 1 &&
@@ -922,8 +922,8 @@ final class ma extends kl implements vb {
             }
           }
           if (!param0) {
-            var8 = (qm) null;
-            this.a((qm) null, -20, 39, 69);
+            var8 = (UiComponent) null;
+            this.updatePointer((UiComponent) null, -20, 39, 69);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

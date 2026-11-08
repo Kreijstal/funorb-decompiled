@@ -356,8 +356,8 @@ final class ml extends DualLinkNode {
         var9 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           var6 = 16384;
-          pi.field_b.a((byte) 95, this.field_L.field_i);
-          var7 = (ml) (pi.field_b.b(-83));
+          pi.field_b.setDeque((byte) 95, this.field_L.field_i);
+          var7 = (ml) (pi.field_b.first(-83));
           while (var7 != null) {
             if (var7.field_jb == 19) {
               var4 = -var7.field_db + (-48 + this.field_db);
@@ -368,10 +368,10 @@ final class ml extends DualLinkNode {
                 var7.field_jb = 0;
               }
             }
-            var7 = (ml) (pi.field_b.d(-18502));
+            var7 = (ml) (pi.field_b.next(-18502));
           }
-          pi.field_b.a((byte) 91, this.field_L.field_Kb);
-          var7_ref = (mi) (pi.field_b.b(-58));
+          pi.field_b.setDeque((byte) 91, this.field_L.field_Kb);
+          var7_ref = (mi) (pi.field_b.first(-58));
           if (!param1) {
             this.a(-6, -62);
           }
@@ -430,7 +430,7 @@ final class ml extends DualLinkNode {
                 var7_ref.f(0);
               }
             }
-            var7_ref = (mi) (pi.field_b.d(-18502));
+            var7_ref = (mi) (pi.field_b.next(-18502));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1724,15 +1724,15 @@ final class ml extends DualLinkNode {
           if (this.field_jb == 17) {
             this.field_s = this.field_L.a(this.field_u, true);
             var2_intLifetime1 = 65536;
-            pi.field_b.a((byte) 114, this.field_L.field_i);
-            var6_ref_ml = (ml) (pi.field_b.b(-31));
+            pi.field_b.setDeque((byte) 114, this.field_L.field_i);
+            var6_ref_ml = (ml) (pi.field_b.first(-31));
             while (var6_ref_ml != null) {
               if (~var6_ref_ml.field_u == ~this.field_u) {
                 if (var6_ref_ml.field_s != null &&
                   var6_ref_ml.field_jb != 9 &&
                   var6_ref_ml.field_jb != 7 &&
                   var6_ref_ml.field_jb != 37) {
-                  var6_ref_ml = (ml) (pi.field_b.d(-18502));
+                  var6_ref_ml = (ml) (pi.field_b.next(-18502));
                   continue;
                 }
                 var5_intLifetime1 = -var6_ref_ml.field_db + this.field_db - this.field_Y / 2;
@@ -1743,14 +1743,14 @@ final class ml extends DualLinkNode {
                   this.field_s = var6_ref_ml;
                 }
               }
-              var6_ref_ml = (ml) (pi.field_b.d(-18502));
+              var6_ref_ml = (ml) (pi.field_b.next(-18502));
             }
           } else {
             if (this.x(32)) {
               this.field_s = this.field_L.a(this.field_u, true);
               var2_intLifetime1 = 65536;
-              pi.field_b.a((byte) 99, this.field_L.field_i);
-              var6_ref_ml = (ml) (pi.field_b.b(-47));
+              pi.field_b.setDeque((byte) 99, this.field_L.field_i);
+              var6_ref_ml = (ml) (pi.field_b.first(-47));
               while (var6_ref_ml != null) {
                 if (~var6_ref_ml.field_u == ~this.field_u && (null == var6_ref_ml.field_s ||
                   var6_ref_ml.field_jb == 37)) {
@@ -1762,7 +1762,7 @@ final class ml extends DualLinkNode {
                     var2_intLifetime1 = var3Lifetime1;
                   }
                 }
-                var6_ref_ml = (ml) (pi.field_b.d(-18502));
+                var6_ref_ml = (ml) (pi.field_b.next(-18502));
               }
             }
           }
@@ -3314,15 +3314,15 @@ final class ml extends DualLinkNode {
             16 == this.field_jb ||
             this.field_jb == 7 ||
             this.field_jb == 37)) {
-            pi.field_b.a((byte) 113, this.field_L.field_i);
-            var6_ref_ml = (ml) (pi.field_b.b(-51));
+            pi.field_b.setDeque((byte) 113, this.field_L.field_i);
+            var6_ref_ml = (ml) (pi.field_b.first(-51));
             while (var6_ref_ml != null) {
               if (var6_ref_ml.field_s == this &&
                 var6_ref_ml.x(32)) {
                 var4 = 1;
                 this.field_L.a(var6_ref_ml, 0);
               }
-              var6_ref_ml = (ml) (pi.field_b.d(-18502));
+              var6_ref_ml = (ml) (pi.field_b.next(-18502));
             }
           }
           this.field_hb = true;
@@ -3528,19 +3528,19 @@ final class ml extends DualLinkNode {
             this.field_L.a(-41, this.field_s);
           }
           if (var4 != 0) {
-            pi.field_b.a((byte) 87, this.field_L.field_i);
-            var9 = (ml) (pi.field_b.b(-109));
+            pi.field_b.setDeque((byte) 87, this.field_L.field_i);
+            var9 = (ml) (pi.field_b.first(-109));
             while (var9 != null) {
               if (this == var9.field_s) {
                 if (!var9.x(32)) {
-                  var9 = (ml) (pi.field_b.d(param0 ^ 18482));
+                  var9 = (ml) (pi.field_b.next(param0 ^ 18482));
                   continue;
                 }
                 if (var9.field_ib > 0) {
                   this.field_L.a(-45, var9);
                 }
               }
-              var9 = (ml) (pi.field_b.d(param0 ^ 18482));
+              var9 = (ml) (pi.field_b.next(param0 ^ 18482));
             }
             return;
           }
@@ -4416,9 +4416,9 @@ final class ml extends DualLinkNode {
           if (param0 != -10265) {
             discarded$0 = this.u(87);
           }
-          pi.field_b.a((byte) 125, this.field_L.field_i);
+          pi.field_b.setDeque((byte) 125, this.field_L.field_i);
           var2_int = 0;
-          var3 = (ml) (pi.field_b.b(param0 + 10161));
+          var3 = (ml) (pi.field_b.first(param0 + 10161));
           while (var3 != null) {
             if (this == var3.field_s &&
               var3.x(32)) {
@@ -4445,7 +4445,7 @@ final class ml extends DualLinkNode {
                 var2_int = 1;
               }
             }
-            var3 = (ml) (pi.field_b.d(-18502));
+            var3 = (ml) (pi.field_b.next(-18502));
           }
           stackIn_27_0 = var2_int;
           return stackIn_27_0 != 0;

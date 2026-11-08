@@ -10,7 +10,7 @@ final class vm {
     static String field_e;
     static String[] field_d;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_f = null;
         field_c = null;
         field_b = null;

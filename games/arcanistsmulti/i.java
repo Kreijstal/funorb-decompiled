@@ -60,7 +60,7 @@ final class i {
         dd.field_c.a(2, 20, nn.field_p, false);
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_h = null;
         field_i = null;
         field_e = null;
@@ -175,12 +175,12 @@ final class i {
             return;
           }
           if (param0 != 0) {
-            i.a((byte) -47);
+            i.releaseStatics((byte) -47);
           }
-          pm.field_e.a(df.field_y, vi.field_L, true, (byte) -88);
+          pm.field_e.processPointerInput(UiContainer.field_y, vi.field_L, true, (byte) -88);
           pm.field_e.i(4);
           while (ib.b(false)) {
-            pm.field_e.a(ed.field_Bb, (byte) 33, IntrusiveDeque.field_d);
+            pm.field_e.processKey(ed.field_Bb, (byte) 33, IntrusiveDeque.field_d);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -221,7 +221,7 @@ final class i {
                 if (var3_int >= 24) {
                   throw new IOException();
                 }
-                param0.a(var2, 0, (byte) -86, 24);
+                param0.writeBytes(var2, 0, (byte) -86, 24);
                 decompiledRegionSelector0 = 0;
               } catch (java.lang.Exception decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
@@ -235,7 +235,7 @@ final class i {
                 return;
               }
             }
-            param0.a(var2, 0, (byte) -86, 24);
+            param0.writeBytes(var2, 0, (byte) -86, 24);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;

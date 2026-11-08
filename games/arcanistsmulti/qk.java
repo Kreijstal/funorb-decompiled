@@ -6,7 +6,7 @@ abstract class qk extends ob {
     private dm field_sb;
     static String field_qb;
     private int field_jb;
-    private qm field_V;
+    private UiComponent field_V;
     private int field_nb;
     private int field_mb;
     private int field_ob;
@@ -21,7 +21,7 @@ abstract class qk extends ob {
         return qf.field_a == DirectByteStorage.field_f.field_Bb ? true : false;
     }
 
-    private final void d(int param0, qm param1) {
+    private final void d(int param0, UiComponent param1) {
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
@@ -32,12 +32,12 @@ abstract class qk extends ob {
             this.field_sb.unlink(true);
           }
           if (param1 != null) {
-            param1.a(param1.field_k, this.field_mb + 6, param1.field_v, 6, param0 ^ -55);
+            param1.setBounds(param1.field_k, this.field_mb + 6, param1.field_v, 6, param0 ^ -55);
             this.field_sb = new dm(param1);
           } else {
             this.field_sb = new dm();
           }
-          this.c(-126, this.field_sb);
+          this.addChild(-126, this.field_sb);
           this.field_V = null;
           if (param0 != 12) {
             this.field_rb = (db) null;
@@ -57,7 +57,7 @@ abstract class qk extends ob {
         }
     }
 
-    qk(h param0, qm param1, int param2, int param3, int param4) {
+    qk(h param0, UiComponent param1, int param2, int param3, int param4) {
         super(param0, param1.field_v + 12, 12 + param2 + param1.field_k);
         try {
           this.field_mb = param2;
@@ -106,22 +106,22 @@ abstract class qk extends ob {
         return super.a((byte) 57);
     }
 
-    boolean a(qm param0, byte param1, char param2, int param3) {
+    boolean handleKeyInput(UiComponent param0, byte param1, char param2, int param3) {
         RuntimeException var5 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (super.a(param0, (byte) -123, param2, param3)) {
+          if (super.handleKeyInput(param0, (byte) -123, param2, param3)) {
             return true;
           }
           if (null != this.field_sb) {
             if (param3 == 98) {
-              this.field_sb.a(0, param0);
+              this.field_sb.focusNext(0, param0);
             }
             if (param3 == 99) {
-              this.field_sb.a(0, param0);
+              this.field_sb.focusNext(0, param0);
             }
           }
           if (param1 < -120) {
@@ -159,8 +159,8 @@ abstract class qk extends ob {
 
     final void a(int param0) {
         if (param0 < 89) {
-          qm var3 = (qm) null;
-          this.a((byte) -74, (qm) null);
+          UiComponent var3 = (UiComponent) null;
+          this.a((byte) -74, (UiComponent) null);
         }
         if (this.field_rb != null) {
           if (this.field_rb != mj.field_u) {
@@ -173,7 +173,7 @@ abstract class qk extends ob {
         super.a(126);
     }
 
-    public static void g(int param0) {
+    public static void releaseStatics(int param0) {
         field_lb = null;
         field_qb = null;
         field_pb = null;
@@ -190,8 +190,8 @@ abstract class qk extends ob {
         return super.g((byte) 45);
     }
 
-    void a(byte param0, qm param1) {
-        qm var4 = null;
+    void a(byte param0, UiComponent param1) {
+        UiComponent var4 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -209,8 +209,8 @@ abstract class qk extends ob {
             this.field_jb = 0;
           }
           if (param0 != -92) {
-            var4 = (qm) null;
-            this.d(106, (qm) null);
+            var4 = (UiComponent) null;
+            this.d(106, (UiComponent) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -4,23 +4,23 @@
 final class vh {
     int field_c;
     int field_C;
-    pf field_y;
-    pf field_x;
-    pf field_g;
-    pf field_r;
+    WidgetPainter field_y;
+    WidgetPainter field_x;
+    WidgetPainter field_g;
+    WidgetPainter field_r;
     int field_p;
     int field_s;
     BitmapFont field_q;
     static boolean field_n;
-    pf field_u;
+    WidgetPainter field_u;
     static ql field_f;
     int field_k;
-    pf field_l;
+    WidgetPainter field_l;
     static int field_t;
     int field_d;
     private int field_v;
     int field_z;
-    pf field_b;
+    WidgetPainter field_b;
     private boolean field_i;
     int field_e;
     static String field_A;
@@ -234,7 +234,7 @@ final class vh {
     final void a(int param0, int param1, int param2, int param3, int param4, byte param5) {
         SoftwareRasterizer.drawLine(param1, param4, param0, param2, param3);
         if (param5 <= 48) {
-          vh.b(127);
+          vh.releaseStatics(127);
         }
     }
 
@@ -246,7 +246,7 @@ final class vh {
         jm var17 = new jm(param1, 2, 2, 2236962, 1, 1, 1, 2 + (param1.field_m + param1.field_C));
         mj var14Lifetime1;
         mj var14Lifetime2;
-        this.field_r = (pf) ((Object) var17);
+        this.field_r = (WidgetPainter) ((Object) var17);
         var17.field_k = 16777215;
         mj var4 = new mj();
         var17.a(var4, 1881);
@@ -273,21 +273,21 @@ final class vh {
         var5[4] = (Sprite) ((Object) var18);
         var4.a((byte) -62, 4).a(true, -5859).a((byte) -71, var5);
         var4.a((byte) -113, 5).a((byte) -71, le.a(0, 0, 1, 0, 65793)).a(true, -5859).b(0, -1);
-        this.field_u = (pf) ((Object) var4);
+        this.field_u = (WidgetPainter) ((Object) var4);
         mj var6 = new mj(var4, true);
         var6.field_i = 0;
         mj var7 = new mj(var4, true);
         var7.field_i = 0;
         var7.a(q.a(8947848, 0), -23165);
         var7.a((byte) -28, 1).a((byte) -71, q.a(11184810, 0)).b(0, 2236962);
-        this.field_b = (pf) ((Object) new si(param1, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
+        this.field_b = (WidgetPainter) ((Object) new si(param1, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
         of discarded$0 = new of(param1, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
         lh discarded$1 = new lh(param1, 16777215, -1, 125269879, 4473924, 3, 268435455);
         mj var8 = new mj();
         var17.a(var8, 1881);
         var8.a((byte) -25, 0).a((byte) -71, ff.a((byte) 104, 10066329, 7829367, 15658734)).b(0, 1118481).a(125, -1);
         var8.a((byte) -100, 4).a(true, -5859).a((byte) -71, var5);
-        this.field_l = (pf) ((Object) var8);
+        this.field_l = (WidgetPainter) ((Object) var8);
         Sprite[] var9 = new Sprite[9];
         Sprite[] var10 = new Sprite[9];
         var9[4] = new Sprite(2, 1);
@@ -299,8 +299,8 @@ final class vh {
         mj var12 = new mj();
         var11.a((byte) -122, 0, var9);
         var12.a((byte) 123, 0, var10);
-        this.field_x = (pf) ((Object) var12);
-        this.field_g = (pf) ((Object) var4);
+        this.field_x = (WidgetPainter) ((Object) var12);
+        this.field_g = (WidgetPainter) ((Object) var4);
         Sprite var13 = new Sprite(7, 4);
         var13.field_A = new int[]{8947848, 8947848, 8947848, 13421772, 8947848, 8947848, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772};
         this.field_p = 10;
@@ -324,7 +324,7 @@ final class vh {
         }
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_m = null;
         field_o = null;
         field_f = null;

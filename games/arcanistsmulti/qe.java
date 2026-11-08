@@ -135,7 +135,7 @@ final class qe extends IntrusiveNode {
                         var13 = param2.readInt(-10674);
                         array$0 = new byte[var13];
                         var11[var12_int] = array$0;
-                        param2.a((byte) 92, 0, var21[var12_int], var13);
+                        param2.readBytes((byte) 92, 0, var21[var12_int], var13);
                       }
                     }
                     var18.field_o[var5] = var6_int;
@@ -279,7 +279,7 @@ final class qe extends IntrusiveNode {
         return (java.awt.Container) ((Object) cd.e(param0 ^ -115));
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         field_l = null;
         field_r = null;
         field_j = null;

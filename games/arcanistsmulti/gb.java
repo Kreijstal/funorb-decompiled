@@ -160,7 +160,7 @@ final class gb implements Iterable {
         this.field_g.secondaryPrevious = this.field_g;
     }
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_d = null;
         field_e = null;
         field_b = null;

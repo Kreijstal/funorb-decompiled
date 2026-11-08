@@ -115,8 +115,8 @@ final class th {
 
     final static void a(ResourceArchive param0, ResourceArchive param1, ResourceArchive param2, byte param3, boolean param4) {
         try {
-          wn.field_z = nj.a("", param3 + 133);
-          wn.field_z.a(false, (byte) -59);
+          SingleChildContainer.field_z = nj.a("", param3 + 133);
+          SingleChildContainer.field_z.a(false, (byte) -59);
           aa.a(param3 ^ -121, param2, param1, param0);
           ci.a((byte) 50);
           hb.field_Gb = uj.field_h;
@@ -143,7 +143,7 @@ final class th {
         return true;
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_g = null;
         field_k = null;
         field_a = null;

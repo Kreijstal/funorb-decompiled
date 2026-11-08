@@ -1,19 +1,19 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class mg extends df implements el {
+abstract class mg extends UiContainer implements el {
     private bl field_D;
     static String field_F;
     static BitmapFont field_C;
     static ResourceArchive field_E;
 
-    mg(int param0, int param1, int param2, int param3, pf param4) {
+    mg(int param0, int param1, int param2, int param3, WidgetPainter param4) {
         super(param0, param1, param2, param3, param4);
     }
 
     abstract int h(int param0);
 
-    public static void i(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 > 34) {
           field_F = null;
           field_C = null;

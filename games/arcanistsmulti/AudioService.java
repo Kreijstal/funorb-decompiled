@@ -55,14 +55,14 @@ final class AudioService implements Runnable {
         this.field_a = false;
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_i = null;
         field_h = null;
         field_e = null;
         field_c = null;
         field_d = null;
         if (param0 >= -80) {
-          AudioService.a((byte) 26);
+          AudioService.releaseStatics((byte) 26);
         }
     }
 

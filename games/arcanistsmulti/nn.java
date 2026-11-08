@@ -24,7 +24,7 @@ abstract class nn extends DualLinkNode {
         String var8;
         var5 = ArcanistsMulti.field_G ? 1 : 0;
         if (param0 != -25) {
-          nn.c(-47);
+          nn.releaseStatics(-47);
         }
         var6 = "(" + ve.field_m + " " + nf.field_W + " " + se.field_I + ") " + on.field_g;
         var1 = var6;
@@ -32,7 +32,7 @@ abstract class nn extends DualLinkNode {
           var1 = var6 + ":";
           for (var2 = 0; var2 < fj.field_h; var2++) {
             var7 = var1 + ' ';
-            var3 = 255 & df.field_z.payload[var2];
+            var3 = 255 & UiContainer.field_z.payload[var2];
             var4 = var3 >> 4;
             var3 = var3 & 15;
             if (var4 < 10) {
@@ -52,7 +52,7 @@ abstract class nn extends DualLinkNode {
         return var1;
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         field_t = null;
         if (param0 <= 25) {
           return;
@@ -160,10 +160,10 @@ abstract class nn extends DualLinkNode {
           sm.field_c = new kc(0L, wa.field_Pb, hb.field_Ib.toUpperCase());
           ad.field_c = new kc(0L, ia.field_a);
           tj.field_o = new kc(0L, vf.field_u, of.field_k);
-          hg.field_e = new kc(0L, rn.field_S, lc.field_c);
-          ci.field_a = new kc(0L, rn.field_S, PatchEnvelopeSet.field_c);
-          lo.field_r = new kc(0L, rn.field_S, CanvasRasterBuffer.field_h);
-          vc.field_j = new kc(0L, rn.field_S, g.field_b);
+          hg.field_e = new kc(0L, EditableTextWidget.field_S, lc.field_c);
+          ci.field_a = new kc(0L, EditableTextWidget.field_S, PatchEnvelopeSet.field_c);
+          lo.field_r = new kc(0L, EditableTextWidget.field_S, CanvasRasterBuffer.field_h);
+          vc.field_j = new kc(0L, EditableTextWidget.field_S, g.field_b);
           jo.field_a = new kc(0L, vf.field_i, kh.field_a);
           ee.field_g = new dn(0L, new kc(0L, (kc) null), am.field_c, IntrusiveDeque.field_i);
           of.field_a = new kc(0L, ko.field_h, fi.field_f.toUpperCase());

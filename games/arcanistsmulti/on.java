@@ -248,7 +248,7 @@ final class on {
                 }
                 var2 = MusicPatch.a("mu_chat_off", (byte) -45);
                 if (null != var2) {
-                  ag.field_A = sc.a((byte) 87, var2);
+                  TextButton.field_A = sc.a((byte) 87, var2);
                 }
                 var2 = MusicPatch.a("mu_chat_lobby", (byte) -45);
                 if (var2 != null) {
@@ -256,7 +256,7 @@ final class on {
                 }
                 var2 = MusicPatch.a("mu_chat_public", (byte) -45);
                 if (null != var2) {
-                  qm.field_m = sc.a((byte) 106, var2);
+                  UiComponent.field_m = sc.a((byte) 106, var2);
                 }
                 var2 = MusicPatch.a("mu_chat_ignore", (byte) -45);
                 if (null != var2) {
@@ -720,7 +720,7 @@ final class on {
                 }
                 var2 = MusicPatch.a("status_playing", (byte) -45);
                 if (null != var2) {
-                  kl.field_x = sc.a((byte) 118, var2);
+                  ArrayWidgetContainer.field_x = sc.a((byte) 118, var2);
                 }
                 var2 = MusicPatch.a("status_join", (byte) -45);
                 if (null != var2) {
@@ -912,7 +912,7 @@ final class on {
                 }
                 var2 = MusicPatch.a("gameopt_unratedonly", (byte) -45);
                 if (var2 != null) {
-                  kl.field_D = sc.a((byte) 117, var2);
+                  ArrayWidgetContainer.field_D = sc.a((byte) 117, var2);
                 }
                 var2 = MusicPatch.a("gameopt_notunlocked", (byte) -45);
                 if (null != var2) {
@@ -928,7 +928,7 @@ final class on {
                 }
                 var2 = MusicPatch.a("gameopt_playernotmember", (byte) -45);
                 if (var2 != null) {
-                  qm.field_p = sc.a((byte) 93, var2);
+                  UiComponent.field_p = sc.a((byte) 93, var2);
                 }
                 var2 = MusicPatch.a("gameopt_younotmember", (byte) -45);
                 if (var2 != null) {
@@ -948,7 +948,7 @@ final class on {
                 }
                 var2 = MusicPatch.a("gameopt_youneedratedgames", (byte) -45);
                 if (var2 != null) {
-                  df.field_A = sc.a((byte) 105, var2);
+                  UiContainer.field_A = sc.a((byte) 105, var2);
                 }
                 var2 = MusicPatch.a("gameopt_playerneeds1ratedgame", (byte) -45);
                 if (var2 != null) {
@@ -2794,7 +2794,7 @@ final class on {
                 }
                 var2 = MusicPatch.a("fs_nonmember", (byte) -45);
                 if (var2 != null) {
-                  oc.field_d = sc.a((byte) 124, var2);
+                  IntrusiveDequeCursor.field_d = sc.a((byte) 124, var2);
                 }
                 var2 = MusicPatch.a("fs_button_close", (byte) -45);
                 if (null != var2) {

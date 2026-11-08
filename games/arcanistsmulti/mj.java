@@ -80,7 +80,7 @@ final class mj extends jm {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         int var1 = -101 % ((16 - param0) / 59);
         field_z = null;
         field_v = null;
@@ -260,7 +260,7 @@ final class mj extends jm {
           if (param2 == 3) {
             return;
           }
-          mj.a((byte) -95);
+          mj.releaseStatics((byte) -95);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -282,8 +282,8 @@ final class mj extends jm {
         }
     }
 
-    public final void a(qm param0, int param1, int param2, int param3, boolean param4) {
-        qm stackIn_3_0 = null;
+    public final void a(UiComponent param0, int param1, int param2, int param3, boolean param4) {
+        UiComponent stackIn_3_0 = null;
         RuntimeException stackIn_29_0 = null;
         StringBuilder stackIn_29_1 = null;
         String stackIn_30_2 = null;
@@ -292,18 +292,18 @@ final class mj extends jm {
         vc var7 = null;
         vc var9 = null;
         Sprite[] var10 = null;
-        ag var11 = null;
+        TextButton var11 = null;
         vc var12 = null;
         vc var13 = null;
         vc var14 = null;
         vc var15 = null;
         try {
-          if (!(param0 instanceof ag)) {
+          if (!(param0 instanceof TextButton)) {
             stackIn_3_0 = null;
           } else {
-            stackIn_3_0 = (qm) (param0);
+            stackIn_3_0 = (UiComponent) (param0);
           }
-          var11 = (ag) (stackIn_3_0);
+          var11 = (TextButton) (stackIn_3_0);
           if (param1 != 5592405) {
             var10 = (Sprite[]) null;
             this.a((byte) 33, 29, (Sprite[]) null);
@@ -335,7 +335,7 @@ final class mj extends jm {
               }
             }
           }
-          if (param0.d(-2116)) {
+          if (param0.isFocused(-2116)) {
             var14 = this.field_q[5];
             if (var14 != null) {
               var14.a(param0, param3, this.field_t, this, -2147483648, param2);

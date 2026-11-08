@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class q extends wn {
+final class q extends SingleChildContainer {
     static java.math.BigInteger field_K;
     static String field_J;
     static String field_F;
@@ -33,16 +33,16 @@ final class q extends wn {
         field_G = null;
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, qm param5) {
+    final void handlePointerRelease(int param0, int param1, int param2, int param3, int param4, UiComponent param5) {
         se var8 = null;
         try {
-          super.a(param0, param1 ^ 0, param2, param3, param4, param5);
+          super.handlePointerRelease(param0, param1 ^ 0, param2, param3, param4, param5);
           if (param1 != -20592) {
             field_J = (String) null;
           }
           var8 = so.field_i;
           if (var8 != null &&
-            this.a((byte) -47, param3, param0, param4, param2)) {
+            this.containsPoint((byte) -47, param3, param0, param4, param2)) {
             if (this.field_o instanceof em) {
               ((em) (this.field_o)).a(var8, (byte) 125, this);
               so.field_i = null;
@@ -107,17 +107,17 @@ final class q extends wn {
           var7 = (String) null;
           rb.a(ArchiveIndex.field_u, var5, 0, (String) null, 97);
           lo.field_y = sa.field_Cb;
-          wd.field_a = wn.field_D;
-          wn.field_D.field_J = ArchiveIndex.field_u + (-(8355711 & ArchiveIndex.field_u >> 1) + ((16711422 & nf.field_A.field_J) >> 1));
-          wn.field_D.field_eb = -((16711423 & ArchiveIndex.field_u) >> 1) + ArchiveIndex.field_u + (8355711 & nf.field_A.field_eb >> 1);
-          wn.field_D.field_zb = ((nf.field_A.field_zb & 16711422) >> 1) + (-(8355711 & ArchiveIndex.field_u >> 1) + ArchiveIndex.field_u);
+          wd.field_a = SingleChildContainer.field_D;
+          SingleChildContainer.field_D.field_J = ArchiveIndex.field_u + (-(8355711 & ArchiveIndex.field_u >> 1) + ((16711422 & nf.field_A.field_J) >> 1));
+          SingleChildContainer.field_D.field_eb = -((16711423 & ArchiveIndex.field_u) >> 1) + ArchiveIndex.field_u + (8355711 & nf.field_A.field_eb >> 1);
+          SingleChildContainer.field_D.field_zb = ((nf.field_A.field_zb & 16711422) >> 1) + (-(8355711 & ArchiveIndex.field_u >> 1) + ArchiveIndex.field_u);
           tm.field_d = new kc(0L, param3);
           bi.field_U = new kc(0L, param2);
           in.field_Jb = new kc(0L, (kc) null);
           ck.field_d = new kc(0L, param4);
-          wn.field_D = new kc(0L, param0);
-          wn.field_D.field_Z = oo.field_x;
-          ck.field_d.a(wn.field_D, 41);
+          SingleChildContainer.field_D = new kc(0L, param0);
+          SingleChildContainer.field_D.field_Z = oo.field_x;
+          ck.field_d.a(SingleChildContainer.field_D, 41);
           sa.field_Cb = new kc(0L, lo.field_y);
           ck.field_d.a(sa.field_Cb, 97);
           hf.field_f = new kc(0L, nf.field_A, fe.field_k);
@@ -160,7 +160,7 @@ final class q extends wn {
         }
     }
 
-    private q(int param0, int param1, int param2, int param3, pf param4, wc param5, qm param6) {
+    private q(int param0, int param1, int param2, int param3, WidgetPainter param4, UiListener param5, UiComponent param6) {
         super(param0, param1, param2, param3, param4, param5);
         try {
           this.field_B = param6;

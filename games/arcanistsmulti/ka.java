@@ -169,7 +169,7 @@ final class ka extends go {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_l = null;
         if (param0 != -1) {
           return;

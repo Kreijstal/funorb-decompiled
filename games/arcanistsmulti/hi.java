@@ -11,7 +11,7 @@ final class hi {
     static long field_d;
     static StringBuilder field_e;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_e = null;
         field_b = (int[][]) null;
         if (param0 < 16) {

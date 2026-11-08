@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qn extends ob implements vb {
-    private ag field_V;
+final class qn extends ob implements ButtonListener {
+    private TextButton field_V;
     static String field_kb;
     static le field_ob;
     static String field_lb;
@@ -25,7 +25,7 @@ final class qn extends ob implements vb {
         return hd.field_b + ((on.field_h << 4) + (ra.field_m << 2));
     }
 
-    public final void a(boolean param0, int param1, int param2, int param3, ag param4) {
+    public final void a(boolean param0, int param1, int param2, int param3, TextButton param4) {
         RuntimeException var6 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -54,12 +54,12 @@ final class qn extends ob implements vb {
         }
     }
 
-    private final ag a(wc param0, String param1, byte param2) {
-        ag var4 = null;
+    private final TextButton a(UiListener param0, String param1, byte param2) {
+        TextButton var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
-        ag stackIn_2_0 = null;
-        ag stackIn_4_0 = null;
+        TextButton stackIn_2_0 = null;
+        TextButton stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -67,17 +67,17 @@ final class qn extends ob implements vb {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4 = new ag(param1, param0);
-          var4.field_r = (pf) ((Object) new mm());
+          var4 = new TextButton(param1, param0);
+          var4.field_r = (WidgetPainter) ((Object) new mm());
           var5 = this.field_k - 6;
           this.field_k = this.field_k + 38;
-          var4.a(30, var5, -14 + (this.field_v - 16), 15, -128);
+          var4.setBounds(30, var5, -14 + (this.field_v - 16), 15, -128);
           if (param2 <= 1) {
-            stackIn_2_0 = (ag) null;
+            stackIn_2_0 = (TextButton) null;
             return stackIn_2_0;
           }
-          this.c(-110, var4);
-          this.e((byte) 86);
+          this.addChild(-110, var4);
+          this.refreshLayout((byte) 86);
           stackIn_4_0 = var4;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -222,7 +222,7 @@ final class qn extends ob implements vb {
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
-        qm var4 = null;
+        UiComponent var4 = null;
         try {
           var3 = null;
           if (oo.field_C == param1) {
@@ -242,14 +242,14 @@ final class qn extends ob implements vb {
               }
             }
           }
-          var4 = new qm((String) (var3), (wc) null);
+          var4 = new UiComponent((String) (var3), (UiListener) null);
           var4.field_v = this.field_v;
           var4.field_j = 50;
           var4.field_k = 80;
           var4.field_n = 0;
-          var4.field_r = (pf) ((Object) new jm(vc.field_e, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
-          this.c(-86, var4);
-          this.field_V = this.a((wc) (this), dd.field_e, (byte) 113);
+          var4.field_r = (WidgetPainter) ((Object) new jm(vc.field_e, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
+          this.addChild(-86, var4);
+          this.field_V = this.a((UiListener) (this), dd.field_e, (byte) 113);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

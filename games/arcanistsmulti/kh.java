@@ -230,7 +230,7 @@ abstract class kh {
         return param0 ^ param1;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_g = null;
         field_e = null;
         field_a = null;

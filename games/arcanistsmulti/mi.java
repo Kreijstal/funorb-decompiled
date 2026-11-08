@@ -3948,7 +3948,7 @@ final class mi extends DualLinkNode {
         ml var10_ref_ml = null;
         double var10_double = 0.0;
         mi var10_ref_mi = null;
-        oc var10_ref_oc = null;
+        IntrusiveDequeCursor var10_ref_oc = null;
         int var11 = 0;
         ml var11_ref_ml = null;
         mi var11_ref_mi = null;
@@ -4031,8 +4031,8 @@ final class mi extends DualLinkNode {
                   if (this.field_y > 255) {
                     this.field_y = 0;
                   }
-                  MidiPcmStream.field_L.a((byte) 90, this.field_q.field_Kb);
-                  var5 = (mi) (MidiPcmStream.field_L.b(-69));
+                  MidiPcmStream.field_L.setDeque((byte) 90, this.field_q.field_Kb);
+                  var5 = (mi) (MidiPcmStream.field_L.first(-69));
                   while (null != var5) {
                     stackIn_392_0 = var5;
                     boolean decompiledFrameRemainder2 = true;
@@ -4061,10 +4061,10 @@ final class mi extends DualLinkNode {
                         ((mi) (var5)).field_z = ((mi) (var5)).field_G << 4;
                       }
                     }
-                    var5 = (mi) (MidiPcmStream.field_L.d(-18502));
+                    var5 = (mi) (MidiPcmStream.field_L.next(-18502));
                   }
-                  MidiPcmStream.field_L.a((byte) 28, this.field_q.field_i);
-                  stackIn_392_0Lifetime1 = MidiPcmStream.field_L.b(-66);
+                  MidiPcmStream.field_L.setDeque((byte) 28, this.field_q.field_i);
+                  stackIn_392_0Lifetime1 = MidiPcmStream.field_L.first(-66);
                   var9_ref_ml = (ml) (stackIn_392_0Lifetime1);
                   while (null != var9_ref_ml) {
                     boolean decompiledFrameRemainder1 = true;
@@ -4097,7 +4097,7 @@ final class mi extends DualLinkNode {
                         var9_ref_ml.field_R = var9_ref_ml.field_db << 4;
                       }
                     }
-                    var9_ref_ml = (ml) (MidiPcmStream.field_L.d(-18502));
+                    var9_ref_ml = (ml) (MidiPcmStream.field_L.next(-18502));
                   }
                   return;
                 }
@@ -4120,8 +4120,8 @@ final class mi extends DualLinkNode {
                 var5 = this.a(this.field_t.field_lb + (int)(Math.random() * 256.0 * Math.cos(var9_double)), (ml) null, (byte) 81, 100, this.field_t.field_db - (this.field_t.field_Y >> 1) + (int)(Math.random() * 256.0 * Math.sin(var9_double)), this.field_q);
                 this.field_q.b(52, (mi) (var5));
                 if (this.field_y % 15 == 1) {
-                  MidiPcmStream.field_L.a((byte) 39, this.field_q.field_i);
-                  var11_ref_ml = (ml) (MidiPcmStream.field_L.b(-59));
+                  MidiPcmStream.field_L.setDeque((byte) 39, this.field_q.field_i);
+                  var11_ref_ml = (ml) (MidiPcmStream.field_L.first(-59));
                   while (var11_ref_ml != null) {
                     stackOut_430_0 = var11_ref_ml;
                     stackIn_472_0 = stackOut_430_0;
@@ -4166,10 +4166,10 @@ final class mi extends DualLinkNode {
                         }
                       }
                     }
-                    var11_ref_ml = (ml) (MidiPcmStream.field_L.d(-18502));
+                    var11_ref_ml = (ml) (MidiPcmStream.field_L.next(-18502));
                   }
-                  MidiPcmStream.field_L.a((byte) 122, this.field_q.field_Kb);
-                  stackIn_472_0Lifetime1 = MidiPcmStream.field_L.b(-109);
+                  MidiPcmStream.field_L.setDeque((byte) 122, this.field_q.field_Kb);
+                  stackIn_472_0Lifetime1 = MidiPcmStream.field_L.first(-109);
                   var11_ref_mi = (mi) (stackIn_472_0Lifetime1);
                   while (var11_ref_mi != null) {
                     stackIn_539_0 = var11_ref_mi.field_I;
@@ -4224,7 +4224,7 @@ final class mi extends DualLinkNode {
                         }
                       }
                     }
-                    var11_ref_mi = (mi) (MidiPcmStream.field_L.d(-18502));
+                    var11_ref_mi = (mi) (MidiPcmStream.field_L.next(-18502));
                   }
                 }
                 stackIn_539_0Lifetime1 = -251;
@@ -4259,8 +4259,8 @@ final class mi extends DualLinkNode {
                           return;
                         }
                         var9 = 0;
-                        MidiPcmStream.field_L.a((byte) 69, this.field_q.field_i);
-                        var10_ref_ml = (ml) (MidiPcmStream.field_L.b(-111));
+                        MidiPcmStream.field_L.setDeque((byte) 69, this.field_q.field_i);
+                        var10_ref_ml = (ml) (MidiPcmStream.field_L.first(-111));
                         while (var10_ref_ml != null) {
                           if (var19 != 0) {
                             return;
@@ -4272,7 +4272,7 @@ final class mi extends DualLinkNode {
                             var10_ref_ml.field_x = var10_ref_ml.field_x + 1;
                             var9 = 1;
                           }
-                          var10_ref_ml = (ml) (MidiPcmStream.field_L.d(-18502));
+                          var10_ref_ml = (ml) (MidiPcmStream.field_L.next(-18502));
                         }
                         if (var9 != 0) {
                           if (var19 == 0) {
@@ -4654,8 +4654,8 @@ final class mi extends DualLinkNode {
                                               }
                                               this.field_y = this.field_y + 1;
                                               if (this.field_y % 15 == 1) {
-                                                MidiPcmStream.field_L.a((byte) 28, this.field_q.field_i);
-                                                var9_ref_mlLifetime1 = (ml) (MidiPcmStream.field_L.b(-70));
+                                                MidiPcmStream.field_L.setDeque((byte) 28, this.field_q.field_i);
+                                                var9_ref_mlLifetime1 = (ml) (MidiPcmStream.field_L.first(-70));
                                                 while (var9_ref_mlLifetime1 != null) {
                                                   stackOut_1133_0 = var9_ref_mlLifetime1.field_z;
                                                   stackIn_1159_0 = stackOut_1133_0 ? 1 : 0;
@@ -4676,7 +4676,7 @@ final class mi extends DualLinkNode {
                                                     var9_ref_mlLifetime1.field_x = var9_ref_mlLifetime1.field_x + 2;
                                                     var9_ref_mlLifetime1.field_z = true;
                                                   }
-                                                  var9_ref_mlLifetime1 = (ml) (MidiPcmStream.field_L.d(-18502));
+                                                  var9_ref_mlLifetime1 = (ml) (MidiPcmStream.field_L.next(-18502));
                                                 }
                                               }
                                               stackIn_1159_0Lifetime1 = this.field_y;
@@ -4787,8 +4787,8 @@ final class mi extends DualLinkNode {
                                                       if (0 < this.field_y) {
                                                         this.field_y = this.field_y + 1;
                                                       }
-                                                      MidiPcmStream.field_L.a((byte) 121, this.field_q.field_Kb);
-                                                      var9_ref_mi = (mi) (MidiPcmStream.field_L.b(-60));
+                                                      MidiPcmStream.field_L.setDeque((byte) 121, this.field_q.field_Kb);
+                                                      var9_ref_mi = (mi) (MidiPcmStream.field_L.first(-60));
                                                       while (null != var9_ref_mi) {
                                                         stackOut_1284_0 = var9_ref_mi;
                                                         stackIn_1322_0 = stackOut_1284_0;
@@ -4825,7 +4825,7 @@ final class mi extends DualLinkNode {
                                                             }
                                                           }
                                                         }
-                                                        var9_ref_mi = (mi) (MidiPcmStream.field_L.d(-18502));
+                                                        var9_ref_mi = (mi) (MidiPcmStream.field_L.next(-18502));
                                                       }
                                                     }
                                                     if (decompiledFrameCompleted1) {
@@ -4852,8 +4852,8 @@ final class mi extends DualLinkNode {
                                                         this.field_t.field_gb.field_I != 121)) {
                                                         this.field_t.field_gb = this;
                                                       }
-                                                      MidiPcmStream.field_L.a((byte) 117, this.field_q.field_i);
-                                                      var9_ref_mlLifetime1Lifetime1 = (ml) (MidiPcmStream.field_L.b(-62));
+                                                      MidiPcmStream.field_L.setDeque((byte) 117, this.field_q.field_i);
+                                                      var9_ref_mlLifetime1Lifetime1 = (ml) (MidiPcmStream.field_L.first(-62));
                                                       while (var9_ref_mlLifetime1Lifetime1 != null) {
                                                         if (var9_ref_mlLifetime1Lifetime1 != this.field_t &&
                                                           this.field_y == 0) {
@@ -4892,7 +4892,7 @@ final class mi extends DualLinkNode {
                                                             this.field_y = 1;
                                                           }
                                                         }
-                                                        var9_ref_mlLifetime1Lifetime1 = (ml) (MidiPcmStream.field_L.d(-18502));
+                                                        var9_ref_mlLifetime1Lifetime1 = (ml) (MidiPcmStream.field_L.next(-18502));
                                                       }
                                                     }
                                                     this.field_z = this.field_G << 4;
@@ -4913,8 +4913,8 @@ final class mi extends DualLinkNode {
                                                     }
                                                     this.field_G = this.field_t.field_db;
                                                     if (this.field_y < 5) {
-                                                      MidiPcmStream.field_L.a((byte) 116, this.field_q.field_i);
-                                                      var9_ref_mlLifetime1Lifetime1 = (ml) (MidiPcmStream.field_L.b(-57));
+                                                      MidiPcmStream.field_L.setDeque((byte) 116, this.field_q.field_i);
+                                                      var9_ref_mlLifetime1Lifetime1 = (ml) (MidiPcmStream.field_L.first(-57));
                                                       while (var9_ref_mlLifetime1Lifetime1 != null) {
                                                         if (~this.field_t.field_u != ~var9_ref_mlLifetime1Lifetime1.field_u) {
                                                           var10Lifetime1 = -var9_ref_mlLifetime1Lifetime1.field_lb + this.field_v;
@@ -4952,7 +4952,7 @@ final class mi extends DualLinkNode {
                                                             this.field_G = var13Lifetime1;
                                                           }
                                                         }
-                                                        var9_ref_mlLifetime1Lifetime1 = (ml) (MidiPcmStream.field_L.d(-18502));
+                                                        var9_ref_mlLifetime1Lifetime1 = (ml) (MidiPcmStream.field_L.next(-18502));
                                                       }
                                                     }
                                                     this.field_z = this.field_G << 4;
@@ -5051,8 +5051,8 @@ final class mi extends DualLinkNode {
                                                   if (this.field_y > 0) {
                                                     this.field_y = this.field_y + 1;
                                                   }
-                                                  MidiPcmStream.field_L.a((byte) 51, this.field_q.field_Kb);
-                                                  var9_ref_miLifetime1 = (mi) (MidiPcmStream.field_L.b(-62));
+                                                  MidiPcmStream.field_L.setDeque((byte) 51, this.field_q.field_Kb);
+                                                  var9_ref_miLifetime1 = (mi) (MidiPcmStream.field_L.first(-62));
                                                   while (null != var9_ref_miLifetime1) {
                                                     stackOut_1493_0 = var9_ref_miLifetime1;
                                                     stackIn_1544_0 = stackOut_1493_0;
@@ -5087,10 +5087,10 @@ final class mi extends DualLinkNode {
                                                         }
                                                       }
                                                     }
-                                                    var9_ref_miLifetime1 = (mi) (MidiPcmStream.field_L.d(-18502));
+                                                    var9_ref_miLifetime1 = (mi) (MidiPcmStream.field_L.next(-18502));
                                                   }
-                                                  MidiPcmStream.field_L.a((byte) 77, this.field_q.field_i);
-                                                  stackIn_1544_0Lifetime1 = MidiPcmStream.field_L.b(-78);
+                                                  MidiPcmStream.field_L.setDeque((byte) 77, this.field_q.field_i);
+                                                  stackIn_1544_0Lifetime1 = MidiPcmStream.field_L.first(-78);
                                                   var9_ref_mlLifetime1Lifetime1 = (ml) (stackIn_1544_0Lifetime1);
                                                   while (var9_ref_mlLifetime1Lifetime1 != null) {
                                                     if (var9_ref_mlLifetime1Lifetime1.field_z) {
@@ -5118,7 +5118,7 @@ final class mi extends DualLinkNode {
                                                         this.field_y = this.field_y + 1;
                                                       }
                                                     }
-                                                    var9_ref_mlLifetime1Lifetime1 = (ml) (MidiPcmStream.field_L.d(-18502));
+                                                    var9_ref_mlLifetime1Lifetime1 = (ml) (MidiPcmStream.field_L.next(-18502));
                                                   }
                                                   return;
                                                 }
@@ -5224,8 +5224,8 @@ final class mi extends DualLinkNode {
                                                                     this.field_q.b(52, (mi) (var5));
                                                                   }
                                                                 } else {
-                                                                  MidiPcmStream.field_L.a((byte) 75, this.field_q.field_Kb);
-                                                                  var9_ref_miLifetime2 = (mi) (MidiPcmStream.field_L.b(-43));
+                                                                  MidiPcmStream.field_L.setDeque((byte) 75, this.field_q.field_Kb);
+                                                                  var9_ref_miLifetime2 = (mi) (MidiPcmStream.field_L.first(-43));
                                                                   while (true) {
                                                                     if (null != var9_ref_miLifetime2) {
                                                                       stackOut_2016_0 = var9_ref_miLifetime2;
@@ -5246,7 +5246,7 @@ final class mi extends DualLinkNode {
                                                                           }
                                                                         }
                                                                       }
-                                                                      var9_ref_miLifetime2 = (mi) (MidiPcmStream.field_L.d(-18502));
+                                                                      var9_ref_miLifetime2 = (mi) (MidiPcmStream.field_L.next(-18502));
                                                                       continue;
                                                                     }
                                                                     break;
@@ -5947,8 +5947,8 @@ final class mi extends DualLinkNode {
                                                               }
                                                             } else {
                                                               if (this.field_I != 71) {
-                                                                MidiPcmStream.field_L.a((byte) 100, this.field_q.field_Kb);
-                                                                var9_ref_miLifetime2 = (mi) (MidiPcmStream.field_L.b(-123));
+                                                                MidiPcmStream.field_L.setDeque((byte) 100, this.field_q.field_Kb);
+                                                                var9_ref_miLifetime2 = (mi) (MidiPcmStream.field_L.first(-123));
                                                                 while (true) {
                                                                   if (var9_ref_miLifetime2 != null) {
                                                                     stackOut_1870_0 = var9_ref_miLifetime2;
@@ -5970,7 +5970,7 @@ final class mi extends DualLinkNode {
                                                                           }
                                                                         }
                                                                       }
-                                                                      var9_ref_miLifetime2 = (mi) (MidiPcmStream.field_L.d(-18502));
+                                                                      var9_ref_miLifetime2 = (mi) (MidiPcmStream.field_L.next(-18502));
                                                                       continue;
                                                                     }
                                                                   } else {
@@ -6111,8 +6111,8 @@ final class mi extends DualLinkNode {
                                                     if (0 < this.field_y) {
                                                       this.field_y = this.field_y + 1;
                                                     }
-                                                    MidiPcmStream.field_L.a((byte) 107, this.field_q.field_Kb);
-                                                    var9_ref_miLifetime2Lifetime1 = (mi) (MidiPcmStream.field_L.b(-32));
+                                                    MidiPcmStream.field_L.setDeque((byte) 107, this.field_q.field_Kb);
+                                                    var9_ref_miLifetime2Lifetime1 = (mi) (MidiPcmStream.field_L.first(-32));
                                                     while (var9_ref_miLifetime2Lifetime1 != null) {
                                                       if (var9_ref_miLifetime2Lifetime1.h(-139) &&
                                                         var9_ref_miLifetime2Lifetime1.field_I != 30 &&
@@ -6148,7 +6148,7 @@ final class mi extends DualLinkNode {
                                                           }
                                                         }
                                                       }
-                                                      var9_ref_miLifetime2Lifetime1 = (mi) (MidiPcmStream.field_L.d(-18502));
+                                                      var9_ref_miLifetime2Lifetime1 = (mi) (MidiPcmStream.field_L.next(-18502));
                                                       if (var19 == 0) {
                                                         continue;
                                                       }
@@ -6199,8 +6199,8 @@ final class mi extends DualLinkNode {
                                                     this.a(50, 64, 32, 8);
                                                     this.field_y = 250;
                                                   }
-                                                  MidiPcmStream.field_L.a((byte) 31, this.field_q.field_Kb);
-                                                  var9_ref_miLifetime3 = (mi) (MidiPcmStream.field_L.b(-78));
+                                                  MidiPcmStream.field_L.setDeque((byte) 31, this.field_q.field_Kb);
+                                                  var9_ref_miLifetime3 = (mi) (MidiPcmStream.field_L.first(-78));
                                                   while (var9_ref_miLifetime3 != null) {
                                                     if (var19 != 0) {
                                                       return;
@@ -6236,7 +6236,7 @@ final class mi extends DualLinkNode {
                                                         }
                                                       }
                                                     }
-                                                    var9_ref_miLifetime3 = (mi) (MidiPcmStream.field_L.d(-18502));
+                                                    var9_ref_miLifetime3 = (mi) (MidiPcmStream.field_L.next(-18502));
                                                   }
                                                   return;
                                                 }
@@ -6642,8 +6642,8 @@ final class mi extends DualLinkNode {
                     this.field_G = this.field_z >> 4;
                     if (~var10Lifetime1Lifetime1 != ~this.field_o ||
                       ~this.field_z != ~var11Lifetime1Lifetime1) {
-                      MidiPcmStream.field_L.a((byte) 38, this.field_q.field_r);
-                      var12_ref_mi = (mi) (MidiPcmStream.field_L.b(-62));
+                      MidiPcmStream.field_L.setDeque((byte) 38, this.field_q.field_r);
+                      var12_ref_mi = (mi) (MidiPcmStream.field_L.first(-62));
                       while (var12_ref_mi != null) {
                         var13Lifetime1Lifetime1 = var12_ref_mi.field_o - var10Lifetime1Lifetime1;
                         var14Lifetime1Lifetime1 = var12_ref_mi.field_z - var11Lifetime1Lifetime1;
@@ -6659,7 +6659,7 @@ final class mi extends DualLinkNode {
                           var12_ref_mi.field_v = var12_ref_mi.field_o >> 4;
                           var12_ref_mi.field_G = var12_ref_mi.field_z >> 4;
                         }
-                        var12_ref_mi = (mi) (MidiPcmStream.field_L.d(-18502));
+                        var12_ref_mi = (mi) (MidiPcmStream.field_L.next(-18502));
                       }
                     }
                   }
@@ -6671,8 +6671,8 @@ final class mi extends DualLinkNode {
                   if (stackIn_594_0 >= stackIn_594_1) {
                     this.field_x = this.field_x - 256;
                   }
-                  MidiPcmStream.field_L.a((byte) 75, this.field_q.field_Kb);
-                  var10_ref_mi = (mi) (MidiPcmStream.field_L.b(-52));
+                  MidiPcmStream.field_L.setDeque((byte) 75, this.field_q.field_Kb);
+                  var10_ref_mi = (mi) (MidiPcmStream.field_L.first(-52));
                   while (null != var10_ref_mi) {
                     if (var10_ref_mi.m(-8209)) {
                       var11Lifetime1Lifetime1 = this.field_o - var10_ref_mi.field_o;
@@ -6681,7 +6681,7 @@ final class mi extends DualLinkNode {
                         this.field_q.field_h.a(var10_ref_mi, 15893);
                       }
                     }
-                    var10_ref_mi = (mi) (MidiPcmStream.field_L.d(-18502));
+                    var10_ref_mi = (mi) (MidiPcmStream.field_L.next(-18502));
                     if (var19 == 0) {
                       continue;
                     }
@@ -6692,8 +6692,8 @@ final class mi extends DualLinkNode {
                   }
                   break regionExit2;
                 }
-                var10_ref_oc = new oc(this.field_q.field_r);
-                var11_ref_miLifetime1 = (mi) (var10_ref_oc.b(-123));
+                var10_ref_oc = new IntrusiveDequeCursor(this.field_q.field_r);
+                var11_ref_miLifetime1 = (mi) (var10_ref_oc.first(-123));
                 while (var11_ref_miLifetime1 != null) {
                   var12Lifetime1Lifetime2 = -var11_ref_miLifetime1.field_o + this.field_o;
                   var13Lifetime1Lifetime2 = -var11_ref_miLifetime1.field_z + this.field_z;
@@ -6703,7 +6703,7 @@ final class mi extends DualLinkNode {
                   if (((var9 >> 4) * var9) > (var13Lifetime1Lifetime2 * (var13Lifetime1Lifetime2 >> 4) + (var12Lifetime1Lifetime2 >> 4) * var12Lifetime1Lifetime2)) {
                     this.field_q.field_kb.addLast(var11_ref_miLifetime1, -1);
                   }
-                  var11_ref_miLifetime1 = (mi) (var10_ref_oc.d(-18502));
+                  var11_ref_miLifetime1 = (mi) (var10_ref_oc.next(-18502));
                 }
                 this.f(0);
                 return;
@@ -6729,8 +6729,8 @@ final class mi extends DualLinkNode {
                 if (this.field_y >= 1) {
                   return;
                 }
-                MidiPcmStream.field_L.a((byte) 27, this.field_q.field_i);
-                var10_ref_mlLifetime1 = (ml) (MidiPcmStream.field_L.b(-99));
+                MidiPcmStream.field_L.setDeque((byte) 27, this.field_q.field_i);
+                var10_ref_mlLifetime1 = (ml) (MidiPcmStream.field_L.first(-99));
                 while (null != var10_ref_mlLifetime1) {
                   if (var19 != 0) {
                     return;
@@ -6763,7 +6763,7 @@ final class mi extends DualLinkNode {
                       this.field_G = var14Lifetime2;
                     }
                   }
-                  var10_ref_mlLifetime1 = (ml) (MidiPcmStream.field_L.d(-18502));
+                  var10_ref_mlLifetime1 = (ml) (MidiPcmStream.field_L.next(-18502));
                 }
                 return;
               }
@@ -7086,8 +7086,8 @@ final class mi extends DualLinkNode {
             this.field_I == 2 ||
             this.field_I == 3 ||
             147 == this.field_I) {
-            ki.field_v.a((byte) 116, this.field_q.field_Kb);
-            var6_ref_mi = (mi) (ki.field_v.b(param3 ^ -40));
+            ki.field_v.setDeque((byte) 116, this.field_q.field_Kb);
+            var6_ref_mi = (mi) (ki.field_v.first(param3 ^ -40));
             while (var6_ref_mi != null) {
               stackIn_52_0 = 148;
               stackIn_52_1 = var6_ref_mi.field_I;
@@ -7101,7 +7101,7 @@ final class mi extends DualLinkNode {
                 param2 += 5;
                 param0 += 5;
               }
-              var6_ref_mi = (mi) (ki.field_v.d(param3 - 18510));
+              var6_ref_mi = (mi) (ki.field_v.next(param3 - 18510));
             }
           }
           if (decompiledFrameCompleted0) {
@@ -7156,12 +7156,12 @@ final class mi extends DualLinkNode {
               this.field_G = this.field_G + 32;
             }
           }
-          ki.field_v.a((byte) 109, this.field_q.field_i);
+          ki.field_v.setDeque((byte) 109, this.field_q.field_i);
           var6Lifetime2 = 1;
           if (param3 != 8) {
             this.field_F = -5;
           }
-          var7 = (ml) (ki.field_v.b(-46));
+          var7 = (ml) (ki.field_v.first(-46));
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var7 == null))) {
             var6Lifetime3 = 1;
@@ -7240,7 +7240,7 @@ final class mi extends DualLinkNode {
                   var7.field_jb != 12 &&
                   (16 + (var7.field_Y >> 1) + param2) > var11) {
                   var14 = var7;
-                  var7 = (ml) (ki.field_v.b(param3 - 88));
+                  var7 = (ml) (ki.field_v.first(param3 - 88));
                   while (var7 != null) {
                     if (var7.field_jb == 37) {
                       this.field_q.a(var14, 0);
@@ -7254,7 +7254,7 @@ final class mi extends DualLinkNode {
                       this.a(2, (byte) 37, 8);
                       return;
                     }
-                    var7 = (ml) (ki.field_v.d(param3 ^ -18510));
+                    var7 = (ml) (ki.field_v.next(param3 ^ -18510));
                   }
                   this.a(0, (byte) 37, 8);
                   return;
@@ -7353,7 +7353,7 @@ final class mi extends DualLinkNode {
                   this.a(var5_int, true, var13, var7);
                 }
               }
-              var7 = (ml) (ki.field_v.d(-18502));
+              var7 = (ml) (ki.field_v.next(-18502));
               continue;
             }
             break;
@@ -7493,7 +7493,7 @@ final class mi extends DualLinkNode {
         mi var5 = null;
         int var5_int = 0;
         RuntimeException var5_ref = null;
-        oc var6 = null;
+        IntrusiveDequeCursor var6 = null;
         int var6_int = 0;
         mi var7 = null;
         int var7_int = 0;
@@ -7502,10 +7502,10 @@ final class mi extends DualLinkNode {
         ml stackIn_552_0Lifetime1;
         ml stackIn_552_1Lifetime1;
         mi var5Lifetime1;
-        oc var6Lifetime1;
+        IntrusiveDequeCursor var6Lifetime1;
         ml var7_refLifetime1;
         mi var5Lifetime2;
-        oc var6Lifetime1Lifetime1;
+        IntrusiveDequeCursor var6Lifetime1Lifetime1;
         int var5_intLifetime1;
         int var5_intLifetime2;
         int var5_intLifetime3;
@@ -7882,8 +7882,8 @@ final class mi extends DualLinkNode {
               var5_intLifetime3 = 1;
               if (17 == param3.field_jb ||
                 param3.field_jb == 9) {
-                var6 = new oc(this.field_q.field_Kb);
-                var7 = (mi) (var6.b(-77));
+                var6 = new IntrusiveDequeCursor(this.field_q.field_Kb);
+                var7 = (mi) (var6.first(-77));
                 while (var7 != null) {
                   stackIn_564_0 = var7.field_I;
                   stackIn_564_1 = 106;
@@ -7895,7 +7895,7 @@ final class mi extends DualLinkNode {
                     param3 == var7.field_t) {
                     var5_intLifetime3 = 0;
                   }
-                  var7 = (mi) (var6.d(-18502));
+                  var7 = (mi) (var6.next(-18502));
                 }
               }
               if ((decompiledFrameCompleted1) && (!param3.field_U &&
@@ -7918,8 +7918,8 @@ final class mi extends DualLinkNode {
                 param3.field_ib = param3.field_ib / 4;
                 if (param3.field_jb == 9) {
                   param3.field_jb = 7;
-                  var6Lifetime1 = new oc(this.field_q.field_i);
-                  var7_ref = (ml) (var6Lifetime1.b(-38));
+                  var6Lifetime1 = new IntrusiveDequeCursor(this.field_q.field_i);
+                  var7_ref = (ml) (var6Lifetime1.first(-38));
                   while (var7_ref != null) {
                     stackIn_552_0 = var7_ref.field_s;
                     stackIn_552_1 = param3.field_s;
@@ -7928,7 +7928,7 @@ final class mi extends DualLinkNode {
                         var7_ref.field_U &&
                         17 == var7_ref.field_jb) {
                       }
-                      var7_ref = (ml) (var6Lifetime1.d(-18502));
+                      var7_ref = (ml) (var6Lifetime1.next(-18502));
                       continue;
                     }
                     while (true) {
@@ -7936,14 +7936,14 @@ final class mi extends DualLinkNode {
                         var7_ref.field_U &&
                         var7_ref.field_jb == 7) {
                       }
-                      var7_ref = (ml) (var6Lifetime1.d(-18502));
+                      var7_ref = (ml) (var6Lifetime1.next(-18502));
                       break regionExit1;
                     }
                   }
                 }
                 if (param3.field_jb == 17) {
-                  var6Lifetime1Lifetime1 = new oc(this.field_q.field_i);
-                  var7_refLifetime1 = (ml) (var6Lifetime1Lifetime1.b(-62));
+                  var6Lifetime1Lifetime1 = new IntrusiveDequeCursor(this.field_q.field_i);
+                  var7_refLifetime1 = (ml) (var6Lifetime1Lifetime1.first(-62));
                   while (null != var7_refLifetime1) {
                     stackIn_563_0 = param3.field_s;
                     if (var8 != 0) {
@@ -7956,7 +7956,7 @@ final class mi extends DualLinkNode {
                       var7_refLifetime1.field_U &&
                       var7_refLifetime1.field_jb == 7) {
                     }
-                    var7_refLifetime1 = (ml) (var6Lifetime1Lifetime1.d(-18502));
+                    var7_refLifetime1 = (ml) (var6Lifetime1Lifetime1.next(-18502));
                   }
                 }
               }
@@ -8151,7 +8151,7 @@ final class mi extends DualLinkNode {
         RuntimeException var2_ref = null;
         Sprite var3 = null;
         Sprite var4 = null;
-        oc var5 = null;
+        IntrusiveDequeCursor var5 = null;
         ml var6_ref_ml = null;
         int var6 = 0;
         int var7 = 0;
@@ -8165,8 +8165,8 @@ final class mi extends DualLinkNode {
           var2 = gj.field_f[0].toRgbSprite();
           var3 = gj.field_f[5].toRgbSprite();
           var4 = tg.field_b[2].toRgbSprite();
-          var5 = new oc(this.field_q.field_i);
-          var6_ref_ml = (ml) (var5.b(-36));
+          var5 = new IntrusiveDequeCursor(this.field_q.field_i);
+          var6_ref_ml = (ml) (var5.first(-36));
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var6_ref_ml == null))) {
             stackIn_14_0 = 0;
@@ -8176,7 +8176,7 @@ final class mi extends DualLinkNode {
               } else {
                 this.field_q.a(var6_ref_ml, 0);
               }
-              var6_ref_ml = (ml) (var5.d(-18502));
+              var6_ref_ml = (ml) (var5.next(-18502));
               continue;
             }
             break;
@@ -8834,13 +8834,13 @@ final class mi extends DualLinkNode {
                                                                                                                                           return;
                                                                                                                                         }
                                                                                                                                       }
-                                                                                                                                      if (null == kl.field_G) {
+                                                                                                                                      if (null == ArrayWidgetContainer.field_G) {
                                                                                                                                         return;
                                                                                                                                       }
                                                                                                                                       if (0 > this.field_H) {
                                                                                                                                         return;
                                                                                                                                       }
-                                                                                                                                      kl.field_G[this.field_H].draw(-8 + this.field_v + param2, -8 + this.field_G + param0);
+                                                                                                                                      ArrayWidgetContainer.field_G[this.field_H].draw(-8 + this.field_v + param2, -8 + this.field_G + param0);
                                                                                                                                       if (var16 == 0) {
                                                                                                                                         return;
                                                                                                                                       }
@@ -9055,14 +9055,14 @@ final class mi extends DualLinkNode {
                                                                                                             return;
                                                                                                           }
                                                                                                         }
-                                                                                                        var5 = kl.field_E.length * this.field_x / 256;
+                                                                                                        var5 = ArrayWidgetContainer.field_E.length * this.field_x / 256;
                                                                                                         if (0 > var5) {
                                                                                                           var5 = 0;
                                                                                                         }
-                                                                                                        if (kl.field_E.length <= var5) {
-                                                                                                          var5 = -1 + kl.field_E.length;
+                                                                                                        if (ArrayWidgetContainer.field_E.length <= var5) {
+                                                                                                          var5 = -1 + ArrayWidgetContainer.field_E.length;
                                                                                                         }
-                                                                                                        kl.field_E[var5].drawScaledAlpha(param2 + (this.field_v - 128), -128 + this.field_G + param0, 256, 256, 64);
+                                                                                                        ArrayWidgetContainer.field_E[var5].drawScaledAlpha(param2 + (this.field_v - 128), -128 + this.field_G + param0, 256, 256, 64);
                                                                                                         if (var16 == 0) {
                                                                                                           return;
                                                                                                         }
@@ -9094,8 +9094,8 @@ final class mi extends DualLinkNode {
                                                                                                         (this.field_t.field_jb == 6)) {
                                                                                                         var5 = 64;
                                                                                                       }
-                                                                                                      MidiPcmStream.field_L.a((byte) 36, this.field_q.field_i);
-                                                                                                      var6_ref = (ml) (MidiPcmStream.field_L.b(-68));
+                                                                                                      MidiPcmStream.field_L.setDeque((byte) 36, this.field_q.field_i);
+                                                                                                      var6_ref = (ml) (MidiPcmStream.field_L.first(-68));
                                                                                                       while (var6_ref != null) {
                                                                                                         if (var16 != 0) {
                                                                                                           return;
@@ -9115,7 +9115,7 @@ final class mi extends DualLinkNode {
                                                                                                             wg.field_J[this.field_x >> 2].drawScaledAlpha(-var9 + var10, -var9 + var11, var9 * 2, 2 * var9, 48);
                                                                                                           }
                                                                                                         }
-                                                                                                        var6_ref = (ml) (MidiPcmStream.field_L.d(-18502));
+                                                                                                        var6_ref = (ml) (MidiPcmStream.field_L.next(-18502));
                                                                                                         continue;
                                                                                                       }
                                                                                                       if (var16 == 0) {

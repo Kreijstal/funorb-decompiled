@@ -9,7 +9,7 @@ final class mn extends rl {
     static kc[] field_s;
     static kc field_t;
     static IndexedSprite field_y;
-    private rn field_u;
+    private EditableTextWidget field_u;
     static String field_x;
 
     final eh a(String param0, int param1) {
@@ -52,7 +52,7 @@ final class mn extends rl {
         }
     }
 
-    public static void d(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_w = null;
         field_t = null;
         int var1 = 20 % ((-64 - param0) / 51);
@@ -132,7 +132,7 @@ final class mn extends rl {
         }
     }
 
-    mn(rn param0, rn param1) {
+    mn(EditableTextWidget param0, EditableTextWidget param1) {
         super(param0);
         try {
           this.field_u = param1;
@@ -193,12 +193,12 @@ final class mn extends rl {
 
     final static void e(int param0) {
         if (null != wd.field_a) {
-          wn.field_D = wd.field_a;
+          SingleChildContainer.field_D = wd.field_a;
           sa.field_Cb = lo.field_y;
-          wn.field_D.field_J = -1;
+          SingleChildContainer.field_D.field_J = -1;
           wd.field_a = null;
           lo.field_y = null;
-          wn.field_D.field_eb = -1;
+          SingleChildContainer.field_D.field_eb = -1;
         }
         ck.field_d = null;
         tm.field_d = null;

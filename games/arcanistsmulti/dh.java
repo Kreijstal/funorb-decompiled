@@ -17,7 +17,7 @@ final class dh extends kc {
     private StringBuilder field_Ib;
     static boolean[][] field_Hb;
 
-    public static void f(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_Fb = null;
         field_Jb = null;
         field_Nb = null;
@@ -103,7 +103,7 @@ final class dh extends kc {
           wl.field_L[param2] = param0;
           ArchiveProvider.field_f[param2] = new lc(param2);
           if (param1 != 9) {
-            dh.f((byte) 121);
+            dh.releaseStatics((byte) 121);
           }
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "dh.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');

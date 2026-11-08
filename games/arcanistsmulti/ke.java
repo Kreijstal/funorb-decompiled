@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ke extends wn {
+final class ke extends SingleChildContainer {
     private BitmapFont field_L;
     static String field_E;
     private int field_G;
@@ -23,25 +23,25 @@ final class ke extends wn {
         pm.field_e.b(new kn(pm.field_e), 15637);
     }
 
-    final String b(boolean param0) {
+    final String getTooltip(boolean param0) {
         int var2 = this.field_B.field_w ? 1 : 0;
         this.field_B.field_w = this.field_w;
-        String var3 = this.field_B.b(param0);
+        String var3 = this.field_B.getTooltip(param0);
         this.field_B.field_w = var2 != 0 ? true : false;
         if (!param0) {
           return var3;
         }
-        ke.f(-115);
+        ke.releaseStatics(-115);
         return var3;
     }
 
-    final void a(byte param0, int param1, int param2, int param3) {
+    final void drawLayer(byte param0, int param1, int param2, int param3) {
         if (param0 > -52) {
           return;
         }
         int var5 = this.field_n + param1;
         int var6 = this.field_j + param3;
-        super.a((byte) -60, param1, param2, param3);
+        super.drawLayer((byte) -60, param1, param2, param3);
         if (param2 != 0) {
           return;
         }
@@ -49,7 +49,7 @@ final class ke extends wn {
         this.field_L.drawParagraph(this.field_N, this.field_G + (var7 + var5), this.field_G + var6, -this.field_G + this.field_H, this.field_k - this.field_G * 2, this.field_I, -1, this.field_J ? 0 : 2, 1, this.field_L.field_C);
     }
 
-    public static void f(int param0) {
+    public static void releaseStatics(int param0) {
         field_E = null;
         field_M = null;
         if (param0 != 2) {
@@ -118,8 +118,8 @@ final class ke extends wn {
         }
     }
 
-    ke(int param0, int param1, int param2, int param3, qm param4, boolean param5, int param6, int param7, BitmapFont param8, int param9, String param10) {
-        super(param0, param1, param2, param3, (pf) null, (wc) null);
+    ke(int param0, int param1, int param2, int param3, UiComponent param4, boolean param5, int param6, int param7, BitmapFont param8, int param9, String param10) {
+        super(param0, param1, param2, param3, (WidgetPainter) null, (UiListener) null);
         boolean stackIn_4_1 = false;
         int stackIn_10_0 = 0;
         RuntimeException stackIn_14_0 = null;
@@ -146,7 +146,7 @@ final class ke extends wn {
           var12_int = -this.field_G + this.field_H;
           var13 = this.field_L.paragraphHeight(param10, var12_int, this.field_L.field_C) + this.field_G * 2;
           if (var13 > param3) {
-            this.a(var13, param1, param2, param0, -59);
+            this.setBounds(var13, param1, param2, param0, -59);
           } else {
             var13 = param3;
           }
@@ -156,7 +156,7 @@ final class ke extends wn {
             stackIn_10_0 = this.field_H + this.field_G * 2;
           }
           var14 = stackIn_10_0;
-          this.field_B.a(param3 - 2 * this.field_G, this.field_G + (-param3 + var13 >> 1), param2 - (this.field_H + 3 * this.field_G), var14, -60);
+          this.field_B.setBounds(param3 - 2 * this.field_G, this.field_G + (-param3 + var13 >> 1), param2 - (this.field_H + 3 * this.field_G), var14, -60);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

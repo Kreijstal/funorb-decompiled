@@ -201,12 +201,12 @@ final class na extends kc {
         var4.position = var4.position + 1;
         int var6 = var4.position;
         var4.writeByte(7, (byte) -5);
-        var4.a(param0, (byte) 110);
+        var4.writeLong(param0, (byte) 110);
         var4.writeByteLengthAtMark(-var6 + var4.position, (byte) 43);
     }
 
     final static void i(byte param0) {
-        df.a(1, cd.e(108));
+        UiContainer.a(1, cd.e(108));
         int var1 = -86 % ((param0 + 14) / 33);
     }
 
@@ -221,7 +221,7 @@ final class na extends kc {
           IOException var15 = null;
           RuntimeException var15_ref = null;
           try {
-            df.field_z = new CipherPacketBuffer(param9);
+            UiContainer.field_z = new CipherPacketBuffer(param9);
             he.field_e = new CipherPacketBuffer(param6);
             md.field_c = param8;
             ho.field_c = param10;

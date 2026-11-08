@@ -567,7 +567,7 @@ final class ne {
         return false;
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 < -1) {
           field_f = null;
           field_a = null;

@@ -72,7 +72,7 @@ final class dn extends kc {
           stackIn_21_0.field_Fb = stackIn_22_1;
           stackIn_25_0 = ((4 & var4_int) == 0) ? 0 : 1;
           var5 = stackIn_25_0;
-          param0.a((byte) 122, 0, param1.field_Wb, param1.field_Wb.length);
+          param0.readBytes((byte) 122, 0, param1.field_Wb, param1.field_Wb.length);
           stackIn_28_0 = ((var4_int & param3) == 0) ? 0 : 1;
           var6 = stackIn_28_0;
           param1.field_Db = param0.readUnsignedShort(param3 ^ -100);
@@ -230,7 +230,7 @@ final class dn extends kc {
         return this.a(this.field_Hb.field_I, param0, param3, param4, -5368, param5, param2);
     }
 
-    public static void e(int param0) {
+    public static void releaseStatics(int param0) {
         field_Gb = null;
         field_Fb = null;
         field_Ib = null;
@@ -320,8 +320,8 @@ final class dn extends kc {
         int var6 = 0;
         String var7 = null;
         try {
-          hj.field_a[0] = ag.field_D.nextInt();
-          hj.field_a[1] = ag.field_D.nextInt();
+          hj.field_a[0] = TextButton.field_D.nextInt();
+          hj.field_a[1] = TextButton.field_D.nextInt();
           hj.field_a[2] = (int)(of.field_j >> 32);
           hj.field_a[3] = (int)of.field_j;
           jf.field_a.position = 0;
@@ -341,7 +341,7 @@ final class dn extends kc {
           he.field_e.position = he.field_e.position + 2;
           var5_int = he.field_e.position;
           he.field_e.writeInt(gm.field_d, (byte) -101);
-          he.field_e.a(ho.field_c, (byte) 36);
+          he.field_e.writeLong(ho.field_c, (byte) 36);
           var6 = 0;
           if (lk.field_d) {
             var6 = var6 | 1;
@@ -360,13 +360,13 @@ final class dn extends kc {
           if (var7 == null) {
             var7 = "";
           }
-          he.field_e.a(var7, param2 ^ 23377);
+          he.field_e.writeString(var7, param2 ^ 23377);
           if (AudioService.field_i != null) {
-            he.field_e.a(AudioService.field_i, (byte) -110);
+            he.field_e.writeVersionedString(AudioService.field_i, (byte) -110);
           }
           vd.a(false, he.field_e, nl.field_Jb, jf.field_a, q.field_K);
           if (param2 != 116) {
-            dn.e(-40);
+            dn.releaseStatics(-40);
           }
           he.field_e.writeShortLengthAtMark(he.field_e.position - var5_int, -19571);
           we.a(-1, (byte) 104);
@@ -421,7 +421,7 @@ final class dn extends kc {
             var8 += 128;
           }
           var6.writeByte(var8, (byte) -32);
-          var6.a(param2, 0, (byte) -86, param2.length);
+          var6.writeBytes(param2, 0, (byte) -86, param2.length);
           var6.writeByteLengthAtMark(var6.position - var7, (byte) 43);
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "dn.F(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ')');

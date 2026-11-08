@@ -74,7 +74,7 @@ final class ik {
         var2.writeByte(param1, (byte) -44);
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 0) {
           field_a = (String) null;
         }

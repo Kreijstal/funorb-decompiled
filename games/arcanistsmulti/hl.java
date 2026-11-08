@@ -115,7 +115,7 @@ final class hl extends IntrusiveNode {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 == -1513388336) {
           field_m = null;
           field_h = null;

@@ -189,7 +189,7 @@ final class be {
         return "" + this.field_k;
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_i = null;
         field_j = null;
         field_h = null;

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bi extends rn implements el {
+final class bi extends EditableTextWidget implements el {
     static int field_I;
     private int field_V;
     private pd field_T;
@@ -78,7 +78,7 @@ final class bi extends rn implements el {
         }
     }
 
-    final String b(boolean param0) {
+    final String getTooltip(boolean param0) {
         if (param0) {
           field_U = (kc) null;
           if (!this.field_w) {
@@ -100,9 +100,9 @@ final class bi extends rn implements el {
         return null;
     }
 
-    final void a(qm param0, int param1, int param2, int param3) {
+    final void updatePointer(UiComponent param0, int param1, int param2, int param3) {
         try {
-          super.a(param0, param1, param2, param3);
+          super.updatePointer(param0, param1, param2, param3);
           this.field_V = an.field_g - (this.field_n + param1);
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "bi.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
@@ -116,8 +116,8 @@ final class bi extends rn implements el {
         return this.field_T;
     }
 
-    final void l(int param0) {
-        super.l(param0);
+    final void notifyTextChanged(int param0) {
+        super.notifyTextChanged(param0);
         if (null != this.field_T) {
           this.field_T.b(-17444);
         }
@@ -132,11 +132,11 @@ final class bi extends rn implements el {
         }
     }
 
-    bi(String param0, wc param1, int param2) {
+    bi(String param0, UiListener param1, int param2) {
         super(param0, param1, param2);
     }
 
-    public static void o(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 0) {
           bi.a((byte) 84, -108);
           field_W = null;

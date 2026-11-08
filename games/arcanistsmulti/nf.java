@@ -107,7 +107,7 @@ final class nf {
         boolean stackOut_9_0;
         boolean stackOut_16_0;
         int var3;
-        oc var4;
+        IntrusiveDequeCursor var4;
         ml var5_ref_ml;
         mi var5_ref_mi;
         int var5;
@@ -116,11 +116,11 @@ final class nf {
         mi var5_ref_miLifetime1;
         var7 = ArcanistsMulti.field_G ? 1 : 0;
         var3 = 0;
-        var4 = new oc(this.field_i);
-        var5_ref_ml = (ml) (var4.b(-99));
+        var4 = new IntrusiveDequeCursor(this.field_i);
+        var5_ref_ml = (ml) (var4.first(-99));
         while (true) {
           if (var5_ref_ml == null) {
-            var4.a((byte) 82, this.field_Kb);
+            var4.setDeque((byte) 82, this.field_Kb);
             break;
           }
           var3 = var3 + ((var5_ref_ml.field_R + 11) * (var5_ref_ml.field_X + 5) + (var5_ref_ml.field_q * 13 + (7 * var5_ref_ml.field_ib + var5_ref_ml.field_jb)) * (1 + var5_ref_ml.field_T));
@@ -131,15 +131,15 @@ final class nf {
               System.out.println("Health:" + var5_ref_ml.field_ib + " TYPE:" + var5_ref_ml.field_jb);
               System.out.println("TOWER HEALTH:" + var5_ref_ml.field_q);
             }
-            var5_ref_ml = (ml) (var4.d(-18502));
+            var5_ref_ml = (ml) (var4.next(-18502));
             continue;
           }
           break;
         }
-        var5_ref_mi = (mi) (var4.b(-60));
+        var5_ref_mi = (mi) (var4.first(-60));
         while (true) {
           if (var5_ref_mi == null) {
-            var4.a((byte) 31, this.field_r);
+            var4.setDeque((byte) 31, this.field_r);
             stackIn_14_0 = -104 / ((-60 - param0) / 40);
             break;
           }
@@ -150,13 +150,13 @@ final class nf {
             if (!stackIn_10_0) {
               var3 = var3 + ((var5_ref_mi.field_y + var5_ref_mi.field_H * 29) * (23 + var5_ref_mi.field_I) + (var5_ref_mi.field_o + 17) * 19 * var5_ref_mi.field_z);
             }
-            var5_ref_mi = (mi) (var4.d(-18502));
+            var5_ref_mi = (mi) (var4.next(-18502));
             continue;
           }
           break;
         }
         var6 = stackIn_14_0;
-        var5_ref_miLifetime1 = (mi) (var4.b(-104));
+        var5_ref_miLifetime1 = (mi) (var4.first(-104));
         while (true) {
           if (var5_ref_miLifetime1 == null) {
             var3 = var3 + this.field_mb;
@@ -170,7 +170,7 @@ final class nf {
             if (!stackIn_17_0) {
               var3 = var3 + (19 * (var5_ref_miLifetime1.field_z * (var5_ref_miLifetime1.field_o + 17)) + (23 + var5_ref_miLifetime1.field_I) * (var5_ref_miLifetime1.field_H * 29 + var5_ref_miLifetime1.field_y));
             }
-            var5_ref_miLifetime1 = (mi) (var4.d(-18502));
+            var5_ref_miLifetime1 = (mi) (var4.next(-18502));
             continue;
           }
           break;
@@ -208,7 +208,7 @@ final class nf {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 2) {
-            nf.r(-29);
+            nf.releaseStatics(-29);
           }
           stackIn_3_0 = fk.a(this, param0, this.field_Jb, param2, (byte) -1, param3);
           return stackIn_3_0;
@@ -1678,17 +1678,17 @@ final class nf {
         ml var2;
         int var3;
         var3 = ArcanistsMulti.field_G ? 1 : 0;
-        mk.field_J.a((byte) 72, this.field_i);
+        mk.field_J.setDeque((byte) 72, this.field_i);
         if (param0 != -20) {
           return;
         }
-        var2 = (ml) (mk.field_J.b(-64));
+        var2 = (ml) (mk.field_J.first(-64));
         while (var2 != null) {
           if (var3 == 0) {
             if (~var2.field_u == ~this.field_J) {
               var2.field_D = false;
             }
-            var2 = (ml) (mk.field_J.d(param0 - 18482));
+            var2 = (ml) (mk.field_J.next(param0 - 18482));
             continue;
           }
           break;
@@ -2350,9 +2350,9 @@ final class nf {
           }
         }
         if (decompiledFrameCompleted2) {
-          ge.field_p.a((byte) 31, this.field_i);
+          ge.field_p.setDeque((byte) 31, this.field_i);
         }
-        var3 = (ml) (ge.field_p.b(-98));
+        var3 = (ml) (ge.field_p.first(-98));
         scanLoop1: while (true) {
           boolean decompiledFrameCompleted1 = true;
           if (var3 != null) {
@@ -2365,7 +2365,7 @@ final class nf {
                 }
                 var3.field_W = 0;
                 var3.field_G = -1;
-                var3 = (ml) (ge.field_p.d(-18502));
+                var3 = (ml) (ge.field_p.next(-18502));
                 decompiledFrameCompleted1 = false;
                 break;
               }
@@ -2530,14 +2530,14 @@ final class nf {
                   }
                 }
               }
-              var3 = (ml) (ge.field_p.d(-18502));
+              var3 = (ml) (ge.field_p.next(-18502));
               if (var31 == 0) {
                 continue;
               }
             }
           }
           if (decompiledFrameCompleted1) {
-            var3 = (ml) (ge.field_p.b(-102));
+            var3 = (ml) (ge.field_p.first(-102));
             while (var3 != null) {
               stackOut_105_0 = var3;
               stackIn_111_0 = stackOut_105_0;
@@ -2552,7 +2552,7 @@ final class nf {
               }
               var3.field_W = 0;
               var3.field_G = -1;
-              var3 = (ml) (ge.field_p.d(-18502));
+              var3 = (ml) (ge.field_p.next(-18502));
             }
           }
           stackIn_111_0 = this.field_Kb.first(12623);
@@ -2568,8 +2568,8 @@ final class nf {
             this.field_Gb = true;
           }
           if (var3_ref.field_I == 123) {
-            n.field_d.a((byte) 41, this.field_i);
-            var4Lifetime1 = (ml) (n.field_d.b(-96));
+            n.field_d.setDeque((byte) 41, this.field_i);
+            var4Lifetime1 = (ml) (n.field_d.first(-96));
             while (var4Lifetime1 != null) {
               stackIn_150_0 = ~((ml) (var4Lifetime1)).field_jb;
               stackIn_150_1 = -34;
@@ -2636,7 +2636,7 @@ final class nf {
                   break;
                 }
               }
-              var4Lifetime1 = (ml) (n.field_d.d(-18502));
+              var4Lifetime1 = (ml) (n.field_d.next(-18502));
             }
           }
           stackIn_150_0Lifetime1 = 149;
@@ -3523,12 +3523,12 @@ final class nf {
         int var5;
         int stackIn_11_0 = 0;
         var5 = ArcanistsMulti.field_G ? 1 : 0;
-        MidiPcmStream.field_D.a((byte) 102, this.field_i);
+        MidiPcmStream.field_D.setDeque((byte) 102, this.field_i);
         var3 = 0;
         if (param0 >= -101) {
           discarded$1 = this.c((jd) null, -100);
         }
-        var4 = (ml) (MidiPcmStream.field_D.b(-107));
+        var4 = (ml) (MidiPcmStream.field_D.first(-107));
         while (var4 != null) {
           stackIn_11_0 = 12;
           if (var5 != 0) {
@@ -3539,7 +3539,7 @@ final class nf {
             param1 == var4.field_u) {
             var3++;
           }
-          var4 = (ml) (MidiPcmStream.field_D.d(-18502));
+          var4 = (ml) (MidiPcmStream.field_D.next(-18502));
         }
         return var3;
     }
@@ -4007,8 +4007,8 @@ final class nf {
             break;
           }
           if (decompiledNaturalLoopExit1) {
-            u.field_f.a((byte) 120, this.field_i);
-            stackIn_14_0 = u.field_f.b(-67);
+            u.field_f.setDeque((byte) 120, this.field_i);
+            stackIn_14_0 = u.field_f.first(-67);
           }
           var5_ref = (ml) (stackIn_14_0);
           boolean decompiledNaturalLoopExit0 = false;
@@ -4029,7 +4029,7 @@ final class nf {
               } else {
                 this.field_Gb = true;
               }
-              var5_ref = (ml) (u.field_f.d(-18502));
+              var5_ref = (ml) (u.field_f.next(-18502));
               continue;
             }
             break;
@@ -6593,7 +6593,7 @@ final class nf {
         return this.c(106, false);
     }
 
-    public static void r(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 0) {
           return;
         }
@@ -6609,18 +6609,18 @@ final class nf {
     }
 
     private final void i(byte param0) {
-        oc var2 = null;
+        IntrusiveDequeCursor var2 = null;
         ml var3 = null;
         int var4 = 0;
         var4 = ArcanistsMulti.field_G ? 1 : 0;
-        var2 = new oc(this.field_i);
+        var2 = new IntrusiveDequeCursor(this.field_i);
         if (param0 != 86) {
           this.field_Kb = (IntrusiveDeque) null;
         }
-        var3 = (ml) (var2.b(-42));
+        var3 = (ml) (var2.first(-42));
         while (var3 != null) {
           this.a(-100, var3);
-          var3 = (ml) (var2.d(-18502));
+          var3 = (ml) (var2.next(-18502));
           if (var4 == 0) {
             continue;
           }
@@ -7982,8 +7982,8 @@ final class nf {
           boolean decompiledFrameCompleted9 = true;
           if (var10 == 7) {
             this.a((byte) 80, var10, var4);
-            n.field_d.a((byte) 96, this.field_i);
-            var24_ref_mlLifetime22 = (ml) (n.field_d.b(-74));
+            n.field_d.setDeque((byte) 96, this.field_i);
+            var24_ref_mlLifetime22 = (ml) (n.field_d.first(-74));
             while (var24_ref_mlLifetime22 != null) {
               stackIn_456_0 = -12;
               stackIn_456_1 = ~var24_ref_mlLifetime22.field_jb;
@@ -8002,7 +8002,7 @@ final class nf {
                 var24_ref_mlLifetime22.field_ib = 0;
                 var24_ref_mlLifetime22.d(var4, 116);
               }
-              var24_ref_mlLifetime22 = (ml) (n.field_d.d(-18502));
+              var24_ref_mlLifetime22 = (ml) (n.field_d.next(-18502));
             }
             if (decompiledFrameCompleted9) {
               this.field_D = true;
@@ -8021,8 +8021,8 @@ final class nf {
           boolean decompiledFrameCompleted8 = true;
           if (var10 == 94) {
             this.a((byte) 80, var10, var4);
-            n.field_d.a((byte) 83, this.field_Kb);
-            var24_ref_miLifetime15 = (mi) (n.field_d.b(-105));
+            n.field_d.setDeque((byte) 83, this.field_Kb);
+            var24_ref_miLifetime15 = (mi) (n.field_d.first(-105));
             while (var24_ref_miLifetime15 != null) {
               stackIn_470_0 = ~var24_ref_miLifetime15.field_I;
               stackIn_470_1 = -127;
@@ -8036,7 +8036,7 @@ final class nf {
               if (var24_ref_miLifetime15.field_I == 117) {
                 var24_ref_miLifetime15.a(0, 0, 16, 8);
               }
-              var24_ref_miLifetime15 = (mi) (n.field_d.d(-18502));
+              var24_ref_miLifetime15 = (mi) (n.field_d.next(-18502));
             }
             if (decompiledFrameCompleted8) {
               var24_ref_miLifetime15Lifetime1 = j.a(var12, 0, (byte) -125, this, var10, var8, 126);
@@ -8051,8 +8051,8 @@ final class nf {
           boolean decompiledFrameCompleted7 = true;
           if (stackIn_470_0 == stackIn_470_1) {
             this.a((byte) 80, var10, var4);
-            n.field_d.a((byte) 67, this.field_Kb);
-            var24_ref_miLifetime16 = (mi) (n.field_d.b(-57));
+            n.field_d.setDeque((byte) 67, this.field_Kb);
+            var24_ref_miLifetime16 = (mi) (n.field_d.first(-57));
             while (var24_ref_miLifetime16 != null) {
               stackIn_480_0 = -124;
               stackIn_480_1 = ~var24_ref_miLifetime16.field_I;
@@ -8063,7 +8063,7 @@ final class nf {
               if (stackIn_480_0 == stackIn_480_1) {
                 var24_ref_miLifetime16.f(0);
               }
-              var24_ref_miLifetime16 = (mi) (n.field_d.d(-18502));
+              var24_ref_miLifetime16 = (mi) (n.field_d.next(-18502));
             }
             if (decompiledFrameCompleted7) {
               var24_ref_miLifetime16Lifetime1 = j.a(var12, var9, (byte) -105, this, var10, var8, 123);
@@ -8078,9 +8078,9 @@ final class nf {
           boolean decompiledFrameCompleted6 = true;
           if (stackIn_480_0 == stackIn_480_1) {
             this.a((byte) 80, var10, var4);
-            n.field_d.a((byte) 40, this.field_Kb);
+            n.field_d.setDeque((byte) 40, this.field_Kb);
             var24Lifetime2 = 0;
-            var25Lifetime4 = (mi) (n.field_d.b(-83));
+            var25Lifetime4 = (mi) (n.field_d.first(-83));
             while (var25Lifetime4 != null) {
               stackIn_524_0 = var25Lifetime4.field_I;
               stackIn_524_1 = 123;
@@ -8091,11 +8091,11 @@ final class nf {
               if (stackIn_524_0 == stackIn_524_1) {
                 var25Lifetime4.f(0);
               }
-              var25Lifetime4 = (mi) (n.field_d.d(-18502));
+              var25Lifetime4 = (mi) (n.field_d.next(-18502));
             }
             if (decompiledFrameCompleted6) {
-              n.field_d.a((byte) 69, this.field_i);
-              var25_ref = (ml) (n.field_d.b(-50));
+              n.field_d.setDeque((byte) 69, this.field_i);
+              var25_ref = (ml) (n.field_d.first(-50));
               while (true) {
                 if (var25_ref != null) {
                   stackIn_522_0 = -34;
@@ -8165,7 +8165,7 @@ final class nf {
                         break;
                       }
                     }
-                    var25_ref = (ml) (n.field_d.d(-18502));
+                    var25_ref = (ml) (n.field_d.next(-18502));
                     continue;
                   }
                 } else {
@@ -8185,8 +8185,8 @@ final class nf {
           boolean decompiledFrameCompleted5 = true;
           if (stackIn_524_0 == stackIn_524_1) {
             this.a((byte) 80, var10, var4);
-            n.field_d.a((byte) 99, this.field_i);
-            var24_ref_mlLifetime23 = (ml) (n.field_d.b(-113));
+            n.field_d.setDeque((byte) 99, this.field_i);
+            var24_ref_mlLifetime23 = (ml) (n.field_d.first(-113));
             while (var24_ref_mlLifetime23 != null) {
               stackIn_541_0 = var24_ref_mlLifetime23.field_s;
               if (var47 != 0) {
@@ -8203,7 +8203,7 @@ final class nf {
                 var24_ref_mlLifetime23.field_ib = 0;
                 var24_ref_mlLifetime23.d(var4, 24);
               }
-              var24_ref_mlLifetime23 = (ml) (n.field_d.d(-18502));
+              var24_ref_mlLifetime23 = (ml) (n.field_d.next(-18502));
             }
             if (decompiledFrameCompleted5) {
               this.field_D = true;
@@ -8604,8 +8604,8 @@ final class nf {
             var25Lifetime15.a(0, 0, 64, 8);
             var25Lifetime15.field_v = var12.field_lb;
             var25Lifetime15.field_G = var12.field_db;
-            n.field_d.a((byte) 83, this.field_i);
-            var28_ref = (ml) (n.field_d.b(-44));
+            n.field_d.setDeque((byte) 83, this.field_i);
+            var28_ref = (ml) (n.field_d.first(-44));
             while (var28_ref != null) {
               stackIn_689_0 = var28_ref;
               stackIn_689_1 = var12;
@@ -8631,7 +8631,7 @@ final class nf {
                   var28_ref.field_R = var28_ref.field_db << 4;
                 }
               }
-              var28_ref = (ml) (n.field_d.d(-18502));
+              var28_ref = (ml) (n.field_d.next(-18502));
             }
             if (decompiledFrameCompleted0) {
               this.field_D = true;
@@ -9436,11 +9436,11 @@ final class nf {
         this.field_nb = 0;
         this.field_Y = -1;
         try {
-          MidiPcmStream.field_D = new oc();
-          n.field_d = new oc();
-          u.field_f = new oc();
-          mk.field_J = new oc();
-          ge.field_p = new oc();
+          MidiPcmStream.field_D = new IntrusiveDequeCursor();
+          n.field_d = new IntrusiveDequeCursor();
+          u.field_f = new IntrusiveDequeCursor();
+          mk.field_J = new IntrusiveDequeCursor();
+          ge.field_p = new IntrusiveDequeCursor();
           this.field_m = param11;
           stackIn_4_1 = (param0);
           this.field_l = stackIn_4_1;
@@ -9785,8 +9785,8 @@ final class nf {
         if (param0 != 12) {
           this.f(-25);
         }
-        MidiPcmStream.field_D.a((byte) 78, this.field_i);
-        var3 = (ml) (MidiPcmStream.field_D.b(-43));
+        MidiPcmStream.field_D.setDeque((byte) 78, this.field_i);
+        var3 = (ml) (MidiPcmStream.field_D.first(-43));
         while (var3 != null) {
           stackIn_11_0 = 12;
           if (var4 != 0) {
@@ -9796,7 +9796,7 @@ final class nf {
             null != var3.field_s) {
             var2++;
           }
-          var3 = (ml) (MidiPcmStream.field_D.d(param0 ^ -18506));
+          var3 = (ml) (MidiPcmStream.field_D.next(param0 ^ -18506));
         }
         return var2;
     }

@@ -14,7 +14,7 @@ final class co {
     static java.util.zip.CRC32 field_g;
     static int[] field_e;
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = (boolean[][]) null;
         field_i = null;
         field_h = null;

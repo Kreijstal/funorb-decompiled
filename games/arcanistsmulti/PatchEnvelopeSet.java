@@ -20,7 +20,7 @@ final class PatchEnvelopeSet {
     static String field_b;
     int field_j;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_f = null;
         field_k = null;
         if (param0 <= 75) {
@@ -114,9 +114,9 @@ final class PatchEnvelopeSet {
 
     final static void a(int param0) {
         if (param0 < 80) {
-          PatchEnvelopeSet.a((byte) 114);
+          PatchEnvelopeSet.releaseStatics((byte) 114);
         }
-        g.field_e.a((byte) -92, (qm) (new td()));
+        g.field_e.a((byte) -92, (UiComponent) (new td()));
     }
 
     final static void c(int param0) {
@@ -216,7 +216,7 @@ final class PatchEnvelopeSet {
             if (var7 != 0) {
               if (var7 >= 128 &&
                 var7 < 160) {
-                var8 = oc.field_a[-128 + var7];
+                var8 = IntrusiveDequeCursor.field_a[-128 + var7];
                 if (0 == var8) {
                   var8 = 63;
                 }

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wg extends ag {
+final class wg extends TextButton {
     private int field_K;
     int field_L;
     static Sprite[] field_J;
@@ -10,8 +10,8 @@ final class wg extends ag {
 
     final int g(byte param0) {
         if (param0 != -102) {
-          qm var3 = (qm) null;
-          this.a(-7, 91, (qm) null, 21, -15, 11, 120);
+          UiComponent var3 = (UiComponent) null;
+          this.handlePointerPress(-7, 91, (UiComponent) null, 21, -15, 11, 120);
         }
         return this.field_K;
     }
@@ -226,7 +226,7 @@ final class wg extends ag {
         }
     }
 
-    final boolean a(int param0, int param1, qm param2, int param3, int param4, int param5, int param6) {
+    final boolean handlePointerPress(int param0, int param1, UiComponent param2, int param3, int param4, int param5, int param6) {
         int var13 = 0;
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
@@ -243,7 +243,7 @@ final class wg extends ag {
         var15 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           var8_int = -12 % ((param4 + 42) / 35);
-          if (!super.a(param0, param1, param2, param3, 94, param5, param6)) {
+          if (!super.handlePointerPress(param0, param1, param2, param3, 94, param5, param6)) {
             return false;
           }
           var9 = -this.field_H - param6 + param5;

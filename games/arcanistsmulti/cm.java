@@ -12,7 +12,7 @@ final class cm extends IntrusiveNode {
     static String field_h;
     static int field_j;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_l = null;
         if (param0 != 49) {
           field_j = 83;

@@ -118,7 +118,7 @@ final class ResourceArchive {
             var26 = var36;
             var9 = var26;
             var27 = new PacketBuffer(var36);
-            var27.a(param1, 5, var27.payload.length, 127);
+            var27.xteaDecryptRange(param1, 5, var27.payload.length, 127);
             decompiledFrameRemainder0 = false;
           }
           else {
@@ -879,7 +879,7 @@ final class ResourceArchive {
           if (11 == fj.field_j) {
             pe.h(7807);
           }
-          SoundCache.a(ii.field_f, kl.field_C, af.field_Hb, (byte) -100);
+          SoundCache.a(ii.field_f, ArrayWidgetContainer.field_C, af.field_Hb, (byte) -100);
           kn.a(param0, (byte) -112, 0, 0);
           if (param1 > -15) {
             var3 = (java.awt.Canvas) null;

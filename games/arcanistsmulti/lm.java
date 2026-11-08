@@ -538,7 +538,7 @@ final class lm {
                     var21 = ff.field_g;
                   }
                 } else {
-                  var21 = kl.field_D;
+                  var21 = ArrayWidgetContainer.field_D;
                 }
                 if (var4_int != 0 &&
                   !ByteStorage.field_a) {
@@ -638,7 +638,7 @@ final class lm {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_i = null;
         field_a = null;
         if (param0 != -888) {
@@ -654,7 +654,7 @@ final class lm {
     }
 
     final static void a(byte param0, boolean param1) {
-        ClientException.field_b.a(0, true, 0);
+        ClientException.field_b.drawLayersAndTooltip(0, true, 0);
         if (param0 > -7) {
           field_c = (String) null;
         }

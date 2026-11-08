@@ -5,11 +5,11 @@ final class wl extends mg {
     static String field_I;
     static int[][] field_L;
     static String field_M;
-    private rn field_J;
-    private rn field_T;
+    private EditableTextWidget field_J;
+    private EditableTextWidget field_T;
     static so field_S;
     private boolean field_G;
-    private rn field_Q;
+    private EditableTextWidget field_Q;
     static String field_R;
     static String field_N;
     static IndexedSprite[] field_U;
@@ -32,7 +32,7 @@ final class wl extends mg {
         CipherPacketBuffer var8 = null;
         tk var9 = null;
         var7 = ArcanistsMulti.field_G ? 1 : 0;
-        var8 = df.field_z;
+        var8 = UiContainer.field_z;
         var2 = var8;
         var3 = var8.readUnsignedByte((byte) 122);
         stackIn_3_0 = ((128 & var3) != 0);
@@ -96,10 +96,10 @@ final class wl extends mg {
         return new jg(param0);
     }
 
-    final String b(boolean param0) {
-        String var2 = this.field_Q.b(param0);
+    final String getTooltip(boolean param0) {
+        String var2 = this.field_Q.getTooltip(param0);
         if (param0) {
-          this.b(false);
+          this.getTooltip(false);
           if (var2 != null) {
             return var2;
           }
@@ -120,19 +120,19 @@ final class wl extends mg {
     final void a(bl param0, byte param1) {
         try {
           super.a(param0, (byte) 116);
-          this.field_T.field_o = (wc) ((Object) param0);
-          this.field_Q.field_o = (wc) ((Object) param0);
+          this.field_T.field_o = (UiListener) ((Object) param0);
+          this.field_Q.field_o = (UiListener) ((Object) param0);
           int var3_int = -113 / ((63 - param1) / 47);
-          this.field_J.field_o = (wc) ((Object) param0);
+          this.field_J.field_o = (UiListener) ((Object) param0);
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "wl.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final void a(byte param0, int param1, int param2, int param3) {
+    final void drawLayer(byte param0, int param1, int param2, int param3) {
         if (param0 >= -52) {
           field_N = (String) null;
-          super.a((byte) -57, param1, param2, param3);
+          super.drawLayer((byte) -57, param1, param2, param3);
           if (param2 != 0) {
             return;
           }
@@ -143,7 +143,7 @@ final class wl extends mg {
           this.a(param3, rc.field_g, this.field_J, -5187, param1);
           return;
         }
-        super.a((byte) -57, param1, param2, param3);
+        super.drawLayer((byte) -57, param1, param2, param3);
         if (param2 != 0) {
           return;
         }
@@ -203,7 +203,7 @@ final class wl extends mg {
         }
     }
 
-    private final void a(int param0, String param1, qm param2, int param3, int param4) {
+    private final void a(int param0, String param1, UiComponent param2, int param3, int param4) {
         if (param3 != -5187) {
           return;
         }
@@ -214,21 +214,21 @@ final class wl extends mg {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4) {
-        super.a(param0, param1, param2, param3, -67);
+    final void setBounds(int param0, int param1, int param2, int param3, int param4) {
+        super.setBounds(param0, param1, param2, param3, -67);
         if (param4 > -49) {
           return;
         }
         int var6 = -130 + param2 >> 1;
         if (this.field_G) {
-          this.field_Q.a(param0, 0, 25, var6, -74);
-          this.field_T.a(param0, 0, 25, 45 + var6, -124);
-          this.field_J.a(param0, 0, 40, 90 + var6, -72);
+          this.field_Q.setBounds(param0, 0, 25, var6, -74);
+          this.field_T.setBounds(param0, 0, 25, 45 + var6, -124);
+          this.field_J.setBounds(param0, 0, 40, 90 + var6, -72);
           return;
         }
-        this.field_T.a(param0, 0, 25, var6, -80);
-        this.field_Q.a(param0, 0, 25, 45 + var6, -50);
-        this.field_J.a(param0, 0, 40, 90 + var6, -72);
+        this.field_T.setBounds(param0, 0, 25, var6, -80);
+        this.field_Q.setBounds(param0, 0, 25, 45 + var6, -50);
+        this.field_J.setBounds(param0, 0, 40, 90 + var6, -72);
     }
 
     final boolean j(int param0) {
@@ -291,33 +291,33 @@ final class wl extends mg {
         }
     }
 
-    wl(pf param0, boolean param1, int param2, int param3, int param4, int param5) {
+    wl(WidgetPainter param0, boolean param1, int param2, int param3, int param4, int param5) {
         this(param0, param1);
         try {
-          this.a(param5, param3, param4, param2, -58);
+          this.setBounds(param5, param3, param4, param2, -58);
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "wl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
-    private wl(pf param0, boolean param1) {
-        super(0, 0, 0, 0, (pf) null);
+    private wl(WidgetPainter param0, boolean param1) {
+        super(0, 0, 0, 0, (WidgetPainter) null);
         try {
-          this.field_T = (rn) ((Object) new bi("", (wc) null, 2));
-          this.field_Q = (rn) ((Object) new bi("", (wc) null, 2));
-          this.field_J = (rn) ((Object) new bi("", (wc) null, 4));
+          this.field_T = (EditableTextWidget) ((Object) new bi("", (UiListener) null, 2));
+          this.field_Q = (EditableTextWidget) ((Object) new bi("", (UiListener) null, 2));
+          this.field_J = (EditableTextWidget) ((Object) new bi("", (UiListener) null, 4));
           this.field_G = param1 ? true : false;
           this.field_J.field_r = param0;
           this.field_Q.field_r = param0;
           this.field_T.field_r = param0;
           if (!this.field_G) {
-            this.c(-107, this.field_T);
-            this.c(-121, this.field_Q);
+            this.addChild(-107, this.field_T);
+            this.addChild(-121, this.field_Q);
           } else {
-            this.c(-104, this.field_Q);
-            this.c(-110, this.field_T);
+            this.addChild(-104, this.field_Q);
+            this.addChild(-110, this.field_T);
           }
-          this.c(-103, this.field_J);
+          this.addChild(-103, this.field_J);
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "wl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

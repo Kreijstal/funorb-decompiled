@@ -13,7 +13,7 @@ final class tc extends ib {
     static String field_E;
     static boolean[] field_D;
 
-    final String a(boolean param0, qm param1) {
+    final String a(boolean param0, UiComponent param1) {
         RuntimeException var3 = null;
         String stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -62,7 +62,7 @@ final class tc extends ib {
         this(ia.field_c, param0);
     }
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_w = null;
         field_C = null;
         field_x = null;
@@ -135,7 +135,7 @@ final class tc extends ib {
           var2.writeByte(DirectByteStorage.field_f.field_dc, (byte) -3);
           var4 = DirectByteStorage.field_f.field_Pb + (DirectByteStorage.field_f.field_Fb << 6);
           var2.writeByte(var4, (byte) -97);
-          var2.a(DirectByteStorage.field_f.field_Wb, 0, (byte) -86, DirectByteStorage.field_f.field_Wb.length);
+          var2.writeBytes(DirectByteStorage.field_f.field_Wb, 0, (byte) -86, DirectByteStorage.field_f.field_Wb.length);
           var2.writeByteLengthAtMark(var2.position - var3, (byte) 43);
           return;
         }
@@ -145,7 +145,7 @@ final class tc extends ib {
         var2.writeByte(DirectByteStorage.field_f.field_dc, (byte) -3);
         var4Lifetime1 = DirectByteStorage.field_f.field_Pb + (DirectByteStorage.field_f.field_Fb << 6);
         var2.writeByte(var4Lifetime1, (byte) -97);
-        var2.a(DirectByteStorage.field_f.field_Wb, 0, (byte) -86, DirectByteStorage.field_f.field_Wb.length);
+        var2.writeBytes(DirectByteStorage.field_f.field_Wb, 0, (byte) -86, DirectByteStorage.field_f.field_Wb.length);
         var2.writeByteLengthAtMark(var2.position - var3Lifetime1, (byte) 43);
     }
 

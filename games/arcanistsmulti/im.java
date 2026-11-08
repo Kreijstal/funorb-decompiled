@@ -206,9 +206,9 @@ class im extends bd {
 
     final void a(PacketBuffer param0, int param1) {
         try {
-          param0.a(this.field_h, (byte) 109);
+          param0.writeLong(this.field_h, (byte) 109);
           int var3_int = 116 / ((-35 - param1) / 36);
-          param0.a((byte) 7, this.field_e);
+          param0.writeBase38Name((byte) 7, this.field_e);
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "im.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

@@ -27,10 +27,10 @@ final class jd {
         return this.field_a[this.field_b];
     }
 
-    public static void d(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_j = null;
         if (param0 != -109) {
-          jd.d((byte) -44);
+          jd.releaseStatics((byte) -44);
         }
         field_i = null;
         field_g = null;
@@ -237,7 +237,7 @@ final class jd {
         if (param0 >= -6) {
           jd.b(1);
         }
-        return qm.field_u;
+        return UiComponent.field_u;
     }
 
     final jd b(byte param0) {
