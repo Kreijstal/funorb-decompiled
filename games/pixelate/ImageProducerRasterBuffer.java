@@ -233,7 +233,7 @@ final class ImageProducerRasterBuffer extends CanvasRasterBuffer implements java
               CachedTextLayout.a(param1, param6 + 28363, param0, param4, param7);
             }
             if (EmergentBehaviourBackground.field_o &&
-              io.field_c.field_ec <= io.field_c.field_mc) {
+              LoginMethod.field_c.field_ec <= LoginMethod.field_c.field_mc) {
               jm.field_b.field_Ib.field_cb = fo.field_m;
               StripedProgressBar.field_O.field_rb = false;
               GrowableIntList.a(jm.field_b.content, false);
@@ -259,7 +259,7 @@ final class ImageProducerRasterBuffer extends CanvasRasterBuffer implements java
                 CachedTextLayout.a(param1, param6 + 28363, param0, param4, param7);
               }
               if (EmergentBehaviourBackground.field_o &&
-                io.field_c.field_ec <= io.field_c.field_mc) {
+                LoginMethod.field_c.field_ec <= LoginMethod.field_c.field_mc) {
                 jm.field_b.field_Ib.field_cb = fo.field_m;
                 StripedProgressBar.field_O.field_rb = false;
                 GrowableIntList.a(jm.field_b.content, false);
@@ -280,7 +280,7 @@ final class ImageProducerRasterBuffer extends CanvasRasterBuffer implements java
                   CachedTextLayout.a(param1, param6 + 28363, param0, param4, param7);
                 }
                 if (EmergentBehaviourBackground.field_o &&
-                  io.field_c.field_ec <= io.field_c.field_mc) {
+                  LoginMethod.field_c.field_ec <= LoginMethod.field_c.field_mc) {
                   jm.field_b.field_Ib.field_cb = fo.field_m;
                   StripedProgressBar.field_O.field_rb = false;
                   GrowableIntList.a(jm.field_b.content, false);
@@ -298,7 +298,7 @@ final class ImageProducerRasterBuffer extends CanvasRasterBuffer implements java
                     CachedTextLayout.a(param1, param6 + 28363, param0, param4, param7);
                   }
                   if (EmergentBehaviourBackground.field_o &&
-                    io.field_c.field_ec <= io.field_c.field_mc) {
+                    LoginMethod.field_c.field_ec <= LoginMethod.field_c.field_mc) {
                     jm.field_b.field_Ib.field_cb = fo.field_m;
                     StripedProgressBar.field_O.field_rb = false;
                     GrowableIntList.a(jm.field_b.content, false);
@@ -316,7 +316,7 @@ final class ImageProducerRasterBuffer extends CanvasRasterBuffer implements java
                     jm.field_b.field_Ib.field_cb = null;
                     la.a(70, param0, jm.field_b, param8, param3);
                   } else {
-                    if (io.field_c.field_ec <= io.field_c.field_mc) {
+                    if (LoginMethod.field_c.field_ec <= LoginMethod.field_c.field_mc) {
                       jm.field_b.field_Ib.field_cb = fo.field_m;
                       StripedProgressBar.field_O.field_rb = false;
                       GrowableIntList.a(jm.field_b.content, false);
@@ -335,7 +335,7 @@ final class ImageProducerRasterBuffer extends CanvasRasterBuffer implements java
             if (SoftwareRasterizer.field_d != Matrix3.field_b &&
               ClientException.field_f.field_i == SoftwareRasterizer.field_d &&
               ClientException.field_f.field_a == SoftwareRasterizer.field_j) {
-              if (io.field_c != null) {
+              if (LoginMethod.field_c != null) {
                 DebouncedValidator.a((byte) 32, false);
               } else {
                 if (DraggableWidget.field_S != null) {
@@ -363,7 +363,7 @@ final class ImageProducerRasterBuffer extends CanvasRasterBuffer implements java
                 CachedTextLayout.a(param1, param6 + 28363, param0, param4, param7);
               }
               if (EmergentBehaviourBackground.field_o &&
-                io.field_c.field_ec <= io.field_c.field_mc) {
+                LoginMethod.field_c.field_ec <= LoginMethod.field_c.field_mc) {
                 jm.field_b.field_Ib.field_cb = fo.field_m;
                 StripedProgressBar.field_O.field_rb = false;
                 GrowableIntList.a(jm.field_b.content, false);
@@ -389,7 +389,7 @@ final class ImageProducerRasterBuffer extends CanvasRasterBuffer implements java
                   CachedTextLayout.a(param1, param6 + 28363, param0, param4, param7);
                 }
                 if (EmergentBehaviourBackground.field_o &&
-                  io.field_c.field_ec <= io.field_c.field_mc) {
+                  LoginMethod.field_c.field_ec <= LoginMethod.field_c.field_mc) {
                   jm.field_b.field_Ib.field_cb = fo.field_m;
                   StripedProgressBar.field_O.field_rb = false;
                   GrowableIntList.a(jm.field_b.content, false);
@@ -410,7 +410,7 @@ final class ImageProducerRasterBuffer extends CanvasRasterBuffer implements java
                     CachedTextLayout.a(param1, param6 + 28363, param0, param4, param7);
                   }
                   if (EmergentBehaviourBackground.field_o &&
-                    io.field_c.field_ec <= io.field_c.field_mc) {
+                    LoginMethod.field_c.field_ec <= LoginMethod.field_c.field_mc) {
                     jm.field_b.field_Ib.field_cb = fo.field_m;
                     StripedProgressBar.field_O.field_rb = false;
                     GrowableIntList.a(jm.field_b.content, false);
@@ -428,7 +428,7 @@ final class ImageProducerRasterBuffer extends CanvasRasterBuffer implements java
                     jm.field_b.field_Ib.field_cb = null;
                     la.a(70, param0, jm.field_b, param8, param3);
                   } else {
-                    if (io.field_c.field_ec <= io.field_c.field_mc) {
+                    if (LoginMethod.field_c.field_ec <= LoginMethod.field_c.field_mc) {
                       jm.field_b.field_Ib.field_cb = fo.field_m;
                       StripedProgressBar.field_O.field_rb = false;
                       GrowableIntList.a(jm.field_b.content, false);
@@ -444,7 +444,7 @@ final class ImageProducerRasterBuffer extends CanvasRasterBuffer implements java
           } else {
             if (ClientException.field_f.field_i == SoftwareRasterizer.field_d &&
               ClientException.field_f.field_a == SoftwareRasterizer.field_j) {
-              if (io.field_c != null) {
+              if (LoginMethod.field_c != null) {
                 DebouncedValidator.a((byte) 32, false);
               } else {
                 if (DraggableWidget.field_S != null) {
@@ -472,7 +472,7 @@ final class ImageProducerRasterBuffer extends CanvasRasterBuffer implements java
                 CachedTextLayout.a(param1, param6 + 28363, param0, param4, param7);
               }
               if (EmergentBehaviourBackground.field_o &&
-                io.field_c.field_ec <= io.field_c.field_mc) {
+                LoginMethod.field_c.field_ec <= LoginMethod.field_c.field_mc) {
                 jm.field_b.field_Ib.field_cb = fo.field_m;
                 StripedProgressBar.field_O.field_rb = false;
                 GrowableIntList.a(jm.field_b.content, false);
@@ -498,7 +498,7 @@ final class ImageProducerRasterBuffer extends CanvasRasterBuffer implements java
                   CachedTextLayout.a(param1, param6 + 28363, param0, param4, param7);
                 }
                 if (EmergentBehaviourBackground.field_o &&
-                  io.field_c.field_ec <= io.field_c.field_mc) {
+                  LoginMethod.field_c.field_ec <= LoginMethod.field_c.field_mc) {
                   jm.field_b.field_Ib.field_cb = fo.field_m;
                   StripedProgressBar.field_O.field_rb = false;
                   GrowableIntList.a(jm.field_b.content, false);
@@ -519,7 +519,7 @@ final class ImageProducerRasterBuffer extends CanvasRasterBuffer implements java
                     CachedTextLayout.a(param1, param6 + 28363, param0, param4, param7);
                   }
                   if (EmergentBehaviourBackground.field_o &&
-                    io.field_c.field_ec <= io.field_c.field_mc) {
+                    LoginMethod.field_c.field_ec <= LoginMethod.field_c.field_mc) {
                     jm.field_b.field_Ib.field_cb = fo.field_m;
                     StripedProgressBar.field_O.field_rb = false;
                     GrowableIntList.a(jm.field_b.content, false);
@@ -537,7 +537,7 @@ final class ImageProducerRasterBuffer extends CanvasRasterBuffer implements java
                       CachedTextLayout.a(param1, param6 + 28363, param0, param4, param7);
                     }
                     if (EmergentBehaviourBackground.field_o &&
-                      io.field_c.field_ec <= io.field_c.field_mc) {
+                      LoginMethod.field_c.field_ec <= LoginMethod.field_c.field_mc) {
                       jm.field_b.field_Ib.field_cb = fo.field_m;
                       StripedProgressBar.field_O.field_rb = false;
                       GrowableIntList.a(jm.field_b.content, false);
@@ -555,7 +555,7 @@ final class ImageProducerRasterBuffer extends CanvasRasterBuffer implements java
                       jm.field_b.field_Ib.field_cb = null;
                       la.a(70, param0, jm.field_b, param8, param3);
                     } else {
-                      if (io.field_c.field_ec <= io.field_c.field_mc) {
+                      if (LoginMethod.field_c.field_ec <= LoginMethod.field_c.field_mc) {
                         jm.field_b.field_Ib.field_cb = fo.field_m;
                         StripedProgressBar.field_O.field_rb = false;
                         GrowableIntList.a(jm.field_b.content, false);

@@ -25,7 +25,7 @@ final class SocketJs5Transport extends Js5Transport {
     }
 
     final static void d(int param0) {
-        io.field_d = hm.a(64);
+        LoginMethod.field_d = hm.a(64);
         if (param0 >= -11) {
           SocketJs5Transport.c(16);
         }

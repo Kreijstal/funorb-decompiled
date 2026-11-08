@@ -32,7 +32,7 @@ final class ScrollPaneWithFooter extends SceneWidget {
         int var5 = (param2 + this.field_K) / 2;
         int var6 = -param0 + this.height;
         if (param1) {
-          this.field_Gb.a(0, param2, (byte) 97, this.field_K, 0, var6 - param2, param3);
+          this.field_Gb.setBoundsAndLayout(0, param2, (byte) 97, this.field_K, 0, var6 - param2, param3);
           this.field_Ib.field_S = var6;
           this.field_Ib.height = param0;
           this.field_Ib.field_K = -param2 + var5;

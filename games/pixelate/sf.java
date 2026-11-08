@@ -14,7 +14,7 @@ final class sf {
         int var2 = Pixelate.field_H ? 1 : 0;
         int var1_intLifetime1;
         try {
-          ArchiveRequest.field_y.a(true);
+          ArchiveRequest.field_y.resynchronize(true);
           for (var1_int = param0; 32 > var1_int; var1_int++) {
             rh.field_x[var1_int] = 0L;
           }

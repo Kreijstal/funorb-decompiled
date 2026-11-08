@@ -32,7 +32,7 @@ final class lp {
         try {
           var1_int = 0;
           while (DirectByteStorage.$cfr$intArgs$b$c4997cb15529(107)) {
-            VerticalScrollbar.field_Gb.a((byte) -48);
+            VerticalScrollbar.field_Gb.handleVerticalNavigation((byte) -48);
             if (!VerticalScrollbar.field_Gb.isActivated(121)) {
               continue;
             }

@@ -44,7 +44,7 @@ abstract class CanvasRasterBuffer {
           if (param1 != 37) {
             field_k = (String) null;
           }
-          stackIn_5_0 = (re.findFriend(param0, -1) != null);
+          stackIn_5_0 = (LoadingStepTracker.findFriend(param0, -1) != null);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

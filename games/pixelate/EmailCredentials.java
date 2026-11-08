@@ -85,20 +85,20 @@ class EmailCredentials extends LoginCredentials {
               if (EmailValidator.a(var5_ref_String, 1)) {
                 var14 = (String) null;
                 var13 = (String) null;
-                MidiPcmStream.a(0, (String) null, (String) null, (byte) -76, 2, mp.field_c);
+                MidiPcmStream.appendChatMessage(0, (String) null, (String) null, (byte) -76, 2, mp.field_c);
                 var16 = (String) null;
                 var15 = (String) null;
-                MidiPcmStream.a(0, (String) null, (String) null, (byte) -21, 2, fd.field_d);
+                MidiPcmStream.appendChatMessage(0, (String) null, (String) null, (byte) -21, 2, fd.field_d);
                 nd.a((byte) -23);
                 return true;
               }
               var6 = ce.field_d;
               if (var6 == 0 &&
-                io.field_c != null) {
+                LoginMethod.field_c != null) {
                 var6 = 1;
               }
               if (IterableNodeHashTable.a(var6, 0) == 2) {
-                Js5ArchiveManager.a(1, -26931, var6, param2);
+                Js5ArchiveManager.setChatFilterMode(1, -26931, var6, param2);
               }
               dg.a(true, ce.field_d, -1, var5_ref_String, CheckboxPainter.field_k, param0);
               nd.a((byte) -23);
@@ -120,7 +120,7 @@ class EmailCredentials extends LoginCredentials {
           if (mp.field_a.length() <= 0) {
             return true;
           }
-          nk.a(mp.field_a, -1 + mp.field_a.length(), ' ', 16736352);
+          nk.padWithChar(mp.field_a, -1 + mp.field_a.length(), ' ', 16736352);
           return true;
         }
         var5 = DualLinkDeque.field_f;
@@ -148,23 +148,23 @@ class EmailCredentials extends LoginCredentials {
           if (2 != ce.field_d) {
             var8Lifetime1Lifetime6 = "";
             if (ce.field_d == 0) {
-              if (io.field_c == null &&
+              if (LoginMethod.field_c == null &&
                 ge.field_f) {
                 var8Lifetime1Lifetime6 = "[" + TimerBar.field_m + "] ";
               }
-              if (io.field_c == null) {
+              if (LoginMethod.field_c == null) {
                 var34 = var8Lifetime1Lifetime6 + var33 + ": ";
                 var6Lifetime1 = var6Lifetime1 - AccountMessagePanel.field_Q.textWidth(var34);
                 break regionExit1;
               }
               if (!TickClock.field_b) {
-                var37 = "[" + AlphaContainer.a(HowToPlayScreen.field_q, 49, new String[]{io.field_c.field_pc}) + "] ";
+                var37 = "[" + AlphaContainer.a(HowToPlayScreen.field_q, 49, new String[]{LoginMethod.field_c.field_pc}) + "] ";
                 var38 = var37 + var33 + ": ";
                 var6Lifetime1 = var6Lifetime1 - AccountMessagePanel.field_Q.textWidth(var38);
                 break regionExit1;
               }
               if (TextLayoutLine.field_f == null) {
-                var35 = "[" + AlphaContainer.a(HowToPlayScreen.field_q, 49, new String[]{io.field_c.field_pc}) + "] ";
+                var35 = "[" + AlphaContainer.a(HowToPlayScreen.field_q, 49, new String[]{LoginMethod.field_c.field_pc}) + "] ";
                 var36 = var35 + var33 + ": ";
                 var6Lifetime1 = var6Lifetime1 - AccountMessagePanel.field_Q.textWidth(var36);
                 break regionExit1;
@@ -189,7 +189,7 @@ class EmailCredentials extends LoginCredentials {
         if (AccountMessagePanel.field_Q.textWidth(mp.field_a.toString()) <= var6Lifetime1) {
           return true;
         }
-        nk.a(mp.field_a, -1 + mp.field_a.length(), ' ', 16736352);
+        nk.padWithChar(mp.field_a, -1 + mp.field_a.length(), ' ', 16736352);
         return true;
     }
 

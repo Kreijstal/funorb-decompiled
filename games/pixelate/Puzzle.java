@@ -111,7 +111,7 @@ final class Puzzle {
         var9 = Pixelate.field_H ? 1 : 0;
         try {
           var11 = (CharSequence) ((Object) param0);
-          var3_int = FallingPieceView.a(0, param2, var11);
+          var3_int = FallingPieceView.countChar(0, param2, var11);
           var4 = new String[var3_int + 1];
           var5 = 0;
           var6 = 0;

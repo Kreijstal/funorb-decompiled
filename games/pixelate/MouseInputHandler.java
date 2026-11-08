@@ -75,7 +75,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
               gb.field_d = stackIn_11_0;
               MarkerSlider.field_U = stackIn_11_0;
               FallingPieceView.a(CipherPacketBuffer.field_q, (byte) 66, bj.field_a, aa.field_f, hf.field_n);
-              SecondaryNodeHashTable.b(-1, 10000);
+              SecondaryNodeHashTable.flushOutgoingPackets(-1, 10000);
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var2 = (IOException) (Object) decompiledCaughtException;

@@ -164,7 +164,7 @@ final class TabbedPanel extends SceneWidget {
                 var17.field_u[var5] = -5;
               }
             }
-            ScoreMarkerBar.field_o.addFirst(22125, var17);
+            ScoreMarkerBar.field_o.addLast(22125, var17);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter5) {
             decompiledCaughtException = decompiledCaughtParameter5;

@@ -125,7 +125,7 @@ final class vf {
           stackIn_3_0 = MouseWheelHandler.field_e.field_Gb;
           stackIn_3_1 = param0;
           stackIn_4_2 = (bj.field_d == MouseWheelHandler.field_e.field_Gb);
-          var3_int = ((ScrollContainer) (Object) stackIn_3_0).a(stackIn_3_1, stackIn_4_2, 2, 3 * (fq.field_q + 2) * param2, param1 ^ param1, 2 + fq.field_q) ? 1 : 0;
+          var3_int = ((ScrollContainer) (Object) stackIn_3_0).updateScrolling(stackIn_3_1, stackIn_4_2, 2, 3 * (fq.field_q + 2) * param2, param1 ^ param1, 2 + fq.field_q) ? 1 : 0;
           var4 = MouseWheelHandler.field_e.field_Fb.children;
           if (2 != ValidatedTextWidget.field_db &&
             1 != ValidatedTextWidget.field_db) {
@@ -137,7 +137,7 @@ final class vf {
           MouseWheelHandler.field_e.field_rb = true;
           MouseWheelHandler.field_e.field_Gb.field_Ib.field_cb = null;
           var5 = null;
-          var6 = (SocialListEntry) (var4.c(1504642273));
+          var6 = (SocialListEntry) (var4.first(1504642273));
           while (var6 != null) {
             var7 = 0;
             if (null == var6.children) {
@@ -145,7 +145,7 @@ final class vf {
               var6.addChild(var6.field_Pb, (byte) 26);
               var6.field_Ob = new SceneWidget(0L, SceneWidget.field_T);
               var6.addChild(var6.field_Ob, (byte) 26);
-              var6.h(-257);
+              var6.markTreeDirty(-257);
               var7 = 1;
             }
             var6.field_K = MouseWheelHandler.field_e.field_Fb.field_K;
@@ -200,7 +200,7 @@ final class vf {
               var18.field_b.layoutPopup(0, var13, 43, var14, 0);
             }
             var5 = var6;
-            var6 = (SocialListEntry) (var4.last(1504642273));
+            var6 = (SocialListEntry) (var4.next(1504642273));
           }
           if (MouseWheelHandler.field_e.field_Ib.field_P != 0) {
             he.field_f = new AccountNamePrompt(MouseWheelHandler.field_e.field_Ib.field_tb, MouseWheelHandler.field_e.field_Ib.screenY, MouseWheelHandler.field_e.field_Ib.field_K, MouseWheelHandler.field_e.field_Ib.height, GameplayScreen.field_p, SoundCache.field_c, TextFieldValidator.field_h, TextFieldValidator.field_h);

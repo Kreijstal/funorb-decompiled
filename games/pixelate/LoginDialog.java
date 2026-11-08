@@ -129,8 +129,8 @@ final class LoginDialog extends ContentTransitionDialog {
             stackIn_2_0 = null;
             return (CoverageBitmapFont) (stackIn_2_0);
           }
-          var2 = new CoverageBitmapFont(param0, IntrusiveNode.field_b, e.field_b, ByteStorage.field_g, ge.field_c, fl.field_g, wo.field_f);
-          re.b(140);
+          var2 = new CoverageBitmapFont(param0, IntrusiveNode.field_b, e.field_b, ByteStorage.field_g, ge.field_c, AsyncValidationResult.field_g, wo.field_f);
+          LoadingStepTracker.clearSpriteDecodeBuffers(140);
           if (param1 <= 25) {
             var3 = (byte[]) null;
             LoginDialog.a((byte[]) null, -110);

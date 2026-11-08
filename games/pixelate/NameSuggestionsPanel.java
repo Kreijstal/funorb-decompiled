@@ -24,11 +24,11 @@ final class NameSuggestionsPanel extends UiContainer implements ButtonListener {
         try {
           for (var6_int = 0; var6_int < this.suggestions.length; var6_int++) {
             if (this.buttons[var6_int] == param0) {
-              this.field_K.a(this.suggestions[var6_int], (byte) -104);
+              this.field_K.onSuggestionChosen(this.suggestions[var6_int], (byte) -104);
             }
           }
           if (this.buttons[this.suggestions.length] == param0) {
-            this.field_K.a((byte) 41);
+            this.field_K.onMoreSuggestionsRequested((byte) 41);
           }
           if (param2 != 11) {
             this.suggestions = (String[]) null;
@@ -117,7 +117,7 @@ final class NameSuggestionsPanel extends UiContainer implements ButtonListener {
         }
     }
 
-    final static void a(byte param0, int param1) {
+    final static void processWidgetInput(byte param0, int param1) {
         ArrayWidgetContainer.l(84);
         if (param0 >= -103) {
           field_M = (String) null;
@@ -137,7 +137,7 @@ final class NameSuggestionsPanel extends UiContainer implements ButtonListener {
         int var6 = 0;
         var6 = Pixelate.field_H ? 1 : 0;
         try {
-          this.children.e(81);
+          this.children.clear(81);
           if (param1 != null &&
             param1.length != 0) {
             if (param0 >= -83) {
@@ -153,7 +153,7 @@ final class NameSuggestionsPanel extends UiContainer implements ButtonListener {
             for (var5 = 0; var5 < var3_int; var5++) {
               this.buttons[var5] = new TextButton(this.suggestions[var5], (UiListener) (this));
               this.buttons[var5].field_y = (WidgetPainter) ((Object) var4);
-              this.buttons[var5].field_l = io.field_a;
+              this.buttons[var5].field_l = LoginMethod.field_a;
               this.buttons[var5].setBounds(80, (byte) 63, 20 + 16 * var5, 0, 15);
               this.addChild(this.buttons[var5], 80);
             }
@@ -181,9 +181,9 @@ final class NameSuggestionsPanel extends UiContainer implements ButtonListener {
 
     final static void l(int param0) {
         String var2 = (String) null;
-        FallingPieceView.a(nk.field_b, -116, (String) null);
+        FallingPieceView.openLoginForm(nk.field_b, -116, (String) null);
         if (param0 != 20700) {
-          NameSuggestionsPanel.a((byte) -98, -12);
+          NameSuggestionsPanel.processWidgetInput((byte) -98, -12);
         }
     }
 

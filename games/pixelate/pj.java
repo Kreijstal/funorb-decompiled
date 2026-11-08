@@ -23,7 +23,7 @@ final class pj {
             field_i = (SceneWidget) null;
           }
           if (param1 ||
-            io.field_c == null) {
+            LoginMethod.field_c == null) {
             EmergentBehaviourBackground.field_o = false;
           }
           if (param1) {
@@ -41,7 +41,7 @@ final class pj {
             Checkbox.field_W = Checkbox.field_W - 1;
             return;
           }
-          if (io.field_c != null) {
+          if (LoginMethod.field_c != null) {
             if (0 < oo.field_b) {
               oo.field_b = oo.field_b - 1;
               return;
@@ -54,7 +54,7 @@ final class pj {
               return;
             }
             if (0 == Checkbox.field_W) {
-              NodeHashTable.a(false, -102);
+              NodeHashTable.buildLobbyWidgetTree(false, -102);
             }
             Checkbox.field_W = Checkbox.field_W + 1;
             return;
@@ -72,7 +72,7 @@ final class pj {
               return;
             }
             if (vn.field_g == 0) {
-              NodeHashTable.a(true, -71);
+              NodeHashTable.buildLobbyWidgetTree(true, -71);
             }
             vn.field_g = vn.field_g + 1;
             return;
@@ -118,13 +118,13 @@ final class pj {
           this.field_d = param3;
           this.field_f = false;
           this.field_j = 0;
-          var5_int = rk.field_e.textWidth(param0);
+          var5_int = PieceTiming.field_e.textWidth(param0);
           if (var5_int > this.field_e.field_A) {
             this.field_e = new Sprite(10 + var5_int, this.field_e.field_B);
           }
           this.field_e.makeRasterTarget();
           SoftwareRasterizer.clear();
-          rk.field_e.drawCentered(param0, this.field_e.field_A >> 1, this.field_e.field_B, 0, -1);
+          PieceTiming.field_e.drawCentered(param0, this.field_e.field_A >> 1, this.field_e.field_B, 0, -1);
           ClientException.field_f.bindRaster(19692);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

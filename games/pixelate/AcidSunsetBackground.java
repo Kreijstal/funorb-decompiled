@@ -7,8 +7,8 @@ final class AcidSunsetBackground extends BackgroundScene {
     private int field_m;
     static IndexedSprite[] field_o;
 
-    final void c(int param0) {
-        super.c(param0);
+    final void tick(int param0) {
+        super.tick(param0);
         this.field_m = this.field_m + 1;
         this.field_p = this.field_p + 2;
         if (DialWidgetPainter.field_f.length <= this.field_m) {
@@ -38,7 +38,7 @@ final class AcidSunsetBackground extends BackgroundScene {
         super(param0, param1);
     }
 
-    final void a(boolean param0) {
+    final void render(boolean param0) {
         SoftwareRasterizer.fillVerticalGradient(0, 0, 640, 480, DialWidgetPainter.field_f[this.field_m], DialWidgetPainter.field_f[this.field_p]);
         if (param0) {
           return;

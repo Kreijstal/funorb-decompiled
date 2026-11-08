@@ -18,7 +18,7 @@ final class MusicPatchPcmStream extends PcmStream {
             var1.indexOf('@') >= 0) {
             var1 = "";
           }
-          return new ConditionalTextValue(ProxySocketConnector.f(8192), OptionsScreen.g(120));
+          return new ConditionalTextValue(ProxySocketConnector.f(8192), OptionsScreen.isAccountRequestPending(120));
         }
         field_p = (Sprite) null;
         var1Lifetime1 = ProxySocketConnector.f(8192);
@@ -26,14 +26,14 @@ final class MusicPatchPcmStream extends PcmStream {
           var1Lifetime1.indexOf('@') >= 0) {
           var1Lifetime1 = "";
         }
-        return new ConditionalTextValue(ProxySocketConnector.f(8192), OptionsScreen.g(120));
+        return new ConditionalTextValue(ProxySocketConnector.f(8192), OptionsScreen.isAccountRequestPending(120));
     }
 
     final PcmStream nextSubStream() {
         MusicPatchNode var1_ref = null;
         int var2 = Pixelate.field_H ? 1 : 0;
         do {
-          var1_ref = (MusicPatchNode) (this.field_r.last(1504642273));
+          var1_ref = (MusicPatchNode) (this.field_r.next(1504642273));
           if (var1_ref == null) {
             return null;
           }
@@ -42,7 +42,7 @@ final class MusicPatchPcmStream extends PcmStream {
     }
 
     final PcmStream firstSubStream() {
-        MusicPatchNode var1 = (MusicPatchNode) (this.field_r.c(1504642273));
+        MusicPatchNode var1 = (MusicPatchNode) (this.field_r.first(1504642273));
         if (var1 == null) {
           return null;
         }
@@ -83,7 +83,7 @@ final class MusicPatchPcmStream extends PcmStream {
         var7 = Pixelate.field_H ? 1 : 0;
         try {
           this.field_o.mixInto(param0, param1, param2);
-          var6 = (MusicPatchNode) (this.field_r.c(1504642273));
+          var6 = (MusicPatchNode) (this.field_r.first(1504642273));
           while (var6 != null) {
             stackIn_4_0 = this.sequencer.discardInactiveVoice(var6, (byte) 75);
             boolean decompiledFrameCompleted0 = true;
@@ -104,7 +104,7 @@ final class MusicPatchPcmStream extends PcmStream {
                 var6.field_E = var6.field_E - var5;
               }
             }
-            var6 = (MusicPatchNode) (this.field_r.last(1504642273));
+            var6 = (MusicPatchNode) (this.field_r.next(1504642273));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -127,7 +127,7 @@ final class MusicPatchPcmStream extends PcmStream {
         int var4;
         var4 = Pixelate.field_H ? 1 : 0;
         this.field_o.skip(param0);
-        var3 = (MusicPatchNode) (this.field_r.c(1504642273));
+        var3 = (MusicPatchNode) (this.field_r.first(1504642273));
         while (var3 != null) {
           if (!this.sequencer.discardInactiveVoice(var3, (byte) 75)) {
             var2 = param0;
@@ -141,7 +141,7 @@ final class MusicPatchPcmStream extends PcmStream {
               var2 = var2 - var3.field_E;
             } while (!this.sequencer.updateNote(var2, var3, 0, false, (int[]) null));
           }
-          var3 = (MusicPatchNode) (this.field_r.last(1504642273));
+          var3 = (MusicPatchNode) (this.field_r.next(1504642273));
         }
     }
 

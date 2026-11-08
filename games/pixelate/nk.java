@@ -12,12 +12,12 @@ final class nk {
     static int field_i;
     static IntrusiveDeque field_a;
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         try {
           if (!param0) {
-            nk.a((SceneWidget) null, (BitmapFont) null, (VerticalScrollbar) null, (SceneWidget) null, (byte) 7, (SceneWidget) null, (SceneWidget) null, (SceneWidget) null, (SceneWidget) null, true, (SceneWidget) null, (SceneWidget) null);
+            nk.buildChatPanelComponents((SceneWidget) null, (BitmapFont) null, (VerticalScrollbar) null, (SceneWidget) null, (byte) 7, (SceneWidget) null, (SceneWidget) null, (SceneWidget) null, (SceneWidget) null, true, (SceneWidget) null, (SceneWidget) null);
           }
           field_d = null;
           field_g = null;
@@ -35,7 +35,7 @@ final class nk {
         }
     }
 
-    final static void a(SceneWidget param0, BitmapFont param1, VerticalScrollbar param2, SceneWidget param3, byte param4, SceneWidget param5, SceneWidget param6, SceneWidget param7, SceneWidget param8, boolean param9, SceneWidget param10, SceneWidget param11) {
+    final static void buildChatPanelComponents(SceneWidget param0, BitmapFont param1, VerticalScrollbar param2, SceneWidget param3, byte param4, SceneWidget param5, SceneWidget param6, SceneWidget param7, SceneWidget param8, boolean param9, SceneWidget param10, SceneWidget param11) {
         String stackIn_30_0 = null;
         int stackIn_34_0 = 0;
         RuntimeException stackIn_44_0 = null;
@@ -108,11 +108,11 @@ final class nk {
           nf.field_d = new SceneWidget(0L, param10);
           nf.field_d.font = AccountMessagePanel.field_Q;
           StripedProgressBar.field_U.addChild(nf.field_d, (byte) 26);
-          StripedProgressBar.field_U.h(-257);
+          StripedProgressBar.field_U.markTreeDirty(-257);
           rh.field_y = new SceneWidget(0L, (SceneWidget) null);
           rh.field_y.field_zb = var16;
           if (param4 <= 69) {
-            nk.a(-96);
+            nk.readLocalDisplayName(-96);
           }
           StripedProgressBar.field_U.addChild(rh.field_y, (byte) 26);
           DelegatingCanvas.field_e = new SceneWidget[5];
@@ -153,7 +153,7 @@ final class nk {
                 ResourceArchive.field_f[var18].addChild(CheckboxPainter.field_n[var18], (byte) 26);
                 ResourceArchive.field_f[var18].addChild(ResourceArchive.field_h[var18], (byte) 26);
                 ResourceArchive.field_f[var18].addChild(DelegatingCanvas.field_e[var18], (byte) 26);
-                ResourceArchive.field_f[var18].h(-257);
+                ResourceArchive.field_f[var18].markTreeDirty(-257);
                 ui.field_i.addChild(ResourceArchive.field_f[var18], (byte) 26);
                 TextButton.field_F = TextButton.field_F + 1;
               }
@@ -242,12 +242,12 @@ final class nk {
         }
     }
 
-    final static void a(int param0) {
+    final static void readLocalDisplayName(int param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         try {
           if (param0 != 16711935) {
-            nk.a(true);
+            nk.releaseStatics(true);
           }
           ModalStack.field_J = MusicCrossfadeStream.field_o.readString(5);
           LobbyGame.field_Hb = dh.a((CharSequence) ((Object) ModalStack.field_J), (byte) 44);
@@ -259,7 +259,7 @@ final class nk {
         }
     }
 
-    final static StringBuilder a(StringBuilder param0, int param1, char param2, int param3) {
+    final static StringBuilder padWithChar(StringBuilder param0, int param1, char param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -277,7 +277,7 @@ final class nk {
           do {
             if (param1 <= var5) {
               if (param3 != 16736352) {
-                nk.a((StringBuilder) null, 4, 'ﾧ', 43);
+                nk.padWithChar((StringBuilder) null, 4, 'ﾧ', 43);
               }
               break;
             }
@@ -300,7 +300,7 @@ final class nk {
         }
     }
 
-    final static void a(byte param0, int param1) {
+    final static void setMusicVolume(byte param0, int param1) {
         cm var2 = null;
         int var3 = 0;
         boolean stackIn_22_0 = false;
@@ -314,7 +314,7 @@ final class nk {
             field_i = -74;
           }
           LinkButtonPainter.field_h = param1;
-          var2 = (cm) (bo.field_d.c(param0 ^ 1504642236));
+          var2 = (cm) (bo.field_d.first(param0 ^ 1504642236));
           while (null != var2) {
             stackIn_22_0 = var2.field_k.isLinked(param0 - 93);
             if (var3 != 0) {
@@ -323,7 +323,7 @@ final class nk {
                   var2.unlink(2779);
                 }
                 var2.field_n.setVolumeQ6(var2.field_p * LinkButtonPainter.field_h + 128 >> 8);
-                var2 = (cm) (LoginCredentials.field_b.last(1504642273));
+                var2 = (cm) (LoginCredentials.field_b.next(1504642273));
                 return;
               }
             }
@@ -334,14 +334,14 @@ final class nk {
               var3 != 0) {
               var2.field_n.setVolumeQ6(128 + var2.field_p * LinkButtonPainter.field_h >> 8);
             }
-            var2 = (cm) (bo.field_d.last(param0 + 1504642180));
+            var2 = (cm) (bo.field_d.next(param0 + 1504642180));
             if (var3 == 0) {
               continue;
             }
             break;
           }
           if (LoginCredentials.field_b != null) {
-            var2Lifetime1 = (cm) (LoginCredentials.field_b.c(1504642273));
+            var2Lifetime1 = (cm) (LoginCredentials.field_b.first(1504642273));
             while (null != var2Lifetime1) {
               if (var3 != 0) {
                 return;
@@ -352,7 +352,7 @@ final class nk {
               } else {
                 var2Lifetime1.field_n.setVolumeQ6(var2Lifetime1.field_p * LinkButtonPainter.field_h + 128 >> 8);
               }
-              var2Lifetime1 = (cm) (LoginCredentials.field_b.last(1504642273));
+              var2Lifetime1 = (cm) (LoginCredentials.field_b.next(1504642273));
             }
           }
           return;
@@ -363,15 +363,15 @@ final class nk {
         }
     }
 
-    final static void a(int param0, boolean param1) {
+    final static void completePendingValidation(int param0, boolean param1) {
         try {
-          an.field_e.a(param0 + param0, param1);
+          an.field_e.complete(param0 + param0, param1);
         } catch (RuntimeException runtimeException) {
           throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "nk.A(" + param0 + ',' + param1 + ')');
         }
     }
 
-    final static void a(int param0, int param1, int param2) {
+    final static void setTooltipAnchor(int param0, int param1, int param2) {
         try {
           Checkbox.field_Q = param0;
           DisplayNameForm.field_L = param1;

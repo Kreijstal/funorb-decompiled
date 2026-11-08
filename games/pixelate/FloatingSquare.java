@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class ck {
+final class FloatingSquare {
     private float field_i;
     private float field_d;
     private float field_c;
@@ -16,17 +16,17 @@ final class ck {
     private float field_e;
     static TriangleMesh[] field_b;
 
-    public static void a(byte param0) {
+    public static void clearStatics(byte param0) {
         field_g = null;
         field_b = null;
         field_j = null;
         if (param0 >= -98) {
           java.applet.Applet var2 = (java.applet.Applet) null;
-          ck.a(true, (java.applet.Applet) null);
+          FloatingSquare.hasTuhstatbutCookie(true, (java.applet.Applet) null);
         }
     }
 
-    final static LoginCredentials a(String param0, String param1, boolean param2, long param3, int param4) {
+    final static LoginCredentials createLoginCredentials(String param0, String param1, boolean param2, long param3, int param4) {
         RuntimeException var6 = null;
         gq stackIn_5_0 = null;
         wk stackIn_7_0 = null;
@@ -74,7 +74,7 @@ final class ck {
         }
     }
 
-    final void b(int param0) {
+    final void tick(int param0) {
         if (this.field_f > 0) {
           this.field_f = this.field_f - 1;
           return;
@@ -86,7 +86,7 @@ final class ck {
         }
         this.field_h = this.field_h + this.field_i;
         if (0.0f > this.field_c) {
-          this.a(-22970);
+          this.respawn(-22970);
         }
         this.field_k = (int)this.field_c * 100 / 400;
         if (this.field_k > 100) {
@@ -94,7 +94,7 @@ final class ck {
         }
     }
 
-    private final void a(int param0) {
+    private final void respawn(int param0) {
         int stackIn_3_0 = 0;
         int stackIn_6_0 = 0;
         float stackIn_10_1 = 0.0f;
@@ -138,7 +138,7 @@ final class ck {
         this.field_e = var6 * (float)var5;
     }
 
-    final void a(int param0, boolean param1) {
+    final void draw(int param0, boolean param1) {
         int var3;
         int var6;
         int stackIn_7_0 = 0;
@@ -176,7 +176,7 @@ final class ck {
         }
     }
 
-    final static void a(int param0, BitmapFont param1, ResourceArchive param2) {
+    final static void createQuickChatResources(int param0, BitmapFont param1, ResourceArchive param2) {
         int var8 = 0;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
@@ -207,7 +207,7 @@ final class ck {
           param2.field_e = 0;
           StatefulTextPainter.field_y = new QuickChatCategoryCache(var3_int, param2, param2);
           jd.field_k = new QuickChatPhraseCache(var3_int, param2, param2, new dn());
-          var4 = fl.c(-3060);
+          var4 = AsyncValidationResult.findRootQuickChatCategory(-3060);
           if (var4 == null) {
             var11 = (Throwable) null;
             CheckboxPainter.reportClientError(1, "QC2", (Throwable) null);
@@ -215,9 +215,9 @@ final class ck {
           }
           oo.a(-1, var4);
           var12 = (BitmapFont) null;
-          AccountMessagePanel.field_L = ResizableModalPanel.a(65793, 4020342, 65793, (BitmapFont) null, 1513239, 0, 8947848, param0, 21, 1513239, 2245737, 5138823, 1127256);
-          ue.field_t = ResizableModalPanel.a(0, 0, 0, param1, 0, 16764006, 0, 0, 21, 0, 0, 0, 0);
-          AccountNamePrompt.field_Ib = ResizableModalPanel.a(0, 0, 0, param1, 0, 16777215, 0, 0, 21, 0, 0, 0, 0);
+          AccountMessagePanel.field_L = ResizableModalPanel.createThemedWidget(65793, 4020342, 65793, (BitmapFont) null, 1513239, 0, 8947848, param0, 21, 1513239, 2245737, 5138823, 1127256);
+          RankingTableRequest.field_t = ResizableModalPanel.createThemedWidget(0, 0, 0, param1, 0, 16764006, 0, 0, 21, 0, 0, 0, 0);
+          AccountNamePrompt.field_Ib = ResizableModalPanel.createThemedWidget(0, 0, 0, param1, 0, 16777215, 0, 0, 21, 0, 0, 0, 0);
           var5 = SoftwareRasterizer.field_j;
           var6 = SoftwareRasterizer.field_d;
           var16 = SoftwareRasterizer.field_k;
@@ -227,7 +227,7 @@ final class ck {
             SoftwareRasterizer.drawVerticalLine(var8, 1 + var8, -(var8 << 1) + 14, 16777215);
           }
           SoftwareRasterizer.setTarget(var16, var5, var6);
-          ContextActionMenu.field_Rb = BoundedRandomAccessFile.buildQuickChatCategoryMenu(ue.field_t, AccountNamePrompt.field_Ib, -55, AccountMessagePanel.field_L, var4);
+          ContextActionMenu.field_Rb = BoundedRandomAccessFile.buildQuickChatCategoryMenu(RankingTableRequest.field_t, AccountNamePrompt.field_Ib, -55, AccountMessagePanel.field_L, var4);
           DraggableWidget.field_I.children = new IntrusiveDeque();
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -250,7 +250,7 @@ final class ck {
         }
     }
 
-    final static boolean a(boolean param0, java.applet.Applet param1) {
+    final static boolean hasTuhstatbutCookie(boolean param0, java.applet.Applet param1) {
         try {
           int var5 = 0;
           String var2 = null;
@@ -309,9 +309,9 @@ final class ck {
         }
     }
 
-    ck() {
+    FloatingSquare() {
         int var1;
-        this.a(-22970);
+        this.respawn(-22970);
         var1 = JavaRandomHelpers.a(ea.field_b, -128, 250);
         if (var1 >= 180) {
           this.field_f = this.field_f + JavaRandomHelpers.a(ea.field_b, -116, 50);
@@ -321,7 +321,7 @@ final class ck {
           this.field_h = this.field_h + (float)var1 * this.field_i;
           this.field_c = this.field_c - (float)var1 * this.field_d;
           if (this.field_c < 0.0f) {
-            this.a(-22970);
+            this.respawn(-22970);
           }
           this.field_k = (int)this.field_c * 100 / 400;
           if (this.field_k > 100) {

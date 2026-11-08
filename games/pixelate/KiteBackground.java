@@ -15,7 +15,7 @@ final class KiteBackground extends BackgroundScene {
         return stackIn_6_0;
     }
 
-    final void c(int param0) {
+    final void tick(int param0) {
         jm[] var2;
         int var3;
         int var5;
@@ -27,7 +27,7 @@ final class KiteBackground extends BackgroundScene {
         fo var10;
         int var3Lifetime1;
         var5 = Pixelate.field_H ? 1 : 0;
-        super.c(param0);
+        super.tick(param0);
         var6 = this.field_n;
         var2 = var6;
         for (var3 = 0; var6.length > var3; var3++) {
@@ -36,7 +36,7 @@ final class KiteBackground extends BackgroundScene {
           if (-200.0 > var9.field_m ||
             640.0 < var9.field_m) {
             var9.a((byte) -114);
-            this.e(-1);
+            this.sortKitesByDepth(-1);
           }
         }
         var7 = this.field_m;
@@ -50,7 +50,7 @@ final class KiteBackground extends BackgroundScene {
         }
     }
 
-    private final boolean b(byte param0) {
+    private final boolean areKitesSortedByDepth(byte param0) {
         int var2 = 0;
         int var3 = Pixelate.field_H ? 1 : 0;
         int var2Lifetime1;
@@ -63,7 +63,7 @@ final class KiteBackground extends BackgroundScene {
         return true;
     }
 
-    final static Sprite[] a(int param0, int param1, int param2, ResourceArchive param3) {
+    final static Sprite[] loadSpriteSheet(int param0, int param1, int param2, ResourceArchive param3) {
         RuntimeException var4 = null;
         Sprite[] stackIn_5_0 = null;
         Sprite[] stackIn_7_0 = null;
@@ -72,7 +72,7 @@ final class KiteBackground extends BackgroundScene {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!rk.a(param0, false, param3, param1)) {
+          if (!PieceTiming.a(param0, false, param3, param1)) {
             return null;
           }
           if (param2 == 1000) {
@@ -95,23 +95,23 @@ final class KiteBackground extends BackgroundScene {
         }
     }
 
-    final static void a(byte param0, int param1) {
+    final static void resendPendingRequests(byte param0, int param1) {
         int var3 = 0;
         rh var4 = null;
-        ue var5 = null;
+        RankingTableRequest var5 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         var3 = Pixelate.field_H ? 1 : 0;
         try {
-          var4 = (rh) (MenuScreen.field_b.c(1504642273));
+          var4 = (rh) (MenuScreen.field_b.first(1504642273));
           while (var4 != null) {
             AlphaContainer.a((byte) -76, var4, param1);
-            var4 = (rh) (MenuScreen.field_b.last(1504642273));
+            var4 = (rh) (MenuScreen.field_b.next(1504642273));
           }
-          var5 = (ue) (DialWidgetPainter.field_c.c(1504642273));
+          var5 = (RankingTableRequest) (DialWidgetPainter.field_c.first(1504642273));
           while (var5 != null) {
-            LobbyPlayer.a(param1, var5, 65536);
-            var5 = (ue) (DialWidgetPainter.field_c.last(1504642273));
+            LobbyPlayer.sendRankingTableRequest(param1, var5, 65536);
+            var5 = (RankingTableRequest) (DialWidgetPainter.field_c.next(1504642273));
           }
           if (param0 <= 3) {
             KiteBackground.b(true);
@@ -124,7 +124,7 @@ final class KiteBackground extends BackgroundScene {
         }
     }
 
-    final void a(boolean param0) {
+    final void render(boolean param0) {
         jm var4 = null;
         fo var4_ref = null;
         int var3 = 0;
@@ -149,14 +149,14 @@ final class KiteBackground extends BackgroundScene {
         }
     }
 
-    private final void a(byte param0, int param1, int param2) {
+    private final void swapKites(byte param0, int param1, int param2) {
         int var4 = 36 / ((param0 - 20) / 49);
         jm var5 = this.field_n[param1];
         this.field_n[param1] = this.field_n[param2];
         this.field_n[param2] = var5;
     }
 
-    final static boolean d(int param0) {
+    final static boolean loadMembersBenefitsAssets(int param0) {
         if (null != PasswordFieldPainter.field_y) {
           return true;
         }
@@ -171,7 +171,7 @@ final class KiteBackground extends BackgroundScene {
         SpriteState.field_t = bi.loadSprite("benefits", "members_benefits_logo", MenuInputState.field_d, (byte) -118);
         li.field_h = SocketConnector.loadRgbSpritesByName("members_benefits_screenshots", "benefits", (byte) 47, MenuInputState.field_d);
         bl.a(11833, PasswordFieldPainter.field_y, SoundCache.field_e);
-        ni.a(MusicPatchPcmStream.field_p, 2, 40, 40, 80, false, -2400, 15, rk.field_e, 80, 0);
+        ni.a(MusicPatchPcmStream.field_p, 2, 40, 40, 80, false, -2400, 15, PieceTiming.field_e, 80, 0);
         PictureStrip.a(-25960, li.field_h);
         sk.a(param0 ^ -3744, SpriteState.field_t);
         return true;
@@ -184,14 +184,14 @@ final class KiteBackground extends BackgroundScene {
         }
     }
 
-    private final void e(int param0) {
+    private final void sortKitesByDepth(int param0) {
         int var2 = 0;
         int var3;
         var3 = Pixelate.field_H ? 1 : 0;
-        while (!this.b((byte) 89)) {
+        while (!this.areKitesSortedByDepth((byte) 89)) {
           for (var2 = 0; -1 + this.field_n.length > var2; var2++) {
             if (this.field_n[var2 + 1].field_l < this.field_n[var2].field_l) {
-              this.a((byte) 108, 1 + var2, var2);
+              this.swapKites((byte) 108, 1 + var2, var2);
             }
           }
         }
@@ -208,7 +208,7 @@ final class KiteBackground extends BackgroundScene {
           for (var3_int = 0; var3_int < 10; var3_int++) {
             this.field_n[var3_int] = new jm();
           }
-          this.e(-1);
+          this.sortKitesByDepth(-1);
           this.field_m = new fo[4];
           this.field_m[0] = new fo(1400, 150, 400, 500, 1000);
           this.field_m[1] = new fo(1800, 430, 320, 800, 1000);

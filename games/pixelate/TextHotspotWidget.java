@@ -94,7 +94,7 @@ class TextHotspotWidget extends TextButton {
             if (var10 != null) {
               ((ni) (var10)).field_l = var15;
             }
-            this.hotspotRegions.addFirst(22125, var15);
+            this.hotspotRegions.addLast(22125, var15);
             var10 = var15;
           }
         }
@@ -255,7 +255,7 @@ class TextHotspotWidget extends TextButton {
             var4 = param0;
           }
           var5 = new WhirlpoolHasher();
-          var5.a((byte) 123);
+          var5.reset((byte) 123);
           if (param2 != 1761872464) {
             field_N = (String) null;
           }
@@ -302,7 +302,7 @@ class TextHotspotWidget extends TextButton {
         if (param1 != -22562) {
           field_R = 126;
         }
-        var4 = (ni) (this.hotspotRegions.c(1504642273));
+        var4 = (ni) (this.hotspotRegions.first(1504642273));
         while (var4 != null) {
           var5 = var4;
           while (var5 != null) {
@@ -314,7 +314,7 @@ class TextHotspotWidget extends TextButton {
             }
             var5 = var5.field_l;
           }
-          var4 = (ni) (this.hotspotRegions.last(1504642273));
+          var4 = (ni) (this.hotspotRegions.next(1504642273));
         }
         return null;
     }

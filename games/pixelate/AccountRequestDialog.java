@@ -25,10 +25,10 @@ class AccountRequestDialog extends ContentTransitionDialog implements ButtonList
             field_ub = (int[]) null;
           }
           if (!this.field_nb) {
-            Vector3.a((byte) 71, AudioService.a(13867), "tochangedisplayname.ws");
+            Vector3.openRelativeUrl((byte) 71, AudioService.a(13867), "tochangedisplayname.ws");
             return;
           }
-          QuickChatMenu.a(3, -2671);
+          QuickChatMenu.setPendingUiResult(3, -2671);
           this.p(-83);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -193,7 +193,7 @@ class AccountRequestDialog extends ContentTransitionDialog implements ButtonList
                   this.transitionToContent(var6, -124);
                   return;
                 }
-                var6.appendButton(1707, (UiListener) (this), ue.field_q);
+                var6.appendButton(1707, (UiListener) (this), RankingTableRequest.field_q);
               }
             } else {
               var6.a(8, -1, StripedProgressBar.field_X);

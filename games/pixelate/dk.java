@@ -19,12 +19,12 @@ final class dk {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!rk.a(param0, false, param1, param2)) {
+          if (!PieceTiming.a(param0, false, param1, param2)) {
             stackIn_2_0 = null;
             return (Sprite) (stackIn_2_0);
           }
           if (param3 == -1) {
-            stackIn_7_0 = WhirlpoolHasher.a(0);
+            stackIn_7_0 = WhirlpoolHasher.createSpriteFromDecodeBuffers(0);
             return stackIn_7_0;
           }
           stackIn_5_0 = (Sprite) null;
@@ -125,17 +125,17 @@ final class dk {
           var11 = var9;
           var3 = var11.readUnsignedByte(255);
           var11.startBitAccess(-110);
-          qn.field_q = MenuInputState.a(var11, (byte) 77);
-          ck.field_b = new TriangleMesh[var3];
+          qn.field_q = MenuInputState.readMeshColourEntries(var11, (byte) 77);
+          FloatingSquare.field_b = new TriangleMesh[var3];
           BlastFromThePastBackground.field_p = new int[var3][];
           for (var4 = 0; var3 > var4; var4++) {
-            ck.field_b[var4] = pk.readTriangleMesh(var9, -1);
+            FloatingSquare.field_b[var4] = pk.readTriangleMesh(var9, -1);
           }
           var11.endBitAccess(7);
           var10 = 0;
           var4Lifetime1 = var10;
           while (var10 < var3) {
-            var5 = ck.field_b[var10];
+            var5 = FloatingSquare.field_b[var10];
             var5.a(6, 6, 6, true, 1);
             var5.ensureBounds((byte) -17);
             var6 = new int[]{var5.field_b + var5.field_c >> 1, var5.field_F + var5.field_t >> 1, var5.field_x + var5.field_g >> 1};

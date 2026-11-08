@@ -151,7 +151,7 @@ final class ContextActionMenu extends SceneWidget {
     final int updateAndPollAction(int param0, boolean param1) {
         int var3 = 0;
         int var4 = Pixelate.field_H ? 1 : 0;
-        this.a(param0 ^ 24573, param1);
+        this.updateInputFullScreen(param0 ^ 24573, param1);
         if (!param1) {
           return -2;
         }

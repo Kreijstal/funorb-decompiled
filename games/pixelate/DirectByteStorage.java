@@ -66,7 +66,7 @@ final class DirectByteStorage extends ByteStorage {
     final static void a(int param0, hf param1, int param2) {
         try {
           int var3_int = 113 / ((59 - param0) / 39);
-          dh.field_a.addFirst(22125, param1);
+          dh.field_a.addLast(22125, param1);
           id.a((byte) -109, param1, param2);
         } catch (RuntimeException runtimeException) {
           throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "bh.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');

@@ -35,10 +35,10 @@ final class ArchiveIndex {
         int var2 = Pixelate.field_H ? 1 : 0;
         try {
           TriangleMesh.field_r = false;
-          io.field_c = null;
+          LoginMethod.field_c = null;
           DraggableWidget.field_S = null;
           if (null != ImageProducerRasterBuffer.field_n) {
-            ImageProducerRasterBuffer.field_n.e(-123);
+            ImageProducerRasterBuffer.field_n.clear(-123);
             ImageProducerRasterBuffer.field_n = null;
           }
           if (param0 != 23949) {
@@ -46,20 +46,20 @@ final class ArchiveIndex {
           }
           QuickChatCategoryCache.field_d = null;
           if (null != nk.field_a) {
-            nk.field_a.e(117);
+            nk.field_a.clear(117);
             nk.field_a = null;
           }
           dg.field_f = null;
           if (null != ClientContextMenu.field_a) {
-            ClientContextMenu.field_a.e(126);
+            ClientContextMenu.field_a.clear(126);
             ClientContextMenu.field_a = null;
           }
           SocketConnector.field_f = null;
           if (QuickChatCategoryCache.field_d != null) {
-            var3 = (LobbyPlayer) (QuickChatCategoryCache.field_d.a(-109));
+            var3 = (LobbyPlayer) (QuickChatCategoryCache.field_d.first(-109));
             while (var3 != null) {
               var3.unlinkSecondary(17);
-              var3 = (LobbyPlayer) (QuickChatCategoryCache.field_d.a((byte) 50));
+              var3 = (LobbyPlayer) (QuickChatCategoryCache.field_d.next((byte) 50));
             }
             QuickChatCategoryCache.field_d = null;
           }
@@ -330,7 +330,7 @@ final class ArchiveIndex {
     final static void a(int param0, byte param1) {
         DateOfBirthValidator.field_j = 1;
         un.field_j = gd.field_e[param0];
-        un.field_j.b(false);
+        un.field_j.reset(false);
         if (param1 < 124) {
           Sprite var3 = (Sprite) null;
           ArchiveIndex.a(-60, (Sprite) null, 85, -59, 28, 57);
@@ -452,7 +452,7 @@ final class ArchiveIndex {
     ArchiveIndex(byte[] param0, int param1, byte[] param2) {
         int var4_int = 0;
         try {
-          this.field_o = Matrix3.a(param0, 125, param0.length);
+          this.field_o = Matrix3.crc32(param0, 125, param0.length);
           if (param1 != this.field_o) {
             throw new RuntimeException();
           }

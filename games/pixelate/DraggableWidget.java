@@ -132,10 +132,10 @@ final class DraggableWidget extends SingleChildContainer {
     final static void n(int param0) {
         if (param0 != 2147483647) {
           field_P = (Sprite[]) null;
-          QuickChatMenu.a(17, -2671);
+          QuickChatMenu.setPendingUiResult(17, -2671);
           return;
         }
-        QuickChatMenu.a(17, -2671);
+        QuickChatMenu.setPendingUiResult(17, -2671);
     }
 
     final void handlePointerRelease(int param0, int param1, UiComponent param2, int param3, int param4, int param5) {

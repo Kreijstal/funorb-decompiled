@@ -111,7 +111,7 @@ final class cn {
               HighscoresScreen.a(AgeValidator.field_m, aa.field_f, SceneWidgetNode.field_t, GameModeSelectScreen.field_v, 12556);
               aa.field_f.backpatchByteLength(aa.field_f.position - var9, -1);
             }
-            SecondaryNodeHashTable.b(-1, 10000);
+            SecondaryNodeHashTable.flushOutgoingPackets(-1, 10000);
             GameModeSelectScreen.field_s = TextLayoutLine.field_c;
           }
           if (TextLayoutLine.field_c == GameModeSelectScreen.field_s &&
@@ -424,12 +424,12 @@ final class cn {
 
     final static lc a(int param0, int param1, int param2, int param3) {
         int var5 = Pixelate.field_H ? 1 : 0;
-        lc var4 = (lc) (LoginCredentials.field_c.c(1504642273));
+        lc var4 = (lc) (LoginCredentials.field_c.first(1504642273));
         while (var4 != null) {
           if (~param0 == ~var4.field_k) {
             return var4;
           }
-          var4 = (lc) (LoginCredentials.field_c.last(1504642273));
+          var4 = (lc) (LoginCredentials.field_c.next(1504642273));
         }
         var4 = new lc();
         if (param3 > -16) {
@@ -437,7 +437,7 @@ final class cn {
         }
         var4.field_k = param0;
         var4.field_s = param2;
-        LoginCredentials.field_c.addFirst(22125, var4);
+        LoginCredentials.field_c.addLast(22125, var4);
         em.a((byte) -7, var4, param1);
         return var4;
     }

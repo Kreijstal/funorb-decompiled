@@ -47,9 +47,9 @@ final class IconTextComponent extends SceneWidget {
           if (param5 != null) {
             this.field_Eb = new SceneWidget(0L, param3, param5);
             this.addChild(this.field_Eb, (byte) 26);
-            this.h(-257);
+            this.markTreeDirty(-257);
           } else {
-            this.h(-257);
+            this.markTreeDirty(-257);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -99,10 +99,10 @@ final class IconTextComponent extends SceneWidget {
           var4 = -param1;
           var5 = -param1;
           if (this.field_Fb != null) {
-            var4 = this.field_Fb.g(0);
+            var4 = this.field_Fb.getContentWidth(0);
           }
           if (null != this.field_Eb) {
-            var5 = this.field_Eb.g(param0 + 25469);
+            var5 = this.field_Eb.getContentWidth(param0 + 25469);
           }
           return param2 + var4 + (param2 + param1) + var5;
         }
@@ -110,10 +110,10 @@ final class IconTextComponent extends SceneWidget {
         var4Lifetime1 = -param1;
         var5Lifetime1 = -param1;
         if (this.field_Fb != null) {
-          var4Lifetime1 = this.field_Fb.g(0);
+          var4Lifetime1 = this.field_Fb.getContentWidth(0);
         }
         if (null != this.field_Eb) {
-          var5Lifetime1 = this.field_Eb.g(param0 + 25469);
+          var5Lifetime1 = this.field_Eb.getContentWidth(param0 + 25469);
         }
         return param2 + var4Lifetime1 + (param2 + param1) + var5Lifetime1;
     }
@@ -127,11 +127,11 @@ final class IconTextComponent extends SceneWidget {
         }
         var4 = -param1;
         if (this.field_Fb != null) {
-          var4 = this.field_Fb.g(0);
+          var4 = this.field_Fb.getContentWidth(0);
         }
         var5 = -param1;
         if (null != this.field_Eb) {
-          var5 = this.field_Eb.a((byte) 95, -param2 - var4 - param2 + (this.field_K - param1));
+          var5 = this.field_Eb.measureContentWidth((byte) 95, -param2 - var4 - param2 + (this.field_K - param1));
         }
         var6 = var5 + param1 + (param2 + (var4 + param2));
         if (var6 > this.field_K) {

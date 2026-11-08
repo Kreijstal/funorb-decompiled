@@ -64,7 +64,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                     (var2.startsWith("1.6.0_"))) {
                     var3 = 6;
                     while (var3 < var2.length()) {
-                      stackIn_68_0 = MidiPcmStream.a(89, var2.charAt(var3));
+                      stackIn_68_0 = MidiPcmStream.isAsciiDigit(89, var2.charAt(var3));
                       if (var5 != 0) {
                         decompiledFrameCompleted0 = false;
                         break;
@@ -150,7 +150,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                     }
                   }
                   if (decompiledFrameRemainder0) {
-                    id.field_b = ArchiveRequest.field_y.a((byte) 42, wa.field_b);
+                    id.field_b = ArchiveRequest.field_y.waitForTicks((byte) 42, wa.field_b);
                     stackIn_100_0 = 0;
                   }
                   var3 = stackIn_100_0;
@@ -348,7 +348,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                   }
                   break;
                 }
-                SecondaryNodeHashTable.a(10L, (byte) 23);
+                SecondaryNodeHashTable.sleepMillis(10L, (byte) 23);
               } while (var9 == 0);
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
@@ -555,7 +555,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           if (this == DropTargetWidget.field_I &&
             !DialWidget.field_U) {
             PicturePreview.field_m = hm.a(64);
-            SecondaryNodeHashTable.a(5000L, (byte) 23);
+            SecondaryNodeHashTable.sleepMillis(5000L, (byte) 23);
             fp.field_c = null;
             this.shutdownApplet(false, -238);
             return;

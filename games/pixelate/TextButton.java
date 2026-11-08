@@ -363,7 +363,7 @@ class TextButton extends UiComponent {
                   var26Lifetime1Lifetime1 = param0.field_u[var23Lifetime2];
                   ProxySocketConnector.field_l[var23Lifetime2] = var9 + (var18 * var26Lifetime1Lifetime1 + (var12 * var24Lifetime1Lifetime1 + var25Lifetime1Lifetime1 * var15) >> 16);
                   ValidationState.field_b[var23Lifetime2] = var10 + (var16 * var25Lifetime1Lifetime1 + var24Lifetime1Lifetime1 * var13 + var19 * var26Lifetime1Lifetime1 >> 16);
-                  kh.field_c[var23Lifetime2] = (var20 * var26Lifetime1Lifetime1 + var14 * var24Lifetime1Lifetime1 + var25Lifetime1Lifetime1 * var17 >> 16) + var11;
+                  DisplayNameRequestGlobals.field_c[var23Lifetime2] = (var20 * var26Lifetime1Lifetime1 + var14 * var24Lifetime1Lifetime1 + var25Lifetime1Lifetime1 * var17 >> 16) + var11;
                   var24Lifetime1Lifetime1 = param0.field_M[var23Lifetime2];
                   var25Lifetime1Lifetime1 = param0.field_y[var23Lifetime2];
                   var26Lifetime1Lifetime1 = param0.field_R[var23Lifetime2];
@@ -417,7 +417,7 @@ class TextButton extends UiComponent {
             stackIn_76_0 = var8;
             break;
           }
-          WhirlpoolHasher.a(stackIn_76_0, param0, false, var7_int, param2);
+          WhirlpoolHasher.renderMeshFaces(stackIn_76_0, param0, false, var7_int, param2);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -481,7 +481,7 @@ class TextButton extends UiComponent {
           DualLinkNode.field_o = param14;
           el.a(param10, param13, param9, 93, param3);
           SecondaryNodeDequeIterator.a(param5, param6, 7, param1);
-          mj.a(param2, param4, param0, 300, param12, param8);
+          ScoreMarkerDemo.a(param2, param4, param0, 300, param12, param8);
           ug.a(param15, param19, -26104);
           NanoTickClock.a(param7, param18, -14129, param16);
           if (param17 < 105) {

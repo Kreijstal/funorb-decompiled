@@ -27,7 +27,7 @@ final class TimerBarDemo extends StatusBar {
             return (BinaryBitmapFont) (stackIn_2_0);
           }
           var2 = new BinaryBitmapFont(param0, IntrusiveNode.field_b, e.field_b, ByteStorage.field_g, ge.field_c, wo.field_f);
-          re.b(140);
+          LoadingStepTracker.clearSpriteDecodeBuffers(140);
           var3 = -91 % ((77 - param1) / 37);
           stackIn_4_0 = var2;
           return stackIn_4_0;
@@ -54,7 +54,7 @@ final class TimerBarDemo extends StatusBar {
         field_p = null;
     }
 
-    final void c(int param0) {
+    final void draw(int param0) {
         int var5 = 0;
         int var2;
         int var3;
@@ -70,7 +70,7 @@ final class TimerBarDemo extends StatusBar {
           stackIn_3_0 = 0;
         }
         var3 = stackIn_3_0;
-        this.a(param0 + 61, var3, var2, this.field_r);
+        this.drawBarFrame(param0 + 61, var3, var2, this.field_r);
         var4 = 320 - this.field_r / param0;
         for (var5 = 0; 7 > var5; var5++) {
           var6 = 13 + (76 * var5 + 76) + 2;
@@ -82,11 +82,11 @@ final class TimerBarDemo extends StatusBar {
         }
     }
 
-    final void a(byte param0) {
+    final void tick(byte param0) {
         int var2;
         int var2Lifetime1;
         int var2Lifetime2;
-        super.a(param0);
+        super.tick(param0);
         int fieldTemp$0 = this.field_s + 1;
         this.field_s = this.field_s + 1;
         if (200 <= fieldTemp$0) {
@@ -126,7 +126,7 @@ final class TimerBarDemo extends StatusBar {
           }
           return;
         }
-        this.b(255);
+        this.setFlashIntensity(255);
         var2Lifetime2 = this.field_t * 615 / this.field_m;
         if (var2Lifetime2 <= this.field_r) {
           this.field_r = var2Lifetime2;

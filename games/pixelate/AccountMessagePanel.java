@@ -85,7 +85,7 @@ final class AccountMessagePanel extends UiContainer implements ButtonListener {
             }
             var7 = this.field_I[var6_int];
             if (var7 != -1) {
-              QuickChatMenu.a(this.field_I[var6_int], -2671);
+              QuickChatMenu.setPendingUiResult(this.field_I[var6_int], -2671);
             } else {
               this.field_M.p(-121);
             }
@@ -168,10 +168,10 @@ final class AccountMessagePanel extends UiContainer implements ButtonListener {
           return true;
         }
         if (param0 == ke.field_a) {
-          bo.field_h.l(17872);
+          bo.field_h.resetSelection(17872);
           return true;
         }
-        stackIn_9_0 = (null != bo.field_h) && (bo.field_h.a(param2, 0, param1));
+        stackIn_9_0 = (null != bo.field_h) && (bo.field_h.processShortcutKey(param2, 0, param1));
         return stackIn_9_0;
     }
 

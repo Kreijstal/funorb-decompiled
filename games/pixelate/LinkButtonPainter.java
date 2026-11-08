@@ -65,7 +65,7 @@ final class LinkButtonPainter implements WidgetPainter {
     }
 
     final static void a(byte param0) {
-        jd var1 = (jd) (BirthDateEntryPanel.field_P.b(param0 - 174));
+        jd var1 = (jd) (BirthDateEntryPanel.field_P.removeLast(param0 - 174));
         if (param0 != 92) {
           field_i = -106;
           if (var1 == null) {
@@ -74,7 +74,7 @@ final class LinkButtonPainter implements WidgetPainter {
           SoftwareRasterizer.setTarget(var1.field_t, var1.field_q, var1.field_u);
           SoftwareRasterizer.setClip(var1.field_w, var1.field_v, var1.field_m, var1.field_l);
           var1.field_t = null;
-          ValidationIndicator.field_O.addFirst(param0 ^ 22065, var1);
+          ValidationIndicator.field_O.addLast(param0 ^ 22065, var1);
           return;
         }
         if (var1 == null) {
@@ -83,7 +83,7 @@ final class LinkButtonPainter implements WidgetPainter {
         SoftwareRasterizer.setTarget(var1.field_t, var1.field_q, var1.field_u);
         SoftwareRasterizer.setClip(var1.field_w, var1.field_v, var1.field_m, var1.field_l);
         var1.field_t = null;
-        ValidationIndicator.field_O.addFirst(param0 ^ 22065, var1);
+        ValidationIndicator.field_O.addLast(param0 ^ 22065, var1);
     }
 
     public static void releaseStatics(int param0) {

@@ -659,7 +659,7 @@ final class VorbisSample extends IntrusiveNode {
           var9 = new int[var5];
           var10 = aq.a((byte) 46, var5 - 1);
           for (var11 = 0; var11 < var5; var11++) {
-            var9[var11] = MarkerSlider.b(var11, -23439, var10);
+            var9[var11] = MarkerSlider.reverseBits(var11, -23439, var10);
           }
           if (var1 == 0) {
             field_F = var6_ref_float__;

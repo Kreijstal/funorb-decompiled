@@ -52,7 +52,7 @@ final class GreenGrowTheRushesBackground extends BackgroundScene {
         return false;
     }
 
-    final void a(boolean param0) {
+    final void render(boolean param0) {
         if (param0) {
           return;
         }
@@ -98,7 +98,7 @@ final class GreenGrowTheRushesBackground extends BackgroundScene {
             wp.field_a = gi.a(0, new CharSequence[]{(CharSequence) ((Object) wp.field_a), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) GameApplet.field_d)});
           }
           MainMenuScreen.field_r.p(-100);
-          fl.a((byte) 81);
+          AsyncValidationResult.showLoadingProgressDialog((byte) 81);
         }
     }
 

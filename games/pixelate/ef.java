@@ -11,7 +11,7 @@ final class ef {
     static int field_f;
 
     final static void a(int param0) {
-        m var1 = (m) (LoginDialog.field_nb.c(1504642273));
+        m var1 = (m) (LoginDialog.field_nb.first(1504642273));
         if (var1 == null) {
           na.a(true);
           return;
@@ -40,7 +40,7 @@ final class ef {
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
-        ue var4 = null;
+        RankingTableRequest var4 = null;
         long var4_long = 0L;
         int var5 = 0;
         int var6 = 0;
@@ -72,10 +72,10 @@ final class ef {
           var2 = var28.readUnsignedByte(255);
           if (var2 == 0) {
             var3 = var28.readUnsignedShort((byte) 86);
-            var4 = (ue) (DialWidgetPainter.field_c.c(1504642273));
+            var4 = (RankingTableRequest) (DialWidgetPainter.field_c.first(1504642273));
             while (var4 != null) {
               if (var4.field_o != var3) {
-                var4 = (ue) (DialWidgetPainter.field_c.last(1504642273));
+                var4 = (RankingTableRequest) (DialWidgetPainter.field_c.next(1504642273));
                 continue;
               }
               break;
@@ -169,10 +169,10 @@ final class ef {
           } else if (var2 == 1) {
             var3 = var28.readUnsignedShort((byte) -125);
             var4_long = var28.readLong(false);
-            var6_ref_rh = (rh) (MenuScreen.field_b.c(1504642273));
+            var6_ref_rh = (rh) (MenuScreen.field_b.first(1504642273));
             while (var6_ref_rh != null) {
               if (var3 != var6_ref_rh.field_o) {
-                var6_ref_rh = (rh) (MenuScreen.field_b.last(1504642273));
+                var6_ref_rh = (rh) (MenuScreen.field_b.next(1504642273));
                 continue;
               }
               break;

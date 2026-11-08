@@ -23,18 +23,18 @@ final class bo {
         RuntimeException var2_ref = null;
         var3 = Pixelate.field_H ? 1 : 0;
         try {
-          var4 = (og) (wk.field_g.c(1504642273));
+          var4 = (og) (wk.field_g.first(1504642273));
           while (var4 != null) {
             dq.a(param0, -18989, var4);
-            var4 = (og) (wk.field_g.last(param1 + 1504642266));
+            var4 = (og) (wk.field_g.next(param1 + 1504642266));
           }
           if (param1 != 7) {
             field_k = (String) null;
           }
-          var2 = bq.field_a.c(1504642273);
+          var2 = bq.field_a.first(1504642273);
           while (var2 != null) {
             AlphaContainer.a(true, param0);
-            var2 = bq.field_a.last(1504642273);
+            var2 = bq.field_a.next(1504642273);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -4,7 +4,7 @@
 final class aa {
     long field_k;
     SceneWidget field_q;
-    static ue field_p;
+    static RankingTableRequest field_p;
     int field_j;
     String field_n;
     int field_e;

@@ -176,7 +176,7 @@ final class ResourceArchive {
           }
           for (var3_int = 0; 50 > var3_int; var3_int++) {
             if (null != param0.field_w.peekEvent()) {
-              SecondaryNodeHashTable.a(1L, (byte) 23);
+              SecondaryNodeHashTable.sleepMillis(1L, (byte) 23);
               continue;
             }
             break;
@@ -444,7 +444,7 @@ final class ResourceArchive {
             stackIn_34_0 = var11_ref_RuntimeException;
             stackIn_34_1 = new StringBuilder();
             stackIn_35_2 = (param2 != null);
-            throw aa.addExceptionContext((Throwable) ((Object) stackIn_34_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(" ").append(param1).append(" ").append(var9.length).append(" ").append(Matrix3.a(var9, 126, var9.length)).append(" ").append(Matrix3.a(var9, 125, var9.length - 2)).append(" ").append(this.index.field_k[param1]).append(" ").append(this.index.field_o).toString());
+            throw aa.addExceptionContext((Throwable) ((Object) stackIn_34_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(" ").append(param1).append(" ").append(var9.length).append(" ").append(Matrix3.crc32(var9, 126, var9.length)).append(" ").append(Matrix3.crc32(var9, 125, var9.length - 2)).append(" ").append(this.index.field_k[param1]).append(" ").append(this.index.field_o).toString());
           }
           if (this.discardPackedGroups) {
             this.packedGroups[param1] = null;

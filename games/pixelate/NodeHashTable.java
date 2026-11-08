@@ -12,7 +12,7 @@ final class NodeHashTable {
     private int field_a;
     static String field_b;
 
-    final IntrusiveNode a(int param0, long param1) {
+    final IntrusiveNode get(int param0, long param1) {
         IntrusiveNode var5 = null;
         int var6 = Pixelate.field_H ? 1 : 0;
         if (param0 != -25484) {
@@ -33,15 +33,15 @@ final class NodeHashTable {
         return null;
     }
 
-    final IntrusiveNode a(byte param0) {
+    final IntrusiveNode first(byte param0) {
         if (param0 > -95) {
           return (IntrusiveNode) null;
         }
         this.field_e = 0;
-        return this.a(54);
+        return this.next(54);
     }
 
-    final static void a(boolean param0, int param1) {
+    final static void buildLobbyWidgetTree(boolean param0, int param1) {
         nd.field_b = param0 ? new wo(UiContainer.field_H, an.field_a) : new wo(PairedTextColumns.field_Gb, vd.field_a);
         ff.field_h = new SceneWidget(0L, (SceneWidget) null);
         if (param1 >= -68) {
@@ -50,11 +50,11 @@ final class NodeHashTable {
         ff.field_h.addChild(nd.field_b.field_g, (byte) 26);
         ff.field_h.addChild(ValidatedTextWidget.field_kb, (byte) 26);
         ra.field_e = new SceneWidget(0L, cm.field_o);
-        kh.field_a = new SceneWidget(0L, (SceneWidget) null);
+        DisplayNameRequestGlobals.field_a = new SceneWidget(0L, (SceneWidget) null);
         ra.field_e.addChild(ih.field_g, (byte) 26);
-        ra.field_e.addChild(kh.field_a, (byte) 26);
-        kh.field_a.addChild(StripedProgressBar.field_O, (byte) 26);
-        kh.field_a.addChild(ContentTransitionDialog.field_eb, (byte) 26);
+        ra.field_e.addChild(DisplayNameRequestGlobals.field_a, (byte) 26);
+        DisplayNameRequestGlobals.field_a.addChild(StripedProgressBar.field_O, (byte) 26);
+        DisplayNameRequestGlobals.field_a.addChild(ContentTransitionDialog.field_eb, (byte) 26);
         DebouncedValidator.a((byte) 32, param0);
     }
 
@@ -122,11 +122,11 @@ final class NodeHashTable {
         }
     }
 
-    final void a(long param0, int param1, IntrusiveNode param2) {
+    final void put(long param0, int param1, IntrusiveNode param2) {
         IntrusiveNode var5 = null;
         try {
           if (param1 <= 120) {
-            this.a(-40);
+            this.next(-40);
           }
           if (param2.previous != null) {
             param2.unlink(2779);
@@ -149,7 +149,7 @@ final class NodeHashTable {
         }
     }
 
-    final static int a(boolean param0) {
+    final static int getUiLoadPercent(boolean param0) {
         if (hf.field_q < 2) {
           return 0;
         }
@@ -160,10 +160,10 @@ final class NodeHashTable {
           if (!wk.field_j.ensureGroupAvailableByName("commonui", -1)) {
             return 40;
           }
-          if (!io.field_g.ensureIndex(-3)) {
+          if (!LoginMethod.field_g.ensureIndex(-3)) {
             return 50;
           }
-          if (!io.field_g.ensureGroupAvailableByName("commonui", -1)) {
+          if (!LoginMethod.field_g.ensureGroupAvailableByName("commonui", -1)) {
             return 60;
           }
           if (!MatchingTextValidator.field_u.ensureIndex(-3)) {
@@ -190,10 +190,10 @@ final class NodeHashTable {
           if (!wk.field_j.ensureGroupAvailableByName("commonui", -1)) {
             return 57;
           }
-          if (!io.field_g.ensureIndex(-3)) {
+          if (!LoginMethod.field_g.ensureIndex(-3)) {
             return 71;
           }
-          if (!io.field_g.ensureGroupAvailableByName("commonui", -1)) {
+          if (!LoginMethod.field_g.ensureGroupAvailableByName("commonui", -1)) {
             return 80;
           }
           if (!MatchingTextValidator.field_u.ensureIndex(-3)) {
@@ -225,7 +225,7 @@ final class NodeHashTable {
         }
     }
 
-    final IntrusiveNode a(int param0) {
+    final IntrusiveNode next(int param0) {
         int fieldTemp$0 = 0;
         IntrusiveNode var2_ref_fa;
         int var2;

@@ -18,7 +18,7 @@ final class FallingPieceView {
     private int field_n;
     static int[] field_m;
 
-    final static void a(String param0, int param1, String param2) {
+    final static void openLoginForm(String param0, int param1, String param2) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -56,7 +56,7 @@ final class FallingPieceView {
         }
     }
 
-    final static int a(int param0, char param1, CharSequence param2) {
+    final static int countChar(int param0, char param1, CharSequence param2) {
         int var5 = 0;
         int var3_int = 0;
         RuntimeException var3 = null;
@@ -92,7 +92,7 @@ final class FallingPieceView {
         }
     }
 
-    final void a(int param0) {
+    final void updatePreviewPosition(int param0) {
         int var2;
         int var3;
         int var4;
@@ -131,7 +131,7 @@ final class FallingPieceView {
           param3.writeByte(160, 12);
           if (param1 != 66) {
             Sprite[] var6 = (Sprite[]) null;
-            FallingPieceView.a(true, (Sprite[]) null);
+            FallingPieceView.trimSpriteCanvases(true, (Sprite[]) null);
           }
           param3.writeShort(param1 + 1276387878, 17);
           param3.writeShort(1276387944, param4);
@@ -142,7 +142,7 @@ final class FallingPieceView {
         }
     }
 
-    final static void a(String param0, int param1) {
+    final static void printError(String param0, int param1) {
         if (param1 != 0) {
           return;
         }
@@ -158,13 +158,13 @@ final class FallingPieceView {
           this.field_h = param0.field_h;
           this.field_k = param0.field_j;
           this.field_a = param0.field_n;
-          this.a(-127);
+          this.updatePreviewPosition(-127);
         } catch (RuntimeException runtimeException) {
           throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "al.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void a(int param0, int param1, int param2) {
+    final void draw(int param0, int param1, int param2) {
         int fieldTemp$0 = 0;
         int stackIn_8_0 = 0;
         int stackIn_11_0 = 0;
@@ -248,10 +248,10 @@ final class FallingPieceView {
         SoftwareRasterizer.drawRectangle(1 + var13, -63 + var14, 63, 63, 16777215);
         SoftwareRasterizer.drawRectangle(2 + var13, var14 - 64 + 2, 61, 61, 0);
         var18 = var9 * var11 * 15 >> 16;
-        SpriteEffectHelpers.a(6 + var16, var17 + 5, var13, var14 - 64, 6, var18, CachedArchiveProvider.field_z);
-        SpriteEffectHelpers.a(-7 + (var15 + var16), 5 + var17, 64 + var13, var14 - 64, 6, var18, CachedArchiveProvider.field_z);
-        SpriteEffectHelpers.a(var16 + 6, var15 + var17, var13, var14 - 1, 6, var18, CachedArchiveProvider.field_z);
-        SpriteEffectHelpers.a(var16 - (-var15 + 7), var15 + var17, 64 + var13, var14 - 1, 6, var18, CachedArchiveProvider.field_z);
+        SpriteEffectHelpers.drawGlowLine(6 + var16, var17 + 5, var13, var14 - 64, 6, var18, CachedArchiveProvider.field_z);
+        SpriteEffectHelpers.drawGlowLine(-7 + (var15 + var16), 5 + var17, 64 + var13, var14 - 64, 6, var18, CachedArchiveProvider.field_z);
+        SpriteEffectHelpers.drawGlowLine(var16 + 6, var15 + var17, var13, var14 - 1, 6, var18, CachedArchiveProvider.field_z);
+        SpriteEffectHelpers.drawGlowLine(var16 - (-var15 + 7), var15 + var17, 64 + var13, var14 - 1, 6, var18, CachedArchiveProvider.field_z);
         var15 = var15 / 2;
         var19 = null;
         var20 = null;
@@ -288,25 +288,25 @@ final class FallingPieceView {
           } else {
             stackIn_51_0 = var19_ref;
           }
-          SpriteEffectHelpers.a(stackIn_51_0, MatchController.field_p[var8 - 1], var16, var17);
+          SpriteEffectHelpers.drawMaskedByIndexedSprite(stackIn_51_0, MatchController.field_p[var8 - 1], var16, var17);
           if (!var4[1]) {
             stackIn_54_0 = var19_ref;
           } else {
             stackIn_54_0 = var20_ref;
           }
-          SpriteEffectHelpers.a(stackIn_54_0, MatchController.field_p[-1 + var8], var16 + var15, var17);
+          SpriteEffectHelpers.drawMaskedByIndexedSprite(stackIn_54_0, MatchController.field_p[-1 + var8], var16 + var15, var17);
           if (!var4[2]) {
             stackIn_57_0 = var19_ref;
           } else {
             stackIn_57_0 = var20_ref;
           }
-          SpriteEffectHelpers.a(stackIn_57_0, MatchController.field_p[var8 - 1], var16, var15 + var17);
+          SpriteEffectHelpers.drawMaskedByIndexedSprite(stackIn_57_0, MatchController.field_p[var8 - 1], var16, var15 + var17);
           if (var4[3]) {
             stackIn_60_0 = var20_ref;
           } else {
             stackIn_60_0 = var19_ref;
           }
-          SpriteEffectHelpers.a(stackIn_60_0, MatchController.field_p[-1 + var8], var16 + var15, var17 + var15);
+          SpriteEffectHelpers.drawMaskedByIndexedSprite(stackIn_60_0, MatchController.field_p[-1 + var8], var16 + var15, var17 + var15);
         } else {
           var22 = 0;
           if (param1 != 0) {
@@ -340,7 +340,7 @@ final class FallingPieceView {
         }
     }
 
-    final static Sprite[] a(boolean param0, Sprite[] param1) {
+    final static Sprite[] trimSpriteCanvases(boolean param0, Sprite[] param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         Sprite var3 = null;

@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class ah extends DualLinkNode {
+abstract class CacheReference extends DualLinkNode {
     int field_t;
     static String field_u;
 
-    final static aa a(byte param0, int param1, int param2, int param3) {
+    final static aa rebuildChatHistoryWidgets(byte param0, int param1, int param2, int param3) {
         Object var4;
         int var5;
         int var6;
@@ -40,7 +40,7 @@ abstract class ah extends DualLinkNode {
         int var8Lifetime3;
         int var9Lifetime2Lifetime1;
         var13 = Pixelate.field_H ? 1 : 0;
-        l.field_p.content.children.e(33);
+        l.field_p.content.children.clear(33);
         var4 = null;
         var5 = 0;
         var6 = 0;
@@ -77,12 +77,12 @@ abstract class ah extends DualLinkNode {
         }
         var7Lifetime1 = 0;
         if (param0 >= -90) {
-          ah.releaseStatics(-107);
+          CacheReference.releaseStatics(-107);
           for (var8 = 0; AlphaContainer.field_L > var8; var8++) {
             var14 = MenuScreen.field_e[var8];
             if (var14.field_q != null) {
               l.field_p.content.addChild(var14.field_q, (byte) 26);
-              var14.field_q.setBounds(var7Lifetime1, param1, param3, 256, var14.field_q.g(0));
+              var14.field_q.setBounds(var7Lifetime1, param1, param3, 256, var14.field_q.getContentWidth(0));
               if (var14.field_q.field_P != 0) {
                 var4 = var14;
               }
@@ -108,12 +108,12 @@ abstract class ah extends DualLinkNode {
           }
           var9Lifetime1 = -l.field_p.content.pendingHeightDelta - l.field_p.content.height + l.field_p.field_Ib.height;
           if (!MatchingTextValidator.field_z) {
-            l.field_p.a(-100, param1, true, param2 * 2 * param1);
+            l.field_p.applyScrollInputForViewport(-100, param1, true, param2 * 2 * param1);
             stackIn_48_0 = (var9Lifetime1 == l.field_p.content.field_S + l.field_p.content.pendingYDelta);
             MatchingTextValidator.field_z = stackIn_48_0;
           } else {
             l.field_p.content.pendingYDelta = -l.field_p.content.field_S + var9Lifetime1;
-            l.field_p.a(-100, param1, true, param2 * 2 * param1);
+            l.field_p.applyScrollInputForViewport(-100, param1, true, param2 * 2 * param1);
             stackIn_44_0 = (var9Lifetime1 == l.field_p.content.field_S + l.field_p.content.pendingYDelta);
             MatchingTextValidator.field_z = stackIn_44_0;
           }
@@ -123,7 +123,7 @@ abstract class ah extends DualLinkNode {
           var16 = MenuScreen.field_e[var8Lifetime1];
           if (var16.field_q != null) {
             l.field_p.content.addChild(var16.field_q, (byte) 26);
-            var16.field_q.setBounds(var7Lifetime1, param1, param3, 256, var16.field_q.g(0));
+            var16.field_q.setBounds(var7Lifetime1, param1, param3, 256, var16.field_q.getContentWidth(0));
             if (var16.field_q.field_P != 0) {
               var4 = var16;
             }
@@ -146,12 +146,12 @@ abstract class ah extends DualLinkNode {
             MatchingTextValidator.field_z = true;
             var9Lifetime2 = -l.field_p.content.pendingHeightDelta - l.field_p.content.height + l.field_p.field_Ib.height;
             if (!MatchingTextValidator.field_z) {
-              l.field_p.a(-100, param1, true, param2 * 2 * param1);
+              l.field_p.applyScrollInputForViewport(-100, param1, true, param2 * 2 * param1);
               stackIn_101_0 = (var9Lifetime2 == l.field_p.content.field_S + l.field_p.content.pendingYDelta);
               MatchingTextValidator.field_z = stackIn_101_0;
             } else {
               l.field_p.content.pendingYDelta = -l.field_p.content.field_S + var9Lifetime2;
-              l.field_p.a(-100, param1, true, param2 * 2 * param1);
+              l.field_p.applyScrollInputForViewport(-100, param1, true, param2 * 2 * param1);
               stackIn_105_0 = (var9Lifetime2 == l.field_p.content.field_S + l.field_p.content.pendingYDelta);
               MatchingTextValidator.field_z = stackIn_105_0;
             }
@@ -159,12 +159,12 @@ abstract class ah extends DualLinkNode {
           }
           var9Lifetime2Lifetime1 = -l.field_p.content.pendingHeightDelta - l.field_p.content.height + l.field_p.field_Ib.height;
           if (!MatchingTextValidator.field_z) {
-            l.field_p.a(-100, param1, true, param2 * 2 * param1);
+            l.field_p.applyScrollInputForViewport(-100, param1, true, param2 * 2 * param1);
             stackIn_111_0 = (var9Lifetime2Lifetime1 == l.field_p.content.field_S + l.field_p.content.pendingYDelta);
             MatchingTextValidator.field_z = stackIn_111_0;
           } else {
             l.field_p.content.pendingYDelta = -l.field_p.content.field_S + var9Lifetime2Lifetime1;
-            l.field_p.a(-100, param1, true, param2 * 2 * param1);
+            l.field_p.applyScrollInputForViewport(-100, param1, true, param2 * 2 * param1);
             stackIn_115_0 = (var9Lifetime2Lifetime1 == l.field_p.content.field_S + l.field_p.content.pendingYDelta);
             MatchingTextValidator.field_z = stackIn_115_0;
           }
@@ -181,12 +181,12 @@ abstract class ah extends DualLinkNode {
         if (!oo.field_d) {
           var9Lifetime3 = -l.field_p.content.pendingHeightDelta - l.field_p.content.height + l.field_p.field_Ib.height;
           if (!MatchingTextValidator.field_z) {
-            l.field_p.a(-100, param1, true, param2 * 2 * param1);
+            l.field_p.applyScrollInputForViewport(-100, param1, true, param2 * 2 * param1);
             stackIn_69_0 = (var9Lifetime3 == l.field_p.content.field_S + l.field_p.content.pendingYDelta);
             MatchingTextValidator.field_z = stackIn_69_0;
           } else {
             l.field_p.content.pendingYDelta = -l.field_p.content.field_S + var9Lifetime3;
-            l.field_p.a(-100, param1, true, param2 * 2 * param1);
+            l.field_p.applyScrollInputForViewport(-100, param1, true, param2 * 2 * param1);
             stackIn_73_0 = (var9Lifetime3 == l.field_p.content.field_S + l.field_p.content.pendingYDelta);
             MatchingTextValidator.field_z = stackIn_73_0;
           }
@@ -197,18 +197,18 @@ abstract class ah extends DualLinkNode {
             if (MatchingTextValidator.field_z) {
               l.field_p.content.pendingYDelta = -l.field_p.content.field_S + var9Lifetime3;
             }
-            l.field_p.a(-100, param1, true, param2 * 2 * param1);
+            l.field_p.applyScrollInputForViewport(-100, param1, true, param2 * 2 * param1);
             stackIn_81_0 = (var9Lifetime3 == l.field_p.content.field_S + l.field_p.content.pendingYDelta);
             MatchingTextValidator.field_z = stackIn_81_0;
           } else {
             var9Lifetime3 = -l.field_p.content.pendingHeightDelta - l.field_p.content.height + l.field_p.field_Ib.height;
             if (!MatchingTextValidator.field_z) {
-              l.field_p.a(-100, param1, true, param2 * 2 * param1);
+              l.field_p.applyScrollInputForViewport(-100, param1, true, param2 * 2 * param1);
               stackIn_86_0 = (var9Lifetime3 == l.field_p.content.field_S + l.field_p.content.pendingYDelta);
               MatchingTextValidator.field_z = stackIn_86_0;
             } else {
               l.field_p.content.pendingYDelta = -l.field_p.content.field_S + var9Lifetime3;
-              l.field_p.a(-100, param1, true, param2 * 2 * param1);
+              l.field_p.applyScrollInputForViewport(-100, param1, true, param2 * 2 * param1);
               stackIn_90_0 = (var9Lifetime3 == l.field_p.content.field_S + l.field_p.content.pendingYDelta);
               MatchingTextValidator.field_z = stackIn_90_0;
             }
@@ -217,7 +217,7 @@ abstract class ah extends DualLinkNode {
         return (aa) (var4);
     }
 
-    final static void a(int param0, byte param1) {
+    final static void notifyPageResizing(int param0, byte param1) {
         try {
           try {
             JavaScriptBridge.a(AudioService.a(13867), (byte) -64, new Object[]{new Integer(param0)}, "resizing");
@@ -234,18 +234,18 @@ abstract class ah extends DualLinkNode {
         }
     }
 
-    abstract Object a(byte param0);
+    abstract Object get(byte param0);
 
     public static void releaseStatics(int param0) {
         if (param0 != -520925311) {
-          ah.releaseStatics(-22);
+          CacheReference.releaseStatics(-22);
           field_u = null;
           return;
         }
         field_u = null;
     }
 
-    ah(int param0) {
+    CacheReference(int param0) {
         this.field_t = param0;
     }
 

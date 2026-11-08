@@ -205,11 +205,11 @@ final class cl {
           GameplayScreen.a(up.field_o, -2);
         }
         if (null != ProxySocketConnector.field_n) {
-          ProxySocketConnector.field_n.a(param1, (byte) 20);
+          ProxySocketConnector.field_n.setMenuFlag(param1, (byte) 20);
         }
-        MenuScreen.a((byte) 28, param1);
+        MenuScreen.drawAccountNamePrompt((byte) 28, param1);
         if (AccountTermsPanel.field_M != null) {
-          AccountTermsPanel.field_M.a(param1, 0);
+          AccountTermsPanel.field_M.drawFullScreen(param1, 0);
         }
         TextLayout.c(param1, -24721);
     }

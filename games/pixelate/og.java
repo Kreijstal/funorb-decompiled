@@ -9,7 +9,7 @@ final class og extends IntrusiveNode {
 
     final static boolean a(byte param0) {
         int var1 = 82 % ((-28 - param0) / 42);
-        return ck.a(true, AudioService.a(13867));
+        return FloatingSquare.hasTuhstatbutCookie(true, AudioService.a(13867));
     }
 
     final static Sprite[] a(int param0, boolean param1, int param2, int param3, int param4) {

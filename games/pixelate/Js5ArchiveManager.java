@@ -14,7 +14,7 @@ final class Js5ArchiveManager {
     private Js5NetworkRequest field_g;
     static int field_c;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_i = null;
         field_b = null;
         if (param0 >= -120) {
@@ -35,7 +35,7 @@ final class Js5ArchiveManager {
         }
     }
 
-    final static void a(ResourceArchive param0, boolean param1, ResourceArchive param2) {
+    final static void setSharedArchives(ResourceArchive param0, boolean param1, ResourceArchive param2) {
         PictureStrip.field_n = param0;
         if (!param1) {
           return;
@@ -47,7 +47,7 @@ final class Js5ArchiveManager {
         }
     }
 
-    final static void a(byte param0, boolean param1) {
+    final static void drawFrontEndOverlays(byte param0, boolean param1) {
         int var2;
         SceneWidget stackIn_8_0 = null;
         boolean stackIn_9_1 = false;
@@ -64,10 +64,10 @@ final class Js5ArchiveManager {
           }
           stackIn_8_0 = GreenGrowTheRushesBackground.field_n;
           stackIn_9_1 = (param1) && (!LobbyPlayer.field_Wb);
-          ((SceneWidget) (Object) stackIn_8_0).a(stackIn_9_1, 0);
+          ((SceneWidget) (Object) stackIn_8_0).drawFullScreen(stackIn_9_1, 0);
           stackIn_12_0 = MidiPcmStream.field_E;
           stackIn_13_1 = (param1) && (!LobbyPlayer.field_Wb);
-          ((SceneWidget) (Object) stackIn_12_0).a(stackIn_13_1, 0);
+          ((SceneWidget) (Object) stackIn_12_0).drawFullScreen(stackIn_13_1, 0);
         }
         if (!(vn.field_g <= 0) ||
           !(Checkbox.field_W <= 0)) {
@@ -76,16 +76,16 @@ final class Js5ArchiveManager {
           }
           stackIn_23_0 = ff.field_h;
           stackIn_24_1 = (param1) && (!EmergentBehaviourBackground.field_o);
-          ((SceneWidget) (Object) stackIn_23_0).a(stackIn_24_1, 0);
+          ((SceneWidget) (Object) stackIn_23_0).drawFullScreen(stackIn_24_1, 0);
           stackIn_27_0 = Bzip2State.field_A;
           stackIn_28_1 = (param1) && (!EmergentBehaviourBackground.field_o);
-          ((SceneWidget) (Object) stackIn_27_0).a(stackIn_28_1, 0);
+          ((SceneWidget) (Object) stackIn_27_0).drawFullScreen(stackIn_28_1, 0);
         }
         var2 = 127 / ((param0 + 31) / 55);
         LinkButtonPainter.a((byte) 92);
     }
 
-    final static void b(int param0) {
+    final static void suppressReconnectRedirect(int param0) {
         if (param0 < 10) {
           field_e = true;
         }
@@ -146,7 +146,7 @@ final class Js5ArchiveManager {
         }
     }
 
-    final static String a(int param0) {
+    final static String getLoginStatusText(int param0) {
         if (Js5NetworkRequest.field_F == MarkerSlider.field_X) {
           return Match.field_s;
         }
@@ -160,7 +160,7 @@ final class Js5ArchiveManager {
         this(param0, param1, (java.math.BigInteger) null, (java.math.BigInteger) null);
     }
 
-    final void b(byte param0) {
+    final void maintainArchives(byte param0) {
         int var2;
         int var3;
         int var4;
@@ -241,7 +241,7 @@ final class Js5ArchiveManager {
         }
     }
 
-    final boolean c(int param0) {
+    final boolean pollMasterIndex(int param0) {
         int var7 = 0;
         int var3;
         byte[] var4;
@@ -299,10 +299,10 @@ final class Js5ArchiveManager {
         return true;
     }
 
-    final static void a(int param0, int param1, int param2, int param3) {
+    final static void setChatFilterMode(int param0, int param1, int param2, int param3) {
         if (param2 == 0 &&
-          param0 != io.field_e) {
-          io.field_e = param0;
+          param0 != LoginMethod.field_e) {
+          LoginMethod.field_e = param0;
           DialWidget.field_P = true;
           ro.a(param3, true);
         }
@@ -319,7 +319,7 @@ final class Js5ArchiveManager {
           ro.a(param3, true);
         }
         if (param1 != -26931) {
-          Js5ArchiveManager.a((byte) -107);
+          Js5ArchiveManager.releaseStatics((byte) -107);
         }
     }
 

@@ -122,7 +122,7 @@ final class el {
         if (var14 == null) {
           return;
         }
-        IntArraySorter.a(var18, param2);
+        PolygonFiller.fillPolygon(var18, param2);
         if (param3 <= -8) {
           SoftwareRasterizer.fillCircle(param4, param0, (int)(param6 - 0.5f), param2);
           SoftwareRasterizer.fillCircle(param1, param5, (int)(-0.5f + param6), param2);
@@ -161,7 +161,7 @@ final class el {
               }
               var7 = new SectorCacheStore(param3, Js5NetworkRequest.field_G, ug.field_l[param3], 2097152);
             }
-            var8 = ck.field_j.getArchiveSource(param2, 6, param3, (SectorCacheStore) (var6), (SectorCacheStore) (var7));
+            var8 = FloatingSquare.field_j.getArchiveSource(param2, 6, param3, (SectorCacheStore) (var6), (SectorCacheStore) (var7));
             if (param5) {
               var8.a(true);
             }

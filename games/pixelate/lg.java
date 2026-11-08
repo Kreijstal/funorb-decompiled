@@ -106,8 +106,8 @@ final class lg {
             var4 = dh.a(param2, (byte) 97);
             if (var4 != null &&
               var4.length() >= 1) {
-              if (!MatchController.a((byte) 122, var4.charAt(0)) &&
-                !MatchController.a((byte) 126, var4.charAt(-1 + var4.length()))) {
+              if (!MatchController.isNameSeparatorChar((byte) 122, var4.charAt(0)) &&
+                !MatchController.isNameSeparatorChar((byte) 126, var4.charAt(-1 + var4.length()))) {
                 if (param0 != 11) {
                   var9 = (ResourceArchive) null;
                   lg.loadMusicTracks(55, (ResourceArchive) null);
@@ -115,14 +115,14 @@ final class lg {
                 var5 = 0;
                 for (var6 = 0; param2.length() > var6; var6++) {
                   var7 = param2.charAt(var6);
-                  if (!MatchController.a((byte) 118, (char) var7)) {
+                  if (!MatchController.isNameSeparatorChar((byte) 118, (char) var7)) {
                     var5 = 0;
                   } else {
                     var5++;
                   }
                   if (2 <= var5 &&
                     !param1) {
-                    stackIn_31_0 = fl.field_f;
+                    stackIn_31_0 = AsyncValidationResult.field_f;
                     return stackIn_31_0;
                   }
                 }
@@ -154,17 +154,17 @@ final class lg {
         }
     }
 
-    final static io readLastLoginMethodCookie(java.applet.Applet param0, int param1) {
+    final static LoginMethod readLastLoginMethodCookie(java.applet.Applet param0, int param1) {
         int var4 = 0;
         String var2 = null;
         RuntimeException var2_ref = null;
-        io[] var3 = null;
-        io var5 = null;
+        LoginMethod[] var3 = null;
+        LoginMethod var5 = null;
         int var6 = 0;
         sb var7 = null;
-        io stackIn_6_0 = null;
-        io stackIn_12_0 = null;
-        io stackIn_15_0 = null;
+        LoginMethod stackIn_6_0 = null;
+        LoginMethod stackIn_12_0 = null;
+        LoginMethod stackIn_15_0 = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         String stackIn_19_2 = null;
@@ -183,7 +183,7 @@ final class lg {
           var3 = Checkbox.a((byte) -8);
           for (var4 = 0; var4 < var3.length; var4++) {
             var5 = var3[var4];
-            if (var5.a(var2, -66)) {
+            if (var5.hasName(var2, -66)) {
               stackIn_12_0 = var5;
               return stackIn_12_0;
             }

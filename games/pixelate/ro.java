@@ -315,7 +315,7 @@ final class ro {
             }
             stackIn_70_0 = 116;
             while (DirectByteStorage.$cfr$intArgs$b$c4997cb15529(stackIn_70_0)) {
-              NameSuggestionsPanel.field_I.a(99, 0);
+              NameSuggestionsPanel.field_I.handleHorizontalNavigation(99, 0);
               if (NameSuggestionsPanel.field_I.isActivated(57)) {
                 if (NameSuggestionsPanel.field_I.selectedIndex == 0) {
                   stackIn_75_0 = 3;

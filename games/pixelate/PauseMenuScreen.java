@@ -32,7 +32,7 @@ final class PauseMenuScreen extends MenuScreen {
     }
 
     final void draw(int param0) {
-        if (KiteBackground.d(3782)) {
+        if (KiteBackground.loadMembersBenefitsAssets(3782)) {
           mc.e(12);
         }
         if (param0 != 11) {

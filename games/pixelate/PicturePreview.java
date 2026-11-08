@@ -13,7 +13,7 @@ final class PicturePreview extends IntrusiveNode {
     static int[] field_r;
     private int field_s;
 
-    final static BinaryBitmapFont a(int param0, ResourceArchive param1, String param2, ResourceArchive param3, String param4) {
+    final static BinaryBitmapFont loadBinaryBitmapFontByName(int param0, ResourceArchive param1, String param2, ResourceArchive param3, String param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -76,19 +76,19 @@ final class PicturePreview extends IntrusiveNode {
         field_r = null;
         if (param0 > -72) {
           String var2 = (String) null;
-          PicturePreview.a(-17, (String) null, (String) null);
+          PicturePreview.loadFrameSprites(-17, (String) null, (String) null);
         }
         field_q = (String[][]) null;
     }
 
-    final static int[] a(boolean param0) {
+    final static int[] createEightInts(boolean param0) {
         if (param0) {
           return (int[]) null;
         }
         return new int[8];
     }
 
-    final static Sprite[] a(int param0, String param1, String param2) {
+    final static Sprite[] loadFrameSprites(int param0, String param1, String param2) {
         Sprite[] var3 = null;
         RuntimeException var3_ref = null;
         Sprite[] var4 = null;
@@ -128,9 +128,9 @@ final class PicturePreview extends IntrusiveNode {
         }
     }
 
-    final static String a(int param0, boolean param1, boolean param2, boolean param3) {
+    final static String getUnsavedDataWarning(int param0, boolean param1, boolean param2, boolean param3) {
         if (param0 >= -50) {
-          PicturePreview.a(true);
+          PicturePreview.createEightInts(true);
         }
         int var4 = 0;
         if (param3) {
@@ -145,29 +145,29 @@ final class PicturePreview extends IntrusiveNode {
         return MouseWheelHandler.field_a[var4];
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4) {
+    final void drawWithAlphaGradient(int param0, int param1, int param2, int param3, int param4) {
         if (param4 <= 0 &&
           param2 <= 0) {
           return;
         }
         if (param0 != 0) {
-          this.b(116, 75, (byte) -124);
+          this.draw(116, 75, (byte) -124);
         }
         if (param4 >= 256 &&
           param2 >= 256) {
-          this.a(param3, param1, (byte) 98);
+          this.drawCellsAt(param3, param1, (byte) 98);
         } else {
           SoftwareRasterizer.saveClip(NameSuggestionsPanel.field_N);
           this.field_l.makeRasterTarget();
           SoftwareRasterizer.clear();
-          this.a(0, 0, (byte) 98);
+          this.drawCellsAt(0, 0, (byte) 98);
           ClientException.field_f.bindRaster(19692);
           SoftwareRasterizer.restoreClip(NameSuggestionsPanel.field_N);
-          SpriteEffectHelpers.a(this.field_l, param1, param3, param4, param2);
+          SpriteEffectHelpers.drawWithVerticalAlphaGradient(this.field_l, param1, param3, param4, param2);
         }
     }
 
-    private final void a(int param0, int param1, byte param2) {
+    private final void drawCellsAt(int param0, int param1, byte param2) {
         int var7 = 0;
         int var8 = 0;
         int stackIn_5_0 = 0;
@@ -239,8 +239,8 @@ final class PicturePreview extends IntrusiveNode {
         return;
     }
 
-    final void b(int param0, int param1, byte param2) {
-        this.a(param1, param0, (byte) 98);
+    final void draw(int param0, int param1, byte param2) {
+        this.drawCellsAt(param1, param0, (byte) 98);
         int var4 = 21 / ((param2 + 66) / 35);
     }
 

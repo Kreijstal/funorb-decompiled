@@ -34,7 +34,7 @@ final class PlayerController {
           this.field_a = 111;
         }
         while (true) {
-          dupTemp$0 = this.field_g.a(true);
+          dupTemp$0 = this.field_g.poll(true);
           var2 = dupTemp$0;
           if (dupTemp$0 == -1) {
             break;
@@ -44,20 +44,20 @@ final class PlayerController {
     }
 
     final void enqueueInput(int param0, int param1, int param2) {
-        this.field_g.a(param2, 0, param1);
+        this.field_g.enqueue(param2, 0, param1);
         if (param0 != 6364) {
-          PlayerController.a((byte) -64);
+          PlayerController.canPollServerConnection((byte) -64);
         }
     }
 
-    final void j(int param0) {
+    final void resetForRound(int param0) {
         this.field_l = false;
         this.field_e = this.field_o ? -50 : 0;
-        this.field_g.a(-1);
+        this.field_g.clear(-1);
         int var2 = 94 / ((-68 - param0) / 57);
     }
 
-    public static void f(int param0) {
+    public static void releaseStatics(int param0) {
         field_b = null;
         if (param0 < 76) {
           field_r = 7;
@@ -66,30 +66,30 @@ final class PlayerController {
         field_m = null;
     }
 
-    final void b(int param0) {
+    final void draw(int param0) {
         this.field_f.draw(false);
         if (param0 != -1) {
-          PlayerController.f(88);
+          PlayerController.releaseStatics(88);
         }
-        if (!this.field_f.c(-127) &&
+        if (!this.field_f.isAnimating(-127) &&
           !this.field_l &&
           this.field_e >= 0 &&
           this.field_u >= 0 &&
           this.field_h >= this.field_u) {
-          this.field_q.a(this.field_u, this.field_p, 0);
+          this.field_q.draw(this.field_u, this.field_p, 0);
         }
     }
 
-    final static boolean a(byte param0) {
+    final static boolean canPollServerConnection(byte param0) {
         boolean stackIn_7_0 = false;
         if (param0 != -59) {
-          PlayerController.a((byte) 49);
+          PlayerController.canPollServerConnection((byte) 49);
         }
         stackIn_7_0 = (10 <= el.field_b) && (!IconTextComponent.field_Nb) && (!PauseMenuScreen.b(true));
         return stackIn_7_0;
     }
 
-    final void a(int param0, int param1, boolean param2) {
+    final void showScorePopup(int param0, int param1, boolean param2) {
         int var5 = 0;
         int var4 = 0;
         if (param2) {
@@ -104,9 +104,9 @@ final class PlayerController {
         }
     }
 
-    final void d(int param0) {
-        if (!this.field_f.c(param0 ^ -40)) {
-          this.field_f.b(param0 - 32);
+    final void restartPieceDrop(int param0) {
+        if (!this.field_f.isAnimating(param0 ^ -40)) {
+          this.field_f.playPictureCompleteEffect(param0 - 32);
           EmailValidator.a((byte) 96, 7);
         }
         if (param0 != 93) {
@@ -122,12 +122,12 @@ final class PlayerController {
         }
         this.field_e = !this.field_o ? 0 : -50;
         this.field_n = this.field_k.puzzle;
-        this.field_f.a((byte) 71);
+        this.field_f.startFadeIn((byte) 71);
         this.field_t = true;
         this.field_h = 16777216 / this.field_n.field_j + (this.field_n.field_n + this.field_n.field_h) + 10;
     }
 
-    final static void a(boolean param0, boolean param1, String param2, int param3, int param4) {
+    final static void openMessageMenu(boolean param0, boolean param1, String param2, int param3, int param4) {
         String stackIn_4_0 = null;
         String stackIn_25_0 = null;
         int stackIn_25_1 = 0;
@@ -242,7 +242,7 @@ final class PlayerController {
         }
     }
 
-    final void h(int param0) {
+    final void syncTickWithBoard(int param0) {
         if (param0 != 9236) {
           this.field_i = 83;
         }
@@ -265,7 +265,7 @@ final class PlayerController {
             this.field_p = 0;
           }
         }
-        if (this.field_f.c(-123)) {
+        if (this.field_f.isAnimating(-123)) {
           return;
         }
         if (this.field_t) {
@@ -296,7 +296,7 @@ final class PlayerController {
             this.field_u = this.field_h;
           }
           while (true) {
-            dupTemp$2 = this.field_g.a(this.field_e, (byte) -106);
+            dupTemp$2 = this.field_g.pollDueInput(this.field_e, (byte) -106);
             var2Lifetime1 = dupTemp$2;
             if (-1 == dupTemp$2) {
               return;
@@ -306,14 +306,14 @@ final class PlayerController {
         }
         if (this.field_h <= this.field_u) {
           if (AgeValidator.field_p) {
-            Vector3.a(5, param0 ^ 18655, this.field_e);
+            Vector3.sendInputEvent(5, param0 ^ 18655, this.field_e);
           }
           this.applyInput(0, 5);
         }
         return;
     }
 
-    final int a(int param0) {
+    final int getTick(int param0) {
         if (param0 >= -77) {
           this.field_u = 19;
         }
@@ -336,7 +336,7 @@ final class PlayerController {
           stackIn_32_0 = (!this.field_k.applyAction(param1, this.field_j, param0 + 92, this.field_e)) ? 0 : 1;
           var3 = stackIn_32_0;
           this.field_f.spawnPlacementParticles(param0 - 16);
-          this.field_q.a(param0 - 122);
+          this.field_q.updatePreviewPosition(param0 - 122);
           this.field_u = 0;
           this.field_l = this.field_k.boards[this.field_j].isFullyPainted(param0 + 26745);
           if (50 != this.field_k.boards[this.field_j].field_f) {
@@ -384,7 +384,7 @@ final class PlayerController {
         return var3 != 0;
     }
 
-    final boolean g(int param0) {
+    final boolean isBoardIdle(int param0) {
         if (param0 != -1) {
           return true;
         }
@@ -444,11 +444,11 @@ final class PlayerController {
         }
     }
 
-    final boolean i(int param0) {
+    final boolean isBoardAnimating(int param0) {
         if (param0 >= -116) {
           this.applyInput(-27, -5);
         }
-        return this.field_f.c(-123);
+        return this.field_f.isAnimating(-123);
     }
 
     static {

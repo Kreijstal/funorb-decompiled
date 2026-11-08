@@ -38,7 +38,7 @@ final class ih {
           if (fq.field_o == null) {
             return;
           }
-          fq.field_o.c(-1);
+          fq.field_o.tick(-1);
           fieldTemp$0 = DebouncedValidator.field_d + 1;
           DebouncedValidator.field_d = DebouncedValidator.field_d + 1;
           if (fieldTemp$0 < ce.field_f) {
@@ -70,7 +70,7 @@ final class ih {
           return;
         }
         if (fq.field_o != null) {
-          fq.field_o.c(-1);
+          fq.field_o.tick(-1);
           fieldTemp$1 = DebouncedValidator.field_d + 1;
           DebouncedValidator.field_d = DebouncedValidator.field_d + 1;
           if (fieldTemp$1 >= ce.field_f) {

@@ -101,8 +101,8 @@ final class Bzip2State {
             if (GzipDecoder.field_c == null) {
               ib.field_f = wo.openFullscreenWindow(mc.field_k, 150, 480, 0, 640, 0);
             } else {
-              ib.field_f = GzipDecoder.field_c.b(false);
-              ah.a(2, (byte) 114);
+              ib.field_f = GzipDecoder.field_c.enterFullscreen(false);
+              CacheReference.notifyPageResizing(2, (byte) 114);
             }
             if (ib.field_f == null) {
               var2 = 3;
@@ -123,8 +123,8 @@ final class Bzip2State {
             if (GzipDecoder.field_c == null) {
               ib.field_f = wo.openFullscreenWindow(mc.field_k, 150, 480, 0, 640, 0);
             } else {
-              ib.field_f = GzipDecoder.field_c.b(false);
-              ah.a(2, (byte) 114);
+              ib.field_f = GzipDecoder.field_c.enterFullscreen(false);
+              CacheReference.notifyPageResizing(2, (byte) 114);
             }
             if (ib.field_f == null) {
               var2 = 3;

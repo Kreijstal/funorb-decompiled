@@ -25,7 +25,7 @@ final class ff {
             stackIn_2_0 = (Sprite[]) null;
             return stackIn_2_0;
           }
-          if (rk.a(param2, false, param0, param1)) {
+          if (PieceTiming.a(param2, false, param0, param1)) {
             return ff.buildSprites(0);
           }
           return null;
@@ -82,14 +82,14 @@ final class ff {
             stackIn_8_0 = qg.field_c;
             return stackIn_8_0;
           }
-          var8 = re.findFriend(param1, -1);
+          var8 = LoadingStepTracker.findFriend(param1, -1);
           if (var8 == null) {
             stackIn_11_0 = AlphaContainer.a(AccountMessagePanel.field_R, 41, new String[]{param1});
             return stackIn_11_0;
           }
           VerticalScrollbar.field_Hb.traverseFrom(var8, param2 + 1504642379);
           while (true) {
-            var7 = (SocialListEntry) (VerticalScrollbar.field_Hb.last(param2 ^ -1504642185));
+            var7 = (SocialListEntry) (VerticalScrollbar.field_Hb.next(param2 ^ -1504642185));
             if (var7 != null) {
               var7.field_Kb = var7.field_Kb - 1;
               continue;
@@ -138,11 +138,11 @@ final class ff {
           var4 = wo.field_f[var2];
           var5 = new int[var3];
           for (var6 = 0; var6 < var3; var6++) {
-            var5[var6] = fl.field_g[cm.bitAnd((int) var4[var6], 255)];
+            var5[var6] = AsyncValidationResult.field_g[cm.bitAnd((int) var4[var6], 255)];
           }
-          var1[var2] = new Sprite(tj.field_y, jb.field_a, IntrusiveNode.field_b[var2], e.field_b[var2], ByteStorage.field_g[var2], ge.field_c[var2], var5);
+          var1[var2] = new Sprite(StrongCacheReference.field_y, jb.field_a, IntrusiveNode.field_b[var2], e.field_b[var2], ByteStorage.field_g[var2], ge.field_c[var2], var5);
         }
-        re.b(140);
+        LoadingStepTracker.clearSpriteDecodeBuffers(140);
         return var1;
     }
 
@@ -155,7 +155,7 @@ final class ff {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!rk.a(param1, false, param0, param2)) {
+          if (!PieceTiming.a(param1, false, param0, param2)) {
             return null;
           }
           var4_int = 101 % ((-49 - param3) / 52);

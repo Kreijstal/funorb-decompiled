@@ -91,7 +91,7 @@ final class AlphaContainer extends SingleChildContainer {
             if (0 <= var6_int) {
               stackIn_6_0 = 2 + var6_int;
               for (var5 = stackIn_6_0; var5 < var3_int; var5++) {
-                if (MidiPcmStream.a(121, param0.charAt(var5))) {
+                if (MidiPcmStream.isAsciiDigit(121, param0.charAt(var5))) {
                   continue;
                 }
                 break;
@@ -129,7 +129,7 @@ final class AlphaContainer extends SingleChildContainer {
             }
             stackIn_19_0 = 2 + var8Lifetime1;
             for (var5Lifetime1 = stackIn_19_0; var5Lifetime1 < var3_int; var5Lifetime1++) {
-              if (MidiPcmStream.a(112, param0.charAt(var5Lifetime1))) {
+              if (MidiPcmStream.isAsciiDigit(112, param0.charAt(var5Lifetime1))) {
                 continue;
               }
               break;
@@ -260,7 +260,7 @@ final class AlphaContainer extends SingleChildContainer {
           e.field_b = new int[SocialListEntry.field_Qb];
           wo.field_f = new byte[SocialListEntry.field_Qb][];
           var18.position = -7 + (param1.length - 8 * SocialListEntry.field_Qb);
-          tj.field_y = var18.readUnsignedShort((byte) 38);
+          StrongCacheReference.field_y = var18.readUnsignedShort((byte) 38);
           jb.field_a = var18.readUnsignedShort((byte) 46);
           var3 = 1 + (var18.readUnsignedByte(255) & 255);
           for (var4 = 0; var4 < SocialListEntry.field_Qb; var4++) {
@@ -280,11 +280,11 @@ final class AlphaContainer extends SingleChildContainer {
             ge.field_c[var4Lifetime3] = var18.readUnsignedShort((byte) -116);
           }
           var18.position = param1.length - (7 - (-(8 * SocialListEntry.field_Qb) - 3 * (-1 + var3)));
-          fl.field_g = new int[var3];
+          AsyncValidationResult.field_g = new int[var3];
           for (var4Lifetime4 = 1; var3 > var4Lifetime4; var4Lifetime4++) {
-            fl.field_g[var4Lifetime4] = var18.readUnsignedMedium((byte) 13);
-            if (0 == fl.field_g[var4Lifetime4]) {
-              fl.field_g[var4Lifetime4] = 1;
+            AsyncValidationResult.field_g[var4Lifetime4] = var18.readUnsignedMedium((byte) 13);
+            if (0 == AsyncValidationResult.field_g[var4Lifetime4]) {
+              AsyncValidationResult.field_g[var4Lifetime4] = 1;
             }
           }
           var18.position = 0;

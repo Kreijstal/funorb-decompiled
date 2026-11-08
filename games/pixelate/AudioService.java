@@ -62,7 +62,7 @@ final class AudioService implements Runnable {
           var21 = null;
           var12 = Pixelate.field_H ? 1 : 0;
           try {
-            var16_ref = (aj) (ScoreMarkerBar.field_o.c(1504642273));
+            var16_ref = (aj) (ScoreMarkerBar.field_o.first(1504642273));
             if (var16_ref == null) {
               return;
             }
@@ -266,7 +266,7 @@ final class AudioService implements Runnable {
                 var2.serviceOutput();
               }
             }
-            SecondaryNodeHashTable.a(10L, (byte) 23);
+            SecondaryNodeHashTable.sleepMillis(10L, (byte) 23);
             Object var5 = (Object) null;
             ResourceArchive.a(this.field_g, (Object) null, (byte) -52);
           }

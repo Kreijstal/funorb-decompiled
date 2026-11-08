@@ -33,7 +33,7 @@ final class SoundCache {
           var5_int = param2 ^ (param3 << 4 & param0 | param3 >>> 12);
           var5_int = var5_int | param3 << 16;
           var6 = (long)var5_int ^ 4294967296L;
-          var8 = (PcmSample) (this.field_h.a(-25484, var6));
+          var8 = (PcmSample) (this.field_h.get(-25484, var6));
           if (var8 != null) {
             stackIn_2_0 = var8;
             return stackIn_2_0;
@@ -42,13 +42,13 @@ final class SoundCache {
             param1[0] <= 0) {
             return null;
           }
-          var9 = (VorbisSample) (this.field_g.a(-25484, var6));
+          var9 = (VorbisSample) (this.field_g.get(-25484, var6));
           if (var9 == null) {
             var9 = VorbisSample.load(this.musicSampleArchive, param3, param2);
             if (var9 == null) {
               return null;
             }
-            this.field_g.a(var6, param0 ^ 65420, var9);
+            this.field_g.put(var6, param0 ^ 65420, var9);
           }
           var8Lifetime1 = var9.decodeToPcm(param1);
           if (var8Lifetime1 == null) {
@@ -56,7 +56,7 @@ final class SoundCache {
             return (PcmSample) (stackIn_14_0);
           }
           var9.unlink(2779);
-          this.field_h.a(var6, param0 ^ 65423, var8Lifetime1);
+          this.field_h.put(var6, param0 ^ 65423, var8Lifetime1);
           stackIn_16_0 = var8Lifetime1;
           return stackIn_16_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -132,7 +132,7 @@ final class SoundCache {
             field_j = (String) null;
           }
           var6 = (long)var5_int;
-          var8 = (PcmSample) (this.field_h.a(param0 - 25484, var6));
+          var8 = (PcmSample) (this.field_h.get(param0 - 25484, var6));
           if (var8 != null) {
             stackIn_5_0 = var8;
             return stackIn_5_0;
@@ -147,7 +147,7 @@ final class SoundCache {
           }
           var10 = var9.toPcmSample();
           var8Lifetime1 = var10;
-          this.field_h.a(var6, param0 ^ 127, var8Lifetime1);
+          this.field_h.put(var6, param0 ^ 127, var8Lifetime1);
           if (param2 != null) {
             param2[0] = param2[0] - var10.field_n.length;
           }
@@ -247,11 +247,11 @@ final class SoundCache {
           if (!un.field_l) {
             return;
           }
-          mj.a(false);
+          ScoreMarkerDemo.closeQuickChatMenu(false);
           return;
         }
         if (un.field_l) {
-          mj.a(false);
+          ScoreMarkerDemo.closeQuickChatMenu(false);
           return;
         }
     }

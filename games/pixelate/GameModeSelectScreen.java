@@ -37,7 +37,7 @@ final class GameModeSelectScreen extends MenuScreen {
                 this.var4 = 0;
             }
             void runChunk0() throws java.lang.RuntimeException {
-                fl.field_b = param1;
+                AsyncValidationResult.field_b = param1;
                 var2 = vd.a("loginm3", 0);
                 if (var2 != null) {
                   ValidationIndicator.field_N = of.a(var2, 1);
@@ -140,7 +140,7 @@ final class GameModeSelectScreen extends MenuScreen {
                 }
                 var2 = vd.a("mu_chat_ignore", 0);
                 if (var2 != null) {
-                  fl.field_c = of.a(var2, 1);
+                  AsyncValidationResult.field_c = of.a(var2, 1);
                 }
                 var2 = vd.a("mu_chat_tips", 0);
                 if (null != var2) {
@@ -484,7 +484,7 @@ final class GameModeSelectScreen extends MenuScreen {
                 }
                 var2 = vd.a("rated_game_tips", param0 - 31873);
                 if (var2 != null) {
-                  mj.field_g = of.a(var2, 1);
+                  ScoreMarkerDemo.field_g = of.a(var2, 1);
                 }
                 var2 = vd.a("searching_for_opponent_singular", 0);
                 if (null != var2) {
@@ -672,7 +672,7 @@ final class GameModeSelectScreen extends MenuScreen {
                 }
                 var2 = vd.a("offline", 0);
                 if (null != var2) {
-                  re.field_g = of.a(var2, 1);
+                  LoadingStepTracker.field_g = of.a(var2, 1);
                 }
                 var2 = vd.a("multiconst_invite_only", 0);
                 if (var2 != null) {
@@ -1050,7 +1050,7 @@ final class GameModeSelectScreen extends MenuScreen {
                 }
                 var2 = vd.a("changedisplayname", param0 - 31873);
                 if (var2 != null) {
-                  ue.field_q = of.a(var2, param0 - 31872);
+                  RankingTableRequest.field_q = of.a(var2, param0 - 31872);
                 }
                 var2 = vd.a("returntohomepage", 0);
                 if (var2 != null) {
@@ -1454,7 +1454,7 @@ final class GameModeSelectScreen extends MenuScreen {
                 }
                 var2 = vd.a("create_select_alternative", param0 - 31873);
                 if (null != var2) {
-                  io.field_a = of.a(var2, 1);
+                  LoginMethod.field_a = of.a(var2, 1);
                 }
                 var2 = vd.a("create_optin_news", param0 ^ 31873);
                 if (null != var2) {
@@ -1598,7 +1598,7 @@ final class GameModeSelectScreen extends MenuScreen {
                 }
                 var2 = vd.a("create_alert_doublespace", 0);
                 if (var2 != null) {
-                  fl.field_f = of.a(var2, 1);
+                  AsyncValidationResult.field_f = of.a(var2, 1);
                 }
                 var2 = vd.a("create_alert_passchars", 0);
                 if (var2 != null) {
@@ -1614,7 +1614,7 @@ final class GameModeSelectScreen extends MenuScreen {
                 }
                 var2 = vd.a("create_alert_passcontainsname", 0);
                 if (var2 != null) {
-                  tj.field_w = of.a(var2, 1);
+                  StrongCacheReference.field_w = of.a(var2, 1);
                 }
                 var2 = vd.a("create_alert_passcontainsemail", param0 ^ 31873);
                 if (null != var2) {
@@ -1638,7 +1638,7 @@ final class GameModeSelectScreen extends MenuScreen {
                 }
                 var2 = vd.a("create_alert_invaliddate", 0);
                 if (var2 != null) {
-                  ue.field_p = of.a(var2, 1);
+                  RankingTableRequest.field_p = of.a(var2, 1);
                 }
                 var2 = vd.a("create_alert_invalidage", 0);
                 if (null != var2) {
@@ -1894,7 +1894,7 @@ final class GameModeSelectScreen extends MenuScreen {
                 }
                 var2 = vd.a("music_colon", param0 - 31873);
                 if (null != var2) {
-                  mj.field_e = of.a(var2, param0 - 31872);
+                  ScoreMarkerDemo.field_e = of.a(var2, param0 - 31872);
                 }
                 var2 = vd.a("fullscreen", 0);
                 if (var2 != null) {
@@ -1906,7 +1906,7 @@ final class GameModeSelectScreen extends MenuScreen {
                 }
                 var2 = vd.a("highscores", 0);
                 if (var2 != null) {
-                  ah.field_u = of.a(var2, param0 ^ 31872);
+                  CacheReference.field_u = of.a(var2, param0 ^ 31872);
                 }
                 var2 = vd.a("rankings", 0);
                 if (null != var2) {
@@ -1984,7 +1984,7 @@ final class GameModeSelectScreen extends MenuScreen {
                 }
                 var2 = vd.a("newgame", 0);
                 if (null != var2) {
-                  re.field_c = of.a(var2, 1);
+                  LoadingStepTracker.field_c = of.a(var2, 1);
                 }
                 var2 = vd.a("resumegame", 0);
                 if (null != var2) {
@@ -2520,7 +2520,7 @@ final class GameModeSelectScreen extends MenuScreen {
                 }
                 var2 = vd.a("keychar_the_character_under_questionmark", 0);
                 if (null != var2) {
-                  rk.field_d = cm.decodeCp1252Byte(var2[0], 63);
+                  PieceTiming.field_d = cm.decodeCp1252Byte(var2[0], 63);
                 }
                 var2 = vd.a("rating_noratings", 0);
                 if (var2 != null) {
@@ -2756,15 +2756,15 @@ final class GameModeSelectScreen extends MenuScreen {
                 }
                 var2 = vd.a("hs_mode_name,0", 0);
                 if (var2 != null) {
-                  re.field_k[0] = of.a(var2, 1);
+                  LoadingStepTracker.field_k[0] = of.a(var2, 1);
                 }
                 var2 = vd.a("hs_mode_name,1", 0);
                 if (null != var2) {
-                  re.field_k[1] = of.a(var2, 1);
+                  LoadingStepTracker.field_k[1] = of.a(var2, 1);
                 }
                 var2 = vd.a("hs_mode_name,2", 0);
                 if (null != var2) {
-                  re.field_k[2] = of.a(var2, 1);
+                  LoadingStepTracker.field_k[2] = of.a(var2, 1);
                 }
                 var2 = vd.a("rating_mode_name,0", 0);
                 if (var2 != null) {
@@ -2824,7 +2824,7 @@ final class GameModeSelectScreen extends MenuScreen {
                 }
                 var2 = vd.a("createtouse", param0 - 31873);
                 if (null != var2) {
-                  mj.field_h = of.a(var2, 1);
+                  ScoreMarkerDemo.field_h = of.a(var2, 1);
                 }
                 var2 = vd.a("achievementsoffline", 0);
                 if (var2 != null) {
@@ -2900,7 +2900,7 @@ final class GameModeSelectScreen extends MenuScreen {
                 }
                 var2 = vd.a("discard", 0);
                 if (null != var2) {
-                  mj.field_i = of.a(var2, 1);
+                  ScoreMarkerDemo.field_i = of.a(var2, 1);
                 }
                 var2 = vd.a("mustlogin4,1", 0);
                 if (var2 != null) {
@@ -3020,7 +3020,7 @@ final class GameModeSelectScreen extends MenuScreen {
                 if (var2 != null) {
                   of.a(var2, 1);
                 }
-                fl.field_b = null;
+                AsyncValidationResult.field_b = null;
             }
             void run() {
                 var3 = Pixelate.field_H ? 1 : 0;
@@ -3099,15 +3099,15 @@ final class GameModeSelectScreen extends MenuScreen {
           if (var2_int != -1) {
             if (96 == ke.field_a &&
               1 == var2_int) {
-              this.field_g.a(false, 0);
+              this.field_g.selectIndex(false, 0);
             }
             if (ke.field_a == 97 &&
               0 == var2_int) {
-              this.field_g.a(false, 1);
+              this.field_g.selectIndex(false, 1);
             }
             if (98 == ke.field_a &&
               2 == var2_int) {
-              this.field_g.a(false, this.field_t);
+              this.field_g.selectIndex(false, this.field_t);
             }
             if (ke.field_a != 99) {
               return;
@@ -3116,12 +3116,12 @@ final class GameModeSelectScreen extends MenuScreen {
               return;
             }
             this.field_t = var2_int;
-            this.field_g.a(false, 2);
+            this.field_g.selectIndex(false, 2);
             if (var3 == 0) {
               return;
             }
           }
-          this.field_g.a(false, 2);
+          this.field_g.selectIndex(false, 2);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -3200,10 +3200,10 @@ final class GameModeSelectScreen extends MenuScreen {
             var9 = var8.field_n;
             pk.a(var9, 0, ConditionalTextValue.field_i, 77, 0);
             if (var40 != 0) {
-              InputQueue.c(0);
+              InputQueue.compactMeshBlocks(0);
             }
           } else {
-            InputQueue.c(0);
+            InputQueue.compactMeshBlocks(0);
           }
           if (param6 != 20126) {
             field_u = (ResourceArchive) null;
@@ -3372,12 +3372,12 @@ final class GameModeSelectScreen extends MenuScreen {
         }
     }
 
-    final void a(int param0, int param1, boolean param2) {
+    final void enterScreen(int param0, int param1, boolean param2) {
         try {
           this.field_t = 0;
-          this.field_p.a((byte) -54);
-          this.field_o.a((byte) -84);
-          super.a(param0, 0, param2);
+          this.field_p.resetHighlight((byte) -54);
+          this.field_o.resetHighlight((byte) -84);
+          super.enterScreen(param0, 0, param2);
         } catch (RuntimeException runtimeException) {
           throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "uk.F(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
@@ -3397,14 +3397,14 @@ final class GameModeSelectScreen extends MenuScreen {
           stackIn_3_0 = this.field_p;
           stackIn_3_1 = -127;
           stackIn_4_2 = (this.field_g.selectedIndex == 0);
-          ((GameModeCard) (Object) stackIn_3_0).a((byte) stackIn_3_1, stackIn_4_2);
+          ((GameModeCard) (Object) stackIn_3_0).animateHighlight((byte) stackIn_3_1, stackIn_4_2);
           if (param0 >= -64) {
             return;
           }
           stackIn_9_0 = this.field_o;
           stackIn_9_1 = -125;
           stackIn_10_2 = (this.field_g.selectedIndex == 1);
-          ((GameModeCard) (Object) stackIn_9_0).a((byte) stackIn_9_1, stackIn_10_2);
+          ((GameModeCard) (Object) stackIn_9_0).animateHighlight((byte) stackIn_9_1, stackIn_10_2);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -3467,7 +3467,7 @@ final class GameModeSelectScreen extends MenuScreen {
           if (param0 != 11) {
             return;
           }
-          this.d((byte) -110);
+          this.drawDefaultBackdrop((byte) -110);
           this.drawRows((byte) -71);
           if (0 >= this.field_p.field_c &&
             this.field_o.field_c <= 0) {
@@ -3485,7 +3485,7 @@ final class GameModeSelectScreen extends MenuScreen {
             stackIn_16_0 = jm.field_s;
           }
           var3 = stackIn_16_0;
-          var2.a(-18879, var3);
+          var2.drawDescriptionBanner(-18879, var3);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -3494,7 +3494,7 @@ final class GameModeSelectScreen extends MenuScreen {
         }
     }
 
-    final void a(byte param0, boolean param1, int param2) {
+    final void drawRow(byte param0, boolean param1, int param2) {
         int var5 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
@@ -3504,19 +3504,19 @@ final class GameModeSelectScreen extends MenuScreen {
             field_q = (String[]) null;
           }
           if (param2 == 0) {
-            this.field_p.a(false);
+            this.field_p.draw(false);
             if (var5 == 0) {
               return;
             }
           }
           if (1 == param2) {
-            this.field_o.a(false);
+            this.field_o.draw(false);
             if (var5 == 0) {
               return;
             }
           }
           if (param2 == 2) {
-            this.a(param1, true);
+            this.drawMenuButton(param1, true);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -3535,11 +3535,11 @@ final class GameModeSelectScreen extends MenuScreen {
         int stackIn_15_0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.field_p.a(param0, param1, -119)) {
+          if (this.field_p.containsPoint(param0, param1, -119)) {
             stackIn_2_0 = 0;
             return stackIn_2_0;
           }
-          if (this.field_o.a(param0, param1, -115)) {
+          if (this.field_o.containsPoint(param0, param1, -115)) {
             stackIn_5_0 = 1;
             return stackIn_5_0;
           }

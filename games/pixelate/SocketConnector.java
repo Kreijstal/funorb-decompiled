@@ -34,7 +34,7 @@ abstract class SocketConnector {
           nf.field_d.setBounds(0, param2, param1, 256, -rh.field_y.field_K - param1 + StripedProgressBar.field_U.field_K);
           var7 = var7 - (2 + param2);
           rh.field_y.setBounds(0, param2, param1 + nf.field_d.field_K, 256, rh.field_y.field_K);
-          l.field_p.a(5, 2, (byte) 118, 487 + (param1 + param5), 5, -5 + var7, param5);
+          l.field_p.setBoundsAndLayout(5, 2, (byte) 118, 487 + (param1 + param5), 5, -5 + var7, param5);
           if (null != td.field_b) {
             td.field_b.setBounds(l.field_p.field_K, (byte) 100, l.field_p.field_S, l.field_p.field_D, l.field_p.height);
           }

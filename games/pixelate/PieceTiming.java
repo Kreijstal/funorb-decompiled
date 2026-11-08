@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rk {
+final class PieceTiming {
     int field_a;
     int field_b;
     static PaletteBitmapFont field_e;
@@ -11,7 +11,7 @@ final class rk {
     public static void releaseStatics(int param0) {
         if (param0 != 10934) {
           ResourceArchive var2 = (ResourceArchive) null;
-          rk.a(-99, true, (ResourceArchive) null, 69);
+          PieceTiming.a(-99, true, (ResourceArchive) null, 69);
           field_e = null;
           return;
         }
@@ -51,7 +51,7 @@ final class rk {
         }
     }
 
-    rk(int param0, int param1, int param2) {
+    PieceTiming(int param0, int param1, int param2) {
         this.field_c = param2;
         this.field_b = param1;
         this.field_a = param0;

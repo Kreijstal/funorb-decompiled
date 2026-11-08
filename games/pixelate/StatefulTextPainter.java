@@ -47,19 +47,19 @@ final class StatefulTextPainter extends TextWidgetPainter {
           if (param0 != -48) {
             return;
           }
-          var2 = (LobbyGame) (nk.field_a.c(1504642273));
+          var2 = (LobbyGame) (nk.field_a.first(1504642273));
           while (var2 != null) {
             if (var2.comesBeforeGame((byte) 110, param1)) {
-              var2 = (LobbyGame) (nk.field_a.last(1504642273));
+              var2 = (LobbyGame) (nk.field_a.next(1504642273));
               continue;
             }
             break;
           }
           if (var2 == null) {
-            nk.field_a.addFirst(22125, param1);
+            nk.field_a.addLast(22125, param1);
           } else {
             stackIn_9_0 = -4;
-            BackgroundScene.$cfr$intArgs$a$2d0b7bdf67eb(stackIn_9_0, var2, param1);
+            BackgroundScene.insertNodeBefore(stackIn_9_0, var2, param1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -302,7 +302,7 @@ final class StatefulTextPainter extends TextWidgetPainter {
             return;
           }
           var18 = new int[]{var10_int, var11, var12, var13, var14, var15, var16, var17};
-          IntArraySorter.a(var18, 12632256);
+          PolygonFiller.fillPolygon(var18, 12632256);
           for (var19 = 0; var19 <= param1; var19++) {
             el.a((var17 - var11) * var19 / param1 + var11, var19 * (var14 - var12) / param1 + var12, 8421504, -20, var10_int + (-var10_int + var16) * var19 / param1, (-var13 + var15) * var19 / param1 + var13, 3.0f);
           }

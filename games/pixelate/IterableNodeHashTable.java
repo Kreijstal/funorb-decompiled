@@ -21,7 +21,7 @@ final class IterableNodeHashTable implements Iterable {
     final static int a(int param0, int param1) {
         int var2 = param1;
         if (0 == param0) {
-          var2 = io.field_e;
+          var2 = LoginMethod.field_e;
         }
         if (1 == param0) {
           var2 = GradientOutlineTextPainter.field_v;

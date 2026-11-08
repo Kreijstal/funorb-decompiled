@@ -20,7 +20,7 @@ final class hp extends SceneWidget {
           field_Fb = (String) null;
         }
         boolean decompiledFrameRemainder0 = true;
-        this.a(-28476, true);
+        this.updateInputFullScreen(-28476, true);
         if ((0 == IntrusiveDequeCursor.field_c ||
           this.field_P != 0) && this.field_Eb.field_P == 0) {
           stackIn_9_0 = false;
@@ -33,7 +33,7 @@ final class hp extends SceneWidget {
     }
 
     final static void a(int param0, int param1, int param2, byte param3, int param4) {
-        MidiPcmStream.a(false);
+        MidiPcmStream.pushRasterState(false);
         if (param3 > -83) {
           hp.j(-32);
         }

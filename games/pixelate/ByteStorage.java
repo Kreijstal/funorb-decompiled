@@ -52,7 +52,7 @@ abstract class ByteStorage {
             field_g = (int[]) null;
           }
           ig.a(-56);
-          var1 = SoundCache.field_b.c(1504642273);
+          var1 = SoundCache.field_b.first(1504642273);
           while (var1 instanceof ln) {
             var2 = var1.field_a;
             if (((ln) (var1)).field_o.isSamplePositionOutOfRange()) {

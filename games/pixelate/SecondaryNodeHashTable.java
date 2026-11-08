@@ -40,7 +40,7 @@ final class SecondaryNodeHashTable {
           this.lookupCursor = this.lookupCursor.secondaryNext;
           return var3;
         }
-        this.a((byte) -113);
+        this.next((byte) -113);
         while (true) {
           if (this.lookupCursor == var2) {
             this.lookupCursor = null;
@@ -57,7 +57,7 @@ final class SecondaryNodeHashTable {
         return var3Lifetime1;
     }
 
-    final void a(boolean param0, DualLinkNode param1, long param2) {
+    final void put(boolean param0, DualLinkNode param1, long param2) {
         DualLinkNode var5 = null;
         try {
           if (param1.secondaryPrevious != null) {
@@ -68,7 +68,7 @@ final class SecondaryNodeHashTable {
           param1.secondaryNext = var5;
           param1.secondaryPrevious.secondaryNext = param1;
           if (param0) {
-            SecondaryNodeHashTable.b(-98, -4);
+            SecondaryNodeHashTable.flushOutgoingPackets(-98, -4);
           }
           param1.secondaryNext.secondaryPrevious = param1;
           param1.field_q = param2;
@@ -77,7 +77,7 @@ final class SecondaryNodeHashTable {
         }
     }
 
-    final static void a(long param0, byte param1) {
+    final static void sleepMillis(long param0, byte param1) {
         if (param1 != 23) {
           return;
         }
@@ -85,15 +85,15 @@ final class SecondaryNodeHashTable {
           return;
         }
         if (0L != param0 % 10L) {
-          ScoreMarkerBar.a((byte) 37, param0);
+          ScoreMarkerBar.threadSleep((byte) 37, param0);
         } else {
-          ScoreMarkerBar.a((byte) 37, -1L + param0);
-          ScoreMarkerBar.a((byte) 37, 1L);
+          ScoreMarkerBar.threadSleep((byte) 37, -1L + param0);
+          ScoreMarkerBar.threadSleep((byte) 37, 1L);
           return;
         }
     }
 
-    final static ib a(byte param0, int param1) {
+    final static ib chooseGridSize(byte param0, int param1) {
         int stackIn_5_0 = 0;
         int var2;
         int var3;
@@ -103,7 +103,7 @@ final class SecondaryNodeHashTable {
         if (param1 < 10) {
           stackIn_5_0 = 0;
         } else {
-          stackIn_5_0 = ue.a(param1, (byte) 118);
+          stackIn_5_0 = RankingTableRequest.a(param1, (byte) 118);
         }
         var2 = stackIn_5_0;
         if (var2 == 0) {
@@ -137,7 +137,7 @@ final class SecondaryNodeHashTable {
         return new ib(4, 4);
     }
 
-    final DualLinkNode a(byte param0) {
+    final DualLinkNode next(byte param0) {
         int fieldTemp$1 = 0;
         int fieldTemp$0 = 0;
         int fieldTemp$3 = 0;
@@ -164,7 +164,7 @@ final class SecondaryNodeHashTable {
             this.field_c = var58.secondaryNext;
             return var58;
           }
-          SecondaryNodeHashTable.a(-20, -121);
+          SecondaryNodeHashTable.inverseSquareRoot(-20, -121);
           do {
             if (this.field_d >= this.field_h) {
               return null;
@@ -195,7 +195,7 @@ final class SecondaryNodeHashTable {
           this.field_c = var5.secondaryNext;
           return var5;
         }
-        SecondaryNodeHashTable.a(-20, -121);
+        SecondaryNodeHashTable.inverseSquareRoot(-20, -121);
         do {
           if (this.field_d >= this.field_h) {
             return null;
@@ -209,7 +209,7 @@ final class SecondaryNodeHashTable {
         return var29;
     }
 
-    final static int a(int param0, int param1) {
+    final static int inverseSquareRoot(int param0, int param1) {
         int var2;
         int var3;
         int var2Lifetime1;
@@ -260,7 +260,7 @@ final class SecondaryNodeHashTable {
         return bl.field_a[param0 - 32768] << var2Lifetime1;
     }
 
-    final DualLinkNode a(int param0, long param1) {
+    final DualLinkNode get(int param0, long param1) {
         DualLinkNode var4;
         DualLinkNode var5;
         int var6;
@@ -306,16 +306,16 @@ final class SecondaryNodeHashTable {
         return var5Lifetime1;
     }
 
-    final DualLinkNode a(int param0) {
+    final DualLinkNode first(int param0) {
         this.field_d = 0;
         if (param0 > -21) {
           this.field_d = -64;
-          return this.a((byte) 50);
+          return this.next((byte) 50);
         }
-        return this.a((byte) 50);
+        return this.next((byte) 50);
     }
 
-    final static void b(int param0, int param1) {
+    final static void flushOutgoingPackets(int param0, int param1) {
         try {
           Throwable decompiledCaughtException = null;
           IOException var2 = null;
@@ -378,7 +378,7 @@ final class SecondaryNodeHashTable {
 
     public static void releaseStatics(boolean param0) {
         if (!param0) {
-          SecondaryNodeHashTable.a(-87L, (byte) 117);
+          SecondaryNodeHashTable.sleepMillis(-87L, (byte) 117);
           field_e = null;
           field_f = null;
           return;

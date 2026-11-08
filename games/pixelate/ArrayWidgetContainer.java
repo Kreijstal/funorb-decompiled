@@ -242,11 +242,11 @@ abstract class ArrayWidgetContainer extends UiComponent implements UiContainerMa
     final static void a(int param0, int param1) {
         SocketJs5Transport.field_u = param0;
         if (null != MainMenuScreen.field_q) {
-          MainMenuScreen.field_q.c((byte) 30, param0);
+          MainMenuScreen.field_q.setMasterVolume((byte) 30, param0);
         }
         int var2 = -13 % ((52 - param1) / 59);
         if (ri.field_a != null) {
-          ri.field_a.a(param0, (byte) 2);
+          ri.field_a.setVolume(param0, (byte) 2);
         }
     }
 
@@ -352,7 +352,7 @@ abstract class ArrayWidgetContainer extends UiComponent implements UiContainerMa
           }
           if (QuickChatPhraseCache.field_h != -1) {
             var1_int = QuickChatPhraseCache.field_h;
-            QuickChatMenu.a(-1, -2671);
+            QuickChatMenu.setPendingUiResult(-1, -2671);
             stackIn_7_0 = var1_int;
             return stackIn_7_0;
           }
@@ -367,7 +367,7 @@ abstract class ArrayWidgetContainer extends UiComponent implements UiContainerMa
             stackIn_16_0 = 1;
             return stackIn_16_0;
           }
-          if (!an.field_e.d(123)) {
+          if (!an.field_e.isComplete(123)) {
             stackIn_20_0 = 1;
             return stackIn_20_0;
           }

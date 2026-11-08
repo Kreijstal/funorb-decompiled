@@ -190,7 +190,7 @@ final class ProxySocketConnector extends SocketConnector {
         if (MatchingTextValidator.field_n == Js5NetworkRequest.field_F) {
           return PlayerController.field_m;
         }
-        if (!an.field_e.d(79)) {
+        if (!an.field_e.isComplete(79)) {
           return PlayerController.field_m;
         }
         return Checkbox.field_U;

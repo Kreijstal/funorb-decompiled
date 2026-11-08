@@ -23,7 +23,7 @@ final class ke {
           if (GzipDecoder.field_c == null) {
             return false;
           }
-          if (GzipDecoder.field_c.a((byte) 99)) {
+          if (GzipDecoder.field_c.canResize((byte) 99)) {
             return true;
           }
           return false;
@@ -31,7 +31,7 @@ final class ke {
         if (GzipDecoder.field_c == null) {
           return false;
         }
-        if (GzipDecoder.field_c.a((byte) 99)) {
+        if (GzipDecoder.field_c.canResize((byte) 99)) {
           return true;
         }
         return false;

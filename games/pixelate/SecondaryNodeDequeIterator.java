@@ -72,7 +72,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
             field_b = (String) null;
           }
           if (null == DateInputWidget.field_L) {
-            DateInputWidget.field_L = rk.field_e;
+            DateInputWidget.field_L = PieceTiming.field_e;
           }
           var6 = new Sprite[]{param1[0], param1[1]};
           var7 = var6;

@@ -40,16 +40,16 @@ final class AccountChoicePanel extends UiContainer implements ButtonListener {
           }
           stackIn_8_0 = GreenGrowTheRushesBackground.field_n;
           stackIn_8_1 = -28476;
-          stackIn_9_2 = (param2) && (!param3) && (!LobbyPlayer.field_Wb) && (null == io.field_c) && (null == DraggableWidget.field_S);
-          ((SceneWidget) (Object) stackIn_8_0).a(stackIn_8_1, stackIn_9_2);
+          stackIn_9_2 = (param2) && (!param3) && (!LobbyPlayer.field_Wb) && (null == LoginMethod.field_c) && (null == DraggableWidget.field_S);
+          ((SceneWidget) (Object) stackIn_8_0).updateInputFullScreen(stackIn_8_1, stackIn_9_2);
           stackIn_15_0 = MidiPcmStream.field_E;
           stackIn_15_1 = param0 - 28478;
-          stackIn_16_2 = (param2) && (!param3) && (!LobbyPlayer.field_Wb) && (io.field_c == null) && (null == DraggableWidget.field_S);
-          ((SceneWidget) (Object) stackIn_15_0).a(stackIn_15_1, stackIn_16_2);
+          stackIn_16_2 = (param2) && (!param3) && (!LobbyPlayer.field_Wb) && (LoginMethod.field_c == null) && (null == DraggableWidget.field_S);
+          ((SceneWidget) (Object) stackIn_15_0).updateInputFullScreen(stackIn_15_1, stackIn_16_2);
           stackIn_20_0 = TickClock.field_e;
           stackIn_20_1 = param0 - 28478;
           stackIn_21_2 = (param2) && (!param3) && (LobbyPlayer.field_Wb);
-          ((SceneWidget) (Object) stackIn_20_0).a(stackIn_20_1, stackIn_21_2);
+          ((SceneWidget) (Object) stackIn_20_0).updateInputFullScreen(stackIn_20_1, stackIn_21_2);
         } else {
           ValidatedTextWidget.field_lb.field_cb = AlphaContainer.a(oi.field_d, 89, new String[]{Integer.toString(gi.field_a)});
           if (param0 != 2) {
@@ -57,16 +57,16 @@ final class AccountChoicePanel extends UiContainer implements ButtonListener {
           }
           stackIn_56_0 = GreenGrowTheRushesBackground.field_n;
           stackIn_56_1 = -28476;
-          stackIn_57_2 = (param2) && (!param3) && (!LobbyPlayer.field_Wb) && (null == io.field_c) && (null == DraggableWidget.field_S);
-          ((SceneWidget) (Object) stackIn_56_0).a(stackIn_56_1, stackIn_57_2);
+          stackIn_57_2 = (param2) && (!param3) && (!LobbyPlayer.field_Wb) && (null == LoginMethod.field_c) && (null == DraggableWidget.field_S);
+          ((SceneWidget) (Object) stackIn_56_0).updateInputFullScreen(stackIn_56_1, stackIn_57_2);
           stackIn_63_0 = MidiPcmStream.field_E;
           stackIn_63_1 = param0 - 28478;
-          stackIn_64_2 = (param2) && (!param3) && (!LobbyPlayer.field_Wb) && (io.field_c == null) && (null == DraggableWidget.field_S);
-          ((SceneWidget) (Object) stackIn_63_0).a(stackIn_63_1, stackIn_64_2);
+          stackIn_64_2 = (param2) && (!param3) && (!LobbyPlayer.field_Wb) && (LoginMethod.field_c == null) && (null == DraggableWidget.field_S);
+          ((SceneWidget) (Object) stackIn_63_0).updateInputFullScreen(stackIn_63_1, stackIn_64_2);
           stackIn_68_0 = TickClock.field_e;
           stackIn_68_1 = param0 - 28478;
           stackIn_69_2 = (param2) && (!param3) && (LobbyPlayer.field_Wb);
-          ((SceneWidget) (Object) stackIn_68_0).a(stackIn_68_1, stackIn_69_2);
+          ((SceneWidget) (Object) stackIn_68_0).updateInputFullScreen(stackIn_68_1, stackIn_69_2);
         }
         cl.field_g.field_g.processTabPresses((byte) -88);
         if (ValidatedTextWidget.field_cb.field_P != 0) {

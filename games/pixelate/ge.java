@@ -175,7 +175,7 @@ final class ge {
         throw new IllegalStateException();
     }
 
-    final static int a(rh param0, ue param1, int param2, int param3) {
+    final static int a(rh param0, RankingTableRequest param1, int param2, int param3) {
         int var6 = 0;
         int var7 = 0;
         int stackIn_7_0 = 0;

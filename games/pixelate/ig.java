@@ -3,7 +3,7 @@
  */
 final class ig {
     static BinaryBitmapFont field_d;
-    static io field_e;
+    static LoginMethod field_e;
     static String field_c;
     static Sprite[][] field_a;
     static ResourceArchive field_b;
@@ -82,20 +82,20 @@ final class ig {
           e.field_a = e.field_a - 1;
           if (e.field_a == 0) {
             e.field_a = 200;
-            var2 = (cm) (bo.field_d.c(1504642273));
+            var2 = (cm) (bo.field_d.first(1504642273));
             while (var2 != null) {
               if (!var2.field_k.isLinked(0)) {
                 var2.unlink(2779);
               }
-              var2 = (cm) (bo.field_d.last(1504642273));
+              var2 = (cm) (bo.field_d.next(1504642273));
             }
             if (LoginCredentials.field_b != null) {
-              var2Lifetime1 = (cm) (LoginCredentials.field_b.c(1504642273));
+              var2Lifetime1 = (cm) (LoginCredentials.field_b.first(1504642273));
               while (var2Lifetime1 != null) {
                 if (!var2Lifetime1.field_k.isLinked(0)) {
                   var2Lifetime1.unlink(2779);
                 }
-                var2Lifetime1 = (cm) (LoginCredentials.field_b.last(1504642273));
+                var2Lifetime1 = (cm) (LoginCredentials.field_b.next(1504642273));
               }
             }
           }
@@ -112,6 +112,6 @@ final class ig {
 
     static {
         field_c = "OK";
-        field_e = new io("email");
+        field_e = new LoginMethod("email");
     }
 }

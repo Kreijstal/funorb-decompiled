@@ -105,10 +105,10 @@ final class oi {
         int var12 = 0;
         try {
           em.openContextMenu(param4.field_Fb, param4.field_Nb, param4.field_Ub, -1, param4, -163, param6, (int[]) null, -1);
-          ProxySocketConnector.field_n.b(true, (byte) -98);
-          ProxySocketConnector.field_n.a(0, (int[]) null, -3);
+          ProxySocketConnector.field_n.addGameMemberActions(true, (byte) -98);
+          ProxySocketConnector.field_n.addPlayerSocialActions(0, (int[]) null, -3);
           int var7_int = -127 / ((param3 - 0) / 38);
-          ProxySocketConnector.field_n.b(8893);
+          ProxySocketConnector.field_n.addReportAbuseAction(8893);
           var8 = ProxySocketConnector.field_n;
           var9 = param0;
           var10 = param2;

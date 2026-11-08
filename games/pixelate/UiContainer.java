@@ -375,7 +375,7 @@ class UiContainer extends UiComponent implements UiContainerMarker {
 
     final void addChild(UiComponent param0, int param1) {
         try {
-          this.children.addFirst(22125, param0);
+          this.children.addLast(22125, param0);
           if (param1 != 80) {
             field_H = (String) null;
           }
@@ -595,9 +595,9 @@ class UiContainer extends UiComponent implements UiContainerMarker {
         int var15_int = 0;
         RuntimeException var15 = null;
         try {
-          TextButton.a(param13, NodeHashTable.field_c, param2, param11, new sb(param4), AudioService.field_d, MouseWheelHandler.field_d, mh.field_a, new sb(param8), param6, param11, param10, param7, param6, param10, param14, mj.field_k, 108, PlayerBoard.field_n, param5);
+          TextButton.a(param13, NodeHashTable.field_c, param2, param11, new sb(param4), AudioService.field_d, MouseWheelHandler.field_d, mh.field_a, new sb(param8), param6, param11, param10, param7, param6, param10, param14, ScoreMarkerDemo.field_k, 108, PlayerBoard.field_n, param5);
           var15_int = 75 % ((param12 + 21) / 34);
-          PlayerController.a(param0, param9, param1, 0, param3);
+          PlayerController.openMessageMenu(param0, param9, param1, 0, param3);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -20,7 +20,7 @@ final class hm {
         RuntimeException decompiledCaughtException = null;
         try {
           var3 = new og(param1);
-          wk.field_g.addFirst(22125, var3);
+          wk.field_g.addLast(22125, var3);
           dq.a(param2, -18989, var3);
           var4 = 55 / ((param0 - 68) / 46);
           stackIn_1_0 = var3;
@@ -101,7 +101,7 @@ final class hm {
     final static void a(byte param0) {
         oo.field_f = -1;
         qg.field_b = null;
-        re.field_h = false;
+        LoadingStepTracker.field_h = false;
         CachedTextLayout.field_h = 0;
         MarkerSlider.field_V = -1;
         int var1 = -61 / ((17 - param0) / 55);

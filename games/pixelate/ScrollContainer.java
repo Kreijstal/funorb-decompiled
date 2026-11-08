@@ -25,7 +25,7 @@ final class ScrollContainer extends SceneWidget {
         }
     }
 
-    final static void a(boolean param0, String param1, int param2) {
+    final static void showLoginResultMessage(boolean param0, String param1, int param2) {
         int var3_int = 0;
         RuntimeException stackIn_31_0 = null;
         StringBuilder stackIn_31_1 = null;
@@ -84,9 +84,9 @@ final class ScrollContainer extends SceneWidget {
         }
     }
 
-    private final void a(boolean param0, int param1, int param2, int param3, byte param4) {
+    private final void applyScrollInput(boolean param0, int param1, int param2, int param3, byte param4) {
         int var6;
-        if (this.field_Gb.e((byte) 123)) {
+        if (this.field_Gb.pollLineUp((byte) 123)) {
           this.content.pendingYDelta = this.content.pendingYDelta + param2;
         }
         var6 = 13 / ((70 - param4) / 55);
@@ -96,7 +96,7 @@ final class ScrollContainer extends SceneWidget {
         if (this.field_Gb.pollPageUp((byte) 83)) {
           this.content.pendingYDelta = this.content.pendingYDelta + param1;
         }
-        if (this.field_Gb.j(-1)) {
+        if (this.field_Gb.pollPageDown(-1)) {
           this.content.pendingYDelta = this.content.pendingYDelta - param1;
         }
         if (this.field_W) {
@@ -117,8 +117,8 @@ final class ScrollContainer extends SceneWidget {
             this.content.pendingYDelta = -this.content.field_S;
           }
         }
-        if (this.field_Gb.k(92)) {
-          this.content.field_S = -this.field_Gb.a(3, this.content.height, param0, this.field_Ib.height);
+        if (this.field_Gb.isThumbHeld(92)) {
+          this.content.field_S = -this.field_Gb.getThumbScrollOffset(3, this.content.height, param0, this.field_Ib.height);
           this.content.pendingYDelta = 0;
         }
         this.field_Gb.layoutScrollbar(this.field_Ib.height, (byte) 108, -this.content.field_S, this.content.height);
@@ -130,7 +130,7 @@ final class ScrollContainer extends SceneWidget {
           this.field_Ib.field_K = -param2 + (this.field_K - param1);
           this.content.field_D = 0;
           this.content.field_K = -param2 + (this.field_K - param1);
-          this.field_Gb.a(-param2 + this.field_K, this.content.height, this.height, this.field_Ib.height, -this.content.field_S, param2, 0, -1);
+          this.field_Gb.setBoundsAndLayout(-param2 + this.field_K, this.content.height, this.height, this.field_Ib.height, -this.content.field_S, param2, 0, -1);
           return;
         }
         field_Jb = (String) null;
@@ -138,10 +138,10 @@ final class ScrollContainer extends SceneWidget {
         this.field_Ib.field_K = -param2 + (this.field_K - param1);
         this.content.field_D = 0;
         this.content.field_K = -param2 + (this.field_K - param1);
-        this.field_Gb.a(-param2 + this.field_K, this.content.height, this.height, this.field_Ib.height, -this.content.field_S, param2, 0, -1);
+        this.field_Gb.setBoundsAndLayout(-param2 + this.field_K, this.content.height, this.height, this.field_Ib.height, -this.content.field_S, param2, 0, -1);
     }
 
-    final void a(int param0, int param1, byte param2, int param3, int param4, int param5, int param6) {
+    final void setBoundsAndLayout(int param0, int param1, byte param2, int param3, int param4, int param5, int param6) {
         this.field_K = param3;
         this.height = param5;
         this.field_S = param4;
@@ -152,7 +152,7 @@ final class ScrollContainer extends SceneWidget {
         }
     }
 
-    private final boolean a(int param0, int param1, int param2, boolean param3, int param4, int param5, boolean param6) {
+    private final boolean layoutAndScroll(int param0, int param1, int param2, boolean param3, int param4, int param5, boolean param6) {
         int var8 = 0;
         int var8Lifetime1;
         int var8Lifetime2;
@@ -162,60 +162,60 @@ final class ScrollContainer extends SceneWidget {
             var8 = 0;
             if (param5 == 7736) {
               this.content.layoutVerticalContent(param1, (byte) -128, var8 != 0, this.field_Ib.height);
-              this.a(false, param4, param2, param0, (byte) 127);
+              this.applyScrollInput(false, param4, param2, param0, (byte) 127);
               return var8 != 0;
             }
-            ScrollContainer.a(-48, -99L);
+            ScrollContainer.findLobbyPlayer(-48, -99L);
             this.content.layoutVerticalContent(param1, (byte) -128, var8 != 0, this.field_Ib.height);
-            this.a(false, param4, param2, param0, (byte) 127);
+            this.applyScrollInput(false, param4, param2, param0, (byte) 127);
             return var8 != 0;
           }
           if (param6) {
             var8Lifetime2 = 0;
             if (param5 == 7736) {
               this.content.layoutVerticalContent(param1, (byte) -128, var8Lifetime2 != 0, this.field_Ib.height);
-              this.a(false, param4, param2, param0, (byte) 127);
+              this.applyScrollInput(false, param4, param2, param0, (byte) 127);
               return var8Lifetime2 != 0;
             }
-            ScrollContainer.a(-48, -99L);
+            ScrollContainer.findLobbyPlayer(-48, -99L);
             this.content.layoutVerticalContent(param1, (byte) -128, var8Lifetime2 != 0, this.field_Ib.height);
-            this.a(false, param4, param2, param0, (byte) 127);
+            this.applyScrollInput(false, param4, param2, param0, (byte) 127);
             return var8Lifetime2 != 0;
           }
           var8Lifetime3 = 1;
           if (param5 == 7736) {
             this.content.layoutVerticalContent(param1, (byte) -128, var8Lifetime3 != 0, this.field_Ib.height);
-            this.a(false, param4, param2, param0, (byte) 127);
+            this.applyScrollInput(false, param4, param2, param0, (byte) 127);
             return var8Lifetime3 != 0;
           }
-          ScrollContainer.a(-48, -99L);
+          ScrollContainer.findLobbyPlayer(-48, -99L);
           this.content.layoutVerticalContent(param1, (byte) -128, var8Lifetime3 != 0, this.field_Ib.height);
-          this.a(false, param4, param2, param0, (byte) 127);
+          this.applyScrollInput(false, param4, param2, param0, (byte) 127);
           return var8Lifetime3 != 0;
         }
         var8Lifetime1 = 1;
         if (param5 == 7736) {
           this.content.layoutVerticalContent(param1, (byte) -128, var8Lifetime1 != 0, this.field_Ib.height);
-          this.a(false, param4, param2, param0, (byte) 127);
+          this.applyScrollInput(false, param4, param2, param0, (byte) 127);
           return var8Lifetime1 != 0;
         }
-        ScrollContainer.a(-48, -99L);
+        ScrollContainer.findLobbyPlayer(-48, -99L);
         this.content.layoutVerticalContent(param1, (byte) -128, var8Lifetime1 != 0, this.field_Ib.height);
-        this.a(false, param4, param2, param0, (byte) 127);
+        this.applyScrollInput(false, param4, param2, param0, (byte) 127);
         return var8Lifetime1 != 0;
     }
 
-    final static LobbyPlayer a(int param0, long param1) {
+    final static LobbyPlayer findLobbyPlayer(int param0, long param1) {
         if (param0 == 2) {
-          return (LobbyPlayer) (QuickChatCategoryCache.field_d.a(param0 - 11436, param1));
+          return (LobbyPlayer) (QuickChatCategoryCache.field_d.get(param0 - 11436, param1));
         }
         String var4 = (String) null;
-        ScrollContainer.a(true, (String) null, -69);
-        return (LobbyPlayer) (QuickChatCategoryCache.field_d.a(param0 - 11436, param1));
+        ScrollContainer.showLoginResultMessage(true, (String) null, -69);
+        return (LobbyPlayer) (QuickChatCategoryCache.field_d.get(param0 - 11436, param1));
     }
 
-    final void a(int param0, int param1, boolean param2, int param3) {
-        this.a(param2, this.field_Ib.height, param1, param3, (byte) -43);
+    final void applyScrollInputForViewport(int param0, int param1, boolean param2, int param3) {
+        this.applyScrollInput(param2, this.field_Ib.height, param1, param3, (byte) -43);
         int var5 = -81 / ((param0 + 15) / 62);
     }
 
@@ -230,12 +230,12 @@ final class ScrollContainer extends SceneWidget {
         field_Jb = null;
     }
 
-    final boolean a(boolean param0, boolean param1, int param2, int param3, int param4, int param5) {
+    final boolean updateScrolling(boolean param0, boolean param1, int param2, int param3, int param4, int param5) {
         if (param4 == 0) {
-          return this.a(param3, param2, param5, param1, this.field_Ib.height, 7736, param0);
+          return this.layoutAndScroll(param3, param2, param5, param1, this.field_Ib.height, 7736, param0);
         }
-        this.a(false, true, -57, 93, -15, 99);
-        return this.a(param3, param2, param5, param1, this.field_Ib.height, 7736, param0);
+        this.updateScrolling(false, true, -57, 93, -15, 99);
+        return this.layoutAndScroll(param3, param2, param5, param1, this.field_Ib.height, 7736, param0);
     }
 
     static {

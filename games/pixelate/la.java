@@ -42,7 +42,7 @@ final class la {
           }
           var2 = var13.readUnsignedByte(255);
           if (var2 == 0) {
-            var11 = PicturePreview.a(false);
+            var11 = PicturePreview.createEightInts(false);
             var17 = var11;
             var14 = var17;
             var3 = var14;
@@ -53,7 +53,7 @@ final class la {
             for (var7 = 0; var6 > var7; var7++) {
               var10[var7] = ((PacketBuffer) ((Object) var5)).readInt(0);
             }
-            var15 = (mc) (tj.field_z.c(1504642273));
+            var15 = (mc) (StrongCacheReference.field_z.first(1504642273));
             if (var15 == null) {
               na.a(true);
               return;
@@ -69,18 +69,18 @@ final class la {
               CheckboxPainter.reportClientError(1, "A1: " + jm.b(-79), (Throwable) null);
               na.a(true);
             } else {
-              var16_ref = (mc) (tj.field_z.c(1504642273));
+              var16_ref = (mc) (StrongCacheReference.field_z.first(1504642273));
               if (var16_ref == null) {
                 na.a(true);
                 return;
               }
-              var16_ref.field_l = PicturePreview.a(false);
+              var16_ref.field_l = PicturePreview.createEightInts(false);
               var16_ref.field_p = true;
               var16_ref.field_s = var16_ref.field_l[0];
               var16_ref.unlink(2779);
             }
           } else {
-            var12 = (hf) (dh.field_a.c(1504642273));
+            var12 = (hf) (dh.field_a.first(1504642273));
             if (var12 == null) {
               na.a(true);
               return;
@@ -287,12 +287,12 @@ final class la {
           var6 = 0;
           var7 = 0;
           var8 = 0;
-          if (null != io.field_c && (null != jm.field_r ||
+          if (null != LoginMethod.field_c && (null != jm.field_r ||
             null != StatefulTextPainter.field_z ||
             null != pa.field_a ||
             oo.field_e != null)) {
             for (var9 = 0; fj.field_b > var9; var9++) {
-              var10_int = io.field_c.field_Eb[var9] & 255;
+              var10_int = LoginMethod.field_c.field_Eb[var9] & 255;
               if (jm.field_r != null &&
                 jm.field_r[var9] != null &&
                 jm.field_r[var9][var10_int]) {
@@ -329,11 +329,11 @@ final class la {
           stackIn_45_0 = (ScrollContainer) (param2);
           stackIn_45_1 = param4;
           stackIn_46_2 = (bj.field_d == param2);
-          stackIn_49_0 = (!((ScrollContainer) (Object) stackIn_45_0).a(stackIn_45_1, stackIn_46_2, 2, (fq.field_q * 4 + 8) * param3, 0, 2 * fq.field_q + 4)) ? 0 : 1;
+          stackIn_49_0 = (!((ScrollContainer) (Object) stackIn_45_0).updateScrolling(stackIn_45_1, stackIn_46_2, 2, (fq.field_q * 4 + 8) * param3, 0, 2 * fq.field_q + 4)) ? 0 : 1;
           var9Lifetime1 = stackIn_49_0;
           var10 = param2.content.children;
           var11 = null;
-          var12 = (LobbyPlayer) (var10.c(1504642273));
+          var12 = (LobbyPlayer) (var10.first(1504642273));
           while (var12 != null) {
             var13 = 0;
             if (var12.children == null) {
@@ -346,7 +346,7 @@ final class la {
               var12.field_Gb.horizontalAlignment = 2;
               var12.field_Sb = new SceneWidget(0L, TextFieldValidator.field_h);
               var12.addChild(var12.field_Sb, (byte) 26);
-              var12.h(-257);
+              var12.markTreeDirty(-257);
               var12.field_Zb = new SceneWidget(0L, TimerBar.field_p);
               var12.addChild(var12.field_Zb, (byte) 26);
               var12.field_Mb = new SceneWidget(0L, ge.field_h);
@@ -396,7 +396,7 @@ final class la {
               }
             }
             var12.field_Hb.field_cb = var20;
-            if (!var12.b((byte) -114)) {
+            if (!var12.isUnlisted((byte) -114)) {
               var23_int = 16764006;
               var24_int = 16777215;
               if (var5_int != 0 &&
@@ -420,7 +420,7 @@ final class la {
               var12.field_Zb.field_pb = var24_int;
               var12.field_Zb.field_y = var24_int;
               if (param2 == Vector3.field_c) {
-                if (!io.field_c.field_dc) {
+                if (!LoginMethod.field_c.field_dc) {
                   var12.field_Mb.field_cb = MenuInputState.field_m;
                 }
               } else {
@@ -438,11 +438,11 @@ final class la {
                 }
               }
               var25_int = 0;
-              if (io.field_c != null &&
-                AccountRegistrationPanel.m(99) &&
+              if (LoginMethod.field_c != null &&
+                AccountRegistrationPanel.isLocalPlayerGameHost(99) &&
                 DebouncedValidator.field_f != var12.field_Nb) {
                 if (null != var12.field_Zb.field_cb) {
-                  var26 = var12.field_Zb.g(0) + MouseWheelHandler.field_c * 2;
+                  var26 = var12.field_Zb.getContentWidth(0) + MouseWheelHandler.field_c * 2;
                   var12.field_Zb.setBounds(var19, fq.field_q, var25_int, 256, var26);
                   var25_int = var25_int + var26;
                 }
@@ -450,7 +450,7 @@ final class la {
                   if (param2 == Vector3.field_c) {
                     var26Lifetime2 = 40;
                   } else {
-                    var26Lifetime2 = var12.field_Mb.g(0) + 2 * MouseWheelHandler.field_c;
+                    var26Lifetime2 = var12.field_Mb.getContentWidth(0) + 2 * MouseWheelHandler.field_c;
                   }
                   var12.field_Mb.setBounds(var19, fq.field_q, var25_int, 256, var26Lifetime2);
                   var25_int = var25_int + var26Lifetime2;
@@ -504,7 +504,7 @@ final class la {
               param2.content.positionAfter(var12, 2, -1, (SceneWidget) (var11));
             }
             if (var12.field_P != 0 &&
-              !var12.b((byte) -89)) {
+              !var12.isUnlisted((byte) -89)) {
               if (var12.field_Zb.field_P == 0) {
                 if (0 == var12.field_Mb.field_P) {
                   oi.a(BufferedRandomAccessFile.field_a, 0, ji.field_c, (byte) -110, var12, 0, param2);
@@ -512,12 +512,12 @@ final class la {
                   pe.a(7, param1, var12.field_Nb);
                 }
               } else {
-                StatusBar.a(var12.field_Nb, param1, -26231);
+                StatusBar.sendNameRequest(var12.field_Nb, param1, -26231);
               }
             }
             var11 = var12;
             if (var12.field_R &&
-              !var12.b((byte) -110)) {
+              !var12.isUnlisted((byte) -110)) {
               var24Lifetime2 = null;
               if (~DebouncedValidator.field_f != ~var12.field_Nb) {
                 if (var5_int != 0 &&
@@ -591,7 +591,7 @@ final class la {
                 var25 = null;
                 var26Lifetime1 = 0;
                 for (var27_int = 0; fj.field_b > var27_int; var27_int++) {
-                  var28 = 255 & io.field_c.field_Eb[var27_int];
+                  var28 = 255 & LoginMethod.field_c.field_Eb[var27_int];
                   var29 = 0;
                   if (jm.field_r != null &&
                     null != jm.field_r[var27_int] &&
@@ -644,7 +644,7 @@ final class la {
                   }
                 }
                 if (param2 == Vector3.field_c &&
-                  AccountRegistrationPanel.m(99)) {
+                  AccountRegistrationPanel.isLocalPlayerGameHost(99)) {
                   if (var26Lifetime1 == 0) {
                     var24Lifetime2 = var34 + "<br>" + AlphaContainer.a(BoardParticle.field_q, 96, new String[]{(String) (var25)});
                   } else {
@@ -658,14 +658,14 @@ final class la {
                   }
                 }
                 if (param2 == Vector3.field_c &&
-                  !AccountRegistrationPanel.m(99)) {
-                  var27 = io.field_c.field_pc;
+                  !AccountRegistrationPanel.isLocalPlayerGameHost(99)) {
+                  var27 = LoginMethod.field_c.field_pc;
                   var24Lifetime2 = (String) (var24Lifetime2) + "<br>" + AlphaContainer.a(ff.field_c, 93, new String[]{var27});
                 }
                 up.field_o = (String) (var24Lifetime2);
               }
             }
-            var12 = (LobbyPlayer) (var10.last(1504642273));
+            var12 = (LobbyPlayer) (var10.next(1504642273));
           }
           if (param0 < 19) {
             field_a = (int[]) null;
@@ -703,7 +703,7 @@ final class la {
           if (MidiPcmStream.field_t == 12) {
             var4 = -1;
           }
-          wo.getScreen(-92, MidiPcmStream.field_t).a(2, var4, param2);
+          wo.getScreen(-92, MidiPcmStream.field_t).enterScreen(2, var4, param2);
           if (MidiPcmStream.field_t == 12) {
             id.a(param2, (byte) 110);
           }

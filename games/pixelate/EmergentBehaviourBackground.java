@@ -32,7 +32,7 @@ final class EmergentBehaviourBackground extends BackgroundScene {
         AccountRegistrationPanel.field_O = 3 * LobbyPlayer.field_Ob + 16777215;
     }
 
-    final void a(boolean param0) {
+    final void render(boolean param0) {
         int incrementValue$2 = 0;
         int var4 = 0;
         int var3 = 0;
@@ -166,11 +166,11 @@ final class EmergentBehaviourBackground extends BackgroundScene {
         }
     }
 
-    final void c(int param0) {
+    final void tick(int param0) {
         int var3 = 0;
         lp var4 = null;
         int var5 = Pixelate.field_H ? 1 : 0;
-        super.c(param0);
+        super.tick(param0);
         lp[] var6 = this.field_p;
         lp[] var2 = var6;
         for (var3 = 0; var6.length > var3; var3++) {

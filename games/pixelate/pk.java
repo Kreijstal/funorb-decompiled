@@ -145,8 +145,8 @@ final class pk {
           if (~var2_int < param1) {
             throw new IllegalStateException("" + var2_int);
           }
-          var3 = tj.a(param0, -32) ? 1 : 0;
-          var4 = tj.a(param0, -32) ? 1 : 0;
+          var3 = StrongCacheReference.readBit(param0, -32) ? 1 : 0;
+          var4 = StrongCacheReference.readBit(param0, -32) ? 1 : 0;
           var5 = new TriangleMesh();
           var5.vertexCount = (short)param0.readBits(16, (byte) -34);
           var5.vertexX = EmergentBehaviourBackground.a(var5.vertexX, (byte) -128, param0, 16);
@@ -173,10 +173,10 @@ final class pk {
             var5.field_d = EmergentBehaviourBackground.a(var5.field_d, (byte) -128, param0, 16);
             var5.field_z = EmergentBehaviourBackground.a(var5.field_z, (byte) -128, param0, 16);
           }
-          if (tj.a(param0, -32)) {
+          if (StrongCacheReference.readBit(param0, -32)) {
             var5.field_l = EmergentBehaviourBackground.a(var5.field_l, (byte) -128, param0, 16);
           }
-          if (tj.a(param0, -32)) {
+          if (StrongCacheReference.readBit(param0, -32)) {
             var5.field_n = NodeHashTable.readPackedByteArray(param0, var5.field_n, 16, param1 ^ -122);
             var6 = 0;
             var7 = 0;
@@ -277,7 +277,7 @@ final class pk {
               var2 = AlphaContainer.a(fg.field_d, 34, new String[]{CheckboxPainter.field_k});
             }
             if (un.field_l) {
-              MidiPcmStream.a(0, (String) null, (String) null, (byte) -82, 2, (String) (var2));
+              MidiPcmStream.appendChatMessage(0, (String) null, (String) null, (byte) -82, 2, (String) (var2));
               SoundCache.a(true);
             }
           }
@@ -310,14 +310,14 @@ final class pk {
             if (2 != var6 ||
               var10 != 0) {
               if (0 == var6) {
-                if (null == io.field_c &&
+                if (null == LoginMethod.field_c &&
                   ge.field_f) {
                   var4 = "[" + TimerBar.field_m + "] ";
                 }
-                if (null != io.field_c) {
+                if (null != LoginMethod.field_c) {
                   if (!TickClock.field_b ||
                     TextLayoutLine.field_f == null) {
-                    var4 = "[" + AlphaContainer.a(HowToPlayScreen.field_q, 40, new String[]{io.field_c.field_pc}) + "] ";
+                    var4 = "[" + AlphaContainer.a(HowToPlayScreen.field_q, 40, new String[]{LoginMethod.field_c.field_pc}) + "] ";
                     if (var10 != 0) {
                       var4 = "[" + TextLayoutLine.field_f + "] ";
                     }
@@ -327,7 +327,7 @@ final class pk {
                   var6 = 1;
                 }
               }
-              if (ue.a((byte) 81)) {
+              if (RankingTableRequest.a((byte) 81)) {
                 stackIn_60_0 = ": ";
               } else {
                 stackIn_60_0 = "<img=3>: ";
@@ -346,7 +346,7 @@ final class pk {
                 var4 = "<col=999999>" + var4 + JaggrabDownloader.field_i + "</col>";
               }
               var9 = AccountMessagePanel.field_Q.textWidth(var4);
-              if (!ue.a((byte) 124)) {
+              if (!RankingTableRequest.a((byte) 124)) {
                 if (nf.field_d.field_W &&
                   (-nf.field_d.field_tb + ProxyAuthenticationException.field_d) < var9) {
                   if (!ln.field_q) {

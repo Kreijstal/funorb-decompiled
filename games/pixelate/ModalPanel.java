@@ -21,8 +21,8 @@ abstract class ModalPanel extends UiContainer {
         return (UiComponent) (this);
     }
 
-    boolean a(byte param0) {
-        this.field_J = this.d(false);
+    boolean isDismissed(byte param0) {
+        this.field_J = this.getVisibilityAlpha(false);
         if (param0 < 120) {
           field_L = (int[]) null;
           if (0 != this.field_J) {
@@ -42,7 +42,7 @@ abstract class ModalPanel extends UiContainer {
         return false;
     }
 
-    private final int d(boolean param0) {
+    private final int getVisibilityAlpha(boolean param0) {
         if (!param0) {
           return !this.field_N ? 0 : this == this.field_M.n(640) ? 256 : 0;
         }
@@ -143,7 +143,7 @@ abstract class ModalPanel extends UiContainer {
         int var3Lifetime1;
         if (param0) {
           this.drawDialogBackground(-46, -6, false);
-          var2 = this.d(param0);
+          var2 = this.getVisibilityAlpha(param0);
           var3 = -this.field_J + var2;
           if (var3 <= 0) {
             if (var3 < 0) {
@@ -169,7 +169,7 @@ abstract class ModalPanel extends UiContainer {
           stackIn_24_0 = (this.field_J == 0) && (var2 == 0) && (!this.field_N);
           return stackIn_24_0;
         }
-        var2Lifetime1 = this.d(param0);
+        var2Lifetime1 = this.getVisibilityAlpha(param0);
         var3Lifetime1 = -this.field_J + var2Lifetime1;
         if (var3Lifetime1 <= 0) {
           if (var3Lifetime1 >= 0) {
@@ -190,7 +190,7 @@ abstract class ModalPanel extends UiContainer {
         return stackIn_45_0;
     }
 
-    final void a(int param0, byte param1, int param2) {
+    final void centerWithSize(int param0, byte param1, int param2) {
         this.setBounds(param2, (byte) 88, -param0 + IndexedSpriteState.field_c >> 1, ModalStack.field_O - param2 >> 1, param0);
         if (param1 != -110) {
           field_K = true;

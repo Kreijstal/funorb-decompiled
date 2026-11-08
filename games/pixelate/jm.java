@@ -12,7 +12,7 @@ final class jm {
     static volatile int field_o;
     int field_c;
     static String field_k;
-    static ck[] field_d;
+    static FloatingSquare[] field_d;
     int field_l;
     static ScrollContainer field_b;
     int field_f;
@@ -105,7 +105,7 @@ final class jm {
 
     static {
         field_k = "<%0> must play 1 more rated game before playing with the current options.";
-        field_d = new ck[24];
+        field_d = new FloatingSquare[24];
         field_o = 0;
         field_q = new bd();
         field_p = "From only <%0>/month";

@@ -28,7 +28,7 @@ final class SpriteCheckboxPainter implements WidgetPainter {
         try {
           int var2_int = 31 % ((param1 + 78) / 35);
           oo.field_a = param0;
-          QuickChatMenu.a(12, -2671);
+          QuickChatMenu.setPendingUiResult(12, -2671);
         } catch (RuntimeException runtimeException) {
           throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "jc.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -49,7 +49,7 @@ final class SpriteCheckboxPainter implements WidgetPainter {
           }
           var6_int = param0.field_z + param3;
           var7 = param2 + param0.field_p;
-          BoardView.a(var6_int, param0.field_C, var7, param0.field_E, (byte) -51);
+          BoardView.drawInsetFieldBorder(var6_int, param0.field_C, var7, param0.field_E, (byte) -51);
           var8 = CanvasRasterBuffer.field_g[1];
           if (param0 instanceof TextButton &&
             ((TextButton) (param0)).field_M) {

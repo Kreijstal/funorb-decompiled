@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class io {
+final class LoginMethod {
     static ResourceArchive field_g;
     static SceneWidget field_f;
     static long field_d;
@@ -10,7 +10,7 @@ final class io {
     static LobbyGame field_c;
     private String field_b;
 
-    final static void a(int param0, int param1) {
+    final static void resendQueuedListRequests(int param0, int param1) {
         int var3 = 0;
         m var4 = null;
         RuntimeException decompiledCaughtException = null;
@@ -20,10 +20,10 @@ final class io {
           if (param1 != -20304) {
             field_d = 56L;
           }
-          var4 = (m) (LoginDialog.field_nb.c(1504642273));
+          var4 = (m) (LoginDialog.field_nb.first(1504642273));
           while (var4 != null) {
             SpriteCheckboxPainter.a((byte) -31, param0, var4);
-            var4 = (m) (LoginDialog.field_nb.last(1504642273));
+            var4 = (m) (LoginDialog.field_nb.next(1504642273));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -33,7 +33,7 @@ final class io {
         }
     }
 
-    final static void b(int param0) {
+    final static void readRankingPacket(int param0) {
         String[][] dupTemp$0 = null;
         int[][] dupTemp$1 = null;
         RuntimeException decompiledCaughtException = null;
@@ -61,10 +61,10 @@ final class io {
         try {
           var15 = MusicCrossfadeStream.field_o;
           var2 = var15.readUnsignedByte(255);
-          var3 = (lc) (LoginCredentials.field_c.c(1504642273));
+          var3 = (lc) (LoginCredentials.field_c.first(1504642273));
           while (var3 != null) {
             if (~var2 != ~var3.field_k) {
-              var3 = (lc) (LoginCredentials.field_c.last(1504642273));
+              var3 = (lc) (LoginCredentials.field_c.next(1504642273));
               continue;
             }
             break;
@@ -148,7 +148,7 @@ final class io {
         }
     }
 
-    final static void a(int param0, byte param1, int param2) {
+    final static void drawLogoAnimation(int param0, byte param1, int param2) {
         int var3;
         int var4;
         int var5;
@@ -177,10 +177,10 @@ final class io {
           if (GameModeCard.field_f > 200) {
             var5 = (250 - GameModeCard.field_f << 8) / 50;
           }
-          Checkbox.a(-113, re.field_b);
+          Checkbox.a(-113, LoadingStepTracker.field_b);
           MeshRasterState.a();
           SoftwareRasterizer.clear();
-          ScoreMarkerBar.d((byte) 106);
+          ScoreMarkerBar.renderLogoMeshes((byte) 106);
           if (256 > var5) {
             SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_j, SoftwareRasterizer.field_d, 0, -var5 + 256);
           }
@@ -188,7 +188,7 @@ final class io {
           if (GameModeCard.field_f >= 150) {
             th.field_b.drawAlpha(var3 + 15, var4 + 10, var5);
           } else {
-            re.field_b.drawHalfSize(var3, var4);
+            LoadingStepTracker.field_b.drawHalfSize(var3, var4);
           }
           var6 = GameModeCard.field_f - 125;
           if (var6 > 0) {
@@ -228,17 +228,17 @@ final class io {
         if (GameModeCard.field_f > 200) {
           var5 = (250 - GameModeCard.field_f << 8) / 50;
         }
-        Checkbox.a(-113, re.field_b);
+        Checkbox.a(-113, LoadingStepTracker.field_b);
         MeshRasterState.a();
         SoftwareRasterizer.clear();
-        ScoreMarkerBar.d((byte) 106);
+        ScoreMarkerBar.renderLogoMeshes((byte) 106);
         if (256 > var5) {
           SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_j, SoftwareRasterizer.field_d, 0, -var5 + 256);
           LinkButtonPainter.a((byte) 92);
           if (GameModeCard.field_f >= 150) {
             th.field_b.drawAlpha(var3 + 15, var4 + 10, var5);
           } else {
-            re.field_b.drawHalfSize(var3, var4);
+            LoadingStepTracker.field_b.drawHalfSize(var3, var4);
           }
           var6Lifetime1 = GameModeCard.field_f - 125;
           if (var6Lifetime1 > 0 &&
@@ -319,7 +319,7 @@ final class io {
             }
             return;
           }
-          re.field_b.drawHalfSize(var3, var4);
+          LoadingStepTracker.field_b.drawHalfSize(var3, var4);
           var6Lifetime1 = GameModeCard.field_f - 125;
           if (var6Lifetime1 > 0 &&
             var6Lifetime1 < 50) {
@@ -347,7 +347,7 @@ final class io {
         return;
     }
 
-    final boolean a(String param0, int param1) {
+    final boolean hasName(String param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         boolean stackIn_1_0 = false;
@@ -377,7 +377,7 @@ final class io {
         throw new IllegalStateException();
     }
 
-    final static void a(boolean param0, int param1, LoginCredentials param2, int param3, boolean param4) {
+    final static void writeLoginPacket(boolean param0, int param1, LoginCredentials param2, int param3, boolean param4) {
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
         String stackIn_25_2 = null;
@@ -434,11 +434,11 @@ final class io {
           }
           if (param1 >= -40) {
             var8 = (BinaryBitmapFont) null;
-            io.a((BinaryBitmapFont) null, (byte) 105);
+            LoginMethod.setSmallFont((BinaryBitmapFont) null, (byte) 105);
           }
           HighscoresScreen.a(AgeValidator.field_m, aa.field_f, SceneWidgetNode.field_t, GameModeSelectScreen.field_v, 12556);
           aa.field_f.backpatchShortLength(7519, aa.field_f.position - var5_int);
-          SecondaryNodeHashTable.b(-1, 10000);
+          SecondaryNodeHashTable.flushOutgoingPackets(-1, 10000);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -454,7 +454,7 @@ final class io {
         }
     }
 
-    final static void a(BinaryBitmapFont param0, byte param1) {
+    final static void setSmallFont(BinaryBitmapFont param0, byte param1) {
         try {
           DelegatingCanvas.field_d = param0;
           pe.field_c = DelegatingCanvas.field_d.maxDescent + DelegatingCanvas.field_d.maxAscent;
@@ -464,11 +464,11 @@ final class io {
         }
     }
 
-    final void a(java.applet.Applet param0, int param1) {
+    final void saveAsLastLoginMethod(java.applet.Applet param0, int param1) {
         try {
           if (param1 != -80419032) {
             java.applet.Applet var4 = (java.applet.Applet) null;
-            this.a((java.applet.Applet) null, 6);
+            this.saveAsLastLoginMethod((java.applet.Applet) null, 6);
           }
           MatchHud.a(param0, -75, this.field_b, "jagex-last-login-method", 31536000L);
         } catch (RuntimeException runtimeException) {
@@ -488,7 +488,7 @@ final class io {
         field_g = null;
     }
 
-    io(String param0) {
+    LoginMethod(String param0) {
         try {
           this.field_b = param0;
         } catch (RuntimeException runtimeException) {

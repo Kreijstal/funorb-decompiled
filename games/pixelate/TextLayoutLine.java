@@ -76,7 +76,7 @@ final class TextLayoutLine {
             field_a = (String) null;
           }
           var2 = new cm(param1, param1);
-          bo.field_d.addFirst(22125, var2);
+          bo.field_d.addLast(22125, var2);
           ClientContextMenu.field_d.a(param1);
           stackIn_3_0 = var2;
           return stackIn_3_0;

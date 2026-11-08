@@ -58,10 +58,10 @@ final class ki {
               return;
             }
             var3 = var10.readInt(0);
-            var4_ref_og = (og) (wk.field_g.c(1504642273));
+            var4_ref_og = (og) (wk.field_g.first(1504642273));
             while (var4_ref_og != null) {
               if (var4_ref_og.field_m != var3) {
-                var4_ref_og = (og) (wk.field_g.last(1504642273));
+                var4_ref_og = (og) (wk.field_g.next(1504642273));
                 continue;
               }
               break;
@@ -73,7 +73,7 @@ final class ki {
             na.a(true);
             return;
           }
-          var9 = (um) (bq.field_a.c(1504642273));
+          var9 = (um) (bq.field_a.first(1504642273));
           if (var9 == null) {
             na.a(true);
             return;

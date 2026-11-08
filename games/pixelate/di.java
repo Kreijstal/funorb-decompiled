@@ -64,7 +64,7 @@ final class di {
         try {
           ih.field_f = param0;
           ej.field_a = param1;
-          ck.field_g = param2;
+          FloatingSquare.field_g = param2;
           if (param3 != 9) {
             field_c = (Sprite) null;
           }

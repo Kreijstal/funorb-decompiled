@@ -41,7 +41,7 @@ final class um extends IntrusiveNode {
             stackIn_14_0 = ((var12 & 4) != 0) ? param3 : param1;
             var15 = stackIn_14_0;
             var11[var12] = new Vector3(var13 * 2 - 2 << 12, var14 * 2 - 2 << 12, var15 * 2 - 2 << 12);
-            var17[var12] = param2.a(var17[var12], (byte) 83);
+            var17[var12] = param2.transform(var17[var12], (byte) 83);
           }
           if (param2.field_f[8] > 0) {
             StatefulTextPainter.a(param10, param8 - param0, var18[1], param4 - param7, var18[0], var18[2], var18[3], param6, (byte) -43, param9);
@@ -90,7 +90,7 @@ final class um extends IntrusiveNode {
           if (param3 < 54) {
             field_o = (String) null;
           }
-          if (rk.a(param4, false, param0, param2)) {
+          if (PieceTiming.a(param4, false, param0, param2)) {
             stackIn_6_0 = TimerBarDemo.a(param1.getFile(param2, param4, true), -17);
             return stackIn_6_0;
           }

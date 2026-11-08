@@ -14,7 +14,7 @@ final class dh {
             if (0 < vn.field_g) {
               if (EmergentBehaviourBackground.field_o) {
                 SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.field_j, ui.field_i.screenY);
-                ra.field_e.a(param1, 0);
+                ra.field_e.drawFullScreen(param1, 0);
                 return;
               }
               return;
@@ -24,7 +24,7 @@ final class dh {
             }
             if (EmergentBehaviourBackground.field_o) {
               SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.field_j, ui.field_i.screenY);
-              ra.field_e.a(param1, 0);
+              ra.field_e.drawFullScreen(param1, 0);
               return;
             }
             return;
@@ -35,7 +35,7 @@ final class dh {
                 return;
               }
               SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.field_j, ui.field_i.screenY);
-              ra.field_e.a(param1, 0);
+              ra.field_e.drawFullScreen(param1, 0);
               return;
             }
             if (Checkbox.field_W > 0) {
@@ -43,13 +43,13 @@ final class dh {
                 return;
               }
               SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.field_j, ui.field_i.screenY);
-              ra.field_e.a(param1, 0);
+              ra.field_e.drawFullScreen(param1, 0);
               return;
             }
             return;
           }
           SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.field_j, ui.field_i.screenY);
-          TickClock.field_e.a(param1, 0);
+          TickClock.field_e.drawFullScreen(param1, 0);
           if (0 >= vn.field_g &&
             Checkbox.field_W <= 0) {
             return;
@@ -58,13 +58,13 @@ final class dh {
             return;
           }
           SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.field_j, ui.field_i.screenY);
-          ra.field_e.a(param1, 0);
+          ra.field_e.drawFullScreen(param1, 0);
           return;
         }
         if (oo.field_b > 0 &&
           LobbyPlayer.field_Wb) {
           SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.field_j, ui.field_i.screenY);
-          TickClock.field_e.a(param1, 0);
+          TickClock.field_e.drawFullScreen(param1, 0);
           if (0 >= vn.field_g &&
             Checkbox.field_W <= 0) {
             return;
@@ -73,7 +73,7 @@ final class dh {
             return;
           }
           SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.field_j, ui.field_i.screenY);
-          ra.field_e.a(param1, 0);
+          ra.field_e.drawFullScreen(param1, 0);
           return;
         }
         if (0 >= vn.field_g &&
@@ -84,7 +84,7 @@ final class dh {
           return;
         }
         SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.field_j, ui.field_i.screenY);
-        ra.field_e.a(param1, 0);
+        ra.field_e.drawFullScreen(param1, 0);
     }
 
     final static void a(int param0) {
@@ -138,14 +138,14 @@ final class dh {
           var2_int = 0;
           var3 = param0.length();
           while (var3 > var2_int) {
-            if (MatchController.a((byte) 116, param0.charAt(var2_int))) {
+            if (MatchController.isNameSeparatorChar((byte) 116, param0.charAt(var2_int))) {
               var2_int++;
               continue;
             }
             break;
           }
           while (var2_int < var3) {
-            if (MatchController.a((byte) 121, param0.charAt(var3 - 1))) {
+            if (MatchController.isNameSeparatorChar((byte) 121, param0.charAt(var3 - 1))) {
               var3--;
               continue;
             }
@@ -162,7 +162,7 @@ final class dh {
           for (var6 = var2_int; var3 > var6; var6++) {
             var7 = param0.charAt(var6);
             if (vf.isAllowedChar((byte) -3, (char) var7)) {
-              var8 = Vector3.a(124, (char) var7);
+              var8 = Vector3.foldAccountNameChar(124, (char) var7);
               if (0 != var8) {
                 discarded$0 = var5.append((char) var8);
               }

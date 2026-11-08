@@ -144,7 +144,7 @@ final class BufferedSocket implements Runnable {
           }
           if (null != this.writerTask) {
             while (this.writerTask.field_b == 0) {
-              SecondaryNodeHashTable.a(1L, (byte) 23);
+              SecondaryNodeHashTable.sleepMillis(1L, (byte) 23);
             }
             if (this.writerTask.field_b == 1) {
               try {

@@ -9,8 +9,8 @@ final class NightToRememberBackground extends BackgroundScene {
     private li field_p;
     static int field_o;
 
-    final void c(int param0) {
-        super.c(param0);
+    final void tick(int param0) {
+        super.tick(param0);
         this.field_p.a(440, 100, (byte) 116, 120, 0);
         this.field_q.a(440, 100, (byte) 116, 120, 0);
         lg.field_a = lg.field_a - 4;
@@ -19,7 +19,7 @@ final class NightToRememberBackground extends BackgroundScene {
         }
     }
 
-    final void a(boolean param0) {
+    final void render(boolean param0) {
         ClientException.field_g.drawOpaque(0, 0);
         int var2 = lg.field_a >> 3;
         SoftwareRasterizer.f(0, 0, 640, 480, 17, (var2 << 8) + (var2 * 2 + 34) + (var2 << 16));

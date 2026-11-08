@@ -69,7 +69,7 @@ final class LabeledField extends SingleChildContainer {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4 = re.findFriend(param2, -1);
+          var4 = LoadingStepTracker.findFriend(param2, -1);
           if (!param0) {
             LabeledField.releaseStatics((byte) 102);
           }
@@ -77,7 +77,7 @@ final class LabeledField extends SingleChildContainer {
             null != var4.field_Nb) {
             return true;
           }
-          stackIn_10_0 = (null != io.field_c) && (null != JaggrabDownloader.a(param1, 14428));
+          stackIn_10_0 = (null != LoginMethod.field_c) && (null != JaggrabDownloader.a(param1, 14428));
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -167,14 +167,14 @@ final class LabeledField extends SingleChildContainer {
               if (ArrayWidgetContainer.k(1)) {
                 return true;
               }
-              stackIn_13_0 = (fl.a(param3, param1, param2, 0));
+              stackIn_13_0 = (AsyncValidationResult.dispatchKeyInput(param3, param1, param2, 0));
               return stackIn_13_0;
             }
             LabeledField.releaseStatics((byte) 0);
             if (ArrayWidgetContainer.k(1)) {
               return true;
             }
-            if (!fl.a(param3, param1, param2, 0)) {
+            if (!AsyncValidationResult.dispatchKeyInput(param3, param1, param2, 0)) {
               return false;
             }
             return true;
@@ -185,7 +185,7 @@ final class LabeledField extends SingleChildContainer {
             return true;
           }
         } else {
-          if (ProxySocketConnector.field_n.a(-105)) {
+          if (ProxySocketConnector.field_n.isMenuOpen(-105)) {
             ArchiveProvider.a(-99);
             return true;
           }
@@ -202,7 +202,7 @@ final class LabeledField extends SingleChildContainer {
         if (ArrayWidgetContainer.k(1)) {
           return true;
         }
-        if (fl.a(param3, param1, param2, 0)) {
+        if (AsyncValidationResult.dispatchKeyInput(param3, param1, param2, 0)) {
           return true;
         }
         return false;

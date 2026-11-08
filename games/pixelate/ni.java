@@ -26,7 +26,7 @@ final class ni extends IntrusiveNode {
 
     final static um a(int param0, int param1) {
         um var2 = new um();
-        bq.field_a.addFirst(22125, var2);
+        bq.field_a.addLast(22125, var2);
         AlphaContainer.a(true, param0);
         int var3 = -62 / ((param1 - 48) / 62);
         return var2;

@@ -10,7 +10,7 @@ final class TimerBar extends StatusBar {
     private int field_r;
     private int field_s;
 
-    final void b(int param0, boolean param1) {
+    final void adjustBySecond(int param0, boolean param1) {
         if (param0 <= -23) {
           this.field_s = this.field_s + (!param1 ? 50 : -50);
           return;
@@ -19,7 +19,7 @@ final class TimerBar extends StatusBar {
         this.field_s = this.field_s + (!param1 ? 50 : -50);
     }
 
-    final static boolean a(int param0, String param1) {
+    final static boolean isPrivateChatTarget(int param0, String param1) {
         RuntimeException var2 = null;
         CharSequence var3 = null;
         RuntimeException stackIn_14_0 = null;
@@ -64,7 +64,7 @@ final class TimerBar extends StatusBar {
         field_p = null;
     }
 
-    final void a(int param0, boolean param1) {
+    final void tickTimer(int param0, boolean param1) {
         boolean stackIn_3_0 = false;
         boolean stackIn_4_1 = false;
         int var3;
@@ -73,7 +73,7 @@ final class TimerBar extends StatusBar {
         int var3Lifetime1;
         int var4Lifetime1;
         var5 = Pixelate.field_H ? 1 : 0;
-        super.a((byte) 21);
+        super.tick((byte) 21);
         stackIn_3_0 = param1;
         stackIn_4_1 = (MenuInputState.field_e) && (ByteStorage.field_b);
         param1 = stackIn_3_0 | stackIn_4_1;
@@ -86,12 +86,12 @@ final class TimerBar extends StatusBar {
           if (this.field_s > 0) {
             if (this.field_s < (this.field_r >> 2) + 20 &&
               this.field_s % 30 == 0) {
-              this.b(255);
+              this.setFlashIntensity(255);
               mc.a(129, -120);
             } else {
               if (-20 + this.field_r > this.field_s &&
                 this.field_s % (this.field_r >> 2) == 0) {
-                this.b(255);
+                this.setFlashIntensity(255);
               }
             }
           } else {
@@ -100,16 +100,16 @@ final class TimerBar extends StatusBar {
             if (this.field_s >= (this.field_r >> 2) + 20) {
               if (-20 + this.field_r > this.field_s &&
                 this.field_s % (this.field_r >> 2) == 0) {
-                this.b(255);
+                this.setFlashIntensity(255);
               }
             } else {
               if (this.field_s % 30 != 0) {
                 if (-20 + this.field_r > this.field_s &&
                   this.field_s % (this.field_r >> 2) == 0) {
-                  this.b(255);
+                  this.setFlashIntensity(255);
                 }
               } else {
-                this.b(255);
+                this.setFlashIntensity(255);
                 mc.a(129, -120);
               }
             }
@@ -135,28 +135,28 @@ final class TimerBar extends StatusBar {
           mc.a(130, -123);
           if (this.field_s < (this.field_r >> 2) + 20 &&
             this.field_s % 30 == 0) {
-            this.b(255);
+            this.setFlashIntensity(255);
             mc.a(129, -120);
           } else {
             if (-20 + this.field_r > this.field_s &&
               this.field_s % (this.field_r >> 2) == 0) {
-              this.b(255);
+              this.setFlashIntensity(255);
             }
           }
         } else {
           if (this.field_s >= (this.field_r >> 2) + 20) {
             if (-20 + this.field_r > this.field_s &&
               this.field_s % (this.field_r >> 2) == 0) {
-              this.b(255);
+              this.setFlashIntensity(255);
             }
           } else {
             if (this.field_s % 30 == 0) {
-              this.b(255);
+              this.setFlashIntensity(255);
               mc.a(129, -120);
             } else {
               if (-20 + this.field_r > this.field_s &&
                 this.field_s % (this.field_r >> 2) == 0) {
-                this.b(255);
+                this.setFlashIntensity(255);
               }
             }
           }
@@ -177,7 +177,7 @@ final class TimerBar extends StatusBar {
         return;
     }
 
-    final void c(int param0) {
+    final void draw(int param0) {
         int var4 = 0;
         int var2;
         int var3;
@@ -191,7 +191,7 @@ final class TimerBar extends StatusBar {
           stackIn_3_0 = 0;
         }
         var2 = stackIn_3_0;
-        this.a(param0 ^ 119, var2, 435, this.field_o);
+        this.drawBarFrame(param0 ^ 119, var2, 435, this.field_o);
         var3 = -(this.field_o / param0) + 320;
         for (var4 = 0; var4 < 7; var4++) {
           var5 = 13 + (76 + var4 * 76 + 2);
@@ -203,15 +203,15 @@ final class TimerBar extends StatusBar {
         }
     }
 
-    final boolean a(boolean param0) {
+    final boolean isExpired(boolean param0) {
         if (!param0) {
           return this.field_s <= 0 ? true : false;
         }
-        this.b(-8, true);
+        this.adjustBySecond(-8, true);
         return this.field_s <= 0 ? true : false;
     }
 
-    private final void a(boolean param0, int param1) {
+    private final void setDurationSeconds(boolean param0, int param1) {
         this.field_s = param1 * 50;
         this.field_r = this.field_s;
         if (!param0) {
@@ -219,7 +219,7 @@ final class TimerBar extends StatusBar {
         }
     }
 
-    final boolean a(int param0, byte param1) {
+    final boolean addSecondsAndCheckFull(int param0, byte param1) {
         this.field_s = this.field_s + param0 * 50;
         if (param1 == 73) {
           return this.field_r <= this.field_s ? true : false;
@@ -229,7 +229,7 @@ final class TimerBar extends StatusBar {
     }
 
     TimerBar(int param0) {
-        this.a(true, param0);
+        this.setDurationSeconds(true, param0);
         this.field_r = this.field_s;
     }
 

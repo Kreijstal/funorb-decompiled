@@ -130,7 +130,7 @@ final class NameAvailabilityValidator extends TextFieldValidator {
           var2 = new Sprite(param1.getNamedFile((byte) 24, "", "final_frame.jpg"), (java.awt.Component) ((Object) field_u));
           var3 = var2.field_F;
           var4 = var2.field_E;
-          MidiPcmStream.a(param0);
+          MidiPcmStream.pushRasterState(param0);
           th.field_b = new Sprite(var3, 3 * var4 / 4);
           th.field_b.makeRasterTarget();
           var2.drawOpaque(0, 0);

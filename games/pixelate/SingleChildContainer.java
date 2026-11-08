@@ -194,7 +194,7 @@ abstract class SingleChildContainer extends UiComponent implements UiContainerMa
             for (var8Lifetime1 = param4; var7_intLifetime1 > var8Lifetime1; var8Lifetime1++) {
               var9Lifetime1 = ArchiveRequest.field_A[var8Lifetime1];
               var10Lifetime1 = ArchiveRequest.field_A[1 + var8Lifetime1];
-              if (tj.a(false, param2, var9Lifetime1, var10Lifetime1)) {
+              if (StrongCacheReference.rankedEntryPrecedes(false, param2, var9Lifetime1, var10Lifetime1)) {
                 ArchiveRequest.field_A[var8Lifetime1] = var10Lifetime1;
                 ArchiveRequest.field_A[var8Lifetime1 + 1] = var9Lifetime1;
               }
@@ -223,7 +223,7 @@ abstract class SingleChildContainer extends UiComponent implements UiContainerMa
     }
 
     final static void k(int param0) {
-        QuickChatMenu.a(4, -2671);
+        QuickChatMenu.setPendingUiResult(4, -2671);
         if (param0 != 8149) {
           field_F = (String) null;
         }
@@ -323,9 +323,9 @@ abstract class SingleChildContainer extends UiComponent implements UiContainerMa
         var4 = Pixelate.field_H ? 1 : 0;
         if (-1 != param2) {
           if (param2 == -2) {
-            QuickChatMenu.b(true, -116);
+            QuickChatMenu.drawFloatingSquares(true, -116);
           } else {
-            wo.getScreen(107, param2).c(0);
+            wo.getScreen(107, param2).drawScreenBackground(0);
             if (Match.field_u) {
               var3 = 81 % ((-12 - param1) / 42);
               decompiledFrameRemainder0 = false;

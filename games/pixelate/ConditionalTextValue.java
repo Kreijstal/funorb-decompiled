@@ -44,11 +44,11 @@ final class ConditionalTextValue {
         if (!wk.field_j.ensureGroupAvailableByName("commonui", -1)) {
           return PasswordValidator.field_q + " - " + wk.field_j.getGroupProgressByName(119, "commonui") + "%";
         }
-        if (!io.field_g.ensureIndex(param0 ^ -16421)) {
+        if (!LoginMethod.field_g.ensureIndex(param0 ^ -16421)) {
           return CanvasRasterBuffer.field_f;
         }
-        if (!io.field_g.ensureGroupAvailableByName("commonui", -1)) {
-          return CipherPacketBuffer.field_x + " - " + io.field_g.getGroupProgressByName(param0 ^ 16463, "commonui") + "%";
+        if (!LoginMethod.field_g.ensureGroupAvailableByName("commonui", -1)) {
+          return CipherPacketBuffer.field_x + " - " + LoginMethod.field_g.getGroupProgressByName(param0 ^ 16463, "commonui") + "%";
         }
         if (!MatchingTextValidator.field_u.ensureIndex(-3)) {
           return jd.field_p;

@@ -116,7 +116,7 @@ final class BouncedownBackground extends BackgroundScene {
         field_o = null;
     }
 
-    final void a(boolean param0) {
+    final void render(boolean param0) {
         vn[] var2;
         int var3;
         vn var4;
@@ -140,14 +140,14 @@ final class BouncedownBackground extends BackgroundScene {
         }
     }
 
-    final void c(int param0) {
+    final void tick(int param0) {
         int var3 = 0;
         vn[] var2;
         vn var4;
         int var5;
         vn[] var6;
         var5 = Pixelate.field_H ? 1 : 0;
-        super.c(param0);
+        super.tick(param0);
         var6 = this.field_n;
         var2 = var6;
         for (var3 = 0; var3 < var6.length; var3++) {

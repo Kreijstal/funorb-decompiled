@@ -100,8 +100,8 @@ final class ra {
         if (!un.field_l) {
           return;
         }
-        DraggableWidget.field_I.a(param3 ^ 4400, param2);
-        int var4 = bo.field_h.m(14685) ? 1 : 0;
+        DraggableWidget.field_I.updateInputFullScreen(param3 ^ 4400, param2);
+        int var4 = bo.field_h.hasPressedItem(14685) ? 1 : 0;
         if (param3 != -32268) {
           field_f = (String) null;
         }
@@ -111,12 +111,12 @@ final class ra {
           param2 = false;
         }
         if (param2) {
-          bo.field_h.b(param1, param3 ^ 32267, param0);
+          bo.field_h.processClicks(param1, param3 ^ 32267, param0);
         }
         if (var4 != 0) {
-          DraggableWidget.field_I.a(-28476, param2);
+          DraggableWidget.field_I.updateInputFullScreen(-28476, param2);
         }
-        int var5 = bo.field_h.k(-16200) + bo.field_h.field_tb;
+        int var5 = bo.field_h.getCascadeWidth(-16200) + bo.field_h.field_tb;
         if (var5 > 640) {
           di.field_a = di.field_a + 5;
         } else {

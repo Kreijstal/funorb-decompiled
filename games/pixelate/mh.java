@@ -11,7 +11,7 @@ final class mh {
         }
         try {
           bo.field_h = param0;
-          DraggableWidget.field_I.children.e(43);
+          DraggableWidget.field_I.children.clear(43);
           if (param1 < 73) {
             field_b = 37;
           }

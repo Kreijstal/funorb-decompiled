@@ -163,14 +163,14 @@ final class GrowableIntList {
         int var3 = Pixelate.field_H ? 1 : 0;
         SceneWidget var2Lifetime1;
         try {
-          var4 = (SceneWidget) (param0.children.c(1504642273));
+          var4 = (SceneWidget) (param0.children.first(1504642273));
           var2 = var4;
           while (var4 != null) {
             var4.pendingHeightDelta = 0;
             var4.pendingYDelta = 0;
             var4.height = 0;
             var4.field_S = 0;
-            var4 = (SceneWidget) (param0.children.last(1504642273));
+            var4 = (SceneWidget) (param0.children.next(1504642273));
             var2Lifetime1 = var4;
           }
           param0.pendingYDelta = 0;

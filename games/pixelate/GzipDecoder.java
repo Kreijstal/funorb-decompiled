@@ -41,7 +41,7 @@ final class GzipDecoder {
               var5 = PlayerBoard.field_n;
             } else {
               if (var4 == VerticalScrollbar.field_Gb.selectedIndex) {
-                var5 = mj.field_k;
+                var5 = ScoreMarkerDemo.field_k;
               } else {
                 var5 = mh.field_a;
               }

@@ -7,11 +7,11 @@ final class BlastFromThePastBackground extends BackgroundScene {
     static String[] field_m;
     private qk[] field_o;
 
-    final void c(int param0) {
+    final void tick(int param0) {
         int var3 = 0;
         qk var4 = null;
         int var5 = Pixelate.field_H ? 1 : 0;
-        super.c(param0);
+        super.tick(param0);
         qk[] var6 = this.field_o;
         qk[] var2 = var6;
         for (var3 = 0; var3 < var6.length; var3++) {
@@ -38,7 +38,7 @@ final class BlastFromThePastBackground extends BackgroundScene {
         }
     }
 
-    final void a(boolean param0) {
+    final void render(boolean param0) {
         int var3 = 0;
         qk var4 = null;
         int var5 = Pixelate.field_H ? 1 : 0;
@@ -61,11 +61,11 @@ final class BlastFromThePastBackground extends BackgroundScene {
         if (Js5NetworkRequest.field_F == MarkerSlider.field_X) {
           return nk.field_b;
         }
-        if (!an.field_e.d(param0 ^ 46)) {
-          return an.field_e.b((byte) 114);
+        if (!an.field_e.isComplete(param0 ^ 46)) {
+          return an.field_e.getMessage((byte) 114);
         }
         if (Js5NetworkRequest.field_F == MatchingTextValidator.field_n) {
-          return an.field_e.b((byte) 116);
+          return an.field_e.getMessage((byte) 116);
         }
         return Checkbox.field_U;
     }
@@ -73,7 +73,7 @@ final class BlastFromThePastBackground extends BackgroundScene {
     private final void c(byte param0) {
         this.field_o = new qk[2];
         if (param0 < 91) {
-          this.c(-106);
+          this.tick(-106);
         }
         this.field_o[0] = new qk(0);
         this.field_o[1] = new qk(7);

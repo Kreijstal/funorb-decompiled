@@ -39,37 +39,37 @@ final class l extends MenuScreen {
         if (param0 != 19854) {
           PlatformTaskDispatcher var3 = (PlatformTaskDispatcher) null;
           l.initialisePacketBuffers(false, -75, -15, true, 99, -28L, (String) null, -112, -64, true, 118, -87, 71, (PlatformTaskDispatcher) null);
-          if (MarkerSlider.a((byte) 127)) {
+          if (MarkerSlider.isOverlayOpen((byte) 127)) {
             param1 = false;
           }
-          Js5ArchiveManager.a((byte) 29, param1);
+          Js5ArchiveManager.drawFrontEndOverlays((byte) 29, param1);
           if (dk.field_b) {
             SoftwareRasterizer.darkenRectangle(nd.field_b.field_g.field_D, nd.field_b.field_g.field_S, nd.field_b.field_g.field_K, nd.field_b.field_g.height);
-            nd.field_b.field_g.a(param1, 0);
+            nd.field_b.field_g.drawFullScreen(param1, 0);
             CachedTextLayout.a(param1, (byte) 34);
             return;
           }
           CachedTextLayout.a(param1, (byte) 34);
           return;
         }
-        if (MarkerSlider.a((byte) 127)) {
+        if (MarkerSlider.isOverlayOpen((byte) 127)) {
           param1 = false;
         }
-        Js5ArchiveManager.a((byte) 29, param1);
+        Js5ArchiveManager.drawFrontEndOverlays((byte) 29, param1);
         if (!dk.field_b) {
           CachedTextLayout.a(param1, (byte) 34);
           return;
         }
         SoftwareRasterizer.darkenRectangle(nd.field_b.field_g.field_D, nd.field_b.field_g.field_S, nd.field_b.field_g.field_K, nd.field_b.field_g.height);
-        nd.field_b.field_g.a(param1, 0);
+        nd.field_b.field_g.drawFullScreen(param1, 0);
         CachedTextLayout.a(param1, (byte) 34);
     }
 
-    final void a(byte param0, boolean param1, int param2) {
+    final void drawRow(byte param0, boolean param1, int param2) {
         if (param0 >= -116) {
           l.b(116, true);
           if (param2 == 0) {
-            this.a(param1, true);
+            this.drawMenuButton(param1, true);
             return;
           }
           return;
@@ -77,7 +77,7 @@ final class l extends MenuScreen {
         if (param2 != 0) {
           return;
         }
-        this.a(param1, true);
+        this.drawMenuButton(param1, true);
     }
 
     final void onCancel(byte param0) {
@@ -183,7 +183,7 @@ final class l extends MenuScreen {
         int var3 = 0;
         BinaryBitmapFont var2Lifetime1;
         int var3Lifetime1;
-        this.d((byte) -65);
+        this.drawDefaultBackdrop((byte) -65);
         this.drawRows((byte) -71);
         if (param0 == 11) {
           var2 = qj.field_e;
@@ -191,7 +191,7 @@ final class l extends MenuScreen {
           var2.drawParagraph(SingleChildContainer.field_F, 50, 160, 540, 200, 16777215, 0, 1, 1, var3);
           return;
         }
-        this.a((byte) 119, false, 7);
+        this.drawRow((byte) 119, false, 7);
         var2Lifetime1 = qj.field_e;
         var3Lifetime1 = 1 + (var2Lifetime1.maxAscent + var2Lifetime1.maxDescent);
         var2Lifetime1.drawParagraph(SingleChildContainer.field_F, 50, 160, 540, 200, 16777215, 0, 1, 1, var3Lifetime1);

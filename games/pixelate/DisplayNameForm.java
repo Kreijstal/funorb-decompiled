@@ -147,7 +147,7 @@ final class DisplayNameForm extends UiContainer implements NameSuggestionListene
         }
     }
 
-    public final void a(byte param0) {
+    public final void onMoreSuggestionsRequested(byte param0) {
         if (param0 >= 12) {
           ((NameAvailabilityValidator) (this.field_O.a(1))).f(63);
           return;
@@ -206,7 +206,7 @@ final class DisplayNameForm extends UiContainer implements NameSuggestionListene
         }
     }
 
-    public final void a(String param0, byte param1) {
+    public final void onSuggestionChosen(String param0, byte param1) {
         ValidatedTextWidget var3 = null;
         String var4 = null;
         try {
@@ -225,13 +225,13 @@ final class DisplayNameForm extends UiContainer implements NameSuggestionListene
           String var3 = (String) null;
           discarded$0 = this.appendStandardValidatedField((byte) 21, -50, (String) null, (UiComponent) null, (String) null, -110);
           if (this.g((byte) -59)) {
-            LobbyPlayer.a(-1710418464, this.field_O.field_q);
+            LobbyPlayer.submitDisplayName(-1710418464, this.field_O.field_q);
             return;
           }
           return;
         }
         if (this.g((byte) -59)) {
-          LobbyPlayer.a(-1710418464, this.field_O.field_q);
+          LobbyPlayer.submitDisplayName(-1710418464, this.field_O.field_q);
           return;
         }
     }
@@ -314,7 +314,7 @@ final class DisplayNameForm extends UiContainer implements NameSuggestionListene
           if (var2 == null) {
             var2 = param0;
           }
-          var4 = (SocialListEntry) (GameResultsScreen.field_q.a(-11434, (long)var2.hashCode()));
+          var4 = (SocialListEntry) (GameResultsScreen.field_q.get(-11434, (long)var2.hashCode()));
           while (var4 != null) {
             var8 = (CharSequence) ((Object) var4.field_Fb);
             var5 = dh.a(var8, (byte) 27);

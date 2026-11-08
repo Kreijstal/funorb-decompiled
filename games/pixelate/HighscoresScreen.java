@@ -120,7 +120,7 @@ final class HighscoresScreen extends MenuScreen {
     private final int d(int param0, int param1) {
         String var3 = PacketBuffer.field_o[this.field_k[param0]];
         int var4 = 96 / ((param1 + 50) / 50);
-        return 20 + rk.field_e.textWidth(var3);
+        return 20 + PieceTiming.field_e.textWidth(var3);
     }
 
     final static void readHighscoresPacket(int param0) {
@@ -147,7 +147,7 @@ final class HighscoresScreen extends MenuScreen {
           var3 = var11.readUnsignedByte(255);
           var4 = var11.readUnsignedByte(255);
           if (var3 == 0) {
-            var5_ref_sm = (sm) (MusicPatchNode.field_J.c(1504642273));
+            var5_ref_sm = (sm) (MusicPatchNode.field_J.first(1504642273));
             if (var5_ref_sm == null) {
               na.a(true);
               return;
@@ -178,7 +178,7 @@ final class HighscoresScreen extends MenuScreen {
           }
           if (var3 == 1) {
             var5 = var11.readSignedSmart(-20729);
-            var6 = (df) (he.field_b.c(1504642273));
+            var6 = (df) (he.field_b.first(1504642273));
             while (true) {
               boolean decompiledFrameRemainder0 = true;
               if (var6 != null) {
@@ -186,7 +186,7 @@ final class HighscoresScreen extends MenuScreen {
                 decompiledFrameRemainder0 = (var9 == 0);
                 if ((decompiledFrameRemainder0) && (stackIn_27_0 != var6.field_p ||
                   var6.field_k != var5)) {
-                  var6 = (df) (he.field_b.last(1504642273));
+                  var6 = (df) (he.field_b.next(1504642273));
                   continue;
                 }
               }
@@ -267,9 +267,9 @@ final class HighscoresScreen extends MenuScreen {
         NumericDateInputWidget.field_W[8].drawTransparent(0, 45);
         this.drawRows((byte) -71);
         if (param0 != 11) {
-          this.a((byte) -95, false, 89);
-          this.d((byte) 74);
-          var17 = rk.field_e;
+          this.drawRow((byte) -95, false, 89);
+          this.drawDefaultBackdrop((byte) 74);
+          var17 = PieceTiming.field_e;
           var16 = var17;
           var3 = var17.maxAscent + var17.maxDescent;
           if (WhirlpoolHasher.field_f == null &&
@@ -277,7 +277,7 @@ final class HighscoresScreen extends MenuScreen {
             WhirlpoolHasher.field_f = cn.a(0, 7, 10, -119);
           }
           if (ArrayWidgetContainer.a((byte) 83)) {
-            var4 = mj.field_h;
+            var4 = ScoreMarkerDemo.field_h;
           } else {
             if (WhirlpoolHasher.field_f.field_u) {
               if (WhirlpoolHasher.field_f.field_o != null) {
@@ -326,12 +326,12 @@ final class HighscoresScreen extends MenuScreen {
                 }
                 if (var15 != 0) {
                   var4 = MenuInputState.field_l;
-                  var4 = mj.field_h;
+                  var4 = ScoreMarkerDemo.field_h;
                 }
               } else {
                 var4 = MenuInputState.field_l;
                 if (var15 != 0) {
-                  var4 = mj.field_h;
+                  var4 = ScoreMarkerDemo.field_h;
                 }
               }
             } else {
@@ -370,20 +370,20 @@ final class HighscoresScreen extends MenuScreen {
                 }
               }
               var4 = MenuInputState.field_l;
-              var4 = mj.field_h;
+              var4 = ScoreMarkerDemo.field_h;
             }
           }
           var17.drawParagraph(var4, 50, 150, 540, 200, 0, -1, 1, 1, var3);
           return;
         }
-        this.d((byte) 74);
-        var24 = rk.field_e;
+        this.drawDefaultBackdrop((byte) 74);
+        var24 = PieceTiming.field_e;
         var16Lifetime1 = var24;
         var3Lifetime1 = var24.maxAscent + var24.maxDescent;
         if (WhirlpoolHasher.field_f == null) {
           if (ArrayWidgetContainer.a((byte) 112)) {
             if (ArrayWidgetContainer.a((byte) 83)) {
-              var4Lifetime1 = mj.field_h;
+              var4Lifetime1 = ScoreMarkerDemo.field_h;
             } else {
               if (WhirlpoolHasher.field_f.field_u) {
                 if (WhirlpoolHasher.field_f.field_o != null) {
@@ -434,12 +434,12 @@ final class HighscoresScreen extends MenuScreen {
                   }
                   if (var15 != 0) {
                     var4Lifetime1 = MenuInputState.field_l;
-                    var4Lifetime1 = mj.field_h;
+                    var4Lifetime1 = ScoreMarkerDemo.field_h;
                   }
                 } else {
                   var4Lifetime1 = MenuInputState.field_l;
                   if (var15 != 0) {
-                    var4Lifetime1 = mj.field_h;
+                    var4Lifetime1 = ScoreMarkerDemo.field_h;
                   }
                 }
               } else {
@@ -480,7 +480,7 @@ final class HighscoresScreen extends MenuScreen {
                   }
                 }
                 var4Lifetime1 = MenuInputState.field_l;
-                var4Lifetime1 = mj.field_h;
+                var4Lifetime1 = ScoreMarkerDemo.field_h;
               }
             }
             var24.drawParagraph(var4Lifetime1, 50, 150, 540, 200, 0, -1, 1, 1, var3Lifetime1);
@@ -489,7 +489,7 @@ final class HighscoresScreen extends MenuScreen {
           WhirlpoolHasher.field_f = cn.a(0, 7, 10, -119);
         }
         if (ArrayWidgetContainer.a((byte) 83)) {
-          var4Lifetime2 = mj.field_h;
+          var4Lifetime2 = ScoreMarkerDemo.field_h;
         } else {
           if (WhirlpoolHasher.field_f.field_u) {
             if (WhirlpoolHasher.field_f.field_o != null) {
@@ -538,12 +538,12 @@ final class HighscoresScreen extends MenuScreen {
               }
               if (var15 != 0) {
                 var4Lifetime2 = MenuInputState.field_l;
-                var4Lifetime2 = mj.field_h;
+                var4Lifetime2 = ScoreMarkerDemo.field_h;
               }
             } else {
               var4Lifetime2 = MenuInputState.field_l;
               if (var15 != 0) {
-                var4Lifetime2 = mj.field_h;
+                var4Lifetime2 = ScoreMarkerDemo.field_h;
               }
             }
           } else {
@@ -582,7 +582,7 @@ final class HighscoresScreen extends MenuScreen {
               }
             }
             var4Lifetime2 = MenuInputState.field_l;
-            var4Lifetime2 = mj.field_h;
+            var4Lifetime2 = ScoreMarkerDemo.field_h;
           }
         }
         var24.drawParagraph(var4Lifetime2, 50, 150, 540, 200, 0, -1, 1, 1, var3Lifetime1);
@@ -667,7 +667,7 @@ final class HighscoresScreen extends MenuScreen {
         }
     }
 
-    final void a(byte param0, boolean param1, int param2) {
+    final void drawRow(byte param0, boolean param1, int param2) {
         Sprite var4 = null;
         Sprite var4Lifetime1;
         Sprite var4Lifetime2;
@@ -679,25 +679,25 @@ final class HighscoresScreen extends MenuScreen {
             if (param2 == 1) {
               var4 = StripedProgressBar.field_S;
             }
-            super.a((byte) 35, var4, param1, param2);
+            super.drawItemRow((byte) 35, var4, param1, param2);
             return;
           }
           var4Lifetime3 = StripedProgressBar.field_S;
-          super.a((byte) 35, var4Lifetime3, param1, param2);
+          super.drawItemRow((byte) 35, var4Lifetime3, param1, param2);
           return;
         }
         var4Lifetime1 = StripedProgressBar.field_N;
         if (ArrayWidgetContainer.a((byte) 117)) {
           var4Lifetime1 = StripedProgressBar.field_S;
-          super.a((byte) 35, var4Lifetime1, param1, param2);
+          super.drawItemRow((byte) 35, var4Lifetime1, param1, param2);
           return;
         }
         if (param2 != 1) {
-          super.a((byte) 35, var4Lifetime1, param1, param2);
+          super.drawItemRow((byte) 35, var4Lifetime1, param1, param2);
           return;
         }
         var4Lifetime2 = StripedProgressBar.field_S;
-        super.a((byte) 35, var4Lifetime2, param1, param2);
+        super.drawItemRow((byte) 35, var4Lifetime2, param1, param2);
     }
 
     static {

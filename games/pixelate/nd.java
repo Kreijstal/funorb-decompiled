@@ -42,11 +42,11 @@ final class nd {
         SpriteState.field_C = new BoardView(var3, 460, 285);
         QuickChatMenu.field_Qb = new FallingPieceView(var10, var3, SpriteState.field_C);
         ug.field_q = new PictureStrip(var2, 150, 280);
-        SpriteState.field_C.a(0, 0, 0, (byte) -124, 0);
-        ug.field_q.a(param0 - 18614);
+        SpriteState.field_C.setAnimationTimers(0, 0, 0, (byte) -124, 0);
+        ug.field_q.snapToTarget(param0 - 18614);
         SpriteState.field_u = new TimerBarDemo();
-        SpriteState.field_u.a(262144, -76);
-        jf.field_c = new mj();
+        SpriteState.field_u.setScrollSpeed(262144, -76);
+        jf.field_c = new ScoreMarkerDemo();
         Puzzle var4 = new Puzzle(3, 4, 0, 0, 0, 262144, 0, 0, FallingPieceView.field_c[3][4]);
         if (param0 != 37) {
           return;
@@ -80,16 +80,16 @@ final class nd {
           BoundedRandomAccessFile.field_g = new FallingPieceView(var4, var5, PasswordValidator.field_r);
           DialWidgetPainter.field_a = new FallingPieceView(var4, var6, an.field_b);
           DiskCacheRequest.field_H = new PictureStrip(var4, 320, var8);
-          PasswordValidator.field_r.a(0, 0, 0, (byte) -69, 0);
-          an.field_b.a(0, 0, 0, (byte) -98, 0);
-          DiskCacheRequest.field_H.a(-18577);
+          PasswordValidator.field_r.setAnimationTimers(0, 0, 0, (byte) -69, 0);
+          an.field_b.setAnimationTimers(0, 0, 0, (byte) -98, 0);
+          DiskCacheRequest.field_H.snapToTarget(-18577);
         } catch (RuntimeException runtimeException) {
           throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "nd.A(" + param0 + ')');
         }
     }
 
     final static void a(int param0) {
-        ConditionalTextValue.field_h = rk.field_e;
+        ConditionalTextValue.field_h = PieceTiming.field_e;
         Checkbox.field_T = 10 + ConditionalTextValue.field_h.textWidth(PacketBuffer.field_o[20]);
         if (param0 != 3) {
           field_c = (int[]) null;

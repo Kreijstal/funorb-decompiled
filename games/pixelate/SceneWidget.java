@@ -73,9 +73,9 @@ class SceneWidget extends SceneWidgetNode {
           if (this.children == null) {
             this.children = new IntrusiveDeque();
           }
-          this.children.addFirst(22125, param0);
+          this.children.addLast(22125, param0);
           if (param1 != 26) {
-            this.a(false, -2);
+            this.drawFullScreen(false, -2);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -92,7 +92,7 @@ class SceneWidget extends SceneWidgetNode {
         }
     }
 
-    final int a(byte param0, int param1) {
+    final int measureContentWidth(byte param0, int param1) {
         int var3;
         int var4_int;
         SceneWidget var4;
@@ -118,13 +118,13 @@ class SceneWidget extends SceneWidgetNode {
           }
         }
         if (null != this.children) {
-          var4 = (SceneWidget) (this.children.c(1504642273));
+          var4 = (SceneWidget) (this.children.first(1504642273));
           while (var4 != null) {
             var5 = var4.field_K + var4.field_D;
             if (var3 < var5) {
               var3 = var5;
             }
-            var4 = (SceneWidget) (this.children.last(1504642273));
+            var4 = (SceneWidget) (this.children.next(1504642273));
           }
         }
         return var3;
@@ -155,11 +155,11 @@ class SceneWidget extends SceneWidgetNode {
         int var9Lifetime1;
         if (!param2) {
           var9 = 0;
-          var10_ref_ak = (SceneWidget) (this.children.c(1504642273));
+          var10_ref_ak = (SceneWidget) (this.children.first(1504642273));
           while (var10_ref_ak != null) {
             var10_ref_ak.pendingYDelta = -var10_ref_ak.field_S + var9;
             var9 = var9 + (var10_ref_ak.height - (-var10_ref_ak.pendingHeightDelta - param0));
-            var10_ref_ak = (SceneWidget) (this.children.last(1504642273));
+            var10_ref_ak = (SceneWidget) (this.children.next(1504642273));
           }
           var8 = -param0 + var9;
         }
@@ -186,7 +186,7 @@ class SceneWidget extends SceneWidgetNode {
         this.field_S = -var5;
     }
 
-    final void a(int param0, boolean param1) {
+    final void updateInputFullScreen(int param0, boolean param1) {
         DiskCacheRequest.field_I = !param1 ? true : false;
         EmergentBehaviourBackground.field_q = !param1 ? true : false;
         if (param0 != -28476) {
@@ -200,7 +200,7 @@ class SceneWidget extends SceneWidgetNode {
         this(param0, param1, 0, 0, 0, 0, param2);
     }
 
-    final void a(boolean param0, int param1) {
+    final void drawFullScreen(boolean param0, int param1) {
         this.drawTree(false, 0, false, param0, SoftwareRasterizer.field_j, false, (byte) -50, param1, SoftwareRasterizer.field_d, false, true);
     }
 
@@ -418,10 +418,10 @@ class SceneWidget extends SceneWidgetNode {
           }
         }
         if (this.children != null) {
-          var23_ref = (SceneWidget) (this.children.c(param6 + 1504642323));
+          var23_ref = (SceneWidget) (this.children.first(param6 + 1504642323));
           while (var23_ref != null) {
             var23_ref.drawTree(param0, this.field_tb + var19, this.field_X, param3, this.field_K, param5, (byte) -50, var20 + this.screenY, this.height, param9, param10);
-            var23_ref = (SceneWidget) (this.children.last(1504642273));
+            var23_ref = (SceneWidget) (this.children.next(1504642273));
           }
         }
         SoftwareRasterizer.setClip(var12, var13, var14, var15);
@@ -507,10 +507,10 @@ class SceneWidget extends SceneWidgetNode {
         stackIn_39_1 = (this.field_R) && (ef.field_b == this.heldPressButton) && (param2);
         this.field_W = stackIn_39_1;
         if (null != this.children) {
-          var14 = (SceneWidget) (this.children.g(1504642273));
+          var14 = (SceneWidget) (this.children.last(1504642273));
           while (var14 != null) {
             var14.updateInputTree(this.field_K, this.field_tb, param2, this.height, this.screenY, -123);
-            var14 = (SceneWidget) (this.children.j(0));
+            var14 = (SceneWidget) (this.children.previous(0));
           }
         }
         if (this.field_R) {
@@ -547,11 +547,11 @@ class SceneWidget extends SceneWidgetNode {
         this(param0, param1, 0, 0, 0, 0, (String) null);
     }
 
-    final static void i(int param0) {
+    final static void closeTransientDialogs(int param0) {
         ArchiveProvider.a(-117);
         BufferedRandomAccessFile.b(false);
         AccountTermsPanel.field_M = null;
-        mj.a(false);
+        ScoreMarkerDemo.closeQuickChatMenu(false);
         if (param0 != 0) {
           SceneWidget.releaseStatics((byte) -43);
         }
@@ -715,15 +715,15 @@ class SceneWidget extends SceneWidgetNode {
         field_T = null;
     }
 
-    final void h(int param0) {
+    final void markTreeDirty(int param0) {
         SceneWidget var4 = null;
         int var3 = Pixelate.field_H ? 1 : 0;
         if (this.children != null) {
-          var4 = (SceneWidget) (this.children.g(1504642273));
+          var4 = (SceneWidget) (this.children.last(1504642273));
           while (var4 != null) {
             var4.field_fb = true;
-            var4.h(-257);
-            var4 = (SceneWidget) (this.children.j(0));
+            var4.markTreeDirty(-257);
+            var4 = (SceneWidget) (this.children.previous(0));
           }
         }
         if (param0 != -257) {
@@ -731,11 +731,11 @@ class SceneWidget extends SceneWidgetNode {
         }
     }
 
-    final int g(int param0) {
+    final int getContentWidth(int param0) {
         if (param0 != 0) {
           return -99;
         }
-        return this.a((byte) 95, 2147483647);
+        return this.measureContentWidth((byte) 95, 2147483647);
     }
 
     protected SceneWidget() {

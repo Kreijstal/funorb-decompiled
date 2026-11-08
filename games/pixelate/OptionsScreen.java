@@ -12,19 +12,19 @@ final class OptionsScreen extends MenuScreen {
     static int field_s;
     private int field_o;
 
-    private final boolean a(boolean param0, int param1) {
+    private final boolean isPuzzleCompleted(boolean param0, int param1) {
         if (!param0) {
           this.field_o = 93;
         }
         return (CheckboxPainter.field_h & 1L << param1) > 0L ? true : false;
     }
 
-    final static boolean g(int param0) {
+    final static boolean isAccountRequestPending(int param0) {
         int var1 = -97 / ((55 - param0) / 62);
         return Js5NetworkRequest.field_F == MatchingTextValidator.field_n ? true : false;
     }
 
-    final static void b(int param0, int param1, boolean param2) {
+    final static void setLegacyMenuCentre(int param0, int param1, boolean param2) {
         QuickChatCategory.field_u = param1;
         IntrusiveDeque.field_b = param0;
         if (!param2) {
@@ -32,13 +32,13 @@ final class OptionsScreen extends MenuScreen {
         }
     }
 
-    final void a(int param0, int param1, boolean param2) {
+    final void enterScreen(int param0, int param1, boolean param2) {
         int var4 = 0;
         int var5 = Pixelate.field_H ? 1 : 0;
         for (var4 = 0; ModalPanel.field_I.length > var4; var4++) {
           ModalPanel.field_I[var4].c(-124);
         }
-        super.a(param0, 3, param2);
+        super.enterScreen(param0, 3, param2);
         this.field_v = 0;
         this.field_r = 1;
     }
@@ -112,7 +112,7 @@ final class OptionsScreen extends MenuScreen {
                     var5 = 1;
                     var6 = InputQueue.field_a;
                   }
-                  MatchController.a(param2, var5, 17, (byte) 71, var6);
+                  MatchController.openTextPopup(param2, var5, 17, (byte) 71, var6);
                   return;
                 }
               }
@@ -138,7 +138,7 @@ final class OptionsScreen extends MenuScreen {
         int var2 = 0;
         int var3 = Pixelate.field_H ? 1 : 0;
         NumericDateInputWidget.field_W[4].drawTransparent(0, 45);
-        this.d((byte) 50);
+        this.drawDefaultBackdrop((byte) 50);
         this.drawRows((byte) -71);
         if (param0 != 11) {
           return;
@@ -150,7 +150,7 @@ final class OptionsScreen extends MenuScreen {
 
     final int getRowRight(int param0, boolean param1) {
         if (param1) {
-          this.a(103, -99, false);
+          this.enterScreen(103, -99, false);
         }
         if (param0 != 1 &&
           2 != param0) {
@@ -162,7 +162,7 @@ final class OptionsScreen extends MenuScreen {
         return IconTextComponent.field_Jb + hf.field_k;
     }
 
-    final void f(int param0) {
+    final void resetPage(int param0) {
         this.field_o = 0;
         int var2 = 23 / ((-16 - param0) / 43);
     }
@@ -211,7 +211,7 @@ final class OptionsScreen extends MenuScreen {
         int var5;
         var5 = Pixelate.field_H ? 1 : 0;
         if (param0 >= -35) {
-          discarded$0 = this.a(true, 60);
+          discarded$0 = this.isPuzzleCompleted(true, 60);
         }
         regionExit1: {
           if (ke.field_a != 98) {
@@ -231,10 +231,10 @@ final class OptionsScreen extends MenuScreen {
             var3 != 2) {
             if (var3 == 0) {
               if (var2 == 0) {
-                this.field_g.a(false, 3);
+                this.field_g.selectIndex(false, 3);
                 this.field_o = 0;
               } else {
-                this.field_g.a(false, 52);
+                this.field_g.selectIndex(false, 52);
                 this.field_o = DirectByteStorage.field_k;
               }
             } else {
@@ -244,7 +244,7 @@ final class OptionsScreen extends MenuScreen {
                 var2 != 0)) {
                 var4 = (-PasswordFieldPainter.field_A + 532) / 2;
                 if (var2 != 0) {
-                  this.field_g.a(false, -1 + var3);
+                  this.field_g.selectIndex(false, -1 + var3);
                   if (this.getRowY(115, this.field_g.selectedIndex) < var4) {
                     this.field_o = this.field_o - PasswordFieldPainter.field_A;
                   }
@@ -253,7 +253,7 @@ final class OptionsScreen extends MenuScreen {
                   }
                   this.field_o = 0;
                 } else {
-                  this.field_g.a(false, var3 + 1);
+                  this.field_g.selectIndex(false, var3 + 1);
                   if (this.getRowY(69, this.field_g.selectedIndex) > var4) {
                     this.field_o = this.field_o + PasswordFieldPainter.field_A;
                   }
@@ -263,12 +263,12 @@ final class OptionsScreen extends MenuScreen {
                   }
                 }
               } else {
-                this.field_g.a(false, 0);
+                this.field_g.selectIndex(false, 0);
               }
             }
             break regionExit1;
           }
-          this.field_g.a(false, 0);
+          this.field_g.selectIndex(false, 0);
         }
     }
 
@@ -301,7 +301,7 @@ final class OptionsScreen extends MenuScreen {
     final int getRowLeft(int param0, byte param1) {
         boolean discarded$0 = false;
         if (param1 != 90) {
-          discarded$0 = this.a(false, 70);
+          discarded$0 = this.isPuzzleCompleted(false, 70);
         }
         if (1 != param0 &&
           param0 != 2) {
@@ -342,7 +342,7 @@ final class OptionsScreen extends MenuScreen {
         }
     }
 
-    final static void e(int param0) {
+    final static void initializeSpecularTable(int param0) {
         int var1_int = 0;
         double var2 = 0.0;
         int var4 = 0;
@@ -376,7 +376,7 @@ final class OptionsScreen extends MenuScreen {
         }
     }
 
-    final void a(byte param0, boolean param1, int param2) {
+    final void drawRow(byte param0, boolean param1, int param2) {
         PaletteBitmapFont stackIn_16_0;
         String stackIn_16_1;
         int stackIn_16_2;
@@ -414,15 +414,15 @@ final class OptionsScreen extends MenuScreen {
                 var9 = var7 + var8 >> 1;
                 var10 = this.getRowY(58, param2);
                 if (param1) {
-                  SpriteEffectHelpers.a(var9, -2 + var10, 35, StripedProgressBar.field_N);
+                  SpriteEffectHelpers.drawGreenVerticalGlowBar(var9, -2 + var10, 35, StripedProgressBar.field_N);
                 }
-                stackIn_16_0 = rk.field_e;
+                stackIn_16_0 = PieceTiming.field_e;
                 stackIn_16_1 = var6;
                 stackIn_16_2 = var9;
-                stackIn_16_3 = var10 + rk.field_e.maxAscent;
+                stackIn_16_3 = var10 + PieceTiming.field_e.maxAscent;
                 stackIn_17_4 = (!param1) ? 2 : 0;
                 ((PaletteBitmapFont) (Object) stackIn_16_0).drawCentered(stackIn_16_1, stackIn_16_2, stackIn_16_3, stackIn_17_4, -1);
-                if (this.a(true, param2 - 3)) {
+                if (this.isPuzzleCompleted(true, param2 - 3)) {
                   stackIn_20_0 = ih.field_a;
                   stackIn_21_1 = (!param1) ? 0 : 1;
                   ((Sprite) (Object) stackIn_20_0[stackIn_21_1]).drawTransparent(var8, this.getRowY(118, param2));
@@ -437,7 +437,7 @@ final class OptionsScreen extends MenuScreen {
             }
           }
         } else {
-          this.a(Checkbox.field_O, StripedProgressBar.field_N, (byte) 122, param1);
+          this.drawCenteredFooterButton(Checkbox.field_O, StripedProgressBar.field_N, (byte) 122, param1);
         }
     }
 

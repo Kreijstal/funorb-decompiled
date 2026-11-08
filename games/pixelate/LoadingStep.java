@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ik {
+final class LoadingStep {
     ResourceArchive field_d;
     String field_e;
     String field_c;
@@ -10,7 +10,7 @@ final class ik {
     int field_b;
     private static String field_z;
 
-    private ik() throws Throwable {
+    private LoadingStep() throws Throwable {
         throw new Error();
     }
 

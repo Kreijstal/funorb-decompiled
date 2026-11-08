@@ -119,7 +119,7 @@ final class HuffmanCodec {
         SocialListEntry var3 = CipherPacketBuffer.a(param2, param0, (byte) 113);
         ClientContextMenu var4Lifetime1;
         if (var3 != null) {
-          ProxySocketConnector.field_n.b(false, (byte) -98);
+          ProxySocketConnector.field_n.addGameMemberActions(false, (byte) -98);
           var4 = ProxySocketConnector.field_n;
           var5_ref_String = OptionsScreen.field_q;
           var4.field_b.addAction(var5_ref_String, (byte) -68, 5);
@@ -247,7 +247,7 @@ final class HuffmanCodec {
           ba.field_f = param0;
           ib.field_h.setStream(ClientContextMenu.field_d);
           ri.field_a = param7;
-          ri.field_a.a(SocketJs5Transport.field_u, (byte) 2);
+          ri.field_a.setVolume(SocketJs5Transport.field_u, (byte) 2);
           MainMenuScreen.field_t.setStream(ri.field_a);
         } catch (RuntimeException runtimeException) {
           throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "oh.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ',' + (param7 != null ? "{...}" : "null") + ')');

@@ -239,7 +239,7 @@ final class bq {
             }
             pk.field_g = hm.a(64);
           }
-          mj.field_c.field_h = BackgroundScene.field_h.length;
+          ScoreMarkerDemo.field_c.field_h = BackgroundScene.field_h.length;
           var3_intLifetime1 = 0;
           for (var4Lifetime1 = 0; var4Lifetime1 < vm.field_e.length; var4Lifetime1++) {
             stackIn_89_0 = 3;
@@ -273,7 +273,7 @@ final class bq {
             return;
           }
           ib.field_g = -(var3_intLifetime1 >> 1) + var3_intLifetime1 + QuickChatCategory.field_u;
-          MouseInputHandler.field_b = (LoadingProgressDialog.field_fb + bd.field_c << 1) * mj.field_c.field_h;
+          MouseInputHandler.field_b = (LoadingProgressDialog.field_fb + bd.field_c << 1) * ScoreMarkerDemo.field_c.field_h;
           LoadingProgressDialog.field_cb = -(var3_intLifetime1 >> 1) + QuickChatCategory.field_u;
           for (var4Lifetime2 = 0; var4Lifetime2 < vm.field_e.length; var4Lifetime2++) {
             stackIn_115_0 = MouseInputHandler.field_b;
@@ -306,9 +306,9 @@ final class bq {
             var4Lifetime3++;
           }
           if (CanvasRasterBuffer.field_h != 2) {
-            mj.field_c.initializeSelection(param0, mi.a(ProxyAuthenticationException.field_d, StatusBar.field_k, (byte) -97), 17068, 0);
+            ScoreMarkerDemo.field_c.initializeSelection(param0, mi.a(ProxyAuthenticationException.field_d, StatusBar.field_k, (byte) -97), 17068, 0);
           } else {
-            mj.field_c.initializeSelection(param0, -1, 17068, -1);
+            ScoreMarkerDemo.field_c.initializeSelection(param0, -1, 17068, -1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -326,10 +326,10 @@ final class bq {
         if (param0 != -124) {
           bq.releaseStatics((byte) -16);
         }
-        if (MarkerSlider.a((byte) 117)) {
+        if (MarkerSlider.isOverlayOpen((byte) 117)) {
           vd.a(param3, param1, param4, (byte) -86);
           if (null != ProxySocketConnector.field_n &&
-            ProxySocketConnector.field_n.a(param4, param6, false, param5, param3)) {
+            ProxySocketConnector.field_n.updateAndRunSelectedAction(param4, param6, false, param5, param3)) {
             ArchiveProvider.a(71);
             param3 = false;
           }

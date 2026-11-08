@@ -14,8 +14,8 @@ final class WeightedLruCache {
     private int field_a;
 
     private final void putWeighted(Object param0, boolean param1, long param2, int param3) {
-        ah var6 = null;
-        tj var6_ref = null;
+        CacheReference var6 = null;
+        StrongCacheReference var6_ref = null;
         int var7 = Pixelate.field_H ? 1 : 0;
         if (this.field_a < param3) {
           throw new IllegalStateException();
@@ -27,13 +27,13 @@ final class WeightedLruCache {
         try {
           this.remainingCapacity = this.remainingCapacity - param3;
           while (this.remainingCapacity < 0) {
-            var6 = (ah) (this.field_g.a(113));
+            var6 = (CacheReference) (this.field_g.a(113));
             this.removeEntry(var6, -26133);
           }
-          var6_ref = new tj(param0, param3);
+          var6_ref = new StrongCacheReference(param0, param3);
           this.field_e.a(var6_ref, param2, -1);
           this.field_g.addLast((byte) 99, var6_ref);
-          ((ah) ((Object) var6_ref)).field_q = 0L;
+          ((CacheReference) ((Object) var6_ref)).field_q = 0L;
         } catch (RuntimeException runtimeException) {
           throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "le.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
@@ -58,7 +58,7 @@ final class WeightedLruCache {
     }
 
     private final void a(long param0, byte param1) {
-        ah var4 = (ah) (this.field_e.findByKey(1, param0));
+        CacheReference var4 = (CacheReference) (this.field_e.findByKey(1, param0));
         if (param1 == 11) {
           this.removeEntry(var4, -26133);
           return;
@@ -69,14 +69,14 @@ final class WeightedLruCache {
 
     final Object a(long param0, int param1) {
         Object var5;
-        tj var6;
-        ah var7;
-        tj var6Lifetime1;
-        var7 = (ah) (this.field_e.findByKey(param1 ^ 1, param0));
+        StrongCacheReference var6;
+        CacheReference var7;
+        StrongCacheReference var6Lifetime1;
+        var7 = (CacheReference) (this.field_e.findByKey(param1 ^ 1, param0));
         if (var7 == null) {
           return null;
         }
-        var5 = var7.a((byte) -55);
+        var5 = var7.get((byte) -55);
         if (param1 == 0) {
           if (var5 == null) {
             var7.unlink(2779);
@@ -85,10 +85,10 @@ final class WeightedLruCache {
             return null;
           }
           if (var7.isSoft(true)) {
-            var6 = new tj(var5, var7.field_t);
+            var6 = new StrongCacheReference(var5, var7.field_t);
             this.field_e.a(var6, var7.field_e, -1);
             this.field_g.addLast((byte) 83, var6);
-            ((ah) ((Object) var6)).field_q = 0L;
+            ((CacheReference) ((Object) var6)).field_q = 0L;
             var7.unlink(2779);
             var7.unlinkSecondary(param1 ^ 17);
           } else {
@@ -105,10 +105,10 @@ final class WeightedLruCache {
           return null;
         }
         if (var7.isSoft(true)) {
-          var6Lifetime1 = new tj(var5, var7.field_t);
+          var6Lifetime1 = new StrongCacheReference(var5, var7.field_t);
           this.field_e.a(var6Lifetime1, var7.field_e, -1);
           this.field_g.addLast((byte) 83, var6Lifetime1);
-          ((ah) ((Object) var6Lifetime1)).field_q = 0L;
+          ((CacheReference) ((Object) var6Lifetime1)).field_q = 0L;
           var7.unlink(2779);
           var7.unlinkSecondary(param1 ^ 17);
         } else {
@@ -118,7 +118,7 @@ final class WeightedLruCache {
         return var5;
     }
 
-    private final void removeEntry(ah param0, int param1) {
+    private final void removeEntry(CacheReference param0, int param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -168,7 +168,7 @@ final class WeightedLruCache {
           var4 = 0;
           var5 = -16 / ((-26 - param1) / 59);
           while (var2_int > var4) {
-            var3 = (var3 << 5) - var3 + MenuInputState.a((byte) -118, param0.charAt(var4));
+            var3 = (var3 << 5) - var3 + MenuInputState.charToCp1252Byte((byte) -118, param0.charAt(var4));
             var4++;
           }
           stackIn_5_0 = var3;

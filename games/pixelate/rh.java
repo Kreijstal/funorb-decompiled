@@ -68,7 +68,7 @@ final class rh extends IntrusiveNode {
 
     final static void b(byte param0) {
         int var1 = -5 % ((param0 - 16) / 63);
-        QuickChatMenu.b(false, 93);
+        QuickChatMenu.drawFloatingSquares(false, 93);
     }
 
     public static void releaseStatics(byte param0) {

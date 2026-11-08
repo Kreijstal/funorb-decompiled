@@ -10,7 +10,7 @@ final class Matrix3 {
     static boolean field_a;
     static int field_b;
 
-    final static int a(int param0, int param1) {
+    final static int bitLength(int param0, int param1) {
         int var2;
         int var2Lifetime1;
         if (param0 == 0) {
@@ -67,7 +67,7 @@ final class Matrix3 {
         return var2Lifetime1;
     }
 
-    final static boolean a(String param0, String param1, byte param2) {
+    final static boolean isAcceptablePassword(String param0, String param1, byte param2) {
         RuntimeException var3 = null;
         byte[] var4 = null;
         RuntimeException stackIn_30_0 = null;
@@ -85,7 +85,7 @@ final class Matrix3 {
           }
           if (param2 != -4) {
             var4 = (byte[]) null;
-            Matrix3.a((byte[]) null, 103, 27);
+            Matrix3.crc32((byte[]) null, 103, 27);
           }
           if (ep.a((byte) 34, param0)) {
             return false;
@@ -123,7 +123,7 @@ final class Matrix3 {
         }
     }
 
-    final Vector3 a(Vector3 param0, byte param1) {
+    final Vector3 transform(Vector3 param0, byte param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -137,7 +137,7 @@ final class Matrix3 {
           var3_int = param0.field_h >> 2;
           var4 = param0.field_g >> 2;
           if (param1 < 35) {
-            Matrix3.b(-124, 49);
+            Matrix3.queueAchievementMaskRequest(-124, 49);
           }
           var5 = param0.field_i >> 2;
           stackIn_3_0 = new Vector3(this.field_f[0] * var3_int - (-(var4 * this.field_f[1]) - var5 * this.field_f[2]) >> 14, var3_int * this.field_f[3] + (this.field_f[4] * var4 + var5 * this.field_f[5]) >> 14, var5 * this.field_f[8] + this.field_f[7] * var4 + this.field_f[6] * var3_int >> 14);
@@ -156,7 +156,7 @@ final class Matrix3 {
         }
     }
 
-    final static int a(byte[] param0, int param1, int param2) {
+    final static int crc32(byte[] param0, int param1, int param2) {
         RuntimeException var3 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -187,21 +187,21 @@ final class Matrix3 {
 
     final static boolean a(int param0) {
         if (param0 == -5057) {
-          return !an.field_e.d(125) ? true : false;
+          return !an.field_e.isComplete(125) ? true : false;
         }
-        Matrix3.a(26, 126);
-        return !an.field_e.d(125) ? true : false;
+        Matrix3.bitLength(26, 126);
+        return !an.field_e.isComplete(125) ? true : false;
     }
 
-    final static mc b(int param0, int param1) {
+    final static mc queueAchievementMaskRequest(int param0, int param1) {
         mc var2 = new mc();
         if (param0 == 255) {
-          tj.field_z.addFirst(22125, var2);
+          StrongCacheReference.field_z.addLast(22125, var2);
           ro.a(127, param1);
           return var2;
         }
-        Matrix3.a((byte) 74);
-        tj.field_z.addFirst(22125, var2);
+        Matrix3.releaseStatics((byte) 74);
+        StrongCacheReference.field_z.addLast(22125, var2);
         ro.a(127, param1);
         return var2;
     }
@@ -230,7 +230,7 @@ final class Matrix3 {
         this.field_f[0] = param0;
     }
 
-    final Matrix3 a(int param0, Matrix3 param1) {
+    final Matrix3 multiply(int param0, Matrix3 param1) {
         int var4 = 0;
         int var5 = 0;
         int var8 = 0;
@@ -280,7 +280,7 @@ final class Matrix3 {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_g = null;
         field_c = null;
         if (param0 != -27) {

@@ -225,7 +225,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
 
     final static void a(rh param0, boolean param1, int param2) {
         try {
-          MenuScreen.field_b.addFirst(22125, param0);
+          MenuScreen.field_b.addLast(22125, param0);
           AlphaContainer.a((byte) -52, param0, param2);
           if (!param1) {
             ValidationHelpWidget.c(false);

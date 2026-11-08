@@ -5,7 +5,7 @@ final class an {
     static String field_d;
     static SceneWidget field_a;
     static int[] field_c;
-    static fl field_e;
+    static AsyncValidationResult field_e;
     static BoardView field_b;
 
     final static void a(BitmapFont param0, int param1, byte param2, TextLayoutLine param3, String param4) {

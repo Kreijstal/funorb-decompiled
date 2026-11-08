@@ -37,7 +37,7 @@ final class ModalStack extends SingleChildContainer {
           if (param0 != -6183) {
             field_L = true;
           }
-          this.field_N.addLast(param0 ^ -1392505192, var3);
+          this.field_N.addFirst(param0 ^ -1392505192, var3);
           var3.field_N = true;
           var3.focusNext((UiComponent) (this), 27);
         } catch (RuntimeException runtimeException) {
@@ -140,7 +140,7 @@ final class ModalStack extends SingleChildContainer {
         IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.field_N);
         ModalPanel var3 = (ModalPanel) (var2.d(0));
         while (var3 != null) {
-          if (var3.a((byte) 123)) {
+          if (var3.isDismissed((byte) 123)) {
             var3.unlink(2779);
           }
           var3 = (ModalPanel) (var2.first((byte) -104));

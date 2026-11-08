@@ -8,7 +8,7 @@ final class InputQueue {
     static String field_a;
     static int field_d;
 
-    final int a(boolean param0) {
+    final int poll(boolean param0) {
         QueuedInput var2 = null;
         RuntimeException var2_ref = null;
         int stackIn_7_0 = 0;
@@ -18,7 +18,7 @@ final class InputQueue {
           if (!param0) {
             field_c = (String) null;
           }
-          var2 = (QueuedInput) (this.field_b.c(1504642273));
+          var2 = (QueuedInput) (this.field_b.first(1504642273));
           if (null == var2) {
             stackIn_9_0 = -1;
             return stackIn_9_0;
@@ -33,7 +33,7 @@ final class InputQueue {
         }
     }
 
-    final static void b(int param0) {
+    final static void readFriendListPacket(int param0) {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         int stackIn_11_0 = 0;
@@ -86,16 +86,16 @@ final class InputQueue {
             if (var6 == null) {
               var6 = DisplayNameForm.findFriend(var7, 69);
               if (null != var6) {
-                GameResultsScreen.field_q.a(false, var6, (long)var8.hashCode());
+                GameResultsScreen.field_q.put(false, var6, (long)var8.hashCode());
               }
             }
             if (var6 == null) {
               var6 = new SocialListEntry();
-              GameResultsScreen.field_q.a(false, var6, (long)var8.hashCode());
+              GameResultsScreen.field_q.put(false, var6, (long)var8.hashCode());
               fieldTemp$0 = aj.field_t;
               aj.field_t = aj.field_t + 1;
               var6.field_Kb = fieldTemp$0;
-              bq.field_b.addFirst(22125, var6);
+              bq.field_b.addLast(22125, var6);
             }
             var6.field_Ib = var5;
             var6.field_Fb = var4_ref_String;
@@ -140,20 +140,20 @@ final class InputQueue {
           }
           var4_ref_StringLifetime1 = var1.readString(5);
           var5Lifetime1 = var1.readString(5);
-          var6Lifetime1 = re.findFriend(var4_ref_StringLifetime1, -1);
+          var6Lifetime1 = LoadingStepTracker.findFriend(var4_ref_StringLifetime1, -1);
           if (null == var6Lifetime1) {
-            var6Lifetime1 = re.findFriend(var5Lifetime1, -1);
+            var6Lifetime1 = LoadingStepTracker.findFriend(var5Lifetime1, -1);
             if (null != var6Lifetime1) {
-              vm.field_b.a(false, var6Lifetime1, (long)dh.a((CharSequence) ((Object) var4_ref_StringLifetime1), (byte) 29).hashCode());
+              vm.field_b.put(false, var6Lifetime1, (long)dh.a((CharSequence) ((Object) var4_ref_StringLifetime1), (byte) 29).hashCode());
             }
           }
           if (null == var6Lifetime1) {
             var6Lifetime1 = new SocialListEntry();
-            vm.field_b.a(false, var6Lifetime1, (long)dh.a((CharSequence) ((Object) var4_ref_StringLifetime1), (byte) 70).hashCode());
+            vm.field_b.put(false, var6Lifetime1, (long)dh.a((CharSequence) ((Object) var4_ref_StringLifetime1), (byte) 70).hashCode());
             fieldTemp$1 = DialWidgetPainter.field_q;
             DialWidgetPainter.field_q = DialWidgetPainter.field_q + 1;
             var6Lifetime1.field_Kb = fieldTemp$1;
-            VerticalScrollbar.field_Hb.addFirst(22125, var6Lifetime1);
+            VerticalScrollbar.field_Hb.addLast(22125, var6Lifetime1);
           }
           if (null != var3Lifetime1) {
             var3Lifetime1 = ((String) (var3Lifetime1)).intern();
@@ -162,7 +162,7 @@ final class InputQueue {
           var6Lifetime1.field_Nb = (String) (var3Lifetime1);
           var6Lifetime1.field_Gb = var5Lifetime1;
           var6Lifetime1.unlink(2779);
-          var7_ref = (SocialListEntry) (VerticalScrollbar.field_Hb.c(1504642273));
+          var7_ref = (SocialListEntry) (VerticalScrollbar.field_Hb.first(1504642273));
           scanLoop1: while (true) {
             if (null != var7_ref) {
               stackOut_49_0 = DebouncedValidator.a((byte) 115, var6Lifetime1, var7_ref);
@@ -172,12 +172,12 @@ final class InputQueue {
                 break scanLoop1;
               }
               if (stackIn_50_0) {
-                var7_ref = (SocialListEntry) (VerticalScrollbar.field_Hb.last(1504642273));
+                var7_ref = (SocialListEntry) (VerticalScrollbar.field_Hb.next(1504642273));
                 continue;
               }
             }
             if (null == var7_ref) {
-              VerticalScrollbar.field_Hb.addFirst(22125, var6Lifetime1);
+              VerticalScrollbar.field_Hb.addLast(22125, var6Lifetime1);
               if (var9 == 0) {
                 return;
               }
@@ -185,7 +185,7 @@ final class InputQueue {
             stackIn_60_0 = 95;
             break;
           }
-          BackgroundScene.$cfr$intArgs$a$2d0b7bdf67eb(stackIn_60_0, var7_ref, var6Lifetime1);
+          BackgroundScene.insertNodeBefore(stackIn_60_0, var7_ref, var6Lifetime1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -194,18 +194,18 @@ final class InputQueue {
         }
     }
 
-    final void a(int param0) {
+    final void clear(int param0) {
         if (param0 != -1) {
           return;
         }
         try {
-          this.field_b.e(77);
+          this.field_b.clear(77);
         } catch (RuntimeException runtimeException) {
           throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "ee.G(" + param0 + ')');
         }
     }
 
-    final int a(int param0, byte param1) {
+    final int pollDueInput(int param0, byte param1) {
         QueuedInput discarded$1 = null;
         QueuedInput var3 = null;
         RuntimeException var3_ref = null;
@@ -213,9 +213,9 @@ final class InputQueue {
         int stackIn_12_0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = (QueuedInput) (this.field_b.c(1504642273));
+          var3 = (QueuedInput) (this.field_b.first(1504642273));
           if (param1 >= -14) {
-            discarded$1 = this.a(-71, -29, (byte) 37);
+            discarded$1 = this.obtainQueuedInput(-71, -29, (byte) 37);
           }
           if (var3 != null &&
             var3.field_m < param0) {
@@ -232,7 +232,7 @@ final class InputQueue {
         }
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         try {
@@ -249,7 +249,7 @@ final class InputQueue {
         }
     }
 
-    private final QueuedInput a(int param0, int param1, byte param2) {
+    private final QueuedInput obtainQueuedInput(int param0, int param1, byte param2) {
         Object var4 = null;
         int var5 = 0;
         Object stackIn_12_0 = null;
@@ -304,7 +304,7 @@ final class InputQueue {
         }
     }
 
-    final static void c(int param0) {
+    final static void compactMeshBlocks(int param0) {
         RuntimeException runtimeException = null;
         int var1_int = 0;
         int var2 = 0;
@@ -332,11 +332,11 @@ final class InputQueue {
         }
     }
 
-    final void a(int param0, int param1, int param2) {
+    final void enqueue(int param0, int param1, int param2) {
         try {
-          this.field_b.addFirst(22125, this.a(param0, param2, (byte) 109));
+          this.field_b.addLast(22125, this.obtainQueuedInput(param0, param2, (byte) 109));
           if (param1 != 0) {
-            this.a(-120, 48, 81);
+            this.enqueue(-120, 48, 81);
           }
         } catch (RuntimeException runtimeException) {
           throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "ee.B(" + param0 + ',' + param1 + ',' + param2 + ')');

@@ -8,15 +8,15 @@ final class PcmStreamMixer extends PcmStream {
     private int field_q;
 
     final synchronized void a(PcmStream param0) {
-        this.field_r.addLast(1392503105, param0);
+        this.field_r.addFirst(1392503105, param0);
     }
 
     final PcmStream nextSubStream() {
-        return (PcmStream) (this.field_r.last(1504642273));
+        return (PcmStream) (this.field_r.next(1504642273));
     }
 
     final PcmStream firstSubStream() {
-        return (PcmStream) (this.field_r.c(1504642273));
+        return (PcmStream) (this.field_r.first(1504642273));
     }
 
     final synchronized void skip(int param0) {
@@ -40,7 +40,7 @@ final class PcmStreamMixer extends PcmStream {
           param0 = param0 - var2;
           this.processedSamples = this.processedSamples + var2;
           this.normalizeListenerDeadlines();
-          var3 = (PcmMixerListener) (this.listeners.c(1504642273));
+          var3 = (PcmMixerListener) (this.listeners.first(1504642273));
           var4 = var3;
           synchronized (var4) {
             var5 = var3.a(this);
@@ -78,7 +78,7 @@ final class PcmStreamMixer extends PcmStream {
           param2 = param2 - var4;
           this.processedSamples = this.processedSamples + var4;
           this.normalizeListenerDeadlines();
-          var5 = (PcmMixerListener) (this.listeners.c(1504642273));
+          var5 = (PcmMixerListener) (this.listeners.first(1504642273));
           var6 = var5;
           synchronized (var6) {
             var7 = var5.a(this);
@@ -97,10 +97,10 @@ final class PcmStreamMixer extends PcmStream {
     private final void normalizeListenerDeadlines() {
         PcmMixerListener var1 = null;
         if (this.processedSamples > 0) {
-          var1 = (PcmMixerListener) (this.listeners.c(1504642273));
+          var1 = (PcmMixerListener) (this.listeners.first(1504642273));
           while (var1 != null) {
             var1.field_k = var1.field_k - this.processedSamples;
-            var1 = (PcmMixerListener) (this.listeners.last(1504642273));
+            var1 = (PcmMixerListener) (this.listeners.next(1504642273));
           }
           this.field_q = this.field_q - this.processedSamples;
           this.processedSamples = 0;
@@ -108,10 +108,10 @@ final class PcmStreamMixer extends PcmStream {
     }
 
     private final void skipSubstreams(int param0) {
-        PcmStream var2 = (PcmStream) (this.field_r.c(1504642273));
+        PcmStream var2 = (PcmStream) (this.field_r.first(1504642273));
         while (var2 != null) {
           var2.skip(param0);
-          var2 = (PcmStream) (this.field_r.last(1504642273));
+          var2 = (PcmStream) (this.field_r.next(1504642273));
         }
     }
 
@@ -122,7 +122,7 @@ final class PcmStreamMixer extends PcmStream {
     private final void insertListener(IntrusiveNode param0, PcmMixerListener param1) {
         while (true) {
           if (param0 == this.listeners.sentinel) {
-            BackgroundScene.$cfr$intArgs$a$2d0b7bdf67eb(98, param0, param1);
+            BackgroundScene.insertNodeBefore(98, param0, param1);
             this.field_q = ((PcmMixerListener) (this.listeners.sentinel.field_a)).field_k;
             return;
           }
@@ -132,7 +132,7 @@ final class PcmStreamMixer extends PcmStream {
           }
           break;
         }
-        BackgroundScene.$cfr$intArgs$a$2d0b7bdf67eb(98, param0, param1);
+        BackgroundScene.insertNodeBefore(98, param0, param1);
         this.field_q = ((PcmMixerListener) (this.listeners.sentinel.field_a)).field_k;
         return;
     }
@@ -156,10 +156,10 @@ final class PcmStreamMixer extends PcmStream {
     }
 
     private final void mixSubstreams(int[] param0, int param1, int param2) {
-        PcmStream var4 = (PcmStream) (this.field_r.c(1504642273));
+        PcmStream var4 = (PcmStream) (this.field_r.first(1504642273));
         while (var4 != null) {
           var4.process(param0, param1, param2);
-          var4 = (PcmStream) (this.field_r.last(1504642273));
+          var4 = (PcmStream) (this.field_r.next(1504642273));
         }
     }
 }

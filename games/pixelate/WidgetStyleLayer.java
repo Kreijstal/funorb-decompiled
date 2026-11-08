@@ -87,7 +87,7 @@ final class WidgetStyleLayer {
         RuntimeException decompiledCaughtException = null;
         var3 = Pixelate.field_H ? 1 : 0;
         try {
-          var1 = (aj) (ScoreMarkerBar.field_o.c(1504642273));
+          var1 = (aj) (ScoreMarkerBar.field_o.first(1504642273));
           if (var1 == null) {
             return false;
           }
@@ -240,7 +240,7 @@ final class WidgetStyleLayer {
         }
     }
 
-    final WidgetStyleLayer a(int param0, byte param1) {
+    final WidgetStyleLayer setShadowColour(int param0, byte param1) {
         if (param1 != -68) {
           this.field_a = 97;
         }
@@ -248,7 +248,7 @@ final class WidgetStyleLayer {
         return this;
     }
 
-    final WidgetStyleLayer a(byte param0, int param1) {
+    final WidgetStyleLayer setOffsetX(byte param0, int param1) {
         int var3 = -32 % ((56 - param0) / 46);
         this.field_d = param1;
         return this;
@@ -283,7 +283,7 @@ final class WidgetStyleLayer {
         }
     }
 
-    final WidgetStyleLayer a(boolean param0, boolean param1) {
+    final WidgetStyleLayer setPaintsBaseLayer(boolean param0, boolean param1) {
         if (!param0) {
           return (WidgetStyleLayer) null;
         }
@@ -299,7 +299,7 @@ final class WidgetStyleLayer {
         field_i = null;
     }
 
-    final WidgetStyleLayer a(int param0, boolean param1) {
+    final WidgetStyleLayer setOffsetY(int param0, boolean param1) {
         this.field_h = param0;
         if (param1) {
           this.field_g = 122;
@@ -307,7 +307,7 @@ final class WidgetStyleLayer {
         return this;
     }
 
-    final WidgetStyleLayer a(int param0, int param1) {
+    final WidgetStyleLayer setTextColour(int param0, int param1) {
         this.field_g = param0;
         if (param1 != 15115) {
           this.field_d = 118;

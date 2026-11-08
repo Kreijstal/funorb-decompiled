@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class IntArraySorter {
+final class PolygonFiller {
     private static int field_d;
     private static int[] field_c;
     private static int field_a;
@@ -11,7 +11,7 @@ final class IntArraySorter {
     private static int field_b;
     private static int field_g;
 
-    private final static void b() {
+    private final static void beginScanlines() {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
@@ -26,7 +26,7 @@ final class IntArraySorter {
           field_a = 2147483646;
           return;
         }
-        IntArraySorter.a(0, field_h);
+        PolygonFiller.sortEdgesByStartY(0, field_h);
         int var0 = field_c[1];
         if (var0 < SoftwareRasterizer.field_f) {
           var0 = SoftwareRasterizer.field_f;
@@ -51,11 +51,11 @@ final class IntArraySorter {
         field_a = var0 - 1;
     }
 
-    final static void a(int[] param0, int param1) {
-        IntArraySorter.a(param0, 0, param0.length, param1);
+    final static void fillPolygon(int[] param0, int param1) {
+        PolygonFiller.fillPolygonRange(param0, 0, param0.length, param1);
     }
 
-    private final static void a(int[] param0, int param1, int param2) {
+    private final static void buildEdgeTable(int[] param0, int param1, int param2) {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         int fieldTemp$2 = 0;
@@ -123,7 +123,7 @@ final class IntArraySorter {
         }
     }
 
-    private final static boolean d() {
+    private final static boolean nextSpan() {
         int var0;
         int var1;
         int var2;
@@ -188,14 +188,14 @@ final class IntArraySorter {
             field_h = 0;
             return false;
           }
-          IntArraySorter.b(var3, var0);
+          PolygonFiller.sortActiveEdgesByX(var3, var0);
           field_b = var3;
           field_d = var0;
           var1 = var3;
         }
     }
 
-    private final static void a(int param0, int param1) {
+    private final static void sortEdgesByStartY(int param0, int param1) {
         int var7 = 0;
         int var2;
         int var3;
@@ -229,30 +229,30 @@ final class IntArraySorter {
         field_c[var2 + 1] = var4;
         field_c[var2 + 2] = var5;
         field_c[var2 + 3] = var6;
-        IntArraySorter.a(param0, var2);
-        IntArraySorter.a(var2 + 4, param1);
+        PolygonFiller.sortEdgesByStartY(param0, var2);
+        PolygonFiller.sortEdgesByStartY(var2 + 4, param1);
     }
 
     public static void releaseStatics() {
         field_c = null;
     }
 
-    private final static void c() {
+    private final static void resetEdgeTable() {
         field_h = 0;
     }
 
-    private final static void a(int[] param0, int param1, int param2, int param3) {
-        IntArraySorter.c();
-        IntArraySorter.a(param0, param1, param2);
-        IntArraySorter.a(param3);
+    private final static void fillPolygonRange(int[] param0, int param1, int param2, int param3) {
+        PolygonFiller.resetEdgeTable();
+        PolygonFiller.buildEdgeTable(param0, param1, param2);
+        PolygonFiller.fillScanlines(param3);
     }
 
-    private final static void a(int param0) {
+    private final static void fillScanlines(int param0) {
         int var1 = 0;
         int var2 = 0;
         int var3 = 0;
-        IntArraySorter.b();
-        while (IntArraySorter.d()) {
+        PolygonFiller.beginScanlines();
+        while (PolygonFiller.nextSpan()) {
           var1 = field_f;
           var2 = field_e;
           var3 = field_a;
@@ -260,7 +260,7 @@ final class IntArraySorter {
         }
     }
 
-    private final static void b(int param0, int param1) {
+    private final static void sortActiveEdgesByX(int param0, int param1) {
         int var3 = 0;
         int var2;
         int var4;

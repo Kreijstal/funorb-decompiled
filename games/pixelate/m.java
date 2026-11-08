@@ -70,14 +70,14 @@ final class m extends IntrusiveNode {
         if (param0 == -102) {
           wa.field_c.b(param0 - 6081, ph.field_l);
           ph.field_l.transitionToContent(nf.field_b, param0 ^ 27);
-          ph.field_l.e(false);
+          ph.field_l.finishAnimations(false);
           return;
         }
         java.applet.Applet var2 = (java.applet.Applet) null;
         m.openSubscribePage((java.applet.Applet) null, -43);
         wa.field_c.b(param0 - 6081, ph.field_l);
         ph.field_l.transitionToContent(nf.field_b, param0 ^ 27);
-        ph.field_l.e(false);
+        ph.field_l.finishAnimations(false);
     }
 
     static {

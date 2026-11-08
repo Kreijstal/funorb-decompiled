@@ -51,7 +51,7 @@ abstract class DebouncedValidator implements ValidationSource {
 
     final static void a(ResourceArchive param0, int param1, ResourceArchive param2, ResourceArchive param3, boolean param4) {
         an.field_e = MatchController.execute((byte) 122, "");
-        an.field_e.a(param1 - 27848, false);
+        an.field_e.complete(param1 - 27848, false);
         MatchHud.loadCommonUiResources(param1 + 4740151, param3, param2, param0);
         GreenGrowTheRushesBackground.b(false);
         if (param1 != 27848) {
@@ -231,7 +231,7 @@ abstract class DebouncedValidator implements ValidationSource {
           }
           ((SceneWidget) (Object) stackIn_8_0).setBounds(stackIn_8_1, stackIn_8_2, stackIn_8_3, stackIn_8_4, -stackIn_9_5 + vd.field_a.field_K);
           wa.field_g.setBounds(2 + fq.field_q, 18, -40 + vd.field_a.field_K - (DelegatingCanvas.field_b + 2), 256, 42 + DelegatingCanvas.field_b);
-          Vector3.field_c.a(0, 2, (byte) 90, vd.field_a.field_K, fq.field_q + 22, -22 + (-fq.field_q + vd.field_a.height), DelegatingCanvas.field_b);
+          Vector3.field_c.setBoundsAndLayout(0, 2, (byte) 90, vd.field_a.field_K, fq.field_q + 22, -22 + (-fq.field_q + vd.field_a.height), DelegatingCanvas.field_b);
           ValidatedTextWidget.field_kb.setBounds(ff.field_h.height - 40, 40, 0, 256, ff.field_h.field_K);
           VerticalScrollbar.field_Qb.setBounds(0, 30, 0, 256, Bzip2State.field_A.field_K);
           dc.field_a.setBounds(30, -40 + (Bzip2State.field_A.height - 2 - 30), 0, 256, Bzip2State.field_A.field_K);
@@ -337,10 +337,10 @@ abstract class DebouncedValidator implements ValidationSource {
           }
           ra.field_e.setBounds(10, -10 + (-10 + (-4 + (-120 + SoftwareRasterizer.field_d))), SoftwareRasterizer.field_j - 360 >> 1, 256, 360);
           ih.field_g.setBounds(0, 24, 0, 256, ra.field_e.field_K);
-          kh.field_a.setBounds(24, -24 + ra.field_e.height, 0, 256, ra.field_e.field_K);
-          kh.field_a.field_zb = OptionsScreen.buildNineSliceSprites(8421504, param0 ^ 48, 11579568, kh.field_a.height, 1, 3);
-          StripedProgressBar.field_O.setBounds(5, -2 + kh.field_a.height - 10 - 24, 5, param0 + 224, kh.field_a.field_K - 10);
-          ContentTransitionDialog.field_eb.setBounds(-24 + kh.field_a.height - 5, 24, (-80 + kh.field_a.field_K) / 2, 256, 80);
+          DisplayNameRequestGlobals.field_a.setBounds(24, -24 + ra.field_e.height, 0, 256, ra.field_e.field_K);
+          DisplayNameRequestGlobals.field_a.field_zb = OptionsScreen.buildNineSliceSprites(8421504, param0 ^ 48, 11579568, DisplayNameRequestGlobals.field_a.height, 1, 3);
+          StripedProgressBar.field_O.setBounds(5, -2 + DisplayNameRequestGlobals.field_a.height - 10 - 24, 5, param0 + 224, DisplayNameRequestGlobals.field_a.field_K - 10);
+          ContentTransitionDialog.field_eb.setBounds(-24 + DisplayNameRequestGlobals.field_a.height - 5, 24, (-80 + DisplayNameRequestGlobals.field_a.field_K) / 2, 256, 80);
           mi.b(false);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -415,18 +415,18 @@ abstract class DebouncedValidator implements ValidationSource {
         if (11 == ke.field_a &&
           CheckboxPainter.field_r) {
           if (2 == BoardView.field_a &&
-            !LabeledField.a(true, ej.field_a, ck.field_g)) {
+            !LabeledField.a(true, ej.field_a, FloatingSquare.field_g)) {
             return false;
           }
           if (BoardView.field_a != 2 &&
             var3 != 0) {
             return false;
           }
-          if (!ScoreMarkerBar.a(true)) {
+          if (!ScoreMarkerBar.isConnectionRetryDue(true)) {
             return true;
           }
           String var4 = (String) null;
-          dg.a(true, BoardView.field_a, ih.field_f, (String) null, ck.field_g, param1);
+          dg.a(true, BoardView.field_a, ih.field_f, (String) null, FloatingSquare.field_g, param1);
           return true;
         }
         return false;

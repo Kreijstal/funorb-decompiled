@@ -105,7 +105,7 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
             } else {
               var4 = ek.field_e;
               if (this.field_Ab != null) {
-                this.field_Ab.a((byte) 103);
+                this.field_Ab.onMoreSuggestionsRequested((byte) 103);
               }
             }
           } else {

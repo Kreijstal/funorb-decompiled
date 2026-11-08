@@ -43,7 +43,7 @@ final class jn extends IntrusiveNode {
         this.field_l = 0;
         this.field_s = TabbedPanel.a((byte) 41, 50, 20);
         this.field_w = TabbedPanel.a((byte) 41, 75, 25);
-        this.field_n = MatchController.c(6, (byte) -120);
+        this.field_n = MatchController.randomBelow(6, (byte) -120);
         this.field_k = Math.random() < 0.5 ? true : false;
     }
 

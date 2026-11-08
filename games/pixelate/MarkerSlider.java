@@ -15,7 +15,7 @@ final class MarkerSlider extends TextButton {
     static int field_V;
     private GrowableIntList field_W;
 
-    final static boolean a(byte param0) {
+    final static boolean isOverlayOpen(byte param0) {
         boolean stackIn_9_0 = false;
         if (param0 < 108) {
           field_U = -99;
@@ -24,24 +24,24 @@ final class MarkerSlider extends TextButton {
         return stackIn_9_0;
     }
 
-    final int f(byte param0) {
+    final int getMarkerCount(byte param0) {
         int var2 = 108 / ((9 - param0) / 53);
         return this.field_W.size(1);
     }
 
-    final static void a(int param0) {
+    final static void returnToLoginStage(int param0) {
         if (!IconTextComponent.field_Nb) {
           throw new IllegalStateException();
         }
         AlphaContainer.field_I = true;
         if (param0 != -20822) {
-          MarkerSlider.a(-68);
+          MarkerSlider.returnToLoginStage(-68);
         }
         NodeHashTable.a(0, true);
         el.field_b = 0;
     }
 
-    final int a(byte param0, int param1) {
+    final int getMarker(byte param0, int param1) {
         if (param1 < 0 ||
           param1 >= this.field_W.size(1)) {
           return -1;
@@ -52,9 +52,9 @@ final class MarkerSlider extends TextButton {
         return this.field_W.get(param1, -124);
     }
 
-    final int k(int param0) {
+    final int getRange(int param0) {
         if (param0 != -1) {
-          MarkerSlider.d((byte) 62);
+          MarkerSlider.storeIncomingPacketBlock((byte) 62);
         }
         return this.field_P;
     }
@@ -121,7 +121,7 @@ final class MarkerSlider extends TextButton {
         }
     }
 
-    final static void d(byte param0) {
+    final static void storeIncomingPacketBlock(byte param0) {
         try {
           if (null != MusicCrossfadeStream.field_p) {
             try {
@@ -157,7 +157,7 @@ final class MarkerSlider extends TextButton {
         throw new Error();
     }
 
-    final static int b(int param0, int param1, int param2) {
+    final static int reverseBits(int param0, int param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;

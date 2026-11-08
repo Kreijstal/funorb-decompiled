@@ -226,9 +226,9 @@ final class CachedTextLayout extends TextLayout {
                         var13 = var16[var11Lifetime1 + 1];
                         if (!param3) {
                           if (-1 == param7) {
-                            stackIn_81_0 = (~LinkButtonPainter.field_a[var11Lifetime1] != ~io.field_c.field_ec) ? 0 : 1;
+                            stackIn_81_0 = (~LinkButtonPainter.field_a[var11Lifetime1] != ~LoginMethod.field_c.field_ec) ? 0 : 1;
                           } else {
-                            stackIn_81_0 = (var11Lifetime1 != (io.field_c.field_Eb[param7] & 255)) ? 0 : 1;
+                            stackIn_81_0 = (var11Lifetime1 != (LoginMethod.field_c.field_Eb[param7] & 255)) ? 0 : 1;
                           }
                           var12 = stackIn_81_0;
                         }
@@ -323,7 +323,7 @@ final class CachedTextLayout extends TextLayout {
     }
 
     final static void a(boolean param0, byte param1) {
-        ui.field_i.a(param0, 0);
+        ui.field_i.drawFullScreen(param0, 0);
         if (param1 != 34) {
           field_n = (String) null;
         }
@@ -577,7 +577,7 @@ final class CachedTextLayout extends TextLayout {
           if (param1 != 1) {
             return;
           }
-          if (io.field_c != null) {
+          if (LoginMethod.field_c != null) {
             boolean decompiledFrameRemainder3 = true;
             ValidatedTextWidget.field_kb.field_rb = true;
             wm.field_d.height = 0;
@@ -590,8 +590,8 @@ final class CachedTextLayout extends TextLayout {
             var7 = nk.field_e;
             nk.field_e.height = 0;
             var7.field_K = 0;
-            if (!AccountRegistrationPanel.m(param1 + 98)) {
-              var9_ref_String = io.field_c.field_pc;
+            if (!AccountRegistrationPanel.isLocalPlayerGameHost(param1 + 98)) {
+              var9_ref_String = LoginMethod.field_c.field_pc;
               VerticalScrollbar.field_Qb.field_cb = AlphaContainer.a(HowToPlayScreen.field_q, param1 ^ 62, new String[]{var9_ref_String}).toUpperCase();
               nk.field_e.setBounds(Bzip2State.field_A.height - 40, 40, 0, param1 + 255, Bzip2State.field_A.field_K);
               nk.field_e.field_cb = AlphaContainer.a(qh.field_a, param1 + 23, new String[]{var9_ref_String});
@@ -602,7 +602,7 @@ final class CachedTextLayout extends TextLayout {
               VerticalScrollbar.field_Qb.field_cb = DelegatingCanvas.field_g.toUpperCase();
               var9 = (Bzip2State.field_A.field_K + 2) / 2;
               wm.field_d.setBounds(Bzip2State.field_A.height - 40, 40, 0, 256, var9 - 2);
-              if (io.field_c.field_ec <= io.field_c.field_mc) {
+              if (LoginMethod.field_c.field_ec <= LoginMethod.field_c.field_mc) {
                 wm.field_d.field_cb = fo.field_m.toUpperCase();
                 wm.field_d.field_rb = false;
                 if (var19 != 0) {
@@ -675,16 +675,16 @@ final class CachedTextLayout extends TextLayout {
                             stackIn_51_0 = ~var15;
                             if (stackIn_51_0 == 0) {
                               if (var10 == 0) {
-                                stackIn_47_0 = io.field_c.field_ec;
+                                stackIn_47_0 = LoginMethod.field_c.field_ec;
                               } else {
-                                stackIn_47_0 = io.field_c.field_mc;
+                                stackIn_47_0 = LoginMethod.field_c.field_mc;
                               }
                               var17_int = stackIn_47_0;
                               if (~var17_int != ~var16) {
                                 break scanLoop2;
                               }
                             } else {
-                              if (~var16 != ~(255 & io.field_c.field_Eb[var15])) {
+                              if (~var16 != ~(255 & LoginMethod.field_c.field_Eb[var15])) {
                                 break scanLoop2;
                               }
                             }
@@ -743,7 +743,7 @@ final class CachedTextLayout extends TextLayout {
                 var16 = 0;
                 boolean decompiledNaturalLoopExit0 = false;
                 while (!(decompiledNaturalLoopExit0 = (!(var16 < fj.field_b)))) {
-                  var17_int = io.field_c.field_Eb[var16] & 255;
+                  var17_int = LoginMethod.field_c.field_Eb[var16] & 255;
                   if (var19 == 0) {
                     if (jm.field_r != null &&
                       jm.field_r[var16] != null &&
@@ -785,11 +785,11 @@ final class CachedTextLayout extends TextLayout {
                   var16 = 0;
                 }
                 var17 = Vector3.field_c.content.children;
-                var18_ref = (LobbyPlayer) (var17.c(1504642273));
+                var18_ref = (LobbyPlayer) (var17.first(1504642273));
                 scanLoop3: while (true) {
                   boolean decompiledFrameRemainder0 = true;
                   if (var18_ref != null) {
-                    stackOut_109_0 = var18_ref.b((byte) -98);
+                    stackOut_109_0 = var18_ref.isUnlisted((byte) -98);
                     stackIn_129_0 = stackOut_109_0 ? 1 : 0;
                     stackIn_110_0 = stackOut_109_0;
                     if (var19 != 0) {
@@ -827,7 +827,7 @@ final class CachedTextLayout extends TextLayout {
                       }
                     }
                     if (decompiledFrameRemainder0) {
-                      var18_ref = (LobbyPlayer) (var17.last(1504642273));
+                      var18_ref = (LobbyPlayer) (var17.next(1504642273));
                       continue;
                     }
                   }
@@ -940,24 +940,24 @@ final class CachedTextLayout extends TextLayout {
               }
               var8.field_cb = AlphaContainer.a(AudioService.field_i, 100, new String[]{Integer.toString(var9)});
             }
-            MatchingTextValidator.field_q.field_cb = AlphaContainer.a(ReportAbuseDialog.field_Gb, param1 + 68, new String[]{Integer.toString(io.field_c.field_mc), Integer.toString(io.field_c.field_ec)});
+            MatchingTextValidator.field_q.field_cb = AlphaContainer.a(ReportAbuseDialog.field_Gb, param1 + 68, new String[]{Integer.toString(LoginMethod.field_c.field_mc), Integer.toString(LoginMethod.field_c.field_ec)});
           }
           stackIn_181_0 = ff.field_h;
           stackIn_181_1 = -28476;
           stackIn_182_2 = (param4) && (!param3) && (!EmergentBehaviourBackground.field_o);
-          ((SceneWidget) (Object) stackIn_181_0).a(stackIn_181_1, stackIn_182_2);
+          ((SceneWidget) (Object) stackIn_181_0).updateInputFullScreen(stackIn_181_1, stackIn_182_2);
           stackIn_186_0 = Bzip2State.field_A;
           stackIn_186_1 = -28476;
           stackIn_187_2 = (param4) && (!param3) && (!EmergentBehaviourBackground.field_o);
-          ((SceneWidget) (Object) stackIn_186_0).a(stackIn_186_1, stackIn_187_2);
+          ((SceneWidget) (Object) stackIn_186_0).updateInputFullScreen(stackIn_186_1, stackIn_187_2);
           stackIn_191_0 = ra.field_e;
           stackIn_191_1 = -28476;
           stackIn_192_2 = (param4) && (!param3) && (EmergentBehaviourBackground.field_o);
-          ((SceneWidget) (Object) stackIn_191_0).a(stackIn_191_1, stackIn_192_2);
+          ((SceneWidget) (Object) stackIn_191_0).updateInputFullScreen(stackIn_191_1, stackIn_192_2);
           nd.field_b.field_g.processTabPresses((byte) -122);
-          if (null != io.field_c) {
+          if (null != LoginMethod.field_c) {
             if (0 != ValidatedTextWidget.field_kb.field_P) {
-              qg.a(io.field_c.c((byte) 8), param2, false);
+              qg.a(LoginMethod.field_c.c((byte) 8), param2, false);
             }
             if (0 != wm.field_d.field_P) {
               EmergentBehaviourBackground.field_o = true;
@@ -968,7 +968,7 @@ final class CachedTextLayout extends TextLayout {
             if (0 != ContentTransitionDialog.field_eb.field_P) {
               EmergentBehaviourBackground.field_o = false;
             }
-            LoginForm.a(false, io.field_c, param2, -1);
+            LoginForm.a(false, LoginMethod.field_c, param2, -1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

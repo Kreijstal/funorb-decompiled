@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class cd {
-    static io field_c;
+    static LoginMethod field_c;
     static String[] field_e;
     static String field_d;
     static long field_g;
@@ -20,7 +20,7 @@ final class cd {
           field_c = null;
           return;
         }
-        field_c = (io) null;
+        field_c = (LoginMethod) null;
         field_e = null;
         field_c = null;
     }
@@ -28,7 +28,7 @@ final class cd {
     static {
         field_z = "cd.A(";
         field_d = "Player";
-        field_c = new io("");
+        field_c = new LoginMethod("");
         field_f = "Who can join";
         field_a = "Password is valid";
     }

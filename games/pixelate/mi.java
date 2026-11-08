@@ -20,7 +20,7 @@ final class mi extends MenuScreen {
         if (param0 != 11) {
           mi.b(false);
         }
-        String var8 = var7 + " " + ub.replaceCharacter(AlphaContainer.a(PicturePreview.a(param0 - 99, false, var3 != 0, var2 != 0), param0 ^ 50, new String[]{mj.field_i}), param0 - 11, "<br><br>", '#');
+        String var8 = var7 + " " + ub.replaceCharacter(AlphaContainer.a(PicturePreview.getUnsavedDataWarning(param0 - 99, false, var3 != 0, var2 != 0), param0 ^ 50, new String[]{ScoreMarkerDemo.field_i}), param0 - 11, "<br><br>", '#');
         BinaryBitmapFont var5 = qj.field_e;
         int var6 = 1 + var5.maxDescent + var5.maxAscent;
         var5.drawParagraph(var8, 50, 150, 540, 10 * var6, 16777215, 0, 1, 0, var6);
@@ -35,7 +35,7 @@ final class mi extends MenuScreen {
           if (MatchController.field_q != -1) {
             MatchController.field_q = -1;
           }
-          var3 = (ph) (AccountRegistrationPanel.field_Y.d(-28918));
+          var3 = (ph) (AccountRegistrationPanel.field_Y.removeFirst(-28918));
           if (var3 != null) {
             MatchController.field_q = var3.field_k;
             ki.field_f = 300;
@@ -151,14 +151,14 @@ final class mi extends MenuScreen {
             if (ij.field_o == GameModeSelectScreen.field_s) {
               if (param4) {
                 var10 = (String) null;
-                li.field_g = ck.a(param2, (String) null, false, vn.field_b, 83);
+                li.field_g = FloatingSquare.createLoginCredentials(param2, (String) null, false, vn.field_b, 83);
               } else {
-                li.field_g = NanoTickClock.a(param2, false, -61, param5);
+                li.field_g = NanoTickClock.createLoginCredentials(param2, false, -61, param5);
               }
               aa.field_f.position = 0;
               aa.field_f.writeByte(160, 14);
               aa.field_f.writeByte(160, li.field_g.getCredentialKind(-27096).field_a);
-              SecondaryNodeHashTable.b(-1, 10000);
+              SecondaryNodeHashTable.flushOutgoingPackets(-1, 10000);
               GameModeSelectScreen.field_s = cn.field_a;
             }
             if (GameModeSelectScreen.field_s == cn.field_a &&
@@ -177,7 +177,7 @@ final class mi extends MenuScreen {
               QueuedInput.a(8, false)) {
               NumericDateInputWidget.field_P = MusicCrossfadeStream.field_o.readLong(false);
               MusicCrossfadeStream.field_o.position = 0;
-              io.a(param4, -67, li.field_g, param3, param0);
+              LoginMethod.writeLoginPacket(param4, -67, li.field_g, param3, param0);
               GameModeSelectScreen.field_s = BoardView.field_b;
             }
             boolean decompiledFrameRemainder0 = true;
@@ -216,7 +216,7 @@ final class mi extends MenuScreen {
               var6 = MusicCrossfadeStream.field_o.readOptionalString((byte) 79);
               var7 = MusicCrossfadeStream.field_o.readUnsignedByte(255);
               if ((var7 & 1) != 0) {
-                MarkerSlider.d((byte) -51);
+                MarkerSlider.storeIncomingPacketBlock((byte) -51);
               }
               stackIn_40_0 = ((16 & var7) != 0);
               TextFieldValidator.field_l = stackIn_40_0;
@@ -247,10 +247,10 @@ final class mi extends MenuScreen {
               ra.field_g = MusicCrossfadeStream.field_o.readUnsignedByte(255);
               GameModeSelectScreen.field_s = Pixelate.field_G;
               if (li.field_g.getCredentialKind(-27096) == l.field_r) {
-                ig.field_e.a(AudioService.a(13867), -80419032);
+                ig.field_e.saveAsLastLoginMethod(AudioService.a(13867), -80419032);
               } else {
                 if (li.field_g.getCredentialKind(-27096) == QuickChatMenu.field_Nb) {
-                  vm.field_a.a(AudioService.a(13867), -80419032);
+                  vm.field_a.saveAsLastLoginMethod(AudioService.a(13867), -80419032);
                 }
               }
               qj.field_b = false;
@@ -411,7 +411,7 @@ final class mi extends MenuScreen {
           field_o = false;
         }
         l.field_s.setBounds(0, 18, -40 + (-DelegatingCanvas.field_b + (StripedProgressBar.field_O.field_K - 2)), 256, 42 + DelegatingCanvas.field_b);
-        jm.field_b.a(0, 2, (byte) 102, StripedProgressBar.field_O.field_K, 20, StripedProgressBar.field_O.height - 20, DelegatingCanvas.field_b);
+        jm.field_b.setBoundsAndLayout(0, 2, (byte) 102, StripedProgressBar.field_O.field_K, 20, StripedProgressBar.field_O.height - 20, DelegatingCanvas.field_b);
     }
 
     static {

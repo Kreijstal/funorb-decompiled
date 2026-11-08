@@ -16,7 +16,7 @@ final class WhirlpoolHasher {
     private long[] field_b;
     private long[] field_e;
 
-    final void a(byte param0) {
+    final void reset(byte param0) {
         RuntimeException runtimeException = null;
         int var2_int = 0;
         int var3 = 0;
@@ -25,7 +25,7 @@ final class WhirlpoolHasher {
         try {
           var2_int = 0;
           if (param0 <= 122) {
-            WhirlpoolHasher.b(-128);
+            WhirlpoolHasher.clearStatics(-128);
           }
           do {
             if (var2_int >= 32) {
@@ -53,7 +53,7 @@ final class WhirlpoolHasher {
         }
     }
 
-    final static void a(int param0, TriangleMesh param1, boolean param2, int param3, boolean param4) {
+    final static void renderMeshFaces(int param0, TriangleMesh param1, boolean param2, int param3, boolean param4) {
         byte dupTemp$0 = 0;
         boolean stackIn_13_0 = false;
         int stackIn_34_0 = 0;
@@ -93,7 +93,7 @@ final class WhirlpoolHasher {
           var5_int = aq.a((byte) 32, 3 * (param0 - param3));
           var6 = 3 * param3;
           if (param2) {
-            WhirlpoolHasher.a(-91);
+            WhirlpoolHasher.createSpriteFromDecodeBuffers(-91);
           }
           var7 = var5_int - 10;
           BouncedownBackground.e(-98);
@@ -202,7 +202,7 @@ final class WhirlpoolHasher {
         }
     }
 
-    private final void b(byte param0) {
+    private final void processBlock(byte param0) {
         long dupTemp$0 = 0L;
         long arrayValue$1 = 0L;
         int stackIn_32_0 = 0;
@@ -313,7 +313,7 @@ final class WhirlpoolHasher {
         }
     }
 
-    final static Sprite a(int param0) {
+    final static Sprite createSpriteFromDecodeBuffers(int param0) {
         int var1_int = 0;
         RuntimeException var1 = null;
         byte[] var2 = null;
@@ -330,15 +330,15 @@ final class WhirlpoolHasher {
           var3 = new int[var1_int];
           var4_int = 0;
           while (var4_int < var1_int) {
-            var3[var4_int] = fl.field_g[cm.bitAnd((int) var2[var4_int], 255)];
+            var3[var4_int] = AsyncValidationResult.field_g[cm.bitAnd((int) var2[var4_int], 255)];
             var4_int++;
             if (var5 == 0) {
               continue;
             }
             break;
           }
-          var4 = new Sprite(tj.field_y, jb.field_a, IntrusiveNode.field_b[0], e.field_b[0], ByteStorage.field_g[0], ge.field_c[0], var3);
-          re.b(140);
+          var4 = new Sprite(StrongCacheReference.field_y, jb.field_a, IntrusiveNode.field_b[0], e.field_b[0], ByteStorage.field_g[0], ge.field_c[0], var3);
+          LoadingStepTracker.clearSpriteDecodeBuffers(140);
           stackIn_5_0 = var4;
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -395,7 +395,7 @@ final class WhirlpoolHasher {
                   this.field_h = this.field_h + (8 - var7);
                   this.field_i = this.field_i + 1;
                   if (this.field_h == 512) {
-                    this.b((byte) 41);
+                    this.processBlock((byte) 41);
                     this.field_i = 0;
                     this.field_h = 0;
                   }
@@ -408,7 +408,7 @@ final class WhirlpoolHasher {
                 throw new RuntimeException("LOGIC ERROR");
               }
             }
-            stackIn_24_0 = $cfr$lcmp(0L, param1);
+            stackIn_24_0 = compareLongs(0L, param1);
             break;
           }
           if (stackIn_24_0 >= 0) {
@@ -430,7 +430,7 @@ final class WhirlpoolHasher {
           this.field_i = this.field_i + 1;
           this.field_h = this.field_h + (-var7 + 8);
           if (this.field_h == 512) {
-            this.b((byte) 41);
+            this.processBlock((byte) 41);
             this.field_h = 0;
             this.field_i = 0;
           }
@@ -477,7 +477,7 @@ final class WhirlpoolHasher {
                   continue;
                 }
               } else {
-                this.b((byte) 41);
+                this.processBlock((byte) 41);
               }
               break;
             }
@@ -489,7 +489,7 @@ final class WhirlpoolHasher {
                 return;
               }
               ArraySupport.a(this.bitLength, 0, this.inputBlock, 32, 32);
-              this.b((byte) 41);
+              this.processBlock((byte) 41);
               break;
             }
             fieldTemp$1 = this.field_i;
@@ -529,7 +529,7 @@ final class WhirlpoolHasher {
         }
     }
 
-    public static void b(int param0) {
+    public static void clearStatics(int param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         try {
@@ -537,7 +537,7 @@ final class WhirlpoolHasher {
           field_m = null;
           field_k = null;
           if (param0 != 64) {
-            WhirlpoolHasher.a(59);
+            WhirlpoolHasher.createSpriteFromDecodeBuffers(59);
           }
           field_f = null;
           return;
@@ -566,7 +566,7 @@ final class WhirlpoolHasher {
         field_k = "Invite players";
     }
 
-    private static int $cfr$lcmp(long left, long right) {
+    private static int compareLongs(long left, long right) {
         return left < right ? -1 : (left == right ? 0 : 1);
     }
 }

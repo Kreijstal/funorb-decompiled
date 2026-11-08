@@ -321,25 +321,25 @@ final class StripedProgressBar extends UiComponent {
 
     static {
         field_H = new MenuScreen[18];
-        ContentTransitionDialog.a(true, 127, 0, 590, new int[]{28, 1, 5, 20, 21, 27, 6, 4, 3, 22, 19}, 30, 50);
-        ContentTransitionDialog.a(true, 175, 1, 460, new int[]{2, 20, 21, 27, 5, 9}, 30, 180);
-        ContentTransitionDialog.a(true, 175, 2, 460, new int[]{2, 20, 21, 27, 5, 11, 13}, 30, 180);
-        ContentTransitionDialog.a(true, 175, 4, 460, new int[]{2, 20, 21, 27, 5, 13}, 30, 180);
-        ContentTransitionDialog.a(true, 410, 5, 610, new int[]{23, 8}, 30, 30);
-        ContentTransitionDialog.a(true, 410, 6, 460, new int[]{23, 7}, 30, 180);
-        ContentTransitionDialog.a(true, 420, 7, 460, new int[]{25, 8, 26}, 30, 70);
-        ContentTransitionDialog.a(true, 420, 8, 460, new int[]{8, 23}, 30, 180);
-        ContentTransitionDialog.a(true, 420, 9, 460, new int[]{8, 3}, 30, 180);
-        ContentTransitionDialog.a(true, 260, 10, 460, new int[]{23, 24}, 30, 180);
-        ContentTransitionDialog.a(true, 420, 11, 460, new int[]{7}, 30, 180);
-        ContentTransitionDialog.a(true, 175, 12, 460, new int[]{}, 30, 180);
-        ContentTransitionDialog.a(true, 420, 13, 460, new int[]{33, 34}, 30, 180);
-        ContentTransitionDialog.a(true, 360, 16, 460, new int[]{0, 29, 7}, 30, 180);
-        ContentTransitionDialog.a(true, 420, 17, 460, new int[]{7}, 30, 180);
-        ContentTransitionDialog.a(true, 175, 14, 460, new int[]{}, 30, 180);
-        field_S = SpriteEffectHelpers.a(600);
-        field_W = SpriteEffectHelpers.a(180);
-        field_N = SpriteEffectHelpers.a(300);
+        ContentTransitionDialog.createMenuScreen(true, 127, 0, 590, new int[]{28, 1, 5, 20, 21, 27, 6, 4, 3, 22, 19}, 30, 50);
+        ContentTransitionDialog.createMenuScreen(true, 175, 1, 460, new int[]{2, 20, 21, 27, 5, 9}, 30, 180);
+        ContentTransitionDialog.createMenuScreen(true, 175, 2, 460, new int[]{2, 20, 21, 27, 5, 11, 13}, 30, 180);
+        ContentTransitionDialog.createMenuScreen(true, 175, 4, 460, new int[]{2, 20, 21, 27, 5, 13}, 30, 180);
+        ContentTransitionDialog.createMenuScreen(true, 410, 5, 610, new int[]{23, 8}, 30, 30);
+        ContentTransitionDialog.createMenuScreen(true, 410, 6, 460, new int[]{23, 7}, 30, 180);
+        ContentTransitionDialog.createMenuScreen(true, 420, 7, 460, new int[]{25, 8, 26}, 30, 70);
+        ContentTransitionDialog.createMenuScreen(true, 420, 8, 460, new int[]{8, 23}, 30, 180);
+        ContentTransitionDialog.createMenuScreen(true, 420, 9, 460, new int[]{8, 3}, 30, 180);
+        ContentTransitionDialog.createMenuScreen(true, 260, 10, 460, new int[]{23, 24}, 30, 180);
+        ContentTransitionDialog.createMenuScreen(true, 420, 11, 460, new int[]{7}, 30, 180);
+        ContentTransitionDialog.createMenuScreen(true, 175, 12, 460, new int[]{}, 30, 180);
+        ContentTransitionDialog.createMenuScreen(true, 420, 13, 460, new int[]{33, 34}, 30, 180);
+        ContentTransitionDialog.createMenuScreen(true, 360, 16, 460, new int[]{0, 29, 7}, 30, 180);
+        ContentTransitionDialog.createMenuScreen(true, 420, 17, 460, new int[]{7}, 30, 180);
+        ContentTransitionDialog.createMenuScreen(true, 175, 14, 460, new int[]{}, 30, 180);
+        field_S = SpriteEffectHelpers.createGrayRampSprite(600);
+        field_W = SpriteEffectHelpers.createGrayRampSprite(180);
+        field_N = SpriteEffectHelpers.createGrayRampSprite(300);
         field_X = "Play free version";
     }
 }

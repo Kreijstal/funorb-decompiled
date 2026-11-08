@@ -37,24 +37,24 @@ final class wa {
             var9 = new int[var3];
             var21 = var9;
             for (var6_int = 0; var6_int < var3; var6_int++) {
-              var9[var6_int] = fl.field_g[cm.bitAnd(255, (int) var20[var6_int])];
+              var9[var6_int] = AsyncValidationResult.field_g[cm.bitAnd(255, (int) var20[var6_int])];
             }
-            var1[var2] = new Sprite(tj.field_y, jb.field_a, IntrusiveNode.field_b[var2], e.field_b[var2], ByteStorage.field_g[var2], ge.field_c[var2], var21);
+            var1[var2] = new Sprite(StrongCacheReference.field_y, jb.field_a, IntrusiveNode.field_b[var2], e.field_b[var2], ByteStorage.field_g[var2], ge.field_c[var2], var21);
           } else {
             var22 = gd.field_k[var2];
             var16 = new int[var3];
             var13 = var16;
             var6 = var13;
             for (var7 = 0; var7 < var3; var7++) {
-              var6[var7] = bq.bitOr(fl.field_g[cm.bitAnd(255, (int) var20[var7])], cm.bitAnd(var22[var7] << 24, -16777216));
+              var6[var7] = bq.bitOr(AsyncValidationResult.field_g[cm.bitAnd(255, (int) var20[var7])], cm.bitAnd(var22[var7] << 24, -16777216));
             }
-            var1[var2] = (Sprite) ((Object) new ArgbSprite(tj.field_y, jb.field_a, IntrusiveNode.field_b[var2], e.field_b[var2], ByteStorage.field_g[var2], ge.field_c[var2], var16));
+            var1[var2] = (Sprite) ((Object) new ArgbSprite(StrongCacheReference.field_y, jb.field_a, IntrusiveNode.field_b[var2], e.field_b[var2], ByteStorage.field_g[var2], ge.field_c[var2], var16));
           }
         }
         if (param0 >= -116) {
           return (Sprite[]) null;
         }
-        re.b(140);
+        LoadingStepTracker.clearSpriteDecodeBuffers(140);
         return var1;
     }
 

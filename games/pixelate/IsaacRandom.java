@@ -23,8 +23,8 @@ final class IsaacRandom {
           if (param3 <= 114) {
             field_a = (String) null;
           }
-          if (rk.a(param2, false, param1, param0)) {
-            return tj.b((byte) -103);
+          if (PieceTiming.a(param2, false, param1, param0)) {
+            return StrongCacheReference.createIndexedSpriteFromDecodeBuffers((byte) -103);
           }
           return null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -242,7 +242,7 @@ final class IsaacRandom {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!rk.a(param4, false, param0, param1)) {
+          if (!PieceTiming.a(param4, false, param0, param1)) {
             return null;
           }
           if (param2 != 48077700) {

@@ -75,7 +75,7 @@ final class sm extends IntrusiveNode {
               var5 = ff.requestRemoveFriend(param0, (String) (var4), (byte) -106);
             }
             if (QuickChatCategoryCache.field_e == 2) {
-              var5 = mj.a(-34, (String) (var4), param0);
+              var5 = ScoreMarkerDemo.requestAddIgnore(-34, (String) (var4), param0);
             }
             if (QuickChatCategoryCache.field_e == 3) {
               var5 = aq.a((String) (var4), param0, (String) (var4), -20867);
@@ -84,7 +84,7 @@ final class sm extends IntrusiveNode {
             }
             if (var5 != null) {
               var6 = (String) null;
-              MidiPcmStream.a(0, (String) null, (String) (var4), (byte) -59, 2, (String) (var5));
+              MidiPcmStream.appendChatMessage(0, (String) null, (String) (var4), (byte) -59, 2, (String) (var5));
             }
           }
           he.field_f = null;
@@ -127,7 +127,7 @@ final class sm extends IntrusiveNode {
           var5Lifetime1 = ff.requestRemoveFriend(param0, (String) (var4Lifetime1), (byte) -106);
         }
         if (QuickChatCategoryCache.field_e == 2) {
-          var5Lifetime1 = mj.a(-34, (String) (var4Lifetime1), param0);
+          var5Lifetime1 = ScoreMarkerDemo.requestAddIgnore(-34, (String) (var4Lifetime1), param0);
         }
         if (QuickChatCategoryCache.field_e == 3) {
           var5Lifetime1 = aq.a((String) (var4Lifetime1), param0, (String) (var4Lifetime1), -20867);
@@ -138,7 +138,7 @@ final class sm extends IntrusiveNode {
           return;
         }
         var6Lifetime1 = (String) null;
-        MidiPcmStream.a(0, (String) null, (String) (var4Lifetime1), (byte) -59, 2, (String) (var5Lifetime1));
+        MidiPcmStream.appendChatMessage(0, (String) null, (String) (var4Lifetime1), (byte) -59, 2, (String) (var5Lifetime1));
         he.field_f = null;
         QuickChatCategoryCache.field_e = -1;
         return;

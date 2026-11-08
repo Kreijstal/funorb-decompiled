@@ -373,8 +373,8 @@ class PacketBuffer extends IntrusiveNode {
           var4 = dh.a(param2, (byte) 58);
           if (var4 != null &&
             var4.length() >= 1) {
-            if (!MatchController.a((byte) 123, var4.charAt(0)) &&
-              !MatchController.a((byte) 124, var4.charAt(var4.length() - 1))) {
+            if (!MatchController.isNameSeparatorChar((byte) 123, var4.charAt(0)) &&
+              !MatchController.isNameSeparatorChar((byte) 124, var4.charAt(var4.length() - 1))) {
               var5 = 0;
               var6 = 0;
               if (param1 != 5832) {
@@ -383,7 +383,7 @@ class PacketBuffer extends IntrusiveNode {
               stackIn_25_0 = (CharSequence) (param2);
               while (((CharSequence) (Object) stackIn_25_0).length() > var6) {
                 var7 = param2.charAt(var6);
-                if (!MatchController.a((byte) 119, (char) var7)) {
+                if (!MatchController.isNameSeparatorChar((byte) 119, (char) var7)) {
                   var5 = 0;
                 } else {
                   var5++;
@@ -615,7 +615,7 @@ class PacketBuffer extends IntrusiveNode {
         int var2 = DialWidgetPainter.field_n ? 250 : 200;
         PasswordValidator.field_o.setBounds(5, 30, var2 + 5, 256, 363 - var2);
         SocketJs5Transport.field_t.setBounds(5, 30, 370, 256, -375 + MidiPcmStream.field_E.field_K);
-        aj.field_k.a(5, 2, (byte) 52, -5 + DiskCacheWorker.field_a.field_K - 5, 37, -10 + DiskCacheWorker.field_a.height - 32, DelegatingCanvas.field_b);
+        aj.field_k.setBoundsAndLayout(5, 2, (byte) 52, -5 + DiskCacheWorker.field_a.field_K - 5, 37, -10 + DiskCacheWorker.field_a.height - 32, DelegatingCanvas.field_b);
         int var3 = (2 + MidiPcmStream.field_E.field_K) / 2;
         lg.field_c.setBounds(-40 + MidiPcmStream.field_E.height, 40, 0, 256, var3 - 2);
         if (!DialWidgetPainter.field_n) {

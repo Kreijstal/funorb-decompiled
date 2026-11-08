@@ -50,8 +50,8 @@ final class MarkerSliderPainter implements WidgetPainter {
           var8 = param3 + param0.field_z + var12.field_R;
           var9 = param2 + param0.field_p + var12.field_T;
           SoftwareRasterizer.drawLine(var8, var9, var7 + var8, var9, this.field_c);
-          for (var10 = -1 + var12.f((byte) 62); var10 >= 0; var10--) {
-            SoftwareRasterizer.fillCircle(var8 + var7 * var12.a((byte) -91, var10) / var12.k(param1 + 123), var9, this.field_e, this.field_a);
+          for (var10 = -1 + var12.getMarkerCount((byte) 62); var10 >= 0; var10--) {
+            SoftwareRasterizer.fillCircle(var8 + var7 * var12.getMarker((byte) -91, var10) / var12.getRange(param1 + 123), var9, this.field_e, this.field_a);
           }
           if (null == this.field_h) {
             return;

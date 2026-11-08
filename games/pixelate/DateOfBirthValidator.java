@@ -204,7 +204,7 @@ final class DateOfBirthValidator extends DebouncedValidator implements TextInput
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = (NumberFormatException) (Object) decompiledCaughtException;
         }
-        return ue.field_p;
+        return RankingTableRequest.field_p;
     }
 
     public DateOfBirthValidator() {

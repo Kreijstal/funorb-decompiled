@@ -15,7 +15,7 @@ abstract class ContentTransitionDialog extends ResizableModalPanel {
     static String[] field_jb;
     private int fadeOutDuration;
 
-    final static void a(boolean param0, int param1, int param2, int param3, int[] param4, int param5, int param6) {
+    final static void createMenuScreen(boolean param0, int param1, int param2, int param3, int[] param4, int param5, int param6) {
         RuntimeException stackIn_35_0 = null;
         StringBuilder stackIn_35_1 = null;
         String stackIn_36_2 = null;
@@ -83,7 +83,7 @@ abstract class ContentTransitionDialog extends ResizableModalPanel {
           if (param0) {
             return;
           }
-          ContentTransitionDialog.e((byte) 29);
+          ContentTransitionDialog.getTimedNoticeText((byte) 29);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -99,7 +99,7 @@ abstract class ContentTransitionDialog extends ResizableModalPanel {
         }
     }
 
-    final static byte[] a(String param0, byte param1) {
+    final static byte[] getNamedTextFile(String param0, byte param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         byte[] stackIn_1_0 = null;
@@ -125,7 +125,7 @@ abstract class ContentTransitionDialog extends ResizableModalPanel {
         }
     }
 
-    final void f(boolean param0) {
+    final void onResizeFinished(boolean param0) {
         if (DisplayNameForm.field_I == this.transitionPhase) {
           return;
         }
@@ -209,12 +209,12 @@ abstract class ContentTransitionDialog extends ResizableModalPanel {
             return super.tickLayerAndCheckHidden(false);
           }
           this.transitionPhase = ViewportController.field_h;
-          this.a(this.pendingContent.field_C + this.headerHeight + 12, 12 + this.pendingContent.field_E, this.field_gb, 57);
+          this.startResizeAnimation(this.pendingContent.field_C + this.headerHeight + 12, 12 + this.pendingContent.field_E, this.field_gb, 57);
           this.phaseTick = 0;
           this.contentWrapper.field_O = 0;
           return super.tickLayerAndCheckHidden(false);
         }
-        ContentTransitionDialog.e((byte) 58);
+        ContentTransitionDialog.getTimedNoticeText((byte) 58);
         if (this.transitionPhase == null) {
           return super.tickLayerAndCheckHidden(false);
         }
@@ -239,7 +239,7 @@ abstract class ContentTransitionDialog extends ResizableModalPanel {
           return super.tickLayerAndCheckHidden(false);
         }
         this.transitionPhase = ViewportController.field_h;
-        this.a(this.pendingContent.field_C + this.headerHeight + 12, 12 + this.pendingContent.field_E, this.field_gb, 57);
+        this.startResizeAnimation(this.pendingContent.field_C + this.headerHeight + 12, 12 + this.pendingContent.field_E, this.field_gb, 57);
         this.phaseTick = 0;
         this.contentWrapper.field_O = 0;
         return super.tickLayerAndCheckHidden(false);
@@ -273,7 +273,7 @@ abstract class ContentTransitionDialog extends ResizableModalPanel {
               this.phaseTick = 0;
             }
           } else {
-            this.a(this.pendingContent.field_C + this.headerHeight + 12, 12 + this.pendingContent.field_E, this.field_gb, 57);
+            this.startResizeAnimation(this.pendingContent.field_C + this.headerHeight + 12, 12 + this.pendingContent.field_E, this.field_gb, 57);
             this.phaseTick = 0;
           }
           if (param1 < -111) {
@@ -317,40 +317,40 @@ abstract class ContentTransitionDialog extends ResizableModalPanel {
         }
     }
 
-    final void e(boolean param0) {
+    final void finishAnimations(boolean param0) {
         if (null != this.transitionPhase) {
           if (Js5Transport.field_i != this.transitionPhase) {
-            this.a(this.headerHeight + 12 + this.pendingContent.field_C, (byte) -110, 12 + this.pendingContent.field_E);
+            this.centerWithSize(this.headerHeight + 12 + this.pendingContent.field_C, (byte) -110, 12 + this.pendingContent.field_E);
             this.installContent(this.pendingContent, 111);
           }
           this.contentWrapper.field_O = 256;
           this.transitionPhase = null;
         }
-        super.e(param0);
+        super.finishAnimations(param0);
     }
 
-    public static void f(byte param0) {
+    public static void clearStatics(byte param0) {
         field_hb = null;
         field_jb = null;
         field_eb = null;
         if (param0 != 82) {
           String var2 = (String) null;
-          ContentTransitionDialog.a((String) null, (byte) -11);
+          ContentTransitionDialog.getNamedTextFile((String) null, (byte) -11);
         }
     }
 
-    final boolean a(byte param0) {
-        this.e(false);
+    final boolean isDismissed(byte param0) {
+        this.finishAnimations(false);
         if (param0 < 120) {
-          this.f(false);
-          return super.a((byte) 126);
+          this.onResizeFinished(false);
+          return super.isDismissed((byte) 126);
         }
-        return super.a((byte) 126);
+        return super.isDismissed((byte) 126);
     }
 
-    final static String e(byte param0) {
+    final static String getTimedNoticeText(byte param0) {
         int var1 = -24 / ((-51 - param0) / 54);
-        if (re.field_h) {
+        if (LoadingStepTracker.field_h) {
           return null;
         }
         if (Js5ArchiveManager.field_c > CachedTextLayout.field_h) {

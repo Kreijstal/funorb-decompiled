@@ -12,7 +12,7 @@ final class qn extends IntrusiveNode {
     static int field_o;
 
     final static int e(int param0) {
-        ck.field_j.b((byte) -2);
+        FloatingSquare.field_j.maintainArchives((byte) -2);
         if (param0 != 59) {
           qn.a(-63);
         }

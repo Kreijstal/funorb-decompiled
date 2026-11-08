@@ -197,7 +197,7 @@ final class PlayerBoard {
 
     final static int a(int param0, int param1) {
         int var2 = -19 % ((param1 - 71) / 53);
-        return SecondaryNodeHashTable.a(param0, -1) >> 8;
+        return SecondaryNodeHashTable.inverseSquareRoot(param0, -1) >> 8;
     }
 
     final boolean isFullyPainted(int param0) {
@@ -258,7 +258,7 @@ final class PlayerBoard {
               }
             }
           } else {
-            var2 = un.field_j.a(0);
+            var2 = un.field_j.takeNextPiece(0);
             if (-1 == var2) {
               return;
             }

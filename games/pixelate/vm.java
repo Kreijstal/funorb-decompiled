@@ -6,16 +6,16 @@ final class vm {
     static String[] field_e;
     static String field_f;
     static SecondaryNodeHashTable field_b;
-    static io field_a;
+    static LoginMethod field_a;
     static boolean field_d;
     static String field_g;
 
     final static LobbyGame findLobbyGame(int param0, byte param1) {
         if (param1 <= -102) {
-          return null == dg.field_f ? null : (LobbyGame) (dg.field_f.a(-11434, (long)param0));
+          return null == dg.field_f ? null : (LobbyGame) (dg.field_f.get(-11434, (long)param0));
         }
         vm.b(-99, (byte) 98);
-        return null == dg.field_f ? null : (LobbyGame) (dg.field_f.a(-11434, (long)param0));
+        return null == dg.field_f ? null : (LobbyGame) (dg.field_f.get(-11434, (long)param0));
     }
 
     final static ResourceArchive createArchive(boolean param0, byte param1, boolean param2, int param3, int param4) {
@@ -30,9 +30,9 @@ final class vm {
         if (param1 > -62) {
           return;
         }
-        io.field_e = 3 & param0 >> 4;
-        if (io.field_e > 2) {
-          io.field_e = 2;
+        LoginMethod.field_e = 3 & param0 >> 4;
+        if (LoginMethod.field_e > 2) {
+          LoginMethod.field_e = 2;
           GradientOutlineTextPainter.field_v = (14 & param0) >> 2;
           if (!(GradientOutlineTextPainter.field_v <= 2)) {
             GradientOutlineTextPainter.field_v = 2;
@@ -75,7 +75,7 @@ final class vm {
 
     static {
         field_f = "Try Again";
-        field_a = new io("usename");
+        field_a = new LoginMethod("usename");
         field_g = "Cancel";
     }
 }

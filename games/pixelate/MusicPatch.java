@@ -30,9 +30,9 @@ final class MusicPatch extends IntrusiveNode {
           if (var2 == 0) {
             var2 = 32;
           }
-          nk.a((byte) 93, -var2 + LinkButtonPainter.field_h);
+          nk.setMusicVolume((byte) 93, -var2 + LinkButtonPainter.field_h);
         } else {
-          nk.a((byte) 93, 0);
+          nk.setMusicVolume((byte) 93, 0);
         }
     }
 
@@ -69,7 +69,7 @@ final class MusicPatch extends IntrusiveNode {
         Matrix3 var24 = null;
         var21 = Pixelate.field_H ? 1 : 0;
         try {
-          var22 = LobbyPlayer.a(param0.field_o, param0.field_l, 0);
+          var22 = LobbyPlayer.axisAngleRotation(param0.field_o, param0.field_l, 0);
           var3 = 4;
           var4 = 14;
           if (param0.field_n != 0) {
@@ -94,7 +94,7 @@ final class MusicPatch extends IntrusiveNode {
             stackIn_12_0 = new Vector3(var3 << var4, 0, 0);
           }
           var5 = stackIn_12_0;
-          stackIn_15_0 = (0 >= var22.a(var5, (byte) 106).field_i) ? 0 : 1;
+          stackIn_15_0 = (0 >= var22.transform(var5, (byte) 106).field_i) ? 0 : 1;
           var6 = stackIn_15_0;
           var7 = 2048 * param0.field_x / param0.field_w;
           if (param1 != 1183261192) {
@@ -106,8 +106,8 @@ final class MusicPatch extends IntrusiveNode {
           } else {
             stackIn_20_1 = -var7;
           }
-          var23 = LobbyPlayer.a(stackIn_19_0, stackIn_20_1, param1 - 1183261192);
-          var24 = var22.a(param1 - 1183261184, var23);
+          var23 = LobbyPlayer.axisAngleRotation(stackIn_19_0, stackIn_20_1, param1 - 1183261192);
+          var24 = var22.multiply(param1 - 1183261184, var23);
           var9 = 0;
           var10 = 2;
           var11 = 0;
@@ -217,17 +217,17 @@ final class MusicPatch extends IntrusiveNode {
     final static void a(byte param0) {
         ln.a(param0 + 165);
         if (null != NameAvailabilityValidator.field_u) {
-          MenuInputState.a(NameAvailabilityValidator.field_u, 0);
+          MenuInputState.removeCanvasInputListeners(NameAvailabilityValidator.field_u, 0);
         }
         if (param0 != -91) {
           return;
         }
-        MusicCrossfadeStream.a((byte) -109);
+        MusicCrossfadeStream.clearKeyboardHandler((byte) -109);
         TextHotspotWidget.a((byte) -94);
         ep.c(-26721);
         if (KiteBackground.b(true)) {
           aa.field_f.writeOpcode(1, 15514);
-          SecondaryNodeHashTable.b(0, param0 + 10091);
+          SecondaryNodeHashTable.flushOutgoingPackets(0, param0 + 10091);
         }
         na.a(true);
     }

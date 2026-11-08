@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fl {
+final class AsyncValidationResult {
     private String field_e;
     private boolean field_d;
     static int[] field_g;
@@ -10,7 +10,7 @@ final class fl {
     static ResourceArchive field_b;
     private boolean field_a;
 
-    final static QuickChatCategory c(int param0) {
+    final static QuickChatCategory findRootQuickChatCategory(int param0) {
         int var1_int = 0;
         QuickChatCategory var2 = null;
         QuickChatCategory stackIn_6_0 = null;
@@ -18,7 +18,7 @@ final class fl {
         IllegalArgumentException var1 = null;
         try {
           if (param0 != -3060) {
-            fl.a((byte) 81);
+            AsyncValidationResult.showLoadingProgressDialog((byte) 81);
           }
           var1_int = 0;
           while (true) {
@@ -36,7 +36,7 @@ final class fl {
         }
     }
 
-    final static boolean a(int param0, int param1, int param2, int param3) {
+    final static boolean dispatchKeyInput(int param0, int param1, int param2, int param3) {
         if (ln.field_q) {
           return td.field_b.processKey(DualLinkDeque.field_f, ke.field_a, false);
         }
@@ -52,15 +52,15 @@ final class fl {
         return EmailCredentials.a(param0, -35, param1);
     }
 
-    final boolean d(int param0) {
+    final boolean isComplete(int param0) {
         if (param0 <= 35) {
-          this.b((byte) 37);
+          this.getMessage((byte) 37);
           return this.field_d;
         }
         return this.field_d;
     }
 
-    final static void a(byte param0) {
+    final static void showLoadingProgressDialog(byte param0) {
         wa.field_c.refreshPanelVisibility((byte) 54);
         int var1 = -119 / ((param0 + 55) / 51);
         if (null != cn.field_b) {
@@ -71,15 +71,15 @@ final class fl {
         wa.field_c.b(-6183, cn.field_b);
     }
 
-    final boolean b(int param0) {
+    final boolean isSuccessful(int param0) {
         if (param0 != -20425) {
-          fl.a((byte) -122);
+          AsyncValidationResult.showLoadingProgressDialog((byte) -122);
           return this.field_a;
         }
         return this.field_a;
     }
 
-    final void a(int param0, boolean param1) {
+    final void complete(int param0, boolean param1) {
         if (param0 == 0) {
           this.field_d = true;
           this.field_a = param1 ? true : false;
@@ -100,12 +100,12 @@ final class fl {
         }
     }
 
-    final String b(byte param0) {
+    final String getMessage(byte param0) {
         int var2 = 63 / ((param0 - 28) / 50);
         return this.field_e;
     }
 
-    fl(String param0) {
+    AsyncValidationResult(String param0) {
         this.field_d = false;
         this.field_a = false;
         try {

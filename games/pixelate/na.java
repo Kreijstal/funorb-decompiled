@@ -20,7 +20,7 @@ final class na {
           if (param1 != -33) {
             field_a = (String) null;
           }
-          stackIn_3_0 = tj.parseInt(10, param0, true, true);
+          stackIn_3_0 = StrongCacheReference.parseInt(10, param0, true, true);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

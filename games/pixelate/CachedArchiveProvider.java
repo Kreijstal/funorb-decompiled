@@ -70,7 +70,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
           if (null == this.getIndex((byte) 36)) {
             return;
           }
-          var2 = this.field_l.c(param0 + 1504642244);
+          var2 = this.field_l.first(param0 + 1504642244);
           while (var2 != null) {
             var3 = (int)var2.field_e;
             if (var3 >= 0) {
@@ -94,7 +94,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
             } else {
               var2.unlink(2779);
             }
-            var2 = this.field_l.last(1504642273);
+            var2 = this.field_l.next(1504642273);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -130,7 +130,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
         byte[] var30 = null;
         var10 = Pixelate.field_H ? 1 : 0;
         try {
-          var12 = (ArchiveRequest) (this.requests.a(-25484, (long)param0));
+          var12 = (ArchiveRequest) (this.requests.get(-25484, (long)param0));
           var4 = var12;
           if (!param2) {
             discarded$0 = this.pollGroupRequest(37, -122, true);
@@ -175,7 +175,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
                 var4 = this.field_i.createRequest((byte) -31, this.archiveId, false, param0, (byte) 2);
               }
             }
-            this.requests.a((long)param0, 127, (IntrusiveNode) (var4));
+            this.requests.put((long)param0, 127, (IntrusiveNode) (var4));
           }
           if (((ArchiveRequest) (var4)).field_v) {
             stackIn_40_0 = null;
@@ -233,7 +233,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
                   return null;
                 }
                 var4 = this.field_i.createRequest((byte) -31, this.archiveId, true, param0, (byte) 2);
-                this.requests.a((long)param0, 127, (IntrusiveNode) (var4));
+                this.requests.put((long)param0, 127, (IntrusiveNode) (var4));
               }
               stackIn_118_0 = null;
               return (ArchiveRequest) (stackIn_118_0);
@@ -275,7 +275,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
               return null;
             }
             var4 = this.field_i.createRequest((byte) -31, this.archiveId, true, param0, (byte) 2);
-            this.requests.a((long)param0, 127, (IntrusiveNode) (var4));
+            this.requests.put((long)param0, 127, (IntrusiveNode) (var4));
             stackIn_68_0 = null;
             return (ArchiveRequest) (stackIn_68_0);
           }
@@ -309,7 +309,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
           if (param1 != 8192) {
             CachedArchiveProvider.d((byte) 22);
           }
-          var3 = (ArchiveRequest) (this.requests.a(-25484, (long)param0));
+          var3 = (ArchiveRequest) (this.requests.get(-25484, (long)param0));
           if (var3 == null) {
             stackIn_6_0 = 0;
             return stackIn_6_0;
@@ -522,7 +522,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
             }
             if (this.field_k) {
               var2_int = 1;
-              var3 = this.pendingScanGroups.c(1504642273);
+              var3 = this.pendingScanGroups.first(1504642273);
               while (var3 != null) {
                 var4 = (int)var3.field_e;
                 if (0 == this.cacheGroupStates[var4]) {
@@ -533,7 +533,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
                 } else {
                   var2_int = 0;
                 }
-                var3 = this.pendingScanGroups.last(1504642273);
+                var3 = this.pendingScanGroups.next(1504642273);
               }
               while (this.index.fileCounts.length > this.scanGroupId) {
                 if (0 == this.index.fileCounts[this.scanGroupId]) {
@@ -547,7 +547,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
                   if (0 == this.cacheGroupStates[this.scanGroupId]) {
                     var6 = new IntrusiveNode();
                     var6.field_e = (long)this.scanGroupId;
-                    this.pendingScanGroups.addFirst(22125, var6);
+                    this.pendingScanGroups.addLast(22125, var6);
                     var2_int = 0;
                   }
                   this.scanGroupId = this.scanGroupId + 1;
@@ -565,7 +565,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
             else {
               if (this.field_q) {
                 var2_intLifetime1 = 1;
-                var3Lifetime1 = this.pendingScanGroups.c(param0 ^ 1504642273);
+                var3Lifetime1 = this.pendingScanGroups.first(param0 ^ 1504642273);
                 while (var3Lifetime1 != null) {
                   var4Lifetime1 = (int)var3Lifetime1.field_e;
                   if (1 != this.cacheGroupStates[var4Lifetime1]) {
@@ -576,7 +576,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
                   } else {
                     var3Lifetime1.unlink(param0 ^ 2779);
                   }
-                  var3Lifetime1 = this.pendingScanGroups.last(1504642273);
+                  var3Lifetime1 = this.pendingScanGroups.next(1504642273);
                 }
                 while (this.scanGroupId < this.index.fileCounts.length) {
                   if (this.index.fileCounts[this.scanGroupId] == 0) {
@@ -590,7 +590,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
                     if (this.cacheGroupStates[this.scanGroupId] != 1) {
                       var7 = new IntrusiveNode();
                       var7.field_e = (long)this.scanGroupId;
-                      this.pendingScanGroups.addFirst(22125, var7);
+                      this.pendingScanGroups.addLast(22125, var7);
                       var2_intLifetime1 = 0;
                     }
                     this.scanGroupId = this.scanGroupId + 1;
@@ -615,7 +615,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
           }
           if (this.field_p &&
             hm.a(64) >= this.field_t) {
-            var2_ref = (ArchiveRequest) (this.requests.a((byte) -99));
+            var2_ref = (ArchiveRequest) (this.requests.first((byte) -99));
             while (var2_ref != null) {
               if (!var2_ref.field_v) {
                 if (!var2_ref.field_x) {
@@ -627,7 +627,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
                   var2_ref.unlink(param0 + 2779);
                 }
               }
-              var2_ref = (ArchiveRequest) (this.requests.a(-123));
+              var2_ref = (ArchiveRequest) (this.requests.next(-123));
             }
             this.field_t = 1000L + hm.a(64);
             return;

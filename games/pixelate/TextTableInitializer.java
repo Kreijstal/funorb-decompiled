@@ -21,7 +21,7 @@ final class TextTableInitializer {
             return;
           }
           PacketBuffer.field_o = new String[35];
-          PacketBuffer.field_o[3] = ah.field_u;
+          PacketBuffer.field_o[3] = CacheReference.field_u;
           PacketBuffer.field_o[7] = ge.field_b;
           PacketBuffer.field_o[9] = ih.field_e;
           PacketBuffer.field_o[6] = wk.field_f;
@@ -40,18 +40,18 @@ final class TextTableInitializer {
           PacketBuffer.field_o[4] = MatchHud.field_l;
           PacketBuffer.field_o[19] = cl.field_c;
           PacketBuffer.field_o[17] = dg.field_c[0];
-          PacketBuffer.field_o[15] = re.field_k[1];
-          PacketBuffer.field_o[24] = mj.field_i;
+          PacketBuffer.field_o[15] = LoadingStepTracker.field_k[1];
+          PacketBuffer.field_o[24] = ScoreMarkerDemo.field_i;
           PacketBuffer.field_o[22] = SecondaryNodeDeque.field_d;
           PacketBuffer.field_o[20] = HowToPlayScreen.field_p;
           PacketBuffer.field_o[26] = qh.field_f;
-          PacketBuffer.field_o[16] = re.field_k[2];
+          PacketBuffer.field_o[16] = LoadingStepTracker.field_k[2];
           PacketBuffer.field_o[23] = td.field_a;
           PacketBuffer.field_o[27] = IterableNodeHashTable.field_d;
-          PacketBuffer.field_o[21] = mj.field_e;
+          PacketBuffer.field_o[21] = ScoreMarkerDemo.field_e;
           PacketBuffer.field_o[25] = PasswordFieldPainter.field_z;
           PacketBuffer.field_o[18] = dg.field_c[1];
-          PacketBuffer.field_o[14] = re.field_k[0];
+          PacketBuffer.field_o[14] = LoadingStepTracker.field_k[0];
           BlastFromThePastBackground.field_m[3] = GzipDecoder.field_b;
           BlastFromThePastBackground.field_m[6] = ReportAbuseDialog.field_Vb;
           BlastFromThePastBackground.field_m[2] = bo.field_a;

@@ -83,7 +83,7 @@ final class AccountNamePrompt extends SceneWidget {
             }
             return true;
           }
-          if (!MidiPcmStream.a(124, (char) var3)) {
+          if (!MidiPcmStream.isAsciiDigit(124, (char) var3)) {
             if (ke.field_a == 84) {
               if (this.field_Eb.length() <= 0) {
                 this.completionState = 1;
@@ -152,7 +152,7 @@ final class AccountNamePrompt extends SceneWidget {
             }
             return true;
           }
-          if (!MidiPcmStream.a(124, (char) var3Lifetime1)) {
+          if (!MidiPcmStream.isAsciiDigit(124, (char) var3Lifetime1)) {
             if (ke.field_a == 84) {
               if (this.field_Eb.length() <= 0) {
                 this.completionState = 1;
@@ -180,7 +180,7 @@ final class AccountNamePrompt extends SceneWidget {
           }
           return true;
         }
-        nk.a(this.field_Eb, this.field_Eb.length() - 1, ' ', 16736352);
+        nk.padWithChar(this.field_Eb, this.field_Eb.length() - 1, ' ', 16736352);
         var2Lifetime2 = 17 / ((-8 - param0) / 50);
         if (this.field_Eb.length() >= 12) {
           if (ke.field_a == 84) {
@@ -221,7 +221,7 @@ final class AccountNamePrompt extends SceneWidget {
           this.completionState = 1;
           return true;
         }
-        if (!MidiPcmStream.a(124, (char) var3Lifetime2)) {
+        if (!MidiPcmStream.isAsciiDigit(124, (char) var3Lifetime2)) {
           if (ke.field_a == 84) {
             if (this.field_Eb.length() <= 0) {
               this.completionState = 1;
@@ -328,7 +328,7 @@ final class AccountNamePrompt extends SceneWidget {
         StringBuilder discarded$3 = null;
         int var4;
         var4 = Pixelate.field_H ? 1 : 0;
-        this.a(-28476, param1);
+        this.updateInputFullScreen(-28476, param1);
         if (param0 >= -92) {
           return 124;
         }
@@ -353,7 +353,7 @@ final class AccountNamePrompt extends SceneWidget {
           }
           if (ke.field_a == 85 &&
             this.field_Eb.length() > 0) {
-            nk.a(this.field_Eb, -1 + this.field_Eb.length(), ' ', 16736352);
+            nk.padWithChar(this.field_Eb, -1 + this.field_Eb.length(), ' ', 16736352);
           }
           if (aq.a(DualLinkDeque.field_f, (CharSequence) ((Object) this.field_Eb), (byte) -117)) {
             discarded$0 = this.field_Eb.append(DualLinkDeque.field_f);
@@ -414,7 +414,7 @@ final class AccountNamePrompt extends SceneWidget {
           this.addChild(this.field_Lb, (byte) 26);
           this.field_Lb.field_qb = "|";
           this.field_Eb = new StringBuilder(12);
-          var9_int = this.field_Fb.g(0);
+          var9_int = this.field_Fb.getContentWidth(0);
           this.field_Fb.setBounds(3, fq.field_q, 5, 256, var9_int);
           this.field_Lb.setBounds(3 + fq.field_q, fq.field_q, 5, 256, var9_int);
           var10 = var9_int + 10;

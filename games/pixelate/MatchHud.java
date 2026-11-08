@@ -48,7 +48,7 @@ final class MatchHud {
         int var5Lifetime2;
         var8 = Pixelate.field_H ? 1 : 0;
         var3 = -96 / ((param0 + 64) / 35);
-        var9 = rk.field_e;
+        var9 = PieceTiming.field_e;
         var10 = var9;
         if (this.field_n != 0) {
           if (this.field_n != 1 &&
@@ -86,10 +86,10 @@ final class MatchHud {
           }
         } else {
           if (0 < this.field_p) {
-            SpriteEffectHelpers.a(var10, SoundCache.field_j, Integer.toString(this.field_g.field_r), Js5Transport.field_n, 30, 50, 0, -1, this.field_p);
+            SpriteEffectHelpers.drawLabelValueAlpha(var10, SoundCache.field_j, Integer.toString(this.field_g.field_r), Js5Transport.field_n, 30, 50, 0, -1, this.field_p);
             var9.drawLeftAlpha(sb.a(this.field_r[0], 3), 30, 415, 0, -1, this.field_p);
             if (null != this.field_f) {
-              SpriteEffectHelpers.a(var10, IntrusiveDeque.field_e, this.field_f, ArrayWidgetContainer.field_J, 30, 390, 0, -1, this.field_p);
+              SpriteEffectHelpers.drawLabelValueAlpha(var10, IntrusiveDeque.field_e, this.field_f, ArrayWidgetContainer.field_J, 30, 390, 0, -1, this.field_p);
             }
           }
         }
@@ -241,13 +241,13 @@ final class MatchHud {
           PlayerBoard.field_v = SocketConnector.loadRgbSpritesByName("frame_bottom", "commonui", (byte) 47, param2);
           ge.field_g = bi.loadSprite("commonui", "jagex_logo_grey", param2, (byte) -74);
           fc.field_d = SocketConnector.loadRgbSpritesByName("button", "commonui", (byte) 47, param2);
-          CanvasRasterBuffer.field_g = MusicCrossfadeStream.a(param2, 20049, "validation", "commonui");
+          CanvasRasterBuffer.field_g = MusicCrossfadeStream.loadSpriteSheetByName(param2, 20049, "validation", "commonui");
           ep.field_b = (BitmapFont) ((Object) BoardView.a(param2, "commonui", 0, "arezzo12", param3));
           he.field_d = (BitmapFont) ((Object) BoardView.a(param2, "commonui", 0, "arezzo14", param3));
           ba.field_d = (BitmapFont) ((Object) BoardView.a(param2, "commonui", 0, "arezzo14bold", param3));
           var17 = new Sprite(param1.getNamedFile((byte) 24, "", "button.gif"), (java.awt.Component) ((Object) NameAvailabilityValidator.field_u));
           dq.loadIndexedSprite((byte) 31, "dropdown", "commonui", param2);
-          var5 = NetworkGameClient.a(param2, param0 ^ 4767934, "commonui", "screen_options");
+          var5 = NetworkGameClient.loadIndexedSpritesByName(param2, param0 ^ 4767934, "commonui", "screen_options");
           UiComponent.field_A = new IndexedSprite[4];
           UiComponent.field_o = new IndexedSprite[4];
           qg.field_a = new IndexedSprite[4];
@@ -271,7 +271,7 @@ final class MatchHud {
             }
           }
           var9Lifetime1 = var17.field_E;
-          MidiPcmStream.a(false);
+          MidiPcmStream.pushRasterState(false);
           var17.makeRasterTarget();
           SoftwareRasterizer.grayscaleRectangle(0, 0, SoftwareRasterizer.field_j, SoftwareRasterizer.field_d);
           var15 = new Sprite(var9Lifetime1, var9Lifetime1);

@@ -45,7 +45,7 @@ abstract class TextLayout {
     final static void c(boolean param0, int param1) {
         if (null != ri.field_f) {
           SoftwareRasterizer.darkenRectangle(SoftwareRasterizer.field_e, SoftwareRasterizer.field_f, -SoftwareRasterizer.field_e + SoftwareRasterizer.field_h, SoftwareRasterizer.field_a - SoftwareRasterizer.field_f);
-          ri.field_f.a(param0, 0);
+          ri.field_f.drawFullScreen(param0, 0);
         }
         if (param1 != -24721) {
           field_c = (String[]) null;

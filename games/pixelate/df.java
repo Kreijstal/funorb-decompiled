@@ -22,7 +22,7 @@ final class df extends IntrusiveNode {
         LobbyGame var6Lifetime1Lifetime1;
         if (param0 == 3) {
           if (NameAvailabilityValidator.field_r != param1) {
-            var12 = (LobbyGame) (dg.field_f.a(-11434, (long)NameAvailabilityValidator.field_r));
+            var12 = (LobbyGame) (dg.field_f.get(-11434, (long)NameAvailabilityValidator.field_r));
             var6 = var12;
             var9 = var12;
             NameAvailabilityValidator.field_r = param1;
@@ -39,7 +39,7 @@ final class df extends IntrusiveNode {
         }
         field_m = (String) null;
         if (NameAvailabilityValidator.field_r != param1) {
-          var6Lifetime1 = (LobbyGame) (dg.field_f.a(-11434, (long)NameAvailabilityValidator.field_r));
+          var6Lifetime1 = (LobbyGame) (dg.field_f.get(-11434, (long)NameAvailabilityValidator.field_r));
           var7 = var6Lifetime1;
           var6Lifetime1Lifetime1 = var7;
           NameAvailabilityValidator.field_r = param1;

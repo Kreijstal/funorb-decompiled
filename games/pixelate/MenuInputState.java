@@ -16,7 +16,7 @@ final class MenuInputState {
     static String field_b;
     static String field_m;
 
-    final void a(boolean param0, int param1) {
+    final void selectIndex(boolean param0, int param1) {
         if (param0) {
           this.initializeSelection(false, -5, -120, 105);
           if (this.heldButton == 0) {
@@ -33,19 +33,19 @@ final class MenuInputState {
         this.selectedIndex = param1;
     }
 
-    final static int a(boolean param0) {
+    final static int getTargetFrameRate(boolean param0) {
         if (!param0) {
           return -75;
         }
         return (int)(1000000000L / wa.field_b);
     }
 
-    final boolean d(int param0) {
+    final boolean isEndKey(int param0) {
         int var2 = -101 % ((param0 + 51) / 33);
         return this.keyCode == 103 ? true : false;
     }
 
-    final void a(byte param0) {
+    final void handleVerticalNavigation(byte param0) {
         this.keyCode = 0;
         this.field_k = 0;
         boolean decompiledFrameRemainder0 = true;
@@ -56,7 +56,7 @@ final class MenuInputState {
             }
             if (this.heldButton != 0) {
               if (param0 != -48) {
-                this.c(64);
+                this.isRightKey(64);
               }
               return;
             }
@@ -93,7 +93,7 @@ final class MenuInputState {
         if (param0 == -48) {
           return;
         }
-        this.c(64);
+        this.isRightKey(64);
     }
 
     public static void releaseStatics(int param0) {
@@ -107,7 +107,7 @@ final class MenuInputState {
         field_d = null;
     }
 
-    final void a(int param0, int param1) {
+    final void handleHorizontalNavigation(int param0, int param1) {
         if (param0 >= 46) {
           this.field_k = 0;
           this.keyCode = 0;
@@ -299,15 +299,15 @@ final class MenuInputState {
         this.selectedIndex = param1;
     }
 
-    final boolean c(byte param0) {
+    final boolean isButtonHeld(byte param0) {
         if (param0 == 35) {
           return 0 != this.heldButton ? true : false;
         }
-        MenuInputState.b(116, 24);
+        MenuInputState.selectLanguageStrings(116, 24);
         return 0 != this.heldButton ? true : false;
     }
 
-    final void b(byte param0) {
+    final void captureKeyCode(byte param0) {
         if (param0 == -71) {
           this.keyCode = 0;
           this.field_k = 0;
@@ -318,14 +318,14 @@ final class MenuInputState {
         }
     }
 
-    final boolean e(int param0) {
+    final boolean isLeftKey(int param0) {
         if (param0 != -97) {
           return true;
         }
         return this.keyCode == 96 ? true : false;
     }
 
-    final static jk[] a(CipherPacketBuffer param0, byte param1) {
+    final static jk[] readMeshColourEntries(CipherPacketBuffer param0, byte param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -356,8 +356,8 @@ final class MenuInputState {
             return stackIn_6_0;
           }
           while (var3 > var5) {
-            if (!tj.a(param0, -32)) {
-              var6 = param0.readBits(Matrix3.a(var5 - 1, 15598), (byte) -34);
+            if (!StrongCacheReference.readBit(param0, -32)) {
+              var6 = param0.readBits(Matrix3.bitLength(var5 - 1, 15598), (byte) -34);
               var4[var5] = var4[var6];
             } else {
               var6_ref_jk = new jk();
@@ -433,7 +433,7 @@ final class MenuInputState {
         this.pointerSelection = true;
         this.heldButton = IntrusiveDequeCursor.field_c;
         this.field_k = IntrusiveDequeCursor.field_c;
-        this.field_a = tj.field_v;
+        this.field_a = StrongCacheReference.field_v;
         if (this.heldButton == 0) {
           if (~IntrusiveDequeCursor.field_c == param2 &&
             0 == ef.field_b) {
@@ -525,16 +525,16 @@ final class MenuInputState {
         this.selectedIndex = param1;
     }
 
-    final static void b(int param0, int param1) {
+    final static void selectLanguageStrings(int param0, int param1) {
         td.field_d = ArchiveRequest.field_w[param0];
         hm.field_a = un.field_k[param0];
         wa.field_a = ProxyAuthenticationException.field_c[param0];
         if (param1 != -31383) {
-          MenuInputState.b(63, 96);
+          MenuInputState.selectLanguageStrings(63, 96);
         }
     }
 
-    final static byte a(byte param0, char param1) {
+    final static byte charToCp1252Byte(byte param0, char param1) {
         int var2;
         int var3;
         int var2Lifetime1;
@@ -1003,7 +1003,7 @@ final class MenuInputState {
         return (byte) var2Lifetime2;
     }
 
-    final boolean c(int param0) {
+    final boolean isRightKey(int param0) {
         if (param0 == 102) {
           return 97 == this.keyCode ? true : false;
         }
@@ -1011,7 +1011,7 @@ final class MenuInputState {
         return 97 == this.keyCode ? true : false;
     }
 
-    final static void a(java.awt.Canvas param0, int param1) {
+    final static void removeCanvasInputListeners(java.awt.Canvas param0, int param1) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -1019,7 +1019,7 @@ final class MenuInputState {
         RuntimeException var2 = null;
         try {
           Js5ArchiveManager.detachKeyboardInput(-7749, (java.awt.Component) ((Object) param0));
-          QuickChatMenu.a((byte) -47, (java.awt.Component) ((Object) param0));
+          QuickChatMenu.removeMouseListeners((byte) -47, (java.awt.Component) ((Object) param0));
           if (null != ScrollContainer.field_Lb) {
             ScrollContainer.field_Lb.attach(param1 + 18421, (java.awt.Component) ((Object) param0));
           }
@@ -1060,7 +1060,7 @@ final class MenuInputState {
         this.field_h = param0;
     }
 
-    final boolean d(byte param0) {
+    final boolean isHomeKey(byte param0) {
         if (param0 <= -75) {
           return 102 == this.keyCode ? true : false;
         }
@@ -1070,7 +1070,7 @@ final class MenuInputState {
 
     final boolean isActivated(int param0) {
         if (param0 < 4) {
-          MenuInputState.a(true);
+          MenuInputState.getTargetFrameRate(true);
           if (this.field_k != 0) {
             return true;
           }

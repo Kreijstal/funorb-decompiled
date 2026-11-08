@@ -42,7 +42,7 @@ final class GameResultsScreen extends MenuScreen {
         if (!param4) {
           if (!param5) {
             if (param2) {
-              this.field_A = ah.field_u;
+              this.field_A = CacheReference.field_u;
               this.field_I = 5;
             } else {
               this.field_A = gq.field_m;
@@ -91,7 +91,7 @@ final class GameResultsScreen extends MenuScreen {
         } else {
           NumericDateInputWidget.field_W[4].drawTransparent(0, 45);
         }
-        this.d((byte) -81);
+        this.drawDefaultBackdrop((byte) -81);
         this.drawRows((byte) -71);
         var2 = 20;
         var3 = 70;
@@ -106,7 +106,7 @@ final class GameResultsScreen extends MenuScreen {
           LoginCredentials.field_e.field_a[1].drawOpaque(var3 + (var2 >> 2), var4);
           var4 = var4 + var2;
         }
-        var5 = rk.field_e;
+        var5 = PieceTiming.field_e;
         var6 = 190;
         var7 = var5.maxAscent + var5.maxDescent + 3;
         if (this.field_G == 0) {
@@ -173,8 +173,8 @@ final class GameResultsScreen extends MenuScreen {
         return var3 + ":" + (var4 < 10 ? "0" : "") + var4;
     }
 
-    private final int d(int param0, int param1) {
-        int var3 = rk.field_e.textWidth(param1 == 0 ? this.field_A : this.field_s);
+    private final int getRowTextWidth(int param0, int param1) {
+        int var3 = PieceTiming.field_e.textWidth(param1 == 0 ? this.field_A : this.field_s);
         if (param1 == 0) {
           var3 += 40;
         }
@@ -182,7 +182,7 @@ final class GameResultsScreen extends MenuScreen {
         return var3;
     }
 
-    final void f(int param0) {
+    final void hideRematchOption(int param0) {
         this.field_B = false;
         if (param0 >= -119) {
           this.field_u = (String) null;
@@ -192,7 +192,7 @@ final class GameResultsScreen extends MenuScreen {
     final boolean isRowEnabled(int param0, int param1) {
         boolean stackIn_11_0 = false;
         if (param0 >= -112) {
-          this.f(-55);
+          this.hideRematchOption(-55);
         }
         boolean decompiledFrameRemainder0 = true;
         if (param1 != 0 && ((1 != this.field_G ||
@@ -213,11 +213,11 @@ final class GameResultsScreen extends MenuScreen {
         return this.field_d;
     }
 
-    final void a(int param0, int param1, boolean param2) {
-        super.a(param0, !this.isRowEnabled(-113, 1) ? 0 : 1, param2);
+    final void enterScreen(int param0, int param1, boolean param2) {
+        super.enterScreen(param0, !this.isRowEnabled(-113, 1) ? 0 : 1, param2);
     }
 
-    final void a(boolean param0, boolean param1, int param2, int param3, byte param4, int param5, int param6) {
+    final void setPuzzleResult(boolean param0, boolean param1, int param2, int param3, byte param4, int param5, int param6) {
         this.field_u = !param1 ? qj.field_c : MouseInputHandler.field_a;
         this.field_G = 1;
         this.field_x = param5;
@@ -239,13 +239,13 @@ final class GameResultsScreen extends MenuScreen {
     }
 
     final void onCancel(byte param0) {
-        this.b((byte) 12, false);
+        this.leaveResults((byte) 12, false);
         if (param0 > -13) {
           GameResultsScreen.releaseStatics((byte) 29);
         }
     }
 
-    final static int a(byte param0, int param1) {
+    final static int computeTimeBonusSeconds(byte param0, int param1) {
         int var2 = -((-10 + param1) / 2) + 25;
         int var3 = 19 % ((param0 - 54) / 38);
         if (var2 < 5) {
@@ -258,15 +258,15 @@ final class GameResultsScreen extends MenuScreen {
         if (param1) {
           field_r = -93;
         }
-        return this.getRowLeft(param0, (byte) 90) + this.d(-112, param0);
+        return this.getRowLeft(param0, (byte) 90) + this.getRowTextWidth(-112, param0);
     }
 
-    final void c(int param0) {
+    final void drawScreenBackground(int param0) {
         if (param0 != 0) {
           this.field_K = (String) null;
         }
         if (null == ro.field_e) {
-          super.c(0);
+          super.drawScreenBackground(0);
         } else {
           ro.field_e.render(false, param0 ^ 0);
           SoftwareRasterizer.darkenRectangle(0, 0, 640, 480);
@@ -274,11 +274,11 @@ final class GameResultsScreen extends MenuScreen {
         }
     }
 
-    final void a(boolean param0, int param1) {
+    final void continueFromResults(boolean param0, int param1) {
         int discarded$0 = 0;
         int var3 = 0;
         if (param1 >= -106) {
-          discarded$0 = this.d(-3, 100);
+          discarded$0 = this.getRowTextWidth(-3, 100);
         }
         if (DateOfBirthValidator.field_j == 1) {
           ArchiveIndex.a(this.field_x, (byte) 126);
@@ -287,7 +287,7 @@ final class GameResultsScreen extends MenuScreen {
           la.changeScreen(!gq.d(121) ? 0 : 12, -3, var3 != 0, -25528);
         } else {
           if (DateOfBirthValidator.field_j == 2) {
-            ro.field_e.g(46);
+            ro.field_e.sendResultsDismissed(46);
           }
         }
     }
@@ -329,7 +329,7 @@ final class GameResultsScreen extends MenuScreen {
             this.field_G = -27;
           }
           if (this.field_B) {
-            this.e(1);
+            this.updateRematchLabel(1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -359,15 +359,15 @@ final class GameResultsScreen extends MenuScreen {
           if (0 == param0) {
             return var3;
           }
-          return -var3 + (640 - this.d(98, param0));
+          return -var3 + (640 - this.getRowTextWidth(98, param0));
         }
         if (param1 != 90) {
           field_t = (String) null;
         }
-        return 320 - (this.d(87, param0) >> 1);
+        return 320 - (this.getRowTextWidth(87, param0) >> 1);
     }
 
-    final void a(int param0, boolean param1, boolean param2) {
+    final void drawFadeTransition(int param0, boolean param1, boolean param2) {
         int var6_int = 0;
         int var4 = param0 * 2;
         if (!param1) {
@@ -385,13 +385,13 @@ final class GameResultsScreen extends MenuScreen {
         CanvasRasterBuffer var6 = ClientException.field_f;
         ClientException.field_f = EditableTextWidget.field_R;
         ClientException.field_f.bindRaster(19692);
-        this.c(0);
+        this.drawScreenBackground(0);
         ClientException.field_f = var6;
         ClientException.field_f.bindRaster(19692);
-        SpriteEffectHelpers.a(EditableTextWidget.field_R.field_e, var4, var5);
+        SpriteEffectHelpers.blendFullscreenImageVerticalFade(EditableTextWidget.field_R.field_e, var4, var5);
     }
 
-    final void e(int param0) {
+    final void updateRematchLabel(int param0) {
         int var2;
         int var3;
         int var4;
@@ -420,25 +420,25 @@ final class GameResultsScreen extends MenuScreen {
         try {
           this.field_o = param0;
           if (param1 != -4) {
-            this.e(79);
+            this.updateRematchLabel(79);
           }
         } catch (RuntimeException runtimeException) {
           throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "hq.JA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final void a(byte param0, boolean param1, int param2) {
+    final void drawRow(byte param0, boolean param1, int param2) {
         if (param2 == 0) {
           this.drawFooterButton(param1, this.field_A, StripedProgressBar.field_N, -6, this.getRowLeft(0, (byte) 90) + this.getRowRight(0, false) >> 1);
         } else {
-          super.a(this.field_s, param1, param2, StripedProgressBar.field_N, (byte) 99);
+          super.drawLabeledRowButton(this.field_s, param1, param2, StripedProgressBar.field_N, (byte) 99);
         }
         if (param0 > -116) {
           this.field_E = 4;
         }
     }
 
-    final void b(byte param0, boolean param1) {
+    final void leaveResults(byte param0, boolean param1) {
         int var3;
         int var4;
         int stackIn_8_0 = 0;
@@ -479,7 +479,7 @@ final class GameResultsScreen extends MenuScreen {
         boolean decompiledFrameRemainder0 = true;
         var3 = Pixelate.field_H ? 1 : 0;
         var2 = ke.field_a;
-        if (!this.field_g.c((byte) 35)) {
+        if (!this.field_g.isButtonHeld((byte) 35)) {
           if (this.field_g.selectedIndex == -1 && (var2 == 98 ||
             var2 == 99)) {
             stackIn_16_0 = this.field_g;
@@ -489,21 +489,21 @@ final class GameResultsScreen extends MenuScreen {
             } else {
               stackIn_17_2 = 1;
             }
-            ((MenuInputState) (Object) stackIn_16_0).a(stackIn_16_1, stackIn_17_2);
+            ((MenuInputState) (Object) stackIn_16_0).selectIndex(stackIn_16_1, stackIn_17_2);
             decompiledFrameRemainder0 = false;
           }
           else {
             if (this.field_g.selectedIndex == 0 &&
               var2 == 97) {
               if (!(!this.isRowEnabled(-119, 1))) {
-                this.field_g.a(false, 1);
+                this.field_g.selectIndex(false, 1);
               }
               decompiledFrameRemainder0 = false;
             }
             else {
               if (1 == this.field_g.selectedIndex &&
                 var2 == 96) {
-                this.field_g.a(false, 0);
+                this.field_g.selectIndex(false, 0);
               }
             }
           }
@@ -511,7 +511,7 @@ final class GameResultsScreen extends MenuScreen {
         if (param0 >= -35) {
           GameResultsScreen.releaseStatics((byte) -122);
         }
-        this.field_g.b((byte) -71);
+        this.field_g.captureKeyCode((byte) -71);
     }
 
     static {

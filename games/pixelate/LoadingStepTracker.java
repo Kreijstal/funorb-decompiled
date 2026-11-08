@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class re {
+final class LoadingStepTracker {
     float field_f;
     static Sprite field_b;
     private int field_i;
@@ -9,12 +9,12 @@ final class re {
     private int field_d;
     String field_e;
     static boolean field_h;
-    private ik[] field_a;
+    private LoadingStep[] field_a;
     static String field_c;
     static String[] field_k;
     static String field_g;
 
-    private final void a(byte param0, ik param1, int param2) {
+    private final void updateStepProgress(byte param0, LoadingStep param1, int param2) {
         float var4_float = 0.0f;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -46,12 +46,12 @@ final class re {
         }
     }
 
-    final static void a(boolean param0, HuffmanCodec param1) {
+    final static void setChatHuffmanCodec(boolean param0, HuffmanCodec param1) {
         try {
           QuickChatPhraseDefinition.field_v = param1;
           if (!param0) {
             byte[] var3 = (byte[]) null;
-            re.copyBytes(true, (byte[]) null);
+            LoadingStepTracker.copyBytes(true, (byte[]) null);
           }
         } catch (RuntimeException runtimeException) {
           throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "re.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -83,14 +83,14 @@ final class re {
             return null;
           }
           if (param1 != -1) {
-            re.a(true);
+            LoadingStepTracker.releaseStatics(true);
           }
           var6 = (CharSequence) ((Object) param0);
           var2 = dh.a(var6, (byte) 64);
           if (var2 == null) {
             return null;
           }
-          var3 = (SocialListEntry) (vm.field_b.a(-11434, (long)var2.hashCode()));
+          var3 = (SocialListEntry) (vm.field_b.get(-11434, (long)var2.hashCode()));
           while (var3 != null) {
             var7 = (CharSequence) ((Object) var3.field_Fb);
             var4 = dh.a(var7, (byte) 41);
@@ -115,9 +115,9 @@ final class re {
         }
     }
 
-    final static boolean a(int param0) {
+    final static boolean isLobbyUiReady(int param0) {
         if (param0 <= 105) {
-          re.a(true);
+          LoadingStepTracker.releaseStatics(true);
           if (10 > el.field_b) {
             return false;
           }
@@ -135,7 +135,7 @@ final class re {
         return false;
     }
 
-    final static void b(int param0) {
+    final static void clearSpriteDecodeBuffers(int param0) {
         IntrusiveNode.field_b = null;
         if (param0 != 140) {
           return;
@@ -144,10 +144,10 @@ final class re {
         wo.field_f = (byte[][]) null;
         ge.field_c = null;
         ByteStorage.field_g = null;
-        fl.field_g = null;
+        AsyncValidationResult.field_g = null;
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_b = null;
         if (param0) {
           field_c = null;
@@ -155,7 +155,7 @@ final class re {
           field_g = null;
           return;
         }
-        re.a((byte) -52);
+        LoadingStepTracker.pollKeyboardState((byte) -52);
         field_c = null;
         field_k = null;
         field_g = null;
@@ -195,7 +195,7 @@ final class re {
         }
     }
 
-    final static void a(byte param0) {
+    final static void pollKeyboardState(byte param0) {
         Object var1 = null;
         int var2 = 0;
         int var4 = 0;
@@ -235,10 +235,10 @@ final class re {
         }
     }
 
-    final boolean c(int param0) {
-        ik var2;
+    final boolean pollLoadSteps(int param0) {
+        LoadingStep var2;
         int var3;
-        ik var4;
+        LoadingStep var4;
         var3 = Pixelate.field_H ? 1 : 0;
         if (param0 != 4567) {
           this.field_f = 0.011294713243842125f;
@@ -247,24 +247,24 @@ final class re {
           var4 = this.field_a[this.field_j];
           var2 = var4;
           if (!var4.field_d.ensureIndex(-3)) {
-            this.a((byte) 58, var4, 0);
+            this.updateStepProgress((byte) 58, var4, 0);
             return false;
           }
           if (0 <= var4.field_b &&
             !var4.field_d.ensureGroupLoaded(var4.field_b, false)) {
-            this.a((byte) -96, var2, var4.field_d.getGroupProgress(var4.field_b, (byte) -78));
+            this.updateStepProgress((byte) -96, var2, var4.field_d.getGroupProgress(var4.field_b, (byte) -78));
             return false;
           }
           if (var4.field_f != null &&
             !var4.field_d.ensureGroupAvailableByName(var4.field_f, -1)) {
-            this.a((byte) -93, var2, var4.field_d.getGroupProgressByName(108, var4.field_f));
+            this.updateStepProgress((byte) -93, var2, var4.field_d.getGroupProgressByName(108, var4.field_f));
             return false;
           }
           if (var4.field_b < 0 &&
             null == var4.field_f &&
             var4.field_e != null &&
             !var4.field_d.ensureAllGroupsAvailable((byte) 92)) {
-            this.a((byte) -102, var2, var4.field_d.getOverallProgress(param0 ^ 4567));
+            this.updateStepProgress((byte) -102, var2, var4.field_d.getOverallProgress(param0 ^ 4567));
             return false;
           }
           this.field_j = this.field_j + 1;
@@ -272,7 +272,7 @@ final class re {
         return true;
     }
 
-    private re() throws Throwable {
+    private LoadingStepTracker() throws Throwable {
         throw new Error();
     }
 

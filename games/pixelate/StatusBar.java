@@ -15,7 +15,7 @@ abstract class StatusBar {
     static String field_c;
     static int field_k;
 
-    final static void a(long param0, int param1, int param2) {
+    final static void sendNameRequest(long param0, int param1, int param2) {
         int var5 = 0;
         CipherPacketBuffer var4 = aa.field_f;
         int var5Lifetime1;
@@ -28,7 +28,7 @@ abstract class StatusBar {
           var4.backpatchByteLength(var4.position - var5, -1);
           return;
         }
-        StatusBar.a(18L, -62, 23);
+        StatusBar.sendNameRequest(18L, -62, 23);
         var4.position = var4.position + 1;
         var5Lifetime1 = var4.position;
         var4.writeByte(160, 6);
@@ -36,7 +36,7 @@ abstract class StatusBar {
         var4.backpatchByteLength(var4.position - var5Lifetime1, -1);
     }
 
-    void a(byte param0) {
+    void tick(byte param0) {
         int var2;
         this.field_e = this.field_e + this.field_g;
         var2 = hp.field_Gb.field_A << 16;
@@ -52,7 +52,7 @@ abstract class StatusBar {
         if (param0 == 21) {
           return;
         }
-        this.b(38);
+        this.setFlashIntensity(38);
     }
 
     public static void releaseStatics(byte param0) {
@@ -69,7 +69,7 @@ abstract class StatusBar {
         }
     }
 
-    final static void a(int param0, java.applet.Applet param1) {
+    final static void readUsernameParameter(int param0, java.applet.Applet param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         String var3 = null;
@@ -102,18 +102,18 @@ abstract class StatusBar {
         }
     }
 
-    final static void a(int param0) {
+    final static void setResultsKind(int param0) {
         DateOfBirthValidator.field_j = param0;
     }
 
-    final void a(int param0, int param1) {
+    final void setScrollSpeed(int param0, int param1) {
         this.field_g = param0;
         if (param1 > -21) {
-          this.a(-61, 51);
+          this.setScrollSpeed(-61, 51);
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void drawBarFrame(int param0, int param1, int param2, int param3) {
         int var5 = -(param3 / 2) + 320;
         if (param0 <= 9) {
           return;
@@ -146,7 +146,7 @@ abstract class StatusBar {
         SoftwareRasterizer.drawHorizontalLineAlpha(2 + var6, 25 + param2 - 2, var9, 16777215, 128);
         SoftwareRasterizer.drawHorizontalLineAlpha(var6 + 2, param2 + 2, var9, 0, 128);
         SoftwareRasterizer.drawHorizontalLineAlpha(2 + var6, param2 + 22, var9, 0, 128);
-        SpriteEffectHelpers.a(var6, 7 + param2, var7, param2 + 7, 4, 7, gd.field_b);
+        SpriteEffectHelpers.drawGlowLine(var6, 7 + param2, var7, param2 + 7, 4, 7, gd.field_b);
         if (this.field_h <= 0) {
           return;
         }
@@ -155,12 +155,12 @@ abstract class StatusBar {
         if (var10 <= 0) {
           return;
         }
-        SpriteEffectHelpers.a(var6, 12 + param2, var7, param2 + 12, 12, var10, gd.field_c);
+        SpriteEffectHelpers.drawGlowLine(var6, 12 + param2, var7, param2 + 12, 12, var10, gd.field_c);
     }
 
-    abstract void c(int param0);
+    abstract void draw(int param0);
 
-    final void b(int param0) {
+    final void setFlashIntensity(int param0) {
         this.field_h = param0;
     }
 

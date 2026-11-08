@@ -17,14 +17,14 @@ final class mc extends IntrusiveNode {
 
     final static Puzzle a(Random param0, int param1, boolean param2, int param3, int param4) {
         RuntimeException var5 = null;
-        rk var6 = null;
+        PieceTiming var6 = null;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
         IndexedSprite[] var10 = null;
         Puzzle var11 = null;
         ib var12 = null;
-        rk stackIn_3_0 = null;
+        PieceTiming stackIn_3_0 = null;
         Puzzle stackIn_5_0 = null;
         Puzzle stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
@@ -33,11 +33,11 @@ final class mc extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         try {
           UiTheme.field_f = param0;
-          var12 = SecondaryNodeHashTable.a((byte) 96, param3);
+          var12 = SecondaryNodeHashTable.chooseGridSize((byte) 96, param3);
           if (!param2) {
-            stackIn_3_0 = GameModeCard.a(param3, 10);
+            stackIn_3_0 = GameModeCard.createRandomPieceTiming(param3, 10);
           } else {
-            stackIn_3_0 = AchievementsScreen.b(param3, (byte) 73);
+            stackIn_3_0 = AchievementsScreen.createPieceTiming(param3, (byte) 73);
           }
           var6 = stackIn_3_0;
           var7 = el.a(param3, (byte) -24);
@@ -46,7 +46,7 @@ final class mc extends IntrusiveNode {
             return stackIn_5_0;
           }
           var8 = SpriteState.a(false, param3);
-          var9 = GameResultsScreen.a((byte) 124, param3);
+          var9 = GameResultsScreen.computeTimeBonusSeconds((byte) 124, param3);
           var10 = mi.a(var12.field_d, param1, var12.field_j, 20);
           var11 = new Puzzle(var12.field_j, var12.field_d, var7, var6.field_a, var6.field_b, var6.field_c, var9, var8, var10);
           var11.shufflePictures((byte) 58, UiTheme.field_f);
@@ -132,8 +132,8 @@ final class mc extends IntrusiveNode {
             ResizableModalPanel.field_P = bi.loadSprite("benefits", "menu_text", PictureStrip.field_n, (byte) -20);
             AccountChoicePanel.field_O = bi.loadSprite("benefits", "button_frame", PictureStrip.field_n, (byte) -63);
             ScrollContainer.field_Kb = bi.loadSprite("benefits", "arrow", PictureStrip.field_n, (byte) -125);
-            EmailConfirmationValidator.field_r = (BitmapFont) ((Object) PicturePreview.a(0, TimerBarDemo.field_p, "large_font", PictureStrip.field_n, "benefits"));
-            QuickChatCategory.field_A = (BitmapFont) ((Object) PicturePreview.a(0, TimerBarDemo.field_p, "small_font", PictureStrip.field_n, "benefits"));
+            EmailConfirmationValidator.field_r = (BitmapFont) ((Object) PicturePreview.loadBinaryBitmapFontByName(0, TimerBarDemo.field_p, "large_font", PictureStrip.field_n, "benefits"));
+            QuickChatCategory.field_A = (BitmapFont) ((Object) PicturePreview.loadBinaryBitmapFontByName(0, TimerBarDemo.field_p, "small_font", PictureStrip.field_n, "benefits"));
             var28 = SoftwareRasterizer.field_k;
             var2 = SoftwareRasterizer.field_j;
             var3 = SoftwareRasterizer.field_d;
@@ -380,12 +380,12 @@ final class mc extends IntrusiveNode {
 
     final static PcmSampleStream a(int param0, int param1) {
         ln var2 = null;
-        if (SoundCache.field_b.i(0) < 5) {
+        if (SoundCache.field_b.size(0) < 5) {
           if (param1 >= -117) {
             mc.a(17, -35);
           }
           var2 = new ln(param0);
-          SoundCache.field_b.addFirst(22125, var2);
+          SoundCache.field_b.addLast(22125, var2);
           return var2.field_o;
         }
         return null;

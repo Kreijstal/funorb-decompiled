@@ -27,7 +27,7 @@ final class ViewportController {
     private float field_w;
     static String field_e;
 
-    final boolean a(byte param0) {
+    final boolean canResize(byte param0) {
         int var2 = -88 / ((param0 + 5) / 36);
         if (ri.field_h < this.field_j) {
           return false;
@@ -38,7 +38,7 @@ final class ViewportController {
         return false;
     }
 
-    final void a(int param0, int param1, int param2) {
+    final void setRequestedSize(int param0, int param1, int param2) {
         this.field_n = param0;
         this.field_f = param2;
         if (param1 != 13756) {
@@ -46,7 +46,7 @@ final class ViewportController {
         }
     }
 
-    private final void a(int param0) {
+    private final void applyClampedSize(int param0) {
         int var2;
         int var3;
         int var4;
@@ -59,7 +59,7 @@ final class ViewportController {
         var2 = 110 / ((-76 - param0) / 34);
         var3 = this.field_n;
         var4 = this.field_f;
-        if (!this.a((byte) 99)) {
+        if (!this.canResize((byte) 99)) {
           this.field_c = false;
           return;
         }
@@ -148,19 +148,19 @@ final class ViewportController {
         }
     }
 
-    final FullscreenFocusCanvas b(boolean param0) {
+    final FullscreenFocusCanvas enterFullscreen(boolean param0) {
         this.field_b = BufferedRandomAccessFile.field_i;
         this.field_l = wp.field_c;
         this.field_s.a(this.field_q, 126, this.field_x);
         wl.field_i = param0 ? true : false;
         FullscreenFocusCanvas var2 = wo.openFullscreenWindow(mc.field_k, 150, this.field_x, 0, this.field_q, 0);
         if (var2 == null) {
-          this.b(89);
+          this.restoreSavedSize(89);
         }
         return var2;
     }
 
-    final void b(int param0) {
+    final void restoreSavedSize(int param0) {
         this.field_s.a(this.field_b, 127, this.field_l);
         int var2 = 99 % ((param0 + 17) / 62);
     }
@@ -179,7 +179,7 @@ final class ViewportController {
         field_h = null;
     }
 
-    final void c(int param0) {
+    final void tick(int param0) {
         int fieldTemp$0 = 0;
         int var2;
         if (ib.field_f != null) {
@@ -199,7 +199,7 @@ final class ViewportController {
             this.field_c = false;
             return;
           }
-          this.a(-117);
+          this.applyClampedSize(-117);
           var2 = -110 / ((-61 - param0) / 38);
           return;
         }

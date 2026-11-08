@@ -16,7 +16,7 @@ final class GameplayScreen extends MenuScreen {
         super(param0, param1, param2, param3, param4, param5);
     }
 
-    final void a(int param0, boolean param1, boolean param2) {
+    final void drawFadeTransition(int param0, boolean param1, boolean param2) {
         int var6_int = 0;
         CanvasRasterBuffer var6 = null;
         int var4 = param0 * 2;
@@ -34,20 +34,20 @@ final class GameplayScreen extends MenuScreen {
           var6 = ClientException.field_f;
           ClientException.field_f = EditableTextWidget.field_R;
           ClientException.field_f.bindRaster(19692);
-          this.c(0);
+          this.drawScreenBackground(0);
           ClientException.field_f = var6;
           ClientException.field_f.bindRaster(19692);
-          SpriteEffectHelpers.a(EditableTextWidget.field_R.field_e, var4, var5);
+          SpriteEffectHelpers.blendFullscreenImageVerticalFade(EditableTextWidget.field_R.field_e, var4, var5);
           return;
         }
         field_p = (String) null;
         var6Lifetime1 = ClientException.field_f;
         ClientException.field_f = EditableTextWidget.field_R;
         ClientException.field_f.bindRaster(19692);
-        this.c(0);
+        this.drawScreenBackground(0);
         ClientException.field_f = var6Lifetime1;
         ClientException.field_f.bindRaster(19692);
-        SpriteEffectHelpers.a(EditableTextWidget.field_R.field_e, var4, var5);
+        SpriteEffectHelpers.blendFullscreenImageVerticalFade(EditableTextWidget.field_R.field_e, var4, var5);
     }
 
     final void draw(int param0) {
@@ -167,7 +167,7 @@ final class GameplayScreen extends MenuScreen {
         }
     }
 
-    final void c(int param0) {
+    final void drawScreenBackground(int param0) {
         Object var2;
         MatchController var2_ref;
         MatchController var3;
@@ -178,7 +178,7 @@ final class GameplayScreen extends MenuScreen {
           var4 = ro.field_e;
           var2_ref = var4;
           if (var4 == null) {
-            super.c(0);
+            super.drawScreenBackground(0);
           } else {
             var4.render(false, param0 + param0);
             if (this.field_l == 1) {
@@ -190,7 +190,7 @@ final class GameplayScreen extends MenuScreen {
           if (this.field_l == 2) {
             var3 = ro.field_e;
             if (var3 == null) {
-              super.c(0);
+              super.drawScreenBackground(0);
             } else {
               var3.render(false, param0 + param0);
               if (this.field_l == 1) {
@@ -201,7 +201,7 @@ final class GameplayScreen extends MenuScreen {
           } else {
             if (this.field_l != 4) {
               if (var2 == null) {
-                super.c(0);
+                super.drawScreenBackground(0);
               } else {
                 ((MatchController) (var2)).render(false, param0 + param0);
                 if (this.field_l == 1) {
@@ -212,7 +212,7 @@ final class GameplayScreen extends MenuScreen {
             } else {
               var5 = MatchingTextValidator.field_r;
               if (var5 == null) {
-                super.c(0);
+                super.drawScreenBackground(0);
               } else {
                 var5.render(false, param0 + param0);
                 if (this.field_l == 1) {

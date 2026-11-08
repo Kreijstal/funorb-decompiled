@@ -17,7 +17,7 @@ final class vd {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 == 0) {
-            stackIn_4_0 = fl.field_b.getNamedFile((byte) 24, param0, "");
+            stackIn_4_0 = AsyncValidationResult.field_b.getNamedFile((byte) 24, param0, "");
             return stackIn_4_0;
           }
           stackIn_2_0 = (byte[]) null;
@@ -128,7 +128,7 @@ final class vd {
         var2 = Pixelate.field_H ? 1 : 0;
         try {
           for (var1_int = 0; var1_int < 24; var1_int++) {
-            jm.field_d[var1_int] = new ck();
+            jm.field_d[var1_int] = new FloatingSquare();
           }
           if (!param0) {
             var3 = (String) null;

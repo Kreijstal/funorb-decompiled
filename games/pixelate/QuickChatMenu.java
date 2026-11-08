@@ -20,11 +20,11 @@ final class QuickChatMenu extends SceneWidget {
     private int field_Mb;
     static FallingPieceView field_Qb;
 
-    final static void b(boolean param0, int param1) {
+    final static void drawFloatingSquares(boolean param0, int param1) {
         int var4 = 0;
         int var2_int = 0;
-        ck[] var3 = null;
-        ck var5 = null;
+        FloatingSquare[] var3 = null;
+        FloatingSquare var5 = null;
         int var6 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
@@ -34,7 +34,7 @@ final class QuickChatMenu extends SceneWidget {
           var3 = jm.field_d;
           for (var4 = 0; var3.length > var4; var4++) {
             var5 = var3[var4];
-            var5.a(100, param0);
+            var5.draw(100, param0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -44,14 +44,14 @@ final class QuickChatMenu extends SceneWidget {
         }
     }
 
-    final static void a(int param0, int param1) {
+    final static void setPendingUiResult(int param0, int param1) {
         if (param1 != -2671) {
           field_Nb = (ea) null;
         }
         QuickChatPhraseCache.field_h = param0;
     }
 
-    final void l(int param0) {
+    final void resetSelection(int param0) {
         int var3 = 0;
         IconTextComponent var4 = null;
         int var5 = Pixelate.field_H ? 1 : 0;
@@ -66,15 +66,15 @@ final class QuickChatMenu extends SceneWidget {
           var4.field_P = 0;
         }
         if (null != this.field_Pb) {
-          this.field_Pb.l(17872);
+          this.field_Pb.resetSelection(17872);
           this.field_Pb.unlink(2779);
         }
         this.field_Pb = null;
         this.openItemIndex = -1;
-        this.a(12, (byte) -85);
+        this.setOpenAnimationStep(12, (byte) -85);
     }
 
-    final static void a(byte param0, java.awt.Component param1) {
+    final static void removeMouseListeners(byte param0, java.awt.Component param1) {
         param1.removeMouseListener(fj.field_c);
         param1.removeMouseMotionListener(fj.field_c);
         if (param0 != -47) {
@@ -98,7 +98,7 @@ final class QuickChatMenu extends SceneWidget {
         this.setBounds(param0 - this.field_Ob, this.field_Ob, param1, 256, this.field_Fb);
         if (param5 != this.field_Ub) {
           this.field_Ub = param5;
-          this.a(this.field_Kb, (byte) -79);
+          this.setOpenAnimationStep(this.field_Kb, (byte) -79);
         }
         if (param4 != -94) {
           this.field_Gb = (QuickChatMenu[]) null;
@@ -115,7 +115,7 @@ final class QuickChatMenu extends SceneWidget {
         }
     }
 
-    final boolean a(int param0, int param1, int param2) {
+    final boolean processShortcutKey(int param0, int param1, int param2) {
         int var4;
         int var5;
         int var6;
@@ -127,21 +127,21 @@ final class QuickChatMenu extends SceneWidget {
         if (null != this.field_Pb) {
           if (var4 != 0 &&
             this.field_Pb.openItemIndex == -1) {
-            this.l(17872);
-            this.a(0, (byte) -82);
+            this.resetSelection(17872);
+            this.setOpenAnimationStep(0, (byte) -82);
             return true;
           }
-          return this.field_Pb.a(param0, 0, param2);
+          return this.field_Pb.processShortcutKey(param0, 0, param2);
         }
         if (null == this.field_Pb &&
           bo.field_h == this &&
           var4 != 0) {
-          mj.a(false);
+          ScoreMarkerDemo.closeQuickChatMenu(false);
           return true;
         }
         var5 = DualLinkDeque.field_f;
         if (var5 > param1) {
-          if (rk.field_d == var5) {
+          if (PieceTiming.field_d == var5) {
             var5 = 63;
           }
           var6 = 0;
@@ -150,14 +150,14 @@ final class QuickChatMenu extends SceneWidget {
               var6++;
               continue;
             }
-            this.a(var6, param0, param1 ^ 88, param2);
+            this.activateItem(var6, param0, param1 ^ 88, param2);
             return true;
           }
         }
         return false;
     }
 
-    final void b(int param0, int param1, int param2) {
+    final void processClicks(int param0, int param1, int param2) {
         int var4_int = 0;
         IconTextComponent var5;
         int var6;
@@ -169,7 +169,7 @@ final class QuickChatMenu extends SceneWidget {
         for (var4_int = 0; this.field_Sb.length > var4_int; var4_int++) {
           var5 = this.field_Sb[var4_int];
           if (1 == var5.field_P) {
-            this.a(var4_int, param2, 118, param0);
+            this.activateItem(var4_int, param2, 118, param0);
             stackIn_7_0 = var5;
             stackIn_8_1 = (this.openItemIndex == var4_int);
             stackIn_7_0.field_U = stackIn_8_1;
@@ -179,22 +179,22 @@ final class QuickChatMenu extends SceneWidget {
           var7 = this.field_Gb[this.openItemIndex];
           var4 = var7;
           if (var4 != null) {
-            var7.b(param0, param1 + 0, param2);
+            var7.processClicks(param0, param1 + 0, param2);
           }
         }
         if (this.field_Kb > 0) {
-          this.a(-1 + this.field_Kb, (byte) -106);
+          this.setOpenAnimationStep(-1 + this.field_Kb, (byte) -106);
         }
     }
 
-    final static int n(int param0) {
+    final static int getAudioSampleRate(int param0) {
         if (param0 != 0) {
           return 100;
         }
         return ba.field_f;
     }
 
-    final boolean m(int param0) {
+    final boolean hasPressedItem(int param0) {
         int var4 = 0;
         IconTextComponent var5 = null;
         int var6 = Pixelate.field_H ? 1 : 0;
@@ -209,7 +209,7 @@ final class QuickChatMenu extends SceneWidget {
         }
         if (var2 == 0 && this.openItemIndex != -1 &&
           this.field_Gb[this.openItemIndex] != null) {
-          var2 = this.field_Gb[this.openItemIndex].m(param0 + 0) ? 1 : 0;
+          var2 = this.field_Gb[this.openItemIndex].hasPressedItem(param0 + 0) ? 1 : 0;
         }
         return var2 != 0;
     }
@@ -271,7 +271,7 @@ final class QuickChatMenu extends SceneWidget {
             }
           }
           this.field_Rb = this.field_Rb + (10 + fe.field_b.field_A);
-          this.a(12, (byte) -85);
+          this.setOpenAnimationStep(12, (byte) -85);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -323,21 +323,21 @@ final class QuickChatMenu extends SceneWidget {
         }
     }
 
-    final int k(int param0) {
+    final int getCascadeWidth(int param0) {
         if (param0 != -16200) {
           return 111;
         }
-        return this.field_Fb + (this.field_Pb != null ? this.field_Pb.k(-16200) : 0);
+        return this.field_Fb + (this.field_Pb != null ? this.field_Pb.getCascadeWidth(-16200) : 0);
     }
 
-    private final void a(int param0, byte param1) {
+    private final void setOpenAnimationStep(int param0, byte param1) {
         int var5 = 0;
         int var3 = 0;
         int var4 = 0;
         int var6 = Pixelate.field_H ? 1 : 0;
         this.field_Kb = param0;
         if (param1 > -73) {
-          this.m(-111);
+          this.hasPressedItem(-111);
         }
         for (var5 = 0; var5 < this.field_Mb; var5++) {
           var3 = var5 * this.field_Jb;
@@ -346,7 +346,7 @@ final class QuickChatMenu extends SceneWidget {
         }
     }
 
-    private final void a(int param0, int param1, int param2, int param3) {
+    private final void activateItem(int param0, int param1, int param2, int param3) {
         int var5;
         int var6;
         int var7;
@@ -354,39 +354,39 @@ final class QuickChatMenu extends SceneWidget {
         var7 = Pixelate.field_H ? 1 : 0;
         if (this.openItemIndex != param0) {
           if (this.field_Gb[param0] != null) {
-            this.l(17872);
-            this.a(0, (byte) -96);
+            this.resetSelection(17872);
+            this.setOpenAnimationStep(0, (byte) -96);
             this.openItemIndex = param0;
             this.field_Pb = this.field_Gb[this.openItemIndex];
             StripedProgressBar.a(this.field_Pb, true);
-            this.field_Pb.a(12, (byte) -104);
+            this.field_Pb.setOpenAnimationStep(12, (byte) -104);
           } else {
             if (-1 != this.field_Tb[param0]) {
               var5 = 32768 | this.field_Tb[param0];
               var6 = ce.field_d;
               if (var6 == 0 &&
-                io.field_c != null) {
+                LoginMethod.field_c != null) {
                 var6 = 1;
               }
               if (IterableNodeHashTable.a(var6, 0) == 2) {
-                Js5ArchiveManager.a(1, -26931, var6, param1);
+                Js5ArchiveManager.setChatFilterMode(1, -26931, var6, param1);
               }
               var8 = (String) null;
               dg.a(true, ce.field_d, var5, (String) null, CheckboxPainter.field_k, param3);
               di.a(var5, fp.field_e, CheckboxPainter.field_k, (byte) 9, ce.field_d);
-              mj.a(false);
+              ScoreMarkerDemo.closeQuickChatMenu(false);
               SocketJs5Transport.d(-93);
             } else {
               ScrollPaneWithFooter.j(-127);
-              mj.a(false);
+              ScoreMarkerDemo.closeQuickChatMenu(false);
             }
           }
         } else {
-          this.l(17872);
-          this.a(0, (byte) -118);
+          this.resetSelection(17872);
+          this.setOpenAnimationStep(0, (byte) -118);
         }
         if (param2 <= 54) {
-          this.a(-128, -51, 10);
+          this.processShortcutKey(-128, -51, 10);
         }
     }
 

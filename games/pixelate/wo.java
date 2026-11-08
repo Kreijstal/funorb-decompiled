@@ -17,7 +17,7 @@ final class wo {
         String[] var3 = null;
         SceneWidget[] var4 = null;
         try {
-          var3 = new String[]{param0, NameSuggestionsPanel.field_J, fl.field_c};
+          var3 = new String[]{param0, NameSuggestionsPanel.field_J, AsyncValidationResult.field_c};
           var4 = new SceneWidget[]{param1, wa.field_f, (SceneWidget) ((Object) MouseWheelHandler.field_e)};
           this.field_g = new TabbedPanel(0L, ab.field_a, var3, AccountMessagePanel.field_J, var4, 0);
         } catch (RuntimeException runtimeException) {
@@ -131,14 +131,14 @@ final class wo {
           for (var2 = 3; var2 > 0; var2--) {
             var1.makeRasterTarget();
             SoftwareRasterizer.clear();
-            rk.field_e.drawCentered(Integer.toString(var2), SoftwareRasterizer.field_j >> 1, SoftwareRasterizer.field_d, 0, -1);
+            PieceTiming.field_e.drawCentered(Integer.toString(var2), SoftwareRasterizer.field_j >> 1, SoftwareRasterizer.field_d, 0, -1);
             Match.field_l[-var2 + 3] = new Sprite(150, 90);
             Match.field_l[3 - var2].makeRasterTarget();
             var1.drawScaled(0, 0, SoftwareRasterizer.field_j, SoftwareRasterizer.field_d);
           }
           ClientException.field_f.bindRaster(param0 ^ 19695);
-          ArrayWidgetContainer.field_J = rk.field_e.textWidth(IntrusiveDeque.field_e);
-          Js5Transport.field_n = rk.field_e.textWidth(SoundCache.field_j);
+          ArrayWidgetContainer.field_J = PieceTiming.field_e.textWidth(IntrusiveDeque.field_e);
+          Js5Transport.field_n = PieceTiming.field_e.textWidth(SoundCache.field_j);
         } catch (RuntimeException runtimeException) {
           throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "wo.A(" + param0 + ')');
         }

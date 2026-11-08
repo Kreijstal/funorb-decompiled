@@ -28,12 +28,12 @@ final class VerticalScrollbar extends SceneWidget {
         field_Nb = null;
     }
 
-    final int a(int param0, int param1, boolean param2, int param3) {
+    final int getThumbScrollOffset(int param0, int param1, boolean param2, int param3) {
         int var7 = 0;
         int var8 = 0;
         int var5 = 0;
         if (param0 != 3) {
-          this.e((byte) -58);
+          this.pollLineUp((byte) -58);
         }
         int var6 = this.track.height - this.thumb.height;
         if (var6 > 0) {
@@ -60,7 +60,7 @@ final class VerticalScrollbar extends SceneWidget {
         return var5;
     }
 
-    final static PcmStreamMixer d(byte param0) {
+    final static PcmStreamMixer getEffectsMixer(byte param0) {
         if (param0 != -58) {
           field_Lb = -5;
           return ClientContextMenu.field_d;
@@ -93,7 +93,7 @@ final class VerticalScrollbar extends SceneWidget {
         return true;
     }
 
-    final boolean e(byte param0) {
+    final boolean pollLineUp(byte param0) {
         if (this.upButton.field_P != 0) {
           this.repeatDelay = 20;
           return true;
@@ -128,21 +128,21 @@ final class VerticalScrollbar extends SceneWidget {
         return false;
     }
 
-    final boolean k(int param0) {
+    final boolean isThumbHeld(int param0) {
         if (param0 <= 70) {
           return true;
         }
         return this.thumb.heldPressButton != 0 ? true : false;
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    final void setBoundsAndLayout(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         this.field_S = param6;
         this.field_K = param5;
         this.field_D = param0;
         this.height = param2;
         this.layoutScrollbar(param3, (byte) 108, param4, param1);
         if (param7 != -1) {
-          VerticalScrollbar.a(55, 126);
+          VerticalScrollbar.resendQueuedRequests(55, 126);
         }
     }
 
@@ -276,7 +276,7 @@ final class VerticalScrollbar extends SceneWidget {
         }
     }
 
-    final static void a(int param0, int param1) {
+    final static void resendQueuedRequests(int param0, int param1) {
         int var3 = 0;
         df var4 = null;
         sm var5 = null;
@@ -284,18 +284,18 @@ final class VerticalScrollbar extends SceneWidget {
         RuntimeException var2 = null;
         var3 = Pixelate.field_H ? 1 : 0;
         try {
-          var4 = (df) (he.field_b.c(param0 + 1504642273));
+          var4 = (df) (he.field_b.first(param0 + 1504642273));
           while (var4 != null) {
             Pixelate.a(param1, (byte) 109, var4);
-            var4 = (df) (he.field_b.last(1504642273));
+            var4 = (df) (he.field_b.next(1504642273));
           }
           if (param0 != 0) {
             field_Hb = (IntrusiveDeque) null;
           }
-          var5 = (sm) (MusicPatchNode.field_J.c(param0 ^ 1504642273));
+          var5 = (sm) (MusicPatchNode.field_J.first(param0 ^ 1504642273));
           while (var5 != null) {
             he.a((byte) -53, param1, var5);
-            var5 = (sm) (MusicPatchNode.field_J.last(1504642273));
+            var5 = (sm) (MusicPatchNode.field_J.next(1504642273));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -393,7 +393,7 @@ final class VerticalScrollbar extends SceneWidget {
         }
     }
 
-    final boolean j(int param0) {
+    final boolean pollPageDown(int param0) {
         if (param0 != ~this.field_Jb.field_P) {
           this.repeatDelay = 20;
           return true;

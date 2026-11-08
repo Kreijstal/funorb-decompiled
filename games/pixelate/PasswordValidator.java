@@ -34,7 +34,7 @@ final class PasswordValidator extends TextFieldValidator {
             stackIn_5_0 = sk.field_a;
             return stackIn_5_0;
           }
-          if (!Matrix3.a(var4, var3, (byte) -4)) {
+          if (!Matrix3.isAcceptablePassword(var4, var3, (byte) -4)) {
             stackIn_8_0 = sk.field_a;
             return stackIn_8_0;
           }
@@ -108,7 +108,7 @@ final class PasswordValidator extends TextFieldValidator {
             return stackIn_20_0;
           }
           if (DateInputWidget.containsTextOrReverse(var5, var6, (byte) 78)) {
-            stackIn_23_0 = tj.field_w;
+            stackIn_23_0 = StrongCacheReference.field_w;
             return stackIn_23_0;
           }
           if (CipherPacketBuffer.a(var5, (byte) -47, var6)) {
@@ -118,7 +118,7 @@ final class PasswordValidator extends TextFieldValidator {
           if (!gb.a(var5, var6, 95)) {
             return MusicCrossfadeStream.field_y;
           }
-          stackIn_31_0 = tj.field_w;
+          stackIn_31_0 = StrongCacheReference.field_w;
           return stackIn_31_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -375,26 +375,26 @@ final class PasswordValidator extends TextFieldValidator {
         }
     }
 
-    final static ue a(int param0, byte param1, int param2, int param3, int param4) {
-        ue var5;
+    final static RankingTableRequest a(int param0, byte param1, int param2, int param3, int param4) {
+        RankingTableRequest var5;
         int var6;
         int var7;
-        ue var5Lifetime1;
+        RankingTableRequest var5Lifetime1;
         var7 = Pixelate.field_H ? 1 : 0;
         var6 = 27 % ((param1 - 25) / 44);
-        var5 = (ue) (DialWidgetPainter.field_c.c(1504642273));
+        var5 = (RankingTableRequest) (DialWidgetPainter.field_c.first(1504642273));
         while (var5 != null) {
           if (param4 == var5.field_o) {
             return var5;
           }
-          var5 = (ue) (DialWidgetPainter.field_c.last(1504642273));
+          var5 = (RankingTableRequest) (DialWidgetPainter.field_c.next(1504642273));
         }
-        var5Lifetime1 = new ue();
+        var5Lifetime1 = new RankingTableRequest();
         var5Lifetime1.field_s = param2;
         var5Lifetime1.field_m = param3;
         var5Lifetime1.field_o = param4;
-        DialWidgetPainter.field_c.addFirst(22125, var5Lifetime1);
-        LobbyPlayer.a(param0, var5Lifetime1, 65536);
+        DialWidgetPainter.field_c.addLast(22125, var5Lifetime1);
+        LobbyPlayer.sendRankingTableRequest(param0, var5Lifetime1, 65536);
         return var5Lifetime1;
     }
 

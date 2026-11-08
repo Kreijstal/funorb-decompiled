@@ -115,20 +115,20 @@ final class QuickChatCategoryCache {
             return;
           }
           param1.unlink(2779);
-          var2 = (LobbyPlayer) (ImageProducerRasterBuffer.field_n.c(1504642273));
+          var2 = (LobbyPlayer) (ImageProducerRasterBuffer.field_n.first(1504642273));
           while (var2 != null) {
             if (var2.sortsBefore(param1, (byte) -82)) {
-              var2 = (LobbyPlayer) (ImageProducerRasterBuffer.field_n.last(1504642273));
+              var2 = (LobbyPlayer) (ImageProducerRasterBuffer.field_n.next(1504642273));
               continue;
             }
             break;
           }
           if (var2 == null) {
-            ImageProducerRasterBuffer.field_n.addFirst(22125, param1);
+            ImageProducerRasterBuffer.field_n.addLast(22125, param1);
             return;
           }
           stackIn_10_0 = 126;
-          BackgroundScene.$cfr$intArgs$a$2d0b7bdf67eb(stackIn_10_0, var2, param1);
+          BackgroundScene.insertNodeBefore(stackIn_10_0, var2, param1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

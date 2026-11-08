@@ -25,14 +25,14 @@ final class LobbyPlayer extends SceneWidget {
     int field_Tb;
     boolean field_Jb;
 
-    final static void a(int param0, ue param1, int param2) {
+    final static void sendRankingTableRequest(int param0, RankingTableRequest param1, int param2) {
         CipherPacketBuffer var3 = null;
         try {
           var3 = aa.field_f;
           var3.writeOpcode(param0, 15514);
           if (param2 != 65536) {
-            ue var4 = (ue) null;
-            LobbyPlayer.a(-62, (ue) null, 81);
+            RankingTableRequest var4 = (RankingTableRequest) null;
+            LobbyPlayer.sendRankingTableRequest(-62, (RankingTableRequest) null, 81);
           }
           var3.writeByte(160, 5);
           var3.writeByte(160, 0);
@@ -58,7 +58,7 @@ final class LobbyPlayer extends SceneWidget {
         }
     }
 
-    final static aa a(boolean param0, byte param1) {
+    final static aa readChatMessage(boolean param0, byte param1) {
         boolean stackIn_5_0 = false;
         int stackIn_11_0 = 0;
         int[] stackIn_24_0 = null;
@@ -136,13 +136,13 @@ final class LobbyPlayer extends SceneWidget {
         return new aa(param0);
     }
 
-    final static void a(int param0, String param1) {
+    final static void submitDisplayName(int param0, String param1) {
         try {
           if (param0 != -1710418464) {
             Vector3 var3 = (Vector3) null;
-            LobbyPlayer.a((Vector3) null, 99, -60);
+            LobbyPlayer.axisAngleRotation((Vector3) null, 99, -60);
           }
-          kh.a(false, param1);
+          DisplayNameRequestGlobals.setRequestedDisplayName(false, param1);
           LoadingProgressDialog.a(false, TriangleMesh.field_e, -26027);
         } catch (RuntimeException runtimeException) {
           throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "uj.I(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -193,23 +193,23 @@ final class LobbyPlayer extends SceneWidget {
         }
     }
 
-    final static void j(int param0) {
+    final static void resetLoginRequestState(int param0) {
         MainMenuScreen.field_s = false;
         dk.field_c = false;
-        QuickChatMenu.a(-1, -2671);
+        QuickChatMenu.setPendingUiResult(-1, -2671);
         MatchingTextValidator.field_n = wm.field_a;
         MarkerSlider.field_X = wm.field_a;
         if (param0 != -705633312) {
-          LobbyPlayer.j(-5);
+          LobbyPlayer.resetLoginRequestState(-5);
         }
     }
 
-    final boolean b(byte param0) {
+    final boolean isUnlisted(byte param0) {
         int var2 = 92 % ((-23 - param0) / 35);
         return !this.f(0) ? true : false;
     }
 
-    final static Matrix3 a(Vector3 param0, int param1, int param2) {
+    final static Matrix3 axisAngleRotation(Vector3 param0, int param1, int param2) {
         long var3_long = 0L;
         RuntimeException var3 = null;
         long var5 = 0L;
@@ -243,7 +243,7 @@ final class LobbyPlayer extends SceneWidget {
           var14 = (int)(var3_long * (var3_long * (long)(65536 - var10)) >> 32);
           if (param2 != 0) {
             var20 = (ConditionalTextValue) null;
-            LobbyPlayer.a((byte) -55, (ConditionalTextValue) null, (ConditionalTextValue) null);
+            LobbyPlayer.submitDetailsValidationRequest((byte) -55, (ConditionalTextValue) null, (ConditionalTextValue) null);
           }
           var15 = (int)((long)(65536 - var10) * var5 * var3_long >> 32);
           var16 = (int)((long)(65536 - var10) * (var3_long * var7) >> 32);
@@ -266,16 +266,16 @@ final class LobbyPlayer extends SceneWidget {
         }
     }
 
-    public static void d(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         if (!param0) {
-          LobbyPlayer.j(49);
+          LobbyPlayer.resetLoginRequestState(49);
           field_Kb = null;
           return;
         }
         field_Kb = null;
     }
 
-    final static int a(byte param0, ConditionalTextValue param1, ConditionalTextValue param2) {
+    final static int submitDetailsValidationRequest(byte param0, ConditionalTextValue param1, ConditionalTextValue param2) {
         RuntimeException var3 = null;
         String var4 = null;
         int stackIn_3_0 = 0;

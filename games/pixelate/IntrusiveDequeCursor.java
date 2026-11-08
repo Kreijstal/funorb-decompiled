@@ -58,20 +58,20 @@ final class IntrusiveDequeCursor {
             var3 = (String) null;
             IntrusiveDequeCursor.containsNonAlphanumeric((String) null, -43);
           }
-          var1 = (LobbyPlayer) (ImageProducerRasterBuffer.field_n.c(1504642273));
+          var1 = (LobbyPlayer) (ImageProducerRasterBuffer.field_n.first(1504642273));
           while (var1 != null) {
             if (var1.field_Tb > 0) {
               var1.field_Tb = var1.field_Tb - 1;
               if (var1.field_Tb == 0) {
                 var1.field_Eb = 0;
-                if (var1.b((byte) 109)) {
+                if (var1.isUnlisted((byte) 109)) {
                   var1.unlink(param0 ^ -2780);
                 }
               }
             }
-            var1 = (LobbyPlayer) (ImageProducerRasterBuffer.field_n.last(param0 ^ -1504642274));
+            var1 = (LobbyPlayer) (ImageProducerRasterBuffer.field_n.next(param0 ^ -1504642274));
           }
-          var1_ref = (LobbyGame) (nk.field_a.c(param0 ^ -1504642274));
+          var1_ref = (LobbyGame) (nk.field_a.first(param0 ^ -1504642274));
           while (var1_ref != null) {
             if (var1_ref.field_Rb > 0) {
               var1_ref.field_Rb = var1_ref.field_Rb - 1;
@@ -82,23 +82,23 @@ final class IntrusiveDequeCursor {
                 }
               }
             }
-            var1_ref = (LobbyGame) (nk.field_a.last(1504642273));
+            var1_ref = (LobbyGame) (nk.field_a.next(1504642273));
           }
-          var1Lifetime1 = (LobbyPlayer) (ClientContextMenu.field_a.c(1504642273));
+          var1Lifetime1 = (LobbyPlayer) (ClientContextMenu.field_a.first(1504642273));
           while (var1Lifetime1 != null) {
             stackIn_23_0 = -1;
             if (stackIn_23_0 > ~var1Lifetime1.field_Tb) {
               var1Lifetime1.field_Tb = var1Lifetime1.field_Tb - 1;
               if (var1Lifetime1.field_Tb != 0) {
-                var1Lifetime1 = (LobbyPlayer) (ClientContextMenu.field_a.last(1504642273));
+                var1Lifetime1 = (LobbyPlayer) (ClientContextMenu.field_a.next(1504642273));
                 continue;
               }
               var1Lifetime1.field_Eb = 0;
-              if (var1Lifetime1.b((byte) -116)) {
+              if (var1Lifetime1.isUnlisted((byte) -116)) {
                 var1Lifetime1.unlink(2779);
               }
             }
-            var1Lifetime1 = (LobbyPlayer) (ClientContextMenu.field_a.last(1504642273));
+            var1Lifetime1 = (LobbyPlayer) (ClientContextMenu.field_a.next(1504642273));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -152,7 +152,7 @@ final class IntrusiveDequeCursor {
 
     final static void b(boolean param0) {
         String var2 = (String) null;
-        FallingPieceView.a("", -110, (String) null);
+        FallingPieceView.openLoginForm("", -110, (String) null);
         if (!param0) {
           field_f = (Sprite) null;
         }
@@ -230,7 +230,7 @@ final class IntrusiveDequeCursor {
           for (var2_int = 0; var2_int < param0.length(); var2_int++) {
             var3 = param0.charAt(var2_int);
             if (!BoardParticle.a(-66, (char) var3) &&
-              !MidiPcmStream.a(57, (char) var3)) {
+              !MidiPcmStream.isAsciiDigit(57, (char) var3)) {
               return true;
             }
           }
@@ -267,7 +267,7 @@ final class IntrusiveDequeCursor {
           return;
         }
         if (BoardParticle.a((byte) -104, fc.field_e)) {
-          wo.getScreen(126, fc.field_e).a(true);
+          wo.getScreen(126, fc.field_e).releaseScreenAssets(true);
         }
         fc.field_e = MidiPcmStream.field_t;
         if (og.field_l) {
@@ -284,7 +284,7 @@ final class IntrusiveDequeCursor {
           MenuScreen.field_n = 0;
         }
         if (mi.field_o) {
-          SceneWidget.i(param0 ^ 0);
+          SceneWidget.closeTransientDialogs(param0 ^ 0);
           ArchiveIndex.a(23949);
           bd.a((byte) -1);
           mi.field_o = false;

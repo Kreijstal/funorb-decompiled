@@ -106,7 +106,7 @@ class IntrusiveNode {
           ValidatedTextWidget.field_lb = new SceneWidget(0L, TextFieldValidator.field_h);
           ValidatedTextWidget.field_lb.horizontalAlignment = 1;
           ValidatedTextWidget.field_cb = new SceneWidget(0L, LoginForm.field_R, AccountChoicePanel.field_K.toUpperCase());
-          AlphaContainer.field_P = new SceneWidget(0L, io.field_f, TimerBar.field_n.toUpperCase());
+          AlphaContainer.field_P = new SceneWidget(0L, LoginMethod.field_f, TimerBar.field_n.toUpperCase());
           DiskCacheWorker.field_a = new SceneWidget(0L, ff.field_a);
           BlastFromThePastBackground.field_n = new SceneWidget(0L, QuickChatPhraseCache.field_l, OptionsScreen.field_w);
           if (param3 < 108) {
@@ -131,7 +131,7 @@ class IntrusiveNode {
           } else {
             stackIn_9_0 = null;
             stackIn_9_1 = null;
-            stackIn_9_4 = re.field_c;
+            stackIn_9_4 = LoadingStepTracker.field_c;
           }
           MusicPatchNode.field_p = new SceneWidget(stackIn_8_2, stackIn_8_3, ((String) (Object) stackIn_9_4).toUpperCase());
           MidiPcmStream.field_E = new SceneWidget(0L, (SceneWidget) null);
@@ -175,7 +175,7 @@ class IntrusiveNode {
           }
           vd.field_a.addChild(Vector3.field_c, (byte) 26);
           ValidatedTextWidget.field_kb = new SceneWidget(0L, LoginForm.field_R, ra.field_f.toUpperCase());
-          VerticalScrollbar.field_Qb = new SceneWidget(0L, io.field_f);
+          VerticalScrollbar.field_Qb = new SceneWidget(0L, LoginMethod.field_f);
           dc.field_a = new SceneWidget(0L, ff.field_a);
           sm.field_m = new SceneWidget(0L, ff.field_j, og.field_n.toUpperCase());
           AccountTermsPanel.field_L = new IconTextComponent[param12 + 4][];

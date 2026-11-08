@@ -14,15 +14,15 @@ abstract class ResizableModalPanel extends ModalPanel {
     private int field_Y;
     static String field_R;
 
-    boolean a(byte param0) {
-        this.e(false);
+    boolean isDismissed(byte param0) {
+        this.finishAnimations(false);
         if (param0 < 120) {
           this.field_Y = 17;
         }
-        return super.a((byte) 124);
+        return super.isDismissed((byte) 124);
     }
 
-    final static SceneWidget a(int param0, int param1, int param2, BitmapFont param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12) {
+    final static SceneWidget createThemedWidget(int param0, int param1, int param2, BitmapFont param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12) {
         SceneWidget var13 = null;
         RuntimeException var13_ref = null;
         SceneWidget stackIn_3_0 = null;
@@ -33,7 +33,7 @@ abstract class ResizableModalPanel extends ModalPanel {
         try {
           var13 = new SceneWidget(0L, (SceneWidget) null);
           if (param8 != 21) {
-            ResizableModalPanel.m(40);
+            ResizableModalPanel.getLegacyMenuHeight(40);
           }
           var13.field_zb = wk.a(param9, param0, 1);
           var13.field_ab = wk.a(param6, param4, 1);
@@ -72,24 +72,24 @@ abstract class ResizableModalPanel extends ModalPanel {
           this.field_S = this.field_S + 1;
           if (this.field_Q <= fieldTemp$0) {
             this.field_Q = 0;
-            this.f(true);
+            this.onResizeFinished(true);
           } else {
             var4 = this.field_S * (-this.field_S + this.field_Q * 2);
             var5 = this.field_Q * this.field_Q;
             var2 = (-this.field_T + this.field_U) * var4 / var5 + this.field_T;
             var3 = var4 * (this.field_Z - this.field_Y) / var5 + this.field_Y;
           }
-          this.a(var3, (byte) -110, var2);
+          this.centerWithSize(var3, (byte) -110, var2);
         }
         if (param0) {
-          this.e(false);
+          this.finishAnimations(false);
         }
         return super.tickLayerAndCheckHidden(param0);
     }
 
-    public static void l(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 127) {
-          ResizableModalPanel.m(55);
+          ResizableModalPanel.getLegacyMenuHeight(55);
         }
         field_R = null;
         field_P = null;
@@ -102,28 +102,28 @@ abstract class ResizableModalPanel extends ModalPanel {
         this.field_S = 0;
     }
 
-    void e(boolean param0) {
+    void finishAnimations(boolean param0) {
         if (this.field_Q <= 0) {
           return;
         }
-        this.a(this.field_Z, (byte) -110, this.field_U);
+        this.centerWithSize(this.field_Z, (byte) -110, this.field_U);
         this.field_Q = 0;
-        this.f(!param0 ? true : false);
+        this.onResizeFinished(!param0 ? true : false);
         if (param0) {
-          this.e(false);
+          this.finishAnimations(false);
         }
     }
 
-    final static int m(int param0) {
+    final static int getLegacyMenuHeight(int param0) {
         if (param0 != 22) {
-          ResizableModalPanel.a(-69, 82, -115, (BitmapFont) null, -110, 125, 40, -83, 9, 8, -58, 81, 44);
+          ResizableModalPanel.createThemedWidget(-69, 82, -115, (BitmapFont) null, -110, 125, 40, -83, 9, 8, -58, 81, 44);
         }
         return -qn.field_o + LinkButtonPainter.field_e;
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void startResizeAnimation(int param0, int param1, int param2, int param3) {
         if (param2 <= 0) {
-          this.a(param0, (byte) -110, param1);
+          this.centerWithSize(param0, (byte) -110, param1);
           return;
         }
         this.field_U = param1;
@@ -252,9 +252,9 @@ abstract class ResizableModalPanel extends ModalPanel {
         }
     }
 
-    void f(boolean param0) {
+    void onResizeFinished(boolean param0) {
         if (!param0) {
-          ResizableModalPanel.m(-1);
+          ResizableModalPanel.getLegacyMenuHeight(-1);
         }
     }
 

@@ -16,7 +16,7 @@ abstract class TickClock {
         field_e = null;
     }
 
-    abstract int a(boolean param0, long param1);
+    abstract int advanceTicks(boolean param0, long param1);
 
     final static SceneWidget b(int param0) {
         if (param0 <= 101) {
@@ -26,19 +26,19 @@ abstract class TickClock {
         return PairedTextColumns.c((byte) 123);
     }
 
-    abstract void a(boolean param0);
+    abstract void resynchronize(boolean param0);
 
-    final int a(byte param0, long param1) {
+    final int waitForTicks(byte param0, long param1) {
         int var4 = -125 % ((param0 + 64) / 46);
-        long var5 = this.a(-23239);
+        long var5 = this.getMillisUntilNextTick(-23239);
         if (var5 <= 0L) {
-          return this.a(false, param1);
+          return this.advanceTicks(false, param1);
         }
-        SecondaryNodeHashTable.a(var5, (byte) 23);
-        return this.a(false, param1);
+        SecondaryNodeHashTable.sleepMillis(var5, (byte) 23);
+        return this.advanceTicks(false, param1);
     }
 
-    abstract long a(int param0);
+    abstract long getMillisUntilNextTick(int param0);
 
     static {
         field_b = false;

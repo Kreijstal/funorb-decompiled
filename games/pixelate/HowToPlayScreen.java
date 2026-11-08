@@ -20,9 +20,9 @@ final class HowToPlayScreen extends MenuScreen {
         this.field_r = 0;
     }
 
-    final void a(int param0, int param1, boolean param2) {
+    final void enterScreen(int param0, int param1, boolean param2) {
         this.field_r = 0;
-        super.a(param0, 1, param2);
+        super.enterScreen(param0, 1, param2);
     }
 
     final void handleNavigation(int param0) {
@@ -39,28 +39,28 @@ final class HowToPlayScreen extends MenuScreen {
         if (param0 > -35) {
           return;
         }
-        if (!this.field_g.c((byte) 35)) {
+        if (!this.field_g.isButtonHeld((byte) 35)) {
           if (ke.field_a == 96) {
             if (var2 >= this.field_g.selectedIndex) {
-              this.field_g.a(false, var3);
+              this.field_g.selectIndex(false, var3);
             } else {
-              this.field_g.a(false, this.field_g.selectedIndex - 1);
+              this.field_g.selectIndex(false, this.field_g.selectedIndex - 1);
             }
           }
           if (ke.field_a == 97) {
             if (this.field_g.selectedIndex >= 0 &&
               this.field_g.selectedIndex < var3) {
-              this.field_g.a(false, this.field_g.selectedIndex + 1);
+              this.field_g.selectIndex(false, this.field_g.selectedIndex + 1);
             } else {
-              this.field_g.a(false, var2);
+              this.field_g.selectIndex(false, var2);
             }
           }
           if ((ke.field_a == 98 ||
             ke.field_a == 99) && this.field_g.selectedIndex == -1) {
-            this.field_g.a(false, 1);
+            this.field_g.selectIndex(false, 1);
           }
         }
-        this.field_g.b((byte) -71);
+        this.field_g.captureKeyCode((byte) -71);
     }
 
     final static id a(byte param0, String[] param1) {
@@ -102,7 +102,7 @@ final class HowToPlayScreen extends MenuScreen {
           ln.field_m.length - 1 == this.field_r) {
           var3 = ke.field_a;
           ke.field_a = 96;
-          this.field_g.a(84, 1);
+          this.field_g.handleHorizontalNavigation(84, 1);
           ke.field_a = var3;
         }
     }
@@ -112,11 +112,11 @@ final class HowToPlayScreen extends MenuScreen {
         return this.field_d;
     }
 
-    final void a(byte param0, boolean param1, int param2) {
+    final void drawRow(byte param0, boolean param1, int param2) {
         if (1 != param2) {
-          super.a((byte) 35, StripedProgressBar.field_W, param1, param2);
+          super.drawItemRow((byte) 35, StripedProgressBar.field_W, param1, param2);
         } else {
-          this.a(param1, true);
+          this.drawMenuButton(param1, true);
         }
         if (param0 > -116) {
           this.handleNavigation(-71);
@@ -133,10 +133,10 @@ final class HowToPlayScreen extends MenuScreen {
     final void handleInput(byte param0) {
         super.handleInput((byte) -107);
         if (this.field_r == 3) {
-          SpriteState.field_u.a((byte) 21);
+          SpriteState.field_u.tick((byte) 21);
         }
         if (this.field_r == 7) {
-          jf.field_c.b(300);
+          jf.field_c.tick(300);
         }
         if (param0 > -64) {
           field_s = (Sprite[]) null;
@@ -190,9 +190,9 @@ final class HowToPlayScreen extends MenuScreen {
         LoginCredentials.field_e = Js5NetworkRequest.field_C[0];
         DebouncedValidator.field_d = 0;
         NumericDateInputWidget.field_W[1].drawTransparent(0, 45);
-        this.d((byte) 59);
+        this.drawDefaultBackdrop((byte) 59);
         this.drawRows((byte) -71);
-        var4 = rk.field_e;
+        var4 = PieceTiming.field_e;
         var5 = qj.field_e;
         var6 = var5.maxAscent + (var5.maxDescent + 1);
         var7 = 200;
@@ -202,7 +202,7 @@ final class HowToPlayScreen extends MenuScreen {
             var8 = new Puzzle(3, 3, 0, 0, 0, 262144, 0, 0, new IndexedSprite[]{});
             var9 = new PlayerBoard(var8);
             var10 = new BoardView(var9, 320, 350);
-            var10.a(0, 0, 0, (byte) -68, 0);
+            var10.setAnimationTimers(0, 0, 0, (byte) -68, 0);
             var9.cells[8] = (byte)2;
             var9.cells[3] = (byte)2;
             var9.cells[2] = (byte) 1;
@@ -216,7 +216,7 @@ final class HowToPlayScreen extends MenuScreen {
                 var7 = var7 + var6 * var5.drawParagraph(ln.field_m[this.field_r][0], 50, var7, 270, 400, 16777215, 0, 0, 0, var6);
                 var7 += 10;
                 var7 = var7 + var6 * var5.drawParagraph(ln.field_m[this.field_r][1], 50, var7, 540, 400, 16777215, 0, 0, 0, var6);
-                SpriteState.field_u.c(2);
+                SpriteState.field_u.draw(2);
                 for (var8_int = 3; 0 <= var8_int; var8_int--) {
                   stackIn_29_0 = (var8_int % 2 != 0) ? 0 : 20;
                   var9_int = stackIn_29_0;
@@ -248,7 +248,7 @@ final class HowToPlayScreen extends MenuScreen {
                         var7 += 10;
                         var7 = var7 + var6 * var5.drawParagraph(ln.field_m[this.field_r][0], 50, var7, 540, 150, 16777215, 0, 0, 0, var6);
                         var8_int = 70;
-                        jf.field_c.a((byte) -8);
+                        jf.field_c.draw((byte) -8);
                         var4.drawText(ln.field_m[this.field_r][1], var8_int, 314, 0, -1);
                         var9_int = 2;
                         if (640 - var8_int > ProxyAuthenticationException.field_d &&
@@ -265,8 +265,8 @@ final class HowToPlayScreen extends MenuScreen {
                       PasswordValidator.field_r.draw(false);
                       an.field_b.draw(false);
                       DiskCacheRequest.field_H.draw((byte) 119);
-                      BoundedRandomAccessFile.field_g.a(55, 0, 0);
-                      DialWidgetPainter.field_a.a(60, 0, 0);
+                      BoundedRandomAccessFile.field_g.draw(55, 0, 0);
+                      DialWidgetPainter.field_a.draw(60, 0, 0);
                       SoftwareRasterizer.resetClip();
                     }
                   }
@@ -303,10 +303,10 @@ final class HowToPlayScreen extends MenuScreen {
           var7 += 10;
           var7 = var7 + var6 * var5.drawParagraph(ln.field_m[this.field_r][1], 50, var7, 270, 400, 16777215, 0, 0, 0, var6);
           SpriteState.field_C.draw(false);
-          QuickChatMenu.field_Qb.a(50, 0, 0);
+          QuickChatMenu.field_Qb.draw(50, 0, 0);
         }
         var4.drawCentered(pk.field_d[this.field_r], 320, 180, 0, -1);
-        var5.drawRightAlignedText(mj.formatPageNumber(4067, this.field_r), 590, 375, 16777215, 0);
+        var5.drawRightAlignedText(ScoreMarkerDemo.formatPageNumber(4067, this.field_r), 590, 375, 16777215, 0);
         DebouncedValidator.field_d = var3;
         LoginCredentials.field_e = var2;
     }
@@ -318,7 +318,7 @@ final class HowToPlayScreen extends MenuScreen {
           this.field_r == 0) {
           var3 = ke.field_a;
           ke.field_a = 97;
-          this.field_g.a(param1 - 14, 1);
+          this.field_g.handleHorizontalNavigation(param1 - 14, 1);
           ke.field_a = var3;
         }
         if (param1 != 97) {

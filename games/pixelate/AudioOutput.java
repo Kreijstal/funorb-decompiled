@@ -368,7 +368,7 @@ class AudioOutput {
           if (var1 != 0) {
             field_b.field_a = true;
             while (field_b.field_f) {
-              SecondaryNodeHashTable.a(50L, (byte) 23);
+              SecondaryNodeHashTable.sleepMillis(50L, (byte) 23);
             }
             field_b = null;
           }

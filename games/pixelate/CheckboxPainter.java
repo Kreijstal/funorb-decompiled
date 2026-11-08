@@ -56,7 +56,7 @@ final class CheckboxPainter implements WidgetPainter {
               }
               var3 = var3 + param1;
             }
-            FallingPieceView.a(var3, 0);
+            FallingPieceView.printError(var3, 0);
             var7 = qk.replaceAll(var3, ":", "%3a", -123);
             var8 = qk.replaceAll(var7, "@", "%40", -128);
             if (param0 != 1) {
@@ -84,7 +84,7 @@ final class CheckboxPainter implements WidgetPainter {
             }
             var4 = ((PlatformTaskDispatcher) (Object) stackIn_15_0).requestUrlStream((byte) stackIn_15_1, new java.net.URL(stackIn_15_4, ((StringBuilder) (Object) stackIn_15_5).append(stackIn_16_6).append("&v1=").append(PlatformTaskDispatcher.field_o).append("&v2=").append(PlatformTaskDispatcher.field_l).append("&e=").append(var10).toString()));
             while (0 == var4.field_b) {
-              SecondaryNodeHashTable.a(1L, (byte) 23);
+              SecondaryNodeHashTable.sleepMillis(1L, (byte) 23);
             }
             if (var4.field_b != 1) {
               return;
@@ -179,8 +179,8 @@ final class CheckboxPainter implements WidgetPainter {
     }
 
     final static void a(int param0) {
-        fl.a((byte) -125);
-        QuickChatMenu.a(4, -2671);
+        AsyncValidationResult.showLoadingProgressDialog((byte) -125);
+        QuickChatMenu.setPendingUiResult(4, -2671);
         if (param0 != -22218) {
           CheckboxPainter.a(-34);
         }

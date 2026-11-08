@@ -123,7 +123,7 @@ abstract class MenuScreen {
     abstract void draw(int param0);
 
     final void drawBackdrop(int param0, byte param1, int param2) {
-        SpriteEffectHelpers.a(320, param0, param2 + 290, StripedProgressBar.field_S);
+        SpriteEffectHelpers.drawGreenVerticalGlowBar(320, param0, param2 + 290, StripedProgressBar.field_S);
         if (param1 >= -82) {
           field_e = (aa[]) null;
         }
@@ -141,7 +141,7 @@ abstract class MenuScreen {
           if (this.isRowEnabled(param0 - 47, var2)) {
             stackIn_7_1 = -125;
             stackIn_8_2 = (var2 == this.field_g.selectedIndex);
-            this.a((byte) stackIn_7_1, stackIn_8_2, var2);
+            this.drawRow((byte) stackIn_7_1, stackIn_8_2, var2);
           }
         }
         if (param0 != -71) {
@@ -156,37 +156,37 @@ abstract class MenuScreen {
         if (ke.field_a == 96) {
           if (0 < this.field_g.selectedIndex) {
             if (this.field_g.selectedIndex != 2) {
-              this.field_g.a(false, 0);
+              this.field_g.selectIndex(false, 0);
             }
           } else {
-            this.field_g.a(false, 1);
+            this.field_g.selectIndex(false, 1);
           }
         }
         if (ke.field_a == 97) {
           if (this.field_g.selectedIndex != 1) {
             if (this.field_g.selectedIndex != 2) {
-              this.field_g.a(false, 1);
+              this.field_g.selectIndex(false, 1);
             }
           } else {
-            this.field_g.a(false, 0);
+            this.field_g.selectIndex(false, 0);
           }
         }
         if (ke.field_a == 99) {
           if (0 <= this.field_g.selectedIndex &&
             this.field_g.selectedIndex <= 1) {
-            this.field_g.a(false, 2);
+            this.field_g.selectIndex(false, 2);
           } else {
-            this.field_g.a(false, d.field_c);
+            this.field_g.selectIndex(false, d.field_c);
           }
         }
         if (ke.field_a == 98) {
           if (2 == this.field_g.selectedIndex) {
-            this.field_g.a(false, d.field_c);
+            this.field_g.selectIndex(false, d.field_c);
           } else {
-            this.field_g.a(false, 2);
+            this.field_g.selectIndex(false, 2);
           }
         }
-        this.field_g.b((byte) -71);
+        this.field_g.captureKeyCode((byte) -71);
         var2 = 44 / ((param0 + 21) / 50);
     }
 
@@ -199,14 +199,14 @@ abstract class MenuScreen {
         field_e = null;
     }
 
-    void a(byte param0, boolean param1, int param2) {
+    void drawRow(byte param0, boolean param1, int param2) {
         if (param0 > -116) {
           this.drawRows((byte) 11);
         }
-        this.a((byte) 35, StripedProgressBar.field_S, param1, param2);
+        this.drawItemRow((byte) 35, StripedProgressBar.field_S, param1, param2);
     }
 
-    void a(int param0, int param1, boolean param2) {
+    void enterScreen(int param0, int param1, boolean param2) {
         this.field_g.initializeSelection(param2, this.rowAt(ProxyAuthenticationException.field_d, StatusBar.field_k, -119), 17068, param1);
         nk.field_i = pa.field_b;
         if (param0 != 2) {
@@ -237,12 +237,12 @@ abstract class MenuScreen {
 
     int getRowHeight(int param0, int param1) {
         if (param0 != -28071) {
-          MenuScreen.a((byte) -105, true);
+          MenuScreen.drawAccountNamePrompt((byte) -105, true);
         }
         return 30;
     }
 
-    final void a(boolean param0) {
+    final void releaseScreenAssets(boolean param0) {
         if (!param0) {
           this.field_d = 59;
         }
@@ -254,14 +254,14 @@ abstract class MenuScreen {
         }
     }
 
-    final void a(boolean param0, boolean param1) {
+    final void drawMenuButton(boolean param0, boolean param1) {
         if (!param1) {
           this.field_m = -106;
         }
-        this.a(PacketBuffer.field_o[7], StripedProgressBar.field_W, (byte) 109, param0);
+        this.drawCenteredFooterButton(PacketBuffer.field_o[7], StripedProgressBar.field_W, (byte) 109, param0);
     }
 
-    final void a(String param0, Sprite param1, byte param2, boolean param3) {
+    final void drawCenteredFooterButton(String param0, Sprite param1, byte param2, boolean param3) {
         if (param2 < 98) {
           return;
         }
@@ -272,7 +272,7 @@ abstract class MenuScreen {
         }
     }
 
-    void c(int param0) {
+    void drawScreenBackground(int param0) {
         EmergentBehaviourBackground.field_u.drawOpaque(0, param0);
         rh.b((byte) -67);
     }
@@ -292,12 +292,12 @@ abstract class MenuScreen {
         return this.field_a;
     }
 
-    final static void a(byte param0, boolean param1) {
+    final static void drawAccountNamePrompt(byte param0, boolean param1) {
         if (param0 != 28) {
           field_h = -12;
         }
         if (null != he.field_f) {
-          he.field_f.a(param1, 0);
+          he.field_f.drawFullScreen(param1, 0);
         }
     }
 
@@ -309,7 +309,7 @@ abstract class MenuScreen {
           !ArrayWidgetContainer.a((byte) 84)) {
           this.handleNavigationKeys((byte) 81);
         } else {
-          this.field_g.a((byte) -48);
+          this.field_g.handleVerticalNavigation((byte) -48);
         }
     }
 
@@ -343,9 +343,9 @@ abstract class MenuScreen {
 
     abstract void onCancel(byte param0);
 
-    final void a(byte param0, Sprite param1, boolean param2, int param3) {
+    final void drawItemRow(byte param0, Sprite param1, boolean param2, int param3) {
         try {
-          this.a(PacketBuffer.field_o[this.field_k[param3]], param2, param3, param1, (byte) 89);
+          this.drawLabeledRowButton(PacketBuffer.field_o[this.field_k[param3]], param2, param3, param1, (byte) 89);
           if (param0 != 35) {
             field_b = (IntrusiveDeque) null;
           }
@@ -374,12 +374,12 @@ abstract class MenuScreen {
         return true;
     }
 
-    final void d(byte param0) {
+    final void drawDefaultBackdrop(byte param0) {
         this.drawBackdrop(120, (byte) -102, 0);
         int var2 = -125 % ((param0 - 5) / 39);
     }
 
-    final void a(String param0, boolean param1, int param2, Sprite param3, byte param4) {
+    final void drawLabeledRowButton(String param0, boolean param1, int param2, Sprite param3, byte param4) {
         int stackIn_27_0 = 0;
         int stackIn_45_0 = 0;
         RuntimeException stackIn_49_0 = null;
@@ -439,7 +439,7 @@ abstract class MenuScreen {
           var12 = -var7 + var9 + var8 >> 1;
           var13 = this.getRowHeight(-28071, param2);
           if (param1) {
-            SpriteEffectHelpers.a(var9 + var8 >> 1, var10 - 2, 35, param3);
+            SpriteEffectHelpers.drawGreenVerticalGlowBar(var9 + var8 >> 1, var10 - 2, 35, param3);
           }
           stackIn_27_0 = (!param1) ? 2 : 0;
           var14 = stackIn_27_0;
@@ -500,7 +500,7 @@ abstract class MenuScreen {
           var9 = 420;
           var10 = 2;
           if (param0) {
-            SpriteEffectHelpers.a(param4, -7 + var9, 46, param2);
+            SpriteEffectHelpers.drawGreenVerticalGlowBar(param4, -7 + var9, 46, param2);
             var10 = 0;
           }
           if (param3 != -6) {
@@ -513,7 +513,7 @@ abstract class MenuScreen {
         }
     }
 
-    void a(int param0, boolean param1, boolean param2) {
+    void drawFadeTransition(int param0, boolean param1, boolean param2) {
         int var6 = 0;
         if (!param1) {
           int[] var7 = (int[]) null;
@@ -527,9 +527,9 @@ abstract class MenuScreen {
           var5 = var6;
         }
         pe.field_b.makeRasterTarget();
-        this.c(0);
+        this.drawScreenBackground(0);
         ClientException.field_f.bindRaster(19692);
-        SpriteEffectHelpers.a(pe.field_b.pixels, var4, var5);
+        SpriteEffectHelpers.blendFullscreenImageVerticalFade(pe.field_b.pixels, var4, var5);
     }
 
     void handleInput(byte param0) {
@@ -603,7 +603,7 @@ abstract class MenuScreen {
                   if (1 == var6) {
                     if (!(!this.field_g.isActivated(38))) {
                       if (ArrayWidgetContainer.a((byte) 66)) {
-                        MatchController.a(param2, 0, -4, (byte) 91, QuickChatMenu.field_Ib);
+                        MatchController.openTextPopup(param2, 0, -4, (byte) 91, QuickChatMenu.field_Ib);
                       } else {
                         var6 = param2 ? 1 : 0;
                         la.changeScreen(MidiPcmStream.field_t, -4, var6 != 0, -25528);
@@ -654,7 +654,7 @@ abstract class MenuScreen {
                       } else {
                         if (var6 == 5) {
                           if (!(!this.field_g.isActivated(45))) {
-                            ((HowToPlayScreen) (StripedProgressBar.field_H[7])).a(2, 1, param2);
+                            ((HowToPlayScreen) (StripedProgressBar.field_H[7])).enterScreen(2, 1, param2);
                             var6 = param2 ? 1 : 0;
                             la.changeScreen(MidiPcmStream.field_t, 7, var6 != 0, -25528);
                           }
@@ -683,55 +683,55 @@ abstract class MenuScreen {
                           }
                           if (20 == var6) {
                             var5 = 0;
-                            if (this.field_g.d((byte) -111) &&
+                            if (this.field_g.isHomeKey((byte) -111) &&
                               LinkButtonPainter.field_h > 0) {
                               var5 = 1;
-                              nk.a((byte) 93, 0);
+                              nk.setMusicVolume((byte) 93, 0);
                             }
-                            if (this.field_g.d(-111) &&
+                            if (this.field_g.isEndKey(-111) &&
                               LinkButtonPainter.field_h < 256) {
                               var5 = 1;
-                              nk.a((byte) 93, 256);
+                              nk.setMusicVolume((byte) 93, 256);
                             }
-                            if (this.field_g.c((byte) 35)) {
+                            if (this.field_g.isButtonHeld((byte) 35)) {
                               var6 = this.getRowLeft(param0, (byte) 90) + this.getRowRight(param0, false) + (Checkbox.field_T - 120) >> 1;
                               var7_int = -var6 + ProxyAuthenticationException.field_d;
                               var8 = 256 * var7_int / 120;
                               var5 = 1;
                               if (var8 <= 0) {
-                                nk.a((byte) 93, 0);
+                                nk.setMusicVolume((byte) 93, 0);
                               } else {
                                 if (var8 < 256) {
-                                  nk.a((byte) 93, var8);
+                                  nk.setMusicVolume((byte) 93, var8);
                                 } else {
-                                  nk.a((byte) 93, 256);
+                                  nk.setMusicVolume((byte) 93, 256);
                                 }
                               }
                             }
-                            if (this.field_g.e(-97) &&
+                            if (this.field_g.isLeftKey(-97) &&
                               LinkButtonPainter.field_h > 0) {
                               var5 = 1;
                               MusicPatch.e(99);
                             }
-                            if (this.field_g.c(102) &&
+                            if (this.field_g.isRightKey(102) &&
                               LinkButtonPainter.field_h < 256) {
                               var5 = 1;
-                              tj.i(32);
+                              StrongCacheReference.increaseMusicVolume(32);
                             }
-                            if (var5 != 0 && (!this.field_g.c((byte) 35) ||
+                            if (var5 != 0 && (!this.field_g.isButtonHeld((byte) 35) ||
                               !(pa.field_b <= nk.field_i))) {
                               mc.a(128, -124);
                               nk.field_i = pa.field_b + 20;
                             }
                           } else {
                             if (var6 == 21) {
-                              if (this.field_g.d((byte) -94)) {
+                              if (this.field_g.isHomeKey((byte) -94)) {
                                 ArrayWidgetContainer.a(0, -114);
                               }
-                              if (this.field_g.d(64)) {
+                              if (this.field_g.isEndKey(64)) {
                                 ArrayWidgetContainer.a(256, -54);
                               }
-                              if (this.field_g.c((byte) 35)) {
+                              if (this.field_g.isButtonHeld((byte) 35)) {
                                 var6 = -120 + (this.getRowLeft(param0, (byte) 90) + (this.getRowRight(param0, false) + Checkbox.field_T)) >> 1;
                                 var7_int = ProxyAuthenticationException.field_d - var6;
                                 var8 = var7_int * 256 / 120;
@@ -745,10 +745,10 @@ abstract class MenuScreen {
                                   }
                                 }
                               }
-                              if (this.field_g.e(-97)) {
+                              if (this.field_g.isLeftKey(-97)) {
                                 fc.a((byte) -65);
                               }
-                              if (!(!this.field_g.c(102))) {
+                              if (!(!this.field_g.isRightKey(102))) {
                                 ProxySocketConnector.e(-4767);
                               }
                               break regionExit1;
@@ -768,7 +768,7 @@ abstract class MenuScreen {
                               if (var6 != 9) {
                                 if (var6 == 11) {
                                   if (!(!this.field_g.isActivated(95))) {
-                                    ro.field_e.e(6);
+                                    ro.field_e.sendResign(6);
                                     var6 = param2 ? 1 : 0;
                                     stackIn_162_0 = (!gq.d(71)) ? 0 : 12;
                                     la.changeScreen(stackIn_162_0, -1, var6 != 0, -25528);
@@ -840,7 +840,7 @@ abstract class MenuScreen {
                                     break;
                                   case 33:
                                     if (this.field_g.isActivated(40)) {
-                                      ((GameResultsScreen) (this)).b((byte) 12, param2);
+                                      ((GameResultsScreen) (this)).leaveResults((byte) 12, param2);
                                     }
                                     break;
                                   default:
@@ -864,7 +864,7 @@ abstract class MenuScreen {
                                     break;
                                   case 34:
                                     if (this.field_g.isActivated(28)) {
-                                      ((GameResultsScreen) (this)).a(param2, -116);
+                                      ((GameResultsScreen) (this)).continueFromResults(param2, -116);
                                     }
                                     break;
                                 }
@@ -896,7 +896,7 @@ abstract class MenuScreen {
               }
             } else {
               if (this.field_g.isActivated(6)) {
-                ((OptionsScreen) (StripedProgressBar.field_H[17])).f(76);
+                ((OptionsScreen) (StripedProgressBar.field_H[17])).resetPage(76);
                 var6 = param2 ? 1 : 0;
                 la.changeScreen(MidiPcmStream.field_t, 17, var6 != 0, -25528);
               }

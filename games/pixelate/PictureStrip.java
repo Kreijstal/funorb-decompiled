@@ -32,13 +32,13 @@ final class PictureStrip {
         }
     }
 
-    final void a(int param0) {
+    final void snapToTarget(int param0) {
         if (param0 == -18577) {
-          this.field_e = this.b((byte) -37);
+          this.field_e = this.getTargetScroll((byte) -37);
           return;
         }
         this.isScrollFinished((byte) -44);
-        this.field_e = this.b((byte) -37);
+        this.field_e = this.getTargetScroll((byte) -37);
     }
 
     final static void a(int param0, Sprite[] param1) {
@@ -74,7 +74,7 @@ final class PictureStrip {
         }
     }
 
-    final static void b(int param0) {
+    final static void advanceCardAnimationCounter(int param0) {
         if (0 - ub.field_a == GameModeCard.field_f) {
           if (param0 > 122) {
             GameModeCard.field_f = GameModeCard.field_f + 1;
@@ -95,7 +95,7 @@ final class PictureStrip {
         }
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 == 0) {
           field_n = null;
           field_j = null;
@@ -114,7 +114,7 @@ final class PictureStrip {
         return 0 == this.field_c ? true : false;
     }
 
-    private final int b(byte param0) {
+    private final int getTargetScroll(byte param0) {
         int var2 = 0;
         int var2Lifetime1;
         if (param0 != -37) {
@@ -132,7 +132,7 @@ final class PictureStrip {
         return this.field_o - var2Lifetime1 * 100;
     }
 
-    private final int a(boolean param0, int param1) {
+    private final int computeEdgeFadeAlpha(boolean param0, int param1) {
         if (param1 > this.field_o) {
           param1 = 2 * this.field_o - param1;
         }
@@ -179,14 +179,14 @@ final class PictureStrip {
           var9 = -(gb.field_b.field_A >> 1) + this.field_k;
           var10 = this.field_e + 100 * var7 - 50;
           if (var2 != 0) {
-            var3 = this.a(false, var10);
-            var4 = this.a(false, 100 + var10);
+            var3 = this.computeEdgeFadeAlpha(false, var10);
+            var4 = this.computeEdgeFadeAlpha(false, 100 + var10);
             if (var3 > 0 ||
               var4 > 0) {
-              SpriteEffectHelpers.a(gb.field_b, var9, var10, var3 >> 1, var4 >> 1);
-              var5 = this.a(false, var10 + this.field_a);
-              var6 = this.a(false, this.field_g + (var10 + this.field_a));
-              this.field_l[var8].a(0, this.field_h + var9, var6, this.field_a + var10, var5);
+              SpriteEffectHelpers.drawWithVerticalAlphaGradient(gb.field_b, var9, var10, var3 >> 1, var4 >> 1);
+              var5 = this.computeEdgeFadeAlpha(false, var10 + this.field_a);
+              var6 = this.computeEdgeFadeAlpha(false, this.field_g + (var10 + this.field_a));
+              this.field_l[var8].drawWithAlphaGradient(0, this.field_h + var9, var6, this.field_a + var10, var5);
             }
             if (var7 == 0) {
               if (var3 > 0) {
@@ -204,7 +204,7 @@ final class PictureStrip {
             }
           } else {
             gb.field_b.drawAlpha(var9, var10, 128);
-            this.field_l[var8].b(this.field_h + var9, var10 + this.field_a, (byte) -106);
+            this.field_l[var8].draw(this.field_h + var9, var10 + this.field_a, (byte) -106);
             if (0 == var7) {
               HighscoresScreen.field_q.drawAlpha(var9, var10 - HighscoresScreen.field_q.field_B, 128);
             }
@@ -223,8 +223,8 @@ final class PictureStrip {
         int var2 = 0;
         int var2Lifetime1;
         if (param0 != -16888) {
-          PictureStrip.c(-121);
-          var2 = this.b((byte) -37);
+          PictureStrip.releaseStatics(-121);
+          var2 = this.getTargetScroll((byte) -37);
           if (this.field_c > 0) {
             this.field_c = this.field_c - 1;
             this.field_e = this.field_b * this.field_c * this.field_c / 900 + var2;
@@ -242,7 +242,7 @@ final class PictureStrip {
           }
           return;
         }
-        var2Lifetime1 = this.b((byte) -37);
+        var2Lifetime1 = this.getTargetScroll((byte) -37);
         if (this.field_c > 0) {
           this.field_c = this.field_c - 1;
           this.field_e = this.field_b * this.field_c * this.field_c / 900 + var2Lifetime1;

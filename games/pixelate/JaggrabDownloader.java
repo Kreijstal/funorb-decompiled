@@ -37,7 +37,7 @@ final class JaggrabDownloader implements Runnable {
         if (param1 != 14428) {
           return (LobbyPlayer) null;
         }
-        return (LobbyPlayer) (SocketConnector.field_f.a(-11434, param0));
+        return (LobbyPlayer) (SocketConnector.field_f.get(-11434, param0));
     }
 
     protected final void finalize() {

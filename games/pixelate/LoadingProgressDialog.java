@@ -31,7 +31,7 @@ final class LoadingProgressDialog extends ResizableModalPanel {
           this.field_gb = param1;
           if (null != this.field_gb) {
             var3_int = ba.field_d.paragraphHeight(this.field_gb, 260, ba.field_d.maxAscent);
-            this.a(150 + var3_int, (byte) -110, 300);
+            this.centerWithSize(150 + var3_int, (byte) -110, 300);
           }
           this.activityBar = new StripedProgressBar(13, 50, 274, 30, 15, 2113632, 4210752);
           this.field_db = false;

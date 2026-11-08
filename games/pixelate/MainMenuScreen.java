@@ -11,11 +11,11 @@ final class MainMenuScreen extends MenuScreen {
 
     final static void g(byte param0) {
         if (el.field_b == 10) {
-          tj.h(20);
+          StrongCacheReference.beginLoginRequest(20);
           el.field_b = 11;
         } else {
           if (!ri.a(-88)) {
-            tj.h(20);
+            StrongCacheReference.beginLoginRequest(20);
             el.field_b = 11;
           }
         }

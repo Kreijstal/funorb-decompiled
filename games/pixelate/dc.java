@@ -25,10 +25,10 @@ final class dc {
           while (true) {
             var3 = param2.requestExitFullscreen(param1, -84);
             while (var3.field_b == 0) {
-              SecondaryNodeHashTable.a(10L, (byte) 23);
+              SecondaryNodeHashTable.sleepMillis(10L, (byte) 23);
             }
             if (var3.field_b != 1) {
-              SecondaryNodeHashTable.a(100L, (byte) 23);
+              SecondaryNodeHashTable.sleepMillis(100L, (byte) 23);
               continue;
             }
             break;

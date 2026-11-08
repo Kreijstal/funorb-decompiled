@@ -114,7 +114,7 @@ final class CipherPacketBuffer extends PacketBuffer {
           stackIn_4_1 = param1;
           stackIn_5_2 = (bj.field_d == ScoreMarkerBar.field_z.field_Gb);
           boolean decompiledFrameRemainder0 = true;
-          var3_int = ((ScrollContainer) (Object) stackIn_4_0).a(stackIn_4_1, stackIn_5_2, 2, param0 * (3 * fq.field_q + 6), 0, 2 + fq.field_q) ? 1 : 0;
+          var3_int = ((ScrollContainer) (Object) stackIn_4_0).updateScrolling(stackIn_4_1, stackIn_5_2, 2, param0 * (3 * fq.field_q + 6), 0, 2 + fq.field_q) ? 1 : 0;
           var4 = ScoreMarkerBar.field_z.field_Fb.children;
           var5 = null;
           if (ValidatedTextWidget.field_db != 2) {
@@ -136,7 +136,7 @@ final class CipherPacketBuffer extends PacketBuffer {
             SceneWidget.field_E.field_cb = AlphaContainer.a(ke.field_e, 78, new String[]{LabeledField.field_L});
             ScoreMarkerBar.field_z.field_Gb.field_Ib.field_cb = null;
             var6 = null;
-            var7 = (SocialListEntry) (var4.c(1504642273));
+            var7 = (SocialListEntry) (var4.first(1504642273));
             while (true) {
               if (var7 != null) {
                 var8 = 0;
@@ -152,7 +152,7 @@ final class CipherPacketBuffer extends PacketBuffer {
                     var7.field_Ob = new SceneWidget(0L, SceneWidget.field_T);
                     var7.addChild(var7.field_Ob, (byte) 26);
                     var7.field_Eb.horizontalAlignment = 2;
-                    var7.h(-257);
+                    var7.markTreeDirty(-257);
                     var8 = 1;
                   }
                   var7.field_K = ScoreMarkerBar.field_z.field_Fb.field_K;
@@ -203,7 +203,7 @@ final class CipherPacketBuffer extends PacketBuffer {
                   if (null != var7.field_Nb) {
                     stackIn_50_1 = var7.field_Nb;
                   } else {
-                    stackIn_50_1 = re.field_g;
+                    stackIn_50_1 = LoadingStepTracker.field_g;
                   }
                   stackIn_49_0.field_cb = stackIn_50_1;
                   var7.field_Eb.setBounds(var9, fq.field_q, -80 + var7.field_K, 256, 80);
@@ -230,7 +230,7 @@ final class CipherPacketBuffer extends PacketBuffer {
                     em.openContextMenu((String) null, 0L, var16, -1, var7, -163, ScoreMarkerBar.field_z.field_Gb, (int[]) null, -1);
                     var5 = var7;
                     if (var7.field_Nb != null &&
-                      !TimerBar.a(75, ProxySocketConnector.field_n.field_h) &&
+                      !TimerBar.isPrivateChatTarget(75, ProxySocketConnector.field_n.field_h) &&
                       !ln.field_q) {
                       if (!IsaacRandom.field_g) {
                         var17 = ProxySocketConnector.field_n;
@@ -242,7 +242,7 @@ final class CipherPacketBuffer extends PacketBuffer {
                       var17Lifetime1.field_b.addAction(var18Lifetime1, (byte) -102, 18);
                     }
                   }
-                  var7 = (SocialListEntry) (var4.last(1504642273));
+                  var7 = (SocialListEntry) (var4.next(1504642273));
                   continue;
                 }
               } else {

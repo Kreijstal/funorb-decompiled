@@ -167,8 +167,8 @@ final class TriangleMesh {
           var1_int = 0;
           var2 = 0;
           while (DirectByteStorage.$cfr$intArgs$b$c4997cb15529(123)) {
-            mj.field_c.a((byte) -48);
-            if (mj.field_c.isActivated(84)) {
+            ScoreMarkerDemo.field_c.handleVerticalNavigation((byte) -48);
+            if (ScoreMarkerDemo.field_c.isActivated(84)) {
               var1_int = 1;
             }
             if (ke.field_a != 13) {
@@ -176,17 +176,17 @@ final class TriangleMesh {
             }
             var2 = 1;
           }
-          mj.field_c.updatePointer(mi.a(BufferedRandomAccessFile.field_a, ji.field_c, (byte) -82), mi.a(ProxyAuthenticationException.field_d, StatusBar.field_k, (byte) -73), -1);
+          ScoreMarkerDemo.field_c.updatePointer(mi.a(BufferedRandomAccessFile.field_a, ji.field_c, (byte) -82), mi.a(ProxyAuthenticationException.field_d, StatusBar.field_k, (byte) -73), -1);
           if (param0 <= 74) {
             TriangleMesh.b((byte) -77);
           }
-          if (mj.field_c.isActivated(17)) {
+          if (ScoreMarkerDemo.field_c.isActivated(17)) {
             var1_int = 1;
           }
           var3 = 0;
           if (var1_int != 0 &&
-            mj.field_c.selectedIndex >= 0) {
-            var3 = BackgroundScene.field_h[mj.field_c.selectedIndex];
+            ScoreMarkerDemo.field_c.selectedIndex >= 0) {
+            var3 = BackgroundScene.field_h[ScoreMarkerDemo.field_c.selectedIndex];
             if (var3 == 2 ||
               var3 == 5) {
               dh.a(0);

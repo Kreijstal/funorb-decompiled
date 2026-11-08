@@ -4,7 +4,7 @@
 final class jf {
     static Sprite field_a;
     static String field_b;
-    static mj field_c;
+    static ScoreMarkerDemo field_c;
 
     public static void releaseStatics(int param0) {
         field_a = null;
@@ -34,12 +34,12 @@ final class jf {
             return false;
           }
           if (!param0) {
-            field_c = (mj) null;
+            field_c = (ScoreMarkerDemo) null;
           }
           var2_long = hm.a(64);
           if (0 != ij.field_s &&
             0 > AudioService.field_c) {
-            var4_ref_ug = (ug) (id.field_d.c(1504642273));
+            var4_ref_ug = (ug) (id.field_d.first(1504642273));
             if (var4_ref_ug != null &&
               var2_long > var4_ref_ug.field_o) {
               var4_ref_ug.unlink(2779);
@@ -87,7 +87,7 @@ final class jf {
             for (var6 = 0; var6 < BackgroundScene.field_b; var6++) {
               var5.field_r[var6] = MusicCrossfadeStream.field_o.payload[var6];
             }
-            id.field_d.addFirst(22125, var5);
+            id.field_d.addLast(22125, var5);
             AudioService.field_c = -1;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -145,7 +145,7 @@ final class jf {
             return stackIn_18_0;
           }
           if (param2 < 57) {
-            field_c = (mj) null;
+            field_c = (ScoreMarkerDemo) null;
           }
           if (DialWidgetPainter.field_q >= 200) {
             stackIn_24_0 = MarkerSlider.field_Q;
@@ -258,7 +258,7 @@ final class jf {
             var6 = (String) null;
             jf.requestAddFriend((String) null, -39, (byte) 9);
           }
-          if (rk.a(param3, false, param2, param1)) {
+          if (PieceTiming.a(param3, false, param2, param1)) {
             stackIn_6_0 = ed.createPaletteBitmapFont(param0.getFile(param1, param3, true), -28628);
             return stackIn_6_0;
           }

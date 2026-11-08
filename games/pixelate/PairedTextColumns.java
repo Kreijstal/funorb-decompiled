@@ -8,7 +8,7 @@ final class PairedTextColumns extends SceneWidget {
     private SceneWidget field_Fb;
     static int field_Hb;
 
-    public static void j(int param0) {
+    public static void clearStatics(int param0) {
         field_Eb = null;
         field_Gb = null;
         if (param0 < 78) {
@@ -16,12 +16,12 @@ final class PairedTextColumns extends SceneWidget {
         }
     }
 
-    final int b(byte param0, int param1) {
+    final int getPreferredWidth(byte param0, int param1) {
         if (param0 >= 106) {
-          return this.field_Fb.g(0) + param1 + this.field_Ib.g(0);
+          return this.field_Fb.getContentWidth(0) + param1 + this.field_Ib.getContentWidth(0);
         }
-        this.a(99, 86, 52, 40, 114, 127);
-        return this.field_Fb.g(0) + param1 + this.field_Ib.g(0);
+        this.setBoundsAndLayoutColumns(99, 86, 52, 40, 114, 127);
+        return this.field_Fb.getContentWidth(0) + param1 + this.field_Ib.getContentWidth(0);
     }
 
     final static SceneWidget c(byte param0) {
@@ -31,25 +31,25 @@ final class PairedTextColumns extends SceneWidget {
         return MouseWheelHandler.field_e.field_Fb;
     }
 
-    private final void b(int param0, boolean param1) {
-        this.field_Fb.setBounds(0, this.height, 0, 256, this.field_Fb.g(0));
+    private final void layoutColumns(int param0, boolean param1) {
+        this.field_Fb.setBounds(0, this.height, 0, 256, this.field_Fb.getContentWidth(0));
         int var3 = param0 + this.field_Fb.field_K;
         this.field_Ib.setBounds(0, this.height, var3, 256, -var3 + this.field_K);
         if (!param1) {
           return;
         }
         LobbyGame var4 = (LobbyGame) null;
-        PairedTextColumns.a(false, (String) null, (LobbyGame) null, 102);
+        PairedTextColumns.openLobbyGameContextMenu(false, (String) null, (LobbyGame) null, 102);
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final void setBoundsAndLayoutColumns(int param0, int param1, int param2, int param3, int param4, int param5) {
         this.setBounds(param2, param0, param1, param5 + 256, param3);
         if (param5 == 0) {
-          this.b(param4, false);
+          this.layoutColumns(param4, false);
           return;
         }
         field_Hb = -3;
-        this.b(param4, false);
+        this.layoutColumns(param4, false);
     }
 
     final static void a(int param0, int param1) {
@@ -85,7 +85,7 @@ final class PairedTextColumns extends SceneWidget {
           this.field_Ib.field_cb = param3;
           this.addChild(this.field_Fb, (byte) 26);
           this.addChild(this.field_Ib, (byte) 26);
-          this.h(-257);
+          this.markTreeDirty(-257);
         } catch (RuntimeException runtimeException) {
           throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "fb.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
@@ -115,7 +115,7 @@ final class PairedTextColumns extends SceneWidget {
         return 0;
     }
 
-    final static void a(boolean param0, String param1, LobbyGame param2, int param3) {
+    final static void openLobbyGameContextMenu(boolean param0, String param1, LobbyGame param2, int param3) {
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
@@ -141,7 +141,7 @@ final class PairedTextColumns extends SceneWidget {
             var10 = AlphaContainer.a(ReportAbuseDialog.field_Kb, 103, new String[]{param1});
             var9.field_b.addAction(var10, (byte) -112, 10);
           }
-          ProxySocketConnector.field_n.c(-107);
+          ProxySocketConnector.field_n.addLobbyGameActions(-107);
           if (param0) {
             if (NameAvailabilityValidator.field_r == ProxySocketConnector.field_n.field_m) {
               var13 = ProxySocketConnector.field_n;

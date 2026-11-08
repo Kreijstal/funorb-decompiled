@@ -31,7 +31,7 @@ final class ClientContextMenu {
         }
     }
 
-    private final String a(byte param0) {
+    private final String getTargetDisplayName(byte param0) {
         String var2 = null;
         if (this.field_i != null) {
           var2 = this.field_i;
@@ -44,7 +44,7 @@ final class ClientContextMenu {
         return var2;
     }
 
-    final void a(int param0, int[] param1, int param2) {
+    final void addPlayerSocialActions(int param0, int[] param1, int param2) {
         RuntimeException stackIn_28_0 = null;
         StringBuilder stackIn_28_1 = null;
         String stackIn_29_2 = null;
@@ -66,9 +66,9 @@ final class ClientContextMenu {
             if (2 != ValidatedTextWidget.field_db) {
               return;
             }
-            var7 = this.a((byte) 114);
+            var7 = this.getTargetDisplayName((byte) 114);
             var4 = var7;
-            var5 = re.findFriend(this.field_h, -1);
+            var5 = LoadingStepTracker.findFriend(this.field_h, -1);
             var6 = ImageProducerRasterBuffer.a(-640, this.field_h) ? 1 : 0;
             if (var5 == null &&
               var6 == 0) {
@@ -82,7 +82,7 @@ final class ClientContextMenu {
               }
             }
             if (var5 != null) {
-              if (!TimerBar.a(57, this.field_h) &&
+              if (!TimerBar.isPrivateChatTarget(57, this.field_h) &&
                 !ln.field_q) {
                 if (!IsaacRandom.field_g) {
                   this.field_b.addAction(AlphaContainer.a(nf.field_e, 105, new String[]{var7}), (byte) -119, 8);
@@ -115,7 +115,7 @@ final class ClientContextMenu {
         }
     }
 
-    final static void b(byte param0) {
+    final static void refreshOpenLegacyMenu(byte param0) {
         if (!hf.b((byte) 100)) {
           return;
         }
@@ -125,7 +125,7 @@ final class ClientContextMenu {
         }
     }
 
-    private final boolean a(int param0, int param1, int param2) {
+    private final boolean handleGameMembershipAction(int param0, int param1, int param2) {
         boolean discarded$0 = false;
         boolean discarded$1 = false;
         boolean discarded$2 = false;
@@ -136,11 +136,11 @@ final class ClientContextMenu {
         int var5;
         var5 = Pixelate.field_H ? 1 : 0;
         if (param0 == 0) {
-          StatusBar.a(this.field_l, param1, param2 ^ -31541);
+          StatusBar.sendNameRequest(this.field_l, param1, param2 ^ -31541);
           if (param2 == 7490) {
             return true;
           }
-          discarded$0 = this.a(67, true, 49);
+          discarded$0 = this.handleReportAbuseAction(67, true, 49);
           return true;
         }
         if (param0 == 1) {
@@ -148,15 +148,15 @@ final class ClientContextMenu {
           if (param2 == 7490) {
             return true;
           }
-          discarded$1 = this.a(67, true, 49);
+          discarded$1 = this.handleReportAbuseAction(67, true, 49);
           return true;
         }
         if (param0 == 2) {
-          ClientContextMenu.b(param1, param2 ^ -7903, this.field_m);
+          ClientContextMenu.sendLobbyGameRequest(param1, param2 ^ -7903, this.field_m);
           if (param2 == 7490) {
             return true;
           }
-          discarded$2 = this.a(67, true, 49);
+          discarded$2 = this.handleReportAbuseAction(67, true, 49);
           return true;
         }
         if (param0 == 3) {
@@ -164,7 +164,7 @@ final class ClientContextMenu {
           if (param2 == 7490) {
             return true;
           }
-          discarded$3 = this.a(67, true, 49);
+          discarded$3 = this.handleReportAbuseAction(67, true, 49);
           return true;
         }
         if (param0 == 10) {
@@ -172,7 +172,7 @@ final class ClientContextMenu {
           if (param2 == 7490) {
             return true;
           }
-          discarded$4 = this.a(67, true, 49);
+          discarded$4 = this.handleReportAbuseAction(67, true, 49);
           return true;
         }
         if (param0 == 15) {
@@ -180,7 +180,7 @@ final class ClientContextMenu {
           if (param2 == 7490) {
             return true;
           }
-          discarded$5 = this.a(67, true, 49);
+          discarded$5 = this.handleReportAbuseAction(67, true, 49);
           return true;
         }
         if (param0 != 16) {
@@ -190,20 +190,20 @@ final class ClientContextMenu {
         if (param2 == 7490) {
           return true;
         }
-        discarded$6 = this.a(67, true, 49);
+        discarded$6 = this.handleReportAbuseAction(67, true, 49);
         return true;
     }
 
-    final void a(boolean param0, byte param1) {
+    final void setMenuFlag(boolean param0, byte param1) {
         if (param1 != 20) {
           field_n = (String) null;
-          this.field_b.a(param0, 0);
+          this.field_b.drawFullScreen(param0, 0);
           return;
         }
-        this.field_b.a(param0, 0);
+        this.field_b.drawFullScreen(param0, 0);
     }
 
-    final void b(boolean param0, byte param1) {
+    final void addGameMemberActions(boolean param0, byte param1) {
         boolean discarded$13 = false;
         boolean discarded$12 = false;
         boolean discarded$11 = false;
@@ -227,75 +227,75 @@ final class ClientContextMenu {
           if (param1 == -98) {
             return;
           }
-          discarded$13 = this.a(48, 58, -125);
+          discarded$13 = this.handleGameMembershipAction(48, 58, -125);
           return;
         }
         if (this.field_l == DebouncedValidator.field_f) {
           if (param1 == -98) {
             return;
           }
-          discarded$12 = this.a(48, 58, -125);
+          discarded$12 = this.handleGameMembershipAction(48, 58, -125);
           return;
         }
-        if (null == io.field_c) {
+        if (null == LoginMethod.field_c) {
           if (param1 == -98) {
             return;
           }
-          discarded$11 = this.a(48, 58, -125);
+          discarded$11 = this.handleGameMembershipAction(48, 58, -125);
           return;
         }
-        if (!AccountRegistrationPanel.m(param1 + 197)) {
+        if (!AccountRegistrationPanel.isLocalPlayerGameHost(param1 + 197)) {
           if (param1 == -98) {
             return;
           }
-          discarded$10 = this.a(48, 58, -125);
+          discarded$10 = this.handleGameMembershipAction(48, 58, -125);
           return;
         }
-        var7 = ScrollContainer.a(param1 + 100, this.field_l);
+        var7 = ScrollContainer.findLobbyPlayer(param1 + 100, this.field_l);
         var4 = JaggrabDownloader.a(this.field_l, param1 + 14526);
-        var5 = this.a((byte) 27);
+        var5 = this.getTargetDisplayName((byte) 27);
         if (var4 != null) {
-          if (!io.field_c.field_dc) {
+          if (!LoginMethod.field_c.field_dc) {
             this.field_b.addAction(AlphaContainer.a(vf.field_b, 123, new String[]{var5}), (byte) -112, 1);
             if (param1 == -98) {
               return;
             }
-            discarded$0 = this.a(48, 58, -125);
+            discarded$0 = this.handleGameMembershipAction(48, 58, -125);
             return;
           }
-          if (io.field_c.field_nc < 0) {
+          if (LoginMethod.field_c.field_nc < 0) {
             if (param1 == -98) {
               return;
             }
-            discarded$1 = this.a(48, 58, -125);
+            discarded$1 = this.handleGameMembershipAction(48, 58, -125);
             return;
           }
           this.field_b.addAction(AlphaContainer.a(vf.field_b, 123, new String[]{var5}), (byte) -112, 1);
           if (param1 == -98) {
             return;
           }
-          discarded$2 = this.a(48, 58, -125);
+          discarded$2 = this.handleGameMembershipAction(48, 58, -125);
           return;
         }
         if (var7 == null) {
           if (param1 == -98) {
             return;
           }
-          discarded$9 = this.a(48, 58, -125);
+          discarded$9 = this.handleGameMembershipAction(48, 58, -125);
           return;
         }
-        if (!io.field_c.field_Mb) {
+        if (!LoginMethod.field_c.field_Mb) {
           if (param1 == -98) {
             return;
           }
-          discarded$8 = this.a(48, 58, -125);
+          discarded$8 = this.handleGameMembershipAction(48, 58, -125);
           return;
         }
-        if (io.field_c.field_mc >= io.field_c.field_ec) {
+        if (LoginMethod.field_c.field_mc >= LoginMethod.field_c.field_ec) {
           if (param1 == -98) {
             return;
           }
-          discarded$7 = this.a(48, 58, -125);
+          discarded$7 = this.handleGameMembershipAction(48, 58, -125);
           return;
         }
         if (var7.field_Vb) {
@@ -303,7 +303,7 @@ final class ClientContextMenu {
           if (param1 == -98) {
             return;
           }
-          discarded$3 = this.a(48, 58, -125);
+          discarded$3 = this.handleGameMembershipAction(48, 58, -125);
           return;
         }
         if (!param0) {
@@ -311,7 +311,7 @@ final class ClientContextMenu {
           if (param1 == -98) {
             return;
           }
-          discarded$4 = this.a(48, 58, -125);
+          discarded$4 = this.handleGameMembershipAction(48, 58, -125);
           return;
         }
         if (!var7.field_Jb) {
@@ -319,7 +319,7 @@ final class ClientContextMenu {
           if (param1 == -98) {
             return;
           }
-          discarded$6 = this.a(48, 58, -125);
+          discarded$6 = this.handleGameMembershipAction(48, 58, -125);
           return;
         }
         this.field_b.addAction(AlphaContainer.a(ValidationHelpWidget.field_V, 59, new String[]{var5}), (byte) -70, 0);
@@ -327,11 +327,11 @@ final class ClientContextMenu {
         if (param1 == -98) {
           return;
         }
-        discarded$5 = this.a(48, 58, -125);
+        discarded$5 = this.handleGameMembershipAction(48, 58, -125);
         return;
     }
 
-    final static void b(int param0, int param1, int param2) {
+    final static void sendLobbyGameRequest(int param0, int param1, int param2) {
         CipherPacketBuffer var3 = null;
         CipherPacketBuffer var3Lifetime1;
         if (param1 == -925) {
@@ -350,7 +350,7 @@ final class ClientContextMenu {
         var3Lifetime1.writeShort(1276387944, param2);
     }
 
-    private final boolean a(int param0, byte param1, int param2) {
+    private final boolean handleSocialAction(int param0, byte param1, int param2) {
         Object var4;
         String var5;
         String var6;
@@ -360,7 +360,7 @@ final class ClientContextMenu {
         if (param2 == 4) {
           var5 = jf.requestAddFriend(this.field_h, param0, (byte) 79);
           if (var5 != null) {
-            MidiPcmStream.a(0, (String) null, this.field_h, (byte) -50, 2, var5);
+            MidiPcmStream.appendChatMessage(0, (String) null, this.field_h, (byte) -50, 2, var5);
           }
           if (param1 >= -123) {
           }
@@ -369,16 +369,16 @@ final class ClientContextMenu {
         if (param2 == 5) {
           var6 = ff.requestRemoveFriend(param0, this.field_h, (byte) -106);
           if (var6 != null) {
-            MidiPcmStream.a(0, (String) null, this.field_h, (byte) -50, 2, var6);
+            MidiPcmStream.appendChatMessage(0, (String) null, this.field_h, (byte) -50, 2, var6);
           }
           if (param1 >= -123) {
           }
           return true;
         }
         if (param2 == 6) {
-          var7 = mj.a(85, this.field_h, param0);
+          var7 = ScoreMarkerDemo.requestAddIgnore(85, this.field_h, param0);
           if (var7 != null) {
-            MidiPcmStream.a(0, (String) null, this.field_h, (byte) -50, 2, var7);
+            MidiPcmStream.appendChatMessage(0, (String) null, this.field_h, (byte) -50, 2, var7);
           }
           if (param1 >= -123) {
           }
@@ -392,14 +392,14 @@ final class ClientContextMenu {
           if (param1 < -123) {
           }
         } else {
-          MidiPcmStream.a(0, (String) null, this.field_h, (byte) -50, 2, var8);
+          MidiPcmStream.appendChatMessage(0, (String) null, this.field_h, (byte) -50, 2, var8);
           if (param1 >= -123) {
           }
         }
         return true;
     }
 
-    final boolean a(int param0) {
+    final boolean isMenuOpen(int param0) {
         if (param0 >= -94) {
           return true;
         }
@@ -412,7 +412,7 @@ final class ClientContextMenu {
         return false;
     }
 
-    final void a(byte param0, aa param1) {
+    final void addChatFilterActions(byte param0, aa param1) {
         if (param0 <= 66) {
           this.field_l = 31L;
         }
@@ -422,7 +422,7 @@ final class ClientContextMenu {
         try {
           this.field_k = param1.field_j;
           if (param1.field_j == 0) {
-            if (io.field_e == 0) {
+            if (LoginMethod.field_e == 0) {
               this.field_b.addAction(gd.field_j, (byte) -31, 12);
             }
             this.field_b.addAction(BufferedRandomAccessFile.field_d, (byte) -127, 13);
@@ -444,7 +444,7 @@ final class ClientContextMenu {
         }
     }
 
-    final boolean a(int param0, int param1, boolean param2, int param3, boolean param4) {
+    final boolean updateAndRunSelectedAction(int param0, int param1, boolean param2, int param3, boolean param4) {
         int var6 = this.field_b.updateAndPollAction(-12487, param4);
         if (param2) {
           return true;
@@ -452,14 +452,14 @@ final class ClientContextMenu {
         if (-2 == var6) {
           return false;
         }
-        boolean discarded$0 = this.a(var6, param1, 7490);
-        boolean discarded$1 = this.a(param0, (byte) -128, var6);
-        boolean discarded$2 = this.b(var6, (byte) 10, param0);
-        boolean discarded$3 = this.a(var6, param2, param3);
+        boolean discarded$0 = this.handleGameMembershipAction(var6, param1, 7490);
+        boolean discarded$1 = this.handleSocialAction(param0, (byte) -128, var6);
+        boolean discarded$2 = this.handlePlayerUtilityAction(var6, (byte) 10, param0);
+        boolean discarded$3 = this.handleReportAbuseAction(var6, param2, param3);
         return true;
     }
 
-    private final boolean b(int param0, byte param1, int param2) {
+    private final boolean handlePlayerUtilityAction(int param0, byte param1, int param2) {
         int var5;
         var5 = Pixelate.field_H ? 1 : 0;
         if (param0 == 8) {
@@ -469,13 +469,13 @@ final class ClientContextMenu {
             qj.a(this.field_h, this.field_l, (byte) 8);
           } else {
             if (param0 == 11) {
-              Js5ArchiveManager.a(0, -26931, this.field_k, param2);
+              Js5ArchiveManager.setChatFilterMode(0, -26931, this.field_k, param2);
             } else {
               if (param0 == 12) {
-                Js5ArchiveManager.a(1, -26931, this.field_k, param2);
+                Js5ArchiveManager.setChatFilterMode(1, -26931, this.field_k, param2);
               } else {
                 if (param0 == 13) {
-                  Js5ArchiveManager.a(2, -26931, this.field_k, param2);
+                  Js5ArchiveManager.setChatFilterMode(2, -26931, this.field_k, param2);
                 } else {
                   if (param0 == 14) {
                     IterableNodeHashTable.a(7500);
@@ -497,11 +497,11 @@ final class ClientContextMenu {
         if (param1 == 10) {
           return true;
         }
-        ClientContextMenu.b((byte) -113);
+        ClientContextMenu.refreshOpenLegacyMenu((byte) -113);
         return true;
     }
 
-    private final boolean a(int param0, boolean param1, int param2) {
+    private final boolean handleReportAbuseAction(int param0, boolean param1, int param2) {
         if (param0 == 17) {
           AccountTermsPanel.field_M = new ReportAbuseDialog(this.field_o.field_tb, this.field_o.screenY, this.field_o.field_K, this.field_o.height, param2, cm.field_o, pj.field_i, Vector3.field_f, TextFieldValidator.field_h, um.field_q, dn.field_c, this.field_h, this.field_l);
           return true;
@@ -509,18 +509,18 @@ final class ClientContextMenu {
         if (!param1) {
           return false;
         }
-        boolean discarded$0 = this.a(-50, false, 11);
+        boolean discarded$0 = this.handleReportAbuseAction(-50, false, 11);
         return false;
     }
 
-    final void c(int param0) {
+    final void addLobbyGameActions(int param0) {
         int var2;
         LobbyGame var3;
         String var4;
         int var5;
         var5 = Pixelate.field_H ? 1 : 0;
         var2 = -90 % ((42 - param0) / 62);
-        if (io.field_c != null) {
+        if (LoginMethod.field_c != null) {
           return;
         }
         var3 = vm.findLobbyGame(this.field_m, (byte) -107);
@@ -569,25 +569,25 @@ final class ClientContextMenu {
         }
     }
 
-    final void b(int param0) {
+    final void addReportAbuseAction(int param0) {
         boolean discarded$0 = false;
         String var3 = null;
         if (null != this.field_h) {
           if (~this.field_l == ~DebouncedValidator.field_f) {
             if (param0 != 8893) {
-              discarded$0 = this.a(-105, 67, -5);
+              discarded$0 = this.handleGameMembershipAction(-105, 67, -5);
               return;
             }
             return;
           }
-          var3 = this.a((byte) 43);
+          var3 = this.getTargetDisplayName((byte) 43);
           String var2 = var3;
           this.field_b.addAction(AlphaContainer.a(IndexedSpriteState.field_j, param0 - 8830, new String[]{var3}), (byte) -72, 17);
         }
         if (param0 == 8893) {
           return;
         }
-        boolean discarded$1 = this.a(-105, 67, -5);
+        boolean discarded$1 = this.handleGameMembershipAction(-105, 67, -5);
     }
 
     static {

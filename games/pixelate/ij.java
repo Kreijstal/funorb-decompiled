@@ -40,7 +40,7 @@ final class ij extends MenuScreen {
             decompiledFrameRemainder0 = (qg.field_b == null);
           }
           if (decompiledFrameRemainder0) {
-            if (!re.field_h) {
+            if (!LoadingStepTracker.field_h) {
               if (CachedTextLayout.field_h >= Js5ArchiveManager.field_c) {
                 stackIn_20_0 = (CipherPacketBuffer.field_s + Js5ArchiveManager.field_c > CachedTextLayout.field_h) ? 1 : 0;
               } else {
@@ -53,7 +53,7 @@ final class ij extends MenuScreen {
             if (param1 == null) {
               CachedTextLayout.field_h = 0;
             } else {
-              if (re.field_h) {
+              if (LoadingStepTracker.field_h) {
                 CachedTextLayout.field_h = Js5ArchiveManager.field_c;
               } else {
                 if (var2_int == 0) {
@@ -66,15 +66,15 @@ final class ij extends MenuScreen {
             oo.field_f = Checkbox.field_Q;
             MarkerSlider.field_V = DisplayNameForm.field_L;
             if (param1 != null) {
-              re.field_h = false;
+              LoadingStepTracker.field_h = false;
             } else {
               if (var2_int != 0) {
-                re.field_h = true;
+                LoadingStepTracker.field_h = true;
               }
             }
           }
           qg.field_b = param1;
-          if (!re.field_h &&
+          if (!LoadingStepTracker.field_h &&
             CachedTextLayout.field_h < Js5ArchiveManager.field_c &&
             SocialListEntry.field_Jb) {
             MarkerSlider.field_V = DisplayNameForm.field_L;
@@ -83,9 +83,9 @@ final class ij extends MenuScreen {
           }
           Checkbox.field_Q = -1;
           DisplayNameForm.field_L = -1;
-          if (re.field_h &&
+          if (LoadingStepTracker.field_h &&
             CachedTextLayout.field_h == ContextActionMenu.field_Fb) {
-            re.field_h = false;
+            LoadingStepTracker.field_h = false;
             CachedTextLayout.field_h = 0;
             return;
           }
@@ -104,7 +104,7 @@ final class ij extends MenuScreen {
         }
     }
 
-    final void c(int param0) {
+    final void drawScreenBackground(int param0) {
         if (param0 != 0) {
           return;
         }

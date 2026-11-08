@@ -36,9 +36,9 @@ final class MidiPcmStream extends PcmStream {
     private int field_O;
     private MusicTrack field_D;
 
-    private final void b(int param0, int param1, int param2) {
+    private final void handleChannelPressure(int param0, int param1, int param2) {
         if (param2 != 1000000) {
-          this.g(-41);
+          this.stopAndResetTrack(-41);
         }
     }
 
@@ -150,7 +150,7 @@ final class MidiPcmStream extends PcmStream {
         if (param0 <= 66) {
           this.field_z = false;
         }
-        var3 = (MusicPatchNode) (this.field_N.field_r.c(1504642273));
+        var3 = (MusicPatchNode) (this.field_N.field_r.first(1504642273));
         while (var3 != null) {
           if ((0 > param1 ||
             param1 == var3.field_I) &&
@@ -158,7 +158,7 @@ final class MidiPcmStream extends PcmStream {
             this.field_G[var3.field_I][var3.field_A] = null;
             var3.field_v = 0;
           }
-          var3 = (MusicPatchNode) (this.field_N.field_r.last(1504642273));
+          var3 = (MusicPatchNode) (this.field_N.field_r.next(1504642273));
         }
     }
 
@@ -167,7 +167,7 @@ final class MidiPcmStream extends PcmStream {
         if (param1 != 0) {
           this.firstSubStream();
         }
-        MusicPatchNode var3 = (MusicPatchNode) (this.field_N.field_r.c(1504642273));
+        MusicPatchNode var3 = (MusicPatchNode) (this.field_N.field_r.first(1504642273));
         while (var3 != null) {
           if (param0 < 0 ||
             var3.field_I == param0) {
@@ -183,7 +183,7 @@ final class MidiPcmStream extends PcmStream {
             }
             var3.unlink(2779);
           }
-          var3 = (MusicPatchNode) (this.field_N.field_r.last(param1 + 1504642273));
+          var3 = (MusicPatchNode) (this.field_N.field_r.next(param1 + 1504642273));
         }
     }
 
@@ -213,11 +213,11 @@ final class MidiPcmStream extends PcmStream {
           if (param4 > 0) {
             var7 = new int[]{param4};
           }
-          var8 = (qn) (param0.patchUsage.a((byte) -109));
+          var8 = (qn) (param0.patchUsage.first((byte) -109));
           while (var8 != null) {
             boolean decompiledFrameRemainder0 = true;
             var9 = (int)var8.field_e;
-            var12 = (MusicPatch) (this.patches.a(-25484, (long)var9));
+            var12 = (MusicPatch) (this.patches.get(-25484, (long)var9));
             if (var12 == null) {
               var13 = TabbedPanel.a(param2, var9, -30805);
               if (var13 == null) {
@@ -225,7 +225,7 @@ final class MidiPcmStream extends PcmStream {
                 decompiledFrameRemainder0 = false;
               }
               else {
-                this.patches.a((long)var9, 124, var13);
+                this.patches.put((long)var9, 124, var13);
                 decompiledFrameRemainder0 = !(var13.prepareSamples(param1, (int[]) (var7), (byte) -52, var8.field_r));
               }
             } else {
@@ -234,7 +234,7 @@ final class MidiPcmStream extends PcmStream {
             if (decompiledFrameRemainder0) {
               var6_int = 0;
             }
-            var8 = (qn) (param0.patchUsage.a(-119));
+            var8 = (qn) (param0.patchUsage.next(-119));
           }
           if (param3 <= 52) {
             return true;
@@ -318,14 +318,14 @@ final class MidiPcmStream extends PcmStream {
         }
     }
 
-    private final void d(int param0, int param1, int param2) {
+    private final void setPitchBend(int param0, int param1, int param2) {
         this.field_u[param1] = param0;
         if (param2 != -102) {
           this.field_u = (int[]) null;
         }
     }
 
-    final static void a(int param0, String param1, String param2, byte param3, int param4, String param5) {
+    final static void appendChatMessage(int param0, String param1, String param2, byte param3, int param4, String param5) {
         aa var6 = null;
         if (param3 > -18) {
           return;
@@ -386,7 +386,7 @@ final class MidiPcmStream extends PcmStream {
         var9 = Pixelate.field_H ? 1 : 0;
         this.noteOff(param1, 64, param0, (byte) 114);
         if ((this.channelFlags[param0] & 2) != 0) {
-          var5 = (MusicPatchNode) (this.field_N.field_r.g(1504642273));
+          var5 = (MusicPatchNode) (this.field_N.field_r.last(1504642273));
           while (var5 != null) {
             if (var5.field_I == param0 &&
               0 > var5.field_v) {
@@ -399,10 +399,10 @@ final class MidiPcmStream extends PcmStream {
               var5.field_A = param1;
               return;
             }
-            var5 = (MusicPatchNode) (this.field_N.field_r.j(0));
+            var5 = (MusicPatchNode) (this.field_N.field_r.previous(0));
           }
         }
-        var11 = (MusicPatch) (this.patches.a(-25484, (long)this.field_y[param0]));
+        var11 = (MusicPatch) (this.patches.get(-25484, (long)this.field_y[param0]));
         var12 = var11;
         if (var12 == null) {
           return;
@@ -445,7 +445,7 @@ final class MidiPcmStream extends PcmStream {
           }
           this.notesByGroup[param0][var7.field_y] = var7;
         }
-        this.field_N.field_r.addFirst(22125, var7);
+        this.field_N.field_r.addLast(22125, var7);
         if (param2 >= -21) {
           var10 = (ResourceArchive) null;
           this.prepareTrack((MusicTrack) null, (SoundCache) null, (ResourceArchive) null, 79, -76);
@@ -454,7 +454,7 @@ final class MidiPcmStream extends PcmStream {
         return;
     }
 
-    final static boolean a(int param0, char param1) {
+    final static boolean isAsciiDigit(int param0, char param1) {
         boolean stackIn_6_0 = false;
         if (param0 < 45) {
           return false;
@@ -481,7 +481,7 @@ final class MidiPcmStream extends PcmStream {
         }
     }
 
-    private final void a(byte param0, int param1, int param2, int param3) {
+    private final void handlePolyphonicAftertouch(byte param0, int param1, int param2, int param3) {
         if (param0 <= 106) {
           this.field_G = (MusicPatchNode[][]) null;
         }
@@ -529,16 +529,16 @@ final class MidiPcmStream extends PcmStream {
         }
     }
 
-    final static void a(boolean param0) {
-        jd var1 = (jd) (ValidationIndicator.field_O.b(-88));
+    final static void pushRasterState(boolean param0) {
+        jd var1 = (jd) (ValidationIndicator.field_O.removeLast(-88));
         if (var1 == null) {
           var1 = new jd();
         }
         if (param0) {
-          MidiPcmStream.a(-80, 'ￆ');
+          MidiPcmStream.isAsciiDigit(-80, 'ￆ');
         }
         var1.a(SoftwareRasterizer.field_k, SoftwareRasterizer.field_a, SoftwareRasterizer.field_d, SoftwareRasterizer.field_e, (byte) -102, SoftwareRasterizer.field_h, SoftwareRasterizer.field_f, SoftwareRasterizer.field_j);
-        BirthDateEntryPanel.field_P.addFirst(22125, var1);
+        BirthDateEntryPanel.field_P.addLast(22125, var1);
     }
 
     final boolean updateNote(int param0, MusicPatchNode param1, int param2, boolean param3, int[] param4) {
@@ -689,13 +689,13 @@ final class MidiPcmStream extends PcmStream {
           if (param0 > -45) {
             this.handleMidiMessage(-56, -113);
           }
-          this.b(param1, 16383);
+          this.releaseUnsustainedNotes(param1, 16383);
           this.resetRetriggerPhase(true, param1);
           this.channelFlags[param1] = 0;
           this.channelParameter[param1] = 32767;
           this.channelPitchBendRange[param1] = 256;
           this.channelSampleOffset[param1] = 0;
-          this.c(103, 8192, param1);
+          this.setChannelTuningControl(103, 8192, param1);
         }
     }
 
@@ -712,14 +712,14 @@ final class MidiPcmStream extends PcmStream {
         try {
           this.startTrack(param2, param0, true, 0);
           if (param1 != -39) {
-            this.e(54);
+            this.releasePatchSamples(54);
           }
         } catch (RuntimeException runtimeException) {
           throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "ti.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
-    final synchronized void c(int param0, int param1) {
+    final synchronized void setTempoScale(int param0, int param1) {
         this.field_C = param0;
         if (param1 != 274191016) {
           ResourceArchive var4 = (ResourceArchive) null;
@@ -742,7 +742,7 @@ final class MidiPcmStream extends PcmStream {
         }
         {
           if (0 != (2 & this.channelFlags[param2])) {
-            var6 = (MusicPatchNode) (this.field_N.field_r.c(1504642273));
+            var6 = (MusicPatchNode) (this.field_N.field_r.first(1504642273));
             while (var6 != null) {
               if (var6.field_I == var8.field_I &&
                 0 > var6.field_v &&
@@ -750,7 +750,7 @@ final class MidiPcmStream extends PcmStream {
                 var8.field_v = 0;
                 break;
               }
-              var6 = (MusicPatchNode) (this.field_N.field_r.last(1504642273));
+              var6 = (MusicPatchNode) (this.field_N.field_r.next(1504642273));
             }
           } else {
             var8.field_v = 0;
@@ -842,7 +842,7 @@ final class MidiPcmStream extends PcmStream {
         var7 = Pixelate.field_H ? 1 : 0;
         var2 = this.field_U;
         if (param0 > -105) {
-          this.b(100, -34);
+          this.releaseUnsustainedNotes(100, -34);
         }
         var3 = this.field_B;
         var4 = this.nextEventTime;
@@ -968,7 +968,7 @@ final class MidiPcmStream extends PcmStream {
         this.field_N.skip(param0);
     }
 
-    private final void b(int param0, int param1) {
+    private final void releaseUnsustainedNotes(int param0, int param1) {
         MusicPatchNode var3;
         int var4;
         var4 = Pixelate.field_H ? 1 : 0;
@@ -976,23 +976,23 @@ final class MidiPcmStream extends PcmStream {
           return;
         }
         if ((2 & this.channelFlags[param0]) != 0) {
-          var3 = (MusicPatchNode) (this.field_N.field_r.c(param1 + 1504625890));
+          var3 = (MusicPatchNode) (this.field_N.field_r.first(param1 + 1504625890));
           while (var3 != null) {
             if (var3.field_I == param0) {
               if (this.field_G[param0][var3.field_A] != null) {
-                var3 = (MusicPatchNode) (this.field_N.field_r.last(1504642273));
+                var3 = (MusicPatchNode) (this.field_N.field_r.next(1504642273));
                 continue;
               }
               if (0 > var3.field_v) {
                 var3.field_v = 0;
               }
             }
-            var3 = (MusicPatchNode) (this.field_N.field_r.last(1504642273));
+            var3 = (MusicPatchNode) (this.field_N.field_r.next(1504642273));
           }
         }
     }
 
-    final synchronized void g(int param0) {
+    final synchronized void stopAndResetTrack(int param0) {
         this.stopTrack(125, true);
         int var2 = 127 / ((param0 - 78) / 45);
     }
@@ -1067,7 +1067,7 @@ final class MidiPcmStream extends PcmStream {
           var4Lifetime2 = param0 & 15;
           var5Lifetime2 = param0 >> 8 & 127;
           var6Lifetime2 = param0 >> 16 & 127;
-          this.a((byte) 119, var5Lifetime2, var4Lifetime2, var6Lifetime2);
+          this.handlePolyphonicAftertouch((byte) 119, var5Lifetime2, var4Lifetime2, var6Lifetime2);
           return;
         }
         if (var3 != 176) {
@@ -1080,13 +1080,13 @@ final class MidiPcmStream extends PcmStream {
           if (var3 == 208) {
             var4Lifetime3Lifetime1 = param0 & 15;
             var5Lifetime3Lifetime1 = 127 & param0 >> 8;
-            this.b(var5Lifetime3Lifetime1, var4Lifetime3Lifetime1, 1000000);
+            this.handleChannelPressure(var5Lifetime3Lifetime1, var4Lifetime3Lifetime1, 1000000);
             return;
           }
           if (var3 == 224) {
             var4Lifetime3Lifetime2 = param0 & 15;
             var5Lifetime3Lifetime2 = (127 & param0 >> 8) + (16256 & param0 >> 9);
-            this.d(var5Lifetime3Lifetime2, var4Lifetime3Lifetime2, -102);
+            this.setPitchBend(var5Lifetime3Lifetime2, var4Lifetime3Lifetime2, -102);
             return;
           }
           if (param1 != -24232) {
@@ -1147,7 +1147,7 @@ final class MidiPcmStream extends PcmStream {
         }
         if (65 == var5Lifetime4) {
           if (var6Lifetime3 < 64) {
-            this.b(var4Lifetime4, 16383);
+            this.releaseUnsustainedNotes(var4Lifetime4, 16383);
             this.channelFlags[var4Lifetime4] = cm.bitAnd(this.channelFlags[var4Lifetime4], -3);
           } else {
             this.channelFlags[var4Lifetime4] = bq.bitOr(this.channelFlags[var4Lifetime4], 2);
@@ -1201,14 +1201,14 @@ final class MidiPcmStream extends PcmStream {
           }
         }
         if (var5Lifetime4 == 17) {
-          this.c(124, (this.field_Q[var4Lifetime4] & -16257) + (var6Lifetime3 << 7), var4Lifetime4);
+          this.setChannelTuningControl(124, (this.field_Q[var4Lifetime4] & -16257) + (var6Lifetime3 << 7), var4Lifetime4);
         }
         if (var5Lifetime4 == 49) {
-          this.c(72, (-128 & this.field_Q[var4Lifetime4]) + var6Lifetime3, var4Lifetime4);
+          this.setChannelTuningControl(72, (-128 & this.field_Q[var4Lifetime4]) + var6Lifetime3, var4Lifetime4);
         }
     }
 
-    final synchronized void a(boolean param0, int param1, int param2) {
+    final synchronized void setDefaultInstrumentAndBank(boolean param0, int param1, int param2) {
         this.setDefaultInstrumentAndBank(param2, 4200, param1);
         if (!param0) {
           this.allNotesOff((byte) 53, 52);
@@ -1220,15 +1220,15 @@ final class MidiPcmStream extends PcmStream {
         return this.midiReader.isReady();
     }
 
-    final synchronized void e(int param0) {
+    final synchronized void releasePatchSamples(int param0) {
         int var3 = Pixelate.field_H ? 1 : 0;
         if (param0 != -38) {
           this.channelFlags = (int[]) null;
         }
-        MusicPatch var4 = (MusicPatch) (this.patches.a((byte) -121));
+        MusicPatch var4 = (MusicPatch) (this.patches.first((byte) -121));
         while (var4 != null) {
           var4.a(false);
-          var4 = (MusicPatch) (this.patches.a(113));
+          var4 = (MusicPatch) (this.patches.next(113));
         }
     }
 
@@ -1236,12 +1236,12 @@ final class MidiPcmStream extends PcmStream {
         MusicPatchNode var3 = null;
         int var4 = Pixelate.field_H ? 1 : 0;
         if (0 != (4 & this.channelFlags[param1])) {
-          var3 = (MusicPatchNode) (this.field_N.field_r.c(1504642273));
+          var3 = (MusicPatchNode) (this.field_N.field_r.first(1504642273));
           while (var3 != null) {
             if (param1 == var3.field_I) {
               var3.field_n = 0;
             }
-            var3 = (MusicPatchNode) (this.field_N.field_r.last(1504642273));
+            var3 = (MusicPatchNode) (this.field_N.field_r.next(1504642273));
           }
         }
         if (!param0) {
@@ -1249,7 +1249,7 @@ final class MidiPcmStream extends PcmStream {
         }
     }
 
-    final synchronized void c(byte param0, int param1) {
+    final synchronized void setMasterVolume(byte param0, int param1) {
         this.field_v = param1;
         int var3 = -66 / ((-71 - param0) / 55);
     }
@@ -1263,7 +1263,7 @@ final class MidiPcmStream extends PcmStream {
         }
     }
 
-    private final void c(int param0, int param1, int param2) {
+    private final void setChannelTuningControl(int param0, int param1, int param2) {
         this.field_Q[param2] = param1;
         if (param0 <= 19) {
           return;

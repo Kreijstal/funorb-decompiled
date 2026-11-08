@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tj extends ah {
+final class StrongCacheReference extends CacheReference {
     private Object field_x;
     static String field_w;
     static IntrusiveDeque field_z;
@@ -16,7 +16,7 @@ final class tj extends ah {
         }
     }
 
-    final static boolean a(CipherPacketBuffer param0, int param1) {
+    final static boolean readBit(CipherPacketBuffer param0, int param1) {
         RuntimeException var2 = null;
         boolean stackIn_6_0 = false;
         RuntimeException stackIn_9_0 = null;
@@ -43,7 +43,7 @@ final class tj extends ah {
         }
     }
 
-    tj(Object param0, int param1) {
+    StrongCacheReference(Object param0, int param1) {
         super(param1);
         try {
           this.field_x = param0;
@@ -72,17 +72,17 @@ final class tj extends ah {
         }
     }
 
-    final static IndexedSprite b(byte param0) {
-        IndexedSprite var1 = new IndexedSprite(field_y, jb.field_a, IntrusiveNode.field_b[0], e.field_b[0], ByteStorage.field_g[0], ge.field_c[0], wo.field_f[0], fl.field_g);
+    final static IndexedSprite createIndexedSpriteFromDecodeBuffers(byte param0) {
+        IndexedSprite var1 = new IndexedSprite(field_y, jb.field_a, IntrusiveNode.field_b[0], e.field_b[0], ByteStorage.field_g[0], ge.field_c[0], wo.field_f[0], AsyncValidationResult.field_g);
         if (param0 >= -78) {
           return (IndexedSprite) null;
         }
-        re.b(140);
+        LoadingStepTracker.clearSpriteDecodeBuffers(140);
         return var1;
     }
 
-    final static void h(int param0) {
-        LobbyPlayer.j(-705633312);
+    final static void beginLoginRequest(int param0) {
+        LobbyPlayer.resetLoginRequestState(-705633312);
         NumericDateInputWidget.field_V = true;
         MainMenuScreen.field_s = true;
         if (param0 != 20) {
@@ -96,7 +96,7 @@ final class tj extends ah {
         try {
           if (param11 != 122) {
             java.awt.Component var16 = (java.awt.Component) null;
-            tj.attachMouseInput((byte) 102, (java.awt.Component) null);
+            StrongCacheReference.attachMouseInput((byte) 102, (java.awt.Component) null);
           }
           Sprite[] var17 = (Sprite[]) null;
           BouncedownBackground.a((Sprite[]) null, param6, param8, 0, param10, 0, ce.field_b, param4, 480, param2, (byte) -100, param14, param3, param0, param12, param13, param5, param9, IndexedSpriteState.field_l, MatchingTextValidator.field_s, param7);
@@ -106,7 +106,7 @@ final class tj extends ah {
         }
     }
 
-    final Object a(byte param0) {
+    final Object get(byte param0) {
         if (param0 != -55) {
           return (Object) null;
         }
@@ -196,7 +196,7 @@ final class tj extends ah {
         }
     }
 
-    final static boolean a(boolean param0, boolean param1, int param2, int param3) {
+    final static boolean rankedEntryPrecedes(boolean param0, boolean param1, int param2, int param3) {
         int var4;
         int var5;
         if (param1) {
@@ -240,16 +240,16 @@ final class tj extends ah {
         return !(param2 >= param3);
     }
 
-    final static void i(int param0) {
+    final static void increaseMusicVolume(int param0) {
         int var1 = 0;
         if (LinkButtonPainter.field_h < 224) {
           var1 = LinkButtonPainter.field_h % 32;
-          nk.a((byte) 93, LinkButtonPainter.field_h + 32 - var1);
+          nk.setMusicVolume((byte) 93, LinkButtonPainter.field_h + 32 - var1);
         } else {
-          nk.a((byte) 93, 256);
+          nk.setMusicVolume((byte) 93, 256);
         }
         if (param0 != 32) {
-          tj.releaseStatics(117);
+          StrongCacheReference.releaseStatics(117);
         }
     }
 

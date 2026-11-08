@@ -12,7 +12,7 @@ final class bj {
     final static void a(byte param0) {
         if (un.field_l) {
           SoftwareRasterizer.darkenRectangle(SoftwareRasterizer.field_e, SoftwareRasterizer.field_f, -SoftwareRasterizer.field_e + SoftwareRasterizer.field_h, SoftwareRasterizer.field_a - SoftwareRasterizer.field_f);
-          DraggableWidget.field_I.a(false, 0);
+          DraggableWidget.field_I.drawFullScreen(false, 0);
         }
         if (param0 == 1) {
           return;

@@ -12,7 +12,7 @@ final class SpriteEffectHelpers {
     private static int field_i;
     private static int field_c;
 
-    final static void a(int param0, int param1, int param2, Sprite param3, int param4) {
+    final static void drawVerticalGlowBar(int param0, int param1, int param2, Sprite param3, int param4) {
         int var7 = 0;
         int var5;
         int var6;
@@ -36,7 +36,7 @@ final class SpriteEffectHelpers {
         field_b = null;
     }
 
-    private final static void a(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10) {
+    private final static void blitRowsWithAlphaGradient(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10) {
         int var13 = 0;
         int var14 = 0;
         int incrementValue$12 = 0;
@@ -70,7 +70,7 @@ final class SpriteEffectHelpers {
         }
     }
 
-    private final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int[] param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13) {
+    private final static void rasterGlowLineSpans(int param0, int param1, int param2, int param3, int param4, int param5, int[] param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13) {
         int stackIn_16_0 = 0;
         int stackIn_19_0 = 0;
         int var14;
@@ -121,7 +121,7 @@ final class SpriteEffectHelpers {
         }
     }
 
-    final static void a(Sprite param0, IndexedSprite param1, int param2, int param3) {
+    final static void drawMaskedByIndexedSprite(Sprite param0, IndexedSprite param1, int param2, int param3) {
         int var10 = 0;
         int var10Lifetime1;
         int var10Lifetime2;
@@ -162,10 +162,10 @@ final class SpriteEffectHelpers {
           var6 <= 0) {
           return;
         }
-        SpriteEffectHelpers.a(SoftwareRasterizer.field_k, param0.pixels, 0, var5, var4, var7, var6, var8, var9, param1.indices);
+        SpriteEffectHelpers.blitMaskedRows(SoftwareRasterizer.field_k, param0.pixels, 0, var5, var4, var7, var6, var8, var9, param1.indices);
     }
 
-    final static void a(int[] param0, int param1, int param2) {
+    final static void blendFullscreenImageVerticalFade(int[] param0, int param1, int param2) {
         int var12 = 0;
         int incrementValue$3 = 0;
         int incrementValue$1 = 0;
@@ -262,10 +262,10 @@ final class SpriteEffectHelpers {
           var6 <= 0) {
           return;
         }
-        SpriteEffectHelpers.a(0, 0, 0, SoftwareRasterizer.field_k, param0.pixels, var5, 0, var4, 0, var7, var6, var8, var9, param3);
+        SpriteEffectHelpers.blendColorByCoverage(0, 0, 0, SoftwareRasterizer.field_k, param0.pixels, var5, 0, var4, 0, var7, var6, var8, var9, param3);
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int[] param6) {
+    final static void drawGlowLine(int param0, int param1, int param2, int param3, int param4, int param5, int[] param6) {
         int var15 = 0;
         int var15Lifetime1;
         if (!SpriteCheckboxPainter.field_d) {
@@ -315,10 +315,10 @@ final class SpriteEffectHelpers {
         field_f = (var11 - param0) * var7;
         field_c = (var11 - param0) * var8;
         field_b = param6;
-        SpriteEffectHelpers.a(param0, param1, param4, 0, 0, var9, SoftwareRasterizer.field_k, var12 * SoftwareRasterizer.field_j + var11, param5, var7, var8, var12 - var14, var11 - var13, SoftwareRasterizer.field_j - (var13 - var11));
+        SpriteEffectHelpers.rasterGlowLineSpans(param0, param1, param4, 0, 0, var9, SoftwareRasterizer.field_k, var12 * SoftwareRasterizer.field_j + var11, param5, var7, var8, var12 - var14, var11 - var13, SoftwareRasterizer.field_j - (var13 - var11));
     }
 
-    private final static void a(int param0, int param1, int param2, int[] param3, int[] param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13) {
+    private final static void blendColorByCoverage(int param0, int param1, int param2, int[] param3, int[] param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13) {
         int incrementValue$11 = 0;
         int incrementValue$12 = 0;
         for (param8 = -param10; param8 < 0; param8++) {
@@ -341,7 +341,7 @@ final class SpriteEffectHelpers {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final static void fillRectangleAdditive(int param0, int param1, int param2, int param3, int param4, int param5) {
         int var10 = 0;
         int var11 = 0;
         int incrementValue$0 = 0;
@@ -384,7 +384,7 @@ final class SpriteEffectHelpers {
         }
     }
 
-    private final static void a(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, byte[] param9) {
+    private final static void blitMaskedRows(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, byte[] param9) {
         int var11 = 0;
         int incrementValue$2 = 0;
         int incrementValue$4 = 0;
@@ -490,19 +490,19 @@ final class SpriteEffectHelpers {
           var5 <= 0) {
           return;
         }
-        SpriteEffectHelpers.a(SoftwareRasterizer.field_k, param0.pixels, 0, var4, var3, var6, var5, var7, var8);
+        SpriteEffectHelpers.darkenByMaskAlpha(SoftwareRasterizer.field_k, param0.pixels, 0, var4, var3, var6, var5, var7, var8);
     }
 
-    final static void a(int param0, int param1, int param2, Sprite param3) {
-        SpriteEffectHelpers.a(param0, param1, param2, param3, 65280);
+    final static void drawGreenVerticalGlowBar(int param0, int param1, int param2, Sprite param3) {
+        SpriteEffectHelpers.drawVerticalGlowBar(param0, param1, param2, param3, 65280);
     }
 
-    final static void a(BitmapFont param0, String param1, String param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    final static void drawLabelValueAlpha(BitmapFont param0, String param1, String param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         param0.drawLeftAlpha(param1, param4, param5, param6, param7, param8);
         param0.drawLeftAlpha(param2, param4 + param3, param5, param6, param7, param8);
     }
 
-    final static Sprite a(int param0) {
+    final static Sprite createGrayRampSprite(int param0) {
         int var2 = 0;
         int var3 = 0;
         Sprite var1 = new Sprite(param0, 1);
@@ -513,7 +513,7 @@ final class SpriteEffectHelpers {
         return var1;
     }
 
-    private final static void a(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    private final static void darkenByMaskAlpha(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int var11 = 0;
         int var12 = 0;
         int incrementValue$12 = 0;
@@ -537,7 +537,7 @@ final class SpriteEffectHelpers {
         }
     }
 
-    final static void a(Sprite param0, int param1, int param2, int param3, int param4) {
+    final static void drawWithVerticalAlphaGradient(Sprite param0, int param1, int param2, int param3, int param4) {
         int var13 = 0;
         int var13Lifetime1;
         int var13Lifetime2;
@@ -581,6 +581,6 @@ final class SpriteEffectHelpers {
           var7 <= 0) {
           return;
         }
-        SpriteEffectHelpers.a(SoftwareRasterizer.field_k, param0.pixels, 0, var6, var5, var8, var7, var9, var10, var11, var12);
+        SpriteEffectHelpers.blitRowsWithAlphaGradient(SoftwareRasterizer.field_k, param0.pixels, 0, var6, var5, var8, var7, var9, var10, var11, var12);
     }
 }

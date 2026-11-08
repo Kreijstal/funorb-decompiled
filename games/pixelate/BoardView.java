@@ -31,11 +31,11 @@ final class BoardView {
     static int field_k;
     static int field_a;
 
-    final static void a(int param0, Match param1) {
+    final static void initializeTutorialPages(int param0, Match param1) {
         int var2_int = 0;
         int var3 = Pixelate.field_H ? 1 : 0;
         StatefulTextPainter.field_v = param1;
-        io.a(qj.field_e, (byte) -108);
+        LoginMethod.setSmallFont(qj.field_e, (byte) -108);
         jb.field_b = new bi[dn.field_a.length];
         if (param0 != 1) {
           return;
@@ -68,13 +68,13 @@ final class BoardView {
         int var6;
         BoardParticle var7;
         var6 = Pixelate.field_H ? 1 : 0;
-        var7 = (BoardParticle) (this.field_q.c(1504642273));
+        var7 = (BoardParticle) (this.field_q.first(1504642273));
         while (var7 != null) {
           var7.e(-123);
-          var7 = (BoardParticle) (this.field_q.last(1504642273));
+          var7 = (BoardParticle) (this.field_q.next(1504642273));
         }
         if (param0 >= -18) {
-          this.a(-66, 3, -15, (byte) 3, 14);
+          this.setAnimationTimers(-66, 3, -15, (byte) 3, 14);
         }
         for (var2 = 1; var2 < -1 + this.field_j; var2++) {
           for (var3 = 1; var3 < -1 + this.field_h; var3++) {
@@ -114,7 +114,7 @@ final class BoardView {
           if (fieldTemp$2 >= this.field_w) {
             this.field_v = 0;
           } else {
-            this.e(2);
+            this.updateShrinkInset(2);
           }
         }
         if (this.field_i == 0 &&
@@ -143,13 +143,13 @@ final class BoardView {
             this.field_m[var4] = 1;
             if ((this.field_B.cells[var4] & 4) != 0) {
               var5 = -1 + (3 & this.field_B.cells[var4]);
-              this.field_q.addFirst(22125, new BoardParticle(16 + (this.field_t + var3 * 32), var2 * 32 + (this.field_u + 16), var5, 0));
+              this.field_q.addLast(22125, new BoardParticle(16 + (this.field_t + var3 * 32), var2 * 32 + (this.field_u + 16), var5, 0));
             }
           }
         }
     }
 
-    final void a(int param0, int param1, int param2, byte param3, int param4) {
+    final void setAnimationTimers(int param0, int param1, int param2, byte param3, int param4) {
         this.field_i = param0;
         this.field_z = param2;
         if (param3 >= -59) {
@@ -159,7 +159,7 @@ final class BoardView {
         this.field_r = param4;
     }
 
-    final void b(int param0) {
+    final void playPictureCompleteEffect(int param0) {
         int var2;
         int var3;
         int var4;
@@ -186,7 +186,7 @@ final class BoardView {
           while (this.field_j - 1 > var6) {
             var4 = this.field_B.cells[this.field_h * var6 + var2Lifetime1];
             if (0 != (4 & var4)) {
-              this.field_q.addFirst(22125, new BoardParticle(32 * var2Lifetime1 + (16 + this.field_t), 32 * var6 + (16 + this.field_u), -1 + (3 & var4), var2Lifetime1 * 6 - 6));
+              this.field_q.addLast(22125, new BoardParticle(32 * var2Lifetime1 + (16 + this.field_t), 32 * var6 + (16 + this.field_u), -1 + (3 & var4), var2Lifetime1 * 6 - 6));
             }
             var6++;
           }
@@ -334,7 +334,7 @@ final class BoardView {
         }
     }
 
-    final boolean c(int param0) {
+    final boolean isAnimating(int param0) {
         boolean stackIn_9_0 = false;
         if (param0 >= -103) {
           this.field_u = -108;
@@ -398,7 +398,7 @@ final class BoardView {
         for (var6Lifetime1 = this.field_g; var4Lifetime1 >= var6Lifetime1; var6Lifetime1++) {
           SoftwareRasterizer.drawLineBlendedInclusive(var2 + 32 * var6Lifetime1, this.field_p * 32 - 16 + var3, var2 + var6Lifetime1 * 32, 32 * var5 + var3 + 16, 0, 100);
         }
-        if (this.c(-108)) {
+        if (this.isAnimating(-108)) {
           SoftwareRasterizer.saveClip(DialWidgetPainter.field_d);
           if (this.field_i == 0 &&
             this.field_v > 0) {
@@ -438,7 +438,7 @@ final class BoardView {
               var13 = 33;
               if (var9 == 0) {
                 if (var10 != 0) {
-                  SpriteEffectHelpers.a(var11, var12, var13, var13, 16777215, 40);
+                  SpriteEffectHelpers.fillRectangleAdditive(var11, var12, var13, var13, 16777215, 40);
                 }
               } else {
                 SoftwareRasterizer.fillRectangleAlpha(var11, var12, var13, var13, 0, 192);
@@ -454,10 +454,10 @@ final class BoardView {
         if (param0) {
           this.field_h = 38;
         }
-        var17 = (BoardParticle) (this.field_q.c(1504642273));
+        var17 = (BoardParticle) (this.field_q.first(1504642273));
         while (var17 != null) {
           var17.a((byte) -127);
-          var17 = (BoardParticle) (this.field_q.last(1504642273));
+          var17 = (BoardParticle) (this.field_q.next(1504642273));
         }
         if (0 < this.field_v &&
           this.field_i == 0 &&
@@ -465,8 +465,8 @@ final class BoardView {
           SoftwareRasterizer.saveClip(DialWidgetPainter.field_d);
           SoftwareRasterizer.setClip(var2 + this.field_g * 32, this.field_p * 32 + var3, (this.field_h - this.field_f) * 32 + var2, var3 + 32 * (-this.field_e + this.field_j));
           for (var6Lifetime3 = 0; 20 > var6Lifetime3; var6Lifetime3 += 3) {
-            SpriteEffectHelpers.a(this.field_g * 32 + (this.field_t - (-this.field_A - var6Lifetime3 * 2 + 40)), -20 + var3, this.field_A + 32 * this.field_g + this.field_t - 2 * (-var6Lifetime3 + 20), this.field_j * 32 + var3 + 20, 4, var6Lifetime3 * 3, AlphaContainer.field_Q);
-            SpriteEffectHelpers.a(var2 - 20, -(2 * (-var6Lifetime3 + 20)) + this.field_x + (this.field_u + this.field_p * 32), this.field_h * 32 + (var2 + 20), var6Lifetime3 * 2 - 40 + (this.field_p * 32 + this.field_u) + this.field_x, 4, 3 * var6Lifetime3, AlphaContainer.field_Q);
+            SpriteEffectHelpers.drawGlowLine(this.field_g * 32 + (this.field_t - (-this.field_A - var6Lifetime3 * 2 + 40)), -20 + var3, this.field_A + 32 * this.field_g + this.field_t - 2 * (-var6Lifetime3 + 20), this.field_j * 32 + var3 + 20, 4, var6Lifetime3 * 3, AlphaContainer.field_Q);
+            SpriteEffectHelpers.drawGlowLine(var2 - 20, -(2 * (-var6Lifetime3 + 20)) + this.field_x + (this.field_u + this.field_p * 32), this.field_h * 32 + (var2 + 20), var6Lifetime3 * 2 - 40 + (this.field_p * 32 + this.field_u) + this.field_x, 4, 3 * var6Lifetime3, AlphaContainer.field_Q);
           }
           SoftwareRasterizer.restoreClip(DialWidgetPainter.field_d);
         }
@@ -480,7 +480,7 @@ final class BoardView {
         jk.a(param1, (byte) 83);
     }
 
-    final void a(byte param0) {
+    final void startFadeIn(byte param0) {
         this.field_v = 0;
         if (param0 != 71) {
           return;
@@ -488,15 +488,15 @@ final class BoardView {
         this.field_r = 1;
     }
 
-    private final void e(int param0) {
+    private final void updateShrinkInset(int param0) {
         this.field_A = -4 + this.field_d * this.field_v / this.field_w;
         this.field_x = this.field_o * this.field_v / this.field_w - 4;
         if (param0 != 2) {
-          this.a((byte) 112);
+          this.startFadeIn((byte) 112);
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, byte param4) {
+    final static void drawInsetFieldBorder(int param0, int param1, int param2, int param3, byte param4) {
         int var7 = 0;
         RuntimeException decompiledCaughtException = null;
         int var5_int = 0;

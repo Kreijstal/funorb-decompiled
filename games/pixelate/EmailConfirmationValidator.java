@@ -85,7 +85,7 @@ final class EmailConfirmationValidator extends TextFieldValidator {
     }
 
     final ValidationState validateText(String param0, boolean param1) {
-        fl var3 = null;
+        AsyncValidationResult var3 = null;
         RuntimeException var3_ref = null;
         ValidationState stackIn_2_0 = null;
         ValidationState stackIn_5_0 = null;
@@ -106,12 +106,12 @@ final class EmailConfirmationValidator extends TextFieldValidator {
           }
           if (!param0.equals(this.checkedEmail)) {
             var3 = SectorCacheStore.a(param0, (byte) -99);
-            if (!var3.d(121)) {
+            if (!var3.isComplete(121)) {
               stackIn_11_0 = UiTheme.field_j;
               return stackIn_11_0;
             }
             this.checkedEmail = param0;
-            this.field_q = var3.b(-20425);
+            this.field_q = var3.isSuccessful(-20425);
           }
           if (!this.field_q) {
             stackIn_16_0 = sk.field_a;

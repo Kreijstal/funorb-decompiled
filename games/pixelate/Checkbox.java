@@ -50,7 +50,7 @@ final class Checkbox extends TextButton {
 
     final static void a(int param0, Sprite param1) {
         try {
-          MidiPcmStream.a(false);
+          MidiPcmStream.pushRasterState(false);
           SoftwareRasterizer.setTarget(param1.pixels, param1.field_A, param1.field_B);
           if (param0 >= -58) {
             field_V = (Sprite[]) null;
@@ -60,13 +60,13 @@ final class Checkbox extends TextButton {
         }
     }
 
-    final static io[] a(byte param0) {
+    final static LoginMethod[] a(byte param0) {
         if (param0 == -8) {
-          return new io[]{ig.field_e, vm.field_a, cd.field_c};
+          return new LoginMethod[]{ig.field_e, vm.field_a, cd.field_c};
         }
         Sprite var2 = (Sprite) null;
         Checkbox.a(-96, (Sprite) null);
-        return new io[]{ig.field_e, vm.field_a, cd.field_c};
+        return new LoginMethod[]{ig.field_e, vm.field_a, cd.field_c};
     }
 
     public static void releaseStatics(int param0) {

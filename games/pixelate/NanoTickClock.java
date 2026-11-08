@@ -13,8 +13,8 @@ final class NanoTickClock extends TickClock {
     private long field_g;
     static double field_h;
 
-    final long a(int param0) {
-        this.field_g = this.field_g + this.c(true);
+    final long getMillisUntilNextTick(int param0) {
+        this.field_g = this.field_g + this.sampleElapsedNanos(true);
         if (param0 != -23239) {
           return -44L;
         }
@@ -24,17 +24,17 @@ final class NanoTickClock extends TickClock {
         return 0L;
     }
 
-    public static void d(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_i = null;
         field_k = null;
         field_n = null;
         if (param0) {
           String var2 = (String) null;
-          NanoTickClock.a((String) null, false, -90, (String) null);
+          NanoTickClock.createLoginCredentials((String) null, false, -90, (String) null);
         }
     }
 
-    private final long c(boolean param0) {
+    private final long sampleElapsedNanos(boolean param0) {
         long var6 = 0L;
         int var8 = 0;
         int var9 = Pixelate.field_H ? 1 : 0;
@@ -59,7 +59,7 @@ final class NanoTickClock extends TickClock {
             }
             return var6 / (long)this.field_j;
           }
-          this.a(true, -50L);
+          this.advanceTicks(true, -50L);
           for (var8Lifetime5 = 1; this.field_j >= var8Lifetime5; var8Lifetime5++) {
             var6 = var6 + this.field_l[(-var8Lifetime5 + this.field_f + 10) % 10];
           }
@@ -73,7 +73,7 @@ final class NanoTickClock extends TickClock {
             }
             return var6Lifetime1 / (long)this.field_j;
           }
-          this.a(true, -50L);
+          this.advanceTicks(true, -50L);
           for (var8Lifetime1Lifetime1 = 1; this.field_j >= var8Lifetime1Lifetime1; var8Lifetime1Lifetime1++) {
             var6Lifetime1 = var6Lifetime1 + this.field_l[(-var8Lifetime1Lifetime1 + this.field_f + 10) % 10];
           }
@@ -89,7 +89,7 @@ final class NanoTickClock extends TickClock {
             }
             return var6Lifetime2 / (long)this.field_j;
           }
-          this.a(true, -50L);
+          this.advanceTicks(true, -50L);
           for (var8Lifetime2Lifetime1 = 1; this.field_j >= var8Lifetime2Lifetime1; var8Lifetime2Lifetime1++) {
             var6Lifetime2 = var6Lifetime2 + this.field_l[(-var8Lifetime2Lifetime1 + this.field_f + 10) % 10];
           }
@@ -103,14 +103,14 @@ final class NanoTickClock extends TickClock {
           }
           return var6Lifetime3 / (long)this.field_j;
         }
-        this.a(true, -50L);
+        this.advanceTicks(true, -50L);
         for (var8Lifetime4 = 1; this.field_j >= var8Lifetime4; var8Lifetime4++) {
           var6Lifetime3 = var6Lifetime3 + this.field_l[(-var8Lifetime4 + this.field_f + 10) % 10];
         }
         return var6Lifetime3 / (long)this.field_j;
     }
 
-    final void a(boolean param0) {
+    final void resynchronize(boolean param0) {
         if (this.field_m > this.field_g) {
           this.field_g = this.field_g + (this.field_m - this.field_g);
           this.field_o = 0L;
@@ -131,17 +131,17 @@ final class NanoTickClock extends TickClock {
         if (param2 != -14129) {
           return;
         }
-        mj.field_k = param3;
+        ScoreMarkerDemo.field_k = param3;
         mh.field_a = param0;
         PlayerBoard.field_n = param1;
     }
 
-    final int a(boolean param0, long param1) {
+    final int advanceTicks(boolean param0, long param1) {
         int var4;
         int var5;
         var5 = Pixelate.field_H ? 1 : 0;
         if (param0) {
-          NanoTickClock.d(true);
+          NanoTickClock.releaseStatics(true);
         }
         if (this.field_g < this.field_m) {
           this.field_o = this.field_o + (-this.field_g + this.field_m);
@@ -162,7 +162,7 @@ final class NanoTickClock extends TickClock {
         return var4;
     }
 
-    final static LoginCredentials a(String param0, boolean param1, int param2, String param3) {
+    final static LoginCredentials createLoginCredentials(String param0, boolean param1, int param2, String param3) {
         long var4_long = 0L;
         RuntimeException var4 = null;
         Object var6 = null;
@@ -186,7 +186,7 @@ final class NanoTickClock extends TickClock {
           if (param2 >= -54) {
             NanoTickClock.a(-82, 96, 5, -81);
           }
-          stackIn_6_0 = ck.a(param0, (String) (var6), param1, var4_long, 96);
+          stackIn_6_0 = FloatingSquare.createLoginCredentials(param0, (String) (var6), param1, var4_long, 96);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

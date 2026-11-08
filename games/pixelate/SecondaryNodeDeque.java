@@ -156,7 +156,7 @@ final class SecondaryNodeDeque implements Iterable {
           byte[] var2 = (byte[]) null;
           SecondaryNodeDeque.writeEncryptedPayload((java.math.BigInteger) null, false, 32, -117, (java.math.BigInteger) null, (PacketBuffer) null, (byte[]) null);
         }
-        return ck.field_j.c(32059);
+        return FloatingSquare.field_j.pollMasterIndex(32059);
     }
 
     SecondaryNodeDeque() {

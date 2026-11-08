@@ -22,8 +22,8 @@ final class bl {
           bl.releaseStatics(-59);
         }
         IntrusiveDequeCursor.c(-1);
-        if (null != io.field_c) {
-          stackIn_8_0 = (ModalStack.a(true, io.field_c.field_mc)) ? 1 : 0;
+        if (null != LoginMethod.field_c) {
+          stackIn_8_0 = (ModalStack.a(true, LoginMethod.field_c.field_mc)) ? 1 : 0;
         } else {
           stackIn_8_0 = 0;
         }

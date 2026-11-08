@@ -104,7 +104,7 @@ final class UiTheme {
           var7 = (CharSequence) ((Object) param0);
           fp.field_d = dh.a(var7, (byte) 26);
           fp.field_e = param1;
-          var6 = ThreeSliceButtonPainter.a(49, AccountMessagePanel.field_L, param4, ue.field_t, AccountNamePrompt.field_Ib);
+          var6 = ThreeSliceButtonPainter.a(49, AccountMessagePanel.field_L, param4, RankingTableRequest.field_t, AccountNamePrompt.field_Ib);
           mh.a(var6, (byte) 127);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -296,9 +296,9 @@ final class UiTheme {
           this.field_n = 3;
           this.field_m = param1;
           this.field_g = 3;
-          var4.a(0, 7177).a(15658734, 15115).setFrameSprites(ClientException.a(8947848, 7829367, 10066329, 3), (byte) -65);
+          var4.a(0, 7177).setTextColour(15658734, 15115).setFrameSprites(ClientException.a(8947848, 7829367, 10066329, 3), (byte) -65);
           var4.a(1, 7177).setFrameSprites(ClientException.a(11184810, 13421772, 10066329, param0 ^ 7), (byte) -65);
-          var4.a(3, 7177).setFrameSprites(ClientException.a(8947848, 10066329, 7829367, 3), (byte) -65).a((byte) 124, 1).a(1, false);
+          var4.a(3, 7177).setFrameSprites(ClientException.a(8947848, 10066329, 7829367, 3), (byte) -65).setOffsetX((byte) 124, 1).setOffsetY(1, false);
           var5 = new Sprite[9];
           var16 = new ArgbSprite(32, 32);
           var18 = var16;
@@ -306,22 +306,22 @@ final class UiTheme {
             var16.pixels[var7_int] = 1077952576;
           }
           var5[4] = (Sprite) ((Object) var18);
-          var4.a(4, 7177).a(true, true).setFrameSprites(var5, (byte) -65);
-          var4.a(5, 7177).setFrameSprites(og.a(0, true, 65793, 0, 0), (byte) -65).a(true, true).a(-1, 15115);
+          var4.a(4, 7177).setPaintsBaseLayer(true, true).setFrameSprites(var5, (byte) -65);
+          var4.a(5, 7177).setFrameSprites(og.a(0, true, 65793, 0, 0), (byte) -65).setPaintsBaseLayer(true, true).setTextColour(-1, 15115);
           this.field_r = (WidgetPainter) ((Object) var4);
           var6 = new StatefulTextPainter(var4, true);
           var6.field_l = 0;
           var7 = new StatefulTextPainter(var4, true);
           var7.field_l = 0;
           var7.setContentSprite(0, SecondaryNodeDeque.a(8947848, (byte) -128));
-          var7.a(1, 7177).setFrameSprites(SecondaryNodeDeque.a(11184810, (byte) -93), (byte) -65).a(2236962, 15115);
+          var7.a(1, 7177).setFrameSprites(SecondaryNodeDeque.a(11184810, (byte) -93), (byte) -65).setTextColour(2236962, 15115);
           this.field_t = (WidgetPainter) ((Object) new CheckboxPainter(param1, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
           discarded$0 = new DialWidgetPainter(param1, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
           discarded$1 = new MarkerSliderPainter(param1, 16777215, -1, 125269879, 4473924, 3, 268435455);
           var8 = new StatefulTextPainter();
           var17.copyStyleTo(var8, (byte) 126);
-          var8.a(0, 7177).setFrameSprites(ClientException.a(15658734, 10066329, 7829367, 3), (byte) -65).a(1118481, 15115).a(-1, (byte) -68);
-          var8.a(4, 7177).a(true, true).setFrameSprites(var5, (byte) -65);
+          var8.a(0, 7177).setFrameSprites(ClientException.a(15658734, 10066329, 7829367, 3), (byte) -65).setTextColour(1118481, 15115).setShadowColour(-1, (byte) -68);
+          var8.a(4, 7177).setPaintsBaseLayer(true, true).setFrameSprites(var5, (byte) -65);
           this.field_i = (WidgetPainter) ((Object) var8);
           var9 = new Sprite[9];
           var10 = new Sprite[9];
@@ -385,7 +385,7 @@ final class UiTheme {
             stackIn_11_0 = var3;
             return stackIn_11_0;
           }
-          stackIn_9_0 = re.copyBytes(true, var3);
+          stackIn_9_0 = LoadingStepTracker.copyBytes(true, var3);
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

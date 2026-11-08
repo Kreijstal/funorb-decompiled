@@ -40,7 +40,7 @@ final class bd {
             return;
           }
           r.b(-96);
-          ui.field_i.a(-28476, param1);
+          ui.field_i.updateInputFullScreen(-28476, param1);
           if (td.field_b != null) {
             if (!ln.field_q) {
               td.field_b = null;
@@ -62,7 +62,7 @@ final class bd {
           if (0 != GradientOutlineTextPainter.field_u.field_P) {
             AccountTermsPanel.field_M = new ReportAbuseDialog(GradientOutlineTextPainter.field_u.field_tb, GradientOutlineTextPainter.field_u.screenY, GradientOutlineTextPainter.field_u.field_K, GradientOutlineTextPainter.field_u.height, param3, cm.field_o, pj.field_i, Vector3.field_f, TextFieldValidator.field_h, um.field_q, dn.field_c, (String) null, 0L);
           }
-          var9 = ah.a((byte) -110, fq.field_q, param2, MouseWheelHandler.field_c);
+          var9 = CacheReference.rebuildChatHistoryWidgets((byte) -110, fq.field_q, param2, MouseWheelHandler.field_c);
           if (var9 != null) {
             fj.a(var9, (byte) 125);
           }
@@ -85,7 +85,7 @@ final class bd {
           if (hf.field_q < 20) {
             return true;
           }
-          if (!re.a(106)) {
+          if (!LoadingStepTracker.isLobbyUiReady(106)) {
             return true;
           }
           if (ra.field_g <= 0) {
@@ -99,7 +99,7 @@ final class bd {
         if (hf.field_q < 20) {
           return true;
         }
-        if (!re.a(106)) {
+        if (!LoadingStepTracker.isLobbyUiReady(106)) {
           return true;
         }
         if (ra.field_g <= 0) {
@@ -138,17 +138,17 @@ final class bd {
           if (param0 != -1) {
             field_c = 75;
           }
-          VerticalScrollbar.field_Hb.e(param0 - 110);
-          bq.field_b.e(-127);
-          var1 = vm.field_b.a(-89);
+          VerticalScrollbar.field_Hb.clear(param0 - 110);
+          bq.field_b.clear(-127);
+          var1 = vm.field_b.first(-89);
           while (var1 != null) {
             var1.unlinkSecondary(17);
-            var1 = vm.field_b.a((byte) 50);
+            var1 = vm.field_b.next((byte) 50);
           }
-          var1Lifetime1 = GameResultsScreen.field_q.a(-84);
+          var1Lifetime1 = GameResultsScreen.field_q.first(-84);
           while (var1Lifetime1 != null) {
             var1Lifetime1.unlinkSecondary(17);
-            var1Lifetime1 = GameResultsScreen.field_q.a((byte) 50);
+            var1Lifetime1 = GameResultsScreen.field_q.next((byte) 50);
           }
           ValidatedTextWidget.field_db = 0;
         } catch (RuntimeException runtimeException) {

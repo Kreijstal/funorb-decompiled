@@ -46,41 +46,41 @@ final class fq extends MenuScreen {
         int var4;
         var4 = Pixelate.field_H ? 1 : 0;
         if (ArrayWidgetContainer.a((byte) 115)) {
-          this.field_g.a(53, 0);
+          this.field_g.handleHorizontalNavigation(53, 0);
           return;
         }
         boolean decompiledFrameRemainder0 = true;
-        if (!this.field_g.c((byte) 35)) {
+        if (!this.field_g.isButtonHeld((byte) 35)) {
           var2 = this.field_g.selectedIndex;
           var3 = ke.field_a;
           if (var2 == -1 && (var3 == 96 ||
             var3 == 97 ||
             98 == var3 ||
             var3 == 99)) {
-            this.field_g.a(false, 0);
+            this.field_g.selectIndex(false, 0);
             decompiledFrameRemainder0 = false;
           }
           else {
             if (ke.field_a == 96) {
               if (1 == var2 ||
                 3 == var2) {
-                this.field_g.a(false, var2 - 1);
+                this.field_g.selectIndex(false, var2 - 1);
               }
             } else {
               if (97 == ke.field_a) {
                 if (var2 == 0 ||
                   var2 == 2) {
-                  this.field_g.a(false, var2 + 1);
+                  this.field_g.selectIndex(false, var2 + 1);
                 }
               } else {
                 if (ke.field_a == 99) {
                   if (var2 < 2) {
-                    this.field_g.a(false, var2 + 2);
+                    this.field_g.selectIndex(false, var2 + 2);
                   }
                 } else {
                   if (ke.field_a == 98 &&
                     var2 > 1) {
-                    this.field_g.a(false, var2 - 2);
+                    this.field_g.selectIndex(false, var2 - 2);
                   }
                 }
               }
@@ -90,10 +90,10 @@ final class fq extends MenuScreen {
         if (param0 > -35) {
           return;
         }
-        this.field_g.b((byte) -71);
+        this.field_g.captureKeyCode((byte) -71);
     }
 
-    final void a(byte param0, boolean param1, int param2) {
+    final void drawRow(byte param0, boolean param1, int param2) {
         int stackIn_5_1 = 0;
         Sprite stackIn_7_2 = null;
         if (param0 >= -116) {
@@ -106,7 +106,7 @@ final class fq extends MenuScreen {
         } else {
           stackIn_7_2 = StripedProgressBar.field_N;
         }
-        super.a((byte) stackIn_5_1, stackIn_7_2, param1, param2);
+        super.drawItemRow((byte) stackIn_5_1, stackIn_7_2, param1, param2);
     }
 
     final static void a(aa param0, byte param1) {
@@ -193,7 +193,7 @@ final class fq extends MenuScreen {
         String var2;
         PaletteBitmapFont var3_ref_ob;
         int var3;
-        ue var4;
+        RankingTableRequest var4;
         String[] var5;
         int var7;
         int var8;
@@ -212,14 +212,14 @@ final class fq extends MenuScreen {
           var16 = Pixelate.field_H ? 1 : 0;
           NumericDateInputWidget.field_W[5].drawTransparent(0, 45);
           this.drawRows((byte) -71);
-          this.d((byte) -63);
+          this.drawDefaultBackdrop((byte) -63);
           if (ArrayWidgetContainer.a((byte) 74)) {
             var2 = wo.field_a;
           } else {
             if (aa.field_p == null) {
               aa.field_p = PasswordValidator.a(3, (byte) 103, 1, 10, 0);
             }
-            var3_ref_ob = rk.field_e;
+            var3_ref_ob = PieceTiming.field_e;
             var4 = aa.field_p;
             if (var4.field_n) {
               if (var4.field_r != null) {
@@ -231,7 +231,7 @@ final class fq extends MenuScreen {
                 var9 = 0;
                 var10 = 16711680;
                 var11 = var3_ref_ob.maxAscent + 150;
-                var3_ref_ob.drawRightAlignedText(kh.field_b, 150, var11, 0, 0);
+                var3_ref_ob.drawRightAlignedText(DisplayNameRequestGlobals.field_b, 150, var11, 0, 0);
                 var3_ref_ob.drawText(ij.field_q, 170, var11, 0, 0);
                 var3_ref_ob.drawRightAlignedText(IconTextComponent.field_Kb, 500, var11, 0, 0);
                 var11 += 20;
@@ -265,15 +265,15 @@ final class fq extends MenuScreen {
         if (param0 != 11) {
           field_o = (BackgroundScene) null;
         }
-        var3 = 225 + rk.field_e.maxAscent;
-        rk.field_e.drawCentered(var2, 330, var3, 0, 0);
+        var3 = 225 + PieceTiming.field_e.maxAscent;
+        PieceTiming.field_e.drawCentered(var2, 330, var3, 0, 0);
         if (ArrayWidgetContainer.a((byte) 96)) {
-          stackIn_28_0 = mj.field_h;
+          stackIn_28_0 = ScoreMarkerDemo.field_h;
         } else {
           stackIn_28_0 = MenuInputState.field_b;
         }
         var2Lifetime1 = stackIn_28_0;
-        qj.field_e.drawCentered(var2Lifetime1, 320, 330 + (rk.field_e.maxAscent + 12), 14540253, 3355443);
+        qj.field_e.drawCentered(var2Lifetime1, 320, 330 + (PieceTiming.field_e.maxAscent + 12), 14540253, 3355443);
     }
 
     static {

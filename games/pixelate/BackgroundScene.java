@@ -15,7 +15,7 @@ class BackgroundScene {
     static String field_c;
     static int field_b;
 
-    final void a(byte param0) {
+    final void drawTitleBanner(byte param0) {
         int var7 = 0;
         int var2;
         int var3;
@@ -52,11 +52,11 @@ class BackgroundScene {
         }
         if (param0 > -87) {
           var9 = (IntrusiveNode) null;
-          BackgroundScene.$cfr$intArgs$a$2d0b7bdf67eb(106, (IntrusiveNode) null, (IntrusiveNode) null);
+          BackgroundScene.insertNodeBefore(106, (IntrusiveNode) null, (IntrusiveNode) null);
         }
     }
 
-    final static void a(int param0, boolean param1, int param2, int param3, int param4) {
+    final static void setLegacyMenuFontMetrics(int param0, boolean param1, int param2, int param3, int param4) {
         ValidatedTextWidget.field_fb = param4;
         GameResultsScreen.field_r = param0;
         if (param1) {
@@ -66,7 +66,7 @@ class BackgroundScene {
         TimerBar.field_q = param2;
     }
 
-    final static bo[] a(PlatformTaskDispatcher param0, int param1) {
+    final static bo[] getFullscreenDisplayModes(PlatformTaskDispatcher param0, int param1) {
         int var5 = 0;
         bo[] stackIn_3_0 = null;
         bo[] stackIn_7_0 = null;
@@ -96,7 +96,7 @@ class BackgroundScene {
           }
           var8 = param0.requestDisplayModes(true);
           while (0 == var8.field_b) {
-            SecondaryNodeHashTable.a(10L, (byte) 23);
+            SecondaryNodeHashTable.sleepMillis(10L, (byte) 23);
           }
           if (var8.field_b == 2) {
             stackIn_13_0 = new bo[]{};
@@ -130,7 +130,7 @@ class BackgroundScene {
         }
     }
 
-    void c(int param0) {
+    void tick(int param0) {
         if (param0 > ~this.field_d) {
           this.field_d = this.field_d - 1;
         }
@@ -167,7 +167,7 @@ class BackgroundScene {
         SocketConnector.a(3, MouseWheelHandler.field_c, fq.field_q, r.field_c, Checkbox.field_V[param0].field_A, DelegatingCanvas.field_b);
     }
 
-    void a(boolean param0) {
+    void render(boolean param0) {
         if (param0) {
           this.field_d = -82;
         }
@@ -315,7 +315,7 @@ class BackgroundScene {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static void $cfr$intArgs$a$2d0b7bdf67eb(int param0, IntrusiveNode param1, IntrusiveNode param2) {
+    final static void insertNodeBefore(int param0, IntrusiveNode param1, IntrusiveNode param2) {
         try {
           if (param2.previous != null) {
             param2.unlink(2779);

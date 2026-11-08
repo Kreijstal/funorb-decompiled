@@ -86,10 +86,10 @@ final class DialWidgetPainter implements WidgetPainter {
 
     final static void b(int param0) {
         int var2 = 0;
-        ck[] var1 = null;
-        ck var3 = null;
+        FloatingSquare[] var1 = null;
+        FloatingSquare var3 = null;
         int var4 = 0;
-        ck[] var5 = null;
+        FloatingSquare[] var5 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1_ref = null;
         var4 = Pixelate.field_H ? 1 : 0;
@@ -98,7 +98,7 @@ final class DialWidgetPainter implements WidgetPainter {
           var1 = var5;
           for (var2 = param0; var2 < var5.length; var2++) {
             var3 = var5[var2];
-            var3.b(param0 - 26338);
+            var3.tick(param0 - 26338);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

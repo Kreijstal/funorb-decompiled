@@ -21,7 +21,7 @@ final class jk {
     }
 
     final static void a(boolean param0, byte param1) {
-        if (MarkerSlider.a((byte) 120)) {
+        if (MarkerSlider.isOverlayOpen((byte) 120)) {
           param0 = false;
         }
         dh.a((byte) 58, param0);

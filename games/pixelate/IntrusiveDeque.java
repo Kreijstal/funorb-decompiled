@@ -9,12 +9,12 @@ final class IntrusiveDeque {
     private IntrusiveNode field_c;
     static int field_b;
 
-    final IntrusiveNode g(int param0) {
+    final IntrusiveNode last(int param0) {
         IntrusiveNode var2 = null;
         IntrusiveNode var2Lifetime1;
         if (param0 != 1504642273) {
           IntrusiveNode var3 = (IntrusiveNode) null;
-          this.addFirst(46, (IntrusiveNode) null);
+          this.addLast(46, (IntrusiveNode) null);
           var2 = this.sentinel.previous;
           if (this.sentinel == var2) {
             this.field_c = null;
@@ -32,7 +32,7 @@ final class IntrusiveDeque {
         return var2Lifetime1;
     }
 
-    final IntrusiveNode d(int param0) {
+    final IntrusiveNode removeFirst(int param0) {
         IntrusiveNode var2 = null;
         IntrusiveNode var2Lifetime1;
         if (param0 != -28918) {
@@ -92,7 +92,7 @@ final class IntrusiveDeque {
         }
     }
 
-    final void e(int param0) {
+    final void clear(int param0) {
         IntrusiveNode var3 = null;
         int var4 = Pixelate.field_H ? 1 : 0;
         int var2 = -12 / ((param0 + 36) / 63);
@@ -114,10 +114,10 @@ final class IntrusiveDeque {
         return this.sentinel == this.sentinel.field_a ? true : false;
     }
 
-    final IntrusiveNode c(int param0) {
+    final IntrusiveNode first(int param0) {
         IntrusiveNode var2 = this.sentinel.field_a;
         if (param0 != 1504642273) {
-          this.e(44);
+          this.clear(44);
           if (this.sentinel == var2) {
             this.field_c = null;
             return null;
@@ -133,7 +133,7 @@ final class IntrusiveDeque {
         return var2;
     }
 
-    final IntrusiveNode last(int param0) {
+    final IntrusiveNode next(int param0) {
         IntrusiveNode var2 = this.field_c;
         if (var2 == this.sentinel) {
           this.field_c = null;
@@ -158,7 +158,7 @@ final class IntrusiveDeque {
         }
     }
 
-    final IntrusiveNode b(int param0) {
+    final IntrusiveNode removeLast(int param0) {
         int var2 = -96 % ((-6 - param0) / 48);
         IntrusiveNode var3 = this.sentinel.previous;
         if (var3 != this.sentinel) {
@@ -180,7 +180,7 @@ final class IntrusiveDeque {
         field_d = null;
     }
 
-    final IntrusiveNode j(int param0) {
+    final IntrusiveNode previous(int param0) {
         IntrusiveNode var2 = this.field_c;
         if (var2 == this.sentinel) {
           this.field_c = null;
@@ -194,7 +194,7 @@ final class IntrusiveDeque {
         return var2;
     }
 
-    final void addLast(int param0, IntrusiveNode param1) {
+    final void addFirst(int param0, IntrusiveNode param1) {
         try {
           if (param1.previous != null) {
             param1.unlink(2779);
@@ -211,7 +211,7 @@ final class IntrusiveDeque {
         }
     }
 
-    final int i(int param0) {
+    final int size(int param0) {
         int var4 = Pixelate.field_H ? 1 : 0;
         int var2 = param0;
         IntrusiveNode var3 = this.sentinel.field_a;
@@ -222,7 +222,7 @@ final class IntrusiveDeque {
         return var2;
     }
 
-    final void addFirst(int param0, IntrusiveNode param1) {
+    final void addLast(int param0, IntrusiveNode param1) {
         try {
           if (param1.previous != null) {
             param1.unlink(2779);

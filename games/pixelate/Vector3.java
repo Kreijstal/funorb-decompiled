@@ -13,19 +13,19 @@ final class Vector3 {
     static int field_d;
     static SceneWidget field_e;
 
-    final static void a(int param0, int param1, int param2) {
+    final static void sendInputEvent(int param0, int param1, int param2) {
         aa.field_f.writeOpcode(58, 15514);
         if (param1 == -18656) {
           aa.field_f.writeShort(1276387944, param2);
           aa.field_f.writeByte(160, param0);
           return;
         }
-        Vector3.a(-17, -36, -89);
+        Vector3.sendInputEvent(-17, -36, -89);
         aa.field_f.writeShort(1276387944, param2);
         aa.field_f.writeByte(160, param0);
     }
 
-    final static char a(int param0, char param1) {
+    final static char foldAccountNameChar(int param0, char param1) {
         int var2;
         int var3;
         int var2Lifetime1;
@@ -133,7 +133,7 @@ final class Vector3 {
           }
           return param1;
         }
-        Vector3.a(-103, 27, 37);
+        Vector3.sendInputEvent(-103, 27, 37);
         var2Lifetime1 = param1;
         if (var2Lifetime1 == 32) {
           return '_';
@@ -257,7 +257,7 @@ final class Vector3 {
         return '_';
     }
 
-    final static void a(byte param0, java.applet.Applet param1, String param2) {
+    final static void openRelativeUrl(byte param0, java.applet.Applet param1, String param2) {
         try {
           java.net.URL var3 = null;
           String var4 = null;
@@ -274,7 +274,7 @@ final class Vector3 {
               var3 = new java.net.URL(param1.getCodeBase(), param2);
               if (param0 != 71) {
                 var4 = (String) null;
-                Vector3.a((byte) -4, (java.applet.Applet) null, (String) null);
+                Vector3.openRelativeUrl((byte) -4, (java.applet.Applet) null, (String) null);
               }
               var3 = lg.a(false, param1, var3);
               LinkButtonPainter.openUrlInNewWindow(true, var3.toString(), -72, param1);
@@ -309,22 +309,22 @@ final class Vector3 {
         }
     }
 
-    private final int a(boolean param0) {
+    private final int length(boolean param0) {
         int var2 = (this.field_h >> 2) * (this.field_h >> 2) - (-((this.field_g >> 2) * (this.field_g >> 2)) - (this.field_i >> 2) * (this.field_i >> 2));
         if (!param0) {
           Vector3.releaseStatics((byte) 96);
           if (var2 < 0) {
             throw new RuntimeException();
           }
-          return NetworkGameClient.a((byte) -116, var2) << 2;
+          return NetworkGameClient.integerSquareRoot((byte) -116, var2) << 2;
         }
         if (var2 < 0) {
           throw new RuntimeException();
         }
-        return NetworkGameClient.a((byte) -116, var2) << 2;
+        return NetworkGameClient.integerSquareRoot((byte) -116, var2) << 2;
     }
 
-    private final void a(int param0, int param1, int param2, int param3) {
+    private final void set(int param0, int param1, int param2, int param3) {
         if (param1 != -33) {
           return;
         }
@@ -333,9 +333,9 @@ final class Vector3 {
         this.field_i = param2;
     }
 
-    final void a(byte param0) {
+    final void normalize(byte param0) {
         int var5 = Pixelate.field_H ? 1 : 0;
-        int var2 = this.a(true) >> 1;
+        int var2 = this.length(true) >> 1;
         int var3 = 15;
         while (65536 <= var2) {
           var3--;
@@ -347,7 +347,7 @@ final class Vector3 {
         if (param0 != -7) {
           return;
         }
-        int var4 = this.a(true);
+        int var4 = this.length(true);
         if (var4 < 64512) {
           throw new RuntimeException();
         }
@@ -366,7 +366,7 @@ final class Vector3 {
     }
 
     Vector3(int param0, int param1, int param2) {
-        this.a(param1, -33, param2, param0);
+        this.set(param1, -33, param2, param0);
     }
 
     static {

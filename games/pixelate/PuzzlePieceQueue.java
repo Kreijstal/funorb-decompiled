@@ -19,7 +19,7 @@ final class PuzzlePieceQueue {
     static int[][] field_c;
     private int field_b;
 
-    final int a(int param0) {
+    final int takeNextPiece(int param0) {
         if (this.field_p == this.field_i.length) {
           this.field_h = true;
           return -1;
@@ -35,14 +35,14 @@ final class PuzzlePieceQueue {
         return this.field_i[fieldTemp$0];
     }
 
-    final int a(byte param0) {
+    final int getPieceCount(byte param0) {
         if (param0 >= -88) {
           this.field_a = -66;
         }
         return this.field_i.length;
     }
 
-    final void d(int param0) {
+    final void animateListScroll(int param0) {
         if (this.field_l > this.field_g) {
           this.field_g = this.field_g + 3;
         }
@@ -54,14 +54,14 @@ final class PuzzlePieceQueue {
         }
     }
 
-    final Puzzle b(int param0) {
+    final Puzzle createPuzzle(int param0) {
         if (param0 != -3060) {
           this.field_a = 17;
         }
         return new Puzzle(this.field_m, this.field_k, this.field_j, 60, 30, lp.field_d, 0, 0, new IndexedSprite[]{AcidSunsetBackground.field_o[this.field_e]});
     }
 
-    final void b(boolean param0) {
+    final void reset(boolean param0) {
         this.field_p = 0;
         this.field_n = false;
         this.field_h = false;
@@ -71,18 +71,18 @@ final class PuzzlePieceQueue {
         this.field_l = this.field_g;
     }
 
-    final static void c(int param0) {
+    final static void pollAchievementSyncRequests(int param0) {
         if (param0 != 4478) {
           field_d = (Sprite[]) null;
         }
-        if (!ik.field_a) {
+        if (!LoadingStep.field_a) {
           if (null == pk.field_f) {
-            pk.field_f = Matrix3.b(255, 4);
+            pk.field_f = Matrix3.queueAchievementMaskRequest(255, 4);
           }
           if (pk.field_f.field_p) {
             EmailCredentials.field_k = EmailCredentials.field_k & ~pk.field_f.field_s;
             MenuScreen.field_n = MenuScreen.field_n | pk.field_f.field_s;
-            ik.field_a = true;
+            LoadingStep.field_a = true;
             pk.field_f = null;
           }
         }
@@ -99,7 +99,7 @@ final class PuzzlePieceQueue {
             TextHotspotWidget.field_U = true;
           }
         }
-        if (ik.field_a &&
+        if (LoadingStep.field_a &&
           TextHotspotWidget.field_U) {
           SocketConnector.c(5);
           ni.a(-31470);
@@ -111,7 +111,7 @@ final class PuzzlePieceQueue {
         }
     }
 
-    final void e(int param0) {
+    final void markPuzzleCompleted(int param0) {
         this.field_n = true;
         long var2 = 1L << this.field_e | CheckboxPainter.field_h;
         if (param0 != 20604) {
@@ -131,7 +131,7 @@ final class PuzzlePieceQueue {
         field_c = (int[][]) null;
     }
 
-    final void f(int param0) {
+    final void draw(int param0) {
         int var3 = 0;
         Sprite[] stackIn_6_0 = null;
         int stackIn_7_1 = 0;
@@ -187,7 +187,7 @@ final class PuzzlePieceQueue {
           }
           var2 += 37;
         }
-        rk.field_e.drawText("Puzzle " + (this.field_e + 1), 30, 50, 0, -1);
+        PieceTiming.field_e.drawText("Puzzle " + (this.field_e + 1), 30, 50, 0, -1);
     }
 
     PuzzlePieceQueue(int param0, int param1, int param2, int param3, int param4, int[] param5) {

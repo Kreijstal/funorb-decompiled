@@ -15,7 +15,7 @@ final class DialWidget extends TextButton {
     final static void a(int param0, java.awt.Canvas param1) {
         try {
           if (11 == el.field_b) {
-            Js5ArchiveManager.b(98);
+            Js5ArchiveManager.suppressReconnectRedirect(98);
           }
           if (param0 != -1913) {
             DialWidget.releaseStatics((byte) -51);

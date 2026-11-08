@@ -39,7 +39,7 @@ final class fj {
           em.openContextMenu(stackIn_2_0, stackIn_2_1, stackIn_2_2, stackIn_3_3, param0.field_q, -163, (ScrollContainer) null, (int[]) null, param0.field_j);
           if (0 == param0.field_j &&
             !pk.b(121) &&
-            io.field_c == null &&
+            LoginMethod.field_c == null &&
             DraggableWidget.field_S == null) {
             if (!IsaacRandom.field_g) {
               var5 = ProxySocketConnector.field_n;
@@ -52,8 +52,8 @@ final class fj {
           }
           if (param0.field_j == 1 &&
             !pk.b(120) &&
-            io.field_c != null &&
-            param0.field_b == io.field_c.c((byte) 8)) {
+            LoginMethod.field_c != null &&
+            param0.field_b == LoginMethod.field_c.c((byte) 8)) {
             if (!IsaacRandom.field_g) {
               var9 = ProxySocketConnector.field_n;
               var10 = InputQueue.field_c;
@@ -63,14 +63,14 @@ final class fj {
             var12 = TabbedPanel.field_Eb;
             var11.field_b.addAction(var12, (byte) -73, 20);
           }
-          ProxySocketConnector.field_n.c(-24);
-          ProxySocketConnector.field_n.b(false, (byte) -98);
-          ProxySocketConnector.field_n.a(param0.field_j, param0.field_l, -3);
-          ProxySocketConnector.field_n.b(8893);
+          ProxySocketConnector.field_n.addLobbyGameActions(-24);
+          ProxySocketConnector.field_n.addGameMemberActions(false, (byte) -98);
+          ProxySocketConnector.field_n.addPlayerSocialActions(param0.field_j, param0.field_l, -3);
+          ProxySocketConnector.field_n.addReportAbuseAction(8893);
           if (param1 <= 96) {
             field_a = -88;
           }
-          ProxySocketConnector.field_n.a((byte) 99, param0);
+          ProxySocketConnector.field_n.addChatFilterActions((byte) 99, param0);
           var13 = ProxySocketConnector.field_n;
           var3 = BufferedRandomAccessFile.field_a;
           var4 = ji.field_c;

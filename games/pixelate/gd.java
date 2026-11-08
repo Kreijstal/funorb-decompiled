@@ -5,7 +5,7 @@ final class gd {
     static Sprite field_i;
     static int[] field_c;
     static String field_d;
-    static re field_a;
+    static LoadingStepTracker field_a;
     static int field_l;
     static int[] field_b;
     static int[] field_h;

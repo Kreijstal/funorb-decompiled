@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class mj {
+final class ScoreMarkerDemo {
     private int[] field_a;
     static String field_i;
     private ScoreMarkerBar field_f;
@@ -16,21 +16,21 @@ final class mj {
     static String field_h;
     static String field_e;
 
-    final void a(byte param0) {
-        this.field_f.c(2);
+    final void draw(byte param0) {
+        this.field_f.draw(2);
         if (param0 != -8) {
           field_i = (String) null;
         }
     }
 
-    final void b(int param0) {
-        this.field_f.a(12804, false);
+    final void tick(int param0) {
+        this.field_f.tickMarker(12804, false);
         int fieldTemp$0 = this.field_d;
         this.field_d = this.field_d + 1;
         if (fieldTemp$0 != 60) {
           if (120 >= this.field_d) {
             if (param0 != 300) {
-              mj.c(43);
+              ScoreMarkerDemo.showAccountChoicePanel(43);
               return;
             }
             return;
@@ -39,7 +39,7 @@ final class mj {
           this.field_a[1] = 300 + JavaRandomHelpers.a(ea.field_b, DraggableWidget.a(param0, -327), 300);
           this.field_d = 0;
           if (param0 != 300) {
-            mj.c(43);
+            ScoreMarkerDemo.showAccountChoicePanel(43);
             return;
           }
           return;
@@ -49,10 +49,10 @@ final class mj {
         if (param0 == 300) {
           return;
         }
-        mj.c(43);
+        ScoreMarkerDemo.showAccountChoicePanel(43);
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_e = null;
         field_c = null;
         field_g = null;
@@ -61,7 +61,7 @@ final class mj {
           field_i = null;
           return;
         }
-        mj.c(-11);
+        ScoreMarkerDemo.showAccountChoicePanel(-11);
         field_i = null;
     }
 
@@ -73,7 +73,7 @@ final class mj {
           Matrix3.field_d = param5;
           if (param3 != 300) {
             sb var7 = (sb) null;
-            mj.a(-68, (sb) null, -42, 67, -94, (sb) null);
+            ScoreMarkerDemo.a(-68, (sb) null, -42, 67, -94, (sb) null);
           }
           ki.field_e = param0;
         } catch (RuntimeException runtimeException) {
@@ -86,11 +86,11 @@ final class mj {
           return param1 + 1 + "/" + ln.field_m.length;
         }
         sb var3 = (sb) null;
-        mj.a(112, (sb) null, -11, -57, 97, (sb) null);
+        ScoreMarkerDemo.a(112, (sb) null, -11, -57, 97, (sb) null);
         return param1 + 1 + "/" + ln.field_m.length;
     }
 
-    final static String a(int param0, String param1, int param2) {
+    final static String requestAddIgnore(int param0, String param1, int param2) {
         RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
@@ -157,23 +157,23 @@ final class mj {
         }
     }
 
-    public mj() {
+    public ScoreMarkerDemo() {
         this.field_a = new int[2];
         this.field_a[0] = 0;
         this.field_a[1] = 0;
         this.field_f = new ScoreMarkerBar(this.field_a, false, 500, 330);
-        this.field_f.a(196608, -115);
+        this.field_f.setScrollSpeed(196608, -115);
     }
 
-    final static void c(int param0) {
+    final static void showAccountChoicePanel(int param0) {
         ph.field_l.transitionToContent(new AccountChoicePanel(), -115);
         if (param0 != 24496) {
           String var2 = (String) null;
-          mj.a(-69, (String) null, 1);
+          ScoreMarkerDemo.requestAddIgnore(-69, (String) null, 1);
         }
     }
 
-    final static void a(boolean param0) {
+    final static void closeQuickChatMenu(boolean param0) {
         un.field_l = param0 ? true : false;
         if (null == bo.field_h) {
           if (0 != ce.field_d) {
@@ -182,7 +182,7 @@ final class mj {
           di.field_a = 0;
           return;
         }
-        bo.field_h.l(17872);
+        bo.field_h.resetSelection(17872);
         if (0 != ce.field_d) {
           nd.a((byte) -124);
         }

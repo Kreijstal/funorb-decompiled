@@ -18,7 +18,7 @@ final class ScoreMarkerBar extends StatusBar {
     private int field_u;
     private int field_p;
 
-    final static void d(byte param0) {
+    final static void renderLogoMeshes(byte param0) {
         int var15 = 0;
         int var17_int = 0;
         int var18 = 0;
@@ -59,12 +59,12 @@ final class ScoreMarkerBar extends StatusBar {
         var19 = Pixelate.field_H ? 1 : 0;
         try {
           StatusBar.field_a = new int[]{0, 0, -8144, 65536, 0, 0, 0, -65536, 0, 0, 0, 65536};
-          var1_int = ck.field_b.length;
+          var1_int = FloatingSquare.field_b.length;
           var21 = new int[var1_int];
           var20 = var21;
           var2 = var20;
           for (var3 = 0; var1_int > var3; var3++) {
-            var4_ref_rl = ck.field_b[var3];
+            var4_ref_rl = FloatingSquare.field_b[var3];
             var17 = var4_ref_rl;
             var17Lifetime2 = var4_ref_rl;
             var4_ref_rl.ensureBounds((byte) -17);
@@ -107,15 +107,15 @@ final class ScoreMarkerBar extends StatusBar {
           var14 = (int)((double)var14 * var10Lifetime1);
           var13Lifetime1 = (int)((double)var13Lifetime1 * var10Lifetime1);
           var12Lifetime1 = (int)((double)var12Lifetime1 * var10Lifetime1);
-          for (var15 = 0; var15 < ck.field_b.length; var15++) {
+          for (var15 = 0; var15 < FloatingSquare.field_b.length; var15++) {
             var16 = 0;
-            for (var17_int = 1; var17_int < ck.field_b.length; var17_int++) {
+            for (var17_int = 1; var17_int < FloatingSquare.field_b.length; var17_int++) {
               if (var21[var17_int] > var21[var16]) {
                 var16 = var17_int;
               }
             }
             var21[var16] = -2147483648;
-            var17Lifetime1 = ck.field_b[var16];
+            var17Lifetime1 = FloatingSquare.field_b[var16];
             PasswordValidator.a(var16, 100);
             for (var18 = 0; var18 < 3; var18++) {
               ReportAbuseDialog.field_Hb[var18] = ReportAbuseDialog.field_Hb[var18] + BlastFromThePastBackground.field_p[var15][var18];
@@ -144,7 +144,7 @@ final class ScoreMarkerBar extends StatusBar {
         this(param0, param1, 615, 435 - param2);
     }
 
-    final static boolean a(boolean param0) {
+    final static boolean isConnectionRetryDue(boolean param0) {
         long var1;
         long var3;
         int var5;
@@ -152,11 +152,11 @@ final class ScoreMarkerBar extends StatusBar {
         var6 = Pixelate.field_H ? 1 : 0;
         var1 = hm.a(64);
         if (!param0) {
-          ScoreMarkerBar.a(true);
+          ScoreMarkerBar.isConnectionRetryDue(true);
         }
-        var3 = -io.field_d + var1;
+        var3 = -LoginMethod.field_d + var1;
         if (30000L < var3) {
-          io.field_d = var1;
+          LoginMethod.field_d = var1;
           LoginDialog.field_ob = 0;
           return true;
         }
@@ -176,11 +176,11 @@ final class ScoreMarkerBar extends StatusBar {
           return false;
         }
         LoginDialog.field_ob = LoginDialog.field_ob + 1;
-        io.field_d = var1;
+        LoginMethod.field_d = var1;
         return true;
     }
 
-    final static void a(byte param0, long param1) {
+    final static void threadSleep(byte param0, long param1) {
         try {
           try {
             Thread.sleep(param1);
@@ -196,14 +196,14 @@ final class ScoreMarkerBar extends StatusBar {
         }
     }
 
-    final static boolean e(byte param0) {
+    final static boolean isLoginRequestFlagged(byte param0) {
         if (param0 != 37) {
           return true;
         }
         return MainMenuScreen.field_s;
     }
 
-    final void c(int param0) {
+    final void draw(int param0) {
         int var5 = 0;
         int stackIn_11_0 = 0;
         int stackIn_14_0 = 0;
@@ -226,7 +226,7 @@ final class ScoreMarkerBar extends StatusBar {
         if (gd.field_h.length <= var2) {
           var2 = -1 + gd.field_h.length;
         }
-        this.a(65, var2, this.field_m, this.field_n);
+        this.drawBarFrame(65, var2, this.field_m, this.field_n);
         SoftwareRasterizer.drawVerticalLineAlpha(320, this.field_m + 3, 19, 0, 128);
         SoftwareRasterizer.drawVerticalLineAlpha(321, 4 + this.field_m, 18, 16777215, 128);
         if (this.field_v != this.field_A) {
@@ -274,7 +274,7 @@ final class ScoreMarkerBar extends StatusBar {
         JaggrabDownloader.field_m[var3Lifetime1].drawTransparent(-8 + (this.field_v + 320), -10 + this.field_m);
     }
 
-    final void a(int param0, boolean param1) {
+    final void tickMarker(int param0, boolean param1) {
         int var3;
         int var4;
         int var5;
@@ -282,7 +282,7 @@ final class ScoreMarkerBar extends StatusBar {
         int var7;
         int var6Lifetime1;
         var7 = Pixelate.field_H ? 1 : 0;
-        super.a((byte) 21);
+        super.tick((byte) 21);
         if (param0 != 12804) {
           ScoreMarkerBar.releaseStatics((byte) 73);
         }

@@ -94,11 +94,11 @@ final class ln extends IntrusiveNode {
         if (null == ib.field_f) {
           return;
         }
-        MenuInputState.a(ib.field_f, 0);
+        MenuInputState.removeCanvasInputListeners(ib.field_f, 0);
         ib.field_f.a(6511, mc.field_k);
         ib.field_f = null;
         if (GzipDecoder.field_c != null) {
-          GzipDecoder.field_c.b(-101);
+          GzipDecoder.field_c.restoreSavedSize(-101);
         }
         NameAvailabilityValidator.field_u.requestFocus();
     }

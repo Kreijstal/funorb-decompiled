@@ -251,24 +251,24 @@ final class SectorCacheStore {
         }
     }
 
-    final static fl a(String param0, byte param1) {
+    final static AsyncValidationResult a(String param0, byte param1) {
         RuntimeException var2 = null;
-        fl stackIn_6_0 = null;
-        fl stackIn_8_0 = null;
+        AsyncValidationResult stackIn_6_0 = null;
+        AsyncValidationResult stackIn_8_0 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (an.field_e.d(param1 ^ -49) &&
-            !param0.equals(an.field_e.b((byte) 81))) {
+          if (an.field_e.isComplete(param1 ^ -49) &&
+            !param0.equals(an.field_e.getMessage((byte) 81))) {
             an.field_e = MatchController.execute((byte) 119, param0);
           }
           if (param1 == -99) {
             stackIn_8_0 = an.field_e;
             return stackIn_8_0;
           }
-          stackIn_6_0 = (fl) null;
+          stackIn_6_0 = (AsyncValidationResult) null;
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

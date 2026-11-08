@@ -243,7 +243,7 @@ class UiComponent extends IntrusiveNode {
           MeshRasterState.a();
           SoftwareRasterizer.clear();
           GameModeCard.field_f = param0;
-          ScoreMarkerBar.d((byte) 106);
+          ScoreMarkerBar.renderLogoMeshes((byte) 106);
           var2 = var1.copy();
           var3 = 0;
           while (15 > var3) {
@@ -285,7 +285,7 @@ class UiComponent extends IntrusiveNode {
           var5 = -7 % ((44 - param2) / 51);
           break;
         }
-        var6 = ContentTransitionDialog.e((byte) -115);
+        var6 = ContentTransitionDialog.getTimedNoticeText((byte) -115);
         if (var6 == null) {
           return;
         }
