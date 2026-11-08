@@ -275,7 +275,7 @@ abstract class PopupDialog extends IntrusiveNode {
         int var5 = Kickabout.field_G;
         AuctionListing.pushRasterClip(param1 + this.field_e, param0 - 22946, param1, param2 + this.field_r, param2);
         for (var4 = 0; this.field_e > var4; var4++) {
-          TutorialScenerySupport.field_a.d(var4 + param1, param2 + this.field_r - 480);
+          TutorialScenerySupport.field_a.drawOpaque(var4 + param1, param2 + this.field_r - 480);
         }
         AuctionLogEntry.field_j.drawScaledAdditive(param1 - 10, 15 + param2, AuctionLogEntry.field_j.field_o * 2 / 3, 2 * AuctionLogEntry.field_j.field_v / 3, param0);
         this.drawBody((byte) -29, param1, param2);

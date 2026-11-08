@@ -36,7 +36,7 @@ final class AlternateKeyedLoginCredentials extends KeyedLoginCredentials {
           var8 = -(var6 >> 1) + IntKeyLookup.projectPitchY((byte) -101, param1.field_bb >> 16);
           if (InstrumentNoteMask.field_i == 256) {
             if (1 == SocketArchiveNetworkClient.field_v) {
-              param0.b(var7, var8, param3);
+              param0.drawAlpha(var7, var8, param3);
               return;
             }
             SpritePixelSupport.drawAlphaTestedArgb(param0, var7, var8);

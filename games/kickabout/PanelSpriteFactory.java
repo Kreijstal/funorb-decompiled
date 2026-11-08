@@ -73,7 +73,7 @@ final class PanelSpriteFactory {
         return new Sprite[]{var10, var11, var10, var9, (Sprite) (var14), var9, var19, var20, var19};
     }
 
-    final static int a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, CipherPacketBuffer param7, int param8, int param9) {
+    final static int readSignedFourRangeValue(int param0, int param1, int param2, int param3, int param4, int param5, int param6, CipherPacketBuffer param7, int param8, int param9) {
         int stackIn_6_0 = 0;
         int stackIn_9_0 = 0;
         int stackIn_15_0 = 0;
@@ -101,7 +101,7 @@ final class PanelSpriteFactory {
             if (0 == param9) {
               stackIn_29_0 = 0;
             } else {
-              stackIn_29_0 = IsaacRandom.a(param9, -30273, param7);
+              stackIn_29_0 = IsaacRandom.readSignedBits(param9, -30273, param7);
             }
             return stackIn_29_0;
           }
@@ -109,7 +109,7 @@ final class PanelSpriteFactory {
             if (param4 == 0) {
               stackIn_22_0 = 0;
             } else {
-              stackIn_22_0 = IsaacRandom.a(param4, -30273, param7);
+              stackIn_22_0 = IsaacRandom.readSignedBits(param4, -30273, param7);
             }
             var11 = stackIn_22_0;
             var12 = param1;
@@ -124,7 +124,7 @@ final class PanelSpriteFactory {
             if (0 == param3) {
               stackIn_6_0 = 0;
             } else {
-              stackIn_6_0 = IsaacRandom.a(param3, -30273, param7);
+              stackIn_6_0 = IsaacRandom.readSignedBits(param3, -30273, param7);
             }
             var11Lifetime1 = stackIn_6_0;
             var12Lifetime1 = param2 + param1;
@@ -139,7 +139,7 @@ final class PanelSpriteFactory {
             throw new IllegalStateException();
           }
           if (0 != param8) {
-            stackIn_15_0 = IsaacRandom.a(param8, -30273, param7);
+            stackIn_15_0 = IsaacRandom.readSignedBits(param8, -30273, param7);
           } else {
             stackIn_15_0 = 0;
           }

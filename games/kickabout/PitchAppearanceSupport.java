@@ -43,10 +43,10 @@ final class PitchAppearanceSupport {
           GoalSpriteLoader.field_d = new Sprite(ConsoleCommand.field_z.field_o, LoggedGoal.field_o.field_v);
           TextLayoutLine.field_a = new Sprite(PlayerValueSortCriterion.field_p.field_o, LineupView.field_x.field_v);
           PacketBuffer.a(-70, GoalSpriteLoader.field_d);
-          LoggedGoal.field_o.d(SoftwareRasterizer.field_g - LoggedGoal.field_o.field_o, 0);
+          LoggedGoal.field_o.drawOpaque(SoftwareRasterizer.field_g - LoggedGoal.field_o.field_o, 0);
           TeamManagementScreen.e(param0 + 158);
           PacketBuffer.a(-42, TextLayoutLine.field_a);
-          PlayerValueSortCriterion.field_p.d(0, -PlayerValueSortCriterion.field_p.field_v + SoftwareRasterizer.field_f);
+          PlayerValueSortCriterion.field_p.drawOpaque(0, -PlayerValueSortCriterion.field_p.field_v + SoftwareRasterizer.field_f);
           TeamManagementScreen.e(118);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "mj.D(" + param0 + ',' + param1 + ')');

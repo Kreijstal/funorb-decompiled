@@ -84,11 +84,11 @@ final class FormationView extends MatchPhaseView {
         SoftwareRasterizer.fillRoundedRectangleBlended(220, 332, 150, 26, 8, 65793, 128);
         var3 = AuctionsHelpScreen.field_F[var2].toLowerCase();
         ByteArrayPool.field_d.drawCentered(var3, 293, 351, 16777215, -1);
-        TextLayoutLine.field_f.c(220, 100);
+        TextLayoutLine.field_f.draw(220, 100);
         for (var4Lifetime2 = 0; 4 > var4Lifetime2; var4Lifetime2++) {
           var5Lifetime1 = -(RowRangeRequest.field_f.field_o >> 1) + 147 * AccountNameCharacterSupport.field_b[var2][var4Lifetime2] / 896 + 220;
           var6Lifetime1 = -(RowRangeRequest.field_f.field_v >> 1) + AccountNameCharacterSupport.field_d[var2][var4Lifetime2] * 220 / 1344 + 100;
-          RowRangeRequest.field_f.c(var5Lifetime1, var6Lifetime1);
+          RowRangeRequest.field_f.draw(var5Lifetime1, var6Lifetime1);
         }
         if (this.isButtonEnabled(0, param0 + 49)) {
           this.field_k.draw(102, false);

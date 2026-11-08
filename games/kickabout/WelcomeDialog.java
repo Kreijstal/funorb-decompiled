@@ -276,7 +276,7 @@ final class WelcomeDialog extends MessageDialog {
 
     static {
         field_J = "To server list";
-        field_F = CachedTextLayout.c(-23091);
+        field_F = CachedTextLayout.createEightIntBuffer(-23091);
         field_I = 0;
     }
 }

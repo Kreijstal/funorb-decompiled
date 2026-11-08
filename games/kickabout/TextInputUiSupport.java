@@ -80,7 +80,7 @@ final class TextInputUiSupport {
           var3 = 358;
           AuctionListing.pushRasterClip(TickClock.field_a + var2_int, -22914, var2_int, var3 + 112, var3);
           for (var4 = 0; TickClock.field_a > var4; var4++) {
-            TutorialScenerySupport.field_a.d(var2_int + var4, var3 - 368);
+            TutorialScenerySupport.field_a.drawOpaque(var2_int + var4, var3 - 368);
           }
           SoftwareRasterizer.drawThickRectangle(var2_int, var3, TickClock.field_a, 112, 2, 65793);
           if (param1 != null) {
@@ -108,7 +108,7 @@ final class TextInputUiSupport {
             }
           }
           AuctionListing.pushRasterClip(-20 + (var2_int + TickClock.field_a), param0 ^ 23036, var2_int + 22 - 12, 112 + var3, var3);
-          LoginKind.getPlayerPortrait(ThumbnailStateFactory.field_d.field_H[0], param0 ^ -126, ThumbnailStateFactory.field_d.field_P[0][FriendRemovalSupport.field_e].stats, ThumbnailStateFactory.field_d.field_Q[0], ThumbnailStateFactory.field_d.field_d[0], false).c(12 + var2_int, var3 + 40);
+          LoginKind.getPlayerPortrait(ThumbnailStateFactory.field_d.field_H[0], param0 ^ -126, ThumbnailStateFactory.field_d.field_P[0][FriendRemovalSupport.field_e].stats, ThumbnailStateFactory.field_d.field_Q[0], ThumbnailStateFactory.field_d.field_d[0], false).draw(12 + var2_int, var3 + 40);
           TeamManagementScreen.e(120);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

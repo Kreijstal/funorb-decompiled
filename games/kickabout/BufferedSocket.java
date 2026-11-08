@@ -326,7 +326,7 @@ final class BufferedSocket implements Runnable {
     static {
         field_q = "Loading graphics";
         field_t = "Your search returned no results.";
-        field_f = CachedTextLayout.c(-23091);
+        field_f = CachedTextLayout.createEightIntBuffer(-23091);
         field_k = -2;
     }
 }

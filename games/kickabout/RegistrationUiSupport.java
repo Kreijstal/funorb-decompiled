@@ -46,7 +46,7 @@ final class RegistrationUiSupport {
           BeveledTextPainter.a(param10, param16, param7 ^ -17016, param5, param6);
           SocketArchiveNetworkClient.initializeSocialPanels(-92, param6);
           LeaderboardParticipant.a(param2, param11, param18, param19, param13, param17, param8, param0, param14, param6, param15, param12, param9, (byte) 117, param4);
-          BufferedCacheFile.a(param3, param6, param1, 0);
+          BufferedCacheFile.initializeChatInterface(param3, param6, param1, 0);
           StringCursor.b((byte) -124);
           if (param7 != 16971) {
             RegistrationUiSupport.buildLoadingSpinnerSprites((byte) -8);

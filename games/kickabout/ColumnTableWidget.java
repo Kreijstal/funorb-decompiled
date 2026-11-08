@@ -333,7 +333,7 @@ class ColumnTableWidget extends UiLayoutNode {
             var10 = this.field_zb[this.field_Db];
             if (var10.directionCount(-113) == 2) {
               if (1 == var10.field_i) {
-                SoftwareDrawingSupport.field_b.c(var8, var9 - 1);
+                SoftwareDrawingSupport.field_b.draw(var8, var9 - 1);
               } else {
                 SoftwareDrawingSupport.field_b.drawVerticalFlip(var8, var9);
               }
@@ -342,7 +342,7 @@ class ColumnTableWidget extends UiLayoutNode {
               if (var10.field_i >= 3) {
                 var11.drawVerticalFlip(var8, -1 + var9);
               } else {
-                var11.c(var8, var9);
+                var11.draw(var8, var9);
               }
             }
           }

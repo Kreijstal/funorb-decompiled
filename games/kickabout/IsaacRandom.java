@@ -23,7 +23,7 @@ final class IsaacRandom {
         return this.field_a[fieldTemp$0];
     }
 
-    final static int a(int param0, int param1, CipherPacketBuffer param2) {
+    final static int readSignedBits(int param0, int param1, CipherPacketBuffer param2) {
         RuntimeException var3 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -50,7 +50,7 @@ final class IsaacRandom {
         }
     }
 
-    final static String c(int param0) {
+    final static String getPendingExternalUrl(int param0) {
         int var1 = 55 / ((3 - param0) / 40);
         return TrinketShopDialog.field_M;
     }
@@ -186,7 +186,7 @@ final class IsaacRandom {
         this.field_e = 256;
     }
 
-    final static String a(String param0, int param1) {
+    final static String highlightConsoleSyntax(String param0, int param1) {
         int var4 = 0;
         StringBuilder discarded$0 = null;
         StringBuilder discarded$1 = null;
@@ -216,7 +216,7 @@ final class IsaacRandom {
           var2 = var11;
           if (param1 < 103) {
             var10 = (String) null;
-            IsaacRandom.a((String) null, -9);
+            IsaacRandom.highlightConsoleSyntax((String) null, -9);
           }
           var3 = new StringBuilder();
           for (var4 = 0; var11.length > var4; var4++) {
@@ -271,12 +271,12 @@ final class IsaacRandom {
         field_f = null;
         if (param0 != 1) {
           CipherPacketBuffer var2 = (CipherPacketBuffer) null;
-          IsaacRandom.a(-123, -53, (CipherPacketBuffer) null);
+          IsaacRandom.readSignedBits(-123, -53, (CipherPacketBuffer) null);
         }
         field_h = null;
     }
 
-    final static int a(boolean param0) {
+    final static int getCameraY(boolean param0) {
         if (!param0) {
           return 17;
         }

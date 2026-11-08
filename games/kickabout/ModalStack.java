@@ -229,7 +229,7 @@ final class ModalStack extends SingleChildContainer {
                   BytePlusOneCommand.a(var7, false, RotaryDialPainter.field_d.field_Cb, -1, var16, (int[]) null, 0L, (String) null, -1);
                   var5 = var7;
                   if (null != var7.field_zb &&
-                    !BufferedCacheFile.a(118, TextButton.field_v.field_k) &&
+                    !BufferedCacheFile.isActivePrivateChatRecipient(118, TextButton.field_v.field_k) &&
                     !PacketBuffer.field_l) {
                     if (!WriteIntegersCommand.field_C) {
                       var17 = TextButton.field_v;

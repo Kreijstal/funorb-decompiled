@@ -235,18 +235,18 @@ final class KitStyleTile extends UiLayoutNode implements PopupCard {
         var6 = this.field_Jb.field_mb + this.field_Jb.field_T + 5;
         if (this.field_Kb) {
           var10 = LineupPositionSupport.field_g;
-          var10.c(-(var10.field_q >> 1) + var5, var6 - (var10.field_w >> 1));
+          var10.draw(-(var10.field_q >> 1) + var5, var6 - (var10.field_w >> 1));
           var8 = new ArgbSprite(18, 13);
           PacketBuffer.a(param0 ^ -24576, var8);
           ConsoleTokenCursor.field_d.drawCentered("10", SoftwareRasterizer.field_g >> 1, SoftwareRasterizer.field_f - 2, -1, -1);
           SoftwareDrawingSupport.outlineSpriteInPlace(var8, -16711423);
           SoftwareDrawingSupport.outlineSpriteInPlace(var8, 1996554497);
           TeamManagementScreen.e(122);
-          ((Sprite) ((Object) var8)).c(-(((Sprite) ((Object) var8)).field_o >> 1) + var5, -(((Sprite) ((Object) var8)).field_v >> 1) + var6);
+          ((Sprite) ((Object) var8)).draw(-(((Sprite) ((Object) var8)).field_o >> 1) + var5, -(((Sprite) ((Object) var8)).field_v >> 1) + var6);
         }
         if (this.field_Ib) {
           var11 = LoginResponseUiSupport.field_h;
-          var11.c(var5 - (var11.field_q >> 1), var6 - (var11.field_w >> 1));
+          var11.draw(var5 - (var11.field_q >> 1), var6 - (var11.field_w >> 1));
         }
         return;
     }
@@ -255,7 +255,7 @@ final class KitStyleTile extends UiLayoutNode implements PopupCard {
         try {
           ButtonMenuScreen.field_l = GameSoundEffect.getTargetFramesPerSecond((byte) 119) * param0 / 1000;
           GameAppletShell.decodeLogoAudio(param1, (byte) 60);
-          StripedProgressBar.a((byte) 49, param1);
+          StripedProgressBar.loadLogoModels((byte) 49, param1);
           CipherPacketBuffer.loadSplitFinalFrameSprites(3, param1);
           RasterGammaSupport.initializeIntensityLookup(false);
           Trinket.buildBlurredModelSprite((byte) -128);

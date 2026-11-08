@@ -383,7 +383,7 @@ final class PainterStyle {
             if (param1.field_m == 2) {
               var7 = var7 + (param0.field_i - this.field_j.field_v);
             }
-            this.field_j.c(var6_int, var7);
+            this.field_j.draw(var6_int, var7);
           }
           var6 = param1.displayText((byte) -83, param0);
           if (var6 != null &&

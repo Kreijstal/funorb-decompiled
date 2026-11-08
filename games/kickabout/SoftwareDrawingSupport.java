@@ -372,7 +372,7 @@ final class SoftwareDrawingSupport {
         PacketBuffer.a(-79, var8);
         param1.drawParagraph(param0, 0, 0, param4, param5, param6, -1, 1, 1, 0);
         TeamManagementScreen.e(126);
-        var8.c(param2, param3, param7, 4096);
+        var8.drawRotatedBilinear(param2, param3, param7, 4096);
     }
 
     private final static boolean isAngleInRange(int param0, int param1, int param2) {
@@ -694,7 +694,7 @@ final class SoftwareDrawingSupport {
         int var10Lifetime1;
         int var10Lifetime2;
         if (param3 == 256) {
-          param0.c(param1, param2);
+          param0.draw(param1, param2);
           return;
         }
         param1 = param1 + param0.field_s;
@@ -992,15 +992,15 @@ final class SoftwareDrawingSupport {
           PacketBuffer.a(73, var6_ref_ut);
           SoftwareDrawingSupport.drawStatBar(0, 0, param2 - 100, param3, false, 0);
           TeamManagementScreen.e(126);
-          var6_ref_ut.b(param0 + 3, param1 + 7, 128);
+          var6_ref_ut.drawAlpha(param0 + 3, param1 + 7, 128);
           param5 = param5 + (param2 - 100);
           param2 = 100;
         }
         int var6 = (int)(MonotonicClock.monotonicMillis(74) % 220L);
         var6 = (var6 << 2) / 220;
-        field_g.d(param0 - 1, param1 - 1);
+        field_g.drawOpaque(param0 - 1, param1 - 1);
         AuctionListing.pushRasterClip(param0 + param2, -22914, param0, param1 + 11, param1);
-        field_h[param3][var6].d(param0, param1);
+        field_h[param3][var6].drawOpaque(param0, param1);
         TeamManagementScreen.e(127);
         SoftwareRasterizer.drawRectangle(param0 - 1, param1 - 1, 102, 13, 65793);
         if (param4) {
@@ -1023,7 +1023,7 @@ final class SoftwareDrawingSupport {
           ConsoleTokenCursor.field_d.drawText(var10.toString(), var9 + 4, 10, 16777215, var7);
           TeamManagementScreen.e(127);
           SoftwareDrawingSupport.outlineSpriteInPlace(field_d, 65793);
-          field_d.c(param0, param1);
+          field_d.draw(param0, param1);
           return;
         }
     }

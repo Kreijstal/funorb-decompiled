@@ -66,7 +66,7 @@ final class ValidationState {
           }
           TeamManagementScreen.e(122);
           if (PlayerStats.field_p >= 150) {
-            AppScreen.field_a.b(var3 + 15, var4 + 10, var5);
+            AppScreen.field_a.drawAlpha(var3 + 15, var4 + 10, var5);
           } else {
             NamedValueContainer.field_f.drawHalfSize(var3, var4);
           }
@@ -79,7 +79,7 @@ final class ValidationState {
                 if (var6 < 20) {
                   var7 = 256 * var6 / 20;
                 }
-                SocialRowOrderSupport.field_e.b(15 + var3, 10 + var4, var5 * var7 >> 8);
+                SocialRowOrderSupport.field_e.drawAlpha(15 + var3, 10 + var4, var5 * var7 >> 8);
               }
               return;
             }
@@ -101,7 +101,7 @@ final class ValidationState {
             if (var6Lifetime4 < 20) {
               var7Lifetime4 = 256 * var6Lifetime4 / 20;
             }
-            SocialRowOrderSupport.field_e.b(15 + var3, 10 + var4, var5 * var7Lifetime4 >> 8);
+            SocialRowOrderSupport.field_e.drawAlpha(15 + var3, 10 + var4, var5 * var7Lifetime4 >> 8);
           }
           return;
         }
@@ -123,7 +123,7 @@ final class ValidationState {
         }
         TeamManagementScreen.e(122);
         if (PlayerStats.field_p >= 150) {
-          AppScreen.field_a.b(var3Lifetime1 + 15, var4Lifetime1 + 10, var5Lifetime1);
+          AppScreen.field_a.drawAlpha(var3Lifetime1 + 15, var4Lifetime1 + 10, var5Lifetime1);
           var6Lifetime1 = -125 + PlayerStats.field_p;
           if (0 >= var6Lifetime1) {
             var6Lifetime1 = -140 + PlayerStats.field_p;
@@ -132,7 +132,7 @@ final class ValidationState {
               if (var6Lifetime1 < 20) {
                 var7Lifetime1 = 256 * var6Lifetime1 / 20;
               }
-              SocialRowOrderSupport.field_e.b(15 + var3Lifetime1, 10 + var4Lifetime1, var5Lifetime1 * var7Lifetime1 >> 8);
+              SocialRowOrderSupport.field_e.drawAlpha(15 + var3Lifetime1, 10 + var4Lifetime1, var5Lifetime1 * var7Lifetime1 >> 8);
             }
           } else {
             if (var6Lifetime1 >= 50) {
@@ -142,7 +142,7 @@ final class ValidationState {
                 if (var6Lifetime1 < 20) {
                   var7Lifetime1 = 256 * var6Lifetime1 / 20;
                 }
-                SocialRowOrderSupport.field_e.b(15 + var3Lifetime1, 10 + var4Lifetime1, var5Lifetime1 * var7Lifetime1 >> 8);
+                SocialRowOrderSupport.field_e.drawAlpha(15 + var3Lifetime1, 10 + var4Lifetime1, var5Lifetime1 * var7Lifetime1 >> 8);
               }
             } else {
               if (20 > var6Lifetime1) {
@@ -154,7 +154,7 @@ final class ValidationState {
                   if (var6Lifetime1 < 20) {
                     var7Lifetime1 = 256 * var6Lifetime1 / 20;
                   }
-                  SocialRowOrderSupport.field_e.b(15 + var3Lifetime1, 10 + var4Lifetime1, var5Lifetime1 * var7Lifetime1 >> 8);
+                  SocialRowOrderSupport.field_e.drawAlpha(15 + var3Lifetime1, 10 + var4Lifetime1, var5Lifetime1 * var7Lifetime1 >> 8);
                 }
               } else {
                 if (var6Lifetime1 < 30) {
@@ -165,7 +165,7 @@ final class ValidationState {
                     if (var6Lifetime1 < 20) {
                       var7Lifetime1 = 256 * var6Lifetime1 / 20;
                     }
-                    SocialRowOrderSupport.field_e.b(15 + var3Lifetime1, 10 + var4Lifetime1, var5Lifetime1 * var7Lifetime1 >> 8);
+                    SocialRowOrderSupport.field_e.drawAlpha(15 + var3Lifetime1, 10 + var4Lifetime1, var5Lifetime1 * var7Lifetime1 >> 8);
                   }
                 } else {
                   var7Lifetime1 = (-(var6Lifetime1 * 256) + 12800) / 20;
@@ -176,7 +176,7 @@ final class ValidationState {
                     if (var6Lifetime1 < 20) {
                       var7Lifetime1 = 256 * var6Lifetime1 / 20;
                     }
-                    SocialRowOrderSupport.field_e.b(15 + var3Lifetime1, 10 + var4Lifetime1, var5Lifetime1 * var7Lifetime1 >> 8);
+                    SocialRowOrderSupport.field_e.drawAlpha(15 + var3Lifetime1, 10 + var4Lifetime1, var5Lifetime1 * var7Lifetime1 >> 8);
                   }
                 }
               }
@@ -206,7 +206,7 @@ final class ValidationState {
           if (var6Lifetime3 < 20) {
             var7Lifetime3 = 256 * var6Lifetime3 / 20;
           }
-          SocialRowOrderSupport.field_e.b(15 + var3Lifetime1, 10 + var4Lifetime1, var5Lifetime1 * var7Lifetime3 >> 8);
+          SocialRowOrderSupport.field_e.drawAlpha(15 + var3Lifetime1, 10 + var4Lifetime1, var5Lifetime1 * var7Lifetime3 >> 8);
         }
         return;
     }

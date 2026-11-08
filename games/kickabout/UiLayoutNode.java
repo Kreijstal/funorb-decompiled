@@ -78,7 +78,7 @@ class UiLayoutNode extends SharedWidgetFactory {
           var6 = var10.field_v;
           for (var7 = 0; var7 < SoftwareRasterizer.field_g; var7 = var7 + var5) {
             for (var8 = 0; SoftwareRasterizer.field_f > var8; var8 = var8 + var6) {
-              var10.d(var7, var8);
+              var10.drawOpaque(var7, var8);
             }
           }
           TrinketCatalog.a(param0, 15, param2, param1, param3, false);
@@ -811,9 +811,9 @@ class UiLayoutNode extends SharedWidgetFactory {
             var24 = var24 + (-var17.field_v + this.field_mb);
           }
           if (this.field_P >= 256) {
-            var17.c(var23_int, var24);
+            var17.draw(var23_int, var24);
           } else {
-            var17.b(var23_int, var24, this.field_P);
+            var17.drawAlpha(var23_int, var24, this.field_P);
           }
         }
         boolean decompiledFrameRemainder0 = true;

@@ -286,7 +286,7 @@ final class PlayerShopScreen extends TeamManagementScreen {
         this.field_T.k((byte) 55);
         SoftwareRasterizer.fillRectangleAlpha(this.field_G.field_F, this.field_G.field_T, this.field_G.field_q, this.field_G.field_mb, 65793, 96);
         ByteArrayPool.field_d.drawText(MusicPatchNode.field_i, 14 + this.field_G.field_F, 21 + this.field_G.field_T, 16777215, -1);
-        RenderedFootballer.a(param0 - 5181, this.field_U.isLinked((byte) -113), this.field_G, this.field_T.getSelectedSlot((byte) 21));
+        RenderedFootballer.drawPlayerSaleSummary(param0 - 5181, this.field_U.isLinked((byte) -113), this.field_G, this.field_T.getSelectedSlot((byte) 21));
         this.field_J.drawTable(-120);
         this.field_L.draw(75, false);
     }

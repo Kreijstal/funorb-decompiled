@@ -870,7 +870,7 @@ final class TournamentLobbyScreen extends AppScreen {
               SoftwareRasterizer.drawLineBlendedInclusive(-(ByteArrayPool.field_d.stringWidth(var7) >> 1) + (var5 >> 1) + (var2 - 8), 8 + var4, 8 + ((var5 >> 1) + var2) + (ByteArrayPool.field_d.stringWidth(var7) >> 1), var4 + 8, 11141377, 196);
               SoftwareRasterizer.drawLineBlendedInclusive(-(ByteArrayPool.field_d.stringWidth(var7) >> 1) + ((var5 >> 1) + var2 - 8), var4 + 9, (var5 >> 1) + (var2 + (ByteArrayPool.field_d.stringWidth(var7) >> 1)) + 8, var4 + 9, 11141377, 196);
             }
-            MySquadScreen.field_U[this.field_H[var6]].c(var2, var4 - 1);
+            MySquadScreen.field_U[this.field_H[var6]].draw(var2, var4 - 1);
           }
         }
         if (param0 != -21109) {
@@ -1165,7 +1165,7 @@ final class TournamentLobbyScreen extends AppScreen {
           ByteArrayPool.field_d.drawCentered(WeightedLruCache.field_g, var11, var12 + (-(var6 >> 1) - 4), -1, -1);
           TeamManagementScreen.e(126);
           SoftwareRasterizer.fillRectangleAlpha(-(var5 >> 1) + var11, -(var6 >> 1) + var12, var5, var6, 65793, 128);
-          WriteIntegersCommand.field_E[6].c(var11 + (var5 >> 1) - (WriteIntegersCommand.field_E[6].field_o - 4), -(WriteIntegersCommand.field_E[6].field_v >> 1) + var12);
+          WriteIntegersCommand.field_E[6].draw(var11 + (var5 >> 1) - (WriteIntegersCommand.field_E[6].field_o - 4), -(WriteIntegersCommand.field_E[6].field_v >> 1) + var12);
           var16 = var14.field_o;
           if (var16 < 0 &&
             var14.field_f >= 5) {

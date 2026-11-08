@@ -120,7 +120,7 @@ final class MyPitchScreen extends TeamManagementScreen {
         if (!this.field_F) {
           SoftwareRasterizer.fillRoundedRectangleBlended(var3, 207, 348, 102, 10, 65793, 228);
           for (var4Lifetime1 = 0; var4Lifetime1 < 3; var4Lifetime1++) {
-            LineupPositionSupport.field_g.c(30 + (var3 - var4Lifetime1), 241 - var4Lifetime1 * 2);
+            LineupPositionSupport.field_g.draw(30 + (var3 - var4Lifetime1), 241 - var4Lifetime1 * 2);
           }
           IsSixCommand.field_C.drawText(TooltipOverlay.field_c, 70 + var3, 261, 16777215, -1);
           IsSixCommand.field_C.drawParagraph(ClientUiUpdateSupport.field_d, var3, 269, 348, 40, 16777215, -1, 1, 1, 0);
@@ -128,7 +128,7 @@ final class MyPitchScreen extends TeamManagementScreen {
         if (!this.field_I) {
           SoftwareRasterizer.fillRoundedRectangleBlended(var3, 314, 348, 100, 10, 65793, 228);
           for (var4Lifetime2 = 0; var4Lifetime2 < 3; var4Lifetime2++) {
-            LineupPositionSupport.field_g.c(-var4Lifetime2 + (30 + var3), -(2 * var4Lifetime2) + 348);
+            LineupPositionSupport.field_g.draw(-var4Lifetime2 + (30 + var3), -(2 * var4Lifetime2) + 348);
           }
           IsSixCommand.field_C.drawText(TooltipOverlay.field_c, var3 + 70, 368, 16777215, -1);
           IsSixCommand.field_C.drawParagraph(ClientUiUpdateSupport.field_d, var3, 376, 348, 40, 16777215, -1, 1, 1, 0);

@@ -24,7 +24,7 @@ abstract class AppScreen {
           SoftwareRasterizer.clearFramebuffer();
           TriangleRasterizer.useRasterClip();
           TriangleRasterizer.setProjectionCenter(SoftwareRasterizer.field_g >> 1, 202);
-          param0.a(0, param1, 0, 0, 0, 0, 0, 700);
+          param0.drawOrthographic(0, param1, 0, 0, 0, 0, 0, 700);
           if (param3 >= -25) {
             stackIn_2_0 = (Sprite) null;
             return stackIn_2_0;

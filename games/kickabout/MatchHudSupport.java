@@ -45,16 +45,16 @@ final class MatchHudSupport {
         var5 = Kickabout.field_G;
         try {
           param0 = param0 >> 1;
-          LoginDialog.field_cb.c(param0 + TextLayoutLine.field_e, ArchiveNetworkClient.field_i);
-          AccountChoicePanel.field_C.c(param0 + TextLayoutLine.field_e, 18 + ArchiveNetworkClient.field_i);
+          LoginDialog.field_cb.draw(param0 + TextLayoutLine.field_e, ArchiveNetworkClient.field_i);
+          AccountChoicePanel.field_C.draw(param0 + TextLayoutLine.field_e, 18 + ArchiveNetworkClient.field_i);
           var2_int = 2;
           if (CachedArchiveSource.field_s > 1) {
             for (var3 = 1; var3 < CachedArchiveSource.field_s; var3++) {
-              AccountChoicePanel.field_C.c(TextLayoutLine.field_e + param0, 18 + ArchiveNetworkClient.field_i + var2_int);
+              AccountChoicePanel.field_C.draw(TextLayoutLine.field_e + param0, 18 + ArchiveNetworkClient.field_i + var2_int);
               var2_int += 2;
             }
           }
-          MarkerSliderPainter.field_i.c(TextLayoutLine.field_e + param0, ArchiveNetworkClient.field_i + (18 + var2_int));
+          MarkerSliderPainter.field_i.draw(TextLayoutLine.field_e + param0, ArchiveNetworkClient.field_i + (18 + var2_int));
           ByteArrayPool.field_d.drawText(SharedChatLayoutSupport.field_c, 13 + TextLayoutLine.field_e + param0, var2_int / 2 + (20 + ArchiveNetworkClient.field_i), 16777215, -1);
           var3Lifetime1 = 0;
           if (param1 != -12452) {
@@ -66,7 +66,7 @@ final class MatchHudSupport {
             AuctionListing.pushRasterClip(param0 + (TextLayoutLine.field_e + LoginDialog.field_cb.field_q), -22914, TextLayoutLine.field_e + param0, -14 + (ArchiveNetworkClient.field_i - (-LoginDialog.field_cb.field_w - 2 * CachedArchiveSource.field_s)), ArchiveNetworkClient.field_i + 8);
             var4Lifetime1 = RankingRowNode.field_Db;
             while (var4Lifetime1 > 0) {
-              field_a[var4Lifetime1 % 10].c(TextLayoutLine.field_e + 140 + (-(var3Lifetime2 * field_a[0].field_q) + param0), 9 + (ArchiveNetworkClient.field_i - 2 * (-CachedArchiveSource.field_s + 18)));
+              field_a[var4Lifetime1 % 10].draw(TextLayoutLine.field_e + 140 + (-(var3Lifetime2 * field_a[0].field_q) + param0), 9 + (ArchiveNetworkClient.field_i - 2 * (-CachedArchiveSource.field_s + 18)));
               var3Lifetime2++;
               var4Lifetime1 = var4Lifetime1 / 10;
             }
@@ -74,9 +74,9 @@ final class MatchHudSupport {
             var3Lifetime2Lifetime1 = 0;
             while (var4Lifetime1Lifetime1 > 0) {
               if (PortraitCacheOrder.field_d < 0) {
-                ClubStateFactory.field_d[var4Lifetime1Lifetime1 % 10].c(param0 - ClubStateFactory.field_d[0].field_q * var3Lifetime2Lifetime1 + (140 + TextLayoutLine.field_e), -36 - (-(2 * CachedArchiveSource.field_s) - (24 + ArchiveNetworkClient.field_i)));
+                ClubStateFactory.field_d[var4Lifetime1Lifetime1 % 10].draw(param0 - ClubStateFactory.field_d[0].field_q * var3Lifetime2Lifetime1 + (140 + TextLayoutLine.field_e), -36 - (-(2 * CachedArchiveSource.field_s) - (24 + ArchiveNetworkClient.field_i)));
               } else {
-                ValidationIndicator.field_G[var4Lifetime1Lifetime1 % 10].c(param0 + TextLayoutLine.field_e + (140 - ValidationIndicator.field_G[0].field_q * var3Lifetime2Lifetime1), 24 + ArchiveNetworkClient.field_i - (18 - CachedArchiveSource.field_s) * 2);
+                ValidationIndicator.field_G[var4Lifetime1Lifetime1 % 10].draw(param0 + TextLayoutLine.field_e + (140 - ValidationIndicator.field_G[0].field_q * var3Lifetime2Lifetime1), 24 + ArchiveNetworkClient.field_i - (18 - CachedArchiveSource.field_s) * 2);
               }
               var4Lifetime1Lifetime1 = var4Lifetime1Lifetime1 / 10;
               var3Lifetime2Lifetime1++;
@@ -92,10 +92,10 @@ final class MatchHudSupport {
           var4Lifetime2 = GoalStateAgent.field_l;
           var3Lifetime3 = 0;
           if (var4Lifetime2 == 0) {
-            field_a[0].c(param0 + (140 + (TextLayoutLine.field_e - field_a[0].field_q * var3Lifetime3)), ArchiveNetworkClient.field_i + 7 + CachedArchiveSource.field_s * 2);
+            field_a[0].draw(param0 + (140 + (TextLayoutLine.field_e - field_a[0].field_q * var3Lifetime3)), ArchiveNetworkClient.field_i + 7 + CachedArchiveSource.field_s * 2);
           }
           while (var4Lifetime2 > 0) {
-            field_a[var4Lifetime2 % 10].c(TextLayoutLine.field_e + 140 - (var3Lifetime3 * field_a[0].field_q - param0), ArchiveNetworkClient.field_i + 7 + 2 * CachedArchiveSource.field_s);
+            field_a[var4Lifetime2 % 10].draw(TextLayoutLine.field_e + 140 - (var3Lifetime3 * field_a[0].field_q - param0), ArchiveNetworkClient.field_i + 7 + 2 * CachedArchiveSource.field_s);
             var3Lifetime3++;
             var4Lifetime2 = var4Lifetime2 / 10;
           }

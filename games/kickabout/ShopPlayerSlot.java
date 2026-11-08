@@ -95,9 +95,9 @@ final class ShopPlayerSlot extends ListRow {
             ClientPacketFlushSupport.a(31, 28 + (this.field_F + 56 + var3), this.field_T + 39, 8000);
           }
           var3Lifetime1 = this.field_F;
-          var4 = TriangleMesh.a(this.field_Sb, param0 + 0, false);
+          var4 = TriangleMesh.getPlayerPortraitWithClubDefaults(this.field_Sb, param0 + 0, false);
           if (var4 != null) {
-            var4.c(1 + var3Lifetime1, 4 + this.field_T);
+            var4.draw(1 + var3Lifetime1, 4 + this.field_T);
           } else {
             ReceivedAuctionItemRow.a(19 + (1 + var3Lifetime1), -92, 23 + (this.field_T + 4));
           }

@@ -20,7 +20,7 @@ final class MachineTokenStorageSupport {
           if (LoginForm.field_G != null) {
             try {
               LoginForm.field_G.seek((byte) 4, 0L);
-              LoginForm.field_G.a(ByteArrayPool.field_e.field_n, param0 + 12, 24, ByteArrayPool.field_e.field_f);
+              LoginForm.field_G.write(ByteArrayPool.field_e.field_n, param0 + 12, 24, ByteArrayPool.field_e.field_f);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var1 = (Exception) (Object) decompiledCaughtException;

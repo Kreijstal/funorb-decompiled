@@ -454,7 +454,7 @@ final class MyKitScreen extends TeamManagementScreen {
           var5 = TriangleRasterizer.field_o[var3] * var12[0] >> 16;
           var6 = var12[0] * TriangleRasterizer.field_f[var3] >> 16;
           var7 = (ModelMesh) (this.field_cb.applyCurrentFrame(this.field_db.createModelMesh(var12[2], var12[3], var5, var12[1], var6), false, true, true));
-          var7.a(0, var3, 0, 0, 0, 0, 0, 540);
+          var7.drawOrthographic(0, var3, 0, 0, 0, 0, 0, 540);
           var8 = Math.max(120, IsSixCommand.field_C.stringWidth(this.field_T) + 30);
           SoftwareRasterizer.fillRoundedRectangleBlended(this.slideOffsetX + (532 - (var8 >> 1)), 412, var8, 56, 12, 65793, 128);
           IsSixCommand.field_C.drawCentered(this.field_T, 532 + this.slideOffsetX, 430, 16777215, -1);

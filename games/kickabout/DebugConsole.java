@@ -402,7 +402,7 @@ final class DebugConsole extends ConsolePanel {
           else {
             this.field_k.setCaret(-85, 1 + var5);
           }
-          MeshObject.field_c = IsaacRandom.a(this.field_k.getText((byte) -16), 120);
+          MeshObject.field_c = IsaacRandom.highlightConsoleSyntax(this.field_k.getText((byte) -16), 120);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

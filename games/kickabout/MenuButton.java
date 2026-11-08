@@ -421,7 +421,7 @@ final class MenuButton {
           1 == AccountNameCheckState.field_c) {
           var4 = 2;
         }
-        this.field_n[var4].c(param1 - (this.width >> 1), -(this.height >> 1) + param0);
+        this.field_n[var4].draw(param1 - (this.width >> 1), -(this.height >> 1) + param0);
         if (this.kind != 32) {
           if (this.kind == 49 &&
             EmailSyntaxValidator.c((byte) -42)) {

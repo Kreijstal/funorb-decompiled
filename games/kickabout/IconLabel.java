@@ -10,7 +10,7 @@ final class IconLabel extends UiLayoutNode {
     static int field_Bb;
     static String field_zb;
 
-    private final void a(int param0, byte param1) {
+    private final void layoutIconAndLabel(int param0, byte param1) {
         int var3 = 0;
         int var3Lifetime1;
         if (param1 == 14) {
@@ -19,7 +19,7 @@ final class IconLabel extends UiLayoutNode {
           this.field_Db.setBounds(true, this.field_q - var3, var3, 0, this.field_mb);
           return;
         }
-        this.a(-123, (byte) 90);
+        this.layoutIconAndLabel(-123, (byte) 90);
         this.field_Cb.setBounds(true, this.field_Cb.getPreferredWidth((byte) -2), 0, 0, this.field_mb);
         var3Lifetime1 = param0 + this.field_Cb.field_q;
         this.field_Db.setBounds(true, this.field_q - var3Lifetime1, var3Lifetime1, 0, this.field_mb);
@@ -29,7 +29,7 @@ final class IconLabel extends UiLayoutNode {
         this(param0, param1.field_Cb, param1.field_Db, param2);
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_Eb = null;
         if (param0 == 0) {
           field_zb = null;
@@ -43,7 +43,7 @@ final class IconLabel extends UiLayoutNode {
         field_Ab = null;
     }
 
-    final int b(int param0, int param1) {
+    final int measureWidthWithGap(int param0, int param1) {
         if (param0 == 0) {
           return this.field_Cb.getPreferredWidth((byte) -24) - (-param1 - this.field_Db.getPreferredWidth((byte) 113));
         }
@@ -62,7 +62,7 @@ final class IconLabel extends UiLayoutNode {
         }
     }
 
-    final static void a(int param0) {
+    final static void readSubmissionAcknowledgement(int param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -126,17 +126,17 @@ final class IconLabel extends UiLayoutNode {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final void setBoundsAndLayout(int param0, int param1, int param2, int param3, int param4, int param5) {
         this.setBounds(true, param3, param4, param1, param2);
         if (param5 == -10481) {
-          this.a(param0, (byte) 14);
+          this.layoutIconAndLabel(param0, (byte) 14);
           return;
         }
-        IconLabel.a(89);
-        this.a(param0, (byte) 14);
+        IconLabel.readSubmissionAcknowledgement(89);
+        this.layoutIconAndLabel(param0, (byte) 14);
     }
 
-    final static void a(java.math.BigInteger param0, PacketBuffer param1, byte param2, PacketBuffer param3, java.math.BigInteger param4) {
+    final static void writeEncryptedLoginBuffer(java.math.BigInteger param0, PacketBuffer param1, byte param2, PacketBuffer param3, java.math.BigInteger param4) {
         try {
           if (param2 > -59) {
             field_Ab = (String) null;

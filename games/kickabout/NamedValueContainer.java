@@ -126,7 +126,7 @@ final class NamedValueContainer {
         AuctionListing.pushRasterClip(SoftwareRasterizer.field_g + 640 >> 1, -22914, -640 + SoftwareRasterizer.field_g >> 1, SoftwareRasterizer.field_f, 0);
         if (0 < NotificationPanelPositionSupport.field_a) {
           if (IntrusiveDeque.field_e != null) {
-            IntrusiveDeque.field_e.d(UiKeyRoutingSupport.field_c.field_s, 0);
+            IntrusiveDeque.field_e.drawOpaque(UiKeyRoutingSupport.field_c.field_s, 0);
             stackIn_5_0 = UiKeyRoutingSupport.field_c;
             stackIn_5_1 = 65;
             stackIn_6_2 = (param1) && (!TextWidgetPainter.field_f);
@@ -139,7 +139,7 @@ final class NamedValueContainer {
               if (!(0 >= ConsoleLexer.field_a) ||
                 !(GameMediaSupport.field_b <= 0)) {
                 if (null != IntrusiveDeque.field_e) {
-                  IntrusiveDeque.field_e.d(TrinketIcon.field_Cb.field_s, 0);
+                  IntrusiveDeque.field_e.drawOpaque(TrinketIcon.field_Cb.field_s, 0);
                 }
                 stackIn_19_0 = TrinketIcon.field_Cb;
                 stackIn_19_1 = 102;
@@ -157,7 +157,7 @@ final class NamedValueContainer {
             NamedValueContainer.a((String) null, 87L, (byte) -24, false, (String) null);
             if (0 < ConsoleLexer.field_a) {
               if (null != IntrusiveDeque.field_e) {
-                IntrusiveDeque.field_e.d(TrinketIcon.field_Cb.field_s, 0);
+                IntrusiveDeque.field_e.drawOpaque(TrinketIcon.field_Cb.field_s, 0);
               }
               stackIn_32_0 = TrinketIcon.field_Cb;
               stackIn_32_1 = 102;
@@ -179,7 +179,7 @@ final class NamedValueContainer {
                   stackIn_49_2 = (param1) && (!TrinketCatalog.field_b);
                   ((UiLayoutNode) (Object) stackIn_48_0).draw(stackIn_48_1, stackIn_49_2);
                 } else {
-                  IntrusiveDeque.field_e.d(TrinketIcon.field_Cb.field_s, 0);
+                  IntrusiveDeque.field_e.drawOpaque(TrinketIcon.field_Cb.field_s, 0);
                   stackIn_53_0 = TrinketIcon.field_Cb;
                   stackIn_53_1 = 102;
                   stackIn_54_2 = (param1) && (!TrinketCatalog.field_b);
@@ -215,7 +215,7 @@ final class NamedValueContainer {
               stackIn_145_2 = (param1) && (!TrinketCatalog.field_b);
               ((UiLayoutNode) (Object) stackIn_144_0).draw(stackIn_144_1, stackIn_145_2);
             } else {
-              IntrusiveDeque.field_e.d(TrinketIcon.field_Cb.field_s, 0);
+              IntrusiveDeque.field_e.drawOpaque(TrinketIcon.field_Cb.field_s, 0);
               stackIn_149_0 = TrinketIcon.field_Cb;
               stackIn_149_1 = 102;
               stackIn_150_2 = (param1) && (!TrinketCatalog.field_b);
@@ -237,7 +237,7 @@ final class NamedValueContainer {
                 stackIn_125_2 = (param1) && (!TrinketCatalog.field_b);
                 ((UiLayoutNode) (Object) stackIn_124_0).draw(stackIn_124_1, stackIn_125_2);
               } else {
-                IntrusiveDeque.field_e.d(TrinketIcon.field_Cb.field_s, 0);
+                IntrusiveDeque.field_e.drawOpaque(TrinketIcon.field_Cb.field_s, 0);
                 stackIn_129_0 = TrinketIcon.field_Cb;
                 stackIn_129_1 = 102;
                 stackIn_130_2 = (param1) && (!TrinketCatalog.field_b);
@@ -263,7 +263,7 @@ final class NamedValueContainer {
               stackIn_102_2 = (param1) && (!TrinketCatalog.field_b);
               ((UiLayoutNode) (Object) stackIn_101_0).draw(stackIn_101_1, stackIn_102_2);
             } else {
-              IntrusiveDeque.field_e.d(TrinketIcon.field_Cb.field_s, 0);
+              IntrusiveDeque.field_e.drawOpaque(TrinketIcon.field_Cb.field_s, 0);
               stackIn_106_0 = TrinketIcon.field_Cb;
               stackIn_106_1 = 102;
               stackIn_107_2 = (param1) && (!TrinketCatalog.field_b);
@@ -285,7 +285,7 @@ final class NamedValueContainer {
                 stackIn_91_2 = (param1) && (!TrinketCatalog.field_b);
                 ((UiLayoutNode) (Object) stackIn_90_0).draw(stackIn_90_1, stackIn_91_2);
               } else {
-                IntrusiveDeque.field_e.d(TrinketIcon.field_Cb.field_s, 0);
+                IntrusiveDeque.field_e.drawOpaque(TrinketIcon.field_Cb.field_s, 0);
                 stackIn_77_0 = TrinketIcon.field_Cb;
                 stackIn_77_1 = 102;
                 stackIn_78_2 = (param1) && (!TrinketCatalog.field_b);

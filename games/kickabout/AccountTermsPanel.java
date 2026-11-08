@@ -65,11 +65,11 @@ final class AccountTermsPanel extends WidgetContainer implements TextHotspotList
           var4 = new TextWidgetPainter(ModelMaterial.field_a, 0, 0, 0, 0, 16777215, -1, 3, 0, ModelMaterial.field_a.field_G, -1, 2147483647, true);
           this.field_D = new TextHotspotWidget(var7, var4);
           this.field_D.field_u = "";
-          this.field_D.a(PendingRequestAcknowledgement.field_e, 0, 12082);
-          this.field_D.a(PendingRequestAcknowledgement.field_e, 1, 12082);
+          this.field_D.setHotspotHelpText(PendingRequestAcknowledgement.field_e, 0, 12082);
+          this.field_D.setHotspotHelpText(PendingRequestAcknowledgement.field_e, 1, 12082);
           this.field_D.field_n = this.field_n - 40;
           this.field_D.field_k = (UiListener) (this);
-          this.field_D.c(-1, -40 + this.field_n, 26, var3);
+          this.field_D.setBoundsWithTextHeight(-1, -40 + this.field_n, 26, var3);
           var3 = var3 + (15 + this.field_D.field_i);
           this.addChild(-103, this.field_D);
           var5 = 4;

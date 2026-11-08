@@ -172,29 +172,29 @@ final class ColorQuantizationBox {
             }
             if (null != param4[0]) {
               SoftwareRasterizer.intersectClip(param2, param0, var17, var19);
-              param4[0].c(param2, param0);
+              param4[0].draw(param2, param0);
               SoftwareRasterizer.restoreClip(DirectByteStorage.field_j);
             }
             if (param4[2] != null) {
               SoftwareRasterizer.intersectClip(var18, param0, var11, var19);
-              param4[2].c(var14, param0);
+              param4[2].draw(var14, param0);
               SoftwareRasterizer.restoreClip(DirectByteStorage.field_j);
             }
             if (param4[6] != null) {
               SoftwareRasterizer.intersectClip(param2, var20, var17, var12);
-              param4[6].c(param2, var16);
+              param4[6].draw(param2, var16);
               SoftwareRasterizer.restoreClip(DirectByteStorage.field_j);
             }
             if (param4[8] != null) {
               SoftwareRasterizer.intersectClip(var18, var20, var11, var12);
-              param4[8].c(var14, var16);
+              param4[8].draw(var14, var16);
               SoftwareRasterizer.restoreClip(DirectByteStorage.field_j);
             }
             if (null != param4[1] &&
               param4[1].field_o != 0) {
               SoftwareRasterizer.intersectClip(var17, param0, var18, var19);
               for (var21 = var13; var14 > var21; var21 = var21 + param4[1].field_o) {
-                param4[1].c(var21, param0);
+                param4[1].draw(var21, param0);
               }
               SoftwareRasterizer.restoreClip(DirectByteStorage.field_j);
             }
@@ -202,7 +202,7 @@ final class ColorQuantizationBox {
               param4[7].field_o != 0) {
               SoftwareRasterizer.intersectClip(var17, var20, var18, var12);
               for (var21Lifetime1 = var13; var14 > var21Lifetime1; var21Lifetime1 = var21Lifetime1 + param4[7].field_o) {
-                param4[7].c(var21Lifetime1, var16);
+                param4[7].draw(var21Lifetime1, var16);
               }
               SoftwareRasterizer.restoreClip(DirectByteStorage.field_j);
             }
@@ -210,7 +210,7 @@ final class ColorQuantizationBox {
               0 != param4[3].field_v) {
               SoftwareRasterizer.intersectClip(param2, var19, var17, var20);
               for (var21Lifetime2 = var15; var16 > var21Lifetime2; var21Lifetime2 = var21Lifetime2 + param4[3].field_v) {
-                param4[3].c(param2, var21Lifetime2);
+                param4[3].draw(param2, var21Lifetime2);
               }
               SoftwareRasterizer.restoreClip(DirectByteStorage.field_j);
             }
@@ -218,7 +218,7 @@ final class ColorQuantizationBox {
               param4[5].field_v != 0) {
               SoftwareRasterizer.intersectClip(var18, var19, var11, var20);
               for (var21Lifetime3 = var15; var21Lifetime3 < var16; var21Lifetime3 = var21Lifetime3 + param4[5].field_v) {
-                param4[5].c(var14, var21Lifetime3);
+                param4[5].draw(var14, var21Lifetime3);
               }
               SoftwareRasterizer.restoreClip(DirectByteStorage.field_j);
             }
@@ -230,7 +230,7 @@ final class ColorQuantizationBox {
               SoftwareRasterizer.intersectClip(var17, var19, var18, var20);
               for (var21Lifetime4 = var15; var21Lifetime4 < var16; var21Lifetime4 = var21Lifetime4 + param4[4].field_v) {
                 for (var22 = var13; var14 > var22; var22 = var22 + param4[4].field_o) {
-                  param4[4].c(var22, var21Lifetime4);
+                  param4[4].draw(var22, var21Lifetime4);
                 }
               }
               SoftwareRasterizer.restoreClip(DirectByteStorage.field_j);

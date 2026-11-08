@@ -157,7 +157,7 @@ final class PasswordValidator extends TextFieldValidator {
           SocialUiState.field_e.drawScaled(0, 0, SocialUiState.field_e.field_o * var7 / 140, SocialUiState.field_e.field_v);
           TeamManagementScreen.e(124);
           AuctionListing.pushRasterClip(SoftwareRasterizer.field_g, -22914, var7, SoftwareRasterizer.field_f, 0);
-          SocialUiState.field_e.d(-140 + var7, 0);
+          SocialUiState.field_e.drawOpaque(-140 + var7, 0);
           TeamManagementScreen.e(param0 - 706856552);
           if (MouseWheelInput.field_f) {
             for (var8 = 0; SoftwareRasterizer.field_a.length > var8; var8++) {
@@ -237,7 +237,7 @@ final class PasswordValidator extends TextFieldValidator {
         var5 = (var5 + (param0 * 100 >> 16)) % 100;
         Sprite var6 = PlayAreaMovementSupport.field_c[var5];
         if (!param3) {
-          var6.c(-(var6.field_o >> 1) + param1, -(var6.field_v >> 1) + param2);
+          var6.draw(-(var6.field_o >> 1) + param1, -(var6.field_v >> 1) + param2);
         } else {
           var6.drawHalfSize(param1 - (var6.field_o >> 1), param2 - (var6.field_v >> 1));
         }

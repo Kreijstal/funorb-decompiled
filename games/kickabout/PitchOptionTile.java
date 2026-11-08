@@ -200,7 +200,7 @@ final class PitchOptionTile extends UiLayoutNode implements PopupCard {
                   IsSixCommand.field_C.drawCentered(this.field_Eb, -2 + ((this.field_q >> 1) + this.field_F), this.field_T + 40, 16777215, -1);
                 }
                 if (var4 != 0) {
-                  LoginResponseUiSupport.field_h.c(this.field_F + (-LoginResponseUiSupport.field_h.field_o + this.field_q >> 1), this.field_T + (-LoginResponseUiSupport.field_h.field_v + this.field_mb >> 1) + 10);
+                  LoginResponseUiSupport.field_h.draw(this.field_F + (-LoginResponseUiSupport.field_h.field_o + this.field_q >> 1), this.field_T + (-LoginResponseUiSupport.field_h.field_v + this.field_mb >> 1) + 10);
                 }
                 return;
               }
@@ -223,7 +223,7 @@ final class PitchOptionTile extends UiLayoutNode implements PopupCard {
                 IsSixCommand.field_C.drawCentered(this.field_Eb, -2 + ((this.field_q >> 1) + this.field_F), this.field_T + 40, 16777215, -1);
               }
               if (var4 != 0) {
-                LoginResponseUiSupport.field_h.c(this.field_F + (-LoginResponseUiSupport.field_h.field_o + this.field_q >> 1), this.field_T + (-LoginResponseUiSupport.field_h.field_v + this.field_mb >> 1) + 10);
+                LoginResponseUiSupport.field_h.draw(this.field_F + (-LoginResponseUiSupport.field_h.field_o + this.field_q >> 1), this.field_T + (-LoginResponseUiSupport.field_h.field_v + this.field_mb >> 1) + 10);
               }
               return;
             }
@@ -250,7 +250,7 @@ final class PitchOptionTile extends UiLayoutNode implements PopupCard {
           IsSixCommand.field_C.drawCentered(this.field_Eb, -2 + ((this.field_q >> 1) + this.field_F), this.field_T + 40, 16777215, -1);
         }
         if (var4 != 0) {
-          LoginResponseUiSupport.field_h.c(this.field_F + (-LoginResponseUiSupport.field_h.field_o + this.field_q >> 1), this.field_T + (-LoginResponseUiSupport.field_h.field_v + this.field_mb >> 1) + 10);
+          LoginResponseUiSupport.field_h.draw(this.field_F + (-LoginResponseUiSupport.field_h.field_o + this.field_q >> 1), this.field_T + (-LoginResponseUiSupport.field_h.field_v + this.field_mb >> 1) + 10);
         }
     }
 

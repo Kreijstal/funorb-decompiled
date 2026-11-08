@@ -13,13 +13,13 @@ final class DirectByteStorage extends ByteStorage {
     static Sprite field_m;
     static Sprite field_n;
 
-    final static void c(byte param0) {
+    final static void tickSharedInterface(byte param0) {
         NetworkGameClient.updateChatPanelTransition((byte) -118);
         int var1 = 115 % ((param0 + 48) / 42);
         AccountRegistrationPanel.tickSharedUiTimers(-19417);
     }
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_m = null;
         field_l = null;
         field_h = null;
@@ -31,7 +31,7 @@ final class DirectByteStorage extends ByteStorage {
           field_g = null;
           return;
         }
-        DirectByteStorage.b((byte) 81);
+        DirectByteStorage.releaseStatics((byte) 81);
         field_g = null;
     }
 
@@ -41,14 +41,14 @@ final class DirectByteStorage extends ByteStorage {
           this.field_f.position(0);
           this.field_f.put(param0);
           if (param1 != 21820) {
-            DirectByteStorage.b((byte) -82);
+            DirectByteStorage.releaseStatics((byte) -82);
           }
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "ll.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final byte[] a(int param0) {
+    final byte[] getBytes(int param0) {
         byte[] var4 = null;
         byte[] var2 = null;
         byte[] var4Lifetime1;
@@ -61,7 +61,7 @@ final class DirectByteStorage extends ByteStorage {
           return var4;
         }
         ColorQuantizationBox var3 = (ColorQuantizationBox) null;
-        DirectByteStorage.a((int[][][]) null, -84, 70, (ColorQuantizationBox) null, 83);
+        DirectByteStorage.colorBoxSliceMoment((int[][][]) null, -84, 70, (ColorQuantizationBox) null, 83);
         var4Lifetime1 = new byte[this.field_f.capacity()];
         var2Lifetime1 = var4Lifetime1;
         this.field_f.position(0);
@@ -72,7 +72,7 @@ final class DirectByteStorage extends ByteStorage {
     DirectByteStorage() {
     }
 
-    final static int a(int[][][] param0, int param1, int param2, ColorQuantizationBox param3, int param4) {
+    final static int colorBoxSliceMoment(int[][][] param0, int param1, int param2, ColorQuantizationBox param3, int param4) {
         RuntimeException var5 = null;
         int stackIn_3_0 = 0;
         int stackIn_8_0 = 0;

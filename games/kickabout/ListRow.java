@@ -138,7 +138,7 @@ abstract class ListRow extends UiLayoutNode {
             param3.drawScaled(param1, param2, InstrumentNoteMask.field_i * param3.field_o >> 8, InstrumentNoteMask.field_i * param3.field_v >> 8);
             return;
           }
-          param3.c(param1, param2);
+          param3.draw(param1, param2);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

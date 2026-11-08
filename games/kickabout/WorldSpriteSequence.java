@@ -43,16 +43,16 @@ final class WorldSpriteSequence {
         var11 = var8.field_v;
         var12 = -15 - SingleChildContainer.floorMod(105, this.field_a - 27, var10);
         var13 = -SingleChildContainer.floorMod(-49, -64 + this.field_b, var11);
-        var8.d(var12, var13);
-        var8.d(var12 + var10, var13);
-        var8.d(var12, var11 + var13);
-        var8.d(var12 + var10, var11 + var13);
+        var8.drawOpaque(var12, var13);
+        var8.drawOpaque(var12 + var10, var13);
+        var8.drawOpaque(var12, var11 + var13);
+        var8.drawOpaque(var12 + var10, var11 + var13);
         TeamManagementScreen.e(120);
         for (var14 = 0; var14 < 4; var14++) {
           this.field_c[var14] = new Sprite(54, 85);
           var15 = this.field_c[var14];
           PacketBuffer.a(-114, var15);
-          var9.d(0, 0);
+          var9.drawOpaque(0, 0);
           incrementValue$3 = var7;
           var7++;
           var6.a(incrementValue$3 % 4, -2);
@@ -76,7 +76,7 @@ final class WorldSpriteSequence {
         int var4 = PitchProjectionSupport.worldToScreenY(this.field_b - 64, (byte) -56);
         Sprite var5 = this.field_c[param0];
         if (InstrumentNoteMask.field_i == 256) {
-          var5.c(var3, var4);
+          var5.draw(var3, var4);
         } else {
           var6 = InstrumentNoteMask.field_i * var5.field_o >> 8;
           var7 = var5.field_v * InstrumentNoteMask.field_i >> 8;

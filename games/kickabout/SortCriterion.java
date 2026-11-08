@@ -105,13 +105,13 @@ abstract class SortCriterion {
             if (!param2 ||
               var15 < 2) {
               var16_int = 0;
-              var8[0][var15].c(var16_int, 0);
+              var8[0][var15].draw(var16_int, 0);
               var16_int = var16_int + var8[0][var15].field_o;
               for (var17 = 0; var17 < param5; var17++) {
-                var8[1][var15].c(var16_int, 0);
+                var8[1][var15].draw(var16_int, 0);
                 var16_int = var16_int + var8[1][var15].field_o;
               }
-              var8[2][var15].c(var16_int, 0);
+              var8[2][var15].draw(var16_int, 0);
             }
           }
           TeamManagementScreen.e(123);
@@ -162,13 +162,13 @@ abstract class SortCriterion {
             if (!param2 ||
               2 > var17Lifetime2) {
               var18Lifetime1 = 0;
-              var8[0][var17Lifetime2].c(var18Lifetime1, 0);
+              var8[0][var17Lifetime2].draw(var18Lifetime1, 0);
               var18Lifetime1 = var18Lifetime1 + var8[0][var17Lifetime2].field_o;
               for (var19Lifetime1Lifetime1 = 0; param5 > var19Lifetime1Lifetime1; var19Lifetime1Lifetime1++) {
-                var8[1][var17Lifetime2].c(var18Lifetime1, 0);
+                var8[1][var17Lifetime2].draw(var18Lifetime1, 0);
                 var18Lifetime1 = var18Lifetime1 + var8[1][var17Lifetime2].field_o;
               }
-              var8[2][var17Lifetime2].c(var18Lifetime1, 0);
+              var8[2][var17Lifetime2].draw(var18Lifetime1, 0);
             }
           }
           TeamManagementScreen.e(119);

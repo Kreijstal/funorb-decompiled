@@ -46,7 +46,7 @@ final class SquadSlotWidget extends UiLayoutNode {
           if (this.field_Fb == null) {
             return;
           }
-          this.field_Fb.c(18 + this.field_F, 41 + this.field_T);
+          this.field_Fb.draw(18 + this.field_F, 41 + this.field_T);
           return;
         }
         if (null == this.field_Db) {
@@ -58,7 +58,7 @@ final class SquadSlotWidget extends UiLayoutNode {
             if (this.field_Fb == null) {
               return;
             }
-            this.field_Fb.c(18 + this.field_F, 41 + this.field_T);
+            this.field_Fb.draw(18 + this.field_F, 41 + this.field_T);
             return;
           }
           SoftwareRasterizer.fillRoundedRectangleBlended(this.field_F + 1, -22 + this.field_mb + this.field_T, this.field_q - 2, 19, 7, 65793, 170);
@@ -68,12 +68,12 @@ final class SquadSlotWidget extends UiLayoutNode {
             if (this.field_Fb == null) {
               return;
             }
-            this.field_Fb.c(18 + this.field_F, 41 + this.field_T);
+            this.field_Fb.draw(18 + this.field_F, 41 + this.field_T);
             return;
           }
           this.h((byte) -68);
           if (this.field_Fb != null) {
-            this.field_Fb.c(18 + this.field_F, 41 + this.field_T);
+            this.field_Fb.draw(18 + this.field_F, 41 + this.field_T);
           }
           return;
         }
@@ -106,7 +106,7 @@ final class SquadSlotWidget extends UiLayoutNode {
               this.h((byte) -68);
             }
             if (this.field_Fb != null) {
-              this.field_Fb.c(18 + this.field_F, 41 + this.field_T);
+              this.field_Fb.draw(18 + this.field_F, 41 + this.field_T);
             }
             return;
           }
@@ -123,7 +123,7 @@ final class SquadSlotWidget extends UiLayoutNode {
         if (this.field_Fb == null) {
           return;
         }
-        this.field_Fb.c(18 + this.field_F, 41 + this.field_T);
+        this.field_Fb.draw(18 + this.field_F, 41 + this.field_T);
         return;
     }
 

@@ -99,12 +99,12 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
             var15 = new Sprite(param3, var14.field_v);
             var5 = var15;
             PacketBuffer.a(-116, var15);
-            var9_ref_ut.d(var15.field_o - var9_ref_ut.field_o, 0);
+            var9_ref_ut.drawOpaque(var15.field_o - var9_ref_ut.field_o, 0);
             for (var10 = var14.field_o; var10 < var15.field_o - var9_ref_ut.field_o; var10 = var10 + var16.field_o) {
-              var16.d(var10, 0);
+              var16.drawOpaque(var10, 0);
             }
             var6 = 1;
-            var14.d(0, 0);
+            var14.drawOpaque(0, 0);
           } else {
             var13 = AnimationClip.tintGrayscaleSprite(param4, -85, TextHotspotWidget.field_L);
             var5 = var13;
@@ -271,10 +271,10 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
         TextWidgetPainter var5 = new TextWidgetPainter(ModelMaterial.field_a, 0, 0, 0, 0, 16777215, -1, 0, 0, ModelMaterial.field_a.field_G, -1, 2147483647, true);
         this.field_R = new TextHotspotWidget(var2, var5);
         this.field_R.field_u = "";
-        this.field_R.a(PendingRequestAcknowledgement.field_e, 0, 12082);
-        this.field_R.a(PendingRequestAcknowledgement.field_e, 1, 12082);
+        this.field_R.setHotspotHelpText(PendingRequestAcknowledgement.field_e, 0, 12082);
+        this.field_R.setHotspotHelpText(PendingRequestAcknowledgement.field_e, 1, 12082);
         this.field_R.field_k = (UiListener) (this);
-        this.field_R.c(-1, this.field_n - 90, 46, var3);
+        this.field_R.setBoundsWithTextHeight(-1, this.field_n - 90, 46, var3);
         var3 = var3 + (15 + this.field_R.field_i);
         this.addChild(-45, this.field_R);
         int var6 = 4;

@@ -201,12 +201,12 @@ class BallAgent extends MatchAgent {
             return;
           }
           if (ContentTransitionDialog.a(param0, (byte) -39)) {
-            this.positionX = this.positionX + BufferedCacheFile.a((byte) 125, 17, param0, 0, 22, 30);
-            this.positionY = this.positionY + BufferedCacheFile.a((byte) 125, 17, param0, 0, 22, 30);
-            this.height = this.height + BufferedCacheFile.a((byte) 125, 20, param0, 0, 24, 30);
-            this.velocityX = this.velocityX + BufferedCacheFile.a((byte) 125, 11, param0, 0, 16, 30);
-            this.velocityY = this.velocityY + BufferedCacheFile.a((byte) 125, 11, param0, 0, 16, 30);
-            this.verticalVelocity = this.verticalVelocity + BufferedCacheFile.a((byte) 125, 18, param0, 0, 24, 30);
+            this.positionX = this.positionX + BufferedCacheFile.readSignedFourRangeBits((byte) 125, 17, param0, 0, 22, 30);
+            this.positionY = this.positionY + BufferedCacheFile.readSignedFourRangeBits((byte) 125, 17, param0, 0, 22, 30);
+            this.height = this.height + BufferedCacheFile.readSignedFourRangeBits((byte) 125, 20, param0, 0, 24, 30);
+            this.velocityX = this.velocityX + BufferedCacheFile.readSignedFourRangeBits((byte) 125, 11, param0, 0, 16, 30);
+            this.velocityY = this.velocityY + BufferedCacheFile.readSignedFourRangeBits((byte) 125, 11, param0, 0, 16, 30);
+            this.verticalVelocity = this.verticalVelocity + BufferedCacheFile.readSignedFourRangeBits((byte) 125, 18, param0, 0, 24, 30);
           }
           if (!ContentTransitionDialog.a(param0, (byte) -39)) {
             return;

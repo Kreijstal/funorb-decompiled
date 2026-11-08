@@ -158,7 +158,7 @@ final class WorldDrawEntry extends IntrusiveNode {
             MidiPcmStream.drawGoalScenery(this.field_n, (byte) -114);
           } else {
             if (1 == this.field_j) {
-              this.field_m.d(false);
+              this.field_m.drawFootballer(false);
             } else {
               if (this.field_j == 2) {
                 this.field_h.render(param0 ^ 128);

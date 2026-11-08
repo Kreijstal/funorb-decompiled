@@ -328,7 +328,7 @@ final class ClientUiOverlay implements OverlayLayer {
             PlayerInputFactory.field_f = false;
           }
         } else {
-          DirectByteStorage.c((byte) 51);
+          DirectByteStorage.tickSharedInterface((byte) 51);
           this.field_a = 0;
         }
     }

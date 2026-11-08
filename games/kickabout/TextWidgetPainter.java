@@ -111,7 +111,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
               if (!(param1.field_h instanceof CachedTextLayout)) {
                 return;
               }
-              ((CachedTextLayout) (param1.field_h)).a(1, var3_int >> 1, this.field_a, this.displayText((byte) -71, param1), var5);
+              ((CachedTextLayout) (param1.field_h)).layoutCenteredLine(1, var3_int >> 1, this.field_a, this.displayText((byte) -71, param1), var5);
               return;
             }
             if (var6Lifetime1 != 2) {
@@ -120,11 +120,11 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
             if (!(param1.field_h instanceof CachedTextLayout)) {
               return;
             }
-            ((CachedTextLayout) (param1.field_h)).a((byte) 123, this.displayText((byte) -112, param1), var5, var3_int, this.field_a);
+            ((CachedTextLayout) (param1.field_h)).layoutRightAlignedLine((byte) 123, this.displayText((byte) -112, param1), var5, var3_int, this.field_a);
             return;
           }
           if (param1.field_h instanceof CachedTextLayout) {
-            ((CachedTextLayout) (param1.field_h)).a(0, this.displayText((byte) -85, param1), (byte) 80, this.field_a, var5);
+            ((CachedTextLayout) (param1.field_h)).layoutLeftAlignedLine(0, this.displayText((byte) -85, param1), (byte) 80, this.field_a, var5);
             return;
           }
           return;
@@ -818,7 +818,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
             return stackIn_5_0;
           }
           if (this.field_k) {
-            ((CachedTextLayout) (param1.field_h)).a(this.contentWidth((byte) -124, param1), this.field_a, this.field_m, this.contentHeight((byte) -120, param1), this.field_e, (byte) 102, this.displayText((byte) -97, param1), this.field_p);
+            ((CachedTextLayout) (param1.field_h)).layoutWrappedText(this.contentWidth((byte) -124, param1), this.field_a, this.field_m, this.contentHeight((byte) -120, param1), this.field_e, (byte) 102, this.displayText((byte) -97, param1), this.field_p);
           } else {
             this.layoutSingleLine((byte) -66, param1);
           }

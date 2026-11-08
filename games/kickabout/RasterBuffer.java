@@ -45,8 +45,8 @@ abstract class RasterBuffer {
               var16 = param1[LoggedPossession.a((byte) -24, 3)];
               var8 = 448 + var15[var6] - (var16.field_o >> 1);
               var9 = var17[var6] - (var16.field_v >> 1) + 10;
-              var16.c(var8 + param2, var9 + param3);
-              var16.c(var8 + param2, param3 + 1344 - var9 - var16.field_v);
+              var16.draw(var8 + param2, var9 + param3);
+              var16.draw(var8 + param2, param3 + 1344 - var9 - var16.field_v);
             }
             var20 = new int[]{30, -20, 0};
             var18 = new int[]{-50, -10, 40};
@@ -54,7 +54,7 @@ abstract class RasterBuffer {
               var19 = param1[LoggedPossession.a((byte) -24, 3)];
               var8 = var18[var6] + (896 - var19.field_o >> 1);
               var9 = var20[var6] + (1344 - var19.field_v >> 1);
-              var19.c(param2 + var8, var9 + param3);
+              var19.draw(param2 + var8, var9 + param3);
             }
           } else if (RankingsScreen.field_C != 1 &&
             RankingsScreen.field_C != 2) {
@@ -63,11 +63,11 @@ abstract class RasterBuffer {
               var4 = var11;
               var5 = BytePlusOneCommand.a(29430, 10, 896 - var11.field_o >> 1);
               var6 = BytePlusOneCommand.a(29430, 10, 50 - (var11.field_v >> 1));
-              var11.c(var5 + param2, var6 + param3);
-              var4.c(param2 + var5, -var11.field_v - var6 + (1344 + param3));
+              var11.draw(var5 + param2, var6 + param3);
+              var4.draw(param2 + var5, -var11.field_v - var6 + (1344 + param3));
               var5Lifetime1 = BytePlusOneCommand.a(29430, 10, -var11.field_o + 896 >> 1);
               var6 = BytePlusOneCommand.a(29430, 10, 1344 - var11.field_v >> 1);
-              param1[LoggedPossession.a((byte) -24, 3)].c(var5Lifetime1 + param2, param3 + var6);
+              param1[LoggedPossession.a((byte) -24, 3)].draw(var5Lifetime1 + param2, param3 + var6);
             }
           } else {
             var12 = new int[]{-40, 40, 0};
@@ -77,13 +77,13 @@ abstract class RasterBuffer {
               var7_ref_ut = var13;
               var8 = BytePlusOneCommand.a(29430, 10, var12[var6] + (896 - var13.field_o >> 1));
               var9 = BytePlusOneCommand.a(29430, 10, 60 - ((var13.field_v >> 1) - var14[var6]));
-              var13.c(var8 + param2, var9 + param3);
-              var7_ref_ut.c(var8 + param2, -var13.field_v - var9 + (1344 + param3));
+              var13.draw(var8 + param2, var9 + param3);
+              var7_ref_ut.draw(var8 + param2, -var13.field_v - var9 + (1344 + param3));
             }
             var6_ref_ut = param1[LoggedPossession.a((byte) -24, 3)];
             var7 = BytePlusOneCommand.a(29430, 10, -var6_ref_ut.field_o + 896 >> 1);
             var8 = BytePlusOneCommand.a(29430, 10, 1344 - var6_ref_ut.field_v >> 1);
-            var6_ref_ut.c(var7 + param2, var8 + param3);
+            var6_ref_ut.draw(var7 + param2, var8 + param3);
           }
           if (param0 < 71) {
             field_c = 46;

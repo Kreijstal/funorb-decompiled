@@ -235,7 +235,7 @@ final class FullscreenErrorDialog extends ResizableModalPanel implements ButtonL
             for (var4 = 9; var4 >= 0; var4--) {
               if (null != var3[var4] &&
                 var3[var4] != "") {
-                RenderedFootballer.a(var3[var4], false, (byte) -116);
+                RenderedFootballer.enqueueFadingChatMessage(var3[var4], false, (byte) -116);
               }
             }
             AccountRegistrationPanel.field_D = var8;

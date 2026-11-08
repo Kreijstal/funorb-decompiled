@@ -227,10 +227,10 @@ public final class Kickabout extends GameLoopApplet {
           }
         }
         if (256 == var4) {
-          var7.c(var3, 10);
+          var7.draw(var3, 10);
         }
         if (0 != var4) {
-          var7.b(var3, 10, var4);
+          var7.drawAlpha(var3, 10, var4);
         }
     }
 
@@ -699,7 +699,7 @@ public final class Kickabout extends GameLoopApplet {
             MouseWheelInput.a(-1822);
           }
         }
-        RenderedFootballer.i(0);
+        RenderedFootballer.restoreSharedDefaultButtons(0);
         if (param0 < 50) {
           field_I = (String) null;
         }
@@ -1412,8 +1412,8 @@ public final class Kickabout extends GameLoopApplet {
           GameModesHelpScreen.field_G.drawScreen(-5, false);
         }
         if (FormationAgent.field_f > 0) {
-          SocialRowOrderSupport.field_h.c(var4Lifetime2, 0);
-          AccountChoicePanel.field_B.c(var4Lifetime2, 0);
+          SocialRowOrderSupport.field_h.draw(var4Lifetime2, 0);
+          AccountChoicePanel.field_B.draw(var4Lifetime2, 0);
         }
         TeamManagementScreen.e(118);
         if (AuctionLogEntry.field_h instanceof ButtonMenuScreen) {
@@ -1598,7 +1598,7 @@ public final class Kickabout extends GameLoopApplet {
         FootballerAgent.e((byte) -108);
         TextLineLayoutSupport.releaseStatics(116);
         PitchAppearanceSupport.releaseStatics(param0 ^ 6);
-        IconLabel.b(0);
+        IconLabel.releaseStatics(0);
         VerticalScrollbar.releaseStatics(param0 ^ 116);
         SharedWidgetFactory.releaseStatics(false);
         ContextMenu.releaseStatics((byte) 38);
@@ -1797,7 +1797,7 @@ public final class Kickabout extends GameLoopApplet {
         TextInputWidget.releaseStatics(param0 - 6);
         ContentTransitionDialog.releaseStatics(12);
         NameSuggestionsPanel.releaseStatics(param0 - 6);
-        TextHotspotWidget.i(param0 + 9568);
+        TextHotspotWidget.releaseStatics(param0 + 9568);
         ValidationIndicator.releaseStatics((byte) 38);
         ValidationHelpWidget.releaseStatics((byte) -120);
         Checkbox.releaseStatics((byte) 108);
@@ -1828,7 +1828,7 @@ public final class Kickabout extends GameLoopApplet {
         CachedTextLayout.releaseStatics((byte) -103);
         DraggableWidget.releaseStatics((byte) -112);
         DropTargetWidget.releaseStatics(31235);
-        DirectByteStorage.b((byte) -56);
+        DirectByteStorage.releaseStatics((byte) -56);
         GrowableIntList.releaseStatics(true);
         IterableNodeHashTable.releaseStatics(false);
         IterableDualLinkDeque.releaseStatics(18);

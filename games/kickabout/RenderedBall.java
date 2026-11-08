@@ -195,7 +195,7 @@ final class RenderedBall extends BallAgent {
         if (this.field_J != param3) {
           this.setRotationMatrix((byte) -113, param3, 300);
         }
-        EmailSyntaxValidator.field_l[this.modelId].a(this.field_D, this.field_G);
+        EmailSyntaxValidator.field_l[this.modelId].drawTransformed(this.field_D, this.field_G);
     }
 
     private final int getRenderedX(int param0) {

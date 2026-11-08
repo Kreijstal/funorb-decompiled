@@ -122,7 +122,7 @@ abstract class ResizableModalPanel extends ModalPanel {
             PlayAreaMovementSupport.field_c[var4] = new Sprite(var2, var3);
             PacketBuffer.a(123, PlayAreaMovementSupport.field_c[var4]);
             var5 = (var4 << 16) / 100;
-            ArrayWidgetContainer.field_y.b(ArrayWidgetContainer.field_y.field_o << 3, ArrayWidgetContainer.field_y.field_v << 3, SoftwareRasterizer.field_g << 3, SoftwareRasterizer.field_f << 3, -var5, 4096);
+            ArrayWidgetContainer.field_y.rotateBilinear(ArrayWidgetContainer.field_y.field_o << 3, ArrayWidgetContainer.field_y.field_v << 3, SoftwareRasterizer.field_g << 3, SoftwareRasterizer.field_f << 3, -var5, 4096);
             TeamManagementScreen.e(127);
           }
           return;
@@ -229,7 +229,7 @@ abstract class ResizableModalPanel extends ModalPanel {
           var9Lifetime1++;
           var8Lifetime1++;
         }
-        KeyedLoginCredentials.field_f.c(-90 + this.field_n + param0, param2 + 10);
+        KeyedLoginCredentials.field_f.draw(-90 + this.field_n + param0, param2 + 10);
         ValidationHelpWidget.a(5 + param0, -127, 35 + param2, LoadingProgressSupport.field_a, -10 + this.field_n);
         ValidationHelpWidget.a(param0, -125, -22 + (this.field_i + param2), PitchDecorationSupport.field_a, this.field_n);
         var4Lifetime2 = this.field_i - 79;

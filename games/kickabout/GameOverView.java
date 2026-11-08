@@ -240,7 +240,7 @@ final class GameOverView extends MatchPhaseView {
           ByteArrayPool.field_d.drawCentered(CommonGame.field_a.toUpperCase(), 500 + var2_int, this.field_Q + 130, 16777215, -1);
           var3 = this.field_Q + 140;
           var4 = 360 + var2_int;
-          CachedTextLayout.b(var4, param0 ^ 16777113, var3);
+          CachedTextLayout.setMinimapPosition(var4, param0 ^ 16777113, var3);
           MusicPatch.drawMatchMinimap(param0 ^ 0);
           var5 = this.field_u[this.field_h];
           var6 = this.field_u[1 - this.field_h];
@@ -1081,7 +1081,7 @@ final class GameOverView extends MatchPhaseView {
           }
           if ((decompiledFrameCompleted1) &&
             (decompiledFrameCompleted0)) {
-            CachedTextLayout.a((CommonGame) null, this.field_g, 50);
+            CachedTextLayout.initializeMatchMinimap((CommonGame) null, this.field_g, 50);
             OverlayLayerSupport.shutdownSharedAudio(-23217);
             stackIn_76_0 = 111;
           }
@@ -1501,7 +1501,7 @@ final class GameOverView extends MatchPhaseView {
                   if (stackIn_17_0) {
                     PlayerContextMenu.a(var7 + 10, (byte) -119, var8 - 6);
                   }
-                  MySquadScreen.field_U[this.field_a.field_g[this.field_O[var5][var9]].field_f].c(var7, var8 - 16);
+                  MySquadScreen.field_U[this.field_a.field_g[this.field_O[var5][var9]].field_f].draw(var7, var8 - 16);
                   stackIn_26_0 = (var11 == 0) ? 16777215 : 11184810;
                   var12 = stackIn_26_0;
                   ByteArrayPool.field_d.drawCentered(this.field_w[var5][var9], 80 + var7, var8, var12, -1);

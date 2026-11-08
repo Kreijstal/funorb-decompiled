@@ -169,7 +169,7 @@ final class MeshPreviewSupport {
           }
           TriangleRasterizer.useRasterClip();
           TriangleRasterizer.setProjectionCenter(SoftwareRasterizer.field_g >> 1, 198);
-          param0.a(0, 0, 0, 0, 0, 0, 0, 700);
+          param0.drawOrthographic(0, 0, 0, 0, 0, 0, 0, 700);
           TeamManagementScreen.e(param3 + 77);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "pe.D(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');

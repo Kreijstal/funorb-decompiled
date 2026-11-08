@@ -104,7 +104,7 @@ final class GameResourceLoader implements LoadingSequence {
           SoftwareDrawingSupport.field_f = DemoIntegersCommand.a(QuickChatKeysHelpPanel.field_Cb, 17369, "lobby", "orb_icons");
           ModalStack.loadSpriteSheetByName(QuickChatKeysHelpPanel.field_Cb, -127, "lobby", "players");
           IntrusiveDeque.field_e = SoftwareDrawingSupport.field_q;
-          ByteArrayPool.field_d = RenderedFootballer.a(EntityAfterimage.field_b, 10, "font2", QuickChatKeysHelpPanel.field_Cb, "fonts");
+          ByteArrayPool.field_d = RenderedFootballer.loadFontByName(EntityAfterimage.field_b, 10, "font2", QuickChatKeysHelpPanel.field_Cb, "fonts");
           ConsoleTokenCursor.field_d = Checkbox.a("font", EntityAfterimage.field_b, 75, "fonts", QuickChatKeysHelpPanel.field_Cb);
           IsSixCommand.field_C = Checkbox.a("", var17, 105, "arialish12", var16);
           var4 = new Sprite(16, 9);
@@ -532,7 +532,7 @@ final class GameResourceLoader implements LoadingSequence {
         for (var2 = 0; var2 < WriteIntegersCommand.field_E.length; var2++) {
           var3 = new ArgbSprite(40, 40);
           PacketBuffer.a(-100, var3);
-          WriteIntegersCommand.field_E[var2].c(0, 0);
+          WriteIntegersCommand.field_E[var2].draw(0, 0);
           TeamManagementScreen.e(param0 - 12637);
           for (var4 = 0; var3.field_y.length > var4; var4++) {
             if (var3.field_y[var4] != 0) {

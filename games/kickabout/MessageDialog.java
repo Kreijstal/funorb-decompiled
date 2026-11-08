@@ -302,7 +302,7 @@ class MessageDialog extends PopupDialog {
           return;
         }
         if (null != this.field_D) {
-          this.field_D.c(15 + var4, var5 + (var7 - this.field_D.field_v >> 1));
+          this.field_D.draw(15 + var4, var5 + (var7 - this.field_D.field_v >> 1));
           return;
         }
     }

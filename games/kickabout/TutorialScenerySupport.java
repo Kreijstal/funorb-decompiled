@@ -521,7 +521,7 @@ final class TutorialScenerySupport {
     final static AchievementQuery requestAchievementMask(int param0, int param1) {
         AchievementQuery var2 = new AchievementQuery();
         MatchScreen.field_j.addLast(var2, 3);
-        TextHotspotWidget.a((byte) -105, param0);
+        TextHotspotWidget.sendAchievementMaskRequest((byte) -105, param0);
         if (param1 != 26731) {
           TutorialScenerySupport.requestAchievementMask(121, -110);
         }

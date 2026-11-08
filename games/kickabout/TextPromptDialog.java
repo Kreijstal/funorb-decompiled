@@ -449,7 +449,7 @@ final class TextPromptDialog extends UiLayoutNode {
               var19 = var20;
             }
             if (null != this.field_zb) {
-              var20Lifetime2 = this.field_zb.b(0, 4);
+              var20Lifetime2 = this.field_zb.measureWidthWithGap(0, 4);
               if (var20Lifetime2 > var19) {
                 var19 = var20Lifetime2;
               }
@@ -464,8 +464,8 @@ final class TextPromptDialog extends UiLayoutNode {
             this.field_Fb.setBounds(true, 0, 0, var21, LineupPositionSupport.field_c);
             var21 = var21 + (10 + LineupPositionSupport.field_c);
             if (null != this.field_zb) {
-              var20Lifetime3 = this.field_zb.b(0, 4);
-              this.field_zb.a(4, var21, LineupPositionSupport.field_c, var20Lifetime3, 13 + (var19 - var20Lifetime3) / 2, -10481);
+              var20Lifetime3 = this.field_zb.measureWidthWithGap(0, 4);
+              this.field_zb.setBoundsAndLayout(4, var21, LineupPositionSupport.field_c, var20Lifetime3, 13 + (var19 - var20Lifetime3) / 2, -10481);
               var21 = var21 + (10 + LineupPositionSupport.field_c);
             }
             var28[0].setBounds(true, var16Lifetime2, 13, var21, var17Lifetime5);
@@ -476,7 +476,7 @@ final class TextPromptDialog extends UiLayoutNode {
             this.field_Nb.field_R = PanelSpriteFactory.createPanelSprites(this.field_Nb.field_mb, 3, 2105376, 11579568, 8421504, (byte) 127);
             var23 = var19 + 13 + 13;
             var24 = 10 + (var17Lifetime5 + 24) + var22;
-            var25 = StripedProgressBar.b(var23, param0, param2, 127);
+            var25 = StripedProgressBar.choosePopupX(var23, param0, param2, 127);
             var26 = MonotonicClock.placePopupVertically(param1, param3, var24, 29079);
             this.setBounds(true, var23, var25, var26, var24);
             return;
@@ -494,7 +494,7 @@ final class TextPromptDialog extends UiLayoutNode {
           this.field_Nb.field_R = PanelSpriteFactory.createPanelSprites(this.field_Nb.field_mb, 3, 2105376, 11579568, 8421504, (byte) 96);
           var18Lifetime1 = var15_int + 13 + 13;
           var19Lifetime1 = var16Lifetime1 + 34;
-          var20Lifetime1 = StripedProgressBar.b(var18Lifetime1, param0, param2, 127);
+          var20Lifetime1 = StripedProgressBar.choosePopupX(var18Lifetime1, param0, param2, 127);
           var21Lifetime1 = MonotonicClock.placePopupVertically(param1, param3, var19Lifetime1, 29079);
           this.setBounds(true, var18Lifetime1, var20Lifetime1, var21Lifetime1, var19Lifetime1);
           return;

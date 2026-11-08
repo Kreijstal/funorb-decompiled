@@ -499,9 +499,9 @@ final class SplashScreen extends AppScreen {
     final void drawScreen(int param0, boolean param1) {
         AppScreen var4;
         if (this.field_h != 256) {
-          CachedListingRow.field_k.b(0, 0, this.field_h);
+          CachedListingRow.field_k.drawAlpha(0, 0, this.field_h);
         } else {
-          CachedListingRow.field_k.d(0, 0);
+          CachedListingRow.field_k.drawOpaque(0, 0);
         }
         if (param0 != -5) {
           var4 = (AppScreen) null;

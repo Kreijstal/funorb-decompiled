@@ -443,7 +443,7 @@ final class MatchScreen extends AppScreen {
           }
         }
         if (var6 != null) {
-          RenderedFootballer.a(LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, (String) (var6), new String[]{this.matchState.field_S[param2]}), false, (byte) -108);
+          RenderedFootballer.enqueueFadingChatMessage(LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, (String) (var6), new String[]{this.matchState.field_S[param2]}), false, (byte) -108);
         }
     }
 
@@ -610,7 +610,7 @@ final class MatchScreen extends AppScreen {
         }
         TutorialCaptionSupport.drawTutorialCaption((byte) -121);
         if (0 < this.field_E) {
-          WorldSpriteSequence.field_h.b(0, 0, this.field_E);
+          WorldSpriteSequence.field_h.drawAlpha(0, 0, this.field_E);
         }
         if (!MyKitScreen.field_O) {
           if (this.phaseController instanceof PlayingView) {

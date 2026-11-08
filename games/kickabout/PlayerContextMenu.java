@@ -587,7 +587,7 @@ final class PlayerContextMenu {
                 }
               }
               if (var6 != null) {
-                if (!BufferedCacheFile.a(121, this.field_k) &&
+                if (!BufferedCacheFile.isActivePrivateChatRecipient(121, this.field_k) &&
                   !PacketBuffer.field_l) {
                   if (!WriteIntegersCommand.field_C) {
                     this.field_j.addItem(0, 8, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, LeaderboardParticipant.field_a, new String[]{var5}));

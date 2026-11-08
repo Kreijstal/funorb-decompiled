@@ -13,7 +13,7 @@ class TextHotspotWidget extends TextButton {
     static boolean field_F;
     private TextHotspotRegion field_I;
 
-    private final TextHotspotRegion b(int param0, int param1, int param2) {
+    private final TextHotspotRegion hitTestHotspot(int param0, int param1, int param2) {
         TextHotspotRegion var4;
         TextHotspotRegion var5;
         int var6;
@@ -38,29 +38,29 @@ class TextHotspotWidget extends TextButton {
         return null;
     }
 
-    final static boolean a(int param0, int param1, int param2) {
+    final static boolean intersectsPlayerViewport(int param0, int param1, int param2) {
         RenderedFootballer var4;
         boolean stackIn_8_0 = false;
         if (param2 != 480) {
           var4 = (RenderedFootballer) null;
-          TextHotspotWidget.a((RenderedFootballer) null, 69);
+          TextHotspotWidget.createFootballerDrawEntry((RenderedFootballer) null, 69);
         }
         stackIn_8_0 = (20 + param0 > 0) && (param1 > 0) && (param0 - 20 < 640) && (480 > -40 + param1);
         return stackIn_8_0;
     }
 
-    final void b(int param0, int param1, int param2, int param3) {
-        super.b(param0, param1, param2, param3);
+    final void dispatchAction(int param0, int param1, int param2, int param3) {
+        super.dispatchAction(param0, param1, param2, param3);
         int var5 = -this.field_t + param1;
         int var6 = -this.field_g + param2;
-        TextHotspotRegion var7 = this.b(var5, 2, var6);
+        TextHotspotRegion var7 = this.hitTestHotspot(var5, 2, var6);
         if (var7 != null &&
           null != this.field_k) {
           ((TextHotspotListener) ((Object) this.field_k)).onHotspotClicked(this, param0, var7.hotspotId, 40);
         }
     }
 
-    public static void i(int param0) {
+    public static void releaseStatics(int param0) {
         field_L = null;
         field_K = null;
         field_G = null;
@@ -71,17 +71,17 @@ class TextHotspotWidget extends TextButton {
         }
     }
 
-    final static void a(byte param0, int param1) {
+    final static void sendAchievementMaskRequest(byte param0, int param1) {
         CipherPacketBuffer var2 = FootballerAiOverlaySupport.field_d;
         if (param0 != -105) {
-          TextHotspotWidget.i(83);
+          TextHotspotWidget.releaseStatics(83);
         }
         var2.writeIsaacByte(param1, (byte) -80);
         var2.writeByte(116, 1);
         var2.writeByte(param0 ^ -32, 2);
     }
 
-    final void c(int param0, int param1, int param2, int param3) {
+    final void setBoundsWithTextHeight(int param0, int param1, int param2, int param3) {
         if (param0 != -1) {
           field_H = (String) null;
         }
@@ -98,7 +98,7 @@ class TextHotspotWidget extends TextButton {
         }
     }
 
-    final static void a(int param0, String param1) {
+    final static void sendModeratorCommand(int param0, String param1) {
         int var2_int = 0;
         if (!AuctionLogEntry.isLoggedInJagexModerator(15137)) {
           return;
@@ -125,7 +125,7 @@ class TextHotspotWidget extends TextButton {
           return null;
         }
         if (param0 != -1) {
-          this.b(112, 119, -84, -8);
+          this.dispatchAction(112, 119, -84, -8);
         }
         if (this.field_I.hotspotId >= this.field_J.length) {
           return null;
@@ -142,14 +142,14 @@ class TextHotspotWidget extends TextButton {
           if (this.field_m) {
             var5_int = -param2 + (BytePlusOneCommand.field_A - this.field_t);
             var6 = ArchiveManager.field_m - (param3 + this.field_g);
-            this.field_I = this.b(var5_int, 2, var6);
+            this.field_I = this.hitTestHotspot(var5_int, 2, var6);
           }
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "lb.P(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
-    final static WorldDrawEntry a(RenderedFootballer param0, int param1) {
+    final static WorldDrawEntry createFootballerDrawEntry(RenderedFootballer param0, int param1) {
         WorldDrawEntry var2 = null;
         RuntimeException var2_ref = null;
         WorldDrawEntry stackIn_1_0 = null;
@@ -178,13 +178,13 @@ class TextHotspotWidget extends TextButton {
 
     final void setBounds(int param0, int param1, int param2, int param3, int param4) {
         super.setBounds(param0, param1 ^ 0, param2, param3, param4);
-        this.a((byte) -41);
+        this.rebuildHotspotRegions((byte) -41);
         if (param1 != 1) {
           field_H = (String) null;
         }
     }
 
-    final void a(String param0, int param1, int param2) {
+    final void setHotspotHelpText(String param0, int param1, int param2) {
         int var5 = 0;
         RuntimeException runtimeException = null;
         String[] var4 = null;
@@ -272,7 +272,7 @@ class TextHotspotWidget extends TextButton {
         }
     }
 
-    final void a(byte param0) {
+    final void rebuildHotspotRegions(byte param0) {
         int var11 = 0;
         int stackIn_9_0 = 0;
         int stackIn_14_0 = 0;

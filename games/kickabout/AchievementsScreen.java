@@ -94,7 +94,7 @@ final class AchievementsScreen extends ButtonMenuScreen {
           !DisplayNameUiSupport.field_e) {
           if (var5 == 32 &&
             TextFieldValidator.areAccountTrinketsDisabled(-1)) {
-            GameModesHelpScreen.field_L.c(5 + this.slideOffsetX, 290);
+            GameModesHelpScreen.field_L.draw(5 + this.slideOffsetX, 290);
             var10 = var18.drawParagraph('"' + AvailabilityCheckRequest.field_c[var5] + '"', var7, var8, var9, 80, 16776960, -1, 1, 0, 16);
             var11 = var8 + var10 * 16 + 5;
             ConsoleTokenCursor.field_d.drawCentered(QuickChatKeysHelpPanel.field_Db.toLowerCase(), (var9 >> 1) + var7, var11 + 6, 16711680, -1);
@@ -122,7 +122,7 @@ final class AchievementsScreen extends ButtonMenuScreen {
             var18.drawParagraph(var12, var7, var11, var9, 200, 16777215, -1, 0, 0, var14Lifetime5);
             return;
           }
-          StrongCacheEntry.field_w.c(5 + this.slideOffsetX, 290);
+          StrongCacheEntry.field_w.draw(5 + this.slideOffsetX, 290);
           var10Lifetime2 = var18.drawParagraph('"' + AvailabilityCheckRequest.field_c[var5] + '"', var7, var8, var9, 80, 16776960, -1, 1, 0, 16);
           var11Lifetime2 = var8 + var10Lifetime2 * 16 + 5;
           ConsoleTokenCursor.field_d.drawCentered(QuickChatKeysHelpPanel.field_Db.toLowerCase(), (var9 >> 1) + var7, var11Lifetime2 + 6, 16711680, -1);
@@ -150,7 +150,7 @@ final class AchievementsScreen extends ButtonMenuScreen {
           var18.drawParagraph(var12Lifetime2, var7, var11Lifetime2, var9, 200, 16777215, -1, 0, 0, var14Lifetime4);
           return;
         }
-        ArchivePreloader.field_i[PacketBuffer.field_e[var5]].c(5 + this.slideOffsetX, 290);
+        ArchivePreloader.field_i[PacketBuffer.field_e[var5]].draw(5 + this.slideOffsetX, 290);
         var10Lifetime1 = var18.drawParagraph('"' + AvailabilityCheckRequest.field_c[var5] + '"', var7, var8, var9, 80, 16776960, -1, 1, 0, 16);
         var11Lifetime1 = var8 + var10Lifetime1 * 16 + 5;
         if (var6 == 0) {

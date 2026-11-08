@@ -273,9 +273,9 @@ final class LeaguesScreen extends ButtonMenuScreen {
           var5 = stackIn_10_0;
           SoftwareRasterizer.fillRoundedRectangleBlended(WelcomeDialog.field_H[var3_int].field_F, WelcomeDialog.field_H[var3_int].field_T, WelcomeDialog.field_H[var3_int].field_q, WelcomeDialog.field_H[var3_int].field_mb, 10, 0, var5);
           if (var4 == 0) {
-            DelayedServerPacket.field_i[var3_int].b(WelcomeDialog.field_H[var3_int].field_F + 4, WelcomeDialog.field_H[var3_int].field_T - 2, 48);
+            DelayedServerPacket.field_i[var3_int].drawAlpha(WelcomeDialog.field_H[var3_int].field_F + 4, WelcomeDialog.field_H[var3_int].field_T - 2, 48);
           } else {
-            WriteIntegersCommand.field_E[var3_int].c(WelcomeDialog.field_H[var3_int].field_F + 4, WelcomeDialog.field_H[var3_int].field_T - 2);
+            WriteIntegersCommand.field_E[var3_int].draw(WelcomeDialog.field_H[var3_int].field_F + 4, WelcomeDialog.field_H[var3_int].field_T - 2);
           }
         }
         TeamManagementScreen.e(param0 ^ -122);

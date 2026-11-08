@@ -62,7 +62,7 @@ abstract class PagedHelpScreen extends ButtonMenuScreen {
           var5_int = this.buttonCenterX(0, -22667) + (this.slideOffsetX - (var3_int >> 1));
           var6 = this.buttonCenterY(-124, 0) - (var4_int >> 1);
           SoftwareRasterizer.fillRoundedRectangleBlended(var5_int - 4, -4 + var6, 8 + var3_int, var4_int + 8, 10, 0, 128);
-          SoftwareDrawingSupport.field_r[0][3].c(var5_int, var6);
+          SoftwareDrawingSupport.field_r[0][3].draw(var5_int, var6);
         }
         if (!this.hasNextPage(false)) {
           var3_intLifetime1 = this.buttons[2].width;
@@ -70,7 +70,7 @@ abstract class PagedHelpScreen extends ButtonMenuScreen {
           var5_intLifetime1 = -(var3_intLifetime1 >> 1) + (this.buttonCenterX(2, param0 ^ 22670) + this.slideOffsetX);
           var6Lifetime1 = -(var4_intLifetime1 >> 1) + this.buttonCenterY(101, 2);
           SoftwareRasterizer.fillRoundedRectangleBlended(-4 + var5_intLifetime1, -4 + var6Lifetime1, 8 + var3_intLifetime1, var4_intLifetime1 + 8, 10, 0, 128);
-          SoftwareDrawingSupport.field_c[0][3].c(var5_intLifetime1, var6Lifetime1);
+          SoftwareDrawingSupport.field_c[0][3].draw(var5_intLifetime1, var6Lifetime1);
         }
         SoftwareRasterizer.fillRoundedRectangleBlended(this.slideOffsetX + 15, 60, 610, 355, 10, 0, 128);
         String[] var7 = this.getPageTitles(true);

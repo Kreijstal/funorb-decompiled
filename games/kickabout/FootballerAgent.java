@@ -321,7 +321,7 @@ class FootballerAgent extends MatchAgent {
           this.positionX = param1.readBits(26, param0 ^ -13927);
           this.positionY = param1.readBits(27, 59);
           this.height = ClientInteractionSupport.a(22531, 30, param1, 0);
-          this.verticalVelocity = BufferedCacheFile.a((byte) 125, 17, param1, 0, 24, 25);
+          this.verticalVelocity = BufferedCacheFile.readSignedFourRangeBits((byte) 125, 17, param1, 0, 24, 25);
           this.directionMask = param1.readBits(4, 59);
           this.directionY = param1.readBits(2, 59) - 1;
           this.directionX = -1 + param1.readBits(2, param0 + 13977);
@@ -337,12 +337,12 @@ class FootballerAgent extends MatchAgent {
           this.field_B = TutorialScenerySupport.a(param1, 30, (byte) 6, 18);
           this.field_h = param1.readBits(4, 59);
           this.field_z = param1.readBits(9, 59) - 5;
-          this.field_x = IsaacRandom.a(11, -30273, param1);
+          this.field_x = IsaacRandom.readSignedBits(11, -30273, param1);
           if (param0 != -13918) {
             CipherPacketBuffer var4 = (CipherPacketBuffer) null;
             this.readDeltaState(-70, (CipherPacketBuffer) null);
           }
-          this.field_P = IsaacRandom.a(11, -30273, param1);
+          this.field_P = IsaacRandom.readSignedBits(11, -30273, param1);
           this.field_A = param1.readBits(32, param0 + 13977);
           this.field_g = param1.readBits(32, 59);
           this.field_q = param1.readBits(32, 59);
@@ -402,9 +402,9 @@ class FootballerAgent extends MatchAgent {
         RuntimeException var3 = null;
         try {
           if (ContentTransitionDialog.a(param1, (byte) -39)) {
-            this.positionX = this.positionX + BufferedCacheFile.a((byte) 125, 19, param1, 0, 23, 30);
-            this.positionY = this.positionY + BufferedCacheFile.a((byte) 125, 19, param1, 0, 23, 30);
-            this.height = this.height + BufferedCacheFile.a((byte) 125, 19, param1, 0, 23, 30);
+            this.positionX = this.positionX + BufferedCacheFile.readSignedFourRangeBits((byte) 125, 19, param1, 0, 23, 30);
+            this.positionY = this.positionY + BufferedCacheFile.readSignedFourRangeBits((byte) 125, 19, param1, 0, 23, 30);
+            this.height = this.height + BufferedCacheFile.readSignedFourRangeBits((byte) 125, 19, param1, 0, 23, 30);
           }
           this.verticalVelocity = TutorialScenerySupport.a(param1, 25, (byte) 6, 0);
           if (ContentTransitionDialog.a(param1, (byte) -39)) {
@@ -424,8 +424,8 @@ class FootballerAgent extends MatchAgent {
             this.field_O = ContentTransitionDialog.a(param1, (byte) -39);
             this.field_h = param1.readBits(4, 59);
             this.field_z = -5 + param1.readBits(9, 59);
-            this.field_x = IsaacRandom.a(11, -30273, param1);
-            this.field_P = IsaacRandom.a(11, -30273, param1);
+            this.field_x = IsaacRandom.readSignedBits(11, -30273, param1);
+            this.field_P = IsaacRandom.readSignedBits(11, -30273, param1);
           }
           if (ContentTransitionDialog.a(param1, (byte) -39)) {
             this.field_s = ContentTransitionDialog.a(param1, (byte) -39);

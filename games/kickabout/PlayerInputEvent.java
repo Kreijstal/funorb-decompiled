@@ -115,7 +115,7 @@ final class PlayerInputEvent extends DualLinkNode {
             }
             ArchiveManager.prepareRankingStatistics(-20669, var4, var5);
             for (var6_intLifetime1 = 0; var6_intLifetime1 < var4; var6_intLifetime1++) {
-              ByteStorage.a(var14, 542439655);
+              ByteStorage.readPackedRankingStatistics(var14, 542439655);
               if (var6_intLifetime1 == 0) {
                 var3.field_f = FormationView.field_r;
                 var3.field_m = GameOptionMenuSupport.field_d;

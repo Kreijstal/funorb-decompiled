@@ -33,7 +33,7 @@ final class LobbyGameRecord {
           }
           var2 = MatchScreen.field_j.first(24009);
           while (var2 != null) {
-            TextHotspotWidget.a((byte) -105, param0);
+            TextHotspotWidget.sendAchievementMaskRequest((byte) -105, param0);
             var2 = MatchScreen.field_j.next(33);
           }
           if (param1 > -36) {

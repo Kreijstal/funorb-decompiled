@@ -77,7 +77,7 @@ final class ColourSwatchTile extends UiLayoutNode {
             ArrayWidgetContainer.field_z[1].drawScaledAlpha(var5 + 2, var6 + 2, -4 + var7, -4 + var7, 128);
             ArrayWidgetContainer.field_z[3].drawScaledAdditive(2 + var5, var6 + 2, -4 + var7, -4 + var7, 256);
           }
-          WidgetStyleFactory.field_a.c((-WidgetStyleFactory.field_a.field_o + var7 >> 1) + var5, (var7 - WidgetStyleFactory.field_a.field_v >> 1) + var6);
+          WidgetStyleFactory.field_a.draw((-WidgetStyleFactory.field_a.field_o + var7 >> 1) + var5, (var7 - WidgetStyleFactory.field_a.field_v >> 1) + var6);
           SoftwareRasterizer.drawHorizontalLineAlpha(var5 + 2, -3 + var7 + var6, -4 + var7, 0, 90);
           SoftwareRasterizer.drawVerticalLineAlpha(var5 - (-var7 + param0), 2 + var6, -5 + var7, 0, 90);
           SoftwareRasterizer.drawVerticalLineAlpha(2 + var5, 2 + var6, var7 - 5, 0, 90);
@@ -89,8 +89,8 @@ final class ColourSwatchTile extends UiLayoutNode {
           SoftwareRasterizer.drawVerticalLineAlpha(2 + var5, 2 + var6, var7 - 5, 0, 90);
           return;
         }
-        ArrayWidgetContainer.field_z[0].b(var5 + 2, var6 + 2, 140);
-        ArrayWidgetContainer.field_z[1].b(var5 + 2, var6 + 2, 128);
+        ArrayWidgetContainer.field_z[0].drawAlpha(var5 + 2, var6 + 2, 140);
+        ArrayWidgetContainer.field_z[1].drawAlpha(var5 + 2, var6 + 2, 128);
         ArrayWidgetContainer.field_z[3].drawAdditive(2 + var5, 2 + var6, 128);
         SoftwareRasterizer.drawHorizontalLineAlpha(var5 + 2, -3 + var7 + var6, -4 + var7, 0, 90);
         SoftwareRasterizer.drawVerticalLineAlpha(var5 - (-var7 + param0), 2 + var6, -5 + var7, 0, 90);

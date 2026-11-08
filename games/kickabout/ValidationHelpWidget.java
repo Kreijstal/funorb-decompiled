@@ -43,14 +43,14 @@ final class ValidationHelpWidget extends TextHotspotWidget {
               field_W = (long[][]) null;
             }
             var7 = param3[1].field_o;
-            param3[0].c(param0, param2);
-            param3[2].c(param4 + param0 - var6, param2);
+            param3[0].draw(param0, param2);
+            param3[2].draw(param4 + param0 - var6, param2);
             SoftwareRasterizer.saveClip(NanoTickClock.field_q);
             SoftwareRasterizer.intersectClip(var5_int + param0, param2, -var6 + param4 + param0, param3[1].field_v + param2);
             var8 = param0 + var5_int;
             var9 = param4 + (param0 - var6);
             for (param0 = var8; var9 > param0; param0 = param0 + var7) {
-              param3[1].c(param0, param2);
+              param3[1].draw(param0, param2);
             }
             SoftwareRasterizer.restoreClip(NanoTickClock.field_q);
             return;
@@ -162,7 +162,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
         }
         if (!var5.equals(this.field_q)) {
           this.field_q = var5;
-          this.a((byte) -41);
+          this.rebuildHotspotRegions((byte) -41);
         }
         super.drawLayer(param0, (int) (char)param1, param2, param3);
         var6Lifetime1 = this.field_R.getValidationState(-24407);
@@ -191,7 +191,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
             this.field_Q = new Sprite(var11, var12);
             PacketBuffer.a(70, this.field_Q);
           }
-          var14.b(112, 144, var14.field_o << 4, var14.field_v << 4, -this.field_S << 10, 4096);
+          var14.rotateBilinear(112, 144, var14.field_o << 4, var14.field_v << 4, -this.field_S << 10, 4096);
           TeamManagementScreen.e(126);
           this.field_Q.drawAdditive(-(var14.field_o >> 1) + var9, -var14.field_v + var10, 256);
         }

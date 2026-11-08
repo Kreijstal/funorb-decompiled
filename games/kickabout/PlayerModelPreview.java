@@ -35,7 +35,7 @@ final class PlayerModelPreview extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var21 = null;
         try {
-          BufferedCacheFile.a(126, param5, param10, param11);
+          BufferedCacheFile.configureLoadingDisplay(126, param5, param10, param11);
           StringCursor.a(param18, param0, param13, param7, (byte) 5);
           if (param2 <= 25) {
             field_q = (GameKeyHandler) null;
@@ -96,7 +96,7 @@ final class PlayerModelPreview extends IntrusiveNode {
         TriangleRasterizer.useRasterClip();
         int var4 = 950;
         TriangleRasterizer.setProjectionCenter(128, 240);
-        var5.a(0, this.field_n << 8, 0, 300, 0, 0, 0, var4);
+        var5.drawOrthographic(0, this.field_n << 8, 0, 300, 0, 0, 0, var4);
         TeamManagementScreen.e(param1 ^ -124);
         Cp1252EncodingSupport.field_d.drawHalfSize(-64 + this.field_g, this.field_i - 120);
     }
@@ -117,7 +117,7 @@ final class PlayerModelPreview extends IntrusiveNode {
           var6_int = param1.readBits(1, 59);
           if (param3 == var6_int) {
             if (param5 != 0) {
-              stackIn_13_0 = IsaacRandom.a(param5, -30273, param1);
+              stackIn_13_0 = IsaacRandom.readSignedBits(param5, -30273, param1);
             } else {
               stackIn_13_0 = 0;
             }
@@ -129,7 +129,7 @@ final class PlayerModelPreview extends IntrusiveNode {
           if (0 == param2) {
             stackIn_6_0 = 0;
           } else {
-            stackIn_6_0 = IsaacRandom.a(param2, param3 ^ -30273, param1);
+            stackIn_6_0 = IsaacRandom.readSignedBits(param2, param3 ^ -30273, param1);
           }
           var7 = stackIn_6_0;
           var8 = param4;

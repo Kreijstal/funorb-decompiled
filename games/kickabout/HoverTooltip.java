@@ -43,7 +43,7 @@ final class HoverTooltip extends UiLayoutNode {
           this.field_Db.setBounds(true, var9_int, 5, LineupPositionSupport.field_c + 3, LineupPositionSupport.field_c);
           var10 = 5 + var9_int + 5;
           var11 = 3 + (LineupPositionSupport.field_c * 2 + 3);
-          var12 = StripedProgressBar.b(var10, param0, param2, 127);
+          var12 = StripedProgressBar.choosePopupX(var10, param0, param2, 127);
           var13 = MonotonicClock.placePopupVertically(param1, param3, var11, 29079);
           this.setBounds(true, var10, var12, var13, var11);
           return;

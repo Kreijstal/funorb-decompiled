@@ -125,14 +125,14 @@ final class HuffmanTextSupport {
             }
             var7 = param5[2].field_o;
             var8 = param5[1].field_o;
-            param5[0].d(param2, param0, param4);
-            param5[2].d(-var7 + param2 + param3, param0, param4);
+            param5[0].drawTinted(param2, param0, param4);
+            param5[2].drawTinted(-var7 + param2 + param3, param0, param4);
             SoftwareRasterizer.saveClip(NanoTickClock.field_q);
             SoftwareRasterizer.intersectClip(param2 + var6_int, param0, param2 - (-param3 + var7), param5[1].field_v + param0);
             var9 = param2 + var6_int;
             var10 = param3 + (param2 - var7);
             for (param2 = var9; var10 > param2; param2 = param2 + var8) {
-              param5[1].d(param2, param0, param4);
+              param5[1].drawTinted(param2, param0, param4);
             }
             SoftwareRasterizer.restoreClip(NanoTickClock.field_q);
             return;

@@ -382,7 +382,7 @@ abstract class MatchPhaseView {
         var6 = SoftwareRasterizer.field_g >> 1;
         var7 = SoftwareRasterizer.field_f >> 1;
         ByteArrayPool.field_d.drawCentered(var5, var6, var7, 16777215, -1);
-        AuctionSettingsDialog.field_H.c(-16 + var6, var7 - 31);
+        AuctionSettingsDialog.field_H.draw(-16 + var6, var7 - 31);
         TeamManagementScreen.e(124);
         var8 = 256;
         if (param0 != -2351) {
@@ -397,7 +397,7 @@ abstract class MatchPhaseView {
         var9 = PromotionDialog.field_G.field_o;
         var10 = PromotionDialog.field_G.field_v;
         if (256 == var8) {
-          PromotionDialog.field_G.c(var3 - (var9 >> 1), -(var10 >> 1) + var4);
+          PromotionDialog.field_G.draw(var3 - (var9 >> 1), -(var10 >> 1) + var4);
         } else {
           var10 = var10 * var8 >> 8;
           var9 = var8 * var9 >> 8;
@@ -455,7 +455,7 @@ abstract class MatchPhaseView {
         var7Lifetime1 = var14;
         while (var14 < this.field_a.playerCount) {
           if (param0 == this.field_a.field_g[var14].team) {
-            MySquadScreen.field_U[this.field_a.field_g[var14].field_f].c(param3, -16 + param1);
+            MySquadScreen.field_U[this.field_a.field_g[var14].field_f].draw(param3, -16 + param1);
             stackIn_24_0 = (this.field_a.participantStatus[var14].isActive(3511)) ? 16777215 : 11184810;
             var8 = stackIn_24_0;
             var9 = this.field_a.field_S[var14].toLowerCase();
@@ -569,7 +569,7 @@ abstract class MatchPhaseView {
           SoftwareRasterizer.fillRoundedRectangleBlended(var4[var8], var5[var8], 186, 21, 7, 65793, 128);
           TeamManagementScreen.e(123);
           if (this.field_a.participantStatus[var10].loadedPitch) {
-            PitchDecorationSupport.field_l.c(2 + (160 + var4[var8]), -4 + var5[var8]);
+            PitchDecorationSupport.field_l.draw(2 + (160 + var4[var8]), -4 + var5[var8]);
           }
           var5[var8] = var5[var8] + 23;
           var10++;

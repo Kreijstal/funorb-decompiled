@@ -290,7 +290,7 @@ final class AuctionSettingsDialog extends MessageDialog {
             SoftwareRasterizer.fillRoundedRectangleBlended(FriendRemovalSupport.field_d[var11].field_F, FriendRemovalSupport.field_d[var11].field_T, FriendRemovalSupport.field_d[var11].field_q, FriendRemovalSupport.field_d[var11].field_mb - 2, 6, 16777215, 140);
           }
           if (GameMediaSupport.field_d == var11) {
-            WidgetStyleFactory.field_a.c(10 + (var4 + 74), 26 + var9 - (-(var11 * 18) - 2));
+            WidgetStyleFactory.field_a.draw(10 + (var4 + 74), 26 + var9 - (-(var11 * 18) - 2));
           }
           FriendRemovalSupport.field_d[var11].draw(112, false);
         }

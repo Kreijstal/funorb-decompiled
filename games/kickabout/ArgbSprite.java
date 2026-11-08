@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ArgbSprite extends Sprite {
-    final void d(int param0, int param1, int param2) {
+    final void drawTinted(int param0, int param1, int param2) {
         int var10 = 0;
         int var10Lifetime1;
         int var10Lifetime2;
@@ -48,7 +48,7 @@ final class ArgbSprite extends Sprite {
         }
     }
 
-    final void c(int param0, int param1) {
+    final void draw(int param0, int param1) {
         int var9 = 0;
         int var9Lifetime1;
         int var9Lifetime2;
@@ -148,7 +148,7 @@ final class ArgbSprite extends Sprite {
         }
     }
 
-    final void d(int param0, int param1) {
+    final void drawOpaque(int param0, int param1) {
         int var9 = 0;
         int var9Lifetime1;
         int var9Lifetime2;
@@ -293,7 +293,7 @@ final class ArgbSprite extends Sprite {
         }
     }
 
-    private final static void c(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12) {
+    private final static void blitArgbScaledAlpha(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12) {
         int var14 = 0;
         int var15 = 0;
         int var16 = 0;
@@ -1020,7 +1020,7 @@ final class ArgbSprite extends Sprite {
         super(param0, param1);
     }
 
-    private final static void b(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11) {
+    private final static void blitArgbScaled(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11) {
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
@@ -1118,7 +1118,7 @@ final class ArgbSprite extends Sprite {
             var7 = var7 + var11 * var15Lifetime2;
             var14 = var14 + var15Lifetime2;
           }
-          ArgbSprite.b(SoftwareRasterizer.field_a, this.field_y, 0, var7, var8, var13Lifetime2, var14, param2, param3, var11, var12, var5);
+          ArgbSprite.blitArgbScaled(SoftwareRasterizer.field_a, this.field_y, 0, var7, var8, var13Lifetime2, var14, param2, param3, var11, var12, var5);
           return;
         }
     }
@@ -1314,7 +1314,7 @@ final class ArgbSprite extends Sprite {
             var8 = var8 + var12 * var16Lifetime2;
             var15 = var15 + var16Lifetime2;
           }
-          ArgbSprite.c(SoftwareRasterizer.field_a, this.field_y, 0, var8, var9, var14Lifetime2, var15, param2, param3, var12, var13, var6, param4);
+          ArgbSprite.blitArgbScaledAlpha(SoftwareRasterizer.field_a, this.field_y, 0, var8, var9, var14Lifetime2, var15, param2, param3, var12, var13, var6, param4);
           return;
         }
     }
@@ -1369,7 +1369,7 @@ final class ArgbSprite extends Sprite {
         }
     }
 
-    private final static void d(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    private final static void blitArgbAlpha(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
@@ -1392,7 +1392,7 @@ final class ArgbSprite extends Sprite {
         }
     }
 
-    final void b(int param0, int param1, int param2) {
+    final void drawAlpha(int param0, int param1, int param2) {
         int var10 = 0;
         int var10Lifetime1;
         int var10Lifetime2;
@@ -1433,7 +1433,7 @@ final class ArgbSprite extends Sprite {
           if (var6 <= 0) {
             return;
           }
-          ArgbSprite.d(SoftwareRasterizer.field_a, this.field_y, 0, var5, var4, var7, var6, var8, var9, param2);
+          ArgbSprite.blitArgbAlpha(SoftwareRasterizer.field_a, this.field_y, 0, var5, var4, var7, var6, var8, var9, param2);
           return;
         }
     }

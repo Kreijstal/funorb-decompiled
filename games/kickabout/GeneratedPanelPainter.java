@@ -37,21 +37,21 @@ final class GeneratedPanelPainter extends NineSlicePanelPainter {
           IntrusiveNode var7 = (IntrusiveNode) null;
           GeneratedPanelPainter.a((IntrusiveNode) null, (IntrusiveNode) null, (byte) 126);
           if (null == this.field_k) {
-            AccountRegistrationPanel.createButtonStateSprite(false, (byte) -52, this.field_h, param3, 13386922).c(param0, param2);
+            AccountRegistrationPanel.createButtonStateSprite(false, (byte) -52, this.field_h, param3, 13386922).draw(param0, param2);
             return;
           }
           if (this.field_k.field_o != param3) {
-            AccountRegistrationPanel.createButtonStateSprite(false, (byte) -52, this.field_h, param3, 13386922).c(param0, param2);
+            AccountRegistrationPanel.createButtonStateSprite(false, (byte) -52, this.field_h, param3, 13386922).draw(param0, param2);
             return;
           }
           return;
         }
         if (null == this.field_k) {
-          AccountRegistrationPanel.createButtonStateSprite(false, (byte) -52, this.field_h, param3, 13386922).c(param0, param2);
+          AccountRegistrationPanel.createButtonStateSprite(false, (byte) -52, this.field_h, param3, 13386922).draw(param0, param2);
           return;
         }
         if (this.field_k.field_o != param3) {
-          AccountRegistrationPanel.createButtonStateSprite(false, (byte) -52, this.field_h, param3, 13386922).c(param0, param2);
+          AccountRegistrationPanel.createButtonStateSprite(false, (byte) -52, this.field_h, param3, 13386922).draw(param0, param2);
           return;
         }
     }

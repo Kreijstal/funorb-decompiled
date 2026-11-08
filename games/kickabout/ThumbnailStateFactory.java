@@ -35,7 +35,7 @@ final class ThumbnailStateFactory {
             stackIn_6_0 = (1 != var5) ? 0 : 1;
             var6 = stackIn_6_0;
             PacketBuffer.a(param0 ^ 55, var9[var5]);
-            param2.d(0, 0);
+            param2.drawOpaque(0, 0);
             if (var6 == 0) {
               SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.field_g, SoftwareRasterizer.field_f);
             }

@@ -80,7 +80,7 @@ final class ModelMaterial {
           var2 = 123 % ((param0 + 25) / 60);
           var3 = var15.readUnsignedByte((byte) -106);
           if (var3 == 0) {
-            var12 = CachedTextLayout.c(-23091);
+            var12 = CachedTextLayout.createEightIntBuffer(-23091);
             var4 = var12;
             var11 = var12;
             var5 = var11;
@@ -118,7 +118,7 @@ final class ModelMaterial {
             FormationView.b((byte) -116);
             return;
           }
-          var16_ref.resultValues = CachedTextLayout.c(-23091);
+          var16_ref.resultValues = CachedTextLayout.createEightIntBuffer(-23091);
           var16_ref.complete = true;
           var16_ref.c((byte) -109);
           return;

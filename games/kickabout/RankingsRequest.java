@@ -47,7 +47,7 @@ final class RankingsRequest extends IntrusiveNode {
               var10 = var9[LoggedPossession.a((byte) -24, var9.length)];
               var6 = LoggedPossession.a((byte) -24, 896 - (var10.field_o >> 1));
               var7 = LoggedPossession.a((byte) -24, 1344 - (var10.field_v >> 1));
-              var10.c(var6 + param1, param0 + var7);
+              var10.draw(var6 + param1, param0 + var7);
             }
           } else {
             if (RankingsScreen.field_C != 1) {
@@ -57,7 +57,7 @@ final class RankingsRequest extends IntrusiveNode {
               var11 = var9[LoggedPossession.a((byte) -24, var9.length)];
               var6 = LoggedPossession.a((byte) -24, 896 - (var11.field_o >> 1));
               var7 = LoggedPossession.a((byte) -24, 1344 - (var11.field_v >> 1));
-              var11.c(var6 + param1, var7 + param0);
+              var11.draw(var6 + param1, var7 + param0);
             }
           }
           return;

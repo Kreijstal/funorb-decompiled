@@ -42,7 +42,7 @@ final class SellPlayerDialog extends MessageDialog {
             fieldTemp$0 = AnimationSkeleton.field_m - 1;
             AnimationSkeleton.field_m = AnimationSkeleton.field_m - 1;
             if (fieldTemp$0 == 0) {
-              RenderedFootballer.a(GameKeyHandler.field_a, true, (byte) -118);
+              RenderedFootballer.enqueueFadingChatMessage(GameKeyHandler.field_a, true, (byte) -118);
             }
           }
           if (null == ThumbnailStateFactory.field_d) {

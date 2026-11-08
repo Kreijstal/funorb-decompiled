@@ -50,7 +50,7 @@ final class TriangleMesh {
     short[] field_P;
     static String field_A;
 
-    final static void a(byte param0, boolean param1, boolean param2, String param3) {
+    final static void showLoginDialog(byte param0, boolean param1, boolean param2, String param3) {
         try {
           StripedProgressBar.a(param0 + 101);
           RankingsRequest.field_l.deactivateAllModals(param0 + 225);
@@ -133,7 +133,7 @@ final class TriangleMesh {
         if (param2 != 256) {
           this.field_y = -57;
         }
-        this.a(param2 - 311);
+        this.invalidateBounds(param2 - 311);
     }
 
     final void translate(int param0, int param1, int param2, int param3) {
@@ -144,7 +144,7 @@ final class TriangleMesh {
           this.field_r[var5] = (short)(this.field_r[var5] + param3);
           this.field_P[var5] = (short)(this.field_P[var5] + param0);
         }
-        this.a(param2 - 68);
+        this.invalidateBounds(param2 - 68);
     }
 
     public static void releaseStatics(byte param0) {
@@ -160,12 +160,12 @@ final class TriangleMesh {
         field_j = null;
     }
 
-    private final void a(int param0) {
+    private final void invalidateBounds(int param0) {
         int var2 = -26 / ((58 - param0) / 62);
         this.field_q = false;
     }
 
-    final static boolean a(int param0, IntrusiveDeque param1) {
+    final static boolean isWorldDrawListSorted(int param0, IntrusiveDeque param1) {
         IntrusiveNode var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
@@ -179,7 +179,7 @@ final class TriangleMesh {
           var2 = param1.first(24009);
           if (param0 != -27054) {
             var4 = (IntrusiveDeque) null;
-            TriangleMesh.a(-43, (IntrusiveDeque) null);
+            TriangleMesh.isWorldDrawListSorted(-43, (IntrusiveDeque) null);
           }
           while (var2 instanceof WorldDrawEntry) {
             if (var2.field_d instanceof WorldDrawEntry) {
@@ -206,7 +206,7 @@ final class TriangleMesh {
         }
     }
 
-    final static ArgbSprite a(PlayerStats param0, int param1, boolean param2) {
+    final static ArgbSprite getPlayerPortraitWithClubDefaults(PlayerStats param0, int param1, boolean param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -243,7 +243,7 @@ final class TriangleMesh {
         }
     }
 
-    final static CoverageBitmapFont a(int param0, ResourceArchive param1, int param2, int param3, ResourceArchive param4) {
+    final static CoverageBitmapFont loadFont(int param0, ResourceArchive param1, int param2, int param3, ResourceArchive param4) {
         RuntimeException var5 = null;
         Object stackIn_4_0 = null;
         CoverageBitmapFont stackIn_6_0 = null;
@@ -311,7 +311,7 @@ final class TriangleMesh {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static void $cfr$intArgs$a$842e35442ba4(int param0, boolean param1, boolean param2, String param3) {
+    final static void showLoginDialog(int param0, boolean param1, boolean param2, String param3) {
         try {
           StripedProgressBar.a(param0 + 101);
           RankingsRequest.field_l.deactivateAllModals(param0 + 225);

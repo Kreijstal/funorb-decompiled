@@ -17,7 +17,7 @@ final class StripedProgressBar extends UiWidget {
     private int field_E;
     static int field_B;
 
-    private final Sprite a(boolean param0) {
+    private final Sprite createRoundedEndMask(boolean param0) {
         int var4 = 0;
         int var5 = 0;
         double var6 = 0.0;
@@ -44,7 +44,7 @@ final class StripedProgressBar extends UiWidget {
         return var3;
     }
 
-    final static void a(byte param0, ResourceArchive param1) {
+    final static void loadLogoModels(byte param0, ResourceArchive param1) {
         int var3 = 0;
         int var4 = 0;
         TriangleMesh var5 = null;
@@ -119,26 +119,26 @@ final class StripedProgressBar extends UiWidget {
           var5_int = this.field_n + param1;
           AuctionListing.pushRasterClip(var5_int - this.field_v.field_q, -22914, param1 + this.field_v.field_q, this.field_i + param3, param3);
           for (var6 = param1 - this.field_H; var5_int > var6; var6 = var6 + param0.field_q) {
-            param0.c(var6, param3);
+            param0.draw(var6, param3);
           }
           TeamManagementScreen.e(param2 - 1);
           if (SoftwareRasterizer.field_b <= this.field_v.field_q + param1) {
             PacketBuffer.a(param2 ^ -84, this.field_I);
-            param0.c(-this.field_H, 0);
-            param0.c(this.field_G * 2 - this.field_H, 0);
+            param0.draw(-this.field_H, 0);
+            param0.draw(this.field_G * 2 - this.field_H, 0);
             this.field_D.drawMultiply(0, 0);
             TeamManagementScreen.e(117);
-            this.field_I.c(param1, param3);
+            this.field_I.draw(param1, param3);
           }
           if (SoftwareRasterizer.field_c >= var5_int - this.field_v.field_q) {
             PacketBuffer.a(-107, this.field_I);
             for (var7 = this.field_n - this.field_v.field_q + this.field_H; var7 > this.field_G * 2; var7 = var7 - this.field_G * 2) {
             }
-            param0.c(-var7, 0);
-            param0.c(-var7 + 2 * this.field_G, 0);
+            param0.draw(-var7, 0);
+            param0.draw(-var7 + 2 * this.field_G, 0);
             this.field_v.drawMultiply(0, 0);
             TeamManagementScreen.e(120);
-            this.field_I.c(-this.field_v.field_q + var5_int, param3);
+            this.field_I.draw(-this.field_v.field_q + var5_int, param3);
             return;
           }
           return;
@@ -172,7 +172,7 @@ final class StripedProgressBar extends UiWidget {
         this.field_F = 8355711 & param2 >> 1;
         if (param0 != 21) {
           ResourceArchive var5 = (ResourceArchive) null;
-          StripedProgressBar.a((byte) -30, (ResourceArchive) null);
+          StripedProgressBar.loadLogoModels((byte) -30, (ResourceArchive) null);
         }
         this.field_E = param2;
         this.field_x = (16711422 & param1) >> 1;
@@ -184,7 +184,7 @@ final class StripedProgressBar extends UiWidget {
         this.rebuildSprites((byte) 121);
     }
 
-    private final Sprite a(int param0, int param1, int param2) {
+    private final Sprite createStripedFillSprite(int param0, int param1, int param2) {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -225,7 +225,7 @@ final class StripedProgressBar extends UiWidget {
         this(param0, param1, param2, param3, param4, param5, param6, (16711422 & param5) >> 1, param6 >> 1 & 8355711);
     }
 
-    final static int b(int param0, int param1, int param2, int param3) {
+    final static int choosePopupX(int param0, int param1, int param2, int param3) {
         if (!(SoftwareRasterizer.field_g < param1 + param0)) {
           return param1;
         }
@@ -233,7 +233,7 @@ final class StripedProgressBar extends UiWidget {
           return -param0 + (param1 + param2);
         }
         if (param3 < 126) {
-          StripedProgressBar.b(80, 123, -76, -16);
+          StripedProgressBar.choosePopupX(80, 123, -76, -16);
         }
         return -param0 + SoftwareRasterizer.field_g;
     }
@@ -291,8 +291,8 @@ final class StripedProgressBar extends UiWidget {
         if (param0 != 121) {
           return;
         }
-        this.field_z = new Sprite[]{this.a(-257, this.field_A, this.field_E), this.a(-257, this.field_x, this.field_F)};
-        this.field_v = this.a(false);
+        this.field_z = new Sprite[]{this.createStripedFillSprite(-257, this.field_A, this.field_E), this.createStripedFillSprite(-257, this.field_x, this.field_F)};
+        this.field_v = this.createRoundedEndMask(false);
         this.field_D = this.field_v.copyFlippedHorizontally();
         this.field_I = new Sprite(this.field_i >> 1, this.field_i);
     }

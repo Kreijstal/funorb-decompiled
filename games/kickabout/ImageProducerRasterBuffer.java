@@ -222,8 +222,8 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
           }
           if (null == MachineTokenStorageSupport.field_e) {
             FaceNormal.field_c = false;
-            var1 = NotCommand.h(-2521) - MarkerSliderWidget.field_E[BufferedCacheFile.field_a];
-            var2 = IsaacRandom.a(true) - ButtonMenuScreen.field_r[BufferedCacheFile.field_a];
+            var1 = NotCommand.getCameraX(-2521) - MarkerSliderWidget.field_E[BufferedCacheFile.field_a];
+            var2 = IsaacRandom.getCameraY(true) - ButtonMenuScreen.field_r[BufferedCacheFile.field_a];
             if (var2 * var2 + var1 * var1 < 10000) {
               fieldTemp$0 = BufferedCacheFile.field_a + 1;
               BufferedCacheFile.field_a = BufferedCacheFile.field_a + 1;
@@ -238,8 +238,8 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
               IterableNodeHashTable.a(true, (byte) 89);
             } else {
               FaceNormal.field_c = false;
-              var1Lifetime4 = NotCommand.h(-2521) - MarkerSliderWidget.field_E[BufferedCacheFile.field_a];
-              var2Lifetime4 = IsaacRandom.a(true) - ButtonMenuScreen.field_r[BufferedCacheFile.field_a];
+              var1Lifetime4 = NotCommand.getCameraX(-2521) - MarkerSliderWidget.field_E[BufferedCacheFile.field_a];
+              var2Lifetime4 = IsaacRandom.getCameraY(true) - ButtonMenuScreen.field_r[BufferedCacheFile.field_a];
               if (var2Lifetime4 * var2Lifetime4 + var1Lifetime4 * var1Lifetime4 < 10000) {
                 fieldTemp$1 = BufferedCacheFile.field_a + 1;
                 BufferedCacheFile.field_a = BufferedCacheFile.field_a + 1;
@@ -252,8 +252,8 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
           }
           if (GameModesHelpScreen.field_G.screenId == 0) {
             FaceNormal.field_c = false;
-            var1Lifetime5 = NotCommand.h(-2521) - MarkerSliderWidget.field_E[BufferedCacheFile.field_a];
-            var2Lifetime5 = IsaacRandom.a(true) - ButtonMenuScreen.field_r[BufferedCacheFile.field_a];
+            var1Lifetime5 = NotCommand.getCameraX(-2521) - MarkerSliderWidget.field_E[BufferedCacheFile.field_a];
+            var2Lifetime5 = IsaacRandom.getCameraY(true) - ButtonMenuScreen.field_r[BufferedCacheFile.field_a];
             if (var2Lifetime5 * var2Lifetime5 + var1Lifetime5 * var1Lifetime5 < 10000) {
               fieldTemp$2 = BufferedCacheFile.field_a + 1;
               BufferedCacheFile.field_a = BufferedCacheFile.field_a + 1;
@@ -268,8 +268,8 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
             return;
           }
           FaceNormal.field_c = false;
-          var1Lifetime6 = NotCommand.h(-2521) - MarkerSliderWidget.field_E[BufferedCacheFile.field_a];
-          var2Lifetime6 = IsaacRandom.a(true) - ButtonMenuScreen.field_r[BufferedCacheFile.field_a];
+          var1Lifetime6 = NotCommand.getCameraX(-2521) - MarkerSliderWidget.field_E[BufferedCacheFile.field_a];
+          var2Lifetime6 = IsaacRandom.getCameraY(true) - ButtonMenuScreen.field_r[BufferedCacheFile.field_a];
           if (var2Lifetime6 * var2Lifetime6 + var1Lifetime6 * var1Lifetime6 < 10000) {
             fieldTemp$3 = BufferedCacheFile.field_a + 1;
             BufferedCacheFile.field_a = BufferedCacheFile.field_a + 1;
@@ -285,8 +285,8 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
         }
         if (null == MachineTokenStorageSupport.field_e) {
           FaceNormal.field_c = false;
-          var1Lifetime1 = NotCommand.h(-2521) - MarkerSliderWidget.field_E[BufferedCacheFile.field_a];
-          var2Lifetime1 = IsaacRandom.a(true) - ButtonMenuScreen.field_r[BufferedCacheFile.field_a];
+          var1Lifetime1 = NotCommand.getCameraX(-2521) - MarkerSliderWidget.field_E[BufferedCacheFile.field_a];
+          var2Lifetime1 = IsaacRandom.getCameraY(true) - ButtonMenuScreen.field_r[BufferedCacheFile.field_a];
           if (var2Lifetime1 * var2Lifetime1 + var1Lifetime1 * var1Lifetime1 < 10000) {
             fieldTemp$4 = BufferedCacheFile.field_a + 1;
             BufferedCacheFile.field_a = BufferedCacheFile.field_a + 1;
@@ -302,8 +302,8 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
               IterableNodeHashTable.a(true, (byte) 89);
             } else {
               FaceNormal.field_c = false;
-              var1Lifetime2 = NotCommand.h(-2521) - MarkerSliderWidget.field_E[BufferedCacheFile.field_a];
-              var2Lifetime2 = IsaacRandom.a(true) - ButtonMenuScreen.field_r[BufferedCacheFile.field_a];
+              var1Lifetime2 = NotCommand.getCameraX(-2521) - MarkerSliderWidget.field_E[BufferedCacheFile.field_a];
+              var2Lifetime2 = IsaacRandom.getCameraY(true) - ButtonMenuScreen.field_r[BufferedCacheFile.field_a];
               if (var2Lifetime2 * var2Lifetime2 + var1Lifetime2 * var1Lifetime2 < 10000) {
                 fieldTemp$5 = BufferedCacheFile.field_a + 1;
                 BufferedCacheFile.field_a = BufferedCacheFile.field_a + 1;
@@ -315,8 +315,8 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
             return;
           }
           FaceNormal.field_c = false;
-          var1Lifetime2Lifetime1 = NotCommand.h(-2521) - MarkerSliderWidget.field_E[BufferedCacheFile.field_a];
-          var2Lifetime2Lifetime1 = IsaacRandom.a(true) - ButtonMenuScreen.field_r[BufferedCacheFile.field_a];
+          var1Lifetime2Lifetime1 = NotCommand.getCameraX(-2521) - MarkerSliderWidget.field_E[BufferedCacheFile.field_a];
+          var2Lifetime2Lifetime1 = IsaacRandom.getCameraY(true) - ButtonMenuScreen.field_r[BufferedCacheFile.field_a];
           if (var2Lifetime2Lifetime1 * var2Lifetime2Lifetime1 + var1Lifetime2Lifetime1 * var1Lifetime2Lifetime1 < 10000) {
             fieldTemp$6 = BufferedCacheFile.field_a + 1;
             BufferedCacheFile.field_a = BufferedCacheFile.field_a + 1;
@@ -328,8 +328,8 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
         }
         if (AuctionLogEntry.field_h.screenId == 0) {
           FaceNormal.field_c = false;
-          var1Lifetime3 = NotCommand.h(-2521) - MarkerSliderWidget.field_E[BufferedCacheFile.field_a];
-          var2Lifetime3 = IsaacRandom.a(true) - ButtonMenuScreen.field_r[BufferedCacheFile.field_a];
+          var1Lifetime3 = NotCommand.getCameraX(-2521) - MarkerSliderWidget.field_E[BufferedCacheFile.field_a];
+          var2Lifetime3 = IsaacRandom.getCameraY(true) - ButtonMenuScreen.field_r[BufferedCacheFile.field_a];
           if (var2Lifetime3 * var2Lifetime3 + var1Lifetime3 * var1Lifetime3 < 10000) {
             fieldTemp$7 = BufferedCacheFile.field_a + 1;
             BufferedCacheFile.field_a = BufferedCacheFile.field_a + 1;

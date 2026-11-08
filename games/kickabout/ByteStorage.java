@@ -8,7 +8,7 @@ abstract class ByteStorage {
     static int[] field_d;
     static boolean field_c;
 
-    abstract byte[] a(int param0);
+    abstract byte[] getBytes(int param0);
 
     abstract void setBytes(byte[] param0, int param1);
 
@@ -39,7 +39,7 @@ abstract class ByteStorage {
         field_b = null;
     }
 
-    final static void a(PacketBuffer param0, int param1) {
+    final static void readPackedRankingStatistics(PacketBuffer param0, int param1) {
         int var2_int = 0;
         int var2_intLifetime1;
         int var2_intLifetime2;

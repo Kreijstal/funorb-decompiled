@@ -202,11 +202,11 @@ final class MySquadScreen extends TeamManagementScreen {
           stackIn_6_3 = -107;
           stackIn_7_4 = !(TextFieldValidator.areAccountTrinketsDisabled(param0 ^ 4));
           stackIn_11_2 = (((PlayerStats) (Object) stackIn_6_2).hasActiveHorrorCostume((byte) stackIn_6_3, stackIn_7_4)) && (AccountRegistrationResponse.isHalloweenAppearanceEnabled((byte) 47));
-          var7 = TriangleMesh.a(stackIn_6_0, stackIn_6_1, stackIn_11_2);
+          var7 = TriangleMesh.getPlayerPortraitWithClubDefaults(stackIn_6_0, stackIn_6_1, stackIn_11_2);
           var8 = -36 + this.field_I.field_F + this.field_I.field_q;
           var9 = this.field_I.field_T + 40;
           if (var7 != null) {
-            ((Sprite) ((Object) var7)).c(var8 - (((Sprite) ((Object) var7)).field_o >> 1), -(((Sprite) ((Object) var7)).field_v >> 1) + var9);
+            ((Sprite) ((Object) var7)).draw(var8 - (((Sprite) ((Object) var7)).field_o >> 1), -(((Sprite) ((Object) var7)).field_v >> 1) + var9);
           } else {
             ReceivedAuctionItemRow.a(var8, param0 - 94, var9);
           }

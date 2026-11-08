@@ -219,7 +219,7 @@ final class WhirlpoolHasher {
               FootballerAiOverlaySupport.field_d.writeByte(106, 16);
               FootballerAiOverlaySupport.field_d.field_n = FootballerAiOverlaySupport.field_d.field_n + 1;
               var9 = FootballerAiOverlaySupport.field_d.field_n;
-              IconLabel.a(ManagerAction.field_h, FootballerAiOverlaySupport.field_d, (byte) -89, InstrumentEnvelope.field_a, CascadingMenu.field_Nb);
+              IconLabel.writeEncryptedLoginBuffer(ManagerAction.field_h, FootballerAiOverlaySupport.field_d, (byte) -89, InstrumentEnvelope.field_a, CascadingMenu.field_Nb);
               FootballerAiOverlaySupport.field_d.backpatchByteLength(62, -var9 + FootballerAiOverlaySupport.field_d.field_n);
             } else {
               var9 = 0;
@@ -244,7 +244,7 @@ final class WhirlpoolHasher {
                 var11_ref_String = "";
               }
               FootballerAiOverlaySupport.field_d.writeString(14190, var11_ref_String);
-              IconLabel.a(ManagerAction.field_h, FootballerAiOverlaySupport.field_d, (byte) -94, InstrumentEnvelope.field_a, CascadingMenu.field_Nb);
+              IconLabel.writeEncryptedLoginBuffer(ManagerAction.field_h, FootballerAiOverlaySupport.field_d, (byte) -94, InstrumentEnvelope.field_a, CascadingMenu.field_Nb);
               FootballerAiOverlaySupport.field_d.backpatchShortLength(-var10 + FootballerAiOverlaySupport.field_d.field_n, 62);
             }
             ClientPacketFlushSupport.flushPackets(-1, false);

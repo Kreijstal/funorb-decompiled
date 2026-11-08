@@ -158,7 +158,7 @@ final class LobbyPlayerRow extends UiLayoutNode {
             var10 = (RenderedFootballer) (IntrusiveDequeCursor.field_b.getControlledFootballer((byte) -76, TrinketShopDialog.field_G));
             var2 = SocialListLayoutSupport.worldToScreenX(param0, var10.field_kb >> 16);
             var3 = IntKeyLookup.projectPitchY((byte) -119, var10.field_bb >> 16);
-            if (!TextHotspotWidget.a(var2, var3, param0 ^ 480)) {
+            if (!TextHotspotWidget.intersectsPlayerViewport(var2, var3, param0 ^ 480)) {
               var2 = 320;
               var3 = 240;
             }

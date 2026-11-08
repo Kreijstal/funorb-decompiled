@@ -32,7 +32,7 @@ final class RenderedFootballer extends FootballerAgent {
     boolean field_Z;
     private boolean field_Y;
 
-    final static CoverageBitmapFont a(ResourceArchive param0, int param1, String param2, ResourceArchive param3, String param4) {
+    final static CoverageBitmapFont loadFontByName(ResourceArchive param0, int param1, String param2, ResourceArchive param3, String param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -53,9 +53,9 @@ final class RenderedFootballer extends FootballerAgent {
           var6 = param3.getFileId((byte) -107, param2, var5_int);
           if (param1 != 10) {
             var7 = (String) null;
-            RenderedFootballer.a((ResourceArchive) null, -21, (String) null, (ResourceArchive) null, (String) null);
+            RenderedFootballer.loadFontByName((ResourceArchive) null, -21, (String) null, (ResourceArchive) null, (String) null);
           }
-          stackIn_3_0 = TriangleMesh.a(var5_int, param3, param1 - 84, var6, param0);
+          stackIn_3_0 = TriangleMesh.loadFont(var5_int, param3, param1 - 84, var6, param0);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -89,7 +89,7 @@ final class RenderedFootballer extends FootballerAgent {
         }
     }
 
-    final static void a(int param0, boolean param1, UiLayoutNode param2, SquadSlotWidget param3) {
+    final static void drawPlayerSaleSummary(int param0, boolean param1, UiLayoutNode param2, SquadSlotWidget param3) {
         PlayerStats stackIn_7_0;
         int stackIn_7_1;
         PlayerStats stackIn_7_2;
@@ -116,7 +116,7 @@ final class RenderedFootballer extends FootballerAgent {
         try {
           if (param0 != -5186) {
             var12 = (String) null;
-            RenderedFootballer.a((ResourceArchive) null, -89, (String) null, (ResourceArchive) null, (String) null);
+            RenderedFootballer.loadFontByName((ResourceArchive) null, -89, (String) null, (ResourceArchive) null, (String) null);
           }
           SoftwareRasterizer.fillRoundedRectangleBlended(param2.field_F + 6, 26 + param2.field_T, -12 + param2.field_q, -32 + param2.field_mb, 10, 65793, 96);
           if (param3 != null) {
@@ -126,13 +126,13 @@ final class RenderedFootballer extends FootballerAgent {
             stackIn_7_3 = -107;
             stackIn_8_4 = !(TextFieldValidator.areAccountTrinketsDisabled(param0 ^ 5185));
             stackIn_12_2 = (((PlayerStats) (Object) stackIn_7_2).hasActiveHorrorCostume((byte) stackIn_7_3, stackIn_8_4)) && (AccountRegistrationResponse.isHalloweenAppearanceEnabled((byte) 83));
-            var4 = TriangleMesh.a(stackIn_7_0, stackIn_7_1, stackIn_12_2);
+            var4 = TriangleMesh.getPlayerPortraitWithClubDefaults(stackIn_7_0, stackIn_7_1, stackIn_12_2);
             var5 = param2.field_q + param2.field_F - 38;
             var6 = param2.field_T + 58;
             if (var4 == null) {
               ReceivedAuctionItemRow.a(var5, -128, var6);
             } else {
-              ((Sprite) ((Object) var4)).c(var5 - (((Sprite) ((Object) var4)).field_o >> 1), var6 - (((Sprite) ((Object) var4)).field_v >> 1));
+              ((Sprite) ((Object) var4)).draw(var5 - (((Sprite) ((Object) var4)).field_o >> 1), var6 - (((Sprite) ((Object) var4)).field_v >> 1));
             }
             var7 = LocalizedTextLoader.formatCurrencyAmount(ImageProducerRasterBuffer.a(param3.field_Eb, true), 26300);
             var8 = Math.max(param2.field_F + 15, 66 + (param2.field_F - (IsSixCommand.field_C.stringWidth(var7) >> 1)));
@@ -210,9 +210,9 @@ final class RenderedFootballer extends FootballerAgent {
           this.action == 4) {
           var7 = this.actionTime * (2048 / BuyPitchDialog.field_I[4]) + var7 & 2047;
         }
-        var8.a(0, var7, 0, param1, 0, 0, 0, param0);
+        var8.drawOrthographic(0, var7, 0, param1, 0, 0, 0, param0);
         if (param4 >= -63) {
-          this.d(true);
+          this.drawFootballer(true);
         }
     }
 
@@ -231,7 +231,7 @@ final class RenderedFootballer extends FootballerAgent {
         }
         if (param0 != 109) {
           var9 = (String) null;
-          RenderedFootballer.a((String) null, true, (byte) -48);
+          RenderedFootballer.enqueueFadingChatMessage((String) null, true, (byte) -48);
         }
         if (KitPatternMaskSupport.field_c == 0) {
           var2 = 74;
@@ -239,8 +239,8 @@ final class RenderedFootballer extends FootballerAgent {
           var2 = (KitPatternMaskSupport.field_c != 1) ? 62 : 68;
         }
         var2 = var2 + ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(127, 2, MidiPcmStream.field_l);
-        var3 = NotCommand.h(-2521);
-        var4 = IsaacRandom.a(true);
+        var3 = NotCommand.getCameraX(-2521);
+        var4 = IsaacRandom.getCameraY(true);
         if (512 > Math.abs((this.positionX >> 16) - var3) &&
           Math.abs(-var4 + (this.positionY >> 16)) < 512) {
           var5 = LocalizedTextLoader.approximateHypotenuse(-var3 + (this.positionX >> 16), true, (this.positionY >> 16) - var4);
@@ -273,7 +273,7 @@ final class RenderedFootballer extends FootballerAgent {
         return;
     }
 
-    final void d(boolean param0) {
+    final void drawFootballer(boolean param0) {
         StringBuilder discarded$6 = null;
         StringBuilder discarded$7 = null;
         StringBuilder discarded$8 = null;
@@ -310,7 +310,7 @@ final class RenderedFootballer extends FootballerAgent {
         var21 = Kickabout.field_G;
         var2 = 1900;
         var3 = SocialListLayoutSupport.worldToScreenX(0, this.getRenderedX(1606384336));
-        var4 = IntKeyLookup.projectPitchY((byte) -119, this.h(1000));
+        var4 = IntKeyLookup.projectPitchY((byte) -119, this.getPerspectiveAdjustedY(1000));
         var5 = InstrumentNoteMask.field_i * 40 >> 8;
         var6 = InstrumentNoteMask.field_i * 70 >> 8;
         var7 = InstrumentNoteMask.field_i * 10 >> 8;
@@ -436,7 +436,7 @@ final class RenderedFootballer extends FootballerAgent {
         return this.field_kb >> 16;
     }
 
-    final static FadingChatMessage a(String param0, boolean param1, byte param2) {
+    final static FadingChatMessage enqueueFadingChatMessage(String param0, boolean param1, byte param2) {
         FadingChatMessage var3 = null;
         RuntimeException var3_ref = null;
         FadingChatMessage stackIn_6_0 = null;
@@ -821,7 +821,7 @@ final class RenderedFootballer extends FootballerAgent {
         return 1536;
     }
 
-    final static void a(int param0, int param1, boolean param2, int param3, int param4, int param5, boolean param6, int param7, int param8, boolean param9, boolean param10, boolean param11, int param12, int param13) {
+    final static void updateSharedInterface(int param0, int param1, boolean param2, int param3, int param4, int param5, boolean param6, int param7, int param8, boolean param9, boolean param10, boolean param11, int param12, int param13) {
         UrlRequest.field_e = null;
         NetworkGameClient.showPendingServerNotice(true);
         param11 = UiInputRoutingSupport.routePointerInput(param4, 50, param5, param11, param13, param12, param1);
@@ -853,7 +853,7 @@ final class RenderedFootballer extends FootballerAgent {
         }
     }
 
-    final int h(int param0) {
+    final int getPerspectiveAdjustedY(int param0) {
         int var4 = 0;
         int var2 = this.field_bb >> 16;
         int var3 = this.field_X >> 16;
@@ -922,7 +922,7 @@ final class RenderedFootballer extends FootballerAgent {
         }
     }
 
-    final static void i(int param0) {
+    final static void restoreSharedDefaultButtons(int param0) {
         int var2 = 0;
         ButtonMenuScreen[] var1 = null;
         ButtonMenuScreen var3 = null;

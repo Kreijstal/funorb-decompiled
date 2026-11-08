@@ -154,7 +154,7 @@ final class LeaguesHelpScreen extends PagedHelpScreen {
             }
           }
           for (var4Lifetime1Lifetime1 = 0; WriteIntegersCommand.field_E.length > var4Lifetime1Lifetime1; var4Lifetime1Lifetime1++) {
-            WriteIntegersCommand.field_E[var4Lifetime1Lifetime1].d(30 * var4Lifetime1Lifetime1 + this.slideOffsetX + 50, 150);
+            WriteIntegersCommand.field_E[var4Lifetime1Lifetime1].drawOpaque(30 * var4Lifetime1Lifetime1 + this.slideOffsetX + 50, 150);
           }
         }
     }

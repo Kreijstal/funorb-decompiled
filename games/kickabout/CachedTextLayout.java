@@ -17,7 +17,7 @@ final class CachedTextLayout extends TextLayout {
     static String field_d;
     static String field_f;
 
-    final static void a(CommonGame param0, int param1, int param2) {
+    final static void initializeMatchMinimap(CommonGame param0, int param1, int param2) {
         try {
           LoginMethod.field_d = true;
           PasswordLoginCredentials.field_i = -SquadPickerDialog.field_Q.field_o;
@@ -30,7 +30,7 @@ final class CachedTextLayout extends TextLayout {
         }
     }
 
-    final static int[] c(int param0) {
+    final static int[] createEightIntBuffer(int param0) {
         if (param0 != -23091) {
           CachedTextLayout.releaseStatics((byte) -38);
           return new int[8];
@@ -78,7 +78,7 @@ final class CachedTextLayout extends TextLayout {
         }
     }
 
-    final void a(int param0, String param1, byte param2, BitmapFont param3, int param4) {
+    final void layoutLeftAlignedLine(int param0, String param1, byte param2, BitmapFont param3, int param4) {
         TextLayoutLine var8 = null;
         TextLayoutLine var9 = null;
         if (param1 == null) {
@@ -100,7 +100,7 @@ final class CachedTextLayout extends TextLayout {
           var9.field_b[param1.length()] = param3.stringWidth(param1) + param0;
           if (param2 != 80) {
             CommonGame var7 = (CommonGame) null;
-            CachedTextLayout.a((CommonGame) null, -19, 117);
+            CachedTextLayout.initializeMatchMinimap((CommonGame) null, -19, 117);
           }
           TextLineLayoutSupport.computeCharacterPositions(param3, param1, var9, 0, -1942293368);
         } catch (RuntimeException runtimeException) {
@@ -108,7 +108,7 @@ final class CachedTextLayout extends TextLayout {
         }
     }
 
-    final void a(int param0, BitmapFont param1, int param2, int param3, int param4, byte param5, String param6, int param7) {
+    final void layoutWrappedText(int param0, BitmapFont param1, int param2, int param3, int param4, byte param5, String param6, int param7) {
         TextLayoutLine stackIn_36_0;
         TextLayoutLine stackIn_36_1;
         int stackIn_36_2;
@@ -246,7 +246,7 @@ final class CachedTextLayout extends TextLayout {
         }
     }
 
-    final void a(byte param0, String param1, int param2, int param3, BitmapFont param4) {
+    final void layoutRightAlignedLine(byte param0, String param1, int param2, int param3, BitmapFont param4) {
         TextLayoutLine var8 = null;
         TextLayoutLine var9 = null;
         if (param1 == null) {
@@ -287,7 +287,7 @@ final class CachedTextLayout extends TextLayout {
         field_q = null;
     }
 
-    final void a(int param0, int param1, BitmapFont param2, String param3, int param4) {
+    final void layoutCenteredLine(int param0, int param1, BitmapFont param2, String param3, int param4) {
         TextLayoutLine var8 = null;
         int var7 = 0;
         if (param3 == null) {
@@ -312,7 +312,7 @@ final class CachedTextLayout extends TextLayout {
         }
     }
 
-    final static void b(int param0, int param1, int param2) {
+    final static void setMinimapPosition(int param0, int param1, int param2) {
         PasswordLoginCredentials.field_i = param0;
         if (param1 < 76) {
           field_d = (String) null;

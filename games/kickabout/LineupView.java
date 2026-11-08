@@ -458,7 +458,7 @@ final class LineupView extends MatchPhaseView {
             ConsoleTokenCursor.field_d.drawCentered(this.field_a.field_S[var5_int].toLowerCase(), SoftwareRasterizer.field_g >> 1, -1 + SoftwareRasterizer.field_f, 16777062, -1);
             TeamManagementScreen.e(param0 + 116);
             SoftwareDrawingSupport.outlineSpriteInPlace(QuickChatCommandType.field_b, 65793);
-            QuickChatCommandType.field_b.c(-(QuickChatCommandType.field_b.field_o >> 1) + var6, var7 - QuickChatCommandType.field_b.field_v);
+            QuickChatCommandType.field_b.draw(-(QuickChatCommandType.field_b.field_o >> 1) + var6, var7 - QuickChatCommandType.field_b.field_v);
           }
         }
         if (this.field_l != -1) {
@@ -474,7 +474,7 @@ final class LineupView extends MatchPhaseView {
             if (this.field_h == this.field_a.field_g[var11].team) {
               SoftwareRasterizer.fillRoundedRectangleBlended(412, var4Lifetime5, 186, 21, 7, 65793, 128);
               if (this.field_a.field_o.isReadyOrInactive(param0 - 87, var11)) {
-                PitchDecorationSupport.field_l.c(574, var4Lifetime5 - 4);
+                PitchDecorationSupport.field_l.draw(574, var4Lifetime5 - 4);
               }
               var4Lifetime5 += 23;
             }

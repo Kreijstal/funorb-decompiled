@@ -92,9 +92,9 @@ final class Checkbox extends TextButton {
         }
     }
 
-    final void b(int param0, int param1, int param2, int param3) {
+    final void dispatchAction(int param0, int param1, int param2, int param3) {
         this.field_A = !this.field_A ? true : false;
-        super.b(param0, param1, param2, param3);
+        super.dispatchAction(param0, param1, param2, param3);
     }
 
     public static void releaseStatics(byte param0) {

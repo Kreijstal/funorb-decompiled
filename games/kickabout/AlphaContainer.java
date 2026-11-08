@@ -40,8 +40,8 @@ final class AlphaContainer extends SingleChildContainer {
           } else {
             stackIn_7_1 = -120;
           }
-          ((Sprite) (Object) stackIn_6_0).d(stackIn_7_1, 0);
-          var4.c(0, 0);
+          ((Sprite) (Object) stackIn_6_0).drawOpaque(stackIn_7_1, 0);
+          var4.draw(0, 0);
           var6 = (PlayerModelPreview) (param2.first(24009));
           while (var6 != null) {
             var6.a(param3, -2);
@@ -113,7 +113,7 @@ final class AlphaContainer extends SingleChildContainer {
         PacketBuffer.a(-46, var6);
         this.field_z.drawLayer(param0, (int) (char)param1, 0, 0);
         TeamManagementScreen.e(127);
-        var6.b(param2 + this.field_t, this.field_g + param3, this.field_F);
+        var6.drawAlpha(param2 + this.field_t, this.field_g + param3, this.field_F);
     }
 
     static {

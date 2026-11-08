@@ -63,10 +63,10 @@ final class ServerMessageScreen extends ButtonMenuScreen {
             ServerMessageScreen.a((byte) -36, 37L);
           }
           for (var21 = param7; param1 > var21; var21++) {
-            var9_int = var13 + DirectByteStorage.a(GameModesHelpScreen.field_F, param2 ^ -4, param0, param4, var21);
-            var10 = DirectByteStorage.a(IntrusiveDeque.field_g, 111, param0, param4, var21) + var14;
-            var11 = var15 + DirectByteStorage.a(RenderedFootballer.field_fb, 121, param0, param4, var21);
-            var12 = var16 + DirectByteStorage.a(RandomAccessCacheFile.field_i, 110, param0, param4, var21);
+            var9_int = var13 + DirectByteStorage.colorBoxSliceMoment(GameModesHelpScreen.field_F, param2 ^ -4, param0, param4, var21);
+            var10 = DirectByteStorage.colorBoxSliceMoment(IntrusiveDeque.field_g, 111, param0, param4, var21) + var14;
+            var11 = var15 + DirectByteStorage.colorBoxSliceMoment(RenderedFootballer.field_fb, 121, param0, param4, var21);
+            var12 = var16 + DirectByteStorage.colorBoxSliceMoment(RandomAccessCacheFile.field_i, 110, param0, param4, var21);
             if (var12 != 0) {
               var17 = ((double)var10 * (double)var10 + (double)var9_int * (double)var9_int + (double)var11 * (double)var11) / (double)var12;
               var12 = -var12 + param6;

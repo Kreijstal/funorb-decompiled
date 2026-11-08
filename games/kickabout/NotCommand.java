@@ -98,7 +98,7 @@ final class NotCommand extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 84) {
-            NotCommand.h(5);
+            NotCommand.getCameraX(5);
           }
           stackIn_3_0 = new ConsoleValue(WelcomeDialog.negate(param1[0].asBoolean(param0 - 84), (byte) -48));
           return stackIn_3_0;
@@ -120,7 +120,7 @@ final class NotCommand extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    final static int h(int param0) {
+    final static int getCameraX(int param0) {
         if (param0 != -2521) {
           field_C = (String) null;
           return (int)UiLayoutNode.field_K;

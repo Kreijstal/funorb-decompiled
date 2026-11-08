@@ -156,9 +156,9 @@ final class CheatCodeListener implements OverlayLayer {
           this.field_i[var4].renderModel(var3, 0, SoftwareRasterizer.field_g >> 1, SoftwareRasterizer.field_f, (byte) -105);
           TeamManagementScreen.e(120);
           if (this.field_f > 136) {
-            this.field_b.b(-(this.field_b.field_o >> 1) + var8, -(this.field_b.field_v >> 1) + var9, 200 - this.field_f << 2);
+            this.field_b.drawAlpha(-(this.field_b.field_o >> 1) + var8, -(this.field_b.field_v >> 1) + var9, 200 - this.field_f << 2);
           } else {
-            this.field_b.c(-(this.field_b.field_o >> 1) + var8, var9 - (this.field_b.field_v >> 1));
+            this.field_b.draw(-(this.field_b.field_o >> 1) + var8, var9 - (this.field_b.field_v >> 1));
           }
         }
         var4Lifetime1 = -36 / ((50 - param0) / 45);

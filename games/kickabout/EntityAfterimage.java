@@ -70,7 +70,7 @@ final class EntityAfterimage {
         }
         int var2 = SocialListLayoutSupport.worldToScreenX(0, this.field_c) - this.field_g;
         int var3 = IntKeyLookup.projectPitchY((byte) -83, this.field_j) - this.field_h;
-        this.field_f.b(var2, var3, this.field_e * this.field_a / 17);
+        this.field_f.drawAlpha(var2, var3, this.field_e * this.field_a / 17);
         if (param0 < -1) {
           return;
         }

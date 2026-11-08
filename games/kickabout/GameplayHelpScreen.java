@@ -325,7 +325,7 @@ final class GameplayHelpScreen extends PagedHelpScreen {
         stackIn_3_0 = (AccountRegistrationPanel.field_C == null) ? 0 : 1;
         var2 = stackIn_3_0;
         if (var2 != 0) {
-          DirectByteStorage.field_g.c(this.slideOffsetX + 490, 112);
+          DirectByteStorage.field_g.draw(this.slideOffsetX + 490, 112);
         }
         IsSixCommand.field_C.drawText(ListingRowCache.field_g, this.slideOffsetX + 60, 136, 16777215, -1);
         var3 = 40 + this.slideOffsetX;
@@ -343,14 +343,14 @@ final class GameplayHelpScreen extends PagedHelpScreen {
             }
             var8 = stackIn_12_0;
             if (var8 != null) {
-              var8.c(var6, var7);
+              var8.draw(var6, var7);
             }
           }
           var3 += 220;
         }
         SoftwareRasterizer.fillRoundedRectangleBlended(40 + this.slideOffsetX, 360, 430, 43, 10, 65793, 140);
         if (WorldDrawEntry.field_f != null) {
-          WorldDrawEntry.field_f.c(120 + this.slideOffsetX, 363);
+          WorldDrawEntry.field_f.draw(120 + this.slideOffsetX, 363);
         }
         if (param0 != -128) {
           GameplayHelpScreen.j((byte) 0);
@@ -362,7 +362,7 @@ final class GameplayHelpScreen extends PagedHelpScreen {
           while (2 > var10) {
             var5Lifetime1 = this.slideOffsetX + (50 + var10 * 14);
             var6Lifetime1 = var10 * 12 + 361;
-            PlayAreaMovementSupport.field_d[var10].c(var5Lifetime1, var6Lifetime1);
+            PlayAreaMovementSupport.field_d[var10].draw(var5Lifetime1, var6Lifetime1);
             var10++;
           }
         }
@@ -552,7 +552,7 @@ final class GameplayHelpScreen extends PagedHelpScreen {
               }
               var14 = stackIn_27_0[stackIn_28_1];
               var15 = var14;
-              var14.c(var8[var10] - (var15.field_o >> 1), var9[var10] - (var15.field_v >> 1));
+              var14.draw(var8[var10] - (var15.field_o >> 1), var9[var10] - (var15.field_v >> 1));
             }
           }
           UrlRequest.field_k.drawHalfSize(var5 - (UrlRequest.field_k.field_o >> 2), -(UrlRequest.field_k.field_v >> 2) + 280);
@@ -581,7 +581,7 @@ final class GameplayHelpScreen extends PagedHelpScreen {
             var16 = stackIn_42_0[stackIn_43_1];
             stackIn_46_0 = (var4 == 0) ? 138 : 60;
             var12 = stackIn_46_0;
-            var16.c(var12 + var3, 324);
+            var16.draw(var12 + var3, 324);
           }
           var3 += 285;
         }
@@ -634,7 +634,7 @@ final class GameplayHelpScreen extends PagedHelpScreen {
           SoftwareRasterizer.fillRoundedRectangleBlended(var2, 190, 275, 208, 10, 65793, 140);
           ByteArrayPool.field_d.drawText(ModelMaterial.field_e[var4].toLowerCase(), var2 + 10, 212, 16777215, -1);
           for (var5 = 0; var5 < 4; var5++) {
-            GeneratedPanelPainter.field_g[var3[var4][var5]].getIconSprite(false).c(110 + (var2 + var5 * 40), 200);
+            GeneratedPanelPainter.field_g[var3[var4][var5]].getIconSprite(false).draw(110 + (var2 + var5 * 40), 200);
           }
           var5Lifetime1 = 242;
           for (var6 = 0; var6 < GoalkeeperAiSupport.field_c[var4].length; var6++) {

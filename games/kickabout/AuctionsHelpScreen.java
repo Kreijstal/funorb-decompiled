@@ -162,7 +162,7 @@ final class AuctionsHelpScreen extends PagedHelpScreen {
                 stackIn_23_0 = CipherPacketBuffer.field_q;
               }
               var4 = stackIn_23_0;
-              ((Sprite) ((Object) var4)).c(var3 * 45 + 380 + this.slideOffsetX, 145);
+              ((Sprite) ((Object) var4)).draw(var3 * 45 + 380 + this.slideOffsetX, 145);
             }
           }
         }

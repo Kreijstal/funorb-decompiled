@@ -193,9 +193,9 @@ final class StatefulTextPainter extends TextWidgetPainter {
           KeyedLoginCredentials.field_f = SpriteResourceSupport.loadNamedSprite((byte) 112, "commonui", param3, "jagex_logo_grey");
           IntrusiveDequeCursor.field_a = ModalStack.loadSpriteSheetByName(param3, -29, "commonui", "button");
           LoggedPlayer.field_g = ServerTextTemplate.a("validation", "commonui", 2, param3);
-          EmailSyntaxValidator.field_k = (BitmapFont) ((Object) RenderedFootballer.a(param1, 10, "arezzo12", param3, "commonui"));
-          ModelMaterial.field_a = (BitmapFont) ((Object) RenderedFootballer.a(param1, 10, "arezzo14", param3, "commonui"));
-          ConsoleLexer.field_b = (BitmapFont) ((Object) RenderedFootballer.a(param1, 10, "arezzo14bold", param3, "commonui"));
+          EmailSyntaxValidator.field_k = (BitmapFont) ((Object) RenderedFootballer.loadFontByName(param1, 10, "arezzo12", param3, "commonui"));
+          ModelMaterial.field_a = (BitmapFont) ((Object) RenderedFootballer.loadFontByName(param1, 10, "arezzo14", param3, "commonui"));
+          ConsoleLexer.field_b = (BitmapFont) ((Object) RenderedFootballer.loadFontByName(param1, 10, "arezzo14bold", param3, "commonui"));
           var17 = new Sprite(param0.takeFileByName("", "button.gif", 34), (java.awt.Component) ((Object) RegistrationRequestState.field_d));
           stackIn_3_0 = (ResourceArchive) (param3);
           stackIn_3_1 = "commonui";
@@ -231,13 +231,13 @@ final class StatefulTextPainter extends TextWidgetPainter {
           var15 = new Sprite(var9Lifetime1, var9Lifetime1);
           var18 = var15;
           var18.setRasterTarget();
-          var17.d(0, 0);
+          var17.drawOpaque(0, 0);
           var11 = new Sprite(var9Lifetime1, var9Lifetime1);
           var11.setRasterTarget();
-          var17.d(-var17.field_q + var9Lifetime1, 0);
+          var17.drawOpaque(-var17.field_q + var9Lifetime1, 0);
           var12 = new Sprite(-(2 * var9Lifetime1) + var17.field_q, var9Lifetime1);
           var12.setRasterTarget();
-          var17.d(-var9Lifetime1, 0);
+          var17.drawOpaque(-var9Lifetime1, 0);
           TeamManagementScreen.e(119);
           IntrusiveDequeCursor.field_a = new Sprite[]{var15, var12, var11};
           if (param2) {

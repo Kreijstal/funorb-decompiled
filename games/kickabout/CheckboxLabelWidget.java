@@ -228,7 +228,7 @@ final class CheckboxLabelWidget extends UiLayoutNode {
                   this.field_lb) {
                   if (this.field_gb) {
                     this.field_X.drawRightAligned(this.field_Hb, -35 + var3, this.field_mb + this.field_T - 9, var5, -1);
-                    var6.c(-26 + var3, this.field_T + ((this.field_mb - var6.field_v >> 1) - 2));
+                    var6.draw(-26 + var3, this.field_T + ((this.field_mb - var6.field_v >> 1) - 2));
                     return;
                   }
                   var7 = IntTripleCommand.h(40);
@@ -237,7 +237,7 @@ final class CheckboxLabelWidget extends UiLayoutNode {
                   }
                 }
                 this.field_X.drawRightAligned(this.field_Hb, -35 + var3, this.field_mb + this.field_T - 9, var5, -1);
-                var6.c(-26 + var3, this.field_T + ((this.field_mb - var6.field_v >> 1) - 2));
+                var6.draw(-26 + var3, this.field_T + ((this.field_mb - var6.field_v >> 1) - 2));
                 return;
               }
               this.a(true, (byte) -8);
@@ -276,7 +276,7 @@ final class CheckboxLabelWidget extends UiLayoutNode {
           }
         }
         this.field_X.drawRightAligned(this.field_Hb, -35 + var3, this.field_mb + this.field_T - 9, var5, -1);
-        var6.c(-26 + var3, this.field_T + ((this.field_mb - var6.field_v >> 1) - 2));
+        var6.draw(-26 + var3, this.field_T + ((this.field_mb - var6.field_v >> 1) - 2));
     }
 
     CheckboxLabelWidget(String param0, BitmapFont param1, int param2) {

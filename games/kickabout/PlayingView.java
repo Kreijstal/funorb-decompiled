@@ -687,7 +687,7 @@ final class PlayingView extends MatchPhaseView {
           }
           for (var3_int = 0; 2 > var3_int; var3_int++) {
             for (var4_int = 0; var4_int < 5; var4_int++) {
-              this.field_r.addLast(TextHotspotWidget.a((RenderedFootballer) (this.field_a.field_P[var3_int][var4_int]), 1), 3);
+              this.field_r.addLast(TextHotspotWidget.createFootballerDrawEntry((RenderedFootballer) (this.field_a.field_P[var3_int][var4_int]), 1), 3);
             }
           }
           this.field_r.addLast(ValidatedTextWidget.a((RenderedBall) (this.field_a.field_V), false), 3);
@@ -904,7 +904,7 @@ final class PlayingView extends MatchPhaseView {
         var3 = (RenderedFootballer) (this.field_a.getControlledFootballer((byte) -70, var2));
         if (this.field_a.participantHasBall(var2, -67)) {
           var4 = var3.getRenderedX(1606384336);
-          var5 = var3.h(1000);
+          var5 = var3.getPerspectiveAdjustedY(1000);
           var6 = var3.directionX * 0;
           var7 = 50 * var3.directionY;
           PitchAppearanceSupport.setProjectionTarget((double)this.field_q, 60, (double)(var6 + var4), (double)(var5 + var7));
@@ -1157,7 +1157,7 @@ final class PlayingView extends MatchPhaseView {
           this.field_l = true;
           MainMenuScreen.a(this.field_h, param1, param0, true);
           ArrayWidgetContainer.a(0, param0, var6_int, this.field_C);
-          CachedTextLayout.a(param0, var6_int, 50);
+          CachedTextLayout.initializeMatchMinimap(param0, var6_int, 50);
           KitPatternMaskSupport.buildMatchKitPreviewSprites(-3, param0, this.field_h);
           ByteArrayPool.setActiveMatch(param0, this.field_h, 101);
           this.field_q = 172;
@@ -1283,7 +1283,7 @@ final class PlayingView extends MatchPhaseView {
           for (var3Lifetime1 = 0; this.field_a.playerCount > var3Lifetime1; var3Lifetime1++) {
             if (this.field_a.participantStatus[var3Lifetime1].isActive(3511)) {
               var4_ref_gm = (RenderedFootballer) (this.field_a.getControlledFootballer((byte) 112, var3Lifetime1));
-              this.field_C[var3Lifetime1].c(SocialListLayoutSupport.worldToScreenX(0, var4_ref_gm.getRenderedX(1606384336)) - (this.field_C[var3Lifetime1].field_o >> 1), IntKeyLookup.projectPitchY((byte) -85, var4_ref_gm.h(1000)) - var2Lifetime1);
+              this.field_C[var3Lifetime1].draw(SocialListLayoutSupport.worldToScreenX(0, var4_ref_gm.getRenderedX(1606384336)) - (this.field_C[var3Lifetime1].field_o >> 1), IntKeyLookup.projectPitchY((byte) -85, var4_ref_gm.getPerspectiveAdjustedY(1000)) - var2Lifetime1);
             }
           }
         }

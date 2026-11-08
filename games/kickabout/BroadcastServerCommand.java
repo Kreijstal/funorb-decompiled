@@ -123,7 +123,7 @@ final class BroadcastServerCommand extends ConsoleCommand {
             stackIn_2_0 = (ConsoleValue) null;
             return stackIn_2_0;
           }
-          TextHotspotWidget.a(-28153, (String) (param1[0].field_d));
+          TextHotspotWidget.sendModeratorCommand(-28153, (String) (param1[0].field_d));
           stackIn_4_0 = new ConsoleValue("void");
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

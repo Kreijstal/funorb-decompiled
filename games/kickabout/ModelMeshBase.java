@@ -194,7 +194,7 @@ abstract class ModelMeshBase extends MeshObject {
     ModelMeshBase() {
     }
 
-    abstract ModelMeshBase a(boolean param0, boolean param1, boolean param2);
+    abstract ModelMeshBase copyForAnimation(boolean param0, boolean param1, boolean param2);
 
     abstract boolean beginAnimation();
 

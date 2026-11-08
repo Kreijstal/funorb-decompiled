@@ -49,18 +49,18 @@ final class LobbyMatchPreview {
           ByteArrayPool.field_d.drawParagraph(MusicPatchPcmStream.field_k.toUpperCase(), 0, 0, this.field_a, -32 + this.field_j >> 1, 16777215, -1, 1, 1, 0);
           ByteArrayPool.field_d.drawParagraph(MarkerSliderPainter.field_g.toUpperCase(), 0, -32 + this.field_j >> 1, this.field_a, -32 + this.field_j >> 1, 16777215, -1, 1, 1, 0);
           TeamManagementScreen.e(121);
-          StreetSceneryLoader.field_j.b(var2, var3, 96);
+          StreetSceneryLoader.field_j.drawAlpha(var2, var3, 96);
         }
         if (param0 < 63) {
           this.field_e = (LobbyGameRecord) null;
         }
-        SquadPickerDialog.field_Q.b(var2, var3, FriendsListPanel.getHudOpacity(false, (byte) 14));
+        SquadPickerDialog.field_Q.drawAlpha(var2, var3, FriendsListPanel.getHudOpacity(false, (byte) 14));
         if (this.field_e.field_f == 4) {
           PacketBuffer.a(-45, DraggableWidget.field_K);
           SoftwareRasterizer.clearFramebuffer();
           ColorQuantizationBox.drawMatchTimer(this.field_e.field_h, 0, false, DraggableWidget.field_K.field_q, 0, -52);
           TeamManagementScreen.e(119);
-          DraggableWidget.field_K.b((-50 + PitchOptionTile.field_yb >> 1) + var2, (-20 + IconLabel.field_Bb >> 1) + var3, 96);
+          DraggableWidget.field_K.drawAlpha((-50 + PitchOptionTile.field_yb >> 1) + var2, (-20 + IconLabel.field_Bb >> 1) + var3, 96);
         }
         if (this.field_e.field_f == 4) {
           AuctionListing.pushRasterClip(var2 + 1 + PitchOptionTile.field_yb, -22914, 1 + var2, IconLabel.field_Bb + var3 + 1, var3 + 1);
@@ -108,7 +108,7 @@ final class LobbyMatchPreview {
 
     final static void a(boolean param0, boolean param1, byte param2) {
         String var4 = (String) null;
-        TriangleMesh.$cfr$intArgs$a$842e35442ba4(-101, param1, param0, (String) null);
+        TriangleMesh.showLoginDialog(-101, param1, param0, (String) null);
         if (param2 > -35) {
           field_n = (String) null;
         }

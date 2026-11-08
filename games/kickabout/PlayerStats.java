@@ -983,7 +983,7 @@ final class PlayerStats implements PopupCard {
         if (var16 == null) {
           ReceivedAuctionItemRow.a(param1 + 24, -103, -19 + (param6 + 50));
         } else {
-          var16.c(7 + param1, 50 + param6 - (var16.field_v + 1));
+          var16.draw(7 + param1, 50 + param6 - (var16.field_v + 1));
         }
         ConsoleTokenCursor.field_d.drawRightAligned(this.getDisplayName(100), -10 + var13 + param1, 22 + param6, 16777215, 65793);
         ConsoleTokenCursor.field_d.drawRightAligned(RegistrationUiSupport.field_e[this.archetype], -10 + param1 + var13, 36 + param6, 16777215, 65793);

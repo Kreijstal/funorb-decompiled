@@ -107,22 +107,22 @@ final class CanvasResizePolicy {
             if (var6 >= 2048) {
               var6 -= 2048;
             }
-            var7.b(var6);
-            var7.a(0, 0, 256, 0, 0, 0, 0, param4);
-            var7.f();
-            var7.a(0, 0, 768, 0, 0, 0, 0, param4);
-            var7.f();
-            var7.a(0, 0, 1280, 0, 0, 0, 0, param4);
-            var7.f();
-            var7.a(0, 0, 1792, 0, 0, 0, 0, param4);
+            var7.rotateY(var6);
+            var7.drawOrthographic(0, 0, 256, 0, 0, 0, 0, param4);
+            var7.rotateYQuarterTurn();
+            var7.drawOrthographic(0, 0, 768, 0, 0, 0, 0, param4);
+            var7.rotateYQuarterTurn();
+            var7.drawOrthographic(0, 0, 1280, 0, 0, 0, 0, param4);
+            var7.rotateYQuarterTurn();
+            var7.drawOrthographic(0, 0, 1792, 0, 0, 0, 0, param4);
           } else {
             if (2 == FormationAgent.field_l) {
               var6 = param2 + 1280;
               if (var6 >= 2048) {
                 var6 -= 2048;
               }
-              var7.b(var6);
-              var7.a(0, 0, 1280, 0, 0, 0, 0, param4);
+              var7.rotateY(var6);
+              var7.drawOrthographic(0, 0, 1280, 0, 0, 0, 0, param4);
             }
           }
           TeamManagementScreen.e(124);

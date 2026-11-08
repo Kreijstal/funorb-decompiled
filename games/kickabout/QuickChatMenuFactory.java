@@ -163,7 +163,7 @@ final class QuickChatMenuFactory {
           AchievementSubmission var13 = (AchievementSubmission) null;
           QuickChatMenuFactory.writeAchievementSubmission(80, (AchievementSubmission) null, (byte) -28);
         }
-        RenderedFootballer.a(-79, param4, param5, 16777215, param2, param8, param9, 16777215, param6, param3, param11, param7, param10, param0);
+        RenderedFootballer.updateSharedInterface(-79, param4, param5, 16777215, param2, param8, param9, 16777215, param6, param3, param11, param7, param10, param0);
     }
 
     static {
@@ -177,6 +177,6 @@ final class QuickChatMenuFactory {
           AchievementSubmission var13 = (AchievementSubmission) null;
           QuickChatMenuFactory.writeAchievementSubmission(80, (AchievementSubmission) null, (byte) -28);
         }
-        RenderedFootballer.a(-79, param4, param5, 16777215, param2, param8, param9, 16777215, param6, param3, param11, param7, param10, param0);
+        RenderedFootballer.updateSharedInterface(-79, param4, param5, 16777215, param2, param8, param9, 16777215, param6, param3, param11, param7, param10, param0);
     }
 }

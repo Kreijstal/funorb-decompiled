@@ -145,9 +145,9 @@ class ButtonMenuScreen extends AppScreen {
           var8 = SocialListLayoutSupport.field_b[this.field_o][1];
           var5_ref_ut = SocialListLayoutSupport.field_b[this.field_o][0];
           for (var6Lifetime1 = 0; var6Lifetime1 < FormationAgent.field_f - var5_ref_ut.field_o; var6Lifetime1 = var6Lifetime1 + var8.field_o) {
-            var8.d(var6Lifetime1, var3Lifetime1);
+            var8.drawOpaque(var6Lifetime1, var3Lifetime1);
           }
-          var5_ref_ut.d(-var5_ref_ut.field_o + FormationAgent.field_f, var3Lifetime1);
+          var5_ref_ut.drawOpaque(-var5_ref_ut.field_o + FormationAgent.field_f, var3Lifetime1);
           var6Lifetime1Lifetime1 = var3Lifetime1 - (-var5_ref_ut.field_v + 18);
           if (null != this.field_w) {
             ByteArrayPool.field_d.drawText(this.field_w, 10, var6Lifetime1Lifetime1, 16777215, -1);
@@ -163,7 +163,7 @@ class ButtonMenuScreen extends AppScreen {
             if (var3_ref_js == this &&
               var4_ref_js instanceof ButtonMenuScreen &&
               ((ButtonMenuScreen) (var4_ref_js)).field_m) {
-              AccountTermsPanel.field_E.d(0, 430);
+              AccountTermsPanel.field_E.drawOpaque(0, 430);
             } else {
               var5Lifetime1 = (BuyPlayerDialog.field_I << 9) / 24;
               if (256 < var5Lifetime1) {
@@ -172,10 +172,10 @@ class ButtonMenuScreen extends AppScreen {
               if (this == AuctionLogEntry.field_h) {
                 var5Lifetime1 = -var5Lifetime1 + 256;
               }
-              AccountTermsPanel.field_E.b(0, 430, var5Lifetime1);
+              AccountTermsPanel.field_E.drawAlpha(0, 430, var5Lifetime1);
             }
           } else {
-            AccountTermsPanel.field_E.d(0, 430);
+            AccountTermsPanel.field_E.drawOpaque(0, 430);
           }
         }
         for (var3Lifetime2 = 0; var3Lifetime2 < this.buttonSelection.itemCount; var3Lifetime2++) {

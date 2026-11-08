@@ -169,9 +169,9 @@ final class ReceivedAuctionItemRow extends ListRow {
             stackIn_14_3 = -107;
             stackIn_15_4 = !(TextFieldValidator.areAccountTrinketsDisabled(-1));
             stackIn_19_2 = (((PlayerStats) (Object) stackIn_14_2).hasActiveHorrorCostume((byte) stackIn_14_3, stackIn_15_4)) && (AccountRegistrationResponse.isHalloweenAppearanceEnabled((byte) 1));
-            var5 = TriangleMesh.a(stackIn_14_0, stackIn_14_1, stackIn_19_2);
+            var5 = TriangleMesh.getPlayerPortraitWithClubDefaults(stackIn_14_0, stackIn_14_1, stackIn_19_2);
             if (var5 != null) {
-              var5.c(1 + var4, this.field_T + 4);
+              var5.draw(1 + var4, this.field_T + 4);
             } else {
               ReceivedAuctionItemRow.a(1 + var4 + 19, -97, this.field_T + 4 + 23);
             }
@@ -267,7 +267,7 @@ final class ReceivedAuctionItemRow extends ListRow {
         }
         int var3 = (int)(MonotonicClock.monotonicMillis(75) % 600L);
         var3 = var3 * 6 / 600;
-        DialogOverlay.field_f[var3].c(param0 - 19, param2 - 23);
+        DialogOverlay.field_f[var3].draw(param0 - 19, param2 - 23);
     }
 
     final static MusicPatch a(ResourceArchive param0, int param1, int param2) {

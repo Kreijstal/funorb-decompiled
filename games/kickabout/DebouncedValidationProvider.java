@@ -35,7 +35,7 @@ abstract class DebouncedValidationProvider implements ValidationSource {
           }
           if (param0 instanceof ByteStorage) {
             var4 = (ByteStorage) (param0);
-            stackIn_13_0 = var4.a(2);
+            stackIn_13_0 = var4.getBytes(2);
             return stackIn_13_0;
           }
           if (param2 == 18828) {

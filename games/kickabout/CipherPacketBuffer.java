@@ -39,10 +39,10 @@ final class CipherPacketBuffer extends PacketBuffer {
           ClientUiOverlay.pushRasterState(-12974);
           AppScreen.field_a = new Sprite(var3, param0 * var4 / 4);
           AppScreen.field_a.setRasterTarget();
-          var2.d(0, 0);
+          var2.drawOpaque(0, 0);
           SocialRowOrderSupport.field_e = new Sprite(var3, var4 - AppScreen.field_a.field_w);
           SocialRowOrderSupport.field_e.setRasterTarget();
-          var2.d(0, -AppScreen.field_a.field_w);
+          var2.drawOpaque(0, -AppScreen.field_a.field_w);
           SocialRowOrderSupport.field_e.field_n = AppScreen.field_a.field_w;
           TeamManagementScreen.e(123);
         } catch (RuntimeException runtimeException) {

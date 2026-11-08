@@ -253,7 +253,7 @@ final class AuctionsScreen extends ButtonMenuScreen {
           }
           var6[1].flipHorizontalInPlace();
           var6[2].rotateClockwise();
-          var6[param0].c();
+          var6[param0].rotateCounterclockwise();
           var7 = new Sprite[2][4][2];
           for (var8 = 0; var8 < 16; var8++) {
             stackIn_15_0 = ((8 & var8) != 0) ? 0 : 1;
@@ -265,7 +265,7 @@ final class AuctionsScreen extends ButtonMenuScreen {
             var12 = stackIn_21_0;
             var13 = new Sprite(param1.field_o, param1.field_v);
             PacketBuffer.a(-96, var13);
-            param1.d(0, 0);
+            param1.drawOpaque(0, 0);
             if (var11 == 0) {
               SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.field_g, SoftwareRasterizer.field_f);
             }
@@ -724,7 +724,7 @@ final class AuctionsScreen extends ButtonMenuScreen {
             PlayArea.a(MachineTokenStorageSupport.field_e.matchState, 0);
           } else {
             MachineTokenStorageSupport.field_e.beginPhase(26415, 2);
-            RenderedFootballer.a(GameKeyHandler.field_a, true, (byte) -117);
+            RenderedFootballer.enqueueFadingChatMessage(GameKeyHandler.field_a, true, (byte) -117);
           }
           StringCursor.a(false, (byte) -122, MachineTokenStorageSupport.field_e.matchState.tier, MachineTokenStorageSupport.field_e.matchState.surface);
         } catch (RuntimeException runtimeException) {

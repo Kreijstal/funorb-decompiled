@@ -97,7 +97,7 @@ class TextButton extends UiWidget {
             param3 != 83) {
             return false;
           }
-          this.b(1, -1, -1, -1);
+          this.dispatchAction(1, -1, -1, -1);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -160,7 +160,7 @@ class TextButton extends UiWidget {
             this.field_p != FootballerAgent.field_p) {
             if (this.containsPointer((byte) -70, param2, param3, BytePlusOneCommand.field_A, ArchiveManager.field_m) &&
               0 == FootballerAgent.field_p) {
-              this.b(this.field_p, -param2 + BytePlusOneCommand.field_A, ArchiveManager.field_m - param3, -1);
+              this.dispatchAction(this.field_p, -param2 + BytePlusOneCommand.field_A, ArchiveManager.field_m - param3, -1);
             }
             this.handlePointerRelease(param3, ArchiveManager.field_m, BytePlusOneCommand.field_A, param1, param0 - 13, param2);
           }
@@ -248,9 +248,9 @@ class TextButton extends UiWidget {
         }
     }
 
-    void b(int param0, int param1, int param2, int param3) {
+    void dispatchAction(int param0, int param1, int param2, int param3) {
         if (param3 != -1) {
-          this.b(117, -8, -51, -115);
+          this.dispatchAction(117, -8, -51, -115);
         }
         if (this.field_k != null &&
           this.field_k instanceof ButtonListener) {

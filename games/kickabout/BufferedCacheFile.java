@@ -28,7 +28,7 @@ final class BufferedCacheFile {
         }
     }
 
-    final static void a(byte param0) {
+    final static void snapshotMouseInput(byte param0) {
         Throwable decompiledCaughtException = null;
         Object var1 = null;
         var1 = ProxyAuthenticationRequiredException.field_e;
@@ -49,7 +49,7 @@ final class BufferedCacheFile {
         }
     }
 
-    final static boolean a(int param0, String param1) {
+    final static boolean isActivePrivateChatRecipient(int param0, String param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         CharSequence var3 = null;
@@ -85,7 +85,7 @@ final class BufferedCacheFile {
         }
     }
 
-    final static void a(int param0, int param1, BitmapFont param2, BitmapFont param3) {
+    final static void configureLoadingDisplay(int param0, int param1, BitmapFont param2, BitmapFont param3) {
         try {
           MatchTextInputOverlay.field_k = param1;
           MainMenuScreen.field_F = param3;
@@ -98,7 +98,7 @@ final class BufferedCacheFile {
         }
     }
 
-    private final void b(int param0) throws IOException {
+    private final void refillReadBuffer(int param0) throws IOException {
         int var2;
         int var3;
         int var4;
@@ -131,23 +131,23 @@ final class BufferedCacheFile {
         field_d = null;
     }
 
-    final void a(int param0, byte[] param1) throws IOException {
+    final void readFully(int param0, byte[] param1) throws IOException {
         try {
           if (param0 <= 57) {
             this.field_c = -73L;
           }
-          this.a(param1.length, 0, (byte) 115, param1);
+          this.readFully(param1.length, 0, (byte) 115, param1);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "ew.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final void close(int param0) throws IOException {
-        this.e(121);
+        this.flush(121);
         this.field_j.close(param0 ^ -111);
         if (param0 != 1) {
           String var3 = (String) null;
-          BufferedCacheFile.a(60, (String) null);
+          BufferedCacheFile.isActivePrivateChatRecipient(60, (String) null);
         }
     }
 
@@ -156,7 +156,7 @@ final class BufferedCacheFile {
         return this.field_f;
     }
 
-    final static void a(boolean param0, ResourceArchive param1, ResourceArchive param2, int param3) {
+    final static void initializeChatInterface(boolean param0, ResourceArchive param1, ResourceArchive param2, int param3) {
         try {
           BytePlusOneCommand.a(CheckboxLabelWidget.field_Ab, DisplayModeSupport.field_b, TrinketPickerDialog.field_F, SharedScrollbarState.field_b, MonotonicClock.field_d, param0, ClientProtocolStage.field_c, DoSomethingCommand.field_B, TextInputUiSupport.field_c, ConsoleEvaluationException.field_e, 5, RasterGammaSupport.field_c);
           ClassDescriptorSupport.field_d = ModalStack.loadSpriteSheetByName(param1, -127, "lobby", "chatfilter");
@@ -169,7 +169,7 @@ final class BufferedCacheFile {
         }
     }
 
-    final static int a(byte param0, int param1, CipherPacketBuffer param2, int param3, int param4, int param5) {
+    final static int readSignedFourRangeBits(byte param0, int param1, CipherPacketBuffer param2, int param3, int param4, int param5) {
         RuntimeException var6 = null;
         int stackIn_4_0 = 0;
         int stackIn_5_1 = 0;
@@ -210,7 +210,7 @@ final class BufferedCacheFile {
           } else {
             stackIn_14_6 = 0;
           }
-          stackIn_15_0 = PanelSpriteFactory.a(stackIn_4_0, stackIn_5_1, stackIn_8_2, stackIn_10_3, stackIn_10_4, stackIn_11_5, stackIn_14_6, param2, param5, param3);
+          stackIn_15_0 = PanelSpriteFactory.readSignedFourRangeValue(stackIn_4_0, stackIn_5_1, stackIn_8_2, stackIn_10_3, stackIn_10_4, stackIn_11_5, stackIn_14_6, param2, param5, param3);
           return stackIn_15_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -226,7 +226,7 @@ final class BufferedCacheFile {
         }
     }
 
-    final void a(int param0, int param1, byte param2, byte[] param3) throws IOException {
+    final void readFully(int param0, int param1, byte param2, byte[] param3) throws IOException {
         int incrementValue$0 = 0;
         RuntimeException stackIn_62_0 = null;
         StringBuilder stackIn_62_1 = null;
@@ -296,7 +296,7 @@ final class BufferedCacheFile {
             if ((decompiledFrameRemainder0) &&
               (decompiledFrameCompleted0) &&
               (0 < param0)) {
-              this.b(0);
+              this.refillReadBuffer(0);
               var9_intLifetime1Lifetime1 = param0;
               if (this.field_b < var9_intLifetime1Lifetime1) {
                 var9_intLifetime1Lifetime1 = this.field_b;
@@ -375,7 +375,7 @@ final class BufferedCacheFile {
         }
     }
 
-    final void a(int param0, int param1, int param2, byte[] param3) throws IOException {
+    final void write(int param0, int param1, int param2, byte[] param3) throws IOException {
         RuntimeException stackIn_55_0 = null;
         StringBuilder stackIn_55_1 = null;
         String stackIn_56_2 = null;
@@ -396,10 +396,10 @@ final class BufferedCacheFile {
             if (this.field_l != -1L) {
               if (this.field_m >= this.field_l) {
                 if ((this.field_l + (long)this.field_g) < this.field_m) {
-                  this.e(102);
+                  this.flush(102);
                 }
               } else {
-                this.e(102);
+                this.flush(102);
               }
             }
             if (param1 <= 37) {
@@ -413,7 +413,7 @@ final class BufferedCacheFile {
               this.field_m = this.field_m + (long)var5_int;
               param0 = param0 + var5_int;
               this.field_g = this.field_k.length;
-              this.e(109);
+              this.flush(109);
             }
             if (this.field_k.length >= param2) {
               if (param2 <= 0) {
@@ -485,7 +485,7 @@ final class BufferedCacheFile {
         }
     }
 
-    private final void e(int param0) throws IOException {
+    private final void flush(int param0) throws IOException {
         long var2;
         long var4;
         int var6;

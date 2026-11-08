@@ -32,15 +32,15 @@ final class SpriteButtonPainter extends TextWidgetPainter {
         SoftwareRasterizer.drawRectangle(1, 1, -2 + (PitchOptionTile.field_yb << 1), (IconLabel.field_Bb << 1) - 2, 16777215);
         SoftwareRasterizer.drawHorizontalLine(0, IconLabel.field_Bb, PitchOptionTile.field_yb << 1, 16777215);
         SoftwareRasterizer.drawHorizontalLine(0, 1 + IconLabel.field_Bb, PitchOptionTile.field_yb << 1, 16777215);
-        LoginMethod.a(2, var1, true, 16777215).c(-var1 + PitchOptionTile.field_yb, IconLabel.field_Bb - var1);
+        LoginMethod.a(2, var1, true, 16777215).draw(-var1 + PitchOptionTile.field_yb, IconLabel.field_Bb - var1);
         SoftwareRasterizer.drawThickRectangle(PitchOptionTile.field_yb - (var2 >> 1), 1, var2, var4, 2, 16777215);
         SoftwareRasterizer.drawThickRectangle(PitchOptionTile.field_yb - (var5 >> 1), 0, var5, var6, 2, 16777215);
         SoftwareRasterizer.drawThickRectangle(PitchOptionTile.field_yb - (var2 >> 1), -1 + (-var4 + IconLabel.field_Bb) + IconLabel.field_Bb, var2, var4, 2, 16777215);
         SoftwareRasterizer.drawThickRectangle(PitchOptionTile.field_yb - (var5 >> 1), -var6 + (IconLabel.field_Bb + IconLabel.field_Bb), var5, var6, 2, 16777215);
         AuctionListing.pushRasterClip(PitchOptionTile.field_yb + PitchOptionTile.field_yb, -22914, 0, -var4 + (IconLabel.field_Bb + IconLabel.field_Bb), var4);
         Sprite var8 = LoginMethod.a(2, var3, true, 16777215);
-        var8.c(-var3 + PitchOptionTile.field_yb, -var3 + var6);
-        var8.c(PitchOptionTile.field_yb - var3, -var3 + (IconLabel.field_Bb + IconLabel.field_Bb) - var6);
+        var8.draw(-var3 + PitchOptionTile.field_yb, -var3 + var6);
+        var8.draw(PitchOptionTile.field_yb - var3, -var3 + (IconLabel.field_Bb + IconLabel.field_Bb) - var6);
         TeamManagementScreen.e(param0 ^ -363021514);
         TeamManagementScreen.e(127);
         SquadPickerDialog.field_Q = new Sprite(2 + PitchOptionTile.field_yb, 2 + IconLabel.field_Bb);

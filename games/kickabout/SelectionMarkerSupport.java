@@ -18,19 +18,19 @@ final class SelectionMarkerSupport {
           return;
         }
         if (ArrayWidgetContainer.field_x != -1) {
-          SceneSpriteFactory.field_e[2].c(TutorialCaptionSupport.field_k + (-CheckboxPainter.field_k + ArrayWidgetContainer.field_x - 6 + 1), -1 + (TutorialCaptionSupport.field_j - AvailabilityCheckRequest.field_h));
-          SceneSpriteFactory.field_e[3].c(ArrayWidgetContainer.field_x + 6 - TutorialCaptionSupport.field_k, -AvailabilityCheckRequest.field_h + (TutorialCaptionSupport.field_j - 1));
-          SceneSpriteFactory.field_e[0].c(-AvailabilityCheckRequest.field_h + (ArrayWidgetContainer.field_x - 1), 1 + (TutorialCaptionSupport.field_k - 6) + (-CheckboxPainter.field_k + TutorialCaptionSupport.field_j));
-          SceneSpriteFactory.field_e[1].c(-AvailabilityCheckRequest.field_h + (ArrayWidgetContainer.field_x - 1), -TutorialCaptionSupport.field_k + 6 + TutorialCaptionSupport.field_j);
+          SceneSpriteFactory.field_e[2].draw(TutorialCaptionSupport.field_k + (-CheckboxPainter.field_k + ArrayWidgetContainer.field_x - 6 + 1), -1 + (TutorialCaptionSupport.field_j - AvailabilityCheckRequest.field_h));
+          SceneSpriteFactory.field_e[3].draw(ArrayWidgetContainer.field_x + 6 - TutorialCaptionSupport.field_k, -AvailabilityCheckRequest.field_h + (TutorialCaptionSupport.field_j - 1));
+          SceneSpriteFactory.field_e[0].draw(-AvailabilityCheckRequest.field_h + (ArrayWidgetContainer.field_x - 1), 1 + (TutorialCaptionSupport.field_k - 6) + (-CheckboxPainter.field_k + TutorialCaptionSupport.field_j));
+          SceneSpriteFactory.field_e[1].draw(-AvailabilityCheckRequest.field_h + (ArrayWidgetContainer.field_x - 1), -TutorialCaptionSupport.field_k + 6 + TutorialCaptionSupport.field_j);
           return;
         }
         if (TutorialCaptionSupport.field_j == -1) {
           return;
         }
-        SceneSpriteFactory.field_e[2].c(TutorialCaptionSupport.field_k + (-CheckboxPainter.field_k + ArrayWidgetContainer.field_x - 6 + 1), -1 + (TutorialCaptionSupport.field_j - AvailabilityCheckRequest.field_h));
-        SceneSpriteFactory.field_e[3].c(ArrayWidgetContainer.field_x + 6 - TutorialCaptionSupport.field_k, -AvailabilityCheckRequest.field_h + (TutorialCaptionSupport.field_j - 1));
-        SceneSpriteFactory.field_e[0].c(-AvailabilityCheckRequest.field_h + (ArrayWidgetContainer.field_x - 1), 1 + (TutorialCaptionSupport.field_k - 6) + (-CheckboxPainter.field_k + TutorialCaptionSupport.field_j));
-        SceneSpriteFactory.field_e[1].c(-AvailabilityCheckRequest.field_h + (ArrayWidgetContainer.field_x - 1), -TutorialCaptionSupport.field_k + 6 + TutorialCaptionSupport.field_j);
+        SceneSpriteFactory.field_e[2].draw(TutorialCaptionSupport.field_k + (-CheckboxPainter.field_k + ArrayWidgetContainer.field_x - 6 + 1), -1 + (TutorialCaptionSupport.field_j - AvailabilityCheckRequest.field_h));
+        SceneSpriteFactory.field_e[3].draw(ArrayWidgetContainer.field_x + 6 - TutorialCaptionSupport.field_k, -AvailabilityCheckRequest.field_h + (TutorialCaptionSupport.field_j - 1));
+        SceneSpriteFactory.field_e[0].draw(-AvailabilityCheckRequest.field_h + (ArrayWidgetContainer.field_x - 1), 1 + (TutorialCaptionSupport.field_k - 6) + (-CheckboxPainter.field_k + TutorialCaptionSupport.field_j));
+        SceneSpriteFactory.field_e[1].draw(-AvailabilityCheckRequest.field_h + (ArrayWidgetContainer.field_x - 1), -TutorialCaptionSupport.field_k + 6 + TutorialCaptionSupport.field_j);
     }
 
     final static void clearPlayerPreviewResource(int param0) {

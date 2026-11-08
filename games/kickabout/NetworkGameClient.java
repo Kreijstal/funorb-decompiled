@@ -305,7 +305,7 @@ abstract class NetworkGameClient extends GameAppletShell {
                       }
                     }
                   } else {
-                    IconLabel.a(0);
+                    IconLabel.readSubmissionAcknowledgement(0);
                   }
                 }
               }
@@ -366,7 +366,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           ArchiveIndex.field_h.updateCanvasSize(0);
         }
         AgeValidator.g(param0);
-        BufferedCacheFile.a((byte) 58);
+        BufferedCacheFile.snapshotMouseInput((byte) 58);
         if (!RegistrationUiSupport.c(608) &&
           11 != RasterGlowSupport.field_c) {
           MeshPreviewSupport.a(127);
@@ -508,7 +508,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             stackIn_102_0 = -101;
             stackIn_103_1 = !(TriangleMesh.field_m);
             stackIn_106_2 = !(TriangleMesh.field_m);
-            TriangleMesh.$cfr$intArgs$a$842e35442ba4(stackIn_102_0, stackIn_103_1, stackIn_106_2, IntKeyLookup.field_c);
+            TriangleMesh.showLoginDialog(stackIn_102_0, stackIn_103_1, stackIn_106_2, IntKeyLookup.field_c);
           }
           if (DualLinkDeque.field_d) {
             BufferedSocket.a(true);
@@ -1284,7 +1284,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             MatchUiLayoutSupport.reloadAppletPage((byte) 125, AppletContextSupport.getActiveApplet(51));
           }
           if (var4 == 12) {
-            ListRow.openUrlInBrowser(AppletContextSupport.getActiveApplet(-85), 114, IsaacRandom.c(71));
+            ListRow.openUrlInBrowser(AppletContextSupport.getActiveApplet(-85), 114, IsaacRandom.getPendingExternalUrl(71));
           }
           if (13 == var4) {
             try {

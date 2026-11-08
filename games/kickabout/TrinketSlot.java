@@ -37,7 +37,7 @@ final class TrinketSlot extends UiLayoutNode implements PopupCard {
         if (param1 != 23) {
           this.field_Hb = (String) null;
         }
-        this.field_Cb.c(var6 + 8, 9 + var7);
+        this.field_Cb.draw(var6 + 8, 9 + var7);
         if (0 != this.field_Bb.field_h) {
           SoftwareRasterizer.drawHorizontalLine(var6, var7 + 50, var4, 65793);
           ConsoleTokenCursor.field_d.drawParagraph(this.field_Gb, 5 + var6, var7 + 50, var4 - 10, var5 - 50 - 2, 16777215, 65793, 0, 1, 12);

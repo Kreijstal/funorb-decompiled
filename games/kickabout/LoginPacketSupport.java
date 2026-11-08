@@ -117,7 +117,7 @@ final class LoginPacketSupport {
           if (BroadcastServerCommand.field_A != null) {
             FootballerAiOverlaySupport.field_d.writeCircumfixedString(BroadcastServerCommand.field_A, (byte) -127);
           }
-          IconLabel.a(ManagerAction.field_h, FootballerAiOverlaySupport.field_d, (byte) -116, InstrumentEnvelope.field_a, CascadingMenu.field_Nb);
+          IconLabel.writeEncryptedLoginBuffer(ManagerAction.field_h, FootballerAiOverlaySupport.field_d, (byte) -116, InstrumentEnvelope.field_a, CascadingMenu.field_Nb);
           FootballerAiOverlaySupport.field_d.backpatchShortLength(FootballerAiOverlaySupport.field_d.field_n - var5_int, 62);
           ClientPacketFlushSupport.flushPackets(-1, false);
           return;

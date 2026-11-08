@@ -31,7 +31,7 @@ final class OffscreenPlayerArrow {
           param1 >= 10 &&
           630 >= param0 &&
           470 >= param1) {
-          if (TextHotspotWidget.a(var5, var6, 480)) {
+          if (TextHotspotWidget.intersectsPlayerViewport(var5, var6, 480)) {
             return;
           }
           this.field_a = -PlayerContextMenu.b(-param1 + var6, -param0 + var5, (byte) 2);
