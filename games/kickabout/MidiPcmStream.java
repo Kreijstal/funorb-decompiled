@@ -1040,7 +1040,7 @@ final class MidiPcmStream extends PcmStream {
             return;
           }
           var2 = null;
-          var3 = MySquadScreen.c(-93, 359);
+          var3 = MySquadScreen.worldToScreenX(-93, 359);
           if (param0) {
             stackIn_7_0 = PitchProjectionSupport.worldToScreenY(0, (byte) -56);
           } else {
@@ -1110,12 +1110,12 @@ final class MidiPcmStream extends PcmStream {
             3 == RankingsScreen.field_C) {
             var5 = PitchProjectionSupport.worldToScreenY(-87, (byte) -56);
             for (var6 = 0; var6 < 5; var6++) {
-              ListRow.a(-12376, MySquadScreen.c(-121, (-5 + MatchingTextValidator.field_k.field_o) * var6 - 32), var5, MatchingTextValidator.field_k);
+              ListRow.a(-12376, MySquadScreen.worldToScreenX(-121, (-5 + MatchingTextValidator.field_k.field_o) * var6 - 32), var5, MatchingTextValidator.field_k);
             }
           }
           if (FormationMaskSupport.field_c == 2) {
-            var5Lifetime1 = MySquadScreen.c(-105, -47);
-            var6Lifetime1 = MySquadScreen.c(param1 + 94, 892);
+            var5Lifetime1 = MySquadScreen.worldToScreenX(-105, -47);
+            var6Lifetime1 = MySquadScreen.worldToScreenX(param1 + 94, 892);
             stackIn_48_0 = (!param0) ? 0 : 3;
             var7 = stackIn_48_0;
             for (var8 = 0; 5 > var8; var8++) {
@@ -1132,7 +1132,7 @@ final class MidiPcmStream extends PcmStream {
             3 == RankingsScreen.field_C) {
             var5Lifetime2 = PitchProjectionSupport.worldToScreenY(1384, (byte) -56);
             for (var6Lifetime2 = 0; var6Lifetime2 < 5; var6Lifetime2++) {
-              ListRow.a(param1 - 12262, MySquadScreen.c(-126, var6Lifetime2 * (-5 + MatchingTextValidator.field_k.field_o) - 32), var5Lifetime2, MatchingTextValidator.field_k);
+              ListRow.a(param1 - 12262, MySquadScreen.worldToScreenX(-126, var6Lifetime2 * (-5 + MatchingTextValidator.field_k.field_o) - 32), var5Lifetime2, MatchingTextValidator.field_k);
             }
             return;
           }

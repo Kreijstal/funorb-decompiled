@@ -117,7 +117,7 @@ final class SocialPlayerRow extends UiLayoutNode {
     }
 
     final static void a(int param0) {
-        TrinketCountSortCriterion.a(112, true);
+        TrinketCountSortCriterion.drawModalOverlay(112, true);
         if (param0 != -32053) {
           field_Db = 59;
         }

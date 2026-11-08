@@ -11,7 +11,7 @@ final class ModalStack extends SingleChildContainer {
         this.field_A = new IntrusiveDeque();
     }
 
-    final UiWidget a(int param0) {
+    final UiWidget findFocusedChild(int param0) {
         IntrusiveDequeCursor var2 = null;
         RuntimeException var2_ref = null;
         ModalPanel var3 = null;
@@ -371,7 +371,7 @@ final class ModalStack extends SingleChildContainer {
             if (var4 != 0) {
               return;
             }
-            if (var3.a(param0 - 4521)) {
+            if (var3.finishAnimationAndCheckClosed(param0 - 4521)) {
               var3.c((byte) -109);
             }
             var3 = (ModalPanel) (var2.a(0));

@@ -83,7 +83,7 @@ final class MatchScreen extends AppScreen {
           var3[7] = MeshData.load(param1, "", "balls/asteroid_craters_3");
           LoadingProgressSupport.reportStageProgress(-104, 5, 3);
           if (param0 != -34) {
-            MatchScreen.a(true);
+            MatchScreen.releaseStatics(true);
           }
           for (var4Lifetime1 = 0; var4Lifetime1 < 9; var4Lifetime1++) {
             if (var4Lifetime1 == 7) {
@@ -540,7 +540,7 @@ final class MatchScreen extends AppScreen {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         if (!param0) {
           ResourceArchive var2 = (ResourceArchive) null;
           MatchScreen.loadMatchSprites((byte) 13, (ResourceArchive) null);

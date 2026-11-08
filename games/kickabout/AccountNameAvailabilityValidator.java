@@ -63,7 +63,7 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
         }
     }
 
-    final void c(byte param0) {
+    final void clearCachedName(byte param0) {
         if (param0 <= 70) {
           return;
         }
@@ -171,7 +171,7 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, LobbyPlayerRow param5, ScrollPane param6) {
+    final static void showLobbyPlayerContextMenu(int param0, int param1, int param2, int param3, int param4, LobbyPlayerRow param5, ScrollPane param6) {
         PlayerContextMenu var12 = null;
         int var8 = 0;
         int var9 = 0;
@@ -252,19 +252,19 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
         }
     }
 
-    final static void a(RenderedBall param0, int param1, int param2) {
+    final static void captureBallAfterimage(RenderedBall param0, int param1, int param2) {
         try {
           if (param1 != 256) {
             String var4 = (String) null;
             AccountNameAvailabilityValidator.writeSessionCookie((java.applet.Applet) null, (String) null, (byte) 46);
           }
-          NetworkArchiveRequest.g(0).captureBall(param2, (byte) 15, param0);
+          NetworkArchiveRequest.getOldestAfterimage(0).captureBall(param2, (byte) 15, param0);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "bv.J(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
-    public static void g(int param0) {
+    public static void releaseStatics(int param0) {
         field_m = null;
         field_o = null;
         field_p = null;
@@ -275,7 +275,7 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
         field_l = null;
     }
 
-    final static void a(boolean param0, int[] param1, int param2) {
+    final static void quantizeColors(boolean param0, int[] param1, int param2) {
         int var4_int = 0;
         double[] stackIn_20_0 = null;
         int stackIn_20_1 = 0;

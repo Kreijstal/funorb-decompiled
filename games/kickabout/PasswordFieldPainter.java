@@ -60,7 +60,7 @@ final class PasswordFieldPainter extends BeveledTextPainter {
           if (param1 != -587) {
             PasswordFieldPainter.getQuickChatCommandTypes(-111);
           }
-          while (UnreadMessagesScreen.a(MatchTextInputOverlay.field_a, false, TournamentChampionDialog.field_I) >= 65536) {
+          while (UnreadMessagesScreen.multiplyFixed16(MatchTextInputOverlay.field_a, false, TournamentChampionDialog.field_I) >= 65536) {
             TournamentChampionDialog.field_I = TournamentChampionDialog.field_I - MatchTextInputOverlay.field_a;
           }
           var2_int = -1;
@@ -199,7 +199,7 @@ final class PasswordFieldPainter extends BeveledTextPainter {
           if (param0 > -38) {
             field_D = (String) null;
           }
-          stackIn_3_0 = BuyPlayerDialog.a('*', (byte) 48, param1.field_q.length());
+          stackIn_3_0 = BuyPlayerDialog.repeatCharacter('*', (byte) 48, param1.field_q.length());
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

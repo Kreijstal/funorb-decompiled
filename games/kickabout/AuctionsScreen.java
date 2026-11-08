@@ -65,7 +65,7 @@ final class AuctionsScreen extends ButtonMenuScreen {
         this.field_G = new AuctionTableWidget(ChatComposeSupport.field_f, ClubState.field_l, var6, 50);
         this.field_G.a(300, (byte) -116, 122, 7);
         this.field_B = new ReceivedAuctionItemRow[]{};
-        this.field_G.a(this.field_B, 0);
+        this.field_G.setRows(this.field_B, 0);
         this.field_L.addChild((byte) -123, this.field_P);
         this.field_L.addChild((byte) -106, this.field_R);
         this.field_L.addChild((byte) -124, this.field_K);
@@ -135,7 +135,7 @@ final class AuctionsScreen extends ButtonMenuScreen {
         if (this.field_V > 0) {
           this.field_V = this.field_V - 1;
         }
-        var3 = this.field_G.h((byte) 123);
+        var3 = this.field_G.getScrollOffset((byte) 123);
         stackIn_5_0 = param1;
         stackIn_6_1 = (ModelMaterialDecoder.field_g) ? 0 : 1;
         stackIn_9_2 = (NineSlicePanelPainter.field_e) ? 0 : 1;
@@ -152,9 +152,9 @@ final class AuctionsScreen extends ButtonMenuScreen {
           }
         }
         this.handleButtons(false, param1);
-        var4 = this.field_G.i((byte) -124) - this.headerRowCount((byte) 63);
-        var5 = this.field_G.b(64);
-        var6 = this.field_G.j((byte) 34);
+        var4 = this.field_G.getFirstVisibleRow((byte) -124) - this.headerRowCount((byte) 63);
+        var5 = this.field_G.getSortColumnIndex(64);
+        var6 = this.field_G.getSortDirection((byte) 34);
         if (-1 == var5) {
           var5 = 4;
         }
@@ -171,12 +171,12 @@ final class AuctionsScreen extends ButtonMenuScreen {
         }
         this.field_S = this.field_U;
         var7 = -68 % ((38 - param0) / 60);
-        if (var3 < this.field_G.h((byte) -25) &&
+        if (var3 < this.field_G.getScrollOffset((byte) -25) &&
           this.field_V == 0) {
           ShopPlayerSlot.c(59, 42);
           this.field_V = 10;
         }
-        if (var3 > this.field_G.h((byte) -126) &&
+        if (var3 > this.field_G.getScrollOffset((byte) -126) &&
           this.field_V == 0) {
           ShopPlayerSlot.c(60, -101);
           this.field_V = 10;
@@ -307,7 +307,7 @@ final class AuctionsScreen extends ButtonMenuScreen {
         this.field_B = new ReceivedAuctionItemRow[param0];
         this.field_G.a(0, (byte) -47, this.field_B, 5);
         this.field_G.field_Db = -1;
-        this.field_G.b(4, 113);
+        this.field_G.cycleColumnSort(4, 113);
         this.field_U = 15;
         this.field_F = 4;
         this.field_S = this.field_U;
@@ -557,7 +557,7 @@ final class AuctionsScreen extends ButtonMenuScreen {
           } else {
             this.field_N = false;
           }
-          var12Lifetime2 = this.field_G.h((byte) 127);
+          var12Lifetime2 = this.field_G.getScrollOffset((byte) 127);
           var13 = this.headerRowCount((byte) 84) - var8;
           var14 = this.headerRowCount((byte) -110);
           stackIn_47_0 = this.field_G;
@@ -567,7 +567,7 @@ final class AuctionsScreen extends ButtonMenuScreen {
             stackIn_48_1 = 0;
           }
           ((AuctionTableWidget) (Object) stackIn_47_0).a(stackIn_48_1, (byte) -47, this.field_B, param2 + var14);
-          this.field_G.a(param0, var12Lifetime2);
+          this.field_G.setScrollOffset(param0, var12Lifetime2);
           this.field_G.updateInput(0, false);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

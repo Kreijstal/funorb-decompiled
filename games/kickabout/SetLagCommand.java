@@ -157,7 +157,7 @@ final class SetLagCommand extends ConsoleCommand {
             return false;
           }
           try {
-            var2 = SpriteButtonPainter.field_y.a((byte) 63);
+            var2 = SpriteButtonPainter.field_y.available((byte) 63);
             if (0 < var2) {
               if (param1 - ByteArrayPool.field_e.field_n < var2) {
                 var2 = -ByteArrayPool.field_e.field_n + param1;

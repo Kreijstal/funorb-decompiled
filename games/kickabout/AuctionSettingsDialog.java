@@ -323,7 +323,7 @@ final class AuctionSettingsDialog extends MessageDialog {
         IndexedSpriteState.field_g = AuctionPriceLimits.maximumAuctionPrice(ClubStateFactory.field_c, -31);
         LocalizedTextLoader.field_f = QuickChatPhraseCache.field_c;
         BlackFadeScreen.field_l = 8;
-        AuctionBidDialog.field_L = PasswordLoginCredentials.a(ClubStateFactory.field_c, -576054046) <= 0 ? 1 : PasswordLoginCredentials.a(ClubStateFactory.field_c, -576054046);
+        AuctionBidDialog.field_L = PasswordLoginCredentials.calculatePlayerValue(ClubStateFactory.field_c, -576054046) <= 0 ? 1 : PasswordLoginCredentials.calculatePlayerValue(ClubStateFactory.field_c, -576054046);
         UiLayoutNode var9 = new UiLayoutNode();
         FriendRemovalSupport.field_d = new UiLayoutNode[5];
         var9.field_y = 16777215;

@@ -10,7 +10,7 @@ final class PitchSurfaceLoader {
           return;
         }
         String var2 = (String) null;
-        NetworkArchiveRequest.a(AccountInputValidationResult.field_a, (byte) 111, (String) null);
+        NetworkArchiveRequest.showLoginForm(AccountInputValidationResult.field_a, (byte) 111, (String) null);
     }
 
     final static int a(int param0, int param1) {

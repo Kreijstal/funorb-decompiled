@@ -72,7 +72,7 @@ final class ProxySocketConnector extends SocketConnector {
             var4 = param2.nextInt();
           } while (var4 >= var3_int);
           var5 = -40 / ((param0 - 25) / 54);
-          stackIn_9_0 = SingleChildContainer.a(-68, var4, param1);
+          stackIn_9_0 = SingleChildContainer.floorMod(-68, var4, param1);
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -101,7 +101,7 @@ final class ProxySocketConnector extends SocketConnector {
         var4 = Kickabout.field_G;
         try {
           while (true) {
-            var3 = param0.a((byte) -106, param1);
+            var3 = param0.requestExitFullscreen((byte) -106, param1);
             while (var3.field_a == 0) {
               ThreadSleepSupport.sleepMillis(10L, 1);
             }
@@ -460,7 +460,7 @@ final class ProxySocketConnector extends SocketConnector {
             var4 = param2.nextInt();
           } while (var4 >= var3_int);
           var5 = -40 / ((param0 - 25) / 54);
-          stackIn_9_0 = SingleChildContainer.a(-68, var4, param1);
+          stackIn_9_0 = SingleChildContainer.floorMod(-68, var4, param1);
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

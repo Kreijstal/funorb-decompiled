@@ -147,7 +147,7 @@ final class EmailSyntaxValidator extends TextFieldValidator {
         try {
           CipherPacketBuffer var2_ref_ml = null;
           if (ArrayWidgetContainer.field_A == null) {
-            ArrayWidgetContainer.field_A = LoginMethod.field_c.a(true, IntTripleCommand.field_E, PlayerArchetypeSortCriterion.field_o);
+            ArrayWidgetContainer.field_A = LoginMethod.field_c.requestSocketOpen(true, IntTripleCommand.field_E, PlayerArchetypeSortCriterion.field_o);
           }
           if (ArrayWidgetContainer.field_A.field_a == 0) {
             return false;

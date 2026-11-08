@@ -1088,8 +1088,8 @@ final class GameOverView extends MatchPhaseView {
           DefaultPlayerFactory.buildSharedContextActions(stackIn_76_0);
           this.field_fb = new Sprite[2];
           this.field_j = 256;
-          this.field_fb[0] = AccountRegistrationPanel.a(true, (byte) -52, 0, 80, 7126504);
-          this.field_fb[1] = AccountRegistrationPanel.a(true, (byte) -52, 1, 80, 7126504);
+          this.field_fb[0] = AccountRegistrationPanel.createButtonStateSprite(true, (byte) -52, 0, 80, 7126504);
+          this.field_fb[1] = AccountRegistrationPanel.createButtonStateSprite(true, (byte) -52, 1, 80, 7126504);
           if (this.field_p == null) {
             this.field_p = new int[this.field_a.playerCount][4];
           }

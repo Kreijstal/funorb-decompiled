@@ -151,7 +151,7 @@ final class FootballerPreview {
         this.field_b.field_R = 1536;
         this.field_b.setAnimationClip((byte) -128, 5);
         if (param0 == 0) {
-          this.field_b.field_mb.a(10, 126);
+          this.field_b.field_mb.setFrame(10, 126);
         }
     }
 

@@ -44,20 +44,20 @@ final class ThreeCommand extends ConsoleCommand {
           if (SelectionMarkerSupport.field_b) {
             SoftwareRasterizer.darkenRectangle(HighScoreQuery.field_l.tabs.field_s, HighScoreQuery.field_l.tabs.field_J, HighScoreQuery.field_l.tabs.field_q, HighScoreQuery.field_l.tabs.field_mb);
             HighScoreQuery.field_l.tabs.draw(122, param0);
-            PasswordLoginCredentials.a(param0, (byte) -93);
+            PasswordLoginCredentials.drawSharedTextPanel(param0, (byte) -93);
             return;
           }
-          PasswordLoginCredentials.a(param0, (byte) -93);
+          PasswordLoginCredentials.drawSharedTextPanel(param0, (byte) -93);
           return;
         }
         NamedValueContainer.a(63, param0);
         if (!SelectionMarkerSupport.field_b) {
-          PasswordLoginCredentials.a(param0, (byte) -93);
+          PasswordLoginCredentials.drawSharedTextPanel(param0, (byte) -93);
           return;
         }
         SoftwareRasterizer.darkenRectangle(HighScoreQuery.field_l.tabs.field_s, HighScoreQuery.field_l.tabs.field_J, HighScoreQuery.field_l.tabs.field_q, HighScoreQuery.field_l.tabs.field_mb);
         HighScoreQuery.field_l.tabs.draw(122, param0);
-        PasswordLoginCredentials.a(param0, (byte) -93);
+        PasswordLoginCredentials.drawSharedTextPanel(param0, (byte) -93);
     }
 
     public static void a(boolean param0) {

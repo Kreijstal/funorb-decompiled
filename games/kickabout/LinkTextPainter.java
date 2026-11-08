@@ -47,7 +47,7 @@ final class LinkTextPainter implements WidgetPainter {
           if (null == SpriteButtonPainter.field_y) {
             return false;
           }
-          if (ByteArrayPool.field_c.a((byte) -96)) {
+          if (ByteArrayPool.field_c.isLoginResponseStage((byte) -96)) {
             return true;
           }
           return false;
@@ -55,7 +55,7 @@ final class LinkTextPainter implements WidgetPainter {
         if (null == SpriteButtonPainter.field_y) {
           return false;
         }
-        if (ByteArrayPool.field_c.a((byte) -96)) {
+        if (ByteArrayPool.field_c.isLoginResponseStage((byte) -96)) {
           return true;
         }
         return false;

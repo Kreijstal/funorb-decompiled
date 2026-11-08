@@ -8,7 +8,7 @@ final class AccountNameCheckState {
     static String field_b;
     static int field_c;
 
-    final static void a(int param0, int param1) {
+    final static void advanceLoadingStep(int param0, int param1) {
         if (param1 > PlayerArchetypeSortCriterion.field_r) {
           PlayerArchetypeSortCriterion.field_r = param1;
           NineSlicePanelPainter.field_c = MarkerSliderWidget.field_I[ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(115, MarkerSliderWidget.field_I.length, MidiPcmStream.field_l)];
@@ -42,7 +42,7 @@ final class AccountNameCheckState {
         throw new IllegalStateException();
     }
 
-    final static boolean a(byte param0) {
+    final static boolean canShowQueuedDialog(byte param0) {
         int var1;
         int var1Lifetime1;
         if (param0 == 82) {

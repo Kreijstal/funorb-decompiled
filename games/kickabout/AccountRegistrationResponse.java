@@ -13,9 +13,9 @@ final class AccountRegistrationResponse {
     static String field_h;
     static Sprite[] field_a;
 
-    final static boolean a(byte param0) {
+    final static boolean isHalloweenAppearanceEnabled(byte param0) {
         int var1 = -55 / ((-40 - param0) / 36);
-        if (!ConsolePanel.e((byte) 127)) {
+        if (!ConsolePanel.isHalloweenPeriod((byte) 127)) {
           return false;
         }
         if (SpriteNumberPainter.field_c) {

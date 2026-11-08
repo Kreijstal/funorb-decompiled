@@ -37,7 +37,7 @@ final class MusicPatchNode extends IntrusiveNode {
         this.field_F = null;
         this.field_j = null;
         if (!param0) {
-          MusicPatchNode.b(97);
+          MusicPatchNode.closePlayerContextMenu(97);
           return;
         }
     }
@@ -100,7 +100,7 @@ final class MusicPatchNode extends IntrusiveNode {
         return null;
     }
 
-    final static void b(int param0) {
+    final static void closePlayerContextMenu(int param0) {
         if (param0 < 64) {
           return;
         }
@@ -159,7 +159,7 @@ final class MusicPatchNode extends IntrusiveNode {
         try {
           var4 = (PendingRequestAcknowledgement) (FootballerAgent.field_f.g(param0 + 24009));
           if (param0 != 0) {
-            MusicPatchNode.b(79);
+            MusicPatchNode.closePlayerContextMenu(79);
           }
           while (var4 != null) {
             ShopPlayerSlot.a(param1, var4, -51265247);

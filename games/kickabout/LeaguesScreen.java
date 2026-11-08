@@ -183,7 +183,7 @@ final class LeaguesScreen extends ButtonMenuScreen {
         AuctionTableWidget.field_Hb.field_y = 16777215;
         AuctionTableWidget.field_Hb.field_p = 1;
         AuctionTableWidget.field_Hb.field_X = (BitmapFont) ((Object) ConsoleTokenCursor.field_d);
-        UiLayoutNode var4 = SoundStreamHandle.a(16006912, param0 ^ param0);
+        UiLayoutNode var4 = SoundStreamHandle.createSpriteBackedWidget(16006912, param0 ^ param0);
         UiLayoutNode var5 = new UiLayoutNode();
         var5.field_y = 16777215;
         var5.field_B = 2;

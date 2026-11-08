@@ -590,9 +590,9 @@ final class MenuButton {
             if (49 == this.kind &&
               !EmailSyntaxValidator.c((byte) -42)) {
               param1 = 11184810;
-              this.field_n[0] = AccountRegistrationPanel.a(var4 != 0, (byte) -52, 0, var5, param1);
+              this.field_n[0] = AccountRegistrationPanel.createButtonStateSprite(var4 != 0, (byte) -52, 0, var5, param1);
               this.field_n[1] = this.field_n[0];
-              this.field_n[2] = AccountRegistrationPanel.a(var4 != 0, (byte) -52, 2, var5, param1);
+              this.field_n[2] = AccountRegistrationPanel.createButtonStateSprite(var4 != 0, (byte) -52, 2, var5, param1);
             } else {
               if (this.field_a == -5) {
                 this.field_n[0] = (Sprite) ((Object) ArchiveIndex.field_m);
@@ -614,9 +614,9 @@ final class MenuButton {
                 TeamManagementScreen.e(125);
                 this.field_n[1] = (Sprite) ((Object) var6);
               } else {
-                this.field_n[0] = AccountRegistrationPanel.a(var4 != 0, (byte) -52, 0, var5, param1);
-                this.field_n[1] = AccountRegistrationPanel.a(var4 != 0, (byte) -52, 1, var5, param1);
-                this.field_n[2] = AccountRegistrationPanel.a(var4 != 0, (byte) -52, 2, var5, param1);
+                this.field_n[0] = AccountRegistrationPanel.createButtonStateSprite(var4 != 0, (byte) -52, 0, var5, param1);
+                this.field_n[1] = AccountRegistrationPanel.createButtonStateSprite(var4 != 0, (byte) -52, 1, var5, param1);
+                this.field_n[2] = AccountRegistrationPanel.createButtonStateSprite(var4 != 0, (byte) -52, 2, var5, param1);
               }
             }
           } else {

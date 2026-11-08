@@ -88,7 +88,7 @@ final class PlayerModelPreview extends IntrusiveNode {
         if (param0 > 3) {
           param0 = 6 - param0;
         }
-        this.field_h.a(param0, 111);
+        this.field_h.setFrame(param0, 111);
         ModelMesh var5 = (ModelMesh) (this.field_h.applyCurrentFrame(this.field_p, false, true, true));
         SpritePixelSupport.a(param1 + this.field_g << 4, this.field_i << 4, 320, -4 + UiWidget.field_f.length, UiWidget.field_f);
         PacketBuffer.a(103, Cp1252EncodingSupport.field_d);
@@ -164,7 +164,7 @@ final class PlayerModelPreview extends IntrusiveNode {
         this.field_p = Cp1252EncodingSupport.a(-49, this.field_s, var8);
         this.field_h = new AnimationPlayer(1);
         int var6 = ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(-48, 5, var8);
-        this.field_h.a(ClientInteractionSupport.field_b[var6], (byte) -107);
+        this.field_h.setClip(ClientInteractionSupport.field_b[var6], (byte) -107);
     }
 
     public static void releaseStatics(byte param0) {

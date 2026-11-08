@@ -27,7 +27,7 @@ final class DisplayNameForm extends WidgetContainer implements NameSuggestionLis
         if (param0 != -1) {
           return;
         }
-        ((AccountNameAvailabilityValidator) (this.field_C.a((byte) -116))).c((byte) 101);
+        ((AccountNameAvailabilityValidator) (this.field_C.getValidationSource((byte) -116))).clearCachedName((byte) 101);
     }
 
     private final int a(String param0, int param1, int param2, UiWidget param3, int param4, int param5, String param6) {
@@ -47,7 +47,7 @@ final class DisplayNameForm extends WidgetContainer implements NameSuggestionLis
         try {
           var11 = new CaptionedContainer(20, param5, param1 + 120, 25, param3, false, 120, 3, ModelMaterial.field_a, 16777215, param0);
           this.a(-55, var11);
-          var9 = new ValidationHelpWidget(((ValidationProvider) ((Object) param3)).a((byte) -120), param6, 126, var11.field_i + param5, param1 + 25, param2);
+          var9 = new ValidationHelpWidget(((ValidationProvider) ((Object) param3)).getValidationSource((byte) -120), param6, 126, var11.field_i + param5, param1 + 25, param2);
           var9.field_k = (UiListener) (this);
           var10 = -123 % ((param4 - 24) / 41);
           this.a(-58, var9);
@@ -92,7 +92,7 @@ final class DisplayNameForm extends WidgetContainer implements NameSuggestionLis
             this.onSuggestionChosen((String) null, -65);
           }
           if (this.field_E == param1) {
-            AccountChoicePanel.a(-25085);
+            AccountChoicePanel.showEmptyLoginForm(-25085);
             return;
           }
           if (param1 != this.field_B) {
@@ -258,7 +258,7 @@ final class DisplayNameForm extends WidgetContainer implements NameSuggestionLis
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = param1.a((byte) -116);
+          var3 = param1.getValidationSource((byte) -116);
           if (var3 == null) {
             return true;
           }

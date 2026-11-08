@@ -114,7 +114,7 @@ final class PlayerPortraitCacheEntry {
             var11 = 31;
           }
           var12 = PlayerInputFactory.createRenderedPlayer(this.playerStats, var9, var10, this.field_j, var11, (byte) 108);
-          var12.field_mb.a(0, 99);
+          var12.field_mb.setFrame(0, 99);
           PacketBuffer.a(-81, ConsoleCommand.field_u);
           SoftwareRasterizer.clearFramebuffer();
           var12.renderModel(var8[this.playerStats.archetype], 0, SoftwareRasterizer.field_g >> 1, var17[this.playerStats.archetype], (byte) -118);

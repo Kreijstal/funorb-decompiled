@@ -689,7 +689,7 @@ final class Trinket {
           if (param0 != -9814) {
             field_g = (int[]) null;
           }
-          stackIn_10_0 = (this.field_h == 73) && (ConsolePanel.e((byte) 65));
+          stackIn_10_0 = (this.field_h == 73) && (ConsolePanel.isHalloweenPeriod((byte) 65));
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

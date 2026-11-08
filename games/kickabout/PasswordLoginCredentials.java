@@ -15,12 +15,12 @@ final class PasswordLoginCredentials extends LoginCredentials {
         return LoginRequiredDialog.field_K;
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         int var1 = -123 % ((param0 + 53) / 59);
         field_g = null;
     }
 
-    final static void b(byte param0) {
+    final static void serviceAudioOutputs(byte param0) {
         SoundStreamHandle var1 = null;
         int var2 = 0;
         boolean stackIn_15_0 = false;
@@ -31,7 +31,7 @@ final class PasswordLoginCredentials extends LoginCredentials {
         try {
           PitchPurchaseSupport.field_d.serviceOutput();
           if (param0 != -28) {
-            PasswordLoginCredentials.c(-80);
+            PasswordLoginCredentials.releaseStatics(-80);
           }
           SharedPanelFactory.field_d.serviceOutput();
           BeveledTextPainter.field_r = BeveledTextPainter.field_r - 1;
@@ -64,18 +64,18 @@ final class PasswordLoginCredentials extends LoginCredentials {
         }
     }
 
-    final static void a(boolean param0, byte param1) {
+    final static void drawSharedTextPanel(boolean param0, byte param1) {
         GrayscalePaletteSupport.field_a.draw(97, param0);
         DateOfBirthPanel var2 = PlayArea.field_a;
         if (param1 >= -27) {
-          PasswordLoginCredentials.b((byte) 111);
+          PasswordLoginCredentials.serviceAudioOutputs((byte) 111);
         }
         if (var2 != null) {
           var2.renderWidgetPassesAndTooltip(GrayscalePaletteSupport.field_a.field_T, GrayscalePaletteSupport.field_a.field_F, (byte) -120);
         }
     }
 
-    final static AccountInputValidationResult a(byte param0, String param1) {
+    final static AccountInputValidationResult validateEmailLocalPart(byte param0, String param1) {
         AccountInputValidationResult stackIn_4_0 = null;
         AccountInputValidationResult stackIn_8_0 = null;
         AccountInputValidationResult stackIn_14_0 = null;
@@ -170,7 +170,7 @@ final class PasswordLoginCredentials extends LoginCredentials {
         }
     }
 
-    final static boolean a(byte param0, String param1, boolean param2, String param3, AccountRegistrationPanel param4, int param5, String param6) {
+    final static boolean beginAccountRegistration(byte param0, String param1, boolean param2, String param3, AccountRegistrationPanel param4, int param5, String param6) {
         RuntimeException var7 = null;
         RegistrationRequestDialog var8 = null;
         RuntimeException stackIn_16_0 = null;
@@ -237,7 +237,7 @@ final class PasswordLoginCredentials extends LoginCredentials {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, String param4, String param5) {
+    final static void sendChatPacket(int param0, int param1, int param2, int param3, String param4, String param5) {
         CipherPacketBuffer var9 = null;
         int var7 = 0;
         try {
@@ -274,7 +274,7 @@ final class PasswordLoginCredentials extends LoginCredentials {
         }
     }
 
-    final static int a(PlayerStats param0, int param1) {
+    final static int calculatePlayerValue(PlayerStats param0, int param1) {
         int var4 = 0;
         int var2_int = 0;
         RuntimeException var2 = null;

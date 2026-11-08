@@ -26,7 +26,7 @@ final class AccountChoicePanel extends WidgetContainer implements ButtonListener
             return;
           }
           if (param1 == this.field_J) {
-            AccountChoicePanel.a(-25085);
+            AccountChoicePanel.showEmptyLoginForm(-25085);
             return;
           }
           if (param1 == this.field_E) {
@@ -52,20 +52,20 @@ final class AccountChoicePanel extends WidgetContainer implements ButtonListener
         }
     }
 
-    final static void a(int param0) {
+    final static void showEmptyLoginForm(int param0) {
         String var2 = null;
         String var2Lifetime1;
         if (param0 == -25085) {
           var2 = (String) null;
-          NetworkArchiveRequest.a("", (byte) 111, (String) null);
+          NetworkArchiveRequest.showLoginForm("", (byte) 111, (String) null);
           return;
         }
-        AccountChoicePanel.k(115);
+        AccountChoicePanel.releaseStatics(115);
         var2Lifetime1 = (String) null;
-        NetworkArchiveRequest.a("", (byte) 111, (String) null);
+        NetworkArchiveRequest.showLoginForm("", (byte) 111, (String) null);
     }
 
-    public static void k(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 == 2) {
           field_L = null;
           field_B = null;

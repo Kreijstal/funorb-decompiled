@@ -81,11 +81,11 @@ final class WelcomeDialog extends MessageDialog {
         }
         var6 = param0;
         var6 = var6 ^ (long)(2 + param4);
-        var6 = ModalPanel.a(4, (byte) -80, var6);
+        var6 = ModalPanel.rotateLeftLong(4, (byte) -80, var6);
         var6 = var6 ^ (long)(1 + param1);
-        var6 = ModalPanel.a(4, (byte) 115, var6);
+        var6 = ModalPanel.rotateLeftLong(4, (byte) 115, var6);
         var6 = var6 ^ (long)(1 + param2);
-        var6 = ModalPanel.a(4, (byte) -119, var6);
+        var6 = ModalPanel.rotateLeftLong(4, (byte) -119, var6);
         var8 = new Random(var6);
         var9 = new PlayerStats();
         var9.field_c = true;

@@ -318,7 +318,7 @@ final class SplashScreen extends AppScreen {
               !var12.h(-13356)) {
               if (var12.field_Tb.field_sb == 0) {
                 if (var12.field_Hb.field_sb == 0) {
-                  AccountNameAvailabilityValidator.a(ReceivedAuctionItem.field_y, HighScoreSubmission.field_q, 0, 95, 0, var12, param0);
+                  AccountNameAvailabilityValidator.showLobbyPlayerContextMenu(ReceivedAuctionItem.field_y, HighScoreSubmission.field_q, 0, 95, 0, var12, param0);
                 } else {
                   MenuSelection.a(64, param3, var12.field_Ab);
                 }
@@ -348,7 +348,7 @@ final class SplashScreen extends AppScreen {
                       var25 = var30Lifetime1Lifetime1;
                     } else {
                       if ((~var12.field_Pb & var8) != 0) {
-                        var25_int = LoginCredentials.a((byte) -86, ~var12.field_Pb & var8);
+                        var25_int = LoginCredentials.highestOneBit((byte) -86, ~var12.field_Pb & var8);
                         var24Lifetime2 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, ClassDescriptorSupport.field_e, new String[]{var20});
                         if (var25_int > 0 &&
                           null != MachineTokenStorageSupport.field_a &&
@@ -380,7 +380,7 @@ final class SplashScreen extends AppScreen {
                   } else {
                     if (var12.field_Qb >= var6) {
                       if ((var8 & ~var12.field_Pb) != 0) {
-                        var25_int = LoginCredentials.a((byte) -63, ~var12.field_Pb & var8);
+                        var25_int = LoginCredentials.highestOneBit((byte) -63, ~var12.field_Pb & var8);
                         var24Lifetime2 = GradientRasterSupport.field_e;
                         if (var25_int > 0 &&
                           null != MachineTokenStorageSupport.field_a &&

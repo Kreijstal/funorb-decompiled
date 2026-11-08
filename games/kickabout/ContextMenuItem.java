@@ -216,7 +216,7 @@ final class ContextMenuItem extends UiLayoutNode {
           if (null != TextPromptState.field_b) {
             TextPromptState.field_b.draw(104, param1);
           }
-          NumericDateInputWidget.a(30521, param1);
+          NumericDateInputWidget.drawQuickChatKeysHelp(30521, param1);
           return;
         }
         field_Db = true;
@@ -227,7 +227,7 @@ final class ContextMenuItem extends UiLayoutNode {
         if (null != TextPromptState.field_b) {
           TextPromptState.field_b.draw(104, param1);
         }
-        NumericDateInputWidget.a(30521, param1);
+        NumericDateInputWidget.drawQuickChatKeysHelp(30521, param1);
     }
 
     static {

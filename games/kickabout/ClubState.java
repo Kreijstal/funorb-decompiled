@@ -825,7 +825,7 @@ final class ClubState {
                     var7_ref_up = var13;
                     var8 = 0;
                     if (-1 != var5) {
-                      var8 = PasswordLoginCredentials.a(var7_ref_up, -576054046);
+                      var8 = PasswordLoginCredentials.calculatePlayerValue(var7_ref_up, -576054046);
                     }
                     if (var8 > this.field_x) {
                       throw new IllegalStateException("User bought a player but did not have enough money" + param0.toString());
@@ -863,7 +863,7 @@ final class ClubState {
                     var7_ref_upLifetime1 = var12;
                     var8 = 0;
                     if (-1 != var5) {
-                      var8 = PasswordLoginCredentials.a(var7_ref_upLifetime1, -576054046);
+                      var8 = PasswordLoginCredentials.calculatePlayerValue(var7_ref_upLifetime1, -576054046);
                     }
                     if (var8 > this.field_x) {
                       throw new IllegalStateException("User bought a player but did not have enough money" + param0.toString());

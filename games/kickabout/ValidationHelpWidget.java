@@ -271,9 +271,9 @@ final class ValidationHelpWidget extends TextHotspotWidget {
                 var10 = var10 ^ 285L;
             }
             var12 = var2 ^ var10;
-            field_W[0][var0] = IsaacRandom.a(var12, IsaacRandom.a(var4 << 8, IsaacRandom.a(IsaacRandom.a(var10 << 24, IsaacRandom.a(IsaacRandom.a(var6 << 40, IsaacRandom.a(var2 << 48, var2 << 56)), var2 << 32)), var8 << 16)));
+            field_W[0][var0] = IsaacRandom.bitwiseOr(var12, IsaacRandom.bitwiseOr(var4 << 8, IsaacRandom.bitwiseOr(IsaacRandom.bitwiseOr(var10 << 24, IsaacRandom.bitwiseOr(IsaacRandom.bitwiseOr(var6 << 40, IsaacRandom.bitwiseOr(var2 << 48, var2 << 56)), var2 << 32)), var8 << 16)));
             for (var14 = 1; var14 < 8; var14++) {
-                field_W[var14][var0] = IsaacRandom.a(field_W[var14 - 1][var0] << 56, field_W[var14 - 1][var0] >>> 8);
+                field_W[var14][var0] = IsaacRandom.bitwiseOr(field_W[var14 - 1][var0] << 56, field_W[var14 - 1][var0] >>> 8);
             }
             var0++;
         }

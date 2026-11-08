@@ -158,7 +158,7 @@ final class CheckboxPainter implements WidgetPainter {
           AuctionItem.field_f = AuctionItem.field_f - 256;
         }
         if (FadingSoundPlayer.field_q) {
-          AccountNameCheckState.a(0, 0);
+          AccountNameCheckState.advanceLoadingStep(0, 0);
           var1 = PitchSurfaceLoader.loadPitchSurface(RankingsScreen.field_C, FormationMaskSupport.field_c, (byte) -110);
           if (var1 != -1) {
             DelayedServerPacket.a(100, 9863, var1);
@@ -168,7 +168,7 @@ final class CheckboxPainter implements WidgetPainter {
             DelayedServerPacket.a(2, 9863, 1);
             return;
           }
-          AccountNameCheckState.a(0, 1);
+          AccountNameCheckState.advanceLoadingStep(0, 1);
           if (0 != FormationMaskSupport.field_c) {
             if (FormationMaskSupport.field_c == 1) {
               var1Lifetime1 = ReceivedAuctionItem.b(123);
@@ -192,7 +192,7 @@ final class CheckboxPainter implements WidgetPainter {
               return;
             }
           }
-          AccountNameCheckState.a(0, 2);
+          AccountNameCheckState.advanceLoadingStep(0, 2);
           if (2 != RankingsScreen.field_C) {
             if (RankingsScreen.field_C == 3) {
               var1Lifetime2 = AvailabilityCheckRequest.loadStadiumScenery((byte) 28);
@@ -207,18 +207,18 @@ final class CheckboxPainter implements WidgetPainter {
               return;
             }
           }
-          AccountNameCheckState.a(0, 3);
+          AccountNameCheckState.advanceLoadingStep(0, 3);
           var1Lifetime3 = GrowableIntList.a(5464, FormationMaskSupport.field_c, RankingsScreen.field_C);
           if (var1Lifetime3 != -1) {
             DelayedServerPacket.a(100, 9863, var1Lifetime3);
             return;
           }
-          AccountNameCheckState.a(0, 4);
+          AccountNameCheckState.advanceLoadingStep(0, 4);
           if (!MyKitScreen.ensureSoundLoaded(120, TrinketPickerDialog.a(FormationMaskSupport.field_c, 121, NanoTickClock.field_n, RankingsScreen.field_C))) {
             DelayedServerPacket.a(4, 9863, 0);
             return;
           }
-          AccountNameCheckState.a(0, 5);
+          AccountNameCheckState.advanceLoadingStep(0, 5);
           if (RankingsScreen.field_C == 2) {
             if (!MyKitScreen.ensureSoundLoaded(108, 4)) {
               DelayedServerPacket.a(2, 9863, 0);
@@ -246,7 +246,7 @@ final class CheckboxPainter implements WidgetPainter {
             ModalPanel.field_G = null;
             ClientInteractionSupport.field_e = null;
             ClientPacketFlushSupport.field_f = null;
-            AccountNameCheckState.a(0, 6);
+            AccountNameCheckState.advanceLoadingStep(0, 6);
             if (0 == RankingsScreen.field_C) {
               UiLayoutNode.a(15, 6, 50, 0);
             }
@@ -259,16 +259,16 @@ final class CheckboxPainter implements WidgetPainter {
             if (3 == RankingsScreen.field_C) {
               UiLayoutNode.a(15, 3, 256, 0);
             }
-            AccountNameCheckState.a(0, 7);
+            AccountNameCheckState.advanceLoadingStep(0, 7);
             if (RankingsScreen.field_C == 2) {
               UiInputRoutingSupport.buildSliderTrackSprites(true, 128);
             }
             if (RankingsScreen.field_C == 3) {
               PitchAppearanceSupport.buildPitchSprites((byte) -39, 128);
             }
-            AccountNameCheckState.a(0, 8);
+            AccountNameCheckState.advanceLoadingStep(0, 8);
             PitchDecorationSupport.buildPitchDecorations(true);
-            AccountNameCheckState.a(0, 9);
+            AccountNameCheckState.advanceLoadingStep(0, 9);
             if (0 == FormationMaskSupport.field_c) {
               MusicPatchPcmStream.b(1);
             }
@@ -278,7 +278,7 @@ final class CheckboxPainter implements WidgetPainter {
             if (FormationMaskSupport.field_c == 2) {
               MeshObject.a(11383);
             }
-            AccountNameCheckState.a(0, 10);
+            AccountNameCheckState.advanceLoadingStep(0, 10);
             MatchTextInputOverlay.setRenderDetail(-4121, RankingsScreen.field_C);
             ArchiveIndex.field_t = false;
           }

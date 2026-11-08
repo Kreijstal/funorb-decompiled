@@ -124,7 +124,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         PlayerContextMenu.a(127, this.field_x, this.field_A, this.field_s, this.field_B, param7, param1, 5000, PlatformTaskState.field_c, ArchiveRequest.field_r, this.field_v, this.field_u, 5000, this.field_z);
         AppScreen.setServerConnectionParameters(this.field_z, param1, PlatformTaskState.field_c, ArchiveRequest.field_r, this.field_u, this.field_x, this.field_B, this.field_s, false);
         CipherPacketBuffer.o(255);
-        SoundStreamHandle.field_f = TutorialChoiceDialog.g((byte) 3);
+        SoundStreamHandle.field_f = TutorialChoiceDialog.createMouseWheelInput((byte) 3);
         CanvasInputBindings.attachInputHandlers(RegistrationRequestState.field_d, (byte) -64);
         LeagueWinnerDialog.field_F = param4;
         ClubState.field_y = param3;
@@ -910,7 +910,7 @@ abstract class NetworkGameClient extends GameAppletShell {
                   null != SumIntegersCommand.field_D[var7] &&
                   (~StringCursor.field_a & SumIntegersCommand.field_D[var7][var9]) > 0) {
                   var14 = 1;
-                  var15 = LoginCredentials.a((byte) -126, SumIntegersCommand.field_D[var7][var9] & ~StringCursor.field_a);
+                  var15 = LoginCredentials.highestOneBit((byte) -126, SumIntegersCommand.field_D[var7][var9] & ~StringCursor.field_a);
                 }
                 if (null != ModelMaterialDecoder.field_h &&
                   null != ModelMaterialDecoder.field_h[var7] &&

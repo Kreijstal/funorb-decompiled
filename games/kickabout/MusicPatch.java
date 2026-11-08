@@ -85,7 +85,7 @@ final class MusicPatch extends IntrusiveNode {
           if (param0 != 16777215) {
             MusicPatch.drawMatchMinimap(32);
           }
-          SquadPickerDialog.field_Q.b(var1_int, var2, FriendsListPanel.a(false, (byte) 51));
+          SquadPickerDialog.field_Q.b(var1_int, var2, FriendsListPanel.getHudOpacity(false, (byte) 51));
           if (SocketArchiveNetworkClient.field_w != null) {
             AuctionListing.a(1 + var1_int + PitchOptionTile.field_yb, param0 ^ -16754303, 1 + var1_int, 1 + var2 + IconLabel.field_Bb, 1 + var2);
             for (var3_int = 0; 2 > var3_int; var3_int++) {

@@ -93,8 +93,8 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
           if (!param1) {
             field_g = (String) null;
           }
-          var2_int = PasswordLoginCredentials.a(param0, -576054046) / 10;
-          if (PasswordLoginCredentials.a(param0, -576054046) > 0 &&
+          var2_int = PasswordLoginCredentials.calculatePlayerValue(param0, -576054046) / 10;
+          if (PasswordLoginCredentials.calculatePlayerValue(param0, -576054046) > 0 &&
             var2_int == 0) {
             var2_int = 1;
           }

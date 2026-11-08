@@ -296,7 +296,7 @@ final class WhirlpoolHasher {
             }
           }
           if (TournamentLobbyScreen.field_N == ByteArrayPool.field_c &&
-            LoginCredentials.a(180)) {
+            LoginCredentials.ensureLoginPayloadAvailable(180)) {
             if (AppletContextSupport.field_b != 255) {
               ListingRowCache.field_b = ByteArrayPool.field_e.readString(61);
             } else {

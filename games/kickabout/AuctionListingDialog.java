@@ -52,13 +52,13 @@ final class AuctionListingDialog extends MessageDialog {
 
     final int dialogWidth(int param0) {
         if (param0 != -1379118556) {
-          AuctionListingDialog.d(true);
+          AuctionListingDialog.releaseStatics(true);
           return 400;
         }
         return 400;
     }
 
-    public static void d(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         if (!param0) {
           field_F = null;
           field_H = null;
@@ -66,7 +66,7 @@ final class AuctionListingDialog extends MessageDialog {
           field_K = null;
           return;
         }
-        AuctionListingDialog.d(false);
+        AuctionListingDialog.releaseStatics(false);
         field_F = null;
         field_H = null;
         field_L = null;

@@ -24,7 +24,7 @@ class ColumnTableWidget extends UiLayoutNode {
         for (var3_int = 0; var3_int < this.field_Bb.length; var3_int++) {
           if (this.field_Bb[var3_int].field_sb == 1) {
             ShopPlayerSlot.c(45, 81);
-            this.b(var3_int, 99);
+            this.cycleColumnSort(var3_int, 99);
           }
         }
         var7 = this.field_Fb;
@@ -97,14 +97,14 @@ class ColumnTableWidget extends UiLayoutNode {
         }
     }
 
-    final void a(boolean param0, int param1) {
+    final void setScrollOffset(boolean param0, int param1) {
         if (!param0) {
           return;
         }
         this.field_Ab.field_J = param1;
     }
 
-    final void a(ListRow[] param0, int param1) {
+    final void setRows(ListRow[] param0, int param1) {
         try {
           this.a(param1, (byte) -47, param0, param0.length);
         } catch (RuntimeException runtimeException) {
@@ -160,7 +160,7 @@ class ColumnTableWidget extends UiLayoutNode {
             var13++;
           }
           if (param1 != -47) {
-            this.j((byte) -4);
+            this.getSortDirection((byte) -4);
           }
           var12 = this.field_Fb;
           var7 = this.field_Fb;
@@ -189,7 +189,7 @@ class ColumnTableWidget extends UiLayoutNode {
         }
     }
 
-    public static void c(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         if (param0) {
           field_yb = (String) null;
         }
@@ -207,12 +207,12 @@ class ColumnTableWidget extends UiLayoutNode {
         this.field_Cb.field_Eb.layoutThumb(-this.field_Cb.field_Db.field_J, this.field_Cb.field_Db.field_mb, 100, this.field_Cb.field_Gb.field_mb);
     }
 
-    final int h(byte param0) {
+    final int getScrollOffset(byte param0) {
         int var2 = -111 / ((70 - param0) / 52);
         return this.field_Ab.field_J;
     }
 
-    final int b(int param0) {
+    final int getSortColumnIndex(int param0) {
         if (param0 < 30) {
           field_yb = (String) null;
         }
@@ -265,7 +265,7 @@ class ColumnTableWidget extends UiLayoutNode {
         }
     }
 
-    void b(int param0, int param1) {
+    void cycleColumnSort(int param0, int param1) {
         if (param1 < 97) {
           return;
         }
@@ -386,7 +386,7 @@ class ColumnTableWidget extends UiLayoutNode {
         TeamManagementScreen.e(127);
     }
 
-    final int j(byte param0) {
+    final int getSortDirection(byte param0) {
         int stackIn_6_0 = 0;
         if (param0 != 34) {
           this.field_Eb = 0;
@@ -400,7 +400,7 @@ class ColumnTableWidget extends UiLayoutNode {
         return stackIn_6_0;
     }
 
-    final int i(byte param0) {
+    final int getFirstVisibleRow(byte param0) {
         if (param0 != -124) {
           this.field_Ab = (UiLayoutNode) null;
         }

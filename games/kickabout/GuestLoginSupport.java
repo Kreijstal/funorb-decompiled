@@ -6,7 +6,7 @@ final class GuestLoginSupport {
     static String field_b;
 
     final static void a(byte param0, int param1, int param2) {
-        MouseInputHandler.a(16777215, FriendsListPanel.a(false, (byte) 66), param2, -1, param1, 0);
+        MouseInputHandler.a(16777215, FriendsListPanel.getHudOpacity(false, (byte) 66), param2, -1, param1, 0);
         if (param0 >= -126) {
           GuestLoginSupport.releaseStatics((byte) 70);
         }

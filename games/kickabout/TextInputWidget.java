@@ -64,7 +64,7 @@ class TextInputWidget extends TextButton {
         }
     }
 
-    private final void m(int param0) {
+    private final void notifyEnterPressed(int param0) {
         if (this.field_k instanceof TextInputListener) {
           ((TextInputListener) (this.field_k)).onEnterPressed(-86, this);
         }
@@ -73,7 +73,7 @@ class TextInputWidget extends TextButton {
         }
     }
 
-    public static void l(int param0) {
+    public static void releaseStatics(int param0) {
         field_E = null;
         field_U = null;
         field_N = null;
@@ -133,9 +133,9 @@ class TextInputWidget extends TextButton {
         }
     }
 
-    void m(byte param0) {
+    void notifyTextChanged(byte param0) {
         if (param0 > -57) {
-          this.m(49);
+          this.notifyEnterPressed(49);
         }
         if (this.field_k instanceof TextInputListener) {
           ((TextInputListener) (this.field_k)).onTextChanged((byte) 113, this);
@@ -164,7 +164,7 @@ class TextInputWidget extends TextButton {
           this.field_Q = dupTemp$1;
           this.field_I = dupTemp$1;
           if (!param2) {
-            this.m((byte) -83);
+            this.notifyTextChanged((byte) -83);
           }
           if (param1 != -17) {
             this.field_S = 42;
@@ -219,7 +219,7 @@ class TextInputWidget extends TextButton {
           this.field_Q = var2;
           this.field_I = var2;
           this.field_q = this.field_q.substring(0, var2) + this.field_q.substring(var3, this.field_q.length());
-          this.m((byte) -96);
+          this.notifyTextChanged((byte) -96);
         }
     }
 
@@ -246,7 +246,7 @@ class TextInputWidget extends TextButton {
           field_E = (Sprite) null;
         }
         this.field_Q = 0;
-        this.m((byte) -85);
+        this.notifyTextChanged((byte) -85);
     }
 
     final static SoundStreamHandle a(PcmSampleStream param0, int param1) {
@@ -394,7 +394,7 @@ class TextInputWidget extends TextButton {
                 this.field_I = dupTemp$0;
                 this.field_Q = dupTemp$0;
               }
-              this.m((byte) -61);
+              this.notifyTextChanged((byte) -61);
             }
             return true;
           }
@@ -415,12 +415,12 @@ class TextInputWidget extends TextButton {
                     return true;
                   }
                   if (84 == param3) {
-                    this.m(99);
+                    this.notifyEnterPressed(99);
                     return true;
                   }
                   if (GameplayHelpScreen.field_G[82] &&
                     65 == param3) {
-                    this.j(-13630);
+                    this.cutSelectedText(-13630);
                     return true;
                   }
                   if (GameplayHelpScreen.field_G[82] &&
@@ -511,7 +511,7 @@ class TextInputWidget extends TextButton {
         return -81;
     }
 
-    private final void j(int param0) {
+    private final void cutSelectedText(int param0) {
         if (param0 != -13630) {
           return;
         }
@@ -567,7 +567,7 @@ class TextInputWidget extends TextButton {
           }
           this.field_I = this.field_I + param0.length();
           this.field_Q = this.field_I;
-          this.m((byte) -86);
+          this.notifyTextChanged((byte) -86);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

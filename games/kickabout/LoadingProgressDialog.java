@@ -98,7 +98,7 @@ final class LoadingProgressDialog extends ResizableModalPanel {
           this.field_S = param1;
           if (this.field_S != null) {
             var3_int = ConsoleLexer.field_b.paragraphHeight(this.field_S, 260, ConsoleLexer.field_b.field_G);
-            this.a((byte) 110, var3_int + 150, 300);
+            this.setCenteredSize((byte) 110, var3_int + 150, 300);
           }
           this.field_Y = new StripedProgressBar(13, 50, 274, 30, 15, 2113632, 4210752);
           this.field_X = false;

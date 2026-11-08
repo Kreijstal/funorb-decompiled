@@ -49,7 +49,7 @@ final class PendingRequestAcknowledgement extends IntrusiveNode {
             return stackIn_2_0;
           }
           if (RankingRowFactory.decodeSpriteSheetFromArchive(param2, param3, param0, 122)) {
-            stackIn_7_0 = ModalPanel.i((byte) 78);
+            stackIn_7_0 = ModalPanel.takeDecodedSprites((byte) 78);
             return stackIn_7_0;
           }
           stackIn_5_0 = null;

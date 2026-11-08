@@ -91,8 +91,8 @@ final class LookupRecordUpdate extends IntrusiveNode {
             SoftwareRasterizer.fillRect(0, 0, 640, 480, ConsoleCommand.field_x[FormationMaskSupport.field_c][RankingsScreen.field_C]);
             var2_int = var15.field_v;
             var3 = var15.field_v;
-            var4_int = -1 + AccountTermsPanel.a(0, 6784) / var2_int;
-            var5 = 1 + AccountTermsPanel.a(640, 6784) / var2_int;
+            var4_int = -1 + AccountTermsPanel.screenToWorldX(0, 6784) / var2_int;
+            var5 = 1 + AccountTermsPanel.screenToWorldX(640, 6784) / var2_int;
             var6 = TextLayoutLine.a(-6779, 0) / var3 - 1;
             var7 = TextLayoutLine.a(-6779, 640) / var3 + 1;
             for (var8 = var4_int; var8 < var5; var8++) {
@@ -129,7 +129,7 @@ final class LookupRecordUpdate extends IntrusiveNode {
             stackIn_29_0 = (MatchHudSupport.screenToWorldY(480, 4620) <= 1344) ? 0 : 1;
             var5Lifetime1 = stackIn_29_0;
             if (var2_intLifetime1Lifetime1 != 0) {
-              var6Lifetime1 = MySquadScreen.c(param0 - 26, -15 - var15.field_o);
+              var6Lifetime1 = MySquadScreen.worldToScreenX(param0 - 26, -15 - var15.field_o);
               stackIn_33_0 = -15;
               if (var4_intLifetime1 != 0) {
                 stackIn_34_1 = var15.field_v;
@@ -152,7 +152,7 @@ final class LookupRecordUpdate extends IntrusiveNode {
             if (var4_intLifetime1 != 0) {
               var6Lifetime1Lifetime1 = PitchProjectionSupport.worldToScreenY(-var15.field_v - 15, (byte) -56);
               for (var7Lifetime1Lifetime1 = -15; var7Lifetime1Lifetime1 < 896; var7Lifetime1Lifetime1 = var7Lifetime1Lifetime1 + var15.field_o) {
-                MyKitScreen.field_S.d(MySquadScreen.c(-44, var7Lifetime1Lifetime1), var6Lifetime1Lifetime1);
+                MyKitScreen.field_S.d(MySquadScreen.worldToScreenX(-44, var7Lifetime1Lifetime1), var6Lifetime1Lifetime1);
               }
             }
             if (var5Lifetime1 != 0) {
@@ -161,7 +161,7 @@ final class LookupRecordUpdate extends IntrusiveNode {
               for (var7Lifetime1Lifetime2 = 0; var7Lifetime1Lifetime2 < 2; var7Lifetime1Lifetime2++) {
                 var8Lifetime1Lifetime1 = PitchProjectionSupport.worldToScreenY(var6Lifetime1Lifetime2, (byte) -56);
                 for (var9Lifetime1 = -15; 896 > var9Lifetime1; var9Lifetime1 = var9Lifetime1 + var15.field_o) {
-                  MyKitScreen.field_S.d(MySquadScreen.c(-16, var9Lifetime1), var8Lifetime1Lifetime1);
+                  MyKitScreen.field_S.d(MySquadScreen.worldToScreenX(-16, var9Lifetime1), var8Lifetime1Lifetime1);
                 }
                 var6Lifetime1Lifetime2 = var6Lifetime1Lifetime2 + var15.field_v;
               }
@@ -170,7 +170,7 @@ final class LookupRecordUpdate extends IntrusiveNode {
               for (var6Lifetime1Lifetime3 = -15; var15.field_o + var6Lifetime1Lifetime3 < 896; var6Lifetime1Lifetime3 = var6Lifetime1Lifetime3 + var15.field_o) {
               }
               for (var7Lifetime1Lifetime3 = 0; var7Lifetime1Lifetime3 < 2; var7Lifetime1Lifetime3++) {
-                var8Lifetime1Lifetime2 = MySquadScreen.c(-63, var6Lifetime1Lifetime3);
+                var8Lifetime1Lifetime2 = MySquadScreen.worldToScreenX(-63, var6Lifetime1Lifetime3);
                 stackIn_62_0 = -15;
                 if (var4_intLifetime1 != 0) {
                   stackIn_63_1 = var15.field_v;
@@ -195,7 +195,7 @@ final class LookupRecordUpdate extends IntrusiveNode {
             SoftwareRasterizer.fillRect(0, 0, 640, 480, ConsoleCommand.field_x[FormationMaskSupport.field_c][RankingsScreen.field_C]);
           }
           if (DebouncedValidationProvider.field_a != null) {
-            var2_intLifetime2 = MySquadScreen.c(-29, -15);
+            var2_intLifetime2 = MySquadScreen.worldToScreenX(-29, -15);
             var3Lifetime2 = PitchProjectionSupport.worldToScreenY(-15, (byte) -56);
             if (InstrumentNoteMask.field_i == 256) {
               DebouncedValidationProvider.field_a.d(var2_intLifetime2, var3Lifetime2);
@@ -208,7 +208,7 @@ final class LookupRecordUpdate extends IntrusiveNode {
               GameKeyHandler.a((byte) 92);
             }
             if (RankingsScreen.field_C == 2) {
-              LoginForm.a((byte) -79);
+              LoginForm.drawAnimatedPitchEdges((byte) -79);
             }
             if (AccountNameAvailabilityValidator.field_l != null) {
               var2_intLifetime3 = AuctionItem.field_f * 6 >> 8;

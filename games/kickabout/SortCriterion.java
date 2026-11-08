@@ -82,7 +82,7 @@ abstract class SortCriterion {
           for (var10 = 0; var10 < var8[var9].length; var10++) {
             var11_ref_kg = var7[var9][var10];
             var8[var9][var10] = var11_ref_kg.toRgbSprite();
-            LoginForm.a(var8[var9][var10], 20684);
+            LoginForm.tintSpriteForSurface(var8[var9][var10], 20684);
           }
         }
         stackIn_12_0 = (!param2) ? 59 : 50;

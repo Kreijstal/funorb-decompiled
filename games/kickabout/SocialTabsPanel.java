@@ -29,7 +29,7 @@ final class SocialTabsPanel {
         try {
           HelpTipDialog.field_I = new AnimationClip[5][17];
           ClientInteractionSupport.field_b = new AnimationClip[5];
-          GameKeyHandler.a(param1, param3, (byte) -69);
+          GameKeyHandler.setSharedUiArchives(param1, param3, (byte) -69);
           var10 = new AnimationFrameset(0);
           var11 = var10;
           while (!var11.ensureLoaded((byte) 103)) {
@@ -140,7 +140,7 @@ final class SocialTabsPanel {
         int var8 = 17 % ((-10 - param4) / 63);
         AlphaContainer.field_E.setBounds(true, -2 - TeamSelectionAgent.field_f + (TriangleMesh.field_R.field_q - 80) - 2, 0, 2 + LineupPositionSupport.field_c, 18);
         AudioOutputSupport.field_f.setBounds(true, 82 + TeamSelectionAgent.field_f, -80 + (-TeamSelectionAgent.field_f + TriangleMesh.field_R.field_q) - 2, LineupPositionSupport.field_c + 2, 18);
-        RotaryDialPainter.field_d.a(TeamSelectionAgent.field_f, -LineupPositionSupport.field_c + (TriangleMesh.field_R.field_mb - 22), 20, 20 + LineupPositionSupport.field_c + 2, TriangleMesh.field_R.field_q, 92, 2, 0);
+        RotaryDialPainter.field_d.setBoundsAndUpdateRows(TeamSelectionAgent.field_f, -LineupPositionSupport.field_c + (TriangleMesh.field_R.field_mb - 22), 20, 20 + LineupPositionSupport.field_c + 2, TriangleMesh.field_R.field_q, 92, 2, 0);
         TournamentChampionDialog.field_F.a(2, TeamSelectionAgent.field_f, (byte) 19, 20);
     }
 

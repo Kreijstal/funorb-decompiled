@@ -265,7 +265,7 @@ final class DisplayModeSupport {
             stackIn_4_0 = new FullscreenDisplayMode[]{};
             return stackIn_4_0;
           }
-          var8 = param1.b(true);
+          var8 = param1.requestDisplayModes(true);
           while (var8.field_a == 0) {
             ThreadSleepSupport.sleepMillis(10L, 1);
           }

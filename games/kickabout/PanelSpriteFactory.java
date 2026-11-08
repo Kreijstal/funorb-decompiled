@@ -167,7 +167,7 @@ final class PanelSpriteFactory {
 
     final static void captureFootballer(int param0, RenderedFootballer param1, int param2) {
         try {
-          NetworkArchiveRequest.g(0).captureFootballer(param1, param0, true);
+          NetworkArchiveRequest.getOldestAfterimage(0).captureFootballer(param1, param0, true);
           if (param2 < 103) {
             field_c = (String) null;
           }

@@ -68,7 +68,7 @@ final class MySquadScreen extends TeamManagementScreen {
         this.rebuildPlayerPanel(-111);
     }
 
-    final static int c(int param0, int param1) {
+    final static int worldToScreenX(int param0, int param1) {
         if (param0 >= -15) {
           field_N = (UiLayoutNode) null;
         }
@@ -201,7 +201,7 @@ final class MySquadScreen extends TeamManagementScreen {
           stackIn_6_2 = var26;
           stackIn_6_3 = -107;
           stackIn_7_4 = !(TextFieldValidator.f(param0 ^ 4));
-          stackIn_11_2 = (((PlayerStats) (Object) stackIn_6_2).c((byte) stackIn_6_3, stackIn_7_4)) && (AccountRegistrationResponse.a((byte) 47));
+          stackIn_11_2 = (((PlayerStats) (Object) stackIn_6_2).c((byte) stackIn_6_3, stackIn_7_4)) && (AccountRegistrationResponse.isHalloweenAppearanceEnabled((byte) 47));
           var7 = TriangleMesh.a(stackIn_6_0, stackIn_6_1, stackIn_11_2);
           var8 = -36 + this.field_I.field_F + this.field_I.field_q;
           var9 = this.field_I.field_T + 40;

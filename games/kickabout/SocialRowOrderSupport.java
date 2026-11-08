@@ -184,7 +184,7 @@ final class SocialRowOrderSupport {
           SocialRowOrderSupport.getScreenPanelWidth((AppScreen) null, 65);
           return;
         }
-        if (!NumericDateInputWidget.field_J.a((byte) -122, param1)) {
+        if (!NumericDateInputWidget.field_J.updateAndCheckDismissed((byte) -122, param1)) {
           if (param0 == -27) {
             return;
           }

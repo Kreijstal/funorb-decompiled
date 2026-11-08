@@ -31,7 +31,7 @@ final class LeagueWinnerDialog extends MessageDialog {
         var2 = Kickabout.field_G;
         var1 = -24 % ((param0 - 38) / 56);
         if (1 == HuffmanCodec.field_e) {
-          LoginCredentials.a(-25246, true, false, false, false, false, false);
+          LoginCredentials.setTutorialRestrictions(-25246, true, false, false, false, false, false);
         } else {
           if (HuffmanCodec.field_e != 2) {
             if (3 != HuffmanCodec.field_e) {
@@ -41,46 +41,46 @@ final class LeagueWinnerDialog extends MessageDialog {
                     if (HuffmanCodec.field_e != 7) {
                       if (8 != HuffmanCodec.field_e) {
                         if (HuffmanCodec.field_e == 9) {
-                          LoginCredentials.a(-25246, false, false, true, true, false, false);
+                          LoginCredentials.setTutorialRestrictions(-25246, false, false, true, true, false, false);
                         } else {
                           if (HuffmanCodec.field_e != 10) {
                             if (HuffmanCodec.field_e == 11) {
-                              LoginCredentials.a(-25246, true, true, true, true, false, true);
+                              LoginCredentials.setTutorialRestrictions(-25246, true, true, true, true, false, true);
                             } else {
                               if (HuffmanCodec.field_e != 12) {
                                 if (HuffmanCodec.field_e == 13) {
-                                  LoginCredentials.a(-25246, true, true, true, true, false, true);
+                                  LoginCredentials.setTutorialRestrictions(-25246, true, true, true, true, false, true);
                                 } else {
-                                  LoginCredentials.a(-25246, true, true, true, true, true, true);
+                                  LoginCredentials.setTutorialRestrictions(-25246, true, true, true, true, true, true);
                                 }
                               } else {
-                                LoginCredentials.a(-25246, false, false, true, true, false, false);
+                                LoginCredentials.setTutorialRestrictions(-25246, false, false, true, true, false, false);
                               }
                             }
                           } else {
-                            LoginCredentials.a(-25246, false, false, false, false, true, false);
+                            LoginCredentials.setTutorialRestrictions(-25246, false, false, false, false, true, false);
                           }
                         }
                       } else {
-                        LoginCredentials.a(-25246, true, true, false, true, false, true);
+                        LoginCredentials.setTutorialRestrictions(-25246, true, true, false, true, false, true);
                       }
                     } else {
-                      LoginCredentials.a(-25246, true, true, false, false, false, true);
+                      LoginCredentials.setTutorialRestrictions(-25246, true, true, false, false, false, true);
                     }
                   } else {
-                    LoginCredentials.a(-25246, false, false, false, true, false, false);
+                    LoginCredentials.setTutorialRestrictions(-25246, false, false, false, true, false, false);
                   }
                 } else {
-                  LoginCredentials.a(-25246, false, false, false, true, false, false);
+                  LoginCredentials.setTutorialRestrictions(-25246, false, false, false, true, false, false);
                 }
               } else {
-                LoginCredentials.a(-25246, false, false, false, true, false, false);
+                LoginCredentials.setTutorialRestrictions(-25246, false, false, false, true, false, false);
               }
             } else {
-              LoginCredentials.a(-25246, true, false, false, false, false, true);
+              LoginCredentials.setTutorialRestrictions(-25246, true, false, false, false, false, true);
             }
           } else {
-            LoginCredentials.a(-25246, false, false, false, false, false, true);
+            LoginCredentials.setTutorialRestrictions(-25246, false, false, false, false, false, true);
           }
         }
     }

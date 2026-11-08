@@ -125,7 +125,7 @@ final class RenderedFootballer extends FootballerAgent {
             stackIn_7_2 = param3.field_Eb;
             stackIn_7_3 = -107;
             stackIn_8_4 = !(TextFieldValidator.f(param0 ^ 5185));
-            stackIn_12_2 = (((PlayerStats) (Object) stackIn_7_2).c((byte) stackIn_7_3, stackIn_8_4)) && (AccountRegistrationResponse.a((byte) 83));
+            stackIn_12_2 = (((PlayerStats) (Object) stackIn_7_2).c((byte) stackIn_7_3, stackIn_8_4)) && (AccountRegistrationResponse.isHalloweenAppearanceEnabled((byte) 83));
             var4 = TriangleMesh.a(stackIn_7_0, stackIn_7_1, stackIn_12_2);
             var5 = param2.field_q + param2.field_F - 38;
             var6 = param2.field_T + 58;
@@ -748,19 +748,19 @@ final class RenderedFootballer extends FootballerAgent {
           if (!this.field_nb) {
             if (this.field_ob == 4 &&
               this.actionTime < 20) {
-              this.field_mb.a(-1 + this.field_mb.a(true), 103);
+              this.field_mb.setFrame(-1 + this.field_mb.frameCount(true), 103);
             }
             if (0 == this.field_ob &&
               this.field_mb.field_b > 9) {
-              this.field_mb.a(9, 98);
+              this.field_mb.setFrame(9, 98);
             }
             if (this.field_ob == 6 &&
               30 < this.actionTime) {
-              this.field_mb.a(0, 109);
+              this.field_mb.setFrame(0, 109);
             }
             if (this.field_ob == 15 &&
               !this.e(292603688)) {
-              this.field_mb.a(0, 124);
+              this.field_mb.setFrame(0, 124);
             }
           }
         }
@@ -784,7 +784,7 @@ final class RenderedFootballer extends FootballerAgent {
           return;
         }
         this.field_ob = param1;
-        this.field_mb.a(HelpTipDialog.field_I[this.field_U][this.field_ob], (byte) -107);
+        this.field_mb.setClip(HelpTipDialog.field_I[this.field_U][this.field_ob], (byte) -107);
     }
 
     private final int computeFacingAngle(byte param0) {

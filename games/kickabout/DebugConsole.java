@@ -39,7 +39,7 @@ final class DebugConsole extends ConsolePanel {
               if (!var7.isAtEnd(6)) {
                 throw new ConsoleParseException(var7.readToken((byte) 114).field_f);
               }
-              this.a(-98, var5.a(param1, this.field_t));
+              this.print(-98, var5.a(param1, this.field_t));
               return true;
             } catch (ConsoleParseException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
@@ -51,7 +51,7 @@ final class DebugConsole extends ConsolePanel {
             } catch (ConsoleEvaluationException decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               var3_ref = (ConsoleEvaluationException) (Object) decompiledCaughtException;
-              this.a(var3_ref.field_c, (byte) 94);
+              this.print(var3_ref.field_c, (byte) 94);
               return false;
             }
           } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
@@ -222,7 +222,7 @@ final class DebugConsole extends ConsolePanel {
             this.field_t[incrementValue$3] = var5;
             var5 = (ConsoleCommand) (param0.c(33));
           }
-          this.a("# <col=ffaaff>FunOrbConsole (loaded " + this.field_t.length + " methods at " + new Date() + ")</col>", (byte) 94);
+          this.print("# <col=ffaaff>FunOrbConsole (loaded " + this.field_t.length + " methods at " + new Date() + ")</col>", (byte) 94);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

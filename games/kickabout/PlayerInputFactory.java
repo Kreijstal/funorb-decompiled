@@ -58,7 +58,7 @@ final class PlayerInputFactory {
           }
           var7 = new RenderedFootballer(var6, param0.archetype, true);
           var7.setAction((byte) -31, 0);
-          var7.field_mb.a(ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(-121, var7.field_mb.a(true), new Random()), -38);
+          var7.field_mb.setFrame(ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(-121, var7.field_mb.frameCount(true), new Random()), -38);
           stackIn_3_0 = var7;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

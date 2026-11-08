@@ -186,7 +186,7 @@ abstract class AppScreen {
               }
             }
             if (AuctionListingDialog.field_H == ByteArrayPool.field_c &&
-              LoginCredentials.a(180)) {
+              LoginCredentials.ensureLoginPayloadAvailable(180)) {
               DiagnosticsOverlaySupport.field_d = ByteArrayPool.field_e.readLong((byte) -124);
               LoginMethod.field_e = param4;
               ScrollContainer.field_Ib = ByteArrayPool.field_e.readUnsignedByte((byte) -118);
@@ -277,7 +277,7 @@ abstract class AppScreen {
               return stackIn_91_0;
             }
             if (AccountRequestDialog.field_fb == ByteArrayPool.field_c &&
-              LoginCredentials.a(180)) {
+              LoginCredentials.ensureLoginPayloadAvailable(180)) {
               FormationView.b((byte) -116);
               if (AppletContextSupport.field_b == 7 &&
                 !ContextMenuItem.field_Db) {

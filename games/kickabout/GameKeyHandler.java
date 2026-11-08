@@ -6,7 +6,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
     static int[] field_b;
     static String field_a;
 
-    final static void a(ResourceArchive param0, ResourceArchive param1, byte param2) {
+    final static void setSharedUiArchives(ResourceArchive param0, ResourceArchive param1, byte param2) {
         if (param2 > -68) {
           return;
         }
@@ -132,7 +132,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
           var8 = stackIn_10_0;
           stackIn_13_0 = (MatchHudSupport.screenToWorldY(480, 4620) <= 1344 + var3 >> 1) ? 0 : 1;
           var9 = stackIn_13_0;
-          var10 = MySquadScreen.c(-75, 448);
+          var10 = MySquadScreen.worldToScreenX(-75, 448);
           var11 = PitchProjectionSupport.worldToScreenY(672, (byte) -56);
           var12 = DualLinkNode.field_h[0].field_i * InstrumentNoteMask.field_i >> 8;
           var13 = InstrumentNoteMask.field_i * DateInputValidator.field_e[0].field_a >> 8;
@@ -184,8 +184,8 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             ListRow.a(-12376, var16, var17, ByteStorage.field_b);
             ListRow.a(-12376, var16, var17, ClientPacketFlushSupport.field_f[3]);
           }
-          var22Lifetime2 = MySquadScreen.c(-82, -130);
-          var23 = MySquadScreen.c(-70, 998);
+          var22Lifetime2 = MySquadScreen.worldToScreenX(-82, -130);
+          var23 = MySquadScreen.worldToScreenX(-70, 998);
           for (var24 = 0; var24 < 8; var24++) {
             var25 = PitchProjectionSupport.worldToScreenY(40 + (-22 + ManagerAction.field_f.field_v) * var24, (byte) -56);
             ListRow.a(-12376, var22Lifetime2, var25, ManagerAction.field_f);
@@ -325,7 +325,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_b = null;
         field_a = null;
         if (param0 != 3902) {

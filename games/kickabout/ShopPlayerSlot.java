@@ -288,7 +288,7 @@ final class ShopPlayerSlot extends ListRow {
             this.field_Mb.field_s = this.field_Mb.field_s + this.field_Pb[var6_int];
           }
           this.field_Mb.field_J = 21;
-          this.field_Gb = PasswordLoginCredentials.a(this.field_Sb, -576054046);
+          this.field_Gb = PasswordLoginCredentials.calculatePlayerValue(this.field_Sb, -576054046);
           if (this.field_Fb == -1) {
             this.field_Gb = 0;
           }

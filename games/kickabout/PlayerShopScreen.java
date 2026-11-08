@@ -35,12 +35,12 @@ final class PlayerShopScreen extends TeamManagementScreen {
     }
 
     final void a(int param0, int param1, int param2, int param3) {
-        int var5 = this.field_J.h((byte) -48);
+        int var5 = this.field_J.getScrollOffset((byte) -48);
         SortCriterion var6 = this.field_J.field_zb[this.field_J.field_Db];
         this.field_I.addLast(new IntValueNode(param0 | param3 << 16), 3);
         this.rebuildShopRows(true);
         this.field_J.a(var6, 94);
-        this.field_J.a(true, var5);
+        this.field_J.setScrollOffset(true, var5);
         this.field_T.field_Fb = param1;
         if (param2 <= 20) {
           this.drawOverlay(false, -54);
@@ -82,7 +82,7 @@ final class PlayerShopScreen extends TeamManagementScreen {
         this.field_G.setBounds(true, this.field_Q.field_q, this.field_Q.field_s, 5 + (this.field_Q.field_mb + this.field_Q.field_J), 97);
         this.rebuildShopRows(true);
         this.field_J.field_Db = -1;
-        this.field_J.b(2, 104);
+        this.field_J.cycleColumnSort(2, 104);
         this.field_T.field_Fb = -1;
         this.refreshSellButton(false);
     }
@@ -101,7 +101,7 @@ final class PlayerShopScreen extends TeamManagementScreen {
         if (0 < this.field_O) {
           this.field_O = this.field_O - 1;
         }
-        var3 = this.field_J.h((byte) -38);
+        var3 = this.field_J.getScrollOffset((byte) -38);
         QuickChatCategory.a(RegistrationRequestState.field_h.field_x, 5464);
         this.field_J.a(param1, false);
         this.field_L.field_s = this.slideOffsetX;
@@ -136,12 +136,12 @@ final class PlayerShopScreen extends TeamManagementScreen {
           }
           var7++;
         }
-        if (this.field_J.h((byte) -73) > var3 &&
+        if (this.field_J.getScrollOffset((byte) -73) > var3 &&
           this.field_O == 0) {
           ShopPlayerSlot.c(59, -112);
           this.field_O = 10;
         }
-        if (this.field_J.h((byte) -86) < var3 &&
+        if (this.field_J.getScrollOffset((byte) -86) < var3 &&
           this.field_O == 0) {
           ShopPlayerSlot.c(60, -127);
           this.field_O = 10;
@@ -246,7 +246,7 @@ final class PlayerShopScreen extends TeamManagementScreen {
           var3Lifetime1++;
           var4 = (ShopPlayerSlot) (var10.c(33));
         }
-        this.field_J.a(this.field_F, 0);
+        this.field_J.setRows(this.field_F, 0);
         return;
     }
 

@@ -37,7 +37,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
         }
     }
 
-    final static void a(Sprite param0, int param1) {
+    final static void tintSpriteForSurface(Sprite param0, int param1) {
         double[] var3 = null;
         if (FormationMaskSupport.field_c == 0) {
           return;
@@ -57,7 +57,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
     final static void submitHighScore(byte param0, int param1, HighScoreSubmission param2) {
         try {
           if (param0 != 70) {
-            LoginForm.a((byte) -2);
+            LoginForm.drawAnimatedPitchEdges((byte) -2);
           }
           FaceNormal.field_d.addLast(param2, param0 - 67);
           BlobSubmission.writeHighScoreSubmission(125, param1, param2);
@@ -188,7 +188,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
         }
     }
 
-    public static void k(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != -11203) {
           field_E = (Random) null;
         }
@@ -383,7 +383,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
         return this.field_N.field_q;
     }
 
-    final static void a(byte param0) {
+    final static void drawAnimatedPitchEdges(byte param0) {
         int var7 = 0;
         int var2 = 0;
         int var3 = 0;
@@ -402,8 +402,8 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
         var10 = Kickabout.field_G;
         try {
           var12 = FootballerPreview.a(param0 ^ 5332);
-          var2 = MySquadScreen.c(param0 ^ 62, -var12.field_o - 15 + 120);
-          var3 = MySquadScreen.c(-54, 10 + var12.field_o * 3 - 15);
+          var2 = MySquadScreen.worldToScreenX(param0 ^ 62, -var12.field_o - 15 + 120);
+          var3 = MySquadScreen.worldToScreenX(-54, 10 + var12.field_o * 3 - 15);
           var4 = var12.field_v;
           var5 = 6 * AuctionItem.field_f >> 8;
           var6 = -15;

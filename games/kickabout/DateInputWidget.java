@@ -24,15 +24,15 @@ abstract class DateInputWidget extends WidgetContainer implements ValidationProv
           TeamSelectionView.a(param0, var7, param6, param3, param2, 73, param5, param1);
           return;
         }
-        DateInputWidget.a(-38);
+        DateInputWidget.releaseStatics(-38);
         TeamSelectionView.a(param0, var7, param6, param3, param2, 73, param5, param1);
     }
 
-    void a(DateInputValidator param0, int param1) {
+    void setValidator(DateInputValidator param0, int param1) {
         try {
           this.field_B = param0;
           if (param1 != -20274) {
-            DateInputWidget.a(-16);
+            DateInputWidget.releaseStatics(-16);
           }
           this.field_B.dateInput = this;
         } catch (RuntimeException runtimeException) {
@@ -46,7 +46,7 @@ abstract class DateInputWidget extends WidgetContainer implements ValidationProv
         super(param0, param1, param2, param3, param4);
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_H = null;
         field_F = null;
         field_E = null;
@@ -68,7 +68,7 @@ abstract class DateInputWidget extends WidgetContainer implements ValidationProv
 
     abstract int getMonthIndex(byte param0);
 
-    public final ValidationSource a(byte param0) {
+    public final ValidationSource getValidationSource(byte param0) {
         if (param0 > -107) {
           return (ValidationSource) null;
         }

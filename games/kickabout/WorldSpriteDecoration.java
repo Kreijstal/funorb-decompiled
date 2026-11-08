@@ -94,11 +94,11 @@ final class WorldSpriteDecoration {
         int var2 = 0;
         int var3 = 0;
         if (256 == InstrumentNoteMask.field_i) {
-          this.field_c.c(MySquadScreen.c(-62, this.field_b), PitchProjectionSupport.worldToScreenY(this.field_e, (byte) -56));
+          this.field_c.c(MySquadScreen.worldToScreenX(-62, this.field_b), PitchProjectionSupport.worldToScreenY(this.field_e, (byte) -56));
         } else {
           var2 = this.field_c.field_o * InstrumentNoteMask.field_i >> 8;
           var3 = InstrumentNoteMask.field_i * this.field_c.field_v >> 8;
-          this.field_c.drawScaled(MySquadScreen.c(-109, this.field_b), PitchProjectionSupport.worldToScreenY(this.field_e, (byte) -56), var2, var3);
+          this.field_c.drawScaled(MySquadScreen.worldToScreenX(-109, this.field_b), PitchProjectionSupport.worldToScreenY(this.field_e, (byte) -56), var2, var3);
         }
         if (param0 < 106) {
           field_a = (double[][]) null;

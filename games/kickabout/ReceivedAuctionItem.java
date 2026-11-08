@@ -91,7 +91,7 @@ final class ReceivedAuctionItem extends AuctionItem {
     }
 
     final static void f(byte param0) {
-        MusicPatchNode.b(67);
+        MusicPatchNode.closePlayerContextMenu(67);
         GameModesHelpScreen.i((byte) -90);
         TextPromptState.field_b = null;
         PendingRequestAcknowledgement.closeQuickChat(47);

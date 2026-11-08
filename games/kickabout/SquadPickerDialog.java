@@ -115,7 +115,7 @@ final class SquadPickerDialog extends MessageDialog {
                 return;
               }
               if (this.field_H.field_Fb != -1 &&
-                PasswordLoginCredentials.a(GameLoopApplet.field_E.squad[GameLoopApplet.field_E.field_q[this.field_H.field_Fb]], -576054046) == 0) {
+                PasswordLoginCredentials.calculatePlayerValue(GameLoopApplet.field_E.squad[GameLoopApplet.field_E.field_q[this.field_H.field_Fb]], -576054046) == 0) {
                 IsSixCommand.field_C.a(PlayArea.field_f, param1 + 170, 210 + (param2 + 35), 300, 40, 16777215, -1, 1, 1, 0);
                 return;
               }
@@ -128,7 +128,7 @@ final class SquadPickerDialog extends MessageDialog {
             if (this.field_H.field_Fb == -1) {
               IsSixCommand.field_C.a(LeaguesHelpScreen.field_G, 170 + param1, 210 + param2 + 35, 300, 40, 16729156, -1, 1, 1, 0);
             } else {
-              if (PasswordLoginCredentials.a(GameLoopApplet.field_E.squad[GameLoopApplet.field_E.field_q[this.field_H.field_Fb]], -576054046) != 0) {
+              if (PasswordLoginCredentials.calculatePlayerValue(GameLoopApplet.field_E.squad[GameLoopApplet.field_E.field_q[this.field_H.field_Fb]], -576054046) != 0) {
                 IsSixCommand.field_C.a(LeaguesHelpScreen.field_G, 170 + param1, 210 + param2 + 35, 300, 40, 16729156, -1, 1, 1, 0);
               } else {
                 IsSixCommand.field_C.a(PlayArea.field_f, param1 + 170, 210 + (param2 + 35), 300, 40, 16777215, -1, 1, 1, 0);
@@ -141,7 +141,7 @@ final class SquadPickerDialog extends MessageDialog {
             return;
           }
           if (this.field_H.field_Fb != -1 &&
-            PasswordLoginCredentials.a(GameLoopApplet.field_E.squad[GameLoopApplet.field_E.field_q[this.field_H.field_Fb]], -576054046) == 0) {
+            PasswordLoginCredentials.calculatePlayerValue(GameLoopApplet.field_E.squad[GameLoopApplet.field_E.field_q[this.field_H.field_Fb]], -576054046) == 0) {
             IsSixCommand.field_C.a(PlayArea.field_f, param1 + 170, 210 + (param2 + 35), 300, 40, 16777215, -1, 1, 1, 0);
             return;
           }
@@ -159,7 +159,7 @@ final class SquadPickerDialog extends MessageDialog {
           if (!GameLoopApplet.field_E.a((byte) -102, GameLoopApplet.field_E.field_q[this.field_H.field_Fb])) {
             if (!AuctionLogEntry.e(15137)) {
               if (this.field_H.field_Fb != -1 &&
-                PasswordLoginCredentials.a(GameLoopApplet.field_E.squad[GameLoopApplet.field_E.field_q[this.field_H.field_Fb]], -576054046) == 0) {
+                PasswordLoginCredentials.calculatePlayerValue(GameLoopApplet.field_E.squad[GameLoopApplet.field_E.field_q[this.field_H.field_Fb]], -576054046) == 0) {
                 IsSixCommand.field_C.a(PlayArea.field_f, param1 + 170, 210 + (param2 + 35), 300, 40, 16777215, -1, 1, 1, 0);
                 return;
               }
@@ -172,7 +172,7 @@ final class SquadPickerDialog extends MessageDialog {
               if (this.field_H.field_Fb == -1) {
                 IsSixCommand.field_C.a(LeaguesHelpScreen.field_G, 170 + param1, 210 + param2 + 35, 300, 40, 16729156, -1, 1, 1, 0);
               } else {
-                if (PasswordLoginCredentials.a(GameLoopApplet.field_E.squad[GameLoopApplet.field_E.field_q[this.field_H.field_Fb]], -576054046) != 0) {
+                if (PasswordLoginCredentials.calculatePlayerValue(GameLoopApplet.field_E.squad[GameLoopApplet.field_E.field_q[this.field_H.field_Fb]], -576054046) != 0) {
                   IsSixCommand.field_C.a(LeaguesHelpScreen.field_G, 170 + param1, 210 + param2 + 35, 300, 40, 16729156, -1, 1, 1, 0);
                 } else {
                   IsSixCommand.field_C.a(PlayArea.field_f, param1 + 170, 210 + (param2 + 35), 300, 40, 16777215, -1, 1, 1, 0);
@@ -187,7 +187,7 @@ final class SquadPickerDialog extends MessageDialog {
           if (this.field_H.field_Fb == -1) {
             IsSixCommand.field_C.a(LeaguesHelpScreen.field_G, 170 + param1, 210 + param2 + 35, 300, 40, 16729156, -1, 1, 1, 0);
           } else {
-            if (PasswordLoginCredentials.a(GameLoopApplet.field_E.squad[GameLoopApplet.field_E.field_q[this.field_H.field_Fb]], -576054046) == 0) {
+            if (PasswordLoginCredentials.calculatePlayerValue(GameLoopApplet.field_E.squad[GameLoopApplet.field_E.field_q[this.field_H.field_Fb]], -576054046) == 0) {
               IsSixCommand.field_C.a(PlayArea.field_f, param1 + 170, 210 + (param2 + 35), 300, 40, 16777215, -1, 1, 1, 0);
             } else {
               IsSixCommand.field_C.a(LeaguesHelpScreen.field_G, 170 + param1, 210 + param2 + 35, 300, 40, 16729156, -1, 1, 1, 0);
@@ -200,7 +200,7 @@ final class SquadPickerDialog extends MessageDialog {
             if (this.field_H.field_Fb == -1) {
               IsSixCommand.field_C.a(LeaguesHelpScreen.field_G, 170 + param1, 210 + param2 + 35, 300, 40, 16729156, -1, 1, 1, 0);
             } else {
-              if (PasswordLoginCredentials.a(GameLoopApplet.field_E.squad[GameLoopApplet.field_E.field_q[this.field_H.field_Fb]], -576054046) != 0) {
+              if (PasswordLoginCredentials.calculatePlayerValue(GameLoopApplet.field_E.squad[GameLoopApplet.field_E.field_q[this.field_H.field_Fb]], -576054046) != 0) {
                 IsSixCommand.field_C.a(LeaguesHelpScreen.field_G, 170 + param1, 210 + param2 + 35, 300, 40, 16729156, -1, 1, 1, 0);
               } else {
                 IsSixCommand.field_C.a(PlayArea.field_f, param1 + 170, 210 + (param2 + 35), 300, 40, 16777215, -1, 1, 1, 0);
@@ -258,7 +258,7 @@ final class SquadPickerDialog extends MessageDialog {
           if (GameLoopApplet.field_E.a((byte) 90, GameLoopApplet.field_E.field_q[this.field_H.field_Fb])) {
             this.field_i[0].field_lb = false;
           } else {
-            if (PasswordLoginCredentials.a(GameLoopApplet.field_E.squad[GameLoopApplet.field_E.field_q[this.field_H.field_Fb]], -576054046) != 0) {
+            if (PasswordLoginCredentials.calculatePlayerValue(GameLoopApplet.field_E.squad[GameLoopApplet.field_E.field_q[this.field_H.field_Fb]], -576054046) != 0) {
               this.field_i[0].field_lb = true;
             } else {
               this.field_i[0].field_lb = false;

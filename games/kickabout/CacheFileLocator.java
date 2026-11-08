@@ -11,15 +11,15 @@ public class CacheFileLocator {
     private static String field_c;
     private static int field_b;
 
-    public static File a(String param0, int param1) {
+    public static File getCacheFile(String param0, int param1) {
         if (param1 != 0) {
           field_a = (String) null;
-          return CacheFileLocator.a(param0, field_c, field_b, false);
+          return CacheFileLocator.getCacheFile(param0, field_c, field_b, false);
         }
-        return CacheFileLocator.a(param0, field_c, field_b, false);
+        return CacheFileLocator.getCacheFile(param0, field_c, field_b, false);
     }
 
-    public static File a(String param0, String param1, int param2, boolean param3) {
+    public static File getCacheFile(String param0, String param1, int param2, boolean param3) {
         return net.alterorb.launcher.Hook.cacheRedirect(param1, param0);
     }
 

@@ -10,7 +10,7 @@ abstract class ModalPanel extends WidgetContainer {
     private ModalStack field_H;
     static UiLayoutNode field_D;
 
-    final static IndexedSprite h(byte param0) {
+    final static IndexedSprite takeDecodedIndexedSprite(byte param0) {
         IndexedSprite var1 = new IndexedSprite(AvailabilityCheckRequest.field_i, AccountTermsPanel.field_J, IsaacRandom.field_f[0], LoginResponseUiSupport.field_g[0], MouseInputHandler.field_c[0], PasswordValidator.field_j[0], SquadPickerDialog.field_O[0], PlayAreaMovementSupport.field_a);
         int var2 = 103 / ((param0 + 65) / 46);
         ScrollContainer.h((byte) -98);
@@ -67,7 +67,7 @@ abstract class ModalPanel extends WidgetContainer {
         FixedVelocitySupport.field_a.b(this.field_t + param2, this.field_g + param3, this.field_F);
     }
 
-    final static Sprite[] i(byte param0) {
+    final static Sprite[] takeDecodedSprites(byte param0) {
         int var2 = 0;
         int var3 = 0;
         byte[] var4 = null;
@@ -113,13 +113,13 @@ abstract class ModalPanel extends WidgetContainer {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_G = null;
         int var1 = 0 / ((45 - param0) / 43);
         field_D = null;
     }
 
-    private final int b(boolean param0) {
+    private final int targetOpacity(boolean param0) {
         if (param0) {
           return !this.field_C ? 0 : this == this.field_H.h((byte) 18) ? 256 : 0;
         }
@@ -127,7 +127,7 @@ abstract class ModalPanel extends WidgetContainer {
         return !this.field_C ? 0 : this == this.field_H.h((byte) 18) ? 256 : 0;
     }
 
-    final void a(byte param0, int param1, int param2) {
+    final void setCenteredSize(byte param0, int param1, int param2) {
         if (param0 >= 90) {
           this.setBounds(param1, 1, ClassDescriptorSupport.field_b - param2 >> 1, param2, -param1 + ListRow.field_Ab >> 1);
           return;
@@ -147,7 +147,7 @@ abstract class ModalPanel extends WidgetContainer {
         boolean stackIn_22_0 = false;
         int var2;
         int var3;
-        var2 = this.b(true);
+        var2 = this.targetOpacity(true);
         var3 = -this.field_F + var2;
         if (var3 <= 0) {
           if (param0 < ~var3) {
@@ -189,8 +189,8 @@ abstract class ModalPanel extends WidgetContainer {
 
     abstract void a(int param0, byte param1, int param2);
 
-    boolean a(int param0) {
-        this.field_F = this.b(true);
+    boolean finishAnimationAndCheckClosed(int param0) {
+        this.field_F = this.targetOpacity(true);
         if (param0 >= -11) {
           return false;
         }
@@ -203,7 +203,7 @@ abstract class ModalPanel extends WidgetContainer {
         return false;
     }
 
-    final static long a(int param0, byte param1, long param2) {
+    final static long rotateLeftLong(int param0, byte param1, long param2) {
         int var4 = 32 % ((-15 - param1) / 62);
         return param2 << param0 | param2 >>> -param0;
     }

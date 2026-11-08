@@ -9,7 +9,7 @@ final class TutorialChoiceDialog extends MessageDialog {
     static String field_I;
     static int field_J;
 
-    public static void h(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_F = null;
         field_G = null;
         if (param0 < -108) {
@@ -23,14 +23,14 @@ final class TutorialChoiceDialog extends MessageDialog {
         field_I = null;
     }
 
-    final static MouseWheelInput g(byte param0) {
+    final static MouseWheelInput createMouseWheelInput(byte param0) {
         try {
           Throwable var1 = null;
           MouseWheelInput stackIn_3_0 = null;
           Throwable decompiledCaughtException = null;
           try {
             if (param0 != 3) {
-              TutorialChoiceDialog.h((byte) -117);
+              TutorialChoiceDialog.releaseStatics((byte) -117);
             }
             stackIn_3_0 = (MouseWheelInput) (Class.forName("AwtMouseWheelInput").newInstance());
             return stackIn_3_0;
@@ -62,7 +62,7 @@ final class TutorialChoiceDialog extends MessageDialog {
           if (param3 != 2) {
             field_G = (String) null;
           }
-          stackIn_6_0 = ModalPanel.h((byte) -128);
+          stackIn_6_0 = ModalPanel.takeDecodedIndexedSprite((byte) -128);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

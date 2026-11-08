@@ -22,11 +22,11 @@ final class LineupView extends MatchPhaseView {
     static ArgbSprite field_x;
     static String field_n;
 
-    private final int a(byte param0, int param1) {
+    private final int getPlayerDisplayY(byte param0, int param1) {
         if (param0 <= 98) {
           this.a((byte) 101, true, 125, true);
         }
-        int var3 = this.g(param1, 0);
+        int var3 = this.findPlayerSlot(param1, 0);
         if (var3 == -1) {
           return 75 * (param1 / 3) + this.field_A.field_T;
         }
@@ -108,7 +108,7 @@ final class LineupView extends MatchPhaseView {
         }
     }
 
-    private final UiLayoutNode a(int param0, int param1, byte param2) {
+    private final UiLayoutNode createLineupPositionWidget(int param0, int param1, byte param2) {
         UiLayoutNode var5 = new UiLayoutNode();
         UiLayoutNode var4 = var5;
         var5.field_s = AccountNameCharacterSupport.field_b[param0][param1] * 147 / 896 - 26;
@@ -204,8 +204,8 @@ final class LineupView extends MatchPhaseView {
               this.field_p = var3;
             } else {
               if (this.field_p != var3) {
-                var7 = this.h(var3, 3);
-                var8 = this.a((byte) 116, var3);
+                var7 = this.getPlayerDisplayX(var3, 3);
+                var8 = this.getPlayerDisplayY((byte) 116, var3);
                 if (var7 != var11.field_s) {
                   var9 = -var11.field_s + (var7 + var11.field_s * 3 >> 2);
                   if (0 == var9) {
@@ -229,13 +229,13 @@ final class LineupView extends MatchPhaseView {
                     if (~this.field_a.field_i[this.field_h][var7] == ~this.field_g &&
                       this.a(false, this.field_t[var7])) {
                       LoginKind.a((byte) 45);
-                      this.i(74, var5 + 1 << 2 | var7);
+                      this.selectLineupPlayer(74, var5 + 1 << 2 | var7);
                     }
                   }
                 } else {
-                  var7 = this.g(var3, 0);
+                  var7 = this.findPlayerSlot(var3, 0);
                   if (var7 != -1) {
-                    this.i(74, var7);
+                    this.selectLineupPlayer(74, var7);
                   }
                 }
               }
@@ -251,7 +251,7 @@ final class LineupView extends MatchPhaseView {
             }
           }
           if (this.field_o.field_sb == 1) {
-            this.i(74, -1);
+            this.selectLineupPlayer(74, -1);
             ShopPlayerSlot.c(61, 47);
           }
           this.field_o.field_Gb = this.field_a.field_o.isReadyOrInactive(-82, this.field_g);
@@ -414,7 +414,7 @@ final class LineupView extends MatchPhaseView {
         if (var2 == -1 &&
           this.field_l != -1) {
           if (!this.a(false, this.field_A)) {
-            var2 = this.g(this.field_l, param0 - 1);
+            var2 = this.findPlayerSlot(this.field_l, param0 - 1);
           }
           if (var2 == -1) {
             var3 = this.field_l;
@@ -564,18 +564,18 @@ final class LineupView extends MatchPhaseView {
         }
     }
 
-    private final int h(int param0, int param1) {
+    private final int getPlayerDisplayX(int param0, int param1) {
         if (param1 != 3) {
           field_n = (String) null;
         }
-        int var3 = this.g(param0, 0);
+        int var3 = this.findPlayerSlot(param0, 0);
         if (-1 == var3) {
           return this.field_A.field_F + 52 * (param0 % 3);
         }
         return this.field_t[var3].field_F;
     }
 
-    private final void i(int param0, int param1) {
+    private final void selectLineupPlayer(int param0, int param1) {
         this.field_a.enqueueEvent(RankingsRequest.createLineupEvent(18238, this.field_k, GameLoopApplet.field_E, param1, this.field_g), -121);
         if (param0 != 74) {
           return;
@@ -592,7 +592,7 @@ final class LineupView extends MatchPhaseView {
         }
         if (this.isLocalParticipantActive((byte) 13) && GameplayHelpScreen.field_G[82] &&
           param2 == 48) {
-          this.i(74, -2);
+          this.selectLineupPlayer(74, -2);
           return true;
         }
         return super.handleKey(param0, 1670, param2);
@@ -637,7 +637,7 @@ final class LineupView extends MatchPhaseView {
           this.field_z = new SquadSlotWidget[4];
           this.field_t = new UiLayoutNode[4];
           for (var7 = 3; var7 >= 0; var7--) {
-            this.field_t[var7] = this.a(var6, var7, (byte) -75);
+            this.field_t[var7] = this.createLineupPositionWidget(var6, var7, (byte) -75);
             var11.addChild((byte) -111, this.field_t[var7]);
             this.field_z[var7] = new SquadSlotWidget();
             var8 = this.field_t[var7];
@@ -666,7 +666,7 @@ final class LineupView extends MatchPhaseView {
             this.field_j = new SquadSlotWidget[9];
             for (var7Lifetime1 = 0; var7Lifetime1 < 9; var7Lifetime1++) {
               this.field_j[var7Lifetime1] = new SquadSlotWidget();
-              this.field_j[var7Lifetime1].setBounds(true, 52, this.h(var7Lifetime1, 3), this.a((byte) 113, var7Lifetime1), 75);
+              this.field_j[var7Lifetime1].setBounds(true, 52, this.getPlayerDisplayX(var7Lifetime1, 3), this.getPlayerDisplayY((byte) 113, var7Lifetime1), 75);
               this.field_j[var7Lifetime1].field_F = this.field_j[var7Lifetime1].field_s;
               this.field_j[var7Lifetime1].field_T = this.field_j[var7Lifetime1].field_J;
               this.field_q.addChild((byte) -125, (UiLayoutNode) (this.field_j[var7Lifetime1]));
@@ -700,7 +700,7 @@ final class LineupView extends MatchPhaseView {
         }
     }
 
-    private final int g(int param0, int param1) {
+    private final int findPlayerSlot(int param0, int param1) {
         int var3 = 0;
         int var4;
         var4 = Kickabout.field_G;

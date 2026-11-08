@@ -207,7 +207,7 @@ final class WidgetStyleFactory {
         RuntimeException decompiledCaughtException = null;
         try {
           var2_int = 79 % ((-40 - param0) / 58);
-          var3 = (PasswordLoginCredentials.a(param1, -576054046) << 1) / 3;
+          var3 = (PasswordLoginCredentials.calculatePlayerValue(param1, -576054046) << 1) / 3;
           if (var3 < 10) {
             var3 = 10;
           }

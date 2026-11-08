@@ -158,7 +158,7 @@ final class FullscreenErrorDialog extends ResizableModalPanel implements ButtonL
             if (param1 == PainterStyle.field_a) {
               this.field_i = this.field_i + 10;
               var3 = AnimationSkeleton.field_n;
-              if (AccountTermsPanel.a(99)) {
+              if (AccountTermsPanel.canAutoResizeCanvas(99)) {
                 var3 = TextLine.field_k;
                 this.field_i = this.field_i + 20;
               }

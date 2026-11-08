@@ -294,8 +294,8 @@ final class DraggableWidget extends SingleChildContainer {
         }
     }
 
-    final void a(byte param0) {
-        super.a(param0);
+    final void refreshChildLayout(byte param0) {
+        super.refreshChildLayout(param0);
         this.field_z.setBounds(this.field_i, 1, 0, this.field_n, 0);
         this.field_H = this.field_t;
         this.field_C = this.field_g;

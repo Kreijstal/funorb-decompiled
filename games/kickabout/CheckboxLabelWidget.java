@@ -153,7 +153,7 @@ final class CheckboxLabelWidget extends UiLayoutNode {
             }
           }
           HoverTooltip.field_Eb = true;
-          LoginCredentials.a(-25246, false, param1, false, false, false, false);
+          LoginCredentials.setTutorialRestrictions(-25246, false, param1, false, false, false, false);
           TutorialScenerySupport.buildTutorialScenery(-1622);
           ThumbnailStateFactory.field_d.field_x = new PlayArea[]{new PlayArea(-800, -800, 1800, 1800)};
           ThumbnailStateFactory.field_d.field_B = ThumbnailStateFactory.field_d.field_x;

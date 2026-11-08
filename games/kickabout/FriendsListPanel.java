@@ -10,7 +10,7 @@ final class FriendsListPanel extends UiLayoutNode {
     UiLayoutNode field_zb;
     static ArchiveManager field_Ab;
 
-    final static int a(boolean param0, byte param1) {
+    final static int getHudOpacity(boolean param0, byte param1) {
         int var2 = 0;
         int var2Lifetime1;
         if (!MyKitScreen.field_O) {
@@ -24,7 +24,7 @@ final class FriendsListPanel extends UiLayoutNode {
         return (256 - InstrumentNoteMask.field_i >> 1) + 70;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_Ab = null;
         field_Bb = (double[][]) null;
         if (param0 != 1) {
@@ -32,14 +32,14 @@ final class FriendsListPanel extends UiLayoutNode {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    final void setBoundsAndUpdateRows(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         this.field_mb = param1;
         this.field_J = param3;
         this.field_s = param7;
         this.field_q = param4;
         this.a(param6, param0, (byte) 19, param2);
         if (param5 < 82) {
-          FriendsListPanel.a(-85);
+          FriendsListPanel.releaseStatics(-85);
         }
     }
 
@@ -109,7 +109,7 @@ final class FriendsListPanel extends UiLayoutNode {
           this.field_zb.field_mb = param3;
           return;
         }
-        FriendsListPanel.a(48);
+        FriendsListPanel.releaseStatics(48);
         this.field_Eb.field_mb = param3;
         this.field_Eb.field_q = var5 - param0;
         this.field_zb.field_q = this.field_q - var5;

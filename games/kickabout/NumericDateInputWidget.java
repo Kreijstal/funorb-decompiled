@@ -17,13 +17,13 @@ final class NumericDateInputWidget extends DateInputWidget {
     private boolean field_U;
     static String field_S;
 
-    final static void a(int param0, boolean param1) {
+    final static void drawQuickChatKeysHelp(int param0, boolean param1) {
         if (null != field_J) {
           SoftwareRasterizer.darkenRectangle(SoftwareRasterizer.field_b, SoftwareRasterizer.field_e, -SoftwareRasterizer.field_b + SoftwareRasterizer.field_c, SoftwareRasterizer.field_h - SoftwareRasterizer.field_e);
           field_J.draw(param0 ^ 30543, param1);
         }
         if (param0 != 30521) {
-          NumericDateInputWidget.n(81);
+          NumericDateInputWidget.releaseStatics(81);
         }
     }
 
@@ -114,9 +114,9 @@ final class NumericDateInputWidget extends DateInputWidget {
         }
     }
 
-    final void a(DateInputValidator param0, int param1) {
+    final void setValidator(DateInputValidator param0, int param1) {
         try {
-          super.a(param0, param1);
+          super.setValidator(param0, param1);
           this.field_L.field_k = (UiListener) ((Object) param0);
           this.field_K.field_k = (UiListener) ((Object) param0);
           this.field_P.field_k = (UiListener) ((Object) param0);
@@ -131,7 +131,7 @@ final class NumericDateInputWidget extends DateInputWidget {
         Throwable decompiledCaughtException = null;
         try {
           if (param0 != -1) {
-            NumericDateInputWidget.a(-65, false);
+            NumericDateInputWidget.drawQuickChatKeysHelp(-65, false);
           }
           stackIn_3_0 = Integer.parseInt(this.field_P.field_q);
           return stackIn_3_0;
@@ -170,7 +170,7 @@ final class NumericDateInputWidget extends DateInputWidget {
           var1[var2] = new IndexedSprite(AvailabilityCheckRequest.field_i, AccountTermsPanel.field_J, IsaacRandom.field_f[var2], LoginResponseUiSupport.field_g[var2], MouseInputHandler.field_c[var2], PasswordValidator.field_j[var2], SquadPickerDialog.field_O[var2], PlayAreaMovementSupport.field_a);
         }
         if (param0 <= 78) {
-          NumericDateInputWidget.n(-91);
+          NumericDateInputWidget.releaseStatics(-91);
         }
         ScrollContainer.h((byte) -118);
         return var1;
@@ -201,7 +201,7 @@ final class NumericDateInputWidget extends DateInputWidget {
         this.a(this.field_P, TrinketTile.field_Ab, param3, (byte) 108, param2);
     }
 
-    public static void n(int param0) {
+    public static void releaseStatics(int param0) {
         field_Q = null;
         field_C = null;
         field_J = null;

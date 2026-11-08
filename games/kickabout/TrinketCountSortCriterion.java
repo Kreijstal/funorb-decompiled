@@ -68,7 +68,7 @@ final class TrinketCountSortCriterion extends SortCriterion {
         }
     }
 
-    final static Sprite[] a(int param0, int param1, int param2, byte param3) {
+    final static Sprite[] createPanelSprites(int param0, int param1, int param2, byte param3) {
         int var4 = -62 / ((param3 + 13) / 55);
         return QuickChatMenuFactory.createSolidPanelSprites(1, param2, param0, false, param1);
     }
@@ -394,7 +394,7 @@ final class TrinketCountSortCriterion extends SortCriterion {
     TrinketCountSortCriterion() {
     }
 
-    final static void a(int param0, boolean param1) {
+    final static void drawModalOverlay(int param0, boolean param1) {
         if (!ArchiveManager.a(false)) {
           return;
         }
@@ -407,12 +407,12 @@ final class TrinketCountSortCriterion extends SortCriterion {
         }
     }
 
-    public static void c(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_n = null;
         field_q = null;
         field_p = null;
         if (param0 != -35) {
-          TrinketCountSortCriterion.a(27, -30, 62, (byte) -107);
+          TrinketCountSortCriterion.createPanelSprites(27, -30, 62, (byte) -107);
         }
         field_o = null;
     }
@@ -435,7 +435,7 @@ final class TrinketCountSortCriterion extends SortCriterion {
             }
             if (RandomAccessCacheFile.field_h != null) {
               try {
-                RandomAccessCacheFile.field_h.c(1);
+                RandomAccessCacheFile.field_h.close(1);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 iOException = (IOException) (Object) decompiledCaughtException;
@@ -445,7 +445,7 @@ final class TrinketCountSortCriterion extends SortCriterion {
               for (var1_int = 0; JaggrabDownloader.field_j.length > var1_int; var1_int++) {
                 if (JaggrabDownloader.field_j[var1_int] != null) {
                   try {
-                    JaggrabDownloader.field_j[var1_int].c(param0 - 43);
+                    JaggrabDownloader.field_j[var1_int].close(param0 - 43);
                   } catch (java.io.IOException decompiledCaughtParameter1) {
                     decompiledCaughtException = decompiledCaughtParameter1;
                     var2 = (IOException) (Object) decompiledCaughtException;

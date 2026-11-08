@@ -30,7 +30,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
         }
     }
 
-    final static Sprite a(boolean param0, byte param1, int param2, int param3, int param4) {
+    final static Sprite createButtonStateSprite(boolean param0, byte param1, int param2, int param3, int param4) {
         int var10 = 0;
         int var9 = 0;
         int var7 = 0;
@@ -182,7 +182,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
         return var5;
     }
 
-    private final int a(int param0, String param1, int param2, int param3, UiWidget param4) {
+    private final int addCaptionedField(int param0, String param1, int param2, int param3, UiWidget param4) {
         CaptionedContainer var6 = null;
         RuntimeException var6_ref = null;
         int stackIn_3_0 = 0;
@@ -259,12 +259,12 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
         this.field_T.field_r = (WidgetPainter) ((Object) dupTemp$1);
         String var2 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, SquadGridWidget.field_Ab, new String[]{this.openLinkMarkup(true), this.closeLinkMarkup(6)});
         int var3 = 20;
-        var3 = var3 + this.a(170, ReflectionCheck.field_i, 21621, var3, this.field_S);
-        var3 = var3 + (5 + this.a(20, true, GameAppletShell.field_n, this.field_K, 170, "", var3));
-        var3 = var3 + this.a(170, TrinketTile.field_Ib, 21621, var3, this.field_T);
-        var3 = var3 + (this.a(this.field_N, PendingRequestAcknowledgement.field_h, 35, 170, var3, LongPlusOneCommand.field_A) + 5);
-        var3 = var3 + (this.a(this.field_E, GoalStateAgent.field_f, 35, 170, var3, MusicPatch.field_i) + 5);
-        var3 = var3 + this.a(var3, GameOptionMenuSupport.field_a, 170, this.field_J, (byte) 117);
+        var3 = var3 + this.addCaptionedField(170, ReflectionCheck.field_i, 21621, var3, this.field_S);
+        var3 = var3 + (5 + this.addFieldWithValidationHelp(20, true, GameAppletShell.field_n, this.field_K, 170, "", var3));
+        var3 = var3 + this.addCaptionedField(170, TrinketTile.field_Ib, 21621, var3, this.field_T);
+        var3 = var3 + (this.addFieldWithValidationHelp(this.field_N, PendingRequestAcknowledgement.field_h, 35, 170, var3, LongPlusOneCommand.field_A) + 5);
+        var3 = var3 + (this.addFieldWithValidationHelp(this.field_E, GoalStateAgent.field_f, 35, 170, var3, MusicPatch.field_i) + 5);
+        var3 = var3 + this.addValidatedField(var3, GameOptionMenuSupport.field_a, 170, this.field_J, (byte) 117);
         CaptionedContainer var4 = new CaptionedContainer(46, var3, -90 + this.field_n, 25, this.field_O, true, this.field_n - 120, 5, EmailSyntaxValidator.field_k, 11579568, StrongCacheEntry.field_v);
         this.a(-35, var4);
         var3 = var3 + var4.field_i;
@@ -291,7 +291,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
         this.setBounds(var6 + (55 + var3), 1, 0, 496, 0);
     }
 
-    private final int a(int param0, boolean param1, String param2, UiWidget param3, int param4, String param5, int param6) {
+    private final int addFieldWithValidationHelp(int param0, boolean param1, String param2, UiWidget param3, int param4, String param5, int param6) {
         RuntimeException var8 = null;
         ValidationHelpWidget var9 = null;
         CaptionedContainer var10 = null;
@@ -312,7 +312,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
             return stackIn_2_0;
           }
           this.a(-84, var10);
-          var9 = new ValidationHelpWidget(((ValidationProvider) ((Object) param3)).a((byte) -128), param5, 126, var10.field_i + param6, 50 + param4, param0);
+          var9 = new ValidationHelpWidget(((ValidationProvider) ((Object) param3)).getValidationSource((byte) -128), param5, 126, var10.field_i + param6, 50 + param4, param0);
           var9.field_k = (UiListener) (this);
           this.a(-42, var9);
           stackIn_4_0 = var10.field_i + var9.field_i;
@@ -347,7 +347,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
         if (param0 != -1) {
           return;
         }
-        ((AccountNameAvailabilityValidator) (this.field_E.a((byte) -110))).c((byte) 92);
+        ((AccountNameAvailabilityValidator) (this.field_E.getValidationSource((byte) -110))).clearCachedName((byte) 92);
     }
 
     public final void onHotspotClicked(TextHotspotWidget param0, int param1, int param2, int param3) {
@@ -389,7 +389,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_M = null;
         field_I = null;
         field_C = (Sprite[][][]) null;
@@ -407,14 +407,14 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
           this.isFieldValid((ValidationProvider) (this.field_N), 120) &&
           this.isFieldValid((ValidationProvider) (this.field_J), 120)) {
           if (param0 >= -108) {
-            AccountRegistrationPanel.a((byte) 127);
+            AccountRegistrationPanel.releaseStatics((byte) 127);
           }
           return true;
         }
         return false;
     }
 
-    final static void m(int param0) {
+    final static void tickSharedUiTimers(int param0) {
         int var2 = Kickabout.field_G;
         if (0 < NotificationPanelPositionSupport.field_a) {
           NotificationPanelPositionSupport.field_a = NotificationPanelPositionSupport.field_a - 1;
@@ -445,7 +445,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
         int discarded$0 = 0;
         if (param0 >= -82) {
           String var4 = (String) null;
-          discarded$0 = this.a(-122, true, (String) null, (UiWidget) null, 3, (String) null, -84);
+          discarded$0 = this.addFieldWithValidationHelp(-122, true, (String) null, (UiWidget) null, 3, (String) null, -84);
         }
         if (!this.allFieldsValid(-112)) {
           return false;
@@ -455,10 +455,10 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
           var2 = Integer.parseInt(this.field_J.field_q);
         } catch (NumberFormatException numberFormatException) {
         }
-        return PasswordLoginCredentials.a((byte) 117, this.field_S.field_q, this.field_O.field_A, this.field_E.field_q, this, var2, this.field_T.field_q);
+        return PasswordLoginCredentials.beginAccountRegistration((byte) 117, this.field_S.field_q, this.field_O.field_A, this.field_E.field_q, this, var2, this.field_T.field_q);
     }
 
-    private final int a(UiWidget param0, String param1, int param2, int param3, int param4, String param5) {
+    private final int addFieldWithValidationHelp(UiWidget param0, String param1, int param2, int param3, int param4, String param5) {
         RuntimeException var7 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -471,9 +471,9 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 != 35) {
-            AccountRegistrationPanel.m(-40);
+            AccountRegistrationPanel.tickSharedUiTimers(-40);
           }
-          stackIn_3_0 = this.a(35, true, param1, param0, param3, param5, param4);
+          stackIn_3_0 = this.addFieldWithValidationHelp(35, true, param1, param0, param3, param5, param4);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -510,7 +510,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
         RuntimeException var6 = null;
         try {
           if (param3 < 64) {
-            AccountRegistrationPanel.a((byte) -10);
+            AccountRegistrationPanel.releaseStatics((byte) -10);
           }
           if (this.field_F != param1) {
             if (param1 == this.field_Q) {
@@ -548,7 +548,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
         return "<u=2164A2><col=2164A2>";
     }
 
-    private final int a(int param0, String param1, int param2, UiWidget param3, byte param4) {
+    private final int addValidatedField(int param0, String param1, int param2, UiWidget param3, byte param4) {
         int var6_int = 0;
         RuntimeException var6 = null;
         CaptionedContainer var7 = null;
@@ -564,7 +564,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
           var6_int = 94 / ((10 - param4) / 49);
           var7 = new CaptionedContainer(20, param0, param2 + 120, 25, param3, false, 120, 3, ModelMaterial.field_a, 16777215, param1);
           this.a(-111, var7);
-          var8 = new ValidationIndicator(((ValidationProvider) ((Object) param3)).a((byte) -117));
+          var8 = new ValidationIndicator(((ValidationProvider) ((Object) param3)).getValidationSource((byte) -117));
           this.a(-48, var8);
           var8.setBounds(15, 1, 3 + (var7.field_n + var7.field_t), 15, var7.field_g + (var7.field_i - 15 >> 1));
           stackIn_1_0 = var7.field_i;
@@ -636,7 +636,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
         String stackIn_19_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = param0.a((byte) -126);
+          var3 = param0.getValidationSource((byte) -126);
           if (param1 != 120) {
             field_P = (String) null;
           }
@@ -684,7 +684,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
           ((TextInputWidget) ((Object) var3)).setInputText(var4, (byte) -17, false);
           if (param1 != 15) {
             var5 = (String) null;
-            discarded$1 = this.a(24, false, (String) null, (UiWidget) null, 103, (String) null, 84);
+            discarded$1 = this.addFieldWithValidationHelp(24, false, (String) null, (UiWidget) null, 103, (String) null, 84);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

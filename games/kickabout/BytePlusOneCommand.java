@@ -286,7 +286,7 @@ final class BytePlusOneCommand extends ConsoleCommand {
           if (param0 != 84) {
             field_E = (int[]) null;
           }
-          stackIn_4_0 = new ConsoleValue(ResizableModalPanel.b(param0 - 89, param1[0].a(param0 - 84)));
+          stackIn_4_0 = new ConsoleValue(ResizableModalPanel.incrementByte(param0 - 89, param1[0].a(param0 - 84)));
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

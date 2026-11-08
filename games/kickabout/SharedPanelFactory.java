@@ -201,7 +201,7 @@ final class SharedPanelFactory {
           stackIn_8_3 = (PlayerStats) (param2);
           stackIn_8_4 = -107;
           stackIn_9_5 = !(param2.f(13467));
-          stackIn_13_3 = (((PlayerStats) (Object) stackIn_8_3).c((byte) stackIn_8_4, stackIn_9_5)) && (AccountRegistrationResponse.a((byte) 34));
+          stackIn_13_3 = (((PlayerStats) (Object) stackIn_8_3).c((byte) stackIn_8_4, stackIn_9_5)) && (AccountRegistrationResponse.isHalloweenAppearanceEnabled((byte) 34));
           stackIn_14_0 = PlayerInputFactory.createRenderedPlayer(stackIn_8_0, stackIn_8_1, stackIn_8_2, stackIn_13_3, param0, (byte) 106);
           return stackIn_14_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

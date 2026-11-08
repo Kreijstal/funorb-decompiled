@@ -39,7 +39,7 @@ final class MatchingTextValidator extends TextFieldValidator {
         }
     }
 
-    public static void c(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_o = null;
         field_m = null;
         field_n = null;
@@ -65,7 +65,7 @@ final class MatchingTextValidator extends TextFieldValidator {
         RuntimeException decompiledCaughtException = null;
         try {
           if (this.field_l instanceof ValidationProvider) {
-            var3 = ((ValidationProvider) ((Object) this.field_l)).a((byte) -115);
+            var3 = ((ValidationProvider) ((Object) this.field_l)).getValidationSource((byte) -115);
             if (var3 != null) {
               if (var3.getValidationState(-24407) == LobbyPlayerRow.field_yb &&
                 !param1.equals(this.field_l.field_q)) {
@@ -130,7 +130,7 @@ final class MatchingTextValidator extends TextFieldValidator {
             field_j = (QuickChatCommandType) null;
           }
           if (this.field_l instanceof ValidationProvider) {
-            var3 = ((ValidationProvider) ((Object) this.field_l)).a((byte) -113);
+            var3 = ((ValidationProvider) ((Object) this.field_l)).getValidationSource((byte) -113);
             if (var3 != null &&
               var3.getValidationState(-24407) != LobbyPlayerRow.field_yb) {
               stackIn_8_0 = PitchOptionTile.field_Bb;

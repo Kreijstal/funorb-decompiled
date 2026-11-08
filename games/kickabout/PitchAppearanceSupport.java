@@ -24,7 +24,7 @@ final class PitchAppearanceSupport {
           for (var2_int = 0; var2_int < 4; var2_int++) {
             var3 = DiskCacheWorker.field_i[var2_int];
             ClientPacketFlushSupport.field_f[var2_int] = FormationMaskSupport.field_c == 0 ? (Sprite) ((Object) var3) : (Sprite) ((Object) var3.copyArgb());
-            LoginForm.a(ClientPacketFlushSupport.field_f[var2_int], 20684);
+            LoginForm.tintSpriteForSurface(ClientPacketFlushSupport.field_f[var2_int], 20684);
             DelayedServerPacket.a(100, 9863, var2_int + 96);
           }
           var7 = FriendsListPanel.field_Bb[FormationMaskSupport.field_c];

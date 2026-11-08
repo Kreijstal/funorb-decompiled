@@ -603,7 +603,7 @@ final class PlayingView extends MatchPhaseView {
                 this.field_z = -1;
                 this.field_G = -1;
               } else {
-                this.field_z = AccountTermsPanel.a(ArrayWidgetContainer.field_x, 6784) - var4.pixelX(-103);
+                this.field_z = AccountTermsPanel.screenToWorldX(ArrayWidgetContainer.field_x, 6784) - var4.pixelX(-103);
                 this.field_G = TextLayoutLine.a(-6779, TutorialCaptionSupport.field_j) - var4.pixelY(true);
               }
             }
@@ -622,7 +622,7 @@ final class PlayingView extends MatchPhaseView {
                     this.field_k = false;
                   }
                   if (this.field_m) {
-                    this.switchToNearestTeammate(TextLayoutLine.a(-6779, TutorialCaptionSupport.field_j), AccountTermsPanel.a(ArrayWidgetContainer.field_x, 6784), 1);
+                    this.switchToNearestTeammate(TextLayoutLine.a(-6779, TutorialCaptionSupport.field_j), AccountTermsPanel.screenToWorldX(ArrayWidgetContainer.field_x, 6784), 1);
                     this.field_m = false;
                   }
                 } else {
@@ -799,7 +799,7 @@ final class PlayingView extends MatchPhaseView {
                 var10 = var14_int >> 8 & 15;
                 var11 = (var14_int & 245) >> 4;
               }
-              if (AccountRegistrationResponse.a((byte) 24)) {
+              if (AccountRegistrationResponse.isHalloweenAppearanceEnabled((byte) 24)) {
                 stackIn_22_0 = (param0.field_P[var4_int][var8].stats.c((byte) -107, param0.field_P[var4_int][var8].member)) ? 1 : 0;
               } else {
                 stackIn_22_0 = 0;
@@ -1481,7 +1481,7 @@ final class PlayingView extends MatchPhaseView {
               var7 >= 5) {
               var7 = 0;
             }
-            if (AccountRegistrationResponse.a((byte) -86)) {
+            if (AccountRegistrationResponse.isHalloweenAppearanceEnabled((byte) -86)) {
               stackIn_27_0 = (this.field_a.field_P[var2][var6].stats.c((byte) -107, this.field_a.field_P[var2][var6].member)) ? 1 : 0;
             } else {
               stackIn_27_0 = 0;

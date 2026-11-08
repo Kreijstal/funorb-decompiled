@@ -17,7 +17,7 @@ abstract class ResizableModalPanel extends ModalPanel {
         this.field_L = 0;
     }
 
-    final static int a(boolean param0, int param1) {
+    final static int bitLength(boolean param0, int param1) {
         int var2;
         var2 = 0;
         if (param1 < 0 ||
@@ -26,7 +26,7 @@ abstract class ResizableModalPanel extends ModalPanel {
           param1 = param1 >>> 16;
         }
         if (!param0) {
-          ResizableModalPanel.b(122, (byte) 64);
+          ResizableModalPanel.incrementByte(122, (byte) 64);
         }
         if (256 <= param1) {
           param1 = param1 >>> 8;
@@ -51,38 +51,38 @@ abstract class ResizableModalPanel extends ModalPanel {
         if (this.field_O <= 0) {
           return;
         }
-        this.a((byte) 117, this.field_K, this.field_P);
+        this.setCenteredSize((byte) 117, this.field_K, this.field_P);
         this.field_O = 0;
         if (param0 != 4000) {
           return;
         }
-        this.n(param0 ^ 8096);
+        this.onResizeFinished(param0 ^ 8096);
     }
 
-    public static void o(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 1) {
           return;
         }
         field_M = null;
     }
 
-    boolean a(int param0) {
+    boolean finishAnimationAndCheckClosed(int param0) {
         this.finishTransition(4000);
         if (param0 >= -11) {
           return true;
         }
-        return super.a(-89);
+        return super.finishAnimationAndCheckClosed(-89);
     }
 
-    void n(int param0) {
+    void onResizeFinished(int param0) {
         if (param0 != 4096) {
           this.field_I = 43;
         }
     }
 
-    final void a(byte param0, int param1, int param2, int param3) {
+    final void animateResize(byte param0, int param1, int param2, int param3) {
         if (param1 <= 0) {
-          this.a((byte) 99, param2, param3);
+          this.setCenteredSize((byte) 99, param2, param3);
           return;
         }
         this.field_P = param3;
@@ -96,7 +96,7 @@ abstract class ResizableModalPanel extends ModalPanel {
         this.field_I = this.field_n;
     }
 
-    final static void a(int param0, int param1) {
+    final static void setTargetFrameRate(int param0, int param1) {
         LeagueWinnerDialog.field_H = 1000000000L / (long)param1;
         if (param0 != 922104624) {
           field_M = (int[]) null;
@@ -247,7 +247,7 @@ abstract class ResizableModalPanel extends ModalPanel {
         }
     }
 
-    final static byte b(int param0, byte param1) {
+    final static byte incrementByte(int param0, byte param1) {
         if (param0 != -5) {
           field_J = 116;
         }
@@ -268,14 +268,14 @@ abstract class ResizableModalPanel extends ModalPanel {
           this.field_L = this.field_L + 1;
           if (fieldTemp$0 >= this.field_O) {
             this.field_O = 0;
-            this.n(4096);
+            this.onResizeFinished(4096);
           } else {
             var4 = (2 * this.field_O - this.field_L) * this.field_L;
             var5 = this.field_O * this.field_O;
             var2 = var4 * (this.field_P - this.field_I) / var5 + this.field_I;
             var3 = (-this.field_N + this.field_K) * var4 / var5 + this.field_N;
           }
-          this.a((byte) 125, var3, var2);
+          this.setCenteredSize((byte) 125, var3, var2);
         }
         return super.advanceDialogAnimation(-1);
     }

@@ -29,7 +29,7 @@ final class SocialListLayoutSupport {
         if (param0 != 0) {
           return -103;
         }
-        return MySquadScreen.c(-23, param1);
+        return MySquadScreen.worldToScreenX(-23, param1);
     }
 
     final static void insertNodeBefore(IntrusiveNode param0, int param1, IntrusiveNode param2) {

@@ -971,7 +971,7 @@ final class PlayerStats implements PopupCard {
         stackIn_35_2 = this;
         if (this.c((byte) stackIn_31_6, stackIn_32_7)) {
           stackIn_35_2Lifetime1 = this;
-          if (AccountRegistrationResponse.a((byte) -121)) {
+          if (AccountRegistrationResponse.isHalloweenAppearanceEnabled((byte) -121)) {
             stackIn_36_5 = true;
             decompiledFrameRemainder0 = false;
           }

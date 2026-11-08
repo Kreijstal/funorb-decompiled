@@ -39,7 +39,7 @@ final class GameplayHelpScreen extends PagedHelpScreen {
         var2 = 0;
         var3 = GradientRasterSupport.field_f.length;
         if (!LoginMethod.b(param0 - 15) ||
-          !AccountRegistrationResponse.a((byte) 50) &&
+          !AccountRegistrationResponse.isHalloweenAppearanceEnabled((byte) 50) &&
           !ClientPacketFlushSupport.isBitSet(QuickChatKeysHelpPanel.field_Ab[32], 0, BufferedSocket.field_f)) {
           var3--;
         }
@@ -392,7 +392,7 @@ final class GameplayHelpScreen extends PagedHelpScreen {
           RasterGammaSupport.field_b[var2] = new RenderedFootballer(AuctionItem.a(11, 16, 0, var3_int, 0, 0, 31, false, false, false), var3_int, true);
           RasterGammaSupport.field_b[var2].archetype = var3_int;
           RasterGammaSupport.field_b[var2].resetPose((byte) 127);
-          RasterGammaSupport.field_b[var2].field_mb.a(ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(79, RasterGammaSupport.field_b[var2].field_mb.a(true), new Random()), -61);
+          RasterGammaSupport.field_b[var2].field_mb.setFrame(ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(79, RasterGammaSupport.field_b[var2].field_mb.frameCount(true), new Random()), -61);
         }
         CalendarSupport.field_a = new RenderedFootballer[2];
         PlayerStats var6 = new PlayerStats();

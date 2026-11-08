@@ -11,8 +11,8 @@ final class ValidatedTextWidget extends TextInputWidget implements ValidationPro
     private int field_ab;
     static UiLayoutNode[] field_W;
 
-    final void m(byte param0) {
-        super.m((byte) -97);
+    final void notifyTextChanged(byte param0) {
+        super.notifyTextChanged((byte) -97);
         if (param0 >= -57) {
           ValidatedTextWidget.a(true, 93);
         }
@@ -48,7 +48,7 @@ final class ValidatedTextWidget extends TextInputWidget implements ValidationPro
         field_W = null;
     }
 
-    public final ValidationSource a(byte param0) {
+    public final ValidationSource getValidationSource(byte param0) {
         if (param0 > -107) {
           ValidatedTextWidget.a((byte) -36, 39);
         }

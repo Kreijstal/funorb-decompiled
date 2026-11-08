@@ -122,7 +122,7 @@ final class ColourSwatchTile extends UiLayoutNode {
         RuntimeException decompiledCaughtException = null;
         var2 = Kickabout.field_G;
         try {
-          PasswordLoginCredentials.b((byte) -28);
+          PasswordLoginCredentials.serviceAudioOutputs((byte) -28);
           var3 = (FadingSoundPlayer) (StrongCacheEntry.field_z.g(24009));
           while (var3 != null) {
             var3.update((byte) -127);

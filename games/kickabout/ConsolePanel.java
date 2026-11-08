@@ -191,7 +191,7 @@ abstract class ConsolePanel implements OverlayLayer {
 
     abstract boolean a(String param0, boolean param1);
 
-    private final UiLayoutNode a(int param0, int param1) {
+    private final UiLayoutNode createSpriteBackedWidget(int param0, int param1) {
         if (param0 != 4) {
           return (UiLayoutNode) null;
         }
@@ -231,7 +231,7 @@ abstract class ConsolePanel implements OverlayLayer {
     public final boolean capturesInput(byte param0) {
         UiLayoutNode discarded$0 = null;
         if (param0 < 63) {
-          discarded$0 = this.a(40, -60, 5);
+          discarded$0 = this.createSizedSpriteWidget(40, -60, 5);
         }
         return this.field_h;
     }
@@ -246,7 +246,7 @@ abstract class ConsolePanel implements OverlayLayer {
           return true;
         }
         if (param2 == 96) {
-          this.c((byte) -23);
+          this.toggleConsole((byte) -23);
           return true;
         }
         if (!this.field_h) {
@@ -345,7 +345,7 @@ abstract class ConsolePanel implements OverlayLayer {
           var4.setBounds(true, this.field_d.a(var4.field_E), 5, 0, this.field_f);
           if (param2 > 0) {
             var5 = (String) null;
-            this.a((String) null, (byte) -100);
+            this.print((String) null, (byte) -100);
           }
           stackIn_3_0 = var4;
           return stackIn_3_0;
@@ -363,7 +363,7 @@ abstract class ConsolePanel implements OverlayLayer {
         }
     }
 
-    final void a(String param0, byte param1) {
+    final void print(String param0, byte param1) {
         try {
           this.a(13421772, param0, (byte) -122);
           if (param1 != 94) {
@@ -374,13 +374,13 @@ abstract class ConsolePanel implements OverlayLayer {
         }
     }
 
-    private final UiLayoutNode b(int param0, int param1) {
+    private final UiLayoutNode createDefaultSpriteWidget(int param0, int param1) {
         UiLayoutNode var3 = new UiLayoutNode();
         var3.field_R = FormationMaskSupport.a(param0, param1 ^ param1, 0);
         return var3;
     }
 
-    private final UiLayoutNode a(int param0, int param1, int param2) {
+    private final UiLayoutNode createSizedSpriteWidget(int param0, int param1, int param2) {
         if (param1 != 200) {
           this.field_o = (TextLine) null;
         }
@@ -399,18 +399,18 @@ abstract class ConsolePanel implements OverlayLayer {
         field_q = null;
     }
 
-    final void a(int param0, Object param1) {
+    final void print(int param0, Object param1) {
         try {
           if (param0 > -49) {
             this.field_b = -72;
           }
-          this.a(param1 == null ? "null" : param1.toString(), (byte) 94);
+          this.print(param1 == null ? "null" : param1.toString(), (byte) 94);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "be.N(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static boolean e(byte param0) {
+    final static boolean isHalloweenPeriod(byte param0) {
         int var1;
         int var2;
         boolean stackIn_10_0 = false;
@@ -426,7 +426,7 @@ abstract class ConsolePanel implements OverlayLayer {
         return stackIn_10_0;
     }
 
-    private final void c(byte param0) {
+    private final void toggleConsole(byte param0) {
         boolean stackIn_3_1 = false;
         stackIn_3_1 = !(this.field_h);
         this.field_h = stackIn_3_1;
@@ -515,15 +515,15 @@ abstract class ConsolePanel implements OverlayLayer {
           this.field_d = param0;
           this.field_f = this.field_d.field_G + this.field_d.field_p;
           var3_int = this.field_f + 4;
-          var4 = this.b(65793, 186);
+          var4 = this.createDefaultSpriteWidget(65793, 186);
           var5 = var4;
           var6 = var4;
           var7 = var4;
-          var8 = this.a(2236962, 200, 7829367);
-          var9 = this.a(65793, 200, 65793);
-          var10 = this.a(65793, 200, 3355443);
-          var11 = this.a(4, 2263074);
-          var12 = this.a(65793, 200, 2236962);
+          var8 = this.createSizedSpriteWidget(2236962, 200, 7829367);
+          var9 = this.createSizedSpriteWidget(65793, 200, 65793);
+          var10 = this.createSizedSpriteWidget(65793, 200, 3355443);
+          var11 = this.createSpriteBackedWidget(4, 2263074);
+          var12 = this.createSizedSpriteWidget(65793, 200, 2236962);
           this.field_l = new UiLayoutNode(0L, var5);
           this.field_l.setBounds(true, SpriteNumberPainter.field_d, 0, -200, 200);
           var13 = new VerticalScrollbar(0L, var8, var8, var9, var10);

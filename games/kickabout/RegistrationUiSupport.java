@@ -209,13 +209,13 @@ final class RegistrationUiSupport {
               if (~var4 == ~var3) {
                 var5 = 16777215;
               }
-              if (SingleChildContainer.a(97, var4 - 1, 6) == var3) {
+              if (SingleChildContainer.floorMod(97, var4 - 1, 6) == var3) {
                 var5 = 13619151;
               }
-              if (SingleChildContainer.a(param0 + 119, -2 + var4, 6) == var3) {
+              if (SingleChildContainer.floorMod(param0 + 119, -2 + var4, 6) == var3) {
                 var5 = 11184810;
               }
-              if (var3 == SingleChildContainer.a(124, -3 + var4, 6)) {
+              if (var3 == SingleChildContainer.floorMod(124, -3 + var4, 6)) {
                 var5 = 8947848;
               }
               PacketBuffer.a(-110, var8);

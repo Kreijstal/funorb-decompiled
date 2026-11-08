@@ -98,7 +98,7 @@ final class DemoIntegersCommand extends ConsoleCommand {
               if (var6.field_sb != 0) {
                 DisplayModeSupport.a(var6, true, var5_int);
               }
-              var7 = ClientProtocolStage.a(0, var5_int);
+              var7 = ClientProtocolStage.getChatFilterValue(0, var5_int);
               SocketConnector.field_b[var5_int].field_N = ClassDescriptorSupport.field_d[var7];
               ModelMaterialDecoder.field_a[var5_int].field_E = IntrusiveDeque.field_h[var7];
             }

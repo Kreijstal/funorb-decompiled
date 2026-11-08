@@ -51,7 +51,7 @@ final class JaggrabDownloader implements Runnable {
         }
         if (1 == this.field_b) {
           if (this.field_f == null) {
-            this.field_f = this.field_a.a(true, this.field_k.getHost(), 443);
+            this.field_f = this.field_a.requestSocketOpen(true, this.field_k.getHost(), 443);
           }
           if (this.field_f.field_a == 0) {
             return false;
@@ -67,7 +67,7 @@ final class JaggrabDownloader implements Runnable {
             JaggrabDownloader.a(false);
           }
           if (null == this.field_i) {
-            this.field_i = this.field_a.a(5, (byte) 125, (Runnable) (this));
+            this.field_i = this.field_a.requestThreadStart(5, (byte) 125, (Runnable) (this));
           }
           if (this.field_i.field_a == 0) {
             return false;
@@ -100,7 +100,7 @@ final class JaggrabDownloader implements Runnable {
           this.field_b = this.field_b + 1;
           if (param0 > 45) {
             if (null == this.field_i) {
-              this.field_i = this.field_a.a(5, (byte) 125, (Runnable) (this));
+              this.field_i = this.field_a.requestThreadStart(5, (byte) 125, (Runnable) (this));
             }
             if (this.field_i.field_a == 0) {
               return false;
@@ -113,7 +113,7 @@ final class JaggrabDownloader implements Runnable {
           }
           JaggrabDownloader.a(false);
           if (null == this.field_i) {
-            this.field_i = this.field_a.a(5, (byte) 125, (Runnable) (this));
+            this.field_i = this.field_a.requestThreadStart(5, (byte) 125, (Runnable) (this));
           }
           if (this.field_i.field_a == 0) {
             return false;
@@ -128,7 +128,7 @@ final class JaggrabDownloader implements Runnable {
           JaggrabDownloader.a(false);
         }
         if (null == this.field_i) {
-          this.field_i = this.field_a.a(5, (byte) 125, (Runnable) (this));
+          this.field_i = this.field_a.requestThreadStart(5, (byte) 125, (Runnable) (this));
         }
         if (this.field_i.field_a == 0) {
           return false;

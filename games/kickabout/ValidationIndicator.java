@@ -10,7 +10,7 @@ final class ValidationIndicator extends TextButton {
     static Sprite[] field_G;
     private ValidationSource field_J;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         int var1 = 84 / ((-83 - param0) / 35);
         field_G = null;
         field_H = null;

@@ -11,7 +11,7 @@ final class SoundStreamHandle extends IntrusiveNode {
     static int field_g;
     IntrusiveNode owner;
 
-    final static UiLayoutNode a(int param0, int param1) {
+    final static UiLayoutNode createSpriteBackedWidget(int param0, int param1) {
         UiLayoutNode var2 = new UiLayoutNode((long)param1, (UiLayoutNode) null);
         var2.field_R = ShopPlayerSlot.a((byte) 26, param0);
         return var2;

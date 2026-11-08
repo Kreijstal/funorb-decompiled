@@ -12,7 +12,7 @@ class DualLinkNode extends IntrusiveNode {
     static int field_k;
     static int[] field_i;
 
-    public static void e(int param0) {
+    public static void releaseStatics(int param0) {
         field_i = null;
         field_h = null;
         field_m = null;
@@ -55,7 +55,7 @@ class DualLinkNode extends IntrusiveNode {
         int var2 = 96 % ((param0 + 38) / 33);
     }
 
-    final void a(long param0, byte param1) {
+    final void setSecondaryKey(long param0, byte param1) {
         if (param1 >= -110) {
           return;
         }

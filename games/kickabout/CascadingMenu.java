@@ -96,7 +96,7 @@ final class CascadingMenu extends UiLayoutNode {
         }
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_Db = null;
         field_Nb = null;
         field_Mb = null;
@@ -293,11 +293,11 @@ final class CascadingMenu extends UiLayoutNode {
                 PlayerContextMenu.field_i != null) {
                 var6 = 1;
               }
-              if (ClientProtocolStage.a(0, var6) == 2) {
+              if (ClientProtocolStage.getChatFilterValue(0, var6) == 2) {
                 ListingRowCache.a(21, 1, var6, param2);
               }
               String var8 = (String) null;
-              PasswordLoginCredentials.a(var5, -128, NodeHashTableIterator.field_b, param3, TrinketTile.field_Kb, (String) null);
+              PasswordLoginCredentials.sendChatPacket(var5, -128, NodeHashTableIterator.field_b, param3, TrinketTile.field_Kb, (String) null);
               ChatComposeSupport.prepareChatSend(TrinketTile.field_Kb, var5, IntDoubleCommand.field_A, NodeHashTableIterator.field_b, (byte) -51);
               PendingRequestAcknowledgement.closeQuickChat(125);
               DelayedServerPacket.b(68);

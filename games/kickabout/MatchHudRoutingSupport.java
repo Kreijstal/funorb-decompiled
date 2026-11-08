@@ -110,7 +110,7 @@ final class MatchHudRoutingSupport {
           if (param0 != 96) {
             field_d = (String) null;
           }
-          var3_int = FriendsListPanel.a(false, (byte) 71);
+          var3_int = FriendsListPanel.getHudOpacity(false, (byte) 71);
           if (4 == AsciiCharacterSupport.field_c.phase) {
             LoadingProgressSupport.drawActiveMatchTimer(1, var3_int);
             PlayerValueSortCriterion.a(param2, var3_int, AsciiCharacterSupport.field_c.participantStatus, 14839);

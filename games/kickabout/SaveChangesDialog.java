@@ -38,7 +38,7 @@ final class SaveChangesDialog extends MessageDialog {
             return true;
           }
           String var5 = (String) null;
-          PasswordLoginCredentials.a(PitchDecorationSupport.field_h, 101, PlayerShopScreen.field_K, param2, ArchivePreloadEntry.field_f, (String) null);
+          PasswordLoginCredentials.sendChatPacket(PitchDecorationSupport.field_h, 101, PlayerShopScreen.field_K, param2, ArchivePreloadEntry.field_f, (String) null);
           return true;
         }
         return false;

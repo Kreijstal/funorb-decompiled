@@ -44,7 +44,7 @@ final class UnreadMessagesScreen extends ButtonMenuScreen {
         var4Lifetime1 = 62 / ((38 - param0) / 60);
     }
 
-    final static int a(int param0, boolean param1, int param2) {
+    final static int multiplyFixed16(int param0, boolean param1, int param2) {
         int var5 = 0;
         int var6 = 0;
         int var3 = param2 >> 16;

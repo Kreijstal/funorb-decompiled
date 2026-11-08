@@ -20,7 +20,7 @@ final class UiInputRoutingSupport {
           if (TextButton.field_v != null &&
             TextButton.field_v.a(param3, param1 - 52, param4, param2, param5)) {
             param3 = false;
-            MusicPatchNode.b(98);
+            MusicPatchNode.closePlayerContextMenu(98);
           }
           DualLinkDequeIterator.a(param1 - 6, param5, param3);
           TrinketIcon.a(param3, param6, true);

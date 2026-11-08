@@ -72,7 +72,7 @@ final class ClassNameSupport {
               ByteArrayPool.field_e.field_n = 0;
               MusicVolumeSupport.field_b = param1[DirectByteStorage.field_i];
             }
-            if (!LoginCredentials.a(180)) {
+            if (!LoginCredentials.ensureLoginPayloadAvailable(180)) {
               return false;
             }
             if (RankingRowFactory.field_c == 0) {

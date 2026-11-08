@@ -16,7 +16,7 @@ final class AuctionPriceLimits {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2_int = 5 * PasswordLoginCredentials.a(param0, -576054046) / 3;
+          var2_int = 5 * PasswordLoginCredentials.calculatePlayerValue(param0, -576054046) / 3;
           if (param1 < ~var2_int) {
             var2_int = 30;
           }

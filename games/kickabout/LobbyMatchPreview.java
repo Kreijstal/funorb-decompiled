@@ -54,7 +54,7 @@ final class LobbyMatchPreview {
         if (param0 < 63) {
           this.field_e = (LobbyGameRecord) null;
         }
-        SquadPickerDialog.field_Q.b(var2, var3, FriendsListPanel.a(false, (byte) 14));
+        SquadPickerDialog.field_Q.b(var2, var3, FriendsListPanel.getHudOpacity(false, (byte) 14));
         if (this.field_e.field_f == 4) {
           PacketBuffer.a(-45, DraggableWidget.field_K);
           SoftwareRasterizer.clearFramebuffer();

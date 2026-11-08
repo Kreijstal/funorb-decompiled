@@ -52,13 +52,13 @@ final class UiKeyRoutingSupport {
         }
         if (null != TextButton.field_v &&
           TextButton.field_v.a((byte) -52)) {
-          MusicPatchNode.b(param0 ^ 21);
+          MusicPatchNode.closePlayerContextMenu(param0 ^ 21);
           return true;
         }
         if (null != TextPromptState.field_b &&
           TextPromptState.field_b.h((byte) 37)) {
           TextPromptState.field_b = null;
-          MusicPatchNode.b(85);
+          MusicPatchNode.closePlayerContextMenu(85);
           return true;
         }
         if (KitUnlockNoticeSupport.handleSharedPromptKey(param0 ^ 62)) {

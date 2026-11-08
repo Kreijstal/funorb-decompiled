@@ -799,7 +799,7 @@ final class VerticalScrollbar extends UiLayoutNode {
           } else {
             var3_intLifetime1 = ((PacketBuffer) ((Object) var1)).readUnsignedShort((byte) 81);
             PlayerContextMenu.field_i = new GameSetupPanel(UiKeyRoutingSupport.field_j);
-            PlayerContextMenu.field_i.a((long)var3_intLifetime1, (byte) -113);
+            PlayerContextMenu.field_i.setSecondaryKey((long)var3_intLifetime1, (byte) -113);
             GameModesHelpScreen.a(false, 114, var1, PlayerContextMenu.field_i);
             TextFieldNode.field_Ib = 0L;
           }

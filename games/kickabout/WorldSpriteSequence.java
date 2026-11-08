@@ -41,8 +41,8 @@ final class WorldSpriteSequence {
         PacketBuffer.a(114, var9);
         var10 = var8.field_o;
         var11 = var8.field_v;
-        var12 = -15 - SingleChildContainer.a(105, this.field_a - 27, var10);
-        var13 = -SingleChildContainer.a(-49, -64 + this.field_b, var11);
+        var12 = -15 - SingleChildContainer.floorMod(105, this.field_a - 27, var10);
+        var13 = -SingleChildContainer.floorMod(-49, -64 + this.field_b, var11);
         var8.d(var12, var13);
         var8.d(var12 + var10, var13);
         var8.d(var12, var11 + var13);
@@ -69,7 +69,7 @@ final class WorldSpriteSequence {
     final void drawFrame(int param0, boolean param1) {
         int var6 = 0;
         int var7 = 0;
-        int var3 = MySquadScreen.c(-115, -27 + this.field_a);
+        int var3 = MySquadScreen.worldToScreenX(-115, -27 + this.field_a);
         if (!param1) {
           this.drawFrame(-41, true);
         }

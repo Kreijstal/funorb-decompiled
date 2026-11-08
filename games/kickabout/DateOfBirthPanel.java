@@ -13,7 +13,7 @@ final class DateOfBirthPanel extends ArrayWidgetContainer implements ButtonListe
     final void updatePointerState(byte param0, UiWidget param1, int param2, int param3) {
         try {
           super.updatePointerState(param0, param1, param2, param3);
-          this.field_D.field_y = this.field_G.a((byte) -125).getValidationState(-24407) == LobbyPlayerRow.field_yb ? true : false;
+          this.field_D.field_y = this.field_G.getValidationSource((byte) -125).getValidationState(-24407) == LobbyPlayerRow.field_yb ? true : false;
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "ib.P(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
@@ -23,7 +23,7 @@ final class DateOfBirthPanel extends ArrayWidgetContainer implements ButtonListe
         if (param3 < 64) {
           return;
         }
-        if (this.field_G.a((byte) -125).getValidationState(-24407) != LobbyPlayerRow.field_yb) {
+        if (this.field_G.getValidationSource((byte) -125).getValidationState(-24407) != LobbyPlayerRow.field_yb) {
           return;
         }
         try {
@@ -78,7 +78,7 @@ final class DateOfBirthPanel extends ArrayWidgetContainer implements ButtonListe
     DateOfBirthPanel(int param0, int param1, int param2, int param3) {
         super(param0, param1, param2, param3, (WidgetPainter) null);
         this.field_G = new NumericDateInputWidget(new BeveledTextPainter(10000536), field_E, 0, 0, 140, 25);
-        this.field_G.a(new DateInputValidator(), -20274);
+        this.field_G.setValidator(new DateInputValidator(), -20274);
         this.field_D = new TextButton(RowRangeRequest.field_g, (UiListener) (this));
         this.field_w = new UiWidget[]{(UiWidget) ((Object) this.field_G), (UiWidget) ((Object) this.field_D)};
         this.field_D.field_r = (WidgetPainter) ((Object) new SpriteButtonPainter());

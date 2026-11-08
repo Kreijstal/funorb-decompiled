@@ -41,7 +41,7 @@ abstract class ContentTransitionDialog extends ResizableModalPanel {
           return;
         }
         if (AccountRegistrationResponse.field_b != this.field_X) {
-          this.a((byte) 127, this.field_V.field_i + (this.field_R + 12), 12 + this.field_V.field_n);
+          this.setCenteredSize((byte) 127, this.field_V.field_i + (this.field_R + 12), 12 + this.field_V.field_n);
           this.b(this.field_V, 54);
         } else {
           this.field_ab.field_F = 256;
@@ -130,7 +130,7 @@ abstract class ContentTransitionDialog extends ResizableModalPanel {
             this.field_R = 54;
           }
           if (LineupView.field_m == this.field_X) {
-            this.a((byte) -23, this.field_U, this.field_V.field_i + (12 + this.field_R), this.field_V.field_n + 12);
+            this.animateResize((byte) -23, this.field_U, this.field_V.field_i + (12 + this.field_R), this.field_V.field_n + 12);
             this.field_T = 0;
             return;
           }
@@ -167,17 +167,17 @@ abstract class ContentTransitionDialog extends ResizableModalPanel {
         }
     }
 
-    final boolean a(int param0) {
+    final boolean finishAnimationAndCheckClosed(int param0) {
         if (param0 <= -11) {
           this.finishTransition(4000);
-          return super.a(-13);
+          return super.finishAnimationAndCheckClosed(-13);
         }
-        this.n(55);
+        this.onResizeFinished(55);
         this.finishTransition(4000);
-        return super.a(-13);
+        return super.finishAnimationAndCheckClosed(-13);
     }
 
-    final void n(int param0) {
+    final void onResizeFinished(int param0) {
         if (ValidationState.field_e == this.field_X) {
           return;
         }
@@ -222,7 +222,7 @@ abstract class ContentTransitionDialog extends ResizableModalPanel {
             return super.advanceDialogAnimation(param0 + 0);
           }
           this.field_X = LineupView.field_m;
-          this.a((byte) -104, this.field_U, this.field_R + (12 + this.field_V.field_i), 12 + this.field_V.field_n);
+          this.animateResize((byte) -104, this.field_U, this.field_R + (12 + this.field_V.field_i), 12 + this.field_V.field_n);
           this.field_ab.field_F = 0;
           this.field_T = 0;
           return super.advanceDialogAnimation(param0 + 0);
@@ -251,7 +251,7 @@ abstract class ContentTransitionDialog extends ResizableModalPanel {
           return super.advanceDialogAnimation(param0 + 0);
         }
         this.field_X = LineupView.field_m;
-        this.a((byte) -104, this.field_U, this.field_R + (12 + this.field_V.field_i), 12 + this.field_V.field_n);
+        this.animateResize((byte) -104, this.field_U, this.field_R + (12 + this.field_V.field_i), 12 + this.field_V.field_n);
         this.field_ab.field_F = 0;
         this.field_T = 0;
         return super.advanceDialogAnimation(param0 + 0);

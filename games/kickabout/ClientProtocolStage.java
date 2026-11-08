@@ -8,7 +8,7 @@ final class ClientProtocolStage {
     static String[] field_b;
     static UiLayoutNode field_c;
 
-    final static int a(int param0, int param1) {
+    final static int getChatFilterValue(int param0, int param1) {
         int var2 = 0;
         if (param1 == param0) {
           var2 = ServerTextTemplate.field_a;
@@ -53,13 +53,13 @@ final class ClientProtocolStage {
           field_e = null;
           return;
         }
-        ClientProtocolStage.a(-21, -111);
+        ClientProtocolStage.getChatFilterValue(-21, -111);
         field_e = null;
     }
 
-    final boolean a(byte param0) {
+    final boolean isLoginResponseStage(byte param0) {
         if (param0 >= -26) {
-          this.a((byte) -81);
+          this.isLoginResponseStage((byte) -81);
           if (this == ClubState.field_c) {
             return true;
           }

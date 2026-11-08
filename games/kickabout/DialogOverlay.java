@@ -712,7 +712,7 @@ final class DialogOverlay implements OverlayLayer {
         if (WidgetStyleFactory.field_c == null) {
           stackIn_22_0 = param1;
           if (stackIn_22_0 &&
-            AccountNameCheckState.a((byte) 82)) {
+            AccountNameCheckState.canShowQueuedDialog((byte) 82)) {
             WidgetStyleFactory.field_c = (PopupDialog) (ScrollPane.field_Jb.removeFirst((byte) 125));
           }
         } else {

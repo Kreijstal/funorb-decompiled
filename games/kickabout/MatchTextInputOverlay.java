@@ -58,17 +58,17 @@ final class MatchTextInputOverlay implements OverlayLayer {
             for (var5 = 0; var5 < 5; var5++) {
               var6 = HelpTipDialog.field_I[var5][5];
               var7 = HelpTipDialog.field_I[var5][3];
-              var12.a(var7, (byte) -107);
+              var12.setClip(var7, (byte) -107);
               PitchPurchaseSupport.field_b[var5] = new byte[8][];
               for (var8 = 0; var8 < 8; var8++) {
                 CanvasResizePolicy.a(var5, var12, var8 << 8, false, 2150);
                 PitchPurchaseSupport.field_b[var5][var8] = MatchingTextValidator.a(16, BuyPitchDialog.field_F);
               }
-              var12.a(var6, (byte) -107);
+              var12.setClip(var6, (byte) -107);
               var8Lifetime1 = (2 + var6.field_e.length) / 3;
               BuyPitchDialog.field_K[var5] = new byte[var8Lifetime1][8][];
               for (var9 = 0; var9 < var8Lifetime1; var9++) {
-                var12.a(var9 * 3, -39);
+                var12.setFrame(var9 * 3, -39);
                 for (var10 = 0; var10 < 8; var10++) {
                   CanvasResizePolicy.a(var5, var12, var10 << 8, false, 2150);
                   BuyPitchDialog.field_K[var5][var9][var10] = MatchingTextValidator.a(16, BuyPitchDialog.field_F);

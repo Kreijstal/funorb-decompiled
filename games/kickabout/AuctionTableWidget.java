@@ -27,7 +27,7 @@ final class AuctionTableWidget extends ColumnTableWidget {
         }
     }
 
-    final void b(int param0, int param1) {
+    final void cycleColumnSort(int param0, int param1) {
         this.a(0, -23061, param0);
         if (param1 < 97) {
           this.a(117, -16, -93);

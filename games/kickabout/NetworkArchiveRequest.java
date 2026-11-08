@@ -9,7 +9,7 @@ final class NetworkArchiveRequest extends ArchiveRequest {
     PacketBuffer field_v;
     int field_u;
 
-    final static void a(String param0, byte param1, String param2) {
+    final static void showLoginForm(String param0, byte param1, String param2) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -47,7 +47,7 @@ final class NetworkArchiveRequest extends ArchiveRequest {
         }
     }
 
-    final static EntityAfterimage g(int param0) {
+    final static EntityAfterimage getOldestAfterimage(int param0) {
         int var3 = 0;
         int var1;
         int var2;
@@ -66,11 +66,11 @@ final class NetworkArchiveRequest extends ArchiveRequest {
         return SplashScreen.field_n[var2];
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_w = null;
         if (!param0) {
           String var2 = (String) null;
-          NetworkArchiveRequest.a((String) null, (byte) 7, (String) null);
+          NetworkArchiveRequest.showLoginForm((String) null, (byte) 7, (String) null);
         }
     }
 
@@ -84,7 +84,7 @@ final class NetworkArchiveRequest extends ArchiveRequest {
     final static void a(int param0, int param1, int param2, int param3) {
         if (param3 != 2147483647) {
           String var5 = (String) null;
-          NetworkArchiveRequest.a((String) null, (byte) 63, (String) null);
+          NetworkArchiveRequest.showLoginForm((String) null, (byte) 63, (String) null);
         }
         ContentTransitionDialog.a(SceneSpriteFactory.field_a[param1], true, param0, LocalizedTextLoader.field_d[param1], param2, true);
     }
@@ -103,7 +103,7 @@ final class NetworkArchiveRequest extends ArchiveRequest {
         if (!this.pending &&
           this.field_v.field_n >= -this.field_x + this.field_v.field_f.length) {
           if (param0 != 12802) {
-            NetworkArchiveRequest.g(64);
+            NetworkArchiveRequest.getOldestAfterimage(64);
           }
           return this.field_v.field_f;
         }

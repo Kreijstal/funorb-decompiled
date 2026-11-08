@@ -9,7 +9,7 @@ final class OverlayLayerSupport {
 
     final static void shutdownSharedAudio(int param0) {
         GameMediaSupport.releaseSharedAudioStream((byte) -25);
-        IsaacRandom.c((byte) -125);
+        IsaacRandom.installMusicRootStream((byte) -125);
         if (param0 != -23217) {
           field_a = (Calendar) null;
         }
@@ -43,7 +43,7 @@ final class OverlayLayerSupport {
           }
           var17[2].a(var7, 0);
           TeamManagementScreen.e(122);
-          LoginForm.a(var16, 20684);
+          LoginForm.tintSpriteForSurface(var16, 20684);
           return var16;
         }
         OverlayLayerSupport.shutdownSharedAudio(-53);
@@ -62,7 +62,7 @@ final class OverlayLayerSupport {
         }
         var14[2].a(var7Lifetime1, 0);
         TeamManagementScreen.e(122);
-        LoginForm.a(var13, 20684);
+        LoginForm.tintSpriteForSurface(var13, 20684);
         return var13;
     }
 

@@ -722,7 +722,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
               dupTemp$0 = new PlatformTaskDispatcher(param6, param5, param0, true);
               PlatformTaskState.field_c = dupTemp$0;
               DelegatingCanvas.field_a = dupTemp$0;
-              var8 = PlatformTaskState.field_c.a(1, (byte) 110, (Runnable) (this));
+              var8 = PlatformTaskState.field_c.requestThreadStart(1, (byte) 110, (Runnable) (this));
               while (true) {
                 if (var8.field_a == 0) {
                   ThreadSleepSupport.sleepMillis(10L, 1);

@@ -26,7 +26,7 @@ final class BufferedSocket implements Runnable {
     static int field_j;
     static int field_l;
 
-    final int a(byte param0) throws IOException {
+    final int available(byte param0) throws IOException {
         if (this.field_e) {
           return 0;
         }
@@ -40,7 +40,7 @@ final class BufferedSocket implements Runnable {
         this.close(1);
     }
 
-    final int b(int param0) throws IOException {
+    final int readByte(int param0) throws IOException {
         if (this.field_e) {
           return 0;
         }
@@ -235,7 +235,7 @@ final class BufferedSocket implements Runnable {
               }
             }
             if (null == this.field_p) {
-              this.field_p = this.field_g.a(3, (byte) 127, (Runnable) (this));
+              this.field_p = this.field_g.requestThreadStart(3, (byte) 127, (Runnable) (this));
             }
             if (param1 != -127) {
               return;

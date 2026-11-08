@@ -524,7 +524,7 @@ class WidgetContainer extends UiWidget implements UiContainerMarker {
         int var13Lifetime1;
         var19 = Kickabout.field_G;
         try {
-          var5_int = ResizableModalPanel.a(true, 3 * (-param2 + param3));
+          var5_int = ResizableModalPanel.bitLength(true, 3 * (-param2 + param3));
           var6 = param2 * 3;
           var7 = -10 + var5_int;
           if (param0 != -336184828) {

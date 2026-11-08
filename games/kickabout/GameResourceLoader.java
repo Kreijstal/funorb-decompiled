@@ -557,8 +557,8 @@ final class GameResourceLoader implements LoadingSequence {
         LoadingProgressSupport.reportStageProgress(-57, 4, 2);
         GameSoundEffect.a((byte) -94);
         LoadingProgressSupport.reportStageProgress(75, 4, 3);
-        ResizableModalPanel.a(param0 ^ 922092267, 50);
-        Kickabout.t(param0 - 826888154);
+        ResizableModalPanel.setTargetFrameRate(param0 ^ 922092267, 50);
+        Kickabout.prepareAccountChoiceSprites(param0 - 826888154);
         CipherPacketBuffer.k(61, 13);
         OverlayLayerSupport.registerOverlay(false, new CheatCodeListener());
         OverlayLayerSupport.registerOverlay(false, new ClientUiOverlay());

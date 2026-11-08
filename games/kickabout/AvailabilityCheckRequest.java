@@ -198,7 +198,7 @@ final class AvailabilityCheckRequest {
                 stackIn_20_0 = SplashScreen.field_m;
               }
               var2_ref = stackIn_20_0;
-              PlatformTaskState.field_c.a((byte) 68, 240, 320, (java.awt.Component) (var2_ref));
+              PlatformTaskState.field_c.requestMouseMove((byte) 68, 240, 320, (java.awt.Component) (var2_ref));
               if (param1 >= -99) {
                 AvailabilityCheckRequest.releaseStatics((byte) -40);
               }
@@ -235,7 +235,7 @@ final class AvailabilityCheckRequest {
                   stackIn_126_0 = SplashScreen.field_m;
                 }
                 var2_ref = stackIn_126_0;
-                PlatformTaskState.field_c.a((byte) 68, 240, 320, (java.awt.Component) (var2_ref));
+                PlatformTaskState.field_c.requestMouseMove((byte) 68, 240, 320, (java.awt.Component) (var2_ref));
               }
             }
             if (param1 >= -99) {
@@ -308,7 +308,7 @@ final class AvailabilityCheckRequest {
                   stackIn_69_0 = SplashScreen.field_m;
                 }
                 var2_ref = stackIn_69_0;
-                PlatformTaskState.field_c.a((byte) 68, 240, 320, (java.awt.Component) (var2_ref));
+                PlatformTaskState.field_c.requestMouseMove((byte) 68, 240, 320, (java.awt.Component) (var2_ref));
                 if (param1 >= -99) {
                   AvailabilityCheckRequest.releaseStatics((byte) -40);
                 }
@@ -344,7 +344,7 @@ final class AvailabilityCheckRequest {
                     stackIn_104_0 = SplashScreen.field_m;
                   }
                   var2_ref = stackIn_104_0;
-                  PlatformTaskState.field_c.a((byte) 68, 240, 320, (java.awt.Component) (var2_ref));
+                  PlatformTaskState.field_c.requestMouseMove((byte) 68, 240, 320, (java.awt.Component) (var2_ref));
                 }
               }
               if (param1 >= -99) {
@@ -401,7 +401,7 @@ final class AvailabilityCheckRequest {
                   stackIn_146_0 = SplashScreen.field_m;
                 }
                 var2_ref = stackIn_146_0;
-                PlatformTaskState.field_c.a((byte) 68, 240, 320, (java.awt.Component) (var2_ref));
+                PlatformTaskState.field_c.requestMouseMove((byte) 68, 240, 320, (java.awt.Component) (var2_ref));
                 if (param1 >= -99) {
                   AvailabilityCheckRequest.releaseStatics((byte) -40);
                 }
@@ -443,7 +443,7 @@ final class AvailabilityCheckRequest {
                     stackIn_163_0 = SplashScreen.field_m;
                   }
                   var2_ref = stackIn_163_0;
-                  PlatformTaskState.field_c.a((byte) 68, 240, 320, (java.awt.Component) (var2_ref));
+                  PlatformTaskState.field_c.requestMouseMove((byte) 68, 240, 320, (java.awt.Component) (var2_ref));
                   if (param1 >= -99) {
                     AvailabilityCheckRequest.releaseStatics((byte) -40);
                   }

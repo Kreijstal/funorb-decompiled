@@ -15,7 +15,7 @@ final class RandomAccessCacheFile {
     static int[][][] field_i;
     private long field_e;
 
-    final void a(int param0, long param1) throws IOException {
+    final void seek(int param0, long param1) throws IOException {
         if (param0 == 15557) {
           this.field_j.seek(param1);
           this.field_e = param1;
@@ -58,7 +58,7 @@ final class RandomAccessCacheFile {
     protected final void finalize() throws Throwable {
         if (null != this.field_j) {
           System.out.println("");
-          this.a(-98);
+          this.close(-98);
         }
     }
 
@@ -94,7 +94,7 @@ final class RandomAccessCacheFile {
         }
     }
 
-    final void a(int param0) throws IOException {
+    final void close(int param0) throws IOException {
         int var2 = -76 / ((param0 + 38) / 60);
         if (null != this.field_j) {
           this.field_j.close();
@@ -102,7 +102,7 @@ final class RandomAccessCacheFile {
         }
     }
 
-    final static void a(boolean param0, java.awt.Component param1) {
+    final static void detachMouseListeners(boolean param0, java.awt.Component param1) {
         if (param0) {
           return;
         }
@@ -116,7 +116,7 @@ final class RandomAccessCacheFile {
         }
     }
 
-    final long c(int param0) throws IOException {
+    final long length(int param0) throws IOException {
         if (param0 != 31114) {
           field_i = (int[][][]) null;
           return this.field_j.length();

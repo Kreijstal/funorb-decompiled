@@ -27,10 +27,10 @@ abstract class SingleChildContainer extends UiWidget implements UiContainerMarke
         if (param0 <= 10) {
           return true;
         }
-        return null != this.a(0) ? true : false;
+        return null != this.findFocusedChild(0) ? true : false;
     }
 
-    UiWidget a(int param0) {
+    UiWidget findFocusedChild(int param0) {
         UiWidget var2 = this.field_z;
         if (var2 != null &&
           var2.isFocused(19)) {
@@ -39,7 +39,7 @@ abstract class SingleChildContainer extends UiWidget implements UiContainerMarke
         if (param0 == 0) {
           return null;
         }
-        SingleChildContainer.a(9, 19, -25);
+        SingleChildContainer.floorMod(9, 19, -25);
         return null;
     }
 
@@ -52,7 +52,7 @@ abstract class SingleChildContainer extends UiWidget implements UiContainerMarke
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 0) {
-            SingleChildContainer.j(-18);
+            SingleChildContainer.releaseStatics(-18);
           }
           stackIn_6_0 = (null != this.field_z) && (this.field_z.requestKeyboardFocus(param0, 0));
           return stackIn_6_0;
@@ -160,7 +160,7 @@ abstract class SingleChildContainer extends UiWidget implements UiContainerMarke
         }
     }
 
-    void a(byte param0) {
+    void refreshChildLayout(byte param0) {
         if (param0 != -32) {
           this.setBounds(43, 116, 100, 117, -104);
         }
@@ -169,7 +169,7 @@ abstract class SingleChildContainer extends UiWidget implements UiContainerMarke
         }
     }
 
-    final static int a(int param0, int param1, int param2) {
+    final static int floorMod(int param0, int param1, int param2) {
         int var4 = 47 / ((26 - param0) / 61);
         int var3 = -1 + param2 & param1 >> 31;
         return var3 + (param1 + (param1 >>> 31)) % param2;
@@ -313,7 +313,7 @@ abstract class SingleChildContainer extends UiWidget implements UiContainerMarke
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 17883) {
-            SingleChildContainer.j(31);
+            SingleChildContainer.releaseStatics(31);
           }
           if (this.beginWidgetDiagnosticVisit(1, param3, param2, param1)) {
             this.appendWidgetDiagnosticProperties(param1, param3, param2, -18568);
@@ -424,7 +424,7 @@ abstract class SingleChildContainer extends UiWidget implements UiContainerMarke
         }
     }
 
-    public static void j(int param0) {
+    public static void releaseStatics(int param0) {
         field_w = null;
         if (param0 != 31068) {
           return;
@@ -436,7 +436,7 @@ abstract class SingleChildContainer extends UiWidget implements UiContainerMarke
 
     final void setBounds(int param0, int param1, int param2, int param3, int param4) {
         super.setBounds(param0, param1, param2, param3, param4);
-        this.a((byte) -32);
+        this.refreshChildLayout((byte) -32);
     }
 
     String getTooltip(int param0) {

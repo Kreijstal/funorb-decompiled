@@ -55,7 +55,7 @@ final class QuickChatCategoryCache {
         }
         var5[2].a(0, var7);
         TeamManagementScreen.e(118);
-        LoginForm.a(var6, 20684);
+        LoginForm.tintSpriteForSurface(var6, 20684);
         return var6;
     }
 

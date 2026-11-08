@@ -391,10 +391,10 @@ class UiLayoutNode extends SharedWidgetFactory {
                   PlayerContextMenu.field_i != null) {
                   var5 = 1;
                 }
-                if (ClientProtocolStage.a(0, var5) == 2) {
+                if (ClientProtocolStage.getChatFilterValue(0, var5) == 2) {
                   ListingRowCache.a(-117, 1, var5, param2);
                 }
-                PasswordLoginCredentials.a(-1, 82, NodeHashTableIterator.field_b, param1, TrinketTile.field_Kb, var4_ref_String);
+                PasswordLoginCredentials.sendChatPacket(-1, 82, NodeHashTableIterator.field_b, param1, TrinketTile.field_Kb, var4_ref_String);
               }
             }
             TrinketCatalog.a(99);

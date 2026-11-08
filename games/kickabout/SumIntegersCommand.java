@@ -37,7 +37,7 @@ final class SumIntegersCommand extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           FormationView.a((java.awt.Component) ((Object) param1), -63);
-          RandomAccessCacheFile.a(false, (java.awt.Component) ((Object) param1));
+          RandomAccessCacheFile.detachMouseListeners(false, (java.awt.Component) ((Object) param1));
           if (param0 > -102) {
             return;
           }

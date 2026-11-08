@@ -130,7 +130,7 @@ final class RenderedBall extends BallAgent {
             if (var6Lifetime1 > 255) {
               var6Lifetime1 = 255;
             }
-            AccountNameAvailabilityValidator.a(this, 256, var6Lifetime1);
+            AccountNameAvailabilityValidator.captureBallAfterimage(this, 256, var6Lifetime1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

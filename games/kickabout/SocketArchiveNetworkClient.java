@@ -91,7 +91,7 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
               var2Lifetime1 = (NetworkArchiveRequest) (this.field_c.b(0));
             }
             for (var2_int = 0; 100 > var2_int; var2_int++) {
-              var3_intLifetime1 = this.field_x.a((byte) 63);
+              var3_intLifetime1 = this.field_x.available((byte) 63);
               if (var3_intLifetime1 < 0) {
                 throw new IOException();
               }

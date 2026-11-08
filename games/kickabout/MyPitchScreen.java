@@ -208,7 +208,7 @@ final class MyPitchScreen extends TeamManagementScreen {
           }
           try {
             if (IterableDualLinkDeque.field_a == 0) {
-              SharedWidgetFactory.field_o = PainterStyle.field_e.a(true, ScrollContainer.field_yb, GameSoundEffect.field_b);
+              SharedWidgetFactory.field_o = PainterStyle.field_e.requestSocketOpen(true, ScrollContainer.field_yb, GameSoundEffect.field_b);
               IterableDualLinkDeque.field_a = IterableDualLinkDeque.field_a + 1;
             }
             if (IterableDualLinkDeque.field_a == 1) {
@@ -231,13 +231,13 @@ final class MyPitchScreen extends TeamManagementScreen {
               LoginRequiredDialog.field_I = 30000L + MonotonicClock.monotonicMillis(93);
             }
             if (IterableDualLinkDeque.field_a == 3) {
-              if (AnimationSkeleton.field_e.a((byte) 63) <= 0) {
+              if (AnimationSkeleton.field_e.available((byte) 63) <= 0) {
                 if (MonotonicClock.monotonicMillis(param0 ^ 102) > LoginRequiredDialog.field_I) {
                   stackIn_32_0 = ArchiveReconnectSupport.retryArchiveConnection(-126, -2);
                   return stackIn_32_0;
                 }
               } else {
-                var1_int = AnimationSkeleton.field_e.b(1);
+                var1_int = AnimationSkeleton.field_e.readByte(1);
                 if (var1_int != 0) {
                   stackIn_27_0 = ArchiveReconnectSupport.retryArchiveConnection(param0 - 182, var1_int);
                   return stackIn_27_0;

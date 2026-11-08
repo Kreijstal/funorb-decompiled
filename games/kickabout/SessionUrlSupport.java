@@ -124,7 +124,7 @@ final class SessionUrlSupport {
             var2 = var6;
             if (LoginForm.field_G != null) {
               try {
-                LoginForm.field_G.a((byte) 4, 0L);
+                LoginForm.field_G.seek((byte) 4, 0L);
                 LoginForm.field_G.a(param0 ^ 64, var6);
                 for (var3_int = 0; var3_int < 24; var3_int++) {
                   if (0 == var2[var3_int]) {

@@ -18,7 +18,7 @@ final class BufferedCacheFile {
     private long field_i;
     static int field_a;
 
-    final void a(byte param0, long param1) throws IOException {
+    final void seek(byte param0, long param1) throws IOException {
         if (param1 < 0L) {
           throw new IOException();
         }
@@ -105,7 +105,7 @@ final class BufferedCacheFile {
         var4 = Kickabout.field_G;
         this.field_b = param0;
         if (~this.field_c != ~this.field_m) {
-          this.field_j.a(param0 ^ 15557, this.field_m);
+          this.field_j.seek(param0 ^ 15557, this.field_m);
           this.field_c = this.field_m;
         }
         this.field_e = this.field_m;
@@ -142,16 +142,16 @@ final class BufferedCacheFile {
         }
     }
 
-    final void c(int param0) throws IOException {
+    final void close(int param0) throws IOException {
         this.e(121);
-        this.field_j.a(param0 ^ -111);
+        this.field_j.close(param0 ^ -111);
         if (param0 != 1) {
           String var3 = (String) null;
           BufferedCacheFile.a(60, (String) null);
         }
     }
 
-    final long a(int param0) {
+    final long length(int param0) {
         int var2 = 97 % ((-25 - param0) / 45);
         return this.field_f;
     }
@@ -278,7 +278,7 @@ final class BufferedCacheFile {
             boolean decompiledFrameRemainder0 = true;
             boolean decompiledFrameCompleted0 = true;
             if (this.field_h.length < param0) {
-              this.field_j.a(15557, this.field_m);
+              this.field_j.seek(15557, this.field_m);
               this.field_c = this.field_m;
               while (param0 > 0) {
                 var9_intLifetime1 = this.field_j.a(33, param0, param3, param1);
@@ -430,7 +430,7 @@ final class BufferedCacheFile {
               return;
             }
             if (~this.field_c != ~this.field_m) {
-              this.field_j.a(15557, this.field_m);
+              this.field_j.seek(15557, this.field_m);
               this.field_c = this.field_m;
             }
             this.field_j.a(1, param3, param0, param2);
@@ -496,7 +496,7 @@ final class BufferedCacheFile {
         }
         if (-1L != this.field_l) {
           if (this.field_c != this.field_l) {
-            this.field_j.a(15557, this.field_l);
+            this.field_j.seek(15557, this.field_l);
             this.field_c = this.field_l;
           }
           this.field_j.a(1, this.field_k, 0, this.field_g);
@@ -541,7 +541,7 @@ final class BufferedCacheFile {
         this.field_g = 0;
         try {
           this.field_j = param0;
-          dupTemp$0 = param0.c(31114);
+          dupTemp$0 = param0.length(31114);
           this.field_i = dupTemp$0;
           this.field_f = dupTemp$0;
           this.field_k = new byte[param2];

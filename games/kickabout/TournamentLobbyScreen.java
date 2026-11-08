@@ -1236,7 +1236,7 @@ final class TournamentLobbyScreen extends AppScreen {
           var6 = 0;
           var7 = Math.abs(255 - var5) | Math.abs(-var5 + 255) << 8 | Math.abs(255 - var5) << 16;
           AuctionListing.a(40 + (MarkerSliderPainter.field_n + var3), -22914, -2 + var3, var4, -16 + var4);
-          SoftwareRasterizer.fillRoundedRectangleBlended(var3, var4 - 11, 33 + MarkerSliderPainter.field_n, 20, 6, var6, FriendsListPanel.a(false, (byte) -96));
+          SoftwareRasterizer.fillRoundedRectangleBlended(var3, var4 - 11, 33 + MarkerSliderPainter.field_n, 20, 6, var6, FriendsListPanel.getHudOpacity(false, (byte) -96));
           ScrollPane.a(var4, -123, 14 + var3);
           ScrollPane.a(var4, param0 + 113, MarkerSliderPainter.field_n + (30 + var3));
           var8 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, NanoTickClock.field_o, new String[]{TutorialScenerySupport.field_b[ClassDescriptorSupport.field_h]});

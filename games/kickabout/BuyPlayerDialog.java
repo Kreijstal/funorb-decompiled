@@ -27,9 +27,9 @@ final class BuyPlayerDialog extends MessageDialog {
         }
     }
 
-    public static void g(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 30) {
-          BuyPlayerDialog.g(9);
+          BuyPlayerDialog.releaseStatics(9);
         }
         field_G = (String[][]) null;
         field_K = null;
@@ -46,7 +46,7 @@ final class BuyPlayerDialog extends MessageDialog {
         }
     }
 
-    final static String a(char param0, byte param1, int param2) {
+    final static String repeatCharacter(char param0, byte param1, int param2) {
         int var4 = 0;
         int var5 = Kickabout.field_G;
         char[] var6 = new char[param2];

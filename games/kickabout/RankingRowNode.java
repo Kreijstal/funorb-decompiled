@@ -15,7 +15,7 @@ final class RankingRowNode extends UiLayoutNode {
     private String field_Eb;
     private String field_zb;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_Cb = null;
         int var1 = -62 % ((-82 - param0) / 35);
         field_Ib = null;
@@ -135,18 +135,18 @@ final class RankingRowNode extends UiLayoutNode {
         var3Lifetime2 = 52 % ((-31 - param0) / 59);
     }
 
-    final void c(boolean param0) {
+    final void recycle(boolean param0) {
         if (param0) {
-          this.h((byte) 103);
+          this.reset((byte) 103);
           RankingRowFactory.field_a.addLast((IntrusiveNode) (this), 3);
           return;
         }
         this.field_Bb = (String) null;
-        this.h((byte) 103);
+        this.reset((byte) 103);
         RankingRowFactory.field_a.addLast((IntrusiveNode) (this), 3);
     }
 
-    final void h(byte param0) {
+    final void reset(byte param0) {
         this.field_Fb = false;
         if (param0 <= 100) {
           return;

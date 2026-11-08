@@ -16,7 +16,7 @@ final class DirectByteStorage extends ByteStorage {
     final static void c(byte param0) {
         NetworkGameClient.k((byte) -118);
         int var1 = 115 % ((param0 + 48) / 42);
-        AccountRegistrationPanel.m(-19417);
+        AccountRegistrationPanel.tickSharedUiTimers(-19417);
     }
 
     public static void b(byte param0) {

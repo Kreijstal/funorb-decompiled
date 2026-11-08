@@ -95,10 +95,10 @@ final class SectorCacheStore {
           var3_ref = this.field_i;
           synchronized (var3_ref) {
             try {
-              if ((long)(6 + 6 * param0) > this.field_f.a(param1 - 65162)) {
+              if ((long)(6 + 6 * param0) > this.field_f.length(param1 - 65162)) {
                 return null;
               }
-              this.field_f.a((byte) 4, (long)(param0 * 6));
+              this.field_f.seek((byte) 4, (long)(param0 * 6));
               this.field_f.a(6, 0, (byte) 93, StatefulTextPainter.field_u);
               var4_int = (param1 & StatefulTextPainter.field_u[1] << 8) + ((255 & StatefulTextPainter.field_u[0]) << 16) + (StatefulTextPainter.field_u[2] & 255);
               var5 = (255 & StatefulTextPainter.field_u[5]) + (((255 & StatefulTextPainter.field_u[3]) << 16) + (StatefulTextPainter.field_u[4] << 8 & 65280));
@@ -111,7 +111,7 @@ final class SectorCacheStore {
               if (var5 <= 0) {
                 return null;
               }
-              if ((long)var5 > this.field_i.a(-76) / 520L) {
+              if ((long)var5 > this.field_i.length(-76) / 520L) {
                 stackIn_15_0 = null;
                 return (byte[]) (stackIn_15_0);
               }
@@ -123,7 +123,7 @@ final class SectorCacheStore {
                   stackIn_21_0 = null;
                   return (byte[]) (stackIn_21_0);
                 }
-                this.field_i.a((byte) 4, (long)(520 * var5));
+                this.field_i.seek((byte) 4, (long)(520 * var5));
                 var9 = var4_int - var7;
                 if (param0 > 65535) {
                   var14 = 10;
@@ -158,7 +158,7 @@ final class SectorCacheStore {
                 if (var12 < 0) {
                   return null;
                 }
-                if ((this.field_i.a(58) / 520L) < (long)var12) {
+                if ((this.field_i.length(58) / 520L) < (long)var12) {
                   stackIn_44_0 = null;
                   return (byte[]) (stackIn_44_0);
                 }
@@ -262,18 +262,18 @@ final class SectorCacheStore {
             synchronized (var6) {
               try {
                 if (param0) {
-                  if ((long)(6 + param2 * 6) > this.field_f.a(param1 ^ -115)) {
+                  if ((long)(6 + param2 * 6) > this.field_f.length(param1 ^ -115)) {
                     return false;
                   }
-                  this.field_f.a((byte) 4, (long)(6 * param2));
+                  this.field_f.seek((byte) 4, (long)(6 * param2));
                   this.field_f.a(6, 0, (byte) 103, StatefulTextPainter.field_u);
                   var7_int = (255 & StatefulTextPainter.field_u[5]) + ((StatefulTextPainter.field_u[3] & 255) << 16) + ((StatefulTextPainter.field_u[4] & 255) << 8);
                   if (var7_int <= 0 ||
-                    !((long)var7_int <= (this.field_i.a(107) / 520L))) {
+                    !((long)var7_int <= (this.field_i.length(107) / 520L))) {
                     return false;
                   }
                 } else {
-                  var7_int = (int)((519L + this.field_i.a(121)) / 520L);
+                  var7_int = (int)((519L + this.field_i.length(121)) / 520L);
                   if (0 == var7_int) {
                     var7_int = 1;
                   }
@@ -287,7 +287,7 @@ final class SectorCacheStore {
                   SectorCacheStore.a(-25);
                 }
                 StatefulTextPainter.field_u[2] = (byte)param4;
-                this.field_f.a((byte) 4, (long)(6 * param2));
+                this.field_f.seek((byte) 4, (long)(6 * param2));
                 this.field_f.a(0, 56, 6, StatefulTextPainter.field_u);
                 var8 = 0;
                 var9 = 0;
@@ -296,7 +296,7 @@ final class SectorCacheStore {
                     boolean decompiledFrameRemainder0 = true;
                     var10 = 0;
                     if (param0) {
-                      this.field_i.a((byte) 4, (long)(520 * var7_int));
+                      this.field_i.seek((byte) 4, (long)(520 * var7_int));
                       if (param2 <= 65535) {
                         try {
                           this.field_i.a(8, 0, (byte) 118, StatefulTextPainter.field_u);
@@ -334,7 +334,7 @@ final class SectorCacheStore {
                         var12 == var9 &&
                         var13 == this.field_h) &&
                         (decompiledFrameRemainder0 = (!(var10 >= 0) ||
-                        !((long)var10 <= this.field_i.a(param1 - 117) / 520L)))) {
+                        !((long)var10 <= this.field_i.length(param1 - 117) / 520L)))) {
                         return false;
                       }
                       if (decompiledFrameRemainder0) {
@@ -343,7 +343,7 @@ final class SectorCacheStore {
                     }
                     if (var10 == 0) {
                       param0 = false;
-                      var10 = (int)((519L + this.field_i.a(97)) / 520L);
+                      var10 = (int)((519L + this.field_i.length(97)) / 520L);
                       if (var10 == 0) {
                         var10++;
                       }
@@ -365,7 +365,7 @@ final class SectorCacheStore {
                       StatefulTextPainter.field_u[0] = (byte)(param2 >> 24);
                       StatefulTextPainter.field_u[7] = (byte)(var10 >> 8);
                       StatefulTextPainter.field_u[9] = (byte)this.field_h;
-                      this.field_i.a((byte) 4, (long)(520 * var7_int));
+                      this.field_i.seek((byte) 4, (long)(520 * var7_int));
                       this.field_i.a(0, 125, 10, StatefulTextPainter.field_u);
                       var11 = param4 - var8;
                       if (510 < var11) {
@@ -382,7 +382,7 @@ final class SectorCacheStore {
                       StatefulTextPainter.field_u[7] = (byte)this.field_h;
                       StatefulTextPainter.field_u[6] = (byte)var10;
                       StatefulTextPainter.field_u[5] = (byte)(var10 >> 8);
-                      this.field_i.a((byte) 4, (long)(520 * var7_int));
+                      this.field_i.seek((byte) 4, (long)(520 * var7_int));
                       this.field_i.a(0, 76, 8, StatefulTextPainter.field_u);
                       var11 = -var8 + param4;
                       if (var11 > 512) {
@@ -472,7 +472,7 @@ final class SectorCacheStore {
               var4 += 18;
               var2++;
               if (var6 == null) {
-                var5.h((byte) 104);
+                var5.reset((byte) 104);
                 continue scanLoop1;
               }
               var5.a((byte) 59, var6);
@@ -485,7 +485,7 @@ final class SectorCacheStore {
             return;
           }
           while (var5Lifetime1 != null) {
-            var5Lifetime1.c(true);
+            var5Lifetime1.recycle(true);
             var5Lifetime1 = (RankingRowNode) (var8.removeFirst((byte) 127));
           }
           return;

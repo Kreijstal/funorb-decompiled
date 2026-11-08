@@ -46,7 +46,7 @@ final class AnimationPlayer {
         this.field_g[this.field_i] = dupTemp$0 - 1;
         if (dupTemp$0 < 0) {
           var2 = this.field_i;
-          this.a(this.field_d[this.field_i], (byte) -107);
+          this.setClip(this.field_d[this.field_i], (byte) -107);
           this.field_i = var2;
           this.field_d[this.field_i] = null;
           this.field_i = this.field_i + 1;
@@ -81,7 +81,7 @@ final class AnimationPlayer {
         return false;
     }
 
-    private final void b(boolean param0) {
+    private final void reset(boolean param0) {
         this.field_h = 0;
         this.field_j = 0;
         this.field_a = 0;
@@ -121,7 +121,7 @@ final class AnimationPlayer {
         }
     }
 
-    final int a(boolean param0) {
+    final int frameCount(boolean param0) {
         if (!param0) {
           return -113;
         }
@@ -154,16 +154,16 @@ final class AnimationPlayer {
         return false;
     }
 
-    final void a(int param0, int param1) {
+    final void setFrame(int param0, int param1) {
         this.field_b = param0;
         int var3 = 124 % ((28 - param1) / 60);
         this.field_j = this.field_e.field_e[this.field_b];
         this.field_h = 0;
     }
 
-    final void a(AnimationClip param0, byte param1) {
+    final void setClip(AnimationClip param0, byte param1) {
         try {
-          this.b(true);
+          this.reset(true);
           this.field_e = param0;
           if (param1 != -107) {
             this.field_h = -20;

@@ -148,7 +148,7 @@ final class TextFieldNode extends UiLayoutNode {
           return;
         }
         java.awt.datatransfer.StringSelection var3 = new java.awt.datatransfer.StringSelection(this.getSelectedText((byte) 35));
-        this.field_Pb.a((byte) 68, (java.awt.datatransfer.Transferable) ((Object) var3));
+        this.field_Pb.requestClipboardWrite((byte) 68, (java.awt.datatransfer.Transferable) ((Object) var3));
     }
 
     final void clear(int param0) {

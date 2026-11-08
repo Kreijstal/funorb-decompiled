@@ -8,7 +8,7 @@ abstract class LoginCredentials {
     static IndexedSprite[][] field_c;
     static int[] field_d;
 
-    final static void a(int param0, boolean param1, boolean param2, boolean param3, boolean param4, boolean param5, boolean param6) {
+    final static void setTutorialRestrictions(int param0, boolean param1, boolean param2, boolean param3, boolean param4, boolean param5, boolean param6) {
         CommonGame stackIn_2_0 = null;
         boolean stackIn_3_1 = false;
         CommonGame stackIn_5_0 = null;
@@ -49,7 +49,7 @@ abstract class LoginCredentials {
           stackIn_19_1 = (param3) ? false : true;
           stackIn_18_0.field_z = stackIn_19_1;
         } else {
-          LoginCredentials.a(23);
+          LoginCredentials.ensureLoginPayloadAvailable(23);
           stackIn_22_0 = ThumbnailStateFactory.field_d;
           stackIn_23_1 = (param6) ? false : true;
           stackIn_22_0.field_A = stackIn_23_1;
@@ -65,7 +65,7 @@ abstract class LoginCredentials {
         }
     }
 
-    final static int a(byte param0, int param1) {
+    final static int highestOneBit(byte param0, int param1) {
         int var2 = 0;
         int var2Lifetime1;
         if (param0 <= -60) {
@@ -77,7 +77,7 @@ abstract class LoginCredentials {
           var2 = var2 | var2 >>> 16;
           return ~var2 & param1;
         }
-        LoginCredentials.b(-77);
+        LoginCredentials.releaseStatics(-77);
         var2Lifetime1 = param1 >>> 1;
         var2Lifetime1 = var2Lifetime1 | var2Lifetime1 >>> 1;
         var2Lifetime1 = var2Lifetime1 | var2Lifetime1 >>> 2;
@@ -87,7 +87,7 @@ abstract class LoginCredentials {
         return ~var2Lifetime1 & param1;
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_b = null;
         field_d = null;
         field_c = (IndexedSprite[][]) null;
@@ -97,7 +97,7 @@ abstract class LoginCredentials {
         }
     }
 
-    final static boolean a(int param0) {
+    final static boolean ensureLoginPayloadAvailable(int param0) {
         if (MusicVolumeSupport.field_b == -1) {
           if (!SetLagCommand.a((byte) 52, 1)) {
             return false;

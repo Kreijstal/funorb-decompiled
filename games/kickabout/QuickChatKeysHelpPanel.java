@@ -48,7 +48,7 @@ final class QuickChatKeysHelpPanel extends UiLayoutNode {
         }
     }
 
-    final boolean a(byte param0, boolean param1) {
+    final boolean updateAndCheckDismissed(byte param0, boolean param1) {
         int var3;
         boolean stackIn_7_0 = false;
         boolean decompiledFrameRemainder0 = true;
@@ -65,14 +65,14 @@ final class QuickChatKeysHelpPanel extends UiLayoutNode {
         return stackIn_7_0;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_Cb = null;
         field_Ab = null;
         field_Db = null;
         field_zb = null;
         field_Bb = null;
         if (param0 != 72) {
-          QuickChatKeysHelpPanel.a(-72);
+          QuickChatKeysHelpPanel.releaseStatics(-72);
         }
     }
 

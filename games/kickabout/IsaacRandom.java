@@ -322,7 +322,7 @@ final class IsaacRandom {
         }
     }
 
-    final static void c(byte param0) {
+    final static void installMusicRootStream(byte param0) {
         PitchPurchaseSupport.field_d.setRootStream(LoadingProgressSupport.field_d);
         if (param0 > -91) {
           return;
@@ -330,7 +330,7 @@ final class IsaacRandom {
         AnimationClip.field_k = null;
     }
 
-    static long a(long param0, long param1) {
+    static long bitwiseOr(long param0, long param1) {
         return param0 | param1;
     }
 

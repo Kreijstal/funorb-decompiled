@@ -93,7 +93,7 @@ final class TrinketIcon extends UiLayoutNode {
               CommonGame.a(119, TextPromptState.field_b.field_Eb, var3, param1, var4 != 0, TextPromptState.field_b.a(-15596));
             }
             TextPromptState.field_b = null;
-            MusicPatchNode.b(108);
+            MusicPatchNode.closePlayerContextMenu(108);
           }
         }
     }

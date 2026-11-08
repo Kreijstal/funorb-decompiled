@@ -622,7 +622,7 @@ final class SoftwareDrawingSupport {
         var4 = ((BitmapFont) (var2)).a(var0) + var3;
         field_n = new Sprite[4];
         for (var5 = 0; var5 < 4; var5++) {
-          field_n[var5] = AccountRegistrationPanel.a(true, (byte) -52, var5, var4, 7126504);
+          field_n[var5] = AccountRegistrationPanel.createButtonStateSprite(true, (byte) -52, var5, var4, 7126504);
           PacketBuffer.a(-41, field_n[var5]);
           ((BitmapFont) (var2)).d(var0, SoftwareRasterizer.field_g >> 1, SoftwareRasterizer.field_f - 8, 16777215, -1);
           TeamManagementScreen.e(127);
@@ -745,7 +745,7 @@ final class SoftwareDrawingSupport {
         int[] var2;
         int var4;
         int var5;
-        AccountNameAvailabilityValidator.a(true, param0.field_y, 255);
+        AccountNameAvailabilityValidator.quantizeColors(true, param0.field_y, 255);
         var1 = new IndexedSprite(param0.field_q, param0.field_w, 256);
         var2 = var1.field_l;
         for (var3 = 0; var3 < param0.field_y.length; var3++) {
@@ -867,7 +867,7 @@ final class SoftwareDrawingSupport {
         param0 = param0.toLowerCase();
         Sprite[] var5 = new Sprite[4];
         for (var6_int = 0; var6_int < 4; var6_int++) {
-          var5[var6_int] = AccountRegistrationPanel.a(param4, (byte) -52, var6_int, param3, param1);
+          var5[var6_int] = AccountRegistrationPanel.createButtonStateSprite(param4, (byte) -52, var6_int, param3, param1);
           PacketBuffer.a(-52, var5[var6_int]);
           var7 = param4 ? 8 : 9;
           param2.d(param0, SoftwareRasterizer.field_g >> 1, SoftwareRasterizer.field_f - var7, 16777215, -1);

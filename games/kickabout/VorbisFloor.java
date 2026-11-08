@@ -255,7 +255,7 @@ final class VorbisFloor {
         var2 = this.field_a.length;
         System.arraycopy(this.field_a, 0, field_e, 0, var2);
         var3 = field_h[this.field_l - 1];
-        var4 = ResizableModalPanel.a(true, var3 - 1);
+        var4 = ResizableModalPanel.bitLength(true, var3 - 1);
         field_d[0] = VorbisSample.readBits(var4);
         field_d[1] = VorbisSample.readBits(var4);
         var5 = 2;

@@ -206,7 +206,7 @@ final class ModelMaterial {
             }
             var3 = param1.substring(0, var2_int);
             var4 = param1.substring(1 + var2_int);
-            var5 = PasswordLoginCredentials.a((byte) -25, var3);
+            var5 = PasswordLoginCredentials.validateEmailLocalPart((byte) -25, var3);
             if (var5 == null) {
               stackIn_12_0 = SellPlayerDialog.a(var4, param0 - 64);
               return stackIn_12_0;

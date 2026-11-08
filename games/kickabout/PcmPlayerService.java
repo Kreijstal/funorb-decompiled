@@ -213,7 +213,7 @@ class PcmPlayerService {
                 field_d == null) {
                 field_d = new AudioService();
                 field_d.field_f = param0;
-                param0.a(field_h, (byte) 125, (Runnable) ((Object) field_d));
+                param0.requestThreadStart(field_h, (byte) 125, (Runnable) ((Object) field_d));
               }
               if (field_d != null) {
                 if (field_d.field_b[param2] != null) {

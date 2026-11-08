@@ -185,8 +185,8 @@ final class RankingsScreen extends ButtonMenuScreen {
             var1 = DropTargetWidget.l(64);
             ArrayWidgetContainer.field_x = BytePlusOneCommand.field_A;
             TutorialCaptionSupport.field_j = ArchiveManager.field_m;
-            PlatformTaskState.field_c.a((byte) 76, 240, 320, (java.awt.Component) ((Object) var1));
-            PlatformTaskState.field_c.a(-126, (java.awt.Component) ((Object) var1), false);
+            PlatformTaskState.field_c.requestMouseMove((byte) 76, 240, 320, (java.awt.Component) ((Object) var1));
+            PlatformTaskState.field_c.requestCursorVisibility(-126, (java.awt.Component) ((Object) var1), false);
             BytePlusOneCommand.field_A = 320;
             ArchiveManager.field_m = 240;
           }
@@ -198,8 +198,8 @@ final class RankingsScreen extends ButtonMenuScreen {
           var1Lifetime1 = DropTargetWidget.l(64);
           ArrayWidgetContainer.field_x = BytePlusOneCommand.field_A;
           TutorialCaptionSupport.field_j = ArchiveManager.field_m;
-          PlatformTaskState.field_c.a((byte) 76, 240, 320, (java.awt.Component) ((Object) var1Lifetime1));
-          PlatformTaskState.field_c.a(-126, (java.awt.Component) ((Object) var1Lifetime1), false);
+          PlatformTaskState.field_c.requestMouseMove((byte) 76, 240, 320, (java.awt.Component) ((Object) var1Lifetime1));
+          PlatformTaskState.field_c.requestCursorVisibility(-126, (java.awt.Component) ((Object) var1Lifetime1), false);
           BytePlusOneCommand.field_A = 320;
           ArchiveManager.field_m = 240;
         }

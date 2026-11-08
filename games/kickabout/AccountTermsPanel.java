@@ -13,16 +13,16 @@ final class AccountTermsPanel extends WidgetContainer implements TextHotspotList
     private TextHotspotWidget field_D;
     static int field_J;
 
-    private final String m(int param0) {
+    private final String linkStyleSuffix(int param0) {
         String discarded$0 = null;
         if (param0 != -1522433695) {
-          discarded$0 = this.k(13);
+          discarded$0 = this.linkStylePrefix(13);
           return "</col></u>";
         }
         return "</col></u>";
     }
 
-    public static void l(int param0) {
+    public static void releaseStatics(int param0) {
         field_C = null;
         field_L = null;
         field_E = null;
@@ -32,13 +32,13 @@ final class AccountTermsPanel extends WidgetContainer implements TextHotspotList
           field_G = null;
           return;
         }
-        AccountTermsPanel.l(122);
+        AccountTermsPanel.releaseStatics(122);
         field_H = null;
         field_K = null;
         field_G = null;
     }
 
-    final static boolean a(int param0) {
+    final static boolean canAutoResizeCanvas(int param0) {
         int var1 = 61 % ((-62 - param0) / 44);
         if (null == ArchiveIndex.field_h) {
           return false;
@@ -60,7 +60,7 @@ final class AccountTermsPanel extends WidgetContainer implements TextHotspotList
           this.field_B = param0;
           this.field_I = new TextButton(RowRangeRequest.field_g, (UiListener) null);
           this.field_I.field_r = (WidgetPainter) ((Object) new SpriteButtonPainter());
-          var7 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, NodeHashTableIterator.field_a, new String[]{this.k(107), this.m(-1522433695)});
+          var7 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, NodeHashTableIterator.field_a, new String[]{this.linkStylePrefix(107), this.linkStyleSuffix(-1522433695)});
           var3 = 20;
           var4 = new TextWidgetPainter(ModelMaterial.field_a, 0, 0, 0, 0, 16777215, -1, 3, 0, ModelMaterial.field_a.field_G, -1, 2147483647, true);
           this.field_D = new TextHotspotWidget(var7, var4);
@@ -191,7 +191,7 @@ final class AccountTermsPanel extends WidgetContainer implements TextHotspotList
         }
     }
 
-    private final String k(int param0) {
+    private final String linkStylePrefix(int param0) {
         if (param0 < 63) {
           TextHotspotWidget var3 = (TextHotspotWidget) null;
           this.onHotspotClicked((TextHotspotWidget) null, -77, -73, -3);
@@ -200,7 +200,7 @@ final class AccountTermsPanel extends WidgetContainer implements TextHotspotList
         return "<u=2164A2><col=2164A2>";
     }
 
-    final static int a(int param0, int param1) {
+    final static int screenToWorldX(int param0, int param1) {
         int var2 = SessionUrlSupport.screenToWorldX(param0, (byte) -1);
         if (FaceNormal.field_c) {
           var2 = -var2 + 896;
@@ -208,7 +208,7 @@ final class AccountTermsPanel extends WidgetContainer implements TextHotspotList
         if (param1 == 6784) {
           return var2;
         }
-        AccountTermsPanel.a(121, -36);
+        AccountTermsPanel.screenToWorldX(121, -36);
         return var2;
     }
 

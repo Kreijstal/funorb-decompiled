@@ -414,7 +414,7 @@ final class MyKitScreen extends TeamManagementScreen {
           stackIn_19_0 = this;
           if (((PlayerStats) stackIn_15_6).c((byte) stackIn_15_7, stackIn_16_8)) {
             stackIn_19_0Lifetime1 = this;
-            if (AccountRegistrationResponse.a((byte) 110)) {
+            if (AccountRegistrationResponse.isHalloweenAppearanceEnabled((byte) 110)) {
               stackIn_20_6 = true;
               decompiledFrameRemainder0 = false;
             }
@@ -427,10 +427,10 @@ final class MyKitScreen extends TeamManagementScreen {
           this.field_N = RegistrationRequestState.field_h.field_k;
           this.field_bb = RegistrationRequestState.field_h.field_w;
           this.field_Q = RegistrationRequestState.field_h.field_R;
-          this.field_cb.a(HelpTipDialog.field_I[((PlayerStats) (var3)).archetype][3], (byte) -107);
-          this.field_cb.a(30, -81);
+          this.field_cb.setClip(HelpTipDialog.field_I[((PlayerStats) (var3)).archetype][3], (byte) -107);
+          this.field_cb.setFrame(30, -81);
           if (((PlayerStats) (var3)).archetype == 2) {
-            this.field_cb.a(10, param0 - 36);
+            this.field_cb.setFrame(10, param0 - 36);
           }
         }
         return;
