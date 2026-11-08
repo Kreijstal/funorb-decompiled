@@ -126,7 +126,7 @@ final class cg extends SceneWidget {
           for (var3 = 0; var1_int > var3; var3++) {
             var4_ref_vg = oo.field_u[var3];
             var4_ref_vg.b((byte) 62);
-            sc.b(var3, 14130);
+            ValidationHelpWidget.b(var3, 14130);
             var5 = var4_ref_vg.field_k + var4_ref_vg.field_i >> 1;
             var6 = var4_ref_vg.field_v + var4_ref_vg.field_R >> 1;
             var7 = var4_ref_vg.field_N + var4_ref_vg.field_P >> 1;
@@ -143,13 +143,13 @@ final class cg extends SceneWidget {
           var5Lifetime1 = EmailLoginCredentials.field_e[11] >> 8;
           var6Lifetime1 = SoundCache.field_a << 4;
           var7Lifetime1 = 0;
-          var8Lifetime1 = of.a(param0 - 252566934, var6Lifetime1) >> 8;
-          var9Lifetime1 = j.a(var6Lifetime1, -108) >> 8;
+          var8Lifetime1 = of.sine(param0 - 252566934, var6Lifetime1) >> 8;
+          var9Lifetime1 = BevelBoxPainter.cosine(var6Lifetime1, -108) >> 8;
           if (EmailLoginCredentials.field_g != -1 &&
-            me.field_I != -1) {
+            MenuButtonPanel.field_I != -1) {
             var7Lifetime1 = -320 + EmailLoginCredentials.field_g;
             var9Lifetime1 = -128;
-            var8Lifetime1 = 240 - me.field_I;
+            var8Lifetime1 = 240 - MenuButtonPanel.field_I;
           }
           var10 = 256.0 / Math.sqrt((double)(var8Lifetime1 * var8Lifetime1 + (var7Lifetime1 * var7Lifetime1 + var9Lifetime1 * var9Lifetime1)));
           var9Lifetime1 = (int)((double)var9Lifetime1 * var10);
@@ -174,7 +174,7 @@ final class cg extends SceneWidget {
             }
             var21[var16] = -2147483648;
             var17 = oo.field_u[var16];
-            sc.b(var16, param0 ^ 252570192);
+            ValidationHelpWidget.b(var16, param0 ^ 252570192);
             for (var18 = 0; var18 < 3; var18++) {
               tn.field_Gb[var18] = tn.field_Gb[var18] + gn.field_g[var15][var18];
             }

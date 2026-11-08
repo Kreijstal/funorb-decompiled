@@ -162,7 +162,7 @@ final class tj extends ArchiveProvider {
             if (var6 >= 0) {
               stackIn_6_0 = var6 + 2;
               for (var5 = stackIn_6_0; var3_int > var5; var5++) {
-                if (LoginPanel.a(30, param2.charAt(var5))) {
+                if (LoginPanel.isDigit(30, param2.charAt(var5))) {
                   continue;
                 }
                 break;
@@ -197,7 +197,7 @@ final class tj extends ArchiveProvider {
               return stackIn_31_0;
             }
             for (var5Lifetime1 = var9 + 2; var3_int > var5Lifetime1; var5Lifetime1++) {
-              if (LoginPanel.a(30, param2.charAt(var5Lifetime1))) {
+              if (LoginPanel.isDigit(30, param2.charAt(var5Lifetime1))) {
                 continue;
               }
               break;
@@ -270,7 +270,7 @@ final class tj extends ArchiveProvider {
 
     final static void a(boolean param0, byte param1) {
         try {
-          sc.a(false, false, param0);
+          ValidationHelpWidget.a(false, false, param0);
           if (param1 >= -93) {
             field_t = (BinaryBitmapFont) null;
           }
@@ -529,7 +529,7 @@ final class tj extends ArchiveProvider {
             field_C = -45;
           }
           qn.field_ob = null;
-          mj.field_p = -1;
+          StatefulTextPainter.field_p = -1;
         } catch (RuntimeException runtimeException) {
           throw aa.wrapException((Throwable) ((Object) runtimeException), "tj.I(" + param0 + ')');
         }

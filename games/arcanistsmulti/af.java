@@ -32,7 +32,7 @@ final class af extends SceneWidget {
           }
           var4_int = param3.c(param1, 90);
           var5 = param3.a(param0, (byte) 98, var4_int);
-          stackIn_3_0 = me.a(param3, 31027, var4_int, var5);
+          stackIn_3_0 = MenuButtonPanel.loadIndexedSprite(param3, 31027, var4_int, var5);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

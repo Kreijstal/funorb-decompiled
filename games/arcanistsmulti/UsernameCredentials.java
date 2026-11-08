@@ -104,7 +104,7 @@ class UsernameCredentials extends LoginCredentials {
         try {
           var1_int = -117 / ((param0 - 89) / 35);
           var2 = he.field_e;
-          while (bl.d(0)) {
+          while (DateOfBirthValidator.d(0)) {
             var2.writeOpcode((byte) -66, 8);
             fieldTemp$0 = var2.position + 1;
             var2.position = var2.position + 1;

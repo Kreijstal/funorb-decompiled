@@ -3,20 +3,20 @@
  */
 final class ci {
     static String field_b;
-    static gd field_c;
+    static LoadingProgressDialog field_c;
     static SceneWidget field_a;
     static Sprite field_e;
     static pb field_d;
 
     final static void a(byte param0) {
         MusicCrossfadeStream.field_n = oo.d(-9685);
-        ClientException.field_b = new h();
+        ClientException.field_b = new ModalPanelStack();
         if (param0 > 49) {
-          sc.a(true, false, true);
+          ValidationHelpWidget.a(true, false, true);
           return;
         }
         field_b = (String) null;
-        sc.a(true, false, true);
+        ValidationHelpWidget.a(true, false, true);
     }
 
     public static void releaseStatics(int param0) {

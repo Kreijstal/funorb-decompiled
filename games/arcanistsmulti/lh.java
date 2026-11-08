@@ -17,7 +17,7 @@ final class lh implements WidgetPainter {
     static String field_a;
     static String[] field_e;
 
-    public final void a(UiComponent param0, int param1, int param2, int param3, boolean param4) {
+    public final void paint(UiComponent param0, int param1, int param2, int param3, boolean param4) {
         int var10 = 0;
         UiComponent stackIn_4_0 = null;
         RuntimeException stackIn_15_0 = null;

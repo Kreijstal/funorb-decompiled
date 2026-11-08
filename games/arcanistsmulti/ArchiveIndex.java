@@ -343,14 +343,14 @@ final class ArchiveIndex {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          ob.field_Y = param1;
-          if (ob.field_Y != null &&
-            ob.field_Y.field_l) {
+          ResizableModalPanel.field_Y = param1;
+          if (ResizableModalPanel.field_Y != null &&
+            ResizableModalPanel.field_Y.field_l) {
             stackIn_5_0 = 1;
           } else {
             stackIn_5_0 = 0;
           }
-          li.a(stackIn_5_0, 0);
+          NameSuggestionsPanel.notifyBrowserResizing(stackIn_5_0, 0);
           if (param0 > -110) {
             field_s = (String) null;
           }
@@ -371,7 +371,7 @@ final class ArchiveIndex {
 
     final static boolean b(int param0) {
         int var1 = 60 % ((8 - param0) / 48);
-        return re.a((byte) -68, cd.getApplet(122));
+        return re.a((byte) -68, IconButtonPainter.getApplet(122));
     }
 
     final static void a(byte param0) {
@@ -417,7 +417,7 @@ final class ArchiveIndex {
     ArchiveIndex(byte[] param0, int param1, byte[] param2) {
         int var4_int = 0;
         try {
-          this.field_p = mj.a(param0.length, (byte) -104, param0);
+          this.field_p = StatefulTextPainter.crc32(param0.length, (byte) -104, param0);
           if (param1 != this.field_p) {
             throw new RuntimeException();
           }

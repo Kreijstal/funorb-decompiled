@@ -126,7 +126,7 @@ final class lm {
             stackIn_12_0 = (dn.field_Db) ? 0 : 1;
             var4_int = stackIn_12_0;
           } else {
-            if (qk.k((byte) 106)) {
+            if (ContentTransitionDialog.k((byte) 106)) {
               stackIn_8_0 = (!param2.field_Lb) ? 1 : 0;
             } else {
               stackIn_8_0 = 0;
@@ -155,7 +155,7 @@ final class lm {
               stackIn_33_0.field_ab = stackIn_34_1;
             }
             if (IndexedSpriteState.field_e[0][2].field_A) {
-              if (!qk.k((byte) 111)) {
+              if (!ContentTransitionDialog.k((byte) 111)) {
                 TextLayout.field_c = tj.a(param3 ^ -111, new String[]{DirectByteStorage.field_f.field_ic}, ed.field_tb);
               } else {
                 TextLayout.field_c = UiTheme.field_m;
@@ -273,9 +273,9 @@ final class lm {
                 }
               } else {
                 if (0 == var6Lifetime1) {
-                  q.field_N = 0;
+                  DropTargetWidget.field_N = 0;
                 } else {
-                  q.field_N = q.field_N ^ var6Lifetime1;
+                  DropTargetWidget.field_N = DropTargetWidget.field_N ^ var6Lifetime1;
                 }
               }
             }
@@ -286,11 +286,11 @@ final class lm {
             } else {
               if (0 != var6Lifetime1) {
                 stackIn_128_0 = var28;
-                stackIn_129_1 = ((var6Lifetime1 & q.field_N) != 0);
+                stackIn_129_1 = ((var6Lifetime1 & DropTargetWidget.field_N) != 0);
                 stackIn_128_0.field_ab = stackIn_129_1;
               } else {
                 stackIn_124_0 = var28;
-                stackIn_125_1 = (q.field_N == 0);
+                stackIn_125_1 = (DropTargetWidget.field_N == 0);
                 stackIn_124_0.field_ab = stackIn_125_1;
               }
             }
@@ -304,7 +304,7 @@ final class lm {
               var29 = IndexedSpriteState.field_e[3][var6Lifetime2];
               if (var4_int != 0 &&
                 0 != var29.field_U) {
-                q.field_L = var6Lifetime2;
+                DropTargetWidget.field_L = var6Lifetime2;
               }
               if (var29.field_A &&
                 var6Lifetime2 > 0) {
@@ -319,7 +319,7 @@ final class lm {
                 }
               }
               stackIn_155_0 = var29;
-              stackIn_156_1 = (var6Lifetime2 == q.field_L);
+              stackIn_156_1 = (var6Lifetime2 == DropTargetWidget.field_L);
               stackIn_155_0.field_ab = stackIn_156_1;
               stackIn_158_0 = var29;
               stackIn_159_1 = (var4_int != 0);
@@ -428,7 +428,7 @@ final class lm {
                 for (var17_int = 0; var17_int < var7; var17_int++) {
                   tk.field_q[var17_int] = false;
                 }
-                jm.a(-1, (byte) -25, param0, param2, var9, var7, -1, 0);
+                TextWidgetPainter.a(-1, (byte) -25, param0, param2, var9, var7, -1, 0);
                 if (qf.field_d >= 2 &&
                   ri.field_b[12]) {
                   ByteStorage.field_a = true;
@@ -513,10 +513,10 @@ final class lm {
                     if (var14 != 0) {
                       var22 = KeyboardInputHandler.field_a;
                       if (var15 > 0 &&
-                        ma.field_P != null &&
-                        ma.field_P.length >= var15 &&
-                        ma.field_P[var15 - 1] != null) {
-                        var22 = ma.field_P[var15 - 1][0];
+                        Scrollbar.field_P != null &&
+                        Scrollbar.field_P.length >= var15 &&
+                        Scrollbar.field_P[var15 - 1] != null) {
+                        var22 = Scrollbar.field_P[var15 - 1][0];
                       }
                       if (var21 != null) {
                         var21 = (String) (var21) + "<br>" + (String) (var22);
@@ -554,7 +554,7 @@ final class lm {
                   var23 = 0;
                   for (var24 = 0; var24 < var7; var24++) {
                     if (tk.field_q[var24]) {
-                      var25_refLifetime1 = "</col>" + ob.field_bb[var24] + "<col=A00000>";
+                      var25_refLifetime1 = "</col>" + ResizableModalPanel.field_bb[var24] + "<col=A00000>";
                       var22 = var25_refLifetime1;
                       var21 = var22;
                       var22 = var25_refLifetime1;
@@ -571,7 +571,7 @@ final class lm {
                   if (var23 == 0) {
                     var21 = tj.a(param3 + 125, new String[]{(String) (var22)}, gf.field_jb);
                   } else {
-                    var21 = qk.field_qb + (String) (var22);
+                    var21 = ContentTransitionDialog.field_qb + (String) (var22);
                   }
                 }
                 if (var21 != null) {
@@ -621,7 +621,7 @@ final class lm {
             if (param0) {
               return;
             }
-            tc.b(12657, param1);
+            PasswordFieldPainter.b(12657, param1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

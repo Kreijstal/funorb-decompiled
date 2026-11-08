@@ -206,7 +206,7 @@ final class na extends SceneWidget {
     }
 
     final static void i(byte param0) {
-        UiContainer.a(1, cd.getApplet(108));
+        UiContainer.a(1, IconButtonPainter.getApplet(108));
         int var1 = -86 % ((param0 + 14) / 33);
     }
 
@@ -225,7 +225,7 @@ final class na extends SceneWidget {
             he.field_e = new CipherPacketBuffer(param6);
             md.field_c = param8;
             ho.field_c = param10;
-            q.field_P = param2;
+            DropTargetWidget.field_P = param2;
             ProxySocketConnector.field_q = param5;
             fl.field_a = param13;
             vf.field_r = param1;

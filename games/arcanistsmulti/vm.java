@@ -26,12 +26,12 @@ final class vm {
     final static void pollMouseInput(int param0) {
         Throwable decompiledCaughtException = null;
         Object var1 = null;
-        var1 = ob.field_hb;
+        var1 = ResizableModalPanel.field_hb;
         synchronized (var1) {
           PacketBuffer.field_m = rk.field_K;
           rf.field_o = rf.field_o + 1;
-          EmailLoginCredentials.field_g = j.field_g;
-          me.field_I = dd.field_i;
+          EmailLoginCredentials.field_g = BevelBoxPainter.field_g;
+          MenuButtonPanel.field_I = dd.field_i;
           ArchiveProvider.field_d = qa.field_g;
           qa.field_g = false;
           re.field_r = ValidationState.field_c;

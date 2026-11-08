@@ -43,7 +43,7 @@ final class vf extends IntrusiveNode {
             return stackIn_6_0;
           }
           if (param2 == 7) {
-            stackIn_10_0 = mm.field_v;
+            stackIn_10_0 = MenuButtonPainter.field_v;
             return stackIn_10_0;
           }
           if (param2 == 8) {
@@ -87,9 +87,9 @@ final class vf extends IntrusiveNode {
     final static cg a(long param0, int param1) {
         if (param1 != 8192) {
           field_h = (String) null;
-          return (cg) (kn.field_qb.get(param0, (byte) -121));
+          return (cg) (OptionsDialog.field_qb.get(param0, (byte) -121));
         }
-        return (cg) (kn.field_qb.get(param0, (byte) -121));
+        return (cg) (OptionsDialog.field_qb.get(param0, (byte) -121));
     }
 
     public static void releaseStatics(int param0) {

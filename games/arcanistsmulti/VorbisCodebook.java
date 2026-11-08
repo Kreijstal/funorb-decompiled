@@ -11,7 +11,7 @@ final class VorbisCodebook {
 
     private final static int lookup1ValueCount(int param0, int param1) {
         int var2 = 0;
-        for (var2 = (int)Math.pow((double)param0, 1.0 / (double)param1) + 1; j.a(param1, -74, var2) > param0; var2--) {
+        for (var2 = (int)Math.pow((double)param0, 1.0 / (double)param1) + 1; BevelBoxPainter.integerPower(param1, -74, var2) > param0; var2--) {
         }
         return var2;
     }

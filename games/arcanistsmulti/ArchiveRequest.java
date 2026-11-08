@@ -105,7 +105,7 @@ abstract class ArchiveRequest extends DualLinkNode {
           }
           ImageProducerRasterBuffer.field_r = 15;
           dh.field_Gb = 4;
-          mm.field_p = 2;
+          MenuButtonPainter.field_p = 2;
           IntrusiveDequeCursor.field_i = 11;
           ra.field_h = 2;
           var7 = LoadingTracker.loadBinaryFont(param4, -24755, "lobby", "largefont", param1);
@@ -170,18 +170,18 @@ abstract class ArchiveRequest extends DualLinkNode {
           var15.field_z = ImageProducerRasterBuffer.field_r;
           var15.field_Z = (BitmapFont) ((Object) var7);
           var15.field_ob = 16777215;
-          j.field_f = new SceneWidget(0L, IntrusiveNode.field_c);
-          j.field_f.field_v = rb.a(false, false, 652, 2236962, 2236962, 16);
-          j.field_f.field_t = 2;
+          BevelBoxPainter.field_f = new SceneWidget(0L, IntrusiveNode.field_c);
+          BevelBoxPainter.field_f.field_v = rb.a(false, false, 652, 2236962, 2236962, 16);
+          BevelBoxPainter.field_f.field_t = 2;
           mi.field_A = new SceneWidget(0L, IntrusiveNode.field_c);
           mi.field_A.field_v = rb.a(false, false, 652, 1513239, 1513239, 16);
           mi.field_A.field_t = 2;
-          le.field_E = new SceneWidget(0L, j.field_f);
+          le.field_E = new SceneWidget(0L, BevelBoxPainter.field_f);
           le.field_E.applyStyle(nj.field_d, (byte) 118);
           qa.field_j = new SceneWidget(0L, mi.field_A);
           qa.field_j.applyStyle(nj.field_d, (byte) 119);
           var16 = qe.loadSpriteSheet(param1, "button_mouseover", "lobby", param0 + 91);
-          ml.field_H = new pe(ck.field_a, var12, IntrusiveNode.field_c, nj.field_d, 3, 2, mm.field_p, 3, ImageProducerRasterBuffer.field_r);
+          ml.field_H = new pe(ck.field_a, var12, IntrusiveNode.field_c, nj.field_d, 3, 2, MenuButtonPainter.field_p, 3, ImageProducerRasterBuffer.field_r);
           EditableTextWidget.field_L = new SceneWidget(0L, nj.field_d);
           EditableTextWidget.field_L.field_Y = 1;
           EditableTextWidget.field_L.field_wb = 1;
@@ -216,7 +216,7 @@ abstract class ArchiveRequest extends DualLinkNode {
           FrameClock.field_d.field_X = 1;
           FrameClock.field_d.field_wb = 1;
           ml.field_V = new SceneWidget(0L, FrameClock.field_d);
-          sl.field_S = new SceneWidget(0L, FrameClock.field_d);
+          ScrollContainer.field_S = new SceneWidget(0L, FrameClock.field_d);
           th.field_c = new SceneWidget(0L, ko.field_h);
           ml.field_S = new SceneWidget(0L, FrameClock.field_d);
           MouseWheelHandler.field_d = new SceneWidget(0L, FrameClock.field_d);
@@ -237,9 +237,9 @@ abstract class ArchiveRequest extends DualLinkNode {
           ml.field_V.field_v = ic.a(qe.loadSpriteSheet(param1, "greenbutton", "lobby", 94), (byte) -78);
           ml.field_V.field_Ab = ic.a(qe.loadSpriteSheet(param1, "greenbutton_mouseover", "lobby", 43), (byte) -79);
           ml.field_V.field_xb = ic.a(qe.loadSpriteSheet(param1, "greenbutton_mouseheld", "lobby", param0 ^ 50), (byte) -118);
-          sl.field_S.field_v = ic.a(qe.loadSpriteSheet(param1, "redbutton", "lobby", 55), (byte) -93);
-          sl.field_S.field_Ab = ic.a(qe.loadSpriteSheet(param1, "redbutton_mouseover", "lobby", 86), (byte) -109);
-          sl.field_S.field_xb = ic.a(qe.loadSpriteSheet(param1, "redbutton_mouseheld", "lobby", 44), (byte) -115);
+          ScrollContainer.field_S.field_v = ic.a(qe.loadSpriteSheet(param1, "redbutton", "lobby", 55), (byte) -93);
+          ScrollContainer.field_S.field_Ab = ic.a(qe.loadSpriteSheet(param1, "redbutton_mouseover", "lobby", 86), (byte) -109);
+          ScrollContainer.field_S.field_xb = ic.a(qe.loadSpriteSheet(param1, "redbutton_mouseheld", "lobby", 44), (byte) -115);
           th.field_c.field_v = ic.a(qe.loadSpriteSheet(param1, "backbutton", "lobby", param0 + 107), (byte) -82);
           th.field_c.field_Ab = ic.a(qe.loadSpriteSheet(param1, "backbutton_mouseover", "lobby", param0 ^ 107), (byte) -128);
           th.field_c.field_xb = ic.a(qe.loadSpriteSheet(param1, "backbutton_mouseheld", "lobby", 76), (byte) -102);
@@ -323,7 +323,7 @@ abstract class ArchiveRequest extends DualLinkNode {
           ri.field_g = param4;
           hd.field_a = param6;
           ne.field_b = param5;
-          ib.field_u = param1;
+          BevelTextPainter.field_u = param1;
           ce.field_o = param7;
           qe.field_h = param3;
           if (param0 > -55) {
@@ -332,7 +332,7 @@ abstract class ArchiveRequest extends DualLinkNode {
           IsaacRandom.field_g = param8;
           GrowableIntList.field_c = (Js5Transport) ((Object) new SocketJs5Transport());
           ed.field_yb = new DiskCacheWorker(param4);
-          mk.field_O = new Js5ArchiveManager(GrowableIntList.field_c, ed.field_yb);
+          ValidationStatusIcon.field_O = new Js5ArchiveManager(GrowableIntList.field_c, ed.field_yb);
         } catch (RuntimeException runtimeException) {
           throw aa.wrapException((Throwable) ((Object) runtimeException), "ve.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ',' + param7 + ',' + (param8 != null ? "{...}" : "null") + ')');
         }

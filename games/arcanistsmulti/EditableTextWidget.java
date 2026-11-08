@@ -97,15 +97,15 @@ class EditableTextWidget extends TextButton {
         }
         if (this.field_r != null &&
           param2 == 0) {
-          this.field_r.a((UiComponent) (this), 5592405, param1, param3, this.field_B);
+          this.field_r.paint((UiComponent) (this), 5592405, param1, param3, this.field_B);
           if (this.field_r instanceof WidgetTextLayout) {
             var5 = (WidgetTextLayout) ((Object) this.field_r);
             if (this.field_N != this.field_J) {
-              var5.a(param3, (UiComponent) (this), param1, 6600, this.field_N, this.field_J);
+              var5.drawSelection(param3, (UiComponent) (this), param1, 6600, this.field_N, this.field_J);
             }
             var6 = qj.monotonicTimeMillis(-26572);
             if ((-this.field_Q + var6) % 1000L < 500L) {
-              var5.a(79, param3, param1, this.field_N, (UiComponent) (this));
+              var5.drawCaret(79, param3, param1, this.field_N, (UiComponent) (this));
             }
           }
         }
@@ -150,7 +150,7 @@ class EditableTextWidget extends TextButton {
           if (this.field_t == 1) {
             if (this.field_r instanceof WidgetTextLayout) {
               var5 = (WidgetTextLayout) ((Object) this.field_r);
-              var6 = var5.b(param1, (UiComponent) (this), me.field_I, EmailLoginCredentials.field_g, param3, param2 ^ 2364);
+              var6 = var5.hitTestCharacter(param1, (UiComponent) (this), MenuButtonPanel.field_I, EmailLoginCredentials.field_g, param3, param2 ^ 2364);
               if (var6 != -1) {
                 if (this.field_R &&
                   var6 < this.field_O &&
@@ -224,7 +224,7 @@ class EditableTextWidget extends TextButton {
             ph.field_a.clear(10);
             ph.field_a = null;
           }
-          kn.field_qb = null;
+          OptionsDialog.field_qb = null;
           if (null != bc.field_c) {
             var4 = (cg) (bc.field_c.f(102));
             while (var4 != null) {
@@ -453,13 +453,13 @@ class EditableTextWidget extends TextButton {
           return;
         }
         var9 = (WidgetTextLayout) ((Object) this.field_r);
-        var3 = var9.a((UiComponent) (this), -46);
+        var3 = var9.getTextLayout((UiComponent) (this), -46);
         var4 = var3.maxLineWidth((byte) 121);
-        var5 = var9.a((UiComponent) (this), (byte) 101);
+        var5 = var9.getAvailableWidth((UiComponent) (this), (byte) 101);
         if (param0 > -38) {
           return;
         }
-        var6 = var9.a(27184) >> 1;
+        var6 = var9.lineHeight(27184) >> 1;
         if (-var6 + var5 > var4) {
           this.field_i = 0;
           this.field_h = 0;
@@ -704,7 +704,7 @@ class EditableTextWidget extends TextButton {
           if (!(this.field_r instanceof WidgetTextLayout)) {
             return false;
           }
-          var9_int = ((WidgetTextLayout) ((Object) this.field_r)).b(param6, (UiComponent) (this), me.field_I, EmailLoginCredentials.field_g, param3, 2454);
+          var9_int = ((WidgetTextLayout) ((Object) this.field_r)).hitTestCharacter(param6, (UiComponent) (this), MenuButtonPanel.field_I, EmailLoginCredentials.field_g, param3, 2454);
           stackIn_5_1 = 81;
           if (var9_int != -1) {
             stackIn_6_2 = var9_int;

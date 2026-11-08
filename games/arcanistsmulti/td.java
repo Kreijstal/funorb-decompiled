@@ -31,10 +31,10 @@ final class td extends UiContainer implements ButtonListener {
 
     public td() {
         super(0, 0, 476, 225, (WidgetPainter) null);
-        this.field_C = new TextButton(ib.field_t, (UiListener) null);
-        this.field_F = new TextButton(kn.field_rb, (UiListener) null);
+        this.field_C = new TextButton(BevelTextPainter.field_t, (UiListener) null);
+        this.field_F = new TextButton(OptionsDialog.field_rb, (UiListener) null);
         this.field_H = new TextButton(LoadingTracker.field_n, (UiListener) null);
-        mm var1 = new mm();
+        MenuButtonPainter var1 = new MenuButtonPainter();
         this.field_C.field_r = (WidgetPainter) ((Object) var1);
         this.field_F.field_r = (WidgetPainter) ((Object) var1);
         this.field_H.field_r = (WidgetPainter) ((Object) var1);
@@ -54,7 +54,7 @@ final class td extends UiContainer implements ButtonListener {
         this.addChild(-76, this.field_H);
     }
 
-    public final void a(boolean param0, int param1, int param2, int param3, TextButton param4) {
+    public final void onButtonActivated(boolean param0, int param1, int param2, int param3, TextButton param4) {
         RuntimeException var6 = null;
         int var7 = 0;
         RuntimeException stackIn_12_0 = null;
@@ -67,7 +67,7 @@ final class td extends UiContainer implements ButtonListener {
             field_G = (aj) null;
           }
           if (param4 == this.field_F) {
-            bl.d((byte) 109);
+            DateOfBirthValidator.d((byte) 109);
             return;
           }
           if (param4 == this.field_C) {
@@ -99,7 +99,7 @@ final class td extends UiContainer implements ButtonListener {
           if (null == CredentialKind.field_c) {
             return false;
           }
-          if (ob.field_eb == qc.field_c) {
+          if (ResizableModalPanel.field_eb == qc.field_c) {
             return true;
           }
           return false;
@@ -107,13 +107,13 @@ final class td extends UiContainer implements ButtonListener {
         if (null == CredentialKind.field_c) {
           return false;
         }
-        if (ob.field_eb == qc.field_c) {
+        if (ResizableModalPanel.field_eb == qc.field_c) {
           return true;
         }
         return false;
     }
 
-    final static byte[] a(Object param0, int param1, boolean param2) {
+    final static byte[] toByteArray(Object param0, int param1, boolean param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         byte[] var4 = null;

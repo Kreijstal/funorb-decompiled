@@ -43,7 +43,7 @@ final class jn {
           return;
         }
         try {
-          ClientException.field_b.b(vf.field_k, 15637);
+          ClientException.field_b.pushPanel(vf.field_k, 15637);
         } catch (RuntimeException runtimeException) {
           throw aa.wrapException((Throwable) ((Object) runtimeException), "jn.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
@@ -101,7 +101,7 @@ final class jn {
           }
           ph.field_a = param5.field_G;
           ph.field_a.clear(-124);
-          kn.field_qb = new IntrusiveNodeHashTable(param8);
+          OptionsDialog.field_qb = new IntrusiveNodeHashTable(param8);
           PatchEnvelopeSet.field_a = 0L;
           if (param2 != -13173) {
             field_a = (int[]) null;

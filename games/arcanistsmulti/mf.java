@@ -75,11 +75,11 @@ final class mf {
         fk var2Lifetime1;
         var3 = ArcanistsMulti.field_G ? 1 : 0;
         try {
-          si.field_l = param0;
+          CheckboxPainter.field_l = param0;
           var2 = (fk) (qn.field_mb.first(12623));
           while (var2 != null) {
             if (var2.field_n.isLinked((byte) -119)) {
-              var2.field_m.setVolumeQ6(si.field_l * var2.field_l + 128 >> 8);
+              var2.field_m.setVolumeQ6(CheckboxPainter.field_l * var2.field_l + 128 >> 8);
             } else {
               var2.unlink(true);
             }
@@ -96,7 +96,7 @@ final class mf {
             if (!var2Lifetime1.field_n.isLinked((byte) -36)) {
               var2Lifetime1.unlink(true);
             } else {
-              var2Lifetime1.field_m.setVolumeQ6(var2Lifetime1.field_l * si.field_l + 128 >> 8);
+              var2Lifetime1.field_m.setVolumeQ6(var2Lifetime1.field_l * CheckboxPainter.field_l + 128 >> 8);
             }
             var2Lifetime1 = (fk) (he.field_f.next(0));
           }

@@ -6,7 +6,7 @@ final class oa {
     static int field_e;
     static IndexedSprite[] field_d;
     static String field_b;
-    static sn field_c;
+    static DisplayNameForm field_c;
 
     public static void releaseStatics(byte param0) {
         field_b = null;
@@ -38,25 +38,25 @@ final class oa {
                 param2 = Bzip2State.field_v;
               }
               param1 = 2;
-              wh.field_f.a(26152, ge.field_g);
+              wh.field_f.setUsername(26152, ge.field_g);
             }
             if (10 == param1) {
               var3_int = 0;
-              ma.h(-90);
+              Scrollbar.openDisplayNameForm(-90);
             }
             if (var3_int != 0) {
               if (Bzip2State.field_h) {
                 param2 = tj.a(114, new String[]{param2}, wa.field_Eb);
               }
               if (NodeHashTable.field_h) {
-                param2 = si.field_n;
+                param2 = CheckboxPainter.field_n;
               }
-              vf.field_k.a(true, param2, param1);
+              vf.field_k.showResult(true, param2, param1);
             }
             if (param1 != 256 &&
               param1 != 10 &&
               !MusicPatchPcmStream.field_s) {
-              wh.field_f.f(true);
+              wh.field_f.clearFields(true);
             }
           }
           if (param0) {

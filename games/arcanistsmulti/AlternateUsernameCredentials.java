@@ -44,10 +44,10 @@ final class AlternateUsernameCredentials extends UsernameCredentials {
     final static void c(byte param0) {
         if (param0 != 13) {
           field_m = 5;
-          tc.field_A = null;
+          PasswordFieldPainter.field_A = null;
           return;
         }
-        tc.field_A = null;
+        PasswordFieldPainter.field_A = null;
     }
 
     public static void releaseStatics(byte param0) {

@@ -42,10 +42,10 @@ final class gg {
         int[] var21;
         byte[] var22;
         var8 = ArcanistsMulti.field_G ? 1 : 0;
-        var1 = new Sprite[h.field_J];
-        for (var2 = param0; var2 < h.field_J; var2++) {
+        var1 = new Sprite[ModalPanelStack.field_J];
+        for (var2 = param0; var2 < ModalPanelStack.field_J; var2++) {
           var3 = ho.field_i[var2] * jg.field_p[var2];
-          var20 = ln.field_I[var2];
+          var20 = AccountRegistrationPanel.field_I[var2];
           if (!dn.field_Ib[var2]) {
             var9 = new int[var3];
             var21 = var9;
@@ -54,7 +54,7 @@ final class gg {
             }
             var1[var2] = new Sprite(pb.field_g, gn.field_a, hl.field_l[var2], SectorCacheStore.field_d[var2], jg.field_p[var2], ho.field_i[var2], var21);
           } else {
-            var22 = vi.field_O[var2];
+            var22 = FadingModalPanel.field_O[var2];
             var16 = new int[var3];
             var13 = var16;
             var6 = var13;

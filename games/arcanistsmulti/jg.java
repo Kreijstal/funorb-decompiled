@@ -58,7 +58,7 @@ final class jg {
             ce.field_g[10] = pe.field_Nb;
             return;
           }
-          ce.field_g[10] = cn.field_K;
+          ce.field_g[10] = BirthDateEntryPanel.field_K;
           return;
         }
         if ((SpriteState.field_z.field_D & 1 << SpriteState.field_z.field_I) != 0) {
@@ -69,7 +69,7 @@ final class jg {
           ce.field_g[10] = pe.field_Nb;
           return;
         }
-        ce.field_g[10] = cn.field_K;
+        ce.field_g[10] = BirthDateEntryPanel.field_K;
     }
 
     public static void releaseStatics(int param0) {
@@ -91,11 +91,11 @@ final class jg {
     }
 
     jg(boolean param0) {
-        this.field_i = sc.field_V;
-        this.field_h = vi.field_P;
+        this.field_i = ValidationHelpWidget.field_V;
+        this.field_h = FadingModalPanel.field_P;
         this.field_e = fe.field_p;
         this.field_b = db.field_e;
-        this.field_o = wl.field_N;
+        this.field_o = NumericDateInputWidget.field_N;
         this.field_g = vf.field_j;
         this.field_q = mc.field_c;
         this.field_d = i.field_f;
@@ -105,8 +105,8 @@ final class jg {
           this.field_f = null;
         }
         this.field_n = ff.field_a;
-        this.field_k = ma.field_M;
-        this.field_m = sl.field_W;
+        this.field_k = Scrollbar.field_M;
+        this.field_m = ScrollContainer.field_W;
     }
 
     jg(int param0, String param1, int param2, String param3, String param4) {

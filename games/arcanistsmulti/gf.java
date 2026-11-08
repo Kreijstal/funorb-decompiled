@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gf extends ob implements ButtonListener {
+final class gf extends ResizableModalPanel implements ButtonListener {
     private TextButton field_lb;
     private TextButton field_kb;
     static String field_jb;
@@ -42,10 +42,10 @@ final class gf extends ob implements ButtonListener {
         String[] var20 = null;
         try {
           if (param2 < 36) {
-            gf.a(83, (byte) 102, 89, -126);
+            gf.blendColours(83, (byte) 102, 89, -126);
           }
           var20 = (String[]) null;
-          gd.a(param10, param0, param14, param12, param5, param15, param8, param9, param4, (String[]) null, param7, param16, 17292, param13, param1, 1, param18, param3, param6, param17);
+          LoadingProgressDialog.a(param10, param0, param14, param12, param5, param15, param8, param9, param4, (String[]) null, param7, param16, 17292, param13, param1, 1, param18, param3, param6, param17);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -139,7 +139,7 @@ final class gf extends ob implements ButtonListener {
         }
     }
 
-    gf(h param0) {
+    gf(ModalPanelStack param0) {
         super(param0, 200, 130);
         UiComponent var2 = null;
         try {
@@ -148,18 +148,18 @@ final class gf extends ob implements ButtonListener {
           var2.field_v = this.field_v;
           var2.field_k = 80;
           var2.field_n = 0;
-          var2.field_r = (WidgetPainter) ((Object) new jm(WidgetStyleLayer.field_e, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
+          var2.field_r = (WidgetPainter) ((Object) new TextWidgetPainter(WidgetStyleLayer.field_e, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.addChild(-107, var2);
           if (lc.a((byte) 112)) {
-            this.field_lb = this.a((byte) 103, la.field_e, (UiListener) (this));
+            this.field_lb = this.addButton((byte) 103, la.field_e, (UiListener) (this));
           }
-          this.field_kb = this.a((byte) 103, dd.field_e, (UiListener) (this));
+          this.field_kb = this.addButton((byte) 103, dd.field_e, (UiListener) (this));
         } catch (RuntimeException runtimeException) {
           throw aa.wrapException((Throwable) ((Object) runtimeException), "gf.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static int a(int param0, byte param1, int param2, int param3) {
+    final static int blendColours(int param0, byte param1, int param2, int param3) {
         int var7 = 0;
         int var8 = 0;
         int var9 = ArcanistsMulti.field_G ? 1 : 0;
@@ -386,14 +386,14 @@ final class gf extends ob implements ButtonListener {
         }
     }
 
-    final static void a(byte param0, ResourceArchive param1) {
+    final static void loadDisplayNameSprites(byte param0, ResourceArchive param1) {
         SceneWidget var6 = null;
         SceneWidget var7 = null;
         SceneWidget var3 = null;
         try {
-          eb.field_d = fj.loadSprite("basic", param0 ^ -22556, param1, "display_name_changed");
-          nl.field_Gb = new hb(0L, ReflectionCheckRequest.field_r, ln.field_T, Js5NetworkRequest.field_z);
-          dd.field_c = new hb(0L, ReflectionCheckRequest.field_r, dm.field_I, wl.field_M);
+          EmptyPainter.field_d = fj.loadSprite("basic", param0 ^ -22556, param1, "display_name_changed");
+          nl.field_Gb = new hb(0L, ReflectionCheckRequest.field_r, AccountRegistrationPanel.field_T, Js5NetworkRequest.field_z);
+          dd.field_c = new hb(0L, ReflectionCheckRequest.field_r, dm.field_I, NumericDateInputWidget.field_M);
           ec.field_d = new SceneWidget(0L, (SceneWidget) null);
           NanoFrameClock.field_j = new SceneWidget(0L, IntrusiveNode.field_c);
           NanoFrameClock.field_j.field_X = 1;
@@ -407,7 +407,7 @@ final class gf extends ob implements ButtonListener {
           ec.field_d.addChild(cc.field_a, 85);
           if (param0 != 72) {
             ResourceArchive var4 = (ResourceArchive) null;
-            gf.a((byte) 119, (ResourceArchive) null);
+            gf.loadDisplayNameSprites((byte) 119, (ResourceArchive) null);
           }
           nl.field_Gb.field_Db.field_Hb.applyStyle(IntrusiveNode.field_c, (byte) 127);
           nl.field_Gb.field_Db.field_Hb.field_gb = 1;
@@ -423,7 +423,7 @@ final class gf extends ob implements ButtonListener {
         }
     }
 
-    private final void g(int param0) {
+    private final void close(int param0) {
         if (param0 < 30) {
           field_V = (String) null;
           if (this.field_G) {
@@ -438,7 +438,7 @@ final class gf extends ob implements ButtonListener {
         }
     }
 
-    private final TextButton a(byte param0, String param1, UiListener param2) {
+    private final TextButton addButton(byte param0, String param1, UiListener param2) {
         TextButton var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
@@ -451,7 +451,7 @@ final class gf extends ob implements ButtonListener {
         RuntimeException decompiledCaughtException = null;
         try {
           var4 = new TextButton(param1, param2);
-          var4.field_r = (WidgetPainter) ((Object) new mm());
+          var4.field_r = (WidgetPainter) ((Object) new MenuButtonPainter());
           if (param0 != 103) {
             this.field_lb = (TextButton) null;
           }
@@ -482,7 +482,7 @@ final class gf extends ob implements ButtonListener {
         }
     }
 
-    public final void a(boolean param0, int param1, int param2, int param3, TextButton param4) {
+    public final void onButtonActivated(boolean param0, int param1, int param2, int param3, TextButton param4) {
         ResourceArchive var7 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -492,15 +492,15 @@ final class gf extends ob implements ButtonListener {
         try {
           if (this.field_lb == param4) {
             IntrusiveDeque.a((byte) 4);
-            this.g(48);
+            this.close(48);
           } else {
             if (this.field_kb == param4) {
-              this.g(57);
+              this.close(57);
             }
           }
           if (!param0) {
             var7 = (ResourceArchive) null;
-            gf.a((byte) -109, (ResourceArchive) null);
+            gf.loadDisplayNameSprites((byte) -109, (ResourceArchive) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

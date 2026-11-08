@@ -113,7 +113,7 @@ final class pb extends IntrusiveNode {
         int var6 = var2 + 160;
         int var7 = 320;
         wm.field_H[6].drawScaled(var6, var4Lifetime2, var7, var5Lifetime1);
-        mc.field_b.drawParagraph(sn.field_L, var6, var4Lifetime2 + 32, var7, 32 + mc.field_b.field_C, 16777215, 0, 1, 1, mc.field_b.field_C);
+        mc.field_b.drawParagraph(DisplayNameForm.field_L, var6, var4Lifetime2 + 32, var7, 32 + mc.field_b.field_C, 16777215, 0, 1, 1, mc.field_b.field_C);
         if ((2 & CredentialKind.field_b) > 0) {
           mc.field_b.drawParagraph("This item is only availiable to members.", var6, 64 + var4Lifetime2, var7, 80, 16777215, 0, 1, 1, mc.field_b.field_C);
           ii.field_d.drawQuarterSize(var6 - (-(var7 / 2) + 16), 80 + (var4Lifetime2 + 64));

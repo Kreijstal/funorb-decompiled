@@ -93,7 +93,7 @@ final class nm {
             var4 = so.field_g;
           }
           if (param2 == -31843) {
-            stackIn_11_0 = si.a((byte) 115, (String) (var3), (String) (var4), -1, param1);
+            stackIn_11_0 = CheckboxPainter.appendUrlSettings((byte) 115, (String) (var3), (String) (var4), -1, param1);
             return stackIn_11_0;
           }
           stackIn_9_0 = (java.net.URL) null;

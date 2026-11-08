@@ -38,7 +38,7 @@ final class IsaacCipher {
           td.a(true, param17, param5);
           LoadingTracker.a(param14, 120, param16, param15, param19, param18);
           NanoFrameClock.a(param10, param11, param7, 69);
-          vi.a(-1, param6, param20, param9);
+          FadingModalPanel.a(-1, param6, param20, param9);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -80,14 +80,14 @@ final class IsaacCipher {
 
     final static void a(int param0, PcmStreamMixer param1, ResourceArchive param2, int param3) {
         try {
-          sn.field_G = param0 * LinkButtonPainter.getFramesPerSecond(-2) / 1000;
+          DisplayNameForm.field_G = param0 * LinkButtonPainter.getFramesPerSecond(-2) / 1000;
           ed.loadJagexLogoSound((byte) -17, param2);
           ArcanistsMulti.a(param2, (byte) -80);
           int var4_int = 88 % ((81 - param3) / 36);
           fl.loadFinalFrameImage(-2389, param2);
           tm.buildIntensityTable(5968);
-          h.j(0);
-          SoundCache.field_a = -sn.field_G + 0;
+          ModalPanelStack.j(0);
+          SoundCache.field_a = -DisplayNameForm.field_G + 0;
         } catch (RuntimeException runtimeException) {
           throw aa.wrapException((Throwable) ((Object) runtimeException), "ug.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }

@@ -797,7 +797,7 @@ final class ml extends DualLinkNode {
                               break regionExit1;
                             }
                             if (15 == this.field_jb &&
-                              bk.field_L != null) {
+                              Checkbox.field_L != null) {
                               var7 = 0;
                               if (this.field_F > 1.5) {
                                 var7 = 1;
@@ -818,9 +818,9 @@ final class ml extends DualLinkNode {
                                 }
                               }
                               if (this.field_E != -1) {
-                                bk.field_L[var7].draw(-(this.field_Y >> 1) + var41[0], var41[1] - this.field_Y);
+                                Checkbox.field_L[var7].draw(-(this.field_Y >> 1) + var41[0], var41[1] - this.field_Y);
                               } else {
-                                bk.field_L[var7].drawFlippedHorizontal(var41[0] - (this.field_Y >> 1), var41[1] - this.field_Y);
+                                Checkbox.field_L[var7].drawFlippedHorizontal(var41[0] - (this.field_Y >> 1), var41[1] - this.field_Y);
                               }
                               break regionExit1;
                             }
@@ -884,7 +884,7 @@ final class ml extends DualLinkNode {
                               break regionExit1;
                             }
                             if (this.field_jb == 6 &&
-                              null != wl.field_U) {
+                              null != NumericDateInputWidget.field_U) {
                               var7 = 0;
                               if (0.75 < this.field_F) {
                                 var7 = 1;
@@ -908,9 +908,9 @@ final class ml extends DualLinkNode {
                                 var7 = 7;
                               }
                               if (-1 != this.field_E) {
-                                wl.field_U[var7].draw(var41[0] - 24, -36 + var41[1]);
+                                NumericDateInputWidget.field_U[var7].draw(var41[0] - 24, -36 + var41[1]);
                               } else {
-                                wl.field_U[var7].drawFlippedHorizontal(var41[0] - 24, -36 + var41[1]);
+                                NumericDateInputWidget.field_U[var7].drawFlippedHorizontal(var41[0] - 24, -36 + var41[1]);
                               }
                               break regionExit1;
                             }
@@ -2118,7 +2118,7 @@ final class ml extends DualLinkNode {
                                 SoftwareRasterizer.fillCircle(this.field_Y >> 1, this.field_Y >> 1, this.field_Y >> 1, 16777215);
                               }
                               var25 = new int[]{28, 0, 29, 33, 47, 50, var7, 0, 0};
-                              var13_ref_qb____ = new Sprite[][]{SceneWidget.field_kb, IsaacRandom.field_j, DiskCacheRequest.field_u, qe.field_i, hn.field_d, tj.field_A, bo.field_a, h.field_I, fn.field_b};
+                              var13_ref_qb____ = new Sprite[][]{SceneWidget.field_kb, IsaacRandom.field_j, DiskCacheRequest.field_u, qe.field_i, hn.field_d, tj.field_A, bo.field_a, ModalPanelStack.field_I, fn.field_b};
                               if (SceneWidget.field_kb != null) {
                                 var23 = new int[]{204, 170, 238};
                                 var3 = var23;
@@ -2406,7 +2406,7 @@ final class ml extends DualLinkNode {
                                   var16++;
                                 }
                               }
-                              var9 = new Sprite[][]{SceneWidget.field_kb, IsaacRandom.field_j, DiskCacheRequest.field_u, qe.field_i, hn.field_d, tj.field_A, bo.field_a, h.field_I, fn.field_b};
+                              var9 = new Sprite[][]{SceneWidget.field_kb, IsaacRandom.field_j, DiskCacheRequest.field_u, qe.field_i, hn.field_d, tj.field_A, bo.field_a, ModalPanelStack.field_I, fn.field_b};
                               if (SceneWidget.field_kb == null) {
                                 this.field_J = false;
                               } else {
@@ -2768,8 +2768,8 @@ final class ml extends DualLinkNode {
               var5 = this.field_G;
               var6 = null;
               if (var5 >= 0 &&
-                tc.field_w.length > var5) {
-                var6 = tc.field_w[var5];
+                PasswordFieldPainter.field_w.length > var5) {
+                var6 = PasswordFieldPainter.field_w[var5];
               }
               if (var6 == null) {
                 var6 = "(unknown" + var5 + ")";
@@ -3255,7 +3255,7 @@ final class ml extends DualLinkNode {
           }
           if (this.field_L.field_rb != null &&
             null != this.field_L.field_rb[param1]) {
-            ti.a((byte) -30, tm.field_a[param1], this.field_L.field_rb[param1]);
+            DropdownList.playSampleAtVolume((byte) -30, tm.field_a[param1], this.field_L.field_rb[param1]);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -4154,7 +4154,7 @@ final class ml extends DualLinkNode {
           if (param1 >= -100) {
             ml.a((BitmapFont) null, -106, (byte) 51, (BitmapFont) null);
           }
-          eb.a(param0, -105);
+          EmptyPainter.a(param0, -105);
         } catch (RuntimeException runtimeException) {
           throw aa.wrapException((Throwable) ((Object) runtimeException), "ml.V(" + param0 + ',' + param1 + ')');
         }
@@ -4195,7 +4195,7 @@ final class ml extends DualLinkNode {
             this.b(-30225, ed.field_Ib[param1]);
           }
           if (2 == this.field_jb) {
-            this.b(-30225, tc.field_B[param1]);
+            this.b(-30225, PasswordFieldPainter.field_B[param1]);
           }
           if (this.field_jb == 4) {
             this.b(-30225, in.field_Fb[param1]);
@@ -4213,7 +4213,7 @@ final class ml extends DualLinkNode {
             this.b(-30225, NanoFrameClock.field_n[param1]);
           }
           if (this.field_jb == 15) {
-            this.b(-30225, gd.field_pb[param1]);
+            this.b(-30225, LoadingProgressDialog.field_pb[param1]);
           }
           if (this.field_jb == 17) {
             this.b(-30225, cj.field_a[param1]);
@@ -4243,13 +4243,13 @@ final class ml extends DualLinkNode {
             this.b(-30225, fd.field_h[param1]);
           }
           if (this.field_jb == 28) {
-            this.a((byte) -49, 200, cd.field_p[param1]);
+            this.a((byte) -49, 200, IconButtonPainter.field_p[param1]);
           }
           if (this.field_jb == 29) {
-            this.a((byte) -72, 100, cd.field_p[param1]);
+            this.a((byte) -72, 100, IconButtonPainter.field_p[param1]);
           }
           if (this.field_jb == 30) {
-            this.a((byte) -91, 50, cd.field_p[param1]);
+            this.a((byte) -91, 50, IconButtonPainter.field_p[param1]);
           }
           if (this.field_jb == 34) {
             this.b(-30225, cf.field_a[param1]);
@@ -4561,8 +4561,8 @@ final class ml extends DualLinkNode {
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          eb.field_a = param1;
-          mg.field_C = param3;
+          EmptyPainter.field_a = param1;
+          DateInputWidget.field_C = param3;
           if (param2 < 76) {
             return;
           }

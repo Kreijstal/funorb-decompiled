@@ -12,10 +12,10 @@ final class qc {
 
     final static void a(boolean param0) {
         hi.installViewController(-123, param0);
-        ob.field_Y.setMinimumSize(480, 8110, 640);
-        ob.field_Y.setMaximumSize((byte) -119, 1024, 1280);
+        ResizableModalPanel.field_Y.setMinimumSize(480, 8110, 640);
+        ResizableModalPanel.field_Y.setMaximumSize((byte) -119, 1024, 1280);
         dh.defineScreen(TextFieldValidator.field_h, 9, 6);
-        dh.defineScreen(me.field_H, 9, 8);
+        dh.defineScreen(MenuButtonPanel.field_H, 9, 8);
         if (!ArcanistsMulti.i((byte) -77)) {
           dh.defineScreen(MidiPcmStream.field_l, 9, 1);
           dh.defineScreen(LoginMethod.field_b, 9, 2);

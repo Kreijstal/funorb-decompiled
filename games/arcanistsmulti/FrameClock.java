@@ -85,14 +85,14 @@ abstract class FrameClock {
             if (var6.field_Gb != null &&
               !var6.field_Gb.equals("")) {
               var6.field_Mb.field_eb = 16737894;
-              var6.field_Mb.field_W = eb.field_d;
+              var6.field_Mb.field_W = EmptyPainter.field_d;
               var8 = 1;
-              var6.field_Mb.setBounds(eb.field_d.field_n + 3, 0, 0, ImageProducerRasterBuffer.field_r, (byte) -120);
+              var6.field_Mb.setBounds(EmptyPainter.field_d.field_n + 3, 0, 0, ImageProducerRasterBuffer.field_r, (byte) -120);
             }
             var9 = 0;
             var10 = var6.field_x;
             if (var8 != 0) {
-              var9 = eb.field_d.field_n + 3;
+              var9 = EmptyPainter.field_d.field_n + 3;
               var10 = var10 - var9;
             }
             stackIn_21_0 = var6.field_Jb;
@@ -124,7 +124,7 @@ abstract class FrameClock {
             if (var6.field_U != 0) {
               ArcanistsMulti.a(-26335, (int[]) null, dd.field_c.field_Db, var6.field_Ib, 0L, -1, -1, var6.field_Cb, var6);
               var16 = eo.field_c;
-              var13_ref_String = wl.field_M;
+              var13_ref_String = NumericDateInputWidget.field_M;
               var16.field_l.a(7, var13_ref_String, (byte) -26);
               var17 = eo.field_c;
               var13 = pb.field_h;
@@ -134,13 +134,13 @@ abstract class FrameClock {
             var6 = (wa) (var4.next(0));
           }
           if (dd.field_c.field_Jb.field_U != 0) {
-            tc.field_A = new dh(dd.field_c.field_Jb.field_V, dd.field_c.field_Jb.field_nb, dd.field_c.field_Jb.field_x, dd.field_c.field_Jb.field_I, fh.field_a, ck.field_a, IntrusiveNode.field_c, IntrusiveNode.field_c);
+            PasswordFieldPainter.field_A = new dh(dd.field_c.field_Jb.field_V, dd.field_c.field_Jb.field_nb, dd.field_c.field_Jb.field_x, dd.field_c.field_Jb.field_I, fh.field_a, ck.field_a, IntrusiveNode.field_c, IntrusiveNode.field_c);
             TextLine.field_h = 2;
           }
           if (dd.field_c.field_Lb.field_U == 0) {
             return;
           }
-          tc.field_A = new dh(dd.field_c.field_Lb.field_V, dd.field_c.field_Lb.field_nb, dd.field_c.field_Lb.field_x, dd.field_c.field_Lb.field_I, ResizableViewResizeListener.field_i, ck.field_a, IntrusiveNode.field_c, IntrusiveNode.field_c);
+          PasswordFieldPainter.field_A = new dh(dd.field_c.field_Lb.field_V, dd.field_c.field_Lb.field_nb, dd.field_c.field_Lb.field_x, dd.field_c.field_Lb.field_I, ResizableViewResizeListener.field_i, ck.field_a, IntrusiveNode.field_c, IntrusiveNode.field_c);
           TextLine.field_h = 3;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -213,7 +213,7 @@ abstract class FrameClock {
         if (param0 != 0) {
           return true;
         }
-        return mk.field_O.b((byte) -52);
+        return ValidationStatusIcon.field_O.b((byte) -52);
     }
 
     public static void releaseStatics(byte param0) {
@@ -232,7 +232,7 @@ abstract class FrameClock {
           UiComponent.attachInputListeners(on.field_c, (byte) 91);
         }
         mh.g((byte) 45);
-        ng.a((byte) -23);
+        ng.clearPendingMouseHandler((byte) -23);
         PatchEnvelopeSet.closeNetworkResources(11670);
         if (tm.a(!param0 ? true : false)) {
           he.field_e.writeOpcode((byte) -107, 1);
@@ -246,7 +246,7 @@ abstract class FrameClock {
           if (param3 > -97) {
             field_b = 88;
           }
-          Bzip2State.a(md.field_b, mi.field_A, nj.field_d, ml.field_S, MouseWheelHandler.field_c, param1, j.field_f, th.field_k, 27874, MouseWheelHandler.field_d, IntrusiveNode.field_c, IntrusiveDeque.field_i);
+          Bzip2State.a(md.field_b, mi.field_A, nj.field_d, ml.field_S, MouseWheelHandler.field_c, param1, BevelBoxPainter.field_f, th.field_k, 27874, MouseWheelHandler.field_d, IntrusiveNode.field_c, IntrusiveDeque.field_i);
           ArchiveProvider.field_a = qe.loadSpriteSheet(param2, "chatfilter", "lobby", 119);
           cf.field_b[2] = TextButton.field_A;
           cf.field_b[1] = u.field_d;

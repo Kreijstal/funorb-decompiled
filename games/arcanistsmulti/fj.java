@@ -181,12 +181,12 @@ final class fj extends IntrusiveNode {
           fj.a(-37, (nk) null, 73);
         }
         if (null != vf.field_k) {
-          vf.field_k.h(77);
+          vf.field_k.dismiss(77);
         }
         String var1 = ho.b((byte) 103);
         wh.field_f = new LoginPanel(var1, (String) null, true, false, false);
-        ClientException.field_b.b(g.field_e, 15637);
-        g.field_e.a((byte) -92, (UiComponent) (wh.field_f));
+        ClientException.field_b.pushPanel(g.field_e, 15637);
+        g.field_e.setContent((byte) -92, (UiComponent) (wh.field_f));
         g.field_e.a(111);
     }
 

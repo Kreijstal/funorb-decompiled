@@ -49,7 +49,7 @@ final class hj extends IOException {
           }
           ff.a((byte) 91, var4);
           var12 = (BitmapFont) null;
-          mj.field_z = ck.createTextComponent(65793, 5138823, 65793, 8947848, 1513239, 4020342, 65793, (BitmapFont) null, 97, 0, 2245737, 1513239, 1127256);
+          StatefulTextPainter.field_z = ck.createTextComponent(65793, 5138823, 65793, 8947848, 1513239, 4020342, 65793, (BitmapFont) null, 97, 0, 2245737, 1513239, 1127256);
           if (param2 != 3896) {
             return;
           }
@@ -64,7 +64,7 @@ final class hj extends IOException {
             SoftwareRasterizer.drawVerticalLine(var8, 1 + var8, -(var8 << 1) + 14, 16777215);
           }
           SoftwareRasterizer.setTarget(var16, var5, var6);
-          TextButton.field_C = bl.a(true, gl.field_c, CipherPacketBuffer.field_p, var4, mj.field_z);
+          TextButton.field_C = DateOfBirthValidator.a(true, gl.field_c, CipherPacketBuffer.field_p, var4, StatefulTextPainter.field_z);
           co.field_f.field_G = new IntrusiveDeque();
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

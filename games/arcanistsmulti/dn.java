@@ -356,7 +356,7 @@ final class dn extends SceneWidget {
             var6 = var6 | 16;
           }
           he.field_e.writeByte(var6, (byte) -54);
-          var7 = SecondaryNodeDeque.getSettingsCookie(cd.getApplet(param2 ^ 3), -120);
+          var7 = SecondaryNodeDeque.getSettingsCookie(IconButtonPainter.getApplet(param2 ^ 3), -120);
           if (var7 == null) {
             var7 = "";
           }
@@ -364,7 +364,7 @@ final class dn extends SceneWidget {
           if (AudioService.field_i != null) {
             he.field_e.writeVersionedString(AudioService.field_i, (byte) -110);
           }
-          TextLine.a(false, he.field_e, nl.field_Jb, jf.field_a, q.field_K);
+          TextLine.a(false, he.field_e, nl.field_Jb, jf.field_a, DropTargetWidget.field_K);
           if (param2 != 116) {
             dn.releaseStatics(-40);
           }

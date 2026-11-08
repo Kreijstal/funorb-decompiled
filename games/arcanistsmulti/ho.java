@@ -277,14 +277,14 @@ final class ho {
     final static String b(byte param0) {
         String var1 = "";
         if (null != wh.field_f) {
-          var1 = wh.field_f.e(true);
+          var1 = wh.field_f.getUsername(true);
         }
         if (0 == var1.length()) {
           var1 = SoundCache.a(0);
         }
         int var2 = 101 / ((24 - param0) / 56);
         if (var1.length() == 0) {
-          var1 = ob.field_ib;
+          var1 = ResizableModalPanel.field_ib;
         }
         return var1;
     }

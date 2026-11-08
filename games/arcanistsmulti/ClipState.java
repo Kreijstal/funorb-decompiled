@@ -321,7 +321,7 @@ final class ClipState extends IntrusiveNode {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          vi.field_F = param1;
+          FadingModalPanel.field_F = param1;
           DebouncedValidator.a(12, (byte) 30);
           if (param0 <= 125) {
             field_l = (String) null;

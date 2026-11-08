@@ -130,13 +130,13 @@ abstract class TextLayout {
             if (!TextFieldValidator.d(true)) {
               SoftwareRasterizer.clear();
               IntKeyLookup.a(320, 240, param0 - 13);
-              kn.a(param1, (byte) -101, 0, 0);
+              OptionsDialog.paintCanvasNow(param1, (byte) -101, 0, 0);
             } else {
               if (fj.field_j != 0) {
                 ResourceArchive.a(param1, (byte) -39);
               } else {
                 la.clearOrDimScreen(param2, false, (byte) -72);
-                kn.a(param1, (byte) -97, 0, 0);
+                OptionsDialog.paintCanvasNow(param1, (byte) -97, 0, 0);
               }
             }
           } else {
@@ -260,12 +260,12 @@ abstract class TextLayout {
             field_e = (String) null;
           }
           TextLine.field_c = param12;
-          ob.field_T = param16;
-          ib.a(param4, param6, param10, param11, 109);
+          ResizableModalPanel.field_T = param16;
+          BevelTextPainter.a(param4, param6, param10, param11, 109);
           sk.a(param14, -28995, param2, param17);
           TextLayout.a(param9, param18, param7, param3, -1, param1);
           ho.a((byte) 101, param0, param5);
-          kn.a(param13, param19, param15, (byte) -43);
+          OptionsDialog.a(param13, param19, param15, (byte) -43);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

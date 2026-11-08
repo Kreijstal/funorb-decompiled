@@ -50,7 +50,7 @@ final class Bzip2State {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 > 14) {
-            stackIn_4_0 = 1 + param0 + "/" + gd.field_kb.length;
+            stackIn_4_0 = 1 + param0 + "/" + LoadingProgressDialog.field_kb.length;
             return stackIn_4_0;
           }
           stackIn_2_0 = (String) null;
@@ -208,7 +208,7 @@ final class Bzip2State {
             IntKeyLookup.field_g.addChild(g.field_g, 56);
             if (!td.a(-91) ||
               wh.field_g) {
-              ln.field_U = new cn(0, 0, 0, 0);
+              AccountRegistrationPanel.field_U = new BirthDateEntryPanel(0, 0, 0, 0);
             }
             stackIn_35_0 = param8;
             stackIn_35_1 = 27874;

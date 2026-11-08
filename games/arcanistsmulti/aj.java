@@ -82,7 +82,7 @@ final class aj {
         RuntimeException decompiledCaughtException = null;
         try {
           if (!param2) {
-            stackIn_4_0 = j.a(param0, param1, (byte) -116, param4, -1, param5, param3);
+            stackIn_4_0 = BevelBoxPainter.createProjectile(param0, param1, (byte) -116, param4, -1, param5, param3);
             return stackIn_4_0;
           }
           stackIn_2_0 = (mi) null;

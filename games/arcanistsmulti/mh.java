@@ -9,16 +9,16 @@ class mh extends TextButton {
 
     final static void i(byte param0) {
         rk.field_O.q(-256);
-        if (mj.field_p >= 6) {
-          if (7 != mj.field_p) {
+        if (StatefulTextPainter.field_p >= 6) {
+          if (7 != StatefulTextPainter.field_p) {
             gj.a(true, true, 14, mn.field_r);
-            UiContainer.a((byte) 120, mj.field_p + 1);
+            UiContainer.a((byte) 120, StatefulTextPainter.field_p + 1);
           }
         } else {
           if (co.countUnitsOfType40(-20675) == 0 &&
-            7 != mj.field_p) {
+            7 != StatefulTextPainter.field_p) {
             gj.a(true, true, 14, mn.field_r);
-            UiContainer.a((byte) 120, mj.field_p + 1);
+            UiContainer.a((byte) 120, StatefulTextPainter.field_p + 1);
           }
         }
         if (param0 == 74) {

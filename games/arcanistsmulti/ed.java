@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class ed extends qk implements ButtonListener {
+class ed extends ContentTransitionDialog implements ButtonListener {
     static String field_tb;
     static char field_Bb;
     static String field_xb;
@@ -36,7 +36,7 @@ class ed extends qk implements ButtonListener {
             stackIn_6_0 = super.handleKeyInput(param0, (byte) -122, param2, param3);
             return stackIn_6_0;
           }
-          this.h(77);
+          this.dismiss(77);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -52,7 +52,7 @@ class ed extends qk implements ButtonListener {
         }
     }
 
-    final void h(int param0) {
+    final void dismiss(int param0) {
         if (!this.field_G) {
           return;
         }
@@ -70,8 +70,8 @@ class ed extends qk implements ButtonListener {
         pn.c(-11090);
     }
 
-    ed(h param0, BitmapFont param1, String param2, boolean param3, boolean param4) {
-        super(param0, new me((ed) null, param1, param2), 77, 10, 10);
+    ed(ModalPanelStack param0, BitmapFont param1, String param2, boolean param3, boolean param4) {
+        super(param0, new MenuButtonPanel((ed) null, param1, param2), 77, 10, 10);
         try {
           this.field_wb = param1;
           this.field_Ab = param3 ? true : false;
@@ -236,26 +236,26 @@ class ed extends qk implements ButtonListener {
         }
     }
 
-    final void g(boolean param0) {
+    final void openMenu(boolean param0) {
         this.field_ub.setColours(4210752, param0, 2121792);
-        me var2 = new me(this, this.field_wb, Bzip2State.field_k);
-        var2.a(r.field_e, (byte) 3, 15);
-        this.a((byte) -92, (UiComponent) (var2));
+        MenuButtonPanel var2 = new MenuButtonPanel(this, this.field_wb, Bzip2State.field_k);
+        var2.addMenuItem(r.field_e, (byte) 3, 15);
+        this.setContent((byte) -92, (UiComponent) (var2));
     }
 
-    final void a(boolean param0, String param1, int param2) {
+    final void showResult(boolean param0, String param1, int param2) {
         boolean stackIn_6_1 = false;
         boolean stackIn_9_1 = false;
-        me stackIn_14_0 = null;
+        MenuButtonPanel stackIn_14_0 = null;
         String stackIn_15_1 = null;
         RuntimeException stackIn_29_0 = null;
         StringBuilder stackIn_29_1 = null;
         String stackIn_30_2 = null;
         RuntimeException decompiledCaughtException = null;
-        me var4 = null;
+        MenuButtonPanel var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
-        me var6 = null;
+        MenuButtonPanel var6 = null;
         var5 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           if (this.field_Gb) {
@@ -266,11 +266,11 @@ class ed extends qk implements ButtonListener {
           stackIn_9_1 = (256 == param2);
           this.field_zb = stackIn_9_1;
           this.field_ub.setColours(4210752, param0, 8405024);
-          var6 = new me(this, this.field_wb, param1);
+          var6 = new MenuButtonPanel(this, this.field_wb, param1);
           var4 = var6;
           if (5 != param2) {
             if (256 == param2) {
-              var6.a(118, sk.field_b, (UiListener) (this));
+              var6.addButton(118, sk.field_b, (UiListener) (this));
             } else {
               stackIn_14_0 = var6;
               if (!this.field_Ab) {
@@ -278,28 +278,28 @@ class ed extends qk implements ButtonListener {
               } else {
                 stackIn_15_1 = sk.field_b;
               }
-              ((me) (Object) stackIn_14_0).a(stackIn_15_1, (byte) 111, -1);
+              ((MenuButtonPanel) (Object) stackIn_14_0).addMenuItem(stackIn_15_1, (byte) 111, -1);
             }
           } else {
-            var6.a(DebouncedValidator.field_f, (byte) 106, 11);
-            var6.a(ki.field_u, (byte) 111, 17);
+            var6.addMenuItem(DebouncedValidator.field_f, (byte) 106, 11);
+            var6.addMenuItem(ki.field_u, (byte) 111, 17);
           }
           if (param2 != 3) {
             if (param2 == 4) {
-              var6.a(ad.field_e, (byte) -117, 8);
+              var6.addMenuItem(ad.field_e, (byte) -117, 8);
             } else {
               if (6 == param2) {
-                var6.a(DiskCacheRequest.field_B, (byte) -114, 9);
+                var6.addMenuItem(DiskCacheRequest.field_B, (byte) -114, 9);
               } else {
                 if (param2 == 9) {
-                  var6.a(81, fk.field_j, (UiListener) (this));
+                  var6.addButton(81, fk.field_j, (UiListener) (this));
                 }
               }
             }
           } else {
-            var6.a(LoginCredentials.field_b, (byte) 110, 7);
+            var6.addMenuItem(LoginCredentials.field_b, (byte) 110, 7);
           }
-          this.a((byte) -92, (UiComponent) (var6));
+          this.setContent((byte) -92, (UiComponent) (var6));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -315,11 +315,11 @@ class ed extends qk implements ButtonListener {
         }
     }
 
-    final static String k(int param0) {
+    final static String getStatusMessage(int param0) {
         if (param0 != -952) {
           field_tb = (String) null;
           if (in.field_Gb == sk.field_a) {
-            return ln.field_Q;
+            return AccountRegistrationPanel.field_Q;
           }
           if (hb.field_Gb == sk.field_a) {
             return KeyboardInputHandler.field_j;
@@ -330,7 +330,7 @@ class ed extends qk implements ButtonListener {
           return ge.field_g;
         }
         if (in.field_Gb == sk.field_a) {
-          return ln.field_Q;
+          return AccountRegistrationPanel.field_Q;
         }
         if (hb.field_Gb == sk.field_a) {
           return KeyboardInputHandler.field_j;
@@ -355,7 +355,7 @@ class ed extends qk implements ButtonListener {
         }
     }
 
-    public void a(boolean param0, int param1, int param2, int param3, TextButton param4) {
+    public void onButtonActivated(boolean param0, int param1, int param2, int param3, TextButton param4) {
         RuntimeException var6 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -366,11 +366,11 @@ class ed extends qk implements ButtonListener {
             return;
           }
           if (!this.field_zb) {
-            fk.openUrl(cd.getApplet(104), false, "tochangedisplayname.ws");
+            fk.openUrl(IconButtonPainter.getApplet(104), false, "tochangedisplayname.ws");
             return;
           }
           DebouncedValidator.a(3, (byte) 30);
-          this.h(77);
+          this.dismiss(77);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -386,7 +386,7 @@ class ed extends qk implements ButtonListener {
         }
     }
 
-    final static void a(byte param0, boolean param1) {
+    final static void drawModalOverlay(byte param0, boolean param1) {
         if (param0 != 90) {
           return;
         }
@@ -399,9 +399,9 @@ class ed extends qk implements ButtonListener {
     final static void j(int param0) {
         int var1 = DiskCacheRequest.field_F * DiskCacheRequest.field_F;
         int var2 = -(jo.field_e * jo.field_e) + var1;
-        int var3 = (-ma.field_N + TextLine.field_k) * var2 / var1 + ma.field_N;
+        int var3 = (-Scrollbar.field_N + TextLine.field_k) * var2 / var1 + Scrollbar.field_N;
         IntKeyLookup.field_g.setBounds(640, sa.field_Hb, var3, param0, (byte) -120);
-        IsaacRandom.a(5, TextLine.field_k - 24, (byte) 19, 640, mm.field_p, 0, dh.field_Gb);
+        IsaacRandom.a(5, TextLine.field_k - 24, (byte) 19, 640, MenuButtonPainter.field_p, 0, dh.field_Gb);
     }
 
     static {

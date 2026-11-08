@@ -138,8 +138,8 @@ final class KeyboardInputHandler implements java.awt.event.KeyListener, java.awt
         if (param1 != -101) {
           field_e = (String) null;
         }
-        if (tc.field_A != null) {
-          tc.field_A.drawFullScreen(param0, true);
+        if (PasswordFieldPainter.field_A != null) {
+          PasswordFieldPainter.field_A.drawFullScreen(param0, true);
         }
     }
 
@@ -153,9 +153,9 @@ final class KeyboardInputHandler implements java.awt.event.KeyListener, java.awt
           ed.a(param1, (byte) 106);
         } else {
           if (-2 == param2 &&
-            bi.field_I > 3) {
-            sc.a(2, EmailLoginCredentials.field_j, EmailLoginCredentials.field_f);
-            SoftwareRasterizer.fillRectangle(bi.field_I - 3, 0, 646, EmailLoginCredentials.field_j, 0);
+            ValidatedTextWidget.field_I > 3) {
+            ValidationHelpWidget.a(2, EmailLoginCredentials.field_j, EmailLoginCredentials.field_f);
+            SoftwareRasterizer.fillRectangle(ValidatedTextWidget.field_I - 3, 0, 646, EmailLoginCredentials.field_j, 0);
           } else {
             if (-2 == param2) {
               SoftwareRasterizer.clear();

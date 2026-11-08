@@ -19,11 +19,11 @@ final class ri {
         wh.field_c = param2;
         MusicPatchNode.field_r = param0;
         tn.field_Eb = param0;
-        jm.field_j = true;
+        TextWidgetPainter.field_j = true;
         ce.field_m = null;
         int[] var4 = (int[]) null;
         SoftwareRasterizer.setTarget((int[]) null, 0, 0);
-        ce.field_m = se.a(param0, (java.awt.Component) ((Object) on.field_c), param2, (byte) -123);
+        ce.field_m = DraggableWidget.createRasterBuffer(param0, (java.awt.Component) ((Object) on.field_c), param2, (byte) -123);
         ce.field_m.a(true);
         ho.a((byte) 51, param2 / param1, param0 / 2);
         nl.b(param0, param1 ^ 19131, param2);
@@ -37,11 +37,11 @@ final class ri {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
-        int var3 = of.a(115, param2);
-        int var4 = j.a(param2, -107);
-        int var5 = of.a(-95, param0);
+        int var3 = of.sine(115, param2);
+        int var4 = BevelBoxPainter.cosine(param2, -107);
+        int var5 = of.sine(-95, param0);
         if (param1 == 66) {
-          var6 = j.a(param0, -101);
+          var6 = BevelBoxPainter.cosine(param0, -101);
           var7 = (int)((long)var5 * (long)var3 >> 16);
           var8 = (int)((long)var3 * (long)var6 >> 16);
           var9 = (int)((long)var5 * (long)var4 >> 16);
@@ -49,7 +49,7 @@ final class ri {
           return new int[]{0, 0, 0, var6, 0, var5, var7, var4, -var8, -var9, var3, var10};
         }
         ri.releaseStatics((byte) -82);
-        var6 = j.a(param0, -101);
+        var6 = BevelBoxPainter.cosine(param0, -101);
         var7 = (int)((long)var5 * (long)var3 >> 16);
         var8 = (int)((long)var3 * (long)var6 >> 16);
         var9 = (int)((long)var5 * (long)var4 >> 16);

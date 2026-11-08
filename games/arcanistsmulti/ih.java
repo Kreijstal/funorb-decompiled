@@ -22,7 +22,7 @@ final class ih {
     final static void a(int param0, int param1, byte param2) {
         TextFieldValidator.field_m = param0;
         int var3 = -78 % ((param2 - 8) / 55);
-        ln.field_J = param1;
+        AccountRegistrationPanel.field_J = param1;
     }
 
     final static int clampToScreenX(int param0, int param1, int param2, int param3) {

@@ -265,8 +265,8 @@ final class nf {
         int var8Lifetime2;
         int var6Lifetime1Lifetime1;
         var10 = ArcanistsMulti.field_G ? 1 : 0;
-        if (null != ti.field_I) {
-          var2 = ti.field_I[this.field_O].field_m.length - 1;
+        if (null != DropdownList.field_I) {
+          var2 = DropdownList.field_I[this.field_O].field_m.length - 1;
           while (true) {
             if (var2 >= 0) {
               var2--;
@@ -284,8 +284,8 @@ final class nf {
         }
         var2Lifetime1 = 16384;
         var3 = 18048;
-        if (var3 > ti.field_I[this.field_O].field_m.length) {
-          var3 = ti.field_I[this.field_O].field_m.length;
+        if (var3 > DropdownList.field_I[this.field_O].field_m.length) {
+          var3 = DropdownList.field_I[this.field_O].field_m.length;
         }
         var4 = 2;
         if (0 == this.field_O) {
@@ -320,9 +320,9 @@ final class nf {
                         var9 = (127 & var7) + var2Lifetime1;
                         while (var9 < var3) {
                           stackIn_37_0 = -1;
-                          stackIn_37_1 = ~ti.field_I[this.field_O].field_m[var9];
+                          stackIn_37_1 = ~DropdownList.field_I[this.field_O].field_m[var9];
                           if (stackIn_37_0 != stackIn_37_1) {
-                            sn.a(var7, this.field_V, 0, 125, this, false, var8 - var4, ti.field_I[this.field_O].field_m[var9]);
+                            DisplayNameForm.a(var7, this.field_V, 0, 125, this, false, var8 - var4, DropdownList.field_I[this.field_O].field_m[var9]);
                           }
                           var8++;
                           var9 += 128;
@@ -335,13 +335,13 @@ final class nf {
                         mn.field_y.field_m[this.field_y + var5] != -5) {
                         var8 = var6 - 1;
                         var9Lifetime1 = (var7 & 127) + var3;
-                        while (!(var9Lifetime1 >= ti.field_I[this.field_O].field_m.length)) {
+                        while (!(var9Lifetime1 >= DropdownList.field_I[this.field_O].field_m.length)) {
                           stackIn_23_0 = 0;
-                          stackOut_42_1 = ti.field_I[this.field_O].field_m[var9Lifetime1];
+                          stackOut_42_1 = DropdownList.field_I[this.field_O].field_m[var9Lifetime1];
                           stackIn_23_1 = stackOut_42_1;
                           stackIn_43_1 = stackOut_42_1;
                           if (stackIn_23_0 != stackIn_43_1) {
-                            sn.a(var7, this.field_V, 0, 125, this, false, var8, ti.field_I[this.field_O].field_m[var9Lifetime1]);
+                            DisplayNameForm.a(var7, this.field_V, 0, 125, this, false, var8, DropdownList.field_I[this.field_O].field_m[var9Lifetime1]);
                           }
                           var8++;
                           var9Lifetime1 += 128;
@@ -385,8 +385,8 @@ final class nf {
                     -5 != mn.field_y.field_m[1 + var5] &&
                     mn.field_y.field_m[var5 + 1] == 0) {
                     var8Lifetime2 = (var7Lifetime2 & 127) + var3 - 128;
-                    if (ti.field_I[this.field_O].field_m[var8Lifetime2] != 0) {
-                      sn.a(var7Lifetime2, this.field_V, 0, 12, this, false, var6, ti.field_I[this.field_O].field_m[var8Lifetime2]);
+                    if (DropdownList.field_I[this.field_O].field_m[var8Lifetime2] != 0) {
+                      DisplayNameForm.a(var7Lifetime2, this.field_V, 0, 12, this, false, var6, DropdownList.field_I[this.field_O].field_m[var8Lifetime2]);
                     }
                   }
                   var5++;
@@ -402,7 +402,7 @@ final class nf {
         if (stackIn_72_0 != 5) {
           this.field_K = (int[]) null;
         }
-        if (null != ti.field_I) {
+        if (null != DropdownList.field_I) {
           var6Lifetime1 = 0;
           var7Lifetime1 = 0;
           while (true) {
@@ -419,7 +419,7 @@ final class nf {
                 stackIn_77_0 = 4;
                 stackIn_77_1 = ~this.field_V.field_m[var5Lifetime1];
                 if (stackIn_77_0 == stackIn_77_1) {
-                  this.field_V.field_m[var5Lifetime1] = ti.field_I[this.field_O].field_m[var6Lifetime1Lifetime1];
+                  this.field_V.field_m[var5Lifetime1] = DropdownList.field_I[this.field_O].field_m[var6Lifetime1Lifetime1];
                 }
                 var5Lifetime1++;
                 var6Lifetime1Lifetime1 = 1 + var6Lifetime1Lifetime1 & 16383;
@@ -519,7 +519,7 @@ final class nf {
                   boolean decompiledFrameRemainder1 = true;
                   boolean decompiledFrameRemainder0 = true;
                   var13 = stackIn_18_0 - stackIn_18_1;
-                  if (tc.field_D[var4_int]) {
+                  if (PasswordFieldPainter.field_D[var4_int]) {
                     stackIn_21_0 = Math.abs(var11 - var12);
                     if (WeightedLruCache.field_a[var4_int]) {
                       stackIn_22_1 = var5.field_h / 2;
@@ -577,14 +577,14 @@ final class nf {
                           break;
                       }
                     }
-                    sn.a(var8, mn.field_y, var5.field_c / 2, 124, this, false, -(var5.field_c / 4) + var14, (byte) 0);
-                    sn.a(var8, this.field_V, var5.field_c / 2, 122, this, false, -(var5.field_c / 4) + var14, (byte) 0);
+                    DisplayNameForm.a(var8, mn.field_y, var5.field_c / 2, 124, this, false, -(var5.field_c / 4) + var14, (byte) 0);
+                    DisplayNameForm.a(var8, this.field_V, var5.field_c / 2, 122, this, false, -(var5.field_c / 4) + var14, (byte) 0);
                     var16 = -var5.field_h / 3;
                     while (!(var16 >= (var5.field_h / 3))) {
-                      var17 = (var16 * j.a(var15, -111) >> 16) + var8;
-                      var18 = var14 + var5.field_c * 4 / 10 - (of.a(127, var15) * var16 >> 16);
-                      sn.a(var17, mn.field_y, 2 * var5.field_c / 10, -58, this, false, var18, (byte) -5);
-                      sn.a(var17, this.field_V, 2 * var5.field_c / 10, 124, this, false, var18, (byte) -5);
+                      var17 = (var16 * BevelBoxPainter.cosine(var15, -111) >> 16) + var8;
+                      var18 = var14 + var5.field_c * 4 / 10 - (of.sine(127, var15) * var16 >> 16);
+                      DisplayNameForm.a(var17, mn.field_y, 2 * var5.field_c / 10, -58, this, false, var18, (byte) -5);
+                      DisplayNameForm.a(var17, this.field_V, 2 * var5.field_c / 10, 124, this, false, var18, (byte) -5);
                       var16++;
                     }
                   }
@@ -913,8 +913,8 @@ final class nf {
               System.gc();
               this.field_V = new IndexedSprite(this.field_y, this.field_H, gg.field_c);
             }
-            if (null != ti.field_I) {
-              this.field_V.field_l = ti.field_I[this.field_O].field_l;
+            if (null != DropdownList.field_I) {
+              this.field_V.field_l = DropdownList.field_I[this.field_O].field_l;
             }
             this.a(0, 120, mn.field_y, 0, this.field_V);
             var21 = SocketConnector.field_j[0 + this.field_O * 8];
@@ -1115,7 +1115,7 @@ final class nf {
                           var14 = -var6 + var7;
                           var15 = -var8 + var9;
                           var16 = 8192 * (var3_int - var9) / var15;
-                          var17 = of.a(-122, var16);
+                          var17 = of.sine(-122, var16);
                           var18 = var14 / 2 * (var17 + (var3_int - var8) * 131072 / var15) >> 16;
                           var13 = var13 + var18;
                           var18 = -var18 + (var7 - var6);
@@ -1149,7 +1149,7 @@ final class nf {
                           var14 = -var6 + var7;
                           var15 = var9 - var8;
                           var16 = (var3_int - var9) * 8192 / var15;
-                          var17 = of.a(-107, var16);
+                          var17 = of.sine(-107, var16);
                           var18Lifetime1 = ((-var8 + var3_int) * 131072 / var15 + var17) * (var14 / 2) >> 16;
                           stackIn_63_0Lifetime2 = -1;
                           stackIn_63_1Lifetime2 = ~var12;
@@ -1210,7 +1210,7 @@ final class nf {
                       var3_int = var6;
                       while (var3_int < var7) {
                         var12 = (var3_int - var6) * 4096 / (var7 - var6);
-                        var13 = j.a(var12, -115);
+                        var13 = BevelBoxPainter.cosine(var12, -115);
                         var14 = (var8 << 16) + (var9 - var8) * ((-var13 + 65536) / 2) >> 16;
                         var15 = this.field_H - var14;
                         stackIn_5_0 = var3_int;
@@ -1641,7 +1641,7 @@ final class nf {
         this.field_J = param2;
         this.field_f = false;
         if (this.field_jb < this.field_q &&
-          mj.field_p == 7) {
+          StatefulTextPainter.field_p == 7) {
           var4 = 0;
           while (true) {
             stackIn_4_0 = this.field_q;
@@ -1678,17 +1678,17 @@ final class nf {
         ml var2;
         int var3;
         var3 = ArcanistsMulti.field_G ? 1 : 0;
-        mk.field_J.setDeque((byte) 72, this.field_i);
+        ValidationStatusIcon.field_J.setDeque((byte) 72, this.field_i);
         if (param0 != -20) {
           return;
         }
-        var2 = (ml) (mk.field_J.first(-64));
+        var2 = (ml) (ValidationStatusIcon.field_J.first(-64));
         while (var2 != null) {
           if (var3 == 0) {
             if (~var2.field_u == ~this.field_J) {
               var2.field_D = false;
             }
-            var2 = (ml) (mk.field_J.next(param0 - 18482));
+            var2 = (ml) (ValidationStatusIcon.field_J.next(param0 - 18482));
             continue;
           }
           break;
@@ -2325,7 +2325,7 @@ final class nf {
         var35 = this.a(this.field_J, true);
         this.field_f = false;
         if (this.field_q > this.field_jb &&
-          mj.field_p == -1) {
+          StatefulTextPainter.field_p == -1) {
           var3_int = 0;
           while (true) {
             stackIn_7_0 = this.field_q;
@@ -2399,14 +2399,14 @@ final class nf {
                       if (!(((mi) (var4)).field_y >= 0)) {
                         ((mi) (var4)).field_y = 0;
                         if (var31 != 0) {
-                          var32 = j.a(var3, var3.field_db, (byte) 35, this, 145, var3.field_lb, 106);
+                          var32 = BevelBoxPainter.createProjectile(var3, var3.field_db, (byte) 35, this, 145, var3.field_lb, 106);
                           var34 = var32;
                           var32.field_y = 50 - this.field_X[this.field_J] / 20;
                           this.b(52, var34);
                         }
                       }
                     } else {
-                      var32 = j.a(var3, var3.field_db, (byte) 35, this, 145, var3.field_lb, 106);
+                      var32 = BevelBoxPainter.createProjectile(var3, var3.field_db, (byte) 35, this, 145, var3.field_lb, 106);
                       var34 = var32;
                       var32.field_y = 50 - this.field_X[this.field_J] / 20;
                       this.b(52, var34);
@@ -2421,7 +2421,7 @@ final class nf {
                   23 == var3.field_jb) {
                   stackIn_47_0 = (var3.field_jb == 16) ? 71 : 60;
                   var4_intLifetime1 = stackIn_47_0;
-                  var36 = j.a(var35, var3.field_db, (byte) 49, this, var4_intLifetime1, var3.field_lb, 111);
+                  var36 = BevelBoxPainter.createProjectile(var35, var3.field_db, (byte) 49, this, var4_intLifetime1, var3.field_lb, 111);
                   var36.field_H = 4;
                   this.b(52, var36);
                 }
@@ -2431,7 +2431,7 @@ final class nf {
                   var3.field_jb == 17) {
                   stackIn_56_0 = (var3.field_jb != 6) ? 76 : 64;
                   var4_intLifetime1Lifetime1 = stackIn_56_0;
-                  var37 = j.a(var3, var3.field_db, (byte) 11, this, var4_intLifetime1Lifetime1, var3.field_lb, 55);
+                  var37 = BevelBoxPainter.createProjectile(var3, var3.field_db, (byte) 11, this, var4_intLifetime1Lifetime1, var3.field_lb, 55);
                   var37.field_H = 4;
                   this.b(52, var37);
                 }
@@ -2520,7 +2520,7 @@ final class nf {
                     var26 = 8;
                     var27 = (int)((double)(var24 * (4 + (var3.field_Y / 2 + var26))) / var8_double + (double)var3.field_lb);
                     var28 = (int)((double)(-(var3.field_Y / 2)) + ((double)var3.field_db + (double)(var25 * (var26 + (var3.field_Y / 2 + 4))) / var8_double));
-                    var29_ref_mi = j.a(this.a(var3.field_u, true), var28, (byte) 18, this, -1, var27, 153);
+                    var29_ref_mi = BevelBoxPainter.createProjectile(this.a(var3.field_u, true), var28, (byte) 18, this, -1, var27, 153);
                     this.b(52, var29_ref_mi);
                     var29_ref_mi.field_y = 20;
                     var29_ref_mi.field_u = var24;
@@ -2625,7 +2625,7 @@ final class nf {
                   var27Lifetime1 = 8;
                   var28Lifetime1 = (int)((double)((ml) (var4Lifetime1)).field_lb + (double)(var25Lifetime1 * (4 + ((ml) (var4Lifetime1)).field_Y / 2 + var27Lifetime1)) / var9);
                   var29 = (int)((double)((ml) (var4Lifetime1)).field_db + (double)((var27Lifetime1 - (-(((ml) (var4Lifetime1)).field_Y / 2) - 4)) * var26Lifetime1) / var9 - (double)(((ml) (var4Lifetime1)).field_Y / 2));
-                  var30 = j.a(this.a(((ml) (var4Lifetime1)).field_u, true), var29, (byte) -122, this, 148, var28Lifetime1, 125);
+                  var30 = BevelBoxPainter.createProjectile(this.a(((ml) (var4Lifetime1)).field_u, true), var29, (byte) -122, this, 148, var28Lifetime1, 125);
                   this.b(52, var30);
                   var30.field_y = 20;
                   if (this.field_x[((ml) (var4Lifetime1)).field_u] == 6) {
@@ -2655,19 +2655,19 @@ final class nf {
                 var5_ref_jd = new IsaacRandom(new int[]{this.field_Q, this.field_jb, var33.field_lb, var33.field_db});
                 var6_int = 0;
                 while (var6_int < 5) {
-                  var39 = j.a((ml) null, var38.field_db - var38.field_Y / 2, (byte) 51, this, 95, var38.field_lb, 116);
+                  var39 = BevelBoxPainter.createProjectile((ml) null, var38.field_db - var38.field_Y / 2, (byte) 51, this, 95, var38.field_lb, 116);
                   var8 = u.a(var5_ref_jd, param0 + 2147483579, 8192);
-                  var39.field_u = of.a(-56, var8) >> 9;
-                  var39.field_F = (j.a(var8, -109) * 3 >> 11) - 64;
+                  var39.field_u = of.sine(-56, var8) >> 9;
+                  var39.field_F = (BevelBoxPainter.cosine(var8, -109) * 3 >> 11) - 64;
                   this.b(52, var39);
                   var6_int++;
                 }
                 var6_intLifetime1 = 0;
                 while (5 > var6_intLifetime1) {
-                  var40 = j.a((ml) null, -(var38.field_Y / 2) + var38.field_db, (byte) -97, this, 95, var38.field_lb, 122);
+                  var40 = BevelBoxPainter.createProjectile((ml) null, -(var38.field_Y / 2) + var38.field_db, (byte) -97, this, 95, var38.field_lb, 122);
                   var8Lifetime1 = u.a(var5_ref_jd, -2147483648, 8192);
-                  var40.field_u = of.a(-8, var8Lifetime1) >> 9;
-                  var40.field_F = -64 + (3 * j.a(var8Lifetime1, -113) >> 11);
+                  var40.field_u = of.sine(-8, var8Lifetime1) >> 9;
+                  var40.field_F = -64 + (3 * BevelBoxPainter.cosine(var8Lifetime1, -113) >> 11);
                   this.b(param0 ^ 113, var40);
                   var6_intLifetime1++;
                 }
@@ -2801,10 +2801,10 @@ final class nf {
               var3_ref.f(0);
               var5 = 0;
               while (var5 < 5) {
-                var6 = j.a(var3_ref.field_t, var3_ref.field_G, (byte) -109, this, 117, var3_ref.field_v, 159);
+                var6 = BevelBoxPainter.createProjectile(var3_ref.field_t, var3_ref.field_G, (byte) -109, this, 117, var3_ref.field_v, 159);
                 var7 = var5 * 8192 / 5;
-                var6.field_u = of.a(-93, var7) >> 10;
-                var6.field_F = (j.a(var7, -112) >> 11) - 64;
+                var6.field_u = of.sine(-93, var7) >> 10;
+                var6.field_F = (BevelBoxPainter.cosine(var7, -112) >> 11) - 64;
                 this.b(param0 ^ 113, var6);
                 var5++;
               }
@@ -2895,7 +2895,7 @@ final class nf {
             decompiledFrameRemainder7 = (var6 == 8);
             if ((decompiledFrameRemainder7) &&
               (var11 == 0)) {
-              var19 = j.a(var5, this.field_H, (byte) 19, this, 0, var3, 74);
+              var19 = BevelBoxPainter.createProjectile(var5, this.field_H, (byte) 19, this, 0, var3, 74);
               var19.field_y = 0 - this.field_jb;
               var19.field_F = -512;
               var19.field_u = 0;
@@ -2941,14 +2941,14 @@ final class nf {
           }
           if (((decompiledFrameRemainder7) && (decompiledFrameRemainder6) && (decompiledFrameRemainder5) && (decompiledFrameRemainder4) && (decompiledFrameRemainder3) && (decompiledFrameRemainder2) && (decompiledFrameRemainder1) && (decompiledFrameRemainder0)) &&
             (decompiledFrameRemainder6 = (this.field_jb % 5 == 0))) {
-            var13 = j.a(var5, this.field_H, (byte) 82, this, 22, var3, 19);
+            var13 = BevelBoxPainter.createProjectile(var5, this.field_H, (byte) 82, this, 22, var3, 19);
             var13.field_w = true;
             this.b(52, var13);
             decompiledFrameRemainder7 = (var11 != 0);
           }
           if (((decompiledFrameRemainder7) && (decompiledFrameRemainder6) && (decompiledFrameRemainder5) && (decompiledFrameRemainder4) && (decompiledFrameRemainder3) && (decompiledFrameRemainder2) && (decompiledFrameRemainder1)) &&
             (decompiledFrameRemainder7 = (0 == this.field_jb % 2))) {
-            var14 = j.a(var5, this.field_H, (byte) -97, this, 35, var3, 29);
+            var14 = BevelBoxPainter.createProjectile(var5, this.field_H, (byte) -97, this, 35, var3, 29);
             var14.field_w = true;
             this.b(52, var14);
             decompiledFrameRemainder7 = (var11 != 0);
@@ -2967,7 +2967,7 @@ final class nf {
             while (true) {
               if (var10Lifetime1 < 7) {
                 var9Lifetime1 = -var9Lifetime1;
-                var15 = j.a(var5, -544, (byte) 99, this, 61, -(var8Lifetime2 * var9Lifetime1 * var7_int / 16) + (-3 + var10Lifetime1) * 48 + var3, 50);
+                var15 = BevelBoxPainter.createProjectile(var5, -544, (byte) 99, this, 61, -(var8Lifetime2 * var9Lifetime1 * var7_int / 16) + (-3 + var10Lifetime1) * 48 + var3, 50);
                 var15.field_F = 0;
                 var15.field_u = var9Lifetime1 * var8Lifetime2;
                 var15.field_w = true;
@@ -2992,7 +2992,7 @@ final class nf {
             var6 = this.field_H / 2;
             var7_intLifetime1 = gf.a((15360 + 32 * var6) / 4, param0 ^ 266757658);
             var8Lifetime1 = (var3 & 1) * 192 - 96;
-            var16 = j.a(var5, -544, (byte) -117, this, 58, var3 - var7_intLifetime1 * var8Lifetime1 / 16, 49);
+            var16 = BevelBoxPainter.createProjectile(var5, -544, (byte) -117, this, 58, var3 - var7_intLifetime1 * var8Lifetime1 / 16, 49);
             var16.field_w = true;
             var16.field_F = 0;
             var16.field_u = var8Lifetime1;
@@ -3003,7 +3003,7 @@ final class nf {
             (decompiledFrameRemainder6) &&
             (decompiledFrameRemainder5) &&
             (decompiledFrameRemainder4)) {
-            var17 = j.a(var5, -480, (byte) -93, this, 46, var3, 36);
+            var17 = BevelBoxPainter.createProjectile(var5, -480, (byte) -93, this, 46, var3, 36);
             var17.field_w = true;
             var17.field_F = 0;
             var17.field_u = 0;
@@ -3012,7 +3012,7 @@ final class nf {
           }
           if (((decompiledFrameRemainder7) && (decompiledFrameRemainder6) && (decompiledFrameRemainder5)) &&
             (decompiledFrameRemainder7 = (this.field_jb % 2 == 0))) {
-            var18 = j.a(var5, -480, (byte) -125, this, 73, var3, 60);
+            var18 = BevelBoxPainter.createProjectile(var5, -480, (byte) -125, this, 73, var3, 60);
             var18.field_w = true;
             this.b(param0 ^ -17817, var18);
             decompiledFrameRemainder7 = (var11 != 0);
@@ -4553,7 +4553,7 @@ final class nf {
           if (param0 <= 22) {
             this.field_ob = (int[]) null;
           }
-          stackIn_3_0 = ti.a(param2, param4, false, param1, this.field_Jb, this, param3);
+          stackIn_3_0 = DropdownList.spriteHitsTerrain(param2, param4, false, param1, this.field_Jb, this, param3);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -4786,8 +4786,8 @@ final class nf {
         if (var4_array != null) {
           System.gc();
           this.field_V = new IndexedSprite(this.field_y, this.field_H, gg.field_c);
-          if (ti.field_I != null) {
-            this.field_V.field_l = ti.field_I[this.field_O].field_l;
+          if (DropdownList.field_I != null) {
+            this.field_V.field_l = DropdownList.field_I[this.field_O].field_l;
           }
           this.a(0, 117, mn.field_y, 0, this.field_V);
           this.a(var4_array, var16, (byte) -121);
@@ -5556,8 +5556,8 @@ final class nf {
             } while (var15 != 0);
             break;
           }
-          if (ti.field_I != null) {
-            this.field_V.field_l = ti.field_I[this.field_O].field_l;
+          if (DropdownList.field_I != null) {
+            this.field_V.field_l = DropdownList.field_I[this.field_O].field_l;
           }
           this.a(0, 120, mn.field_y, 0, this.field_V);
           var25 = new int[1000];
@@ -5823,7 +5823,7 @@ final class nf {
           if (this.field_sb[ah.field_f[0 + this.field_x[param0]]] == null) {
             return;
           }
-          ti.a((byte) -30, SceneWidgetNode.field_r[ah.field_f[0 + this.field_x[param0] + 0]], this.field_sb[ah.field_f[this.field_x[param0] + 0]]);
+          DropdownList.playSampleAtVolume((byte) -30, SceneWidgetNode.field_r[ah.field_f[0 + this.field_x[param0] + 0]], this.field_sb[ah.field_f[this.field_x[param0] + 0]]);
           if (var6 == 0) {
             return;
           }
@@ -5861,7 +5861,7 @@ final class nf {
         while (var4 < 16 &&
           var5 == 0) {
           if (~param0 == ~this.field_v[param1][var4]) {
-            if (-1 == mj.field_p) {
+            if (-1 == StatefulTextPainter.field_p) {
               dupTemp$1 = this.field_vb[param1];
               dupTemp$1[var4] = dupTemp$1[var4] + 1;
             }
@@ -5954,7 +5954,7 @@ final class nf {
                 stackIn_69_0 = this.a(false, param2, param1);
                 return stackIn_69_0;
               }
-              if (5 != ti.field_N) {
+              if (5 != DropdownList.field_N) {
                 if (param4 != 11) {
                   return true;
                 }
@@ -6505,8 +6505,8 @@ final class nf {
             var4[var12 + var14] = var4[var12 + var14] - 64;
             var14++;
           } while (var24 == 0);
-          if (ti.field_I != null) {
-            this.field_V.field_l = ti.field_I[this.field_O].field_l;
+          if (DropdownList.field_I != null) {
+            this.field_V.field_l = DropdownList.field_I[this.field_O].field_l;
           }
           this.a(0, 127, mn.field_y, 0, this.field_V);
           var14 = this.field_y * var6 / var4.length;
@@ -7118,7 +7118,7 @@ final class nf {
               param1.followUnit(-85, var12);
               if (this.field_sb != null &&
                 this.field_sb[225] != null) {
-                ti.a((byte) -30, SceneWidgetNode.field_r[225], this.field_sb[225]);
+                DropdownList.playSampleAtVolume((byte) -30, SceneWidgetNode.field_r[225], this.field_sb[225]);
               }
             }
             return;
@@ -7178,7 +7178,7 @@ final class nf {
           }
           if (this.field_sb != null &&
             null != this.field_sb[64 + var10]) {
-            ti.a((byte) -30, SceneWidgetNode.field_r[64 + var10], this.field_sb[64 + var10]);
+            DropdownList.playSampleAtVolume((byte) -30, SceneWidgetNode.field_r[64 + var10], this.field_sb[64 + var10]);
           }
           if (var7 < -480) {
             var7 = -480;
@@ -7583,7 +7583,7 @@ final class nf {
               }
               if (decompiledFrameCompleted12) {
                 this.a((byte) 80, var10, var4);
-                var24_ref_mi = j.a(var12, var12.field_db + var21, (byte) 36, this, var10, var12.field_lb + var20, var18);
+                var24_ref_mi = BevelBoxPainter.createProjectile(var12, var12.field_db + var21, (byte) 36, this, var10, var12.field_lb + var20, var18);
                 var24_ref_mi.field_F = 8 * var23;
                 var24_ref_mi.field_u = var22 * 8;
                 this.b(52, var24_ref_mi);
@@ -7750,7 +7750,7 @@ final class nf {
             this.a((byte) -127, var24_ref_mlLifetime12);
             var8 = -1000;
             this.field_D = true;
-            var25Lifetime1 = j.a(var24_ref_mlLifetime12, var24_ref_mlLifetime12.field_db, (byte) 17, this, var10, var24_ref_mlLifetime12.field_lb, 55);
+            var25Lifetime1 = BevelBoxPainter.createProjectile(var24_ref_mlLifetime12, var24_ref_mlLifetime12.field_db, (byte) 17, this, var10, var24_ref_mlLifetime12.field_lb, 55);
             var25Lifetime1.field_H = 4;
             this.b(52, var25Lifetime1);
             this.field_ob[var4] = this.field_ob[var4] + 1;
@@ -7768,7 +7768,7 @@ final class nf {
             var24_ref_mlLifetime14 = new ml(5, var8, var9, this.h(-98), this, var12);
             this.a((byte) -120, var24_ref_mlLifetime14);
             var8 = -1000;
-            var25Lifetime2 = j.a(var24_ref_mlLifetime14, -480, (byte) -103, this, var10, var8, 71);
+            var25Lifetime2 = BevelBoxPainter.createProjectile(var24_ref_mlLifetime14, -480, (byte) -103, this, var10, var8, 71);
             var25Lifetime2.field_u = 0;
             var25Lifetime2.field_F = 0;
             this.b(52, var25Lifetime2);
@@ -7851,13 +7851,13 @@ final class nf {
           }
           if (var10 == 54) {
             this.a((byte) 80, var10, var4);
-            var24_ref_miLifetime1 = j.a(var12, var12.field_db, (byte) -106, this, var10, var12.field_lb, 72);
+            var24_ref_miLifetime1 = BevelBoxPainter.createProjectile(var12, var12.field_db, (byte) -106, this, var10, var12.field_lb, 72);
             this.b(52, var24_ref_miLifetime1);
           }
           if (var10 == 39 ||
             var10 == 153) {
             this.a((byte) 80, var10, var4);
-            var24_ref_miLifetime2 = j.a(var12, var12.field_db, (byte) 37, this, var10, var12.field_lb, 32);
+            var24_ref_miLifetime2 = BevelBoxPainter.createProjectile(var12, var12.field_db, (byte) 37, this, var10, var12.field_lb, 32);
             this.b(52, var24_ref_miLifetime2);
             if (153 == var10) {
               var12.field_z = true;
@@ -7867,37 +7867,37 @@ final class nf {
           }
           if (var10 == 106) {
             this.a((byte) 80, var10, var4);
-            var24_ref_miLifetime3 = j.a(var12, var12.field_db, (byte) -110, this, var10, var12.field_lb, 136);
+            var24_ref_miLifetime3 = BevelBoxPainter.createProjectile(var12, var12.field_db, (byte) -110, this, var10, var12.field_lb, 136);
             this.b(52, var24_ref_miLifetime3);
             this.field_D = true;
           }
           if (var10 == 8) {
             this.a((byte) 80, var10, var4);
-            var24_ref_miLifetime4 = j.a(var12, var12.field_db, (byte) -97, this, var10, var12.field_lb, 83);
+            var24_ref_miLifetime4 = BevelBoxPainter.createProjectile(var12, var12.field_db, (byte) -97, this, var10, var12.field_lb, 83);
             this.b(52, var24_ref_miLifetime4);
             this.field_D = true;
           }
           if (var10 == 26) {
             this.a((byte) 80, var10, var4);
-            var24_ref_miLifetime5 = j.a(var12, var12.field_db, (byte) -113, this, var10, var12.field_lb, 22);
+            var24_ref_miLifetime5 = BevelBoxPainter.createProjectile(var12, var12.field_db, (byte) -113, this, var10, var12.field_lb, 22);
             this.b(52, var24_ref_miLifetime5);
             this.field_D = true;
           }
           if (var10 == 35) {
             this.a((byte) 80, var10, var4);
-            var24_ref_miLifetime6 = j.a(var12, this.field_H, (byte) -96, this, var10, var8, 29);
+            var24_ref_miLifetime6 = BevelBoxPainter.createProjectile(var12, this.field_H, (byte) -96, this, var10, var8, 29);
             this.b(52, var24_ref_miLifetime6);
             this.field_D = true;
           }
           if (var10 == 73) {
             this.a((byte) 80, var10, var4);
-            var24_ref_miLifetime7 = j.a(var12, -480, (byte) -96, this, var10, var8, 60);
+            var24_ref_miLifetime7 = BevelBoxPainter.createProjectile(var12, -480, (byte) -96, this, var10, var8, 60);
             this.b(52, var24_ref_miLifetime7);
             this.field_D = true;
           }
           if (120 == var10) {
             this.a((byte) 80, var10, var4);
-            var24_ref_miLifetime8 = j.a(var12, var12.field_db, (byte) -101, this, var10, var12.field_lb, 77);
+            var24_ref_miLifetime8 = BevelBoxPainter.createProjectile(var12, var12.field_db, (byte) -101, this, var10, var12.field_lb, 77);
             this.b(52, var24_ref_miLifetime8);
             this.field_D = true;
           }
@@ -7912,7 +7912,7 @@ final class nf {
             this.field_D = true;
             var24_ref_miLifetime9 = aj.spawnProjectile(var12, var12.field_db - var12.field_Y / 2, false, 103, this, var12.field_lb);
             this.b(52, var24_ref_miLifetime9);
-            var24_ref_miLifetime9Lifetime1 = j.a(var12, -(var12.field_Y / 2) + var12.field_db, (byte) -107, this, var10, var12.field_lb, 111);
+            var24_ref_miLifetime9Lifetime1 = BevelBoxPainter.createProjectile(var12, -(var12.field_Y / 2) + var12.field_db, (byte) -107, this, var10, var12.field_lb, 111);
             var24_ref_miLifetime9Lifetime1.field_H = 4;
             this.b(52, var24_ref_miLifetime9Lifetime1);
           }
@@ -7949,7 +7949,7 @@ final class nf {
             var27 = 0;
             while (var27 < 7) {
               var26 = -var26;
-              var28 = j.a(var12, -544, (byte) 55, this, var10, -(var24Lifetime1 * (var25_intLifetime1 * var26) / 16) + (48 * var27 - 144 + var8), 50);
+              var28 = BevelBoxPainter.createProjectile(var12, -544, (byte) 55, this, var10, -(var24Lifetime1 * (var25_intLifetime1 * var26) / 16) + (48 * var27 - 144 + var8), 50);
               var28.field_u = var26 * var25_intLifetime1;
               var28.field_F = 0;
               this.b(52, var28);
@@ -7965,17 +7965,17 @@ final class nf {
           }
           if (var10 == 68) {
             this.a((byte) 80, var10, var4);
-            var24_ref_miLifetime12 = j.a(var12, var9, (byte) -104, this, var10, var8, 55);
+            var24_ref_miLifetime12 = BevelBoxPainter.createProjectile(var12, var9, (byte) -104, this, var10, var8, 55);
             this.b(52, var24_ref_miLifetime12);
             this.field_D = true;
           }
           if (var10 == 9) {
             this.a((byte) 80, var10, var4);
-            var24_ref_miLifetime13 = j.a(var12, -24 + var9, (byte) 121, this, var10, var8, 3);
+            var24_ref_miLifetime13 = BevelBoxPainter.createProjectile(var12, -24 + var9, (byte) 121, this, var10, var8, 3);
             this.b(52, var24_ref_miLifetime13);
-            var24_ref_miLifetime13Lifetime1 = j.a(var12, -11 + var9, (byte) -122, this, var10, -8 + var8, 3);
+            var24_ref_miLifetime13Lifetime1 = BevelBoxPainter.createProjectile(var12, -11 + var9, (byte) -122, this, var10, -8 + var8, 3);
             this.b(52, var24_ref_miLifetime13Lifetime1);
-            var24_ref_miLifetime13Lifetime2 = j.a(var12, var9 - 12, (byte) -114, this, var10, 8 + var8, 3);
+            var24_ref_miLifetime13Lifetime2 = BevelBoxPainter.createProjectile(var12, var9 - 12, (byte) -114, this, var10, 8 + var8, 3);
             this.b(52, var24_ref_miLifetime13Lifetime2);
             this.field_D = true;
           }
@@ -7994,7 +7994,7 @@ final class nf {
               if (stackIn_456_0 == stackIn_456_1) {
                 var25Lifetime3 = aj.spawnProjectile(this.a(var24_ref_mlLifetime22.field_u, true), var24_ref_mlLifetime22.field_db, false, 101, this, var24_ref_mlLifetime22.field_lb);
                 this.b(52, var25Lifetime3);
-                var25Lifetime3Lifetime1 = j.a(var12, var24_ref_mlLifetime22.field_db, (byte) 38, this, var10, var24_ref_mlLifetime22.field_lb, 74);
+                var25Lifetime3Lifetime1 = BevelBoxPainter.createProjectile(var12, var24_ref_mlLifetime22.field_db, (byte) 38, this, var10, var24_ref_mlLifetime22.field_lb, 74);
                 var25Lifetime3Lifetime1.field_y = -(var24_ref_mlLifetime22.field_ib / 2) + 20;
                 var25Lifetime3Lifetime1.field_u = 0;
                 var25Lifetime3Lifetime1.field_F = -var24_ref_mlLifetime22.field_ib;
@@ -8014,7 +8014,7 @@ final class nf {
           }
           if (stackIn_456_0 == stackIn_456_1) {
             this.a((byte) 80, var10, var4);
-            var24_ref_miLifetime14 = j.a(var12, var12.field_db, (byte) 95, this, var10, var12.field_lb, 127);
+            var24_ref_miLifetime14 = BevelBoxPainter.createProjectile(var12, var12.field_db, (byte) 95, this, var10, var12.field_lb, 127);
             this.b(52, var24_ref_miLifetime14);
             this.field_D = true;
           }
@@ -8039,7 +8039,7 @@ final class nf {
               var24_ref_miLifetime15 = (mi) (IntKeyLookup.field_d.next(-18502));
             }
             if (decompiledFrameCompleted8) {
-              var24_ref_miLifetime15Lifetime1 = j.a(var12, 0, (byte) -125, this, var10, var8, 126);
+              var24_ref_miLifetime15Lifetime1 = BevelBoxPainter.createProjectile(var12, 0, (byte) -125, this, var10, var8, 126);
               this.b(52, var24_ref_miLifetime15Lifetime1);
               this.field_D = true;
             }
@@ -8066,7 +8066,7 @@ final class nf {
               var24_ref_miLifetime16 = (mi) (IntKeyLookup.field_d.next(-18502));
             }
             if (decompiledFrameCompleted7) {
-              var24_ref_miLifetime16Lifetime1 = j.a(var12, var9, (byte) -105, this, var10, var8, 123);
+              var24_ref_miLifetime16Lifetime1 = BevelBoxPainter.createProjectile(var12, var9, (byte) -105, this, var10, var8, 123);
               this.b(52, var24_ref_miLifetime16Lifetime1);
               this.field_D = true;
             }
@@ -8151,7 +8151,7 @@ final class nf {
                         }
                         var44 = (int)((double)((4 + (var25_ref.field_Y / 2 + var17)) * var42) / var26_double + (double)var25_ref.field_lb);
                         var45 = (int)((double)(-(var12.field_Y / 2)) + ((double)(var43 * (var17 + (var25_ref.field_Y / 2 + 4))) / var26_double + (double)var25_ref.field_db));
-                        var46 = j.a(this.a(var25_ref.field_u, true), var45, (byte) -95, this, var10, var44, 125);
+                        var46 = BevelBoxPainter.createProjectile(this.a(var25_ref.field_u, true), var45, (byte) -95, this, var10, var44, 125);
                         this.b(52, var46);
                         var46.field_y = 10;
                         if (this.field_x[var25_ref.field_u] == 6) {
@@ -8198,7 +8198,7 @@ final class nf {
                 var24_ref_mlLifetime23.field_jb != 12) {
                 var25Lifetime5 = aj.spawnProjectile(this.a(var24_ref_mlLifetime23.field_u, true), var24_ref_mlLifetime23.field_db, false, 103, this, var24_ref_mlLifetime23.field_lb);
                 this.b(52, var25Lifetime5);
-                var25Lifetime5Lifetime1 = j.a(var12, var24_ref_mlLifetime23.field_db, (byte) 40, this, var10, var24_ref_mlLifetime23.field_lb, 55);
+                var25Lifetime5Lifetime1 = BevelBoxPainter.createProjectile(var12, var24_ref_mlLifetime23.field_db, (byte) 40, this, var10, var24_ref_mlLifetime23.field_lb, 55);
                 this.b(52, var25Lifetime5Lifetime1);
                 var24_ref_mlLifetime23.field_ib = 0;
                 var24_ref_mlLifetime23.d(var4, 24);
@@ -8283,7 +8283,7 @@ final class nf {
                 var12.field_I.trimTransparentBorders();
               }
             }
-            var24_ref_miLifetime17Lifetime1 = j.a(var12, var12.field_db, (byte) 32, this, var10, var12.field_lb, 111);
+            var24_ref_miLifetime17Lifetime1 = BevelBoxPainter.createProjectile(var12, var12.field_db, (byte) 32, this, var10, var12.field_lb, 111);
             var24_ref_miLifetime17Lifetime1.field_H = 4;
             this.b(52, var24_ref_miLifetime17Lifetime1);
             var24_ref_miLifetime17Lifetime2 = aj.spawnProjectile((ml) null, var12.field_db - var12.field_Y / 2, false, 103, this, var12.field_lb);
@@ -8300,7 +8300,7 @@ final class nf {
             this.a((byte) 80, var10, var4);
             var24Lifetime3 = gf.a((480 + var9) * 32 / 4, -266740663);
             var25_intLifetime2 = -96 + (var8 & 1) * 192;
-            var26_ref_mi = j.a(var12, -544, (byte) -128, this, var10, var8 - var24Lifetime3 * var25_intLifetime2 / 16, 49);
+            var26_ref_mi = BevelBoxPainter.createProjectile(var12, -544, (byte) -128, this, var10, var8 - var24Lifetime3 * var25_intLifetime2 / 16, 49);
             var26_ref_mi.field_u = var25_intLifetime2;
             var26_ref_mi.field_F = 0;
             this.b(52, var26_ref_mi);
@@ -8308,7 +8308,7 @@ final class nf {
           }
           if (var10 == 17) {
             this.a((byte) 80, var10, var4);
-            var24_ref_miLifetime18 = j.a(var12, var9, (byte) 103, this, var10, var8, 15);
+            var24_ref_miLifetime18 = BevelBoxPainter.createProjectile(var12, var9, (byte) 103, this, var10, var8, 15);
             this.b(52, var24_ref_miLifetime18);
             this.field_D = true;
           }
@@ -8316,7 +8316,7 @@ final class nf {
             this.a((byte) 80, var10, var4);
             var24Lifetime4 = gf.a((var9 + 480) * 32 / 4, -266740663);
             var25_intLifetime3 = (1 & var8) * 192 - 96;
-            var26_ref_miLifetime1 = j.a(var12, -544, (byte) -119, this, var10, var8 - var24Lifetime4 * var25_intLifetime3 / 16, 28);
+            var26_ref_miLifetime1 = BevelBoxPainter.createProjectile(var12, -544, (byte) -119, this, var10, var8 - var24Lifetime4 * var25_intLifetime3 / 16, 28);
             var26_ref_miLifetime1.field_u = var25_intLifetime3;
             var26_ref_miLifetime1.field_F = 0;
             this.b(52, var26_ref_miLifetime1);
@@ -8333,7 +8333,7 @@ final class nf {
             }
             var27Lifetime1 = 0;
             while (var26Lifetime1 > var27Lifetime1) {
-              var28Lifetime1 = j.a(var12, -544, (byte) -94, this, var10, -(var24Lifetime5 * var25_intLifetime4 / 16) + (64 * var27Lifetime1 - 128 + var8), 17);
+              var28Lifetime1 = BevelBoxPainter.createProjectile(var12, -544, (byte) -94, this, var10, -(var24Lifetime5 * var25_intLifetime4 / 16) + (64 * var27Lifetime1 - 128 + var8), 17);
               var28Lifetime1.field_u = var25_intLifetime4;
               var28Lifetime1.field_F = 0;
               this.b(52, var28Lifetime1);
@@ -8354,7 +8354,7 @@ final class nf {
             var25_intLifetime5 = -96 + 192 * (var8 & 1);
             var26Lifetime2 = 0;
             while (var26Lifetime2 < 5) {
-              var27_ref_mi = j.a(var12, -544, (byte) 17, this, var10, var8 - (192 - 96 * var26Lifetime2) - var24Lifetime6 * var25_intLifetime5 / 16, 143);
+              var27_ref_mi = BevelBoxPainter.createProjectile(var12, -544, (byte) 17, this, var10, var8 - (192 - 96 * var26Lifetime2) - var24Lifetime6 * var25_intLifetime5 / 16, 143);
               var27_ref_mi.field_u = var25_intLifetime5;
               var27_ref_mi.field_F = 0;
               this.b(52, var27_ref_mi);
@@ -8379,7 +8379,7 @@ final class nf {
             }
             var27Lifetime2 = 0;
             while (var26Lifetime3 > var27Lifetime2) {
-              var28Lifetime2 = j.a(var12, -544, (byte) -128, this, var10, var8 - (-(64 * (-2 + var27Lifetime2)) + var25_intLifetime6 * var24Lifetime7 / 16), 18);
+              var28Lifetime2 = BevelBoxPainter.createProjectile(var12, -544, (byte) -128, this, var10, var8 - (-(64 * (-2 + var27Lifetime2)) + var25_intLifetime6 * var24Lifetime7 / 16), 18);
               this.b(52, var28Lifetime2);
               var27Lifetime2++;
               if (var47 != 0) {
@@ -8393,7 +8393,7 @@ final class nf {
           }
           if (var10 == 22) {
             this.a((byte) 80, var10, var4);
-            var24_ref_miLifetime19 = j.a(var12, this.field_H, (byte) -109, this, var10, var8, 19);
+            var24_ref_miLifetime19 = BevelBoxPainter.createProjectile(var12, this.field_H, (byte) -109, this, var10, var8, 19);
             var24_ref_miLifetime19.field_F = 0;
             var24_ref_miLifetime19.field_u = 0;
             this.b(52, var24_ref_miLifetime19);
@@ -8401,7 +8401,7 @@ final class nf {
           }
           if (var10 == 75) {
             this.a((byte) 80, var10, var4);
-            var24_ref_miLifetime20 = j.a(var12, -480, (byte) -98, this, var10, var8, 62);
+            var24_ref_miLifetime20 = BevelBoxPainter.createProjectile(var12, -480, (byte) -98, this, var10, var8, 62);
             var24_ref_miLifetime20.field_u = 0;
             var24_ref_miLifetime20.field_F = 0;
             this.b(52, var24_ref_miLifetime20);
@@ -8409,7 +8409,7 @@ final class nf {
           }
           if (var10 == 53) {
             this.a((byte) 80, var10, var4);
-            var24_ref_miLifetime21 = j.a(var12, -480, (byte) 30, this, var10, var8, 47);
+            var24_ref_miLifetime21 = BevelBoxPainter.createProjectile(var12, -480, (byte) 30, this, var10, var8, 47);
             var24_ref_miLifetime21.field_u = 0;
             var24_ref_miLifetime21.field_F = 0;
             this.b(52, var24_ref_miLifetime21);
@@ -8418,7 +8418,7 @@ final class nf {
           var24Lifetime8 = -115 % ((param0 + 53) / 37);
           if (var10 == 100) {
             this.a((byte) 80, var10, var4);
-            var25Lifetime6 = j.a(var12, -480, (byte) -120, this, var10, var8, 141);
+            var25Lifetime6 = BevelBoxPainter.createProjectile(var12, -480, (byte) -120, this, var10, var8, 141);
             var25Lifetime6.field_u = 0;
             var25Lifetime6.field_F = 0;
             this.b(52, var25Lifetime6);
@@ -8426,7 +8426,7 @@ final class nf {
           }
           if (111 == var10) {
             this.a((byte) 80, var10, var4);
-            var25Lifetime7 = j.a(var12, -480, (byte) 124, this, var10, var8, 160);
+            var25Lifetime7 = BevelBoxPainter.createProjectile(var12, -480, (byte) 124, this, var10, var8, 160);
             var25Lifetime7.field_F = 0;
             var25Lifetime7.field_u = 0;
             this.b(52, var25Lifetime7);
@@ -8434,7 +8434,7 @@ final class nf {
           }
           if (var10 == 101) {
             this.a((byte) 80, var10, var4);
-            var25Lifetime8 = j.a(var12, -480, (byte) 118, this, var10, var8, 142);
+            var25Lifetime8 = BevelBoxPainter.createProjectile(var12, -480, (byte) 118, this, var10, var8, 142);
             var25Lifetime8.field_u = 0;
             var25Lifetime8.field_F = 0;
             this.b(52, var25Lifetime8);
@@ -8442,7 +8442,7 @@ final class nf {
           }
           if (var10 == 97) {
             this.a((byte) 80, var10, var4);
-            var25Lifetime9 = j.a(var12, this.field_H, (byte) -93, this, var10, var8, 134);
+            var25Lifetime9 = BevelBoxPainter.createProjectile(var12, this.field_H, (byte) -93, this, var10, var8, 134);
             var25Lifetime9.field_u = 0;
             var25Lifetime9.field_F = 0;
             this.b(52, var25Lifetime9);
@@ -8450,7 +8450,7 @@ final class nf {
           }
           if (46 == var10) {
             this.a((byte) 80, var10, var4);
-            var25Lifetime10 = j.a(var12, -480, (byte) 29, this, var10, var8, 36);
+            var25Lifetime10 = BevelBoxPainter.createProjectile(var12, -480, (byte) 29, this, var10, var8, 36);
             var25Lifetime10.field_F = 0;
             var25Lifetime10.field_u = 0;
             this.b(52, var25Lifetime10);
@@ -8478,7 +8478,7 @@ final class nf {
               var25Lifetime11Lifetime2 = (mi) (this.field_Kb.next(0));
             }
             if (decompiledFrameCompleted1) {
-              var25Lifetime11Lifetime3 = j.a(var12, -32 + (var12.field_db - var12.field_Y), (byte) 29, this, var10, var12.field_lb, 149);
+              var25Lifetime11Lifetime3 = BevelBoxPainter.createProjectile(var12, -32 + (var12.field_db - var12.field_Y), (byte) 29, this, var10, var12.field_lb, 149);
               var25Lifetime11Lifetime3.field_F = -var12.field_db - (-var12.field_Y - 32) + var9;
               var25Lifetime11Lifetime3.field_u = var8 - var12.field_lb;
               this.b(52, var25Lifetime11Lifetime3);
@@ -9010,7 +9010,7 @@ final class nf {
                 stackIn_88_1 = 1;
               }
               if (stackIn_87_0 != stackIn_88_1) {
-                var4 = vi.field_N;
+                var4 = FadingModalPanel.field_N;
               }
             }
             var5 = 0;
@@ -9258,7 +9258,7 @@ final class nf {
             if (stackIn_45_0 == stackIn_45_1) {
               this.field_L[param2][var4] = true;
               if (MouseWheelHandler.field_b[param1] != -1) {
-                if (this.field_vb[param2][var4] > 0 && (-1 == mj.field_p ||
+                if (this.field_vb[param2][var4] > 0 && (-1 == StatefulTextPainter.field_p ||
                   param1 == 5)) {
                   dupTemp$0 = this.field_vb[param2];
                   dupTemp$0[var4] = dupTemp$0[var4] - 1;
@@ -9439,7 +9439,7 @@ final class nf {
           MidiPcmStream.field_D = new IntrusiveDequeCursor();
           IntKeyLookup.field_d = new IntrusiveDequeCursor();
           u.field_f = new IntrusiveDequeCursor();
-          mk.field_J = new IntrusiveDequeCursor();
+          ValidationStatusIcon.field_J = new IntrusiveDequeCursor();
           ge.field_p = new IntrusiveDequeCursor();
           this.field_m = param11;
           stackIn_4_1 = (param0);
@@ -9461,10 +9461,10 @@ final class nf {
           if (!this.field_d) {
             nj.field_n = nj.field_a;
             if (var19 != 0) {
-              nj.field_n = ke.field_M;
+              nj.field_n = LabeledField.field_M;
             }
           } else {
-            nj.field_n = ke.field_M;
+            nj.field_n = LabeledField.field_M;
           }
           this.field_k = param5;
           if (0 > this.field_Cb) {

@@ -58,7 +58,7 @@ final class wh {
           field_f = (LoginPanel) null;
         }
         int var1 = ho.field_i[0] * jg.field_p[0];
-        byte[] var2 = ln.field_I[0];
+        byte[] var2 = AccountRegistrationPanel.field_I[0];
         int[] var3 = new int[var1];
         for (var4_int = 0; var4_int < var1; var4_int++) {
           var3[var4_int] = ph.field_c[NameValidator.bitAnd(255, (int) var2[var4_int])];

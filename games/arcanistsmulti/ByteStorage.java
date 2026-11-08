@@ -101,11 +101,11 @@ abstract class ByteStorage {
           if (param0 > qf.field_d) {
             return;
           }
-          if (ua.field_P + ta.a(true, param1) > jf.field_j) {
+          if (GridContainer.field_P + ta.a(true, param1) > jf.field_j) {
             return;
           }
           if ((cb.field_e & 1L << param1) == 0L) {
-            ua.field_P = ua.field_P + ta.a(true, param1);
+            GridContainer.field_P = GridContainer.field_P + ta.a(true, param1);
             nm.field_h = -1;
             cb.field_e = cb.field_e | 1L << param1;
             return;
@@ -122,11 +122,11 @@ abstract class ByteStorage {
         if (param0 > qf.field_d) {
           return;
         }
-        if (ua.field_P + ta.a(true, param1) > jf.field_j) {
+        if (GridContainer.field_P + ta.a(true, param1) > jf.field_j) {
           return;
         }
         if ((cb.field_e & 1L << param1) == 0L) {
-          ua.field_P = ua.field_P + ta.a(true, param1);
+          GridContainer.field_P = GridContainer.field_P + ta.a(true, param1);
           nm.field_h = -1;
           cb.field_e = cb.field_e | 1L << param1;
           return;
@@ -135,7 +135,7 @@ abstract class ByteStorage {
 
     final static void a(boolean param0, byte param1) {
         IntKeyLookup.field_g.drawFullScreen(param0, true);
-        cn var2 = ln.field_U;
+        BirthDateEntryPanel var2 = AccountRegistrationPanel.field_U;
         if (var2 != null) {
           var2.drawLayersAndTooltip(IntKeyLookup.field_g.field_V, true, IntKeyLookup.field_g.field_nb);
           if (param1 > -11) {

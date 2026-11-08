@@ -91,7 +91,7 @@ class IntrusiveNode {
             for (var6_int = 1; var6_int < var4; var6_int++) {
               bb.field_i[var6_int] = var13.readString(-1);
             }
-            se.a((byte) -33, var4, var5);
+            DraggableWidget.a((byte) -33, var4, var5);
             for (var6_intLifetime1 = 0; var4 > var6_intLifetime1; var6_intLifetime1++) {
               MouseInputHandler.a(123, var15);
               if (0 == var6_intLifetime1) {
@@ -104,7 +104,7 @@ class IntrusiveNode {
                 PacketBuffer.a(-1, kj.field_c, var6_intLifetime1, fo.field_a, qj.field_g, IntrusiveDequeCursor.field_j);
               }
             }
-            bi.a((byte) -113, var5);
+            ValidatedTextWidget.a((byte) -113, var5);
             dupTemp$0 = new String[2][var5];
             var3.field_r = dupTemp$0;
             var6 = dupTemp$0;

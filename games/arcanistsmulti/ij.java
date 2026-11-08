@@ -61,7 +61,7 @@ final class ij extends SceneWidget {
             this.field_Sb.c(-111, 12);
           } else {
             if (this.field_Ib[param3] == -1) {
-              ua.g(-19741);
+              GridContainer.g(-19741);
               SecondaryNodeDeque.a(14);
             } else {
               var5 = 32768 | this.field_Ib[param3];
@@ -351,7 +351,7 @@ final class ij extends SceneWidget {
           this.c(22, -124);
         }
         if (0 < var5) {
-          if (se.field_E == var5) {
+          if (DraggableWidget.field_E == var5) {
             var5 = 63;
           }
           for (var6 = 0; this.field_Lb.length > var6; var6++) {

@@ -136,7 +136,7 @@ final class w extends SceneWidget {
             this.field_Mb.field_ob = 16764006;
             this.field_Pb.addChild(this.field_Mb, 95);
             this.field_Mb.field_L = "|";
-            if (!(5 > ib.field_r) ||
+            if (!(5 > BevelTextPainter.field_r) ||
               !(qf.field_d < 2)) {
               regionExit1: {
                 stackIn_7_0 = this;
@@ -144,7 +144,7 @@ final class w extends SceneWidget {
                 stackIn_7_2 = null;
                 stackIn_7_3 = 0L;
                 stackIn_7_4 = (af) (param9);
-                if (ib.field_r < 7) {
+                if (BevelTextPainter.field_r < 7) {
                   stackIn_8_0 = this;
                   stackIn_7_0Lifetime1 = stackIn_8_0;
                   if (qf.field_d < 2) {
@@ -173,8 +173,8 @@ final class w extends SceneWidget {
             this.field_Pb.addChild(var28[2], 60);
             this.field_Ob = new SceneWidget[aj.field_g];
             for (var16 = 0; aj.field_g > var16; var16++) {
-              if (h.field_K[var16] != null) {
-                this.field_Ob[var16] = new SceneWidget(0L, param10, h.field_K[var16]);
+              if (ModalPanelStack.field_K[var16] != null) {
+                this.field_Ob[var16] = new SceneWidget(0L, param10, ModalPanelStack.field_K[var16]);
                 this.field_Ob[var16].field_X = 0;
                 stackIn_15_0 = this.field_Ob[var16];
                 stackIn_16_1 = (param11 != null);

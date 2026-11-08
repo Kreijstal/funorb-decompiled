@@ -62,7 +62,7 @@ class TextButton extends UiComponent {
           return;
         }
         if (this.field_o instanceof ButtonListener) {
-          ((ButtonListener) (this.field_o)).a(true, param3, param1, param2, this);
+          ((ButtonListener) (this.field_o)).onButtonActivated(true, param3, param1, param2, this);
           return;
         }
     }
@@ -122,11 +122,11 @@ class TextButton extends UiComponent {
           this.field_F = 0;
           if (0 != this.field_t &&
             PacketBuffer.field_m != this.field_t) {
-            if (this.containsPoint((byte) -47, param3, me.field_I, param1, EmailLoginCredentials.field_g) &&
+            if (this.containsPoint((byte) -47, param3, MenuButtonPanel.field_I, param1, EmailLoginCredentials.field_g) &&
               PacketBuffer.field_m == 0) {
-              this.activate(-102, -param1 + EmailLoginCredentials.field_g, this.field_t, me.field_I - param3);
+              this.activate(-102, -param1 + EmailLoginCredentials.field_g, this.field_t, MenuButtonPanel.field_I - param3);
             }
-            this.handlePointerRelease(me.field_I, -20592, EmailLoginCredentials.field_g, param3, param1, param0);
+            this.handlePointerRelease(MenuButtonPanel.field_I, -20592, EmailLoginCredentials.field_g, param3, param1, param0);
           }
         } catch (RuntimeException runtimeException) {
           throw aa.wrapException((Throwable) ((Object) runtimeException), "ag.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');

@@ -17,7 +17,7 @@ final class we {
           boolean decompiledFrameRemainder0 = true;
           if (null != CredentialKind.field_c) {
             if (0 <= param0) {
-              decompiledFrameRemainder0 = (qc.field_c == ob.field_eb);
+              decompiledFrameRemainder0 = (qc.field_c == ResizableModalPanel.field_eb);
               if ((decompiledFrameRemainder0) && (he.field_e.position == 0 &&
                 qj.monotonicTimeMillis(-26572) > 10000L + fo.field_d)) {
                 he.field_e.writeOpcode((byte) -50, param0);
@@ -74,21 +74,21 @@ final class we {
             we.a((byte) -29);
           }
           var1_int = 0;
-          while (ib.b(false)) {
-            wl.field_S.a((byte) -76);
-            if (!wl.field_S.b(true)) {
+          while (BevelTextPainter.pollKeyEvent(false)) {
+            NumericDateInputWidget.field_S.a((byte) -76);
+            if (!NumericDateInputWidget.field_S.b(true)) {
               continue;
             }
             var1_int = 1;
           }
-          wl.field_S.a(ao.a(param0 + 31131, EmailLoginCredentials.field_g, me.field_I), ao.a(param0 ^ -31131, pb.field_h, ja.field_s), -97);
-          if (wl.field_S.b(true)) {
+          NumericDateInputWidget.field_S.a(ao.a(param0 + 31131, EmailLoginCredentials.field_g, MenuButtonPanel.field_I), ao.a(param0 ^ -31131, pb.field_h, ja.field_s), -97);
+          if (NumericDateInputWidget.field_S.b(true)) {
             var1_int = 1;
           }
           var2 = 0;
           if (var1_int != 0 &&
-            0 <= wl.field_S.field_h) {
-            var2 = cf.field_c[wl.field_S.field_h];
+            0 <= NumericDateInputWidget.field_S.field_h) {
+            var2 = cf.field_c[NumericDateInputWidget.field_S.field_h];
             if (var2 == 2) {
               Js5NetworkRequest.c(false);
             }
@@ -141,7 +141,7 @@ final class we {
         int var9Lifetime1;
         var10 = ArcanistsMulti.field_G ? 1 : 0;
         try {
-          var7_int = gd.a(param1 ^ 29389, param6);
+          var7_int = LoadingProgressDialog.padToByteBoundary(param1 ^ 29389, param6);
           if (null == c.field_b) {
             c.field_b = new java.security.SecureRandom();
           }

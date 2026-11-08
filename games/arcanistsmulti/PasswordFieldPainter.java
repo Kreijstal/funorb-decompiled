@@ -1,0 +1,162 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class PasswordFieldPainter extends BevelTextPainter {
+    static ResourceArchive field_x;
+    static String[] field_w;
+    static String field_z;
+    static String field_y;
+    static String field_C;
+    static dh field_A;
+    static String field_F;
+    static int[] field_B;
+    static String field_E;
+    static boolean[] field_D;
+
+    final String getDisplayText(boolean param0, UiComponent param1) {
+        RuntimeException var3 = null;
+        String stackIn_3_0 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (param0) {
+            field_D = (boolean[]) null;
+          }
+          stackIn_3_0 = jo.repeatCharacter(0, '*', param1.field_g.length());
+          return stackIn_3_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          stackIn_6_0 = var3;
+          stackIn_6_1 = new StringBuilder().append("tc.K(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
+          }
+          throw aa.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+        }
+    }
+
+    final static void a(byte param0) {
+        ModalPanelStack.field_K = new String[aj.field_g];
+        ModalPanelStack.field_K[9] = DiskCacheWorker.field_c;
+        ModalPanelStack.field_K[20] = ByteStorage.field_b;
+        ModalPanelStack.field_K[18] = ModalPanelStack.field_E;
+        ModalPanelStack.field_K[19] = ArchiveRequest.field_r;
+        ModalPanelStack.field_K[15] = gg.field_d;
+        ModalPanelStack.field_K[17] = lc.field_e;
+        ModalPanelStack.field_K[5] = aa.field_i;
+        ModalPanelStack.field_K[param0] = lf.field_h;
+        ModalPanelStack.field_K[13] = DirectByteStorage.field_g;
+        ModalPanelStack.field_K[7] = SpriteState.field_r;
+        ModalPanelStack.field_K[16] = OptionsDialog.field_sb;
+        ModalPanelStack.field_K[4] = cc.field_c;
+        ModalPanelStack.field_K[21] = ja.field_w;
+        ModalPanelStack.field_K[11] = sa.field_Gb;
+    }
+
+    PasswordFieldPainter(int param0) {
+        this(ia.field_c, param0);
+    }
+
+    public static void releaseStatics(byte param0) {
+        field_w = null;
+        field_C = null;
+        field_x = null;
+        field_A = null;
+        field_D = null;
+        field_B = null;
+        field_y = null;
+        field_F = null;
+        field_E = null;
+        if (param0 >= 22) {
+          field_z = null;
+          return;
+        }
+        field_A = (dh) null;
+        field_z = null;
+    }
+
+    private PasswordFieldPainter(BitmapFont param0, int param1) {
+        super(param0, param1);
+    }
+
+    final static boolean a(String param0, int param1) {
+        RuntimeException var2 = null;
+        CharSequence var3 = null;
+        RuntimeException stackIn_16_0 = null;
+        StringBuilder stackIn_16_1 = null;
+        String stackIn_17_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (!SocketJs5Transport.field_r) {
+            return false;
+          }
+          if (nj.field_c == 2 &&
+            GridContainer.field_S != null) {
+            var3 = (CharSequence) ((Object) param0);
+            if (!GridContainer.field_S.equals(Js5ArchiveManager.a(var3, -13))) {
+              return false;
+            }
+            if (param1 == -31046) {
+              return true;
+            }
+            return true;
+          }
+          return false;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          stackIn_16_0 = var2;
+          stackIn_16_1 = new StringBuilder().append("tc.W(");
+          if (param0 == null) {
+            stackIn_17_2 = "null";
+          } else {
+            stackIn_17_2 = "{...}";
+          }
+          throw aa.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(')').toString());
+        }
+    }
+
+    final static void b(int param0, int param1) {
+        int var3 = 0;
+        int var4 = 0;
+        CipherPacketBuffer var2 = he.field_e;
+        int var3Lifetime1;
+        int var4Lifetime1;
+        var2.writeOpcode((byte) -126, param1);
+        var2.position = var2.position + 1;
+        if (param0 == 12657) {
+          var3 = var2.position;
+          var2.writeByte(5, (byte) -39);
+          var2.writeByte(DirectByteStorage.field_f.field_dc, (byte) -3);
+          var4 = DirectByteStorage.field_f.field_Pb + (DirectByteStorage.field_f.field_Fb << 6);
+          var2.writeByte(var4, (byte) -97);
+          var2.writeBytes(DirectByteStorage.field_f.field_Wb, 0, (byte) -86, DirectByteStorage.field_f.field_Wb.length);
+          var2.writeByteLengthAtMark(var2.position - var3, (byte) 43);
+          return;
+        }
+        field_E = (String) null;
+        var3Lifetime1 = var2.position;
+        var2.writeByte(5, (byte) -39);
+        var2.writeByte(DirectByteStorage.field_f.field_dc, (byte) -3);
+        var4Lifetime1 = DirectByteStorage.field_f.field_Pb + (DirectByteStorage.field_f.field_Fb << 6);
+        var2.writeByte(var4Lifetime1, (byte) -97);
+        var2.writeBytes(DirectByteStorage.field_f.field_Wb, 0, (byte) -86, DirectByteStorage.field_f.field_Wb.length);
+        var2.writeByteLengthAtMark(var2.position - var3Lifetime1, (byte) 43);
+    }
+
+    static {
+        field_w = new String[]{"Arcane Arrow", "Arcane Bomb", "Arcane Tower", "Arcane Energiser", "Arcane Gate", "Arcane Portal", "Summon Imps", "Imp Destruction", "Arcane Glyph", "Arcane Sigil", "Arcane Flash", "Arcane Zero Shield", "Fire Ball", "Fire Arrow", "Lava Bomb", "Magma Bomb", "Flame Shield", "Flame Wall", "Napalm", "Napalm Bomb", "Rain of Fire", "Rain of Arrows", "Volcano", "Summon Flame Dragon", "Pebble Shot", "Scatter Rock", "Quake", "Disruption", "Mud Ball", "Mega Boulder", "Rock Slab", "Fortress", "Summon Dwarf", "Summon Rock Golem", "Meteor", "Fissure", "Thunder Shock", "Chain Lightning", "Wind Shield", "Hurricane", "Shock Bomb", "Storm Shield", "Summon Cyclops", "Conductor Rod", "Summon Storm Spirit", "Flight", "Storm", "Summon Storm Dragon", "Ice Ball", "Ice Bomb", "Frost Shards", "Frost Arrow", "Snow Ball", "Blizzard", "Ice Shield", "Ice Castle", "Summon Sylph", "Summon Frost Giant", "Comet", "Frost Dragon", "Den of Darkness", "Rain of Chaos", "Drain Bolt", "Death Bomb", "Summon Swarm", "Summon Dark Knight", "Raise Dead", "Summon Wraith", "Aura of Decay", "Dark Defences", "Swallowing Pit", "Lichdom", "Protection Shield", "Sky Ray", "Shining Bolt", "Rising Star", "Summon Pegasus", "Summon Paladin", "Forest Seed", "Summon Pixies", "Sphere of Healing", "Castle of Light", "Invulnerability Shield", "Shining Power", "Thorn Ball", "Thorn Bomb", "Vine Whip", "Vine Bridge", "Entangle", "Vine Bomb", "Summon Man-Trap", "Sanctuary", "Summon Elves", "Flurry", "Nature's Wrath", "Vine Bloom", "Water Ball", "Maelstrom", "Summon Water Trolls", "Hydration", "Deluge", "English Summer", "Brine Bolt", "Brine Bomb", "Summon Brine Goblin", "Rain of Clams", "Ocean's Fury", "Summon Water Lord", "Static Ball", "Static Shield", "Mechanical Arrow", "Cog Fall", "Recall Device", "Calling Bell", "Clock Tower", "Cuckoo Clock", "Blast from the Past", "Clockwork Bomb", "Steam Dragon", "Redo", "Self Destruct", "Sylph Arrow", "Frost Giant Ball", "Smash", "Mine", "Kablam!", "Cyclops Shock Attack", "Flame Dragon Breath", "Frost Dragon Breath", "Storm Dragon Breath", "Charge", "Wraith Drain", "Fairy Ring", "Spirit Shield", "Shock Shield", "Protection Shield", "Zombie Breath", "Wallop", "Sunder", "Banish", "Harpy Flame Familiar", "Pet Rock Familiar", "Storm Cloud Familiar", "Frost Sprite Familiar", "Create Soul Jar", "Cherub Familiar", "Fungus Familiar", "Seahorse Familiar", "Volley", "Ent Whip", "Dive", "Disobedience", "Cancel Flight", "Spirit Hurricane", "Recall", "Rake", "Time Familiar", "Arcane Familiar"};
+        field_F = "Chosen Spells";
+        field_y = "It looks like one of your imps managed to hurt you. Try to avoid this in future, since, outside of this training area, you will not get instantly healed back up to full health.";
+        field_z = " charge left";
+        field_C = "Click";
+        field_B = new int[]{30, 31, 32};
+        field_D = new boolean[]{false, false, false, true, false, true, true, true, false, false, false, false, false, false, false, false, false, false, false, false, true, true, true, true, true, true, true, true, false, false, false, true, false, true, true, true, true, true, true, false, true, true, true, true, false, true, true, true, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false};
+        field_E = "Now, clicking near the selected Imp will make it blow up! Move to a target and try it out.";
+    }
+}

@@ -119,7 +119,7 @@ final class sb {
         var9 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           var2_int = IntKeyLookup.field_g.field_nb;
-          if (bk.field_J.a(-31497) == 8) {
+          if (Checkbox.field_J.a(-31497) == 8) {
             SoftwareRasterizer.setClip(0, 0, 391, 480);
           }
           stackIn_5_0 = fe.field_g;
@@ -144,7 +144,7 @@ final class sb {
           boolean decompiledFrameRemainder1 = true;
           var3 = null;
           if (bm.field_g.field_bb != -1) {
-            var4_ref_ml = bk.field_J.a(bm.field_g.field_bb, true);
+            var4_ref_ml = Checkbox.field_J.a(bm.field_g.field_bb, true);
             if (var4_ref_ml != null) {
               var5 = var4_ref_ml.o(-22625);
               if (17 == var5) {
@@ -171,7 +171,7 @@ final class sb {
                       decompiledFrameRemainder1 = false;
                     }
                     else {
-                      var12 = bk.field_J.e(3, var4_ref_ml.y(17571));
+                      var12 = Checkbox.field_J.e(3, var4_ref_ml.y(17571));
                       var11 = var12;
                       var10 = var11;
                       var3 = var10;
@@ -185,7 +185,7 @@ final class sb {
                       }
                     }
                   } else {
-                    var12 = bk.field_J.e(3, var4_ref_ml.y(17571));
+                    var12 = Checkbox.field_J.e(3, var4_ref_ml.y(17571));
                     var11 = var12;
                     var10 = var11;
                     var3 = var10;
@@ -207,8 +207,8 @@ final class sb {
                     }
                   }
                   if ((decompiledFrameRemainder1) &&
-                    (var4_ref_ml.i((byte) -106) > bk.field_J.field_H)) {
-                    ti.field_N = 4;
+                    (var4_ref_ml.i((byte) -106) > Checkbox.field_J.field_H)) {
+                    DropdownList.field_N = 4;
                     pn.field_a = th.field_b;
                     var3 = th.field_b;
                     lm.field_f = th.field_b;
@@ -216,7 +216,7 @@ final class sb {
                 } else {
                   var3 = gj.field_c[var4_ref_ml.o(-22625)];
                   if (var4_ref_ml.q(72)) {
-                    var3 = vi.field_N;
+                    var3 = FadingModalPanel.field_N;
                   }
                 }
               }
@@ -225,17 +225,17 @@ final class sb {
           if (var3 != pn.field_a) {
             pn.field_a = (int[]) (var3);
             lm.field_f = (int[]) (var3);
-            ti.field_N = -1;
+            DropdownList.field_N = -1;
           }
-          if (bk.field_J.a(true) ||
-            bm.field_g.field_I != bk.field_J.d(false) ||
-            bk.field_J.c((byte) 89) &&
-            !bk.field_J.j(39) ||
-            bk.field_J.g(116)) {
+          if (Checkbox.field_J.a(true) ||
+            bm.field_g.field_I != Checkbox.field_J.d(false) ||
+            Checkbox.field_J.c((byte) 89) &&
+            !Checkbox.field_J.j(39) ||
+            Checkbox.field_J.g(116)) {
             var3 = null;
           }
           if (var3 != null) {
-            ej.b(0, param0);
+            TextHotspotWidget.b(0, param0);
           } else {
             UiTheme.field_n = false;
           }

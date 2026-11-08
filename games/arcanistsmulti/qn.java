@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qn extends ob implements ButtonListener {
+final class qn extends ResizableModalPanel implements ButtonListener {
     private TextButton field_V;
     static String field_kb;
     static le field_ob;
@@ -11,21 +11,21 @@ final class qn extends ob implements ButtonListener {
     static String field_nb;
     static String field_jb;
 
-    final static void a(int param0, int param1) {
+    final static void setTargetFrameRate(int param0, int param1) {
         fd.field_d = 1000000000L / (long)param1;
         if (param0 != 16) {
           field_nb = (String) null;
         }
     }
 
-    final static int k(byte param0) {
+    final static int packChatSettings(byte param0) {
         if (param0 != -14) {
           return -111;
         }
         return hd.field_b + ((on.field_h << 4) + (ra.field_m << 2));
     }
 
-    public final void a(boolean param0, int param1, int param2, int param3, TextButton param4) {
+    public final void onButtonActivated(boolean param0, int param1, int param2, int param3, TextButton param4) {
         RuntimeException var6 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -38,7 +38,7 @@ final class qn extends ob implements ButtonListener {
           if (this.field_V != param4) {
             return;
           }
-          this.g(109);
+          this.close(109);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -54,7 +54,7 @@ final class qn extends ob implements ButtonListener {
         }
     }
 
-    private final TextButton a(UiListener param0, String param1, byte param2) {
+    private final TextButton addButton(UiListener param0, String param1, byte param2) {
         TextButton var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
@@ -68,7 +68,7 @@ final class qn extends ob implements ButtonListener {
         RuntimeException decompiledCaughtException = null;
         try {
           var4 = new TextButton(param1, param0);
-          var4.field_r = (WidgetPainter) ((Object) new mm());
+          var4.field_r = (WidgetPainter) ((Object) new MenuButtonPainter());
           var5 = this.field_k - 6;
           this.field_k = this.field_k + 38;
           var4.setBounds(30, var5, -14 + (this.field_v - 16), 15, -128);
@@ -141,7 +141,7 @@ final class qn extends ob implements ButtonListener {
         }
     }
 
-    private final void g(int param0) {
+    private final void close(int param0) {
         if (param0 < 33) {
           return;
         }
@@ -203,7 +203,7 @@ final class qn extends ob implements ButtonListener {
           field_kb = null;
           return;
         }
-        qn.k((byte) 17);
+        qn.packChatSettings((byte) 17);
         field_nb = null;
         field_lb = null;
         field_jb = null;
@@ -213,7 +213,7 @@ final class qn extends ob implements ButtonListener {
         field_kb = null;
     }
 
-    qn(h param0, ih param1) {
+    qn(ModalPanelStack param0, ih param1) {
         super(param0, 200, 150);
         Object var3 = null;
         Object stackIn_12_0 = null;
@@ -228,7 +228,7 @@ final class qn extends ob implements ButtonListener {
           if (oo.field_C == param1) {
             var3 = DirectByteStorage.field_j;
           } else {
-            if (param1 != vi.field_C) {
+            if (param1 != FadingModalPanel.field_C) {
               if (param1 == bh.field_c) {
                 this.field_k = this.field_k + 30;
                 var3 = fl.field_d;
@@ -247,9 +247,9 @@ final class qn extends ob implements ButtonListener {
           var4.field_j = 50;
           var4.field_k = 80;
           var4.field_n = 0;
-          var4.field_r = (WidgetPainter) ((Object) new jm(WidgetStyleLayer.field_e, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
+          var4.field_r = (WidgetPainter) ((Object) new TextWidgetPainter(WidgetStyleLayer.field_e, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.addChild(-86, var4);
-          this.field_V = this.a((UiListener) (this), dd.field_e, (byte) 113);
+          this.field_V = this.addButton((UiListener) (this), dd.field_e, (byte) 113);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

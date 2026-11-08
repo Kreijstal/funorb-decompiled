@@ -22,12 +22,12 @@ final class ao {
             field_a = (String) null;
           }
           if (da.field_d != null) {
-            da.field_d.field_G.a(args, (byte) -37);
+            da.field_d.field_G.setSuggestions(args, (byte) -37);
           }
           if (null == oa.field_c) {
             return;
           }
-          oa.field_c.field_M.a(args, (byte) -100);
+          oa.field_c.field_M.setSuggestions(args, (byte) -100);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -95,19 +95,19 @@ final class ao {
         if (param1 != 1) {
           field_a = (String) null;
           if (param0 % 10L != 0L) {
-            ng.a(true, param0);
+            ng.sleep(true, param0);
             return;
           }
-          ng.a(true, -1L + param0);
-          ng.a(true, 1L);
+          ng.sleep(true, -1L + param0);
+          ng.sleep(true, 1L);
           return;
         }
         if (param0 % 10L != 0L) {
-          ng.a(true, param0);
+          ng.sleep(true, param0);
           return;
         }
-        ng.a(true, -1L + param0);
-        ng.a(true, 1L);
+        ng.sleep(true, -1L + param0);
+        ng.sleep(true, 1L);
     }
 
     final static int a(boolean param0) {
@@ -131,9 +131,9 @@ final class ao {
         ri.field_a = SoftwareRasterizer.field_j;
         WidgetStyleLayer.a((byte) -128);
         aj.field_h.a(0, 0, -40 + (k.field_d.field_I - 2), k.field_d.field_x, 5);
-        kg.field_c.setBounds(se.field_H.field_x, 0, 0, ImageProducerRasterBuffer.field_r, (byte) -120);
+        kg.field_c.setBounds(DraggableWidget.field_H.field_x, 0, 0, ImageProducerRasterBuffer.field_r, (byte) -120);
         int var1 = 2 + ImageProducerRasterBuffer.field_r;
-        mj.field_s.setBounds(se.field_H.field_x, 0, !fc.field_a ? 0 : var1, -(fc.field_a ? var1 : 0) + se.field_H.field_I, (byte) -120);
+        StatefulTextPainter.field_s.setBounds(DraggableWidget.field_H.field_x, 0, !fc.field_a ? 0 : var1, -(fc.field_a ? var1 : 0) + DraggableWidget.field_H.field_I, (byte) -120);
         ie.l((byte) 100);
         ii.field_b.setBounds(k.field_d.field_x, 0, k.field_d.field_I - 40, 40, (byte) -120);
         sm.field_c.setBounds(fn.field_e.field_x, 0, 0, 30, (byte) -120);
@@ -185,14 +185,14 @@ final class ao {
           }
           var4 = qe.field_o;
           while (pm.field_f.length > var3_int) {
-            var5 = ln.field_M[var3_int];
+            var5 = AccountRegistrationPanel.field_M[var3_int];
             if (var5 < 0) {
               var4 = var4 + u.field_l;
             } else {
               var6 = lc.a(true, pm.field_f[var3_int], (byte) -97);
               var4 = var4 + ic.field_a;
               var7 = -(var6 >> 1) + af.field_Eb;
-              if (bj.a(param2, 39, var4, var6 + (f.field_h << 1), tm.field_b + (FullscreenFocusCanvas.field_d << 1), param1, var7 - f.field_h)) {
+              if (bj.containsPoint(param2, 39, var4, var6 + (f.field_h << 1), tm.field_b + (FullscreenFocusCanvas.field_d << 1), param1, var7 - f.field_h)) {
                 stackIn_10_0 = var5;
                 return stackIn_10_0;
               }

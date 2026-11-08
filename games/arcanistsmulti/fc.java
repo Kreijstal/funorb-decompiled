@@ -149,7 +149,7 @@ final class fc {
             return false;
           }
           var5 = -27 % ((param0 + 66) / 51);
-          LoginPanel.a(var6, true);
+          LoginPanel.decodeIndexedSpriteSheet(var6, true);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

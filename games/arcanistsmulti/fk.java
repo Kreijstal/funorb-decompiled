@@ -34,7 +34,7 @@ final class fk extends IntrusiveNode {
           field_h = (int[]) null;
         }
         if (fj.field_j == 10 ||
-          !ke.g(-115)) {
+          !LabeledField.g(-115)) {
           DiskCacheWorker.b((byte) 108);
           fj.field_j = 11;
         }
@@ -203,9 +203,9 @@ final class fk extends IntrusiveNode {
     final static IndexedSprite[] c(int param0) {
         int var2 = 0;
         int var3 = ArcanistsMulti.field_G ? 1 : 0;
-        IndexedSprite[] var1 = new IndexedSprite[h.field_J];
-        for (var2 = param0; h.field_J > var2; var2++) {
-          var1[var2] = new IndexedSprite(pb.field_g, gn.field_a, hl.field_l[var2], SectorCacheStore.field_d[var2], jg.field_p[var2], ho.field_i[var2], ln.field_I[var2], ph.field_c);
+        IndexedSprite[] var1 = new IndexedSprite[ModalPanelStack.field_J];
+        for (var2 = param0; ModalPanelStack.field_J > var2; var2++) {
+          var1[var2] = new IndexedSprite(pb.field_g, gn.field_a, hl.field_l[var2], SectorCacheStore.field_d[var2], jg.field_p[var2], ho.field_i[var2], AccountRegistrationPanel.field_I[var2], ph.field_c);
         }
         CanvasRasterBuffer.a(-18229);
         return var1;
@@ -357,7 +357,7 @@ final class fk extends IntrusiveNode {
         int var8 = 0;
         try {
           var2_int = EmailLoginCredentials.field_g;
-          var3 = me.field_I;
+          var3 = MenuButtonPanel.field_I;
           var4 = IntrusiveNode.field_c.field_Z.wrappedLineCount(param1, 500);
           var5 = 6 + IntrusiveNode.field_c.field_Z.getWrappedWidth(param1, 500);
           var6 = 2 + var4 * ImageProducerRasterBuffer.field_r;
@@ -376,7 +376,7 @@ final class fk extends IntrusiveNode {
           this.field_m = param0;
           this.field_l = param0.getTargetVolume();
           this.field_n = param1;
-          this.field_m.setVolumeQ6(si.field_l * this.field_l + 128 >> 8);
+          this.field_m.setVolumeQ6(CheckboxPainter.field_l * this.field_l + 128 >> 8);
         } catch (RuntimeException runtimeException) {
           throw aa.wrapException((Throwable) ((Object) runtimeException), "fk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

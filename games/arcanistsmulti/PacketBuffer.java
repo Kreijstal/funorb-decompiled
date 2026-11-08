@@ -556,8 +556,8 @@ class PacketBuffer extends IntrusiveNode {
     }
 
     final static void k(int param0) {
-        da.field_d = new ln();
-        g.field_e.a((byte) -92, (UiComponent) (da.field_d));
+        da.field_d = new AccountRegistrationPanel();
+        g.field_e.setContent((byte) -92, (UiComponent) (da.field_d));
         if (param0 != 970210916) {
           field_i = (String) null;
         }
@@ -712,14 +712,14 @@ class PacketBuffer extends IntrusiveNode {
             ArchiveProvider.field_f[var1_int] = new lc(var1_int);
           }
           mn.field_r = 13;
-          si.field_g = 13;
-          qn.a(16, 50);
+          CheckboxPainter.field_g = 13;
+          qn.setTargetFrameRate(16, 50);
           sm.a(-107, 50);
           if (!lc.a((byte) 112)) {
             ce.field_i = tj.a(4, -21402);
             ci.field_d = AlternateUsernameCredentials.a(6, false);
           }
-          bk.a(2);
+          Checkbox.a(2);
         } catch (RuntimeException runtimeException) {
           throw aa.wrapException((Throwable) ((Object) runtimeException), "wk.FB(" + param0 + ')');
         }

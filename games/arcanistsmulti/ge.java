@@ -42,7 +42,7 @@ final class ge extends IntrusiveNode {
             stackIn_5_0 = (BinaryBitmapFont) null;
             return stackIn_5_0;
           }
-          var2 = new BinaryBitmapFont(param0, hl.field_l, SectorCacheStore.field_d, jg.field_p, ho.field_i, ln.field_I);
+          var2 = new BinaryBitmapFont(param0, hl.field_l, SectorCacheStore.field_d, jg.field_p, ho.field_i, AccountRegistrationPanel.field_I);
           CanvasRasterBuffer.a(-18229);
           stackIn_7_0 = var2;
           return stackIn_7_0;

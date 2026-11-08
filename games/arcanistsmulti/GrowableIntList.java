@@ -126,7 +126,7 @@ final class GrowableIntList {
           }
           if (2 == nj.field_c &&
             !wm.c(false)) {
-            boolean decompiledSharedTail1 = !(!ArrayWidgetContainer.a(ua.field_S, 1));
+            boolean decompiledSharedTail1 = !(!ArrayWidgetContainer.a(GridContainer.field_S, 1));
             if (!decompiledSharedTail1) {
               var2 = tj.a(125, new String[]{so.field_p}, qc.field_b);
               decompiledSharedTail1 = (var10 != 0);

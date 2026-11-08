@@ -12,7 +12,7 @@ final class mb extends mh {
     Object[] field_W;
     static int[] field_U;
     static long[] field_V;
-    private ti field_X;
+    private DropdownList field_X;
     static String field_S;
     static int field_P;
     static String field_O;
@@ -121,7 +121,7 @@ final class mb extends mh {
         }
         if (this.field_W.length > var5) {
           this.field_Y = var5;
-          this.field_X.a(0);
+          this.field_X.notifySelectionChanged(0);
           return;
         }
     }
@@ -129,9 +129,9 @@ final class mb extends mh {
     final static int j(byte param0) {
         if (param0 != 19) {
           mb.a(-104, 99);
-          return -bk.field_I + bj.field_tb;
+          return -Checkbox.field_I + bj.field_tb;
         }
-        return -bk.field_I + bj.field_tb;
+        return -Checkbox.field_I + bj.field_tb;
     }
 
     final Object g(int param0) {
@@ -280,7 +280,7 @@ final class mb extends mh {
         }
     }
 
-    mb(ti param0, BitmapFont param1, Object[] param2, int param3) {
+    mb(DropdownList param0, BitmapFont param1, Object[] param2, int param3) {
         super(param0);
         try {
           this.field_X = param0;

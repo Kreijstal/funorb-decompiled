@@ -124,7 +124,7 @@ final class c {
         var18 = null;
         var19 = ArcanistsMulti.field_G ? 1 : 0;
         try {
-          ej.a(16, oo.field_y);
+          TextHotspotWidget.a(16, oo.field_y);
           if (DirectByteStorage.field_f != null) {
             IntrusiveNodeHashTable.field_o.field_ub = true;
             var22 = SocketConnector.field_d;
@@ -137,7 +137,7 @@ final class c {
             var7 = jf.field_d;
             jf.field_d.field_I = 0;
             var7.field_x = 0;
-            if (qk.k((byte) 105)) {
+            if (ContentTransitionDialog.k((byte) 105)) {
               nl.field_Db.field_rb = fb.field_c.toUpperCase();
               var9 = (2 + ReflectionCheckRequest.field_h.field_x) / 2;
               SocketConnector.field_d.setBounds(-2 + var9, 0, -40 + ReflectionCheckRequest.field_h.field_I, 40, (byte) -120);
@@ -155,12 +155,12 @@ final class c {
               SocketConnector.field_d.field_v = ko.field_h.field_v;
               if (0 < oe.field_b) {
                 if (oe.field_b != 1) {
-                  var10_ref_String = tj.a(-36, new String[]{Integer.toString(oe.field_b)}, mm.field_y);
+                  var10_ref_String = tj.a(-36, new String[]{Integer.toString(oe.field_b)}, MenuButtonPainter.field_y);
                   if (var19 != 0) {
-                    var10_ref_String = qk.field_pb;
+                    var10_ref_String = ContentTransitionDialog.field_pb;
                   }
                 } else {
-                  var10_ref_String = qk.field_pb;
+                  var10_ref_String = ContentTransitionDialog.field_pb;
                 }
                 if ((16 & sb.field_e) == 0 &&
                   !so.field_j) {
@@ -406,7 +406,7 @@ final class c {
                   CanvasRasterBuffer.field_k.field_ub = false;
                   if (CanvasRasterBuffer.field_k.field_A) {
                     if (tn.field_Ob.field_c.field_Mb != 0) {
-                      TextLayout.field_c = tj.a(param3 ^ 119, new String[]{ec.field_b}, q.field_O);
+                      TextLayout.field_c = tj.a(param3 ^ 119, new String[]{ec.field_b}, DropTargetWidget.field_O);
                       if (var19 != 0) {
                         TextLayout.field_c = DiskCacheRequest.field_G;
                       }
@@ -435,7 +435,7 @@ final class c {
                       break;
                     }
                     if (stackIn_154_0) {
-                      var25 = "<col=A00000>" + ob.field_bb[var13_intLifetime1] + "</col>";
+                      var25 = "<col=A00000>" + ResizableModalPanel.field_bb[var13_intLifetime1] + "</col>";
                       if (var11 != null) {
                         var12 = 1;
                         var11 = (String) (var11) + ", " + var25;

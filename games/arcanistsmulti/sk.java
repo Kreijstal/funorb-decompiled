@@ -36,7 +36,7 @@ final class sk {
 
     final static void a(ec param0, int param1, int param2, int param3) {
         try {
-          mj.field_r = param2;
+          StatefulTextPainter.field_r = param2;
           if (param1 != -28995) {
             sk.a(-70);
           }

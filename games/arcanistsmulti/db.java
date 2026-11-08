@@ -42,7 +42,7 @@ final class db {
           }
           var4_int = -1;
           for (var5 = param3; param0 > var5; var5++) {
-            var4_int = bl.field_i[255 & (param2[var5] ^ var4_int)] ^ var4_int >>> 8;
+            var4_int = DateOfBirthValidator.field_i[255 & (param2[var5] ^ var4_int)] ^ var4_int >>> 8;
           }
           var4_int = ~var4_int;
           stackIn_7_0 = var4_int;

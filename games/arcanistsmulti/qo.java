@@ -53,7 +53,7 @@ final class qo {
         if (param3 < -125) {
           jf.field_a.writeByte(param1, (byte) -50);
           jf.field_a.writeShort(param2, (byte) -66);
-          jf.field_a.rsaEncrypt(q.field_K, (byte) 98, nl.field_Jb);
+          jf.field_a.rsaEncrypt(DropTargetWidget.field_K, (byte) 98, nl.field_Jb);
           he.field_e.writeOpcode((byte) -25, 18);
           fieldTemp$0 = he.field_e.position + 1;
           he.field_e.position = he.field_e.position + 1;
@@ -65,7 +65,7 @@ final class qo {
         qo.a(5, 14, 54, (byte) 68);
         jf.field_a.writeByte(param1, (byte) -50);
         jf.field_a.writeShort(param2, (byte) -66);
-        jf.field_a.rsaEncrypt(q.field_K, (byte) 98, nl.field_Jb);
+        jf.field_a.rsaEncrypt(DropTargetWidget.field_K, (byte) 98, nl.field_Jb);
         he.field_e.writeOpcode((byte) -25, 18);
         int fieldTemp$1 = he.field_e.position + 1;
         he.field_e.position = he.field_e.position + 1;

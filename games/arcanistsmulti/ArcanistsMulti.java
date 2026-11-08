@@ -49,21 +49,21 @@ public final class ArcanistsMulti extends ud {
           if (null != va.field_c) {
             TextTableInitializer.initializeTextTable(va.field_c, (byte) 22);
             va.field_c = null;
-            bk.a(2);
+            Checkbox.a(2);
           }
           hb.field_Fb = BufferedRandomAccessFile.a(6, (byte) 62);
           ue.field_d = BufferedRandomAccessFile.a(1, (byte) 23);
           so.field_k = BufferedRandomAccessFile.a(7, (byte) 11);
           vg.field_l = BufferedRandomAccessFile.a(2, (byte) 55);
-          mg.field_E = BufferedRandomAccessFile.a(3, (byte) 36);
+          DateInputWidget.field_E = BufferedRandomAccessFile.a(3, (byte) 36);
           if (!param0) {
             this.m(-126);
           }
           ki.field_s = BufferedRandomAccessFile.a(4, (byte) 123);
-          tc.field_x = BufferedRandomAccessFile.a(5, (byte) 121);
+          PasswordFieldPainter.field_x = BufferedRandomAccessFile.a(5, (byte) 121);
           ck.field_b = BufferedRandomAccessFile.a(10, (byte) 6);
           wh.field_l = BufferedRandomAccessFile.a(12, (byte) 49);
-          ua.field_K = BufferedRandomAccessFile.a(13, (byte) 27);
+          GridContainer.field_K = BufferedRandomAccessFile.a(13, (byte) 27);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -186,7 +186,7 @@ public final class ArcanistsMulti extends ud {
           this.a(stackIn_10_1, stackIn_11_2);
           EmailLoginCredentials.field_j = ce.field_m.field_m;
           EmailLoginCredentials.field_f = ce.field_m.field_e;
-          bi.field_I = (EmailLoginCredentials.field_f - 640) / 2;
+          ValidatedTextWidget.field_I = (EmailLoginCredentials.field_f - 640) / 2;
           uc.field_a = (-480 + EmailLoginCredentials.field_j) / 2;
           if (ja.field_y) {
             this.e(true);
@@ -210,7 +210,7 @@ public final class ArcanistsMulti extends ud {
                   if (~ii.field_c == ~ii.field_a) {
                     var2_int = we.b(-3);
                     if (1 == var2_int) {
-                      if (si.field_g == 0) {
+                      if (CheckboxPainter.field_g == 0) {
                         pi.field_c = true;
                       }
                       Bzip2State.a(ud.field_o, (byte) -98, 0);
@@ -238,7 +238,7 @@ public final class ArcanistsMulti extends ud {
                       u.b(6);
                     }
                     if (2 == var2_intLifetime2) {
-                      UsernameCredentials.a((byte) 75, cd.getApplet(123));
+                      UsernameCredentials.a((byte) 75, IconButtonPainter.getApplet(123));
                       if (var27 != 0) {
                         ao.a(5623);
                       }
@@ -304,12 +304,12 @@ public final class ArcanistsMulti extends ud {
                   lf.switchToRequestedScreen((byte) 80);
                   TextLayout.field_b = false;
                   mn.field_r = 9;
-                  jm.field_b = UiContainer.field_z.readString(-1);
+                  TextWidgetPainter.field_b = UiContainer.field_z.readString(-1);
                   continue;
                 }
                 if (on.field_g == 14) {
                   lf.switchToRequestedScreen((byte) 80);
-                  jn.a(150, dn.f((byte) -112), -13173, LoginMethod.a(1), li.field_E, PacketBuffer.f((byte) -125), 1024, wh.nextPowerOfTwo(1000, 678231216), wh.nextPowerOfTwo(6, 678231216), ArchiveIndex.field_a.length);
+                  jn.a(150, dn.f((byte) -112), -13173, LoginMethod.a(1), NameSuggestionsPanel.field_E, PacketBuffer.f((byte) -125), 1024, wh.nextPowerOfTwo(1000, 678231216), wh.nextPowerOfTwo(6, 678231216), ArchiveIndex.field_a.length);
                   ra.a(ViewportController.b((byte) 115), 64, DiskCacheWorker.c((byte) -122));
                   mn.field_r = -2;
                   wa.field_Ob = true;
@@ -320,10 +320,10 @@ public final class ArcanistsMulti extends ud {
                   if (wa.field_Ob) {
                     lf.switchToRequestedScreen((byte) 80);
                     ho.a(0);
-                    cn.c(true);
+                    BirthDateEntryPanel.c(true);
                     hi.field_a = false;
                     wa.field_Ob = false;
-                    mj.field_w = false;
+                    StatefulTextPainter.field_w = false;
                     fi.field_h = true;
                     wa.field_Kb = true;
                     MusicCrossfadeStream.field_A = false;
@@ -385,7 +385,7 @@ public final class ArcanistsMulti extends ud {
                     }
                     cb.field_e = cb.field_e | var3_long;
                   }
-                  ua.field_P = md.sumFlaggedValues(false, cb.field_e);
+                  GridContainer.field_P = md.sumFlaggedValues(false, cb.field_e);
                   nm.field_h = -1;
                   la.field_a = true;
                   continue;
@@ -504,13 +504,13 @@ public final class ArcanistsMulti extends ud {
                   }
                   if (on.field_g != 57) {
                     r.field_b = var17;
-                    mj.field_w = true;
+                    StatefulTextPainter.field_w = true;
                   } else {
                     SpriteState.field_z = var17;
                     hi.field_a = true;
                     jg.a(-3);
                     ArchiveIndex.a((byte) 121);
-                    sc.i((byte) -53);
+                    ValidationHelpWidget.i((byte) -53);
                   }
                   stackIn_233_0 = (var16Lifetime1 == 0) ? 5 : -1;
                   mn.field_r = stackIn_233_0;
@@ -520,7 +520,7 @@ public final class ArcanistsMulti extends ud {
                 }
                 if (on.field_g == 59) {
                   if (hi.field_a ||
-                    mj.field_w) {
+                    StatefulTextPainter.field_w) {
                     lf.switchToRequestedScreen((byte) 80);
                     if (hi.field_a &&
                       SpriteState.field_z != null) {
@@ -528,7 +528,7 @@ public final class ArcanistsMulti extends ud {
                     }
                     fi.field_h = true;
                     hi.field_a = false;
-                    mj.field_w = false;
+                    StatefulTextPainter.field_w = false;
                     MusicCrossfadeStream.field_A = false;
                     mn.field_r = -2;
                     ao.field_d = true;
@@ -540,7 +540,7 @@ public final class ArcanistsMulti extends ud {
                 }
                 var2 = null;
                 if (!hi.field_a) {
-                  if (mj.field_w) {
+                  if (StatefulTextPainter.field_w) {
                     var2 = r.field_b;
                   }
                 } else {
@@ -559,7 +559,7 @@ public final class ArcanistsMulti extends ud {
             }
             var2_intLifetime1 = stackIn_263_0 % stackIn_263_1;
             we.a(0, (byte) 121);
-            if (-2 == si.field_g) {
+            if (-2 == CheckboxPainter.field_g) {
               ao.field_d = true;
             }
             if (ao.field_d) {
@@ -588,7 +588,7 @@ public final class ArcanistsMulti extends ud {
                     fi.field_h = true;
                     wa.field_Kb = true;
                     if (hi.field_a) {
-                      jm.field_b = we.field_e;
+                      TextWidgetPainter.field_b = we.field_e;
                       gj.a(false, true, 9, mn.field_r);
                       if (var27 != 0) {
                         gj.a(false, true, 0, mn.field_r);
@@ -597,8 +597,8 @@ public final class ArcanistsMulti extends ud {
                       gj.a(false, true, 0, mn.field_r);
                     }
                     lf.switchToRequestedScreen((byte) 80);
-                    ArchiveProvider.field_f[si.field_g].a(false, 0, (byte) -123);
-                    mj.field_w = false;
+                    ArchiveProvider.field_f[CheckboxPainter.field_g].a(false, 0, (byte) -123);
+                    StatefulTextPainter.field_w = false;
                     wa.field_Ob = false;
                     hi.field_a = false;
                     bc.a((byte) -50);
@@ -722,7 +722,7 @@ public final class ArcanistsMulti extends ud {
               ec.field_c = "clockwork";
             }
           }
-          ti.a((byte) -90);
+          DropdownList.initializeCaptionTable((byte) -90);
           if (null != vg.field_l) {
             if (LoadingTracker.field_a.c(-10923) &&
               LoadingTracker.field_a.a("basic", -24417)) {
@@ -736,82 +736,82 @@ public final class ArcanistsMulti extends ud {
                       ud.field_D.a("lobby", -24417)) {
                       if (vg.field_l.c(-10923) &&
                         vg.field_l.a(106)) {
-                        if (mg.field_E.c(-10923) &&
-                          mg.field_E.a(-15)) {
+                        if (DateInputWidget.field_E.c(-10923) &&
+                          DateInputWidget.field_E.a(-15)) {
                           if (ki.field_s.c(-10923) &&
                             ki.field_s.a(125)) {
-                            if (tc.field_x.c(-10923) &&
-                              tc.field_x.a(true, "arcanists_titlescreen", "") &&
-                              tc.field_x.a(true, "arcanists_grassland", "")) {
+                            if (PasswordFieldPainter.field_x.c(-10923) &&
+                              PasswordFieldPainter.field_x.a(true, "arcanists_titlescreen", "") &&
+                              PasswordFieldPainter.field_x.a(true, "arcanists_grassland", "")) {
                               if (ue.field_d.c(-10923) &&
                                 ue.field_d.a("", -24417)) {
                                 if (!ue.field_d.a(ec.field_c, -24417)) {
-                                  rb.a(nm.formatArchiveProgress(17153, gd.field_nb, ue.field_d, sc.field_Z, ec.field_c), false, 40.0f);
+                                  rb.a(nm.formatArchiveProgress(17153, LoadingProgressDialog.field_nb, ue.field_d, ValidationHelpWidget.field_Z, ec.field_c), false, 40.0f);
                                   return false;
                                 }
                                 if (so.field_k.c(-10923) &&
                                   so.field_k.a(109)) {
                                   if (hb.field_Fb.c(-10923) &&
                                     hb.field_Fb.a(-33)) {
-                                    if (ua.field_K.c(-10923) &&
-                                      ua.field_K.a(-121)) {
+                                    if (GridContainer.field_K.c(-10923) &&
+                                      GridContainer.field_K.a(-121)) {
                                       wm.g(0);
-                                      rb.a(sn.field_N, false, 60.0f);
+                                      rb.a(DisplayNameForm.field_N, false, 60.0f);
                                       this.updateClient((byte) -89);
                                       if (!param1) {
                                         return false;
                                       }
-                                      lo.field_w = new SoundCache(vg.field_l, mg.field_E);
+                                      lo.field_w = new SoundCache(vg.field_l, DateInputWidget.field_E);
                                       vg.field_l = null;
-                                      mg.field_E = null;
-                                      bk.a(2);
+                                      DateInputWidget.field_E = null;
+                                      Checkbox.a(2);
                                       return false;
                                     }
-                                    rb.a(qe.formatLoadingProgress(mm.field_t, 74, ua.field_K, NodeHashTable.field_c), false, 55.0f);
+                                    rb.a(qe.formatLoadingProgress(MenuButtonPainter.field_t, 74, GridContainer.field_K, NodeHashTable.field_c), false, 55.0f);
                                     return false;
                                   }
-                                  rb.a(qe.formatLoadingProgress(mm.field_t, 115, hb.field_Fb, NodeHashTable.field_c), false, 50.0f);
+                                  rb.a(qe.formatLoadingProgress(MenuButtonPainter.field_t, 115, hb.field_Fb, NodeHashTable.field_c), false, 50.0f);
                                   return false;
                                 }
-                                rb.a(qe.formatLoadingProgress(gd.field_nb, 113, so.field_k, sc.field_Z), false, 45.0f);
+                                rb.a(qe.formatLoadingProgress(LoadingProgressDialog.field_nb, 113, so.field_k, ValidationHelpWidget.field_Z), false, 45.0f);
                                 return false;
                               }
-                              rb.a(nm.formatArchiveProgress(17153, gd.field_nb, ue.field_d, sc.field_Z, ""), false, 35.0f);
+                              rb.a(nm.formatArchiveProgress(17153, LoadingProgressDialog.field_nb, ue.field_d, ValidationHelpWidget.field_Z, ""), false, 35.0f);
                               return false;
                             }
-                            rb.a(qe.formatLoadingProgress(ii.field_e, 96, tc.field_x, TextLayout.field_e), false, 32.0f);
+                            rb.a(qe.formatLoadingProgress(ii.field_e, 96, PasswordFieldPainter.field_x, TextLayout.field_e), false, 32.0f);
                             return false;
                           }
                           rb.a(qe.formatLoadingProgress(ii.field_e, 76, ki.field_s, TextLayout.field_e), false, 29.0f);
                           return false;
                         }
-                        rb.a(qe.formatLoadingProgress(mj.field_v, 76, mg.field_E, fn.field_a), false, 23.0f);
+                        rb.a(qe.formatLoadingProgress(StatefulTextPainter.field_v, 76, DateInputWidget.field_E, fn.field_a), false, 23.0f);
                         return false;
                       }
-                      rb.a(qe.formatLoadingProgress(mj.field_v, 122, vg.field_l, fn.field_a), false, 20.0f);
+                      rb.a(qe.formatLoadingProgress(StatefulTextPainter.field_v, 122, vg.field_l, fn.field_a), false, 20.0f);
                       return false;
                     }
                     rb.a(nm.formatArchiveProgress(17153, ra.field_d, ud.field_D, wh.field_a, "lobby"), false, 17.0f);
                     return false;
                   }
-                  rb.a(nm.formatArchiveProgress(17153, gd.field_nb, LoadingTracker.field_a, sc.field_Z, "lobby"), false, 14.0f);
+                  rb.a(nm.formatArchiveProgress(17153, LoadingProgressDialog.field_nb, LoadingTracker.field_a, ValidationHelpWidget.field_Z, "lobby"), false, 14.0f);
                   return false;
                 }
                 rb.a(nm.formatArchiveProgress(17153, ra.field_d, ud.field_D, wh.field_a, "roman20"), false, 11.0f);
                 return false;
               }
-              rb.a(nm.formatArchiveProgress(17153, gd.field_nb, LoadingTracker.field_a, sc.field_Z, "roman20"), false, 8.0f);
+              rb.a(nm.formatArchiveProgress(17153, LoadingProgressDialog.field_nb, LoadingTracker.field_a, ValidationHelpWidget.field_Z, "roman20"), false, 8.0f);
               return false;
             }
-            rb.a(nm.formatArchiveProgress(17153, gd.field_nb, LoadingTracker.field_a, sc.field_Z, "basic"), false, 5.0f);
+            rb.a(nm.formatArchiveProgress(17153, LoadingProgressDialog.field_nb, LoadingTracker.field_a, ValidationHelpWidget.field_Z, "basic"), false, 5.0f);
             return false;
           }
-          if (tc.field_x != null &&
+          if (PasswordFieldPainter.field_x != null &&
             DelegatingCanvas.field_c == null) {
-            rb.a(vi.field_J, false, 85.0f);
+            rb.a(FadingModalPanel.field_J, false, 85.0f);
             this.updateClient((byte) -89);
             DelegatingCanvas.field_c = new MusicTrack[10];
-            bk.a(2);
+            Checkbox.a(2);
             return false;
           }
           var3_intLifetime1 = -84 / ((14 - param0) / 56);
@@ -823,14 +823,14 @@ public final class ArcanistsMulti extends ud {
               IntrusiveDeque.field_b = fj.loadSprite("", -22612, ue.field_d, "newlogo");
               g.field_a = fj.loadSprite("", -22612, ue.field_d, "newlogostars");
               sm.field_d = fj.loadSprite("", -22612, ue.field_d, "newlogostars2");
-              vi.field_I = fj.loadSprite("", -22612, ue.field_d, "arrowbuttonsmall");
+              FadingModalPanel.field_I = fj.loadSprite("", -22612, ue.field_d, "arrowbuttonsmall");
               SceneWidgetNode.field_q = fj.loadSprite("", -22612, ue.field_d, "arrowbutton");
               km.field_e = fj.loadSprite("", -22612, ue.field_d, "border_corner");
               PacketBuffer.field_l = fj.loadSprite("", -22612, ue.field_d, "border_bar_h");
               MusicPatchPcmStream.field_k = fj.loadSprite("", -22612, ue.field_d, "border_bar_v");
               mc.field_a = qe.loadSpriteSheet(ue.field_d, "charactericons", "", 55);
               rb.field_o = qe.loadSpriteSheet(ue.field_d, "bonushats", "", 63);
-              bk.a(2);
+              Checkbox.a(2);
               return false;
             }
             if (LoginPanel.field_M == null) {
@@ -850,10 +850,10 @@ public final class ArcanistsMulti extends ud {
               TextTableInitializer.field_a = fj.loadSprite("", -22612, ue.field_d, "cldtr");
               MusicPatchNode.field_F = fj.loadSprite("", -22612, ue.field_d, "cldbl");
               pe.field_Ib = fj.loadSprite("", -22612, ue.field_d, "cldtl");
-              j.field_a = fj.loadSprite("", -22612, ue.field_d, "cldbr");
-              gd.field_mb = fj.loadSprite("", -22612, ue.field_d, "cldflat");
+              BevelBoxPainter.field_a = fj.loadSprite("", -22612, ue.field_d, "cldbr");
+              LoadingProgressDialog.field_mb = fj.loadSprite("", -22612, ue.field_d, "cldflat");
               fe.field_o = fj.loadSprite("", -22612, ue.field_d, "spell_book");
-              bk.a(2);
+              Checkbox.a(2);
               return false;
             }
             if (null == DiskCacheRequest.field_E) {
@@ -890,7 +890,7 @@ public final class ArcanistsMulti extends ud {
                 dh.loadSceneSprites(ue.field_d, (byte) -66);
                 tj.field_t = LoadingTracker.loadBinaryFont(so.field_k, -24755, "", "font", ue.field_d);
                 mi.field_B = LoadingTracker.loadBinaryFont(so.field_k, -24755, "", "smallfont", ue.field_d);
-                bk.a(2);
+                Checkbox.a(2);
                 stackIn_188_0 = 0;
               }
               return stackIn_188_0 != 0;
@@ -909,9 +909,9 @@ public final class ArcanistsMulti extends ud {
               hn.field_d = qe.loadSpriteSheet(ue.field_d, "beards", "", 106);
               tj.field_A = qe.loadSpriteSheet(ue.field_d, "hats", "", 124);
               bo.field_a = qe.loadSpriteSheet(ue.field_d, "mouths", "", 42);
-              h.field_I = qe.loadSpriteSheet(ue.field_d, "pfeet", "", 58);
+              ModalPanelStack.field_I = qe.loadSpriteSheet(ue.field_d, "pfeet", "", 58);
               fn.field_b = qe.loadSpriteSheet(ue.field_d, "mfeet", "", 113);
-              bk.a(2);
+              Checkbox.a(2);
               return false;
             }
             if (null == ij.field_Pb) {
@@ -930,7 +930,7 @@ public final class ArcanistsMulti extends ud {
               ArrayWidgetContainer.field_E = qe.loadSpriteSheet(ue.field_d, "clockworkaura", "", 75);
               jg.field_c = pk.a("", 0, "runes", ue.field_d);
               WhirlpoolHasher.field_o = qe.loadSpriteSheet(ue.field_d, "spellbooks", "", 93);
-              bk.a(2);
+              Checkbox.a(2);
               return false;
             }
             if (null == nm.field_i) {
@@ -944,7 +944,7 @@ public final class ArcanistsMulti extends ud {
               nm.field_i[7].field_n = nm.field_i[7].field_q;
               nm.field_i[5].field_w = nm.field_i[5].field_y;
               ResizableViewResizeListener.field_h = qe.loadSpriteSheet(ue.field_d, "button_frame", "", 69);
-              bk.a(2);
+              Checkbox.a(2);
               return false;
             }
             if (null == ArchiveRequest.field_t) {
@@ -960,7 +960,7 @@ public final class ArcanistsMulti extends ud {
                   ih.field_e.makeRasterTarget();
                   NodeHashTable.field_d.drawScaledAveraged(0, 0, 32, 32);
                   ce.field_m.a(true);
-                  bk.a(2);
+                  Checkbox.a(2);
                   break;
                 }
                 IntrusiveNodeHashTable.field_a[var4_int] = null;
@@ -995,7 +995,7 @@ public final class ArcanistsMulti extends ud {
               var6[1][2] = var6[1][1];
               var6[1][1] = var6[1][0];
               var6[1][0] = var7Lifetime1;
-              rb.a(li.field_E, ua.field_K, var4, var5, true, DelegatingCanvas.field_d, WhirlpoolHasher.field_l, 6, ud.field_D, (int[]) null, var6, cn.field_O, (byte) -67, ArchiveIndex.field_a, 3, aj.field_a, LoadingTracker.field_a);
+              rb.a(NameSuggestionsPanel.field_E, GridContainer.field_K, var4, var5, true, DelegatingCanvas.field_d, WhirlpoolHasher.field_l, 6, ud.field_D, (int[]) null, var6, BirthDateEntryPanel.field_O, (byte) -67, ArchiveIndex.field_a, 3, aj.field_a, LoadingTracker.field_a);
               fn.a(200, (byte) -106);
               um.field_a = qf.field_c;
               LinkButtonPainter.field_c = false;
@@ -1008,7 +1008,7 @@ public final class ArcanistsMulti extends ud {
                 var8 = pk.a("", 0, "expansion_screens", ue.field_d);
                 SceneWidgetNode.field_s = new MembershipOfferScreen((java.applet.Applet) (this), SectorCacheStore.field_i, var8, dh.field_Kb);
               }
-              bk.a(2);
+              Checkbox.a(2);
               return false;
             }
           }
@@ -1018,7 +1018,7 @@ public final class ArcanistsMulti extends ud {
           }
           MidiPcmStream.a(-92, new u(hb.field_Fb.a("huffman", "", -1)));
           hb.field_Fb = null;
-          bk.a(2);
+          Checkbox.a(2);
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1049,15 +1049,15 @@ public final class ArcanistsMulti extends ud {
                 var2 != 0) {
                 MusicPatch.field_o = tj.a(param0 ^ -80, new String[]{Integer.toString(var1_int)}, sk.field_g);
               }
-              MusicPatch.field_o = ua.a(new CharSequence[]{(CharSequence) ((Object) MusicPatch.field_o), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) nl.field_Hb)}, -93);
+              MusicPatch.field_o = GridContainer.joinText(new CharSequence[]{(CharSequence) ((Object) MusicPatch.field_o), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) nl.field_Hb)}, -93);
             }
-            vf.field_k.h(77);
+            vf.field_k.dismiss(77);
             PatchEnvelopeSet.c(0);
             if (var2 == 0) {
               return;
             }
           }
-          vf.field_k.g(true);
+          vf.field_k.openMenu(true);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1214,16 +1214,16 @@ public final class ArcanistsMulti extends ud {
           ah.releaseStatics(false);
           r.releaseStatics(8);
           oi.releaseStatics(103);
-          vi.releaseStatics((byte) 62);
-          h.releaseStatics(1);
+          FadingModalPanel.releaseStatics((byte) 62);
+          ModalPanelStack.releaseStatics(1);
           ie.releaseStatics((byte) 25);
-          gd.releaseStatics(103);
+          LoadingProgressDialog.releaseStatics(103);
           no.releaseStatics((byte) -11);
           ed.releaseStatics(-29222);
-          ln.releaseStatics(10);
+          AccountRegistrationPanel.releaseStatics(10);
           td.releaseStatics((byte) 115);
           LoginPanel.a(-1);
-          sn.releaseStatics((byte) 127);
+          DisplayNameForm.releaseStatics((byte) 127);
           ConditionalTextValue.releaseStatics((byte) -60);
           UiTheme.releaseStatics(-60);
           fb.releaseStatics(!param0);
@@ -1268,7 +1268,7 @@ public final class ArcanistsMulti extends ud {
           IsaacCipher.releaseStatics(109);
           ic.releaseStatics(0);
           ge.releaseStatics(-117);
-          cn.releaseStatics((byte) 112);
+          BirthDateEntryPanel.releaseStatics((byte) 112);
           qn.releaseStatics(1);
           cj.releaseStatics(param0);
           sa.releaseStatics(26820);
@@ -1277,21 +1277,21 @@ public final class ArcanistsMulti extends ud {
           ReflectionCheckRequest.releaseStatics(-791);
           BoundedRandomAccessFile.releaseStatics(255);
           ff.a((byte) 46);
-          si.releaseStatics((byte) 36);
-          mj.releaseStatics((byte) -95);
+          CheckboxPainter.releaseStatics((byte) 36);
+          StatefulTextPainter.releaseStatics((byte) -95);
           of.releaseStatics(-56);
           lh.releaseStatics(2);
-          jm.releaseStatics(63);
+          TextWidgetPainter.releaseStatics(63);
           UiComponent.releaseStatics((byte) -17);
           SingleChildContainer.releaseStatics(23123);
           TextLayout.releaseStatics(6481);
-          kn.releaseStatics(3);
+          OptionsDialog.releaseStatics(3);
           ScreenDisplayMode.releaseStatics(true);
           qo.releaseStatics(6);
-          ob.releaseStatics(false);
-          ti.releaseStatics(0);
+          ResizableModalPanel.releaseStatics(false);
+          DropdownList.releaseStatics(0);
           TextButton.releaseStatics(-125);
-          ua.releaseStatics(-1);
+          GridContainer.releaseStatics(-1);
           UiContainer.releaseStatics(true);
           ArrayWidgetContainer.releaseStatics((byte) -90);
           ae.releaseStatics((byte) -125);
@@ -1344,16 +1344,16 @@ public final class ArcanistsMulti extends ud {
           MusicPatch.releaseStatics(param0);
           PatchEnvelopeSet.releaseStatics((byte) 94);
           AudioFilter.releaseStatics();
-          ke.releaseStatics(2);
-          bi.releaseStatics(0);
+          LabeledField.releaseStatics(2);
+          ValidatedTextWidget.releaseStatics(0);
           EditableTextWidget.releaseStatics(1);
-          qk.releaseStatics(0);
+          ContentTransitionDialog.releaseStatics(0);
           om.releaseStatics((byte) -127);
-          li.releaseStatics(1313);
-          ej.releaseStatics(20445);
-          mk.releaseStatics((byte) -125);
-          sc.releaseStatics(15428);
-          bk.releaseStatics(0);
+          NameSuggestionsPanel.releaseStatics(1313);
+          TextHotspotWidget.releaseStatics(20445);
+          ValidationStatusIcon.releaseStatics((byte) -125);
+          ValidationHelpWidget.releaseStatics(15428);
+          Checkbox.releaseStatics(0);
           TextFieldValidator.releaseStatics((byte) -114);
           gg.releaseStatics(28);
           ng.releaseStatics(40);
@@ -1362,19 +1362,19 @@ public final class ArcanistsMulti extends ud {
           tn.releaseStatics((byte) -97);
           dh.releaseStatics((byte) 77);
           fd.releaseStatics(-1);
-          bl.releaseStatics((byte) -79);
-          wl.releaseStatics(0);
+          DateOfBirthValidator.releaseStatics((byte) -79);
+          NumericDateInputWidget.releaseStatics(0);
           nj.releaseStatics((byte) -72);
-          mg.releaseStatics(42);
-          sl.releaseStatics(123);
+          DateInputWidget.releaseStatics(42);
+          ScrollContainer.releaseStatics(123);
           GrowableIntList.c(-125);
           re.releaseStatics(0);
-          se.releaseStatics(-114);
-          q.f(-1764031359);
+          DraggableWidget.releaseStatics(-114);
+          DropTargetWidget.f(-1764031359);
           bj.l((byte) -46);
           gf.releaseStatics((byte) -108);
           wm.releaseStatics(-5903);
-          ma.releaseStatics((byte) 54);
+          Scrollbar.releaseStatics((byte) 54);
           DirectByteStorage.releaseStatics(92);
           pk.releaseStatics(-14987);
           SecondaryNodeDeque.releaseStatics((byte) 33);
@@ -1388,13 +1388,13 @@ public final class ArcanistsMulti extends ud {
           fk.releaseStatics(-1333592895);
           nk.releaseStatics(30025);
           ce.releaseStatics(false);
-          mm.d(2188450);
+          MenuButtonPainter.d(2188450);
           LinkButtonPainter.releaseStatics(-9922);
-          ib.releaseStatics(true);
-          tc.releaseStatics((byte) 25);
+          BevelTextPainter.releaseStatics(true);
+          PasswordFieldPainter.releaseStatics((byte) 25);
           ii.releaseStatics((byte) 106);
           dm.releaseStatics(true);
-          cd.releaseStatics((byte) 99);
+          IconButtonPainter.releaseStatics((byte) 99);
           rf.a(85);
           fj.releaseStatics(90);
           on.a(3);
@@ -1412,7 +1412,7 @@ public final class ArcanistsMulti extends ud {
           km.releaseStatics(400);
           am.releaseStatics(false);
           qe.releaseStatics(-100);
-          me.releaseStatics((byte) 115);
+          MenuButtonPanel.releaseStatics((byte) 115);
           ClipState.a(-69);
           fm.releaseStatics(0);
           th.releaseStatics((byte) -113);
@@ -1424,8 +1424,8 @@ public final class ArcanistsMulti extends ud {
           WidgetStyleLayer.releaseStatics(202);
           TextLine.releaseStatics(0);
           va.releaseStatics(121);
-          eb.releaseStatics((byte) 49);
-          j.releaseStatics((byte) -122);
+          EmptyPainter.releaseStatics((byte) 49);
+          BevelBoxPainter.releaseStatics((byte) -122);
           mh.releaseStatics((byte) 114);
           mb.releaseStatics(122);
           aa.releaseStatics(false);
@@ -1502,7 +1502,7 @@ public final class ArcanistsMulti extends ud {
           boolean decompiledFrameRemainder2 = true;
           if (~ii.field_c != ~ii.field_a) {
             if (ie.field_Vb != ii.field_a) {
-              if (ii.field_a != sl.field_I) {
+              if (ii.field_a != ScrollContainer.field_I) {
                 u.field_i = u.field_i - 1;
                 decompiledFrameRemainder2 = (u.field_i == 0);
                 if (decompiledFrameRemainder2) {
@@ -1542,7 +1542,7 @@ public final class ArcanistsMulti extends ud {
                 } else {
                   am.a(3020);
                 }
-                ii.field_a = sl.field_I;
+                ii.field_a = ScrollContainer.field_I;
                 decompiledFrameRemainder2 = (var13 != 0);
               }
             }
@@ -1553,7 +1553,7 @@ public final class ArcanistsMulti extends ud {
             var3_int = 0;
             var4 = 0;
             if (!param1) {
-              if (~si.field_g != ~mn.field_r) {
+              if (~CheckboxPainter.field_g != ~mn.field_r) {
                 km.field_c = km.field_c + 1;
                 decompiledFrameRemainder1 = (km.field_c == 32);
                 if (decompiledFrameRemainder1) {
@@ -1566,13 +1566,13 @@ public final class ArcanistsMulti extends ud {
                 if (null == var5) {
                   var5 = r.field_b;
                 }
-                if (-1 != si.field_g) {
-                  if (14 != si.field_g &&
-                    si.field_g != 2 &&
-                    si.field_g != 4) {
-                    if ((si.field_g != -2) &&
-                      (decompiledFrameRemainder1 = !(!ij.b(si.field_g, param0 ^ -83)))) {
-                      ArchiveProvider.field_f[si.field_g].b(91);
+                if (-1 != CheckboxPainter.field_g) {
+                  if (14 != CheckboxPainter.field_g &&
+                    CheckboxPainter.field_g != 2 &&
+                    CheckboxPainter.field_g != 4) {
+                    if ((CheckboxPainter.field_g != -2) &&
+                      (decompiledFrameRemainder1 = !(!ij.b(CheckboxPainter.field_g, param0 ^ -83)))) {
+                      ArchiveProvider.field_f[CheckboxPainter.field_g].b(91);
                       decompiledFrameRemainder1 = (var13 != 0);
                     }
                     if (decompiledFrameRemainder1) {
@@ -1584,7 +1584,7 @@ public final class ArcanistsMulti extends ud {
                     if (!var5.field_ab) {
                       var5.a(true, false);
                     }
-                    ArchiveProvider.field_f[si.field_g].b(param0 ^ -2);
+                    ArchiveProvider.field_f[CheckboxPainter.field_g].b(param0 ^ -2);
                     decompiledFrameRemainder1 = (var13 != 0);
                   }
                 }
@@ -1598,7 +1598,7 @@ public final class ArcanistsMulti extends ud {
                     if (!var5.field_ab) {
                       var5.a(true, true);
                     }
-                    while (ib.b(false)) {
+                    while (BevelTextPainter.pollKeyEvent(false)) {
                       var5.k(1);
                       if (var13 != 0) {
                         decompiledFrameCompleted0 = false;
@@ -1619,7 +1619,7 @@ public final class ArcanistsMulti extends ud {
                 var4 = 0;
               }
               ae.a(var3_int != 0, 13);
-              if (mj.field_w) {
+              if (StatefulTextPainter.field_w) {
                 r.field_b.a(true, var4 != 0);
               }
               if (hi.field_a &&
@@ -1628,7 +1628,7 @@ public final class ArcanistsMulti extends ud {
                 SpriteState.field_z.a(true, var4 != 0);
               }
               while (true) {
-                if (ib.b(false)) {
+                if (BevelTextPainter.pollKeyEvent(false)) {
                   stackIn_152_0 = ao.field_d;
                   if (var13 == 0) {
                     boolean decompiledFrameRemainder0 = true;
@@ -1642,7 +1642,7 @@ public final class ArcanistsMulti extends ud {
                         pe.a(15, 12, (byte) 32, 13);
                       }
                     }
-                    if (mj.field_w) {
+                    if (StatefulTextPainter.field_w) {
                       r.field_b.k(1);
                     }
                     if (!hi.field_a) {
@@ -1784,7 +1784,7 @@ public final class ArcanistsMulti extends ud {
             do {
               if (var3_int >= 16) {
                 he.field_e.writeOpcode((byte) -127, 9);
-                mn.field_r = si.field_g;
+                mn.field_r = CheckboxPainter.field_g;
                 break;
               }
               he.field_e.writeByte(b.field_f[var3_int], (byte) -47);
@@ -1795,7 +1795,7 @@ public final class ArcanistsMulti extends ud {
           if (mn.field_r == -5) {
             qc.a(false, DirectByteStorage.field_f.h((byte) 72), 11);
             IntrusiveDequeCursor.field_g = true;
-            mn.field_r = si.field_g;
+            mn.field_r = CheckboxPainter.field_g;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1820,7 +1820,7 @@ public final class ArcanistsMulti extends ud {
           la.field_a = false;
           nm.field_h = -1;
           jf.field_j = 0;
-          ua.field_P = 0;
+          GridContainer.field_P = 0;
           kg.field_a = false;
           cb.field_e = 0L;
           ta.field_b = false;
@@ -1936,17 +1936,17 @@ public final class ArcanistsMulti extends ud {
             return;
           }
           if (!hn.a((byte) 87)) {
-            rb.a(mm.field_t, false, 100.0f);
+            rb.a(MenuButtonPainter.field_t, false, 100.0f);
             ResourceArchive.a((java.awt.Canvas) (var2), (byte) -62);
             return;
           }
           boolean decompiledFrameRemainder0 = true;
           this.m(obfuscationGuard + 15522);
-          if (mn.field_r != si.field_g) {
-            if (-2 != si.field_g &&
+          if (mn.field_r != CheckboxPainter.field_g) {
+            if (-2 != CheckboxPainter.field_g &&
               mn.field_r != -2) {
               if (16 > km.field_c) {
-                KeyboardInputHandler.a(-2, false, si.field_g, cb.field_b);
+                KeyboardInputHandler.a(-2, false, CheckboxPainter.field_g, cb.field_b);
                 tn.field_Fb = 256 * km.field_c / 16;
                 SoftwareRasterizer.fillRectangleAlpha(0, 0, EmailLoginCredentials.field_f, EmailLoginCredentials.field_j, 0, tn.field_Fb / 2);
                 gn.a(256, (byte) 108, tn.field_Fb / 2, 0, pm.field_c);
@@ -1968,26 +1968,26 @@ public final class ArcanistsMulti extends ud {
                 tn.field_Fb = (8192 - 256 * km.field_c) / 16;
                 SoftwareRasterizer.fillRectangleAlpha(0, 0, EmailLoginCredentials.field_f, EmailLoginCredentials.field_j, 0, tn.field_Fb);
                 if (var20 != 0) {
-                  KeyboardInputHandler.a(-2, false, si.field_g, cb.field_b);
+                  KeyboardInputHandler.a(-2, false, CheckboxPainter.field_g, cb.field_b);
                   tn.field_Fb = km.field_c * 256 / 16;
                   SoftwareRasterizer.fillRectangleAlpha(0, 0, EmailLoginCredentials.field_f, EmailLoginCredentials.field_j, 0, tn.field_Fb);
-                  KeyboardInputHandler.a(-2, true, si.field_g, cb.field_b);
+                  KeyboardInputHandler.a(-2, true, CheckboxPainter.field_g, cb.field_b);
                 }
               } else {
-                KeyboardInputHandler.a(-2, false, si.field_g, cb.field_b);
+                KeyboardInputHandler.a(-2, false, CheckboxPainter.field_g, cb.field_b);
                 tn.field_Fb = km.field_c * 256 / 16;
                 SoftwareRasterizer.fillRectangleAlpha(0, 0, EmailLoginCredentials.field_f, EmailLoginCredentials.field_j, 0, tn.field_Fb);
                 if (var20 != 0) {
-                  KeyboardInputHandler.a(-2, true, si.field_g, cb.field_b);
+                  KeyboardInputHandler.a(-2, true, CheckboxPainter.field_g, cb.field_b);
                 }
               }
             }
           } else {
-            KeyboardInputHandler.a(-2, true, si.field_g, cb.field_b);
+            KeyboardInputHandler.a(-2, true, CheckboxPainter.field_g, cb.field_b);
           }
-          if (-2 != si.field_g &&
+          if (-2 != CheckboxPainter.field_g &&
             -2 != mn.field_r) {
-            li.a((byte) 99);
+            NameSuggestionsPanel.drawFrameDecorations((byte) 99);
           }
           if (!cb.field_b ||
             !MusicCrossfadeStream.field_A) {
@@ -1996,7 +1996,7 @@ public final class ArcanistsMulti extends ud {
             var5 = -120 + (EmailLoginCredentials.field_j + 120 * var4 / var3_int);
             LoadingTracker.a(var5, -30218);
             SceneWidgetNode.a(gj.a(29372), (byte) 119);
-            if (si.field_g == -2) {
+            if (CheckboxPainter.field_g == -2) {
               var3_intLifetime1 = (int)(Math.sin((double)SpriteState.field_v * 0.2) * 8.0);
               var4Lifetime3 = -(int)(Math.cos((double)SpriteState.field_v * 0.2) * 5.0);
               if (var4Lifetime3 > 0) {
@@ -2058,7 +2058,7 @@ public final class ArcanistsMulti extends ud {
               pc.$cfr$intArgs$a$5f050b8899ac(kg.field_d[2], var13, kg.field_d[3], kg.field_d[0], -127, kg.field_d[1], tj.field_A[so.field_c[4]], var12);
               var13 += 8;
               var13 += 16;
-              pc.$cfr$intArgs$a$5f050b8899ac(kg.field_d[2], var6 + var13, kg.field_d[3], kg.field_d[0], -113, kg.field_d[1], h.field_I[0], var12 + var5Lifetime2);
+              pc.$cfr$intArgs$a$5f050b8899ac(kg.field_d[2], var6 + var13, kg.field_d[3], kg.field_d[0], -113, kg.field_d[1], ModalPanelStack.field_I[0], var12 + var5Lifetime2);
               pc.$cfr$intArgs$a$5f050b8899ac(kg.field_d[2], var10 + var13, kg.field_d[3], kg.field_d[0], 122, kg.field_d[1], DiskCacheRequest.field_u[so.field_c[2]], var9 + var12);
               ce.field_m.a(true);
               var16 = db.a(false);
@@ -2158,13 +2158,13 @@ public final class ArcanistsMulti extends ud {
             } else {
               stackIn_125_0 = ie.field_Pb;
             }
-            ke.a(stackIn_125_0, 4474111);
+            LabeledField.a(stackIn_125_0, 4474111);
             decompiledSharedTail0 = (var20 != 0);
           }
           if ((decompiledSharedTail0) &&
             (um.a((byte) -5))) {
             SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.field_e, SoftwareRasterizer.field_j);
-            eb.setFrameSprites(kf.field_b, kf.field_b[0].field_y, -117, kf.field_b[0].field_q);
+            EmptyPainter.setFrameSprites(kf.field_b, kf.field_b[0].field_y, -117, kf.field_b[0].field_q);
           }
           if (ii.field_c != ii.field_a) {
             var4Lifetime2 = u.field_i * 256 / 16;
@@ -2172,8 +2172,8 @@ public final class ArcanistsMulti extends ud {
               SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_e, SoftwareRasterizer.field_j, 0, var4Lifetime2);
             }
           }
-          ma.i(91);
-          kn.a((java.awt.Canvas) (var2), (byte) -126, 0, 0);
+          Scrollbar.i(91);
+          OptionsDialog.paintCanvasNow((java.awt.Canvas) (var2), (byte) -126, 0, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -2199,7 +2199,7 @@ public final class ArcanistsMulti extends ud {
           var2 = new CipherPacketBuffer(param0.a("", "logo.fo3d", -1));
           var3 = var2.readUnsignedByte((byte) -121);
           var2.beginBitAccess(param1 + 166);
-          ph.field_e = ma.a((byte) -101, var2);
+          ph.field_e = Scrollbar.a((byte) -101, var2);
           gn.field_g = new int[var3][];
           oo.field_u = new vg[var3];
           var4 = 0;
@@ -2248,7 +2248,7 @@ public final class ArcanistsMulti extends ud {
     final static void a(int param0, byte param1) {
         try {
           int var2_int = 84 % ((param1 - 57) / 54);
-          gl.drawNineSliceFrame(28 + sc.field_U[param0] * wl.field_L[param0].length, -8 + lm.field_e[param0], -27327, 14 - (-eo.field_b[param0] + lm.field_e[param0]), kf.field_b, tg.field_f[param0] - 16);
+          gl.drawNineSliceFrame(28 + ValidationHelpWidget.field_U[param0] * NumericDateInputWidget.field_L[param0].length, -8 + lm.field_e[param0], -27327, 14 - (-eo.field_b[param0] + lm.field_e[param0]), kf.field_b, tg.field_f[param0] - 16);
         } catch (RuntimeException runtimeException) {
           throw aa.wrapException((Throwable) ((Object) runtimeException), "ArcanistsMulti.OA(" + param0 + ',' + param1 + ')');
         }
@@ -2278,8 +2278,8 @@ public final class ArcanistsMulti extends ud {
           if (0 == jo.field_c) {
             pi.field_e = DebouncedValidator.field_a;
             if (null == DelegatingCanvas.field_c[0] &&
-              tc.field_x.a(true, "arcanists_titlescreen", "")) {
-              DelegatingCanvas.field_c[0] = MusicTrack.a(tc.field_x, "", "arcanists_titlescreen");
+              PasswordFieldPainter.field_x.a(true, "arcanists_titlescreen", "")) {
+              DelegatingCanvas.field_c[0] = MusicTrack.a(PasswordFieldPainter.field_x, "", "arcanists_titlescreen");
               jo.field_c = 1;
               GrowableIntList.field_h.a(0, lo.field_w, ki.field_s, DelegatingCanvas.field_c[0], -123);
               mi.a(DelegatingCanvas.field_c[0], 3);
@@ -2291,7 +2291,7 @@ public final class ArcanistsMulti extends ud {
               !ue.field_d.a(true, "imp", "streamed")) {
               if (SingleChildContainer.field_C == 1 &&
                 ue.field_d.a(true, "arcaneexplosion", "streamed")) {
-                cn.field_N = pk.a("streamed", param0 ^ 15433, "arcaneexplosion", ue.field_d);
+                BirthDateEntryPanel.field_N = pk.a("streamed", param0 ^ 15433, "arcaneexplosion", ue.field_d);
                 SingleChildContainer.field_C = SingleChildContainer.field_C + 1;
                 if (var3 == 0) {
                   return;
@@ -2299,7 +2299,7 @@ public final class ArcanistsMulti extends ud {
               }
               if (SingleChildContainer.field_C == 2 &&
                 ue.field_d.a(true, "flameexplosion", "streamed")) {
-                sn.field_E = pk.a("streamed", 0, "flameexplosion", ue.field_d);
+                DisplayNameForm.field_E = pk.a("streamed", 0, "flameexplosion", ue.field_d);
                 SingleChildContainer.field_C = SingleChildContainer.field_C + 1;
                 if (var3 == 0) {
                   return;
@@ -2317,7 +2317,7 @@ public final class ArcanistsMulti extends ud {
                 }
                 if (SingleChildContainer.field_C == 5 &&
                   ue.field_d.a(true, "smokepuff", "streamed")) {
-                  vi.field_M = pk.a("streamed", 0, "smokepuff", ue.field_d);
+                  FadingModalPanel.field_M = pk.a("streamed", 0, "smokepuff", ue.field_d);
                   SingleChildContainer.field_C = SingleChildContainer.field_C + 1;
                   if (var3 == 0) {
                     return;
@@ -2498,7 +2498,7 @@ public final class ArcanistsMulti extends ud {
                                                             }
                                                             if (SingleChildContainer.field_C == 44 &&
                                                               ue.field_d.a(true, "thornexplosion", "streamed")) {
-                                                              si.field_p = pk.a("streamed", 0, "thornexplosion", ue.field_d);
+                                                              CheckboxPainter.field_p = pk.a("streamed", 0, "thornexplosion", ue.field_d);
                                                               SingleChildContainer.field_C = SingleChildContainer.field_C + 1;
                                                               if (var3 == 0) {
                                                                 return;
@@ -2540,8 +2540,8 @@ public final class ArcanistsMulti extends ud {
                                                                   if (!ue.field_d.a(true, "watersplash", "streamed")) {
                                                                     return;
                                                                   }
-                                                                  ob.field_db = pk.a("streamed", 0, "watersplash", ue.field_d);
-                                                                  pi.field_e = vi.field_Q;
+                                                                  ResizableModalPanel.field_db = pk.a("streamed", 0, "watersplash", ue.field_d);
+                                                                  pi.field_e = FadingModalPanel.field_Q;
                                                                   SingleChildContainer.field_C = SingleChildContainer.field_C + 1;
                                                                   if (var3 == 0) {
                                                                     return;
@@ -2583,7 +2583,7 @@ public final class ArcanistsMulti extends ud {
                                                         return;
                                                       }
                                                     }
-                                                    cn.field_S = pk.a("streamed", param0 ^ 15433, "flameshield", ue.field_d);
+                                                    BirthDateEntryPanel.field_S = pk.a("streamed", param0 ^ 15433, "flameshield", ue.field_d);
                                                     SingleChildContainer.field_C = SingleChildContainer.field_C + 1;
                                                     if (var3 == 0) {
                                                       return;
@@ -2613,7 +2613,7 @@ public final class ArcanistsMulti extends ud {
                                               return;
                                             }
                                           }
-                                          wl.field_U = pk.a("streamed", 0, "swarm", ue.field_d);
+                                          NumericDateInputWidget.field_U = pk.a("streamed", 0, "swarm", ue.field_d);
                                           SingleChildContainer.field_C = SingleChildContainer.field_C + 1;
                                           if (var3 == 0) {
                                             return;
@@ -2655,7 +2655,7 @@ public final class ArcanistsMulti extends ud {
                                 return;
                               }
                             }
-                            bk.field_L = pk.a("streamed", param0 ^ 15433, "frostdragon", ue.field_d);
+                            Checkbox.field_L = pk.a("streamed", param0 ^ 15433, "frostdragon", ue.field_d);
                             SingleChildContainer.field_C = SingleChildContainer.field_C + 1;
                             if (var3 == 0) {
                               return;
@@ -2712,8 +2712,8 @@ public final class ArcanistsMulti extends ud {
               return;
             }
             if (DelegatingCanvas.field_c[4] == null &&
-              tc.field_x.a(true, "arcanists_grassland", "")) {
-              DelegatingCanvas.field_c[4] = MusicTrack.a(tc.field_x, "", "arcanists_grassland");
+              PasswordFieldPainter.field_x.a(true, "arcanists_grassland", "")) {
+              DelegatingCanvas.field_c[4] = MusicTrack.a(PasswordFieldPainter.field_x, "", "arcanists_grassland");
               jo.field_c = 2;
               if (var3 == 0) {
                 return;
@@ -2727,8 +2727,8 @@ public final class ArcanistsMulti extends ud {
               }
             }
             if (null == DelegatingCanvas.field_c[1] &&
-              tc.field_x.a(true, "arcanists_giant_mountains", "")) {
-              DelegatingCanvas.field_c[1] = MusicTrack.a(tc.field_x, "", "arcanists_giant_mountains");
+              PasswordFieldPainter.field_x.a(true, "arcanists_giant_mountains", "")) {
+              DelegatingCanvas.field_c[1] = MusicTrack.a(PasswordFieldPainter.field_x, "", "arcanists_giant_mountains");
               jo.field_c = 4;
               if (var3 == 0) {
                 return;
@@ -2736,8 +2736,8 @@ public final class ArcanistsMulti extends ud {
             }
             if (jo.field_c != 4) {
               if (null == DelegatingCanvas.field_c[2] &&
-                tc.field_x.a(true, "arcanists_elven", "")) {
-                DelegatingCanvas.field_c[2] = MusicTrack.a(tc.field_x, "", "arcanists_elven");
+                PasswordFieldPainter.field_x.a(true, "arcanists_elven", "")) {
+                DelegatingCanvas.field_c[2] = MusicTrack.a(PasswordFieldPainter.field_x, "", "arcanists_elven");
                 jo.field_c = 6;
                 if (var3 == 0) {
                   return;
@@ -2745,13 +2745,13 @@ public final class ArcanistsMulti extends ud {
               }
               if (jo.field_c != 6) {
                 if (DelegatingCanvas.field_c[3] != null ||
-                  !tc.field_x.a(true, "arcanists_goblin_caves", "")) {
+                  !PasswordFieldPainter.field_x.a(true, "arcanists_goblin_caves", "")) {
                   if (jo.field_c != 8) {
                     if (null != DelegatingCanvas.field_c[5] ||
-                      !tc.field_x.a(true, "arcanists_swamp", "")) {
+                      !PasswordFieldPainter.field_x.a(true, "arcanists_swamp", "")) {
                       if (jo.field_c != 10) {
                         if (null != DelegatingCanvas.field_c[6] ||
-                          !tc.field_x.a(true, "arcanists_graveyard", "")) {
+                          !PasswordFieldPainter.field_x.a(true, "arcanists_graveyard", "")) {
                           if (jo.field_c == 12) {
                             jo.field_c = 13;
                             GrowableIntList.field_h.a(0, lo.field_w, ki.field_s, DelegatingCanvas.field_c[6], param0 ^ -15414);
@@ -2760,10 +2760,10 @@ public final class ArcanistsMulti extends ud {
                             }
                           }
                           if (DelegatingCanvas.field_c[7] != null ||
-                            !tc.field_x.a(true, "arcanists_skycastles", "")) {
+                            !PasswordFieldPainter.field_x.a(true, "arcanists_skycastles", "")) {
                             if (jo.field_c != 14) {
                               if (null != DelegatingCanvas.field_c[8] ||
-                                !tc.field_x.a(true, "arcanists_beach_cove", "")) {
+                                !PasswordFieldPainter.field_x.a(true, "arcanists_beach_cove", "")) {
                                 if (jo.field_c == 16) {
                                   jo.field_c = 17;
                                   GrowableIntList.field_h.a(0, lo.field_w, ki.field_s, DelegatingCanvas.field_c[8], 50);
@@ -2772,7 +2772,7 @@ public final class ArcanistsMulti extends ud {
                                   }
                                 }
                                 if (null != DelegatingCanvas.field_c[9] ||
-                                  !tc.field_x.a(true, "arcanists_arcane_crystal_cavern", "")) {
+                                  !PasswordFieldPainter.field_x.a(true, "arcanists_arcane_crystal_cavern", "")) {
                                   if (jo.field_c != 18) {
                                     return;
                                   }
@@ -2780,19 +2780,19 @@ public final class ArcanistsMulti extends ud {
                                   GrowableIntList.field_h.a(0, lo.field_w, ki.field_s, DelegatingCanvas.field_c[9], param0 - 15554);
                                   GrowableIntList.field_h.c(125);
                                   ki.field_s = null;
-                                  tc.field_x = null;
+                                  PasswordFieldPainter.field_x = null;
                                   lo.field_w = null;
                                   if (var3 == 0) {
                                     return;
                                   }
                                 }
-                                DelegatingCanvas.field_c[9] = MusicTrack.a(tc.field_x, "", "arcanists_arcane_crystal_cavern");
+                                DelegatingCanvas.field_c[9] = MusicTrack.a(PasswordFieldPainter.field_x, "", "arcanists_arcane_crystal_cavern");
                                 jo.field_c = 18;
                                 if (var3 == 0) {
                                   return;
                                 }
                               }
-                              DelegatingCanvas.field_c[8] = MusicTrack.a(tc.field_x, "", "arcanists_beach_cove");
+                              DelegatingCanvas.field_c[8] = MusicTrack.a(PasswordFieldPainter.field_x, "", "arcanists_beach_cove");
                               jo.field_c = 16;
                               if (var3 == 0) {
                                 return;
@@ -2804,13 +2804,13 @@ public final class ArcanistsMulti extends ud {
                               return;
                             }
                           }
-                          DelegatingCanvas.field_c[7] = MusicTrack.a(tc.field_x, "", "arcanists_skycastles");
+                          DelegatingCanvas.field_c[7] = MusicTrack.a(PasswordFieldPainter.field_x, "", "arcanists_skycastles");
                           jo.field_c = 14;
                           if (var3 == 0) {
                             return;
                           }
                         }
-                        DelegatingCanvas.field_c[6] = MusicTrack.a(tc.field_x, "", "arcanists_graveyard");
+                        DelegatingCanvas.field_c[6] = MusicTrack.a(PasswordFieldPainter.field_x, "", "arcanists_graveyard");
                         jo.field_c = 12;
                         if (var3 == 0) {
                           return;
@@ -2822,7 +2822,7 @@ public final class ArcanistsMulti extends ud {
                         return;
                       }
                     }
-                    DelegatingCanvas.field_c[5] = MusicTrack.a(tc.field_x, "", "arcanists_swamp");
+                    DelegatingCanvas.field_c[5] = MusicTrack.a(PasswordFieldPainter.field_x, "", "arcanists_swamp");
                     jo.field_c = 10;
                     if (var3 == 0) {
                       return;
@@ -2834,7 +2834,7 @@ public final class ArcanistsMulti extends ud {
                     return;
                   }
                 }
-                DelegatingCanvas.field_c[3] = MusicTrack.a(tc.field_x, "", "arcanists_goblin_caves");
+                DelegatingCanvas.field_c[3] = MusicTrack.a(PasswordFieldPainter.field_x, "", "arcanists_goblin_caves");
                 jo.field_c = 8;
                 if (var3 == 0) {
                   return;
@@ -2862,7 +2862,7 @@ public final class ArcanistsMulti extends ud {
                 !wh.field_l.a("spell_select", -24417))) {
                 return;
               }
-              pi.field_e = vi.field_Q;
+              pi.field_e = FadingModalPanel.field_Q;
               if (0 != SectorCacheStore.field_f) {
                 if (1 != SectorCacheStore.field_f) {
                   if (SectorCacheStore.field_f != 2) {
@@ -3368,7 +3368,7 @@ public final class ArcanistsMulti extends ud {
               ck.field_b.a("spell_cast_cogs", -24417) &&
               wh.field_l.a("spell_cast_cogs", -24417)) {
               SectorCacheStore.field_f = 55;
-              pi.field_e = ma.field_I;
+              pi.field_e = Scrollbar.field_I;
               this.a(255, 172, VorbisSample.loadNamed(ck.field_b, "spell_cast_cogs", "arcanists_cog_static_ball_shield_cast").decodeAllToPcm(), SceneWidgetNode.field_r, false, cf.field_h);
               this.a(255, 173, cf.field_h[172], SceneWidgetNode.field_r, false, cf.field_h);
               this.a(255, 174, VorbisSample.loadNamed(ck.field_b, "spell_cast_cogs", "arcanists_cog_mech_arrow_cast").decodeAllToPcm(), SceneWidgetNode.field_r, false, cf.field_h);
@@ -3427,9 +3427,9 @@ public final class ArcanistsMulti extends ud {
                 this.a(79, ed.field_Ib[2], VorbisSample.loadNamed(ck.field_b, "paladin", "arcanists_paladin_hit").decodeAllToPcm(), tm.field_a, false, FullscreenFocusCanvas.field_g);
                 this.a(84, ed.field_Ib[1], VorbisSample.loadNamed(ck.field_b, "paladin", "arcanists_paladin_death").decodeAllToPcm(), tm.field_a, false, FullscreenFocusCanvas.field_g);
                 this.a(91, 202, SoundEffect.loadNamed(wh.field_l, "paladin", "arcanists_paladin_smash").toPcmSample(), SceneWidgetNode.field_r, false, cf.field_h);
-                this.a(147, tc.field_B[0], VorbisSample.loadNamed(ck.field_b, "rock_golem", "arcanists_rock_golem_select").decodeAllToPcm(), tm.field_a, false, FullscreenFocusCanvas.field_g);
-                this.a(128, tc.field_B[2], VorbisSample.loadNamed(ck.field_b, "rock_golem", "arcanists_rock_golem_hit").decodeAllToPcm(), tm.field_a, false, FullscreenFocusCanvas.field_g);
-                this.a(148, tc.field_B[1], VorbisSample.loadNamed(ck.field_b, "rock_golem", "arcanists_rock_golem_death").decodeAllToPcm(), tm.field_a, false, FullscreenFocusCanvas.field_g);
+                this.a(147, PasswordFieldPainter.field_B[0], VorbisSample.loadNamed(ck.field_b, "rock_golem", "arcanists_rock_golem_select").decodeAllToPcm(), tm.field_a, false, FullscreenFocusCanvas.field_g);
+                this.a(128, PasswordFieldPainter.field_B[2], VorbisSample.loadNamed(ck.field_b, "rock_golem", "arcanists_rock_golem_hit").decodeAllToPcm(), tm.field_a, false, FullscreenFocusCanvas.field_g);
+                this.a(148, PasswordFieldPainter.field_B[1], VorbisSample.loadNamed(ck.field_b, "rock_golem", "arcanists_rock_golem_death").decodeAllToPcm(), tm.field_a, false, FullscreenFocusCanvas.field_g);
                 this.a(125, in.field_Fb[0], VorbisSample.loadNamed(ck.field_b, "slyph", "arcanists_slyph_select").decodeAllToPcm(), tm.field_a, false, FullscreenFocusCanvas.field_g);
                 this.a(159, in.field_Fb[2], VorbisSample.loadNamed(ck.field_b, "slyph", "arcanists_slyph_hit").decodeAllToPcm(), tm.field_a, false, FullscreenFocusCanvas.field_g);
                 this.a(181, in.field_Fb[1], VorbisSample.loadNamed(ck.field_b, "slyph", "arcanists_slyph_death").decodeAllToPcm(), tm.field_a, false, FullscreenFocusCanvas.field_g);
@@ -3459,9 +3459,9 @@ public final class ArcanistsMulti extends ud {
                 this.a(182, NanoFrameClock.field_n[2], VorbisSample.loadNamed(ck.field_b, "storm_dragon", "arcanists_storm_dragon_hit").decodeAllToPcm(), tm.field_a, false, FullscreenFocusCanvas.field_g);
                 this.a(202, NanoFrameClock.field_n[1], VorbisSample.loadNamed(ck.field_b, "storm_dragon", "arcanists_storm_dragon_death").decodeAllToPcm(), tm.field_a, false, FullscreenFocusCanvas.field_g);
                 this.a(154, 193, VorbisSample.loadNamed(ck.field_b, "storm_dragon", "arcanists_storm_dragon_breath").decodeAllToPcm(), SceneWidgetNode.field_r, false, cf.field_h);
-                this.a(190, gd.field_pb[0], VorbisSample.loadNamed(ck.field_b, "frost_dragon", "arcanists_frost_dragon_select").decodeAllToPcm(), tm.field_a, false, FullscreenFocusCanvas.field_g);
-                this.a(256, gd.field_pb[2], VorbisSample.loadNamed(ck.field_b, "frost_dragon", "arcanists_frost_dragon_hit").decodeAllToPcm(), tm.field_a, false, FullscreenFocusCanvas.field_g);
-                this.a(148, gd.field_pb[1], VorbisSample.loadNamed(ck.field_b, "frost_dragon", "arcanists_frost_dragon_death").decodeAllToPcm(), tm.field_a, false, FullscreenFocusCanvas.field_g);
+                this.a(190, LoadingProgressDialog.field_pb[0], VorbisSample.loadNamed(ck.field_b, "frost_dragon", "arcanists_frost_dragon_select").decodeAllToPcm(), tm.field_a, false, FullscreenFocusCanvas.field_g);
+                this.a(256, LoadingProgressDialog.field_pb[2], VorbisSample.loadNamed(ck.field_b, "frost_dragon", "arcanists_frost_dragon_hit").decodeAllToPcm(), tm.field_a, false, FullscreenFocusCanvas.field_g);
+                this.a(148, LoadingProgressDialog.field_pb[1], VorbisSample.loadNamed(ck.field_b, "frost_dragon", "arcanists_frost_dragon_death").decodeAllToPcm(), tm.field_a, false, FullscreenFocusCanvas.field_g);
                 this.a(167, 192, VorbisSample.loadNamed(ck.field_b, "frost_dragon", "arcanists_frost_dragon_breath").decodeAllToPcm(), SceneWidgetNode.field_r, false, cf.field_h);
                 this.a(181, fi.field_c[0], VorbisSample.loadNamed(ck.field_b, "flame_dragon", "arcanists_flame_dragon_select").decodeAllToPcm(), tm.field_a, false, FullscreenFocusCanvas.field_g);
                 this.a(108, fi.field_c[2], VorbisSample.loadNamed(ck.field_b, "flame_dragon", "arcanists_flame_dragon_hit").decodeAllToPcm(), tm.field_a, false, FullscreenFocusCanvas.field_g);
@@ -3487,9 +3487,9 @@ public final class ArcanistsMulti extends ud {
                 this.a(85, jn.field_a[0], VorbisSample.loadNamed(ck.field_b, "plant_minion", "arcanists_plant_minion_select").decodeAllToPcm(), tm.field_a, false, FullscreenFocusCanvas.field_g);
                 this.a(83, jn.field_a[2], VorbisSample.loadNamed(ck.field_b, "plant_minion", "arcanists_plant_minion_hit").decodeAllToPcm(), tm.field_a, false, FullscreenFocusCanvas.field_g);
                 this.a(85, jn.field_a[1], VorbisSample.loadNamed(ck.field_b, "plant_minion", "arcanists_plant_minion_death").decodeAllToPcm(), tm.field_a, false, FullscreenFocusCanvas.field_g);
-                this.a(85, cd.field_p[0], VorbisSample.loadNamed(ck.field_b, "default", "arcanists_water_troll_select").decodeAllToPcm(), tm.field_a, false, FullscreenFocusCanvas.field_g);
-                this.a(83, cd.field_p[2], SoundEffect.loadNamed(wh.field_l, "default", "arcanists_sea_watertroll_hit").toPcmSample(), tm.field_a, false, FullscreenFocusCanvas.field_g);
-                this.a(85, cd.field_p[1], SoundEffect.loadNamed(wh.field_l, "default", "arcanists_sea_watertroll_death").toPcmSample(), tm.field_a, false, FullscreenFocusCanvas.field_g);
+                this.a(85, IconButtonPainter.field_p[0], VorbisSample.loadNamed(ck.field_b, "default", "arcanists_water_troll_select").decodeAllToPcm(), tm.field_a, false, FullscreenFocusCanvas.field_g);
+                this.a(83, IconButtonPainter.field_p[2], SoundEffect.loadNamed(wh.field_l, "default", "arcanists_sea_watertroll_hit").toPcmSample(), tm.field_a, false, FullscreenFocusCanvas.field_g);
+                this.a(85, IconButtonPainter.field_p[1], SoundEffect.loadNamed(wh.field_l, "default", "arcanists_sea_watertroll_death").toPcmSample(), tm.field_a, false, FullscreenFocusCanvas.field_g);
                 this.a(85, fd.field_h[0], SoundEffect.loadNamed(wh.field_l, "spell_cast_ocean", "arcanists_summon_sea_minion").toPcmSample(), tm.field_a, false, FullscreenFocusCanvas.field_g);
                 this.a(83, fd.field_h[2], SoundEffect.loadNamed(wh.field_l, "default", "arcanists_water_lord_hit").toPcmSample(), tm.field_a, false, FullscreenFocusCanvas.field_g);
                 this.a(85, fd.field_h[1], SoundEffect.loadNamed(wh.field_l, "default", "arcanists_water_lord_death").toPcmSample(), tm.field_a, false, FullscreenFocusCanvas.field_g);

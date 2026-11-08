@@ -84,32 +84,32 @@ final class co {
           rk.field_O.d(3, true);
           rk.field_O.field_y = 1920;
           rk.field_O.field_H = 960;
-          if (mj.field_p == 0) {
+          if (StatefulTextPainter.field_p == 0) {
             rk.field_O.field_y = 1280;
             rk.field_O.field_H = 480;
             rk.field_O.d(9, true);
           }
-          if (mj.field_p == 1) {
+          if (StatefulTextPainter.field_p == 1) {
             rk.field_O.field_y = 960;
             rk.field_O.field_H = 960;
             rk.field_O.d(33, true);
           }
-          if (mj.field_p == 2) {
+          if (StatefulTextPainter.field_p == 2) {
             rk.field_O.d(3, true);
           }
-          if (3 == mj.field_p) {
+          if (3 == StatefulTextPainter.field_p) {
             rk.field_O.d(9, true);
           }
-          if (mj.field_p == 4) {
+          if (StatefulTextPainter.field_p == 4) {
             rk.field_O.d(15, true);
           }
-          if (mj.field_p == 5) {
+          if (StatefulTextPainter.field_p == 5) {
             rk.field_O.d(33, true);
           }
-          if (mj.field_p == 6) {
+          if (StatefulTextPainter.field_p == 6) {
             rk.field_O.d(39, true);
           }
-          if (mj.field_p == 7) {
+          if (StatefulTextPainter.field_p == 7) {
             rk.field_O.d(45, true);
           }
           rk.field_O.field_Hb = rk.field_O.field_H >> 1;
@@ -120,7 +120,7 @@ final class co {
           }
           qn.field_ob.m(413355681);
           rk.field_O.a((byte) -96);
-          var2 = mj.field_p;
+          var2 = StatefulTextPainter.field_p;
           if (var2 == 0) {
             rk.field_O.a(false, -1, false);
             qn.field_ob.field_y = false;

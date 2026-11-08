@@ -34,14 +34,14 @@ final class am {
         int var7 = 0;
         var7 = ArcanistsMulti.field_G ? 1 : 0;
         try {
-          if (qc.field_c != ob.field_eb) {
+          if (qc.field_c != ResizableModalPanel.field_eb) {
             return false;
           }
           if (param0 != 26) {
             return false;
           }
           var2_long = qj.monotonicTimeMillis(-26572);
-          if (ob.field_ab != 0 &&
+          if (ResizableModalPanel.field_ab != 0 &&
             so.field_d < 0) {
             var4_ref_qe = (qe) (uf.field_a.first(12623));
             if (var4_ref_qe != null &&
@@ -53,8 +53,8 @@ final class am {
                 UiContainer.field_z.payload[var5_int] = var4_ref_qe.field_k[var5_int];
               }
               ArchiveRequest.field_m = nf.field_W;
-              nf.field_W = se.field_I;
-              se.field_I = on.field_g;
+              nf.field_W = DraggableWidget.field_I;
+              DraggableWidget.field_I = on.field_g;
               on.field_g = var4_ref_qe.field_g;
               return true;
             }
@@ -72,15 +72,15 @@ final class am {
             if (!pn.b(-12564)) {
               return false;
             }
-            if (ob.field_ab == 0) {
+            if (ResizableModalPanel.field_ab == 0) {
               ArchiveRequest.field_m = nf.field_W;
-              nf.field_W = se.field_I;
-              se.field_I = on.field_g;
+              nf.field_W = DraggableWidget.field_I;
+              DraggableWidget.field_I = on.field_g;
               on.field_g = so.field_d;
               so.field_d = -1;
               return true;
             }
-            var4 = ob.field_ab;
+            var4 = ResizableModalPanel.field_ab;
             if (0.0 != hb.field_Cb) {
               var4 = (int)((double)var4 + TextButton.field_D.nextGaussian() * hb.field_Cb);
               if (var4 < 0) {

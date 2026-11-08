@@ -39,7 +39,7 @@ final class MembershipOfferScreen {
 
     final static void a(int param0, int[] param1, int param2, int param3, int param4, int param5, int param6) {
         try {
-          wl.field_L[param3] = param1;
+          NumericDateInputWidget.field_L[param3] = param1;
           lm.field_e[param3] = param6;
           eo.field_b[param3] = param5;
           if (param2 != 0) {
@@ -47,7 +47,7 @@ final class MembershipOfferScreen {
             MembershipOfferScreen.splitIntoTwoLines((String[]) null, (String) null, -76, (BitmapFont) null, 57);
           }
           tg.field_f[param3] = param4;
-          sc.field_U[param3] = param0;
+          ValidationHelpWidget.field_U[param3] = param0;
         } catch (RuntimeException runtimeException) {
           throw aa.wrapException((Throwable) ((Object) runtimeException), "hf.L(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
@@ -215,7 +215,7 @@ final class MembershipOfferScreen {
           bb.field_a.a("pump32", -24417)) {
           SectorCacheStore.field_j = af.a("frame", "members_expansion_screen", 19412, EmailLoginCredentials.field_o);
           cg.field_Ib = fj.loadSprite("members_expansion_screen", -22612, EmailLoginCredentials.field_o, "arrow");
-          li.field_F = LoadingTracker.loadBinaryFont(bb.field_a, -24755, "arialish12", "", EmailLoginCredentials.field_o);
+          NameSuggestionsPanel.field_F = LoadingTracker.loadBinaryFont(bb.field_a, -24755, "arialish12", "", EmailLoginCredentials.field_o);
           fd.field_b = WhirlpoolHasher.loadCoverageFont("", bb.field_a, "pump32", -119, EmailLoginCredentials.field_o);
           fd.field_f = cg.a("benefit_orbs", (byte) 113, EmailLoginCredentials.field_o, "members_expansion_screen");
           qf.field_b = cg.a("button_text", (byte) 116, EmailLoginCredentials.field_o, "members_expansion_screen");
@@ -233,8 +233,8 @@ final class MembershipOfferScreen {
         if (cg.field_Ib != null) {
           cg.field_Ib.drawTransparent(9, 257);
           cg.field_Ib.drawHorizontalFlip(558, 257);
-          if (me.field_I > 257 &&
-            290 > me.field_I) {
+          if (MenuButtonPanel.field_I > 257 &&
+            290 > MenuButtonPanel.field_I) {
             var2Lifetime2 = 40 + (40 * FrameClock.sinTable(this.field_p << 4, -52) >> 16);
             if (var2Lifetime2 > 0) {
               if (EmailLoginCredentials.field_g > 9 &&
@@ -259,11 +259,11 @@ final class MembershipOfferScreen {
         }
         var2Lifetime3 = 89 % ((-46 - param0) / 43);
         this.field_g.drawTransparent(16, 302);
-        li.field_F.drawParagraph(this.field_a[this.field_l], 9, 257, 622, 33, 16754688, -1, 1, 1, 0);
+        NameSuggestionsPanel.field_F.drawParagraph(this.field_a[this.field_l], 9, 257, 622, 33, 16754688, -1, 1, 1, 0);
         fd.field_f.drawTransparent(30, 330);
-        li.field_F.drawParagraph(nf.field_qb[0], 17, 428, 111, 35, 16754688, -1, 1, 1, 0);
-        li.field_F.drawParagraph(nf.field_qb[1], 138, 428, 111, 35, 16754688, -1, 1, 1, 0);
-        li.field_F.drawParagraph(nf.field_qb[2], 259, 428, 111, 35, 16754688, -1, 1, 1, 0);
+        NameSuggestionsPanel.field_F.drawParagraph(nf.field_qb[0], 17, 428, 111, 35, 16754688, -1, 1, 1, 0);
+        NameSuggestionsPanel.field_F.drawParagraph(nf.field_qb[1], 138, 428, 111, 35, 16754688, -1, 1, 1, 0);
+        NameSuggestionsPanel.field_F.drawParagraph(nf.field_qb[2], 259, 428, 111, 35, 16754688, -1, 1, 1, 0);
         qf.field_b.drawTransparent(508 + (127 - qf.field_b.field_n) / 2, 315);
         if (0 != this.field_d.field_h) {
           if (this.field_d.field_h == 1) {
@@ -345,7 +345,7 @@ final class MembershipOfferScreen {
           return;
         }
         try {
-          ko.openSubscribePage(cd.getApplet(124), (byte) -108);
+          ko.openSubscribePage(IconButtonPainter.getApplet(124), (byte) -108);
         } catch (Exception exception) {
           exception.printStackTrace();
         }
@@ -440,7 +440,7 @@ final class MembershipOfferScreen {
           this.drawGradientParagraph(47, 622, 0, fd.field_b, this.field_j, 23146, var15, 0);
           oo.popClipState(-15405);
           this.field_g = new Sprite(475, 24);
-          this.drawScaledCaption(this.field_g, 0.75f, 0, 127, 24, var15, -4, fd.field_b, mm.field_r, 475);
+          this.drawScaledCaption(this.field_g, 0.75f, 0, 127, 24, var15, -4, fd.field_b, MenuButtonPainter.field_r, 475);
           var13 = BoundedRandomAccessFile.a(526344, 526344, 65535);
           var11 = var13;
           var9 = var11;
@@ -534,8 +534,8 @@ final class MembershipOfferScreen {
         IndexedSprite var2Lifetime1;
         var5 = ArcanistsMulti.field_G ? 1 : 0;
         if (null == this.field_i) {
-          if (li.field_F != null) {
-            li.field_F.drawParagraph(hn.field_l, 9, 58, 622, 196, 16754688, -1, 1, 1, 0);
+          if (NameSuggestionsPanel.field_F != null) {
+            NameSuggestionsPanel.field_F.drawParagraph(hn.field_l, 9, 58, 622, 196, 16754688, -1, 1, 1, 0);
           }
           return;
         }
@@ -547,8 +547,8 @@ final class MembershipOfferScreen {
         if (var2 != null) {
           var6.draw(9, 58);
         } else {
-          if (null != li.field_F) {
-            li.field_F.drawParagraph(hn.field_l, 9, 58, 622, 196, 16754688, -1, 1, 1, 0);
+          if (null != NameSuggestionsPanel.field_F) {
+            NameSuggestionsPanel.field_F.drawParagraph(hn.field_l, 9, 58, 622, 196, 16754688, -1, 1, 1, 0);
           }
         }
         if (vf.field_o > this.field_s) {
@@ -661,7 +661,7 @@ final class MembershipOfferScreen {
           }
         }
         if (param0) {
-          this.field_d.a(this.hitTestButtons(EmailLoginCredentials.field_g, 112, me.field_I), this.hitTestButtons(pb.field_h, 76, ja.field_s), -97);
+          this.field_d.a(this.hitTestButtons(EmailLoginCredentials.field_g, 112, MenuButtonPanel.field_I), this.hitTestButtons(pb.field_h, 76, ja.field_s), -97);
           var4Lifetime1 = 0;
           if (this.field_d.b(true)) {
             if (this.field_d.field_h == 0) {
@@ -672,7 +672,7 @@ final class MembershipOfferScreen {
             }
           }
           if (ViewportController.field_t) {
-            while (ib.b(false)) {
+            while (BevelTextPainter.pollKeyEvent(false)) {
               var5 = this.updateOffer((byte) -73);
               if (0 == var5) {
                 continue;

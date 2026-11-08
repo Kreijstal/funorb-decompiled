@@ -380,7 +380,7 @@ final class WhirlpoolHasher {
         RuntimeException var2 = null;
         try {
           qn.field_ob.a(0, 4, 0, rk.field_O.field_y / 2, 0, rk.field_O.field_y / 2, 0, -60);
-          if (mj.field_p != 6) {
+          if (StatefulTextPainter.field_p != 6) {
             param0.b((byte) -92, 250);
           } else {
             field_k = 6;

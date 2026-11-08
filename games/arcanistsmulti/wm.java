@@ -24,7 +24,7 @@ final class wm extends SingleChildContainer {
         }
         if (0 == param2 &&
           this.field_r != null) {
-          this.field_r.a((UiComponent) (this), 5592405, param1, param3, true);
+          this.field_r.paint((UiComponent) (this), 5592405, param1, param3, true);
         }
         if (this.field_v != 0 &&
           0 != this.field_k) {
@@ -43,9 +43,9 @@ final class wm extends SingleChildContainer {
 
     final static boolean c(boolean param0) {
         if (param0) {
-          wm.a(-119, (byte) 118);
+          wm.statusColour(-119, (byte) 118);
         }
-        return kg.a(gg.field_e, true, ua.field_S);
+        return kg.a(gg.field_e, true, GridContainer.field_S);
     }
 
     wm(int param0, int param1, int param2, int param3, WidgetPainter param4, UiComponent param5) {
@@ -57,7 +57,7 @@ final class wm extends SingleChildContainer {
         }
     }
 
-    final static int a(int param0, byte param1) {
+    final static int statusColour(int param0, byte param1) {
         if (param0 == 0) {
           return 5864847;
         }
@@ -96,8 +96,8 @@ final class wm extends SingleChildContainer {
     }
 
     final static void g(byte param0) {
-        if (0 - sn.field_G != SoundCache.field_a &&
-          -sn.field_G + 250 == SoundCache.field_a) {
+        if (0 - DisplayNameForm.field_G != SoundCache.field_a &&
+          -DisplayNameForm.field_G + 250 == SoundCache.field_a) {
         }
         if (param0 != 27) {
           return;

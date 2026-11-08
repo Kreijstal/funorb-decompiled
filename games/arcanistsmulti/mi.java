@@ -118,7 +118,7 @@ final class mi extends DualLinkNode {
           }
           if (null != this.field_q.field_sb &&
             this.field_q.field_sb[param0] != null) {
-            ti.a((byte) -30, SceneWidgetNode.field_r[param0], this.field_q.field_sb[param0]);
+            DropdownList.playSampleAtVolume((byte) -30, SceneWidgetNode.field_r[param0], this.field_q.field_sb[param0]);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -197,7 +197,7 @@ final class mi extends DualLinkNode {
           if (param3 != -8) {
             mi.a(-116, -3, 107, 69, 64);
           }
-          stackIn_16_0 = (EmailLoginCredentials.field_g >= param4) && ((param4 + param2) > EmailLoginCredentials.field_g) && (param1 <= me.field_I) && ((param1 + param0) > me.field_I);
+          stackIn_16_0 = (EmailLoginCredentials.field_g >= param4) && ((param4 + param2) > EmailLoginCredentials.field_g) && (param1 <= MenuButtonPanel.field_I) && ((param1 + param0) > MenuButtonPanel.field_I);
           return stackIn_16_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -280,8 +280,8 @@ final class mi extends DualLinkNode {
                       if (0 == this.field_u) {
                         this.field_u = 1;
                       }
-                      ((mi) (var5)).field_u = this.field_u + Math.abs((127 & var6_ref_jd.nextInt((byte) -46)) * of.a(param0 - 5896, var8) >> 17) * this.field_u / Math.abs(this.field_u);
-                      ((mi) (var5)).field_F = -Math.abs(this.field_F) - Math.abs((var6_ref_jd.nextInt((byte) -46) & 127) * j.a(var8, param0 - 6134) >> 17);
+                      ((mi) (var5)).field_u = this.field_u + Math.abs((127 & var6_ref_jd.nextInt((byte) -46)) * of.sine(param0 - 5896, var8) >> 17) * this.field_u / Math.abs(this.field_u);
+                      ((mi) (var5)).field_F = -Math.abs(this.field_F) - Math.abs((var6_ref_jd.nextInt((byte) -46) & 127) * BevelBoxPainter.cosine(var8, param0 - 6134) >> 17);
                       this.field_q.b(param0 ^ 6068, (mi) (var5));
                       var7++;
                     }
@@ -326,8 +326,8 @@ final class mi extends DualLinkNode {
                     if (this.field_u == 0) {
                       this.field_u = 1;
                     }
-                    ((mi) (var5)).field_u = this.field_u + Math.abs((var6_ref_jd.nextInt((byte) -46) & 127) * of.a(113, var8) >> 17) * this.field_u / Math.abs(this.field_u);
-                    ((mi) (var5)).field_F = this.field_F - (-((127 & var6_ref_jd.nextInt((byte) -46)) * j.a(var8, param0 ^ -6134) >> 17) + 64);
+                    ((mi) (var5)).field_u = this.field_u + Math.abs((var6_ref_jd.nextInt((byte) -46) & 127) * of.sine(113, var8) >> 17) * this.field_u / Math.abs(this.field_u);
+                    ((mi) (var5)).field_F = this.field_F - (-((127 & var6_ref_jd.nextInt((byte) -46)) * BevelBoxPainter.cosine(var8, param0 ^ -6134) >> 17) + 64);
                     this.field_q.b(52, (mi) (var5));
                     var7++;
                   }
@@ -848,7 +848,7 @@ final class mi extends DualLinkNode {
                                               if (this.field_y == 225 &&
                                                 this.field_q.field_sb != null &&
                                                 null != this.field_q.field_sb[74]) {
-                                                ti.a((byte) -30, SceneWidgetNode.field_r[220] >> 2, this.field_q.field_sb[74]);
+                                                DropdownList.playSampleAtVolume((byte) -30, SceneWidgetNode.field_r[220] >> 2, this.field_q.field_sb[74]);
                                               }
                                             }
                                           }
@@ -2109,8 +2109,8 @@ final class mi extends DualLinkNode {
                                                 var9 = var8 * 8192 / 15;
                                                 var10 = 0;
                                                 while (var7 > var10) {
-                                                  var11 = of.a(-43, var9) * (3 + var10) >> 12;
-                                                  var12 = (3 + var10) * j.a(var9, param0 - 6137) >> 12;
+                                                  var11 = of.sine(-43, var9) * (3 + var10) >> 12;
+                                                  var12 = (3 + var10) * BevelBoxPainter.cosine(var9, param0 - 6137) >> 12;
                                                   jo.field_b = false;
                                                   stackOut_2218_0 = this.field_q.a(this.field_G + var12, this.field_v + var11, (byte) -83);
                                                   stackIn_2234_0 = stackOut_2218_0 ? 1 : 0;
@@ -2231,8 +2231,8 @@ final class mi extends DualLinkNode {
                                               while (var8 < 5) {
                                                 var5 = this.a(this.field_v, this.field_t, (byte) 81, 14, this.field_G, this.field_q);
                                                 var9 = u.a(var7_ref_jd, -2147483648, 8192);
-                                                ((mi) (var5)).field_u = of.a(127, var9) >> 9;
-                                                ((mi) (var5)).field_F = (j.a(var9, -115) * 3 >> 11) - 64;
+                                                ((mi) (var5)).field_u = of.sine(127, var9) >> 9;
+                                                ((mi) (var5)).field_F = (BevelBoxPainter.cosine(var9, -115) * 3 >> 11) - 64;
                                                 this.field_q.b(52, (mi) (var5));
                                                 var8++;
                                                 if (var19 != 0) {
@@ -2254,16 +2254,16 @@ final class mi extends DualLinkNode {
                                                 }
                                                 var5 = this.a(this.field_v, (ml) null, (byte) 81, 42, this.field_G, this.field_q);
                                                 var9 = u.a(var7_ref_jd, -2147483648, 8192);
-                                                ((mi) (var5)).field_u = of.a(-95, var9) >> 9;
-                                                ((mi) (var5)).field_F = (3 * j.a(var9, -111) >> 11) - 64;
+                                                ((mi) (var5)).field_u = of.sine(-95, var9) >> 9;
+                                                ((mi) (var5)).field_F = (3 * BevelBoxPainter.cosine(var9, -111) >> 11) - 64;
                                                 this.field_q.b(52, (mi) (var5));
                                                 var8++;
                                               } while (var19 == 0);
                                               while (var8 < 4) {
                                                 var5 = this.a(this.field_v, (ml) null, (byte) 81, 76, this.field_G, this.field_q);
                                                 var9 = u.a(var7_ref_jd, param0 ^ -2147477632, 8192);
-                                                ((mi) (var5)).field_u = of.a(-71, var9) >> 11;
-                                                ((mi) (var5)).field_F = j.a(var9, param0 - 6130) >> 11;
+                                                ((mi) (var5)).field_u = of.sine(-71, var9) >> 11;
+                                                ((mi) (var5)).field_F = BevelBoxPainter.cosine(var9, param0 - 6130) >> 11;
                                                 this.field_q.b(52, (mi) (var5));
                                                 var8++;
                                                 if (var19 != 0) {
@@ -2284,8 +2284,8 @@ final class mi extends DualLinkNode {
                                               while (var7 < 15) {
                                                 var5 = this.a(this.field_v, (ml) null, (byte) 81, 16, this.field_G, this.field_q);
                                                 var8 = 8192 * var7 / 15;
-                                                ((mi) (var5)).field_u = of.a(118, var8) >> 9;
-                                                ((mi) (var5)).field_F = (3 * j.a(var8, param0 ^ -6117) >> 11) - 64;
+                                                ((mi) (var5)).field_u = of.sine(118, var8) >> 9;
+                                                ((mi) (var5)).field_F = (3 * BevelBoxPainter.cosine(var8, param0 ^ -6117) >> 11) - 64;
                                                 ((mi) (var5)).field_w = this.field_w;
                                                 this.field_q.b(param0 ^ 6068, (mi) (var5));
                                                 var7++;
@@ -2305,8 +2305,8 @@ final class mi extends DualLinkNode {
                                               while (var7 < 15) {
                                                 var5 = this.a(this.field_v, (ml) null, (byte) 81, 145, this.field_G, this.field_q);
                                                 var8 = 8192 * var7 / 15;
-                                                ((mi) (var5)).field_u = of.a(-78, var8) >> 9;
-                                                ((mi) (var5)).field_F = -64 + (3 * j.a(var8, -116) >> 11);
+                                                ((mi) (var5)).field_u = of.sine(-78, var8) >> 9;
+                                                ((mi) (var5)).field_F = -64 + (3 * BevelBoxPainter.cosine(var8, -116) >> 11);
                                                 ((mi) (var5)).field_z = ((mi) (var5)).field_z + 4 * ((mi) (var5)).field_F;
                                                 ((mi) (var5)).field_o = ((mi) (var5)).field_o + 4 * ((mi) (var5)).field_u;
                                                 ((mi) (var5)).field_G = ((mi) (var5)).field_z >> 4;
@@ -2594,8 +2594,8 @@ final class mi extends DualLinkNode {
                           var10 = -48;
                         }
                         var9 = var9 + var10;
-                        this.field_u = var11 * j.a(var9, -109) >> 16;
-                        this.field_F = of.a(125, var9) * var11 >> 16;
+                        this.field_u = var11 * BevelBoxPainter.cosine(var9, -109) >> 16;
+                        this.field_F = of.sine(125, var9) * var11 >> 16;
                         if (var19 != 0) {
                           this.field_F = this.field_F + 4;
                         }
@@ -2761,8 +2761,8 @@ final class mi extends DualLinkNode {
                             }
                           }
                           var9 = var9 + var10;
-                          this.field_u = var11 * j.a(var9, -102) >> 16;
-                          this.field_F = of.a(-59, var9) * var11 >> 16;
+                          this.field_u = var11 * BevelBoxPainter.cosine(var9, -102) >> 16;
+                          this.field_F = of.sine(-59, var9) * var11 >> 16;
                           decompiledFrameRemainder5 = (var19 != 0);
                         }
                         if (decompiledFrameRemainder5) {
@@ -2776,8 +2776,8 @@ final class mi extends DualLinkNode {
                             while (15 > var6) {
                               var5 = this.a(this.field_v, (ml) null, (byte) 81, 159, this.field_G, this.field_q);
                               var7 = var6 * 8192 / 15;
-                              ((mi) (var5)).field_u = of.a(-36, var7) >> 10;
-                              ((mi) (var5)).field_F = (j.a(var7, -127) >> 11) - 64;
+                              ((mi) (var5)).field_u = of.sine(-36, var7) >> 10;
+                              ((mi) (var5)).field_F = (BevelBoxPainter.cosine(var7, -127) >> 11) - 64;
                               this.field_q.b(52, (mi) (var5));
                               var6++;
                               if (var19 != 0) {
@@ -2853,8 +2853,8 @@ final class mi extends DualLinkNode {
                           break;
                         }
                         var11 = stackIn_958_0;
-                        ((mi) (var5)).field_u = of.a(119, var11) >> 10;
-                        ((mi) (var5)).field_F = j.a(var11, -119) >> 10;
+                        ((mi) (var5)).field_u = of.sine(119, var11) >> 10;
+                        ((mi) (var5)).field_F = BevelBoxPainter.cosine(var11, -119) >> 10;
                         this.field_q.b(52, (mi) (var5));
                         var10++;
                       }
@@ -2871,8 +2871,8 @@ final class mi extends DualLinkNode {
                       while (var9 < 4) {
                         var5 = this.a(this.field_v, (ml) null, (byte) 81, 159, this.field_G, this.field_q);
                         var10 = 8192 * var9 / 4;
-                        ((mi) (var5)).field_u = of.a(param0 ^ 6136, var10) >> 10;
-                        ((mi) (var5)).field_F = (j.a(var10, -113) >> 11) - 64;
+                        ((mi) (var5)).field_u = of.sine(param0 ^ 6136, var10) >> 10;
+                        ((mi) (var5)).field_F = (BevelBoxPainter.cosine(var10, -113) >> 11) - 64;
                         this.field_q.b(52, (mi) (var5));
                         var9++;
                         if (var19 != 0) {
@@ -2895,8 +2895,8 @@ final class mi extends DualLinkNode {
                       while (var9 < 15) {
                         var5 = this.a(this.field_v, (ml) null, (byte) 81, 16, this.field_G, this.field_q);
                         var10 = var9 * 8192 / 15;
-                        ((mi) (var5)).field_u = of.a(param0 - 6056, var10) >> 10;
-                        ((mi) (var5)).field_F = -64 + (j.a(var10, param0 - 6119) >> 11);
+                        ((mi) (var5)).field_u = of.sine(param0 - 6056, var10) >> 10;
+                        ((mi) (var5)).field_F = -64 + (BevelBoxPainter.cosine(var10, param0 - 6119) >> 11);
                         this.field_q.b(52, (mi) (var5));
                         var9++;
                         if (var19 != 0) {
@@ -3040,8 +3040,8 @@ final class mi extends DualLinkNode {
                           var5 = this.a(this.field_v, (ml) null, (byte) 81, 42, this.field_G, this.field_q);
                           ((mi) (var5)).field_w = this.field_w;
                           var11 = u.a(var9_ref_jd, param0 ^ -2147477632, 8192);
-                          ((mi) (var5)).field_u = of.a(126, var11) >> 9;
-                          ((mi) (var5)).field_F = -64 + (j.a(var11, -119) >> 9);
+                          ((mi) (var5)).field_u = of.sine(126, var11) >> 9;
+                          ((mi) (var5)).field_F = -64 + (BevelBoxPainter.cosine(var11, -119) >> 9);
                           this.field_q.b(52, (mi) (var5));
                           var10++;
                           if (var19 == 0) {
@@ -3083,8 +3083,8 @@ final class mi extends DualLinkNode {
                       while (var10 < 5) {
                         var5 = this.a(this.field_v, (ml) null, (byte) 81, 82, this.field_G, this.field_q);
                         var11 = u.a(var9_ref_jd, -2147483648, 8192);
-                        ((mi) (var5)).field_u = of.a(param0 - 5899, var11) >> 10;
-                        ((mi) (var5)).field_F = (j.a(var11, -120) >> 11) - 48;
+                        ((mi) (var5)).field_u = of.sine(param0 - 5899, var11) >> 10;
+                        ((mi) (var5)).field_F = (BevelBoxPainter.cosine(var11, -120) >> 11) - 48;
                         ((mi) (var5)).field_v = ((mi) (var5)).field_v + ((mi) (var5)).field_u;
                         ((mi) (var5)).field_G = ((mi) (var5)).field_G + 2 * (48 + ((mi) (var5)).field_F);
                         ((mi) (var5)).field_o = ((mi) (var5)).field_v << 4;
@@ -3109,8 +3109,8 @@ final class mi extends DualLinkNode {
                         var5 = this.a(this.field_v, (ml) null, (byte) 81, 20, this.field_G, this.field_q);
                         ((mi) (var5)).field_w = this.field_w;
                         var11 = u.a(var9_ref_jd, -2147483648, 8192);
-                        ((mi) (var5)).field_u = of.a(10, var11) >> 9;
-                        ((mi) (var5)).field_F = j.a(var11, -114) >> 9;
+                        ((mi) (var5)).field_u = of.sine(10, var11) >> 9;
+                        ((mi) (var5)).field_F = BevelBoxPainter.cosine(var11, -114) >> 9;
                         this.field_q.b(52, (mi) (var5));
                         var10++;
                         if (var19 != 0) {
@@ -3132,8 +3132,8 @@ final class mi extends DualLinkNode {
                       while (var10 < 10) {
                         var5 = this.a(this.field_v, (ml) null, (byte) 81, 76, this.field_G, this.field_q);
                         var11 = u.a(var9_ref_jd, -2147483648, 8192);
-                        ((mi) (var5)).field_u = of.a(0, var11) >> 11;
-                        ((mi) (var5)).field_F = j.a(var11, -116) >> 11;
+                        ((mi) (var5)).field_u = of.sine(0, var11) >> 11;
+                        ((mi) (var5)).field_F = BevelBoxPainter.cosine(var11, -116) >> 11;
                         this.field_q.b(52, (mi) (var5));
                         var10++;
                         if (var19 != 0) {
@@ -3160,8 +3160,8 @@ final class mi extends DualLinkNode {
                           while (var10 < 4) {
                             var5 = this.a(this.field_v, (ml) null, (byte) 81, 76, this.field_G, this.field_q);
                             var11 = u.a(var9_ref_jd, -2147483648, 8192);
-                            ((mi) (var5)).field_u = of.a(param0 - 6088, var11) >> 11;
-                            ((mi) (var5)).field_F = j.a(var11, -114) >> 11;
+                            ((mi) (var5)).field_u = of.sine(param0 - 6088, var11) >> 11;
+                            ((mi) (var5)).field_F = BevelBoxPainter.cosine(var11, -114) >> 11;
                             this.field_q.b(52, (mi) (var5));
                             var10++;
                             if (var19 != 0) {
@@ -3183,8 +3183,8 @@ final class mi extends DualLinkNode {
                           while (var10 < 2) {
                             var5 = this.a(this.field_v, (ml) null, (byte) 81, 43, this.field_G, this.field_q);
                             var11 = u.a(var9_ref_jd, -2147483648, 8192);
-                            ((mi) (var5)).field_u = of.a(-5, var11) >> 10;
-                            ((mi) (var5)).field_F = j.a(var11, -103) >> 10;
+                            ((mi) (var5)).field_u = of.sine(-5, var11) >> 10;
+                            ((mi) (var5)).field_F = BevelBoxPainter.cosine(var11, -103) >> 10;
                             this.field_q.b(52, (mi) (var5));
                             var10++;
                             if (var19 != 0) {
@@ -3206,8 +3206,8 @@ final class mi extends DualLinkNode {
                           while (15 > var10) {
                             var5 = this.a(this.field_v, (ml) null, (byte) 81, 43, this.field_G, this.field_q);
                             var11 = u.a(var9_ref_jd, -2147483648, 8192);
-                            ((mi) (var5)).field_u = of.a(116, var11) >> 9;
-                            ((mi) (var5)).field_F = j.a(var11, -112) >> 9;
+                            ((mi) (var5)).field_u = of.sine(116, var11) >> 9;
+                            ((mi) (var5)).field_F = BevelBoxPainter.cosine(var11, -112) >> 9;
                             this.field_q.b(param0 - 5964, (mi) (var5));
                             var10++;
                             if (var19 != 0) {
@@ -3287,8 +3287,8 @@ final class mi extends DualLinkNode {
                     while (var7 < 45) {
                       var5 = this.a(this.field_v, (ml) null, (byte) 81, 46, this.field_G, this.field_q);
                       var8 = var6_ref_jd.nextInt((byte) -46) & 8191;
-                      ((mi) (var5)).field_u = this.field_u + ((var6_ref_jd.nextInt((byte) -46) & 127) * of.a(-122, var8) >> 16);
-                      ((mi) (var5)).field_F = this.field_F + ((127 & var6_ref_jd.nextInt((byte) -46)) * j.a(var8, param0 - 6140) >> 16);
+                      ((mi) (var5)).field_u = this.field_u + ((var6_ref_jd.nextInt((byte) -46) & 127) * of.sine(-122, var8) >> 16);
+                      ((mi) (var5)).field_F = this.field_F + ((127 & var6_ref_jd.nextInt((byte) -46)) * BevelBoxPainter.cosine(var8, param0 - 6140) >> 16);
                       this.field_q.b(52, (mi) (var5));
                       var7++;
                       if (var19 != 0) {
@@ -3328,8 +3328,8 @@ final class mi extends DualLinkNode {
                     if (this.field_y / 2 > var8) {
                       var5 = this.a(this.field_v, (ml) null, (byte) 81, 20, this.field_G, this.field_q);
                       var9 = u.a(this.field_C, -2147483648, 8192);
-                      ((mi) (var5)).field_u = of.a(-46, var9) >> 9;
-                      ((mi) (var5)).field_F = j.a(var9, -127) >> 9;
+                      ((mi) (var5)).field_u = of.sine(-46, var9) >> 9;
+                      ((mi) (var5)).field_F = BevelBoxPainter.cosine(var9, -127) >> 9;
                       this.field_q.b(param0 ^ 6068, (mi) (var5));
                       var8++;
                       if (var19 != 0) {
@@ -3511,7 +3511,7 @@ final class mi extends DualLinkNode {
         RuntimeException var2 = null;
         try {
           if (this.field_D != null) {
-            bl.a(this.field_D, 123);
+            DateOfBirthValidator.a(this.field_D, 123);
           }
           if (this.field_t != null) {
             if (this == this.field_t.field_gb) {
@@ -3588,7 +3588,7 @@ final class mi extends DualLinkNode {
           }
           if (null != this.field_q.field_sb &&
             this.field_q.field_sb[CacheEntry.field_n[param2][param0]] != null) {
-            ti.a((byte) -30, SceneWidgetNode.field_r[CacheEntry.field_n[param2][param0]], this.field_q.field_sb[CacheEntry.field_n[param2][param0]]);
+            DropdownList.playSampleAtVolume((byte) -30, SceneWidgetNode.field_r[CacheEntry.field_n[param2][param0]], this.field_q.field_sb[CacheEntry.field_n[param2][param0]]);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -3760,7 +3760,7 @@ final class mi extends DualLinkNode {
           if (param2 != 81) {
             this.a(76, (nf) null);
           }
-          stackIn_4_0 = j.a(param1, param4, (byte) -118, param5, this.field_n, param0, param3);
+          stackIn_4_0 = BevelBoxPainter.createProjectile(param1, param4, (byte) -118, param5, this.field_n, param0, param3);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -4110,7 +4110,7 @@ final class mi extends DualLinkNode {
                 if ((this.field_y == 100 ||
                   this.field_y == 150) && (null != this.field_q.field_sb &&
                   null != this.field_q.field_sb[103])) {
-                  ti.a((byte) -30, SceneWidgetNode.field_r[103], this.field_q.field_sb[103]);
+                  DropdownList.playSampleAtVolume((byte) -30, SceneWidgetNode.field_r[103], this.field_q.field_sb[103]);
                 }
                 var5 = this.a(this.field_t.field_lb, (ml) null, (byte) 81, 100, this.field_t.field_db - (this.field_t.field_Y >> 1), this.field_q);
                 ((mi) (var5)).field_u = (int)(64.0 * Math.sin(0.1 * (double)this.field_y));
@@ -4546,7 +4546,7 @@ final class mi extends DualLinkNode {
                                                   this.field_q.b(52, (mi) (var5));
                                                   var14Lifetime1++;
                                                 }
-                                                ti.field_N = -1;
+                                                DropdownList.field_N = -1;
                                                 stackIn_953_0Lifetime1 = this;
                                                 this.field_y = 1;
                                                 break regionExit5;
@@ -4595,8 +4595,8 @@ final class mi extends DualLinkNode {
                                                 this.field_o = this.field_v << 4;
                                                 this.field_z = this.field_G << 4;
                                                 var9 = this.field_y * 4096 / 100;
-                                                var10Lifetime1 = of.a(10, var9) >> 10;
-                                                var11Lifetime1 = j.a(var9, -105) >> 10;
+                                                var10Lifetime1 = of.sine(10, var9) >> 10;
+                                                var11Lifetime1 = BevelBoxPainter.cosine(var9, -105) >> 10;
                                                 this.field_y = this.field_y + 1;
                                                 var5 = this.a(this.field_v - var10Lifetime1, (ml) null, (byte) 81, 95, this.field_G - var11Lifetime1, this.field_q);
                                                 this.field_q.b(52, (mi) (var5));
@@ -4625,8 +4625,8 @@ final class mi extends DualLinkNode {
                                                 this.field_z = this.field_G << 4;
                                                 this.field_o = this.field_v << 4;
                                                 var9 = 4096 * (this.field_y + this.field_v + this.field_G) / 100;
-                                                var10Lifetime1 = of.a(117, var9) >> 10;
-                                                var11Lifetime1 = j.a(var9, -112) >> 10;
+                                                var10Lifetime1 = of.sine(117, var9) >> 10;
+                                                var11Lifetime1 = BevelBoxPainter.cosine(var9, -112) >> 10;
                                                 this.field_y = this.field_y + 20;
                                                 var5 = this.a(var10Lifetime1 + this.field_v, this.field_t, (byte) 81, 3, this.field_G + var11Lifetime1, this.field_q);
                                                 ((mi) (var5)).field_u = var10Lifetime1;
@@ -4650,7 +4650,7 @@ final class mi extends DualLinkNode {
                                               if (this.field_y == 50 &&
                                                 this.field_q.field_sb != null &&
                                                 null != this.field_q.field_sb[90]) {
-                                                ti.a((byte) -30, SceneWidgetNode.field_r[90], this.field_q.field_sb[90]);
+                                                DropdownList.playSampleAtVolume((byte) -30, SceneWidgetNode.field_r[90], this.field_q.field_sb[90]);
                                               }
                                               this.field_y = this.field_y + 1;
                                               if (this.field_y % 15 == 1) {
@@ -4707,8 +4707,8 @@ final class mi extends DualLinkNode {
                                                 var5 = this.a(this.field_v, (ml) null, (byte) 81, 21, this.field_G, this.field_q);
                                                 ((mi) (var5)).field_w = this.field_w;
                                                 this.a(89, true);
-                                                ((mi) (var5)).field_u = of.a(126, var9) >> 11;
-                                                ((mi) (var5)).field_F = -256 + (j.a(var9, -119) >> 9);
+                                                ((mi) (var5)).field_u = of.sine(126, var9) >> 11;
+                                                ((mi) (var5)).field_F = -256 + (BevelBoxPainter.cosine(var9, -119) >> 9);
                                                 this.field_q.b(52, (mi) (var5));
                                               }
                                               if (this.field_y <= 250) {
@@ -5219,8 +5219,8 @@ final class mi extends DualLinkNode {
                                                                       null != this.field_q.field_sb[CacheEntry.field_n[7][1]]) {
                                                                       ii.playSample((int)(Math.random() * 500.0) + 200, false, this.field_q.field_sb[CacheEntry.field_n[7][1]], SceneWidgetNode.field_r[CacheEntry.field_n[7][1]] / 8);
                                                                     }
-                                                                    ((mi) (var5)).field_u = of.a(113, var12Lifetime1) >> 11;
-                                                                    ((mi) (var5)).field_F = (j.a(var12Lifetime1, -101) >> 11) + 32;
+                                                                    ((mi) (var5)).field_u = of.sine(113, var12Lifetime1) >> 11;
+                                                                    ((mi) (var5)).field_F = (BevelBoxPainter.cosine(var12Lifetime1, -101) >> 11) + 32;
                                                                     this.field_q.b(52, (mi) (var5));
                                                                   }
                                                                 } else {
@@ -5337,8 +5337,8 @@ final class mi extends DualLinkNode {
                                                                     if (var7Lifetime4 != 132) {
                                                                       var10Lifetime1 = u.a(this.field_C, -2147483648, 8192);
                                                                     }
-                                                                    ((mi) (var5)).field_u = of.a(-17, var10Lifetime1) >> 9;
-                                                                    ((mi) (var5)).field_F = -256 + (j.a(var10Lifetime1, -101) >> 9);
+                                                                    ((mi) (var5)).field_u = of.sine(-17, var10Lifetime1) >> 9;
+                                                                    ((mi) (var5)).field_F = -256 + (BevelBoxPainter.cosine(var10Lifetime1, -101) >> 9);
                                                                     if (var7Lifetime4 == 152) {
                                                                       ((mi) (var5)).field_u = ((mi) (var5)).field_u >> 1;
                                                                       ((mi) (var5)).field_F = ((mi) (var5)).field_F >> 1;
@@ -5477,7 +5477,7 @@ final class mi extends DualLinkNode {
                                                                       return;
                                                                     }
                                                                     var9 = u.a(this.field_C, -2147483648, 8192);
-                                                                    ((mi) (var5)).field_u = of.a(127, var9) >> 11;
+                                                                    ((mi) (var5)).field_u = of.sine(127, var9) >> 11;
                                                                     ((mi) (var5)).field_F = 0;
                                                                     if (var7Lifetime1 == 64) {
                                                                       ((mi) (var5)).field_u = 0;
@@ -5845,8 +5845,8 @@ final class mi extends DualLinkNode {
                                                                   if (var7Lifetime3 == 67) {
                                                                     this.a(83, true);
                                                                   }
-                                                                  ((mi) (var5)).field_u = of.a(123, var10Lifetime1) >> 9;
-                                                                  ((mi) (var5)).field_F = (j.a(var10Lifetime1, -101) >> 9) - 256;
+                                                                  ((mi) (var5)).field_u = of.sine(123, var10Lifetime1) >> 9;
+                                                                  ((mi) (var5)).field_F = (BevelBoxPainter.cosine(var10Lifetime1, -101) >> 9) - 256;
                                                                   if (var7Lifetime3 == 10) {
                                                                     ((mi) (var5)).field_u = ((mi) (var5)).field_u >> 1;
                                                                     ((mi) (var5)).field_F = ((mi) (var5)).field_F - 64;
@@ -5926,16 +5926,16 @@ final class mi extends DualLinkNode {
                                                                   var10Lifetime1 = this.field_G - (-u.a(this.field_C, -2147483648, 16) - 48);
                                                                   var11Lifetime1 = u.a(this.field_C, -2147483648, 8192);
                                                                   var5 = this.a(var9, (ml) null, (byte) 81, 46, var10Lifetime1, this.field_q);
-                                                                  ((mi) (var5)).field_u = of.a(125, var11Lifetime1) >> 11;
-                                                                  ((mi) (var5)).field_F = (j.a(var11Lifetime1, -104) >> 11) + 32;
+                                                                  ((mi) (var5)).field_u = of.sine(125, var11Lifetime1) >> 11;
+                                                                  ((mi) (var5)).field_F = (BevelBoxPainter.cosine(var11Lifetime1, -104) >> 11) + 32;
                                                                   this.field_q.b(52, (mi) (var5));
                                                                 } else {
                                                                   var9 = this.field_v + u.a(this.field_C, -2147483648, 192) - 96;
                                                                   var10Lifetime1 = this.field_G + (48 + u.a(this.field_C, -2147483648, 16));
                                                                   var5 = this.a(var9, (ml) null, (byte) 81, 46, var10Lifetime1, this.field_q);
                                                                   var11Lifetime1 = u.a(this.field_C, -2147483648, 8192);
-                                                                  ((mi) (var5)).field_u = of.a(-2, var11Lifetime1) >> 11;
-                                                                  ((mi) (var5)).field_F = 32 + (j.a(var11Lifetime1, -128) >> 11);
+                                                                  ((mi) (var5)).field_u = of.sine(-2, var11Lifetime1) >> 11;
+                                                                  ((mi) (var5)).field_F = 32 + (BevelBoxPainter.cosine(var11Lifetime1, -128) >> 11);
                                                                   this.field_q.b(52, (mi) (var5));
                                                                   if (100 != this.field_y &&
                                                                     this.field_y != 200 &&
@@ -7388,7 +7388,7 @@ final class mi extends DualLinkNode {
             stackIn_2_0 = null;
             return (CoverageBitmapFont) (stackIn_2_0);
           }
-          var2 = new CoverageBitmapFont(param0, hl.field_l, SectorCacheStore.field_d, jg.field_p, ho.field_i, ph.field_c, ln.field_I);
+          var2 = new CoverageBitmapFont(param0, hl.field_l, SectorCacheStore.field_d, jg.field_p, ho.field_i, ph.field_c, AccountRegistrationPanel.field_I);
           if (param1 < 43) {
             stackIn_5_0 = (CoverageBitmapFont) null;
             return stackIn_5_0;
@@ -8126,7 +8126,7 @@ final class mi extends DualLinkNode {
               this.field_J = 0;
               this.field_D = this.a(var3, 19227);
               if (this.field_D != null) {
-                sc.a(this.field_D, (byte) 68);
+                ValidationHelpWidget.a(this.field_D, (byte) 68);
               }
             }
           }
@@ -8200,8 +8200,8 @@ final class mi extends DualLinkNode {
                   stackIn_16_0 = 0;
                   var9 = stackIn_16_0;
                   while (var9 < 8192) {
-                    var10 = of.a(125, var9) * var8 >> 16;
-                    var11 = var8 * j.a(var9, -107) >> 16;
+                    var10 = of.sine(125, var9) * var8 >> 16;
+                    var11 = var8 * BevelBoxPainter.cosine(var9, -107) >> 16;
                     stackIn_20_0 = 0;
                     stackIn_20_1 = var6;
                     if (stackIn_20_0 != stackIn_20_1) {
@@ -8626,10 +8626,10 @@ final class mi extends DualLinkNode {
                                                                                                                                                   regionExit68: {
                                                                                                                                                     if ((var5 == 128) &&
                                                                                                                                                       (var16 == 0)) {
-                                                                                                                                                      if (si.field_p == null) {
+                                                                                                                                                      if (CheckboxPainter.field_p == null) {
                                                                                                                                                         return;
                                                                                                                                                       }
-                                                                                                                                                      si.field_p[this.field_H].draw(param2 + (this.field_v - 50), this.field_G + (param0 - 50));
+                                                                                                                                                      CheckboxPainter.field_p[this.field_H].draw(param2 + (this.field_v - 50), this.field_G + (param0 - 50));
                                                                                                                                                       return;
                                                                                                                                                     } else {
                                                                                                                                                       if (var5 != 154) {
@@ -8783,10 +8783,10 @@ final class mi extends DualLinkNode {
                                                                                                                                                 return;
                                                                                                                                               }
                                                                                                                                             }
-                                                                                                                                            if (null == ob.field_db) {
+                                                                                                                                            if (null == ResizableModalPanel.field_db) {
                                                                                                                                               return;
                                                                                                                                             }
-                                                                                                                                            ob.field_db[this.field_H].draw(param2 + (this.field_v - 64), -128 + param0 + this.field_q.field_H);
+                                                                                                                                            ResizableModalPanel.field_db[this.field_H].draw(param2 + (this.field_v - 64), -128 + param0 + this.field_q.field_H);
                                                                                                                                             if (var16 == 0) {
                                                                                                                                               return;
                                                                                                                                             }
@@ -9516,10 +9516,10 @@ final class mi extends DualLinkNode {
                                                   return;
                                                 }
                                               }
-                                              if (null == sn.field_E) {
+                                              if (null == DisplayNameForm.field_E) {
                                                 return;
                                               }
-                                              sn.field_E[this.field_H].draw(-50 + (this.field_v + param2), this.field_G - (-param0 + 50));
+                                              DisplayNameForm.field_E[this.field_H].draw(-50 + (this.field_v + param2), this.field_G - (-param0 + 50));
                                               if (var16 == 0) {
                                                 return;
                                               }
@@ -9562,13 +9562,13 @@ final class mi extends DualLinkNode {
                                         return;
                                       }
                                     }
-                                    if (null == sn.field_E) {
+                                    if (null == DisplayNameForm.field_E) {
                                       return;
                                     }
                                     if (0 > this.field_H) {
                                       return;
                                     }
-                                    vi.field_M[this.field_H].draw(-8 + (this.field_v + param2), -8 + this.field_G + param0);
+                                    FadingModalPanel.field_M[this.field_H].draw(-8 + (this.field_v + param2), -8 + this.field_G + param0);
                                     if (var16 == 0) {
                                       return;
                                     }
@@ -9624,16 +9624,16 @@ final class mi extends DualLinkNode {
                                 return;
                               }
                             }
-                            if (null == cn.field_S) {
+                            if (null == BirthDateEntryPanel.field_S) {
                               return;
                             }
                             if (this.field_y < 250) {
-                              cn.field_S[this.field_x >> 1].draw(param2 + this.field_v - 25, -64 + (this.field_G + param0));
+                              BirthDateEntryPanel.field_S[this.field_x >> 1].draw(param2 + this.field_v - 25, -64 + (this.field_G + param0));
                               if (var16 == 0) {
                                 return;
                               }
                             }
-                            cn.field_S[this.field_x >> 1].drawAlpha(-25 + param2 + this.field_v, this.field_G + param0 - 64, 64);
+                            BirthDateEntryPanel.field_S[this.field_x >> 1].drawAlpha(-25 + param2 + this.field_v, this.field_G + param0 - 64, 64);
                             if (var16 == 0) {
                               return;
                             }
@@ -9681,10 +9681,10 @@ final class mi extends DualLinkNode {
                     return;
                   }
                 }
-                if (null == cn.field_N) {
+                if (null == BirthDateEntryPanel.field_N) {
                   return;
                 }
-                cn.field_N[this.field_H].draw(this.field_v + param2 - 50, -50 + param0 + this.field_G);
+                BirthDateEntryPanel.field_N[this.field_H].draw(this.field_v + param2 - 50, -50 + param0 + this.field_G);
                 if (var16 == 0) {
                   return;
                 }
@@ -9713,13 +9713,13 @@ final class mi extends DualLinkNode {
               SoftwareRasterizer.fillCircleAlpha(this.field_v - (-param2 + 1), -1 + param0 + this.field_G, 2, 16777215, 32);
               return;
             }
-            if (null == ob.field_db) {
+            if (null == ResizableModalPanel.field_db) {
               return;
             }
             if (this.field_H < 0) {
               return;
             }
-            ob.field_db[this.field_H].drawScaled(-8 + (param2 + this.field_v), -8 + (this.field_G + param0), 16, 16);
+            ResizableModalPanel.field_db[this.field_H].drawScaled(-8 + (param2 + this.field_v), -8 + (this.field_G + param0), 16, 16);
             if (var16 == 0) {
               return;
             }
@@ -9786,8 +9786,8 @@ final class mi extends DualLinkNode {
                   stackIn_11_0 = 0;
                   var8 = stackIn_11_0;
                   while (var8 < 8192) {
-                    var9 = of.a(116, var8) * var7 >> 16;
-                    var10 = j.a(var8, -126) * var7 >> 16;
+                    var9 = of.sine(116, var8) * var7 >> 16;
+                    var10 = BevelBoxPainter.cosine(var8, -126) * var7 >> 16;
                     stackIn_15_0 = 0;
                     stackIn_15_1 = var6;
                     if (stackIn_15_0 != stackIn_15_1) {

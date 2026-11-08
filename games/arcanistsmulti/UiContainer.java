@@ -265,7 +265,7 @@ class UiContainer extends UiComponent implements UiContainerMarker {
         }
         if (param2 == 0 &&
           null != this.field_r) {
-          this.field_r.a((UiComponent) (this), 5592405, param1, param3, true);
+          this.field_r.paint((UiComponent) (this), 5592405, param1, param3, true);
         }
         IntrusiveDequeCursor var5 = new IntrusiveDequeCursor(this.field_B);
         UiComponent var6 = (UiComponent) (var5.last(-116));
@@ -277,7 +277,7 @@ class UiContainer extends UiComponent implements UiContainerMarker {
 
     final static void a(byte param0, int param1) {
         int var2 = 2 / ((-54 - param0) / 54);
-        mj.field_p = param1;
+        StatefulTextPainter.field_p = param1;
         pn.field_c = null;
         co.resetBattleState(112);
     }
@@ -485,10 +485,10 @@ class UiContainer extends UiComponent implements UiContainerMarker {
           if (var2 == 1) {
             var3Lifetime1 = var27.readUnsignedShort(-98);
             var27.readLong(-943038560);
-            var4 = (fj) (me.field_O.first(12623));
+            var4 = (fj) (MenuButtonPanel.field_O.first(12623));
             while (var4 != null) {
               if (var3Lifetime1 != var4.field_k) {
-                var4 = (fj) (me.field_O.next(0));
+                var4 = (fj) (MenuButtonPanel.field_O.next(0));
                 continue;
               }
               break;

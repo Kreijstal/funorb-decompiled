@@ -25,7 +25,7 @@ final class dd {
           if (ko.hasDisallowedCharacter(63, param1)) {
             return false;
           }
-          if (LoginPanel.b(-12055, param1)) {
+          if (LoginPanel.isSingleRepeatedCharacter(-12055, param1)) {
             return false;
           }
           if (LoginCredentials.isLengthOutOfRange((byte) -117, param1)) {
@@ -100,14 +100,14 @@ final class dd {
           var7 = param2[1].field_n;
           param2[0].drawTransparent(param4, param1);
           param2[2].drawTransparent(param3 + (param4 - var6), param1);
-          SoftwareRasterizer.saveClip(sl.field_H);
+          SoftwareRasterizer.saveClip(ScrollContainer.field_H);
           SoftwareRasterizer.intersectClip(param4 + var5_int, param1, -var6 + (param4 + param3), param2[1].field_w + param1);
           var8 = param4 + var5_int;
           var9 = -var6 + param3 + param4;
           for (param4 = var8; var9 > param4; param4 = param4 + var7) {
             param2[1].drawTransparent(param4, param1);
           }
-          SoftwareRasterizer.restoreClip(sl.field_H);
+          SoftwareRasterizer.restoreClip(ScrollContainer.field_H);
         } catch (RuntimeException runtimeException) {
           throw aa.wrapException((Throwable) ((Object) runtimeException), "dd.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }

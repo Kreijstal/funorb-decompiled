@@ -198,7 +198,7 @@ abstract class ArrayWidgetContainer extends UiComponent implements UiContainerMa
         var7 = ArcanistsMulti.field_G ? 1 : 0;
         if (0 == param2 &&
           null != this.field_r) {
-          this.field_r.a((UiComponent) (this), 5592405, param1, param3, true);
+          this.field_r.paint((UiComponent) (this), 5592405, param1, param3, true);
         }
         if (null != this.field_z) {
           for (var5 = this.field_z.length - 1; 0 <= var5; var5--) {

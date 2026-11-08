@@ -126,9 +126,9 @@ abstract class ArchiveProvider {
     final static String b(byte param0) {
         if (param0 < 95) {
           ArchiveProvider.releaseStatics((byte) 55);
-          return vi.field_F;
+          return FadingModalPanel.field_F;
         }
-        return vi.field_F;
+        return FadingModalPanel.field_F;
     }
 
     abstract int a(int param0, byte param1);
@@ -138,16 +138,16 @@ abstract class ArchiveProvider {
     abstract byte[] a(int param0, boolean param1);
 
     final static void a(int param0) {
-        if (ob.field_Y != null) {
-          ob.field_Y.field_l = false;
-          li.a(0, param0 + 30267);
+        if (ResizableModalPanel.field_Y != null) {
+          ResizableModalPanel.field_Y.field_l = false;
+          NameSuggestionsPanel.notifyBrowserResizing(0, param0 + 30267);
           if (param0 != -30267) {
             field_e = (String) null;
             return;
           }
           return;
         }
-        li.a(0, param0 + 30267);
+        NameSuggestionsPanel.notifyBrowserResizing(0, param0 + 30267);
         if (param0 == -30267) {
           return;
         }

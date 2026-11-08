@@ -12,7 +12,7 @@ final class cj {
 
     final static void composeAgreementText(int param0) {
         int var1 = -65 / ((param0 + 81) / 41);
-        qj.field_i = tc.field_C + " <b>" + ln.field_R + "</b> " + li.field_G + " <b>" + ki.field_t + "</b> " + we.field_d + "<br>" + "<br>" + ClientException.field_f;
+        qj.field_i = PasswordFieldPainter.field_C + " <b>" + AccountRegistrationPanel.field_R + "</b> " + NameSuggestionsPanel.field_G + " <b>" + ki.field_t + "</b> " + we.field_d + "<br>" + "<br>" + ClientException.field_f;
     }
 
     final static void drawModel(int param0, int param1, int param2, int param3, vg param4, int param5, int param6, int param7) {
@@ -297,7 +297,7 @@ final class cj {
             var14 = (vg) null;
             cj.drawModel(-75, -92, 61, -80, (vg) null, 40, 3, -5);
           }
-          if (ob.field_eb == pc.field_g) {
+          if (ResizableModalPanel.field_eb == pc.field_g) {
             kj.field_e = null;
             he.field_e.position = 0;
             if (param6 == null) {
@@ -321,7 +321,7 @@ final class cj {
               he.field_e.writeByte(16, (byte) -75);
               he.field_e.position = he.field_e.position + 1;
               var9 = he.field_e.position;
-              TextLine.a(false, he.field_e, nl.field_Jb, jf.field_a, q.field_K);
+              TextLine.a(false, he.field_e, nl.field_Jb, jf.field_a, DropTargetWidget.field_K);
               he.field_e.writeByteLengthAtMark(he.field_e.position - var9, (byte) 43);
             } else {
               var9 = 0;
@@ -341,36 +341,36 @@ final class cj {
               he.field_e.writeByte(18, (byte) -114);
               he.field_e.position = he.field_e.position + 2;
               var10 = he.field_e.position;
-              var11_ref_StringLifetime4 = SecondaryNodeDeque.getSettingsCookie(cd.getApplet(121), param1 ^ 32);
+              var11_ref_StringLifetime4 = SecondaryNodeDeque.getSettingsCookie(IconButtonPainter.getApplet(121), param1 ^ 32);
               if (var11_ref_StringLifetime4 == null) {
                 var11_ref_StringLifetime4 = "";
               }
               he.field_e.writeString(var11_ref_StringLifetime4, 23333);
-              TextLine.a(false, he.field_e, nl.field_Jb, jf.field_a, q.field_K);
+              TextLine.a(false, he.field_e, nl.field_Jb, jf.field_a, DropTargetWidget.field_K);
               he.field_e.writeShortLengthAtMark(he.field_e.position - var10, -19571);
             }
             we.a(-1, (byte) 113);
-            ob.field_eb = sb.field_f;
+            ResizableModalPanel.field_eb = sb.field_f;
           }
-          if (ob.field_eb == sb.field_f &&
+          if (ResizableModalPanel.field_eb == sb.field_f &&
             pe.a((byte) -86, 1)) {
             var9Lifetime1 = UiContainer.field_z.readUnsignedByte((byte) 56);
             UiContainer.field_z.position = 0;
             if (var9Lifetime1 >= 100 &&
               var9Lifetime1 <= 105) {
-              ob.field_eb = ej.field_R;
+              ResizableModalPanel.field_eb = TextHotspotWidget.field_R;
               Bzip2State.field_M = new String[-100 + var9Lifetime1];
             } else {
               if (var9Lifetime1 == 248) {
-                UiContainer.a(1, cd.getApplet(param1 ^ -40));
-                me.field_E = fo.field_c;
+                UiContainer.a(1, IconButtonPainter.getApplet(param1 ^ -40));
+                MenuButtonPanel.field_E = fo.field_c;
                 ProxySocketConnector.closeActiveConnection(false);
                 bb.field_h = false;
                 stackIn_36_0 = var9Lifetime1;
                 return stackIn_36_0;
               }
               if (99 != var9Lifetime1) {
-                ob.field_eb = NodeHashTable.field_i;
+                ResizableModalPanel.field_eb = NodeHashTable.field_i;
                 fj.field_h = -1;
                 on.field_g = var9Lifetime1;
               } else {
@@ -380,7 +380,7 @@ final class cj {
               }
             }
           }
-          if (ob.field_eb == ej.field_R) {
+          if (ResizableModalPanel.field_eb == TextHotspotWidget.field_R) {
             var9Lifetime2 = 2;
             if (pe.a((byte) -86, var9Lifetime2)) {
               var10Lifetime1 = UiContainer.field_z.readUnsignedShort(-98);
@@ -397,14 +397,14 @@ final class cj {
               }
             }
           }
-          if (ob.field_eb == NodeHashTable.field_i &&
+          if (ResizableModalPanel.field_eb == NodeHashTable.field_i &&
             pn.b(-12564)) {
             if (on.field_g != 255) {
-              me.field_E = UiContainer.field_z.readString(param1 + 90);
+              MenuButtonPanel.field_E = UiContainer.field_z.readString(param1 + 90);
             } else {
               var9_ref_String = UiContainer.field_z.readOptionalString(-112);
               if (var9_ref_String != null) {
-                jf.a(var9_ref_String, cd.getApplet(110), 0);
+                jf.a(var9_ref_String, IconButtonPainter.getApplet(110), 0);
               }
             }
             ProxySocketConnector.closeActiveConnection(false);
@@ -415,9 +415,9 @@ final class cj {
           if (null == CredentialKind.field_c) {
             if (bb.field_h) {
               if (rk.a(-78) <= 30000L) {
-                me.field_E = wl.field_R;
+                MenuButtonPanel.field_E = NumericDateInputWidget.field_R;
               } else {
-                me.field_E = tg.field_a;
+                MenuButtonPanel.field_E = tg.field_a;
               }
               bb.field_h = false;
               stackIn_61_0 = 249;

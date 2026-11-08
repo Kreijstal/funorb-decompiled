@@ -9,7 +9,7 @@ final class ii implements WidgetPainter {
     static int field_a;
     static String field_e;
 
-    public final void a(UiComponent param0, int param1, int param2, int param3, boolean param4) {
+    public final void paint(UiComponent param0, int param1, int param2, int param3, boolean param4) {
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
@@ -25,7 +25,7 @@ final class ii implements WidgetPainter {
           }
           var7 = param3 + param0.field_j;
           TextLayout.drawBevelBox(param0.field_v, var6_int, var7, param0.field_k, param1 - 5592532);
-          var8 = qk.field_lb[1];
+          var8 = ContentTransitionDialog.field_lb[1];
           if (param0 instanceof TextButton &&
             ((TextButton) (param0)).field_z) {
             var8.drawAdditive((-var8.field_n + param0.field_v >> 1) + 1 + var6_int, (param0.field_k - var8.field_w >> 1) + (var7 + 1), 256);
@@ -68,7 +68,7 @@ final class ii implements WidgetPainter {
           if (param1) {
             ii.a((byte) 81);
           }
-          stackIn_3_0 = sc.a(PcmSampleStream.createAtRatePercent(param2, param0, param3), (byte) 68);
+          stackIn_3_0 = ValidationHelpWidget.a(PcmSampleStream.createAtRatePercent(param2, param0, param3), (byte) 68);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -93,7 +93,7 @@ final class ii implements WidgetPainter {
         RuntimeException decompiledCaughtException = null;
         try {
           var1_int = 53 / ((26 - param0) / 49);
-          while (ib.b(false)) {
+          while (BevelTextPainter.pollKeyEvent(false)) {
             if (IntrusiveDeque.field_d == 16) {
               MusicCrossfadeStream.a(65, (byte) -84);
             }
@@ -122,7 +122,7 @@ final class ii implements WidgetPainter {
               continue;
             }
           }
-          vf.field_g.a(TextFieldValidator.a(me.field_I, EmailLoginCredentials.field_g, -123), TextFieldValidator.a(ja.field_s, pb.field_h, -74), -97);
+          vf.field_g.a(TextFieldValidator.a(MenuButtonPanel.field_I, EmailLoginCredentials.field_g, -123), TextFieldValidator.a(ja.field_s, pb.field_h, -74), -97);
           if (!vf.field_g.b(true)) {
           }
           var2 = 0;

@@ -88,7 +88,7 @@ final class of implements WidgetPainter {
         return new Sprite[]{var10, var11, var10, var9, (Sprite) (var14), var9, var12, var13, var12};
     }
 
-    final static int a(int param0, int param1) {
+    final static int sine(int param0, int param1) {
         param1 = param1 & 8191;
         int var2 = -32 / ((63 - param0) / 50);
         if (4096 > param1) {
@@ -128,7 +128,7 @@ final class of implements WidgetPainter {
         }
     }
 
-    public final void a(UiComponent param0, int param1, int param2, int param3, boolean param4) {
+    public final void paint(UiComponent param0, int param1, int param2, int param3, boolean param4) {
         RuntimeException var6 = null;
         int var7 = 0;
         int var8 = 0;

@@ -16,7 +16,7 @@ final class gj {
         if (param1) {
           if (param2 == 0 &&
             NameValidator.field_s) {
-            jm.field_b = co.field_d;
+            TextWidgetPainter.field_b = co.field_d;
             NameValidator.field_s = false;
             param2 = 9;
           }
@@ -33,7 +33,7 @@ final class gj {
           field_b = (String) null;
           if (param2 == 0 &&
             NameValidator.field_s) {
-            jm.field_b = co.field_d;
+            TextWidgetPainter.field_b = co.field_d;
             NameValidator.field_s = false;
             param2 = 9;
           }

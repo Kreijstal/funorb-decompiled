@@ -77,7 +77,7 @@ final class ub {
         var2.writeOpcode((byte) -115, param0);
         var2.writeByte(2, (byte) -128);
         var2.writeByte(4, (byte) -43);
-        var2.writeByte(qn.k((byte) -14), (byte) -57);
+        var2.writeByte(qn.packChatSettings((byte) -14), (byte) -57);
     }
 
     public static void releaseStatics(int param0) {

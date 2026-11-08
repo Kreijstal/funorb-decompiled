@@ -40,16 +40,16 @@ final class LinkButtonPainter implements WidgetPainter {
     }
 
     final static void a(byte param0) {
-        if (ob.field_Y != null) {
-          ob.field_Y.field_l = true;
-          li.a(1, 0);
+        if (ResizableModalPanel.field_Y != null) {
+          ResizableModalPanel.field_Y.field_l = true;
+          NameSuggestionsPanel.notifyBrowserResizing(1, 0);
           int var1 = 10 / ((-80 - param0) / 44);
           return;
         }
         throw new IllegalStateException("NGR");
     }
 
-    public final void a(UiComponent param0, int param1, int param2, int param3, boolean param4) {
+    public final void paint(UiComponent param0, int param1, int param2, int param3, boolean param4) {
         int stackIn_5_0 = 0;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;

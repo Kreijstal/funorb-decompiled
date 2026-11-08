@@ -21,8 +21,8 @@ final class pn {
           field_d = -35;
         }
         MusicCrossfadeStream.field_n = oo.d(-9685);
-        pm.field_e = new h();
-        ke.g((byte) 94);
+        pm.field_e = new ModalPanelStack();
+        LabeledField.g((byte) 94);
     }
 
     final static String reverseString(int param0, String param1) {

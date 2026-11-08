@@ -55,10 +55,10 @@ final class LoadingTracker {
 
     final static boolean c(int param0) {
         if (param0 == -1321) {
-          return null != tc.field_A ? true : false;
+          return null != PasswordFieldPainter.field_A ? true : false;
         }
         field_a = (ResourceArchive) null;
-        return null != tc.field_A ? true : false;
+        return null != PasswordFieldPainter.field_A ? true : false;
     }
 
     final static BinaryBitmapFont loadBinaryFont(ResourceArchive param0, int param1, String param2, String param3, ResourceArchive param4) {
@@ -82,7 +82,7 @@ final class LoadingTracker {
           }
           var5_int = param4.c(param2, 105);
           var6 = param4.a(param3, (byte) 73, var5_int);
-          stackIn_3_0 = kn.a(param4, var5_int, true, var6, param0);
+          stackIn_3_0 = OptionsDialog.loadBinaryFont(param4, var5_int, true, var6, param0);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -153,26 +153,26 @@ final class LoadingTracker {
         int var2Lifetime1;
         int var3Lifetime1;
         if (param1 == -30218) {
-          ma.field_N = param0;
+          Scrollbar.field_N = param0;
           if (DiskCacheRequest.field_F != jo.field_e) {
             var2 = DiskCacheRequest.field_F * DiskCacheRequest.field_F;
             var3 = var2 - jo.field_e * jo.field_e;
             param0 = param0 + var3 * (TextLine.field_k - param0) / var2;
           }
           IntKeyLookup.field_g.setBounds(640, sa.field_Hb, param0, 120, (byte) -120);
-          IsaacRandom.a(5, TextLine.field_k - 24, (byte) 19, 640, mm.field_p, 0, dh.field_Gb);
+          IsaacRandom.a(5, TextLine.field_k - 24, (byte) 19, 640, MenuButtonPainter.field_p, 0, dh.field_Gb);
           return;
         }
         CharSequence var4 = (CharSequence) null;
         LoadingTracker.parseIntegerRadix((byte) 20, (CharSequence) null, -57);
-        ma.field_N = param0;
+        Scrollbar.field_N = param0;
         if (DiskCacheRequest.field_F != jo.field_e) {
           var2Lifetime1 = DiskCacheRequest.field_F * DiskCacheRequest.field_F;
           var3Lifetime1 = var2Lifetime1 - jo.field_e * jo.field_e;
           param0 = param0 + var3Lifetime1 * (TextLine.field_k - param0) / var2Lifetime1;
         }
         IntKeyLookup.field_g.setBounds(640, sa.field_Hb, param0, 120, (byte) -120);
-        IsaacRandom.a(5, TextLine.field_k - 24, (byte) 19, 640, mm.field_p, 0, dh.field_Gb);
+        IsaacRandom.a(5, TextLine.field_k - 24, (byte) 19, 640, MenuButtonPainter.field_p, 0, dh.field_Gb);
     }
 
     final static boolean b(int param0) {

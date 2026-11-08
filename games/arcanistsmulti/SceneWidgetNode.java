@@ -40,9 +40,9 @@ class SceneWidgetNode extends DualLinkNode {
           if (pn.a((byte) 111)) {
             param0 = false;
           }
-          ej.a(-11837, param0);
+          TextHotspotWidget.a(-11837, param0);
           var2_int = 125 / ((25 - param1) / 59);
-          if (ua.field_J) {
+          if (GridContainer.field_J) {
             SoftwareRasterizer.darkenRectangle(tn.field_Ob.field_c.field_T, tn.field_Ob.field_c.field_db, tn.field_Ob.field_c.field_x, tn.field_Ob.field_c.field_I);
             tn.field_Ob.field_c.drawFullScreen(param0, true);
           }
@@ -179,7 +179,7 @@ class SceneWidgetNode extends DualLinkNode {
               if (ClipState.field_m == 2) {
                 td.field_E = new k((java.net.Socket) (FrameClock.field_a.field_g), ri.field_g);
                 var1 = new PacketBuffer(13);
-                SpriteState.a(var1, ne.field_b, ib.field_u, ce.field_o, 123);
+                SpriteState.a(var1, ne.field_b, BevelTextPainter.field_u, ce.field_o, 123);
                 var1.writeByte(15, (byte) -28);
                 var1.writeInt(hd.field_a, (byte) -101);
                 td.field_E.a(13, 0, (byte) 126, var1.payload);
@@ -375,14 +375,14 @@ class SceneWidgetNode extends DualLinkNode {
                   var25Lifetime1Lifetime1 = param4.field_y[var24Lifetime2];
                   var26Lifetime1Lifetime1 = param4.field_g[var24Lifetime2];
                   var27Lifetime1Lifetime1 = param4.field_x[var24Lifetime2];
-                  sl.field_V[var24Lifetime2] = (var16 * var26Lifetime1Lifetime1 + (var25Lifetime1Lifetime1 * var12 + var19 * var27Lifetime1Lifetime1) >> 16) + var9;
+                  ScrollContainer.field_V[var24Lifetime2] = (var16 * var26Lifetime1Lifetime1 + (var25Lifetime1Lifetime1 * var12 + var19 * var27Lifetime1Lifetime1) >> 16) + var9;
                   k.field_m[var24Lifetime2] = var10 + (var27Lifetime1Lifetime1 * var20 + var26Lifetime1Lifetime1 * var17 + var25Lifetime1Lifetime1 * var13 >> 16);
                   SceneWidget.field_N[var24Lifetime2] = (var21 * var27Lifetime1Lifetime1 + var18 * var26Lifetime1Lifetime1 + var25Lifetime1Lifetime1 * var14 >> 16) + var11;
                   var25Lifetime1Lifetime1 = param4.field_J[var24Lifetime2];
                   var26Lifetime1Lifetime1 = param4.field_a[var24Lifetime2];
                   var27Lifetime1Lifetime1 = param4.field_j[var24Lifetime2];
-                  cn.field_M[var24Lifetime2] = var9 + (var27Lifetime1Lifetime1 * var19 + (var16 * var26Lifetime1Lifetime1 + var12 * var25Lifetime1Lifetime1) >> 16);
-                  q.field_E[var24Lifetime2] = (var25Lifetime1Lifetime1 * var13 + var26Lifetime1Lifetime1 * var17 + var27Lifetime1Lifetime1 * var20 >> 16) + var10;
+                  BirthDateEntryPanel.field_M[var24Lifetime2] = var9 + (var27Lifetime1Lifetime1 * var19 + (var16 * var26Lifetime1Lifetime1 + var12 * var25Lifetime1Lifetime1) >> 16);
+                  DropTargetWidget.field_E[var24Lifetime2] = (var25Lifetime1Lifetime1 * var13 + var26Lifetime1Lifetime1 * var17 + var27Lifetime1Lifetime1 * var20 >> 16) + var10;
                   dh.field_Db[var24Lifetime2] = (var26Lifetime1Lifetime1 * var18 + var25Lifetime1Lifetime1 * var14 + var27Lifetime1Lifetime1 * var21 >> 16) + var11;
                   var25Lifetime1Lifetime1 = param4.field_o[var24Lifetime2];
                   var26Lifetime1Lifetime1 = param4.field_E[var24Lifetime2];

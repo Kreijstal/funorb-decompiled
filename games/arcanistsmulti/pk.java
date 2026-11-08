@@ -19,13 +19,13 @@ final class pk implements Iterable {
         int[] var5 = null;
         int var6 = 0;
         int var7 = ArcanistsMulti.field_G ? 1 : 0;
-        Sprite[] var1 = new Sprite[h.field_J];
+        Sprite[] var1 = new Sprite[ModalPanelStack.field_J];
         if (param0 >= -106) {
           field_f = (String) null;
         }
-        for (var2 = 0; var2 < h.field_J; var2++) {
+        for (var2 = 0; var2 < ModalPanelStack.field_J; var2++) {
           var3 = jg.field_p[var2] * ho.field_i[var2];
-          var4 = ln.field_I[var2];
+          var4 = AccountRegistrationPanel.field_I[var2];
           var5 = new int[var3];
           for (var6 = 0; var6 < var3; var6++) {
             var5[var6] = ph.field_c[NameValidator.bitAnd((int) var4[var6], 255)];

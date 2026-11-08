@@ -80,18 +80,18 @@ final class mn extends TextFieldValidator {
         int var10 = 0;
         var10 = ArcanistsMulti.field_G ? 1 : 0;
         try {
-          var1_int = bj.field_tb - bk.field_I;
-          bk.field_I = af.field_Eb - (var1_int >> 1);
+          var1_int = bj.field_tb - Checkbox.field_I;
+          Checkbox.field_I = af.field_Eb - (var1_int >> 1);
           qe.field_o = -(ih.field_b >> 1) + ub.field_g;
-          bj.field_tb = bk.field_I + var1_int;
+          bj.field_tb = Checkbox.field_I + var1_int;
           if (param0 != -1) {
             field_q = (String) null;
           }
           var2 = qe.field_o;
           for (var3 = 0; var3 < pm.field_f.length; var3++) {
-            var4 = ln.field_M[var3];
+            var4 = AccountRegistrationPanel.field_M[var3];
             if (var4 >= 0) {
-              if (wl.field_S.field_h != var4) {
+              if (NumericDateInputWidget.field_S.field_h != var4) {
                 var5 = wm.field_I;
               } else {
                 var5 = pn.field_d;
@@ -105,7 +105,7 @@ final class mn extends TextFieldValidator {
             var8 = af.field_Eb - (var7 >> 1);
             if (var4 >= 0) {
               var2 = var2 + ic.field_a;
-              if (wl.field_S.field_h != var4) {
+              if (NumericDateInputWidget.field_S.field_h != var4) {
                 stackIn_18_0 = kg.field_h;
               } else {
                 stackIn_18_0 = vf.field_s;
@@ -120,7 +120,7 @@ final class mn extends TextFieldValidator {
               TextLine.field_c.drawText(var6, var8, mh.field_H + var2, var5, -1);
               var2 = var2 + (ic.field_a + (FullscreenFocusCanvas.field_d + tm.field_b));
             } else {
-              ob.field_T.drawText(var6, var8, var2 + NanoFrameClock.field_k, var5, -1);
+              ResizableModalPanel.field_T.drawText(var6, var8, var2 + NanoFrameClock.field_k, var5, -1);
               var2 = var2 + u.field_l;
             }
           }
@@ -202,7 +202,7 @@ final class mn extends TextFieldValidator {
         }
         ck.field_d = null;
         tm.field_d = null;
-        bi.field_U = null;
+        ValidatedTextWidget.field_U = null;
         if (param0 < 78) {
           mn.e(18);
         }

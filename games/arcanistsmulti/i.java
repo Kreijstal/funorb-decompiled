@@ -28,7 +28,7 @@ final class i {
           return (Sprite) null;
         }
         int var1 = jg.field_p[0] * ho.field_i[0];
-        byte[] var16 = ln.field_I[0];
+        byte[] var16 = AccountRegistrationPanel.field_I[0];
         if (!dn.field_Ib[0]) {
           var8 = new int[var1];
           for (var5_int = 0; var5_int < var1; var5_int++) {
@@ -36,7 +36,7 @@ final class i {
           }
           var3 = new Sprite(pb.field_g, gn.field_a, hl.field_l[0], SectorCacheStore.field_d[0], jg.field_p[0], ho.field_i[0], var8);
         } else {
-          var17 = vi.field_O[0];
+          var17 = FadingModalPanel.field_O[0];
           var13 = new int[var1];
           var11 = var13;
           var5 = var11;
@@ -170,16 +170,16 @@ final class i {
             if (ProxySocketConnector.field_m != null &&
               ProxySocketConnector.field_m.field_e) {
               u.b(param0 ^ 6);
-              pm.field_e.b(new qn(pm.field_e, vi.field_C), 15637);
+              pm.field_e.pushPanel(new qn(pm.field_e, FadingModalPanel.field_C), 15637);
             }
             return;
           }
           if (param0 != 0) {
             i.releaseStatics((byte) -47);
           }
-          pm.field_e.processPointerInput(UiContainer.field_y, vi.field_L, true, (byte) -88);
-          pm.field_e.i(4);
-          while (ib.b(false)) {
+          pm.field_e.processPointerInput(UiContainer.field_y, FadingModalPanel.field_L, true, (byte) -88);
+          pm.field_e.updatePanels(4);
+          while (BevelTextPainter.pollKeyEvent(false)) {
             pm.field_e.processKey(ed.field_Bb, (byte) 33, IntrusiveDeque.field_d);
           }
           return;

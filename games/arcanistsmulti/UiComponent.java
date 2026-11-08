@@ -30,7 +30,7 @@ class UiComponent extends IntrusiveNode {
           return;
         }
         if (this.field_r != null) {
-          this.field_r.a(this, 5592405, param1, param3, true);
+          this.field_r.paint(this, 5592405, param1, param3, true);
           return;
         }
     }
@@ -247,15 +247,15 @@ class UiComponent extends IntrusiveNode {
     final boolean processPointerInput(int param0, int param1, boolean param2, byte param3) {
         int var5;
         int var7;
-        se var8;
-        se var9;
-        se var10;
-        se var11;
-        se var12;
-        se var13;
-        se var14;
-        se var15;
-        se var16;
+        DraggableWidget var8;
+        DraggableWidget var9;
+        DraggableWidget var10;
+        DraggableWidget var11;
+        DraggableWidget var12;
+        DraggableWidget var13;
+        DraggableWidget var14;
+        DraggableWidget var15;
+        DraggableWidget var16;
         var7 = ArcanistsMulti.field_G ? 1 : 0;
         if (param3 >= -75) {
           return false;
@@ -275,11 +275,11 @@ class UiComponent extends IntrusiveNode {
           if (0 == re.field_r) {
             if (0 == PacketBuffer.field_m &&
               la.field_f != 0) {
-              this.handlePointerRelease(me.field_I, -20592, EmailLoginCredentials.field_g, param1, param0, this);
+              this.handlePointerRelease(MenuButtonPanel.field_I, -20592, EmailLoginCredentials.field_g, param1, param0, this);
               var8 = so.field_i;
               if (var8 != null) {
-                if (var8.field_o instanceof em) {
-                  ((em) (var8.field_o)).a(var8, (byte) 71, (q) null);
+                if (var8.field_o instanceof WidgetDropListener) {
+                  ((WidgetDropListener) (var8.field_o)).onWidgetDropped(var8, (byte) 71, (DropTargetWidget) null);
                 }
                 so.field_i = null;
               }
@@ -297,13 +297,13 @@ class UiComponent extends IntrusiveNode {
             if (var5 == 0) {
               if (0 == PacketBuffer.field_m &&
                 la.field_f != 0) {
-                this.handlePointerRelease(me.field_I, -20592, EmailLoginCredentials.field_g, param1, param0, this);
+                this.handlePointerRelease(MenuButtonPanel.field_I, -20592, EmailLoginCredentials.field_g, param1, param0, this);
                 var9 = so.field_i;
                 if (var9 != null) {
-                  if (!(var9.field_o instanceof em)) {
+                  if (!(var9.field_o instanceof WidgetDropListener)) {
                     so.field_i = null;
                   } else {
-                    ((em) (var9.field_o)).a(var9, (byte) 71, (q) null);
+                    ((WidgetDropListener) (var9.field_o)).onWidgetDropped(var9, (byte) 71, (DropTargetWidget) null);
                     so.field_i = null;
                   }
                 }
@@ -334,11 +334,11 @@ class UiComponent extends IntrusiveNode {
             qg.a(38, this.getTooltip(false));
             return param2;
           }
-          this.handlePointerRelease(me.field_I, -20592, EmailLoginCredentials.field_g, param1, param0, this);
+          this.handlePointerRelease(MenuButtonPanel.field_I, -20592, EmailLoginCredentials.field_g, param1, param0, this);
           var10 = so.field_i;
           if (var10 != null) {
-            if (var10.field_o instanceof em) {
-              ((em) (var10.field_o)).a(var10, (byte) 71, (q) null);
+            if (var10.field_o instanceof WidgetDropListener) {
+              ((WidgetDropListener) (var10.field_o)).onWidgetDropped(var10, (byte) 71, (DropTargetWidget) null);
             }
             so.field_i = null;
           }
@@ -355,11 +355,11 @@ class UiComponent extends IntrusiveNode {
           if (0 == re.field_r) {
             if (0 == PacketBuffer.field_m &&
               la.field_f != 0) {
-              this.handlePointerRelease(me.field_I, -20592, EmailLoginCredentials.field_g, param1, param0, this);
+              this.handlePointerRelease(MenuButtonPanel.field_I, -20592, EmailLoginCredentials.field_g, param1, param0, this);
               var11 = so.field_i;
               if (var11 != null) {
-                if (var11.field_o instanceof em) {
-                  ((em) (var11.field_o)).a(var11, (byte) 71, (q) null);
+                if (var11.field_o instanceof WidgetDropListener) {
+                  ((WidgetDropListener) (var11.field_o)).onWidgetDropped(var11, (byte) 71, (DropTargetWidget) null);
                 }
                 so.field_i = null;
               }
@@ -376,13 +376,13 @@ class UiComponent extends IntrusiveNode {
           if (!this.handlePointerPress(ja.field_s, re.field_r, this, param1, 10, pb.field_h, param0)) {
             if (0 == PacketBuffer.field_m &&
               la.field_f != 0) {
-              this.handlePointerRelease(me.field_I, -20592, EmailLoginCredentials.field_g, param1, param0, this);
+              this.handlePointerRelease(MenuButtonPanel.field_I, -20592, EmailLoginCredentials.field_g, param1, param0, this);
               var12 = so.field_i;
               if (var12 != null) {
-                if (!(var12.field_o instanceof em)) {
+                if (!(var12.field_o instanceof WidgetDropListener)) {
                   so.field_i = null;
                 } else {
-                  ((em) (var12.field_o)).a(var12, (byte) 71, (q) null);
+                  ((WidgetDropListener) (var12.field_o)).onWidgetDropped(var12, (byte) 71, (DropTargetWidget) null);
                   so.field_i = null;
                 }
               }
@@ -407,11 +407,11 @@ class UiComponent extends IntrusiveNode {
             qg.a(38, this.getTooltip(false));
             return param2;
           }
-          this.handlePointerRelease(me.field_I, -20592, EmailLoginCredentials.field_g, param1, param0, this);
+          this.handlePointerRelease(MenuButtonPanel.field_I, -20592, EmailLoginCredentials.field_g, param1, param0, this);
           var13 = so.field_i;
           if (var13 != null) {
-            if (var13.field_o instanceof em) {
-              ((em) (var13.field_o)).a(var13, (byte) 71, (q) null);
+            if (var13.field_o instanceof WidgetDropListener) {
+              ((WidgetDropListener) (var13.field_o)).onWidgetDropped(var13, (byte) 71, (DropTargetWidget) null);
             }
             so.field_i = null;
           }
@@ -424,15 +424,15 @@ class UiComponent extends IntrusiveNode {
           qg.a(38, this.getTooltip(false));
           return param2;
         }
-        this.handleMouseWheel(param1, param0, EmailLoginCredentials.field_g, me.field_I, SingleChildContainer.field_y, 0, this);
+        this.handleMouseWheel(param1, param0, EmailLoginCredentials.field_g, MenuButtonPanel.field_I, SingleChildContainer.field_y, 0, this);
         if (0 == re.field_r) {
           if (0 == PacketBuffer.field_m &&
             la.field_f != 0) {
-            this.handlePointerRelease(me.field_I, -20592, EmailLoginCredentials.field_g, param1, param0, this);
+            this.handlePointerRelease(MenuButtonPanel.field_I, -20592, EmailLoginCredentials.field_g, param1, param0, this);
             var14 = so.field_i;
             if (var14 != null) {
-              if (var14.field_o instanceof em) {
-                ((em) (var14.field_o)).a(var14, (byte) 71, (q) null);
+              if (var14.field_o instanceof WidgetDropListener) {
+                ((WidgetDropListener) (var14.field_o)).onWidgetDropped(var14, (byte) 71, (DropTargetWidget) null);
               }
               so.field_i = null;
             }
@@ -464,11 +464,11 @@ class UiComponent extends IntrusiveNode {
           qg.a(38, this.getTooltip(false));
           return param2;
         }
-        this.handlePointerRelease(me.field_I, -20592, EmailLoginCredentials.field_g, param1, param0, this);
+        this.handlePointerRelease(MenuButtonPanel.field_I, -20592, EmailLoginCredentials.field_g, param1, param0, this);
         var16 = so.field_i;
         if (var16 != null) {
-          if (var16.field_o instanceof em) {
-            ((em) (var16.field_o)).a(var16, (byte) 71, (q) null);
+          if (var16.field_o instanceof WidgetDropListener) {
+            ((WidgetDropListener) (var16.field_o)).onWidgetDropped(var16, (byte) 71, (DropTargetWidget) null);
           }
           so.field_i = null;
         }
@@ -693,7 +693,7 @@ class UiComponent extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         try {
-          var5_int = this.containsPoint((byte) -47, param3, me.field_I, param1, EmailLoginCredentials.field_g) ? 1 : 0;
+          var5_int = this.containsPoint((byte) -47, param3, MenuButtonPanel.field_I, param1, EmailLoginCredentials.field_g) ? 1 : 0;
           if (param2 != 170) {
             field_p = (String) null;
           }
@@ -760,8 +760,8 @@ class UiComponent extends IntrusiveNode {
           this.field_r = param1;
           if (this.field_r instanceof WidgetTextLayout) {
             var4 = (WidgetTextLayout) ((Object) this.field_r);
-            this.field_v = var4.a((byte) 124, this);
-            this.field_k = var4.b(this, 1);
+            this.field_v = var4.getPreferredWidth((byte) 124, this);
+            this.field_k = var4.getPreferredHeight(this, 1);
           }
         } catch (RuntimeException runtimeException) {
           throw aa.wrapException((Throwable) ((Object) runtimeException), "qm.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');

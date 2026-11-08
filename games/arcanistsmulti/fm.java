@@ -20,8 +20,8 @@ final class fm {
           var3 = var5.position;
           var5.writeByte(2, (byte) -12);
           var5.writeBytes(MidiPcmStream.field_E, 0, (byte) -86, MidiPcmStream.field_E.length);
-          var5.writeByte(q.field_L, (byte) -14);
-          var5.writeByte(q.field_N, (byte) -3);
+          var5.writeByte(DropTargetWidget.field_L, (byte) -14);
+          var5.writeByte(DropTargetWidget.field_N, (byte) -3);
           var5.writeBytes(ng.field_D, 0, (byte) -86, ng.field_D.length);
           var5.writeByteLengthAtMark(var5.position - var3, (byte) 43);
           return;
@@ -33,8 +33,8 @@ final class fm {
         var3Lifetime1 = var4.position;
         var4.writeByte(2, (byte) -12);
         var4.writeBytes(MidiPcmStream.field_E, 0, (byte) -86, MidiPcmStream.field_E.length);
-        var4.writeByte(q.field_L, (byte) -14);
-        var4.writeByte(q.field_N, (byte) -3);
+        var4.writeByte(DropTargetWidget.field_L, (byte) -14);
+        var4.writeByte(DropTargetWidget.field_N, (byte) -3);
         var4.writeBytes(ng.field_D, 0, (byte) -86, ng.field_D.length);
         var4.writeByteLengthAtMark(var4.position - var3Lifetime1, (byte) 43);
     }

@@ -81,10 +81,10 @@ final class qj {
         }
         long var1 = System.currentTimeMillis();
         if (!(sk.field_h <= var1)) {
-          wl.field_O = wl.field_O + (-var1 + sk.field_h);
+          NumericDateInputWidget.field_O = NumericDateInputWidget.field_O + (-var1 + sk.field_h);
         }
         sk.field_h = var1;
-        return var1 + wl.field_O;
+        return var1 + NumericDateInputWidget.field_O;
     }
 
     final static String readIncomingString(int param0) {

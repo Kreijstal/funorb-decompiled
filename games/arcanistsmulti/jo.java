@@ -29,10 +29,10 @@ final class jo {
           WidgetStyleLayer.a((byte) 37);
         }
         if (sm.field_a > 0) {
-          ej.a(16, sm.field_a);
+          TextHotspotWidget.a(16, sm.field_a);
         }
         if (oo.field_y > 0) {
-          ej.a(16, oo.field_y);
+          TextHotspotWidget.a(16, oo.field_y);
         }
     }
 

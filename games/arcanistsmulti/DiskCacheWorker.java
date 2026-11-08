@@ -244,7 +244,7 @@ final class DiskCacheWorker implements Runnable {
         Bzip2State.field_h = true;
         int var1 = -24 % ((71 - param0) / 35);
         MusicPatchPcmStream.field_s = true;
-        ClientException.field_b.f(-126);
+        ClientException.field_b.deactivatePanels(-126);
         jn.a(fi.field_a, false, -1);
     }
 

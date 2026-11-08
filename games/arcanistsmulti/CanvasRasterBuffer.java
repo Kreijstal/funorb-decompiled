@@ -21,7 +21,7 @@ abstract class CanvasRasterBuffer {
         ph.field_c = null;
         SectorCacheStore.field_d = null;
         jg.field_p = null;
-        ln.field_I = (byte[][]) null;
+        AccountRegistrationPanel.field_I = (byte[][]) null;
         hl.field_l = null;
         if (param0 != -18229) {
           field_f = (String) null;
@@ -82,12 +82,12 @@ abstract class CanvasRasterBuffer {
           }
           var6 = stackIn_4_0;
           if (0 == i.field_d) {
-            var7 = MembershipOfferScreen.splitIntoTwoLines(of.field_e, var11, 480, ob.field_T, 21230);
+            var7 = MembershipOfferScreen.splitIntoTwoLines(of.field_e, var11, 480, ResizableModalPanel.field_T, 21230);
             var8 = var7 + 3;
             pm.field_f = new String[var8];
-            ln.field_M = new int[var8];
+            AccountRegistrationPanel.field_M = new int[var8];
             for (var9 = 0; var8 > var9; var9++) {
-              ln.field_M[var9] = -1;
+              AccountRegistrationPanel.field_M[var9] = -1;
             }
             cf.field_c = new int[2];
             for (var9 = 0; var9 < var7; var9++) {
@@ -95,21 +95,21 @@ abstract class CanvasRasterBuffer {
             }
             pm.field_f[-3 + var8] = "";
             pm.field_f[var8 - 2] = var6;
-            ln.field_M[var8 - 2] = 0;
+            AccountRegistrationPanel.field_M[var8 - 2] = 0;
             cf.field_c[0] = 1;
             pm.field_f[var8 - 1] = dd.field_e;
-            ln.field_M[var8 - 1] = 1;
+            AccountRegistrationPanel.field_M[var8 - 1] = 1;
             cf.field_c[1] = 2;
           } else {
             if (1 != i.field_d) {
               throw new IllegalArgumentException();
             }
-            var7 = MembershipOfferScreen.splitIntoTwoLines(of.field_e, var11, 480, ob.field_T, 21230);
+            var7 = MembershipOfferScreen.splitIntoTwoLines(of.field_e, var11, 480, ResizableModalPanel.field_T, 21230);
             var8 = var7 + 2;
-            ln.field_M = new int[var8];
+            AccountRegistrationPanel.field_M = new int[var8];
             pm.field_f = new String[var8];
             for (var9 = 0; var8 > var9; var9++) {
-              ln.field_M[var9] = -1;
+              AccountRegistrationPanel.field_M[var9] = -1;
             }
             cf.field_c = new int[1];
             for (var9 = 0; var7 > var9; var9++) {
@@ -117,30 +117,30 @@ abstract class CanvasRasterBuffer {
             }
             pm.field_f[-2 + var8] = "";
             pm.field_f[var8 - 1] = dd.field_e;
-            ln.field_M[-1 + var8] = 0;
+            AccountRegistrationPanel.field_M[-1 + var8] = 0;
             cf.field_c[0] = 2;
           }
-          wl.field_S.field_f = cf.field_c.length;
+          NumericDateInputWidget.field_S.field_f = cf.field_c.length;
           var7Lifetime1 = 0;
           for (var8Lifetime1 = 0; pm.field_f.length > var8Lifetime1; var8Lifetime1++) {
-            stackIn_28_0 = !(ln.field_M[var8Lifetime1] < 0);
+            stackIn_28_0 = !(AccountRegistrationPanel.field_M[var8Lifetime1] < 0);
             var9Lifetime1 = lc.a(stackIn_28_0, pm.field_f[var8Lifetime1], (byte) -94);
-            if (-1 != ln.field_M[var8Lifetime1]) {
+            if (-1 != AccountRegistrationPanel.field_M[var8Lifetime1]) {
               var9Lifetime1 = var9Lifetime1 + 2 * f.field_h;
             }
             if (var9Lifetime1 > var7Lifetime1) {
               var7Lifetime1 = var9Lifetime1;
             }
           }
-          bk.field_I = -(var7Lifetime1 >> 1) + af.field_Eb;
-          ih.field_b = (FullscreenFocusCanvas.field_d + ic.field_a << 1) * wl.field_S.field_f;
+          Checkbox.field_I = -(var7Lifetime1 >> 1) + af.field_Eb;
+          ih.field_b = (FullscreenFocusCanvas.field_d + ic.field_a << 1) * NumericDateInputWidget.field_S.field_f;
           bj.field_tb = -(var7Lifetime1 >> 1) + af.field_Eb + var7Lifetime1;
           if (param1 >= -37) {
             return;
           }
           for (var8Lifetime2 = 0; var8Lifetime2 < pm.field_f.length; var8Lifetime2++) {
             stackIn_42_0 = ih.field_b;
-            if (ln.field_M[var8Lifetime2] < 0) {
+            if (AccountRegistrationPanel.field_M[var8Lifetime2] < 0) {
               stackIn_43_1 = u.field_l;
             } else {
               stackIn_43_1 = tm.field_b;
@@ -148,7 +148,7 @@ abstract class CanvasRasterBuffer {
             ih.field_b = stackIn_42_0 + stackIn_43_1;
           }
           qe.field_o = ub.field_g - (ih.field_b >> 1);
-          wl.field_S.a(param4, 0, false, ao.a(31128, EmailLoginCredentials.field_g, me.field_I));
+          NumericDateInputWidget.field_S.a(param4, 0, false, ao.a(31128, EmailLoginCredentials.field_g, MenuButtonPanel.field_I));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

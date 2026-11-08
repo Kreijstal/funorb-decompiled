@@ -76,7 +76,7 @@ final class IntrusiveDequeCursor {
         boolean decompiledFrameRemainder0 = true;
         if (ih.field_f >= 20 &&
           ue.a(125) && (!(0 < dd.field_j) ||
-          ke.g(param0 ^ 15587))) {
+          LabeledField.g(param0 ^ 15587))) {
           stackIn_9_0 = false;
           decompiledFrameRemainder0 = false;
         }
@@ -180,8 +180,8 @@ final class IntrusiveDequeCursor {
           sa.field_Cb.setBounds(sa.field_Cb.field_x, param3 + SingleChildContainer.field_D.field_x, 0, param4, (byte) -120);
           var7 = var7 - (2 + param4);
           qo.field_f.a(5, param1, param1 + param3 + 487, false, 5, var7 - 5, 2);
-          if (ln.field_U != null) {
-            ln.field_U.setBounds(qo.field_f.field_I, qo.field_f.field_db, qo.field_f.field_x, qo.field_f.field_T, -104);
+          if (AccountRegistrationPanel.field_U != null) {
+            AccountRegistrationPanel.field_U.setBounds(qo.field_f.field_I, qo.field_f.field_db, qo.field_f.field_x, qo.field_f.field_T, -104);
           }
           var8 = -param3 + (IntKeyLookup.field_g.field_x - var6_int);
           var9 = var8 / 2;

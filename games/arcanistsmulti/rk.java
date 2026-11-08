@@ -195,12 +195,12 @@ final class rk extends TextButton {
         int var3 = -66 / ((param0 - 8) / 46);
         int var4 = om.field_x != null ? 1 : 0;
         if (IntrusiveDeque.field_d == 9 &&
-          wj.a(of.field_c, ao.field_e, gd.field_rb, 2, fo.field_h)) {
-          if (2 != gd.field_rb &&
+          wj.a(of.field_c, ao.field_e, LoadingProgressDialog.field_rb, 2, fo.field_h)) {
+          if (2 != LoadingProgressDialog.field_rb &&
             var4 != 0) {
             return false;
           }
-          return va.a(fo.field_h, 1, ao.field_e, of.field_c, gd.field_rb);
+          return va.a(fo.field_h, 1, ao.field_e, of.field_c, LoadingProgressDialog.field_rb);
         }
         if (IntrusiveDeque.field_d == 10) {
           if (var4 != 0) {

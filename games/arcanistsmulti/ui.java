@@ -45,7 +45,7 @@ final class ui extends TextFieldValidator {
             stackIn_11_0 = cm.field_h;
             return stackIn_11_0;
           }
-          if (LoginPanel.b(-12055, var5)) {
+          if (LoginPanel.isSingleRepeatedCharacter(-12055, var5)) {
             stackIn_14_0 = ko.field_g;
             return stackIn_14_0;
           }

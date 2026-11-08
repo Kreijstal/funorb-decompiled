@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class no extends qk {
+final class no extends ContentTransitionDialog {
     static String field_wb;
     static String[] field_ub;
     static int[] field_tb;
@@ -9,12 +9,12 @@ final class no extends qk {
 
     final static void attachMouseInput(java.awt.Component param0, int param1) {
         try {
-          param0.addMouseListener(ob.field_hb);
-          param0.addMouseMotionListener(ob.field_hb);
+          param0.addMouseListener(ResizableModalPanel.field_hb);
+          param0.addMouseMotionListener(ResizableModalPanel.field_hb);
           if (param1 != 0) {
             no.b(-101, (byte) -112, -11);
           }
-          param0.addFocusListener(ob.field_hb);
+          param0.addFocusListener(ResizableModalPanel.field_hb);
         } catch (RuntimeException runtimeException) {
           throw aa.wrapException((Throwable) ((Object) runtimeException), "no.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -46,7 +46,7 @@ final class no extends qk {
         return null;
     }
 
-    no(h param0, UiComponent param1) {
+    no(ModalPanelStack param0, UiComponent param1) {
         super(param0, param1, 33, 20, 30);
     }
 
@@ -124,12 +124,12 @@ final class no extends qk {
         if (param1 != -61) {
           field_ub = (String[]) null;
         }
-        jm.field_j = true;
+        TextWidgetPainter.field_j = true;
     }
 
-    final void a(byte param0, UiComponent param1) {
+    final void setContent(byte param0, UiComponent param1) {
         try {
-          super.a(param0, param1);
+          super.setContent(param0, param1);
         } catch (RuntimeException runtimeException) {
           throw aa.wrapException((Throwable) ((Object) runtimeException), "no.K(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

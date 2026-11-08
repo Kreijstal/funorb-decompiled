@@ -32,7 +32,7 @@ final class LoginMethod {
           if (param0.field_f != null) {
             fo.field_h = param0.field_h;
             ao.field_e = param0.field_f;
-            gd.field_rb = param0.field_m;
+            LoadingProgressDialog.field_rb = param0.field_m;
             of.field_c = param0.field_n;
           }
           TextLine.a(param0, (byte) -74);
@@ -81,12 +81,12 @@ final class LoginMethod {
             } else {
               var8 = uc.field_a + 480;
               if (uc.field_a > 1) {
-                var9 = gf.a((uc.field_a * 1024 + 491520) / 480, (byte) 16, var5, var4);
+                var9 = gf.blendColours((uc.field_a * 1024 + 491520) / 480, (byte) 16, var5, var4);
                 SoftwareRasterizer.fillVerticalGradient(0, 0, param0 / 2, uc.field_a / 2, var9, var4);
               }
               SoftwareRasterizer.fillVerticalGradient(0, uc.field_a / 2, param0 / 2, 240, var4, var5);
               if (param1 - var8 > 1) {
-                var9Lifetime2 = gf.a((491520 + (param1 - var8) * 1024) / 480, (byte) 14, var4, var5);
+                var9Lifetime2 = gf.blendColours((491520 + (param1 - var8) * 1024) / 480, (byte) 14, var4, var5);
                 SoftwareRasterizer.fillVerticalGradient(0, var8 / 2, param0 / 2, (param1 - var8) / 2, var5, var9Lifetime2);
               }
             }

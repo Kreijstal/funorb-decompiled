@@ -38,8 +38,8 @@ final class ue {
           }
           mf.field_g = -1;
           ConditionalTextValue.field_f = true;
-          ti.field_N = -1;
-          bk.field_J = param1.field_V;
+          DropdownList.field_N = -1;
+          Checkbox.field_J = param1.field_V;
           bm.field_g = param1;
           IntrusiveNodeHashTable.field_f = null;
           i.b(-120);

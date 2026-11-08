@@ -19,7 +19,7 @@ final class nl extends SceneWidget {
         SoundCache.field_c = param0;
         mf.field_c = param2;
         if (ClientException.field_b != null) {
-          ClientException.field_b.a(-118, param0, param2);
+          ClientException.field_b.recentrePanels(-118, param0, param2);
         }
     }
 

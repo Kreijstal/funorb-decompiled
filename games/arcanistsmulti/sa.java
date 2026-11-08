@@ -41,14 +41,14 @@ final class sa extends SceneWidget {
           var17.field_X = 1;
           this.field_Fb = new SceneWidget(0L, param2);
           var8 = new SceneWidget(0L, param3);
-          var9 = new SceneWidget(0L, param3, li.field_H);
+          var9 = new SceneWidget(0L, param3, NameSuggestionsPanel.field_H);
           var9.field_X = 1;
           var10 = 50;
           var11 = 0;
-          for (var12 = 0; var12 < me.field_L.length; var12++) {
+          for (var12 = 0; var12 < MenuButtonPanel.field_L.length; var12++) {
             var13 = new SceneWidget(0L, param3, no.field_vb[var12]);
-            var14 = new SceneWidget(0L, param3, me.field_L[var12]);
-            var15 = param3.field_Z.textWidth(me.field_L[var12]);
+            var14 = new SceneWidget(0L, param3, MenuButtonPanel.field_L[var12]);
+            var15 = param3.field_Z.textWidth(MenuButtonPanel.field_L[var12]);
             var13.setBounds(65, 20, var10, 15, (byte) -120);
             if (var11 < var15) {
               var11 = var15;

@@ -1,23 +1,23 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ng extends UiContainer implements pj, ButtonListener {
+final class ng extends UiContainer implements TextHotspotListener, ButtonListener {
     static aj field_I;
     static int field_G;
     static String field_H;
-    private ej field_J;
+    private TextHotspotWidget field_J;
     private TextButton field_F;
     static byte[] field_D;
     static int field_K;
     private ie field_E;
 
-    final static void a(byte param0) {
+    final static void clearPendingMouseHandler(byte param0) {
         Throwable decompiledCaughtException = null;
         Object var1 = null;
-        if (null != ob.field_hb) {
-          var1 = ob.field_hb;
+        if (null != ResizableModalPanel.field_hb) {
+          var1 = ResizableModalPanel.field_hb;
           synchronized (var1) {
-            ob.field_hb = null;
+            ResizableModalPanel.field_hb = null;
           }
         }
         if (param0 != -23) {
@@ -77,7 +77,7 @@ final class ng extends UiContainer implements pj, ButtonListener {
         int var10Lifetime1;
         var12 = ArcanistsMulti.field_G ? 1 : 0;
         try {
-          ej.a(16, sm.field_a);
+          TextHotspotWidget.a(16, sm.field_a);
           if (null != om.field_x) {
             SocketConnector.field_d.field_I = 0;
             var15 = SocketConnector.field_d;
@@ -135,12 +135,12 @@ final class ng extends UiContainer implements pj, ButtonListener {
               stackIn_36_1 = -96;
               stackIn_36_2 = new String[]{CanvasRasterBuffer.field_k.field_rb};
               if (var8 == 0) {
-                stackIn_37_3 = bi.field_W;
+                stackIn_37_3 = ValidatedTextWidget.field_W;
               } else {
                 stackIn_37_3 = km.field_g;
               }
               stackIn_36_0.field_rb = tj.a(stackIn_36_1, stackIn_36_2, stackIn_37_3);
-              jf.field_d.field_rb = me.field_R;
+              jf.field_d.field_rb = MenuButtonPanel.field_R;
               IntrusiveNodeHashTable.field_o.field_ub = true;
               ByteStorage.field_a = true;
               if (um.field_a != null) {
@@ -156,7 +156,7 @@ final class ng extends UiContainer implements pj, ButtonListener {
                   tk.field_q[var13] = false;
                   var13++;
                 }
-                jm.a(-1, (byte) -25, true, om.field_x, -1, vf.field_l, -1, 0);
+                TextWidgetPainter.a(-1, (byte) -25, true, om.field_x, -1, vf.field_l, -1, 0);
                 if (!(qf.field_d < 2) &&
                   ri.field_b[12]) {
                   ByteStorage.field_a = true;
@@ -175,7 +175,7 @@ final class ng extends UiContainer implements pj, ButtonListener {
                   }
                   for (var10Lifetime1 = 0; var10Lifetime1 < vf.field_l; var10Lifetime1++) {
                     if (tk.field_q[var10Lifetime1]) {
-                      var11_ref = "<col=A00000>" + ob.field_bb[var10Lifetime1] + "</col>";
+                      var11_ref = "<col=A00000>" + ResizableModalPanel.field_bb[var10Lifetime1] + "</col>";
                       var9 = var11_ref;
                       var9 = var11_ref;
                       if (var9 != null) {
@@ -185,12 +185,12 @@ final class ng extends UiContainer implements pj, ButtonListener {
                       }
                     }
                   }
-                  TextLayout.field_c = "<col=A00000>" + nm.field_f + "<br>" + cd.field_s + (String) (var9);
+                  TextLayout.field_c = "<col=A00000>" + nm.field_f + "<br>" + IconButtonPainter.field_s + (String) (var9);
                 }
               }
             } else {
               IntrusiveNodeHashTable.field_o.field_ub = false;
-              WidgetStyleLayer.field_c.field_rb = j.field_e;
+              WidgetStyleLayer.field_c.field_rb = BevelBoxPainter.field_e;
               if (var8 == 0) {
                 stackIn_24_0 = LoginMethod.field_e;
               } else {
@@ -240,7 +240,7 @@ final class ng extends UiContainer implements pj, ButtonListener {
             lm.a(true, param1, om.field_x, 0);
           }
           if (param3 <= 105) {
-            ng.a(false, -75L);
+            ng.sleep(false, -75L);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -250,7 +250,7 @@ final class ng extends UiContainer implements pj, ButtonListener {
         }
     }
 
-    public final void a(boolean param0, int param1, int param2, int param3, TextButton param4) {
+    public final void onButtonActivated(boolean param0, int param1, int param2, int param3, TextButton param4) {
         String discarded$1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -263,7 +263,7 @@ final class ng extends UiContainer implements pj, ButtonListener {
           }
           if (this.field_F == param4) {
             IntrusiveNodeHashTable.g(-1);
-            this.field_E.h(77);
+            this.field_E.dismiss(77);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -290,7 +290,7 @@ final class ng extends UiContainer implements pj, ButtonListener {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 > -120) {
-            ng.a((byte) -91);
+            ng.clearPendingMouseHandler((byte) -91);
           }
           if (super.handleKeyInput(param0, (byte) -122, param2, param3)) {
             return true;
@@ -318,7 +318,7 @@ final class ng extends UiContainer implements pj, ButtonListener {
         }
     }
 
-    public final void a(int param0, ej param1, int param2, int param3) {
+    public final void onHotspotClicked(int param0, TextHotspotWidget param1, int param2, int param3) {
         int var6 = 0;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
@@ -339,7 +339,7 @@ final class ng extends UiContainer implements pj, ButtonListener {
             }
           }
           if (param2 != -1607) {
-            this.field_J = (ej) null;
+            this.field_J = (TextHotspotWidget) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -363,7 +363,7 @@ final class ng extends UiContainer implements pj, ButtonListener {
         field_D = null;
     }
 
-    final static void a(boolean param0, long param1) {
+    final static void sleep(boolean param0, long param1) {
         try {
           Throwable decompiledCaughtException = null;
           InterruptedException var3 = null;
@@ -387,20 +387,20 @@ final class ng extends UiContainer implements pj, ButtonListener {
         super(0, 0, 288, 0, (WidgetPainter) null);
         String var7 = null;
         int var3 = 0;
-        jm var4 = null;
+        TextWidgetPainter var4 = null;
         int var5 = 0;
         int var6 = 0;
         try {
           this.field_E = param0;
           this.field_F = new TextButton(qn.field_lb, (UiListener) null);
-          this.field_F.field_r = (WidgetPainter) ((Object) new mm());
+          this.field_F.field_r = (WidgetPainter) ((Object) new MenuButtonPainter());
           var7 = tj.a(125, new String[]{this.g(-7), this.g((byte) 94)}, ud.field_r);
           var3 = 20;
-          var4 = new jm(ia.field_c, 0, 0, 0, 0, 16777215, -1, 3, 0, ia.field_c.field_C, -1, 2147483647, true);
-          this.field_J = new ej(var7, var4);
+          var4 = new TextWidgetPainter(ia.field_c, 0, 0, 0, 0, 16777215, -1, 3, 0, ia.field_c.field_C, -1, 2147483647, true);
+          this.field_J = new TextHotspotWidget(var7, var4);
           this.field_J.field_q = "";
-          this.field_J.a(0, 0, mm.field_s);
-          this.field_J.a(1, 0, mm.field_s);
+          this.field_J.a(0, 0, MenuButtonPainter.field_s);
+          this.field_J.a(1, 0, MenuButtonPainter.field_s);
           this.field_J.field_o = (UiListener) (this);
           this.field_J.field_v = -40 + this.field_v;
           this.field_J.a(26, (byte) -4, this.field_v - 40, var3);
@@ -417,7 +417,7 @@ final class ng extends UiContainer implements pj, ButtonListener {
         }
     }
 
-    final static int b(byte param0, int param1) {
+    final static int rankColour(byte param0, int param1) {
         if (0 == param1) {
           return 12176339;
         }

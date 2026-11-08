@@ -11,7 +11,7 @@ final class oe {
         if (~param2 != param0) {
           return ub.field_i[param2];
         }
-        if (cn.a(113, param1)) {
+        if (BirthDateEntryPanel.isLeapYear(113, param1)) {
           return 29;
         }
         return ub.field_i[param2];

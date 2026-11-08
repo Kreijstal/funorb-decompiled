@@ -87,10 +87,10 @@ final class PatchEnvelopeSet {
                 if (var5 <= 0) {
                   return null;
                 }
-                stackIn_34_0 = ua.field_H;
+                stackIn_34_0 = GridContainer.field_H;
                 return stackIn_34_0;
               }
-              stackIn_18_0 = ua.field_H;
+              stackIn_18_0 = GridContainer.field_H;
               return stackIn_18_0;
             }
             stackIn_13_0 = lm.field_c;
@@ -116,18 +116,18 @@ final class PatchEnvelopeSet {
         if (param0 < 80) {
           PatchEnvelopeSet.releaseStatics((byte) 114);
         }
-        g.field_e.a((byte) -92, (UiComponent) (new td()));
+        g.field_e.setContent((byte) -92, (UiComponent) (new td()));
     }
 
     final static void c(int param0) {
         if (param0 != 0) {
           PatchEnvelopeSet.a(-120);
         }
-        ClientException.field_b.f(-120);
+        ClientException.field_b.deactivatePanels(-120);
         if (null == ci.field_c) {
-          ci.field_c = new gd(ClientException.field_b, MusicPatch.field_o);
+          ci.field_c = new LoadingProgressDialog(ClientException.field_b, MusicPatch.field_o);
         }
-        ClientException.field_b.b(ci.field_c, param0 + 15637);
+        ClientException.field_b.pushPanel(ci.field_c, param0 + 15637);
     }
 
     final static void closeNetworkResources(int param0) {
@@ -173,10 +173,10 @@ final class PatchEnvelopeSet {
     final static void d(int param0) {
         int var1 = -96 / ((param0 + 52) / 63);
         if (null != ClientException.field_b) {
-          ClientException.field_b.h((byte) 83);
+          ClientException.field_b.removeClosedPanels((byte) 83);
         }
         if (ci.field_c != null) {
-          ci.field_c.k((byte) 61);
+          ci.field_c.markComplete((byte) 61);
         }
         hb.f((byte) -102);
     }

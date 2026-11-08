@@ -130,14 +130,14 @@ final class tk extends DualLinkNode {
         }
         if (param1 < 0) {
           if (param1 >= -65536) {
-            return -sn.field_H[-param1 >> 5];
+            return -DisplayNameForm.field_H[-param1 >> 5];
           }
-          return sn.field_H[134217728 / -param1] - 2048;
+          return DisplayNameForm.field_H[134217728 / -param1] - 2048;
         }
         if (65536 >= param1) {
-          return sn.field_H[param1 >> 5];
+          return DisplayNameForm.field_H[param1 >> 5];
         }
-        return -sn.field_H[134217728 / param1] + 2048;
+        return -DisplayNameForm.field_H[134217728 / param1] + 2048;
     }
 
     final void e(byte param0) {
@@ -183,17 +183,17 @@ final class tk extends DualLinkNode {
         if (param0 != 0) {
           tk.releaseStatics(-48);
         }
-        if (tc.field_A != null) {
-          var3 = tc.field_A.b(false, param1);
+        if (PasswordFieldPainter.field_A != null) {
+          var3 = PasswordFieldPainter.field_A.b(false, param1);
           if (var3 != 0) {
             if (var3 == 2 &&
-              tc.field_A.field_rb != null &&
-              !tc.field_A.field_rb.equals("")) {
-              if (tc.field_A.field_rb.charAt(0) != 91) {
-                var7 = (CharSequence) ((Object) tc.field_A.field_rb);
+              PasswordFieldPainter.field_A.field_rb != null &&
+              !PasswordFieldPainter.field_A.field_rb.equals("")) {
+              if (PasswordFieldPainter.field_A.field_rb.charAt(0) != 91) {
+                var7 = (CharSequence) ((Object) PasswordFieldPainter.field_A.field_rb);
                 var4 = Js5ArchiveManager.a(var7, param0 ^ -13);
               } else {
-                var4 = tc.field_A.field_rb;
+                var4 = PasswordFieldPainter.field_A.field_rb;
               }
               var5 = null;
               if (TextLine.field_h == 0) {
@@ -212,10 +212,10 @@ final class tk extends DualLinkNode {
                 var6 = (String) null;
                 ao.a(0, (byte) 126, (String) (var5), var4, 2, (String) null);
               }
-              tc.field_A = null;
+              PasswordFieldPainter.field_A = null;
               TextLine.field_h = -1;
             } else {
-              tc.field_A = null;
+              PasswordFieldPainter.field_A = null;
               TextLine.field_h = -1;
             }
           }

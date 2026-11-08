@@ -240,16 +240,16 @@ final class UiTheme {
 
     final void initialize(byte param0, BitmapFont param1) {
         int var7_int = 0;
-        mj var14 = null;
-        mj var19 = null;
+        StatefulTextPainter var14 = null;
+        StatefulTextPainter var19 = null;
         int var15 = ArcanistsMulti.field_G ? 1 : 0;
-        jm var17 = new jm(param1, 2, 2, 2236962, 1, 1, 1, 2 + (param1.field_m + param1.field_C));
-        mj var14Lifetime1;
-        mj var14Lifetime2;
+        TextWidgetPainter var17 = new TextWidgetPainter(param1, 2, 2, 2236962, 1, 1, 1, 2 + (param1.field_m + param1.field_C));
+        StatefulTextPainter var14Lifetime1;
+        StatefulTextPainter var14Lifetime2;
         this.field_r = (WidgetPainter) ((Object) var17);
         var17.field_k = 16777215;
-        mj var4 = new mj();
-        var17.a(var4, 1881);
+        StatefulTextPainter var4 = new StatefulTextPainter();
+        var17.copyStyleTo(var4, 1881);
         this.field_s = 3;
         this.field_w = 3;
         this.field_k = 3;
@@ -261,9 +261,9 @@ final class UiTheme {
         this.field_d = -1;
         var4.field_e = 11711154;
         this.field_C = 15658734;
-        var4.a((byte) -37, 0).b(0, 15658734).withFrameSprites((byte) -71, ff.a((byte) 109, 7829367, 10066329, 8947848));
-        var4.a((byte) -121, 1).withFrameSprites((byte) -71, ff.a((byte) 35, 13421772, 10066329, 11184810));
-        var4.a((byte) -68, 3).withFrameSprites((byte) -71, ff.a((byte) 53, 10066329, 7829367, 8947848)).c(-1, 1).a(1, (byte) 120);
+        var4.createStyleLayer((byte) -37, 0).b(0, 15658734).withFrameSprites((byte) -71, ff.a((byte) 109, 7829367, 10066329, 8947848));
+        var4.createStyleLayer((byte) -121, 1).withFrameSprites((byte) -71, ff.a((byte) 35, 13421772, 10066329, 11184810));
+        var4.createStyleLayer((byte) -68, 3).withFrameSprites((byte) -71, ff.a((byte) 53, 10066329, 7829367, 8947848)).c(-1, 1).a(1, (byte) 120);
         Sprite[] var5 = new Sprite[9];
         ArgbSprite var16 = new ArgbSprite(32, 32);
         ArgbSprite var18 = var16;
@@ -271,22 +271,22 @@ final class UiTheme {
           var16.field_A[var7_int] = 1077952576;
         }
         var5[4] = (Sprite) ((Object) var18);
-        var4.a((byte) -62, 4).a(true, -5859).withFrameSprites((byte) -71, var5);
-        var4.a((byte) -113, 5).withFrameSprites((byte) -71, le.a(0, 0, 1, 0, 65793)).a(true, -5859).b(0, -1);
+        var4.createStyleLayer((byte) -62, 4).a(true, -5859).withFrameSprites((byte) -71, var5);
+        var4.createStyleLayer((byte) -113, 5).withFrameSprites((byte) -71, le.a(0, 0, 1, 0, 65793)).a(true, -5859).b(0, -1);
         this.field_u = (WidgetPainter) ((Object) var4);
-        mj var6 = new mj(var4, true);
+        StatefulTextPainter var6 = new StatefulTextPainter(var4, true);
         var6.field_i = 0;
-        mj var7 = new mj(var4, true);
+        StatefulTextPainter var7 = new StatefulTextPainter(var4, true);
         var7.field_i = 0;
-        var7.a(q.a(8947848, 0), -23165);
-        var7.a((byte) -28, 1).withFrameSprites((byte) -71, q.a(11184810, 0)).b(0, 2236962);
-        this.field_b = (WidgetPainter) ((Object) new si(param1, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
+        var7.setAllFrameSprites(DropTargetWidget.createCentreFrame(8947848, 0), -23165);
+        var7.createStyleLayer((byte) -28, 1).withFrameSprites((byte) -71, DropTargetWidget.createCentreFrame(11184810, 0)).b(0, 2236962);
+        this.field_b = (WidgetPainter) ((Object) new CheckboxPainter(param1, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
         of discarded$0 = new of(param1, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
         lh discarded$1 = new lh(param1, 16777215, -1, 125269879, 4473924, 3, 268435455);
-        mj var8 = new mj();
-        var17.a(var8, 1881);
-        var8.a((byte) -25, 0).withFrameSprites((byte) -71, ff.a((byte) 104, 10066329, 7829367, 15658734)).b(0, 1118481).a(125, -1);
-        var8.a((byte) -100, 4).a(true, -5859).withFrameSprites((byte) -71, var5);
+        StatefulTextPainter var8 = new StatefulTextPainter();
+        var17.copyStyleTo(var8, 1881);
+        var8.createStyleLayer((byte) -25, 0).withFrameSprites((byte) -71, ff.a((byte) 104, 10066329, 7829367, 15658734)).b(0, 1118481).a(125, -1);
+        var8.createStyleLayer((byte) -100, 4).a(true, -5859).withFrameSprites((byte) -71, var5);
         this.field_l = (WidgetPainter) ((Object) var8);
         Sprite[] var9 = new Sprite[9];
         Sprite[] var10 = new Sprite[9];
@@ -295,10 +295,10 @@ final class UiTheme {
         Sprite dupTemp$2 = var9[4];
         dupTemp$2.field_A = new int[]{6710886, 7829367};
         var10[4].field_A = new int[]{6710886, 7829367};
-        mj var11 = new mj();
-        mj var12 = new mj();
-        var11.a((byte) -122, 0, var9);
-        var12.a((byte) 123, 0, var10);
+        StatefulTextPainter var11 = new StatefulTextPainter();
+        StatefulTextPainter var12 = new StatefulTextPainter();
+        var11.setStateFrameSprites((byte) -122, 0, var9);
+        var12.setStateFrameSprites((byte) 123, 0, var10);
         this.field_x = (WidgetPainter) ((Object) var12);
         this.field_g = (WidgetPainter) ((Object) var4);
         Sprite var13 = new Sprite(7, 4);
@@ -308,17 +308,17 @@ final class UiTheme {
           return;
         }
         try {
-          var14 = new mj(var4, true);
-          var14.a(0, var13.copy());
+          var14 = new StatefulTextPainter(var4, true);
+          var14.setAllIcons(0, var13.copy());
           var13.rotateClockwise();
-          var14Lifetime1 = new mj(var4, true);
-          var14Lifetime1.a(0, var13.copy());
+          var14Lifetime1 = new StatefulTextPainter(var4, true);
+          var14Lifetime1.setAllIcons(0, var13.copy());
           var13.rotateClockwise();
-          var14Lifetime2 = new mj(var4, true);
-          var14Lifetime2.a(0, var13.copy());
+          var14Lifetime2 = new StatefulTextPainter(var4, true);
+          var14Lifetime2.setAllIcons(0, var13.copy());
           var13.rotateClockwise();
-          var19 = new mj(var4, true);
-          var19.a(0, var13);
+          var19 = new StatefulTextPainter(var4, true);
+          var19.setAllIcons(0, var13);
         } catch (RuntimeException runtimeException) {
           throw aa.wrapException((Throwable) ((Object) runtimeException), "vh.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -349,7 +349,7 @@ final class UiTheme {
             return stackIn_2_0;
           }
           if (!param0) {
-            stackIn_7_0 = mg.field_C.textWidth(param2);
+            stackIn_7_0 = DateInputWidget.field_C.textWidth(param2);
             return stackIn_7_0;
           }
           stackIn_5_0 = ko.field_j.textWidth(param2);

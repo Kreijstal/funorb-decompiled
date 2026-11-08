@@ -72,12 +72,12 @@ final class ck {
         int var1Lifetime1;
         int var1Lifetime2;
         if (Bzip2State.field_A >= 224) {
-          eb.setMusicVolume(256, false);
+          EmptyPainter.setMusicVolume(256, false);
           var1 = 50 % ((47 - param0) / 38);
           return;
         }
         var1Lifetime1 = Bzip2State.field_A % 32;
-        eb.setMusicVolume(32 + Bzip2State.field_A - var1Lifetime1, false);
+        EmptyPainter.setMusicVolume(32 + Bzip2State.field_A - var1Lifetime1, false);
         var1Lifetime2 = 50 % ((47 - param0) / 38);
     }
 

@@ -73,9 +73,9 @@ final class le {
         RuntimeException var1 = null;
         var2 = ArcanistsMulti.field_G ? 1 : 0;
         try {
-          ClientException.field_b.processPointerInput(mk.field_S, dn.field_Jb, true, (byte) -100);
-          ClientException.field_b.i(4);
-          while (ib.b(false)) {
+          ClientException.field_b.processPointerInput(ValidationStatusIcon.field_S, dn.field_Jb, true, (byte) -100);
+          ClientException.field_b.updatePanels(4);
+          while (BevelTextPainter.pollKeyEvent(false)) {
             ClientException.field_b.processKey(ed.field_Bb, (byte) -89, IntrusiveDeque.field_d);
           }
           if (qg.field_c != -1) {
@@ -230,7 +230,7 @@ final class le {
           this.field_s = -1000;
           this.field_t = false;
           if (!this.field_ab &&
-            mj.field_p == 7 &&
+            StatefulTextPainter.field_p == 7 &&
             this.field_V.field_q > 1) {
             this.field_I = this.field_V.d(false);
             return;
@@ -389,7 +389,7 @@ final class le {
             0 == (1 << param2 & (this.field_a | this.field_J)) &&
             var16.field_I != null && (param2 == 0 ||
             !qg.a(param3 - 99) ||
-            mj.field_p == 6)) {
+            StatefulTextPainter.field_p == 6)) {
             var6 = var16.v(-126);
             if (0 > var6) {
               var6 = 0;
@@ -634,9 +634,9 @@ final class le {
             var9_intLifetime1 = nj.field_n[this.field_V.d(false)];
             if (this.field_y &&
               !this.field_V.a(true) &&
-              this.field_z > 0 && (mj.field_p == -1 ||
+              this.field_z > 0 && (StatefulTextPainter.field_p == -1 ||
               !(this.field_z >= this.field_V.f(12955)) ||
-              mj.field_p == 6) && MusicPatchNode.field_s == 0) {
+              StatefulTextPainter.field_p == 6) && MusicPatchNode.field_s == 0) {
               var10 = (this.field_z + 49) / 50;
               if (var10 > this.field_V.f(12955) / 50 && (this.field_V.field_x[this.field_V.d(false)] != 8 ||
                 this.field_V.field_X[this.field_V.d(false)] == 0)) {
@@ -686,9 +686,9 @@ final class le {
                 if (this.field_I == var10Lifetime1) {
                   if ((1 << var10Lifetime1 & this.field_b) != 0) {
                     if (this.field_i) {
-                      var11_refLifetime2 = mk.field_K;
+                      var11_refLifetime2 = ValidationStatusIcon.field_K;
                     } else {
-                      var11_refLifetime2 = vi.field_R;
+                      var11_refLifetime2 = FadingModalPanel.field_R;
                     }
                   } else {
                     if ((1 << var10Lifetime1 & this.field_J) == 0) {
@@ -812,7 +812,7 @@ final class le {
           if (IntrusiveDeque.field_d == 84 &&
             this.field_B) {
             this.field_B = false;
-            if (6 <= mj.field_p) {
+            if (6 <= StatefulTextPainter.field_p) {
               this.field_O = true;
             }
             WhirlpoolHasher.field_k = WhirlpoolHasher.field_k + 1;
@@ -857,7 +857,7 @@ final class le {
           }
           if (var2_int != 0) {
             var3 = IntKeyLookup.field_g.field_nb;
-            var4 = CameraFollowTarget.field_g + (me.field_I - (var3 >> 1));
+            var4 = CameraFollowTarget.field_g + (MenuButtonPanel.field_I - (var3 >> 1));
             if (this.field_u > 0) {
               var4 = this.field_c;
             }
@@ -905,8 +905,8 @@ final class le {
               }
               var5.c(0, 2);
               this.field_m.followUnit(-119, var5);
-              ti.field_N = -1;
-              eb.field_b = null;
+              DropdownList.field_N = -1;
+              EmptyPainter.field_b = null;
             }
             if (var7 != 0 &&
               var8 != 0) {
@@ -927,8 +927,8 @@ final class le {
               }
               var5.c(param0 - 1, 3);
               this.field_m.followUnit(-90, var5);
-              ti.field_N = -1;
-              eb.field_b = null;
+              DropdownList.field_N = -1;
+              EmptyPainter.field_b = null;
             }
             if (IntrusiveDeque.field_d == ByteStorage.field_c &&
               !this.field_O) {
@@ -1203,13 +1203,13 @@ final class le {
           if (mf.field_g == -4) {
             mf.field_g = -1;
           }
-          if (this.field_I >= 0 && (mj.field_p == -1 ||
-            mj.field_p == 7) && (10 != this.field_V.field_x[this.field_I] &&
+          if (this.field_I >= 0 && (StatefulTextPainter.field_p == -1 ||
+            StatefulTextPainter.field_p == 7) && (10 != this.field_V.field_x[this.field_I] &&
             this.field_I == this.field_bb)) {
             var6 = 30;
             var7Lifetime1 = -150 + (var3_int + ii.a((byte) -117));
             var8 = 0;
-            if ((-var7Lifetime1 + me.field_I + 24) * (-var7Lifetime1 + (me.field_I + 24)) + (-var6 + EmailLoginCredentials.field_g) * (-var6 + EmailLoginCredentials.field_g) < 1296) {
+            if ((-var7Lifetime1 + MenuButtonPanel.field_I + 24) * (-var7Lifetime1 + (MenuButtonPanel.field_I + 24)) + (-var6 + EmailLoginCredentials.field_g) * (-var6 + EmailLoginCredentials.field_g) < 1296) {
               mf.field_g = -4;
               var8 = 1;
               var9 = 100;
@@ -1292,7 +1292,7 @@ final class le {
                   var9 = 5;
                 }
               }
-              var12 = tj.a(120, new String[]{Integer.toString(var9)}, bk.field_H);
+              var12 = tj.a(120, new String[]{Integer.toString(var9)}, Checkbox.field_H);
               var10 = var12;
               var10Lifetime2 = var12;
               var7Lifetime1 += 16;
@@ -1360,7 +1360,7 @@ final class le {
             }
             ((IndexedSprite) (Object) stackIn_153_0[stackIn_153_1]).draw(var6 - 16, var7Lifetime2 - 16);
             var8 = var6 - EmailLoginCredentials.field_g;
-            var9 = -me.field_I + var7Lifetime2;
+            var9 = -MenuButtonPanel.field_I + var7Lifetime2;
             if (var8 * var8 + var9 * var9 < 256) {
               if (!param1) {
                 return;
@@ -1555,8 +1555,8 @@ final class le {
                 SoftwareRasterizer.resetClip();
               } else {
                 i.b(90);
-                ti.field_N = -1;
-                eb.field_b = null;
+                DropdownList.field_N = -1;
+                EmptyPainter.field_b = null;
                 var10Lifetime1 = this.field_V.s(param0 ^ 8);
                 var22 = new int[var10Lifetime1];
                 var19 = var22;
@@ -1645,7 +1645,7 @@ final class le {
           if (db.field_a != null) {
             db.field_a.drawFullScreen(param1, true);
           }
-          ed.a((byte) 90, param1);
+          ed.drawModalOverlay((byte) 90, param1);
           if (param0 != 1) {
             field_A = (String) null;
           }
@@ -1709,15 +1709,15 @@ final class le {
         try {
           var5 = -120 / ((param0 - 58) / 53);
           var4_int = IntKeyLookup.field_g.field_nb;
-          if (ti.field_N >= 0 &&
-            ti.field_N != -1 &&
-            null == eb.field_b) {
-            var6_int = FixedViewResizeListener.field_e[ti.field_N];
+          if (DropdownList.field_N >= 0 &&
+            DropdownList.field_N != -1 &&
+            null == EmptyPainter.field_b) {
+            var6_int = FixedViewResizeListener.field_e[DropdownList.field_N];
             if (1 == var6_int &&
               this.field_s == -1000 &&
               !this.field_V.c((byte) 89)) {
               var7 = EmailLoginCredentials.field_g;
-              var8 = me.field_I;
+              var8 = MenuButtonPanel.field_I;
               tg.field_b[5].toRgbSprite().drawCenteredRotatedScaledBilinear(var7, var8, this.field_P << 8, 4096 - Math.abs(this.field_P - 128));
             }
           }
@@ -1731,7 +1731,7 @@ final class le {
             var7Lifetime1 = var6.f(-98);
             var8Lifetime1 = var6.i((byte) -5);
             if (this.field_s != -1000) {
-              if (ti.field_N == 78) {
+              if (DropdownList.field_N == 78) {
                 var9_int = -(SocketConnector.field_j[29].field_g / 2) + ((EmailLoginCredentials.field_f >> 1) + (this.field_s - param1));
                 var10 = (var4_int >> 1) + this.field_r - param2 - SocketConnector.field_j[29].field_k;
                 if (!this.field_V.a(var6, this.field_r, this.field_s, -5)) {
@@ -1740,7 +1740,7 @@ final class le {
                 SocketConnector.field_j[29].drawAlpha(var9_int, var10, 64);
                 return;
               }
-              if (ti.field_N == 4) {
+              if (DropdownList.field_N == 4) {
                 var9_intLifetime1 = var6.p(-8323);
                 stackIn_152_0 = (this.field_V.b(this.field_s, var6, -16, this.field_r)) ? 65280 : 16711680;
                 var10Lifetime2 = stackIn_152_0;
@@ -1757,7 +1757,7 @@ final class le {
                 tg.field_b[5].toRgbSprite().drawCenteredRotatedScaledBilinear(var11_int, var12, this.field_P << 8, var9_intLifetime1 * (4096 - 64 * Math.abs((this.field_P & 31) - 16)) / 32);
                 return;
               }
-              if (ti.field_N == 150) {
+              if (DropdownList.field_N == 150) {
                 var9_intLifetime2 = var6.p(-8323);
                 stackIn_25_0 = (this.field_V.a(this.field_s, this.field_V.field_H - 16, (byte) -75, var6)) ? 65280 : 16711680;
                 var10Lifetime3 = stackIn_25_0;
@@ -1774,31 +1774,31 @@ final class le {
                 tg.field_b[5].toRgbSprite().drawCenteredRotatedScaledBilinear(var11_intLifetime1, var12Lifetime1, this.field_P << 8, var9_intLifetime2 * (-(Math.abs((this.field_P & 31) - 16) * 64) + 4096) / 32);
                 return;
               }
-              if (ti.field_N != 56 &&
-                ti.field_N != 57 &&
-                ti.field_N != 32 &&
-                33 != ti.field_N &&
-                ti.field_N != 42 &&
-                ti.field_N != 17 &&
-                ti.field_N != 23 &&
-                ti.field_N != 59 &&
-                ti.field_N != 47 &&
-                ti.field_N != 65 &&
-                ti.field_N != 67 &&
-                ti.field_N != 64 &&
-                ti.field_N != 44 &&
-                ti.field_N != 76 &&
-                ti.field_N != 77 &&
-                ti.field_N != 6 &&
-                79 != ti.field_N &&
-                ti.field_N != 98 &&
-                ti.field_N != 90 &&
-                ti.field_N != 104 &&
-                ti.field_N != 92 &&
-                107 != ti.field_N &&
-                112 != ti.field_N &&
-                ti.field_N != 118) {
-                if (9 == ti.field_N) {
+              if (DropdownList.field_N != 56 &&
+                DropdownList.field_N != 57 &&
+                DropdownList.field_N != 32 &&
+                33 != DropdownList.field_N &&
+                DropdownList.field_N != 42 &&
+                DropdownList.field_N != 17 &&
+                DropdownList.field_N != 23 &&
+                DropdownList.field_N != 59 &&
+                DropdownList.field_N != 47 &&
+                DropdownList.field_N != 65 &&
+                DropdownList.field_N != 67 &&
+                DropdownList.field_N != 64 &&
+                DropdownList.field_N != 44 &&
+                DropdownList.field_N != 76 &&
+                DropdownList.field_N != 77 &&
+                DropdownList.field_N != 6 &&
+                79 != DropdownList.field_N &&
+                DropdownList.field_N != 98 &&
+                DropdownList.field_N != 90 &&
+                DropdownList.field_N != 104 &&
+                DropdownList.field_N != 92 &&
+                107 != DropdownList.field_N &&
+                112 != DropdownList.field_N &&
+                DropdownList.field_N != 118) {
+                if (9 == DropdownList.field_N) {
                   stackIn_57_0 = (this.field_V.a(false, this.field_s, this.field_r)) ? 65280 : 16711680;
                   var9_intLifetime3 = stackIn_57_0;
                   ce.field_m.a(true);
@@ -1813,15 +1813,15 @@ final class le {
                   tg.field_b[5].toRgbSprite().drawCenteredRotatedScaledBilinear(var11_intLifetime2, var12Lifetime2, this.field_P << 8, (4096 - 64 * Math.abs((this.field_P & 31) - 16)) * var10Lifetime4 / 32);
                   return;
                 }
-                if (ti.field_N != 5) {
-                  if (ti.field_N == 30) {
+                if (DropdownList.field_N != 5) {
+                  if (DropdownList.field_N == 30) {
                     stackIn_77_0 = (this.field_V.a(this.field_s, var6, 30882, this.field_r)) ? 65280 : 16711680;
                     var9_intLifetime3Lifetime1 = stackIn_77_0;
                     ByteStorage.field_e.drawSilhouette(-(ByteStorage.field_e.field_n >> 1) + ((EmailLoginCredentials.field_f >> 1) - param1 + this.field_s), (var4_int >> 1) + (-param2 + (this.field_r - ByteStorage.field_e.field_w)), var9_intLifetime3Lifetime1);
                     ByteStorage.field_e.drawAlpha(-param1 + this.field_s + (EmailLoginCredentials.field_f >> 1) - (ByteStorage.field_e.field_n >> 1), -ByteStorage.field_e.field_w + (this.field_r - (param2 - (var4_int >> 1))), 128);
                     return;
                   }
-                  decompiledFrameRemainder0 = (ti.field_N != -1);
+                  decompiledFrameRemainder0 = (DropdownList.field_N != -1);
                   if (decompiledFrameRemainder0) {
                     var9_intLifetime3Lifetime1 = -param1 + this.field_s + (EmailLoginCredentials.field_f >> 1);
                     var10Lifetime4 = -param2 + this.field_r + (var4_int >> 1);
@@ -1859,64 +1859,64 @@ final class le {
               }
               if (decompiledFrameRemainder0) {
                 var9_intLifetime4 = 32;
-                if (ti.field_N == 4) {
+                if (DropdownList.field_N == 4) {
                   var9_intLifetime4 = var6.p(-8323);
                 }
-                if (ti.field_N == 57) {
+                if (DropdownList.field_N == 57) {
                   var9_intLifetime4 = 64;
                 }
-                if (ti.field_N == 33) {
+                if (DropdownList.field_N == 33) {
                   var9_intLifetime4 = 64;
                 }
-                if (ti.field_N == 42) {
+                if (DropdownList.field_N == 42) {
                   var9_intLifetime4 = 64;
                 }
-                if (ti.field_N == 23) {
+                if (DropdownList.field_N == 23) {
                   var9_intLifetime4 = 100;
                 }
-                if (ti.field_N == 59) {
+                if (DropdownList.field_N == 59) {
                   var9_intLifetime4 = 100;
                 }
-                if (ti.field_N == 47) {
+                if (DropdownList.field_N == 47) {
                   var9_intLifetime4 = 100;
                 }
-                if (ti.field_N == 65) {
+                if (DropdownList.field_N == 65) {
                   var9_intLifetime4 = 48;
                 }
-                if (67 == ti.field_N) {
+                if (67 == DropdownList.field_N) {
                   var9_intLifetime4 = 48;
                 }
-                if (ti.field_N == 76) {
+                if (DropdownList.field_N == 76) {
                   var9_intLifetime4 = 80;
                 }
-                if (ti.field_N == 77) {
+                if (DropdownList.field_N == 77) {
                   var9_intLifetime4 = 48;
                 }
-                if (ti.field_N == 6) {
+                if (DropdownList.field_N == 6) {
                   var9_intLifetime4 = 96;
                 }
-                if (ti.field_N == 79) {
+                if (DropdownList.field_N == 79) {
                   var9_intLifetime4 = 96;
                 }
-                if (98 == ti.field_N) {
+                if (98 == DropdownList.field_N) {
                   var9_intLifetime4 = 96;
                 }
-                if (ti.field_N == 90) {
+                if (DropdownList.field_N == 90) {
                   var9_intLifetime4 = 64;
                 }
-                if (ti.field_N == 107) {
+                if (DropdownList.field_N == 107) {
                   var9_intLifetime4 = 128;
                 }
-                if (ti.field_N == 104) {
+                if (DropdownList.field_N == 104) {
                   var9_intLifetime4 = 32;
                 }
-                if (ti.field_N == 92) {
+                if (DropdownList.field_N == 92) {
                   var9_intLifetime4 = 96;
                 }
-                if (ti.field_N == 118) {
+                if (DropdownList.field_N == 118) {
                   var9_intLifetime4 = 100;
                 }
-                stackIn_144_0 = (this.field_V.a(false, var6, ti.field_N, this.field_r, this.field_s)) ? 65280 : 16711680;
+                stackIn_144_0 = (this.field_V.a(false, var6, DropdownList.field_N, this.field_r, this.field_s)) ? 65280 : 16711680;
                 var10Lifetime5 = stackIn_144_0;
                 ce.field_m.a(true);
                 SoftwareRasterizer.setClip(-param1 + (EmailLoginCredentials.field_f >> 1), -param2 + (var4_int >> 1), (EmailLoginCredentials.field_f >> 1) + (-param1 + this.field_V.field_y), (var4_int >> 1) + (-param2 + this.field_V.field_H));
@@ -1936,35 +1936,35 @@ final class le {
               }
             }
             if (decompiledFrameRemainder0) {
-              if (ti.field_N != 2 &&
-                ti.field_N != 81 &&
-                ti.field_N != 31 &&
-                ti.field_N != 60 &&
-                ti.field_N != 55 &&
-                91 != ti.field_N &&
-                ti.field_N != 114) {
+              if (DropdownList.field_N != 2 &&
+                DropdownList.field_N != 81 &&
+                DropdownList.field_N != 31 &&
+                DropdownList.field_N != 60 &&
+                DropdownList.field_N != 55 &&
+                91 != DropdownList.field_N &&
+                DropdownList.field_N != 114) {
                 return;
               }
               var9 = ScreenDisplayMode.field_i[0];
-              if (55 == ti.field_N) {
+              if (55 == DropdownList.field_N) {
                 var9 = ScreenDisplayMode.field_i[1];
               }
-              if (ti.field_N == 31) {
+              if (DropdownList.field_N == 31) {
                 var9 = ScreenDisplayMode.field_i[2];
               }
-              if (ti.field_N == 60) {
+              if (DropdownList.field_N == 60) {
                 var9 = ScreenDisplayMode.field_i[3];
               }
-              if (81 == ti.field_N) {
+              if (81 == DropdownList.field_N) {
                 var9 = ScreenDisplayMode.field_i[4];
               }
-              if (ti.field_N == 91) {
+              if (DropdownList.field_N == 91) {
                 var9 = ScreenDisplayMode.field_i[5];
               }
-              if (114 == ti.field_N) {
+              if (114 == DropdownList.field_N) {
                 var9 = ScreenDisplayMode.field_i[6];
               }
-              stackIn_194_0 = (!this.field_V.a(ti.field_N, var6.i((byte) 116), var6, (byte) 91, var6.f(45))) ? 16711680 : 65280;
+              stackIn_194_0 = (!this.field_V.a(DropdownList.field_N, var6.i((byte) 116), var6, (byte) 91, var6.f(45))) ? 16711680 : 65280;
               var10Lifetime1 = stackIn_194_0;
               var11 = new Sprite(16 + var9.field_n, 16 + var9.field_w);
               var11.makeRasterTarget();
@@ -2064,8 +2064,8 @@ final class le {
             ij.field_Tb = new Sprite(640, 480);
           }
           ij.field_Tb.makeRasterTarget();
-          var2_int = wm.a(this.field_V.a(-31497), (byte) -124);
-          var3 = ng.b((byte) -124, this.field_V.a(-31497));
+          var2_int = wm.statusColour(this.field_V.a(-31497), (byte) -124);
+          var3 = ng.rankColour((byte) -124, this.field_V.a(-31497));
           GzipDecoder.field_a = var2_int;
           cg.field_Lb = var3;
           SoftwareRasterizer.fillVerticalGradient(0, 0, 640, 480, var2_int, var3);
@@ -2149,7 +2149,7 @@ final class le {
           }
           var3_int = IntKeyLookup.field_g.field_nb;
           var4 = -(EmailLoginCredentials.field_f >> 1) + (IntrusiveDeque.field_c + EmailLoginCredentials.field_g);
-          var5 = -(var3_int >> 1) + CameraFollowTarget.field_g + me.field_I;
+          var5 = -(var3_int >> 1) + CameraFollowTarget.field_g + MenuButtonPanel.field_I;
           if (this.field_u > 0) {
             var5 = this.field_c;
             var4 = this.field_e;
@@ -2170,7 +2170,7 @@ final class le {
             } else {
               param1.field_E = 1;
             }
-            if (ti.field_N == 155 &&
+            if (DropdownList.field_N == 155 &&
               Math.abs(var9) < Math.abs(var10)) {
               var9 = param1.field_E * 64;
               var10 = (var10 < 0) ? -64 : 64;
@@ -2261,7 +2261,7 @@ final class le {
           if (param5 != -30) {
             this.field_r = 83;
           }
-          ob.a(20, this.field_f, param2);
+          ResizableModalPanel.a(20, this.field_f, param2);
         } catch (RuntimeException runtimeException) {
           throw aa.wrapException((Throwable) ((Object) runtimeException), "le.L(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }
@@ -2584,20 +2584,20 @@ final class le {
             var9Lifetime3 = 0;
             var10Lifetime3 = 0;
             var11 = this.field_V.m((byte) 69);
-            gd.field_tb = gd.field_tb + 1;
-            if (-1 + this.field_V.field_y <= gd.field_tb) {
-              gd.field_tb = 0;
+            LoadingProgressDialog.field_tb = LoadingProgressDialog.field_tb + 1;
+            if (-1 + this.field_V.field_y <= LoadingProgressDialog.field_tb) {
+              LoadingProgressDialog.field_tb = 0;
             }
-            var12 = gd.field_tb - 2 * (1 & gd.field_tb) + 1;
+            var12 = LoadingProgressDialog.field_tb - 2 * (1 & LoadingProgressDialog.field_tb) + 1;
             if (var12 < 0) {
               var12 = 0;
             }
             if (var12 >= -1 + this.field_V.field_y) {
               var12 = this.field_V.field_y - 1;
             }
-            var10Lifetime3Lifetime1 = (gd.field_tb >> 1) + this.field_V.field_hb;
-            var13 = 2 * (gd.field_tb & 1) - 1;
-            var9Lifetime3Lifetime1 = gd.field_tb + 2 * this.field_V.field_y;
+            var10Lifetime3Lifetime1 = (LoadingProgressDialog.field_tb >> 1) + this.field_V.field_hb;
+            var13 = 2 * (LoadingProgressDialog.field_tb & 1) - 1;
+            var9Lifetime3Lifetime1 = LoadingProgressDialog.field_tb + 2 * this.field_V.field_y;
             for (var14 = 2; var14 < this.field_V.field_H - 2; var14 += 2) {
               if (var11.field_m[var10Lifetime3Lifetime1] != 0) {
                 if (this.field_V.field_V.field_m[var9Lifetime3Lifetime1] == 0 &&
@@ -2665,7 +2665,7 @@ final class le {
           this.field_w.e((byte) 72);
           this.field_w.f((byte) -20);
           if (this.field_k) {
-            bk.a(2);
+            Checkbox.a(2);
           } else {
             this.b(0);
           }
@@ -2865,7 +2865,7 @@ final class le {
           }
           CameraFollowTarget.field_g = CameraFollowTarget.field_g + this.field_S;
           IntrusiveDeque.field_c = IntrusiveDeque.field_c + this.field_n;
-          if (eb.field_b != null) {
+          if (EmptyPainter.field_b != null) {
             this.field_M = 2000;
           } else {
             if (!this.field_V.a(true) &&
@@ -2887,12 +2887,12 @@ final class le {
               var7 = var2_int;
             }
             if (EmailLoginCredentials.field_g >= -8 - var5 + EmailLoginCredentials.field_f &&
-              me.field_I >= -8 + (-var6 + var7) &&
-              me.field_I < var7) {
+              MenuButtonPanel.field_I >= -8 + (-var6 + var7) &&
+              MenuButtonPanel.field_I < var7) {
               if (PacketBuffer.field_m == 1) {
                 IntrusiveDeque.field_c = 4 - EmailLoginCredentials.field_f + (var5 + EmailLoginCredentials.field_g) << this.field_K;
                 this.field_t = true;
-                CameraFollowTarget.field_g = me.field_I - (-4 - var6) - var7 << this.field_K;
+                CameraFollowTarget.field_g = MenuButtonPanel.field_I - (-4 - var6) - var7 << this.field_K;
               }
               this.field_u = 0;
               var4 = 1;
@@ -2923,8 +2923,8 @@ final class le {
             }
           }
           if (decompiledFrameRemainder1) {
-            eb.field_b = null;
-            ti.field_N = -1;
+            EmptyPainter.field_b = null;
+            DropdownList.field_N = -1;
           }
           if (this.field_V.c((byte) 89)) {
             this.field_K = 4;
@@ -2971,7 +2971,7 @@ final class le {
               if (0 >= (1 << param2 & this.field_a)) {
                 var6Lifetime1 = tj.a(122, new String[]{var8}, GrowableIntList.field_i);
               } else {
-                var6Lifetime1 = tj.a(param1 - 14, new String[]{var8}, cn.field_Q);
+                var6Lifetime1 = tj.a(param1 - 14, new String[]{var8}, BirthDateEntryPanel.field_Q);
               }
             }
             mi.field_B.drawText(var6Lifetime1, 3, mi.field_B.field_C / 2 + (param0 + 8), 15790320 ^ (var5 | 15790320), 0);
@@ -3031,10 +3031,10 @@ final class le {
             } else {
               param2.field_E = -1;
             }
-            if ((ti.field_N == 127 ||
-              ti.field_N == 128 ||
-              ti.field_N == 129 ||
-              ti.field_N == 136) &&
+            if ((DropdownList.field_N == 127 ||
+              DropdownList.field_N == 128 ||
+              DropdownList.field_N == 129 ||
+              DropdownList.field_N == 136) &&
               Math.abs(var9) < Math.abs(var10)) {
               var9 = 64 * param2.field_E;
               var10 = (var10 >= 0) ? 64 : -64;
@@ -3147,10 +3147,10 @@ final class le {
             this.field_Z = this.field_Z - 1;
           }
           if (!(EmailLoginCredentials.field_g >= 0) ||
-            !(me.field_I >= 0) ||
+            !(MenuButtonPanel.field_I >= 0) ||
             !(EmailLoginCredentials.field_f > EmailLoginCredentials.field_g) &&
-            !(me.field_I < EmailLoginCredentials.field_j)) {
-            ti.field_N = -1;
+            !(MenuButtonPanel.field_I < EmailLoginCredentials.field_j)) {
+            DropdownList.field_N = -1;
           }
           this.field_P = this.field_P + 1;
           if (0 > this.field_Z) {
@@ -3164,7 +3164,7 @@ final class le {
             this.field_j = this.field_j - g.field_a.field_n * 2;
           }
           var3_int = 0;
-          LoginPanel.g((byte) -49);
+          LoginPanel.tickMessageTimer((byte) -49);
           if (dm.h((byte) 97)) {
             this.c((byte) -106);
             if (!this.field_V.c((byte) 89) &&
@@ -3173,8 +3173,8 @@ final class le {
               -5 != mn.field_r &&
               this.field_V.d(1)) {
               var4 = this.field_V.d(false);
-              if (ob.field_Y != null &&
-                ob.field_Y.field_l) {
+              if (ResizableModalPanel.field_Y != null &&
+                ResizableModalPanel.field_Y.field_l) {
                 stackIn_50_0 = 1;
               } else {
                 if (EmailLoginCredentials.field_f <= 640) {
@@ -3257,12 +3257,12 @@ final class le {
                 }
               }
               if (!this.field_ab &&
-                5 == mj.field_p) {
+                5 == StatefulTextPainter.field_p) {
                 PacketBuffer.j(13805);
               }
             }
           }
-          if (mj.field_p == 6) {
+          if (StatefulTextPainter.field_p == 6) {
             if (WhirlpoolHasher.field_k < 5) {
               this.field_G = false;
             } else {
@@ -3279,7 +3279,7 @@ final class le {
             if (this.field_y) {
               this.field_t = false;
               this.c(false);
-              if (mj.field_p == 6 &&
+              if (StatefulTextPainter.field_p == 6 &&
                 this.field_V.d(false) != 0) {
                 hj.a(-20602);
               } else {
@@ -3306,7 +3306,7 @@ final class le {
           this.field_x = this.field_x - 1;
           if (fieldTemp$0 <= 0) {
             if (this.field_W == this.field_V.n((byte) -75)) {
-              ob.a(20, this.field_f, this.field_W);
+              ResizableModalPanel.a(20, this.field_f, this.field_W);
             }
             this.field_x = 50;
           }
@@ -3593,7 +3593,7 @@ final class le {
           this.field_w.b((byte) 88, var3_int);
           this.field_w.e((byte) 72);
           if (this.field_k) {
-            bk.a(2);
+            Checkbox.a(2);
           } else {
             this.field_V.b((byte) 88, var3_int);
           }
@@ -3651,12 +3651,12 @@ final class le {
             this.a(41, 48, 1, -100);
           }
           var4 = EmailLoginCredentials.field_g - (-IntrusiveDeque.field_c + (EmailLoginCredentials.field_f >> 1));
-          var5 = -(var3_int >> 1) + me.field_I + CameraFollowTarget.field_g;
+          var5 = -(var3_int >> 1) + MenuButtonPanel.field_I + CameraFollowTarget.field_g;
           if (this.field_u > 0) {
             var4 = this.field_e;
             var5 = this.field_c;
           }
-          if (ti.field_N == 78) {
+          if (DropdownList.field_N == 78) {
             var5 += 64;
           }
           var16 = this.field_V.a(this.field_bb, true);
@@ -3726,7 +3726,7 @@ final class le {
                 null == var6.w(24501)) {
                 if ((!(this.field_ab)) &&
                   (!(!qg.a(-92))) &&
-                  ((mj.field_p != 7))) {
+                  ((StatefulTextPainter.field_p != 7))) {
                   WhirlpoolHasher.a(var6, true);
                 }
                 decompiledFrameRemainder3 = false;
@@ -3734,8 +3734,8 @@ final class le {
               else {
                 this.field_bb = this.field_V.d(false);
                 var6 = this.field_V.a(this.field_bb, true);
-                eb.field_b = null;
-                ti.field_N = -1;
+                EmptyPainter.field_b = null;
+                DropdownList.field_N = -1;
               }
             }
             boolean decompiledFrameRemainder1 = true;
@@ -3773,7 +3773,7 @@ final class le {
                   this.field_Y = this.field_Y - 1;
                 } else {
                   if (cf.field_h[224] != null) {
-                    ti.a((byte) -30, SceneWidgetNode.field_r[224], cf.field_h[224]);
+                    DropdownList.playSampleAtVolume((byte) -30, SceneWidgetNode.field_r[224], cf.field_h[224]);
                   }
                   this.field_Y = 25;
                   var6 = this.q(10781);
@@ -3797,8 +3797,8 @@ final class le {
                 this.field_R = 0;
                 var6.c(0, -1);
                 this.field_m.followUnit(-80, var6);
-                eb.field_b = null;
-                ti.field_N = -1;
+                EmptyPainter.field_b = null;
+                DropdownList.field_N = -1;
               }
               if (this.field_G &&
                 var9 != 0 &&
@@ -3818,8 +3818,8 @@ final class le {
                 this.field_h = this.field_h + 1;
                 var6.c(param1 - 10, 1);
                 this.field_m.followUnit(param1 ^ -106, var6);
-                eb.field_b = null;
-                ti.field_N = -1;
+                EmptyPainter.field_b = null;
+                DropdownList.field_N = -1;
               }
             }
           }
@@ -3828,10 +3828,10 @@ final class le {
               if (mf.field_g >= 0 &&
                 null != lm.field_f &&
                 this.field_V.a(lm.field_f[mf.field_g], true, this.field_bb)) {
-                ti.field_N = lm.field_f[mf.field_g];
+                DropdownList.field_N = lm.field_f[mf.field_g];
                 var8Lifetime1 = 9;
-                if (ti.field_N / 12 <= 9) {
-                  var8Lifetime1 = ti.field_N / 12;
+                if (DropdownList.field_N / 12 <= 9) {
+                  var8Lifetime1 = DropdownList.field_N / 12;
                 }
                 if (var8Lifetime1 != 0) {
                   var8Lifetime1--;
@@ -3840,7 +3840,7 @@ final class le {
                 }
                 th.field_g[9] = 42;
                 if (null != cf.field_h[th.field_g[var8Lifetime1]]) {
-                  ti.a((byte) -30, SceneWidgetNode.field_r[th.field_g[var8Lifetime1]], cf.field_h[th.field_g[var8Lifetime1]]);
+                  DropdownList.playSampleAtVolume((byte) -30, SceneWidgetNode.field_r[th.field_g[var8Lifetime1]], cf.field_h[th.field_g[var8Lifetime1]]);
                 }
                 this.field_s = -1000;
               }
@@ -3873,25 +3873,25 @@ final class le {
             }
             if (2 == re.field_r) {
               this.field_s = -1000;
-              ti.field_N = -1;
+              DropdownList.field_N = -1;
             }
             if (this.field_z > 1 &&
-              null == eb.field_b &&
+              null == EmptyPainter.field_b &&
               var6 != null &&
               !param0 &&
               -1 == mf.field_g) {
-              stackIn_181_0 = (ti.field_N < 0) ? 0 : 1;
+              stackIn_181_0 = (DropdownList.field_N < 0) ? 0 : 1;
               var8Lifetime1Lifetime1 = stackIn_181_0;
               if (PacketBuffer.field_m == 1 && ((this.field_u > 0 ||
                 re.field_r == 1) &&
                 (this.field_u == 0 ||
-                !(ti.field_N < 0))) && this.field_u < 100) {
+                !(DropdownList.field_N < 0))) && this.field_u < 100) {
                 if (re.field_r == 1 &&
                   cf.field_h[222] != null) {
-                  ti.a((byte) -30, SceneWidgetNode.field_r[222], cf.field_h[222]);
+                  DropdownList.playSampleAtVolume((byte) -30, SceneWidgetNode.field_r[222], cf.field_h[222]);
                 }
                 if (null == sm.field_e) {
-                  var9Lifetime1 = -12 + ti.field_N;
+                  var9Lifetime1 = -12 + DropdownList.field_N;
                   if (var9Lifetime1 >= 0 &&
                     var9Lifetime1 < 96 &&
                     var9Lifetime1 / 12 != 6) {
@@ -3904,30 +3904,30 @@ final class le {
                     }
                   }
                   if (null != sm.field_e) {
-                    sc.a(sm.field_e, (byte) 68);
+                    ValidationHelpWidget.a(sm.field_e, (byte) 68);
                   }
                 }
                 var8Lifetime1Lifetime1 = 0;
                 if (this.field_u < 100) {
                   this.field_u = this.field_u + 1;
                   if (1 == this.field_u) {
-                    this.field_c = -(var3_int >> 1) + CameraFollowTarget.field_g + me.field_I;
+                    this.field_c = -(var3_int >> 1) + CameraFollowTarget.field_g + MenuButtonPanel.field_I;
                     this.field_e = -(EmailLoginCredentials.field_f >> 1) + IntrusiveDeque.field_c + EmailLoginCredentials.field_g;
                   }
                 }
-                if (ti.field_N >= 0 &&
+                if (DropdownList.field_N >= 0 &&
                   !this.field_V.c((byte) 89) &&
-                  FixedViewResizeListener.field_e[ti.field_N] == 1 &&
+                  FixedViewResizeListener.field_e[DropdownList.field_N] == 1 &&
                   this.field_s == -1000) {
                   this.field_u = 0;
                   this.field_s = var4;
                   this.field_r = var5;
                 }
               }
-              if (0 > ti.field_N) {
+              if (0 > DropdownList.field_N) {
                 var8Lifetime1Lifetime1 = 1;
               } else {
-                var9Lifetime1Lifetime1 = FixedViewResizeListener.field_e[ti.field_N];
+                var9Lifetime1Lifetime1 = FixedViewResizeListener.field_e[DropdownList.field_N];
                 if ((var9Lifetime1Lifetime1 == 2 ||
                   var9Lifetime1Lifetime1 == 4 ||
                   3 == var9Lifetime1Lifetime1) && 0 < this.field_u) {
@@ -3943,7 +3943,7 @@ final class le {
                   }
                 }
                 if (sm.field_e != null) {
-                  bl.a(sm.field_e, param1 ^ 119);
+                  DateOfBirthValidator.a(sm.field_e, param1 ^ 119);
                   sm.field_e = null;
                 }
                 boolean decompiledFrameRemainder2 = true;
@@ -3953,16 +3953,16 @@ final class le {
                 var12 = -var9Lifetime1Lifetime2 + var4;
                 var13 = -var10 + (var5 + (var11 >> 1));
                 var14 = (int)Math.sqrt((double)(var12 * var12 + var13 * var13));
-                if (0 <= ti.field_N &&
+                if (0 <= DropdownList.field_N &&
                   !this.field_V.c((byte) 89)) {
-                  if (FixedViewResizeListener.field_e[ti.field_N] == 1 &&
+                  if (FixedViewResizeListener.field_e[DropdownList.field_N] == 1 &&
                     -1000 == this.field_s) {
                     this.field_u = 0;
                   }
-                  if (FixedViewResizeListener.field_e[ti.field_N] != 2 &&
-                    FixedViewResizeListener.field_e[ti.field_N] != 4) {
-                    if (((FixedViewResizeListener.field_e[ti.field_N] == 3)) &&
-                      (!(this.field_V.a(var6, var6.i((byte) -111), var6.f(param1 ^ -103), -129, ti.field_N)))) {
+                  if (FixedViewResizeListener.field_e[DropdownList.field_N] != 2 &&
+                    FixedViewResizeListener.field_e[DropdownList.field_N] != 4) {
+                    if (((FixedViewResizeListener.field_e[DropdownList.field_N] == 3)) &&
+                      (!(this.field_V.a(var6, var6.i((byte) -111), var6.f(param1 ^ -103), -129, DropdownList.field_N)))) {
                       this.field_u = 0;
                     }
                     decompiledFrameRemainder2 = false;
@@ -3970,7 +3970,7 @@ final class le {
                   else {
                     this.field_s = var4;
                     this.field_r = var5;
-                    if (!this.field_V.a(var6, this.field_r, this.field_s, -129, ti.field_N)) {
+                    if (!this.field_V.a(var6, this.field_r, this.field_s, -129, DropdownList.field_N)) {
                       this.field_u = 0;
                     }
                   }
@@ -3982,39 +3982,39 @@ final class le {
                 if (this.field_u > 0 &&
                   !this.field_V.c((byte) 89)) {
                   if (!this.field_V.a(true) &&
-                    ti.field_N >= 0) {
+                    DropdownList.field_N >= 0) {
                     this.field_u = (int)Math.sqrt((double)(this.field_u * 32));
-                    if (ti.field_N != 87 &&
-                      ti.field_N != 116 &&
-                      ti.field_N != 45 &&
-                      54 != ti.field_N &&
-                      154 != ti.field_N &&
-                      ti.field_N != 139 &&
-                      ti.field_N != 152) {
+                    if (DropdownList.field_N != 87 &&
+                      DropdownList.field_N != 116 &&
+                      DropdownList.field_N != 45 &&
+                      54 != DropdownList.field_N &&
+                      154 != DropdownList.field_N &&
+                      DropdownList.field_N != 139 &&
+                      DropdownList.field_N != 152) {
                       this.field_V.e(true);
                     }
                     if (this.field_ab) {
-                      if (ti.field_N == 4 ||
-                        87 == ti.field_N ||
-                        ti.field_N == 116) {
+                      if (DropdownList.field_N == 4 ||
+                        87 == DropdownList.field_N ||
+                        DropdownList.field_N == 116) {
                         this.field_u = this.field_Q;
                         this.field_Q = 255 & 1 + this.field_Q;
                       }
                       if (this.field_h > 0) {
                         this.i(2000);
                       }
-                      if (FixedViewResizeListener.field_e[ti.field_N] == 3) {
-                        this.a(ti.field_N, var4, this.field_V.n((byte) -75), this.field_bb, var5, (byte) -30, var6.f(-80), var6.i((byte) 113), this.field_u);
+                      if (FixedViewResizeListener.field_e[DropdownList.field_N] == 3) {
+                        this.a(DropdownList.field_N, var4, this.field_V.n((byte) -75), this.field_bb, var5, (byte) -30, var6.f(-80), var6.i((byte) 113), this.field_u);
                       } else {
-                        this.a(ti.field_N, var4, this.field_V.n((byte) -75), this.field_bb, var5, (byte) -30, this.field_s, this.field_r, this.field_u);
+                        this.a(DropdownList.field_N, var4, this.field_V.n((byte) -75), this.field_bb, var5, (byte) -30, this.field_s, this.field_r, this.field_u);
                       }
-                      if (ti.field_N != 87) {
-                        ti.field_N = -1;
+                      if (DropdownList.field_N != 87) {
+                        DropdownList.field_N = -1;
                       }
                     } else {
-                      this.a(var5, ti.field_N, this.field_r, var4, this.field_u, this.field_s, var6.y(17571), param1 ^ -65);
-                      if (ti.field_N != 87) {
-                        ti.field_N = -1;
+                      this.a(var5, DropdownList.field_N, this.field_r, var4, this.field_u, this.field_s, var6.y(17571), param1 ^ -65);
+                      if (DropdownList.field_N != 87) {
+                        DropdownList.field_N = -1;
                       }
                     }
                     this.field_u = 0;
@@ -4066,16 +4066,16 @@ final class le {
         int var4 = 0;
         int var3_intLifetime1;
         try {
-          if (ti.field_N >= 0 &&
-            ti.field_N != -1 &&
-            null == eb.field_b) {
-            var3_int = FixedViewResizeListener.field_e[ti.field_N];
-            if (var3_int == 3 && ((ti.field_N == 10 ||
-              ti.field_N == 123 ||
-              ti.field_N == 125 ||
-              138 == ti.field_N ||
-              ti.field_N == 137 ||
-              ti.field_N == 155) &&
+          if (DropdownList.field_N >= 0 &&
+            DropdownList.field_N != -1 &&
+            null == EmptyPainter.field_b) {
+            var3_int = FixedViewResizeListener.field_e[DropdownList.field_N];
+            if (var3_int == 3 && ((DropdownList.field_N == 10 ||
+              DropdownList.field_N == 123 ||
+              DropdownList.field_N == 125 ||
+              138 == DropdownList.field_N ||
+              DropdownList.field_N == 137 ||
+              DropdownList.field_N == 155) &&
               (!this.field_ab ||
               this.field_V.d(false) == this.field_I))) {
               this.a((byte) -7, param0);
@@ -4092,7 +4092,7 @@ final class le {
             this.field_V.d(false) == this.field_I)) {
             var3_intLifetime1 = this.field_e;
             var4 = this.field_c;
-            if (ti.field_N == 78) {
+            if (DropdownList.field_N == 78) {
               var4 += 64;
             }
             this.a(var4, (byte) -82, param0, var3_intLifetime1);
@@ -4154,7 +4154,7 @@ final class le {
               this.field_V.a(this.field_V.d(false), var8, (byte) 11, var9, var4, var5, var7, var3_int, var6);
               if (((var8 != 6 &&
                 var8 != 79) || pb.field_m.isEmpty(true))) {
-                ma.a(li.field_I + tc.field_w[var8], 8421504, (byte) -41);
+                Scrollbar.queueTimedMessage(NameSuggestionsPanel.field_I + PasswordFieldPainter.field_w[var8], 8421504, (byte) -41);
               }
               decompiledFrameRemainder0 = false;
             }
@@ -4179,12 +4179,12 @@ final class le {
               } else {
                 this.field_V.a(this.field_V.d(false), var8, (byte) 25, var9, var4, var5, var7, var3_int, var6);
                 if (var8 == 159) {
-                  ma.a(kj.field_b, 8421504, (byte) -117);
+                  Scrollbar.queueTimedMessage(kj.field_b, 8421504, (byte) -117);
                 }
               }
             }
           } else {
-            bk.a(2);
+            Checkbox.a(2);
           }
           this.field_o = true;
           return;
@@ -4262,7 +4262,7 @@ final class le {
         try {
           var3_int = IntKeyLookup.field_g.field_nb;
           var4 = EmailLoginCredentials.field_g + (IntrusiveDeque.field_c - (EmailLoginCredentials.field_f >> 1));
-          var5 = -(var3_int >> 1) + me.field_I + CameraFollowTarget.field_g;
+          var5 = -(var3_int >> 1) + MenuButtonPanel.field_I + CameraFollowTarget.field_g;
           if (0 < this.field_u) {
             var4 = this.field_e;
             var5 = this.field_c;
@@ -4278,52 +4278,52 @@ final class le {
             var10 = -1;
           }
           var12 = 0;
-          if (ti.field_N == 18) {
+          if (DropdownList.field_N == 18) {
             var12 = 1;
           }
-          if (ti.field_N == 50) {
+          if (DropdownList.field_N == 50) {
             var12 = 1;
           }
-          if (ti.field_N == 121) {
+          if (DropdownList.field_N == 121) {
             var12 = 1;
           }
-          if (24 == ti.field_N) {
+          if (24 == DropdownList.field_N) {
             var12 = 1;
           }
-          if (36 == ti.field_N) {
+          if (36 == DropdownList.field_N) {
             var12 = 1;
           }
-          if (126 == ti.field_N) {
+          if (126 == DropdownList.field_N) {
             var12 = 1;
           }
-          if (ti.field_N == 127) {
+          if (DropdownList.field_N == 127) {
             var12 = 1;
           }
-          if (ti.field_N == 128) {
+          if (DropdownList.field_N == 128) {
             var12 = 1;
           }
-          if (ti.field_N == 129) {
+          if (DropdownList.field_N == 129) {
             var12 = 1;
           }
-          if (ti.field_N == 136) {
+          if (DropdownList.field_N == 136) {
             var12 = 1;
           }
-          if (ti.field_N == 37) {
+          if (DropdownList.field_N == 37) {
             var12 = 1;
           }
-          if (ti.field_N == 102) {
+          if (DropdownList.field_N == 102) {
             var12 = 1;
           }
-          if (86 == ti.field_N) {
+          if (86 == DropdownList.field_N) {
             var12 = 1;
           }
-          if (87 == ti.field_N) {
+          if (87 == DropdownList.field_N) {
             var12 = 1;
           }
-          if (ti.field_N == 116) {
+          if (DropdownList.field_N == 116) {
             var12 = 1;
           }
-          if (ti.field_N == 149) {
+          if (DropdownList.field_N == 149) {
             var12 = 1;
           }
           if (param0 > -107) {
@@ -4339,11 +4339,11 @@ final class le {
             } else {
               param1.field_E = -1;
             }
-            if ((ti.field_N == 127 ||
-              ti.field_N == 128 ||
-              ti.field_N == 129 ||
-              ti.field_N == 136 ||
-              155 == ti.field_N) &&
+            if ((DropdownList.field_N == 127 ||
+              DropdownList.field_N == 128 ||
+              DropdownList.field_N == 129 ||
+              DropdownList.field_N == 136 ||
+              155 == DropdownList.field_N) &&
               Math.abs(var9) < Math.abs(var10)) {
               var9 = param1.field_E * 64;
               var10 = (0 > var10) ? -64 : 64;
@@ -4487,18 +4487,18 @@ final class le {
           if (var6Lifetime1 != null) {
             var6Lifetime1.c((var4_int >> 1) - param0, (EmailLoginCredentials.field_f >> 1) - param2, 1703903841);
             if (this.field_u == 0 &&
-              -1 != ti.field_N &&
-              null == eb.field_b) {
+              -1 != DropdownList.field_N &&
+              null == EmptyPainter.field_b) {
               var7 = -param2 + (EmailLoginCredentials.field_f >> 1) + var6Lifetime1.f(-88);
               var8 = -48 + (var4_int >> 1) - param0 + var6Lifetime1.i((byte) 115) + (-var6Lifetime1.p(-8323) - this.field_M);
               SoftwareRasterizer.fillCircle(var7, var8, 20, 16777215);
               gn.a(20, (byte) 99, 192, var7, var8);
               SoftwareRasterizer.drawCircleOutline(var7, var8, 20, 0);
-              bb.field_g[dd.field_f[ti.field_N]].drawTransparent(var7 - 20, var8 - 20);
+              bb.field_g[dd.field_f[DropdownList.field_N]].drawTransparent(var7 - 20, var8 - 20);
             }
             if (this.field_u == 0 &&
-              ti.field_N == -1 &&
-              null == eb.field_b) {
+              DropdownList.field_N == -1 &&
+              null == EmptyPainter.field_b) {
               if (this.field_V.d(false) < 0) {
                 this.g(0);
                 this.a(var6Lifetime1, 98);
@@ -4584,8 +4584,8 @@ final class le {
                 }
                 var4 = var10;
                 this.field_bb = var10.y(param0 + 6790);
-                eb.field_b = null;
-                ti.field_N = -1;
+                EmptyPainter.field_b = null;
+                DropdownList.field_N = -1;
                 var10.a((byte) -31, 0);
               } else {
                 if (var10 == null) {
@@ -4599,8 +4599,8 @@ final class le {
                 }
                 var4 = var10;
                 this.field_bb = var10.y(17571);
-                eb.field_b = null;
-                ti.field_N = -1;
+                EmptyPainter.field_b = null;
+                DropdownList.field_N = -1;
                 var10.a((byte) 65, 0);
               }
             }
@@ -4710,9 +4710,9 @@ final class le {
               param1 != 79 ||
               pb.field_m.isEmpty(true))) {
               if (param1 == 159) {
-                ma.a(kj.field_b, 8421504, (byte) -42);
+                Scrollbar.queueTimedMessage(kj.field_b, 8421504, (byte) -42);
               } else {
-                ma.a(li.field_I + tc.field_w[param1], 8421504, (byte) -103);
+                Scrollbar.queueTimedMessage(NameSuggestionsPanel.field_I + PasswordFieldPainter.field_w[param1], 8421504, (byte) -103);
               }
             }
             this.field_V.a(this.field_V.d(false), param1, (byte) 77, param4, param3, param0, param2, param6, param5);

@@ -29,7 +29,7 @@ final class ViewportController {
         this.field_j = MusicPatchNode.field_r;
         this.field_r = co.field_c;
         this.field_a.a(this.field_m, this.field_c, 120);
-        jm.field_j = false;
+        TextWidgetPainter.field_j = false;
         FullscreenFocusCanvas var2 = CameraFollowTarget.createFullscreenCanvas(0, 0, false, fi.field_d, this.field_c, this.field_m);
         if (param0 > 116) {
           if (var2 == null) {
@@ -279,7 +279,7 @@ final class ViewportController {
 
     final boolean isFullscreenAvailable(byte param0) {
         int var2 = 40 % ((32 - param0) / 43);
-        if (this.field_q > wl.field_K) {
+        if (this.field_q > NumericDateInputWidget.field_K) {
           return false;
         }
         if (ah.field_c > 0) {
@@ -290,10 +290,10 @@ final class ViewportController {
 
     final static ResourceArchive a(byte param0, boolean param1, boolean param2, int param3, int param4) {
         if (param0 == -93) {
-          return me.a(param3, param2, param0 + 2097245, param1, param4, false);
+          return MenuButtonPanel.createResourceArchive(param3, param2, param0 + 2097245, param1, param4, false);
         }
         ViewportController.a((byte) -92, false, true, 53, 6);
-        return me.a(param3, param2, param0 + 2097245, param1, param4, false);
+        return MenuButtonPanel.createResourceArchive(param3, param2, param0 + 2097245, param1, param4, false);
     }
 
     final boolean b(boolean param0) {
@@ -302,7 +302,7 @@ final class ViewportController {
           if (ah.field_c <= 0) {
             return false;
           }
-          if (wl.field_K < this.field_q) {
+          if (NumericDateInputWidget.field_K < this.field_q) {
             return true;
           }
           return false;
@@ -310,7 +310,7 @@ final class ViewportController {
         if (ah.field_c <= 0) {
           return false;
         }
-        if (wl.field_K < this.field_q) {
+        if (NumericDateInputWidget.field_K < this.field_q) {
           return true;
         }
         return false;
@@ -356,7 +356,7 @@ final class ViewportController {
               return;
             }
             this.field_s = this.field_i;
-            if (this.field_q > wl.field_K) {
+            if (this.field_q > NumericDateInputWidget.field_K) {
               this.field_l = false;
             } else {
               this.applyRequestedSize((byte) 89);
@@ -390,7 +390,7 @@ final class ViewportController {
               return;
             }
             this.field_s = this.field_i;
-            if (this.field_q > wl.field_K) {
+            if (this.field_q > NumericDateInputWidget.field_K) {
               this.field_l = false;
             } else {
               this.applyRequestedSize((byte) 89);

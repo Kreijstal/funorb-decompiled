@@ -77,7 +77,7 @@ final class ja extends TextFieldValidator {
             return stackIn_2_0;
           }
           if (!param0.equals(this.field_q)) {
-            var3 = ib.a(2, param0);
+            var3 = BevelTextPainter.a(2, param0);
             if (!var3.a((byte) -111)) {
               stackIn_7_0 = IsaacCipher.field_c;
               return stackIn_7_0;

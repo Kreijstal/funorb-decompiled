@@ -421,19 +421,19 @@ final class MusicCrossfadeStream extends PcmStream {
           } else {
             stackIn_4_1 = sm.field_a;
           }
-          ej.a(stackIn_3_0, stackIn_4_1);
+          TextHotspotWidget.a(stackIn_3_0, stackIn_4_1);
           tn.field_Ob.a(0, 0, -42 + hl.field_m.field_I, hl.field_m.field_x, 5);
-          aj.field_d.setBounds(bk.field_M.field_x, 0, 0, ImageProducerRasterBuffer.field_r, (byte) -120);
+          aj.field_d.setBounds(Checkbox.field_M.field_x, 0, 0, ImageProducerRasterBuffer.field_r, (byte) -120);
           stackIn_6_0 = qc.field_d;
-          stackIn_6_1 = bk.field_M.field_x;
+          stackIn_6_1 = Checkbox.field_M.field_x;
           if (!fc.field_a) {
             stackIn_7_2 = 0;
           } else {
             stackIn_7_2 = CacheEntry.field_p + 2 + 42;
           }
           ((SceneWidget) (Object) stackIn_6_0).setBounds(stackIn_6_1 - stackIn_7_2, 0, ImageProducerRasterBuffer.field_r + 2, 18, (byte) -120);
-          MembershipOfferScreen.field_q.setBounds(CacheEntry.field_p + 42, -40 + (bk.field_M.field_x - CacheEntry.field_p - 2), ImageProducerRasterBuffer.field_r + 2, 18, (byte) -120);
-          lf.field_b.a(ImageProducerRasterBuffer.field_r + 22, CacheEntry.field_p, bk.field_M.field_x, false, 0, bk.field_M.field_I - (ImageProducerRasterBuffer.field_r + 2) - 20, 2);
+          MembershipOfferScreen.field_q.setBounds(CacheEntry.field_p + 42, -40 + (Checkbox.field_M.field_x - CacheEntry.field_p - 2), ImageProducerRasterBuffer.field_r + 2, 18, (byte) -120);
+          lf.field_b.a(ImageProducerRasterBuffer.field_r + 22, CacheEntry.field_p, Checkbox.field_M.field_x, false, 0, Checkbox.field_M.field_I - (ImageProducerRasterBuffer.field_r + 2) - 20, 2);
           var2_int = -29 / ((84 - param0) / 36);
           IntrusiveNodeHashTable.field_o.setBounds(hl.field_m.field_x, 0, -40 + hl.field_m.field_I, 40, (byte) -120);
           nl.field_Db.setBounds(ReflectionCheckRequest.field_h.field_x, 0, 0, 30, (byte) -120);
@@ -453,7 +453,7 @@ final class MusicCrossfadeStream extends PcmStream {
           if (var5 > 40) {
             var5 = 40;
           }
-          ib.field_s.setBounds(-5 + mi.field_m.field_x - 5, 5, 5, var5, (byte) -120);
+          BevelTextPainter.field_s.setBounds(-5 + mi.field_m.field_x - 5, 5, 5, var5, (byte) -120);
           var6 = var5 + 7;
           for (var7 = 0; var7 < 4 + vf.field_l; var7++) {
             if ((var7 != 1 ||
@@ -516,7 +516,7 @@ final class MusicCrossfadeStream extends PcmStream {
                   ResizableViewResizeListener.field_g[var7].setBounds(103, 5, var6, var4, (byte) -120);
                   var9 = 110;
                   if (param1) {
-                    IndexedSpriteState.field_e[var7][0].a(2, 0, var4, 38, var9, var6, mm.field_p);
+                    IndexedSpriteState.field_e[var7][0].a(2, 0, var4, 38, var9, var6, MenuButtonPainter.field_p);
                     var9 += 40;
                   } else {
                     if (IndexedSpriteState.field_e[var7][0] != null) {
@@ -529,7 +529,7 @@ final class MusicCrossfadeStream extends PcmStream {
                   var11_int = -1 + IndexedSpriteState.field_e[var7].length;
                   for (var12 = 0; var12 < var11_int; var12++) {
                     var13 = var10_int * var12 / var11_int;
-                    IndexedSpriteState.field_e[var7][1 + var12].a(2, 0, var4, -var13 + (var12 + 1) * var10_int / var11_int - 2, var9 + var13, var6, mm.field_p);
+                    IndexedSpriteState.field_e[var7][1 + var12].a(2, 0, var4, -var13 + (var12 + 1) * var10_int / var11_int - 2, var9 + var13, var6, MenuButtonPainter.field_p);
                   }
                   var6 = var6 + (2 + var4);
                 }
@@ -540,7 +540,7 @@ final class MusicCrossfadeStream extends PcmStream {
           MembershipOfferScreen.field_t.setBounds(nl.field_Fb.field_x, 0, 0, 24, (byte) -120);
           Js5ArchiveManager.field_g.setBounds(nl.field_Fb.field_x, 0, 24, -24 + nl.field_Fb.field_I, (byte) -120);
           Js5ArchiveManager.field_g.field_v = of.a(3, Js5ArchiveManager.field_g.field_I, 1, 1, 11579568, 8421504);
-          mj.field_s.setBounds(-10 + Js5ArchiveManager.field_g.field_x, 5, 5, -2 + (-34 + Js5ArchiveManager.field_g.field_I), (byte) -120);
+          StatefulTextPainter.field_s.setBounds(-10 + Js5ArchiveManager.field_g.field_x, 5, 5, -2 + (-34 + Js5ArchiveManager.field_g.field_I), (byte) -120);
           gj.field_d.setBounds(80, (-80 + Js5ArchiveManager.field_g.field_x) / 2, Js5ArchiveManager.field_g.field_I - 5 - 24, 24, (byte) -120);
           ie.l((byte) 112);
           return;
@@ -666,7 +666,7 @@ final class MusicCrossfadeStream extends PcmStream {
             }
           }
           var2_intLifetime1 = -44 % ((-45 - param1) / 34);
-          vf.field_g.a(true, 0, false, TextFieldValidator.a(me.field_I, EmailLoginCredentials.field_g, -121));
+          vf.field_g.a(true, 0, false, TextFieldValidator.a(MenuButtonPanel.field_I, EmailLoginCredentials.field_g, -121));
         } catch (RuntimeException runtimeException) {
           throw aa.wrapException((Throwable) ((Object) runtimeException), "io.H(" + param0 + ',' + param1 + ')');
         }

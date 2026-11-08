@@ -17,7 +17,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
         try {
           int var4_int = 0;
           if (PlatformTaskDispatcher.field_s.startsWith("win") &&
-            ie.b((byte) 118, param0)) {
+            ie.openUrlWithWindowsShell((byte) 118, param0)) {
             return;
           }
           var4_int = 89 / ((param3 + 46) / 63);
@@ -39,7 +39,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
         ml var4;
         ml var5;
         var3 = ArcanistsMulti.field_G ? 1 : 0;
-        if (mj.field_p == 0) {
+        if (StatefulTextPainter.field_p == 0) {
           qn.field_ob.field_X = false;
           qn.field_ob.field_H = false;
           qn.field_ob.field_g = false;
@@ -53,8 +53,8 @@ final class DelegatingCanvas extends java.awt.Canvas {
               } else {
                 if (WhirlpoolHasher.field_k != 3) {
                   if (4 == WhirlpoolHasher.field_k) {
-                    IntrusiveNodeHashTable.field_f = ej.field_Q;
-                    if (ti.field_N != 12 &&
+                    IntrusiveNodeHashTable.field_f = TextHotspotWidget.field_Q;
+                    if (DropdownList.field_N != 12 &&
                       !rk.field_O.c((byte) 89)) {
                       IntrusiveNodeHashTable.field_f = sk.field_i;
                     }
@@ -75,7 +75,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
                     }
                   }
                 } else {
-                  if (ti.field_N == 12) {
+                  if (DropdownList.field_N == 12) {
                     WhirlpoolHasher.field_k = 4;
                   }
                   ArrayWidgetContainer.field_A = 500;
@@ -94,7 +94,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
             ArrayWidgetContainer.field_A = 400;
           }
         }
-        if (mj.field_p == 1) {
+        if (StatefulTextPainter.field_p == 1) {
           qn.field_ob.field_H = false;
           qn.field_ob.field_g = false;
           qn.field_ob.field_X = false;
@@ -105,7 +105,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
             ArrayWidgetContainer.field_A = 400;
           } else {
             if (WhirlpoolHasher.field_k == 1) {
-              if (ti.field_N == 14) {
+              if (DropdownList.field_N == 14) {
                 WhirlpoolHasher.field_k = 2;
               }
               ArrayWidgetContainer.field_A = 500;
@@ -117,16 +117,16 @@ final class DelegatingCanvas extends java.awt.Canvas {
                     IntrusiveNodeHashTable.field_f = DirectByteStorage.field_i;
                   }
                 } else {
-                  IntrusiveNodeHashTable.field_f = vi.field_D;
+                  IntrusiveNodeHashTable.field_f = FadingModalPanel.field_D;
                   if (1 >= co.countUnitsOfType40(param0 ^ 20672)) {
                     WhirlpoolHasher.field_k = 4;
                   }
                 }
               } else {
-                IntrusiveNodeHashTable.field_f = mk.field_R;
-                if (ti.field_N != 14 &&
+                IntrusiveNodeHashTable.field_f = ValidationStatusIcon.field_R;
+                if (DropdownList.field_N != 14 &&
                   !rk.field_O.c((byte) 89)) {
-                  IntrusiveNodeHashTable.field_f = ke.field_E;
+                  IntrusiveNodeHashTable.field_f = LabeledField.field_E;
                 }
                 if (co.countUnitsOfType40(param0 - 20672) <= 2) {
                   WhirlpoolHasher.field_k = 3;
@@ -136,7 +136,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
             }
           }
         }
-        if (2 == mj.field_p) {
+        if (2 == StatefulTextPainter.field_p) {
           qn.field_ob.field_H = false;
           qn.field_ob.field_X = false;
           qn.field_ob.field_g = false;
@@ -183,7 +183,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
                 }
               } else {
                 IntrusiveNodeHashTable.field_f = nj.field_h;
-                if (0 != ti.field_N) {
+                if (0 != DropdownList.field_N) {
                   WhirlpoolHasher.field_k = 1;
                 }
                 ArrayWidgetContainer.field_A = 400;
@@ -192,20 +192,20 @@ final class DelegatingCanvas extends java.awt.Canvas {
                 }
               }
             } else {
-              IntrusiveNodeHashTable.field_f = mk.field_N;
+              IntrusiveNodeHashTable.field_f = ValidationStatusIcon.field_N;
               ArrayWidgetContainer.field_A = 500;
-              if (ti.field_N == 0) {
+              if (DropdownList.field_N == 0) {
                 WhirlpoolHasher.field_k = 2;
               }
             }
           }
         }
-        if (3 == mj.field_p) {
+        if (3 == StatefulTextPainter.field_p) {
           qn.field_ob.field_X = false;
           qn.field_ob.field_H = false;
           qn.field_ob.field_g = false;
           if (WhirlpoolHasher.field_k == 0) {
-            if (20 == ti.field_N) {
+            if (20 == DropdownList.field_N) {
               WhirlpoolHasher.field_k = 1;
             }
             IntrusiveNodeHashTable.field_f = GzipDecoder.field_f;
@@ -215,7 +215,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
           } else {
             if (1 == WhirlpoolHasher.field_k) {
               IntrusiveNodeHashTable.field_f = qn.field_jb;
-              if (20 != ti.field_N &&
+              if (20 != DropdownList.field_N &&
                 !rk.field_O.c((byte) 89)) {
                 WhirlpoolHasher.field_k = 0;
               }
@@ -237,7 +237,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
             }
           }
         }
-        if (mj.field_p == 4) {
+        if (StatefulTextPainter.field_p == 4) {
           qn.field_ob.field_X = false;
           qn.field_ob.field_H = false;
           qn.field_ob.field_g = false;
@@ -266,7 +266,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
                       if (WhirlpoolHasher.field_k != 6) {
                         if (7 != WhirlpoolHasher.field_k) {
                           if (WhirlpoolHasher.field_k == 8) {
-                            if (ti.field_N == 10) {
+                            if (DropdownList.field_N == 10) {
                               WhirlpoolHasher.field_k = 4;
                             }
                             IntrusiveNodeHashTable.field_f = ScreenDisplayMode.field_b;
@@ -278,7 +278,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
                           }
                         }
                       } else {
-                        IntrusiveNodeHashTable.field_f = eb.field_c;
+                        IntrusiveNodeHashTable.field_f = EmptyPainter.field_c;
                       }
                     } else {
                       if (rk.field_O.a(3, true) == null) {
@@ -301,7 +301,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
                     }
                   }
                 } else {
-                  if (ti.field_N == 10) {
+                  if (DropdownList.field_N == 10) {
                     WhirlpoolHasher.field_k = 4;
                   }
                   ArrayWidgetContainer.field_A = 320;
@@ -332,7 +332,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
             ArrayWidgetContainer.field_A = 400;
           }
         }
-        if (mj.field_p == 5) {
+        if (StatefulTextPainter.field_p == 5) {
           qn.field_ob.field_X = false;
           qn.field_ob.field_H = false;
           qn.field_ob.field_g = false;
@@ -344,7 +344,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
           var4 = rk.field_O.a(qn.field_ob.field_bb, true);
           if (0 == WhirlpoolHasher.field_k) {
             ArrayWidgetContainer.field_A = 400;
-            if (ti.field_N == 6) {
+            if (DropdownList.field_N == 6) {
               WhirlpoolHasher.field_k = 1;
             }
             IntrusiveNodeHashTable.field_f = bm.field_a;
@@ -380,12 +380,12 @@ final class DelegatingCanvas extends java.awt.Canvas {
                       }
                     }
                   } else {
-                    IntrusiveNodeHashTable.field_f = tc.field_E;
+                    IntrusiveNodeHashTable.field_f = PasswordFieldPainter.field_E;
                     if (var4 == null ||
                       var4.field_jb != 11) {
                       WhirlpoolHasher.field_k = 5;
                     }
-                    if (ti.field_N != 120) {
+                    if (DropdownList.field_N != 120) {
                       WhirlpoolHasher.field_k = 5;
                     }
                     if (rk.field_O.a(1, true) == null ||
@@ -411,14 +411,14 @@ final class DelegatingCanvas extends java.awt.Canvas {
                     var4.field_jb != 11) {
                     WhirlpoolHasher.field_k = 2;
                   }
-                  if (120 == ti.field_N) {
+                  if (120 == DropdownList.field_N) {
                     WhirlpoolHasher.field_k = 4;
                   }
                   ArrayWidgetContainer.field_A = 460;
                 }
               }
             } else {
-              IntrusiveNodeHashTable.field_f = mk.field_M;
+              IntrusiveNodeHashTable.field_f = ValidationStatusIcon.field_M;
               if (rk.field_O.b(12) >= 3) {
                 WhirlpoolHasher.field_k = 2;
               }
@@ -432,11 +432,11 @@ final class DelegatingCanvas extends java.awt.Canvas {
             {
               IntrusiveNodeHashTable.field_f = r.field_c;
               if ((var4 == null ||
-                var4.field_jb == 0) && ti.field_N != 6) {
+                var4.field_jb == 0) && DropdownList.field_N != 6) {
                 if (var4 == null) {
                 } else if (250 <= var4.field_ib) {
                 } else {
-                  IntrusiveNodeHashTable.field_f = tc.field_y;
+                  IntrusiveNodeHashTable.field_f = PasswordFieldPainter.field_y;
                 }
               } else {
                 WhirlpoolHasher.field_k = -WhirlpoolHasher.field_k;
@@ -454,7 +454,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
             }
           }
         }
-        if (mj.field_p == 6) {
+        if (StatefulTextPainter.field_p == 6) {
           if (null == rk.field_O.a(0, true)) {
             gj.a(true, true, 14, mn.field_r);
             co.resetBattleState(108);
@@ -516,7 +516,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
         if (param0 != -3) {
           field_c = (MusicTrack[]) null;
         }
-        if (7 != mj.field_p) {
+        if (7 != StatefulTextPainter.field_p) {
           return;
         }
         if (null == rk.field_O.a(0, true)) {
@@ -537,12 +537,12 @@ final class DelegatingCanvas extends java.awt.Canvas {
           ArrayWidgetContainer.field_A = 400;
           if (var5 != null &&
             var5.field_jb != 0 ||
-            ti.field_N != -1) {
+            DropdownList.field_N != -1) {
             WhirlpoolHasher.field_k = -WhirlpoolHasher.field_k;
           }
           if (var5 != null &&
             var5.field_ib < 250) {
-            IntrusiveNodeHashTable.field_f = q.field_F;
+            IntrusiveNodeHashTable.field_f = DropTargetWidget.field_F;
           }
         }
         if (rk.field_O.a(0, true).field_x > 0) {
@@ -642,15 +642,15 @@ final class DelegatingCanvas extends java.awt.Canvas {
               }
               var3 = var3 + param1;
             }
-            se.a((byte) -125, var3);
+            DraggableWidget.printError((byte) -125, var3);
             if (param2 != 20) {
               var7 = (java.applet.Applet) null;
               DelegatingCanvas.a((String) null, (java.applet.Applet) null, true, (byte) 83);
             }
-            var3 = si.a(var3, ":", "%3a", (byte) 107);
-            var3 = si.a(var3, "@", "%40", (byte) 125);
-            var3 = si.a(var3, "&", "%26", (byte) 100);
-            var8 = si.a(var3, "#", "%23", (byte) 100);
+            var3 = CheckboxPainter.replaceAll(var3, ":", "%3a", (byte) 107);
+            var3 = CheckboxPainter.replaceAll(var3, "@", "%40", (byte) 125);
+            var3 = CheckboxPainter.replaceAll(var3, "&", "%26", (byte) 100);
+            var8 = CheckboxPainter.replaceAll(var3, "#", "%23", (byte) 100);
             if (MouseWheelHandler.field_e == null) {
               return;
             }

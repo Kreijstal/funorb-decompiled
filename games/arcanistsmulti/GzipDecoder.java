@@ -19,9 +19,9 @@ final class GzipDecoder {
           return;
         }
         if (ah.field_c > 0) {
-          if (ob.field_Y != null) {
-            ProxySocketConnector.field_m = ob.field_Y.enterFullscreen(param1 + 122);
-            li.a(2, 0);
+          if (ResizableModalPanel.field_Y != null) {
+            ProxySocketConnector.field_m = ResizableModalPanel.field_Y.enterFullscreen(param1 + 122);
+            NameSuggestionsPanel.notifyBrowserResizing(2, 0);
           } else {
             ProxySocketConnector.field_m = CameraFollowTarget.createFullscreenCanvas(0, 0, false, fi.field_d, 480, 640);
           }
@@ -34,7 +34,7 @@ final class GzipDecoder {
         } else {
           var2 = (lc.a((byte) 112)) ? 0 : 1;
         }
-        if (null == ob.field_Y &&
+        if (null == ResizableModalPanel.field_Y &&
           ri.field_f) {
           qa.a(param0, -4693, var2);
         }
@@ -131,7 +131,7 @@ final class GzipDecoder {
             field_a = -55;
           }
           var5 = (CharSequence) ((Object) param0);
-          ua.field_S = Js5ArchiveManager.a(var5, -13);
+          GridContainer.field_S = Js5ArchiveManager.a(var5, -13);
           gg.field_e = param1;
           SocketJs5Transport.field_r = true;
         } catch (RuntimeException runtimeException) {

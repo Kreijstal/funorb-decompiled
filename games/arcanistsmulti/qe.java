@@ -276,7 +276,7 @@ final class qe extends IntrusiveNode {
         if (param0 != -4) {
           field_o = 94;
         }
-        return (java.awt.Container) ((Object) cd.getApplet(param0 ^ -115));
+        return (java.awt.Container) ((Object) IconButtonPainter.getApplet(param0 ^ -115));
     }
 
     public static void releaseStatics(int param0) {

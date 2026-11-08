@@ -214,7 +214,7 @@ final class pe extends SceneWidget {
               var12.addChild(var12.field_ec, 35);
               var12.field_pc = new SceneWidget[vf.field_l];
               var12.field_Ub = new SceneWidget(0L, (SceneWidget) null);
-              if ((1 << ma.field_U & var14) != 0) {
+              if ((1 << Scrollbar.field_U & var14) != 0) {
                 var12.field_ec.addChild(var12.field_Ub, 76);
               }
               var12.field_Cb = new SceneWidget(0L, (SceneWidget) null);
@@ -370,7 +370,7 @@ final class pe extends SceneWidget {
                 if (!var12.field_Ob &&
                   !var12.field_Hb) {
                   if (!var12.field_mc) {
-                    var12.field_Gb.field_rb = ti.field_C;
+                    var12.field_Gb.field_rb = DropdownList.field_C;
                   } else {
                     var12.field_Gb.field_rb = lo.field_z;
                   }
@@ -407,12 +407,12 @@ final class pe extends SceneWidget {
               stackIn_69_0 = (!fc.field_a) ? 200 : 250;
               var33_intLifetime1 = stackIn_69_0;
               var12.field_ec.setBounds(365 - var33_intLifetime1 - 2, var33_intLifetime1, var31, ImageProducerRasterBuffer.field_r, (byte) -120);
-              var34_int = mm.field_p;
-              if ((var14Lifetime1 & 1 << ma.field_U) != 0) {
+              var34_int = MenuButtonPainter.field_p;
+              if ((var14Lifetime1 & 1 << Scrollbar.field_U) != 0) {
                 var50_ref = IntrusiveNodeHashTable.field_b[var12.field_Pb];
                 var12.field_Ub.field_W = var50_ref;
                 var12.field_Ub.setBounds(var50_ref.field_n, var34_int, 0, var12.field_ec.field_I, (byte) -120);
-                var34_int = var34_int + (var50_ref.field_n + mm.field_p);
+                var34_int = var34_int + (var50_ref.field_n + MenuButtonPainter.field_p);
               }
               if ((1 << gn.field_k & var14Lifetime1) != 0) {
                 if (!var12.field_Ob) {
@@ -430,13 +430,13 @@ final class pe extends SceneWidget {
                 var51_ref = stackIn_82_0[stackIn_83_1];
                 var12.field_Cb.field_W = var51_ref;
                 var12.field_Cb.setBounds(var51_ref.field_n, var34_int, 0, var12.field_ec.field_I, (byte) -120);
-                var34_int = var34_int + (var51_ref.field_n + mm.field_p);
+                var34_int = var34_int + (var51_ref.field_n + MenuButtonPainter.field_p);
               }
               if ((1 << hb.field_Kb & var14Lifetime1) != 0) {
                 var52_ref = ec.field_i[var12.field_Fb - 1];
                 var12.field_Jb.field_W = var52_ref;
                 var12.field_Jb.setBounds(var52_ref.field_n, var34_int, 0, var12.field_ec.field_I, (byte) -120);
-                var34_int = var34_int + (var52_ref.field_n + mm.field_p);
+                var34_int = var34_int + (var52_ref.field_n + MenuButtonPainter.field_p);
               }
               if ((var14Lifetime1 & 1 << LinkButtonPainter.field_a) != 0) {
                 stackIn_90_0 = re.field_j;
@@ -448,7 +448,7 @@ final class pe extends SceneWidget {
                 var53_ref = stackIn_90_0[stackIn_91_1];
                 var12.field_Xb.field_W = var53_ref;
                 var12.field_Xb.setBounds(var53_ref.field_n, var34_int, 0, var12.field_ec.field_I, (byte) -120);
-                var34_int = var34_int + (var53_ref.field_n + mm.field_p);
+                var34_int = var34_int + (var53_ref.field_n + MenuButtonPainter.field_p);
               }
               if (null != nk.field_m) {
                 for (var36Lifetime1 = 0; var36Lifetime1 < vf.field_l; var36Lifetime1++) {
@@ -458,7 +458,7 @@ final class pe extends SceneWidget {
                     var54 = var42;
                     var12.field_pc[var36Lifetime1].field_W = var42;
                     var12.field_pc[var36Lifetime1].setBounds(var54.field_n, var34_int, 0, var12.field_ec.field_I, (byte) -120);
-                    var34_int = var34_int + (mm.field_p + var54.field_n);
+                    var34_int = var34_int + (MenuButtonPainter.field_p + var54.field_n);
                   }
                 }
               }
@@ -543,9 +543,9 @@ final class pe extends SceneWidget {
                   var35 = null;
                 }
                 if (var35 != null) {
-                  TextLayout.field_c = ob.field_bb[var34_intLifetime2] + " - " + (String) (var35);
+                  TextLayout.field_c = ResizableModalPanel.field_bb[var34_intLifetime2] + " - " + (String) (var35);
                 } else {
-                  TextLayout.field_c = ob.field_bb[var34_intLifetime2];
+                  TextLayout.field_c = ResizableModalPanel.field_bb[var34_intLifetime2];
                 }
               }
             }

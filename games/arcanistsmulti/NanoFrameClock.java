@@ -120,11 +120,11 @@ final class NanoFrameClock extends FrameClock {
           var9.drawAdditive(0, 0, 128);
         }
         if (param1 == 0) {
-          var3 = sc.field_U[param1] * wl.field_L[param1].length + tg.field_f[param1];
+          var3 = ValidationHelpWidget.field_U[param1] * NumericDateInputWidget.field_L[param1].length + tg.field_f[param1];
           var4 = new Sprite(640, 480);
           var4.makeRasterTarget();
           MusicPatchNode.field_F.drawTransparent(-64 + lm.field_e[param1], var3 - 80);
-          j.field_a.drawTransparent(eo.field_b[param1] - 110, -70 + var3);
+          BevelBoxPainter.field_a.drawTransparent(eo.field_b[param1] - 110, -70 + var3);
           pe.field_Ib.drawTransparent(lm.field_e[param1] - 39, tg.field_f[param1] - 66);
           TextTableInitializer.field_a.drawTransparent(-150 + eo.field_b[param1], -80 + tg.field_f[param1]);
           var5 = fj.loadSprite(ec.field_c, -22612, ue.field_d, "");
@@ -141,7 +141,7 @@ final class NanoFrameClock extends FrameClock {
           wm.field_H[var2].makeRasterTarget();
           var4.drawAdditive(0, 0, 255);
           MusicPatchNode.field_F.drawTransparent(lm.field_e[param1] - 64, var3 - 80);
-          j.field_a.drawTransparent(eo.field_b[param1] - 110, -70 + var3);
+          BevelBoxPainter.field_a.drawTransparent(eo.field_b[param1] - 110, -70 + var3);
           pe.field_Ib.drawTransparent(lm.field_e[param1] - 39, -66 + tg.field_f[param1]);
           TextTableInitializer.field_a.drawTransparent(-150 + eo.field_b[param1], tg.field_f[param1] - 80);
           if (!ec.field_c.equals("underdark")) {
@@ -164,13 +164,13 @@ final class NanoFrameClock extends FrameClock {
           gl.drawNineSliceFrame(371, 32, -27327, 576, kf.field_b, 63);
           wm.field_H[var2].makeRasterTarget();
           var10.drawAdditive(0, 0, 128);
-          bj.a(var10.field_A, 0);
+          bj.clearInts(var10.field_A, 0);
           var10.makeRasterTarget();
-          gd.field_mb.drawTransparent(-(gd.field_mb.field_n / 2) + 320, -5);
+          LoadingProgressDialog.field_mb.drawTransparent(-(LoadingProgressDialog.field_mb.field_n / 2) + 320, -5);
           SoftwareRasterizer.blurRectangle(4, 4, 0, 0, 640, 480);
           wm.field_H[var2].makeRasterTarget();
           var10.drawAdditive(0, 0, 255);
-          gd.field_mb.drawTransparent(-(gd.field_mb.field_n / 2) + 320, -5);
+          LoadingProgressDialog.field_mb.drawTransparent(-(LoadingProgressDialog.field_mb.field_n / 2) + 320, -5);
         }
         if (7 == param1) {
           var11 = new Sprite(640, 480);
@@ -178,13 +178,13 @@ final class NanoFrameClock extends FrameClock {
           gl.drawNineSliceFrame(385, 32, -27327, 576, kf.field_b, 63);
           wm.field_H[var2].makeRasterTarget();
           var11.drawAdditive(0, 0, 128);
-          bj.a(var11.field_A, 0);
+          bj.clearInts(var11.field_A, 0);
           var11.makeRasterTarget();
-          gd.field_mb.drawTransparent(320 - gd.field_mb.field_n / 2, -5);
+          LoadingProgressDialog.field_mb.drawTransparent(320 - LoadingProgressDialog.field_mb.field_n / 2, -5);
           SoftwareRasterizer.blurRectangle(4, 4, 0, 0, 640, 480);
           wm.field_H[var2].makeRasterTarget();
           var11.drawAdditive(0, 0, 255);
-          gd.field_mb.drawTransparent(320 - gd.field_mb.field_n / 2, -5);
+          LoadingProgressDialog.field_mb.drawTransparent(320 - LoadingProgressDialog.field_mb.field_n / 2, -5);
         }
         if (param1 == 9) {
           var12 = new Sprite(640, 480);
@@ -194,11 +194,11 @@ final class NanoFrameClock extends FrameClock {
           var12.drawAdditive(0, 0, 128);
           var13 = new Sprite(640, 480);
           var13.makeRasterTarget();
-          gd.field_mb.drawTransparent(320 - gd.field_mb.field_n / 2, 35);
+          LoadingProgressDialog.field_mb.drawTransparent(320 - LoadingProgressDialog.field_mb.field_n / 2, 35);
           SoftwareRasterizer.blurRectangle(4, 4, 0, 0, 640, 480);
           wm.field_H[var2].makeRasterTarget();
           var13.drawAdditive(0, 0, 255);
-          gd.field_mb.drawTransparent(-(gd.field_mb.field_n / 2) + 320, 35);
+          LoadingProgressDialog.field_mb.drawTransparent(-(LoadingProgressDialog.field_mb.field_n / 2) + 320, 35);
         }
         if (!param0) {
           NanoFrameClock.renderThemeBackground(true, -39);
@@ -214,34 +214,34 @@ final class NanoFrameClock extends FrameClock {
           var15 = new Sprite(640, 480);
           var15.makeRasterTarget();
           MusicPatchNode.field_F.drawTransparent(343, -2);
-          j.field_a.drawTransparent(108, 6);
+          BevelBoxPainter.field_a.drawTransparent(108, 6);
           SoftwareRasterizer.blurRectangle(4, 4, 0, 0, 640, 480);
           wm.field_H[var2].makeRasterTarget();
           var15.drawAdditive(0, 0, 255);
           MusicPatchNode.field_F.drawTransparent(343, -2);
-          j.field_a.drawTransparent(108, 6);
+          BevelBoxPainter.field_a.drawTransparent(108, 6);
         }
         if (param1 == 11) {
           var16 = new Sprite(640, 480);
           var16.makeRasterTarget();
-          gd.field_mb.drawTransparent(320 - gd.field_mb.field_n / 2 - 72, 10);
-          gd.field_mb.drawTransparent(72 + (-(gd.field_mb.field_n / 2) + 320), 10);
+          LoadingProgressDialog.field_mb.drawTransparent(320 - LoadingProgressDialog.field_mb.field_n / 2 - 72, 10);
+          LoadingProgressDialog.field_mb.drawTransparent(72 + (-(LoadingProgressDialog.field_mb.field_n / 2) + 320), 10);
           SoftwareRasterizer.blurRectangle(4, 4, 0, 0, 640, 480);
           wm.field_H[var2].makeRasterTarget();
           var16.drawAdditive(0, 0, 255);
-          gd.field_mb.drawTransparent(248 - gd.field_mb.field_n / 2, 10);
-          gd.field_mb.drawTransparent(72 - gd.field_mb.field_n / 2 + 320, 10);
+          LoadingProgressDialog.field_mb.drawTransparent(248 - LoadingProgressDialog.field_mb.field_n / 2, 10);
+          LoadingProgressDialog.field_mb.drawTransparent(72 - LoadingProgressDialog.field_mb.field_n / 2 + 320, 10);
         }
         if (param1 == 12) {
           var17 = new Sprite(640, 480);
           var17.makeRasterTarget();
-          gd.field_mb.drawTransparent(248 - gd.field_mb.field_n / 2, 0);
-          gd.field_mb.drawTransparent(72 + (320 - gd.field_mb.field_n / 2), 0);
+          LoadingProgressDialog.field_mb.drawTransparent(248 - LoadingProgressDialog.field_mb.field_n / 2, 0);
+          LoadingProgressDialog.field_mb.drawTransparent(72 + (320 - LoadingProgressDialog.field_mb.field_n / 2), 0);
           SoftwareRasterizer.blurRectangle(4, 4, 0, 0, 640, 480);
           wm.field_H[var2].makeRasterTarget();
           var17.drawAdditive(0, 0, 255);
-          gd.field_mb.drawTransparent(320 - (gd.field_mb.field_n / 2 + 72), 0);
-          gd.field_mb.drawTransparent(72 + (320 - gd.field_mb.field_n / 2), 0);
+          LoadingProgressDialog.field_mb.drawTransparent(320 - (LoadingProgressDialog.field_mb.field_n / 2 + 72), 0);
+          LoadingProgressDialog.field_mb.drawTransparent(72 + (320 - LoadingProgressDialog.field_mb.field_n / 2), 0);
         }
         rk.g(491697968);
     }

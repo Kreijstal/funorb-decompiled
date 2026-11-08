@@ -74,7 +74,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                     (var2.startsWith("1.6.0_"))) {
                     var3 = 6;
                     while (var2.length() > var3) {
-                      stackIn_68_0 = LoginPanel.a(30, var2.charAt(var3));
+                      stackIn_68_0 = LoginPanel.isDigit(30, var2.charAt(var3));
                       if (var5 != 0) {
                         decompiledFrameCompleted0 = false;
                         break;
@@ -146,7 +146,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                 }
                 DebouncedValidator.logMaxMemory(true);
                 this.a(-11232);
-                ce.field_m = se.a(MusicPatchNode.field_r, (java.awt.Component) ((Object) on.field_c), co.field_c, (byte) -123);
+                ce.field_m = DraggableWidget.createRasterBuffer(MusicPatchNode.field_r, (java.awt.Component) ((Object) on.field_c), co.field_c, (byte) -123);
                 this.initializeClient((byte) -116);
                 tg.field_e = ki.createFrameClock((byte) -126);
                 do {
@@ -234,7 +234,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                   return;
                 }
               }
-              jm.field_j = true;
+              TextWidgetPainter.field_j = true;
             }
             return;
           }
@@ -321,7 +321,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             this.field_d = true;
             System.out.println("error_game_" + param0);
             try {
-              ei.a(cd.getApplet(126), 114, "loggedout");
+              ei.a(IconButtonPainter.getApplet(126), 114, "loggedout");
               if (param1 >= -115) {
                 field_k = (int[]) null;
               }
@@ -472,7 +472,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           if (param0 != -11232) {
             this.b(true);
           }
-          jm.field_j = false;
+          TextWidgetPainter.field_j = false;
           oo.field_s = qj.monotonicTimeMillis(-26572);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -714,8 +714,8 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         Object var6 = null;
         try {
           var2_long = qj.monotonicTimeMillis(-26572);
-          var4 = kn.field_tb[qo.field_e];
-          kn.field_tb[qo.field_e] = var2_long;
+          var4 = OptionsDialog.field_tb[qo.field_e];
+          OptionsDialog.field_tb[qo.field_e] = var2_long;
           if (param0 > -59) {
             return;
           }
@@ -772,7 +772,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
               co.field_c = param5;
               wh.field_c = param5;
               ge.field_i = 0;
-              MouseWheelHandler.field_e = cd.getApplet(104);
+              MouseWheelHandler.field_e = IconButtonPainter.getApplet(104);
               dupTemp$0 = new PlatformTaskDispatcher(param0, param2, param6, true);
               fi.field_d = dupTemp$0;
               rb.field_k = dupTemp$0;

@@ -553,7 +553,7 @@ final class u {
                     var7 = vf.a(var3_longLifetime2, 8192);
                     if (var7 == null) {
                       var7 = new cg(var26, var27, var3_longLifetime2);
-                      kn.field_qb.put(var7, var3_longLifetime2, (byte) 121);
+                      OptionsDialog.field_qb.put(var7, var3_longLifetime2, (byte) 121);
                       DirectByteStorage.field_f.field_Rb = DirectByteStorage.field_f.field_Rb + 1;
                     }
                     var7.field_Pb = ((PacketBuffer) ((Object) var1)).readUnsignedShort(-98);
@@ -707,8 +707,8 @@ final class u {
           for (var3Lifetime2 = 0; MidiPcmStream.field_E.length > var3Lifetime2; var3Lifetime2++) {
             MidiPcmStream.field_E[var3Lifetime2] = ((PacketBuffer) ((Object) var1)).readByte(6);
           }
-          q.field_L = ((PacketBuffer) ((Object) var1)).readUnsignedByte((byte) 32);
-          q.field_N = ((PacketBuffer) ((Object) var1)).readUnsignedByte((byte) 72);
+          DropTargetWidget.field_L = ((PacketBuffer) ((Object) var1)).readUnsignedByte((byte) 32);
+          DropTargetWidget.field_N = ((PacketBuffer) ((Object) var1)).readUnsignedByte((byte) 72);
           for (var3Lifetime3 = 0; var3Lifetime3 < ng.field_D.length; var3Lifetime3++) {
             ng.field_D[var3Lifetime3] = ((PacketBuffer) ((Object) var1)).readByte(6);
           }
@@ -730,8 +730,8 @@ final class u {
         UiComponent.attachInputListeners(ProxySocketConnector.field_m, (byte) 122);
         ProxySocketConnector.field_m.a(fi.field_d, (byte) 67);
         ProxySocketConnector.field_m = null;
-        if (ob.field_Y != null) {
-          ob.field_Y.restoreWindowedSize(true);
+        if (ResizableModalPanel.field_Y != null) {
+          ResizableModalPanel.field_Y.restoreWindowedSize(true);
         }
         on.field_c.requestFocus();
     }
@@ -882,7 +882,7 @@ final class u {
             return stackIn_9_0;
           }
           if (param1 == 4) {
-            stackIn_13_0 = tj.a(125, new String[]{param2}, q.field_M);
+            stackIn_13_0 = tj.a(125, new String[]{param2}, DropTargetWidget.field_M);
             return stackIn_13_0;
           }
           if (5 == param1) {

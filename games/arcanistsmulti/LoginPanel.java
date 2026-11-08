@@ -42,7 +42,7 @@ final class LoginPanel extends UiContainer implements TextInputListener, ButtonL
         }
     }
 
-    final static void g(byte param0) {
+    final static void tickMessageTimer(byte param0) {
         RuntimeException runtimeException = null;
         rb var1 = null;
         RuntimeException decompiledCaughtException = null;
@@ -76,7 +76,7 @@ final class LoginPanel extends UiContainer implements TextInputListener, ButtonL
             this.field_G.focusNext(0, (UiComponent) (this));
           }
           if (this.field_G == param0) {
-            this.a((byte) -83);
+            this.submitLogin((byte) -83);
           }
           if (param1 < 73) {
             this.onTextChanged((EditableTextWidget) null, 105);
@@ -134,7 +134,7 @@ final class LoginPanel extends UiContainer implements TextInputListener, ButtonL
         }
     }
 
-    final void a(int param0, String param1) {
+    final void setUsername(int param0, String param1) {
         RuntimeException runtimeException = null;
         EditableTextWidget var3 = null;
         String var4 = null;
@@ -170,7 +170,7 @@ final class LoginPanel extends UiContainer implements TextInputListener, ButtonL
         RuntimeException var5 = null;
         try {
           if (param0 != 1) {
-            LoginPanel.g((byte) 123);
+            LoginPanel.tickMessageTimer((byte) 123);
           }
           qj.field_a = param4;
           IntrusiveNodeHashTable.field_h = param2;
@@ -196,7 +196,7 @@ final class LoginPanel extends UiContainer implements TextInputListener, ButtonL
         }
     }
 
-    final static void a(byte[] param0, boolean param1) {
+    final static void decodeIndexedSpriteSheet(byte[] param0, boolean param1) {
         byte dupTemp$0 = 0;
         byte dupTemp$1 = 0;
         int stackIn_42_0 = 0;
@@ -242,21 +242,21 @@ final class LoginPanel extends UiContainer implements TextInputListener, ButtonL
         try {
           var2 = new PacketBuffer(param0);
           var2.position = param0.length - 2;
-          h.field_J = var2.readUnsignedShort(-98);
-          jg.field_p = new int[h.field_J];
-          vi.field_O = new byte[h.field_J][];
-          SectorCacheStore.field_d = new int[h.field_J];
-          ho.field_i = new int[h.field_J];
-          ln.field_I = new byte[h.field_J][];
-          hl.field_l = new int[h.field_J];
-          dn.field_Ib = new boolean[h.field_J];
-          var2.position = param0.length - (7 + h.field_J * 8);
+          ModalPanelStack.field_J = var2.readUnsignedShort(-98);
+          jg.field_p = new int[ModalPanelStack.field_J];
+          FadingModalPanel.field_O = new byte[ModalPanelStack.field_J][];
+          SectorCacheStore.field_d = new int[ModalPanelStack.field_J];
+          ho.field_i = new int[ModalPanelStack.field_J];
+          AccountRegistrationPanel.field_I = new byte[ModalPanelStack.field_J][];
+          hl.field_l = new int[ModalPanelStack.field_J];
+          dn.field_Ib = new boolean[ModalPanelStack.field_J];
+          var2.position = param0.length - (7 + ModalPanelStack.field_J * 8);
           pb.field_g = var2.readUnsignedShort(-98);
           gn.field_a = var2.readUnsignedShort(-98);
           var3 = 1 + (var2.readUnsignedByte((byte) -103) & 255);
           var4 = 0;
           do {
-            if (!(var4 < h.field_J)) {
+            if (!(var4 < ModalPanelStack.field_J)) {
               var4 = 0;
               break;
             }
@@ -264,7 +264,7 @@ final class LoginPanel extends UiContainer implements TextInputListener, ButtonL
             var4++;
           } while (var15 == 0);
           do {
-            if (!(var4 < h.field_J)) {
+            if (!(var4 < ModalPanelStack.field_J)) {
               var4 = 0;
               break;
             }
@@ -272,7 +272,7 @@ final class LoginPanel extends UiContainer implements TextInputListener, ButtonL
             var4++;
           } while (var15 == 0);
           do {
-            if (!(h.field_J > var4)) {
+            if (!(ModalPanelStack.field_J > var4)) {
               var4 = 0;
               break;
             }
@@ -280,8 +280,8 @@ final class LoginPanel extends UiContainer implements TextInputListener, ButtonL
             var4++;
           } while (var15 == 0);
           do {
-            if (!(h.field_J > var4)) {
-              var2.position = -(3 * (-1 + var3)) - 8 * h.field_J + (-7 + param0.length);
+            if (!(ModalPanelStack.field_J > var4)) {
+              var2.position = -(3 * (-1 + var3)) - 8 * ModalPanelStack.field_J + (-7 + param0.length);
               ph.field_c = new int[var3];
               break;
             }
@@ -309,11 +309,11 @@ final class LoginPanel extends UiContainer implements TextInputListener, ButtonL
             stackIn_42_1 = 1;
           }
           if (stackIn_42_0 != stackIn_42_1) {
-            LoginPanel.a((ConditionalTextValue) null, -42, (ConditionalTextValue) null);
+            LoginPanel.submitAccountCreation((ConditionalTextValue) null, -42, (ConditionalTextValue) null);
           }
           var4 = 0;
           while (true) {
-            stackIn_47_0 = ~h.field_J;
+            stackIn_47_0 = ~ModalPanelStack.field_J;
             stackIn_48_0 = stackIn_47_0;
             stackIn_48_1 = var4;
             stackIn_48_2 = -1;
@@ -322,9 +322,9 @@ final class LoginPanel extends UiContainer implements TextInputListener, ButtonL
               var6 = ho.field_i[var4];
               var7 = var5 * var6;
               var8 = new byte[var7];
-              ln.field_I[var4] = var8;
+              AccountRegistrationPanel.field_I[var4] = var8;
               var9 = new byte[var7];
-              vi.field_O[var4] = var9;
+              FadingModalPanel.field_O[var4] = var9;
               var10 = 0;
               var11 = var2.readUnsignedByte((byte) -117);
               if (var15 != 0) {
@@ -416,7 +416,7 @@ final class LoginPanel extends UiContainer implements TextInputListener, ButtonL
         }
     }
 
-    final void f(boolean param0) {
+    final void clearFields(boolean param0) {
         try {
           this.field_O.clearText(3545);
           this.field_G.clearText(3545);
@@ -452,8 +452,8 @@ final class LoginPanel extends UiContainer implements TextInputListener, ButtonL
 
     LoginPanel(String param0, String param1, boolean param2, boolean param3, boolean param4) {
         super(0, 0, 310, 190, (WidgetPainter) null);
-        ke dupTemp$0 = null;
-        ke dupTemp$1 = null;
+        LabeledField dupTemp$0 = null;
+        LabeledField dupTemp$1 = null;
         TextButton stackIn_17_1 = null;
         TextButton stackIn_17_2 = null;
         TextButton stackIn_18_1 = null;
@@ -465,14 +465,14 @@ final class LoginPanel extends UiContainer implements TextInputListener, ButtonL
         StringBuilder stackIn_95_1 = null;
         String stackIn_96_2 = null;
         RuntimeException decompiledCaughtException = null;
-        mm var6 = null;
+        MenuButtonPainter var6 = null;
         RuntimeException var6_ref = null;
         BitmapFont var7 = null;
         String var8 = null;
         LoginMethod var9 = null;
-        ke var10 = null;
+        LabeledField var10 = null;
         int var11 = 0;
-        ke var10Lifetime1;
+        LabeledField var10Lifetime1;
         var11 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           this.field_F = param2;
@@ -484,8 +484,8 @@ final class LoginPanel extends UiContainer implements TextInputListener, ButtonL
             throw new IllegalStateException();
           }
           boolean decompiledFrameRemainder0 = true;
-          this.field_O = (EditableTextWidget) ((Object) new bi(param0, (UiListener) (this), 100));
-          this.field_G = (EditableTextWidget) ((Object) new bi("", (UiListener) (this), 20));
+          this.field_O = (EditableTextWidget) ((Object) new ValidatedTextWidget(param0, (UiListener) (this), 100));
+          this.field_G = (EditableTextWidget) ((Object) new ValidatedTextWidget("", (UiListener) (this), 20));
           if (this.field_F) {
             this.field_P = new TextButton(sk.field_b, (UiListener) null);
             this.field_L = new TextButton(ki.field_u, (UiListener) null);
@@ -507,12 +507,12 @@ final class LoginPanel extends UiContainer implements TextInputListener, ButtonL
             }
             this.field_L = new TextButton(stackIn_18_3, (UiListener) null);
             if (this.field_R) {
-              this.field_J = new TextButton(ib.field_t, (UiListener) (this));
+              this.field_J = new TextButton(BevelTextPainter.field_t, (UiListener) (this));
             }
           }
-          this.field_O.field_r = (WidgetPainter) ((Object) new ib(10000536));
-          this.field_G.field_r = (WidgetPainter) ((Object) new tc(10000536));
-          var6 = new mm();
+          this.field_O.field_r = (WidgetPainter) ((Object) new BevelTextPainter(10000536));
+          this.field_G.field_r = (WidgetPainter) ((Object) new PasswordFieldPainter(10000536));
+          var6 = new MenuButtonPainter();
           this.field_P.field_r = (WidgetPainter) ((Object) var6);
           if (null != this.field_L) {
             this.field_L.field_r = (WidgetPainter) ((Object) var6);
@@ -520,7 +520,7 @@ final class LoginPanel extends UiContainer implements TextInputListener, ButtonL
           if (this.field_J != null) {
             this.field_J.field_r = (WidgetPainter) ((Object) var6);
           }
-          this.field_O.field_q = ln.field_L;
+          this.field_O.field_q = AccountRegistrationPanel.field_L;
           if (this.field_J != null) {
             this.field_J.field_q = dh.field_Bb;
           }
@@ -553,9 +553,9 @@ final class LoginPanel extends UiContainer implements TextInputListener, ButtonL
             this.field_j = this.field_j + (5 + var7.paragraphHeight(this.field_E, -40 + this.field_v, var7.field_C));
           }
           var8 = GrowableIntList.field_b;
-          var9 = oj.readLastLoginMethod(122, cd.getApplet(117));
+          var9 = oj.readLastLoginMethod(122, IconButtonPainter.getApplet(117));
           if (var9 == DiskCacheRequest.field_y) {
-            var8 = cn.field_H;
+            var8 = BirthDateEntryPanel.field_H;
             if ((var11 != 0) &&
               (of.field_n == var9)) {
               var8 = wh.field_b;
@@ -565,11 +565,11 @@ final class LoginPanel extends UiContainer implements TextInputListener, ButtonL
               var8 = wh.field_b;
             }
           }
-          dupTemp$0 = new ke(10, this.field_j, this.field_v - 20, 25, this.field_O, false, 80, 3, var7, 16777215, var8);
+          dupTemp$0 = new LabeledField(10, this.field_j, this.field_v - 20, 25, this.field_O, false, 80, 3, var7, 16777215, var8);
           var10 = dupTemp$0;
           this.addChild(-108, dupTemp$0);
           this.field_j = this.field_j + (((UiComponent) ((Object) var10)).field_k + 5);
-          dupTemp$1 = new ke(10, this.field_j, this.field_v - 20, 25, this.field_G, false, 80, 3, var7, 16777215, ValidationState.field_a);
+          dupTemp$1 = new LabeledField(10, this.field_j, this.field_v - 20, 25, this.field_G, false, 80, 3, var7, 16777215, ValidationState.field_a);
           var10Lifetime1 = dupTemp$1;
           this.addChild(-108, dupTemp$1);
           this.field_P.field_o = (UiListener) (this);
@@ -636,7 +636,7 @@ final class LoginPanel extends UiContainer implements TextInputListener, ButtonL
         }
     }
 
-    private final void a(byte param0) {
+    private final void submitLogin(byte param0) {
         int var2_int = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
@@ -655,7 +655,7 @@ final class LoginPanel extends UiContainer implements TextInputListener, ButtonL
         }
     }
 
-    public final void a(boolean param0, int param1, int param2, int param3, TextButton param4) {
+    public final void onButtonActivated(boolean param0, int param1, int param2, int param3, TextButton param4) {
         int var7 = 0;
         RuntimeException stackIn_35_0 = null;
         StringBuilder stackIn_35_1 = null;
@@ -665,7 +665,7 @@ final class LoginPanel extends UiContainer implements TextInputListener, ButtonL
         var7 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           if (!param0) {
-            LoginPanel.b(-36, (String) null);
+            LoginPanel.isSingleRepeatedCharacter(-36, (String) null);
           }
           if (this.field_P != param4) {
             if (param4 != this.field_J) {
@@ -694,7 +694,7 @@ final class LoginPanel extends UiContainer implements TextInputListener, ButtonL
               return;
             }
           }
-          this.a((byte) -69);
+          this.submitLogin((byte) -69);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -710,7 +710,7 @@ final class LoginPanel extends UiContainer implements TextInputListener, ButtonL
         }
     }
 
-    final static boolean a(int param0, char param1) {
+    final static boolean isDigit(int param0, char param1) {
         RuntimeException var2 = null;
         boolean stackIn_10_0 = false;
         RuntimeException decompiledCaughtException = null;
@@ -727,7 +727,7 @@ final class LoginPanel extends UiContainer implements TextInputListener, ButtonL
         }
     }
 
-    final String e(boolean param0) {
+    final String getUsername(boolean param0) {
         RuntimeException var2 = null;
         String stackIn_7_0 = null;
         String stackIn_9_0 = null;
@@ -749,7 +749,7 @@ final class LoginPanel extends UiContainer implements TextInputListener, ButtonL
         }
     }
 
-    final static boolean b(int param0, String param1) {
+    final static boolean isSingleRepeatedCharacter(int param0, String param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -796,7 +796,7 @@ final class LoginPanel extends UiContainer implements TextInputListener, ButtonL
         }
     }
 
-    final static int a(ConditionalTextValue param0, int param1, ConditionalTextValue param2) {
+    final static int submitAccountCreation(ConditionalTextValue param0, int param1, ConditionalTextValue param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int stackIn_1_0 = 0;

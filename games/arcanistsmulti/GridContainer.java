@@ -1,0 +1,467 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class GridContainer extends ArrayWidgetContainer {
+    static String field_H;
+    static ResourceArchive field_K;
+    static boolean field_J;
+    private int[] field_O;
+    private int field_N;
+    static int field_P;
+    static String field_S;
+    private int[] field_I;
+    private int field_Q;
+    int field_R;
+    private int[] field_L;
+    private int field_M;
+
+    private final void resizeRowCells(int param0, int param1, int param2) {
+        int var6 = 0;
+        int var7 = ArcanistsMulti.field_G ? 1 : 0;
+        if (param0 != 0) {
+          field_K = (ResourceArchive) null;
+        }
+        int var4 = null != this.field_O ? this.field_O.length : 0;
+        UiComponent[] var5 = new UiComponent[var4 * param2];
+        if (null != this.field_z &&
+          0 < this.field_z.length &&
+          0 < var5.length &&
+          0 < param1) {
+          for (var6 = 0; var4 > var6; var6++) {
+            ArraySupport.copyObjects(this.field_z, var6 * param1, var5, var6 * param2, Math.min(param1, param2));
+          }
+        }
+        this.field_z = var5;
+    }
+
+    final static void g(int param0) {
+        pm.field_b = new sa(mf.field_d, SectorCacheStore.field_l, wj.field_b, IntrusiveNode.field_c, ec.field_g, nj.field_d);
+        if (param0 != -19741) {
+          field_J = true;
+        }
+    }
+
+    private final void resizeColumnAlignment(byte param0, int param1, int param2) {
+        if (param0 < 92) {
+          return;
+        }
+        int var4 = null == this.field_L ? 0 : this.field_L.length;
+        int[] var5 = new int[var4 * param2];
+        if (this.field_I != null && 0 < this.field_I.length && 0 < var5.length &&
+          param1 > 0) {
+          ArraySupport.copyInts(this.field_I, 0, var5, 0, var4 * Math.min(param1, param2));
+        }
+        this.field_I = var5;
+    }
+
+    private final void resizeColumnCells(int param0, int param1, int param2) {
+        int var4 = null == this.field_L ? 0 : this.field_L.length;
+        UiComponent[] var5 = new UiComponent[param0 * var4];
+        if (this.field_z != null &&
+          this.field_z.length > 0 &&
+          var5.length > 0 &&
+          param1 > 0) {
+          ArraySupport.copyObjects(this.field_z, 0, var5, 0, var4 * Math.min(param1, param0));
+        }
+        this.field_z = var5;
+        if (param2 != -8734) {
+          int[] var6 = (int[]) null;
+          this.setRowHeights(29, (int[]) null);
+        }
+    }
+
+    final void setBounds(int param0, int param1, int param2, int param3, int param4) {
+        if (param4 > -49) {
+          return;
+        }
+        super.setBounds(param0, param1, param2, param3, -79);
+    }
+
+    final void setCell(UiComponent param0, int param1, int param2) {
+        int var5 = 0;
+        int var4_int = this.field_N % this.field_L.length;
+        if (param1 <= 115) {
+          return;
+        }
+        try {
+          var5 = this.field_N / this.field_L.length;
+          this.field_I[this.field_N] = param2;
+          this.field_z[this.field_N] = param0;
+          if (param0 != null) {
+            this.layoutCell(var5, param0, 14881, var4_int);
+          }
+          this.field_N = this.field_N + 1;
+        } catch (RuntimeException runtimeException) {
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "ua.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+        }
+    }
+
+    final void layoutChildren(int param0) {
+        int incrementValue$0 = 0;
+        int var2;
+        int var3;
+        int var4;
+        int var6;
+        UiComponent var5;
+        var6 = ArcanistsMulti.field_G ? 1 : 0;
+        var2 = 0;
+        var3 = 0;
+        if (param0 < 17) {
+          GridContainer.releaseStatics(-24);
+        }
+        while (this.field_z.length > var2) {
+          if (var3 < this.field_O.length) {
+            var4 = 0;
+            while (this.field_z.length > var2) {
+              if (var4 < this.field_L.length) {
+                incrementValue$0 = var2;
+                var2++;
+                var5 = this.field_z[incrementValue$0];
+                if (var5 != null) {
+                  this.layoutCell(var3, var5, 14881, var4);
+                }
+                var4++;
+                continue;
+              }
+              break;
+            }
+            var3++;
+            continue;
+          }
+          break;
+        }
+    }
+
+    private final void resizeRowAlignment(int param0, int param1, int param2) {
+        int var6 = 0;
+        int var7 = ArcanistsMulti.field_G ? 1 : 0;
+        int var4 = null == this.field_O ? 0 : this.field_O.length;
+        int[] var5 = new int[param0 * var4];
+        if (param2 < 92) {
+          return;
+        }
+        if (this.field_I != null && this.field_I.length > 0 && var5.length > 0 &&
+          param1 > 0) {
+          for (var6 = 0; var4 > var6; var6++) {
+            ArraySupport.copyInts(this.field_I, var6 * param1, var5, var6 * param0, Math.min(param1, param0));
+          }
+        }
+        this.field_I = var5;
+    }
+
+    private final void setColumnWidths(int[] param0, int param1) {
+        int[] var5 = null;
+        int var6 = 0;
+        int var7 = 0;
+        int dupTemp$0 = 0;
+        int var8 = ArcanistsMulti.field_G ? 1 : 0;
+        int var3_int = this.field_L == null ? 0 : this.field_L.length;
+        int var4 = param0.length;
+        if (param1 != 9443) {
+          return;
+        }
+        try {
+          this.field_L = param0;
+          var5 = param0;
+          var6 = 0;
+          var7 = 0;
+          while (var6 < var5.length) {
+            dupTemp$0 = var7 + var5[var6];
+            var7 = dupTemp$0;
+            var5[var6] = dupTemp$0;
+            var6++;
+          }
+          this.resizeRowCells(0, var3_int, var4);
+          this.resizeRowAlignment(var4, var3_int, 103);
+        } catch (RuntimeException runtimeException) {
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "ua.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+        }
+    }
+
+    private final void layoutCell(int param0, UiComponent param1, int param2, int param3) {
+        int stackIn_5_0 = 0;
+        int stackIn_6_1 = 0;
+        int stackIn_9_0 = 0;
+        RuntimeException stackIn_38_0 = null;
+        StringBuilder stackIn_38_1 = null;
+        String stackIn_39_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int var5_int = 0;
+        RuntimeException var5 = null;
+        int var6 = 0;
+        int var7 = 0;
+        int var8 = 0;
+        int var9 = 0;
+        int var10 = 0;
+        int var11 = 0;
+        int var12 = 0;
+        int var13 = 0;
+        int var14 = 0;
+        int var15 = 0;
+        int var16 = 0;
+        int var17 = 0;
+        int var18 = 0;
+        int var19 = 0;
+        int var20 = 0;
+        CharSequence[] var21 = null;
+        int var14Lifetime1;
+        int var15Lifetime1;
+        var20 = ArcanistsMulti.field_G ? 1 : 0;
+        try {
+          if (param2 != 14881) {
+            var21 = (CharSequence[]) null;
+            GridContainer.joinText((CharSequence[]) null, 110);
+          }
+          var5_int = this.field_L[this.field_L.length - 1];
+          var6 = this.field_O[this.field_O.length - 1];
+          stackIn_5_0 = this.field_v;
+          if (param3 > 0) {
+            stackIn_6_1 = this.field_L[-1 + param3];
+          } else {
+            stackIn_6_1 = 0;
+          }
+          var7 = stackIn_5_0 * stackIn_6_1 / var5_int;
+          if (param0 <= 0) {
+            stackIn_9_0 = 0;
+          } else {
+            stackIn_9_0 = this.field_O[-1 + param0];
+          }
+          var8 = stackIn_9_0 * this.field_k / var6;
+          var9 = this.field_v * this.field_L[param3] / var5_int;
+          var10 = this.field_O[param0] * this.field_k / var6;
+          var11 = this.field_L.length * param0 + param3;
+          var12 = 48 & this.field_I[var11];
+          var13 = 192 & this.field_I[var11];
+          var14 = param1.field_n;
+          var15 = param1.field_j;
+          var16 = param1.field_v;
+          var17 = param1.field_k;
+          if (var16 < var9 - var7 &&
+            (1 & this.field_I[var11]) != 0) {
+            var16 = var9 - var7;
+            var14Lifetime1 = var7;
+          } else if (var9 - var7 < var16 &&
+            (4 & this.field_I[var11]) != 0) {
+            var16 = -var7 + var9;
+            var14Lifetime1 = var7;
+          } else {
+            if (var12 != 16) {
+              if (var12 != 32) {
+                var14Lifetime1 = var7;
+              } else {
+                var14Lifetime1 = var9 - var16;
+              }
+            } else {
+              var14Lifetime1 = var7 + (var9 - var16) >> 1;
+            }
+          }
+          if (var17 < var10 - var8 &&
+            0 != (2 & this.field_I[var11])) {
+            var15Lifetime1 = var8;
+            var17 = var10 - var8;
+          } else if (var10 - var8 < var17 &&
+            (8 & this.field_I[var11]) != 0) {
+            var15Lifetime1 = var8;
+            var17 = -var8 + var10;
+          } else {
+            if (64 != var13) {
+              if (var13 != 128) {
+                var15Lifetime1 = var8;
+              } else {
+                var15Lifetime1 = -var17 + var10;
+              }
+            } else {
+              var15Lifetime1 = -var17 + var8 + var10 >> 1;
+            }
+          }
+          var18 = this.field_Q;
+          var19 = this.field_M;
+          param1.setBounds(-(var19 * 2) + var17, var19 + var15Lifetime1, var16 - var18 * 2, var18 + var14Lifetime1, -109);
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var5 = decompiledCaughtException;
+          stackIn_38_0 = var5;
+          stackIn_38_1 = new StringBuilder().append("ua.G(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_39_2 = "null";
+          } else {
+            stackIn_39_2 = "{...}";
+          }
+          throw aa.wrapException((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+        }
+    }
+
+    final boolean handleKeyInput(UiComponent param0, byte param1, char param2, int param3) {
+        int var5_int = 0;
+        int var6 = 0;
+        boolean stackIn_12_0 = false;
+        boolean stackIn_14_0 = false;
+        boolean stackIn_16_0 = false;
+        boolean stackIn_18_0 = false;
+        RuntimeException stackIn_26_0 = null;
+        StringBuilder stackIn_26_1 = null;
+        String stackIn_27_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var5 = null;
+        var6 = ArcanistsMulti.field_G ? 1 : 0;
+        try {
+          if (super.handleKeyInput(param0, (byte) -122, param2, param3)) {
+            return true;
+          }
+          var5_int = param3;
+          if (var5_int == 98) {
+            stackIn_12_0 = this.focusBackwardBy(this.field_L.length, param0, (byte) 9);
+            return stackIn_12_0;
+          }
+          if (99 == var5_int) {
+            stackIn_14_0 = this.focusForwardBy(29787, this.field_L.length, param0);
+            return stackIn_14_0;
+          }
+          if (var5_int == 96) {
+            stackIn_16_0 = this.focusPreviousChild(param0, -103);
+            return stackIn_16_0;
+          }
+          if (var5_int == 97) {
+            stackIn_18_0 = this.focusNextChild((byte) -128, param0);
+            return stackIn_18_0;
+          }
+          if (param1 < -120) {
+            return false;
+          }
+          return false;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var5 = decompiledCaughtException;
+          stackIn_26_0 = var5;
+          stackIn_26_1 = new StringBuilder().append("ua.N(");
+          if (param0 == null) {
+            stackIn_27_2 = "null";
+          } else {
+            stackIn_27_2 = "{...}";
+          }
+          throw aa.wrapException((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+        }
+    }
+
+    final static String joinText(CharSequence[] param0, int param1) {
+        int var2_int = 0;
+        RuntimeException var2 = null;
+        String stackIn_1_0 = null;
+        RuntimeException stackIn_4_0 = null;
+        StringBuilder stackIn_4_1 = null;
+        String stackIn_5_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          var2_int = 27 / ((-52 - param1) / 40);
+          stackIn_1_0 = UiTheme.a(param0.length, 0, param0, true);
+          return stackIn_1_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          stackIn_4_0 = var2;
+          stackIn_4_1 = new StringBuilder().append("ua.F(");
+          if (param0 == null) {
+            stackIn_5_2 = "null";
+          } else {
+            stackIn_5_2 = "{...}";
+          }
+          throw aa.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
+        }
+    }
+
+    GridContainer(int param0, int param1, int param2, int param3, WidgetPainter param4, int param5, int param6) {
+        super(param0, param1, param2, param3, param4);
+        int[] var10 = null;
+        int[] var9 = null;
+        this.field_R = 92;
+        this.field_N = 0;
+        try {
+          var10 = new int[param5];
+          int[] var8 = var10;
+          ArraySupport.fillInts(var10, 0, param5, 1);
+          var9 = new int[param6];
+          ArraySupport.fillInts(var9, 0, param6, 1);
+          this.setColumnWidths(var10, 9443);
+          this.setRowHeights(0, var9);
+        } catch (RuntimeException runtimeException) {
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "ua.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ')');
+        }
+    }
+
+    final boolean handlePointerPress(int param0, int param1, UiComponent param2, int param3, int param4, int param5, int param6) {
+        int var8_int = 0;
+        RuntimeException var8 = null;
+        boolean stackIn_1_0 = false;
+        RuntimeException stackIn_4_0 = null;
+        StringBuilder stackIn_4_1 = null;
+        String stackIn_5_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          var8_int = 71 % ((-42 - param4) / 35);
+          stackIn_1_0 = super.handlePointerPress(param0, param1, param2, param3, 91, param5, param6);
+          return stackIn_1_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var8 = decompiledCaughtException;
+          stackIn_4_0 = var8;
+          stackIn_4_1 = new StringBuilder().append("ua.DA(").append(param0).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_5_2 = "null";
+          } else {
+            stackIn_5_2 = "{...}";
+          }
+          throw aa.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+        }
+    }
+
+    private final void setRowHeights(int param0, int[] param1) {
+        int var3_int = 0;
+        int var4 = 0;
+        int[] var5 = null;
+        int var6 = 0;
+        int var7 = 0;
+        int dupTemp$0 = 0;
+        int var8 = ArcanistsMulti.field_G ? 1 : 0;
+        try {
+          var3_int = null == this.field_O ? 0 : this.field_O.length;
+          var4 = param1.length;
+          this.field_O = param1;
+          var5 = param1;
+          var6 = 0;
+          var7 = param0;
+          while (var5.length > var6) {
+            dupTemp$0 = var7 + var5[var6];
+            var7 = dupTemp$0;
+            var5[var6] = dupTemp$0;
+            var6++;
+          }
+          this.resizeColumnCells(var4, var3_int, param0 - 8734);
+          this.resizeColumnAlignment((byte) 119, var3_int, var4);
+        } catch (RuntimeException runtimeException) {
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "ua.J(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    public static void releaseStatics(int param0) {
+        field_S = null;
+        field_H = null;
+        field_K = null;
+        if (param0 != -1) {
+          field_H = (String) null;
+        }
+    }
+
+    final void setSpacing(int param0, int param1, int param2) {
+        this.field_Q = param2;
+        this.field_M = param1;
+        if (param0 != 0) {
+          field_P = -123;
+        }
+    }
+
+    static {
+        field_J = false;
+        field_H = "Names cannot start or end with space or underscore";
+    }
+}

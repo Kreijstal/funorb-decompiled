@@ -32,10 +32,10 @@ final class SoundCache {
     final static void a(boolean param0, String param1, float param2, byte param3) {
         try {
           if (ci.field_c == null) {
-            ci.field_c = new gd(ClientException.field_b, MusicPatch.field_o);
-            ClientException.field_b.b(ci.field_c, 15637);
+            ci.field_c = new LoadingProgressDialog(ClientException.field_b, MusicPatch.field_o);
+            ClientException.field_b.pushPanel(ci.field_c, 15637);
           }
-          ci.field_c.a(param1, param2, param0, (byte) -105);
+          ci.field_c.setProgress(param1, param2, param0, (byte) -105);
           SoftwareRasterizer.clear();
           if (param3 != -100) {
             String var5 = (String) null;

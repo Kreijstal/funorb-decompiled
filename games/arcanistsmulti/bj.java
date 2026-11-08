@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bj extends ob implements ButtonListener {
+final class bj extends ResizableModalPanel implements ButtonListener {
     static String field_jb;
     private long field_V;
     static String field_sb;
@@ -36,7 +36,7 @@ final class bj extends ob implements ButtonListener {
             return true;
           }
           if (param1 > -120) {
-            bj.a(-60, 57, 53, -57, -90, -4, -1);
+            bj.containsPoint(-60, 57, 53, -57, -90, -4, -1);
           }
           stackIn_17_0 = super.handleKeyInput(param0, (byte) -125, param2, param3);
           return stackIn_17_0;
@@ -54,7 +54,7 @@ final class bj extends ob implements ButtonListener {
         }
     }
 
-    bj(h param0) {
+    bj(ModalPanelStack param0) {
         super(param0, 200, 200);
         RuntimeException runtimeException = null;
         UiComponent var2 = null;
@@ -69,17 +69,17 @@ final class bj extends ob implements ButtonListener {
           var2.field_v = this.field_v;
           var2.field_n = 0;
           var2.field_j = 50;
-          var2.field_r = (WidgetPainter) ((Object) new jm(WidgetStyleLayer.field_e, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
+          var2.field_r = (WidgetPainter) ((Object) new TextWidgetPainter(WidgetStyleLayer.field_e, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.addChild(-67, var2);
           this.field_rb = new UiComponent(qj.field_i, (UiListener) null);
           this.field_rb.field_j = 20 + var2.field_k + var2.field_j;
           this.field_rb.field_v = this.field_v;
           this.field_rb.field_n = 0;
           this.field_rb.field_k = 80;
-          this.field_rb.field_r = (WidgetPainter) ((Object) new jm(SocketConnector.field_k, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
+          this.field_rb.field_r = (WidgetPainter) ((Object) new TextWidgetPainter(SocketConnector.field_k, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.addChild(-108, this.field_rb);
-          this.field_nb = this.a((UiListener) (this), ln.field_R, true);
-          this.field_lb = this.a((UiListener) (this), ki.field_t, true);
+          this.field_nb = this.addButton((UiListener) (this), AccountRegistrationPanel.field_R, true);
+          this.field_lb = this.addButton((UiListener) (this), ki.field_t, true);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -135,7 +135,7 @@ final class bj extends ob implements ButtonListener {
         }
     }
 
-    final static boolean a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    final static boolean containsPoint(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         RuntimeException var7 = null;
         boolean stackIn_16_0 = false;
         RuntimeException decompiledCaughtException = null;
@@ -169,8 +169,8 @@ final class bj extends ob implements ButtonListener {
           var7 = (int)((-var5_long + 10999L) / 1000L);
           if (var7 <= 0) {
             u.b(6);
-            this.k((byte) 119);
-            this.field_H.b(new qn(this.field_H, bh.field_c), param2 ^ 15807);
+            this.clearPendingFlag((byte) 119);
+            this.field_H.pushPanel(new qn(this.field_H, bh.field_c), param2 ^ 15807);
           }
           if (var7 > 0 ||
             ArcanistsMulti.field_G) {
@@ -178,13 +178,13 @@ final class bj extends ob implements ButtonListener {
           }
           if (this.field_G &&
             ProxySocketConnector.field_m == null) {
-            this.k((byte) 116);
-            this.field_H.b(new qn(this.field_H, vi.field_C), 15637);
+            this.clearPendingFlag((byte) 116);
+            this.field_H.pushPanel(new qn(this.field_H, FadingModalPanel.field_C), 15637);
           }
           if (ProxySocketConnector.field_m != null &&
             ProxySocketConnector.field_m.field_e) {
-            this.k((byte) 122);
-            this.field_H.b(new qn(this.field_H, vi.field_C), 15637);
+            this.clearPendingFlag((byte) 122);
+            this.field_H.pushPanel(new qn(this.field_H, FadingModalPanel.field_C), 15637);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -276,8 +276,8 @@ final class bj extends ob implements ButtonListener {
                   if (var7.field_Gb != null &&
                     !var7.field_Gb.equals("")) {
                     var7.field_Mb.field_eb = var11;
-                    var7.field_Mb.field_W = eb.field_d;
-                    var7.field_Mb.setBounds(eb.field_d.field_n + 3, 0, var9, ImageProducerRasterBuffer.field_r, (byte) -120);
+                    var7.field_Mb.field_W = EmptyPainter.field_d;
+                    var7.field_Mb.setBounds(EmptyPainter.field_d.field_n + 3, 0, var9, ImageProducerRasterBuffer.field_r, (byte) -120);
                     var12 = 1;
                   }
                   var7.field_Fb.field_eb = var11;
@@ -291,7 +291,7 @@ final class bj extends ob implements ButtonListener {
                   var13 = 0;
                   var14 = -82 + var7.field_x;
                   if (var12 != 0) {
-                    var13 = eb.field_d.field_n + 3;
+                    var13 = EmptyPainter.field_d.field_n + 3;
                     var14 = var14 - var13;
                   }
                   stackIn_32_0 = var7.field_Jb;
@@ -331,7 +331,7 @@ final class bj extends ob implements ButtonListener {
                       var16 = var7.field_Cb;
                       ArcanistsMulti.a(-26335, (int[]) null, nl.field_Gb.field_Db, var16, 0L, -1, -1, (String) null, var7);
                       if (var7.field_Lb != null &&
-                        !tc.a(eo.field_c.field_h, -31046) &&
+                        !PasswordFieldPainter.a(eo.field_c.field_h, -31046) &&
                         !wh.field_g) {
                         if (!AlternateUsernameCredentials.field_p) {
                           var17 = eo.field_c;
@@ -354,13 +354,13 @@ final class bj extends ob implements ButtonListener {
                 if (0 == nl.field_Gb.field_Jb.field_U) {
                   break scanLoop1;
                 }
-                tc.field_A = new dh(nl.field_Gb.field_Jb.field_V, nl.field_Gb.field_Jb.field_nb, nl.field_Gb.field_Jb.field_x, nl.field_Gb.field_Jb.field_I, NameValidator.field_v, ck.field_a, IntrusiveNode.field_c, IntrusiveNode.field_c);
+                PasswordFieldPainter.field_A = new dh(nl.field_Gb.field_Jb.field_V, nl.field_Gb.field_Jb.field_nb, nl.field_Gb.field_Jb.field_x, nl.field_Gb.field_Jb.field_I, NameValidator.field_v, ck.field_a, IntrusiveNode.field_c, IntrusiveNode.field_c);
               }
               TextLine.field_h = 0;
               break;
             }
             if (nl.field_Gb.field_Lb.field_U != 0) {
-              tc.field_A = new dh(nl.field_Gb.field_Lb.field_V, nl.field_Gb.field_Lb.field_nb, nl.field_Gb.field_Lb.field_x, nl.field_Gb.field_Lb.field_I, af.field_Gb, ck.field_a, IntrusiveNode.field_c, IntrusiveNode.field_c);
+              PasswordFieldPainter.field_A = new dh(nl.field_Gb.field_Lb.field_V, nl.field_Gb.field_Lb.field_nb, nl.field_Gb.field_Lb.field_x, nl.field_Gb.field_Lb.field_I, af.field_Gb, ck.field_a, IntrusiveNode.field_c, IntrusiveNode.field_c);
               TextLine.field_h = 1;
             }
             decompiledFrameRemainder0 = false;
@@ -387,7 +387,7 @@ final class bj extends ob implements ButtonListener {
         }
     }
 
-    public final void a(boolean param0, int param1, int param2, int param3, TextButton param4) {
+    public final void onButtonActivated(boolean param0, int param1, int param2, int param3, TextButton param4) {
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
@@ -397,13 +397,13 @@ final class bj extends ob implements ButtonListener {
           if (this.field_nb != param4) {
             if (this.field_lb == param4) {
               u.b(6);
-              this.k((byte) 104);
+              this.clearPendingFlag((byte) 104);
               if (ArcanistsMulti.field_G) {
-                this.k((byte) 86);
+                this.clearPendingFlag((byte) 86);
               }
             }
           } else {
-            this.k((byte) 86);
+            this.clearPendingFlag((byte) 86);
           }
           if (!param0) {
             this.handleKeyInput((UiComponent) null, (byte) 73, 'ﾻ', -7);
@@ -431,7 +431,7 @@ final class bj extends ob implements ButtonListener {
           if (param0) {
             bj.a(121, (byte) -115);
           }
-          stackIn_10_0 = (pm.field_e != null) && (pm.field_e.g(7213) != null);
+          stackIn_10_0 = (pm.field_e != null) && (pm.field_e.getActivePanel(7213) != null);
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -440,7 +440,7 @@ final class bj extends ob implements ButtonListener {
         }
     }
 
-    final static void a(int[] param0, int param1) {
+    final static void clearInts(int[] param0, int param1) {
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         String stackIn_20_2 = null;
@@ -488,7 +488,7 @@ final class bj extends ob implements ButtonListener {
         }
     }
 
-    private final TextButton a(UiListener param0, String param1, boolean param2) {
+    private final TextButton addButton(UiListener param0, String param1, boolean param2) {
         TextButton var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
@@ -501,7 +501,7 @@ final class bj extends ob implements ButtonListener {
         RuntimeException decompiledCaughtException = null;
         try {
           var4 = new TextButton(param1, param0);
-          var4.field_r = (WidgetPainter) ((Object) new mm());
+          var4.field_r = (WidgetPainter) ((Object) new MenuButtonPainter());
           if (!param2) {
             field_mb = true;
           }
@@ -572,7 +572,7 @@ final class bj extends ob implements ButtonListener {
         }
     }
 
-    private final void k(byte param0) {
+    private final void clearPendingFlag(byte param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {

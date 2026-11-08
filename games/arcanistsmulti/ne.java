@@ -155,18 +155,18 @@ final class ne {
     final static boolean b(int param0) {
         if (param0 != -22768) {
           field_g = 24;
-          if (ob.field_Y == null) {
+          if (ResizableModalPanel.field_Y == null) {
             return false;
           }
-          if (ob.field_Y.isFullscreenAvailable((byte) -126)) {
+          if (ResizableModalPanel.field_Y.isFullscreenAvailable((byte) -126)) {
             return true;
           }
           return false;
         }
-        if (ob.field_Y == null) {
+        if (ResizableModalPanel.field_Y == null) {
           return false;
         }
-        if (ob.field_Y.isFullscreenAvailable((byte) -126)) {
+        if (ResizableModalPanel.field_Y.isFullscreenAvailable((byte) -126)) {
           return true;
         }
         return false;
@@ -219,7 +219,7 @@ final class ne {
           }
           if (this.field_d != qf.field_a &&
             null != DirectByteStorage.field_f) {
-            if (!qk.k((byte) 98)) {
+            if (!ContentTransitionDialog.k((byte) 98)) {
               return;
             }
             var12 = fn.lookupEntry(this.field_d, 110);
@@ -246,7 +246,7 @@ final class ne {
                 }
                 if (param1 &&
                   var12.field_Kb) {
-                  this.field_l.a(0, tj.a(-55, new String[]{var5}, se.field_L), (byte) -26);
+                  this.field_l.a(0, tj.a(-55, new String[]{var5}, DraggableWidget.field_L), (byte) -26);
                   this.field_l.a(1, tj.a(param0 + 54, new String[]{var5}, MidiPcmStream.field_z), (byte) -26);
                   return;
                 }
@@ -266,7 +266,7 @@ final class ne {
         if (null == DirectByteStorage.field_f) {
           return;
         }
-        if (!qk.k((byte) 98)) {
+        if (!ContentTransitionDialog.k((byte) 98)) {
           return;
         }
         var11 = fn.lookupEntry(this.field_d, 110);
@@ -295,7 +295,7 @@ final class ne {
         }
         if (param1 &&
           var11.field_Kb) {
-          this.field_l.a(0, tj.a(-55, new String[]{var5}, se.field_L), (byte) -26);
+          this.field_l.a(0, tj.a(-55, new String[]{var5}, DraggableWidget.field_L), (byte) -26);
           this.field_l.a(1, tj.a(param0 + 54, new String[]{var5}, MidiPcmStream.field_z), (byte) -26);
           return;
         }
@@ -323,7 +323,7 @@ final class ne {
           var3 = var8.field_ic;
           if (var8.field_Hb) {
             this.field_l.a(2, tj.a(-106, new String[]{var3}, na.field_Sb), (byte) -26);
-            this.field_l.a(3, tj.a(-91, new String[]{var3}, mk.field_I), (byte) -26);
+            this.field_l.a(3, tj.a(-91, new String[]{var3}, ValidationStatusIcon.field_I), (byte) -26);
             return;
           }
           if (var8.field_Ob) {
@@ -351,7 +351,7 @@ final class ne {
           var3 = var7.field_ic;
           if (var7.field_Hb) {
             this.field_l.a(2, tj.a(-106, new String[]{var3}, na.field_Sb), (byte) -26);
-            this.field_l.a(3, tj.a(-91, new String[]{var3}, mk.field_I), (byte) -26);
+            this.field_l.a(3, tj.a(-91, new String[]{var3}, ValidationStatusIcon.field_I), (byte) -26);
             return;
           }
           if (var7.field_Ob) {
@@ -414,7 +414,7 @@ final class ne {
               }
             }
             if (var5 != null) {
-              if (!tc.a(this.field_h, -31046) &&
+              if (!PasswordFieldPainter.a(this.field_h, -31046) &&
                 !wh.field_g) {
                 if (!AlternateUsernameCredentials.field_p) {
                   this.field_l.a(8, tj.a(-94, new String[]{var8}, mb.field_S), (byte) -26);
@@ -425,7 +425,7 @@ final class ne {
                   this.field_l.a(19, tj.a(-98, new String[]{var8}, MidiPcmStream.field_O), (byte) -26);
                 }
               }
-              this.field_l.a(5, tj.a(param2 - 48, new String[]{var8}, ke.field_F), (byte) -26);
+              this.field_l.a(5, tj.a(param2 - 48, new String[]{var8}, LabeledField.field_F), (byte) -26);
             }
             if (var6 != 0) {
               this.field_l.a(7, tj.a(126, new String[]{var8}, ja.field_t), (byte) -26);
@@ -503,7 +503,7 @@ final class ne {
             return true;
           }
           if (18 == param0) {
-            h.a(this.field_d, -30687, this.field_h);
+            ModalPanelStack.a(this.field_d, -30687, this.field_h);
             return true;
           }
           if (param0 == 11) {
@@ -520,7 +520,7 @@ final class ne {
             return true;
           }
           if (18 == param0) {
-            h.a(this.field_d, -30687, this.field_h);
+            ModalPanelStack.a(this.field_d, -30687, this.field_h);
             return true;
           }
           if (param0 == 11) {
@@ -540,7 +540,7 @@ final class ne {
           return true;
         }
         if (param0 == 14) {
-          j.a(param2);
+          BevelBoxPainter.a(param2);
           return true;
         }
         if (param0 == 20) {
@@ -617,7 +617,7 @@ final class ne {
             var8 = param2[1].field_n;
             param2[0].drawWithOpacity(param4, param3, param5);
             param2[2].drawWithOpacity(param4 + param1 - var7, param3, param5);
-            SoftwareRasterizer.saveClip(sl.field_H);
+            SoftwareRasterizer.saveClip(ScrollContainer.field_H);
             SoftwareRasterizer.intersectClip(param4 + var6_int, param3, -var7 + (param1 + param4), param2[1].field_w + param3);
             var9 = var6_int + param4;
             var10 = -var7 + param4 + param1;
@@ -627,7 +627,7 @@ final class ne {
             for (param4 = var9; param4 < var10; param4 = param4 + var8) {
               param2[1].drawWithOpacity(param4, param3, param5);
             }
-            SoftwareRasterizer.restoreClip(sl.field_H);
+            SoftwareRasterizer.restoreClip(ScrollContainer.field_H);
             return;
           }
           return;

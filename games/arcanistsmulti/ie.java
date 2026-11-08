@@ -5,7 +5,7 @@ import java.io.*;
 
 final class ie extends ed implements ButtonListener {
     static String field_Lb;
-    private ln field_Kb;
+    private AccountRegistrationPanel field_Kb;
     static String field_Ub;
     static String field_Rb;
     static int field_Sb;
@@ -35,28 +35,28 @@ final class ie extends ed implements ButtonListener {
         hi.field_d = dupTemp$2;
         if (CacheEntry.field_o.field_e != 1) {
         }
-        ob.field_eb = nl.field_Ib;
+        ResizableModalPanel.field_eb = nl.field_Ib;
         CacheEntry.field_o = null;
         return true;
     }
 
-    public final void a(boolean param0, int param1, int param2, int param3, TextButton param4) {
+    public final void onButtonActivated(boolean param0, int param1, int param2, int param3, TextButton param4) {
         if (!param0) {
           field_Tb = (IndexedSprite[]) null;
         }
         if (this.field_Wb) {
-          sc.a(true, false, false);
+          ValidationHelpWidget.a(true, false, false);
           return;
         }
         try {
           IntrusiveNodeHashTable.g(-1);
-          this.h(77);
+          this.dismiss(77);
         } catch (RuntimeException runtimeException) {
           throw aa.wrapException((Throwable) ((Object) runtimeException), "ie.U(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
-    ie(h param0, ln param1) {
+    ie(ModalPanelStack param0, AccountRegistrationPanel param1) {
         super(param0, SocketConnector.field_k, qe.field_l, false, false);
         try {
           this.field_Kb = param1;
@@ -65,7 +65,7 @@ final class ie extends ed implements ButtonListener {
         }
     }
 
-    final boolean a(byte param0) {
+    final boolean updateFade(byte param0) {
         ho var2 = null;
         if (param0 <= 19) {
           return false;
@@ -77,10 +77,10 @@ final class ie extends ed implements ButtonListener {
             this.a(var2, (byte) 119, false);
           }
         }
-        return super.a((byte) 83);
+        return super.updateFade((byte) 83);
     }
 
-    final static boolean b(byte param0, String param1) {
+    final static boolean openUrlWithWindowsShell(byte param0, String param1) {
         int var3 = 0;
         String var2 = null;
         Exception var2_ref = null;
@@ -143,7 +143,7 @@ final class ie extends ed implements ButtonListener {
         field_Tb = null;
     }
 
-    final void l(int param0) {
+    final void showMessageById(int param0) {
         this.a(CipherPacketBuffer.a(0, param0, g.field_c), (byte) 124, true);
     }
 
@@ -154,7 +154,7 @@ final class ie extends ed implements ButtonListener {
         RuntimeException decompiledCaughtException = null;
         String var4 = null;
         RuntimeException var4_ref = null;
-        me var5 = null;
+        MenuButtonPanel var5 = null;
         int var6 = 0;
         var6 = ArcanistsMulti.field_G ? 1 : 0;
         try {
@@ -175,39 +175,39 @@ final class ie extends ed implements ButtonListener {
             } else {
               var4 = ec.field_e;
               if (this.field_Kb != null) {
-                this.field_Kb.a((byte) -7);
+                this.field_Kb.onSuggestionsChanged((byte) -7);
               }
             }
           } else {
             var4 = aa.field_h;
           }
-          var5 = new me((ed) (this), SocketConnector.field_k, var4);
+          var5 = new MenuButtonPanel((ed) (this), SocketConnector.field_k, var4);
           if (param0.field_f) {
             if (param0.field_h) {
-              this.a((byte) -92, (UiComponent) (new ng(this)));
+              this.setContent((byte) -92, (UiComponent) (new ng(this)));
               return;
             }
-            var5.a(73, qn.field_lb, (UiListener) (this));
+            var5.addButton(73, qn.field_lb, (UiListener) (this));
           } else {
             if (!this.field_Wb) {
               if (5 != param0.field_a) {
-                var5.a(ae.field_b, (byte) 115, -1);
+                var5.addMenuItem(ae.field_b, (byte) 115, -1);
               } else {
-                var5.a(DebouncedValidator.field_f, (byte) 111, 11);
-                var5.a(ki.field_u, (byte) 10, 17);
+                var5.addMenuItem(DebouncedValidator.field_f, (byte) 111, 11);
+                var5.addMenuItem(ki.field_u, (byte) 10, 17);
               }
             } else {
-              var5.a(116, qn.field_lb, (UiListener) (this));
+              var5.addButton(116, qn.field_lb, (UiListener) (this));
             }
             if (3 == param0.field_a) {
-              var5.a(LoginCredentials.field_b, (byte) 10, 7);
+              var5.addMenuItem(LoginCredentials.field_b, (byte) 10, 7);
             } else {
               if (param0.field_a == 6) {
-                var5.a(DiskCacheRequest.field_B, (byte) -121, 9);
+                var5.addMenuItem(DiskCacheRequest.field_B, (byte) -121, 9);
               }
             }
           }
-          this.a((byte) -92, (UiComponent) (var5));
+          this.setContent((byte) -92, (UiComponent) (var5));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -224,9 +224,9 @@ final class ie extends ed implements ButtonListener {
     }
 
     final static void l(byte param0) {
-        uc.field_d.setBounds(-(!fc.field_a ? 0 : 40 + (2 + (CacheEntry.field_p + 2))) + mj.field_s.field_x, 0, 0, 18, (byte) -120);
-        StrongCacheEntry.field_z.setBounds(CacheEntry.field_p + 42, -40 + (-CacheEntry.field_p + mj.field_s.field_x) - 2, 0, 18, (byte) -120);
-        nj.field_m.a(20, CacheEntry.field_p, mj.field_s.field_x, false, 0, mj.field_s.field_I - 20, 2);
+        uc.field_d.setBounds(-(!fc.field_a ? 0 : 40 + (2 + (CacheEntry.field_p + 2))) + StatefulTextPainter.field_s.field_x, 0, 0, 18, (byte) -120);
+        StrongCacheEntry.field_z.setBounds(CacheEntry.field_p + 42, -40 + (-CacheEntry.field_p + StatefulTextPainter.field_s.field_x) - 2, 0, 18, (byte) -120);
+        nj.field_m.a(20, CacheEntry.field_p, StatefulTextPainter.field_s.field_x, false, 0, StatefulTextPainter.field_s.field_I - 20, 2);
         int var1 = -112 % ((param0 - 45) / 37);
     }
 

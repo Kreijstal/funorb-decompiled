@@ -8,7 +8,7 @@ final class va implements WidgetPainter {
     static String field_d;
     static String field_e;
 
-    public final void a(UiComponent param0, int param1, int param2, int param3, boolean param4) {
+    public final void paint(UiComponent param0, int param1, int param2, int param3, boolean param4) {
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         String stackIn_20_2 = null;
@@ -82,9 +82,9 @@ final class va implements WidgetPainter {
           nj.field_c = param4;
           so.field_p = param3;
           var7 = (CharSequence) ((Object) param3);
-          ua.field_S = Js5ArchiveManager.a(var7, param1 ^ -14);
+          GridContainer.field_S = Js5ArchiveManager.a(var7, param1 ^ -14);
           gg.field_e = param0;
-          var6 = ff.a(param2, 49, gl.field_c, mj.field_z, CipherPacketBuffer.field_p);
+          var6 = ff.a(param2, 49, gl.field_c, StatefulTextPainter.field_z, CipherPacketBuffer.field_p);
           TextButton.a(var6, (byte) -104);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

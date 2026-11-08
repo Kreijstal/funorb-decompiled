@@ -19,9 +19,9 @@ final class qg extends RuntimeException {
         var3 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           if (TextFieldValidator.field_m == -1 &&
-            ln.field_J == -1) {
+            AccountRegistrationPanel.field_J == -1) {
             TextFieldValidator.field_m = EmailLoginCredentials.field_g;
-            ln.field_J = me.field_I;
+            AccountRegistrationPanel.field_J = MenuButtonPanel.field_I;
           }
           boolean decompiledFrameRemainder0 = true;
           DelegatingCanvas.field_f = DelegatingCanvas.field_f + 1;
@@ -62,7 +62,7 @@ final class qg extends RuntimeException {
               }
             }
             IntrusiveNodeHashTable.field_p = TextFieldValidator.field_m;
-            ProxySocketConnector.field_p = ln.field_J;
+            ProxySocketConnector.field_p = AccountRegistrationPanel.field_J;
           }
           var2_intLifetime1 = -49 / ((param0 + 45) / 60);
           cb.field_c = param1;
@@ -70,13 +70,13 @@ final class qg extends RuntimeException {
             oa.field_e > DelegatingCanvas.field_f &&
             ArchiveProvider.field_d) {
             IntrusiveNodeHashTable.field_p = TextFieldValidator.field_m;
-            ProxySocketConnector.field_p = ln.field_J;
+            ProxySocketConnector.field_p = AccountRegistrationPanel.field_J;
             DelegatingCanvas.field_f = 0;
           }
           TextFieldValidator.field_m = -1;
-          ln.field_J = -1;
+          AccountRegistrationPanel.field_J = -1;
           if (ReflectionCheckRequest.field_i) {
-            if (mk.field_Q != DelegatingCanvas.field_f) {
+            if (ValidationStatusIcon.field_Q != DelegatingCanvas.field_f) {
               return;
             }
             DelegatingCanvas.field_f = 0;
@@ -112,7 +112,7 @@ final class qg extends RuntimeException {
         if (param0 > -61) {
           return true;
         }
-        return mj.field_p != -1 ? true : false;
+        return StatefulTextPainter.field_p != -1 ? true : false;
     }
 
     static {

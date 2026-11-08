@@ -12,7 +12,7 @@ final class bb {
     static Sprite[] field_g;
     static String[] field_i;
 
-    final static boolean a(String param0, String param1, int param2, ln param3, int param4, String param5, boolean param6) {
+    final static boolean a(String param0, String param1, int param2, AccountRegistrationPanel param3, int param4, String param5, boolean param6) {
         RuntimeException var7 = null;
         String var8 = null;
         ie var9 = null;
@@ -32,15 +32,15 @@ final class bb {
           }
           if (param4 != -30001) {
             var8 = (String) null;
-            bb.a((String) null, (String) null, 89, (ln) null, 120, (String) null, false);
+            bb.a((String) null, (String) null, 89, (AccountRegistrationPanel) null, 120, (String) null, false);
           }
           var9 = new ie(ClientException.field_b, param3);
-          ClientException.field_b.b(var9, 15637);
+          ClientException.field_b.pushPanel(var9, 15637);
           if (ArchiveIndex.b(63)) {
-            var9.l(248);
+            var9.showMessageById(248);
             return true;
           }
-          ln.field_Q = param1;
+          AccountRegistrationPanel.field_Q = param1;
           i.field_i = null;
           UiComponent.field_u = param2;
           in.field_Gb = sk.field_a;
@@ -137,16 +137,16 @@ final class bb {
               SceneWidget.field_D > 0) {
               fieldTemp$23 = SceneWidget.field_D - 1;
               SceneWidget.field_D = SceneWidget.field_D - 1;
-              var2_ref_byte__ = sn.field_F[fieldTemp$23];
-              sn.field_F[SceneWidget.field_D] = null;
+              var2_ref_byte__ = DisplayNameForm.field_F[fieldTemp$23];
+              DisplayNameForm.field_F[SceneWidget.field_D] = null;
               return var2_ref_byte__;
             }
             if (param0 == 30000 &&
-              0 < sn.field_K) {
-              fieldTemp$24 = sn.field_K - 1;
-              sn.field_K = sn.field_K - 1;
+              0 < DisplayNameForm.field_K) {
+              fieldTemp$24 = DisplayNameForm.field_K - 1;
+              DisplayNameForm.field_K = DisplayNameForm.field_K - 1;
               var2_ref_byte__ = DelegatingCanvas.field_b[fieldTemp$24];
-              DelegatingCanvas.field_b[sn.field_K] = null;
+              DelegatingCanvas.field_b[DisplayNameForm.field_K] = null;
               return var2_ref_byte__;
             }
             if (null == vm.field_a) {
@@ -167,11 +167,11 @@ final class bb {
           }
           if (param0 != 5000) {
             if (param0 == 30000 &&
-              0 < sn.field_K) {
-              fieldTemp$16 = sn.field_K - 1;
-              sn.field_K = sn.field_K - 1;
+              0 < DisplayNameForm.field_K) {
+              fieldTemp$16 = DisplayNameForm.field_K - 1;
+              DisplayNameForm.field_K = DisplayNameForm.field_K - 1;
               var2_ref_byte__Lifetime6 = DelegatingCanvas.field_b[fieldTemp$16];
-              DelegatingCanvas.field_b[sn.field_K] = null;
+              DelegatingCanvas.field_b[DisplayNameForm.field_K] = null;
               return var2_ref_byte__Lifetime6;
             }
             if (null == vm.field_a) {
@@ -193,16 +193,16 @@ final class bb {
           if (SceneWidget.field_D > 0) {
             fieldTemp$22 = SceneWidget.field_D - 1;
             SceneWidget.field_D = SceneWidget.field_D - 1;
-            var2_ref_byte__Lifetime7 = sn.field_F[fieldTemp$22];
-            sn.field_F[SceneWidget.field_D] = null;
+            var2_ref_byte__Lifetime7 = DisplayNameForm.field_F[fieldTemp$22];
+            DisplayNameForm.field_F[SceneWidget.field_D] = null;
             return var2_ref_byte__Lifetime7;
           }
           if (param0 == 30000 &&
-            0 < sn.field_K) {
-            fieldTemp$19 = sn.field_K - 1;
-            sn.field_K = sn.field_K - 1;
+            0 < DisplayNameForm.field_K) {
+            fieldTemp$19 = DisplayNameForm.field_K - 1;
+            DisplayNameForm.field_K = DisplayNameForm.field_K - 1;
             var2_ref_byte__Lifetime8 = DelegatingCanvas.field_b[fieldTemp$19];
-            DelegatingCanvas.field_b[sn.field_K] = null;
+            DelegatingCanvas.field_b[DisplayNameForm.field_K] = null;
             return var2_ref_byte__Lifetime8;
           }
           if (null == vm.field_a) {
@@ -234,8 +234,8 @@ final class bb {
             SceneWidget.field_D > 0) {
             fieldTemp$9 = SceneWidget.field_D - 1;
             SceneWidget.field_D = SceneWidget.field_D - 1;
-            var2_ref_byte__Lifetime2 = sn.field_F[fieldTemp$9];
-            sn.field_F[SceneWidget.field_D] = null;
+            var2_ref_byte__Lifetime2 = DisplayNameForm.field_F[fieldTemp$9];
+            DisplayNameForm.field_F[SceneWidget.field_D] = null;
             return var2_ref_byte__Lifetime2;
           }
           if (param0 != 30000) {
@@ -255,11 +255,11 @@ final class bb {
             }
             return new byte[param0];
           }
-          if (0 < sn.field_K) {
-            fieldTemp$12 = sn.field_K - 1;
-            sn.field_K = sn.field_K - 1;
+          if (0 < DisplayNameForm.field_K) {
+            fieldTemp$12 = DisplayNameForm.field_K - 1;
+            DisplayNameForm.field_K = DisplayNameForm.field_K - 1;
             var2_ref_byte__Lifetime2Lifetime1 = DelegatingCanvas.field_b[fieldTemp$12];
-            DelegatingCanvas.field_b[sn.field_K] = null;
+            DelegatingCanvas.field_b[DisplayNameForm.field_K] = null;
             return var2_ref_byte__Lifetime2Lifetime1;
           }
           if (null == vm.field_a) {
@@ -280,11 +280,11 @@ final class bb {
         }
         if (param0 != 5000) {
           if (param0 == 30000 &&
-            0 < sn.field_K) {
-            fieldTemp$2 = sn.field_K - 1;
-            sn.field_K = sn.field_K - 1;
+            0 < DisplayNameForm.field_K) {
+            fieldTemp$2 = DisplayNameForm.field_K - 1;
+            DisplayNameForm.field_K = DisplayNameForm.field_K - 1;
             var2_ref_byte__Lifetime3 = DelegatingCanvas.field_b[fieldTemp$2];
-            DelegatingCanvas.field_b[sn.field_K] = null;
+            DelegatingCanvas.field_b[DisplayNameForm.field_K] = null;
             return var2_ref_byte__Lifetime3;
           }
           if (null != vm.field_a) {
@@ -305,16 +305,16 @@ final class bb {
         if (SceneWidget.field_D > 0) {
           fieldTemp$5 = SceneWidget.field_D - 1;
           SceneWidget.field_D = SceneWidget.field_D - 1;
-          var2_ref_byte__Lifetime4 = sn.field_F[fieldTemp$5];
-          sn.field_F[SceneWidget.field_D] = null;
+          var2_ref_byte__Lifetime4 = DisplayNameForm.field_F[fieldTemp$5];
+          DisplayNameForm.field_F[SceneWidget.field_D] = null;
           return var2_ref_byte__Lifetime4;
         }
         if (param0 == 30000 &&
-          0 < sn.field_K) {
-          fieldTemp$6 = sn.field_K - 1;
-          sn.field_K = sn.field_K - 1;
+          0 < DisplayNameForm.field_K) {
+          fieldTemp$6 = DisplayNameForm.field_K - 1;
+          DisplayNameForm.field_K = DisplayNameForm.field_K - 1;
           var2_ref_byte__Lifetime5 = DelegatingCanvas.field_b[fieldTemp$6];
-          DelegatingCanvas.field_b[sn.field_K] = null;
+          DelegatingCanvas.field_b[DisplayNameForm.field_K] = null;
           return var2_ref_byte__Lifetime5;
         }
         if (null != vm.field_a) {
@@ -386,10 +386,10 @@ final class bb {
           return AlternateUsernameCredentials.field_o;
         }
         if (!da.field_b.c(-10923)) {
-          return sc.field_Z;
+          return ValidationHelpWidget.field_Z;
         }
         if (!da.field_b.a("commonui", -24417)) {
-          return gd.field_nb + " - " + da.field_b.b("commonui", 100) + "%";
+          return LoadingProgressDialog.field_nb + " - " + da.field_b.b("commonui", 100) + "%";
         }
         if (!DiskCacheRequest.field_C.c(-10923)) {
           return wh.field_a;
@@ -404,7 +404,7 @@ final class bb {
           return NodeHashTable.field_c;
         }
         if (!ho.field_g.a(123)) {
-          return mm.field_t + " - " + ho.field_g.a((byte) 79) + "%";
+          return MenuButtonPainter.field_t + " - " + ho.field_g.a((byte) 79) + "%";
         }
         return PatchEnvelopeSet.field_f;
     }
@@ -415,10 +415,10 @@ final class bb {
         }
         try {
           if (vf.field_k != null) {
-            vf.field_k.h(77);
+            vf.field_k.dismiss(77);
           }
           wh.field_f = new LoginPanel(param0, param2, false, true, true);
-          g.field_e.a((byte) -92, (UiComponent) (wh.field_f));
+          g.field_e.setContent((byte) -92, (UiComponent) (wh.field_f));
         } catch (RuntimeException runtimeException) {
           throw aa.wrapException((Throwable) ((Object) runtimeException), "bb.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

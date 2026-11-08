@@ -51,7 +51,7 @@ final class BufferedRandomAccessFile {
         if (param1 < 5) {
           return (ResourceArchive) null;
         }
-        return me.a(param0, true, 2097152, false, 1, false);
+        return MenuButtonPanel.createResourceArchive(param0, true, 2097152, false, 1, false);
     }
 
     final void c(byte param0) throws IOException {

@@ -3,7 +3,7 @@
  */
 final class ClientException extends RuntimeException {
     static SceneWidget field_d;
-    static h field_b;
+    static ModalPanelStack field_b;
     static int field_c;
     Throwable cause;
     static String field_j;
@@ -22,7 +22,7 @@ final class ClientException extends RuntimeException {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != -1) {
-            field_b = (h) null;
+            field_b = (ModalPanelStack) null;
           }
           if (fn.field_f == null) {
             return false;

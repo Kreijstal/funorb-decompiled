@@ -3,16 +3,16 @@
  */
 final class cc {
     static IntrusiveDeque field_e;
-    private static jm field_f;
+    private static TextWidgetPainter field_f;
     static String field_b;
     static SceneWidget field_a;
     static boolean[] field_d;
     static String field_c;
 
-    final static jm getDefaultTextPainter(byte param0) {
+    final static TextWidgetPainter getDefaultTextPainter(byte param0) {
         int var1 = 125 % ((34 - param0) / 49);
         if (field_f == null) {
-          field_f = new jm(WidgetStyleLayer.field_e, 20, 0, 0, 0, 11579568, -1, 0, 0, WidgetStyleLayer.field_e.field_C, -1, 2147483647, true);
+          field_f = new TextWidgetPainter(WidgetStyleLayer.field_e, 20, 0, 0, 0, 11579568, -1, 0, 0, WidgetStyleLayer.field_e.field_C, -1, 2147483647, true);
         }
         return field_f;
     }
@@ -43,7 +43,7 @@ final class cc {
         field_e = null;
         field_a = null;
         if (param0 <= 101) {
-          field_f = (jm) null;
+          field_f = (TextWidgetPainter) null;
         }
     }
 

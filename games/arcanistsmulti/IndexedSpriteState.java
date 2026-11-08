@@ -18,20 +18,20 @@ abstract class IndexedSpriteState {
         int var1 = 0;
         int var1Lifetime1;
         if (!param0) {
-          if (224 <= si.field_l) {
+          if (224 <= CheckboxPainter.field_l) {
             mf.setSoundEffectVolume(256, 21298);
           } else {
-            var1 = si.field_l % 32;
-            mf.setSoundEffectVolume(si.field_l + 32 - var1, 21298);
+            var1 = CheckboxPainter.field_l % 32;
+            mf.setSoundEffectVolume(CheckboxPainter.field_l + 32 - var1, 21298);
           }
           return;
         }
         field_b = (String) null;
-        if (224 <= si.field_l) {
+        if (224 <= CheckboxPainter.field_l) {
           mf.setSoundEffectVolume(256, 21298);
         } else {
-          var1Lifetime1 = si.field_l % 32;
-          mf.setSoundEffectVolume(si.field_l + 32 - var1Lifetime1, 21298);
+          var1Lifetime1 = CheckboxPainter.field_l % 32;
+          mf.setSoundEffectVolume(CheckboxPainter.field_l + 32 - var1Lifetime1, 21298);
         }
     }
 

@@ -276,17 +276,17 @@ final class f extends IntrusiveNode {
 
     final static void a(boolean param0, int param1, int param2, boolean param3, byte param4, int param5, boolean param6, int param7, int param8, boolean param9, boolean param10, int param11, int param12, int param13) {
         TextLayout.field_c = null;
-        ej.a(101);
+        TextHotspotWidget.a(101);
         param3 = w.a(0, param8, param1, param11, param3, param2, param13);
         fn.a(param9, param3, param7, param0, param5, param12, param10, param13, param6, 83);
         IntrusiveNodeHashTable.a(1, param10, param7);
         if (param4 >= -28) {
           f.releaseStatics(-1);
         } else {
-          kn.a(param1, param7, false, param3);
+          OptionsDialog.a(param1, param7, false, param3);
           return;
         }
-        kn.a(param1, param7, false, param3);
+        OptionsDialog.a(param1, param7, false, param3);
     }
 
     static {

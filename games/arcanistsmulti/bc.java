@@ -27,7 +27,7 @@ final class bc {
     }
 
     final static void a(byte param0) {
-        cd.d(param0 + 16777265);
+        IconButtonPainter.d(param0 + 16777265);
         if (param0 != -50) {
           String var2 = (String) null;
           bc.a((String) null, true);

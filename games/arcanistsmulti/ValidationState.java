@@ -81,7 +81,7 @@ final class ValidationState {
           ValidationState.b((byte) -111);
         }
         if (wh.field_g) {
-          return ln.field_U.processKey(ed.field_Bb, (byte) 123, IntrusiveDeque.field_d);
+          return AccountRegistrationPanel.field_U.processKey(ed.field_Bb, (byte) 123, IntrusiveDeque.field_d);
         }
         if (oj.field_i) {
           return TextTableInitializer.a(param3, -14, param2);
@@ -127,11 +127,11 @@ final class ValidationState {
             return stackIn_7_0;
           }
           if (SpriteState.field_t != 2) {
-            stackIn_11_0 = vi.field_K;
+            stackIn_11_0 = FadingModalPanel.field_K;
             return stackIn_11_0;
           }
           if (sa.a(param2, 320)) {
-            stackIn_15_0 = tj.a(119, new String[]{param2}, sc.field_bb);
+            stackIn_15_0 = tj.a(119, new String[]{param2}, ValidationHelpWidget.field_bb);
             return stackIn_15_0;
           }
           if (pc.field_b >= 100) {
@@ -242,18 +242,18 @@ final class ValidationState {
           if (!LinkButtonPainter.field_c &&
             0 >= ah.field_c) {
             if (2 > qf.field_d) {
-              me.field_C = true;
+              MenuButtonPanel.field_C = true;
               decompiledFrameRemainder0 = false;
             }
             else {
               if (!ri.field_b[12]) {
-                me.field_C = true;
+                MenuButtonPanel.field_C = true;
                 decompiledFrameRemainder0 = false;
               }
             }
           }
           if (decompiledFrameRemainder0) {
-            ib.a(param3, 0);
+            BevelTextPainter.a(param3, 0);
           }
         }
         if (0 != GrowableIntList.field_a.field_U) {

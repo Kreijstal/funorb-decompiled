@@ -17,7 +17,7 @@ final class so {
     private int field_o;
     static String field_n;
     int field_f;
-    static se field_i;
+    static DraggableWidget field_i;
 
     final void a(int param0, int param1, int param2) {
         if (param0 >= this.field_f) {
@@ -457,9 +457,9 @@ final class so {
 
     final static void a(java.awt.Component param0, int param1) {
         try {
-          param0.removeMouseListener(ob.field_hb);
-          param0.removeMouseMotionListener(ob.field_hb);
-          param0.removeFocusListener(ob.field_hb);
+          param0.removeMouseListener(ResizableModalPanel.field_hb);
+          param0.removeMouseMotionListener(ResizableModalPanel.field_hb);
+          param0.removeFocusListener(ResizableModalPanel.field_hb);
           rk.field_K = param1;
         } catch (RuntimeException runtimeException) {
           throw aa.wrapException((Throwable) ((Object) runtimeException), "so.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -473,10 +473,10 @@ final class so {
 
     final static aj[] c(int param0) {
         if (param0 == 96) {
-          return new aj[]{sc.field_W, Js5NetworkRequest.field_B, IntrusiveDequeCursor.field_b, td.field_G, om.field_M, h.field_G, ib.field_q, gl.field_b, um.field_b, gg.field_b, fc.field_b, q.field_G, ng.field_I, GameAppletShell.field_e};
+          return new aj[]{ValidationHelpWidget.field_W, Js5NetworkRequest.field_B, IntrusiveDequeCursor.field_b, td.field_G, om.field_M, ModalPanelStack.field_G, BevelTextPainter.field_q, gl.field_b, um.field_b, gg.field_b, fc.field_b, DropTargetWidget.field_G, ng.field_I, GameAppletShell.field_e};
         }
-        field_i = (se) null;
-        return new aj[]{sc.field_W, Js5NetworkRequest.field_B, IntrusiveDequeCursor.field_b, td.field_G, om.field_M, h.field_G, ib.field_q, gl.field_b, um.field_b, gg.field_b, fc.field_b, q.field_G, ng.field_I, GameAppletShell.field_e};
+        field_i = (DraggableWidget) null;
+        return new aj[]{ValidationHelpWidget.field_W, Js5NetworkRequest.field_B, IntrusiveDequeCursor.field_b, td.field_G, om.field_M, ModalPanelStack.field_G, BevelTextPainter.field_q, gl.field_b, um.field_b, gg.field_b, fc.field_b, DropTargetWidget.field_G, ng.field_I, GameAppletShell.field_e};
     }
 
     final void d(int param0) {

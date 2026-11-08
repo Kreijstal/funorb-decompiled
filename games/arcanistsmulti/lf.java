@@ -20,42 +20,42 @@ final class lf {
         int var3 = 0;
         var3 = ArcanistsMulti.field_G ? 1 : 0;
         try {
-          if (~mn.field_r == ~si.field_g) {
+          if (~mn.field_r == ~CheckboxPainter.field_g) {
             return;
           }
-          if (ij.b(si.field_g, 10)) {
-            ArchiveProvider.field_f[si.field_g].d((byte) 103);
+          if (ij.b(CheckboxPainter.field_g, 10)) {
+            ArchiveProvider.field_f[CheckboxPainter.field_g].d((byte) 103);
           }
-          var1_int = si.field_g;
-          si.field_g = mn.field_r;
+          var1_int = CheckboxPainter.field_g;
+          CheckboxPainter.field_g = mn.field_r;
           cb.field_b = MusicCrossfadeStream.field_A;
           km.field_c = 0;
-          if (si.field_g == -1 &&
+          if (CheckboxPainter.field_g == -1 &&
             5 == var1_int &&
             null != SpriteState.field_z) {
             SpriteState.field_z.field_z = SpriteState.field_z.field_z - (250 - MusicPatchNode.field_s);
           }
-          if (si.field_g == 0 ||
-            si.field_g == -4 ||
-            -1 == si.field_g ||
-            -2 == si.field_g ||
-            si.field_g == -5 ||
-            si.field_g == -3 ||
-            si.field_g == 14) {
+          if (CheckboxPainter.field_g == 0 ||
+            CheckboxPainter.field_g == -4 ||
+            -1 == CheckboxPainter.field_g ||
+            -2 == CheckboxPainter.field_g ||
+            CheckboxPainter.field_g == -5 ||
+            CheckboxPainter.field_g == -3 ||
+            CheckboxPainter.field_g == 14) {
             for (var2 = 1; var2 < wm.field_H.length; var2++) {
               wm.field_H[var2] = null;
             }
           }
-          if (si.field_g == 3) {
+          if (CheckboxPainter.field_g == 3) {
             MusicPatchNode.field_s = 0;
           }
-          if (si.field_g == 5) {
+          if (CheckboxPainter.field_g == 5) {
             MusicPatchNode.field_s = 0;
           }
-          if (-1 == si.field_g) {
+          if (-1 == CheckboxPainter.field_g) {
             MusicPatchNode.field_s = 0;
           }
-          if (0 == si.field_g) {
+          if (0 == CheckboxPainter.field_g) {
             vl.d((byte) 112);
           }
           if (fi.field_h) {

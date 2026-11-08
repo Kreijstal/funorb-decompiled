@@ -5,7 +5,7 @@ final class pm {
     static String field_g;
     static LoadingTracker field_h;
     static String[] field_f;
-    static h field_e;
+    static ModalPanelStack field_e;
     static IndexedSprite[] field_d;
     static Sprite field_a;
     static sa field_b;

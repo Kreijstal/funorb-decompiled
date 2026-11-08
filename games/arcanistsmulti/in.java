@@ -35,7 +35,7 @@ final class in extends SceneWidget {
           var2Lifetime1 = 83 % ((param0 + 69) / 52);
           return false;
         }
-        if (me.field_I < this.field_Cb.field_nb + this.field_Cb.field_bb) {
+        if (MenuButtonPanel.field_I < this.field_Cb.field_nb + this.field_Cb.field_bb) {
           this.field_Bb = 3;
           return true;
         }
@@ -391,7 +391,7 @@ final class in extends SceneWidget {
           field_Gb = (co) null;
           return false;
         }
-        if (me.field_I >= this.field_Cb.field_B + this.field_Cb.field_bb + this.field_Cb.field_nb + this.field_Cb.field_I) {
+        if (MenuButtonPanel.field_I >= this.field_Cb.field_B + this.field_Cb.field_bb + this.field_Cb.field_nb + this.field_Cb.field_I) {
           this.field_Bb = 3;
           return true;
         }

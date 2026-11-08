@@ -288,7 +288,7 @@ final class ko extends IntrusiveNode {
             } else {
               var13 = (String) null;
               var12 = (String) null;
-              ao.a(0, (byte) 83, cd.field_q, (String) null, 2, (String) null);
+              ao.a(0, (byte) 83, IconButtonPainter.field_q, (String) null, 2, (String) null);
               var15 = (String) null;
               var14 = (String) null;
               ao.a(0, (byte) 73, TextTableInitializer.field_b, (String) null, 2, (String) null);
@@ -443,7 +443,7 @@ final class ko extends IntrusiveNode {
           for (var2_int = 0; param1.length() > var2_int; var2_int++) {
             var3 = param1.charAt(var2_int);
             if (!ClipState.a((char) var3, (byte) -122) &&
-              !LoginPanel.a(30, (char) var3)) {
+              !LoginPanel.isDigit(30, (char) var3)) {
               return true;
             }
           }

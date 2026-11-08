@@ -657,7 +657,7 @@ class SceneWidget extends SceneWidgetNode {
           }
           this.field_U = 0;
         }
-        stackIn_30_1 = (!ui.field_v) && (EmailLoginCredentials.field_g >= SoftwareRasterizer.field_i) && (SoftwareRasterizer.field_h > EmailLoginCredentials.field_g) && (me.field_I >= SoftwareRasterizer.field_c) && (SoftwareRasterizer.field_k > me.field_I);
+        stackIn_30_1 = (!ui.field_v) && (EmailLoginCredentials.field_g >= SoftwareRasterizer.field_i) && (SoftwareRasterizer.field_h > EmailLoginCredentials.field_g) && (MenuButtonPanel.field_I >= SoftwareRasterizer.field_c) && (SoftwareRasterizer.field_k > MenuButtonPanel.field_I);
         this.field_A = stackIn_30_1;
         if (PacketBuffer.field_m == 0) {
           this.field_P = 0;
@@ -680,7 +680,7 @@ class SceneWidget extends SceneWidgetNode {
         SoftwareRasterizer.setClip(var8, var9, var10, var11);
         if (~this.field_P != param3 &&
           this.field_H) {
-          this.field_db = me.field_I + (-this.field_y - param1);
+          this.field_db = MenuButtonPanel.field_I + (-this.field_y - param1);
           this.field_T = -param5 + (-this.field_cb + EmailLoginCredentials.field_g);
           if (this.field_T < 0) {
             this.field_T = 0;

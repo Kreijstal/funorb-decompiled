@@ -7,7 +7,7 @@ final class mc {
     static BitmapFont field_b;
 
     final static void a(int param0, int param1, int param2, boolean param3) {
-        ib.a(param3, 2);
+        BevelTextPainter.a(param3, 2);
         BoundedRandomAccessFile.a(param3, param0, -32507, param1);
         if (param2 > -79) {
           mc.releaseStatics(55);

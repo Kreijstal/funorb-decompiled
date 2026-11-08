@@ -102,7 +102,7 @@ abstract class SingleChildContainer extends UiComponent implements UiContainerMa
               stackIn_7_0 = 41;
               return stackIn_7_0;
             }
-            if (pc.field_g == ob.field_eb) {
+            if (pc.field_g == ResizableModalPanel.field_eb) {
               if (param4) {
                 var10 = (String) null;
                 fd.field_e = ci.createCredentials(false, (String) null, -95, fk.field_k, param5);
@@ -113,29 +113,29 @@ abstract class SingleChildContainer extends UiComponent implements UiContainerMa
               he.field_e.writeByte(14, (byte) -105);
               he.field_e.writeByte(fd.field_e.getCredentialKind(0).field_g, (byte) -106);
               we.a(-1, (byte) 86);
-              ob.field_eb = pe.field_Db;
+              ResizableModalPanel.field_eb = pe.field_Db;
             }
-            if (ob.field_eb == pe.field_Db &&
+            if (ResizableModalPanel.field_eb == pe.field_Db &&
               pe.a((byte) -86, 1)) {
               var6_int = UiContainer.field_z.readUnsignedByte((byte) -123);
               UiContainer.field_z.position = 0;
               if (0 == var6_int) {
-                ob.field_eb = SocketConnector.field_c;
+                ResizableModalPanel.field_eb = SocketConnector.field_c;
               } else {
                 on.field_g = var6_int;
                 fj.field_h = -1;
-                ob.field_eb = lf.field_f;
+                ResizableModalPanel.field_eb = lf.field_f;
               }
             }
-            if (ob.field_eb == SocketConnector.field_c &&
+            if (ResizableModalPanel.field_eb == SocketConnector.field_c &&
               pe.a((byte) -86, 8)) {
               of.field_j = UiContainer.field_z.readLong(-943038560);
               UiContainer.field_z.position = 0;
               dn.writeLoginBlock(param4, fd.field_e, (byte) 116, param2, param0);
-              ob.field_eb = co.field_h;
+              ResizableModalPanel.field_eb = co.field_h;
             }
             boolean decompiledFrameRemainder0 = true;
-            if (ob.field_eb == co.field_h &&
+            if (ResizableModalPanel.field_eb == co.field_h &&
               pe.a((byte) -86, 1)) {
               var6_intLifetime1 = UiContainer.field_z.readUnsignedByte((byte) -122);
               UiContainer.field_z.position = 0;
@@ -145,7 +145,7 @@ abstract class SingleChildContainer extends UiComponent implements UiContainerMa
                 var6_intLifetime1 != 1) {
                 if (var6_intLifetime1 != 8) {
                   fj.field_h = -1;
-                  ob.field_eb = lf.field_f;
+                  ResizableModalPanel.field_eb = lf.field_f;
                   decompiledFrameRemainder0 = false;
                 }
                 else {
@@ -156,21 +156,21 @@ abstract class SingleChildContainer extends UiComponent implements UiContainerMa
                 }
               }
               if (decompiledFrameRemainder0) {
-                ob.field_eb = bb.field_c;
+                ResizableModalPanel.field_eb = bb.field_c;
                 fj.field_h = -1;
               }
             }
-            if (ob.field_eb == bb.field_c &&
+            if (ResizableModalPanel.field_eb == bb.field_c &&
               pn.b(-12564)) {
               fk.field_k = UiContainer.field_z.readLong(-943038560);
               fn.field_f = param5;
               qf.field_d = UiContainer.field_z.readUnsignedByte((byte) 115);
-              ib.field_r = UiContainer.field_z.readUnsignedByte((byte) 93);
+              BevelTextPainter.field_r = UiContainer.field_z.readUnsignedByte((byte) 93);
               ah.field_c = UiContainer.field_z.readUnsignedShort(-98);
               var6 = UiContainer.field_z.readOptionalString(103);
               var7 = UiContainer.field_z.readUnsignedByte((byte) -94);
               if ((1 & var7) != 0) {
-                j.b(-69);
+                BevelBoxPainter.b(-69);
               }
               if (!param4) {
                 stackIn_46_0 = ((4 & var7) != 0);
@@ -199,29 +199,29 @@ abstract class SingleChildContainer extends UiComponent implements UiContainerMa
               var11 = (CharSequence) ((Object) ah.field_b);
               nm.field_b = Js5ArchiveManager.a(var11, -13);
               dd.field_j = UiContainer.field_z.readUnsignedByte((byte) 65);
-              ob.field_eb = qc.field_c;
+              ResizableModalPanel.field_eb = qc.field_c;
               if (fd.field_e.getCredentialKind(0) == k.field_q) {
-                DiskCacheRequest.field_y.saveAsLastLoginMethod(cd.getApplet(118), (byte) -93);
+                DiskCacheRequest.field_y.saveAsLastLoginMethod(IconButtonPainter.getApplet(118), (byte) -93);
               } else {
                 if (fd.field_e.getCredentialKind(0) == MusicPatchPcmStream.field_m) {
-                  of.field_n.saveAsLastLoginMethod(cd.getApplet(120), (byte) -118);
+                  of.field_n.saveAsLastLoginMethod(IconButtonPainter.getApplet(120), (byte) -118);
                 }
               }
               bb.field_h = false;
               if (var6 != null) {
-                jf.a(var6, cd.getApplet(108), 0);
+                jf.a(var6, IconButtonPainter.getApplet(108), 0);
               }
               if (0 >= ah.field_c &&
                 !fd.field_a) {
                 try {
-                  ei.a(cd.getApplet(125), 108, "unzap");
+                  ei.a(IconButtonPainter.getApplet(125), 108, "unzap");
                 } catch (java.lang.Throwable decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var8_ref_Throwable = decompiledCaughtException;
                 }
               } else {
                 try {
-                  ei.a("zap", cd.getApplet(113), (byte) 114, new Object[]{TextFieldValidator.decodeBase37(fk.field_k, 29424)});
+                  ei.a("zap", IconButtonPainter.getApplet(113), (byte) 114, new Object[]{TextFieldValidator.decodeBase37(fk.field_k, 29424)});
                 } catch (java.lang.Throwable decompiledCaughtParameter1) {
                   decompiledCaughtException = decompiledCaughtParameter1;
                   var8_ref_Throwable = decompiledCaughtException;
@@ -238,7 +238,7 @@ abstract class SingleChildContainer extends UiComponent implements UiContainerMa
               stackIn_85_0 = on.field_g;
               return stackIn_85_0;
             }
-            if (ob.field_eb == lf.field_f &&
+            if (ResizableModalPanel.field_eb == lf.field_f &&
               pn.b(-12564)) {
               ProxySocketConnector.closeActiveConnection(false);
               if (7 == on.field_g &&
@@ -250,7 +250,7 @@ abstract class SingleChildContainer extends UiComponent implements UiContainerMa
               if (on.field_g == 7) {
                 on.field_g = 3;
               }
-              me.field_E = UiContainer.field_z.readString(-1);
+              MenuButtonPanel.field_E = UiContainer.field_z.readString(-1);
               bb.field_h = false;
               stackIn_96_0 = on.field_g;
               return stackIn_96_0;
@@ -258,9 +258,9 @@ abstract class SingleChildContainer extends UiComponent implements UiContainerMa
             if (null == CredentialKind.field_c) {
               if (bb.field_h) {
                 if (rk.a(-68) <= 30000L) {
-                  me.field_E = wl.field_R;
+                  MenuButtonPanel.field_E = NumericDateInputWidget.field_R;
                 } else {
-                  me.field_E = tg.field_a;
+                  MenuButtonPanel.field_E = tg.field_a;
                 }
                 bb.field_h = false;
                 stackIn_105_0 = 3;
@@ -376,7 +376,7 @@ abstract class SingleChildContainer extends UiComponent implements UiContainerMa
     void drawLayer(byte param0, int param1, int param2, int param3) {
         if (param2 == 0 &&
           null != this.field_r) {
-          this.field_r.a((UiComponent) (this), 5592405, param1, param3, true);
+          this.field_r.paint((UiComponent) (this), 5592405, param1, param3, true);
         }
         if (param0 > -52) {
           this.getTopLayer(14);

@@ -3,7 +3,7 @@
  */
 final class da {
     static ValidationState field_f;
-    static ln field_d;
+    static AccountRegistrationPanel field_d;
     static String field_a;
     static ResourceArchive field_b;
     static String field_e;
@@ -26,7 +26,7 @@ final class da {
           SoftwareRasterizer.intersectClip(param3, param4, param0, param1);
           return;
         }
-        field_d = (ln) null;
+        field_d = (AccountRegistrationPanel) null;
         ec.pushClipState(65280);
         SoftwareRasterizer.intersectClip(param3, param4, param0, param1);
     }

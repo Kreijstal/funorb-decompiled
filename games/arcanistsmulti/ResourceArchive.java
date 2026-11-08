@@ -114,7 +114,7 @@ final class ResourceArchive {
             param1[1] != 0 ||
             param1[2] != 0 ||
             param1[3] != 0)) {
-            var36 = td.a(this.field_c[param3], -128, true);
+            var36 = td.toByteArray(this.field_c[param3], -128, true);
             var26 = var36;
             var9 = var26;
             var27 = new PacketBuffer(var36);
@@ -122,7 +122,7 @@ final class ResourceArchive {
             decompiledFrameRemainder0 = false;
           }
           else {
-            var9 = td.a(this.field_c[param3], -19, false);
+            var9 = td.toByteArray(this.field_c[param3], -19, false);
           }
           try {
             if (param2 < 73) {
@@ -139,7 +139,7 @@ final class ResourceArchive {
             stackIn_37_0 = var11_ref_RuntimeException;
             stackIn_37_1 = new StringBuilder();
             stackIn_38_2 = (param1 != null);
-            throw aa.wrapException((Throwable) ((Object) stackIn_37_0), ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(" ").append(param3).append(" ").append(var9.length).append(" ").append(mj.a(var9.length, (byte) -112, var9)).append(" ").append(mj.a(-2 + var9.length, (byte) -86, var9)).append(" ").append(this.field_i.field_h[param3]).append(" ").append(this.field_i.field_p).toString());
+            throw aa.wrapException((Throwable) ((Object) stackIn_37_0), ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(" ").append(param3).append(" ").append(var9.length).append(" ").append(StatefulTextPainter.crc32(var9.length, (byte) -112, var9)).append(" ").append(StatefulTextPainter.crc32(-2 + var9.length, (byte) -86, var9)).append(" ").append(this.field_i.field_h[param3]).append(" ").append(this.field_i.field_p).toString());
           }
           if (this.field_h) {
             this.field_c[param3] = null;
@@ -239,7 +239,7 @@ final class ResourceArchive {
               if (0 != this.field_f) {
                 var7[var18Lifetime2] = var41[var17Lifetime3];
               } else {
-                var7[var18Lifetime2] = bi.a(false, 0, var41[var17Lifetime3]);
+                var7[var18Lifetime2] = ValidatedTextWidget.a(false, 0, var41[var17Lifetime3]);
               }
             }
           } else {
@@ -249,7 +249,7 @@ final class ResourceArchive {
               var11 = 0;
             }
             if (this.field_f == 0) {
-              var7[var11] = bi.a(false, 0, var44);
+              var7[var11] = ValidatedTextWidget.a(false, 0, var44);
             } else {
               var7[var11] = var37;
             }
@@ -401,7 +401,7 @@ final class ResourceArchive {
         }
         int var1 = mb.j((byte) 19);
         int var2 = IntrusiveNodeHashTable.b(25117);
-        CameraFollowTarget.field_f.draw(-mj.field_r + bk.field_I, -tg.field_d + qe.field_o, -98, var1 + (mj.field_r << 1), (tg.field_d << 1) + var2);
+        CameraFollowTarget.field_f.draw(-StatefulTextPainter.field_r + Checkbox.field_I, -tg.field_d + qe.field_o, -98, var1 + (StatefulTextPainter.field_r << 1), (tg.field_d << 1) + var2);
         mn.d(-1);
     }
 
@@ -710,7 +710,7 @@ final class ResourceArchive {
         if (this.field_h) {
           this.field_c[param0] = this.field_e.a(param0, true);
         } else {
-          this.field_c[param0] = bi.a(false, 0, this.field_e.a(param0, true));
+          this.field_c[param0] = ValidatedTextWidget.a(false, 0, this.field_e.a(param0, true));
         }
     }
 
@@ -743,7 +743,7 @@ final class ResourceArchive {
             throw new RuntimeException("");
           }
           if (null != this.field_b[param1][param0]) {
-            var7 = td.a(this.field_b[param1][param0], param2 ^ -10399, false);
+            var7 = td.toByteArray(this.field_b[param1][param0], param2 ^ -10399, false);
             var5 = var7;
             if (var7 == null) {
               throw new RuntimeException("");
@@ -880,7 +880,7 @@ final class ResourceArchive {
             pe.h(7807);
           }
           SoundCache.a(ii.field_f, ArrayWidgetContainer.field_C, af.field_Hb, (byte) -100);
-          kn.a(param0, (byte) -112, 0, 0);
+          OptionsDialog.paintCanvasNow(param0, (byte) -112, 0, 0);
           if (param1 > -15) {
             var3 = (java.awt.Canvas) null;
             ResourceArchive.a((java.awt.Canvas) null, (byte) -58);

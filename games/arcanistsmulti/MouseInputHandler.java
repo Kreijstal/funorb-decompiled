@@ -7,7 +7,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
 
     public final synchronized void focusLost(java.awt.event.FocusEvent param0) {
         try {
-          if (null != ob.field_hb) {
+          if (null != ResizableModalPanel.field_hb) {
             rk.field_K = 0;
           }
         } catch (RuntimeException runtimeException) {
@@ -27,9 +27,9 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
 
     public final synchronized void mouseMoved(java.awt.event.MouseEvent param0) {
         try {
-          if (null != ob.field_hb) {
+          if (null != ResizableModalPanel.field_hb) {
             rf.field_o = 0;
-            j.field_g = param0.getX();
+            BevelBoxPainter.field_g = param0.getX();
             dd.field_i = param0.getY();
             qa.field_g = true;
           }
@@ -46,7 +46,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (ob.field_hb != null) {
+          if (ResizableModalPanel.field_hb != null) {
             rf.field_o = 0;
             bo.field_e = param0.getX();
             ResizableViewResizeListener.field_j = param0.getY();
@@ -95,9 +95,9 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
 
     public final synchronized void mouseExited(java.awt.event.MouseEvent param0) {
         try {
-          if (ob.field_hb != null) {
+          if (ResizableModalPanel.field_hb != null) {
             rf.field_o = 0;
-            j.field_g = -1;
+            BevelBoxPainter.field_g = -1;
             dd.field_i = -1;
             qa.field_g = true;
           }
@@ -114,7 +114,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (null != ob.field_hb) {
+          if (null != ResizableModalPanel.field_hb) {
             rf.field_o = 0;
             rk.field_K = 0;
             qa.field_g = true;
@@ -150,9 +150,9 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
 
     public final synchronized void mouseEntered(java.awt.event.MouseEvent param0) {
         try {
-          if (ob.field_hb != null) {
+          if (ResizableModalPanel.field_hb != null) {
             rf.field_o = 0;
-            j.field_g = param0.getX();
+            BevelBoxPainter.field_g = param0.getX();
             dd.field_i = param0.getY();
             qa.field_g = true;
           }
@@ -163,9 +163,9 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
 
     public final synchronized void mouseDragged(java.awt.event.MouseEvent param0) {
         try {
-          if (ob.field_hb != null) {
+          if (ResizableModalPanel.field_hb != null) {
             rf.field_o = 0;
-            j.field_g = param0.getX();
+            BevelBoxPainter.field_g = param0.getX();
             dd.field_i = param0.getY();
             qa.field_g = true;
           }
