@@ -79,13 +79,13 @@ final class DiskCacheWorker implements Runnable {
             try {
               if (2 == var7.field_t) {
                 var7.field_v.write((byte) 66, (int)var7.field_l, var7.field_u.length, var7.field_u);
-                var7.field_p = false;
+                var7.pending = false;
               } else {
                 if (3 == var7.field_t) {
                   var7.field_u = var7.field_v.a((int)var7.field_l, 65280);
-                  var7.field_p = false;
+                  var7.pending = false;
                 } else {
-                  var7.field_p = false;
+                  var7.pending = false;
                 }
               }
             } catch (java.lang.Exception decompiledCaughtParameter1) {
@@ -93,7 +93,7 @@ final class DiskCacheWorker implements Runnable {
               var2_ref = (Exception) (Object) decompiledCaughtException;
               var6 = (String) null;
               UnreadMessagesScreen.a((String) null, (Throwable) ((Object) var2_ref), 1);
-              var7.field_p = false;
+              var7.pending = false;
             }
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
@@ -165,7 +165,7 @@ final class DiskCacheWorker implements Runnable {
               if (var6.field_l == (long)param2 &&
                 var6.field_v == param1 &&
                 var6.field_t == 2) {
-                var4.field_p = false;
+                var4.pending = false;
                 var4.field_u = var6.field_u;
                 stackIn_10_0 = var4;
                 return stackIn_10_0;
@@ -175,7 +175,7 @@ final class DiskCacheWorker implements Runnable {
           }
           var4.field_u = param1.a(param2, param0 + 66193);
           var4.field_q = true;
-          var4.field_p = false;
+          var4.pending = false;
           stackIn_17_0 = var4;
           return stackIn_17_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

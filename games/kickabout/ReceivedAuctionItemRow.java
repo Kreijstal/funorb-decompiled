@@ -250,8 +250,8 @@ final class ReceivedAuctionItemRow extends ListRow {
           }
           if (this.field_Db == null) {
             if (this.field_Ib != null) {
-              SoftwareRasterizer.f(this.field_F + (-320 + this.field_q >> 1), 23 + this.field_T, 320, 27, 8, 65793);
-              SoftwareRasterizer.a((-320 + this.field_q >> 1) + this.field_F, this.field_T + 23, 320, 27, 8, 65793, 160);
+              SoftwareRasterizer.drawRoundedRectangle(this.field_F + (-320 + this.field_q >> 1), 23 + this.field_T, 320, 27, 8, 65793);
+              SoftwareRasterizer.fillRoundedRectangleBlended((-320 + this.field_q >> 1) + this.field_F, this.field_T + 23, 320, 27, 8, 65793, 160);
               IsSixCommand.field_C.d(this.field_Ib, this.field_F + (this.field_q >> 1), this.field_T + 42, 16777215, -1);
             }
           } else {
@@ -365,9 +365,9 @@ final class ReceivedAuctionItemRow extends ListRow {
           this.field_mb = 50;
           this.field_Hb = param0;
           this.field_Db = param1;
-          if (vv.field_r != 3) {
-            if (vv.field_r != 2) {
-              stackIn_11_0 = (vv.field_r == 1) ? 1 : 0;
+          if (ArchiveRequest.field_r != 3) {
+            if (ArchiveRequest.field_r != 2) {
+              stackIn_11_0 = (ArchiveRequest.field_r == 1) ? 1 : 0;
             } else {
               stackIn_11_0 = 1;
             }

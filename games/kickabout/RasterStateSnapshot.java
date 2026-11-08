@@ -134,10 +134,10 @@ final class RasterStateSnapshot extends IntrusiveNode {
           BufferedSocket.field_h = null;
           GameplayHelpScreen.field_I.clear(22997);
           qn.field_b.clear(22997);
-          var1 = kw.field_b.b((byte) 72);
+          var1 = AvailabilityCheckRequest.field_b.b((byte) 72);
           while (var1 != null) {
             var1.unlinkSecondary(-104);
-            var1 = kw.field_b.a(0);
+            var1 = AvailabilityCheckRequest.field_b.a(0);
           }
           var1Lifetime1 = ni.field_m.b((byte) 72);
           while (var1Lifetime1 != null) {

@@ -20,13 +20,13 @@ final class DropTargetWidget extends SingleChildContainer {
           var7 = mp.field_g;
           if (var7 != null &&
             this.containsPointer((byte) -81, param5, param0, param2, param1)) {
-            if (this.field_k instanceof co) {
-              ((co) (this.field_k)).a(var7, this, param4 + 14579);
+            if (this.field_k instanceof WidgetDropListener) {
+              ((WidgetDropListener) (this.field_k)).dropped(var7, this, param4 + 14579);
               mp.field_g = null;
               return;
             }
-            if (var7.field_k instanceof co) {
-              ((co) (var7.field_k)).a(var7, this, 14578);
+            if (var7.field_k instanceof WidgetDropListener) {
+              ((WidgetDropListener) (var7.field_k)).dropped(var7, this, 14578);
               mp.field_g = null;
               return;
             }
@@ -47,8 +47,8 @@ final class DropTargetWidget extends SingleChildContainer {
           return;
         }
         try {
-          if (null == kw.field_b) {
-            kw.field_b = new DualLinkHashTable(64);
+          if (null == AvailabilityCheckRequest.field_b) {
+            AvailabilityCheckRequest.field_b = new DualLinkHashTable(64);
           }
           if (null == ni.field_m) {
             ni.field_m = new DualLinkHashTable(64);

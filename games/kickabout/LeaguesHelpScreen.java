@@ -113,18 +113,18 @@ final class LeaguesHelpScreen extends PagedHelpScreen {
         super.drawScreen(param0, param1);
         if (0 == this.pageIndex) {
           ms.a(cd.field_b, 40 + this.slideOffsetX, 280, true, 0, 263);
-          SoftwareRasterizer.a(350 + this.slideOffsetX, 144, 226, 232, 10, 65793, 140);
+          SoftwareRasterizer.fillRoundedRectangleBlended(350 + this.slideOffsetX, 144, 226, 232, 10, 65793, 140);
           un.field_d.a(ic.field_b.toLowerCase(), 370 + this.slideOffsetX, 172, 16777215, -1);
           var3 = this.slideOffsetX + 370;
-          SoftwareRasterizer.a(var3, 186, 184, 174, 16777215, 30);
-          SoftwareRasterizer.h(var3 - 1, 185, 186, 176, 16777215, 128);
+          SoftwareRasterizer.fillRectangleAlpha(var3, 186, 184, 174, 16777215, 30);
+          SoftwareRasterizer.drawRectangleAlpha(var3 - 1, 185, 186, 176, 16777215, 128);
           for (var4 = 0; var4 < 6; var4++) {
             IsSixCommand.field_C.c(ConsoleTokenCursor.field_h[var4 + 1], 120 + var3, 180 + (var4 + 1) * 28, 16777215, -1);
             IsSixCommand.field_C.a(Integer.toString(LoginCredentials.field_d[1 + var4]), 134 + var3, var4 * 28 + 28 + 180, 16777215, -1);
           }
-          SoftwareRasterizer.f(var3 + 127, 186, 174, 16777215, 128);
+          SoftwareRasterizer.drawVerticalLineAlpha(var3 + 127, 186, 174, 16777215, 128);
           for (var4Lifetime2 = 0; var4Lifetime2 < 5; var4Lifetime2++) {
-            SoftwareRasterizer.c(var3 + 4, 187 + 28 * var4Lifetime2 + 28, 174, 16777215, 30);
+            SoftwareRasterizer.drawHorizontalLineAlpha(var3 + 4, 187 + 28 * var4Lifetime2 + 28, 174, 16777215, 30);
           }
           PasswordValidator.a(206, this.slideOffsetX + 180, 100);
         }
@@ -138,7 +138,7 @@ final class LeaguesHelpScreen extends PagedHelpScreen {
             var6 = stackIn_18_0;
             var6 = var6 + this.slideOffsetX;
             var7 = 146;
-            SoftwareRasterizer.a(var6 - 10, 126, 265, 270, 10, 65793, 140);
+            SoftwareRasterizer.fillRoundedRectangleBlended(var6 - 10, 126, 265, 270, 10, 65793, 140);
             if (var4Lifetime1 == 0) {
               var7 += 60;
             }

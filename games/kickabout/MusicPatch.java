@@ -12,7 +12,7 @@ final class MusicPatch extends IntrusiveNode {
     static long[] field_m;
     short[] field_r;
     byte[] field_n;
-    gl[] field_e;
+    InstrumentEnvelope[] field_e;
     int field_j;
     PcmSample[] field_l;
     static int field_h;
@@ -90,7 +90,7 @@ final class MusicPatch extends IntrusiveNode {
             AuctionListing.a(1 + var1_int + PitchOptionTile.field_yb, param0 ^ -16754303, 1 + var1_int, 1 + var2 + IconLabel.field_Bb, 1 + var2);
             for (var3_int = 0; 2 > var3_int; var3_int++) {
               if (mk.field_c != -2) {
-                stackIn_17_0 = (var3_int != SocketArchiveNetworkClient.field_w.field_g[mk.field_c].field_p) ? 0 : 1;
+                stackIn_17_0 = (var3_int != SocketArchiveNetworkClient.field_w.field_g[mk.field_c].team) ? 0 : 1;
               } else {
                 stackIn_17_0 = (var3_int != 0) ? 0 : 1;
               }
@@ -110,7 +110,7 @@ final class MusicPatch extends IntrusiveNode {
                 }
                 var9 = 23 * var9 >> 8;
                 var8 = var8 * 23 >> 8;
-                SoftwareRasterizer.d(var8 + (var1_int + 1), var9 + (1 + var2), 3, var7);
+                SoftwareRasterizer.fillCircle(var8 + (var1_int + 1), var9 + (1 + var2), 3, var7);
                 SoftwareRasterizer.drawCircle(var8 + var1_int + 1, var9 + 1 + var2, 3, 65793);
               }
             }
@@ -130,7 +130,7 @@ final class MusicPatch extends IntrusiveNode {
             }
             var5Lifetime1 = var5Lifetime1 * 23 >> 8;
             var4Lifetime1 = var4Lifetime1 * 23 >> 8;
-            SoftwareRasterizer.d(var4Lifetime1 + (1 + var1_int), var5Lifetime1 + (var2 + 1), 3, 16777215);
+            SoftwareRasterizer.fillCircle(var4Lifetime1 + (1 + var1_int), var5Lifetime1 + (var2 + 1), 3, 16777215);
             SoftwareRasterizer.drawCircle(var4Lifetime1 + 1 + var1_int, 1 + (var2 + var5Lifetime1), 3, 65793);
             TeamManagementScreen.e(125);
             return;
@@ -163,7 +163,7 @@ final class MusicPatch extends IntrusiveNode {
         var10 = Kickabout.field_G;
         try {
           if (param2 < 103) {
-            this.field_e = (gl[]) null;
+            this.field_e = (InstrumentEnvelope[]) null;
           }
           var5_int = 1;
           var6 = 0;
@@ -240,7 +240,7 @@ final class MusicPatch extends IntrusiveNode {
     MusicPatch(byte[] param0) {
         int var11_int = 0;
         int incrementValue$0 = 0;
-        gl dupTemp$8 = null;
+        InstrumentEnvelope dupTemp$8 = null;
         int incrementValue$6 = 0;
         int var25_int = 0;
         int incrementValue$4 = 0;
@@ -262,11 +262,11 @@ final class MusicPatch extends IntrusiveNode {
         byte[] var11 = null;
         int var12 = 0;
         int var13_int = 0;
-        gl[] var13 = null;
+        InstrumentEnvelope[] var13 = null;
         int var14 = 0;
         int var15_int = 0;
         byte[] var15 = null;
-        gl var15_ref = null;
+        InstrumentEnvelope var15_ref = null;
         byte[] var16 = null;
         int var16_int = 0;
         int var17 = 0;
@@ -291,19 +291,19 @@ final class MusicPatch extends IntrusiveNode {
         int var37 = 0;
         PacketBuffer var38 = null;
         byte[] var39 = null;
-        gl var40 = null;
+        InstrumentEnvelope var40 = null;
         byte[] var41 = null;
         byte[] var42 = null;
         byte[] var43 = null;
         byte[] var44 = null;
-        gl var45 = null;
+        InstrumentEnvelope var45 = null;
         byte[] var46 = null;
         byte[] var47 = null;
-        gl var48 = null;
-        gl var49 = null;
-        gl var50 = null;
-        gl var51 = null;
-        gl var52 = null;
+        InstrumentEnvelope var48 = null;
+        InstrumentEnvelope var49 = null;
+        InstrumentEnvelope var50 = null;
+        InstrumentEnvelope var51 = null;
+        InstrumentEnvelope var52 = null;
         byte[] var53 = null;
         byte[] var54 = null;
         byte[] var55 = null;
@@ -367,7 +367,7 @@ final class MusicPatch extends IntrusiveNode {
         int var30Lifetime1Lifetime2;
         int var31Lifetime1Lifetime1;
         try {
-          this.field_e = new gl[128];
+          this.field_e = new InstrumentEnvelope[128];
           this.field_l = new PcmSample[128];
           this.field_n = new byte[128];
           this.field_p = new byte[128];
@@ -433,9 +433,9 @@ final class MusicPatch extends IntrusiveNode {
           } else {
             var12 = var9;
           }
-          var13 = new gl[var12];
+          var13 = new InstrumentEnvelope[var12];
           for (var14Lifetime1 = 0; var13.length > var14Lifetime1; var14Lifetime1++) {
-            dupTemp$8 = new gl();
+            dupTemp$8 = new InstrumentEnvelope();
             var13[var14Lifetime1] = dupTemp$8;
             var40 = dupTemp$8;
             var15_ref = var40;
@@ -554,7 +554,7 @@ final class MusicPatch extends IntrusiveNode {
                 }
               }
               var20Lifetime5--;
-              this.field_e[var26] = (gl) (var25);
+              this.field_e[var26] = (InstrumentEnvelope) (var25);
             }
           }
           var21Lifetime4 = 0;

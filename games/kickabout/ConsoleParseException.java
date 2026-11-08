@@ -57,9 +57,9 @@ final class ConsoleParseException extends Exception {
           }
           var7 = (String) null;
           nv.a(0, ag.field_e, var5, (String) null, (byte) 34);
-          ei.field_b.field_ab = ag.field_e + (-((ag.field_e & 16711422) >> 1) + ((vv.field_o.field_ab & 16711422) >> 1));
-          ei.field_b.field_H = ag.field_e + (-((ag.field_e & 16711422) >> 1) + (8355711 & vv.field_o.field_H >> 1));
-          ei.field_b.field_ub = -((16711423 & ag.field_e) >> 1) + ag.field_e + (vv.field_o.field_ub >> 1 & 8355711);
+          ei.field_b.field_ab = ag.field_e + (-((ag.field_e & 16711422) >> 1) + ((ArchiveRequest.field_o.field_ab & 16711422) >> 1));
+          ei.field_b.field_H = ag.field_e + (-((ag.field_e & 16711422) >> 1) + (8355711 & ArchiveRequest.field_o.field_H >> 1));
+          ei.field_b.field_ub = -((16711423 & ag.field_e) >> 1) + ag.field_e + (ArchiveRequest.field_o.field_ub >> 1 & 8355711);
           ButtonMenuScreen.field_n = WeightedCacheEntry.field_s;
           jl.field_f = ei.field_b;
           ContentTransitionDialog.field_Y = new UiLayoutNode(0L, param0);
@@ -74,12 +74,12 @@ final class ConsoleParseException extends Exception {
           if (param2 != 14594) {
             field_e = (ff) null;
           }
-          gl.field_c = new UiLayoutNode(0L, vv.field_o, rr.field_h);
-          MySquadScreen.field_N = new UiLayoutNode(0L, vv.field_o);
+          InstrumentEnvelope.field_c = new UiLayoutNode(0L, ArchiveRequest.field_o, rr.field_h);
+          MySquadScreen.field_N = new UiLayoutNode(0L, ArchiveRequest.field_o);
           ContentTransitionDialog.field_Y.addChild((byte) -111, h.field_e);
           ContentTransitionDialog.field_Y.addChild((byte) -121, PagedHelpScreen.field_D);
           PagedHelpScreen.field_D.addChild((byte) -119, Kickabout.field_H);
-          PagedHelpScreen.field_D.addChild((byte) -104, gl.field_c);
+          PagedHelpScreen.field_D.addChild((byte) -104, InstrumentEnvelope.field_c);
           PagedHelpScreen.field_D.addChild((byte) -111, MySquadScreen.field_N);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

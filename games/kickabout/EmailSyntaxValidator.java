@@ -80,10 +80,10 @@ final class EmailSyntaxValidator extends TextFieldValidator {
         Sprite var6 = new Sprite(108, 108);
         int var3Lifetime1;
         PacketBuffer.a(-110, var6);
-        SoftwareRasterizer.d(54, 54, 51, 204);
+        SoftwareRasterizer.fillCircle(54, 54, 51, 204);
         for (var2_int = 43; var2_int > 0; var2_int--) {
           var3 = 119 * var2_int / 43 + 34;
-          SoftwareRasterizer.d(54, 54, var2_int, var3);
+          SoftwareRasterizer.fillCircle(54, 54, var2_int, var3);
         }
         if (param0 != -22976) {
           EmailSyntaxValidator.g(126);

@@ -43,13 +43,13 @@ final class bl {
         var2 = this.field_l;
         var3 = this.field_b;
         if (this.field_f) {
-          SoftwareRasterizer.a(-2 + var2, -2 + var3, this.field_a + 6, 6 + this.field_j, 4, 16777215, 48);
-          PacketBuffer.a(-47, k.field_j);
+          SoftwareRasterizer.fillRoundedRectangleBlended(-2 + var2, -2 + var3, this.field_a + 6, 6 + this.field_j, 4, 16777215, 48);
+          PacketBuffer.a(-47, StreetSceneryLoader.field_j);
           SoftwareRasterizer.clearFramebuffer();
           un.field_d.a(MusicPatchPcmStream.field_k.toUpperCase(), 0, 0, this.field_a, -32 + this.field_j >> 1, 16777215, -1, 1, 1, 0);
           un.field_d.a(du.field_g.toUpperCase(), 0, -32 + this.field_j >> 1, this.field_a, -32 + this.field_j >> 1, 16777215, -1, 1, 1, 0);
           TeamManagementScreen.e(121);
-          k.field_j.b(var2, var3, 96);
+          StreetSceneryLoader.field_j.b(var2, var3, 96);
         }
         if (param0 < 63) {
           this.field_e = (LobbyGameRecord) null;
@@ -77,13 +77,13 @@ final class bl {
                 var9 = 16776960;
               }
               var5Lifetime1 = this.field_e.field_e[var6][var8][1] >> 16;
-              SoftwareRasterizer.d(var2 - (-1 - var4Lifetime1), var5Lifetime1 + var3 + 1, 3, var9);
+              SoftwareRasterizer.fillCircle(var2 - (-1 - var4Lifetime1), var5Lifetime1 + var3 + 1, 3, var9);
               SoftwareRasterizer.drawCircle(var4Lifetime1 + (var2 + 1), var5Lifetime1 + 1 + var3, 3, 65793);
             }
           }
           var4Lifetime2 = this.field_e.field_n >> 16;
           var5Lifetime2 = this.field_e.field_l >> 16;
-          SoftwareRasterizer.d(var2 + 1 + var4Lifetime2, var5Lifetime2 + var3 + 1, 3, 16777215);
+          SoftwareRasterizer.fillCircle(var2 + 1 + var4Lifetime2, var5Lifetime2 + var3 + 1, 3, 16777215);
           SoftwareRasterizer.drawCircle(var4Lifetime2 + (var2 + 1), 1 + var3 + var5Lifetime2, 3, 65793);
           TeamManagementScreen.e(119);
         } else {
@@ -205,7 +205,7 @@ final class bl {
           this.field_b = param3;
           this.field_j = 32 + IconLabel.field_Bb;
           this.field_k = param4;
-          k.field_j = new Sprite(this.field_a, this.field_j - 32);
+          StreetSceneryLoader.field_j = new Sprite(this.field_a, this.field_j - 32);
           DraggableWidget.field_K = new Sprite(50, 20);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "bl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');

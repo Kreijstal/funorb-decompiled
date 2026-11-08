@@ -258,7 +258,7 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
             String var4 = (String) null;
             AccountNameAvailabilityValidator.writeSessionCookie((java.applet.Applet) null, (String) null, (byte) 46);
           }
-          ui.g(0).a(param2, (byte) 15, param0);
+          NetworkArchiveRequest.g(0).captureBall(param2, (byte) 15, param0);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "bv.J(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }

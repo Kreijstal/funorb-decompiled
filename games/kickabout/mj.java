@@ -23,7 +23,7 @@ final class mj {
         try {
           for (var2_int = 0; var2_int < 4; var2_int++) {
             var3 = DiskCacheWorker.field_i[var2_int];
-            c.field_f[var2_int] = ih.field_c == 0 ? (Sprite) ((Object) var3) : (Sprite) ((Object) var3.h());
+            c.field_f[var2_int] = ih.field_c == 0 ? (Sprite) ((Object) var3) : (Sprite) ((Object) var3.copyArgb());
             LoginForm.a(c.field_f[var2_int], 20684);
             DelayedServerPacket.a(100, 9863, var2_int + 96);
           }
@@ -31,7 +31,7 @@ final class mj {
           var6 = var7;
           var5 = var6;
           double[] var2 = var5;
-          LineupView.field_x = Trinket.field_f.h();
+          LineupView.field_x = Trinket.field_f.copyArgb();
           LoggedGoal.field_o = TrinketPickerDialog.field_J.copy();
           PlayerValueSortCriterion.field_p = LoginMethod.field_g.copy();
           nh.adjustHsv(LineupView.field_x.field_y, var7[0], var7[1], var7[2]);

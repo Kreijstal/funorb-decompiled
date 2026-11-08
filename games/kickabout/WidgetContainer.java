@@ -453,7 +453,7 @@ class WidgetContainer extends UiWidget implements UiContainerMarker {
         try {
           var6_int = -127 % ((param5 - 63) / 51);
           AuctionListing.a(160 + param3, -22914, param3, param4 + 21, param4);
-          SoftwareRasterizer.i(param3, param4, 160, 42, 10, 65793);
+          SoftwareRasterizer.fillRoundedRectangle(param3, param4, 160, 42, 10, 65793);
           TeamManagementScreen.e(123);
           if (param2 != null) {
             un.field_d.d(param2, 80 + param3, 17 + param4, 16777215, -1);
@@ -469,7 +469,7 @@ class WidgetContainer extends UiWidget implements UiContainerMarker {
               var8 = 16777215;
               var9 = 50;
             }
-            SoftwareRasterizer.a(param3, param4 + (var7 + 1) * 23, 160, 21, var8, var9);
+            SoftwareRasterizer.fillRectangleAlpha(param3, param4 + (var7 + 1) * 23, 160, 21, var8, var9);
             var7++;
           }
           return;

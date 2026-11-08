@@ -177,8 +177,8 @@ final class LoginMethod {
         int var4 = (param1 << 1) + 1;
         Sprite var5 = new Sprite(var4, var4);
         PacketBuffer.a(56, var5);
-        SoftwareRasterizer.d(param1, param1, param1, param3);
-        SoftwareRasterizer.d(param1, param1, param1 - param0, 0);
+        SoftwareRasterizer.fillCircle(param1, param1, param1, param3);
+        SoftwareRasterizer.fillCircle(param1, param1, param1 - param0, 0);
         TeamManagementScreen.e(120);
         if (!param2) {
           LoginMethod.releaseStatics(8);
@@ -188,7 +188,7 @@ final class LoginMethod {
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
         dk.a(param2, -109, param1, param3 / param0, param3 % 3);
-        SoftwareRasterizer.a(param2, param1, 156, 225, 10, 16777215, param4);
+        SoftwareRasterizer.fillRoundedRectangleBlended(param2, param1, 156, 225, 10, 16777215, param4);
         TeamManagementScreen.e(126);
     }
 

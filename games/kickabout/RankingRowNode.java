@@ -69,7 +69,7 @@ final class RankingRowNode extends UiLayoutNode {
             break;
           }
           if (var4 != 34) {
-            stackIn_13_0 = v.field_d;
+            stackIn_13_0 = EntityAfterimage.field_d;
           } else {
             stackIn_13_0 = TextPromptDialog.field_Mb;
           }
@@ -112,9 +112,9 @@ final class RankingRowNode extends UiLayoutNode {
         int var3Lifetime1;
         int var3Lifetime2;
         int var3Lifetime1Lifetime1;
-        SoftwareRasterizer.a(this.field_F, this.field_T, 40, this.field_mb, 0, var2);
-        SoftwareRasterizer.a(46 + this.field_F, this.field_T, 196, this.field_mb, 0, var2);
-        SoftwareRasterizer.a(248 + this.field_F, this.field_T, 70, this.field_mb, 0, var2);
+        SoftwareRasterizer.fillRectangleAlpha(this.field_F, this.field_T, 40, this.field_mb, 0, var2);
+        SoftwareRasterizer.fillRectangleAlpha(46 + this.field_F, this.field_T, 196, this.field_mb, 0, var2);
+        SoftwareRasterizer.fillRectangleAlpha(248 + this.field_F, this.field_T, 70, this.field_mb, 0, var2);
         if (null == this.field_Hb) {
           ConsoleTokenCursor.field_d.a(uf.field_a, this.field_F + 60, 4 + (this.field_T + this.field_mb / 2), this.field_Jb, -1);
           var3 = 52 % ((-31 - param0) / 59);

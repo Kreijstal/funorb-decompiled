@@ -57,7 +57,7 @@ final class DraggableWidget extends SingleChildContainer {
               if (!param1) {
                 var7.c(param3, param2);
               } else {
-                var7.a(-3 + param3, -3 + param2, 6 + var7.field_o, 6 + var7.field_v);
+                var7.drawScaled(-3 + param3, -3 + param2, 6 + var7.field_o, 6 + var7.field_v);
               }
             }
             return;
@@ -169,8 +169,8 @@ final class DraggableWidget extends SingleChildContainer {
               this.field_g != var6) {
               this.field_t = var5_int;
               this.field_g = var6;
-              if (this.field_k instanceof eu) {
-                ((eu) (this.field_k)).a(param0 - 18830, this, param3, param2);
+              if (this.field_k instanceof WidgetDragListener) {
+                ((WidgetDragListener) (this.field_k)).dragged(param0 - 18830, this, param3, param2);
               }
             }
           } else {

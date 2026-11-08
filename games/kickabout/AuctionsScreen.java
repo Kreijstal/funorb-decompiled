@@ -251,8 +251,8 @@ final class AuctionsScreen extends ButtonMenuScreen {
           for (var7_int = 0; 4 > var7_int; var7_int++) {
             var6[var7_int] = var3.copy();
           }
-          var6[1].g();
-          var6[2].d();
+          var6[1].flipHorizontalInPlace();
+          var6[2].rotateClockwise();
           var6[param0].c();
           var7 = new Sprite[2][4][2];
           for (var8 = 0; var8 < 16; var8++) {
@@ -372,8 +372,8 @@ final class AuctionsScreen extends ButtonMenuScreen {
         int var4;
         var4 = Kickabout.field_G;
         super.drawScreen(param0, param1);
-        SoftwareRasterizer.a(this.field_K.field_F, this.field_K.field_T, this.field_K.field_q, this.field_K.field_mb, 65793, 96);
-        SoftwareRasterizer.a(this.field_K.field_F + 8, 23 + this.field_K.field_T, this.field_K.field_q - 16, -30 + this.field_K.field_mb, 10, 65793, 96);
+        SoftwareRasterizer.fillRectangleAlpha(this.field_K.field_F, this.field_K.field_T, this.field_K.field_q, this.field_K.field_mb, 65793, 96);
+        SoftwareRasterizer.fillRoundedRectangleBlended(this.field_K.field_F + 8, 23 + this.field_K.field_T, this.field_K.field_q - 16, -30 + this.field_K.field_mb, 10, 65793, 96);
         un.field_d.a(this.field_K.field_E, 13 + this.field_K.field_F, 17 + this.field_K.field_T, 16777215, -1);
         for (var3_int = 0; 4 > var3_int; var3_int++) {
           this.field_E[var3_int].a(false, (byte) 46);
@@ -390,11 +390,11 @@ final class AuctionsScreen extends ButtonMenuScreen {
           IsSixCommand.field_C.d(var3, this.field_G.field_F + (this.field_G.field_q >> 1), (this.field_G.field_mb >> 1) + this.field_G.field_T, 16777215, -1);
         }
         if (PlayArea.a(param0 ^ -97)) {
-          SoftwareRasterizer.a(this.slideOffsetX, 48, 640, 383, 0, 196);
+          SoftwareRasterizer.fillRectangleAlpha(this.slideOffsetX, 48, 640, 383, 0, 196);
         }
         if (ds.field_g ||
           dg.field_e) {
-          SoftwareRasterizer.a(this.slideOffsetX, 48, 640, 383, 0, 196);
+          SoftwareRasterizer.fillRectangleAlpha(this.slideOffsetX, 48, 640, 383, 0, 196);
           IsSixCommand.field_C.a(BufferedCacheFile.field_d, this.slideOffsetX, 0, 640, 480, 16777215, -1, 1, 1, 0);
         }
     }
@@ -465,7 +465,7 @@ final class AuctionsScreen extends ButtonMenuScreen {
         var16 = null;
         var15 = Kickabout.field_G;
         try {
-          ui.field_w = param1;
+          NetworkArchiveRequest.field_w = param1;
           var17 = new IntrusiveDeque();
           var6 = 0;
           var7 = 0;
@@ -504,11 +504,11 @@ final class AuctionsScreen extends ButtonMenuScreen {
           if (!param0) {
             AuctionsScreen.h((byte) 106);
           }
-          for (var9 = 0; var9 < ui.field_w.length; var9++) {
-            if (this.containsAuction(ui.field_w[var9], (byte) 117)) {
-              this.replaceAuctionEntry(ui.field_w[var9], 640);
+          for (var9 = 0; var9 < NetworkArchiveRequest.field_w.length; var9++) {
+            if (this.containsAuction(NetworkArchiveRequest.field_w[var9], (byte) 117)) {
+              this.replaceAuctionEntry(NetworkArchiveRequest.field_w[var9], 640);
             }
-            var10_ref_jrLifetime1 = new ReceivedAuctionItemRow(ui.field_w[var9], gk.field_f);
+            var10_ref_jrLifetime1 = new ReceivedAuctionItemRow(NetworkArchiveRequest.field_w[var9], gk.field_f);
             var10_ref_jrLifetime1.field_mb = 50;
             var10_ref_jrLifetime1.field_X = (BitmapFont) ((Object) IsSixCommand.field_C);
             var10_ref_jrLifetime1.field_y = 16777215;
@@ -700,7 +700,7 @@ final class AuctionsScreen extends ButtonMenuScreen {
           var6 = WeightedLruCache.field_d > 0 ? 3 : 2;
           um.field_e = new MatchScreen(false, (PlayerStats[]) null, var3, 0, false, false, 3, var6, false, false, false, false, false, -1, var4);
           for (var7 = 0; var7 < 2; var7++) {
-            um.field_e.matchState.field_g[var7].field_p = var7;
+            um.field_e.matchState.field_g[var7].team = var7;
           }
           um.field_e.matchState.surface = var5.field_K;
           um.field_e.matchState.tier = var5.field_o;

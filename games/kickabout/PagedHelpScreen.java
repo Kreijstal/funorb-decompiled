@@ -61,7 +61,7 @@ abstract class PagedHelpScreen extends ButtonMenuScreen {
           var4_int = this.buttons[0].height;
           var5_int = this.buttonCenterX(0, -22667) + (this.slideOffsetX - (var3_int >> 1));
           var6 = this.buttonCenterY(-124, 0) - (var4_int >> 1);
-          SoftwareRasterizer.a(var5_int - 4, -4 + var6, 8 + var3_int, var4_int + 8, 10, 0, 128);
+          SoftwareRasterizer.fillRoundedRectangleBlended(var5_int - 4, -4 + var6, 8 + var3_int, var4_int + 8, 10, 0, 128);
           eo.field_r[0][3].c(var5_int, var6);
         }
         if (!this.hasNextPage(false)) {
@@ -69,14 +69,14 @@ abstract class PagedHelpScreen extends ButtonMenuScreen {
           var4_intLifetime1 = this.buttons[2].height;
           var5_intLifetime1 = -(var3_intLifetime1 >> 1) + (this.buttonCenterX(2, param0 ^ 22670) + this.slideOffsetX);
           var6Lifetime1 = -(var4_intLifetime1 >> 1) + this.buttonCenterY(101, 2);
-          SoftwareRasterizer.a(-4 + var5_intLifetime1, -4 + var6Lifetime1, 8 + var3_intLifetime1, var4_intLifetime1 + 8, 10, 0, 128);
+          SoftwareRasterizer.fillRoundedRectangleBlended(-4 + var5_intLifetime1, -4 + var6Lifetime1, 8 + var3_intLifetime1, var4_intLifetime1 + 8, 10, 0, 128);
           eo.field_c[0][3].c(var5_intLifetime1, var6Lifetime1);
         }
-        SoftwareRasterizer.a(this.slideOffsetX + 15, 60, 610, 355, 10, 0, 128);
+        SoftwareRasterizer.fillRoundedRectangleBlended(this.slideOffsetX + 15, 60, 610, 355, 10, 0, 128);
         String[] var7 = this.getPageTitles(true);
         String[] var3 = var7;
         String var4 = var7[this.pageIndex].toUpperCase();
-        SoftwareRasterizer.a(this.slideOffsetX + 40, 76, 560, 36, 10, 65793, 140);
+        SoftwareRasterizer.fillRoundedRectangleBlended(this.slideOffsetX + 40, 76, 560, 36, 10, 65793, 140);
         un.field_d.d(var4, this.slideOffsetX + 320, 101, 16777215, -1);
         String var5 = this.pageIndex + 1 + " / " + var7.length;
         un.field_d.c(var5, 580 + this.slideOffsetX, 101, 16777215, -1);

@@ -348,12 +348,12 @@ final class StatChoiceDialog extends MessageDialog {
                 ConsoleTokenCursor.field_d.a(GameplayHelpScreen.field_L, 123 + var5, var6 + 19, 13382451, 65793);
               }
             } else {
-              SoftwareRasterizer.f(var5, var6, var7, var8, 8, 4473924);
+              SoftwareRasterizer.drawRoundedRectangle(var5, var6, var7, var8, 8, 4473924);
               ConsoleTokenCursor.field_d.a("+1%", 123 + var5, var6 + 19, 5592405, -1);
             }
           } else {
-            SoftwareRasterizer.a(var5, var6, var7, var8, 8, 65793, 128);
-            SoftwareRasterizer.f(var5, var6, var7, var8, 8, 10066329);
+            SoftwareRasterizer.fillRoundedRectangleBlended(var5, var6, var7, var8, 8, 65793, 128);
+            SoftwareRasterizer.drawRoundedRectangle(var5, var6, var7, var8, 8, 10066329);
             ConsoleTokenCursor.field_d.a("+1%", 123 + var5, 19 + var6, 16777215, 65793);
           }
           var9 = 0;

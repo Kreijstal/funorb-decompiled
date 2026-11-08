@@ -75,14 +75,14 @@ final class LineupView extends MatchPhaseView {
           stackIn_3_4 = 10;
           stackIn_3_5 = 65793;
           stackIn_4_6 = (!param3) ? 200 : 256;
-          SoftwareRasterizer.a(stackIn_3_0, stackIn_3_1, stackIn_3_2, stackIn_3_3, stackIn_3_4, stackIn_3_5, stackIn_4_6);
+          SoftwareRasterizer.fillRoundedRectangleBlended(stackIn_3_0, stackIn_3_1, stackIn_3_2, stackIn_3_3, stackIn_3_4, stackIn_3_5, stackIn_4_6);
           stackIn_6_0 = var5;
           stackIn_6_1 = var6;
           stackIn_6_2 = var7;
           stackIn_6_3 = var8;
           stackIn_6_4 = 10;
           stackIn_7_5 = (param3) ? 16777215 : 8947848;
-          SoftwareRasterizer.f(stackIn_6_0, stackIn_6_1, stackIn_6_2, stackIn_6_3, stackIn_6_4, stackIn_7_5);
+          SoftwareRasterizer.drawRoundedRectangle(stackIn_6_0, stackIn_6_1, stackIn_6_2, stackIn_6_3, stackIn_6_4, stackIn_7_5);
         }
         var11 = (var7 - var9 >> 1) + var5;
         if (param0 > -72) {
@@ -102,7 +102,7 @@ final class LineupView extends MatchPhaseView {
         } else {
           stackIn_18_5 = (!param1) ? 100 : 200;
         }
-        ((Sprite) (Object) stackIn_17_0).d(stackIn_17_1, stackIn_17_2, stackIn_17_3, stackIn_17_4, stackIn_18_5);
+        ((Sprite) (Object) stackIn_17_0).drawScaledAlpha(stackIn_17_1, stackIn_17_2, stackIn_17_3, stackIn_17_4, stackIn_18_5);
         if (param1) {
           un.field_d.d(Integer.toString(1 + param2), (var7 >> 1) + var5, 23 + var12, 65793, -1);
         }
@@ -399,7 +399,7 @@ final class LineupView extends MatchPhaseView {
         int var5_intLifetime1;
         var9 = Kickabout.field_G;
         this.drawPanelBackground(62);
-        this.drawTitle(false, k.field_h);
+        this.drawTitle(false, StreetSceneryLoader.field_h);
         this.drawCountdown(param0 ^ -2352, this.field_a.phaseTime);
         this.positionButtons(126);
         this.field_q.draw(120, false);
@@ -471,8 +471,8 @@ final class LineupView extends MatchPhaseView {
           var11 = 0;
           var5_intLifetime1 = var11;
           while (var11 < this.field_a.playerCount) {
-            if (this.field_h == this.field_a.field_g[var11].field_p) {
-              SoftwareRasterizer.a(412, var4Lifetime5, 186, 21, 7, 65793, 128);
+            if (this.field_h == this.field_a.field_g[var11].team) {
+              SoftwareRasterizer.fillRoundedRectangleBlended(412, var4Lifetime5, 186, 21, 7, 65793, 128);
               if (this.field_a.field_o.isReadyOrInactive(param0 - 87, var11)) {
                 vb.field_l.c(574, var4Lifetime5 - 4);
               }
@@ -673,7 +673,7 @@ final class LineupView extends MatchPhaseView {
             }
           }
           for (var7Lifetime2 = 0; param0.playerCount > var7Lifetime2; var7Lifetime2++) {
-            if (this.field_h == param0.field_g[var7Lifetime2].field_p &&
+            if (this.field_h == param0.field_g[var7Lifetime2].team &&
               var7Lifetime2 != param1 &&
               param0.participantStatus[var7Lifetime2].isActive(3511)) {
               this.field_v = true;

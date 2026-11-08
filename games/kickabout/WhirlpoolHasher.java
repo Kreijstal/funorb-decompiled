@@ -124,7 +124,7 @@ final class WhirlpoolHasher {
           ei.field_b.setBounds(true, Kickabout.field_H.field_q - WeightedCacheEntry.field_s.field_q, 0, 0, param6);
           WeightedCacheEntry.field_s.setBounds(true, WeightedCacheEntry.field_s.field_q, ei.field_b.field_q, 0, param6);
           var10 = var10 + (param7 + param6);
-          gl.field_c.setBounds(true, gl.field_c.getPreferredWidth((byte) -99), 5, var10, param3);
+          InstrumentEnvelope.field_c.setBounds(true, InstrumentEnvelope.field_c.getPreferredWidth((byte) -99), 5, var10, param3);
           var11 = MySquadScreen.field_N.getPreferredWidth((byte) -19);
           MySquadScreen.field_N.setBounds(true, var11, -5 + (var9_int - var11), var10, param3);
           h.field_e.setBounds(true, var9_int, 0, 0, param1);
@@ -199,17 +199,17 @@ final class WhirlpoolHasher {
             ep.field_f = null;
             or.field_d.field_n = 0;
             if (param5 == null) {
-              gl.field_a.field_n = 0;
-              gl.field_a.writeInt(-56, TrinketUnlockNotice.field_d.nextInt());
-              gl.field_a.writeInt(-34, TrinketUnlockNotice.field_d.nextInt());
-              stackIn_17_0 = gl.field_a;
+              InstrumentEnvelope.field_a.field_n = 0;
+              InstrumentEnvelope.field_a.writeInt(-56, TrinketUnlockNotice.field_d.nextInt());
+              InstrumentEnvelope.field_a.writeInt(-34, TrinketUnlockNotice.field_d.nextInt());
+              stackIn_17_0 = InstrumentEnvelope.field_a;
               if (!param2.getFlag(-95)) {
                 stackIn_18_1 = "";
               } else {
                 stackIn_18_1 = var14;
               }
               ((PacketBuffer) (Object) stackIn_17_0).writeCircumfixedString(stackIn_18_1, (byte) -126);
-              stackIn_20_0 = gl.field_a;
+              stackIn_20_0 = InstrumentEnvelope.field_a;
               if (!param1.getFlag(-94)) {
                 stackIn_21_1 = "";
               } else {
@@ -219,23 +219,23 @@ final class WhirlpoolHasher {
               or.field_d.writeByte(106, 16);
               or.field_d.field_n = or.field_d.field_n + 1;
               var9 = or.field_d.field_n;
-              IconLabel.a(ManagerAction.field_h, or.field_d, (byte) -89, gl.field_a, CascadingMenu.field_Nb);
+              IconLabel.a(ManagerAction.field_h, or.field_d, (byte) -89, InstrumentEnvelope.field_a, CascadingMenu.field_Nb);
               or.field_d.backpatchByteLength(62, -var9 + or.field_d.field_n);
             } else {
               var9 = 0;
               if (param4) {
                 var9 = var9 | 1;
               }
-              gl.field_a.field_n = 0;
-              gl.field_a.writeInt(-62, TrinketUnlockNotice.field_d.nextInt());
-              gl.field_a.writeInt(-42, TrinketUnlockNotice.field_d.nextInt());
-              gl.field_a.writeCircumfixedString(var14, (byte) -126);
-              gl.field_a.writeCircumfixedString(var8, (byte) -126);
+              InstrumentEnvelope.field_a.field_n = 0;
+              InstrumentEnvelope.field_a.writeInt(-62, TrinketUnlockNotice.field_d.nextInt());
+              InstrumentEnvelope.field_a.writeInt(-42, TrinketUnlockNotice.field_d.nextInt());
+              InstrumentEnvelope.field_a.writeCircumfixedString(var14, (byte) -126);
+              InstrumentEnvelope.field_a.writeCircumfixedString(var8, (byte) -126);
               var15 = (CharSequence) ((Object) param5);
-              gl.field_a.writeCircumfixedString(ri.a(var15, (byte) -100), (byte) -125);
-              gl.field_a.writeShort(-1207444472, param0);
-              gl.field_a.writeByte(106, param3);
-              gl.field_a.writeByte(125, var9);
+              InstrumentEnvelope.field_a.writeCircumfixedString(ri.a(var15, (byte) -100), (byte) -125);
+              InstrumentEnvelope.field_a.writeShort(-1207444472, param0);
+              InstrumentEnvelope.field_a.writeByte(106, param3);
+              InstrumentEnvelope.field_a.writeByte(125, var9);
               or.field_d.writeByte(123, 18);
               or.field_d.field_n = or.field_d.field_n + 2;
               var10 = or.field_d.field_n;
@@ -244,7 +244,7 @@ final class WhirlpoolHasher {
                 var11_ref_String = "";
               }
               or.field_d.writeString(14190, var11_ref_String);
-              IconLabel.a(ManagerAction.field_h, or.field_d, (byte) -94, gl.field_a, CascadingMenu.field_Nb);
+              IconLabel.a(ManagerAction.field_h, or.field_d, (byte) -94, InstrumentEnvelope.field_a, CascadingMenu.field_Nb);
               or.field_d.backpatchShortLength(-var10 + or.field_d.field_n, 62);
             }
             c.a(-1, false);

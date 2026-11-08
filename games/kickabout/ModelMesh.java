@@ -169,9 +169,9 @@ final class ModelMesh extends ModelMeshBase {
           }
         } else {
           if (this.field_n[param0] != -1) {
-            TriangleRasterizer.a(field_s[var2], field_s[var3], field_s[var4], field_i[var2], field_i[var3], field_i[var4], this.field_kb[param0] & 65535, this.field_v[param0] & 65535, this.field_n[param0] & 65535);
+            TriangleRasterizer.drawShadedTriangle(field_s[var2], field_s[var3], field_s[var4], field_i[var2], field_i[var3], field_i[var4], this.field_kb[param0] & 65535, this.field_v[param0] & 65535, this.field_n[param0] & 65535);
           } else {
-            TriangleRasterizer.a(field_s[var2], field_s[var3], field_s[var4], field_i[var2], field_i[var3], field_i[var4], TriangleRasterizer.field_l[this.field_kb[param0] & 65535]);
+            TriangleRasterizer.drawFlatTriangle(field_s[var2], field_s[var3], field_s[var4], field_i[var2], field_i[var3], field_i[var4], TriangleRasterizer.field_l[this.field_kb[param0] & 65535]);
           }
         }
     }
@@ -187,7 +187,7 @@ final class ModelMesh extends ModelMeshBase {
         this.field_M = false;
     }
 
-    final void a(int param0, int[] param1, int param2, int param3, int param4, boolean param5) {
+    final void applyGroupTransform(int param0, int[] param1, int param2, int param3, int param4, boolean param5) {
         int var7;
         int var8;
         int var9;
@@ -671,9 +671,9 @@ final class ModelMesh extends ModelMeshBase {
           }
           else {
             if (this.field_n[param0] != -1) {
-              TriangleRasterizer.a(var14Lifetime3, var15, var16, var11Lifetime3, var12Lifetime3, var13Lifetime3, field_H[0], field_H[1], field_H[2]);
+              TriangleRasterizer.drawShadedTriangle(var14Lifetime3, var15, var16, var11Lifetime3, var12Lifetime3, var13Lifetime3, field_H[0], field_H[1], field_H[2]);
             } else {
-              TriangleRasterizer.a(var14Lifetime3, var15, var16, var11Lifetime3, var12Lifetime3, var13Lifetime3, TriangleRasterizer.field_l[this.field_kb[param0] & 65535]);
+              TriangleRasterizer.drawFlatTriangle(var14Lifetime3, var15, var16, var11Lifetime3, var12Lifetime3, var13Lifetime3, TriangleRasterizer.field_l[this.field_kb[param0] & 65535]);
             }
           }
         }
@@ -713,12 +713,12 @@ final class ModelMesh extends ModelMeshBase {
           }
         } else {
           if (this.field_n[param0] != -1) {
-            TriangleRasterizer.a(var14Lifetime3, var15, var16, var11Lifetime3, var12Lifetime3, var13Lifetime3, field_H[0], field_H[1], field_H[2]);
-            TriangleRasterizer.a(var14Lifetime3, var16, field_db[3], var11Lifetime3, var13Lifetime3, field_t[3], field_H[0], field_H[2], field_H[3]);
+            TriangleRasterizer.drawShadedTriangle(var14Lifetime3, var15, var16, var11Lifetime3, var12Lifetime3, var13Lifetime3, field_H[0], field_H[1], field_H[2]);
+            TriangleRasterizer.drawShadedTriangle(var14Lifetime3, var16, field_db[3], var11Lifetime3, var13Lifetime3, field_t[3], field_H[0], field_H[2], field_H[3]);
           } else {
             var17Lifetime1 = TriangleRasterizer.field_l[this.field_kb[param0] & 65535];
-            TriangleRasterizer.a(var14Lifetime3, var15, var16, var11Lifetime3, var12Lifetime3, var13Lifetime3, var17Lifetime1);
-            TriangleRasterizer.a(var14Lifetime3, var16, field_db[3], var11Lifetime3, var13Lifetime3, field_t[3], var17Lifetime1);
+            TriangleRasterizer.drawFlatTriangle(var14Lifetime3, var15, var16, var11Lifetime3, var12Lifetime3, var13Lifetime3, var17Lifetime1);
+            TriangleRasterizer.drawFlatTriangle(var14Lifetime3, var16, field_db[3], var11Lifetime3, var13Lifetime3, field_t[3], var17Lifetime1);
           }
         }
     }
@@ -1258,7 +1258,7 @@ final class ModelMesh extends ModelMeshBase {
         return (ModelMeshBase) ((Object) param2);
     }
 
-    final void a(int param0, int[] param1, int param2, int param3, int param4, boolean param5, int param6, int[] param7) {
+    final void applyMaskedGroupTransform(int param0, int[] param1, int param2, int param3, int param4, boolean param5, int param6, int[] param7) {
         int var35_int = 0;
         int var42 = 0;
         int var9;

@@ -117,7 +117,7 @@ final class hr extends IntrusiveNode {
               var2_intLifetime1 = var15.field_o * InstrumentNoteMask.field_i >> 8;
               var3Lifetime1 = InstrumentNoteMask.field_i * var15.field_v >> 8;
               PacketBuffer.a(param0 ^ 10, MyKitScreen.field_S);
-              var15.a(0, 0, var2_intLifetime1, var3Lifetime1);
+              var15.drawScaled(0, 0, var2_intLifetime1, var3Lifetime1);
               TeamManagementScreen.e(118);
             }
             stackIn_20_0 = (qr.a(0, (byte) -1) >= 0) ? 0 : 1;
@@ -200,7 +200,7 @@ final class hr extends IntrusiveNode {
             if (InstrumentNoteMask.field_i == 256) {
               DebouncedValidationProvider.field_a.d(var2_intLifetime2, var3Lifetime2);
             } else {
-              DebouncedValidationProvider.field_a.a(var2_intLifetime2, var3Lifetime2, DebouncedValidationProvider.field_a.field_o * InstrumentNoteMask.field_i >> 8, InstrumentNoteMask.field_i * DebouncedValidationProvider.field_a.field_v >> 8);
+              DebouncedValidationProvider.field_a.drawScaled(var2_intLifetime2, var3Lifetime2, DebouncedValidationProvider.field_a.field_o * InstrumentNoteMask.field_i >> 8, InstrumentNoteMask.field_i * DebouncedValidationProvider.field_a.field_v >> 8);
             }
           }
           if (!FadingSoundPlayer.field_q) {

@@ -292,7 +292,7 @@ final class GameplayHelpScreen extends PagedHelpScreen {
           var5 = stackIn_10_0;
           var5 = var5 + this.slideOffsetX;
           var6 = 146;
-          SoftwareRasterizer.a(-10 + var5, 126, 265, 270, 10, 65793, 140);
+          SoftwareRasterizer.fillRoundedRectangleBlended(-10 + var5, 126, 265, 270, 10, 65793, 140);
           while (s.field_M.length > var2) {
             var7 = s.field_M[var2];
             var8 = IsSixCommand.field_C.paragraphHeight(var7, 245, 16);
@@ -330,7 +330,7 @@ final class GameplayHelpScreen extends PagedHelpScreen {
         IsSixCommand.field_C.a(ListingRowCache.field_g, this.slideOffsetX + 60, 136, 16777215, -1);
         var3 = 40 + this.slideOffsetX;
         for (var4 = 0; var4 < 2; var4++) {
-          SoftwareRasterizer.a(var3, 150, 210, 200, 10, 65793, 140);
+          SoftwareRasterizer.fillRoundedRectangleBlended(var3, 150, 210, 200, 10, 65793, 140);
           un.field_d.a(LoginRequiredDialog.field_L[var4].toUpperCase(), 20 + var3, 175, 16777215, -1);
           for (var5 = 0; var5 < 2; var5++) {
             var6 = var5 * 120 + (var3 + 20);
@@ -348,7 +348,7 @@ final class GameplayHelpScreen extends PagedHelpScreen {
           }
           var3 += 220;
         }
-        SoftwareRasterizer.a(40 + this.slideOffsetX, 360, 430, 43, 10, 65793, 140);
+        SoftwareRasterizer.fillRoundedRectangleBlended(40 + this.slideOffsetX, 360, 430, 43, 10, 65793, 140);
         if (ak.field_f != null) {
           ak.field_f.c(120 + this.slideOffsetX, 363);
         }
@@ -510,7 +510,7 @@ final class GameplayHelpScreen extends PagedHelpScreen {
           this.field_F = (PlayerStats[]) null;
         }
         for (var4 = 0; 2 > var4; var4++) {
-          SoftwareRasterizer.a(var3, 150, 275, 250, 10, 65793, 140);
+          SoftwareRasterizer.fillRoundedRectangleBlended(var3, 150, 275, 250, 10, 65793, 140);
           stackIn_9_0 = 137 + var3;
           if (var4 == 0) {
             stackIn_10_1 = -60;
@@ -626,12 +626,12 @@ final class GameplayHelpScreen extends PagedHelpScreen {
         int var5 = 0;
         int var7 = Kickabout.field_G;
         int var5Lifetime1;
-        SoftwareRasterizer.a(40 + this.slideOffsetX, 121, 560, 60, 10, 65793, param0);
+        SoftwareRasterizer.fillRoundedRectangleBlended(40 + this.slideOffsetX, 121, 560, 60, 10, 65793, param0);
         IsSixCommand.field_C.a(ReceivedAuctionItem.field_H, this.slideOffsetX + 55, 131, 530, 40, 16777215, -1, 0, 1, 16);
         int var2 = 40 + this.slideOffsetX;
         int[][] var3 = new int[][]{new int[]{0, 1, 2, 3}, new int[]{4, 36, 80, 87}};
         for (var4 = 0; var4 < 2; var4++) {
-          SoftwareRasterizer.a(var2, 190, 275, 208, 10, 65793, 140);
+          SoftwareRasterizer.fillRoundedRectangleBlended(var2, 190, 275, 208, 10, 65793, 140);
           un.field_d.a(gf.field_e[var4].toLowerCase(), var2 + 10, 212, 16777215, -1);
           for (var5 = 0; var5 < 4; var5++) {
             pa.field_g[var3[var4][var5]].d(false).c(110 + (var2 + var5 * 40), 200);
@@ -648,7 +648,7 @@ final class GameplayHelpScreen extends PagedHelpScreen {
         if (param0 > -22) {
           GameplayHelpScreen.g(124);
         }
-        return k.field_m != null ? true : false;
+        return StreetSceneryLoader.field_m != null ? true : false;
     }
 
     private final void drawPlayerStatsPage(int param0) {
@@ -678,9 +678,9 @@ final class GameplayHelpScreen extends PagedHelpScreen {
           this.field_K[var3Lifetime1].updateInput(0, false);
           this.field_K[var3Lifetime1].h((byte) -122);
         }
-        SoftwareRasterizer.a(this.slideOffsetX + 40, 120, 560, 50, 10, 65793, 140);
+        SoftwareRasterizer.fillRoundedRectangleBlended(this.slideOffsetX + 40, 120, 560, 50, 10, 65793, 140);
         IsSixCommand.field_C.a(sh.field_e, 70 + this.slideOffsetX, 126, 500, 40, 16777215, -1, 0, 1, 16);
-        SoftwareRasterizer.a(this.slideOffsetX + 210, 178, 390, 225, 10, 65793, 140);
+        SoftwareRasterizer.fillRoundedRectangleBlended(this.slideOffsetX + 210, 178, 390, 225, 10, 65793, 140);
         this.field_E.draw(94, false);
         AuctionListing.a(this.field_E.field_Gb.field_q + this.field_E.field_F, -22914, this.field_E.field_F, this.field_E.field_T + this.field_E.field_Gb.field_mb, this.field_E.field_T);
         var3Lifetime2 = this.field_E.field_F + 10;

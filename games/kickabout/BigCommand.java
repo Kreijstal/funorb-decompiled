@@ -12,7 +12,7 @@ final class BigCommand extends ConsoleCommand {
         if (PlayerModelPreview.field_f == mj.field_a) {
           return pr.field_c;
         }
-        if (!DualLinkDequeIterator.field_e.a((byte) -80)) {
+        if (!DualLinkDequeIterator.field_e.isComplete((byte) -80)) {
           return pr.field_c;
         }
         return ep.field_b;

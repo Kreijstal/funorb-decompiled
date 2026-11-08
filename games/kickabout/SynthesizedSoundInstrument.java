@@ -174,20 +174,20 @@ final class SynthesizedSoundInstrument {
           if (this.field_j != null) {
             var14 = this.field_j.advance(param0);
             var15 = this.field_a.advance(param0);
-            var12 = var12 + (this.a(var7, var15, this.field_j.field_g) >> 1);
+            var12 = var12 + (this.evaluateWaveform(var7, var15, this.field_j.field_g) >> 1);
             var7 = var7 + ((var14 * var5 >> 16) + var6);
           }
           if (this.field_h != null) {
             var14Lifetime3 = this.field_h.advance(param0);
             var15Lifetime3 = this.field_r.advance(param0);
-            var13 = var13 * ((this.a(var10, var15Lifetime3, this.field_h.field_g) >> 1) + 32768) >> 15;
+            var13 = var13 * ((this.evaluateWaveform(var10, var15Lifetime3, this.field_h.field_g) >> 1) + 32768) >> 15;
             var10 = var10 + ((var14Lifetime3 * var8 >> 16) + var9);
           }
           for (var14Lifetime4 = 0; var14Lifetime4 < 5; var14Lifetime4++) {
             if (this.field_v[var14Lifetime4] != 0) {
               var15Lifetime4 = var11Lifetime1 + field_o[var14Lifetime4];
               if (var15Lifetime4 < param0) {
-                field_d[var15Lifetime4] = field_d[var15Lifetime4] + this.a(field_s[var14Lifetime4], var13 * field_k[var14Lifetime4] >> 15, this.field_u.field_g);
+                field_d[var15Lifetime4] = field_d[var15Lifetime4] + this.evaluateWaveform(field_s[var14Lifetime4], var13 * field_k[var14Lifetime4] >> 15, this.field_u.field_g);
                 field_s[var14Lifetime4] = field_s[var14Lifetime4] + ((var12 * field_g[var14Lifetime4] >> 16) + field_f[var14Lifetime4]);
               }
             }
@@ -299,7 +299,7 @@ final class SynthesizedSoundInstrument {
         return field_d;
     }
 
-    private final int a(int param0, int param1, int param2) {
+    private final int evaluateWaveform(int param0, int param1, int param2) {
         if (param2 == 1) {
           if ((param0 & 32767) < 16384) {
             return param1;

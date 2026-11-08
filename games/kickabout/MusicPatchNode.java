@@ -11,7 +11,7 @@ final class MusicPatchNode extends IntrusiveNode {
     static IntrusiveDeque field_h;
     int field_v;
     MusicPatch field_g;
-    gl field_j;
+    InstrumentEnvelope field_j;
     int field_A;
     int field_z;
     int field_B;
@@ -140,7 +140,7 @@ final class MusicPatchNode extends IntrusiveNode {
           return;
         }
         try {
-          DualLinkDequeIterator.field_e.a(false, (byte) 108);
+          DualLinkDequeIterator.field_e.complete(false, (byte) 108);
           StatefulTextPainter.a(param0, param3, false, param2);
           IntKeyLookup.a(-93);
           mj.field_a = vj.field_a;

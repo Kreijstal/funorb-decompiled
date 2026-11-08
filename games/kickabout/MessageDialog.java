@@ -135,7 +135,7 @@ class MessageDialog extends PopupDialog {
               var13 = stackIn_43_0[stackIn_44_1];
               var14 = InstrumentNoteMask.field_i * var13.field_o >> 8;
               var15 = var13.field_v * InstrumentNoteMask.field_i >> 8;
-              var13.b(ug.a(param0 ^ 70, var8_ref_int__[var11]) - (var14 >> 1), IntKeyLookup.a((byte) -90, var9_ref_int__[var11]) - (var15 >> 1), var14, var15);
+              var13.drawScaledAveraged(ug.a(param0 ^ 70, var8_ref_int__[var11]) - (var14 >> 1), IntKeyLookup.a((byte) -90, var9_ref_int__[var11]) - (var15 >> 1), var14, var15);
             }
           }
           if (var2 != 0) {
@@ -164,7 +164,7 @@ class MessageDialog extends PopupDialog {
             }
             var8 = InstrumentNoteMask.field_i * var18.field_o >> 8;
             var9 = InstrumentNoteMask.field_i * var18.field_v >> 8;
-            var5_ref.b(ug.a(0, var6) - (var8 >> 1), -(var9 >> 1) + IntKeyLookup.a((byte) -77, var7), var8, var9);
+            var5_ref.drawScaledAveraged(ug.a(0, var6) - (var8 >> 1), -(var9 >> 1) + IntKeyLookup.a((byte) -77, var7), var8, var9);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -287,7 +287,7 @@ class MessageDialog extends PopupDialog {
         int var5 = 45 + param2;
         int var6 = -20 + this.dialogWidth(-1379118556);
         int var7 = -20 + this.dialogHeight((byte) 80) - 80;
-        SoftwareRasterizer.a(var4, var5, var6, var7, 10, 65793, 140);
+        SoftwareRasterizer.fillRoundedRectangleBlended(var4, var5, var6, var7, 10, 65793, 140);
         un.field_d.a(this.field_u, 5 + var4, var5 - 12, 16777215, -1);
         int var8 = 25 + param2 + 35;
         if (27 == this.field_y) {

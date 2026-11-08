@@ -118,8 +118,8 @@ final class tt {
             }
             return;
           }
-          if (kw.field_b == null) {
-            kw.field_b = new DualLinkHashTable(128);
+          if (AvailabilityCheckRequest.field_b == null) {
+            AvailabilityCheckRequest.field_b = new DualLinkHashTable(128);
             ListingRow.field_d = 0;
           }
           var3Lifetime1 = var1.readString(-126);
@@ -132,12 +132,12 @@ final class tt {
           if (var6Lifetime1 == null) {
             var6Lifetime1 = tr.a(var5Lifetime1, (byte) 40);
             if (null != var6Lifetime1) {
-              kw.field_b.a(var6Lifetime1, (byte) -4, (long)MatchAgent.a(0, (CharSequence) ((Object) var4_ref_StringLifetime1)).hashCode());
+              AvailabilityCheckRequest.field_b.a(var6Lifetime1, (byte) -4, (long)MatchAgent.a(0, (CharSequence) ((Object) var4_ref_StringLifetime1)).hashCode());
             }
           }
           if (null == var6Lifetime1) {
             var6Lifetime1 = new gg();
-            kw.field_b.a(var6Lifetime1, (byte) -4, (long)MatchAgent.a(0, (CharSequence) ((Object) var4_ref_StringLifetime1)).hashCode());
+            AvailabilityCheckRequest.field_b.a(var6Lifetime1, (byte) -4, (long)MatchAgent.a(0, (CharSequence) ((Object) var4_ref_StringLifetime1)).hashCode());
             fieldTemp$1 = ListingRow.field_d;
             ListingRow.field_d = ListingRow.field_d + 1;
             var6Lifetime1.field_Cb = fieldTemp$1;

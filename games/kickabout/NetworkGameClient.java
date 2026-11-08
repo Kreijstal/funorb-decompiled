@@ -119,13 +119,13 @@ abstract class NetworkGameClient extends GameAppletShell {
         var10.pack();
         var10.dispose();
         this.setBackground(java.awt.Color.black);
-        vv.field_r = this.field_p;
-        TextFieldNode.b(vv.field_r, 31900);
-        PlayerContextMenu.a(127, this.field_x, this.field_A, this.field_s, this.field_B, param7, param1, 5000, oo.field_c, vv.field_r, this.field_v, this.field_u, 5000, this.field_z);
-        AppScreen.setServerConnectionParameters(this.field_z, param1, oo.field_c, vv.field_r, this.field_u, this.field_x, this.field_B, this.field_s, false);
+        ArchiveRequest.field_r = this.field_p;
+        TextFieldNode.b(ArchiveRequest.field_r, 31900);
+        PlayerContextMenu.a(127, this.field_x, this.field_A, this.field_s, this.field_B, param7, param1, 5000, oo.field_c, ArchiveRequest.field_r, this.field_v, this.field_u, 5000, this.field_z);
+        AppScreen.setServerConnectionParameters(this.field_z, param1, oo.field_c, ArchiveRequest.field_r, this.field_u, this.field_x, this.field_B, this.field_s, false);
         CipherPacketBuffer.o(255);
         ag.field_f = TutorialChoiceDialog.g((byte) 3);
-        lp.a(ic.field_d, (byte) -64);
+        CanvasInputBindings.attachInputHandlers(ic.field_d, (byte) -64);
         LeagueWinnerDialog.field_F = param4;
         ClubState.field_y = param3;
         if (param5 >= -3) {
@@ -372,7 +372,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           pe.a(127);
         }
         if (null != ag.field_f) {
-          StatefulTextPainter.field_v = ag.field_f.b((byte) -22);
+          StatefulTextPainter.field_v = ag.field_f.pollRotation((byte) -22);
         }
         if (oh.b(-14954)) {
           var3 = 1200 * GameSoundEffect.b((byte) 126);
@@ -468,7 +468,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           hl.field_d = 1;
         }
         if (hl.field_d == 1) {
-          if (vv.field_r != 0) {
+          if (ArchiveRequest.field_r != 0) {
             LoginRequiredDialog.field_H = ImageProducerRasterBuffer.a((byte) -128, ModalPanel.field_E);
           }
           bw.field_b = ContextMenu.a(false, SellPlayerDialog.field_G, 1, true, 118);
@@ -526,7 +526,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           hl.field_d = 10;
         }
         if (hl.field_d == 10) {
-          if (0 != vv.field_r) {
+          if (0 != ArchiveRequest.field_r) {
             Trinket.field_b = ImageProducerRasterBuffer.a((byte) -125, AuctionsScreen.field_Q);
           }
           hl.field_d = 11;
@@ -562,7 +562,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           SquadGridWidget.field_Ib) {
           SumIntegersCommand.a(-113, ic.field_d);
           this.f((byte) -88);
-          lp.a(ic.field_d, (byte) -64);
+          CanvasInputBindings.attachInputHandlers(ic.field_d, (byte) -64);
         }
         if (hr.field_h[8]) {
           gw.b(5);
@@ -731,7 +731,7 @@ abstract class NetworkGameClient extends GameAppletShell {
               stackIn_37_0 = rf.field_c[0][var6 + 1];
               stackIn_38_1 = (var4_int != 0);
               stackIn_37_0.field_lb = stackIn_38_1;
-              if (!ui.field_t &&
+              if (!NetworkArchiveRequest.field_t &&
                 3 == var6) {
                 rf.field_c[0][1 + var6].field_lb = false;
               }
@@ -1203,7 +1203,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           int var5_intLifetime1;
           int var5_intLifetime2;
           var8 = Kickabout.field_G;
-          var4 = StripedProgressBar.b(StatefulTextPainter.field_v, -1951459327, vv.field_r, param2);
+          var4 = StripedProgressBar.b(StatefulTextPainter.field_v, -1951459327, ArchiveRequest.field_r, param2);
           if (var4 == 0) {
             throw new IllegalStateException();
           }
@@ -1214,7 +1214,7 @@ abstract class NetworkGameClient extends GameAppletShell {
               ListingRowCache.field_b = null;
               ValidatedTextWidget.field_X = null;
             }
-            var11 = v.d(83);
+            var11 = EntityAfterimage.takePendingBooleanResult(83);
             if (var11 != null) {
               ia.a(var11.booleanValue(), -23249);
             }

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class DiskCacheRequest extends vv {
+final class DiskCacheRequest extends ArchiveRequest {
     byte[] field_u;
     int field_t;
     static String field_w;
@@ -11,7 +11,7 @@ final class DiskCacheRequest extends vv {
         if (param0 != 0) {
           return -42;
         }
-        if (this.field_p) {
+        if (this.pending) {
           return 0;
         }
         return 100;
@@ -37,7 +37,7 @@ final class DiskCacheRequest extends vv {
     }
 
     final byte[] getBytes(int param0) {
-        if (this.field_p) {
+        if (this.pending) {
           throw new RuntimeException();
         }
         if (param0 == 12802) {

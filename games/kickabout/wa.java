@@ -69,8 +69,8 @@ final class wa {
         if (param0 < -89) {
           var8 = new Sprite(108, 108);
           PacketBuffer.a(-118, var8);
-          SoftwareRasterizer.d(54, 54, 51, 255);
-          SoftwareRasterizer.d(54, 54, 43, 0);
+          SoftwareRasterizer.fillCircle(54, 54, 51, 255);
+          SoftwareRasterizer.fillCircle(54, 54, 43, 0);
           ts.a(param1, 0, 124);
           TeamManagementScreen.e(117);
           var9 = new ArgbSprite(54, 54);
@@ -85,8 +85,8 @@ final class wa {
         wa.b((byte) 1);
         Sprite var6 = new Sprite(108, 108);
         PacketBuffer.a(-118, var6);
-        SoftwareRasterizer.d(54, 54, 51, 255);
-        SoftwareRasterizer.d(54, 54, 43, 0);
+        SoftwareRasterizer.fillCircle(54, 54, 51, 255);
+        SoftwareRasterizer.fillCircle(54, 54, 43, 0);
         ts.a(param1, 0, 124);
         TeamManagementScreen.e(117);
         ArgbSprite var7 = new ArgbSprite(54, 54);

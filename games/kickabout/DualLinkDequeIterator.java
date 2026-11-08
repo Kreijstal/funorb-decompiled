@@ -7,7 +7,7 @@ final class DualLinkDequeIterator implements Iterator {
     private DualLinkNode field_a;
     private DualLinkNode field_d;
     static String field_b;
-    static kw field_e;
+    static AvailabilityCheckRequest field_e;
     private IterableDualLinkDeque field_c;
 
     public final Object next() {
@@ -35,40 +35,40 @@ final class DualLinkDequeIterator implements Iterator {
         int var3Lifetime5;
         Object var5Lifetime1;
         Object var5Lifetime2;
-        if (null == k.field_m) {
+        if (null == StreetSceneryLoader.field_m) {
           var3 = 91 % ((-21 - param0) / 44);
           return;
         }
-        var3Lifetime1 = k.field_m.a((byte) 84, param2);
+        var3Lifetime1 = StreetSceneryLoader.field_m.a((byte) 84, param2);
         if (var3Lifetime1 == 0) {
           var3Lifetime1 = 91 % ((-21 - param0) / 44);
           return;
         }
         if (var3Lifetime1 != 2) {
-          k.field_m = null;
+          StreetSceneryLoader.field_m = null;
           fs.field_b = -1;
           var3Lifetime1 = 91 % ((-21 - param0) / 44);
           return;
         }
-        if (k.field_m.field_E == null) {
-          k.field_m = null;
+        if (StreetSceneryLoader.field_m.field_E == null) {
+          StreetSceneryLoader.field_m = null;
           fs.field_b = -1;
           var3Lifetime2 = 91 % ((-21 - param0) / 44);
           return;
         }
-        if (k.field_m.field_E.equals("")) {
-          k.field_m = null;
+        if (StreetSceneryLoader.field_m.field_E.equals("")) {
+          StreetSceneryLoader.field_m = null;
           fs.field_b = -1;
           var3Lifetime3 = 91 % ((-21 - param0) / 44);
           return;
         }
-        if (k.field_m.field_E.charAt(0) != 91) {
-          var7 = (CharSequence) ((Object) k.field_m.field_E);
+        if (StreetSceneryLoader.field_m.field_E.charAt(0) != 91) {
+          var7 = (CharSequence) ((Object) StreetSceneryLoader.field_m.field_E);
           var4 = MatchAgent.a(0, var7);
           var5 = var4;
           var5Lifetime2 = var4;
         } else {
-          var4 = k.field_m.field_E;
+          var4 = StreetSceneryLoader.field_m.field_E;
         }
         var5Lifetime1 = null;
         if (fs.field_b == 0) {
@@ -84,14 +84,14 @@ final class DualLinkDequeIterator implements Iterator {
           var5Lifetime1 = rn.a(var4, 2, param1, var4);
         }
         if (var5Lifetime1 == null) {
-          k.field_m = null;
+          StreetSceneryLoader.field_m = null;
           fs.field_b = -1;
           var3Lifetime4 = 91 % ((-21 - param0) / 44);
           return;
         }
         var6 = (String) null;
         TextButton.a((String) null, var4, 0, 2, (String) (var5Lifetime1), -115);
-        k.field_m = null;
+        StreetSceneryLoader.field_m = null;
         fs.field_b = -1;
         var3Lifetime5 = 91 % ((-21 - param0) / 44);
         return;

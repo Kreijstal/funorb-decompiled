@@ -209,7 +209,7 @@ abstract class AppScreen {
                 }
                 stackIn_62_0 = ((16 & var7) != 0);
                 DateOfBirthPanel.field_E = stackIn_62_0;
-                if (it.field_n) {
+                if (ParticipantAgent.field_n) {
                   un.field_e.readUnsignedByte((byte) -118);
                   vp.field_h = un.field_e.readUnsignedByte((byte) -124);
                   un.field_e.readInt(4);
@@ -222,7 +222,7 @@ abstract class AppScreen {
               } else {
                 stackIn_43_0 = ((16 & var7) != 0);
                 DateOfBirthPanel.field_E = stackIn_43_0;
-                if (it.field_n) {
+                if (ParticipantAgent.field_n) {
                   un.field_e.readUnsignedByte((byte) -118);
                   vp.field_h = un.field_e.readUnsignedByte((byte) -124);
                   un.field_e.readInt(4);

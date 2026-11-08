@@ -45,7 +45,7 @@ final class GameResourceLoader implements LoadingSequence {
           this.pollMessageOfTheDay(0)) {
           this.field_d = true;
         }
-        stackIn_24_0 = (this.field_d) && (this.field_c) && (this.field_a) && (ui.field_y);
+        stackIn_24_0 = (this.field_d) && (this.field_c) && (this.field_a) && (NetworkArchiveRequest.field_y);
         return stackIn_24_0;
     }
 
@@ -76,7 +76,7 @@ final class GameResourceLoader implements LoadingSequence {
           null != d.field_b) {
           CipherPacketBuffer.k(61, 0);
           if (null == SortCriterion.field_h) {
-            it.a(new SoundCache(IterableNodeHashTable.field_c, d.field_b), d.field_b, (byte) -100);
+            ParticipantAgent.initializeGameSoundEffects(new SoundCache(IterableNodeHashTable.field_c, d.field_b), d.field_b, (byte) -100);
           }
           d.field_b = null;
           IterableNodeHashTable.field_c = null;
@@ -93,7 +93,7 @@ final class GameResourceLoader implements LoadingSequence {
         if (!MyKitScreen.ensureSoundLoaded(111, Trinket.field_c)) {
           return false;
         }
-        if (v.field_b != null) {
+        if (EntityAfterimage.field_b != null) {
           CipherPacketBuffer.k(61, 2);
           eo.field_q = wa.a((byte) 124, "lobby", QuickChatKeysHelpPanel.field_Cb, "logo");
           eo.field_p = ModalStack.a(QuickChatKeysHelpPanel.field_Cb, -28, "lobby", "time");
@@ -104,13 +104,13 @@ final class GameResourceLoader implements LoadingSequence {
           eo.field_f = DemoIntegersCommand.a(QuickChatKeysHelpPanel.field_Cb, 17369, "lobby", "orb_icons");
           ModalStack.a(QuickChatKeysHelpPanel.field_Cb, -127, "lobby", "players");
           IntrusiveDeque.field_e = eo.field_q;
-          un.field_d = RenderedFootballer.a(v.field_b, 10, "font2", QuickChatKeysHelpPanel.field_Cb, "fonts");
-          ConsoleTokenCursor.field_d = Checkbox.a("font", v.field_b, 75, "fonts", QuickChatKeysHelpPanel.field_Cb);
+          un.field_d = RenderedFootballer.a(EntityAfterimage.field_b, 10, "font2", QuickChatKeysHelpPanel.field_Cb, "fonts");
+          ConsoleTokenCursor.field_d = Checkbox.a("font", EntityAfterimage.field_b, 75, "fonts", QuickChatKeysHelpPanel.field_Cb);
           IsSixCommand.field_C = Checkbox.a("", var17, 105, "arialish12", var16);
           var4 = new Sprite(16, 9);
           PacketBuffer.a(-64, var4);
-          SoftwareRasterizer.d(4, 4, 3, 7829367);
-          SoftwareRasterizer.d(4, 4, 2, 13421772);
+          SoftwareRasterizer.fillCircle(4, 4, 3, 7829367);
+          SoftwareRasterizer.fillCircle(4, 4, 2, 13421772);
           TeamManagementScreen.e(122);
           var5 = eo.toIndexedSprite(var4);
           IsSixCommand.field_C.setInlineImages(new IndexedSprite[]{var5}, new int[]{10});
@@ -192,7 +192,7 @@ final class GameResourceLoader implements LoadingSequence {
           WhirlpoolHasher.a(var17, var16, 5198);
           LineupView.a(-70, RankingsScreen.field_A, 0, AnimationClip.field_g, 0, 16777215);
           Object var3 = null;
-          v.field_b = null;
+          EntityAfterimage.field_b = null;
           AnimationPlayer.a((byte) 104);
           return false;
         }
@@ -638,7 +638,7 @@ final class GameResourceLoader implements LoadingSequence {
         MySquadScreen.field_H = ImageProducerRasterBuffer.a((byte) -126, 3);
         StatefulTextPainter.field_y = ImageProducerRasterBuffer.a((byte) -128, 11);
         QuickChatKeysHelpPanel.field_Cb = ImageProducerRasterBuffer.a((byte) -128, 5);
-        v.field_b = ImageProducerRasterBuffer.a((byte) -125, 6);
+        EntityAfterimage.field_b = ImageProducerRasterBuffer.a((byte) -125, 6);
         IterableNodeHashTable.field_c = ImageProducerRasterBuffer.a((byte) -127, 7);
         d.field_b = ImageProducerRasterBuffer.a((byte) -128, 8);
         vp.field_j = ImageProducerRasterBuffer.a((byte) -127, 9);
@@ -658,7 +658,7 @@ final class GameResourceLoader implements LoadingSequence {
         mp.field_h.a(ResourceArchive.field_f, BufferedSocket.field_q, -6869, "", CommonGame.field_M);
         mp.field_h.a(var4, BufferedSocket.field_q, -6869, "arialish12", CommonGame.field_M);
         mp.field_h.a(QuickChatKeysHelpPanel.field_Cb, TextLine.field_l, -6869, "fonts", CommonGame.field_M);
-        mp.field_h.a(v.field_b, TextLine.field_l, -6869, "fonts", te.field_b);
+        mp.field_h.a(EntityAfterimage.field_b, TextLine.field_l, -6869, "fonts", te.field_b);
         mp.field_h.a(var3, TextLine.field_l, -6869, "arialish12", te.field_b);
         mp.field_h.a(var3, TextLine.field_l, -6869, "lobby", te.field_b);
         mp.field_h.a(QuickChatKeysHelpPanel.field_Cb, LoggedPossession.field_a, -6869, "menu", CommonGame.field_M);
@@ -685,7 +685,7 @@ final class GameResourceLoader implements LoadingSequence {
         mp.field_h.a(KitStyleTile.field_Bb, (byte) -122, vp.field_l, cu.field_b);
         mp.field_h.a(ContextMenuItem.field_Eb, (byte) -126, vp.field_l, cu.field_b);
         mp.field_h.a(ListingRowCache.field_h, (byte) -106, vp.field_l, cu.field_b);
-        mp.field_h.a(MySquadScreen.field_H, (byte) -128, kw.field_g, Bzip2State.field_d);
+        mp.field_h.a(MySquadScreen.field_H, (byte) -128, AvailabilityCheckRequest.field_g, Bzip2State.field_d);
         mp.field_h.a(StatefulTextPainter.field_y, (byte) -116, CascadingMenu.field_Ib, TrinketUnlockNotice.field_e);
     }
 

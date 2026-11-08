@@ -57,15 +57,15 @@ final class ei implements WidgetPainter {
           SoftwareRasterizer.fillRect(param4 + param3.field_t, param2 + param3.field_g, param3.field_n, param3.field_i, this.field_m);
           var7 = param4 + (param3.field_t + var15.field_H);
           var8 = param3.field_g + (param2 + var15.field_G);
-          SoftwareRasterizer.d(var7, var8, var15.field_J, this.field_i);
+          SoftwareRasterizer.fillCircle(var7, var8, var15.field_J, this.field_i);
           var12 = -80 % ((59 - param0) / 53);
           if (var15.field_I != -1) {
             var9 = 2.0 * (3.141592653589793 * (double)var15.field_I) / (double)var15.field_K;
             var11 = (int)(-Math.sin(var9) * (double)var15.field_J);
             var13 = (int)(Math.cos(var9) * (double)var15.field_J);
-            SoftwareRasterizer.d(var11 + var7, var13 + var8, 1, this.field_g);
+            SoftwareRasterizer.fillCircle(var11 + var7, var13 + var8, 1, this.field_g);
           }
-          SoftwareRasterizer.d(var7, var8, 2, 1);
+          SoftwareRasterizer.fillCircle(var7, var8, 2, 1);
           var9Lifetime1 = 2.0 * (3.141592653589793 * (double)var15.field_L) / (double)var15.field_K;
           var11Lifetime1 = (int)(-Math.sin(var9Lifetime1) * (double)var15.field_J);
           var13Lifetime1 = (int)(Math.cos(var9Lifetime1) * (double)var15.field_J);

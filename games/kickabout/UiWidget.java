@@ -219,8 +219,8 @@ class UiWidget extends IntrusiveNode {
             stackIn_11_1 = (var5_int != 0);
             this.field_m = stackIn_11_1;
             if (null != this.field_k &&
-              this.field_k instanceof uu) {
-              ((uu) (this.field_k)).a(var5_int != 0, (byte) -103, this);
+              this.field_k instanceof WidgetHoverListener) {
+              ((WidgetHoverListener) (this.field_k)).hoverChanged(var5_int != 0, (byte) -103, this);
             }
           }
           if (param0 != 12) {
@@ -399,8 +399,8 @@ class UiWidget extends IntrusiveNode {
             this.handlePointerRelease(param0, ArchiveManager.field_m, BytePlusOneCommand.field_A, this, param1 ^ -31948, param2);
             var6 = mp.field_g;
             if (var6 != null) {
-              if (var6.field_k instanceof co) {
-                ((co) (var6.field_k)).a(var6, (DropTargetWidget) null, 14578);
+              if (var6.field_k instanceof WidgetDropListener) {
+                ((WidgetDropListener) (var6.field_k)).dropped(var6, (DropTargetWidget) null, 14578);
               }
               mp.field_g = null;
             }

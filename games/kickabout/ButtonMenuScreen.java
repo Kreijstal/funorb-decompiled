@@ -135,7 +135,7 @@ class ButtonMenuScreen extends AppScreen {
           var6 = this.buttonCenterY(60, 0) - (this.buttons[0].height >> 1);
           var5Lifetime3 = var5Lifetime3 - 7 + this.slideOffsetX;
           var6 = var6 - 7;
-          SoftwareRasterizer.a(var5Lifetime3, var6, var4Lifetime2, var3, 12, 0, 128);
+          SoftwareRasterizer.fillRoundedRectangleBlended(var5Lifetime3, var6, var4Lifetime2, var3, 12, 0, 128);
         }
         if (param0 != -5) {
           return;
@@ -202,7 +202,7 @@ class ButtonMenuScreen extends AppScreen {
                 var5Lifetime2 == 21 ||
                 var5Lifetime2 == 22 ||
                 var5Lifetime2 == 37) {
-                SoftwareRasterizer.a(-4 + (var4Lifetime1 - (this.buttons[var3Lifetime2].width >> 1)), this.buttonCenterY(123, var3Lifetime2) + (-(this.buttons[var3Lifetime2].height >> 1) - 4), 8 + this.buttons[var3Lifetime2].width, 8 + this.buttons[var3Lifetime2].height, 10, 0, 128);
+                SoftwareRasterizer.fillRoundedRectangleBlended(-4 + (var4Lifetime1 - (this.buttons[var3Lifetime2].width >> 1)), this.buttonCenterY(123, var3Lifetime2) + (-(this.buttons[var3Lifetime2].height >> 1) - 4), 8 + this.buttons[var3Lifetime2].width, 8 + this.buttons[var3Lifetime2].height, 10, 0, 128);
               }
               this.buttons[var3Lifetime2].a(this.buttonCenterY(-106, var3Lifetime2), var4Lifetime1, 13800);
             }

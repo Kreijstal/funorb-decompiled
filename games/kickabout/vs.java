@@ -42,7 +42,7 @@ final class vs {
 
     final static void a(boolean param0, boolean param1, byte param2) {
         if (param0) {
-          SoftwareRasterizer.a(0, 0, SoftwareRasterizer.field_g, SoftwareRasterizer.field_f, 0, 192);
+          SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_g, SoftwareRasterizer.field_f, 0, 192);
           oa.a((byte) -126, param0);
           if (param2 != 39) {
             vs.a(115, 82L);

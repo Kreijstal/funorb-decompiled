@@ -3,7 +3,7 @@
  */
 final class LineupAgent extends MatchAgent {
     static boolean field_o;
-    private it[] field_k;
+    private ParticipantAgent[] field_k;
     private int readyMask;
     static int field_n;
     private PlayerStats[][] slotStats;
@@ -18,7 +18,7 @@ final class LineupAgent extends MatchAgent {
         int var3;
         int var5;
         var5 = Kickabout.field_G;
-        var3 = this.field_k[param1].field_p;
+        var3 = this.field_k[param1].team;
         for (var4 = 0; var4 < 4; var4++) {
           if (param1 == this.slotOwner[var3][var4] &&
             -1 == this.slotChoice[var3][var4]) {
@@ -85,8 +85,8 @@ final class LineupAgent extends MatchAgent {
           }
           discarded$63 = var5.append("[");
           for (var3 = 0; 4 > var3; var3++) {
-            if (~this.slotOwner[this.field_k[var2].field_p][var3] == ~var2) {
-              discarded$65 = var5.append(" " + var3 + "=" + this.slotChoice[this.field_k[var2].field_p][var3]);
+            if (~this.slotOwner[this.field_k[var2].team][var3] == ~var2) {
+              discarded$65 = var5.append(" " + var3 + "=" + this.slotChoice[this.field_k[var2].team][var3]);
             }
           }
           discarded$64 = var5.append(" ]");
@@ -116,7 +116,7 @@ final class LineupAgent extends MatchAgent {
           if (param3 != 4) {
             field_g = false;
           }
-          var5_int = this.field_k[param2].field_p;
+          var5_int = this.field_k[param2].team;
           for (var6 = 0; var6 < 4; var6++) {
             if (this.slotOwner[var5_int][var6] == param2 &&
               param0 == this.slotChoice[var5_int][var6]) {
@@ -204,7 +204,7 @@ final class LineupAgent extends MatchAgent {
         int var7Lifetime1;
         var11 = Kickabout.field_G;
         try {
-          var6_int = this.field_k[param4].field_p;
+          var6_int = this.field_k[param4].team;
           if (param1 != 0) {
             var12 = (MatchAgent) null;
             this.copyStateFrom((byte) 13, (MatchAgent) null);
@@ -321,7 +321,7 @@ final class LineupAgent extends MatchAgent {
         return stackIn_7_0;
     }
 
-    LineupAgent(boolean param0, it[] param1, ParticipantStatus[] param2, int[][] param3, int[][] param4, PlayerStats[][] param5) {
+    LineupAgent(boolean param0, ParticipantAgent[] param1, ParticipantStatus[] param2, int[][] param3, int[][] param4, PlayerStats[][] param5) {
         try {
           this.field_f = param2;
           this.field_k = param1;

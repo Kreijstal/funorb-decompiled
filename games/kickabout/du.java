@@ -49,7 +49,7 @@ final class du implements WidgetPainter {
           SoftwareRasterizer.drawLine(var8, var9, var8 + var7, var9, this.field_h);
           var10 = 47 / ((59 - param0) / 53);
           for (var11 = var13.a((byte) 31) - 1; 0 <= var11; var11--) {
-            SoftwareRasterizer.d(var13.a((byte) -120, var11) * var7 / var13.h((byte) -88) + var8, var9, this.field_d, this.field_l);
+            SoftwareRasterizer.fillCircle(var13.a((byte) -120, var11) * var7 / var13.h((byte) -88) + var8, var9, this.field_d, this.field_l);
           }
           if (null == this.field_m) {
             return;

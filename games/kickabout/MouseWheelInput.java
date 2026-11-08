@@ -260,11 +260,11 @@ abstract class MouseWheelInput {
         LoginText.field_e = true;
     }
 
-    abstract void a(byte param0, java.awt.Component param1);
+    abstract void detach(byte param0, java.awt.Component param1);
 
-    abstract void b(byte param0, java.awt.Component param1);
+    abstract void attach(byte param0, java.awt.Component param1);
 
-    abstract int b(byte param0);
+    abstract int pollRotation(byte param0);
 
     static {
         field_f = true;

@@ -131,16 +131,16 @@ final class BlackFadeScreen extends AppScreen {
         }
     }
 
-    final static kw a(boolean param0, String param1) {
+    final static AvailabilityCheckRequest a(boolean param0, String param1) {
         RuntimeException var2 = null;
-        kw stackIn_7_0 = null;
+        AvailabilityCheckRequest stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (DualLinkDequeIterator.field_e.a((byte) -80) &&
-            !param1.equals(DualLinkDequeIterator.field_e.a(3))) {
+          if (DualLinkDequeIterator.field_e.isComplete((byte) -80) &&
+            !param1.equals(DualLinkDequeIterator.field_e.getQuery(3))) {
             DualLinkDequeIterator.field_e = su.a(-3505, param1);
           }
           if (param0) {
@@ -185,7 +185,7 @@ final class BlackFadeScreen extends AppScreen {
 
     final void drawScreen(int param0, boolean param1) {
         if (this.field_h != 256) {
-          SoftwareRasterizer.a(0, 0, 640, 480, 0, this.field_h);
+          SoftwareRasterizer.fillRectangleAlpha(0, 0, 640, 480, 0, this.field_h);
         } else {
           SoftwareRasterizer.clearFramebuffer();
         }

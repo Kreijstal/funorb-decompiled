@@ -89,7 +89,7 @@ final class WidgetTheme {
         if (param6 != -2) {
           return;
         }
-        SoftwareRasterizer.a(param0, param4, param3, param1, param2, param5);
+        SoftwareRasterizer.fillRectangleAlpha(param0, param4, param3, param1, param2, param5);
     }
 
     final void initializeRenderers(BitmapFont param0, int param1) {
@@ -141,7 +141,7 @@ final class WidgetTheme {
         try {
           var5[4] = (Sprite) ((Object) var18);
           var4.a(4, -12085).a(true, (byte) 113).a(true, var5);
-          var4.a(5, -12085).a(true, gl.a(65793, (byte) 115, 0, 0, 0)).a(true, (byte) -90).b(param1 - 3424, -1);
+          var4.a(5, -12085).a(true, InstrumentEnvelope.createPanelSpriteSlices(65793, (byte) 115, 0, 0, 0)).a(true, (byte) -90).b(param1 - 3424, -1);
           this.field_l = (WidgetPainter) ((Object) var4);
           var6 = new StatefulTextPainter(var4, true);
           var6.field_e = 0;
@@ -172,13 +172,13 @@ final class WidgetTheme {
           var13.field_y = new int[]{8947848, 8947848, 8947848, 13421772, 8947848, 8947848, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772};
           var14 = new StatefulTextPainter(var4, true);
           var14.a(var13.copy(), (byte) -95);
-          var13.d();
+          var13.rotateClockwise();
           var14Lifetime1 = new StatefulTextPainter(var4, true);
           var14Lifetime1.a(var13.copy(), (byte) -114);
-          var13.d();
+          var13.rotateClockwise();
           var14Lifetime2 = new StatefulTextPainter(var4, true);
           var14Lifetime2.a(var13.copy(), (byte) -101);
-          var13.d();
+          var13.rotateClockwise();
           var19 = new StatefulTextPainter(var4, true);
           var19.a(var13, (byte) -90);
         } catch (RuntimeException runtimeException) {

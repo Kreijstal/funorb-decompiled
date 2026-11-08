@@ -107,7 +107,7 @@ final class BytePlusOneCommand extends ConsoleCommand {
         var20 = Kickabout.field_G;
         try {
           uk.field_d = param5;
-          vv.field_o = param8;
+          ArchiveRequest.field_o = param8;
           sg.field_c[4] = 16711935;
           sg.field_c[2] = 9474303;
           sg.field_c[3] = 16736511;
@@ -174,10 +174,10 @@ final class BytePlusOneCommand extends ConsoleCommand {
               }
               if (decompiledFrameRemainder0) {
                 ValidatedTextWidget.field_W[var18] = new UiLayoutNode(0L, param4);
-                BlackFadeScreen.field_m[var18] = new UiLayoutNode(0L, vv.field_o, var19);
+                BlackFadeScreen.field_m[var18] = new UiLayoutNode(0L, ArchiveRequest.field_o, var19);
                 SocketConnector.field_b[var18] = new UiLayoutNode(0L, (UiLayoutNode) null);
                 SocketConnector.field_b[var18].field_p = 1;
-                ds.field_a[var18] = new UiLayoutNode(0L, vv.field_o);
+                ds.field_a[var18] = new UiLayoutNode(0L, ArchiveRequest.field_o);
                 ds.field_a[var18].field_p = 1;
                 ValidatedTextWidget.field_W[var18].addChild((byte) -126, BlackFadeScreen.field_m[var18]);
                 ValidatedTextWidget.field_W[var18].addChild((byte) -113, SocketConnector.field_b[var18]);

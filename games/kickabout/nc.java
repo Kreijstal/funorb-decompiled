@@ -72,16 +72,16 @@ final class nc {
         try {
           UrlRequest.field_f[0] = TrinketUnlockNotice.field_d.nextInt();
           UrlRequest.field_f[1] = TrinketUnlockNotice.field_d.nextInt();
-          gl.field_a.field_n = 0;
+          InstrumentEnvelope.field_a.field_n = 0;
           UrlRequest.field_f[3] = (int)ld.field_c;
           UrlRequest.field_f[2] = (int)(ld.field_c >> 32);
-          gl.field_a.writeInt(-116, UrlRequest.field_f[0]);
-          gl.field_a.writeInt(-55, UrlRequest.field_f[1]);
-          gl.field_a.writeInt(-92, UrlRequest.field_f[2]);
-          gl.field_a.writeInt(-102, UrlRequest.field_f[3]);
-          qr.a(param3 ^ -16185, gl.field_a);
-          gl.field_a.writeShort(param3 ^ 1207442647, param4);
-          param2.writeCredentials(gl.field_a, param3 + 33214);
+          InstrumentEnvelope.field_a.writeInt(-116, UrlRequest.field_f[0]);
+          InstrumentEnvelope.field_a.writeInt(-55, UrlRequest.field_f[1]);
+          InstrumentEnvelope.field_a.writeInt(-92, UrlRequest.field_f[2]);
+          InstrumentEnvelope.field_a.writeInt(-102, UrlRequest.field_f[3]);
+          qr.a(param3 ^ -16185, InstrumentEnvelope.field_a);
+          InstrumentEnvelope.field_a.writeShort(param3 ^ 1207442647, param4);
+          param2.writeCredentials(InstrumentEnvelope.field_a, param3 + 33214);
           if (param3 != -16161) {
             field_d = (String) null;
           }
@@ -99,7 +99,7 @@ final class nc {
           if (GrowableIntList.field_c) {
             var6 = var6 | 1;
           }
-          if (it.field_n) {
+          if (ParticipantAgent.field_n) {
             var6 = var6 | 4;
           }
           if (param0) {
@@ -117,7 +117,7 @@ final class nc {
           if (BroadcastServerCommand.field_A != null) {
             or.field_d.writeCircumfixedString(BroadcastServerCommand.field_A, (byte) -127);
           }
-          IconLabel.a(ManagerAction.field_h, or.field_d, (byte) -116, gl.field_a, CascadingMenu.field_Nb);
+          IconLabel.a(ManagerAction.field_h, or.field_d, (byte) -116, InstrumentEnvelope.field_a, CascadingMenu.field_Nb);
           or.field_d.backpatchShortLength(or.field_d.field_n - var5_int, 62);
           c.a(-1, false);
           return;

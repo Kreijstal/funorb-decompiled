@@ -154,7 +154,7 @@ final class PasswordValidator extends TextFieldValidator {
           PacketBuffer.a(-68, wn.field_j);
           SoftwareRasterizer.clearFramebuffer();
           AuctionListing.a(var7, -22914, 0, SoftwareRasterizer.field_f, 0);
-          tn.field_e.a(0, 0, tn.field_e.field_o * var7 / 140, tn.field_e.field_v);
+          tn.field_e.drawScaled(0, 0, tn.field_e.field_o * var7 / 140, tn.field_e.field_v);
           TeamManagementScreen.e(124);
           AuctionListing.a(SoftwareRasterizer.field_g, -22914, var7, SoftwareRasterizer.field_f, 0);
           tn.field_e.d(-140 + var7, 0);
@@ -178,7 +178,7 @@ final class PasswordValidator extends TextFieldValidator {
           var9 = wn.field_j.field_o;
           DelegatingCanvas.field_e = -(var9 * we.cosine(var8Lifetime1, false)) >> 17;
           FormationView.field_m = var9 * ei.sine(var8Lifetime1, (byte) -23) >> 17;
-          wn.field_j.a(wn.field_j.field_o << 3, wn.field_j.field_v << 3, SoftwareRasterizer.field_g << 3, SoftwareRasterizer.field_f << 3, var8Lifetime1 << 3, 4096);
+          wn.field_j.rotateNearest(wn.field_j.field_o << 3, wn.field_j.field_v << 3, SoftwareRasterizer.field_g << 3, SoftwareRasterizer.field_f << 3, var8Lifetime1 << 3, 4096);
           TeamManagementScreen.e(118);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -337,13 +337,13 @@ final class PasswordValidator extends TextFieldValidator {
           var6 = var5 + var5 + var4;
           var7 = -(var6 >> 1) + param1;
           var8 = -34 + param0;
-          SoftwareRasterizer.a(var7, var8, var4 + (var5 << 1), 69, 16777215, 30);
-          SoftwareRasterizer.h(var7 - 1, -1 + var8, 2 + (var4 + (var5 << 1)), 71, 16777215, 128);
+          SoftwareRasterizer.fillRectangleAlpha(var7, var8, var4 + (var5 << 1), 69, 16777215, 30);
+          SoftwareRasterizer.drawRectangleAlpha(var7 - 1, -1 + var8, 2 + (var4 + (var5 << 1)), 71, 16777215, 128);
           for (var9 = 1; var9 < 3; var9++) {
-            SoftwareRasterizer.c(var7 + 4, var8 + (var9 * 22 - 1), -10 + var6, 16777215, 100);
+            SoftwareRasterizer.drawHorizontalLineAlpha(var7 + 4, var8 + (var9 * 22 - 1), -10 + var6, 16777215, 100);
           }
-          SoftwareRasterizer.f(var7 + var4, 4 + var8, 59, 16777215, 100);
-          SoftwareRasterizer.f(var4 + var7 + var5, 4 + var8, 59, 16777215, 100);
+          SoftwareRasterizer.drawVerticalLineAlpha(var7 + var4, 4 + var8, 59, 16777215, 100);
+          SoftwareRasterizer.drawVerticalLineAlpha(var4 + var7 + var5, 4 + var8, 59, 16777215, 100);
           var9Lifetime1 = 22 + var8 - 4;
           ((BitmapFont) ((Object) var3)).c(ns.field_d[0], var7 - (-var4 + 5), var9Lifetime1, 16777215, 65793);
           ((BitmapFont) ((Object) var3)).d(ns.field_d[1], (var5 >> 1) + (var7 + var4), var9Lifetime1, 16777215, 65793);

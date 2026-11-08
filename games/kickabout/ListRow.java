@@ -135,7 +135,7 @@ abstract class ListRow extends UiLayoutNode {
             field_Bb = (String) null;
           }
           if (InstrumentNoteMask.field_i != 256) {
-            param3.a(param1, param2, InstrumentNoteMask.field_i * param3.field_o >> 8, InstrumentNoteMask.field_i * param3.field_v >> 8);
+            param3.drawScaled(param1, param2, InstrumentNoteMask.field_i * param3.field_o >> 8, InstrumentNoteMask.field_i * param3.field_v >> 8);
             return;
           }
           param3.c(param1, param2);

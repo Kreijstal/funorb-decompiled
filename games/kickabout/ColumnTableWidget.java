@@ -303,7 +303,7 @@ class ColumnTableWidget extends UiLayoutNode {
         int var8Lifetime1Lifetime1;
         int var8Lifetime1Lifetime2;
         var12 = Kickabout.field_G;
-        SoftwareRasterizer.a(this.field_F, this.field_T + 20, this.field_q, this.field_mb - 20, 16777215, 60);
+        SoftwareRasterizer.fillRectangleAlpha(this.field_F, this.field_T + 20, this.field_q, this.field_mb - 20, 16777215, 60);
         if (this.field_Cb.field_Eb.isLinked((byte) -113)) {
           var2_ref_ji = this.field_Cb.field_Eb;
           SoftwareRasterizer.darkenRectangle(3 + ((UiLayoutNode) ((Object) var2_ref_ji)).field_F, ((UiLayoutNode) ((Object) var2_ref_ji)).field_T, ((UiLayoutNode) ((Object) var2_ref_ji)).field_q - 6, ((UiLayoutNode) ((Object) var2_ref_ji)).field_mb);
@@ -319,9 +319,9 @@ class ColumnTableWidget extends UiLayoutNode {
           AuctionListing.a(var13.field_F + var13.field_q, -22914, var13.field_F, var13.field_T - (-var13.field_mb + 1), var13.field_T);
           stackIn_13_0 = (var4 != 0) ? 65793 : 5592405;
           var5_int = stackIn_13_0;
-          SoftwareRasterizer.a(1 + var13.field_F, var13.field_T, -1 + var13.field_q, 40, 10, 16777215, 60);
+          SoftwareRasterizer.fillRoundedRectangleBlended(1 + var13.field_F, var13.field_T, -1 + var13.field_q, 40, 10, 16777215, 60);
           if (var4 != 0) {
-            SoftwareRasterizer.a(var13.field_F + 1, var13.field_T, -1 + var13.field_q, 40, 10, 2280703, 90);
+            SoftwareRasterizer.fillRoundedRectangleBlended(var13.field_F + 1, var13.field_T, -1 + var13.field_q, 40, 10, 2280703, 90);
           }
           TeamManagementScreen.e(118);
           var6 = (var13.field_q >> 1) + var13.field_F;
@@ -335,12 +335,12 @@ class ColumnTableWidget extends UiLayoutNode {
               if (1 == var10.field_i) {
                 eo.field_b.c(var8, var9 - 1);
               } else {
-                eo.field_b.b(var8, var9);
+                eo.field_b.drawVerticalFlip(var8, var9);
               }
             } else {
               var11 = eo.field_l[var10.field_i % 3];
               if (var10.field_i >= 3) {
-                var11.b(var8, -1 + var9);
+                var11.drawVerticalFlip(var8, -1 + var9);
               } else {
                 var11.c(var8, var9);
               }
@@ -361,7 +361,7 @@ class ColumnTableWidget extends UiLayoutNode {
                 if (!this.field_Bb[var8Lifetime1].field_gb) {
                   SoftwareRasterizer.darkenRectangle(var7Lifetime1, var5.field_T, this.field_Bb[var8Lifetime1].field_q, var5.field_mb);
                 } else {
-                  SoftwareRasterizer.a(var7Lifetime1, var5.field_T, this.field_Bb[var8Lifetime1].field_q, var5.field_mb, 2280703, 90);
+                  SoftwareRasterizer.fillRectangleAlpha(var7Lifetime1, var5.field_T, this.field_Bb[var8Lifetime1].field_q, var5.field_mb, 2280703, 90);
                   stackIn_35_0 = (var8Lifetime1 == this.field_Bb.length - 1) ? 0 : 1;
                   var9Lifetime1 = stackIn_35_0;
                   SoftwareRasterizer.e(var7Lifetime1, var5.field_T, var9Lifetime1 + this.field_Bb[var8Lifetime1].field_q, var5.field_mb, 65793);
@@ -369,11 +369,11 @@ class ColumnTableWidget extends UiLayoutNode {
                 var7Lifetime1 = var7Lifetime1 + this.field_Bb[var8Lifetime1].field_q;
               }
             } else {
-              SoftwareRasterizer.a(var5.field_F, var5.field_T, var5.field_q, var5.field_mb, 2280703, 90);
+              SoftwareRasterizer.fillRectangleAlpha(var5.field_F, var5.field_T, var5.field_q, var5.field_mb, 2280703, 90);
             }
             SoftwareRasterizer.e(var5.field_F, var5.field_T, var5.field_q, var5.field_mb, 65793);
             for (var8Lifetime1Lifetime1 = 0; var8Lifetime1Lifetime1 < 4; var8Lifetime1Lifetime1++) {
-              SoftwareRasterizer.h(-var8Lifetime1Lifetime1 + (var5.field_F + 3), -var8Lifetime1Lifetime1 + 3 + var5.field_T, var8Lifetime1Lifetime1 - 6 + (var5.field_q + var8Lifetime1Lifetime1), var5.field_mb + (-6 + var8Lifetime1Lifetime1 + var8Lifetime1Lifetime1), 65793, var8Lifetime1Lifetime1 << 4);
+              SoftwareRasterizer.drawRectangleAlpha(-var8Lifetime1Lifetime1 + (var5.field_F + 3), -var8Lifetime1Lifetime1 + 3 + var5.field_T, var8Lifetime1Lifetime1 - 6 + (var5.field_q + var8Lifetime1Lifetime1), var5.field_mb + (-6 + var8Lifetime1Lifetime1 + var8Lifetime1Lifetime1), 65793, var8Lifetime1Lifetime1 << 4);
             }
             for (var8Lifetime1Lifetime2 = 0; var8Lifetime1Lifetime2 < this.field_Bb.length; var8Lifetime1Lifetime2++) {
               if (this.field_Bb[var8Lifetime1Lifetime2].field_gb) {

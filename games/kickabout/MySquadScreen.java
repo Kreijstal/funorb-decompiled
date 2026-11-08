@@ -179,10 +179,10 @@ final class MySquadScreen extends TeamManagementScreen {
         var22 = Kickabout.field_G;
         super.drawScreen(param0, param1);
         var25 = this.field_Y;
-        SoftwareRasterizer.a(var25.field_F, var25.field_T, var25.field_q, var25.field_mb, 65793, 96);
+        SoftwareRasterizer.fillRectangleAlpha(var25.field_F, var25.field_T, var25.field_q, var25.field_mb, 65793, 96);
         var3 = (UiLayoutNode) (this.field_Y.field_jb.g(24009));
         while (var3 != null) {
-          SoftwareRasterizer.a(var3.field_F, var3.field_T, var3.field_q, var3.field_mb, 10, 65793, 96);
+          SoftwareRasterizer.fillRoundedRectangleBlended(var3.field_F, var3.field_T, var3.field_q, var3.field_mb, 10, 65793, 96);
           un.field_d.a(var3.field_E, var3.field_F + 10, var3.field_T + 20, 16777215, -1);
           var3 = (UiLayoutNode) (this.field_Y.field_jb.c(33));
         }

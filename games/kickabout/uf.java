@@ -223,7 +223,7 @@ final class uf {
               SoftwareRasterizer.fillRect(SoftwareRasterizer.field_g - 6 >> 1, 26, 6, 10, var5);
               TeamManagementScreen.e(120);
               var6 = (var4 << 16) / 6;
-              var8.a(608, 736, 608, 736, var6, 4096);
+              var8.rotateNearest(608, 736, 608, 736, var6, 4096);
             }
             DialogOverlay.field_f[-var3 + 5] = new ArgbSprite(38, 46);
             eo.downscaleByHalf(var2, DialogOverlay.field_f[5 - var3]);

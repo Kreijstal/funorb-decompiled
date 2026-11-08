@@ -72,7 +72,7 @@ final class CheatCodeListener implements OverlayLayer {
           var2 = (-1 + LoginDialog.field_bb << 8) / 16;
           if (0 < var2) {
             var1 = 1;
-            SoftwareRasterizer.a(0, 0, SoftwareRasterizer.field_g, SoftwareRasterizer.field_f, 0, var2);
+            SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_g, SoftwareRasterizer.field_f, 0, var2);
           }
         }
         if (param0 != -27302) {

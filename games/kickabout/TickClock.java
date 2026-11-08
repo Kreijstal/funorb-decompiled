@@ -31,7 +31,7 @@ abstract class TickClock {
 
     final static void a(int param0) {
         TextFieldNode.field_Wb = true;
-        gl.field_c = null;
+        InstrumentEnvelope.field_c = null;
         MySquadScreen.field_N = null;
         ContentTransitionDialog.field_Y = null;
         h.field_e = null;

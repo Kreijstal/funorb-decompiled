@@ -20,7 +20,7 @@ final class FindingOpponentScreen extends ButtonMenuScreen {
         int var5 = 0;
         int var6 = Kickabout.field_G;
         super.drawOverlay(param0, 116);
-        SoftwareRasterizer.a(this.field_A.field_F - 150, this.field_A.field_T - 150, this.field_A.field_q + 300, this.field_A.field_mb + 160, 8, 65793, this.field_C >> 1);
+        SoftwareRasterizer.fillRoundedRectangleBlended(this.field_A.field_F - 150, this.field_A.field_T - 150, this.field_A.field_q + 300, this.field_A.field_mb + 160, 8, 65793, this.field_C >> 1);
         this.field_A.draw(50, param0);
         String var3 = SingleChildContainer.field_w.toLowerCase();
         int var4 = (int)Math.abs(-(nj.monotonicMillis(-58) / 1000L % 6L) + 3L);

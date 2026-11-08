@@ -16,7 +16,7 @@ final class br {
             var4 = var3;
             var4 = var3;
           }
-          var4 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, ListingRowCache.field_e[35], new String[]{kw.field_c[param1], var3});
+          var4 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, ListingRowCache.field_e[35], new String[]{AvailabilityCheckRequest.field_c[param1], var3});
           if (hv.field_a[param1] &&
             !c.a(param1, 0, BufferedSocket.field_f)) {
             var4 = ContextMenuItem.field_Gb;
@@ -30,7 +30,7 @@ final class br {
           var4 = var3;
           var4 = var3;
         }
-        var4 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, ListingRowCache.field_e[35], new String[]{kw.field_c[param1], var3});
+        var4 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, ListingRowCache.field_e[35], new String[]{AvailabilityCheckRequest.field_c[param1], var3});
         if (hv.field_a[param1] &&
           !c.a(param1, 0, BufferedSocket.field_f)) {
           var4 = ContextMenuItem.field_Gb;
@@ -41,18 +41,18 @@ final class br {
     final static boolean a(int param0) {
         if (param0 <= 39) {
           br.a((byte) 2, -21);
-          if (null == k.field_m) {
+          if (null == StreetSceneryLoader.field_m) {
             return false;
           }
-          if (k.field_m.h((byte) 16)) {
+          if (StreetSceneryLoader.field_m.h((byte) 16)) {
             return true;
           }
           return false;
         }
-        if (null == k.field_m) {
+        if (null == StreetSceneryLoader.field_m) {
           return false;
         }
-        if (k.field_m.h((byte) 16)) {
+        if (StreetSceneryLoader.field_m.h((byte) 16)) {
           return true;
         }
         return false;

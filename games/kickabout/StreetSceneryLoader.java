@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class k extends IntrusiveNode {
+final class StreetSceneryLoader extends IntrusiveNode {
     static boolean field_k;
     static HoverTooltip field_m;
     static Sprite field_j;
@@ -12,10 +12,10 @@ final class k extends IntrusiveNode {
     static int field_i;
     static String field_h;
 
-    final static void a(boolean param0, int param1) {
+    final static void enqueuePromotionDialog(boolean param0, int param1) {
         ScrollPane.field_Jb.addLast(new PromotionDialog(param1), 3);
         if (!param0) {
-          k.loadStreetScenery(-78);
+          StreetSceneryLoader.loadStreetScenery(-78);
         }
     }
 
@@ -24,7 +24,7 @@ final class k extends IntrusiveNode {
           return -1;
         }
         if (param0 > -121) {
-          k.a(true, -119);
+          StreetSceneryLoader.enqueuePromotionDialog(true, -119);
           if (QuickChatKeysHelpPanel.field_Cb.a(false, "street")) {
             vk.field_b = true;
             oo.field_b = ng.a("cars", "street", 2, QuickChatKeysHelpPanel.field_Cb);
@@ -44,7 +44,7 @@ final class k extends IntrusiveNode {
         return QuickChatKeysHelpPanel.field_Cb.getGroupProgressByName("street", -16248);
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_f = null;
         if (param0 > -28) {
           return;
@@ -56,7 +56,7 @@ final class k extends IntrusiveNode {
         field_j = null;
     }
 
-    private k() throws Throwable {
+    private StreetSceneryLoader() throws Throwable {
         throw new Error();
     }
 

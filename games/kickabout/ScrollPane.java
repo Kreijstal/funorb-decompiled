@@ -281,7 +281,7 @@ final class ScrollPane extends UiLayoutNode {
           if (!SaveChangesDialog.field_G) {
             SquadPickerDialog.g((byte) 66);
           } else {
-            kw.b(0);
+            AvailabilityCheckRequest.b(0);
           }
           WeightedLruCache.field_a = ContextMenuItem.field_Hb;
           return;

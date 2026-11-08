@@ -35,12 +35,12 @@ final class bw {
           return (ak) null;
         }
         ak var6 = new ak(4);
-        var6.field_e = ((ArgbSprite) (SpriteState.field_p[param5 ? 1 : 0])).h();
+        var6.field_e = ((ArgbSprite) (SpriteState.field_p[param5 ? 1 : 0])).copyArgb();
         if (param2) {
-          var6.field_e.g();
+          var6.field_e.flipHorizontalInPlace();
         }
         for (var7 = 0; var7 < param1; var7++) {
-          var6.field_e.d();
+          var6.field_e.rotateClockwise();
         }
         var6.field_g = -(var6.field_e.field_v >> 1) + param3;
         var6.field_k = param0;

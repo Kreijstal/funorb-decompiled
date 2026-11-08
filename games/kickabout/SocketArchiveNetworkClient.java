@@ -20,7 +20,7 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
           int stackIn_61_0 = 0;
           Throwable decompiledCaughtException = null;
           long var2_long = 0L;
-          ui var2 = null;
+          NetworkArchiveRequest var2 = null;
           IOException var2_ref = null;
           int var3_int = 0;
           Exception var3 = null;
@@ -35,11 +35,11 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
           int var11 = 0;
           long var12 = 0L;
           Object var14 = null;
-          ui var14_ref = null;
+          NetworkArchiveRequest var14_ref = null;
           int var15 = 0;
           int var16 = 0;
           int var17 = 0;
-          ui var2Lifetime1;
+          NetworkArchiveRequest var2Lifetime1;
           int var3_intLifetime1;
           var16 = Kickabout.field_G;
           if (null != this.field_x) {
@@ -71,7 +71,7 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
           }
           try {
             this.field_x.checkWriteError((byte) -113);
-            var2 = (ui) (this.field_h.a(-116));
+            var2 = (NetworkArchiveRequest) (this.field_h.a(-116));
             var3_int = -71 % ((param0 - 30) / 37);
             while (var2 != null) {
               this.field_d.field_n = 0;
@@ -79,16 +79,16 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
               this.field_d.b((byte) 83, var2.field_l);
               this.field_x.write(this.field_d.field_f.length, (byte) -127, 0, this.field_d.field_f);
               this.field_b.addLast(127, var2);
-              var2 = (ui) (this.field_h.b(0));
+              var2 = (NetworkArchiveRequest) (this.field_h.b(0));
             }
-            var2Lifetime1 = (ui) (this.field_c.a(-117));
+            var2Lifetime1 = (NetworkArchiveRequest) (this.field_c.a(-117));
             while (var2Lifetime1 != null) {
               this.field_d.field_n = 0;
               this.field_d.writeByte(116, 0);
               this.field_d.b((byte) 18, var2Lifetime1.field_l);
               this.field_x.write(this.field_d.field_f.length, (byte) -127, 0, this.field_d.field_f);
               this.field_j.addLast(127, var2Lifetime1);
-              var2Lifetime1 = (ui) (this.field_c.b(0));
+              var2Lifetime1 = (NetworkArchiveRequest) (this.field_c.b(0));
             }
             for (var2_int = 0; 100 > var2_int; var2_int++) {
               var3_intLifetime1 = this.field_x.a((byte) 63);
@@ -127,7 +127,7 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
                   this.field_k.field_u = this.field_k.field_u + var6;
                   if (this.field_k.field_v.field_n == var5) {
                     this.field_k.unlinkSecondary(50);
-                    this.field_k.field_p = false;
+                    this.field_k.pending = false;
                     this.field_k = null;
                   } else {
                     if (this.field_k.field_u == 512) {
@@ -161,24 +161,24 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
                       var12 = ((long)var6 << 32) + (long)var7;
                       var14 = null;
                       if (var11 != 0) {
-                        var14_ref = (ui) (this.field_j.a(-127));
+                        var14_ref = (NetworkArchiveRequest) (this.field_j.a(-127));
                         while (var14_ref != null) {
                           if (~var12 == ~var14_ref.field_l) {
                             decompiledFrameCompleted0 = false;
                             break;
                           }
-                          var14_ref = (ui) (this.field_j.b(0));
+                          var14_ref = (NetworkArchiveRequest) (this.field_j.b(0));
                         }
                         decompiledFrameRemainder0 = !(decompiledFrameCompleted0);
                       }
                       if ((decompiledFrameRemainder0) &&
                         (decompiledFrameCompleted0)) {
-                        var14_ref = (ui) (this.field_b.a(-115));
+                        var14_ref = (NetworkArchiveRequest) (this.field_b.a(-115));
                         while (var14_ref != null) {
                           if (~var12 == ~var14_ref.field_l) {
                             break;
                           }
-                          var14_ref = (ui) (this.field_b.b(0));
+                          var14_ref = (NetworkArchiveRequest) (this.field_b.b(0));
                         }
                       }
                       if (var14_ref == null) {
@@ -300,12 +300,12 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
           String stackIn_26_2 = null;
           Throwable decompiledCaughtException = null;
           Exception var4 = null;
-          ui var4_ref = null;
+          NetworkArchiveRequest var4_ref = null;
           IOException var4_ref2 = null;
           RuntimeException var4_ref3 = null;
           Exception var5 = null;
           int var6 = 0;
-          ui var4_refLifetime1;
+          NetworkArchiveRequest var4_refLifetime1;
           var6 = Kickabout.field_G;
           try {
             if (this.field_x != null) {
@@ -326,7 +326,7 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
             this.field_k = null;
             this.field_n.field_n = 0;
             while (true) {
-              var4_ref = (ui) (this.field_b.removeFirst((byte) 105));
+              var4_ref = (NetworkArchiveRequest) (this.field_b.removeFirst((byte) 105));
               if (var4_ref != null) {
                 this.field_h.addLast(127, var4_ref);
                 continue;
@@ -334,7 +334,7 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
               break;
             }
             while (true) {
-              var4_refLifetime1 = (ui) (this.field_j.removeFirst((byte) 118));
+              var4_refLifetime1 = (NetworkArchiveRequest) (this.field_j.removeFirst((byte) 118));
               if (var4_refLifetime1 != null) {
                 this.field_c.addLast(127, var4_refLifetime1);
                 continue;

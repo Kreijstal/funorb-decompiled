@@ -182,7 +182,7 @@ final class fv implements OverlayLayer {
           var27 = GameModesHelpScreen.a(var2, var10, var9Lifetime1, 0, var3);
           var3 = var27[1];
           var2 = var27[0];
-          SoftwareRasterizer.a(4 + var2, 3 + var3, var9Lifetime1, var10, 65793, 128);
+          SoftwareRasterizer.fillRectangleAlpha(4 + var2, 3 + var3, var9Lifetime1, var10, 65793, 128);
           SoftwareRasterizer.e(var2 - 1, var3 - 1, 2 + var9Lifetime1, var10 + 2, 65793);
           SoftwareRasterizer.fillRect(var2, var3, var9Lifetime1, var10, 16777185);
           for (var12 = 0; var6.length > var12; var12++) {
@@ -200,7 +200,7 @@ final class fv implements OverlayLayer {
             var24 = GameModesHelpScreen.a(var2, var7, var6_int, 0, var3);
             var3 = var24[1];
             var2 = var24[0];
-            SoftwareRasterizer.a(var2 - 2, var3 - 2, 4 + var6_int, var7 + 4, 6, 65793, 200);
+            SoftwareRasterizer.fillRoundedRectangleBlended(var2 - 2, var3 - 2, 4 + var6_int, var7 + 4, 6, 65793, 200);
             AccountTermsPanel.field_G.a((byte) 77, 3 + var2, ok.field_c, VerticalScrollbar.field_Ib, MessageDialog.field_x, cr.field_c, var3 + 3, CachedListingRow.field_j);
           } else {
             if (AuctionItem.field_e == 6) {
@@ -209,7 +209,7 @@ final class fv implements OverlayLayer {
               var26 = GameModesHelpScreen.a(var2, var7, var6_int, 0, var3);
               var2 = var26[0];
               var3 = var26[1];
-              SoftwareRasterizer.a(-2 + var2, var3 - 2, var6_int + 4, var7 + 4, 6, 65793, 200);
+              SoftwareRasterizer.fillRoundedRectangleBlended(-2 + var2, var3 - 2, var6_int + 4, var7 + 4, 6, 65793, 200);
               pc.field_a.drawCentered((var7 >> 1) + var3, 23, var2 + (var6_int >> 1));
             } else {
               if (AuctionItem.field_e == 1) {
@@ -224,7 +224,7 @@ final class fv implements OverlayLayer {
                 var25 = GameModesHelpScreen.a(var2, var8, var7, 0, var3);
                 var3 = var25[1];
                 var2 = var25[0];
-                SoftwareRasterizer.a(3 + var2, var3 + 2, var7, var8, 65793, 128);
+                SoftwareRasterizer.fillRectangleAlpha(3 + var2, var3 + 2, var7, var8, 65793, 128);
                 SoftwareRasterizer.e(var2 - 1, -1 + var3, 2 + var7, var8 + 2, 65793);
                 SoftwareRasterizer.fillRect(var2, var3, var7, var8, 16777185);
                 ((BitmapFont) ((Object) var4)).a(wp.field_h, 5 + var2, -2 + var3 + 5, var7 - 10, var8, 65793, -1, 0, 0, 12);

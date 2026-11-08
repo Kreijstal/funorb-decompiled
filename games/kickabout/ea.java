@@ -65,7 +65,7 @@ final class ea {
             var11 = -(var7 < 10 ? 3 : 0) + 25;
             var13 = var9 * 50 >> 8;
           }
-          SoftwareRasterizer.a(-var13 + param3, param1, var13, var14, 2, 0, param4);
+          SoftwareRasterizer.fillRoundedRectangleBlended(-var13 + param3, param1, var13, var14, 2, 0, param4);
           if (256 != var9) {
             PacketBuffer.a(-122, ph.field_b);
             SoftwareRasterizer.clearFramebuffer();

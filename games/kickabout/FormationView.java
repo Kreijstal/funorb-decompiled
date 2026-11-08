@@ -52,7 +52,7 @@ final class FormationView extends MatchPhaseView {
             this.field_g == this.field_a.b((byte) -89, this.field_h)) {
             var3_int = 0;
             for (var4 = 0; var4 < this.field_a.playerCount; var4++) {
-              if (~this.field_a.field_g[var4].field_p == ~this.field_h) {
+              if (~this.field_a.field_g[var4].team == ~this.field_h) {
                 var3_int++;
               }
             }
@@ -75,13 +75,13 @@ final class FormationView extends MatchPhaseView {
         stackIn_22_0 = 10 + var4Lifetime1;
         stackIn_23_1 = (var3_intLifetime1 == 0) ? 0 : 60;
         var6 = stackIn_22_0 + stackIn_23_1;
-        SoftwareRasterizer.f(390, var5, 205, var6, 10, 983040);
-        SoftwareRasterizer.a(390, var5, 205, var6, 10, 65793, 140);
+        SoftwareRasterizer.drawRoundedRectangle(390, var5, 205, var6, 10, 983040);
+        SoftwareRasterizer.fillRoundedRectangleBlended(390, var5, 205, var6, 10, 65793, 140);
         IsSixCommand.field_C.a(var2_ref_String, 400, var5 + 8, 185, var6, 16777215, -1, param0, 0, 16);
         this.positionButtons(param0 - 95);
         this.drawCountdown(param0 ^ -2352, this.field_a.phaseTime);
         var2 = this.field_a.field_C.formationChoice[this.field_h];
-        SoftwareRasterizer.a(220, 332, 150, 26, 8, 65793, 128);
+        SoftwareRasterizer.fillRoundedRectangleBlended(220, 332, 150, 26, 8, 65793, 128);
         var3 = AuctionsHelpScreen.field_F[var2].toLowerCase();
         un.field_d.d(var3, 293, 351, 16777215, -1);
         TextLayoutLine.field_f.c(220, 100);
@@ -97,7 +97,7 @@ final class FormationView extends MatchPhaseView {
         var4Lifetime3 = 110;
         var5Lifetime2 = 230;
         if (-2 != this.field_g &&
-          this.field_a.field_g[this.field_g].field_p == 1) {
+          this.field_a.field_g[this.field_g].team == 1) {
           var6Lifetime2 = var4Lifetime3;
           var4Lifetime3 = var5Lifetime2;
           var5Lifetime2 = var6Lifetime2;
@@ -160,14 +160,14 @@ final class FormationView extends MatchPhaseView {
         if (this.field_g == -2) {
           return false;
         }
-        var3 = this.field_a.field_g[this.field_g].field_p;
-        if (this.field_a.b((byte) -71, this.field_a.field_g[this.field_g].field_p) != this.field_g) {
+        var3 = this.field_a.field_g[this.field_g].team;
+        if (this.field_a.b((byte) -71, this.field_a.field_g[this.field_g].team) != this.field_g) {
           return false;
         }
         if (this.field_a.field_C.formationConfirmed[var3]) {
           return false;
         }
-        var4 = this.field_a.field_C.formationChoice[this.field_a.field_g[this.field_g].field_p];
+        var4 = this.field_a.field_C.formationChoice[this.field_a.field_g[this.field_g].team];
         if (param1 != 50) {
           field_s = (String) null;
         }

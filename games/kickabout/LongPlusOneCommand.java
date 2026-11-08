@@ -85,8 +85,8 @@ final class LongPlusOneCommand extends ConsoleCommand {
         gg.a(param2, 0, param0.field_V);
         int var3_int = ug.a(0, param0.field_V.pixelX(true));
         int var4 = IntKeyLookup.a((byte) -110, param0.field_V.pixelY(879306160));
-        SoftwareRasterizer.e(var3_int, var4, ug.a(0, TriangleMesh.field_B[0]), IntKeyLookup.a((byte) -70, or.field_a[0]), 16777215, 64);
-        SoftwareRasterizer.e(var3_int, var4, ug.a(0, TriangleMesh.field_B[1]), IntKeyLookup.a((byte) -68, or.field_a[1]), 16777215, 64);
+        SoftwareRasterizer.drawLineBlendedInclusive(var3_int, var4, ug.a(0, TriangleMesh.field_B[0]), IntKeyLookup.a((byte) -70, or.field_a[0]), 16777215, 64);
+        SoftwareRasterizer.drawLineBlendedInclusive(var3_int, var4, ug.a(0, TriangleMesh.field_B[1]), IntKeyLookup.a((byte) -68, or.field_a[1]), 16777215, 64);
         SoftwareRasterizer.drawLine(ug.a(0, TriangleMesh.field_B[0]), IntKeyLookup.a((byte) -92, or.field_a[0]), ug.a(0, TriangleMesh.field_B[1]), IntKeyLookup.a((byte) -98, or.field_a[1]), 16777215);
         if (param1 <= 22) {
           return;
@@ -98,7 +98,7 @@ final class LongPlusOneCommand extends ConsoleCommand {
           SoftwareRasterizer.drawLine(-4 + var5, var6 - 4, var5 + 4, 4 + var6, 16776960);
           SoftwareRasterizer.drawLine(var5 - 4, var6 + 4, var5 + 4, var6 - 4, 16776960);
           var7 = param0.field_P[param2][0];
-          SoftwareRasterizer.c(ug.a(0, 372), IntKeyLookup.a((byte) -110, var7.pixelY(true)), ug.a(0, 523) - ug.a(0, 372), 16776960, 128);
+          SoftwareRasterizer.drawHorizontalLineAlpha(ug.a(0, 372), IntKeyLookup.a((byte) -110, var7.pixelY(true)), ug.a(0, 523) - ug.a(0, 372), 16776960, 128);
           var8 = 4474111;
           var9 = var7.pixelX(-105) - param0.field_V.pixelX(true);
           var10 = var7.pixelY(true) - param0.field_V.pixelY(879306160);
@@ -140,7 +140,7 @@ final class LongPlusOneCommand extends ConsoleCommand {
           }
           var15Lifetime1 = ug.a(0, var7.pixelX(-116));
           var16Lifetime1 = IntKeyLookup.a((byte) -82, var7.pixelY(true));
-          SoftwareRasterizer.a(var15Lifetime1 - 50, -6 + var16Lifetime1, 100, 12, 65793, 208);
+          SoftwareRasterizer.fillRectangleAlpha(var15Lifetime1 - 50, -6 + var16Lifetime1, 100, 12, 65793, 208);
           ConsoleTokenCursor.field_d.d("DMG=" + var7.field_o + "  A=" + var7.action + "  T=" + var7.actionTime, var15Lifetime1, var16Lifetime1 + 4, 16777215, -1);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "ev.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');

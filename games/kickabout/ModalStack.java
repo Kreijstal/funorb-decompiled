@@ -255,11 +255,11 @@ final class ModalStack extends SingleChildContainer {
               stackIn_86_0 = ei.field_d.field_Eb;
             }
             if (((UiLayoutNode) (stackIn_86_0)).field_sb != 0) {
-              k.field_m = new HoverTooltip(ei.field_d.field_Eb.field_F, ei.field_d.field_Eb.field_T, ei.field_d.field_Eb.field_q, ei.field_d.field_Eb.field_mb, MainMenuScreen.field_G, StrongCacheEntry.field_u, ConsoleEvaluationException.field_e, ConsoleEvaluationException.field_e);
+              StreetSceneryLoader.field_m = new HoverTooltip(ei.field_d.field_Eb.field_F, ei.field_d.field_Eb.field_T, ei.field_d.field_Eb.field_q, ei.field_d.field_Eb.field_mb, MainMenuScreen.field_G, StrongCacheEntry.field_u, ConsoleEvaluationException.field_e, ConsoleEvaluationException.field_e);
               fs.field_b = 0;
             }
             if (ei.field_d.field_zb.field_sb != 0) {
-              k.field_m = new HoverTooltip(ei.field_d.field_zb.field_F, ei.field_d.field_zb.field_T, ei.field_d.field_zb.field_q, ei.field_d.field_zb.field_mb, TabStrip.field_yb, StrongCacheEntry.field_u, ConsoleEvaluationException.field_e, ConsoleEvaluationException.field_e);
+              StreetSceneryLoader.field_m = new HoverTooltip(ei.field_d.field_zb.field_F, ei.field_d.field_zb.field_T, ei.field_d.field_zb.field_q, ei.field_d.field_zb.field_mb, TabStrip.field_yb, StrongCacheEntry.field_u, ConsoleEvaluationException.field_e, ConsoleEvaluationException.field_e);
               fs.field_b = 1;
             }
             decompiledFrameRemainder0 = false;
@@ -417,7 +417,7 @@ final class ModalStack extends SingleChildContainer {
         }
     }
 
-    final static void a(int param0, java.awt.Component param1) {
+    final static void attachMouseInput(int param0, java.awt.Component param1) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;

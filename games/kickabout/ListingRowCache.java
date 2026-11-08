@@ -102,7 +102,7 @@ final class ListingRowCache {
           for (var5_int = 0; var5_int < 3; var5_int++) {
             for (var6 = 0; 3 > var6; var6++) {
               dk.a(param2, -112, param1, var5_int, var6);
-              SoftwareRasterizer.a(param2, param1, 156, 225, 10, 65793, 96);
+              SoftwareRasterizer.fillRoundedRectangleBlended(param2, param1, 156, 225, 10, 65793, 96);
               TeamManagementScreen.e(126);
             }
           }

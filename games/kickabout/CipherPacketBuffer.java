@@ -174,13 +174,13 @@ final class CipherPacketBuffer extends PacketBuffer {
         stackIn_5_1 = (param0) ? false : true;
         stackIn_7_2 = WhirlpoolHasher.field_m.field_q;
         stackIn_7_3 = 0;
-        if (!ui.field_t) {
+        if (!NetworkArchiveRequest.field_t) {
           stackIn_8_4 = 0;
         } else {
           stackIn_8_4 = var1;
         }
         stackIn_10_5 = WhirlpoolHasher.field_m.field_mb;
-        if (!ui.field_t) {
+        if (!NetworkArchiveRequest.field_t) {
           stackIn_11_6 = 0;
         } else {
           stackIn_11_6 = var1;
@@ -196,7 +196,7 @@ final class CipherPacketBuffer extends PacketBuffer {
         LoginRequiredDialog.field_G.setBounds(true, 78, 75, 5, 30);
         TextWidgetPainter.field_n.setBounds(true, 48, 155, 5, 30);
         AuctionsHelpScreen.field_G.setBounds(true, 48, 205, 5, 30);
-        stackIn_17_0 = (ui.field_t) ? 250 : 200;
+        stackIn_17_0 = (NetworkArchiveRequest.field_t) ? 250 : 200;
         var2 = stackIn_17_0;
         stackIn_19_0 = DateInputWidget.field_D;
         stackIn_20_1 = (param0) ? false : true;
@@ -205,7 +205,7 @@ final class CipherPacketBuffer extends PacketBuffer {
         ShopPlayerSlot.field_Jb.setLayout(2, 55, -10 + (bt.field_b.field_mb - 32), 37, 5, -5 + bt.field_b.field_q - 5, TeamSelectionAgent.field_f);
         var3 = (2 + af.field_d.field_q) / 2;
         dr.field_d.setBounds(true, var3 - 2, 0, -40 + af.field_d.field_mb, 40);
-        if (!ui.field_t) {
+        if (!NetworkArchiveRequest.field_t) {
           var3 = 0;
         }
         LoginCredentials.field_b.setBounds(true, -var3 + af.field_d.field_q, var3, -40 + af.field_d.field_mb, 40);

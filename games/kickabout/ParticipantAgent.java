@@ -1,30 +1,30 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class it extends MatchAgent {
+final class ParticipantAgent extends MatchAgent {
     boolean field_l;
     int[] field_o;
     static ScrollBar field_m;
-    int field_p;
+    int team;
     int field_f;
     int field_h;
     int field_k;
     int field_g;
-    private int field_j;
+    private int participantIndex;
     static boolean field_n;
     boolean field_i;
 
     final void copyStateFrom(byte param0, MatchAgent param1) {
         int var4 = 0;
         int var5 = Kickabout.field_G;
-        it var6 = (it) (param1);
-        it var3 = var6;
+        ParticipantAgent var6 = (ParticipantAgent) (param1);
+        ParticipantAgent var3 = var6;
         if (param0 >= -52) {
           return;
         }
         try {
           this.field_k = var3.field_k;
-          this.field_p = var3.field_p;
+          this.team = var3.team;
           this.field_l = var3.field_l;
           this.field_g = var3.field_g;
           for (var4 = 0; var4 < this.field_o.length; var4++) {
@@ -38,7 +38,7 @@ final class it extends MatchAgent {
         }
     }
 
-    final static void a(SoundCache param0, ResourceArchive param1, byte param2) {
+    final static void initializeGameSoundEffects(SoundCache param0, ResourceArchive param1, byte param2) {
         bq.field_a = param0;
         SortCriterion.field_h = param1;
         TextFieldNode.field_Db[44] = new GameSoundEffect(bq.field_a.a("", true, "KaB_menu_btn"));
@@ -167,18 +167,18 @@ final class it extends MatchAgent {
         }
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 <= 54) {
           field_n = true;
         }
         field_m = null;
     }
 
-    it(int param0, boolean param1) {
-        this.field_j = param0;
+    ParticipantAgent(int param0, boolean param1) {
+        this.participantIndex = param0;
         this.field_g = 0;
         this.field_k = 0;
-        this.field_e = this.field_j;
+        this.field_e = this.participantIndex;
         this.field_o = new int[4];
     }
 

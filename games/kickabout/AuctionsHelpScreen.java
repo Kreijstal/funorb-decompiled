@@ -130,7 +130,7 @@ final class AuctionsHelpScreen extends PagedHelpScreen {
         var9 = Kickabout.field_G;
         super.drawScreen(param0, param1);
         if (this.pageIndex == 0) {
-          SoftwareRasterizer.a(this.slideOffsetX + 40, 198, 560, 200, 10, 65793, 128);
+          SoftwareRasterizer.fillRoundedRectangleBlended(this.slideOffsetX + 40, 198, 560, 200, 10, 65793, 128);
           ms.a(wa.field_b, this.slideOffsetX + 40, 560, false, 0, 126);
           un.field_d.a(c.field_h.toLowerCase(), 56 + this.slideOffsetX, 222, 16777215, -1);
           for (var3 = 0; var3 < 3; var3++) {
@@ -146,7 +146,7 @@ final class AuctionsHelpScreen extends PagedHelpScreen {
               var5 = stackIn_12_0;
               var5 = var5 + this.slideOffsetX;
               var6 = 146;
-              SoftwareRasterizer.a(-10 + var5, 126, 265, 270, 10, 65793, 140);
+              SoftwareRasterizer.fillRoundedRectangleBlended(-10 + var5, 126, 265, 270, 10, 65793, 140);
               if (var3 == 1) {
                 var6 += 50;
               }
@@ -204,7 +204,7 @@ final class AuctionsHelpScreen extends PagedHelpScreen {
           var2 = 0;
           if (var1_int != 0 &&
             re.field_c.selectedIndex >= 0) {
-            var2 = gl.field_d[re.field_c.selectedIndex];
+            var2 = InstrumentEnvelope.field_d[re.field_c.selectedIndex];
             if (2 == var2) {
               ImageProducerRasterBuffer.c((byte) -77);
             }

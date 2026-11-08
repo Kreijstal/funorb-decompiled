@@ -126,7 +126,7 @@ final class StripedProgressBar extends UiWidget {
             PacketBuffer.a(param2 ^ -84, this.field_I);
             param0.c(-this.field_H, 0);
             param0.c(this.field_G * 2 - this.field_H, 0);
-            this.field_D.e(0, 0);
+            this.field_D.drawMultiply(0, 0);
             TeamManagementScreen.e(117);
             this.field_I.c(param1, param3);
           }
@@ -136,7 +136,7 @@ final class StripedProgressBar extends UiWidget {
             }
             param0.c(-var7, 0);
             param0.c(-var7 + 2 * this.field_G, 0);
-            this.field_v.e(0, 0);
+            this.field_v.drawMultiply(0, 0);
             TeamManagementScreen.e(120);
             this.field_I.c(-this.field_v.field_q + var5_int, param3);
             return;
@@ -293,7 +293,7 @@ final class StripedProgressBar extends UiWidget {
         }
         this.field_z = new Sprite[]{this.a(-257, this.field_A, this.field_E), this.a(-257, this.field_x, this.field_F)};
         this.field_v = this.a(false);
-        this.field_D = this.field_v.flipHorizontal();
+        this.field_D = this.field_v.copyFlippedHorizontally();
         this.field_I = new Sprite(this.field_i >> 1, this.field_i);
     }
 

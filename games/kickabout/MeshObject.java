@@ -259,11 +259,11 @@ abstract class MeshObject {
             }
             TickClock.field_j = false;
           }
-          if (k.field_k) {
+          if (StreetSceneryLoader.field_k) {
             ReceivedAuctionItem.f((byte) 119);
             vr.a(-2);
             RasterStateSnapshot.a(0);
-            k.field_k = false;
+            StreetSceneryLoader.field_k = false;
           }
           if (param0 < 42) {
             field_a = (int[]) null;

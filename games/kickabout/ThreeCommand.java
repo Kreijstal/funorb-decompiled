@@ -100,9 +100,9 @@ final class ThreeCommand extends ConsoleCommand {
         if (param1 > -10) {
           field_A = (int[]) null;
         }
-        ServerMessageScreen.field_D.b(param6);
+        ServerMessageScreen.field_D.setWetGain(param6);
         ServerMessageScreen.field_D.e(param3);
-        ServerMessageScreen.field_D.d(param2);
+        ServerMessageScreen.field_D.setStereoWidth(param2);
     }
 
     static {

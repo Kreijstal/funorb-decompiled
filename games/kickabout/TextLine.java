@@ -14,10 +14,10 @@ final class TextLine extends IntrusiveNode {
 
     final static boolean a(boolean param0) {
         if (!param0) {
-          return !DualLinkDequeIterator.field_e.a((byte) -80) ? true : false;
+          return !DualLinkDequeIterator.field_e.isComplete((byte) -80) ? true : false;
         }
         field_j = (String) null;
-        return !DualLinkDequeIterator.field_e.a((byte) -80) ? true : false;
+        return !DualLinkDequeIterator.field_e.isComplete((byte) -80) ? true : false;
     }
 
     final static boolean a(byte param0, String param1, String param2) {

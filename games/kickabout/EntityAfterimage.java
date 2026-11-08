@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class v {
+final class EntityAfterimage {
     static String[] field_i;
     private int field_c;
     private int field_g;
@@ -13,20 +13,20 @@ final class v {
     private Sprite field_f;
     static int field_d;
 
-    final void a(int param0) {
+    final void tick(int param0) {
         if (param0 == 17) {
           if (this.field_a > 0) {
             this.field_a = this.field_a - 1;
           }
           return;
         }
-        this.a(-40);
+        this.tick(-40);
         if (this.field_a > 0) {
           this.field_a = this.field_a - 1;
         }
     }
 
-    final void a(RenderedFootballer param0, int param1, boolean param2) {
+    final void captureFootballer(RenderedFootballer param0, int param1, boolean param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         RuntimeException stackIn_5_0 = null;
@@ -48,7 +48,7 @@ final class v {
           if (param2) {
             return;
           }
-          this.c(119);
+          this.draw(119);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -64,7 +64,7 @@ final class v {
         }
     }
 
-    final void c(int param0) {
+    final void draw(int param0) {
         if (0 >= this.field_a) {
           return;
         }
@@ -75,10 +75,10 @@ final class v {
           return;
         }
         RenderedFootballer var4 = (RenderedFootballer) null;
-        this.a((RenderedFootballer) null, 55, true);
+        this.captureFootballer((RenderedFootballer) null, 55, true);
     }
 
-    final static Boolean d(int param0) {
+    final static Boolean takePendingBooleanResult(int param0) {
         int var2 = -80 % ((1 - param0) / 56);
         Boolean var1 = ep.field_f;
         ep.field_f = null;
@@ -93,11 +93,11 @@ final class v {
         field_b = null;
     }
 
-    v() {
+    EntityAfterimage() {
         this.field_f = new Sprite(128, 128);
     }
 
-    final void a(int param0, byte param1, RenderedBall param2) {
+    final void captureBall(int param0, byte param1, RenderedBall param2) {
         int var4_int = 0;
         try {
           this.field_g = 64;

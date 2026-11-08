@@ -27,7 +27,7 @@ final class SelectableTrinketIcon extends UiLayoutNode {
                 return;
               }
               var4 = (java.awt.Component) null;
-              SelectableTrinketIcon.a((java.awt.Component) null, -51);
+              SelectableTrinketIcon.attachKeyboardInput((java.awt.Component) null, -51);
               return;
             }
             RenderedBall.field_C = this.field_Bb;
@@ -37,7 +37,7 @@ final class SelectableTrinketIcon extends UiLayoutNode {
           return;
         }
         var4Lifetime1 = (java.awt.Component) null;
-        SelectableTrinketIcon.a((java.awt.Component) null, -51);
+        SelectableTrinketIcon.attachKeyboardInput((java.awt.Component) null, -51);
     }
 
     final static void b(int param0, int param1, int param2, int param3) {
@@ -58,7 +58,7 @@ final class SelectableTrinketIcon extends UiLayoutNode {
         var4.actionTime = var4.actionTime + param3;
     }
 
-    final static void a(java.awt.Component param0, int param1) {
+    final static void attachKeyboardInput(java.awt.Component param0, int param1) {
         try {
           int var2_int = 2 % ((-26 - param1) / 58);
           param0.setFocusTraversalKeysEnabled(false);
@@ -73,8 +73,8 @@ final class SelectableTrinketIcon extends UiLayoutNode {
         int var3;
         var3 = Kickabout.field_G;
         if (AuctionListing.field_e == this.field_Bb) {
-          SoftwareRasterizer.a(-4 + this.field_F, this.field_T - 4, 40, 40, 2, 65793, 128);
-          SoftwareRasterizer.f(this.field_F - 4, -4 + this.field_T, 40, 40, 2, 6710886);
+          SoftwareRasterizer.fillRoundedRectangleBlended(-4 + this.field_F, this.field_T - 4, 40, 40, 2, 65793, 128);
+          SoftwareRasterizer.drawRoundedRectangle(this.field_F - 4, -4 + this.field_T, 40, 40, 2, 6710886);
           if (param0) {
             if (c.a(this.field_Bb, 0, BufferedSocket.field_f)) {
               ArchivePreloader.field_i[PacketBuffer.field_e[this.field_Bb]].drawQuarterSize(this.field_F, this.field_T);
@@ -115,8 +115,8 @@ final class SelectableTrinketIcon extends UiLayoutNode {
           }
         } else {
           if (this.field_Bb == RenderedBall.field_C) {
-            SoftwareRasterizer.a(this.field_F - 4, -4 + this.field_T, 40, 40, 2, 65793, 32);
-            SoftwareRasterizer.f(this.field_F - 4, -4 + this.field_T, 40, 40, 2, 6710886);
+            SoftwareRasterizer.fillRoundedRectangleBlended(this.field_F - 4, -4 + this.field_T, 40, 40, 2, 65793, 32);
+            SoftwareRasterizer.drawRoundedRectangle(this.field_F - 4, -4 + this.field_T, 40, 40, 2, 6710886);
           }
           if (param0) {
             if (c.a(this.field_Bb, 0, BufferedSocket.field_f)) {

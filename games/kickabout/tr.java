@@ -48,7 +48,7 @@ final class tr implements OverlayLayer {
         var3 = g.field_a.field_T;
         if (!this.capturesInput((byte) 103) &&
           480 > var3) {
-          SoftwareRasterizer.c(0, var3, 640, 0, 128);
+          SoftwareRasterizer.drawHorizontalLineAlpha(0, var3, 640, 0, 128);
         }
     }
 
@@ -201,7 +201,7 @@ final class tr implements OverlayLayer {
         RuntimeException var2_ref = null;
         var5 = Kickabout.field_G;
         try {
-          if (kw.field_b == null) {
+          if (AvailabilityCheckRequest.field_b == null) {
             return null;
           }
           if (param0 == null) {
@@ -219,7 +219,7 @@ final class tr implements OverlayLayer {
             stackIn_12_0 = null;
             return (gg) (stackIn_12_0);
           }
-          var3 = (gg) (kw.field_b.a(param1 ^ -3635, (long)var2.hashCode()));
+          var3 = (gg) (AvailabilityCheckRequest.field_b.a(param1 ^ -3635, (long)var2.hashCode()));
           while (var3 != null) {
             var7 = (CharSequence) ((Object) var3.field_Gb);
             var4 = MatchAgent.a(param1 ^ 40, var7);
@@ -227,7 +227,7 @@ final class tr implements OverlayLayer {
               stackIn_19_0 = var3;
               return stackIn_19_0;
             }
-            var3 = (gg) (kw.field_b.a((byte) 103));
+            var3 = (gg) (AvailabilityCheckRequest.field_b.a((byte) 103));
           }
           return null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

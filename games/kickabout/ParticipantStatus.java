@@ -64,7 +64,7 @@ final class ParticipantStatus extends MatchAgent {
           }
           var2 = new ak(5);
           var1 = var2;
-          var2.field_e = ((ArgbSprite) (SpriteState.field_p[2])).h();
+          var2.field_e = ((ArgbSprite) (SpriteState.field_p[2])).copyArgb();
           stackIn_4_0 = var1;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

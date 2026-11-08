@@ -70,7 +70,7 @@ final class MidiPcmStream extends PcmStream {
         RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
         RuntimeException var3 = null;
-        gl var4 = null;
+        InstrumentEnvelope var4 = null;
         int var5 = 0;
         int var6 = 0;
         double var7 = 0.0;
@@ -710,7 +710,7 @@ final class MidiPcmStream extends PcmStream {
         RuntimeException decompiledCaughtException = null;
         int var6_int = 0;
         RuntimeException var6 = null;
-        gl var7 = null;
+        InstrumentEnvelope var7 = null;
         int var8 = 0;
         double var9 = 0.0;
         int var11 = 0;
@@ -1339,8 +1339,8 @@ final class MidiPcmStream extends PcmStream {
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
-        gl var10 = null;
-        gl var11 = null;
+        InstrumentEnvelope var10 = null;
+        InstrumentEnvelope var11 = null;
         int stackIn_3_0 = 0;
         int stackIn_20_0 = 0;
         RuntimeException stackIn_23_0 = null;

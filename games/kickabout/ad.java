@@ -16,7 +16,7 @@ final class ad {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 == 26300) {
-            stackIn_4_0 = MatchPhaseView.field_b + dg.a((byte) -128, 0, (long)param0, true, vv.field_r);
+            stackIn_4_0 = MatchPhaseView.field_b + dg.a((byte) -128, 0, (long)param0, true, ArchiveRequest.field_r);
             return stackIn_4_0;
           }
           stackIn_2_0 = (String) null;
@@ -379,295 +379,295 @@ final class ad {
                 }
                 var2 = DateOfBirthPanel.a("achievement_names,0", param1 - 87);
                 if (var2 != null) {
-                  kw.field_c[0] = BlackFadeScreen.a(var2, true);
+                  AvailabilityCheckRequest.field_c[0] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("achievement_names,1", param1 - 113);
                 if (null != var2) {
-                  kw.field_c[1] = BlackFadeScreen.a(var2, true);
+                  AvailabilityCheckRequest.field_c[1] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("achievement_names,2", param1 - 89);
                 if (null != var2) {
-                  kw.field_c[2] = BlackFadeScreen.a(var2, true);
+                  AvailabilityCheckRequest.field_c[2] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("achievement_names,3", param1 - 129);
                 if (null != var2) {
-                  kw.field_c[3] = BlackFadeScreen.a(var2, true);
+                  AvailabilityCheckRequest.field_c[3] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("achievement_names,4", -83);
                 if (null != var2) {
-                  kw.field_c[4] = BlackFadeScreen.a(var2, true);
+                  AvailabilityCheckRequest.field_c[4] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("achievement_names,5", param1 - 124);
                 if (null != var2) {
-                  kw.field_c[5] = BlackFadeScreen.a(var2, true);
+                  AvailabilityCheckRequest.field_c[5] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("achievement_names,6", param1 - 105);
                 if (var2 != null) {
-                  kw.field_c[6] = BlackFadeScreen.a(var2, true);
+                  AvailabilityCheckRequest.field_c[6] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("achievement_names,7", -117);
                 if (var2 != null) {
-                  kw.field_c[7] = BlackFadeScreen.a(var2, true);
+                  AvailabilityCheckRequest.field_c[7] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("achievement_names,8", -97);
                 if (var2 != null) {
-                  kw.field_c[8] = BlackFadeScreen.a(var2, true);
+                  AvailabilityCheckRequest.field_c[8] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("achievement_names,9", -82);
                 if (var2 != null) {
-                  kw.field_c[9] = BlackFadeScreen.a(var2, true);
+                  AvailabilityCheckRequest.field_c[9] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("achievement_names,10", -83);
                 if (null != var2) {
-                  kw.field_c[10] = BlackFadeScreen.a(var2, true);
+                  AvailabilityCheckRequest.field_c[10] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("achievement_names,11", param1 - 109);
                 if (var2 != null) {
-                  kw.field_c[11] = BlackFadeScreen.a(var2, true);
+                  AvailabilityCheckRequest.field_c[11] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("achievement_names,12", -107);
                 if (var2 != null) {
-                  kw.field_c[12] = BlackFadeScreen.a(var2, true);
+                  AvailabilityCheckRequest.field_c[12] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("achievement_names,13", param1 - 82);
                 if (var2 != null) {
-                  kw.field_c[13] = BlackFadeScreen.a(var2, true);
+                  AvailabilityCheckRequest.field_c[13] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("achievement_names,14", -102);
                 if (null != var2) {
-                  kw.field_c[14] = BlackFadeScreen.a(var2, true);
+                  AvailabilityCheckRequest.field_c[14] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("achievement_names,15", -119);
                 if (var2 != null) {
-                  kw.field_c[15] = BlackFadeScreen.a(var2, true);
+                  AvailabilityCheckRequest.field_c[15] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("achievement_names,16", -82);
                 if (var2 != null) {
-                  kw.field_c[16] = BlackFadeScreen.a(var2, true);
+                  AvailabilityCheckRequest.field_c[16] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("achievement_names,17", param1 - 128);
                 if (null != var2) {
-                  kw.field_c[17] = BlackFadeScreen.a(var2, true);
+                  AvailabilityCheckRequest.field_c[17] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("achievement_names,18", -128);
                 if (var2 != null) {
-                  kw.field_c[18] = BlackFadeScreen.a(var2, true);
+                  AvailabilityCheckRequest.field_c[18] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("achievement_names,19", param1 ^ -83);
                 if (null != var2) {
-                  kw.field_c[19] = BlackFadeScreen.a(var2, true);
+                  AvailabilityCheckRequest.field_c[19] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("achievement_names,20", param1 - 120);
                 if (var2 != null) {
-                  kw.field_c[20] = BlackFadeScreen.a(var2, true);
+                  AvailabilityCheckRequest.field_c[20] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("achievement_names,21", -123);
                 if (null != var2) {
-                  kw.field_c[21] = BlackFadeScreen.a(var2, true);
+                  AvailabilityCheckRequest.field_c[21] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("achievement_names,22", param1 ^ -116);
                 if (var2 != null) {
-                  kw.field_c[22] = BlackFadeScreen.a(var2, true);
+                  AvailabilityCheckRequest.field_c[22] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("achievement_names,23", param1 - 128);
                 if (null != var2) {
-                  kw.field_c[23] = BlackFadeScreen.a(var2, true);
+                  AvailabilityCheckRequest.field_c[23] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("achievement_names,24", -97);
                 if (var2 != null) {
-                  kw.field_c[24] = BlackFadeScreen.a(var2, true);
+                  AvailabilityCheckRequest.field_c[24] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("achievement_names,25", -116);
                 if (var2 != null) {
-                  kw.field_c[25] = BlackFadeScreen.a(var2, true);
+                  AvailabilityCheckRequest.field_c[25] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("achievement_names,26", -125);
                 if (var2 != null) {
-                  kw.field_c[26] = BlackFadeScreen.a(var2, true);
+                  AvailabilityCheckRequest.field_c[26] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("achievement_names,27", -90);
                 if (null != var2) {
-                  kw.field_c[27] = BlackFadeScreen.a(var2, true);
+                  AvailabilityCheckRequest.field_c[27] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("achievement_names,28", -94);
                 if (var2 != null) {
-                  kw.field_c[28] = BlackFadeScreen.a(var2, true);
+                  AvailabilityCheckRequest.field_c[28] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("achievement_names,29", -92);
                 if (var2 != null) {
-                  kw.field_c[29] = BlackFadeScreen.a(var2, true);
+                  AvailabilityCheckRequest.field_c[29] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("achievement_names,30", -104);
                 if (null != var2) {
-                  kw.field_c[30] = BlackFadeScreen.a(var2, true);
+                  AvailabilityCheckRequest.field_c[30] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("achievement_names,31", -102);
                 if (var2 != null) {
-                  kw.field_c[31] = BlackFadeScreen.a(var2, true);
+                  AvailabilityCheckRequest.field_c[31] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("achievement_names,32", -91);
                 if (null != var2) {
-                  kw.field_c[32] = BlackFadeScreen.a(var2, true);
+                  AvailabilityCheckRequest.field_c[32] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("achievement_names,33", -112);
                 if (var2 != null) {
-                  kw.field_c[33] = BlackFadeScreen.a(var2, true);
+                  AvailabilityCheckRequest.field_c[33] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("achievement_names,34", -110);
                 if (var2 != null) {
-                  kw.field_c[34] = BlackFadeScreen.a(var2, true);
+                  AvailabilityCheckRequest.field_c[34] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("achievement_names,35", -108);
                 if (var2 != null) {
-                  kw.field_c[35] = BlackFadeScreen.a(var2, true);
+                  AvailabilityCheckRequest.field_c[35] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("achievement_names,36", -123);
                 if (var2 != null) {
-                  kw.field_c[36] = BlackFadeScreen.a(var2, true);
+                  AvailabilityCheckRequest.field_c[36] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("achievement_names,37", -106);
                 if (var2 != null) {
-                  kw.field_c[37] = BlackFadeScreen.a(var2, true);
+                  AvailabilityCheckRequest.field_c[37] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("achievement_names,38", -90);
                 if (null != var2) {
-                  kw.field_c[38] = BlackFadeScreen.a(var2, true);
+                  AvailabilityCheckRequest.field_c[38] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("achievement_names,39", -95);
                 if (null != var2) {
-                  kw.field_c[39] = BlackFadeScreen.a(var2, true);
+                  AvailabilityCheckRequest.field_c[39] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("achievement_names,40", -124);
                 if (null != var2) {
-                  kw.field_c[40] = BlackFadeScreen.a(var2, true);
+                  AvailabilityCheckRequest.field_c[40] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("achievement_names,41", -86);
                 if (null != var2) {
-                  kw.field_c[41] = BlackFadeScreen.a(var2, true);
+                  AvailabilityCheckRequest.field_c[41] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("achievement_names,42", param1 - 122);
                 if (var2 != null) {
-                  kw.field_c[42] = BlackFadeScreen.a(var2, true);
+                  AvailabilityCheckRequest.field_c[42] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("achievement_names,43", param1 - 106);
                 if (var2 != null) {
-                  kw.field_c[43] = BlackFadeScreen.a(var2, true);
+                  AvailabilityCheckRequest.field_c[43] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("achievement_names,44", param1 - 96);
                 if (null != var2) {
-                  kw.field_c[44] = BlackFadeScreen.a(var2, true);
+                  AvailabilityCheckRequest.field_c[44] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("achievement_names,45", -126);
                 if (null != var2) {
-                  kw.field_c[45] = BlackFadeScreen.a(var2, true);
+                  AvailabilityCheckRequest.field_c[45] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("achievement_names,46", -97);
                 if (var2 != null) {
-                  kw.field_c[46] = BlackFadeScreen.a(var2, true);
+                  AvailabilityCheckRequest.field_c[46] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("achievement_names,47", -112);
                 if (var2 != null) {
-                  kw.field_c[47] = BlackFadeScreen.a(var2, true);
+                  AvailabilityCheckRequest.field_c[47] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("achievement_names,48", -121);
                 if (var2 != null) {
-                  kw.field_c[48] = BlackFadeScreen.a(var2, true);
+                  AvailabilityCheckRequest.field_c[48] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("achievement_names,49", -122);
                 if (var2 != null) {
-                  kw.field_c[49] = BlackFadeScreen.a(var2, true);
+                  AvailabilityCheckRequest.field_c[49] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("achievement_names,50", -98);
                 if (var2 != null) {
-                  kw.field_c[50] = BlackFadeScreen.a(var2, true);
+                  AvailabilityCheckRequest.field_c[50] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("achievement_names,51", param1 - 129);
                 if (null != var2) {
-                  kw.field_c[51] = BlackFadeScreen.a(var2, true);
+                  AvailabilityCheckRequest.field_c[51] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("achievement_names,52", param1 ^ -96);
                 if (var2 != null) {
-                  kw.field_c[52] = BlackFadeScreen.a(var2, true);
+                  AvailabilityCheckRequest.field_c[52] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("achievement_names,53", param1 - 116);
                 if (null != var2) {
-                  kw.field_c[53] = BlackFadeScreen.a(var2, true);
+                  AvailabilityCheckRequest.field_c[53] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("achievement_names,54", param1 - 112);
                 if (var2 != null) {
-                  kw.field_c[54] = BlackFadeScreen.a(var2, true);
+                  AvailabilityCheckRequest.field_c[54] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("achievement_names,55", param1 - 101);
                 if (null != var2) {
-                  kw.field_c[55] = BlackFadeScreen.a(var2, true);
+                  AvailabilityCheckRequest.field_c[55] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("achievement_names,56", -92);
                 if (var2 != null) {
-                  kw.field_c[56] = BlackFadeScreen.a(var2, true);
+                  AvailabilityCheckRequest.field_c[56] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("achievement_names,57", param1 - 115);
                 if (var2 != null) {
-                  kw.field_c[57] = BlackFadeScreen.a(var2, true);
+                  AvailabilityCheckRequest.field_c[57] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("achievement_names,58", -82);
                 if (var2 != null) {
-                  kw.field_c[58] = BlackFadeScreen.a(var2, true);
+                  AvailabilityCheckRequest.field_c[58] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("achievement_names,59", -82);
                 if (null != var2) {
-                  kw.field_c[59] = BlackFadeScreen.a(var2, true);
+                  AvailabilityCheckRequest.field_c[59] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("achievement_names,60", -104);
                 if (var2 != null) {
-                  kw.field_c[60] = BlackFadeScreen.a(var2, true);
+                  AvailabilityCheckRequest.field_c[60] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("achievement_names,61", -115);
                 if (var2 != null) {
-                  kw.field_c[61] = BlackFadeScreen.a(var2, true);
+                  AvailabilityCheckRequest.field_c[61] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("achievement_names,62", param1 - 94);
                 if (null != var2) {
-                  kw.field_c[62] = BlackFadeScreen.a(var2, true);
+                  AvailabilityCheckRequest.field_c[62] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("achievement_names,63", -128);
                 if (null != var2) {
-                  kw.field_c[63] = BlackFadeScreen.a(var2, true);
+                  AvailabilityCheckRequest.field_c[63] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("achievement_names,64", -82);
                 if (null != var2) {
-                  kw.field_c[64] = BlackFadeScreen.a(var2, true);
+                  AvailabilityCheckRequest.field_c[64] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("achievement_names,65", -99);
                 if (var2 != null) {
-                  kw.field_c[65] = BlackFadeScreen.a(var2, true);
+                  AvailabilityCheckRequest.field_c[65] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("achievement_names,66", -83);
                 if (var2 != null) {
-                  kw.field_c[66] = BlackFadeScreen.a(var2, true);
+                  AvailabilityCheckRequest.field_c[66] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("achievement_names,67", -80);
                 if (null != var2) {
-                  kw.field_c[67] = BlackFadeScreen.a(var2, true);
+                  AvailabilityCheckRequest.field_c[67] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("achievement_names,68", param1 ^ -102);
                 if (null != var2) {
-                  kw.field_c[68] = BlackFadeScreen.a(var2, true);
+                  AvailabilityCheckRequest.field_c[68] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("achievement_names,69", param1 ^ -112);
                 if (var2 != null) {
-                  kw.field_c[69] = BlackFadeScreen.a(var2, true);
+                  AvailabilityCheckRequest.field_c[69] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("achievement_names,70", -128);
                 if (var2 != null) {
-                  kw.field_c[70] = BlackFadeScreen.a(var2, true);
+                  AvailabilityCheckRequest.field_c[70] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("achievement_names,71", -122);
                 if (null != var2) {
-                  kw.field_c[71] = BlackFadeScreen.a(var2, true);
+                  AvailabilityCheckRequest.field_c[71] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("achievement_names,72", -106);
                 if (var2 != null) {
-                  kw.field_c[72] = BlackFadeScreen.a(var2, true);
+                  AvailabilityCheckRequest.field_c[72] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("achievement_criteria,0", -101);
                 if (var2 != null) {
@@ -2066,7 +2066,7 @@ final class ad {
                 }
                 var2 = DateOfBirthPanel.a("extra_l1", -81);
                 if (null != var2) {
-                  kw.field_g = BlackFadeScreen.a(var2, true);
+                  AvailabilityCheckRequest.field_g = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("extra_l2", -118);
                 if (var2 != null) {
@@ -2162,7 +2162,7 @@ final class ad {
                 }
                 var2 = DateOfBirthPanel.a("title_lineup", param1 - 113);
                 if (var2 != null) {
-                  k.field_h = BlackFadeScreen.a(var2, true);
+                  StreetSceneryLoader.field_h = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("ready", -95);
                 if (var2 != null) {
@@ -2374,7 +2374,7 @@ final class ad {
                 }
                 var2 = DateOfBirthPanel.a("click_for_help", -117);
                 if (var2 != null) {
-                  gl.field_i = BlackFadeScreen.a(var2, true);
+                  InstrumentEnvelope.field_i = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("create_new_auction", param1 - 113);
                 if (var2 != null) {
@@ -2546,7 +2546,7 @@ final class ad {
                 }
                 var2 = DateOfBirthPanel.a("reserve", param1 - 93);
                 if (null != var2) {
-                  gl.field_f = BlackFadeScreen.a(var2, true);
+                  InstrumentEnvelope.field_f = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("popup_text,0", -95);
                 if (var2 != null) {

@@ -44,7 +44,7 @@ final class wo extends KeyedLoginCredentials {
           }
           var9 = var5 * InstrumentNoteMask.field_i >> 8;
           if (SocketArchiveNetworkClient.field_v == 1) {
-            param0.d((-var9 + var5 >> 1) + var7, (var6 - var9 >> 1) + var8, var9, var9, param3);
+            param0.drawScaledAlpha((-var9 + var5 >> 1) + var7, (var6 - var9 >> 1) + var8, var9, var9, param3);
             return;
           }
           nh.a(param0, (-var9 + var5 >> 1) + var7, (var6 - var9 >> 1) + var8, var9, var9);

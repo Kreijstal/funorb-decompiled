@@ -27,9 +27,9 @@ final class TrinketSlot extends UiLayoutNode implements PopupCard {
         int var5 = this.getHeight(param1 ^ 24);
         int var6 = -(var4 >> 1) + param2;
         int var7 = -(var5 >> 1) + param0;
-        SoftwareRasterizer.a(var6, var7, var4, var5, 52479, 60);
+        SoftwareRasterizer.fillRectangleAlpha(var6, var7, var4, var5, 52479, 60);
         if (this.field_Bb.field_h != 0) {
-          SoftwareRasterizer.a(var6, var7, var4, 50, 16777215, 60);
+          SoftwareRasterizer.fillRectangleAlpha(var6, var7, var4, 50, 16777215, 60);
         }
         SoftwareRasterizer.e(var6, var7, var4, var5, 65793);
         ConsoleTokenCursor.field_d.c(this.field_yb, -10 + (var6 + var4), 22 + var7, 16777215, 65793);
@@ -214,19 +214,19 @@ final class TrinketSlot extends UiLayoutNode implements PopupCard {
     }
 
     final static void a(byte param0, int param1, int param2, int param3) {
-        gl.field_a.field_n = 0;
-        gl.field_a.writeByte(122, 12);
-        gl.field_a.writeInt(-43, TrinketUnlockNotice.field_d.nextInt());
-        gl.field_a.writeInt(-111, TrinketUnlockNotice.field_d.nextInt());
-        gl.field_a.writeByte(102, param3);
-        gl.field_a.writeByte(112, param2);
-        gl.field_a.writeShort(-1207444472, param1);
-        gl.field_a.rsaEncrypt(CascadingMenu.field_Nb, ManagerAction.field_h, 38);
+        InstrumentEnvelope.field_a.field_n = 0;
+        InstrumentEnvelope.field_a.writeByte(122, 12);
+        InstrumentEnvelope.field_a.writeInt(-43, TrinketUnlockNotice.field_d.nextInt());
+        InstrumentEnvelope.field_a.writeInt(-111, TrinketUnlockNotice.field_d.nextInt());
+        InstrumentEnvelope.field_a.writeByte(102, param3);
+        InstrumentEnvelope.field_a.writeByte(112, param2);
+        InstrumentEnvelope.field_a.writeShort(-1207444472, param1);
+        InstrumentEnvelope.field_a.rsaEncrypt(CascadingMenu.field_Nb, ManagerAction.field_h, 38);
         or.field_d.b(18, (byte) -83);
         int fieldTemp$0 = or.field_d.field_n + 1;
         or.field_d.field_n = or.field_d.field_n + 1;
         int var4 = fieldTemp$0;
-        or.field_d.writeBytes(0, gl.field_a.field_n, 1991220144, gl.field_a.field_f);
+        or.field_d.writeBytes(0, InstrumentEnvelope.field_a.field_n, 1991220144, InstrumentEnvelope.field_a.field_f);
         or.field_d.backpatchByteLength(62, -var4 + or.field_d.field_n);
         int var5 = 83 % ((40 - param0) / 43);
     }

@@ -51,7 +51,7 @@ final class bq {
           stackIn_6_0 = BufferedSocket.field_u;
           stackIn_6_1 = true;
           stackIn_6_2 = AchievementsScreen.field_C.field_q;
-          if (!ui.field_t) {
+          if (!NetworkArchiveRequest.field_t) {
             stackIn_7_3 = 0;
           } else {
             stackIn_7_3 = 2 + (TeamSelectionAgent.field_f + 40 + 2);

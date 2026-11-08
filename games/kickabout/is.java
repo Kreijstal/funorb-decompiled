@@ -95,7 +95,7 @@ final class is {
         var2 = Kickabout.field_G;
         try {
           for (var1_int = 0; var1_int < SplashScreen.field_n.length; var1_int++) {
-            SplashScreen.field_n[var1_int].a(param0 - 7232);
+            SplashScreen.field_n[var1_int].tick(param0 - 7232);
           }
           if (param0 != 7249) {
             field_e = (Random) null;

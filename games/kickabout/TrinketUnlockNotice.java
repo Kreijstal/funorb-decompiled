@@ -24,12 +24,12 @@ final class TrinketUnlockNotice implements OverlayLayer {
         int var2Lifetime1;
         if (field_c != -1) {
           var2 = -AuctionsScreen.field_A + 20;
-          SoftwareRasterizer.f(-1 + var2, 19, 2 + sh.field_d, 50, 10, 16777215);
-          SoftwareRasterizer.a(var2, 20, sh.field_d, 48, 10, 65793, 160);
+          SoftwareRasterizer.drawRoundedRectangle(-1 + var2, 19, 2 + sh.field_d, 50, 10, 16777215);
+          SoftwareRasterizer.fillRoundedRectangleBlended(var2, 20, sh.field_d, 48, 10, 65793, 160);
           if (ArchivePreloader.field_i != null) {
             ArchivePreloader.field_i[PacketBuffer.field_e[field_c]].drawQuarterSize(var2, 28);
           }
-          un.field_d.a(kw.field_c[field_c], var2 + 16 + 32, 49, 16777215, -1);
+          un.field_d.a(AvailabilityCheckRequest.field_c[field_c], var2 + 16 + 32, 49, 16777215, -1);
         }
         var2Lifetime1 = 1 / ((50 - param0) / 45);
     }
@@ -80,7 +80,7 @@ final class TrinketUnlockNotice implements OverlayLayer {
           if (var5 != null) {
             field_c = var5.field_j;
             TextLine.field_f = 335;
-            sh.field_d = un.field_d.a(kw.field_c[field_c]) + 56;
+            sh.field_d = un.field_d.a(AvailabilityCheckRequest.field_c[field_c]) + 56;
             AuctionsScreen.field_A = 20 + sh.field_d;
             if (param0 == -25) {
               return;

@@ -43,33 +43,33 @@ final class MainMenuScreen extends ButtonMenuScreen {
         if (param1 < 99) {
           this.field_B = (UiLayoutNode) null;
           super.drawOverlay(param0, 110);
-          SoftwareRasterizer.a(this.field_B.field_F - 10, this.field_B.field_T - 20, 20 + this.field_B.field_q, 100 + this.field_B.field_mb, 8, 65793, this.field_E >> 1);
+          SoftwareRasterizer.fillRoundedRectangleBlended(this.field_B.field_F - 10, this.field_B.field_T - 20, 20 + this.field_B.field_q, 100 + this.field_B.field_mb, 8, 65793, this.field_E >> 1);
           this.field_B.draw(76, param0);
           un.field_d.c(sk.field_b, this.field_B.field_F + (this.field_B.field_q >> 1), (this.field_B.field_mb >> 1) + (this.field_B.field_T - 28), 16777215, -1, this.field_E);
           un.field_d.c(TextFieldValidator.field_e.toUpperCase(), (this.field_B.field_q >> 1) + this.field_B.field_F, 6 + this.field_B.field_T + (this.field_B.field_mb >> 1), 16777215, -1, this.field_E);
           un.field_d.a(ri.field_v.toLowerCase(), this.field_B.field_F, this.field_B.field_mb + this.field_B.field_T, this.field_B.field_q, 80, 16777215, -1, this.field_E, 1, 1, 0);
           if (!GameLoopApplet.field_E.field_J[0]) {
-            SoftwareRasterizer.a(this.field_B.field_F, this.field_B.field_T, this.field_B.field_q, this.field_B.field_mb, 8, 0, this.field_E >> 1);
+            SoftwareRasterizer.fillRoundedRectangleBlended(this.field_B.field_F, this.field_B.field_T, this.field_B.field_q, this.field_B.field_mb, 8, 0, this.field_E >> 1);
             return;
           }
           if (PlayArea.a(100)) {
-            SoftwareRasterizer.a(this.field_B.field_F, this.field_B.field_T, this.field_B.field_q, this.field_B.field_mb, 8, 0, this.field_E >> 1);
+            SoftwareRasterizer.fillRoundedRectangleBlended(this.field_B.field_F, this.field_B.field_T, this.field_B.field_q, this.field_B.field_mb, 8, 0, this.field_E >> 1);
             return;
           }
           return;
         }
         super.drawOverlay(param0, 110);
-        SoftwareRasterizer.a(this.field_B.field_F - 10, this.field_B.field_T - 20, 20 + this.field_B.field_q, 100 + this.field_B.field_mb, 8, 65793, this.field_E >> 1);
+        SoftwareRasterizer.fillRoundedRectangleBlended(this.field_B.field_F - 10, this.field_B.field_T - 20, 20 + this.field_B.field_q, 100 + this.field_B.field_mb, 8, 65793, this.field_E >> 1);
         this.field_B.draw(76, param0);
         un.field_d.c(sk.field_b, this.field_B.field_F + (this.field_B.field_q >> 1), (this.field_B.field_mb >> 1) + (this.field_B.field_T - 28), 16777215, -1, this.field_E);
         un.field_d.c(TextFieldValidator.field_e.toUpperCase(), (this.field_B.field_q >> 1) + this.field_B.field_F, 6 + this.field_B.field_T + (this.field_B.field_mb >> 1), 16777215, -1, this.field_E);
         un.field_d.a(ri.field_v.toLowerCase(), this.field_B.field_F, this.field_B.field_mb + this.field_B.field_T, this.field_B.field_q, 80, 16777215, -1, this.field_E, 1, 1, 0);
         if (!GameLoopApplet.field_E.field_J[0]) {
-          SoftwareRasterizer.a(this.field_B.field_F, this.field_B.field_T, this.field_B.field_q, this.field_B.field_mb, 8, 0, this.field_E >> 1);
+          SoftwareRasterizer.fillRoundedRectangleBlended(this.field_B.field_F, this.field_B.field_T, this.field_B.field_q, this.field_B.field_mb, 8, 0, this.field_E >> 1);
           return;
         }
         if (PlayArea.a(100)) {
-          SoftwareRasterizer.a(this.field_B.field_F, this.field_B.field_T, this.field_B.field_q, this.field_B.field_mb, 8, 0, this.field_E >> 1);
+          SoftwareRasterizer.fillRoundedRectangleBlended(this.field_B.field_F, this.field_B.field_T, this.field_B.field_q, this.field_B.field_mb, 8, 0, this.field_E >> 1);
           return;
         }
     }

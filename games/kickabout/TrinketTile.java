@@ -44,7 +44,7 @@ final class TrinketTile extends UiLayoutNode {
         int[] var16 = null;
         var9 = Kickabout.field_G;
         try {
-          var3_int = vv.field_r;
+          var3_int = ArchiveRequest.field_r;
           LeaguesHelpScreen.field_E = new UiLayoutNode(0L, (UiLayoutNode) null);
           if (param1 == null) {
             var10 = (Throwable) null;

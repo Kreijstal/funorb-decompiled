@@ -152,22 +152,22 @@ final class OffscreenPlayerArrow {
           if (0 == SocketArchiveNetworkClient.field_v) {
             TriangleRasterizer.useRasterClip();
             TriangleRasterizer.setProjectionCenter(this.field_b, this.field_d);
-            TriangleRasterizer.a(this.field_d, var7 + this.field_d, this.field_d + var5, this.field_b, -var6 + this.field_b, -var4 + this.field_b, 4487082);
-            TriangleRasterizer.a(this.field_d, var9 + this.field_d, this.field_d + var5, this.field_b, this.field_b - var8, -var4 + this.field_b, 85);
+            TriangleRasterizer.drawFlatTriangle(this.field_d, var7 + this.field_d, this.field_d + var5, this.field_b, -var6 + this.field_b, -var4 + this.field_b, 4487082);
+            TriangleRasterizer.drawFlatTriangle(this.field_d, var9 + this.field_d, this.field_d + var5, this.field_b, this.field_b - var8, -var4 + this.field_b, 85);
           } else {
             PacketBuffer.a(param0 + 112, UiWidget.field_e);
             SoftwareRasterizer.clearFramebuffer();
             TriangleRasterizer.useRasterClip();
-            TriangleRasterizer.a(TextInputWidget.field_P, TextInputWidget.field_P + (var7 << 1), (var5 << 1) + TextInputWidget.field_P, TextInputWidget.field_P, -(var6 << 1) + TextInputWidget.field_P, TextInputWidget.field_P - (var4 << 1), -16777216);
-            TriangleRasterizer.a(TextInputWidget.field_P, TextInputWidget.field_P + (var9 << 1), (var5 << 1) + TextInputWidget.field_P, TextInputWidget.field_P, TextInputWidget.field_P - (var8 << 1), -(var4 << 1) + TextInputWidget.field_P, -16777216);
+            TriangleRasterizer.drawFlatTriangle(TextInputWidget.field_P, TextInputWidget.field_P + (var7 << 1), (var5 << 1) + TextInputWidget.field_P, TextInputWidget.field_P, -(var6 << 1) + TextInputWidget.field_P, TextInputWidget.field_P - (var4 << 1), -16777216);
+            TriangleRasterizer.drawFlatTriangle(TextInputWidget.field_P, TextInputWidget.field_P + (var9 << 1), (var5 << 1) + TextInputWidget.field_P, TextInputWidget.field_P, TextInputWidget.field_P - (var8 << 1), -(var4 << 1) + TextInputWidget.field_P, -16777216);
             TeamManagementScreen.e(param0 + 116);
             PacketBuffer.a(param0 ^ 68, TextInputWidget.field_N);
             SoftwareRasterizer.clearFramebuffer();
             TriangleRasterizer.useRasterClip();
             TriangleRasterizer.setProjectionCenter(TextInputWidget.field_P, TextInputWidget.field_P);
-            TriangleRasterizer.a(TextInputWidget.field_P, TextInputWidget.field_P + (var7 << 1), TextInputWidget.field_P + (var5 << 1), TextInputWidget.field_P, TextInputWidget.field_P - (var6 << 1), -(var4 << 1) + TextInputWidget.field_P, 153);
+            TriangleRasterizer.drawFlatTriangle(TextInputWidget.field_P, TextInputWidget.field_P + (var7 << 1), TextInputWidget.field_P + (var5 << 1), TextInputWidget.field_P, TextInputWidget.field_P - (var6 << 1), -(var4 << 1) + TextInputWidget.field_P, 153);
             SoftwareRasterizer.a(-(3 * var4 >> 1) + TextInputWidget.field_P << 4, TextInputWidget.field_P + (3 * var5 >> 1) << 4, 544, 29, en.field_n);
-            TriangleRasterizer.a(TextInputWidget.field_P, (var9 << 1) + TextInputWidget.field_P, TextInputWidget.field_P + (var5 << 1), TextInputWidget.field_P, -(var8 << 1) + TextInputWidget.field_P, -(var4 << 1) + TextInputWidget.field_P, 68);
+            TriangleRasterizer.drawFlatTriangle(TextInputWidget.field_P, (var9 << 1) + TextInputWidget.field_P, TextInputWidget.field_P + (var5 << 1), TextInputWidget.field_P, -(var8 << 1) + TextInputWidget.field_P, -(var4 << 1) + TextInputWidget.field_P, 68);
             SoftwareRasterizer.a(-(var4 * 3 >> 1) + TextInputWidget.field_P << 4, TextInputWidget.field_P + (3 * var5 >> 1) << 4, 544, 18, en.field_n);
             SoftwareRasterizer.e(0, 0, SoftwareRasterizer.field_g, SoftwareRasterizer.field_f, 16711935);
             TeamManagementScreen.e(param0 + 113);
@@ -195,7 +195,7 @@ final class OffscreenPlayerArrow {
             if (var14 + var12 > 470) {
               var14 = -var12 + 470;
             }
-            var10.a(var13, var14, var11, var12);
+            var10.drawScaled(var13, var14, var11, var12);
           }
         }
         if (param0 != 10) {

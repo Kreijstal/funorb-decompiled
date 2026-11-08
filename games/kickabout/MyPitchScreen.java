@@ -107,18 +107,18 @@ final class MyPitchScreen extends TeamManagementScreen {
         int var4Lifetime2;
         super.drawScreen(param0, param1);
         int var3 = this.slideOffsetX + 18;
-        SoftwareRasterizer.a(this.slideOffsetX + 10, 53, 365, 371, 65793, 96);
-        SoftwareRasterizer.a(var3, 62, 348, 24, 6, 65793, 96);
+        SoftwareRasterizer.fillRectangleAlpha(this.slideOffsetX + 10, 53, 365, 371, 65793, 96);
+        SoftwareRasterizer.fillRoundedRectangleBlended(var3, 62, 348, 24, 6, 65793, 96);
         IsSixCommand.field_C.a(SplashScreen.field_o, 30 + this.slideOffsetX, 80, 16777215, -1);
-        SoftwareRasterizer.a(var3, 95, 348, 106, 10, 65793, 96);
-        SoftwareRasterizer.a(var3, 207, 348, 102, 10, 65793, 96);
-        SoftwareRasterizer.a(var3, 314, 348, 100, 10, 65793, 96);
+        SoftwareRasterizer.fillRoundedRectangleBlended(var3, 95, 348, 106, 10, 65793, 96);
+        SoftwareRasterizer.fillRoundedRectangleBlended(var3, 207, 348, 102, 10, 65793, 96);
+        SoftwareRasterizer.fillRoundedRectangleBlended(var3, 314, 348, 100, 10, 65793, 96);
         for (var4 = 0; var4 < RankingRowNode.field_Gb.field_jb.f(606511077).length; var4++) {
           ((PitchOptionTile) (RankingRowNode.field_Gb.field_jb.f(param0 ^ -606511074)[var4])).j(0);
         }
         RankingRowNode.field_Gb.draw(96, false);
         if (!this.field_F) {
-          SoftwareRasterizer.a(var3, 207, 348, 102, 10, 65793, 228);
+          SoftwareRasterizer.fillRoundedRectangleBlended(var3, 207, 348, 102, 10, 65793, 228);
           for (var4Lifetime1 = 0; var4Lifetime1 < 3; var4Lifetime1++) {
             sh.field_g.c(30 + (var3 - var4Lifetime1), 241 - var4Lifetime1 * 2);
           }
@@ -126,7 +126,7 @@ final class MyPitchScreen extends TeamManagementScreen {
           IsSixCommand.field_C.a(we.field_d, var3, 269, 348, 40, 16777215, -1, 1, 1, 0);
         }
         if (!this.field_I) {
-          SoftwareRasterizer.a(var3, 314, 348, 100, 10, 65793, 228);
+          SoftwareRasterizer.fillRoundedRectangleBlended(var3, 314, 348, 100, 10, 65793, 228);
           for (var4Lifetime2 = 0; var4Lifetime2 < 3; var4Lifetime2++) {
             sh.field_g.c(-var4Lifetime2 + (30 + var3), -(2 * var4Lifetime2) + 348);
           }

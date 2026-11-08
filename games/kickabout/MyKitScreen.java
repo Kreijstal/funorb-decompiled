@@ -68,7 +68,7 @@ final class MyKitScreen extends TeamManagementScreen {
               if (var4 != 0) {
                 ValidatedTextWidget.a((byte) 74, var6.field_yb);
               } else {
-                kw.a(123, var6.field_yb);
+                AvailabilityCheckRequest.a(123, var6.field_yb);
               }
               kj.a((byte) -117);
             }
@@ -264,10 +264,10 @@ final class MyKitScreen extends TeamManagementScreen {
         int var3Lifetime1;
         var6 = Kickabout.field_G;
         super.drawScreen(param0, param1);
-        SoftwareRasterizer.a(this.field_P.field_F - 8, -8 + this.field_P.field_T, this.field_P.field_q + 16, this.field_P.field_mb + 16, 65793, 96);
+        SoftwareRasterizer.fillRectangleAlpha(this.field_P.field_F - 8, -8 + this.field_P.field_T, this.field_P.field_q + 16, this.field_P.field_mb + 16, 65793, 96);
         var3_ref_hd = (UiLayoutNode) (this.field_P.field_jb.g(param0 + 24014));
         while (var3_ref_hd != null) {
-          SoftwareRasterizer.a(var3_ref_hd.field_F, var3_ref_hd.field_T, var3_ref_hd.field_q, var3_ref_hd.field_mb, 10, 65793, 96);
+          SoftwareRasterizer.fillRoundedRectangleBlended(var3_ref_hd.field_F, var3_ref_hd.field_T, var3_ref_hd.field_q, var3_ref_hd.field_mb, 10, 65793, 96);
           var3_ref_hd = (UiLayoutNode) (this.field_P.field_jb.c(33));
         }
         un.field_d.a(le.field_c, -26 + this.field_G.field_F, this.field_G.field_T - 16, 16777215, -1);
@@ -456,7 +456,7 @@ final class MyKitScreen extends TeamManagementScreen {
           var7 = (ModelMesh) (this.field_cb.applyCurrentFrame(this.field_db.createModelMesh(var12[2], var12[3], var5, var12[1], var6), false, true, true));
           var7.a(0, var3, 0, 0, 0, 0, 0, 540);
           var8 = Math.max(120, IsSixCommand.field_C.a(this.field_T) + 30);
-          SoftwareRasterizer.a(this.slideOffsetX + (532 - (var8 >> 1)), 412, var8, 56, 12, 65793, 128);
+          SoftwareRasterizer.fillRoundedRectangleBlended(this.slideOffsetX + (532 - (var8 >> 1)), 412, var8, 56, 12, 65793, 128);
           IsSixCommand.field_C.d(this.field_T, 532 + this.slideOffsetX, 430, 16777215, -1);
           this.field_ab.draw(123, false);
         }

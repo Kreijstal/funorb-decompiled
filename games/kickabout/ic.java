@@ -51,7 +51,7 @@ final class ic {
           while (var9 <= var12 << 1) {
             var12 = var12 >> 1;
           }
-          SoftwareRasterizer.a(param7, param4, param0, var9, var12, 65793, 140);
+          SoftwareRasterizer.fillRoundedRectangleBlended(param7, param4, param0, var9, var12, 65793, 140);
           IsSixCommand.field_C.a(param1, var10, var11, var8_int, var9, 16777215, -1, 0, 0, 16);
           if (param3 == null) {
             return;
@@ -113,9 +113,9 @@ final class ic {
           AnimationClip.field_k.a(param3);
           AnimationClip.field_k.f(param6);
           AnimationClip.field_k.setDampingTimeMicros(param4);
-          AnimationClip.field_k.b(param2);
+          AnimationClip.field_k.setWetGain(param2);
           AnimationClip.field_k.e(param0);
-          AnimationClip.field_k.d(param1);
+          AnimationClip.field_k.setStereoWidth(param1);
           return;
         }
     }

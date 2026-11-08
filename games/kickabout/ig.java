@@ -235,7 +235,7 @@ final class ig {
           var9 = 20 + (var4 + var8Lifetime2 + 65);
           var10Lifetime1 = TextPromptDialog.field_yb * (var6.length + 1) + 20;
           var11 = -6 + (-var10Lifetime1 + (473 - rn.field_c * vt.field_c.playerCount) - 22);
-          SoftwareRasterizer.a(-var9 + 644, var11, var9, var10Lifetime1, 2, 0, param2);
+          SoftwareRasterizer.fillRoundedRectangleBlended(-var9 + 644, var11, var9, var10Lifetime1, 2, 0, param2);
           var12Lifetime1 = 619 - (var4 + 20);
           var13 = 6 + var11 + TextPromptDialog.field_yb;
           ((BitmapFont) ((Object) var3)).c(var20, 599, var13, param1, -1);

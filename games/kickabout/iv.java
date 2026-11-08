@@ -48,14 +48,14 @@ class iv extends DualLinkNode {
           var6.field_N = rk.field_g;
           var7 = new UiLayoutNode();
           var7.field_N = rk.field_g.copy();
-          var7.field_N.a();
+          var7.field_N.flipVertically();
           ConsolePanel.field_q = new UiLayoutNode();
           ConsolePanel.field_q.field_y = 14540253;
           ConsolePanel.field_q.field_p = 1;
           ConsolePanel.field_q.field_A = 1;
           ConsolePanel.field_q.field_X = (BitmapFont) ((Object) un.field_d);
           rr.field_b = new ScrollBar("scrollbar", var6, var7, var5, var4, true);
-          it.field_m = new ScrollBar("scrollbar", ConsolePanel.field_q, ConsolePanel.field_q, ConsolePanel.field_q, ConsolePanel.field_q, true);
+          ParticipantAgent.field_m = new ScrollBar("scrollbar", ConsolePanel.field_q, ConsolePanel.field_q, ConsolePanel.field_q, ConsolePanel.field_q, true);
           ug.field_b = new Sprite[2][2];
           ug.field_b[0][0] = AnimationClip.a(16679959, -87, ButtonMenuScreen.field_u);
           ug.field_b[0][1] = AnimationClip.a(16679959, -104, mg.field_g);

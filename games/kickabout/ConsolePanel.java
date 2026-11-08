@@ -80,21 +80,21 @@ abstract class ConsolePanel implements OverlayLayer {
         int var3Lifetime1;
         int var4Lifetime1;
         if (this.field_l.field_mb + this.field_l.field_J > 0) {
-          SoftwareRasterizer.a(this.field_l.field_F, this.field_l.field_T, this.field_g.field_s, this.field_l.field_mb, 5592405, 230);
-          SoftwareRasterizer.a(this.field_g.field_F + this.field_g.field_q, this.field_l.field_T, this.field_g.field_s, this.field_l.field_mb, 5592405, 230);
-          SoftwareRasterizer.a(this.field_g.field_F, this.field_l.field_T, this.field_g.field_q, this.field_g.field_J, 5592405, 230);
-          SoftwareRasterizer.a(this.field_g.field_F, this.field_g.field_mb + this.field_g.field_T, this.field_g.field_q, -this.field_g.field_mb - this.field_g.field_T + this.field_k.field_T, 5592405, 230);
-          SoftwareRasterizer.a(this.field_g.field_F, this.field_k.field_mb + this.field_k.field_T, this.field_g.field_q, -this.field_k.field_mb + (this.field_l.field_mb - this.field_k.field_J), 5592405, 230);
-          SoftwareRasterizer.a(this.field_g.field_F, this.field_g.field_T, this.field_g.field_q, this.field_g.field_mb, 2236962, 240);
-          SoftwareRasterizer.a(this.field_k.field_F, this.field_k.field_T, this.field_k.field_q, this.field_k.field_mb, 2236962, 240);
+          SoftwareRasterizer.fillRectangleAlpha(this.field_l.field_F, this.field_l.field_T, this.field_g.field_s, this.field_l.field_mb, 5592405, 230);
+          SoftwareRasterizer.fillRectangleAlpha(this.field_g.field_F + this.field_g.field_q, this.field_l.field_T, this.field_g.field_s, this.field_l.field_mb, 5592405, 230);
+          SoftwareRasterizer.fillRectangleAlpha(this.field_g.field_F, this.field_l.field_T, this.field_g.field_q, this.field_g.field_J, 5592405, 230);
+          SoftwareRasterizer.fillRectangleAlpha(this.field_g.field_F, this.field_g.field_mb + this.field_g.field_T, this.field_g.field_q, -this.field_g.field_mb - this.field_g.field_T + this.field_k.field_T, 5592405, 230);
+          SoftwareRasterizer.fillRectangleAlpha(this.field_g.field_F, this.field_k.field_mb + this.field_k.field_T, this.field_g.field_q, -this.field_k.field_mb + (this.field_l.field_mb - this.field_k.field_J), 5592405, 230);
+          SoftwareRasterizer.fillRectangleAlpha(this.field_g.field_F, this.field_g.field_T, this.field_g.field_q, this.field_g.field_mb, 2236962, 240);
+          SoftwareRasterizer.fillRectangleAlpha(this.field_k.field_F, this.field_k.field_T, this.field_k.field_q, this.field_k.field_mb, 2236962, 240);
           var2 = 256 + this.field_l.field_J;
           if (var2 < 0) {
             var2 = 0;
           }
-          SoftwareRasterizer.a(this.field_l.field_F, this.field_l.field_T + this.field_l.field_mb, this.field_l.field_q, -this.field_l.field_mb + ReceivedAuctionItem.field_B - this.field_l.field_T, 0, var2 >> 1);
+          SoftwareRasterizer.fillRectangleAlpha(this.field_l.field_F, this.field_l.field_T + this.field_l.field_mb, this.field_l.field_q, -this.field_l.field_mb + ReceivedAuctionItem.field_B - this.field_l.field_T, 0, var2 >> 1);
           var3 = 5 + (this.field_l.field_mb + this.field_l.field_J);
           for (var4 = 0; 6 > var4; var4++) {
-            SoftwareRasterizer.c(0, var3, f.field_d, 0, var4 << 5);
+            SoftwareRasterizer.drawHorizontalLineAlpha(0, var3, f.field_d, 0, var4 << 5);
             var3--;
           }
           this.field_l.draw(127, 0 == (this.field_n & 8) ? true : false);

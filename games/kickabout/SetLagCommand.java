@@ -57,7 +57,7 @@ final class SetLagCommand extends ConsoleCommand {
         field_D = null;
     }
 
-    final static Sprite[] a(byte param0, it[] param1, String[] param2, int param3) {
+    final static Sprite[] a(byte param0, ParticipantAgent[] param1, String[] param2, int param3) {
         int var6 = 0;
         int var4_int = 0;
         RuntimeException var4 = null;
@@ -84,7 +84,7 @@ final class SetLagCommand extends ConsoleCommand {
             var7 = param2[var6];
             var5[var6] = new Sprite(ConsoleTokenCursor.field_d.a(var7) + 4, 18);
             PacketBuffer.a(82, var5[var6]);
-            stackIn_8_0 = (param1[var6].field_p == param3) ? 11184895 : 16755370;
+            stackIn_8_0 = (param1[var6].team == param3) ? 11184895 : 16755370;
             var8 = stackIn_8_0;
             ConsoleTokenCursor.field_d.d(var7, SoftwareRasterizer.field_g >> 1, -4 + SoftwareRasterizer.field_f, var8, -1);
             TeamManagementScreen.e(117);

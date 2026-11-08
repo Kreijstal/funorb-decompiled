@@ -154,7 +154,7 @@ final class ConsoleExpression extends IntrusiveNode {
               stackIn_30_0 = (ConsoleValue) null;
               return stackIn_30_0;
             }
-            if (this.field_k == v.field_d) {
+            if (this.field_k == EntityAfterimage.field_d) {
               var9 = this.field_h.substring(1, this.field_h.length() - 1);
               if (var9.length() != 1) {
                 throw new ConsoleEvaluationException("Invalid char value: " + var9);
@@ -200,7 +200,7 @@ final class ConsoleExpression extends IntrusiveNode {
         if (GameModesHelpScreen.field_N == this.field_k) {
           return "Boolean{" + this.field_h + "}";
         }
-        if (this.field_k == v.field_d) {
+        if (this.field_k == EntityAfterimage.field_d) {
           return "Char{" + this.field_h + "}";
         }
         if (this.field_k == TextPromptDialog.field_Mb) {

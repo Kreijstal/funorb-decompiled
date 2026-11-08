@@ -10,7 +10,7 @@ final class pe {
         if (hl.field_d < 2) {
           return 0;
         }
-        if (vv.field_r == 0) {
+        if (ArchiveRequest.field_r == 0) {
           if (!bw.field_b.ensureIndex(-93)) {
             return 20;
           }

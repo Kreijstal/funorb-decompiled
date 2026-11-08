@@ -49,8 +49,8 @@ final class AchievementsScreen extends ButtonMenuScreen {
         int var14Lifetime5;
         var16 = Kickabout.field_G;
         super.drawScreen(param0, param1);
-        SoftwareRasterizer.a(ContextMenuItem.field_Ib.field_F, ContextMenuItem.field_Ib.field_T, ContextMenuItem.field_Ib.field_q, ContextMenuItem.field_Ib.field_mb, 8, 0, 96);
-        SoftwareRasterizer.a(-4 + bq.field_d.field_F, -4 + bq.field_d.field_T, 2 + bq.field_d.field_q, 4 + (bq.field_d.field_mb << 1), 8, 0, 128);
+        SoftwareRasterizer.fillRoundedRectangleBlended(ContextMenuItem.field_Ib.field_F, ContextMenuItem.field_Ib.field_T, ContextMenuItem.field_Ib.field_q, ContextMenuItem.field_Ib.field_mb, 8, 0, 96);
+        SoftwareRasterizer.fillRoundedRectangleBlended(-4 + bq.field_d.field_F, -4 + bq.field_d.field_T, 2 + bq.field_d.field_q, 4 + (bq.field_d.field_mb << 1), 8, 0, 128);
         bq.field_d.draw(46, false);
         ModalPanel.field_D.draw(97, false);
         ContextMenuItem.field_Ib.draw(param0 + 84, false);
@@ -79,9 +79,9 @@ final class AchievementsScreen extends ButtonMenuScreen {
         var6 = stackIn_12_0;
         var7 = 142 + this.slideOffsetX;
         var8 = 289;
-        SoftwareRasterizer.a(this.slideOffsetX + 8, 280, 120, 145, 8, 0, 148);
+        SoftwareRasterizer.fillRoundedRectangleBlended(this.slideOffsetX + 8, 280, 120, 145, 8, 0, 148);
         var9 = 230;
-        SoftwareRasterizer.a(this.slideOffsetX + 135, 280, 244, 145, 8, 0, 148);
+        SoftwareRasterizer.fillRoundedRectangleBlended(this.slideOffsetX + 135, 280, 244, 145, 8, 0, 148);
         if (-1 == var5) {
           if (!PlayArea.a(100)) {
             IsSixCommand.field_C.a(StatChoiceDialog.field_K, var7, 250, var9, 200, 16777215, -1, 1, 1, 0);
@@ -95,7 +95,7 @@ final class AchievementsScreen extends ButtonMenuScreen {
           if (var5 == 32 &&
             TextFieldValidator.f(-1)) {
             GameModesHelpScreen.field_L.c(5 + this.slideOffsetX, 290);
-            var10 = var18.a('"' + kw.field_c[var5] + '"', var7, var8, var9, 80, 16776960, -1, 1, 0, 16);
+            var10 = var18.a('"' + AvailabilityCheckRequest.field_c[var5] + '"', var7, var8, var9, 80, 16776960, -1, 1, 0, 16);
             var11 = var8 + var10 * 16 + 5;
             ConsoleTokenCursor.field_d.d(QuickChatKeysHelpPanel.field_Db.toLowerCase(), (var9 >> 1) + var7, var11 + 6, 16711680, -1);
             var11 += 10;
@@ -123,7 +123,7 @@ final class AchievementsScreen extends ButtonMenuScreen {
             return;
           }
           StrongCacheEntry.field_w.c(5 + this.slideOffsetX, 290);
-          var10Lifetime2 = var18.a('"' + kw.field_c[var5] + '"', var7, var8, var9, 80, 16776960, -1, 1, 0, 16);
+          var10Lifetime2 = var18.a('"' + AvailabilityCheckRequest.field_c[var5] + '"', var7, var8, var9, 80, 16776960, -1, 1, 0, 16);
           var11Lifetime2 = var8 + var10Lifetime2 * 16 + 5;
           ConsoleTokenCursor.field_d.d(QuickChatKeysHelpPanel.field_Db.toLowerCase(), (var9 >> 1) + var7, var11Lifetime2 + 6, 16711680, -1);
           var11Lifetime2 += 10;
@@ -151,7 +151,7 @@ final class AchievementsScreen extends ButtonMenuScreen {
           return;
         }
         ArchivePreloader.field_i[PacketBuffer.field_e[var5]].c(5 + this.slideOffsetX, 290);
-        var10Lifetime1 = var18.a('"' + kw.field_c[var5] + '"', var7, var8, var9, 80, 16776960, -1, 1, 0, 16);
+        var10Lifetime1 = var18.a('"' + AvailabilityCheckRequest.field_c[var5] + '"', var7, var8, var9, 80, 16776960, -1, 1, 0, 16);
         var11Lifetime1 = var8 + var10Lifetime1 * 16 + 5;
         if (var6 == 0) {
           ConsoleTokenCursor.field_d.d(QuickChatKeysHelpPanel.field_Db.toLowerCase(), (var9 >> 1) + var7, var11Lifetime1 + 6, 16711680, -1);
@@ -204,13 +204,13 @@ final class AchievementsScreen extends ButtonMenuScreen {
         ModalPanel.field_D = eo.a(true);
         for (var2 = 0; 2 > var2; var2++) {
           var3 = var2 == 0 ? bq.field_d : ModalPanel.field_D;
-          var3.field_N.d();
-          var3.field_vb.d();
-          var3.field_r.d();
-          var3.field_t.d();
+          var3.field_N.rotateClockwise();
+          var3.field_vb.rotateClockwise();
+          var3.field_r.rotateClockwise();
+          var3.field_t.rotateClockwise();
         }
         bq.field_d.field_lb = false;
-        ContextMenuItem.field_Ib = new ScrollContainer("Cabinet", GameplayHelpScreen.j((byte) 15), ConsolePanel.field_q, it.field_m);
+        ContextMenuItem.field_Ib = new ScrollContainer("Cabinet", GameplayHelpScreen.j((byte) 15), ConsolePanel.field_q, ParticipantAgent.field_m);
         ContextMenuItem.field_Ib.setLayout(16, 100, 4, (byte) -114, 200, 300, 70);
         if (param0 == -38) {
           ResourceArchive.field_g = true;

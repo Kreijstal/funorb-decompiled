@@ -163,7 +163,7 @@ abstract class ResizableModalPanel extends ModalPanel {
         int var13Lifetime1;
         int var14Lifetime1;
         var17 = Kickabout.field_G;
-        SoftwareRasterizer.g(param0 + 6, 35 + param2, this.field_n - 12, -40 + this.field_i, 2105376, 0);
+        SoftwareRasterizer.fillVerticalGradient(param0 + 6, 35 + param2, this.field_n - 12, -40 + this.field_i, 2105376, 0);
         var5 = 211;
         var4 = 35;
         var6 = 194;

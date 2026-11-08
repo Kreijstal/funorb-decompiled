@@ -1,26 +1,26 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kw {
+final class AvailabilityCheckRequest {
     static int field_i;
     static Sprite field_f;
     static int field_h;
-    private String field_d;
+    private String query;
     static String field_a;
     static String field_g;
     static String[] field_c;
     static DualLinkHashTable field_b;
-    private boolean field_j;
-    private boolean field_e;
+    private boolean complete;
+    private boolean result;
 
-    final boolean b(byte param0) {
+    final boolean getResult(byte param0) {
         if (param0 != -90) {
           return false;
         }
-        return this.field_e;
+        return this.result;
     }
 
-    final static int c(byte param0) {
+    final static int loadStadiumScenery(byte param0) {
         if (ValidationHelpWidget.field_T) {
           return -1;
         }
@@ -63,10 +63,10 @@ final class kw {
         return -1;
     }
 
-    final void a(boolean param0, byte param1) {
-        this.field_j = true;
+    final void complete(boolean param0, byte param1) {
+        this.complete = true;
         int var3 = -109 % ((param1 - 48) / 55);
-        this.field_e = param0 ? true : false;
+        this.result = param0 ? true : false;
     }
 
     final static void b(int param0) {
@@ -78,12 +78,12 @@ final class kw {
         vj.field_c = param0;
     }
 
-    final boolean a(byte param0) {
+    final boolean isComplete(byte param0) {
         if (param0 != -80) {
-          kw.c((byte) -18);
-          return this.field_j;
+          AvailabilityCheckRequest.loadStadiumScenery((byte) -18);
+          return this.complete;
         }
-        return this.field_j;
+        return this.complete;
     }
 
     final static void a(int param0, int param1) {
@@ -121,12 +121,12 @@ final class kw {
         field_c = null;
     }
 
-    final String a(int param0) {
+    final String getQuery(int param0) {
         if (param0 != 3) {
-          this.field_j = true;
-          return this.field_d;
+          this.complete = true;
+          return this.query;
         }
-        return this.field_d;
+        return this.query;
     }
 
     final static void b(boolean param0, byte param1) {
@@ -157,7 +157,7 @@ final class kw {
             ArrayWidgetContainer.field_x = BytePlusOneCommand.field_A;
             us.field_j = ArchiveManager.field_m;
             if (param1 >= -99) {
-              kw.releaseStatics((byte) -40);
+              AvailabilityCheckRequest.releaseStatics((byte) -40);
             }
             vd.field_c = FootballerAgent.field_p;
             TrinketIcon.field_yb = sm.field_q;
@@ -174,7 +174,7 @@ final class kw {
             if (320 == BytePlusOneCommand.field_A &&
               ArchiveManager.field_m == 240) {
               if (param1 >= -99) {
-                kw.releaseStatics((byte) -40);
+                AvailabilityCheckRequest.releaseStatics((byte) -40);
               }
               vd.field_c = FootballerAgent.field_p;
               TrinketIcon.field_yb = sm.field_q;
@@ -200,7 +200,7 @@ final class kw {
               var2_ref = stackIn_20_0;
               oo.field_c.a((byte) 68, 240, 320, (java.awt.Component) (var2_ref));
               if (param1 >= -99) {
-                kw.releaseStatics((byte) -40);
+                AvailabilityCheckRequest.releaseStatics((byte) -40);
               }
               vd.field_c = FootballerAgent.field_p;
               TrinketIcon.field_yb = sm.field_q;
@@ -239,7 +239,7 @@ final class kw {
               }
             }
             if (param1 >= -99) {
-              kw.releaseStatics((byte) -40);
+              AvailabilityCheckRequest.releaseStatics((byte) -40);
             }
             vd.field_c = FootballerAgent.field_p;
             TrinketIcon.field_yb = sm.field_q;
@@ -267,7 +267,7 @@ final class kw {
               ArrayWidgetContainer.field_x = BytePlusOneCommand.field_A;
               us.field_j = ArchiveManager.field_m;
               if (param1 >= -99) {
-                kw.releaseStatics((byte) -40);
+                AvailabilityCheckRequest.releaseStatics((byte) -40);
               }
               vd.field_c = FootballerAgent.field_p;
               TrinketIcon.field_yb = sm.field_q;
@@ -284,7 +284,7 @@ final class kw {
               if (320 == BytePlusOneCommand.field_A &&
                 ArchiveManager.field_m == 240) {
                 if (param1 >= -99) {
-                  kw.releaseStatics((byte) -40);
+                  AvailabilityCheckRequest.releaseStatics((byte) -40);
                 }
                 vd.field_c = FootballerAgent.field_p;
                 TrinketIcon.field_yb = sm.field_q;
@@ -310,7 +310,7 @@ final class kw {
                 var2_ref = stackIn_69_0;
                 oo.field_c.a((byte) 68, 240, 320, (java.awt.Component) (var2_ref));
                 if (param1 >= -99) {
-                  kw.releaseStatics((byte) -40);
+                  AvailabilityCheckRequest.releaseStatics((byte) -40);
                 }
                 vd.field_c = FootballerAgent.field_p;
                 TrinketIcon.field_yb = sm.field_q;
@@ -348,7 +348,7 @@ final class kw {
                 }
               }
               if (param1 >= -99) {
-                kw.releaseStatics((byte) -40);
+                AvailabilityCheckRequest.releaseStatics((byte) -40);
               }
               vd.field_c = FootballerAgent.field_p;
               TrinketIcon.field_yb = sm.field_q;
@@ -366,7 +366,7 @@ final class kw {
                 ArrayWidgetContainer.field_x = BytePlusOneCommand.field_A;
                 us.field_j = ArchiveManager.field_m;
                 if (param1 >= -99) {
-                  kw.releaseStatics((byte) -40);
+                  AvailabilityCheckRequest.releaseStatics((byte) -40);
                 }
                 vd.field_c = FootballerAgent.field_p;
                 TrinketIcon.field_yb = sm.field_q;
@@ -403,7 +403,7 @@ final class kw {
                 var2_ref = stackIn_146_0;
                 oo.field_c.a((byte) 68, 240, 320, (java.awt.Component) (var2_ref));
                 if (param1 >= -99) {
-                  kw.releaseStatics((byte) -40);
+                  AvailabilityCheckRequest.releaseStatics((byte) -40);
                 }
                 vd.field_c = FootballerAgent.field_p;
                 TrinketIcon.field_yb = sm.field_q;
@@ -419,7 +419,7 @@ final class kw {
               } else {
                 if (ArchiveManager.field_m == 240) {
                   if (param1 >= -99) {
-                    kw.releaseStatics((byte) -40);
+                    AvailabilityCheckRequest.releaseStatics((byte) -40);
                   }
                   vd.field_c = FootballerAgent.field_p;
                   TrinketIcon.field_yb = sm.field_q;
@@ -445,7 +445,7 @@ final class kw {
                   var2_ref = stackIn_163_0;
                   oo.field_c.a((byte) 68, 240, 320, (java.awt.Component) (var2_ref));
                   if (param1 >= -99) {
-                    kw.releaseStatics((byte) -40);
+                    AvailabilityCheckRequest.releaseStatics((byte) -40);
                   }
                   vd.field_c = FootballerAgent.field_p;
                   TrinketIcon.field_yb = sm.field_q;
@@ -473,11 +473,11 @@ final class kw {
         }
     }
 
-    kw(String param0) {
-        this.field_e = false;
-        this.field_j = false;
+    AvailabilityCheckRequest(String param0) {
+        this.result = false;
+        this.complete = false;
         try {
-          this.field_d = param0;
+          this.query = param0;
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "kw.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

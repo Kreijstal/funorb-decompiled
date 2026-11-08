@@ -17,7 +17,7 @@ abstract class ArchiveNetworkClient {
     volatile int field_o;
     byte field_g;
     PacketBuffer field_n;
-    ui field_k;
+    NetworkArchiveRequest field_k;
 
     final int countBackgroundRequests(int param0) {
         if (param0 == -21) {
@@ -107,15 +107,15 @@ abstract class ArchiveNetworkClient {
         field_e = null;
     }
 
-    final ui queueRequest(int param0, int param1, byte param2, byte param3, boolean param4) {
-        ui stackIn_3_0 = null;
+    final NetworkArchiveRequest queueRequest(int param0, int param1, byte param2, byte param3, boolean param4) {
+        NetworkArchiveRequest stackIn_3_0 = null;
         boolean stackIn_4_1 = false;
-        ui stackIn_16_0 = null;
+        NetworkArchiveRequest stackIn_16_0 = null;
         boolean stackIn_17_1 = false;
         long var6;
-        ui var8;
+        NetworkArchiveRequest var8;
         var6 = ((long)param0 << 32) + (long)param1;
-        var8 = new ui();
+        var8 = new NetworkArchiveRequest();
         if (param3 == 89) {
           var8.field_l = var6;
           stackIn_16_0 = var8;

@@ -74,7 +74,7 @@ final class TrinketShopDialog extends MessageDialog {
         ScrollContainer var11 = this.field_L;
         this.field_L.setBounds(true, 210, param1 + 250, param2 + 55, 240);
         this.field_L.updateInput(0, true);
-        SoftwareRasterizer.a(-4 + var11.field_F, var11.field_T - 5, 8 + var11.field_q, var11.field_mb, 8, 65793, 96);
+        SoftwareRasterizer.fillRoundedRectangleBlended(-4 + var11.field_F, var11.field_T - 5, 8 + var11.field_q, var11.field_mb, 8, 65793, 96);
         if (param0 >= -11) {
           return;
         }
@@ -86,11 +86,11 @@ final class TrinketShopDialog extends MessageDialog {
         TrinketTile var6_ref_at = (TrinketTile) (this.field_L.field_Db.field_jb.g(24009));
         while (var6_ref_at != null) {
           if (this.field_H == var6_ref_at) {
-            SoftwareRasterizer.a(var6_ref_at.field_F, var6_ref_at.field_T, var6_ref_at.field_q, var6_ref_at.field_mb, 8, 65793, 128);
-            SoftwareRasterizer.f(var6_ref_at.field_F, var6_ref_at.field_T, var6_ref_at.field_q, var6_ref_at.field_mb, 8, 10066329);
+            SoftwareRasterizer.fillRoundedRectangleBlended(var6_ref_at.field_F, var6_ref_at.field_T, var6_ref_at.field_q, var6_ref_at.field_mb, 8, 65793, 128);
+            SoftwareRasterizer.drawRoundedRectangle(var6_ref_at.field_F, var6_ref_at.field_T, var6_ref_at.field_q, var6_ref_at.field_mb, 8, 10066329);
           } else {
             if (var6_ref_at.field_gb) {
-              SoftwareRasterizer.f(var6_ref_at.field_F, var6_ref_at.field_T, var6_ref_at.field_q, var6_ref_at.field_mb, 8, 4473924);
+              SoftwareRasterizer.drawRoundedRectangle(var6_ref_at.field_F, var6_ref_at.field_T, var6_ref_at.field_q, var6_ref_at.field_mb, 8, 4473924);
             }
           }
           var6_ref_at.i((byte) -76);
@@ -105,7 +105,7 @@ final class TrinketShopDialog extends MessageDialog {
           var7 = 160 + param2;
           var8 = this.field_H.field_Cb.getWidth(0);
           var9 = this.field_H.field_Cb.getHeight(15);
-          SoftwareRasterizer.a(-(var8 >> 1) + var6 - 10, -(var9 >> 1) + (var7 - 10), 20 + var8, var9 + 40, 10, 65793, 128);
+          SoftwareRasterizer.fillRoundedRectangleBlended(-(var8 >> 1) + var6 - 10, -(var9 >> 1) + (var7 - 10), 20 + var8, var9 + 40, 10, 65793, 128);
           this.field_H.field_Cb.drawCentered(var7, 23, var6);
           IsSixCommand.field_C.d(this.field_H.field_Eb, var6, 20 + ((var9 >> 1) + var7), this.field_H.c(true), -1);
           if (!(this.field_H.field_Db <= ic.field_h.field_x)) {
@@ -173,7 +173,7 @@ final class TrinketShopDialog extends MessageDialog {
         this.field_K = 0;
         this.field_I = param1;
         CharSequence var5 = (CharSequence) ((Object) "trinkets");
-        this.field_L = new ScrollContainer(vb.a(0, var5), this.g((byte) -119), ConsolePanel.field_q, rr.field_b, it.field_m);
+        this.field_L = new ScrollContainer(vb.a(0, var5), this.g((byte) -119), ConsolePanel.field_q, rr.field_b, ParticipantAgent.field_m);
         this.field_L.setLayout(15, 0, 2, (byte) 2, 240, 210, 0);
         this.field_i[0].field_lb = false;
     }

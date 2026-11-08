@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ui extends vv {
+final class NetworkArchiveRequest extends ArchiveRequest {
     static boolean field_y;
     byte field_x;
     static ReceivedAuctionItem[] field_w;
@@ -47,7 +47,7 @@ final class ui extends vv {
         }
     }
 
-    final static v g(int param0) {
+    final static EntityAfterimage g(int param0) {
         int var3 = 0;
         int var1;
         int var2;
@@ -70,7 +70,7 @@ final class ui extends vv {
         field_w = null;
         if (!param0) {
           String var2 = (String) null;
-          ui.a((String) null, (byte) 7, (String) null);
+          NetworkArchiveRequest.a((String) null, (byte) 7, (String) null);
         }
     }
 
@@ -84,7 +84,7 @@ final class ui extends vv {
     final static void a(int param0, int param1, int param2, int param3) {
         if (param3 != 2147483647) {
           String var5 = (String) null;
-          ui.a((String) null, (byte) 63, (String) null);
+          NetworkArchiveRequest.a((String) null, (byte) 63, (String) null);
         }
         ContentTransitionDialog.a(bw.field_a[param1], true, param0, ad.field_d[param1], param2, true);
     }
@@ -100,17 +100,17 @@ final class ui extends vv {
     }
 
     final byte[] getBytes(int param0) {
-        if (!this.field_p &&
+        if (!this.pending &&
           this.field_v.field_n >= -this.field_x + this.field_v.field_f.length) {
           if (param0 != 12802) {
-            ui.g(64);
+            NetworkArchiveRequest.g(64);
           }
           return this.field_v.field_f;
         }
         throw new RuntimeException();
     }
 
-    ui() {
+    NetworkArchiveRequest() {
     }
 
     static {

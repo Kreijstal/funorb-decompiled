@@ -119,7 +119,7 @@ final class wq {
             for (var3 = 0; var3 < um.field_e.matchState.playerCount; var3++) {
               stackIn_42_0 = (~var3 == ~um.field_e.localSeat) ? 16777215 : 11184812;
               var4 = stackIn_42_0;
-              var10 = um.field_e.matchState.field_S[var3] + ": " + um.field_e.field_z[var3] + "ms / team " + um.field_e.matchState.field_g[var3].field_p;
+              var10 = um.field_e.matchState.field_S[var3] + ": " + um.field_e.field_z[var3] + "ms / team " + um.field_e.matchState.field_g[var3].team;
               IsSixCommand.field_C.c(var10, 620, var2, var4, 0);
               var2 += 20;
             }

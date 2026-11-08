@@ -168,7 +168,7 @@ final class VerticalScrollbar extends UiLayoutNode {
 
     final static void h(int param0) {
         WhirlpoolHasher.field_m = new UiLayoutNode(0L, (UiLayoutNode) null);
-        if (ui.field_t) {
+        if (NetworkArchiveRequest.field_t) {
           WhirlpoolHasher.field_m.addChild((byte) -127, ConsoleValue.field_a);
         }
         WhirlpoolHasher.field_m.addChild((byte) -114, TickClock.field_d);

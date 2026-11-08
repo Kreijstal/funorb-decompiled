@@ -232,7 +232,7 @@ final class IsaacRandom {
             if (TextPromptDialog.field_Mb == var5.field_k) {
               discarded$0 = var3.append("<col=66ffff>").append(var8).append("</col>");
             } else {
-              if (var5.field_k != v.field_d) {
+              if (var5.field_k != EntityAfterimage.field_d) {
                 if (ContextMenuItem.field_Ab != var5.field_k) {
                   if (HelpTipDialog.field_H == var5.field_k) {
                     discarded$1 = var3.append("<col=ffaaff>").append(var8).append("</col>");

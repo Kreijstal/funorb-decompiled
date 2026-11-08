@@ -437,8 +437,8 @@ final class eo {
         }
         int var10 = var9 == 1 ? 5592405 : 16777215;
         int var11 = var9 == 0 ? 5592405 : 16777215;
-        SoftwareRasterizer.a(param3, param4, param5 - 20, param6 - 2 >> 1, 65793, 128);
-        SoftwareRasterizer.a(param3 + param5 - 19, param4, 20, param6 - 2 >> 1, 65793, 128);
+        SoftwareRasterizer.fillRectangleAlpha(param3, param4, param5 - 20, param6 - 2 >> 1, 65793, 128);
+        SoftwareRasterizer.fillRectangleAlpha(param3 + param5 - 19, param4, 20, param6 - 2 >> 1, 65793, 128);
         AuctionListing.a(param3 + param5 - 20, -22914, param3, param4 + param6, param4);
         if (un.field_d.a(param2) > param5 - 20) {
           var12 = (double)(IsSixCommand.field_C.a(param2) - (param5 - 30));
@@ -450,11 +450,11 @@ final class eo {
         TeamManagementScreen.e(125);
         IsSixCommand.field_C.d(Integer.toString(param0.field_b), param3 + param5 - 8, param4 + (param6 >> 1) - 3, var11, -1);
         if (var9 == 0) {
-          SoftwareRasterizer.e(param3 + 2, param4 + (param6 >> 2), param3 + param5 - 1, param4 + (param6 >> 2), 11141377, 196);
-          SoftwareRasterizer.e(param3 + 2, param4 + (param6 >> 2) - 1, param3 + param5 - 1, param4 + (param6 >> 2) - 1, 11141377, 196);
+          SoftwareRasterizer.drawLineBlendedInclusive(param3 + 2, param4 + (param6 >> 2), param3 + param5 - 1, param4 + (param6 >> 2), 11141377, 196);
+          SoftwareRasterizer.drawLineBlendedInclusive(param3 + 2, param4 + (param6 >> 2) - 1, param3 + param5 - 1, param4 + (param6 >> 2) - 1, 11141377, 196);
         }
-        SoftwareRasterizer.a(param3, param4 + (param6 >> 1), param5 - 20, param6 - 2 >> 1, 65793, 128);
-        SoftwareRasterizer.a(param3 + param5 - 19, param4 + (param6 >> 1), 20, param6 - 2 >> 1, 65793, 128);
+        SoftwareRasterizer.fillRectangleAlpha(param3, param4 + (param6 >> 1), param5 - 20, param6 - 2 >> 1, 65793, 128);
+        SoftwareRasterizer.fillRectangleAlpha(param3 + param5 - 19, param4 + (param6 >> 1), 20, param6 - 2 >> 1, 65793, 128);
         AuctionListing.a(param3 + param5 - 20, -22914, param3, param4 + param6, param4);
         if (un.field_d.a(param1) > param5 - 20) {
           var12Lifetime1 = (double)(IsSixCommand.field_C.a(param1) - (param5 - 30));
@@ -466,8 +466,8 @@ final class eo {
         TeamManagementScreen.e(124);
         IsSixCommand.field_C.d(Integer.toString(param0.field_j), param3 + param5 - 8, param4 + param6 - 3, var10, -1);
         if (var9 == 1) {
-          SoftwareRasterizer.e(param3 + 2, param4 + 3 * (param6 >> 2), param3 + param5 - 1, param4 + 3 * (param6 >> 2), 11141377, 196);
-          SoftwareRasterizer.e(param3 + 2, param4 + 3 * (param6 >> 2) - 1, param3 + param5 - 1, param4 + 3 * (param6 >> 2) - 1, 11141377, 196);
+          SoftwareRasterizer.drawLineBlendedInclusive(param3 + 2, param4 + 3 * (param6 >> 2), param3 + param5 - 1, param4 + 3 * (param6 >> 2), 11141377, 196);
+          SoftwareRasterizer.drawLineBlendedInclusive(param3 + 2, param4 + 3 * (param6 >> 2) - 1, param3 + param5 - 1, param4 + 3 * (param6 >> 2) - 1, 11141377, 196);
           return;
         }
     }
@@ -511,10 +511,10 @@ final class eo {
     final static UiLayoutNode createButtonNode(boolean param0, int param1) {
         ArgbSprite[] var2 = param0 ? field_c[param1] : field_r[param1];
         UiLayoutNode var3 = new UiLayoutNode();
-        var3.field_N = (Sprite) ((Object) var2[0].h());
-        var3.field_vb = (Sprite) ((Object) var2[1].h());
-        var3.field_r = (Sprite) ((Object) var2[2].h());
-        var3.field_t = (Sprite) ((Object) var2[3].h());
+        var3.field_N = (Sprite) ((Object) var2[0].copyArgb());
+        var3.field_vb = (Sprite) ((Object) var2[1].copyArgb());
+        var3.field_r = (Sprite) ((Object) var2[2].copyArgb());
+        var3.field_t = (Sprite) ((Object) var2[3].copyArgb());
         var3.field_q = var2[0].field_o;
         var3.field_mb = var2[0].field_v;
         return var3;
@@ -537,11 +537,11 @@ final class eo {
           SoftwareRasterizer.drawVerticalLine(param0 + var7, param1, 11, var9);
         }
         for (var7Lifetime1 = 0; var7Lifetime1 < 3; var7Lifetime1++) {
-          SoftwareRasterizer.h(param0 + var7Lifetime1 - 1, param1 + var7Lifetime1 - 1, 100 - var7Lifetime1 - var7Lifetime1 + 1, 11 - var7Lifetime1 - var7Lifetime1 + 1, 65793, (3 - var7Lifetime1) * param4);
+          SoftwareRasterizer.drawRectangleAlpha(param0 + var7Lifetime1 - 1, param1 + var7Lifetime1 - 1, 100 - var7Lifetime1 - var7Lifetime1 + 1, 11 - var7Lifetime1 - var7Lifetime1 + 1, 65793, (3 - var7Lifetime1) * param4);
         }
         var7Lifetime2 = param5 * 65793;
-        SoftwareRasterizer.d(param0, param1, 100, 2, 0, var7Lifetime2);
-        SoftwareRasterizer.d(param0, param1 + 2, 100, 4, var7Lifetime2, 0);
+        SoftwareRasterizer.fillVerticalGradientAdditive(param0, param1, 100, 2, 0, var7Lifetime2);
+        SoftwareRasterizer.fillVerticalGradientAdditive(param0, param1 + 2, 100, 4, var7Lifetime2, 0);
     }
 
     private final static void b(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7) {
@@ -584,26 +584,26 @@ final class eo {
           field_r[var0_int][0] = field_k[var0_int];
           field_r[var0_int][1] = eo.b((Sprite) (field_r[var0_int][0]));
           field_r[var0_int][2] = field_i[var0_int];
-          field_r[var0_int][3] = field_k[var0_int].h();
+          field_r[var0_int][3] = field_k[var0_int].copyArgb();
           nh.adjustSpriteHsv(field_r[var0_int][3], 0.0, 0.0, 0.7);
         }
         for (var0_intLifetime1 = 0; var0_intLifetime1 < 3; var0_intLifetime1++) {
           for (var1 = 0; var1 < 4; var1++) {
-            field_c[var0_intLifetime1][var1] = field_r[var0_intLifetime1][var1].h();
-            field_c[var0_intLifetime1][var1].g();
+            field_c[var0_intLifetime1][var1] = field_r[var0_intLifetime1][var1].copyArgb();
+            field_c[var0_intLifetime1][var1].flipHorizontalInPlace();
           }
         }
         field_l = new Sprite[3];
         for (var0_intLifetime2 = 0; var0_intLifetime2 < 3; var0_intLifetime2++) {
-          field_l[var0_intLifetime2] = (Sprite) ((Object) field_a.h());
-          field_l[var0_intLifetime2].a();
+          field_l[var0_intLifetime2] = (Sprite) ((Object) field_a.copyArgb());
+          field_l[var0_intLifetime2].flipVertically();
         }
         nh.adjustSpriteHsv(field_l[0], 0.321875, 1.0, 1.0);
         nh.adjustSpriteHsv(field_l[2], 0.74375, 1.0, 1.0);
         var0 = TickClock.field_f.toLowerCase();
-        if (vv.field_r != 3) {
-          if (vv.field_r != 2) {
-            stackIn_20_0 = (vv.field_r == 1) ? 1 : 0;
+        if (ArchiveRequest.field_r != 3) {
+          if (ArchiveRequest.field_r != 2) {
+            stackIn_20_0 = (ArchiveRequest.field_r == 1) ? 1 : 0;
           } else {
             stackIn_20_0 = 1;
           }
@@ -766,7 +766,7 @@ final class eo {
     }
 
     private final static ArgbSprite b(Sprite param0) {
-        ArgbSprite var1 = ((ArgbSprite) (param0)).h();
+        ArgbSprite var1 = ((ArgbSprite) (param0)).copyArgb();
         PacketBuffer.a(-112, var1);
         param0.drawAdditive(0, 0, 90);
         TeamManagementScreen.e(117);
@@ -1078,7 +1078,7 @@ final class eo {
         var17 = 4;
         for (var18 = 0; var18 < var14; var18++) {
           for (var19 = 0; var19 < var11; var19++) {
-            SoftwareRasterizer.e(param0, param1, param0 + var13, param1 - var12, var16, var15);
+            SoftwareRasterizer.drawLineBlendedInclusive(param0, param1, param0 + var13, param1 - var12, var16, var15);
             param0++;
           }
           eo.a(param2[var18], un.field_d, param0, param1 - (var12 >> 1), var11, var12, 16777215, 8192);
@@ -1092,7 +1092,7 @@ final class eo {
           if (var19Lifetime1 == param9) {
             var20 = 11184810;
           }
-          SoftwareRasterizer.a(param0 - var18Lifetime1 - var17, param1 + var19Lifetime1 * (param6 + var17), var18Lifetime1, param6, var20, var15);
+          SoftwareRasterizer.fillRectangleAlpha(param0 - var18Lifetime1 - var17, param1 + var19Lifetime1 * (param6 + var17), var18Lifetime1, param6, var20, var15);
           var21 = param8[var19Lifetime1].toLowerCase();
           stackIn_12_0 = un.field_d;
           stackIn_12_1 = var21;
@@ -1105,7 +1105,7 @@ final class eo {
           }
           ((CoverageBitmapFont) (Object) stackIn_12_0).d(stackIn_12_1, stackIn_12_2, stackIn_12_3, stackIn_13_4, -1);
           for (var22 = 0; var22 < var14; var22++) {
-            SoftwareRasterizer.a(param0 + var22 * (var11 + var17), param1 + var19Lifetime1 * (param6 + var17), var11, param6, var20, var15);
+            SoftwareRasterizer.fillRectangleAlpha(param0 + var22 * (var11 + var17), param1 + var19Lifetime1 * (param6 + var17), var11, param6, var20, var15);
             if (param3 != null) {
               stackIn_18_0 = param3[var19Lifetime1][var22];
             } else {
@@ -1131,9 +1131,9 @@ final class eo {
         }
         for (var19Lifetime2 = 0; var19Lifetime2 < 16; var19Lifetime2++) {
           for (var20Lifetime1 = 0; var20Lifetime1 < var14; var20Lifetime1++) {
-            SoftwareRasterizer.c(param0 + var20Lifetime1 * (var11 + var17), param1 + param7 * (param6 + var17) + var19Lifetime2, var11, 65793, 128 - (var19Lifetime2 << 3));
+            SoftwareRasterizer.drawHorizontalLineAlpha(param0 + var20Lifetime1 * (var11 + var17), param1 + param7 * (param6 + var17) + var19Lifetime2, var11, 65793, 128 - (var19Lifetime2 << 3));
           }
-          SoftwareRasterizer.c(param0 - var18Lifetime1 - var17, param1 + param7 * (param6 + var17) + var19Lifetime2, var18Lifetime1, 65793, 128 - (var19Lifetime2 << 3));
+          SoftwareRasterizer.drawHorizontalLineAlpha(param0 - var18Lifetime1 - var17, param1 + param7 * (param6 + var17) + var19Lifetime2, var18Lifetime1, 65793, 128 - (var19Lifetime2 << 3));
         }
         return param1;
     }

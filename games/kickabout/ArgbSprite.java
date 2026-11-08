@@ -397,7 +397,7 @@ final class ArgbSprite extends Sprite {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final void rotateNearest(int param0, int param1, int param2, int param3, int param4, int param5) {
         int incrementValue$8 = 0;
         int incrementValue$6 = 0;
         int incrementValue$7 = 0;
@@ -1002,7 +1002,7 @@ final class ArgbSprite extends Sprite {
         return;
     }
 
-    final ArgbSprite h() {
+    final ArgbSprite copyArgb() {
         int var3 = 0;
         ArgbSprite var1 = new ArgbSprite(this.field_q, this.field_w);
         var1.field_o = this.field_o;
@@ -1051,7 +1051,7 @@ final class ArgbSprite extends Sprite {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void drawScaled(int param0, int param1, int param2, int param3) {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -1247,7 +1247,7 @@ final class ArgbSprite extends Sprite {
         }
     }
 
-    final void d(int param0, int param1, int param2, int param3, int param4) {
+    final void drawScaledAlpha(int param0, int param1, int param2, int param3, int param4) {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -1323,7 +1323,7 @@ final class ArgbSprite extends Sprite {
         super(param0, param1);
     }
 
-    final void b(int param0, int param1) {
+    final void drawVerticalFlip(int param0, int param1) {
         int var9 = 0;
         int var9Lifetime1;
         int var9Lifetime2;

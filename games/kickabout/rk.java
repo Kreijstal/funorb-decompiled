@@ -80,7 +80,7 @@ final class rk {
         } else {
           var6 = InstrumentNoteMask.field_i * var5.field_o >> 8;
           var7 = var5.field_v * InstrumentNoteMask.field_i >> 8;
-          var5.a(var3, var4, var6, var7);
+          var5.drawScaled(var3, var4, var6, var7);
         }
     }
 

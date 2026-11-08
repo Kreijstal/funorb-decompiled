@@ -6,9 +6,9 @@ final class su {
     static Sprite field_a;
     static ContextMenu field_b;
 
-    final static kw a(int param0, String param1) {
+    final static AvailabilityCheckRequest a(int param0, String param1) {
         RuntimeException var2 = null;
-        kw stackIn_3_0 = null;
+        AvailabilityCheckRequest stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -17,7 +17,7 @@ final class su {
           if (param0 != -3505) {
             field_c = (PopupDialog) null;
           }
-          stackIn_3_0 = new kw(param1);
+          stackIn_3_0 = new AvailabilityCheckRequest(param1);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

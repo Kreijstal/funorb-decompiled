@@ -30,7 +30,7 @@ abstract class SpriteState extends DualLinkNode {
         var2.backpatchByteLength(62, var2.field_n - var3);
     }
 
-    abstract void a(int param0, int param1, int param2, int param3, int param4, int param5);
+    abstract void rotateNearest(int param0, int param1, int param2, int param3, int param4, int param5);
 
     final static void a(boolean param0, int param1, int param2, boolean param3, boolean param4) {
         UiLayoutNode stackIn_18_0 = null;
@@ -397,7 +397,7 @@ abstract class SpriteState extends DualLinkNode {
         param3 = (15 & var6) + (param3 << 4);
         int var7 = this.field_v << 3;
         param0 = (param0 << 4) + (var7 & 15);
-        this.a(var6, var7, param3, param0, param2, param4);
+        this.rotateNearest(var6, var7, param3, param0, param2, param4);
         if (param1 != 24407) {
           SpriteState.a(false, 46, 70, true, false);
         }

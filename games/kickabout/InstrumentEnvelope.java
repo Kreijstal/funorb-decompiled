@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gl {
+final class InstrumentEnvelope {
     int field_e;
     byte[] field_m;
     int field_h;
@@ -17,7 +17,7 @@ final class gl {
     static String field_i;
     int field_n;
 
-    final static int a(int param0, byte param1, int param2, int param3, CipherPacketBuffer param4, int param5, int param6, int param7, int param8, int param9) {
+    final static int readFourRangeUnsigned(int param0, byte param1, int param2, int param3, CipherPacketBuffer param4, int param5, int param6, int param7, int param8, int param9) {
         int stackIn_7_0 = 0;
         int stackIn_8_0 = 0;
         int stackIn_12_0 = 0;
@@ -90,7 +90,7 @@ final class gl {
         }
     }
 
-    final static void a(int param0, CommonGame param1) {
+    final static void buildBoundaryCameraLookup(int param0, CommonGame param1) {
         int var2_int = 0;
         int var3 = 0;
         int var4 = 0;
@@ -111,7 +111,7 @@ final class gl {
         try {
           if (param0 != 6711) {
             var12 = (CommonGame) null;
-            gl.a(-102, (CommonGame) null);
+            InstrumentEnvelope.buildBoundaryCameraLookup(-102, (CommonGame) null);
           }
           if (in.field_c == null) {
             in.field_c = new int[2][4][4][10][2];
@@ -172,7 +172,7 @@ final class gl {
         }
     }
 
-    final static Sprite[] a(int param0, byte param1, int param2, int param3, int param4) {
+    final static Sprite[] createPanelSpriteSlices(int param0, byte param1, int param2, int param3, int param4) {
         int var5 = 34 % ((param1 - 38) / 37);
         return ConsoleTokenCursor.a(1, 1, param2, 1, 3, -1481, param4, param0, param3);
     }

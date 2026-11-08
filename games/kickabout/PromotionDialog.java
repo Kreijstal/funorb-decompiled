@@ -81,7 +81,7 @@ final class PromotionDialog extends MessageDialog {
             stackIn_14_0 = 1;
             return stackIn_14_0;
           }
-          if (!DualLinkDequeIterator.field_e.a((byte) -80)) {
+          if (!DualLinkDequeIterator.field_e.isComplete((byte) -80)) {
             stackIn_18_0 = 1;
             return stackIn_18_0;
           }

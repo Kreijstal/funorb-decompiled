@@ -257,10 +257,10 @@ final class LeaguesScreen extends ButtonMenuScreen {
         RankingRowNode var7;
         int var4Lifetime1;
         var6 = Kickabout.field_G;
-        SoftwareRasterizer.a(AuctionTableWidget.field_Hb.field_F + this.slideOffsetX, -4 + AuctionTableWidget.field_Hb.field_T, AuctionTableWidget.field_Hb.field_q + 4, AuctionTableWidget.field_Hb.field_mb + 6, 0, 128);
-        SoftwareRasterizer.a(this.slideOffsetX + 20, 60, 134 + DialogOverlay.field_b.field_q + ScrollPane.field_Cb.field_q, 29, 10, 0, 128);
+        SoftwareRasterizer.fillRectangleAlpha(AuctionTableWidget.field_Hb.field_F + this.slideOffsetX, -4 + AuctionTableWidget.field_Hb.field_T, AuctionTableWidget.field_Hb.field_q + 4, AuctionTableWidget.field_Hb.field_mb + 6, 0, 128);
+        SoftwareRasterizer.fillRoundedRectangleBlended(this.slideOffsetX + 20, 60, 134 + DialogOverlay.field_b.field_q + ScrollPane.field_Cb.field_q, 29, 10, 0, 128);
         ConsoleTokenCursor.field_d.c(ArchiveNetworkClient.field_e.toUpperCase(), DialogOverlay.field_b.field_F, DialogOverlay.field_b.field_T + 15, 16777215, -1);
-        SoftwareRasterizer.a(DialogOverlay.field_b.field_F, DialogOverlay.field_b.field_T + 4, DialogOverlay.field_b.field_q, DialogOverlay.field_b.field_mb - 5, 7829367, 128);
+        SoftwareRasterizer.fillRectangleAlpha(DialogOverlay.field_b.field_F, DialogOverlay.field_b.field_T + 4, DialogOverlay.field_b.field_q, DialogOverlay.field_b.field_mb - 5, 7829367, 128);
         if (AuctionTableWidget.field_Hb.field_Eb.isLinked((byte) -113)) {
           var3 = AuctionTableWidget.field_Hb.field_Eb;
           SoftwareRasterizer.darkenRectangle(3 + (((UiLayoutNode) ((Object) var3)).field_F + this.slideOffsetX), ((UiLayoutNode) ((Object) var3)).field_T, ((UiLayoutNode) ((Object) var3)).field_q - 6, ((UiLayoutNode) ((Object) var3)).field_mb);
@@ -271,7 +271,7 @@ final class LeaguesScreen extends ButtonMenuScreen {
           var4 = stackIn_7_0;
           stackIn_10_0 = (var4 != 0) ? 256 : 128;
           var5 = stackIn_10_0;
-          SoftwareRasterizer.a(WelcomeDialog.field_H[var3_int].field_F, WelcomeDialog.field_H[var3_int].field_T, WelcomeDialog.field_H[var3_int].field_q, WelcomeDialog.field_H[var3_int].field_mb, 10, 0, var5);
+          SoftwareRasterizer.fillRoundedRectangleBlended(WelcomeDialog.field_H[var3_int].field_F, WelcomeDialog.field_H[var3_int].field_T, WelcomeDialog.field_H[var3_int].field_q, WelcomeDialog.field_H[var3_int].field_mb, 10, 0, var5);
           if (var4 == 0) {
             DelayedServerPacket.field_i[var3_int].b(WelcomeDialog.field_H[var3_int].field_F + 4, WelcomeDialog.field_H[var3_int].field_T - 2, 48);
           } else {
@@ -317,7 +317,7 @@ final class LeaguesScreen extends ButtonMenuScreen {
             IsSixCommand.field_C.d(sh.field_b, this.slideOffsetX + 194, 290, 16777215, -1);
           }
         }
-        SoftwareRasterizer.a(AuctionTableWidget.field_Hb.field_F, 4 + (AuctionTableWidget.field_Hb.field_mb + AuctionTableWidget.field_Hb.field_T), 4 + AuctionTableWidget.field_Hb.field_q, 24, 0, 196);
+        SoftwareRasterizer.fillRectangleAlpha(AuctionTableWidget.field_Hb.field_F, 4 + (AuctionTableWidget.field_Hb.field_mb + AuctionTableWidget.field_Hb.field_T), 4 + AuctionTableWidget.field_Hb.field_q, 24, 0, 196);
         AuctionListing.a(AuctionTableWidget.field_Hb.field_F + (AuctionTableWidget.field_Hb.field_q + 2), -22914, 1 + AuctionTableWidget.field_Hb.field_F, AuctionTableWidget.field_Hb.field_T + (AuctionTableWidget.field_Hb.field_mb + 4) + 24, 4 + (AuctionTableWidget.field_Hb.field_mb + AuctionTableWidget.field_Hb.field_T));
         if (FadingSoundPlayer.field_w > 0) {
           un.field_d.d(SectorCacheStore.field_e.toLowerCase(), (AuctionTableWidget.field_Hb.field_q >> 1) + AuctionTableWidget.field_Hb.field_F, 423, 16679959, -1);

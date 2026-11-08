@@ -248,7 +248,7 @@ final class PlayerContextMenu {
               var16 = (String) null;
               PlayerContextMenu.a(39, 24, true, 46, 63, true, -76, 49, (PlatformTaskDispatcher) null, 107, -22L, -59, -43, (String) null);
             }
-            it.field_n = param5;
+            ParticipantAgent.field_n = param5;
             il.field_g = param6;
             rl.field_o = param3;
             il.field_f = param10;

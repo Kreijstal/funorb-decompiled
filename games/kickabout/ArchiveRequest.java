@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class vv extends DualLinkNode {
+abstract class ArchiveRequest extends DualLinkNode {
     boolean field_q;
     static UiLayoutNode field_o;
     boolean field_n;
     static int field_r;
-    volatile boolean field_p;
+    volatile boolean pending;
     static String field_s;
     private static String field_z;
 
@@ -16,14 +16,14 @@ abstract class vv extends DualLinkNode {
         field_s = null;
         field_o = null;
         if (param0 != 18) {
-          vv.releaseStatics((byte) 127);
+          ArchiveRequest.releaseStatics((byte) 127);
         }
     }
 
     abstract int progress(int param0);
 
-    vv() {
-        this.field_p = true;
+    ArchiveRequest() {
+        this.pending = true;
     }
 
     static {

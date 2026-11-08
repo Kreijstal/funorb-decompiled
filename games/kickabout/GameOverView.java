@@ -232,7 +232,7 @@ final class GameOverView extends MatchPhaseView {
         int var14Lifetime1;
         var15 = Kickabout.field_G;
         try {
-          SoftwareRasterizer.a(22, 95, 596, 225, 10, 0, 96);
+          SoftwareRasterizer.fillRoundedRectangleBlended(22, 95, 596, 225, 10, 0, 96);
           AuctionListing.a(618, param0 ^ -16754303, 22, 305, 110);
           var2_int = this.field_ib;
           un.field_d.d("<u=FFFFFF>" + ConsoleEvaluationException.field_b.toUpperCase() + "</u>", 320 + var2_int, 125 + this.field_Q, 16777215, -1);
@@ -275,7 +275,7 @@ final class GameOverView extends MatchPhaseView {
           var7 = var2_int + 60;
           var8 = this.field_Q + 140;
           AuctionListing.a(160 + var7, -22914, var7, var8 + 21, var8);
-          SoftwareRasterizer.i(var7, var8, 160, 42, 10, 65793);
+          SoftwareRasterizer.fillRoundedRectangle(var7, var8, 160, 42, 10, 65793);
           un.field_d.d(DateOfBirthPanel.field_H, 80 + var7, 17 + var8, 16777215, -1);
           TeamManagementScreen.e(124);
           var8 += 40;
@@ -284,11 +284,11 @@ final class GameOverView extends MatchPhaseView {
             boolean decompiledFrameRemainder1 = true;
             if (var9 < this.field_a.field_g.length) {
               stackIn_34_0 = 0;
-              stackIn_34_1 = this.field_a.field_g[var9].field_p;
+              stackIn_34_1 = this.field_a.field_g[var9].team;
               if (var15 != 0) {
                 if (stackIn_34_0 > stackIn_34_1) {
-                  SoftwareRasterizer.c(var7, var9 + (4 + (var8 - 21)), 160, 65793, -(var9 << 3) + 128);
-                  SoftwareRasterizer.c(160 + var7 + 2, 4 + var8 - (21 - var9), 40, 65793, -(var9 << 3) + 128);
+                  SoftwareRasterizer.drawHorizontalLineAlpha(var7, var9 + (4 + (var8 - 21)), 160, 65793, -(var9 << 3) + 128);
+                  SoftwareRasterizer.drawHorizontalLineAlpha(160 + var7 + 2, 4 + var8 - (21 - var9), 40, 65793, -(var9 << 3) + 128);
                   var9++;
                   break scanLoop1;
                 }
@@ -307,9 +307,9 @@ final class GameOverView extends MatchPhaseView {
                     var13 = 16777215;
                     var14 = 50;
                   }
-                  SoftwareRasterizer.a(var7, -17 + var8, 160, 21, var13, var14);
+                  SoftwareRasterizer.fillRectangleAlpha(var7, -17 + var8, 160, 21, var13, var14);
                   un.field_d.d(this.field_a.field_S[var9], var7 + 80, var8, var12, -1);
-                  SoftwareRasterizer.a(2 + var7 + 160, -17 + var8, 40, 21, var13, var14);
+                  SoftwareRasterizer.fillRectangleAlpha(2 + var7 + 160, -17 + var8, 40, 21, var13, var14);
                   un.field_d.d(LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, ei.field_c, new String[]{Integer.toString(this.field_k[var9])}), 160 + (var7 + 22), var8, var12, -1);
                   var8 += 23;
                 }
@@ -325,8 +325,8 @@ final class GameOverView extends MatchPhaseView {
                 if (stackIn_34_0Lifetime1 <= stackIn_34_1Lifetime1) {
                   break;
                 }
-                SoftwareRasterizer.c(var7, var9 + (4 + (var8 - 21)), 160, 65793, -(var9 << 3) + 128);
-                SoftwareRasterizer.c(160 + var7 + 2, 4 + var8 - (21 - var9), 40, 65793, -(var9 << 3) + 128);
+                SoftwareRasterizer.drawHorizontalLineAlpha(var7, var9 + (4 + (var8 - 21)), 160, 65793, -(var9 << 3) + 128);
+                SoftwareRasterizer.drawHorizontalLineAlpha(160 + var7 + 2, 4 + var8 - (21 - var9), 40, 65793, -(var9 << 3) + 128);
                 var9++;
                 if (var15 != 0) {
                   break scanLoop1;
@@ -336,7 +336,7 @@ final class GameOverView extends MatchPhaseView {
             var8 = 140 + this.field_Q;
             var7 = var2_int + 420;
             AuctionListing.a(var7 + 160, param0 - 16800129, var7, var8 + 21, var8);
-            SoftwareRasterizer.i(var7, var8, 160, 42, 10, 65793);
+            SoftwareRasterizer.fillRoundedRectangle(var7, var8, 160, 42, 10, 65793);
             un.field_d.d(DateOfBirthPanel.field_H, var7 + 80, var8 + 17, 16777215, -1);
             TeamManagementScreen.e(117);
             var8 += 40;
@@ -347,11 +347,11 @@ final class GameOverView extends MatchPhaseView {
             boolean decompiledFrameRemainder0 = true;
             if (this.field_a.field_g.length > var9) {
               stackIn_61_0 = -2;
-              stackIn_61_1 = ~this.field_a.field_g[var9].field_p;
+              stackIn_61_1 = ~this.field_a.field_g[var9].team;
               if (var15 != 0) {
                 if (stackIn_61_0 < stackIn_61_1) {
-                  SoftwareRasterizer.c(var7, var9 - 17 + var8, 160, 65793, 128 - (var9 << 3));
-                  SoftwareRasterizer.c(-42 + var7, var9 - 21 + (var8 + 4), 40, 65793, -(var9 << 3) + 128);
+                  SoftwareRasterizer.drawHorizontalLineAlpha(var7, var9 - 17 + var8, 160, 65793, 128 - (var9 << 3));
+                  SoftwareRasterizer.drawHorizontalLineAlpha(-42 + var7, var9 - 21 + (var8 + 4), 40, 65793, -(var9 << 3) + 128);
                   var9++;
                   break scanLoop2;
                 }
@@ -370,9 +370,9 @@ final class GameOverView extends MatchPhaseView {
                     var13Lifetime1 = 16777215;
                     var14Lifetime1 = 50;
                   }
-                  SoftwareRasterizer.a(var7, var8 - 17, 160, 21, var13Lifetime1, var14Lifetime1);
+                  SoftwareRasterizer.fillRectangleAlpha(var7, var8 - 17, 160, 21, var13Lifetime1, var14Lifetime1);
                   un.field_d.d(this.field_a.field_S[var9], var7 + 80, var8, var12Lifetime1, -1);
-                  SoftwareRasterizer.a(var7 - 42, var8 - 17, 40, 21, var13Lifetime1, var14Lifetime1);
+                  SoftwareRasterizer.fillRectangleAlpha(var7 - 42, var8 - 17, 40, 21, var13Lifetime1, var14Lifetime1);
                   un.field_d.d(LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, ei.field_c, new String[]{Integer.toString(this.field_k[var9])}), -22 + var7, var8, var12Lifetime1, -1);
                   var8 += 23;
                 }
@@ -388,8 +388,8 @@ final class GameOverView extends MatchPhaseView {
                 if (stackIn_61_0Lifetime1 >= stackIn_61_1Lifetime1) {
                   break;
                 }
-                SoftwareRasterizer.c(var7, var9 - 17 + var8, 160, 65793, 128 - (var9 << 3));
-                SoftwareRasterizer.c(-42 + var7, var9 - 21 + (var8 + 4), 40, 65793, -(var9 << 3) + 128);
+                SoftwareRasterizer.drawHorizontalLineAlpha(var7, var9 - 17 + var8, 160, 65793, 128 - (var9 << 3));
+                SoftwareRasterizer.drawHorizontalLineAlpha(-42 + var7, var9 - 21 + (var8 + 4), 40, 65793, -(var9 << 3) + 128);
                 var9++;
                 if (var15 != 0) {
                   break scanLoop2;
@@ -407,7 +407,7 @@ final class GameOverView extends MatchPhaseView {
             } else {
               stackIn_75_5 = 11184810;
             }
-            SoftwareRasterizer.a(stackIn_72_0, stackIn_72_1, stackIn_72_2, stackIn_72_3, stackIn_72_4, stackIn_75_5, 128);
+            SoftwareRasterizer.fillRoundedRectangleBlended(stackIn_72_0, stackIn_72_1, stackIn_72_2, stackIn_72_3, stackIn_72_4, stackIn_75_5, 128);
             break;
           }
           stackIn_82_0 = un.field_d;
@@ -436,13 +436,13 @@ final class GameOverView extends MatchPhaseView {
           var9 = this.field_Q;
           un.field_d.d("<u=FFFFFF>" + GameSetupPanel.field_Vb.toUpperCase() + "</u>", 320 + var2_int, 125 + var9, 16777215, -1);
           var9 += 160;
-          SoftwareRasterizer.a(var2_int + 42, var9 - 20, 552, 28, 10, 65793, 128);
+          SoftwareRasterizer.fillRoundedRectangleBlended(var2_int + 42, var9 - 20, 552, 28, 10, 65793, 128);
           un.field_d.d(LobbyPlayerRow.field_Ub.toUpperCase(), var2_int + 320, var9, param0, -1);
           var9 += 20;
           var10_ref = this.field_bb;
           var9 = this.a(var10_ref, var2_int, var9, true);
           var9 += 35;
-          SoftwareRasterizer.a(42 + var2_int, var9 - 20, 552, 28, 10, 65793, 128);
+          SoftwareRasterizer.fillRoundedRectangleBlended(42 + var2_int, var9 - 20, 552, 28, 10, 65793, 128);
           un.field_d.d(CommonGame.field_a.toUpperCase(), var2_int + 320, var9, 16777215, -1);
           var10_refLifetime1 = this.field_q;
           var9 += 20;
@@ -461,7 +461,7 @@ final class GameOverView extends MatchPhaseView {
             } else {
               stackIn_100_5 = this.field_cb;
             }
-            SoftwareRasterizer.a(stackIn_99_0, stackIn_99_1, stackIn_99_2, stackIn_99_3, stackIn_99_4, stackIn_100_5, 128);
+            SoftwareRasterizer.fillRoundedRectangleBlended(stackIn_99_0, stackIn_99_1, stackIn_99_2, stackIn_99_3, stackIn_99_4, stackIn_100_5, 128);
             stackIn_103_0 = un.field_d;
             stackIn_103_1 = ButtonMenuScreen.field_h;
             stackIn_103_2 = this.field_x + 285;
@@ -488,7 +488,7 @@ final class GameOverView extends MatchPhaseView {
             } else {
               stackIn_112_5 = this.field_cb;
             }
-            SoftwareRasterizer.a(stackIn_111_0, stackIn_111_1, stackIn_111_2, stackIn_111_3, stackIn_111_4, stackIn_112_5, 128);
+            SoftwareRasterizer.fillRoundedRectangleBlended(stackIn_111_0, stackIn_111_1, stackIn_111_2, stackIn_111_3, stackIn_111_4, stackIn_112_5, 128);
             stackIn_115_0 = un.field_d;
             stackIn_115_1 = ContextMenu.field_Ib;
             stackIn_115_2 = this.field_T + 285;
@@ -513,7 +513,7 @@ final class GameOverView extends MatchPhaseView {
           } else {
             stackIn_124_5 = 11184810;
           }
-          SoftwareRasterizer.a(stackIn_121_0, stackIn_121_1, stackIn_121_2, stackIn_121_3, stackIn_121_4, stackIn_124_5, 128);
+          SoftwareRasterizer.fillRoundedRectangleBlended(stackIn_121_0, stackIn_121_1, stackIn_121_2, stackIn_121_3, stackIn_121_4, stackIn_124_5, 128);
           stackIn_128_0 = un.field_d;
           stackIn_128_1 = GameModeDefinition.field_d;
           stackIn_128_2 = this.field_L + 14;
@@ -540,13 +540,13 @@ final class GameOverView extends MatchPhaseView {
           var9 = this.field_Q;
           un.field_d.d("<u=FFFFFF>" + GameModeDefinition.field_d.toUpperCase() + "</u>", 320 + var2_int, 125 + this.field_Q, 16777215, -1);
           var9 += 160;
-          SoftwareRasterizer.a(42 + var2_int, -20 + var9, 552, 28, 10, 65793, 128);
+          SoftwareRasterizer.fillRoundedRectangleBlended(42 + var2_int, -20 + var9, 552, 28, 10, 65793, 128);
           un.field_d.d(ProxyAuthenticationRequiredException.field_f.toUpperCase(), var2_int + 320, var9, 16777215, -1);
           var11Lifetime2 = var2_int + 240;
           var12Lifetime2 = 80 + var9;
           eo.a(var11Lifetime2, var12Lifetime2, ArchivePreloader.field_j, this.field_p, (String[]) null, 160, 21, this.field_a.playerCount, this.field_a.field_S, this.field_g);
           var9 = var9 + (140 + 25 * (this.field_a.playerCount + 1));
-          SoftwareRasterizer.a(var2_int + 42, -20 + var9, 552, 28, 10, 65793, 128);
+          SoftwareRasterizer.fillRoundedRectangleBlended(var2_int + 42, -20 + var9, 552, 28, 10, 65793, 128);
           var12Lifetime3 = var9 + 80;
           un.field_d.d(ad.field_b.toUpperCase(), var2_int + 320, var9, 16777215, -1);
           eo.a(var11Lifetime2, var12Lifetime3, d.field_c, this.field_ab, (String[]) null, 160, 21, this.field_a.playerCount, this.field_a.field_S, this.field_g);
@@ -565,7 +565,7 @@ final class GameOverView extends MatchPhaseView {
             } else {
               stackIn_148_5 = 11184810;
             }
-            SoftwareRasterizer.a(stackIn_147_0, stackIn_147_1, stackIn_147_2, stackIn_147_3, stackIn_147_4, stackIn_148_5, 128);
+            SoftwareRasterizer.fillRoundedRectangleBlended(stackIn_147_0, stackIn_147_1, stackIn_147_2, stackIn_147_3, stackIn_147_4, stackIn_148_5, 128);
             stackIn_151_0 = un.field_d;
             stackIn_151_1 = ButtonMenuScreen.field_h;
             stackIn_151_2 = 285 + this.field_H;
@@ -592,7 +592,7 @@ final class GameOverView extends MatchPhaseView {
             } else {
               stackIn_160_5 = 11184810;
             }
-            SoftwareRasterizer.a(stackIn_159_0, stackIn_159_1, stackIn_159_2, stackIn_159_3, stackIn_159_4, stackIn_160_5, 128);
+            SoftwareRasterizer.fillRoundedRectangleBlended(stackIn_159_0, stackIn_159_1, stackIn_159_2, stackIn_159_3, stackIn_159_4, stackIn_160_5, 128);
             stackIn_163_0 = un.field_d;
             stackIn_163_1 = ContextMenu.field_Ib;
             stackIn_163_2 = 285 + this.field_v;
@@ -701,7 +701,7 @@ final class GameOverView extends MatchPhaseView {
             if (var10 == 0) {
               if (stackIn_25_0 != stackIn_25_1) {
                 var7 = this.field_o[var6_int].field_Eb;
-                SoftwareRasterizer.a(-30 + this.field_o[var6_int].field_F, 92, 110, 180, 10, 0, 128);
+                SoftwareRasterizer.fillRoundedRectangleBlended(-30 + this.field_o[var6_int].field_F, 92, 110, 180, 10, 0, 128);
                 this.field_o[var6_int].h((byte) -116);
                 this.field_s[var6_int].draw(59, true);
                 if (var7.power >= 100 &&
@@ -905,7 +905,7 @@ final class GameOverView extends MatchPhaseView {
         RuntimeException var4_ref = null;
         int var5 = 0;
         int var6_int = 0;
-        it var6 = null;
+        ParticipantAgent var6 = null;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
@@ -1144,14 +1144,14 @@ final class GameOverView extends MatchPhaseView {
           } else {
             stackIn_9_3 = 0;
           }
-          SoftwareRasterizer.a(stackIn_4_0, stackIn_8_1, stackIn_8_2, stackIn_9_3 + 35, 10, 0, 128);
+          SoftwareRasterizer.fillRoundedRectangleBlended(stackIn_4_0, stackIn_8_1, stackIn_8_2, stackIn_9_3 + 35, 10, 0, 128);
           this.positionButtons(123);
           if (this.isButtonEnabled(3, 50) &&
             this.field_S == 0) {
             var3 = this.buttonX(127, 3);
             var4 = this.buttonY(342, 3);
             AuctionListing.a(31 + var3, -22914, var3 - 31, var4 - 17, var4 - 37);
-            SoftwareRasterizer.a(-30 + var3, var4 - 32, 60, 30, 8, 65793, 128);
+            SoftwareRasterizer.fillRoundedRectangleBlended(-30 + var3, var4 - 32, 60, 30, 8, 65793, 128);
             TeamManagementScreen.e(param0 + 116);
             PlayerContextMenu.a(var3 - 19, (byte) -82, -22 + var4);
             IsSixCommand.field_C.a(WeightedLruCache.field_b, -6 + var3, -16 + var4, 16777215, -1);
@@ -1164,7 +1164,7 @@ final class GameOverView extends MatchPhaseView {
             var3Lifetime1 = this.buttonX(param0 ^ 126, 0);
             var4Lifetime1 = this.buttonY(342, 0);
             AuctionListing.a(31 + var3Lifetime1, -22914, -31 + var3Lifetime1, var4Lifetime1 - 17, -37 + var4Lifetime1);
-            SoftwareRasterizer.a(var3Lifetime1 - 30, -32 + var4Lifetime1, 60, 30, 8, 65793, 128);
+            SoftwareRasterizer.fillRoundedRectangleBlended(var3Lifetime1 - 30, -32 + var4Lifetime1, 60, 30, 8, 65793, 128);
             TeamManagementScreen.e(126);
             PlayerContextMenu.a(var3Lifetime1 - 19, (byte) 99, var4Lifetime1 - 22);
             IsSixCommand.field_C.a(WeightedLruCache.field_b, var3Lifetime1 - 6, -16 + var4Lifetime1, 16777215, -1);
@@ -1304,9 +1304,9 @@ final class GameOverView extends MatchPhaseView {
             var8 = 160;
             AuctionListing.a(4 + (var5_int + 320), -22914, var5_int, param2 + 21, param2);
             var9 = 80;
-            SoftwareRasterizer.i(var5_int, param2, var8, 42, 10, 65793);
-            SoftwareRasterizer.i(var6, param2, var9, 42, 10, 65793);
-            SoftwareRasterizer.i(var7, param2, var9, 42, 10, 65793);
+            SoftwareRasterizer.fillRoundedRectangle(var5_int, param2, var8, 42, 10, 65793);
+            SoftwareRasterizer.fillRoundedRectangle(var6, param2, var9, 42, 10, 65793);
+            SoftwareRasterizer.fillRoundedRectangle(var7, param2, var9, 42, 10, 65793);
             un.field_d.d(DateOfBirthPanel.field_H, var5_int + (var8 >> 1), param2 + 17, 16777215, -1);
             un.field_d.d(et.field_e, var6 + (var9 >> 1), param2 + 17, 16777215, -1);
             un.field_d.d(lt.field_e, var7 + (var9 >> 1), 17 + param2, 16777215, -1);
@@ -1331,10 +1331,10 @@ final class GameOverView extends MatchPhaseView {
                 var13 = 50;
                 var12 = 16777215;
               }
-              SoftwareRasterizer.a(-26 + var5_int, param2, 24, 21, var12, var13);
-              SoftwareRasterizer.a(var5_int, param2, var8, 21, var12, var13);
-              SoftwareRasterizer.a(var6, param2, var9, 21, var12, var13);
-              SoftwareRasterizer.a(var7, param2, var9, 21, var12, var13);
+              SoftwareRasterizer.fillRectangleAlpha(-26 + var5_int, param2, 24, 21, var12, var13);
+              SoftwareRasterizer.fillRectangleAlpha(var5_int, param2, var8, 21, var12, var13);
+              SoftwareRasterizer.fillRectangleAlpha(var6, param2, var9, 21, var12, var13);
+              SoftwareRasterizer.fillRectangleAlpha(var7, param2, var9, 21, var12, var13);
               var10++;
               un.field_d.d(Integer.toString(var10), -14 + var5_int, 16 + param2, 16777215, -1);
               un.field_d.d(var14, (var8 >> 1) + var5_int, 16 + param2, 16777215, -1);
@@ -1347,10 +1347,10 @@ final class GameOverView extends MatchPhaseView {
               var11 = 0;
               while (true) {
                 if (16 > var11) {
-                  SoftwareRasterizer.c(-26 + var5_int, param2 + var11, 24, 65793, 128 - (var11 << 3));
-                  SoftwareRasterizer.c(var5_int, param2 + var11, var8, 65793, 128 - (var11 << 3));
-                  SoftwareRasterizer.c(var6, param2 + var11, var9, 65793, 128 - (var11 << 3));
-                  SoftwareRasterizer.c(var7, param2 + var11, var9, 65793, -(var11 << 3) + 128);
+                  SoftwareRasterizer.drawHorizontalLineAlpha(-26 + var5_int, param2 + var11, 24, 65793, 128 - (var11 << 3));
+                  SoftwareRasterizer.drawHorizontalLineAlpha(var5_int, param2 + var11, var8, 65793, 128 - (var11 << 3));
+                  SoftwareRasterizer.drawHorizontalLineAlpha(var6, param2 + var11, var9, 65793, 128 - (var11 << 3));
+                  SoftwareRasterizer.drawHorizontalLineAlpha(var7, param2 + var11, var9, 65793, -(var11 << 3) + 128);
                   var11++;
                   if (var15 == 0) {
                     continue;
@@ -1522,7 +1522,7 @@ final class GameOverView extends MatchPhaseView {
                 stackIn_40_0Lifetime1 = 0;
                 var9Lifetime1 = stackIn_40_0Lifetime1;
                 while (var9Lifetime1 < 16) {
-                  SoftwareRasterizer.c(var3[var5], var9Lifetime1 + var8, 160, 65793, -(var9Lifetime1 << 3) + 128);
+                  SoftwareRasterizer.drawHorizontalLineAlpha(var3[var5], var9Lifetime1 + var8, 160, 65793, -(var9Lifetime1 << 3) + 128);
                   var9Lifetime1++;
                 }
               }

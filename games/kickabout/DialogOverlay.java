@@ -199,7 +199,7 @@ final class DialogOverlay implements OverlayLayer {
               stackIn_10_1 = null;
               stackIn_10_2 = null;
               stackIn_10_3 = 0L;
-              if (ui.field_t) {
+              if (NetworkArchiveRequest.field_t) {
                 stackIn_11_1 = null;
                 stackIn_11_2 = null;
                 stackIn_11_4 = AuctionSettingsDialog.field_J;
@@ -245,7 +245,7 @@ final class DialogOverlay implements OverlayLayer {
               stackIn_31_1 = null;
               stackIn_31_2 = null;
               stackIn_31_3 = 0L;
-              if (ui.field_t) {
+              if (NetworkArchiveRequest.field_t) {
                 stackIn_32_1 = null;
                 stackIn_32_2 = null;
                 stackIn_32_4 = mp.field_f;
@@ -404,7 +404,7 @@ final class DialogOverlay implements OverlayLayer {
               }
               var12.field_Hb.field_E = Integer.toString(var12.field_Ob);
               var12.field_Hb.setBounds(true, 48, 200, var31, sh.field_c);
-              stackIn_75_0 = (ui.field_t) ? 250 : 200;
+              stackIn_75_0 = (NetworkArchiveRequest.field_t) ? 250 : 200;
               var33_intLifetime1 = stackIn_75_0;
               var12.field_zb.setBounds(true, -var33_intLifetime1 + 365 - 2, var33_intLifetime1, var31, sh.field_c);
               var34_int = mj.field_b;

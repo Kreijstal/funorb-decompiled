@@ -205,10 +205,10 @@ final class KitStyleTile extends UiLayoutNode implements PopupCard {
           var4 = 210;
         }
         if (0 != var4) {
-          SoftwareRasterizer.a(this.field_Jb.field_F, this.field_Jb.field_T, this.field_Jb.field_q, this.field_Jb.field_mb, 8, 16777215, var4);
+          SoftwareRasterizer.fillRoundedRectangleBlended(this.field_Jb.field_F, this.field_Jb.field_T, this.field_Jb.field_q, this.field_Jb.field_mb, 8, 16777215, var4);
         }
         if (var2 != 0) {
-          SoftwareRasterizer.f(this.field_Jb.field_F, this.field_Jb.field_T, this.field_Jb.field_q, this.field_Jb.field_mb, 8, 16777215);
+          SoftwareRasterizer.drawRoundedRectangle(this.field_Jb.field_F, this.field_Jb.field_T, this.field_Jb.field_q, this.field_Jb.field_mb, 8, 16777215);
         }
         if (null != this.field_Eb) {
           AppScreen.renderModelToSprite(this.field_Eb, this.field_Db, PlayArea.field_e, -101);
@@ -316,7 +316,7 @@ final class KitStyleTile extends UiLayoutNode implements PopupCard {
               } else {
                 stackIn_24_2 = RenderedBall.field_R;
               }
-              IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(stackIn_23_0, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(stackIn_23_1, stackIn_24_2, new String[]{kw.field_c[this.field_Cb.field_k].toLowerCase()}));
+              IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(stackIn_23_0, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(stackIn_23_1, stackIn_24_2, new String[]{AvailabilityCheckRequest.field_c[this.field_Cb.field_k].toLowerCase()}));
             }
           }
           if (-1 != this.field_Cb.field_g) {

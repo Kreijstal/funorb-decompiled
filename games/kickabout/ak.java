@@ -116,7 +116,7 @@ final class ak extends IntrusiveNode {
           var4 = IntKeyLookup.a((byte) -59, this.field_g + var2);
           var5_int = this.field_e.field_o * InstrumentNoteMask.field_i >> 8;
           var6 = this.field_e.field_v * InstrumentNoteMask.field_i >> 8;
-          this.field_e.a(var3 - (var5_int >> 1), -(var6 >> 1) + var4, var5_int, var6);
+          this.field_e.drawScaled(var3 - (var5_int >> 1), -(var6 >> 1) + var4, var5_int, var6);
           if (param0 == 192) {
             return;
           }
@@ -134,7 +134,7 @@ final class ak extends IntrusiveNode {
           var4Lifetime1 = IntKeyLookup.a((byte) -59, this.field_g + var2Lifetime1);
           var5_intLifetime1 = this.field_e.field_o * InstrumentNoteMask.field_i >> 8;
           var6Lifetime1 = this.field_e.field_v * InstrumentNoteMask.field_i >> 8;
-          this.field_e.a(var3Lifetime1 - (var5_intLifetime1 >> 1), -(var6Lifetime1 >> 1) + var4Lifetime1, var5_intLifetime1, var6Lifetime1);
+          this.field_e.drawScaled(var3Lifetime1 - (var5_intLifetime1 >> 1), -(var6Lifetime1 >> 1) + var4Lifetime1, var5_intLifetime1, var6Lifetime1);
         } else {
           if (this.field_j == 5) {
             var2Lifetime1 = ug.a(param0 ^ 192, this.field_k);

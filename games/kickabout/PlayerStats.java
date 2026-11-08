@@ -952,7 +952,7 @@ final class PlayerStats implements PopupCard {
         }
         while (var16_int < 4) {
           if (var26[var16_int] != 0) {
-            SoftwareRasterizer.a(param1, var15, var13, var26[var16_int] + 1, var25[var14], var10[var14]);
+            SoftwareRasterizer.fillRectangleAlpha(param1, var15, var13, var26[var16_int] + 1, var25[var14], var10[var14]);
             SoftwareRasterizer.e(param1, var15, var13, var26[var16_int] + 1, 65793);
             var15 = var15 + var26[var16_int];
             var14 = var14 ^ 1;

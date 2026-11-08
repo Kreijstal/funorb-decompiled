@@ -14,7 +14,7 @@ final class ArchiveManager {
     static boolean field_c;
     private CachedArchiveSource[] field_k;
     static int field_d;
-    private ui field_a;
+    private NetworkArchiveRequest field_a;
 
     public static void releaseStatics(int param0) {
         field_f = null;
@@ -520,7 +520,7 @@ final class ArchiveManager {
           }
           this.field_a = this.field_g.queueRequest(255, 255, (byte) 0, (byte) 89, true);
         }
-        if (this.field_a.field_p) {
+        if (this.field_a.pending) {
           return false;
         }
         var10 = new PacketBuffer(this.field_a.getBytes(param0 ^ -12847));

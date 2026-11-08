@@ -31,7 +31,7 @@ final class fs {
         int var8 = SoftwareRasterizer.field_f;
         Sprite var9 = new Sprite(param1, param0 - param1 * 2);
         var9.e();
-        SoftwareRasterizer.g(0, 0, param1, -(2 * param1) + param0, param3, param4);
+        SoftwareRasterizer.fillVerticalGradient(0, 0, param1, -(2 * param1) + param0, param3, param4);
         Sprite var10 = new Sprite(param1, param1);
         var10.e();
         SoftwareRasterizer.fillRect(0, 0, param1, param1, param3);
@@ -167,7 +167,7 @@ final class fs {
 
     final static void a(int param0, RenderedFootballer param1, int param2) {
         try {
-          ui.g(0).a(param1, param0, true);
+          NetworkArchiveRequest.g(0).captureFootballer(param1, param0, true);
           if (param2 < 103) {
             field_c = (String) null;
           }

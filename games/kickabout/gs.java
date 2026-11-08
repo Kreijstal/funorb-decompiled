@@ -18,19 +18,19 @@ final class gs {
           return;
         }
         if (ArrayWidgetContainer.field_x != -1) {
-          bw.field_e[2].c(us.field_k + (-re.field_k + ArrayWidgetContainer.field_x - 6 + 1), -1 + (us.field_j - kw.field_h));
-          bw.field_e[3].c(ArrayWidgetContainer.field_x + 6 - us.field_k, -kw.field_h + (us.field_j - 1));
-          bw.field_e[0].c(-kw.field_h + (ArrayWidgetContainer.field_x - 1), 1 + (us.field_k - 6) + (-re.field_k + us.field_j));
-          bw.field_e[1].c(-kw.field_h + (ArrayWidgetContainer.field_x - 1), -us.field_k + 6 + us.field_j);
+          bw.field_e[2].c(us.field_k + (-re.field_k + ArrayWidgetContainer.field_x - 6 + 1), -1 + (us.field_j - AvailabilityCheckRequest.field_h));
+          bw.field_e[3].c(ArrayWidgetContainer.field_x + 6 - us.field_k, -AvailabilityCheckRequest.field_h + (us.field_j - 1));
+          bw.field_e[0].c(-AvailabilityCheckRequest.field_h + (ArrayWidgetContainer.field_x - 1), 1 + (us.field_k - 6) + (-re.field_k + us.field_j));
+          bw.field_e[1].c(-AvailabilityCheckRequest.field_h + (ArrayWidgetContainer.field_x - 1), -us.field_k + 6 + us.field_j);
           return;
         }
         if (us.field_j == -1) {
           return;
         }
-        bw.field_e[2].c(us.field_k + (-re.field_k + ArrayWidgetContainer.field_x - 6 + 1), -1 + (us.field_j - kw.field_h));
-        bw.field_e[3].c(ArrayWidgetContainer.field_x + 6 - us.field_k, -kw.field_h + (us.field_j - 1));
-        bw.field_e[0].c(-kw.field_h + (ArrayWidgetContainer.field_x - 1), 1 + (us.field_k - 6) + (-re.field_k + us.field_j));
-        bw.field_e[1].c(-kw.field_h + (ArrayWidgetContainer.field_x - 1), -us.field_k + 6 + us.field_j);
+        bw.field_e[2].c(us.field_k + (-re.field_k + ArrayWidgetContainer.field_x - 6 + 1), -1 + (us.field_j - AvailabilityCheckRequest.field_h));
+        bw.field_e[3].c(ArrayWidgetContainer.field_x + 6 - us.field_k, -AvailabilityCheckRequest.field_h + (us.field_j - 1));
+        bw.field_e[0].c(-AvailabilityCheckRequest.field_h + (ArrayWidgetContainer.field_x - 1), 1 + (us.field_k - 6) + (-re.field_k + us.field_j));
+        bw.field_e[1].c(-AvailabilityCheckRequest.field_h + (ArrayWidgetContainer.field_x - 1), -us.field_k + 6 + us.field_j);
     }
 
     final static void d(int param0) {
@@ -56,7 +56,7 @@ final class gs {
         var2 = Kickabout.field_G;
         try {
           for (var1_int = param0; SplashScreen.field_n.length > var1_int; var1_int++) {
-            SplashScreen.field_n[var1_int].c(-118);
+            SplashScreen.field_n[var1_int].draw(-118);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -79,7 +79,7 @@ final class gs {
         ContextMenu.b(0, (byte) 60, ReceivedAuctionItem.field_E[1]);
         ScrollBar.k(param0);
         tc.a(NanoTickClock.field_n, param0 ^ 8710, ih.field_c, RankingsScreen.field_C);
-        ui.a(1, TrinketPickerDialog.a(ih.field_c, param0 ^ 77, NanoTickClock.field_n, RankingsScreen.field_C), ReceivedAuctionItem.field_E[2], 2147483647);
+        NetworkArchiveRequest.a(1, TrinketPickerDialog.a(ih.field_c, param0 ^ 77, NanoTickClock.field_n, RankingsScreen.field_C), ReceivedAuctionItem.field_E[2], 2147483647);
     }
 
     public static void releaseStatics(byte param0) {

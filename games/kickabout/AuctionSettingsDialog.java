@@ -227,16 +227,16 @@ final class AuctionSettingsDialog extends MessageDialog {
         var7 = var4 + 50;
         var8 = 6 + (var6 + 75);
         var9 = 75 + var8 + 6;
-        SoftwareRasterizer.a(-47 + var4, var6, 90, 75, 10, 65793, 128);
-        SoftwareRasterizer.a(160 + var5 + 7, var6, 90, 75, 10, 65793, 128);
+        SoftwareRasterizer.fillRoundedRectangleBlended(-47 + var4, var6, 90, 75, 10, 65793, 128);
+        SoftwareRasterizer.fillRoundedRectangleBlended(160 + var5 + 7, var6, 90, 75, 10, 65793, 128);
         un.field_d.d(LoadingProgressDialog.field_T.toLowerCase(), var4 - 2, var6 + 30, 16777215, -1);
         IsSixCommand.field_C.d(ad.formatCurrencyAmount(QuickChatPhraseCache.field_c, 26300), var4 - 2, var6 + 54, 16777215, -1);
         un.field_d.d(GameLoopApplet.field_D.toLowerCase(), 52 + (160 + var5), var6 + 30, 16777215, -1);
         IsSixCommand.field_C.d(ad.formatCurrencyAmount(IndexedSpriteState.field_g, 26300), 52 + (160 + var5), 54 + var6, 16777215, -1);
-        SoftwareRasterizer.a(var5, var6, 160, 75, 10, 65793, 128);
-        SoftwareRasterizer.a(var7, var8, 160, 75, 10, 65793, 128);
-        SoftwareRasterizer.a(var4, var9, 260, 120, 10, 65793, 128);
-        un.field_d.d(gl.field_f.toLowerCase(), 130 + var4, 21 + var6, 16777215, -1);
+        SoftwareRasterizer.fillRoundedRectangleBlended(var5, var6, 160, 75, 10, 65793, 128);
+        SoftwareRasterizer.fillRoundedRectangleBlended(var7, var8, 160, 75, 10, 65793, 128);
+        SoftwareRasterizer.fillRoundedRectangleBlended(var4, var9, 260, 120, 10, 65793, 128);
+        un.field_d.d(InstrumentEnvelope.field_f.toLowerCase(), 130 + var4, 21 + var6, 16777215, -1);
         un.field_d.d(Kickabout.field_F.toLowerCase(), var4 + 130, var9 + 21, 16777215, -1);
         if (StrongCacheEntry.g(2368)) {
           stackIn_8_0 = (nj.monotonicMillis(-51) % 500L < 250L) ? 1 : 0;
@@ -246,12 +246,12 @@ final class AuctionSettingsDialog extends MessageDialog {
         var10 = stackIn_8_0;
         uq.field_b.field_s = var4 + 10;
         uq.field_b.field_J = 27 + var6;
-        SoftwareRasterizer.a(uq.field_b.field_s + 85, uq.field_b.field_J + 6, UnreadMessagesScreen.field_A.field_q + 4, -4 + UnreadMessagesScreen.field_A.field_mb, 7829367, 128);
+        SoftwareRasterizer.fillRectangleAlpha(uq.field_b.field_s + 85, uq.field_b.field_J + 6, UnreadMessagesScreen.field_A.field_q + 4, -4 + UnreadMessagesScreen.field_A.field_mb, 7829367, 128);
         IsSixCommand.field_C.a('£', 91 + uq.field_b.field_s, uq.field_b.field_J + 19, 16777215);
         uq.field_b.draw(110, var10 != 0 & this.field_F);
         oa.field_b.field_J = 5 + (var8 - 13);
         oa.field_b.field_s = var4 + 10;
-        SoftwareRasterizer.a(oa.field_b.field_s + 85, 40 + oa.field_b.field_J, StatChoiceDialog.field_F.field_q + 4, -4 + StatChoiceDialog.field_F.field_mb, 7829367, 128);
+        SoftwareRasterizer.fillRectangleAlpha(oa.field_b.field_s + 85, 40 + oa.field_b.field_J, StatChoiceDialog.field_F.field_q + 4, -4 + StatChoiceDialog.field_F.field_mb, 7829367, 128);
         if (ng.field_e) {
           IsSixCommand.field_C.a('£', oa.field_b.field_s + 91, 53 + oa.field_b.field_J, 16777215);
         }
@@ -287,7 +287,7 @@ final class AuctionSettingsDialog extends MessageDialog {
         for (var11 = 0; var11 < 5; var11++) {
           of.field_d[var11].setBounds(true, of.field_d[var11].field_q, var4 + 10, 26 + (var9 + var11 * 18), of.field_d[var11].field_mb);
           if (of.field_d[var11].field_gb) {
-            SoftwareRasterizer.a(of.field_d[var11].field_F, of.field_d[var11].field_T, of.field_d[var11].field_q, of.field_d[var11].field_mb - 2, 6, 16777215, 140);
+            SoftwareRasterizer.fillRoundedRectangleBlended(of.field_d[var11].field_F, of.field_d[var11].field_T, of.field_d[var11].field_q, of.field_d[var11].field_mb - 2, 6, 16777215, 140);
           }
           if (ee.field_d == var11) {
             su.field_a.c(10 + (var4 + 74), 26 + var9 - (-(var11 * 18) - 2));

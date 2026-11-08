@@ -67,7 +67,7 @@ final class PlayerValueSortCriterion extends SortCriterion {
     final static void a(int[] param0, int param1, ParticipantStatus[] param2, int param3) {
         int dupTemp$0 = 0;
         int var12 = 0;
-        it[] stackIn_6_0 = null;
+        ParticipantAgent[] stackIn_6_0 = null;
         int stackIn_7_1 = 0;
         int stackIn_29_0 = 0;
         RuntimeException stackIn_43_0 = null;
@@ -114,7 +114,7 @@ final class PlayerValueSortCriterion extends SortCriterion {
           var22 = var25;
           var7 = var22;
           for (var8 = 0; var8 < vt.field_c.field_g.length; var8++) {
-            dupTemp$0 = vt.field_c.field_g[var8].field_p;
+            dupTemp$0 = vt.field_c.field_g[var8].team;
             var5[dupTemp$0] = var5[dupTemp$0] + 1;
           }
           stackIn_6_0 = vt.field_c.field_g;
@@ -123,7 +123,7 @@ final class PlayerValueSortCriterion extends SortCriterion {
           } else {
             stackIn_7_1 = 0;
           }
-          var8Lifetime1 = stackIn_6_0[stackIn_7_1].field_p;
+          var8Lifetime1 = stackIn_6_0[stackIn_7_1].team;
           for (var9 = 0; 2 > var9; var9++) {
             var6[var9] = rn.field_c * var23[var9] + 4;
           }
@@ -133,8 +133,8 @@ final class PlayerValueSortCriterion extends SortCriterion {
           var7[var8Lifetime1] = 473 - var24[var8Lifetime1];
           var7[-var8Lifetime1 + 1] = -2 + var25[var8Lifetime1] - var6[-var8Lifetime1 + 1];
           for (var9Lifetime1 = 0; 2 > var9Lifetime1; var9Lifetime1++) {
-            SoftwareRasterizer.a(-et.field_c + 644, var25[var9Lifetime1], et.field_c, var24[var9Lifetime1], 2, 0, param1);
-            SoftwareRasterizer.a(643 - (et.field_c + rn.field_c + 2), var25[var9Lifetime1], rn.field_c + 1, var24[var9Lifetime1], 2, 0, param1);
+            SoftwareRasterizer.fillRoundedRectangleBlended(-et.field_c + 644, var25[var9Lifetime1], et.field_c, var24[var9Lifetime1], 2, 0, param1);
+            SoftwareRasterizer.fillRoundedRectangleBlended(643 - (et.field_c + rn.field_c + 2), var25[var9Lifetime1], rn.field_c + 1, var24[var9Lifetime1], 2, 0, param1);
             var10 = vt.field_c.field_X.score[var9Lifetime1];
             if (var10 > 99) {
               var10 = 99;
@@ -142,7 +142,7 @@ final class PlayerValueSortCriterion extends SortCriterion {
             ((BitmapFont) ((Object) var4)).d(Integer.toString(var10), -2 + (-rn.field_c + 644 - et.field_c + (rn.field_c >> 1)) + 1, (var24[var9Lifetime1] + rn.field_c >> 1) + var25[var9Lifetime1] - 2, 16777215, -1);
             var11 = 0;
             for (var12 = 0; vt.field_c.playerCount > var12; var12++) {
-              if (~var9Lifetime1 == ~vt.field_c.field_g[var12].field_p) {
+              if (~var9Lifetime1 == ~vt.field_c.field_g[var12].team) {
                 var13 = 1 + (TextPromptDialog.field_yb + var11 * rn.field_c) + (var25[var9Lifetime1] + 2) + 3;
                 var14 = param0[var12];
                 var15 = SingleChildContainer.a(true, var14);
@@ -160,7 +160,7 @@ final class PlayerValueSortCriterion extends SortCriterion {
                   if (vt.field_c.participantStatus[var12].offerDraw) {
                     var17 = ((BitmapFont) ((Object) var4)).a(AlphaContainer.field_A) + 12;
                     AuctionListing.a(-rn.field_c + (-et.field_c + 642) - 1, -22914, 0, 480, 0);
-                    SoftwareRasterizer.a(642 - (et.field_c + (rn.field_c + var17)), var13 - rn.field_c + 3, var17 + 4, rn.field_c - 2, 6, 65793, param1);
+                    SoftwareRasterizer.fillRoundedRectangleBlended(642 - (et.field_c + (rn.field_c + var17)), var13 - rn.field_c + 3, var17 + 4, rn.field_c - 2, 6, 65793, param1);
                     ((BitmapFont) ((Object) var4)).a(AlphaContainer.field_A, 7 + (-et.field_c + 644 - rn.field_c - (2 + var17)), var13, 16777215, -1);
                     TeamManagementScreen.e(119);
                   }

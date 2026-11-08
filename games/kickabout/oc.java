@@ -33,13 +33,13 @@ final class oc {
             for (var6 = 0; var1 > var6; var6++) {
               var5_ref_int__[var6] = PainterStyle.a(lt.field_a[TextLayoutLine.b((int) var16[var6], 255)], TextLayoutLine.b(-16777216, var17[var6] << 24));
             }
-            var3 = new ArgbSprite(kw.field_i, AccountTermsPanel.field_J, IsaacRandom.field_f[0], fc.field_g[0], MouseInputHandler.field_c[0], PasswordValidator.field_j[0], var13);
+            var3 = new ArgbSprite(AvailabilityCheckRequest.field_i, AccountTermsPanel.field_J, IsaacRandom.field_f[0], fc.field_g[0], MouseInputHandler.field_c[0], PasswordValidator.field_j[0], var13);
           } else {
             var9 = new int[var1];
             for (var5 = 0; var1 > var5; var5++) {
               var9[var5] = lt.field_a[TextLayoutLine.b((int) var16[var5], 255)];
             }
-            var3 = new Sprite(kw.field_i, AccountTermsPanel.field_J, IsaacRandom.field_f[0], fc.field_g[0], MouseInputHandler.field_c[0], PasswordValidator.field_j[0], var9);
+            var3 = new Sprite(AvailabilityCheckRequest.field_i, AccountTermsPanel.field_J, IsaacRandom.field_f[0], fc.field_g[0], MouseInputHandler.field_c[0], PasswordValidator.field_j[0], var9);
           }
           ScrollContainer.h((byte) -111);
           return (Sprite) (var3);

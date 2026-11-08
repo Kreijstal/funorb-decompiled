@@ -178,7 +178,7 @@ final class re implements WidgetPainter {
               }
             } else {
               if (ih.field_c == 2) {
-                var1Lifetime1 = k.loadStreetScenery(-124);
+                var1Lifetime1 = StreetSceneryLoader.loadStreetScenery(-124);
                 if (var1Lifetime1 != -1) {
                   DelayedServerPacket.a(100, 9863, var1Lifetime1);
                   return;
@@ -195,7 +195,7 @@ final class re implements WidgetPainter {
           vd.a(0, 2);
           if (2 != RankingsScreen.field_C) {
             if (RankingsScreen.field_C == 3) {
-              var1Lifetime2 = kw.c((byte) 28);
+              var1Lifetime2 = AvailabilityCheckRequest.loadStadiumScenery((byte) 28);
               if (var1Lifetime2 != -1) {
                 DelayedServerPacket.a(100, 9863, var1Lifetime2);
                 return;

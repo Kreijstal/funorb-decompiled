@@ -62,7 +62,7 @@ final class ValidationState {
           SoftwareRasterizer.clearFramebuffer();
           AuctionItem.a((byte) 47);
           if (256 > var5) {
-            SoftwareRasterizer.a(0, 0, SoftwareRasterizer.field_g, SoftwareRasterizer.field_f, 0, 256 - var5);
+            SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_g, SoftwareRasterizer.field_f, 0, 256 - var5);
           }
           TeamManagementScreen.e(122);
           if (PlayerStats.field_p >= 150) {
@@ -119,7 +119,7 @@ final class ValidationState {
         SoftwareRasterizer.clearFramebuffer();
         AuctionItem.a((byte) 47);
         if (256 > var5Lifetime1) {
-          SoftwareRasterizer.a(0, 0, SoftwareRasterizer.field_g, SoftwareRasterizer.field_f, 0, 256 - var5Lifetime1);
+          SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_g, SoftwareRasterizer.field_f, 0, 256 - var5Lifetime1);
         }
         TeamManagementScreen.e(122);
         if (PlayerStats.field_p >= 150) {

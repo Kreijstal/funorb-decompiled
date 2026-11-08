@@ -412,7 +412,7 @@ final class MenuButton {
             IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, nv.field_G);
           }
           if (37 == this.kind) {
-            IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, gl.field_i);
+            IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, InstrumentEnvelope.field_i);
           }
         }
         stackIn_18_0 = (this.field_g) ? 1 : 0;
@@ -490,7 +490,7 @@ final class MenuButton {
         if (this.kind == 1 && (!GameLoopApplet.field_E.field_J[0] ||
           PlayArea.a(100))) {
           param0 -= 4;
-          SoftwareRasterizer.a(-(this.width >> 1) + param1, -(this.height >> 1) + param0, this.width, this.height, 0, 128);
+          SoftwareRasterizer.fillRectangleAlpha(-(this.width >> 1) + param1, -(this.height >> 1) + param0, this.width, this.height, 0, 128);
         }
     }
 
@@ -596,7 +596,7 @@ final class MenuButton {
             } else {
               if (this.field_a == -5) {
                 this.field_n[0] = (Sprite) ((Object) ArchiveIndex.field_m);
-                var6 = ArchiveIndex.field_m.h();
+                var6 = ArchiveIndex.field_m.copyArgb();
                 this.field_n[2] = (Sprite) ((Object) ArchiveIndex.field_m);
                 PacketBuffer.a(-104, var6);
                 AuctionListing.a(-3 + SoftwareRasterizer.field_g, -22914, 3, SoftwareRasterizer.field_f - 3, 3);

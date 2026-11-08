@@ -109,7 +109,7 @@ abstract class PopupDialog extends IntrusiveNode {
         if (param0) {
           this.field_r = 11;
         }
-        SoftwareRasterizer.a(0, 0, 640, 480, 0, var2);
+        SoftwareRasterizer.fillRectangleAlpha(0, 0, 640, 480, 0, var2);
         if (this.field_q == 4096) {
           this.a(32, this.field_p, this.field_k);
           var12 = 0;
@@ -142,7 +142,7 @@ abstract class PopupDialog extends IntrusiveNode {
           if (var7Lifetime1 > 256) {
             var7Lifetime1 = 256;
           }
-          this.field_l.d(var5, var6, var3, var4_int, var7Lifetime1);
+          this.field_l.drawScaledAlpha(var5, var6, var3, var4_int, var7Lifetime1);
         }
     }
 

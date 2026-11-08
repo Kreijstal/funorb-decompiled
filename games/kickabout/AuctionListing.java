@@ -819,7 +819,7 @@ final class AuctionListing extends IntrusiveNode {
                 }
                 var2 = ni.a((byte) -77, "accept");
                 if (null != var2) {
-                  kw.field_a = BlackFadeScreen.a(var2, true);
+                  AvailabilityCheckRequest.field_a = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ni.a((byte) -52, "reject");
                 if (null != var2) {
@@ -1157,7 +1157,7 @@ final class AuctionListing extends IntrusiveNode {
                 }
                 var2 = ni.a((byte) -104, "ra_suggestmute");
                 if (var2 != null) {
-                  vv.field_s = BlackFadeScreen.a(var2, true);
+                  ArchiveRequest.field_s = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ni.a((byte) -111, "ra_intro");
                 if (null != var2) {
@@ -2774,7 +2774,7 @@ final class AuctionListing extends IntrusiveNode {
                 }
                 var2 = ni.a((byte) -96, "rating_played");
                 if (null != var2) {
-                  k.field_e = BlackFadeScreen.a(var2, true);
+                  StreetSceneryLoader.field_e = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ni.a((byte) -50, "rating_won");
                 if (var2 != null) {
@@ -3208,55 +3208,55 @@ final class AuctionListing extends IntrusiveNode {
                 }
                 var2 = ni.a((byte) -126, "subscription_cost_monthly,0");
                 if (var2 != null) {
-                  v.field_i[0] = BlackFadeScreen.a(var2, true);
+                  EntityAfterimage.field_i[0] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ni.a((byte) -106, "subscription_cost_monthly,1");
                 if (null != var2) {
-                  v.field_i[1] = BlackFadeScreen.a(var2, true);
+                  EntityAfterimage.field_i[1] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ni.a((byte) -86, "subscription_cost_monthly,2");
                 if (var2 != null) {
-                  v.field_i[2] = BlackFadeScreen.a(var2, param0);
+                  EntityAfterimage.field_i[2] = BlackFadeScreen.a(var2, param0);
                 }
                 var2 = ni.a((byte) -113, "subscription_cost_monthly,3");
                 if (var2 != null) {
-                  v.field_i[3] = BlackFadeScreen.a(var2, true);
+                  EntityAfterimage.field_i[3] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ni.a((byte) -76, "subscription_cost_monthly,4");
                 if (var2 != null) {
-                  v.field_i[4] = BlackFadeScreen.a(var2, true);
+                  EntityAfterimage.field_i[4] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ni.a((byte) -102, "subscription_cost_monthly,5");
                 if (null != var2) {
-                  v.field_i[5] = BlackFadeScreen.a(var2, true);
+                  EntityAfterimage.field_i[5] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ni.a((byte) -86, "subscription_cost_monthly,6");
                 if (var2 != null) {
-                  v.field_i[6] = BlackFadeScreen.a(var2, true);
+                  EntityAfterimage.field_i[6] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ni.a((byte) -106, "subscription_cost_monthly,7");
                 if (null != var2) {
-                  v.field_i[7] = BlackFadeScreen.a(var2, true);
+                  EntityAfterimage.field_i[7] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ni.a((byte) -67, "subscription_cost_monthly,8");
                 if (null != var2) {
-                  v.field_i[8] = BlackFadeScreen.a(var2, true);
+                  EntityAfterimage.field_i[8] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ni.a((byte) -94, "subscription_cost_monthly,9");
                 if (null != var2) {
-                  v.field_i[9] = BlackFadeScreen.a(var2, true);
+                  EntityAfterimage.field_i[9] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ni.a((byte) -102, "subscription_cost_monthly,10");
                 if (null != var2) {
-                  v.field_i[10] = BlackFadeScreen.a(var2, true);
+                  EntityAfterimage.field_i[10] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ni.a((byte) -59, "subscription_cost_monthly,11");
                 if (null != var2) {
-                  v.field_i[11] = BlackFadeScreen.a(var2, true);
+                  EntityAfterimage.field_i[11] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ni.a((byte) -83, "subscription_cost_monthly,12");
                 if (null != var2) {
-                  v.field_i[12] = BlackFadeScreen.a(var2, true);
+                  EntityAfterimage.field_i[12] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ni.a((byte) -122, "sentence_separator");
                 if (var2 != null) {

@@ -195,7 +195,7 @@ final class LoginDialog extends ContentTransitionDialog {
           fc.field_g = new int[MenuButton.field_l];
           SquadPickerDialog.field_O = new byte[MenuButton.field_l][];
           var17.field_n = -(MenuButton.field_l * 8) + param1.length - 7;
-          kw.field_i = var17.readUnsignedShort((byte) 81);
+          AvailabilityCheckRequest.field_i = var17.readUnsignedShort((byte) 81);
           AccountTermsPanel.field_J = var17.readUnsignedShort((byte) 81);
           var3 = 1 + (var17.readUnsignedByte((byte) -116) & 255);
           for (var4 = 0; var4 < MenuButton.field_l; var4++) {

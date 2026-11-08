@@ -67,7 +67,7 @@ final class IconLabel extends UiLayoutNode {
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
-        k var3_ref_k = null;
+        StreetSceneryLoader var3_ref_k = null;
         mp var4 = null;
         int var4_int = 0;
         Object var5 = null;
@@ -79,7 +79,7 @@ final class IconLabel extends UiLayoutNode {
           var8 = un.field_e;
           var2 = var8.readUnsignedByte((byte) -114);
           if (param0 == var2) {
-            var3_ref_k = (k) (IterableDualLinkDeque.field_f.g(param0 ^ 24009));
+            var3_ref_k = (StreetSceneryLoader) (IterableDualLinkDeque.field_f.g(param0 ^ 24009));
             if (var3_ref_k == null) {
               FormationView.b((byte) -116);
               return;

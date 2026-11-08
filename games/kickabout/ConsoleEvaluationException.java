@@ -53,7 +53,7 @@ final class ConsoleEvaluationException extends Exception {
                 var2 = 3;
               } else {
                 var2 = 2;
-                lp.a(SplashScreen.field_m, (byte) -64);
+                CanvasInputBindings.attachInputHandlers(SplashScreen.field_m, (byte) -64);
               }
               if (ArchiveIndex.field_h == null &&
                 MeshObject.field_e) {
@@ -65,7 +65,7 @@ final class ConsoleEvaluationException extends Exception {
             ar.a(500, 2);
             if (null != SplashScreen.field_m) {
               var2 = 2;
-              lp.a(SplashScreen.field_m, (byte) -64);
+              CanvasInputBindings.attachInputHandlers(SplashScreen.field_m, (byte) -64);
               if (ArchiveIndex.field_h == null &&
                 MeshObject.field_e) {
                 TrinketCountSortCriterion.a(param0, param1 + 6, var2);
@@ -104,7 +104,7 @@ final class ConsoleEvaluationException extends Exception {
             var2 = 3;
           } else {
             var2 = 2;
-            lp.a(SplashScreen.field_m, (byte) -64);
+            CanvasInputBindings.attachInputHandlers(SplashScreen.field_m, (byte) -64);
           }
         }
         if (ArchiveIndex.field_h != null) {

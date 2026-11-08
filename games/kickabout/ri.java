@@ -345,7 +345,7 @@ class ri extends TextWidgetPainter {
           LongPlusOneCommand.field_D = new UiLayoutNode(0L, TextFieldNode.field_Qb);
           TrinketPickerDialog.field_F = new UiLayoutNode(0L, um.field_d);
           nj.field_d = new UiLayoutNode(0L, um.field_d);
-          k.field_f = new UiLayoutNode(0L, um.field_d);
+          StreetSceneryLoader.field_f = new UiLayoutNode(0L, um.field_d);
           um.field_d.field_R = ClientException.a(ModalStack.a(param4, 81, "lobby", "smallbutton"), (byte) 47);
           um.field_d.field_S = ClientException.a(ModalStack.a(param4, -4, "lobby", "smallbutton_mouseover"), (byte) 68);
           dupTemp$0 = ClientException.a(ModalStack.a(param4, -128, "lobby", "smallbutton_active"), (byte) -124);
@@ -369,12 +369,12 @@ class ri extends TextWidgetPainter {
           LongPlusOneCommand.field_D.field_S = ClientException.a(ModalStack.a(param4, -119, "lobby", "backbutton_mouseover"), (byte) -110);
           LongPlusOneCommand.field_D.field_rb = ClientException.a(ModalStack.a(param4, 25, "lobby", "backbutton_mouseheld"), (byte) -3);
           LongPlusOneCommand.field_D.field_tb = ClientException.a(ModalStack.a(param4, 0, "lobby", "backbutton_disabled"), (byte) -99);
-          k.field_f.field_R = ClientException.a(ModalStack.a(param4, 8, "lobby", "gameoptionbutton"), (byte) -20);
-          k.field_f.field_S = ClientException.a(ModalStack.a(param4, 53, "lobby", "gameoptionbutton_mouseover"), (byte) -5);
+          StreetSceneryLoader.field_f.field_R = ClientException.a(ModalStack.a(param4, 8, "lobby", "gameoptionbutton"), (byte) -20);
+          StreetSceneryLoader.field_f.field_S = ClientException.a(ModalStack.a(param4, 53, "lobby", "gameoptionbutton_mouseover"), (byte) -5);
           dupTemp$1 = ClientException.a(ModalStack.a(param4, -124, "lobby", "gameoptionbutton_active"), (byte) -121);
-          k.field_f.field_u = dupTemp$1;
-          k.field_f.field_rb = dupTemp$1;
-          k.field_f.field_tb = ClientException.a(ModalStack.a(param4, 63, "lobby", "gameoptionbutton_disabled"), (byte) -109);
+          StreetSceneryLoader.field_f.field_u = dupTemp$1;
+          StreetSceneryLoader.field_f.field_rb = dupTemp$1;
+          StreetSceneryLoader.field_f.field_tb = ClientException.a(ModalStack.a(param4, 63, "lobby", "gameoptionbutton_disabled"), (byte) -109);
           TrinketPickerDialog.field_F.field_R = ClientException.a(ModalStack.a(param4, 31, "lobby", "chatbutton"), (byte) -113);
           TrinketPickerDialog.field_F.field_S = ClientException.a(ModalStack.a(param4, -127, "lobby", "chatbutton_mouseover"), (byte) 74);
           dupTemp$2 = ClientException.a(ModalStack.a(param4, 11, "lobby", "chatbutton_active"), (byte) -124);

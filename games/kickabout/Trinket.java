@@ -332,7 +332,7 @@ final class Trinket {
           var2 = var1.copy();
           var3 = 0;
           while (var3 < 15) {
-            var2.a(-2, -2, 16777215);
+            var2.drawSilhouette(-2, -2, 16777215);
             SoftwareRasterizer.b(4, 4, 0, 0, 540, 140);
             var3++;
             if (var4 != 0) {
@@ -394,10 +394,10 @@ final class Trinket {
         RuntimeException decompiledCaughtException = null;
         var2 = Kickabout.field_G;
         try {
-          SplashScreen.field_n = new v[param0];
+          SplashScreen.field_n = new EntityAfterimage[param0];
           var1_int = 0;
           while (SplashScreen.field_n.length > var1_int) {
-            SplashScreen.field_n[var1_int] = new v();
+            SplashScreen.field_n[var1_int] = new EntityAfterimage();
             var1_int++;
             if (var2 != 0) {
               return;

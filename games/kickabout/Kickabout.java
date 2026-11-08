@@ -43,7 +43,7 @@ public final class Kickabout extends GameLoopApplet {
         else {
           stackIn_17_0 = false;
         }
-        kw.b(stackIn_17_0, (byte) -116);
+        AvailabilityCheckRequest.b(stackIn_17_0, (byte) -116);
         re.b(param0 ^ -105);
         ((GameResourceLoader) (NetworkGameClient.field_t)).pollMessageOfTheDay(0);
         if (um.field_e == null &&
@@ -160,7 +160,7 @@ public final class Kickabout extends GameLoopApplet {
           if (PlayerValueSortCriterion.field_n) {
             TextButton.field_B = true;
             FriendsListPanel.field_Db = true;
-            k.field_k = true;
+            StreetSceneryLoader.field_k = true;
             if (null != um.field_e) {
               if (!um.field_e.isSpectator(-2)) {
                 ka.a(2, IntTripleCommand.field_B);
@@ -559,23 +559,23 @@ public final class Kickabout extends GameLoopApplet {
     }
 
     private final void drawLoadingBar(int param0) {
-        SoftwareRasterizer.a(0, 300, 640, 87, 0, 190);
+        SoftwareRasterizer.fillRectangleAlpha(0, 300, 640, 87, 0, 190);
         int var2 = (int)(250.0f * TextInputWidget.field_R / 100.0f);
         int var3 = var2 + 196;
         un.field_d.d(LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, TickClock.field_e, new String[]{h.field_b[ih.field_c][RankingsScreen.field_C].toUpperCase()}), 320, 332, 16777215, 0);
-        SoftwareRasterizer.f(193, 348, 254, 19, 8, 268435455);
+        SoftwareRasterizer.drawRoundedRectangle(193, 348, 254, 19, 8, 268435455);
         if (param0 != 81) {
           return;
         }
         if (var2 <= 16) {
           AuctionListing.a((var2 >> 1) + 195, -22914, 0, 480, 0);
-          SoftwareRasterizer.i(195, 350, 250, 15, 6, 268435455);
+          SoftwareRasterizer.fillRoundedRectangle(195, 350, 250, 15, 6, 268435455);
           TeamManagementScreen.e(117);
           AuctionListing.a(640, -22914, (var2 >> 1) + 195, 480, 0);
-          SoftwareRasterizer.i(-250 + (var2 + 195), 350, 250, 15, 6, 268435455);
+          SoftwareRasterizer.fillRoundedRectangle(-250 + (var2 + 195), 350, 250, 15, 6, 268435455);
           TeamManagementScreen.e(122);
         } else {
-          SoftwareRasterizer.i(195, 350, var2, 15, 6, 268435455);
+          SoftwareRasterizer.fillRoundedRectangle(195, 350, var2, 15, 6, 268435455);
         }
         AuctionListing.a(640, -22914, var3, 480, 0);
         ConsoleTokenCursor.field_d.d(SquadGridWidget.field_Db, 320, 362, 16777215, -1);
@@ -925,7 +925,7 @@ public final class Kickabout extends GameLoopApplet {
             }
             if (param0 == 77) {
               var4_intLifetime3 = un.field_e.readUnsignedByte((byte) -115);
-              k.a(true, var4_intLifetime3);
+              StreetSceneryLoader.enqueuePromotionDialog(true, var4_intLifetime3);
               BufferedSocket.field_k = var4_intLifetime3;
               if (AuctionLogEntry.field_h instanceof PlayerShopScreen) {
                 if (null != GameModesHelpScreen.field_G) {
@@ -946,7 +946,7 @@ public final class Kickabout extends GameLoopApplet {
               return true;
             }
             if (70 == param0) {
-              ui.field_y = true;
+              NetworkArchiveRequest.field_y = true;
               GameLoopApplet.field_E.readFromPacket(85, param1, 4);
               ByteStorage.field_c = GameLoopApplet.field_E.field_d;
               if (GameLoopApplet.field_E.field_L) {
@@ -1008,7 +1008,7 @@ public final class Kickabout extends GameLoopApplet {
                 ContextMenuItem.b(122);
                 DelayedServerPacket.a(0, false, -2);
                 TextButton.field_B = true;
-                k.field_k = true;
+                StreetSceneryLoader.field_k = true;
                 PlayerValueSortCriterion.field_n = false;
                 FriendsListPanel.field_Db = true;
                 vr.b(1);
@@ -1621,7 +1621,7 @@ public final class Kickabout extends GameLoopApplet {
         h.a(false);
         LoggedPlayer.releaseStatics(48);
         LoggedPossession.releaseStatics(320);
-        it.c(92);
+        ParticipantAgent.releaseStatics(92);
         TeamSelectionAgent.releaseStatics((byte) -90);
         FormationAgent.a(true);
         GoalStateAgent.releaseStatics((byte) -30);
@@ -1785,12 +1785,12 @@ public final class Kickabout extends GameLoopApplet {
         MusicPatchPcmStream.a(false);
         PagedHelpScreen.e(param0 - 29110);
         SocketArchiveNetworkClient.releaseStatics((byte) -115);
-        ui.a(true);
+        NetworkArchiveRequest.a(true);
         SectorCacheStore.releaseStatics(-1);
         DiskCacheRequest.g(-26236);
         CachedArchiveSource.releaseStatics((byte) -119);
         or.releaseStatics((byte) 69);
-        vv.releaseStatics((byte) 18);
+        ArchiveRequest.releaseStatics((byte) 18);
         af.releaseStatics((byte) 105);
         cg.k(115);
         ValidatedTextWidget.n((byte) 74);
@@ -1821,7 +1821,7 @@ public final class Kickabout extends GameLoopApplet {
         mg.releaseStatics(param0 ^ 136);
         hv.releaseStatics(23);
         MusicPatch.releaseStatics((byte) -37);
-        gl.releaseStatics(93);
+        InstrumentEnvelope.releaseStatics(93);
         WhirlpoolHasher.releaseStatics(0);
         s.i(-1);
         nv.j(696);
@@ -1877,7 +1877,7 @@ public final class Kickabout extends GameLoopApplet {
         pa.c((byte) 125);
         CheatCodeListener.releaseStatics(param0 ^ 32312);
         fa.a(param0 - 121);
-        kw.releaseStatics((byte) -122);
+        AvailabilityCheckRequest.releaseStatics((byte) -122);
         r.releaseStatics(param0 ^ -94);
         DelayedServerPacket.a(104);
         vd.a(-5);
@@ -1915,10 +1915,10 @@ public final class Kickabout extends GameLoopApplet {
         TextLayoutLine.releaseStatics((byte) -125);
         dl.releaseStatics((byte) -61);
         hr.a(2);
-        k.a(-77);
+        StreetSceneryLoader.releaseStatics(-77);
         mp.a(1);
         PainterStyle.a(true);
-        v.releaseStatics(0);
+        EntityAfterimage.releaseStatics(0);
         AccountNameAvailabilityValidator.g(-70);
         PasswordValidator.c((byte) -96);
         EmailSyntaxValidator.f((byte) -126);

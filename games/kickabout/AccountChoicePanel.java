@@ -57,12 +57,12 @@ final class AccountChoicePanel extends WidgetContainer implements ButtonListener
         String var2Lifetime1;
         if (param0 == -25085) {
           var2 = (String) null;
-          ui.a("", (byte) 111, (String) null);
+          NetworkArchiveRequest.a("", (byte) 111, (String) null);
           return;
         }
         AccountChoicePanel.k(115);
         var2Lifetime1 = (String) null;
-        ui.a("", (byte) 111, (String) null);
+        NetworkArchiveRequest.a("", (byte) 111, (String) null);
     }
 
     public static void k(int param0) {

@@ -45,7 +45,7 @@ final class PlayingView extends MatchPhaseView {
         int var12;
         int var13;
         var13 = Kickabout.field_G;
-        var4 = this.field_a.field_g[this.field_g].field_p;
+        var4 = this.field_a.field_g[this.field_g].team;
         var5 = -1;
         var6 = 2147483647;
         var7 = this.field_a.field_P[var4];
@@ -206,7 +206,7 @@ final class PlayingView extends MatchPhaseView {
           ShopPlayerSlot.c(33, 98);
         }
         if (-2 != this.field_g) {
-          stackIn_25_0 = this.field_a.field_g[this.field_g].field_p;
+          stackIn_25_0 = this.field_a.field_g[this.field_g].team;
         } else {
           stackIn_25_0 = 0;
         }
@@ -1054,7 +1054,7 @@ final class PlayingView extends MatchPhaseView {
             var4Lifetime1 = var6.pixelX(true);
             var5 = var6.pixelY(879306160);
           }
-          var8 = this.field_a.field_g[this.field_g].field_p;
+          var8 = this.field_a.field_g[this.field_g].team;
           var9 = -1;
           var10 = 2147483647;
           for (var11 = 1; this.field_a.field_P[var8].length > var11; var11++) {
@@ -1153,7 +1153,7 @@ final class PlayingView extends MatchPhaseView {
           this.wrapAgentsForRendering(param0, param3, 370);
           this.a((IntrusiveDeque) null, (byte) -97);
           var6_int = this.getFocusedParticipant(-41);
-          this.field_C = SetLagCommand.a((byte) -97, param0.field_g, param0.field_S, param0.field_g[var6_int].field_p);
+          this.field_C = SetLagCommand.a((byte) -97, param0.field_g, param0.field_S, param0.field_g[var6_int].team);
           this.field_l = true;
           MainMenuScreen.a(this.field_h, param1, param0, true);
           ArrayWidgetContainer.a(0, param0, var6_int, this.field_C);
@@ -1161,7 +1161,7 @@ final class PlayingView extends MatchPhaseView {
           ih.a(-3, param0, this.field_h);
           un.a(param0, this.field_h, 101);
           this.field_q = 172;
-          stackIn_10_0 = (param0.field_g[var6_int].field_p == 1);
+          stackIn_10_0 = (param0.field_g[var6_int].team == 1);
           ia.field_c = stackIn_10_0;
           ContextMenu.b(0, (byte) 60, ReceivedAuctionItem.field_E[1]);
           return;

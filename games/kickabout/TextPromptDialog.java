@@ -62,11 +62,11 @@ final class TextPromptDialog extends UiLayoutNode {
               var10 = RenderedBall.a((byte) -92, var8_ref_tv);
               var11 = var10 + BitmapFont.escapeMarkup(var8_ref_tv.field_g);
               var12 = LeaguesHelpScreen.a(var8_ref_tv, 31100);
-              var8_ref_tv.field_s = new UiLayoutNode(0L, vv.field_o, var11);
+              var8_ref_tv.field_s = new UiLayoutNode(0L, ArchiveRequest.field_o, var11);
               var6 = var6 + param1;
               var8_ref_tv.field_s.field_X = FootballerAgent.field_i;
-              var8_ref_tv.field_s.field_ub = -(8355711 & var12 >> 1) + var12 + (8355711 & vv.field_o.field_ub >> 1);
-              var8_ref_tv.field_s.field_ab = var12 - (((16711423 & var12) >> 1) - ((vv.field_o.field_ab & 16711422) >> 1));
+              var8_ref_tv.field_s.field_ub = -(8355711 & var12 >> 1) + var12 + (8355711 & ArchiveRequest.field_o.field_ub >> 1);
+              var8_ref_tv.field_s.field_ab = var12 - (((16711423 & var12) >> 1) - ((ArchiveRequest.field_o.field_ab & 16711422) >> 1));
               var8_ref_tv.field_s.field_y = var12;
             }
             var5++;
@@ -353,7 +353,7 @@ final class TextPromptDialog extends UiLayoutNode {
                     stackIn_8_0 = this;
                     stackIn_8_1 = null;
                     stackIn_8_2 = null;
-                    stackIn_8_5 = vv.field_s;
+                    stackIn_8_5 = ArchiveRequest.field_s;
                     break regionExit1;
                   }
                 }

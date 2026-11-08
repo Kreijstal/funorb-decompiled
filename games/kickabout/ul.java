@@ -90,10 +90,10 @@ final class ul {
           TeamManagementScreen.e(param0 ^ -7);
           var4Lifetime1 = 12 + ((TickClock.field_a + 640 >> 1) - 22);
           AuctionListing.a(320, param0 - 22788, var2_int, 480, 0);
-          SoftwareRasterizer.a(var2_int, 388, 640, 72, 8, 65793, 128);
+          SoftwareRasterizer.fillRoundedRectangleBlended(var2_int, 388, 640, 72, 8, 65793, 128);
           TeamManagementScreen.e(122);
           AuctionListing.a(var4Lifetime1, -22914, 320, 480, 0);
-          SoftwareRasterizer.a(0, 388, var4Lifetime1, 72, 8, 65793, 128);
+          SoftwareRasterizer.fillRoundedRectangleBlended(0, 388, var4Lifetime1, 72, 8, 65793, 128);
           TeamManagementScreen.e(122);
           var5 = AnimationSkeleton.a(false);
           if (var5 != -1) {
@@ -255,7 +255,7 @@ final class ul {
             } else {
               stackIn_5_1 = -4;
             }
-            SoftwareRasterizer.f(stackIn_4_0, stackIn_5_1 + param2, param5, var10_int, 10, 983040);
+            SoftwareRasterizer.drawRoundedRectangle(stackIn_4_0, stackIn_5_1 + param2, param5, var10_int, 10, 983040);
             stackIn_7_0 = param7;
             stackIn_7_1 = param2;
             if (0 >= param1) {
@@ -263,7 +263,7 @@ final class ul {
             } else {
               stackIn_8_2 = -var10_int + param0 >> 1;
             }
-            SoftwareRasterizer.a(stackIn_7_0, stackIn_7_1 + stackIn_8_2, param5, var10_int, 10, 65793, 140);
+            SoftwareRasterizer.fillRoundedRectangleBlended(stackIn_7_0, stackIn_7_1 + stackIn_8_2, param5, var10_int, 10, 65793, 140);
           }
           IsSixCommand.field_C.a(param9, param7 + 10, param2, -10 + param5 - 10, param0, 16777215, -1, param8, param1, param6);
           return;

@@ -46,10 +46,10 @@ class TextButton extends UiWidget {
             this.requestKeyboardFocus(param3, 0);
             this.field_p = param6;
             if (null != this.field_k) {
-              if (!(this.field_k instanceof nf)) {
+              if (!(this.field_k instanceof ButtonPointerListener)) {
                 return true;
               }
-              ((nf) (this.field_k)).a(param4, param6, param2, param5, this, (byte) -32, param1);
+              ((ButtonPointerListener) (this.field_k)).pointerPressed(param4, param6, param2, param5, this, (byte) -32, param1);
             }
             return true;
           }
@@ -124,8 +124,8 @@ class TextButton extends UiWidget {
         if (this.field_D) {
           this.field_D = false;
           if (null != this.field_k &&
-            this.field_k instanceof ab) {
-            ((ab) (this.field_k)).a(this.field_D, (UiWidget) (this), -9307);
+            this.field_k instanceof WidgetFocusListener) {
+            ((WidgetFocusListener) (this.field_k)).focusChanged(this.field_D, (UiWidget) (this), -9307);
           }
         }
         if (param0 != 84) {
@@ -137,8 +137,8 @@ class TextButton extends UiWidget {
     final void handlePointerRelease(int param0, int param1, int param2, UiWidget param3, int param4, int param5) {
         try {
           if (null != this.field_k &&
-            this.field_k instanceof nf) {
-            ((nf) (this.field_k)).a(this, param2, param4 - 31878, param1, param0, param5);
+            this.field_k instanceof ButtonPointerListener) {
+            ((ButtonPointerListener) (this.field_k)).pointerReleased(this, param2, param4 - 31878, param1, param0, param5);
           }
           if (param4 != -1) {
             this.field_A = false;
@@ -184,10 +184,10 @@ class TextButton extends UiWidget {
             param0.clearKeyboardFocus(84);
             this.field_D = true;
             if (this.field_k != null) {
-              if (!(this.field_k instanceof ab)) {
+              if (!(this.field_k instanceof WidgetFocusListener)) {
                 return true;
               }
-              ((ab) (this.field_k)).a(this.field_D, (UiWidget) (this), param1 ^ -9307);
+              ((WidgetFocusListener) (this.field_k)).focusChanged(this.field_D, (UiWidget) (this), param1 ^ -9307);
             }
             return true;
           }

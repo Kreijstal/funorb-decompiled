@@ -32,13 +32,13 @@ final class mv {
         if (param0 > 104) {
           ContextMenu.b(1, (byte) 60, ReceivedAuctionItem.field_E[3]);
           ContextMenu.b(2, (byte) 60, ReceivedAuctionItem.field_E[5]);
-          ui.a(0, Trinket.field_c, ReceivedAuctionItem.field_E[0], 2147483647);
+          NetworkArchiveRequest.a(0, Trinket.field_c, ReceivedAuctionItem.field_E[0], 2147483647);
           return;
         }
         field_b = 48;
         ContextMenu.b(1, (byte) 60, ReceivedAuctionItem.field_E[3]);
         ContextMenu.b(2, (byte) 60, ReceivedAuctionItem.field_E[5]);
-        ui.a(0, Trinket.field_c, ReceivedAuctionItem.field_E[0], 2147483647);
+        NetworkArchiveRequest.a(0, Trinket.field_c, ReceivedAuctionItem.field_E[0], 2147483647);
     }
 
     static {
@@ -50,12 +50,12 @@ final class mv {
         if (param0 > 104) {
           ContextMenu.b(1, (byte) 60, ReceivedAuctionItem.field_E[3]);
           ContextMenu.b(2, (byte) 60, ReceivedAuctionItem.field_E[5]);
-          ui.a(0, Trinket.field_c, ReceivedAuctionItem.field_E[0], 2147483647);
+          NetworkArchiveRequest.a(0, Trinket.field_c, ReceivedAuctionItem.field_E[0], 2147483647);
           return;
         }
         field_b = 48;
         ContextMenu.b(1, (byte) 60, ReceivedAuctionItem.field_E[3]);
         ContextMenu.b(2, (byte) 60, ReceivedAuctionItem.field_E[5]);
-        ui.a(0, Trinket.field_c, ReceivedAuctionItem.field_E[0], 2147483647);
+        NetworkArchiveRequest.a(0, Trinket.field_c, ReceivedAuctionItem.field_E[0], 2147483647);
     }
 }

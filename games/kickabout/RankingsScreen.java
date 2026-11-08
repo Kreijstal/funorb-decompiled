@@ -92,18 +92,18 @@ final class RankingsScreen extends ButtonMenuScreen {
         }
         try {
           var12 = 140;
-          SoftwareRasterizer.a(this.slideOffsetX + var11, param8 - 17, var12, 25, 0, var10_int);
+          SoftwareRasterizer.fillRectangleAlpha(this.slideOffsetX + var11, param8 - 17, var12, 25, 0, var10_int);
           var11 = 4 + (var11 + var12);
           var12Lifetime1 = 36;
-          SoftwareRasterizer.a(this.slideOffsetX + var11, param8 - 17, var12Lifetime1, 25, 0, var10_int);
+          SoftwareRasterizer.fillRectangleAlpha(this.slideOffsetX + var11, param8 - 17, var12Lifetime1, 25, 0, var10_int);
           var11 = 4 + var12Lifetime1 + var11;
-          SoftwareRasterizer.a(this.slideOffsetX + var11, param8 - 17, var12Lifetime1, 25, 0, var10_int);
+          SoftwareRasterizer.fillRectangleAlpha(this.slideOffsetX + var11, param8 - 17, var12Lifetime1, 25, 0, var10_int);
           var11 = var12Lifetime1 + var11 + 4;
-          SoftwareRasterizer.a(this.slideOffsetX + var11, param8 - 17, var12Lifetime1, 25, 0, var10_int);
+          SoftwareRasterizer.fillRectangleAlpha(this.slideOffsetX + var11, param8 - 17, var12Lifetime1, 25, 0, var10_int);
           var11 = 4 + var11 + var12Lifetime1;
-          SoftwareRasterizer.a(this.slideOffsetX + var11, -17 + param8, var12Lifetime1, 25, 0, var10_int);
+          SoftwareRasterizer.fillRectangleAlpha(this.slideOffsetX + var11, -17 + param8, var12Lifetime1, 25, 0, var10_int);
           var11 = 4 + var12Lifetime1 + var11;
-          SoftwareRasterizer.a(var11 + this.slideOffsetX, param8 - 17, var12Lifetime1, 25, 0, var10_int);
+          SoftwareRasterizer.fillRectangleAlpha(var11 + this.slideOffsetX, param8 - 17, var12Lifetime1, 25, 0, var10_int);
           var13 = param1 + (param4 + param6);
           if (param7 != -1) {
             ConsoleTokenCursor.field_d.c(param7 + 1 + ". ", this.slideOffsetX + 35, param8, param5, -1);
@@ -236,7 +236,7 @@ final class RankingsScreen extends ButtonMenuScreen {
         String var13Lifetime1Lifetime1;
         var10 = Kickabout.field_G;
         AuctionListing.a(374 + this.slideOffsetX, -22914, this.slideOffsetX + 10, 390, 80);
-        SoftwareRasterizer.a(10 + this.slideOffsetX, 80, 364, 320, 10, 0, 128);
+        SoftwareRasterizer.fillRoundedRectangleBlended(10 + this.slideOffsetX, 80, 364, 320, 10, 0, 128);
         TeamManagementScreen.e(126);
         super.drawScreen(param0, param1);
         if (PlayArea.a(param0 ^ -97)) {
@@ -249,7 +249,7 @@ final class RankingsScreen extends ButtonMenuScreen {
         var3 = 99;
         var4 = 11184810;
         ConsoleTokenCursor.field_d.d(CachedArchiveSource.field_p, CipherPacketBuffer.field_r[0] + this.slideOffsetX, var3, var4, -1);
-        ConsoleTokenCursor.field_d.d(k.field_e, this.slideOffsetX + CipherPacketBuffer.field_r[1], var3, var4, -1);
+        ConsoleTokenCursor.field_d.d(StreetSceneryLoader.field_e, this.slideOffsetX + CipherPacketBuffer.field_r[1], var3, var4, -1);
         ConsoleTokenCursor.field_d.d(mt.field_e, this.slideOffsetX + CipherPacketBuffer.field_r[2], var3, var4, -1);
         ConsoleTokenCursor.field_d.d(TeamManagementScreen.field_D, CipherPacketBuffer.field_r[3] + this.slideOffsetX, var3, var4, -1);
         ConsoleTokenCursor.field_d.d(MouseInputHandler.field_e, CipherPacketBuffer.field_r[4] + this.slideOffsetX, var3, var4, -1);

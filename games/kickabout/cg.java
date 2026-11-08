@@ -28,7 +28,7 @@ final class cg extends SingleChildContainer {
           if (param1 > -83) {
             return;
           }
-          k.field_i = k.field_i + 1;
+          StreetSceneryLoader.field_i = StreetSceneryLoader.field_i + 1;
           if (ScrollBar.field_Hb == -1 &&
             TextLine.field_h == -1) {
             ScrollBar.field_Hb = BytePlusOneCommand.field_A;
@@ -42,8 +42,8 @@ final class cg extends SingleChildContainer {
           }
           if (decompiledFrameRemainder0) {
             if (!nc.field_a) {
-              if (us.field_e <= k.field_i) {
-                stackIn_19_0 = (k.field_i < us.field_e + GameModeDefinition.field_i) ? 1 : 0;
+              if (us.field_e <= StreetSceneryLoader.field_i) {
+                stackIn_19_0 = (StreetSceneryLoader.field_i < us.field_e + GameModeDefinition.field_i) ? 1 : 0;
               } else {
                 stackIn_19_0 = 0;
               }
@@ -52,15 +52,15 @@ final class cg extends SingleChildContainer {
             }
             var2_int = stackIn_19_0;
             if (param0 == null) {
-              k.field_i = 0;
+              StreetSceneryLoader.field_i = 0;
             } else {
               if (nc.field_a) {
-                k.field_i = us.field_e;
+                StreetSceneryLoader.field_i = us.field_e;
               } else {
                 if (var2_int == 0) {
-                  k.field_i = 0;
+                  StreetSceneryLoader.field_i = 0;
                 } else {
-                  k.field_i = us.field_e;
+                  StreetSceneryLoader.field_i = us.field_e;
                 }
               }
             }
@@ -75,16 +75,16 @@ final class cg extends SingleChildContainer {
             }
           }
           if (!nc.field_a &&
-            us.field_e > k.field_i &&
+            us.field_e > StreetSceneryLoader.field_i &&
             BytePlusOneCommand.field_C) {
-            k.field_i = 0;
+            StreetSceneryLoader.field_i = 0;
             TrinketCatalog.field_d = TextLine.field_h;
             ws.field_e = ScrollBar.field_Hb;
           }
           EmailAvailabilityValidator.field_o = param0;
           if (nc.field_a &&
-            k.field_i == nd.field_b) {
-            k.field_i = 0;
+            StreetSceneryLoader.field_i == nd.field_b) {
+            StreetSceneryLoader.field_i = 0;
             nc.field_a = false;
           }
           TextLine.field_h = -1;

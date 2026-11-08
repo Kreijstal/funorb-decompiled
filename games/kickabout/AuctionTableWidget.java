@@ -78,7 +78,7 @@ final class AuctionTableWidget extends ColumnTableWidget {
           }
           var5 = param0.readToken((byte) 82);
           if (TextPromptDialog.field_Mb != var5.field_k &&
-            var5.field_k != v.field_d &&
+            var5.field_k != EntityAfterimage.field_d &&
             HelpTipDialog.field_H != var5.field_k &&
             GameModesHelpScreen.field_N != var5.field_k) {
             if (var5.field_k != ContextMenuItem.field_Ab) {

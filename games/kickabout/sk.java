@@ -120,7 +120,7 @@ final class sk {
           if (param0 != 19881) {
             sk.a(22, -23, -9);
           }
-          stackIn_3_0 = gl.a(1 << param3, (byte) 123, param2, param5, param4, param3, 1 << param5, 1 << param1, 1 << param2, param1);
+          stackIn_3_0 = InstrumentEnvelope.readFourRangeUnsigned(1 << param3, (byte) 123, param2, param5, param4, param3, 1 << param5, 1 << param1, 1 << param2, param1);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

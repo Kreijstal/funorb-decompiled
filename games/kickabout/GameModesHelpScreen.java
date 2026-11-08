@@ -157,7 +157,7 @@ final class GameModesHelpScreen extends PagedHelpScreen {
         if (param0 >= -16) {
           GameModesHelpScreen.a(-54, 93, 33, 14, -70);
         }
-        k.field_m = null;
+        StreetSceneryLoader.field_m = null;
     }
 
     final void drawScreen(int param0, boolean param1) {
@@ -263,9 +263,9 @@ final class GameModesHelpScreen extends PagedHelpScreen {
             this.field_K[var12Lifetime4].updateInput(0, false);
             this.field_K[var12Lifetime4].h((byte) -123);
           }
-          SoftwareRasterizer.a(40 + this.slideOffsetX, 120, 560, 50, 10, 65793, 140);
+          SoftwareRasterizer.fillRoundedRectangleBlended(40 + this.slideOffsetX, 120, 560, 50, 10, 65793, 140);
           IsSixCommand.field_C.a(tr.field_c, this.slideOffsetX + 70, 126, 500, 40, 16777215, -1, 0, 1, 16);
-          SoftwareRasterizer.a(210 + this.slideOffsetX, 178, 390, 225, 10, 65793, 140);
+          SoftwareRasterizer.fillRoundedRectangleBlended(210 + this.slideOffsetX, 178, 390, 225, 10, 65793, 140);
           var12Lifetime5 = 0;
           var13 = this.slideOffsetX + 230;
           var14 = var4;
@@ -280,7 +280,7 @@ final class GameModesHelpScreen extends PagedHelpScreen {
           }
         }
         if (this.pageIndex == 1) {
-          SoftwareRasterizer.a(40 + this.slideOffsetX, 120, 560, 50, 10, 65793, 140);
+          SoftwareRasterizer.fillRoundedRectangleBlended(40 + this.slideOffsetX, 120, 560, 50, 10, 65793, 140);
           var6 -= 50;
           IsSixCommand.field_C.a(PopupDialog.field_h, this.slideOffsetX + 70, 126, 500, 40, 16777215, -1, 0, 1, 16);
           var4 += 50;
@@ -294,7 +294,7 @@ final class GameModesHelpScreen extends PagedHelpScreen {
             }
             var13Lifetime1 = stackIn_29_0;
             var13Lifetime1 = var13Lifetime1 + this.slideOffsetX;
-            SoftwareRasterizer.a(-var8 + var13Lifetime1, var4, var5, var6, 10, 65793, 140);
+            SoftwareRasterizer.fillRoundedRectangleBlended(-var8 + var13Lifetime1, var4, var5, var6, 10, 65793, 140);
             var14Lifetime1 = 40 + var7;
             for (var15 = 0; tn.field_g[var11Lifetime1].length > var15; var15++) {
               var26 = tn.field_g[var11Lifetime1][var15];
@@ -303,9 +303,9 @@ final class GameModesHelpScreen extends PagedHelpScreen {
           }
         }
         if (this.pageIndex == 2) {
-          SoftwareRasterizer.a(40 + this.slideOffsetX, 120, 560, 50, 10, 65793, 140);
+          SoftwareRasterizer.fillRoundedRectangleBlended(40 + this.slideOffsetX, 120, 560, 50, 10, 65793, 140);
           IsSixCommand.field_C.a(DirectByteStorage.field_l, this.slideOffsetX + 70, 126, 500, 40, 16777215, -1, 0, 1, 16);
-          SoftwareRasterizer.a(40 + this.slideOffsetX, 178, 275, 225, 10, 65793, 140);
+          SoftwareRasterizer.fillRoundedRectangleBlended(40 + this.slideOffsetX, 178, 275, 225, 10, 65793, 140);
           var4 = 195;
           var11Lifetime2 = 0;
           var6 = 230;
@@ -321,7 +321,7 @@ final class GameModesHelpScreen extends PagedHelpScreen {
             }
             break;
           }
-          SoftwareRasterizer.a(this.slideOffsetX + 325, 178, 275, 225, 10, 65793, 140);
+          SoftwareRasterizer.fillRoundedRectangleBlended(this.slideOffsetX + 325, 178, 275, 225, 10, 65793, 140);
           AuctionListing.a(this.slideOffsetX + 595, -22914, this.slideOffsetX + 330, 398, 183);
           var14Lifetime2 = 7;
           var15Lifetime1Lifetime1 = 110;
@@ -376,12 +376,12 @@ final class GameModesHelpScreen extends PagedHelpScreen {
               }
               var24 = stackIn_62_0;
               eo.a(var22, var23, var24, -(var15Lifetime1Lifetime1 >> 1) + var12Lifetime2Lifetime1, var13Lifetime2Lifetime1 - (var16Lifetime1 >> 1), var15Lifetime1Lifetime1, var16Lifetime1);
-              SoftwareRasterizer.e(-(var15Lifetime1Lifetime1 >> 1) + var12Lifetime2Lifetime1, var13Lifetime2Lifetime1 - (var16Lifetime1 >> 1), (var15Lifetime1Lifetime1 >> 1) + var12Lifetime2Lifetime1, -(var16Lifetime1 >> 1) + var13Lifetime2Lifetime1, 11184810, 128);
-              SoftwareRasterizer.e(var12Lifetime2Lifetime1 - (var15Lifetime1Lifetime1 >> 1), (var16Lifetime1 >> 1) + var13Lifetime2Lifetime1, var12Lifetime2Lifetime1 + (var15Lifetime1Lifetime1 >> 1), var13Lifetime2Lifetime1 + (var16Lifetime1 >> 1), 11184810, 128);
-              SoftwareRasterizer.e(var12Lifetime2Lifetime1 - (var15Lifetime1Lifetime1 >> 1), -(var16Lifetime1 >> 1) + (var13Lifetime2Lifetime1 + 1), -(var15Lifetime1Lifetime1 >> 1) + var12Lifetime2Lifetime1, -1 + ((var16Lifetime1 >> 1) + var13Lifetime2Lifetime1), 11184810, 128);
-              SoftwareRasterizer.e((var15Lifetime1Lifetime1 >> 1) + var12Lifetime2Lifetime1, var13Lifetime2Lifetime1 + (var16Lifetime1 >> 1) - 1, (var15Lifetime1Lifetime1 >> 1) + var12Lifetime2Lifetime1, 1 + (var13Lifetime2Lifetime1 - (var16Lifetime1 >> 1)), 11184810, 128);
-              SoftwareRasterizer.e(-(var15Lifetime1Lifetime1 >> 1) + var12Lifetime2Lifetime1 + 1, var13Lifetime2Lifetime1, -1 + (var15Lifetime1Lifetime1 >> 1) + var12Lifetime2Lifetime1, var13Lifetime2Lifetime1, 11184810, 128);
-              SoftwareRasterizer.e((var15Lifetime1Lifetime1 >> 1) + (var12Lifetime2Lifetime1 - 19), 1 + var13Lifetime2Lifetime1 - (var16Lifetime1 >> 1), (var15Lifetime1Lifetime1 >> 1) + var12Lifetime2Lifetime1 - 19, -1 + var13Lifetime2Lifetime1 + (var16Lifetime1 >> 1), 11184810, 128);
+              SoftwareRasterizer.drawLineBlendedInclusive(-(var15Lifetime1Lifetime1 >> 1) + var12Lifetime2Lifetime1, var13Lifetime2Lifetime1 - (var16Lifetime1 >> 1), (var15Lifetime1Lifetime1 >> 1) + var12Lifetime2Lifetime1, -(var16Lifetime1 >> 1) + var13Lifetime2Lifetime1, 11184810, 128);
+              SoftwareRasterizer.drawLineBlendedInclusive(var12Lifetime2Lifetime1 - (var15Lifetime1Lifetime1 >> 1), (var16Lifetime1 >> 1) + var13Lifetime2Lifetime1, var12Lifetime2Lifetime1 + (var15Lifetime1Lifetime1 >> 1), var13Lifetime2Lifetime1 + (var16Lifetime1 >> 1), 11184810, 128);
+              SoftwareRasterizer.drawLineBlendedInclusive(var12Lifetime2Lifetime1 - (var15Lifetime1Lifetime1 >> 1), -(var16Lifetime1 >> 1) + (var13Lifetime2Lifetime1 + 1), -(var15Lifetime1Lifetime1 >> 1) + var12Lifetime2Lifetime1, -1 + ((var16Lifetime1 >> 1) + var13Lifetime2Lifetime1), 11184810, 128);
+              SoftwareRasterizer.drawLineBlendedInclusive((var15Lifetime1Lifetime1 >> 1) + var12Lifetime2Lifetime1, var13Lifetime2Lifetime1 + (var16Lifetime1 >> 1) - 1, (var15Lifetime1Lifetime1 >> 1) + var12Lifetime2Lifetime1, 1 + (var13Lifetime2Lifetime1 - (var16Lifetime1 >> 1)), 11184810, 128);
+              SoftwareRasterizer.drawLineBlendedInclusive(-(var15Lifetime1Lifetime1 >> 1) + var12Lifetime2Lifetime1 + 1, var13Lifetime2Lifetime1, -1 + (var15Lifetime1Lifetime1 >> 1) + var12Lifetime2Lifetime1, var13Lifetime2Lifetime1, 11184810, 128);
+              SoftwareRasterizer.drawLineBlendedInclusive((var15Lifetime1Lifetime1 >> 1) + (var12Lifetime2Lifetime1 - 19), 1 + var13Lifetime2Lifetime1 - (var16Lifetime1 >> 1), (var15Lifetime1Lifetime1 >> 1) + var12Lifetime2Lifetime1 - 19, -1 + var13Lifetime2Lifetime1 + (var16Lifetime1 >> 1), 11184810, 128);
             }
             if (var21 != -1 + var14Lifetime2) {
               stackIn_66_0 = (var15Lifetime1Lifetime1 >> 1) + var12Lifetime2Lifetime1;
@@ -429,7 +429,7 @@ final class GameModesHelpScreen extends PagedHelpScreen {
             var13Lifetime3 = stackIn_89_0;
             var13Lifetime3 = var13Lifetime3 + this.slideOffsetX;
             var14Lifetime3 = var7 - 5;
-            SoftwareRasterizer.a(var13Lifetime3 - var8, var4, var5, var6, 10, 65793, 140);
+            SoftwareRasterizer.fillRoundedRectangleBlended(var13Lifetime3 - var8, var4, var5, var6, 10, 65793, 140);
             for (var15Lifetime2 = 0; PlayingView.field_y[var11Lifetime3].length > var15Lifetime2; var15Lifetime2++) {
               var27 = PlayingView.field_y[var11Lifetime3][var15Lifetime2];
               var14Lifetime3 = var14Lifetime3 + (IsSixCommand.field_C.a(var27, var13Lifetime3, var14Lifetime3, var9, 999, 16777215, -1, 0, 0, var10) * var10 + 15);

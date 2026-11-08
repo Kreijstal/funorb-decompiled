@@ -161,12 +161,12 @@ final class vp implements OverlayLayer {
             if (um.field_e != null &&
               um.field_e.field_A && (!um.field_e.isSpectator(param0 ^ 25) ||
               um.field_e.b(-21660))) {
-              ui.h(param0 ^ 15419);
+              NetworkArchiveRequest.h(param0 ^ 15419);
               ReceivedAuctionItem.a(wn.field_h, param0 ^ 24);
               AuctionTableWidget.a(6356832, (byte) -25);
             }
           } else {
-            ui.h(-15396);
+            NetworkArchiveRequest.h(-15396);
             ReceivedAuctionItem.a(qr.field_g, -1);
             AuctionTableWidget.a(6356832, (byte) -25);
           }

@@ -103,7 +103,7 @@ final class wp {
           ck.field_c = new UiLayoutNode(0L, SquadPickerDialog.field_P, mt.field_b);
           LineupView.field_u = new ScrollPane(0L, new UiLayoutNode(0L, (UiLayoutNode) null), SoundCache.field_b, uk.field_b);
           TickClock.field_d.addChild((byte) -114, StatefulTextPainter.field_s);
-          if (ui.field_t) {
+          if (NetworkArchiveRequest.field_t) {
             TickClock.field_d.addChild((byte) -107, ck.field_c);
           }
           TickClock.field_d.addChild((byte) -119, (UiLayoutNode) (LineupView.field_u));
@@ -128,12 +128,12 @@ final class wp {
           RegistrationRequestDialog.field_lb = new UiLayoutNode(0L, SquadPickerDialog.field_P, ig.field_h);
           ShopPlayerSlot.field_Jb = new ScrollPane(0L, new UiLayoutNode(0L, (UiLayoutNode) null), SoundCache.field_b, uk.field_b);
           dr.field_d = new UiLayoutNode(0L, TextFieldNode.field_Qb, vp.field_n.toUpperCase());
-          dr.field_d.field_lb = ui.field_t;
+          dr.field_d.field_lb = NetworkArchiveRequest.field_t;
           stackIn_7_0 = null;
           stackIn_7_1 = null;
           stackIn_7_2 = 0L;
           stackIn_7_3 = TextFieldNode.field_Qb;
-          if (ui.field_t) {
+          if (NetworkArchiveRequest.field_t) {
             stackIn_8_0 = null;
             stackIn_8_1 = null;
             stackIn_8_4 = oo.field_g;
@@ -149,13 +149,13 @@ final class wp {
           bt.field_b.addChild((byte) -127, PlayingView.field_w);
           bt.field_b.addChild((byte) -118, LoginRequiredDialog.field_G);
           bt.field_b.addChild((byte) -113, TextWidgetPainter.field_n);
-          if (ui.field_t) {
+          if (NetworkArchiveRequest.field_t) {
             bt.field_b.addChild((byte) -118, AuctionsHelpScreen.field_G);
           }
           bt.field_b.addChild((byte) -128, DateInputWidget.field_D);
           bt.field_b.addChild((byte) -122, RegistrationRequestDialog.field_lb);
           bt.field_b.addChild((byte) -118, (UiLayoutNode) (ShopPlayerSlot.field_Jb));
-          if (ui.field_t) {
+          if (NetworkArchiveRequest.field_t) {
             af.field_d.addChild((byte) -109, dr.field_d);
           }
           af.field_d.addChild((byte) -112, LoginCredentials.field_b);
@@ -179,7 +179,7 @@ final class wp {
           ClientException.field_c = new ScrollPane(0L, new UiLayoutNode(0L, (UiLayoutNode) null), SoundCache.field_b, uk.field_b);
           AchievementsScreen.field_C.addChild((byte) -114, ka.field_c);
           AchievementsScreen.field_C.addChild((byte) -105, BufferedSocket.field_u);
-          if (ui.field_t) {
+          if (NetworkArchiveRequest.field_t) {
             AchievementsScreen.field_C.addChild((byte) -123, DoSomethingCommand.field_D);
           }
           AchievementsScreen.field_C.addChild((byte) -122, (UiLayoutNode) (ClientException.field_c));
@@ -192,33 +192,33 @@ final class wp {
           qr.field_b[0] = new UiLayoutNode(0L, kr.field_b, mi.field_a);
           rf.field_c[0] = new ContextMenuItem[6];
           for (var17_int = 0; 5 > var17_int; var17_int++) {
-            rf.field_c[0][var17_int + 1] = new ContextMenuItem(0L, k.field_f, (UiLayoutNode) null, ul.field_c, TextFieldValidator.field_d[var17_int], WidgetContainer.field_w[var17_int]);
+            rf.field_c[0][var17_int + 1] = new ContextMenuItem(0L, StreetSceneryLoader.field_f, (UiLayoutNode) null, ul.field_c, TextFieldValidator.field_d[var17_int], WidgetContainer.field_w[var17_int]);
           }
           if (2 <= rn.field_d.length) {
             qr.field_b[1] = new UiLayoutNode(0L, kr.field_b, Checkbox.field_H);
             array$0 = new ContextMenuItem[rn.field_d.length + 1];
             rf.field_c[1] = array$0;
-            rf.field_c[1][0] = new ContextMenuItem(0L, k.field_f, (UiLayoutNode) null, ul.field_c, (Sprite) null, ia.field_b);
+            rf.field_c[1][0] = new ContextMenuItem(0L, StreetSceneryLoader.field_f, (UiLayoutNode) null, ul.field_c, (Sprite) null, ia.field_b);
             for (var17_intLifetime1 = 0; rn.field_d.length > var17_intLifetime1; var17_intLifetime1++) {
-              rf.field_c[1][1 + var17_intLifetime1] = new ContextMenuItem(0L, k.field_f, (UiLayoutNode) null, ul.field_c, (Sprite) null, Integer.toString(rn.field_d[var17_intLifetime1]));
+              rf.field_c[1][1 + var17_intLifetime1] = new ContextMenuItem(0L, StreetSceneryLoader.field_f, (UiLayoutNode) null, ul.field_c, (Sprite) null, Integer.toString(rn.field_d[var17_intLifetime1]));
             }
           }
           qr.field_b[2] = new UiLayoutNode(0L, kr.field_b, GzipDecoder.field_b);
-          rf.field_c[2] = new ContextMenuItem[]{new ContextMenuItem(0L, k.field_f, (UiLayoutNode) null, ul.field_c, (Sprite) null, ia.field_b), new ContextMenuItem(0L, k.field_f, (UiLayoutNode) null, ul.field_c, MessageDialog.field_E[0], ScrollPane.field_Db), new ContextMenuItem(0L, k.field_f, (UiLayoutNode) null, ul.field_c, MessageDialog.field_E[1], um.field_g)};
+          rf.field_c[2] = new ContextMenuItem[]{new ContextMenuItem(0L, StreetSceneryLoader.field_f, (UiLayoutNode) null, ul.field_c, (Sprite) null, ia.field_b), new ContextMenuItem(0L, StreetSceneryLoader.field_f, (UiLayoutNode) null, ul.field_c, MessageDialog.field_E[0], ScrollPane.field_Db), new ContextMenuItem(0L, StreetSceneryLoader.field_f, (UiLayoutNode) null, ul.field_c, MessageDialog.field_E[1], um.field_g)};
           if (MouseInputHandler.field_f > 1) {
             qr.field_b[3] = new UiLayoutNode(0L, kr.field_b, pc.field_b);
             array$1 = new ContextMenuItem[1 + MouseInputHandler.field_f];
             rf.field_c[3] = array$1;
-            rf.field_c[3][0] = new ContextMenuItem(0L, k.field_f, (UiLayoutNode) null, ul.field_c, (Sprite) null, ia.field_b);
+            rf.field_c[3][0] = new ContextMenuItem(0L, StreetSceneryLoader.field_f, (UiLayoutNode) null, ul.field_c, (Sprite) null, ia.field_b);
             for (var17_intLifetime2 = 0; MouseInputHandler.field_f > var17_intLifetime2; var17_intLifetime2++) {
-              rf.field_c[3][1 + var17_intLifetime2] = new ContextMenuItem(0L, k.field_f, (UiLayoutNode) null, ul.field_c, (Sprite) null, ReceivedAuctionItem.field_D[var17_intLifetime2]);
+              rf.field_c[3][1 + var17_intLifetime2] = new ContextMenuItem(0L, StreetSceneryLoader.field_f, (UiLayoutNode) null, ul.field_c, (Sprite) null, ReceivedAuctionItem.field_D[var17_intLifetime2]);
             }
           }
           for (var17_intLifetime3 = 0; param4 > var17_intLifetime3; var17_intLifetime3++) {
             qr.field_b[4 + var17_intLifetime3] = new UiLayoutNode(0L, kr.field_b, ok.field_b[var17_intLifetime3]);
             array$2 = new ContextMenuItem[TextLayoutLine.b(255, (int) NamedValueEntry.field_k[var17_intLifetime3]) + 1];
             rf.field_c[var17_intLifetime3 + 4] = array$2;
-            rf.field_c[4 + var17_intLifetime3][0] = new ContextMenuItem(0L, k.field_f, (UiLayoutNode) null, ul.field_c, (Sprite) null, ia.field_b);
+            rf.field_c[4 + var17_intLifetime3][0] = new ContextMenuItem(0L, StreetSceneryLoader.field_f, (UiLayoutNode) null, ul.field_c, (Sprite) null, ia.field_b);
             for (var18 = 0; (255 & NamedValueEntry.field_k[var17_intLifetime3]) > var18; var18++) {
               if (ni.field_f != null) {
                 if (null == ni.field_f[var17_intLifetime3]) {
@@ -238,7 +238,7 @@ final class wp {
               } else {
                 var20 = null;
               }
-              rf.field_c[4 + var17_intLifetime3][var18 + 1] = new ContextMenuItem(0L, k.field_f, (UiLayoutNode) null, ul.field_c, (Sprite) (var19_ref), (String) (var20));
+              rf.field_c[4 + var17_intLifetime3][var18 + 1] = new ContextMenuItem(0L, StreetSceneryLoader.field_f, (UiLayoutNode) null, ul.field_c, (Sprite) (var19_ref), (String) (var20));
             }
           }
           for (var17_intLifetime4 = 0; 4 + param4 > var17_intLifetime4; var17_intLifetime4++) {
@@ -385,7 +385,7 @@ final class wp {
             for (var6 = 0; var3 > var6; var6++) {
               var10[var6] = lt.field_a[TextLayoutLine.b((int) var21[var6], 255)];
             }
-            var1[var2] = new Sprite(kw.field_i, AccountTermsPanel.field_J, IsaacRandom.field_f[var2], fc.field_g[var2], MouseInputHandler.field_c[var2], PasswordValidator.field_j[var2], var22);
+            var1[var2] = new Sprite(AvailabilityCheckRequest.field_i, AccountTermsPanel.field_J, IsaacRandom.field_f[var2], fc.field_g[var2], MouseInputHandler.field_c[var2], PasswordValidator.field_j[var2], var22);
           } else {
             var16 = RowRangeRequest.field_e[var2];
             var12 = var16;
@@ -397,7 +397,7 @@ final class wp {
             for (var7 = 0; var7 < var3; var7++) {
               var6_ref_int__[var7] = PainterStyle.a(lt.field_a[TextLayoutLine.b((int) var21[var7], 255)], TextLayoutLine.b(-16777216, var16[var7] << 24));
             }
-            var1[var2] = (Sprite) ((Object) new ArgbSprite(kw.field_i, AccountTermsPanel.field_J, IsaacRandom.field_f[var2], fc.field_g[var2], MouseInputHandler.field_c[var2], PasswordValidator.field_j[var2], var17));
+            var1[var2] = (Sprite) ((Object) new ArgbSprite(AvailabilityCheckRequest.field_i, AccountTermsPanel.field_J, IsaacRandom.field_f[var2], fc.field_g[var2], MouseInputHandler.field_c[var2], PasswordValidator.field_j[var2], var17));
           }
         }
         if (param0 >= -123) {

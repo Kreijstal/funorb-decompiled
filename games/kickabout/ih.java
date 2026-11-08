@@ -72,7 +72,7 @@ final class ih {
         var9 = Kickabout.field_G;
         try {
           DemoIntegersCommand.field_F = param1;
-          k.field_g = param2;
+          StreetSceneryLoader.field_g = param2;
           if (param0 != -3) {
             return;
           }
@@ -82,7 +82,7 @@ final class ih {
           var3 = var10;
           stackIn_5_0 = var10;
           stackIn_5_1 = 0;
-          if (k.field_g == 1) {
+          if (StreetSceneryLoader.field_g == 1) {
             stackIn_6_2 = 148;
           } else {
             stackIn_6_2 = 1900;

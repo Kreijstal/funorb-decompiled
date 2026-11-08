@@ -23,16 +23,16 @@ final class so {
             if (!param3) {
               ContextMenu.b(2, (byte) 60, ReceivedAuctionItem.field_E[5]);
             } else {
-              ui.a(2, 7, ReceivedAuctionItem.field_E[4], 2147483647);
+              NetworkArchiveRequest.a(2, 7, ReceivedAuctionItem.field_E[4], 2147483647);
             }
             return;
           }
           if (param3) {
-            ui.a(2, 5, ReceivedAuctionItem.field_E[4], 2147483647);
+            NetworkArchiveRequest.a(2, 5, ReceivedAuctionItem.field_E[4], 2147483647);
             if (param0 != 3) {
               return;
             }
-            ui.a(2, 7, ReceivedAuctionItem.field_E[4], 2147483647);
+            NetworkArchiveRequest.a(2, 7, ReceivedAuctionItem.field_E[4], 2147483647);
             return;
           }
           ContextMenu.b(2, (byte) 60, ReceivedAuctionItem.field_E[5]);
@@ -45,7 +45,7 @@ final class so {
             if (!param3) {
               ContextMenu.b(2, (byte) 60, ReceivedAuctionItem.field_E[5]);
             } else {
-              ui.a(2, 5, ReceivedAuctionItem.field_E[4], 2147483647);
+              NetworkArchiveRequest.a(2, 5, ReceivedAuctionItem.field_E[4], 2147483647);
             }
           }
         }
@@ -53,7 +53,7 @@ final class so {
           return;
         }
         if (param3) {
-          ui.a(2, 7, ReceivedAuctionItem.field_E[4], 2147483647);
+          NetworkArchiveRequest.a(2, 7, ReceivedAuctionItem.field_E[4], 2147483647);
         } else {
           ContextMenu.b(2, (byte) 60, ReceivedAuctionItem.field_E[5]);
         }

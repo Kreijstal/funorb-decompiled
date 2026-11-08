@@ -118,7 +118,7 @@ final class RenderedFootballer extends FootballerAgent {
             var12 = (String) null;
             RenderedFootballer.a((ResourceArchive) null, -89, (String) null, (ResourceArchive) null, (String) null);
           }
-          SoftwareRasterizer.a(param2.field_F + 6, 26 + param2.field_T, -12 + param2.field_q, -32 + param2.field_mb, 10, 65793, 96);
+          SoftwareRasterizer.fillRoundedRectangleBlended(param2.field_F + 6, 26 + param2.field_T, -12 + param2.field_q, -32 + param2.field_mb, 10, 65793, 96);
           if (param3 != null) {
             stackIn_7_0 = param3.field_Eb;
             stackIn_7_1 = 0;
@@ -353,8 +353,8 @@ final class RenderedFootballer extends FootballerAgent {
           var18 = InstrumentNoteMask.field_i * var14.field_v >> 8;
           var19 = -(var17Lifetime1 >> 1) + var3;
           var20 = 10 + var4;
-          SoftwareRasterizer.a(var19 - 5, -5 + var20, var17Lifetime1 + 10, var18 + 10, 5, 65793, 200);
-          var14.b(var19, var20, var17Lifetime1, var18);
+          SoftwareRasterizer.fillRoundedRectangleBlended(var19 - 5, -5 + var20, var17Lifetime1 + 10, var18 + 10, 5, 65793, 200);
+          var14.drawScaledAveraged(var19, var20, var17Lifetime1, var18);
         }
         if (var3 + var5 < 0) {
           return;
@@ -381,29 +381,29 @@ final class RenderedFootballer extends FootballerAgent {
         if (!this.megamode && (1 == SocketArchiveNetworkClient.field_v ||
           this.field_ab ||
           this.field_T)) {
-          PacketBuffer.a(-88, kw.field_f);
+          PacketBuffer.a(-88, AvailabilityCheckRequest.field_f);
           SoftwareRasterizer.clearFramebuffer();
           var2 = (var2 << 7) / InstrumentNoteMask.field_i;
           this.renderModel(var2, var8, 128, 190, (byte) -91);
           TeamManagementScreen.e(119);
           if (this.field_T) {
-            eo.a(kw.field_f, -16777215);
-            eo.a(kw.field_f, -16777214);
-            eo.a(kw.field_f, -16777215);
-            eo.a(kw.field_f, -16777214);
-            eo.a(kw.field_f, -16777215);
-            for (var9_int = 0; kw.field_f.field_y.length > var9_int; var9_int++) {
-              if (kw.field_f.field_y[var9_int] > 0) {
-                kw.field_f.field_y[var9_int] = 0;
+            eo.a(AvailabilityCheckRequest.field_f, -16777215);
+            eo.a(AvailabilityCheckRequest.field_f, -16777214);
+            eo.a(AvailabilityCheckRequest.field_f, -16777215);
+            eo.a(AvailabilityCheckRequest.field_f, -16777214);
+            eo.a(AvailabilityCheckRequest.field_f, -16777215);
+            for (var9_int = 0; AvailabilityCheckRequest.field_f.field_y.length > var9_int; var9_int++) {
+              if (AvailabilityCheckRequest.field_f.field_y[var9_int] > 0) {
+                AvailabilityCheckRequest.field_f.field_y[var9_int] = 0;
               }
             }
           }
           if (this.field_ab) {
             var9 = (double)(nj.monotonicMillis(95) % 1000L) / 1000.0;
             var11 = (double)(nj.monotonicMillis(35) % 300L) / 300.0;
-            nh.adjustSpriteHsv(kw.field_f, var9, 1.0, var11 + 1.0);
+            nh.adjustSpriteHsv(AvailabilityCheckRequest.field_f, var9, 1.0, var11 + 1.0);
           }
-          kw.field_f.drawHalfSize(-64 + var3, -95 + var4);
+          AvailabilityCheckRequest.field_f.drawHalfSize(-64 + var3, -95 + var4);
           decompiledFrameRemainder0 = false;
         }
         else {

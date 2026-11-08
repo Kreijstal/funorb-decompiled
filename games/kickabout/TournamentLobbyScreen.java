@@ -57,7 +57,7 @@ final class TournamentLobbyScreen extends AppScreen {
         if (null == this.field_X) {
           return;
         }
-        SoftwareRasterizer.a(40, g.field_a.field_J - 42, 140 * this.field_X.length, 50, 8, 65793, 128);
+        SoftwareRasterizer.fillRoundedRectangleBlended(40, g.field_a.field_J - 42, 140 * this.field_X.length, 50, 8, 65793, 128);
         var2 = -9 / ((param0 - 35) / 36);
         for (var3 = 0; var3 < this.field_X.length; var3++) {
           if (this.a(var3, -1)) {
@@ -196,8 +196,8 @@ final class TournamentLobbyScreen extends AppScreen {
 
     private final void drawStatsPanel(int param0) {
         int var2 = 20;
-        SoftwareRasterizer.a(-(this.field_A >> 1) + 320, var2, this.field_A, this.field_n, 8, 0, 128);
-        SoftwareRasterizer.a(-(-20 + this.field_A >> 1) + 320, var2 + 10, this.field_A - 20, 30, 8, 65793, 128);
+        SoftwareRasterizer.fillRoundedRectangleBlended(-(this.field_A >> 1) + 320, var2, this.field_A, this.field_n, 8, 0, 128);
+        SoftwareRasterizer.fillRoundedRectangleBlended(-(-20 + this.field_A >> 1) + 320, var2 + 10, this.field_A - 20, 30, 8, 65793, 128);
         un.field_d.d("<u=ffffff>" + LoggedPlayer.field_e[2].toUpperCase() + "</u> " + (null != this.field_r ? this.field_r : ""), 320, var2 + 30, 16777215, -1);
         var2 = var2 + ii.field_l;
         int var3 = 22;
@@ -206,19 +206,19 @@ final class TournamentLobbyScreen extends AppScreen {
         int var6 = this.field_n;
         var2 += 60;
         AuctionListing.a(var5, -22914, var3, var6, var4);
-        SoftwareRasterizer.a(-(-60 + this.field_A >> 1) + 320, 10 + var2, -60 + this.field_A, 30, 8, 65793, 128);
+        SoftwareRasterizer.fillRoundedRectangleBlended(-(-60 + this.field_A >> 1) + 320, 10 + var2, -60 + this.field_A, 30, 8, 65793, 128);
         un.field_d.d(ProxyAuthenticationRequiredException.field_f.toUpperCase(), 320, var2 + 30, 16777215, -1);
         var2 += 120;
         eo.a(250, var2, ArchivePreloader.field_j, this.field_O, (String[]) null, 160, 21, this.field_Q.length, this.field_Q, -1);
         var2 = var2 + 32 * this.field_O.length;
         var2 += 20;
-        SoftwareRasterizer.a(320 - (this.field_A - 60 >> 1), var2 + 10, -60 + this.field_A, 30, 8, 65793, 128);
+        SoftwareRasterizer.fillRoundedRectangleBlended(320 - (this.field_A - 60 >> 1), var2 + 10, -60 + this.field_A, 30, 8, 65793, 128);
         un.field_d.d(ad.field_b.toUpperCase(), 320, 30 + var2, 16777215, -1);
         var2 += 120;
         eo.a(250, var2, d.field_c, this.field_D, (String[]) null, 160, 21, this.field_Q.length, this.field_Q, -1);
         var2 = var2 + this.field_D.length * param0;
         var2 += 20;
-        SoftwareRasterizer.a(320 - (-60 + this.field_A >> 1), var2 + 10, this.field_A - 60, 30, 8, 65793, 128);
+        SoftwareRasterizer.fillRoundedRectangleBlended(320 - (-60 + this.field_A >> 1), var2 + 10, this.field_A - 60, 30, 8, 65793, 128);
         un.field_d.d(TeamSelectionAgent.field_j.toUpperCase(), 320, var2 + 30, 16777215, -1);
         var2 += 120;
         eo.a(250, var2, SortCriterion.field_g, this.field_Y, new String[]{"", "%"}, 160, 21, this.field_Q.length, this.field_Q, -1);
@@ -227,11 +227,11 @@ final class TournamentLobbyScreen extends AppScreen {
         TeamManagementScreen.e(117);
         if (this.field_k != 0 &&
           this.field_h > this.field_k) {
-          SoftwareRasterizer.a(this.field_m, this.field_u, 570, 12, 3, this.field_i ? 11184810 : this.field_s, 128);
+          SoftwareRasterizer.fillRoundedRectangleBlended(this.field_m, this.field_u, 570, 12, 3, this.field_i ? 11184810 : this.field_s, 128);
           un.field_d.d(ButtonMenuScreen.field_h, this.field_m + 285, -1 + this.field_u + 12, this.field_i ? 65793 : 11184810, -1);
         }
         if (this.field_h != 0) {
-          SoftwareRasterizer.a(this.field_G, this.field_q, 570, 12, 3, this.field_U ? 11184810 : this.field_s, 128);
+          SoftwareRasterizer.fillRoundedRectangleBlended(this.field_G, this.field_q, 570, 12, 3, this.field_U ? 11184810 : this.field_s, 128);
           un.field_d.d(ContextMenu.field_Ib, this.field_G + 285, 12 + (this.field_q - 1), !this.field_U ? 11184810 : 65793, -1);
         }
     }
@@ -823,8 +823,8 @@ final class TournamentLobbyScreen extends AppScreen {
         int var6Lifetime1;
         int var6Lifetime2;
         var13 = Kickabout.field_G;
-        SoftwareRasterizer.a(-(this.field_A >> 1) + 320, 20, this.field_A, this.field_n, 8, 0, 128);
-        SoftwareRasterizer.a(320 - (this.field_A - 20 >> 1), 30, -20 + this.field_A, 30, 8, 65793, 128);
+        SoftwareRasterizer.fillRoundedRectangleBlended(-(this.field_A >> 1) + 320, 20, this.field_A, this.field_n, 8, 0, 128);
+        SoftwareRasterizer.fillRoundedRectangleBlended(320 - (this.field_A - 20 >> 1), 30, -20 + this.field_A, 30, 8, 65793, 128);
         stackIn_2_0 = un.field_d;
         stackIn_2_1 = new StringBuilder().append("<u=ffffff>").append(LoggedPlayer.field_e[0].toUpperCase()).append("</u> ");
         if (this.field_r == null) {
@@ -834,10 +834,10 @@ final class TournamentLobbyScreen extends AppScreen {
         }
         ((CoverageBitmapFont) (Object) stackIn_2_0).d(((StringBuilder) (Object) stackIn_2_1).append(stackIn_3_2).toString(), 320, 50, 16777215, -1);
         AuctionListing.a(640, -22914, 0, 88, 60);
-        SoftwareRasterizer.a(224, 66, 372, 50, 8, 65793, 196);
+        SoftwareRasterizer.fillRoundedRectangleBlended(224, 66, 372, 50, 8, 65793, 196);
         un.field_d.d(LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, wk.field_e, new String[]{LobbyGameRecord.field_g[this.field_W].toLowerCase()}), 410, 82, 16777215, -1);
         var2 = 46;
-        SoftwareRasterizer.a(var2, 66, 175, 50, 8, 65793, 196);
+        SoftwareRasterizer.fillRoundedRectangleBlended(var2, 66, 175, 50, 8, 65793, 196);
         un.field_d.d(nk.field_g, var2 + 87, 82, 16777215, -1);
         TeamManagementScreen.e(120);
         var3 = 17;
@@ -845,7 +845,7 @@ final class TournamentLobbyScreen extends AppScreen {
         var5 = 175;
         for (var6 = 0; this.field_Q.length > var6; var6++) {
           var4 = var4 + (var3 + 2);
-          SoftwareRasterizer.a(var2, var4, var5, var3, 65793, 96);
+          SoftwareRasterizer.fillRectangleAlpha(var2, var4, var5, var3, 65793, 96);
           if (this.field_Q.length > var6) {
             var14 = this.field_Q[var6].toLowerCase();
             var7 = var14;
@@ -867,8 +867,8 @@ final class TournamentLobbyScreen extends AppScreen {
             }
             TeamManagementScreen.e(param0 + 21236);
             if (var8 != 0) {
-              SoftwareRasterizer.e(-(un.field_d.a(var7) >> 1) + (var5 >> 1) + (var2 - 8), 8 + var4, 8 + ((var5 >> 1) + var2) + (un.field_d.a(var7) >> 1), var4 + 8, 11141377, 196);
-              SoftwareRasterizer.e(-(un.field_d.a(var7) >> 1) + ((var5 >> 1) + var2 - 8), var4 + 9, (var5 >> 1) + (var2 + (un.field_d.a(var7) >> 1)) + 8, var4 + 9, 11141377, 196);
+              SoftwareRasterizer.drawLineBlendedInclusive(-(un.field_d.a(var7) >> 1) + (var5 >> 1) + (var2 - 8), 8 + var4, 8 + ((var5 >> 1) + var2) + (un.field_d.a(var7) >> 1), var4 + 8, 11141377, 196);
+              SoftwareRasterizer.drawLineBlendedInclusive(-(un.field_d.a(var7) >> 1) + ((var5 >> 1) + var2 - 8), var4 + 9, (var5 >> 1) + (var2 + (un.field_d.a(var7) >> 1)) + 8, var4 + 9, 11141377, 196);
             }
             MySquadScreen.field_U[this.field_H[var6]].c(var2, var4 - 1);
           }
@@ -877,9 +877,9 @@ final class TournamentLobbyScreen extends AppScreen {
           this.field_L = -119;
         }
         for (var6Lifetime1 = 0; var6Lifetime1 < 16; var6Lifetime1++) {
-          SoftwareRasterizer.c(var2, 2 + var3 + var6Lifetime1 + var4, 175, 65793, -(var6Lifetime1 << 3) + 128);
+          SoftwareRasterizer.drawHorizontalLineAlpha(var2, 2 + var3 + var6Lifetime1 + var4, 175, 65793, -(var6Lifetime1 << 3) + 128);
         }
-        SoftwareRasterizer.a(224, 90, 372, 320, 65793, 96);
+        SoftwareRasterizer.fillRectangleAlpha(224, 90, 372, 320, 65793, 96);
         if (this.field_z) {
           if (null != this.field_y) {
             for (var6Lifetime2 = 0; var6Lifetime2 < this.field_y.length; var6Lifetime2++) {
@@ -984,8 +984,8 @@ final class TournamentLobbyScreen extends AppScreen {
         stackIn_8_0 = (var2 <= 7) ? 20 : 300;
         var3 = stackIn_8_0;
         var4 = 48 % ((-30 - param0) / 45);
-        SoftwareRasterizer.a(-(this.field_A >> 1) + 320, 20, this.field_A, this.field_n, 8, 0, 128);
-        SoftwareRasterizer.a(-(-var3 + this.field_A >> 1) + 320, 30, this.field_A - var3, 30, 8, 65793, 128);
+        SoftwareRasterizer.fillRoundedRectangleBlended(-(this.field_A >> 1) + 320, 20, this.field_A, this.field_n, 8, 0, 128);
+        SoftwareRasterizer.fillRoundedRectangleBlended(-(-var3 + this.field_A >> 1) + 320, 30, this.field_A - var3, 30, 8, 65793, 128);
         stackIn_10_0 = un.field_d;
         stackIn_10_1 = new StringBuilder().append("<u=ffffff>").append(LoggedPlayer.field_e[1].toUpperCase()).append("</u> ");
         if (null != this.field_r) {
@@ -1161,10 +1161,10 @@ final class TournamentLobbyScreen extends AppScreen {
           var15 = (var6 << 1) + (var6 >> 1);
           var12 = var12 + var15;
           AuctionListing.a(var11 + var5, -22914, var11 - var5, -(var6 >> 1) + var12, -var6 + var12);
-          SoftwareRasterizer.a(-(un.field_d.a(WeightedLruCache.field_g) >> 1) + var11 - 10, var12 - var6, 20 + un.field_d.a(WeightedLruCache.field_g), var6, 8, 65793, 128);
+          SoftwareRasterizer.fillRoundedRectangleBlended(-(un.field_d.a(WeightedLruCache.field_g) >> 1) + var11 - 10, var12 - var6, 20 + un.field_d.a(WeightedLruCache.field_g), var6, 8, 65793, 128);
           un.field_d.d(WeightedLruCache.field_g, var11, var12 + (-(var6 >> 1) - 4), -1, -1);
           TeamManagementScreen.e(126);
-          SoftwareRasterizer.a(-(var5 >> 1) + var11, -(var6 >> 1) + var12, var5, var6, 65793, 128);
+          SoftwareRasterizer.fillRectangleAlpha(-(var5 >> 1) + var11, -(var6 >> 1) + var12, var5, var6, 65793, 128);
           WriteIntegersCommand.field_E[6].c(var11 + (var5 >> 1) - (WriteIntegersCommand.field_E[6].field_o - 4), -(WriteIntegersCommand.field_E[6].field_v >> 1) + var12);
           var16 = var14.field_o;
           if (var16 < 0 &&
@@ -1236,7 +1236,7 @@ final class TournamentLobbyScreen extends AppScreen {
           var6 = 0;
           var7 = Math.abs(255 - var5) | Math.abs(-var5 + 255) << 8 | Math.abs(255 - var5) << 16;
           AuctionListing.a(40 + (du.field_n + var3), -22914, -2 + var3, var4, -16 + var4);
-          SoftwareRasterizer.a(var3, var4 - 11, 33 + du.field_n, 20, 6, var6, FriendsListPanel.a(false, (byte) -96));
+          SoftwareRasterizer.fillRoundedRectangleBlended(var3, var4 - 11, 33 + du.field_n, 20, 6, var6, FriendsListPanel.a(false, (byte) -96));
           ScrollPane.a(var4, -123, 14 + var3);
           ScrollPane.a(var4, param0 + 113, du.field_n + (30 + var3));
           var8 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, NanoTickClock.field_o, new String[]{mk.field_b[il.field_h]});

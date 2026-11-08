@@ -147,7 +147,7 @@ final class NamedValueEntry extends IntrusiveNode {
             NamedValueEntry.a((String) null, (byte) -120);
           }
           AuctionListing.a(640, -22914, 0, 229 + var2, -var2 + 229);
-          SoftwareRasterizer.a(0, 229 - var2, 640, var2 << 1, 0, 128);
+          SoftwareRasterizer.fillRectangleAlpha(0, 229 - var2, 640, var2 << 1, 0, 128);
           if (var1_int >= 30) {
             var1_int -= 30;
             var3 = 256;
@@ -166,7 +166,7 @@ final class NamedValueEntry extends IntrusiveNode {
             } else {
               var4 = 0;
             }
-            stackIn_24_0 = (k.field_g != 1) ? 0 : 1;
+            stackIn_24_0 = (StreetSceneryLoader.field_g != 1) ? 0 : 1;
             var5Lifetime1 = stackIn_24_0;
             var14 = new int[2];
             var13 = var14;

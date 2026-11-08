@@ -6,7 +6,7 @@ final class SplashScreen extends AppScreen {
     static TickClock field_k;
     private int field_l;
     private int field_h;
-    static v[] field_n;
+    static EntityAfterimage[] field_n;
     static FullscreenFocusCanvas field_m;
     static int field_j;
     private boolean field_g;
@@ -154,7 +154,7 @@ final class SplashScreen extends AppScreen {
               var12.field_Lb = new UiLayoutNode(0L, mp.field_f);
               var12.addChild((byte) -120, var12.field_Lb);
               var12.field_Ob = new UiLayoutNode(0L, AuctionSettingsDialog.field_J);
-              if (ui.field_t) {
+              if (NetworkArchiveRequest.field_t) {
                 var12.addChild((byte) -127, var12.field_Ob);
               }
               var12.field_Ob.field_A = 2;
@@ -238,7 +238,7 @@ final class SplashScreen extends AppScreen {
                 if (!var12.field_Gb) {
                   if (var12.field_Fb) {
                     var12.field_Lb.field_E = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, ni.field_p, new String[]{var20});
-                    var12.field_Tb.field_E = kw.field_a;
+                    var12.field_Tb.field_E = AvailabilityCheckRequest.field_a;
                     var12.field_Hb.field_E = DemoIntegersCommand.field_A;
                   } else {
                     var12.field_Tb.field_E = nc.field_c;
@@ -270,7 +270,7 @@ final class SplashScreen extends AppScreen {
               stackIn_98_0 = var12.field_Lb;
               stackIn_98_1 = true;
               stackIn_98_2 = -var25_int;
-              if (ui.field_t) {
+              if (NetworkArchiveRequest.field_t) {
                 stackIn_99_3 = 42;
               } else {
                 stackIn_99_3 = 0;

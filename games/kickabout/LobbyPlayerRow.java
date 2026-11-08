@@ -130,11 +130,11 @@ final class LobbyPlayerRow extends UiLayoutNode {
           PcmSampleStream var2 = (PcmSampleStream) null;
           LobbyPlayerRow.a((PcmSampleStream) null, false);
         }
-        if (!DualLinkDequeIterator.field_e.a((byte) -80)) {
-          return DualLinkDequeIterator.field_e.a(3);
+        if (!DualLinkDequeIterator.field_e.isComplete((byte) -80)) {
+          return DualLinkDequeIterator.field_e.getQuery(3);
         }
         if (mj.field_a == PlayerModelPreview.field_f) {
-          return DualLinkDequeIterator.field_e.a(param0 ^ 323);
+          return DualLinkDequeIterator.field_e.getQuery(param0 ^ 323);
         }
         return ep.field_b;
     }
@@ -167,7 +167,7 @@ final class LobbyPlayerRow extends UiLayoutNode {
               var6 = var4[var5];
               var7 = -1;
               for (var8 = 0; IntrusiveDequeCursor.field_b.playerCount > var8; var8++) {
-                if (IntrusiveDequeCursor.field_b.field_g[TrinketShopDialog.field_G].field_p == IntrusiveDequeCursor.field_b.field_g[var8].field_p &&
+                if (IntrusiveDequeCursor.field_b.field_g[TrinketShopDialog.field_G].team == IntrusiveDequeCursor.field_b.field_g[var8].team &&
                   var6.field_h == IntrusiveDequeCursor.field_b.participantStatus[var8].controlledSlot) {
                   var7 = var8;
                 }

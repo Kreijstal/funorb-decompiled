@@ -313,7 +313,7 @@ abstract class MatchPhaseView {
     abstract void drawContent(int param0);
 
     final void drawPanelBackground(int param0) {
-        SoftwareRasterizer.a(10, 50, 620, 320, 20, 65793, 128);
+        SoftwareRasterizer.fillRoundedRectangleBlended(10, 50, 620, 320, 20, 65793, 128);
         if (param0 < 43) {
           this.buttonY(-47, -123);
         }
@@ -425,7 +425,7 @@ abstract class MatchPhaseView {
         int var7Lifetime1;
         var13 = Kickabout.field_G;
         if (this.field_g != -2) {
-          stackIn_3_0 = this.field_a.field_g[this.field_g].field_p;
+          stackIn_3_0 = this.field_a.field_g[this.field_g].team;
         } else {
           stackIn_3_0 = 0;
         }
@@ -434,7 +434,7 @@ abstract class MatchPhaseView {
         if (param0 == var5) {
           var6 = 0;
           for (var7 = 0; this.field_g > var7; var7++) {
-            if (~this.field_a.field_g[var7].field_p == ~param0) {
+            if (~this.field_a.field_g[var7].team == ~param0) {
               var6++;
             }
           }
@@ -454,7 +454,7 @@ abstract class MatchPhaseView {
         var14 = 0;
         var7Lifetime1 = var14;
         while (var14 < this.field_a.playerCount) {
-          if (param0 == this.field_a.field_g[var14].field_p) {
+          if (param0 == this.field_a.field_g[var14].team) {
             MySquadScreen.field_U[this.field_a.field_g[var14].field_f].c(param3, -16 + param1);
             stackIn_24_0 = (this.field_a.participantStatus[var14].isActive(3511)) ? 16777215 : 11184810;
             var8 = stackIn_24_0;
@@ -476,7 +476,7 @@ abstract class MatchPhaseView {
 
     final void drawTitle(boolean param0, String param1) {
         try {
-          SoftwareRasterizer.a(22, 62, 596, 28, 10, 65793, 128);
+          SoftwareRasterizer.fillRoundedRectangleBlended(22, 62, 596, 28, 10, 65793, 128);
           if (param0) {
             this.field_a = (CommonGame) null;
           }
@@ -498,7 +498,7 @@ abstract class MatchPhaseView {
         try {
           this.field_g = param1;
           this.field_a = param0;
-          this.field_h = -2 != this.field_g ? this.field_a.field_g[this.field_g].field_p : 0;
+          this.field_h = -2 != this.field_g ? this.field_a.field_g[this.field_g].team : 0;
           this.field_f = param2 ? true : false;
           if (param3 != null) {
             this.field_c = new MenuButton[param3.length];
@@ -549,7 +549,7 @@ abstract class MatchPhaseView {
         var4 = new int[]{-160 - var3 + 640 >> 1, -160 + (640 + var3) >> 1};
         var5 = new int[]{23 + param0, param0 + 23};
         if (this.field_g != -2) {
-          stackIn_8_0 = (1 == this.field_a.field_g[this.field_g].field_p) ? 1 : 0;
+          stackIn_8_0 = (1 == this.field_a.field_g[this.field_g].team) ? 1 : 0;
         } else {
           stackIn_8_0 = 0;
         }
@@ -564,9 +564,9 @@ abstract class MatchPhaseView {
         var10 = 0;
         var7Lifetime1 = var10;
         while (this.field_a.playerCount > var10) {
-          var8 = this.field_a.field_g[var10].field_p;
+          var8 = this.field_a.field_g[var10].team;
           AuctionListing.a(640, -22914, 2 + (var4[var8] + 160), 480, 0);
-          SoftwareRasterizer.a(var4[var8], var5[var8], 186, 21, 7, 65793, 128);
+          SoftwareRasterizer.fillRoundedRectangleBlended(var4[var8], var5[var8], 186, 21, 7, 65793, 128);
           TeamManagementScreen.e(123);
           if (this.field_a.participantStatus[var10].loadedPitch) {
             vb.field_l.c(2 + (160 + var4[var8]), -4 + var5[var8]);

@@ -142,24 +142,24 @@ abstract class ModelMeshBase extends MeshObject {
                   if (var26 != -1) {
                     var31Lifetime1 = param8 & param0.field_r[var26];
                     if (var31Lifetime1 == 65535) {
-                      this.a(0, param0.field_q[var26], 0, 0, 0, param7);
+                      this.applyGroupTransform(0, param0.field_q[var26], 0, 0, 0, param7);
                     } else {
-                      this.a(0, param0.field_q[var26], 0, 0, 0, param7, var31Lifetime1, param9);
+                      this.applyMaskedGroupTransform(0, param0.field_q[var26], 0, 0, 0, param7, var31Lifetime1, param9);
                     }
                   }
                 } else {
                   var31Lifetime1 = param8 & param0.field_r[var21];
                   if (var31Lifetime1 == 65535) {
-                    this.a(0, param0.field_q[var21], 0, 0, 0, param7);
+                    this.applyGroupTransform(0, param0.field_q[var21], 0, 0, 0, param7);
                   } else {
-                    this.a(0, param0.field_q[var21], 0, 0, 0, param7, var31Lifetime1, param9);
+                    this.applyMaskedGroupTransform(0, param0.field_q[var21], 0, 0, 0, param7, var31Lifetime1, param9);
                   }
                 }
                 var31Lifetime2 = param8 & param0.field_r[var36];
                 if (var31Lifetime2 == 65535) {
-                  this.a(var17, param0.field_q[var36], var28, var29, var30, param7);
+                  this.applyGroupTransform(var17, param0.field_q[var36], var28, var29, var30, param7);
                 } else {
-                  this.a(var17, param0.field_q[var36], var28, var29, var30, param7, var31Lifetime2, param9);
+                  this.applyMaskedGroupTransform(var17, param0.field_q[var36], var28, var29, var30, param7, var31Lifetime2, param9);
                 }
               }
             }
@@ -176,16 +176,16 @@ abstract class ModelMeshBase extends MeshObject {
             if (var13Lifetime1 != -1) {
               var14Lifetime1 = param8 & param0.field_r[var13Lifetime1];
               if (var14Lifetime1 == 65535) {
-                this.a(0, param0.field_q[var13Lifetime1], 0, 0, 0, param7);
+                this.applyGroupTransform(0, param0.field_q[var13Lifetime1], 0, 0, 0, param7);
               } else {
-                this.a(0, param0.field_q[var13Lifetime1], 0, 0, 0, param7, var14Lifetime1, param9);
+                this.applyMaskedGroupTransform(0, param0.field_q[var13Lifetime1], 0, 0, 0, param7, var14Lifetime1, param9);
               }
             }
             var14Lifetime1Lifetime1 = param8 & param0.field_r[var12Lifetime1];
             if (var14Lifetime1Lifetime1 == 65535) {
-              this.a(param0.field_o[var12Lifetime1], param0.field_q[var12Lifetime1], (int) param1.field_c[var11Lifetime1], (int) param1.field_f[var11Lifetime1], (int) param1.field_d[var11Lifetime1], param7);
+              this.applyGroupTransform(param0.field_o[var12Lifetime1], param0.field_q[var12Lifetime1], (int) param1.field_c[var11Lifetime1], (int) param1.field_f[var11Lifetime1], (int) param1.field_d[var11Lifetime1], param7);
             } else {
-              this.a(param0.field_o[var12Lifetime1], param0.field_q[var12Lifetime1], (int) param1.field_c[var11Lifetime1], (int) param1.field_f[var11Lifetime1], (int) param1.field_d[var11Lifetime1], param7, var14Lifetime1Lifetime1, param9);
+              this.applyMaskedGroupTransform(param0.field_o[var12Lifetime1], param0.field_q[var12Lifetime1], (int) param1.field_c[var11Lifetime1], (int) param1.field_f[var11Lifetime1], (int) param1.field_d[var11Lifetime1], param7, var14Lifetime1Lifetime1, param9);
             }
           }
         }
@@ -220,7 +220,7 @@ abstract class ModelMeshBase extends MeshObject {
         this.finishAnimation();
     }
 
-    abstract void a(int param0, int[] param1, int param2, int param3, int param4, boolean param5);
+    abstract void applyGroupTransform(int param0, int[] param1, int param2, int param3, int param4, boolean param5);
 
-    abstract void a(int param0, int[] param1, int param2, int param3, int param4, boolean param5, int param6, int[] param7);
+    abstract void applyMaskedGroupTransform(int param0, int[] param1, int param2, int param3, int param4, boolean param5, int param6, int[] param7);
 }

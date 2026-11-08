@@ -223,7 +223,7 @@ final class CheckboxLabelWidget extends UiLayoutNode {
                 }
                 stackIn_12_1 = (!this.field_Gb) ? 0 : 1;
                 var6 = stackIn_9_0[stackIn_12_1];
-                SoftwareRasterizer.a(this.field_F, this.field_T, this.field_q, this.field_mb, 6, var4, 128);
+                SoftwareRasterizer.fillRoundedRectangleBlended(this.field_F, this.field_T, this.field_q, this.field_mb, 6, var4, 128);
                 if (param0 &&
                   this.field_lb) {
                   if (this.field_gb) {
@@ -233,7 +233,7 @@ final class CheckboxLabelWidget extends UiLayoutNode {
                   }
                   var7 = IntTripleCommand.h(40);
                   if (0 <= var7) {
-                    SoftwareRasterizer.f(this.field_F, this.field_T, this.field_q, this.field_mb, 6, 65793 * var7);
+                    SoftwareRasterizer.drawRoundedRectangle(this.field_F, this.field_T, this.field_q, this.field_mb, 6, 65793 * var7);
                   }
                 }
                 this.field_X.c(this.field_Hb, -35 + var3, this.field_mb + this.field_T - 9, var5, -1);
@@ -266,13 +266,13 @@ final class CheckboxLabelWidget extends UiLayoutNode {
           stackIn_51_1 = (!this.field_Gb) ? 0 : 1;
           var6 = stackIn_48_0[stackIn_51_1];
         }
-        SoftwareRasterizer.a(this.field_F, this.field_T, this.field_q, this.field_mb, 6, var4, 128);
+        SoftwareRasterizer.fillRoundedRectangleBlended(this.field_F, this.field_T, this.field_q, this.field_mb, 6, var4, 128);
         if (param0 &&
           this.field_lb &&
           !this.field_gb) {
           var7Lifetime1 = IntTripleCommand.h(40);
           if (0 <= var7Lifetime1) {
-            SoftwareRasterizer.f(this.field_F, this.field_T, this.field_q, this.field_mb, 6, 65793 * var7Lifetime1);
+            SoftwareRasterizer.drawRoundedRectangle(this.field_F, this.field_T, this.field_q, this.field_mb, 6, 65793 * var7Lifetime1);
           }
         }
         this.field_X.c(this.field_Hb, -35 + var3, this.field_mb + this.field_T - 9, var5, -1);

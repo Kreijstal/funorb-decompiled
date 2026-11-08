@@ -44,7 +44,7 @@ final class SumIntegersCommand extends ConsoleCommand {
           if (null == ag.field_f) {
             return;
           }
-          ag.field_f.a((byte) -68, (java.awt.Component) ((Object) param1));
+          ag.field_f.detach((byte) -68, (java.awt.Component) ((Object) param1));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

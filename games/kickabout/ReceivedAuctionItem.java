@@ -203,7 +203,7 @@ final class ReceivedAuctionItem extends AuctionItem {
           }
           for (var1_int = 0; var1_int < NotCommand.field_F.playerCount; var1_int++) {
             if (NotCommand.field_F.participantStatus[var1_int].isActive(3511) &&
-              wp.field_c == NotCommand.field_F.field_g[var1_int].field_p) {
+              wp.field_c == NotCommand.field_F.field_g[var1_int].team) {
               var2 = (RenderedFootballer) (NotCommand.field_F.getControlledFootballer((byte) -60, var1_int));
               stackIn_14_0 = (RegistrationRequestDialog.field_kb != var1_int) ? 160 : 256;
               var3 = stackIn_14_0;

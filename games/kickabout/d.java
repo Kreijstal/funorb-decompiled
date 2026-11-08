@@ -18,7 +18,7 @@ final class d {
     }
 
     final static void a(byte param0) {
-        k.field_i = 0;
+        StreetSceneryLoader.field_i = 0;
         if (param0 > 126) {
           TrinketCatalog.field_d = -1;
           nc.field_a = false;
