@@ -32,7 +32,7 @@ final class MusicCrossfadeStream extends PcmStream {
           if (param1 != 22770) {
             MusicCrossfadeStream.getRegistrationAge((byte) -76);
           }
-          vf.reloadPage(param0, param1 ^ 21565);
+          PageReloadHelpers.reloadPage(param0, param1 ^ 21565);
         } catch (RuntimeException runtimeException) {
           throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "vi.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -158,7 +158,7 @@ final class MusicCrossfadeStream extends PcmStream {
         if (param0 < 118) {
           return -17;
         }
-        return um.field_r;
+        return SavedDataRequest.field_r;
     }
 
     final PcmStream firstSubStream() {
@@ -326,10 +326,10 @@ final class MusicCrossfadeStream extends PcmStream {
         if (param0 != -109) {
           return;
         }
-        if (mc.field_r != null) {
-          var1 = mc.field_r;
+        if (AchievementMaskRequest.field_r != null) {
+          var1 = AchievementMaskRequest.field_r;
           synchronized (var1) {
-            mc.field_r = null;
+            AchievementMaskRequest.field_r = null;
           }
         }
     }

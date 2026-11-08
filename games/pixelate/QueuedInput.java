@@ -38,7 +38,7 @@ final class QueuedInput extends IntrusiveNode {
               if (param2 <= -92) {
                 return;
               }
-              QueuedInput.a(true, 41, true);
+              QueuedInput.showLoginDialog(true, 41, true);
               return;
             }
             var17 = param3;
@@ -48,7 +48,7 @@ final class QueuedInput extends IntrusiveNode {
             var13 = param4;
             var14 = param7;
             var15 = 8355711 & var17[var11] >> 1;
-            var10[var11] = (cm.bitAnd(33423531, var13) >> 9) + cm.bitAnd(var12 >> 1, 16711680) + cm.bitAnd(255, var14 >> 17) + var15;
+            var10[var11] = (VolumeControlledVoice.bitAnd(33423531, var13) >> 9) + VolumeControlledVoice.bitAnd(var12 >> 1, 16711680) + VolumeControlledVoice.bitAnd(255, var14 >> 17) + var15;
             param1++;
             param7 = param7 + param6;
             param4 = param4 + param9;
@@ -108,14 +108,14 @@ final class QueuedInput extends IntrusiveNode {
               if (param0.length() == 0) {
                 var5Lifetime6 = var8 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
               } else {
-                var5Lifetime6 = var8 + "; Expires=" + SoundCache.formatCookieDate(10, hm.monotonicMillis(64) + 94608000000L) + "; Max-Age=" + 94608000L;
+                var5Lifetime6 = var8 + "; Expires=" + SoundCache.formatCookieDate(10, ClockHelpers.monotonicMillis(64) + 94608000000L) + "; Max-Age=" + 94608000L;
               }
               JavaScriptBridge.evaluateScript(param2, (byte) -121, "document.cookie=\"" + var5Lifetime6 + "\"");
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var3 = decompiledCaughtException;
             }
-            ib.updatePageLinks(param2, false);
+            GridSize.updatePageLinks(param2, false);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
@@ -142,7 +142,7 @@ final class QueuedInput extends IntrusiveNode {
         }
     }
 
-    final static void a(boolean param0, int param1, boolean param2) {
+    final static void showLoginDialog(boolean param0, int param1, boolean param2) {
         if (param1 == -17130) {
           RisingBubble.showLoginDialog(param1 ^ 17146, param0, param2, (String) null);
           return;
@@ -168,7 +168,7 @@ final class QueuedInput extends IntrusiveNode {
               var2_int = param0 - MusicCrossfadeStream.field_o.position;
             }
             NodeHashTableIterator.field_e.readFully(MusicCrossfadeStream.field_o.payload, MusicCrossfadeStream.field_o.position, (byte) 119, var2_int);
-            SpriteCheckboxPainter.field_c = hm.monotonicMillis(64);
+            SpriteCheckboxPainter.field_c = ClockHelpers.monotonicMillis(64);
             MusicCrossfadeStream.field_o.position = MusicCrossfadeStream.field_o.position + var2_int;
             if (param0 > MusicCrossfadeStream.field_o.position) {
               return false;
@@ -182,9 +182,9 @@ final class QueuedInput extends IntrusiveNode {
               CachedTextLayout.millisSinceLastPacket(8) <= 30000L) {
               return false;
             }
-            na.closeGameSocket(true);
+            GameSocketHelpers.closeGameSocket(true);
           } catch (IOException iOException) {
-            na.closeGameSocket(true);
+            GameSocketHelpers.closeGameSocket(true);
           }
           return false;
         } catch (RuntimeException | Error decompiledUncheckedException) {
@@ -204,17 +204,17 @@ final class QueuedInput extends IntrusiveNode {
           }
           ReflectionCheckRequest.field_n = param1.readUnsignedShort((byte) -121) << 5;
           var2_int = param1.readUnsignedByte(255);
-          bq.field_c = (7 & var2_int) << 18;
+          LegacyMenuBuilder.field_c = (7 & var2_int) << 18;
           ReflectionCheckRequest.field_n = ReflectionCheckRequest.field_n + (var2_int >> 3);
-          bq.field_c = bq.field_c + (param1.readUnsignedShort((byte) 47) << 2);
+          LegacyMenuBuilder.field_c = LegacyMenuBuilder.field_c + (param1.readUnsignedShort((byte) 47) << 2);
           var2_intLifetime1 = param1.readUnsignedByte(255);
-          bq.field_c = bq.field_c + (var2_intLifetime1 >> 6);
-          of.field_g = var2_intLifetime1 << 15 & 2064384;
-          of.field_g = of.field_g + (param1.readUnsignedByte(255) << 7);
+          LegacyMenuBuilder.field_c = LegacyMenuBuilder.field_c + (var2_intLifetime1 >> 6);
+          TextDecodeHelpers.field_g = var2_intLifetime1 << 15 & 2064384;
+          TextDecodeHelpers.field_g = TextDecodeHelpers.field_g + (param1.readUnsignedByte(255) << 7);
           var2_intLifetime2 = param1.readUnsignedByte(255);
-          of.field_b = var2_intLifetime2 << 16 & 65536;
-          of.field_g = of.field_g + (var2_intLifetime2 >> 1);
-          of.field_b = of.field_b + param1.readUnsignedShort((byte) 96);
+          TextDecodeHelpers.field_b = var2_intLifetime2 << 16 & 65536;
+          TextDecodeHelpers.field_g = TextDecodeHelpers.field_g + (var2_intLifetime2 >> 1);
+          TextDecodeHelpers.field_b = TextDecodeHelpers.field_b + param1.readUnsignedShort((byte) 96);
         } catch (RuntimeException runtimeException) {
           throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "rd.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

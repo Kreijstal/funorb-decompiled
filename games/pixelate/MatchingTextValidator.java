@@ -13,7 +13,7 @@ final class MatchingTextValidator extends TextFieldValidator {
     static String[] field_t;
     static Sprite field_v;
     static int field_A;
-    static ge field_n;
+    static RequestState field_n;
     static int[] field_w;
     static String field_x;
     static java.security.SecureRandom field_y;
@@ -47,7 +47,7 @@ final class MatchingTextValidator extends TextFieldValidator {
             if (var3 != null) {
               if (var3.getState((byte) 68) == RetroBlock.field_g &&
                 !param1.equals(this.matchingField.field_q)) {
-                stackIn_7_0 = sk.field_d;
+                stackIn_7_0 = LobbyFrameHelpers.field_d;
                 return stackIn_7_0;
               }
               stackIn_9_0 = var3.getMessage((byte) -7);
@@ -57,7 +57,7 @@ final class MatchingTextValidator extends TextFieldValidator {
           if (param1.equals(this.matchingField.field_q)) {
             return null;
           }
-          stackIn_13_0 = sk.field_d;
+          stackIn_13_0 = LobbyFrameHelpers.field_d;
           return stackIn_13_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -117,14 +117,14 @@ final class MatchingTextValidator extends TextFieldValidator {
             var3 = ((ValidationProvider) ((Object) this.matchingField)).getValidationSource(1);
             if (var3 != null &&
               var3.getState((byte) 69) != RetroBlock.field_g) {
-              stackIn_9_0 = sk.field_a;
+              stackIn_9_0 = LobbyFrameHelpers.field_a;
               return stackIn_9_0;
             }
           }
           if (param0.equals(this.matchingField.field_q)) {
             stackIn_13_0 = RetroBlock.field_g;
           } else {
-            stackIn_13_0 = sk.field_a;
+            stackIn_13_0 = LobbyFrameHelpers.field_a;
           }
           return stackIn_13_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

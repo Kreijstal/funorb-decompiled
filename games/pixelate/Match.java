@@ -45,7 +45,7 @@ final class Match {
         int stackIn_38_0 = 0;
         String stackIn_38_1 = null;
         boolean stackIn_39_2 = false;
-        sb stackIn_44_0 = null;
+        NineSliceFrame stackIn_44_0 = null;
         RuntimeException decompiledCaughtException = null;
         int var1_int = 0;
         RuntimeException var1 = null;
@@ -56,7 +56,7 @@ final class Match {
         String var6 = null;
         int var7 = 0;
         int var8 = 0;
-        sb var9 = null;
+        NineSliceFrame var9 = null;
         int var10 = 0;
         int var7Lifetime1;
         int var8Lifetime1;
@@ -65,7 +65,7 @@ final class Match {
           var1_int = MenuScreen.field_h;
           var2 = 0;
           if (2 == CanvasRasterBuffer.field_h) {
-            var3_long = -pk.field_g + hm.monotonicMillis(64);
+            var3_long = -MeshDecodeHelpers.field_g + ClockHelpers.monotonicMillis(64);
             var2 = (int)((-var3_long + 10999L) / 1000L);
             if (var2 < 0) {
               var2 = 0;
@@ -74,24 +74,24 @@ final class Match {
           if (param0 >= -7) {
             return;
           }
-          for (var3 = 0; vm.field_e.length > var3; var3++) {
+          for (var3 = 0; LobbyGameLookupHelpers.field_e.length > var3; var3++) {
             var4 = Kite.field_a[var3];
             if (var4 >= 0) {
               if (var4 == ScoreMarkerDemo.field_c.selectedIndex) {
                 var5 = IndexedSpriteState.field_l;
               } else {
-                var5 = ce.field_b;
+                var5 = ChatChannelGlobals.field_b;
               }
             } else {
               var5 = MatchingTextValidator.field_s;
             }
-            var6 = vm.field_e[var3];
+            var6 = LobbyGameLookupHelpers.field_e[var3];
             if (CanvasRasterBuffer.field_h == 2 &&
               1 == var2) {
-              if (jk.field_d.length <= StatsRequest.field_r.length) {
+              if (MeshColourEntry.field_d.length <= StatsRequest.field_r.length) {
                 stackIn_19_0 = StatsRequest.field_r.length;
               } else {
-                stackIn_19_0 = jk.field_d.length;
+                stackIn_19_0 = MeshColourEntry.field_d.length;
               }
               var7 = stackIn_19_0;
               if (ContentTransitionDialog.field_jb.length <= GameModeSelectScreen.field_r.length) {
@@ -125,7 +125,7 @@ final class Match {
             stackIn_38_0 = 3;
             stackIn_38_1 = var6;
             stackIn_39_2 = !(var4 < 0);
-            var7Lifetime1 = sb.measureMenuText(stackIn_38_0, stackIn_38_1, stackIn_39_2);
+            var7Lifetime1 = NineSliceFrame.measureMenuText(stackIn_38_0, stackIn_38_1, stackIn_39_2);
             var8Lifetime1 = QuickChatCategory.field_u - (var7Lifetime1 >> 1);
             if (var4 >= 0) {
               if (var4 == ScoreMarkerDemo.field_c.selectedIndex) {
@@ -136,16 +136,16 @@ final class Match {
               var9 = stackIn_44_0;
               var1_int = var1_int + LoadingProgressDialog.field_fb;
               if (var9 != null) {
-                var9.draw(var1_int, ValidatedTextWidget.field_fb + (bd.field_c << 1), -1, var7Lifetime1 + (AccountTermsPanel.field_J << 1), -AccountTermsPanel.field_J + var8Lifetime1);
+                var9.draw(var1_int, ValidatedTextWidget.field_fb + (ConnectionState.field_c << 1), -1, var7Lifetime1 + (AccountTermsPanel.field_J << 1), -AccountTermsPanel.field_J + var8Lifetime1);
               }
-              var1_int = var1_int + bd.field_c;
+              var1_int = var1_int + ConnectionState.field_c;
             }
             if (var4 < 0) {
               StatusBar.field_j.drawText(var6, var8Lifetime1, var1_int + MatchController.field_i, var5, -1);
               var1_int = var1_int + GameResultsScreen.field_r;
             } else {
               ScoreMarkerBar.field_y.drawText(var6, var8Lifetime1, var1_int + TimerBar.field_q, var5, -1);
-              var1_int = var1_int + (ValidatedTextWidget.field_fb + (bd.field_c + LoadingProgressDialog.field_fb));
+              var1_int = var1_int + (ValidatedTextWidget.field_fb + (ConnectionState.field_c + LoadingProgressDialog.field_fb));
             }
           }
           return;
@@ -237,9 +237,9 @@ final class Match {
                 var12 = this.puzzle.columns - var9 - 1 + var8 * this.puzzle.columns;
                 var13 = var15.cells[var11] & 3;
                 if (~var13 == ~(255 & var7.indices[var10])) {
-                  var15.cells[var11] = (byte)bq.bitOr((int) var15.cells[var11], 4);
+                  var15.cells[var11] = (byte)LegacyMenuBuilder.bitOr((int) var15.cells[var11], 4);
                 } else {
-                  var15.cells[var11] = (byte)cm.bitAnd((int) var15.cells[var11], -5);
+                  var15.cells[var11] = (byte)VolumeControlledVoice.bitAnd((int) var15.cells[var11], -5);
                   if (0 != var13) {
                     this.field_o = this.field_o + 1;
                   }
@@ -291,7 +291,7 @@ final class Match {
           throw new IllegalStateException();
         }
         this.field_r = param1;
-        this.puzzle = bj.createChallengePuzzle(this.field_r, -89);
+        this.puzzle = ChallengePuzzleHelpers.createChallengePuzzle(this.field_r, -89);
         for (var4 = param0; var4 < this.boards.length; var4++) {
           if (null != this.boards[var4]) {
             this.boards[var4] = new PlayerBoard(this.puzzle);
@@ -323,14 +323,14 @@ final class Match {
         CharSequence var5 = null;
         try {
           CheckboxPainter.field_k = param1;
-          ce.field_d = 2;
+          ChatChannelGlobals.field_d = 2;
           var5 = (CharSequence) ((Object) param1);
-          fp.field_d = dh.normalizeDisplayName(var5, (byte) 38);
+          NoticeKind.field_d = DisplayNameHelpers.normalizeDisplayName(var5, (byte) 38);
           if (param0 < 32) {
             field_s = (String) null;
           }
-          oo.field_d = true;
-          fp.field_e = param2;
+          AchievementIconGlobals.field_d = true;
+          NoticeKind.field_e = param2;
         } catch (RuntimeException runtimeException) {
           throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "pm.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -355,14 +355,14 @@ final class Match {
           this.field_g = param5;
           this.field_q = this.field_c + 1;
           if (param2 == 0) {
-            this.puzzle = bj.createChallengePuzzle(this.field_r, -121);
+            this.puzzle = ChallengePuzzleHelpers.createChallengePuzzle(this.field_r, -121);
           }
           if (1 == param2) {
-            this.puzzle = un.field_j.createPuzzle(-3060);
+            this.puzzle = PatchEnvelopeSet.field_j.createPuzzle(-3060);
           }
           if (param2 == 2) {
             var9 = new Random((long)this.field_c);
-            this.puzzle = wo.createPuzzle(this.field_r, cl.field_e[this.field_n], var9, (byte) 116);
+            this.puzzle = SocialPanel.createPuzzle(this.field_r, Cp1252EncodingHelpers.field_e[this.field_n], var9, (byte) 116);
             this.puzzle.field_e = 1000;
             JavaRandomHelpers.randomBelow(var9, -98, 2147483647);
           }

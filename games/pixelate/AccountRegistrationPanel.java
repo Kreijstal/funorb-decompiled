@@ -54,15 +54,15 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
         this.field_Q = new ValidatedTextWidget("", (UiListener) null, 3);
         int var1 = 1;
         this.field_T = new Checkbox("", (UiListener) null, var1 != 0);
-        this.field_R = new TextButton(hm.field_d, (UiListener) null);
+        this.field_R = new TextButton(ClockHelpers.field_d, (UiListener) null);
         this.field_K = new TextButton(MatchController.field_v, (UiListener) null);
         this.field_U.field_l = StatusBar.field_i;
         this.field_P.field_l = LabeledField.field_N;
-        this.field_L.field_l = jf.field_b;
+        this.field_L.field_l = IncomingPacketHelpers.field_b;
         this.field_V.field_l = QuickChatMenu.field_Eb;
         this.field_X.field_l = Puzzle.field_f;
         this.field_Q.field_l = IntrusiveDeque.field_d;
-        this.field_T.field_l = mc.field_o;
+        this.field_T.field_l = AchievementMaskRequest.field_o;
         this.field_U.setValidationSource((byte) 101, new NameAvailabilityValidator(this.field_U));
         this.field_P.setValidationSource((byte) 118, new EmailValidator(this.field_P));
         this.field_L.setValidationSource((byte) 56, new EmailConfirmationValidator(this.field_L, this.field_P));
@@ -84,15 +84,15 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
         String var2 = AlphaContainer.formatTemplate(DelegatingCanvas.field_f, 27, new String[]{this.getLinkOpenTag(3), this.getLinkCloseTag(0)});
         int var3 = 20;
         var3 = var3 + this.addLabeledField(DialWidget.field_S, -21, this.field_P, 170, var3);
-        var3 = var3 + (5 + this.addFieldWithHelp(mp.field_d, this.field_L, 20, 170, var3, 126, ""));
+        var3 = var3 + (5 + this.addFieldWithHelp(ChatInputGlobals.field_d, this.field_L, 20, 170, var3, 126, ""));
         var3 = var3 + this.addLabeledField(AccountRequestDialog.field_qb, -86, this.field_V, 170, var3);
-        var3 = var3 + (5 + this.addFieldWithHelp(PictureStrip.field_i, var3, this.field_X, 35, 170, r.field_b));
-        var3 = var3 + (this.addFieldWithHelp(na.field_a, var3, this.field_U, 35, 170, BufferedSocket.field_i) + 5);
+        var3 = var3 + (5 + this.addFieldWithHelp(PictureStrip.field_i, var3, this.field_X, 35, 170, LobbySlideHelpers.field_b));
+        var3 = var3 + (this.addFieldWithHelp(GameSocketHelpers.field_a, var3, this.field_U, 35, 170, BufferedSocket.field_i) + 5);
         var3 = var3 + this.addLabeledFieldWithValidationIcon((byte) 85, 170, this.field_Q, var3, TriangleMesh.field_O);
-        LabeledField var4 = new LabeledField(46, var3, this.field_E - 90, 25, this.field_T, true, this.field_E - 120, 5, ep.field_b, 11579568, CanvasRasterBuffer.field_j);
+        LabeledField var4 = new LabeledField(46, var3, this.field_E - 90, 25, this.field_T, true, this.field_E - 120, 5, PolygonClipHelpers.field_b, 11579568, CanvasRasterBuffer.field_j);
         this.addChild(var4, 80);
         var3 = var3 + var4.field_C;
-        TextWidgetPainter var5 = new TextWidgetPainter(he.field_d, 0, 0, 0, 0, 16777215, -1, 0, 0, he.field_d.maxAscent, -1, 2147483647, true);
+        TextWidgetPainter var5 = new TextWidgetPainter(CanvasInputHelpers.field_d, 0, 0, 0, 0, 16777215, -1, 0, 0, CanvasInputHelpers.field_d.maxAscent, -1, 2147483647, true);
         this.field_M = new TextHotspotWidget(var2, var5);
         this.field_M.field_l = "";
         this.field_M.setHotspotTooltip(IntrusiveNode.field_g, 0, 0);
@@ -127,7 +127,7 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var6 = new LabeledField(20, param4, param3 + 120, 25, param2, false, 120, 3, he.field_d, 16777215, param0);
+          var6 = new LabeledField(20, param4, param3 + 120, 25, param2, false, 120, 3, CanvasInputHelpers.field_d, 16777215, param0);
           this.addChild(var6, 80);
           if (param1 <= -6) {
             stackIn_4_0 = var6.field_C;
@@ -168,7 +168,7 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var9 = new LabeledField(20, param3, 120 + param1, 25, param2, false, 120, 3, he.field_d, 16777215, param4);
+          var9 = new LabeledField(20, param3, 120 + param1, 25, param2, false, 120, 3, CanvasInputHelpers.field_d, 16777215, param4);
           this.addChild(var9, 80);
           var7 = new ValidationIndicator(((ValidationProvider) ((Object) param2)).getValidationSource(1));
           this.addChild(var7, 80);
@@ -301,7 +301,7 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
                 var8_ref_uj = new LobbyPlayer(var21, var22, var3);
                 QuickChatCategoryCache.field_d.put(false, var8_ref_uj, var3);
               }
-              var8_ref_uj.field_Pb = hm.monotonicMillis(64) - (long)((PacketBuffer) ((Object) var1)).readInt(0);
+              var8_ref_uj.field_Pb = ClockHelpers.monotonicMillis(64) - (long)((PacketBuffer) ((Object) var1)).readInt(0);
               var8_ref_uj.field_Rb = ((PacketBuffer) ((Object) var1)).readUnsignedShort((byte) 105);
               var10 = ((PacketBuffer) ((Object) var1)).readVarInt(127);
               var8_ref_uj.field_Yb = var10 >> 1;
@@ -325,7 +325,7 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
                 var30.field_Jb = false;
               }
               if (var5 != 0) {
-                var30.field_Tb = mh.field_b;
+                var30.field_Tb = QuickChatOpenHelpers.field_b;
                 var30.field_Eb = var5;
               } else {
                 var30.unlink(2779);
@@ -345,10 +345,10 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
             }
             if (8 == var2) {
               var3_int = ((PacketBuffer) ((Object) var1)).readUnsignedShort((byte) -124);
-              var4 = (LobbyGame) (dg.field_f.get(-11434, (long)var3_int));
+              var4 = (LobbyGame) (QuickChatSendHelpers.field_f.get(-11434, (long)var3_int));
               if (var4 == null) {
-                var4 = new LobbyGame(fj.field_b);
-                dg.field_f.put(false, var4, (long)var3_int);
+                var4 = new LobbyGame(MouseInputGlobals.field_b);
+                QuickChatSendHelpers.field_f.put(false, var4, (long)var3_int);
               }
               TextLayout.readLobbyGameStatus(true, var4, (byte) 120, var1);
               StatefulTextPainter.insertLobbyGameSorted((byte) -48, var4);
@@ -357,12 +357,12 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
             if (var2 == 9) {
               var3_intLifetime4 = ((PacketBuffer) ((Object) var1)).readUnsignedShort((byte) 124);
               var4_int = ((PacketBuffer) ((Object) var1)).readUnsignedByte(255);
-              var33 = (LobbyGame) (dg.field_f.get(-11434, (long)var3_intLifetime4));
+              var33 = (LobbyGame) (QuickChatSendHelpers.field_f.get(-11434, (long)var3_intLifetime4));
               if (var33 == null) {
                 return;
               }
               if (0 != var4_int) {
-                var33.field_Rb = mh.field_b;
+                var33.field_Rb = QuickChatOpenHelpers.field_b;
                 var33.field_Qb = var4_int;
               } else {
                 var33.unlink(2779);
@@ -371,11 +371,11 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
               return;
             }
             if (10 == var2) {
-              var32 = (LobbyGame) (nk.field_a.first(1504642273));
+              var32 = (LobbyGame) (ChatPanelHelpers.field_a.first(1504642273));
               while (var32 != null) {
                 var32.unlink(2779);
                 var32.unlinkSecondary(17);
-                var32 = (LobbyGame) (nk.field_a.next(1504642273));
+                var32 = (LobbyGame) (ChatPanelHelpers.field_a.next(1504642273));
               }
               return;
             }
@@ -384,7 +384,7 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
               if (var2 == 13) {
                 var3_intLifetime5 = ((PacketBuffer) ((Object) var1)).readUnsignedShort((byte) 107);
                 var4_intLifetime1 = ((PacketBuffer) ((Object) var1)).readUnsignedByte(255);
-                var17_ref = (LobbyGame) (dg.field_f.get(-11434, (long)var3_intLifetime5));
+                var17_ref = (LobbyGame) (QuickChatSendHelpers.field_f.get(-11434, (long)var3_intLifetime5));
                 if (var17_ref == null) {
                   return;
                 }
@@ -392,7 +392,7 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
                 var13 = var17_ref;
                 var6 = var13;
                 if (var4_intLifetime1 != 0) {
-                  var17_ref.field_Rb = mh.field_b;
+                  var17_ref.field_Rb = QuickChatOpenHelpers.field_b;
                   var17_ref.field_Qb = var4_intLifetime1;
                 }
                 var13.field_cc = false;
@@ -413,7 +413,7 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
                       }
                       if (var5Lifetime1 != 0) {
                         var23.field_Eb = var5Lifetime1;
-                        var23.field_Tb = mh.field_b;
+                        var23.field_Tb = QuickChatOpenHelpers.field_b;
                       } else {
                         var23.unlink(2779);
                       }
@@ -428,15 +428,15 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
                     if (var2 == 21) {
                       var3_intLifetime5 = ((PacketBuffer) ((Object) var1)).readUnsignedShort((byte) -120);
                       if (var3_intLifetime5 == 0) {
-                        bo.field_e = 0L;
+                        ScreenDisplayMode.field_e = 0L;
                         return;
                       }
-                      bo.field_e = (long)var3_intLifetime5 + hm.monotonicMillis(64);
+                      ScreenDisplayMode.field_e = (long)var3_intLifetime5 + ClockHelpers.monotonicMillis(64);
                       return;
                     }
                     if (var2 == 22) {
-                      gi.field_a = ((PacketBuffer) ((Object) var1)).readUnsignedShort((byte) 63);
-                      ui.field_e = ((PacketBuffer) ((Object) var1)).readVarInt(127);
+                      HighscoreNameEntry.field_a = ((PacketBuffer) ((Object) var1)).readUnsignedShort((byte) 63);
+                      Cp1252DecodeHelpers.field_e = ((PacketBuffer) ((Object) var1)).readVarInt(127);
                       return;
                     }
                     if (var2 == 23) {
@@ -444,7 +444,7 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
                       return;
                     }
                     CheckboxPainter.reportClientError(1, "L1: " + Cloud.describePacketHistory(-74), (Throwable) null);
-                    na.closeGameSocket(true);
+                    GameSocketHelpers.closeGameSocket(true);
                     return;
                   }
                   stackIn_100_0 = var1;
@@ -487,7 +487,7 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
                     var14.field_Vb = false;
                   }
                   if (var5Lifetime1Lifetime1 != 0) {
-                    var26.field_Tb = mh.field_b;
+                    var26.field_Tb = QuickChatOpenHelpers.field_b;
                     var26.field_Eb = var5Lifetime1Lifetime1;
                   }
                   QuickChatCategoryCache.insertLobbyPlayerSorted(-124, var26);
@@ -510,7 +510,7 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
               return;
             }
             var3_intLifetime6 = ((PacketBuffer) ((Object) var1)).readUnsignedShort((byte) -124);
-            var19_ref = (LobbyGame) (dg.field_f.get(-11434, (long)var3_intLifetime6));
+            var19_ref = (LobbyGame) (QuickChatSendHelpers.field_f.get(-11434, (long)var3_intLifetime6));
             var28 = var19_ref;
             if (var28 == null) {
               return;
@@ -544,14 +544,14 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
           }
           if (var2 == 1 &&
             null != LoginMethod.field_c) {
-            wo.field_b = LoginMethod.field_c.field_pc;
+            SocialPanel.field_b = LoginMethod.field_c.field_pc;
           }
           if (var2 == 4) {
             var3_intLifetime1 = ((PacketBuffer) ((Object) var1)).readUnsignedShort((byte) 49);
-            LoginMethod.field_c = new LobbyGame(fj.field_b);
+            LoginMethod.field_c = new LobbyGame(MouseInputGlobals.field_b);
             LoginMethod.field_c.setSecondaryKey((long)var3_intLifetime1, 29574);
             TextLayout.readLobbyGameStatus(false, LoginMethod.field_c, (byte) 120, var1);
-            bo.field_e = 0L;
+            ScreenDisplayMode.field_e = 0L;
           } else {
             LoginMethod.field_c = null;
           }
@@ -560,7 +560,7 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
             DraggableWidget.field_S = null;
           } else {
             if (DraggableWidget.field_S == null) {
-              DraggableWidget.field_S = new LobbyGame(fj.field_b);
+              DraggableWidget.field_S = new LobbyGame(MouseInputGlobals.field_b);
             }
           }
           if (var2 != 3) {
@@ -571,7 +571,7 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
           for (var3_intLifetime2 = 0; var3_intLifetime2 < TextButton.field_J.length; var3_intLifetime2++) {
             TextButton.field_J[var3_intLifetime2] = ((PacketBuffer) ((Object) var1)).readByte(0);
           }
-          ib.field_a = ((PacketBuffer) ((Object) var1)).readUnsignedByte(255);
+          GridSize.field_a = ((PacketBuffer) ((Object) var1)).readUnsignedByte(255);
           TextFieldValidator.field_i = ((PacketBuffer) ((Object) var1)).readUnsignedByte(255);
           for (var3_intLifetime3 = 0; NanoTickClock.field_k.length > var3_intLifetime3; var3_intLifetime3++) {
             NanoTickClock.field_k[var3_intLifetime3] = ((PacketBuffer) ((Object) var1)).readByte(0);
@@ -672,7 +672,7 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
             return true;
           }
           var4 = var3.getState((byte) 112);
-          if (sk.field_a == var4) {
+          if (LobbyFrameHelpers.field_a == var4) {
             return false;
           }
           if (var4 == BufferedRandomAccessFile.field_b) {
@@ -727,7 +727,7 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var10 = new LabeledField(20, param4, 120 + param3, 25, param1, false, 120, 3, he.field_d, 16777215, param0);
+          var10 = new LabeledField(20, param4, 120 + param3, 25, param1, false, 120, 3, CanvasInputHelpers.field_d, 16777215, param0);
           this.addChild(var10, 80);
           var9 = new ValidationHelpWidget(((ValidationProvider) ((Object) param1)).getValidationSource(param5 - 125), param6, param5, var10.field_C + param4, 50 + param3, param2);
           var9.field_n = (UiListener) (this);
@@ -816,7 +816,7 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
           UiComponent var4 = (UiComponent) null;
           this.updatePointer(-14, 96, -17, (UiComponent) null);
         }
-        return oi.startRegistrationSubmission(this, var2, this.field_T.field_M, this.field_P.field_q, (byte) -98, this.field_V.field_q, this.field_U.field_q);
+        return RegistrationHelpers.startRegistrationSubmission(this, var2, this.field_T.field_M, this.field_P.field_q, (byte) -98, this.field_V.field_q, this.field_U.field_q);
     }
 
     private final boolean areAllFieldsReady(boolean param0) {

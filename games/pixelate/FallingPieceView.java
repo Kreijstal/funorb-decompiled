@@ -30,8 +30,8 @@ final class FallingPieceView {
           if (MainMenuScreen.field_r != null) {
             MainMenuScreen.field_r.close(-92);
           }
-          nf.field_b = new LoginForm(param0, param2, false, true, true);
-          ph.field_l.transitionToContent(nf.field_b, -120);
+          LoginFormGlobals.field_b = new LoginForm(param0, param2, false, true, true);
+          AchievementBannerEntry.field_l.transitionToContent(LoginFormGlobals.field_b, -120);
           if (param1 > -30) {
             field_d = (String) null;
           }
@@ -243,7 +243,7 @@ final class FallingPieceView {
           if (fieldTemp$0 >= 50) {
             this.field_b = 0;
           }
-          gd.field_f[this.field_b].drawAdditive(1 + var13, -63 + var14, var9);
+          MainScreenWidgetGlobals.field_f[this.field_b].drawAdditive(1 + var13, -63 + var14, var9);
         }
         SoftwareRasterizer.drawRectangle(1 + var13, -63 + var14, 63, 63, 16777215);
         SoftwareRasterizer.drawRectangle(2 + var13, var14 - 64 + 2, 61, 61, 0);
@@ -255,7 +255,7 @@ final class FallingPieceView {
         var15 = var15 / 2;
         var19 = null;
         var20 = null;
-        if (null == fq.field_o) {
+        if (null == RankingSummaryScreen.field_o) {
           stackIn_27_0 = 0;
         } else {
           stackIn_27_0 = Kite.field_t;
@@ -266,8 +266,8 @@ final class FallingPieceView {
           var20_ref = LoginCredentials.field_e.field_f[1];
         } else {
           if (var21 == 1) {
-            var20_ref = fq.field_o.field_f[1];
-            var19_ref = fq.field_o.field_f[0];
+            var20_ref = RankingSummaryScreen.field_o.field_f[1];
+            var19_ref = RankingSummaryScreen.field_o.field_f[0];
           } else {
             var23 = SocialListEntry.field_Hb[0];
             var19_ref = var23;
@@ -275,10 +275,10 @@ final class FallingPieceView {
             var20_ref = var24;
             var23.makeRasterTarget();
             LoginCredentials.field_e.field_f[0].drawOpaque(0, 0);
-            fq.field_o.field_f[0].drawAlpha(0, 0, var21);
+            RankingSummaryScreen.field_o.field_f[0].drawAlpha(0, 0, var21);
             var24.makeRasterTarget();
             LoginCredentials.field_e.field_f[1].drawOpaque(0, 0);
-            fq.field_o.field_f[1].drawAlpha(0, 0, var21);
+            RankingSummaryScreen.field_o.field_f[1].drawAlpha(0, 0, var21);
             ClientException.field_f.bindRaster(param2 ^ 19692);
           }
         }

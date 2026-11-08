@@ -10,7 +10,7 @@ final class AchievementsScreen extends MenuScreen {
     static String[] field_p;
 
     final void enterScreen(int param0, int param1, boolean param2) {
-        jn.field_v = -1;
+        TwistedLogicCube.field_v = -1;
         Cloud.field_j = -1;
         super.enterScreen(param0, param1, param2);
     }
@@ -20,7 +20,7 @@ final class AchievementsScreen extends MenuScreen {
           this.enterScreen(-110, 30, true);
         }
         if (param0 == 0) {
-          return ge.field_b;
+          return RequestState.field_b;
         }
         return PacketBuffer.field_o[this.field_k[param0]];
     }
@@ -96,7 +96,7 @@ final class AchievementsScreen extends MenuScreen {
         if (param0 != 11) {
           AchievementsScreen.createPieceTiming(-94, (byte) 78);
         }
-        var4 = qj.field_e;
+        var4 = PrivateChatHelpers.field_e;
         NumericDateInputWidget.field_W[6].drawTransparent(0, 45);
         this.drawRows((byte) -71);
         for (var5 = 0; var5 < GameApplet.field_n.length; var5++) {
@@ -108,14 +108,14 @@ final class AchievementsScreen extends MenuScreen {
             if (var5 == Cloud.field_j) {
               SoftwareRasterizer.fillRoundedRectangleBlended(var7 - 3, -3 + var8, 38, 38, 6, 0, 128);
             }
-            if (var5 == jn.field_v) {
+            if (var5 == TwistedLogicCube.field_v) {
               SoftwareRasterizer.drawRoundedRectangle(var7 - 3, var8 - 3, 38, 38, 6, 16777215);
             }
             var6_ref_tf.drawQuarterSize(var7, var8);
           }
         }
         if (Cloud.field_j == -1) {
-          stackIn_24_0 = jn.field_v;
+          stackIn_24_0 = TwistedLogicCube.field_v;
         } else {
           stackIn_24_0 = Cloud.field_j;
         }
@@ -133,16 +133,16 @@ final class AchievementsScreen extends MenuScreen {
           var9.drawTransparent(60, 120);
           var10 = var4.drawParagraph(this.getAchievementDescription(true, var5Lifetime1), 120, 320, 400, 400, 16777215, 0, 0, 0, var7Lifetime1);
           var11 = 320 + (var7Lifetime1 * var10 + 24);
-          var4.drawText(MainMenuScreen.field_p + ri.field_c[var5Lifetime1], 120, var11, 16777215, 0);
+          var4.drawText(MainMenuScreen.field_p + ChatHistoryAllocator.field_c[var5Lifetime1], 120, var11, 16777215, 0);
           var11 = var11 + (4 + var7Lifetime1);
           var4.drawText(DisplayNameForm.field_K, 120, var11, 16777215, 0);
           var12 = var4.textWidth(DisplayNameForm.field_K) + 120;
           var13 = var11;
-          for (var14 = 0; var14 < ri.field_e[var5Lifetime1]; var14++) {
+          for (var14 = 0; var14 < ChatHistoryAllocator.field_e[var5Lifetime1]; var14++) {
             RisingBubble.field_c.drawTransparent((RisingBubble.field_c.field_A >> 1) * var14 + var12, -RisingBubble.field_c.field_B + (var13 + 4));
           }
         } else {
-          var3.drawParagraph(th.field_a, 30, 280, 580, 400, 0, -1, 1, 0, 30);
+          var3.drawParagraph(TrigonometryHelpers.field_a, 30, 280, 580, 400, 0, -1, 1, 0, 30);
           if (ArrayWidgetContainer.isAccountUiActive((byte) 109)) {
             var6 = 280 + this.field_d >> 1;
             var4.drawCentered(ScoreMarkerDemo.field_h, 320, var6, 16777215, 0);
@@ -202,7 +202,7 @@ final class AchievementsScreen extends MenuScreen {
         }
         if (param1 == 10 &&
           !this.isAchievementUnlocked((byte) 66, param1)) {
-          return dq.field_a;
+          return TransitionPhase.field_a;
         }
         return ClientException.field_a[param1];
     }
@@ -211,7 +211,7 @@ final class AchievementsScreen extends MenuScreen {
         if (param0 >= -13) {
           return;
         }
-        la.changeScreen(this.field_l, TickClock.field_a, false, -25528);
+        ScreenChangeHelpers.changeScreen(this.field_l, TickClock.field_a, false, -25528);
     }
 
     AchievementsScreen(int param0, int param1, int param2, int param3, int param4, int[] param5) {
@@ -241,11 +241,11 @@ final class AchievementsScreen extends MenuScreen {
 
     private final Sprite getAchievementIcon(byte param0, int param1) {
         if (this.isAchievementUnlocked((byte) 66, param1)) {
-          return oo.field_c[param1];
+          return AchievementIconGlobals.field_c[param1];
         }
-        if (gq.isOfflineOrAccountUi(param0 ^ 96) &&
+        if (AlternateNameCredentials.isOfflineOrAccountUi(param0 ^ 96) &&
           TwistedLogicBackground.field_p[param1]) {
-          return gd.field_i;
+          return MainScreenWidgetGlobals.field_i;
         }
         if (param0 == 37) {
           return ScorePopup.field_a;
@@ -271,14 +271,14 @@ final class AchievementsScreen extends MenuScreen {
         if (param0 > -64) {
           field_q = 92;
         }
-        jn.field_v = this.achievementAt(4, ProxyAuthenticationException.field_d, StatusBar.field_k);
-        if (jn.field_v != -1 &&
+        TwistedLogicCube.field_v = this.achievementAt(4, ProxyAuthenticationException.field_d, StatusBar.field_k);
+        if (TwistedLogicCube.field_v != -1 &&
           IntrusiveDequeCursor.field_c == 1) {
-          mc.playSoundEffect(128, -126);
-          if (jn.field_v == Cloud.field_j) {
+          AchievementMaskRequest.playSoundEffect(128, -126);
+          if (TwistedLogicCube.field_v == Cloud.field_j) {
             Cloud.field_j = -1;
           } else {
-            Cloud.field_j = jn.field_v;
+            Cloud.field_j = TwistedLogicCube.field_v;
           }
         }
     }
@@ -297,7 +297,7 @@ final class AchievementsScreen extends MenuScreen {
         }
         int var3 = 3 + JavaRandomHelpers.randomBelow(UiTheme.field_f, -124, 17);
         double var4 = (double)(param0 - 10) / 10.0 + 7.0;
-        return new PieceTiming(var2, var3, of.toFixedPoint(var4, 65536));
+        return new PieceTiming(var2, var3, TextDecodeHelpers.toFixedPoint(var4, 65536));
     }
 
     public static void releaseStatics(boolean param0) {

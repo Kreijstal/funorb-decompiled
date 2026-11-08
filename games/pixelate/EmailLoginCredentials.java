@@ -1,0 +1,75 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class EmailLoginCredentials extends LoginCredentials {
+    static ResourceArchive field_j;
+    private String field_k;
+    static String[] field_i;
+    static IntrusiveDeque field_g;
+    private String field_h;
+    static String field_f;
+
+    final static Sprite[] createSolidFrame(int param0, int param1, int param2) {
+        if (param2 != 1) {
+          EmailLoginCredentials.releaseStatics(-57);
+          return BoardParticle.createSolidFrameSprites(1, param1, true, param0);
+        }
+        return BoardParticle.createSolidFrameSprites(1, param1, true, param0);
+    }
+
+    public static void releaseStatics(int param0) {
+        if (param0 == -19101) {
+          field_j = null;
+          field_f = null;
+          field_g = null;
+          field_i = null;
+          return;
+        }
+        field_g = (IntrusiveDeque) null;
+        field_j = null;
+        field_f = null;
+        field_g = null;
+        field_i = null;
+    }
+
+    final CredentialKind getCredentialKind(int param0) {
+        if (param0 != -27096) {
+          EmailLoginCredentials.createSolidFrame(45, 71, -79);
+          return MessageScreen.field_r;
+        }
+        return MessageScreen.field_r;
+    }
+
+    EmailLoginCredentials(String param0, String param1) {
+        try {
+          this.field_k = param1;
+          this.field_h = param0;
+        } catch (RuntimeException runtimeException) {
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "wk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    final static void updateLobbyChat(int param0, int param1, boolean param2, boolean param3, boolean param4, boolean param5, byte param6, boolean param7, int param8, int param9, int param10, int param11) {
+        LobbyFrameHelpers.updateLobbyFrame(param4, 16777215, param0, param2, param11, param10, param1, (byte) -119, param7, 16777215, param3, param8, param5, param9);
+        int var12 = -97 % ((param6 + 37) / 37);
+    }
+
+    final void writePayload(byte param0, PacketBuffer param1) {
+        try {
+          param1.writeVersionedString((byte) -66, this.field_h);
+          param1.writeBase38Name(-129, this.field_k);
+          if (param0 != -12) {
+            PacketBuffer var4 = (PacketBuffer) null;
+            this.writePayload((byte) -114, (PacketBuffer) null);
+          }
+        } catch (RuntimeException runtimeException) {
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "wk.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    static {
+        field_i = new String[]{"The single-player challenge is simple - make as many pictures as you can for points and Achievements!", "The <col=FF9900>timer bar</col> is slowly draining at the bottom of the screen. Complete pictures quickly to <col=FF9900>bump</col> it back up. If it disappears completely the game is over."};
+        field_f = "Fullscreen";
+        field_g = new IntrusiveDeque();
+    }
+}

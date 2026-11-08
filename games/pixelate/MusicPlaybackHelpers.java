@@ -1,0 +1,45 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class MusicPlaybackHelpers {
+    static String field_a;
+    static int field_c;
+    static String field_e;
+    static String field_f;
+    static String[] field_d;
+    static int field_b;
+
+    final static void playMusicTrack(byte param0, int param1, MusicTrack param2, boolean param3) {
+        if (param0 > -50) {
+          return;
+        }
+        try {
+          ChatHistoryAllocator.field_a.selectTrack(1000000, !param3 ? true : false, param1, (byte) 124, param2, 256);
+        } catch (RuntimeException runtimeException) {
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "qh.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+        }
+    }
+
+    public static void releaseStatics(int param0) {
+        if (param0 == 256) {
+          field_a = null;
+          field_f = null;
+          field_e = null;
+          field_d = null;
+          return;
+        }
+        MusicPlaybackHelpers.releaseStatics(3);
+        field_a = null;
+        field_f = null;
+        field_e = null;
+        field_d = null;
+    }
+
+    static {
+        field_a = "Waiting for <%0> to start the game...";
+        field_c = 20;
+        field_f = "Next";
+        field_d = new String[]{"Move:", "Rotate:", "Drop Fast:", "Pause:", "or"};
+        field_e = "Add name";
+    }
+}

@@ -13,7 +13,7 @@ final class KeyboardInputHandler implements java.awt.event.KeyListener, java.awt
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          if (null != mc.field_r) {
+          if (null != AchievementMaskRequest.field_r) {
             LinkButtonPainter.field_i = 0;
             var2_int = param0.getKeyCode();
             if (var2_int >= 0 &&
@@ -26,7 +26,7 @@ final class KeyboardInputHandler implements java.awt.event.KeyListener, java.awt
               0 <= var2_int) {
               LabeledField.field_Q[PauseMenuScreen.field_q] = ~var2_int;
               PauseMenuScreen.field_q = PauseMenuScreen.field_q + 1 & 127;
-              if (PauseMenuScreen.field_q == wm.field_c) {
+              if (PauseMenuScreen.field_q == ReportReason.field_c) {
                 PauseMenuScreen.field_q = -1;
               }
             }
@@ -54,13 +54,13 @@ final class KeyboardInputHandler implements java.awt.event.KeyListener, java.awt
             String var10 = (String) null;
             KeyboardInputHandler.initializeArchiveServices(117, 59, -61, 116, (PlatformTaskDispatcher) null, -123, (String) null, 58, -63);
           }
-          fj.field_a = param0;
-          bl.field_e = param6;
+          MouseInputGlobals.field_a = param0;
+          MouseWheelSetupHelpers.field_e = param6;
           SceneWidget.field_ib = param2;
           GreenGrowTheRushesBackground.field_o = param8;
           ScrollPaneWithFooter.field_Eb = param5;
           AcidSunsetBackground.field_n = param1;
-          ef.field_e = param4;
+          HighscorePacketHandlers.field_e = param4;
           Match.field_h = (Js5Transport) ((Object) new SocketJs5Transport());
           DisplayNameForm.field_J = new DiskCacheWorker(param4);
           FloatingSquare.field_j = new Js5ArchiveManager(Match.field_h, DisplayNameForm.field_J);
@@ -132,7 +132,7 @@ final class KeyboardInputHandler implements java.awt.event.KeyListener, java.awt
 
     public final synchronized void focusLost(java.awt.event.FocusEvent param0) {
         try {
-          if (mc.field_r != null) {
+          if (AchievementMaskRequest.field_r != null) {
             PauseMenuScreen.field_q = -1;
           }
         } catch (RuntimeException runtimeException) {
@@ -152,13 +152,13 @@ final class KeyboardInputHandler implements java.awt.event.KeyListener, java.awt
         int var2_int = 0;
         int var3 = 0;
         try {
-          if (mc.field_r != null) {
+          if (AchievementMaskRequest.field_r != null) {
             var2_int = param0.getKeyChar();
             if (var2_int != 0 &&
               var2_int != 65535 &&
               ArchiveIndex.isTypeableChar((char) var2_int, (byte) 111)) {
               var3 = 127 & 1 + RasterState.field_s;
-              if (qn.field_p != var3) {
+              if (PatchNoteUsage.field_p != var3) {
                 ArchiveRequest.field_z[RasterState.field_s] = -1;
                 ResourceArchive.field_d[RasterState.field_s] = (char)var2_int;
                 RasterState.field_s = var3;
@@ -181,7 +181,7 @@ final class KeyboardInputHandler implements java.awt.event.KeyListener, java.awt
         int var3 = 0;
         int var3Lifetime1;
         try {
-          if (null != mc.field_r) {
+          if (null != AchievementMaskRequest.field_r) {
             LinkButtonPainter.field_i = 0;
             var2_int = param0.getKeyCode();
             if (var2_int >= 0 &&
@@ -197,13 +197,13 @@ final class KeyboardInputHandler implements java.awt.event.KeyListener, java.awt
               var2_int >= 0) {
               LabeledField.field_Q[PauseMenuScreen.field_q] = var2_int;
               PauseMenuScreen.field_q = 127 & 1 + PauseMenuScreen.field_q;
-              if (PauseMenuScreen.field_q == wm.field_c) {
+              if (PauseMenuScreen.field_q == ReportReason.field_c) {
                 PauseMenuScreen.field_q = -1;
               }
             }
             if (var2_int >= 0) {
               var3 = 127 & 1 + RasterState.field_s;
-              if (qn.field_p != var3) {
+              if (PatchNoteUsage.field_p != var3) {
                 ArchiveRequest.field_z[RasterState.field_s] = var2_int;
                 ResourceArchive.field_d[RasterState.field_s] = (char)0;
                 RasterState.field_s = var3;

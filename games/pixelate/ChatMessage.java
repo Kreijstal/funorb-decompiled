@@ -82,7 +82,7 @@ final class ChatMessage {
     ChatMessage(boolean param0) {
         this.field_b = OptionsScreen.field_s;
         this.field_n = OptionsScreen.field_t;
-        this.field_h = cl.field_h;
+        this.field_h = Cp1252EncodingHelpers.field_h;
         if (param0) {
           this.field_l = HuffmanCodec.field_g;
         } else {
@@ -93,8 +93,8 @@ final class ChatMessage {
         this.field_i = BoundedRandomAccessFile.field_d;
         this.field_e = ModalStack.field_I;
         this.field_a = TextWidgetPainter.field_n;
-        this.field_k = cd.field_g;
-        this.field_d = qf.field_b;
+        this.field_k = LoginMethodGlobals.field_g;
+        this.field_d = KeyMapHelpers.field_b;
         this.field_g = PictureStrip.field_j;
     }
 

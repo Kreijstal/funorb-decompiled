@@ -595,7 +595,7 @@ class UiContainer extends UiComponent implements UiContainerMarker {
         int var15_int = 0;
         RuntimeException var15 = null;
         try {
-          TextButton.configureButtonStyles(param13, NodeHashTable.field_c, param2, param11, new sb(param4), AudioService.field_d, MouseWheelHandler.field_d, mh.field_a, new sb(param8), param6, param11, param10, param7, param6, param10, param14, ScoreMarkerDemo.field_k, 108, PlayerBoard.field_n, param5);
+          TextButton.configureButtonStyles(param13, NodeHashTable.field_c, param2, param11, new NineSliceFrame(param4), AudioService.field_d, MouseWheelHandler.field_d, QuickChatOpenHelpers.field_a, new NineSliceFrame(param8), param6, param11, param10, param7, param6, param10, param14, ScoreMarkerDemo.field_k, 108, PlayerBoard.field_n, param5);
           var15_int = 75 % ((param12 + 21) / 34);
           PlayerController.openMessageMenu(param0, param9, param1, 0, param3);
           return;

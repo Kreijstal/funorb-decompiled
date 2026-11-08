@@ -45,7 +45,7 @@ final class SecondaryNodeDeque implements Iterable {
         int var9Lifetime1;
         var10 = Pixelate.field_H ? 1 : 0;
         try {
-          var7_int = un.padToByteBoundary(param3, 108);
+          var7_int = PatchEnvelopeSet.padToByteBoundary(param3, 108);
           if (MatchingTextValidator.field_y == null) {
             MatchingTextValidator.field_y = new java.security.SecureRandom();
           }
@@ -55,14 +55,14 @@ final class SecondaryNodeDeque implements Iterable {
           for (var9 = 0; var9 < 4; var9++) {
             var8[var9] = MatchingTextValidator.field_y.nextInt();
           }
-          if (ed.field_b == null ||
-            !(var7_int <= ed.field_b.payload.length)) {
-            ed.field_b = new PacketBuffer(var7_int);
+          if (PaletteFontFactory.field_b == null ||
+            !(var7_int <= PaletteFontFactory.field_b.payload.length)) {
+            PaletteFontFactory.field_b = new PacketBuffer(var7_int);
           }
-          ed.field_b.position = 0;
-          ed.field_b.writeBytes(param3, param2, -3493, param6);
-          ed.field_b.padToPosition(var7_int, param1);
-          ed.field_b.xteaEncrypt(true, var13);
+          PaletteFontFactory.field_b.position = 0;
+          PaletteFontFactory.field_b.writeBytes(param3, param2, -3493, param6);
+          PaletteFontFactory.field_b.padToPosition(var7_int, param1);
+          PaletteFontFactory.field_b.xteaEncrypt(true, var13);
           if (null == TutorialPage.field_d ||
             !(100 <= TutorialPage.field_d.payload.length)) {
             TutorialPage.field_d = new PacketBuffer(100);
@@ -78,7 +78,7 @@ final class SecondaryNodeDeque implements Iterable {
           TutorialPage.field_d.writeShort(1276387944, param3);
           TutorialPage.field_d.rsaEncrypt(param4, param0, 0);
           param5.writeBytes(TutorialPage.field_d.position, 0, -3493, TutorialPage.field_d.payload);
-          param5.writeBytes(ed.field_b.position, 0, -3493, ed.field_b.payload);
+          param5.writeBytes(PaletteFontFactory.field_b.position, 0, -3493, PaletteFontFactory.field_b.payload);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -130,7 +130,7 @@ final class SecondaryNodeDeque implements Iterable {
         Sprite[] var4 = new Sprite[9];
         Sprite[] var2 = var4;
         int var3 = -118 % ((param1 - 67) / 55);
-        var4[4] = cl.createSolidSprite(64, param0, (byte) -61);
+        var4[4] = Cp1252EncodingHelpers.createSolidSprite(64, param0, (byte) -61);
         return var2;
     }
 
@@ -203,7 +203,7 @@ final class SecondaryNodeDeque implements Iterable {
         field_c[0] = 0L;
         for (var0 = 1; var0 <= 10; var0++) {
             var1 = (var0 - 1) * 8;
-            field_c[var0] = fp.xor(fp.xor(fp.xor(fp.xor(FullscreenFocusCanvas.longAnd(4278190080L, field_b[4][4 + var1]), fp.xor(FullscreenFocusCanvas.longAnd(1095216660480L, field_b[3][var1 + 3]), fp.xor(FullscreenFocusCanvas.longAnd(field_b[2][var1 + 2], 280375465082880L), fp.xor(FullscreenFocusCanvas.longAnd(-72057594037927936L, field_b[0][var1]), FullscreenFocusCanvas.longAnd(field_b[1][var1 + 1], 71776119061217280L))))), FullscreenFocusCanvas.longAnd(field_b[5][5 + var1], 16711680L)), FullscreenFocusCanvas.longAnd(65280L, field_b[6][var1 + 6])), FullscreenFocusCanvas.longAnd(field_b[7][var1 + 7], 255L));
+            field_c[var0] = NoticeKind.xor(NoticeKind.xor(NoticeKind.xor(NoticeKind.xor(FullscreenFocusCanvas.longAnd(4278190080L, field_b[4][4 + var1]), NoticeKind.xor(FullscreenFocusCanvas.longAnd(1095216660480L, field_b[3][var1 + 3]), NoticeKind.xor(FullscreenFocusCanvas.longAnd(field_b[2][var1 + 2], 280375465082880L), NoticeKind.xor(FullscreenFocusCanvas.longAnd(-72057594037927936L, field_b[0][var1]), FullscreenFocusCanvas.longAnd(field_b[1][var1 + 1], 71776119061217280L))))), FullscreenFocusCanvas.longAnd(field_b[5][5 + var1], 16711680L)), FullscreenFocusCanvas.longAnd(65280L, field_b[6][var1 + 6])), FullscreenFocusCanvas.longAnd(field_b[7][var1 + 7], 255L));
         }
         field_f = new PcmSample[132];
         field_d = "Achievements";

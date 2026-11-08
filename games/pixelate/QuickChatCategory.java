@@ -23,14 +23,14 @@ final class QuickChatCategory extends DualLinkNode {
         }
         if (this.phraseIds != null) {
           for (var2 = 0; var2 < this.phraseIds.length; var2++) {
-            this.phraseIds[var2] = bq.bitOr(this.phraseIds[var2], 32768);
+            this.phraseIds[var2] = LegacyMenuBuilder.bitOr(this.phraseIds[var2], 32768);
           }
         }
         if (null != this.subcategoryIds) {
           var4 = 0;
           var2Lifetime1 = var4;
           while (var4 < this.subcategoryIds.length) {
-            this.subcategoryIds[var4] = bq.bitOr(this.subcategoryIds[var4], 32768);
+            this.subcategoryIds[var4] = LegacyMenuBuilder.bitOr(this.subcategoryIds[var4], 32768);
             var4++;
           }
         }
@@ -146,7 +146,7 @@ final class QuickChatCategory extends DualLinkNode {
                 if (var6 == 0) {
                   stackIn_19_2 = (char)0;
                 } else {
-                  stackIn_19_2 = cm.decodeCp1252Byte((byte) var6, 63);
+                  stackIn_19_2 = VolumeControlledVoice.decodeCp1252Byte((byte) var6, 63);
                 }
                 stackIn_18_0[stackIn_18_1] = stackIn_19_2;
               }
@@ -163,7 +163,7 @@ final class QuickChatCategory extends DualLinkNode {
                   if (0 == var6) {
                     stackIn_10_2 = (char)0;
                   } else {
-                    stackIn_10_2 = cm.decodeCp1252Byte((byte) var6, 63);
+                    stackIn_10_2 = VolumeControlledVoice.decodeCp1252Byte((byte) var6, 63);
                   }
                   stackIn_9_0[stackIn_9_1] = stackIn_10_2;
                 }

@@ -188,9 +188,9 @@ final class CachedArchiveProvider extends ArchiveProvider {
             try {
               if (var5 != null &&
                 var18.length > 2) {
-                ra.field_h.reset();
-                ra.field_h.update(var5, 0, -2 + var18.length);
-                var6_int = (int)ra.field_h.getValue();
+                NineSliceSpriteFactory.field_h.reset();
+                NineSliceSpriteFactory.field_h.update(var5, 0, -2 + var18.length);
+                var6_int = (int)NineSliceSpriteFactory.field_h.getValue();
                 if (var6_int != this.index.field_k[param0]) {
                   throw new RuntimeException();
                 }
@@ -242,9 +242,9 @@ final class CachedArchiveProvider extends ArchiveProvider {
           try {
             if (var5 != null &&
               var18.length > 2) {
-              ra.field_h.reset();
-              ra.field_h.update(var5, 0, -2 + var18.length);
-              var6_int = (int)ra.field_h.getValue();
+              NineSliceSpriteFactory.field_h.reset();
+              NineSliceSpriteFactory.field_h.update(var5, 0, -2 + var18.length);
+              var6_int = (int)NineSliceSpriteFactory.field_h.getValue();
               if (var6_int != this.index.field_k[param0]) {
                 throw new RuntimeException();
               }
@@ -384,7 +384,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var15 = null;
         try {
-          ro.initializeLobbyUi(param0, param6, param8, -15690, param10, param4, param14, param1, (IndexedSprite[]) null, param7, (int[]) null, param2, param12, param3, param9, param5, param13);
+          NameSuggestionHelpers.initializeLobbyUi(param0, param6, param8, -15690, param10, param4, param14, param1, (IndexedSprite[]) null, param7, (int[]) null, param2, param12, param3, param9, param5, param13);
           if (param11 <= 6) {
             CachedArchiveProvider.takeRegistrationResult((byte) 43);
           }
@@ -614,7 +614,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
             discarded$4 = this.pollGroupRequest(112, 27, true);
           }
           if (this.field_p &&
-            hm.monotonicMillis(64) >= this.field_t) {
+            ClockHelpers.monotonicMillis(64) >= this.field_t) {
             var2_ref = (ArchiveRequest) (this.requests.first((byte) -99));
             while (var2_ref != null) {
               if (!var2_ref.field_v) {
@@ -629,7 +629,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
               }
               var2_ref = (ArchiveRequest) (this.requests.next(-123));
             }
-            this.field_t = 1000L + hm.monotonicMillis(64);
+            this.field_t = 1000L + ClockHelpers.monotonicMillis(64);
             return;
           }
           return;
@@ -747,13 +747,13 @@ final class CachedArchiveProvider extends ArchiveProvider {
         }
     }
 
-    final static id takeRegistrationResult(byte param0) {
-        id stackIn_10_0 = null;
+    final static AccountRequestReply takeRegistrationResult(byte param0) {
+        AccountRequestReply stackIn_10_0 = null;
         Object stackIn_12_0 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         try {
-          if (MarkerSlider.field_X == wm.field_a) {
+          if (MarkerSlider.field_X == ReportReason.field_a) {
             throw new IllegalStateException();
           }
           if (param0 != 52) {
@@ -761,9 +761,9 @@ final class CachedArchiveProvider extends ArchiveProvider {
           }
           if (MarkerSlider.field_X != Checkbox.field_N) {
             stackIn_12_0 = null;
-            return (id) (stackIn_12_0);
+            return (AccountRequestReply) (stackIn_12_0);
           }
-          MarkerSlider.field_X = wm.field_a;
+          MarkerSlider.field_X = ReportReason.field_a;
           stackIn_10_0 = MouseWheelHandler.field_b;
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

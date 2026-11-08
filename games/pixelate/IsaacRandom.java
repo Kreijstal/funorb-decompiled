@@ -213,10 +213,10 @@ final class IsaacRandom {
             }
           }
           this.accumulator = this.accumulator + this.memory[255 & var2 + 128];
-          dupTemp$1 = this.lastResult + this.accumulator + this.memory[cm.bitAnd(255, var3 >> 2)];
+          dupTemp$1 = this.lastResult + this.accumulator + this.memory[VolumeControlledVoice.bitAnd(255, var3 >> 2)];
           var4 = dupTemp$1;
           this.memory[var2] = dupTemp$1;
-          dupTemp$2 = this.memory[cm.bitAnd(255, var4 >> 8 >> 2)] + var3;
+          dupTemp$2 = this.memory[VolumeControlledVoice.bitAnd(255, var4 >> 8 >> 2)] + var3;
           this.lastResult = dupTemp$2;
           this.field_h[var2] = dupTemp$2;
           var2++;

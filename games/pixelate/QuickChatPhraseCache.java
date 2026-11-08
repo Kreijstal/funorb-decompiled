@@ -3,7 +3,7 @@
  */
 final class QuickChatPhraseCache {
     static SceneWidget field_l;
-    static wm field_d;
+    static ReportReason field_d;
     static volatile boolean field_j;
     static Sprite field_k;
     private ResourceArchive field_c;
@@ -22,7 +22,7 @@ final class QuickChatPhraseCache {
           if (param1 != -879) {
             field_h = 78;
           }
-          StrongCacheReference.a(param8, param11, param10, param5, param7, param6, param4, param0, param9, param2, param7, (byte) 122, param3, param0, param2);
+          StrongCacheReference.configureMenusAndFullscreen(param8, param11, param10, param5, param7, param6, param4, param0, param9, param2, param7, (byte) 122, param3, param0, param2);
         } catch (RuntimeException runtimeException) {
           throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "u.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ',' + (param7 != null ? "{...}" : "null") + ',' + param8 + ',' + (param9 != null ? "{...}" : "null") + ',' + param10 + ',' + param11 + ')');
         }
@@ -72,7 +72,7 @@ final class QuickChatPhraseCache {
         field_l = null;
     }
 
-    QuickChatPhraseCache(int param0, ResourceArchive param1, ResourceArchive param2, hj param3) {
+    QuickChatPhraseCache(int param0, ResourceArchive param1, ResourceArchive param2, QuickChatPhraseListener param3) {
         RuntimeException var5 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -121,7 +121,7 @@ final class QuickChatPhraseCache {
     }
 
     final static void playSkinMusic(boolean param0, int param1) {
-        qh.playMusicTrack((byte) -110, 10, bj.field_c[param1], true);
+        MusicPlaybackHelpers.playMusicTrack((byte) -110, 10, ChallengePuzzleHelpers.field_c[param1], true);
         if (param0) {
           QuickChatPhraseCache.releaseStatics(-24);
         }
@@ -134,6 +134,6 @@ final class QuickChatPhraseCache {
         field_g = "Open";
         field_h = -1;
         field_n = "to keep fullscreen or";
-        field_d = new wm(13, 0, 1, 0);
+        field_d = new ReportReason(13, 0, 1, 0);
     }
 }

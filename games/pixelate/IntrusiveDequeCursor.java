@@ -71,7 +71,7 @@ final class IntrusiveDequeCursor {
             }
             var1 = (LobbyPlayer) (ImageProducerRasterBuffer.field_n.next(param0 ^ -1504642274));
           }
-          var1_ref = (LobbyGame) (nk.field_a.first(param0 ^ -1504642274));
+          var1_ref = (LobbyGame) (ChatPanelHelpers.field_a.first(param0 ^ -1504642274));
           while (var1_ref != null) {
             if (var1_ref.field_Rb > 0) {
               var1_ref.field_Rb = var1_ref.field_Rb - 1;
@@ -82,7 +82,7 @@ final class IntrusiveDequeCursor {
                 }
               }
             }
-            var1_ref = (LobbyGame) (nk.field_a.next(1504642273));
+            var1_ref = (LobbyGame) (ChatPanelHelpers.field_a.next(1504642273));
           }
           var1Lifetime1 = (LobbyPlayer) (ClientContextMenu.field_a.first(1504642273));
           while (var1Lifetime1 != null) {
@@ -263,31 +263,31 @@ final class IntrusiveDequeCursor {
     }
 
     final static void commitScreenChange(int param0) {
-        if (fc.field_e == MidiPcmStream.field_t) {
+        if (LobbyListBindingHelpers.field_e == MidiPcmStream.field_t) {
           return;
         }
-        if (BoardParticle.isNonNegative((byte) -104, fc.field_e)) {
-          wo.getScreen(126, fc.field_e).releaseScreenAssets(true);
+        if (BoardParticle.isNonNegative((byte) -104, LobbyListBindingHelpers.field_e)) {
+          SocialPanel.getScreen(126, LobbyListBindingHelpers.field_e).releaseScreenAssets(true);
         }
-        fc.field_e = MidiPcmStream.field_t;
+        LobbyListBindingHelpers.field_e = MidiPcmStream.field_t;
         if (SaveDataRequest.field_l) {
           SaveDataRequest.field_l = false;
           MatchingTextValidator.field_r = null;
-          ro.field_e = null;
+          NameSuggestionHelpers.field_e = null;
         }
         NameAvailabilityValidator.field_t = param0;
-        if (ce.field_a) {
+        if (ChatChannelGlobals.field_a) {
           HighscoresScreen.field_p = null;
           DualLinkDeque.field_h = new IntrusiveDeque();
           EmailCredentials.field_k = 0;
-          ce.field_a = false;
+          ChatChannelGlobals.field_a = false;
           MenuScreen.field_n = 0;
         }
-        if (mi.field_o) {
+        if (NotLoggedInScreen.field_o) {
           SceneWidget.closeTransientDialogs(param0 ^ 0);
           ArchiveIndex.clearLobbyState(23949);
-          bd.clearSocialLists((byte) -1);
-          mi.field_o = false;
+          ConnectionState.clearSocialLists((byte) -1);
+          NotLoggedInScreen.field_o = false;
         }
     }
 

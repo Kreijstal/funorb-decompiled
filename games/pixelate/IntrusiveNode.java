@@ -67,35 +67,35 @@ class IntrusiveNode {
         int var17_intLifetime4;
         var21 = Pixelate.field_H ? 1 : 0;
         try {
-          dq.field_b = param9;
-          vm.field_c = param11;
-          jk.field_e = args;
+          TransitionPhase.field_b = param9;
+          LobbyGameLookupHelpers.field_c = param11;
+          MeshColourEntry.field_e = args;
           LinkButtonPainter.field_a = param2;
-          rm.field_b = param8;
-          ff.field_i = param5;
+          TutorialDrawHelpers.field_b = param8;
+          SpriteLoadHelpers.field_i = param5;
           PasswordValidator.field_s = param6;
-          ig.field_a = param7;
+          AudioPumpHelpers.field_a = param7;
           GameApplet.field_o = param13;
           StatusBar.field_d = param14;
           PicturePreview.field_q = param10;
-          dk.field_a = param4;
+          NineSliceFrameHelpers.field_a = param4;
           DraggableWidget.field_P = SocketConnector.loadRgbSpritesByName("gameprivacy", "lobby", (byte) 47, param1);
-          fd.field_c = SocketConnector.loadRgbSpritesByName("ratedgame", "lobby", (byte) 47, param1);
+          ByteArrayPool.field_c = SocketConnector.loadRgbSpritesByName("ratedgame", "lobby", (byte) 47, param1);
           EmailCredentials.field_h = SocketConnector.loadRgbSpritesByName("opentome", "lobby", (byte) 47, param1);
           PuzzlePieceQueue.field_d = SocketConnector.loadRgbSpritesByName("allowspectators", "lobby", (byte) 47, param1);
           AchievementsScreen.field_p = new String[5];
           AchievementsScreen.field_p[3] = QuickChatCategoryCache.field_c;
-          AchievementsScreen.field_p[2] = cl.field_b;
+          AchievementsScreen.field_p[2] = Cp1252EncodingHelpers.field_b;
           AchievementsScreen.field_p[4] = QuickChatPhraseCache.field_g;
           AchievementsScreen.field_p[0] = CipherPacketBuffer.field_t;
           AchievementsScreen.field_p[1] = IntrusiveDequeCursor.field_b;
           StripedProgressBar.field_O = new SceneWidget(0L, (SceneWidget) null);
-          TextTableInitializer.field_g = new SceneWidget(0L, QuickChatPhraseCache.field_l, qn.field_m);
-          l.field_s = new SceneWidget(0L, ni.field_s, rh.field_m);
-          Cloud.field_b = new ScrollContainer(0L, new SceneWidget(0L, (SceneWidget) null), ff.field_g, ug.field_s);
+          TextTableInitializer.field_g = new SceneWidget(0L, QuickChatPhraseCache.field_l, PatchNoteUsage.field_m);
+          MessageScreen.field_s = new SceneWidget(0L, TextHotspot.field_s, HighscoreSubmission.field_m);
+          Cloud.field_b = new ScrollContainer(0L, new SceneWidget(0L, (SceneWidget) null), SpriteLoadHelpers.field_g, LaggedPacket.field_s);
           StripedProgressBar.field_O.addChild(TextTableInitializer.field_g, (byte) 26);
           if (DialWidgetPainter.field_n) {
-            StripedProgressBar.field_O.addChild(l.field_s, (byte) 26);
+            StripedProgressBar.field_O.addChild(MessageScreen.field_s, (byte) 26);
           }
           StripedProgressBar.field_O.addChild(Cloud.field_b, (byte) 26);
           Cloud.field_b.field_Ib.applyStyle(-27813, TextFieldValidator.field_h);
@@ -107,19 +107,19 @@ class IntrusiveNode {
           ValidatedTextWidget.field_lb.horizontalAlignment = 1;
           ValidatedTextWidget.field_cb = new SceneWidget(0L, LoginForm.field_R, AccountChoicePanel.field_K.toUpperCase());
           AlphaContainer.field_P = new SceneWidget(0L, LoginMethod.field_f, TimerBar.field_n.toUpperCase());
-          DiskCacheWorker.field_a = new SceneWidget(0L, ff.field_a);
+          DiskCacheWorker.field_a = new SceneWidget(0L, SpriteLoadHelpers.field_a);
           BlastFromThePastBackground.field_n = new SceneWidget(0L, QuickChatPhraseCache.field_l, OptionsScreen.field_w);
           if (param3 < 108) {
             IntrusiveNode.releaseStatics(41);
           }
           IsaacRandom.field_b = new SceneWidget(0L, AccountRequestDialog.field_mb, ViewportController.field_u);
-          LoginDialog.field_pb = new SceneWidget(0L, AccountRequestDialog.field_mb, nk.field_c);
+          LoginDialog.field_pb = new SceneWidget(0L, AccountRequestDialog.field_mb, ChatPanelHelpers.field_c);
           LoginForm.field_P = new SceneWidget(0L, AccountRequestDialog.field_mb, MusicPatchPcmStream.field_q);
           PasswordValidator.field_o = new SceneWidget(0L, AccountRequestDialog.field_mb, MatchController.field_b);
-          SocketJs5Transport.field_t = new SceneWidget(0L, ni.field_s, StatsRequest.field_m);
-          ReflectionCheckRequest.field_k = new ScrollContainer(0L, new SceneWidget(0L, (SceneWidget) null), ff.field_g, ug.field_s);
-          lg.field_c = new SceneWidget(0L, PicturePreview.field_k, DualLinkNode.field_m.toUpperCase());
-          lg.field_c.field_rb = DialWidgetPainter.field_n;
+          SocketJs5Transport.field_t = new SceneWidget(0L, TextHotspot.field_s, StatsRequest.field_m);
+          ReflectionCheckRequest.field_k = new ScrollContainer(0L, new SceneWidget(0L, (SceneWidget) null), SpriteLoadHelpers.field_g, LaggedPacket.field_s);
+          LoginCookieHelpers.field_c = new SceneWidget(0L, PicturePreview.field_k, DualLinkNode.field_m.toUpperCase());
+          LoginCookieHelpers.field_c.field_rb = DialWidgetPainter.field_n;
           stackIn_8_0 = null;
           stackIn_8_1 = null;
           stackIn_8_2 = 0L;
@@ -147,75 +147,75 @@ class IntrusiveNode {
           DiskCacheWorker.field_a.addChild(SocketJs5Transport.field_t, (byte) 26);
           DiskCacheWorker.field_a.addChild(ReflectionCheckRequest.field_k, (byte) 26);
           if (DialWidgetPainter.field_n) {
-            MidiPcmStream.field_E.addChild(lg.field_c, (byte) 26);
+            MidiPcmStream.field_E.addChild(LoginCookieHelpers.field_c, (byte) 26);
           }
           MidiPcmStream.field_E.addChild(MusicPatchNode.field_p, (byte) 26);
           Cloud.field_h = new SceneWidget(0L, TextFieldValidator.field_h);
           Cloud.field_h.verticalAlignment = 0;
           Cloud.field_h.horizontalAlignment = 1;
-          DelegatingCanvas.field_h = new SceneWidget(0L, nk.field_f, ig.field_c.toUpperCase());
-          TickClock.field_e = new SceneWidget(0L, cm.field_o);
+          DelegatingCanvas.field_h = new SceneWidget(0L, ChatPanelHelpers.field_f, AudioPumpHelpers.field_c.toUpperCase());
+          TickClock.field_e = new SceneWidget(0L, VolumeControlledVoice.field_o);
           TickClock.field_e.addChild(Cloud.field_h, (byte) 26);
           TickClock.field_e.addChild(DelegatingCanvas.field_h, (byte) 26);
-          an.field_a = new SceneWidget(0L, ff.field_g);
-          an.field_a.applyStyle(-27813, TextFieldValidator.field_h);
-          var16 = an.field_a;
-          an.field_a.verticalAlignment = 1;
+          CaretLayoutHelpers.field_a = new SceneWidget(0L, SpriteLoadHelpers.field_g);
+          CaretLayoutHelpers.field_a.applyStyle(-27813, TextFieldValidator.field_h);
+          var16 = CaretLayoutHelpers.field_a;
+          CaretLayoutHelpers.field_a.verticalAlignment = 1;
           var16.horizontalAlignment = 1;
-          vd.field_a = new SceneWidget(0L, (SceneWidget) null);
+          ChatAppendHelpers.field_a = new SceneWidget(0L, (SceneWidget) null);
           MatchingTextValidator.field_q = new SceneWidget(0L, TextFieldValidator.field_h);
           MatchingTextValidator.field_q.horizontalAlignment = 1;
-          WeightedLruCache.field_h = new SceneWidget(0L, QuickChatPhraseCache.field_l, qn.field_m);
-          wa.field_g = new SceneWidget(0L, ni.field_s, rh.field_m);
-          Vector3.field_c = new ScrollContainer(0L, new SceneWidget(0L, (SceneWidget) null), ff.field_g, ug.field_s);
-          vd.field_a.addChild(MatchingTextValidator.field_q, (byte) 26);
-          vd.field_a.addChild(WeightedLruCache.field_h, (byte) 26);
+          WeightedLruCache.field_h = new SceneWidget(0L, QuickChatPhraseCache.field_l, PatchNoteUsage.field_m);
+          SpriteBuildHelpers.field_g = new SceneWidget(0L, TextHotspot.field_s, HighscoreSubmission.field_m);
+          Vector3.field_c = new ScrollContainer(0L, new SceneWidget(0L, (SceneWidget) null), SpriteLoadHelpers.field_g, LaggedPacket.field_s);
+          ChatAppendHelpers.field_a.addChild(MatchingTextValidator.field_q, (byte) 26);
+          ChatAppendHelpers.field_a.addChild(WeightedLruCache.field_h, (byte) 26);
           if (DialWidgetPainter.field_n) {
-            vd.field_a.addChild(wa.field_g, (byte) 26);
+            ChatAppendHelpers.field_a.addChild(SpriteBuildHelpers.field_g, (byte) 26);
           }
-          vd.field_a.addChild(Vector3.field_c, (byte) 26);
-          ValidatedTextWidget.field_kb = new SceneWidget(0L, LoginForm.field_R, ra.field_f.toUpperCase());
+          ChatAppendHelpers.field_a.addChild(Vector3.field_c, (byte) 26);
+          ValidatedTextWidget.field_kb = new SceneWidget(0L, LoginForm.field_R, NineSliceSpriteFactory.field_f.toUpperCase());
           VerticalScrollbar.field_Qb = new SceneWidget(0L, LoginMethod.field_f);
-          dc.field_a = new SceneWidget(0L, ff.field_a);
-          sm.field_m = new SceneWidget(0L, ff.field_j, SaveDataRequest.field_n.toUpperCase());
+          FullscreenExitHelpers.field_a = new SceneWidget(0L, SpriteLoadHelpers.field_a);
+          QueuedLobbyRequest.field_m = new SceneWidget(0L, SpriteLoadHelpers.field_j, SaveDataRequest.field_n.toUpperCase());
           AccountTermsPanel.field_L = new IconTextComponent[param12 + 4][];
-          dh.field_b = new SceneWidget[param12 + 4];
-          dh.field_b[0] = new SceneWidget(0L, RetroBlock.field_d, cd.field_f);
+          DisplayNameHelpers.field_b = new SceneWidget[param12 + 4];
+          DisplayNameHelpers.field_b[0] = new SceneWidget(0L, RetroBlock.field_d, LoginMethodGlobals.field_f);
           AccountTermsPanel.field_L[0] = new IconTextComponent[6];
           for (var17_int = 0; 5 > var17_int; var17_int++) {
-            AccountTermsPanel.field_L[0][var17_int + 1] = new IconTextComponent(0L, EmailValidator.field_o, (SceneWidget) null, dn.field_c, DraggableWidget.field_P[var17_int], AchievementsScreen.field_p[var17_int]);
+            AccountTermsPanel.field_L[0][var17_int + 1] = new IconTextComponent(0L, EmailValidator.field_o, (SceneWidget) null, DefaultQuickChatPhraseListener.field_c, DraggableWidget.field_P[var17_int], AchievementsScreen.field_p[var17_int]);
           }
           if (LinkButtonPainter.field_a.length >= 2) {
-            dh.field_b[1] = new SceneWidget(0L, RetroBlock.field_d, pk.field_e);
+            DisplayNameHelpers.field_b[1] = new SceneWidget(0L, RetroBlock.field_d, MeshDecodeHelpers.field_e);
             array$0 = new IconTextComponent[LinkButtonPainter.field_a.length + 1];
             AccountTermsPanel.field_L[1] = array$0;
-            AccountTermsPanel.field_L[1][0] = new IconTextComponent(0L, EmailValidator.field_o, (SceneWidget) null, dn.field_c, (Sprite) null, fg.field_a);
+            AccountTermsPanel.field_L[1][0] = new IconTextComponent(0L, EmailValidator.field_o, (SceneWidget) null, DefaultQuickChatPhraseListener.field_c, (Sprite) null, RematchCaptionGlobals.field_a);
             for (var17_intLifetime1 = 0; LinkButtonPainter.field_a.length > var17_intLifetime1; var17_intLifetime1++) {
-              AccountTermsPanel.field_L[1][var17_intLifetime1 + 1] = new IconTextComponent(0L, EmailValidator.field_o, (SceneWidget) null, dn.field_c, (Sprite) null, Integer.toString(LinkButtonPainter.field_a[var17_intLifetime1]));
+              AccountTermsPanel.field_L[1][var17_intLifetime1 + 1] = new IconTextComponent(0L, EmailValidator.field_o, (SceneWidget) null, DefaultQuickChatPhraseListener.field_c, (Sprite) null, Integer.toString(LinkButtonPainter.field_a[var17_intLifetime1]));
             }
           }
-          dh.field_b[2] = new SceneWidget(0L, RetroBlock.field_d, LobbyGame.field_Xb);
-          AccountTermsPanel.field_L[2] = new IconTextComponent[]{new IconTextComponent(0L, EmailValidator.field_o, (SceneWidget) null, dn.field_c, (Sprite) null, fg.field_a), new IconTextComponent(0L, EmailValidator.field_o, (SceneWidget) null, dn.field_c, PuzzlePieceQueue.field_d[0], ValidatedTextWidget.field_eb), new IconTextComponent(0L, EmailValidator.field_o, (SceneWidget) null, dn.field_c, PuzzlePieceQueue.field_d[1], ij.field_t)};
-          if (ff.field_i > 1) {
-            dh.field_b[3] = new SceneWidget(0L, RetroBlock.field_d, MatchController.field_c);
-            array$1 = new IconTextComponent[1 + ff.field_i];
+          DisplayNameHelpers.field_b[2] = new SceneWidget(0L, RetroBlock.field_d, LobbyGame.field_Xb);
+          AccountTermsPanel.field_L[2] = new IconTextComponent[]{new IconTextComponent(0L, EmailValidator.field_o, (SceneWidget) null, DefaultQuickChatPhraseListener.field_c, (Sprite) null, RematchCaptionGlobals.field_a), new IconTextComponent(0L, EmailValidator.field_o, (SceneWidget) null, DefaultQuickChatPhraseListener.field_c, PuzzlePieceQueue.field_d[0], ValidatedTextWidget.field_eb), new IconTextComponent(0L, EmailValidator.field_o, (SceneWidget) null, DefaultQuickChatPhraseListener.field_c, PuzzlePieceQueue.field_d[1], BlankScreen.field_t)};
+          if (SpriteLoadHelpers.field_i > 1) {
+            DisplayNameHelpers.field_b[3] = new SceneWidget(0L, RetroBlock.field_d, MatchController.field_c);
+            array$1 = new IconTextComponent[1 + SpriteLoadHelpers.field_i];
             AccountTermsPanel.field_L[3] = array$1;
-            AccountTermsPanel.field_L[3][0] = new IconTextComponent(0L, EmailValidator.field_o, (SceneWidget) null, dn.field_c, (Sprite) null, fg.field_a);
-            for (var17_intLifetime2 = 0; var17_intLifetime2 < ff.field_i; var17_intLifetime2++) {
-              AccountTermsPanel.field_L[3][var17_intLifetime2 + 1] = new IconTextComponent(0L, EmailValidator.field_o, (SceneWidget) null, dn.field_c, (Sprite) null, rm.field_b[var17_intLifetime2]);
+            AccountTermsPanel.field_L[3][0] = new IconTextComponent(0L, EmailValidator.field_o, (SceneWidget) null, DefaultQuickChatPhraseListener.field_c, (Sprite) null, RematchCaptionGlobals.field_a);
+            for (var17_intLifetime2 = 0; var17_intLifetime2 < SpriteLoadHelpers.field_i; var17_intLifetime2++) {
+              AccountTermsPanel.field_L[3][var17_intLifetime2 + 1] = new IconTextComponent(0L, EmailValidator.field_o, (SceneWidget) null, DefaultQuickChatPhraseListener.field_c, (Sprite) null, TutorialDrawHelpers.field_b[var17_intLifetime2]);
             }
           }
           for (var17_intLifetime3 = 0; param12 > var17_intLifetime3; var17_intLifetime3++) {
-            dh.field_b[4 + var17_intLifetime3] = new SceneWidget(0L, RetroBlock.field_d, jk.field_e[var17_intLifetime3]);
-            array$2 = new IconTextComponent[1 + cm.bitAnd(255, (int) PasswordValidator.field_s[var17_intLifetime3])];
+            DisplayNameHelpers.field_b[4 + var17_intLifetime3] = new SceneWidget(0L, RetroBlock.field_d, MeshColourEntry.field_e[var17_intLifetime3]);
+            array$2 = new IconTextComponent[1 + VolumeControlledVoice.bitAnd(255, (int) PasswordValidator.field_s[var17_intLifetime3])];
             AccountTermsPanel.field_L[4 + var17_intLifetime3] = array$2;
-            AccountTermsPanel.field_L[var17_intLifetime3 + 4][0] = new IconTextComponent(0L, EmailValidator.field_o, (SceneWidget) null, dn.field_c, (Sprite) null, fg.field_a);
+            AccountTermsPanel.field_L[var17_intLifetime3 + 4][0] = new IconTextComponent(0L, EmailValidator.field_o, (SceneWidget) null, DefaultQuickChatPhraseListener.field_c, (Sprite) null, RematchCaptionGlobals.field_a);
             for (var18 = 0; (PasswordValidator.field_s[var17_intLifetime3] & 255) > var18; var18++) {
-              if (null == dk.field_a) {
+              if (null == NineSliceFrameHelpers.field_a) {
                 var19_ref = null;
               } else {
-                if (dk.field_a[var17_intLifetime3] != null) {
-                  var19_ref = dk.field_a[var17_intLifetime3][var18];
+                if (NineSliceFrameHelpers.field_a[var17_intLifetime3] != null) {
+                  var19_ref = NineSliceFrameHelpers.field_a[var17_intLifetime3][var18];
                 } else {
                   var19_ref = null;
                 }
@@ -229,12 +229,12 @@ class IntrusiveNode {
                   var20 = null;
                 }
               }
-              AccountTermsPanel.field_L[4 + var17_intLifetime3][1 + var18] = new IconTextComponent(0L, EmailValidator.field_o, (SceneWidget) null, dn.field_c, (Sprite) (var19_ref), (String) (var20));
+              AccountTermsPanel.field_L[4 + var17_intLifetime3][1 + var18] = new IconTextComponent(0L, EmailValidator.field_o, (SceneWidget) null, DefaultQuickChatPhraseListener.field_c, (Sprite) (var19_ref), (String) (var20));
             }
           }
           for (var17_intLifetime4 = 0; 4 + param12 > var17_intLifetime4; var17_intLifetime4++) {
-            if (null != dh.field_b[var17_intLifetime4]) {
-              dh.field_b[var17_intLifetime4].field_mb = 11;
+            if (null != DisplayNameHelpers.field_b[var17_intLifetime4]) {
+              DisplayNameHelpers.field_b[var17_intLifetime4].field_mb = 11;
             }
             if (null != AccountTermsPanel.field_L[var17_intLifetime4]) {
               for (var18Lifetime1 = 0; AccountTermsPanel.field_L[var17_intLifetime4].length > var18Lifetime1; var18Lifetime1++) {
@@ -245,34 +245,34 @@ class IntrusiveNode {
               }
             }
           }
-          wm.field_d = new SceneWidget(0L, PicturePreview.field_k);
-          ep.field_a = new SceneWidget(0L, PicturePreview.field_k);
-          nk.field_e = new SceneWidget(0L, ArchiveIndex.field_l);
-          nk.field_e.applyStyle(-27813, TextFieldValidator.field_h);
-          nk.field_e.verticalAlignment = 1;
-          var17 = nk.field_e;
+          ReportReason.field_d = new SceneWidget(0L, PicturePreview.field_k);
+          PolygonClipHelpers.field_a = new SceneWidget(0L, PicturePreview.field_k);
+          ChatPanelHelpers.field_e = new SceneWidget(0L, ArchiveIndex.field_l);
+          ChatPanelHelpers.field_e.applyStyle(-27813, TextFieldValidator.field_h);
+          ChatPanelHelpers.field_e.verticalAlignment = 1;
+          var17 = ChatPanelHelpers.field_e;
           var17.horizontalAlignment = 1;
           Bzip2State.field_A = new SceneWidget(0L, (SceneWidget) null);
           Bzip2State.field_A.addChild(VerticalScrollbar.field_Qb, (byte) 26);
-          Bzip2State.field_A.addChild(dc.field_a, (byte) 26);
-          dc.field_a.addChild(sm.field_m, (byte) 26);
+          Bzip2State.field_A.addChild(FullscreenExitHelpers.field_a, (byte) 26);
+          FullscreenExitHelpers.field_a.addChild(QueuedLobbyRequest.field_m, (byte) 26);
           for (var18Lifetime2 = 0; param12 + 4 > var18Lifetime2; var18Lifetime2++) {
             if ((var18Lifetime2 != 1 ||
               !(LinkButtonPainter.field_a.length < 2)) && (3 != var18Lifetime2 ||
-              !(ff.field_i <= 1))) {
-              dc.field_a.addChild(dh.field_b[var18Lifetime2], (byte) 26);
+              !(SpriteLoadHelpers.field_i <= 1))) {
+              FullscreenExitHelpers.field_a.addChild(DisplayNameHelpers.field_b[var18Lifetime2], (byte) 26);
               for (var19 = 0; AccountTermsPanel.field_L[var18Lifetime2].length > var19; var19++) {
                 if (AccountTermsPanel.field_L[var18Lifetime2][var19] != null) {
-                  dc.field_a.addChild(AccountTermsPanel.field_L[var18Lifetime2][var19], (byte) 26);
+                  FullscreenExitHelpers.field_a.addChild(AccountTermsPanel.field_L[var18Lifetime2][var19], (byte) 26);
                 }
               }
             }
           }
-          Bzip2State.field_A.addChild(wm.field_d, (byte) 26);
-          Bzip2State.field_A.addChild(ep.field_a, (byte) 26);
-          Bzip2State.field_A.addChild(nk.field_e, (byte) 26);
-          ih.field_g = new SceneWidget(0L, ScorePopup.field_i, WhirlpoolHasher.field_k.toUpperCase());
-          ContentTransitionDialog.field_eb = new SceneWidget(0L, nk.field_f, NameAvailabilityValidator.field_o.toUpperCase());
+          Bzip2State.field_A.addChild(ReportReason.field_d, (byte) 26);
+          Bzip2State.field_A.addChild(PolygonClipHelpers.field_a, (byte) 26);
+          Bzip2State.field_A.addChild(ChatPanelHelpers.field_e, (byte) 26);
+          TutorialTickHelpers.field_g = new SceneWidget(0L, ScorePopup.field_i, WhirlpoolHasher.field_k.toUpperCase());
+          ContentTransitionDialog.field_eb = new SceneWidget(0L, ChatPanelHelpers.field_f, NameAvailabilityValidator.field_o.toUpperCase());
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

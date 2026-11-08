@@ -1,0 +1,55 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+import java.util.*;
+
+final class ChallengePuzzleHelpers {
+    static ScrollContainer field_d;
+    static int field_a;
+    static int[] field_b;
+    static MusicTrack[] field_c;
+
+    final static void drawQuickChatOverlay(byte param0) {
+        if (PatchEnvelopeSet.field_l) {
+          SoftwareRasterizer.darkenRectangle(SoftwareRasterizer.field_e, SoftwareRasterizer.field_f, -SoftwareRasterizer.field_e + SoftwareRasterizer.field_h, SoftwareRasterizer.field_a - SoftwareRasterizer.field_f);
+          DraggableWidget.field_I.drawFullScreen(false, 0);
+        }
+        if (param0 == 1) {
+          return;
+        }
+        field_b = (int[]) null;
+    }
+
+    final static Puzzle createChallengePuzzle(int param0, int param1) {
+        int var2 = 0;
+        if (param0 >= 10) {
+          if (10 > param0) {
+            param0 = 10;
+          }
+          if (param0 > 50) {
+            param0 = 50;
+          }
+          int var3 = 85 / ((0 - param1) / 35);
+          var2 = 0 == JavaRandomHelpers.randomBelow(CredentialKind.field_b, -111, 4) ? 1 : 0;
+          return AchievementMaskRequest.generatePuzzle(CredentialKind.field_b, 5, var2 != 0, param0, -52);
+        }
+        return PuzzleThumbnail.field_d[param0];
+    }
+
+    public static void releaseStatics(byte param0) {
+        if (param0 == 109) {
+          field_c = null;
+          field_d = null;
+          field_b = null;
+          return;
+        }
+        field_b = (int[]) null;
+        field_c = null;
+        field_d = null;
+        field_b = null;
+    }
+
+    static {
+        field_c = new MusicTrack[18];
+    }
+}

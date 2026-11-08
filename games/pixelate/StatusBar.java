@@ -8,7 +8,7 @@ abstract class StatusBar {
     private int field_g;
     private int field_e;
     static byte[] field_d;
-    static bd field_l;
+    static ConnectionState field_l;
     static String field_f;
     static BitmapFont field_j;
     static String field_i;
@@ -39,7 +39,7 @@ abstract class StatusBar {
     void tick(byte param0) {
         int var2;
         this.field_e = this.field_e + this.field_g;
-        var2 = hp.field_Gb.field_A << 16;
+        var2 = HelpPopup.field_Gb.field_A << 16;
         if (this.field_e > var2) {
           this.field_e = this.field_e - var2;
         }
@@ -83,7 +83,7 @@ abstract class StatusBar {
           var3 = param1.getParameter("username");
           if (var3 != null) {
             var4 = (CharSequence) ((Object) var3);
-            if (nh.encodeBase37Name(var4, -29667) != 0L) {
+            if (Base37NameHelpers.encodeBase37Name(var4, -29667) != 0L) {
               return;
             }
           }
@@ -118,44 +118,44 @@ abstract class StatusBar {
         if (param0 <= 9) {
           return;
         }
-        int var6 = ui.field_f.field_A + var5;
-        int var7 = var5 - (-param3 + ui.field_f.field_A);
-        SoftwareRasterizer.fillRectangle(var6, param2, param3 - 2 * ui.field_f.field_A, 25, 16711935);
+        int var6 = Cp1252DecodeHelpers.field_f.field_A + var5;
+        int var7 = var5 - (-param3 + Cp1252DecodeHelpers.field_f.field_A);
+        SoftwareRasterizer.fillRectangle(var6, param2, param3 - 2 * Cp1252DecodeHelpers.field_f.field_A, 25, 16711935);
         SoftwareRasterizer.saveClip(PicturePreview.field_r);
         SoftwareRasterizer.setClip(0, 0, 320, 480);
-        ui.field_f.drawTransparent(var5, param2);
+        Cp1252DecodeHelpers.field_f.drawTransparent(var5, param2);
         SoftwareRasterizer.setClip(320, 0, 640, 480);
-        ui.field_f.drawHorizontalFlip(var7, param2);
+        Cp1252DecodeHelpers.field_f.drawHorizontalFlip(var7, param2);
         SoftwareRasterizer.restoreClip(PicturePreview.field_r);
-        SoftwareRasterizer.drawHorizontalLine(var6, param2, -(2 * ui.field_f.field_A) + param3, 0);
-        SoftwareRasterizer.drawHorizontalLine(var6, 25 + param2 - 1, param3 - 2 * ui.field_f.field_A, 0);
+        SoftwareRasterizer.drawHorizontalLine(var6, param2, -(2 * Cp1252DecodeHelpers.field_f.field_A) + param3, 0);
+        SoftwareRasterizer.drawHorizontalLine(var6, 25 + param2 - 1, param3 - 2 * Cp1252DecodeHelpers.field_f.field_A, 0);
         int var8 = this.field_e >> 16;
-        mh.drawBarTexture(param2, gd.field_h[param1], var8 - hp.field_Gb.field_A, 0);
-        mh.drawBarTexture(param2, gd.field_h[param1], var8, 0);
+        QuickChatOpenHelpers.drawBarTexture(param2, MainScreenWidgetGlobals.field_h[param1], var8 - HelpPopup.field_Gb.field_A, 0);
+        QuickChatOpenHelpers.drawBarTexture(param2, MainScreenWidgetGlobals.field_h[param1], var8, 0);
         SoftwareRasterizer.saveClip(PicturePreview.field_r);
         SoftwareRasterizer.setClip(0, 0, 320, 480);
         NameAvailabilityValidator.field_q.drawAlpha(var5 + 2, param2, 128);
         SoftwareRasterizer.setClip(320, 0, 640, 480);
-        di.field_c.drawAlpha(-1 + param3 + (var5 - di.field_c.field_A), param2, 128);
+        NumberFormatHelpers.field_c.drawAlpha(-1 + param3 + (var5 - NumberFormatHelpers.field_c.field_A), param2, 128);
         SoftwareRasterizer.restoreClip(PicturePreview.field_r);
         if (var7 <= var6) {
           return;
         }
-        int var9 = -4 + (param3 - ui.field_f.field_A * 2);
+        int var9 = -4 + (param3 - Cp1252DecodeHelpers.field_f.field_A * 2);
         SoftwareRasterizer.drawHorizontalLineAlpha(2 + var6, param2 + 3, var9, 16777215, 128);
         SoftwareRasterizer.drawHorizontalLineAlpha(2 + var6, 25 + param2 - 2, var9, 16777215, 128);
         SoftwareRasterizer.drawHorizontalLineAlpha(var6 + 2, param2 + 2, var9, 0, 128);
         SoftwareRasterizer.drawHorizontalLineAlpha(2 + var6, param2 + 22, var9, 0, 128);
-        SpriteEffectHelpers.drawGlowLine(var6, 7 + param2, var7, param2 + 7, 4, 7, gd.field_b);
+        SpriteEffectHelpers.drawGlowLine(var6, 7 + param2, var7, param2 + 7, 4, 7, MainScreenWidgetGlobals.field_b);
         if (this.field_h <= 0) {
           return;
         }
-        int var10 = gd.field_c.length * this.field_h >> 8;
+        int var10 = MainScreenWidgetGlobals.field_c.length * this.field_h >> 8;
         var10 -= 2;
         if (var10 <= 0) {
           return;
         }
-        SpriteEffectHelpers.drawGlowLine(var6, 12 + param2, var7, param2 + 12, 12, var10, gd.field_c);
+        SpriteEffectHelpers.drawGlowLine(var6, 12 + param2, var7, param2 + 12, 12, var10, MainScreenWidgetGlobals.field_c);
     }
 
     abstract void draw(int param0);
@@ -174,7 +174,7 @@ abstract class StatusBar {
         field_b = "Try again";
         field_a = new int[12];
         field_f = "<%0> has entered a game.";
-        field_l = new bd();
+        field_l = new ConnectionState();
         field_i = "Enter the name you'd prefer. This is the name displayed to other players.";
         field_c = "You can join this game";
         field_k = 0;

@@ -39,11 +39,11 @@ final class AccountNamePrompt extends SceneWidget {
         if (this.completionState != 0) {
           return false;
         }
-        if (ke.field_a != 85) {
+        if (KeyEventGlobals.field_a != 85) {
           var2 = 17 / ((-8 - param0) / 50);
           if (this.field_Eb.length() >= 12) {
-            if (ke.field_a != 84) {
-              if (ke.field_a != 13) {
+            if (KeyEventGlobals.field_a != 84) {
+              if (KeyEventGlobals.field_a != 13) {
                 return true;
               }
               this.completionState = 1;
@@ -55,7 +55,7 @@ final class AccountNamePrompt extends SceneWidget {
               this.field_cb = this.field_Eb.toString();
               this.completionState = 2;
             }
-            if (ke.field_a == 13) {
+            if (KeyEventGlobals.field_a == 13) {
               this.completionState = 1;
             }
             return true;
@@ -70,7 +70,7 @@ final class AccountNamePrompt extends SceneWidget {
           }
           if (BoardParticle.isAsciiLetter(-66, (char) var3)) {
             discarded$8 = this.field_Eb.append((char) var3);
-            if (ke.field_a == 84) {
+            if (KeyEventGlobals.field_a == 84) {
               if (this.field_Eb.length() <= 0) {
                 this.completionState = 1;
               } else {
@@ -78,13 +78,13 @@ final class AccountNamePrompt extends SceneWidget {
                 this.completionState = 2;
               }
             }
-            if (ke.field_a == 13) {
+            if (KeyEventGlobals.field_a == 13) {
               this.completionState = 1;
             }
             return true;
           }
           if (!MidiPcmStream.isAsciiDigit(124, (char) var3)) {
-            if (ke.field_a == 84) {
+            if (KeyEventGlobals.field_a == 84) {
               if (this.field_Eb.length() <= 0) {
                 this.completionState = 1;
               } else {
@@ -92,14 +92,14 @@ final class AccountNamePrompt extends SceneWidget {
                 this.completionState = 2;
               }
             }
-            if (ke.field_a != 13) {
+            if (KeyEventGlobals.field_a != 13) {
               return true;
             }
             this.completionState = 1;
             return true;
           }
           discarded$7 = this.field_Eb.append((char) var3);
-          if (ke.field_a == 84) {
+          if (KeyEventGlobals.field_a == 84) {
             if (this.field_Eb.length() <= 0) {
               this.completionState = 1;
             } else {
@@ -107,7 +107,7 @@ final class AccountNamePrompt extends SceneWidget {
               this.completionState = 2;
             }
           }
-          if (ke.field_a == 13) {
+          if (KeyEventGlobals.field_a == 13) {
             this.completionState = 1;
           }
           return true;
@@ -115,7 +115,7 @@ final class AccountNamePrompt extends SceneWidget {
         if (this.field_Eb.length() <= 0) {
           var2Lifetime1 = 17 / ((-8 - param0) / 50);
           if (this.field_Eb.length() >= 12) {
-            if (ke.field_a == 84) {
+            if (KeyEventGlobals.field_a == 84) {
               if (this.field_Eb.length() <= 0) {
                 this.completionState = 1;
               } else {
@@ -123,7 +123,7 @@ final class AccountNamePrompt extends SceneWidget {
                 this.completionState = 2;
               }
             }
-            if (ke.field_a != 13) {
+            if (KeyEventGlobals.field_a != 13) {
               return true;
             }
             this.completionState = 1;
@@ -139,7 +139,7 @@ final class AccountNamePrompt extends SceneWidget {
           }
           if (BoardParticle.isAsciiLetter(-66, (char) var3Lifetime1)) {
             discarded$5 = this.field_Eb.append((char) var3Lifetime1);
-            if (ke.field_a == 84) {
+            if (KeyEventGlobals.field_a == 84) {
               if (this.field_Eb.length() <= 0) {
                 this.completionState = 1;
               } else {
@@ -147,13 +147,13 @@ final class AccountNamePrompt extends SceneWidget {
                 this.completionState = 2;
               }
             }
-            if (ke.field_a == 13) {
+            if (KeyEventGlobals.field_a == 13) {
               this.completionState = 1;
             }
             return true;
           }
           if (!MidiPcmStream.isAsciiDigit(124, (char) var3Lifetime1)) {
-            if (ke.field_a == 84) {
+            if (KeyEventGlobals.field_a == 84) {
               if (this.field_Eb.length() <= 0) {
                 this.completionState = 1;
               } else {
@@ -161,13 +161,13 @@ final class AccountNamePrompt extends SceneWidget {
                 this.completionState = 2;
               }
             }
-            if (ke.field_a == 13) {
+            if (KeyEventGlobals.field_a == 13) {
               this.completionState = 1;
             }
             return true;
           }
           discarded$4 = this.field_Eb.append((char) var3Lifetime1);
-          if (ke.field_a == 84) {
+          if (KeyEventGlobals.field_a == 84) {
             if (this.field_Eb.length() <= 0) {
               this.completionState = 1;
             } else {
@@ -175,15 +175,15 @@ final class AccountNamePrompt extends SceneWidget {
               this.completionState = 2;
             }
           }
-          if (ke.field_a == 13) {
+          if (KeyEventGlobals.field_a == 13) {
             this.completionState = 1;
           }
           return true;
         }
-        nk.padWithChar(this.field_Eb, this.field_Eb.length() - 1, ' ', 16736352);
+        ChatPanelHelpers.padWithChar(this.field_Eb, this.field_Eb.length() - 1, ' ', 16736352);
         var2Lifetime2 = 17 / ((-8 - param0) / 50);
         if (this.field_Eb.length() >= 12) {
-          if (ke.field_a == 84) {
+          if (KeyEventGlobals.field_a == 84) {
             if (this.field_Eb.length() <= 0) {
               this.completionState = 1;
             } else {
@@ -191,7 +191,7 @@ final class AccountNamePrompt extends SceneWidget {
               this.completionState = 2;
             }
           }
-          if (ke.field_a != 13) {
+          if (KeyEventGlobals.field_a != 13) {
             return true;
           }
           this.completionState = 1;
@@ -207,7 +207,7 @@ final class AccountNamePrompt extends SceneWidget {
         }
         if (BoardParticle.isAsciiLetter(-66, (char) var3Lifetime2)) {
           discarded$1 = this.field_Eb.append((char) var3Lifetime2);
-          if (ke.field_a == 84) {
+          if (KeyEventGlobals.field_a == 84) {
             if (this.field_Eb.length() <= 0) {
               this.completionState = 1;
             } else {
@@ -215,14 +215,14 @@ final class AccountNamePrompt extends SceneWidget {
               this.completionState = 2;
             }
           }
-          if (ke.field_a != 13) {
+          if (KeyEventGlobals.field_a != 13) {
             return true;
           }
           this.completionState = 1;
           return true;
         }
         if (!MidiPcmStream.isAsciiDigit(124, (char) var3Lifetime2)) {
-          if (ke.field_a == 84) {
+          if (KeyEventGlobals.field_a == 84) {
             if (this.field_Eb.length() <= 0) {
               this.completionState = 1;
             } else {
@@ -230,13 +230,13 @@ final class AccountNamePrompt extends SceneWidget {
               this.completionState = 2;
             }
           }
-          if (ke.field_a == 13) {
+          if (KeyEventGlobals.field_a == 13) {
             this.completionState = 1;
           }
           return true;
         }
         discarded$2 = this.field_Eb.append((char) var3Lifetime2);
-        if (ke.field_a == 84) {
+        if (KeyEventGlobals.field_a == 84) {
           if (this.field_Eb.length() <= 0) {
             this.completionState = 1;
           } else {
@@ -244,7 +244,7 @@ final class AccountNamePrompt extends SceneWidget {
             this.completionState = 2;
           }
         }
-        if (ke.field_a != 13) {
+        if (KeyEventGlobals.field_a != 13) {
           return true;
         }
         this.completionState = 1;
@@ -351,11 +351,11 @@ final class AccountNamePrompt extends SceneWidget {
             this.completionState = 1;
             return this.completionState;
           }
-          if (ke.field_a == 85 &&
+          if (KeyEventGlobals.field_a == 85 &&
             this.field_Eb.length() > 0) {
-            nk.padWithChar(this.field_Eb, -1 + this.field_Eb.length(), ' ', 16736352);
+            ChatPanelHelpers.padWithChar(this.field_Eb, -1 + this.field_Eb.length(), ' ', 16736352);
           }
-          if (aq.canAppendNameChar(DualLinkDeque.field_f, (CharSequence) ((Object) this.field_Eb), (byte) -117)) {
+          if (SkinSelectionHelpers.canAppendNameChar(DualLinkDeque.field_f, (CharSequence) ((Object) this.field_Eb), (byte) -117)) {
             discarded$0 = this.field_Eb.append(DualLinkDeque.field_f);
           } else {
             if (this.field_Eb.length() == 0 &&
@@ -372,8 +372,8 @@ final class AccountNamePrompt extends SceneWidget {
               }
             }
           }
-          if (84 != ke.field_a) {
-            if (13 == ke.field_a) {
+          if (84 != KeyEventGlobals.field_a) {
+            if (13 == KeyEventGlobals.field_a) {
               return 1;
             }
             continue;
@@ -415,11 +415,11 @@ final class AccountNamePrompt extends SceneWidget {
           this.field_Lb.field_qb = "|";
           this.field_Eb = new StringBuilder(12);
           var9_int = this.field_Fb.getContentWidth(0);
-          this.field_Fb.setBounds(3, fq.field_q, 5, 256, var9_int);
-          this.field_Lb.setBounds(3 + fq.field_q, fq.field_q, 5, 256, var9_int);
+          this.field_Fb.setBounds(3, RankingSummaryScreen.field_q, 5, 256, var9_int);
+          this.field_Lb.setBounds(3 + RankingSummaryScreen.field_q, RankingSummaryScreen.field_q, 5, 256, var9_int);
           var10 = var9_int + 10;
-          var11 = 6 + 2 * fq.field_q;
-          var12 = ui.fitHorizontalPosition(param2, param0, var10, (byte) -1);
+          var11 = 6 + 2 * RankingSummaryScreen.field_q;
+          var12 = Cp1252DecodeHelpers.fitHorizontalPosition(param2, param0, var10, (byte) -1);
           var13 = ScorePopup.fitVerticalPosition(var11, param1, param3, (byte) 67);
           this.setBounds(var13, var11, var12, 256, var10);
           return;
@@ -456,22 +456,22 @@ final class AccountNamePrompt extends SceneWidget {
     }
 
     final static void initializeOptionLabels(int param0) {
-        cd.field_e = new String[d.field_b];
-        cd.field_e[17] = IntKeyLookup.field_i;
-        cd.field_e[20] = NodeHashTableIterator.field_c;
-        cd.field_e[21] = nk.field_g;
-        cd.field_e[5] = wf.field_a;
-        cd.field_e[18] = ScrollContainer.field_Eb;
-        cd.field_e[15] = dq.field_d;
-        cd.field_e[7] = TextWidgetPainter.field_m;
-        cd.field_e[19] = nk.field_h;
-        cd.field_e[4] = UiContainer.field_G;
+        LoginMethodGlobals.field_e = new String[LobbyStartupHelpers.field_b];
+        LoginMethodGlobals.field_e[17] = IntKeyLookup.field_i;
+        LoginMethodGlobals.field_e[20] = NodeHashTableIterator.field_c;
+        LoginMethodGlobals.field_e[21] = ChatPanelHelpers.field_g;
+        LoginMethodGlobals.field_e[5] = MachineIdHelpers.field_a;
+        LoginMethodGlobals.field_e[18] = ScrollContainer.field_Eb;
+        LoginMethodGlobals.field_e[15] = TransitionPhase.field_d;
+        LoginMethodGlobals.field_e[7] = TextWidgetPainter.field_m;
+        LoginMethodGlobals.field_e[19] = ChatPanelHelpers.field_h;
+        LoginMethodGlobals.field_e[4] = UiContainer.field_G;
         if (param0 == 1565) {
-          cd.field_e[11] = DualLinkDeque.field_d;
-          cd.field_e[13] = CachedTextLayout.field_n;
-          cd.field_e[9] = ke.field_c;
-          cd.field_e[6] = Vector3.field_j;
-          cd.field_e[16] = StatefulTextPainter.field_u;
+          LoginMethodGlobals.field_e[11] = DualLinkDeque.field_d;
+          LoginMethodGlobals.field_e[13] = CachedTextLayout.field_n;
+          LoginMethodGlobals.field_e[9] = KeyEventGlobals.field_c;
+          LoginMethodGlobals.field_e[6] = Vector3.field_j;
+          LoginMethodGlobals.field_e[16] = StatefulTextPainter.field_u;
           return;
         }
     }

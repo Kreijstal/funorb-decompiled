@@ -169,7 +169,7 @@ abstract class SingleChildContainer extends UiComponent implements UiContainerMa
               if (!param2) {
                 stackIn_24_0 = SecondaryNodeDequeIterator.field_c[var12];
               } else {
-                stackIn_24_0 = ep.field_c[var12];
+                stackIn_24_0 = PolygonClipHelpers.field_c[var12];
               }
               var13 = stackIn_24_0;
               if (var7_int >= var13) {
@@ -325,22 +325,22 @@ abstract class SingleChildContainer extends UiComponent implements UiContainerMa
           if (param2 == -2) {
             QuickChatMenu.drawFloatingSquares(true, -116);
           } else {
-            wo.getScreen(107, param2).drawScreenBackground(0);
+            SocialPanel.getScreen(107, param2).drawScreenBackground(0);
             if (Match.field_u) {
               var3 = 81 % ((-12 - param1) / 42);
               decompiledFrameRemainder0 = false;
             }
             else {
-              wo.getScreen(-73, param2).draw(11);
+              SocialPanel.getScreen(-73, param2).draw(11);
             }
           }
         } else {
-          if (ro.field_e == null) {
+          if (NameSuggestionHelpers.field_e == null) {
             if (null != MatchingTextValidator.field_r) {
               MatchingTextValidator.field_r.render(param0, 0);
             }
           } else {
-            ro.field_e.render(param0, 0);
+            NameSuggestionHelpers.field_e.render(param0, 0);
           }
         }
         if (decompiledFrameRemainder0) {

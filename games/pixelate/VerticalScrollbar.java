@@ -279,23 +279,23 @@ final class VerticalScrollbar extends SceneWidget {
     final static void resendQueuedRequests(int param0, int param1) {
         int var3 = 0;
         StatsRequest var4 = null;
-        sm var5 = null;
+        QueuedLobbyRequest var5 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         var3 = Pixelate.field_H ? 1 : 0;
         try {
-          var4 = (StatsRequest) (he.field_b.first(param0 + 1504642273));
+          var4 = (StatsRequest) (CanvasInputHelpers.field_b.first(param0 + 1504642273));
           while (var4 != null) {
             Pixelate.sendStatsRequest(param1, (byte) 109, var4);
-            var4 = (StatsRequest) (he.field_b.next(1504642273));
+            var4 = (StatsRequest) (CanvasInputHelpers.field_b.next(1504642273));
           }
           if (param0 != 0) {
             field_Hb = (IntrusiveDeque) null;
           }
-          var5 = (sm) (MusicPatchNode.field_J.first(param0 ^ 1504642273));
+          var5 = (QueuedLobbyRequest) (MusicPatchNode.field_J.first(param0 ^ 1504642273));
           while (var5 != null) {
-            he.sendQueuedRequest((byte) -53, param1, var5);
-            var5 = (sm) (MusicPatchNode.field_J.next(1504642273));
+            CanvasInputHelpers.sendQueuedRequest((byte) -53, param1, var5);
+            var5 = (QueuedLobbyRequest) (MusicPatchNode.field_J.next(1504642273));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

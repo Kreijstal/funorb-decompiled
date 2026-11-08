@@ -22,7 +22,7 @@ final class JaggrabDownloader implements Runnable {
     private PlatformTask field_d;
 
     final static void setMenuTextColours(byte param0, int param1, int param2, int param3) {
-        ce.field_b = param1;
+        ChatChannelGlobals.field_b = param1;
         if (param0 > -112) {
           field_f = (String) null;
           IndexedSpriteState.field_l = param2;

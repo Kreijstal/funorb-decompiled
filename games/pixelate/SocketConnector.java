@@ -28,26 +28,26 @@ abstract class SocketConnector {
         var14 = Pixelate.field_H ? 1 : 0;
         try {
           var6_int = 8 + (param5 + param1 + 8) + 487;
-          KiteTailSegment.field_k.setBounds(3, ui.field_i.height - 6, param0, 256, -6 + var6_int);
+          KiteTailSegment.field_k.setBounds(3, Cp1252DecodeHelpers.field_i.height - 6, param0, 256, -6 + var6_int);
           var7 = KiteTailSegment.field_k.height - 5;
           StripedProgressBar.field_U.setBounds(var7 - param2, param2, 5, 256, 487 + param1 + param5);
-          nf.field_d.setBounds(0, param2, param1, 256, -rh.field_y.field_K - param1 + StripedProgressBar.field_U.field_K);
+          LoginFormGlobals.field_d.setBounds(0, param2, param1, 256, -HighscoreSubmission.field_y.field_K - param1 + StripedProgressBar.field_U.field_K);
           var7 = var7 - (2 + param2);
-          rh.field_y.setBounds(0, param2, param1 + nf.field_d.field_K, 256, rh.field_y.field_K);
-          l.field_p.setBoundsAndLayout(5, 2, (byte) 118, 487 + (param1 + param5), 5, -5 + var7, param5);
-          if (null != td.field_b) {
-            td.field_b.setBounds(l.field_p.field_K, (byte) 100, l.field_p.field_S, l.field_p.field_D, l.field_p.height);
+          HighscoreSubmission.field_y.setBounds(0, param2, param1 + LoginFormGlobals.field_d.field_K, 256, HighscoreSubmission.field_y.field_K);
+          MessageScreen.field_p.setBoundsAndLayout(5, 2, (byte) 118, 487 + (param1 + param5), 5, -5 + var7, param5);
+          if (null != PuzzleModePictureHelpers.field_b) {
+            PuzzleModePictureHelpers.field_b.setBounds(MessageScreen.field_p.field_K, (byte) 100, MessageScreen.field_p.field_S, MessageScreen.field_p.field_D, MessageScreen.field_p.height);
           }
-          var8 = -var6_int + (ui.field_i.field_K - param1);
+          var8 = -var6_int + (Cp1252DecodeHelpers.field_i.field_K - param1);
           var9 = var8 / 2;
           var10 = var9 - (-param4 - param1);
           var11 = 0;
           for (var12 = 0; var12 < 6; var12++) {
             if (var12 >= 5 ||
               null != ResourceArchive.field_f[var12]) {
-              var13 = (ui.field_i.height - 4) * var11 / (TextButton.field_F + 1) + 3;
+              var13 = (Cp1252DecodeHelpers.field_i.height - 4) * var11 / (TextButton.field_F + 1) + 3;
               var11++;
-              var7Lifetime1 = -var13 + (-2 + (3 + var11 * (2 + (ui.field_i.height - 6)) / (1 + TextButton.field_F)));
+              var7Lifetime1 = -var13 + (-2 + (3 + var11 * (2 + (Cp1252DecodeHelpers.field_i.height - 6)) / (1 + TextButton.field_F)));
               if (5 <= var12) {
                 GradientOutlineTextPainter.field_u.setBounds(var13, var7Lifetime1, var6_int, 256, var8);
               } else {
@@ -96,7 +96,7 @@ abstract class SocketConnector {
           if (param2 != 47) {
             field_g = (String[]) null;
           }
-          stackIn_3_0 = ff.loadSprites(param3, var4_int, var5, param2 - 50);
+          stackIn_3_0 = SpriteLoadHelpers.loadSprites(param3, var4_int, var5, param2 - 50);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -8,7 +8,7 @@ final class ModalStack extends SingleChildContainer {
     static String field_J;
     static int field_I;
     private IntrusiveDeque field_N;
-    static wm field_M;
+    static ReportReason field_M;
     static String field_P;
 
     final void updatePanels(byte param0) {
@@ -150,7 +150,7 @@ final class ModalStack extends SingleChildContainer {
     static {
         field_K = true;
         field_O = 640;
-        field_M = new wm(12, 0, 1, 0);
+        field_M = new ReportReason(12, 0, 1, 0);
         field_P = "Next Puzzle";
     }
 }

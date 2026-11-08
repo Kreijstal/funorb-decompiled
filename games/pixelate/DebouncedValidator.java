@@ -50,16 +50,16 @@ abstract class DebouncedValidator implements ValidationSource {
     }
 
     final static void initializeFrontEnd(ResourceArchive param0, int param1, ResourceArchive param2, ResourceArchive param3, boolean param4) {
-        an.field_e = MatchController.execute((byte) 122, "");
-        an.field_e.complete(param1 - 27848, false);
+        CaretLayoutHelpers.field_e = MatchController.execute((byte) 122, "");
+        CaretLayoutHelpers.field_e.complete(param1 - 27848, false);
         MatchHud.loadCommonUiResources(param1 + 4740151, param3, param2, param0);
         GreenGrowTheRushesBackground.createAccountUiLayer(false);
         if (param1 != 27848) {
           return;
         }
         try {
-          MatchingTextValidator.field_n = wm.field_a;
-          MarkerSlider.field_X = wm.field_a;
+          MatchingTextValidator.field_n = ReportReason.field_a;
+          MarkerSlider.field_X = ReportReason.field_a;
         } catch (RuntimeException runtimeException) {
           throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "hn.U(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
@@ -84,15 +84,15 @@ abstract class DebouncedValidator implements ValidationSource {
             if (param2 >= 100 &&
               param2 <= 105) {
               var7 = param1;
-              ro.setNameSuggestions(var7, 2);
+              NameSuggestionHelpers.setNameSuggestions(var7, 2);
               SpriteCheckboxPainter.field_f = HowToPlayScreen.createSuggestionsResult((byte) -65, param1);
             } else {
-              SpriteCheckboxPainter.field_f = pa.createRequestResult(param2, param3, (byte) -97);
+              SpriteCheckboxPainter.field_f = RequestResultFactory.createRequestResult(param2, param3, (byte) -97);
             }
           } else {
-            stackIn_5_0 = !(um.field_r >= 13);
-            SpriteCheckboxPainter.field_f = pk.createDobResult(stackIn_5_0, 5731);
-            ro.setNameSuggestions((String[]) null, param0 ^ -99);
+            stackIn_5_0 = !(SavedDataRequest.field_r >= 13);
+            SpriteCheckboxPainter.field_f = MeshDecodeHelpers.createDobResult(stackIn_5_0, 5731);
+            NameSuggestionHelpers.setNameSuggestions((String[]) null, param0 ^ -99);
           }
           if (param0 != -97) {
             var6 = (String) null;
@@ -205,7 +205,7 @@ abstract class DebouncedValidator implements ValidationSource {
         int var17 = 0;
         var13 = Pixelate.field_H ? 1 : 0;
         try {
-          ni.field_q = SoftwareRasterizer.field_j;
+          TextHotspot.field_q = SoftwareRasterizer.field_j;
           Matrix3.field_b = SoftwareRasterizer.field_d;
           if (param0 != 32) {
             var14 = (SocialListEntry) null;
@@ -216,11 +216,11 @@ abstract class DebouncedValidator implements ValidationSource {
           } else {
             stackIn_6_0 = RisingBubble.field_g;
           }
-          cm.layoutSidePanels(stackIn_6_0, 4740);
-          nd.field_b.layoutSocialPanel(ff.field_h.field_K, -42 + ff.field_h.height, 0, 0, param0 ^ 37);
-          MatchingTextValidator.field_q.setBounds(0, fq.field_q, 0, 256, vd.field_a.field_K);
+          VolumeControlledVoice.layoutSidePanels(stackIn_6_0, 4740);
+          HowToPlayDemoHelpers.field_b.layoutSocialPanel(SpriteLoadHelpers.field_h.field_K, -42 + SpriteLoadHelpers.field_h.height, 0, 0, param0 ^ 37);
+          MatchingTextValidator.field_q.setBounds(0, RankingSummaryScreen.field_q, 0, 256, ChatAppendHelpers.field_a.field_K);
           stackIn_8_0 = WeightedLruCache.field_h;
-          stackIn_8_1 = 2 + fq.field_q;
+          stackIn_8_1 = 2 + RankingSummaryScreen.field_q;
           stackIn_8_2 = 18;
           stackIn_8_3 = 0;
           stackIn_8_4 = 256;
@@ -229,37 +229,37 @@ abstract class DebouncedValidator implements ValidationSource {
           } else {
             stackIn_9_5 = 0;
           }
-          ((SceneWidget) (Object) stackIn_8_0).setBounds(stackIn_8_1, stackIn_8_2, stackIn_8_3, stackIn_8_4, -stackIn_9_5 + vd.field_a.field_K);
-          wa.field_g.setBounds(2 + fq.field_q, 18, -40 + vd.field_a.field_K - (DelegatingCanvas.field_b + 2), 256, 42 + DelegatingCanvas.field_b);
-          Vector3.field_c.setBoundsAndLayout(0, 2, (byte) 90, vd.field_a.field_K, fq.field_q + 22, -22 + (-fq.field_q + vd.field_a.height), DelegatingCanvas.field_b);
-          ValidatedTextWidget.field_kb.setBounds(ff.field_h.height - 40, 40, 0, 256, ff.field_h.field_K);
+          ((SceneWidget) (Object) stackIn_8_0).setBounds(stackIn_8_1, stackIn_8_2, stackIn_8_3, stackIn_8_4, -stackIn_9_5 + ChatAppendHelpers.field_a.field_K);
+          SpriteBuildHelpers.field_g.setBounds(2 + RankingSummaryScreen.field_q, 18, -40 + ChatAppendHelpers.field_a.field_K - (DelegatingCanvas.field_b + 2), 256, 42 + DelegatingCanvas.field_b);
+          Vector3.field_c.setBoundsAndLayout(0, 2, (byte) 90, ChatAppendHelpers.field_a.field_K, RankingSummaryScreen.field_q + 22, -22 + (-RankingSummaryScreen.field_q + ChatAppendHelpers.field_a.height), DelegatingCanvas.field_b);
+          ValidatedTextWidget.field_kb.setBounds(SpriteLoadHelpers.field_h.height - 40, 40, 0, 256, SpriteLoadHelpers.field_h.field_K);
           VerticalScrollbar.field_Qb.setBounds(0, 30, 0, 256, Bzip2State.field_A.field_K);
-          dc.field_a.setBounds(30, -40 + (Bzip2State.field_A.height - 2 - 30), 0, 256, Bzip2State.field_A.field_K);
-          var2_int = 3 + fj.field_b;
+          FullscreenExitHelpers.field_a.setBounds(30, -40 + (Bzip2State.field_A.height - 2 - 30), 0, 256, Bzip2State.field_A.field_K);
+          var2_int = 3 + MouseInputGlobals.field_b;
           if (LinkButtonPainter.field_a.length < 2) {
             var2_int--;
           }
           if (param1) {
             var2_int--;
           }
-          var3 = -2 + (-10 + (dc.field_a.height - 10 + 2) + (1 + var2_int) / 2) / (1 + var2_int);
+          var3 = -2 + (-10 + (FullscreenExitHelpers.field_a.height - 10 + 2) + (1 + var2_int) / 2) / (1 + var2_int);
           if (var3 > 30) {
             var3 = 30;
           }
-          var4 = -5 + dc.field_a.height - 5 - var2_int * (var3 + 2);
+          var4 = -5 + FullscreenExitHelpers.field_a.height - 5 - var2_int * (var3 + 2);
           if (40 < var4) {
             var4 = 40;
           }
-          sm.field_m.setBounds(5, var4, 5, param0 ^ 288, dc.field_a.field_K - 5 - 5);
+          QueuedLobbyRequest.field_m.setBounds(5, var4, 5, param0 ^ 288, FullscreenExitHelpers.field_a.field_K - 5 - 5);
           var5 = 2 + var4 + 5;
-          for (var6 = 0; fj.field_b + 4 > var6; var6++) {
+          for (var6 = 0; MouseInputGlobals.field_b + 4 > var6; var6++) {
             if ((1 != var6 ||
               !(2 > LinkButtonPainter.field_a.length)) && (var6 != 3 ||
-              !(1 >= ff.field_i))) {
+              !(1 >= SpriteLoadHelpers.field_i))) {
               if (!param1 &&
                 3 == var6) {
-                var15 = dh.field_b[var6];
-                dh.field_b[var6].height = 0;
+                var15 = DisplayNameHelpers.field_b[var6];
+                DisplayNameHelpers.field_b[var6].height = 0;
                 var15.field_K = 0;
                 for (var8 = 0; AccountTermsPanel.field_L[var6].length > var8; var8++) {
                   stackIn_32_0 = null;
@@ -272,8 +272,8 @@ abstract class DebouncedValidator implements ValidationSource {
                 }
               } else if (param1 &&
                 var6 == 0) {
-                var16 = dh.field_b[var6];
-                dh.field_b[var6].height = 0;
+                var16 = DisplayNameHelpers.field_b[var6];
+                DisplayNameHelpers.field_b[var6].height = 0;
                 var16.field_K = 0;
                 for (var8 = 0; AccountTermsPanel.field_L[var6].length > var8; var8++) {
                   if (null != AccountTermsPanel.field_L[var6][var8]) {
@@ -285,8 +285,8 @@ abstract class DebouncedValidator implements ValidationSource {
               } else {
                 if (param1) {
                   if (4 <= var6) {
-                    if (ni.field_o != null) {
-                      stackIn_50_0 = (ni.field_o[var6 - 4]) ? 1 : 0;
+                    if (TextHotspot.field_o != null) {
+                      stackIn_50_0 = (TextHotspot.field_o[var6 - 4]) ? 1 : 0;
                     } else {
                       stackIn_50_0 = 0;
                     }
@@ -298,8 +298,8 @@ abstract class DebouncedValidator implements ValidationSource {
                 }
                 var7 = stackIn_50_0;
                 if (var7 != 0) {
-                  var8_ref_ak = dh.field_b[var6];
-                  dh.field_b[var6].height = 0;
+                  var8_ref_ak = DisplayNameHelpers.field_b[var6];
+                  DisplayNameHelpers.field_b[var6].height = 0;
                   var8_ref_ak.field_K = 0;
                   var17 = 0;
                   var9_int = var17;
@@ -312,7 +312,7 @@ abstract class DebouncedValidator implements ValidationSource {
                     var17++;
                   }
                 } else {
-                  dh.field_b[var6].setBounds(var5, var3, 5, 256, 103);
+                  DisplayNameHelpers.field_b[var6].setBounds(var5, var3, 5, 256, 103);
                   var8 = 110;
                   if (!param1) {
                     if (AccountTermsPanel.field_L[var6][0] != null) {
@@ -335,13 +335,13 @@ abstract class DebouncedValidator implements ValidationSource {
               }
             }
           }
-          ra.field_e.setBounds(10, -10 + (-10 + (-4 + (-120 + SoftwareRasterizer.field_d))), SoftwareRasterizer.field_j - 360 >> 1, 256, 360);
-          ih.field_g.setBounds(0, 24, 0, 256, ra.field_e.field_K);
-          DisplayNameRequestGlobals.field_a.setBounds(24, -24 + ra.field_e.height, 0, 256, ra.field_e.field_K);
+          NineSliceSpriteFactory.field_e.setBounds(10, -10 + (-10 + (-4 + (-120 + SoftwareRasterizer.field_d))), SoftwareRasterizer.field_j - 360 >> 1, 256, 360);
+          TutorialTickHelpers.field_g.setBounds(0, 24, 0, 256, NineSliceSpriteFactory.field_e.field_K);
+          DisplayNameRequestGlobals.field_a.setBounds(24, -24 + NineSliceSpriteFactory.field_e.height, 0, 256, NineSliceSpriteFactory.field_e.field_K);
           DisplayNameRequestGlobals.field_a.field_zb = OptionsScreen.buildNineSliceSprites(8421504, param0 ^ 48, 11579568, DisplayNameRequestGlobals.field_a.height, 1, 3);
           StripedProgressBar.field_O.setBounds(5, -2 + DisplayNameRequestGlobals.field_a.height - 10 - 24, 5, param0 + 224, DisplayNameRequestGlobals.field_a.field_K - 10);
           ContentTransitionDialog.field_eb.setBounds(-24 + DisplayNameRequestGlobals.field_a.height - 5, 24, (-80 + DisplayNameRequestGlobals.field_a.field_K) / 2, 256, 80);
-          mi.layoutLobbyPanels(false);
+          NotLoggedInScreen.layoutLobbyPanels(false);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -363,14 +363,14 @@ abstract class DebouncedValidator implements ValidationSource {
         if (this.isInputEmpty(-22265)) {
           return HighscoresScreen.field_o;
         }
-        if (!((350L + this.field_c) <= hm.monotonicMillis(64))) {
+        if (!((350L + this.field_c) <= ClockHelpers.monotonicMillis(64))) {
           return BufferedRandomAccessFile.field_b;
         }
         return this.evaluateState(true);
     }
 
     public final void markEdited(int param0) {
-        this.field_c = hm.monotonicMillis(64);
+        this.field_c = ClockHelpers.monotonicMillis(64);
         if (param0 != 2048) {
           field_d = 74;
         }
@@ -380,7 +380,7 @@ abstract class DebouncedValidator implements ValidationSource {
         if (this.isInputEmpty(-22265)) {
           return null;
         }
-        if (hm.monotonicMillis(64) < (350L + this.field_c)) {
+        if (ClockHelpers.monotonicMillis(64) < (350L + this.field_c)) {
           return null;
         }
         if (param0 != -7) {
@@ -397,25 +397,25 @@ abstract class DebouncedValidator implements ValidationSource {
           return true;
         }
         int var3 = DraggableWidget.field_S != null ? 1 : 0;
-        if (9 == ke.field_a &&
-          SpriteState.canOpenQuickChatResponses(MusicCrossfadeStream.field_F, PuzzleThumbnail.field_h, um.field_o, hm.field_b, 500)) {
-          if (hm.field_b != 2 &&
+        if (9 == KeyEventGlobals.field_a &&
+          SpriteState.canOpenQuickChatResponses(MusicCrossfadeStream.field_F, PuzzleThumbnail.field_h, SavedDataRequest.field_o, ClockHelpers.field_b, 500)) {
+          if (ClockHelpers.field_b != 2 &&
             var3 != 0) {
             return false;
           }
-          return UiTheme.openQuickChatForRecipient(um.field_o, MusicCrossfadeStream.field_F, hm.field_b, param2 ^ -2, PuzzleThumbnail.field_h);
+          return UiTheme.openQuickChatForRecipient(SavedDataRequest.field_o, MusicCrossfadeStream.field_F, ClockHelpers.field_b, param2 ^ -2, PuzzleThumbnail.field_h);
         }
-        if (ke.field_a == 10) {
+        if (KeyEventGlobals.field_a == 10) {
           if (var3 != 0) {
             return false;
           }
           SceneWidget.openLobbyQuickChat(true);
           return true;
         }
-        if (11 == ke.field_a &&
+        if (11 == KeyEventGlobals.field_a &&
           CheckboxPainter.field_r) {
           if (2 == BoardView.field_a &&
-            !LabeledField.isPlayerReachable(true, ej.field_a, FloatingSquare.field_g)) {
+            !LabeledField.isPlayerReachable(true, ReportReasonGlobals.field_a, FloatingSquare.field_g)) {
             return false;
           }
           if (BoardView.field_a != 2 &&
@@ -426,7 +426,7 @@ abstract class DebouncedValidator implements ValidationSource {
             return true;
           }
           String var4 = (String) null;
-          dg.sendQuickChatMessage(true, BoardView.field_a, ih.field_f, (String) null, FloatingSquare.field_g, param1);
+          QuickChatSendHelpers.sendQuickChatMessage(true, BoardView.field_a, TutorialTickHelpers.field_f, (String) null, FloatingSquare.field_g, param1);
           return true;
         }
         return false;

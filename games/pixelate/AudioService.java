@@ -4,7 +4,7 @@
 import java.io.*;
 
 final class AudioService implements Runnable {
-    static sb field_e;
+    static NineSliceFrame field_e;
     static String field_i;
     static int field_c;
     static int field_d;
@@ -223,8 +223,8 @@ final class AudioService implements Runnable {
     }
 
     final static java.applet.Applet getApplet(int param0) {
-        if (bd.field_b != null) {
-          return bd.field_b;
+        if (ConnectionState.field_b != null) {
+          return ConnectionState.field_b;
         }
         if (param0 != 13867) {
           return (java.applet.Applet) null;
@@ -233,14 +233,14 @@ final class AudioService implements Runnable {
     }
 
     final static void finishAccountUiStep(int param0) {
-        if (null != wa.field_c) {
-          wa.field_c.removeDismissedPanels((byte) -22);
+        if (null != SpriteBuildHelpers.field_c) {
+          SpriteBuildHelpers.field_c.removeDismissedPanels((byte) -22);
         }
-        if (null != cn.field_b) {
-          cn.field_b.markFinished(30);
+        if (null != AccountServerRequestHelpers.field_b) {
+          AccountServerRequestHelpers.field_b.markFinished(30);
         }
         int var1 = -72 % ((param0 - 48) / 43);
-        hm.resetNoticeState((byte) -95);
+        ClockHelpers.resetNoticeState((byte) -95);
     }
 
     public static void releaseStatics(boolean param0) {

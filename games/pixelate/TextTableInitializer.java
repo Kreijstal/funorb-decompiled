@@ -22,49 +22,49 @@ final class TextTableInitializer {
           }
           PacketBuffer.field_o = new String[35];
           PacketBuffer.field_o[3] = CacheReference.field_u;
-          PacketBuffer.field_o[7] = ge.field_b;
-          PacketBuffer.field_o[9] = ih.field_e;
-          PacketBuffer.field_o[6] = wk.field_f;
+          PacketBuffer.field_o[7] = RequestState.field_b;
+          PacketBuffer.field_o[9] = TutorialTickHelpers.field_e;
+          PacketBuffer.field_o[6] = EmailLoginCredentials.field_f;
           PacketBuffer.field_o[0] = Cloud.field_s;
           PacketBuffer.field_o[28] = TabbedPanel.field_Nb;
           PacketBuffer.field_o[1] = CheckboxPainter.field_c;
           PacketBuffer.field_o[11] = FallingPieceView.field_d;
-          PacketBuffer.field_o[29] = ge.field_a;
+          PacketBuffer.field_o[29] = RequestState.field_a;
           if (param0 != -29810) {
             TextTableInitializer.drawFrontEndOverlays(false, -69);
           }
           PacketBuffer.field_o[8] = null;
-          PacketBuffer.field_o[5] = cm.field_l;
-          PacketBuffer.field_o[2] = sk.field_b;
-          PacketBuffer.field_o[13] = ra.field_f;
+          PacketBuffer.field_o[5] = VolumeControlledVoice.field_l;
+          PacketBuffer.field_o[2] = LobbyFrameHelpers.field_b;
+          PacketBuffer.field_o[13] = NineSliceSpriteFactory.field_f;
           PacketBuffer.field_o[4] = MatchHud.field_l;
-          PacketBuffer.field_o[19] = cl.field_c;
-          PacketBuffer.field_o[17] = dg.field_c[0];
+          PacketBuffer.field_o[19] = Cp1252EncodingHelpers.field_c;
+          PacketBuffer.field_o[17] = QuickChatSendHelpers.field_c[0];
           PacketBuffer.field_o[15] = LoadingStepTracker.field_k[1];
           PacketBuffer.field_o[24] = ScoreMarkerDemo.field_i;
           PacketBuffer.field_o[22] = SecondaryNodeDeque.field_d;
           PacketBuffer.field_o[20] = HowToPlayScreen.field_p;
-          PacketBuffer.field_o[26] = qh.field_f;
+          PacketBuffer.field_o[26] = MusicPlaybackHelpers.field_f;
           PacketBuffer.field_o[16] = LoadingStepTracker.field_k[2];
-          PacketBuffer.field_o[23] = td.field_a;
+          PacketBuffer.field_o[23] = PuzzleModePictureHelpers.field_a;
           PacketBuffer.field_o[27] = IterableNodeHashTable.field_d;
           PacketBuffer.field_o[21] = ScoreMarkerDemo.field_e;
           PacketBuffer.field_o[25] = PasswordFieldPainter.field_z;
-          PacketBuffer.field_o[18] = dg.field_c[1];
+          PacketBuffer.field_o[18] = QuickChatSendHelpers.field_c[1];
           PacketBuffer.field_o[14] = LoadingStepTracker.field_k[0];
           BlastFromThePastBackground.field_m[3] = GzipDecoder.field_b;
           BlastFromThePastBackground.field_m[6] = ReportAbuseDialog.field_Vb;
-          BlastFromThePastBackground.field_m[2] = bo.field_a;
-          BlastFromThePastBackground.field_m[4] = ce.field_e;
-          BlastFromThePastBackground.field_m[1] = ro.field_f;
-          BlastFromThePastBackground.field_m[7] = qf.field_d;
-          dn.field_a = new String[][]{hm.field_f, MatchingTextValidator.field_t, um.field_l, PauseMenuScreen.field_p, ui.field_h, qg.field_d};
-          SoundVoice.field_m = new String[][]{PuzzleThumbnail.field_a, ScrollContainer.field_Hb, qh.field_d, wk.field_i, GameApplet.field_k, NumericDateInputWidget.field_R, GameModeSelectScreen.field_q, vd.field_d};
+          BlastFromThePastBackground.field_m[2] = ScreenDisplayMode.field_a;
+          BlastFromThePastBackground.field_m[4] = ChatChannelGlobals.field_e;
+          BlastFromThePastBackground.field_m[1] = NameSuggestionHelpers.field_f;
+          BlastFromThePastBackground.field_m[7] = KeyMapHelpers.field_d;
+          DefaultQuickChatPhraseListener.field_a = new String[][]{ClockHelpers.field_f, MatchingTextValidator.field_t, SavedDataRequest.field_l, PauseMenuScreen.field_p, Cp1252DecodeHelpers.field_h, GameRequestHelpers.field_d};
+          SoundVoice.field_m = new String[][]{PuzzleThumbnail.field_a, ScrollContainer.field_Hb, MusicPlaybackHelpers.field_d, EmailLoginCredentials.field_i, GameApplet.field_k, NumericDateInputWidget.field_R, GameModeSelectScreen.field_q, ChatAppendHelpers.field_d};
           BlastFromThePastBackground.field_m[0] = DraggableWidget.field_L;
-          BlastFromThePastBackground.field_m[5] = wa.field_e;
+          BlastFromThePastBackground.field_m[5] = SpriteBuildHelpers.field_e;
           for (var1_int = 0; var1_int < BlastFromThePastBackground.field_m.length; var1_int++) {
             if (null == BlastFromThePastBackground.field_m[var1_int]) {
-              BlastFromThePastBackground.field_m[var1_int] = bl.field_f;
+              BlastFromThePastBackground.field_m[var1_int] = MouseWheelSetupHelpers.field_f;
             }
           }
           return;
@@ -80,7 +80,7 @@ final class TextTableInitializer {
         if (param1 != 12402) {
           return;
         }
-        cl.drawOverlayLayers((byte) 95, param0);
+        Cp1252EncodingHelpers.drawOverlayLayers((byte) 95, param0);
     }
 
     public static void releaseStatics(int param0) {

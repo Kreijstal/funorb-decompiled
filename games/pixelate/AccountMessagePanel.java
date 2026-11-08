@@ -163,15 +163,15 @@ final class AccountMessagePanel extends UiContainer implements ButtonListener {
 
     final static boolean handleQuickChatKey(int param0, int param1, int param2) {
         boolean stackIn_9_0 = false;
-        if (ke.field_a == 13) {
+        if (KeyEventGlobals.field_a == 13) {
           SoundCache.closeQuickChatIfOpen(true);
           return true;
         }
-        if (param0 == ke.field_a) {
-          bo.field_h.resetSelection(17872);
+        if (param0 == KeyEventGlobals.field_a) {
+          ScreenDisplayMode.field_h.resetSelection(17872);
           return true;
         }
-        stackIn_9_0 = (null != bo.field_h) && (bo.field_h.processShortcutKey(param2, 0, param1));
+        stackIn_9_0 = (null != ScreenDisplayMode.field_h) && (ScreenDisplayMode.field_h.processShortcutKey(param2, 0, param1));
         return stackIn_9_0;
     }
 

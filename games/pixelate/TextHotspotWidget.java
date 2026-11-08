@@ -9,7 +9,7 @@ class TextHotspotWidget extends TextButton {
     static byte[][] field_S;
     static int[] field_T;
     private IntrusiveDeque hotspotRegions;
-    private ni hoveredHotspot;
+    private TextHotspot hoveredHotspot;
 
     void drawLayer(int param0, int param1, int param2, byte param3) {
         int var8 = 0;
@@ -20,7 +20,7 @@ class TextHotspotWidget extends TextButton {
         }
         int var5 = -12 % ((70 - param3) / 49);
         WidgetTextLayout var6 = (WidgetTextLayout) ((Object) this.field_y);
-        ni var7 = this.hoveredHotspot;
+        TextHotspot var7 = this.hoveredHotspot;
         if (var7 == null) {
         } else {
           var8 = var6.textOriginY((byte) 69, (UiComponent) (this), param2);
@@ -33,7 +33,7 @@ class TextHotspotWidget extends TextButton {
     }
 
     final void rebuildHotspots(int param0) {
-        ni discarded$0 = null;
+        TextHotspot discarded$0 = null;
         int var11 = 0;
         int stackIn_10_0 = 0;
         int stackIn_15_0 = 0;
@@ -49,7 +49,7 @@ class TextHotspotWidget extends TextButton {
         TextLayoutLine var12;
         int var13;
         int var14;
-        ni var15;
+        TextHotspot var15;
         int var16;
         int var7Lifetime1;
         var16 = Pixelate.field_H ? 1 : 0;
@@ -90,9 +90,9 @@ class TextHotspotWidget extends TextButton {
               stackIn_15_0 = var4.getCharacterX(true, var2);
             }
             var14 = stackIn_15_0;
-            var15 = new ni(var7Lifetime1, var13, var12.field_b, -var13 + var14, Math.max(var3.getLineHeight(param0 ^ -1832), -var12.field_b + var12.field_d));
+            var15 = new TextHotspot(var7Lifetime1, var13, var12.field_b, -var13 + var14, Math.max(var3.getLineHeight(param0 ^ -1832), -var12.field_b + var12.field_d));
             if (var10 != null) {
-              ((ni) (var10)).field_l = var15;
+              ((TextHotspot) (var10)).field_l = var15;
             }
             this.hotspotRegions.addLast(22125, var15);
             var10 = var15;
@@ -102,7 +102,7 @@ class TextHotspotWidget extends TextButton {
 
     final void setHotspotTooltip(String param0, int param1, int param2) {
         int var5 = 0;
-        ni discarded$1 = null;
+        TextHotspot discarded$1 = null;
         String[] var4 = null;
         int var6 = 0;
         String[] var7 = null;
@@ -189,10 +189,10 @@ class TextHotspotWidget extends TextButton {
         if (param0 != -94) {
           return;
         }
-        if (null != fj.field_c) {
-          var1 = fj.field_c;
+        if (null != MouseInputGlobals.field_c) {
+          var1 = MouseInputGlobals.field_c;
           synchronized (var1) {
-            fj.field_c = null;
+            MouseInputGlobals.field_c = null;
           }
         }
     }
@@ -223,7 +223,7 @@ class TextHotspotWidget extends TextButton {
         super.activate(param0, param1, param2, param3);
         int var5 = -this.field_z + param3;
         int var6 = -this.field_p + param1;
-        ni var7 = this.hotspotAt(var5, -22562, var6);
+        TextHotspot var7 = this.hotspotAt(var5, -22562, var6);
         if (var7 != null &&
           this.field_n != null) {
           ((TextHotspotListener) ((Object) this.field_n)).onHotspotAction(var7.field_n, param2, -8894, this);
@@ -286,7 +286,7 @@ class TextHotspotWidget extends TextButton {
           return null;
         }
         if (param0 <= 16) {
-          this.hoveredHotspot = (ni) null;
+          this.hoveredHotspot = (TextHotspot) null;
         }
         if (this.hoveredHotspot.field_n >= this.hotspotTooltips.length) {
           return null;
@@ -294,15 +294,15 @@ class TextHotspotWidget extends TextButton {
         return this.hotspotTooltips[this.hoveredHotspot.field_n];
     }
 
-    private final ni hotspotAt(int param0, int param1, int param2) {
-        ni var4;
-        ni var5;
+    private final TextHotspot hotspotAt(int param0, int param1, int param2) {
+        TextHotspot var4;
+        TextHotspot var5;
         int var6;
         var6 = Pixelate.field_H ? 1 : 0;
         if (param1 != -22562) {
           field_R = 126;
         }
-        var4 = (ni) (this.hotspotRegions.first(1504642273));
+        var4 = (TextHotspot) (this.hotspotRegions.first(1504642273));
         while (var4 != null) {
           var5 = var4;
           while (var5 != null) {
@@ -314,7 +314,7 @@ class TextHotspotWidget extends TextButton {
             }
             var5 = var5.field_l;
           }
-          var4 = (ni) (this.hotspotRegions.next(1504642273));
+          var4 = (TextHotspot) (this.hotspotRegions.next(1504642273));
         }
         return null;
     }

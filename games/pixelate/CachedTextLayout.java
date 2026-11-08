@@ -106,7 +106,7 @@ final class CachedTextLayout extends TextLayout {
                           continue;
                         }
                         if (var11 == 0 &&
-                          fj.field_b != param7) {
+                          MouseInputGlobals.field_b != param7) {
                           break scanLoop3;
                         }
                         var8_int = 0;
@@ -121,7 +121,7 @@ final class CachedTextLayout extends TextLayout {
                           stackIn_4_0 = -1;
                           stackIn_4_1 = var13_intLifetime1;
                           if (stackIn_4_0 == stackIn_4_1) {
-                            ib.field_b = true;
+                            GridSize.field_b = true;
                           } else {
                             if (param7 > var13_intLifetime1) {
                               RankingQuery.field_t[var13_intLifetime1] = true;
@@ -323,13 +323,13 @@ final class CachedTextLayout extends TextLayout {
     }
 
     final static void drawLobbyRoot(boolean param0, byte param1) {
-        ui.field_i.drawFullScreen(param0, 0);
+        Cp1252DecodeHelpers.field_i.drawFullScreen(param0, 0);
         if (param1 != 34) {
           field_n = (String) null;
         }
-        BirthDateEntryPanel var2 = td.field_b;
+        BirthDateEntryPanel var2 = PuzzleModePictureHelpers.field_b;
         if (var2 != null) {
-          var2.drawLayers(ui.field_i.screenY, ui.field_i.field_tb, 104);
+          var2.drawLayers(Cp1252DecodeHelpers.field_i.screenY, Cp1252DecodeHelpers.field_i.field_tb, 104);
         }
     }
 
@@ -452,7 +452,7 @@ final class CachedTextLayout extends TextLayout {
               } else {
                 stackIn_40_1 = this.justificationStep(var13, param0, param3.textWidth(var13), 60);
               }
-              an.populateCaretPositions(stackIn_39_0, stackIn_40_1, (byte) -92, var14, var13);
+              CaretLayoutHelpers.populateCaretPositions(stackIn_39_0, stackIn_40_1, (byte) -92, var14, var13);
             }
             var11 = var11 + param7;
             this.lines[var12Lifetime1] = var14;
@@ -501,7 +501,7 @@ final class CachedTextLayout extends TextLayout {
           var7 = param3.textWidth(param0);
           var8.field_g[0] = param4 - (var7 >> 1);
           var8.field_g[param0.length()] = param4 + (var7 >> 1);
-          an.populateCaretPositions(param3, 0, (byte) -92, var8, param0);
+          CaretLayoutHelpers.populateCaretPositions(param3, 0, (byte) -92, var8, param0);
         } catch (RuntimeException runtimeException) {
           throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "no.Q(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
@@ -573,77 +573,77 @@ final class CachedTextLayout extends TextLayout {
         var18 = null;
         var19 = Pixelate.field_H ? 1 : 0;
         try {
-          cm.layoutSidePanels(Checkbox.field_W, 4740);
+          VolumeControlledVoice.layoutSidePanels(Checkbox.field_W, 4740);
           if (param1 != 1) {
             return;
           }
           if (LoginMethod.field_c != null) {
             boolean decompiledFrameRemainder3 = true;
             ValidatedTextWidget.field_kb.field_rb = true;
-            wm.field_d.height = 0;
-            var22 = wm.field_d;
+            ReportReason.field_d.height = 0;
+            var22 = ReportReason.field_d;
             var27 = var22;
             var27.field_K = 0;
-            var6 = ep.field_a;
-            ep.field_a.height = 0;
+            var6 = PolygonClipHelpers.field_a;
+            PolygonClipHelpers.field_a.height = 0;
             var6.field_K = 0;
-            var7 = nk.field_e;
-            nk.field_e.height = 0;
+            var7 = ChatPanelHelpers.field_e;
+            ChatPanelHelpers.field_e.height = 0;
             var7.field_K = 0;
             if (!AccountRegistrationPanel.isLocalPlayerGameHost(param1 + 98)) {
               var9_ref_String = LoginMethod.field_c.field_pc;
               VerticalScrollbar.field_Qb.field_cb = AlphaContainer.formatTemplate(HowToPlayScreen.field_q, param1 ^ 62, new String[]{var9_ref_String}).toUpperCase();
-              nk.field_e.setBounds(Bzip2State.field_A.height - 40, 40, 0, param1 + 255, Bzip2State.field_A.field_K);
-              nk.field_e.field_cb = AlphaContainer.formatTemplate(qh.field_a, param1 + 23, new String[]{var9_ref_String});
-              var8 = nk.field_e;
+              ChatPanelHelpers.field_e.setBounds(Bzip2State.field_A.height - 40, 40, 0, param1 + 255, Bzip2State.field_A.field_K);
+              ChatPanelHelpers.field_e.field_cb = AlphaContainer.formatTemplate(MusicPlaybackHelpers.field_a, param1 + 23, new String[]{var9_ref_String});
+              var8 = ChatPanelHelpers.field_e;
               decompiledFrameRemainder3 = (var19 != 0);
             }
             if (decompiledFrameRemainder3) {
               VerticalScrollbar.field_Qb.field_cb = DelegatingCanvas.field_g.toUpperCase();
               var9 = (Bzip2State.field_A.field_K + 2) / 2;
-              wm.field_d.setBounds(Bzip2State.field_A.height - 40, 40, 0, 256, var9 - 2);
+              ReportReason.field_d.setBounds(Bzip2State.field_A.height - 40, 40, 0, 256, var9 - 2);
               if (LoginMethod.field_c.field_ec <= LoginMethod.field_c.field_mc) {
-                wm.field_d.field_cb = Kite.field_m.toUpperCase();
-                wm.field_d.field_rb = false;
+                ReportReason.field_d.field_cb = Kite.field_m.toUpperCase();
+                ReportReason.field_d.field_rb = false;
                 if (var19 != 0) {
-                  wm.field_d.field_cb = WhirlpoolHasher.field_k.toUpperCase();
-                  wm.field_d.field_rb = true;
+                  ReportReason.field_d.field_cb = WhirlpoolHasher.field_k.toUpperCase();
+                  ReportReason.field_d.field_rb = true;
                 }
               } else {
-                wm.field_d.field_cb = WhirlpoolHasher.field_k.toUpperCase();
-                wm.field_d.field_rb = true;
+                ReportReason.field_d.field_cb = WhirlpoolHasher.field_k.toUpperCase();
+                ReportReason.field_d.field_rb = true;
               }
-              wm.field_d.field_zb = PicturePreview.field_k.field_zb;
+              ReportReason.field_d.field_zb = PicturePreview.field_k.field_zb;
               if (ResizableModalPanel.field_X > 0) {
                 boolean decompiledSharedTail1 = (ResizableModalPanel.field_X != 1);
                 if (!decompiledSharedTail1) {
-                  var10_ref_String = sm.field_k;
+                  var10_ref_String = QueuedLobbyRequest.field_k;
                   decompiledSharedTail1 = (var19 != 0);
                 }
                 if (decompiledSharedTail1) {
-                  var10_ref_String = AlphaContainer.formatTemplate(d.field_a, 99, new String[]{Integer.toString(ResizableModalPanel.field_X)});
+                  var10_ref_String = AlphaContainer.formatTemplate(LobbyStartupHelpers.field_a, 99, new String[]{Integer.toString(ResizableModalPanel.field_X)});
                 }
-                wm.field_d.field_cb = wm.field_d.field_cb + "<br>" + var10_ref_String;
+                ReportReason.field_d.field_cb = ReportReason.field_d.field_cb + "<br>" + var10_ref_String;
                 if (0 == (16 & AchievementsScreen.field_o) &&
                   !EmergentBehaviourBackground.field_o) {
-                  wm.field_d.field_zb = PicturePreview.field_k.field_ab;
+                  ReportReason.field_d.field_zb = PicturePreview.field_k.field_ab;
                 }
               }
-              ep.field_a.setBounds(-40 + Bzip2State.field_A.height, 40, var9, 256, -var9 + Bzip2State.field_A.field_K);
-              ep.field_a.field_cb = DateInputWidget.field_J.toUpperCase();
-              var8 = ep.field_a;
-              stackIn_21_0 = ep.field_a;
-              stackIn_22_1 = (param0) && (bo.field_e == 0L);
+              PolygonClipHelpers.field_a.setBounds(-40 + Bzip2State.field_A.height, 40, var9, 256, -var9 + Bzip2State.field_A.field_K);
+              PolygonClipHelpers.field_a.field_cb = DateInputWidget.field_J.toUpperCase();
+              var8 = PolygonClipHelpers.field_a;
+              stackIn_21_0 = PolygonClipHelpers.field_a;
+              stackIn_22_1 = (param0) && (ScreenDisplayMode.field_e == 0L);
               stackIn_21_0.field_rb = stackIn_22_1;
               var10 = 2;
               if (Checkbox.field_Z != null) {
                 if (TimerBarDemo.field_o == null) {
-                  TimerBarDemo.field_o = new byte[fj.field_b];
-                  RankingQuery.field_t = new boolean[fj.field_b];
+                  TimerBarDemo.field_o = new byte[MouseInputGlobals.field_b];
+                  RankingQuery.field_t = new boolean[MouseInputGlobals.field_b];
                 }
                 var11_int = 0;
                 do {
-                  if (!(fj.field_b > var11_int)) {
+                  if (!(MouseInputGlobals.field_b > var11_int)) {
                     var10 = 0;
                     break;
                   }
@@ -719,7 +719,7 @@ final class CachedTextLayout extends TextLayout {
                       continue;
                     }
                   }
-                  stackIn_66_0 = ~wo.field_h;
+                  stackIn_66_0 = ~SocialPanel.field_h;
                   break;
                 }
                 if (stackIn_66_0 <= -3 &&
@@ -733,8 +733,8 @@ final class CachedTextLayout extends TextLayout {
               if ((2 <= var10) &&
                 (decompiledFrameRemainder3 = (null != Cloud.field_r ||
                 StatefulTextPainter.field_z != null ||
-                null != pa.field_a ||
-                oo.field_e != null))) {
+                null != RequestResultFactory.field_a ||
+                AchievementIconGlobals.field_e != null))) {
                 var11_int = 0;
                 var12 = 0;
                 var13_int = 0;
@@ -742,7 +742,7 @@ final class CachedTextLayout extends TextLayout {
                 var15 = 0;
                 var16 = 0;
                 boolean decompiledNaturalLoopExit0 = false;
-                while (!(decompiledNaturalLoopExit0 = (!(var16 < fj.field_b)))) {
+                while (!(decompiledNaturalLoopExit0 = (!(var16 < MouseInputGlobals.field_b)))) {
                   var17_int = LoginMethod.field_c.field_Eb[var16] & 255;
                   if (var19 == 0) {
                     if (Cloud.field_r != null &&
@@ -757,24 +757,24 @@ final class CachedTextLayout extends TextLayout {
                         var13_int = var18_int;
                       }
                       if (var18_int != 0 &&
-                        !fe.field_a) {
+                        !PendingFlagGlobals.field_a) {
                         var11_int = 1;
                       }
                     }
-                    if (null != pa.field_a &&
-                      null != pa.field_a[var16]) {
-                      var18_intLifetime1 = pa.field_a[var16][var17_int];
+                    if (null != RequestResultFactory.field_a &&
+                      null != RequestResultFactory.field_a[var16]) {
+                      var18_intLifetime1 = RequestResultFactory.field_a[var16][var17_int];
                       if (var14_int < var18_intLifetime1) {
                         var14_int = var18_intLifetime1;
                       }
                       if (var18_intLifetime1 != 0 &&
-                        !fe.field_a) {
+                        !PendingFlagGlobals.field_a) {
                         var11_int = 1;
                       }
                     }
-                    if (oo.field_e != null &&
-                      null != oo.field_e[var16]) {
-                      var15 = var15 | oo.field_e[var16][var17_int];
+                    if (AchievementIconGlobals.field_e != null &&
+                      null != AchievementIconGlobals.field_e[var16]) {
+                      var15 = var15 | AchievementIconGlobals.field_e[var16][var17_int];
                     }
                     var16++;
                     continue;
@@ -834,19 +834,19 @@ final class CachedTextLayout extends TextLayout {
                   stackIn_129_0 = -3;
                   break;
                 }
-                if (stackIn_129_0 >= ~wo.field_h &&
+                if (stackIn_129_0 >= ~SocialPanel.field_h &&
                   EmailValidator.field_m[12]) {
                   var16 = 0;
                 }
                 if ((var16 == 0) &&
                   (decompiledFrameRemainder3 = (var19 != 0))) {
-                  ep.field_a.field_rb = false;
-                  decompiledFrameRemainder3 = !(!ep.field_a.field_R);
+                  PolygonClipHelpers.field_a.field_rb = false;
+                  decompiledFrameRemainder3 = !(!PolygonClipHelpers.field_a.field_R);
                   if (decompiledFrameRemainder3) {
                     var11 = null;
                     var12 = 0;
                     var13_intLifetime2 = 0;
-                    decompiledFrameRemainder2 = !(var13_intLifetime2 >= fj.field_b);
+                    decompiledFrameRemainder2 = !(var13_intLifetime2 >= MouseInputGlobals.field_b);
                     if (decompiledFrameRemainder2) {
                       stackOut_138_0 = RankingQuery.field_t[var13_intLifetime2];
                       stackIn_162_0 = stackOut_138_0 ? 1 : 0;
@@ -858,9 +858,9 @@ final class CachedTextLayout extends TextLayout {
                 if ((decompiledFrameRemainder3) &&
                   (decompiledFrameRemainder2) &&
                   (decompiledFrameRemainder1)) {
-                  ep.field_a.field_rb = false;
-                  if (ep.field_a.field_R) {
-                    boolean decompiledSharedTail0 = (0 != nd.field_b.field_g.selectedTab);
+                  PolygonClipHelpers.field_a.field_rb = false;
+                  if (PolygonClipHelpers.field_a.field_R) {
+                    boolean decompiledSharedTail0 = (0 != HowToPlayDemoHelpers.field_b.field_g.selectedTab);
                     if (!decompiledSharedTail0) {
                       PuzzleThumbnail.field_o = CipherPacketBuffer.field_u;
                       decompiledSharedTail0 = (var19 != 0);
@@ -875,13 +875,13 @@ final class CachedTextLayout extends TextLayout {
               if ((decompiledFrameRemainder3) &&
                 (decompiledFrameRemainder2) &&
                 (decompiledFrameRemainder1)) {
-                ep.field_a.field_rb = false;
-                decompiledFrameRemainder3 = !(!ep.field_a.field_R);
+                PolygonClipHelpers.field_a.field_rb = false;
+                decompiledFrameRemainder3 = !(!PolygonClipHelpers.field_a.field_R);
                 if (decompiledFrameRemainder3) {
                   var11 = null;
                   var12 = 0;
                   var13_intLifetime1 = 0;
-                  while (!(var13_intLifetime1 >= fj.field_b)) {
+                  while (!(var13_intLifetime1 >= MouseInputGlobals.field_b)) {
                     stackOut_154_0 = RankingQuery.field_t[var13_intLifetime1];
                     stackIn_162_0 = stackOut_154_0 ? 1 : 0;
                     stackIn_155_0 = stackOut_154_0;
@@ -890,7 +890,7 @@ final class CachedTextLayout extends TextLayout {
                       break;
                     }
                     if (stackIn_155_0) {
-                      var25 = "<col=A00000>" + jk.field_e[var13_intLifetime1] + "</col>";
+                      var25 = "<col=A00000>" + MeshColourEntry.field_e[var13_intLifetime1] + "</col>";
                       if (var11 != null) {
                         var11 = (String) (var11) + ", " + var25;
                         var12 = 1;
@@ -909,9 +909,9 @@ final class CachedTextLayout extends TextLayout {
               }
               if (decompiledFrameRemainder3) {
                 if (stackIn_162_0 == var10) {
-                  var13_ref = ji.field_a;
+                  var13_ref = FriendCaptionGlobals.field_a;
                   if (var12 == 0) {
-                    var14 = AlphaContainer.formatTemplate(sm.field_n, 80, new String[]{(String) (var11)});
+                    var14 = AlphaContainer.formatTemplate(QueuedLobbyRequest.field_n, 80, new String[]{(String) (var11)});
                     if (var19 != 0) {
                       var14 = SpriteState.field_x + (String) (var11);
                     }
@@ -919,21 +919,21 @@ final class CachedTextLayout extends TextLayout {
                     var14 = SpriteState.field_x + (String) (var11);
                   }
                 } else {
-                  var13_ref = aq.field_c;
+                  var13_ref = SkinSelectionHelpers.field_c;
                   if (var12 == 0) {
-                    var14 = AlphaContainer.formatTemplate(ff.field_b, 31, new String[]{(String) (var11)});
+                    var14 = AlphaContainer.formatTemplate(SpriteLoadHelpers.field_b, 31, new String[]{(String) (var11)});
                     if (var19 != 0) {
-                      var14 = fg.field_b + (String) (var11);
+                      var14 = RematchCaptionGlobals.field_b + (String) (var11);
                     }
                   } else {
-                    var14 = fg.field_b + (String) (var11);
+                    var14 = RematchCaptionGlobals.field_b + (String) (var11);
                   }
                 }
                 PuzzleThumbnail.field_o = "<col=A00000>" + var13_ref + "<br>" + var14;
               }
             }
-            if (0L != bo.field_e) {
-              var9 = (int)(-hm.monotonicMillis(64) + bo.field_e);
+            if (0L != ScreenDisplayMode.field_e) {
+              var9 = (int)(-ClockHelpers.monotonicMillis(64) + ScreenDisplayMode.field_e);
               var9 = (var9 + 999) / 1000;
               if (var9 < 1) {
                 var9 = 1;
@@ -942,7 +942,7 @@ final class CachedTextLayout extends TextLayout {
             }
             MatchingTextValidator.field_q.field_cb = AlphaContainer.formatTemplate(ReportAbuseDialog.field_Gb, param1 + 68, new String[]{Integer.toString(LoginMethod.field_c.field_mc), Integer.toString(LoginMethod.field_c.field_ec)});
           }
-          stackIn_181_0 = ff.field_h;
+          stackIn_181_0 = SpriteLoadHelpers.field_h;
           stackIn_181_1 = -28476;
           stackIn_182_2 = (param4) && (!param3) && (!EmergentBehaviourBackground.field_o);
           ((SceneWidget) (Object) stackIn_181_0).updateInputFullScreen(stackIn_181_1, stackIn_182_2);
@@ -950,20 +950,20 @@ final class CachedTextLayout extends TextLayout {
           stackIn_186_1 = -28476;
           stackIn_187_2 = (param4) && (!param3) && (!EmergentBehaviourBackground.field_o);
           ((SceneWidget) (Object) stackIn_186_0).updateInputFullScreen(stackIn_186_1, stackIn_187_2);
-          stackIn_191_0 = ra.field_e;
+          stackIn_191_0 = NineSliceSpriteFactory.field_e;
           stackIn_191_1 = -28476;
           stackIn_192_2 = (param4) && (!param3) && (EmergentBehaviourBackground.field_o);
           ((SceneWidget) (Object) stackIn_191_0).updateInputFullScreen(stackIn_191_1, stackIn_192_2);
-          nd.field_b.field_g.processTabPresses((byte) -122);
+          HowToPlayDemoHelpers.field_b.field_g.processTabPresses((byte) -122);
           if (null != LoginMethod.field_c) {
             if (0 != ValidatedTextWidget.field_kb.field_P) {
-              qg.sendDeclineGameRequest(LoginMethod.field_c.getGameId((byte) 8), param2, false);
+              GameRequestHelpers.sendDeclineGameRequest(LoginMethod.field_c.getGameId((byte) 8), param2, false);
             }
-            if (0 != wm.field_d.field_P) {
+            if (0 != ReportReason.field_d.field_P) {
               EmergentBehaviourBackground.field_o = true;
             }
-            if (ep.field_a.field_P != 0) {
-              of.field_c = true;
+            if (PolygonClipHelpers.field_a.field_P != 0) {
+              TextDecodeHelpers.field_c = true;
             }
             if (0 != ContentTransitionDialog.field_eb.field_P) {
               EmergentBehaviourBackground.field_o = false;
@@ -1013,10 +1013,10 @@ final class CachedTextLayout extends TextLayout {
             (QuickChatCategory.field_A != null)) {
             QuickChatCategory.field_A.drawParagraph(FullscreenFocusCanvas.field_c, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
           }
-          if (ui.field_k > jn.field_q) {
+          if (Cp1252DecodeHelpers.field_k > TwistedLogicCube.field_q) {
             var6 = Matrix3.field_g[SpriteCheckboxPainter.field_b];
             if (var6 != null) {
-              var2_int = jn.field_q * (var6.field_A + 60) / ui.field_k;
+              var2_int = TwistedLogicCube.field_q * (var6.field_A + 60) / Cp1252DecodeHelpers.field_k;
               var3 = var2_int - 30;
               boolean decompiledSharedTail0 = !(Match.field_e);
               if (!decompiledSharedTail0) {
@@ -1069,7 +1069,7 @@ final class CachedTextLayout extends TextLayout {
         if (param0 != 8) {
           field_j = (String) null;
         }
-        return -SpriteCheckboxPainter.field_c + hm.monotonicMillis(64);
+        return -SpriteCheckboxPainter.field_c + ClockHelpers.monotonicMillis(64);
     }
 
     final void layoutLeftAlignedLine(BitmapFont param0, int param1, int param2, boolean param3, String param4) {
@@ -1098,7 +1098,7 @@ final class CachedTextLayout extends TextLayout {
           var9 = var8;
           var9.field_g[0] = -param0.textWidth(param4) + param2;
           var9.field_g[param4.length()] = param2;
-          an.populateCaretPositions(param0, 0, (byte) -92, var9, param4);
+          CaretLayoutHelpers.populateCaretPositions(param0, 0, (byte) -92, var9, param4);
         } catch (RuntimeException runtimeException) {
           throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "no.J(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
@@ -1168,7 +1168,7 @@ final class CachedTextLayout extends TextLayout {
           var7 = this.createSingleLine(param0, 0, param2, param1);
           var7.field_g[0] = param3;
           var7.field_g[param0.length()] = param2.textWidth(param0) + param3;
-          an.populateCaretPositions(param2, 0, (byte) -92, var7, param0);
+          CaretLayoutHelpers.populateCaretPositions(param2, 0, (byte) -92, var7, param0);
         } catch (RuntimeException runtimeException) {
           throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "no.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }

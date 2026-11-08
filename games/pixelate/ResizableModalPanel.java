@@ -35,11 +35,11 @@ abstract class ResizableModalPanel extends ModalPanel {
           if (param8 != 21) {
             ResizableModalPanel.getLegacyMenuHeight(40);
           }
-          var13.field_zb = wk.createSolidFrame(param9, param0, 1);
-          var13.field_ab = wk.createSolidFrame(param6, param4, 1);
-          var13.field_bb = wk.createSolidFrame(param10, param12, 1);
-          var13.field_eb = wk.createSolidFrame(param11, param1, 1);
-          var13.field_M = wk.createSolidFrame(param2, param7, 1);
+          var13.field_zb = EmailLoginCredentials.createSolidFrame(param9, param0, 1);
+          var13.field_ab = EmailLoginCredentials.createSolidFrame(param6, param4, 1);
+          var13.field_bb = EmailLoginCredentials.createSolidFrame(param10, param12, 1);
+          var13.field_eb = EmailLoginCredentials.createSolidFrame(param11, param1, 1);
+          var13.field_M = EmailLoginCredentials.createSolidFrame(param2, param7, 1);
           var13.font = param3;
           var13.field_N = param5;
           stackIn_3_0 = var13;
@@ -118,7 +118,7 @@ abstract class ResizableModalPanel extends ModalPanel {
         if (param0 != 22) {
           ResizableModalPanel.createThemedWidget(-69, 82, -115, (BitmapFont) null, -110, 125, 40, -83, 9, 8, -58, 81, 44);
         }
-        return -qn.field_o + LinkButtonPainter.field_e;
+        return -PatchNoteUsage.field_o + LinkButtonPainter.field_e;
     }
 
     final void startResizeAnimation(int param0, int param1, int param2, int param3) {
@@ -234,7 +234,7 @@ abstract class ResizableModalPanel extends ModalPanel {
         if (!param2) {
           this.field_U = -54;
         }
-        ge.field_g.drawTransparent(param0 + (this.field_E - 90), 10 + param1);
+        RequestState.field_g.drawTransparent(param0 + (this.field_E - 90), 10 + param1);
         MatchController.drawThreeSliceBar(-10 + this.field_E, param1 + 35, 19571, 5 + param0, HowToPlayScreen.field_s);
         MatchController.drawThreeSliceBar(this.field_E, param1 + this.field_C - 22, 19571, param0, PlayerBoard.field_v);
         var5Lifetime2 = 169;

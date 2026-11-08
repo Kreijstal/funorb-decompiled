@@ -83,7 +83,7 @@ final class Kite {
         if (param0 < 12) {
           field_m = (String) null;
         }
-        return ek.field_c;
+        return ChatHistoryHelpers.field_c;
     }
 
     public static void releaseStatics(byte param0) {
@@ -105,8 +105,8 @@ final class Kite {
         this.field_f = param2;
         this.field_q = param4;
         this.field_d = param3;
-        this.field_e = JavaRandomHelpers.randomBelow(ea.field_b, -128, 400);
-        this.field_n = JavaRandomHelpers.randomBelow(ea.field_b, -120, 172);
+        this.field_e = JavaRandomHelpers.randomBelow(CredentialKind.field_b, -128, 400);
+        this.field_n = JavaRandomHelpers.randomBelow(CredentialKind.field_b, -120, 172);
         this.field_c = new int[400];
         this.field_h = new int[400];
         int var6 = 200 * this.field_l >> 12;

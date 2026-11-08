@@ -276,7 +276,7 @@ final class Vector3 {
                 var4 = (String) null;
                 Vector3.openRelativeUrl((byte) -4, (java.applet.Applet) null, (String) null);
               }
-              var3 = lg.withSessionParameters(false, param1, var3);
+              var3 = LoginCookieHelpers.withSessionParameters(false, param1, var3);
               LinkButtonPainter.openUrlInNewWindow(true, var3.toString(), -72, param1);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

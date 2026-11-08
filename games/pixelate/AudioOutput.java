@@ -144,7 +144,7 @@ class AudioOutput {
         if (this.rootStream != null) {
           this.rootStream.mixInto(param0, 0, param1);
         }
-        this.field_f = hm.monotonicMillis(64);
+        this.field_f = ClockHelpers.monotonicMillis(64);
     }
 
     void writeMixBlock() throws Exception {
@@ -246,7 +246,7 @@ class AudioOutput {
           if (this.closed) {
             return;
           }
-          var1 = hm.monotonicMillis(64);
+          var1 = ClockHelpers.monotonicMillis(64);
           try {
             if (var1 > this.field_f + 6000L) {
               this.field_f = var1 - 6000L;
@@ -254,7 +254,7 @@ class AudioOutput {
             while (var1 > this.field_f + 5000L) {
               this.skipFrames(256);
               this.field_f = this.field_f + (long)(256000 / field_h);
-              var1 = hm.monotonicMillis(64);
+              var1 = ClockHelpers.monotonicMillis(64);
             }
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -404,7 +404,7 @@ class AudioOutput {
     AudioOutput() {
         this.field_u = 32;
         this.closed = false;
-        this.field_f = hm.monotonicMillis(64);
+        this.field_f = ClockHelpers.monotonicMillis(64);
         this.field_n = new PcmStream[8];
         this.field_k = 0;
         this.field_g = true;

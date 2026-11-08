@@ -27,8 +27,8 @@ final class Js5ArchiveManager {
           if (param0 != -7749) {
             field_b = (int[]) null;
           }
-          param1.removeKeyListener(mc.field_r);
-          param1.removeFocusListener(mc.field_r);
+          param1.removeKeyListener(AchievementMaskRequest.field_r);
+          param1.removeFocusListener(AchievementMaskRequest.field_r);
           PauseMenuScreen.field_q = -1;
         } catch (RuntimeException runtimeException) {
           throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "am.I(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -57,8 +57,8 @@ final class Js5ArchiveManager {
         boolean stackIn_24_1 = false;
         SceneWidget stackIn_27_0 = null;
         boolean stackIn_28_1 = false;
-        hp.pushClipRegion(SoftwareRasterizer.field_j - 640 >> 1, SoftwareRasterizer.field_d, 640 + SoftwareRasterizer.field_j >> 1, (byte) -91, 0);
-        if (oo.field_b > 0) {
+        HelpPopup.pushClipRegion(SoftwareRasterizer.field_j - 640 >> 1, SoftwareRasterizer.field_d, 640 + SoftwareRasterizer.field_j >> 1, (byte) -91, 0);
+        if (AchievementIconGlobals.field_b > 0) {
           if (CheckboxPainter.field_j != null) {
             CheckboxPainter.field_j.drawOpaque(GreenGrowTheRushesBackground.field_n.field_D, 0);
           }
@@ -72,9 +72,9 @@ final class Js5ArchiveManager {
         if (!(RisingBubble.field_g <= 0) ||
           !(Checkbox.field_W <= 0)) {
           if (CheckboxPainter.field_j != null) {
-            CheckboxPainter.field_j.drawOpaque(ff.field_h.field_D, 0);
+            CheckboxPainter.field_j.drawOpaque(SpriteLoadHelpers.field_h.field_D, 0);
           }
-          stackIn_23_0 = ff.field_h;
+          stackIn_23_0 = SpriteLoadHelpers.field_h;
           stackIn_24_1 = (param1) && (!EmergentBehaviourBackground.field_o);
           ((SceneWidget) (Object) stackIn_23_0).drawFullScreen(stackIn_24_1, 0);
           stackIn_27_0 = Bzip2State.field_A;
@@ -304,19 +304,19 @@ final class Js5ArchiveManager {
           param0 != LoginMethod.field_e) {
           LoginMethod.field_e = param0;
           DialWidget.field_P = true;
-          ro.sendChatFilterSettings(param3, true);
+          NameSuggestionHelpers.sendChatFilterSettings(param3, true);
         }
         if (param2 == 1 &&
           GradientOutlineTextPainter.field_v != param0) {
           DialWidget.field_P = true;
           GradientOutlineTextPainter.field_v = param0;
-          ro.sendChatFilterSettings(param3, true);
+          NameSuggestionHelpers.sendChatFilterSettings(param3, true);
         }
         if (2 == param2 &&
-          param0 != ib.field_e) {
+          param0 != GridSize.field_e) {
           DialWidget.field_P = true;
-          ib.field_e = param0;
-          ro.sendChatFilterSettings(param3, true);
+          GridSize.field_e = param0;
+          NameSuggestionHelpers.sendChatFilterSettings(param3, true);
         }
         if (param1 != -26931) {
           Js5ArchiveManager.releaseStatics((byte) -107);

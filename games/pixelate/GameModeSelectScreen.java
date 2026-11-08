@@ -6,7 +6,7 @@ final class GameModeSelectScreen extends MenuScreen {
     static PacketBuffer field_v;
     private GameModeCard field_o;
     static ResourceArchive field_u;
-    static bd field_s;
+    static ConnectionState field_s;
     private GameModeCard field_p;
     static String[] field_r;
     static String[] field_q;
@@ -38,2987 +38,2987 @@ final class GameModeSelectScreen extends MenuScreen {
             }
             void runChunk0() throws java.lang.RuntimeException {
                 AsyncValidationResult.field_b = param1;
-                var2 = vd.getGameTextFile("loginm3", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("loginm3", 0);
                 if (var2 != null) {
-                  ValidationIndicator.field_N = of.decodeCp1252Text(var2, 1);
+                  ValidationIndicator.field_N = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("loginm2", param0 ^ 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("loginm2", param0 ^ 31873);
                 if (var2 != null) {
-                  TextTableInitializer.field_b = of.decodeCp1252Text(var2, param0 - 31872);
+                  TextTableInitializer.field_b = TextDecodeHelpers.decodeCp1252Text(var2, param0 - 31872);
                 }
-                var2 = vd.getGameTextFile("loginm1", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("loginm1", 0);
                 if (var2 != null) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("idlemessage20min", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("idlemessage20min", 0);
                 if (null != var2) {
-                  hm.field_c = of.decodeCp1252Text(var2, param0 - 31872);
+                  ClockHelpers.field_c = TextDecodeHelpers.decodeCp1252Text(var2, param0 - 31872);
                 }
-                var2 = vd.getGameTextFile("error_js5crc", param0 - 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("error_js5crc", param0 - 31873);
                 if (null != var2) {
-                  wo.field_e = of.decodeCp1252Text(var2, 1);
+                  SocialPanel.field_e = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("error_js5io", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("error_js5io", 0);
                 if (var2 != null) {
-                  TabbedPanel.field_Ib = of.decodeCp1252Text(var2, param0 ^ 31872);
+                  TabbedPanel.field_Ib = TextDecodeHelpers.decodeCp1252Text(var2, param0 ^ 31872);
                 }
-                var2 = vd.getGameTextFile("error_js5connect_full", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("error_js5connect_full", 0);
                 if (var2 != null) {
-                  SectorCacheStore.field_g = of.decodeCp1252Text(var2, 1);
+                  SectorCacheStore.field_g = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("error_js5connect", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("error_js5connect", 0);
                 if (null != var2) {
-                  JaggrabDownloader.field_k = of.decodeCp1252Text(var2, 1);
+                  JaggrabDownloader.field_k = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("login_gameupdated", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("login_gameupdated", 0);
                 if (null != var2) {
-                  aq.field_b = of.decodeCp1252Text(var2, 1);
+                  SkinSelectionHelpers.field_b = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("create_unable", param0 - 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("create_unable", param0 - 31873);
                 if (null != var2) {
-                  ph.field_m = of.decodeCp1252Text(var2, 1);
+                  AchievementBannerEntry.field_m = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("create_ineligible", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("create_ineligible", 0);
                 if (var2 != null) {
-                  AudioService.field_b = of.decodeCp1252Text(var2, param0 - 31872);
+                  AudioService.field_b = TextDecodeHelpers.decodeCp1252Text(var2, param0 - 31872);
                 }
-                var2 = vd.getGameTextFile("usernameprompt", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("usernameprompt", 0);
                 if (null != var2) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("passwordprompt", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("passwordprompt", 0);
                 if (var2 != null) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("andagainprompt", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("andagainprompt", 0);
                 if (var2 != null) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("ticketing_read", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("ticketing_read", 0);
                 if (null != var2) {
-                  of.decodeCp1252Text(var2, param0 - 31872);
+                  TextDecodeHelpers.decodeCp1252Text(var2, param0 - 31872);
                 }
-                var2 = vd.getGameTextFile("ticketing_ignore", param0 ^ 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("ticketing_ignore", param0 ^ 31873);
                 if (null != var2) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("ticketing_oneunread", param0 ^ 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("ticketing_oneunread", param0 ^ 31873);
                 if (var2 != null) {
-                  MainMenuScreen.field_o = of.decodeCp1252Text(var2, 1);
+                  MainMenuScreen.field_o = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("ticketing_xunread", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("ticketing_xunread", 0);
                 if (null != var2) {
-                  SpriteState.field_v = of.decodeCp1252Text(var2, 1);
+                  SpriteState.field_v = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("ticketing_gotowebsite", param0 ^ 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("ticketing_gotowebsite", param0 ^ 31873);
                 if (null != var2) {
-                  GameApplet.field_d = of.decodeCp1252Text(var2, 1);
+                  GameApplet.field_d = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("ticketing_waitingformessages", param0 ^ 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("ticketing_waitingformessages", param0 ^ 31873);
                 if (null != var2) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("mu_chat_on", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("mu_chat_on", 0);
                 if (null != var2) {
-                  EmailConfirmationValidator.field_m = of.decodeCp1252Text(var2, 1);
+                  EmailConfirmationValidator.field_m = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("mu_chat_friends", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("mu_chat_friends", 0);
                 if (var2 != null) {
-                  NameSuggestionsPanel.field_J = of.decodeCp1252Text(var2, 1);
+                  NameSuggestionsPanel.field_J = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("mu_chat_off", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("mu_chat_off", 0);
                 if (null != var2) {
-                  GrowableIntList.field_e = of.decodeCp1252Text(var2, param0 ^ 31872);
+                  GrowableIntList.field_e = TextDecodeHelpers.decodeCp1252Text(var2, param0 ^ 31872);
                 }
-                var2 = vd.getGameTextFile("mu_chat_lobby", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("mu_chat_lobby", 0);
                 if (var2 != null) {
-                  TimerBar.field_m = of.decodeCp1252Text(var2, 1);
+                  TimerBar.field_m = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("mu_chat_public", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("mu_chat_public", 0);
                 if (null != var2) {
-                  em.field_c = of.decodeCp1252Text(var2, 1);
+                  ContextMenuHelpers.field_c = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("mu_chat_ignore", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("mu_chat_ignore", 0);
                 if (var2 != null) {
-                  AsyncValidationResult.field_c = of.decodeCp1252Text(var2, 1);
+                  AsyncValidationResult.field_c = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("mu_chat_tips", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("mu_chat_tips", 0);
                 if (null != var2) {
-                  UiContainer.field_H = of.decodeCp1252Text(var2, 1);
+                  UiContainer.field_H = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("mu_chat_game", param0 ^ 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("mu_chat_game", param0 ^ 31873);
                 if (null != var2) {
-                  PairedTextColumns.field_Gb = of.decodeCp1252Text(var2, param0 - 31872);
+                  PairedTextColumns.field_Gb = TextDecodeHelpers.decodeCp1252Text(var2, param0 - 31872);
                 }
-                var2 = vd.getGameTextFile("mu_chat_private", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("mu_chat_private", 0);
                 if (null != var2) {
-                  mc.field_n = of.decodeCp1252Text(var2, 1);
+                  AchievementMaskRequest.field_n = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("mu_x_entered_game", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("mu_x_entered_game", 0);
                 if (null != var2) {
-                  StatusBar.field_f = of.decodeCp1252Text(var2, param0 ^ 31872);
+                  StatusBar.field_f = TextDecodeHelpers.decodeCp1252Text(var2, param0 ^ 31872);
                 }
-                var2 = vd.getGameTextFile("mu_x_joined_your_game", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("mu_x_joined_your_game", 0);
                 if (var2 != null) {
-                  SpriteState.field_w = of.decodeCp1252Text(var2, param0 - 31872);
+                  SpriteState.field_w = TextDecodeHelpers.decodeCp1252Text(var2, param0 - 31872);
                 }
-                var2 = vd.getGameTextFile("mu_x_entered_other_game", param0 ^ 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("mu_x_entered_other_game", param0 ^ 31873);
                 if (var2 != null) {
-                  CachedArchiveProvider.field_v = of.decodeCp1252Text(var2, 1);
+                  CachedArchiveProvider.field_v = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("mu_x_left_lobby", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("mu_x_left_lobby", 0);
                 if (var2 != null) {
-                  KeyboardInputHandler.field_b = of.decodeCp1252Text(var2, 1);
+                  KeyboardInputHandler.field_b = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("mu_x_lost_con", param0 ^ 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("mu_x_lost_con", param0 ^ 31873);
                 if (var2 != null) {
-                  JaggrabDownloader.field_p = of.decodeCp1252Text(var2, param0 - 31872);
+                  JaggrabDownloader.field_p = TextDecodeHelpers.decodeCp1252Text(var2, param0 - 31872);
                 }
-                var2 = vd.getGameTextFile("mu_x_cannot_join_full", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("mu_x_cannot_join_full", 0);
                 if (var2 != null) {
-                  EmailConfirmationValidator.field_n = of.decodeCp1252Text(var2, 1);
+                  EmailConfirmationValidator.field_n = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("mu_x_cannot_join_inprogress", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("mu_x_cannot_join_inprogress", 0);
                 if (var2 != null) {
-                  ClientContextMenu.field_e = of.decodeCp1252Text(var2, 1);
+                  ClientContextMenu.field_e = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("mu_x_declined_invite", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("mu_x_declined_invite", 0);
                 if (var2 != null) {
-                  an.field_d = of.decodeCp1252Text(var2, param0 ^ 31872);
+                  CaretLayoutHelpers.field_d = TextDecodeHelpers.decodeCp1252Text(var2, param0 ^ 31872);
                 }
-                var2 = vd.getGameTextFile("mu_x_withdrew_request", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("mu_x_withdrew_request", 0);
                 if (null != var2) {
-                  SecondaryNodeHashTable.field_e = of.decodeCp1252Text(var2, 1);
+                  SecondaryNodeHashTable.field_e = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("mu_x_removed", param0 ^ 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("mu_x_removed", param0 ^ 31873);
                 if (var2 != null) {
-                  FireworkDisplay.field_j = of.decodeCp1252Text(var2, param0 ^ 31872);
+                  FireworkDisplay.field_j = TextDecodeHelpers.decodeCp1252Text(var2, param0 ^ 31872);
                 }
-                var2 = vd.getGameTextFile("mu_x_dropped_out", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("mu_x_dropped_out", 0);
                 if (var2 != null) {
-                  un.field_c = of.decodeCp1252Text(var2, 1);
+                  PatchEnvelopeSet.field_c = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("mu_entered_other_game", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("mu_entered_other_game", 0);
                 if (var2 != null) {
-                  LoadingProgressDialog.field_ib = of.decodeCp1252Text(var2, param0 - 31872);
+                  LoadingProgressDialog.field_ib = TextDecodeHelpers.decodeCp1252Text(var2, param0 - 31872);
                 }
-                var2 = vd.getGameTextFile("mu_game_is_full", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("mu_game_is_full", 0);
                 if (null != var2) {
-                  nh.field_c = of.decodeCp1252Text(var2, param0 - 31872);
+                  Base37NameHelpers.field_c = TextDecodeHelpers.decodeCp1252Text(var2, param0 - 31872);
                 }
-                var2 = vd.getGameTextFile("mu_game_has_started", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("mu_game_has_started", 0);
                 if (null != var2) {
-                  gq.field_l = of.decodeCp1252Text(var2, param0 ^ 31872);
+                  AlternateNameCredentials.field_l = TextDecodeHelpers.decodeCp1252Text(var2, param0 ^ 31872);
                 }
-                var2 = vd.getGameTextFile("mu_you_declined_invite", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("mu_you_declined_invite", 0);
                 if (var2 != null) {
-                  PairedTextColumns.field_Eb = of.decodeCp1252Text(var2, param0 - 31872);
+                  PairedTextColumns.field_Eb = TextDecodeHelpers.decodeCp1252Text(var2, param0 - 31872);
                 }
-                var2 = vd.getGameTextFile("mu_invite_withdrawn", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("mu_invite_withdrawn", 0);
                 if (null != var2) {
-                  jb.field_c = of.decodeCp1252Text(var2, 1);
+                  TutorialPageGlobals.field_c = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("mu_request_declined", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("mu_request_declined", 0);
                 if (null != var2) {
-                  EditableTextWidget.field_O = of.decodeCp1252Text(var2, param0 ^ 31872);
+                  EditableTextWidget.field_O = TextDecodeHelpers.decodeCp1252Text(var2, param0 ^ 31872);
                 }
-                var2 = vd.getGameTextFile("mu_request_withdrawn", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("mu_request_withdrawn", 0);
                 if (var2 != null) {
-                  AccountNamePrompt.field_Gb = of.decodeCp1252Text(var2, 1);
+                  AccountNamePrompt.field_Gb = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("mu_all_players_have_left", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("mu_all_players_have_left", 0);
                 if (null != var2) {
-                  Puzzle.field_m = of.decodeCp1252Text(var2, 1);
+                  Puzzle.field_m = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("mu_lobby_name", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("mu_lobby_name", 0);
                 if (null != var2) {
-                  qn.field_m = of.decodeCp1252Text(var2, 1);
+                  PatchNoteUsage.field_m = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("mu_lobby_rating", param0 ^ 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("mu_lobby_rating", param0 ^ 31873);
                 if (null != var2) {
-                  rh.field_m = of.decodeCp1252Text(var2, param0 ^ 31872);
+                  HighscoreSubmission.field_m = TextDecodeHelpers.decodeCp1252Text(var2, param0 ^ 31872);
                 }
-                var2 = vd.getGameTextFile("mu_lobby_friend_add", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("mu_lobby_friend_add", 0);
                 if (null != var2) {
-                  SceneWidgetNode.field_u = of.decodeCp1252Text(var2, 1);
+                  SceneWidgetNode.field_u = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("mu_lobby_friend_rm", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("mu_lobby_friend_rm", 0);
                 if (null != var2) {
-                  OptionsScreen.field_q = of.decodeCp1252Text(var2, 1);
+                  OptionsScreen.field_q = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("mu_lobby_name_add", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("mu_lobby_name_add", 0);
                 if (null != var2) {
-                  qh.field_e = of.decodeCp1252Text(var2, param0 ^ 31872);
+                  MusicPlaybackHelpers.field_e = TextDecodeHelpers.decodeCp1252Text(var2, param0 ^ 31872);
                 }
-                var2 = vd.getGameTextFile("mu_lobby_name_rm", param0 - 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("mu_lobby_name_rm", param0 - 31873);
                 if (null != var2) {
-                  NanoTickClock.field_n = of.decodeCp1252Text(var2, 1);
+                  NanoTickClock.field_n = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("mu_lobby_location", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("mu_lobby_location", 0);
                 if (var2 != null) {
-                  ScrollContainer.field_Jb = of.decodeCp1252Text(var2, 1);
+                  ScrollContainer.field_Jb = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("mu_gamelist_all_games", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("mu_gamelist_all_games", 0);
                 if (var2 != null) {
-                  TimerBar.field_n = of.decodeCp1252Text(var2, param0 ^ 31872);
+                  TimerBar.field_n = TextDecodeHelpers.decodeCp1252Text(var2, param0 ^ 31872);
                 }
-                var2 = vd.getGameTextFile("mu_gamelist_status", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("mu_gamelist_status", 0);
                 if (null != var2) {
-                  OptionsScreen.field_w = of.decodeCp1252Text(var2, 1);
+                  OptionsScreen.field_w = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("mu_gamelist_owner", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("mu_gamelist_owner", 0);
                 if (null != var2) {
-                  ViewportController.field_u = of.decodeCp1252Text(var2, 1);
+                  ViewportController.field_u = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("mu_gamelist_players", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("mu_gamelist_players", 0);
                 if (null != var2) {
-                  nk.field_c = of.decodeCp1252Text(var2, 1);
+                  ChatPanelHelpers.field_c = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("mu_gamelist_avg_rating", param0 - 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("mu_gamelist_avg_rating", param0 - 31873);
                 if (null != var2) {
-                  MusicPatchPcmStream.field_q = of.decodeCp1252Text(var2, 1);
+                  MusicPatchPcmStream.field_q = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("mu_gamelist_options", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("mu_gamelist_options", 0);
                 if (null != var2) {
-                  MatchController.field_b = of.decodeCp1252Text(var2, param0 - 31872);
+                  MatchController.field_b = TextDecodeHelpers.decodeCp1252Text(var2, param0 - 31872);
                 }
-                var2 = vd.getGameTextFile("mu_gamelist_elapsed_time", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("mu_gamelist_elapsed_time", 0);
                 if (null != var2) {
-                  StatsRequest.field_m = of.decodeCp1252Text(var2, 1);
+                  StatsRequest.field_m = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("mu_play_rated", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("mu_play_rated", 0);
                 if (var2 != null) {
-                  DualLinkNode.field_m = of.decodeCp1252Text(var2, 1);
+                  DualLinkNode.field_m = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("mu_create_unrated", param0 - 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("mu_create_unrated", param0 - 31873);
                 if (var2 != null) {
-                  NightToRememberBackground.field_r = of.decodeCp1252Text(var2, 1);
+                  NightToRememberBackground.field_r = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("mu_options", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("mu_options", 0);
                 if (null != var2) {
-                  SaveDataRequest.field_n = of.decodeCp1252Text(var2, param0 ^ 31872);
+                  SaveDataRequest.field_n = TextDecodeHelpers.decodeCp1252Text(var2, param0 ^ 31872);
                 }
-                var2 = vd.getGameTextFile("mu_options_whocanjoin", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("mu_options_whocanjoin", 0);
                 if (var2 != null) {
-                  cd.field_f = of.decodeCp1252Text(var2, 1);
+                  LoginMethodGlobals.field_f = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("mu_options_players", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("mu_options_players", 0);
                 if (var2 != null) {
-                  pk.field_e = of.decodeCp1252Text(var2, param0 ^ 31872);
+                  MeshDecodeHelpers.field_e = TextDecodeHelpers.decodeCp1252Text(var2, param0 ^ 31872);
                 }
-                var2 = vd.getGameTextFile("mu_options_dontmind", param0 - 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("mu_options_dontmind", param0 - 31873);
                 if (var2 != null) {
-                  fg.field_a = of.decodeCp1252Text(var2, param0 - 31872);
+                  RematchCaptionGlobals.field_a = TextDecodeHelpers.decodeCp1252Text(var2, param0 - 31872);
                 }
-                var2 = vd.getGameTextFile("mu_options_allow_spectate", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("mu_options_allow_spectate", 0);
                 if (null != var2) {
-                  LobbyGame.field_Xb = of.decodeCp1252Text(var2, 1);
+                  LobbyGame.field_Xb = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("mu_options_ratedgametype", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("mu_options_ratedgametype", 0);
                 if (null != var2) {
-                  MatchController.field_c = of.decodeCp1252Text(var2, 1);
+                  MatchController.field_c = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("yes", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("yes", 0);
                 if (var2 != null) {
-                  ij.field_t = of.decodeCp1252Text(var2, param0 - 31872);
+                  BlankScreen.field_t = TextDecodeHelpers.decodeCp1252Text(var2, param0 - 31872);
                 }
-                var2 = vd.getGameTextFile("no", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("no", 0);
                 if (var2 != null) {
-                  ValidatedTextWidget.field_eb = of.decodeCp1252Text(var2, param0 - 31872);
+                  ValidatedTextWidget.field_eb = TextDecodeHelpers.decodeCp1252Text(var2, param0 - 31872);
                 }
-                var2 = vd.getGameTextFile("mu_invite_players", param0 - 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("mu_invite_players", param0 - 31873);
                 if (null != var2) {
-                  WhirlpoolHasher.field_k = of.decodeCp1252Text(var2, 1);
+                  WhirlpoolHasher.field_k = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("close", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("close", 0);
                 if (null != var2) {
-                  NameAvailabilityValidator.field_o = of.decodeCp1252Text(var2, 1);
+                  NameAvailabilityValidator.field_o = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("add_x_to_friends", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("add_x_to_friends", 0);
                 if (var2 != null) {
-                  ji.field_d = of.decodeCp1252Text(var2, 1);
+                  FriendCaptionGlobals.field_d = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("add_x_to_ignore", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("add_x_to_ignore", 0);
                 if (var2 != null) {
-                  ff.field_e = of.decodeCp1252Text(var2, 1);
+                  SpriteLoadHelpers.field_e = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("rm_x_from_friends", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("rm_x_from_friends", 0);
                 if (null != var2) {
-                  ni.field_p = of.decodeCp1252Text(var2, 1);
+                  TextHotspot.field_p = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("rm_x_from_ignore", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("rm_x_from_ignore", 0);
                 if (null != var2) {
-                  DelegatingCanvas.field_a = of.decodeCp1252Text(var2, 1);
+                  DelegatingCanvas.field_a = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("send_pm_to_x", param0 - 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("send_pm_to_x", param0 - 31873);
                 if (var2 != null) {
-                  nf.field_e = of.decodeCp1252Text(var2, param0 - 31872);
+                  LoginFormGlobals.field_e = TextDecodeHelpers.decodeCp1252Text(var2, param0 - 31872);
                 }
-                var2 = vd.getGameTextFile("send_qc_to_x", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("send_qc_to_x", 0);
                 if (null != var2) {
-                  TextTableInitializer.field_f = of.decodeCp1252Text(var2, 1);
+                  TextTableInitializer.field_f = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("send_pm", param0 ^ 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("send_pm", param0 ^ 31873);
                 if (var2 != null) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("invite_accept_xs_game", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("invite_accept_xs_game", 0);
                 if (null != var2) {
-                  fp.field_b = of.decodeCp1252Text(var2, 1);
+                  NoticeKind.field_b = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("invite_decline_xs_game", param0 ^ 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("invite_decline_xs_game", param0 ^ 31873);
                 if (var2 != null) {
-                  oi.field_a = of.decodeCp1252Text(var2, 1);
+                  RegistrationHelpers.field_a = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("join_xs_game", param0 ^ 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("join_xs_game", param0 ^ 31873);
                 if (null != var2) {
-                  SecondaryNodeHashTable.field_f = of.decodeCp1252Text(var2, 1);
+                  SecondaryNodeHashTable.field_f = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("join_request_xs_game", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("join_request_xs_game", 0);
                 if (var2 != null) {
-                  PlayerBoard.field_o = of.decodeCp1252Text(var2, param0 ^ 31872);
+                  PlayerBoard.field_o = TextDecodeHelpers.decodeCp1252Text(var2, param0 ^ 31872);
                 }
-                var2 = vd.getGameTextFile("join_withdraw_request_xs_game", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("join_withdraw_request_xs_game", 0);
                 if (null != var2) {
-                  AccountNamePrompt.field_Jb = of.decodeCp1252Text(var2, 1);
+                  AccountNamePrompt.field_Jb = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("mu_gameopt_kick_x_from_this_game", param0 ^ 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("mu_gameopt_kick_x_from_this_game", param0 ^ 31873);
                 if (var2 != null) {
-                  vf.field_b = of.decodeCp1252Text(var2, 1);
+                  PageReloadHelpers.field_b = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("mu_gameopt_withdraw_invite_to_x", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("mu_gameopt_withdraw_invite_to_x", 0);
                 if (var2 != null) {
-                  ResourceArchive.field_j = of.decodeCp1252Text(var2, 1);
+                  ResourceArchive.field_j = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("mu_gameopt_accept_x_into_game", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("mu_gameopt_accept_x_into_game", 0);
                 if (null != var2) {
-                  ValidationHelpWidget.field_V = of.decodeCp1252Text(var2, 1);
+                  ValidationHelpWidget.field_V = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("mu_gameopt_reject_x_from_game", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("mu_gameopt_reject_x_from_game", 0);
                 if (null != var2) {
-                  SoundCache.field_f = of.decodeCp1252Text(var2, 1);
+                  SoundCache.field_f = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("mu_gameopt_invite_x_to_game", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("mu_gameopt_invite_x_to_game", 0);
                 if (null != var2) {
-                  ImageProducerRasterBuffer.field_m = of.decodeCp1252Text(var2, 1);
+                  ImageProducerRasterBuffer.field_m = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("report_x_for_abuse", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("report_x_for_abuse", 0);
                 if (null != var2) {
-                  IndexedSpriteState.field_j = of.decodeCp1252Text(var2, param0 - 31872);
+                  IndexedSpriteState.field_j = TextDecodeHelpers.decodeCp1252Text(var2, param0 - 31872);
                 }
-                var2 = vd.getGameTextFile("unable_to_send_message_password_a", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("unable_to_send_message_password_a", 0);
                 if (var2 != null) {
-                  mp.field_c = of.decodeCp1252Text(var2, 1);
+                  ChatInputGlobals.field_c = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("unable_to_send_message_password_b", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("unable_to_send_message_password_b", 0);
                 if (var2 != null) {
-                  fd.field_d = of.decodeCp1252Text(var2, 1);
+                  ByteArrayPool.field_d = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("mu_chat_lobby_show_all", param0 ^ 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("mu_chat_lobby_show_all", param0 ^ 31873);
                 if (var2 != null) {
-                  dg.field_e = of.decodeCp1252Text(var2, 1);
+                  QuickChatSendHelpers.field_e = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("mu_chat_lobby_friends_only", param0 - 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("mu_chat_lobby_friends_only", param0 - 31873);
                 if (null != var2) {
-                  gd.field_j = of.decodeCp1252Text(var2, param0 ^ 31872);
+                  MainScreenWidgetGlobals.field_j = TextDecodeHelpers.decodeCp1252Text(var2, param0 ^ 31872);
                 }
-                var2 = vd.getGameTextFile("mu_chat_lobby_friends", param0 ^ 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("mu_chat_lobby_friends", param0 ^ 31873);
                 if (var2 != null) {
-                  IntKeyLookup.field_b = of.decodeCp1252Text(var2, 1);
+                  IntKeyLookup.field_b = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("mu_chat_lobby_hide", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("mu_chat_lobby_hide", 0);
                 if (null != var2) {
-                  BufferedRandomAccessFile.field_d = of.decodeCp1252Text(var2, 1);
+                  BufferedRandomAccessFile.field_d = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("mu_chat_game_show_all", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("mu_chat_game_show_all", 0);
                 if (null != var2) {
-                  EmergentBehaviourBackground.field_m = of.decodeCp1252Text(var2, 1);
+                  EmergentBehaviourBackground.field_m = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("mu_chat_game_friends_only", param0 ^ 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("mu_chat_game_friends_only", param0 ^ 31873);
                 if (null != var2) {
-                  ListRequest.field_l = of.decodeCp1252Text(var2, 1);
+                  ListRequest.field_l = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("mu_chat_game_friends", param0 ^ 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("mu_chat_game_friends", param0 ^ 31873);
                 if (var2 != null) {
-                  cl.field_i = of.decodeCp1252Text(var2, param0 - 31872);
+                  Cp1252EncodingHelpers.field_i = TextDecodeHelpers.decodeCp1252Text(var2, param0 - 31872);
                 }
-                var2 = vd.getGameTextFile("mu_chat_game_hide", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("mu_chat_game_hide", 0);
                 if (null != var2) {
-                  NameAvailabilityValidator.field_n = of.decodeCp1252Text(var2, 1);
+                  NameAvailabilityValidator.field_n = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("mu_chat_pm_show_all", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("mu_chat_pm_show_all", 0);
                 if (null != var2) {
-                  vd.field_b = of.decodeCp1252Text(var2, 1);
+                  ChatAppendHelpers.field_b = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("mu_chat_pm_friends_only", param0 - 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("mu_chat_pm_friends_only", param0 - 31873);
                 if (null != var2) {
-                  ByteStorage.field_d = of.decodeCp1252Text(var2, 1);
+                  ByteStorage.field_d = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("mu_chat_pm_friends", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("mu_chat_pm_friends", 0);
                 if (null != var2) {
-                  ge.field_e = of.decodeCp1252Text(var2, 1);
+                  RequestState.field_e = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("mu_chat_invisible_and_silent_mode", param0 ^ 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("mu_chat_invisible_and_silent_mode", param0 ^ 31873);
                 if (var2 != null) {
-                  sf.field_a = of.decodeCp1252Text(var2, 1);
+                  FrameTimingHelpers.field_a = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("you_have_been_removed_from_xs_game", param0 ^ 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("you_have_been_removed_from_xs_game", param0 ^ 31873);
                 if (var2 != null) {
-                  ek.field_d = of.decodeCp1252Text(var2, 1);
+                  ChatHistoryHelpers.field_d = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("your_rating_is_x", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("your_rating_is_x", 0);
                 if (var2 != null) {
-                  oi.field_d = of.decodeCp1252Text(var2, 1);
+                  RegistrationHelpers.field_d = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("you_are_on_x_server", param0 - 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("you_are_on_x_server", param0 - 31873);
                 if (null != var2) {
-                  ke.field_e = of.decodeCp1252Text(var2, param0 ^ 31872);
+                  KeyEventGlobals.field_e = TextDecodeHelpers.decodeCp1252Text(var2, param0 ^ 31872);
                 }
-                var2 = vd.getGameTextFile("rated_game", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("rated_game", 0);
                 if (null != var2) {
-                  RisingBubble.field_d = of.decodeCp1252Text(var2, param0 ^ 31872);
+                  RisingBubble.field_d = TextDecodeHelpers.decodeCp1252Text(var2, param0 ^ 31872);
                 }
-                var2 = vd.getGameTextFile("unrated_game", param0 ^ 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("unrated_game", param0 ^ 31873);
                 if (null != var2) {
-                  StatefulTextPainter.field_t = of.decodeCp1252Text(var2, 1);
+                  StatefulTextPainter.field_t = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("rated_game_tips", param0 - 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("rated_game_tips", param0 - 31873);
                 if (var2 != null) {
-                  ScoreMarkerDemo.field_g = of.decodeCp1252Text(var2, 1);
+                  ScoreMarkerDemo.field_g = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("searching_for_opponent_singular", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("searching_for_opponent_singular", 0);
                 if (null != var2) {
-                  oi.field_b = of.decodeCp1252Text(var2, param0 - 31872);
+                  RegistrationHelpers.field_b = TextDecodeHelpers.decodeCp1252Text(var2, param0 - 31872);
                 }
-                var2 = vd.getGameTextFile("searching_for_opponents_plural", param0 - 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("searching_for_opponents_plural", param0 - 31873);
                 if (var2 != null) {
-                  AgeValidator.field_o = of.decodeCp1252Text(var2, 1);
+                  AgeValidator.field_o = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("find_opponent_singular", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("find_opponent_singular", 0);
                 if (null != var2) {
-                  EmailValidator.field_n = of.decodeCp1252Text(var2, 1);
+                  EmailValidator.field_n = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("find_opponents_plural", param0 - 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("find_opponents_plural", param0 - 31873);
                 if (var2 != null) {
-                  MatchingTextValidator.field_x = of.decodeCp1252Text(var2, 1);
+                  MatchingTextValidator.field_x = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("rated_game_tips_setup_singular", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("rated_game_tips_setup_singular", 0);
                 if (var2 != null) {
-                  AccountRequestDialog.field_sb = of.decodeCp1252Text(var2, 1);
+                  AccountRequestDialog.field_sb = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("rated_game_tips_setup_plural", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("rated_game_tips_setup_plural", 0);
                 if (var2 != null) {
-                  HuffmanCodec.field_d = of.decodeCp1252Text(var2, 1);
+                  HuffmanCodec.field_d = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("waiting_to_start_hint", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("waiting_to_start_hint", 0);
                 if (var2 != null) {
-                  dn.field_b = of.decodeCp1252Text(var2, 1);
+                  DefaultQuickChatPhraseListener.field_b = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("your_game", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("your_game", 0);
                 if (var2 != null) {
-                  DelegatingCanvas.field_g = of.decodeCp1252Text(var2, 1);
+                  DelegatingCanvas.field_g = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("game_full", param0 - 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("game_full", param0 - 31873);
                 if (var2 != null) {
-                  Kite.field_m = of.decodeCp1252Text(var2, 1);
+                  Kite.field_m = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("join_requests_one", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("join_requests_one", 0);
                 if (null != var2) {
-                  sm.field_k = of.decodeCp1252Text(var2, 1);
+                  QueuedLobbyRequest.field_k = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("join_requests_many", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("join_requests_many", 0);
                 if (null != var2) {
-                  d.field_a = of.decodeCp1252Text(var2, param0 ^ 31872);
+                  LobbyStartupHelpers.field_a = TextDecodeHelpers.decodeCp1252Text(var2, param0 ^ 31872);
                 }
-                var2 = vd.getGameTextFile("xs_game", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("xs_game", 0);
                 if (var2 != null) {
-                  HowToPlayScreen.field_q = of.decodeCp1252Text(var2, param0 ^ 31872);
+                  HowToPlayScreen.field_q = TextDecodeHelpers.decodeCp1252Text(var2, param0 ^ 31872);
                 }
-                var2 = vd.getGameTextFile("waiting_for_x_to_start_game", param0 ^ 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("waiting_for_x_to_start_game", param0 ^ 31873);
                 if (null != var2) {
-                  qh.field_a = of.decodeCp1252Text(var2, param0 ^ 31872);
+                  MusicPlaybackHelpers.field_a = TextDecodeHelpers.decodeCp1252Text(var2, param0 ^ 31872);
                 }
-                var2 = vd.getGameTextFile("game_options_changed", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("game_options_changed", 0);
                 if (null != var2) {
-                  AudioService.field_i = of.decodeCp1252Text(var2, param0 - 31872);
+                  AudioService.field_i = TextDecodeHelpers.decodeCp1252Text(var2, param0 - 31872);
                 }
-                var2 = vd.getGameTextFile("players_x_of_y", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("players_x_of_y", 0);
                 if (null != var2) {
-                  ReportAbuseDialog.field_Gb = of.decodeCp1252Text(var2, 1);
+                  ReportAbuseDialog.field_Gb = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("message_lobby", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("message_lobby", 0);
                 if (null != var2) {
-                  EmailConfirmationValidator.field_s = of.decodeCp1252Text(var2, 1);
+                  EmailConfirmationValidator.field_s = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("quickchat_lobby", param0 - 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("quickchat_lobby", param0 - 31873);
                 if (var2 != null) {
-                  MatchHud.field_h = of.decodeCp1252Text(var2, 1);
+                  MatchHud.field_h = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("message_game", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("message_game", 0);
                 if (var2 != null) {
-                  InputQueue.field_c = of.decodeCp1252Text(var2, 1);
+                  InputQueue.field_c = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("message_team", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("message_team", 0);
                 if (var2 != null) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("quickchat_game", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("quickchat_game", 0);
                 if (null != var2) {
-                  TabbedPanel.field_Eb = of.decodeCp1252Text(var2, 1);
+                  TabbedPanel.field_Eb = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("kick", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("kick", 0);
                 if (null != var2) {
-                  MenuInputState.field_m = of.decodeCp1252Text(var2, 1);
+                  MenuInputState.field_m = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("inviting_x", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("inviting_x", 0);
                 if (var2 != null) {
-                  ByteStorage.field_e = of.decodeCp1252Text(var2, 1);
+                  ByteStorage.field_e = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("x_wants_to_join", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("x_wants_to_join", 0);
                 if (var2 != null) {
-                  ModalPanel.field_O = of.decodeCp1252Text(var2, 1);
+                  ModalPanel.field_O = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("accept", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("accept", 0);
                 if (null != var2) {
-                  DisplayNameForm.field_M = of.decodeCp1252Text(var2, 1);
+                  DisplayNameForm.field_M = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("reject", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("reject", 0);
                 if (var2 != null) {
-                  QuickChatPhraseCache.field_e = of.decodeCp1252Text(var2, param0 - 31872);
+                  QuickChatPhraseCache.field_e = TextDecodeHelpers.decodeCp1252Text(var2, param0 - 31872);
                 }
-                var2 = vd.getGameTextFile("invite", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("invite", 0);
                 if (var2 != null) {
-                  ih.field_b = of.decodeCp1252Text(var2, param0 - 31872);
+                  TutorialTickHelpers.field_b = TextDecodeHelpers.decodeCp1252Text(var2, param0 - 31872);
                 }
-                var2 = vd.getGameTextFile("status_concluded", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("status_concluded", 0);
                 if (null != var2) {
-                  IntKeyLookup.field_g = of.decodeCp1252Text(var2, 1);
+                  IntKeyLookup.field_g = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("status_spectate", param0 - 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("status_spectate", param0 - 31873);
                 if (null != var2) {
-                  GrowableIntList.field_g = of.decodeCp1252Text(var2, 1);
+                  GrowableIntList.field_g = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("status_playing", param0 ^ 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("status_playing", param0 ^ 31873);
                 if (var2 != null) {
-                  DialWidgetPainter.field_j = of.decodeCp1252Text(var2, param0 - 31872);
+                  DialWidgetPainter.field_j = TextDecodeHelpers.decodeCp1252Text(var2, param0 - 31872);
                 }
-                var2 = vd.getGameTextFile("status_join", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("status_join", 0);
                 if (var2 != null) {
-                  Checkbox.field_S = of.decodeCp1252Text(var2, param0 - 31872);
+                  Checkbox.field_S = TextDecodeHelpers.decodeCp1252Text(var2, param0 - 31872);
                 }
-                var2 = vd.getGameTextFile("status_private", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("status_private", 0);
                 if (var2 != null) {
-                  HighscoresScreen.field_s = of.decodeCp1252Text(var2, 1);
+                  HighscoresScreen.field_s = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("status_full", param0 - 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("status_full", param0 - 31873);
                 if (null != var2) {
-                  KiteTailSegment.field_b = of.decodeCp1252Text(var2, 1);
+                  KiteTailSegment.field_b = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("players_in_game", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("players_in_game", 0);
                 if (null != var2) {
-                  TabbedPanel.field_Fb = of.decodeCp1252Text(var2, 1);
+                  TabbedPanel.field_Fb = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("you_are_invited_to_xs_game", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("you_are_invited_to_xs_game", 0);
                 if (null != var2) {
-                  JavaRandomHelpers.field_a = of.decodeCp1252Text(var2, 1);
+                  JavaRandomHelpers.field_a = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("asking_to_join_xs_game", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("asking_to_join_xs_game", 0);
                 if (var2 != null) {
-                  NodeHashTable.field_h = of.decodeCp1252Text(var2, 1);
+                  NodeHashTable.field_h = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("who_can_join", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("who_can_join", 0);
                 if (var2 != null) {
-                  DisplayNameForm.field_R = of.decodeCp1252Text(var2, 1);
+                  DisplayNameForm.field_R = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("you_can_join", param0 - 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("you_can_join", param0 - 31873);
                 if (var2 != null) {
-                  StatusBar.field_c = of.decodeCp1252Text(var2, 1);
+                  StatusBar.field_c = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("you_can_ask_to_join", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("you_can_ask_to_join", 0);
                 if (null != var2) {
-                  he.field_e = of.decodeCp1252Text(var2, 1);
+                  CanvasInputHelpers.field_e = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("you_cannot_join_in_progress", param0 - 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("you_cannot_join_in_progress", param0 - 31873);
                 if (var2 != null) {
-                  ClientException.field_b = of.decodeCp1252Text(var2, 1);
+                  ClientException.field_b = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("you_can_spectate", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("you_can_spectate", 0);
                 if (var2 != null) {
-                  SecondaryNodeDequeIterator.field_a = of.decodeCp1252Text(var2, 1);
+                  SecondaryNodeDequeIterator.field_a = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("you_can_not_spectate", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("you_can_not_spectate", 0);
                 if (null != var2) {
-                  DialWidgetPainter.field_i = of.decodeCp1252Text(var2, param0 - 31872);
+                  DialWidgetPainter.field_i = TextDecodeHelpers.decodeCp1252Text(var2, param0 - 31872);
                 }
-                var2 = vd.getGameTextFile("spectate_xs_game", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("spectate_xs_game", 0);
                 if (null != var2) {
-                  ReportAbuseDialog.field_Kb = of.decodeCp1252Text(var2, param0 - 31872);
+                  ReportAbuseDialog.field_Kb = TextDecodeHelpers.decodeCp1252Text(var2, param0 - 31872);
                 }
-                var2 = vd.getGameTextFile("hide_players_in_xs_game", param0 - 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("hide_players_in_xs_game", param0 - 31873);
                 if (var2 != null) {
-                  DateInputWidget.field_M = of.decodeCp1252Text(var2, 1);
+                  DateInputWidget.field_M = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("show_players_in_xs_game", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("show_players_in_xs_game", 0);
                 if (var2 != null) {
-                  AlphaContainer.field_J = of.decodeCp1252Text(var2, param0 - 31872);
+                  AlphaContainer.field_J = TextDecodeHelpers.decodeCp1252Text(var2, param0 - 31872);
                 }
-                var2 = vd.getGameTextFile("connecting_to_friend_server_twoline", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("connecting_to_friend_server_twoline", 0);
                 if (var2 != null) {
-                  ih.field_d = of.decodeCp1252Text(var2, 1);
+                  TutorialTickHelpers.field_d = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("loading", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("loading", 0);
                 if (null != var2) {
-                  FullscreenFocusCanvas.field_c = of.decodeCp1252Text(var2, 1);
+                  FullscreenFocusCanvas.field_c = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("offline", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("offline", 0);
                 if (null != var2) {
-                  LoadingStepTracker.field_g = of.decodeCp1252Text(var2, 1);
+                  LoadingStepTracker.field_g = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("multiconst_invite_only", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("multiconst_invite_only", 0);
                 if (var2 != null) {
-                  CipherPacketBuffer.field_t = of.decodeCp1252Text(var2, 1);
+                  CipherPacketBuffer.field_t = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("multiconst_clan", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("multiconst_clan", 0);
                 if (null != var2) {
-                  IntrusiveDequeCursor.field_b = of.decodeCp1252Text(var2, 1);
+                  IntrusiveDequeCursor.field_b = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("multiconst_friends", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("multiconst_friends", 0);
                 if (null != var2) {
-                  cl.field_b = of.decodeCp1252Text(var2, 1);
+                  Cp1252EncodingHelpers.field_b = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("multiconst_similar_rating", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("multiconst_similar_rating", 0);
                 if (null != var2) {
-                  QuickChatCategoryCache.field_c = of.decodeCp1252Text(var2, 1);
+                  QuickChatCategoryCache.field_c = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("multiconst_open", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("multiconst_open", 0);
                 if (var2 != null) {
-                  QuickChatPhraseCache.field_g = of.decodeCp1252Text(var2, 1);
+                  QuickChatPhraseCache.field_g = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("no_options_available", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("no_options_available", 0);
                 if (var2 != null) {
-                  SoundVoice.field_l = of.decodeCp1252Text(var2, 1);
+                  SoundVoice.field_l = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("reportabuse", param0 ^ 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("reportabuse", param0 ^ 31873);
                 if (null != var2) {
-                  nd.field_a = of.decodeCp1252Text(var2, 1);
+                  HowToPlayDemoHelpers.field_a = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("presstabtochat", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("presstabtochat", 0);
                 if (var2 != null) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("pressf10toquickchat", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("pressf10toquickchat", 0);
                 if (var2 != null) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("dob_chatdisabled", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("dob_chatdisabled", 0);
                 if (var2 != null) {
-                  ef.field_d = of.decodeCp1252Text(var2, param0 ^ 31872);
+                  HighscorePacketHandlers.field_d = TextDecodeHelpers.decodeCp1252Text(var2, param0 ^ 31872);
                 }
-                var2 = vd.getGameTextFile("dob_enterforchat", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("dob_enterforchat", 0);
                 if (null != var2) {
-                  UiComponent.field_v = of.decodeCp1252Text(var2, 1);
+                  UiComponent.field_v = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("tab_hidechattemporarily", param0 - 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("tab_hidechattemporarily", param0 - 31873);
                 if (var2 != null) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("esc_cancelprivatemessage", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("esc_cancelprivatemessage", 0);
                 if (null != var2) {
-                  of.decodeCp1252Text(var2, param0 - 31872);
+                  TextDecodeHelpers.decodeCp1252Text(var2, param0 - 31872);
                 }
-                var2 = vd.getGameTextFile("esc_cancelthisline", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("esc_cancelthisline", 0);
                 if (var2 != null) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("privatequickchat_from_x", param0 ^ 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("privatequickchat_from_x", param0 ^ 31873);
                 if (null != var2) {
-                  sk.field_c = of.decodeCp1252Text(var2, 1);
+                  LobbyFrameHelpers.field_c = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("privatequickchat_to_x", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("privatequickchat_to_x", 0);
                 if (var2 != null) {
-                  dg.field_b = of.decodeCp1252Text(var2, 1);
+                  QuickChatSendHelpers.field_b = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("privatechat_blankarea_explanation", param0 - 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("privatechat_blankarea_explanation", param0 - 31873);
                 if (null != var2) {
-                  MatchHud.field_m = of.decodeCp1252Text(var2, 1);
+                  MatchHud.field_m = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("publicchat_unavailable_ratedgame", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("publicchat_unavailable_ratedgame", 0);
                 if (null != var2) {
-                  AccountChoicePanel.field_P = of.decodeCp1252Text(var2, 1);
+                  AccountChoicePanel.field_P = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("privatechat_friend_offline", param0 - 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("privatechat_friend_offline", param0 - 31873);
                 if (null != var2) {
-                  GameApplet.field_m = of.decodeCp1252Text(var2, 1);
+                  GameApplet.field_m = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("privatechat_friend_notlisted", param0 - 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("privatechat_friend_notlisted", param0 - 31873);
                 if (null != var2) {
-                  fg.field_d = of.decodeCp1252Text(var2, param0 ^ 31872);
+                  RematchCaptionGlobals.field_d = TextDecodeHelpers.decodeCp1252Text(var2, param0 ^ 31872);
                 }
-                var2 = vd.getGameTextFile("chatviewscrolledup", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("chatviewscrolledup", 0);
                 if (null != var2) {
-                  NameSuggestionsPanel.field_M = of.decodeCp1252Text(var2, 1);
+                  NameSuggestionsPanel.field_M = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("thisisrunescapeclan", param0 ^ 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("thisisrunescapeclan", param0 ^ 31873);
                 if (var2 != null) {
-                  ClientContextMenu.field_g = of.decodeCp1252Text(var2, param0 - 31872);
+                  ClientContextMenu.field_g = TextDecodeHelpers.decodeCp1252Text(var2, param0 - 31872);
                 }
-                var2 = vd.getGameTextFile("thisisrunescapeclan_notowner", param0 - 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("thisisrunescapeclan_notowner", param0 - 31873);
                 if (var2 != null) {
-                  IterableNodeHashTable.field_c = of.decodeCp1252Text(var2, 1);
+                  IterableNodeHashTable.field_c = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("runescapeclan", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("runescapeclan", 0);
                 if (var2 != null) {
-                  ri.field_g = of.decodeCp1252Text(var2, param0 - 31872);
+                  ChatHistoryAllocator.field_g = TextDecodeHelpers.decodeCp1252Text(var2, param0 - 31872);
                 }
-                var2 = vd.getGameTextFile("rated_membersonly", param0 ^ 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("rated_membersonly", param0 ^ 31873);
                 if (var2 != null) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("gameopt_membersonly", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("gameopt_membersonly", 0);
                 if (var2 != null) {
-                  NodeHashTable.field_b = of.decodeCp1252Text(var2, 1);
+                  NodeHashTable.field_b = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("gameopt_1moreratedgame", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("gameopt_1moreratedgame", 0);
                 if (null != var2) {
-                  PlayerBoard.field_l = of.decodeCp1252Text(var2, 1);
+                  PlayerBoard.field_l = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("gameopt_moreratedgames", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("gameopt_moreratedgames", 0);
                 if (var2 != null) {
-                  DualLinkDeque.field_c = of.decodeCp1252Text(var2, 1);
+                  DualLinkDeque.field_c = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("gameopt_needrating", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("gameopt_needrating", 0);
                 if (var2 != null) {
-                  SocketConnector.field_d = of.decodeCp1252Text(var2, 1);
+                  SocketConnector.field_d = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("gameopt_unratedonly", param0 - 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("gameopt_unratedonly", param0 - 31873);
                 if (null != var2) {
-                  ByteStorage.field_f = of.decodeCp1252Text(var2, param0 ^ 31872);
+                  ByteStorage.field_f = TextDecodeHelpers.decodeCp1252Text(var2, param0 ^ 31872);
                 }
-                var2 = vd.getGameTextFile("gameopt_notunlocked", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("gameopt_notunlocked", 0);
                 if (var2 != null) {
-                  TwistedLogicBackground.field_o = of.decodeCp1252Text(var2, 1);
+                  TwistedLogicBackground.field_o = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("gameopt_cannotbecombined1", param0 - 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("gameopt_cannotbecombined1", param0 - 31873);
                 if (null != var2) {
-                  KiteTailSegment.field_a = of.decodeCp1252Text(var2, 1);
+                  KiteTailSegment.field_a = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("gameopt_cannotbecombined2", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("gameopt_cannotbecombined2", 0);
                 if (null != var2) {
-                  LobbyPlayer.field_Kb = of.decodeCp1252Text(var2, 1);
+                  LobbyPlayer.field_Kb = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("gameopt_playernotmember", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("gameopt_playernotmember", 0);
                 if (null != var2) {
-                  rh.field_w = of.decodeCp1252Text(var2, 1);
+                  HighscoreSubmission.field_w = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("gameopt_younotmember", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("gameopt_younotmember", 0);
                 if (null != var2) {
-                  JaggrabDownloader.field_g = of.decodeCp1252Text(var2, 1);
+                  JaggrabDownloader.field_g = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("gameopt_playerneedsrating", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("gameopt_playerneedsrating", 0);
                 if (null != var2) {
-                  BackgroundScene.field_e = of.decodeCp1252Text(var2, 1);
+                  BackgroundScene.field_e = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("gameopt_youneedrating", param0 ^ 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("gameopt_youneedrating", param0 ^ 31873);
                 if (var2 != null) {
-                  jn.field_m = of.decodeCp1252Text(var2, 1);
+                  TwistedLogicCube.field_m = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("gameopt_playerneedsratedgames", param0 - 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("gameopt_playerneedsratedgames", param0 - 31873);
                 if (null != var2) {
-                  UiTheme.field_l = of.decodeCp1252Text(var2, 1);
+                  UiTheme.field_l = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("gameopt_youneedratedgames", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("gameopt_youneedratedgames", 0);
                 if (null != var2) {
-                  JaggrabDownloader.field_f = of.decodeCp1252Text(var2, 1);
+                  JaggrabDownloader.field_f = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("gameopt_playerneeds1ratedgame", param0 ^ 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("gameopt_playerneeds1ratedgame", param0 ^ 31873);
                 if (null != var2) {
-                  Cloud.field_k = of.decodeCp1252Text(var2, param0 ^ 31872);
+                  Cloud.field_k = TextDecodeHelpers.decodeCp1252Text(var2, param0 ^ 31872);
                 }
-                var2 = vd.getGameTextFile("gameopt_youneed1ratedgame", param0 ^ 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("gameopt_youneed1ratedgame", param0 ^ 31873);
                 if (null != var2) {
-                  ReportAbuseDialog.field_Mb = of.decodeCp1252Text(var2, param0 - 31872);
+                  ReportAbuseDialog.field_Mb = TextDecodeHelpers.decodeCp1252Text(var2, param0 - 31872);
                 }
-                var2 = vd.getGameTextFile("gameopt_playerhasntunlocked", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("gameopt_playerhasntunlocked", 0);
                 if (var2 != null) {
-                  MarkerSliderPainter.field_i = of.decodeCp1252Text(var2, param0 - 31872);
+                  MarkerSliderPainter.field_i = TextDecodeHelpers.decodeCp1252Text(var2, param0 - 31872);
                 }
-                var2 = vd.getGameTextFile("gameopt_youhaventunlocked", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("gameopt_youhaventunlocked", 0);
                 if (var2 != null) {
-                  ArchiveProvider.field_d = of.decodeCp1252Text(var2, 1);
+                  ArchiveProvider.field_d = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("gameopt_trychanging1", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("gameopt_trychanging1", 0);
                 if (var2 != null) {
-                  BoardParticle.field_q = of.decodeCp1252Text(var2, 1);
+                  BoardParticle.field_q = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("gameopt_trychanging2", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("gameopt_trychanging2", 0);
                 if (null != var2) {
-                  WeightedLruCache.field_i = of.decodeCp1252Text(var2, 1);
+                  WeightedLruCache.field_i = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("gameopt_needchanging1", param0 ^ 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("gameopt_needchanging1", param0 ^ 31873);
                 if (null != var2) {
-                  PacketBuffer.field_l = of.decodeCp1252Text(var2, 1);
+                  PacketBuffer.field_l = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("gameopt_needchanging2", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("gameopt_needchanging2", 0);
                 if (null != var2) {
-                  DirectByteStorage.field_i = of.decodeCp1252Text(var2, 1);
+                  DirectByteStorage.field_i = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("gameopt_mightchange", param0 - 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("gameopt_mightchange", param0 - 31873);
                 if (null != var2) {
-                  ff.field_c = of.decodeCp1252Text(var2, 1);
+                  SpriteLoadHelpers.field_c = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("gameopt_playersdontqualify", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("gameopt_playersdontqualify", 0);
                 if (null != var2) {
-                  CipherPacketBuffer.field_u = of.decodeCp1252Text(var2, 1);
+                  CipherPacketBuffer.field_u = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("gameopt_playersdontqualify_selectgametab", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("gameopt_playersdontqualify_selectgametab", 0);
                 if (var2 != null) {
-                  FireworkDisplay.field_b = of.decodeCp1252Text(var2, 1);
+                  FireworkDisplay.field_b = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("gameopt_unselectedoptions", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("gameopt_unselectedoptions", 0);
                 if (null != var2) {
-                  ji.field_a = of.decodeCp1252Text(var2, 1);
+                  FriendCaptionGlobals.field_a = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("gameopt_pleaseselectoption1", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("gameopt_pleaseselectoption1", 0);
                 if (null != var2) {
-                  sm.field_n = of.decodeCp1252Text(var2, 1);
+                  QueuedLobbyRequest.field_n = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("gameopt_pleaseselectoption2", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("gameopt_pleaseselectoption2", 0);
                 if (null != var2) {
-                  SpriteState.field_x = of.decodeCp1252Text(var2, 1);
+                  SpriteState.field_x = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("gameopt_badnumplayers", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("gameopt_badnumplayers", 0);
                 if (var2 != null) {
-                  aq.field_c = of.decodeCp1252Text(var2, 1);
+                  SkinSelectionHelpers.field_c = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("gameopt_inviteplayers_or_trychanging1", param0 ^ 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("gameopt_inviteplayers_or_trychanging1", param0 ^ 31873);
                 if (var2 != null) {
-                  ff.field_b = of.decodeCp1252Text(var2, 1);
+                  SpriteLoadHelpers.field_b = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("gameopt_inviteplayers_or_trychanging2", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("gameopt_inviteplayers_or_trychanging2", 0);
                 if (var2 != null) {
-                  fg.field_b = of.decodeCp1252Text(var2, 1);
+                  RematchCaptionGlobals.field_b = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("gameopt_novalidcombos", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("gameopt_novalidcombos", 0);
                 if (var2 != null) {
-                  IconTextComponent.field_Gb = of.decodeCp1252Text(var2, 1);
+                  IconTextComponent.field_Gb = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("gameopt_pleasetrychanging", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("gameopt_pleasetrychanging", 0);
                 if (null != var2) {
-                  ij.field_p = of.decodeCp1252Text(var2, 1);
+                  BlankScreen.field_p = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("ra_title", param0 ^ 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("ra_title", param0 ^ 31873);
                 if (var2 != null) {
-                  MatchingTextValidator.field_m = of.decodeCp1252Text(var2, 1);
+                  MatchingTextValidator.field_m = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("ra_mutethisplayer", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("ra_mutethisplayer", 0);
                 if (null != var2) {
-                  nh.field_d = of.decodeCp1252Text(var2, 1);
+                  Base37NameHelpers.field_d = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("ra_suggestmute", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("ra_suggestmute", 0);
                 if (var2 != null) {
-                  ClientContextMenu.field_c = of.decodeCp1252Text(var2, 1);
+                  ClientContextMenu.field_c = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("ra_intro", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("ra_intro", 0);
                 if (null != var2) {
-                  ge.field_d = of.decodeCp1252Text(var2, 1);
+                  RequestState.field_d = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("ra_intro_no_name", param0 - 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("ra_intro_no_name", param0 - 31873);
                 if (null != var2) {
-                  SocialListEntry.field_Lb = of.decodeCp1252Text(var2, 1);
+                  SocialListEntry.field_Lb = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("ra_explanation", param0 ^ 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("ra_explanation", param0 ^ 31873);
                 if (var2 != null) {
-                  CachedTextLayout.field_j = of.decodeCp1252Text(var2, param0 ^ 31872);
+                  CachedTextLayout.field_j = TextDecodeHelpers.decodeCp1252Text(var2, param0 ^ 31872);
                 }
-                var2 = vd.getGameTextFile("rule_pillar_0", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("rule_pillar_0", 0);
                 if (var2 != null) {
-                  DirectByteStorage.field_l = of.decodeCp1252Text(var2, 1);
+                  DirectByteStorage.field_l = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("rule_0_0", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("rule_0_0", 0);
                 if (null != var2) {
-                  Vector3.field_j = of.decodeCp1252Text(var2, 1);
+                  Vector3.field_j = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("rule_0_1", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("rule_0_1", 0);
                 if (null != var2) {
-                  ke.field_c = of.decodeCp1252Text(var2, 1);
+                  KeyEventGlobals.field_c = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("rule_0_2", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("rule_0_2", 0);
                 if (null != var2) {
-                  wf.field_a = of.decodeCp1252Text(var2, 1);
+                  MachineIdHelpers.field_a = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("rule_0_3", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("rule_0_3", 0);
                 if (null != var2) {
-                  TextWidgetPainter.field_m = of.decodeCp1252Text(var2, 1);
+                  TextWidgetPainter.field_m = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("rule_0_4", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("rule_0_4", 0);
                 if (var2 != null) {
-                  dq.field_d = of.decodeCp1252Text(var2, 1);
+                  TransitionPhase.field_d = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("rule_0_5", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("rule_0_5", 0);
             }
             void runChunk1() throws java.lang.RuntimeException {
                 if (null != var2) {
-                  UiContainer.field_G = of.decodeCp1252Text(var2, 1);
+                  UiContainer.field_G = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("rule_pillar_1", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("rule_pillar_1", 0);
                 if (var2 != null) {
-                  MusicPatchPcmStream.field_t = of.decodeCp1252Text(var2, 1);
+                  MusicPatchPcmStream.field_t = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("rule_1_0", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("rule_1_0", 0);
                 if (var2 != null) {
-                  StatefulTextPainter.field_u = of.decodeCp1252Text(var2, 1);
+                  StatefulTextPainter.field_u = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("rule_1_1", param0 ^ 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("rule_1_1", param0 ^ 31873);
                 if (var2 != null) {
-                  IntKeyLookup.field_i = of.decodeCp1252Text(var2, 1);
+                  IntKeyLookup.field_i = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("rule_1_2", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("rule_1_2", 0);
                 if (var2 != null) {
-                  ScrollContainer.field_Eb = of.decodeCp1252Text(var2, 1);
+                  ScrollContainer.field_Eb = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("rule_1_3", param0 - 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("rule_1_3", param0 - 31873);
                 if (null != var2) {
-                  nk.field_h = of.decodeCp1252Text(var2, 1);
+                  ChatPanelHelpers.field_h = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("rule_1_4", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("rule_1_4", 0);
                 if (null != var2) {
-                  NodeHashTableIterator.field_c = of.decodeCp1252Text(var2, 1);
+                  NodeHashTableIterator.field_c = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("rule_pillar_2", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("rule_pillar_2", 0);
                 if (var2 != null) {
-                  IsaacRandom.field_j = of.decodeCp1252Text(var2, param0 ^ 31872);
+                  IsaacRandom.field_j = TextDecodeHelpers.decodeCp1252Text(var2, param0 ^ 31872);
                 }
-                var2 = vd.getGameTextFile("rule_2_0", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("rule_2_0", 0);
                 if (null != var2) {
-                  CachedTextLayout.field_n = of.decodeCp1252Text(var2, param0 - 31872);
+                  CachedTextLayout.field_n = TextDecodeHelpers.decodeCp1252Text(var2, param0 - 31872);
                 }
-                var2 = vd.getGameTextFile("rule_2_1", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("rule_2_1", 0);
                 if (null != var2) {
-                  nk.field_g = of.decodeCp1252Text(var2, param0 - 31872);
+                  ChatPanelHelpers.field_g = TextDecodeHelpers.decodeCp1252Text(var2, param0 - 31872);
                 }
-                var2 = vd.getGameTextFile("rule_2_2", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("rule_2_2", 0);
                 if (null != var2) {
-                  DualLinkDeque.field_d = of.decodeCp1252Text(var2, param0 ^ 31872);
+                  DualLinkDeque.field_d = TextDecodeHelpers.decodeCp1252Text(var2, param0 ^ 31872);
                 }
-                var2 = vd.getGameTextFile("createafreeaccount", param0 - 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("createafreeaccount", param0 - 31873);
                 if (var2 != null) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("cancel", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("cancel", 0);
                 if (null != var2) {
-                  IntrusiveNode.field_f = of.decodeCp1252Text(var2, 1);
+                  IntrusiveNode.field_f = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("pleaselogintoplay", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("pleaselogintoplay", 0);
                 if (null != var2) {
-                  of.decodeCp1252Text(var2, param0 - 31872);
+                  TextDecodeHelpers.decodeCp1252Text(var2, param0 - 31872);
                 }
-                var2 = vd.getGameTextFile("pleaselogin", param0 ^ 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("pleaselogin", param0 ^ 31873);
                 if (var2 != null) {
-                  QuickChatMenu.field_Ib = of.decodeCp1252Text(var2, 1);
+                  QuickChatMenu.field_Ib = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("pleaselogin_member", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("pleaselogin_member", 0);
                 if (null != var2) {
-                  InputQueue.field_a = of.decodeCp1252Text(var2, 1);
+                  InputQueue.field_a = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("invaliduserorpass", param0 - 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("invaliduserorpass", param0 - 31873);
                 if (null != var2) {
-                  bo.field_b = of.decodeCp1252Text(var2, param0 ^ 31872);
+                  ScreenDisplayMode.field_b = TextDecodeHelpers.decodeCp1252Text(var2, param0 ^ 31872);
                 }
-                var2 = vd.getGameTextFile("pleasetryagain", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("pleasetryagain", 0);
                 if (null != var2) {
-                  IsaacRandom.field_a = of.decodeCp1252Text(var2, param0 ^ 31872);
+                  IsaacRandom.field_a = TextDecodeHelpers.decodeCp1252Text(var2, param0 ^ 31872);
                 }
-                var2 = vd.getGameTextFile("pleasereenterpass", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("pleasereenterpass", 0);
                 if (null != var2) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("playfreeversion", param0 ^ 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("playfreeversion", param0 ^ 31873);
                 if (var2 != null) {
-                  StripedProgressBar.field_X = of.decodeCp1252Text(var2, 1);
+                  StripedProgressBar.field_X = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("reloadgame", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("reloadgame", 0);
                 if (var2 != null) {
-                  BackgroundScene.field_c = of.decodeCp1252Text(var2, 1);
+                  BackgroundScene.field_c = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("toserverlist", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("toserverlist", 0);
                 if (null != var2) {
-                  gd.field_d = of.decodeCp1252Text(var2, 1);
+                  MainScreenWidgetGlobals.field_d = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("tocustomersupport", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("tocustomersupport", 0);
                 if (var2 != null) {
-                  TextTableInitializer.field_d = of.decodeCp1252Text(var2, 1);
+                  TextTableInitializer.field_d = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("changedisplayname", param0 - 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("changedisplayname", param0 - 31873);
                 if (var2 != null) {
-                  RankingTableRequest.field_q = of.decodeCp1252Text(var2, param0 - 31872);
+                  RankingTableRequest.field_q = TextDecodeHelpers.decodeCp1252Text(var2, param0 - 31872);
                 }
-                var2 = vd.getGameTextFile("returntohomepage", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("returntohomepage", 0);
                 if (var2 != null) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("justplay", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("justplay", 0);
                 if (var2 != null) {
-                  fc.field_c = of.decodeCp1252Text(var2, param0 ^ 31872);
+                  LobbyListBindingHelpers.field_c = TextDecodeHelpers.decodeCp1252Text(var2, param0 ^ 31872);
                 }
-                var2 = vd.getGameTextFile("justplay_excl", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("justplay_excl", 0);
                 if (var2 != null) {
-                  of.decodeCp1252Text(var2, param0 - 31872);
+                  TextDecodeHelpers.decodeCp1252Text(var2, param0 - 31872);
                 }
-                var2 = vd.getGameTextFile("login", param0 - 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("login", param0 - 31873);
                 if (null != var2) {
-                  WhirlpoolHasher.field_m = of.decodeCp1252Text(var2, 1);
+                  WhirlpoolHasher.field_m = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("goback", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("goback", 0);
                 if (var2 != null) {
-                  MatchController.field_v = of.decodeCp1252Text(var2, 1);
+                  MatchController.field_v = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("otheroptions", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("otheroptions", 0);
                 if (null != var2) {
-                  of.decodeCp1252Text(var2, param0 ^ 31872);
+                  TextDecodeHelpers.decodeCp1252Text(var2, param0 ^ 31872);
                 }
-                var2 = vd.getGameTextFile("proceed", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("proceed", 0);
                 if (null != var2) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("connectingtoserver", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("connectingtoserver", 0);
                 if (null != var2) {
-                  of.decodeCp1252Text(var2, param0 ^ 31872);
+                  TextDecodeHelpers.decodeCp1252Text(var2, param0 ^ 31872);
                 }
-                var2 = vd.getGameTextFile("pleasewait", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("pleasewait", 0);
                 if (var2 != null) {
-                  of.decodeCp1252Text(var2, param0 ^ 31872);
+                  TextDecodeHelpers.decodeCp1252Text(var2, param0 ^ 31872);
                 }
-                var2 = vd.getGameTextFile("logging_in", param0 - 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("logging_in", param0 - 31873);
                 if (null != var2) {
-                  TriangleMesh.field_e = of.decodeCp1252Text(var2, 1);
+                  TriangleMesh.field_e = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("reconnect", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("reconnect", 0);
                 if (var2 != null) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("backtoerror", param0 ^ 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("backtoerror", param0 ^ 31873);
                 if (null != var2) {
-                  of.decodeCp1252Text(var2, param0 - 31872);
+                  TextDecodeHelpers.decodeCp1252Text(var2, param0 - 31872);
                 }
-                var2 = vd.getGameTextFile("pleasecheckinternet", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("pleasecheckinternet", 0);
                 if (null != var2) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("attemptingtoreconnect", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("attemptingtoreconnect", 0);
                 if (var2 != null) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("connectionlost_reconnecting", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("connectionlost_reconnecting", 0);
                 if (null != var2) {
-                  SecondaryNodeDequeIterator.field_b = of.decodeCp1252Text(var2, 1);
+                  SecondaryNodeDequeIterator.field_b = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("connectionlost_withreason", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("connectionlost_withreason", 0);
                 if (null != var2) {
-                  vf.field_a = of.decodeCp1252Text(var2, param0 - 31872);
+                  PageReloadHelpers.field_a = TextDecodeHelpers.decodeCp1252Text(var2, param0 - 31872);
                 }
-                var2 = vd.getGameTextFile("passwordverificationrequired", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("passwordverificationrequired", 0);
                 if (var2 != null) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("invalidpass", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("invalidpass", 0);
                 if (null != var2) {
-                  mp.field_e = of.decodeCp1252Text(var2, 1);
+                  ChatInputGlobals.field_e = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("retry", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("retry", 0);
                 if (var2 != null) {
-                  bo.field_k = of.decodeCp1252Text(var2, 1);
+                  ScreenDisplayMode.field_k = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("back", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("back", 0);
                 if (null != var2) {
-                  bo.field_f = of.decodeCp1252Text(var2, param0 ^ 31872);
+                  ScreenDisplayMode.field_f = TextDecodeHelpers.decodeCp1252Text(var2, param0 ^ 31872);
                 }
-                var2 = vd.getGameTextFile("exitfullscreenmode", param0 - 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("exitfullscreenmode", param0 - 31873);
                 if (var2 != null) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("quittowebsite", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("quittowebsite", 0);
                 if (null != var2) {
-                  FullscreenFocusCanvas.field_e = of.decodeCp1252Text(var2, 1);
+                  FullscreenFocusCanvas.field_e = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("connectionrestored", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("connectionrestored", 0);
                 if (null != var2) {
-                  GameResultsScreen.field_D = of.decodeCp1252Text(var2, 1);
+                  GameResultsScreen.field_D = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("warning_ifyouquit", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("warning_ifyouquit", 0);
                 if (null != var2) {
-                  ed.field_a = of.decodeCp1252Text(var2, 1);
+                  PaletteFontFactory.field_a = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("warning_ifyouquitorleavepage", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("warning_ifyouquitorleavepage", 0);
                 if (var2 != null) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("resubscribe_withoutlosing_fs", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("resubscribe_withoutlosing_fs", 0);
                 if (null != var2) {
-                  of.decodeCp1252Text(var2, param0 - 31872);
+                  TextDecodeHelpers.decodeCp1252Text(var2, param0 - 31872);
                 }
-                var2 = vd.getGameTextFile("resubscribe_withoutlosing", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("resubscribe_withoutlosing", 0);
                 if (null != var2) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("customersupport_withoutlosing_fs", param0 ^ 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("customersupport_withoutlosing_fs", param0 ^ 31873);
                 if (var2 != null) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("customersupport_withoutlosing", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("customersupport_withoutlosing", 0);
                 if (var2 != null) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("js5help_withoutlosing_fs", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("js5help_withoutlosing_fs", 0);
                 if (null != var2) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("js5help_withoutlosing", param0 - 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("js5help_withoutlosing", param0 - 31873);
                 if (var2 != null) {
-                  of.decodeCp1252Text(var2, param0 ^ 31872);
+                  TextDecodeHelpers.decodeCp1252Text(var2, param0 ^ 31872);
                 }
-                var2 = vd.getGameTextFile("checkinternet_withoutlosing_fs", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("checkinternet_withoutlosing_fs", 0);
                 if (var2 != null) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("checkinternet_withoutlosing", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("checkinternet_withoutlosing", 0);
                 if (var2 != null) {
-                  of.decodeCp1252Text(var2, param0 - 31872);
+                  TextDecodeHelpers.decodeCp1252Text(var2, param0 - 31872);
                 }
-                var2 = vd.getGameTextFile("create_intro", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("create_intro", 0);
                 if (null != var2) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("create_sameaccounttip_unnamed", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("create_sameaccounttip_unnamed", 0);
                 if (null != var2) {
-                  of.decodeCp1252Text(var2, param0 ^ 31872);
+                  TextDecodeHelpers.decodeCp1252Text(var2, param0 ^ 31872);
                 }
-                var2 = vd.getGameTextFile("dateofbirthprompt", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("dateofbirthprompt", 0);
                 if (null != var2) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("fetchingcountrylist", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("fetchingcountrylist", 0);
                 if (null != var2) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("countryprompt", param0 - 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("countryprompt", param0 - 31873);
                 if (null != var2) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("countrylisterror", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("countrylisterror", 0);
                 if (null != var2) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("theonlypersonalquestions", param0 - 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("theonlypersonalquestions", param0 - 31873);
                 if (var2 != null) {
-                  of.decodeCp1252Text(var2, param0 - 31872);
+                  TextDecodeHelpers.decodeCp1252Text(var2, param0 - 31872);
                 }
-                var2 = vd.getGameTextFile("create_submittingdata", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("create_submittingdata", 0);
                 if (var2 != null) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("check", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("check", 0);
                 if (var2 != null) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("create_pleasechooseausername", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("create_pleasechooseausername", 0);
                 if (null != var2) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("create_usernameblurb", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("create_usernameblurb", 0);
                 if (null != var2) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("checkingavailability", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("checkingavailability", 0);
                 if (null != var2) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("checking", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("checking", 0);
                 if (null != var2) {
-                  NameAvailabilityValidator.field_m = of.decodeCp1252Text(var2, param0 ^ 31872);
+                  NameAvailabilityValidator.field_m = TextDecodeHelpers.decodeCp1252Text(var2, param0 ^ 31872);
                 }
-                var2 = vd.getGameTextFile("create_namealreadytaken", param0 - 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("create_namealreadytaken", param0 - 31873);
                 if (null != var2) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("create_sameaccounttip_named", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("create_sameaccounttip_named", 0);
                 if (var2 != null) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("create_nosuggestions", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("create_nosuggestions", 0);
                 if (null != var2) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("create_alternativelygoback", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("create_alternativelygoback", 0);
                 if (null != var2) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("create_available", param0 - 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("create_available", param0 - 31873);
                 if (var2 != null) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("create_willnowshowtermsandconditions", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("create_willnowshowtermsandconditions", 0);
                 if (null != var2) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("fetchingterms", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("fetchingterms", 0);
                 if (var2 != null) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("termserror", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("termserror", 0);
                 if (var2 != null) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("create_iagree", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("create_iagree", 0);
                 if (var2 != null) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("create_idisagree", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("create_idisagree", 0);
                 if (null != var2) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("create_pleasescrolldowntoaccept", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("create_pleasescrolldowntoaccept", 0);
                 if (var2 != null) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("create_linkaddress", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("create_linkaddress", 0);
                 if (null != var2) {
-                  of.decodeCp1252Text(var2, param0 - 31872);
+                  TextDecodeHelpers.decodeCp1252Text(var2, param0 - 31872);
                 }
-                var2 = vd.getGameTextFile("openinpopupwindow", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("openinpopupwindow", 0);
                 if (var2 != null) {
-                  IntrusiveNode.field_g = of.decodeCp1252Text(var2, 1);
+                  IntrusiveNode.field_g = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("create", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("create", 0);
                 if (null != var2) {
-                  hm.field_d = of.decodeCp1252Text(var2, 1);
+                  ClockHelpers.field_d = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("create_pleasechooseapassword", param0 - 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("create_pleasechooseapassword", param0 - 31873);
                 if (null != var2) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("create_passwordblurb", param0 - 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("create_passwordblurb", param0 - 31873);
                 if (var2 != null) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("create_nevergivepassword", param0 ^ 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("create_nevergivepassword", param0 ^ 31873);
                 if (var2 != null) {
-                  of.decodeCp1252Text(var2, param0 - 31872);
+                  TextDecodeHelpers.decodeCp1252Text(var2, param0 - 31872);
                 }
-                var2 = vd.getGameTextFile("creatingyouraccount", param0 ^ 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("creatingyouraccount", param0 ^ 31873);
                 if (null != var2) {
-                  hm.field_e = of.decodeCp1252Text(var2, 1);
+                  ClockHelpers.field_e = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("create_youmustaccept", param0 - 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("create_youmustaccept", param0 - 31873);
                 if (null != var2) {
-                  of.decodeCp1252Text(var2, param0 - 31872);
+                  TextDecodeHelpers.decodeCp1252Text(var2, param0 - 31872);
                 }
-                var2 = vd.getGameTextFile("create_passwordsdifferent", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("create_passwordsdifferent", 0);
                 if (var2 != null) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("create_success", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("create_success", 0);
                 if (var2 != null) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("day", param0 ^ 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("day", param0 ^ 31873);
                 if (var2 != null) {
-                  ij.field_r = of.decodeCp1252Text(var2, param0 - 31872);
+                  BlankScreen.field_r = TextDecodeHelpers.decodeCp1252Text(var2, param0 - 31872);
                 }
-                var2 = vd.getGameTextFile("month", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("month", 0);
                 if (null != var2) {
-                  fc.field_b = of.decodeCp1252Text(var2, 1);
+                  LobbyListBindingHelpers.field_b = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("year", param0 - 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("year", param0 - 31873);
                 if (var2 != null) {
-                  ji.field_e = of.decodeCp1252Text(var2, 1);
+                  FriendCaptionGlobals.field_e = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("monthnames,0", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("monthnames,0", 0);
                 if (null != var2) {
-                  dh.field_c[0] = of.decodeCp1252Text(var2, param0 - 31872);
+                  DisplayNameHelpers.field_c[0] = TextDecodeHelpers.decodeCp1252Text(var2, param0 - 31872);
                 }
-                var2 = vd.getGameTextFile("monthnames,1", param0 - 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("monthnames,1", param0 - 31873);
                 if (null != var2) {
-                  dh.field_c[1] = of.decodeCp1252Text(var2, 1);
+                  DisplayNameHelpers.field_c[1] = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("monthnames,2", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("monthnames,2", 0);
                 if (var2 != null) {
-                  dh.field_c[2] = of.decodeCp1252Text(var2, 1);
+                  DisplayNameHelpers.field_c[2] = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("monthnames,3", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("monthnames,3", 0);
                 if (null != var2) {
-                  dh.field_c[3] = of.decodeCp1252Text(var2, 1);
+                  DisplayNameHelpers.field_c[3] = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("monthnames,4", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("monthnames,4", 0);
                 if (var2 != null) {
-                  dh.field_c[4] = of.decodeCp1252Text(var2, 1);
+                  DisplayNameHelpers.field_c[4] = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("monthnames,5", param0 - 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("monthnames,5", param0 - 31873);
                 if (var2 != null) {
-                  dh.field_c[5] = of.decodeCp1252Text(var2, DraggableWidget.intXor(param0, 31872));
+                  DisplayNameHelpers.field_c[5] = TextDecodeHelpers.decodeCp1252Text(var2, DraggableWidget.intXor(param0, 31872));
                 }
-                var2 = vd.getGameTextFile("monthnames,6", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("monthnames,6", 0);
                 if (null != var2) {
-                  dh.field_c[6] = of.decodeCp1252Text(var2, 1);
+                  DisplayNameHelpers.field_c[6] = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("monthnames,7", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("monthnames,7", 0);
                 if (null != var2) {
-                  dh.field_c[7] = of.decodeCp1252Text(var2, DraggableWidget.intXor(param0, 31872));
+                  DisplayNameHelpers.field_c[7] = TextDecodeHelpers.decodeCp1252Text(var2, DraggableWidget.intXor(param0, 31872));
                 }
-                var2 = vd.getGameTextFile("monthnames,8", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("monthnames,8", 0);
                 if (null != var2) {
-                  dh.field_c[8] = of.decodeCp1252Text(var2, 1);
+                  DisplayNameHelpers.field_c[8] = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("monthnames,9", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("monthnames,9", 0);
                 if (var2 != null) {
-                  dh.field_c[9] = of.decodeCp1252Text(var2, 1);
+                  DisplayNameHelpers.field_c[9] = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("monthnames,10", param0 - 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("monthnames,10", param0 - 31873);
                 if (null != var2) {
-                  dh.field_c[10] = of.decodeCp1252Text(var2, 1);
+                  DisplayNameHelpers.field_c[10] = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("monthnames,11", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("monthnames,11", 0);
                 if (null != var2) {
-                  dh.field_c[11] = of.decodeCp1252Text(var2, 1);
+                  DisplayNameHelpers.field_c[11] = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("create_welcome", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("create_welcome", 0);
                 if (null != var2) {
-                  ClientContextMenu.field_n = of.decodeCp1252Text(var2, 1);
+                  ClientContextMenu.field_n = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("create_u13_welcome", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("create_u13_welcome", 0);
                 if (var2 != null) {
-                  of.decodeCp1252Text(var2, param0 ^ 31872);
+                  TextDecodeHelpers.decodeCp1252Text(var2, param0 ^ 31872);
                 }
-                var2 = vd.getGameTextFile("create_createanaccount", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("create_createanaccount", 0);
                 if (var2 != null) {
-                  AlphaContainer.field_M = of.decodeCp1252Text(var2, param0 ^ 31872);
+                  AlphaContainer.field_M = TextDecodeHelpers.decodeCp1252Text(var2, param0 ^ 31872);
                 }
-                var2 = vd.getGameTextFile("create_username", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("create_username", 0);
                 if (null != var2) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("create_displayname", param0 ^ 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("create_displayname", param0 ^ 31873);
                 if (null != var2) {
-                  BufferedSocket.field_i = of.decodeCp1252Text(var2, 1);
+                  BufferedSocket.field_i = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("create_password", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("create_password", 0);
                 if (null != var2) {
-                  AccountRequestDialog.field_qb = of.decodeCp1252Text(var2, 1);
+                  AccountRequestDialog.field_qb = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("create_password_confirm", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("create_password_confirm", 0);
                 if (null != var2) {
-                  r.field_b = of.decodeCp1252Text(var2, 1);
+                  LobbySlideHelpers.field_b = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("create_email", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("create_email", 0);
                 if (var2 != null) {
-                  DialWidget.field_S = of.decodeCp1252Text(var2, 1);
+                  DialWidget.field_S = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("create_email_confirm", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("create_email_confirm", 0);
                 if (var2 != null) {
-                  mp.field_d = of.decodeCp1252Text(var2, 1);
+                  ChatInputGlobals.field_d = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("create_age", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("create_age", 0);
                 if (null != var2) {
-                  TriangleMesh.field_O = of.decodeCp1252Text(var2, 1);
+                  TriangleMesh.field_O = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("create_u13_email", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("create_u13_email", 0);
                 if (var2 != null) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("create_u13_email_confirm", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("create_u13_email_confirm", 0);
                 if (null != var2) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("create_dob", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("create_dob", 0);
                 if (var2 != null) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("create_country", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("create_country", 0);
                 if (var2 != null) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("create_alternatives_header", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("create_alternatives_header", 0);
                 if (var2 != null) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("create_alternatives_select", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("create_alternatives_select", 0);
                 if (var2 != null) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("create_suggestions", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("create_suggestions", 0);
                 if (null != var2) {
-                  JavaRandomHelpers.field_c = of.decodeCp1252Text(var2, param0 ^ 31872);
+                  JavaRandomHelpers.field_c = TextDecodeHelpers.decodeCp1252Text(var2, param0 ^ 31872);
                 }
-                var2 = vd.getGameTextFile("create_more_suggestions", param0 ^ 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("create_more_suggestions", param0 ^ 31873);
                 if (null != var2) {
-                  d.field_d = of.decodeCp1252Text(var2, 1);
+                  LobbyStartupHelpers.field_d = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("create_select_alternative", param0 - 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("create_select_alternative", param0 - 31873);
                 if (null != var2) {
-                  LoginMethod.field_a = of.decodeCp1252Text(var2, 1);
+                  LoginMethod.field_a = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("create_optin_news", param0 ^ 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("create_optin_news", param0 ^ 31873);
                 if (null != var2) {
-                  CanvasRasterBuffer.field_j = of.decodeCp1252Text(var2, 1);
+                  CanvasRasterBuffer.field_j = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("create_agreeterms", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("create_agreeterms", 0);
                 if (null != var2) {
-                  DelegatingCanvas.field_f = of.decodeCp1252Text(var2, 1);
+                  DelegatingCanvas.field_f = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("create_u13terms", param0 - 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("create_u13terms", param0 - 31873);
                 if (var2 != null) {
-                  IndexedSpriteState.field_e = of.decodeCp1252Text(var2, param0 ^ 31872);
+                  IndexedSpriteState.field_e = TextDecodeHelpers.decodeCp1252Text(var2, param0 ^ 31872);
                 }
-                var2 = vd.getGameTextFile("login_username_email", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("login_username_email", 0);
                 if (null != var2) {
-                  ui.field_d = of.decodeCp1252Text(var2, 1);
+                  Cp1252DecodeHelpers.field_d = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("login_username", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("login_username", 0);
                 if (null != var2) {
-                  MusicPatch.field_k = of.decodeCp1252Text(var2, 1);
+                  MusicPatch.field_k = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("login_email", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("login_email", 0);
                 if (null != var2) {
-                  AchievementsScreen.field_r = of.decodeCp1252Text(var2, 1);
+                  AchievementsScreen.field_r = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("login_username_tooltip", param0 ^ 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("login_username_tooltip", param0 ^ 31873);
                 if (null != var2) {
-                  rm.field_c = of.decodeCp1252Text(var2, 1);
+                  TutorialDrawHelpers.field_c = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("login_password_tooltip", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("login_password_tooltip", 0);
                 if (null != var2) {
-                  of.decodeCp1252Text(var2, param0 - 31872);
+                  TextDecodeHelpers.decodeCp1252Text(var2, param0 - 31872);
                 }
-                var2 = vd.getGameTextFile("login_login_tooltip", param0 - 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("login_login_tooltip", param0 - 31873);
                 if (null != var2) {
-                  of.decodeCp1252Text(var2, param0 - 31872);
+                  TextDecodeHelpers.decodeCp1252Text(var2, param0 - 31872);
                 }
-                var2 = vd.getGameTextFile("login_create_tooltip", param0 - 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("login_create_tooltip", param0 - 31873);
                 if (null != var2) {
-                  KeyboardInputHandler.field_a = of.decodeCp1252Text(var2, 1);
+                  KeyboardInputHandler.field_a = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("login_justplay_tooltip", param0 - 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("login_justplay_tooltip", param0 - 31873);
                 if (null != var2) {
-                  PuzzleThumbnail.field_q = of.decodeCp1252Text(var2, param0 - 31872);
+                  PuzzleThumbnail.field_q = TextDecodeHelpers.decodeCp1252Text(var2, param0 - 31872);
                 }
-                var2 = vd.getGameTextFile("login_back_tooltip", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("login_back_tooltip", 0);
                 if (var2 != null) {
-                  of.decodeCp1252Text(var2, param0 - 31872);
+                  TextDecodeHelpers.decodeCp1252Text(var2, param0 - 31872);
                 }
-                var2 = vd.getGameTextFile("login_no_displayname", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("login_no_displayname", 0);
                 if (null != var2) {
-                  PlayerController.field_d = of.decodeCp1252Text(var2, 1);
+                  PlayerController.field_d = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("create_username_tooltip", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("create_username_tooltip", 0);
                 if (null != var2) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("create_username_hint", param0 - 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("create_username_hint", param0 - 31873);
                 if (var2 != null) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("create_displayname_tooltip", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("create_displayname_tooltip", 0);
                 if (var2 != null) {
-                  StatusBar.field_i = of.decodeCp1252Text(var2, 1);
+                  StatusBar.field_i = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("create_displayname_hint", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("create_displayname_hint", 0);
                 if (var2 != null) {
-                  na.field_a = of.decodeCp1252Text(var2, 1);
+                  GameSocketHelpers.field_a = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("create_password_tooltip", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("create_password_tooltip", 0);
                 if (var2 != null) {
-                  QuickChatMenu.field_Eb = of.decodeCp1252Text(var2, param0 ^ 31872);
+                  QuickChatMenu.field_Eb = TextDecodeHelpers.decodeCp1252Text(var2, param0 ^ 31872);
                 }
-                var2 = vd.getGameTextFile("create_password_hint", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("create_password_hint", 0);
                 if (null != var2) {
-                  PictureStrip.field_i = of.decodeCp1252Text(var2, 1);
+                  PictureStrip.field_i = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("create_password_confirm_tooltip", param0 - 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("create_password_confirm_tooltip", param0 - 31873);
                 if (var2 != null) {
-                  Puzzle.field_f = of.decodeCp1252Text(var2, 1);
+                  Puzzle.field_f = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("create_email_tooltip", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("create_email_tooltip", 0);
                 if (null != var2) {
-                  LabeledField.field_N = of.decodeCp1252Text(var2, 1);
+                  LabeledField.field_N = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("create_email_confirm_tooltip", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("create_email_confirm_tooltip", 0);
                 if (null != var2) {
-                  jf.field_b = of.decodeCp1252Text(var2, 1);
+                  IncomingPacketHelpers.field_b = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("create_age_tooltip", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("create_age_tooltip", 0);
                 if (null != var2) {
-                  IntrusiveDeque.field_d = of.decodeCp1252Text(var2, 1);
+                  IntrusiveDeque.field_d = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("create_optin_news_tooltip", param0 ^ 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("create_optin_news_tooltip", param0 ^ 31873);
                 if (var2 != null) {
-                  mc.field_o = of.decodeCp1252Text(var2, param0 - 31872);
+                  AchievementMaskRequest.field_o = TextDecodeHelpers.decodeCp1252Text(var2, param0 - 31872);
                 }
-                var2 = vd.getGameTextFile("create_u13_email_tooltip", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("create_u13_email_tooltip", 0);
                 if (var2 != null) {
-                  of.decodeCp1252Text(var2, param0 ^ 31872);
+                  TextDecodeHelpers.decodeCp1252Text(var2, param0 ^ 31872);
                 }
-                var2 = vd.getGameTextFile("create_u13_email_confirm_tooltip", param0 ^ 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("create_u13_email_confirm_tooltip", param0 ^ 31873);
                 if (var2 != null) {
-                  of.decodeCp1252Text(var2, param0 ^ 31872);
+                  TextDecodeHelpers.decodeCp1252Text(var2, param0 ^ 31872);
                 }
-                var2 = vd.getGameTextFile("create_dob_tooltip", param0 ^ 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("create_dob_tooltip", param0 ^ 31873);
                 if (var2 != null) {
-                  of.decodeCp1252Text(var2, param0 - 31872);
+                  TextDecodeHelpers.decodeCp1252Text(var2, param0 - 31872);
                 }
-                var2 = vd.getGameTextFile("create_country_tooltip", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("create_country_tooltip", 0);
                 if (var2 != null) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("create_optin_tooltip", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("create_optin_tooltip", 0);
                 if (var2 != null) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("create_continue", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("create_continue", 0);
                 if (var2 != null) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("create_username_unavailable", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("create_username_unavailable", 0);
                 if (var2 != null) {
-                  ek.field_e = of.decodeCp1252Text(var2, 1);
+                  ChatHistoryHelpers.field_e = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("create_username_available", param0 ^ 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("create_username_available", param0 ^ 31873);
                 if (null != var2) {
-                  MusicCrossfadeStream.field_L = of.decodeCp1252Text(var2, param0 ^ 31872);
+                  MusicCrossfadeStream.field_L = TextDecodeHelpers.decodeCp1252Text(var2, param0 ^ 31872);
                 }
-                var2 = vd.getGameTextFile("create_alert_namelength", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("create_alert_namelength", 0);
                 if (null != var2) {
-                  em.field_b = of.decodeCp1252Text(var2, param0 ^ 31872);
+                  ContextMenuHelpers.field_b = TextDecodeHelpers.decodeCp1252Text(var2, param0 ^ 31872);
                 }
-                var2 = vd.getGameTextFile("create_alert_namechars", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("create_alert_namechars", 0);
                 if (null != var2) {
-                  DualLinkDeque.field_g = of.decodeCp1252Text(var2, param0 - 31872);
+                  DualLinkDeque.field_g = TextDecodeHelpers.decodeCp1252Text(var2, param0 - 31872);
                 }
-                var2 = vd.getGameTextFile("create_alert_nameleadingspace", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("create_alert_nameleadingspace", 0);
                 if (null != var2) {
-                  MatchController.field_k = of.decodeCp1252Text(var2, 1);
+                  MatchController.field_k = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("create_alert_doublespace", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("create_alert_doublespace", 0);
                 if (var2 != null) {
-                  AsyncValidationResult.field_f = of.decodeCp1252Text(var2, 1);
+                  AsyncValidationResult.field_f = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("create_alert_passchars", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("create_alert_passchars", 0);
                 if (var2 != null) {
-                  ResizableModalPanel.field_R = of.decodeCp1252Text(var2, param0 ^ 31872);
+                  ResizableModalPanel.field_R = TextDecodeHelpers.decodeCp1252Text(var2, param0 ^ 31872);
                 }
-                var2 = vd.getGameTextFile("create_alert_passrepeated", param0 ^ 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("create_alert_passrepeated", param0 ^ 31873);
                 if (var2 != null) {
-                  AgeValidator.field_n = of.decodeCp1252Text(var2, param0 ^ 31872);
+                  AgeValidator.field_n = TextDecodeHelpers.decodeCp1252Text(var2, param0 ^ 31872);
                 }
-                var2 = vd.getGameTextFile("create_alert_passlength", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("create_alert_passlength", 0);
                 if (var2 != null) {
-                  MusicCrossfadeStream.field_y = of.decodeCp1252Text(var2, 1);
+                  MusicCrossfadeStream.field_y = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("create_alert_passcontainsname", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("create_alert_passcontainsname", 0);
                 if (var2 != null) {
-                  StrongCacheReference.field_w = of.decodeCp1252Text(var2, 1);
+                  StrongCacheReference.field_w = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("create_alert_passcontainsemail", param0 ^ 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("create_alert_passcontainsemail", param0 ^ 31873);
                 if (null != var2) {
-                  KiteTailSegment.field_c = of.decodeCp1252Text(var2, 1);
+                  KiteTailSegment.field_c = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("create_alert_passcontainsname_partial", param0 ^ 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("create_alert_passcontainsname_partial", param0 ^ 31873);
                 if (var2 != null) {
-                  pk.field_b = of.decodeCp1252Text(var2, 1);
+                  MeshDecodeHelpers.field_b = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("create_alert_checkname", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("create_alert_checkname", 0);
                 if (var2 != null) {
-                  of.decodeCp1252Text(var2, param0 ^ 31872);
+                  TextDecodeHelpers.decodeCp1252Text(var2, param0 ^ 31872);
                 }
-                var2 = vd.getGameTextFile("create_alert_invalidemail", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("create_alert_invalidemail", 0);
                 if (null != var2) {
-                  QuickChatPhraseDefinition.field_A = of.decodeCp1252Text(var2, 1);
+                  QuickChatPhraseDefinition.field_A = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("create_alert_email_unavailable", param0 - 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("create_alert_email_unavailable", param0 - 31873);
                 if (var2 != null) {
-                  SpriteCheckboxPainter.field_e = of.decodeCp1252Text(var2, param0 - 31872);
+                  SpriteCheckboxPainter.field_e = TextDecodeHelpers.decodeCp1252Text(var2, param0 - 31872);
                 }
-                var2 = vd.getGameTextFile("create_alert_invaliddate", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("create_alert_invaliddate", 0);
                 if (var2 != null) {
-                  RankingTableRequest.field_p = of.decodeCp1252Text(var2, 1);
+                  RankingTableRequest.field_p = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("create_alert_invalidage", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("create_alert_invalidage", 0);
                 if (null != var2) {
-                  mc.field_t = of.decodeCp1252Text(var2, param0 ^ 31872);
+                  AchievementMaskRequest.field_t = TextDecodeHelpers.decodeCp1252Text(var2, param0 ^ 31872);
                 }
-                var2 = vd.getGameTextFile("create_alert_yearrange", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("create_alert_yearrange", 0);
                 if (null != var2) {
-                  TextLayout.field_d = of.decodeCp1252Text(var2, 1);
+                  TextLayout.field_d = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("create_alert_mismatch", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("create_alert_mismatch", 0);
                 if (var2 != null) {
-                  sk.field_d = of.decodeCp1252Text(var2, 1);
+                  LobbyFrameHelpers.field_d = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("create_passwordvalid", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("create_passwordvalid", 0);
                 if (null != var2) {
-                  cd.field_a = of.decodeCp1252Text(var2, 1);
+                  LoginMethodGlobals.field_a = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("create_emailvalid", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("create_emailvalid", 0);
                 if (var2 != null) {
-                  e.field_c = of.decodeCp1252Text(var2, 1);
+                  ConnectionStateGlobals.field_c = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("create_account_success", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("create_account_success", 0);
                 if (null != var2) {
-                  ValidatedTextWidget.field_jb = of.decodeCp1252Text(var2, 1);
+                  ValidatedTextWidget.field_jb = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("invalid_name", param0 - 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("invalid_name", param0 - 31873);
                 if (var2 != null) {
-                  qn.field_n = of.decodeCp1252Text(var2, 1);
+                  PatchNoteUsage.field_n = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("cannot_add_yourself", param0 - 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("cannot_add_yourself", param0 - 31873);
                 if (null != var2) {
-                  GrowableIntList.field_h = of.decodeCp1252Text(var2, param0 - 31872);
+                  GrowableIntList.field_h = TextDecodeHelpers.decodeCp1252Text(var2, param0 - 31872);
                 }
-                var2 = vd.getGameTextFile("unable_to_add_friend", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("unable_to_add_friend", 0);
                 if (var2 != null) {
-                  Bzip2State.field_C = of.decodeCp1252Text(var2, 1);
+                  Bzip2State.field_C = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("unable_to_add_ignore", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("unable_to_add_ignore", 0);
                 if (var2 != null) {
-                  WeightedLruCache.field_d = of.decodeCp1252Text(var2, param0 - 31872);
+                  WeightedLruCache.field_d = TextDecodeHelpers.decodeCp1252Text(var2, param0 - 31872);
                 }
-                var2 = vd.getGameTextFile("unable_to_delete_friend", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("unable_to_delete_friend", 0);
                 if (null != var2) {
-                  qg.field_c = of.decodeCp1252Text(var2, 1);
+                  GameRequestHelpers.field_c = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("unable_to_delete_ignore", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("unable_to_delete_ignore", 0);
                 if (null != var2) {
-                  JavaRandomHelpers.field_b = of.decodeCp1252Text(var2, 1);
+                  JavaRandomHelpers.field_b = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("friendlistfull", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("friendlistfull", 0);
                 if (null != var2) {
-                  MarkerSlider.field_Q = of.decodeCp1252Text(var2, 1);
+                  MarkerSlider.field_Q = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("friendlistdupe", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("friendlistdupe", 0);
                 if (null != var2) {
-                  BufferedSocket.field_b = of.decodeCp1252Text(var2, 1);
+                  BufferedSocket.field_b = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("friendnotfound", param0 ^ 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("friendnotfound", param0 ^ 31873);
                 if (null != var2) {
-                  AccountMessagePanel.field_R = of.decodeCp1252Text(var2, 1);
+                  AccountMessagePanel.field_R = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("ignorelistfull", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("ignorelistfull", 0);
                 if (null != var2) {
-                  ViewportController.field_k = of.decodeCp1252Text(var2, 1);
+                  ViewportController.field_k = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("ignorelistdupe", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("ignorelistdupe", 0);
                 if (null != var2) {
-                  SpriteState.field_H = of.decodeCp1252Text(var2, param0 - 31872);
+                  SpriteState.field_H = TextDecodeHelpers.decodeCp1252Text(var2, param0 - 31872);
                 }
-                var2 = vd.getGameTextFile("ignorenotfound", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("ignorenotfound", 0);
                 if (var2 != null) {
-                  ug.field_p = of.decodeCp1252Text(var2, param0 - 31872);
+                  LaggedPacket.field_p = TextDecodeHelpers.decodeCp1252Text(var2, param0 - 31872);
                 }
-                var2 = vd.getGameTextFile("removeignorefirst", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("removeignorefirst", 0);
                 if (null != var2) {
-                  EmergentBehaviourBackground.field_r = of.decodeCp1252Text(var2, 1);
+                  EmergentBehaviourBackground.field_r = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("removefriendfirst", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("removefriendfirst", 0);
                 if (null != var2) {
-                  ArchiveProvider.field_b = of.decodeCp1252Text(var2, param0 - 31872);
+                  ArchiveProvider.field_b = TextDecodeHelpers.decodeCp1252Text(var2, param0 - 31872);
                 }
-                var2 = vd.getGameTextFile("enterfriend_add", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("enterfriend_add", 0);
                 if (null != var2) {
-                  BackgroundScene.field_j = of.decodeCp1252Text(var2, 1);
+                  BackgroundScene.field_j = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("enterfriend_del", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("enterfriend_del", 0);
                 if (var2 != null) {
-                  hp.field_Fb = of.decodeCp1252Text(var2, 1);
+                  HelpPopup.field_Fb = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("enterignore_add", param0 - 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("enterignore_add", param0 - 31873);
                 if (var2 != null) {
-                  GameplayScreen.field_p = of.decodeCp1252Text(var2, 1);
+                  GameplayScreen.field_p = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("enterignore_del", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("enterignore_del", 0);
                 if (var2 != null) {
-                  ProxyAuthenticationException.field_f = of.decodeCp1252Text(var2, 1);
+                  ProxyAuthenticationException.field_f = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("text_removed_from_game", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("text_removed_from_game", 0);
                 if (var2 != null) {
-                  IntrusiveDeque.field_a = of.decodeCp1252Text(var2, param0 ^ 31872);
+                  IntrusiveDeque.field_a = TextDecodeHelpers.decodeCp1252Text(var2, param0 ^ 31872);
                 }
-                var2 = vd.getGameTextFile("text_lobby_pleaselogin_free", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("text_lobby_pleaselogin_free", 0);
                 if (var2 != null) {
-                  of.decodeCp1252Text(var2, param0 - 31872);
+                  TextDecodeHelpers.decodeCp1252Text(var2, param0 - 31872);
                 }
-                var2 = vd.getGameTextFile("opengl", param0 - 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("opengl", param0 - 31873);
                 if (null != var2) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("sse", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("sse", 0);
                 if (var2 != null) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("purejava", param0 - 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("purejava", param0 - 31873);
                 if (null != var2) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("waitingfor_graphics", param0 ^ 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("waitingfor_graphics", param0 ^ 31873);
                 if (null != var2) {
-                  SocialListEntry.field_Mb = of.decodeCp1252Text(var2, 1);
+                  SocialListEntry.field_Mb = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("waitingfor_models", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("waitingfor_models", 0);
                 if (var2 != null) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("waitingfor_fonts", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("waitingfor_fonts", 0);
                 if (var2 != null) {
-                  CanvasRasterBuffer.field_f = of.decodeCp1252Text(var2, 1);
+                  CanvasRasterBuffer.field_f = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("waitingfor_soundeffects", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("waitingfor_soundeffects", 0);
                 if (var2 != null) {
-                  l.field_u = of.decodeCp1252Text(var2, param0 ^ 31872);
+                  MessageScreen.field_u = TextDecodeHelpers.decodeCp1252Text(var2, param0 ^ 31872);
                 }
-                var2 = vd.getGameTextFile("waitingfor_music", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("waitingfor_music", 0);
                 if (var2 != null) {
-                  fq.field_p = of.decodeCp1252Text(var2, 1);
+                  RankingSummaryScreen.field_p = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("waitingfor_instruments", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("waitingfor_instruments", 0);
                 if (var2 != null) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("waitingfor_levels", param0 ^ 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("waitingfor_levels", param0 ^ 31873);
                 if (var2 != null) {
-                  of.decodeCp1252Text(var2, param0 ^ 31872);
+                  TextDecodeHelpers.decodeCp1252Text(var2, param0 ^ 31872);
                 }
-                var2 = vd.getGameTextFile("waitingfor_extradata", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("waitingfor_extradata", 0);
                 if (var2 != null) {
-                  RasterState.field_p = of.decodeCp1252Text(var2, 1);
+                  RasterState.field_p = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("waitingfor_languages", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("waitingfor_languages", 0);
                 if (null != var2) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("waitingfor_textures", param0 - 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("waitingfor_textures", param0 - 31873);
                 if (null != var2) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("waitingfor_animations", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("waitingfor_animations", 0);
                 if (var2 != null) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("loading_graphics", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("loading_graphics", 0);
                 if (var2 != null) {
-                  PasswordValidator.field_q = of.decodeCp1252Text(var2, param0 - 31872);
+                  PasswordValidator.field_q = TextDecodeHelpers.decodeCp1252Text(var2, param0 - 31872);
                 }
-                var2 = vd.getGameTextFile("loading_models", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("loading_models", 0);
                 if (var2 != null) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("loading_fonts", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("loading_fonts", 0);
                 if (null != var2) {
-                  CipherPacketBuffer.field_x = of.decodeCp1252Text(var2, param0 ^ 31872);
+                  CipherPacketBuffer.field_x = TextDecodeHelpers.decodeCp1252Text(var2, param0 ^ 31872);
                 }
-                var2 = vd.getGameTextFile("loading_soundeffects", param0 ^ 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("loading_soundeffects", param0 ^ 31873);
                 if (null != var2) {
-                  EmergentBehaviourBackground.field_n = of.decodeCp1252Text(var2, 1);
+                  EmergentBehaviourBackground.field_n = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("loading_music", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("loading_music", 0);
                 if (null != var2) {
-                  AccountChoicePanel.field_I = of.decodeCp1252Text(var2, 1);
+                  AccountChoicePanel.field_I = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("loading_instruments", param0 ^ 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("loading_instruments", param0 ^ 31873);
                 if (var2 != null) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("loading_levels", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("loading_levels", 0);
                 if (null != var2) {
-                  of.decodeCp1252Text(var2, param0 ^ 31872);
+                  TextDecodeHelpers.decodeCp1252Text(var2, param0 ^ 31872);
                 }
-                var2 = vd.getGameTextFile("loading_extradata", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("loading_extradata", 0);
                 if (var2 != null) {
-                  em.field_a = of.decodeCp1252Text(var2, 1);
+                  ContextMenuHelpers.field_a = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("loading_languages", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("loading_languages", 0);
                 if (var2 != null) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("loading_textures", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("loading_textures", 0);
                 if (var2 != null) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("loading_animations", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("loading_animations", 0);
                 if (null != var2) {
-                  of.decodeCp1252Text(var2, param0 ^ 31872);
+                  TextDecodeHelpers.decodeCp1252Text(var2, param0 ^ 31872);
                 }
-                var2 = vd.getGameTextFile("unpacking_graphics", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("unpacking_graphics", 0);
                 if (null != var2) {
-                  CachedTextLayout.field_g = of.decodeCp1252Text(var2, 1);
+                  CachedTextLayout.field_g = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("unpacking_models", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("unpacking_models", 0);
                 if (null != var2) {
-                  of.decodeCp1252Text(var2, param0 - 31872);
+                  TextDecodeHelpers.decodeCp1252Text(var2, param0 - 31872);
                 }
-                var2 = vd.getGameTextFile("unpacking_soundeffects", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("unpacking_soundeffects", 0);
                 if (var2 != null) {
-                  rh.field_r = of.decodeCp1252Text(var2, param0 - 31872);
+                  HighscoreSubmission.field_r = TextDecodeHelpers.decodeCp1252Text(var2, param0 - 31872);
                 }
-                var2 = vd.getGameTextFile("unpacking_music", param0 - 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("unpacking_music", param0 - 31873);
                 if (var2 != null) {
-                  ff.field_f = of.decodeCp1252Text(var2, 1);
+                  SpriteLoadHelpers.field_f = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("unpacking_levels", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("unpacking_levels", 0);
                 if (var2 != null) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("unpacking_languages", param0 - 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("unpacking_languages", param0 - 31873);
                 if (null != var2) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("unpacking_animations", param0 - 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("unpacking_animations", param0 - 31873);
                 if (null != var2) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("unpacking_toolkit", param0 ^ 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("unpacking_toolkit", param0 ^ 31873);
                 if (var2 != null) {
-                  of.decodeCp1252Text(var2, param0 - 31872);
+                  TextDecodeHelpers.decodeCp1252Text(var2, param0 - 31872);
                 }
-                var2 = vd.getGameTextFile("instructions", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("instructions", 0);
                 if (var2 != null) {
-                  cm.field_l = of.decodeCp1252Text(var2, 1);
+                  VolumeControlledVoice.field_l = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("tutorial", param0 ^ 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("tutorial", param0 ^ 31873);
                 if (var2 != null) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("playtutorial", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("playtutorial", 0);
                 if (null != var2) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("sound_colon", param0 ^ 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("sound_colon", param0 ^ 31873);
                 if (var2 != null) {
-                  HowToPlayScreen.field_p = of.decodeCp1252Text(var2, 1);
+                  HowToPlayScreen.field_p = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("music_colon", param0 - 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("music_colon", param0 - 31873);
                 if (null != var2) {
-                  ScoreMarkerDemo.field_e = of.decodeCp1252Text(var2, param0 - 31872);
+                  ScoreMarkerDemo.field_e = TextDecodeHelpers.decodeCp1252Text(var2, param0 - 31872);
                 }
-                var2 = vd.getGameTextFile("fullscreen", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("fullscreen", 0);
                 if (var2 != null) {
-                  wk.field_f = of.decodeCp1252Text(var2, 1);
+                  EmailLoginCredentials.field_f = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("screensize", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("screensize", 0);
                 if (null != var2) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("highscores", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("highscores", 0);
                 if (var2 != null) {
-                  CacheReference.field_u = of.decodeCp1252Text(var2, param0 ^ 31872);
+                  CacheReference.field_u = TextDecodeHelpers.decodeCp1252Text(var2, param0 ^ 31872);
                 }
-                var2 = vd.getGameTextFile("rankings", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("rankings", 0);
                 if (null != var2) {
-                  MatchHud.field_l = of.decodeCp1252Text(var2, param0 - 31872);
+                  MatchHud.field_l = TextDecodeHelpers.decodeCp1252Text(var2, param0 - 31872);
                 }
-                var2 = vd.getGameTextFile("achievements", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("achievements", 0);
                 if (null != var2) {
-                  SecondaryNodeDeque.field_d = of.decodeCp1252Text(var2, 1);
+                  SecondaryNodeDeque.field_d = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("achievementsthisgame", param0 ^ 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("achievementsthisgame", param0 ^ 31873);
                 if (var2 != null) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
             }
             void runChunk2() throws java.lang.RuntimeException {
-                var2 = vd.getGameTextFile("achievementsthissession", param0 ^ 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("achievementsthissession", param0 ^ 31873);
                 if (var2 != null) {
-                  of.decodeCp1252Text(var2, param0 - 31872);
+                  TextDecodeHelpers.decodeCp1252Text(var2, param0 - 31872);
                 }
-                var2 = vd.getGameTextFile("watchintroduction", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("watchintroduction", 0);
                 if (var2 != null) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("quit", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("quit", 0);
                 if (null != var2) {
-                  cl.field_c = of.decodeCp1252Text(var2, param0 ^ 31872);
+                  Cp1252EncodingHelpers.field_c = TextDecodeHelpers.decodeCp1252Text(var2, param0 ^ 31872);
                 }
-                var2 = vd.getGameTextFile("login_createaccount", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("login_createaccount", 0);
                 if (null != var2) {
-                  td.field_a = of.decodeCp1252Text(var2, 1);
+                  PuzzleModePictureHelpers.field_a = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("tohighscores", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("tohighscores", 0);
                 if (null != var2) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("returntomainmenu", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("returntomainmenu", 0);
                 if (null != var2) {
-                  AccountChoicePanel.field_K = of.decodeCp1252Text(var2, 1);
+                  AccountChoicePanel.field_K = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("returntopausemenu", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("returntopausemenu", 0);
                 if (var2 != null) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("returntooptionsmenu_notpaused", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("returntooptionsmenu_notpaused", 0);
                 if (null != var2) {
-                  of.decodeCp1252Text(var2, param0 - 31872);
+                  TextDecodeHelpers.decodeCp1252Text(var2, param0 - 31872);
                 }
-                var2 = vd.getGameTextFile("mainmenu", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("mainmenu", 0);
                 if (var2 != null) {
-                  gq.field_m = of.decodeCp1252Text(var2, param0 ^ 31872);
+                  AlternateNameCredentials.field_m = TextDecodeHelpers.decodeCp1252Text(var2, param0 ^ 31872);
                 }
-                var2 = vd.getGameTextFile("pausemenu", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("pausemenu", 0);
                 if (var2 != null) {
-                  FullscreenFocusCanvas.field_b = of.decodeCp1252Text(var2, param0 ^ 31872);
+                  FullscreenFocusCanvas.field_b = TextDecodeHelpers.decodeCp1252Text(var2, param0 ^ 31872);
                 }
-                var2 = vd.getGameTextFile("optionsmenu_notpaused", param0 ^ 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("optionsmenu_notpaused", param0 ^ 31873);
                 if (null != var2) {
-                  TextFieldValidator.field_k = of.decodeCp1252Text(var2, param0 - 31872);
+                  TextFieldValidator.field_k = TextDecodeHelpers.decodeCp1252Text(var2, param0 - 31872);
                 }
-                var2 = vd.getGameTextFile("menu", param0 - 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("menu", param0 - 31873);
                 if (var2 != null) {
-                  ge.field_b = of.decodeCp1252Text(var2, 1);
+                  RequestState.field_b = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("selectlevel", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("selectlevel", 0);
                 if (null != var2) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("nextlevel", param0 - 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("nextlevel", param0 - 31873);
                 if (null != var2) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("startgame", param0 - 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("startgame", param0 - 31873);
                 if (var2 != null) {
-                  DateInputWidget.field_J = of.decodeCp1252Text(var2, param0 ^ 31872);
+                  DateInputWidget.field_J = TextDecodeHelpers.decodeCp1252Text(var2, param0 ^ 31872);
                 }
-                var2 = vd.getGameTextFile("newgame", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("newgame", 0);
                 if (null != var2) {
-                  LoadingStepTracker.field_c = of.decodeCp1252Text(var2, 1);
+                  LoadingStepTracker.field_c = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("resumegame", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("resumegame", 0);
                 if (null != var2) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("resumetutorial", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("resumetutorial", 0);
                 if (var2 != null) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("skip", param0 ^ 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("skip", param0 ^ 31873);
                 if (null != var2) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("skiptutorial", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("skiptutorial", 0);
                 if (var2 != null) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("skipending", param0 - 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("skipending", param0 - 31873);
                 if (var2 != null) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("restartlevel", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("restartlevel", 0);
                 if (null != var2) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("endtest", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("endtest", 0);
                 if (var2 != null) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("endgame", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("endgame", 0);
                 if (var2 != null) {
-                  ih.field_e = of.decodeCp1252Text(var2, param0 ^ 31872);
+                  TutorialTickHelpers.field_e = TextDecodeHelpers.decodeCp1252Text(var2, param0 ^ 31872);
                 }
-                var2 = vd.getGameTextFile("endtutorial", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("endtutorial", 0);
                 if (null != var2) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("ok", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("ok", 0);
                 if (null != var2) {
-                  ig.field_c = of.decodeCp1252Text(var2, 1);
+                  AudioPumpHelpers.field_c = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("on", param0 ^ 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("on", param0 ^ 31873);
                 if (null != var2) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("off", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("off", 0);
                 if (null != var2) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("previous", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("previous", 0);
                 if (null != var2) {
-                  PasswordFieldPainter.field_z = of.decodeCp1252Text(var2, param0 ^ 31872);
+                  PasswordFieldPainter.field_z = TextDecodeHelpers.decodeCp1252Text(var2, param0 ^ 31872);
                 }
-                var2 = vd.getGameTextFile("prev", param0 - 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("prev", param0 - 31873);
                 if (var2 != null) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("next", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("next", 0);
                 if (var2 != null) {
-                  qh.field_f = of.decodeCp1252Text(var2, 1);
+                  MusicPlaybackHelpers.field_f = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("graphics_colon", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("graphics_colon", 0);
                 if (null != var2) {
-                  of.decodeCp1252Text(var2, param0 - 31872);
+                  TextDecodeHelpers.decodeCp1252Text(var2, param0 - 31872);
                 }
-                var2 = vd.getGameTextFile("hotseatmultiplayer", param0 ^ 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("hotseatmultiplayer", param0 ^ 31873);
                 if (null != var2) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("entermultiplayerlobby", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("entermultiplayerlobby", 0);
                 if (null != var2) {
-                  CheckboxPainter.field_c = of.decodeCp1252Text(var2, 1);
+                  CheckboxPainter.field_c = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("singleplayergame", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("singleplayergame", 0);
                 if (null != var2) {
-                  TabbedPanel.field_Nb = of.decodeCp1252Text(var2, 1);
+                  TabbedPanel.field_Nb = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("returntogame", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("returntogame", 0);
                 if (null != var2) {
-                  sk.field_b = of.decodeCp1252Text(var2, 1);
+                  LobbyFrameHelpers.field_b = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("endgameresign", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("endgameresign", 0);
                 if (null != var2) {
-                  of.decodeCp1252Text(var2, param0 - 31872);
+                  TextDecodeHelpers.decodeCp1252Text(var2, param0 - 31872);
                 }
-                var2 = vd.getGameTextFile("offerdraw", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("offerdraw", 0);
                 if (var2 != null) {
-                  of.decodeCp1252Text(var2, param0 - 31872);
+                  TextDecodeHelpers.decodeCp1252Text(var2, param0 - 31872);
                 }
-                var2 = vd.getGameTextFile("canceldraw", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("canceldraw", 0);
                 if (null != var2) {
-                  of.decodeCp1252Text(var2, param0 - 31872);
+                  TextDecodeHelpers.decodeCp1252Text(var2, param0 - 31872);
                 }
-                var2 = vd.getGameTextFile("acceptdraw", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("acceptdraw", 0);
                 if (null != var2) {
-                  of.decodeCp1252Text(var2, param0 - 31872);
+                  TextDecodeHelpers.decodeCp1252Text(var2, param0 - 31872);
                 }
-                var2 = vd.getGameTextFile("resign", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("resign", 0);
                 if (null != var2) {
-                  FallingPieceView.field_d = of.decodeCp1252Text(var2, 1);
+                  FallingPieceView.field_d = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("returntolobby", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("returntolobby", 0);
                 if (null != var2) {
-                  ra.field_f = of.decodeCp1252Text(var2, 1);
+                  NineSliceSpriteFactory.field_f = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("cont", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("cont", 0);
                 if (null != var2) {
-                  MusicCrossfadeStream.field_J = of.decodeCp1252Text(var2, 1);
+                  MusicCrossfadeStream.field_J = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("continue_spectating", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("continue_spectating", 0);
                 if (var2 != null) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("messages", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("messages", 0);
                 if (var2 != null) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("graphics_fastest", param0 - 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("graphics_fastest", param0 - 31873);
                 if (null != var2) {
-                  of.decodeCp1252Text(var2, param0 ^ 31872);
+                  TextDecodeHelpers.decodeCp1252Text(var2, param0 ^ 31872);
                 }
-                var2 = vd.getGameTextFile("graphics_medium", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("graphics_medium", 0);
                 if (var2 != null) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("graphics_best", param0 ^ 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("graphics_best", param0 ^ 31873);
                 if (null != var2) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("graphics_directx", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("graphics_directx", 0);
                 if (null != var2) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("graphics_opengl", param0 ^ 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("graphics_opengl", param0 ^ 31873);
                 if (null != var2) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("graphics_java", param0 - 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("graphics_java", param0 - 31873);
                 if (null != var2) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("graphics_quality_high", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("graphics_quality_high", 0);
                 if (var2 != null) {
-                  of.decodeCp1252Text(var2, param0 ^ 31872);
+                  TextDecodeHelpers.decodeCp1252Text(var2, param0 ^ 31872);
                 }
-                var2 = vd.getGameTextFile("graphics_quality_low", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("graphics_quality_low", 0);
                 if (null != var2) {
-                  of.decodeCp1252Text(var2, param0 ^ 31872);
+                  TextDecodeHelpers.decodeCp1252Text(var2, param0 ^ 31872);
                 }
-                var2 = vd.getGameTextFile("graphics_mode", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("graphics_mode", 0);
                 if (null != var2) {
-                  of.decodeCp1252Text(var2, param0 ^ 31872);
+                  TextDecodeHelpers.decodeCp1252Text(var2, param0 ^ 31872);
                 }
-                var2 = vd.getGameTextFile("graphics_quality", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("graphics_quality", 0);
                 if (null != var2) {
-                  of.decodeCp1252Text(var2, param0 ^ 31872);
+                  TextDecodeHelpers.decodeCp1252Text(var2, param0 ^ 31872);
                 }
-                var2 = vd.getGameTextFile("mode", param0 - 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("mode", param0 - 31873);
                 if (null != var2) {
-                  of.decodeCp1252Text(var2, param0 - 31872);
+                  TextDecodeHelpers.decodeCp1252Text(var2, param0 - 31872);
                 }
-                var2 = vd.getGameTextFile("quality", param0 - 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("quality", param0 - 31873);
                 if (var2 != null) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("keys", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("keys", 0);
                 if (null != var2) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("objective", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("objective", 0);
                 if (null != var2) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("currentobjective", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("currentobjective", 0);
                 if (var2 != null) {
-                  of.decodeCp1252Text(var2, param0 ^ 31872);
+                  TextDecodeHelpers.decodeCp1252Text(var2, param0 ^ 31872);
                 }
-                var2 = vd.getGameTextFile("pressescforpausemenu", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("pressescforpausemenu", 0);
                 if (null != var2) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("pressescforpausemenuortoskiptutorial", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("pressescforpausemenuortoskiptutorial", 0);
                 if (null != var2) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("pressescforoptionsmenu_doesntpause", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("pressescforoptionsmenu_doesntpause", 0);
                 if (null != var2) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("pressescforoptionsmenu_doesntpause_short", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("pressescforoptionsmenu_doesntpause_short", 0);
                 if (null != var2) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("powerups", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("powerups", 0);
                 if (var2 != null) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("latestlevel_suffix", param0 ^ 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("latestlevel_suffix", param0 ^ 31873);
                 if (var2 != null) {
-                  of.decodeCp1252Text(var2, param0 ^ 31872);
+                  TextDecodeHelpers.decodeCp1252Text(var2, param0 ^ 31872);
                 }
-                var2 = vd.getGameTextFile("unreachedlevel_name", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("unreachedlevel_name", 0);
                 if (var2 != null) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("unreachedlevel_cannotplayreason", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("unreachedlevel_cannotplayreason", 0);
                 if (null != var2) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("unreachedlevel_cannotplayreason_shorter", param0 - 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("unreachedlevel_cannotplayreason_shorter", param0 - 31873);
                 if (var2 != null) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("unreachedworld_cannotplayreason", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("unreachedworld_cannotplayreason", 0);
                 if (var2 != null) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("memberslevel_name", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("memberslevel_name", 0);
                 if (var2 != null) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("memberslevel_cannotplayreason", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("memberslevel_cannotplayreason", 0);
                 if (var2 != null) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("membersworld_cannotplayreason", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("membersworld_cannotplayreason", 0);
                 if (null != var2) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("unreachedlevel_createtip", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("unreachedlevel_createtip", 0);
                 if (null != var2) {
-                  of.decodeCp1252Text(var2, param0 ^ 31872);
+                  TextDecodeHelpers.decodeCp1252Text(var2, param0 ^ 31872);
                 }
-                var2 = vd.getGameTextFile("unreachedlevel_createtip_line1", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("unreachedlevel_createtip_line1", 0);
                 if (null != var2) {
-                  of.decodeCp1252Text(var2, param0 - 31872);
+                  TextDecodeHelpers.decodeCp1252Text(var2, param0 - 31872);
                 }
-                var2 = vd.getGameTextFile("unreachedlevel_createtip_line2", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("unreachedlevel_createtip_line2", 0);
                 if (var2 != null) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("unreachedlevel_logintip", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("unreachedlevel_logintip", 0);
                 if (null != var2) {
-                  of.decodeCp1252Text(var2, param0 - 31872);
+                  TextDecodeHelpers.decodeCp1252Text(var2, param0 - 31872);
                 }
-                var2 = vd.getGameTextFile("memberslevel_logintip", param0 - 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("memberslevel_logintip", param0 - 31873);
                 if (null != var2) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("displayname_none", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("displayname_none", 0);
                 if (null != var2) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("levelxofy1", param0 - 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("levelxofy1", param0 - 31873);
                 if (null != var2) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("levelxofy2", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("levelxofy2", 0);
                 if (null != var2) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("levelxofy", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("levelxofy", 0);
                 if (null != var2) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("ingame_level", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("ingame_level", 0);
                 if (null != var2) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("mouseoveranicon", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("mouseoveranicon", 0);
                 if (null != var2) {
-                  th.field_a = of.decodeCp1252Text(var2, 1);
+                  TrigonometryHelpers.field_a = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("notyetachieved", param0 ^ 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("notyetachieved", param0 ^ 31873);
                 if (null != var2) {
-                  PicturePreview.field_t = of.decodeCp1252Text(var2, 1);
+                  PicturePreview.field_t = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("achieved", param0 - 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("achieved", param0 - 31873);
                 if (var2 != null) {
-                  ViewportController.field_d = of.decodeCp1252Text(var2, 1);
+                  ViewportController.field_d = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("orbpoints", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("orbpoints", 0);
                 if (null != var2) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("orbcoins", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("orbcoins", 0);
                 if (null != var2) {
-                  of.decodeCp1252Text(var2, param0 - 31872);
+                  TextDecodeHelpers.decodeCp1252Text(var2, param0 - 31872);
                 }
-                var2 = vd.getGameTextFile("orbpoints_colon", param0 - 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("orbpoints_colon", param0 - 31873);
                 if (null != var2) {
-                  MainMenuScreen.field_p = of.decodeCp1252Text(var2, param0 - 31872);
+                  MainMenuScreen.field_p = TextDecodeHelpers.decodeCp1252Text(var2, param0 - 31872);
                 }
-                var2 = vd.getGameTextFile("orbcoins_colon", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("orbcoins_colon", 0);
                 if (null != var2) {
-                  DisplayNameForm.field_K = of.decodeCp1252Text(var2, param0 - 31872);
+                  DisplayNameForm.field_K = TextDecodeHelpers.decodeCp1252Text(var2, param0 - 31872);
                 }
-                var2 = vd.getGameTextFile("achieved_colon_description", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("achieved_colon_description", 0);
                 if (null != var2) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("secretachievement", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("secretachievement", 0);
                 if (null != var2) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("no_highscores", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("no_highscores", 0);
                 if (null != var2) {
-                  wo.field_a = of.decodeCp1252Text(var2, 1);
+                  SocialPanel.field_a = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("hs_name", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("hs_name", 0);
                 if (null != var2) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("hs_level", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("hs_level", 0);
                 if (var2 != null) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("hs_fromlevel", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("hs_fromlevel", 0);
                 if (null != var2) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("hs_tolevel", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("hs_tolevel", 0);
                 if (null != var2) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("hs_score", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("hs_score", 0);
                 if (null != var2) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("hs_end", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("hs_end", 0);
                 if (var2 != null) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("ingame_score", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("ingame_score", 0);
                 if (null != var2) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("score_colon", param0 ^ 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("score_colon", param0 ^ 31873);
                 if (null != var2) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("mp_leavegame", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("mp_leavegame", 0);
                 if (null != var2) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("mp_offerrematch", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("mp_offerrematch", 0);
                 if (null != var2) {
-                  dq.field_c = of.decodeCp1252Text(var2, param0 - 31872);
+                  TransitionPhase.field_c = TextDecodeHelpers.decodeCp1252Text(var2, param0 - 31872);
                 }
-                var2 = vd.getGameTextFile("mp_offerrematch_unrated", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("mp_offerrematch_unrated", 0);
                 if (null != var2) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("mp_acceptrematch", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("mp_acceptrematch", 0);
                 if (var2 != null) {
-                  ConditionalTextValue.field_c = of.decodeCp1252Text(var2, 1);
+                  ConditionalTextValue.field_c = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("mp_acceptrematch_unrated", param0 - 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("mp_acceptrematch_unrated", param0 - 31873);
                 if (null != var2) {
-                  of.decodeCp1252Text(var2, param0 ^ 31872);
+                  TextDecodeHelpers.decodeCp1252Text(var2, param0 ^ 31872);
                 }
-                var2 = vd.getGameTextFile("mp_cancelrematch", param0 ^ 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("mp_cancelrematch", param0 ^ 31873);
                 if (null != var2) {
-                  fg.field_c = of.decodeCp1252Text(var2, 1);
+                  RematchCaptionGlobals.field_c = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("mp_cancelrematch_unrated", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("mp_cancelrematch_unrated", 0);
                 if (var2 != null) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("mp_rematchnewgame", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("mp_rematchnewgame", 0);
                 if (var2 != null) {
-                  EmergentBehaviourBackground.field_t = of.decodeCp1252Text(var2, 1);
+                  EmergentBehaviourBackground.field_t = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("mp_rematchnewgame_unrated", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("mp_rematchnewgame_unrated", 0);
                 if (var2 != null) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("mp_x_wantstodraw", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("mp_x_wantstodraw", 0);
                 if (var2 != null) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("mp_x_offersrematch", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("mp_x_offersrematch", 0);
                 if (null != var2) {
-                  of.decodeCp1252Text(var2, param0 ^ 31872);
+                  TextDecodeHelpers.decodeCp1252Text(var2, param0 ^ 31872);
                 }
-                var2 = vd.getGameTextFile("mp_x_offersrematch_unrated", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("mp_x_offersrematch_unrated", 0);
                 if (var2 != null) {
-                  of.decodeCp1252Text(var2, param0 - 31872);
+                  TextDecodeHelpers.decodeCp1252Text(var2, param0 - 31872);
                 }
-                var2 = vd.getGameTextFile("mp_youofferrematch", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("mp_youofferrematch", 0);
                 if (var2 != null) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("mp_youofferrematch_unrated", param0 ^ 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("mp_youofferrematch_unrated", param0 ^ 31873);
                 if (null != var2) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("mp_youofferdraw", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("mp_youofferdraw", 0);
                 if (null != var2) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("mp_youresigned", param0 ^ 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("mp_youresigned", param0 ^ 31873);
                 if (null != var2) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("mp_youresigned_rematch", param0 - 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("mp_youresigned_rematch", param0 - 31873);
                 if (var2 != null) {
-                  of.decodeCp1252Text(var2, param0 - 31872);
+                  TextDecodeHelpers.decodeCp1252Text(var2, param0 - 31872);
                 }
-                var2 = vd.getGameTextFile("mp_x_hasresignedandleft", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("mp_x_hasresignedandleft", 0);
                 if (null != var2) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("mp_x_hasresigned_rematch", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("mp_x_hasresigned_rematch", 0);
                 if (var2 != null) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("mp_x_hasresigned", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("mp_x_hasresigned", 0);
                 if (var2 != null) {
-                  of.decodeCp1252Text(var2, param0 - 31872);
+                  TextDecodeHelpers.decodeCp1252Text(var2, param0 - 31872);
                 }
-                var2 = vd.getGameTextFile("mp_x_hasleft", param0 - 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("mp_x_hasleft", param0 - 31873);
                 if (null != var2) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("mp_x_haswon", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("mp_x_haswon", 0);
                 if (null != var2) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("mp_youhavewon", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("mp_youhavewon", 0);
                 if (var2 != null) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("mp_gamedrawn", param0 ^ 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("mp_gamedrawn", param0 ^ 31873);
                 if (var2 != null) {
-                  of.decodeCp1252Text(var2, param0 - 31872);
+                  TextDecodeHelpers.decodeCp1252Text(var2, param0 - 31872);
                 }
-                var2 = vd.getGameTextFile("mp_timeremaining", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("mp_timeremaining", 0);
                 if (var2 != null) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("mp_x_turn", param0 ^ 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("mp_x_turn", param0 ^ 31873);
                 if (var2 != null) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("mp_yourturn", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("mp_yourturn", 0);
                 if (var2 != null) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("gameover", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("gameover", 0);
                 if (var2 != null) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("mp_hidechat", param0 - 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("mp_hidechat", param0 - 31873);
                 if (null != var2) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("mp_showchat_nounread", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("mp_showchat_nounread", 0);
                 if (null != var2) {
-                  of.decodeCp1252Text(var2, param0 ^ 31872);
+                  TextDecodeHelpers.decodeCp1252Text(var2, param0 ^ 31872);
                 }
-                var2 = vd.getGameTextFile("mp_showchat_unread1", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("mp_showchat_unread1", 0);
                 if (var2 != null) {
-                  of.decodeCp1252Text(var2, param0 ^ 31872);
+                  TextDecodeHelpers.decodeCp1252Text(var2, param0 ^ 31872);
                 }
-                var2 = vd.getGameTextFile("mp_showchat_unread2", param0 - 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("mp_showchat_unread2", param0 - 31873);
                 if (var2 != null) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("click_to_quickchat", param0 - 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("click_to_quickchat", param0 - 31873);
                 if (var2 != null) {
-                  JaggrabDownloader.field_i = of.decodeCp1252Text(var2, 1);
+                  JaggrabDownloader.field_i = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("autorespond", param0 ^ 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("autorespond", param0 ^ 31873);
                 if (null != var2) {
-                  NodeHashTable.field_d = of.decodeCp1252Text(var2, 1);
+                  NodeHashTable.field_d = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("quickchat_help", param0 ^ 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("quickchat_help", param0 ^ 31873);
                 if (null != var2) {
-                  ui.field_g = of.decodeCp1252Text(var2, 1);
+                  Cp1252DecodeHelpers.field_g = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("quickchat_help_title", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("quickchat_help_title", 0);
                 if (null != var2) {
-                  TextFieldValidator.field_g = of.decodeCp1252Text(var2, 1);
+                  TextFieldValidator.field_g = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("quickchat_shortcut_help,0", param0 - 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("quickchat_shortcut_help,0", param0 - 31873);
                 if (null != var2) {
-                  TextLayout.field_c[0] = of.decodeCp1252Text(var2, 1);
+                  TextLayout.field_c[0] = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("quickchat_shortcut_help,1", param0 - 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("quickchat_shortcut_help,1", param0 - 31873);
                 if (null != var2) {
-                  TextLayout.field_c[1] = of.decodeCp1252Text(var2, 1);
+                  TextLayout.field_c[1] = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("quickchat_shortcut_help,2", param0 ^ 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("quickchat_shortcut_help,2", param0 ^ 31873);
                 if (null != var2) {
-                  TextLayout.field_c[2] = of.decodeCp1252Text(var2, param0 - 31872);
+                  TextLayout.field_c[2] = TextDecodeHelpers.decodeCp1252Text(var2, param0 - 31872);
                 }
-                var2 = vd.getGameTextFile("quickchat_shortcut_help,3", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("quickchat_shortcut_help,3", 0);
                 if (var2 != null) {
-                  TextLayout.field_c[3] = of.decodeCp1252Text(var2, 1);
+                  TextLayout.field_c[3] = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("quickchat_shortcut_help,4", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("quickchat_shortcut_help,4", 0);
                 if (var2 != null) {
-                  TextLayout.field_c[4] = of.decodeCp1252Text(var2, DraggableWidget.intXor(param0, 31872));
+                  TextLayout.field_c[4] = TextDecodeHelpers.decodeCp1252Text(var2, DraggableWidget.intXor(param0, 31872));
                 }
-                var2 = vd.getGameTextFile("quickchat_shortcut_help,5", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("quickchat_shortcut_help,5", 0);
                 if (null != var2) {
-                  TextLayout.field_c[5] = of.decodeCp1252Text(var2, DraggableWidget.intXor(param0, 31872));
+                  TextLayout.field_c[5] = TextDecodeHelpers.decodeCp1252Text(var2, DraggableWidget.intXor(param0, 31872));
                 }
-                var2 = vd.getGameTextFile("quickchat_shortcut_keys,0", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("quickchat_shortcut_keys,0", 0);
                 if (null != var2) {
-                  SpriteState.field_I[0] = of.decodeCp1252Text(var2, 1);
+                  SpriteState.field_I[0] = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("quickchat_shortcut_keys,1", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("quickchat_shortcut_keys,1", 0);
                 if (var2 != null) {
-                  SpriteState.field_I[1] = of.decodeCp1252Text(var2, DraggableWidget.intXor(param0, 31872));
+                  SpriteState.field_I[1] = TextDecodeHelpers.decodeCp1252Text(var2, DraggableWidget.intXor(param0, 31872));
                 }
-                var2 = vd.getGameTextFile("quickchat_shortcut_keys,2", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("quickchat_shortcut_keys,2", 0);
                 if (var2 != null) {
-                  SpriteState.field_I[2] = of.decodeCp1252Text(var2, 1);
+                  SpriteState.field_I[2] = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("quickchat_shortcut_keys,3", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("quickchat_shortcut_keys,3", 0);
                 if (var2 != null) {
-                  SpriteState.field_I[3] = of.decodeCp1252Text(var2, 1);
+                  SpriteState.field_I[3] = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("quickchat_shortcut_keys,4", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("quickchat_shortcut_keys,4", 0);
                 if (null != var2) {
-                  SpriteState.field_I[4] = of.decodeCp1252Text(var2, 1);
+                  SpriteState.field_I[4] = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("quickchat_shortcut_keys,5", param0 - 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("quickchat_shortcut_keys,5", param0 - 31873);
                 if (var2 != null) {
-                  SpriteState.field_I[5] = of.decodeCp1252Text(var2, 1);
+                  SpriteState.field_I[5] = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("keychar_the_character_under_questionmark", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("keychar_the_character_under_questionmark", 0);
                 if (null != var2) {
-                  PieceTiming.field_d = cm.decodeCp1252Byte(var2[0], 63);
+                  PieceTiming.field_d = VolumeControlledVoice.decodeCp1252Byte(var2[0], 63);
                 }
-                var2 = vd.getGameTextFile("rating_noratings", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("rating_noratings", 0);
                 if (var2 != null) {
-                  SpriteState.field_z = of.decodeCp1252Text(var2, 1);
+                  SpriteState.field_z = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("rating_rating", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("rating_rating", 0);
                 if (null != var2) {
-                  MarkerSliderPainter.field_b = of.decodeCp1252Text(var2, 1);
+                  MarkerSliderPainter.field_b = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("rating_played", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("rating_played", 0);
                 if (null != var2) {
-                  TextHotspotWidget.field_N = of.decodeCp1252Text(var2, 1);
+                  TextHotspotWidget.field_N = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("rating_won", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("rating_won", 0);
                 if (null != var2) {
-                  wa.field_d = of.decodeCp1252Text(var2, 1);
+                  SpriteBuildHelpers.field_d = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("rating_lost", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("rating_lost", 0);
                 if (null != var2) {
-                  ab.field_e = of.decodeCp1252Text(var2, param0 ^ 31872);
+                  ResultCaptionGlobals.field_e = TextDecodeHelpers.decodeCp1252Text(var2, param0 ^ 31872);
                 }
-                var2 = vd.getGameTextFile("rating_drawn", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("rating_drawn", 0);
                 if (var2 != null) {
-                  IntrusiveNode.field_d = of.decodeCp1252Text(var2, 1);
+                  IntrusiveNode.field_d = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("benefits_fullscreen", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("benefits_fullscreen", 0);
                 if (var2 != null) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("benefits_noadverts", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("benefits_noadverts", 0);
                 if (null != var2) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("benefits_price", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("benefits_price", 0);
                 if (var2 != null) {
-                  Cloud.field_p = of.decodeCp1252Text(var2, 1);
+                  Cloud.field_p = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("members_expansion_benefits,0", param0 ^ 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("members_expansion_benefits,0", param0 ^ 31873);
                 if (var2 != null) {
-                  DateInputWidget.field_I[0] = of.decodeCp1252Text(var2, 1);
+                  DateInputWidget.field_I[0] = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("members_expansion_benefits,1", param0 - 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("members_expansion_benefits,1", param0 - 31873);
                 if (null != var2) {
-                  DateInputWidget.field_I[1] = of.decodeCp1252Text(var2, 1);
+                  DateInputWidget.field_I[1] = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("members_expansion_benefits,2", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("members_expansion_benefits,2", 0);
                 if (null != var2) {
-                  DateInputWidget.field_I[2] = of.decodeCp1252Text(var2, 1);
+                  DateInputWidget.field_I[2] = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("members_expansion_price_top", param0 - 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("members_expansion_price_top", param0 - 31873);
                 if (null != var2) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("members_expansion_price_bottom", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("members_expansion_price_bottom", 0);
                 if (null != var2) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("reconnect_lost_seq,0", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("reconnect_lost_seq,0", 0);
                 if (var2 != null) {
-                  CanvasRasterBuffer.field_c[0] = of.decodeCp1252Text(var2, 1);
+                  CanvasRasterBuffer.field_c[0] = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("reconnect_lost_seq,1", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("reconnect_lost_seq,1", 0);
                 if (var2 != null) {
-                  CanvasRasterBuffer.field_c[1] = of.decodeCp1252Text(var2, 1);
+                  CanvasRasterBuffer.field_c[1] = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("reconnect_lost_seq,2", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("reconnect_lost_seq,2", 0);
                 if (null != var2) {
-                  CanvasRasterBuffer.field_c[2] = of.decodeCp1252Text(var2, 1);
+                  CanvasRasterBuffer.field_c[2] = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("reconnect_lost_seq,3", param0 ^ 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("reconnect_lost_seq,3", param0 ^ 31873);
                 if (null != var2) {
-                  CanvasRasterBuffer.field_c[3] = of.decodeCp1252Text(var2, 1);
+                  CanvasRasterBuffer.field_c[3] = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("reconnect_lost", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("reconnect_lost", 0);
                 if (null != var2) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("reconnect_restored", param0 - 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("reconnect_restored", param0 - 31873);
                 if (var2 != null) {
-                  of.decodeCp1252Text(var2, param0 - 31872);
+                  TextDecodeHelpers.decodeCp1252Text(var2, param0 - 31872);
                 }
-                var2 = vd.getGameTextFile("reconnect_please_check", param0 ^ 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("reconnect_please_check", param0 ^ 31873);
                 if (null != var2) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("reconnect_wait", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("reconnect_wait", 0);
                 if (null != var2) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("reconnect_retry", param0 - 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("reconnect_retry", param0 - 31873);
                 if (var2 != null) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("reconnect_resume", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("reconnect_resume", 0);
                 if (null != var2) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("reconnect_or", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("reconnect_or", 0);
                 if (var2 != null) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("reconnect_exitfs", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("reconnect_exitfs", 0);
                 if (var2 != null) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("reconnect_exitfs_quit", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("reconnect_exitfs_quit", 0);
                 if (null != var2) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("reconnect_quit", param0 ^ 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("reconnect_quit", param0 ^ 31873);
                 if (null != var2) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("reconnect_check_fs", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("reconnect_check_fs", 0);
                 if (var2 != null) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("reconnect_check_nonfs", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("reconnect_check_nonfs", 0);
                 if (null != var2) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("fs_accept_beforeaccept", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("fs_accept_beforeaccept", 0);
                 if (var2 != null) {
-                  vf.field_c = of.decodeCp1252Text(var2, 1);
+                  PageReloadHelpers.field_c = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("fs_button_accept", param0 - 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("fs_button_accept", param0 - 31873);
                 if (var2 != null) {
-                  MusicPatch.field_q = of.decodeCp1252Text(var2, 1);
+                  MusicPatch.field_q = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("fs_accept_afteraccept", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("fs_accept_afteraccept", 0);
                 if (var2 != null) {
-                  QuickChatPhraseCache.field_n = of.decodeCp1252Text(var2, 1);
+                  QuickChatPhraseCache.field_n = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("fs_button_cancel", param0 - 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("fs_button_cancel", param0 - 31873);
                 if (var2 != null) {
-                  vm.field_g = of.decodeCp1252Text(var2, 1);
+                  LobbyGameLookupHelpers.field_g = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("fs_accept_aftercancel", param0 ^ 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("fs_accept_aftercancel", param0 ^ 31873);
                 if (var2 != null) {
-                  DirectByteStorage.field_m = of.decodeCp1252Text(var2, param0 - 31872);
+                  DirectByteStorage.field_m = TextDecodeHelpers.decodeCp1252Text(var2, param0 - 31872);
                 }
-                var2 = vd.getGameTextFile("fs_accept_countdown_sing", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("fs_accept_countdown_sing", 0);
                 if (null != var2) {
-                  DualLinkNode.field_n = of.decodeCp1252Text(var2, 1);
+                  DualLinkNode.field_n = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("fs_accept_countdown_pl", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("fs_accept_countdown_pl", 0);
                 if (var2 != null) {
-                  BirthDateEntryPanel.field_R = of.decodeCp1252Text(var2, 1);
+                  BirthDateEntryPanel.field_R = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("fs_nonmember", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("fs_nonmember", 0);
                 if (var2 != null) {
-                  l.field_t = of.decodeCp1252Text(var2, 1);
+                  MessageScreen.field_t = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("fs_button_close", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("fs_button_close", 0);
                 if (var2 != null) {
-                  TabbedPanel.field_Hb = of.decodeCp1252Text(var2, 1);
+                  TabbedPanel.field_Hb = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("fs_button_members", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("fs_button_members", 0);
                 if (null != var2) {
-                  SoundVoice.field_k = of.decodeCp1252Text(var2, param0 ^ 31872);
+                  SoundVoice.field_k = TextDecodeHelpers.decodeCp1252Text(var2, param0 ^ 31872);
                 }
-                var2 = vd.getGameTextFile("fs_unavailable", param0 ^ 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("fs_unavailable", param0 ^ 31873);
                 if (var2 != null) {
-                  el.field_c = of.decodeCp1252Text(var2, 1);
+                  EmailValidationState.field_c = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("fs_unavailable_try_signed_applet", param0 - 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("fs_unavailable_try_signed_applet", param0 - 31873);
                 if (var2 != null) {
-                  TextLayoutLine.field_a = of.decodeCp1252Text(var2, param0 ^ 31872);
+                  TextLayoutLine.field_a = TextDecodeHelpers.decodeCp1252Text(var2, param0 ^ 31872);
                 }
-                var2 = vd.getGameTextFile("fs_focus", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("fs_focus", 0);
                 if (null != var2) {
-                  l.field_o = of.decodeCp1252Text(var2, 1);
+                  MessageScreen.field_o = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("fs_focus_or_resolution", param0 ^ 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("fs_focus_or_resolution", param0 ^ 31873);
                 if (var2 != null) {
-                  ViewportController.field_e = of.decodeCp1252Text(var2, 1);
+                  ViewportController.field_e = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("fs_timeout", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("fs_timeout", 0);
                 if (var2 != null) {
-                  CanvasRasterBuffer.field_k = of.decodeCp1252Text(var2, param0 ^ 31872);
+                  CanvasRasterBuffer.field_k = TextDecodeHelpers.decodeCp1252Text(var2, param0 ^ 31872);
                 }
-                var2 = vd.getGameTextFile("fs_button_tryagain", param0 - 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("fs_button_tryagain", param0 - 31873);
                 if (var2 != null) {
-                  StatusBar.field_b = of.decodeCp1252Text(var2, param0 - 31872);
+                  StatusBar.field_b = TextDecodeHelpers.decodeCp1252Text(var2, param0 - 31872);
                 }
-                var2 = vd.getGameTextFile("graphics_ui_fs_countdown", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("graphics_ui_fs_countdown", 0);
                 if (var2 != null) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("mb_caption_title", param0 - 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("mb_caption_title", param0 - 31873);
                 if (null != var2) {
-                  ri.field_i = of.decodeCp1252Text(var2, 1);
+                  ChatHistoryAllocator.field_i = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("mb_including_gamename", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("mb_including_gamename", 0);
                 if (null != var2) {
-                  dk.field_f = of.decodeCp1252Text(var2, param0 ^ 31872);
+                  NineSliceFrameHelpers.field_f = TextDecodeHelpers.decodeCp1252Text(var2, param0 ^ 31872);
                 }
-                var2 = vd.getGameTextFile("mb_full_access_1", param0 ^ 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("mb_full_access_1", param0 ^ 31873);
                 if (var2 != null) {
-                  MusicCrossfadeStream.field_s = of.decodeCp1252Text(var2, 1);
+                  MusicCrossfadeStream.field_s = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("mb_full_access_2", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("mb_full_access_2", 0);
                 if (var2 != null) {
-                  TimerBarDemo.field_n = of.decodeCp1252Text(var2, 1);
+                  TimerBarDemo.field_n = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("mb_achievement_count_1", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("mb_achievement_count_1", 0);
                 if (null != var2) {
-                  ab.field_d = of.decodeCp1252Text(var2, param0 - 31872);
+                  ResultCaptionGlobals.field_d = TextDecodeHelpers.decodeCp1252Text(var2, param0 - 31872);
                 }
-                var2 = vd.getGameTextFile("mb_achievement_count_2", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("mb_achievement_count_2", 0);
                 if (var2 != null) {
-                  BoardView.field_l = of.decodeCp1252Text(var2, 1);
+                  BoardView.field_l = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("mb_exclusive_1", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("mb_exclusive_1", 0);
                 if (var2 != null) {
-                  UiComponent.field_w = of.decodeCp1252Text(var2, 1);
+                  UiComponent.field_w = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("mb_exclusive_2", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("mb_exclusive_2", 0);
                 if (var2 != null) {
-                  ri.field_d = of.decodeCp1252Text(var2, 1);
+                  ChatHistoryAllocator.field_d = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("me_extra_benefits", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("me_extra_benefits", 0);
                 if (null != var2) {
-                  of.decodeCp1252Text(var2, param0 - 31872);
+                  TextDecodeHelpers.decodeCp1252Text(var2, param0 - 31872);
                 }
-                var2 = vd.getGameTextFile("hs_friend_tip", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("hs_friend_tip", 0);
                 if (var2 != null) {
-                  MenuInputState.field_b = of.decodeCp1252Text(var2, 1);
+                  MenuInputState.field_b = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("hs_friend_tip_multi", param0 ^ 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("hs_friend_tip_multi", param0 ^ 31873);
                 if (null != var2) {
-                  of.decodeCp1252Text(var2, param0 ^ 31872);
+                  TextDecodeHelpers.decodeCp1252Text(var2, param0 ^ 31872);
                 }
-                var2 = vd.getGameTextFile("hs_mode_name,0", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("hs_mode_name,0", 0);
                 if (var2 != null) {
-                  LoadingStepTracker.field_k[0] = of.decodeCp1252Text(var2, 1);
+                  LoadingStepTracker.field_k[0] = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("hs_mode_name,1", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("hs_mode_name,1", 0);
                 if (null != var2) {
-                  LoadingStepTracker.field_k[1] = of.decodeCp1252Text(var2, 1);
+                  LoadingStepTracker.field_k[1] = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("hs_mode_name,2", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("hs_mode_name,2", 0);
                 if (null != var2) {
-                  LoadingStepTracker.field_k[2] = of.decodeCp1252Text(var2, 1);
+                  LoadingStepTracker.field_k[2] = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("rating_mode_name,0", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("rating_mode_name,0", 0);
                 if (var2 != null) {
-                  dg.field_c[0] = of.decodeCp1252Text(var2, 1);
+                  QuickChatSendHelpers.field_c[0] = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("rating_mode_name,1", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("rating_mode_name,1", 0);
                 if (null != var2) {
-                  dg.field_c[1] = of.decodeCp1252Text(var2, 1);
+                  QuickChatSendHelpers.field_c[1] = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("rating_mode_long_name,0", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("rating_mode_long_name,0", 0);
                 if (null != var2) {
-                  DualLinkNode.field_k[0] = of.decodeCp1252Text(var2, 1);
+                  DualLinkNode.field_k[0] = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("rating_mode_long_name,1", param0 ^ 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("rating_mode_long_name,1", param0 ^ 31873);
                 if (null != var2) {
-                  DualLinkNode.field_k[1] = of.decodeCp1252Text(var2, 1);
+                  DualLinkNode.field_k[1] = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("graphics_config_fixed_size", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("graphics_config_fixed_size", 0);
                 if (null != var2) {
-                  of.decodeCp1252Text(var2, param0 - 31872);
+                  TextDecodeHelpers.decodeCp1252Text(var2, param0 - 31872);
                 }
-                var2 = vd.getGameTextFile("graphics_config_resizable", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("graphics_config_resizable", 0);
                 if (null != var2) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("graphics_config_fullscreen", param0 - 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("graphics_config_fullscreen", param0 - 31873);
                 if (null != var2) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("graphics_config_done", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("graphics_config_done", 0);
                 if (var2 != null) {
-                  of.decodeCp1252Text(var2, param0 ^ 31872);
+                  TextDecodeHelpers.decodeCp1252Text(var2, param0 ^ 31872);
                 }
-                var2 = vd.getGameTextFile("graphics_config_apply", param0 - 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("graphics_config_apply", param0 - 31873);
                 if (null != var2) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("graphics_config_title", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("graphics_config_title", 0);
                 if (var2 != null) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("graphics_config_instruction", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("graphics_config_instruction", 0);
                 if (null != var2) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("graphics_config_need_memory", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("graphics_config_need_memory", 0);
                 if (var2 != null) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("pleasewait_dotdotdot", param0 ^ param0);
+                var2 = ChatAppendHelpers.getGameTextFile("pleasewait_dotdotdot", param0 ^ param0);
                 if (var2 != null) {
-                  GrowableIntList.field_b = of.decodeCp1252Text(var2, 1);
+                  GrowableIntList.field_b = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("serviceunavailable", param0 - 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("serviceunavailable", param0 - 31873);
                 if (null != var2) {
-                  MenuInputState.field_l = of.decodeCp1252Text(var2, 1);
+                  MenuInputState.field_l = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("createtouse", param0 - 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("createtouse", param0 - 31873);
                 if (null != var2) {
-                  ScoreMarkerDemo.field_h = of.decodeCp1252Text(var2, 1);
+                  ScoreMarkerDemo.field_h = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("achievementsoffline", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("achievementsoffline", 0);
                 if (var2 != null) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("warning", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("warning", 0);
                 if (var2 != null) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("DEFAULT_PLAYER_NAME", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("DEFAULT_PLAYER_NAME", 0);
                 if (var2 != null) {
-                  cd.field_d = of.decodeCp1252Text(var2, 1);
+                  LoginMethodGlobals.field_d = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("mustlogin1", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("mustlogin1", 0);
                 if (var2 != null) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("mustlogin2,1", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("mustlogin2,1", 0);
                 if (null != var2) {
-                  fp.field_a[1] = of.decodeCp1252Text(var2, 1);
+                  NoticeKind.field_a[1] = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("mustlogin2,2", param0 ^ 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("mustlogin2,2", param0 ^ 31873);
                 if (var2 != null) {
-                  fp.field_a[2] = of.decodeCp1252Text(var2, param0 - 31872);
+                  NoticeKind.field_a[2] = TextDecodeHelpers.decodeCp1252Text(var2, param0 - 31872);
                 }
-                var2 = vd.getGameTextFile("mustlogin2,3", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("mustlogin2,3", 0);
                 if (null != var2) {
-                  fp.field_a[3] = of.decodeCp1252Text(var2, DraggableWidget.intXor(param0, 31872));
+                  NoticeKind.field_a[3] = TextDecodeHelpers.decodeCp1252Text(var2, DraggableWidget.intXor(param0, 31872));
                 }
-                var2 = vd.getGameTextFile("mustlogin2,4", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("mustlogin2,4", 0);
                 if (var2 != null) {
-                  fp.field_a[4] = of.decodeCp1252Text(var2, 1);
+                  NoticeKind.field_a[4] = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("mustlogin2,5", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("mustlogin2,5", 0);
                 if (var2 != null) {
-                  fp.field_a[5] = of.decodeCp1252Text(var2, 1);
+                  NoticeKind.field_a[5] = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("mustlogin2,6", param0 - 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("mustlogin2,6", param0 - 31873);
                 if (null != var2) {
-                  fp.field_a[6] = of.decodeCp1252Text(var2, DraggableWidget.intXor(param0, 31872));
+                  NoticeKind.field_a[6] = TextDecodeHelpers.decodeCp1252Text(var2, DraggableWidget.intXor(param0, 31872));
                 }
-                var2 = vd.getGameTextFile("mustlogin2,7", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("mustlogin2,7", 0);
                 if (var2 != null) {
-                  fp.field_a[7] = of.decodeCp1252Text(var2, 1);
+                  NoticeKind.field_a[7] = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("mustlogin3,1", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("mustlogin3,1", 0);
                 if (var2 != null) {
-                  WidgetStyleLayer.field_i[1] = of.decodeCp1252Text(var2, 1);
+                  WidgetStyleLayer.field_i[1] = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("mustlogin3,2", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("mustlogin3,2", 0);
                 if (null != var2) {
-                  WidgetStyleLayer.field_i[2] = of.decodeCp1252Text(var2, 1);
+                  WidgetStyleLayer.field_i[2] = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("mustlogin3,3", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("mustlogin3,3", 0);
                 if (null != var2) {
-                  WidgetStyleLayer.field_i[3] = of.decodeCp1252Text(var2, 1);
+                  WidgetStyleLayer.field_i[3] = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("mustlogin3,4", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("mustlogin3,4", 0);
                 if (var2 != null) {
-                  WidgetStyleLayer.field_i[4] = of.decodeCp1252Text(var2, param0 - 31872);
+                  WidgetStyleLayer.field_i[4] = TextDecodeHelpers.decodeCp1252Text(var2, param0 - 31872);
                 }
-                var2 = vd.getGameTextFile("mustlogin3,5", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("mustlogin3,5", 0);
                 if (var2 != null) {
-                  WidgetStyleLayer.field_i[5] = of.decodeCp1252Text(var2, 1);
+                  WidgetStyleLayer.field_i[5] = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("mustlogin3,6", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("mustlogin3,6", 0);
                 if (var2 != null) {
-                  WidgetStyleLayer.field_i[6] = of.decodeCp1252Text(var2, 1);
+                  WidgetStyleLayer.field_i[6] = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("mustlogin3,7", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("mustlogin3,7", 0);
                 if (null != var2) {
-                  WidgetStyleLayer.field_i[7] = of.decodeCp1252Text(var2, 1);
+                  WidgetStyleLayer.field_i[7] = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("discard", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("discard", 0);
                 if (null != var2) {
-                  ScoreMarkerDemo.field_i = of.decodeCp1252Text(var2, 1);
+                  ScoreMarkerDemo.field_i = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("mustlogin4,1", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("mustlogin4,1", 0);
                 if (var2 != null) {
-                  TextTableInitializer.field_a[1] = of.decodeCp1252Text(var2, 1);
+                  TextTableInitializer.field_a[1] = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("mustlogin4,2", param0 ^ 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("mustlogin4,2", param0 ^ 31873);
                 if (null != var2) {
-                  TextTableInitializer.field_a[2] = of.decodeCp1252Text(var2, DraggableWidget.intXor(param0, 31872));
+                  TextTableInitializer.field_a[2] = TextDecodeHelpers.decodeCp1252Text(var2, DraggableWidget.intXor(param0, 31872));
                 }
-                var2 = vd.getGameTextFile("mustlogin4,3", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("mustlogin4,3", 0);
                 if (null != var2) {
-                  TextTableInitializer.field_a[3] = of.decodeCp1252Text(var2, 1);
+                  TextTableInitializer.field_a[3] = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
             }
             void runChunk3() throws java.lang.RuntimeException {
-                var2 = vd.getGameTextFile("mustlogin4,4", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("mustlogin4,4", 0);
                 if (var2 != null) {
-                  TextTableInitializer.field_a[4] = of.decodeCp1252Text(var2, param0 - 31872);
+                  TextTableInitializer.field_a[4] = TextDecodeHelpers.decodeCp1252Text(var2, param0 - 31872);
                 }
-                var2 = vd.getGameTextFile("mustlogin4,5", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("mustlogin4,5", 0);
                 if (null != var2) {
-                  TextTableInitializer.field_a[5] = of.decodeCp1252Text(var2, 1);
+                  TextTableInitializer.field_a[5] = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("mustlogin4,6", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("mustlogin4,6", 0);
                 if (null != var2) {
-                  TextTableInitializer.field_a[6] = of.decodeCp1252Text(var2, 1);
+                  TextTableInitializer.field_a[6] = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("mustlogin4,7", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("mustlogin4,7", 0);
                 if (var2 != null) {
-                  TextTableInitializer.field_a[7] = of.decodeCp1252Text(var2, 1);
+                  TextTableInitializer.field_a[7] = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("mustlogin_notloggedin", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("mustlogin_notloggedin", 0);
                 if (null != var2) {
-                  EmailValidator.field_p = of.decodeCp1252Text(var2, 1);
+                  EmailValidator.field_p = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("mustlogin_alternate,1", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("mustlogin_alternate,1", 0);
                 if (var2 != null) {
-                  MouseWheelHandler.field_a[1] = of.decodeCp1252Text(var2, 1);
+                  MouseWheelHandler.field_a[1] = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("mustlogin_alternate,2", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("mustlogin_alternate,2", 0);
                 if (var2 != null) {
-                  MouseWheelHandler.field_a[2] = of.decodeCp1252Text(var2, 1);
+                  MouseWheelHandler.field_a[2] = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("mustlogin_alternate,3", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("mustlogin_alternate,3", 0);
                 if (null != var2) {
-                  MouseWheelHandler.field_a[3] = of.decodeCp1252Text(var2, 1);
+                  MouseWheelHandler.field_a[3] = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("mustlogin_alternate,4", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("mustlogin_alternate,4", 0);
                 if (var2 != null) {
-                  MouseWheelHandler.field_a[4] = of.decodeCp1252Text(var2, 1);
+                  MouseWheelHandler.field_a[4] = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("mustlogin_alternate,5", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("mustlogin_alternate,5", 0);
                 if (var2 != null) {
-                  MouseWheelHandler.field_a[5] = of.decodeCp1252Text(var2, param0 - 31872);
+                  MouseWheelHandler.field_a[5] = TextDecodeHelpers.decodeCp1252Text(var2, param0 - 31872);
                 }
-                var2 = vd.getGameTextFile("mustlogin_alternate,6", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("mustlogin_alternate,6", 0);
                 if (var2 != null) {
-                  MouseWheelHandler.field_a[6] = of.decodeCp1252Text(var2, param0 - 31872);
+                  MouseWheelHandler.field_a[6] = TextDecodeHelpers.decodeCp1252Text(var2, param0 - 31872);
                 }
-                var2 = vd.getGameTextFile("mustlogin_alternate,7", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("mustlogin_alternate,7", 0);
                 if (null != var2) {
-                  MouseWheelHandler.field_a[7] = of.decodeCp1252Text(var2, 1);
+                  MouseWheelHandler.field_a[7] = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("subscription_cost_monthly,0", param0 - 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("subscription_cost_monthly,0", param0 - 31873);
                 if (null != var2) {
-                  wp.field_b[0] = of.decodeCp1252Text(var2, param0 - 31872);
+                  CurrencyPriceGlobals.field_b[0] = TextDecodeHelpers.decodeCp1252Text(var2, param0 - 31872);
                 }
-                var2 = vd.getGameTextFile("subscription_cost_monthly,1", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("subscription_cost_monthly,1", 0);
                 if (null != var2) {
-                  wp.field_b[1] = of.decodeCp1252Text(var2, 1);
+                  CurrencyPriceGlobals.field_b[1] = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("subscription_cost_monthly,2", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("subscription_cost_monthly,2", 0);
                 if (var2 != null) {
-                  wp.field_b[2] = of.decodeCp1252Text(var2, DraggableWidget.intXor(param0, 31872));
+                  CurrencyPriceGlobals.field_b[2] = TextDecodeHelpers.decodeCp1252Text(var2, DraggableWidget.intXor(param0, 31872));
                 }
-                var2 = vd.getGameTextFile("subscription_cost_monthly,3", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("subscription_cost_monthly,3", 0);
                 if (var2 != null) {
-                  wp.field_b[3] = of.decodeCp1252Text(var2, param0 - 31872);
+                  CurrencyPriceGlobals.field_b[3] = TextDecodeHelpers.decodeCp1252Text(var2, param0 - 31872);
                 }
-                var2 = vd.getGameTextFile("subscription_cost_monthly,4", param0 ^ 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("subscription_cost_monthly,4", param0 ^ 31873);
                 if (null != var2) {
-                  wp.field_b[4] = of.decodeCp1252Text(var2, 1);
+                  CurrencyPriceGlobals.field_b[4] = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("subscription_cost_monthly,5", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("subscription_cost_monthly,5", 0);
                 if (var2 != null) {
-                  wp.field_b[5] = of.decodeCp1252Text(var2, 1);
+                  CurrencyPriceGlobals.field_b[5] = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("subscription_cost_monthly,6", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("subscription_cost_monthly,6", 0);
                 if (null != var2) {
-                  wp.field_b[6] = of.decodeCp1252Text(var2, 1);
+                  CurrencyPriceGlobals.field_b[6] = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("subscription_cost_monthly,7", param0 - 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("subscription_cost_monthly,7", param0 - 31873);
                 if (var2 != null) {
-                  wp.field_b[7] = of.decodeCp1252Text(var2, param0 - 31872);
+                  CurrencyPriceGlobals.field_b[7] = TextDecodeHelpers.decodeCp1252Text(var2, param0 - 31872);
                 }
-                var2 = vd.getGameTextFile("subscription_cost_monthly,8", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("subscription_cost_monthly,8", 0);
                 if (null != var2) {
-                  wp.field_b[8] = of.decodeCp1252Text(var2, 1);
+                  CurrencyPriceGlobals.field_b[8] = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("subscription_cost_monthly,9", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("subscription_cost_monthly,9", 0);
                 if (null != var2) {
-                  wp.field_b[9] = of.decodeCp1252Text(var2, 1);
+                  CurrencyPriceGlobals.field_b[9] = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("subscription_cost_monthly,10", param0 ^ 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("subscription_cost_monthly,10", param0 ^ 31873);
                 if (var2 != null) {
-                  wp.field_b[10] = of.decodeCp1252Text(var2, 1);
+                  CurrencyPriceGlobals.field_b[10] = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("subscription_cost_monthly,11", param0 - 31873);
+                var2 = ChatAppendHelpers.getGameTextFile("subscription_cost_monthly,11", param0 - 31873);
                 if (null != var2) {
-                  wp.field_b[11] = of.decodeCp1252Text(var2, 1);
+                  CurrencyPriceGlobals.field_b[11] = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("subscription_cost_monthly,12", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("subscription_cost_monthly,12", 0);
                 if (var2 != null) {
-                  wp.field_b[12] = of.decodeCp1252Text(var2, 1);
+                  CurrencyPriceGlobals.field_b[12] = TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
-                var2 = vd.getGameTextFile("sentence_separator", 0);
+                var2 = ChatAppendHelpers.getGameTextFile("sentence_separator", 0);
                 if (var2 != null) {
-                  of.decodeCp1252Text(var2, 1);
+                  TextDecodeHelpers.decodeCp1252Text(var2, 1);
                 }
                 AsyncValidationResult.field_b = null;
             }
@@ -3087,29 +3087,29 @@ final class GameModeSelectScreen extends MenuScreen {
           if (param0 > -35) {
             GameModeSelectScreen.loadTextTable(-67, (ResourceArchive) null);
           }
-          if (ke.field_a != 96 &&
-            ke.field_a != 97 &&
-            ke.field_a != 98 &&
-            99 != ke.field_a) {
+          if (KeyEventGlobals.field_a != 96 &&
+            KeyEventGlobals.field_a != 97 &&
+            KeyEventGlobals.field_a != 98 &&
+            99 != KeyEventGlobals.field_a) {
             super.handleNavigation(-92);
             if (var3 == 0) {
               return;
             }
           }
           if (var2_int != -1) {
-            if (96 == ke.field_a &&
+            if (96 == KeyEventGlobals.field_a &&
               1 == var2_int) {
               this.field_g.selectIndex(false, 0);
             }
-            if (ke.field_a == 97 &&
+            if (KeyEventGlobals.field_a == 97 &&
               0 == var2_int) {
               this.field_g.selectIndex(false, 1);
             }
-            if (98 == ke.field_a &&
+            if (98 == KeyEventGlobals.field_a &&
               2 == var2_int) {
               this.field_g.selectIndex(false, this.field_t);
             }
-            if (ke.field_a != 99) {
+            if (KeyEventGlobals.field_a != 99) {
               return;
             }
             if (2 <= var2_int) {
@@ -3139,7 +3139,7 @@ final class GameModeSelectScreen extends MenuScreen {
         int stackIn_41_0 = 0;
         int stackIn_45_0 = 0;
         int stackIn_49_0 = 0;
-        jk stackIn_65_0 = null;
+        MeshColourEntry stackIn_65_0 = null;
         int stackIn_73_0 = 0;
         int stackIn_78_0 = 0;
         RuntimeException stackIn_84_0 = null;
@@ -3162,7 +3162,7 @@ final class GameModeSelectScreen extends MenuScreen {
         int var18 = 0;
         int var19 = 0;
         int var20 = 0;
-        jk var21 = null;
+        MeshColourEntry var21 = null;
         int var22 = 0;
         int var23 = 0;
         int var24 = 0;
@@ -3198,7 +3198,7 @@ final class GameModeSelectScreen extends MenuScreen {
           if (var8.field_n != null &&
             1 < var8.field_B) {
             var9 = var8.field_n;
-            pk.orderFacesByGroup(var9, 0, ConditionalTextValue.field_i, 77, 0);
+            MeshDecodeHelpers.orderFacesByGroup(var9, 0, ConditionalTextValue.field_i, 77, 0);
             if (var40 != 0) {
               InputQueue.compactMeshBlocks(0);
             }
@@ -3222,7 +3222,7 @@ final class GameModeSelectScreen extends MenuScreen {
               if (stackIn_33_0 <= stackIn_33_1) {
                 return;
               }
-              var14 = nd.field_c[var13];
+              var14 = HowToPlayDemoHelpers.field_c[var13];
               var15 = param1.field_h[var14];
               var16 = param1.field_I[var14];
               var17 = param1.field_o[var14];
@@ -3242,7 +3242,7 @@ final class GameModeSelectScreen extends MenuScreen {
             }
             var14Lifetime2 = stackIn_26_0;
             var15Lifetime2 = var12[var13] * param0 + var10[var13] * param2 + param5 * var11[var13] >> 8;
-            stackIn_29_0 = nk.field_d;
+            stackIn_29_0 = ChatPanelHelpers.field_d;
             if (var15Lifetime2 < 0) {
               stackIn_30_1 = -var15Lifetime2;
             } else {
@@ -3261,11 +3261,11 @@ final class GameModeSelectScreen extends MenuScreen {
           var13Lifetime1 = 0;
           while (true) {
             stackIn_33_0Lifetime1 = ~var13Lifetime1;
-            stackIn_33_1Lifetime1 = ~mp.field_b;
+            stackIn_33_1Lifetime1 = ~ChatInputGlobals.field_b;
             if (stackIn_33_0Lifetime1 <= stackIn_33_1Lifetime1) {
               break;
             }
-            var14Lifetime1 = nd.field_c[var13Lifetime1];
+            var14Lifetime1 = HowToPlayDemoHelpers.field_c[var13Lifetime1];
             var15Lifetime1 = param1.field_h[var14Lifetime1];
             var16Lifetime1 = param1.field_I[var14Lifetime1];
             var17Lifetime1 = param1.field_o[var14Lifetime1];
@@ -3290,12 +3290,12 @@ final class GameModeSelectScreen extends MenuScreen {
               stackIn_49_0 = -1;
             }
             var20 = stackIn_49_0;
-            if (null != qn.field_q &&
+            if (null != PatchNoteUsage.field_q &&
               param1.field_l != null &&
               param1.field_l.length > var14Lifetime1 &&
               param1.field_l[var14Lifetime1] != -1 &&
-              qn.field_q.length > param1.field_l[var14Lifetime1]) {
-              stackIn_65_0 = qn.field_q[param1.field_l[var14Lifetime1]];
+              PatchNoteUsage.field_q.length > param1.field_l[var14Lifetime1]) {
+              stackIn_65_0 = PatchNoteUsage.field_q[param1.field_l[var14Lifetime1]];
             } else {
               stackIn_65_0 = null;
             }
@@ -3342,7 +3342,7 @@ final class GameModeSelectScreen extends MenuScreen {
               var38 = var38 + var32 * 65793;
               var37 = var37 + var31 * 65793;
               var39 = var39 + 65793 * var33;
-              wa.rasterSortedShadedTriangle(var27, var25, var24, var39 >> 16, var37 >> 16, var23, 255 & var38, 255 & var38 >> 8, var26, var37 & 255, var22, -128, 255 & var39, 255 & var39 >> 8, (65289 & var37) >> 8, var38 >> 16);
+              SpriteBuildHelpers.rasterSortedShadedTriangle(var27, var25, var24, var39 >> 16, var37 >> 16, var23, 255 & var38, 255 & var38 >> 8, var26, var37 & 255, var22, -128, 255 & var39, 255 & var39 >> 8, (65289 & var37) >> 8, var38 >> 16);
             }
             var13Lifetime1++;
           }
@@ -3363,7 +3363,7 @@ final class GameModeSelectScreen extends MenuScreen {
 
     final void onCancel(byte param0) {
         try {
-          la.changeScreen(this.field_l, TickClock.field_a, false, -25528);
+          ScreenChangeHelpers.changeScreen(this.field_l, TickClock.field_a, false, -25528);
           if (param0 > -13) {
             this.draw(57);
           }
@@ -3432,11 +3432,11 @@ final class GameModeSelectScreen extends MenuScreen {
           var8 = new int[128];
           var9 = 16742912;
           for (var10 = 0; var7.length > var10; var10++) {
-            var7[var10] = cm.bitAnd(var10 * cm.bitAnd(var9, 65280), 16711680) + cm.bitAnd(-16711936, cm.bitAnd(16711935, var9) * var10) >> 8;
+            var7[var10] = VolumeControlledVoice.bitAnd(var10 * VolumeControlledVoice.bitAnd(var9, 65280), 16711680) + VolumeControlledVoice.bitAnd(-16711936, VolumeControlledVoice.bitAnd(16711935, var9) * var10) >> 8;
           }
           var9Lifetime1 = 39168;
           for (var10Lifetime1 = 0; var8.length > var10Lifetime1; var10Lifetime1++) {
-            var8[var10Lifetime1] = cm.bitAnd(cm.bitAnd(var9Lifetime1, 16711935) * var10Lifetime1, -16711936) + cm.bitAnd(cm.bitAnd(var9Lifetime1, 65280) * var10Lifetime1, 16711680) >> 8;
+            var8[var10Lifetime1] = VolumeControlledVoice.bitAnd(VolumeControlledVoice.bitAnd(var9Lifetime1, 16711935) * var10Lifetime1, -16711936) + VolumeControlledVoice.bitAnd(VolumeControlledVoice.bitAnd(var9Lifetime1, 65280) * var10Lifetime1, 16711680) >> 8;
           }
           this.field_p = new GameModeCard(0, 126, var7);
           this.field_o = new GameModeCard(1, 370, var8);
@@ -3480,7 +3480,7 @@ final class GameModeSelectScreen extends MenuScreen {
           }
           var2 = stackIn_12_0;
           if (this.field_p != var2) {
-            stackIn_16_0 = ge.field_a;
+            stackIn_16_0 = RequestState.field_a;
           } else {
             stackIn_16_0 = Cloud.field_s;
           }

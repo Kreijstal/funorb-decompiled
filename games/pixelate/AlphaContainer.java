@@ -97,7 +97,7 @@ final class AlphaContainer extends SingleChildContainer {
                 break;
               }
               var7_ref_String = param0.substring(var6_int + 2, var5);
-              if (!td.isDecimalInteger(-128, (CharSequence) ((Object) var7_ref_String))) {
+              if (!PuzzleModePictureHelpers.isDecimalInteger(-128, (CharSequence) ((Object) var7_ref_String))) {
                 continue;
               }
               if (var5 >= var3_int) {
@@ -107,7 +107,7 @@ final class AlphaContainer extends SingleChildContainer {
                 continue;
               }
               var5++;
-              var8 = na.parseDecimalInt((CharSequence) ((Object) var7_ref_String), (byte) -33);
+              var8 = GameSocketHelpers.parseDecimalInt((CharSequence) ((Object) var7_ref_String), (byte) -33);
               var4 = var4 + (param2[var8].length() + var6_int - var5);
               continue;
             }
@@ -135,7 +135,7 @@ final class AlphaContainer extends SingleChildContainer {
               break;
             }
             var9 = param0.substring(2 + var8Lifetime1, var5Lifetime1);
-            if (!td.isDecimalInteger(-105, (CharSequence) ((Object) var9))) {
+            if (!PuzzleModePictureHelpers.isDecimalInteger(-105, (CharSequence) ((Object) var9))) {
               continue;
             }
             if (var3_int <= var5Lifetime1) {
@@ -145,7 +145,7 @@ final class AlphaContainer extends SingleChildContainer {
               continue;
             }
             var5Lifetime1++;
-            var10 = na.parseDecimalInt((CharSequence) ((Object) var9), (byte) -33);
+            var10 = GameSocketHelpers.parseDecimalInt((CharSequence) ((Object) var9), (byte) -33);
             discarded$0 = var6.append(param0.substring(var7, var8Lifetime1));
             discarded$1 = var6.append(param2[var10]);
             var7 = var5Lifetime1;
@@ -170,7 +170,7 @@ final class AlphaContainer extends SingleChildContainer {
         }
     }
 
-    final static void sendHighscoreSubmission(byte param0, rh param1, int param2) {
+    final static void sendHighscoreSubmission(byte param0, HighscoreSubmission param1, int param2) {
         CipherPacketBuffer var7 = null;
         CipherPacketBuffer var8 = null;
         int var4 = 0;
@@ -252,16 +252,16 @@ final class AlphaContainer extends SingleChildContainer {
           var18 = var17;
           var18.position = -2 + param1.length;
           SocialListEntry.field_Qb = var18.readUnsignedShort((byte) 97);
-          gd.field_k = new byte[SocialListEntry.field_Qb][];
+          MainScreenWidgetGlobals.field_k = new byte[SocialListEntry.field_Qb][];
           TriangleMesh.field_m = new boolean[SocialListEntry.field_Qb];
           ByteStorage.field_g = new int[SocialListEntry.field_Qb];
-          ge.field_c = new int[SocialListEntry.field_Qb];
+          RequestState.field_c = new int[SocialListEntry.field_Qb];
           IntrusiveNode.field_b = new int[SocialListEntry.field_Qb];
-          e.field_b = new int[SocialListEntry.field_Qb];
-          wo.field_f = new byte[SocialListEntry.field_Qb][];
+          ConnectionStateGlobals.field_b = new int[SocialListEntry.field_Qb];
+          SocialPanel.field_f = new byte[SocialListEntry.field_Qb][];
           var18.position = -7 + (param1.length - 8 * SocialListEntry.field_Qb);
           StrongCacheReference.field_y = var18.readUnsignedShort((byte) 38);
-          jb.field_a = var18.readUnsignedShort((byte) 46);
+          TutorialPageGlobals.field_a = var18.readUnsignedShort((byte) 46);
           var3 = 1 + (var18.readUnsignedByte(255) & 255);
           for (var4 = 0; var4 < SocialListEntry.field_Qb; var4++) {
             IntrusiveNode.field_b[var4] = var17.readUnsignedShort((byte) 88);
@@ -271,13 +271,13 @@ final class AlphaContainer extends SingleChildContainer {
             AlphaContainer.formatTemplate((String) null, 80, (String[]) null);
           }
           for (var4Lifetime1 = 0; var4Lifetime1 < SocialListEntry.field_Qb; var4Lifetime1++) {
-            e.field_b[var4Lifetime1] = var18.readUnsignedShort((byte) -122);
+            ConnectionStateGlobals.field_b[var4Lifetime1] = var18.readUnsignedShort((byte) -122);
           }
           for (var4Lifetime2 = 0; SocialListEntry.field_Qb > var4Lifetime2; var4Lifetime2++) {
             ByteStorage.field_g[var4Lifetime2] = var18.readUnsignedShort((byte) -14);
           }
           for (var4Lifetime3 = 0; var4Lifetime3 < SocialListEntry.field_Qb; var4Lifetime3++) {
-            ge.field_c[var4Lifetime3] = var18.readUnsignedShort((byte) -116);
+            RequestState.field_c[var4Lifetime3] = var18.readUnsignedShort((byte) -116);
           }
           var18.position = param1.length - (7 - (-(8 * SocialListEntry.field_Qb) - 3 * (-1 + var3)));
           AsyncValidationResult.field_g = new int[var3];
@@ -290,16 +290,16 @@ final class AlphaContainer extends SingleChildContainer {
           var18.position = 0;
           for (var4Lifetime5 = 0; var4Lifetime5 < SocialListEntry.field_Qb; var4Lifetime5++) {
             var5 = ByteStorage.field_g[var4Lifetime5];
-            var6 = ge.field_c[var4Lifetime5];
+            var6 = RequestState.field_c[var4Lifetime5];
             var7 = var5 * var6;
             var21 = new byte[var7];
             var19 = var21;
             var8 = var19;
-            wo.field_f[var4Lifetime5] = var21;
+            SocialPanel.field_f[var4Lifetime5] = var21;
             var22 = new byte[var7];
             var20 = var22;
             var9 = var20;
-            gd.field_k[var4Lifetime5] = var22;
+            MainScreenWidgetGlobals.field_k[var4Lifetime5] = var22;
             var10 = 0;
             var11 = var18.readUnsignedByte(255);
             if ((var11 & 1) == 0) {

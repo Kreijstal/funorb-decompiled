@@ -45,7 +45,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
             } else {
               var6 = -(var5 / SoftwareRasterizer.field_j) + SoftwareRasterizer.field_d;
               var7 = 255 * var6 / var4;
-              SoftwareRasterizer.field_k[var5] = bq.bitOr(bq.bitOr(var7 << 8, var7 << 16), var7 >> 1);
+              SoftwareRasterizer.field_k[var5] = LegacyMenuBuilder.bitOr(LegacyMenuBuilder.bitOr(var7 << 8, var7 << 16), var7 >> 1);
             }
           }
           ClientException.field_g = new Sprite(640, 480);
@@ -128,7 +128,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
           var11 = -23 / ((param3 - 70) / 49);
           if (var6Lifetime1 != BufferedRandomAccessFile.field_b &&
             UiTheme.field_j != var6Lifetime1) {
-            if (sk.field_a == var6Lifetime1) {
+            if (LobbyFrameHelpers.field_a == var6Lifetime1) {
               var26 = CanvasRasterBuffer.field_g[2];
               var26.drawAdditive(var9, var10 - (var26.field_E >> 1), 256);
               return;
@@ -192,7 +192,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
           return;
         }
         if (UiTheme.field_j != var6Lifetime2) {
-          if (sk.field_a == var6Lifetime2) {
+          if (LobbyFrameHelpers.field_a == var6Lifetime2) {
             var22 = CanvasRasterBuffer.field_g[2];
             var22.drawAdditive(var9Lifetime1, var10Lifetime1 - (var22.field_E >> 1), 256);
             return;
@@ -223,7 +223,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
         return;
     }
 
-    final static void queueHighscoreSubmission(rh param0, boolean param1, int param2) {
+    final static void queueHighscoreSubmission(HighscoreSubmission param0, boolean param1, int param2) {
         try {
           MenuScreen.field_b.addLast(22125, param0);
           AlphaContainer.sendHighscoreSubmission((byte) -52, param0, param2);
@@ -269,7 +269,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
     }
 
     ValidationHelpWidget(ValidationSource param0, String param1, int param2, int param3, int param4, int param5) {
-        super(param1, ih.getHelpTextPainter((byte) 45));
+        super(param1, TutorialTickHelpers.getHelpTextPainter((byte) 45));
         try {
           this.field_ab = param1;
           this.field_W = param0;

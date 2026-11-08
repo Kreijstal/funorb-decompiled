@@ -13,27 +13,27 @@ final class PauseMenuScreen extends MenuScreen {
     }
 
     final void handleInput(byte param0) {
-        int var2 = ro.advanceSlideshow(-36, !pe.requestLeaveServer(false) ? true : false);
+        int var2 = NameSuggestionHelpers.advanceSlideshow(-36, !PlayerActionHelpers.requestLeaveServer(false) ? true : false);
         if (param0 >= -64) {
           return;
         }
         if (3 == var2) {
-          if (null != ib.field_f) {
+          if (null != GridSize.field_f) {
             SoundVoice.closeFullscreenCanvas(75);
           }
           ListRequest.openSubscribePage(AudioService.getApplet(13867), -60);
         }
         if (var2 == 1) {
-          la.changeScreen(MidiPcmStream.field_t, 0, false, -25528);
+          ScreenChangeHelpers.changeScreen(MidiPcmStream.field_t, 0, false, -25528);
         }
         if (var2 == 2) {
-          la.changeScreen(MidiPcmStream.field_t, 0, true, -25528);
+          ScreenChangeHelpers.changeScreen(MidiPcmStream.field_t, 0, true, -25528);
         }
     }
 
     final void draw(int param0) {
         if (KiteBackground.loadMembersBenefitsAssets(3782)) {
-          mc.drawBenefitsScreen(12);
+          AchievementMaskRequest.drawBenefitsScreen(12);
         }
         if (param0 != 11) {
           field_q = 43;
@@ -73,7 +73,7 @@ final class PauseMenuScreen extends MenuScreen {
             var4 = Js5ArchiveManager.field_i.length >> 2;
             var5 = var1_int % var4;
             var6 = var4 - var5;
-            Js5ArchiveManager.field_i[var1_int] = cm.bitAnd(cm.bitAnd(var3, 65280) * var5 / var4, 65280) + (cm.bitAnd(16711935, var5 * cm.bitAnd(16711935, var3) / var4) + cm.bitAnd(var6 * cm.bitAnd(var2, 65280) / var4, 65280) + cm.bitAnd(16711935, cm.bitAnd(var2, 16711935) * var6 / var4));
+            Js5ArchiveManager.field_i[var1_int] = VolumeControlledVoice.bitAnd(VolumeControlledVoice.bitAnd(var3, 65280) * var5 / var4, 65280) + (VolumeControlledVoice.bitAnd(16711935, var5 * VolumeControlledVoice.bitAnd(16711935, var3) / var4) + VolumeControlledVoice.bitAnd(var6 * VolumeControlledVoice.bitAnd(var2, 65280) / var4, 65280) + VolumeControlledVoice.bitAnd(16711935, VolumeControlledVoice.bitAnd(var2, 16711935) * var6 / var4));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

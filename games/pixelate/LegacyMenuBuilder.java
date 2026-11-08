@@ -1,0 +1,352 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class LegacyMenuBuilder {
+    static IntrusiveDeque field_a;
+    static IntrusiveDeque field_b;
+    static int field_d;
+    static int field_c;
+
+    final static void buildLegacyMenu(boolean param0, byte param1, int param2) {
+        int stackIn_23_0 = 0;
+        int stackIn_26_0 = 0;
+        String[] stackIn_33_0 = null;
+        int stackIn_33_1 = 0;
+        String stackIn_34_2 = null;
+        String[] stackIn_38_0 = null;
+        int stackIn_38_1 = 0;
+        int stackIn_38_2 = 0;
+        int stackIn_38_3 = 0;
+        String stackIn_41_2 = null;
+        int stackIn_89_0 = 0;
+        String stackIn_89_1 = null;
+        boolean stackIn_90_2 = false;
+        int stackIn_115_0 = 0;
+        int stackIn_116_1 = 0;
+        RuntimeException decompiledCaughtException = null;
+        int var3_int = 0;
+        RuntimeException var3 = null;
+        int var4 = 0;
+        String[] var4_ref_String__ = null;
+        int var5 = 0;
+        int var6 = 0;
+        int var7 = 0;
+        int var8 = 0;
+        int var9 = 0;
+        String[] var10 = null;
+        String var11 = null;
+        String var12 = null;
+        String[] var4_ref_String__Lifetime1;
+        int var5Lifetime1;
+        int var5Lifetime2;
+        int var5Lifetime3;
+        int var6Lifetime1;
+        int var8Lifetime1;
+        int var3_intLifetime1;
+        int var4Lifetime1;
+        int var4Lifetime2;
+        int var4Lifetime3;
+        int var7Lifetime1;
+        int var7Lifetime2;
+        int var8Lifetime2;
+        int var8Lifetime3;
+        int var5Lifetime2Lifetime1;
+        int var7Lifetime1Lifetime1;
+        var9 = Pixelate.field_H ? 1 : 0;
+        try {
+          QueuedLobbyRequest.field_l = true;
+          CanvasRasterBuffer.field_h = param2;
+          if (CanvasRasterBuffer.field_h == 0) {
+            var3_int = PatchNoteUsage.wrapText(MessageScreen.field_t, MouseInputHandler.field_c, EmailConfirmationValidator.field_p, -128, StatusBar.field_j);
+            var4 = var3_int + 3;
+            Kite.field_a = new int[var4];
+            LobbyGameLookupHelpers.field_e = new String[var4];
+            for (var5 = 0; var4 > var5; var5++) {
+              Kite.field_a[var5] = -1;
+            }
+            BackgroundScene.field_h = new int[2];
+            for (var5 = 0; var3_int > var5; var5++) {
+              LobbyGameLookupHelpers.field_e[var5] = EmailConfirmationValidator.field_p[var5];
+            }
+            LobbyGameLookupHelpers.field_e[-3 + var4] = "";
+            LobbyGameLookupHelpers.field_e[var4 - 2] = SoundVoice.field_k;
+            Kite.field_a[-2 + var4] = 0;
+            BackgroundScene.field_h[0] = 4;
+            LobbyGameLookupHelpers.field_e[-1 + var4] = TabbedPanel.field_Hb;
+            Kite.field_a[-1 + var4] = 1;
+            BackgroundScene.field_h[1] = 5;
+          } else if (CanvasRasterBuffer.field_h == 1) {
+            var3_int = PatchNoteUsage.wrapText(MessageScreen.field_t, MouseInputHandler.field_c, EmailConfirmationValidator.field_p, -102, StatusBar.field_j);
+            var4 = 2 + var3_int;
+            Kite.field_a = new int[var4];
+            LobbyGameLookupHelpers.field_e = new String[var4];
+            for (var5 = 0; var5 < var4; var5++) {
+              Kite.field_a[var5] = -1;
+            }
+            BackgroundScene.field_h = new int[1];
+            for (var5 = 0; var5 < var3_int; var5++) {
+              LobbyGameLookupHelpers.field_e[var5] = EmailConfirmationValidator.field_p[var5];
+            }
+            LobbyGameLookupHelpers.field_e[-2 + var4] = "";
+            LobbyGameLookupHelpers.field_e[-1 + var4] = TabbedPanel.field_Hb;
+            Kite.field_a[-1 + var4] = 0;
+            BackgroundScene.field_h[0] = 5;
+          } else if (CanvasRasterBuffer.field_h != 2) {
+            if (3 == CanvasRasterBuffer.field_h) {
+              if (!AchievementMaskRequest.field_k.field_x) {
+                var3_int = PatchNoteUsage.wrapText(TextLayoutLine.field_a, MouseInputHandler.field_c, EmailConfirmationValidator.field_p, -120, StatusBar.field_j);
+              } else {
+                var3_int = PatchNoteUsage.wrapText(EmailValidationState.field_c, MouseInputHandler.field_c, EmailConfirmationValidator.field_p, -115, StatusBar.field_j);
+              }
+              var4 = 2 + var3_int;
+              Kite.field_a = new int[var4];
+              LobbyGameLookupHelpers.field_e = new String[var4];
+              for (var5 = 0; var5 < var4; var5++) {
+                Kite.field_a[var5] = -1;
+              }
+              BackgroundScene.field_h = new int[1];
+              for (var5 = 0; var5 < var3_int; var5++) {
+                LobbyGameLookupHelpers.field_e[var5] = EmailConfirmationValidator.field_p[var5];
+              }
+              LobbyGameLookupHelpers.field_e[var4 - 2] = "";
+              LobbyGameLookupHelpers.field_e[var4 - 1] = TabbedPanel.field_Hb;
+              Kite.field_a[var4 - 1] = 0;
+              BackgroundScene.field_h[0] = 5;
+            } else if (CanvasRasterBuffer.field_h == 4) {
+              var3_int = PatchNoteUsage.wrapText(MessageScreen.field_o, MouseInputHandler.field_c, EmailConfirmationValidator.field_p, -118, StatusBar.field_j);
+              var4 = 2 + var3_int;
+              LobbyGameLookupHelpers.field_e = new String[var4];
+              Kite.field_a = new int[var4];
+              for (var5 = 0; var4 > var5; var5++) {
+                Kite.field_a[var5] = -1;
+              }
+              BackgroundScene.field_h = new int[1];
+              for (var5 = 0; var5 < var3_int; var5++) {
+                LobbyGameLookupHelpers.field_e[var5] = EmailConfirmationValidator.field_p[var5];
+              }
+              LobbyGameLookupHelpers.field_e[-2 + var4] = "";
+              LobbyGameLookupHelpers.field_e[-1 + var4] = TabbedPanel.field_Hb;
+              Kite.field_a[var4 - 1] = 0;
+              BackgroundScene.field_h[0] = 5;
+            } else {
+              if (CanvasRasterBuffer.field_h != 5) {
+                throw new IllegalArgumentException();
+              }
+              var3_int = PatchNoteUsage.wrapText(CanvasRasterBuffer.field_k, MouseInputHandler.field_c, EmailConfirmationValidator.field_p, -118, StatusBar.field_j);
+              var4 = var3_int + 3;
+              Kite.field_a = new int[var4];
+              LobbyGameLookupHelpers.field_e = new String[var4];
+              for (var5 = 0; var4 > var5; var5++) {
+                Kite.field_a[var5] = -1;
+              }
+              BackgroundScene.field_h = new int[2];
+              for (var5 = 0; var5 < var3_int; var5++) {
+                LobbyGameLookupHelpers.field_e[var5] = EmailConfirmationValidator.field_p[var5];
+              }
+              LobbyGameLookupHelpers.field_e[var4 - 3] = "";
+              LobbyGameLookupHelpers.field_e[var4 - 2] = StatusBar.field_b;
+              Kite.field_a[var4 - 2] = 0;
+              BackgroundScene.field_h[0] = 3;
+              LobbyGameLookupHelpers.field_e[var4 - 1] = TabbedPanel.field_Hb;
+              Kite.field_a[-1 + var4] = 1;
+              BackgroundScene.field_h[1] = 5;
+            }
+          } else {
+            var3_int = PatchNoteUsage.wrapText(AlphaContainer.formatTemplate(DualLinkNode.field_n, 84, new String[]{"<br><%0><br>"}), MouseInputHandler.field_c, EmailConfirmationValidator.field_p, -128, StatusBar.field_j);
+            var4 = -1;
+            for (var5 = 0; var5 < var3_int; var5++) {
+              if (!"<%0>".equals(EmailConfirmationValidator.field_p[var5])) {
+                continue;
+              }
+              var4 = var5;
+              break;
+            }
+            if (var4 == -1) {
+              throw new IllegalStateException();
+            }
+            StatsRequest.field_r = new String[var4];
+            ArraySupport.copyReferences(EmailConfirmationValidator.field_p, 0, StatsRequest.field_r, 0, var4);
+            GameModeSelectScreen.field_r = new String[-1 + (var3_int - var4)];
+            ArraySupport.copyReferences(EmailConfirmationValidator.field_p, var4 + 1, GameModeSelectScreen.field_r, 0, var3_int + (-var4 - 1));
+            var3_int = PatchNoteUsage.wrapText(AlphaContainer.formatTemplate(BirthDateEntryPanel.field_R, 44, new String[]{"<br><%0><br>"}), MouseInputHandler.field_c, EmailConfirmationValidator.field_p, -106, StatusBar.field_j);
+            var4 = -1;
+            for (var5 = 0; var5 < var3_int; var5++) {
+              if (!"<%0>".equals(EmailConfirmationValidator.field_p[var5])) {
+                continue;
+              }
+              var4 = var5;
+              break;
+            }
+            if (var4 == -1) {
+              throw new IllegalStateException();
+            }
+            MeshColourEntry.field_d = new String[var4];
+            ArraySupport.copyReferences(EmailConfirmationValidator.field_p, 0, MeshColourEntry.field_d, 0, var4);
+            ContentTransitionDialog.field_jb = new String[-var4 + (var3_int - 1)];
+            ArraySupport.copyReferences(EmailConfirmationValidator.field_p, 1 + var4, ContentTransitionDialog.field_jb, 0, -1 + (-var4 + var3_int));
+            if (StatsRequest.field_r.length < MeshColourEntry.field_d.length) {
+              stackIn_23_0 = MeshColourEntry.field_d.length;
+            } else {
+              stackIn_23_0 = StatsRequest.field_r.length;
+            }
+            var5 = stackIn_23_0;
+            if (GameModeSelectScreen.field_r.length >= ContentTransitionDialog.field_jb.length) {
+              stackIn_26_0 = GameModeSelectScreen.field_r.length;
+            } else {
+              stackIn_26_0 = ContentTransitionDialog.field_jb.length;
+            }
+            var6 = stackIn_26_0;
+            var7 = var5 + (7 + var6);
+            Kite.field_a = new int[var7];
+            LobbyGameLookupHelpers.field_e = new String[var7];
+            for (var8 = 0; var7 > var8; var8++) {
+              Kite.field_a[var8] = -1;
+            }
+            Kite.field_a[1] = 0;
+            LobbyGameLookupHelpers.field_e[0] = PageReloadHelpers.field_c;
+            LobbyGameLookupHelpers.field_e[1] = MusicPatch.field_q;
+            BackgroundScene.field_h = new int[2];
+            LobbyGameLookupHelpers.field_e[4] = DirectByteStorage.field_m;
+            LobbyGameLookupHelpers.field_e[5] = "";
+            Kite.field_a[3] = 1;
+            LobbyGameLookupHelpers.field_e[3] = LobbyGameLookupHelpers.field_g;
+            LobbyGameLookupHelpers.field_e[2] = QuickChatPhraseCache.field_n;
+            BackgroundScene.field_h[1] = 2;
+            BackgroundScene.field_h[0] = 5;
+            for (var8Lifetime2 = 0; var8Lifetime2 < var5; var8Lifetime2++) {
+              stackIn_33_0 = LobbyGameLookupHelpers.field_e;
+              stackIn_33_1 = 6 + var8Lifetime2;
+              if (-var5 + var8Lifetime2 + MeshColourEntry.field_d.length >= 0) {
+                stackIn_34_2 = MeshColourEntry.field_d[-var5 + (MeshColourEntry.field_d.length + var8Lifetime2)];
+              } else {
+                stackIn_34_2 = "";
+              }
+              stackIn_33_0[stackIn_33_1] = stackIn_34_2;
+            }
+            LobbyGameLookupHelpers.field_e[6 + var5] = null;
+            Kite.field_a[6 + var5] = -2;
+            for (var8Lifetime3 = 0; var6 > var8Lifetime3; var8Lifetime3++) {
+              stackIn_38_0 = LobbyGameLookupHelpers.field_e;
+              stackIn_38_1 = var8Lifetime3 + var5 + 7;
+              stackIn_38_2 = ~ContentTransitionDialog.field_jb.length;
+              stackIn_38_3 = ~var8Lifetime3;
+              if (stackIn_38_2 >= stackIn_38_3) {
+                stackIn_41_2 = "";
+              } else {
+                stackIn_41_2 = ContentTransitionDialog.field_jb[var8Lifetime3];
+              }
+              stackIn_38_0[stackIn_38_1] = stackIn_41_2;
+            }
+            MeshDecodeHelpers.field_g = ClockHelpers.monotonicMillis(64);
+          }
+          ScoreMarkerDemo.field_c.field_h = BackgroundScene.field_h.length;
+          var3_intLifetime1 = 0;
+          for (var4Lifetime1 = 0; var4Lifetime1 < LobbyGameLookupHelpers.field_e.length; var4Lifetime1++) {
+            stackIn_89_0 = 3;
+            stackIn_89_1 = LobbyGameLookupHelpers.field_e[var4Lifetime1];
+            stackIn_90_2 = !(Kite.field_a[var4Lifetime1] < 0);
+            var5Lifetime1 = NineSliceFrame.measureMenuText(stackIn_89_0, stackIn_89_1, stackIn_90_2);
+            if (var3_intLifetime1 < var5Lifetime1) {
+              var3_intLifetime1 = var5Lifetime1;
+            }
+          }
+          if (CanvasRasterBuffer.field_h == 2) {
+            var10 = StatsRequest.field_r;
+            var4_ref_String__ = var10;
+            for (var5Lifetime2 = 0; var5Lifetime2 < var10.length; var5Lifetime2++) {
+              var11 = var10[var5Lifetime2];
+              var7Lifetime1 = NineSliceFrame.measureMenuText(3, var11, false);
+              if (var7Lifetime1 > var3_intLifetime1) {
+                var3_intLifetime1 = var7Lifetime1;
+              }
+            }
+            var4_ref_String__Lifetime1 = GameModeSelectScreen.field_r;
+            for (var5Lifetime2Lifetime1 = 0; var4_ref_String__Lifetime1.length > var5Lifetime2Lifetime1; var5Lifetime2Lifetime1++) {
+              var12 = var4_ref_String__Lifetime1[var5Lifetime2Lifetime1];
+              var7Lifetime1Lifetime1 = NineSliceFrame.measureMenuText(3, var12, false);
+              if (var3_intLifetime1 < var7Lifetime1Lifetime1) {
+                var3_intLifetime1 = var7Lifetime1Lifetime1;
+              }
+            }
+          }
+          if (param1 >= -64) {
+            return;
+          }
+          GridSize.field_g = -(var3_intLifetime1 >> 1) + var3_intLifetime1 + QuickChatCategory.field_u;
+          MouseInputHandler.field_b = (LoadingProgressDialog.field_fb + ConnectionState.field_c << 1) * ScoreMarkerDemo.field_c.field_h;
+          LoadingProgressDialog.field_cb = -(var3_intLifetime1 >> 1) + QuickChatCategory.field_u;
+          for (var4Lifetime2 = 0; var4Lifetime2 < LobbyGameLookupHelpers.field_e.length; var4Lifetime2++) {
+            stackIn_115_0 = MouseInputHandler.field_b;
+            if (Kite.field_a[var4Lifetime2] < 0) {
+              stackIn_116_1 = GameResultsScreen.field_r;
+            } else {
+              stackIn_116_1 = ValidatedTextWidget.field_fb;
+            }
+            MouseInputHandler.field_b = stackIn_115_0 + stackIn_116_1;
+          }
+          MenuScreen.field_h = IntrusiveDeque.field_b - (MouseInputHandler.field_b >> 1);
+          PuzzlePieceQueue.field_c = new int[LobbyGameLookupHelpers.field_e.length][];
+          var4Lifetime3 = 0;
+          var5Lifetime3 = MenuScreen.field_h;
+          while (var4Lifetime3 < LobbyGameLookupHelpers.field_e.length) {
+            var6Lifetime1 = Kite.field_a[var4Lifetime3];
+            if (var6Lifetime1 < 0) {
+              var5Lifetime3 = var5Lifetime3 + GameResultsScreen.field_r;
+            } else {
+              var7Lifetime2 = NineSliceFrame.measureMenuText(3, LobbyGameLookupHelpers.field_e[var4Lifetime3], true);
+              var8Lifetime1 = -(var7Lifetime2 >> 1) + QuickChatCategory.field_u;
+              var5Lifetime3 = var5Lifetime3 + LoadingProgressDialog.field_fb;
+              PuzzlePieceQueue.field_c[var4Lifetime3] = new int[4];
+              PuzzlePieceQueue.field_c[var4Lifetime3][0] = var8Lifetime1 - AccountTermsPanel.field_J;
+              PuzzlePieceQueue.field_c[var4Lifetime3][1] = var5Lifetime3;
+              PuzzlePieceQueue.field_c[var4Lifetime3][2] = (AccountTermsPanel.field_J << 1) + var7Lifetime2;
+              var5Lifetime3 = var5Lifetime3 + (ValidatedTextWidget.field_fb + (ConnectionState.field_c << 1) + LoadingProgressDialog.field_fb);
+              PuzzlePieceQueue.field_c[var4Lifetime3][3] = (ConnectionState.field_c << 1) + ValidatedTextWidget.field_fb;
+            }
+            var4Lifetime3++;
+          }
+          if (CanvasRasterBuffer.field_h != 2) {
+            ScoreMarkerDemo.field_c.initializeSelection(param0, NotLoggedInScreen.legacyMenuOptionAt(ProxyAuthenticationException.field_d, StatusBar.field_k, (byte) -97), 17068, 0);
+          } else {
+            ScoreMarkerDemo.field_c.initializeSelection(param0, -1, 17068, -1);
+          }
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) var3), "bq.C(" + param0 + ',' + param1 + ',' + param2 + ')');
+        }
+    }
+
+    static int bitOr(int param0, int param1) {
+        return param0 | param1;
+    }
+
+    final static boolean updateOverlayMenus(byte param0, int param1, int param2, boolean param3, int param4, int param5, int param6) {
+        if (param0 != -124) {
+          LegacyMenuBuilder.releaseStatics((byte) -16);
+        }
+        if (MarkerSlider.isOverlayOpen((byte) 117)) {
+          ChatAppendHelpers.updatePopupAndQuickChat(param3, param1, param4, (byte) -86);
+          if (null != ProxySocketConnector.field_n &&
+            ProxySocketConnector.field_n.updateAndRunSelectedAction(param4, param6, false, param5, param3)) {
+            ArchiveProvider.closeContextMenu(71);
+            param3 = false;
+          }
+          QueuedLobbyRequest.handleNameEntryResult(param4, param3, 0);
+          ReportAbuseHelpers.updateReportAbuseDialog((byte) 120, param3, param2);
+          param3 = false;
+        }
+        return param3;
+    }
+
+    public static void releaseStatics(byte param0) {
+        int var1 = 60 % ((param0 - 61) / 61);
+        field_a = null;
+        field_b = null;
+    }
+
+    static {
+        field_a = new IntrusiveDeque();
+    }
+}

@@ -171,12 +171,12 @@ final class TriangleMesh {
             if (ScoreMarkerDemo.field_c.isActivated(84)) {
               var1_int = 1;
             }
-            if (ke.field_a != 13) {
+            if (KeyEventGlobals.field_a != 13) {
               continue;
             }
             var2 = 1;
           }
-          ScoreMarkerDemo.field_c.updatePointer(mi.legacyMenuOptionAt(BufferedRandomAccessFile.field_a, ji.field_c, (byte) -82), mi.legacyMenuOptionAt(ProxyAuthenticationException.field_d, StatusBar.field_k, (byte) -73), -1);
+          ScoreMarkerDemo.field_c.updatePointer(NotLoggedInScreen.legacyMenuOptionAt(BufferedRandomAccessFile.field_a, FriendCaptionGlobals.field_c, (byte) -82), NotLoggedInScreen.legacyMenuOptionAt(ProxyAuthenticationException.field_d, StatusBar.field_k, (byte) -73), -1);
           if (param0 <= 74) {
             TriangleMesh.pollMessageMenuSelection((byte) -77);
           }
@@ -189,21 +189,21 @@ final class TriangleMesh {
             var3 = BackgroundScene.field_h[ScoreMarkerDemo.field_c.selectedIndex];
             if (var3 == 2 ||
               var3 == 5) {
-              dh.closeLegacyMenu(0);
+              DisplayNameHelpers.closeLegacyMenu(0);
             }
           } else {
             if (var2 != 0 &&
               CanvasRasterBuffer.field_h != 2) {
-              dh.closeLegacyMenu(0);
+              DisplayNameHelpers.closeLegacyMenu(0);
             }
           }
           if (0 == var3 &&
             CanvasRasterBuffer.field_h == 2) {
-            var4 = hm.monotonicMillis(64) - pk.field_g;
+            var4 = ClockHelpers.monotonicMillis(64) - MeshDecodeHelpers.field_g;
             var6 = (int)((10999L - var4) / 1000L);
             if (var6 <= 0) {
               var3 = 2;
-              bq.buildLegacyMenu(true, (byte) -65, 5);
+              LegacyMenuBuilder.buildLegacyMenu(true, (byte) -65, 5);
             }
           }
           stackIn_31_0 = var3;

@@ -10,13 +10,13 @@ final class MainMenuScreen extends MenuScreen {
     static String field_o;
 
     final static void advanceToLoginRequest(byte param0) {
-        if (el.field_b == 10) {
+        if (EmailValidationState.field_b == 10) {
           StrongCacheReference.beginLoginRequest(20);
-          el.field_b = 11;
+          EmailValidationState.field_b = 11;
         } else {
-          if (!ri.alwaysTrue(-88)) {
+          if (!ChatHistoryAllocator.alwaysTrue(-88)) {
             StrongCacheReference.beginLoginRequest(20);
-            el.field_b = 11;
+            EmailValidationState.field_b = 11;
           }
         }
         EmailCredentials.field_f = true;

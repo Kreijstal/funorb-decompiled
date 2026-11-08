@@ -43,9 +43,9 @@ abstract class TextLayout {
     }
 
     final static void drawActivePopup(boolean param0, int param1) {
-        if (null != ri.field_f) {
+        if (null != ChatHistoryAllocator.field_f) {
           SoftwareRasterizer.darkenRectangle(SoftwareRasterizer.field_e, SoftwareRasterizer.field_f, -SoftwareRasterizer.field_e + SoftwareRasterizer.field_h, SoftwareRasterizer.field_a - SoftwareRasterizer.field_f);
-          ri.field_f.drawFullScreen(param0, 0);
+          ChatHistoryAllocator.field_f.drawFullScreen(param0, 0);
         }
         if (param1 != -24721) {
           field_c = (String[]) null;
@@ -138,7 +138,7 @@ abstract class TextLayout {
           var6 = stackIn_31_0;
           param3.readBytes(param1.field_Eb, 0, -77, param1.field_Eb.length);
           param1.field_bc = param3.readUnsignedShort((byte) -11);
-          param1.field_Lb = hm.monotonicMillis(64) - (long)param3.readInt(param2 - 120);
+          param1.field_Lb = ClockHelpers.monotonicMillis(64) - (long)param3.readInt(param2 - 120);
           if (var5 == 0) {
             param1.field_nc = -1;
           } else {

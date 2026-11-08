@@ -3,7 +3,7 @@
  */
 final class StatefulTextPainter extends TextWidgetPainter {
     static Match field_v;
-    static wm field_w;
+    static ReportReason field_w;
     static String field_t;
     static int field_s;
     private WidgetStyleLayer field_x;
@@ -47,16 +47,16 @@ final class StatefulTextPainter extends TextWidgetPainter {
           if (param0 != -48) {
             return;
           }
-          var2 = (LobbyGame) (nk.field_a.first(1504642273));
+          var2 = (LobbyGame) (ChatPanelHelpers.field_a.first(1504642273));
           while (var2 != null) {
             if (var2.comesBeforeGame((byte) 110, param1)) {
-              var2 = (LobbyGame) (nk.field_a.next(1504642273));
+              var2 = (LobbyGame) (ChatPanelHelpers.field_a.next(1504642273));
               continue;
             }
             break;
           }
           if (var2 == null) {
-            nk.field_a.addLast(22125, param1);
+            ChatPanelHelpers.field_a.addLast(22125, param1);
           } else {
             stackIn_9_0 = -4;
             BackgroundScene.insertNodeBefore(stackIn_9_0, var2, param1);
@@ -121,7 +121,7 @@ final class StatefulTextPainter extends TextWidgetPainter {
             var10 = (LobbyGame) null;
             StatefulTextPainter.insertLobbyGameSorted((byte) 95, (LobbyGame) null);
           }
-          hp.pushClipRegion(param3 + param0.field_z, param0.field_p + param2 + param0.field_C, param0.field_E + param0.field_z + param3, (byte) -120, param0.field_p + param2);
+          HelpPopup.pushClipRegion(param3 + param0.field_z, param0.field_p + param2 + param0.field_C, param0.field_E + param0.field_z + param3, (byte) -120, param0.field_p + param2);
           if (var11 != null) {
             param4 = param4 & var11.field_H;
           }
@@ -206,7 +206,7 @@ final class StatefulTextPainter extends TextWidgetPainter {
           var4_int = param0.length();
           var5 = param3.length();
           if (param1 >= -35) {
-            field_w = (wm) null;
+            field_w = (ReportReason) null;
           }
           var6 = param2.length();
           if (var5 == 0) {
@@ -304,10 +304,10 @@ final class StatefulTextPainter extends TextWidgetPainter {
           var18 = new int[]{var10_int, var11, var12, var13, var14, var15, var16, var17};
           PolygonFiller.fillPolygon(var18, 12632256);
           for (var19 = 0; var19 <= param1; var19++) {
-            el.drawThickLine((var17 - var11) * var19 / param1 + var11, var19 * (var14 - var12) / param1 + var12, 8421504, -20, var10_int + (-var10_int + var16) * var19 / param1, (-var13 + var15) * var19 / param1 + var13, 3.0f);
+            EmailValidationState.drawThickLine((var17 - var11) * var19 / param1 + var11, var19 * (var14 - var12) / param1 + var12, 8421504, -20, var10_int + (-var10_int + var16) * var19 / param1, (-var13 + var15) * var19 / param1 + var13, 3.0f);
           }
           for (var19Lifetime1 = 0; param3 >= var19Lifetime1; var19Lifetime1++) {
-            el.drawThickLine(var11 + var19Lifetime1 * (var13 - var11) / param3, var19Lifetime1 * (var14 - var16) / param3 + var16, 8421504, -79, (-var10_int + var12) * var19Lifetime1 / param3 + var10_int, var19Lifetime1 * (var15 - var17) / param3 + var17, 3.0f);
+            EmailValidationState.drawThickLine(var11 + var19Lifetime1 * (var13 - var11) / param3, var19Lifetime1 * (var14 - var16) / param3 + var16, 8421504, -79, (-var10_int + var12) * var19Lifetime1 / param3 + var10_int, var19Lifetime1 * (var15 - var17) / param3 + var17, 3.0f);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -475,6 +475,6 @@ final class StatefulTextPainter extends TextWidgetPainter {
     static {
         field_t = "Unrated game";
         field_u = "Seriously offensive language";
-        field_w = new wm(2, 4, 4, 0);
+        field_w = new ReportReason(2, 4, 4, 0);
     }
 }

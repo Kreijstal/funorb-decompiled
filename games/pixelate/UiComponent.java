@@ -137,7 +137,7 @@ class UiComponent extends IntrusiveNode {
     }
 
     final static void resetOverlayState(boolean param0) {
-        l.animateLobbySlide(true);
+        MessageScreen.animateLobbySlide(true);
         if (param0) {
           return;
         }
@@ -166,8 +166,8 @@ class UiComponent extends IntrusiveNode {
             stackIn_11_1 = (var5_int != 0);
             this.field_D = stackIn_11_1;
             if (null != this.field_n &&
-              this.field_n instanceof n) {
-              ((n) (this.field_n)).onHoverChanged(this, var5_int != 0, true);
+              this.field_n instanceof HoverListener) {
+              ((HoverListener) (this.field_n)).onHoverChanged(this, var5_int != 0, true);
             }
           }
           if (param0 != 40) {
@@ -254,7 +254,7 @@ class UiComponent extends IntrusiveNode {
               return;
             }
           }
-          bd.field_a.makeRasterTarget();
+          ConnectionState.field_a.makeRasterTarget();
           var1.drawHalfSize(0, 0);
           LinkButtonPainter.popRasterState((byte) 92);
           return;
@@ -289,7 +289,7 @@ class UiComponent extends IntrusiveNode {
         if (var6 == null) {
           return;
         }
-        Checkbox.field_X.drawTooltip(var6, oo.field_f, false, MarkerSlider.field_V);
+        Checkbox.field_X.drawTooltip(var6, AchievementIconGlobals.field_f, false, MarkerSlider.field_V);
         return;
     }
 
@@ -378,15 +378,15 @@ class UiComponent extends IntrusiveNode {
             if (DriftingParticle.field_i != 0) {
               if (var5 == 0) {
                 if (0 == IntrusiveDequeCursor.field_c) {
-                  if (ef.field_b == 0 &&
+                  if (HighscorePacketHandlers.field_b == 0 &&
                     TextHotspotWidget.field_R != 0) {
                     this.handlePointerRelease(StatusBar.field_k, param3, this, param2 - 99, param0, ProxyAuthenticationException.field_d);
-                    var10 = qf.field_a;
+                    var10 = KeyMapHelpers.field_a;
                     if (var10 != null) {
                       if (var10.field_n instanceof WidgetDropListener) {
                         ((WidgetDropListener) (var10.field_n)).onDropped(-92, var10, (DropTargetWidget) null);
                       }
-                      qf.field_a = null;
+                      KeyMapHelpers.field_a = null;
                     }
                     if (var7 != 0 &&
                       var5 != 0 &&
@@ -395,18 +395,18 @@ class UiComponent extends IntrusiveNode {
                     }
                   }
                 } else {
-                  if (this.handlePointerPress((byte) -58, this, IntrusiveDequeCursor.field_c, param0, BufferedRandomAccessFile.field_a, param3, ji.field_c)) {
+                  if (this.handlePointerPress((byte) -58, this, IntrusiveDequeCursor.field_c, param0, BufferedRandomAccessFile.field_a, param3, FriendCaptionGlobals.field_c)) {
                     param1 = false;
-                    if (ef.field_b == 0 &&
+                    if (HighscorePacketHandlers.field_b == 0 &&
                       TextHotspotWidget.field_R != 0) {
                       this.handlePointerRelease(StatusBar.field_k, param3, this, param2 - 99, param0, ProxyAuthenticationException.field_d);
-                      var8 = qf.field_a;
+                      var8 = KeyMapHelpers.field_a;
                       var6 = var8;
                       if (var8 != null) {
                         if (var8.field_n instanceof WidgetDropListener) {
                           ((WidgetDropListener) (var8.field_n)).onDropped(-92, var8, (DropTargetWidget) null);
                         }
-                        qf.field_a = null;
+                        KeyMapHelpers.field_a = null;
                       }
                       if (var7 != 0 &&
                         var5 != 0 &&
@@ -415,16 +415,16 @@ class UiComponent extends IntrusiveNode {
                       }
                     }
                   } else {
-                    if (ef.field_b == 0 &&
+                    if (HighscorePacketHandlers.field_b == 0 &&
                       TextHotspotWidget.field_R != 0) {
                       this.handlePointerRelease(StatusBar.field_k, param3, this, param2 - 99, param0, ProxyAuthenticationException.field_d);
-                      var9 = qf.field_a;
+                      var9 = KeyMapHelpers.field_a;
                       var6Lifetime3 = var9;
                       if (var9 != null) {
                         if (var9.field_n instanceof WidgetDropListener) {
                           ((WidgetDropListener) (var9.field_n)).onDropped(-92, var9, (DropTargetWidget) null);
                         }
-                        qf.field_a = null;
+                        KeyMapHelpers.field_a = null;
                       }
                       if (var7 != 0 &&
                         var5 != 0 &&
@@ -439,16 +439,16 @@ class UiComponent extends IntrusiveNode {
               this.onMouseWheel(ProxyAuthenticationException.field_d, (byte) 80, param0, param3, StatusBar.field_k, DriftingParticle.field_i, this);
             }
             if (0 == IntrusiveDequeCursor.field_c) {
-              if (ef.field_b == 0 &&
+              if (HighscorePacketHandlers.field_b == 0 &&
                 TextHotspotWidget.field_R != 0) {
                 this.handlePointerRelease(StatusBar.field_k, param3, this, param2 - 99, param0, ProxyAuthenticationException.field_d);
-                var11 = qf.field_a;
+                var11 = KeyMapHelpers.field_a;
                 var6Lifetime1 = var11;
                 if (var11 != null) {
                   if (var11.field_n instanceof WidgetDropListener) {
                     ((WidgetDropListener) (var11.field_n)).onDropped(-92, var11, (DropTargetWidget) null);
                   }
-                  qf.field_a = null;
+                  KeyMapHelpers.field_a = null;
                 }
                 if (var7 != 0 &&
                   var5 != 0 &&
@@ -456,161 +456,161 @@ class UiComponent extends IntrusiveNode {
                   this.blur(2);
                 }
               }
-              TextHotspotWidget.field_R = ef.field_b;
+              TextHotspotWidget.field_R = HighscorePacketHandlers.field_b;
               if (param2 == 99) {
-                ij.updateTooltip(-5516, this.getTooltip((byte) 37));
+                BlankScreen.updateTooltip(-5516, this.getTooltip((byte) 37));
                 return param1;
               }
               this.field_E = -110;
-              ij.updateTooltip(-5516, this.getTooltip((byte) 37));
+              BlankScreen.updateTooltip(-5516, this.getTooltip((byte) 37));
               return param1;
             }
-            if (!this.handlePointerPress((byte) -58, this, IntrusiveDequeCursor.field_c, param0, BufferedRandomAccessFile.field_a, param3, ji.field_c)) {
+            if (!this.handlePointerPress((byte) -58, this, IntrusiveDequeCursor.field_c, param0, BufferedRandomAccessFile.field_a, param3, FriendCaptionGlobals.field_c)) {
               if (var5 == 0) {
-                if (ef.field_b == 0) {
+                if (HighscorePacketHandlers.field_b == 0) {
                   if (TextHotspotWidget.field_R == 0) {
-                    TextHotspotWidget.field_R = ef.field_b;
+                    TextHotspotWidget.field_R = HighscorePacketHandlers.field_b;
                     if (param2 == 99) {
-                      ij.updateTooltip(-5516, this.getTooltip((byte) 37));
+                      BlankScreen.updateTooltip(-5516, this.getTooltip((byte) 37));
                       return param1;
                     }
                     this.field_E = -110;
-                    ij.updateTooltip(-5516, this.getTooltip((byte) 37));
+                    BlankScreen.updateTooltip(-5516, this.getTooltip((byte) 37));
                     return param1;
                   }
                   this.handlePointerRelease(StatusBar.field_k, param3, this, param2 - 99, param0, ProxyAuthenticationException.field_d);
-                  var12 = qf.field_a;
+                  var12 = KeyMapHelpers.field_a;
                   if (var12 != null) {
                     if (var12.field_n instanceof WidgetDropListener) {
                       ((WidgetDropListener) (var12.field_n)).onDropped(-92, var12, (DropTargetWidget) null);
                     }
-                    qf.field_a = null;
+                    KeyMapHelpers.field_a = null;
                   }
                   if (var7 != 0 &&
                     var5 != 0 &&
                     0 != IntrusiveDequeCursor.field_c) {
                     this.blur(2);
-                    TextHotspotWidget.field_R = ef.field_b;
+                    TextHotspotWidget.field_R = HighscorePacketHandlers.field_b;
                     if (param2 == 99) {
-                      ij.updateTooltip(-5516, this.getTooltip((byte) 37));
+                      BlankScreen.updateTooltip(-5516, this.getTooltip((byte) 37));
                       return param1;
                     }
                     this.field_E = -110;
-                    ij.updateTooltip(-5516, this.getTooltip((byte) 37));
+                    BlankScreen.updateTooltip(-5516, this.getTooltip((byte) 37));
                     return param1;
                   }
                 }
-                TextHotspotWidget.field_R = ef.field_b;
+                TextHotspotWidget.field_R = HighscorePacketHandlers.field_b;
                 if (param2 == 99) {
-                  ij.updateTooltip(-5516, this.getTooltip((byte) 37));
+                  BlankScreen.updateTooltip(-5516, this.getTooltip((byte) 37));
                   return param1;
                 }
                 this.field_E = -110;
-                ij.updateTooltip(-5516, this.getTooltip((byte) 37));
+                BlankScreen.updateTooltip(-5516, this.getTooltip((byte) 37));
                 return param1;
               }
               this.blur(2);
               if (var7 != 0) {
                 param1 = false;
-                if (ef.field_b == 0) {
+                if (HighscorePacketHandlers.field_b == 0) {
                   if (TextHotspotWidget.field_R == 0) {
                     break regionExit1;
                   }
                   this.handlePointerRelease(StatusBar.field_k, param3, this, param2 - 99, param0, ProxyAuthenticationException.field_d);
-                  var14 = qf.field_a;
+                  var14 = KeyMapHelpers.field_a;
                   var6Lifetime2 = var14;
                   if (var14 != null) {
                     if (var14.field_n instanceof WidgetDropListener) {
                       ((WidgetDropListener) (var14.field_n)).onDropped(-92, var14, (DropTargetWidget) null);
                     }
-                    qf.field_a = null;
+                    KeyMapHelpers.field_a = null;
                   }
                   if (var5 != 0 &&
                     0 != IntrusiveDequeCursor.field_c) {
                     this.blur(2);
-                    TextHotspotWidget.field_R = ef.field_b;
+                    TextHotspotWidget.field_R = HighscorePacketHandlers.field_b;
                     if (param2 == 99) {
-                      ij.updateTooltip(-5516, this.getTooltip((byte) 37));
+                      BlankScreen.updateTooltip(-5516, this.getTooltip((byte) 37));
                       return param1;
                     }
                     this.field_E = -110;
-                    ij.updateTooltip(-5516, this.getTooltip((byte) 37));
+                    BlankScreen.updateTooltip(-5516, this.getTooltip((byte) 37));
                     return param1;
                   }
                 }
-                TextHotspotWidget.field_R = ef.field_b;
+                TextHotspotWidget.field_R = HighscorePacketHandlers.field_b;
                 if (param2 == 99) {
-                  ij.updateTooltip(-5516, this.getTooltip((byte) 37));
+                  BlankScreen.updateTooltip(-5516, this.getTooltip((byte) 37));
                   return param1;
                 }
                 this.field_E = -110;
-                ij.updateTooltip(-5516, this.getTooltip((byte) 37));
+                BlankScreen.updateTooltip(-5516, this.getTooltip((byte) 37));
                 return param1;
               }
-              if (ef.field_b == 0) {
+              if (HighscorePacketHandlers.field_b == 0) {
                 if (TextHotspotWidget.field_R == 0) {
-                  TextHotspotWidget.field_R = ef.field_b;
+                  TextHotspotWidget.field_R = HighscorePacketHandlers.field_b;
                   if (param2 == 99) {
-                    ij.updateTooltip(-5516, this.getTooltip((byte) 37));
+                    BlankScreen.updateTooltip(-5516, this.getTooltip((byte) 37));
                     return param1;
                   }
                   this.field_E = -110;
-                  ij.updateTooltip(-5516, this.getTooltip((byte) 37));
+                  BlankScreen.updateTooltip(-5516, this.getTooltip((byte) 37));
                   return param1;
                 }
                 this.handlePointerRelease(StatusBar.field_k, param3, this, param2 - 99, param0, ProxyAuthenticationException.field_d);
-                var13 = qf.field_a;
+                var13 = KeyMapHelpers.field_a;
                 var6Lifetime2Lifetime1 = var13;
                 if (var13 != null) {
                   if (var13.field_n instanceof WidgetDropListener) {
                     ((WidgetDropListener) (var13.field_n)).onDropped(-92, var13, (DropTargetWidget) null);
                   }
-                  qf.field_a = null;
+                  KeyMapHelpers.field_a = null;
                 }
                 if (var7 != 0 &&
                   var5 != 0 &&
                   0 != IntrusiveDequeCursor.field_c) {
                   this.blur(2);
-                  TextHotspotWidget.field_R = ef.field_b;
+                  TextHotspotWidget.field_R = HighscorePacketHandlers.field_b;
                   if (param2 == 99) {
-                    ij.updateTooltip(-5516, this.getTooltip((byte) 37));
+                    BlankScreen.updateTooltip(-5516, this.getTooltip((byte) 37));
                     return param1;
                   }
                   this.field_E = -110;
-                  ij.updateTooltip(-5516, this.getTooltip((byte) 37));
+                  BlankScreen.updateTooltip(-5516, this.getTooltip((byte) 37));
                   return param1;
                 }
               }
-              TextHotspotWidget.field_R = ef.field_b;
+              TextHotspotWidget.field_R = HighscorePacketHandlers.field_b;
               if (param2 == 99) {
-                ij.updateTooltip(-5516, this.getTooltip((byte) 37));
+                BlankScreen.updateTooltip(-5516, this.getTooltip((byte) 37));
                 return param1;
               }
               this.field_E = -110;
-              ij.updateTooltip(-5516, this.getTooltip((byte) 37));
+              BlankScreen.updateTooltip(-5516, this.getTooltip((byte) 37));
               return param1;
             }
             param1 = false;
-            if (ef.field_b != 0) {
+            if (HighscorePacketHandlers.field_b != 0) {
               break regionExit1;
             }
             if (TextHotspotWidget.field_R == 0) {
-              TextHotspotWidget.field_R = ef.field_b;
+              TextHotspotWidget.field_R = HighscorePacketHandlers.field_b;
               if (param2 == 99) {
-                ij.updateTooltip(-5516, this.getTooltip((byte) 37));
+                BlankScreen.updateTooltip(-5516, this.getTooltip((byte) 37));
                 return param1;
               }
               this.field_E = -110;
-              ij.updateTooltip(-5516, this.getTooltip((byte) 37));
+              BlankScreen.updateTooltip(-5516, this.getTooltip((byte) 37));
               return param1;
             }
             this.handlePointerRelease(StatusBar.field_k, param3, this, param2 - 99, param0, ProxyAuthenticationException.field_d);
-            var15 = qf.field_a;
+            var15 = KeyMapHelpers.field_a;
             if (var15 != null) {
               if (var15.field_n instanceof WidgetDropListener) {
                 ((WidgetDropListener) (var15.field_n)).onDropped(-92, var15, (DropTargetWidget) null);
               }
-              qf.field_a = null;
+              KeyMapHelpers.field_a = null;
             }
             if (var7 == 0) {
               break regionExit1;
@@ -619,21 +619,21 @@ class UiComponent extends IntrusiveNode {
           if (var5 != 0 &&
             0 != IntrusiveDequeCursor.field_c) {
             this.blur(2);
-            TextHotspotWidget.field_R = ef.field_b;
+            TextHotspotWidget.field_R = HighscorePacketHandlers.field_b;
             if (param2 == 99) {
-              ij.updateTooltip(-5516, this.getTooltip((byte) 37));
+              BlankScreen.updateTooltip(-5516, this.getTooltip((byte) 37));
               return param1;
             }
             this.field_E = -110;
-            ij.updateTooltip(-5516, this.getTooltip((byte) 37));
+            BlankScreen.updateTooltip(-5516, this.getTooltip((byte) 37));
             return param1;
           }
         }
-        TextHotspotWidget.field_R = ef.field_b;
+        TextHotspotWidget.field_R = HighscorePacketHandlers.field_b;
         if (param2 != 99) {
           this.field_E = -110;
         }
-        ij.updateTooltip(-5516, this.getTooltip((byte) 37));
+        BlankScreen.updateTooltip(-5516, this.getTooltip((byte) 37));
         return param1;
     }
 
@@ -750,7 +750,7 @@ class UiComponent extends IntrusiveNode {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2 = PacketBuffer.decodeBase37Name(nh.encodeBase37Name(param0, -29667), -7067);
+          var2 = PacketBuffer.decodeBase37Name(Base37NameHelpers.encodeBase37Name(param0, -29667), -7067);
           if (var2 == null) {
             var2 = "";
           }

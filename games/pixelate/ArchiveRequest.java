@@ -9,11 +9,11 @@ abstract class ArchiveRequest extends DualLinkNode {
     static String[] field_w;
     static int[] field_A;
     boolean field_x;
-    static wm field_u;
+    static ReportReason field_u;
 
     final static void createTimerBarCapSprites(byte param0) {
-        ui.field_f = new Sprite(7, 25);
-        ui.field_f.makeRasterTarget();
+        Cp1252DecodeHelpers.field_f = new Sprite(7, 25);
+        Cp1252DecodeHelpers.field_f.makeRasterTarget();
         SoftwareRasterizer.fillRoundedRectangle(0, 0, 28, 25, 7, 16711935);
         SoftwareRasterizer.drawRoundedRectangle(0, 0, 28, 25, 7, 65793);
         ClientException.field_f.bindRaster(19692);
@@ -24,8 +24,8 @@ abstract class ArchiveRequest extends DualLinkNode {
         if (param0 > 91) {
           SoftwareRasterizer.drawRoundedRectangle(0, 2, 28, 21, 6, 65793);
           ClientException.field_f.bindRaster(19692);
-          di.field_c = new Sprite(8, 25);
-          di.field_c.makeRasterTarget();
+          NumberFormatHelpers.field_c = new Sprite(8, 25);
+          NumberFormatHelpers.field_c.makeRasterTarget();
           SoftwareRasterizer.drawRoundedRectangle(SoftwareRasterizer.field_j - 28, 3, 28, 21, 6, 16777215);
           SoftwareRasterizer.drawRoundedRectangle(-28 + SoftwareRasterizer.field_j, 2, 28, 21, 6, 16777215);
           SoftwareRasterizer.drawRoundedRectangle(-28 + (SoftwareRasterizer.field_j - 1), 2, 28, 21, 6, 65793);
@@ -35,8 +35,8 @@ abstract class ArchiveRequest extends DualLinkNode {
         ArchiveRequest.createTimerBarCapSprites((byte) 36);
         SoftwareRasterizer.drawRoundedRectangle(0, 2, 28, 21, 6, 65793);
         ClientException.field_f.bindRaster(19692);
-        di.field_c = new Sprite(8, 25);
-        di.field_c.makeRasterTarget();
+        NumberFormatHelpers.field_c = new Sprite(8, 25);
+        NumberFormatHelpers.field_c.makeRasterTarget();
         SoftwareRasterizer.drawRoundedRectangle(SoftwareRasterizer.field_j - 28, 3, 28, 21, 6, 16777215);
         SoftwareRasterizer.drawRoundedRectangle(-28 + SoftwareRasterizer.field_j, 2, 28, 21, 6, 16777215);
         SoftwareRasterizer.drawRoundedRectangle(-28 + (SoftwareRasterizer.field_j - 1), 2, 28, 21, 6, 65793);
@@ -65,6 +65,6 @@ abstract class ArchiveRequest extends DualLinkNode {
     static {
         field_z = new int[128];
         field_w = new String[]{"Connecting to update server", "Verbinde mit Aktualisierungsserver", "Connexion au serveur de mise à jour", "Conectando ao servidor de atualização", "Met updateserver verbinden", "Connecting to update server (untranslated)"};
-        field_u = new wm(9, 0, 4, 1);
+        field_u = new ReportReason(9, 0, 4, 1);
     }
 }

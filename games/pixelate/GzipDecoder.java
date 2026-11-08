@@ -13,7 +13,7 @@ final class GzipDecoder {
         String stackIn_12_0 = null;
         int stackIn_12_1 = 0;
         boolean stackIn_13_2 = false;
-        sb stackIn_18_0 = null;
+        NineSliceFrame stackIn_18_0 = null;
         RuntimeException decompiledCaughtException = null;
         int var1_int = 0;
         RuntimeException var1 = null;
@@ -23,18 +23,18 @@ final class GzipDecoder {
         String var6 = null;
         int var7 = 0;
         int var8 = 0;
-        sb var9 = null;
+        NineSliceFrame var9 = null;
         int var10 = 0;
         var10 = Pixelate.field_H ? 1 : 0;
         try {
-          var1_int = LinkButtonPainter.field_e - qn.field_o;
-          qn.field_o = -(var1_int >> 1) + bq.field_d;
-          LinkButtonPainter.field_e = var1_int + qn.field_o;
+          var1_int = LinkButtonPainter.field_e - PatchNoteUsage.field_o;
+          PatchNoteUsage.field_o = -(var1_int >> 1) + LegacyMenuBuilder.field_d;
+          LinkButtonPainter.field_e = var1_int + PatchNoteUsage.field_o;
           if (param0 < 16) {
             field_b = (String) null;
           }
-          ce.field_c = -(nf.field_c >> 1) + qh.field_b;
-          var2 = ce.field_c;
+          ChatChannelGlobals.field_c = -(LoginFormGlobals.field_c >> 1) + MusicPlaybackHelpers.field_b;
+          var2 = ChatChannelGlobals.field_c;
           for (var3 = 0; var3 < AccountRegistrationPanel.field_J.length; var3++) {
             var4 = ProxyAuthenticationException.field_e[var3];
             if (var4 < 0) {
@@ -43,7 +43,7 @@ final class GzipDecoder {
               if (var4 == VerticalScrollbar.field_Gb.selectedIndex) {
                 var5 = ScoreMarkerDemo.field_k;
               } else {
-                var5 = mh.field_a;
+                var5 = QuickChatOpenHelpers.field_a;
               }
             }
             var6 = AccountRegistrationPanel.field_J[var3];
@@ -51,7 +51,7 @@ final class GzipDecoder {
             stackIn_12_1 = 8192;
             stackIn_13_2 = !(var4 < 0);
             var7 = ArchiveProvider.measureMessageText(stackIn_12_0, stackIn_12_1, stackIn_13_2);
-            var8 = bq.field_d - (var7 >> 1);
+            var8 = LegacyMenuBuilder.field_d - (var7 >> 1);
             if (var4 >= 0) {
               if (VerticalScrollbar.field_Gb.selectedIndex != var4) {
                 stackIn_18_0 = BufferedRandomAccessFile.field_m;
@@ -61,15 +61,15 @@ final class GzipDecoder {
               var9 = stackIn_18_0;
               var2 = var2 + KiteTailSegment.field_e;
               if (var9 != null) {
-                var9.draw(var2, dk.field_d + (WidgetStyleLayer.field_b << 1), -1, (ProxyAuthenticationException.field_a << 1) + var7, var8 - ProxyAuthenticationException.field_a);
+                var9.draw(var2, NineSliceFrameHelpers.field_d + (WidgetStyleLayer.field_b << 1), -1, (ProxyAuthenticationException.field_a << 1) + var7, var8 - ProxyAuthenticationException.field_a);
               }
               var2 = var2 + WidgetStyleLayer.field_b;
             }
             if (var4 >= 0) {
               SingleChildContainer.field_G.drawText(var6, var8, var2 + StatefulTextPainter.field_q, var5, -1);
-              var2 = var2 + (dk.field_d + WidgetStyleLayer.field_b + KiteTailSegment.field_e);
+              var2 = var2 + (NineSliceFrameHelpers.field_d + WidgetStyleLayer.field_b + KiteTailSegment.field_e);
             } else {
-              DualLinkNode.field_o.drawText(var6, var8, ab.field_b + var2, var5, -1);
+              DualLinkNode.field_o.drawText(var6, var8, ResultCaptionGlobals.field_b + var2, var5, -1);
               var2 = var2 + BouncedownBackground.field_m;
             }
           }

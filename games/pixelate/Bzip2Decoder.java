@@ -68,8 +68,8 @@ final class Bzip2Decoder {
         var24 = null;
         var25 = null;
         param0.field_F = 1;
-        if (dh.field_d == null) {
-          dh.field_d = new int[param0.field_F * 100000];
+        if (DisplayNameHelpers.field_d == null) {
+          DisplayNameHelpers.field_d = new int[param0.field_F * 100000];
         }
         var26 = 1;
         while (true) {
@@ -240,14 +240,14 @@ final class Bzip2Decoder {
                 param0.field_b[var4] = param0.field_b[var4] + param0.field_b[var4 - 1];
               }
               for (var4 = 0; var4 < var14; var4++) {
-                var1 = (byte)(dh.field_d[var4] & 255);
+                var1 = (byte)(DisplayNameHelpers.field_d[var4] & 255);
                 dupTemp$1 = param0.field_b[var1 & 255];
-                dh.field_d[dupTemp$1] = dh.field_d[dupTemp$1] | var4 << 8;
+                DisplayNameHelpers.field_d[dupTemp$1] = DisplayNameHelpers.field_d[dupTemp$1] | var4 << 8;
                 param0.field_b[var1 & 255] = param0.field_b[var1 & 255] + 1;
               }
-              param0.field_g = dh.field_d[param0.field_s] >> 8;
+              param0.field_g = DisplayNameHelpers.field_d[param0.field_s] >> 8;
               param0.field_n = 0;
-              param0.field_g = dh.field_d[param0.field_g];
+              param0.field_g = DisplayNameHelpers.field_d[param0.field_g];
               param0.field_c = (byte)(param0.field_g & 255);
               param0.field_g = param0.field_g >> 8;
               param0.field_n = param0.field_n + 1;
@@ -311,7 +311,7 @@ final class Bzip2Decoder {
               }
               dupTemp$0 = param0.field_a[var1 & 255] & 255;
               param0.field_u[dupTemp$0] = param0.field_u[dupTemp$0] + 1;
-              dh.field_d[var14] = param0.field_a[var1 & 255] & 255;
+              DisplayNameHelpers.field_d[var14] = param0.field_a[var1 & 255] & 255;
               var14++;
               if (var12 == 0) {
                 var11++;
@@ -368,7 +368,7 @@ final class Bzip2Decoder {
             var1 = param0.field_a[param0.field_t[param0.field_w[0]] & 255];
             param0.field_u[var1 & 255] = param0.field_u[var1 & 255] + var15;
             while (var15 > 0) {
-              dh.field_d[var14] = var1 & 255;
+              DisplayNameHelpers.field_d[var14] = var1 & 255;
               var14++;
               var15--;
             }
@@ -401,7 +401,7 @@ final class Bzip2Decoder {
         var3 = param0.field_v;
         var4 = param0.field_n;
         var5 = param0.field_c;
-        var15 = dh.field_d;
+        var15 = DisplayNameHelpers.field_d;
         var14 = var15;
         var6 = var14;
         var7 = param0.field_g;
@@ -503,7 +503,7 @@ final class Bzip2Decoder {
         param0.field_v = var3;
         param0.field_n = var4;
         param0.field_c = var5;
-        dh.field_d = var6;
+        DisplayNameHelpers.field_d = var6;
         param0.field_g = var7;
         param0.field_o = var8;
         param0.field_l = var9;

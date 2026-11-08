@@ -31,14 +31,14 @@ final class RankingTableRequest extends IntrusiveNode {
         var6 = Pixelate.field_H ? 1 : 0;
         try {
           var2_int = 0;
-          var8 = new int[la.field_a.length];
+          var8 = new int[ScreenChangeHelpers.field_a.length];
           var7 = var8;
           var3 = var7;
           if (param1 != 118) {
             field_p = (String) null;
           }
           for (var4 = 0; var8.length > var4; var4++) {
-            var3[var4] = -Math.abs(param0 - la.field_a[var4]) + 30;
+            var3[var4] = -Math.abs(param0 - ScreenChangeHelpers.field_a[var4]) + 30;
             if (var8[var4] < 0) {
               var8[var4] = 0;
             }
@@ -52,7 +52,7 @@ final class RankingTableRequest extends IntrusiveNode {
               return stackIn_13_0;
             }
           }
-          stackIn_16_0 = JavaRandomHelpers.randomBelow(UiTheme.field_f, -125, la.field_a.length);
+          stackIn_16_0 = JavaRandomHelpers.randomBelow(UiTheme.field_f, -125, ScreenChangeHelpers.field_a.length);
           return stackIn_16_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -78,7 +78,7 @@ final class RankingTableRequest extends IntrusiveNode {
     final static void resendProgressRecords(int param0, byte param1) {
         IntrusiveNode var2 = null;
         int var3 = 0;
-        hf var4 = null;
+        AchievementRecord var4 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2_ref = null;
         var3 = Pixelate.field_H ? 1 : 0;
@@ -86,14 +86,14 @@ final class RankingTableRequest extends IntrusiveNode {
           if (param1 != 42) {
             field_p = (String) null;
           }
-          var4 = (hf) (dh.field_a.first(1504642273));
+          var4 = (AchievementRecord) (DisplayNameHelpers.field_a.first(1504642273));
           while (var4 != null) {
-            id.writeProgressRecord((byte) -117, var4, param0);
-            var4 = (hf) (dh.field_a.next(param1 + 1504642231));
+            AccountRequestReply.writeProgressRecord((byte) -117, var4, param0);
+            var4 = (AchievementRecord) (DisplayNameHelpers.field_a.next(param1 + 1504642231));
           }
           var2 = StrongCacheReference.field_z.first(1504642273);
           while (var2 != null) {
-            ro.sendStatsRequest(126, param0);
+            NameSuggestionHelpers.sendStatsRequest(126, param0);
             var2 = StrongCacheReference.field_z.next(1504642273);
           }
           return;

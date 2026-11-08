@@ -21,11 +21,11 @@ final class Puzzle {
     static String field_a;
     static String field_f;
 
-    final static wm[] getReportReasons(byte param0) {
+    final static ReportReason[] getReportReasons(byte param0) {
         if (param0 != 62) {
           Puzzle.isAsciiAlphanumeric('￑', (byte) 81);
         }
-        return new wm[]{SectorCacheStore.field_f, ej.field_b, StatefulTextPainter.field_w, NumericDateInputWidget.field_T, NetworkGameClient.field_r, DualLinkNode.field_l, NetworkGameClient.field_C, ArchiveRequest.field_u, MenuInputState.field_f, of.field_e, ModalStack.field_M, QuickChatPhraseCache.field_d, GradientOutlineTextPainter.field_s, ThreeSliceButtonPainter.field_u};
+        return new ReportReason[]{SectorCacheStore.field_f, ReportReasonGlobals.field_b, StatefulTextPainter.field_w, NumericDateInputWidget.field_T, NetworkGameClient.field_r, DualLinkNode.field_l, NetworkGameClient.field_C, ArchiveRequest.field_u, MenuInputState.field_f, TextDecodeHelpers.field_e, ModalStack.field_M, QuickChatPhraseCache.field_d, GradientOutlineTextPainter.field_s, ThreeSliceButtonPainter.field_u};
     }
 
     final void shufflePictures(byte param0, Random param1) {
@@ -160,14 +160,14 @@ final class Puzzle {
 
     final static String getLoginNameOrDefault(int param0) {
         String var1 = "";
-        if (nf.field_b != null) {
-          var1 = nf.field_b.getUsername(-24832);
+        if (LoginFormGlobals.field_b != null) {
+          var1 = LoginFormGlobals.field_b.getUsername(-24832);
         }
         if (param0 == var1.length()) {
           var1 = DiskCacheRequest.getLocalDisplayName(false);
         }
         if (var1.length() == 0) {
-          var1 = cd.field_d;
+          var1 = LoginMethodGlobals.field_d;
         }
         return var1;
     }

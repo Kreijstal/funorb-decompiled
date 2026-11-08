@@ -85,7 +85,7 @@ final class PlayerController {
         if (param0 != -59) {
           PlayerController.canPollServerConnection((byte) 49);
         }
-        stackIn_7_0 = (10 <= el.field_b) && (!IconTextComponent.field_Nb) && (!PauseMenuScreen.isGameConnectionOpen(true));
+        stackIn_7_0 = (10 <= EmailValidationState.field_b) && (!IconTextComponent.field_Nb) && (!PauseMenuScreen.isGameConnectionOpen(true));
         return stackIn_7_0;
     }
 
@@ -151,55 +151,55 @@ final class PlayerController {
         int var8Lifetime2;
         var10 = Pixelate.field_H ? 1 : 0;
         try {
-          ek.field_c = true;
+          ChatHistoryHelpers.field_c = true;
           ProxyAuthenticationException.field_g = param4;
           var11 = param2;
           if (param1) {
-            stackIn_4_0 = td.field_a;
+            stackIn_4_0 = PuzzleModePictureHelpers.field_a;
           } else {
             stackIn_4_0 = SoundVoice.field_k;
           }
           var6 = stackIn_4_0;
           if (ProxyAuthenticationException.field_g == 0) {
-            var7 = qn.wrapText(var11, 480, TickClock.field_c, -121, DualLinkNode.field_o);
+            var7 = PatchNoteUsage.wrapText(var11, 480, TickClock.field_c, -121, DualLinkNode.field_o);
             var8 = var7 + 3;
             AccountRegistrationPanel.field_J = new String[var8];
             ProxyAuthenticationException.field_e = new int[var8];
             for (var9 = 0; var9 < var8; var9++) {
               ProxyAuthenticationException.field_e[var9] = -1;
             }
-            di.field_b = new int[2];
+            NumberFormatHelpers.field_b = new int[2];
             for (var9 = 0; var9 < var7; var9++) {
               AccountRegistrationPanel.field_J[var9] = TickClock.field_c[var9];
             }
             AccountRegistrationPanel.field_J[-3 + var8] = "";
             AccountRegistrationPanel.field_J[var8 - 2] = var6;
             ProxyAuthenticationException.field_e[-2 + var8] = 0;
-            di.field_b[0] = 1;
+            NumberFormatHelpers.field_b[0] = 1;
             AccountRegistrationPanel.field_J[-1 + var8] = TabbedPanel.field_Hb;
             ProxyAuthenticationException.field_e[var8 - 1] = 1;
-            di.field_b[1] = 2;
+            NumberFormatHelpers.field_b[1] = 2;
           } else {
             if (1 != ProxyAuthenticationException.field_g) {
               throw new IllegalArgumentException();
             }
-            var7 = qn.wrapText(var11, 480, TickClock.field_c, -109, DualLinkNode.field_o);
+            var7 = PatchNoteUsage.wrapText(var11, 480, TickClock.field_c, -109, DualLinkNode.field_o);
             var8 = var7 + 2;
             AccountRegistrationPanel.field_J = new String[var8];
             ProxyAuthenticationException.field_e = new int[var8];
             for (var9 = 0; var8 > var9; var9++) {
               ProxyAuthenticationException.field_e[var9] = -1;
             }
-            di.field_b = new int[1];
+            NumberFormatHelpers.field_b = new int[1];
             for (var9 = 0; var7 > var9; var9++) {
               AccountRegistrationPanel.field_J[var9] = TickClock.field_c[var9];
             }
             AccountRegistrationPanel.field_J[-2 + var8] = "";
             AccountRegistrationPanel.field_J[var8 - 1] = TabbedPanel.field_Hb;
             ProxyAuthenticationException.field_e[var8 - 1] = 0;
-            di.field_b[0] = 2;
+            NumberFormatHelpers.field_b[0] = 2;
           }
-          VerticalScrollbar.field_Gb.field_h = di.field_b.length;
+          VerticalScrollbar.field_Gb.field_h = NumberFormatHelpers.field_b.length;
           var7Lifetime1 = 0;
           for (var8Lifetime1 = 0; var8Lifetime1 < AccountRegistrationPanel.field_J.length; var8Lifetime1++) {
             stackIn_25_0 = AccountRegistrationPanel.field_J[var8Lifetime1];
@@ -213,19 +213,19 @@ final class PlayerController {
               var7Lifetime1 = var9Lifetime1;
             }
           }
-          qn.field_o = -(var7Lifetime1 >> 1) + bq.field_d;
-          LinkButtonPainter.field_e = -(var7Lifetime1 >> 1) + (bq.field_d + var7Lifetime1);
-          nf.field_c = (WidgetStyleLayer.field_b + KiteTailSegment.field_e << 1) * VerticalScrollbar.field_Gb.field_h;
+          PatchNoteUsage.field_o = -(var7Lifetime1 >> 1) + LegacyMenuBuilder.field_d;
+          LinkButtonPainter.field_e = -(var7Lifetime1 >> 1) + (LegacyMenuBuilder.field_d + var7Lifetime1);
+          LoginFormGlobals.field_c = (WidgetStyleLayer.field_b + KiteTailSegment.field_e << 1) * VerticalScrollbar.field_Gb.field_h;
           for (var8Lifetime2 = param3; AccountRegistrationPanel.field_J.length > var8Lifetime2; var8Lifetime2++) {
-            stackIn_36_0 = nf.field_c;
+            stackIn_36_0 = LoginFormGlobals.field_c;
             if (ProxyAuthenticationException.field_e[var8Lifetime2] >= 0) {
-              stackIn_37_1 = dk.field_d;
+              stackIn_37_1 = NineSliceFrameHelpers.field_d;
             } else {
               stackIn_37_1 = BouncedownBackground.field_m;
             }
-            nf.field_c = stackIn_36_0 + stackIn_37_1;
+            LoginFormGlobals.field_c = stackIn_36_0 + stackIn_37_1;
           }
-          ce.field_c = -(nf.field_c >> 1) + qh.field_b;
+          ChatChannelGlobals.field_c = -(LoginFormGlobals.field_c >> 1) + MusicPlaybackHelpers.field_b;
           VerticalScrollbar.field_Gb.initializeSelection(param0, NameAvailabilityValidator.messageMenuOptionAt(false, ProxyAuthenticationException.field_d, StatusBar.field_k), param3 ^ 17068, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -376,7 +376,7 @@ final class PlayerController {
               stackIn_13_0 = (!this.field_k.applyAction(param1, this.field_j, 117, this.field_e)) ? 0 : 1;
               var3 = stackIn_13_0;
               if (var3 != 0) {
-                EmailValidator.playPieceSound((byte) 96, JavaRandomHelpers.randomBelow(ea.field_b, -101, 4) + 0);
+                EmailValidator.playPieceSound((byte) 96, JavaRandomHelpers.randomBelow(CredentialKind.field_b, -101, 4) + 0);
               }
             }
           }

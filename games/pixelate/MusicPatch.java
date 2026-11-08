@@ -13,13 +13,13 @@ final class MusicPatch extends IntrusiveNode {
     byte[] field_t;
     static Sprite field_m;
     static String field_k;
-    un[] field_l;
+    PatchEnvelopeSet[] field_l;
 
     final static String getPendingNoticeText(byte param0) {
         if (param0 != 11) {
           field_q = (String) null;
         }
-        return oo.field_a;
+        return AchievementIconGlobals.field_a;
     }
 
     final static void decreaseMusicVolume(int param0) {
@@ -30,13 +30,13 @@ final class MusicPatch extends IntrusiveNode {
           if (var2 == 0) {
             var2 = 32;
           }
-          nk.setMusicVolume((byte) 93, -var2 + LinkButtonPainter.field_h);
+          ChatPanelHelpers.setMusicVolume((byte) 93, -var2 + LinkButtonPainter.field_h);
         } else {
-          nk.setMusicVolume((byte) 93, 0);
+          ChatPanelHelpers.setMusicVolume((byte) 93, 0);
         }
     }
 
-    final static void drawRotatingCube(jn param0, int param1) {
+    final static void drawRotatingCube(TwistedLogicCube param0, int param1) {
         Vector3 stackIn_12_0 = null;
         int stackIn_15_0 = 0;
         Vector3 stackIn_19_0 = null;
@@ -150,11 +150,11 @@ final class MusicPatch extends IntrusiveNode {
             }
           }
           if (var6 == 0) {
-            um.drawCubeFaces(var9, var17, var24, var18, var14, (byte) -101, param0.field_u >> 8, var13, var10, param0.field_r >> 8, param0.field_t);
-            um.drawCubeFaces(var11, var19, var22, var20, var16, (byte) -110, param0.field_u >> 8, var15, var12, param0.field_r >> 8, param0.field_t);
+            SavedDataRequest.drawCubeFaces(var9, var17, var24, var18, var14, (byte) -101, param0.field_u >> 8, var13, var10, param0.field_r >> 8, param0.field_t);
+            SavedDataRequest.drawCubeFaces(var11, var19, var22, var20, var16, (byte) -110, param0.field_u >> 8, var15, var12, param0.field_r >> 8, param0.field_t);
           } else {
-            um.drawCubeFaces(var11, var19, var22, var20, var16, (byte) -114, param0.field_u >> 8, var15, var12, param0.field_r >> 8, param0.field_t);
-            um.drawCubeFaces(var9, var17, var24, var18, var14, (byte) -100, param0.field_u >> 8, var13, var10, param0.field_r >> 8, param0.field_t);
+            SavedDataRequest.drawCubeFaces(var11, var19, var22, var20, var16, (byte) -114, param0.field_u >> 8, var15, var12, param0.field_r >> 8, param0.field_t);
+            SavedDataRequest.drawCubeFaces(var9, var17, var24, var18, var14, (byte) -100, param0.field_u >> 8, var13, var10, param0.field_r >> 8, param0.field_t);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -224,18 +224,18 @@ final class MusicPatch extends IntrusiveNode {
         }
         MusicCrossfadeStream.clearKeyboardHandler((byte) -109);
         TextHotspotWidget.clearMouseHandler((byte) -94);
-        ep.closeArchiveConnections(-26721);
+        PolygonClipHelpers.closeArchiveConnections(-26721);
         if (KiteBackground.isServerConnectionActive(true)) {
           ChatMessage.field_f.writeOpcode(1, 15514);
           SecondaryNodeHashTable.flushOutgoingPackets(0, param0 + 10091);
         }
-        na.closeGameSocket(true);
+        GameSocketHelpers.closeGameSocket(true);
     }
 
     MusicPatch(byte[] param0) {
         int var11_int = 0;
         int incrementValue$0 = 0;
-        un dupTemp$8 = null;
+        PatchEnvelopeSet dupTemp$8 = null;
         int incrementValue$5 = 0;
         int var25_int = 0;
         int incrementValue$3 = 0;
@@ -257,11 +257,11 @@ final class MusicPatch extends IntrusiveNode {
         byte[] var11 = null;
         int var12 = 0;
         int var13_int = 0;
-        un[] var13 = null;
+        PatchEnvelopeSet[] var13 = null;
         int var14 = 0;
         int var15_int = 0;
         byte[] var15 = null;
-        un var15_ref = null;
+        PatchEnvelopeSet var15_ref = null;
         byte[] var16 = null;
         int var16_int = 0;
         int var17 = 0;
@@ -276,7 +276,7 @@ final class MusicPatch extends IntrusiveNode {
         int var26 = 0;
         int var27 = 0;
         int var28_int = 0;
-        un var28 = null;
+        PatchEnvelopeSet var28 = null;
         int var29 = 0;
         int var30 = 0;
         int var31 = 0;
@@ -287,26 +287,26 @@ final class MusicPatch extends IntrusiveNode {
         int var37 = 0;
         PacketBuffer var38 = null;
         byte[] var39 = null;
-        un var40 = null;
+        PatchEnvelopeSet var40 = null;
         byte[] var41 = null;
         byte[] var42 = null;
         byte[] var43 = null;
         byte[] var44 = null;
-        un var45 = null;
+        PatchEnvelopeSet var45 = null;
         byte[] var46 = null;
         byte[] var47 = null;
-        un var48 = null;
-        un var49 = null;
-        un var50 = null;
-        un var51 = null;
-        un var52 = null;
+        PatchEnvelopeSet var48 = null;
+        PatchEnvelopeSet var49 = null;
+        PatchEnvelopeSet var50 = null;
+        PatchEnvelopeSet var51 = null;
+        PatchEnvelopeSet var52 = null;
         byte[] var53 = null;
         byte[] var54 = null;
         byte[] var55 = null;
         byte[] var56 = null;
         byte[] var57 = null;
         byte[] var58 = null;
-        un var28Lifetime1;
+        PatchEnvelopeSet var28Lifetime1;
         int var5Lifetime1;
         int var8Lifetime1;
         int var19Lifetime1;
@@ -366,7 +366,7 @@ final class MusicPatch extends IntrusiveNode {
         try {
           this.field_r = new int[128];
           this.field_o = new byte[128];
-          this.field_l = new un[128];
+          this.field_l = new PatchEnvelopeSet[128];
           this.field_u = new short[128];
           this.field_t = new byte[128];
           this.field_n = new PcmSample[128];
@@ -430,9 +430,9 @@ final class MusicPatch extends IntrusiveNode {
           } else {
             var12 = var9;
           }
-          var13 = new un[var12];
+          var13 = new PatchEnvelopeSet[var12];
           for (var14Lifetime1 = 0; var14Lifetime1 < var13.length; var14Lifetime1++) {
-            dupTemp$8 = new un();
+            dupTemp$8 = new PatchEnvelopeSet();
             var13[var14Lifetime1] = dupTemp$8;
             var40 = dupTemp$8;
             var15_ref = var40;
@@ -495,7 +495,7 @@ final class MusicPatch extends IntrusiveNode {
               }
               var22 = var38.readVarInt(127);
             }
-            this.field_u[var23] = (short)(this.field_u[var23] + cm.bitAnd(var22 - 1 << 14, 32768));
+            this.field_u[var23] = (short)(this.field_u[var23] + VolumeControlledVoice.bitAnd(var22 - 1 << 14, 32768));
             var20Lifetime2--;
             this.field_r[var23] = var22;
           }
@@ -551,7 +551,7 @@ final class MusicPatch extends IntrusiveNode {
                 }
               }
               var20Lifetime5--;
-              this.field_l[var26] = (un) (var25);
+              this.field_l[var26] = (PatchEnvelopeSet) (var25);
             }
           }
           var21Lifetime4 = 0;
@@ -634,7 +634,7 @@ final class MusicPatch extends IntrusiveNode {
               var31 = var15[var29Lifetime3Lifetime1 + 1];
               var32 = (var30 - var27Lifetime6Lifetime1) / 2 + (-var27Lifetime6Lifetime1 + var30) * var28_int;
               for (var33 = var27Lifetime6Lifetime1; var30 > var33; var33++) {
-                var34 = cm.floorDivide(var30 - var27Lifetime6Lifetime1, (byte) 120, var32);
+                var34 = VolumeControlledVoice.floorDivide(var30 - var27Lifetime6Lifetime1, (byte) 120, var32);
                 this.field_t[var33] = (byte)(this.field_t[var33] * var34 + 32 >> 6);
                 var32 = var32 + (var31 - var28_int);
               }
@@ -674,7 +674,7 @@ final class MusicPatch extends IntrusiveNode {
               var37 = var27Lifetime7Lifetime1;
               var33Lifetime1 = var37;
               while (var37 < var30Lifetime1Lifetime1) {
-                var34Lifetime1 = cm.floorDivide(var30Lifetime1Lifetime1 - var27Lifetime7Lifetime1, (byte) 124, var32Lifetime1);
+                var34Lifetime1 = VolumeControlledVoice.floorDivide(var30Lifetime1Lifetime1 - var27Lifetime7Lifetime1, (byte) 124, var32Lifetime1);
                 var35 = var34Lifetime1 + (this.field_o[var37] & 255);
                 if (var35 < 0) {
                   var35 = 0;

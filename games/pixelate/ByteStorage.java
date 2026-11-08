@@ -51,7 +51,7 @@ abstract class ByteStorage {
           if (param0 != -29949) {
             field_g = (int[]) null;
           }
-          ig.pumpAudio(-56);
+          AudioPumpHelpers.pumpAudio(-56);
           var1 = SoundCache.field_b.first(1504642273);
           while (var1 instanceof SoundVoice) {
             var2 = var1.field_a;

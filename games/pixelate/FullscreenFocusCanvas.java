@@ -5,14 +5,14 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
     static String field_e;
     java.awt.Frame field_f;
     static Sprite field_d;
-    static el field_a;
+    static EmailValidationState field_a;
     static String field_b;
     volatile boolean field_g;
     static String field_c;
 
     final void closeFrame(int param0, PlatformTaskDispatcher param1) {
         try {
-          dc.exitFullscreenFrame((byte) -124, this.field_f, param1);
+          FullscreenExitHelpers.exitFullscreenFrame((byte) -124, this.field_f, param1);
           if (param0 != 6511) {
             FullscreenFocusCanvas.releaseStatics((byte) 114);
           }
@@ -65,7 +65,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
     static {
         field_e = "Quit to website";
         field_b = "Pause Menu";
-        field_a = new el();
+        field_a = new EmailValidationState();
         field_c = "Loading...";
     }
 }

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class DisplayNameForm extends UiContainer implements NameSuggestionListener, ButtonListener {
-    static fp field_Q;
+    static NoticeKind field_Q;
     static String field_K;
     static DiskCacheWorker field_J;
     static String field_R;
@@ -12,7 +12,7 @@ final class DisplayNameForm extends UiContainer implements NameSuggestionListene
     private TextButton field_P;
     private TextButton field_N;
     static int field_L;
-    static dq field_I;
+    static TransitionPhase field_I;
 
     private final int appendStandardValidatedField(byte param0, int param1, String param2, UiComponent param3, String param4, int param5) {
         int var7_int = 0;
@@ -172,7 +172,7 @@ final class DisplayNameForm extends UiContainer implements NameSuggestionListene
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var11 = new LabeledField(20, param2, param0 + 120, 25, param1, false, 120, 3, he.field_d, 16777215, param5);
+          var11 = new LabeledField(20, param2, param0 + 120, 25, param1, false, 120, 3, CanvasInputHelpers.field_d, 16777215, param5);
           this.addChild(var11, 80);
           var9 = new ValidationHelpWidget(((ValidationProvider) ((Object) param1)).getValidationSource(1), param3, 126, param2 + var11.field_C, 25 + param0, param6);
           var9.field_n = (UiListener) (this);
@@ -258,9 +258,9 @@ final class DisplayNameForm extends UiContainer implements NameSuggestionListene
     public DisplayNameForm() {
         super(0, 0, 496, 0, (WidgetPainter) null);
         this.field_O = new ValidatedTextWidget("", (UiListener) null, 12);
-        TextWidgetPainter var1 = new TextWidgetPainter(ep.field_b, 0, 0, 0, 0, 16777215, -1, 3, 0, he.field_d.maxAscent, -1, 2147483647, true);
+        TextWidgetPainter var1 = new TextWidgetPainter(PolygonClipHelpers.field_b, 0, 0, 0, 0, 16777215, -1, 3, 0, CanvasInputHelpers.field_d.maxAscent, -1, 2147483647, true);
         UiComponent var2 = new UiComponent(PlayerController.field_d, var1, (UiListener) null);
-        this.field_P = new TextButton(ig.field_c, (UiListener) null);
+        this.field_P = new TextButton(AudioPumpHelpers.field_c, (UiListener) null);
         this.field_N = new TextButton(IntrusiveNode.field_f, (UiListener) null);
         this.field_O.field_l = StatusBar.field_i;
         this.field_O.setValidationSource((byte) 57, new NameAvailabilityValidator(this.field_O));
@@ -274,7 +274,7 @@ final class DisplayNameForm extends UiContainer implements NameSuggestionListene
         int var5 = 200;
         this.addChild(var2, 80);
         var3 += 50;
-        var3 = var3 + (5 + this.appendStandardValidatedField((byte) 52, var3, na.field_a, this.field_O, BufferedSocket.field_i, 170));
+        var3 = var3 + (5 + this.appendStandardValidatedField((byte) 52, var3, GameSocketHelpers.field_a, this.field_O, BufferedSocket.field_i, 170));
         this.field_P.setBounds(var5, (byte) 49, var3, 496 - var5 >> 1, 40);
         this.field_N.setBounds(60, (byte) 38, 15 + var3, 3 + var4, 40);
         this.field_N.field_n = (UiListener) (this);
@@ -310,14 +310,14 @@ final class DisplayNameForm extends UiContainer implements NameSuggestionListene
           }
           var3 = -109 % ((13 - param1) / 46);
           var7 = (CharSequence) ((Object) param0);
-          var2 = dh.normalizeDisplayName(var7, (byte) 118);
+          var2 = DisplayNameHelpers.normalizeDisplayName(var7, (byte) 118);
           if (var2 == null) {
             var2 = param0;
           }
           var4 = (SocialListEntry) (GameResultsScreen.field_q.get(-11434, (long)var2.hashCode()));
           while (var4 != null) {
             var8 = (CharSequence) ((Object) var4.field_Fb);
-            var5 = dh.normalizeDisplayName(var8, (byte) 27);
+            var5 = DisplayNameHelpers.normalizeDisplayName(var8, (byte) 27);
             if (var5 == null) {
               var5 = var4.field_Fb;
             }
@@ -385,7 +385,7 @@ final class DisplayNameForm extends UiContainer implements NameSuggestionListene
         field_M = "Accept";
         field_K = "Orb coins: ";
         field_L = -1;
-        field_Q = new fp();
-        field_I = new dq();
+        field_Q = new NoticeKind();
+        field_I = new TransitionPhase();
     }
 }

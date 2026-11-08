@@ -37,7 +37,7 @@ final class DraggableWidget extends SingleChildContainer {
           if (1 == param2) {
             this.field_N = param4 - this.field_z - param5;
             this.field_K = -param3 - this.field_p + param6;
-            qf.field_a = this;
+            KeyMapHelpers.field_a = this;
           }
           this.field_k = param2;
           return true;

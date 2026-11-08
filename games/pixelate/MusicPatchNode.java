@@ -17,7 +17,7 @@ final class MusicPatchNode extends IntrusiveNode {
     MusicPatch field_x;
     int field_C;
     int field_k;
-    un field_q;
+    PatchEnvelopeSet field_q;
     int field_v;
     int field_A;
     int field_E;
@@ -35,8 +35,8 @@ final class MusicPatchNode extends IntrusiveNode {
           if (param1 <= 34) {
             field_p = (SceneWidget) null;
           }
-          param0.addKeyListener(mc.field_r);
-          param0.addFocusListener(mc.field_r);
+          param0.addKeyListener(AchievementMaskRequest.field_r);
+          param0.addFocusListener(AchievementMaskRequest.field_r);
         } catch (RuntimeException runtimeException) {
           throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "in.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

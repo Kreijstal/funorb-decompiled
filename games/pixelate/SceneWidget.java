@@ -353,9 +353,9 @@ class SceneWidget extends SceneWidgetNode {
         var21 = this.field_w + var19;
         var22 = var20 + this.field_I;
         if (!this.field_A) {
-          dk.drawNineSliceFrame(this.field_K, this.field_tb, (byte) 75, this.height, this.screenY, var16);
+          NineSliceFrameHelpers.drawNineSliceFrame(this.field_K, this.field_tb, (byte) 75, this.height, this.screenY, var16);
         } else {
-          dk.drawNineSliceFrame(param4, param1, (byte) 75, param8, param7, var16);
+          NineSliceFrameHelpers.drawNineSliceFrame(param4, param1, (byte) 75, param8, param7, var16);
         }
         if (var17 != null) {
           var23_int = this.field_tb + var21;
@@ -486,10 +486,10 @@ class SceneWidget extends SceneWidgetNode {
           IntrusiveDequeCursor.field_c != 0 &&
           BufferedRandomAccessFile.field_a >= SoftwareRasterizer.field_e &&
           BufferedRandomAccessFile.field_a < SoftwareRasterizer.field_h &&
-          ji.field_c >= SoftwareRasterizer.field_f &&
-          ji.field_c < SoftwareRasterizer.field_a) {
+          FriendCaptionGlobals.field_c >= SoftwareRasterizer.field_f &&
+          FriendCaptionGlobals.field_c < SoftwareRasterizer.field_a) {
           var13 = 1;
-          this.field_Ab = -this.screenY + ji.field_c;
+          this.field_Ab = -this.screenY + FriendCaptionGlobals.field_c;
           this.field_P = IntrusiveDequeCursor.field_c;
           this.field_ub = -this.field_tb + BufferedRandomAccessFile.field_a;
           this.heldPressButton = IntrusiveDequeCursor.field_c;
@@ -501,10 +501,10 @@ class SceneWidget extends SceneWidgetNode {
         }
         stackIn_31_1 = (!EmergentBehaviourBackground.field_q) && (SoftwareRasterizer.field_e <= ProxyAuthenticationException.field_d) && (ProxyAuthenticationException.field_d < SoftwareRasterizer.field_h) && (StatusBar.field_k >= SoftwareRasterizer.field_f) && (SoftwareRasterizer.field_a > StatusBar.field_k);
         this.field_R = stackIn_31_1;
-        if (0 == ef.field_b) {
+        if (0 == HighscorePacketHandlers.field_b) {
           this.heldPressButton = 0;
         }
-        stackIn_39_1 = (this.field_R) && (ef.field_b == this.heldPressButton) && (param2);
+        stackIn_39_1 = (this.field_R) && (HighscorePacketHandlers.field_b == this.heldPressButton) && (param2);
         this.field_W = stackIn_39_1;
         if (null != this.children) {
           var14 = (SceneWidget) (this.children.last(1504642273));
@@ -558,11 +558,11 @@ class SceneWidget extends SceneWidgetNode {
     }
 
     final static void openLobbyQuickChat(boolean param0) {
-        ce.field_d = 0;
+        ChatChannelGlobals.field_d = 0;
         if (!param0) {
           return;
         }
-        ib.openRootQuickChatMenu(20558);
+        GridSize.openRootQuickChatMenu(20558);
     }
 
     final void applyStyle(int param0, SceneWidget param1) {

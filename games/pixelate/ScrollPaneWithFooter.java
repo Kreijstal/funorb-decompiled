@@ -3,7 +3,7 @@
  */
 final class ScrollPaneWithFooter extends SceneWidget {
     SceneWidget field_Ib;
-    static el field_Kb;
+    static EmailValidationState field_Kb;
     static int field_Jb;
     SceneWidget field_Hb;
     static int field_Eb;
@@ -46,7 +46,7 @@ final class ScrollPaneWithFooter extends SceneWidget {
     }
 
     final static void openQuickChatHelp(int param0) {
-        ri.field_f = new hp(cm.field_o, ScorePopup.field_i, Vector3.field_f, TextFieldValidator.field_h, um.field_q, dn.field_c);
+        ChatHistoryAllocator.field_f = new HelpPopup(VolumeControlledVoice.field_o, ScorePopup.field_i, Vector3.field_f, TextFieldValidator.field_h, SavedDataRequest.field_q, DefaultQuickChatPhraseListener.field_c);
         int var1 = 40 / ((param0 + 90) / 35);
     }
 
@@ -81,6 +81,6 @@ final class ScrollPaneWithFooter extends SceneWidget {
 
     static {
         field_Jb = 2;
-        field_Kb = new el();
+        field_Kb = new EmailValidationState();
     }
 }

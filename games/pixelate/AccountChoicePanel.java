@@ -33,7 +33,7 @@ final class AccountChoicePanel extends UiContainer implements ButtonListener {
         int var5;
         var5 = Pixelate.field_H ? 1 : 0;
         EditableTextWidget.layoutAccountPanelSlide(67);
-        if (gi.field_a < 0) {
+        if (HighscoreNameEntry.field_a < 0) {
           ValidatedTextWidget.field_lb.field_cb = null;
           if (param0 != 2) {
             return;
@@ -51,7 +51,7 @@ final class AccountChoicePanel extends UiContainer implements ButtonListener {
           stackIn_21_2 = (param2) && (!param3) && (LobbyPlayer.field_Wb);
           ((SceneWidget) (Object) stackIn_20_0).updateInputFullScreen(stackIn_20_1, stackIn_21_2);
         } else {
-          ValidatedTextWidget.field_lb.field_cb = AlphaContainer.formatTemplate(oi.field_d, 89, new String[]{Integer.toString(gi.field_a)});
+          ValidatedTextWidget.field_lb.field_cb = AlphaContainer.formatTemplate(RegistrationHelpers.field_d, 89, new String[]{Integer.toString(HighscoreNameEntry.field_a)});
           if (param0 != 2) {
             return;
           }
@@ -68,18 +68,18 @@ final class AccountChoicePanel extends UiContainer implements ButtonListener {
           stackIn_69_2 = (param2) && (!param3) && (LobbyPlayer.field_Wb);
           ((SceneWidget) (Object) stackIn_68_0).updateInputFullScreen(stackIn_68_1, stackIn_69_2);
         }
-        cl.field_g.field_g.processTabPresses((byte) -88);
+        Cp1252EncodingHelpers.field_g.field_g.processTabPresses((byte) -88);
         if (ValidatedTextWidget.field_cb.field_P != 0) {
-          fc.field_a = true;
+          LobbyListBindingHelpers.field_a = true;
         }
-        if (lg.field_c.field_P != 0) {
-          if (fe.field_a) {
+        if (LoginCookieHelpers.field_c.field_P != 0) {
+          if (PendingFlagGlobals.field_a) {
             AudioService.sendSubtypeZeroRequest(83, param1);
           } else {
             if (0 < BufferedRandomAccessFile.field_j) {
               AudioService.sendSubtypeZeroRequest(83, param1);
             } else {
-              if (2 > wo.field_h) {
+              if (2 > SocialPanel.field_h) {
                 PlayerBoard.field_g = true;
               } else {
                 if (EmailValidator.field_m[12]) {
@@ -107,7 +107,7 @@ final class AccountChoicePanel extends UiContainer implements ButtonListener {
         int var5 = this.field_z + param2;
         int var6 = this.field_p + param0;
         int var7 = 87 % ((70 - param3) / 49);
-        he.field_d.drawParagraph(ClientContextMenu.field_n, 20 + var5, 20 + var6, -40 + this.field_E, -50 + this.field_C, 16777215, -1, 1, 0, he.field_d.maxAscent);
+        CanvasInputHelpers.field_d.drawParagraph(ClientContextMenu.field_n, 20 + var5, 20 + var6, -40 + this.field_E, -50 + this.field_C, 16777215, -1, 1, 0, CanvasInputHelpers.field_d.maxAscent);
         super.drawLayer(param0, param1, param2, (byte) 122);
     }
 
@@ -166,7 +166,7 @@ final class AccountChoicePanel extends UiContainer implements ButtonListener {
                 CheckboxPainter.submitRegistrationRequest(-22218);
               }
             } else {
-              id.showRegistrationPanel(param2 + 87);
+              AccountRequestReply.showRegistrationPanel(param2 + 87);
             }
           } else {
             IntrusiveDequeCursor.openBlankLoginForm(true);
@@ -190,7 +190,7 @@ final class AccountChoicePanel extends UiContainer implements ButtonListener {
         super(0, 0, 476, 225, (WidgetPainter) null);
         this.field_J = new TextButton(AlphaContainer.field_M, (UiListener) null);
         this.field_N = new TextButton(MatchController.field_v, (UiListener) null);
-        this.field_L = new TextButton(fc.field_c, (UiListener) null);
+        this.field_L = new TextButton(LobbyListBindingHelpers.field_c, (UiListener) null);
         ThreeSliceButtonPainter var1 = new ThreeSliceButtonPainter();
         this.field_J.field_y = (WidgetPainter) ((Object) var1);
         this.field_N.field_y = (WidgetPainter) ((Object) var1);

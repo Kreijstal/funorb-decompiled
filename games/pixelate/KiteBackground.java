@@ -76,7 +76,7 @@ final class KiteBackground extends BackgroundScene {
             return null;
           }
           if (param2 == 1000) {
-            stackIn_7_0 = wa.buildSprites(param2 - 1119);
+            stackIn_7_0 = SpriteBuildHelpers.buildSprites(param2 - 1119);
             return stackIn_7_0;
           }
           stackIn_5_0 = (Sprite[]) null;
@@ -97,16 +97,16 @@ final class KiteBackground extends BackgroundScene {
 
     final static void resendPendingRequests(byte param0, int param1) {
         int var3 = 0;
-        rh var4 = null;
+        HighscoreSubmission var4 = null;
         RankingTableRequest var5 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         var3 = Pixelate.field_H ? 1 : 0;
         try {
-          var4 = (rh) (MenuScreen.field_b.first(1504642273));
+          var4 = (HighscoreSubmission) (MenuScreen.field_b.first(1504642273));
           while (var4 != null) {
             AlphaContainer.sendHighscoreSubmission((byte) -76, var4, param1);
-            var4 = (rh) (MenuScreen.field_b.next(1504642273));
+            var4 = (HighscoreSubmission) (MenuScreen.field_b.next(1504642273));
           }
           var5 = (RankingTableRequest) (DialWidgetPainter.field_c.first(1504642273));
           while (var5 != null) {
@@ -170,10 +170,10 @@ final class KiteBackground extends BackgroundScene {
         MusicPatchPcmStream.field_p = TutorialPage.loadSprite("benefits", "members_benefits_price", MenuInputState.field_d, (byte) -70);
         SpriteState.field_t = TutorialPage.loadSprite("benefits", "members_benefits_logo", MenuInputState.field_d, (byte) -118);
         FireworkDisplay.field_h = SocketConnector.loadRgbSpritesByName("members_benefits_screenshots", "benefits", (byte) 47, MenuInputState.field_d);
-        bl.setBenefitsBorderAndCaption(11833, PasswordFieldPainter.field_y, SoundCache.field_e);
-        ni.configurePopupStyle(MusicPatchPcmStream.field_p, 2, 40, 40, 80, false, -2400, 15, PieceTiming.field_e, 80, 0);
+        MouseWheelSetupHelpers.setBenefitsBorderAndCaption(11833, PasswordFieldPainter.field_y, SoundCache.field_e);
+        TextHotspot.configurePopupStyle(MusicPatchPcmStream.field_p, 2, 40, 40, 80, false, -2400, 15, PieceTiming.field_e, 80, 0);
         PictureStrip.setSlideshowSprites(-25960, FireworkDisplay.field_h);
-        sk.setBenefitsLogo(param0 ^ -3744, SpriteState.field_t);
+        LobbyFrameHelpers.setBenefitsLogo(param0 ^ -3744, SpriteState.field_t);
         return true;
     }
 

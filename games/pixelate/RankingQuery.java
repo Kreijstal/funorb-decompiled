@@ -46,7 +46,7 @@ final class RankingQuery extends IntrusiveNode {
             if (!param0.field_a) {
               if (0 == param0.field_d &&
                 0 == param0.field_e) {
-                var2_intLifetime1 = ib.field_i[param0.field_j];
+                var2_intLifetime1 = GridSize.field_i[param0.field_j];
               } else {
                 var2_intLifetime1 = LabeledField.field_P[param0.field_j];
               }
@@ -58,7 +58,7 @@ final class RankingQuery extends IntrusiveNode {
               var2_intLifetime1 = LabeledField.field_P[param0.field_j];
             } else {
               if (~param0.field_k == ~DebouncedValidator.field_f) {
-                var2_intLifetime1 = ib.field_i[param0.field_j];
+                var2_intLifetime1 = GridSize.field_i[param0.field_j];
               } else {
                 var2_intLifetime1 = LabeledField.field_P[param0.field_j];
               }

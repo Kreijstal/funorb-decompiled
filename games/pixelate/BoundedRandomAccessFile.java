@@ -128,7 +128,7 @@ final class BoundedRandomAccessFile {
             }
             var4 = new byte[var3_int];
             param2.position = param2.position + QuickChatPhraseDefinition.field_v.decompress(-1, var3_int, param2.payload, 0, param2.position, var4);
-            var5 = ui.decodeText(true, var4, 0, var3_int);
+            var5 = Cp1252DecodeHelpers.decodeText(true, var4, 0, var3_int);
             stackIn_5_0 = var5;
             return stackIn_5_0;
           } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -314,7 +314,7 @@ final class BoundedRandomAccessFile {
             for (var14 = 0; param4.phraseIds.length > var14; var14++) {
               var15 = param4.phraseIds[var14];
               if (var15 == -1) {
-                var8[var12Lifetime1 + var14] = ui.field_g;
+                var8[var12Lifetime1 + var14] = Cp1252DecodeHelpers.field_g;
                 var9[var14 + var12Lifetime1] = param4.field_t[var14];
                 var10[var12Lifetime1 + var14] = param4.phraseIds[var14];
               } else {

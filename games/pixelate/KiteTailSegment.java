@@ -40,7 +40,7 @@ final class KiteTailSegment {
         Object var5 = null;
         int var6 = 0;
         byte[] var8 = null;
-        um var9 = null;
+        SavedDataRequest var9 = null;
         CipherPacketBuffer var10 = null;
         byte[] var11 = null;
         byte[] var12 = null;
@@ -54,14 +54,14 @@ final class KiteTailSegment {
           if (var2 != 0) {
             if (1 != var2) {
               CheckboxPainter.reportClientError(1, "A1: " + Cloud.describePacketHistory(-26), (Throwable) null);
-              na.closeGameSocket(true);
+              GameSocketHelpers.closeGameSocket(true);
               return;
             }
             var3 = var10.readInt(0);
-            var4_ref_og = (SaveDataRequest) (wk.field_g.first(1504642273));
+            var4_ref_og = (SaveDataRequest) (EmailLoginCredentials.field_g.first(1504642273));
             while (var4_ref_og != null) {
               if (var4_ref_og.field_m != var3) {
-                var4_ref_og = (SaveDataRequest) (wk.field_g.next(1504642273));
+                var4_ref_og = (SaveDataRequest) (EmailLoginCredentials.field_g.next(1504642273));
                 continue;
               }
               break;
@@ -70,12 +70,12 @@ final class KiteTailSegment {
               var4_ref_og.unlink(2779);
               return;
             }
-            na.closeGameSocket(true);
+            GameSocketHelpers.closeGameSocket(true);
             return;
           }
-          var9 = (um) (bq.field_a.first(1504642273));
+          var9 = (SavedDataRequest) (LegacyMenuBuilder.field_a.first(1504642273));
           if (var9 == null) {
-            na.closeGameSocket(true);
+            GameSocketHelpers.closeGameSocket(true);
             return;
           }
           var4 = var10.readUnsignedByte(255);
@@ -90,7 +90,7 @@ final class KiteTailSegment {
           }
           var10.position = var10.position + 4;
           if (!var10.verifyCrc32((byte) 124)) {
-            na.closeGameSocket(true);
+            GameSocketHelpers.closeGameSocket(true);
             return;
           }
           var9.field_p = true;
@@ -183,11 +183,11 @@ final class KiteTailSegment {
 
     final static void spawnScorePopup(int param0, int param1, int param2, int param3) {
         if (param1 == -1) {
-          gq.startScorePopup(param1 + 1, param3, param0, Integer.toString(param2));
+          AlternateNameCredentials.startScorePopup(param1 + 1, param3, param0, Integer.toString(param2));
           return;
         }
         KiteTailSegment.releaseStatics(-60);
-        gq.startScorePopup(param1 + 1, param3, param0, Integer.toString(param2));
+        AlternateNameCredentials.startScorePopup(param1 + 1, param3, param0, Integer.toString(param2));
     }
 
     KiteTailSegment(int param0, int param1, int param2, int param3) {

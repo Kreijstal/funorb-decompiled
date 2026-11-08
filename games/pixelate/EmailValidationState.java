@@ -1,0 +1,217 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+import java.io.*;
+import java.util.*;
+
+final class EmailValidationState {
+    static int field_a;
+    static String field_c;
+    static int field_b;
+
+    public final String toString() {
+        throw new IllegalStateException();
+    }
+
+    final static void setButtonMetrics(int param0, int param1, int param2, int param3, int param4) {
+        if (param3 >= 87) {
+          StatefulTextPainter.field_q = param1;
+          BouncedownBackground.field_m = param4;
+          NineSliceFrameHelpers.field_d = param0;
+          ResultCaptionGlobals.field_b = param2;
+          return;
+        }
+        field_b = -89;
+        StatefulTextPainter.field_q = param1;
+        BouncedownBackground.field_m = param4;
+        NineSliceFrameHelpers.field_d = param0;
+        ResultCaptionGlobals.field_b = param2;
+    }
+
+    final static int hitTestChoiceIcons(int param0, byte param1, int param2) {
+        int var3;
+        int var3Lifetime1;
+        int var3Lifetime2;
+        if (null == AccountChoicePanel.field_O) {
+          return -1;
+        }
+        if (AlphaContainer.field_K > param2) {
+          var3 = 98 / ((38 - param1) / 61);
+          if (JaggrabDownloader.field_a > param2) {
+            return -1;
+          }
+          if (JaggrabDownloader.field_a + AccountChoicePanel.field_O.field_F <= param2) {
+            return -1;
+          }
+          if (param0 < DraggableWidget.field_Q) {
+            return -1;
+          }
+          if (AccountChoicePanel.field_O.field_E + DraggableWidget.field_Q <= param0) {
+            return -1;
+          }
+          return 1;
+        }
+        if (param2 >= AlphaContainer.field_K + AccountChoicePanel.field_O.field_F) {
+          var3Lifetime1 = 98 / ((38 - param1) / 61);
+          if (JaggrabDownloader.field_a > param2) {
+            return -1;
+          }
+          if (JaggrabDownloader.field_a + AccountChoicePanel.field_O.field_F <= param2) {
+            return -1;
+          }
+          if (param0 < DraggableWidget.field_Q) {
+            return -1;
+          }
+          if (AccountChoicePanel.field_O.field_E + DraggableWidget.field_Q <= param0) {
+            return -1;
+          }
+          return 1;
+        }
+        if (Cp1252DecodeHelpers.field_b <= param0 &&
+          Cp1252DecodeHelpers.field_b + AccountChoicePanel.field_O.field_E > param0) {
+          return 0;
+        }
+        var3Lifetime2 = 98 / ((38 - param1) / 61);
+        if (JaggrabDownloader.field_a > param2) {
+          return -1;
+        }
+        if (JaggrabDownloader.field_a + AccountChoicePanel.field_O.field_F <= param2) {
+          return -1;
+        }
+        if (param0 < DraggableWidget.field_Q) {
+          return -1;
+        }
+        if (AccountChoicePanel.field_O.field_E + DraggableWidget.field_Q > param0) {
+          return 1;
+        }
+        return -1;
+    }
+
+    final static void drawThickLine(int param0, int param1, int param2, int param3, int param4, int param5, float param6) {
+        int[] var17 = new int[8];
+        int[] var15 = var17;
+        int[] var13 = var15;
+        int[] var7 = var13;
+        float var8 = (float)(param1 - param4);
+        float var9 = (float)(param5 - param0);
+        float var10 = (float)Math.sqrt((double)(var9 * var9 + var8 * var8));
+        var8 = var8 / var10;
+        var9 = var9 / var10;
+        int var11 = (int)(0.5f + param6 * var9);
+        int var12 = -(int)(param6 * var8 + 0.5f);
+        if (var9 < 0.0f) {
+          var11--;
+        }
+        if (0.0f > var8) {
+          var13 = var7;
+          var12++;
+        }
+        var13 = var7;
+        var13[0] = param4 + var11;
+        var13[1] = var12 + param0;
+        var13[3] = param0 - var12;
+        var13[2] = -var11 + param4;
+        var13[5] = -var12 + param5;
+        var13[7] = var12 + param5;
+        var13[4] = param1 - var11;
+        var13[6] = param1 + var11;
+        int[] var18 = PolygonClipHelpers.clipPolygonToRaster(var17, -1);
+        int[] var16 = var18;
+        int[] var14 = var16;
+        var7 = var14;
+        if (var14 == null) {
+          return;
+        }
+        PolygonFiller.fillPolygon(var18, param2);
+        if (param3 <= -8) {
+          SoftwareRasterizer.fillCircle(param4, param0, (int)(param6 - 0.5f), param2);
+          SoftwareRasterizer.fillCircle(param1, param5, (int)(-0.5f + param6), param2);
+          return;
+        }
+        field_b = -46;
+        SoftwareRasterizer.fillCircle(param4, param0, (int)(param6 - 0.5f), param2);
+        SoftwareRasterizer.fillCircle(param1, param5, (int)(-0.5f + param6), param2);
+    }
+
+    final static ResourceArchive createResourceArchive(int param0, boolean param1, boolean param2, int param3, int param4, boolean param5) {
+        try {
+          Object var6 = null;
+          Object var7 = null;
+          CachedArchiveProvider var8 = null;
+          ResourceArchive stackIn_16_0 = null;
+          Throwable decompiledCaughtException = null;
+          if (param0 >= -100) {
+            EmailValidationState.createResourceArchive(68, true, true, -71, -103, true);
+          }
+          try {
+            var6 = null;
+            var7 = null;
+            if (HighscorePacketHandlers.field_e.cacheDataFile != null) {
+              Js5NetworkRequest.field_G = new BufferedRandomAccessFile(HighscorePacketHandlers.field_e.cacheDataFile, 5200, 0);
+              HighscorePacketHandlers.field_e.cacheDataFile = null;
+              var6 = new SectorCacheStore(255, Js5NetworkRequest.field_G, new BufferedRandomAccessFile(HighscorePacketHandlers.field_e.field_m, 12000, 0), 2097152);
+            }
+            if (null != Js5NetworkRequest.field_G) {
+              if (LaggedPacket.field_l == null) {
+                LaggedPacket.field_l = new BufferedRandomAccessFile[HighscorePacketHandlers.field_e.cacheIndexFiles.length];
+              }
+              if (null == LaggedPacket.field_l[param3]) {
+                LaggedPacket.field_l[param3] = new BufferedRandomAccessFile(HighscorePacketHandlers.field_e.cacheIndexFiles[param3], 12000, 0);
+                HighscorePacketHandlers.field_e.cacheIndexFiles[param3] = null;
+              }
+              var7 = new SectorCacheStore(param3, Js5NetworkRequest.field_G, LaggedPacket.field_l[param3], 2097152);
+            }
+            var8 = FloatingSquare.field_j.getArchiveSource(param2, 6, param3, (SectorCacheStore) (var6), (SectorCacheStore) (var7));
+            if (param5) {
+              var8.requestGroupScan(true);
+            }
+            stackIn_16_0 = new ResourceArchive(var8, param1, param4);
+            return stackIn_16_0;
+          } catch (java.io.IOException decompiledCaughtParameter0) {
+            decompiledCaughtException = decompiledCaughtParameter0;
+            var6 = (IOException) (Object) decompiledCaughtException;
+            throw new RuntimeException(((IOException) (var6)).toString());
+          }
+        } catch (RuntimeException | Error decompiledUncheckedException) {
+          throw decompiledUncheckedException;
+        } catch (Throwable decompiledCheckedException) {
+          throw new RuntimeException(decompiledCheckedException);
+        }
+    }
+
+    final static int randomBorderFlags(int param0, byte param1) {
+        int var2;
+        var2 = 0;
+        var2 = var2 | 1;
+        if (0 == JavaRandomHelpers.randomBelow(UiTheme.field_f, -105, 2)) {
+          var2 = var2 | 2;
+        }
+        if (JavaRandomHelpers.randomBelow(UiTheme.field_f, -124, 2) == 0) {
+          var2 = var2 | 8;
+        }
+        if (param1 != -24) {
+          EmailValidationState.releaseStatics(-13);
+        }
+        if (JavaRandomHelpers.randomBelow(UiTheme.field_f, param1 ^ 110, 2) == 0) {
+          var2 = var2 | 4;
+        }
+        if (JavaRandomHelpers.randomBelow(UiTheme.field_f, -116, 2) == 0) {
+          var2 = var2 | 16;
+        }
+        return var2;
+    }
+
+    public static void releaseStatics(int param0) {
+        if (param0 != -28464) {
+          field_a = -93;
+          field_c = null;
+          return;
+        }
+        field_c = null;
+    }
+
+    static {
+        field_a = 33;
+        field_c = "Unfortunately your configuration doesn't support fullscreen mode.";
+    }
+}

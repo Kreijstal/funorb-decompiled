@@ -40,14 +40,14 @@ final class HowToPlayScreen extends MenuScreen {
           return;
         }
         if (!this.field_g.isButtonHeld((byte) 35)) {
-          if (ke.field_a == 96) {
+          if (KeyEventGlobals.field_a == 96) {
             if (var2 >= this.field_g.selectedIndex) {
               this.field_g.selectIndex(false, var3);
             } else {
               this.field_g.selectIndex(false, this.field_g.selectedIndex - 1);
             }
           }
-          if (ke.field_a == 97) {
+          if (KeyEventGlobals.field_a == 97) {
             if (this.field_g.selectedIndex >= 0 &&
               this.field_g.selectedIndex < var3) {
               this.field_g.selectIndex(false, this.field_g.selectedIndex + 1);
@@ -55,25 +55,25 @@ final class HowToPlayScreen extends MenuScreen {
               this.field_g.selectIndex(false, var2);
             }
           }
-          if ((ke.field_a == 98 ||
-            ke.field_a == 99) && this.field_g.selectedIndex == -1) {
+          if ((KeyEventGlobals.field_a == 98 ||
+            KeyEventGlobals.field_a == 99) && this.field_g.selectedIndex == -1) {
             this.field_g.selectIndex(false, 1);
           }
         }
         this.field_g.captureKeyCode((byte) -71);
     }
 
-    final static id createSuggestionsResult(byte param0, String[] param1) {
-        id var2 = null;
+    final static AccountRequestReply createSuggestionsResult(byte param0, String[] param1) {
+        AccountRequestReply var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
-        id stackIn_1_0 = null;
+        AccountRequestReply stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2 = new id(false);
+          var2 = new AccountRequestReply(false);
           var2.field_f = param1;
           var3 = 72 % ((-2 - param0) / 58);
           stackIn_1_0 = var2;
@@ -100,10 +100,10 @@ final class HowToPlayScreen extends MenuScreen {
         }
         if (!param1 &&
           SoundVoice.field_m.length - 1 == this.field_r) {
-          var3 = ke.field_a;
-          ke.field_a = 96;
+          var3 = KeyEventGlobals.field_a;
+          KeyEventGlobals.field_a = 96;
           this.field_g.handleHorizontalNavigation(84, 1);
-          ke.field_a = var3;
+          KeyEventGlobals.field_a = var3;
         }
     }
 
@@ -136,7 +136,7 @@ final class HowToPlayScreen extends MenuScreen {
           SpriteState.field_u.tick((byte) 21);
         }
         if (this.field_r == 7) {
-          jf.field_c.tick(300);
+          IncomingPacketHelpers.field_c.tick(300);
         }
         if (param0 > -64) {
           field_s = (Sprite[]) null;
@@ -193,7 +193,7 @@ final class HowToPlayScreen extends MenuScreen {
         this.drawDefaultBackdrop((byte) 59);
         this.drawRows((byte) -71);
         var4 = PieceTiming.field_e;
-        var5 = qj.field_e;
+        var5 = PrivateChatHelpers.field_e;
         var6 = var5.maxAscent + (var5.maxDescent + 1);
         var7 = 200;
         if (this.field_r != 0) {
@@ -237,7 +237,7 @@ final class HowToPlayScreen extends MenuScreen {
                     Js5NetworkRequest.field_C[var8_int].field_a[1].drawOpaque(280 + 30 * var8_int, 350);
                     Js5NetworkRequest.field_C[var8_int].field_a[0].drawOpaque(var8_int * 30 + 270, 340);
                   }
-                  ug.field_q.draw((byte) 50);
+                  LaggedPacket.field_q.draw((byte) 50);
                 } else {
                   if (this.field_r == 5) {
                     var7 = var7 + var6 * var5.drawParagraph(SoundVoice.field_m[this.field_r][0], 50, var7 - 10, 380, 150, 16777215, 0, 0, 1, var6);
@@ -248,7 +248,7 @@ final class HowToPlayScreen extends MenuScreen {
                         var7 += 10;
                         var7 = var7 + var6 * var5.drawParagraph(SoundVoice.field_m[this.field_r][0], 50, var7, 540, 150, 16777215, 0, 0, 0, var6);
                         var8_int = 70;
-                        jf.field_c.draw((byte) -8);
+                        IncomingPacketHelpers.field_c.draw((byte) -8);
                         var4.drawText(SoundVoice.field_m[this.field_r][1], var8_int, 314, 0, -1);
                         var9_int = 2;
                         if (640 - var8_int > ProxyAuthenticationException.field_d &&
@@ -263,7 +263,7 @@ final class HowToPlayScreen extends MenuScreen {
                       var7 = var7 + var6 * var5.drawParagraph(SoundVoice.field_m[this.field_r][0], 50, var7, 540, 150, 16777215, 0, 0, 0, var6);
                       SoftwareRasterizer.setClip(0, 0, 640, 389);
                       PasswordValidator.field_r.draw(false);
-                      an.field_b.draw(false);
+                      CaretLayoutHelpers.field_b.draw(false);
                       DiskCacheRequest.field_H.draw((byte) 119);
                       BoundedRandomAccessFile.field_g.draw(55, 0, 0);
                       DialWidgetPainter.field_a.draw(60, 0, 0);
@@ -279,14 +279,14 @@ final class HowToPlayScreen extends MenuScreen {
               var11 = 50;
               var7 += 30;
               var4.drawRightAlignedText(SoundVoice.field_m[this.field_r][0], var8_int, var7 - 3, 0, -1);
-              var5.drawCentered(SoundVoice.field_m[this.field_r][4], (var11 >> 1) + var8_int - (-var10_int - pk.field_c[0].field_A), -4 + var7, 16777215, 0);
-              pk.field_c[0].drawTransparent(var8_int + var10_int, -pk.field_c[0].field_B + var7);
-              pk.field_c[1].drawTransparent(var11 + var10_int + (var8_int + pk.field_c[0].field_A), var7 - pk.field_c[1].field_B);
+              var5.drawCentered(SoundVoice.field_m[this.field_r][4], (var11 >> 1) + var8_int - (-var10_int - MeshDecodeHelpers.field_c[0].field_A), -4 + var7, 16777215, 0);
+              MeshDecodeHelpers.field_c[0].drawTransparent(var8_int + var10_int, -MeshDecodeHelpers.field_c[0].field_B + var7);
+              MeshDecodeHelpers.field_c[1].drawTransparent(var11 + var10_int + (var8_int + MeshDecodeHelpers.field_c[0].field_A), var7 - MeshDecodeHelpers.field_c[1].field_B);
               var7 = var7 + var9_int;
               var4.drawRightAlignedText(SoundVoice.field_m[this.field_r][1], var8_int, 2 + var7, 0, -1);
-              var5.drawCentered(SoundVoice.field_m[this.field_r][4], (var11 >> 1) + (pk.field_c[0].field_A + var8_int) + var10_int, -4 + var7, 16777215, 0);
+              var5.drawCentered(SoundVoice.field_m[this.field_r][4], (var11 >> 1) + (MeshDecodeHelpers.field_c[0].field_A + var8_int) + var10_int, -4 + var7, 16777215, 0);
               CachedTextLayout.field_p[0].drawTransparent(var10_int + var8_int, var7 - CachedTextLayout.field_p[0].field_B);
-              CachedTextLayout.field_p[1].drawTransparent(var11 + (var10_int + var8_int) + pk.field_c[0].field_A, -CachedTextLayout.field_p[1].field_B + var7);
+              CachedTextLayout.field_p[1].drawTransparent(var11 + (var10_int + var8_int) + MeshDecodeHelpers.field_c[0].field_A, -CachedTextLayout.field_p[1].field_B + var7);
               var7 = var7 + var9_int;
               var4.drawRightAlignedText(SoundVoice.field_m[this.field_r][2], var8_int, var7 + 2, 0, -1);
               CachedTextLayout.field_p[2].drawTransparent(var8_int + var10_int, -CachedTextLayout.field_p[0].field_B + var7);
@@ -305,7 +305,7 @@ final class HowToPlayScreen extends MenuScreen {
           SpriteState.field_C.draw(false);
           QuickChatMenu.field_Qb.draw(50, 0, 0);
         }
-        var4.drawCentered(pk.field_d[this.field_r], 320, 180, 0, -1);
+        var4.drawCentered(MeshDecodeHelpers.field_d[this.field_r], 320, 180, 0, -1);
         var5.drawRightAlignedText(ScoreMarkerDemo.formatPageNumber(4067, this.field_r), 590, 375, 16777215, 0);
         DebouncedValidator.field_d = var3;
         LoginCredentials.field_e = var2;
@@ -316,10 +316,10 @@ final class HowToPlayScreen extends MenuScreen {
         this.field_r = this.field_r - 1;
         if (!param0 &&
           this.field_r == 0) {
-          var3 = ke.field_a;
-          ke.field_a = 97;
+          var3 = KeyEventGlobals.field_a;
+          KeyEventGlobals.field_a = 97;
           this.field_g.handleHorizontalNavigation(param1 - 14, 1);
-          ke.field_a = var3;
+          KeyEventGlobals.field_a = var3;
         }
         if (param1 != 97) {
           field_s = (Sprite[]) null;
@@ -330,7 +330,7 @@ final class HowToPlayScreen extends MenuScreen {
         if (param0 >= -13) {
           this.handleNavigation(-19);
         }
-        la.changeScreen(this.field_l, TickClock.field_a, false, -25528);
+        ScreenChangeHelpers.changeScreen(this.field_l, TickClock.field_a, false, -25528);
     }
 
     static {

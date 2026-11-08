@@ -1,0 +1,67 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class LaggedPacket extends IntrusiveNode {
+    byte[] field_r;
+    int field_m;
+    static int[] field_n;
+    static VerticalScrollbar field_s;
+    static PictureStrip field_q;
+    static BufferedRandomAccessFile[] field_l;
+    long field_o;
+    static int field_k;
+    static String field_p;
+
+    final static void setLegacyMenuOrigin(int param0, int param1, int param2) {
+        MusicPlaybackHelpers.field_b = param0;
+        if (param2 != -26104) {
+          return;
+        }
+        LegacyMenuBuilder.field_d = param1;
+    }
+
+    final static void showRemovedFromGameNotice(int param0) {
+        String var2 = null;
+        if (null != SocialPanel.field_b) {
+          var2 = SocialPanel.field_b;
+          String var1 = var2;
+          LoginCredentials.showMessageDialogText(AlphaContainer.formatTemplate(ChatHistoryHelpers.field_d, 113, new String[]{var2}), false);
+          SocialPanel.field_b = null;
+        }
+        if (param0 == 2586) {
+          return;
+        }
+        LaggedPacket.showRemovedFromGameNotice(20);
+    }
+
+    LaggedPacket(long param0, int param1, byte[] param2) {
+        try {
+          this.field_o = param0;
+          this.field_m = param1;
+          this.field_r = param2;
+        } catch (RuntimeException runtimeException) {
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "ug.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    public static void releaseStatics(int param0) {
+        field_l = null;
+        if (param0 == 24857) {
+          field_p = null;
+          field_s = null;
+          field_n = null;
+          field_q = null;
+          return;
+        }
+        field_p = (String) null;
+        field_p = null;
+        field_s = null;
+        field_n = null;
+        field_q = null;
+    }
+
+    static {
+        field_n = new int[]{14, 15, 16, 8};
+        field_p = "<%0> is not on your ignore list.";
+    }
+}

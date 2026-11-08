@@ -76,23 +76,23 @@ final class PuzzlePieceQueue {
           field_d = (Sprite[]) null;
         }
         if (!LoadingStep.field_a) {
-          if (null == pk.field_f) {
-            pk.field_f = Matrix3.queueAchievementMaskRequest(255, 4);
+          if (null == MeshDecodeHelpers.field_f) {
+            MeshDecodeHelpers.field_f = Matrix3.queueAchievementMaskRequest(255, 4);
           }
-          if (pk.field_f.field_p) {
-            EmailCredentials.field_k = EmailCredentials.field_k & ~pk.field_f.field_s;
-            MenuScreen.field_n = MenuScreen.field_n | pk.field_f.field_s;
+          if (MeshDecodeHelpers.field_f.field_p) {
+            EmailCredentials.field_k = EmailCredentials.field_k & ~MeshDecodeHelpers.field_f.field_s;
+            MenuScreen.field_n = MenuScreen.field_n | MeshDecodeHelpers.field_f.field_s;
             LoadingStep.field_a = true;
-            pk.field_f = null;
+            MeshDecodeHelpers.field_f = null;
           }
         }
         if (!TextHotspotWidget.field_U) {
           if (null == PuzzleThumbnail.field_g) {
-            PuzzleThumbnail.field_g = ni.queueSavedDataRequest(6, -90);
+            PuzzleThumbnail.field_g = TextHotspot.queueSavedDataRequest(6, -90);
           }
           if (PuzzleThumbnail.field_g.field_p) {
             TextHotspotWidget.applyCompletedPuzzleMask(false, PuzzleThumbnail.field_g.field_n);
-            if (ef.field_a) {
+            if (HighscorePacketHandlers.field_a) {
               QuickChatPhraseDefinition.saveProgress((byte) 74);
             }
             PuzzleThumbnail.field_g = null;
@@ -102,11 +102,11 @@ final class PuzzlePieceQueue {
         if (LoadingStep.field_a &&
           TextHotspotWidget.field_U) {
           SocketConnector.stopAudioService(5);
-          ni.refreshScreenItems(-31470);
-          if (fc.field_e == 9 &&
+          TextHotspot.refreshScreenItems(-31470);
+          if (LobbyListBindingHelpers.field_e == 9 &&
             EmailCredentials.field_k == 0) {
-            fc.field_e = 5;
-            la.changeScreen(MidiPcmStream.field_t, 5, false, -25528);
+            LobbyListBindingHelpers.field_e = 5;
+            ScreenChangeHelpers.changeScreen(MidiPcmStream.field_t, 5, false, -25528);
           }
         }
     }

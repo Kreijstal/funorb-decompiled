@@ -251,7 +251,7 @@ final class LoginForm extends UiContainer implements TextInputListener, ButtonLi
                 }
               }
               if (decompiledFrameCompleted2) {
-                TextButton.field_J[var7 / 8] = (byte)bq.bitOr((int) TextButton.field_J[var7 / 8], 1 << var7 % 8);
+                TextButton.field_J[var7 / 8] = (byte)LegacyMenuBuilder.bitOr((int) TextButton.field_J[var7 / 8], 1 << var7 % 8);
               }
             }
             stackIn_82_0 = (param0) ? -1 : 0;
@@ -281,7 +281,7 @@ final class LoginForm extends UiContainer implements TextInputListener, ButtonLi
                         var9++;
                       }
                     } else {
-                      TextButton.field_J[var7 / 8] = (byte)DraggableWidget.intXor((int) TextButton.field_J[var7 / 8], 1 << cm.bitAnd(var7, 7));
+                      TextButton.field_J[var7 / 8] = (byte)DraggableWidget.intXor((int) TextButton.field_J[var7 / 8], 1 << VolumeControlledVoice.bitAnd(var7, 7));
                     }
                   }
                   decompiledFrameRemainder0 = false;
@@ -380,9 +380,9 @@ final class LoginForm extends UiContainer implements TextInputListener, ButtonLi
           }
           boolean decompiledFrameCompleted0 = true;
           if (stackIn_212_0 != 0 &&
-            1 < ff.field_i) {
+            1 < SpriteLoadHelpers.field_i) {
             var6Lifetime2 = 0;
-            while (!(var6Lifetime2 >= (1 + ff.field_i))) {
+            while (!(var6Lifetime2 >= (1 + SpriteLoadHelpers.field_i))) {
               var7_ref_loLifetime1 = AccountTermsPanel.field_L[3][var6Lifetime2];
               stackIn_249_0 = var4_int;
               if (var26 != 0) {
@@ -391,12 +391,12 @@ final class LoginForm extends UiContainer implements TextInputListener, ButtonLi
               }
               if (stackIn_249_0 != 0 &&
                 var7_ref_loLifetime1.field_P != 0) {
-                ib.field_a = var6Lifetime2;
+                GridSize.field_a = var6Lifetime2;
               }
               if (var7_ref_loLifetime1.field_R &&
                 var6Lifetime2 > 0) {
-                if (vm.field_c != null) {
-                  stackIn_240_0 = vm.field_c[-1 + var6Lifetime2];
+                if (LobbyGameLookupHelpers.field_c != null) {
+                  stackIn_240_0 = LobbyGameLookupHelpers.field_c[-1 + var6Lifetime2];
                 } else {
                   stackIn_240_0 = null;
                 }
@@ -407,7 +407,7 @@ final class LoginForm extends UiContainer implements TextInputListener, ButtonLi
               }
               var7_ref_loLifetime1.field_rb = var4_int != 0;
               stackIn_246_0 = var7_ref_loLifetime1;
-              stackIn_247_1 = (~ib.field_a == ~var6Lifetime2);
+              stackIn_247_1 = (~GridSize.field_a == ~var6Lifetime2);
               stackIn_246_0.field_U = stackIn_247_1;
               var6Lifetime2++;
             }
@@ -418,7 +418,7 @@ final class LoginForm extends UiContainer implements TextInputListener, ButtonLi
           }
           var7 = stackIn_249_0;
           scanLoop1: while (true) {
-            if (fj.field_b > var7) {
+            if (MouseInputGlobals.field_b > var7) {
               var8_array = AccountTermsPanel.field_L[var7 + 4];
               stackOut_251_0 = param0;
               stackIn_560_0 = stackOut_251_0 ? 1 : 0;
@@ -438,10 +438,10 @@ final class LoginForm extends UiContainer implements TextInputListener, ButtonLi
                 stackIn_558_0 = var4_int;
                 if (stackIn_558_0 != 0 &&
                   var9 >= 0) {
-                  if (oo.field_e != null &&
-                    null != oo.field_e[var7] &&
-                    0 < (oo.field_e[var7][var9] & ~MatchController.field_t)) {
-                    var15 = cl.highestOneBit((byte) -99, ~MatchController.field_t & oo.field_e[var7][var9]);
+                  if (AchievementIconGlobals.field_e != null &&
+                    null != AchievementIconGlobals.field_e[var7] &&
+                    0 < (AchievementIconGlobals.field_e[var7][var9] & ~MatchController.field_t)) {
+                    var15 = Cp1252EncodingHelpers.highestOneBit((byte) -99, ~MatchController.field_t & AchievementIconGlobals.field_e[var7][var9]);
                     var14 = 1;
                   }
                   if (null != Cloud.field_r &&
@@ -454,25 +454,25 @@ final class LoginForm extends UiContainer implements TextInputListener, ButtonLi
                     null != StatefulTextPainter.field_z[var7]) {
                     var16 = StatefulTextPainter.field_z[var7][var9];
                     if (var16 > 0 &&
-                      gi.field_a < var16) {
+                      HighscoreNameEntry.field_a < var16) {
                       var12 = 1;
                     }
                     if (var16 != 0 &&
-                      !fe.field_a &&
+                      !PendingFlagGlobals.field_a &&
                       BufferedRandomAccessFile.field_j <= 0) {
                       var10 = 1;
                     }
                   }
-                  if (pa.field_a != null &&
-                    pa.field_a[var7] != null) {
-                    var16Lifetime2 = pa.field_a[var7][var9];
+                  if (RequestResultFactory.field_a != null &&
+                    RequestResultFactory.field_a[var7] != null) {
+                    var16Lifetime2 = RequestResultFactory.field_a[var7][var9];
                     if (0 != var16Lifetime2 &&
-                      !fe.field_a &&
+                      !PendingFlagGlobals.field_a &&
                       BufferedRandomAccessFile.field_j <= 0) {
                       var10 = 1;
                     }
                     if (var16Lifetime2 > 0 &&
-                      var16Lifetime2 > ui.field_e) {
+                      var16Lifetime2 > Cp1252DecodeHelpers.field_e) {
                       var11 = 1;
                     }
                   }
@@ -486,7 +486,7 @@ final class LoginForm extends UiContainer implements TextInputListener, ButtonLi
                   }
                   var13 = stackIn_339_0;
                 }
-                if (wo.field_h >= 2 &&
+                if (SocialPanel.field_h >= 2 &&
                   EmailValidator.field_m[12]) {
                   var11 = 0;
                   var13 = 0;
@@ -510,10 +510,10 @@ final class LoginForm extends UiContainer implements TextInputListener, ButtonLi
                   null != Checkbox.field_Z && (!param0 ||
                   !TriangleMesh.field_r)) {
                   PictureStrip.field_f = false;
-                  ib.field_b = false;
+                  GridSize.field_b = false;
                   if (TimerBarDemo.field_o == null) {
-                    TimerBarDemo.field_o = new byte[fj.field_b];
-                    RankingQuery.field_t = new boolean[fj.field_b];
+                    TimerBarDemo.field_o = new byte[MouseInputGlobals.field_b];
+                    RankingQuery.field_t = new boolean[MouseInputGlobals.field_b];
                   }
                   var17_int = 0;
                   while (true) {
@@ -523,7 +523,7 @@ final class LoginForm extends UiContainer implements TextInputListener, ButtonLi
                       continue;
                     }
                     CachedTextLayout.findValidSettingCombination(var7, 0, (byte) 91, param0, -1, var9, param1, -1);
-                    if (wo.field_h >= 2 &&
+                    if (SocialPanel.field_h >= 2 &&
                       EmailValidator.field_m[12]) {
                       PictureStrip.field_f = true;
                     }
@@ -548,11 +548,11 @@ final class LoginForm extends UiContainer implements TextInputListener, ButtonLi
                   }
                   else {
                     if (var9 != -1) {
-                      NanoTickClock.field_k[(var6Lifetime2 + var9) / 8] = (byte)DraggableWidget.intXor((int) NanoTickClock.field_k[(var6Lifetime2 + var9) / 8], 1 << cm.bitAnd(7, var6Lifetime2 + var9));
+                      NanoTickClock.field_k[(var6Lifetime2 + var9) / 8] = (byte)DraggableWidget.intXor((int) NanoTickClock.field_k[(var6Lifetime2 + var9) / 8], 1 << VolumeControlledVoice.bitAnd(7, var6Lifetime2 + var9));
                     } else {
                       var18 = var6Lifetime2;
                       while ((var8_array.length + (var6Lifetime2 - 1)) > var18) {
-                        NanoTickClock.field_k[var18 / 8] = (byte)cm.bitAnd((int) NanoTickClock.field_k[var18 / 8], ~(1 << cm.bitAnd(7, var18)));
+                        NanoTickClock.field_k[var18 / 8] = (byte)VolumeControlledVoice.bitAnd((int) NanoTickClock.field_k[var18 / 8], ~(1 << VolumeControlledVoice.bitAnd(7, var18)));
                         var18++;
                       }
                     }
@@ -560,7 +560,7 @@ final class LoginForm extends UiContainer implements TextInputListener, ButtonLi
                 }
                 if (param0 &&
                   var16Lifetime1 != 0) {
-                  NanoTickClock.field_k[(var9 + var6Lifetime2) / 8] = (byte)cm.bitAnd((int) NanoTickClock.field_k[(var9 + var6Lifetime2) / 8], ~(1 << cm.bitAnd(var6Lifetime2 + var9, 7)));
+                  NanoTickClock.field_k[(var9 + var6Lifetime2) / 8] = (byte)VolumeControlledVoice.bitAnd((int) NanoTickClock.field_k[(var9 + var6Lifetime2) / 8], ~(1 << VolumeControlledVoice.bitAnd(var6Lifetime2 + var9, 7)));
                 }
                 if (0 <= var9 &&
                   var17.field_R) {
@@ -574,11 +574,11 @@ final class LoginForm extends UiContainer implements TextInputListener, ButtonLi
                     stackIn_443_0 = null;
                   }
                   var18_ref_String = stackIn_443_0;
-                  if (null == dq.field_b) {
+                  if (null == TransitionPhase.field_b) {
                     stackIn_451_0 = null;
                   } else {
-                    if (dq.field_b[var7] != null) {
-                      stackIn_451_0 = dq.field_b[var7][var9];
+                    if (TransitionPhase.field_b[var7] != null) {
+                      stackIn_451_0 = TransitionPhase.field_b[var7][var9];
                     } else {
                       stackIn_451_0 = null;
                     }
@@ -595,7 +595,7 @@ final class LoginForm extends UiContainer implements TextInputListener, ButtonLi
                   } else {
                     if (var10 == 0) {
                       if (var11 != 0) {
-                        var22_int = pa.field_a[var7][var9] - ui.field_e;
+                        var22_int = RequestResultFactory.field_a[var7][var9] - Cp1252DecodeHelpers.field_e;
                         if (1 == var22_int) {
                           var21 = PlayerBoard.field_l;
                         } else {
@@ -603,7 +603,7 @@ final class LoginForm extends UiContainer implements TextInputListener, ButtonLi
                         }
                       }
                       if (var12 != 0) {
-                        var22 = AlphaContainer.formatTemplate(SocketConnector.field_d, 103, new String[]{Integer.toString(gi.field_a), Integer.toString(StatefulTextPainter.field_z[var7][var9])});
+                        var22 = AlphaContainer.formatTemplate(SocketConnector.field_d, 103, new String[]{Integer.toString(HighscoreNameEntry.field_a), Integer.toString(StatefulTextPainter.field_z[var7][var9])});
                         if (null != var21) {
                           var21 = (String) (var21) + "<br>" + (String) (var22);
                         } else {
@@ -632,8 +632,8 @@ final class LoginForm extends UiContainer implements TextInputListener, ButtonLi
                     !PictureStrip.field_f) {
                     var22 = null;
                     var23 = 0;
-                    if (ib.field_b) {
-                      var22 = "</col>" + pk.field_e + "<col=A00000>";
+                    if (GridSize.field_b) {
+                      var22 = "</col>" + MeshDecodeHelpers.field_e + "<col=A00000>";
                     }
                     var24 = 0;
                     while (true) {
@@ -642,7 +642,7 @@ final class LoginForm extends UiContainer implements TextInputListener, ButtonLi
                         stackIn_507_0 = stackOut_498_0 ? 1 : 0;
                         stackIn_499_0 = stackOut_498_0;
                         if (stackIn_499_0) {
-                          var25 = "</col>" + jk.field_e[var24] + "<col=A00000>";
+                          var25 = "</col>" + MeshColourEntry.field_e[var24] + "<col=A00000>";
                           if (var22 == null) {
                             var22 = var25;
                           } else {
@@ -781,7 +781,7 @@ final class LoginForm extends UiContainer implements TextInputListener, ButtonLi
         RuntimeException var5 = null;
         try {
           if (null != this.field_S) {
-            he.field_d.drawParagraph(this.field_S, 20 + (param2 + this.field_z), 15 + param0 + this.field_p, -40 + this.field_E, this.field_C, 16777215, -1, 1, 0, he.field_d.maxAscent);
+            CanvasInputHelpers.field_d.drawParagraph(this.field_S, 20 + (param2 + this.field_z), 15 + param0 + this.field_p, -40 + this.field_E, this.field_C, 16777215, -1, 1, 0, CanvasInputHelpers.field_d.maxAscent);
           }
           if (this.field_Q != null) {
             SoftwareRasterizer.drawHorizontalLine(param2 + 10, 134 + param0, -20 + this.field_E, 4210752);
@@ -819,24 +819,24 @@ final class LoginForm extends UiContainer implements TextInputListener, ButtonLi
                     if (var7 != 0) {
                       ScoreMarkerDemo.showAccountChoicePanel(param2 ^ 24507);
                       DraggableWidget.requestCreateAccountResult(2147483647);
-                      id.showRegistrationPanel(param2 ^ 117);
+                      AccountRequestReply.showRegistrationPanel(param2 ^ 117);
                     }
                   } else {
                     ScoreMarkerDemo.showAccountChoicePanel(param2 ^ 24507);
                     if (var7 != 0) {
                       DraggableWidget.requestCreateAccountResult(2147483647);
-                      id.showRegistrationPanel(param2 ^ 117);
+                      AccountRequestReply.showRegistrationPanel(param2 ^ 117);
                     }
                   }
                 } else {
                   DraggableWidget.requestCreateAccountResult(2147483647);
                   if (var7 != 0) {
-                    id.showRegistrationPanel(param2 ^ 117);
+                    AccountRequestReply.showRegistrationPanel(param2 ^ 117);
                   }
                 }
               }
             } else {
-              id.showRegistrationPanel(param2 ^ 117);
+              AccountRequestReply.showRegistrationPanel(param2 ^ 117);
             }
           }
           if (param2 != 11) {
@@ -864,7 +864,7 @@ final class LoginForm extends UiContainer implements TextInputListener, ButtonLi
           if (ScoreMarkerBar.isLoginRequestFlagged((byte) 37) ||
             !(this.field_J.field_q.length() <= 0) &&
             !(0 >= this.field_O.field_q.length())) {
-            oi.submitLoginCredentials(this.field_J.field_q, this.field_O.field_q, (byte) -33);
+            RegistrationHelpers.submitLoginCredentials(this.field_J.field_q, this.field_O.field_q, (byte) -33);
           }
           if (param0 <= 115) {
             LoginForm.releaseStatics(-52);
@@ -1066,583 +1066,583 @@ final class LoginForm extends UiContainer implements TextInputListener, ButtonLi
         byte[] var2Lifetime147;
         var4 = Pixelate.field_H ? 1 : 0;
         try {
-          ig.field_b = param1;
+          AudioPumpHelpers.field_b = param1;
           var2 = ContentTransitionDialog.getNamedTextFile("text_game_name", (byte) 119);
           if (null != var2) {
-            SoundCache.field_e = of.decodeCp1252Text(var2, 1);
+            SoundCache.field_e = TextDecodeHelpers.decodeCp1252Text(var2, 1);
           }
           var2Lifetime1 = ContentTransitionDialog.getNamedTextFile("text_benefits,0", (byte) -12);
           if (null != var2Lifetime1) {
-            AccountNoticeDialog.field_bb[0] = of.decodeCp1252Text(var2Lifetime1, 1);
+            AccountNoticeDialog.field_bb[0] = TextDecodeHelpers.decodeCp1252Text(var2Lifetime1, 1);
           }
           var2Lifetime2 = ContentTransitionDialog.getNamedTextFile("text_benefits,1", (byte) -40);
           if (null != var2Lifetime2) {
-            AccountNoticeDialog.field_bb[1] = of.decodeCp1252Text(var2Lifetime2, 1);
+            AccountNoticeDialog.field_bb[1] = TextDecodeHelpers.decodeCp1252Text(var2Lifetime2, 1);
           }
           var2Lifetime3 = ContentTransitionDialog.getNamedTextFile("text_benefits,2", (byte) 115);
           if (var2Lifetime3 != null) {
-            AccountNoticeDialog.field_bb[2] = of.decodeCp1252Text(var2Lifetime3, 1);
+            AccountNoticeDialog.field_bb[2] = TextDecodeHelpers.decodeCp1252Text(var2Lifetime3, 1);
           }
           var2Lifetime4 = ContentTransitionDialog.getNamedTextFile("text_benefits,3", (byte) 124);
           if (var2Lifetime4 != null) {
-            AccountNoticeDialog.field_bb[3] = of.decodeCp1252Text(var2Lifetime4, 1);
+            AccountNoticeDialog.field_bb[3] = TextDecodeHelpers.decodeCp1252Text(var2Lifetime4, 1);
           }
           var2Lifetime5 = ContentTransitionDialog.getNamedTextFile("achievement_names,0", (byte) -110);
           if (var2Lifetime5 != null) {
-            GameApplet.field_n[0] = of.decodeCp1252Text(var2Lifetime5, 1);
+            GameApplet.field_n[0] = TextDecodeHelpers.decodeCp1252Text(var2Lifetime5, 1);
           }
           var2Lifetime6 = ContentTransitionDialog.getNamedTextFile("achievement_names,1", (byte) -11);
           if (var2Lifetime6 != null) {
-            GameApplet.field_n[1] = of.decodeCp1252Text(var2Lifetime6, 1);
+            GameApplet.field_n[1] = TextDecodeHelpers.decodeCp1252Text(var2Lifetime6, 1);
           }
           var2Lifetime7 = ContentTransitionDialog.getNamedTextFile("achievement_names,2", (byte) 109);
           if (null != var2Lifetime7) {
-            GameApplet.field_n[2] = of.decodeCp1252Text(var2Lifetime7, 1);
+            GameApplet.field_n[2] = TextDecodeHelpers.decodeCp1252Text(var2Lifetime7, 1);
           }
           var2Lifetime8 = ContentTransitionDialog.getNamedTextFile("achievement_names,3", (byte) -9);
           if (null != var2Lifetime8) {
-            GameApplet.field_n[3] = of.decodeCp1252Text(var2Lifetime8, 1);
+            GameApplet.field_n[3] = TextDecodeHelpers.decodeCp1252Text(var2Lifetime8, 1);
           }
           var2Lifetime9 = ContentTransitionDialog.getNamedTextFile("achievement_names,4", (byte) -61);
           if (var2Lifetime9 != null) {
-            GameApplet.field_n[4] = of.decodeCp1252Text(var2Lifetime9, 1);
+            GameApplet.field_n[4] = TextDecodeHelpers.decodeCp1252Text(var2Lifetime9, 1);
           }
           var2Lifetime10 = ContentTransitionDialog.getNamedTextFile("achievement_names,5", (byte) -86);
           if (null != var2Lifetime10) {
-            GameApplet.field_n[5] = of.decodeCp1252Text(var2Lifetime10, 1);
+            GameApplet.field_n[5] = TextDecodeHelpers.decodeCp1252Text(var2Lifetime10, 1);
           }
           var2Lifetime11 = ContentTransitionDialog.getNamedTextFile("achievement_names,6", (byte) 117);
           if (var2Lifetime11 != null) {
-            GameApplet.field_n[6] = of.decodeCp1252Text(var2Lifetime11, 1);
+            GameApplet.field_n[6] = TextDecodeHelpers.decodeCp1252Text(var2Lifetime11, 1);
           }
           var2Lifetime12 = ContentTransitionDialog.getNamedTextFile("achievement_names,7", (byte) -100);
           if (null != var2Lifetime12) {
-            GameApplet.field_n[7] = of.decodeCp1252Text(var2Lifetime12, 1);
+            GameApplet.field_n[7] = TextDecodeHelpers.decodeCp1252Text(var2Lifetime12, 1);
           }
           var2Lifetime13 = ContentTransitionDialog.getNamedTextFile("achievement_names,8", (byte) 112);
           if (null != var2Lifetime13) {
-            GameApplet.field_n[8] = of.decodeCp1252Text(var2Lifetime13, 1);
+            GameApplet.field_n[8] = TextDecodeHelpers.decodeCp1252Text(var2Lifetime13, 1);
           }
           var2Lifetime14 = ContentTransitionDialog.getNamedTextFile("achievement_names,9", (byte) -32);
           if (null != var2Lifetime14) {
-            GameApplet.field_n[9] = of.decodeCp1252Text(var2Lifetime14, 1);
+            GameApplet.field_n[9] = TextDecodeHelpers.decodeCp1252Text(var2Lifetime14, 1);
           }
           var2Lifetime15 = ContentTransitionDialog.getNamedTextFile("achievement_names,10", (byte) -67);
           var3 = 98 / ((param0 - 33) / 43);
           if (var2Lifetime15 != null) {
-            GameApplet.field_n[10] = of.decodeCp1252Text(var2Lifetime15, 1);
+            GameApplet.field_n[10] = TextDecodeHelpers.decodeCp1252Text(var2Lifetime15, 1);
           }
           var2Lifetime16 = ContentTransitionDialog.getNamedTextFile("achievement_names,11", (byte) -118);
           if (var2Lifetime16 != null) {
-            GameApplet.field_n[11] = of.decodeCp1252Text(var2Lifetime16, 1);
+            GameApplet.field_n[11] = TextDecodeHelpers.decodeCp1252Text(var2Lifetime16, 1);
           }
           var2Lifetime17 = ContentTransitionDialog.getNamedTextFile("achievement_names,12", (byte) 117);
           if (var2Lifetime17 != null) {
-            GameApplet.field_n[12] = of.decodeCp1252Text(var2Lifetime17, 1);
+            GameApplet.field_n[12] = TextDecodeHelpers.decodeCp1252Text(var2Lifetime17, 1);
           }
           var2Lifetime18 = ContentTransitionDialog.getNamedTextFile("achievement_names,13", (byte) 127);
           if (null != var2Lifetime18) {
-            GameApplet.field_n[13] = of.decodeCp1252Text(var2Lifetime18, 1);
+            GameApplet.field_n[13] = TextDecodeHelpers.decodeCp1252Text(var2Lifetime18, 1);
           }
           var2Lifetime19 = ContentTransitionDialog.getNamedTextFile("achievement_names,14", (byte) 123);
           if (null != var2Lifetime19) {
-            GameApplet.field_n[14] = of.decodeCp1252Text(var2Lifetime19, 1);
+            GameApplet.field_n[14] = TextDecodeHelpers.decodeCp1252Text(var2Lifetime19, 1);
           }
           var2Lifetime20 = ContentTransitionDialog.getNamedTextFile("achievement_names,15", (byte) -79);
           if (var2Lifetime20 != null) {
-            GameApplet.field_n[15] = of.decodeCp1252Text(var2Lifetime20, 1);
+            GameApplet.field_n[15] = TextDecodeHelpers.decodeCp1252Text(var2Lifetime20, 1);
           }
           var2Lifetime21 = ContentTransitionDialog.getNamedTextFile("achievement_names,16", (byte) 112);
           if (null != var2Lifetime21) {
-            GameApplet.field_n[16] = of.decodeCp1252Text(var2Lifetime21, 1);
+            GameApplet.field_n[16] = TextDecodeHelpers.decodeCp1252Text(var2Lifetime21, 1);
           }
           var2Lifetime22 = ContentTransitionDialog.getNamedTextFile("achievement_names,17", (byte) -113);
           if (null != var2Lifetime22) {
-            GameApplet.field_n[17] = of.decodeCp1252Text(var2Lifetime22, 1);
+            GameApplet.field_n[17] = TextDecodeHelpers.decodeCp1252Text(var2Lifetime22, 1);
           }
           var2Lifetime23 = ContentTransitionDialog.getNamedTextFile("achievement_names,18", (byte) -45);
           if (null != var2Lifetime23) {
-            GameApplet.field_n[18] = of.decodeCp1252Text(var2Lifetime23, 1);
+            GameApplet.field_n[18] = TextDecodeHelpers.decodeCp1252Text(var2Lifetime23, 1);
           }
           var2Lifetime24 = ContentTransitionDialog.getNamedTextFile("achievement_names,19", (byte) -103);
           if (var2Lifetime24 != null) {
-            GameApplet.field_n[19] = of.decodeCp1252Text(var2Lifetime24, 1);
+            GameApplet.field_n[19] = TextDecodeHelpers.decodeCp1252Text(var2Lifetime24, 1);
           }
           var2Lifetime25 = ContentTransitionDialog.getNamedTextFile("achievement_names,20", (byte) 124);
           if (var2Lifetime25 != null) {
-            GameApplet.field_n[20] = of.decodeCp1252Text(var2Lifetime25, 1);
+            GameApplet.field_n[20] = TextDecodeHelpers.decodeCp1252Text(var2Lifetime25, 1);
           }
           var2Lifetime26 = ContentTransitionDialog.getNamedTextFile("achievement_names,21", (byte) 114);
           if (var2Lifetime26 != null) {
-            GameApplet.field_n[21] = of.decodeCp1252Text(var2Lifetime26, 1);
+            GameApplet.field_n[21] = TextDecodeHelpers.decodeCp1252Text(var2Lifetime26, 1);
           }
           var2Lifetime27 = ContentTransitionDialog.getNamedTextFile("achievement_criteria,0", (byte) 122);
           if (var2Lifetime27 != null) {
-            ClientException.field_a[0] = of.decodeCp1252Text(var2Lifetime27, 1);
+            ClientException.field_a[0] = TextDecodeHelpers.decodeCp1252Text(var2Lifetime27, 1);
           }
           var2Lifetime28 = ContentTransitionDialog.getNamedTextFile("achievement_criteria,1", (byte) -12);
           if (var2Lifetime28 != null) {
-            ClientException.field_a[1] = of.decodeCp1252Text(var2Lifetime28, 1);
+            ClientException.field_a[1] = TextDecodeHelpers.decodeCp1252Text(var2Lifetime28, 1);
           }
           var2Lifetime29 = ContentTransitionDialog.getNamedTextFile("achievement_criteria,2", (byte) 122);
           if (null != var2Lifetime29) {
-            ClientException.field_a[2] = of.decodeCp1252Text(var2Lifetime29, 1);
+            ClientException.field_a[2] = TextDecodeHelpers.decodeCp1252Text(var2Lifetime29, 1);
           }
           var2Lifetime30 = ContentTransitionDialog.getNamedTextFile("achievement_criteria,3", (byte) 123);
           if (var2Lifetime30 != null) {
-            ClientException.field_a[3] = of.decodeCp1252Text(var2Lifetime30, 1);
+            ClientException.field_a[3] = TextDecodeHelpers.decodeCp1252Text(var2Lifetime30, 1);
           }
           var2Lifetime31 = ContentTransitionDialog.getNamedTextFile("achievement_criteria,4", (byte) 113);
           if (var2Lifetime31 != null) {
-            ClientException.field_a[4] = of.decodeCp1252Text(var2Lifetime31, 1);
+            ClientException.field_a[4] = TextDecodeHelpers.decodeCp1252Text(var2Lifetime31, 1);
           }
           var2Lifetime32 = ContentTransitionDialog.getNamedTextFile("achievement_criteria,5", (byte) 118);
           if (null != var2Lifetime32) {
-            ClientException.field_a[5] = of.decodeCp1252Text(var2Lifetime32, 1);
+            ClientException.field_a[5] = TextDecodeHelpers.decodeCp1252Text(var2Lifetime32, 1);
           }
           var2Lifetime33 = ContentTransitionDialog.getNamedTextFile("achievement_criteria,6", (byte) 118);
           if (null != var2Lifetime33) {
-            ClientException.field_a[6] = of.decodeCp1252Text(var2Lifetime33, 1);
+            ClientException.field_a[6] = TextDecodeHelpers.decodeCp1252Text(var2Lifetime33, 1);
           }
           var2Lifetime34 = ContentTransitionDialog.getNamedTextFile("achievement_criteria,7", (byte) 116);
           if (null != var2Lifetime34) {
-            ClientException.field_a[7] = of.decodeCp1252Text(var2Lifetime34, 1);
+            ClientException.field_a[7] = TextDecodeHelpers.decodeCp1252Text(var2Lifetime34, 1);
           }
           var2Lifetime35 = ContentTransitionDialog.getNamedTextFile("achievement_criteria,8", (byte) 108);
           if (null != var2Lifetime35) {
-            ClientException.field_a[8] = of.decodeCp1252Text(var2Lifetime35, 1);
+            ClientException.field_a[8] = TextDecodeHelpers.decodeCp1252Text(var2Lifetime35, 1);
           }
           var2Lifetime36 = ContentTransitionDialog.getNamedTextFile("achievement_criteria,9", (byte) 118);
           if (var2Lifetime36 != null) {
-            ClientException.field_a[9] = of.decodeCp1252Text(var2Lifetime36, 1);
+            ClientException.field_a[9] = TextDecodeHelpers.decodeCp1252Text(var2Lifetime36, 1);
           }
           var2Lifetime37 = ContentTransitionDialog.getNamedTextFile("achievement_criteria,10", (byte) 124);
           if (null != var2Lifetime37) {
-            ClientException.field_a[10] = of.decodeCp1252Text(var2Lifetime37, 1);
+            ClientException.field_a[10] = TextDecodeHelpers.decodeCp1252Text(var2Lifetime37, 1);
           }
           var2Lifetime38 = ContentTransitionDialog.getNamedTextFile("achievement_criteria,11", (byte) -5);
           if (null != var2Lifetime38) {
-            ClientException.field_a[11] = of.decodeCp1252Text(var2Lifetime38, 1);
+            ClientException.field_a[11] = TextDecodeHelpers.decodeCp1252Text(var2Lifetime38, 1);
           }
           var2Lifetime39 = ContentTransitionDialog.getNamedTextFile("achievement_criteria,12", (byte) 107);
           if (var2Lifetime39 != null) {
-            ClientException.field_a[12] = of.decodeCp1252Text(var2Lifetime39, 1);
+            ClientException.field_a[12] = TextDecodeHelpers.decodeCp1252Text(var2Lifetime39, 1);
           }
           var2Lifetime40 = ContentTransitionDialog.getNamedTextFile("achievement_criteria,13", (byte) -90);
           if (null != var2Lifetime40) {
-            ClientException.field_a[13] = of.decodeCp1252Text(var2Lifetime40, 1);
+            ClientException.field_a[13] = TextDecodeHelpers.decodeCp1252Text(var2Lifetime40, 1);
           }
           var2Lifetime41 = ContentTransitionDialog.getNamedTextFile("achievement_criteria,14", (byte) 109);
           if (var2Lifetime41 != null) {
-            ClientException.field_a[14] = of.decodeCp1252Text(var2Lifetime41, 1);
+            ClientException.field_a[14] = TextDecodeHelpers.decodeCp1252Text(var2Lifetime41, 1);
           }
           var2Lifetime42 = ContentTransitionDialog.getNamedTextFile("achievement_criteria,15", (byte) 118);
           if (var2Lifetime42 != null) {
-            ClientException.field_a[15] = of.decodeCp1252Text(var2Lifetime42, 1);
+            ClientException.field_a[15] = TextDecodeHelpers.decodeCp1252Text(var2Lifetime42, 1);
           }
           var2Lifetime43 = ContentTransitionDialog.getNamedTextFile("achievement_criteria,16", (byte) -10);
           if (var2Lifetime43 != null) {
-            ClientException.field_a[16] = of.decodeCp1252Text(var2Lifetime43, 1);
+            ClientException.field_a[16] = TextDecodeHelpers.decodeCp1252Text(var2Lifetime43, 1);
           }
           var2Lifetime44 = ContentTransitionDialog.getNamedTextFile("achievement_criteria,17", (byte) -12);
           if (var2Lifetime44 != null) {
-            ClientException.field_a[17] = of.decodeCp1252Text(var2Lifetime44, 1);
+            ClientException.field_a[17] = TextDecodeHelpers.decodeCp1252Text(var2Lifetime44, 1);
           }
           var2Lifetime45 = ContentTransitionDialog.getNamedTextFile("achievement_criteria,18", (byte) 123);
           if (var2Lifetime45 != null) {
-            ClientException.field_a[18] = of.decodeCp1252Text(var2Lifetime45, 1);
+            ClientException.field_a[18] = TextDecodeHelpers.decodeCp1252Text(var2Lifetime45, 1);
           }
           var2Lifetime46 = ContentTransitionDialog.getNamedTextFile("achievement_criteria,19", (byte) -17);
           if (var2Lifetime46 != null) {
-            ClientException.field_a[19] = of.decodeCp1252Text(var2Lifetime46, 1);
+            ClientException.field_a[19] = TextDecodeHelpers.decodeCp1252Text(var2Lifetime46, 1);
           }
           var2Lifetime47 = ContentTransitionDialog.getNamedTextFile("achievement_criteria,20", (byte) 118);
           if (null != var2Lifetime47) {
-            ClientException.field_a[20] = of.decodeCp1252Text(var2Lifetime47, 1);
+            ClientException.field_a[20] = TextDecodeHelpers.decodeCp1252Text(var2Lifetime47, 1);
           }
           var2Lifetime48 = ContentTransitionDialog.getNamedTextFile("achievement_criteria,21", (byte) 116);
           if (var2Lifetime48 != null) {
-            ClientException.field_a[21] = of.decodeCp1252Text(var2Lifetime48, 1);
+            ClientException.field_a[21] = TextDecodeHelpers.decodeCp1252Text(var2Lifetime48, 1);
           }
           var2Lifetime49 = ContentTransitionDialog.getNamedTextFile("tutorial_title,0", (byte) 114);
           if (var2Lifetime49 != null) {
-            GradientOutlineTextPainter.field_w[0] = of.decodeCp1252Text(var2Lifetime49, 1);
+            GradientOutlineTextPainter.field_w[0] = TextDecodeHelpers.decodeCp1252Text(var2Lifetime49, 1);
           }
           var2Lifetime50 = ContentTransitionDialog.getNamedTextFile("tutorial_title,2", (byte) 108);
           if (null != var2Lifetime50) {
-            GradientOutlineTextPainter.field_w[2] = of.decodeCp1252Text(var2Lifetime50, 1);
+            GradientOutlineTextPainter.field_w[2] = TextDecodeHelpers.decodeCp1252Text(var2Lifetime50, 1);
           }
           var2Lifetime51 = ContentTransitionDialog.getNamedTextFile("tutorial1,0", (byte) -26);
           if (var2Lifetime51 != null) {
-            hm.field_f[0] = of.decodeCp1252Text(var2Lifetime51, 1);
+            ClockHelpers.field_f[0] = TextDecodeHelpers.decodeCp1252Text(var2Lifetime51, 1);
           }
           var2Lifetime52 = ContentTransitionDialog.getNamedTextFile("tutorial1,1", (byte) -61);
           if (null != var2Lifetime52) {
-            hm.field_f[1] = of.decodeCp1252Text(var2Lifetime52, 1);
+            ClockHelpers.field_f[1] = TextDecodeHelpers.decodeCp1252Text(var2Lifetime52, 1);
           }
           var2Lifetime53 = ContentTransitionDialog.getNamedTextFile("tutorial1,2", (byte) -90);
           if (var2Lifetime53 != null) {
-            hm.field_f[2] = of.decodeCp1252Text(var2Lifetime53, 1);
+            ClockHelpers.field_f[2] = TextDecodeHelpers.decodeCp1252Text(var2Lifetime53, 1);
           }
           var2Lifetime54 = ContentTransitionDialog.getNamedTextFile("tutorial2,0", (byte) 106);
           if (null != var2Lifetime54) {
-            MatchingTextValidator.field_t[0] = of.decodeCp1252Text(var2Lifetime54, 1);
+            MatchingTextValidator.field_t[0] = TextDecodeHelpers.decodeCp1252Text(var2Lifetime54, 1);
           }
           var2Lifetime55 = ContentTransitionDialog.getNamedTextFile("tutorial2,1", (byte) 113);
           if (null != var2Lifetime55) {
-            MatchingTextValidator.field_t[1] = of.decodeCp1252Text(var2Lifetime55, 1);
+            MatchingTextValidator.field_t[1] = TextDecodeHelpers.decodeCp1252Text(var2Lifetime55, 1);
           }
           var2Lifetime56 = ContentTransitionDialog.getNamedTextFile("tutorial3,0", (byte) -47);
           if (null != var2Lifetime56) {
-            um.field_l[0] = of.decodeCp1252Text(var2Lifetime56, 1);
+            SavedDataRequest.field_l[0] = TextDecodeHelpers.decodeCp1252Text(var2Lifetime56, 1);
           }
           var2Lifetime57 = ContentTransitionDialog.getNamedTextFile("tutorial4,0", (byte) 122);
           if (var2Lifetime57 != null) {
-            PauseMenuScreen.field_p[0] = of.decodeCp1252Text(var2Lifetime57, 1);
+            PauseMenuScreen.field_p[0] = TextDecodeHelpers.decodeCp1252Text(var2Lifetime57, 1);
           }
           var2Lifetime58 = ContentTransitionDialog.getNamedTextFile("tutorial5,0", (byte) -95);
           if (var2Lifetime58 != null) {
-            ui.field_h[0] = of.decodeCp1252Text(var2Lifetime58, 1);
+            Cp1252DecodeHelpers.field_h[0] = TextDecodeHelpers.decodeCp1252Text(var2Lifetime58, 1);
           }
           var2Lifetime59 = ContentTransitionDialog.getNamedTextFile("tutorial5,1", (byte) 125);
           if (null != var2Lifetime59) {
-            ui.field_h[1] = of.decodeCp1252Text(var2Lifetime59, 1);
+            Cp1252DecodeHelpers.field_h[1] = TextDecodeHelpers.decodeCp1252Text(var2Lifetime59, 1);
           }
           var2Lifetime60 = ContentTransitionDialog.getNamedTextFile("tutorial6,0", (byte) 104);
           if (var2Lifetime60 != null) {
-            qg.field_d[0] = of.decodeCp1252Text(var2Lifetime60, 1);
+            GameRequestHelpers.field_d[0] = TextDecodeHelpers.decodeCp1252Text(var2Lifetime60, 1);
           }
           var2Lifetime61 = ContentTransitionDialog.getNamedTextFile("tutorial6,1", (byte) 115);
           if (var2Lifetime61 != null) {
-            qg.field_d[1] = of.decodeCp1252Text(var2Lifetime61, 1);
+            GameRequestHelpers.field_d[1] = TextDecodeHelpers.decodeCp1252Text(var2Lifetime61, 1);
           }
           var2Lifetime62 = ContentTransitionDialog.getNamedTextFile("instructions1,0", (byte) 107);
           if (null != var2Lifetime62) {
-            PuzzleThumbnail.field_a[0] = of.decodeCp1252Text(var2Lifetime62, 1);
+            PuzzleThumbnail.field_a[0] = TextDecodeHelpers.decodeCp1252Text(var2Lifetime62, 1);
           }
           var2Lifetime63 = ContentTransitionDialog.getNamedTextFile("instructions1,1", (byte) -78);
           if (var2Lifetime63 != null) {
-            PuzzleThumbnail.field_a[1] = of.decodeCp1252Text(var2Lifetime63, 1);
+            PuzzleThumbnail.field_a[1] = TextDecodeHelpers.decodeCp1252Text(var2Lifetime63, 1);
           }
           var2Lifetime64 = ContentTransitionDialog.getNamedTextFile("instructions2,0", (byte) -10);
           if (var2Lifetime64 != null) {
-            ScrollContainer.field_Hb[0] = of.decodeCp1252Text(var2Lifetime64, 1);
+            ScrollContainer.field_Hb[0] = TextDecodeHelpers.decodeCp1252Text(var2Lifetime64, 1);
           }
           var2Lifetime65 = ContentTransitionDialog.getNamedTextFile("instructions3,0", (byte) -104);
           if (null != var2Lifetime65) {
-            qh.field_d[0] = of.decodeCp1252Text(var2Lifetime65, 1);
+            MusicPlaybackHelpers.field_d[0] = TextDecodeHelpers.decodeCp1252Text(var2Lifetime65, 1);
           }
           var2Lifetime66 = ContentTransitionDialog.getNamedTextFile("instructions3,1", (byte) 114);
           if (null != var2Lifetime66) {
-            qh.field_d[1] = of.decodeCp1252Text(var2Lifetime66, 1);
+            MusicPlaybackHelpers.field_d[1] = TextDecodeHelpers.decodeCp1252Text(var2Lifetime66, 1);
           }
           var2Lifetime67 = ContentTransitionDialog.getNamedTextFile("instructions3,2", (byte) 111);
           if (null != var2Lifetime67) {
-            qh.field_d[2] = of.decodeCp1252Text(var2Lifetime67, 1);
+            MusicPlaybackHelpers.field_d[2] = TextDecodeHelpers.decodeCp1252Text(var2Lifetime67, 1);
           }
           var2Lifetime68 = ContentTransitionDialog.getNamedTextFile("instructions3,3", (byte) 117);
           if (var2Lifetime68 != null) {
-            qh.field_d[3] = of.decodeCp1252Text(var2Lifetime68, 1);
+            MusicPlaybackHelpers.field_d[3] = TextDecodeHelpers.decodeCp1252Text(var2Lifetime68, 1);
           }
           var2Lifetime69 = ContentTransitionDialog.getNamedTextFile("instructions3,4", (byte) 116);
           if (var2Lifetime69 != null) {
-            qh.field_d[4] = of.decodeCp1252Text(var2Lifetime69, 1);
+            MusicPlaybackHelpers.field_d[4] = TextDecodeHelpers.decodeCp1252Text(var2Lifetime69, 1);
           }
           var2Lifetime70 = ContentTransitionDialog.getNamedTextFile("instructions4,0", (byte) 121);
           if (null != var2Lifetime70) {
-            wk.field_i[0] = of.decodeCp1252Text(var2Lifetime70, 1);
+            EmailLoginCredentials.field_i[0] = TextDecodeHelpers.decodeCp1252Text(var2Lifetime70, 1);
           }
           var2Lifetime71 = ContentTransitionDialog.getNamedTextFile("instructions4,1", (byte) 109);
           if (null != var2Lifetime71) {
-            wk.field_i[1] = of.decodeCp1252Text(var2Lifetime71, 1);
+            EmailLoginCredentials.field_i[1] = TextDecodeHelpers.decodeCp1252Text(var2Lifetime71, 1);
           }
           var2Lifetime72 = ContentTransitionDialog.getNamedTextFile("instructions5,0", (byte) -123);
           if (var2Lifetime72 != null) {
-            GameApplet.field_k[0] = of.decodeCp1252Text(var2Lifetime72, 1);
+            GameApplet.field_k[0] = TextDecodeHelpers.decodeCp1252Text(var2Lifetime72, 1);
           }
           var2Lifetime73 = ContentTransitionDialog.getNamedTextFile("instructions5,1", (byte) 111);
           if (null != var2Lifetime73) {
-            GameApplet.field_k[1] = of.decodeCp1252Text(var2Lifetime73, 1);
+            GameApplet.field_k[1] = TextDecodeHelpers.decodeCp1252Text(var2Lifetime73, 1);
           }
           var2Lifetime74 = ContentTransitionDialog.getNamedTextFile("instructions6,0", (byte) -89);
           if (var2Lifetime74 != null) {
-            NumericDateInputWidget.field_R[0] = of.decodeCp1252Text(var2Lifetime74, 1);
+            NumericDateInputWidget.field_R[0] = TextDecodeHelpers.decodeCp1252Text(var2Lifetime74, 1);
           }
           var2Lifetime75 = ContentTransitionDialog.getNamedTextFile("instructions7,0", (byte) -63);
           if (var2Lifetime75 != null) {
-            GameModeSelectScreen.field_q[0] = of.decodeCp1252Text(var2Lifetime75, 1);
+            GameModeSelectScreen.field_q[0] = TextDecodeHelpers.decodeCp1252Text(var2Lifetime75, 1);
           }
           var2Lifetime76 = ContentTransitionDialog.getNamedTextFile("instructions8,0", (byte) -100);
           if (var2Lifetime76 != null) {
-            vd.field_d[0] = of.decodeCp1252Text(var2Lifetime76, 1);
+            ChatAppendHelpers.field_d[0] = TextDecodeHelpers.decodeCp1252Text(var2Lifetime76, 1);
           }
           var2Lifetime77 = ContentTransitionDialog.getNamedTextFile("instructions8,1", (byte) 123);
           if (null != var2Lifetime77) {
-            vd.field_d[1] = of.decodeCp1252Text(var2Lifetime77, 1);
+            ChatAppendHelpers.field_d[1] = TextDecodeHelpers.decodeCp1252Text(var2Lifetime77, 1);
           }
           var2Lifetime78 = ContentTransitionDialog.getNamedTextFile("instructions8,2", (byte) 115);
           if (var2Lifetime78 != null) {
-            vd.field_d[2] = of.decodeCp1252Text(var2Lifetime78, 1);
+            ChatAppendHelpers.field_d[2] = TextDecodeHelpers.decodeCp1252Text(var2Lifetime78, 1);
           }
           var2Lifetime79 = ContentTransitionDialog.getNamedTextFile("instructions_title,0", (byte) 116);
           if (null != var2Lifetime79) {
-            pk.field_d[0] = of.decodeCp1252Text(var2Lifetime79, 1);
+            MeshDecodeHelpers.field_d[0] = TextDecodeHelpers.decodeCp1252Text(var2Lifetime79, 1);
           }
           var2Lifetime80 = ContentTransitionDialog.getNamedTextFile("instructions_title,1", (byte) 123);
           if (null != var2Lifetime80) {
-            pk.field_d[1] = of.decodeCp1252Text(var2Lifetime80, 1);
+            MeshDecodeHelpers.field_d[1] = TextDecodeHelpers.decodeCp1252Text(var2Lifetime80, 1);
           }
           var2Lifetime81 = ContentTransitionDialog.getNamedTextFile("instructions_title,2", (byte) 112);
           if (var2Lifetime81 != null) {
-            pk.field_d[2] = of.decodeCp1252Text(var2Lifetime81, 1);
+            MeshDecodeHelpers.field_d[2] = TextDecodeHelpers.decodeCp1252Text(var2Lifetime81, 1);
           }
           var2Lifetime82 = ContentTransitionDialog.getNamedTextFile("instructions_title,3", (byte) -85);
           if (var2Lifetime82 != null) {
-            pk.field_d[3] = of.decodeCp1252Text(var2Lifetime82, 1);
+            MeshDecodeHelpers.field_d[3] = TextDecodeHelpers.decodeCp1252Text(var2Lifetime82, 1);
           }
           var2Lifetime83 = ContentTransitionDialog.getNamedTextFile("instructions_title,4", (byte) 105);
           if (var2Lifetime83 != null) {
-            pk.field_d[4] = of.decodeCp1252Text(var2Lifetime83, 1);
+            MeshDecodeHelpers.field_d[4] = TextDecodeHelpers.decodeCp1252Text(var2Lifetime83, 1);
           }
           var2Lifetime84 = ContentTransitionDialog.getNamedTextFile("instructions_title,5", (byte) 108);
           if (var2Lifetime84 != null) {
-            pk.field_d[5] = of.decodeCp1252Text(var2Lifetime84, 1);
+            MeshDecodeHelpers.field_d[5] = TextDecodeHelpers.decodeCp1252Text(var2Lifetime84, 1);
           }
           var2Lifetime85 = ContentTransitionDialog.getNamedTextFile("instructions_title,6", (byte) 112);
           if (var2Lifetime85 != null) {
-            pk.field_d[6] = of.decodeCp1252Text(var2Lifetime85, 1);
+            MeshDecodeHelpers.field_d[6] = TextDecodeHelpers.decodeCp1252Text(var2Lifetime85, 1);
           }
           var2Lifetime86 = ContentTransitionDialog.getNamedTextFile("instructions_title,7", (byte) -94);
           if (var2Lifetime86 != null) {
-            pk.field_d[7] = of.decodeCp1252Text(var2Lifetime86, 1);
+            MeshDecodeHelpers.field_d[7] = TextDecodeHelpers.decodeCp1252Text(var2Lifetime86, 1);
           }
           var2Lifetime87 = ContentTransitionDialog.getNamedTextFile("you", (byte) 127);
           if (var2Lifetime87 != null) {
-            UiComponent.field_t = of.decodeCp1252Text(var2Lifetime87, 1);
+            UiComponent.field_t = TextDecodeHelpers.decodeCp1252Text(var2Lifetime87, 1);
           }
           var2Lifetime88 = ContentTransitionDialog.getNamedTextFile("end_of_free_game", (byte) 116);
           if (null != var2Lifetime88) {
-            ByteStorage.field_c = of.decodeCp1252Text(var2Lifetime88, 1);
+            ByteStorage.field_c = TextDecodeHelpers.decodeCp1252Text(var2Lifetime88, 1);
           }
           var2Lifetime89 = ContentTransitionDialog.getNamedTextFile("achievement_hidden", (byte) 108);
           if (var2Lifetime89 != null) {
-            dq.field_a = of.decodeCp1252Text(var2Lifetime89, 1);
+            TransitionPhase.field_a = TextDecodeHelpers.decodeCp1252Text(var2Lifetime89, 1);
           }
           var2Lifetime90 = ContentTransitionDialog.getNamedTextFile("skin_fireworks", (byte) -42);
           if (var2Lifetime90 != null) {
-            bo.field_a = of.decodeCp1252Text(var2Lifetime90, 1);
+            ScreenDisplayMode.field_a = TextDecodeHelpers.decodeCp1252Text(var2Lifetime90, 1);
           }
           var2Lifetime91 = ContentTransitionDialog.getNamedTextFile("skin_rushes", (byte) -42);
           if (var2Lifetime91 != null) {
-            DraggableWidget.field_L = of.decodeCp1252Text(var2Lifetime91, 1);
+            DraggableWidget.field_L = TextDecodeHelpers.decodeCp1252Text(var2Lifetime91, 1);
           }
           var2Lifetime92 = ContentTransitionDialog.getNamedTextFile("skin_clouds", (byte) 125);
           if (null != var2Lifetime92) {
-            ce.field_e = of.decodeCp1252Text(var2Lifetime92, 1);
+            ChatChannelGlobals.field_e = TextDecodeHelpers.decodeCp1252Text(var2Lifetime92, 1);
           }
           var2Lifetime93 = ContentTransitionDialog.getNamedTextFile("skin_emergent", (byte) 109);
           if (var2Lifetime93 != null) {
-            ReportAbuseDialog.field_Vb = of.decodeCp1252Text(var2Lifetime93, 1);
+            ReportAbuseDialog.field_Vb = TextDecodeHelpers.decodeCp1252Text(var2Lifetime93, 1);
           }
           var2Lifetime94 = ContentTransitionDialog.getNamedTextFile("skin_retro", (byte) 119);
           if (null != var2Lifetime94) {
-            qf.field_d = of.decodeCp1252Text(var2Lifetime94, 1);
+            KeyMapHelpers.field_d = TextDecodeHelpers.decodeCp1252Text(var2Lifetime94, 1);
           }
           var2Lifetime95 = ContentTransitionDialog.getNamedTextFile("skin_rubiks", (byte) -105);
           if (var2Lifetime95 != null) {
-            ro.field_f = of.decodeCp1252Text(var2Lifetime95, 1);
+            NameSuggestionHelpers.field_f = TextDecodeHelpers.decodeCp1252Text(var2Lifetime95, 1);
           }
           var2Lifetime96 = ContentTransitionDialog.getNamedTextFile("skin_twotone", (byte) -18);
           if (null != var2Lifetime96) {
-            GzipDecoder.field_b = of.decodeCp1252Text(var2Lifetime96, 1);
+            GzipDecoder.field_b = TextDecodeHelpers.decodeCp1252Text(var2Lifetime96, 1);
           }
           var2Lifetime97 = ContentTransitionDialog.getNamedTextFile("skin_bouncedown", (byte) -110);
           if (var2Lifetime97 != null) {
-            wa.field_e = of.decodeCp1252Text(var2Lifetime97, 1);
+            SpriteBuildHelpers.field_e = TextDecodeHelpers.decodeCp1252Text(var2Lifetime97, 1);
           }
           var2Lifetime98 = ContentTransitionDialog.getNamedTextFile("skin_empty", (byte) -89);
           if (null != var2Lifetime98) {
-            bl.field_f = of.decodeCp1252Text(var2Lifetime98, 1);
+            MouseWheelSetupHelpers.field_f = TextDecodeHelpers.decodeCp1252Text(var2Lifetime98, 1);
           }
           var2Lifetime99 = ContentTransitionDialog.getNamedTextFile("levelcolonspace", (byte) -11);
           if (var2Lifetime99 != null) {
-            SoundCache.field_j = of.decodeCp1252Text(var2Lifetime99, 1);
+            SoundCache.field_j = TextDecodeHelpers.decodeCp1252Text(var2Lifetime99, 1);
           }
           var2Lifetime100 = ContentTransitionDialog.getNamedTextFile("scorecolonspace", (byte) -91);
           if (var2Lifetime100 != null) {
-            fg.field_e = of.decodeCp1252Text(var2Lifetime100, 1);
+            RematchCaptionGlobals.field_e = TextDecodeHelpers.decodeCp1252Text(var2Lifetime100, 1);
           }
           var2Lifetime101 = ContentTransitionDialog.getNamedTextFile("bestcolonspace", (byte) -18);
           if (null != var2Lifetime101) {
-            IntrusiveDeque.field_e = of.decodeCp1252Text(var2Lifetime101, 1);
+            IntrusiveDeque.field_e = TextDecodeHelpers.decodeCp1252Text(var2Lifetime101, 1);
           }
           var2Lifetime102 = ContentTransitionDialog.getNamedTextFile("name_wins", (byte) 103);
           if (var2Lifetime102 != null) {
-            TextButton.field_G = of.decodeCp1252Text(var2Lifetime102, 1);
+            TextButton.field_G = TextDecodeHelpers.decodeCp1252Text(var2Lifetime102, 1);
           }
           var2Lifetime103 = ContentTransitionDialog.getNamedTextFile("its_a_draw", (byte) 104);
           if (null != var2Lifetime103) {
-            td.field_c = of.decodeCp1252Text(var2Lifetime103, 1);
+            PuzzleModePictureHelpers.field_c = TextDecodeHelpers.decodeCp1252Text(var2Lifetime103, 1);
           }
           var2Lifetime104 = ContentTransitionDialog.getNamedTextFile("lobby", (byte) 110);
           if (null != var2Lifetime104) {
-            LoadingProgressDialog.field_jb = of.decodeCp1252Text(var2Lifetime104, 1);
+            LoadingProgressDialog.field_jb = TextDecodeHelpers.decodeCp1252Text(var2Lifetime104, 1);
           }
           var2Lifetime105 = ContentTransitionDialog.getNamedTextFile("puzzle", (byte) 127);
           if (null != var2Lifetime105) {
-            KiteTailSegment.field_m = of.decodeCp1252Text(var2Lifetime105, 1);
+            KiteTailSegment.field_m = TextDecodeHelpers.decodeCp1252Text(var2Lifetime105, 1);
           }
           var2Lifetime106 = ContentTransitionDialog.getNamedTextFile("slash", (byte) 107);
           if (null != var2Lifetime106) {
-            MatchHud.field_b = of.decodeCp1252Text(var2Lifetime106, 1);
+            MatchHud.field_b = TextDecodeHelpers.decodeCp1252Text(var2Lifetime106, 1);
           }
           var2Lifetime107 = ContentTransitionDialog.getNamedTextFile("comma_seperated_values", (byte) 119);
           if (null != var2Lifetime107) {
-            FireworkSpark.field_f = of.decodeCp1252Text(var2Lifetime107, 1);
+            FireworkSpark.field_f = TextDecodeHelpers.decodeCp1252Text(var2Lifetime107, 1);
           }
           var2Lifetime108 = ContentTransitionDialog.getNamedTextFile("name_resigned", (byte) -104);
           if (null != var2Lifetime108) {
-            e.field_e = of.decodeCp1252Text(var2Lifetime108, 1);
+            ConnectionStateGlobals.field_e = TextDecodeHelpers.decodeCp1252Text(var2Lifetime108, 1);
           }
           var2Lifetime109 = ContentTransitionDialog.getNamedTextFile("name_disconnected", (byte) 106);
           if (null != var2Lifetime109) {
-            ArrayWidgetContainer.field_M = of.decodeCp1252Text(var2Lifetime109, 1);
+            ArrayWidgetContainer.field_M = TextDecodeHelpers.decodeCp1252Text(var2Lifetime109, 1);
           }
           var2Lifetime110 = ContentTransitionDialog.getNamedTextFile("gameoptlabels,0", (byte) 111);
           if (var2Lifetime110 != null) {
-            hp.field_Hb[0] = of.decodeCp1252Text(var2Lifetime110, 1);
+            HelpPopup.field_Hb[0] = TextDecodeHelpers.decodeCp1252Text(var2Lifetime110, 1);
           }
           var2Lifetime111 = ContentTransitionDialog.getNamedTextFile("gameoptlabels,1", (byte) -85);
           if (var2Lifetime111 != null) {
-            hp.field_Hb[1] = of.decodeCp1252Text(var2Lifetime111, 1);
+            HelpPopup.field_Hb[1] = TextDecodeHelpers.decodeCp1252Text(var2Lifetime111, 1);
           }
           var2Lifetime112 = ContentTransitionDialog.getNamedTextFile("gameoptnames,0,0", (byte) 108);
           if (null != var2Lifetime112) {
-            DriftingParticle.field_c[0][0] = of.decodeCp1252Text(var2Lifetime112, 1);
+            DriftingParticle.field_c[0][0] = TextDecodeHelpers.decodeCp1252Text(var2Lifetime112, 1);
           }
           var2Lifetime113 = ContentTransitionDialog.getNamedTextFile("gameoptnames,0,1", (byte) -10);
           if (null != var2Lifetime113) {
-            DriftingParticle.field_c[0][1] = of.decodeCp1252Text(var2Lifetime113, 1);
+            DriftingParticle.field_c[0][1] = TextDecodeHelpers.decodeCp1252Text(var2Lifetime113, 1);
           }
           var2Lifetime114 = ContentTransitionDialog.getNamedTextFile("gameoptnames,0,2", (byte) 118);
           if (null != var2Lifetime114) {
-            DriftingParticle.field_c[0][2] = of.decodeCp1252Text(var2Lifetime114, 1);
+            DriftingParticle.field_c[0][2] = TextDecodeHelpers.decodeCp1252Text(var2Lifetime114, 1);
           }
           var2Lifetime115 = ContentTransitionDialog.getNamedTextFile("gameoptnames,1,0", (byte) -18);
           if (null != var2Lifetime115) {
-            DriftingParticle.field_c[1][0] = of.decodeCp1252Text(var2Lifetime115, 1);
+            DriftingParticle.field_c[1][0] = TextDecodeHelpers.decodeCp1252Text(var2Lifetime115, 1);
           }
           var2Lifetime116 = ContentTransitionDialog.getNamedTextFile("gameoptnames,1,1", (byte) -30);
           if (null != var2Lifetime116) {
-            DriftingParticle.field_c[1][1] = of.decodeCp1252Text(var2Lifetime116, 1);
+            DriftingParticle.field_c[1][1] = TextDecodeHelpers.decodeCp1252Text(var2Lifetime116, 1);
           }
           var2Lifetime117 = ContentTransitionDialog.getNamedTextFile("gameoptnames,1,2", (byte) 109);
           if (var2Lifetime117 != null) {
-            DriftingParticle.field_c[1][2] = of.decodeCp1252Text(var2Lifetime117, 1);
+            DriftingParticle.field_c[1][2] = TextDecodeHelpers.decodeCp1252Text(var2Lifetime117, 1);
           }
           var2Lifetime118 = ContentTransitionDialog.getNamedTextFile("gameopttooltips,0,0", (byte) -114);
           if (null != var2Lifetime118) {
-            IntKeyLookup.field_d[0][0] = of.decodeCp1252Text(var2Lifetime118, 1);
+            IntKeyLookup.field_d[0][0] = TextDecodeHelpers.decodeCp1252Text(var2Lifetime118, 1);
           }
           var2Lifetime119 = ContentTransitionDialog.getNamedTextFile("gameopttooltips,0,1", (byte) -48);
           if (var2Lifetime119 != null) {
-            IntKeyLookup.field_d[0][1] = of.decodeCp1252Text(var2Lifetime119, 1);
+            IntKeyLookup.field_d[0][1] = TextDecodeHelpers.decodeCp1252Text(var2Lifetime119, 1);
           }
           var2Lifetime120 = ContentTransitionDialog.getNamedTextFile("gameopttooltips,0,2", (byte) -93);
           if (null != var2Lifetime120) {
-            IntKeyLookup.field_d[0][2] = of.decodeCp1252Text(var2Lifetime120, 1);
+            IntKeyLookup.field_d[0][2] = TextDecodeHelpers.decodeCp1252Text(var2Lifetime120, 1);
           }
           var2Lifetime121 = ContentTransitionDialog.getNamedTextFile("gameopttooltips,1,0", (byte) -6);
           if (null != var2Lifetime121) {
-            IntKeyLookup.field_d[1][0] = of.decodeCp1252Text(var2Lifetime121, 1);
+            IntKeyLookup.field_d[1][0] = TextDecodeHelpers.decodeCp1252Text(var2Lifetime121, 1);
           }
           var2Lifetime122 = ContentTransitionDialog.getNamedTextFile("gameopttooltips,1,1", (byte) -122);
           if (null != var2Lifetime122) {
-            IntKeyLookup.field_d[1][1] = of.decodeCp1252Text(var2Lifetime122, 1);
+            IntKeyLookup.field_d[1][1] = TextDecodeHelpers.decodeCp1252Text(var2Lifetime122, 1);
           }
           var2Lifetime123 = ContentTransitionDialog.getNamedTextFile("gameopttooltips,1,2", (byte) -41);
           if (null != var2Lifetime123) {
-            IntKeyLookup.field_d[1][2] = of.decodeCp1252Text(var2Lifetime123, 1);
+            IntKeyLookup.field_d[1][2] = TextDecodeHelpers.decodeCp1252Text(var2Lifetime123, 1);
           }
           var2Lifetime124 = ContentTransitionDialog.getNamedTextFile("high_detail", (byte) -93);
           if (var2Lifetime124 != null) {
-            IterableNodeHashTable.field_d = of.decodeCp1252Text(var2Lifetime124, 1);
+            IterableNodeHashTable.field_d = TextDecodeHelpers.decodeCp1252Text(var2Lifetime124, 1);
           }
           var2Lifetime125 = ContentTransitionDialog.getNamedTextFile("low_detail", (byte) 119);
           if (var2Lifetime125 != null) {
-            ef.field_c = of.decodeCp1252Text(var2Lifetime125, 1);
+            HighscorePacketHandlers.field_c = TextDecodeHelpers.decodeCp1252Text(var2Lifetime125, 1);
           }
           var2Lifetime126 = ContentTransitionDialog.getNamedTextFile("puzzlecomplete", (byte) 103);
           if (null != var2Lifetime126) {
-            MouseInputHandler.field_a = of.decodeCp1252Text(var2Lifetime126, 1);
+            MouseInputHandler.field_a = TextDecodeHelpers.decodeCp1252Text(var2Lifetime126, 1);
           }
           var2Lifetime127 = ContentTransitionDialog.getNamedTextFile("puzzlefailed", (byte) -63);
           if (var2Lifetime127 != null) {
-            qj.field_c = of.decodeCp1252Text(var2Lifetime127, 1);
+            PrivateChatHelpers.field_c = TextDecodeHelpers.decodeCp1252Text(var2Lifetime127, 1);
           }
           var2Lifetime128 = ContentTransitionDialog.getNamedTextFile("puzzles", (byte) 110);
           if (null != var2Lifetime128) {
-            GameApplet.field_f = of.decodeCp1252Text(var2Lifetime128, 1);
+            GameApplet.field_f = TextDecodeHelpers.decodeCp1252Text(var2Lifetime128, 1);
           }
           var2Lifetime129 = ContentTransitionDialog.getNamedTextFile("a_of_b", (byte) -22);
           if (null != var2Lifetime129) {
-            BoundedRandomAccessFile.field_b = of.decodeCp1252Text(var2Lifetime129, 1);
+            BoundedRandomAccessFile.field_b = TextDecodeHelpers.decodeCp1252Text(var2Lifetime129, 1);
           }
           var2Lifetime130 = ContentTransitionDialog.getNamedTextFile("totaltime", (byte) -18);
           if (null != var2Lifetime130) {
-            UiTheme.field_b = of.decodeCp1252Text(var2Lifetime130, 1);
+            UiTheme.field_b = TextDecodeHelpers.decodeCp1252Text(var2Lifetime130, 1);
           }
           var2Lifetime131 = ContentTransitionDialog.getNamedTextFile("tilesdropped", (byte) 109);
           if (null != var2Lifetime131) {
-            ep.field_d = of.decodeCp1252Text(var2Lifetime131, 1);
+            PolygonClipHelpers.field_d = TextDecodeHelpers.decodeCp1252Text(var2Lifetime131, 1);
           }
           var2Lifetime132 = ContentTransitionDialog.getNamedTextFile("perfectlandings", (byte) 117);
           if (var2Lifetime132 != null) {
-            MusicCrossfadeStream.field_E = of.decodeCp1252Text(var2Lifetime132, 1);
+            MusicCrossfadeStream.field_E = TextDecodeHelpers.decodeCp1252Text(var2Lifetime132, 1);
           }
           var2Lifetime133 = ContentTransitionDialog.getNamedTextFile("picturescompleted", (byte) 116);
           if (var2Lifetime133 != null) {
-            IconTextComponent.field_Lb = of.decodeCp1252Text(var2Lifetime133, 1);
+            IconTextComponent.field_Lb = TextDecodeHelpers.decodeCp1252Text(var2Lifetime133, 1);
           }
           var2Lifetime134 = ContentTransitionDialog.getNamedTextFile("finalscore", (byte) 124);
           if (var2Lifetime134 != null) {
-            he.field_c = of.decodeCp1252Text(var2Lifetime134, 1);
+            CanvasInputHelpers.field_c = TextDecodeHelpers.decodeCp1252Text(var2Lifetime134, 1);
           }
           var2Lifetime135 = ContentTransitionDialog.getNamedTextFile("next_puzzle", (byte) 114);
           if (null != var2Lifetime135) {
-            ModalStack.field_P = of.decodeCp1252Text(var2Lifetime135, 1);
+            ModalStack.field_P = TextDecodeHelpers.decodeCp1252Text(var2Lifetime135, 1);
           }
           var2Lifetime136 = ContentTransitionDialog.getNamedTextFile("try_again", (byte) 118);
           if (null != var2Lifetime136) {
-            vm.field_f = of.decodeCp1252Text(var2Lifetime136, 1);
+            LobbyGameLookupHelpers.field_f = TextDecodeHelpers.decodeCp1252Text(var2Lifetime136, 1);
           }
           var2Lifetime137 = ContentTransitionDialog.getNamedTextFile("rank", (byte) -54);
           if (null != var2Lifetime137) {
-            DisplayNameRequestGlobals.field_b = of.decodeCp1252Text(var2Lifetime137, 1);
+            DisplayNameRequestGlobals.field_b = TextDecodeHelpers.decodeCp1252Text(var2Lifetime137, 1);
           }
           var2Lifetime138 = ContentTransitionDialog.getNamedTextFile("name", (byte) 110);
           if (null != var2Lifetime138) {
-            ij.field_q = of.decodeCp1252Text(var2Lifetime138, 1);
+            BlankScreen.field_q = TextDecodeHelpers.decodeCp1252Text(var2Lifetime138, 1);
           }
           var2Lifetime139 = ContentTransitionDialog.getNamedTextFile("score", (byte) -12);
           if (null != var2Lifetime139) {
-            IconTextComponent.field_Kb = of.decodeCp1252Text(var2Lifetime139, 1);
+            IconTextComponent.field_Kb = TextDecodeHelpers.decodeCp1252Text(var2Lifetime139, 1);
           }
           var2Lifetime140 = ContentTransitionDialog.getNamedTextFile("challengemode", (byte) 111);
           if (var2Lifetime140 != null) {
-            Cloud.field_s = of.decodeCp1252Text(var2Lifetime140, 1);
+            Cloud.field_s = TextDecodeHelpers.decodeCp1252Text(var2Lifetime140, 1);
           }
           var2Lifetime141 = ContentTransitionDialog.getNamedTextFile("puzzlemode", (byte) 111);
           if (null != var2Lifetime141) {
-            ge.field_a = of.decodeCp1252Text(var2Lifetime141, 1);
+            RequestState.field_a = TextDecodeHelpers.decodeCp1252Text(var2Lifetime141, 1);
           }
           var2Lifetime142 = ContentTransitionDialog.getNamedTextFile("singleplayer", (byte) 117);
           if (var2Lifetime142 != null) {
-            Checkbox.field_O = of.decodeCp1252Text(var2Lifetime142, 1);
+            Checkbox.field_O = TextDecodeHelpers.decodeCp1252Text(var2Lifetime142, 1);
           }
           var2Lifetime143 = ContentTransitionDialog.getNamedTextFile("keycode_w", (byte) -6);
           if (null != var2Lifetime143) {
-            el.field_a = 255 & var2Lifetime143[0];
+            EmailValidationState.field_a = 255 & var2Lifetime143[0];
           }
           var2Lifetime144 = ContentTransitionDialog.getNamedTextFile("keycode_a", (byte) -53);
           if (null != var2Lifetime144) {
@@ -1660,7 +1660,7 @@ final class LoginForm extends UiContainer implements TextInputListener, ButtonLi
           if (var2Lifetime147 != null) {
             IntKeyLookup.field_e = 255 & var2Lifetime147[0];
           }
-          ig.field_b = null;
+          AudioPumpHelpers.field_b = null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
@@ -1772,23 +1772,23 @@ final class LoginForm extends UiContainer implements TextInputListener, ButtonLi
             if (this.field_K) {
               stackIn_15_1 = null;
               stackIn_15_2 = null;
-              stackIn_15_3 = fc.field_c;
+              stackIn_15_3 = LobbyListBindingHelpers.field_c;
             } else {
               stackIn_15_1 = null;
               stackIn_15_2 = null;
-              stackIn_15_3 = bo.field_f;
+              stackIn_15_3 = ScreenDisplayMode.field_f;
             }
             this.field_N = new TextButton(stackIn_15_3, (UiListener) null);
             if (this.field_M) {
               this.field_Q = new TextButton(AlphaContainer.field_M, (UiListener) (this));
               if (var11 != 0) {
-                this.field_L = new TextButton(bo.field_k, (UiListener) null);
+                this.field_L = new TextButton(ScreenDisplayMode.field_k, (UiListener) null);
                 this.field_N = new TextButton(FullscreenFocusCanvas.field_e, (UiListener) null);
                 this.field_J.field_H = false;
               }
             }
           } else {
-            this.field_L = new TextButton(bo.field_k, (UiListener) null);
+            this.field_L = new TextButton(ScreenDisplayMode.field_k, (UiListener) null);
             this.field_N = new TextButton(FullscreenFocusCanvas.field_e, (UiListener) null);
             this.field_J.field_H = false;
           }
@@ -1802,7 +1802,7 @@ final class LoginForm extends UiContainer implements TextInputListener, ButtonLi
           if (null != this.field_Q) {
             this.field_Q.field_y = (WidgetPainter) ((Object) var6);
           }
-          this.field_J.field_l = rm.field_c;
+          this.field_J.field_l = TutorialDrawHelpers.field_c;
           if (null != this.field_Q) {
             this.field_Q.field_l = KeyboardInputHandler.field_a;
           }
@@ -1812,32 +1812,32 @@ final class LoginForm extends UiContainer implements TextInputListener, ButtonLi
               this.field_N.field_y = (WidgetPainter) ((Object) new LinkButtonPainter());
               if (var11 != 0) {
                 this.field_N.field_y = (WidgetPainter) ((Object) new LinkButtonPainter());
-                this.field_N.field_l = ed.field_a;
+                this.field_N.field_l = PaletteFontFactory.field_a;
               }
             } else {
               this.field_N.field_y = (WidgetPainter) ((Object) new LinkButtonPainter());
               if (var11 != 0) {
-                this.field_N.field_l = ed.field_a;
+                this.field_N.field_l = PaletteFontFactory.field_a;
               }
             }
           } else {
-            this.field_N.field_l = ed.field_a;
+            this.field_N.field_l = PaletteFontFactory.field_a;
           }
           this.field_p = 15;
-          var7 = he.field_d;
+          var7 = CanvasInputHelpers.field_d;
           if (null != this.field_S) {
             this.field_p = this.field_p + (var7.paragraphHeight(this.field_S, this.field_E - 40, var7.maxAscent) + 5);
           }
-          var8 = ui.field_d;
-          var9 = lg.readLastLoginMethodCookie(AudioService.getApplet(13867), -18992);
-          if (ig.field_e == var9) {
+          var8 = Cp1252DecodeHelpers.field_d;
+          var9 = LoginCookieHelpers.readLastLoginMethodCookie(AudioService.getApplet(13867), -18992);
+          if (AudioPumpHelpers.field_e == var9) {
             var8 = AchievementsScreen.field_r;
             if ((var11 != 0) &&
-              (var9 == vm.field_a)) {
+              (var9 == LobbyGameLookupHelpers.field_a)) {
               var8 = MusicPatch.field_k;
             }
           } else {
-            if (var9 == vm.field_a) {
+            if (var9 == LobbyGameLookupHelpers.field_a) {
               var8 = MusicPatch.field_k;
             }
           }

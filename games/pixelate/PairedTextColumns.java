@@ -74,7 +74,7 @@ final class PairedTextColumns extends SceneWidget {
         if (param0 <= 77) {
           return (SceneWidget) null;
         }
-        return fd.getPlayerListContent(0);
+        return ByteArrayPool.getPlayerListContent(0);
     }
 
     private PairedTextColumns(long param0, SceneWidget param1, SceneWidget param2, String param3) {
@@ -134,9 +134,9 @@ final class PairedTextColumns extends SceneWidget {
         String var14 = null;
         ClientContextMenu var15 = null;
         try {
-          em.openContextMenu((String) null, 0L, (String) null, param2.getGameId((byte) 8), param2, -163, ReflectionCheckRequest.field_k, (int[]) null, -1);
+          ContextMenuHelpers.openContextMenu((String) null, 0L, (String) null, param2.getGameId((byte) 8), param2, -163, ReflectionCheckRequest.field_k, (int[]) null, -1);
           if (param2.field_dc && (param2.field_Tb == 2 ||
-            !(wo.field_h < 2))) {
+            !(SocialPanel.field_h < 2))) {
             var9 = ProxySocketConnector.field_n;
             var10 = AlphaContainer.formatTemplate(ReportAbuseDialog.field_Kb, 103, new String[]{param1});
             var9.field_b.addAction(var10, (byte) -112, 10);
@@ -156,7 +156,7 @@ final class PairedTextColumns extends SceneWidget {
           var6 = -41 / ((23 - param3) / 40);
           var15 = ProxySocketConnector.field_n;
           var5 = BufferedRandomAccessFile.field_a;
-          var7 = ji.field_c;
+          var7 = FriendCaptionGlobals.field_c;
           var15.field_b.layoutPopup(0, var5, 62, var7, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

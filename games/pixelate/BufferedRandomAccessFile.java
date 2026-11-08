@@ -19,7 +19,7 @@ final class BufferedRandomAccessFile {
     static int field_i;
     static int field_j;
     static String field_d;
-    static sb field_m;
+    static NineSliceFrame field_m;
     static int field_a;
 
     final void write(int param0, int param1, byte param2, byte[] param3) throws IOException {
@@ -304,14 +304,14 @@ final class BufferedRandomAccessFile {
         field_b = null;
     }
 
-    final static el classifyNumericLabel(int param0, String param1) {
+    final static EmailValidationState classifyNumericLabel(int param0, String param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
         Object stackIn_9_0 = null;
-        el stackIn_12_0 = null;
+        EmailValidationState stackIn_12_0 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -339,7 +339,7 @@ final class BufferedRandomAccessFile {
             break;
           }
           stackIn_9_0 = null;
-          return (el) (stackIn_9_0);
+          return (EmailValidationState) (stackIn_9_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
@@ -483,7 +483,7 @@ final class BufferedRandomAccessFile {
     }
 
     final static void closeAccountNamePrompt(boolean param0) {
-        he.field_f = null;
+        CanvasInputHelpers.field_f = null;
         if (param0) {
           BufferedRandomAccessFile.releaseStatics(-78);
         }

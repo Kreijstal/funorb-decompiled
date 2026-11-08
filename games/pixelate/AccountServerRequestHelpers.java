@@ -1,0 +1,448 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class AccountServerRequestHelpers {
+    static ConnectionState field_a;
+    static LoadingProgressDialog field_b;
+
+    final static int performAccountServerRequest(String param0, int param1, int param2, boolean param3, ConditionalTextValue param4, int param5, ConditionalTextValue param6) {
+        int var12 = 0;
+        int stackIn_5_0 = 0;
+        PacketBuffer stackIn_13_0 = null;
+        int stackIn_13_1 = 0;
+        String stackIn_14_2 = null;
+        PacketBuffer stackIn_16_0 = null;
+        int stackIn_16_1 = 0;
+        String stackIn_17_2 = null;
+        int stackIn_33_0 = 0;
+        int stackIn_45_0 = 0;
+        int stackIn_56_0 = 0;
+        int stackIn_64_0 = 0;
+        int stackIn_66_0 = 0;
+        RuntimeException stackIn_69_0 = null;
+        StringBuilder stackIn_69_1 = null;
+        String stackIn_70_2 = null;
+        StringBuilder stackIn_72_1 = null;
+        String stackIn_73_2 = null;
+        StringBuilder stackIn_75_1 = null;
+        String stackIn_76_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var7 = null;
+        String var8 = null;
+        int var9 = 0;
+        String var9_ref_String = null;
+        int var10 = 0;
+        String var11_ref_String = null;
+        int var11 = 0;
+        int var13 = 0;
+        String var14 = null;
+        CharSequence var15 = null;
+        String var11_ref_StringLifetime1;
+        String var11_ref_StringLifetime2;
+        int var10Lifetime1;
+        int var9Lifetime1;
+        int var9Lifetime2;
+        int var9Lifetime3;
+        var13 = Pixelate.field_H ? 1 : 0;
+        try {
+          var14 = param6.getText(-30491);
+          var11_ref_String = var14;
+          var8 = param4.getText(-30491);
+          var11_ref_StringLifetime1 = var8;
+          if (null == NodeHashTableIterator.field_e &&
+            !MouseInputHandler.pollGameSocketConnection(0, false)) {
+            stackIn_5_0 = -1;
+            return stackIn_5_0;
+          }
+          if (param2 >= -121) {
+            field_a = (ConnectionState) null;
+          }
+          if (GameModeSelectScreen.field_s == BlankScreen.field_o) {
+            ChatMessage.field_f.position = 0;
+            ArchiveIndex.field_j = null;
+            if (param0 != null) {
+              var9 = 0;
+              GameModeSelectScreen.field_v.position = 0;
+              if (param3) {
+                var9 = var9 | 1;
+              }
+              GameModeSelectScreen.field_v.writeInt(Bzip2State.field_d.nextInt(), -49);
+              GameModeSelectScreen.field_v.writeInt(Bzip2State.field_d.nextInt(), -62);
+              GameModeSelectScreen.field_v.writeVersionedString((byte) -66, var14);
+              GameModeSelectScreen.field_v.writeVersionedString((byte) -66, var8);
+              var15 = (CharSequence) ((Object) param0);
+              GameModeSelectScreen.field_v.writeVersionedString((byte) -66, ScreenChangeHelpers.normalizeAccountName((byte) 10, var15));
+              GameModeSelectScreen.field_v.writeShort(1276387944, param1);
+              GameModeSelectScreen.field_v.writeByte(160, param5);
+              GameModeSelectScreen.field_v.writeByte(160, var9);
+              ChatMessage.field_f.writeByte(160, 18);
+              ChatMessage.field_f.position = ChatMessage.field_f.position + 2;
+              var10 = ChatMessage.field_f.position;
+              var11_ref_StringLifetime2 = SoundVoice.readSettingsCookie(AudioService.getApplet(13867), (byte) -85);
+              if (var11_ref_StringLifetime2 == null) {
+                var11_ref_StringLifetime2 = "";
+              }
+              ChatMessage.field_f.writeString((byte) -41, var11_ref_StringLifetime2);
+              HighscoresScreen.writeEncryptedBlock(AgeValidator.field_m, ChatMessage.field_f, SceneWidgetNode.field_t, GameModeSelectScreen.field_v, 12556);
+              ChatMessage.field_f.backpatchShortLength(7519, ChatMessage.field_f.position - var10);
+            } else {
+              GameModeSelectScreen.field_v.position = 0;
+              GameModeSelectScreen.field_v.writeInt(Bzip2State.field_d.nextInt(), -90);
+              GameModeSelectScreen.field_v.writeInt(Bzip2State.field_d.nextInt(), -68);
+              stackIn_13_0 = GameModeSelectScreen.field_v;
+              stackIn_13_1 = -66;
+              if (!param6.isPending((byte) -25)) {
+                stackIn_14_2 = "";
+              } else {
+                stackIn_14_2 = var14;
+              }
+              ((PacketBuffer) (Object) stackIn_13_0).writeVersionedString((byte) stackIn_13_1, stackIn_14_2);
+              stackIn_16_0 = GameModeSelectScreen.field_v;
+              stackIn_16_1 = -66;
+              if (param4.isPending((byte) 127)) {
+                stackIn_17_2 = var8;
+              } else {
+                stackIn_17_2 = "";
+              }
+              ((PacketBuffer) (Object) stackIn_16_0).writeVersionedString((byte) stackIn_16_1, stackIn_17_2);
+              ChatMessage.field_f.writeByte(160, 16);
+              ChatMessage.field_f.position = ChatMessage.field_f.position + 1;
+              var9 = ChatMessage.field_f.position;
+              HighscoresScreen.writeEncryptedBlock(AgeValidator.field_m, ChatMessage.field_f, SceneWidgetNode.field_t, GameModeSelectScreen.field_v, 12556);
+              ChatMessage.field_f.backpatchByteLength(ChatMessage.field_f.position - var9, -1);
+            }
+            SecondaryNodeHashTable.flushOutgoingPackets(-1, 10000);
+            GameModeSelectScreen.field_s = TextLayoutLine.field_c;
+          }
+          if (TextLayoutLine.field_c == GameModeSelectScreen.field_s &&
+            QueuedInput.fillIncomingBuffer(1, false)) {
+            var9Lifetime1 = MusicCrossfadeStream.field_o.readUnsignedByte(255);
+            MusicCrossfadeStream.field_o.position = 0;
+            if (var9Lifetime1 >= 100 &&
+              var9Lifetime1 <= 105) {
+              MatchController.field_y = new String[-100 + var9Lifetime1];
+              GameModeSelectScreen.field_s = EditableTextWidget.field_Z;
+            } else {
+              if (248 == var9Lifetime1) {
+                GreenGrowTheRushesBackground.setTuhstatbutCookie(AudioService.getApplet(13867), -7624);
+                HighscoreNameEntry.field_b = AchievementBannerEntry.field_m;
+                GameSocketHelpers.closeGameSocket(true);
+                PrivateChatHelpers.field_b = false;
+                stackIn_33_0 = var9Lifetime1;
+                return stackIn_33_0;
+              }
+              if (var9Lifetime1 != 99) {
+                TextLayoutLine.field_e = var9Lifetime1;
+                GameModeSelectScreen.field_s = StatusBar.field_l;
+                BackgroundScene.field_b = -1;
+              } else {
+                QueuedInput.fillIncomingBuffer(FireworkSpark.constantOne(23062), false);
+                ArchiveIndex.field_j = new Boolean(SectorCacheStore.readBooleanByte((byte) 107, MusicCrossfadeStream.field_o));
+                MusicCrossfadeStream.field_o.position = 0;
+              }
+            }
+          }
+          if (GameModeSelectScreen.field_s == EditableTextWidget.field_Z) {
+            var9Lifetime2 = 2;
+            if (QueuedInput.fillIncomingBuffer(var9Lifetime2, false)) {
+              var10Lifetime1 = MusicCrossfadeStream.field_o.readUnsignedShort((byte) 82);
+              MusicCrossfadeStream.field_o.position = 0;
+              if (QueuedInput.fillIncomingBuffer(var10Lifetime1, false)) {
+                var11 = MatchController.field_y.length;
+                for (var12 = 0; var12 < var11; var12++) {
+                  MatchController.field_y[var12] = MusicCrossfadeStream.field_o.readNullCircumfixedString(122);
+                }
+                GameSocketHelpers.closeGameSocket(true);
+                PrivateChatHelpers.field_b = false;
+                stackIn_45_0 = 100 + var11;
+                return stackIn_45_0;
+              }
+            }
+          }
+          if (GameModeSelectScreen.field_s == StatusBar.field_l &&
+            MusicPatchNode.readPacketHeader(-18481)) {
+            if (TextLayoutLine.field_e == 255) {
+              var9_ref_String = MusicCrossfadeStream.field_o.readOptionalString((byte) 40);
+              if (var9_ref_String != null) {
+                QueuedInput.writeSettingsCookie(var9_ref_String, 126, AudioService.getApplet(13867));
+              }
+            } else {
+              HighscoreNameEntry.field_b = MusicCrossfadeStream.field_o.readString(5);
+            }
+            GameSocketHelpers.closeGameSocket(true);
+            PrivateChatHelpers.field_b = false;
+            stackIn_56_0 = TextLayoutLine.field_e;
+            return stackIn_56_0;
+          }
+          if (NodeHashTableIterator.field_e == null) {
+            if (PrivateChatHelpers.field_b) {
+              if (CachedTextLayout.millisSinceLastPacket(8) > 30000L) {
+                HighscoreNameEntry.field_b = ValidationIndicator.field_N;
+              } else {
+                HighscoreNameEntry.field_b = TextTableInitializer.field_b;
+              }
+              PrivateChatHelpers.field_b = false;
+              stackIn_64_0 = 249;
+              return stackIn_64_0;
+            }
+            var9Lifetime3 = MainScreenWidgetGlobals.field_g;
+            MainScreenWidgetGlobals.field_g = LoginMethodGlobals.field_b;
+            LoginMethodGlobals.field_b = var9Lifetime3;
+            PrivateChatHelpers.field_b = true;
+          }
+          stackIn_66_0 = -1;
+          return stackIn_66_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var7 = decompiledCaughtException;
+          stackIn_69_0 = var7;
+          stackIn_69_1 = new StringBuilder().append("cn.D(");
+          if (param0 == null) {
+            stackIn_70_2 = "null";
+          } else {
+            stackIn_70_2 = "{...}";
+          }
+          stackIn_72_1 = ((StringBuilder) (Object) stackIn_69_1).append(stackIn_70_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
+          if (param4 == null) {
+            stackIn_73_2 = "null";
+          } else {
+            stackIn_73_2 = "{...}";
+          }
+          stackIn_75_1 = ((StringBuilder) (Object) stackIn_72_1).append(stackIn_73_2).append(',').append(param5).append(',');
+          if (param6 == null) {
+            stackIn_76_2 = "null";
+          } else {
+            stackIn_76_2 = "{...}";
+          }
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_69_0), ((StringBuilder) (Object) stackIn_75_1).append(stackIn_76_2).append(')').toString());
+        }
+    }
+
+    public static void releaseStatics(int param0) {
+        field_a = null;
+        if (param0 > -42) {
+          field_a = (ConnectionState) null;
+        }
+        field_b = null;
+    }
+
+    final static void rasterFlatMeshTriangle(int param0, int param1, int param2, int param3, int param4, int[] param5, boolean param6, int param7, int param8) {
+        RuntimeException stackIn_76_0 = null;
+        StringBuilder stackIn_76_1 = null;
+        String stackIn_77_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int var9_int = 0;
+        RuntimeException var9 = null;
+        int var10 = 0;
+        int var11 = 0;
+        int var12 = 0;
+        int var13 = 0;
+        int var14 = 0;
+        int var15 = 0;
+        int var16 = 0;
+        int var17 = 0;
+        int var18 = 0;
+        int var19 = 0;
+        int var15Lifetime1;
+        int var16Lifetime1;
+        int var17Lifetime1;
+        int var16Lifetime2;
+        int var16Lifetime3;
+        int var17Lifetime2;
+        var19 = Pixelate.field_H ? 1 : 0;
+        try {
+          if (param2 >= 0 &&
+            MeshRasterState.field_e > param8) {
+            if (0 > param7 &&
+              param0 < 0 &&
+              0 > param4) {
+              return;
+            }
+            if (MeshRasterState.field_d <= param7 &&
+              MeshRasterState.field_d <= param0 &&
+              MeshRasterState.field_d <= param4) {
+              return;
+            }
+            if (param6) {
+              field_a = (ConnectionState) null;
+            }
+            var14 = param2 - param8;
+            if (param1 != param8) {
+              var10 = param7 << 16;
+              var9_int = param7 << 16;
+              var15 = param1 - param8;
+              var12 = (param4 - param7 << 16) / var14;
+              var11 = (-param7 + param0 << 16) / var15;
+              if (var11 >= var12) {
+                var16 = var11;
+                var11 = var12;
+                var12 = var16;
+                var13 = 1;
+              } else {
+                var13 = 0;
+              }
+              boolean decompiledFrameRemainder0 = true;
+              if (param8 < 0) {
+                if (param1 < 0) {
+                  param8 = -param8 + param1;
+                  var9_int = var9_int + var11 * param8;
+                  var10 = var10 + param8 * var12;
+                  param8 = param1;
+                  decompiledFrameRemainder0 = false;
+                }
+                else {
+                  param8 = -param8;
+                  var9_int = var9_int + var11 * param8;
+                  var10 = var10 + var12 * param8;
+                  param8 = 0;
+                }
+              }
+              if (decompiledFrameRemainder0) {
+                var16Lifetime2 = MeshRasterState.field_g[param8];
+                while (param8 < param1) {
+                  var17 = var9_int >> 16;
+                  if (var17 < MeshRasterState.field_d) {
+                    var18 = (var10 >> 16) - (var9_int >> 16);
+                    if (0 == var18) {
+                      if (var17 >= 0 &&
+                        var17 < MeshRasterState.field_d) {
+                        ProxySocketConnector.blendHalfSpan(var18, 1022226145, var17 + var16Lifetime2, param5, param3);
+                      }
+                    } else {
+                      if (var17 + var18 >= MeshRasterState.field_d) {
+                        var18 = -1 + (-var17 + MeshRasterState.field_d);
+                      }
+                      if (0 <= var17) {
+                        ProxySocketConnector.blendHalfSpan(var18, 1022226145, var16Lifetime2 + var17, param5, param3);
+                      } else {
+                        ProxySocketConnector.blendHalfSpan(var17 + var18, 1022226145, var16Lifetime2, param5, param3);
+                      }
+                    }
+                  }
+                  param8++;
+                  if (MeshRasterState.field_e <= param8) {
+                    return;
+                  }
+                  var16Lifetime2 = var16Lifetime2 + SoftwareRasterizer.field_j;
+                  var10 = var10 + var12;
+                  var9_int = var9_int + var11;
+                }
+              }
+              var16Lifetime3 = -param1 + param2;
+              if (var16Lifetime3 == 0) {
+                var12 = 0;
+                var11 = 0;
+              } else {
+                var17Lifetime2 = param4 << 16;
+                if (var13 != 0) {
+                  var10 = param0 << 16;
+                } else {
+                  var9_int = param0 << 16;
+                }
+                var12 = (-var10 + var17Lifetime2) / var16Lifetime3;
+                var11 = (-var9_int + var17Lifetime2) / var16Lifetime3;
+              }
+            } else {
+              if (param2 == param8) {
+                var9_int = param7 << 16;
+                var10 = param0 << 16;
+                var12 = 0;
+                var11 = 0;
+              } else {
+                var15 = param2 - param1;
+                if (param0 <= param7) {
+                  var9_int = param0 << 16;
+                  var12 = (-param7 + param4 << 16) / var14;
+                  var11 = (param4 - param0 << 16) / var15;
+                  var10 = param7 << 16;
+                } else {
+                  var10 = param0 << 16;
+                  var11 = (param4 - param7 << 16) / var14;
+                  var12 = (param4 - param0 << 16) / var15;
+                  var9_int = param7 << 16;
+                }
+              }
+              var13 = 0;
+              if (param8 < 0) {
+                param8 = Math.min(-param8, -param8 + param1);
+                var10 = var10 + var12 * param8;
+                var9_int = var9_int + param8 * var11;
+                param8 = 0;
+              }
+            }
+            if (param8 < 0) {
+              param8 = -param8;
+              var9_int = var9_int + param8 * var11;
+              var10 = var10 + var12 * param8;
+              param8 = 0;
+            }
+            var15Lifetime1 = MeshRasterState.field_g[param8];
+            while (param2 > param8) {
+              var16Lifetime1 = var9_int >> 16;
+              if (var16Lifetime1 < MeshRasterState.field_d) {
+                var17Lifetime1 = (var10 >> 16) - (var9_int >> 16);
+                if (0 != var17Lifetime1) {
+                  if (var17Lifetime1 + var16Lifetime1 >= MeshRasterState.field_d) {
+                    var17Lifetime1 = MeshRasterState.field_d - var16Lifetime1 - 1;
+                  }
+                  if (var16Lifetime1 >= 0) {
+                    ProxySocketConnector.blendHalfSpan(var17Lifetime1, 1022226145, var15Lifetime1 + var16Lifetime1, param5, param3);
+                  } else {
+                    ProxySocketConnector.blendHalfSpan(var17Lifetime1 + var16Lifetime1, 1022226145, var15Lifetime1, param5, param3);
+                  }
+                } else {
+                  if (var16Lifetime1 >= 0 &&
+                    MeshRasterState.field_d > var16Lifetime1) {
+                    ProxySocketConnector.blendHalfSpan(var17Lifetime1, 1022226145, var15Lifetime1 + var16Lifetime1, param5, param3);
+                  }
+                }
+              }
+              param8++;
+              if (MeshRasterState.field_e <= param8) {
+                return;
+              }
+              var10 = var10 + var12;
+              var15Lifetime1 = var15Lifetime1 + SoftwareRasterizer.field_j;
+              var9_int = var9_int + var11;
+            }
+            return;
+          }
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var9 = decompiledCaughtException;
+          stackIn_76_0 = var9;
+          stackIn_76_1 = new StringBuilder().append("cn.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
+          if (param5 == null) {
+            stackIn_77_2 = "null";
+          } else {
+            stackIn_77_2 = "{...}";
+          }
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_76_0), ((StringBuilder) (Object) stackIn_76_1).append(stackIn_77_2).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(')').toString());
+        }
+    }
+
+    final static RankingQuery getRankingQuery(int param0, int param1, int param2, int param3) {
+        int var5 = Pixelate.field_H ? 1 : 0;
+        RankingQuery var4 = (RankingQuery) (LoginCredentials.field_c.first(1504642273));
+        while (var4 != null) {
+          if (~param0 == ~var4.field_k) {
+            return var4;
+          }
+          var4 = (RankingQuery) (LoginCredentials.field_c.next(1504642273));
+        }
+        var4 = new RankingQuery();
+        if (param3 > -16) {
+          AccountServerRequestHelpers.getRankingQuery(59, -14, -85, -23);
+        }
+        var4.field_k = param0;
+        var4.field_s = param2;
+        LoginCredentials.field_c.addLast(22125, var4);
+        ContextMenuHelpers.sendRankingQuery((byte) -7, var4, param1);
+        return var4;
+    }
+
+    static {
+        field_a = new ConnectionState();
+    }
+}

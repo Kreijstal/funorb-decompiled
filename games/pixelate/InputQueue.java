@@ -79,7 +79,7 @@ final class InputQueue {
             }
             var6 = DisplayNameForm.findFriend(var4_ref_String, -106);
             var7 = var1.readString(5);
-            var8 = dh.normalizeDisplayName((CharSequence) ((Object) var4_ref_String), (byte) 100);
+            var8 = DisplayNameHelpers.normalizeDisplayName((CharSequence) ((Object) var4_ref_String), (byte) 100);
             if (null == var8) {
               var8 = var4_ref_String;
             }
@@ -95,7 +95,7 @@ final class InputQueue {
               fieldTemp$0 = ReflectionCheckRequest.field_t;
               ReflectionCheckRequest.field_t = ReflectionCheckRequest.field_t + 1;
               var6.field_Kb = fieldTemp$0;
-              bq.field_b.addLast(22125, var6);
+              LegacyMenuBuilder.field_b.addLast(22125, var6);
             }
             var6.field_Ib = var5;
             var6.field_Fb = var4_ref_String;
@@ -120,18 +120,18 @@ final class InputQueue {
               if (param0 >= -89) {
                 return;
               }
-              na.closeGameSocket(true);
+              GameSocketHelpers.closeGameSocket(true);
               return;
             }
             ValidatedTextWidget.field_db = 1;
             var3 = var1.readString(5);
             LabeledField.field_L = ((String) (var3)).intern();
             var4 = var1.readUnsignedByte(255);
-            vm.unpackChatFilterSettings(var4, (byte) -113);
+            LobbyGameLookupHelpers.unpackChatFilterSettings(var4, (byte) -113);
             return;
           }
-          if (null == vm.field_b) {
-            vm.field_b = new SecondaryNodeHashTable(128);
+          if (null == LobbyGameLookupHelpers.field_b) {
+            LobbyGameLookupHelpers.field_b = new SecondaryNodeHashTable(128);
             DialWidgetPainter.field_q = 0;
           }
           var3Lifetime1 = var1.readString(5);
@@ -144,12 +144,12 @@ final class InputQueue {
           if (null == var6Lifetime1) {
             var6Lifetime1 = LoadingStepTracker.findFriend(var5Lifetime1, -1);
             if (null != var6Lifetime1) {
-              vm.field_b.put(false, var6Lifetime1, (long)dh.normalizeDisplayName((CharSequence) ((Object) var4_ref_StringLifetime1), (byte) 29).hashCode());
+              LobbyGameLookupHelpers.field_b.put(false, var6Lifetime1, (long)DisplayNameHelpers.normalizeDisplayName((CharSequence) ((Object) var4_ref_StringLifetime1), (byte) 29).hashCode());
             }
           }
           if (null == var6Lifetime1) {
             var6Lifetime1 = new SocialListEntry();
-            vm.field_b.put(false, var6Lifetime1, (long)dh.normalizeDisplayName((CharSequence) ((Object) var4_ref_StringLifetime1), (byte) 70).hashCode());
+            LobbyGameLookupHelpers.field_b.put(false, var6Lifetime1, (long)DisplayNameHelpers.normalizeDisplayName((CharSequence) ((Object) var4_ref_StringLifetime1), (byte) 70).hashCode());
             fieldTemp$1 = DialWidgetPainter.field_q;
             DialWidgetPainter.field_q = DialWidgetPainter.field_q + 1;
             var6Lifetime1.field_Kb = fieldTemp$1;
@@ -317,7 +317,7 @@ final class InputQueue {
           var2 = 1;
           while (var2 < DateInputWidget.field_N.length) {
             var3 = DateInputWidget.field_N[var2];
-            ArraySupport.copyInts(nd.field_c, var2 << 4, nd.field_c, var1_int, var3);
+            ArraySupport.copyInts(HowToPlayDemoHelpers.field_c, var2 << 4, HowToPlayDemoHelpers.field_c, var1_int, var3);
             var1_int = var1_int + var3;
             var2++;
             if (var4 != 0) {

@@ -67,20 +67,20 @@ final class CheckboxPainter implements WidgetPainter {
             if (null == TextButton.field_L) {
               return;
             }
-            stackIn_15_0 = fp.field_c;
+            stackIn_15_0 = NoticeKind.field_c;
             stackIn_15_1 = -44;
             stackIn_15_2 = null;
             stackIn_15_3 = null;
             stackIn_15_4 = TextButton.field_L.getCodeBase();
             stackIn_15_5 = new StringBuilder().append("clienterror.ws?c=").append(AccountChoicePanel.field_M).append("&u=");
-            if (null == ui.field_c) {
+            if (null == Cp1252DecodeHelpers.field_c) {
               stackIn_16_2 = null;
               stackIn_16_3 = null;
-              stackIn_16_6 = "" + ff.field_d;
+              stackIn_16_6 = "" + SpriteLoadHelpers.field_d;
             } else {
               stackIn_16_2 = null;
               stackIn_16_3 = null;
-              stackIn_16_6 = ui.field_c;
+              stackIn_16_6 = Cp1252DecodeHelpers.field_c;
             }
             var4 = ((PlatformTaskDispatcher) (Object) stackIn_15_0).requestUrlStream((byte) stackIn_15_1, new java.net.URL(stackIn_15_4, ((StringBuilder) (Object) stackIn_15_5).append(stackIn_16_6).append("&v1=").append(PlatformTaskDispatcher.field_o).append("&v2=").append(PlatformTaskDispatcher.field_l).append("&e=").append(var10).toString()));
             while (0 == var4.field_b) {

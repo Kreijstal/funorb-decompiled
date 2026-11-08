@@ -93,12 +93,12 @@ final class SecondaryNodeHashTable {
         }
     }
 
-    final static ib chooseGridSize(byte param0, int param1) {
+    final static GridSize chooseGridSize(byte param0, int param1) {
         int stackIn_5_0 = 0;
         int var2;
         int var3;
         if (param0 < 84) {
-          return (ib) null;
+          return (GridSize) null;
         }
         if (param1 < 10) {
           stackIn_5_0 = 0;
@@ -108,33 +108,33 @@ final class SecondaryNodeHashTable {
         var2 = stackIn_5_0;
         if (var2 == 0) {
           if (JavaRandomHelpers.randomBelow(UiTheme.field_f, -128, 2) != 1) {
-            return new ib(4, 3);
+            return new GridSize(4, 3);
           }
-          return new ib(3, 4);
+          return new GridSize(3, 4);
         }
         if (var2 != 1) {
           if (2 == var2) {
             if (JavaRandomHelpers.randomBelow(UiTheme.field_f, -103, 2) == 1) {
-              return new ib(4, 5);
+              return new GridSize(4, 5);
             }
-            return new ib(5, 4);
+            return new GridSize(5, 4);
           }
           if (3 != var2) {
-            return new ib(4, 4);
+            return new GridSize(4, 4);
           }
-          return new ib(5, 5);
+          return new GridSize(5, 5);
         }
         var3 = JavaRandomHelpers.randomBelow(UiTheme.field_f, -121, 3);
         if (var3 == 0) {
-          return new ib(3, 5);
+          return new GridSize(3, 5);
         }
         if (var3 == 1) {
-          return new ib(4, 4);
+          return new GridSize(4, 4);
         }
         if (var3 == 2) {
-          return new ib(5, 3);
+          return new GridSize(5, 3);
         }
-        return new ib(4, 4);
+        return new GridSize(4, 4);
     }
 
     final DualLinkNode next(byte param0) {
@@ -238,10 +238,10 @@ final class SecondaryNodeHashTable {
             }
           }
           param0 = param0 << (var2 << 1);
-          return bl.field_a[-32768 + param0] >> var2;
+          return MouseWheelSetupHelpers.field_a[-32768 + param0] >> var2;
         }
         if (131072 > param0) {
-          return bl.field_a[-32768 + param0];
+          return MouseWheelSetupHelpers.field_a[-32768 + param0];
         }
         if (33554432 <= param0) {
           if (param0 >= 536870912) {
@@ -257,7 +257,7 @@ final class SecondaryNodeHashTable {
           }
         }
         param0 = param0 >> (var2Lifetime1 << 1);
-        return bl.field_a[param0 - 32768] << var2Lifetime1;
+        return MouseWheelSetupHelpers.field_a[param0 - 32768] << var2Lifetime1;
     }
 
     final DualLinkNode get(int param0, long param1) {
@@ -324,12 +324,12 @@ final class SecondaryNodeHashTable {
             if (param0 >= 0) {
               decompiledFrameRemainder0 = (Pixelate.field_G == GameModeSelectScreen.field_s);
               if ((decompiledFrameRemainder0) && (ChatMessage.field_f.position == 0 &&
-                hm.monotonicMillis(64) > (ReflectionCheckRequest.field_m + 10000L))) {
+                ClockHelpers.monotonicMillis(64) > (ReflectionCheckRequest.field_m + 10000L))) {
                 ChatMessage.field_f.writeOpcode(param0, 15514);
               }
             } else {
               if (ChatMessage.field_f.position == 0 &&
-                hm.monotonicMillis(64) > (ReflectionCheckRequest.field_m + 10000L)) {
+                ClockHelpers.monotonicMillis(64) > (ReflectionCheckRequest.field_m + 10000L)) {
                 ChatMessage.field_f.writeOpcode(param0, 15514);
               }
             }
@@ -337,11 +337,11 @@ final class SecondaryNodeHashTable {
               if (ChatMessage.field_f.position > 0) {
                 try {
                   NodeHashTableIterator.field_e.write(ChatMessage.field_f.position, -98, 0, ChatMessage.field_f.payload);
-                  ReflectionCheckRequest.field_m = hm.monotonicMillis(64);
+                  ReflectionCheckRequest.field_m = ClockHelpers.monotonicMillis(64);
                 } catch (java.io.IOException decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var2 = (IOException) (Object) decompiledCaughtException;
-                  na.closeGameSocket(true);
+                  GameSocketHelpers.closeGameSocket(true);
                 }
                 ChatMessage.field_f.position = 0;
               }

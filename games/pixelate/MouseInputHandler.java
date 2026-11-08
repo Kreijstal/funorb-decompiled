@@ -35,7 +35,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
 
     public final synchronized void focusLost(java.awt.event.FocusEvent param0) {
         try {
-          if (fj.field_c != null) {
+          if (MouseInputGlobals.field_c != null) {
             Cloud.field_o = 0;
           }
         } catch (RuntimeException runtimeException) {
@@ -51,40 +51,40 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           CipherPacketBuffer var5 = null;
           int stackIn_11_0 = 0;
           Throwable decompiledCaughtException = null;
-          if (ra.field_b == null) {
-            ra.field_b = OptionsScreen.field_p.requestSocket(param0 ^ 20278, MatchController.field_B, gd.field_g);
+          if (NineSliceSpriteFactory.field_b == null) {
+            NineSliceSpriteFactory.field_b = OptionsScreen.field_p.requestSocket(param0 ^ 20278, MatchController.field_B, MainScreenWidgetGlobals.field_g);
           }
-          if (param0 == ra.field_b.field_b) {
+          if (param0 == NineSliceSpriteFactory.field_b.field_b) {
             return false;
           }
-          dupTemp$1 = hm.monotonicMillis(64);
+          dupTemp$1 = ClockHelpers.monotonicMillis(64);
           ReflectionCheckRequest.field_m = dupTemp$1;
           SpriteCheckboxPainter.field_c = dupTemp$1;
-          if (ra.field_b.field_b != 1) {
+          if (NineSliceSpriteFactory.field_b.field_b != 1) {
             GameModeSelectScreen.field_s = Cloud.field_q;
           } else {
             try {
-              NodeHashTableIterator.field_e = new BufferedSocket((java.net.Socket) (ra.field_b.field_e), OptionsScreen.field_p);
+              NodeHashTableIterator.field_e = new BufferedSocket((java.net.Socket) (NineSliceSpriteFactory.field_b.field_e), OptionsScreen.field_p);
               ChatMessage.field_f.position = 0;
               var4 = MusicCrossfadeStream.field_o;
               var5 = var4;
-              GameModeSelectScreen.field_s = ij.field_o;
+              GameModeSelectScreen.field_s = BlankScreen.field_o;
               var5.position = 0;
               stackIn_11_0 = (param1) ? -2 : -1;
               BirthDateEntryPanel.field_G = stackIn_11_0;
-              gb.field_d = stackIn_11_0;
+              ReportAbuseHelpers.field_d = stackIn_11_0;
               MarkerSlider.field_U = stackIn_11_0;
-              FallingPieceView.writeConnectionHandshake(CipherPacketBuffer.field_q, (byte) 66, bj.field_a, ChatMessage.field_f, hf.field_n);
+              FallingPieceView.writeConnectionHandshake(CipherPacketBuffer.field_q, (byte) 66, ChallengePuzzleHelpers.field_a, ChatMessage.field_f, AchievementRecord.field_n);
               SecondaryNodeHashTable.flushOutgoingPackets(-1, 10000);
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var2 = (IOException) (Object) decompiledCaughtException;
               GameModeSelectScreen.field_s = Cloud.field_q;
-              ra.field_b = null;
+              NineSliceSpriteFactory.field_b = null;
               return true;
             }
           }
-          ra.field_b = null;
+          NineSliceSpriteFactory.field_b = null;
           return true;
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -95,10 +95,10 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
 
     public final synchronized void mouseDragged(java.awt.event.MouseEvent param0) {
         try {
-          if (null != fj.field_c) {
-            oi.field_c = 0;
+          if (null != MouseInputGlobals.field_c) {
+            RegistrationHelpers.field_c = 0;
             QuickChatPhraseCache.field_b = param0.getX();
-            ra.field_d = param0.getY();
+            NineSliceSpriteFactory.field_d = param0.getY();
             QuickChatPhraseCache.field_j = true;
           }
         } catch (RuntimeException runtimeException) {
@@ -113,10 +113,10 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          if (null != fj.field_c) {
-            oi.field_c = 0;
+          if (null != MouseInputGlobals.field_c) {
+            RegistrationHelpers.field_c = 0;
             QuickChatPhraseCache.field_b = -1;
-            ra.field_d = -1;
+            NineSliceSpriteFactory.field_d = -1;
             QuickChatPhraseCache.field_j = true;
           }
           return;
@@ -146,10 +146,10 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
 
     public final synchronized void mouseMoved(java.awt.event.MouseEvent param0) {
         try {
-          if (fj.field_c != null) {
-            oi.field_c = 0;
+          if (MouseInputGlobals.field_c != null) {
+            RegistrationHelpers.field_c = 0;
             QuickChatPhraseCache.field_b = param0.getX();
-            ra.field_d = param0.getY();
+            NineSliceSpriteFactory.field_d = param0.getY();
             QuickChatPhraseCache.field_j = true;
           }
         } catch (RuntimeException runtimeException) {
@@ -165,16 +165,16 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          if (null != fj.field_c) {
-            oi.field_c = 0;
+          if (null != MouseInputGlobals.field_c) {
+            RegistrationHelpers.field_c = 0;
             EditableTextWidget.field_X = param0.getX();
             IntrusiveNode.field_j = param0.getY();
-            hm.monotonicMillis(64);
+            ClockHelpers.monotonicMillis(64);
             if (javax.swing.SwingUtilities.isRightMouseButton(param0)) {
-              tl.field_a = 2;
+              MouseClickGlobals.field_a = 2;
               Cloud.field_o = 2;
             } else {
-              tl.field_a = 1;
+              MouseClickGlobals.field_a = 1;
               Cloud.field_o = 1;
             }
             var2_int = param0.getModifiers();
@@ -206,10 +206,10 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
 
     public final synchronized void mouseEntered(java.awt.event.MouseEvent param0) {
         try {
-          if (fj.field_c != null) {
-            oi.field_c = 0;
+          if (MouseInputGlobals.field_c != null) {
+            RegistrationHelpers.field_c = 0;
             QuickChatPhraseCache.field_b = param0.getX();
-            ra.field_d = param0.getY();
+            NineSliceSpriteFactory.field_d = param0.getY();
             QuickChatPhraseCache.field_j = true;
           }
         } catch (RuntimeException runtimeException) {
@@ -225,8 +225,8 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          if (null != fj.field_c) {
-            oi.field_c = 0;
+          if (null != MouseInputGlobals.field_c) {
+            RegistrationHelpers.field_c = 0;
             Cloud.field_o = 0;
             QuickChatPhraseCache.field_j = true;
             var2_int = param0.getModifiers();
@@ -306,7 +306,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         if (param1 != 124) {
           return (ResourceArchive) null;
         }
-        return el.createResourceArchive(-115, true, false, param0, 1, false);
+        return EmailValidationState.createResourceArchive(-115, true, false, param0, 1, false);
     }
 
     final static void tickTutorialPageTransition(int param0) {
@@ -336,7 +336,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         }
         if (!AlphaContainer.field_N) {
           if (param0 == 5) {
-            if (of.field_d == GreenGrowTheRushesBackground.field_m) {
+            if (TextDecodeHelpers.field_d == GreenGrowTheRushesBackground.field_m) {
               if (NetworkGameClient.field_D > 0) {
                 NetworkGameClient.field_D = NetworkGameClient.field_D - 1;
               } else {
@@ -348,14 +348,14 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
               fieldTemp$6 = AccountRegistrationPanel.field_S;
               AccountRegistrationPanel.field_S = AccountRegistrationPanel.field_S + 1;
               if (fieldTemp$6 >= 15) {
-                of.field_d = GreenGrowTheRushesBackground.field_m;
+                TextDecodeHelpers.field_d = GreenGrowTheRushesBackground.field_m;
                 stackIn_10_0 = (5 != GreenGrowTheRushesBackground.field_m) ? 15 : 75;
                 NetworkGameClient.field_D = stackIn_10_0;
               }
             }
           } else {
             field_c = -69;
-            if (of.field_d == GreenGrowTheRushesBackground.field_m) {
+            if (TextDecodeHelpers.field_d == GreenGrowTheRushesBackground.field_m) {
               if (NetworkGameClient.field_D > 0) {
                 NetworkGameClient.field_D = NetworkGameClient.field_D - 1;
               } else {
@@ -367,7 +367,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
               fieldTemp$5 = AccountRegistrationPanel.field_S;
               AccountRegistrationPanel.field_S = AccountRegistrationPanel.field_S + 1;
               if (fieldTemp$5 >= 15) {
-                of.field_d = GreenGrowTheRushesBackground.field_m;
+                TextDecodeHelpers.field_d = GreenGrowTheRushesBackground.field_m;
                 stackIn_23_0 = (5 != GreenGrowTheRushesBackground.field_m) ? 15 : 75;
                 NetworkGameClient.field_D = stackIn_23_0;
               }
@@ -376,7 +376,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         } else {
           if (GameApplet.field_i == StatefulTextPainter.field_v.puzzle.pictureIndex) {
             if (param0 == 5) {
-              if (of.field_d == GreenGrowTheRushesBackground.field_m) {
+              if (TextDecodeHelpers.field_d == GreenGrowTheRushesBackground.field_m) {
                 if (NetworkGameClient.field_D > 0) {
                   NetworkGameClient.field_D = NetworkGameClient.field_D - 1;
                 } else {
@@ -388,14 +388,14 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
                 fieldTemp$4 = AccountRegistrationPanel.field_S;
                 AccountRegistrationPanel.field_S = AccountRegistrationPanel.field_S + 1;
                 if (fieldTemp$4 >= 15) {
-                  of.field_d = GreenGrowTheRushesBackground.field_m;
+                  TextDecodeHelpers.field_d = GreenGrowTheRushesBackground.field_m;
                   stackIn_39_0 = (5 != GreenGrowTheRushesBackground.field_m) ? 15 : 75;
                   NetworkGameClient.field_D = stackIn_39_0;
                 }
               }
             } else {
               field_c = -69;
-              if (of.field_d == GreenGrowTheRushesBackground.field_m) {
+              if (TextDecodeHelpers.field_d == GreenGrowTheRushesBackground.field_m) {
                 if (NetworkGameClient.field_D > 0) {
                   NetworkGameClient.field_D = NetworkGameClient.field_D - 1;
                 } else {
@@ -407,7 +407,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
                 fieldTemp$3 = AccountRegistrationPanel.field_S;
                 AccountRegistrationPanel.field_S = AccountRegistrationPanel.field_S + 1;
                 if (fieldTemp$3 >= 15) {
-                  of.field_d = GreenGrowTheRushesBackground.field_m;
+                  TextDecodeHelpers.field_d = GreenGrowTheRushesBackground.field_m;
                   stackIn_52_0 = (5 != GreenGrowTheRushesBackground.field_m) ? 15 : 75;
                   NetworkGameClient.field_D = stackIn_52_0;
                 }
@@ -420,36 +420,36 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
               if (param0 != 5) {
                 field_c = -69;
               }
-              if (of.field_d != GreenGrowTheRushesBackground.field_m) {
+              if (TextDecodeHelpers.field_d != GreenGrowTheRushesBackground.field_m) {
                 fieldTemp$0 = AccountRegistrationPanel.field_S;
                 AccountRegistrationPanel.field_S = AccountRegistrationPanel.field_S + 1;
                 if (fieldTemp$0 >= 15) {
-                  of.field_d = GreenGrowTheRushesBackground.field_m;
+                  TextDecodeHelpers.field_d = GreenGrowTheRushesBackground.field_m;
                   stackIn_107_0 = (5 != GreenGrowTheRushesBackground.field_m) ? 15 : 75;
                   NetworkGameClient.field_D = stackIn_107_0;
                 }
-                if (-1 != of.field_d) {
-                  var1 = jb.field_b[of.field_d];
+                if (-1 != TextDecodeHelpers.field_d) {
+                  var1 = TutorialPageGlobals.field_b[TextDecodeHelpers.field_d];
                   var1.field_f = -(AccountRegistrationPanel.field_S * (AccountRegistrationPanel.field_S * 270) / 225) + 20;
                 }
                 return;
               }
               if (NetworkGameClient.field_D > 0) {
                 NetworkGameClient.field_D = NetworkGameClient.field_D - 1;
-                if (-1 != of.field_d) {
-                  var1Lifetime2 = jb.field_b[of.field_d];
+                if (-1 != TextDecodeHelpers.field_d) {
+                  var1Lifetime2 = TutorialPageGlobals.field_b[TextDecodeHelpers.field_d];
                   var1Lifetime2.field_f = -(AccountRegistrationPanel.field_S * (AccountRegistrationPanel.field_S * 270) / 225) + 20;
                 }
               } else {
                 if (AccountRegistrationPanel.field_S <= 0) {
-                  if (-1 != of.field_d) {
-                    var1Lifetime2 = jb.field_b[of.field_d];
+                  if (-1 != TextDecodeHelpers.field_d) {
+                    var1Lifetime2 = TutorialPageGlobals.field_b[TextDecodeHelpers.field_d];
                     var1Lifetime2.field_f = -(AccountRegistrationPanel.field_S * (AccountRegistrationPanel.field_S * 270) / 225) + 20;
                   }
                 } else {
                   AccountRegistrationPanel.field_S = AccountRegistrationPanel.field_S - 1;
-                  if (-1 != of.field_d) {
-                    var1Lifetime2 = jb.field_b[of.field_d];
+                  if (-1 != TextDecodeHelpers.field_d) {
+                    var1Lifetime2 = TutorialPageGlobals.field_b[TextDecodeHelpers.field_d];
                     var1Lifetime2.field_f = -(AccountRegistrationPanel.field_S * (AccountRegistrationPanel.field_S * 270) / 225) + 20;
                   }
                 }
@@ -461,7 +461,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
               if (param0 != 5) {
                 field_c = -69;
               }
-              if (of.field_d == GreenGrowTheRushesBackground.field_m) {
+              if (TextDecodeHelpers.field_d == GreenGrowTheRushesBackground.field_m) {
                 if (NetworkGameClient.field_D > 0) {
                   NetworkGameClient.field_D = NetworkGameClient.field_D - 1;
                 } else {
@@ -473,7 +473,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
                 fieldTemp$2 = AccountRegistrationPanel.field_S;
                 AccountRegistrationPanel.field_S = AccountRegistrationPanel.field_S + 1;
                 if (fieldTemp$2 >= 15) {
-                  of.field_d = GreenGrowTheRushesBackground.field_m;
+                  TextDecodeHelpers.field_d = GreenGrowTheRushesBackground.field_m;
                   stackIn_70_0 = (5 != GreenGrowTheRushesBackground.field_m) ? 15 : 75;
                   NetworkGameClient.field_D = stackIn_70_0;
                 }
@@ -484,7 +484,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
               if (param0 != 5) {
                 field_c = -69;
               }
-              if (of.field_d == GreenGrowTheRushesBackground.field_m) {
+              if (TextDecodeHelpers.field_d == GreenGrowTheRushesBackground.field_m) {
                 if (NetworkGameClient.field_D > 0) {
                   NetworkGameClient.field_D = NetworkGameClient.field_D - 1;
                 } else {
@@ -496,7 +496,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
                 fieldTemp$1 = AccountRegistrationPanel.field_S;
                 AccountRegistrationPanel.field_S = AccountRegistrationPanel.field_S + 1;
                 if (fieldTemp$1 >= 15) {
-                  of.field_d = GreenGrowTheRushesBackground.field_m;
+                  TextDecodeHelpers.field_d = GreenGrowTheRushesBackground.field_m;
                   stackIn_88_0 = (5 != GreenGrowTheRushesBackground.field_m) ? 15 : 75;
                   NetworkGameClient.field_D = stackIn_88_0;
                 }
@@ -504,8 +504,8 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
             }
           }
         }
-        if (-1 != of.field_d) {
-          var1Lifetime1 = jb.field_b[of.field_d];
+        if (-1 != TextDecodeHelpers.field_d) {
+          var1Lifetime1 = TutorialPageGlobals.field_b[TextDecodeHelpers.field_d];
           var1Lifetime1.field_f = -(AccountRegistrationPanel.field_S * (AccountRegistrationPanel.field_S * 270) / 225) + 20;
         }
     }

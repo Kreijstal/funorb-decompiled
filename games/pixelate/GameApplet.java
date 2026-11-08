@@ -77,8 +77,8 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                     }
                     if (decompiledFrameCompleted0) {
                       var4 = var2.substring(6, var3);
-                      if (td.isDecimalInteger(-128, (CharSequence) ((Object) var4)) &&
-                        !(na.parseDecimalInt((CharSequence) ((Object) var4), (byte) -33) >= 10)) {
+                      if (PuzzleModePictureHelpers.isDecimalInteger(-128, (CharSequence) ((Object) var4)) &&
+                        !(GameSocketHelpers.parseDecimalInt((CharSequence) ((Object) var4), (byte) -33) >= 10)) {
                         this.redirectToErrorPage(-18310, "wrongjava");
                         decompiledFrameRemainder3 = (var5 != 0);
                       }
@@ -122,8 +122,8 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               }
               if (decompiledFrameRemainder3) {
                 var1 = DropTargetWidget.field_I;
-                if (null != bd.field_b) {
-                  var1 = bd.field_b;
+                if (null != ConnectionState.field_b) {
+                  var1 = ConnectionState.field_b;
                 }
                 var2_ref = PlatformTaskDispatcher.field_j;
                 if (var2_ref != null) {
@@ -136,13 +136,13 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 }
                 GradientOutlineTextPainter.detectMaxMemoryMb((byte) 90);
                 this.recreateCanvas(-27106);
-                ClientException.field_f = AccountRequestDialog.createRasterBuffer(wp.field_c, -88, (java.awt.Component) ((Object) NameAvailabilityValidator.field_u), BufferedRandomAccessFile.field_i);
+                ClientException.field_f = AccountRequestDialog.createRasterBuffer(CurrencyPriceGlobals.field_c, -88, (java.awt.Component) ((Object) NameAvailabilityValidator.field_u), BufferedRandomAccessFile.field_i);
                 this.initializeClient((byte) -15);
                 ArchiveRequest.field_y = Js5NetworkRequest.createTickClock(-30272);
                 do {
                   boolean decompiledFrameRemainder0 = true;
                   if (PicturePreview.field_m != 0L) {
-                    stackIn_100_0 = compareLongs(~hm.monotonicMillis(64), ~PicturePreview.field_m);
+                    stackIn_100_0 = compareLongs(~ClockHelpers.monotonicMillis(64), ~PicturePreview.field_m);
                     decompiledFrameRemainder0 = (var5 == 0);
                     if ((decompiledFrameRemainder0) &&
                       (stackIn_100_0 <= 0)) {
@@ -150,14 +150,14 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                     }
                   }
                   if (decompiledFrameRemainder0) {
-                    id.field_b = ArchiveRequest.field_y.waitForTicks((byte) 42, wa.field_b);
+                    AccountRequestReply.field_b = ArchiveRequest.field_y.waitForTicks((byte) 42, SpriteBuildHelpers.field_b);
                     stackIn_100_0 = 0;
                   }
                   var3 = stackIn_100_0;
                   do {
-                    if (!(var3 < id.field_b)) {
+                    if (!(var3 < AccountRequestReply.field_b)) {
                       this.runRenderFrame(-1);
-                      ResourceArchive.pumpPlatformEvents(mc.field_k, NameAvailabilityValidator.field_u, (byte) -52);
+                      ResourceArchive.pumpPlatformEvents(AchievementMaskRequest.field_k, NameAvailabilityValidator.field_u, (byte) -52);
                       break;
                     }
                     this.runClientTick(5176);
@@ -221,9 +221,9 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             stackIn_4_0 = null;
             return (java.net.URL) (stackIn_4_0);
           }
-          if (bd.field_b != null &&
-            bd.field_b != this) {
-            stackIn_12_0 = bd.field_b.getDocumentBase();
+          if (ConnectionState.field_b != null &&
+            ConnectionState.field_b != this) {
+            stackIn_12_0 = ConnectionState.field_b.getDocumentBase();
             return stackIn_12_0;
           }
           stackIn_14_0 = super.getDocumentBase();
@@ -244,31 +244,31 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         java.awt.Insets var6 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2_long = hm.monotonicMillis(64);
-          var4 = rh.field_x[la.field_b];
-          rh.field_x[la.field_b] = var2_long;
+          var2_long = ClockHelpers.monotonicMillis(64);
+          var4 = HighscoreSubmission.field_x[ScreenChangeHelpers.field_b];
+          HighscoreSubmission.field_x[ScreenChangeHelpers.field_b] = var2_long;
           if (var4 != 0L &&
             var2_long > var4) {
             var6_int = (int)(var2_long - var4);
             BoardView.field_k = ((var6_int >> 1) + 32000) / var6_int;
           }
-          la.field_b = la.field_b - param0 & 31;
+          ScreenChangeHelpers.field_b = ScreenChangeHelpers.field_b - param0 & 31;
           fieldTemp$1 = HuffmanCodec.field_e;
           HuffmanCodec.field_e = HuffmanCodec.field_e + 1;
           if (50 < fieldTemp$1) {
             HuffmanCodec.field_e = HuffmanCodec.field_e - 50;
             MusicPatch.field_s = true;
-            NameAvailabilityValidator.field_u.setSize(BufferedRandomAccessFile.field_i, wp.field_c);
+            NameAvailabilityValidator.field_u.setSize(BufferedRandomAccessFile.field_i, CurrencyPriceGlobals.field_c);
             NameAvailabilityValidator.field_u.setVisible(true);
             boolean decompiledSharedTail0 = (ProxySocketConnector.field_j != null &&
               ProxySocketConnector.field_i == null);
             if (!decompiledSharedTail0) {
-              NameAvailabilityValidator.field_u.setLocation(Vector3.field_a, mc.field_m);
+              NameAvailabilityValidator.field_u.setLocation(Vector3.field_a, AchievementMaskRequest.field_m);
               decompiledSharedTail0 = (Pixelate.field_H);
             }
             if (decompiledSharedTail0) {
               var6 = ProxySocketConnector.field_j.getInsets();
-              NameAvailabilityValidator.field_u.setLocation(var6.left + Vector3.field_a, var6.top + mc.field_m);
+              NameAvailabilityValidator.field_u.setLocation(var6.left + Vector3.field_a, var6.top + AchievementMaskRequest.field_m);
             }
           }
           this.renderClient(124);
@@ -332,15 +332,15 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               Vector3.field_a = 0;
               BufferedRandomAccessFile.field_i = param2;
               ValidatedTextWidget.field_ib = param2;
-              wp.field_c = param0;
+              CurrencyPriceGlobals.field_c = param0;
               MenuScreen.field_j = param0;
               AccountChoicePanel.field_M = param4;
-              mc.field_m = 0;
+              AchievementMaskRequest.field_m = 0;
               TextButton.field_L = AudioService.getApplet(13867);
               dupTemp$0 = new PlatformTaskDispatcher(param6, param5, param3, true);
-              mc.field_k = dupTemp$0;
-              fp.field_c = dupTemp$0;
-              var8 = mc.field_k.startThread(1, (Runnable) (this), (byte) -123);
+              AchievementMaskRequest.field_k = dupTemp$0;
+              NoticeKind.field_c = dupTemp$0;
+              var8 = AchievementMaskRequest.field_k.startThread(1, (Runnable) (this), (byte) -123);
               do {
                 if (var8.field_b != 0) {
                   if (param1 != -104) {
@@ -383,19 +383,19 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         Throwable decompiledCaughtException = null;
         Object var6 = null;
         try {
-          var2_long = hm.monotonicMillis(64);
+          var2_long = ClockHelpers.monotonicMillis(64);
           if (param0 != 5176) {
             this.update((java.awt.Graphics) null);
           }
-          var4 = ByteStorage.field_a[wf.field_b];
-          ByteStorage.field_a[wf.field_b] = var2_long;
+          var4 = ByteStorage.field_a[MachineIdHelpers.field_b];
+          ByteStorage.field_a[MachineIdHelpers.field_b] = var2_long;
           if (var4 != 0L &&
             var2_long <= var4) {
           }
-          wf.field_b = 31 & 1 + wf.field_b;
+          MachineIdHelpers.field_b = 31 & 1 + MachineIdHelpers.field_b;
           var6 = this;
           synchronized (var6) {
-            ro.field_d = ModalStack.field_K;
+            NameSuggestionHelpers.field_d = ModalStack.field_K;
           }
           this.updateClient(false);
           return;
@@ -424,7 +424,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             !DialWidget.field_U) {
             MusicPatch.field_s = true;
             if (QuickChatCategoryCache.field_g &&
-              hm.monotonicMillis(64) - um.field_m > 1000L) {
+              ClockHelpers.monotonicMillis(64) - SavedDataRequest.field_m > 1000L) {
               var2 = param0.getClipBounds();
               if (var2 != null) {
                 if (ValidatedTextWidget.field_ib > var2.width) {
@@ -554,9 +554,9 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         try {
           if (this == DropTargetWidget.field_I &&
             !DialWidget.field_U) {
-            PicturePreview.field_m = hm.monotonicMillis(64);
+            PicturePreview.field_m = ClockHelpers.monotonicMillis(64);
             SecondaryNodeHashTable.sleepMillis(5000L, (byte) 23);
-            fp.field_c = null;
+            NoticeKind.field_c = null;
             this.shutdownApplet(false, -238);
             return;
           }
@@ -586,8 +586,8 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             }
             DialWidget.field_U = true;
           }
-          if (bd.field_b != null) {
-            bd.field_b.destroy();
+          if (ConnectionState.field_b != null) {
+            ConnectionState.field_b.destroy();
           }
           try {
             this.shutdownClientServices(-90);
@@ -604,9 +604,9 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               exception = (Exception) (Object) decompiledCaughtException;
             }
           }
-          if (null != mc.field_k) {
+          if (null != AchievementMaskRequest.field_k) {
             try {
-              mc.field_k.shutdown(-1204);
+              AchievementMaskRequest.field_k.shutdown(-1204);
             } catch (java.lang.Exception decompiledCaughtParameter2) {
               decompiledCaughtException = decompiledCaughtParameter2;
               exception = (Exception) (Object) decompiledCaughtException;
@@ -649,14 +649,14 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               decompiledFrameRemainder0 = (var4 != 0);
             }
             if (decompiledFrameRemainder0) {
-              if (bd.field_b == null) {
+              if (ConnectionState.field_b == null) {
                 var2 = DropTargetWidget.field_I;
                 if (var4 != 0) {
-                  var2 = bd.field_b;
+                  var2 = ConnectionState.field_b;
                   var2 = ProxySocketConnector.field_i;
                 }
               } else {
-                var2 = bd.field_b;
+                var2 = ConnectionState.field_b;
                 if (var4 != 0) {
                   var2 = ProxySocketConnector.field_i;
                 }
@@ -668,27 +668,27 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           ((java.awt.Container) (var2)).setLayout((java.awt.LayoutManager) null);
           NameAvailabilityValidator.field_u = (java.awt.Canvas) ((Object) new DelegatingCanvas((java.awt.Component) (this)));
           ((java.awt.Container) (var2)).add((java.awt.Component) ((Object) NameAvailabilityValidator.field_u));
-          NameAvailabilityValidator.field_u.setSize(BufferedRandomAccessFile.field_i, wp.field_c);
+          NameAvailabilityValidator.field_u.setSize(BufferedRandomAccessFile.field_i, CurrencyPriceGlobals.field_c);
           NameAvailabilityValidator.field_u.setVisible(true);
           if (var2 == ProxySocketConnector.field_j) {
             var3 = ProxySocketConnector.field_j.getInsets();
-            NameAvailabilityValidator.field_u.setLocation(Vector3.field_a + var3.left, var3.top + mc.field_m);
+            NameAvailabilityValidator.field_u.setLocation(Vector3.field_a + var3.left, var3.top + AchievementMaskRequest.field_m);
             if (var4 != 0) {
-              NameAvailabilityValidator.field_u.setLocation(Vector3.field_a, mc.field_m);
+              NameAvailabilityValidator.field_u.setLocation(Vector3.field_a, AchievementMaskRequest.field_m);
             }
           } else {
-            NameAvailabilityValidator.field_u.setLocation(Vector3.field_a, mc.field_m);
+            NameAvailabilityValidator.field_u.setLocation(Vector3.field_a, AchievementMaskRequest.field_m);
           }
           NameAvailabilityValidator.field_u.addFocusListener((java.awt.event.FocusListener) (this));
           NameAvailabilityValidator.field_u.requestFocus();
           ModalStack.field_K = true;
-          ro.field_d = true;
+          NameSuggestionHelpers.field_d = true;
           if (param0 != -27106) {
             return;
           }
           MusicPatch.field_s = true;
           FireworkSpark.field_i = false;
-          um.field_m = hm.monotonicMillis(64);
+          SavedDataRequest.field_m = ClockHelpers.monotonicMillis(64);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -705,7 +705,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           return;
         }
         try {
-          PicturePreview.field_m = 4000L + hm.monotonicMillis(64);
+          PicturePreview.field_m = 4000L + ClockHelpers.monotonicMillis(64);
         } catch (RuntimeException runtimeException) {
           throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "tn.stop()");
         }
@@ -727,9 +727,9 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         if (null != ProxySocketConnector.field_j) {
           return null;
         }
-        if (bd.field_b != null &&
-          this != bd.field_b) {
-          return bd.field_b.getCodeBase();
+        if (ConnectionState.field_b != null &&
+          this != ConnectionState.field_b) {
+          return ConnectionState.field_b.getCodeBase();
         }
         return super.getCodeBase();
     }
@@ -773,9 +773,9 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             stackIn_2_0 = null;
             return (String) (stackIn_2_0);
           }
-          if (bd.field_b != null &&
-            this != bd.field_b) {
-            stackIn_8_0 = bd.field_b.getParameter(param0);
+          if (ConnectionState.field_b != null &&
+            this != ConnectionState.field_b) {
+            stackIn_8_0 = ConnectionState.field_b.getParameter(param0);
             return stackIn_8_0;
           }
           stackIn_10_0 = super.getParameter(param0);
@@ -805,9 +805,9 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             stackIn_2_0 = null;
             return (java.applet.AppletContext) (stackIn_2_0);
           }
-          if (bd.field_b != null &&
-            this != bd.field_b) {
-            stackIn_8_0 = bd.field_b.getAppletContext();
+          if (ConnectionState.field_b != null &&
+            this != ConnectionState.field_b) {
+            stackIn_8_0 = ConnectionState.field_b.getAppletContext();
             return stackIn_8_0;
           }
           stackIn_10_0 = super.getAppletContext();
@@ -864,7 +864,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          bd.field_b = param0;
+          ConnectionState.field_b = param0;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

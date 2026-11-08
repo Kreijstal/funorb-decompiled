@@ -60,11 +60,11 @@ class TextButton extends UiComponent {
             param0.blur(2);
             this.field_K = true;
             if (param1 != 27) {
-              TextButton.configureButtonStyles(-64, (sb) null, 111, 79, (sb) null, 120, -16, 109, (sb) null, 39, -126, (BitmapFont) null, 33, -16, (BitmapFont) null, -57, -112, -56, 119, 16);
+              TextButton.configureButtonStyles(-64, (NineSliceFrame) null, 111, 79, (NineSliceFrame) null, 120, -16, 109, (NineSliceFrame) null, 39, -126, (BitmapFont) null, 33, -16, (BitmapFont) null, -57, -112, -56, 119, 16);
             }
             if (null != this.field_n &&
-              this.field_n instanceof cc) {
-              ((cc) (this.field_n)).onFocusChanged((UiComponent) (this), param1 ^ 44, this.field_K);
+              this.field_n instanceof ButtonFocusListener) {
+              ((ButtonFocusListener) (this.field_n)).onFocusChanged((UiComponent) (this), param1 ^ 44, this.field_K);
             }
             return true;
           }
@@ -157,9 +157,9 @@ class TextButton extends UiComponent {
         try {
           super.updatePointer(param0, param1, param2, param3);
           if (this.field_k != 0 &&
-            this.field_k != ef.field_b) {
+            this.field_k != HighscorePacketHandlers.field_b) {
             if (this.containsPoint(78, param2, param1, StatusBar.field_k, ProxyAuthenticationException.field_d) &&
-              ef.field_b == 0) {
+              HighscorePacketHandlers.field_b == 0) {
               this.activate(true, -param1 + StatusBar.field_k, this.field_k, -param2 + ProxyAuthenticationException.field_d);
             }
             this.handlePointerRelease(StatusBar.field_k, param2, param3, 0, param1, ProxyAuthenticationException.field_d);
@@ -290,7 +290,7 @@ class TextButton extends UiComponent {
           var22Lifetime1 = param3[1] - param1[1];
           var23Lifetime1 = -param1[2] + param3[2];
           if (param4 < 3) {
-            TextButton.configureButtonStyles(112, (sb) null, 29, 72, (sb) null, 76, -127, -121, (sb) null, -76, 4, (BitmapFont) null, -119, 13, (BitmapFont) null, 46, -72, 8, -22, -67);
+            TextButton.configureButtonStyles(112, (NineSliceFrame) null, 29, 72, (NineSliceFrame) null, 76, -127, -121, (NineSliceFrame) null, -76, 4, (BitmapFont) null, -119, 13, (BitmapFont) null, 46, -72, 8, -22, -67);
           }
           var9 = var21Lifetime1 * param1[3] + param1[4] * var22Lifetime1 + var23Lifetime1 * param1[5] >> -Bzip2State.field_x + 16;
           var10 = var23Lifetime1 * param1[8] + (param1[7] * var22Lifetime1 + param1[6] * var21Lifetime1) >> 16 - Bzip2State.field_x;
@@ -331,7 +331,7 @@ class TextButton extends UiComponent {
                   }
                 }
                 if (param6) {
-                  ih.field_c[var23Lifetime2] = var27Lifetime1 >> Bzip2State.field_x;
+                  TutorialTickHelpers.field_c[var23Lifetime2] = var27Lifetime1 >> Bzip2State.field_x;
                   MatchingTextValidator.field_w[var23Lifetime2] = var28Lifetime1 >> Bzip2State.field_x;
                   Bzip2State.field_e[var23Lifetime2] = var29Lifetime1;
                 }
@@ -462,7 +462,7 @@ class TextButton extends UiComponent {
         }
     }
 
-    final static void configureButtonStyles(int param0, sb param1, int param2, int param3, sb param4, int param5, int param6, int param7, sb param8, int param9, int param10, BitmapFont param11, int param12, int param13, BitmapFont param14, int param15, int param16, int param17, int param18, int param19) {
+    final static void configureButtonStyles(int param0, NineSliceFrame param1, int param2, int param3, NineSliceFrame param4, int param5, int param6, int param7, NineSliceFrame param8, int param9, int param10, BitmapFont param11, int param12, int param13, BitmapFont param14, int param15, int param16, int param17, int param18, int param19) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -479,10 +479,10 @@ class TextButton extends UiComponent {
         try {
           SingleChildContainer.field_G = param11;
           DualLinkNode.field_o = param14;
-          el.setButtonMetrics(param10, param13, param9, 93, param3);
+          EmailValidationState.setButtonMetrics(param10, param13, param9, 93, param3);
           SecondaryNodeDequeIterator.setLegacyMenuFrameAndPadding(param5, param6, 7, param1);
           ScoreMarkerDemo.setButtonFrames(param2, param4, param0, 300, param12, param8);
-          ug.setLegacyMenuOrigin(param15, param19, -26104);
+          LaggedPacket.setLegacyMenuOrigin(param15, param19, -26104);
           NanoTickClock.setButtonTextColours(param7, param18, -14129, param16);
           if (param17 < 105) {
             field_L = (java.applet.Applet) null;
@@ -540,8 +540,8 @@ class TextButton extends UiComponent {
           if (this.field_K) {
             this.field_K = false;
             if (this.field_n != null &&
-              this.field_n instanceof cc) {
-              ((cc) (this.field_n)).onFocusChanged((UiComponent) (this), param0 ^ 58, this.field_K);
+              this.field_n instanceof ButtonFocusListener) {
+              ((ButtonFocusListener) (this.field_n)).onFocusChanged((UiComponent) (this), param0 ^ 58, this.field_K);
             }
           }
           if (param0 != 2) {
@@ -601,10 +601,10 @@ class TextButton extends UiComponent {
           if (param2 != 7) {
             field_F = 18;
           }
-          var3_int = mi.fixedSine(-4096, param1);
-          var4 = th.fixedCosine(param1, 8191);
-          var5 = mi.fixedSine(-4096, param0);
-          var6 = th.fixedCosine(param0, 8191);
+          var3_int = NotLoggedInScreen.fixedSine(-4096, param1);
+          var4 = TrigonometryHelpers.fixedCosine(param1, 8191);
+          var5 = NotLoggedInScreen.fixedSine(-4096, param0);
+          var6 = TrigonometryHelpers.fixedCosine(param0, 8191);
           var7 = (int)((long)var3_int * (long)var5 >> 16);
           var8 = (int)((long)var3_int * (long)var6 >> 16);
           var9 = (int)((long)var5 * (long)var4 >> 16);
@@ -624,7 +624,7 @@ class TextButton extends UiComponent {
           field_G = null;
           field_L = null;
           if (param0 < 62) {
-            TextButton.configureButtonStyles(8, (sb) null, 42, -55, (sb) null, 28, 88, -93, (sb) null, 77, 108, (BitmapFont) null, 5, -44, (BitmapFont) null, -125, -73, 115, -35, -117);
+            TextButton.configureButtonStyles(8, (NineSliceFrame) null, 42, -55, (NineSliceFrame) null, 28, 88, -93, (NineSliceFrame) null, 77, 108, (BitmapFont) null, 5, -44, (BitmapFont) null, -125, -73, 115, -35, -117);
           }
         } catch (RuntimeException runtimeException) {
           throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "qm.RA(" + param0 + ')');

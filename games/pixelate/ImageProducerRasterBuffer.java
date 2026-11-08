@@ -221,11 +221,11 @@ final class ImageProducerRasterBuffer extends CanvasRasterBuffer implements java
             if (param6 != -28362) {
               field_m = (String) null;
             }
-            if (0 < oo.field_b) {
+            if (0 < AchievementIconGlobals.field_b) {
               AccountChoicePanel.updateCreateGameControls(2, param0, param7, param4);
             }
-            nk.field_e.horizontalAlignment = 1;
-            nk.field_e.field_C = ArchiveIndex.field_l.field_C;
+            ChatPanelHelpers.field_e.horizontalAlignment = 1;
+            ChatPanelHelpers.field_e.field_C = ArchiveIndex.field_l.field_C;
             if (RisingBubble.field_g > 0) {
               AccountNoticeDialog.updateGameSetupPanel(param0, param7, 3, param4);
             }
@@ -240,18 +240,18 @@ final class ImageProducerRasterBuffer extends CanvasRasterBuffer implements java
             } else {
               StripedProgressBar.field_O.field_rb = true;
               Cloud.field_b.field_Ib.field_cb = null;
-              la.layoutLobbyGameRows(70, param0, Cloud.field_b, param8, param3);
+              ScreenChangeHelpers.layoutLobbyGameRows(70, param0, Cloud.field_b, param8, param3);
             }
           } else {
-            TextTableInitializer.field_c = (-640 + ni.field_q) / 2;
+            TextTableInitializer.field_c = (-640 + TextHotspot.field_q) / 2;
             ScorePopup.updateOverlayFadeCounters((byte) 111, param4);
             if (param6 != -28362) {
               field_m = (String) null;
-              if (0 < oo.field_b) {
+              if (0 < AchievementIconGlobals.field_b) {
                 AccountChoicePanel.updateCreateGameControls(2, param0, param7, param4);
               }
-              nk.field_e.horizontalAlignment = 1;
-              nk.field_e.field_C = ArchiveIndex.field_l.field_C;
+              ChatPanelHelpers.field_e.horizontalAlignment = 1;
+              ChatPanelHelpers.field_e.field_C = ArchiveIndex.field_l.field_C;
               if (RisingBubble.field_g > 0) {
                 AccountNoticeDialog.updateGameSetupPanel(param0, param7, 3, param4);
               }
@@ -266,13 +266,13 @@ final class ImageProducerRasterBuffer extends CanvasRasterBuffer implements java
               } else {
                 StripedProgressBar.field_O.field_rb = true;
                 Cloud.field_b.field_Ib.field_cb = null;
-                la.layoutLobbyGameRows(70, param0, Cloud.field_b, param8, param3);
+                ScreenChangeHelpers.layoutLobbyGameRows(70, param0, Cloud.field_b, param8, param3);
               }
             } else {
-              if (0 < oo.field_b) {
+              if (0 < AchievementIconGlobals.field_b) {
                 AccountChoicePanel.updateCreateGameControls(2, param0, param7, param4);
-                nk.field_e.horizontalAlignment = 1;
-                nk.field_e.field_C = ArchiveIndex.field_l.field_C;
+                ChatPanelHelpers.field_e.horizontalAlignment = 1;
+                ChatPanelHelpers.field_e.field_C = ArchiveIndex.field_l.field_C;
                 if (RisingBubble.field_g > 0) {
                   AccountNoticeDialog.updateGameSetupPanel(param0, param7, 3, param4);
                 }
@@ -287,11 +287,11 @@ final class ImageProducerRasterBuffer extends CanvasRasterBuffer implements java
                 } else {
                   StripedProgressBar.field_O.field_rb = true;
                   Cloud.field_b.field_Ib.field_cb = null;
-                  la.layoutLobbyGameRows(70, param0, Cloud.field_b, param8, param3);
+                  ScreenChangeHelpers.layoutLobbyGameRows(70, param0, Cloud.field_b, param8, param3);
                 }
               } else {
-                nk.field_e.horizontalAlignment = 1;
-                nk.field_e.field_C = ArchiveIndex.field_l.field_C;
+                ChatPanelHelpers.field_e.horizontalAlignment = 1;
+                ChatPanelHelpers.field_e.field_C = ArchiveIndex.field_l.field_C;
                 if (RisingBubble.field_g > 0) {
                   AccountNoticeDialog.updateGameSetupPanel(param0, param7, 3, param4);
                   if (Checkbox.field_W > 0) {
@@ -305,7 +305,7 @@ final class ImageProducerRasterBuffer extends CanvasRasterBuffer implements java
                   } else {
                     StripedProgressBar.field_O.field_rb = true;
                     Cloud.field_b.field_Ib.field_cb = null;
-                    la.layoutLobbyGameRows(70, param0, Cloud.field_b, param8, param3);
+                    ScreenChangeHelpers.layoutLobbyGameRows(70, param0, Cloud.field_b, param8, param3);
                   }
                 } else {
                   if (Checkbox.field_W > 0) {
@@ -314,7 +314,7 @@ final class ImageProducerRasterBuffer extends CanvasRasterBuffer implements java
                   if (!EmergentBehaviourBackground.field_o) {
                     StripedProgressBar.field_O.field_rb = true;
                     Cloud.field_b.field_Ib.field_cb = null;
-                    la.layoutLobbyGameRows(70, param0, Cloud.field_b, param8, param3);
+                    ScreenChangeHelpers.layoutLobbyGameRows(70, param0, Cloud.field_b, param8, param3);
                   } else {
                     if (LoginMethod.field_c.field_ec <= LoginMethod.field_c.field_mc) {
                       Cloud.field_b.field_Ib.field_cb = Kite.field_m;
@@ -323,7 +323,7 @@ final class ImageProducerRasterBuffer extends CanvasRasterBuffer implements java
                     } else {
                       StripedProgressBar.field_O.field_rb = true;
                       Cloud.field_b.field_Ib.field_cb = null;
-                      la.layoutLobbyGameRows(70, param0, Cloud.field_b, param8, param3);
+                      ScreenChangeHelpers.layoutLobbyGameRows(70, param0, Cloud.field_b, param8, param3);
                     }
                   }
                 }
@@ -331,7 +331,7 @@ final class ImageProducerRasterBuffer extends CanvasRasterBuffer implements java
             }
           }
         } else {
-          if (ni.field_q == SoftwareRasterizer.field_j) {
+          if (TextHotspot.field_q == SoftwareRasterizer.field_j) {
             if (SoftwareRasterizer.field_d != Matrix3.field_b &&
               ClientException.field_f.field_i == SoftwareRasterizer.field_d &&
               ClientException.field_f.field_a == SoftwareRasterizer.field_j) {
@@ -351,11 +351,11 @@ final class ImageProducerRasterBuffer extends CanvasRasterBuffer implements java
               if (param6 != -28362) {
                 field_m = (String) null;
               }
-              if (0 < oo.field_b) {
+              if (0 < AchievementIconGlobals.field_b) {
                 AccountChoicePanel.updateCreateGameControls(2, param0, param7, param4);
               }
-              nk.field_e.horizontalAlignment = 1;
-              nk.field_e.field_C = ArchiveIndex.field_l.field_C;
+              ChatPanelHelpers.field_e.horizontalAlignment = 1;
+              ChatPanelHelpers.field_e.field_C = ArchiveIndex.field_l.field_C;
               if (RisingBubble.field_g > 0) {
                 AccountNoticeDialog.updateGameSetupPanel(param0, param7, 3, param4);
               }
@@ -370,18 +370,18 @@ final class ImageProducerRasterBuffer extends CanvasRasterBuffer implements java
               } else {
                 StripedProgressBar.field_O.field_rb = true;
                 Cloud.field_b.field_Ib.field_cb = null;
-                la.layoutLobbyGameRows(70, param0, Cloud.field_b, param8, param3);
+                ScreenChangeHelpers.layoutLobbyGameRows(70, param0, Cloud.field_b, param8, param3);
               }
             } else {
-              TextTableInitializer.field_c = (-640 + ni.field_q) / 2;
+              TextTableInitializer.field_c = (-640 + TextHotspot.field_q) / 2;
               ScorePopup.updateOverlayFadeCounters((byte) 111, param4);
               if (param6 != -28362) {
                 field_m = (String) null;
-                if (0 < oo.field_b) {
+                if (0 < AchievementIconGlobals.field_b) {
                   AccountChoicePanel.updateCreateGameControls(2, param0, param7, param4);
                 }
-                nk.field_e.horizontalAlignment = 1;
-                nk.field_e.field_C = ArchiveIndex.field_l.field_C;
+                ChatPanelHelpers.field_e.horizontalAlignment = 1;
+                ChatPanelHelpers.field_e.field_C = ArchiveIndex.field_l.field_C;
                 if (RisingBubble.field_g > 0) {
                   AccountNoticeDialog.updateGameSetupPanel(param0, param7, 3, param4);
                 }
@@ -396,14 +396,14 @@ final class ImageProducerRasterBuffer extends CanvasRasterBuffer implements java
                 } else {
                   StripedProgressBar.field_O.field_rb = true;
                   Cloud.field_b.field_Ib.field_cb = null;
-                  la.layoutLobbyGameRows(70, param0, Cloud.field_b, param8, param3);
+                  ScreenChangeHelpers.layoutLobbyGameRows(70, param0, Cloud.field_b, param8, param3);
                 }
               } else {
-                if (0 < oo.field_b) {
+                if (0 < AchievementIconGlobals.field_b) {
                   AccountChoicePanel.updateCreateGameControls(2, param0, param7, param4);
                 }
-                nk.field_e.horizontalAlignment = 1;
-                nk.field_e.field_C = ArchiveIndex.field_l.field_C;
+                ChatPanelHelpers.field_e.horizontalAlignment = 1;
+                ChatPanelHelpers.field_e.field_C = ArchiveIndex.field_l.field_C;
                 if (RisingBubble.field_g > 0) {
                   AccountNoticeDialog.updateGameSetupPanel(param0, param7, 3, param4);
                   if (Checkbox.field_W > 0) {
@@ -417,7 +417,7 @@ final class ImageProducerRasterBuffer extends CanvasRasterBuffer implements java
                   } else {
                     StripedProgressBar.field_O.field_rb = true;
                     Cloud.field_b.field_Ib.field_cb = null;
-                    la.layoutLobbyGameRows(70, param0, Cloud.field_b, param8, param3);
+                    ScreenChangeHelpers.layoutLobbyGameRows(70, param0, Cloud.field_b, param8, param3);
                   }
                 } else {
                   if (Checkbox.field_W > 0) {
@@ -426,7 +426,7 @@ final class ImageProducerRasterBuffer extends CanvasRasterBuffer implements java
                   if (!EmergentBehaviourBackground.field_o) {
                     StripedProgressBar.field_O.field_rb = true;
                     Cloud.field_b.field_Ib.field_cb = null;
-                    la.layoutLobbyGameRows(70, param0, Cloud.field_b, param8, param3);
+                    ScreenChangeHelpers.layoutLobbyGameRows(70, param0, Cloud.field_b, param8, param3);
                   } else {
                     if (LoginMethod.field_c.field_ec <= LoginMethod.field_c.field_mc) {
                       Cloud.field_b.field_Ib.field_cb = Kite.field_m;
@@ -435,7 +435,7 @@ final class ImageProducerRasterBuffer extends CanvasRasterBuffer implements java
                     } else {
                       StripedProgressBar.field_O.field_rb = true;
                       Cloud.field_b.field_Ib.field_cb = null;
-                      la.layoutLobbyGameRows(70, param0, Cloud.field_b, param8, param3);
+                      ScreenChangeHelpers.layoutLobbyGameRows(70, param0, Cloud.field_b, param8, param3);
                     }
                   }
                 }
@@ -460,11 +460,11 @@ final class ImageProducerRasterBuffer extends CanvasRasterBuffer implements java
               if (param6 != -28362) {
                 field_m = (String) null;
               }
-              if (0 < oo.field_b) {
+              if (0 < AchievementIconGlobals.field_b) {
                 AccountChoicePanel.updateCreateGameControls(2, param0, param7, param4);
               }
-              nk.field_e.horizontalAlignment = 1;
-              nk.field_e.field_C = ArchiveIndex.field_l.field_C;
+              ChatPanelHelpers.field_e.horizontalAlignment = 1;
+              ChatPanelHelpers.field_e.field_C = ArchiveIndex.field_l.field_C;
               if (RisingBubble.field_g > 0) {
                 AccountNoticeDialog.updateGameSetupPanel(param0, param7, 3, param4);
               }
@@ -479,18 +479,18 @@ final class ImageProducerRasterBuffer extends CanvasRasterBuffer implements java
               } else {
                 StripedProgressBar.field_O.field_rb = true;
                 Cloud.field_b.field_Ib.field_cb = null;
-                la.layoutLobbyGameRows(70, param0, Cloud.field_b, param8, param3);
+                ScreenChangeHelpers.layoutLobbyGameRows(70, param0, Cloud.field_b, param8, param3);
               }
             } else {
-              TextTableInitializer.field_c = (-640 + ni.field_q) / 2;
+              TextTableInitializer.field_c = (-640 + TextHotspot.field_q) / 2;
               ScorePopup.updateOverlayFadeCounters((byte) 111, param4);
               if (param6 != -28362) {
                 field_m = (String) null;
-                if (0 < oo.field_b) {
+                if (0 < AchievementIconGlobals.field_b) {
                   AccountChoicePanel.updateCreateGameControls(2, param0, param7, param4);
                 }
-                nk.field_e.horizontalAlignment = 1;
-                nk.field_e.field_C = ArchiveIndex.field_l.field_C;
+                ChatPanelHelpers.field_e.horizontalAlignment = 1;
+                ChatPanelHelpers.field_e.field_C = ArchiveIndex.field_l.field_C;
                 if (RisingBubble.field_g > 0) {
                   AccountNoticeDialog.updateGameSetupPanel(param0, param7, 3, param4);
                 }
@@ -505,13 +505,13 @@ final class ImageProducerRasterBuffer extends CanvasRasterBuffer implements java
                 } else {
                   StripedProgressBar.field_O.field_rb = true;
                   Cloud.field_b.field_Ib.field_cb = null;
-                  la.layoutLobbyGameRows(70, param0, Cloud.field_b, param8, param3);
+                  ScreenChangeHelpers.layoutLobbyGameRows(70, param0, Cloud.field_b, param8, param3);
                 }
               } else {
-                if (0 < oo.field_b) {
+                if (0 < AchievementIconGlobals.field_b) {
                   AccountChoicePanel.updateCreateGameControls(2, param0, param7, param4);
-                  nk.field_e.horizontalAlignment = 1;
-                  nk.field_e.field_C = ArchiveIndex.field_l.field_C;
+                  ChatPanelHelpers.field_e.horizontalAlignment = 1;
+                  ChatPanelHelpers.field_e.field_C = ArchiveIndex.field_l.field_C;
                   if (RisingBubble.field_g > 0) {
                     AccountNoticeDialog.updateGameSetupPanel(param0, param7, 3, param4);
                   }
@@ -526,11 +526,11 @@ final class ImageProducerRasterBuffer extends CanvasRasterBuffer implements java
                   } else {
                     StripedProgressBar.field_O.field_rb = true;
                     Cloud.field_b.field_Ib.field_cb = null;
-                    la.layoutLobbyGameRows(70, param0, Cloud.field_b, param8, param3);
+                    ScreenChangeHelpers.layoutLobbyGameRows(70, param0, Cloud.field_b, param8, param3);
                   }
                 } else {
-                  nk.field_e.horizontalAlignment = 1;
-                  nk.field_e.field_C = ArchiveIndex.field_l.field_C;
+                  ChatPanelHelpers.field_e.horizontalAlignment = 1;
+                  ChatPanelHelpers.field_e.field_C = ArchiveIndex.field_l.field_C;
                   if (RisingBubble.field_g > 0) {
                     AccountNoticeDialog.updateGameSetupPanel(param0, param7, 3, param4);
                     if (Checkbox.field_W > 0) {
@@ -544,7 +544,7 @@ final class ImageProducerRasterBuffer extends CanvasRasterBuffer implements java
                     } else {
                       StripedProgressBar.field_O.field_rb = true;
                       Cloud.field_b.field_Ib.field_cb = null;
-                      la.layoutLobbyGameRows(70, param0, Cloud.field_b, param8, param3);
+                      ScreenChangeHelpers.layoutLobbyGameRows(70, param0, Cloud.field_b, param8, param3);
                     }
                   } else {
                     if (Checkbox.field_W > 0) {
@@ -553,7 +553,7 @@ final class ImageProducerRasterBuffer extends CanvasRasterBuffer implements java
                     if (!EmergentBehaviourBackground.field_o) {
                       StripedProgressBar.field_O.field_rb = true;
                       Cloud.field_b.field_Ib.field_cb = null;
-                      la.layoutLobbyGameRows(70, param0, Cloud.field_b, param8, param3);
+                      ScreenChangeHelpers.layoutLobbyGameRows(70, param0, Cloud.field_b, param8, param3);
                     } else {
                       if (LoginMethod.field_c.field_ec <= LoginMethod.field_c.field_mc) {
                         Cloud.field_b.field_Ib.field_cb = Kite.field_m;
@@ -562,7 +562,7 @@ final class ImageProducerRasterBuffer extends CanvasRasterBuffer implements java
                       } else {
                         StripedProgressBar.field_O.field_rb = true;
                         Cloud.field_b.field_Ib.field_cb = null;
-                        la.layoutLobbyGameRows(70, param0, Cloud.field_b, param8, param3);
+                        ScreenChangeHelpers.layoutLobbyGameRows(70, param0, Cloud.field_b, param8, param3);
                       }
                     }
                   }
@@ -572,7 +572,7 @@ final class ImageProducerRasterBuffer extends CanvasRasterBuffer implements java
           }
         }
         Pixelate.updateLobbyGameList(param3, (byte) 69, param8, param2, param5, param0, param9);
-        la.layoutLobbyGameRows(58, param0, Vector3.field_c, param8, param3);
+        ScreenChangeHelpers.layoutLobbyGameRows(58, param0, Vector3.field_c, param8, param3);
         AchievementsScreen.field_o = AchievementsScreen.field_o + 1;
     }
 

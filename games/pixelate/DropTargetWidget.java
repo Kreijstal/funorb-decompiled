@@ -23,7 +23,7 @@ final class DropTargetWidget extends SingleChildContainer {
         RuntimeException var7_ref = null;
         try {
           super.handlePointerRelease(param0, param1, param2, param3, param4, param5);
-          var8 = qf.field_a;
+          var8 = KeyMapHelpers.field_a;
           var7 = var8;
           if (var8 != null) {
             if (!this.containsPoint(param3 ^ 96, param1, param4, param0, param5)) {
@@ -31,12 +31,12 @@ final class DropTargetWidget extends SingleChildContainer {
             }
             if (this.field_n instanceof WidgetDropListener) {
               ((WidgetDropListener) (this.field_n)).onDropped(116, var8, this);
-              qf.field_a = null;
+              KeyMapHelpers.field_a = null;
               return;
             }
             if (var8.field_n instanceof WidgetDropListener) {
               ((WidgetDropListener) (var8.field_n)).onDropped(param3 ^ -106, var8, this);
-              qf.field_a = null;
+              KeyMapHelpers.field_a = null;
               return;
             }
           }
@@ -82,7 +82,7 @@ final class DropTargetWidget extends SingleChildContainer {
         RuntimeException var3_ref = null;
         var5 = Pixelate.field_H ? 1 : 0;
         try {
-          var3 = lg.normalizeAccountName(11, param1, param2);
+          var3 = LoginCookieHelpers.normalizeAccountName(11, param1, param2);
           if (param0 < 56) {
             stackIn_3_0 = (String) null;
             return stackIn_3_0;

@@ -14,7 +14,7 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
           MainMenuScreen.field_r.close(-108);
         }
         ChatMessage.field_c = new DisplayNameForm();
-        ph.field_l.transitionToContent(ChatMessage.field_c, -125);
+        AchievementBannerEntry.field_l.transitionToContent(ChatMessage.field_c, -125);
         if (param0 == -51) {
           return;
         }
@@ -22,7 +22,7 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
     }
 
     RegistrationRequestDialog(ModalStack param0, AccountRegistrationPanel param1) {
-        super(param0, FireworkBurst.field_d, hm.field_e, false, false);
+        super(param0, FireworkBurst.field_d, ClockHelpers.field_e, false, false);
         try {
           this.field_Ab = param1;
         } catch (RuntimeException runtimeException) {
@@ -39,8 +39,8 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
     }
 
     final boolean tickLayerAndCheckHidden(boolean param0) {
-        id var2 = null;
-        id var2Lifetime1;
+        AccountRequestReply var2 = null;
+        AccountRequestReply var2Lifetime1;
         if (param0) {
           this.completeWithoutServer((byte) -120);
           if (!this.field_N) {
@@ -77,7 +77,7 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
         }
     }
 
-    private final void handleRegistrationResult(id param0, int param1, boolean param2) {
+    private final void handleRegistrationResult(AccountRequestReply param0, int param1, boolean param2) {
         RuntimeException stackIn_33_0 = null;
         StringBuilder stackIn_33_1 = null;
         String stackIn_34_2 = null;
@@ -97,13 +97,13 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
               var4 = param0.field_c;
               if (param0.field_a == 248) {
                 if (!param2) {
-                  fq.markTuhstatbutCookie((byte) -73);
+                  RankingSummaryScreen.markTuhstatbutCookie((byte) -73);
                 }
                 this.field_yb = true;
                 var4 = AudioService.field_b;
               }
             } else {
-              var4 = ek.field_e;
+              var4 = ChatHistoryHelpers.field_e;
               if (this.field_Ab != null) {
                 this.field_Ab.onMoreSuggestionsRequested((byte) 103);
               }
@@ -115,7 +115,7 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
           if (!param0.field_g) {
             if (!this.field_yb) {
               if (param0.field_a != 5) {
-                var5.addActionButton(-1, -1, bo.field_f);
+                var5.addActionButton(-1, -1, ScreenDisplayMode.field_f);
               } else {
                 var5.addActionButton(11, -1, BackgroundScene.field_c);
                 var5.addActionButton(17, -1, FullscreenFocusCanvas.field_e);
@@ -128,7 +128,7 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
                 var5.addActionButton(9, -1, TextTableInitializer.field_d);
               }
             } else {
-              var5.addActionButton(7, -1, gd.field_d);
+              var5.addActionButton(7, -1, MainScreenWidgetGlobals.field_d);
             }
           } else {
             if (param0.field_e) {
@@ -175,10 +175,10 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
 
     public final void onAction(TextButton param0, int param1, int param2, int param3, int param4) {
         if (this.field_yb) {
-          QueuedInput.a(false, -17130, true);
+          QueuedInput.showLoginDialog(false, -17130, true);
           return;
         }
-        th.loginWithRegisteredAccount(param2 ^ 8180);
+        TrigonometryHelpers.loginWithRegisteredAccount(param2 ^ 8180);
         if (param2 != 11) {
           return;
         }
@@ -191,11 +191,11 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
 
     final void completeWithoutServer(byte param0) {
         if (param0 <= -96) {
-          this.handleRegistrationResult(pa.createRequestResult(248, AudioService.field_b, (byte) -121), -127, true);
+          this.handleRegistrationResult(RequestResultFactory.createRequestResult(248, AudioService.field_b, (byte) -121), -127, true);
           return;
         }
         RegistrationRequestDialog.drawDimmedAccountLayers(true, false, -97);
-        this.handleRegistrationResult(pa.createRequestResult(248, AudioService.field_b, (byte) -121), -127, true);
+        this.handleRegistrationResult(RequestResultFactory.createRequestResult(248, AudioService.field_b, (byte) -121), -127, true);
     }
 
     static {

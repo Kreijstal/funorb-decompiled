@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class HighscoresScreen extends MenuScreen {
-    static rh field_p;
+    static HighscoreSubmission field_p;
     static String field_s;
     static ValidationState field_o;
     static char[] field_r;
@@ -40,7 +40,7 @@ final class HighscoresScreen extends MenuScreen {
           var15 = Integer.toString(param3);
           param7.drawCentered(var15, ReflectionCheckRequest.field_o[0], param4, param9, param0);
           if (param2 != 540) {
-            field_p = (rh) null;
+            field_p = (HighscoreSubmission) null;
           }
           if (var12_int < 50) {
             stackIn_11_0 = Integer.toString(var12_int);
@@ -130,7 +130,7 @@ final class HighscoresScreen extends MenuScreen {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
-        sm var5_ref_sm = null;
+        QueuedLobbyRequest var5_ref_sm = null;
         int var5 = 0;
         int var6_int = 0;
         StatsRequest var6 = null;
@@ -147,9 +147,9 @@ final class HighscoresScreen extends MenuScreen {
           var3 = var11.readUnsignedByte(255);
           var4 = var11.readUnsignedByte(255);
           if (var3 == 0) {
-            var5_ref_sm = (sm) (MusicPatchNode.field_J.first(1504642273));
+            var5_ref_sm = (QueuedLobbyRequest) (MusicPatchNode.field_J.first(1504642273));
             if (var5_ref_sm == null) {
-              na.closeGameSocket(true);
+              GameSocketHelpers.closeGameSocket(true);
               return;
             }
             var6_int = -var11.position + BackgroundScene.field_b;
@@ -162,7 +162,7 @@ final class HighscoresScreen extends MenuScreen {
             var8 = 0;
             while (true) {
               if (var8 < var6_int) {
-                var7[var8 >> 2] = var7[var8 >> 2] + (var11.readUnsignedByte(255) << (cm.bitAnd(var8, 3) << 8));
+                var7[var8 >> 2] = var7[var8 >> 2] + (var11.readUnsignedByte(255) << (VolumeControlledVoice.bitAnd(var8, 3) << 8));
                 var8++;
                 if (var9 == 0) {
                   continue;
@@ -178,7 +178,7 @@ final class HighscoresScreen extends MenuScreen {
           }
           if (var3 == 1) {
             var5 = var11.readSignedSmart(-20729);
-            var6 = (StatsRequest) (he.field_b.first(1504642273));
+            var6 = (StatsRequest) (CanvasInputHelpers.field_b.first(1504642273));
             while (true) {
               boolean decompiledFrameRemainder0 = true;
               if (var6 != null) {
@@ -186,7 +186,7 @@ final class HighscoresScreen extends MenuScreen {
                 decompiledFrameRemainder0 = (var9 == 0);
                 if ((decompiledFrameRemainder0) && (stackIn_27_0 != var6.field_p ||
                   var6.field_k != var5)) {
-                  var6 = (StatsRequest) (he.field_b.next(1504642273));
+                  var6 = (StatsRequest) (CanvasInputHelpers.field_b.next(1504642273));
                   continue;
                 }
               }
@@ -200,12 +200,12 @@ final class HighscoresScreen extends MenuScreen {
                 }
                 stackIn_27_0 = 1;
               }
-              na.closeGameSocket(stackIn_27_0 != 0);
+              GameSocketHelpers.closeGameSocket(stackIn_27_0 != 0);
               return;
             }
           }
           CheckboxPainter.reportClientError(1, "LR1: " + Cloud.describePacketHistory(-35), (Throwable) null);
-          na.closeGameSocket(true);
+          GameSocketHelpers.closeGameSocket(true);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -274,27 +274,27 @@ final class HighscoresScreen extends MenuScreen {
           var3 = var17.maxAscent + var17.maxDescent;
           if (WhirlpoolHasher.field_f == null &&
             !ArrayWidgetContainer.isAccountUiActive((byte) 112)) {
-            WhirlpoolHasher.field_f = cn.getRankingQuery(0, 7, 10, -119);
+            WhirlpoolHasher.field_f = AccountServerRequestHelpers.getRankingQuery(0, 7, 10, -119);
           }
           if (ArrayWidgetContainer.isAccountUiActive((byte) 83)) {
             var4 = ScoreMarkerDemo.field_h;
           } else {
             if (WhirlpoolHasher.field_f.field_u) {
               if (WhirlpoolHasher.field_f.field_o != null) {
-                var21 = qj.field_e;
+                var21 = PrivateChatHelpers.field_e;
                 var6 = 1 + var21.maxAscent + var21.maxDescent;
                 var7 = 150 + var6;
                 var8 = 16777215;
                 var9 = 0;
                 var21.drawCentered(MarkerSliderPainter.field_b, ReflectionCheckRequest.field_o[0], var7, var8, var9);
                 var21.drawCentered(TextHotspotWidget.field_N, ReflectionCheckRequest.field_o[1], var7, var8, var9);
-                var21.drawCentered(wa.field_d, ReflectionCheckRequest.field_o[2], var7, var8, var9);
-                var21.drawCentered(ab.field_e, ReflectionCheckRequest.field_o[3], var7, var8, var9);
+                var21.drawCentered(SpriteBuildHelpers.field_d, ReflectionCheckRequest.field_o[2], var7, var8, var9);
+                var21.drawCentered(ResultCaptionGlobals.field_e, ReflectionCheckRequest.field_o[3], var7, var8, var9);
                 var21.drawCentered(IntrusiveNode.field_d, ReflectionCheckRequest.field_o[4], var7, var8, var9);
                 var4 = SpriteState.field_z;
                 var7 = var7 + (var6 + 4);
-                var22 = WhirlpoolHasher.field_f.field_o[d.field_c];
-                var11 = WhirlpoolHasher.field_f.field_r[d.field_c];
+                var22 = WhirlpoolHasher.field_f.field_o[LobbyStartupHelpers.field_c];
+                var11 = WhirlpoolHasher.field_f.field_r[LobbyStartupHelpers.field_c];
                 var12 = 0;
                 var13 = 0;
                 scanLoop1: while (true) {
@@ -303,7 +303,7 @@ final class HighscoresScreen extends MenuScreen {
                       if (null != var22[var13]) {
                         var23 = var22[var13];
                         var8 = 16777215;
-                        if (sm.isLocalPlayerName(var23, param0 - 12)) {
+                        if (QueuedLobbyRequest.isLocalPlayerName(var23, param0 - 12)) {
                           var12 = 1;
                           var8 = 16711680;
                         }
@@ -341,20 +341,20 @@ final class HighscoresScreen extends MenuScreen {
                 return;
               }
               if (WhirlpoolHasher.field_f.field_o != null) {
-                var21 = qj.field_e;
+                var21 = PrivateChatHelpers.field_e;
                 var6 = 1 + var21.maxAscent + var21.maxDescent;
                 var7 = 150 + var6;
                 var8 = 16777215;
                 var9 = 0;
                 var21.drawCentered(MarkerSliderPainter.field_b, ReflectionCheckRequest.field_o[0], var7, var8, var9);
                 var21.drawCentered(TextHotspotWidget.field_N, ReflectionCheckRequest.field_o[1], var7, var8, var9);
-                var21.drawCentered(wa.field_d, ReflectionCheckRequest.field_o[2], var7, var8, var9);
-                var21.drawCentered(ab.field_e, ReflectionCheckRequest.field_o[3], var7, var8, var9);
+                var21.drawCentered(SpriteBuildHelpers.field_d, ReflectionCheckRequest.field_o[2], var7, var8, var9);
+                var21.drawCentered(ResultCaptionGlobals.field_e, ReflectionCheckRequest.field_o[3], var7, var8, var9);
                 var21.drawCentered(IntrusiveNode.field_d, ReflectionCheckRequest.field_o[4], var7, var8, var9);
                 var4 = SpriteState.field_z;
                 var7 = var7 + (var6 + 4);
-                var22 = WhirlpoolHasher.field_f.field_o[d.field_c];
-                var11 = WhirlpoolHasher.field_f.field_r[d.field_c];
+                var22 = WhirlpoolHasher.field_f.field_o[LobbyStartupHelpers.field_c];
+                var11 = WhirlpoolHasher.field_f.field_r[LobbyStartupHelpers.field_c];
                 var12 = 0;
                 var13 = 0;
                 scanLoop2: while (true) {
@@ -387,7 +387,7 @@ final class HighscoresScreen extends MenuScreen {
             } else {
               if (WhirlpoolHasher.field_f.field_u) {
                 if (WhirlpoolHasher.field_f.field_o != null) {
-                  var25 = qj.field_e;
+                  var25 = PrivateChatHelpers.field_e;
                   var5 = var25;
                   var6Lifetime1 = 1 + var25.maxAscent + var25.maxDescent;
                   var7Lifetime1 = 150 + var6Lifetime1;
@@ -395,14 +395,14 @@ final class HighscoresScreen extends MenuScreen {
                   var9Lifetime1 = 0;
                   var25.drawCentered(MarkerSliderPainter.field_b, ReflectionCheckRequest.field_o[0], var7Lifetime1, var8Lifetime1, var9Lifetime1);
                   var25.drawCentered(TextHotspotWidget.field_N, ReflectionCheckRequest.field_o[1], var7Lifetime1, var8Lifetime1, var9Lifetime1);
-                  var25.drawCentered(wa.field_d, ReflectionCheckRequest.field_o[2], var7Lifetime1, var8Lifetime1, var9Lifetime1);
-                  var25.drawCentered(ab.field_e, ReflectionCheckRequest.field_o[3], var7Lifetime1, var8Lifetime1, var9Lifetime1);
+                  var25.drawCentered(SpriteBuildHelpers.field_d, ReflectionCheckRequest.field_o[2], var7Lifetime1, var8Lifetime1, var9Lifetime1);
+                  var25.drawCentered(ResultCaptionGlobals.field_e, ReflectionCheckRequest.field_o[3], var7Lifetime1, var8Lifetime1, var9Lifetime1);
                   var25.drawCentered(IntrusiveNode.field_d, ReflectionCheckRequest.field_o[4], var7Lifetime1, var8Lifetime1, var9Lifetime1);
                   var4Lifetime1 = SpriteState.field_z;
                   var7Lifetime1 = var7Lifetime1 + (var6Lifetime1 + 4);
-                  var26 = WhirlpoolHasher.field_f.field_o[d.field_c];
+                  var26 = WhirlpoolHasher.field_f.field_o[LobbyStartupHelpers.field_c];
                   var10 = var26;
-                  var11Lifetime1 = WhirlpoolHasher.field_f.field_r[d.field_c];
+                  var11Lifetime1 = WhirlpoolHasher.field_f.field_r[LobbyStartupHelpers.field_c];
                   var12Lifetime1 = 0;
                   var13Lifetime1 = 0;
                   scanLoop3: while (true) {
@@ -411,7 +411,7 @@ final class HighscoresScreen extends MenuScreen {
                         if (null != var26[var13Lifetime1]) {
                           var27 = var26[var13Lifetime1];
                           var8Lifetime1 = 16777215;
-                          if (sm.isLocalPlayerName(var27, param0 - 12)) {
+                          if (QueuedLobbyRequest.isLocalPlayerName(var27, param0 - 12)) {
                             var12Lifetime1 = 1;
                             var8Lifetime1 = 16711680;
                           }
@@ -449,7 +449,7 @@ final class HighscoresScreen extends MenuScreen {
                   return;
                 }
                 if (WhirlpoolHasher.field_f.field_o != null) {
-                  var29 = qj.field_e;
+                  var29 = PrivateChatHelpers.field_e;
                   var5 = var29;
                   var6Lifetime1 = 1 + var29.maxAscent + var29.maxDescent;
                   var7Lifetime1 = 150 + var6Lifetime1;
@@ -457,14 +457,14 @@ final class HighscoresScreen extends MenuScreen {
                   var9Lifetime1 = 0;
                   var29.drawCentered(MarkerSliderPainter.field_b, ReflectionCheckRequest.field_o[0], var7Lifetime1, var8Lifetime1, var9Lifetime1);
                   var29.drawCentered(TextHotspotWidget.field_N, ReflectionCheckRequest.field_o[1], var7Lifetime1, var8Lifetime1, var9Lifetime1);
-                  var29.drawCentered(wa.field_d, ReflectionCheckRequest.field_o[2], var7Lifetime1, var8Lifetime1, var9Lifetime1);
-                  var29.drawCentered(ab.field_e, ReflectionCheckRequest.field_o[3], var7Lifetime1, var8Lifetime1, var9Lifetime1);
+                  var29.drawCentered(SpriteBuildHelpers.field_d, ReflectionCheckRequest.field_o[2], var7Lifetime1, var8Lifetime1, var9Lifetime1);
+                  var29.drawCentered(ResultCaptionGlobals.field_e, ReflectionCheckRequest.field_o[3], var7Lifetime1, var8Lifetime1, var9Lifetime1);
                   var29.drawCentered(IntrusiveNode.field_d, ReflectionCheckRequest.field_o[4], var7Lifetime1, var8Lifetime1, var9Lifetime1);
                   var4Lifetime1 = SpriteState.field_z;
                   var7Lifetime1 = var7Lifetime1 + (var6Lifetime1 + 4);
-                  var30 = WhirlpoolHasher.field_f.field_o[d.field_c];
+                  var30 = WhirlpoolHasher.field_f.field_o[LobbyStartupHelpers.field_c];
                   var10 = var30;
-                  var11Lifetime1 = WhirlpoolHasher.field_f.field_r[d.field_c];
+                  var11Lifetime1 = WhirlpoolHasher.field_f.field_r[LobbyStartupHelpers.field_c];
                   var12Lifetime1 = 0;
                   var13Lifetime1 = 0;
                   scanLoop4: while (true) {
@@ -486,27 +486,27 @@ final class HighscoresScreen extends MenuScreen {
             var24.drawParagraph(var4Lifetime1, 50, 150, 540, 200, 0, -1, 1, 1, var3Lifetime1);
             return;
           }
-          WhirlpoolHasher.field_f = cn.getRankingQuery(0, 7, 10, -119);
+          WhirlpoolHasher.field_f = AccountServerRequestHelpers.getRankingQuery(0, 7, 10, -119);
         }
         if (ArrayWidgetContainer.isAccountUiActive((byte) 83)) {
           var4Lifetime2 = ScoreMarkerDemo.field_h;
         } else {
           if (WhirlpoolHasher.field_f.field_u) {
             if (WhirlpoolHasher.field_f.field_o != null) {
-              var37 = qj.field_e;
+              var37 = PrivateChatHelpers.field_e;
               var6Lifetime2 = 1 + var37.maxAscent + var37.maxDescent;
               var7Lifetime2 = 150 + var6Lifetime2;
               var8Lifetime2 = 16777215;
               var9Lifetime2 = 0;
               var37.drawCentered(MarkerSliderPainter.field_b, ReflectionCheckRequest.field_o[0], var7Lifetime2, var8Lifetime2, var9Lifetime2);
               var37.drawCentered(TextHotspotWidget.field_N, ReflectionCheckRequest.field_o[1], var7Lifetime2, var8Lifetime2, var9Lifetime2);
-              var37.drawCentered(wa.field_d, ReflectionCheckRequest.field_o[2], var7Lifetime2, var8Lifetime2, var9Lifetime2);
-              var37.drawCentered(ab.field_e, ReflectionCheckRequest.field_o[3], var7Lifetime2, var8Lifetime2, var9Lifetime2);
+              var37.drawCentered(SpriteBuildHelpers.field_d, ReflectionCheckRequest.field_o[2], var7Lifetime2, var8Lifetime2, var9Lifetime2);
+              var37.drawCentered(ResultCaptionGlobals.field_e, ReflectionCheckRequest.field_o[3], var7Lifetime2, var8Lifetime2, var9Lifetime2);
               var37.drawCentered(IntrusiveNode.field_d, ReflectionCheckRequest.field_o[4], var7Lifetime2, var8Lifetime2, var9Lifetime2);
               var4Lifetime2 = SpriteState.field_z;
               var7Lifetime2 = var7Lifetime2 + (var6Lifetime2 + 4);
-              var38 = WhirlpoolHasher.field_f.field_o[d.field_c];
-              var11Lifetime2 = WhirlpoolHasher.field_f.field_r[d.field_c];
+              var38 = WhirlpoolHasher.field_f.field_o[LobbyStartupHelpers.field_c];
+              var11Lifetime2 = WhirlpoolHasher.field_f.field_r[LobbyStartupHelpers.field_c];
               var12Lifetime2 = 0;
               var13Lifetime2 = 0;
               scanLoop5: while (true) {
@@ -515,7 +515,7 @@ final class HighscoresScreen extends MenuScreen {
                     if (null != var38[var13Lifetime2]) {
                       var39 = var38[var13Lifetime2];
                       var8Lifetime2 = 16777215;
-                      if (sm.isLocalPlayerName(var39, param0 - 12)) {
+                      if (QueuedLobbyRequest.isLocalPlayerName(var39, param0 - 12)) {
                         var12Lifetime2 = 1;
                         var8Lifetime2 = 16711680;
                       }
@@ -553,20 +553,20 @@ final class HighscoresScreen extends MenuScreen {
               return;
             }
             if (WhirlpoolHasher.field_f.field_o != null) {
-              var37 = qj.field_e;
+              var37 = PrivateChatHelpers.field_e;
               var6Lifetime2 = 1 + var37.maxAscent + var37.maxDescent;
               var7Lifetime2 = 150 + var6Lifetime2;
               var8Lifetime2 = 16777215;
               var9Lifetime2 = 0;
               var37.drawCentered(MarkerSliderPainter.field_b, ReflectionCheckRequest.field_o[0], var7Lifetime2, var8Lifetime2, var9Lifetime2);
               var37.drawCentered(TextHotspotWidget.field_N, ReflectionCheckRequest.field_o[1], var7Lifetime2, var8Lifetime2, var9Lifetime2);
-              var37.drawCentered(wa.field_d, ReflectionCheckRequest.field_o[2], var7Lifetime2, var8Lifetime2, var9Lifetime2);
-              var37.drawCentered(ab.field_e, ReflectionCheckRequest.field_o[3], var7Lifetime2, var8Lifetime2, var9Lifetime2);
+              var37.drawCentered(SpriteBuildHelpers.field_d, ReflectionCheckRequest.field_o[2], var7Lifetime2, var8Lifetime2, var9Lifetime2);
+              var37.drawCentered(ResultCaptionGlobals.field_e, ReflectionCheckRequest.field_o[3], var7Lifetime2, var8Lifetime2, var9Lifetime2);
               var37.drawCentered(IntrusiveNode.field_d, ReflectionCheckRequest.field_o[4], var7Lifetime2, var8Lifetime2, var9Lifetime2);
               var4Lifetime2 = SpriteState.field_z;
               var7Lifetime2 = var7Lifetime2 + (var6Lifetime2 + 4);
-              var38 = WhirlpoolHasher.field_f.field_o[d.field_c];
-              var11Lifetime2 = WhirlpoolHasher.field_f.field_r[d.field_c];
+              var38 = WhirlpoolHasher.field_f.field_o[LobbyStartupHelpers.field_c];
+              var11Lifetime2 = WhirlpoolHasher.field_f.field_r[LobbyStartupHelpers.field_c];
               var12Lifetime2 = 0;
               var13Lifetime2 = 0;
               scanLoop6: while (true) {
@@ -601,13 +601,13 @@ final class HighscoresScreen extends MenuScreen {
         int var2 = 0;
         int var2Lifetime1;
         int var2Lifetime2;
-        if (fq.field_o != null) {
+        if (RankingSummaryScreen.field_o != null) {
           var2 = 20 / ((10 - param0) / 32);
           return;
         }
         if (Js5NetworkRequest.field_C[param1] != LoginCredentials.field_e) {
-          fq.field_o = Js5NetworkRequest.field_C[param1];
-          fq.field_o.field_d = RegistrationRequestDialog.field_Cb;
+          RankingSummaryScreen.field_o = Js5NetworkRequest.field_C[param1];
+          RankingSummaryScreen.field_o.field_d = RegistrationRequestDialog.field_Cb;
           NightToRememberBackground.field_o = param1;
           DebouncedValidator.field_d = 0;
           QuickChatPhraseCache.playSkinMusic(false, 2 + param1);
@@ -645,11 +645,11 @@ final class HighscoresScreen extends MenuScreen {
 
     final void onCancel(byte param0) {
         if (param0 < -13) {
-          la.changeScreen(this.field_l, TickClock.field_a, false, -25528);
+          ScreenChangeHelpers.changeScreen(this.field_l, TickClock.field_a, false, -25528);
           return;
         }
         field_s = (String) null;
-        la.changeScreen(this.field_l, TickClock.field_a, false, -25528);
+        ScreenChangeHelpers.changeScreen(this.field_l, TickClock.field_a, false, -25528);
     }
 
     HighscoresScreen(int param0, int param1, int param2, int param3, int param4, int[] param5) {

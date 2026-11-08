@@ -30,12 +30,12 @@ final class SecondaryNodeDequeIterator implements Iterator {
         int var1 = 121 / ((-48 - param0) / 51);
     }
 
-    final static void setLegacyMenuFrameAndPadding(int param0, int param1, int param2, sb param3) {
+    final static void setLegacyMenuFrameAndPadding(int param0, int param1, int param2, NineSliceFrame param3) {
         try {
           MouseWheelHandler.field_d = param1;
           if (param2 != 7) {
-            sb var5 = (sb) null;
-            SecondaryNodeDequeIterator.setLegacyMenuFrameAndPadding(-44, 85, 83, (sb) null);
+            NineSliceFrame var5 = (NineSliceFrame) null;
+            SecondaryNodeDequeIterator.setLegacyMenuFrameAndPadding(-44, 85, 83, (NineSliceFrame) null);
           }
           NodeHashTable.field_c = param3;
           AudioService.field_d = param0;

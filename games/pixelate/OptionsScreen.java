@@ -86,12 +86,12 @@ final class OptionsScreen extends MenuScreen {
         if (param0 == 0) {
           if (this.field_g.isActivated(79)) {
             var4 = param2 ? 1 : 0;
-            la.changeScreen(MidiPcmStream.field_t, 16, var4 != 0, -25528);
+            ScreenChangeHelpers.changeScreen(MidiPcmStream.field_t, 16, var4 != 0, -25528);
           }
         } else {
           if (param0 == 1) {
             if (param2) {
-              if (ef.field_b == 1) {
+              if (HighscorePacketHandlers.field_b == 1) {
                 this.field_u = -8;
                 this.field_r = 3;
               } else {
@@ -119,7 +119,7 @@ final class OptionsScreen extends MenuScreen {
               super.activateRow(param0, (byte) -128, param2);
             } else {
               if (param2) {
-                if (1 != ef.field_b) {
+                if (1 != HighscorePacketHandlers.field_b) {
                   this.field_v = 2;
                 } else {
                   this.field_u = 8;
@@ -159,7 +159,7 @@ final class OptionsScreen extends MenuScreen {
           }
           return 500;
         }
-        return IconTextComponent.field_Jb + hf.field_k;
+        return IconTextComponent.field_Jb + AchievementRecord.field_k;
     }
 
     final void resetPage(int param0) {
@@ -198,7 +198,7 @@ final class OptionsScreen extends MenuScreen {
         if (param0 > -13) {
           this.field_v = 86;
         }
-        la.changeScreen(0, 16, false, -25528);
+        ScreenChangeHelpers.changeScreen(0, 16, false, -25528);
     }
 
     final void handleNavigation(int param0) {
@@ -214,15 +214,15 @@ final class OptionsScreen extends MenuScreen {
           discarded$0 = this.isPuzzleCompleted(true, 60);
         }
         regionExit1: {
-          if (ke.field_a != 98) {
-            if (ke.field_a != 99) {
+          if (KeyEventGlobals.field_a != 98) {
+            if (KeyEventGlobals.field_a != 99) {
               super.handleNavigation(-72);
               break regionExit1;
             }
-            stackIn_12_0 = (98 != ke.field_a) ? 0 : 1;
+            stackIn_12_0 = (98 != KeyEventGlobals.field_a) ? 0 : 1;
             var2 = stackIn_12_0;
           } else {
-            stackIn_6_0 = (98 != ke.field_a) ? 0 : 1;
+            stackIn_6_0 = (98 != KeyEventGlobals.field_a) ? 0 : 1;
             var2 = stackIn_6_0;
           }
           var3 = this.field_g.selectedIndex;
@@ -357,15 +357,15 @@ final class OptionsScreen extends MenuScreen {
           }
           MeshRasterState.useRasterClip();
           Bzip2State.field_x = 11;
-          nk.field_d = new int[260];
+          ChatPanelHelpers.field_d = new int[260];
           for (var1_int = 0; var1_int < 256; var1_int++) {
             var2 = 15.0;
-            nk.field_d[var1_int] = (int)(Math.pow((double)((float)var1_int / 256.0f), var2) * 255.0);
+            ChatPanelHelpers.field_d[var1_int] = (int)(Math.pow((double)((float)var1_int / 256.0f), var2) * 255.0);
           }
           var5 = 256;
           var1_intLifetime1 = var5;
-          while (var5 < nk.field_d.length) {
-            nk.field_d[var5] = 255;
+          while (var5 < ChatPanelHelpers.field_d.length) {
+            ChatPanelHelpers.field_d[var5] = 255;
             var5++;
           }
           return;
@@ -423,7 +423,7 @@ final class OptionsScreen extends MenuScreen {
                 stackIn_17_4 = (!param1) ? 2 : 0;
                 ((PaletteBitmapFont) (Object) stackIn_16_0).drawCentered(stackIn_16_1, stackIn_16_2, stackIn_16_3, stackIn_17_4, -1);
                 if (this.isPuzzleCompleted(true, param2 - 3)) {
-                  stackIn_20_0 = ih.field_a;
+                  stackIn_20_0 = TutorialTickHelpers.field_a;
                   stackIn_21_1 = (!param1) ? 0 : 1;
                   ((Sprite) (Object) stackIn_20_0[stackIn_21_1]).drawTransparent(var8, this.getRowY(118, param2));
                 }

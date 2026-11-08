@@ -434,7 +434,7 @@ final class ResourceArchive {
             var9 = UiTheme.unwrapArchiveBytes(false, false, this.packedGroups[param1]);
           }
           try {
-            var36 = la.decompressContainer(var9, param3);
+            var36 = ScreenChangeHelpers.decompressContainer(var9, param3);
             var27 = var36;
             var23 = var27;
             var43 = var23;

@@ -69,7 +69,7 @@ final class AccountTermsPanel extends UiContainer implements TextHotspotListener
         RuntimeException var6 = null;
         try {
           if (param0 == this.field_K) {
-            th.loginWithRegisteredAccount(8191);
+            TrigonometryHelpers.loginWithRegisteredAccount(8191);
             this.field_O.close(-128);
           }
           if (param2 != 11) {
@@ -487,7 +487,7 @@ final class AccountTermsPanel extends UiContainer implements TextHotspotListener
           this.field_K.field_y = (WidgetPainter) ((Object) new ThreeSliceButtonPainter());
           var7 = AlphaContainer.formatTemplate(IndexedSpriteState.field_e, 102, new String[]{this.getLinkOpenTag((byte) 62), this.getLinkCloseTag(-21)});
           var3 = 20;
-          var4 = new TextWidgetPainter(he.field_d, 0, 0, 0, 0, 16777215, -1, 3, 0, he.field_d.maxAscent, -1, 2147483647, true);
+          var4 = new TextWidgetPainter(CanvasInputHelpers.field_d, 0, 0, 0, 0, 16777215, -1, 3, 0, CanvasInputHelpers.field_d.maxAscent, -1, 2147483647, true);
           this.field_N = new TextHotspotWidget(var7, var4);
           this.field_N.field_l = "";
           this.field_N.setHotspotTooltip(IntrusiveNode.field_g, 0, 0);

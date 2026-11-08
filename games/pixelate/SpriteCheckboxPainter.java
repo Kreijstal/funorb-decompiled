@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class SpriteCheckboxPainter implements WidgetPainter {
-    static id field_f;
+    static AccountRequestReply field_f;
     static long field_c;
     static Sprite field_a;
     static String field_e;
@@ -27,7 +27,7 @@ final class SpriteCheckboxPainter implements WidgetPainter {
     final static void requestOpenLinkNotice(String param0, int param1) {
         try {
           int var2_int = 31 % ((param1 + 78) / 35);
-          oo.field_a = param0;
+          AchievementIconGlobals.field_a = param0;
           QuickChatMenu.setPendingUiResult(12, -2671);
         } catch (RuntimeException runtimeException) {
           throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "jc.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

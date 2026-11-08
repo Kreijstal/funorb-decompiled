@@ -45,11 +45,11 @@ final class ArchiveIndex {
             field_s = 72;
           }
           QuickChatCategoryCache.field_d = null;
-          if (null != nk.field_a) {
-            nk.field_a.clear(117);
-            nk.field_a = null;
+          if (null != ChatPanelHelpers.field_a) {
+            ChatPanelHelpers.field_a.clear(117);
+            ChatPanelHelpers.field_a = null;
           }
-          dg.field_f = null;
+          QuickChatSendHelpers.field_f = null;
           if (null != ClientContextMenu.field_a) {
             ClientContextMenu.field_a.clear(126);
             ClientContextMenu.field_a = null;
@@ -160,7 +160,7 @@ final class ArchiveIndex {
         int var13Lifetime1Lifetime1;
         var16 = Pixelate.field_H ? 1 : 0;
         try {
-          var17 = new PacketBuffer(la.decompressContainer(param1, 0));
+          var17 = new PacketBuffer(ScreenChangeHelpers.decompressContainer(param1, 0));
           var4 = var17.readUnsignedByte(255);
           if (5 <= var4 &&
             var4 <= 7) {
@@ -329,8 +329,8 @@ final class ArchiveIndex {
 
     final static void startPuzzleModeGame(int param0, byte param1) {
         DateOfBirthValidator.field_j = 1;
-        un.field_j = gd.field_e[param0];
-        un.field_j.reset(false);
+        PatchEnvelopeSet.field_j = MainScreenWidgetGlobals.field_e[param0];
+        PatchEnvelopeSet.field_j.reset(false);
         if (param1 < 124) {
           Sprite var3 = (Sprite) null;
           ArchiveIndex.drawHorizontalFadeSprite(-60, (Sprite) null, 85, -59, 28, 57);
@@ -423,7 +423,7 @@ final class ArchiveIndex {
                     } else {
                       var19 = SoftwareRasterizer.field_k[var9];
                       var20 = 16711935 & (var19 & 16711935) * var17 + (16711935 & var18) * var16 >> 8;
-                      SoftwareRasterizer.field_k[var9] = var20 + (cm.bitAnd(var17 * cm.bitAnd(65280, var19) + var16 * cm.bitAnd(65280, var18), 16711874) >> 8);
+                      SoftwareRasterizer.field_k[var9] = var20 + (VolumeControlledVoice.bitAnd(var17 * VolumeControlledVoice.bitAnd(65280, var19) + var16 * VolumeControlledVoice.bitAnd(65280, var18), 16711874) >> 8);
                     }
                   }
                   var9++;

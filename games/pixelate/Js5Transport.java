@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class Js5Transport {
-    static dq field_i;
+    static TransitionPhase field_i;
     DualLinkDeque field_e;
     DualLinkDeque field_f;
     DualLinkDeque field_l;
@@ -99,7 +99,7 @@ abstract class Js5Transport {
         try {
           SoundCache.field_d = param0;
           if (param1 != 5088) {
-            field_i = (dq) null;
+            field_i = (TransitionPhase) null;
           }
           for (var3_int = 0; 16 > var3_int; var3_int++) {
             var4 = Integer.toString(var3_int + 1);
@@ -146,6 +146,6 @@ abstract class Js5Transport {
     }
 
     static {
-        field_i = new dq();
+        field_i = new TransitionPhase();
     }
 }

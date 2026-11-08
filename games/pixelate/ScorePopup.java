@@ -27,8 +27,8 @@ final class ScorePopup {
             EmergentBehaviourBackground.field_o = false;
           }
           if (param1) {
-            if (0 < oo.field_b) {
-              oo.field_b = oo.field_b - 1;
+            if (0 < AchievementIconGlobals.field_b) {
+              AchievementIconGlobals.field_b = AchievementIconGlobals.field_b - 1;
               return;
             }
             if (RisingBubble.field_g > 0) {
@@ -42,15 +42,15 @@ final class ScorePopup {
             return;
           }
           if (LoginMethod.field_c != null) {
-            if (0 < oo.field_b) {
-              oo.field_b = oo.field_b - 1;
+            if (0 < AchievementIconGlobals.field_b) {
+              AchievementIconGlobals.field_b = AchievementIconGlobals.field_b - 1;
               return;
             }
             if (RisingBubble.field_g > 0) {
               RisingBubble.field_g = RisingBubble.field_g - 1;
               return;
             }
-            if (qh.field_c <= Checkbox.field_W) {
+            if (MusicPlaybackHelpers.field_c <= Checkbox.field_W) {
               return;
             }
             if (0 == Checkbox.field_W) {
@@ -60,15 +60,15 @@ final class ScorePopup {
             return;
           }
           if (null != DraggableWidget.field_S) {
-            if (oo.field_b > 0) {
-              oo.field_b = oo.field_b - 1;
+            if (AchievementIconGlobals.field_b > 0) {
+              AchievementIconGlobals.field_b = AchievementIconGlobals.field_b - 1;
               return;
             }
             if (Checkbox.field_W > 0) {
               Checkbox.field_W = Checkbox.field_W - 1;
               return;
             }
-            if (RisingBubble.field_g >= qh.field_c) {
+            if (RisingBubble.field_g >= MusicPlaybackHelpers.field_c) {
               return;
             }
             if (RisingBubble.field_g == 0) {
@@ -86,13 +86,13 @@ final class ScorePopup {
             Checkbox.field_W = Checkbox.field_W - 1;
             return;
           }
-          if (qh.field_c <= oo.field_b) {
+          if (MusicPlaybackHelpers.field_c <= AchievementIconGlobals.field_b) {
             return;
           }
-          if (oo.field_b == 0) {
-            gd.buildMainScreenRoots((byte) -7);
+          if (AchievementIconGlobals.field_b == 0) {
+            MainScreenWidgetGlobals.buildMainScreenRoots((byte) -7);
           }
-          oo.field_b = oo.field_b + 1;
+          AchievementIconGlobals.field_b = AchievementIconGlobals.field_b + 1;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

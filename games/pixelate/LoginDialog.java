@@ -65,7 +65,7 @@ final class LoginDialog extends ContentTransitionDialog {
             return stackIn_22_0;
           }
           if (param0 == 8) {
-            stackIn_25_0 = AlphaContainer.formatTemplate(an.field_d, param2 ^ -17206, new String[]{param1});
+            stackIn_25_0 = AlphaContainer.formatTemplate(CaretLayoutHelpers.field_d, param2 ^ -17206, new String[]{param1});
             return stackIn_25_0;
           }
           if (param0 == 11) {
@@ -82,7 +82,7 @@ final class LoginDialog extends ContentTransitionDialog {
           if (13 != param0) {
             return null;
           }
-          stackIn_38_0 = AlphaContainer.formatTemplate(un.field_c, 118, new String[]{param1});
+          stackIn_38_0 = AlphaContainer.formatTemplate(PatchEnvelopeSet.field_c, 118, new String[]{param1});
           return stackIn_38_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -129,7 +129,7 @@ final class LoginDialog extends ContentTransitionDialog {
             stackIn_2_0 = null;
             return (CoverageBitmapFont) (stackIn_2_0);
           }
-          var2 = new CoverageBitmapFont(param0, IntrusiveNode.field_b, e.field_b, ByteStorage.field_g, ge.field_c, AsyncValidationResult.field_g, wo.field_f);
+          var2 = new CoverageBitmapFont(param0, IntrusiveNode.field_b, ConnectionStateGlobals.field_b, ByteStorage.field_g, RequestState.field_c, AsyncValidationResult.field_g, SocialPanel.field_f);
           LoadingStepTracker.clearSpriteDecodeBuffers(140);
           if (param1 <= 25) {
             var3 = (byte[]) null;
@@ -173,7 +173,7 @@ final class LoginDialog extends ContentTransitionDialog {
             }
             if (param1) {
               var9.setColor(java.awt.Color.black);
-              var9.fillRect(0, 0, BufferedRandomAccessFile.field_i, wp.field_c);
+              var9.fillRect(0, 0, BufferedRandomAccessFile.field_i, CurrencyPriceGlobals.field_c);
             }
             if (param2 == null) {
               param2 = new java.awt.Color(140, 17, 17);
@@ -195,12 +195,12 @@ final class LoginDialog extends ContentTransitionDialog {
               var10.setFont(NameSuggestionsPanel.field_L);
               var10.setColor(java.awt.Color.white);
               var10.drawString(param4, (-(6 * param4.length()) + 304) / 2, 22);
-              var9.drawImage(ArrayWidgetContainer.field_K, BufferedRandomAccessFile.field_i / 2 - 152, wp.field_c / 2 - 18, (java.awt.image.ImageObserver) null);
+              var9.drawImage(ArrayWidgetContainer.field_K, BufferedRandomAccessFile.field_i / 2 - 152, CurrencyPriceGlobals.field_c / 2 - 18, (java.awt.image.ImageObserver) null);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var6 = (Exception) (Object) decompiledCaughtException;
               var7 = BufferedRandomAccessFile.field_i / 2 - 152;
-              var8 = -18 + wp.field_c / 2;
+              var8 = -18 + CurrencyPriceGlobals.field_c / 2;
               var9.setColor(param2);
               var9.drawRect(var7, var8, 303, 33);
               var9.fillRect(var7 + 2, var8 + 2, 3 * param3, 30);
@@ -216,7 +216,7 @@ final class LoginDialog extends ContentTransitionDialog {
             }
             var9.setFont(NameSuggestionsPanel.field_L);
             var9.setColor(java.awt.Color.white);
-            var9.drawString(UiTheme.field_h, BufferedRandomAccessFile.field_i / 2 - UiTheme.field_h.length() * 6 / 2, -26 + wp.field_c / 2);
+            var9.drawString(UiTheme.field_h, BufferedRandomAccessFile.field_i / 2 - UiTheme.field_h.length() * 6 / 2, -26 + CurrencyPriceGlobals.field_c / 2);
             return;
           } catch (java.lang.Exception decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;

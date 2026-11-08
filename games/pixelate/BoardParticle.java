@@ -53,11 +53,11 @@ final class BoardParticle extends IntrusiveNode {
         }
         Sprite[] var7 = new Sprite[9];
         Sprite[] var4 = var7;
-        var7[0] = cl.createSolidSprite(param0, param1, (byte) -87);
+        var7[0] = Cp1252EncodingHelpers.createSolidSprite(param0, param1, (byte) -87);
         for (var5 = 1; var5 < 9; var5++) {
           var7[var5] = var7[0];
         }
-        var4[4] = cl.createSolidSprite(64, param3, (byte) -53);
+        var4[4] = Cp1252EncodingHelpers.createSolidSprite(64, param3, (byte) -53);
         return var4;
     }
 

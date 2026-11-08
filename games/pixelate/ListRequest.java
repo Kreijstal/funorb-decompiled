@@ -31,7 +31,7 @@ final class ListRequest extends IntrusiveNode {
             try {
               var2 = new java.net.URL(param0.getCodeBase(), "subscribe.ws");
               var3 = 83 % ((param1 + 11) / 38);
-              param0.getAppletContext().showDocument(lg.withSessionParameters(false, param0, var2), "_top");
+              param0.getAppletContext().showDocument(LoginCookieHelpers.withSessionParameters(false, param0, var2), "_top");
               return;
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
@@ -66,18 +66,18 @@ final class ListRequest extends IntrusiveNode {
           MainMenuScreen.field_r.close(param0 ^ 15);
         }
         String var1 = Puzzle.getLoginNameOrDefault(0);
-        nf.field_b = new LoginForm(var1, (String) null, true, false, false);
+        LoginFormGlobals.field_b = new LoginForm(var1, (String) null, true, false, false);
         if (param0 == -102) {
-          wa.field_c.showPanel(param0 - 6081, ph.field_l);
-          ph.field_l.transitionToContent(nf.field_b, param0 ^ 27);
-          ph.field_l.finishAnimations(false);
+          SpriteBuildHelpers.field_c.showPanel(param0 - 6081, AchievementBannerEntry.field_l);
+          AchievementBannerEntry.field_l.transitionToContent(LoginFormGlobals.field_b, param0 ^ 27);
+          AchievementBannerEntry.field_l.finishAnimations(false);
           return;
         }
         java.applet.Applet var2 = (java.applet.Applet) null;
         ListRequest.openSubscribePage((java.applet.Applet) null, -43);
-        wa.field_c.showPanel(param0 - 6081, ph.field_l);
-        ph.field_l.transitionToContent(nf.field_b, param0 ^ 27);
-        ph.field_l.finishAnimations(false);
+        SpriteBuildHelpers.field_c.showPanel(param0 - 6081, AchievementBannerEntry.field_l);
+        AchievementBannerEntry.field_l.transitionToContent(LoginFormGlobals.field_b, param0 ^ 27);
+        AchievementBannerEntry.field_l.finishAnimations(false);
     }
 
     static {

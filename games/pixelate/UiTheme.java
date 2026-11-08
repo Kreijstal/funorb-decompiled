@@ -99,13 +99,13 @@ final class UiTheme {
           if (param3 == ~param2) {
             param2 = 0;
           }
-          ce.field_d = param2;
+          ChatChannelGlobals.field_d = param2;
           CheckboxPainter.field_k = param0;
           var7 = (CharSequence) ((Object) param0);
-          fp.field_d = dh.normalizeDisplayName(var7, (byte) 26);
-          fp.field_e = param1;
+          NoticeKind.field_d = DisplayNameHelpers.normalizeDisplayName(var7, (byte) 26);
+          NoticeKind.field_e = param1;
           var6 = ThreeSliceButtonPainter.buildQuickChatResponseMenu(49, AccountMessagePanel.field_L, param4, RankingTableRequest.field_t, AccountNamePrompt.field_Ib);
-          mh.openQuickChatMenu(var6, (byte) 127);
+          QuickChatOpenHelpers.openQuickChatMenu(var6, (byte) 127);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

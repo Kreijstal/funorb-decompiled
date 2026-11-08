@@ -125,7 +125,7 @@ final class StripedProgressBar extends UiComponent {
         if (65536 <= this.field_Q) {
           return;
         }
-        hp.pushClipRegion(var6 + (this.field_E * this.field_Q >> 16), this.field_C + var7, var6 + this.field_E, (byte) -126, var7);
+        HelpPopup.pushClipRegion(var6 + (this.field_E * this.field_Q >> 16), this.field_C + var7, var6 + this.field_E, (byte) -126, var7);
         this.drawStripedBar(this.field_P[1], 1177347297, var6, var7);
         LinkButtonPainter.popRasterState((byte) 92);
     }
@@ -271,7 +271,7 @@ final class StripedProgressBar extends UiComponent {
           if (param1 != 1177347297) {
             this.field_M = -54;
           }
-          hp.pushClipRegion(this.rightCapMask.field_F + param2, this.field_C + param3, var5_int - this.rightCapMask.field_F, (byte) -112, param3);
+          HelpPopup.pushClipRegion(this.rightCapMask.field_F + param2, this.field_C + param3, var5_int - this.rightCapMask.field_F, (byte) -112, param3);
           for (var6 = param2 - this.stripeOffset; var5_int > var6; var6 = var6 + param0.field_F) {
             param0.drawTransparent(var6, param3);
           }

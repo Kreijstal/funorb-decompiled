@@ -5,7 +5,7 @@ final class LinkButtonPainter implements WidgetPainter {
     static boolean field_d;
     static volatile int field_i;
     static int[] field_a;
-    static fp field_c;
+    static NoticeKind field_c;
     private int horizontalAlignment;
     private int verticalAlignment;
     static int field_e;
@@ -24,7 +24,7 @@ final class LinkButtonPainter implements WidgetPainter {
           Throwable decompiledCaughtException = null;
           try {
             if (PlatformTaskDispatcher.field_p.startsWith("win") &&
-              la.openUrlWithShell(param1, -31451)) {
+              ScreenChangeHelpers.openUrlWithShell(param1, -31451)) {
               return;
             }
             if (param2 > -31) {
@@ -97,7 +97,7 @@ final class LinkButtonPainter implements WidgetPainter {
     public LinkButtonPainter() {
         this.horizontalAlignment = 1;
         this.verticalAlignment = 1;
-        this.font = he.field_d;
+        this.font = CanvasInputHelpers.field_d;
     }
 
     LinkButtonPainter(BitmapFont param0, int param1, int param2) {
@@ -174,7 +174,7 @@ final class LinkButtonPainter implements WidgetPainter {
 
     static {
         field_i = 0;
-        field_c = new fp();
+        field_c = new NoticeKind();
         field_h = 256;
     }
 }

@@ -21,22 +21,22 @@ final class TutorialPage {
         var2 = 4 + this.field_e + 8;
         if (!param0) {
           if (null != this.field_a) {
-            DelegatingCanvas.field_d.drawCentered(this.field_a, this.field_f + 125, var2 + pe.field_c, 16776960, 0);
-            var2 = var2 + (8 + pe.field_c);
+            DelegatingCanvas.field_d.drawCentered(this.field_a, this.field_f + 125, var2 + PlayerActionHelpers.field_c, 16776960, 0);
+            var2 = var2 + (8 + PlayerActionHelpers.field_c);
           }
           for (var3 = 0; var3 < this.field_b.length; var3++) {
-            var2 = var2 + pe.field_c * DelegatingCanvas.field_d.drawParagraph(this.field_b[var3], 8 + this.field_f, var2, 234, this.field_c, 16777215, 0, 0, 0, pe.field_c);
+            var2 = var2 + PlayerActionHelpers.field_c * DelegatingCanvas.field_d.drawParagraph(this.field_b[var3], 8 + this.field_f, var2, 234, this.field_c, 16777215, 0, 0, 0, PlayerActionHelpers.field_c);
             var2 += 8;
           }
           return;
         }
         TutorialPage.releaseStatics(1);
         if (null != this.field_a) {
-          DelegatingCanvas.field_d.drawCentered(this.field_a, this.field_f + 125, var2 + pe.field_c, 16776960, 0);
-          var2 = var2 + (8 + pe.field_c);
+          DelegatingCanvas.field_d.drawCentered(this.field_a, this.field_f + 125, var2 + PlayerActionHelpers.field_c, 16776960, 0);
+          var2 = var2 + (8 + PlayerActionHelpers.field_c);
         }
         for (var3Lifetime1 = 0; var3Lifetime1 < this.field_b.length; var3Lifetime1++) {
-          var2 = var2 + pe.field_c * DelegatingCanvas.field_d.drawParagraph(this.field_b[var3Lifetime1], 8 + this.field_f, var2, 234, this.field_c, 16777215, 0, 0, 0, pe.field_c);
+          var2 = var2 + PlayerActionHelpers.field_c * DelegatingCanvas.field_d.drawParagraph(this.field_b[var3Lifetime1], 8 + this.field_f, var2, 234, this.field_c, 16777215, 0, 0, 0, PlayerActionHelpers.field_c);
           var2 += 8;
         }
     }
@@ -60,7 +60,7 @@ final class TutorialPage {
             TutorialPage.getUiTheme(25);
           }
           var5 = param2.getFileId((byte) -105, param1, var4_int);
-          stackIn_3_0 = dk.loadSprite(var5, param2, var4_int, -1);
+          stackIn_3_0 = NineSliceFrameHelpers.loadSprite(var5, param2, var4_int, -1);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -103,7 +103,7 @@ final class TutorialPage {
           TutorialPage.releaseStatics(-128);
           if (null == JaggrabDownloader.field_c) {
             JaggrabDownloader.field_c = new UiTheme();
-            JaggrabDownloader.field_c.initializePainters(4, he.field_d);
+            JaggrabDownloader.field_c.initializePainters(4, CanvasInputHelpers.field_d);
             JaggrabDownloader.field_c.field_p = 5;
             JaggrabDownloader.field_c.field_d = 7697781;
             JaggrabDownloader.field_c.field_q = 14;
@@ -111,13 +111,13 @@ final class TutorialPage {
             JaggrabDownloader.field_c.field_o = 0;
             JaggrabDownloader.field_c.field_g = 4;
             JaggrabDownloader.field_c.field_n = 6;
-            JaggrabDownloader.field_c.field_m = ep.field_b;
+            JaggrabDownloader.field_c.field_m = PolygonClipHelpers.field_b;
           }
           return JaggrabDownloader.field_c;
         }
         if (null == JaggrabDownloader.field_c) {
           JaggrabDownloader.field_c = new UiTheme();
-          JaggrabDownloader.field_c.initializePainters(4, he.field_d);
+          JaggrabDownloader.field_c.initializePainters(4, CanvasInputHelpers.field_d);
           JaggrabDownloader.field_c.field_p = 5;
           JaggrabDownloader.field_c.field_d = 7697781;
           JaggrabDownloader.field_c.field_q = 14;
@@ -125,7 +125,7 @@ final class TutorialPage {
           JaggrabDownloader.field_c.field_o = 0;
           JaggrabDownloader.field_c.field_g = 4;
           JaggrabDownloader.field_c.field_n = 6;
-          JaggrabDownloader.field_c.field_m = ep.field_b;
+          JaggrabDownloader.field_c.field_m = PolygonClipHelpers.field_b;
         }
         return JaggrabDownloader.field_c;
     }
@@ -144,10 +144,10 @@ final class TutorialPage {
           this.field_c = 16;
           this.field_b = param1;
           if (null != this.field_a) {
-            this.field_c = this.field_c + (pe.field_c + 8);
+            this.field_c = this.field_c + (PlayerActionHelpers.field_c + 8);
           }
           for (var4_int = 0; this.field_b.length > var4_int; var4_int++) {
-            this.field_c = this.field_c + pe.field_c * DelegatingCanvas.field_d.wrappedLineCount(this.field_b[var4_int], 234);
+            this.field_c = this.field_c + PlayerActionHelpers.field_c * DelegatingCanvas.field_d.wrappedLineCount(this.field_b[var4_int], 234);
             this.field_c = this.field_c + 8;
           }
           this.field_e = 20;

@@ -72,8 +72,8 @@ final class ClientContextMenu {
             var6 = ImageProducerRasterBuffer.isFriend(-640, this.field_h) ? 1 : 0;
             if (var5 == null &&
               var6 == 0) {
-              this.field_b.addAction(AlphaContainer.formatTemplate(ji.field_d, 52, new String[]{var7}), (byte) -106, 4);
-              this.field_b.addAction(AlphaContainer.formatTemplate(ff.field_e, 18, new String[]{var7}), (byte) -53, 6);
+              this.field_b.addAction(AlphaContainer.formatTemplate(FriendCaptionGlobals.field_d, 52, new String[]{var7}), (byte) -106, 4);
+              this.field_b.addAction(AlphaContainer.formatTemplate(SpriteLoadHelpers.field_e, 18, new String[]{var7}), (byte) -53, 6);
               if (param1 != null &&
                 param0 != 2 &&
                 !SoundVoice.field_q) {
@@ -85,7 +85,7 @@ final class ClientContextMenu {
               if (!TimerBar.isPrivateChatTarget(57, this.field_h) &&
                 !SoundVoice.field_q) {
                 if (!IsaacRandom.field_g) {
-                  this.field_b.addAction(AlphaContainer.formatTemplate(nf.field_e, 105, new String[]{var7}), (byte) -119, 8);
+                  this.field_b.addAction(AlphaContainer.formatTemplate(LoginFormGlobals.field_e, 105, new String[]{var7}), (byte) -119, 8);
                 }
                 this.field_b.addAction(AlphaContainer.formatTemplate(TextTableInitializer.field_f, 83, new String[]{var7}), (byte) -33, 18);
                 if (param1 != null) {
@@ -93,7 +93,7 @@ final class ClientContextMenu {
                   this.field_b.addAction(AlphaContainer.formatTemplate(NodeHashTable.field_d, 22, new String[]{var7}), (byte) -95, 19);
                 }
               }
-              this.field_b.addAction(AlphaContainer.formatTemplate(ni.field_p, 18, new String[]{var7}), (byte) -33, 5);
+              this.field_b.addAction(AlphaContainer.formatTemplate(TextHotspot.field_p, 18, new String[]{var7}), (byte) -33, 5);
             }
             if (var6 != 0) {
               this.field_b.addAction(AlphaContainer.formatTemplate(DelegatingCanvas.field_a, param2 + 72, new String[]{var7}), (byte) -77, 7);
@@ -116,10 +116,10 @@ final class ClientContextMenu {
     }
 
     final static void refreshOpenLegacyMenu(byte param0) {
-        if (!hf.isLegacyMenuOpen((byte) 100)) {
+        if (!AchievementRecord.isLegacyMenuOpen((byte) 100)) {
           return;
         }
-        bq.buildLegacyMenu(false, (byte) -110, 4);
+        LegacyMenuBuilder.buildLegacyMenu(false, (byte) -110, 4);
         if (param0 != -53) {
           field_d = (PcmStreamMixer) null;
         }
@@ -144,7 +144,7 @@ final class ClientContextMenu {
           return true;
         }
         if (param0 == 1) {
-          pe.sendPlayerAction(7, param1, this.field_l);
+          PlayerActionHelpers.sendPlayerAction(7, param1, this.field_l);
           if (param2 == 7490) {
             return true;
           }
@@ -160,7 +160,7 @@ final class ClientContextMenu {
           return true;
         }
         if (param0 == 3) {
-          qg.sendDeclineGameRequest(this.field_m, param1, false);
+          GameRequestHelpers.sendDeclineGameRequest(this.field_m, param1, false);
           if (param2 == 7490) {
             return true;
           }
@@ -168,7 +168,7 @@ final class ClientContextMenu {
           return true;
         }
         if (param0 == 10) {
-          qj.sendLeaveGameRequest(false, this.field_m, param1);
+          PrivateChatHelpers.sendLeaveGameRequest(false, this.field_m, param1);
           if (param2 == 7490) {
             return true;
           }
@@ -256,7 +256,7 @@ final class ClientContextMenu {
         var5 = this.getTargetDisplayName((byte) 27);
         if (var4 != null) {
           if (!LoginMethod.field_c.field_dc) {
-            this.field_b.addAction(AlphaContainer.formatTemplate(vf.field_b, 123, new String[]{var5}), (byte) -112, 1);
+            this.field_b.addAction(AlphaContainer.formatTemplate(PageReloadHelpers.field_b, 123, new String[]{var5}), (byte) -112, 1);
             if (param1 == -98) {
               return;
             }
@@ -270,7 +270,7 @@ final class ClientContextMenu {
             discarded$1 = this.handleGameMembershipAction(48, 58, -125);
             return;
           }
-          this.field_b.addAction(AlphaContainer.formatTemplate(vf.field_b, 123, new String[]{var5}), (byte) -112, 1);
+          this.field_b.addAction(AlphaContainer.formatTemplate(PageReloadHelpers.field_b, 123, new String[]{var5}), (byte) -112, 1);
           if (param1 == -98) {
             return;
           }
@@ -358,7 +358,7 @@ final class ClientContextMenu {
         String var8;
         var4 = null;
         if (param2 == 4) {
-          var5 = jf.requestAddFriend(this.field_h, param0, (byte) 79);
+          var5 = IncomingPacketHelpers.requestAddFriend(this.field_h, param0, (byte) 79);
           if (var5 != null) {
             MidiPcmStream.appendChatMessage(0, (String) null, this.field_h, (byte) -50, 2, var5);
           }
@@ -367,7 +367,7 @@ final class ClientContextMenu {
           return true;
         }
         if (param2 == 5) {
-          var6 = ff.requestRemoveFriend(param0, this.field_h, (byte) -106);
+          var6 = SpriteLoadHelpers.requestRemoveFriend(param0, this.field_h, (byte) -106);
           if (var6 != null) {
             MidiPcmStream.appendChatMessage(0, (String) null, this.field_h, (byte) -50, 2, var6);
           }
@@ -387,7 +387,7 @@ final class ClientContextMenu {
         if (7 != param2) {
           return false;
         }
-        var8 = aq.requestRemoveIgnore(this.field_h, param0, this.field_i, -20867);
+        var8 = SkinSelectionHelpers.requestRemoveIgnore(this.field_h, param0, this.field_i, -20867);
         if (var8 == null) {
           if (param1 < -123) {
           }
@@ -423,7 +423,7 @@ final class ClientContextMenu {
           this.field_k = param1.field_j;
           if (param1.field_j == 0) {
             if (LoginMethod.field_e == 0) {
-              this.field_b.addAction(gd.field_j, (byte) -31, 12);
+              this.field_b.addAction(MainScreenWidgetGlobals.field_j, (byte) -31, 12);
             }
             this.field_b.addAction(BufferedRandomAccessFile.field_d, (byte) -127, 13);
           }
@@ -434,10 +434,10 @@ final class ClientContextMenu {
             this.field_b.addAction(NameAvailabilityValidator.field_n, (byte) -106, 13);
           }
           if (2 == param1.field_j) {
-            if (0 == ib.field_e) {
+            if (0 == GridSize.field_e) {
               this.field_b.addAction(ByteStorage.field_d, (byte) -78, 12);
             }
-            this.field_b.addAction(sf.field_a, (byte) -62, 13);
+            this.field_b.addAction(FrameTimingHelpers.field_a, (byte) -62, 13);
           }
         } catch (RuntimeException runtimeException) {
           throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "wi.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -466,7 +466,7 @@ final class ClientContextMenu {
           Match.openPrivateChatTo((byte) 85, this.field_h, this.field_l);
         } else {
           if (param0 == 18) {
-            qj.openPrivateChat(this.field_h, this.field_l, (byte) 8);
+            PrivateChatHelpers.openPrivateChat(this.field_h, this.field_l, (byte) 8);
           } else {
             if (param0 == 11) {
               Js5ArchiveManager.setChatFilterMode(0, -26931, this.field_k, param2);
@@ -503,7 +503,7 @@ final class ClientContextMenu {
 
     private final boolean handleReportAbuseAction(int param0, boolean param1, int param2) {
         if (param0 == 17) {
-          AccountTermsPanel.field_M = new ReportAbuseDialog(this.field_o.field_tb, this.field_o.screenY, this.field_o.field_K, this.field_o.height, param2, cm.field_o, ScorePopup.field_i, Vector3.field_f, TextFieldValidator.field_h, um.field_q, dn.field_c, this.field_h, this.field_l);
+          AccountTermsPanel.field_M = new ReportAbuseDialog(this.field_o.field_tb, this.field_o.screenY, this.field_o.field_K, this.field_o.height, param2, VolumeControlledVoice.field_o, ScorePopup.field_i, Vector3.field_f, TextFieldValidator.field_h, SavedDataRequest.field_q, DefaultQuickChatPhraseListener.field_c, this.field_h, this.field_l);
           return true;
         }
         if (!param1) {
@@ -523,14 +523,14 @@ final class ClientContextMenu {
         if (LoginMethod.field_c != null) {
           return;
         }
-        var3 = vm.findLobbyGame(this.field_m, (byte) -107);
+        var3 = LobbyGameLookupHelpers.findLobbyGame(this.field_m, (byte) -107);
         if (var3 == null) {
           return;
         }
         var4 = var3.field_pc;
         if (var3.field_cc) {
-          this.field_b.addAction(AlphaContainer.formatTemplate(fp.field_b, 97, new String[]{var4}), (byte) -105, 2);
-          this.field_b.addAction(AlphaContainer.formatTemplate(oi.field_a, 52, new String[]{var4}), (byte) -118, 3);
+          this.field_b.addAction(AlphaContainer.formatTemplate(NoticeKind.field_b, 97, new String[]{var4}), (byte) -105, 2);
+          this.field_b.addAction(AlphaContainer.formatTemplate(RegistrationHelpers.field_a, 52, new String[]{var4}), (byte) -118, 3);
           return;
         }
         if (var3.field_hc) {

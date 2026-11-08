@@ -16,21 +16,21 @@ final class DirectByteStorage extends ByteStorage {
     final static boolean pollKeyEventCopy(byte param0) {
         Object var1 = null;
         Throwable var2 = null;
-        hf var3 = null;
+        AchievementRecord var3 = null;
         boolean stackIn_8_0 = false;
         Throwable decompiledCaughtException = null;
-        var1 = mc.field_r;
+        var1 = AchievementMaskRequest.field_r;
         synchronized (var1) {
           if (param0 < 105) {
-            var3 = (hf) null;
-            DirectByteStorage.queueProgressRecord(42, (hf) null, -69);
+            var3 = (AchievementRecord) null;
+            DirectByteStorage.queueProgressRecord(42, (AchievementRecord) null, -69);
           }
-          if (SoundVoice.field_p == qn.field_p) {
+          if (SoundVoice.field_p == PatchNoteUsage.field_p) {
             return false;
           }
-          ke.field_a = ArchiveRequest.field_z[qn.field_p];
-          DualLinkDeque.field_f = ResourceArchive.field_d[qn.field_p];
-          qn.field_p = 1 + qn.field_p & 127;
+          KeyEventGlobals.field_a = ArchiveRequest.field_z[PatchNoteUsage.field_p];
+          DualLinkDeque.field_f = ResourceArchive.field_d[PatchNoteUsage.field_p];
+          PatchNoteUsage.field_p = 1 + PatchNoteUsage.field_p & 127;
           stackIn_8_0 = true;
         }
         return stackIn_8_0;
@@ -63,11 +63,11 @@ final class DirectByteStorage extends ByteStorage {
         field_n = null;
     }
 
-    final static void queueProgressRecord(int param0, hf param1, int param2) {
+    final static void queueProgressRecord(int param0, AchievementRecord param1, int param2) {
         try {
           int var3_int = 113 / ((59 - param0) / 39);
-          dh.field_a.addLast(22125, param1);
-          id.writeProgressRecord((byte) -109, param1, param2);
+          DisplayNameHelpers.field_a.addLast(22125, param1);
+          AccountRequestReply.writeProgressRecord((byte) -109, param1, param2);
         } catch (RuntimeException runtimeException) {
           throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "bh.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -96,21 +96,21 @@ final class DirectByteStorage extends ByteStorage {
     final static boolean pollKeyEvent(int param0) {
         Object var1 = null;
         Throwable var2 = null;
-        hf var3 = null;
+        AchievementRecord var3 = null;
         boolean stackIn_8_0 = false;
         Throwable decompiledCaughtException = null;
-        var1 = mc.field_r;
+        var1 = AchievementMaskRequest.field_r;
         synchronized (var1) {
           if (param0 < 105) {
-            var3 = (hf) null;
-            DirectByteStorage.queueProgressRecord(42, (hf) null, -69);
+            var3 = (AchievementRecord) null;
+            DirectByteStorage.queueProgressRecord(42, (AchievementRecord) null, -69);
           }
-          if (SoundVoice.field_p == qn.field_p) {
+          if (SoundVoice.field_p == PatchNoteUsage.field_p) {
             return false;
           }
-          ke.field_a = ArchiveRequest.field_z[qn.field_p];
-          DualLinkDeque.field_f = ResourceArchive.field_d[qn.field_p];
-          qn.field_p = 1 + qn.field_p & 127;
+          KeyEventGlobals.field_a = ArchiveRequest.field_z[PatchNoteUsage.field_p];
+          DualLinkDeque.field_f = ResourceArchive.field_d[PatchNoteUsage.field_p];
+          PatchNoteUsage.field_p = 1 + PatchNoteUsage.field_p & 127;
           stackIn_8_0 = true;
         }
         return stackIn_8_0;

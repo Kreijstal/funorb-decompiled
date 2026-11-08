@@ -56,7 +56,7 @@ final class ValidationIndicator extends TextButton {
         }
     }
 
-    final static void configureLegacyMenuStyle(int param0, int param1, int param2, sb param3, int param4, sb param5, int param6, int param7, int param8, BitmapFont param9, int param10, int param11, int param12, sb param13, int param14, BitmapFont param15, byte param16, int param17, int param18, int param19, int param20) {
+    final static void configureLegacyMenuStyle(int param0, int param1, int param2, NineSliceFrame param3, int param4, NineSliceFrame param5, int param6, int param7, int param8, BitmapFont param9, int param10, int param11, int param12, NineSliceFrame param13, int param14, BitmapFont param15, byte param16, int param17, int param18, int param19, int param20) {
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
@@ -75,7 +75,7 @@ final class ValidationIndicator extends TextButton {
           ValidationState.configureLegacyMenu((byte) -109, param15, param9, param6);
           BackgroundScene.setLegacyMenuFontMetrics(param17, false, param0, param7, param18);
           OptionsScreen.setLegacyMenuCentre(param8, param20, true);
-          lg.setMenuButtonStyle(param5, param2, -118, param3, param4, param1);
+          LoginCookieHelpers.setMenuButtonStyle(param5, param2, -118, param3, param4, param1);
           PictureStrip.setLegacyMenuFrame(param12, param13, 16, param10);
           JaggrabDownloader.setMenuTextColours((byte) -113, param19, param11, param14);
           var21_int = -33 / ((param16 - 20) / 57);
@@ -168,7 +168,7 @@ final class ValidationIndicator extends TextButton {
           return;
         }
         if (var9 != UiTheme.field_j) {
-          if (var9 == sk.field_a) {
+          if (var9 == LobbyFrameHelpers.field_a) {
             var14 = CanvasRasterBuffer.field_g[2];
             var14.drawAdditive(var5 - (var14.field_F >> 1), -(var14.field_E >> 1) + var7, 256);
             return;
@@ -212,7 +212,7 @@ final class ValidationIndicator extends TextButton {
           return;
         }
         BitmapFont var2 = (BitmapFont) null;
-        ValidationIndicator.configureLegacyMenuStyle(16, 19, 82, (sb) null, 15, (sb) null, -91, -16, 3, (BitmapFont) null, 119, -31, -67, (sb) null, -69, (BitmapFont) null, (byte) 15, -5, 94, -75, -69);
+        ValidationIndicator.configureLegacyMenuStyle(16, 19, 82, (NineSliceFrame) null, 15, (NineSliceFrame) null, -91, -16, 3, (BitmapFont) null, 119, -31, -67, (NineSliceFrame) null, -69, (BitmapFont) null, (byte) 15, -5, 94, -75, -69);
         field_N = null;
         field_O = null;
     }

@@ -16,7 +16,7 @@ final class Cloud {
     int field_l;
     static ScrollContainer field_b;
     int field_f;
-    static bd field_q;
+    static ConnectionState field_q;
     static Sprite[] field_i;
     static SceneWidget field_h;
     static int[] field_g;
@@ -26,15 +26,15 @@ final class Cloud {
     static boolean[][] field_r;
 
     final void respawn(byte param0) {
-        this.field_c = -60 + JavaRandomHelpers.randomBelow(ea.field_b, -126, 480);
-        this.field_l = JavaRandomHelpers.randomBelow(ea.field_b, -126, 50);
+        this.field_c = -60 + JavaRandomHelpers.randomBelow(CredentialKind.field_b, -126, 480);
+        this.field_l = JavaRandomHelpers.randomBelow(CredentialKind.field_b, -126, 50);
         this.field_e = (double)this.field_l / 100.0 + 0.3;
         int var2 = -112 / ((-40 - param0) / 47);
         this.field_t = (int)(this.field_e * 256.0);
         this.field_a = (int)(200.0 * (0.2 + this.field_e));
         this.field_f = (int)((this.field_e + 0.2) * 120.0);
-        this.field_n = JavaRandomHelpers.randomBelow(ea.field_b, -108, 2);
-        if (JavaRandomHelpers.randomBelow(ea.field_b, -126, 2) != 1) {
+        this.field_n = JavaRandomHelpers.randomBelow(CredentialKind.field_b, -108, 2);
+        if (JavaRandomHelpers.randomBelow(CredentialKind.field_b, -126, 2) != 1) {
           this.field_m = (double)(-this.field_a);
         } else {
           this.field_e = -this.field_e;
@@ -68,7 +68,7 @@ final class Cloud {
         String var7;
         String var8;
         var5 = Pixelate.field_H ? 1 : 0;
-        var6 = "(" + BirthDateEntryPanel.field_G + " " + gb.field_d + " " + MarkerSlider.field_U + ") " + TextLayoutLine.field_e;
+        var6 = "(" + BirthDateEntryPanel.field_G + " " + ReportAbuseHelpers.field_d + " " + MarkerSlider.field_U + ") " + TextLayoutLine.field_e;
         var1 = var6;
         if (0 < BackgroundScene.field_b) {
           var1 = var6 + ":";
@@ -100,14 +100,14 @@ final class Cloud {
 
     Cloud() {
         this.respawn((byte) -107);
-        this.field_m = (double)(JavaRandomHelpers.randomBelow(ea.field_b, -114, 640) - 100);
+        this.field_m = (double)(JavaRandomHelpers.randomBelow(CredentialKind.field_b, -114, 640) - 100);
     }
 
     static {
         field_k = "<%0> must play 1 more rated game before playing with the current options.";
         field_d = new FloatingSquare[24];
         field_o = 0;
-        field_q = new bd();
+        field_q = new ConnectionState();
         field_p = "From only <%0>/month";
         field_s = "Challenge Mode";
     }

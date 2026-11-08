@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class Matrix3 {
-    static sb field_d;
+    static NineSliceFrame field_d;
     static int[] field_c;
     int[] field_f;
     static int field_e;
@@ -80,14 +80,14 @@ final class Matrix3 {
           if (IntrusiveDequeCursor.containsNonAlphanumeric(param0, 24)) {
             return false;
           }
-          if (cm.isAllSameChar(param0, param2 ^ -98)) {
+          if (VolumeControlledVoice.isAllSameChar(param0, param2 ^ -98)) {
             return false;
           }
           if (param2 != -4) {
             var4 = (byte[]) null;
             Matrix3.crc32((byte[]) null, 103, 27);
           }
-          if (ep.hasInvalidPasswordLength((byte) 34, param0)) {
+          if (PolygonClipHelpers.hasInvalidPasswordLength((byte) 34, param0)) {
             return false;
           }
           if (param1.length() == 0) {
@@ -99,7 +99,7 @@ final class Matrix3 {
           if (CipherPacketBuffer.containsForwardOrReversed(param0, (byte) -47, param1)) {
             return false;
           }
-          if (!gb.containsForwardOrReversed(param0, param1, 95)) {
+          if (!ReportAbuseHelpers.containsForwardOrReversed(param0, param1, 95)) {
             return true;
           }
           return false;
@@ -187,22 +187,22 @@ final class Matrix3 {
 
     final static boolean isValidationPending(int param0) {
         if (param0 == -5057) {
-          return !an.field_e.isComplete(125) ? true : false;
+          return !CaretLayoutHelpers.field_e.isComplete(125) ? true : false;
         }
         Matrix3.bitLength(26, 126);
-        return !an.field_e.isComplete(125) ? true : false;
+        return !CaretLayoutHelpers.field_e.isComplete(125) ? true : false;
     }
 
-    final static mc queueAchievementMaskRequest(int param0, int param1) {
-        mc var2 = new mc();
+    final static AchievementMaskRequest queueAchievementMaskRequest(int param0, int param1) {
+        AchievementMaskRequest var2 = new AchievementMaskRequest();
         if (param0 == 255) {
           StrongCacheReference.field_z.addLast(22125, var2);
-          ro.sendStatsRequest(127, param1);
+          NameSuggestionHelpers.sendStatsRequest(127, param1);
           return var2;
         }
         Matrix3.releaseStatics((byte) 74);
         StrongCacheReference.field_z.addLast(22125, var2);
-        ro.sendStatsRequest(127, param1);
+        NameSuggestionHelpers.sendStatsRequest(127, param1);
         return var2;
     }
 

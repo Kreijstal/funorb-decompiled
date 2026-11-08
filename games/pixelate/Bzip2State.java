@@ -60,7 +60,7 @@ final class Bzip2State {
             Bzip2State.releaseStatics((byte) 125);
           }
           while (param1.length() > var2_int) {
-            if (!vf.isAllowedChar((byte) -3, param1.charAt(var2_int))) {
+            if (!PageReloadHelpers.isAllowedChar((byte) -3, param1.charAt(var2_int))) {
               return false;
             }
             var2_int++;
@@ -91,24 +91,24 @@ final class Bzip2State {
               if (GzipDecoder.field_c != null) {
                 return;
               }
-              if (dg.field_a) {
-                bq.buildLegacyMenu(param0, (byte) -89, var2);
+              if (QuickChatSendHelpers.field_a) {
+                LegacyMenuBuilder.buildLegacyMenu(param0, (byte) -89, var2);
               }
               return;
             }
             var2 = 0;
           } else {
             if (GzipDecoder.field_c == null) {
-              ib.field_f = wo.openFullscreenWindow(mc.field_k, 150, 480, 0, 640, 0);
+              GridSize.field_f = SocialPanel.openFullscreenWindow(AchievementMaskRequest.field_k, 150, 480, 0, 640, 0);
             } else {
-              ib.field_f = GzipDecoder.field_c.enterFullscreen(false);
+              GridSize.field_f = GzipDecoder.field_c.enterFullscreen(false);
               CacheReference.notifyPageResizing(2, (byte) 114);
             }
-            if (ib.field_f == null) {
+            if (GridSize.field_f == null) {
               var2 = 3;
             } else {
               var2 = 2;
-              he.attachCanvasInput(0, ib.field_f);
+              CanvasInputHelpers.attachCanvasInput(0, GridSize.field_f);
             }
           }
         } else {
@@ -121,24 +121,24 @@ final class Bzip2State {
             }
           } else {
             if (GzipDecoder.field_c == null) {
-              ib.field_f = wo.openFullscreenWindow(mc.field_k, 150, 480, 0, 640, 0);
+              GridSize.field_f = SocialPanel.openFullscreenWindow(AchievementMaskRequest.field_k, 150, 480, 0, 640, 0);
             } else {
-              ib.field_f = GzipDecoder.field_c.enterFullscreen(false);
+              GridSize.field_f = GzipDecoder.field_c.enterFullscreen(false);
               CacheReference.notifyPageResizing(2, (byte) 114);
             }
-            if (ib.field_f == null) {
+            if (GridSize.field_f == null) {
               var2 = 3;
             } else {
               var2 = 2;
-              he.attachCanvasInput(0, ib.field_f);
+              CanvasInputHelpers.attachCanvasInput(0, GridSize.field_f);
             }
           }
         }
         if (GzipDecoder.field_c != null) {
           return;
         }
-        if (dg.field_a) {
-          bq.buildLegacyMenu(param0, (byte) -89, var2);
+        if (QuickChatSendHelpers.field_a) {
+          LegacyMenuBuilder.buildLegacyMenu(param0, (byte) -89, var2);
         }
     }
 

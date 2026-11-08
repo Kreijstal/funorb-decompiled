@@ -90,7 +90,7 @@ final class WhirlpoolHasher {
         int var13Lifetime1;
         var19 = Pixelate.field_H ? 1 : 0;
         try {
-          var5_int = aq.bitLength((byte) 32, 3 * (param0 - param3));
+          var5_int = SkinSelectionHelpers.bitLength((byte) 32, 3 * (param0 - param3));
           var6 = 3 * param3;
           if (param2) {
             WhirlpoolHasher.createSpriteFromDecodeBuffers(-91);
@@ -99,9 +99,9 @@ final class WhirlpoolHasher {
           BouncedownBackground.clearFaceDepthBuckets(-98);
           if (param1.field_B > 0 &&
             null != param1.field_n) {
-            vf.clearFaceGroupCounts((byte) -37);
+            PageReloadHelpers.clearFaceGroupCounts((byte) -37);
           }
-          mp.field_b = 0;
+          ChatInputGlobals.field_b = 0;
           var8 = 0;
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (!(var8 < param1.field_j)))) {
@@ -151,14 +151,14 @@ final class WhirlpoolHasher {
                         stackIn_45_0Lifetime1 = var17;
                         stackIn_45_1Lifetime1 = var16 << 4;
                         var18 = stackIn_45_0Lifetime1 + stackIn_45_1Lifetime1;
-                        nd.field_c[var18] = var8;
+                        HowToPlayDemoHelpers.field_c[var18] = var8;
                         DateInputWidget.field_N[var16] = var17 + 1;
                         if (param1.field_B > 0 &&
                           null != param1.field_n) {
                           dupTemp$0 = param1.field_n[var8];
                           ConditionalTextValue.field_i[dupTemp$0] = ConditionalTextValue.field_i[dupTemp$0] + 1;
                         }
-                        mp.field_b = mp.field_b + 1;
+                        ChatInputGlobals.field_b = ChatInputGlobals.field_b + 1;
                         break;
                       }
                     }
@@ -228,7 +228,7 @@ final class WhirlpoolHasher {
               var2_int = 0;
               break;
             }
-            this.field_c[var2_int] = fp.xor(fp.xor(FullscreenFocusCanvas.longAnd(65280L, (long)this.inputBlock[var3 + 6] << 8), fp.xor(fp.xor(FullscreenFocusCanvas.longAnd((long)this.inputBlock[4 + var3], 255L) << 24, fp.xor(fp.xor(fp.xor(FullscreenFocusCanvas.longAnd((long)this.inputBlock[1 + var3], 255L) << 48, (long)this.inputBlock[var3] << 56), FullscreenFocusCanvas.longAnd(280375465082880L, (long)this.inputBlock[2 + var3] << 40)), FullscreenFocusCanvas.longAnd((long)this.inputBlock[3 + var3], 255L) << 32)), FullscreenFocusCanvas.longAnd((long)this.inputBlock[var3 + 5] << 16, 16711680L))), FullscreenFocusCanvas.longAnd((long)this.inputBlock[7 + var3], 255L));
+            this.field_c[var2_int] = NoticeKind.xor(NoticeKind.xor(FullscreenFocusCanvas.longAnd(65280L, (long)this.inputBlock[var3 + 6] << 8), NoticeKind.xor(NoticeKind.xor(FullscreenFocusCanvas.longAnd((long)this.inputBlock[4 + var3], 255L) << 24, NoticeKind.xor(NoticeKind.xor(NoticeKind.xor(FullscreenFocusCanvas.longAnd((long)this.inputBlock[1 + var3], 255L) << 48, (long)this.inputBlock[var3] << 56), FullscreenFocusCanvas.longAnd(280375465082880L, (long)this.inputBlock[2 + var3] << 40)), FullscreenFocusCanvas.longAnd((long)this.inputBlock[3 + var3], 255L) << 32)), FullscreenFocusCanvas.longAnd((long)this.inputBlock[var3 + 5] << 16, 16711680L))), FullscreenFocusCanvas.longAnd((long)this.inputBlock[7 + var3], 255L));
             var2_int++;
             var3 += 8;
           } while (var6 == 0);
@@ -240,7 +240,7 @@ final class WhirlpoolHasher {
             dupTemp$0 = this.field_g[var2_int];
             arrayValue$1 = this.field_c[var2_int];
             this.field_d[var2_int] = dupTemp$0;
-            this.field_e[var2_int] = fp.xor(arrayValue$1, dupTemp$0);
+            this.field_e[var2_int] = NoticeKind.xor(arrayValue$1, dupTemp$0);
             var2_int++;
           } while (var6 == 0);
           scanLoop1: while (true) {
@@ -256,7 +256,7 @@ final class WhirlpoolHasher {
                 stackIn_32_0 = 56;
                 var5 = stackIn_32_0;
                 while (var4 < 8) {
-                  this.field_b[var3] = fp.xor(this.field_b[var3], SecondaryNodeDeque.field_b[var4][cm.bitAnd(255, (int)(this.field_d[cm.bitAnd(-var4 + var3, 7)] >>> var5))]);
+                  this.field_b[var3] = NoticeKind.xor(this.field_b[var3], SecondaryNodeDeque.field_b[var4][VolumeControlledVoice.bitAnd(255, (int)(this.field_d[VolumeControlledVoice.bitAnd(-var4 + var3, 7)] >>> var5))]);
                   var4++;
                   var5 -= 8;
                 }
@@ -268,7 +268,7 @@ final class WhirlpoolHasher {
                 this.field_d[var3] = this.field_b[var3];
                 var3++;
               }
-              this.field_d[0] = fp.xor(this.field_d[0], SecondaryNodeDeque.field_c[var2_int]);
+              this.field_d[0] = NoticeKind.xor(this.field_d[0], SecondaryNodeDeque.field_c[var2_int]);
               var3 = 0;
               while (var3 < 8) {
                 this.field_b[var3] = this.field_d[var3];
@@ -276,7 +276,7 @@ final class WhirlpoolHasher {
                 stackIn_51_0 = 56;
                 var5Lifetime1 = stackIn_51_0;
                 while (var4Lifetime1 < 8) {
-                  this.field_b[var3] = fp.xor(this.field_b[var3], SecondaryNodeDeque.field_b[var4Lifetime1][cm.bitAnd((int)(this.field_e[cm.bitAnd(7, var3 - var4Lifetime1)] >>> var5Lifetime1), 255)]);
+                  this.field_b[var3] = NoticeKind.xor(this.field_b[var3], SecondaryNodeDeque.field_b[var4Lifetime1][VolumeControlledVoice.bitAnd((int)(this.field_e[VolumeControlledVoice.bitAnd(7, var3 - var4Lifetime1)] >>> var5Lifetime1), 255)]);
                   var5Lifetime1 -= 8;
                   var4Lifetime1++;
                 }
@@ -299,7 +299,7 @@ final class WhirlpoolHasher {
             return;
           }
           while (var2_int < 8) {
-            this.field_g[var2_int] = fp.xor(this.field_g[var2_int], fp.xor(this.field_c[var2_int], this.field_e[var2_int]));
+            this.field_g[var2_int] = NoticeKind.xor(this.field_g[var2_int], NoticeKind.xor(this.field_c[var2_int], this.field_e[var2_int]));
             var2_int++;
             if (var6 != 0) {
               return;
@@ -325,19 +325,19 @@ final class WhirlpoolHasher {
         RuntimeException decompiledCaughtException = null;
         var5 = Pixelate.field_H ? 1 : 0;
         try {
-          var1_int = ge.field_c[0] * ByteStorage.field_g[0];
-          var2 = wo.field_f[param0];
+          var1_int = RequestState.field_c[0] * ByteStorage.field_g[0];
+          var2 = SocialPanel.field_f[param0];
           var3 = new int[var1_int];
           var4_int = 0;
           while (var4_int < var1_int) {
-            var3[var4_int] = AsyncValidationResult.field_g[cm.bitAnd((int) var2[var4_int], 255)];
+            var3[var4_int] = AsyncValidationResult.field_g[VolumeControlledVoice.bitAnd((int) var2[var4_int], 255)];
             var4_int++;
             if (var5 == 0) {
               continue;
             }
             break;
           }
-          var4 = new Sprite(StrongCacheReference.field_y, jb.field_a, IntrusiveNode.field_b[0], e.field_b[0], ByteStorage.field_g[0], ge.field_c[0], var3);
+          var4 = new Sprite(StrongCacheReference.field_y, TutorialPageGlobals.field_a, IntrusiveNode.field_b[0], ConnectionStateGlobals.field_b[0], ByteStorage.field_g[0], RequestState.field_c[0], var3);
           LoadingStepTracker.clearSpriteDecodeBuffers(140);
           stackIn_5_0 = var4;
           return stackIn_5_0;
@@ -391,7 +391,7 @@ final class WhirlpoolHasher {
                 }
                 if (stackIn_24_0 >= 0 &&
                   256 > var8) {
-                  this.inputBlock[this.field_i] = (byte)bq.bitOr((int) this.inputBlock[this.field_i], var8 >>> var7);
+                  this.inputBlock[this.field_i] = (byte)LegacyMenuBuilder.bitOr((int) this.inputBlock[this.field_i], var8 >>> var7);
                   this.field_h = this.field_h + (8 - var7);
                   this.field_i = this.field_i + 1;
                   if (this.field_h == 512) {
@@ -399,7 +399,7 @@ final class WhirlpoolHasher {
                     this.field_i = 0;
                     this.field_h = 0;
                   }
-                  this.inputBlock[this.field_i] = (byte)cm.bitAnd(var8 << -var7 + 8, 255);
+                  this.inputBlock[this.field_i] = (byte)VolumeControlledVoice.bitAnd(var8 << -var7 + 8, 255);
                   param1 = param1 - 8L;
                   this.field_h = this.field_h + var7;
                   var5_int++;
@@ -417,7 +417,7 @@ final class WhirlpoolHasher {
           if (stackIn_24_0 < 0 ||
             var13 != 0) {
             var8 = param0[var5_int] << var6 & 255;
-            this.inputBlock[this.field_i] = (byte)bq.bitOr((int) this.inputBlock[this.field_i], var8 >>> var7);
+            this.inputBlock[this.field_i] = (byte)LegacyMenuBuilder.bitOr((int) this.inputBlock[this.field_i], var8 >>> var7);
           }
           var11Lifetime1 = -86 % ((param2 - 39) / 48);
           if ((long)var7 + param1 < 8L) {
@@ -434,7 +434,7 @@ final class WhirlpoolHasher {
             this.field_h = 0;
             this.field_i = 0;
           }
-          this.inputBlock[this.field_i] = (byte)cm.bitAnd(var8 << -var7 + 8, 255);
+          this.inputBlock[this.field_i] = (byte)VolumeControlledVoice.bitAnd(var8 << -var7 + 8, 255);
           this.field_h = this.field_h + (int)param1;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -465,7 +465,7 @@ final class WhirlpoolHasher {
         int var8 = 0;
         var8 = Pixelate.field_H ? 1 : 0;
         try {
-          this.inputBlock[this.field_i] = (byte)bq.bitOr((int) this.inputBlock[this.field_i], 128 >>> cm.bitAnd(this.field_h, 7));
+          this.inputBlock[this.field_i] = (byte)LegacyMenuBuilder.bitOr((int) this.inputBlock[this.field_i], 128 >>> VolumeControlledVoice.bitAnd(this.field_h, 7));
           this.field_i = this.field_i + 1;
           if (this.field_i > 32) {
             while (true) {

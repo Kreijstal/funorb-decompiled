@@ -134,23 +134,23 @@ final class ProxySocketConnector extends SocketConnector {
           if (null == FallingPieceView.field_g) {
             FallingPieceView.field_g = "0";
           }
-          bl.field_g = param4.getParameter("overxachievements");
-          if (null == bl.field_g) {
-            bl.field_g = "0";
+          MouseWheelSetupHelpers.field_g = param4.getParameter("overxachievements");
+          if (null == MouseWheelSetupHelpers.field_g) {
+            MouseWheelSetupHelpers.field_g = "0";
           }
           var6 = param4.getParameter("currency");
           if (var6 == null) {
-            gb.field_c = 2;
+            ReportAbuseHelpers.field_c = 2;
           } else {
-            if (!td.isDecimalInteger(param0 - 12, (CharSequence) ((Object) var6))) {
-              gb.field_c = 2;
+            if (!PuzzleModePictureHelpers.isDecimalInteger(param0 - 12, (CharSequence) ((Object) var6))) {
+              ReportAbuseHelpers.field_c = 2;
             } else {
-              gb.field_c = na.parseDecimalInt((CharSequence) ((Object) var6), (byte) -33);
+              ReportAbuseHelpers.field_c = GameSocketHelpers.parseDecimalInt((CharSequence) ((Object) var6), (byte) -33);
             }
           }
           MusicPatchNode.field_t = param2;
-          gq.field_n = param1;
-          ug.field_k = param3;
+          AlternateNameCredentials.field_n = param1;
+          LaggedPacket.field_k = param3;
           FireworkDisplay.field_a = new Sprite[param5.length];
           for (var7 = 0; param5.length > var7; var7++) {
             FireworkDisplay.field_a[var7] = new Sprite(317, 34);
@@ -190,7 +190,7 @@ final class ProxySocketConnector extends SocketConnector {
         if (MatchingTextValidator.field_n == Js5NetworkRequest.field_F) {
           return PlayerController.field_m;
         }
-        if (!an.field_e.isComplete(79)) {
+        if (!CaretLayoutHelpers.field_e.isComplete(79)) {
           return PlayerController.field_m;
         }
         return Checkbox.field_U;
@@ -216,11 +216,11 @@ final class ProxySocketConnector extends SocketConnector {
           for (var2 = 0; var2 < 256; var2++) {
             var9[var2] = var2 * 65793;
           }
-          gd.field_f = new Sprite[50];
+          MainScreenWidgetGlobals.field_f = new Sprite[50];
           var2Lifetime1 = -48 / ((param0 - 31) / 39);
           for (var3 = 0; 50 > var3; var3++) {
-            gd.field_f[var3] = new Sprite(63, 63);
-            gd.field_f[var3].makeRasterTarget();
+            MainScreenWidgetGlobals.field_f[var3] = new Sprite(63, 63);
+            MainScreenWidgetGlobals.field_f[var3].makeRasterTarget();
             var4 = (double)var3 * 6.283185307179586 / 50.0;
             var6 = (int)(16.0 * Math.sin(var4)) >> 1;
             SoftwareRasterizer.fillRadialPaletteCircle(512, 512, 48 + var6 << 4, 255, var13);
@@ -393,7 +393,7 @@ final class ProxySocketConnector extends SocketConnector {
             var5 = var9;
             var6 = param2;
             var7 = param4;
-            var9[var6] = var7 + cm.bitAnd(var9[var6] >> 1, 8355711);
+            var9[var6] = var7 + VolumeControlledVoice.bitAnd(var9[var6] >> 1, 8355711);
             param2++;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

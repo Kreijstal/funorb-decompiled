@@ -72,17 +72,17 @@ final class DualLinkDeque {
         var2 = Pixelate.field_H ? 1 : 0;
         try {
           if (!GreenGrowTheRushesBackground.hasOpenNotice(114)) {
-            if (null != ib.field_f &&
-              ib.field_f.field_g) {
+            if (null != GridSize.field_f &&
+              GridSize.field_f.field_g) {
               SoundVoice.closeFullscreenCanvas(49);
               NetworkGameClient.field_x.showPanel(param0 - 55844, new AccountNoticeDialog(NetworkGameClient.field_x, LinkButtonPainter.field_c));
             }
             return;
           }
-          NetworkGameClient.field_x.handlePointerEvents(RetroBlock.field_i, true, (byte) 99, nh.field_b);
+          NetworkGameClient.field_x.handlePointerEvents(RetroBlock.field_i, true, (byte) 99, Base37NameHelpers.field_b);
           NetworkGameClient.field_x.updatePanels((byte) 111);
           while (DirectByteStorage.pollKeyEvent(126)) {
-            NetworkGameClient.field_x.processKey(field_f, ke.field_a, false);
+            NetworkGameClient.field_x.processKey(field_f, KeyEventGlobals.field_a, false);
           }
           if (param0 == 49661) {
             return;

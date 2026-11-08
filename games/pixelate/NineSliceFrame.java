@@ -1,0 +1,82 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class NineSliceFrame {
+    static int field_a;
+    private Sprite[] field_b;
+
+    final void draw(int param0, int param1, int param2, int param3, int param4) {
+        NineSliceFrameHelpers.drawNineSliceFrame(param3, param4, (byte) 75, param1, param0, this.field_b);
+        if (param2 != -1) {
+          String var7 = (String) null;
+          NineSliceFrame.measureMenuText(107, (String) null, false);
+        }
+    }
+
+    final static int measureMenuText(int param0, String param1, boolean param2) {
+        RuntimeException var3 = null;
+        int stackIn_4_0 = 0;
+        int stackIn_6_0 = 0;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        String stackIn_10_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (param0 != 3) {
+            field_a = 28;
+          }
+          if (!param2) {
+            stackIn_6_0 = StatusBar.field_j.textWidth(param1);
+            return stackIn_6_0;
+          }
+          stackIn_4_0 = ScoreMarkerBar.field_y.textWidth(param1);
+          return stackIn_4_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          stackIn_9_0 = var3;
+          stackIn_9_1 = new StringBuilder().append("sb.B(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_10_2 = "null";
+          } else {
+            stackIn_10_2 = "{...}";
+          }
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(')').toString());
+        }
+    }
+
+    NineSliceFrame(Sprite[] param0) {
+        try {
+          this.field_b = param0;
+        } catch (RuntimeException runtimeException) {
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "sb.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    final static String formatScore(int param0, int param1) {
+        StringBuilder discarded$2 = null;
+        StringBuilder discarded$3 = null;
+        int var8 = Pixelate.field_H ? 1 : 0;
+        String var2 = RematchCaptionGlobals.field_e;
+        String var3 = Integer.toString(param0);
+        int var4 = var3.length();
+        int var5 = var2.length();
+        int var6 = var4 % 3;
+        if (var6 == 0) {
+          var6 = 3;
+        }
+        StringBuilder var7 = new StringBuilder((var4 - var6) / param1 + var5);
+        StringBuilder discarded$0 = var7.append(var2);
+        StringBuilder discarded$1 = var7.append(var3.substring(0, var6));
+        var3 = var3.substring(var6);
+        while (var3.length() > 0) {
+          discarded$2 = var7.append(FireworkSpark.field_f);
+          discarded$3 = var7.append(var3.substring(0, 3));
+          var3 = var3.substring(3);
+        }
+        return var7.toString();
+    }
+
+    static {
+    }
+}

@@ -25,7 +25,7 @@ final class SocketJs5Transport extends Js5Transport {
     }
 
     final static void resetRetryTimer(int param0) {
-        LoginMethod.field_d = hm.monotonicMillis(64);
+        LoginMethod.field_d = ClockHelpers.monotonicMillis(64);
         if (param0 >= -11) {
           SocketJs5Transport.tickScorePopups(16);
         }
@@ -102,7 +102,7 @@ final class SocketJs5Transport extends Js5Transport {
               }
             }
             this.field_o = 0;
-            this.field_k = hm.monotonicMillis(64);
+            this.field_k = ClockHelpers.monotonicMillis(64);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter3) {
             decompiledCaughtException = decompiledCaughtParameter3;
@@ -152,7 +152,7 @@ final class SocketJs5Transport extends Js5Transport {
           Js5NetworkRequest var2Lifetime1;
           var16 = Pixelate.field_H ? 1 : 0;
           if (null != this.transport) {
-            var2_long = hm.monotonicMillis(64);
+            var2_long = ClockHelpers.monotonicMillis(64);
             var4 = (int)(var2_long - this.field_k);
             this.field_k = var2_long;
             if (200 < var4) {

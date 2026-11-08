@@ -177,9 +177,9 @@ final class IconTextComponent extends SceneWidget {
     final static void decodeRankingRows(int param0, int param1, int param2) {
         if (WhirlpoolHasher.field_a == null) {
           WhirlpoolHasher.field_a = new int[2 * param2];
-          if (ep.field_c == null ||
-            !(ep.field_c.length >= param2)) {
-            ep.field_c = new int[2 * param2];
+          if (PolygonClipHelpers.field_c == null ||
+            !(PolygonClipHelpers.field_c.length >= param2)) {
+            PolygonClipHelpers.field_c = new int[2 * param2];
           }
           if (null == TextWidgetPainter.field_b ||
             !(param2 <= TextWidgetPainter.field_b.length)) {
@@ -228,9 +228,9 @@ final class IconTextComponent extends SceneWidget {
         } else {
           if (WhirlpoolHasher.field_a.length < param2) {
             WhirlpoolHasher.field_a = new int[2 * param2];
-            if (ep.field_c == null ||
-              !(ep.field_c.length >= param2)) {
-              ep.field_c = new int[2 * param2];
+            if (PolygonClipHelpers.field_c == null ||
+              !(PolygonClipHelpers.field_c.length >= param2)) {
+              PolygonClipHelpers.field_c = new int[2 * param2];
             }
             if (null == TextWidgetPainter.field_b ||
               !(param2 <= TextWidgetPainter.field_b.length)) {
@@ -269,9 +269,9 @@ final class IconTextComponent extends SceneWidget {
               }
             }
           } else {
-            if (ep.field_c == null ||
-              !(ep.field_c.length >= param2)) {
-              ep.field_c = new int[2 * param2];
+            if (PolygonClipHelpers.field_c == null ||
+              !(PolygonClipHelpers.field_c.length >= param2)) {
+              PolygonClipHelpers.field_c = new int[2 * param2];
             }
             if (null == TextWidgetPainter.field_b ||
               !(param2 <= TextWidgetPainter.field_b.length)) {
@@ -365,9 +365,9 @@ final class IconTextComponent extends SceneWidget {
         }
         ChatMessage.field_o = -2147483648;
         StatefulTextPainter.field_s = param0;
-        qn.field_k = -2147483648;
+        PatchNoteUsage.field_k = -2147483648;
         SecondaryNodeDeque.field_e = 0;
-        ro.field_a = 2147483647;
+        NameSuggestionHelpers.field_a = 2147483647;
     }
 
     static {

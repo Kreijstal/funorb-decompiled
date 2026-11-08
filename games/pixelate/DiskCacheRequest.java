@@ -81,13 +81,13 @@ final class DiskCacheRequest extends ArchiveRequest {
         Sprite var30Lifetime5;
         Sprite var30Lifetime6;
         try {
-          em.openContextMenu((String) null, 0L, (String) null, -1, param1, -163, (ScrollContainer) null, (int[]) null, param2);
+          ContextMenuHelpers.openContextMenu((String) null, 0L, (String) null, -1, param1, -163, (ScrollContainer) null, (int[]) null, param2);
           if (0 == param2) {
             var11 = ProxySocketConnector.field_n;
             var12 = Checkbox.field_V[0];
             var30 = var12;
             var30Lifetime2 = var12;
-            var13 = dg.field_e;
+            var13 = QuickChatSendHelpers.field_e;
             var11.field_b.addIconAction(0, 11, var12, var13);
             var14 = ProxySocketConnector.field_n;
             var15 = Checkbox.field_V[1];
@@ -109,7 +109,7 @@ final class DiskCacheRequest extends ArchiveRequest {
             var20.field_b.addIconAction(param0 + 13, 11, var21, var22);
             var23 = ProxySocketConnector.field_n;
             var24 = Checkbox.field_V[1];
-            var25 = cl.field_i;
+            var25 = Cp1252EncodingHelpers.field_i;
             var23.field_b.addIconAction(param0 ^ -13, 12, var24, var25);
             var26 = ProxySocketConnector.field_n;
             var27 = Checkbox.field_V[2];
@@ -119,15 +119,15 @@ final class DiskCacheRequest extends ArchiveRequest {
           if (param2 == 2) {
             var29 = ProxySocketConnector.field_n;
             var30Lifetime1 = Checkbox.field_V[0];
-            var31 = vd.field_b;
+            var31 = ChatAppendHelpers.field_b;
             var29.field_b.addIconAction(0, 11, var30Lifetime1, var31);
             var32 = ProxySocketConnector.field_n;
             var33 = Checkbox.field_V[1];
-            var34 = ge.field_e;
+            var34 = RequestState.field_e;
             var32.field_b.addIconAction(0, 12, var33, var34);
             var35 = ProxySocketConnector.field_n;
             var36 = Checkbox.field_V[2];
-            var37 = sf.field_a;
+            var37 = FrameTimingHelpers.field_a;
             var35.field_b.addIconAction(0, 13, var36, var37);
           }
           var38 = ProxySocketConnector.field_n;

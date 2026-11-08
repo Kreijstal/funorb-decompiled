@@ -1,0 +1,124 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class MouseWheelSetupHelpers {
+    static int[] field_a;
+    static String field_e;
+    static String field_g;
+    static SceneWidget field_d;
+    static String field_f;
+    static int field_c;
+    static int field_b;
+
+    final static void updateLobbyHighlightsAndLayout(int param0, boolean param1) {
+        int var2;
+        int stackIn_8_0 = 0;
+        int stackIn_11_0 = 0;
+        int stackIn_11_1 = 0;
+        boolean stackIn_13_2 = false;
+        int stackIn_15_3;
+        boolean stackIn_16_4 = false;
+        if (param0 >= -22) {
+          MouseWheelSetupHelpers.releaseStatics(-59);
+        }
+        IntrusiveDequeCursor.tickLobbyHighlights(-1);
+        if (null != LoginMethod.field_c) {
+          stackIn_8_0 = (ModalStack.isTwoOrMore(true, LoginMethod.field_c.field_mc)) ? 1 : 0;
+        } else {
+          stackIn_8_0 = 0;
+        }
+        var2 = stackIn_8_0;
+        stackIn_11_0 = 15;
+        stackIn_11_1 = 14;
+        stackIn_13_2 = (ValidationHelpWidget.field_Y) || (DateOfBirthValidator.field_i);
+        stackIn_15_3 = var2;
+        stackIn_16_4 = (50 >= ChatChannelGlobals.field_g) ? false : true;
+        EmailLoginCredentials.updateLobbyChat(stackIn_11_0, stackIn_11_1, stackIn_13_2, stackIn_15_3 != 0, stackIn_16_4, param1, (byte) 116, true, 0, 13, 11, DriftingParticle.field_i);
+        if (TextDecodeHelpers.field_c) {
+          ChatMessage.field_f.writeOpcode(57, 15514);
+          TextDecodeHelpers.field_c = false;
+        }
+        if (LobbyListBindingHelpers.field_a) {
+          ChatMessage.field_f.writeOpcode(10, 15514);
+          LobbyListBindingHelpers.field_a = false;
+        }
+    }
+
+    public static void releaseStatics(int param0) {
+        field_f = null;
+        field_d = null;
+        if (param0 != -46342) {
+          return;
+        }
+        field_a = null;
+        field_e = null;
+        field_g = null;
+    }
+
+    final static int getLegacyMenuWidth(boolean param0) {
+        if (!param0) {
+          MouseWheelSetupHelpers.releaseStatics(-26);
+        }
+        return MouseInputHandler.field_b;
+    }
+
+    final static MouseWheelHandler createMouseWheelHandler(int param0) {
+        try {
+          Throwable var1 = null;
+          MouseWheelHandler stackIn_2_0 = null;
+          MouseWheelHandler stackIn_4_0 = null;
+          Throwable decompiledCaughtException = null;
+          try {
+            if (param0 >= 27) {
+              stackIn_4_0 = (MouseWheelHandler) (Class.forName("MouseWheelInput").newInstance());
+              return stackIn_4_0;
+            }
+            stackIn_2_0 = (MouseWheelHandler) null;
+            return stackIn_2_0;
+          } catch (java.lang.Throwable decompiledCaughtParameter0) {
+            decompiledCaughtException = decompiledCaughtParameter0;
+            var1 = decompiledCaughtException;
+            return null;
+          }
+        } catch (RuntimeException | Error decompiledUncheckedException) {
+          throw decompiledUncheckedException;
+        } catch (Throwable decompiledCheckedException) {
+          throw new RuntimeException(decompiledCheckedException);
+        }
+    }
+
+    final static void setBenefitsBorderAndCaption(int param0, Sprite param1, String param2) {
+        try {
+          if (param0 != 11833) {
+            field_g = (String) null;
+          }
+          KeyMapHelpers.field_c = param1;
+          IntrusiveNode.field_i = param2;
+        } catch (RuntimeException runtimeException) {
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "bl.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    static {
+        int var0 = 0;
+        long var4 = 0L;
+        long var6 = 0L;
+        int var2 = 0;
+        int var3 = 0;
+        int var1 = 0;
+        field_a = new int[98304];
+        for (var0 = 92682; var0 >= 46341; var0--) {
+          var4 = (long)(-1 + (var0 << 1));
+          var6 = (long)(1 + (var0 << 1));
+          var2 = (int)((var4 * var4 >> 18) - 32768L);
+          var3 = (int)(-32768L + (var6 * var6 >> 18));
+          if (!(var3 < field_a.length)) {
+            var3 = field_a.length - 1;
+          }
+          for (var1 = var2 < 0 ? 0 : var2; var1 <= var3; var1++) {
+            field_a[var1] = var0;
+          }
+        }
+        field_f = "Unnamed Skin";
+    }
+}

@@ -14,14 +14,14 @@ final class DialWidget extends TextButton {
 
     final static void renderLoadingScreen(int param0, java.awt.Canvas param1) {
         try {
-          if (11 == el.field_b) {
+          if (11 == EmailValidationState.field_b) {
             Js5ArchiveManager.suppressReconnectRedirect(98);
           }
           if (param0 != -1913) {
             DialWidget.releaseStatics((byte) -51);
           }
-          mi.showLoadingProgress(EmailCredentials.field_f, PicturePreview.field_o, -1, ThreeSliceButtonPainter.field_r);
-          fj.presentToCanvas(0, 0, (byte) 113, param1);
+          NotLoggedInScreen.showLoadingProgress(EmailCredentials.field_f, PicturePreview.field_o, -1, ThreeSliceButtonPainter.field_r);
+          MouseInputGlobals.presentToCanvas(0, 0, (byte) 113, param1);
         } catch (RuntimeException runtimeException) {
           throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "si.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -83,7 +83,7 @@ final class DialWidget extends TextButton {
           var8_int = -param5 - (this.field_z + this.field_O) + param4;
           var9 = param6 + (-this.field_R + (-param3 - this.field_p));
           if (var8_int * var8_int + var9 * var9 < this.field_N * this.field_N) {
-            var10 = Math.atan2((double)var9, (double)var8_int) - of.field_f;
+            var10 = Math.atan2((double)var9, (double)var8_int) - TextDecodeHelpers.field_f;
             if (!(0.0 > var10)) {
               if (var10 > 0.0) {
                 var10 = var10 + 3.141592653589793 / (double)this.stepCount;

@@ -336,13 +336,13 @@ final class PlatformTaskDispatcher implements Runnable {
                         }
                         break;
                       case 21:
-                        if (field_c > hm.monotonicMillis(64)) {
+                        if (field_c > ClockHelpers.monotonicMillis(64)) {
                           throw new IOException();
                         }
                         var8.field_e = java.net.InetAddress.getByName((String) (var8.field_g)).getAddress();
                         break;
                       case 3:
-                        if (field_c > hm.monotonicMillis(64)) {
+                        if (field_c > ClockHelpers.monotonicMillis(64)) {
                           throw new IOException();
                         }
                         var12 = (var8.field_a >> 24 & 255) + "." + (255 & var8.field_a >> 16) + "." + (255 & var8.field_a >> 8) + "." + (var8.field_a & 255);
@@ -367,7 +367,7 @@ final class PlatformTaskDispatcher implements Runnable {
                     var8.field_e = ((Class) (var10[0])).getDeclaredMethod((String) (var10[1]), (Class[]) (var10[2]));
                     break;
                   case 4:
-                    if (hm.monotonicMillis(64) < field_c) {
+                    if (ClockHelpers.monotonicMillis(64) < field_c) {
                       throw new IOException();
                     }
                     var8.field_e = new DataInputStream(((java.net.URL) (var8.field_g)).openStream());
@@ -380,7 +380,7 @@ final class PlatformTaskDispatcher implements Runnable {
                     var8.field_e = var9;
                     break;
                   case 22:
-                    if (hm.monotonicMillis(64) < field_c) {
+                    if (ClockHelpers.monotonicMillis(64) < field_c) {
                       throw new IOException();
                     }
                     try {
@@ -394,7 +394,7 @@ final class PlatformTaskDispatcher implements Runnable {
                     }
                     break;
                   case 1:
-                    if (field_c > hm.monotonicMillis(64)) {
+                    if (field_c > ClockHelpers.monotonicMillis(64)) {
                       throw new IOException();
                     }
                     var8.field_e = new java.net.Socket(java.net.InetAddress.getByName((String) (var8.field_g)), var8.field_a);

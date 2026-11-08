@@ -38,14 +38,14 @@ final class GameResultsScreen extends MenuScreen {
         this.field_E = param1;
         this.field_H = param8;
         this.field_J = param6;
-        this.field_K = di.formatThousands(false, param9);
+        this.field_K = NumberFormatHelpers.formatThousands(false, param9);
         if (!param4) {
           if (!param5) {
             if (param2) {
               this.field_A = CacheReference.field_u;
               this.field_I = 5;
             } else {
-              this.field_A = gq.field_m;
+              this.field_A = AlternateNameCredentials.field_m;
               this.field_I = 0;
             }
           } else {
@@ -58,7 +58,7 @@ final class GameResultsScreen extends MenuScreen {
             if (param3) {
               stackIn_8_1 = ByteStorage.field_c;
             } else {
-              stackIn_8_1 = gq.field_m;
+              stackIn_8_1 = AlternateNameCredentials.field_m;
             }
             this.field_A = stackIn_8_1;
             this.field_I = 0;
@@ -113,7 +113,7 @@ final class GameResultsScreen extends MenuScreen {
           var5.drawText(UiTheme.field_b, 120, var6, 0, -1);
           var5.drawRightAlignedText(this.field_v, 540, var6, 1, -1);
           var6 = var6 + var7;
-          var5.drawText(ep.field_d, 120, var6, 0, -1);
+          var5.drawText(PolygonClipHelpers.field_d, 120, var6, 0, -1);
           var5.drawRightAlignedText(Integer.toString(this.field_E), 540, var6, 1, -1);
           var6 = var6 + var7;
           var5.drawText(MusicCrossfadeStream.field_E, 120, var6, 0, -1);
@@ -125,7 +125,7 @@ final class GameResultsScreen extends MenuScreen {
           SoftwareRasterizer.fillRectangle(118, var6 - 5, 424, 9, 0);
           SoftwareRasterizer.fillRectangle(120, var6 - 2, 420, 3, 16777215);
           var6 = var6 + var7;
-          var5.drawText(he.field_c, 120, var6, 0, -1);
+          var5.drawText(CanvasInputHelpers.field_c, 120, var6, 0, -1);
           var5.drawRightAlignedText(this.field_K, 540, var6, 1, -1);
         } else {
           if (this.field_G != 1) {
@@ -149,7 +149,7 @@ final class GameResultsScreen extends MenuScreen {
             var5.drawText(UiTheme.field_b, 120, var6, 0, -1);
             var5.drawRightAlignedText(this.field_v, 540, var6, 1, -1);
             var6 = var6 + var7;
-            var5.drawText(ep.field_d, 120, var6, 0, -1);
+            var5.drawText(PolygonClipHelpers.field_d, 120, var6, 0, -1);
             var5.drawRightAlignedText(this.field_y, 540, var6, 1, -1);
             var6 = var6 + var7;
             SoftwareRasterizer.fillRectangle(118, var6 - 5, 424, 9, 0);
@@ -218,7 +218,7 @@ final class GameResultsScreen extends MenuScreen {
     }
 
     final void setPuzzleResult(boolean param0, boolean param1, int param2, int param3, byte param4, int param5, int param6) {
-        this.field_u = !param1 ? qj.field_c : MouseInputHandler.field_a;
+        this.field_u = !param1 ? PrivateChatHelpers.field_c : MouseInputHandler.field_a;
         this.field_G = 1;
         this.field_x = param5;
         this.field_y = AlphaContainer.formatTemplate(BoundedRandomAccessFile.field_b, param4 + 21, new String[]{Integer.toString(param2), Integer.toString(param6)});
@@ -227,7 +227,7 @@ final class GameResultsScreen extends MenuScreen {
         }
         this.field_v = this.formatTime(param4 - 24, param3);
         if (this.field_x != -1) {
-          this.field_s = !param1 ? vm.field_f : ModalStack.field_P;
+          this.field_s = !param1 ? LobbyGameLookupHelpers.field_f : ModalStack.field_P;
         }
         if (!param0) {
           this.field_I = 17;
@@ -265,12 +265,12 @@ final class GameResultsScreen extends MenuScreen {
         if (param0 != 0) {
           this.field_K = (String) null;
         }
-        if (null == ro.field_e) {
+        if (null == NameSuggestionHelpers.field_e) {
           super.drawScreenBackground(0);
         } else {
-          ro.field_e.render(false, param0 ^ 0);
+          NameSuggestionHelpers.field_e.render(false, param0 ^ 0);
           SoftwareRasterizer.darkenRectangle(0, 0, 640, 480);
-          rh.drawBackgroundSquares((byte) -75);
+          HighscoreSubmission.drawBackgroundSquares((byte) -75);
         }
     }
 
@@ -282,12 +282,12 @@ final class GameResultsScreen extends MenuScreen {
         }
         if (DateOfBirthValidator.field_j == 1) {
           ArchiveIndex.startPuzzleModeGame(this.field_x, (byte) 126);
-          fc.field_e = 14;
+          LobbyListBindingHelpers.field_e = 14;
           var3 = param0 ? 1 : 0;
-          la.changeScreen(!gq.isOfflineOrAccountUi(121) ? 0 : 12, -3, var3 != 0, -25528);
+          ScreenChangeHelpers.changeScreen(!AlternateNameCredentials.isOfflineOrAccountUi(121) ? 0 : 12, -3, var3 != 0, -25528);
         } else {
           if (DateOfBirthValidator.field_j == 2) {
-            ro.field_e.sendResultsDismissed(46);
+            NameSuggestionHelpers.field_e.sendResultsDismissed(46);
           }
         }
     }
@@ -309,13 +309,13 @@ final class GameResultsScreen extends MenuScreen {
           if (param0 != null) {
             this.field_w = AlphaContainer.formatTemplate(TextButton.field_G, param1 ^ -47, new String[]{param0});
           } else {
-            this.field_w = td.field_c;
+            this.field_w = PuzzleModePictureHelpers.field_c;
           }
           this.field_M = new String[2];
           this.field_p = new String[2];
           for (var4_int = 0; var4_int < 2; var4_int++) {
             this.field_M[var4_int] = param2.playerNames[var4_int];
-            this.field_p[var4_int] = di.formatThousands(false, param2.scores[var4_int]);
+            this.field_p[var4_int] = NumberFormatHelpers.formatThousands(false, param2.scores[var4_int]);
           }
           if (param2.scores[0] >= param2.scores[1]) {
             stackIn_10_1 = 0;
@@ -398,17 +398,17 @@ final class GameResultsScreen extends MenuScreen {
         int var5;
         var5 = Pixelate.field_H ? 1 : 0;
         this.field_B = true;
-        var2 = ro.field_e.field_z;
-        var3 = ro.field_e.field_a.field_p;
-        var4 = ro.field_e.field_o;
+        var2 = NameSuggestionHelpers.field_e.field_z;
+        var3 = NameSuggestionHelpers.field_e.field_a.field_p;
+        var4 = NameSuggestionHelpers.field_e.field_o;
         if ((var3 & param0 << var2) != 0) {
-          this.field_s = fg.field_c;
+          this.field_s = RematchCaptionGlobals.field_c;
         } else {
           if (var3 == 0) {
-            if (3 == (1 << ro.field_e.field_z | var4)) {
+            if (3 == (1 << NameSuggestionHelpers.field_e.field_z | var4)) {
               this.field_s = EmergentBehaviourBackground.field_t;
             } else {
-              this.field_s = dq.field_c;
+              this.field_s = TransitionPhase.field_c;
             }
           } else {
             this.field_s = ConditionalTextValue.field_c;
@@ -445,15 +445,15 @@ final class GameResultsScreen extends MenuScreen {
         if (DateOfBirthValidator.field_j != 2) {
           var3 = this.field_I;
           var4 = param1 ? 1 : 0;
-          stackIn_8_0 = (!gq.isOfflineOrAccountUi(104)) ? 0 : 12;
-          la.changeScreen(stackIn_8_0, var3, var4 != 0, -25528);
+          stackIn_8_0 = (!AlternateNameCredentials.isOfflineOrAccountUi(104)) ? 0 : 12;
+          ScreenChangeHelpers.changeScreen(stackIn_8_0, var3, var4 != 0, -25528);
         } else {
           if (ValidationHelpWidget.field_Y) {
             var3 = param1 ? 1 : 0;
-            la.changeScreen(MidiPcmStream.field_t, -5, var3 != 0, -25528);
+            ScreenChangeHelpers.changeScreen(MidiPcmStream.field_t, -5, var3 != 0, -25528);
           }
           if (DateOfBirthValidator.field_i) {
-            qj.sendLeaveGameRequest(false, 0, 11);
+            PrivateChatHelpers.sendLeaveGameRequest(false, 0, 11);
           }
         }
         if (param0 != 12) {
@@ -478,7 +478,7 @@ final class GameResultsScreen extends MenuScreen {
         int stackIn_17_2 = 0;
         boolean decompiledFrameRemainder0 = true;
         var3 = Pixelate.field_H ? 1 : 0;
-        var2 = ke.field_a;
+        var2 = KeyEventGlobals.field_a;
         if (!this.field_g.isButtonHeld((byte) 35)) {
           if (this.field_g.selectedIndex == -1 && (var2 == 98 ||
             var2 == 99)) {

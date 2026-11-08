@@ -73,7 +73,7 @@ final class LoadingStepTracker {
         RuntimeException var2_ref = null;
         var5 = Pixelate.field_H ? 1 : 0;
         try {
-          if (vm.field_b == null) {
+          if (LobbyGameLookupHelpers.field_b == null) {
             return null;
           }
           if (param0 == null) {
@@ -86,19 +86,19 @@ final class LoadingStepTracker {
             LoadingStepTracker.releaseStatics(true);
           }
           var6 = (CharSequence) ((Object) param0);
-          var2 = dh.normalizeDisplayName(var6, (byte) 64);
+          var2 = DisplayNameHelpers.normalizeDisplayName(var6, (byte) 64);
           if (var2 == null) {
             return null;
           }
-          var3 = (SocialListEntry) (vm.field_b.get(-11434, (long)var2.hashCode()));
+          var3 = (SocialListEntry) (LobbyGameLookupHelpers.field_b.get(-11434, (long)var2.hashCode()));
           while (var3 != null) {
             var7 = (CharSequence) ((Object) var3.field_Fb);
-            var4 = dh.normalizeDisplayName(var7, (byte) 41);
+            var4 = DisplayNameHelpers.normalizeDisplayName(var7, (byte) 41);
             if (var4.equals(var2)) {
               stackIn_19_0 = var3;
               return stackIn_19_0;
             }
-            var3 = (SocialListEntry) (vm.field_b.findNext((byte) 47));
+            var3 = (SocialListEntry) (LobbyGameLookupHelpers.field_b.findNext((byte) 47));
           }
           return null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -118,18 +118,18 @@ final class LoadingStepTracker {
     final static boolean isLobbyUiReady(int param0) {
         if (param0 <= 105) {
           LoadingStepTracker.releaseStatics(true);
-          if (10 > el.field_b) {
+          if (10 > EmailValidationState.field_b) {
             return false;
           }
-          if (hf.field_q >= 13) {
+          if (AchievementRecord.field_q >= 13) {
             return true;
           }
           return false;
         }
-        if (10 > el.field_b) {
+        if (10 > EmailValidationState.field_b) {
           return false;
         }
-        if (hf.field_q >= 13) {
+        if (AchievementRecord.field_q >= 13) {
           return true;
         }
         return false;
@@ -140,9 +140,9 @@ final class LoadingStepTracker {
         if (param0 != 140) {
           return;
         }
-        e.field_b = null;
-        wo.field_f = (byte[][]) null;
-        ge.field_c = null;
+        ConnectionStateGlobals.field_b = null;
+        SocialPanel.field_f = (byte[][]) null;
+        RequestState.field_c = null;
         ByteStorage.field_g = null;
         AsyncValidationResult.field_g = null;
     }
@@ -204,19 +204,19 @@ final class LoadingStepTracker {
         int var2Lifetime1;
         var4 = Pixelate.field_H ? 1 : 0;
         try {
-          var1 = mc.field_r;
+          var1 = AchievementMaskRequest.field_r;
           synchronized (var1) {
-            qn.field_p = SoundVoice.field_p;
+            PatchNoteUsage.field_p = SoundVoice.field_p;
             LinkButtonPainter.field_i = LinkButtonPainter.field_i + 1;
             if (0 > PauseMenuScreen.field_q) {
               for (var2 = 0; var2 < 112; var2++) {
                 EmailValidator.field_m[var2] = false;
               }
-              PauseMenuScreen.field_q = wm.field_c;
+              PauseMenuScreen.field_q = ReportReason.field_c;
             } else {
-              while (PauseMenuScreen.field_q != wm.field_c) {
-                var2 = LabeledField.field_Q[wm.field_c];
-                wm.field_c = 127 & 1 + wm.field_c;
+              while (PauseMenuScreen.field_q != ReportReason.field_c) {
+                var2 = LabeledField.field_Q[ReportReason.field_c];
+                ReportReason.field_c = 127 & 1 + ReportReason.field_c;
                 if (var2 >= 0) {
                   EmailValidator.field_m[var2] = true;
                   continue;

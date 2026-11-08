@@ -38,9 +38,9 @@ final class AsyncValidationResult {
 
     final static boolean dispatchKeyInput(int param0, int param1, int param2, int param3) {
         if (SoundVoice.field_q) {
-          return td.field_b.processKey(DualLinkDeque.field_f, ke.field_a, false);
+          return PuzzleModePictureHelpers.field_b.processKey(DualLinkDeque.field_f, KeyEventGlobals.field_a, false);
         }
-        if (un.field_l) {
+        if (PatchEnvelopeSet.field_l) {
           return AccountMessagePanel.handleQuickChatKey(102, param2, param1);
         }
         if (DebouncedValidator.handleChatShortcutKey(param1, param2, param3)) {
@@ -61,14 +61,14 @@ final class AsyncValidationResult {
     }
 
     final static void showLoadingProgressDialog(byte param0) {
-        wa.field_c.refreshPanelVisibility((byte) 54);
+        SpriteBuildHelpers.field_c.refreshPanelVisibility((byte) 54);
         int var1 = -119 / ((param0 + 55) / 51);
-        if (null != cn.field_b) {
-          wa.field_c.showPanel(-6183, cn.field_b);
+        if (null != AccountServerRequestHelpers.field_b) {
+          SpriteBuildHelpers.field_c.showPanel(-6183, AccountServerRequestHelpers.field_b);
           return;
         }
-        cn.field_b = new LoadingProgressDialog(wa.field_c, wp.field_a);
-        wa.field_c.showPanel(-6183, cn.field_b);
+        AccountServerRequestHelpers.field_b = new LoadingProgressDialog(SpriteBuildHelpers.field_c, CurrencyPriceGlobals.field_a);
+        SpriteBuildHelpers.field_c.showPanel(-6183, AccountServerRequestHelpers.field_b);
     }
 
     final boolean isSuccessful(int param0) {

@@ -3,7 +3,7 @@
  */
 final class BouncedownBackground extends BackgroundScene {
     private RisingBubble[] field_n;
-    static ea field_o;
+    static CredentialKind field_o;
     static int field_m;
 
     final static void configureMenuStyles(Sprite[] param0, int param1, Sprite[] param2, int param3, BitmapFont param4, int param5, int param6, BitmapFont param7, int param8, int param9, byte param10, int param11, int param12, int param13, int param14, int param15, Sprite[] param16, int param17, int param18, int param19, int param20) {
@@ -22,7 +22,7 @@ final class BouncedownBackground extends BackgroundScene {
         int var21_int = 0;
         RuntimeException var21 = null;
         try {
-          ValidationIndicator.configureLegacyMenuStyle(param17, param12, param9, new sb(param2), param14, new sb(param16), param8, param11, param13, param7, param5, param18, param3, new sb(param0), param19, param4, (byte) 119, param15, param20, param6, param1);
+          ValidationIndicator.configureLegacyMenuStyle(param17, param12, param9, new NineSliceFrame(param2), param14, new NineSliceFrame(param16), param8, param11, param13, param7, param5, param18, param3, new NineSliceFrame(param0), param19, param4, (byte) 119, param15, param20, param6, param1);
           var21_int = -40 / ((-41 - param10) / 48);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -168,7 +168,7 @@ final class BouncedownBackground extends BackgroundScene {
             var2++;
           }
         } else {
-          field_o = (ea) null;
+          field_o = (CredentialKind) null;
           while (this.field_n.length > var2) {
             this.field_n[var2] = new RisingBubble(100 * var2);
             var2++;
@@ -217,6 +217,6 @@ final class BouncedownBackground extends BackgroundScene {
     }
 
     static {
-        field_o = new ea(0);
+        field_o = new CredentialKind(0);
     }
 }

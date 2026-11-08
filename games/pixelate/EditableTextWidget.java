@@ -8,7 +8,7 @@ class EditableTextWidget extends TextButton {
     private int caretIndex;
     private boolean field_Q;
     private int field_V;
-    static bd field_Z;
+    static ConnectionState field_Z;
     private long field_W;
     private int selectionAnchor;
     static boolean field_T;
@@ -71,7 +71,7 @@ class EditableTextWidget extends TextButton {
           this.maximumLength = param2;
           this.setText(true, (byte) 87, param0);
           this.field_Q = true;
-          this.field_W = hm.monotonicMillis(64);
+          this.field_W = ClockHelpers.monotonicMillis(64);
         } catch (RuntimeException runtimeException) {
           throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "c.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -137,12 +137,12 @@ class EditableTextWidget extends TextButton {
     }
 
     final static void layoutAccountPanelSlide(int param0) {
-        int var1 = (ni.field_q - 640) / 2;
+        int var1 = (TextHotspot.field_q - 640) / 2;
         if (param0 < 18) {
           field_Y = (BinaryBitmapFont) null;
         }
-        int var2 = qh.field_c * qh.field_c;
-        int var3 = var2 - oo.field_b * oo.field_b;
+        int var2 = MusicPlaybackHelpers.field_c * MusicPlaybackHelpers.field_c;
+        int var3 = var2 - AchievementIconGlobals.field_b * AchievementIconGlobals.field_b;
         GreenGrowTheRushesBackground.field_n.setBounds(90, -210 + SoftwareRasterizer.field_d - 4, -(var3 * 199 / var2) + var1, 256, 199);
         MidiPcmStream.field_E.setBounds(0, -120 + SoftwareRasterizer.field_d - 4, 438 * var3 / var2 + var1 + 202, 256, 438);
     }
@@ -176,7 +176,7 @@ class EditableTextWidget extends TextButton {
           if (param1 != 3) {
             this.field_P = true;
           }
-          this.field_W = hm.monotonicMillis(64);
+          this.field_W = ClockHelpers.monotonicMillis(64);
           if (60 == param3) {
             return false;
           }
@@ -374,7 +374,7 @@ class EditableTextWidget extends TextButton {
             if (this.selectionAnchor != this.caretIndex) {
               var6.drawSelection(this.selectionAnchor, (UiComponent) (this), -1, this.caretIndex, param0, param2);
             }
-            var7 = hm.monotonicMillis(64);
+            var7 = ClockHelpers.monotonicMillis(64);
             if ((var7 - this.field_W) % 1000L < 500L) {
               var6.drawCaret(param2, param0, (byte) -91, (UiComponent) (this), this.caretIndex);
             }
@@ -428,7 +428,7 @@ class EditableTextWidget extends TextButton {
             stackIn_6_1 = var8_int;
           }
           this.moveCaret(stackIn_6_1, 81);
-          var8_long = hm.monotonicMillis(64);
+          var8_long = ClockHelpers.monotonicMillis(64);
           stackIn_9_1 = !(-this.field_U + var8_long >= 250L);
           this.field_P = stackIn_9_1;
           if (this.field_P) {
@@ -532,7 +532,7 @@ class EditableTextWidget extends TextButton {
                 this.caretIndex = var6;
               }
             }
-            this.field_W = hm.monotonicMillis(64);
+            this.field_W = ClockHelpers.monotonicMillis(64);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -569,7 +569,7 @@ class EditableTextWidget extends TextButton {
     }
 
     static {
-        field_Z = new bd();
+        field_Z = new ConnectionState();
         field_O = "Your request to join has been declined.";
         field_X = 0;
     }

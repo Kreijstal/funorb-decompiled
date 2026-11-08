@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class DateOfBirthValidator extends DebouncedValidator implements TextInputListener, mb {
+final class DateOfBirthValidator extends DebouncedValidator implements TextInputListener, DateValidatorMarker {
     static int field_j;
     static String field_h;
     DateInputWidget field_g;
@@ -139,23 +139,23 @@ final class DateOfBirthValidator extends DebouncedValidator implements TextInput
           var2_int = this.field_g.getDay((byte) 90);
           var3 = this.field_g.getMonthIndex(25);
           var4 = this.field_g.getYear(param0);
-          var5 = wa.currentYear(-80);
+          var5 = SpriteBuildHelpers.currentYear(-80);
           if (1890 > var4) {
-            stackIn_3_0 = sk.field_a;
+            stackIn_3_0 = LobbyFrameHelpers.field_a;
             return stackIn_3_0;
           }
           if (-3 + var5 < var4) {
-            stackIn_7_0 = sk.field_a;
+            stackIn_7_0 = LobbyFrameHelpers.field_a;
             return stackIn_7_0;
           }
-          if (!dq.isValidDate(var2_int, var3, -2, var4)) {
-            stackIn_10_0 = sk.field_a;
+          if (!TransitionPhase.isValidDate(var2_int, var3, -2, var4)) {
+            stackIn_10_0 = LobbyFrameHelpers.field_a;
             return stackIn_10_0;
           }
         } catch (java.lang.NumberFormatException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = (NumberFormatException) (Object) decompiledCaughtException;
-          return sk.field_a;
+          return LobbyFrameHelpers.field_a;
         }
         return RetroBlock.field_g;
     }
@@ -190,10 +190,10 @@ final class DateOfBirthValidator extends DebouncedValidator implements TextInput
           var2_int = this.field_g.getDay((byte) -84);
           var3 = this.field_g.getMonthIndex(25);
           var4 = this.field_g.getYear(true);
-          var5 = wa.currentYear(-127);
+          var5 = SpriteBuildHelpers.currentYear(-127);
           if (var4 >= 1890 &&
             var5 - 3 >= var4) {
-            if (dq.isValidDate(var2_int, var3, param0 + param0, var4)) {
+            if (TransitionPhase.isValidDate(var2_int, var3, param0 + param0, var4)) {
               return null;
             }
           } else {

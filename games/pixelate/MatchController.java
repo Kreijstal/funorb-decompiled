@@ -40,9 +40,9 @@ final class MatchController {
         int var3 = 6 / ((-71 - param1) / 40);
         this.field_a.boards[param0].loadPicture(this.field_a.puzzle.pictures[this.field_a.puzzle.pictureIndex], -99);
         this.field_a.boards[-param0 + 1].loadCells(0, QueuedInput.field_l);
-        this.field_a.boards[-param0 + 1].pieceColumn = bl.field_b;
+        this.field_a.boards[-param0 + 1].pieceColumn = MouseWheelSetupHelpers.field_b;
         this.field_a.boards[1 - param0].pieceRow = ResizableModalPanel.field_V;
-        int var4 = jk.field_c - this.field_a.scores[param0];
+        int var4 = MeshColourEntry.field_c - this.field_a.scores[param0];
         int var5 = UiComponent.field_u - this.field_a.scores[-param0 + 1];
         if (0 < var4) {
           this.field_d[param0].showScorePopup(-20791, var4, false);
@@ -50,7 +50,7 @@ final class MatchController {
         if (var5 > 0) {
           this.field_d[-param0 + 1].showScorePopup(-20791, var5, false);
         }
-        this.field_a.scores[param0] = jk.field_c;
+        this.field_a.scores[param0] = MeshColourEntry.field_c;
         this.field_a.scores[-param0 + 1] = UiComponent.field_u;
         PlayerController[] var6 = this.field_d;
         for (var7 = 0; var6.length > var7; var7++) {
@@ -64,7 +64,7 @@ final class MatchController {
           this.field_r = true;
         }
         this.field_d[param0].field_c = false;
-        gq.startScorePopup(0, 200, 320, AlphaContainer.formatTemplate(TextButton.field_G, 35, new String[]{this.field_a.playerNames[param0]}));
+        AlternateNameCredentials.startScorePopup(0, 200, 320, AlphaContainer.formatTemplate(TextButton.field_G, 35, new String[]{this.field_a.playerNames[param0]}));
     }
 
     private final void advanceChallengePicture(int param0) {
@@ -139,7 +139,7 @@ final class MatchController {
           return;
         }
         this.field_g = true;
-        var7 = (GameResultsScreen) (wo.getScreen(-119, 13));
+        var7 = (GameResultsScreen) (SocialPanel.getScreen(-119, 13));
         var8 = var7;
         if (0 != DateOfBirthValidator.field_j) {
           if (DateOfBirthValidator.field_j != 1) {
@@ -151,8 +151,8 @@ final class MatchController {
               var8.showMultiplayerResults((String) (var5), -10, this.field_a);
             }
           } else {
-            var5_int = un.field_j.field_e;
-            if (un.field_j.field_n) {
+            var5_int = PatchEnvelopeSet.field_j.field_e;
+            if (PatchEnvelopeSet.field_j.field_n) {
               var5_int++;
             }
             if (50 <= var5_int) {
@@ -164,26 +164,26 @@ final class MatchController {
             }
             stackIn_21_0 = var8;
             stackIn_22_1 = (EmailCredentials.field_k == 0) ? false : true;
-            ((GameResultsScreen) (Object) stackIn_21_0).setPuzzleResult(stackIn_22_1, un.field_j.field_n, gb.field_f[1], gb.field_f[0], (byte) 34, var5_int, un.field_j.getPieceCount((byte) -117));
+            ((GameResultsScreen) (Object) stackIn_21_0).setPuzzleResult(stackIn_22_1, PatchEnvelopeSet.field_j.field_n, ReportAbuseHelpers.field_f[1], ReportAbuseHelpers.field_f[0], (byte) 34, var5_int, PatchEnvelopeSet.field_j.getPieceCount((byte) -117));
           }
         } else {
           this.submitHighscore(17945);
           stackIn_5_0 = var7;
-          stackIn_5_1 = gb.field_f[0];
-          stackIn_5_2 = gb.field_f[1];
+          stackIn_5_1 = ReportAbuseHelpers.field_f[0];
+          stackIn_5_2 = ReportAbuseHelpers.field_f[1];
           stackIn_6_3 = (HighscoresScreen.field_p == null) ? false : true;
           stackIn_8_4 = param0;
           stackIn_8_5 = ArrayWidgetContainer.isAccountUiActive((byte) 85);
           stackIn_9_6 = (EmailCredentials.field_k == 0) ? false : true;
-          ((GameResultsScreen) (Object) stackIn_5_0).showSinglePlayerResults(stackIn_5_1, stackIn_5_2, stackIn_6_3, stackIn_8_4, stackIn_8_5, stackIn_9_6, gb.field_f[3], 2, gb.field_f[2], this.field_a.scores[0]);
+          ((GameResultsScreen) (Object) stackIn_5_0).showSinglePlayerResults(stackIn_5_1, stackIn_5_2, stackIn_6_3, stackIn_8_4, stackIn_8_5, stackIn_9_6, ReportAbuseHelpers.field_f[3], 2, ReportAbuseHelpers.field_f[2], this.field_a.scores[0]);
         }
         if (DateOfBirthValidator.field_j != 1) {
-          dg.playMenuMusic(1, (byte) -97);
+          QuickChatSendHelpers.playMenuMusic(1, (byte) -97);
         }
         if (param1 != 250) {
           this.field_h = false;
         }
-        la.changeScreen(MidiPcmStream.field_t, 13, false, -25528);
+        ScreenChangeHelpers.changeScreen(MidiPcmStream.field_t, 13, false, -25528);
         return;
     }
 
@@ -198,9 +198,9 @@ final class MatchController {
         if (param1 != 58) {
           discarded$0 = this.isPlayerSlot(-117, 64);
         }
-        AccountRegistrationPanel.field_Y.addLast(22125, new ph(param0));
+        AccountRegistrationPanel.field_Y.addLast(22125, new AchievementBannerEntry(param0));
         if (!this.field_l) {
-          DualLinkDeque.field_h.addLast(param1 ^ 22103, new hf(param0, param2, sb.field_a, DialWidgetPainter.field_o, IntKeyLookup.field_f, IconTextComponent.field_Mb));
+          DualLinkDeque.field_h.addLast(param1 ^ 22103, new AchievementRecord(param0, param2, NineSliceFrame.field_a, DialWidgetPainter.field_o, IntKeyLookup.field_f, IconTextComponent.field_Mb));
         }
     }
 
@@ -268,7 +268,7 @@ final class MatchController {
     }
 
     private final void applyMatchResult(boolean param0) {
-        this.field_a.setWinner(false, nf.field_a);
+        this.field_a.setWinner(false, LoginFormGlobals.field_a);
         this.field_a.scores[1] = Kite.field_g;
         this.field_a.scores[0] = IndexedSpriteState.field_k;
         this.showResults(false, 250, false);
@@ -303,7 +303,7 @@ final class MatchController {
           this.applyMatchResult(true);
         }
         Kite.field_g = param2;
-        nf.field_a = param1;
+        LoginFormGlobals.field_a = param1;
     }
 
     final static boolean isNameSeparatorChar(byte param0, char param1) {
@@ -415,7 +415,7 @@ final class MatchController {
           this.applyMatchResult(true);
           return;
         }
-        gb.field_f[0] = gb.field_f[0] + 1;
+        ReportAbuseHelpers.field_f[0] = ReportAbuseHelpers.field_f[0] + 1;
         if (param1) {
           this.advanceIntegrityCounters(114);
         }
@@ -438,7 +438,7 @@ final class MatchController {
           this.handleKey(82, (byte) 123);
         }
         LoginCredentials.field_e.tick(param0 + 109);
-        ih.tickTutorial(false);
+        TutorialTickHelpers.tickTutorial(false);
         if (param0 != -110) {
           this.field_A = (PictureStrip) null;
         }
@@ -452,7 +452,7 @@ final class MatchController {
         if (null == HighscoresScreen.field_p &&
           var2 > 0 &&
           !this.field_l) {
-          HighscoresScreen.field_p = new rh(0, 65535, SoundVoice.field_n, ScoreMarkerDemo.field_j, ra.field_a, PlayerController.field_r, new int[]{var2});
+          HighscoresScreen.field_p = new HighscoreSubmission(0, 65535, SoundVoice.field_n, ScoreMarkerDemo.field_j, NineSliceSpriteFactory.field_a, PlayerController.field_r, new int[]{var2});
           if (!ArrayWidgetContainer.isAccountUiActive((byte) 120)) {
             ValidationHelpWidget.queueHighscoreSubmission(HighscoresScreen.field_p, true, 3);
           }
@@ -471,12 +471,12 @@ final class MatchController {
           }
           ResizableModalPanel.field_V = 15 & param0;
           UiComponent.field_u = param1;
-          bl.field_b = param0 >> 4;
+          MouseWheelSetupHelpers.field_b = param0 >> 4;
           if (param4 <= 23) {
             this.tickPuzzleMode(44);
           }
           QueuedInput.field_l = param6;
-          jk.field_c = param5;
+          MeshColourEntry.field_c = param5;
         } catch (RuntimeException runtimeException) {
           throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "ii.U(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
         }
@@ -514,13 +514,13 @@ final class MatchController {
             exception = (Exception) (Object) decompiledCaughtException;
             exception.printStackTrace();
           }
-          if (fq.field_o != null &&
+          if (RankingSummaryScreen.field_o != null &&
             SpriteCheckboxPainter.field_d) {
-            pe.field_b.makeRasterTarget();
+            PlayerActionHelpers.field_b.makeRasterTarget();
             SoftwareRasterizer.clear();
-            fq.field_o.render(false);
+            RankingSummaryScreen.field_o.render(false);
             ClientException.field_f.bindRaster(19692);
-            pe.field_b.drawAlpha(0, 0, DebouncedValidator.field_d);
+            PlayerActionHelpers.field_b.drawAlpha(0, 0, DebouncedValidator.field_d);
           }
           if (Match.field_u) {
             return;
@@ -536,11 +536,11 @@ final class MatchController {
             MusicCrossfadeStream.drawScorePopups(91);
             this.field_j.draw(param1 + 2);
             if (param0) {
-              rm.drawTutorialPage(0);
+              TutorialDrawHelpers.drawTutorialPage(0);
             }
             LoginCredentials.field_e.drawTitleBanner((byte) -119);
-            if (null != fq.field_o) {
-              fq.field_o.drawTitleBanner((byte) -108);
+            if (null != RankingSummaryScreen.field_o) {
+              RankingSummaryScreen.field_o.drawTitleBanner((byte) -108);
             }
           } else {
             if (DateOfBirthValidator.field_j != 1) {
@@ -548,7 +548,7 @@ final class MatchController {
                 MusicCrossfadeStream.drawScorePopups(68);
               }
             } else {
-              un.field_j.draw(param1 ^ 550);
+              PatchEnvelopeSet.field_j.draw(param1 ^ 550);
             }
           }
           if (param0) {
@@ -558,7 +558,7 @@ final class MatchController {
             this.field_j.draw(2);
           }
           if (MenuInputState.field_e &&
-            cm.field_m) {
+            VolumeControlledVoice.field_m) {
             PieceTiming.field_e.drawText(Integer.toString(BoardView.field_k), 30, 100, 1, -1);
           }
           if (ModalPanel.field_K) {
@@ -567,7 +567,7 @@ final class MatchController {
             PieceTiming.field_e.drawRightAlignedText((var3 - var5_long) / 1024L + " kB / " + var3 / 1024L + " kB", 610, 100, 0, 0);
           }
           if (FireworkDisplay.field_e) {
-            var17 = qj.field_e;
+            var17 = PrivateChatHelpers.field_e;
             var4 = var17.maxDescent + var17.maxAscent;
             var5 = 30;
             var6 = var4 + 15;
@@ -706,8 +706,8 @@ final class MatchController {
             }
           }
           var5 = var4;
-          stackIn_10_0 = (!gq.isOfflineOrAccountUi(83)) ? 0 : 12;
-          la.changeScreen(stackIn_10_0, var5, false, -25528);
+          stackIn_10_0 = (!AlternateNameCredentials.isOfflineOrAccountUi(83)) ? 0 : 12;
+          ScreenChangeHelpers.changeScreen(stackIn_10_0, var5, false, -25528);
           return;
         }
         if (MenuInputState.field_e) {
@@ -784,8 +784,8 @@ final class MatchController {
               stackIn_21_0 = !(ModalPanel.field_K);
               ModalPanel.field_K = stackIn_21_0;
             } else {
-              stackIn_17_0 = !(cm.field_m);
-              cm.field_m = stackIn_17_0;
+              stackIn_17_0 = !(VolumeControlledVoice.field_m);
+              VolumeControlledVoice.field_m = stackIn_17_0;
             }
           }
         }
@@ -796,7 +796,7 @@ final class MatchController {
             var4Lifetime1 = 4;
           }
           if (param0 == 98 ||
-            param0 == el.field_a) {
+            param0 == EmailValidationState.field_a) {
             var4Lifetime1 = 0;
           }
           if (param0 == 99 ||
@@ -854,15 +854,15 @@ final class MatchController {
         if (param0 <= 101) {
           this.field_o = -75;
         }
-        un.field_j.animateListScroll(27420);
-        if (!un.field_j.field_f &&
+        PatchEnvelopeSet.field_j.animateListScroll(27420);
+        if (!PatchEnvelopeSet.field_j.field_f &&
           var3.field_l) {
           if (!this.field_l) {
-            un.field_j.markPuzzleCompleted(20604);
+            PatchEnvelopeSet.field_j.markPuzzleCompleted(20604);
           }
           var3.restartPieceDrop(93);
           this.field_a.boards[this.field_z].clear(-121);
-          un.field_j.field_f = true;
+          PatchEnvelopeSet.field_j.field_f = true;
           if ((33554431L & CheckboxPainter.field_h) == 33554431L) {
             this.awardAchievement(14, (byte) 58, 241);
           }
@@ -870,16 +870,16 @@ final class MatchController {
             this.awardAchievement(15, (byte) 58, 240);
           }
         }
-        if ((un.field_j.field_f || un.field_j.field_h) &&
+        if ((PatchEnvelopeSet.field_j.field_f || PatchEnvelopeSet.field_j.field_h) &&
           !var3.isBoardAnimating(-124)) {
-          gb.field_f[1] = this.field_a.boards[0].piecesPlaced;
+          ReportAbuseHelpers.field_f[1] = this.field_a.boards[0].piecesPlaced;
           this.showResults(false, 250, false);
         }
     }
 
     private final void advanceIntegrityCounters(int param0) {
-        ra.field_a = ra.field_a + 7;
-        IntKeyLookup.field_f = IntKeyLookup.field_f + sb.field_a;
+        NineSliceSpriteFactory.field_a = NineSliceSpriteFactory.field_a + 7;
+        IntKeyLookup.field_f = IntKeyLookup.field_f + NineSliceFrame.field_a;
         SoundVoice.field_n = SoundVoice.field_n + 7;
         IconTextComponent.field_Mb = IconTextComponent.field_Mb + 1;
         if (param0 <= 93) {
@@ -901,7 +901,7 @@ final class MatchController {
         try {
           TimerBarDemo.field_q = param2;
           int var5_int = 55 / ((2 - param3) / 55);
-          UiContainer.openStyledMessageMenu(param0, param4, 5, param1, ab.field_c, 320, PieceTiming.field_e.maxAscent, 10, TutorialPage.field_g, true, PieceTiming.field_e, PieceTiming.field_e.maxDescent + PieceTiming.field_e.maxAscent, (byte) 27, 15, 240);
+          UiContainer.openStyledMessageMenu(param0, param4, 5, param1, ResultCaptionGlobals.field_c, 320, PieceTiming.field_e.maxAscent, 10, TutorialPage.field_g, true, PieceTiming.field_e, PieceTiming.field_e.maxDescent + PieceTiming.field_e.maxAscent, (byte) 27, 15, 240);
         } catch (RuntimeException runtimeException) {
           throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "ii.HA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
@@ -915,7 +915,7 @@ final class MatchController {
     }
 
     MatchController() {
-        this((String[]) null, 0, false, JavaRandomHelpers.randomBelow(ea.field_b, -115, 2147483647), 0, 0, 0);
+        this((String[]) null, 0, false, JavaRandomHelpers.randomBelow(CredentialKind.field_b, -115, 2147483647), 0, 0, 0);
     }
 
     final void startNextRound(int param0) {
@@ -1111,7 +1111,7 @@ final class MatchController {
         String var7;
         PlayerController var8;
         int var5Lifetime1;
-        sb.field_a = sb.field_a - 1;
+        NineSliceFrame.field_a = NineSliceFrame.field_a - 1;
         DialWidgetPainter.field_o = DialWidgetPainter.field_o - IconTextComponent.field_Mb;
         ScoreMarkerDemo.field_j = ScoreMarkerDemo.field_j + 1;
         PlayerController.field_r = PlayerController.field_r + this.field_a.scores[0];
@@ -1128,11 +1128,11 @@ final class MatchController {
         if (null != ChatMessage.field_p &&
           ChatMessage.field_p.field_n &&
           ChatMessage.field_p.field_r != null) {
-          this.field_e.field_f = di.formatThousands(false, ChatMessage.field_p.field_l[1][0]);
+          this.field_e.field_f = NumberFormatHelpers.formatThousands(false, ChatMessage.field_p.field_l[1][0]);
           ChatMessage.field_p = null;
         }
         if (var4.isExpired(false)) {
-          gb.field_f[1] = gb.field_f[1] + this.field_a.boards[0].piecesPlaced;
+          ReportAbuseHelpers.field_f[1] = ReportAbuseHelpers.field_f[1] + this.field_a.boards[0].piecesPlaced;
           this.showResults(false, param0 + 209, false);
           return;
         }
@@ -1161,7 +1161,7 @@ final class MatchController {
           this.field_a.field_r > 0) {
           if (50 == var3.field_f) {
             var8.showScorePopup(-20791, var3.field_f, true);
-            gb.field_f[2] = gb.field_f[2] + 1;
+            ReportAbuseHelpers.field_f[2] = ReportAbuseHelpers.field_f[2] + 1;
             IterableNodeHashTable.advanceBackgroundSkin((byte) -117);
           }
           var5 = var3.field_f;
@@ -1186,7 +1186,7 @@ final class MatchController {
           if (0 < this.field_a.field_r) {
             var6 = var5Lifetime1;
             this.field_a.scores[0] = this.field_a.scores[0] + var6;
-            ra.field_a = ra.field_a - ScoreMarkerDemo.field_j * var6;
+            NineSliceSpriteFactory.field_a = NineSliceSpriteFactory.field_a - ScoreMarkerDemo.field_j * var6;
             IntKeyLookup.field_f = IntKeyLookup.field_f + (var6 << 7);
             if (this.field_a.scores[0] >= 10000) {
               this.awardAchievement(0, (byte) 58, 255);
@@ -1206,7 +1206,7 @@ final class MatchController {
             this.field_a.field_r > 10) {
             this.awardAchievement(7, (byte) 58, 248);
           }
-          gb.field_f[3] = gb.field_f[3] + 1;
+          ReportAbuseHelpers.field_f[3] = ReportAbuseHelpers.field_f[3] + 1;
           var8.restartPieceDrop(93);
           var2.field_l = false;
           this.field_m = true;
@@ -1236,7 +1236,7 @@ final class MatchController {
         if (this.field_m &&
           var8.isBoardIdle(param0 ^ -42)) {
           if (this.field_a.startNextPicture(0)) {
-            gb.field_f[1] = gb.field_f[1] + this.field_a.boards[0].piecesPlaced;
+            ReportAbuseHelpers.field_f[1] = ReportAbuseHelpers.field_f[1] + this.field_a.boards[0].piecesPlaced;
             this.advanceChallengePicture(125);
           }
           this.startNextRound(param0 - 56);
@@ -1287,13 +1287,13 @@ final class MatchController {
         this.field_r = true;
         try {
           IntKeyLookup.field_f = 770566011;
-          sb.field_a = 22178;
+          NineSliceFrame.field_a = 22178;
           stackIn_4_0 = (DateOfBirthValidator.field_j == 2);
           AgeValidator.field_p = stackIn_4_0;
           EmailCredentials.field_k = 0;
           DialWidgetPainter.field_o = 2359467;
           SoundVoice.field_n = 1426010794;
-          ra.field_a = 1947508858;
+          NineSliceSpriteFactory.field_a = 1947508858;
           this.field_z = param1;
           IconTextComponent.field_Mb = 34851;
           if (param0 == null) {
@@ -1309,23 +1309,23 @@ final class MatchController {
             stackIn_7_1[stackIn_7_2] = stackIn_8_3;
             param0 = stackIn_7_0;
           }
-          stackIn_12_0 = !(wo.field_h < 2);
+          stackIn_12_0 = !(SocialPanel.field_h < 2);
           MenuInputState.field_e = stackIn_12_0;
           ScoreMarkerDemo.field_j = 13483;
           PlayerController.field_r = 16042;
           UiComponent.finishAllScorePopups(0);
-          gb.field_f = new int[4];
+          ReportAbuseHelpers.field_f = new int[4];
           WeightedLruCache.resetAnimationFrameCounter(true);
           if (DateOfBirthValidator.field_j != 0) {
             if (DateOfBirthValidator.field_j == 1) {
-              this.field_a = new Match(param0, 0, DateOfBirthValidator.field_j, param3, 0, un.field_j.field_a);
-              aq.selectBackgroundSkin(this.field_a.field_g, false);
+              this.field_a = new Match(param0, 0, DateOfBirthValidator.field_j, param3, 0, PatchEnvelopeSet.field_j.field_a);
+              SkinSelectionHelpers.selectBackgroundSkin(this.field_a.field_g, false);
               this.createControllers(127);
               this.startNextRound(-100);
             } else {
               if (DateOfBirthValidator.field_j == 2) {
                 this.field_a = new Match(param0, param4, DateOfBirthValidator.field_j, param3, param5, param6);
-                aq.selectBackgroundSkin(this.field_a.field_g, false);
+                SkinSelectionHelpers.selectBackgroundSkin(this.field_a.field_g, false);
                 stackIn_20_0 = this;
                 stackIn_20_1 = null;
                 stackIn_20_2 = null;
@@ -1361,7 +1361,7 @@ final class MatchController {
               }
             }
           } else {
-            aq.shuffleSkinOrder(true);
+            SkinSelectionHelpers.shuffleSkinOrder(true);
             this.field_j = (StatusBar) ((Object) new TimerBar(90));
             if (!ArrayWidgetContainer.isAccountUiActive((byte) 95)) {
               ChatMessage.field_p = PasswordValidator.getRankingTableRequest(3, (byte) -97, 1, 10, 0);

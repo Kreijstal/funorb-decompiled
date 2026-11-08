@@ -3,7 +3,7 @@
  */
 final class NumericDateInputWidget extends DateInputWidget {
     static boolean field_V;
-    static wm field_T;
+    static ReportReason field_T;
     private EditableTextWidget field_Q;
     private EditableTextWidget field_O;
     private EditableTextWidget field_U;
@@ -64,7 +64,7 @@ final class NumericDateInputWidget extends DateInputWidget {
               decompiledCaughtException = decompiledCaughtParameter0;
               throwable = decompiledCaughtException;
             }
-            ib.updatePageLinks(param1, false);
+            GridSize.updatePageLinks(param1, false);
             if (param2) {
               return;
             }
@@ -204,9 +204,9 @@ final class NumericDateInputWidget extends DateInputWidget {
           param0 = param0 + this.field_p;
           int var5 = -46 / ((param3 - 70) / 49);
           param2 = param2 + this.field_z;
-          this.drawCenteredLabel(ij.field_r, param0, param2, 0, this.field_U);
-          this.drawCenteredLabel(fc.field_b, param0, param2, 0, this.field_O);
-          this.drawCenteredLabel(ji.field_e, param0, param2, 0, this.field_Q);
+          this.drawCenteredLabel(BlankScreen.field_r, param0, param2, 0, this.field_U);
+          this.drawCenteredLabel(LobbyListBindingHelpers.field_b, param0, param2, 0, this.field_O);
+          this.drawCenteredLabel(FriendCaptionGlobals.field_e, param0, param2, 0, this.field_Q);
           return;
         }
     }
@@ -216,7 +216,7 @@ final class NumericDateInputWidget extends DateInputWidget {
           return;
         }
         try {
-          ep.field_b.drawCentered(param0, param2 + (param4.field_z + (param4.field_E >> 1)), -5 + param4.field_p + param1, 16777215, -1);
+          PolygonClipHelpers.field_b.drawCentered(param0, param2 + (param4.field_z + (param4.field_E >> 1)), -5 + param4.field_p + param1, 16777215, -1);
         } catch (RuntimeException runtimeException) {
           throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "gj.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
@@ -274,6 +274,6 @@ final class NumericDateInputWidget extends DateInputWidget {
 
     static {
         field_R = new String[]{"A slightly different approach is required to complete all fifty pictures in Puzzle Mode. Although the timer bar is gone, you'll only have a <col=FF9900>limited supply of tiles</col> in the list on the right. If you run out of tiles, then the puzzle is failed and you will have to try again. "};
-        field_T = new wm(4, 1, 1, 1);
+        field_T = new ReportReason(4, 1, 1, 1);
     }
 }

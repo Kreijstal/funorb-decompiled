@@ -167,7 +167,7 @@ final class WidgetStyleLayer {
         RuntimeException var6_ref = null;
         int var7 = 0;
         try {
-          dk.drawNineSliceFrame(param2.field_E, param1 + param2.field_z, (byte) 75, param2.field_C, param0 + param2.field_p, this.field_k);
+          NineSliceFrameHelpers.drawNineSliceFrame(param2.field_E, param1 + param2.field_z, (byte) 75, param2.field_C, param0 + param2.field_p, this.field_k);
           if (null != this.field_j) {
             var6_int = this.field_d + (param2.field_z + param1);
             var7 = param2.field_p + param0 + this.field_h;

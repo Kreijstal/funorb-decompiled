@@ -1,0 +1,107 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class TutorialTickHelpers {
+    static String field_e;
+    static SceneWidget field_g;
+    static int[] field_c;
+    static String field_d;
+    static String field_b;
+    static Sprite[] field_a;
+    static int field_f;
+
+    final static TextWidgetPainter getHelpTextPainter(byte param0) {
+        int var1 = 116 % ((3 - param0) / 36);
+        if (Js5Transport.field_d == null) {
+          Js5Transport.field_d = new TextWidgetPainter(PolygonClipHelpers.field_b, 20, 0, 0, 0, 11579568, -1, 0, 0, PolygonClipHelpers.field_b.maxAscent, -1, 2147483647, true);
+        }
+        return Js5Transport.field_d;
+    }
+
+    public static void releaseStatics(int param0) {
+        field_c = null;
+        field_d = null;
+        field_a = null;
+        field_e = null;
+        field_b = null;
+        if (param0 != -1) {
+          return;
+        }
+        field_g = null;
+    }
+
+    final static void tickTutorial(boolean param0) {
+        int fieldTemp$0 = 0;
+        int fieldTemp$1 = 0;
+        if (param0) {
+          field_c = (int[]) null;
+          if (RankingSummaryScreen.field_o == null) {
+            return;
+          }
+          RankingSummaryScreen.field_o.tick(-1);
+          fieldTemp$0 = DebouncedValidator.field_d + 1;
+          DebouncedValidator.field_d = DebouncedValidator.field_d + 1;
+          if (fieldTemp$0 < ChatChannelGlobals.field_f) {
+            Kite.field_t = DebouncedValidator.field_d - 128;
+            Kite.field_t = Kite.field_t < 0 ? 0 : 6 * Kite.field_t;
+            Kite.field_t = Kite.field_t > 256 ? 256 : Kite.field_t;
+            if (SpriteCheckboxPainter.field_d) {
+              return;
+            }
+            if (DebouncedValidator.field_d >= ChatChannelGlobals.field_f - 2) {
+              return;
+            }
+            DebouncedValidator.field_d = -2 + ChatChannelGlobals.field_f;
+            return;
+          }
+          LoginCredentials.field_e = RankingSummaryScreen.field_o;
+          DebouncedValidator.field_d = 0;
+          RankingSummaryScreen.field_o = null;
+          Kite.field_t = DebouncedValidator.field_d - 128;
+          Kite.field_t = Kite.field_t < 0 ? 0 : 6 * Kite.field_t;
+          Kite.field_t = Kite.field_t > 256 ? 256 : Kite.field_t;
+          if (SpriteCheckboxPainter.field_d) {
+            return;
+          }
+          if (DebouncedValidator.field_d >= ChatChannelGlobals.field_f - 2) {
+            return;
+          }
+          DebouncedValidator.field_d = -2 + ChatChannelGlobals.field_f;
+          return;
+        }
+        if (RankingSummaryScreen.field_o != null) {
+          RankingSummaryScreen.field_o.tick(-1);
+          fieldTemp$1 = DebouncedValidator.field_d + 1;
+          DebouncedValidator.field_d = DebouncedValidator.field_d + 1;
+          if (fieldTemp$1 >= ChatChannelGlobals.field_f) {
+            LoginCredentials.field_e = RankingSummaryScreen.field_o;
+            DebouncedValidator.field_d = 0;
+            RankingSummaryScreen.field_o = null;
+            Kite.field_t = DebouncedValidator.field_d - 128;
+            Kite.field_t = Kite.field_t < 0 ? 0 : 6 * Kite.field_t;
+            Kite.field_t = Kite.field_t > 256 ? 256 : Kite.field_t;
+            if (!SpriteCheckboxPainter.field_d &&
+              DebouncedValidator.field_d < ChatChannelGlobals.field_f - 2) {
+              DebouncedValidator.field_d = -2 + ChatChannelGlobals.field_f;
+              return;
+            }
+            return;
+          }
+          Kite.field_t = DebouncedValidator.field_d - 128;
+          Kite.field_t = Kite.field_t < 0 ? 0 : 6 * Kite.field_t;
+          Kite.field_t = Kite.field_t > 256 ? 256 : Kite.field_t;
+          if (!SpriteCheckboxPainter.field_d &&
+            DebouncedValidator.field_d < ChatChannelGlobals.field_f - 2) {
+            DebouncedValidator.field_d = -2 + ChatChannelGlobals.field_f;
+            return;
+          }
+        }
+    }
+
+    static {
+        field_c = new int[8192];
+        field_d = "Connecting to<br>friend server...";
+        field_e = "End Game";
+        field_b = "Invite";
+    }
+}

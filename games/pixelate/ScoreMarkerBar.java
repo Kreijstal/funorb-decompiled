@@ -88,8 +88,8 @@ final class ScoreMarkerBar extends StatusBar {
           var5Lifetime1 = StatusBar.field_a[11] >> 8;
           var6Lifetime1 = GameModeCard.field_f << 4;
           var7Lifetime1 = 0;
-          var8Lifetime1 = mi.fixedSine(-4096, var6Lifetime1) >> 8;
-          var9Lifetime1 = th.fixedCosine(var6Lifetime1, param0 + 8085) >> 8;
+          var8Lifetime1 = NotLoggedInScreen.fixedSine(-4096, var6Lifetime1) >> 8;
+          var9Lifetime1 = TrigonometryHelpers.fixedCosine(var6Lifetime1, param0 + 8085) >> 8;
           if (ProxyAuthenticationException.field_d != -1 &&
             -1 != StatusBar.field_k) {
             var9Lifetime1 = -128;
@@ -150,7 +150,7 @@ final class ScoreMarkerBar extends StatusBar {
         int var5;
         int var6;
         var6 = Pixelate.field_H ? 1 : 0;
-        var1 = hm.monotonicMillis(64);
+        var1 = ClockHelpers.monotonicMillis(64);
         if (!param0) {
           ScoreMarkerBar.isConnectionRetryDue(true);
         }
@@ -223,8 +223,8 @@ final class ScoreMarkerBar extends StatusBar {
         if (var2 < 0) {
           var2 = 0;
         }
-        if (gd.field_h.length <= var2) {
-          var2 = -1 + gd.field_h.length;
+        if (MainScreenWidgetGlobals.field_h.length <= var2) {
+          var2 = -1 + MainScreenWidgetGlobals.field_h.length;
         }
         this.drawBarFrame(65, var2, this.field_m, this.field_n);
         SoftwareRasterizer.drawVerticalLineAlpha(320, this.field_m + 3, 19, 0, 128);

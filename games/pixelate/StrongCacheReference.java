@@ -64,16 +64,16 @@ final class StrongCacheReference extends CacheReference {
           if (param0 != -128) {
             field_v = -81;
           }
-          param1.addMouseListener(fj.field_c);
-          param1.addMouseMotionListener(fj.field_c);
-          param1.addFocusListener(fj.field_c);
+          param1.addMouseListener(MouseInputGlobals.field_c);
+          param1.addMouseMotionListener(MouseInputGlobals.field_c);
+          param1.addFocusListener(MouseInputGlobals.field_c);
         } catch (RuntimeException runtimeException) {
           throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "tj.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static IndexedSprite createIndexedSpriteFromDecodeBuffers(byte param0) {
-        IndexedSprite var1 = new IndexedSprite(field_y, jb.field_a, IntrusiveNode.field_b[0], e.field_b[0], ByteStorage.field_g[0], ge.field_c[0], wo.field_f[0], AsyncValidationResult.field_g);
+        IndexedSprite var1 = new IndexedSprite(field_y, TutorialPageGlobals.field_a, IntrusiveNode.field_b[0], ConnectionStateGlobals.field_b[0], ByteStorage.field_g[0], RequestState.field_c[0], SocialPanel.field_f[0], AsyncValidationResult.field_g);
         if (param0 >= -78) {
           return (IndexedSprite) null;
         }
@@ -88,18 +88,18 @@ final class StrongCacheReference extends CacheReference {
         if (param0 != 20) {
           field_w = (String) null;
         }
-        wa.field_c.refreshPanelVisibility((byte) 54);
+        SpriteBuildHelpers.field_c.refreshPanelVisibility((byte) 54);
         LoadingProgressDialog.showAccountRequestDialog(false, SecondaryNodeDequeIterator.field_b, param0 ^ -26047);
     }
 
-    final static void a(int param0, boolean param1, int param2, int param3, BitmapFont param4, Sprite[] param5, int param6, int param7, Sprite[] param8, int param9, BitmapFont param10, byte param11, int param12, int param13, int param14) {
+    final static void configureMenusAndFullscreen(int param0, boolean param1, int param2, int param3, BitmapFont param4, Sprite[] param5, int param6, int param7, Sprite[] param8, int param9, BitmapFont param10, byte param11, int param12, int param13, int param14) {
         try {
           if (param11 != 122) {
             java.awt.Component var16 = (java.awt.Component) null;
             StrongCacheReference.attachMouseInput((byte) 102, (java.awt.Component) null);
           }
           Sprite[] var17 = (Sprite[]) null;
-          BouncedownBackground.configureMenuStyles((Sprite[]) null, param6, param8, 0, param10, 0, ce.field_b, param4, 480, param2, (byte) -100, param14, param3, param0, param12, param13, param5, param9, IndexedSpriteState.field_l, MatchingTextValidator.field_s, param7);
+          BouncedownBackground.configureMenuStyles((Sprite[]) null, param6, param8, 0, param10, 0, ChatChannelGlobals.field_b, param4, 480, param2, (byte) -100, param14, param3, param0, param12, param13, param5, param9, IndexedSpriteState.field_l, MatchingTextValidator.field_s, param7);
           Bzip2State.toggleFullscreen(param1, param11 ^ 124);
         } catch (RuntimeException runtimeException) {
           throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "tj.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + param7 + ',' + (param8 != null ? "{...}" : "null") + ',' + param9 + ',' + (param10 != null ? "{...}" : "null") + ',' + param11 + ',' + param12 + ',' + param13 + ',' + param14 + ')');
@@ -200,10 +200,10 @@ final class StrongCacheReference extends CacheReference {
         int var4;
         int var5;
         if (param1) {
-          if (ep.field_c[param3] > ep.field_c[param2]) {
+          if (PolygonClipHelpers.field_c[param3] > PolygonClipHelpers.field_c[param2]) {
             return true;
           }
-          if (ep.field_c[param2] > ep.field_c[param3]) {
+          if (PolygonClipHelpers.field_c[param2] > PolygonClipHelpers.field_c[param3]) {
             return false;
           }
           if (SecondaryNodeDequeIterator.field_c[param2] < SecondaryNodeDequeIterator.field_c[param3]) {
@@ -219,10 +219,10 @@ final class StrongCacheReference extends CacheReference {
           if (SecondaryNodeDequeIterator.field_c[param2] > SecondaryNodeDequeIterator.field_c[param3]) {
             return false;
           }
-          if (ep.field_c[param2] < ep.field_c[param3]) {
+          if (PolygonClipHelpers.field_c[param2] < PolygonClipHelpers.field_c[param3]) {
             return true;
           }
-          if (ep.field_c[param3] < ep.field_c[param2]) {
+          if (PolygonClipHelpers.field_c[param3] < PolygonClipHelpers.field_c[param2]) {
             return false;
           }
         }
@@ -244,9 +244,9 @@ final class StrongCacheReference extends CacheReference {
         int var1 = 0;
         if (LinkButtonPainter.field_h < 224) {
           var1 = LinkButtonPainter.field_h % 32;
-          nk.setMusicVolume((byte) 93, LinkButtonPainter.field_h + 32 - var1);
+          ChatPanelHelpers.setMusicVolume((byte) 93, LinkButtonPainter.field_h + 32 - var1);
         } else {
-          nk.setMusicVolume((byte) 93, 256);
+          ChatPanelHelpers.setMusicVolume((byte) 93, 256);
         }
         if (param0 != 32) {
           StrongCacheReference.releaseStatics(117);

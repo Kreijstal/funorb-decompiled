@@ -22,8 +22,8 @@ final class AgeValidator extends TextFieldValidator {
         RuntimeException decompiledCaughtException = null;
         try {
           var4 = (CharSequence) ((Object) param0);
-          if (!td.isDecimalInteger(-106, var4)) {
-            stackIn_3_0 = sk.field_a;
+          if (!PuzzleModePictureHelpers.isDecimalInteger(-106, var4)) {
+            stackIn_3_0 = LobbyFrameHelpers.field_a;
             return stackIn_3_0;
           }
           if (!param1) {
@@ -31,13 +31,13 @@ final class AgeValidator extends TextFieldValidator {
             return stackIn_6_0;
           }
           var5 = (CharSequence) ((Object) param0);
-          var3_int = na.parseDecimalInt(var5, (byte) -33);
+          var3_int = GameSocketHelpers.parseDecimalInt(var5, (byte) -33);
           if (var3_int > 0 &&
             var3_int <= 130) {
             stackIn_13_0 = RetroBlock.field_g;
             return stackIn_13_0;
           }
-          stackIn_11_0 = sk.field_a;
+          stackIn_11_0 = LobbyFrameHelpers.field_a;
           return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -70,10 +70,10 @@ final class AgeValidator extends TextFieldValidator {
             stackIn_2_0 = (String) null;
             return stackIn_2_0;
           }
-          if (this.validateText(param1, true) != sk.field_a) {
+          if (this.validateText(param1, true) != LobbyFrameHelpers.field_a) {
             return null;
           }
-          stackIn_6_0 = mc.field_t;
+          stackIn_6_0 = AchievementMaskRequest.field_t;
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -111,7 +111,7 @@ final class AgeValidator extends TextFieldValidator {
             field_p = true;
           }
           while (var4 != null) {
-            em.sendRankingQuery((byte) -7, var4, param1);
+            ContextMenuHelpers.sendRankingQuery((byte) -7, var4, param1);
             var4 = (RankingQuery) (LoginCredentials.field_c.next(1504642273));
           }
           return;

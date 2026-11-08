@@ -20,12 +20,12 @@ final class EmailValidator extends TextFieldValidator {
           if (!param1) {
             EmailValidator.releaseStatics(54);
           }
-          stackIn_5_0 = (hm.validateEmailAddress(0, param0) != null) ? 0 : 1;
+          stackIn_5_0 = (ClockHelpers.validateEmailAddress(0, param0) != null) ? 0 : 1;
           var3_int = stackIn_5_0;
           if (var3_int != 0) {
             return RetroBlock.field_g;
           }
-          stackIn_8_0 = sk.field_a;
+          stackIn_8_0 = LobbyFrameHelpers.field_a;
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -46,7 +46,7 @@ final class EmailValidator extends TextFieldValidator {
     }
 
     final static void playPieceSound(byte param0, int param1) {
-        mc.playSoundEffect(8 * NightToRememberBackground.field_o + param1, -127);
+        AchievementMaskRequest.playSoundEffect(8 * NightToRememberBackground.field_o + param1, -127);
         if (param0 != 96) {
           field_n = (String) null;
         }
@@ -131,7 +131,7 @@ final class EmailValidator extends TextFieldValidator {
         for (var2_int = 0; var2_int < SecondaryNodeDeque.field_e; var2_int++) {
           ArchiveRequest.field_A[param0 + var2_int] = var2_int;
         }
-        SingleChildContainer.sortRankedEntryRange(param0 + SecondaryNodeDeque.field_e, ro.field_a, false, qn.field_k, param0, 81, param0 + param0);
+        SingleChildContainer.sortRankedEntryRange(param0 + SecondaryNodeDeque.field_e, NameSuggestionHelpers.field_a, false, PatchNoteUsage.field_k, param0, 81, param0 + param0);
         if (param1 < 1) {
           return;
         }
@@ -167,14 +167,14 @@ final class EmailValidator extends TextFieldValidator {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.validateText(param1, true) == sk.field_a) {
+          if (this.validateText(param1, true) == LobbyFrameHelpers.field_a) {
             stackIn_2_0 = QuickChatPhraseDefinition.field_A;
             return stackIn_2_0;
           }
           if (param0 > -76) {
             field_n = (String) null;
           }
-          stackIn_6_0 = e.field_c;
+          stackIn_6_0 = ConnectionStateGlobals.field_c;
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -52,7 +52,7 @@ final class LobbyPlayer extends SceneWidget {
           this.field_Fb = param1;
           this.field_Ub = param0;
           var6 = (CharSequence) ((Object) this.field_Ub);
-          dh.normalizeDisplayName(var6, (byte) 77);
+          DisplayNameHelpers.normalizeDisplayName(var6, (byte) 77);
         } catch (RuntimeException runtimeException) {
           throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "uj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -82,12 +82,12 @@ final class LobbyPlayer extends SceneWidget {
         stackIn_5_0 = (0 != (128 & var3));
         TextWidgetPainter.field_n = stackIn_5_0;
         BoundedRandomAccessFile.field_d = var8.readUnsignedByte(255);
-        cd.field_g = var8.readLong(false);
+        LoginMethodGlobals.field_g = var8.readLong(false);
         if (HowToPlayScreen.field_o == 2) {
-          qf.field_b = var8.readUnsignedShort((byte) 2);
+          KeyMapHelpers.field_b = var8.readUnsignedShort((byte) 2);
           ModalStack.field_I = var8.readUnsignedMedium((byte) 13);
         } else {
-          qf.field_b = 0;
+          KeyMapHelpers.field_b = 0;
           ModalStack.field_I = 0;
         }
         stackIn_11_0 = (var8.readUnsignedByte(255) != 1) ? 0 : 1;
@@ -100,14 +100,14 @@ final class LobbyPlayer extends SceneWidget {
         }
         if (HowToPlayScreen.field_o == 1) {
           OptionsScreen.field_s = var8.readUnsignedShort((byte) -4);
-          cl.field_h = var8.readString(5);
+          Cp1252EncodingHelpers.field_h = var8.readString(5);
         } else {
           if (HowToPlayScreen.field_o == 4) {
             OptionsScreen.field_s = var8.readUnsignedShort((byte) -4);
-            cl.field_h = var8.readString(5);
+            Cp1252EncodingHelpers.field_h = var8.readString(5);
           } else {
             OptionsScreen.field_s = 0;
-            cl.field_h = null;
+            Cp1252EncodingHelpers.field_h = null;
           }
         }
         if (!param0) {
@@ -195,10 +195,10 @@ final class LobbyPlayer extends SceneWidget {
 
     final static void resetLoginRequestState(int param0) {
         MainMenuScreen.field_s = false;
-        dk.field_c = false;
+        NineSliceFrameHelpers.field_c = false;
         QuickChatMenu.setPendingUiResult(-1, -2671);
-        MatchingTextValidator.field_n = wm.field_a;
-        MarkerSlider.field_X = wm.field_a;
+        MatchingTextValidator.field_n = ReportReason.field_a;
+        MarkerSlider.field_X = ReportReason.field_a;
         if (param0 != -705633312) {
           LobbyPlayer.resetLoginRequestState(-5);
         }
@@ -235,8 +235,8 @@ final class LobbyPlayer extends SceneWidget {
           var3_long = (long)param0.field_h;
           var5 = (long)param0.field_g;
           var7 = (long)param0.field_i;
-          var9 = mi.fixedSine(-4096, param1);
-          var10 = th.fixedCosine(param1, 8191);
+          var9 = NotLoggedInScreen.fixedSine(-4096, param1);
+          var10 = TrigonometryHelpers.fixedCosine(param1, 8191);
           var11 = (int)((long)var9 * var3_long >> 16);
           var12 = (int)(var5 * (long)var9 >> 16);
           var13 = (int)((long)var9 * var7 >> 16);
@@ -290,7 +290,7 @@ final class LobbyPlayer extends SceneWidget {
             field_Wb = false;
           }
           var4 = (String) null;
-          stackIn_3_0 = cn.performAccountServerRequest((String) null, 0, -127, false, param1, 0, param2);
+          stackIn_3_0 = AccountServerRequestHelpers.performAccountServerRequest((String) null, 0, -127, false, param1, 0, param2);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -321,7 +321,7 @@ final class LobbyPlayer extends SceneWidget {
         try {
           this.field_Fb = param0;
           var5 = (CharSequence) ((Object) this.field_Ub);
-          dh.normalizeDisplayName(var5, (byte) 125);
+          DisplayNameHelpers.normalizeDisplayName(var5, (byte) 125);
         } catch (RuntimeException runtimeException) {
           throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "uj.G(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

@@ -11,12 +11,12 @@ class EmailCredentials extends LoginCredentials {
 
     final static int getMessageMenuHeight(int param0) {
         int var1 = -70 % ((param0 - 39) / 33);
-        return nf.field_c;
+        return LoginFormGlobals.field_c;
     }
 
-    ea getCredentialKind(int param0) {
+    CredentialKind getCredentialKind(int param0) {
         if (param0 != -27096) {
-          return (ea) null;
+          return (CredentialKind) null;
         }
         return QuickChatMenu.field_Nb;
     }
@@ -68,31 +68,31 @@ class EmailCredentials extends LoginCredentials {
           var3 = 0;
         }
         var4 = 30 / ((param1 - 90) / 34);
-        if (ce.field_d == 0 &&
+        if (ChatChannelGlobals.field_d == 0 &&
           DraggableWidget.field_S != null) {
           var3 = 0;
         }
-        if (ce.field_d == 2 &&
-          !ra.isPrivateRecipientFriend((byte) -96)) {
+        if (ChatChannelGlobals.field_d == 2 &&
+          !NineSliceSpriteFactory.isPrivateRecipientFriend((byte) -96)) {
           var3 = 0;
         }
-        if (ke.field_a == 84) {
+        if (KeyEventGlobals.field_a == 84) {
           if (var3 != 0) {
-            if (mp.field_a.length() > 0) {
-              var5_ref_String = mp.field_a.toString();
+            if (ChatInputGlobals.field_a.length() > 0) {
+              var5_ref_String = ChatInputGlobals.field_a.toString();
               var8 = var5_ref_String;
               var8Lifetime2 = var5_ref_String;
               if (EmailValidator.containsAccountName(var5_ref_String, 1)) {
                 var14 = (String) null;
                 var13 = (String) null;
-                MidiPcmStream.appendChatMessage(0, (String) null, (String) null, (byte) -76, 2, mp.field_c);
+                MidiPcmStream.appendChatMessage(0, (String) null, (String) null, (byte) -76, 2, ChatInputGlobals.field_c);
                 var16 = (String) null;
                 var15 = (String) null;
-                MidiPcmStream.appendChatMessage(0, (String) null, (String) null, (byte) -21, 2, fd.field_d);
-                nd.clearChatInput((byte) -23);
+                MidiPcmStream.appendChatMessage(0, (String) null, (String) null, (byte) -21, 2, ByteArrayPool.field_d);
+                HowToPlayDemoHelpers.clearChatInput((byte) -23);
                 return true;
               }
-              var6 = ce.field_d;
+              var6 = ChatChannelGlobals.field_d;
               if (var6 == 0 &&
                 LoginMethod.field_c != null) {
                 var6 = 1;
@@ -100,27 +100,27 @@ class EmailCredentials extends LoginCredentials {
               if (IterableNodeHashTable.getChatFilterMode(var6, 0) == 2) {
                 Js5ArchiveManager.setChatFilterMode(1, -26931, var6, param2);
               }
-              dg.sendQuickChatMessage(true, ce.field_d, -1, var5_ref_String, CheckboxPainter.field_k, param0);
-              nd.clearChatInput((byte) -23);
+              QuickChatSendHelpers.sendQuickChatMessage(true, ChatChannelGlobals.field_d, -1, var5_ref_String, CheckboxPainter.field_k, param0);
+              HowToPlayDemoHelpers.clearChatInput((byte) -23);
             } else {
-              nd.clearChatInput((byte) -23);
+              HowToPlayDemoHelpers.clearChatInput((byte) -23);
             }
           } else {
-            if (ce.field_d == 0) {
+            if (ChatChannelGlobals.field_d == 0) {
               return true;
             }
-            nd.clearChatInput((byte) 77);
+            HowToPlayDemoHelpers.clearChatInput((byte) 77);
           }
           return true;
         }
-        if (ke.field_a == 85) {
+        if (KeyEventGlobals.field_a == 85) {
           if (var3 == 0) {
             return true;
           }
-          if (mp.field_a.length() <= 0) {
+          if (ChatInputGlobals.field_a.length() <= 0) {
             return true;
           }
-          nk.padWithChar(mp.field_a, -1 + mp.field_a.length(), ' ', 16736352);
+          ChatPanelHelpers.padWithChar(ChatInputGlobals.field_a, -1 + ChatInputGlobals.field_a.length(), ' ', 16736352);
           return true;
         }
         var5 = DualLinkDeque.field_f;
@@ -130,26 +130,26 @@ class EmailCredentials extends LoginCredentials {
         if (var3 == 0) {
           return true;
         }
-        if (mp.field_a.length() >= 80) {
+        if (ChatInputGlobals.field_a.length() >= 80) {
           return true;
         }
         regionExit1: {
-          discarded$0 = mp.field_a.append((char) var5);
+          discarded$0 = ChatInputGlobals.field_a.append((char) var5);
           var6Lifetime1 = 485;
           var32 = ModalStack.field_J;
           var8Lifetime1 = var32;
           var8Lifetime1Lifetime1 = var32;
-          var17 = th.prefixWithCrown(2, var32);
+          var17 = TrigonometryHelpers.prefixWithCrown(2, var32);
           var8Lifetime1Lifetime2 = var17;
           var8Lifetime1Lifetime3 = var17;
           var33 = var17;
           var8Lifetime1Lifetime4 = var33;
           var8Lifetime1Lifetime5 = var33;
-          if (2 != ce.field_d) {
+          if (2 != ChatChannelGlobals.field_d) {
             var8Lifetime1Lifetime6 = "";
-            if (ce.field_d == 0) {
+            if (ChatChannelGlobals.field_d == 0) {
               if (LoginMethod.field_c == null &&
-                ge.field_f) {
+                RequestState.field_f) {
                 var8Lifetime1Lifetime6 = "[" + TimerBar.field_m + "] ";
               }
               if (LoginMethod.field_c == null) {
@@ -176,8 +176,8 @@ class EmailCredentials extends LoginCredentials {
             break regionExit1;
           }
           var44 = (CharSequence) ((Object) CheckboxPainter.field_k);
-          var40 = AlphaContainer.formatTemplate(dg.field_b, 116, new String[]{UiComponent.normalizeBase37Name(var44, -1)});
-          var41 = AlphaContainer.formatTemplate(sk.field_c, 43, new String[]{var17});
+          var40 = AlphaContainer.formatTemplate(QuickChatSendHelpers.field_b, 116, new String[]{UiComponent.normalizeBase37Name(var44, -1)});
+          var41 = AlphaContainer.formatTemplate(LobbyFrameHelpers.field_c, 43, new String[]{var17});
           var10 = AccountMessagePanel.field_Q.textWidth(var40);
           var11 = AccountMessagePanel.field_Q.textWidth(var41);
           if (var11 >= var10) {
@@ -186,10 +186,10 @@ class EmailCredentials extends LoginCredentials {
             var6Lifetime1 = var6Lifetime1 - var10;
           }
         }
-        if (AccountMessagePanel.field_Q.textWidth(mp.field_a.toString()) <= var6Lifetime1) {
+        if (AccountMessagePanel.field_Q.textWidth(ChatInputGlobals.field_a.toString()) <= var6Lifetime1) {
           return true;
         }
-        nk.padWithChar(mp.field_a, -1 + mp.field_a.length(), ' ', 16736352);
+        ChatPanelHelpers.padWithChar(ChatInputGlobals.field_a, -1 + ChatInputGlobals.field_a.length(), ' ', 16736352);
         return true;
     }
 
@@ -213,14 +213,14 @@ class EmailCredentials extends LoginCredentials {
         }
     }
 
-    final static wm findReportReason(int param0, int param1) {
+    final static ReportReason findReportReason(int param0, int param1) {
         int var3 = 0;
-        wm[] var2;
+        ReportReason[] var2;
         int var4;
-        wm[] var5;
+        ReportReason[] var5;
         var4 = Pixelate.field_H ? 1 : 0;
         if (param1 > -50) {
-          return (wm) null;
+          return (ReportReason) null;
         }
         var5 = Puzzle.getReportReasons((byte) 62);
         var2 = var5;

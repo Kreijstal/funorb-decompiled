@@ -31,18 +31,18 @@ final class PasswordValidator extends TextFieldValidator {
             return stackIn_2_0;
           }
           if (var4.length() == 0) {
-            stackIn_5_0 = sk.field_a;
+            stackIn_5_0 = LobbyFrameHelpers.field_a;
             return stackIn_5_0;
           }
           if (!Matrix3.isAcceptablePassword(var4, var3, (byte) -4)) {
-            stackIn_8_0 = sk.field_a;
+            stackIn_8_0 = LobbyFrameHelpers.field_a;
             return stackIn_8_0;
           }
           if (!this.containsEmailPart(126, param0)) {
             stackIn_13_0 = RetroBlock.field_g;
             return stackIn_13_0;
           }
-          stackIn_11_0 = sk.field_a;
+          stackIn_11_0 = LobbyFrameHelpers.field_a;
           return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -87,7 +87,7 @@ final class PasswordValidator extends TextFieldValidator {
             field_m = 16;
           }
           var5 = var4;
-          if (ep.hasInvalidPasswordLength((byte) 34, var5)) {
+          if (PolygonClipHelpers.hasInvalidPasswordLength((byte) 34, var5)) {
             stackIn_7_0 = MusicCrossfadeStream.field_y;
             return stackIn_7_0;
           }
@@ -95,7 +95,7 @@ final class PasswordValidator extends TextFieldValidator {
             stackIn_11_0 = ResizableModalPanel.field_R;
             return stackIn_11_0;
           }
-          if (cm.isAllSameChar(var5, 73)) {
+          if (VolumeControlledVoice.isAllSameChar(var5, 73)) {
             stackIn_14_0 = AgeValidator.field_n;
             return stackIn_14_0;
           }
@@ -104,7 +104,7 @@ final class PasswordValidator extends TextFieldValidator {
             return stackIn_17_0;
           }
           if (var6.length() <= 0) {
-            stackIn_20_0 = cd.field_a;
+            stackIn_20_0 = LoginMethodGlobals.field_a;
             return stackIn_20_0;
           }
           if (DateInputWidget.containsTextOrReverse(var5, var6, (byte) 78)) {
@@ -112,10 +112,10 @@ final class PasswordValidator extends TextFieldValidator {
             return stackIn_23_0;
           }
           if (CipherPacketBuffer.containsForwardOrReversed(var5, (byte) -47, var6)) {
-            stackIn_27_0 = pk.field_b;
+            stackIn_27_0 = MeshDecodeHelpers.field_b;
             return stackIn_27_0;
           }
-          if (!gb.containsForwardOrReversed(var5, var6, 95)) {
+          if (!ReportAbuseHelpers.containsForwardOrReversed(var5, var6, 95)) {
             return MusicCrossfadeStream.field_y;
           }
           stackIn_31_0 = StrongCacheReference.field_w;

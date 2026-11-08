@@ -46,7 +46,7 @@ abstract class LoginCredentials {
 
     abstract void writePayload(byte param0, PacketBuffer param1);
 
-    abstract ea getCredentialKind(int param0);
+    abstract CredentialKind getCredentialKind(int param0);
 
     static {
         field_a = new String[3];

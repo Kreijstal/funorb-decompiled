@@ -9,15 +9,15 @@ final class GreenGrowTheRushesBackground extends BackgroundScene {
     final static int getIdleTimeoutLimit(int param0) {
         if (param0 != 13428) {
           field_m = -88;
-          return oi.field_c;
+          return RegistrationHelpers.field_c;
         }
-        return oi.field_c;
+        return RegistrationHelpers.field_c;
     }
 
     final static void createAccountUiLayer(boolean param0) {
         Checkbox.field_X = TutorialPage.getUiTheme(4);
-        wa.field_c = new ModalStack();
-        QueuedInput.a(true, -17130, true);
+        SpriteBuildHelpers.field_c = new ModalStack();
+        QueuedInput.showLoginDialog(true, -17130, true);
         if (param0) {
           GreenGrowTheRushesBackground.onLoginSucceeded(-24);
         }
@@ -56,7 +56,7 @@ final class GreenGrowTheRushesBackground extends BackgroundScene {
         if (param0) {
           return;
         }
-        jk.field_a.drawOpaque(0, 0);
+        MeshColourEntry.field_a.drawOpaque(0, 0);
     }
 
     final static void setTuhstatbutCookie(java.applet.Applet param0, int param1) {
@@ -82,20 +82,20 @@ final class GreenGrowTheRushesBackground extends BackgroundScene {
         int var2;
         int var3;
         var3 = Pixelate.field_H ? 1 : 0;
-        dk.field_c = false;
-        wp.field_a = null;
+        NineSliceFrameHelpers.field_c = false;
+        CurrencyPriceGlobals.field_a = null;
         var1 = 32 / ((-65 - param0) / 51);
         if (MainMenuScreen.field_s) {
           MainMenuScreen.field_r.showNoticeContent(2121792);
         } else {
-          var2 = ra.field_g;
+          var2 = NineSliceSpriteFactory.field_g;
           if (var2 > 0) {
             if (var2 == 1) {
-              wp.field_a = MainMenuScreen.field_o;
+              CurrencyPriceGlobals.field_a = MainMenuScreen.field_o;
             } else {
-              wp.field_a = AlphaContainer.formatTemplate(SpriteState.field_v, 63, new String[]{Integer.toString(var2)});
+              CurrencyPriceGlobals.field_a = AlphaContainer.formatTemplate(SpriteState.field_v, 63, new String[]{Integer.toString(var2)});
             }
-            wp.field_a = gi.joinCharSequences(0, new CharSequence[]{(CharSequence) ((Object) wp.field_a), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) GameApplet.field_d)});
+            CurrencyPriceGlobals.field_a = HighscoreNameEntry.joinCharSequences(0, new CharSequence[]{(CharSequence) ((Object) CurrencyPriceGlobals.field_a), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) GameApplet.field_d)});
           }
           MainMenuScreen.field_r.close(-100);
           AsyncValidationResult.showLoadingProgressDialog((byte) 81);

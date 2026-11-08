@@ -5,7 +5,7 @@ final class ViewportController {
     private int field_n;
     static String field_k;
     private int field_x;
-    static dq field_h;
+    static TransitionPhase field_h;
     private int field_g;
     static long field_a;
     private int field_l;
@@ -14,7 +14,7 @@ final class ViewportController {
     private boolean field_c;
     private int field_f;
     private int field_i;
-    private o field_s;
+    private ViewResizeListener field_s;
     private int field_p;
     private int field_j;
     private int field_m;
@@ -29,7 +29,7 @@ final class ViewportController {
 
     final boolean canResize(byte param0) {
         int var2 = -88 / ((param0 + 5) / 36);
-        if (ri.field_h < this.field_j) {
+        if (ChatHistoryAllocator.field_h < this.field_j) {
           return false;
         }
         if (0 < BufferedRandomAccessFile.field_j) {
@@ -139,7 +139,7 @@ final class ViewportController {
         if (BufferedRandomAccessFile.field_i != var3) {
           this.field_s.resizeView(var3, 127, var4);
         } else {
-          if (var4 != wp.field_c) {
+          if (var4 != CurrencyPriceGlobals.field_c) {
             this.field_s.resizeView(var3, 127, var4);
           }
         }
@@ -150,10 +150,10 @@ final class ViewportController {
 
     final FullscreenFocusCanvas enterFullscreen(boolean param0) {
         this.field_b = BufferedRandomAccessFile.field_i;
-        this.field_l = wp.field_c;
+        this.field_l = CurrencyPriceGlobals.field_c;
         this.field_s.resizeView(this.field_q, 126, this.field_x);
         FireworkSpark.field_i = param0 ? true : false;
-        FullscreenFocusCanvas var2 = wo.openFullscreenWindow(mc.field_k, 150, this.field_x, 0, this.field_q, 0);
+        FullscreenFocusCanvas var2 = SocialPanel.openFullscreenWindow(AchievementMaskRequest.field_k, 150, this.field_x, 0, this.field_q, 0);
         if (var2 == null) {
           this.restoreSavedSize(89);
         }
@@ -182,7 +182,7 @@ final class ViewportController {
     final void tick(int param0) {
         int fieldTemp$0 = 0;
         int var2;
-        if (ib.field_f != null) {
+        if (GridSize.field_f != null) {
           return;
         }
         if (BufferedRandomAccessFile.field_j <= 0) {
@@ -195,7 +195,7 @@ final class ViewportController {
             return;
           }
           this.field_m = this.field_o;
-          if (ri.field_h < this.field_j) {
+          if (ChatHistoryAllocator.field_h < this.field_j) {
             this.field_c = false;
             return;
           }
@@ -211,7 +211,7 @@ final class ViewportController {
           }
         }
         if (BufferedRandomAccessFile.field_i == this.field_i &&
-          this.field_p == wp.field_c) {
+          this.field_p == CurrencyPriceGlobals.field_c) {
           return;
         }
         this.field_s.resizeView(this.field_i, 127, this.field_p);
@@ -225,7 +225,7 @@ final class ViewportController {
         field_k = "Your ignore list is full. Max of 100 hit.";
         field_u = "Owner";
         field_d = "Achieved";
-        field_h = new dq();
+        field_h = new TransitionPhase();
         field_e = "Unfortunately there was a focus problem while setting fullscreen mode. You could try disabling any multiple monitor drivers or window enhancements, if you have any enabled, or try a different resolution.";
     }
 }

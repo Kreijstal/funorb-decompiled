@@ -21,14 +21,14 @@ final class TwistedLogicBackground extends BackgroundScene {
     }
 
     final void render(boolean param0) {
-        jn var4 = null;
+        TwistedLogicCube var4 = null;
         int var3 = Pixelate.field_H ? 1 : 0;
         SoftwareRasterizer.fillRectangle(0, 0, 640, 480, 12632256);
         if (!param0) {
-          var4 = (jn) (this.field_n.first(1504642273));
+          var4 = (TwistedLogicCube) (this.field_n.first(1504642273));
           while (var4 != null) {
             MusicPatch.drawRotatingCube(var4, 1183261192);
-            var4 = (jn) (this.field_n.next(1504642273));
+            var4 = (TwistedLogicCube) (this.field_n.next(1504642273));
           }
           return;
         }
@@ -36,16 +36,16 @@ final class TwistedLogicBackground extends BackgroundScene {
 
     final void tick(int param0) {
         int fieldTemp$1 = 0;
-        jn stackIn_7_0 = null;
+        TwistedLogicCube stackIn_7_0 = null;
         int stackIn_8_1 = 0;
-        jn stackIn_10_0 = null;
+        TwistedLogicCube stackIn_10_0 = null;
         boolean stackIn_11_1 = false;
-        jn var2;
+        TwistedLogicCube var2;
         int var3;
         int var4;
         var4 = Pixelate.field_H ? 1 : 0;
         super.tick(-1);
-        var2 = (jn) (this.field_n.first(1504642273));
+        var2 = (TwistedLogicCube) (this.field_n.first(1504642273));
         while (var2 != null) {
           var2.field_l = var2.field_l + var2.field_s;
           var2.field_r = var2.field_r + var2.field_y;
@@ -68,14 +68,14 @@ final class TwistedLogicBackground extends BackgroundScene {
           if (var2.field_r > 148480) {
             var2.unlink(2779);
           }
-          var2 = (jn) (this.field_n.next(param0 + 1504642274));
+          var2 = (TwistedLogicCube) (this.field_n.next(param0 + 1504642274));
         }
         int fieldTemp$0 = this.field_m - 1;
         this.field_m = this.field_m - 1;
         if (~fieldTemp$0 <= param0) {
           return;
         }
-        this.field_n.addLast(22125, new jn(TabbedPanel.randomInRange((byte) 41, 189440, -25600), -25600));
+        this.field_n.addLast(22125, new TwistedLogicCube(TabbedPanel.randomInRange((byte) 41, 189440, -25600), -25600));
         this.field_m = TabbedPanel.randomInRange((byte) 41, 75, 25);
     }
 
@@ -85,7 +85,7 @@ final class TwistedLogicBackground extends BackgroundScene {
         try {
           this.field_n = new IntrusiveDeque();
           for (var3_int = 0; 5 > var3_int; var3_int++) {
-            this.field_n.addLast(22125, new jn(TabbedPanel.randomInRange((byte) 41, 189440, -25600), TabbedPanel.randomInRange((byte) 41, 148480, -25600)));
+            this.field_n.addLast(22125, new TwistedLogicCube(TabbedPanel.randomInRange((byte) 41, 189440, -25600), TabbedPanel.randomInRange((byte) 41, 148480, -25600)));
           }
           this.field_m = TabbedPanel.randomInRange((byte) 41, 75, 25);
         } catch (RuntimeException runtimeException) {

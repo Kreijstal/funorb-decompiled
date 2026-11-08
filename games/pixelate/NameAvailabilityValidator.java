@@ -15,7 +15,7 @@ final class NameAvailabilityValidator extends TextFieldValidator {
     final String describeText(int param0, String param1) {
         String var3 = null;
         RuntimeException var3_ref = null;
-        id var4 = null;
+        AccountRequestReply var4 = null;
         CharSequence var5 = null;
         String stackIn_3_0 = null;
         String stackIn_15_0 = null;
@@ -35,7 +35,7 @@ final class NameAvailabilityValidator extends TextFieldValidator {
             NameAvailabilityValidator.messageMenuOptionAt(true, 49, -104);
           }
           if (!param1.equals(this.checkedName)) {
-            var4 = ig.takeAccountRequestResult(200, param1);
+            var4 = AudioPumpHelpers.takeAccountRequestResult(200, param1);
             if (var4 == null) {
               return null;
             }
@@ -49,7 +49,7 @@ final class NameAvailabilityValidator extends TextFieldValidator {
             stackIn_17_0 = MusicCrossfadeStream.field_L;
             return stackIn_17_0;
           }
-          stackIn_15_0 = ek.field_e;
+          stackIn_15_0 = ChatHistoryHelpers.field_e;
           return stackIn_15_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -91,18 +91,18 @@ final class NameAvailabilityValidator extends TextFieldValidator {
         var8 = Pixelate.field_H ? 1 : 0;
         try {
           var3_int = 0;
-          var4 = ce.field_c;
+          var4 = ChatChannelGlobals.field_c;
           while (var3_int < AccountRegistrationPanel.field_J.length) {
             var5 = ProxyAuthenticationException.field_e[var3_int];
             if (var5 >= 0) {
               var6 = ArchiveProvider.measureMessageText(AccountRegistrationPanel.field_J[var3_int], 8192, true);
               var4 = var4 + KiteTailSegment.field_e;
-              var7 = bq.field_d - (var6 >> 1);
-              if (TextLayoutLine.containsPoint(param1, var4, 59, (WidgetStyleLayer.field_b << 1) + dk.field_d, -ProxyAuthenticationException.field_a + var7, param2, (ProxyAuthenticationException.field_a << 1) + var6)) {
+              var7 = LegacyMenuBuilder.field_d - (var6 >> 1);
+              if (TextLayoutLine.containsPoint(param1, var4, 59, (WidgetStyleLayer.field_b << 1) + NineSliceFrameHelpers.field_d, -ProxyAuthenticationException.field_a + var7, param2, (ProxyAuthenticationException.field_a << 1) + var6)) {
                 stackIn_7_0 = var5;
                 return stackIn_7_0;
               }
-              var4 = var4 + ((WidgetStyleLayer.field_b << 1) + KiteTailSegment.field_e + dk.field_d);
+              var4 = var4 + ((WidgetStyleLayer.field_b << 1) + KiteTailSegment.field_e + NineSliceFrameHelpers.field_d);
             } else {
               var4 = var4 + BouncedownBackground.field_m;
             }
@@ -131,13 +131,13 @@ final class NameAvailabilityValidator extends TextFieldValidator {
           var3 = var2.field_F;
           var4 = var2.field_E;
           MidiPcmStream.pushRasterState(param0);
-          th.field_b = new Sprite(var3, 3 * var4 / 4);
-          th.field_b.makeRasterTarget();
+          TrigonometryHelpers.field_b = new Sprite(var3, 3 * var4 / 4);
+          TrigonometryHelpers.field_b.makeRasterTarget();
           var2.drawOpaque(0, 0);
-          MusicPatchNode.field_s = new Sprite(var3, var4 - th.field_b.field_E);
+          MusicPatchNode.field_s = new Sprite(var3, var4 - TrigonometryHelpers.field_b.field_E);
           MusicPatchNode.field_s.makeRasterTarget();
-          var2.drawOpaque(0, -th.field_b.field_E);
-          MusicPatchNode.field_s.field_y = th.field_b.field_E;
+          var2.drawOpaque(0, -TrigonometryHelpers.field_b.field_E);
+          MusicPatchNode.field_s.field_y = TrigonometryHelpers.field_b.field_E;
           LinkButtonPainter.popRasterState((byte) 92);
         } catch (RuntimeException runtimeException) {
           throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "ec.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -156,7 +156,7 @@ final class NameAvailabilityValidator extends TextFieldValidator {
     }
 
     final ValidationState validateText(String param0, boolean param1) {
-        id var3 = null;
+        AccountRequestReply var3 = null;
         RuntimeException var3_ref = null;
         CharSequence var4 = null;
         ValidationState stackIn_2_0 = null;
@@ -170,7 +170,7 @@ final class NameAvailabilityValidator extends TextFieldValidator {
         try {
           var4 = (CharSequence) ((Object) param0);
           if (!ResourceArchive.ensureGroupAvailableByName((byte) 63, var4)) {
-            stackIn_2_0 = sk.field_a;
+            stackIn_2_0 = LobbyFrameHelpers.field_a;
             return stackIn_2_0;
           }
           if (!param1) {
@@ -178,7 +178,7 @@ final class NameAvailabilityValidator extends TextFieldValidator {
             return stackIn_5_0;
           }
           if (!param0.equals(this.checkedName)) {
-            var3 = ig.takeAccountRequestResult(200, param0);
+            var3 = AudioPumpHelpers.takeAccountRequestResult(200, param0);
             if (var3 != null &&
               null == var3.field_c) {
               this.checkedName = param0;
@@ -191,7 +191,7 @@ final class NameAvailabilityValidator extends TextFieldValidator {
           if (this.accepted) {
             stackIn_17_0 = RetroBlock.field_g;
           } else {
-            stackIn_17_0 = sk.field_a;
+            stackIn_17_0 = LobbyFrameHelpers.field_a;
           }
           return stackIn_17_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

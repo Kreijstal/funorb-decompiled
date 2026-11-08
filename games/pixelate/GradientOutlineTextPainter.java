@@ -5,7 +5,7 @@ class GradientOutlineTextPainter extends TextWidgetPainter {
     static int[] field_q;
     static int field_t;
     static SceneWidget field_u;
-    static wm field_s;
+    static ReportReason field_s;
     static int[] field_r;
     static String[] field_w;
     static int field_v;
@@ -78,7 +78,7 @@ class GradientOutlineTextPainter extends TextWidgetPainter {
                 var2 = Runtime.getRuntime();
                 var4 = (Object[]) null;
                 var3 = (Long) (var1.invoke((Object) (var2), (Object[]) null));
-                ri.field_h = (int)(var3.longValue() / 1048576L) + 1;
+                ChatHistoryAllocator.field_h = (int)(var3.longValue() / 1048576L) + 1;
                 decompiledRegionSelector0 = 0;
               } catch (java.lang.Throwable decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
@@ -109,7 +109,7 @@ class GradientOutlineTextPainter extends TextWidgetPainter {
     }
 
     GradientOutlineTextPainter(int param0) {
-        this(he.field_d, param0);
+        this(CanvasInputHelpers.field_d, param0);
     }
 
     GradientOutlineTextPainter(BitmapFont param0, int param1) {
@@ -118,7 +118,7 @@ class GradientOutlineTextPainter extends TextWidgetPainter {
 
     static {
         field_r = new int[8192];
-        field_s = new wm(14, 0, 4, 1);
+        field_s = new ReportReason(14, 0, 4, 1);
         field_w = new String[]{"Welcome to Pixelate!", null, "Alternate Controls", null, null, null};
     }
 }

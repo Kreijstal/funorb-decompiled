@@ -244,13 +244,13 @@ final class SoundCache {
     final static void closeQuickChatIfOpen(boolean param0) {
         if (!param0) {
           field_c = (SceneWidget) null;
-          if (!un.field_l) {
+          if (!PatchEnvelopeSet.field_l) {
             return;
           }
           ScoreMarkerDemo.closeQuickChatMenu(false);
           return;
         }
-        if (un.field_l) {
+        if (PatchEnvelopeSet.field_l) {
           ScoreMarkerDemo.closeQuickChatMenu(false);
           return;
         }
@@ -267,24 +267,24 @@ final class SoundCache {
         int var7Lifetime1;
         int var8Lifetime1;
         int var9Lifetime1;
-        pe.field_a.setTime(new Date(param1));
-        int var3 = pe.field_a.get(7);
-        int var4 = pe.field_a.get(5);
+        PlayerActionHelpers.field_a.setTime(new Date(param1));
+        int var3 = PlayerActionHelpers.field_a.get(7);
+        int var4 = PlayerActionHelpers.field_a.get(5);
         if (param0 == 10) {
-          var5 = pe.field_a.get(2);
-          var6 = pe.field_a.get(1);
-          var7 = pe.field_a.get(11);
-          var8 = pe.field_a.get(12);
-          var9 = pe.field_a.get(13);
-          return SocketConnector.field_g[-1 + var3] + ", " + var4 / 10 + var4 % 10 + "-" + ib.field_c[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10 + " GMT";
+          var5 = PlayerActionHelpers.field_a.get(2);
+          var6 = PlayerActionHelpers.field_a.get(1);
+          var7 = PlayerActionHelpers.field_a.get(11);
+          var8 = PlayerActionHelpers.field_a.get(12);
+          var9 = PlayerActionHelpers.field_a.get(13);
+          return SocketConnector.field_g[-1 + var3] + ", " + var4 / 10 + var4 % 10 + "-" + GridSize.field_c[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10 + " GMT";
         }
         SoundCache.closeQuickChatIfOpen(true);
-        var5Lifetime1 = pe.field_a.get(2);
-        var6Lifetime1 = pe.field_a.get(1);
-        var7Lifetime1 = pe.field_a.get(11);
-        var8Lifetime1 = pe.field_a.get(12);
-        var9Lifetime1 = pe.field_a.get(13);
-        return SocketConnector.field_g[-1 + var3] + ", " + var4 / 10 + var4 % 10 + "-" + ib.field_c[var5Lifetime1] + "-" + var6Lifetime1 + " " + var7Lifetime1 / 10 + var7Lifetime1 % 10 + ":" + var8Lifetime1 / 10 + var8Lifetime1 % 10 + ":" + var9Lifetime1 / 10 + var9Lifetime1 % 10 + " GMT";
+        var5Lifetime1 = PlayerActionHelpers.field_a.get(2);
+        var6Lifetime1 = PlayerActionHelpers.field_a.get(1);
+        var7Lifetime1 = PlayerActionHelpers.field_a.get(11);
+        var8Lifetime1 = PlayerActionHelpers.field_a.get(12);
+        var9Lifetime1 = PlayerActionHelpers.field_a.get(13);
+        return SocketConnector.field_g[-1 + var3] + ", " + var4 / 10 + var4 % 10 + "-" + GridSize.field_c[var5Lifetime1] + "-" + var6Lifetime1 + " " + var7Lifetime1 / 10 + var7Lifetime1 % 10 + ":" + var8Lifetime1 / 10 + var8Lifetime1 % 10 + ":" + var9Lifetime1 / 10 + var9Lifetime1 % 10 + " GMT";
     }
 
     private final PcmSample loadSoundEffectByName(String param0, int[] param1, String param2, int param3) {

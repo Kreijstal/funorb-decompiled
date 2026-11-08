@@ -10,7 +10,7 @@ final class MenuInputState {
     private int heldButton;
     int selectedIndex;
     int field_h;
-    static wm field_f;
+    static ReportReason field_f;
     static String field_l;
     static boolean field_e;
     static String field_b;
@@ -37,7 +37,7 @@ final class MenuInputState {
         if (!param0) {
           return -75;
         }
-        return (int)(1000000000L / wa.field_b);
+        return (int)(1000000000L / SpriteBuildHelpers.field_b);
     }
 
     final boolean isEndKey(int param0) {
@@ -50,9 +50,9 @@ final class MenuInputState {
         this.field_k = 0;
         boolean decompiledFrameRemainder0 = true;
         if (0 == this.heldButton) {
-          if (ke.field_a != 98) {
+          if (KeyEventGlobals.field_a != 98) {
             if (this.heldButton == 0) {
-              this.keyCode = ke.field_a;
+              this.keyCode = KeyEventGlobals.field_a;
             }
             if (this.heldButton != 0) {
               if (param0 != -48) {
@@ -60,7 +60,7 @@ final class MenuInputState {
               }
               return;
             }
-            if (ke.field_a == 99) {
+            if (KeyEventGlobals.field_a == 99) {
               this.selectedIndex = this.selectedIndex + 1;
               this.pointerSelection = false;
               if (this.field_h <= this.selectedIndex) {
@@ -79,10 +79,10 @@ final class MenuInputState {
         }
         if (decompiledFrameRemainder0) {
           if (this.heldButton == 0) {
-            this.keyCode = ke.field_a;
+            this.keyCode = KeyEventGlobals.field_a;
           }
           if (this.heldButton == 0 &&
-            ke.field_a == 99) {
+            KeyEventGlobals.field_a == 99) {
             this.selectedIndex = this.selectedIndex + 1;
             this.pointerSelection = false;
             if (this.field_h <= this.selectedIndex) {
@@ -112,15 +112,15 @@ final class MenuInputState {
           this.field_k = 0;
           this.keyCode = 0;
           if (0 == this.heldButton &&
-            ke.field_a == 96) {
+            KeyEventGlobals.field_a == 96) {
             if (this.selectedIndex > 0) {
               this.pointerSelection = false;
               this.selectedIndex = this.selectedIndex - 1;
               if (this.heldButton == 0) {
-                this.keyCode = ke.field_a;
+                this.keyCode = KeyEventGlobals.field_a;
               }
               if (this.heldButton == 0 &&
-                ke.field_a == 97) {
+                KeyEventGlobals.field_a == 97) {
                 this.selectedIndex = this.selectedIndex + 1;
                 if (this.selectedIndex >= this.field_h) {
                   this.selectedIndex = 0;
@@ -128,8 +128,8 @@ final class MenuInputState {
                 this.pointerSelection = false;
               }
               if (this.heldButton == 0) {
-                if (ke.field_a != 98 &&
-                  ke.field_a != 99) {
+                if (KeyEventGlobals.field_a != 98 &&
+                  KeyEventGlobals.field_a != 99) {
                   return;
                 }
                 this.pointerSelection = false;
@@ -143,10 +143,10 @@ final class MenuInputState {
             this.pointerSelection = false;
             this.selectedIndex = this.selectedIndex - 1;
             if (this.heldButton == 0) {
-              this.keyCode = ke.field_a;
+              this.keyCode = KeyEventGlobals.field_a;
             }
             if (this.heldButton == 0 &&
-              ke.field_a == 97) {
+              KeyEventGlobals.field_a == 97) {
               this.selectedIndex = this.selectedIndex + 1;
               if (this.selectedIndex >= this.field_h) {
                 this.selectedIndex = 0;
@@ -154,8 +154,8 @@ final class MenuInputState {
               this.pointerSelection = false;
             }
             if (this.heldButton == 0) {
-              if (ke.field_a != 98 &&
-                ke.field_a != 99) {
+              if (KeyEventGlobals.field_a != 98 &&
+                KeyEventGlobals.field_a != 99) {
                 return;
               }
               this.pointerSelection = false;
@@ -166,13 +166,13 @@ final class MenuInputState {
             return;
           }
           if (this.heldButton == 0) {
-            this.keyCode = ke.field_a;
+            this.keyCode = KeyEventGlobals.field_a;
           }
           if (this.heldButton == 0) {
-            if (ke.field_a != 97) {
+            if (KeyEventGlobals.field_a != 97) {
               if (this.heldButton == 0) {
-                if (ke.field_a != 98 &&
-                  ke.field_a != 99) {
+                if (KeyEventGlobals.field_a != 98 &&
+                  KeyEventGlobals.field_a != 99) {
                   return;
                 }
                 this.pointerSelection = false;
@@ -187,8 +187,8 @@ final class MenuInputState {
               this.selectedIndex = 0;
               this.pointerSelection = false;
               if (this.heldButton == 0) {
-                if (ke.field_a != 98 &&
-                  ke.field_a != 99) {
+                if (KeyEventGlobals.field_a != 98 &&
+                  KeyEventGlobals.field_a != 99) {
                   return;
                 }
                 this.pointerSelection = false;
@@ -206,13 +206,13 @@ final class MenuInputState {
           this.keyCode = 0;
           if (0 != this.heldButton) {
             if (this.heldButton == 0) {
-              this.keyCode = ke.field_a;
+              this.keyCode = KeyEventGlobals.field_a;
             }
             if (this.heldButton == 0) {
-              if (ke.field_a != 97) {
+              if (KeyEventGlobals.field_a != 97) {
                 if (this.heldButton == 0) {
-                  if (ke.field_a != 98 &&
-                    ke.field_a != 99) {
+                  if (KeyEventGlobals.field_a != 98 &&
+                    KeyEventGlobals.field_a != 99) {
                     return;
                   }
                   this.pointerSelection = false;
@@ -227,8 +227,8 @@ final class MenuInputState {
                 this.selectedIndex = 0;
                 this.pointerSelection = false;
                 if (this.heldButton == 0) {
-                  if (ke.field_a != 98 &&
-                    ke.field_a != 99) {
+                  if (KeyEventGlobals.field_a != 98 &&
+                    KeyEventGlobals.field_a != 99) {
                     return;
                   }
                   this.pointerSelection = false;
@@ -241,15 +241,15 @@ final class MenuInputState {
               this.pointerSelection = false;
             }
           } else {
-            if (ke.field_a == 96) {
+            if (KeyEventGlobals.field_a == 96) {
               if (this.selectedIndex > 0) {
                 this.pointerSelection = false;
                 this.selectedIndex = this.selectedIndex - 1;
                 if (this.heldButton == 0) {
-                  this.keyCode = ke.field_a;
+                  this.keyCode = KeyEventGlobals.field_a;
                 }
                 if (this.heldButton == 0 &&
-                  ke.field_a == 97) {
+                  KeyEventGlobals.field_a == 97) {
                   this.selectedIndex = this.selectedIndex + 1;
                   if (this.selectedIndex >= this.field_h) {
                     this.selectedIndex = 0;
@@ -257,8 +257,8 @@ final class MenuInputState {
                   this.pointerSelection = false;
                 }
                 if (this.heldButton == 0) {
-                  if (ke.field_a != 98 &&
-                    ke.field_a != 99) {
+                  if (KeyEventGlobals.field_a != 98 &&
+                    KeyEventGlobals.field_a != 99) {
                     return;
                   }
                   this.pointerSelection = false;
@@ -273,10 +273,10 @@ final class MenuInputState {
               this.selectedIndex = this.selectedIndex - 1;
             }
             if (this.heldButton == 0) {
-              this.keyCode = ke.field_a;
+              this.keyCode = KeyEventGlobals.field_a;
             }
             if (this.heldButton == 0 &&
-              ke.field_a == 97) {
+              KeyEventGlobals.field_a == 97) {
               this.selectedIndex = this.selectedIndex + 1;
               if (this.selectedIndex >= this.field_h) {
                 this.selectedIndex = 0;
@@ -288,8 +288,8 @@ final class MenuInputState {
         if (this.heldButton != 0) {
           return;
         }
-        if (ke.field_a != 98 &&
-          ke.field_a != 99) {
+        if (KeyEventGlobals.field_a != 98 &&
+          KeyEventGlobals.field_a != 99) {
           return;
         }
         this.pointerSelection = false;
@@ -312,7 +312,7 @@ final class MenuInputState {
           this.keyCode = 0;
           this.field_k = 0;
           if (this.heldButton == 0) {
-            this.keyCode = ke.field_a;
+            this.keyCode = KeyEventGlobals.field_a;
           }
           return;
         }
@@ -325,18 +325,18 @@ final class MenuInputState {
         return this.keyCode == 96 ? true : false;
     }
 
-    final static jk[] readMeshColourEntries(CipherPacketBuffer param0, byte param1) {
+    final static MeshColourEntry[] readMeshColourEntries(CipherPacketBuffer param0, byte param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
-        jk[] var4 = null;
+        MeshColourEntry[] var4 = null;
         int var5 = 0;
-        jk var6_ref_jk = null;
+        MeshColourEntry var6_ref_jk = null;
         int var6 = 0;
         int var7 = 0;
         Object stackIn_3_0 = null;
-        jk[] stackIn_6_0 = null;
-        jk[] stackIn_13_0 = null;
+        MeshColourEntry[] stackIn_6_0 = null;
+        MeshColourEntry[] stackIn_13_0 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
@@ -346,13 +346,13 @@ final class MenuInputState {
           var2_int = param0.readBits(8, (byte) -34);
           if (var2_int > 0) {
             stackIn_3_0 = null;
-            return (jk[]) (stackIn_3_0);
+            return (MeshColourEntry[]) (stackIn_3_0);
           }
           var3 = param0.readBits(12, (byte) -34);
-          var4 = new jk[var3];
+          var4 = new MeshColourEntry[var3];
           var5 = 0;
           if (param1 != 77) {
-            stackIn_6_0 = (jk[]) null;
+            stackIn_6_0 = (MeshColourEntry[]) null;
             return stackIn_6_0;
           }
           while (var3 > var5) {
@@ -360,7 +360,7 @@ final class MenuInputState {
               var6 = param0.readBits(Matrix3.bitLength(var5 - 1, 15598), (byte) -34);
               var4[var5] = var4[var6];
             } else {
-              var6_ref_jk = new jk();
+              var6_ref_jk = new MeshColourEntry();
               param0.readBits(24, (byte) -34);
               param0.readBits(24, (byte) -34);
               var6_ref_jk.field_b = param0.readBits(24, (byte) -34);
@@ -399,14 +399,14 @@ final class MenuInputState {
         this.field_k = 0;
         if (IntrusiveDequeCursor.field_c == 0) {
           if (this.heldButton != 0 &&
-            ef.field_b != 0) {
+            HighscorePacketHandlers.field_b != 0) {
             if (this.field_a <= 0) {
-              this.field_a = gb.field_a;
+              this.field_a = ReportAbuseHelpers.field_a;
             }
             this.field_a = this.field_a - 1;
           }
           if (~IntrusiveDequeCursor.field_c == param2 &&
-            0 == ef.field_b) {
+            0 == HighscorePacketHandlers.field_b) {
             this.heldButton = 0;
           }
           if (this.heldButton != 0) {
@@ -436,7 +436,7 @@ final class MenuInputState {
         this.field_a = StrongCacheReference.field_v;
         if (this.heldButton == 0) {
           if (~IntrusiveDequeCursor.field_c == param2 &&
-            0 == ef.field_b) {
+            0 == HighscorePacketHandlers.field_b) {
             this.heldButton = 0;
           }
           if (this.heldButton == 0) {
@@ -460,9 +460,9 @@ final class MenuInputState {
           }
           return;
         }
-        if (ef.field_b == 0) {
+        if (HighscorePacketHandlers.field_b == 0) {
           if (~IntrusiveDequeCursor.field_c == param2 &&
-            0 == ef.field_b) {
+            0 == HighscorePacketHandlers.field_b) {
             this.heldButton = 0;
           }
           if (this.heldButton == 0) {
@@ -487,11 +487,11 @@ final class MenuInputState {
           return;
         }
         if (this.field_a <= 0) {
-          this.field_a = gb.field_a;
+          this.field_a = ReportAbuseHelpers.field_a;
         }
         this.field_a = this.field_a - 1;
         if (~IntrusiveDequeCursor.field_c == param2 &&
-          0 == ef.field_b) {
+          0 == HighscorePacketHandlers.field_b) {
           this.heldButton = 0;
         }
         if (this.heldButton != 0) {
@@ -526,9 +526,9 @@ final class MenuInputState {
     }
 
     final static void selectLanguageStrings(int param0, int param1) {
-        td.field_d = ArchiveRequest.field_w[param0];
-        hm.field_a = un.field_k[param0];
-        wa.field_a = ProxyAuthenticationException.field_c[param0];
+        PuzzleModePictureHelpers.field_d = ArchiveRequest.field_w[param0];
+        ClockHelpers.field_a = PatchEnvelopeSet.field_k[param0];
+        SpriteBuildHelpers.field_a = ProxyAuthenticationException.field_c[param0];
         if (param1 != -31383) {
           MenuInputState.selectLanguageStrings(63, 96);
         }
@@ -1093,7 +1093,7 @@ final class MenuInputState {
 
     static {
         field_l = "Service unavailable";
-        field_f = new wm(10, 2, 2, 0);
+        field_f = new ReportReason(10, 2, 2, 0);
         field_b = "Friends can be added in multiplayer<nbsp>games";
         field_m = "Kick";
     }

@@ -33,18 +33,18 @@ final class ScrollContainer extends SceneWidget {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          dk.field_c = false;
+          NineSliceFrameHelpers.field_c = false;
           NumericDateInputWidget.field_V = false;
           if (null != MainMenuScreen.field_r &&
             MainMenuScreen.field_r.field_N) {
             if (param2 == 8) {
               if (!MainMenuScreen.field_s) {
-                param1 = bo.field_b;
+                param1 = ScreenDisplayMode.field_b;
               } else {
-                param1 = mp.field_e;
+                param1 = ChatInputGlobals.field_e;
               }
               param2 = 2;
-              nf.field_b.setUsername(Checkbox.field_U, -13939);
+              LoginFormGlobals.field_b.setUsername(Checkbox.field_U, -13939);
             }
             var3_int = 1;
             if (param2 == 10) {
@@ -53,9 +53,9 @@ final class ScrollContainer extends SceneWidget {
             }
             if (var3_int != 0) {
               if (NumericDateInputWidget.field_V) {
-                param1 = AlphaContainer.formatTemplate(vf.field_a, 79, new String[]{param1});
+                param1 = AlphaContainer.formatTemplate(PageReloadHelpers.field_a, 79, new String[]{param1});
               }
-              if (ke.field_d) {
+              if (KeyEventGlobals.field_d) {
                 param1 = IsaacRandom.field_a;
               }
               MainMenuScreen.field_r.installErrorContent(param2, 5804, param1);
@@ -63,7 +63,7 @@ final class ScrollContainer extends SceneWidget {
             if (256 != param2 &&
               param2 != 10 &&
               !MainMenuScreen.field_s) {
-              nf.field_b.clearFields(-10515);
+              LoginFormGlobals.field_b.clearFields(-10515);
             }
           }
           if (!param0) {

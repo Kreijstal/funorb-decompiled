@@ -30,7 +30,7 @@ class BackgroundScene {
           var3 = 20 + DateInputWidget.field_L.textWidth(this.field_l) / 2 + 320;
           var4 = -1;
           var5 = 25;
-          SoftwareRasterizer.saveClip(nh.field_a);
+          SoftwareRasterizer.saveClip(Base37NameHelpers.field_a);
           if (this.field_d <= RegistrationRequestDialog.field_Cb - var5) {
             if (var5 > this.field_d) {
               var4 = 640 - this.field_d * 640 / var5;
@@ -42,11 +42,11 @@ class BackgroundScene {
           }
           SpriteEffectHelpers.drawTransparent(this.field_i, 0, -DateInputWidget.field_L.maxAscent + (140 - ScrollPaneWithFooter.field_Jb * 2));
           DateInputWidget.field_L.drawCentered(this.field_l, 320, 140, 0, 0);
-          SoftwareRasterizer.restoreClip(nh.field_a);
+          SoftwareRasterizer.restoreClip(Base37NameHelpers.field_a);
           if (var4 > 0) {
             var6 = -((DateInputWidget.field_L.maxAscent + DateInputWidget.field_L.maxDescent) / 2) + 141;
             for (var7 = 0; 10 > var7; var7++) {
-              SoftwareRasterizer.fillRadialPaletteCircle(-40 + var4 + 4 * var7 << 4, var6 << 4, var7 << 3, 15, bo.field_c);
+              SoftwareRasterizer.fillRadialPaletteCircle(-40 + var4 + 4 * var7 << 4, var6 << 4, var7 << 3, 15, ScreenDisplayMode.field_c);
             }
           }
         }
@@ -66,20 +66,20 @@ class BackgroundScene {
         TimerBar.field_q = param2;
     }
 
-    final static bo[] getFullscreenDisplayModes(PlatformTaskDispatcher param0, int param1) {
+    final static ScreenDisplayMode[] getFullscreenDisplayModes(PlatformTaskDispatcher param0, int param1) {
         int var5 = 0;
-        bo[] stackIn_3_0 = null;
-        bo[] stackIn_7_0 = null;
-        bo[] stackIn_13_0 = null;
-        bo[] stackIn_18_0 = null;
+        ScreenDisplayMode[] stackIn_3_0 = null;
+        ScreenDisplayMode[] stackIn_7_0 = null;
+        ScreenDisplayMode[] stackIn_13_0 = null;
+        ScreenDisplayMode[] stackIn_18_0 = null;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
         String stackIn_22_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         int[] var3 = null;
-        bo[] var4 = null;
-        bo var6 = null;
+        ScreenDisplayMode[] var4 = null;
+        ScreenDisplayMode var6 = null;
         int var7 = 0;
         PlatformTask var8 = null;
         int[] var9 = null;
@@ -87,11 +87,11 @@ class BackgroundScene {
         var7 = Pixelate.field_H ? 1 : 0;
         try {
           if (param1 != -855969982) {
-            stackIn_3_0 = (bo[]) null;
+            stackIn_3_0 = (ScreenDisplayMode[]) null;
             return stackIn_3_0;
           }
           if (!param0.isFullscreenAvailable((byte) 115)) {
-            stackIn_7_0 = new bo[]{};
+            stackIn_7_0 = new ScreenDisplayMode[]{};
             return stackIn_7_0;
           }
           var8 = param0.requestDisplayModes(true);
@@ -99,15 +99,15 @@ class BackgroundScene {
             SecondaryNodeHashTable.sleepMillis(10L, (byte) 23);
           }
           if (var8.field_b == 2) {
-            stackIn_13_0 = new bo[]{};
+            stackIn_13_0 = new ScreenDisplayMode[]{};
             return stackIn_13_0;
           }
           var10 = (int[]) (var8.field_e);
           var9 = var10;
           var3 = var9;
-          var4 = new bo[var10.length >> 2];
+          var4 = new ScreenDisplayMode[var10.length >> 2];
           for (var5 = 0; var5 < var4.length; var5++) {
-            var6 = new bo();
+            var6 = new ScreenDisplayMode();
             var4[var5] = var6;
             var6.field_l = var3[var5 << 2];
             var6.field_i = var3[1 + (var5 << 2)];
@@ -163,8 +163,8 @@ class BackgroundScene {
     }
 
     final static void layoutLobbyChat(int param0) {
-        r.layoutSlidingLobbyPanel(-93);
-        SocketConnector.layoutChatPanel(3, MouseWheelHandler.field_c, fq.field_q, r.field_c, Checkbox.field_V[param0].field_A, DelegatingCanvas.field_b);
+        LobbySlideHelpers.layoutSlidingLobbyPanel(-93);
+        SocketConnector.layoutChatPanel(3, MouseWheelHandler.field_c, RankingSummaryScreen.field_q, LobbySlideHelpers.field_c, Checkbox.field_V[param0].field_A, DelegatingCanvas.field_b);
     }
 
     void render(boolean param0) {
@@ -262,7 +262,7 @@ class BackgroundScene {
               var13 = 255 & var17 * var8_int / 32;
               var14 = var9 * var17 / 32 & 255;
               var15 = 255 & var10 * var17 / 32;
-              this.field_g[var7][var17] = bq.bitOr(bq.bitOr(var13 << 16, var14 << 8), var15);
+              this.field_g[var7][var17] = LegacyMenuBuilder.bitOr(LegacyMenuBuilder.bitOr(var13 << 16, var14 << 8), var15);
               var17++;
             }
           }

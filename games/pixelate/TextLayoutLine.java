@@ -4,7 +4,7 @@
 final class TextLayoutLine {
     int field_b;
     static String field_a;
-    static bd field_c;
+    static ConnectionState field_c;
     int[] field_g;
     int field_d;
     static String field_f;
@@ -14,7 +14,7 @@ final class TextLayoutLine {
         field_c = null;
         field_a = null;
         if (param0 != -26) {
-          field_c = (bd) null;
+          field_c = (ConnectionState) null;
           field_f = null;
           return;
         }
@@ -63,10 +63,10 @@ final class TextLayoutLine {
         return 0;
     }
 
-    final static cm playSoundEffect(int param0, PcmSampleStream param1) {
-        cm var2 = null;
+    final static VolumeControlledVoice playSoundEffect(int param0, PcmSampleStream param1) {
+        VolumeControlledVoice var2 = null;
         RuntimeException var2_ref = null;
-        cm stackIn_3_0 = null;
+        VolumeControlledVoice stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -75,8 +75,8 @@ final class TextLayoutLine {
           if (param0 != -21317) {
             field_a = (String) null;
           }
-          var2 = new cm(param1, param1);
-          bo.field_d.addLast(22125, var2);
+          var2 = new VolumeControlledVoice(param1, param1);
+          ScreenDisplayMode.field_d.addLast(22125, var2);
           ClientContextMenu.field_d.addSubStream(param1);
           stackIn_3_0 = var2;
           return stackIn_3_0;
@@ -175,7 +175,7 @@ final class TextLayoutLine {
 
     static {
         field_a = "Unfortunately your configuration doesn't support fullscreen mode. You could try restarting your browser and using the signed applet.";
-        field_c = new bd();
+        field_c = new ConnectionState();
         field_e = -1;
     }
 }

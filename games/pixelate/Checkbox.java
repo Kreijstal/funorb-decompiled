@@ -3,7 +3,7 @@
  */
 final class Checkbox extends TextButton {
     static String field_O;
-    static ge field_N;
+    static RequestState field_N;
     static int[] field_Y;
     static String field_U;
     static String field_S;
@@ -62,11 +62,11 @@ final class Checkbox extends TextButton {
 
     final static LoginMethod[] getLoginMethods(byte param0) {
         if (param0 == -8) {
-          return new LoginMethod[]{ig.field_e, vm.field_a, cd.field_c};
+          return new LoginMethod[]{AudioPumpHelpers.field_e, LobbyGameLookupHelpers.field_a, LoginMethodGlobals.field_c};
         }
         Sprite var2 = (Sprite) null;
         Checkbox.renderToSprite(-96, (Sprite) null);
-        return new LoginMethod[]{ig.field_e, vm.field_a, cd.field_c};
+        return new LoginMethod[]{AudioPumpHelpers.field_e, LobbyGameLookupHelpers.field_a, LoginMethodGlobals.field_c};
     }
 
     public static void releaseStatics(int param0) {
@@ -88,7 +88,7 @@ final class Checkbox extends TextButton {
         field_Y = new int[8192];
         field_O = "Single-Player";
         field_S = "Join";
-        field_N = new ge();
+        field_N = new RequestState();
         field_P = new boolean[64];
         field_Q = -1;
     }

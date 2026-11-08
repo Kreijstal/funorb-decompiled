@@ -23,26 +23,26 @@ final class ConditionalTextValue {
     final static boolean isAccountNamePromptOpen(int param0) {
         if (param0 != -10093) {
           ConditionalTextValue.isAccountNamePromptOpen(-27);
-          return he.field_f != null ? true : false;
+          return CanvasInputHelpers.field_f != null ? true : false;
         }
-        return he.field_f != null ? true : false;
+        return CanvasInputHelpers.field_f != null ? true : false;
     }
 
     final static String getLoadingStatusMessage(int param0) {
-        if (hf.field_q < 2) {
-          return td.field_d;
+        if (AchievementRecord.field_q < 2) {
+          return PuzzleModePictureHelpers.field_d;
         }
         if (null != DebouncedValidator.field_e) {
           if (!DebouncedValidator.field_e.ensureIndex(param0 ^ -16421)) {
-            return hm.field_a;
+            return ClockHelpers.field_a;
           }
-          return wa.field_a;
+          return SpriteBuildHelpers.field_a;
         }
-        if (!wk.field_j.ensureIndex(-3)) {
+        if (!EmailLoginCredentials.field_j.ensureIndex(-3)) {
           return SocialListEntry.field_Mb;
         }
-        if (!wk.field_j.ensureGroupAvailableByName("commonui", -1)) {
-          return PasswordValidator.field_q + " - " + wk.field_j.getGroupProgressByName(119, "commonui") + "%";
+        if (!EmailLoginCredentials.field_j.ensureGroupAvailableByName("commonui", -1)) {
+          return PasswordValidator.field_q + " - " + EmailLoginCredentials.field_j.getGroupProgressByName(119, "commonui") + "%";
         }
         if (!LoginMethod.field_g.ensureIndex(param0 ^ -16421)) {
           return CanvasRasterBuffer.field_f;
@@ -57,7 +57,7 @@ final class ConditionalTextValue {
           ConditionalTextValue.isAccountNamePromptOpen(34);
         }
         if (!MatchingTextValidator.field_u.ensureAllGroupsAvailable((byte) 92)) {
-          return em.field_a + " - " + MatchingTextValidator.field_u.getOverallProgress(0) + "%";
+          return ContextMenuHelpers.field_a + " - " + MatchingTextValidator.field_u.getOverallProgress(0) + "%";
         }
         return GrowableIntList.field_b;
     }

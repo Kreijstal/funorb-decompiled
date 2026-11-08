@@ -55,13 +55,13 @@ final class MusicPatchPcmStream extends PcmStream {
     final static void setLobbyPanelX(int param0, byte param1) {
         int var2 = 0;
         int var3 = 0;
-        wa.field_i = param0;
-        if (HuffmanCodec.field_b != qh.field_c) {
-          var2 = qh.field_c * qh.field_c;
+        SpriteBuildHelpers.field_i = param0;
+        if (HuffmanCodec.field_b != MusicPlaybackHelpers.field_c) {
+          var2 = MusicPlaybackHelpers.field_c * MusicPlaybackHelpers.field_c;
           var3 = -(HuffmanCodec.field_b * HuffmanCodec.field_b) + var2;
           param0 = param0 + var3 * (MatchingTextValidator.field_o - param0) / var2;
         }
-        ui.field_i.setBounds(param0, 120, TextTableInitializer.field_c, 256, 640);
+        Cp1252DecodeHelpers.field_i.setBounds(param0, 120, TextTableInitializer.field_c, 256, 640);
         ArchiveProvider.layoutQuickChatRoot(MatchingTextValidator.field_o - 24, (byte) 123, 640, PlayerBoard.field_q, 5, 0, MouseWheelHandler.field_c);
         if (param1 != 112) {
           MusicPatchPcmStream.createAccountStatusValue(92);

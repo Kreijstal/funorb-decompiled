@@ -3,7 +3,7 @@
  */
 final class DiskCacheWorker implements Runnable {
     private DualLinkDeque requests;
-    static el field_f;
+    static EmailValidationState field_f;
     static SceneWidget field_a;
     private Thread field_d;
     private boolean field_e;
@@ -112,7 +112,7 @@ final class DiskCacheWorker implements Runnable {
     public static void releaseStatics(int param0) {
         field_a = null;
         if (param0 != -1) {
-          field_f = (el) null;
+          field_f = (EmailValidationState) null;
           field_f = null;
           return;
         }
@@ -151,7 +151,7 @@ final class DiskCacheWorker implements Runnable {
             }
           }
           if (param2 < 53) {
-            field_f = (el) null;
+            field_f = (EmailValidationState) null;
           }
           var4.field_D = param1.read(126, param0);
           var4.field_t = true;
@@ -266,6 +266,6 @@ final class DiskCacheWorker implements Runnable {
     }
 
     static {
-        field_f = new el();
+        field_f = new EmailValidationState();
     }
 }

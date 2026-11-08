@@ -6,7 +6,7 @@ abstract class ContentTransitionDialog extends ResizableModalPanel {
     static SceneWidget field_eb;
     static boolean field_kb;
     private int fadeInDuration;
-    private dq transitionPhase;
+    private TransitionPhase transitionPhase;
     private AlphaContainer contentWrapper;
     private UiComponent pendingContent;
     private int headerHeight;
@@ -28,7 +28,7 @@ abstract class ContentTransitionDialog extends ResizableModalPanel {
               param2 != 2 &&
               param2 != 1) {
               if (param2 == 5) {
-                StripedProgressBar.field_H[param2] = (MenuScreen) ((Object) new fq(param2, param6, param3, param1, param5, param4));
+                StripedProgressBar.field_H[param2] = (MenuScreen) ((Object) new RankingSummaryScreen(param2, param6, param3, param1, param5, param4));
               } else {
                 if (param2 == 6) {
                   StripedProgressBar.field_H[param2] = (MenuScreen) ((Object) new HighscoresScreen(param2, param6, param3, param1, param5, param4));
@@ -39,10 +39,10 @@ abstract class ContentTransitionDialog extends ResizableModalPanel {
                     if (param2 != 8 &&
                       param2 != 9) {
                       if (param2 == 10) {
-                        StripedProgressBar.field_H[param2] = (MenuScreen) ((Object) new mi(param2, param6, param3, param1, param5, param4));
+                        StripedProgressBar.field_H[param2] = (MenuScreen) ((Object) new NotLoggedInScreen(param2, param6, param3, param1, param5, param4));
                       } else {
                         if (11 == param2) {
-                          StripedProgressBar.field_H[param2] = (MenuScreen) ((Object) new l(param2, param6, param3, param1, param5, param4));
+                          StripedProgressBar.field_H[param2] = (MenuScreen) ((Object) new MessageScreen(param2, param6, param3, param1, param5, param4));
                         } else {
                           if (param2 == 12) {
                             StripedProgressBar.field_H[param2] = (MenuScreen) ((Object) new PauseMenuScreen(param2, param6, param3, param1, param5, param4));
@@ -59,7 +59,7 @@ abstract class ContentTransitionDialog extends ResizableModalPanel {
                                   if (param2 != 14) {
                                     throw new IllegalStateException("No class defined for id=" + param2);
                                   }
-                                  StripedProgressBar.field_H[param2] = (MenuScreen) ((Object) new ij(param2, param6, param3, param1, param5, param4));
+                                  StripedProgressBar.field_H[param2] = (MenuScreen) ((Object) new BlankScreen(param2, param6, param3, param1, param5, param4));
                                 }
                               }
                             }
@@ -109,7 +109,7 @@ abstract class ContentTransitionDialog extends ResizableModalPanel {
         RuntimeException decompiledCaughtException = null;
         try {
           var2_int = 59 % ((49 - param1) / 54);
-          stackIn_1_0 = ig.field_b.getNamedFile((byte) 24, param0, "");
+          stackIn_1_0 = AudioPumpHelpers.field_b.getNamedFile((byte) 24, param0, "");
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -357,7 +357,7 @@ abstract class ContentTransitionDialog extends ResizableModalPanel {
           return null;
         }
         if (!(Js5ArchiveManager.field_c + CipherPacketBuffer.field_s <= CachedTextLayout.field_h)) {
-          return qg.field_b;
+          return GameRequestHelpers.field_b;
         }
         return null;
     }

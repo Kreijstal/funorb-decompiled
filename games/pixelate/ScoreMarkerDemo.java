@@ -36,7 +36,7 @@ final class ScoreMarkerDemo {
             return;
           }
           this.field_a[0] = 0;
-          this.field_a[1] = 300 + JavaRandomHelpers.randomBelow(ea.field_b, DraggableWidget.intXor(param0, -327), 300);
+          this.field_a[1] = 300 + JavaRandomHelpers.randomBelow(CredentialKind.field_b, DraggableWidget.intXor(param0, -327), 300);
           this.field_d = 0;
           if (param0 != 300) {
             ScoreMarkerDemo.showAccountChoicePanel(43);
@@ -44,7 +44,7 @@ final class ScoreMarkerDemo {
           }
           return;
         }
-        this.field_a[0] = JavaRandomHelpers.randomBelow(ea.field_b, -100, 300) + 300;
+        this.field_a[0] = JavaRandomHelpers.randomBelow(CredentialKind.field_b, -100, 300) + 300;
         this.field_a[1] = 0;
         if (param0 == 300) {
           return;
@@ -65,15 +65,15 @@ final class ScoreMarkerDemo {
         field_i = null;
     }
 
-    final static void setButtonFrames(int param0, sb param1, int param2, int param3, int param4, sb param5) {
+    final static void setButtonFrames(int param0, NineSliceFrame param1, int param2, int param3, int param4, NineSliceFrame param5) {
         try {
           BufferedRandomAccessFile.field_m = param1;
           ProxyAuthenticationException.field_a = param2;
           WidgetStyleLayer.field_b = param4;
           Matrix3.field_d = param5;
           if (param3 != 300) {
-            sb var7 = (sb) null;
-            ScoreMarkerDemo.setButtonFrames(-68, (sb) null, -42, 67, -94, (sb) null);
+            NineSliceFrame var7 = (NineSliceFrame) null;
+            ScoreMarkerDemo.setButtonFrames(-68, (NineSliceFrame) null, -42, 67, -94, (NineSliceFrame) null);
           }
           KiteTailSegment.field_e = param0;
         } catch (RuntimeException runtimeException) {
@@ -85,8 +85,8 @@ final class ScoreMarkerDemo {
         if (param0 == 4067) {
           return param1 + 1 + "/" + SoundVoice.field_m.length;
         }
-        sb var3 = (sb) null;
-        ScoreMarkerDemo.setButtonFrames(112, (sb) null, -11, -57, 97, (sb) null);
+        NineSliceFrame var3 = (NineSliceFrame) null;
+        ScoreMarkerDemo.setButtonFrames(112, (NineSliceFrame) null, -11, -57, 97, (NineSliceFrame) null);
         return param1 + 1 + "/" + SoundVoice.field_m.length;
     }
 
@@ -110,10 +110,10 @@ final class ScoreMarkerDemo {
         try {
           var7 = (CharSequence) ((Object) param1);
           if (!Bzip2State.isValidPlayerName((byte) -128, var7)) {
-            stackIn_3_0 = qn.field_n;
+            stackIn_3_0 = PatchNoteUsage.field_n;
             return stackIn_3_0;
           }
-          if (sm.isLocalPlayerName(param1, -1)) {
+          if (QueuedLobbyRequest.isLocalPlayerName(param1, -1)) {
             stackIn_6_0 = GrowableIntList.field_h;
             return stackIn_6_0;
           }
@@ -166,7 +166,7 @@ final class ScoreMarkerDemo {
     }
 
     final static void showAccountChoicePanel(int param0) {
-        ph.field_l.transitionToContent(new AccountChoicePanel(), -115);
+        AchievementBannerEntry.field_l.transitionToContent(new AccountChoicePanel(), -115);
         if (param0 != 24496) {
           String var2 = (String) null;
           ScoreMarkerDemo.requestAddIgnore(-69, (String) null, 1);
@@ -174,19 +174,19 @@ final class ScoreMarkerDemo {
     }
 
     final static void closeQuickChatMenu(boolean param0) {
-        un.field_l = param0 ? true : false;
-        if (null == bo.field_h) {
-          if (0 != ce.field_d) {
-            nd.clearChatInput((byte) -124);
+        PatchEnvelopeSet.field_l = param0 ? true : false;
+        if (null == ScreenDisplayMode.field_h) {
+          if (0 != ChatChannelGlobals.field_d) {
+            HowToPlayDemoHelpers.clearChatInput((byte) -124);
           }
-          di.field_a = 0;
+          NumberFormatHelpers.field_a = 0;
           return;
         }
-        bo.field_h.resetSelection(17872);
-        if (0 != ce.field_d) {
-          nd.clearChatInput((byte) -124);
+        ScreenDisplayMode.field_h.resetSelection(17872);
+        if (0 != ChatChannelGlobals.field_d) {
+          HowToPlayDemoHelpers.clearChatInput((byte) -124);
         }
-        di.field_a = 0;
+        NumberFormatHelpers.field_a = 0;
     }
 
     static {

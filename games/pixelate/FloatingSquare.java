@@ -28,8 +28,8 @@ final class FloatingSquare {
 
     final static LoginCredentials createLoginCredentials(String param0, String param1, boolean param2, long param3, int param4) {
         RuntimeException var6 = null;
-        gq stackIn_5_0 = null;
-        wk stackIn_7_0 = null;
+        AlternateNameCredentials stackIn_5_0 = null;
+        EmailLoginCredentials stackIn_7_0 = null;
         LoginCredentials stackIn_10_0 = null;
         EmailCredentials stackIn_12_0 = null;
         RuntimeException stackIn_15_0 = null;
@@ -41,11 +41,11 @@ final class FloatingSquare {
         try {
           if (param3 == 0L &&
             param1 != null) {
-            stackIn_7_0 = new wk(param1, param0);
+            stackIn_7_0 = new EmailLoginCredentials(param1, param0);
             return (LoginCredentials) ((Object) stackIn_7_0);
           }
           if (param2) {
-            stackIn_5_0 = new gq(param3, param0);
+            stackIn_5_0 = new AlternateNameCredentials(param3, param0);
             return (LoginCredentials) ((Object) stackIn_5_0);
           }
           if (param4 >= 60) {
@@ -104,14 +104,14 @@ final class FloatingSquare {
         int var4;
         int var5;
         float var6;
-        this.field_f = JavaRandomHelpers.randomBelow(ea.field_b, -101, 50) + 20;
-        this.field_d = 1.5f + (float)JavaRandomHelpers.randomBelow(ea.field_b, -125, 100) / 100.0f;
-        stackIn_3_0 = (JavaRandomHelpers.randomBelow(ea.field_b, param0 ^ 22979, 2) != 1) ? 0 : 1;
+        this.field_f = JavaRandomHelpers.randomBelow(CredentialKind.field_b, -101, 50) + 20;
+        this.field_d = 1.5f + (float)JavaRandomHelpers.randomBelow(CredentialKind.field_b, -125, 100) / 100.0f;
+        stackIn_3_0 = (JavaRandomHelpers.randomBelow(CredentialKind.field_b, param0 ^ 22979, 2) != 1) ? 0 : 1;
         var2 = stackIn_3_0;
-        stackIn_6_0 = (JavaRandomHelpers.randomBelow(ea.field_b, -115, 2) != 1) ? 0 : 1;
+        stackIn_6_0 = (JavaRandomHelpers.randomBelow(CredentialKind.field_b, -115, 2) != 1) ? 0 : 1;
         var3 = stackIn_6_0;
         if (var2 == 0) {
-          this.field_h = (float)(-100 + JavaRandomHelpers.randomBelow(ea.field_b, param0 ^ 22992, 740));
+          this.field_h = (float)(-100 + JavaRandomHelpers.randomBelow(CredentialKind.field_b, param0 ^ 22992, 740));
           if (var3 != 0) {
             stackIn_14_1 = 480.0f;
           } else {
@@ -125,7 +125,7 @@ final class FloatingSquare {
             stackIn_10_1 = 640.0f;
           }
           this.field_h = stackIn_10_1;
-          this.field_a = (float)(JavaRandomHelpers.randomBelow(ea.field_b, -109, 580) - 100);
+          this.field_a = (float)(JavaRandomHelpers.randomBelow(CredentialKind.field_b, -109, 580) - 100);
         }
         var4 = 320 - (int)this.field_h;
         var5 = 240 - (int)this.field_a;
@@ -196,7 +196,7 @@ final class FloatingSquare {
         int[] var16 = null;
         var9 = Pixelate.field_H ? 1 : 0;
         try {
-          var3_int = wo.field_d;
+          var3_int = SocialPanel.field_d;
           DraggableWidget.field_I = new SceneWidget(0L, (SceneWidget) null);
           if (param2 == null) {
             var10 = (Throwable) null;
@@ -206,14 +206,14 @@ final class FloatingSquare {
           param2.discardPackedGroups = false;
           param2.field_e = 0;
           StatefulTextPainter.field_y = new QuickChatCategoryCache(var3_int, param2, param2);
-          RasterState.field_k = new QuickChatPhraseCache(var3_int, param2, param2, new dn());
+          RasterState.field_k = new QuickChatPhraseCache(var3_int, param2, param2, new DefaultQuickChatPhraseListener());
           var4 = AsyncValidationResult.findRootQuickChatCategory(-3060);
           if (var4 == null) {
             var11 = (Throwable) null;
             CheckboxPainter.reportClientError(1, "QC2", (Throwable) null);
             return;
           }
-          oo.setSinglePhraseCategory(-1, var4);
+          AchievementIconGlobals.setSinglePhraseCategory(-1, var4);
           var12 = (BitmapFont) null;
           AccountMessagePanel.field_L = ResizableModalPanel.createThemedWidget(65793, 4020342, 65793, (BitmapFont) null, 1513239, 0, 8947848, param0, 21, 1513239, 2245737, 5138823, 1127256);
           RankingTableRequest.field_t = ResizableModalPanel.createThemedWidget(0, 0, 0, param1, 0, 16764006, 0, 0, 21, 0, 0, 0, 0);
@@ -221,8 +221,8 @@ final class FloatingSquare {
           var5 = SoftwareRasterizer.field_j;
           var6 = SoftwareRasterizer.field_d;
           var16 = SoftwareRasterizer.field_k;
-          fe.field_b = new Sprite(10, 14);
-          fe.field_b.makeRasterTarget();
+          PendingFlagGlobals.field_b = new Sprite(10, 14);
+          PendingFlagGlobals.field_b.makeRasterTarget();
           for (var8 = 2; var8 < 7; var8++) {
             SoftwareRasterizer.drawVerticalLine(var8, 1 + var8, -(var8 << 1) + 14, 16777215);
           }
@@ -312,9 +312,9 @@ final class FloatingSquare {
     FloatingSquare() {
         int var1;
         this.respawn(-22970);
-        var1 = JavaRandomHelpers.randomBelow(ea.field_b, -128, 250);
+        var1 = JavaRandomHelpers.randomBelow(CredentialKind.field_b, -128, 250);
         if (var1 >= 180) {
-          this.field_f = this.field_f + JavaRandomHelpers.randomBelow(ea.field_b, -116, 50);
+          this.field_f = this.field_f + JavaRandomHelpers.randomBelow(CredentialKind.field_b, -116, 50);
         } else {
           this.field_f = 0;
           this.field_a = this.field_a + this.field_e * (float)var1;

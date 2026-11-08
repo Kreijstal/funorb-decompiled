@@ -95,7 +95,7 @@ abstract class BitmapFont extends DualLinkNode {
                 }
               } else {
                 var4 = (CharSequence) ((Object) param0.substring(6));
-                field_O = na.parseDecimalInt(var4, (byte) -33);
+                field_O = GameSocketHelpers.parseDecimalInt(var4, (byte) -33);
               }
             } else {
               field_C = field_y;
@@ -545,7 +545,7 @@ abstract class BitmapFont extends DualLinkNode {
                               if (!(!var8.startsWith("img="))) {
                                 try {
                                   var10 = (CharSequence) ((Object) var8.substring(4));
-                                  var9_int = na.parseDecimalInt(var10, (byte) -33);
+                                  var9_int = GameSocketHelpers.parseDecimalInt(var10, (byte) -33);
                                   var4 = var4 + this.field_I[var9_int].field_f;
                                   var3 = 0;
                                 } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -655,7 +655,7 @@ abstract class BitmapFont extends DualLinkNode {
         if (param0 == null) {
           return 0;
         }
-        nk.padWithChar(field_B, 0, ' ', 16736352);
+        ChatPanelHelpers.padWithChar(field_B, 0, ' ', 16736352);
         var4 = 0;
         var5 = 0;
         var6 = -1;
@@ -687,7 +687,7 @@ abstract class BitmapFont extends DualLinkNode {
                                 if (var15.startsWith("img=")) {
                                   try {
                                     var18 = (CharSequence) ((Object) var15.substring(4));
-                                    var16_int = na.parseDecimalInt(var18, (byte) -33);
+                                    var16_int = GameSocketHelpers.parseDecimalInt(var18, (byte) -33);
                                     var4 = var4 + this.field_I[var16_int].field_f;
                                     var10 = 0;
                                   } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -869,7 +869,7 @@ abstract class BitmapFont extends DualLinkNode {
                               } else {
                                 try {
                                   var13 = (CharSequence) ((Object) var9_ref_String.substring(4));
-                                  var10 = na.parseDecimalInt(var13, (byte) -33);
+                                  var10 = GameSocketHelpers.parseDecimalInt(var13, (byte) -33);
                                   var11_ref_sl = this.field_I[var10];
                                   if (this.inlineImageBaselineOffsets == null) {
                                     stackIn_27_0 = var11_ref_sl.field_a;

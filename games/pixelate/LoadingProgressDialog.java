@@ -122,14 +122,14 @@ final class LoadingProgressDialog extends ResizableModalPanel {
 
     final static void showAccountRequestDialog(boolean param0, String param1, int param2) {
         try {
-          dk.field_c = true;
-          ke.field_d = param0 ? true : false;
+          NineSliceFrameHelpers.field_c = true;
+          KeyEventGlobals.field_d = param0 ? true : false;
           if (param2 != -26027) {
             String var4 = (String) null;
             LoadingProgressDialog.showAccountRequestDialog(true, (String) null, -84);
           }
-          MainMenuScreen.field_r = new AccountRequestDialog(wa.field_c, FireworkBurst.field_d, param1, MainMenuScreen.field_s, ke.field_d);
-          wa.field_c.showPanel(param2 ^ 32140, MainMenuScreen.field_r);
+          MainMenuScreen.field_r = new AccountRequestDialog(SpriteBuildHelpers.field_c, FireworkBurst.field_d, param1, MainMenuScreen.field_s, KeyEventGlobals.field_d);
+          SpriteBuildHelpers.field_c.showPanel(param2 ^ 32140, MainMenuScreen.field_r);
         } catch (RuntimeException runtimeException) {
           throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "ko.Q(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

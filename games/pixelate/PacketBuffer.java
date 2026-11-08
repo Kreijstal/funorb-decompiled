@@ -93,7 +93,7 @@ class PacketBuffer extends IntrusiveNode {
             throw new IllegalArgumentException("");
           }
           var4 = (CharSequence) ((Object) param1);
-          this.position = this.position + cl.encodeCp1252(this.position, this.payload, param1.length(), var4, 0, param0 ^ 21784);
+          this.position = this.position + Cp1252EncodingHelpers.encodeCp1252(this.position, this.payload, param1.length(), var4, 0, param0 ^ 21784);
           fieldTemp$0 = this.position;
           this.position = this.position + 1;
           this.payload[fieldTemp$0] = (byte) 0;
@@ -320,7 +320,7 @@ class PacketBuffer extends IntrusiveNode {
         if (var4 == 0) {
           return "";
         }
-        return ui.decodeText(true, this.payload, var3, var4);
+        return Cp1252DecodeHelpers.decodeText(true, this.payload, var3, var4);
     }
 
     final boolean verifyCrc32(byte param0) {
@@ -370,7 +370,7 @@ class PacketBuffer extends IntrusiveNode {
           if (var3_int > 12) {
             return false;
           }
-          var4 = dh.normalizeDisplayName(param2, (byte) 58);
+          var4 = DisplayNameHelpers.normalizeDisplayName(param2, (byte) 58);
           if (var4 != null &&
             var4.length() >= 1) {
             if (!MatchController.isNameSeparatorChar((byte) 123, var4.charAt(0)) &&
@@ -522,7 +522,7 @@ class PacketBuffer extends IntrusiveNode {
         if (var3 == 0) {
           return "";
         }
-        return ui.decodeText(true, this.payload, var2, var3);
+        return Cp1252DecodeHelpers.decodeText(true, this.payload, var2, var3);
     }
 
     final void xteaEncrypt(boolean param0, int[] param1) {
@@ -598,13 +598,13 @@ class PacketBuffer extends IntrusiveNode {
 
     final static void layoutLobbyPanels(boolean param0) {
         Matrix3.field_b = SoftwareRasterizer.field_d;
-        ni.field_q = SoftwareRasterizer.field_j;
+        TextHotspot.field_q = SoftwareRasterizer.field_j;
         EditableTextWidget.layoutAccountPanelSlide(21);
-        cl.field_g.layoutSocialPanel(GreenGrowTheRushesBackground.field_n.field_K, -2 + (-40 + GreenGrowTheRushesBackground.field_n.height), 0, 0, 5);
-        ValidatedTextWidget.field_lb.setBounds(0, fq.field_q, 0, 256, vd.field_c.field_K);
-        int var1 = 2 + fq.field_q;
-        StripedProgressBar.field_O.setBounds(!DialWidgetPainter.field_n ? 0 : var1, vd.field_c.height - (!DialWidgetPainter.field_n ? 0 : var1), 0, 256, vd.field_c.field_K);
-        mi.layoutLobbyPanels(param0);
+        Cp1252EncodingHelpers.field_g.layoutSocialPanel(GreenGrowTheRushesBackground.field_n.field_K, -2 + (-40 + GreenGrowTheRushesBackground.field_n.height), 0, 0, 5);
+        ValidatedTextWidget.field_lb.setBounds(0, RankingSummaryScreen.field_q, 0, 256, ChatAppendHelpers.field_c.field_K);
+        int var1 = 2 + RankingSummaryScreen.field_q;
+        StripedProgressBar.field_O.setBounds(!DialWidgetPainter.field_n ? 0 : var1, ChatAppendHelpers.field_c.height - (!DialWidgetPainter.field_n ? 0 : var1), 0, 256, ChatAppendHelpers.field_c.field_K);
+        NotLoggedInScreen.layoutLobbyPanels(param0);
         ValidatedTextWidget.field_cb.setBounds(-40 + GreenGrowTheRushesBackground.field_n.height, 40, 0, 256, GreenGrowTheRushesBackground.field_n.field_K);
         AlphaContainer.field_P.setBounds(0, 30, 0, 256, MidiPcmStream.field_E.field_K);
         DiskCacheWorker.field_a.setBounds(30, -70 + MidiPcmStream.field_E.height - 2, 0, 256, MidiPcmStream.field_E.field_K);
@@ -617,7 +617,7 @@ class PacketBuffer extends IntrusiveNode {
         SocketJs5Transport.field_t.setBounds(5, 30, 370, 256, -375 + MidiPcmStream.field_E.field_K);
         ReflectionCheckRequest.field_k.setBoundsAndLayout(5, 2, (byte) 52, -5 + DiskCacheWorker.field_a.field_K - 5, 37, -10 + DiskCacheWorker.field_a.height - 32, DelegatingCanvas.field_b);
         int var3 = (2 + MidiPcmStream.field_E.field_K) / 2;
-        lg.field_c.setBounds(-40 + MidiPcmStream.field_E.height, 40, 0, 256, var3 - 2);
+        LoginCookieHelpers.field_c.setBounds(-40 + MidiPcmStream.field_E.height, 40, 0, 256, var3 - 2);
         if (!DialWidgetPainter.field_n) {
           var3 = 0;
         }
@@ -816,7 +816,7 @@ class PacketBuffer extends IntrusiveNode {
           this.position = this.position + 1;
           this.payload[fieldTemp$0] = (byte) 0;
           var4 = (CharSequence) ((Object) param1);
-          this.position = this.position + cl.encodeCp1252(this.position, this.payload, param1.length(), var4, 0, -21809);
+          this.position = this.position + Cp1252EncodingHelpers.encodeCp1252(this.position, this.payload, param1.length(), var4, 0, -21809);
           fieldTemp$1 = this.position;
           this.position = this.position + 1;
           this.payload[fieldTemp$1] = (byte) 0;
@@ -885,7 +885,7 @@ class PacketBuffer extends IntrusiveNode {
     }
 
     PacketBuffer(int param0) {
-        this.payload = fd.acquireByteArray(-5001, param0);
+        this.payload = ByteArrayPool.acquireByteArray(-5001, param0);
         this.position = 0;
     }
 

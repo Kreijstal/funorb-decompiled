@@ -4,7 +4,7 @@
 final class Js5NetworkRequest extends ArchiveRequest {
     PacketBuffer field_D;
     int field_H;
-    static ge field_F;
+    static RequestState field_F;
     byte field_B;
     static BufferedRandomAccessFile field_G;
     static int field_I;
@@ -25,7 +25,7 @@ final class Js5NetworkRequest extends ArchiveRequest {
     }
 
     final static void drawAccountLayers(int param0, boolean param1) {
-        wa.field_c.drawLayers(0, 0, 120);
+        SpriteBuildHelpers.field_c.drawLayers(0, 0, 120);
         if (param0 <= 73) {
           Js5NetworkRequest.releaseStatics((byte) 4);
         }
@@ -58,9 +58,9 @@ final class Js5NetworkRequest extends ArchiveRequest {
 
     final static void createRoundedPanelSprite(int param0) {
         int var1 = 16777215;
-        gb.field_b = new Sprite(108, 100);
+        ReportAbuseHelpers.field_b = new Sprite(108, 100);
         int var2 = 65793;
-        gb.field_b.makeRasterTarget();
+        ReportAbuseHelpers.field_b.makeRasterTarget();
         SoftwareRasterizer.fillRectangle(4, 0, SoftwareRasterizer.field_j - 8, SoftwareRasterizer.field_d, var1);
         SoftwareRasterizer.fillCircle(4, 0, 4, var2);
         SoftwareRasterizer.fillCircle(-4 + SoftwareRasterizer.field_j - 1, 0, 4, var2);
@@ -73,13 +73,13 @@ final class Js5NetworkRequest extends ArchiveRequest {
           SoftwareRasterizer.drawVerticalLine(-2 + SoftwareRasterizer.field_j - 4, 0, SoftwareRasterizer.field_d, var2);
           SoftwareRasterizer.drawHorizontalLine(4, 0, -8 + SoftwareRasterizer.field_j, var2);
           SoftwareRasterizer.drawHorizontalLine(4, -1 + SoftwareRasterizer.field_d, SoftwareRasterizer.field_j - 8, var2);
-          HighscoresScreen.field_q = new Sprite(gb.field_b.field_A, 4);
+          HighscoresScreen.field_q = new Sprite(ReportAbuseHelpers.field_b.field_A, 4);
           HighscoresScreen.field_q.makeRasterTarget();
           SoftwareRasterizer.fillCircle(4, SoftwareRasterizer.field_d, 4, var2);
           SoftwareRasterizer.fillCircle(SoftwareRasterizer.field_j - 5, SoftwareRasterizer.field_d, 4, var2);
           SoftwareRasterizer.drawHorizontalLine(4, -1 + SoftwareRasterizer.field_d, -8 + SoftwareRasterizer.field_j, var2);
-          of.field_h = new Sprite(HighscoresScreen.field_q.field_A, HighscoresScreen.field_q.field_B);
-          of.field_h.makeRasterTarget();
+          TextDecodeHelpers.field_h = new Sprite(HighscoresScreen.field_q.field_A, HighscoresScreen.field_q.field_B);
+          TextDecodeHelpers.field_h.makeRasterTarget();
           HighscoresScreen.field_q.drawVerticalFlip(0, 0);
           ClientException.field_f.bindRaster(19692);
           return;
@@ -89,13 +89,13 @@ final class Js5NetworkRequest extends ArchiveRequest {
         SoftwareRasterizer.drawVerticalLine(-2 + SoftwareRasterizer.field_j - 4, 0, SoftwareRasterizer.field_d, var2);
         SoftwareRasterizer.drawHorizontalLine(4, 0, -8 + SoftwareRasterizer.field_j, var2);
         SoftwareRasterizer.drawHorizontalLine(4, -1 + SoftwareRasterizer.field_d, SoftwareRasterizer.field_j - 8, var2);
-        HighscoresScreen.field_q = new Sprite(gb.field_b.field_A, 4);
+        HighscoresScreen.field_q = new Sprite(ReportAbuseHelpers.field_b.field_A, 4);
         HighscoresScreen.field_q.makeRasterTarget();
         SoftwareRasterizer.fillCircle(4, SoftwareRasterizer.field_d, 4, var2);
         SoftwareRasterizer.fillCircle(SoftwareRasterizer.field_j - 5, SoftwareRasterizer.field_d, 4, var2);
         SoftwareRasterizer.drawHorizontalLine(4, -1 + SoftwareRasterizer.field_d, -8 + SoftwareRasterizer.field_j, var2);
-        of.field_h = new Sprite(HighscoresScreen.field_q.field_A, HighscoresScreen.field_q.field_B);
-        of.field_h.makeRasterTarget();
+        TextDecodeHelpers.field_h = new Sprite(HighscoresScreen.field_q.field_A, HighscoresScreen.field_q.field_B);
+        TextDecodeHelpers.field_h.makeRasterTarget();
         HighscoresScreen.field_q.drawVerticalFlip(0, 0);
         ClientException.field_f.bindRaster(19692);
     }
@@ -110,7 +110,7 @@ final class Js5NetworkRequest extends ArchiveRequest {
     }
 
     static {
-        field_F = new ge();
+        field_F = new RequestState();
         field_C = new BackgroundScene[8];
     }
 }

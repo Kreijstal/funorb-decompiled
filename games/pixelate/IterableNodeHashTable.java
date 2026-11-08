@@ -11,8 +11,8 @@ final class IterableNodeHashTable implements Iterable {
     static String field_d;
 
     final static void closePrivateChatInput(int param0) {
-        ce.field_d = 0;
-        oo.field_d = true;
+        ChatChannelGlobals.field_d = 0;
+        AchievementIconGlobals.field_d = true;
         if (param0 != 7500) {
           IterableNodeHashTable.advanceBackgroundSkin((byte) -13);
         }
@@ -27,7 +27,7 @@ final class IterableNodeHashTable implements Iterable {
           var2 = GradientOutlineTextPainter.field_v;
         }
         if (2 == param0) {
-          var2 = ib.field_e;
+          var2 = GridSize.field_e;
         }
         return var2;
     }

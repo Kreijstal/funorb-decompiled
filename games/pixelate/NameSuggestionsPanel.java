@@ -66,7 +66,7 @@ final class NameSuggestionsPanel extends UiContainer implements ButtonListener {
           return;
         }
         int var5 = 118 / ((param3 - 70) / 49);
-        BitmapFont var6 = he.field_d;
+        BitmapFont var6 = CanvasInputHelpers.field_d;
         if (null != this.suggestions) {
           var6.drawParagraph(JavaRandomHelpers.field_c, param2 + this.field_z, param0 + this.field_p, this.field_E, 20, 16777215, -1, 0, 0, var6.maxAscent + var6.maxDescent);
         }
@@ -108,9 +108,9 @@ final class NameSuggestionsPanel extends UiContainer implements ButtonListener {
     }
 
     final static void updateActivePopup(boolean param0, int param1) {
-        if (null != ri.field_f &&
-          ri.field_f.updateAndCheckClosed(-85, param0)) {
-          ri.field_f = null;
+        if (null != ChatHistoryAllocator.field_f &&
+          ChatHistoryAllocator.field_f.updateAndCheckClosed(-85, param0)) {
+          ChatHistoryAllocator.field_f = null;
         }
         if (param1 <= 56) {
           field_O = (ContextActionMenu) null;
@@ -148,7 +148,7 @@ final class NameSuggestionsPanel extends UiContainer implements ButtonListener {
             for (var4_int = 0; var3_int > var4_int; var4_int++) {
               this.suggestions[var4_int] = UiComponent.normalizeBase37Name((CharSequence) ((Object) param1[var4_int]), -1).replace(' ', ' ');
             }
-            var4 = new LinkButtonPainter(he.field_d, 0, 1);
+            var4 = new LinkButtonPainter(CanvasInputHelpers.field_d, 0, 1);
             this.buttons = new TextButton[1 + var3_int];
             for (var5 = 0; var5 < var3_int; var5++) {
               this.buttons[var5] = new TextButton(this.suggestions[var5], (UiListener) (this));
@@ -157,7 +157,7 @@ final class NameSuggestionsPanel extends UiContainer implements ButtonListener {
               this.buttons[var5].setBounds(80, (byte) 63, 20 + 16 * var5, 0, 15);
               this.addChild(this.buttons[var5], 80);
             }
-            this.buttons[var3_int] = new TextButton(d.field_d, (UiListener) (this));
+            this.buttons[var3_int] = new TextButton(LobbyStartupHelpers.field_d, (UiListener) (this));
             this.buttons[var3_int].field_y = (WidgetPainter) ((Object) var4);
             this.buttons[var3_int].setBounds(100, (byte) 102, 16 + (16 * var3_int + 20), 0, 15);
             this.addChild(this.buttons[var3_int], 80);
@@ -181,7 +181,7 @@ final class NameSuggestionsPanel extends UiContainer implements ButtonListener {
 
     final static void reopenLoginForm(int param0) {
         String var2 = (String) null;
-        FallingPieceView.openLoginForm(nk.field_b, -116, (String) null);
+        FallingPieceView.openLoginForm(ChatPanelHelpers.field_b, -116, (String) null);
         if (param0 != 20700) {
           NameSuggestionsPanel.processWidgetInput((byte) -98, -12);
         }

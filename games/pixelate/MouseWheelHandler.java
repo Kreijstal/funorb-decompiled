@@ -6,7 +6,7 @@ abstract class MouseWheelHandler {
     static ScrollPaneWithFooter field_e;
     static int field_d;
     static int field_c;
-    static id field_b;
+    static AccountRequestReply field_b;
     private static String field_z;
 
     abstract void detach(int param0, java.awt.Component param1);

@@ -24,7 +24,7 @@ final class BoardView {
     private int field_p;
     private int field_w;
     static int field_s;
-    static bd field_b;
+    static ConnectionState field_b;
     static String field_l;
     static int field_y;
     private int field_f;
@@ -35,19 +35,19 @@ final class BoardView {
         int var2_int = 0;
         int var3 = Pixelate.field_H ? 1 : 0;
         StatefulTextPainter.field_v = param1;
-        LoginMethod.setSmallFont(qj.field_e, (byte) -108);
-        jb.field_b = new TutorialPage[dn.field_a.length];
+        LoginMethod.setSmallFont(PrivateChatHelpers.field_e, (byte) -108);
+        TutorialPageGlobals.field_b = new TutorialPage[DefaultQuickChatPhraseListener.field_a.length];
         if (param0 != 1) {
           return;
         }
         try {
-          for (var2_int = 0; var2_int < dn.field_a.length; var2_int++) {
-            jb.field_b[var2_int] = new TutorialPage(GradientOutlineTextPainter.field_w[var2_int], dn.field_a[var2_int], var2_int == 5 ? true : false);
+          for (var2_int = 0; var2_int < DefaultQuickChatPhraseListener.field_a.length; var2_int++) {
+            TutorialPageGlobals.field_b[var2_int] = new TutorialPage(GradientOutlineTextPainter.field_w[var2_int], DefaultQuickChatPhraseListener.field_a[var2_int], var2_int == 5 ? true : false);
           }
           GreenGrowTheRushesBackground.field_m = -1;
           NetworkGameClient.field_D = 15;
           AccountRegistrationPanel.field_S = 0;
-          of.field_d = -1;
+          TextDecodeHelpers.field_d = -1;
           WeightedLruCache.field_j = 45;
           GameApplet.field_i = -1;
           AlphaContainer.field_N = true;
@@ -107,7 +107,7 @@ final class BoardView {
           this.field_v > 0 &&
           this.field_r == 0) {
           if (this.field_v == 2) {
-            mc.playSoundEffect(131, -125);
+            AchievementMaskRequest.playSoundEffect(131, -125);
           }
           fieldTemp$2 = this.field_v;
           this.field_v = this.field_v + 1;
@@ -299,7 +299,7 @@ final class BoardView {
               var10 = var5 * 32 + param2;
               var11 = var4 * 32 + param1;
               if (var7 != 0) {
-                if (fq.field_o == null) {
+                if (RankingSummaryScreen.field_o == null) {
                   stackIn_29_0 = 0;
                 } else {
                   stackIn_29_0 = Kite.field_t;
@@ -310,9 +310,9 @@ final class BoardView {
                 } else {
                   if (var12 != 256) {
                     LoginCredentials.field_e.field_k[-1 + var7].drawOpaque(var10, var11);
-                    fq.field_o.field_k[var7 - 1].drawAlpha(var10, var11, var12);
+                    RankingSummaryScreen.field_o.field_k[var7 - 1].drawAlpha(var10, var11, var12);
                   } else {
-                    fq.field_o.field_k[var7 - 1].drawOpaque(var10, var11);
+                    RankingSummaryScreen.field_o.field_k[var7 - 1].drawOpaque(var10, var11);
                   }
                 }
                 if (var8 == 0) {
@@ -476,8 +476,8 @@ final class BoardView {
         if (param0 != -61) {
           field_y = -99;
         }
-        l.drawLobbyOverlays(19854, param1);
-        jk.drawAccountAndQuickChatOverlays(param1, (byte) 83);
+        MessageScreen.drawLobbyOverlays(19854, param1);
+        MeshColourEntry.drawAccountAndQuickChatOverlays(param1, (byte) 83);
     }
 
     final void startFadeIn(byte param0) {
@@ -610,7 +610,7 @@ final class BoardView {
     }
 
     static {
-        field_b = new bd();
+        field_b = new ConnectionState();
         field_l = "achievements to collect";
         field_y = 2;
         field_k = 0;

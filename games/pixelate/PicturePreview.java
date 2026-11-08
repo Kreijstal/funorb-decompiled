@@ -36,7 +36,7 @@ final class PicturePreview extends IntrusiveNode {
           }
           var5_int = param3.getGroupId(param0 ^ 122, param4);
           var6 = param3.getFileId((byte) -111, param2, var5_int);
-          stackIn_4_0 = um.loadBinaryBitmapFont(param3, param1, var5_int, 121, var6);
+          stackIn_4_0 = SavedDataRequest.loadBinaryBitmapFont(param3, param1, var5_int, 121, var6);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -189,7 +189,7 @@ final class PicturePreview extends IntrusiveNode {
         if (param2 != 98) {
           return;
         }
-        if (null != fq.field_o) {
+        if (null != RankingSummaryScreen.field_o) {
           stackIn_5_0 = Kite.field_t;
         } else {
           stackIn_5_0 = 0;
@@ -206,7 +206,7 @@ final class PicturePreview extends IntrusiveNode {
                   stackIn_24_1 = 0;
                 }
                 ((Sprite) (Object) stackIn_23_0[stackIn_24_1]).drawOpaque(var4, var5);
-                stackIn_26_0 = fq.field_o.field_a;
+                stackIn_26_0 = RankingSummaryScreen.field_o.field_a;
                 if (this.field_p[var7 * this.field_n + var8]) {
                   stackIn_27_1 = 1;
                 } else {
@@ -214,7 +214,7 @@ final class PicturePreview extends IntrusiveNode {
                 }
                 ((Sprite) (Object) stackIn_26_0[stackIn_27_1]).drawAlpha(var4, var5, var6);
               } else {
-                stackIn_18_0 = fq.field_o.field_a;
+                stackIn_18_0 = RankingSummaryScreen.field_o.field_a;
                 if (this.field_p[var8 + var7 * this.field_n]) {
                   stackIn_19_1 = 1;
                 } else {

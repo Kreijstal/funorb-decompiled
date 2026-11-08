@@ -103,12 +103,12 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
         StringBuilder stackIn_42_1 = null;
         String stackIn_43_2 = null;
         RuntimeException decompiledCaughtException = null;
-        bo[] var6 = null;
+        ScreenDisplayMode[] var6 = null;
         RuntimeException var6_ref = null;
         int var7_int = 0;
         java.awt.Frame var7 = null;
         int var9 = 0;
-        bo[] var10 = null;
+        ScreenDisplayMode[] var10 = null;
         PlatformTask var11 = null;
         var9 = Pixelate.field_H ? 1 : 0;
         try {
@@ -154,7 +154,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
           if (var11.field_b != 2) {
             return var7;
           }
-          dc.exitFullscreenFrame((byte) -124, var7, param0);
+          FullscreenExitHelpers.exitFullscreenFrame((byte) -124, var7, param0);
           stackIn_39_0 = null;
           return (java.awt.Frame) (stackIn_39_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -215,7 +215,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
           var3 = "";
           if (param0.field_j != 2) {
             if (param0.field_j == 0 &&
-              ge.field_f) {
+              RequestState.field_f) {
               var3 = "[" + TimerBar.field_m + "] ";
             }
             if (1 == param0.field_j) {
@@ -235,9 +235,9 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
             if (!param0.field_a) {
               if (param0.field_d == 0 &&
                 param0.field_e == 0) {
-                var3 = AlphaContainer.formatTemplate(dg.field_b, 77, new String[]{(String) (var2)});
+                var3 = AlphaContainer.formatTemplate(QuickChatSendHelpers.field_b, 77, new String[]{(String) (var2)});
               } else {
-                var3 = AlphaContainer.formatTemplate(sk.field_c, 109, new String[]{(String) (var2)});
+                var3 = AlphaContainer.formatTemplate(LobbyFrameHelpers.field_c, 109, new String[]{(String) (var2)});
               }
             }
           }
@@ -414,7 +414,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
             }
             var10 = var19.getLineIndex(false, var8);
             var11 = var19.getLineIndex(false, var9);
-            hp.pushClipRegion(param1.field_z + param5, param4 + (param1.field_p + param1.field_C), param1.field_E + (param5 + param1.field_z), (byte) -104, param4 + param1.field_p);
+            HelpPopup.pushClipRegion(param1.field_z + param5, param4 + (param1.field_p + param1.field_C), param1.field_E + (param5 + param1.field_z), (byte) -104, param4 + param1.field_p);
             for (var12 = var10; var11 >= var12; var12++) {
               var13 = var18.lines[var12];
               if (var10 != var12) {
@@ -544,18 +544,18 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
         var5 = Pixelate.field_H ? 1 : 0;
         try {
           var3_int = 72 / ((param1 - 19) / 45);
-          if (hf.field_q >= 10) {
+          if (AchievementRecord.field_q >= 10) {
             if (RegistrationRequestDialog.isLogoAnimationFinished(22452)) {
-              if (el.field_b != 0) {
+              if (EmailValidationState.field_b != 0) {
                 DialWidget.renderLoadingScreen(-1913, param2);
               } else {
                 RegistrationRequestDialog.drawDimmedAccountLayers(false, param0, 0);
-                fj.presentToCanvas(0, 0, (byte) -82, param2);
+                MouseInputGlobals.presentToCanvas(0, 0, (byte) -82, param2);
               }
             } else {
               SoftwareRasterizer.clear();
               LoginMethod.drawLogoAnimation(240, (byte) -99, 320);
-              fj.presentToCanvas(0, 0, (byte) 119, param2);
+              MouseInputGlobals.presentToCanvas(0, 0, (byte) 119, param2);
             }
           } else {
             var4 = 0;
@@ -602,7 +602,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
             var11 = this.computeTextX(param0, param3, 2, var10);
             var12 = this.getTextOriginY(param1, param3, (byte) 80) + Math.max(0, var9.field_b);
             var13 = this.getTextOriginY(param1, param3, (byte) -57) + Math.min(this.getAvailableTextHeight(101, param3), Math.min(var9.field_d, var7.lines.length <= 1 + var8 ? var9.field_d : var7.lines[1 + var8].field_b));
-            hp.pushClipRegion(param0 + param3.field_z, param3.field_p + param1 + param3.field_C, param3.field_E + param0 + param3.field_z, (byte) -91, param1 + param3.field_p);
+            HelpPopup.pushClipRegion(param0 + param3.field_z, param3.field_p + param1 + param3.field_C, param3.field_E + param0 + param3.field_z, (byte) -91, param1 + param3.field_p);
             Checkbox.field_X.drawCaretLine(var12, var13, var11, var11, this.field_e, false);
             LinkButtonPainter.popRasterState((byte) 92);
           }
@@ -742,7 +742,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
         int var12Lifetime1;
         var13 = Pixelate.field_H ? 1 : 0;
         try {
-          hp.pushClipRegion(param2.field_z + param5, param2.field_C + param3 + param2.field_p, param2.field_E + param5 + param2.field_z, (byte) -103, param2.field_p + param3);
+          HelpPopup.pushClipRegion(param2.field_z + param5, param2.field_C + param3 + param2.field_p, param2.field_E + param5 + param2.field_z, (byte) -103, param2.field_p + param3);
           if (param6 != -3) {
             this.field_i = false;
           }

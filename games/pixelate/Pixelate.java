@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 public final class Pixelate extends NetworkGameClient {
-    static bd field_G;
+    static ConnectionState field_G;
     static Sprite field_E;
     public static boolean field_H;
 
@@ -11,10 +11,10 @@ public final class Pixelate extends NetworkGameClient {
         MusicCrossfadeStream var3 = new MusicCrossfadeStream();
         var3.field_x.setDefaultInstrumentAndBank(true, 9, 128);
         var3.field_H.setDefaultInstrumentAndBank(true, 9, 128);
-        DateInputWidget.initializeAudio(22050, mc.field_k, var3, true, (java.awt.Component) ((Object) NameAvailabilityValidator.field_u), 127);
+        DateInputWidget.initializeAudio(22050, AchievementMaskRequest.field_k, var3, true, (java.awt.Component) ((Object) NameAvailabilityValidator.field_u), 127);
         IndexedSpriteState.field_l = 16777215;
-        mh.field_a = 2;
-        ce.field_b = 13421772;
+        QuickChatOpenHelpers.field_a = 2;
+        ChatChannelGlobals.field_b = 13421772;
         ScoreMarkerDemo.field_k = 0;
         PlayerBoard.field_n = 0;
         MatchingTextValidator.field_s = 16777215;
@@ -24,7 +24,7 @@ public final class Pixelate extends NetworkGameClient {
         GrowableIntList.field_d[61] = 3;
         GrowableIntList.field_d[58] = -2;
         if (param0 != -15) {
-          field_G = (bd) null;
+          field_G = (ConnectionState) null;
         }
         GrowableIntList.field_d[70] = 0;
         GrowableIntList.field_d[10] = -1;
@@ -66,7 +66,7 @@ public final class Pixelate extends NetworkGameClient {
         int var9;
         int var12;
         byte[] var13;
-        hf var14;
+        AchievementRecord var14;
         MatchController var15;
         Object var16;
         GameResultsScreen var16_ref;
@@ -91,25 +91,25 @@ public final class Pixelate extends NetworkGameClient {
         int var9Lifetime1;
         var16 = null;
         var12 = field_H ? 1 : 0;
-        ce.field_g = GreenGrowTheRushesBackground.getIdleTimeoutLimit(13428);
+        ChatChannelGlobals.field_g = GreenGrowTheRushesBackground.getIdleTimeoutLimit(13428);
         ByteStorage.removeFinishedSounds(-29949);
-        if (ib.field_f != null &&
-          ib.field_f.field_g) {
+        if (GridSize.field_f != null &&
+          GridSize.field_f.field_g) {
           SoundVoice.closeFullscreenCanvas(116);
           ClientContextMenu.refreshOpenLegacyMenu((byte) -53);
         }
         stackIn_5_1 = 0;
-        stackIn_6_2 = (ib.field_f != null);
+        stackIn_6_2 = (GridSize.field_f != null);
         this.serviceFramework(stackIn_5_1, stackIn_6_2);
-        pa.field_b = pa.field_b + 1;
+        RequestResultFactory.field_b = RequestResultFactory.field_b + 1;
         if (MatchHud.field_i) {
           this.openArchives(-18528);
           MatchHud.field_i = false;
         }
         stackIn_11_0 = !param0;
-        if (bd.shouldShowBootstrapLoadingScreen(stackIn_11_0)) {
+        if (ConnectionState.shouldShowBootstrapLoadingScreen(stackIn_11_0)) {
           this.updateAccountOrLobbyUi((byte) 20);
-          if (bd.shouldShowBootstrapLoadingScreen(true)) {
+          if (ConnectionState.shouldShowBootstrapLoadingScreen(true)) {
             if (LoadingStepTracker.isLobbyUiReady(122)) {
               discarded$0 = this.updateArchiveLoading(false, 4);
             }
@@ -121,17 +121,17 @@ public final class Pixelate extends NetworkGameClient {
         }
         if (Checkbox.field_R) {
           if (ReflectionCheckRequest.isWaitingForAccountData((byte) -70)) {
-            if (!hf.isLegacyMenuOpen((byte) 100)) {
-              if (pe.requestLeaveServer(false)) {
-                stackIn_51_1 = (ib.field_f != null);
+            if (!AchievementRecord.isLegacyMenuOpen((byte) 100)) {
+              if (PlayerActionHelpers.requestLeaveServer(false)) {
+                stackIn_51_1 = (GridSize.field_f != null);
                 var2 = this.runAccountUiActions(stackIn_51_1, (byte) 96);
                 if (1 == var2 ||
                   var2 == 2) {
-                  if (null != ib.field_f) {
+                  if (null != GridSize.field_f) {
                     SoundVoice.closeFullscreenCanvas(72);
                   }
                   if (2 == var2) {
-                    d.openQuitPage(0, AudioService.getApplet(13867));
+                    LobbyStartupHelpers.openQuitPage(0, AudioService.getApplet(13867));
                   }
                 }
                 stackIn_60_1 = true;
@@ -144,7 +144,7 @@ public final class Pixelate extends NetworkGameClient {
                   if (GameModeCard.field_d == GameModeCard.field_a) {
                     var2 = DriftingParticle.pollLegacyMenuSelection(2);
                     if (var2 == 1) {
-                      gi.setPopupIdAndCaption(QuickChatMenu.field_Ib, TimerBarDemo.field_q, (byte) 78);
+                      HighscoreNameEntry.setPopupIdAndCaption(QuickChatMenu.field_Ib, TimerBarDemo.field_q, (byte) 78);
                     }
                     this.advanceClientState(true, true);
                   } else {
@@ -160,12 +160,12 @@ public final class Pixelate extends NetworkGameClient {
                 } else {
                   if (var2 == 3) {
                     FireworkSpark.field_b = false;
-                    var3_ref = qj.field_e;
-                    QuickChatPhraseCache.configureQuickChatStyle(((BitmapFont) (var3_ref)).maxDescent + ((BitmapFont) (var3_ref)).maxAscent, -879, ((BitmapFont) (var3_ref)).maxAscent, 2, 320, 8, ab.field_c, (BitmapFont) (var3_ref), 240, TutorialPage.field_g, 8, true);
+                    var3_ref = PrivateChatHelpers.field_e;
+                    QuickChatPhraseCache.configureQuickChatStyle(((BitmapFont) (var3_ref)).maxDescent + ((BitmapFont) (var3_ref)).maxAscent, -879, ((BitmapFont) (var3_ref)).maxAscent, 2, 320, 8, ResultCaptionGlobals.field_c, (BitmapFont) (var3_ref), 240, TutorialPage.field_g, 8, true);
                   } else {
                     if (var2 == 4) {
                       FireworkSpark.field_b = true;
-                      gi.setPopupIdAndCaption(InputQueue.field_a, 0, (byte) 89);
+                      HighscoreNameEntry.setPopupIdAndCaption(InputQueue.field_a, 0, (byte) 89);
                     }
                   }
                 }
@@ -187,7 +187,7 @@ public final class Pixelate extends NetworkGameClient {
         }
         if (!ArrayWidgetContainer.isAccountUiActive((byte) 70)) {
           while (true) {
-            var14 = (hf) (DualLinkDeque.field_h.removeFirst(-28918));
+            var14 = (AchievementRecord) (DualLinkDeque.field_h.removeFirst(-28918));
             if (var14 == null) {
               break;
             }
@@ -197,7 +197,7 @@ public final class Pixelate extends NetworkGameClient {
         var16_ref = (GameResultsScreen) (StripedProgressBar.field_H[13]);
         while (true) {
           stackIn_70_0 = !param0;
-          if (!jf.pollIncomingPacket(stackIn_70_0, GrowableIntList.field_d)) {
+          if (!IncomingPacketHelpers.pollIncomingPacket(stackIn_70_0, GrowableIntList.field_d)) {
             SecondaryNodeHashTable.flushOutgoingPackets(0, 10000);
             if (ContentTransitionDialog.field_kb) {
             }
@@ -209,17 +209,17 @@ public final class Pixelate extends NetworkGameClient {
                 if (var3 != 1) {
                   if (StripedProgressBar.field_G) {
                     SaveDataRequest.field_l = true;
-                    mi.field_o = true;
+                    NotLoggedInScreen.field_o = true;
                     if (ValidationHelpWidget.field_Y) {
                       SingleChildContainer.field_F = IntrusiveDeque.field_a;
-                      stackIn_177_0 = (gq.isOfflineOrAccountUi(115)) ? 12 : 0;
-                      la.changeScreen(stackIn_177_0, 11, false, -25528);
+                      stackIn_177_0 = (AlternateNameCredentials.isOfflineOrAccountUi(115)) ? 12 : 0;
+                      ScreenChangeHelpers.changeScreen(stackIn_177_0, 11, false, -25528);
                     } else {
-                      stackIn_173_0 = (gq.isOfflineOrAccountUi(100)) ? 12 : 0;
-                      la.changeScreen(stackIn_173_0, 0, false, -25528);
+                      stackIn_173_0 = (AlternateNameCredentials.isOfflineOrAccountUi(100)) ? 12 : 0;
+                      ScreenChangeHelpers.changeScreen(stackIn_173_0, 0, false, -25528);
                     }
                     IntrusiveDequeCursor.commitScreenChange(0);
-                    wo.getScreen(109, fc.field_e).enterScreen(2, 0, false);
+                    SocialPanel.getScreen(109, LobbyListBindingHelpers.field_e).enterScreen(2, 0, false);
                     StripedProgressBar.field_G = false;
                     ValidationHelpWidget.field_Y = false;
                     DateOfBirthValidator.field_i = false;
@@ -258,8 +258,8 @@ public final class Pixelate extends NetworkGameClient {
           }
           if (TextLayoutLine.field_e == 14) {
             IntrusiveDequeCursor.commitScreenChange(0);
-            GameModeCard.initializeLobby(150, DropTargetWidget.nextPowerOfTwo(-1879863704, 2000), 1024, 3, hp.getGameMemberListContent(0), PairedTextColumns.getPlayerListContent((byte) 79), LoginCredentials.field_d, DropTargetWidget.nextPowerOfTwo(-1879863704, 8), cl.field_f.length, IndexedSpriteState.getGameListContent(1));
-            fc.bindLobbyLists(FireworkBurst.getFriendListContent(-26573), 64, TickClock.getIgnoreListContent(119));
+            GameModeCard.initializeLobby(150, DropTargetWidget.nextPowerOfTwo(-1879863704, 2000), 1024, 3, HelpPopup.getGameMemberListContent(0), PairedTextColumns.getPlayerListContent((byte) 79), LoginCredentials.field_d, DropTargetWidget.nextPowerOfTwo(-1879863704, 8), Cp1252EncodingHelpers.field_f.length, IndexedSpriteState.getGameListContent(1));
+            LobbyListBindingHelpers.bindLobbyLists(FireworkBurst.getFriendListContent(-26573), 64, TickClock.getIgnoreListContent(119));
             MidiPcmStream.field_t = -2;
             StripedProgressBar.field_G = true;
             ValidationState.field_c = false;
@@ -269,11 +269,11 @@ public final class Pixelate extends NetworkGameClient {
             if (StripedProgressBar.field_G) {
               IntrusiveDequeCursor.commitScreenChange(0);
               SceneWidget.closeTransientDialogs(0);
-              ek.clearChatHistory(true);
+              ChatHistoryHelpers.clearChatHistory(true);
               SaveDataRequest.field_l = true;
               MidiPcmStream.field_t = 0;
               DateOfBirthValidator.field_i = false;
-              mi.field_o = true;
+              NotLoggedInScreen.field_o = true;
               ValidationHelpWidget.field_Y = false;
               StripedProgressBar.field_G = false;
             }
@@ -293,10 +293,10 @@ public final class Pixelate extends NetworkGameClient {
                 DateOfBirthValidator.field_i) {
                 IntrusiveDequeCursor.commitScreenChange(0);
                 if (ValidationHelpWidget.field_Y) {
-                  ro.field_e.showResults(false, 250, false);
+                  NameSuggestionHelpers.field_e.showResults(false, 250, false);
                 }
                 SaveDataRequest.field_l = true;
-                dg.playMenuMusic(0, (byte) -117);
+                QuickChatSendHelpers.playMenuMusic(0, (byte) -117);
                 ValidationHelpWidget.field_Y = false;
                 DateOfBirthValidator.field_i = false;
                 MidiPcmStream.field_t = -2;
@@ -306,7 +306,7 @@ public final class Pixelate extends NetworkGameClient {
             }
             var3_ref = null;
             if (ValidationHelpWidget.field_Y) {
-              var3_ref = ro.field_e;
+              var3_ref = NameSuggestionHelpers.field_e;
             } else {
               if (DateOfBirthValidator.field_i) {
                 var3_ref = MatchingTextValidator.field_r;
@@ -359,12 +359,12 @@ public final class Pixelate extends NetworkGameClient {
                 }
                 stackIn_138_0 = (var5Lifetime4 == 1) ? 0 : 1;
                 var6 = stackIn_138_0;
-                var16_ref.setStatusMessage(AlphaContainer.formatTemplate(e.field_e, 76, new String[]{((MatchController) (var3_ref)).field_a.playerNames[var6]}), (byte) -4);
+                var16_ref.setStatusMessage(AlphaContainer.formatTemplate(ConnectionStateGlobals.field_e, 76, new String[]{((MatchController) (var3_ref)).field_a.playerNames[var6]}), (byte) -4);
                 continue;
               }
               if (TextLayoutLine.field_e == 65) {
                 ((MatchController) (var3_ref)).field_a.field_p = MusicCrossfadeStream.field_o.readUnsignedByte(255);
-                if (null == ro.field_e) {
+                if (null == NameSuggestionHelpers.field_e) {
                   continue;
                 }
                 var16_ref.updateRematchLabel(1);
@@ -374,7 +374,7 @@ public final class Pixelate extends NetworkGameClient {
                 var4Lifetime1Lifetime4 = MusicCrossfadeStream.field_o.readUnsignedByte(255);
                 var5Lifetime5 = ~((MatchController) (var3_ref)).field_o & var4Lifetime1Lifetime4;
                 ((MatchController) (var3_ref)).field_o = var4Lifetime1Lifetime4;
-                if (ro.field_e == null) {
+                if (NameSuggestionHelpers.field_e == null) {
                   continue;
                 }
                 var16_ref.updateRematchLabel(1);
@@ -389,16 +389,16 @@ public final class Pixelate extends NetworkGameClient {
               }
               if (71 == TextLayoutLine.field_e) {
                 var4Lifetime1Lifetime5 = MusicCrossfadeStream.field_o.readUnsignedByte(255);
-                if (ro.field_e == null) {
+                if (NameSuggestionHelpers.field_e == null) {
                   continue;
                 }
                 if (var4Lifetime1Lifetime5 == 0) {
-                  ro.field_e.awardAchievement(12, (byte) 58, 243);
+                  NameSuggestionHelpers.field_e.awardAchievement(12, (byte) 58, 243);
                 }
                 if (1 != var4Lifetime1Lifetime5) {
                   continue;
                 }
-                ro.field_e.awardAchievement(13, (byte) 58, 242);
+                NameSuggestionHelpers.field_e.awardAchievement(13, (byte) 58, 242);
                 continue;
               }
             }
@@ -430,13 +430,13 @@ public final class Pixelate extends NetworkGameClient {
             var15.resetControllersForRound(-57);
           }
           if (TextLayoutLine.field_e != 57) {
-            ro.field_e = null;
+            NameSuggestionHelpers.field_e = null;
             MatchingTextValidator.field_r = var15;
             var16_ref.hideRematchOption(-120);
             var16_ref.setStatusMessage((String) null, (byte) -4);
           } else {
             MatchingTextValidator.field_r = null;
-            ro.field_e = var15;
+            NameSuggestionHelpers.field_e = var15;
             ValidationHelpWidget.field_Y = true;
             var16_ref.updateRematchLabel(1);
             var16_ref.setStatusMessage((String) null, (byte) -4);
@@ -448,22 +448,22 @@ public final class Pixelate extends NetworkGameClient {
 
     final void releaseClientStatics(int param0) {
         Pixelate.releaseStatics(param0 - 19640);
-        ph.releaseStatics(111);
+        AchievementBannerEntry.releaseStatics(111);
         IntrusiveDeque.releaseStatics((byte) 76);
-        ef.releaseStatics(true);
+        HighscorePacketHandlers.releaseStatics(true);
         FloatingSquare.clearStatics((byte) -109);
         MenuScreen.releaseStatics(-1);
         GameModeSelectScreen.releaseStatics(false);
-        ab.clearSharedReferences(false);
-        oo.clearStatics(true);
+        ResultCaptionGlobals.clearSharedReferences(false);
+        AchievementIconGlobals.clearStatics(true);
         MusicCrossfadeStream.releaseStatics(-97);
         TextTableInitializer.releaseStatics(11799);
         BackgroundScene.releaseStatics(-4136);
         KeyboardInputHandler.releaseStatics(-1);
-        vf.clearSharedReferences(-109);
-        vd.releaseStatics(70);
-        qh.releaseStatics(param0 - 22862);
-        r.releaseStatics(-31558);
+        PageReloadHelpers.clearSharedReferences(-109);
+        ChatAppendHelpers.releaseStatics(70);
+        MusicPlaybackHelpers.releaseStatics(param0 - 22862);
+        LobbySlideHelpers.releaseStatics(-31558);
         NetworkGameClient.releaseStatics(true);
         ClientException.releaseStatics(true);
         GameApplet.releaseStatics(true);
@@ -473,27 +473,27 @@ public final class Pixelate extends NetworkGameClient {
         SoftwareRasterizer.releaseStatics();
         ResourceArchive.releaseStatics(-34);
         BitmapFont.releaseStatics();
-        wp.releaseStatics(param0 - 23028);
+        CurrencyPriceGlobals.releaseStatics(param0 - 23028);
         PacketBuffer.releaseStatics((byte) 114);
-        hm.releaseStatics((byte) 9);
-        he.releaseStatics(0);
-        la.releaseStatics(param0 - 23114);
-        pa.releaseStatics(82);
-        gb.releaseStatics(false);
-        nf.releaseStatics((byte) -107);
-        sf.releaseStatics((byte) 61);
-        th.releaseStatics((byte) -96);
-        dk.releaseStatics((byte) -93);
+        ClockHelpers.releaseStatics((byte) 9);
+        CanvasInputHelpers.releaseStatics(0);
+        ScreenChangeHelpers.releaseStatics(param0 - 23114);
+        RequestResultFactory.releaseStatics(82);
+        ReportAbuseHelpers.releaseStatics(false);
+        LoginFormGlobals.releaseStatics((byte) -107);
+        FrameTimingHelpers.releaseStatics((byte) 61);
+        TrigonometryHelpers.releaseStatics((byte) -96);
+        NineSliceFrameHelpers.releaseStatics((byte) -93);
         ChatMessage.releaseStatics(-127);
-        bl.releaseStatics(-46342);
+        MouseWheelSetupHelpers.releaseStatics(-46342);
         TickClock.releaseStatics(false);
         CanvasRasterBuffer.releaseStatics(true);
         LoadingStepTracker.releaseStatics(true);
         FullscreenFocusCanvas.releaseStatics((byte) -85);
         ViewportController.releaseStatics(true);
         MatchController.releaseStatics((byte) -101);
-        dg.releaseStatics(1048576);
-        aq.releaseStatics((byte) 119);
+        QuickChatSendHelpers.releaseStatics(1048576);
+        SkinSelectionHelpers.releaseStatics((byte) 119);
         Js5Transport.releaseStatics((byte) -53);
         DiskCacheWorker.releaseStatics(-1);
         Js5ArchiveManager.releaseStatics((byte) -125);
@@ -502,11 +502,11 @@ public final class Pixelate extends NetworkGameClient {
         IntrusiveNode.releaseStatics(-3);
         SpriteState.releaseStatics((byte) -114);
         DualLinkNode.releaseStatics(-2575);
-        nk.releaseStatics(true);
-        dh.releaseStatics(true);
+        ChatPanelHelpers.releaseStatics(true);
+        DisplayNameHelpers.releaseStatics(true);
         ConditionalTextValue.releaseStatics((byte) -108);
-        lg.releaseStatics((byte) -120);
-        ea.releaseStatics(true);
+        LoginCookieHelpers.releaseStatics((byte) -120);
+        CredentialKind.releaseStatics(true);
         LoginCredentials.releaseStatics(1762);
         CipherPacketBuffer.clearSharedReferences(25208);
         IsaacRandom.releaseStatics(7);
@@ -517,22 +517,22 @@ public final class Pixelate extends NetworkGameClient {
         MusicPatchPcmStream.releaseStatics((byte) 106);
         SoundCache.releaseStatics((byte) 91);
         AudioOutput.releaseStatics();
-        nh.releaseStatics((byte) 108);
+        Base37NameHelpers.releaseStatics((byte) 108);
         MenuInputState.releaseStatics(65);
         SceneWidgetNode.releaseStatics(true);
-        ed.releaseStatics(75);
-        e.releaseStatics(200);
-        sk.releaseStatics((byte) 99);
+        PaletteFontFactory.releaseStatics(75);
+        ConnectionStateGlobals.releaseStatics(200);
+        LobbyFrameHelpers.releaseStatics((byte) 99);
         SceneWidget.releaseStatics((byte) 59);
         LobbyGame.releaseStatics((byte) 87);
         SecondaryNodeHashTable.releaseStatics(true);
         LobbyPlayer.releaseStatics(true);
-        qj.releaseStaticReferences(false);
+        PrivateChatHelpers.releaseStaticReferences(false);
         ArchiveIndex.releaseStatics(117);
         GzipDecoder.releaseStatics(-8);
         ArchiveProvider.releaseStatics((byte) -63);
-        rm.releaseStatics((byte) -116);
-        cn.releaseStatics(-59);
+        TutorialDrawHelpers.releaseStatics((byte) -116);
+        AccountServerRequestHelpers.releaseStatics(-59);
         ModalStack.releaseStatics(param0 - 12614);
         RegistrationRequestDialog.releaseStatics(-103);
         LoadingProgressDialog.clearStatics(-100);
@@ -543,14 +543,14 @@ public final class Pixelate extends NetworkGameClient {
         LoginForm.releaseStatics(118);
         DisplayNameForm.releaseStatics((byte) 123);
         UiTheme.releaseStatics(true);
-        d.releaseStatics(false);
-        fg.releaseStatics(9882);
+        LobbyStartupHelpers.releaseStatics(false);
+        RematchCaptionGlobals.releaseStatics(9882);
         VorbisSample.releaseStatics();
-        nd.releaseStatics(param0 - 23110);
+        HowToPlayDemoHelpers.releaseStatics(param0 - 23110);
         SpriteEffectHelpers.releaseStatics();
-        jb.releaseStatics((byte) 33);
+        TutorialPageGlobals.releaseStatics((byte) 33);
         DisplayNameRequestGlobals.releaseStatics(21601);
-        ig.releaseStatics((byte) 2);
+        AudioPumpHelpers.releaseStatics((byte) 2);
         Puzzle.releaseStatics(116);
         PuzzlePieceQueue.releaseStatics(true);
         OptionsScreen.releaseStatics((byte) 122);
@@ -568,11 +568,11 @@ public final class Pixelate extends NetworkGameClient {
         BlastFromThePastBackground.releaseStatics((byte) 34);
         BouncedownBackground.releaseStatics((byte) -13);
         KiteBackground.releaseStatics(21476);
-        pe.releaseStatics(7);
-        an.clearStatics(-1);
-        ek.releaseStatics(14);
-        di.releaseStatics(false);
-        ro.releaseStatics(false);
+        PlayerActionHelpers.releaseStatics(7);
+        CaretLayoutHelpers.clearStatics(-1);
+        ChatHistoryHelpers.releaseStatics(14);
+        NumberFormatHelpers.releaseStatics(false);
+        NameSuggestionHelpers.releaseStatics(false);
         IconTextComponent.releaseStatics(58);
         ScrollContainer.releaseStatics(0);
         PairedTextColumns.clearStatics(118);
@@ -581,39 +581,39 @@ public final class Pixelate extends NetworkGameClient {
         ScrollPaneWithFooter.releaseStatics((byte) -88);
         ClientContextMenu.releaseStatics((byte) 121);
         ReportAbuseDialog.releaseStatics(1);
-        wo.releaseStatics(true);
+        SocialPanel.releaseStatics(true);
         NightToRememberBackground.releaseStatics(-12424);
-        ep.releaseStatics(param0 - 23120);
-        pk.clearSharedReferences(4194303);
-        of.releaseStatics((byte) 79);
-        ej.releaseStatics(-115);
-        em.releaseStatics(param0 ^ 23098);
+        PolygonClipHelpers.releaseStatics(param0 - 23120);
+        MeshDecodeHelpers.clearSharedReferences(4194303);
+        TextDecodeHelpers.releaseStatics((byte) 79);
+        ReportReasonGlobals.releaseStatics(-115);
+        ContextMenuHelpers.releaseStatics(param0 ^ 23098);
         HuffmanCodec.releaseStatics(false);
         PicturePreview.releaseStatics((byte) -91);
         MatchHud.releaseStatics(param0 - 23119);
         Match.releaseStatics(0);
         IndexedSpriteState.releaseStatics(false);
-        bj.releaseStatics((byte) 109);
-        fc.releaseStatics(32);
+        ChallengePuzzleHelpers.releaseStatics((byte) 109);
+        LobbyListBindingHelpers.releaseStatics(32);
         GameResultsScreen.releaseStatics((byte) -49);
-        l.releaseStatics(param0 - 20899);
-        mp.releaseStatics(true);
+        MessageScreen.releaseStatics(param0 - 20899);
+        ChatInputGlobals.releaseStatics(true);
         PlayerController.releaseStatics(103);
-        fe.releaseStatics(param0 ^ -23078);
-        hp.releaseStatics((byte) -15);
+        PendingFlagGlobals.releaseStatics(param0 ^ -23078);
+        HelpPopup.releaseStatics((byte) -15);
         ReflectionCheckRequest.releaseStatics((byte) -38);
         BoundedRandomAccessFile.releaseStatics(-1);
         MainMenuScreen.releaseStatics((byte) 23);
         GameplayScreen.releaseStatics(param0 ^ 23116);
-        fq.clearStatics((byte) -123);
+        RankingSummaryScreen.clearStatics((byte) -123);
         HighscoresScreen.releaseStatics((byte) 49);
         PauseMenuScreen.releaseStatics(false);
-        ij.releaseStatics(-124);
-        wa.releaseStatics(0);
-        ra.releaseStatics(false);
+        BlankScreen.releaseStatics(-124);
+        SpriteBuildHelpers.releaseStatics(0);
+        NineSliceSpriteFactory.releaseStatics(false);
         AudioService.releaseStatics(true);
         TwistedLogicBackground.releaseStatics((byte) 106);
-        dc.releaseStatics(param0 ^ -23119);
+        FullscreenExitHelpers.releaseStatics(param0 ^ -23119);
         PolygonFiller.releaseStatics();
         AcidSunsetBackground.releaseStatics(0);
         EmergentBehaviourBackground.releaseStatics(0);
@@ -623,25 +623,25 @@ public final class Pixelate extends NetworkGameClient {
         SectorCacheStore.releaseStatics(512);
         DiskCacheRequest.releaseStatics(100);
         CachedArchiveProvider.releaseStatics((byte) 45);
-        fj.clearStatics((byte) 119);
+        MouseInputGlobals.clearStatics((byte) 119);
         ArchiveRequest.releaseStatics((byte) -106);
-        qf.releaseStatics(false);
+        KeyMapHelpers.releaseStatics(false);
         AccountNoticeDialog.releaseStatics((byte) -63);
         TextWidgetPainter.releaseStatics(-120);
         MeshRasterState.releaseStatics();
-        jk.releaseStatics(20);
+        MeshColourEntry.releaseStatics(20);
         TriangleMesh.releaseStatics((byte) -79);
-        cl.releaseStatics(938035464);
-        bq.releaseStatics((byte) 124);
-        cd.releaseStatics(false);
-        oi.releaseStatics(param0 ^ param0);
+        Cp1252EncodingHelpers.releaseStatics(938035464);
+        LegacyMenuBuilder.releaseStatics((byte) 124);
+        LoginMethodGlobals.releaseStatics(false);
+        RegistrationHelpers.releaseStatics(param0 ^ param0);
         DelegatingCanvas.releaseStatics(param0 - 23207);
-        ri.releaseStatics(10);
+        ChatHistoryAllocator.releaseStatics(10);
         IntKeyLookup.releaseStatics(11924);
         ByteStorage.releaseStatics(param0 - 31989);
         Bzip2Decoder.releaseSharedState();
         Bzip2State.releaseStatics((byte) -92);
-        fd.releaseStatics(-24465);
+        ByteArrayPool.releaseStatics(-24465);
         JavaRandomHelpers.releaseStatics((byte) -118);
         CheckboxPainter.releaseStatics((byte) -123);
         StatefulTextPainter.releaseStatics(param0 - 23174);
@@ -655,12 +655,12 @@ public final class Pixelate extends NetworkGameClient {
         ModalPanel.releaseStatics(-43);
         UiContainer.releaseStatics((byte) -105);
         IntrusiveDequeCursor.releaseStatics(false);
-        ce.releaseStatics(true);
+        ChatChannelGlobals.releaseStatics(true);
         VorbisFloor.releaseStatics();
-        wf.releaseStatics((byte) -66);
-        qg.releaseStatics((byte) 124);
-        dn.releaseStatics((byte) -41);
-        ui.releaseStatics(23652);
+        MachineIdHelpers.releaseStatics((byte) -66);
+        GameRequestHelpers.releaseStatics((byte) 124);
+        DefaultQuickChatPhraseListener.releaseStatics((byte) -41);
+        Cp1252DecodeHelpers.releaseStatics(23652);
         QuickChatMenu.releaseStatics(1);
         QuickChatCategoryCache.releaseStatics(param0 ^ -6504);
         QuickChatPhraseCache.releaseStatics(param0 - 23002);
@@ -671,17 +671,17 @@ public final class Pixelate extends NetworkGameClient {
         ProxyAuthenticationException.releaseStatics((byte) 73);
         NanoTickClock.releaseStatics(false);
         ImageProducerRasterBuffer.releaseStatics(-56);
-        vm.releaseStatics(116);
-        bo.releaseStatics(true);
+        LobbyGameLookupHelpers.releaseStatics(116);
+        ScreenDisplayMode.releaseStatics(true);
         ScorePopup.clearStatics(false);
         TimerBar.releaseStatics((byte) -69);
-        jf.releaseStatics(-31476);
+        IncomingPacketHelpers.releaseStatics(-31476);
         InputQueue.releaseStatics(-3);
         WhirlpoolHasher.clearStatics(64);
-        td.releaseStatics(param0 - 23112);
-        qn.releaseStatics(-1);
+        PuzzleModePictureHelpers.releaseStatics(param0 - 23112);
+        PatchNoteUsage.releaseStatics(-1);
         MusicPatch.releaseStatics(param0 ^ 23118);
-        un.releaseStatics((byte) -6);
+        PatchEnvelopeSet.releaseStatics((byte) -6);
         SynthInstrument.releaseStatics();
         LabeledField.releaseStatics((byte) -84);
         ValidatedTextWidget.releaseStatics(false);
@@ -694,13 +694,13 @@ public final class Pixelate extends NetworkGameClient {
         ValidationHelpWidget.releaseStatics(false);
         Checkbox.releaseStatics(98);
         TextFieldValidator.releaseStatics(101);
-        ih.releaseStatics(-1);
+        TutorialTickHelpers.releaseStatics(-1);
         AccountTermsPanel.clearSharedReferences((byte) 103);
         DialWidget.releaseStatics((byte) 95);
         MarkerSlider.releaseStatics((byte) -89);
         TabbedPanel.releaseStatics(15967);
         AccountNamePrompt.releaseStatics((byte) -70);
-        ke.releaseStatics(-19064);
+        KeyEventGlobals.releaseStatics(-19064);
         BirthDateEntryPanel.releaseStatics(-8012);
         DateOfBirthValidator.releaseStatics(true);
         NumericDateInputWidget.releaseStatics((byte) -28);
@@ -712,19 +712,19 @@ public final class Pixelate extends NetworkGameClient {
         IterableNodeHashTable.releaseStatics((byte) -105);
         SecondaryNodeDeque.releaseStatics(true);
         CacheReference.releaseStatics(-520925311);
-        wm.releaseStatics(false);
+        ReportReason.releaseStatics(false);
         StrongCacheReference.releaseStatics(109);
         ProxySocketConnector.releaseStatics(-6835);
         AudioFilter.releaseStatics();
-        na.releaseStatics((byte) 4);
+        GameSocketHelpers.releaseStatics((byte) 4);
         DateInputWidget.releaseStatics((byte) 125);
         NodeHashTableIterator.releaseStatics(true);
         SecondaryNodeDequeIterator.releaseStatics(param0 ^ -23078);
         RankingTableRequest.releaseStatics(30);
-        rh.releaseStatics((byte) 64);
-        gi.releaseStatics(-112);
+        HighscoreSubmission.releaseStatics((byte) 64);
+        HighscoreNameEntry.releaseStatics(-112);
         RankingQuery.releaseStatics((byte) 90);
-        cm.releaseStatics(128);
+        VolumeControlledVoice.releaseStatics(128);
         ListRequest.releaseStatics((byte) -10);
         ThreeSliceButtonPainter.clearStatics(param0 ^ -23054);
         LinkButtonPainter.releaseStatics(param0 ^ -23069);
@@ -733,24 +733,24 @@ public final class Pixelate extends NetworkGameClient {
         SpriteCheckboxPainter.releaseStatics(14518);
         AlphaContainer.releaseStatics((byte) -120);
         SocialListEntry.releaseStatics(param0 ^ -16156);
-        gd.releaseStatics(0);
-        ff.releaseStatics(-46);
-        mc.releaseStatics(-1);
-        hf.releaseStatics((byte) 22);
-        um.releaseStatics(-127);
+        MainScreenWidgetGlobals.releaseStatics(0);
+        SpriteLoadHelpers.releaseStatics(-46);
+        AchievementMaskRequest.releaseStatics(-1);
+        AchievementRecord.releaseStatics((byte) 22);
+        SavedDataRequest.releaseStatics(-127);
         SaveDataRequest.releaseStatics(17);
         AsyncValidationResult.releaseStatics(0);
-        bd.releaseStatics(param0 - 23048);
-        ug.releaseStatics(param0 ^ 15191);
+        ConnectionState.releaseStatics(param0 - 23048);
+        LaggedPacket.releaseStatics(param0 ^ 15191);
         LoginMethod.releaseStatics(105);
         EmailCredentials.releaseStatics((byte) 124);
-        gq.releaseStatics(100);
-        wk.releaseStatics(-19101);
-        ge.clearSharedReferences(param0 - 23119);
-        id.releaseStatics(-118);
+        AlternateNameCredentials.releaseStatics(100);
+        EmailLoginCredentials.releaseStatics(-19101);
+        RequestState.clearSharedReferences(param0 - 23119);
+        AccountRequestReply.releaseStatics(-118);
         AccountMessagePanel.releaseStaticReferences(param0 ^ 23118);
         SoundVoice.releaseStatics((byte) -113);
-        ib.releaseStatics(2);
+        GridSize.releaseStatics(2);
         PieceTiming.releaseStatics(10934);
         PuzzleThumbnail.releaseStatics((byte) 104);
         BoardParticle.releaseStatics(7);
@@ -763,13 +763,13 @@ public final class Pixelate extends NetworkGameClient {
         FireworkDisplay.releaseStatics((byte) 48);
         FireworkBurst.releaseStatics(3);
         FireworkSpark.releaseStatics(false);
-        ji.releaseStatics(-14186);
+        FriendCaptionGlobals.releaseStatics(-14186);
         Vector3.releaseStatics((byte) 69);
         Matrix3.releaseStatics((byte) -27);
-        jn.releaseStatics(29353);
+        TwistedLogicCube.releaseStatics(29353);
         DriftingParticle.clearStatics((byte) -114);
-        fp.releaseStatics(param0 + 329385410);
-        sm.releaseStatics((byte) -115);
+        NoticeKind.releaseStatics(param0 + 329385410);
+        QueuedLobbyRequest.releaseStatics((byte) -115);
         StatsRequest.releaseStatics(3);
         WidgetStyleLayer.releaseStatics(0);
         TextLayoutLine.releaseStatics((byte) -26);
@@ -781,11 +781,11 @@ public final class Pixelate extends NetworkGameClient {
         EmailConfirmationValidator.releaseStatics(16);
         AgeValidator.releaseStatics(-1);
         MatchingTextValidator.releaseStatics(true);
-        dq.releaseStatics(-120);
-        ni.releaseStatics((byte) -13);
+        TransitionPhase.releaseStatics(-120);
+        TextHotspot.releaseStatics((byte) -13);
         ValidationState.releaseStatics(-125);
         DebouncedValidator.releaseStatics((byte) -125);
-        el.releaseStatics(param0 ^ -13666);
+        EmailValidationState.releaseStatics(param0 ^ -13666);
         this.field_w = null;
     }
 
@@ -817,7 +817,7 @@ public final class Pixelate extends NetworkGameClient {
     final void shutdownClientServices(int param0) {
         QuickChatPhraseDefinition.shutdownAudio((byte) -92);
         int var2 = -13 % ((-23 - param0) / 61);
-        if (ib.field_f != null) {
+        if (GridSize.field_f != null) {
           SoundVoice.closeFullscreenCanvas(121);
         }
         MusicPatch.shutdownConnectionAndInput((byte) -91);
@@ -929,28 +929,28 @@ public final class Pixelate extends NetworkGameClient {
         try {
           stackIn_3_0 = ReflectionCheckRequest.field_k;
           stackIn_3_1 = param0;
-          stackIn_4_2 = (ReflectionCheckRequest.field_k == bj.field_d);
-          var7_int = ((ScrollContainer) (Object) stackIn_3_0).updateScrolling(stackIn_3_1, stackIn_4_2, 2, param2 * (fq.field_q * 4 + 8), 0, 2 * fq.field_q + 4) ? 1 : 0;
+          stackIn_4_2 = (ReflectionCheckRequest.field_k == ChallengePuzzleHelpers.field_d);
+          var7_int = ((ScrollContainer) (Object) stackIn_3_0).updateScrolling(stackIn_3_1, stackIn_4_2, 2, param2 * (RankingSummaryScreen.field_q * 4 + 8), 0, 2 * RankingSummaryScreen.field_q + 4) ? 1 : 0;
           if (param1 != 69) {
             return;
           }
           var8 = ReflectionCheckRequest.field_k.content.children;
-          var9 = hm.monotonicMillis(64);
+          var9 = ClockHelpers.monotonicMillis(64);
           var11 = null;
           var12 = (LobbyGame) (var8.first(1504642273));
           while (var12 != null) {
             var13 = 0;
             if (var12.children == null) {
               var14 = param4 | param6;
-              var12.field_Nb = new SceneWidget(0L, of.field_i);
+              var12.field_Nb = new SceneWidget(0L, TextDecodeHelpers.field_i);
               var12.addChild(var12.field_Nb, (byte) 26);
               var12.field_Nb.horizontalAlignment = 1;
               var12.field_qc = new SceneWidget(0L, SceneWidget.field_T);
               var12.addChild(var12.field_qc, (byte) 26);
-              var12.field_Yb = new SceneWidget(0L, of.field_i);
+              var12.field_Yb = new SceneWidget(0L, TextDecodeHelpers.field_i);
               var12.addChild(var12.field_Yb, (byte) 26);
               var12.field_Yb.field_C = 0;
-              var12.field_Sb = new SceneWidget(0L, of.field_i);
+              var12.field_Sb = new SceneWidget(0L, TextDecodeHelpers.field_i);
               var12.addChild(var12.field_Sb, (byte) 26);
               var12.field_Sb.field_C = 0;
               var12.field_gc = new SceneWidget(0L, SceneWidget.field_T);
@@ -963,7 +963,7 @@ public final class Pixelate extends NetworkGameClient {
               if (DialWidgetPainter.field_n) {
                 stackIn_13_1 = null;
                 stackIn_13_2 = null;
-                stackIn_13_4 = of.field_i;
+                stackIn_13_4 = TextDecodeHelpers.field_i;
               } else {
                 stackIn_13_1 = null;
                 stackIn_13_2 = null;
@@ -971,13 +971,13 @@ public final class Pixelate extends NetworkGameClient {
               }
               stackIn_12_0.field_Zb = new SceneWidget(stackIn_12_3, stackIn_13_4);
               var12.addChild(var12.field_Zb, (byte) 26);
-              var12.field_ac = new SceneWidget[fj.field_b];
+              var12.field_ac = new SceneWidget[MouseInputGlobals.field_b];
               var12.field_ic = new SceneWidget(0L, (SceneWidget) null);
-              if ((var14 & 1 << ek.field_a) != 0) {
+              if ((var14 & 1 << ChatHistoryHelpers.field_a) != 0) {
                 var12.field_Zb.addChild(var12.field_ic, (byte) 26);
               }
               var12.field_Jb = new SceneWidget(0L, (SceneWidget) null);
-              if ((var14 & 1 << ef.field_f) != 0) {
+              if ((var14 & 1 << HighscorePacketHandlers.field_f) != 0) {
                 var12.field_Zb.addChild(var12.field_Jb, (byte) 26);
               }
               var12.field_Fb = new SceneWidget(0L, (SceneWidget) null);
@@ -995,9 +995,9 @@ public final class Pixelate extends NetworkGameClient {
               var43.verticalAlignment = 1;
               var44.verticalAlignment = 1;
               var45.verticalAlignment = 1;
-              for (var18_int = 0; fj.field_b > var18_int; var18_int++) {
+              for (var18_int = 0; MouseInputGlobals.field_b > var18_int; var18_int++) {
                 var12.field_ac[var18_int] = new SceneWidget(0L, (SceneWidget) null);
-                if (0 != (var14 & 1 << var18_int + cl.field_j)) {
+                if (0 != (var14 & 1 << var18_int + Cp1252EncodingHelpers.field_j)) {
                   var12.field_Zb.addChild(var12.field_ac[var18_int], (byte) 26);
                 }
                 var12.field_ac[var18_int].verticalAlignment = 1;
@@ -1009,7 +1009,7 @@ public final class Pixelate extends NetworkGameClient {
               if (!DialWidgetPainter.field_n) {
                 stackIn_31_1 = null;
                 stackIn_31_2 = null;
-                stackIn_31_4 = of.field_i;
+                stackIn_31_4 = TextDecodeHelpers.field_i;
               } else {
                 stackIn_31_1 = null;
                 stackIn_31_2 = null;
@@ -1020,9 +1020,9 @@ public final class Pixelate extends NetworkGameClient {
               var12.field_Gb.horizontalAlignment = 2;
               var12.field_Kb = new SceneWidget(0L, SceneWidget.field_T);
               var12.addChild(var12.field_Kb, (byte) 26);
-              var12.field_Wb = new SceneWidget(0L, dn.field_c);
+              var12.field_Wb = new SceneWidget(0L, DefaultQuickChatPhraseListener.field_c);
               var12.addChild(var12.field_Wb, (byte) 26);
-              var12.field_lc = new SceneWidget(0L, dn.field_c);
+              var12.field_lc = new SceneWidget(0L, DefaultQuickChatPhraseListener.field_c);
               var12.addChild(var12.field_lc, (byte) 26);
               var12.field_rc = new SceneWidget(0L, TextFieldValidator.field_h);
               var12.addChild(var12.field_rc, (byte) 26);
@@ -1061,7 +1061,7 @@ public final class Pixelate extends NetworkGameClient {
             var21 = var12.field_Zb;
             var12.field_Zb.height = 0;
             var21.field_K = 0;
-            for (var22_int = 0; fj.field_b > var22_int; var22_int++) {
+            for (var22_int = 0; MouseInputGlobals.field_b > var22_int; var22_int++) {
               var12.field_ac[var22_int].field_H = null;
               var23 = var12.field_ac[var22_int];
               var12.field_ac[var22_int].height = 0;
@@ -1140,12 +1140,12 @@ public final class Pixelate extends NetworkGameClient {
                 }
               }
               if (null != var12.field_jc.field_cb) {
-                var12.field_jc.setBounds(var31, fq.field_q, 0, 256, 68);
+                var12.field_jc.setBounds(var31, RankingSummaryScreen.field_q, 0, 256, 68);
               } else {
-                var12.field_Nb.setBounds(var31, fq.field_q, 0, 256, 68);
+                var12.field_Nb.setBounds(var31, RankingSummaryScreen.field_q, 0, 256, 68);
               }
               var12.field_qc.field_cb = BitmapFont.truncateWithEllipsis(var12.field_qc.font, var32, 78);
-              var12.field_qc.setBounds(var31, fq.field_q, 70, 256, 78);
+              var12.field_qc.setBounds(var31, RankingSummaryScreen.field_q, 70, 256, 78);
               if (var12.field_qc.field_W &&
                 !var12.field_qc.field_cb.equals(var32)) {
                 PuzzleThumbnail.field_o = var32;
@@ -1155,25 +1155,25 @@ public final class Pixelate extends NetworkGameClient {
                 var12.field_Sb.field_cb = "/" + var12.field_ec;
                 var12.field_Yb.horizontalAlignment = 2;
                 var33_int = (348 - var12.field_Sb.font.textWidth("/")) / 2;
-                var12.field_Yb.setBounds(var31, fq.field_q, 150, 256, var33_int - 150);
-                var12.field_Sb.setBounds(var31, fq.field_q, var33_int, 256, 198 - var33_int);
+                var12.field_Yb.setBounds(var31, RankingSummaryScreen.field_q, 150, 256, var33_int - 150);
+                var12.field_Sb.setBounds(var31, RankingSummaryScreen.field_q, var33_int, 256, 198 - var33_int);
               } else {
                 var12.field_Yb.horizontalAlignment = 1;
-                var12.field_Yb.setBounds(var31, fq.field_q, 150, 256, 48);
+                var12.field_Yb.setBounds(var31, RankingSummaryScreen.field_q, 150, 256, 48);
               }
               var12.field_gc.field_cb = Integer.toString(var12.field_bc);
-              var12.field_gc.setBounds(var31, fq.field_q, 200, 256, 48);
+              var12.field_gc.setBounds(var31, RankingSummaryScreen.field_q, 200, 256, 48);
               stackIn_69_0 = (!DialWidgetPainter.field_n) ? 200 : 250;
               var33_intLifetime1 = stackIn_69_0;
-              var12.field_Zb.setBounds(var31, fq.field_q, var33_intLifetime1, param1 + 187, -2 + (-var33_intLifetime1 + 365));
+              var12.field_Zb.setBounds(var31, RankingSummaryScreen.field_q, var33_intLifetime1, param1 + 187, -2 + (-var33_intLifetime1 + 365));
               var34_int = PlayerBoard.field_q;
-              if ((1 << ek.field_a & var14Lifetime1) != 0) {
+              if ((1 << ChatHistoryHelpers.field_a & var14Lifetime1) != 0) {
                 var50_ref = DraggableWidget.field_P[var12.field_Ib];
                 var12.field_ic.field_H = var50_ref;
                 var12.field_ic.setBounds(0, var12.field_Zb.height, var34_int, 256, var50_ref.field_A);
                 var34_int = var34_int + (var50_ref.field_A + PlayerBoard.field_q);
               }
-              if ((var14Lifetime1 & 1 << ef.field_f) != 0) {
+              if ((var14Lifetime1 & 1 << HighscorePacketHandlers.field_f) != 0) {
                 if (!var12.field_hc) {
                   stackIn_78_0 = (var12.field_cc) ? 1 : 0;
                 } else {
@@ -1198,7 +1198,7 @@ public final class Pixelate extends NetworkGameClient {
                 var34_int = var34_int + (PlayerBoard.field_q + var52_ref.field_A);
               }
               if ((var14Lifetime1 & 1 << ClientException.field_e) != 0) {
-                stackIn_88_0 = fd.field_c;
+                stackIn_88_0 = ByteArrayPool.field_c;
                 if (!var12.field_oc) {
                   stackIn_89_1 = 0;
                 } else {
@@ -1209,11 +1209,11 @@ public final class Pixelate extends NetworkGameClient {
                 var12.field_Vb.setBounds(0, var12.field_Zb.height, var34_int, 256, var53_ref.field_A);
                 var34_int = var34_int + (PlayerBoard.field_q + var53_ref.field_A);
               }
-              if (ig.field_a != null) {
-                for (var36Lifetime1 = 0; var36Lifetime1 < fj.field_b; var36Lifetime1++) {
-                  if (ig.field_a[var36Lifetime1] != null &&
-                    0 != (var14Lifetime1 & 1 << cl.field_j + var36Lifetime1)) {
-                    var42 = ig.field_a[var36Lifetime1][255 & var12.field_Eb[var36Lifetime1]];
+              if (AudioPumpHelpers.field_a != null) {
+                for (var36Lifetime1 = 0; var36Lifetime1 < MouseInputGlobals.field_b; var36Lifetime1++) {
+                  if (AudioPumpHelpers.field_a[var36Lifetime1] != null &&
+                    0 != (var14Lifetime1 & 1 << Cp1252EncodingHelpers.field_j + var36Lifetime1)) {
+                    var42 = AudioPumpHelpers.field_a[var36Lifetime1][255 & var12.field_Eb[var36Lifetime1]];
                     var54 = var42;
                     var12.field_ac[var36Lifetime1].field_H = var42;
                     var12.field_ac[var36Lifetime1].setBounds(0, var12.field_Zb.height, var34_int, 256, var54.field_A);
@@ -1227,7 +1227,7 @@ public final class Pixelate extends NetworkGameClient {
                 var12.field_Jb.field_D = var12.field_Jb.field_D + var36Lifetime2;
                 var12.field_Fb.field_D = var12.field_Fb.field_D + var36Lifetime2;
                 var12.field_Vb.field_D = var12.field_Vb.field_D + var36Lifetime2;
-                for (var37_int = 0; var37_int < fj.field_b; var37_int++) {
+                for (var37_int = 0; var37_int < MouseInputGlobals.field_b; var37_int++) {
                   dupTemp$0 = var12.field_ac[var37_int];
                   dupTemp$0.field_D = dupTemp$0.field_D + var36Lifetime2;
                 }
@@ -1248,8 +1248,8 @@ public final class Pixelate extends NetworkGameClient {
                   var12.field_Gb.field_cb = var40 + ":" + var39 / 10 + var39 % 10 + ":" + var38_int / 10 + var38_int % 10;
                 }
               }
-              var12.field_Gb.setBounds(var31, fq.field_q, 365, 256, var12.field_K - 365);
-              var31 = var31 + fq.field_q;
+              var12.field_Gb.setBounds(var31, RankingSummaryScreen.field_q, 365, 256, var12.field_K - 365);
+              var31 = var31 + RankingSummaryScreen.field_q;
               if (var12.field_Ub != null) {
                 var31 += 2;
                 var37 = new StringBuilder(64);
@@ -1262,27 +1262,27 @@ public final class Pixelate extends NetworkGameClient {
                 var38 = var37.toString();
                 var12.field_Kb.field_cb = var38;
                 var39Lifetime1 = var12.field_Kb.font.wrappedLineCount(var38, var12.field_K - 2 * var12.field_Kb.field_C);
-                var12.field_Kb.setBounds(var31, fq.field_q * var39Lifetime1, 0, 256, var12.field_K);
-                var31 = var31 + fq.field_q * var39Lifetime1;
+                var12.field_Kb.setBounds(var31, RankingSummaryScreen.field_q * var39Lifetime1, 0, 256, var12.field_K);
+                var31 = var31 + RankingSummaryScreen.field_q * var39Lifetime1;
               }
               if (var12.field_cc) {
                 var12.field_Wb.field_cb = AlphaContainer.formatTemplate(JavaRandomHelpers.field_a, param1 - 22, new String[]{var32});
-                var12.field_Wb.setBounds(var31, fq.field_q, MouseWheelHandler.field_c, 256, -(2 * MouseWheelHandler.field_c) + var12.field_K);
-                var31 = var31 + fq.field_q;
+                var12.field_Wb.setBounds(var31, RankingSummaryScreen.field_q, MouseWheelHandler.field_c, 256, -(2 * MouseWheelHandler.field_c) + var12.field_K);
+                var31 = var31 + RankingSummaryScreen.field_q;
               }
               if (var12.field_Ob) {
                 var12.field_lc.field_cb = AlphaContainer.formatTemplate(NodeHashTable.field_h, param1 ^ 25, new String[]{var32});
-                var12.field_lc.setBounds(var31, fq.field_q, MouseWheelHandler.field_c, 256, var12.field_K - MouseWheelHandler.field_c * 2);
-                var31 = var31 + fq.field_q;
+                var12.field_lc.setBounds(var31, RankingSummaryScreen.field_q, MouseWheelHandler.field_c, 256, var12.field_K - MouseWheelHandler.field_c * 2);
+                var31 = var31 + RankingSummaryScreen.field_q;
               }
             }
-            var33 = lg.getJoinFailureMessage((byte) 121, var32, var12.field_Qb);
+            var33 = LoginCookieHelpers.getJoinFailureMessage((byte) 121, var32, var12.field_Qb);
             if (var33 != null) {
               var34_intLifetime1 = var12.field_rc.font.wrappedLineCount(var33, -MouseWheelHandler.field_c + var12.field_K - MouseWheelHandler.field_c);
               var12.field_rc.field_cb = var33;
-              var12.field_rc.textOpacity = var12.field_Rb * 256 / mh.field_b;
-              var12.field_rc.setBounds(var31, fq.field_q * var34_intLifetime1, MouseWheelHandler.field_c, 256, -(2 * MouseWheelHandler.field_c) + var12.field_K);
-              var31 = var31 + var34_intLifetime1 * fq.field_q;
+              var12.field_rc.textOpacity = var12.field_Rb * 256 / QuickChatOpenHelpers.field_b;
+              var12.field_rc.setBounds(var31, RankingSummaryScreen.field_q * var34_intLifetime1, MouseWheelHandler.field_c, 256, -(2 * MouseWheelHandler.field_c) + var12.field_K);
+              var31 = var31 + var34_intLifetime1 * RankingSummaryScreen.field_q;
             }
             if (var7_int == 0) {
               var12.pendingHeightDelta = -var12.height + var31;
@@ -1290,27 +1290,27 @@ public final class Pixelate extends NetworkGameClient {
             if (var13 != 0) {
               ReflectionCheckRequest.field_k.content.positionAfter(var12, 2, param1 - 70, (SceneWidget) (var11));
             }
-            for (var34_intLifetime2 = 0; var34_intLifetime2 < fj.field_b; var34_intLifetime2++) {
+            for (var34_intLifetime2 = 0; var34_intLifetime2 < MouseInputGlobals.field_b; var34_intLifetime2++) {
               if (var12.field_ac[var34_intLifetime2].field_W) {
-                if (null == dq.field_b) {
+                if (null == TransitionPhase.field_b) {
                   var35 = null;
                 } else {
-                  if (dq.field_b[var34_intLifetime2] != null) {
-                    var35 = dq.field_b[var34_intLifetime2][255 & var12.field_Eb[var34_intLifetime2]];
+                  if (TransitionPhase.field_b[var34_intLifetime2] != null) {
+                    var35 = TransitionPhase.field_b[var34_intLifetime2][255 & var12.field_Eb[var34_intLifetime2]];
                   } else {
                     var35 = null;
                   }
                 }
                 if (var35 != null) {
-                  PuzzleThumbnail.field_o = jk.field_e[var34_intLifetime2] + " - " + (String) (var35);
+                  PuzzleThumbnail.field_o = MeshColourEntry.field_e[var34_intLifetime2] + " - " + (String) (var35);
                 } else {
-                  PuzzleThumbnail.field_o = jk.field_e[var34_intLifetime2];
+                  PuzzleThumbnail.field_o = MeshColourEntry.field_e[var34_intLifetime2];
                 }
               }
             }
             if (var12.field_ic.field_W) {
               if (1 == var12.field_Ib) {
-                var34 = ri.field_g;
+                var34 = ChatHistoryAllocator.field_g;
               } else {
                 var34 = AchievementsScreen.field_p[var12.field_Ib];
               }
@@ -1330,7 +1330,7 @@ public final class Pixelate extends NetworkGameClient {
                 if (!var12.field_Mb) {
                   stackIn_165_0 = ClientException.field_b;
                 } else {
-                  stackIn_165_0 = he.field_e;
+                  stackIn_165_0 = CanvasInputHelpers.field_e;
                 }
               } else {
                 stackIn_165_0 = StatusBar.field_c;
@@ -1357,7 +1357,7 @@ public final class Pixelate extends NetworkGameClient {
                 if (var12.field_dc && (!var12.field_Mb ||
                   !var12.field_hc &&
                   !var12.field_cc)) {
-                  qj.sendLeaveGameRequest(false, var12.getGameId((byte) 8), param5);
+                  PrivateChatHelpers.sendLeaveGameRequest(false, var12.getGameId((byte) 8), param5);
                   decompiledFrameRemainder0 = false;
                 }
                 else {
@@ -1390,8 +1390,8 @@ public final class Pixelate extends NetworkGameClient {
         int var3Lifetime3;
         var5 = field_H ? 1 : 0;
         var6 = ReportAbuseDialog.getActiveCanvas((byte) -122);
-        if (bd.shouldShowBootstrapLoadingScreen(true)) {
-          TextWidgetPainter.renderStartupScreen(wp.isFocusIndicatorEnabled(-8798), -107, var6);
+        if (ConnectionState.shouldShowBootstrapLoadingScreen(true)) {
+          TextWidgetPainter.renderStartupScreen(CurrencyPriceGlobals.isFocusIndicatorEnabled(-8798), -107, var6);
           return;
         }
         if (!Checkbox.field_R) {
@@ -1399,19 +1399,19 @@ public final class Pixelate extends NetworkGameClient {
           return;
         }
         if (!ReflectionCheckRequest.isWaitingForAccountData((byte) -83)) {
-          FireworkDisplay.setLoadingStatus(100.0f, -1, em.field_a);
+          FireworkDisplay.setLoadingStatus(100.0f, -1, ContextMenuHelpers.field_a);
           DialWidget.renderLoadingScreen(-1913, var6);
           return;
         }
         SoftwareRasterizer.clear();
         if (param0 < 91) {
-          field_G = (bd) null;
+          field_G = (ConnectionState) null;
         }
-        if (MidiPcmStream.field_t == fc.field_e) {
-          SingleChildContainer.drawScreenOrTransition(true, 108, fc.field_e);
+        if (MidiPcmStream.field_t == LobbyListBindingHelpers.field_e) {
+          SingleChildContainer.drawScreenOrTransition(true, 108, LobbyListBindingHelpers.field_e);
         } else {
           if (0 > MidiPcmStream.field_t) {
-            stackIn_12_0 = fc.field_e;
+            stackIn_12_0 = LobbyListBindingHelpers.field_e;
           } else {
             stackIn_12_0 = MidiPcmStream.field_t;
           }
@@ -1419,54 +1419,54 @@ public final class Pixelate extends NetworkGameClient {
           if (var3 < 0) {
             var3 = 14;
           }
-          var4 = wo.getScreen(-51, var3);
+          var4 = SocialPanel.getScreen(-51, var3);
           if (NameAvailabilityValidator.field_t >= 16) {
             SingleChildContainer.drawScreenOrTransition(false, -93, MidiPcmStream.field_t);
             var4.drawFadeTransition(-(NameAvailabilityValidator.field_t << 4) + 512, true, true);
           } else {
-            SingleChildContainer.drawScreenOrTransition(false, 97, fc.field_e);
+            SingleChildContainer.drawScreenOrTransition(false, 97, LobbyListBindingHelpers.field_e);
             var4.drawFadeTransition(NameAvailabilityValidator.field_t << 4, true, false);
           }
         }
-        TextTableInitializer.drawFrontEndOverlays(ep.isBlinkPhaseVisible(30022), 12402);
-        if (fc.field_e == 4 ||
+        TextTableInitializer.drawFrontEndOverlays(PolygonClipHelpers.isBlinkPhaseVisible(30022), 12402);
+        if (LobbyListBindingHelpers.field_e == 4 ||
           MidiPcmStream.field_t == 4) {
           var3Lifetime1 = 192;
-          if (MidiPcmStream.field_t != fc.field_e) {
+          if (MidiPcmStream.field_t != LobbyListBindingHelpers.field_e) {
             var3Lifetime1 = NameAvailabilityValidator.field_t << 3;
             if (var3Lifetime1 > 192) {
               var3Lifetime1 = 192;
             }
-            if (fc.field_e == 4) {
+            if (LobbyListBindingHelpers.field_e == 4) {
               var3Lifetime1 = 192 - var3Lifetime1;
             }
           }
-          SoftwareRasterizer.fillRectangleAlpha(0, nf.field_f, 640, -nf.field_f + 480, 0, var3Lifetime1);
+          SoftwareRasterizer.fillRectangleAlpha(0, LoginFormGlobals.field_f, 640, -LoginFormGlobals.field_f + 480, 0, var3Lifetime1);
         }
-        if (fc.field_e != MidiPcmStream.field_t &&
+        if (LobbyListBindingHelpers.field_e != MidiPcmStream.field_t &&
           -2 == MidiPcmStream.field_t) {
           var3Lifetime2 = -(NameAvailabilityValidator.field_t << 4) + 256;
           if (var3Lifetime2 < 0) {
             var3Lifetime2 = 0;
           }
           MusicPatchNode.field_B.drawAlpha(0, 0, var3Lifetime2);
-        } else if (MidiPcmStream.field_t != fc.field_e &&
-          fc.field_e == -2) {
+        } else if (MidiPcmStream.field_t != LobbyListBindingHelpers.field_e &&
+          LobbyListBindingHelpers.field_e == -2) {
           var3Lifetime2 = NameAvailabilityValidator.field_t << 4;
           if (var3Lifetime2 > 256) {
             var3Lifetime2 = 256;
           }
           MusicPatchNode.field_B.drawAlpha(0, 0, var3Lifetime2);
         } else {
-          if (fc.field_e != -2) {
+          if (LobbyListBindingHelpers.field_e != -2) {
             MusicPatchNode.field_B.drawTransparent(0, 0);
           }
         }
-        un.drawAchievementBanner((byte) 87);
-        if (!hf.isLegacyMenuOpen((byte) 100)) {
-          if (pe.requestLeaveServer(false)) {
-            if (ib.field_f == null) {
-              stackIn_51_0 = ro.field_d;
+        PatchEnvelopeSet.drawAchievementBanner((byte) 87);
+        if (!AchievementRecord.isLegacyMenuOpen((byte) 100)) {
+          if (PlayerActionHelpers.requestLeaveServer(false)) {
+            if (GridSize.field_f == null) {
+              stackIn_51_0 = NameSuggestionHelpers.field_d;
             } else {
               stackIn_51_0 = true;
             }
@@ -1474,18 +1474,18 @@ public final class Pixelate extends NetworkGameClient {
           } else {
             if (Kite.isMessageMenuPending((byte) 41)) {
               SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.field_j, SoftwareRasterizer.field_d);
-              ValidationState.setLegacyMenuFrameStyle(ab.field_c[0].field_F, ab.field_c[0].field_E, ab.field_c, -1501881951);
+              ValidationState.setLegacyMenuFrameStyle(ResultCaptionGlobals.field_c[0].field_F, ResultCaptionGlobals.field_c[0].field_E, ResultCaptionGlobals.field_c, -1501881951);
             }
           }
         } else {
           SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.field_j, SoftwareRasterizer.field_d);
-          ThreeSliceButtonPainter.setLegacyMenuFrameSprites(ab.field_c, ab.field_c[0].field_E, -96, ab.field_c[0].field_F);
+          ThreeSliceButtonPainter.setLegacyMenuFrameSprites(ResultCaptionGlobals.field_c, ResultCaptionGlobals.field_c[0].field_E, -96, ResultCaptionGlobals.field_c[0].field_F);
         }
         if (GameModeCard.field_a != GameModeCard.field_d) {
-          var3Lifetime3 = (hf.field_o << 8) / 16;
+          var3Lifetime3 = (AchievementRecord.field_o << 8) / 16;
           SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_j, SoftwareRasterizer.field_d, 0, var3Lifetime3);
         }
-        fj.presentToCanvas(0, 0, (byte) -123, var6);
+        MouseInputGlobals.presentToCanvas(0, 0, (byte) -123, var6);
     }
 
     private final boolean updateArchiveLoading(boolean param0, int param1) {
@@ -1499,23 +1499,23 @@ public final class Pixelate extends NetworkGameClient {
         Sprite[][] var7;
         var9 = field_H ? 1 : 0;
         TextTableInitializer.initializeMenuLabels(-29810);
-        if (ji.field_b != null) {
-          if (qn.field_l.ensureIndex(-3) &&
-            qn.field_l.ensureGroupAvailableByName("basic", -1)) {
-            if (qn.field_l.ensureIndex(-3) &&
-              qn.field_l.ensureGroupAvailableByName("arial13", -1)) {
-              if (dg.field_d.ensureIndex(-3) &&
-                dg.field_d.ensureGroupAvailableByName("arial13", param1 ^ -5)) {
-                if (qn.field_l.ensureIndex(-3) &&
-                  qn.field_l.ensureGroupAvailableByName("lobby", -1)) {
-                  if (dg.field_d.ensureIndex(param1 ^ -7) &&
-                    dg.field_d.ensureGroupAvailableByName("lobby", -1)) {
-                    if (ji.field_b.ensureIndex(-3) &&
-                      ji.field_b.ensureAllGroupsAvailable((byte) 92)) {
+        if (FriendCaptionGlobals.field_b != null) {
+          if (PatchNoteUsage.field_l.ensureIndex(-3) &&
+            PatchNoteUsage.field_l.ensureGroupAvailableByName("basic", -1)) {
+            if (PatchNoteUsage.field_l.ensureIndex(-3) &&
+              PatchNoteUsage.field_l.ensureGroupAvailableByName("arial13", -1)) {
+              if (QuickChatSendHelpers.field_d.ensureIndex(-3) &&
+                QuickChatSendHelpers.field_d.ensureGroupAvailableByName("arial13", param1 ^ -5)) {
+                if (PatchNoteUsage.field_l.ensureIndex(-3) &&
+                  PatchNoteUsage.field_l.ensureGroupAvailableByName("lobby", -1)) {
+                  if (QuickChatSendHelpers.field_d.ensureIndex(param1 ^ -7) &&
+                    QuickChatSendHelpers.field_d.ensureGroupAvailableByName("lobby", -1)) {
+                    if (FriendCaptionGlobals.field_b.ensureIndex(-3) &&
+                      FriendCaptionGlobals.field_b.ensureAllGroupsAvailable((byte) 92)) {
                       if (PacketBuffer.field_p.ensureIndex(param1 ^ -7) &&
                         PacketBuffer.field_p.ensureAllGroupsAvailable((byte) 92)) {
-                        if (ab.field_f.ensureIndex(-3) &&
-                          ab.field_f.ensureAllGroupsAvailable((byte) 92)) {
+                        if (ResultCaptionGlobals.field_f.ensureIndex(-3) &&
+                          ResultCaptionGlobals.field_f.ensureAllGroupsAvailable((byte) 92)) {
                           if (BoundedRandomAccessFile.field_c.ensureIndex(-3) &&
                             BoundedRandomAccessFile.field_c.ensureAllGroupsAvailable((byte) 92)) {
                             if (MenuInputState.field_d.ensureIndex(-3) &&
@@ -1526,21 +1526,21 @@ public final class Pixelate extends NetworkGameClient {
                                   SocketConnector.field_a.ensureAllGroupsAvailable((byte) 92)) {
                                   if (GameModeSelectScreen.field_u.ensureIndex(-3) &&
                                     GameModeSelectScreen.field_u.ensureAllGroupsAvailable((byte) 92)) {
-                                    FireworkDisplay.setLoadingStatus(85.0f, -1, rh.field_r);
+                                    FireworkDisplay.setLoadingStatus(85.0f, -1, HighscoreSubmission.field_r);
                                     this.renderClient(param1 + 106);
                                     if (!param0) {
                                       return false;
                                     }
                                     SocketConnector.stopAudioService(5);
-                                    Js5Transport.loadSkinSounds(new SoundCache(ji.field_b, PacketBuffer.field_p), 5088, PacketBuffer.field_p);
-                                    ji.field_b = null;
-                                    sf.resetFrameTimingHistory(param1 - 4);
+                                    Js5Transport.loadSkinSounds(new SoundCache(FriendCaptionGlobals.field_b, PacketBuffer.field_p), 5088, PacketBuffer.field_p);
+                                    FriendCaptionGlobals.field_b = null;
+                                    FrameTimingHelpers.resetFrameTimingHistory(param1 - 4);
                                     return false;
                                   }
-                                  FireworkDisplay.setLoadingStatus(80.0f, -1, dk.formatArchiveProgressLabel(em.field_a, 0, RasterState.field_p, GameModeSelectScreen.field_u));
+                                  FireworkDisplay.setLoadingStatus(80.0f, -1, NineSliceFrameHelpers.formatArchiveProgressLabel(ContextMenuHelpers.field_a, 0, RasterState.field_p, GameModeSelectScreen.field_u));
                                   return false;
                                 }
-                                FireworkDisplay.setLoadingStatus(75.0f, -1, TextLayoutLine.formatNamedGroupProgressLabel(120, SocketConnector.field_a, em.field_a, "", RasterState.field_p));
+                                FireworkDisplay.setLoadingStatus(75.0f, -1, TextLayoutLine.formatNamedGroupProgressLabel(120, SocketConnector.field_a, ContextMenuHelpers.field_a, "", RasterState.field_p));
                                 return false;
                               }
                               FireworkDisplay.setLoadingStatus(75.0f, -1, TextLayoutLine.formatNamedGroupProgressLabel(53, PlayerBoard.field_c, CipherPacketBuffer.field_x, "basic", CanvasRasterBuffer.field_f));
@@ -1549,92 +1549,92 @@ public final class Pixelate extends NetworkGameClient {
                             FireworkDisplay.setLoadingStatus(75.0f, -1, TextLayoutLine.formatNamedGroupProgressLabel(param1 + 113, MenuInputState.field_d, PasswordValidator.field_q, "basic", SocialListEntry.field_Mb));
                             return false;
                           }
-                          FireworkDisplay.setLoadingStatus(60.0f, -1, TextLayoutLine.formatNamedGroupProgressLabel(61, BoundedRandomAccessFile.field_c, AccountChoicePanel.field_I, "", fq.field_p));
+                          FireworkDisplay.setLoadingStatus(60.0f, -1, TextLayoutLine.formatNamedGroupProgressLabel(61, BoundedRandomAccessFile.field_c, AccountChoicePanel.field_I, "", RankingSummaryScreen.field_p));
                           return false;
                         }
-                        FireworkDisplay.setLoadingStatus(45.0f, -1, BoundedRandomAccessFile.formatProgressLabel(ab.field_f, fq.field_p, AccountChoicePanel.field_I, -22165, 0));
+                        FireworkDisplay.setLoadingStatus(45.0f, -1, BoundedRandomAccessFile.formatProgressLabel(ResultCaptionGlobals.field_f, RankingSummaryScreen.field_p, AccountChoicePanel.field_I, -22165, 0));
                         return false;
                       }
-                      FireworkDisplay.setLoadingStatus(40.0f, -1, TextLayoutLine.formatNamedGroupProgressLabel(83, PacketBuffer.field_p, EmergentBehaviourBackground.field_n, "", l.field_u));
+                      FireworkDisplay.setLoadingStatus(40.0f, -1, TextLayoutLine.formatNamedGroupProgressLabel(83, PacketBuffer.field_p, EmergentBehaviourBackground.field_n, "", MessageScreen.field_u));
                       return false;
                     }
-                    FireworkDisplay.setLoadingStatus(20.0f, -1, TextLayoutLine.formatNamedGroupProgressLabel(125, ji.field_b, EmergentBehaviourBackground.field_n, "", l.field_u));
+                    FireworkDisplay.setLoadingStatus(20.0f, -1, TextLayoutLine.formatNamedGroupProgressLabel(125, FriendCaptionGlobals.field_b, EmergentBehaviourBackground.field_n, "", MessageScreen.field_u));
                     return false;
                   }
-                  FireworkDisplay.setLoadingStatus(17.0f, -1, TextLayoutLine.formatNamedGroupProgressLabel(107, dg.field_d, CipherPacketBuffer.field_x, "lobby", CanvasRasterBuffer.field_f));
+                  FireworkDisplay.setLoadingStatus(17.0f, -1, TextLayoutLine.formatNamedGroupProgressLabel(107, QuickChatSendHelpers.field_d, CipherPacketBuffer.field_x, "lobby", CanvasRasterBuffer.field_f));
                   return false;
                 }
-                FireworkDisplay.setLoadingStatus(13.0f, -1, TextLayoutLine.formatNamedGroupProgressLabel(56, qn.field_l, PasswordValidator.field_q, "lobby", SocialListEntry.field_Mb));
+                FireworkDisplay.setLoadingStatus(13.0f, -1, TextLayoutLine.formatNamedGroupProgressLabel(56, PatchNoteUsage.field_l, PasswordValidator.field_q, "lobby", SocialListEntry.field_Mb));
                 return false;
               }
-              FireworkDisplay.setLoadingStatus(12.0f, -1, TextLayoutLine.formatNamedGroupProgressLabel(57, dg.field_d, CipherPacketBuffer.field_x, "arial13", CanvasRasterBuffer.field_f));
+              FireworkDisplay.setLoadingStatus(12.0f, -1, TextLayoutLine.formatNamedGroupProgressLabel(57, QuickChatSendHelpers.field_d, CipherPacketBuffer.field_x, "arial13", CanvasRasterBuffer.field_f));
               return false;
             }
-            FireworkDisplay.setLoadingStatus(11.0f, param1 ^ -5, TextLayoutLine.formatNamedGroupProgressLabel(78, qn.field_l, PasswordValidator.field_q, "arial13", SocialListEntry.field_Mb));
+            FireworkDisplay.setLoadingStatus(11.0f, param1 ^ -5, TextLayoutLine.formatNamedGroupProgressLabel(78, PatchNoteUsage.field_l, PasswordValidator.field_q, "arial13", SocialListEntry.field_Mb));
             return false;
           }
-          FireworkDisplay.setLoadingStatus(10.0f, param1 - 5, TextLayoutLine.formatNamedGroupProgressLabel(62, qn.field_l, PasswordValidator.field_q, "basic", SocialListEntry.field_Mb));
+          FireworkDisplay.setLoadingStatus(10.0f, param1 - 5, TextLayoutLine.formatNamedGroupProgressLabel(62, PatchNoteUsage.field_l, PasswordValidator.field_q, "basic", SocialListEntry.field_Mb));
           return false;
         }
         if (PacketBuffer.field_p != null) {
-          FireworkDisplay.setLoadingStatus(90.0f, -1, rh.field_r);
+          FireworkDisplay.setLoadingStatus(90.0f, -1, HighscoreSubmission.field_r);
           this.renderClient(param1 + 94);
           PacketBuffer.field_p = null;
-          sf.resetFrameTimingHistory(0);
+          FrameTimingHelpers.resetFrameTimingHistory(0);
           return false;
         }
         if (BoundedRandomAccessFile.field_c != null) {
           FireworkDisplay.setLoadingStatus(92.0f, param1 ^ -5, "Unpacking music");
           this.renderClient(117);
-          lg.loadMusicTracks(param1 - 1, BoundedRandomAccessFile.field_c);
+          LoginCookieHelpers.loadMusicTracks(param1 - 1, BoundedRandomAccessFile.field_c);
           BoundedRandomAccessFile.field_c = null;
         }
-        if (ab.field_f != null) {
-          FireworkDisplay.setLoadingStatus(94.0f, param1 - 5, ff.field_f);
+        if (ResultCaptionGlobals.field_f != null) {
+          FireworkDisplay.setLoadingStatus(94.0f, param1 - 5, SpriteLoadHelpers.field_f);
           this.renderClient(118);
           for (var3_int = 0; var3_int < 18; var3_int++) {
-            if (bj.field_c[var3_int] != null &&
-              !ri.field_a.field_x.prepareTrack(bj.field_c[var3_int], SoundCache.field_d, ab.field_f, 109, 176400)) {
-              sf.resetFrameTimingHistory(0);
+            if (ChallengePuzzleHelpers.field_c[var3_int] != null &&
+              !ChatHistoryAllocator.field_a.field_x.prepareTrack(ChallengePuzzleHelpers.field_c[var3_int], SoundCache.field_d, ResultCaptionGlobals.field_f, 109, 176400)) {
+              FrameTimingHelpers.resetFrameTimingHistory(0);
               return false;
             }
           }
-          ri.field_a.field_x.releasePatchSamples(-38);
-          ri.field_a.field_H.releasePatchSamples(-38);
-          ab.field_f = null;
+          ChatHistoryAllocator.field_a.field_x.releasePatchSamples(-38);
+          ChatHistoryAllocator.field_a.field_H.releasePatchSamples(-38);
+          ResultCaptionGlobals.field_f = null;
           SoundCache.field_d = null;
-          sf.resetFrameTimingHistory(0);
+          FrameTimingHelpers.resetFrameTimingHistory(0);
           return false;
         }
         if (null == PlayerBoard.field_c) {
           if (SocketConnector.field_a != null) {
             LoadingStepTracker.setChatHuffmanCodec(true, new HuffmanCodec(SocketConnector.field_a.getNamedFile((byte) 24, "huffman", "")));
             SocketConnector.field_a = null;
-            sf.resetFrameTimingHistory(param1 - 4);
+            FrameTimingHelpers.resetFrameTimingHistory(param1 - 4);
             return false;
           }
           ArchiveRequest.createTimerBarCapSprites((byte) 112);
           Js5NetworkRequest.createRoundedPanelSprite(7902);
-          wo.buildCountdownSprites(3);
-          id.createGlowAndNoiseSprites(param1 - 2);
-          nd.initializeMenuButtonWidths(3);
+          SocialPanel.buildCountdownSprites(3);
+          AccountRequestReply.createGlowAndNoiseSprites(param1 - 2);
+          HowToPlayDemoHelpers.initializeMenuButtonWidths(3);
           if (param1 != 4) {
             this.shutdownClientServices(-87);
           }
-          nd.buildHowToPlayDemo((byte) 37);
+          HowToPlayDemoHelpers.buildHowToPlayDemo((byte) 37);
           MidiPcmStream.field_t = 0;
-          fc.field_e = 14;
-          wo.setFrameRate(50, -37);
+          LobbyListBindingHelpers.field_e = 14;
+          SocialPanel.setFrameRate(50, -37);
           ArrayWidgetContainer.setSoundVolume(256, -113);
-          dg.playMenuMusic(0, (byte) -90);
-          sf.resetFrameTimingHistory(0);
+          QuickChatSendHelpers.playMenuMusic(0, (byte) -90);
+          FrameTimingHelpers.resetFrameTimingHistory(0);
           return true;
         }
         FireworkDisplay.setLoadingStatus(96.0f, -1, CachedTextLayout.field_g);
         this.renderClient(param1 ^ 123);
         PieceTiming.field_e = RisingBubble.loadPaletteFont(MenuInputState.field_d, "basic", "font", PlayerBoard.field_c, 22510);
-        qj.field_e = PicturePreview.loadBinaryBitmapFontByName(param1 ^ 4, dg.field_d, "", qn.field_l, "arial13");
-        nh.buildFontColourPalettes((byte) 117);
+        PrivateChatHelpers.field_e = PicturePreview.loadBinaryBitmapFontByName(param1 ^ 4, QuickChatSendHelpers.field_d, "", PatchNoteUsage.field_l, "arial13");
+        Base37NameHelpers.buildFontColourPalettes((byte) 117);
         EmergentBehaviourBackground.field_u = TutorialPage.loadSprite("basic", "background", MenuInputState.field_d, (byte) -36);
         Match.createPuzzleModePuzzle(13728, 0, NetworkGameClient.loadIndexedSpritesByName(MenuInputState.field_d, 23, "basic", "level1"));
         Match.createPuzzleModePuzzle(13728, 1, NetworkGameClient.loadIndexedSpritesByName(MenuInputState.field_d, -128, "basic", "level2"));
@@ -1654,25 +1654,25 @@ public final class Pixelate extends NetworkGameClient {
         FallingPieceView.field_c[5][4] = NetworkGameClient.loadIndexedSpritesByName(MenuInputState.field_d, 77, "basic", "set54");
         FallingPieceView.field_c[4][5] = NetworkGameClient.loadIndexedSpritesByName(MenuInputState.field_d, -105, "basic", "set45");
         FallingPieceView.field_c[5][5] = NetworkGameClient.loadIndexedSpritesByName(MenuInputState.field_d, -111, "basic", "set55");
-        td.buildPuzzleModePictures(127, NetworkGameClient.loadIndexedSpritesByName(MenuInputState.field_d, 44, "basic", "puzzle"));
-        lg.field_d[0] = TutorialPage.loadSprite("basic", "icon_singleplayer", MenuInputState.field_d, (byte) -45);
-        lg.field_d[1] = TutorialPage.loadSprite("basic", "icon_puzzle", MenuInputState.field_d, (byte) -73);
-        var3 = TutorialPage.loadSprite("basic", "locked", qn.field_l, (byte) -124);
+        PuzzleModePictureHelpers.buildPuzzleModePictures(127, NetworkGameClient.loadIndexedSpritesByName(MenuInputState.field_d, 44, "basic", "puzzle"));
+        LoginCookieHelpers.field_d[0] = TutorialPage.loadSprite("basic", "icon_singleplayer", MenuInputState.field_d, (byte) -45);
+        LoginCookieHelpers.field_d[1] = TutorialPage.loadSprite("basic", "icon_puzzle", MenuInputState.field_d, (byte) -73);
+        var3 = TutorialPage.loadSprite("basic", "locked", PatchNoteUsage.field_l, (byte) -124);
         MusicPatch.field_m = TutorialPage.loadSprite("basic", "icon_menu", MenuInputState.field_d, (byte) -105);
         NumericDateInputWidget.field_W = SocketConnector.loadRgbSpritesByName("titles", "basic", (byte) 47, MenuInputState.field_d);
-        ih.field_a = SocketConnector.loadRgbSpritesByName("tick", "basic", (byte) 47, MenuInputState.field_d);
-        hp.field_Gb = TutorialPage.loadSprite("basic", "timer", MenuInputState.field_d, (byte) -86);
+        TutorialTickHelpers.field_a = SocketConnector.loadRgbSpritesByName("tick", "basic", (byte) 47, MenuInputState.field_d);
+        HelpPopup.field_Gb = TutorialPage.loadSprite("basic", "timer", MenuInputState.field_d, (byte) -86);
         JaggrabDownloader.field_m = SocketConnector.loadRgbSpritesByName("marker", "basic", (byte) 47, MenuInputState.field_d);
         PicturePreview.loadFrameSprites(5, "basic", "frame");
-        ab.field_c = PicturePreview.loadFrameSprites(param1 + 1, "basic", "frame_filled");
+        ResultCaptionGlobals.field_c = PicturePreview.loadFrameSprites(param1 + 1, "basic", "frame_filled");
         TutorialPage.field_g = PicturePreview.loadFrameSprites(5, "basic", "frame_raised");
         MusicPatchNode.field_B = TutorialPage.loadSprite("basic", "gameframe", MenuInputState.field_d, (byte) -25);
         PlayerBoard.field_w = var3;
-        gd.field_i = var3;
+        MainScreenWidgetGlobals.field_i = var3;
         MatchingTextValidator.field_v = TutorialPage.loadSprite("basic", "instructions6", MenuInputState.field_d, (byte) -121);
-        pk.field_c = SocketConnector.loadRgbSpritesByName("instructions_keys", "basic", (byte) 47, MenuInputState.field_d);
+        MeshDecodeHelpers.field_c = SocketConnector.loadRgbSpritesByName("instructions_keys", "basic", (byte) 47, MenuInputState.field_d);
         CachedTextLayout.field_p = SocketConnector.loadRgbSpritesByName("instructions_keys2", "basic", (byte) 47, MenuInputState.field_d);
-        jk.field_a = TutorialPage.loadSprite("basic", "background_rushes", MenuInputState.field_d, (byte) -58);
+        MeshColourEntry.field_a = TutorialPage.loadSprite("basic", "background_rushes", MenuInputState.field_d, (byte) -58);
         ThreeSliceButtonPainter.field_w = TutorialPage.loadSprite("basic", "background_retro", MenuInputState.field_d, (byte) -78);
         AccountRequestDialog.field_tb = SocketConnector.loadRgbSpritesByName("sprites_retro", "basic", (byte) 47, MenuInputState.field_d);
         ArrayWidgetContainer.field_H = TutorialPage.loadSprite("basic", "background_bouncedown", MenuInputState.field_d, (byte) -117);
@@ -1681,7 +1681,7 @@ public final class Pixelate extends NetworkGameClient {
         IntrusiveDequeCursor.field_f = TutorialPage.loadSprite("basic", "kite", MenuInputState.field_d, (byte) -77);
         ContentTransitionDialog.field_hb = TutorialPage.loadSprite("basic", "bow", MenuInputState.field_d, (byte) -30);
         CheckboxPainter.field_j = TutorialPage.loadSprite("basic", "lobby_logo", MenuInputState.field_d, (byte) -62);
-        em.setupPuzzleSelectGrid(SocketConnector.loadRgbSpritesByName("scrollbutton", "basic", (byte) 47, MenuInputState.field_d), -77);
+        ContextMenuHelpers.setupPuzzleSelectGrid(SocketConnector.loadRgbSpritesByName("scrollbutton", "basic", (byte) 47, MenuInputState.field_d), -77);
         var4 = TutorialPage.loadSprite("basic", "background_fireworks", MenuInputState.field_d, (byte) -38);
         var5 = TutorialPage.loadSprite("basic", "sprite_fireworks", MenuInputState.field_d, (byte) -95);
         ValidationHelpWidget.setBackgroundAndShadow(var4, var5, 80);
@@ -1693,31 +1693,31 @@ public final class Pixelate extends NetworkGameClient {
         SecondaryNodeDequeIterator.buildSkinTileSprites(5, SocketConnector.loadRgbSpritesByName("tiles5", "basic", (byte) 47, MenuInputState.field_d), (byte) -53);
         SecondaryNodeDequeIterator.buildSkinTileSprites(6, SocketConnector.loadRgbSpritesByName("tiles6", "basic", (byte) 47, MenuInputState.field_d), (byte) -53);
         SecondaryNodeDequeIterator.buildSkinTileSprites(7, SocketConnector.loadRgbSpritesByName("tiles7", "basic", (byte) 47, MenuInputState.field_d), (byte) -53);
-        oo.field_c = new Sprite[22];
-        oo.field_c[0] = TutorialPage.loadSprite("basic", "achievement0", MenuInputState.field_d, (byte) -75);
-        oo.field_c[1] = TutorialPage.loadSprite("basic", "achievement1", MenuInputState.field_d, (byte) -57);
-        oo.field_c[2] = TutorialPage.loadSprite("basic", "achievement2", MenuInputState.field_d, (byte) -34);
-        oo.field_c[3] = TutorialPage.loadSprite("basic", "achievement3", MenuInputState.field_d, (byte) -125);
-        oo.field_c[4] = TutorialPage.loadSprite("basic", "achievement4", MenuInputState.field_d, (byte) -34);
-        oo.field_c[5] = TutorialPage.loadSprite("basic", "achievement5", MenuInputState.field_d, (byte) -37);
-        oo.field_c[6] = TutorialPage.loadSprite("basic", "achievement6", MenuInputState.field_d, (byte) -93);
-        oo.field_c[7] = TutorialPage.loadSprite("basic", "achievement7", MenuInputState.field_d, (byte) -88);
-        oo.field_c[8] = TutorialPage.loadSprite("basic", "achievement8", MenuInputState.field_d, (byte) -76);
-        oo.field_c[9] = TutorialPage.loadSprite("basic", "achievement9", MenuInputState.field_d, (byte) -105);
-        oo.field_c[10] = TutorialPage.loadSprite("basic", "achievement10", MenuInputState.field_d, (byte) -62);
-        oo.field_c[11] = TutorialPage.loadSprite("basic", "achievement11", MenuInputState.field_d, (byte) -82);
-        oo.field_c[12] = TutorialPage.loadSprite("basic", "achievement12", MenuInputState.field_d, (byte) -81);
-        oo.field_c[13] = TutorialPage.loadSprite("basic", "achievement13", MenuInputState.field_d, (byte) -100);
-        oo.field_c[14] = TutorialPage.loadSprite("basic", "achievement14", MenuInputState.field_d, (byte) -102);
-        oo.field_c[15] = TutorialPage.loadSprite("basic", "achievement15", MenuInputState.field_d, (byte) -81);
-        oo.field_c[16] = TutorialPage.loadSprite("basic", "achievement16", MenuInputState.field_d, (byte) -41);
-        oo.field_c[17] = TutorialPage.loadSprite("basic", "achievement17", MenuInputState.field_d, (byte) -89);
-        oo.field_c[18] = TutorialPage.loadSprite("basic", "achievement18", MenuInputState.field_d, (byte) -106);
-        oo.field_c[19] = TutorialPage.loadSprite("basic", "achievement19", MenuInputState.field_d, (byte) -40);
-        oo.field_c[20] = TutorialPage.loadSprite("basic", "achievement20", MenuInputState.field_d, (byte) -92);
-        oo.field_c[21] = TutorialPage.loadSprite("basic", "achievement21", MenuInputState.field_d, (byte) -39);
-        ScorePopup.field_a = TutorialPage.loadSprite("basic", "unachieved", qn.field_l, (byte) -86);
-        var6 = TutorialPage.loadSprite("basic", "orbcoin", qn.field_l, (byte) -32);
+        AchievementIconGlobals.field_c = new Sprite[22];
+        AchievementIconGlobals.field_c[0] = TutorialPage.loadSprite("basic", "achievement0", MenuInputState.field_d, (byte) -75);
+        AchievementIconGlobals.field_c[1] = TutorialPage.loadSprite("basic", "achievement1", MenuInputState.field_d, (byte) -57);
+        AchievementIconGlobals.field_c[2] = TutorialPage.loadSprite("basic", "achievement2", MenuInputState.field_d, (byte) -34);
+        AchievementIconGlobals.field_c[3] = TutorialPage.loadSprite("basic", "achievement3", MenuInputState.field_d, (byte) -125);
+        AchievementIconGlobals.field_c[4] = TutorialPage.loadSprite("basic", "achievement4", MenuInputState.field_d, (byte) -34);
+        AchievementIconGlobals.field_c[5] = TutorialPage.loadSprite("basic", "achievement5", MenuInputState.field_d, (byte) -37);
+        AchievementIconGlobals.field_c[6] = TutorialPage.loadSprite("basic", "achievement6", MenuInputState.field_d, (byte) -93);
+        AchievementIconGlobals.field_c[7] = TutorialPage.loadSprite("basic", "achievement7", MenuInputState.field_d, (byte) -88);
+        AchievementIconGlobals.field_c[8] = TutorialPage.loadSprite("basic", "achievement8", MenuInputState.field_d, (byte) -76);
+        AchievementIconGlobals.field_c[9] = TutorialPage.loadSprite("basic", "achievement9", MenuInputState.field_d, (byte) -105);
+        AchievementIconGlobals.field_c[10] = TutorialPage.loadSprite("basic", "achievement10", MenuInputState.field_d, (byte) -62);
+        AchievementIconGlobals.field_c[11] = TutorialPage.loadSprite("basic", "achievement11", MenuInputState.field_d, (byte) -82);
+        AchievementIconGlobals.field_c[12] = TutorialPage.loadSprite("basic", "achievement12", MenuInputState.field_d, (byte) -81);
+        AchievementIconGlobals.field_c[13] = TutorialPage.loadSprite("basic", "achievement13", MenuInputState.field_d, (byte) -100);
+        AchievementIconGlobals.field_c[14] = TutorialPage.loadSprite("basic", "achievement14", MenuInputState.field_d, (byte) -102);
+        AchievementIconGlobals.field_c[15] = TutorialPage.loadSprite("basic", "achievement15", MenuInputState.field_d, (byte) -81);
+        AchievementIconGlobals.field_c[16] = TutorialPage.loadSprite("basic", "achievement16", MenuInputState.field_d, (byte) -41);
+        AchievementIconGlobals.field_c[17] = TutorialPage.loadSprite("basic", "achievement17", MenuInputState.field_d, (byte) -89);
+        AchievementIconGlobals.field_c[18] = TutorialPage.loadSprite("basic", "achievement18", MenuInputState.field_d, (byte) -106);
+        AchievementIconGlobals.field_c[19] = TutorialPage.loadSprite("basic", "achievement19", MenuInputState.field_d, (byte) -40);
+        AchievementIconGlobals.field_c[20] = TutorialPage.loadSprite("basic", "achievement20", MenuInputState.field_d, (byte) -92);
+        AchievementIconGlobals.field_c[21] = TutorialPage.loadSprite("basic", "achievement21", MenuInputState.field_d, (byte) -39);
+        ScorePopup.field_a = TutorialPage.loadSprite("basic", "unachieved", PatchNoteUsage.field_l, (byte) -86);
+        var6 = TutorialPage.loadSprite("basic", "orbcoin", PatchNoteUsage.field_l, (byte) -32);
         KeyboardInputHandler.padToFourPixelAlignment((byte) -59, ScorePopup.field_a);
         KeyboardInputHandler.padToFourPixelAlignment((byte) -59, var6);
         RisingBubble.field_c = new Sprite(16, 16);
@@ -1736,14 +1736,14 @@ public final class Pixelate extends NetworkGameClient {
             var7[var8] = SocketConnector.loadRgbSpritesByName(Kite.field_u[var8], "basic", (byte) 47, MenuInputState.field_d);
           }
         }
-        CachedArchiveProvider.initializeLobbyUi(true, DriftingParticle.field_c, LoginCredentials.field_d, qn.field_l, hp.field_Hb, la.field_c, var7, 2, 2, var7, GameModeSelectScreen.field_u, param1 + 29, IntKeyLookup.field_d, dg.field_d, cl.field_f);
-        fe.field_a = false;
-        ri.allocateChatHistory(200, (byte) -126);
-        Js5ArchiveManager.setSharedArchives(qn.field_l, true, dg.field_d);
+        CachedArchiveProvider.initializeLobbyUi(true, DriftingParticle.field_c, LoginCredentials.field_d, PatchNoteUsage.field_l, HelpPopup.field_Hb, ScreenChangeHelpers.field_c, var7, 2, 2, var7, GameModeSelectScreen.field_u, param1 + 29, IntKeyLookup.field_d, QuickChatSendHelpers.field_d, Cp1252EncodingHelpers.field_f);
+        PendingFlagGlobals.field_a = false;
+        ChatHistoryAllocator.allocateChatHistory(200, (byte) -126);
+        Js5ArchiveManager.setSharedArchives(PatchNoteUsage.field_l, true, QuickChatSendHelpers.field_d);
         ProxySocketConnector.readGameAppletParameters((byte) -94, 0, 0, 16777215, (java.applet.Applet) (this), AccountNoticeDialog.field_bb);
         PlayerBoard.field_c = null;
-        dg.field_d = null;
-        sf.resetFrameTimingHistory(0);
+        QuickChatSendHelpers.field_d = null;
+        FrameTimingHelpers.resetFrameTimingHistory(0);
         return false;
     }
 
@@ -1755,7 +1755,7 @@ public final class Pixelate extends NetworkGameClient {
         if (null != WidgetStyleLayer.field_f) {
           LoginForm.loadTextResources(79, WidgetStyleLayer.field_f);
           WidgetStyleLayer.field_f = null;
-          sf.resetFrameTimingHistory(0);
+          FrameTimingHelpers.resetFrameTimingHistory(0);
         }
         if (param0 != -18528) {
           Pixelate.updateLobbyGameList(false, (byte) -93, -109, true, 5, -125, 20);
@@ -1763,9 +1763,9 @@ public final class Pixelate extends NetworkGameClient {
         SocketConnector.field_a = MouseInputHandler.createLocalArchive(3, (byte) 124);
         MenuInputState.field_d = MouseInputHandler.createLocalArchive(5, (byte) 124);
         PlayerBoard.field_c = MouseInputHandler.createLocalArchive(6, (byte) 124);
-        ji.field_b = MouseInputHandler.createLocalArchive(7, (byte) 124);
+        FriendCaptionGlobals.field_b = MouseInputHandler.createLocalArchive(7, (byte) 124);
         PacketBuffer.field_p = MouseInputHandler.createLocalArchive(8, (byte) 124);
-        ab.field_f = MouseInputHandler.createLocalArchive(9, (byte) 124);
+        ResultCaptionGlobals.field_f = MouseInputHandler.createLocalArchive(9, (byte) 124);
         BoundedRandomAccessFile.field_c = MouseInputHandler.createLocalArchive(10, (byte) 124);
         GameModeSelectScreen.field_u = MouseInputHandler.createLocalArchive(11, (byte) 124);
         TextTableInitializer.initializeMenuLabels(-29810);
@@ -1789,10 +1789,10 @@ public final class Pixelate extends NetworkGameClient {
         var8 = field_H ? 1 : 0;
         if (GameModeCard.field_d != GameModeCard.field_a) {
           if (GameModeCard.field_a == TextTableInitializer.field_e) {
-            hf.field_o = hf.field_o + 1;
-            if (16 == hf.field_o) {
+            AchievementRecord.field_o = AchievementRecord.field_o + 1;
+            if (16 == AchievementRecord.field_o) {
               if (FireworkSpark.field_b) {
-                d.restartLogin(-17540);
+                LobbyStartupHelpers.restartLogin(-17540);
               } else {
                 MarkerSlider.returnToLoginStage(-20822);
               }
@@ -1800,8 +1800,8 @@ public final class Pixelate extends NetworkGameClient {
             }
           } else {
             if (BoardView.field_y != GameModeCard.field_a) {
-              hf.field_o = hf.field_o - 1;
-              if (hf.field_o == 0) {
+              AchievementRecord.field_o = AchievementRecord.field_o - 1;
+              if (AchievementRecord.field_o == 0) {
                 GameModeCard.field_a = GameModeCard.field_d;
               }
             } else {
@@ -1809,14 +1809,14 @@ public final class Pixelate extends NetworkGameClient {
                 if (null != HighscoresScreen.field_p) {
                   ValidationHelpWidget.queueHighscoreSubmission(HighscoresScreen.field_p, true, 3);
                 }
-                un.clearPendingMessageFlag(true);
+                PatchEnvelopeSet.clearPendingMessageFlag(true);
                 var3 = TimerBarDemo.field_q;
-                stackIn_79_0 = (gq.isOfflineOrAccountUi(74)) ? 12 : 0;
-                la.changeScreen(stackIn_79_0, var3, true, -25528);
+                stackIn_79_0 = (AlternateNameCredentials.isOfflineOrAccountUi(74)) ? 12 : 0;
+                ScreenChangeHelpers.changeScreen(stackIn_79_0, var3, true, -25528);
                 if (FireworkSpark.field_b) {
                   FireworkSpark.field_b = false;
-                  var3_ref_tc = qj.field_e;
-                  QuickChatPhraseCache.configureQuickChatStyle(((BitmapFont) ((Object) var3_ref_tc)).maxDescent + ((BitmapFont) ((Object) var3_ref_tc)).maxAscent, -879, ((BitmapFont) ((Object) var3_ref_tc)).maxAscent, 2, 320, 8, ab.field_c, var3_ref_tc, 240, TutorialPage.field_g, 8, false);
+                  var3_ref_tc = PrivateChatHelpers.field_e;
+                  QuickChatPhraseCache.configureQuickChatStyle(((BitmapFont) ((Object) var3_ref_tc)).maxDescent + ((BitmapFont) ((Object) var3_ref_tc)).maxAscent, -879, ((BitmapFont) ((Object) var3_ref_tc)).maxAscent, 2, 320, 8, ResultCaptionGlobals.field_c, var3_ref_tc, 240, TutorialPage.field_g, 8, false);
                 }
                 if (BoardParticle.isNonNegative((byte) -104, MidiPcmStream.field_t)) {
                   IntrusiveDequeCursor.commitScreenChange(0);
@@ -1830,28 +1830,28 @@ public final class Pixelate extends NetworkGameClient {
         } else {
           var3 = 0;
           var4 = 0;
-          mi.tickAchievementBanner(-124);
+          NotLoggedInScreen.tickAchievementBanner(-124);
           if (!param0) {
-            if (fc.field_e == MidiPcmStream.field_t) {
-              if (fc.field_e == -1) {
+            if (LobbyListBindingHelpers.field_e == MidiPcmStream.field_t) {
+              if (LobbyListBindingHelpers.field_e == -1) {
                 if (!StripedProgressBar.field_G) {
                   while (DirectByteStorage.pollKeyEvent(123)) {
                     if (EmailValidator.field_m[82] &&
-                      ke.field_a == 11) {
+                      KeyEventGlobals.field_a == 11) {
                       stackIn_24_0 = !(Match.field_u);
                       Match.field_u = stackIn_24_0;
                     }
-                    ro.field_e.handleKey(ke.field_a, (byte) -79);
+                    NameSuggestionHelpers.field_e.handleKey(KeyEventGlobals.field_a, (byte) -79);
                   }
-                  ro.field_e.tick(-110, true);
+                  NameSuggestionHelpers.field_e.tick(-110, true);
                 } else {
                   var4 = 1;
                   var3 = 1;
                 }
               } else {
-                if (fc.field_e != -2) {
-                  if (BoardParticle.isNonNegative((byte) -104, fc.field_e)) {
-                    wo.getScreen(-79, fc.field_e).handleInput((byte) -83);
+                if (LobbyListBindingHelpers.field_e != -2) {
+                  if (BoardParticle.isNonNegative((byte) -104, LobbyListBindingHelpers.field_e)) {
+                    SocialPanel.getScreen(-79, LobbyListBindingHelpers.field_e).handleInput((byte) -83);
                     DialWidgetPainter.tickFloatingSquares(0);
                   }
                 } else {
@@ -1866,7 +1866,7 @@ public final class Pixelate extends NetworkGameClient {
               }
               DialWidgetPainter.tickFloatingSquares(0);
               if ((MidiPcmStream.field_t == -1 ||
-                fc.field_e == -1) && null != LoginCredentials.field_e) {
+                LobbyListBindingHelpers.field_e == -1) && null != LoginCredentials.field_e) {
                 LoginCredentials.field_e.tick(-1);
               }
             }
@@ -1874,16 +1874,16 @@ public final class Pixelate extends NetworkGameClient {
           if (StripedProgressBar.field_G &&
             !ValidationState.field_c &&
             !LinkButtonPainter.field_d) {
-            bl.updateLobbyHighlightsAndLayout(-55, var3 != 0);
+            MouseWheelSetupHelpers.updateLobbyHighlightsAndLayout(-55, var3 != 0);
             if (PlayerBoard.field_g) {
-              MatchController.openTextPopup(true, 1, fc.field_e, (byte) -68, InputQueue.field_a);
+              MatchController.openTextPopup(true, 1, LobbyListBindingHelpers.field_e, (byte) -68, InputQueue.field_a);
               PlayerBoard.field_g = false;
             }
             if (DateOfBirthValidator.field_i) {
               MatchingTextValidator.field_r.tick(-110, var4 != 0);
             }
             if (ValidationHelpWidget.field_Y) {
-              ro.field_e.tick(-110, var4 != 0);
+              NameSuggestionHelpers.field_e.tick(-110, var4 != 0);
             }
             while (DirectByteStorage.pollKeyEvent(122)) {
               if (ContentTransitionDialog.field_kb &&
@@ -1891,12 +1891,12 @@ public final class Pixelate extends NetworkGameClient {
                 continue;
               }
               if (DateOfBirthValidator.field_i) {
-                MatchingTextValidator.field_r.handleKey(ke.field_a, (byte) -35);
+                MatchingTextValidator.field_r.handleKey(KeyEventGlobals.field_a, (byte) -35);
               }
               if (!ValidationHelpWidget.field_Y) {
                 continue;
               }
-              ro.field_e.handleKey(ke.field_a, (byte) 116);
+              NameSuggestionHelpers.field_e.handleKey(KeyEventGlobals.field_a, (byte) 116);
             }
           }
           if (!StripedProgressBar.field_G) {
@@ -1916,48 +1916,48 @@ public final class Pixelate extends NetworkGameClient {
           ContentTransitionDialog.field_kb = stackIn_61_0;
           if (!ContentTransitionDialog.field_kb) {
             if (0 >= AccountNamePrompt.field_Kb) {
-              var5 = qh.field_c * qh.field_c;
+              var5 = MusicPlaybackHelpers.field_c * MusicPlaybackHelpers.field_c;
               var6 = -(AccountNamePrompt.field_Kb * AccountNamePrompt.field_Kb) + var5;
-              var7 = nf.field_f + var6 * 120 / var5;
-              qf.setLobbyPanelPosition(21983, var7);
+              var7 = LoginFormGlobals.field_f + var6 * 120 / var5;
+              KeyMapHelpers.setLobbyPanelPosition(21983, var7);
             } else {
               AccountNamePrompt.field_Kb = AccountNamePrompt.field_Kb - 1;
-              var5 = qh.field_c * qh.field_c;
+              var5 = MusicPlaybackHelpers.field_c * MusicPlaybackHelpers.field_c;
               var6 = -(AccountNamePrompt.field_Kb * AccountNamePrompt.field_Kb) + var5;
-              var7 = nf.field_f + var6 * 120 / var5;
-              qf.setLobbyPanelPosition(21983, var7);
+              var7 = LoginFormGlobals.field_f + var6 * 120 / var5;
+              KeyMapHelpers.setLobbyPanelPosition(21983, var7);
             }
           } else {
-            if (AccountNamePrompt.field_Kb < qh.field_c) {
+            if (AccountNamePrompt.field_Kb < MusicPlaybackHelpers.field_c) {
               AccountNamePrompt.field_Kb = AccountNamePrompt.field_Kb + 1;
             }
-            var5 = qh.field_c * qh.field_c;
+            var5 = MusicPlaybackHelpers.field_c * MusicPlaybackHelpers.field_c;
             var6 = -(AccountNamePrompt.field_Kb * AccountNamePrompt.field_Kb) + var5;
-            var7 = nf.field_f + var6 * 120 / var5;
-            qf.setLobbyPanelPosition(21983, var7);
+            var7 = LoginFormGlobals.field_f + var6 * 120 / var5;
+            KeyMapHelpers.setLobbyPanelPosition(21983, var7);
           }
         }
         if (MidiPcmStream.field_t == -3) {
           HighscoresScreen.field_p = null;
-          ro.field_e = new MatchController();
+          NameSuggestionHelpers.field_e = new MatchController();
           stackIn_97_0 = (!MenuScreen.field_f) ? 0 : 1;
           var3Lifetime1 = stackIn_97_0;
-          stackIn_100_0 = (gq.isOfflineOrAccountUi(108)) ? 12 : 0;
-          la.changeScreen(stackIn_100_0, -1, var3Lifetime1 != 0, -25528);
+          stackIn_100_0 = (AlternateNameCredentials.isOfflineOrAccountUi(108)) ? 12 : 0;
+          ScreenChangeHelpers.changeScreen(stackIn_100_0, -1, var3Lifetime1 != 0, -25528);
         }
         if (MidiPcmStream.field_t == -4) {
           ChatMessage.field_f.writeOpcode(9, 15514);
           ValidationState.field_c = true;
-          MidiPcmStream.field_t = fc.field_e;
-          AccountNamePrompt.field_Kb = qh.field_c;
+          MidiPcmStream.field_t = LobbyListBindingHelpers.field_e;
+          AccountNamePrompt.field_Kb = MusicPlaybackHelpers.field_c;
         }
         if (!param1) {
           discarded$0 = this.updateArchiveLoading(false, 93);
         }
         if (MidiPcmStream.field_t == -5) {
-          qg.sendDeclineGameRequest(LoginMethod.field_c.getGameId((byte) 8), 11, false);
+          GameRequestHelpers.sendDeclineGameRequest(LoginMethod.field_c.getGameId((byte) 8), 11, false);
           LinkButtonPainter.field_d = true;
-          MidiPcmStream.field_t = fc.field_e;
+          MidiPcmStream.field_t = LobbyListBindingHelpers.field_e;
         }
     }
 
@@ -1999,6 +1999,6 @@ public final class Pixelate extends NetworkGameClient {
     }
 
     static {
-        field_G = new bd();
+        field_G = new ConnectionState();
     }
 }

@@ -59,13 +59,13 @@ final class BlastFromThePastBackground extends BackgroundScene {
           field_n = (SceneWidget) null;
         }
         if (Js5NetworkRequest.field_F == MarkerSlider.field_X) {
-          return nk.field_b;
+          return ChatPanelHelpers.field_b;
         }
-        if (!an.field_e.isComplete(param0 ^ 46)) {
-          return an.field_e.getMessage((byte) 114);
+        if (!CaretLayoutHelpers.field_e.isComplete(param0 ^ 46)) {
+          return CaretLayoutHelpers.field_e.getMessage((byte) 114);
         }
         if (Js5NetworkRequest.field_F == MatchingTextValidator.field_n) {
-          return an.field_e.getMessage((byte) 116);
+          return CaretLayoutHelpers.field_e.getMessage((byte) 116);
         }
         return Checkbox.field_U;
     }

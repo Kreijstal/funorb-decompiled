@@ -70,13 +70,13 @@ final class ReflectionCheckRequest extends IntrusiveNode {
 
     final static void initializeLobbyChatResources(ResourceArchive param0, ResourceArchive param1, boolean param2, int param3) {
         try {
-          nk.buildChatPanelComponents(ProxySocketConnector.field_k, EditableTextWidget.field_Y, ug.field_s, ConditionalTextValue.field_g, (byte) 125, ArchiveIndex.field_l, dn.field_c, bl.field_d, RetroBlock.field_d, param2, TextFieldValidator.field_h, l.field_q);
+          ChatPanelHelpers.buildChatPanelComponents(ProxySocketConnector.field_k, EditableTextWidget.field_Y, LaggedPacket.field_s, ConditionalTextValue.field_g, (byte) 125, ArchiveIndex.field_l, DefaultQuickChatPhraseListener.field_c, MouseWheelSetupHelpers.field_d, RetroBlock.field_d, param2, TextFieldValidator.field_h, MessageScreen.field_q);
           Checkbox.field_V = SocketConnector.loadRgbSpritesByName("chatfilter", "lobby", (byte) 47, param1);
           LoginCredentials.field_a[1] = NameSuggestionsPanel.field_J;
           int var4_int = -115 % ((param3 - 44) / 59);
           LoginCredentials.field_a[0] = EmailConfirmationValidator.field_m;
           LoginCredentials.field_a[2] = GrowableIntList.field_e;
-          FloatingSquare.createQuickChatResources(65793, ig.field_d, param0);
+          FloatingSquare.createQuickChatResources(65793, AudioPumpHelpers.field_d, param0);
         } catch (RuntimeException runtimeException) {
           throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "aj.B(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }

@@ -90,40 +90,40 @@ final class GameModeCard {
           this.field_c = -4;
           if (this.field_c <= 0) {
             if (this.field_c >= NodeHashTableIterator.field_f) {
-              lg.field_d[this.field_b].drawTransparent(this.field_g, 170);
+              LoginCookieHelpers.field_d[this.field_b].drawTransparent(this.field_g, 170);
               return;
             }
-            lg.field_d[this.field_b].drawCenteredRotatedScaledBilinear(72 + this.field_g, 242, 0, this.field_c + 4096 - NodeHashTableIterator.field_f);
+            LoginCookieHelpers.field_d[this.field_b].drawCenteredRotatedScaledBilinear(72 + this.field_g, 242, 0, this.field_c + 4096 - NodeHashTableIterator.field_f);
             return;
           }
           SoftwareRasterizer.fillRadialPaletteCircle(72 + this.field_g << 4, 3872, 600 + this.field_c, -1 + this.field_e.length, this.field_e);
           if (this.field_c >= NodeHashTableIterator.field_f) {
-            lg.field_d[this.field_b].drawTransparent(this.field_g, 170);
+            LoginCookieHelpers.field_d[this.field_b].drawTransparent(this.field_g, 170);
             return;
           }
-          lg.field_d[this.field_b].drawCenteredRotatedScaledBilinear(72 + this.field_g, 242, 0, this.field_c + 4096 - NodeHashTableIterator.field_f);
+          LoginCookieHelpers.field_d[this.field_b].drawCenteredRotatedScaledBilinear(72 + this.field_g, 242, 0, this.field_c + 4096 - NodeHashTableIterator.field_f);
           return;
         }
         if (this.field_c > 0) {
           SoftwareRasterizer.fillRadialPaletteCircle(72 + this.field_g << 4, 3872, 600 + this.field_c, -1 + this.field_e.length, this.field_e);
           if (this.field_c >= NodeHashTableIterator.field_f) {
-            lg.field_d[this.field_b].drawTransparent(this.field_g, 170);
+            LoginCookieHelpers.field_d[this.field_b].drawTransparent(this.field_g, 170);
             return;
           }
-          lg.field_d[this.field_b].drawCenteredRotatedScaledBilinear(72 + this.field_g, 242, 0, this.field_c + 4096 - NodeHashTableIterator.field_f);
+          LoginCookieHelpers.field_d[this.field_b].drawCenteredRotatedScaledBilinear(72 + this.field_g, 242, 0, this.field_c + 4096 - NodeHashTableIterator.field_f);
           return;
         }
         if (this.field_c >= NodeHashTableIterator.field_f) {
-          lg.field_d[this.field_b].drawTransparent(this.field_g, 170);
+          LoginCookieHelpers.field_d[this.field_b].drawTransparent(this.field_g, 170);
           return;
         }
-        lg.field_d[this.field_b].drawCenteredRotatedScaledBilinear(72 + this.field_g, 242, 0, this.field_c + 4096 - NodeHashTableIterator.field_f);
+        LoginCookieHelpers.field_d[this.field_b].drawCenteredRotatedScaledBilinear(72 + this.field_g, 242, 0, this.field_c + 4096 - NodeHashTableIterator.field_f);
     }
 
     final static PieceTiming createRandomPieceTiming(int param0, int param1) {
         double var2 = 1.0;
         var2 = var2 + (((double)param0 - (double)param1) / 16.0 + ((double)JavaRandomHelpers.randomBelow(UiTheme.field_f, -99, 7) - 3.0) / 10.0);
-        return new PieceTiming(1 + JavaRandomHelpers.randomBelow(UiTheme.field_f, param1 ^ -102, 14), 10, of.toFixedPoint(var2, 65536));
+        return new PieceTiming(1 + JavaRandomHelpers.randomBelow(UiTheme.field_f, param1 ^ -102, 14), 10, TextDecodeHelpers.toFixedPoint(var2, 65536));
     }
 
     final static void initializeLobby(int param0, int param1, int param2, int param3, SceneWidget param4, SceneWidget param5, byte[] param6, int param7, int param8, SceneWidget param9) {
@@ -145,11 +145,11 @@ final class GameModeCard {
         try {
           DebouncedValidator.field_f = -1L;
           ReportAbuseDialog.field_Rb = param6;
-          um.field_k = param8;
-          fj.field_b = param6.length;
+          SavedDataRequest.field_k = param8;
+          MouseInputGlobals.field_b = param6.length;
           DraggableWidget.field_S = null;
           TriangleMesh.field_r = false;
-          TextButton.field_J = new byte[(7 + um.field_k) / 8];
+          TextButton.field_J = new byte[(7 + SavedDataRequest.field_k) / 8];
           LoginMethod.field_c = null;
           var10_int = 0;
           for (var11 = 0; ReportAbuseDialog.field_Rb.length > var11; var11++) {
@@ -165,14 +165,14 @@ final class GameModeCard {
           QuickChatCategoryCache.field_d = new SecondaryNodeHashTable(param1);
           ResizableModalPanel.field_X = 0;
           NameAvailabilityValidator.field_r = 0;
-          gi.field_a = -1;
-          ui.field_e = -1;
+          HighscoreNameEntry.field_a = -1;
+          Cp1252DecodeHelpers.field_e = -1;
           if (param9.children == null) {
             param9.children = new IntrusiveDeque();
           }
-          nk.field_a = param9.children;
-          nk.field_a.clear(123);
-          dg.field_f = new SecondaryNodeHashTable(param2);
+          ChatPanelHelpers.field_a = param9.children;
+          ChatPanelHelpers.field_a.clear(123);
+          QuickChatSendHelpers.field_f = new SecondaryNodeHashTable(param2);
           if (null == param4.children) {
             param4.children = new IntrusiveDeque();
           }
@@ -182,8 +182,8 @@ final class GameModeCard {
           }
           ClientContextMenu.field_a.clear(param3 ^ 91);
           SocketConnector.field_f = new SecondaryNodeHashTable(param7);
-          bo.field_e = 0L;
-          mh.field_b = param0;
+          ScreenDisplayMode.field_e = 0L;
+          QuickChatOpenHelpers.field_b = param0;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

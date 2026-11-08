@@ -153,7 +153,7 @@ abstract class MenuScreen {
         int var2;
         int var3;
         var3 = Pixelate.field_H ? 1 : 0;
-        if (ke.field_a == 96) {
+        if (KeyEventGlobals.field_a == 96) {
           if (0 < this.field_g.selectedIndex) {
             if (this.field_g.selectedIndex != 2) {
               this.field_g.selectIndex(false, 0);
@@ -162,7 +162,7 @@ abstract class MenuScreen {
             this.field_g.selectIndex(false, 1);
           }
         }
-        if (ke.field_a == 97) {
+        if (KeyEventGlobals.field_a == 97) {
           if (this.field_g.selectedIndex != 1) {
             if (this.field_g.selectedIndex != 2) {
               this.field_g.selectIndex(false, 1);
@@ -171,17 +171,17 @@ abstract class MenuScreen {
             this.field_g.selectIndex(false, 0);
           }
         }
-        if (ke.field_a == 99) {
+        if (KeyEventGlobals.field_a == 99) {
           if (0 <= this.field_g.selectedIndex &&
             this.field_g.selectedIndex <= 1) {
             this.field_g.selectIndex(false, 2);
           } else {
-            this.field_g.selectIndex(false, d.field_c);
+            this.field_g.selectIndex(false, LobbyStartupHelpers.field_c);
           }
         }
-        if (ke.field_a == 98) {
+        if (KeyEventGlobals.field_a == 98) {
           if (2 == this.field_g.selectedIndex) {
-            this.field_g.selectIndex(false, d.field_c);
+            this.field_g.selectIndex(false, LobbyStartupHelpers.field_c);
           } else {
             this.field_g.selectIndex(false, 2);
           }
@@ -208,7 +208,7 @@ abstract class MenuScreen {
 
     void enterScreen(int param0, int param1, boolean param2) {
         this.field_g.initializeSelection(param2, this.rowAt(ProxyAuthenticationException.field_d, StatusBar.field_k, -119), 17068, param1);
-        nk.field_i = pa.field_b;
+        ChatPanelHelpers.field_i = RequestResultFactory.field_b;
         if (param0 != 2) {
           field_h = -13;
         }
@@ -274,7 +274,7 @@ abstract class MenuScreen {
 
     void drawScreenBackground(int param0) {
         EmergentBehaviourBackground.field_u.drawOpaque(0, param0);
-        rh.drawBackgroundSquares((byte) -67);
+        HighscoreSubmission.drawBackgroundSquares((byte) -67);
     }
 
     int getRowRight(int param0, boolean param1) {
@@ -296,8 +296,8 @@ abstract class MenuScreen {
         if (param0 != 28) {
           field_h = -12;
         }
-        if (null != he.field_f) {
-          he.field_f.drawFullScreen(param1, 0);
+        if (null != CanvasInputHelpers.field_f) {
+          CanvasInputHelpers.field_f.drawFullScreen(param1, 0);
         }
     }
 
@@ -444,11 +444,11 @@ abstract class MenuScreen {
           stackIn_27_0 = (!param1) ? 2 : 0;
           var14 = stackIn_27_0;
           if (5 == this.field_l && (var6_int == 14 &&
-            0 == of.field_a ||
+            0 == TextDecodeHelpers.field_a ||
             var6_int == 15 &&
-            1 == of.field_a ||
+            1 == TextDecodeHelpers.field_a ||
             16 == var6_int &&
-            of.field_a == 2)) {
+            TextDecodeHelpers.field_a == 2)) {
             var14 = 1;
           }
           ConditionalTextValue.field_h.drawText(param0, var12, var10 + ConditionalTextValue.field_h.maxAscent, var14, -1);
@@ -526,10 +526,10 @@ abstract class MenuScreen {
           var4 = var5;
           var5 = var6;
         }
-        pe.field_b.makeRasterTarget();
+        PlayerActionHelpers.field_b.makeRasterTarget();
         this.drawScreenBackground(0);
         ClientException.field_f.bindRaster(19692);
-        SpriteEffectHelpers.blendFullscreenImageVerticalFade(pe.field_b.pixels, var4, var5);
+        SpriteEffectHelpers.blendFullscreenImageVerticalFade(PlayerActionHelpers.field_b.pixels, var4, var5);
     }
 
     void handleInput(byte param0) {
@@ -539,12 +539,12 @@ abstract class MenuScreen {
         if (!ValidationState.field_c &&
           !LinkButtonPainter.field_d) {
           while (DirectByteStorage.pollKeyEvent(121)) {
-            if (ke.field_a == 13) {
+            if (KeyEventGlobals.field_a == 13) {
               this.onCancel((byte) -16);
               continue;
             }
             if (EmailValidator.field_m[82] &&
-              ke.field_a == 11) {
+              KeyEventGlobals.field_a == 11) {
               stackIn_14_0 = !(Match.field_u);
               Match.field_u = stackIn_14_0;
               continue;
@@ -555,7 +555,7 @@ abstract class MenuScreen {
             }
             this.activateRow(this.field_g.selectedIndex, (byte) -114, false);
           }
-          this.field_g.updatePointer(this.rowAt(BufferedRandomAccessFile.field_a, ji.field_c, -125), this.rowAt(ProxyAuthenticationException.field_d, StatusBar.field_k, -115), -1);
+          this.field_g.updatePointer(this.rowAt(BufferedRandomAccessFile.field_a, FriendCaptionGlobals.field_c, -125), this.rowAt(ProxyAuthenticationException.field_d, StatusBar.field_k, -115), -1);
           if (-1 != this.field_g.selectedIndex) {
             this.activateRow(this.field_g.selectedIndex, (byte) -128, true);
           }
@@ -583,7 +583,7 @@ abstract class MenuScreen {
         int var9;
         var9 = Pixelate.field_H ? 1 : 0;
         if (this.field_g.isActivated(51)) {
-          mc.playSoundEffect(128, -120);
+          AchievementMaskRequest.playSoundEffect(128, -120);
         }
         var4 = this.field_k[param0];
         if (param1 > -103) {
@@ -597,7 +597,7 @@ abstract class MenuScreen {
                 if (var6 == 28) {
                   if (this.field_g.isActivated(74)) {
                     var6 = param2 ? 1 : 0;
-                    la.changeScreen(MidiPcmStream.field_t, 16, var6 != 0, -25528);
+                    ScreenChangeHelpers.changeScreen(MidiPcmStream.field_t, 16, var6 != 0, -25528);
                   }
                 } else {
                   if (1 == var6) {
@@ -606,7 +606,7 @@ abstract class MenuScreen {
                         MatchController.openTextPopup(param2, 0, -4, (byte) 91, QuickChatMenu.field_Ib);
                       } else {
                         var6 = param2 ? 1 : 0;
-                        la.changeScreen(MidiPcmStream.field_t, -4, var6 != 0, -25528);
+                        ScreenChangeHelpers.changeScreen(MidiPcmStream.field_t, -4, var6 != 0, -25528);
                       }
                     }
                     break regionExit1;
@@ -614,23 +614,23 @@ abstract class MenuScreen {
                   if (var6 == 2) {
                     if (!(!this.field_g.isActivated(86))) {
                       var6 = param2 ? 1 : 0;
-                      stackIn_74_0 = (!gq.isOfflineOrAccountUi(107)) ? 0 : 12;
-                      la.changeScreen(stackIn_74_0, -1, var6 != 0, -25528);
+                      stackIn_74_0 = (!AlternateNameCredentials.isOfflineOrAccountUi(107)) ? 0 : 12;
+                      ScreenChangeHelpers.changeScreen(stackIn_74_0, -1, var6 != 0, -25528);
                     }
                     break regionExit1;
                   }
                   if (var6 == 7) {
                     if (!(!this.field_g.isActivated(91))) {
                       var6 = param2 ? 1 : 0;
-                      la.changeScreen(MidiPcmStream.field_t, 0, var6 != 0, -25528);
+                      ScreenChangeHelpers.changeScreen(MidiPcmStream.field_t, 0, var6 != 0, -25528);
                     }
                     break regionExit1;
                   }
                   if (24 == var6) {
                     if (!(!this.field_g.isActivated(84))) {
                       var6 = param2 ? 1 : 0;
-                      la.changeScreen(MidiPcmStream.field_t, 12, var6 != 0, -25528);
-                      ce.field_a = true;
+                      ScreenChangeHelpers.changeScreen(MidiPcmStream.field_t, 12, var6 != 0, -25528);
+                      ChatChannelGlobals.field_a = true;
                     }
                     break regionExit1;
                   }
@@ -649,14 +649,14 @@ abstract class MenuScreen {
                       if (var6 == 22) {
                         if (this.field_g.isActivated(23)) {
                           var6 = param2 ? 1 : 0;
-                          la.changeScreen(MidiPcmStream.field_t, 8, var6 != 0, -25528);
+                          ScreenChangeHelpers.changeScreen(MidiPcmStream.field_t, 8, var6 != 0, -25528);
                         }
                       } else {
                         if (var6 == 5) {
                           if (!(!this.field_g.isActivated(45))) {
                             ((HowToPlayScreen) (StripedProgressBar.field_H[7])).enterScreen(2, 1, param2);
                             var6 = param2 ? 1 : 0;
-                            la.changeScreen(MidiPcmStream.field_t, 7, var6 != 0, -25528);
+                            ScreenChangeHelpers.changeScreen(MidiPcmStream.field_t, 7, var6 != 0, -25528);
                           }
                           break regionExit1;
                         }
@@ -664,7 +664,7 @@ abstract class MenuScreen {
                           if (var6 == 4) {
                             if (!(!this.field_g.isActivated(26))) {
                               var6 = param2 ? 1 : 0;
-                              la.changeScreen(MidiPcmStream.field_t, 6, var6 != 0, -25528);
+                              ScreenChangeHelpers.changeScreen(MidiPcmStream.field_t, 6, var6 != 0, -25528);
                             }
                             break regionExit1;
                           }
@@ -672,11 +672,11 @@ abstract class MenuScreen {
                             if (!(!this.field_g.isActivated(62))) {
                               if (this.field_l != 9) {
                                 var6 = param2 ? 1 : 0;
-                                la.changeScreen(MidiPcmStream.field_t, 5, var6 != 0, -25528);
+                                ScreenChangeHelpers.changeScreen(MidiPcmStream.field_t, 5, var6 != 0, -25528);
                               } else {
                                 var6 = param2 ? 1 : 0;
-                                stackIn_105_0 = (!gq.isOfflineOrAccountUi(75)) ? 0 : 12;
-                                la.changeScreen(stackIn_105_0, 5, var6 != 0, -25528);
+                                stackIn_105_0 = (!AlternateNameCredentials.isOfflineOrAccountUi(75)) ? 0 : 12;
+                                ScreenChangeHelpers.changeScreen(stackIn_105_0, 5, var6 != 0, -25528);
                               }
                             }
                             break regionExit1;
@@ -686,12 +686,12 @@ abstract class MenuScreen {
                             if (this.field_g.isHomeKey((byte) -111) &&
                               LinkButtonPainter.field_h > 0) {
                               var5 = 1;
-                              nk.setMusicVolume((byte) 93, 0);
+                              ChatPanelHelpers.setMusicVolume((byte) 93, 0);
                             }
                             if (this.field_g.isEndKey(-111) &&
                               LinkButtonPainter.field_h < 256) {
                               var5 = 1;
-                              nk.setMusicVolume((byte) 93, 256);
+                              ChatPanelHelpers.setMusicVolume((byte) 93, 256);
                             }
                             if (this.field_g.isButtonHeld((byte) 35)) {
                               var6 = this.getRowLeft(param0, (byte) 90) + this.getRowRight(param0, false) + (Checkbox.field_T - 120) >> 1;
@@ -699,12 +699,12 @@ abstract class MenuScreen {
                               var8 = 256 * var7_int / 120;
                               var5 = 1;
                               if (var8 <= 0) {
-                                nk.setMusicVolume((byte) 93, 0);
+                                ChatPanelHelpers.setMusicVolume((byte) 93, 0);
                               } else {
                                 if (var8 < 256) {
-                                  nk.setMusicVolume((byte) 93, var8);
+                                  ChatPanelHelpers.setMusicVolume((byte) 93, var8);
                                 } else {
-                                  nk.setMusicVolume((byte) 93, 256);
+                                  ChatPanelHelpers.setMusicVolume((byte) 93, 256);
                                 }
                               }
                             }
@@ -719,9 +719,9 @@ abstract class MenuScreen {
                               StrongCacheReference.increaseMusicVolume(32);
                             }
                             if (var5 != 0 && (!this.field_g.isButtonHeld((byte) 35) ||
-                              !(pa.field_b <= nk.field_i))) {
-                              mc.playSoundEffect(128, -124);
-                              nk.field_i = pa.field_b + 20;
+                              !(RequestResultFactory.field_b <= ChatPanelHelpers.field_i))) {
+                              AchievementMaskRequest.playSoundEffect(128, -124);
+                              ChatPanelHelpers.field_i = RequestResultFactory.field_b + 20;
                             }
                           } else {
                             if (var6 == 21) {
@@ -746,7 +746,7 @@ abstract class MenuScreen {
                                 }
                               }
                               if (this.field_g.isLeftKey(-97)) {
-                                fc.decreaseSoundVolume((byte) -65);
+                                LobbyListBindingHelpers.decreaseSoundVolume((byte) -65);
                               }
                               if (!(!this.field_g.isRightKey(102))) {
                                 ProxySocketConnector.increaseSoundVolume(-4767);
@@ -755,23 +755,23 @@ abstract class MenuScreen {
                             }
                             if (var6 == 6) {
                               if (this.field_g.isActivated(68)) {
-                                if (ib.field_f != null) {
+                                if (GridSize.field_f != null) {
                                   SoundVoice.closeFullscreenCanvas(33);
                                 } else {
                                   var6 = param2 ? 1 : 0;
                                   FireworkSpark.field_b = false;
-                                  var7 = qj.field_e;
-                                  QuickChatPhraseCache.configureQuickChatStyle(((BitmapFont) ((Object) var7)).maxAscent + ((BitmapFont) ((Object) var7)).maxDescent, -879, ((BitmapFont) ((Object) var7)).maxAscent, 2, 320, 8, ab.field_c, var7, 240, TutorialPage.field_g, 8, var6 != 0);
+                                  var7 = PrivateChatHelpers.field_e;
+                                  QuickChatPhraseCache.configureQuickChatStyle(((BitmapFont) ((Object) var7)).maxAscent + ((BitmapFont) ((Object) var7)).maxDescent, -879, ((BitmapFont) ((Object) var7)).maxAscent, 2, 320, 8, ResultCaptionGlobals.field_c, var7, 240, TutorialPage.field_g, 8, var6 != 0);
                                 }
                               }
                             } else {
                               if (var6 != 9) {
                                 if (var6 == 11) {
                                   if (!(!this.field_g.isActivated(95))) {
-                                    ro.field_e.sendResign(6);
+                                    NameSuggestionHelpers.field_e.sendResign(6);
                                     var6 = param2 ? 1 : 0;
-                                    stackIn_162_0 = (!gq.isOfflineOrAccountUi(71)) ? 0 : 12;
-                                    la.changeScreen(stackIn_162_0, -1, var6 != 0, -25528);
+                                    stackIn_162_0 = (!AlternateNameCredentials.isOfflineOrAccountUi(71)) ? 0 : 12;
+                                    ScreenChangeHelpers.changeScreen(stackIn_162_0, -1, var6 != 0, -25528);
                                   }
                                   break regionExit1;
                                 }
@@ -779,10 +779,10 @@ abstract class MenuScreen {
                                   if (!(!this.field_g.isActivated(117))) {
                                     if (ValidationHelpWidget.field_Y) {
                                       var6 = param2 ? 1 : 0;
-                                      la.changeScreen(MidiPcmStream.field_t, -5, var6 != 0, -25528);
+                                      ScreenChangeHelpers.changeScreen(MidiPcmStream.field_t, -5, var6 != 0, -25528);
                                     }
                                     if (!(!DateOfBirthValidator.field_i)) {
-                                      qj.sendLeaveGameRequest(false, 0, 11);
+                                      PrivateChatHelpers.sendLeaveGameRequest(false, 0, 11);
                                     }
                                   }
                                   break regionExit1;
@@ -792,30 +792,30 @@ abstract class MenuScreen {
                                     if (!this.field_g.isActivated(68)) {
                                       break;
                                     }
-                                    of.field_a = 0;
+                                    TextDecodeHelpers.field_a = 0;
                                     break;
                                   case 15:
                                     if (!this.field_g.isActivated(30)) {
                                       break;
                                     }
-                                    of.field_a = 1;
+                                    TextDecodeHelpers.field_a = 1;
                                     break;
                                   case 16:
                                     if (this.field_g.isActivated(32)) {
-                                      of.field_a = 2;
+                                      TextDecodeHelpers.field_a = 2;
                                     }
                                     break;
                                   case 17:
                                     if (!this.field_g.isActivated(109)) {
                                       break;
                                     }
-                                    d.field_c = 0;
+                                    LobbyStartupHelpers.field_c = 0;
                                     break;
                                   case 18:
                                     if (!this.field_g.isActivated(32)) {
                                       break;
                                     }
-                                    d.field_c = 1;
+                                    LobbyStartupHelpers.field_c = 1;
                                     break;
                                   case 23:
                                     if (!this.field_g.isActivated(106)) {
@@ -827,7 +827,7 @@ abstract class MenuScreen {
                                         this.field_l != 6) {
                                         break;
                                       }
-                                      gi.setPopupIdAndCaption(QuickChatMenu.field_Ib, this.field_l, (byte) -126);
+                                      HighscoreNameEntry.setPopupIdAndCaption(QuickChatMenu.field_Ib, this.field_l, (byte) -126);
                                       break;
                                     }
                                     stackIn_190_0 = null;
@@ -836,7 +836,7 @@ abstract class MenuScreen {
                                     } else {
                                       stackIn_191_1 = 9;
                                     }
-                                    gi.setPopupIdAndCaption((String) (stackIn_190_0), stackIn_191_1, (byte) 79);
+                                    HighscoreNameEntry.setPopupIdAndCaption((String) (stackIn_190_0), stackIn_191_1, (byte) 79);
                                     break;
                                   case 33:
                                     if (this.field_g.isActivated(40)) {
@@ -852,14 +852,14 @@ abstract class MenuScreen {
                                     stackIn_208_0 = !(SpriteCheckboxPainter.field_d);
                                     SpriteCheckboxPainter.field_d = stackIn_208_0;
                                     if (!SpriteCheckboxPainter.field_d) {
-                                      PacketBuffer.field_o[27] = ef.field_c;
+                                      PacketBuffer.field_o[27] = HighscorePacketHandlers.field_c;
                                       break;
                                     }
                                     PacketBuffer.field_o[27] = IterableNodeHashTable.field_d;
                                     break;
                                   case 19:
                                     if (this.field_g.isActivated(77)) {
-                                      d.openQuitPage(0, AudioService.getApplet(13867));
+                                      LobbyStartupHelpers.openQuitPage(0, AudioService.getApplet(13867));
                                     }
                                     break;
                                   case 34:
@@ -870,7 +870,7 @@ abstract class MenuScreen {
                                 }
                               } else {
                                 if (this.field_g.isActivated(96)) {
-                                  ro.field_e.showResults(false, 250, param2);
+                                  NameSuggestionHelpers.field_e.showResults(false, 250, param2);
                                 }
                               }
                             }
@@ -879,7 +879,7 @@ abstract class MenuScreen {
                           if (this.field_g.isActivated(59)) {
                             var6 = TickClock.field_a;
                             var7_int = param2 ? 1 : 0;
-                            la.changeScreen(MidiPcmStream.field_t, var6, var7_int != 0, -25528);
+                            ScreenChangeHelpers.changeScreen(MidiPcmStream.field_t, var6, var7_int != 0, -25528);
                           }
                         }
                       }
@@ -890,23 +890,23 @@ abstract class MenuScreen {
                 if (this.field_g.isActivated(109)) {
                   ArchiveIndex.startPuzzleModeGame(-3 + param0, (byte) 127);
                   var6 = param2 ? 1 : 0;
-                  stackIn_61_0 = (!gq.isOfflineOrAccountUi(90)) ? 0 : 12;
-                  la.changeScreen(stackIn_61_0, -3, var6 != 0, -25528);
+                  stackIn_61_0 = (!AlternateNameCredentials.isOfflineOrAccountUi(90)) ? 0 : 12;
+                  ScreenChangeHelpers.changeScreen(stackIn_61_0, -3, var6 != 0, -25528);
                 }
               }
             } else {
               if (this.field_g.isActivated(6)) {
                 ((OptionsScreen) (StripedProgressBar.field_H[17])).resetPage(76);
                 var6 = param2 ? 1 : 0;
-                la.changeScreen(MidiPcmStream.field_t, 17, var6 != 0, -25528);
+                ScreenChangeHelpers.changeScreen(MidiPcmStream.field_t, 17, var6 != 0, -25528);
               }
             }
           } else {
             if (this.field_g.isActivated(44)) {
-              em.resetResultsKind((byte) -101);
+              ContextMenuHelpers.resetResultsKind((byte) -101);
               var6 = param2 ? 1 : 0;
-              stackIn_52_0 = (gq.isOfflineOrAccountUi(117)) ? 12 : 0;
-              la.changeScreen(stackIn_52_0, -3, var6 != 0, -25528);
+              stackIn_52_0 = (AlternateNameCredentials.isOfflineOrAccountUi(117)) ? 12 : 0;
+              ScreenChangeHelpers.changeScreen(stackIn_52_0, -3, var6 != 0, -25528);
             }
           }
         }

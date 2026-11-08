@@ -70,28 +70,28 @@ final class LoginMethod {
             break;
           }
           if (var3 == null) {
-            na.closeGameSocket(true);
+            GameSocketHelpers.closeGameSocket(true);
             return;
           }
           var5 = 106 / ((-61 - param0) / 53);
           var4 = var15.readUnsignedByte(255);
           if (var4 != 0) {
-            lg.field_b[0] = ModalStack.field_J;
+            LoginCookieHelpers.field_b[0] = ModalStack.field_J;
             var6 = var3.field_s;
             for (var7_int = 1; var4 > var7_int; var7_int++) {
-              lg.field_b[var7_int] = var15.readString(5);
+              LoginCookieHelpers.field_b[var7_int] = var15.readString(5);
             }
             IconTextComponent.decodeRankingRows(2147483647, var6, var4);
             for (var7_intLifetime1 = 0; var4 > var7_intLifetime1; var7_intLifetime1++) {
               QueuedInput.readPackedRankingValues(-112, var15);
               if (var7_intLifetime1 != 0) {
-                ui.appendRankingRow(ReflectionCheckRequest.field_n, 0, of.field_g, of.field_b, var7_intLifetime1, bq.field_c);
+                Cp1252DecodeHelpers.appendRankingRow(ReflectionCheckRequest.field_n, 0, TextDecodeHelpers.field_g, TextDecodeHelpers.field_b, var7_intLifetime1, LegacyMenuBuilder.field_c);
               } else {
                 var3.field_v = ReflectionCheckRequest.field_n;
-                var3.field_n = bq.field_c;
-                var3.field_m = of.field_g;
-                var3.field_p = of.field_b;
-                ui.appendRankingRow(ReflectionCheckRequest.field_n, 0, of.field_g, of.field_b, var7_intLifetime1, bq.field_c);
+                var3.field_n = LegacyMenuBuilder.field_c;
+                var3.field_m = TextDecodeHelpers.field_g;
+                var3.field_p = TextDecodeHelpers.field_b;
+                Cp1252DecodeHelpers.appendRankingRow(ReflectionCheckRequest.field_n, 0, TextDecodeHelpers.field_g, TextDecodeHelpers.field_b, var7_intLifetime1, LegacyMenuBuilder.field_c);
               }
             }
             EmailValidator.sortRankingRows(var6, (byte) 31);
@@ -106,12 +106,12 @@ final class LoginMethod {
             var11 = 0;
             while (var9 > var10) {
               var12 = ArchiveRequest.field_A[var10];
-              var7[0][var11] = lg.field_b[var12];
-              var8[0][var11 * 4] = ep.field_c[var12];
+              var7[0][var11] = LoginCookieHelpers.field_b[var12];
+              var8[0][var11 * 4] = PolygonClipHelpers.field_c[var12];
               var8[0][1 + var11 * 4] = TextWidgetPainter.field_b[var12];
               var8[0][4 * var11 + 2] = VerticalScrollbar.field_Fb[var12];
               var8[0][3 + var11 * 4] = GradientOutlineTextPainter.field_q[var12];
-              if (sm.isLocalPlayerName(lg.field_b[var12], -1) &&
+              if (QueuedLobbyRequest.isLocalPlayerName(LoginCookieHelpers.field_b[var12], -1) &&
                 GradientOutlineTextPainter.field_q[var12] + TextWidgetPainter.field_b[var12] + VerticalScrollbar.field_Fb[var12] == 0) {
                 var7[0][var11] = null;
                 var11--;
@@ -124,12 +124,12 @@ final class LoginMethod {
             var11Lifetime1 = var14;
             while (var10Lifetime1 < var9) {
               var12Lifetime1 = ArchiveRequest.field_A[var10Lifetime1 + var6];
-              var7[1][var14] = lg.field_b[var12Lifetime1];
-              var8[1][4 * var14] = ep.field_c[var12Lifetime1];
+              var7[1][var14] = LoginCookieHelpers.field_b[var12Lifetime1];
+              var8[1][4 * var14] = PolygonClipHelpers.field_c[var12Lifetime1];
               var8[1][1 + 4 * var14] = TextWidgetPainter.field_b[var12Lifetime1];
               var8[1][4 * var14 + 2] = VerticalScrollbar.field_Fb[var12Lifetime1];
               var8[1][4 * var14 + 3] = GradientOutlineTextPainter.field_q[var12Lifetime1];
-              if (sm.isLocalPlayerName(lg.field_b[var12Lifetime1], -1) &&
+              if (QueuedLobbyRequest.isLocalPlayerName(LoginCookieHelpers.field_b[var12Lifetime1], -1) &&
                 TextWidgetPainter.field_b[var12Lifetime1] + (VerticalScrollbar.field_Fb[var12Lifetime1] + GradientOutlineTextPainter.field_q[var12Lifetime1]) == 0) {
                 var7[1][var14] = null;
                 var14--;
@@ -186,7 +186,7 @@ final class LoginMethod {
           }
           LinkButtonPainter.popRasterState((byte) 92);
           if (GameModeCard.field_f >= 150) {
-            th.field_b.drawAlpha(var3 + 15, var4 + 10, var5);
+            TrigonometryHelpers.field_b.drawAlpha(var3 + 15, var4 + 10, var5);
           } else {
             LoadingStepTracker.field_b.drawHalfSize(var3, var4);
           }
@@ -206,13 +206,13 @@ final class LoginMethod {
             if (var6 >= 20) {
               if (var6 >= 30) {
                 var7Lifetime4 = (12800 - var6 * 256) / 20;
-                bd.field_a.drawAdditive(var3, var4, var7Lifetime4);
+                ConnectionState.field_a.drawAdditive(var3, var4, var7Lifetime4);
               } else {
-                bd.field_a.drawAdditive(var3, var4, 256);
+                ConnectionState.field_a.drawAdditive(var3, var4, 256);
               }
             } else {
               var7Lifetime4 = 256 * var6 / 20;
-              bd.field_a.drawAdditive(var3, var4, var7Lifetime4);
+              ConnectionState.field_a.drawAdditive(var3, var4, var7Lifetime4);
             }
           }
           var6Lifetime3 = GameModeCard.field_f - 140;
@@ -236,7 +236,7 @@ final class LoginMethod {
           SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_j, SoftwareRasterizer.field_d, 0, -var5 + 256);
           LinkButtonPainter.popRasterState((byte) 92);
           if (GameModeCard.field_f >= 150) {
-            th.field_b.drawAlpha(var3 + 15, var4 + 10, var5);
+            TrigonometryHelpers.field_b.drawAlpha(var3 + 15, var4 + 10, var5);
           } else {
             LoadingStepTracker.field_b.drawHalfSize(var3, var4);
           }
@@ -246,19 +246,19 @@ final class LoginMethod {
             if (var6Lifetime1 >= 20) {
               if (var6Lifetime1 >= 30) {
                 var7Lifetime1 = (12800 - var6Lifetime1 * 256) / 20;
-                bd.field_a.drawAdditive(var3, var4, var7Lifetime1);
+                ConnectionState.field_a.drawAdditive(var3, var4, var7Lifetime1);
               } else {
-                bd.field_a.drawAdditive(var3, var4, 256);
+                ConnectionState.field_a.drawAdditive(var3, var4, 256);
               }
             } else {
               var7Lifetime1 = 256 * var6Lifetime1 / 20;
-              bd.field_a.drawAdditive(var3, var4, var7Lifetime1);
+              ConnectionState.field_a.drawAdditive(var3, var4, var7Lifetime1);
             }
           }
         } else {
           LinkButtonPainter.popRasterState((byte) 92);
           if (GameModeCard.field_f >= 150) {
-            th.field_b.drawAlpha(var3 + 15, var4 + 10, var5);
+            TrigonometryHelpers.field_b.drawAlpha(var3 + 15, var4 + 10, var5);
             var6Lifetime1 = GameModeCard.field_f - 125;
             if (var6Lifetime1 <= 0) {
               var6Lifetime1 = GameModeCard.field_f - 140;
@@ -282,7 +282,7 @@ final class LoginMethod {
               } else {
                 if (var6Lifetime1 < 20) {
                   var7Lifetime1 = 256 * var6Lifetime1 / 20;
-                  bd.field_a.drawAdditive(var3, var4, var7Lifetime1);
+                  ConnectionState.field_a.drawAdditive(var3, var4, var7Lifetime1);
                   var6Lifetime1 = GameModeCard.field_f - 140;
                   if (var6Lifetime1 > 0) {
                     var7Lifetime1 = 256;
@@ -293,7 +293,7 @@ final class LoginMethod {
                   }
                 } else {
                   if (var6Lifetime1 < 30) {
-                    bd.field_a.drawAdditive(var3, var4, 256);
+                    ConnectionState.field_a.drawAdditive(var3, var4, 256);
                     var6Lifetime1 = GameModeCard.field_f - 140;
                     if (var6Lifetime1 > 0) {
                       var7Lifetime1 = 256;
@@ -304,7 +304,7 @@ final class LoginMethod {
                     }
                   } else {
                     var7Lifetime1 = (12800 - var6Lifetime1 * 256) / 20;
-                    bd.field_a.drawAdditive(var3, var4, var7Lifetime1);
+                    ConnectionState.field_a.drawAdditive(var3, var4, var7Lifetime1);
                     var6Lifetime1 = GameModeCard.field_f - 140;
                     if (var6Lifetime1 > 0) {
                       var7Lifetime1 = 256;
@@ -325,13 +325,13 @@ final class LoginMethod {
             var6Lifetime1 < 50) {
             if (var6Lifetime1 < 20) {
               var7Lifetime1 = 256 * var6Lifetime1 / 20;
-              bd.field_a.drawAdditive(var3, var4, var7Lifetime1);
+              ConnectionState.field_a.drawAdditive(var3, var4, var7Lifetime1);
             } else {
               if (var6Lifetime1 < 30) {
-                bd.field_a.drawAdditive(var3, var4, 256);
+                ConnectionState.field_a.drawAdditive(var3, var4, 256);
               } else {
                 var7Lifetime1 = (12800 - var6Lifetime1 * 256) / 20;
-                bd.field_a.drawAdditive(var3, var4, var7Lifetime1);
+                ConnectionState.field_a.drawAdditive(var3, var4, var7Lifetime1);
               }
             }
           }
@@ -397,7 +397,7 @@ final class LoginMethod {
           GameModeSelectScreen.field_v.writeInt(ModalPanel.field_L[1], -71);
           GameModeSelectScreen.field_v.writeInt(ModalPanel.field_L[2], -68);
           GameModeSelectScreen.field_v.writeInt(ModalPanel.field_L[3], -48);
-          wf.writeMachineId(1, GameModeSelectScreen.field_v);
+          MachineIdHelpers.writeMachineId(1, GameModeSelectScreen.field_v);
           GameModeSelectScreen.field_v.writeShort(1276387944, param3);
           param2.writePayload((byte) -12, GameModeSelectScreen.field_v);
           ChatMessage.field_f.position = 0;
@@ -408,13 +408,13 @@ final class LoginMethod {
           }
           ChatMessage.field_f.position = ChatMessage.field_f.position + 2;
           var5_int = ChatMessage.field_f.position;
-          ChatMessage.field_f.writeInt(ra.field_c, -118);
-          ChatMessage.field_f.writeLong(false, hf.field_t);
+          ChatMessage.field_f.writeInt(NineSliceSpriteFactory.field_c, -118);
+          ChatMessage.field_f.writeLong(false, AchievementRecord.field_t);
           var6 = 0;
           if (LobbyPlayer.field_Lb) {
             var6 = var6 | 1;
           }
-          if (vm.field_d) {
+          if (LobbyGameLookupHelpers.field_d) {
             var6 = var6 | 4;
           }
           if (param4) {
@@ -457,7 +457,7 @@ final class LoginMethod {
     final static void setSmallFont(BinaryBitmapFont param0, byte param1) {
         try {
           DelegatingCanvas.field_d = param0;
-          pe.field_c = DelegatingCanvas.field_d.maxDescent + DelegatingCanvas.field_d.maxAscent;
+          PlayerActionHelpers.field_c = DelegatingCanvas.field_d.maxDescent + DelegatingCanvas.field_d.maxAscent;
           int var2_int = -116 / ((70 - param1) / 48);
         } catch (RuntimeException runtimeException) {
           throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "io.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

@@ -57,7 +57,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
         RuntimeException var4 = null;
         int var5 = 0;
         int var6 = 0;
-        wm var7 = null;
+        ReportReason var7 = null;
         int var9 = 0;
         int var4_intLifetime1;
         var9 = Pixelate.field_H ? 1 : 0;
@@ -116,11 +116,11 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
           QuickChatPhraseDefinition.clearStatics((byte) -64);
         }
         if (ArrayWidgetContainer.isAccountUiActive((byte) 83)) {
-          ef.field_a = true;
+          HighscorePacketHandlers.field_a = true;
         } else {
-          var2 = bo.packCompletedPuzzleMask(param0 ^ 181);
+          var2 = ScreenDisplayMode.packCompletedPuzzleMask(param0 ^ 181);
           byte[] var1 = var2;
-          hm.queueSaveDataRequest(param0 + 41, var2, 6);
+          ClockHelpers.queueSaveDataRequest(param0 + 41, var2, 6);
         }
     }
 
@@ -143,7 +143,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
         }
         if (null != this.field_u) {
           for (var2 = 0; this.field_u.length > var2; var2++) {
-            this.field_u[var2] = bq.bitOr(this.field_u[var2], 32768);
+            this.field_u[var2] = LegacyMenuBuilder.bitOr(this.field_u[var2], 32768);
           }
         }
     }
@@ -153,8 +153,8 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
         if (MainMenuScreen.field_t != null) {
           MainMenuScreen.field_t.shutdown();
         }
-        if (ib.field_h != null) {
-          ib.field_h.shutdown();
+        if (GridSize.field_h != null) {
+          GridSize.field_h.shutdown();
         }
     }
 

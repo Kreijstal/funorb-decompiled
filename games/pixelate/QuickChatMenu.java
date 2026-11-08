@@ -13,7 +13,7 @@ final class QuickChatMenu extends SceneWidget {
     private QuickChatMenu field_Pb;
     static String field_Ib;
     private int field_Jb;
-    static ea field_Nb;
+    static CredentialKind field_Nb;
     private int openItemIndex;
     private int field_Rb;
     private int field_Ub;
@@ -46,7 +46,7 @@ final class QuickChatMenu extends SceneWidget {
 
     final static void setPendingUiResult(int param0, int param1) {
         if (param1 != -2671) {
-          field_Nb = (ea) null;
+          field_Nb = (CredentialKind) null;
         }
         QuickChatPhraseCache.field_h = param0;
     }
@@ -75,13 +75,13 @@ final class QuickChatMenu extends SceneWidget {
     }
 
     final static void removeMouseListeners(byte param0, java.awt.Component param1) {
-        param1.removeMouseListener(fj.field_c);
-        param1.removeMouseMotionListener(fj.field_c);
+        param1.removeMouseListener(MouseInputGlobals.field_c);
+        param1.removeMouseMotionListener(MouseInputGlobals.field_c);
         if (param0 != -47) {
           return;
         }
         try {
-          param1.removeFocusListener(fj.field_c);
+          param1.removeFocusListener(MouseInputGlobals.field_c);
           Cloud.field_o = 0;
         } catch (RuntimeException runtimeException) {
           throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "te.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -122,7 +122,7 @@ final class QuickChatMenu extends SceneWidget {
         int var7;
         int stackIn_3_0 = 0;
         var7 = Pixelate.field_H ? 1 : 0;
-        stackIn_3_0 = (ke.field_a != 85) ? 0 : 1;
+        stackIn_3_0 = (KeyEventGlobals.field_a != 85) ? 0 : 1;
         var4 = stackIn_3_0;
         if (null != this.field_Pb) {
           if (var4 != 0 &&
@@ -134,7 +134,7 @@ final class QuickChatMenu extends SceneWidget {
           return this.field_Pb.processShortcutKey(param0, 0, param2);
         }
         if (null == this.field_Pb &&
-          bo.field_h == this &&
+          ScreenDisplayMode.field_h == this &&
           var4 != 0) {
           ScoreMarkerDemo.closeQuickChatMenu(false);
           return true;
@@ -256,12 +256,12 @@ final class QuickChatMenu extends SceneWidget {
           var12 = "</col>";
           for (var13 = 0; var13 < this.field_Mb; var13++) {
             if (this.field_Hb[var13] > 0) {
-              param6[var13] = var11 + ig.charToString(124, this.field_Hb[var13]).toUpperCase() + ": " + var12 + param6[var13];
+              param6[var13] = var11 + AudioPumpHelpers.charToString(124, this.field_Hb[var13]).toUpperCase() + ": " + var12 + param6[var13];
             }
             var14 = null;
             if (null != this.field_Gb[var13] ||
               -1 == this.field_Tb[var13]) {
-              var14 = fe.field_b;
+              var14 = PendingFlagGlobals.field_b;
             }
             this.field_Sb[var13] = new IconTextComponent(0L, param2, (SceneWidget) null, param3, (Sprite) (var14), param6[var13]);
             this.addChild(this.field_Sb[var13], (byte) 26);
@@ -270,7 +270,7 @@ final class QuickChatMenu extends SceneWidget {
               this.field_Rb = var15;
             }
           }
-          this.field_Rb = this.field_Rb + (10 + fe.field_b.field_A);
+          this.field_Rb = this.field_Rb + (10 + PendingFlagGlobals.field_b.field_A);
           this.setOpenAnimationStep(12, (byte) -85);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -363,7 +363,7 @@ final class QuickChatMenu extends SceneWidget {
           } else {
             if (-1 != this.field_Tb[param0]) {
               var5 = 32768 | this.field_Tb[param0];
-              var6 = ce.field_d;
+              var6 = ChatChannelGlobals.field_d;
               if (var6 == 0 &&
                 LoginMethod.field_c != null) {
                 var6 = 1;
@@ -372,8 +372,8 @@ final class QuickChatMenu extends SceneWidget {
                 Js5ArchiveManager.setChatFilterMode(1, -26931, var6, param1);
               }
               var8 = (String) null;
-              dg.sendQuickChatMessage(true, ce.field_d, var5, (String) null, CheckboxPainter.field_k, param3);
-              di.setLastQuickChatTarget(var5, fp.field_e, CheckboxPainter.field_k, (byte) 9, ce.field_d);
+              QuickChatSendHelpers.sendQuickChatMessage(true, ChatChannelGlobals.field_d, var5, (String) null, CheckboxPainter.field_k, param3);
+              NumberFormatHelpers.setLastQuickChatTarget(var5, NoticeKind.field_e, CheckboxPainter.field_k, (byte) 9, ChatChannelGlobals.field_d);
               ScoreMarkerDemo.closeQuickChatMenu(false);
               SocketJs5Transport.resetRetryTimer(-93);
             } else {
@@ -403,6 +403,6 @@ final class QuickChatMenu extends SceneWidget {
     static {
         field_Eb = "Enter a password for this account. Try to pick a strong password that can't easily be guessed.";
         field_Ib = "Please log in to access this feature.";
-        field_Nb = new ea(2);
+        field_Nb = new CredentialKind(2);
     }
 }

@@ -174,7 +174,7 @@ final class ContextActionMenu extends SceneWidget {
           return false;
         }
         int var2 = -31 / ((71 - param0) / 52);
-        if (ke.field_a != 13) {
+        if (KeyEventGlobals.field_a != 13) {
           return true;
         }
         this.field_Gb = -1;
@@ -229,7 +229,7 @@ final class ContextActionMenu extends SceneWidget {
         }
         var6 = var6 + 2 * this.field_Ob;
         var7Lifetime1 = this.field_Qb * this.itemCount + (this.field_Eb + this.field_Eb);
-        var8Lifetime1 = ui.fitHorizontalPosition(param4, param1, var6, (byte) -1);
+        var8Lifetime1 = Cp1252DecodeHelpers.fitHorizontalPosition(param4, param1, var6, (byte) -1);
         var9 = ScorePopup.fitVerticalPosition(var7Lifetime1, param3, param0, (byte) 45);
         this.setBounds(var9, var7Lifetime1, var8Lifetime1, 256, var6);
         for (var10 = 0; var10 < this.itemCount; var10++) {

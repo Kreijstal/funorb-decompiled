@@ -57,7 +57,7 @@ final class MatchHud {
               stackIn_14_0 = (!DateOfBirthValidator.field_i) ? 0 : 110;
               var4 = stackIn_14_0;
               for (var5 = 0; 2 > var5; var5++) {
-                var9.drawCentered(sb.formatScore(this.field_r[var5], 3), this.field_j[var5], -var4 + (this.field_q[var5] + 155), 0, -1);
+                var9.drawCentered(NineSliceFrame.formatScore(this.field_r[var5], 3), this.field_j[var5], -var4 + (this.field_q[var5] + 155), 0, -1);
               }
               var5Lifetime2 = 20;
               stackIn_20_0 = (this.field_o) ? 1 : 0;
@@ -87,7 +87,7 @@ final class MatchHud {
         } else {
           if (0 < this.field_p) {
             SpriteEffectHelpers.drawLabelValueAlpha(var10, SoundCache.field_j, Integer.toString(this.field_g.field_r), Js5Transport.field_n, 30, 50, 0, -1, this.field_p);
-            var9.drawLeftAlpha(sb.formatScore(this.field_r[0], 3), 30, 415, 0, -1, this.field_p);
+            var9.drawLeftAlpha(NineSliceFrame.formatScore(this.field_r[0], 3), 30, 415, 0, -1, this.field_p);
             if (null != this.field_f) {
               SpriteEffectHelpers.drawLabelValueAlpha(var10, IntrusiveDeque.field_e, this.field_f, ArrayWidgetContainer.field_J, 30, 390, 0, -1, this.field_p);
             }
@@ -158,7 +158,7 @@ final class MatchHud {
               var7Lifetime2 = var10;
               var7Lifetime3 = var10;
               if (param4 >= 0L) {
-                var7Lifetime4 = var10 + "; Expires=" + SoundCache.formatCookieDate(10, param4 * 1000L + hm.monotonicMillis(64)) + "; Max-Age=" + param4;
+                var7Lifetime4 = var10 + "; Expires=" + SoundCache.formatCookieDate(10, param4 * 1000L + ClockHelpers.monotonicMillis(64)) + "; Max-Age=" + param4;
               } else {
                 var7Lifetime4 = var10 + "; Discard;";
               }
@@ -239,19 +239,19 @@ final class MatchHud {
         try {
           HowToPlayScreen.field_s = SocketConnector.loadRgbSpritesByName("frame_top", "commonui", (byte) 47, param2);
           PlayerBoard.field_v = SocketConnector.loadRgbSpritesByName("frame_bottom", "commonui", (byte) 47, param2);
-          ge.field_g = TutorialPage.loadSprite("commonui", "jagex_logo_grey", param2, (byte) -74);
-          fc.field_d = SocketConnector.loadRgbSpritesByName("button", "commonui", (byte) 47, param2);
+          RequestState.field_g = TutorialPage.loadSprite("commonui", "jagex_logo_grey", param2, (byte) -74);
+          LobbyListBindingHelpers.field_d = SocketConnector.loadRgbSpritesByName("button", "commonui", (byte) 47, param2);
           CanvasRasterBuffer.field_g = MusicCrossfadeStream.loadSpriteSheetByName(param2, 20049, "validation", "commonui");
-          ep.field_b = (BitmapFont) ((Object) BoardView.loadCoverageFontByName(param2, "commonui", 0, "arezzo12", param3));
-          he.field_d = (BitmapFont) ((Object) BoardView.loadCoverageFontByName(param2, "commonui", 0, "arezzo14", param3));
+          PolygonClipHelpers.field_b = (BitmapFont) ((Object) BoardView.loadCoverageFontByName(param2, "commonui", 0, "arezzo12", param3));
+          CanvasInputHelpers.field_d = (BitmapFont) ((Object) BoardView.loadCoverageFontByName(param2, "commonui", 0, "arezzo14", param3));
           FireworkBurst.field_d = (BitmapFont) ((Object) BoardView.loadCoverageFontByName(param2, "commonui", 0, "arezzo14bold", param3));
           var17 = new Sprite(param1.getNamedFile((byte) 24, "", "button.gif"), (java.awt.Component) ((Object) NameAvailabilityValidator.field_u));
-          dq.loadIndexedSprite((byte) 31, "dropdown", "commonui", param2);
+          TransitionPhase.loadIndexedSprite((byte) 31, "dropdown", "commonui", param2);
           var5 = NetworkGameClient.loadIndexedSpritesByName(param2, param0 ^ 4767934, "commonui", "screen_options");
           UiComponent.field_A = new IndexedSprite[4];
           UiComponent.field_o = new IndexedSprite[4];
-          qg.field_a = new IndexedSprite[4];
-          var6 = new IndexedSprite[][]{qg.field_a, UiComponent.field_A, UiComponent.field_o};
+          GameRequestHelpers.field_a = new IndexedSprite[4];
+          var6 = new IndexedSprite[][]{GameRequestHelpers.field_a, UiComponent.field_A, UiComponent.field_o};
           var19 = new int[4][];
           var16 = var19;
           var7 = var16;
@@ -285,7 +285,7 @@ final class MatchHud {
           var12.makeRasterTarget();
           var17.drawOpaque(-var9Lifetime1, 0);
           LinkButtonPainter.popRasterState((byte) 92);
-          fc.field_d = new Sprite[]{var15, var12, var11};
+          LobbyListBindingHelpers.field_d = new Sprite[]{var15, var12, var11};
         } catch (RuntimeException runtimeException) {
           throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "nn.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
@@ -301,7 +301,7 @@ final class MatchHud {
           this.field_d = 1 + param1 / 50;
           var3 = param1 % 50;
           if (48 == var3) {
-            mc.playSoundEffect(4, param0 - 40);
+            AchievementMaskRequest.playSoundEffect(4, param0 - 40);
           }
           if (var3 > 25) {
             var3 = 50 - var3;

@@ -6,7 +6,7 @@ import java.io.*;
 final class SectorCacheStore {
     private BufferedRandomAccessFile dataFile;
     private int field_d;
-    static wm field_f;
+    static ReportReason field_f;
     private BufferedRandomAccessFile indexFile;
     private int field_c;
     static int field_b;
@@ -260,12 +260,12 @@ final class SectorCacheStore {
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (an.field_e.isComplete(param1 ^ -49) &&
-            !param0.equals(an.field_e.getMessage((byte) 81))) {
-            an.field_e = MatchController.execute((byte) 119, param0);
+          if (CaretLayoutHelpers.field_e.isComplete(param1 ^ -49) &&
+            !param0.equals(CaretLayoutHelpers.field_e.getMessage((byte) 81))) {
+            CaretLayoutHelpers.field_e = MatchController.execute((byte) 119, param0);
           }
           if (param1 == -99) {
-            stackIn_8_0 = an.field_e;
+            stackIn_8_0 = CaretLayoutHelpers.field_e;
             return stackIn_8_0;
           }
           stackIn_6_0 = (AsyncValidationResult) null;
@@ -465,7 +465,7 @@ final class SectorCacheStore {
     }
 
     static {
-        field_f = new wm(0, 2, 2, 1);
+        field_f = new ReportReason(0, 2, 2, 1);
         field_g = "Data server full or too many connections from your address. Please try again in a few minutes.";
     }
 }

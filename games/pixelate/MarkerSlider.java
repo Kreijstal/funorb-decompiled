@@ -8,8 +8,8 @@ final class MarkerSlider extends TextButton {
     static int field_U;
     static String[] field_S;
     static int[] field_Y;
-    static sb field_N;
-    static ge field_X;
+    static NineSliceFrame field_N;
+    static RequestState field_X;
     static int[] field_O;
     private int field_P;
     static int field_V;
@@ -38,7 +38,7 @@ final class MarkerSlider extends TextButton {
           MarkerSlider.returnToLoginStage(-68);
         }
         NodeHashTable.reopenLoginDialog(0, true);
-        el.field_b = 0;
+        EmailValidationState.field_b = 0;
     }
 
     final int getMarker(byte param0, int param1) {
@@ -131,7 +131,7 @@ final class MarkerSlider extends TextButton {
             }
           }
           if (param0 >= -45) {
-            field_N = (sb) null;
+            field_N = (NineSliceFrame) null;
           }
           MusicCrossfadeStream.field_o.position = MusicCrossfadeStream.field_o.position + 24;
         } catch (RuntimeException | Error decompiledUncheckedException) {

@@ -38,7 +38,7 @@ final class DriftingParticle {
             }
             var1_int = 1;
           }
-          VerticalScrollbar.field_Gb.updatePointer(NameAvailabilityValidator.messageMenuOptionAt(false, BufferedRandomAccessFile.field_a, ji.field_c), NameAvailabilityValidator.messageMenuOptionAt(false, ProxyAuthenticationException.field_d, StatusBar.field_k), -1);
+          VerticalScrollbar.field_Gb.updatePointer(NameAvailabilityValidator.messageMenuOptionAt(false, BufferedRandomAccessFile.field_a, FriendCaptionGlobals.field_c), NameAvailabilityValidator.messageMenuOptionAt(false, ProxyAuthenticationException.field_d, StatusBar.field_k), -1);
           if (param0 != 2) {
             field_d = 101;
           }
@@ -48,9 +48,9 @@ final class DriftingParticle {
           var2 = 0;
           if (var1_int != 0 &&
             VerticalScrollbar.field_Gb.selectedIndex >= 0) {
-            var2 = di.field_b[VerticalScrollbar.field_Gb.selectedIndex];
+            var2 = NumberFormatHelpers.field_b[VerticalScrollbar.field_Gb.selectedIndex];
             if (2 == var2) {
-              un.clearPendingMessageFlag(true);
+              PatchEnvelopeSet.clearPendingMessageFlag(true);
             }
           }
           stackIn_15_0 = var2;
@@ -116,16 +116,16 @@ final class DriftingParticle {
     }
 
     DriftingParticle() {
-        this.field_g = JavaRandomHelpers.randomBelow(ea.field_b, -118, 640) << 16;
-        this.field_b = JavaRandomHelpers.randomBelow(ea.field_b, -100, 480) << 16;
-        this.field_e = JavaRandomHelpers.randomBelow(ea.field_b, -99, 90) + 10;
-        this.field_h = -65536 + JavaRandomHelpers.randomBelow(ea.field_b, -111, 131072);
-        this.field_a = -65536 + JavaRandomHelpers.randomBelow(ea.field_b, -123, 131072);
+        this.field_g = JavaRandomHelpers.randomBelow(CredentialKind.field_b, -118, 640) << 16;
+        this.field_b = JavaRandomHelpers.randomBelow(CredentialKind.field_b, -100, 480) << 16;
+        this.field_e = JavaRandomHelpers.randomBelow(CredentialKind.field_b, -99, 90) + 10;
+        this.field_h = -65536 + JavaRandomHelpers.randomBelow(CredentialKind.field_b, -111, 131072);
+        this.field_a = -65536 + JavaRandomHelpers.randomBelow(CredentialKind.field_b, -123, 131072);
         this.field_f = this.field_e << 16;
     }
 
     static {
-        field_d = of.toFixedPoint(0.9, 65536);
+        field_d = TextDecodeHelpers.toFixedPoint(0.9, 65536);
         field_c = new String[][]{new String[]{"Easy", "Medium", "Hard"}, new String[]{"", "", ""}};
     }
 }

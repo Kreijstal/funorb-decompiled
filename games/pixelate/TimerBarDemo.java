@@ -26,7 +26,7 @@ final class TimerBarDemo extends StatusBar {
             stackIn_2_0 = null;
             return (BinaryBitmapFont) (stackIn_2_0);
           }
-          var2 = new BinaryBitmapFont(param0, IntrusiveNode.field_b, e.field_b, ByteStorage.field_g, ge.field_c, wo.field_f);
+          var2 = new BinaryBitmapFont(param0, IntrusiveNode.field_b, ConnectionStateGlobals.field_b, ByteStorage.field_g, RequestState.field_c, SocialPanel.field_f);
           LoadingStepTracker.clearSpriteDecodeBuffers(140);
           var3 = -91 % ((77 - param1) / 37);
           stackIn_4_0 = var2;

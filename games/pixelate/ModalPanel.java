@@ -86,46 +86,46 @@ abstract class ModalPanel extends UiContainer {
           super.drawLayer(param0, param1, param2, (byte) 119);
           return;
         }
-        if (null == fd.field_a) {
-          fd.field_a = new Sprite(this.field_E, this.field_C);
-          Checkbox.renderToSprite(-90, fd.field_a);
+        if (null == ByteArrayPool.field_a) {
+          ByteArrayPool.field_a = new Sprite(this.field_E, this.field_C);
+          Checkbox.renderToSprite(-90, ByteArrayPool.field_a);
           SoftwareRasterizer.clear();
           this.drawDialogBackground(0, 0, true);
           super.drawLayer(-this.field_p - param0, param1, -param2 - this.field_z, (byte) -61);
           var5 = -94 / ((param3 - 70) / 49);
           LinkButtonPainter.popRasterState((byte) 92);
-          fd.field_a.drawAlpha(this.field_z + param2, this.field_p + param0, this.field_J);
+          ByteArrayPool.field_a.drawAlpha(this.field_z + param2, this.field_p + param0, this.field_J);
           return;
         }
-        if (fd.field_a.field_F < this.field_E) {
-          fd.field_a = new Sprite(this.field_E, this.field_C);
-          Checkbox.renderToSprite(-90, fd.field_a);
+        if (ByteArrayPool.field_a.field_F < this.field_E) {
+          ByteArrayPool.field_a = new Sprite(this.field_E, this.field_C);
+          Checkbox.renderToSprite(-90, ByteArrayPool.field_a);
           SoftwareRasterizer.clear();
           this.drawDialogBackground(0, 0, true);
           super.drawLayer(-this.field_p - param0, param1, -param2 - this.field_z, (byte) -61);
           var5Lifetime1 = -94 / ((param3 - 70) / 49);
           LinkButtonPainter.popRasterState((byte) 92);
-          fd.field_a.drawAlpha(this.field_z + param2, this.field_p + param0, this.field_J);
+          ByteArrayPool.field_a.drawAlpha(this.field_z + param2, this.field_p + param0, this.field_J);
           return;
         }
-        if (this.field_C > fd.field_a.field_E) {
-          fd.field_a = new Sprite(this.field_E, this.field_C);
-          Checkbox.renderToSprite(-90, fd.field_a);
+        if (this.field_C > ByteArrayPool.field_a.field_E) {
+          ByteArrayPool.field_a = new Sprite(this.field_E, this.field_C);
+          Checkbox.renderToSprite(-90, ByteArrayPool.field_a);
           SoftwareRasterizer.clear();
           this.drawDialogBackground(0, 0, true);
           super.drawLayer(-this.field_p - param0, param1, -param2 - this.field_z, (byte) -61);
           var5Lifetime2 = -94 / ((param3 - 70) / 49);
           LinkButtonPainter.popRasterState((byte) 92);
-          fd.field_a.drawAlpha(this.field_z + param2, this.field_p + param0, this.field_J);
+          ByteArrayPool.field_a.drawAlpha(this.field_z + param2, this.field_p + param0, this.field_J);
           return;
         }
-        Checkbox.renderToSprite(-90, fd.field_a);
+        Checkbox.renderToSprite(-90, ByteArrayPool.field_a);
         SoftwareRasterizer.clear();
         this.drawDialogBackground(0, 0, true);
         super.drawLayer(-this.field_p - param0, param1, -param2 - this.field_z, (byte) -61);
         var5Lifetime3 = -94 / ((param3 - 70) / 49);
         LinkButtonPainter.popRasterState((byte) 92);
-        fd.field_a.drawAlpha(this.field_z + param2, this.field_p + param0, this.field_J);
+        ByteArrayPool.field_a.drawAlpha(this.field_z + param2, this.field_p + param0, this.field_J);
     }
 
     boolean tickLayerAndCheckHidden(boolean param0) {

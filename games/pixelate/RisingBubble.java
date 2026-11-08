@@ -28,14 +28,14 @@ final class RisingBubble {
 
     final static void showLoginDialog(int param0, boolean param1, boolean param2, String param3) {
         LobbyPlayer.resetLoginRequestState(param0 - 705633292);
-        wa.field_c.refreshPanelVisibility((byte) 54);
-        nf.field_b = new LoginForm(Checkbox.field_U, (String) null, MainMenuScreen.field_s, param1, param2);
-        ph.field_l = new LoginDialog(wa.field_c, nf.field_b);
+        SpriteBuildHelpers.field_c.refreshPanelVisibility((byte) 54);
+        LoginFormGlobals.field_b = new LoginForm(Checkbox.field_U, (String) null, MainMenuScreen.field_s, param1, param2);
+        AchievementBannerEntry.field_l = new LoginDialog(SpriteBuildHelpers.field_c, LoginFormGlobals.field_b);
         if (param0 != -20) {
           return;
         }
         try {
-          wa.field_c.showPanel(-6183, ph.field_l);
+          SpriteBuildHelpers.field_c.showPanel(-6183, AchievementBannerEntry.field_l);
         } catch (RuntimeException runtimeException) {
           throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "vn.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
@@ -71,7 +71,7 @@ final class RisingBubble {
           }
           var5_int = param0.getGroupId(122, param1);
           var6 = param0.getFileId((byte) -95, param2, var5_int);
-          stackIn_3_0 = jf.loadPaletteFont(param3, var5_int, param0, var6, (byte) 126);
+          stackIn_3_0 = IncomingPacketHelpers.loadPaletteFont(param3, var5_int, param0, var6, (byte) 126);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -106,7 +106,7 @@ final class RisingBubble {
     }
 
     private final void respawn(boolean param0) {
-        this.field_f = 90 + JavaRandomHelpers.randomBelow(ea.field_b, -112, 340);
+        this.field_f = 90 + JavaRandomHelpers.randomBelow(CredentialKind.field_b, -112, 340);
         this.field_a = 480.0f;
         if (param0) {
           field_e = (boolean[][]) null;

@@ -1,0 +1,184 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class SpriteLoadHelpers {
+    static String field_f;
+    static int field_i;
+    static long field_d;
+    static SceneWidget field_j;
+    static SceneWidget field_g;
+    static SceneWidget field_h;
+    static String field_e;
+    static String field_c;
+    static String field_b;
+    static SceneWidget field_a;
+
+    final static Sprite[] loadSprites(ResourceArchive param0, int param1, int param2, int param3) {
+        RuntimeException var4 = null;
+        Sprite[] stackIn_2_0 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        String stackIn_10_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (param3 != -3) {
+            stackIn_2_0 = (Sprite[]) null;
+            return stackIn_2_0;
+          }
+          if (PieceTiming.decodeSpriteSheetFromArchive(param2, false, param0, param1)) {
+            return SpriteLoadHelpers.buildSprites(0);
+          }
+          return null;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var4 = decompiledCaughtException;
+          stackIn_9_0 = var4;
+          stackIn_9_1 = new StringBuilder().append("ff.B(");
+          if (param0 == null) {
+            stackIn_10_2 = "null";
+          } else {
+            stackIn_10_2 = "{...}";
+          }
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+        }
+    }
+
+    public static void releaseStatics(int param0) {
+        field_f = null;
+        field_a = null;
+        field_h = null;
+        field_e = null;
+        field_j = null;
+        field_c = null;
+        int var1 = -117 / ((param0 - 51) / 43);
+        field_b = null;
+        field_g = null;
+    }
+
+    final static String requestRemoveFriend(int param0, String param1, byte param2) {
+        String stackIn_4_0 = null;
+        String stackIn_8_0 = null;
+        String stackIn_11_0 = null;
+        Object stackIn_19_0 = null;
+        RuntimeException stackIn_22_0 = null;
+        StringBuilder stackIn_22_1 = null;
+        String stackIn_23_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var3 = null;
+        int var5 = 0;
+        int var6 = 0;
+        SocialListEntry var7 = null;
+        SocialListEntry var8 = null;
+        CipherPacketBuffer var9 = null;
+        CharSequence var10 = null;
+        var6 = Pixelate.field_H ? 1 : 0;
+        try {
+          var10 = (CharSequence) ((Object) param1);
+          if (!Bzip2State.isValidPlayerName((byte) -126, var10)) {
+            stackIn_4_0 = PatchNoteUsage.field_n;
+            return stackIn_4_0;
+          }
+          if (ValidatedTextWidget.field_db != 2) {
+            stackIn_8_0 = GameRequestHelpers.field_c;
+            return stackIn_8_0;
+          }
+          var8 = LoadingStepTracker.findFriend(param1, -1);
+          if (var8 == null) {
+            stackIn_11_0 = AlphaContainer.formatTemplate(AccountMessagePanel.field_R, 41, new String[]{param1});
+            return stackIn_11_0;
+          }
+          VerticalScrollbar.field_Hb.traverseFrom(var8, param2 + 1504642379);
+          while (true) {
+            var7 = (SocialListEntry) (VerticalScrollbar.field_Hb.next(param2 ^ -1504642185));
+            if (var7 != null) {
+              var7.field_Kb = var7.field_Kb - 1;
+              continue;
+            }
+            break;
+          }
+          var8.unlink(2779);
+          var8.unlinkSecondary(17);
+          if (param2 != -106) {
+            field_d = -123L;
+          }
+          DialWidgetPainter.field_q = DialWidgetPainter.field_q - 1;
+          var9 = ChatMessage.field_f;
+          var9.writeOpcode(param0, 15514);
+          var9.position = var9.position + 1;
+          var5 = var9.position;
+          var9.writeByte(160, 1);
+          var9.writeString((byte) -41, param1);
+          var9.backpatchByteLength(-var5 + var9.position, -1);
+          stackIn_19_0 = null;
+          return (String) (stackIn_19_0);
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          stackIn_22_0 = var3;
+          stackIn_22_1 = new StringBuilder().append("ff.E(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_23_2 = "null";
+          } else {
+            stackIn_23_2 = "{...}";
+          }
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param2).append(')').toString());
+        }
+    }
+
+    private final static Sprite[] buildSprites(int param0) {
+        int var2 = 0;
+        int var3 = 0;
+        byte[] var4 = null;
+        int[] var5 = null;
+        int var6 = 0;
+        int var7 = Pixelate.field_H ? 1 : 0;
+        Sprite[] var1 = new Sprite[SocialListEntry.field_Qb];
+        for (var2 = param0; var2 < SocialListEntry.field_Qb; var2++) {
+          var3 = RequestState.field_c[var2] * ByteStorage.field_g[var2];
+          var4 = SocialPanel.field_f[var2];
+          var5 = new int[var3];
+          for (var6 = 0; var6 < var3; var6++) {
+            var5[var6] = AsyncValidationResult.field_g[VolumeControlledVoice.bitAnd((int) var4[var6], 255)];
+          }
+          var1[var2] = new Sprite(StrongCacheReference.field_y, TutorialPageGlobals.field_a, IntrusiveNode.field_b[var2], ConnectionStateGlobals.field_b[var2], ByteStorage.field_g[var2], RequestState.field_c[var2], var5);
+        }
+        LoadingStepTracker.clearSpriteDecodeBuffers(140);
+        return var1;
+    }
+
+    final static IndexedSprite[] loadIndexedSprites(ResourceArchive param0, int param1, int param2, byte param3) {
+        int var4_int = 0;
+        RuntimeException var4 = null;
+        IndexedSprite[] stackIn_4_0 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_8_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (!PieceTiming.decodeSpriteSheetFromArchive(param1, false, param0, param2)) {
+            return null;
+          }
+          var4_int = 101 % ((-49 - param3) / 52);
+          stackIn_4_0 = ReportAbuseHelpers.buildIndexedSprites((byte) -96);
+          return stackIn_4_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var4 = decompiledCaughtException;
+          stackIn_7_0 = var4;
+          stackIn_7_1 = new StringBuilder().append("ff.C(");
+          if (param0 == null) {
+            stackIn_8_2 = "null";
+          } else {
+            stackIn_8_2 = "{...}";
+          }
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+        }
+    }
+
+    static {
+        field_f = "Unpacking music";
+        field_e = "Add <%0> to ignore list";
+        field_b = "Invite more players, or alternatively try changing the '<%0>' setting.";
+        field_c = "<%0> might change the options - wait and see.";
+    }
+}

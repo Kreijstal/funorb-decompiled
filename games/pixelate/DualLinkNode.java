@@ -3,7 +3,7 @@
  */
 class DualLinkNode extends IntrusiveNode {
     long field_q;
-    static wm field_l;
+    static ReportReason field_l;
     DualLinkNode secondaryPrevious;
     DualLinkNode secondaryNext;
     static String field_n;
@@ -75,7 +75,7 @@ class DualLinkNode extends IntrusiveNode {
     }
 
     static {
-        field_l = new wm(7, 0, 1, 1);
+        field_l = new ReportReason(7, 0, 1, 1);
         field_m = "Play rated game";
         field_n = "If you do nothing the game will revert to normal view in <%0> second.";
         field_k = new String[]{"Showing by rating", "Showing by win percentage"};

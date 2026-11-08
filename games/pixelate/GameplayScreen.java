@@ -9,7 +9,7 @@ final class GameplayScreen extends MenuScreen {
         if (param0 > -13) {
           return;
         }
-        la.changeScreen(!gq.isOfflineOrAccountUi(127) ? 0 : 12, -1, false, -25528);
+        ScreenChangeHelpers.changeScreen(!AlternateNameCredentials.isOfflineOrAccountUi(127) ? 0 : 12, -1, false, -25528);
     }
 
     GameplayScreen(int param0, int param1, int param2, int param3, int param4, int[] param5) {
@@ -149,12 +149,12 @@ final class GameplayScreen extends MenuScreen {
           var3 = StatusBar.field_k;
           var4 = TextFieldValidator.field_h.font.wrappedLineCount(param0, 500);
           var5 = TextFieldValidator.field_h.font.getWrappedWidth(param0, 500) + 6;
-          var6 = 2 + var4 * fq.field_q;
-          var7 = ui.fitHorizontalPosition(12, var2_int, var5, (byte) -1);
+          var6 = 2 + var4 * RankingSummaryScreen.field_q;
+          var7 = Cp1252DecodeHelpers.fitHorizontalPosition(12, var2_int, var5, (byte) -1);
           var8 = ScorePopup.fitVerticalPosition(var6, var3, 20, (byte) 112);
           SoftwareRasterizer.drawRectangle(var7, var8, var5, var6, 0);
           SoftwareRasterizer.fillRectangle(1 + var7, 1 + var8, param1 + var5, var6 - 2, 16777088);
-          TextFieldValidator.field_h.font.drawParagraph(param0, 3 + var7, TickClock.field_d + (1 + (var8 - TextFieldValidator.field_h.font.maxAscent)), 500, 1000, 0, -1, 0, 0, fq.field_q);
+          TextFieldValidator.field_h.font.drawParagraph(param0, 3 + var7, TickClock.field_d + (1 + (var8 - TextFieldValidator.field_h.font.maxAscent)), 500, 1000, 0, -1, 0, 0, RankingSummaryScreen.field_q);
         } catch (RuntimeException runtimeException) {
           throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "dp.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -175,7 +175,7 @@ final class GameplayScreen extends MenuScreen {
         MatchController var5;
         var2 = null;
         if (this.field_l == 1) {
-          var4 = ro.field_e;
+          var4 = NameSuggestionHelpers.field_e;
           var2_ref = var4;
           if (var4 == null) {
             super.drawScreenBackground(0);
@@ -183,19 +183,19 @@ final class GameplayScreen extends MenuScreen {
             var4.render(false, param0 + param0);
             if (this.field_l == 1) {
               SoftwareRasterizer.darkenRectangle(0, 0, 640, 480);
-              rh.drawBackgroundSquares((byte) 121);
+              HighscoreSubmission.drawBackgroundSquares((byte) 121);
             }
           }
         } else {
           if (this.field_l == 2) {
-            var3 = ro.field_e;
+            var3 = NameSuggestionHelpers.field_e;
             if (var3 == null) {
               super.drawScreenBackground(0);
             } else {
               var3.render(false, param0 + param0);
               if (this.field_l == 1) {
                 SoftwareRasterizer.darkenRectangle(0, 0, 640, 480);
-                rh.drawBackgroundSquares((byte) 121);
+                HighscoreSubmission.drawBackgroundSquares((byte) 121);
               }
             }
           } else {
@@ -206,7 +206,7 @@ final class GameplayScreen extends MenuScreen {
                 ((MatchController) (var2)).render(false, param0 + param0);
                 if (this.field_l == 1) {
                   SoftwareRasterizer.darkenRectangle(0, 0, 640, 480);
-                  rh.drawBackgroundSquares((byte) 121);
+                  HighscoreSubmission.drawBackgroundSquares((byte) 121);
                 }
               }
             } else {
@@ -217,7 +217,7 @@ final class GameplayScreen extends MenuScreen {
                 var5.render(false, param0 + param0);
                 if (this.field_l == 1) {
                   SoftwareRasterizer.darkenRectangle(0, 0, 640, 480);
-                  rh.drawBackgroundSquares((byte) 121);
+                  HighscoreSubmission.drawBackgroundSquares((byte) 121);
                 }
               }
             }

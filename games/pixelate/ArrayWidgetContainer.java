@@ -5,7 +5,7 @@ import java.util.*;
 
 abstract class ArrayWidgetContainer extends UiComponent implements UiContainerMarker {
     UiComponent[] children;
-    static fp field_F;
+    static NoticeKind field_F;
     static String field_M;
     static java.awt.Image field_K;
     static Sprite field_H;
@@ -119,7 +119,7 @@ abstract class ArrayWidgetContainer extends UiComponent implements UiContainerMa
 
     final static boolean isAccountUiActive(byte param0) {
         if (param0 < 56) {
-          field_F = (fp) null;
+          field_F = (NoticeKind) null;
         }
         return IconTextComponent.field_Nb;
     }
@@ -137,7 +137,7 @@ abstract class ArrayWidgetContainer extends UiComponent implements UiContainerMa
         if (param0 != 1) {
           return true;
         }
-        stackIn_6_0 = (null != he.field_f) && (he.field_f.handleNormalizedNameKey((byte) -87));
+        stackIn_6_0 = (null != CanvasInputHelpers.field_f) && (CanvasInputHelpers.field_f.handleNormalizedNameKey((byte) -87));
         return stackIn_6_0;
     }
 
@@ -245,8 +245,8 @@ abstract class ArrayWidgetContainer extends UiComponent implements UiContainerMa
           MainMenuScreen.field_q.setMasterVolume((byte) 30, param0);
         }
         int var2 = -13 % ((52 - param1) / 59);
-        if (ri.field_a != null) {
-          ri.field_a.setVolume(param0, (byte) 2);
+        if (ChatHistoryAllocator.field_a != null) {
+          ChatHistoryAllocator.field_a.setVolume(param0, (byte) 2);
         }
     }
 
@@ -304,7 +304,7 @@ abstract class ArrayWidgetContainer extends UiComponent implements UiContainerMa
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1) {
-            field_F = (fp) null;
+            field_F = (NoticeKind) null;
           }
           if (this.beginDebugDescription(-90, param2, param0, param3)) {
             this.appendDebugBody(param2, (byte) -2, param3, param0);
@@ -345,10 +345,10 @@ abstract class ArrayWidgetContainer extends UiComponent implements UiContainerMa
         RuntimeException decompiledCaughtException = null;
         var2 = Pixelate.field_H ? 1 : 0;
         try {
-          wa.field_c.handlePointerEvents(hf.field_w, true, (byte) 99, ph.field_o);
-          wa.field_c.updatePanels((byte) 112);
+          SpriteBuildHelpers.field_c.handlePointerEvents(AchievementRecord.field_w, true, (byte) 99, AchievementBannerEntry.field_o);
+          SpriteBuildHelpers.field_c.updatePanels((byte) 112);
           while (DirectByteStorage.pollKeyEvent(120)) {
-            wa.field_c.processKey(DualLinkDeque.field_f, ke.field_a, false);
+            SpriteBuildHelpers.field_c.processKey(DualLinkDeque.field_f, KeyEventGlobals.field_a, false);
           }
           if (QuickChatPhraseCache.field_h != -1) {
             var1_int = QuickChatPhraseCache.field_h;
@@ -359,7 +359,7 @@ abstract class ArrayWidgetContainer extends UiComponent implements UiContainerMa
           if (param0 <= 51) {
             ArrayWidgetContainer.isAccountUiActive((byte) -82);
           }
-          if (dk.field_c) {
+          if (NineSliceFrameHelpers.field_c) {
             stackIn_12_0 = 3;
             return stackIn_12_0;
           }
@@ -367,7 +367,7 @@ abstract class ArrayWidgetContainer extends UiComponent implements UiContainerMa
             stackIn_16_0 = 1;
             return stackIn_16_0;
           }
-          if (!an.field_e.isComplete(123)) {
+          if (!CaretLayoutHelpers.field_e.isComplete(123)) {
             stackIn_20_0 = 1;
             return stackIn_20_0;
           }
@@ -758,7 +758,7 @@ abstract class ArrayWidgetContainer extends UiComponent implements UiContainerMa
     }
 
     static {
-        field_F = new fp();
+        field_F = new NoticeKind();
         field_M = "<%0> disconnected.";
         field_I = new char[]{(char)8364, (char)0, (char)8218, (char)402, (char)8222, (char)8230, (char)8224, (char)8225, (char)710, (char)8240, (char)352, (char)8249, (char)338, (char)0, (char)381, (char)0, (char)0, (char)8216, (char)8217, (char)8220, (char)8221, (char)8226, (char)8211, (char)8212, (char)732, (char)8482, (char)353, (char)8250, (char)339, (char)0, (char)382, (char)376};
     }

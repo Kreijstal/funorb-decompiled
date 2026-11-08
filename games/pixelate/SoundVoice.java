@@ -91,12 +91,12 @@ final class SoundVoice extends IntrusiveNode {
         if (param0 <= 11) {
           return;
         }
-        if (null == ib.field_f) {
+        if (null == GridSize.field_f) {
           return;
         }
-        MenuInputState.removeCanvasInputListeners(ib.field_f, 0);
-        ib.field_f.closeFrame(6511, mc.field_k);
-        ib.field_f = null;
+        MenuInputState.removeCanvasInputListeners(GridSize.field_f, 0);
+        GridSize.field_f.closeFrame(6511, AchievementMaskRequest.field_k);
+        GridSize.field_f = null;
         if (GzipDecoder.field_c != null) {
           GzipDecoder.field_c.restoreSavedSize(-101);
         }
@@ -112,22 +112,22 @@ final class SoundVoice extends IntrusiveNode {
         if (param1 <= param3) {
           if (param3 >= param4) {
             if (param1 >= param4) {
-              cn.rasterFlatMeshTriangle(param2, param1, param3, param5, param7, SoftwareRasterizer.field_k, false, param0, param4);
+              AccountServerRequestHelpers.rasterFlatMeshTriangle(param2, param1, param3, param5, param7, SoftwareRasterizer.field_k, false, param0, param4);
             } else {
-              cn.rasterFlatMeshTriangle(param0, param4, param3, param5, param7, SoftwareRasterizer.field_k, false, param2, param1);
+              AccountServerRequestHelpers.rasterFlatMeshTriangle(param0, param4, param3, param5, param7, SoftwareRasterizer.field_k, false, param2, param1);
             }
           } else {
-            cn.rasterFlatMeshTriangle(param7, param3, param4, param5, param0, SoftwareRasterizer.field_k, false, param2, param1);
+            AccountServerRequestHelpers.rasterFlatMeshTriangle(param7, param3, param4, param5, param0, SoftwareRasterizer.field_k, false, param2, param1);
           }
         } else {
           if (param4 <= param1) {
             if (param4 <= param3) {
-              cn.rasterFlatMeshTriangle(param7, param3, param1, param5, param2, SoftwareRasterizer.field_k, false, param0, param4);
+              AccountServerRequestHelpers.rasterFlatMeshTriangle(param7, param3, param1, param5, param2, SoftwareRasterizer.field_k, false, param0, param4);
             } else {
-              cn.rasterFlatMeshTriangle(param0, param4, param1, param5, param2, SoftwareRasterizer.field_k, false, param7, param3);
+              AccountServerRequestHelpers.rasterFlatMeshTriangle(param0, param4, param1, param5, param2, SoftwareRasterizer.field_k, false, param7, param3);
             }
           } else {
-            cn.rasterFlatMeshTriangle(param2, param1, param4, param5, param0, SoftwareRasterizer.field_k, false, param7, param3);
+            AccountServerRequestHelpers.rasterFlatMeshTriangle(param2, param1, param4, param5, param0, SoftwareRasterizer.field_k, false, param7, param3);
           }
         }
     }

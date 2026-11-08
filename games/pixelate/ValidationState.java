@@ -28,7 +28,7 @@ final class ValidationState {
 
     final static void setLegacyMenuFrameStyle(int param0, int param1, Sprite[] param2, int param3) {
         try {
-          NodeHashTable.field_c = new sb(param2);
+          NodeHashTable.field_c = new NineSliceFrame(param2);
           AudioService.field_d = param1;
           MouseWheelHandler.field_d = param0;
           ValidationState.positionLegacyMenuFrame(param3);
@@ -45,14 +45,14 @@ final class ValidationState {
         if (param0 == -1501881951) {
           var1 = ResizableModalPanel.getLegacyMenuHeight(param0 + 1501881973);
           var2 = EmailCredentials.getMessageMenuHeight(107);
-          NodeHashTable.field_c.draw(-AudioService.field_d + ce.field_c, (AudioService.field_d << 1) + var2, param0 + 1501881950, (MouseWheelHandler.field_d << 1) + var1, -MouseWheelHandler.field_d + qn.field_o);
+          NodeHashTable.field_c.draw(-AudioService.field_d + ChatChannelGlobals.field_c, (AudioService.field_d << 1) + var2, param0 + 1501881950, (MouseWheelHandler.field_d << 1) + var1, -MouseWheelHandler.field_d + PatchNoteUsage.field_o);
           GzipDecoder.centreMessageMenu(88);
           return;
         }
         ValidationState.releaseStatics(-112);
         var1Lifetime1 = ResizableModalPanel.getLegacyMenuHeight(param0 + 1501881973);
         var2Lifetime1 = EmailCredentials.getMessageMenuHeight(107);
-        NodeHashTable.field_c.draw(-AudioService.field_d + ce.field_c, (AudioService.field_d << 1) + var2Lifetime1, param0 + 1501881950, (MouseWheelHandler.field_d << 1) + var1Lifetime1, -MouseWheelHandler.field_d + qn.field_o);
+        NodeHashTable.field_c.draw(-AudioService.field_d + ChatChannelGlobals.field_c, (AudioService.field_d << 1) + var2Lifetime1, param0 + 1501881950, (MouseWheelHandler.field_d << 1) + var1Lifetime1, -MouseWheelHandler.field_d + PatchNoteUsage.field_o);
         GzipDecoder.centreMessageMenu(88);
     }
 

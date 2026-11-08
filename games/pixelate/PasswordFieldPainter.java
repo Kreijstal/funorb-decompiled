@@ -64,7 +64,7 @@ final class PasswordFieldPainter extends GradientOutlineTextPainter {
               if (param0 != 93) {
                 return;
               }
-              param1.getAppletContext().showDocument(lg.withSessionParameters(false, param1, var2), "_top");
+              param1.getAppletContext().showDocument(LoginCookieHelpers.withSessionParameters(false, param1, var2), "_top");
               return;
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
@@ -92,7 +92,7 @@ final class PasswordFieldPainter extends GradientOutlineTextPainter {
     }
 
     PasswordFieldPainter(int param0) {
-        this(he.field_d, param0);
+        this(CanvasInputHelpers.field_d, param0);
     }
 
     static {

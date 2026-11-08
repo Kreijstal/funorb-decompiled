@@ -39,7 +39,7 @@ final class EmailConfirmationValidator extends TextFieldValidator {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.matchingValidator.validateText(param1, true) == sk.field_a) {
+          if (this.matchingValidator.validateText(param1, true) == LobbyFrameHelpers.field_a) {
             stackIn_2_0 = this.matchingValidator.describeText(-80, param1);
             return stackIn_2_0;
           }
@@ -47,8 +47,8 @@ final class EmailConfirmationValidator extends TextFieldValidator {
             stackIn_5_0 = (String) null;
             return stackIn_5_0;
           }
-          if (this.validateText(param1, true) != sk.field_a) {
-            return e.field_c;
+          if (this.validateText(param1, true) != LobbyFrameHelpers.field_a) {
+            return ConnectionStateGlobals.field_c;
           }
           stackIn_9_0 = SpriteCheckboxPainter.field_e;
           return stackIn_9_0;
@@ -100,8 +100,8 @@ final class EmailConfirmationValidator extends TextFieldValidator {
             stackIn_2_0 = (ValidationState) null;
             return stackIn_2_0;
           }
-          if (this.matchingValidator.validateText(param0, param1) == sk.field_a) {
-            stackIn_5_0 = sk.field_a;
+          if (this.matchingValidator.validateText(param0, param1) == LobbyFrameHelpers.field_a) {
+            stackIn_5_0 = LobbyFrameHelpers.field_a;
             return stackIn_5_0;
           }
           if (!param0.equals(this.checkedEmail)) {
@@ -114,7 +114,7 @@ final class EmailConfirmationValidator extends TextFieldValidator {
             this.field_q = var3.isSuccessful(-20425);
           }
           if (!this.field_q) {
-            stackIn_16_0 = sk.field_a;
+            stackIn_16_0 = LobbyFrameHelpers.field_a;
           } else {
             stackIn_16_0 = RetroBlock.field_g;
           }

@@ -19,15 +19,15 @@ abstract class CanvasRasterBuffer {
     final static boolean hasPopupOrQuickChat(int param0) {
         if (param0 != 12742) {
           CanvasRasterBuffer.hasPopupOrQuickChat(-110);
-          if (ri.field_f == null) {
-            return un.field_l ? true : false;
+          if (ChatHistoryAllocator.field_f == null) {
+            return PatchEnvelopeSet.field_l ? true : false;
           }
           return true;
         }
-        if (ri.field_f != null) {
+        if (ChatHistoryAllocator.field_f != null) {
           return true;
         }
-        if (!un.field_l) {
+        if (!PatchEnvelopeSet.field_l) {
           return false;
         }
         return true;

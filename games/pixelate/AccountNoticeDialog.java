@@ -87,7 +87,7 @@ final class AccountNoticeDialog extends ResizableModalPanel implements ButtonLis
         this.field_N = false;
     }
 
-    AccountNoticeDialog(ModalStack param0, fp param1) {
+    AccountNoticeDialog(ModalStack param0, NoticeKind param1) {
         super(param0, 200, 150);
         Object var3 = null;
         Object stackIn_12_0 = null;
@@ -109,8 +109,8 @@ final class AccountNoticeDialog extends ResizableModalPanel implements ButtonLis
               }
             } else {
               this.field_C = this.field_C + 10;
-              var3 = l.field_o;
-              if (ke.isCanvasResizeAllowed(false)) {
+              var3 = MessageScreen.field_o;
+              if (KeyEventGlobals.isCanvasResizeAllowed(false)) {
                 this.field_C = this.field_C + 20;
                 var3 = ViewportController.field_e;
               }
@@ -121,7 +121,7 @@ final class AccountNoticeDialog extends ResizableModalPanel implements ButtonLis
           var4.field_E = this.field_E;
           var4.field_C = 80;
           var4.field_p = 50;
-          var4.field_y = (WidgetPainter) ((Object) new TextWidgetPainter(ep.field_b, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
+          var4.field_y = (WidgetPainter) ((Object) new TextWidgetPainter(PolygonClipHelpers.field_b, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.addChild(var4, 80);
           this.field_ab = this.appendButton(TabbedPanel.field_Hb, (byte) -126, (UiListener) (this));
           return;
@@ -183,22 +183,22 @@ final class AccountNoticeDialog extends ResizableModalPanel implements ButtonLis
         int var10Lifetime1;
         var12 = Pixelate.field_H ? 1 : 0;
         try {
-          cm.layoutSidePanels(RisingBubble.field_g, param2 ^ 4743);
+          VolumeControlledVoice.layoutSidePanels(RisingBubble.field_g, param2 ^ 4743);
           if (DraggableWidget.field_S != null) {
-            wm.field_d.height = 0;
-            var15 = wm.field_d;
+            ReportReason.field_d.height = 0;
+            var15 = ReportReason.field_d;
             var17 = var15;
             var17.field_K = 0;
-            var5 = ep.field_a;
-            ep.field_a.height = 0;
+            var5 = PolygonClipHelpers.field_a;
+            PolygonClipHelpers.field_a.height = 0;
             var5.field_K = 0;
-            var6 = nk.field_e;
-            nk.field_e.height = 0;
+            var6 = ChatPanelHelpers.field_e;
+            ChatPanelHelpers.field_e.height = 0;
             var6.field_K = 0;
             VerticalScrollbar.field_Qb.field_cb = RisingBubble.field_d.toUpperCase();
             var7 = (Bzip2State.field_A.field_K + 2) / 2;
-            nk.field_e.setBounds(Bzip2State.field_A.height - 40, 40, 0, 256, -2 + var7);
-            ep.field_a.setBounds(Bzip2State.field_A.height - 40, 40, var7, 256, Bzip2State.field_A.field_K - var7);
+            ChatPanelHelpers.field_e.setBounds(Bzip2State.field_A.height - 40, 40, 0, 256, -2 + var7);
+            PolygonClipHelpers.field_a.setBounds(Bzip2State.field_A.height - 40, 40, var7, 256, Bzip2State.field_A.field_K - var7);
             if (LinkButtonPainter.field_a.length == 1 &&
               LinkButtonPainter.field_a[0] == 2) {
               var8 = 0;
@@ -228,58 +228,58 @@ final class AccountNoticeDialog extends ResizableModalPanel implements ButtonLis
                 break;
               }
             }
-            ep.field_a.field_rb = true;
+            PolygonClipHelpers.field_a.field_rb = true;
             if (!TriangleMesh.field_r) {
-              stackIn_34_0 = ep.field_a;
+              stackIn_34_0 = PolygonClipHelpers.field_a;
               if (var8 == 0) {
                 stackIn_35_1 = EmailValidator.field_n;
               } else {
                 stackIn_35_1 = MatchingTextValidator.field_x;
               }
               stackIn_34_0.field_cb = ((String) (Object) stackIn_35_1).toUpperCase();
-              stackIn_37_0 = an.field_a;
+              stackIn_37_0 = CaretLayoutHelpers.field_a;
               if (var8 != 0) {
                 stackIn_38_1 = HuffmanCodec.field_d;
               } else {
                 stackIn_38_1 = AccountRequestDialog.field_sb;
               }
-              stackIn_37_0.field_cb = AlphaContainer.formatTemplate(stackIn_38_1, 59, new String[]{ep.field_a.field_cb});
+              stackIn_37_0.field_cb = AlphaContainer.formatTemplate(stackIn_38_1, 59, new String[]{PolygonClipHelpers.field_a.field_cb});
               ValidatedTextWidget.field_kb.field_rb = true;
-              nk.field_e.field_cb = dn.field_b;
+              ChatPanelHelpers.field_e.field_cb = DefaultQuickChatPhraseListener.field_b;
               PictureStrip.field_f = true;
               if (null != Checkbox.field_Z) {
-                ib.field_b = false;
+                GridSize.field_b = false;
                 if (null == TimerBarDemo.field_o) {
-                  RankingQuery.field_t = new boolean[fj.field_b];
-                  TimerBarDemo.field_o = new byte[fj.field_b];
+                  RankingQuery.field_t = new boolean[MouseInputGlobals.field_b];
+                  TimerBarDemo.field_o = new byte[MouseInputGlobals.field_b];
                 }
                 PictureStrip.field_f = false;
                 var13 = 0;
                 var9_intLifetime1 = var13;
-                while (fj.field_b > var13) {
+                while (MouseInputGlobals.field_b > var13) {
                   RankingQuery.field_t[var13] = false;
                   var13++;
                 }
-                CachedTextLayout.findValidSettingCombination(fj.field_b, 0, (byte) 91, true, -1, -1, DraggableWidget.field_S, -1);
-                if (!(wo.field_h < 2) &&
+                CachedTextLayout.findValidSettingCombination(MouseInputGlobals.field_b, 0, (byte) 91, true, -1, -1, DraggableWidget.field_S, -1);
+                if (!(SocialPanel.field_h < 2) &&
                   EmailValidator.field_m[12]) {
                   PictureStrip.field_f = true;
                 }
               }
               if (!PictureStrip.field_f) {
-                ep.field_a.field_rb = false;
-                if (ep.field_a.field_R) {
+                PolygonClipHelpers.field_a.field_rb = false;
+                if (PolygonClipHelpers.field_a.field_R) {
                   var9 = null;
-                  if (ib.field_b) {
-                    var9 = "<col=A00000>" + pk.field_e + "</col>";
+                  if (GridSize.field_b) {
+                    var9 = "<col=A00000>" + MeshDecodeHelpers.field_e + "</col>";
                     var11 = var9;
                     var9 = var11;
                     var11Lifetime1 = var9;
                     var9 = var11Lifetime1;
                   }
-                  for (var10Lifetime1 = 0; var10Lifetime1 < fj.field_b; var10Lifetime1++) {
+                  for (var10Lifetime1 = 0; var10Lifetime1 < MouseInputGlobals.field_b; var10Lifetime1++) {
                     if (RankingQuery.field_t[var10Lifetime1]) {
-                      var11_ref = "<col=A00000>" + jk.field_e[var10Lifetime1] + "</col>";
+                      var11_ref = "<col=A00000>" + MeshColourEntry.field_e[var10Lifetime1] + "</col>";
                       var9 = var11_ref;
                       var9 = var11_ref;
                       if (var9 != null) {
@@ -289,38 +289,38 @@ final class AccountNoticeDialog extends ResizableModalPanel implements ButtonLis
                       }
                     }
                   }
-                  PuzzleThumbnail.field_o = "<col=A00000>" + IconTextComponent.field_Gb + "<br>" + ij.field_p + (String) (var9);
+                  PuzzleThumbnail.field_o = "<col=A00000>" + IconTextComponent.field_Gb + "<br>" + BlankScreen.field_p + (String) (var9);
                 }
               }
             } else {
-              an.field_a.field_cb = ScoreMarkerDemo.field_g;
+              CaretLayoutHelpers.field_a.field_cb = ScoreMarkerDemo.field_g;
               ValidatedTextWidget.field_kb.field_rb = false;
               if (var8 != 0) {
                 stackIn_25_0 = AgeValidator.field_o;
               } else {
-                stackIn_25_0 = oi.field_b;
+                stackIn_25_0 = RegistrationHelpers.field_b;
               }
               var16 = stackIn_25_0;
               var9 = var16;
               var9 = var16;
               var9 = var16;
-              var10Lifetime1 = nk.field_e.font.textWidth(var16) + nk.field_e.font.charWidth('.') * 3;
+              var10Lifetime1 = ChatPanelHelpers.field_e.font.textWidth(var16) + ChatPanelHelpers.field_e.font.charWidth('.') * 3;
               if (16 == (48 & AchievementsScreen.field_o)) {
                 var9 = var16 + ".";
               }
-              nk.field_e.field_C = (nk.field_e.field_K - var10Lifetime1) / 2;
-              nk.field_e.horizontalAlignment = 0;
+              ChatPanelHelpers.field_e.field_C = (ChatPanelHelpers.field_e.field_K - var10Lifetime1) / 2;
+              ChatPanelHelpers.field_e.horizontalAlignment = 0;
               if ((AchievementsScreen.field_o & 48) == 32) {
                 var9 = (String) (var9) + "..";
               }
               if ((AchievementsScreen.field_o & 48) == 48) {
                 var9 = (String) (var9) + "...";
               }
-              nk.field_e.field_cb = (String) (var9);
-              ep.field_a.field_cb = IntrusiveNode.field_f.toUpperCase();
+              ChatPanelHelpers.field_e.field_cb = (String) (var9);
+              PolygonClipHelpers.field_a.field_cb = IntrusiveNode.field_f.toUpperCase();
             }
           }
-          stackIn_69_0 = ff.field_h;
+          stackIn_69_0 = SpriteLoadHelpers.field_h;
           stackIn_69_1 = -28476;
           stackIn_70_2 = (param1) && (!param3) && (!EmergentBehaviourBackground.field_o);
           ((SceneWidget) (Object) stackIn_69_0).updateInputFullScreen(stackIn_69_1, stackIn_70_2);
@@ -331,20 +331,20 @@ final class AccountNoticeDialog extends ResizableModalPanel implements ButtonLis
           if (param2 != 3) {
             field_bb = (String[]) null;
           }
-          stackIn_81_0 = ra.field_e;
+          stackIn_81_0 = NineSliceSpriteFactory.field_e;
           stackIn_81_1 = param2 ^ -28473;
           stackIn_82_2 = (param1) && (!param3) && (EmergentBehaviourBackground.field_o);
           ((SceneWidget) (Object) stackIn_81_0).updateInputFullScreen(stackIn_81_1, stackIn_82_2);
-          nd.field_b.field_g.processTabPresses((byte) -108);
+          HowToPlayDemoHelpers.field_b.field_g.processTabPresses((byte) -108);
           if (null != DraggableWidget.field_S) {
             if (0 != ValidatedTextWidget.field_kb.field_P) {
               PairedTextColumns.sendNoticeAcknowledgement(1, param0);
             }
-            if (ep.field_a.field_P != 0) {
+            if (PolygonClipHelpers.field_a.field_P != 0) {
               if (!TriangleMesh.field_r) {
-                r.sendGameOptionSelection(param2 - 3, param0);
+                LobbySlideHelpers.sendGameOptionSelection(param2 - 3, param0);
               } else {
-                wo.sendSubtypeThreeRequest(-1, param0);
+                SocialPanel.sendSubtypeThreeRequest(-1, param0);
               }
             }
             LoginForm.updateGameOptionsPanel(true, DraggableWidget.field_S, param0, -1);

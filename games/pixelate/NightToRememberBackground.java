@@ -13,15 +13,15 @@ final class NightToRememberBackground extends BackgroundScene {
         super.tick(param0);
         this.field_p.launchBurst(440, 100, (byte) 116, 120, 0);
         this.field_q.launchBurst(440, 100, (byte) 116, 120, 0);
-        lg.field_a = lg.field_a - 4;
-        if (!(0 <= lg.field_a)) {
-          lg.field_a = 0;
+        LoginCookieHelpers.field_a = LoginCookieHelpers.field_a - 4;
+        if (!(0 <= LoginCookieHelpers.field_a)) {
+          LoginCookieHelpers.field_a = 0;
         }
     }
 
     final void render(boolean param0) {
         ClientException.field_g.drawOpaque(0, 0);
-        int var2 = lg.field_a >> 3;
+        int var2 = LoginCookieHelpers.field_a >> 3;
         SoftwareRasterizer.fillVerticalGradientAdditive(0, 0, 640, 480, 17, (var2 << 8) + (var2 * 2 + 34) + (var2 << 16));
         this.field_p.draw((byte) -123);
         this.field_q.draw((byte) -123);
@@ -29,7 +29,7 @@ final class NightToRememberBackground extends BackgroundScene {
         if (param0) {
           return;
         }
-        QuickChatPhraseCache.field_f.drawAdditive(0, -QuickChatPhraseCache.field_f.field_B + 480, lg.field_a);
+        QuickChatPhraseCache.field_f.drawAdditive(0, -QuickChatPhraseCache.field_f.field_B + 480, LoginCookieHelpers.field_a);
     }
 
     NightToRememberBackground(String param0, Sprite[] param1) {

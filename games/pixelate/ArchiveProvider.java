@@ -25,17 +25,17 @@ abstract class ArchiveProvider {
         if (param1 <= 110) {
           ArchiveProvider.releaseStatics((byte) -3);
           DraggableWidget.field_I.setBounds(param5, param0, param4, 256, param2);
-          if (null != bo.field_h) {
-            bo.field_h.layoutMenu(param0, param6 - di.field_a, param3, param6, (byte) -94, param0);
+          if (null != ScreenDisplayMode.field_h) {
+            ScreenDisplayMode.field_h.layoutMenu(param0, param6 - NumberFormatHelpers.field_a, param3, param6, (byte) -94, param0);
             return;
           }
           return;
         }
         DraggableWidget.field_I.setBounds(param5, param0, param4, 256, param2);
-        if (null == bo.field_h) {
+        if (null == ScreenDisplayMode.field_h) {
           return;
         }
-        bo.field_h.layoutMenu(param0, param6 - di.field_a, param3, param6, (byte) -94, param0);
+        ScreenDisplayMode.field_h.layoutMenu(param0, param6 - NumberFormatHelpers.field_a, param3, param6, (byte) -94, param0);
     }
 
     final static void closeContextMenu(int param0) {
@@ -44,19 +44,19 @@ abstract class ArchiveProvider {
         int var1Lifetime2;
         if (null == ProxySocketConnector.field_n) {
           ProxySocketConnector.field_n = null;
-          bj.field_d = null;
+          ChallengePuzzleHelpers.field_d = null;
           var1 = -128 / ((-64 - param0) / 33);
           return;
         }
         if (null != ProxySocketConnector.field_n.field_o) {
           ProxySocketConnector.field_n.field_o.field_U = false;
           ProxySocketConnector.field_n = null;
-          bj.field_d = null;
+          ChallengePuzzleHelpers.field_d = null;
           var1Lifetime1 = -128 / ((-64 - param0) / 33);
           return;
         }
         ProxySocketConnector.field_n = null;
-        bj.field_d = null;
+        ChallengePuzzleHelpers.field_d = null;
         var1Lifetime2 = -128 / ((-64 - param0) / 33);
     }
 

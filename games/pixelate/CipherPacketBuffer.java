@@ -112,28 +112,28 @@ final class CipherPacketBuffer extends PacketBuffer {
         try {
           stackIn_4_0 = ScoreMarkerBar.field_z.field_Gb;
           stackIn_4_1 = param1;
-          stackIn_5_2 = (bj.field_d == ScoreMarkerBar.field_z.field_Gb);
+          stackIn_5_2 = (ChallengePuzzleHelpers.field_d == ScoreMarkerBar.field_z.field_Gb);
           boolean decompiledFrameRemainder0 = true;
-          var3_int = ((ScrollContainer) (Object) stackIn_4_0).updateScrolling(stackIn_4_1, stackIn_5_2, 2, param0 * (3 * fq.field_q + 6), 0, 2 + fq.field_q) ? 1 : 0;
+          var3_int = ((ScrollContainer) (Object) stackIn_4_0).updateScrolling(stackIn_4_1, stackIn_5_2, 2, param0 * (3 * RankingSummaryScreen.field_q + 6), 0, 2 + RankingSummaryScreen.field_q) ? 1 : 0;
           var4 = ScoreMarkerBar.field_z.field_Fb.children;
           var5 = null;
           if (ValidatedTextWidget.field_db != 2) {
-            wa.field_f.field_rb = false;
+            SpriteBuildHelpers.field_f.field_rb = false;
             SceneWidget.field_E.field_cb = GrowableIntList.field_b;
             if (ValidatedTextWidget.field_db != 1) {
               ScoreMarkerBar.field_z.field_Gb.field_Ib.field_cb = FullscreenFocusCanvas.field_c;
               if (var19 != 0) {
-                ScoreMarkerBar.field_z.field_Gb.field_Ib.field_cb = ih.field_d;
+                ScoreMarkerBar.field_z.field_Gb.field_Ib.field_cb = TutorialTickHelpers.field_d;
               }
             } else {
-              ScoreMarkerBar.field_z.field_Gb.field_Ib.field_cb = ih.field_d;
+              ScoreMarkerBar.field_z.field_Gb.field_Ib.field_cb = TutorialTickHelpers.field_d;
             }
             GrowableIntList.resetChildLayouts(ScoreMarkerBar.field_z.field_Fb, false);
             decompiledFrameRemainder0 = (var19 != 0);
           }
           if (decompiledFrameRemainder0) {
-            wa.field_f.field_rb = true;
-            SceneWidget.field_E.field_cb = AlphaContainer.formatTemplate(ke.field_e, 78, new String[]{LabeledField.field_L});
+            SpriteBuildHelpers.field_f.field_rb = true;
+            SceneWidget.field_E.field_cb = AlphaContainer.formatTemplate(KeyEventGlobals.field_e, 78, new String[]{LabeledField.field_L});
             ScoreMarkerBar.field_z.field_Gb.field_Ib.field_cb = null;
             var6 = null;
             var7 = (SocialListEntry) (var4.first(1504642273));
@@ -147,7 +147,7 @@ final class CipherPacketBuffer extends PacketBuffer {
                   if (stackIn_18_0.children == null) {
                     var7.field_Pb = new SceneWidget(0L, SceneWidget.field_T);
                     var7.addChild(var7.field_Pb, (byte) 26);
-                    var7.field_Eb = new SceneWidget(0L, of.field_i);
+                    var7.field_Eb = new SceneWidget(0L, TextDecodeHelpers.field_i);
                     var7.addChild(var7.field_Eb, (byte) 26);
                     var7.field_Ob = new SceneWidget(0L, SceneWidget.field_T);
                     var7.addChild(var7.field_Ob, (byte) 26);
@@ -173,8 +173,8 @@ final class CipherPacketBuffer extends PacketBuffer {
                   if (null != var7.field_Gb &&
                     !var7.field_Gb.equals("")) {
                     var7.field_Ob.field_y = var11;
-                    var7.field_Ob.field_H = dk.field_e;
-                    var7.field_Ob.setBounds(var9, fq.field_q, 0, 256, 3 + dk.field_e.field_A);
+                    var7.field_Ob.field_H = NineSliceFrameHelpers.field_e;
+                    var7.field_Ob.setBounds(var9, RankingSummaryScreen.field_q, 0, 256, 3 + NineSliceFrameHelpers.field_e.field_A);
                     var12 = 1;
                   }
                   var7.field_Eb.field_y = var11;
@@ -188,7 +188,7 @@ final class CipherPacketBuffer extends PacketBuffer {
                   var13 = 0;
                   var14 = var7.field_K - 82;
                   if (var12 != 0) {
-                    var13 = dk.field_e.field_A + 3;
+                    var13 = NineSliceFrameHelpers.field_e.field_A + 3;
                     var14 = var14 - var13;
                   }
                   stackIn_45_0 = var7.field_Pb;
@@ -198,7 +198,7 @@ final class CipherPacketBuffer extends PacketBuffer {
                     stackIn_46_1 = var7.field_Fb;
                   }
                   stackIn_45_0.field_cb = stackIn_46_1;
-                  var7.field_Pb.setBounds(var9, fq.field_q, var13, 256, var14);
+                  var7.field_Pb.setBounds(var9, RankingSummaryScreen.field_q, var13, 256, var14);
                   stackIn_49_0 = var7.field_Eb;
                   if (null != var7.field_Nb) {
                     stackIn_50_1 = var7.field_Nb;
@@ -206,10 +206,10 @@ final class CipherPacketBuffer extends PacketBuffer {
                     stackIn_50_1 = LoadingStepTracker.field_g;
                   }
                   stackIn_49_0.field_cb = stackIn_50_1;
-                  var7.field_Eb.setBounds(var9, fq.field_q, -80 + var7.field_K, 256, 80);
+                  var7.field_Eb.setBounds(var9, RankingSummaryScreen.field_q, -80 + var7.field_K, 256, 80);
                   stackIn_54_0 = (var7.field_Pb.field_cb.equals(var7.field_Fb)) ? 0 : 1;
                   var15 = stackIn_54_0;
-                  var9 = var9 + fq.field_q;
+                  var9 = var9 + RankingSummaryScreen.field_q;
                   if (var3_int == 0) {
                     var7.pendingHeightDelta = -var7.height + var9;
                   }
@@ -227,14 +227,14 @@ final class CipherPacketBuffer extends PacketBuffer {
                     }
                   } else {
                     var16 = var7.field_Fb;
-                    em.openContextMenu((String) null, 0L, var16, -1, var7, -163, ScoreMarkerBar.field_z.field_Gb, (int[]) null, -1);
+                    ContextMenuHelpers.openContextMenu((String) null, 0L, var16, -1, var7, -163, ScoreMarkerBar.field_z.field_Gb, (int[]) null, -1);
                     var5 = var7;
                     if (var7.field_Nb != null &&
                       !TimerBar.isPrivateChatTarget(75, ProxySocketConnector.field_n.field_h) &&
                       !SoundVoice.field_q) {
                       if (!IsaacRandom.field_g) {
                         var17 = ProxySocketConnector.field_n;
-                        var18 = AlphaContainer.formatTemplate(nf.field_e, 46, new String[]{var16});
+                        var18 = AlphaContainer.formatTemplate(LoginFormGlobals.field_e, 46, new String[]{var16});
                         var17.field_b.addAction(var18, (byte) -105, 8);
                       }
                       var17Lifetime1 = ProxySocketConnector.field_n;
@@ -249,13 +249,13 @@ final class CipherPacketBuffer extends PacketBuffer {
                 stackIn_95_0 = ScoreMarkerBar.field_z.field_Ib;
               }
               if (((SceneWidget) (stackIn_95_0)).field_P != 0) {
-                he.field_f = new AccountNamePrompt(ScoreMarkerBar.field_z.field_Ib.field_tb, ScoreMarkerBar.field_z.field_Ib.screenY, ScoreMarkerBar.field_z.field_Ib.field_K, ScoreMarkerBar.field_z.field_Ib.height, BackgroundScene.field_j, SoundCache.field_c, TextFieldValidator.field_h, TextFieldValidator.field_h);
+                CanvasInputHelpers.field_f = new AccountNamePrompt(ScoreMarkerBar.field_z.field_Ib.field_tb, ScoreMarkerBar.field_z.field_Ib.screenY, ScoreMarkerBar.field_z.field_Ib.field_K, ScoreMarkerBar.field_z.field_Ib.height, BackgroundScene.field_j, SoundCache.field_c, TextFieldValidator.field_h, TextFieldValidator.field_h);
                 QuickChatCategoryCache.field_e = 0;
               }
               if (ScoreMarkerBar.field_z.field_Hb.field_P == 0) {
                 break;
               }
-              he.field_f = new AccountNamePrompt(ScoreMarkerBar.field_z.field_Hb.field_tb, ScoreMarkerBar.field_z.field_Hb.screenY, ScoreMarkerBar.field_z.field_Hb.field_K, ScoreMarkerBar.field_z.field_Hb.height, hp.field_Fb, SoundCache.field_c, TextFieldValidator.field_h, TextFieldValidator.field_h);
+              CanvasInputHelpers.field_f = new AccountNamePrompt(ScoreMarkerBar.field_z.field_Hb.field_tb, ScoreMarkerBar.field_z.field_Hb.screenY, ScoreMarkerBar.field_z.field_Hb.field_K, ScoreMarkerBar.field_z.field_Hb.height, HelpPopup.field_Fb, SoundCache.field_c, TextFieldValidator.field_h, TextFieldValidator.field_h);
               QuickChatCategoryCache.field_e = 1;
               break;
             }
@@ -325,7 +325,7 @@ final class CipherPacketBuffer extends PacketBuffer {
           if (param1 != -47) {
             field_q = -19;
           }
-          param2 = ub.replaceCharacter(param2, param1 ^ -47, "", '_');
+          param2 = UrlRewriteHelpers.replaceCharacter(param2, param1 ^ -47, "", '_');
           var3 = EmailValidator.reverseString(0, param0);
           stackIn_10_0 = (param2.indexOf(param0) != -1) || (param2.indexOf(var3) != -1);
           return stackIn_10_0;
@@ -409,7 +409,7 @@ final class CipherPacketBuffer extends PacketBuffer {
             if (var4 < param0) {
               incrementValue$1 = var3_int;
               var3_int++;
-              var5 = var5 + ((pk.field_a[var4] & this.payload[incrementValue$1]) << param0 - var4);
+              var5 = var5 + ((MeshDecodeHelpers.field_a[var4] & this.payload[incrementValue$1]) << param0 - var4);
               param0 = param0 - var4;
               var4 = 8;
               if (var6 == 0) {
@@ -417,13 +417,13 @@ final class CipherPacketBuffer extends PacketBuffer {
               }
             } else {
               if (~param0 != ~var4) {
-                var5 = var5 + (this.payload[var3_int] >> -param0 + var4 & pk.field_a[param0]);
+                var5 = var5 + (this.payload[var3_int] >> -param0 + var4 & MeshDecodeHelpers.field_a[param0]);
                 if (var6 == 0) {
                   break scanLoop1;
                 }
               }
             }
-            var5 = var5 + (this.payload[var3_int] & pk.field_a[var4]);
+            var5 = var5 + (this.payload[var3_int] & MeshDecodeHelpers.field_a[var4]);
             break;
           }
           stackIn_14_0 = var5;

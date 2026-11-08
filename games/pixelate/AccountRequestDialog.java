@@ -105,8 +105,8 @@ class AccountRequestDialog extends ContentTransitionDialog implements ButtonList
     final static void stepOverlayFadeOut(int param0) {
         int var2;
         var2 = Pixelate.field_H ? 1 : 0;
-        if (oo.field_b > 0) {
-          oo.field_b = oo.field_b - 1;
+        if (AchievementIconGlobals.field_b > 0) {
+          AchievementIconGlobals.field_b = AchievementIconGlobals.field_b - 1;
         } else {
           if (RisingBubble.field_g > 0) {
             RisingBubble.field_g = RisingBubble.field_g - 1;
@@ -116,25 +116,25 @@ class AccountRequestDialog extends ContentTransitionDialog implements ButtonList
             }
           }
         }
-        if (oo.field_b > 0) {
+        if (AchievementIconGlobals.field_b > 0) {
           EditableTextWidget.layoutAccountPanelSlide(124);
         }
         if (param0 <= 76) {
           field_ub = (int[]) null;
         }
         if (0 < RisingBubble.field_g) {
-          cm.layoutSidePanels(RisingBubble.field_g, 4740);
+          VolumeControlledVoice.layoutSidePanels(RisingBubble.field_g, 4740);
         }
         if (Checkbox.field_W <= 0) {
           return;
         }
-        cm.layoutSidePanels(Checkbox.field_W, 4740);
+        VolumeControlledVoice.layoutSidePanels(Checkbox.field_W, 4740);
     }
 
     final void showNoticeContent(int param0) {
         this.field_rb.setColours((byte) 125, param0, 4210752);
         AccountMessagePanel var2 = new AccountMessagePanel(this, this.field_wb, GameResultsScreen.field_D);
-        var2.addActionButton(15, -1, sk.field_b);
+        var2.addActionButton(15, -1, LobbyFrameHelpers.field_b);
         this.transitionToContent(var2, -118);
     }
 
@@ -173,17 +173,17 @@ class AccountRequestDialog extends ContentTransitionDialog implements ButtonList
               stackIn_14_1 = -1;
               stackIn_14_2 = -1;
               if (!this.field_pb) {
-                stackIn_15_3 = bo.field_f;
+                stackIn_15_3 = ScreenDisplayMode.field_f;
               } else {
-                stackIn_15_3 = bo.field_k;
+                stackIn_15_3 = ScreenDisplayMode.field_k;
               }
               ((AccountMessagePanel) (Object) stackIn_14_0).addActionButton(stackIn_14_1, stackIn_14_2, stackIn_15_3);
             } else {
-              var6.appendButton(1707, (UiListener) (this), bo.field_k);
+              var6.appendButton(1707, (UiListener) (this), ScreenDisplayMode.field_k);
             }
           }
           if (param0 == 3) {
-            var6.addActionButton(7, param1 - 5805, gd.field_d);
+            var6.addActionButton(7, param1 - 5805, MainScreenWidgetGlobals.field_d);
           } else {
             if (param0 != 4) {
               if (param0 == 6) {

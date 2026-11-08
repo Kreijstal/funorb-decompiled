@@ -6,7 +6,7 @@ final class NodeHashTable {
     private IntrusiveNode field_i;
     private IntrusiveNode[] field_g;
     static String field_d;
-    static sb field_c;
+    static NineSliceFrame field_c;
     private int field_e;
     static String field_h;
     private int field_a;
@@ -42,17 +42,17 @@ final class NodeHashTable {
     }
 
     final static void buildLobbyWidgetTree(boolean param0, int param1) {
-        nd.field_b = param0 ? new wo(UiContainer.field_H, an.field_a) : new wo(PairedTextColumns.field_Gb, vd.field_a);
-        ff.field_h = new SceneWidget(0L, (SceneWidget) null);
+        HowToPlayDemoHelpers.field_b = param0 ? new SocialPanel(UiContainer.field_H, CaretLayoutHelpers.field_a) : new SocialPanel(PairedTextColumns.field_Gb, ChatAppendHelpers.field_a);
+        SpriteLoadHelpers.field_h = new SceneWidget(0L, (SceneWidget) null);
         if (param1 >= -68) {
           NodeHashTable.releaseStatics(-102);
         }
-        ff.field_h.addChild(nd.field_b.field_g, (byte) 26);
-        ff.field_h.addChild(ValidatedTextWidget.field_kb, (byte) 26);
-        ra.field_e = new SceneWidget(0L, cm.field_o);
+        SpriteLoadHelpers.field_h.addChild(HowToPlayDemoHelpers.field_b.field_g, (byte) 26);
+        SpriteLoadHelpers.field_h.addChild(ValidatedTextWidget.field_kb, (byte) 26);
+        NineSliceSpriteFactory.field_e = new SceneWidget(0L, VolumeControlledVoice.field_o);
         DisplayNameRequestGlobals.field_a = new SceneWidget(0L, (SceneWidget) null);
-        ra.field_e.addChild(ih.field_g, (byte) 26);
-        ra.field_e.addChild(DisplayNameRequestGlobals.field_a, (byte) 26);
+        NineSliceSpriteFactory.field_e.addChild(TutorialTickHelpers.field_g, (byte) 26);
+        NineSliceSpriteFactory.field_e.addChild(DisplayNameRequestGlobals.field_a, (byte) 26);
         DisplayNameRequestGlobals.field_a.addChild(StripedProgressBar.field_O, (byte) 26);
         DisplayNameRequestGlobals.field_a.addChild(ContentTransitionDialog.field_eb, (byte) 26);
         DebouncedValidator.layoutLobbyComponents((byte) 32, param0);
@@ -143,21 +143,21 @@ final class NodeHashTable {
     }
 
     final static void reopenLoginDialog(int param0, boolean param1) {
-        QueuedInput.a(param1, -17130, false);
+        QueuedInput.showLoginDialog(param1, -17130, false);
         if (param0 != 0) {
           NodeHashTable.reopenLoginDialog(-72, false);
         }
     }
 
     final static int getUiLoadPercent(boolean param0) {
-        if (hf.field_q < 2) {
+        if (AchievementRecord.field_q < 2) {
           return 0;
         }
-        if (wo.field_d == 0) {
-          if (!wk.field_j.ensureIndex(-3)) {
+        if (SocialPanel.field_d == 0) {
+          if (!EmailLoginCredentials.field_j.ensureIndex(-3)) {
             return 20;
           }
-          if (!wk.field_j.ensureGroupAvailableByName("commonui", -1)) {
+          if (!EmailLoginCredentials.field_j.ensureGroupAvailableByName("commonui", -1)) {
             return 40;
           }
           if (!LoginMethod.field_g.ensureIndex(-3)) {
@@ -184,10 +184,10 @@ final class NodeHashTable {
               return 29;
             }
           }
-          if (!wk.field_j.ensureIndex(-3)) {
+          if (!EmailLoginCredentials.field_j.ensureIndex(-3)) {
             return 43;
           }
-          if (!wk.field_j.ensureGroupAvailableByName("commonui", -1)) {
+          if (!EmailLoginCredentials.field_j.ensureGroupAvailableByName("commonui", -1)) {
             return 57;
           }
           if (!LoginMethod.field_g.ensureIndex(-3)) {

@@ -41,10 +41,10 @@ final class DelegatingCanvas extends java.awt.Canvas {
 
     final static int packChatFilterSettings(byte param0) {
         if (param0 < -61) {
-          return ib.field_e + ((GradientOutlineTextPainter.field_v << 2) + (LoginMethod.field_e << 4));
+          return GridSize.field_e + ((GradientOutlineTextPainter.field_v << 2) + (LoginMethod.field_e << 4));
         }
         DelegatingCanvas.releaseStatics(54);
-        return ib.field_e + ((GradientOutlineTextPainter.field_v << 2) + (LoginMethod.field_e << 4));
+        return GridSize.field_e + ((GradientOutlineTextPainter.field_v << 2) + (LoginMethod.field_e << 4));
     }
 
     DelegatingCanvas(java.awt.Component param0) {

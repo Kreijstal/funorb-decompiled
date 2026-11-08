@@ -5,7 +5,7 @@ final class ThreeSliceButtonPainter extends TextWidgetPainter {
     private Sprite[] field_s;
     private int field_q;
     static String field_r;
-    static wm field_u;
+    static ReportReason field_u;
     static Sprite field_w;
     private int field_v;
     private int field_t;
@@ -29,7 +29,7 @@ final class ThreeSliceButtonPainter extends TextWidgetPainter {
           var5 = new boolean[param0.field_f * param0.field_a];
           var2 = var5;
           if (param1 != 21922) {
-            field_u = (wm) null;
+            field_u = (ReportReason) null;
           }
           for (var3 = 0; var5.length > var3; var3++) {
             stackIn_7_0 = var5;
@@ -151,7 +151,7 @@ final class ThreeSliceButtonPainter extends TextWidgetPainter {
             IndexedSprite var5 = (IndexedSprite) null;
             ThreeSliceButtonPainter.buildCellMask((IndexedSprite) null, -30);
           }
-          he.field_a = new sb(param0);
+          CanvasInputHelpers.field_a = new NineSliceFrame(param0);
           GradientOutlineTextPainter.field_t = param3;
           PacketBuffer.field_n = param1;
           IntrusiveDeque.drawLegacyMenuWithFrame(-126);
@@ -199,7 +199,7 @@ final class ThreeSliceButtonPainter extends TextWidgetPainter {
             stackIn_16_0 = this.field_v;
           }
           var7 = stackIn_16_0;
-          td.drawThreeSliceBar(param3 + param0.field_z, param0.field_p + (param2 + (param0.field_C - this.field_s[0].field_B >> 1)), param0.field_E, this.field_s, (byte) 121, var7);
+          PuzzleModePictureHelpers.drawThreeSliceBar(param3 + param0.field_z, param0.field_p + (param2 + (param0.field_C - this.field_s[0].field_B >> 1)), param0.field_E, this.field_s, (byte) 121, var7);
           stackIn_19_0 = (param4) ? 16777215 : 7105644;
           var8 = stackIn_19_0;
           this.font.drawParagraph(param0.field_q, param3 + param0.field_z, param2 + param0.field_p - 2, param0.field_E, param0.field_C, var8, -1, 1, 1, this.font.maxAscent);
@@ -223,10 +223,10 @@ final class ThreeSliceButtonPainter extends TextWidgetPainter {
         this.field_q = param1;
         this.field_t = param0;
         this.font = FireworkBurst.field_d;
-        this.field_s = fc.field_d;
+        this.field_s = LobbyListBindingHelpers.field_d;
     }
 
     static {
-        field_u = new wm(15, 0, 1, 0);
+        field_u = new ReportReason(15, 0, 1, 0);
     }
 }

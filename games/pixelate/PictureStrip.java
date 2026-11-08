@@ -18,14 +18,14 @@ final class PictureStrip {
     private int field_o;
     private int field_b;
 
-    final static void setLegacyMenuFrame(int param0, sb param1, int param2, int param3) {
+    final static void setLegacyMenuFrame(int param0, NineSliceFrame param1, int param2, int param3) {
         try {
           PacketBuffer.field_n = param3;
-          he.field_a = param1;
+          CanvasInputHelpers.field_a = param1;
           GradientOutlineTextPainter.field_t = param0;
           if (param2 != 16) {
-            sb var5 = (sb) null;
-            PictureStrip.setLegacyMenuFrame(-25, (sb) null, 81, -121);
+            NineSliceFrame var5 = (NineSliceFrame) null;
+            PictureStrip.setLegacyMenuFrame(-25, (NineSliceFrame) null, 81, -121);
           }
         } catch (RuntimeException runtimeException) {
           throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "pb.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
@@ -43,7 +43,7 @@ final class PictureStrip {
 
     final static void setSlideshowSprites(int param0, Sprite[] param1) {
         RuntimeException var2 = null;
-        sb var3 = null;
+        NineSliceFrame var3 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -57,8 +57,8 @@ final class PictureStrip {
           if (param0 == -25960) {
             return;
           }
-          var3 = (sb) null;
-          PictureStrip.setLegacyMenuFrame(-62, (sb) null, 98, 74);
+          var3 = (NineSliceFrame) null;
+          PictureStrip.setLegacyMenuFrame(-62, (NineSliceFrame) null, 98, 74);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -75,14 +75,14 @@ final class PictureStrip {
     }
 
     final static void advanceCardAnimationCounter(int param0) {
-        if (0 - ub.field_a == GameModeCard.field_f) {
+        if (0 - UrlRewriteHelpers.field_a == GameModeCard.field_f) {
           if (param0 > 122) {
             GameModeCard.field_f = GameModeCard.field_f + 1;
             return;
           }
           return;
         }
-        if (GameModeCard.field_f != 250 - ub.field_a) {
+        if (GameModeCard.field_f != 250 - UrlRewriteHelpers.field_a) {
           if (param0 > 122) {
             GameModeCard.field_f = GameModeCard.field_f + 1;
             return;
@@ -102,8 +102,8 @@ final class PictureStrip {
           field_i = null;
           return;
         }
-        sb var2 = (sb) null;
-        PictureStrip.setLegacyMenuFrame(-41, (sb) null, 24, 65);
+        NineSliceFrame var2 = (NineSliceFrame) null;
+        PictureStrip.setLegacyMenuFrame(-41, (NineSliceFrame) null, 24, 65);
         field_n = null;
         field_j = null;
         field_i = null;
@@ -176,14 +176,14 @@ final class PictureStrip {
           if (var8 >= this.field_l.length) {
             var8 = var8 - this.field_l.length;
           }
-          var9 = -(gb.field_b.field_A >> 1) + this.field_k;
+          var9 = -(ReportAbuseHelpers.field_b.field_A >> 1) + this.field_k;
           var10 = this.field_e + 100 * var7 - 50;
           if (var2 != 0) {
             var3 = this.computeEdgeFadeAlpha(false, var10);
             var4 = this.computeEdgeFadeAlpha(false, 100 + var10);
             if (var3 > 0 ||
               var4 > 0) {
-              SpriteEffectHelpers.drawWithVerticalAlphaGradient(gb.field_b, var9, var10, var3 >> 1, var4 >> 1);
+              SpriteEffectHelpers.drawWithVerticalAlphaGradient(ReportAbuseHelpers.field_b, var9, var10, var3 >> 1, var4 >> 1);
               var5 = this.computeEdgeFadeAlpha(false, var10 + this.field_a);
               var6 = this.computeEdgeFadeAlpha(false, this.field_g + (var10 + this.field_a));
               this.field_l[var8].drawWithAlphaGradient(0, this.field_h + var9, var6, this.field_a + var10, var5);
@@ -194,22 +194,22 @@ final class PictureStrip {
               }
               if (this.field_l.length - 1 == var7 &&
                 var4 > 0) {
-                of.field_h.drawAlpha(var9, 100 + var10, var4 >> 1);
+                TextDecodeHelpers.field_h.drawAlpha(var9, 100 + var10, var4 >> 1);
               }
             } else {
               if (this.field_l.length - 1 == var7 &&
                 var4 > 0) {
-                of.field_h.drawAlpha(var9, 100 + var10, var4 >> 1);
+                TextDecodeHelpers.field_h.drawAlpha(var9, 100 + var10, var4 >> 1);
               }
             }
           } else {
-            gb.field_b.drawAlpha(var9, var10, 128);
+            ReportAbuseHelpers.field_b.drawAlpha(var9, var10, 128);
             this.field_l[var8].draw(this.field_h + var9, var10 + this.field_a, (byte) -106);
             if (0 == var7) {
               HighscoresScreen.field_q.drawAlpha(var9, var10 - HighscoresScreen.field_q.field_B, 128);
             }
             if (this.field_l.length - 1 == var7) {
-              of.field_h.drawAlpha(var9, var10 + 100, 128);
+              TextDecodeHelpers.field_h.drawAlpha(var9, var10 + 100, 128);
             }
           }
         }
@@ -270,8 +270,8 @@ final class PictureStrip {
           IndexedSprite[] var4 = var7;
           this.field_g = var7[0].field_d * 16;
           this.field_d = 16 * var7[0].field_g;
-          this.field_a = -this.field_g + gb.field_b.field_B >> 1;
-          this.field_h = gb.field_b.field_A - this.field_d >> 1;
+          this.field_a = -this.field_g + ReportAbuseHelpers.field_b.field_B >> 1;
+          this.field_h = ReportAbuseHelpers.field_b.field_A - this.field_d >> 1;
           this.field_l = new PicturePreview[var7.length];
           for (var5 = 0; var7.length > var5; var5++) {
             this.field_l[var5] = new PicturePreview(var7[var5]);
