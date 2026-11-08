@@ -549,7 +549,7 @@ class SceneWidget extends SceneWidgetNode {
 
     final static void closeTransientDialogs(int param0) {
         ArchiveProvider.a(-117);
-        BufferedRandomAccessFile.b(false);
+        BufferedRandomAccessFile.closeAccountNamePrompt(false);
         AccountTermsPanel.field_M = null;
         ScoreMarkerDemo.closeQuickChatMenu(false);
         if (param0 != 0) {

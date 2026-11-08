@@ -40,7 +40,7 @@ final class ProxySocketConnector extends SocketConnector {
         var12 = Pixelate.field_H ? 1 : 0;
         try {
           if (param3 < 92) {
-            ProxySocketConnector.f(125);
+            ProxySocketConnector.getAccountRequestStatusText(125);
           }
           var13 = new java.net.Socket(param1, param0);
           var13.setSoTimeout(10000);
@@ -117,7 +117,7 @@ final class ProxySocketConnector extends SocketConnector {
         }
     }
 
-    final static void a(byte param0, int param1, int param2, int param3, java.applet.Applet param4, String[] param5) {
+    final static void readGameAppletParameters(byte param0, int param1, int param2, int param3, java.applet.Applet param4, String[] param5) {
         int var7 = 0;
         String var6 = null;
         int var8 = 0;
@@ -180,7 +180,7 @@ final class ProxySocketConnector extends SocketConnector {
         }
     }
 
-    final static String f(int param0) {
+    final static String getAccountRequestStatusText(int param0) {
         if (Js5NetworkRequest.field_F == MarkerSlider.field_X) {
           return VerticalScrollbar.field_Nb;
         }
@@ -196,7 +196,7 @@ final class ProxySocketConnector extends SocketConnector {
         return Checkbox.field_U;
     }
 
-    final static void a(byte param0) {
+    final static void createPulseSprites(byte param0) {
         int var3 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
@@ -309,7 +309,7 @@ final class ProxySocketConnector extends SocketConnector {
         } catch (java.net.URISyntaxException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = (java.net.URISyntaxException) (Object) decompiledCaughtException;
-          return this.b(-2);
+          return this.openSocket(-2);
         }
         var3.addAll((Collection) ((Object) var4));
         var6_array = var3.toArray();
@@ -338,18 +338,18 @@ final class ProxySocketConnector extends SocketConnector {
           field_n = (ClientContextMenu) null;
         }
         if (var7 == null) {
-          return this.b(-2);
+          return this.openSocket(-2);
         }
-        throw ProxySocketConnector.<RuntimeException>$cfr$sneakyThrow((Throwable) var7);
+        throw ProxySocketConnector.<RuntimeException>rethrowUnchecked((Throwable) var7);
     }
 
-    final static void e(int param0) {
+    final static void increaseSoundVolume(int param0) {
         int var1 = 0;
         if (SocketJs5Transport.field_u >= 224) {
-          ArrayWidgetContainer.a(256, 114);
+          ArrayWidgetContainer.setSoundVolume(256, 114);
         } else {
           var1 = SocketJs5Transport.field_u % 32;
-          ArrayWidgetContainer.a(SocketJs5Transport.field_u + (32 - var1), param0 ^ -4847);
+          ArrayWidgetContainer.setSoundVolume(SocketJs5Transport.field_u + (32 - var1), param0 ^ -4847);
         }
         if (param0 != -4767) {
           field_h = (int[]) null;
@@ -368,7 +368,7 @@ final class ProxySocketConnector extends SocketConnector {
         field_l = null;
     }
 
-    final static void a(int param0, int param1, int param2, int[] param3, int param4) {
+    final static void blendHalfSpan(int param0, int param1, int param2, int[] param3, int param4) {
         int[] var5 = null;
         int var6 = 0;
         int var7 = 0;
@@ -385,7 +385,7 @@ final class ProxySocketConnector extends SocketConnector {
             param0--;
             if (0 > param0) {
               if (param1 != 1022226145) {
-                ProxySocketConnector.e(-111);
+                ProxySocketConnector.increaseSoundVolume(-111);
               }
               return;
             }
@@ -436,7 +436,7 @@ final class ProxySocketConnector extends SocketConnector {
         Throwable decompiledCaughtException = null;
         try {
           if (param0.type() == java.net.Proxy.Type.DIRECT) {
-            stackIn_2_0 = this.b(param1 ^ -26251);
+            stackIn_2_0 = this.openSocket(param1 ^ -26251);
             return stackIn_2_0;
           }
           var3 = param0.address();
@@ -509,7 +509,7 @@ final class ProxySocketConnector extends SocketConnector {
     }
 
     @SuppressWarnings("unchecked")
-    private static <T extends Throwable> RuntimeException $cfr$sneakyThrow(Throwable throwable) throws T {
+    private static <T extends Throwable> RuntimeException rethrowUnchecked(Throwable throwable) throws T {
         throw (T) throwable;
     }
 }

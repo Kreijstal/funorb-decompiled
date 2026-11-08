@@ -40,7 +40,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
             stackIn_2_0 = null;
             return (byte[]) (stackIn_2_0);
           }
-          var5 = var3.h(0);
+          var5 = var3.getData(0);
           var3.unlink(2779);
           stackIn_4_0 = var5;
           return stackIn_4_0;
@@ -51,7 +51,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
         }
     }
 
-    final void f(byte param0) {
+    final void processGroupScan(byte param0) {
         ArchiveRequest discarded$0 = null;
         ArchiveRequest discarded$1 = null;
         RuntimeException decompiledCaughtException = null;
@@ -181,7 +181,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
             stackIn_40_0 = null;
             return (ArchiveRequest) (stackIn_40_0);
           }
-          var18 = ((ArchiveRequest) (var4)).h(0);
+          var18 = ((ArchiveRequest) (var4)).getData(0);
           var13 = var18;
           var5 = var13;
           if (var4 instanceof DiskCacheRequest) {
@@ -197,7 +197,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
                 if (this.index.groupDigests != null &&
                   null != this.index.groupDigests[param0]) {
                   var30 = this.index.groupDigests[param0];
-                  var29 = TextHotspotWidget.a(var5, 0, 1761872464, -2 + var18.length);
+                  var29 = TextHotspotWidget.whirlpoolDigest(var5, 0, 1761872464, -2 + var18.length);
                   var11 = 0;
                   var9 = var11;
                   while (64 > var11) {
@@ -251,7 +251,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
               if (null != this.index.groupDigests &&
                 null != this.index.groupDigests[param0]) {
                 var28 = this.index.groupDigests[param0];
-                var27 = TextHotspotWidget.a(var5, 0, 1761872464, -2 + var18.length);
+                var27 = TextHotspotWidget.whirlpoolDigest(var5, 0, 1761872464, -2 + var18.length);
                 for (var9 = 0; var9 < 64; var9++) {
                   if (var27[var9] != var28[var9]) {
                     throw new RuntimeException();
@@ -307,14 +307,14 @@ final class CachedArchiveProvider extends ArchiveProvider {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 8192) {
-            CachedArchiveProvider.d((byte) 22);
+            CachedArchiveProvider.takeRegistrationResult((byte) 22);
           }
           var3 = (ArchiveRequest) (this.requests.get(-25484, (long)param0));
           if (var3 == null) {
             stackIn_6_0 = 0;
             return stackIn_6_0;
           }
-          stackIn_4_0 = var3.g(param1 ^ -8303);
+          stackIn_4_0 = var3.getProgressPercent(param1 ^ -8303);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -323,7 +323,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
         }
     }
 
-    final void a(boolean param0) {
+    final void requestGroupScan(boolean param0) {
         if (null == this.field_y) {
           return;
         }
@@ -337,7 +337,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
         }
     }
 
-    final static void a(boolean param0, String[][] param1, byte[] param2, ResourceArchive param3, String[] param4, byte[] param5, Sprite[][] param6, int param7, int param8, Sprite[][] param9, ResourceArchive param10, int param11, String[][] param12, ResourceArchive param13, int[] param14) {
+    final static void initializeLobbyUi(boolean param0, String[][] param1, byte[] param2, ResourceArchive param3, String[] param4, byte[] param5, Sprite[][] param6, int param7, int param8, Sprite[][] param9, ResourceArchive param10, int param11, String[][] param12, ResourceArchive param13, int[] param14) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -384,9 +384,9 @@ final class CachedArchiveProvider extends ArchiveProvider {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var15 = null;
         try {
-          ro.a(param0, param6, param8, -15690, param10, param4, param14, param1, (IndexedSprite[]) null, param7, (int[]) null, param2, param12, param3, param9, param5, param13);
+          ro.initializeLobbyUi(param0, param6, param8, -15690, param10, param4, param14, param1, (IndexedSprite[]) null, param7, (int[]) null, param2, param12, param3, param9, param5, param13);
           if (param11 <= 6) {
-            CachedArchiveProvider.d((byte) 43);
+            CachedArchiveProvider.takeRegistrationResult((byte) 43);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -614,7 +614,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
             discarded$4 = this.pollGroupRequest(112, 27, true);
           }
           if (this.field_p &&
-            hm.a(64) >= this.field_t) {
+            hm.monotonicMillis(64) >= this.field_t) {
             var2_ref = (ArchiveRequest) (this.requests.first((byte) -99));
             while (var2_ref != null) {
               if (!var2_ref.field_v) {
@@ -629,7 +629,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
               }
               var2_ref = (ArchiveRequest) (this.requests.next(-123));
             }
-            this.field_t = 1000L + hm.a(64);
+            this.field_t = 1000L + hm.monotonicMillis(64);
             return;
           }
           return;
@@ -673,7 +673,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
             stackIn_18_0 = null;
             return (ArchiveIndex) (stackIn_18_0);
           }
-          var7 = this.field_o.h(0);
+          var7 = this.field_o.getData(0);
           var6 = var7;
           var5 = var6;
           var2 = var5;
@@ -734,11 +734,11 @@ final class CachedArchiveProvider extends ArchiveProvider {
         }
     }
 
-    public static void e(byte param0) {
+    public static void releaseStatics(byte param0) {
         try {
           field_h = null;
           if (param0 != 45) {
-            CachedArchiveProvider.a(true, (String[][]) null, (byte[]) null, (ResourceArchive) null, (String[]) null, (byte[]) null, (Sprite[][]) null, -91, 127, (Sprite[][]) null, (ResourceArchive) null, 112, (String[][]) null, (ResourceArchive) null, (int[]) null);
+            CachedArchiveProvider.initializeLobbyUi(true, (String[][]) null, (byte[]) null, (ResourceArchive) null, (String[]) null, (byte[]) null, (Sprite[][]) null, -91, 127, (Sprite[][]) null, (ResourceArchive) null, 112, (String[][]) null, (ResourceArchive) null, (int[]) null);
           }
           field_z = null;
           field_v = null;
@@ -747,7 +747,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
         }
     }
 
-    final static id d(byte param0) {
+    final static id takeRegistrationResult(byte param0) {
         id stackIn_10_0 = null;
         Object stackIn_12_0 = null;
         RuntimeException decompiledCaughtException = null;
@@ -757,7 +757,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
             throw new IllegalStateException();
           }
           if (param0 != 52) {
-            CachedArchiveProvider.e((byte) -37);
+            CachedArchiveProvider.releaseStatics((byte) -37);
           }
           if (MarkerSlider.field_X != Checkbox.field_N) {
             stackIn_12_0 = null;
@@ -773,7 +773,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
         }
     }
 
-    final static void c(byte param0) {
+    final static void clearCachedLobbyPanels(byte param0) {
         ArrayWidgetContainer.field_K = null;
         if (param0 != 24) {
           return;

@@ -26,7 +26,7 @@ final class NameAvailabilityValidator extends TextFieldValidator {
         RuntimeException decompiledCaughtException = null;
         try {
           var5 = (CharSequence) ((Object) param1);
-          var3 = MusicPatch.a(var5, 0);
+          var3 = MusicPatch.validateUsernameText(var5, 0);
           if (var3 != null) {
             stackIn_3_0 = var3;
             return stackIn_3_0;
@@ -98,7 +98,7 @@ final class NameAvailabilityValidator extends TextFieldValidator {
               var6 = ArchiveProvider.a(AccountRegistrationPanel.field_J[var3_int], 8192, true);
               var4 = var4 + ki.field_e;
               var7 = bq.field_d - (var6 >> 1);
-              if (TextLayoutLine.a(param1, var4, 59, (WidgetStyleLayer.field_b << 1) + dk.field_d, -ProxyAuthenticationException.field_a + var7, param2, (ProxyAuthenticationException.field_a << 1) + var6)) {
+              if (TextLayoutLine.containsPoint(param1, var4, 59, (WidgetStyleLayer.field_b << 1) + dk.field_d, -ProxyAuthenticationException.field_a + var7, param2, (ProxyAuthenticationException.field_a << 1) + var6)) {
                 stackIn_7_0 = var5;
                 return stackIn_7_0;
               }

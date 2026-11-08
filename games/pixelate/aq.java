@@ -8,7 +8,7 @@ final class aq {
     static String field_c;
     static String field_b;
 
-    final static String a(String param0, int param1, String param2, int param3) {
+    final static String requestRemoveIgnore(String param0, int param1, String param2, int param3) {
         RuntimeException var4 = null;
         CipherPacketBuffer var5 = null;
         int var6 = 0;
@@ -44,7 +44,7 @@ final class aq {
           }
           var7.unlink(param3 ^ -23386);
           var7.unlinkSecondary(param3 + 20884);
-          aj.field_t = aj.field_t - 1;
+          ReflectionCheckRequest.field_t = ReflectionCheckRequest.field_t - 1;
           var5 = aa.field_f;
           var5.writeOpcode(param1, 15514);
           var5.position = var5.position + 1;
@@ -74,7 +74,7 @@ final class aq {
         }
     }
 
-    final static void a(boolean param0) {
+    final static void shuffleSkinOrder(boolean param0) {
         int var1_int = 0;
         int var6 = 0;
         int var3 = 0;
@@ -85,7 +85,7 @@ final class aq {
         try {
           var1_int = 8;
           if (!param0) {
-            aq.a(false);
+            aq.shuffleSkinOrder(false);
           }
           jm.field_g = new int[var1_int];
           for (var2 = 0; var1_int > var2; var2++) {
@@ -101,13 +101,13 @@ final class aq {
             var6++;
           }
           LoadingProgressDialog.field_hb = 0;
-          aq.a(jm.field_g[LoadingProgressDialog.field_hb], !param0 ? true : false);
+          aq.selectBackgroundSkin(jm.field_g[LoadingProgressDialog.field_hb], !param0 ? true : false);
         } catch (RuntimeException runtimeException) {
           throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "aq.C(" + param0 + ')');
         }
     }
 
-    final static int a(byte param0, int param1) {
+    final static int bitLength(byte param0, int param1) {
         int var2;
         var2 = 0;
         if (param1 < 0) {
@@ -147,7 +147,7 @@ final class aq {
         int var1 = 17 / ((param0 - 13) / 60);
     }
 
-    final static void a(int param0, boolean param1) {
+    final static void selectBackgroundSkin(int param0, boolean param1) {
         LoginCredentials.field_e = Js5NetworkRequest.field_C[param0];
         fq.field_o = null;
         if (!param1) {
@@ -158,7 +158,7 @@ final class aq {
         }
     }
 
-    final static boolean a(char param0, CharSequence param1, byte param2) {
+    final static boolean canAppendNameChar(char param0, CharSequence param1, byte param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         RuntimeException stackIn_21_0 = null;

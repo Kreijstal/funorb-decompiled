@@ -26,8 +26,8 @@ final class wf {
             var2 = var6;
             if (null != MusicCrossfadeStream.field_p) {
               try {
-                MusicCrossfadeStream.field_p.a(0L, 123);
-                MusicCrossfadeStream.field_p.a(var6, (byte) 0);
+                MusicCrossfadeStream.field_p.seek(0L, 123);
+                MusicCrossfadeStream.field_p.readFully(var6, (byte) 0);
                 for (var3_int = 0; var3_int < 24; var3_int++) {
                   if (var2[var3_int] == 0) {
                     continue;

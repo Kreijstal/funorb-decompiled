@@ -9,7 +9,7 @@ final class IntrusiveDequeCursor {
     static int field_c;
     static boolean field_d;
 
-    final IntrusiveNode first(byte param0) {
+    final IntrusiveNode next(byte param0) {
         IntrusiveNode var2 = this.cursor;
         if (var2 == this.deque.sentinel) {
           this.cursor = null;
@@ -22,15 +22,15 @@ final class IntrusiveDequeCursor {
         return var2;
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_b = null;
         if (param0) {
-          IntrusiveDequeCursor.c(44);
+          IntrusiveDequeCursor.tickLobbyHighlights(44);
         }
         field_f = null;
     }
 
-    final IntrusiveNode d(int param0) {
+    final IntrusiveNode first(int param0) {
         IntrusiveNode var2 = this.deque.sentinel.field_a;
         if (param0 != 0) {
           field_b = (String) null;
@@ -43,7 +43,7 @@ final class IntrusiveDequeCursor {
         return var2;
     }
 
-    final static void c(int param0) {
+    final static void tickLobbyHighlights(int param0) {
         int stackIn_23_0 = 0;
         RuntimeException decompiledCaughtException = null;
         LobbyPlayer var1 = null;
@@ -150,7 +150,7 @@ final class IntrusiveDequeCursor {
         }
     }
 
-    final static void b(boolean param0) {
+    final static void openBlankLoginForm(boolean param0) {
         String var2 = (String) null;
         FallingPieceView.openLoginForm("", -110, (String) null);
         if (!param0) {
@@ -229,7 +229,7 @@ final class IntrusiveDequeCursor {
           }
           for (var2_int = 0; var2_int < param0.length(); var2_int++) {
             var3 = param0.charAt(var2_int);
-            if (!BoardParticle.a(-66, (char) var3) &&
+            if (!BoardParticle.isAsciiLetter(-66, (char) var3) &&
               !MidiPcmStream.isAsciiDigit(57, (char) var3)) {
               return true;
             }
@@ -249,7 +249,7 @@ final class IntrusiveDequeCursor {
         }
     }
 
-    final IntrusiveNode b(int param0) {
+    final IntrusiveNode last(int param0) {
         if (param0 != -1) {
           field_c = 52;
         }
@@ -262,11 +262,11 @@ final class IntrusiveDequeCursor {
         return var2;
     }
 
-    final static void a(int param0) {
+    final static void commitScreenChange(int param0) {
         if (fc.field_e == MidiPcmStream.field_t) {
           return;
         }
-        if (BoardParticle.a((byte) -104, fc.field_e)) {
+        if (BoardParticle.isNonNegative((byte) -104, fc.field_e)) {
           wo.getScreen(126, fc.field_e).releaseScreenAssets(true);
         }
         fc.field_e = MidiPcmStream.field_t;

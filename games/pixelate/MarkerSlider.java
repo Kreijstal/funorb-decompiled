@@ -20,7 +20,7 @@ final class MarkerSlider extends TextButton {
         if (param0 < 108) {
           field_U = -99;
         }
-        stackIn_9_0 = (null != ProxySocketConnector.field_n) || (ConditionalTextValue.b(-10093)) || (null != AccountTermsPanel.field_M) || (CanvasRasterBuffer.b(12742));
+        stackIn_9_0 = (null != ProxySocketConnector.field_n) || (ConditionalTextValue.isAccountNamePromptOpen(-10093)) || (null != AccountTermsPanel.field_M) || (CanvasRasterBuffer.b(12742));
         return stackIn_9_0;
     }
 
@@ -125,7 +125,7 @@ final class MarkerSlider extends TextButton {
         try {
           if (null != MusicCrossfadeStream.field_p) {
             try {
-              MusicCrossfadeStream.field_p.a(0L, -112);
+              MusicCrossfadeStream.field_p.seek(0L, -112);
               MusicCrossfadeStream.field_p.write(24, MusicCrossfadeStream.field_o.position, (byte) -121, MusicCrossfadeStream.field_o.payload);
             } catch (Exception exception) {
             }

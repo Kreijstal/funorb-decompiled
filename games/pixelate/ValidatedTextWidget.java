@@ -27,7 +27,7 @@ final class ValidatedTextWidget extends EditableTextWidget implements Validation
         }
     }
 
-    public final ValidationSource a(int param0) {
+    public final ValidationSource getValidationSource(int param0) {
         if (param0 != 1) {
           field_fb = -57;
         }

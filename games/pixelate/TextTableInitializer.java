@@ -59,7 +59,7 @@ final class TextTableInitializer {
           BlastFromThePastBackground.field_m[1] = ro.field_f;
           BlastFromThePastBackground.field_m[7] = qf.field_d;
           dn.field_a = new String[][]{hm.field_f, MatchingTextValidator.field_t, um.field_l, PauseMenuScreen.field_p, ui.field_h, qg.field_d};
-          ln.field_m = new String[][]{up.field_a, ScrollContainer.field_Hb, qh.field_d, wk.field_i, GameApplet.field_k, NumericDateInputWidget.field_R, GameModeSelectScreen.field_q, vd.field_d};
+          ln.field_m = new String[][]{PuzzleThumbnail.field_a, ScrollContainer.field_Hb, qh.field_d, wk.field_i, GameApplet.field_k, NumericDateInputWidget.field_R, GameModeSelectScreen.field_q, vd.field_d};
           BlastFromThePastBackground.field_m[0] = DraggableWidget.field_L;
           BlastFromThePastBackground.field_m[5] = wa.field_e;
           for (var1_int = 0; var1_int < BlastFromThePastBackground.field_m.length; var1_int++) {
@@ -80,7 +80,7 @@ final class TextTableInitializer {
         if (param1 != 12402) {
           return;
         }
-        cl.a((byte) 95, param0);
+        cl.drawOverlayLayers((byte) 95, param0);
     }
 
     public static void b(int param0) {

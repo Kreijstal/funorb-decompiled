@@ -13,7 +13,7 @@ final class DirectByteStorage extends ByteStorage {
     DirectByteStorage() {
     }
 
-    final static boolean b(byte param0) {
+    final static boolean pollKeyEventCopy(byte param0) {
         Object var1 = null;
         Throwable var2 = null;
         hf var3 = null;
@@ -23,7 +23,7 @@ final class DirectByteStorage extends ByteStorage {
         synchronized (var1) {
           if (param0 < 105) {
             var3 = (hf) null;
-            DirectByteStorage.a(42, (hf) null, -69);
+            DirectByteStorage.queueProgressRecord(42, (hf) null, -69);
           }
           if (ln.field_p == qn.field_p) {
             return false;
@@ -47,7 +47,7 @@ final class DirectByteStorage extends ByteStorage {
         return (byte[]) null;
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_h = (boolean[][]) null;
         if (param0 >= 71) {
           field_l = null;
@@ -56,18 +56,18 @@ final class DirectByteStorage extends ByteStorage {
           field_n = null;
           return;
         }
-        DirectByteStorage.$cfr$intArgs$b$c4997cb15529(-16);
+        DirectByteStorage.pollKeyEvent(-16);
         field_l = null;
         field_i = null;
         field_m = null;
         field_n = null;
     }
 
-    final static void a(int param0, hf param1, int param2) {
+    final static void queueProgressRecord(int param0, hf param1, int param2) {
         try {
           int var3_int = 113 / ((59 - param0) / 39);
           dh.field_a.addLast(22125, param1);
-          id.a((byte) -109, param1, param2);
+          id.writeProgressRecord((byte) -109, param1, param2);
         } catch (RuntimeException runtimeException) {
           throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "bh.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -93,7 +93,7 @@ final class DirectByteStorage extends ByteStorage {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static boolean $cfr$intArgs$b$c4997cb15529(int param0) {
+    final static boolean pollKeyEvent(int param0) {
         Object var1 = null;
         Throwable var2 = null;
         hf var3 = null;
@@ -103,7 +103,7 @@ final class DirectByteStorage extends ByteStorage {
         synchronized (var1) {
           if (param0 < 105) {
             var3 = (hf) null;
-            DirectByteStorage.a(42, (hf) null, -69);
+            DirectByteStorage.queueProgressRecord(42, (hf) null, -69);
           }
           if (ln.field_p == qn.field_p) {
             return false;

@@ -132,7 +132,7 @@ final class PlatformTaskDispatcher implements Runnable {
           }
           if (this.cacheDataFile != null) {
             try {
-              this.cacheDataFile.b(-5317);
+              this.cacheDataFile.close(-5317);
             } catch (java.io.IOException decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               var2_ref2 = (IOException) (Object) decompiledCaughtException;
@@ -140,7 +140,7 @@ final class PlatformTaskDispatcher implements Runnable {
           }
           if (this.field_m != null) {
             try {
-              this.field_m.b(param0 ^ 4215);
+              this.field_m.close(param0 ^ 4215);
             } catch (java.io.IOException decompiledCaughtParameter2) {
               decompiledCaughtException = decompiledCaughtParameter2;
               var2_ref2 = (IOException) (Object) decompiledCaughtException;
@@ -150,7 +150,7 @@ final class PlatformTaskDispatcher implements Runnable {
             for (var2_int = 0; this.cacheIndexFiles.length > var2_int; var2_int++) {
               if (this.cacheIndexFiles[var2_int] != null) {
                 try {
-                  this.cacheIndexFiles[var2_int].b(-5317);
+                  this.cacheIndexFiles[var2_int].close(-5317);
                 } catch (java.io.IOException decompiledCaughtParameter3) {
                   decompiledCaughtException = decompiledCaughtParameter3;
                   var3 = (IOException) (Object) decompiledCaughtException;
@@ -160,7 +160,7 @@ final class PlatformTaskDispatcher implements Runnable {
           }
           if (this.field_e != null) {
             try {
-              this.field_e.b(-5317);
+              this.field_e.close(-5317);
             } catch (java.io.IOException decompiledCaughtParameter4) {
               decompiledCaughtException = decompiledCaughtParameter4;
               var2_ref2 = (IOException) (Object) decompiledCaughtException;
@@ -336,13 +336,13 @@ final class PlatformTaskDispatcher implements Runnable {
                         }
                         break;
                       case 21:
-                        if (field_c > hm.a(64)) {
+                        if (field_c > hm.monotonicMillis(64)) {
                           throw new IOException();
                         }
                         var8.field_e = java.net.InetAddress.getByName((String) (var8.field_g)).getAddress();
                         break;
                       case 3:
-                        if (field_c > hm.a(64)) {
+                        if (field_c > hm.monotonicMillis(64)) {
                           throw new IOException();
                         }
                         var12 = (var8.field_a >> 24 & 255) + "." + (255 & var8.field_a >> 16) + "." + (255 & var8.field_a >> 8) + "." + (var8.field_a & 255);
@@ -367,7 +367,7 @@ final class PlatformTaskDispatcher implements Runnable {
                     var8.field_e = ((Class) (var10[0])).getDeclaredMethod((String) (var10[1]), (Class[]) (var10[2]));
                     break;
                   case 4:
-                    if (hm.a(64) < field_c) {
+                    if (hm.monotonicMillis(64) < field_c) {
                       throw new IOException();
                     }
                     var8.field_e = new DataInputStream(((java.net.URL) (var8.field_g)).openStream());
@@ -380,7 +380,7 @@ final class PlatformTaskDispatcher implements Runnable {
                     var8.field_e = var9;
                     break;
                   case 22:
-                    if (hm.a(64) < field_c) {
+                    if (hm.monotonicMillis(64) < field_c) {
                       throw new IOException();
                     }
                     try {
@@ -394,7 +394,7 @@ final class PlatformTaskDispatcher implements Runnable {
                     }
                     break;
                   case 1:
-                    if (field_c > hm.a(64)) {
+                    if (field_c > hm.monotonicMillis(64)) {
                       throw new IOException();
                     }
                     var8.field_e = new java.net.Socket(java.net.InetAddress.getByName((String) (var8.field_g)), var8.field_a);

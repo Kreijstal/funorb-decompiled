@@ -166,7 +166,7 @@ final class TriangleMesh {
         try {
           var1_int = 0;
           var2 = 0;
-          while (DirectByteStorage.$cfr$intArgs$b$c4997cb15529(123)) {
+          while (DirectByteStorage.pollKeyEvent(123)) {
             ScoreMarkerDemo.field_c.handleVerticalNavigation((byte) -48);
             if (ScoreMarkerDemo.field_c.isActivated(84)) {
               var1_int = 1;
@@ -176,7 +176,7 @@ final class TriangleMesh {
             }
             var2 = 1;
           }
-          ScoreMarkerDemo.field_c.updatePointer(mi.a(BufferedRandomAccessFile.field_a, ji.field_c, (byte) -82), mi.a(ProxyAuthenticationException.field_d, StatusBar.field_k, (byte) -73), -1);
+          ScoreMarkerDemo.field_c.updatePointer(mi.legacyMenuOptionAt(BufferedRandomAccessFile.field_a, ji.field_c, (byte) -82), mi.legacyMenuOptionAt(ProxyAuthenticationException.field_d, StatusBar.field_k, (byte) -73), -1);
           if (param0 <= 74) {
             TriangleMesh.b((byte) -77);
           }
@@ -199,7 +199,7 @@ final class TriangleMesh {
           }
           if (0 == var3 &&
             CanvasRasterBuffer.field_h == 2) {
-            var4 = hm.a(64) - pk.field_g;
+            var4 = hm.monotonicMillis(64) - pk.field_g;
             var6 = (int)((10999L - var4) / 1000L);
             if (var6 <= 0) {
               var3 = 2;

@@ -460,7 +460,7 @@ final class ArchiveIndex {
             if (param2.length != 64) {
               throw new RuntimeException();
             }
-            this.field_e = TextHotspotWidget.a(param0, 0, 1761872464, param0.length);
+            this.field_e = TextHotspotWidget.whirlpoolDigest(param0, 0, 1761872464, param0.length);
             for (var4_int = 0; var4_int < 64; var4_int++) {
               if (param2[var4_int] != this.field_e[var4_int]) {
                 throw new RuntimeException();

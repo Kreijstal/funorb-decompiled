@@ -7,7 +7,7 @@ final class fd {
     static Sprite field_a;
     static Sprite[] field_c;
 
-    final static SceneWidget a(int param0) {
+    final static SceneWidget getPlayerListContent(int param0) {
         if (param0 != 0) {
           return (SceneWidget) null;
         }

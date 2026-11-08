@@ -9,7 +9,7 @@ final class hm {
     static String field_d;
     static int field_b;
 
-    final static og a(int param0, byte[] param1, int param2) {
+    final static og queueSaveDataRequest(int param0, byte[] param1, int param2) {
         og var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
@@ -39,7 +39,7 @@ final class hm {
         }
     }
 
-    final static el a(int param0, String param1) {
+    final static el validateEmailAddress(int param0, String param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         String var3 = null;
@@ -98,7 +98,7 @@ final class hm {
         field_d = null;
     }
 
-    final static void a(byte param0) {
+    final static void resetNoticeState(byte param0) {
         oo.field_f = -1;
         qg.field_b = null;
         LoadingStepTracker.field_h = false;
@@ -107,7 +107,7 @@ final class hm {
         int var1 = -61 / ((17 - param0) / 55);
     }
 
-    final synchronized static long a(int param0) {
+    final synchronized static long monotonicMillis(int param0) {
         if (param0 != 64) {
           return 86L;
         }

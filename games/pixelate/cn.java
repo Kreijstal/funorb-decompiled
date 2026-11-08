@@ -45,12 +45,12 @@ final class cn {
         int var9Lifetime3;
         var13 = Pixelate.field_H ? 1 : 0;
         try {
-          var14 = param6.a(-30491);
+          var14 = param6.getText(-30491);
           var11_ref_String = var14;
-          var8 = param4.a(-30491);
+          var8 = param4.getText(-30491);
           var11_ref_StringLifetime1 = var8;
           if (null == NodeHashTableIterator.field_e &&
-            !MouseInputHandler.a(0, false)) {
+            !MouseInputHandler.pollGameSocketConnection(0, false)) {
             stackIn_5_0 = -1;
             return stackIn_5_0;
           }
@@ -71,7 +71,7 @@ final class cn {
               GameModeSelectScreen.field_v.a((byte) -66, var14);
               GameModeSelectScreen.field_v.a((byte) -66, var8);
               var15 = (CharSequence) ((Object) param0);
-              GameModeSelectScreen.field_v.a((byte) -66, la.a((byte) 10, var15));
+              GameModeSelectScreen.field_v.a((byte) -66, la.normalizeAccountName((byte) 10, var15));
               GameModeSelectScreen.field_v.writeShort(1276387944, param1);
               GameModeSelectScreen.field_v.writeByte(160, param5);
               GameModeSelectScreen.field_v.writeByte(160, var9);
@@ -91,7 +91,7 @@ final class cn {
               GameModeSelectScreen.field_v.writeInt(Bzip2State.field_d.nextInt(), -68);
               stackIn_13_0 = GameModeSelectScreen.field_v;
               stackIn_13_1 = -66;
-              if (!param6.b((byte) -25)) {
+              if (!param6.isPending((byte) -25)) {
                 stackIn_14_2 = "";
               } else {
                 stackIn_14_2 = var14;
@@ -99,7 +99,7 @@ final class cn {
               ((PacketBuffer) (Object) stackIn_13_0).a((byte) stackIn_13_1, stackIn_14_2);
               stackIn_16_0 = GameModeSelectScreen.field_v;
               stackIn_16_1 = -66;
-              if (param4.b((byte) 127)) {
+              if (param4.isPending((byte) 127)) {
                 stackIn_17_2 = var8;
               } else {
                 stackIn_17_2 = "";
@@ -115,7 +115,7 @@ final class cn {
             GameModeSelectScreen.field_s = TextLayoutLine.field_c;
           }
           if (TextLayoutLine.field_c == GameModeSelectScreen.field_s &&
-            QueuedInput.a(1, false)) {
+            QueuedInput.fillIncomingBuffer(1, false)) {
             var9Lifetime1 = MusicCrossfadeStream.field_o.readUnsignedByte(255);
             MusicCrossfadeStream.field_o.position = 0;
             if (var9Lifetime1 >= 100 &&
@@ -124,7 +124,7 @@ final class cn {
               GameModeSelectScreen.field_s = EditableTextWidget.field_Z;
             } else {
               if (248 == var9Lifetime1) {
-                GreenGrowTheRushesBackground.a(AudioService.a(13867), -7624);
+                GreenGrowTheRushesBackground.setTuhstatbutCookie(AudioService.a(13867), -7624);
                 gi.field_b = ph.field_m;
                 na.a(true);
                 qj.field_b = false;
@@ -136,18 +136,18 @@ final class cn {
                 GameModeSelectScreen.field_s = StatusBar.field_l;
                 BackgroundScene.field_b = -1;
               } else {
-                QueuedInput.a(wl.a(23062), false);
-                ArchiveIndex.field_j = new Boolean(SectorCacheStore.a((byte) 107, MusicCrossfadeStream.field_o));
+                QueuedInput.fillIncomingBuffer(FireworkSpark.constantOne(23062), false);
+                ArchiveIndex.field_j = new Boolean(SectorCacheStore.readBooleanByte((byte) 107, MusicCrossfadeStream.field_o));
                 MusicCrossfadeStream.field_o.position = 0;
               }
             }
           }
           if (GameModeSelectScreen.field_s == EditableTextWidget.field_Z) {
             var9Lifetime2 = 2;
-            if (QueuedInput.a(var9Lifetime2, false)) {
+            if (QueuedInput.fillIncomingBuffer(var9Lifetime2, false)) {
               var10Lifetime1 = MusicCrossfadeStream.field_o.readUnsignedShort((byte) 82);
               MusicCrossfadeStream.field_o.position = 0;
-              if (QueuedInput.a(var10Lifetime1, false)) {
+              if (QueuedInput.fillIncomingBuffer(var10Lifetime1, false)) {
                 var11 = MatchController.field_y.length;
                 for (var12 = 0; var12 < var11; var12++) {
                   MatchController.field_y[var12] = MusicCrossfadeStream.field_o.readNullCircumfixedString(122);
@@ -164,7 +164,7 @@ final class cn {
             if (TextLayoutLine.field_e == 255) {
               var9_ref_String = MusicCrossfadeStream.field_o.readOptionalString((byte) 40);
               if (var9_ref_String != null) {
-                QueuedInput.a(var9_ref_String, 126, AudioService.a(13867));
+                QueuedInput.writeSettingsCookie(var9_ref_String, 126, AudioService.a(13867));
               }
             } else {
               gi.field_b = MusicCrossfadeStream.field_o.readString(5);
@@ -176,7 +176,7 @@ final class cn {
           }
           if (NodeHashTableIterator.field_e == null) {
             if (qj.field_b) {
-              if (CachedTextLayout.d(8) > 30000L) {
+              if (CachedTextLayout.millisSinceLastPacket(8) > 30000L) {
                 gi.field_b = ValidationIndicator.field_N;
               } else {
                 gi.field_b = TextTableInitializer.field_b;
@@ -306,16 +306,16 @@ final class cn {
                     if (0 == var18) {
                       if (var17 >= 0 &&
                         var17 < MeshRasterState.field_d) {
-                        ProxySocketConnector.a(var18, 1022226145, var17 + var16Lifetime2, param5, param3);
+                        ProxySocketConnector.blendHalfSpan(var18, 1022226145, var17 + var16Lifetime2, param5, param3);
                       }
                     } else {
                       if (var17 + var18 >= MeshRasterState.field_d) {
                         var18 = -1 + (-var17 + MeshRasterState.field_d);
                       }
                       if (0 <= var17) {
-                        ProxySocketConnector.a(var18, 1022226145, var16Lifetime2 + var17, param5, param3);
+                        ProxySocketConnector.blendHalfSpan(var18, 1022226145, var16Lifetime2 + var17, param5, param3);
                       } else {
-                        ProxySocketConnector.a(var17 + var18, 1022226145, var16Lifetime2, param5, param3);
+                        ProxySocketConnector.blendHalfSpan(var17 + var18, 1022226145, var16Lifetime2, param5, param3);
                       }
                     }
                   }
@@ -386,14 +386,14 @@ final class cn {
                     var17Lifetime1 = MeshRasterState.field_d - var16Lifetime1 - 1;
                   }
                   if (var16Lifetime1 >= 0) {
-                    ProxySocketConnector.a(var17Lifetime1, 1022226145, var15Lifetime1 + var16Lifetime1, param5, param3);
+                    ProxySocketConnector.blendHalfSpan(var17Lifetime1, 1022226145, var15Lifetime1 + var16Lifetime1, param5, param3);
                   } else {
-                    ProxySocketConnector.a(var17Lifetime1 + var16Lifetime1, 1022226145, var15Lifetime1, param5, param3);
+                    ProxySocketConnector.blendHalfSpan(var17Lifetime1 + var16Lifetime1, 1022226145, var15Lifetime1, param5, param3);
                   }
                 } else {
                   if (var16Lifetime1 >= 0 &&
                     MeshRasterState.field_d > var16Lifetime1) {
-                    ProxySocketConnector.a(var17Lifetime1, 1022226145, var15Lifetime1 + var16Lifetime1, param5, param3);
+                    ProxySocketConnector.blendHalfSpan(var17Lifetime1, 1022226145, var15Lifetime1 + var16Lifetime1, param5, param3);
                   }
                 }
               }
@@ -438,7 +438,7 @@ final class cn {
         var4.field_k = param0;
         var4.field_s = param2;
         LoginCredentials.field_c.addLast(22125, var4);
-        em.a((byte) -7, var4, param1);
+        em.sendRankingQuery((byte) -7, var4, param1);
         return var4;
     }
 

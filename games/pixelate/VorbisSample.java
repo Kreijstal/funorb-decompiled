@@ -346,7 +346,7 @@ final class VorbisSample extends IntrusiveNode {
         int var18_intLifetime2;
         VorbisSample.setBitstream(this.packets[param0], 0);
         VorbisSample.readBit();
-        var2 = VorbisSample.readBits(aq.a((byte) 19, field_w.length - 1));
+        var2 = VorbisSample.readBits(aq.bitLength((byte) 19, field_w.length - 1));
         var3 = field_s[var2] ? 1 : 0;
         if (var3 == 0) {
           stackIn_3_0 = field_O;
@@ -465,7 +465,7 @@ final class VorbisSample extends IntrusiveNode {
             var20_ref_float__[4 * var25Lifetime1 + 3] = (var26_floatLifetime1 - var28Lifetime1) * var30 - (var27Lifetime1 - var29Lifetime1) * var31;
             var20_ref_float__[4 * var25Lifetime1 + 1] = (var27Lifetime1 - var29Lifetime1) * var30 + (var26_floatLifetime1 - var28Lifetime1) * var31;
           }
-          var25Lifetime2 = aq.a((byte) 78, var4 - 1);
+          var25Lifetime2 = aq.bitLength((byte) 78, var4 - 1);
           for (var26 = 0; var26 < var25Lifetime2 - 3; var26++) {
             var27_int = var4 >> var26 + 2;
             var28_int = 8 << var26;
@@ -657,7 +657,7 @@ final class VorbisSample extends IntrusiveNode {
             var8[2 * var9_int + 1] = -(float)Math.sin((double)(4 * var9_int + 2) * 3.141592653589793 / (double)var2);
           }
           var9 = new int[var5];
-          var10 = aq.a((byte) 46, var5 - 1);
+          var10 = aq.bitLength((byte) 46, var5 - 1);
           for (var11 = 0; var11 < var5; var11++) {
             var9[var11] = MarkerSlider.reverseBits(var11, -23439, var10);
           }

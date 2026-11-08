@@ -15,7 +15,7 @@ final class TabbedPanel extends SceneWidget {
     static String field_Eb;
     static String field_Ib;
 
-    private final void a(int param0, int param1, int param2) {
+    private final void layoutTabs(int param0, int param1, int param2) {
         SceneWidget dupTemp$0 = null;
         int var4;
         int var5;
@@ -48,7 +48,7 @@ final class TabbedPanel extends SceneWidget {
         }
     }
 
-    final static void a(int param0, PacketBuffer param1, int param2, PlatformTaskDispatcher param3) {
+    final static void readReflectionCheckRequest(int param0, PacketBuffer param1, int param2, PlatformTaskDispatcher param3) {
         try {
           int var5 = 0;
           int var11_int = 0;
@@ -77,14 +77,14 @@ final class TabbedPanel extends SceneWidget {
           int var14 = 0;
           String var15 = null;
           int var16 = 0;
-          aj var17 = null;
+          ReflectionCheckRequest var17 = null;
           byte[][] var18 = null;
           String var19 = null;
           byte[][] var20 = null;
           int var13Lifetime1;
           var14 = Pixelate.field_H ? 1 : 0;
           try {
-            var17 = new aj();
+            var17 = new ReflectionCheckRequest();
             var17.field_s = param1.readUnsignedByte(255);
             var17.field_p = param1.readInt(param0 ^ param0);
             var17.field_r = new int[var17.field_s];
@@ -191,7 +191,7 @@ final class TabbedPanel extends SceneWidget {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    final void setBoundsAndLayout(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         this.field_S = param1;
         this.field_K = param3;
         this.height = param4;
@@ -199,7 +199,7 @@ final class TabbedPanel extends SceneWidget {
         if (param0 != -19360) {
           field_Hb = (String) null;
         }
-        this.a(116, param5, param2);
+        this.layoutTabs(116, param5, param2);
     }
 
     TabbedPanel(long param0, SceneWidget param1, String[] param2, SceneWidget param3, SceneWidget[] param4, int param5) {
@@ -271,7 +271,7 @@ final class TabbedPanel extends SceneWidget {
         }
     }
 
-    final static int a(byte param0, int param1, int param2) {
+    final static int randomInRange(byte param0, int param1, int param2) {
         if (param0 != 41) {
           return 42;
         }
@@ -301,7 +301,7 @@ final class TabbedPanel extends SceneWidget {
         }
     }
 
-    final static MusicPatch a(ResourceArchive param0, int param1, int param2) {
+    final static MusicPatch loadMusicPatch(ResourceArchive param0, int param1, int param2) {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
         byte[] var4 = null;

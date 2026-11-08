@@ -92,25 +92,25 @@ final class fc {
         if (param0 >= -30) {
           field_c = (String) null;
           if (32 >= SocketJs5Transport.field_u) {
-            ArrayWidgetContainer.a(0, 119);
+            ArrayWidgetContainer.setSoundVolume(0, 119);
             return;
           }
           var1 = SocketJs5Transport.field_u % 32;
           if (var1 == 0) {
             var1 = 32;
           }
-          ArrayWidgetContainer.a(SocketJs5Transport.field_u - var1, -8);
+          ArrayWidgetContainer.setSoundVolume(SocketJs5Transport.field_u - var1, -8);
           return;
         }
         if (32 >= SocketJs5Transport.field_u) {
-          ArrayWidgetContainer.a(0, 119);
+          ArrayWidgetContainer.setSoundVolume(0, 119);
           return;
         }
         var1Lifetime1 = SocketJs5Transport.field_u % 32;
         if (var1Lifetime1 == 0) {
           var1Lifetime1 = 32;
         }
-        ArrayWidgetContainer.a(SocketJs5Transport.field_u - var1Lifetime1, -8);
+        ArrayWidgetContainer.setSoundVolume(SocketJs5Transport.field_u - var1Lifetime1, -8);
     }
 
     static {

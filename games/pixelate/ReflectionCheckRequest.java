@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class aj extends IntrusiveNode {
+final class ReflectionCheckRequest extends IntrusiveNode {
     int[] field_r;
     static ScrollContainer field_k;
     static long field_m;
@@ -85,12 +85,12 @@ final class aj extends IntrusiveNode {
     final static boolean b(byte param0) {
         if (param0 > -42) {
           byte[] var2 = (byte[]) null;
-          aj.createByteStorage(false, (byte[]) null, -36);
+          ReflectionCheckRequest.createByteStorage(false, (byte[]) null, -36);
           if (!LoadingStep.field_a) {
-            return ArrayWidgetContainer.a((byte) 78) ? true : false;
+            return ArrayWidgetContainer.isAccountUiActive((byte) 78) ? true : false;
           }
           if (!TextHotspotWidget.field_U) {
-            return ArrayWidgetContainer.a((byte) 78) ? true : false;
+            return ArrayWidgetContainer.isAccountUiActive((byte) 78) ? true : false;
           }
           return true;
         }
@@ -98,15 +98,15 @@ final class aj extends IntrusiveNode {
           if (TextHotspotWidget.field_U) {
             return true;
           }
-          return ArrayWidgetContainer.a((byte) 78) ? true : false;
+          return ArrayWidgetContainer.isAccountUiActive((byte) 78) ? true : false;
         }
-        if (!ArrayWidgetContainer.a((byte) 78)) {
+        if (!ArrayWidgetContainer.isAccountUiActive((byte) 78)) {
           return false;
         }
         return true;
     }
 
-    aj() {
+    ReflectionCheckRequest() {
     }
 
     static {

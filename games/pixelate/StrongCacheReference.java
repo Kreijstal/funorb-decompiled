@@ -89,7 +89,7 @@ final class StrongCacheReference extends CacheReference {
           field_w = (String) null;
         }
         wa.field_c.refreshPanelVisibility((byte) 54);
-        LoadingProgressDialog.a(false, SecondaryNodeDequeIterator.field_b, param0 ^ -26047);
+        LoadingProgressDialog.showAccountRequestDialog(false, SecondaryNodeDequeIterator.field_b, param0 ^ -26047);
     }
 
     final static void a(int param0, boolean param1, int param2, int param3, BitmapFont param4, Sprite[] param5, int param6, int param7, Sprite[] param8, int param9, BitmapFont param10, byte param11, int param12, int param13, int param14) {

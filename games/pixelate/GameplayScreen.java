@@ -28,7 +28,7 @@ final class GameplayScreen extends MenuScreen {
           var5 = var6_int;
         }
         if (null == EditableTextWidget.field_R) {
-          EditableTextWidget.field_R = AccountRequestDialog.a(480, 2, (java.awt.Component) ((Object) new java.awt.Canvas()), 640);
+          EditableTextWidget.field_R = AccountRequestDialog.createRasterBuffer(480, 2, (java.awt.Component) ((Object) new java.awt.Canvas()), 640);
         }
         if (param1) {
           var6 = ClientException.field_f;
@@ -151,7 +151,7 @@ final class GameplayScreen extends MenuScreen {
           var5 = TextFieldValidator.field_h.font.getWrappedWidth(param0, 500) + 6;
           var6 = 2 + var4 * fq.field_q;
           var7 = ui.a(12, var2_int, var5, (byte) -1);
-          var8 = pj.a(var6, var3, 20, (byte) 112);
+          var8 = ScorePopup.fitVerticalPosition(var6, var3, 20, (byte) 112);
           SoftwareRasterizer.drawRectangle(var7, var8, var5, var6, 0);
           SoftwareRasterizer.fillRectangle(1 + var7, 1 + var8, param1 + var5, var6 - 2, 16777088);
           TextFieldValidator.field_h.font.drawParagraph(param0, 3 + var7, TickClock.field_d + (1 + (var8 - TextFieldValidator.field_h.font.maxAscent)), 500, 1000, 0, -1, 0, 0, fq.field_q);

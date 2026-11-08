@@ -96,7 +96,7 @@ final class AccountChoicePanel extends UiContainer implements ButtonListener {
             GameApplet.field_o != LinkButtonPainter.field_a[0]) {
             GameApplet.field_o = LinkButtonPainter.field_a[0];
           }
-          DialWidget.a(param1, StatusBar.field_d, GameApplet.field_o, 0, true, (byte) -76);
+          DialWidget.sendAccountChoicePacket(param1, StatusBar.field_d, GameApplet.field_o, 0, true, (byte) -76);
         }
         if (DelegatingCanvas.field_h.field_P != 0) {
           LobbyPlayer.field_Wb = false;
@@ -166,10 +166,10 @@ final class AccountChoicePanel extends UiContainer implements ButtonListener {
                 CheckboxPainter.a(-22218);
               }
             } else {
-              id.a(param2 + 87);
+              id.showRegistrationPanel(param2 + 87);
             }
           } else {
-            IntrusiveDequeCursor.b(true);
+            IntrusiveDequeCursor.openBlankLoginForm(true);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -205,7 +205,7 @@ final class AccountChoicePanel extends UiContainer implements ButtonListener {
         this.field_J.field_n = (UiListener) (this);
         this.field_J.field_l = KeyboardInputHandler.field_a;
         this.field_L.field_n = (UiListener) (this);
-        this.field_L.field_l = up.field_q;
+        this.field_L.field_l = PuzzleThumbnail.field_q;
         this.addChild(this.field_N, 80);
         this.addChild(this.field_J, 80);
         this.addChild(this.field_L, 80);

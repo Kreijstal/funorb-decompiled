@@ -13,7 +13,7 @@ final class PauseMenuScreen extends MenuScreen {
     }
 
     final void handleInput(byte param0) {
-        int var2 = ro.b(-36, !pe.a(false) ? true : false);
+        int var2 = ro.advanceSlideshow(-36, !pe.a(false) ? true : false);
         if (param0 >= -64) {
           return;
         }

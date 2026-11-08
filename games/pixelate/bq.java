@@ -237,7 +237,7 @@ final class bq {
               }
               stackIn_38_0[stackIn_38_1] = stackIn_41_2;
             }
-            pk.field_g = hm.a(64);
+            pk.field_g = hm.monotonicMillis(64);
           }
           ScoreMarkerDemo.field_c.field_h = BackgroundScene.field_h.length;
           var3_intLifetime1 = 0;
@@ -306,7 +306,7 @@ final class bq {
             var4Lifetime3++;
           }
           if (CanvasRasterBuffer.field_h != 2) {
-            ScoreMarkerDemo.field_c.initializeSelection(param0, mi.a(ProxyAuthenticationException.field_d, StatusBar.field_k, (byte) -97), 17068, 0);
+            ScoreMarkerDemo.field_c.initializeSelection(param0, mi.legacyMenuOptionAt(ProxyAuthenticationException.field_d, StatusBar.field_k, (byte) -97), 17068, 0);
           } else {
             ScoreMarkerDemo.field_c.initializeSelection(param0, -1, 17068, -1);
           }

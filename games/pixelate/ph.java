@@ -52,11 +52,11 @@ final class ph extends IntrusiveNode {
               var2.writeInt(fj.field_a, -76);
               ConditionalTextValue.field_d.write(13, -103, 0, var2.payload);
               AchievementsScreen.field_q = AchievementsScreen.field_q + 1;
-              ViewportController.field_a = 30000L + hm.a(64);
+              ViewportController.field_a = 30000L + hm.monotonicMillis(64);
             }
             if (AchievementsScreen.field_q == 3) {
               if (ConditionalTextValue.field_d.a(-120) <= 0) {
-                if (ViewportController.field_a < hm.a(64)) {
+                if (ViewportController.field_a < hm.monotonicMillis(64)) {
                   stackIn_30_0 = ce.a((byte) -124, -2);
                   return stackIn_30_0;
                 }

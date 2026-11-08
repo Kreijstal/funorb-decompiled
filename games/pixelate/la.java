@@ -14,7 +14,7 @@ final class la {
         }
     }
 
-    final static void a(int param0) {
+    final static void readGameOptionsPacket(int param0) {
         int var7 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
@@ -95,7 +95,7 @@ final class la {
         }
     }
 
-    final static String a(byte param0, CharSequence param1) {
+    final static String normalizeAccountName(byte param0, CharSequence param1) {
         int var4 = 0;
         int var2_int = 0;
         char[] var3 = null;
@@ -151,7 +151,7 @@ final class la {
         }
     }
 
-    final static boolean a(String param0, int param1) {
+    final static boolean openUrlWithShell(String param0, int param1) {
         String var2 = null;
         Exception var2_ref = null;
         RuntimeException var2_ref2 = null;
@@ -207,14 +207,14 @@ final class la {
         }
     }
 
-    final static SceneWidget b(byte param0) {
+    final static SceneWidget getGameListContent(byte param0) {
         if (param0 > -84) {
-          la.a((byte) -93);
+          la.getLegacyMenuWidth((byte) -93);
         }
-        return aj.field_k.content;
+        return ReflectionCheckRequest.field_k.content;
     }
 
-    final static void a(int param0, int param1, ScrollContainer param2, int param3, boolean param4) {
+    final static void layoutLobbyGameRows(int param0, int param1, ScrollContainer param2, int param3, boolean param4) {
         int var27_int = 0;
         ScrollContainer stackIn_45_0 = null;
         boolean stackIn_45_1 = false;
@@ -471,16 +471,16 @@ final class la {
               var12.field_Gb.setBounds(var19, fq.field_q, var12.field_K - 40, 256, 40);
               if (var12.field_Hb.field_W &&
                 var22 != 0) {
-                up.field_o = var12.field_Fb;
+                PuzzleThumbnail.field_o = var12.field_Fb;
                 if (gi.field_d != null &&
                   gi.field_d[var12.field_Qb] != null) {
-                  up.field_o = up.field_o + " - " + gi.field_d[var12.field_Qb];
+                  PuzzleThumbnail.field_o = PuzzleThumbnail.field_o + " - " + gi.field_d[var12.field_Qb];
                 }
               } else {
                 if (var12.field_Hb.field_W &&
                   null != gi.field_d &&
                   gi.field_d[var12.field_Qb] != null) {
-                  up.field_o = gi.field_d[var12.field_Qb];
+                  PuzzleThumbnail.field_o = gi.field_d[var12.field_Qb];
                 }
               }
               var19 = var19 + fq.field_q;
@@ -527,7 +527,7 @@ final class la {
                   if (var7 <= var12.field_Yb) {
                     if (var6 <= var12.field_Rb) {
                       if ((var8 & ~var12.field_Ib) != 0) {
-                        var25_int = cl.a((byte) -101, var8 & ~var12.field_Ib);
+                        var25_int = cl.highestOneBit((byte) -101, var8 & ~var12.field_Ib);
                         var24Lifetime2 = AlphaContainer.a(MarkerSliderPainter.field_i, 27, new String[]{var20});
                         if (var25_int > 0 &&
                           null != lc.field_l &&
@@ -566,7 +566,7 @@ final class la {
                   } else {
                     if (var6 <= var12.field_Rb) {
                       if (0 != (var8 & ~var12.field_Ib)) {
-                        var25_int = cl.a((byte) -100, var8 & ~var12.field_Ib);
+                        var25_int = cl.highestOneBit((byte) -100, var8 & ~var12.field_Ib);
                         var24Lifetime2 = ArchiveProvider.field_d;
                         if (var25_int > 0 &&
                           null != lc.field_l &&
@@ -662,7 +662,7 @@ final class la {
                   var27 = LoginMethod.field_c.field_pc;
                   var24Lifetime2 = (String) (var24Lifetime2) + "<br>" + AlphaContainer.a(ff.field_c, 93, new String[]{var27});
                 }
-                up.field_o = (String) (var24Lifetime2);
+                PuzzleThumbnail.field_o = (String) (var24Lifetime2);
               }
             }
             var12 = (LobbyPlayer) (var10.next(1504642273));
@@ -698,14 +698,14 @@ final class la {
           MidiPcmStream.field_t == 17) {
           dg.a(0, (byte) -91);
         }
-        if (BoardParticle.a((byte) -104, MidiPcmStream.field_t)) {
+        if (BoardParticle.isNonNegative((byte) -104, MidiPcmStream.field_t)) {
           var4 = 0;
           if (MidiPcmStream.field_t == 12) {
             var4 = -1;
           }
           wo.getScreen(-92, MidiPcmStream.field_t).enterScreen(2, var4, param2);
           if (MidiPcmStream.field_t == 12) {
-            id.a(param2, (byte) 110);
+            id.startSlideshow(param2, (byte) 110);
           }
         }
         if (param3 != -25528) {
@@ -713,7 +713,7 @@ final class la {
         }
     }
 
-    final static int a(byte param0) {
+    final static int getLegacyMenuWidth(byte param0) {
         if (param0 != -59) {
           field_a = (int[]) null;
         }
@@ -743,8 +743,8 @@ final class la {
           var9 = new PacketBuffer(param0);
           var3 = var9.readUnsignedByte(param1 ^ 255);
           var4 = var9.readInt(0);
-          if (var4 >= param1 && (up.field_j == 0 ||
-            !(up.field_j < var4))) {
+          if (var4 >= param1 && (PuzzleThumbnail.field_j == 0 ||
+            !(PuzzleThumbnail.field_j < var4))) {
             if (var3 == 0) {
               var13 = new byte[var4];
               var11 = var13;
@@ -754,8 +754,8 @@ final class la {
               return stackIn_21_0;
             }
             var5_int = var9.readInt(0);
-            if (0 <= var5_int && (up.field_j == 0 ||
-              !(var5_int > up.field_j))) {
+            if (0 <= var5_int && (PuzzleThumbnail.field_j == 0 ||
+              !(var5_int > PuzzleThumbnail.field_j))) {
               var12 = new byte[var5_int];
               var10 = var12;
               var6 = var10;

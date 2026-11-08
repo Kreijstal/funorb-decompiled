@@ -11,7 +11,7 @@ abstract class ArchiveRequest extends DualLinkNode {
     boolean field_x;
     static wm field_u;
 
-    final static void a(byte param0) {
+    final static void createTimerBarCapSprites(byte param0) {
         ui.field_f = new Sprite(7, 25);
         ui.field_f.makeRasterTarget();
         SoftwareRasterizer.fillRoundedRectangle(0, 0, 28, 25, 7, 16711935);
@@ -32,7 +32,7 @@ abstract class ArchiveRequest extends DualLinkNode {
           ClientException.field_f.bindRaster(19692);
           return;
         }
-        ArchiveRequest.a((byte) 36);
+        ArchiveRequest.createTimerBarCapSprites((byte) 36);
         SoftwareRasterizer.drawRoundedRectangle(0, 2, 28, 21, 6, 65793);
         ClientException.field_f.bindRaster(19692);
         di.field_c = new Sprite(8, 25);
@@ -54,9 +54,9 @@ abstract class ArchiveRequest extends DualLinkNode {
         }
     }
 
-    abstract byte[] h(int param0);
+    abstract byte[] getData(int param0);
 
-    abstract int g(int param0);
+    abstract int getProgressPercent(int param0);
 
     ArchiveRequest() {
         this.field_v = true;

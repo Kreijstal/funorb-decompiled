@@ -43,7 +43,7 @@ final class di {
           discarded$0 = var5.append(var7.substring(0, var4));
           var2 = var7.substring(var4);
           while (var2.length() > 0) {
-            discarded$1 = var5.append(wl.field_f);
+            discarded$1 = var5.append(FireworkSpark.field_f);
             discarded$2 = var5.append(var2.substring(0, 3));
             var2 = var2.substring(3);
           }
@@ -53,7 +53,7 @@ final class di {
         discarded$3 = var5.append(var7.substring(0, var4));
         var2Lifetime1 = var7.substring(var4);
         while (var2Lifetime1.length() > 0) {
-          discarded$4 = var5.append(wl.field_f);
+          discarded$4 = var5.append(FireworkSpark.field_f);
           discarded$5 = var5.append(var2Lifetime1.substring(0, 3));
           var2Lifetime1 = var2Lifetime1.substring(3);
         }

@@ -29,10 +29,10 @@ final class sk {
     }
 
     final static void a(boolean param0, int param1, int param2, boolean param3, int param4, int param5, int param6, byte param7, boolean param8, int param9, boolean param10, int param11, boolean param12, int param13) {
-        up.field_o = null;
+        PuzzleThumbnail.field_o = null;
         ug.a(2586);
         param12 = bq.a((byte) -124, param2, param6, param12, param13, param11, param5);
-        ImageProducerRasterBuffer.a(param5, param10, param8, param0, param3, param1, -28362, param12, param4, param9);
+        ImageProducerRasterBuffer.updateLobbyPanels(param5, param10, param8, param0, param3, param1, -28362, param12, param4, param9);
         HuffmanCodec.a(param0, 0, param4);
         bd.a((byte) -64, param12, param4, param11);
         if (param7 <= -112) {

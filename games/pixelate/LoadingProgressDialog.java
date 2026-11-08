@@ -14,13 +14,13 @@ final class LoadingProgressDialog extends ResizableModalPanel {
     static SceneWidget field_eb;
     static String field_jb;
 
-    public static void n(int param0) {
+    public static void clearStatics(int param0) {
         field_ib = null;
         field_eb = null;
         field_jb = null;
         if (param0 > -98) {
           String var2 = (String) null;
-          LoadingProgressDialog.a(false, (String) null, 30);
+          LoadingProgressDialog.showAccountRequestDialog(false, (String) null, 30);
         }
     }
 
@@ -43,16 +43,16 @@ final class LoadingProgressDialog extends ResizableModalPanel {
         }
     }
 
-    final static void a(boolean param0, boolean param1) {
-        RegistrationRequestDialog.a(param1, param0, 0);
+    final static void drawDimmedAccountLayers(boolean param0, boolean param1) {
+        RegistrationRequestDialog.drawDimmedAccountLayers(param1, param0, 0);
     }
 
-    final void o(int param0) {
+    final void markFinished(int param0) {
         this.field_db = true;
         this.activityBar.field_Y = false;
         if (param0 != 30) {
           String var3 = (String) null;
-          LoadingProgressDialog.a(true, (String) null, -92);
+          LoadingProgressDialog.showAccountRequestDialog(true, (String) null, -92);
         }
     }
 
@@ -91,10 +91,10 @@ final class LoadingProgressDialog extends ResizableModalPanel {
             stackIn_7_1 = (param3);
             this.field_ab = stackIn_7_1;
             if (this.field_ab) {
-              this.activityBar.a((byte) 98, 8405024, 4210752);
+              this.activityBar.setColours((byte) 98, 8405024, 4210752);
               this.activityBar.field_Y = true;
             } else {
-              this.activityBar.a((byte) 92, 2113632, 4210752);
+              this.activityBar.setColours((byte) 92, 2113632, 4210752);
               if (this.field_db) {
                 this.activityBar.field_Y = false;
               }
@@ -120,16 +120,16 @@ final class LoadingProgressDialog extends ResizableModalPanel {
         }
     }
 
-    final static void a(boolean param0, String param1, int param2) {
+    final static void showAccountRequestDialog(boolean param0, String param1, int param2) {
         try {
           dk.field_c = true;
           ke.field_d = param0 ? true : false;
           if (param2 != -26027) {
             String var4 = (String) null;
-            LoadingProgressDialog.a(true, (String) null, -84);
+            LoadingProgressDialog.showAccountRequestDialog(true, (String) null, -84);
           }
           MainMenuScreen.field_r = new AccountRequestDialog(wa.field_c, ba.field_d, param1, MainMenuScreen.field_s, ke.field_d);
-          wa.field_c.b(param2 ^ 32140, MainMenuScreen.field_r);
+          wa.field_c.showPanel(param2 ^ 32140, MainMenuScreen.field_r);
         } catch (RuntimeException runtimeException) {
           throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "ko.Q(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

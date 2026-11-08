@@ -28,7 +28,7 @@ final class FallingPieceView {
         RuntimeException var3 = null;
         try {
           if (MainMenuScreen.field_r != null) {
-            MainMenuScreen.field_r.p(-92);
+            MainMenuScreen.field_r.close(-92);
           }
           nf.field_b = new LoginForm(param0, param2, false, true, true);
           ph.field_l.transitionToContent(nf.field_b, -120);

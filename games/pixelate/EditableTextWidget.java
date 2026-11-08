@@ -71,7 +71,7 @@ class EditableTextWidget extends TextButton {
           this.maximumLength = param2;
           this.setText(true, (byte) 87, param0);
           this.field_Q = true;
-          this.field_W = hm.a(64);
+          this.field_W = hm.monotonicMillis(64);
         } catch (RuntimeException runtimeException) {
           throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "c.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -176,7 +176,7 @@ class EditableTextWidget extends TextButton {
           if (param1 != 3) {
             this.field_P = true;
           }
-          this.field_W = hm.a(64);
+          this.field_W = hm.monotonicMillis(64);
           if (60 == param3) {
             return false;
           }
@@ -334,15 +334,15 @@ class EditableTextWidget extends TextButton {
         }
         var9 = (WidgetTextLayout) ((Object) this.field_y);
         var3 = var9.getTextLayout(-88, (UiComponent) (this));
-        var4 = var3.a(0);
+        var4 = var3.getMaxLineWidth(0);
         var5 = var9.getAvailableTextHeight(true, (UiComponent) (this));
-        var6 = var9.a(-3) >> 1;
+        var6 = var9.getLineHeight(-3) >> 1;
         if (-var6 + var5 > var4) {
           this.field_B = 0;
           this.field_x = 0;
           return;
         }
-        var7 = this.field_B + var3.b(true, this.caretIndex);
+        var7 = this.field_B + var3.getCharacterX(true, this.caretIndex);
         if (var5 - var6 < var7) {
           this.field_B = -var6 + var5 + (-var7 + this.field_B);
         } else {
@@ -374,9 +374,9 @@ class EditableTextWidget extends TextButton {
             if (this.selectionAnchor != this.caretIndex) {
               var6.drawSelection(this.selectionAnchor, (UiComponent) (this), -1, this.caretIndex, param0, param2);
             }
-            var7 = hm.a(64);
+            var7 = hm.monotonicMillis(64);
             if ((var7 - this.field_W) % 1000L < 500L) {
-              var6.a(param2, param0, (byte) -91, (UiComponent) (this), this.caretIndex);
+              var6.drawCaret(param2, param0, (byte) -91, (UiComponent) (this), this.caretIndex);
             }
           }
         }
@@ -428,7 +428,7 @@ class EditableTextWidget extends TextButton {
             stackIn_6_1 = var8_int;
           }
           this.moveCaret(stackIn_6_1, 81);
-          var8_long = hm.a(64);
+          var8_long = hm.monotonicMillis(64);
           stackIn_9_1 = !(-this.field_U + var8_long >= 250L);
           this.field_P = stackIn_9_1;
           if (this.field_P) {
@@ -532,7 +532,7 @@ class EditableTextWidget extends TextButton {
                 this.caretIndex = var6;
               }
             }
-            this.field_W = hm.a(64);
+            this.field_W = hm.monotonicMillis(64);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

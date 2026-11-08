@@ -246,7 +246,7 @@ final class PicturePreview extends IntrusiveNode {
 
     PicturePreview(IndexedSprite param0) {
         try {
-          this.field_p = ThreeSliceButtonPainter.a(param0, 21922);
+          this.field_p = ThreeSliceButtonPainter.buildCellMask(param0, 21922);
           this.field_n = param0.field_f;
           this.field_s = param0.field_a;
           this.field_l = new Sprite(16 * this.field_n, 16 * this.field_s);

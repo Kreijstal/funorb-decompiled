@@ -13,20 +13,20 @@ final class MusicPatchPcmStream extends PcmStream {
         String var1 = null;
         String var1Lifetime1;
         if (param0 == 100) {
-          var1 = ProxySocketConnector.f(8192);
+          var1 = ProxySocketConnector.getAccountRequestStatusText(8192);
           if (var1 != null &&
             var1.indexOf('@') >= 0) {
             var1 = "";
           }
-          return new ConditionalTextValue(ProxySocketConnector.f(8192), OptionsScreen.isAccountRequestPending(120));
+          return new ConditionalTextValue(ProxySocketConnector.getAccountRequestStatusText(8192), OptionsScreen.isAccountRequestPending(120));
         }
         field_p = (Sprite) null;
-        var1Lifetime1 = ProxySocketConnector.f(8192);
+        var1Lifetime1 = ProxySocketConnector.getAccountRequestStatusText(8192);
         if (var1Lifetime1 != null &&
           var1Lifetime1.indexOf('@') >= 0) {
           var1Lifetime1 = "";
         }
-        return new ConditionalTextValue(ProxySocketConnector.f(8192), OptionsScreen.isAccountRequestPending(120));
+        return new ConditionalTextValue(ProxySocketConnector.getAccountRequestStatusText(8192), OptionsScreen.isAccountRequestPending(120));
     }
 
     final PcmStream nextSubStream() {

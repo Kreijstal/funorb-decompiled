@@ -9,7 +9,7 @@ abstract class DebouncedValidator implements ValidationSource {
     static Sprite field_b;
     static long field_f;
 
-    final static int a(boolean param0, String param1, PacketBuffer param2) {
+    final static int writeCompressedString(boolean param0, String param1, PacketBuffer param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         byte[] var4 = null;
@@ -49,11 +49,11 @@ abstract class DebouncedValidator implements ValidationSource {
         }
     }
 
-    final static void a(ResourceArchive param0, int param1, ResourceArchive param2, ResourceArchive param3, boolean param4) {
+    final static void initializeFrontEnd(ResourceArchive param0, int param1, ResourceArchive param2, ResourceArchive param3, boolean param4) {
         an.field_e = MatchController.execute((byte) 122, "");
         an.field_e.complete(param1 - 27848, false);
         MatchHud.loadCommonUiResources(param1 + 4740151, param3, param2, param0);
-        GreenGrowTheRushesBackground.b(false);
+        GreenGrowTheRushesBackground.createAccountUiLayer(false);
         if (param1 != 27848) {
           return;
         }
@@ -65,7 +65,7 @@ abstract class DebouncedValidator implements ValidationSource {
         }
     }
 
-    final static void a(byte param0, String[] param1, int param2, String param3) {
+    final static void handleAccountRequestResult(byte param0, String[] param1, int param2, String param3) {
         int var5 = 0;
         String var6 = null;
         String[] var7 = null;
@@ -91,12 +91,12 @@ abstract class DebouncedValidator implements ValidationSource {
             }
           } else {
             stackIn_5_0 = !(um.field_r >= 13);
-            SpriteCheckboxPainter.field_f = pk.a(stackIn_5_0, 5731);
+            SpriteCheckboxPainter.field_f = pk.createDobResult(stackIn_5_0, 5731);
             ro.setNameSuggestions((String[]) null, param0 ^ -99);
           }
           if (param0 != -97) {
             var6 = (String) null;
-            DebouncedValidator.a((byte) -92, (String[]) null, -31, (String) null);
+            DebouncedValidator.handleAccountRequestResult((byte) -92, (String[]) null, -31, (String) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -121,7 +121,7 @@ abstract class DebouncedValidator implements ValidationSource {
 
     abstract ValidationState evaluateState(boolean param0);
 
-    final static boolean a(byte param0, SocialListEntry param1, SocialListEntry param2) {
+    final static boolean comesBeforeFriend(byte param0, SocialListEntry param1, SocialListEntry param2) {
         int var3_int = 0;
         int var5 = 0;
         RuntimeException stackIn_16_0 = null;
@@ -171,7 +171,7 @@ abstract class DebouncedValidator implements ValidationSource {
         }
     }
 
-    final static void a(byte param0, boolean param1) {
+    final static void layoutLobbyComponents(byte param0, boolean param1) {
         int var6 = 0;
         int var11 = 0;
         int stackIn_6_0 = 0;
@@ -209,12 +209,12 @@ abstract class DebouncedValidator implements ValidationSource {
           Matrix3.field_b = SoftwareRasterizer.field_d;
           if (param0 != 32) {
             var14 = (SocialListEntry) null;
-            DebouncedValidator.a((byte) -25, (SocialListEntry) null, (SocialListEntry) null);
+            DebouncedValidator.comesBeforeFriend((byte) -25, (SocialListEntry) null, (SocialListEntry) null);
           }
           if (!param1) {
             stackIn_6_0 = Checkbox.field_W;
           } else {
-            stackIn_6_0 = vn.field_g;
+            stackIn_6_0 = RisingBubble.field_g;
           }
           cm.b(stackIn_6_0, 4740);
           nd.field_b.a(ff.field_h.field_K, -42 + ff.field_h.height, 0, 0, param0 ^ 37);
@@ -321,14 +321,14 @@ abstract class DebouncedValidator implements ValidationSource {
                       var9.field_K = 0;
                     }
                   } else {
-                    AccountTermsPanel.field_L[var6][0].a(var3, 2, PlayerBoard.field_q, var5, var8, 38, param0 ^ -2147483616);
+                    AccountTermsPanel.field_L[var6][0].setBoundsAndLayout(var3, 2, PlayerBoard.field_q, var5, var8, 38, param0 ^ -2147483616);
                     var8 += 40;
                   }
                   var9_int = -var8 + (Bzip2State.field_A.field_K - 3);
                   var10_int = AccountTermsPanel.field_L[var6].length - 1;
                   for (var11 = 0; var11 < var10_int; var11++) {
                     var12 = var9_int * var11 / var10_int;
-                    AccountTermsPanel.field_L[var6][var11 + 1].a(var3, 2, PlayerBoard.field_q, var5, var8 + var12, var9_int * (var11 + 1) / var10_int + (-2 - var12), param0 ^ -2147483616);
+                    AccountTermsPanel.field_L[var6][var11 + 1].setBoundsAndLayout(var3, 2, PlayerBoard.field_q, var5, var8 + var12, var9_int * (var11 + 1) / var10_int + (-2 - var12), param0 ^ -2147483616);
                   }
                   var5 = var5 + (var3 + 2);
                 }
@@ -341,7 +341,7 @@ abstract class DebouncedValidator implements ValidationSource {
           DisplayNameRequestGlobals.field_a.field_zb = OptionsScreen.buildNineSliceSprites(8421504, param0 ^ 48, 11579568, DisplayNameRequestGlobals.field_a.height, 1, 3);
           StripedProgressBar.field_O.setBounds(5, -2 + DisplayNameRequestGlobals.field_a.height - 10 - 24, 5, param0 + 224, DisplayNameRequestGlobals.field_a.field_K - 10);
           ContentTransitionDialog.field_eb.setBounds(-24 + DisplayNameRequestGlobals.field_a.height - 5, 24, (-80 + DisplayNameRequestGlobals.field_a.field_K) / 2, 256, 80);
-          mi.b(false);
+          mi.layoutLobbyPanels(false);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -363,14 +363,14 @@ abstract class DebouncedValidator implements ValidationSource {
         if (this.isInputEmpty(-22265)) {
           return HighscoresScreen.field_o;
         }
-        if (!((350L + this.field_c) <= hm.a(64))) {
+        if (!((350L + this.field_c) <= hm.monotonicMillis(64))) {
           return BufferedRandomAccessFile.field_b;
         }
         return this.evaluateState(true);
     }
 
     public final void markEdited(int param0) {
-        this.field_c = hm.a(64);
+        this.field_c = hm.monotonicMillis(64);
         if (param0 != 2048) {
           field_d = 74;
         }
@@ -380,30 +380,30 @@ abstract class DebouncedValidator implements ValidationSource {
         if (this.isInputEmpty(-22265)) {
           return null;
         }
-        if (hm.a(64) < (350L + this.field_c)) {
+        if (hm.monotonicMillis(64) < (350L + this.field_c)) {
           return null;
         }
         if (param0 != -7) {
           String var3 = (String) null;
-          DebouncedValidator.a((byte) -36, (String[]) null, 126, (String) null);
+          DebouncedValidator.handleAccountRequestResult((byte) -36, (String[]) null, 126, (String) null);
         }
         return this.computeMessage(param0 + 6);
     }
 
     abstract String computeMessage(int param0);
 
-    final static boolean a(int param0, int param1, int param2) {
+    final static boolean handleChatShortcutKey(int param0, int param1, int param2) {
         if (param2 != 0) {
           return true;
         }
         int var3 = DraggableWidget.field_S != null ? 1 : 0;
         if (9 == ke.field_a &&
-          SpriteState.a(MusicCrossfadeStream.field_F, up.field_h, um.field_o, hm.field_b, 500)) {
+          SpriteState.a(MusicCrossfadeStream.field_F, PuzzleThumbnail.field_h, um.field_o, hm.field_b, 500)) {
           if (hm.field_b != 2 &&
             var3 != 0) {
             return false;
           }
-          return UiTheme.a(um.field_o, MusicCrossfadeStream.field_F, hm.field_b, param2 ^ -2, up.field_h);
+          return UiTheme.openQuickChatForRecipient(um.field_o, MusicCrossfadeStream.field_F, hm.field_b, param2 ^ -2, PuzzleThumbnail.field_h);
         }
         if (ke.field_a == 10) {
           if (var3 != 0) {

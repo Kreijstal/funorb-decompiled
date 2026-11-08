@@ -68,7 +68,7 @@ final class ScoreMarkerBar extends StatusBar {
             var17 = var4_ref_rl;
             var17Lifetime2 = var4_ref_rl;
             var4_ref_rl.ensureBounds((byte) -17);
-            PasswordValidator.a(var3, 67);
+            PasswordValidator.animateLogoMeshes(var3, 67);
             var5 = var4_ref_rl.field_c + var4_ref_rl.field_b >> 1;
             var6 = var4_ref_rl.field_F + var4_ref_rl.field_t >> 1;
             var7 = var4_ref_rl.field_g + var4_ref_rl.field_x >> 1;
@@ -116,11 +116,11 @@ final class ScoreMarkerBar extends StatusBar {
             }
             var21[var16] = -2147483648;
             var17Lifetime1 = FloatingSquare.field_b[var16];
-            PasswordValidator.a(var16, 100);
+            PasswordValidator.animateLogoMeshes(var16, 100);
             for (var18 = 0; var18 < 3; var18++) {
               ReportAbuseDialog.field_Hb[var18] = ReportAbuseDialog.field_Hb[var18] + BlastFromThePastBackground.field_p[var15][var18];
             }
-            TextButton.a(var17Lifetime1, StatusBar.field_a, false, ReportAbuseDialog.field_Hb, (byte) 98, true, false);
+            TextButton.projectAndBucketMesh(var17Lifetime1, StatusBar.field_a, false, ReportAbuseDialog.field_Hb, (byte) 98, true, false);
             GameModeSelectScreen.renderTriangleMesh(var14, var17Lifetime1, var12Lifetime1, var9Lifetime1, var8Lifetime1, var13Lifetime1, 20126, var7Lifetime1);
           }
           return;
@@ -150,7 +150,7 @@ final class ScoreMarkerBar extends StatusBar {
         int var5;
         int var6;
         var6 = Pixelate.field_H ? 1 : 0;
-        var1 = hm.a(64);
+        var1 = hm.monotonicMillis(64);
         if (!param0) {
           ScoreMarkerBar.isConnectionRetryDue(true);
         }

@@ -164,7 +164,7 @@ class BackgroundScene {
 
     final static void a(int param0) {
         r.b(-93);
-        SocketConnector.a(3, MouseWheelHandler.field_c, fq.field_q, r.field_c, Checkbox.field_V[param0].field_A, DelegatingCanvas.field_b);
+        SocketConnector.layoutChatPanel(3, MouseWheelHandler.field_c, fq.field_q, r.field_c, Checkbox.field_V[param0].field_A, DelegatingCanvas.field_b);
     }
 
     void render(boolean param0) {

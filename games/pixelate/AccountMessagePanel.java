@@ -87,7 +87,7 @@ final class AccountMessagePanel extends UiContainer implements ButtonListener {
             if (var7 != -1) {
               QuickChatMenu.setPendingUiResult(this.field_I[var6_int], -2671);
             } else {
-              this.field_M.p(-121);
+              this.field_M.close(-121);
             }
             break;
           }

@@ -5,7 +5,7 @@ final class th {
     static String field_a;
     static Sprite field_b;
 
-    final static String a(int param0, String param1) {
+    final static String prefixWithCrown(int param0, String param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         String stackIn_7_0 = null;
@@ -14,7 +14,7 @@ final class th {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2_int = PairedTextColumns.a(wo.field_h, (byte) 119, Js5NetworkRequest.field_I);
+          var2_int = PairedTextColumns.getCrownLevel(wo.field_h, (byte) 119, Js5NetworkRequest.field_I);
           if (var2_int == 1) {
             param1 = "<img=0>" + param1;
           }

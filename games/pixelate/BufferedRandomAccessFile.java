@@ -80,7 +80,7 @@ final class BufferedRandomAccessFile {
               this.file.seek(false, this.position);
               this.filePosition = this.position;
             }
-            this.file.a(param0, param3, param1, -80);
+            this.file.write(param0, param3, param1, -80);
             this.filePosition = this.filePosition + (long)param0;
             if (this.filePosition > this.physicalLength) {
               this.physicalLength = this.filePosition;
@@ -281,13 +281,13 @@ final class BufferedRandomAccessFile {
         }
     }
 
-    final void a(boolean param0) throws IOException {
+    final void close(boolean param0) throws IOException {
         if (!param0) {
           String var3 = (String) null;
           BufferedRandomAccessFile.a(-117, (String) null);
         }
         this.flush((byte) 28);
-        this.file.b(-5317);
+        this.file.close(-5317);
     }
 
     final long length(int param0) {
@@ -297,7 +297,7 @@ final class BufferedRandomAccessFile {
         return this.field_o;
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_m = null;
         int var1 = 19 / ((35 - param0) / 50);
         field_d = null;
@@ -354,7 +354,7 @@ final class BufferedRandomAccessFile {
         }
     }
 
-    final void a(long param0, int param1) throws IOException {
+    final void seek(long param0, int param1) throws IOException {
         int var4 = 32 / ((param1 - 60) / 35);
         if (param0 < 0L) {
           throw new IOException();
@@ -373,7 +373,7 @@ final class BufferedRandomAccessFile {
             this.file.seek(false, this.field_g);
             this.filePosition = this.field_g;
           }
-          this.file.a(this.writeBufferLength, this.writeBuffer, 0, -120);
+          this.file.write(this.writeBufferLength, this.writeBuffer, 0, -120);
           this.filePosition = this.filePosition + (long)this.writeBufferLength;
           if (this.physicalLength < this.filePosition) {
             this.physicalLength = this.filePosition;
@@ -407,11 +407,11 @@ final class BufferedRandomAccessFile {
           this.field_g = -1L;
         }
         if (param0 != 28) {
-          BufferedRandomAccessFile.b(9);
+          BufferedRandomAccessFile.releaseStatics(9);
         }
     }
 
-    final void a(byte[] param0, byte param1) throws IOException {
+    final void readFully(byte[] param0, byte param1) throws IOException {
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_6_2 = null;
@@ -420,7 +420,7 @@ final class BufferedRandomAccessFile {
         try {
           this.readFully(param0, (byte) 24, param0.length, 0);
           if (param1 != 0) {
-            BufferedRandomAccessFile.b(-16);
+            BufferedRandomAccessFile.releaseStatics(-16);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -447,7 +447,7 @@ final class BufferedRandomAccessFile {
           this.filePosition = this.position;
         }
         if (param0 != 200000000) {
-          BufferedRandomAccessFile.b(1);
+          BufferedRandomAccessFile.releaseStatics(1);
         }
         this.field_f = this.position;
         while (this.readLength < this.readBuffer.length) {
@@ -471,7 +471,7 @@ final class BufferedRandomAccessFile {
         this.writeBufferLength = 0;
         try {
           this.file = param0;
-          dupTemp$0 = param0.b((byte) -25);
+          dupTemp$0 = param0.length((byte) -25);
           this.physicalLength = dupTemp$0;
           this.field_o = dupTemp$0;
           this.writeBuffer = new byte[param2];
@@ -482,10 +482,10 @@ final class BufferedRandomAccessFile {
         }
     }
 
-    final static void b(boolean param0) {
+    final static void closeAccountNamePrompt(boolean param0) {
         he.field_f = null;
         if (param0) {
-          BufferedRandomAccessFile.b(-78);
+          BufferedRandomAccessFile.releaseStatics(-78);
         }
     }
 

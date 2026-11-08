@@ -13,14 +13,14 @@ final class IconTextComponent extends SceneWidget {
     static boolean field_Nb;
     static String field_Lb;
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    final void setBoundsAndLayout(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         this.setBounds(param3, param0, param4, 256, param5);
         if (param6 == -2147483648) {
-          this.b(param6 ^ 0, param2, param1);
+          this.layoutIconLabel(param6 ^ 0, param2, param1);
           return;
         }
         field_Ib = (int[]) null;
-        this.b(param6 ^ 0, param2, param1);
+        this.layoutIconLabel(param6 ^ 0, param2, param1);
     }
 
     IconTextComponent(long param0, SceneWidget param1, SceneWidget param2, SceneWidget param3, Sprite param4, String param5) {
@@ -90,7 +90,7 @@ final class IconTextComponent extends SceneWidget {
         }
     }
 
-    final int c(int param0, int param1, int param2) {
+    final int getPreferredWidth(int param0, int param1, int param2) {
         int var4 = 0;
         int var5 = 0;
         int var4Lifetime1;
@@ -118,7 +118,7 @@ final class IconTextComponent extends SceneWidget {
         return param2 + var4Lifetime1 + (param2 + param1) + var5Lifetime1;
     }
 
-    private final void b(int param0, int param1, int param2) {
+    private final void layoutIconLabel(int param0, int param1, int param2) {
         int var4;
         int var5;
         int var6;
@@ -174,7 +174,7 @@ final class IconTextComponent extends SceneWidget {
         field_Gb = null;
     }
 
-    final static void a(int param0, int param1, int param2) {
+    final static void decodeRankingRows(int param0, int param1, int param2) {
         if (WhirlpoolHasher.field_a == null) {
           WhirlpoolHasher.field_a = new int[2 * param2];
           if (ep.field_c == null ||

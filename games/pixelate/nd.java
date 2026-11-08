@@ -98,7 +98,7 @@ final class nd {
         if (var1 > Checkbox.field_T) {
           Checkbox.field_T = var1;
         }
-        vd.a(true);
+        vd.createFloatingSquares(true);
     }
 
     public static void releaseStatics(int param0) {

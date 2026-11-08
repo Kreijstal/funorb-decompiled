@@ -37,12 +37,12 @@ final class jn extends IntrusiveNode {
     jn(int param0, int param1) {
         this.field_r = param1;
         this.field_u = param0;
-        this.field_t = TabbedPanel.a((byte) 41, 640, 240);
-        this.field_y = TabbedPanel.a((byte) 41, 768, 256);
+        this.field_t = TabbedPanel.randomInRange((byte) 41, 640, 240);
+        this.field_y = TabbedPanel.randomInRange((byte) 41, 768, 256);
         this.field_o = nh.randomUnitVector((byte) 60);
         this.field_l = 0;
-        this.field_s = TabbedPanel.a((byte) 41, 50, 20);
-        this.field_w = TabbedPanel.a((byte) 41, 75, 25);
+        this.field_s = TabbedPanel.randomInRange((byte) 41, 50, 20);
+        this.field_w = TabbedPanel.randomInRange((byte) 41, 75, 25);
         this.field_n = MatchController.randomBelow(6, (byte) -120);
         this.field_k = Math.random() < 0.5 ? true : false;
     }

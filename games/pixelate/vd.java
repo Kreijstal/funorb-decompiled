@@ -7,7 +7,7 @@ final class vd {
     static String field_b;
     static SceneWidget field_c;
 
-    final static byte[] a(String param0, int param1) {
+    final static byte[] getGameTextFile(String param0, int param1) {
         RuntimeException var2 = null;
         byte[] stackIn_2_0 = null;
         byte[] stackIn_4_0 = null;
@@ -103,7 +103,7 @@ final class vd {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_c = null;
         field_b = null;
         int var1 = -58 % ((-2 - param0) / 49);
@@ -119,7 +119,7 @@ final class vd {
         ra.a(param2, param1, param0, -32268);
     }
 
-    final static void a(boolean param0) {
+    final static void createFloatingSquares(boolean param0) {
         int var1_int = 0;
         int var2 = 0;
         String var3 = null;
@@ -132,7 +132,7 @@ final class vd {
           }
           if (!param0) {
             var3 = (String) null;
-            vd.a((String) null, 91);
+            vd.getGameTextFile((String) null, 91);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

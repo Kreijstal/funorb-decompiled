@@ -10,7 +10,7 @@ final class ThreeSliceButtonPainter extends TextWidgetPainter {
     private int field_v;
     private int field_t;
 
-    final static boolean[] a(IndexedSprite param0, int param1) {
+    final static boolean[] buildCellMask(IndexedSprite param0, int param1) {
         int var3 = 0;
         boolean[] var2 = null;
         RuntimeException var2_ref = null;
@@ -53,7 +53,7 @@ final class ThreeSliceButtonPainter extends TextWidgetPainter {
         }
     }
 
-    final static QuickChatMenu a(int param0, SceneWidget param1, int[] param2, SceneWidget param3, SceneWidget param4) {
+    final static QuickChatMenu buildQuickChatResponseMenu(int param0, SceneWidget param1, int[] param2, SceneWidget param3, SceneWidget param4) {
         int var10_int = 0;
         int var5_int = 0;
         String[] var6 = null;
@@ -135,21 +135,21 @@ final class ThreeSliceButtonPainter extends TextWidgetPainter {
         }
     }
 
-    public static void c(int param0) {
+    public static void clearStatics(int param0) {
         field_w = null;
         field_r = null;
         if (param0 > -24) {
           Sprite[] var2 = (Sprite[]) null;
-          ThreeSliceButtonPainter.a((Sprite[]) null, 23, -123, 94);
+          ThreeSliceButtonPainter.setLegacyMenuFrameSprites((Sprite[]) null, 23, -123, 94);
         }
         field_u = null;
     }
 
-    final static void a(Sprite[] param0, int param1, int param2, int param3) {
+    final static void setLegacyMenuFrameSprites(Sprite[] param0, int param1, int param2, int param3) {
         try {
           if (param2 > -57) {
             IndexedSprite var5 = (IndexedSprite) null;
-            ThreeSliceButtonPainter.a((IndexedSprite) null, -30);
+            ThreeSliceButtonPainter.buildCellMask((IndexedSprite) null, -30);
           }
           he.field_a = new sb(param0);
           GradientOutlineTextPainter.field_t = param3;

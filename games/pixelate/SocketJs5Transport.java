@@ -24,10 +24,10 @@ final class SocketJs5Transport extends Js5Transport {
         this.field_a = (byte)(int)(1.0 + Math.random() * 255.0);
     }
 
-    final static void d(int param0) {
-        LoginMethod.field_d = hm.a(64);
+    final static void resetRetryTimer(int param0) {
+        LoginMethod.field_d = hm.monotonicMillis(64);
         if (param0 >= -11) {
-          SocketJs5Transport.c(16);
+          SocketJs5Transport.tickScorePopups(16);
         }
         LoginDialog.field_ob = 0;
     }
@@ -65,7 +65,7 @@ final class SocketJs5Transport extends Js5Transport {
             this.field_g.position = 0;
             this.field_c = null;
             while (true) {
-              var4_ref = (Js5NetworkRequest) (this.field_f.a((byte) 80));
+              var4_ref = (Js5NetworkRequest) (this.field_f.removeFirst((byte) 80));
               if (var4_ref != null) {
                 this.field_e.addLast(param2 ^ 84, var4_ref);
                 continue;
@@ -73,7 +73,7 @@ final class SocketJs5Transport extends Js5Transport {
               break;
             }
             while (true) {
-              var4_refLifetime1 = (Js5NetworkRequest) (this.field_p.a((byte) 80));
+              var4_refLifetime1 = (Js5NetworkRequest) (this.field_p.removeFirst((byte) 80));
               if (var4_refLifetime1 != null) {
                 this.field_l.addLast(param2 + 104, var4_refLifetime1);
                 continue;
@@ -102,7 +102,7 @@ final class SocketJs5Transport extends Js5Transport {
               }
             }
             this.field_o = 0;
-            this.field_k = hm.a(64);
+            this.field_k = hm.monotonicMillis(64);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter3) {
             decompiledCaughtException = decompiledCaughtParameter3;
@@ -152,7 +152,7 @@ final class SocketJs5Transport extends Js5Transport {
           Js5NetworkRequest var2Lifetime1;
           var16 = Pixelate.field_H ? 1 : 0;
           if (null != this.transport) {
-            var2_long = hm.a(64);
+            var2_long = hm.monotonicMillis(64);
             var4 = (int)(var2_long - this.field_k);
             this.field_k = var2_long;
             if (200 < var4) {
@@ -180,23 +180,23 @@ final class SocketJs5Transport extends Js5Transport {
           }
           try {
             this.transport.b((byte) -106);
-            var2 = (Js5NetworkRequest) (this.field_e.c(61));
+            var2 = (Js5NetworkRequest) (this.field_e.first(61));
             while (var2 != null) {
               this.field_b.position = 0;
               this.field_b.writeByte(160, 1);
               this.field_b.writeLong40(var2.field_q, 109);
               this.transport.write(this.field_b.payload.length, -118, 0, this.field_b.payload);
               this.field_f.addLast(98, var2);
-              var2 = (Js5NetworkRequest) (this.field_e.a(65151));
+              var2 = (Js5NetworkRequest) (this.field_e.next(65151));
             }
-            var2Lifetime1 = (Js5NetworkRequest) (this.field_l.c(72));
+            var2Lifetime1 = (Js5NetworkRequest) (this.field_l.first(72));
             while (var2Lifetime1 != null) {
               this.field_b.position = 0;
               this.field_b.writeByte(160, 0);
               this.field_b.writeLong40(var2Lifetime1.field_q, 91);
               this.transport.write(this.field_b.payload.length, -113, 0, this.field_b.payload);
               this.field_p.addLast(-114, var2Lifetime1);
-              var2Lifetime1 = (Js5NetworkRequest) (this.field_l.a(65151));
+              var2Lifetime1 = (Js5NetworkRequest) (this.field_l.next(65151));
             }
             for (var2_int = 0; var2_int < 100; var2_int++) {
               var3_int = this.transport.a(-73);
@@ -269,24 +269,24 @@ final class SocketJs5Transport extends Js5Transport {
                       var12 = ((long)var6 << 32) + (long)var7;
                       var14 = null;
                       if (var11 == 0) {
-                        var14_ref = (Js5NetworkRequest) (this.field_f.c(96));
+                        var14_ref = (Js5NetworkRequest) (this.field_f.first(96));
                         while (var14_ref != null) {
                           if (~var14_ref.field_q == ~var12) {
                             decompiledFrameCompleted0 = false;
                             break;
                           }
-                          var14_ref = (Js5NetworkRequest) (this.field_f.a(65151));
+                          var14_ref = (Js5NetworkRequest) (this.field_f.next(65151));
                         }
                         decompiledFrameRemainder0 = !(decompiledFrameCompleted0);
                       }
                       if ((decompiledFrameRemainder0) &&
                         (decompiledFrameCompleted0)) {
-                        var14_ref = (Js5NetworkRequest) (this.field_p.c(62));
+                        var14_ref = (Js5NetworkRequest) (this.field_p.first(62));
                         while (var14_ref != null) {
                           if (var14_ref.field_q == var12) {
                             break;
                           }
-                          var14_ref = (Js5NetworkRequest) (this.field_p.a(65151));
+                          var14_ref = (Js5NetworkRequest) (this.field_p.next(65151));
                         }
                       }
                       if (var14_ref == null) {
@@ -318,7 +318,7 @@ final class SocketJs5Transport extends Js5Transport {
               break;
             }
             if (param0) {
-              SocketJs5Transport.c(-11);
+              SocketJs5Transport.tickScorePopups(-11);
             }
             return true;
           } catch (java.io.IOException decompiledCaughtParameter1) {
@@ -346,11 +346,11 @@ final class SocketJs5Transport extends Js5Transport {
         }
     }
 
-    public static void f(int param0) {
+    public static void releaseStatics(int param0) {
         field_q = null;
         field_t = null;
         if (param0 <= 60) {
-          SocketJs5Transport.d(81);
+          SocketJs5Transport.resetRetryTimer(81);
         }
     }
 
@@ -388,21 +388,21 @@ final class SocketJs5Transport extends Js5Transport {
         }
     }
 
-    final static void c(int param0) {
+    final static void tickScorePopups(int param0) {
         int var2 = 0;
-        pj[] var1 = null;
-        pj var3 = null;
+        ScorePopup[] var1 = null;
+        ScorePopup var3 = null;
         int var4 = 0;
-        pj[] var5 = null;
+        ScorePopup[] var5 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1_ref = null;
         var4 = Pixelate.field_H ? 1 : 0;
         try {
-          var5 = up.field_n;
+          var5 = PuzzleThumbnail.field_n;
           var1 = var5;
           for (var2 = param0; var5.length > var2; var2++) {
             var3 = var5[var2];
-            var3.a(-110);
+            var3.tick(-110);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -412,7 +412,7 @@ final class SocketJs5Transport extends Js5Transport {
         }
     }
 
-    final void b(byte param0) {
+    final void closeTransport(byte param0) {
         int var2 = -89 % ((param0 - 82) / 33);
         if (this.transport != null) {
           this.transport.close(-1);

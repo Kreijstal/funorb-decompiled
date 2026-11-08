@@ -46,7 +46,7 @@ final class AudioService implements Runnable {
           java.lang.reflect.Field var14 = null;
           java.lang.reflect.Field var15 = null;
           Object var16 = null;
-          aj var16_ref = null;
+          ReflectionCheckRequest var16_ref = null;
           Object var17 = null;
           java.lang.reflect.Field var18 = null;
           Object var20 = null;
@@ -62,7 +62,7 @@ final class AudioService implements Runnable {
           var21 = null;
           var12 = Pixelate.field_H ? 1 : 0;
           try {
-            var16_ref = (aj) (ScoreMarkerBar.field_o.first(1504642273));
+            var16_ref = (ReflectionCheckRequest) (ScoreMarkerBar.field_o.first(1504642273));
             if (var16_ref == null) {
               return;
             }
@@ -234,13 +234,13 @@ final class AudioService implements Runnable {
 
     final static void b(int param0) {
         if (null != wa.field_c) {
-          wa.field_c.a((byte) -22);
+          wa.field_c.removeDismissedPanels((byte) -22);
         }
         if (null != cn.field_b) {
-          cn.field_b.o(30);
+          cn.field_b.markFinished(30);
         }
         int var1 = -72 % ((param0 - 48) / 43);
-        hm.a((byte) -95);
+        hm.resetNoticeState((byte) -95);
     }
 
     public static void releaseStatics(boolean param0) {

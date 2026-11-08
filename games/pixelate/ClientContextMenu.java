@@ -69,7 +69,7 @@ final class ClientContextMenu {
             var7 = this.getTargetDisplayName((byte) 114);
             var4 = var7;
             var5 = LoadingStepTracker.findFriend(this.field_h, -1);
-            var6 = ImageProducerRasterBuffer.a(-640, this.field_h) ? 1 : 0;
+            var6 = ImageProducerRasterBuffer.isFriend(-640, this.field_h) ? 1 : 0;
             if (var5 == null &&
               var6 == 0) {
               this.field_b.addAction(AlphaContainer.a(ji.field_d, 52, new String[]{var7}), (byte) -106, 4);
@@ -252,7 +252,7 @@ final class ClientContextMenu {
           return;
         }
         var7 = ScrollContainer.findLobbyPlayer(param1 + 100, this.field_l);
-        var4 = JaggrabDownloader.a(this.field_l, param1 + 14526);
+        var4 = JaggrabDownloader.findGamePlayer(this.field_l, param1 + 14526);
         var5 = this.getTargetDisplayName((byte) 27);
         if (var4 != null) {
           if (!LoginMethod.field_c.field_dc) {
@@ -387,7 +387,7 @@ final class ClientContextMenu {
         if (7 != param2) {
           return false;
         }
-        var8 = aq.a(this.field_h, param0, this.field_i, -20867);
+        var8 = aq.requestRemoveIgnore(this.field_h, param0, this.field_i, -20867);
         if (var8 == null) {
           if (param1 < -123) {
           }
@@ -406,7 +406,7 @@ final class ClientContextMenu {
         if (null == this.field_b) {
           return false;
         }
-        if (this.field_b.j(-52)) {
+        if (this.field_b.isOpenHandlingEscape(-52)) {
           return true;
         }
         return false;
@@ -463,7 +463,7 @@ final class ClientContextMenu {
         int var5;
         var5 = Pixelate.field_H ? 1 : 0;
         if (param0 == 8) {
-          Match.a((byte) 85, this.field_h, this.field_l);
+          Match.openPrivateChatTo((byte) 85, this.field_h, this.field_l);
         } else {
           if (param0 == 18) {
             qj.a(this.field_h, this.field_l, (byte) 8);
@@ -478,7 +478,7 @@ final class ClientContextMenu {
                   Js5ArchiveManager.setChatFilterMode(2, -26931, this.field_k, param2);
                 } else {
                   if (param0 == 14) {
-                    IterableNodeHashTable.a(7500);
+                    IterableNodeHashTable.closePrivateChatInput(7500);
                   } else {
                     if (20 == param0) {
                       SceneWidget.c(true);
@@ -486,7 +486,7 @@ final class ClientContextMenu {
                       if (param0 != 19) {
                         return false;
                       }
-                      UiTheme.a(this.field_h, this.field_l, this.field_k, -2, this.field_j);
+                      UiTheme.openQuickChatForRecipient(this.field_h, this.field_l, this.field_k, -2, this.field_j);
                     }
                   }
                 }
@@ -503,7 +503,7 @@ final class ClientContextMenu {
 
     private final boolean handleReportAbuseAction(int param0, boolean param1, int param2) {
         if (param0 == 17) {
-          AccountTermsPanel.field_M = new ReportAbuseDialog(this.field_o.field_tb, this.field_o.screenY, this.field_o.field_K, this.field_o.height, param2, cm.field_o, pj.field_i, Vector3.field_f, TextFieldValidator.field_h, um.field_q, dn.field_c, this.field_h, this.field_l);
+          AccountTermsPanel.field_M = new ReportAbuseDialog(this.field_o.field_tb, this.field_o.screenY, this.field_o.field_K, this.field_o.height, param2, cm.field_o, ScorePopup.field_i, Vector3.field_f, TextFieldValidator.field_h, um.field_q, dn.field_c, this.field_h, this.field_l);
           return true;
         }
         if (!param1) {

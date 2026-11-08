@@ -136,12 +136,12 @@ class UiComponent extends IntrusiveNode {
         }
     }
 
-    final static void a(boolean param0) {
+    final static void resetOverlayState(boolean param0) {
         l.b(true);
         if (param0) {
           return;
         }
-        AccountRequestDialog.n(93);
+        AccountRequestDialog.stepOverlayFadeOut(93);
     }
 
     void updatePointer(int param0, int param1, int param2, UiComponent param3) {
@@ -198,7 +198,7 @@ class UiComponent extends IntrusiveNode {
           field_w = null;
           return;
         }
-        UiComponent.a(true);
+        UiComponent.resetOverlayState(true);
         field_A = null;
         field_o = null;
         field_t = null;
@@ -229,7 +229,7 @@ class UiComponent extends IntrusiveNode {
         return !this.field_D ? null : this.field_l;
     }
 
-    final static void g(int param0) {
+    final static void renderLogoGlowSprite(int param0) {
         RuntimeException runtimeException = null;
         Sprite var1 = null;
         Sprite var2 = null;
@@ -293,17 +293,17 @@ class UiComponent extends IntrusiveNode {
         return;
     }
 
-    final static void i(int param0) {
-        pj[] var1 = null;
+    final static void finishAllScorePopups(int param0) {
+        ScorePopup[] var1 = null;
         int var2 = 0;
-        pj var3 = null;
+        ScorePopup var3 = null;
         int var4 = 0;
-        pj[] var5 = null;
+        ScorePopup[] var5 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1_ref = null;
         var4 = Pixelate.field_H ? 1 : 0;
         try {
-          var5 = up.field_n;
+          var5 = PuzzleThumbnail.field_n;
           var1 = var5;
           var2 = param0;
           while (var5.length > var2) {
@@ -375,7 +375,7 @@ class UiComponent extends IntrusiveNode {
           this.updatePointer(40, param0, param3, this);
           var5 = this.containsFocus(true) ? 1 : 0;
           if (param1) {
-            if (lp.field_i != 0) {
+            if (DriftingParticle.field_i != 0) {
               if (var5 == 0) {
                 if (0 == IntrusiveDequeCursor.field_c) {
                   if (ef.field_b == 0 &&
@@ -436,7 +436,7 @@ class UiComponent extends IntrusiveNode {
                 }
                 break regionExit1;
               }
-              this.onMouseWheel(ProxyAuthenticationException.field_d, (byte) 80, param0, param3, StatusBar.field_k, lp.field_i, this);
+              this.onMouseWheel(ProxyAuthenticationException.field_d, (byte) 80, param0, param3, StatusBar.field_k, DriftingParticle.field_i, this);
             }
             if (0 == IntrusiveDequeCursor.field_c) {
               if (ef.field_b == 0 &&
@@ -741,7 +741,7 @@ class UiComponent extends IntrusiveNode {
         }
     }
 
-    final static String a(CharSequence param0, int param1) {
+    final static String normalizeBase37Name(CharSequence param0, int param1) {
         String var2 = null;
         RuntimeException var2_ref = null;
         String stackIn_6_0 = null;
@@ -755,7 +755,7 @@ class UiComponent extends IntrusiveNode {
             var2 = "";
           }
           if (param1 != -1) {
-            UiComponent.i(-36);
+            UiComponent.finishAllScorePopups(-36);
           }
           stackIn_6_0 = var2;
           return stackIn_6_0;
@@ -827,7 +827,7 @@ class UiComponent extends IntrusiveNode {
           this.field_p = param2;
           return;
         }
-        UiComponent.g(-105);
+        UiComponent.renderLogoGlowSprite(-105);
         this.field_p = param2;
     }
 

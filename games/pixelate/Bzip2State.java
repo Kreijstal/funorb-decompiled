@@ -86,7 +86,7 @@ final class Bzip2State {
         var3 = Pixelate.field_H ? 1 : 0;
         if (param1 == 6) {
           if (BufferedRandomAccessFile.field_j <= 0) {
-            if (!ArrayWidgetContainer.a((byte) 58)) {
+            if (!ArrayWidgetContainer.isAccountUiActive((byte) 58)) {
               var2 = 1;
               if (GzipDecoder.field_c != null) {
                 return;
@@ -114,7 +114,7 @@ final class Bzip2State {
         } else {
           field_C = (String) null;
           if (BufferedRandomAccessFile.field_j <= 0) {
-            if (!ArrayWidgetContainer.a((byte) 58)) {
+            if (!ArrayWidgetContainer.isAccountUiActive((byte) 58)) {
               var2 = 1;
             } else {
               var2 = 0;

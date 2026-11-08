@@ -25,16 +25,16 @@ final class gq extends EmailCredentials {
         try {
           var4_int = param0;
           while (true) {
-            if (var4_int >= up.field_n.length) {
+            if (var4_int >= PuzzleThumbnail.field_n.length) {
               return;
             }
-            if (!up.field_n[var4_int].field_f) {
+            if (!PuzzleThumbnail.field_n[var4_int].field_f) {
               var4_int++;
               continue;
             }
             break;
           }
-          up.field_n[var4_int].a(param3, param2, -1379417087, param1);
+          PuzzleThumbnail.field_n[var4_int].start(param3, param2, -1379417087, param1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -67,7 +67,7 @@ final class gq extends EmailCredentials {
         if (param0 <= 55) {
           field_m = (String) null;
         }
-        stackIn_7_0 = (ArrayWidgetContainer.a((byte) 59)) || !(BufferedRandomAccessFile.field_j > 0);
+        stackIn_7_0 = (ArrayWidgetContainer.isAccountUiActive((byte) 59)) || !(BufferedRandomAccessFile.field_j > 0);
         return stackIn_7_0;
     }
 

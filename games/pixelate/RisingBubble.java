@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class vn {
+final class RisingBubble {
     static Sprite field_c;
     static boolean[][] field_e;
     static long field_b;
@@ -12,21 +12,21 @@ final class vn {
     private int field_f;
     static String field_d;
 
-    final void a(int param0) {
+    final void tick(int param0) {
         this.field_a = this.field_a - 1.600000023841858f;
         if (param0 >= 91) {
           if (this.field_a < -20.0f) {
-            this.b(false);
+            this.respawn(false);
           }
           return;
         }
         field_d = (String) null;
         if (this.field_a < -20.0f) {
-          this.b(false);
+          this.respawn(false);
         }
     }
 
-    final static void a(int param0, boolean param1, boolean param2, String param3) {
+    final static void showLoginDialog(int param0, boolean param1, boolean param2, String param3) {
         LobbyPlayer.resetLoginRequestState(param0 - 705633292);
         wa.field_c.refreshPanelVisibility((byte) 54);
         nf.field_b = new LoginForm(Checkbox.field_U, (String) null, MainMenuScreen.field_s, param1, param2);
@@ -35,7 +35,7 @@ final class vn {
           return;
         }
         try {
-          wa.field_c.b(-6183, ph.field_l);
+          wa.field_c.showPanel(-6183, ph.field_l);
         } catch (RuntimeException runtimeException) {
           throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "vn.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
@@ -50,7 +50,7 @@ final class vn {
         }
     }
 
-    final static PaletteBitmapFont a(ResourceArchive param0, String param1, String param2, ResourceArchive param3, int param4) {
+    final static PaletteBitmapFont loadPaletteFont(ResourceArchive param0, String param1, String param2, ResourceArchive param3, int param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -105,7 +105,7 @@ final class vn {
         }
     }
 
-    private final void b(boolean param0) {
+    private final void respawn(boolean param0) {
         this.field_f = 90 + JavaRandomHelpers.a(ea.field_b, -112, 340);
         this.field_a = 480.0f;
         if (param0) {
@@ -113,15 +113,15 @@ final class vn {
         }
     }
 
-    final void a(byte param0) {
+    final void draw(byte param0) {
         DebouncedValidator.field_b.drawTransparent(this.field_f, (int)this.field_a);
         if (param0 < 122) {
           field_g = -53;
         }
     }
 
-    vn(int param0) {
-        this.b(false);
+    RisingBubble(int param0) {
+        this.respawn(false);
         this.field_a = (float)param0;
     }
 

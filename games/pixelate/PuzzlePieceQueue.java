@@ -58,7 +58,7 @@ final class PuzzlePieceQueue {
         if (param0 != -3060) {
           this.field_a = 17;
         }
-        return new Puzzle(this.field_m, this.field_k, this.field_j, 60, 30, lp.field_d, 0, 0, new IndexedSprite[]{AcidSunsetBackground.field_o[this.field_e]});
+        return new Puzzle(this.field_m, this.field_k, this.field_j, 60, 30, DriftingParticle.field_d, 0, 0, new IndexedSprite[]{AcidSunsetBackground.field_o[this.field_e]});
     }
 
     final void reset(boolean param0) {
@@ -87,21 +87,21 @@ final class PuzzlePieceQueue {
           }
         }
         if (!TextHotspotWidget.field_U) {
-          if (null == up.field_g) {
-            up.field_g = ni.a(6, -90);
+          if (null == PuzzleThumbnail.field_g) {
+            PuzzleThumbnail.field_g = ni.a(6, -90);
           }
-          if (up.field_g.field_p) {
-            TextHotspotWidget.a(false, up.field_g.field_n);
+          if (PuzzleThumbnail.field_g.field_p) {
+            TextHotspotWidget.applyCompletedPuzzleMask(false, PuzzleThumbnail.field_g.field_n);
             if (ef.field_a) {
-              QuickChatPhraseDefinition.b((byte) 74);
+              QuickChatPhraseDefinition.saveProgress((byte) 74);
             }
-            up.field_g = null;
+            PuzzleThumbnail.field_g = null;
             TextHotspotWidget.field_U = true;
           }
         }
         if (LoadingStep.field_a &&
           TextHotspotWidget.field_U) {
-          SocketConnector.c(5);
+          SocketConnector.stopAudioService(5);
           ni.a(-31470);
           if (fc.field_e == 9 &&
             EmailCredentials.field_k == 0) {
@@ -119,7 +119,7 @@ final class PuzzlePieceQueue {
         }
         if (var2 != CheckboxPainter.field_h) {
           CheckboxPainter.field_h = var2;
-          QuickChatPhraseDefinition.b((byte) 74);
+          QuickChatPhraseDefinition.saveProgress((byte) 74);
         }
     }
 
@@ -153,7 +153,7 @@ final class PuzzlePieceQueue {
           this.field_l = -112;
         }
         for (var3 = 0; var3 < this.field_i.length; var3++) {
-          var4 = vn.field_e[this.field_i[var3]];
+          var4 = RisingBubble.field_e[this.field_i[var3]];
           stackIn_6_0 = LoginCredentials.field_e.field_a;
           if (!var4[0]) {
             stackIn_7_1 = 0;

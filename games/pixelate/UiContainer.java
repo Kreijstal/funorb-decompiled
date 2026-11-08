@@ -30,14 +30,14 @@ class UiContainer extends UiComponent implements UiContainerMarker {
             var9 = (StringBuilder) null;
             this.appendDebugChildren(-23, (Hashtable) null, -77, (StringBuilder) null);
           }
-          var6 = (UiComponent) (var10.d(param2 - 32));
+          var6 = (UiComponent) (var10.first(param2 - 32));
           while (var6 != null) {
             discarded$3 = param3.append('\n');
             for (var7 = 0; var7 <= param0; var7++) {
               discarded$4 = param3.append(' ');
             }
             var6.appendWidgetDiagnostics(param3, false, param0 + 1, param1);
-            var6 = (UiComponent) (var10.first((byte) -104));
+            var6 = (UiComponent) (var10.next((byte) -104));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -74,14 +74,14 @@ class UiContainer extends UiComponent implements UiContainerMarker {
         var7 = Pixelate.field_H ? 1 : 0;
         try {
           var9 = new IntrusiveDequeCursor(this.children);
-          var8 = (UiComponent) (var9.d(0));
+          var8 = (UiComponent) (var9.first(0));
           while (var8 != null) {
             if (var8.isLinked(0)) {
               if (var8.containsFocus(true) &&
                 var8.onFocusedKey(param0, param1 + 0, param2, param3)) {
                 return true;
               }
-              var8 = (UiComponent) (var9.first((byte) -104));
+              var8 = (UiComponent) (var9.next((byte) -104));
               continue;
             }
             break;
@@ -131,14 +131,14 @@ class UiContainer extends UiComponent implements UiContainerMarker {
             this.appendDebugChildren(95, (Hashtable) null, -28, (StringBuilder) null);
           }
           var12 = new IntrusiveDequeCursor(this.children);
-          var9 = (UiComponent) (var12.d(0));
+          var9 = (UiComponent) (var12.first(0));
           while (var9 != null) {
             if (var9.isLinked(0)) {
               if (var9.containsFocus(true) &&
                 var9.onMouseWheel(param0, (byte) 112, param2, param3, param4, param5, param6)) {
                 return true;
               }
-              var9 = (UiComponent) (var12.first((byte) -104));
+              var9 = (UiComponent) (var12.next((byte) -104));
               continue;
             }
             break;
@@ -175,7 +175,7 @@ class UiContainer extends UiComponent implements UiContainerMarker {
             return false;
           }
           var3 = new IntrusiveDequeCursor(this.children);
-          var4 = (UiComponent) (var3.b(~param0));
+          var4 = (UiComponent) (var3.last(~param0));
           while (var4 != null) {
             if (var4.containsFocus(true)) {
               var5 = new IntrusiveDequeCursor(this.children);
@@ -219,11 +219,11 @@ class UiContainer extends UiComponent implements UiContainerMarker {
         try {
           super.updatePointer(param0, param1, param2, param3);
           var5 = new IntrusiveDequeCursor(this.children);
-          var6 = (UiComponent) (var5.d(0));
+          var6 = (UiComponent) (var5.first(0));
           while (var6 != null) {
             if (var6.isLinked(param0 - 40)) {
               var6.updatePointer(40, param1 + this.field_p, param2 + this.field_z, param3);
-              var6 = (UiComponent) (var5.first((byte) -104));
+              var6 = (UiComponent) (var5.next((byte) -104));
               continue;
             }
             break;
@@ -260,21 +260,21 @@ class UiContainer extends UiComponent implements UiContainerMarker {
             return false;
           }
           var8 = new IntrusiveDequeCursor(this.children);
-          var4 = (UiComponent) (var8.d(0));
+          var4 = (UiComponent) (var8.first(0));
           while (var4 != null) {
             if (var4.containsFocus(true)) {
               var5 = new IntrusiveDequeCursor(this.children);
               var5.firstFrom((byte) -87, var4);
-              var6 = (UiComponent) (var5.first((byte) -104));
+              var6 = (UiComponent) (var5.next((byte) -104));
               while (var6 != null) {
                 if (!var6.focusNext(param1, 27)) {
-                  var6 = (UiComponent) (var5.first((byte) -104));
+                  var6 = (UiComponent) (var5.next((byte) -104));
                   continue;
                 }
                 return true;
               }
             }
-            var4 = (UiComponent) (var8.first((byte) -104));
+            var4 = (UiComponent) (var8.next((byte) -104));
           }
           if (param0 == 10) {
             return false;
@@ -302,10 +302,10 @@ class UiContainer extends UiComponent implements UiContainerMarker {
           this.onFocusedKey(-101, 97, (UiComponent) null, '\006');
         }
         IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.children);
-        UiComponent var3 = (UiComponent) (var2.d(0));
+        UiComponent var3 = (UiComponent) (var2.first(0));
         while (var3 != null) {
           var3.blur(2);
-          var3 = (UiComponent) (var2.first((byte) -104));
+          var3 = (UiComponent) (var2.next((byte) -104));
         }
     }
 
@@ -334,13 +334,13 @@ class UiContainer extends UiComponent implements UiContainerMarker {
             var11 = (StringBuilder) null;
             this.appendDebugChildren(-76, (Hashtable) null, 78, (StringBuilder) null);
           }
-          var9 = (UiComponent) (var12.d(0));
+          var9 = (UiComponent) (var12.first(0));
           while (var9 != null) {
             if (var9.isLinked(0)) {
               if (var9.handlePointerPress((byte) -58, param1, param2, this.field_p + param3, param4, this.field_z + param5, param6)) {
                 return true;
               }
-              var9 = (UiComponent) (var12.first((byte) -104));
+              var9 = (UiComponent) (var12.next((byte) -104));
               continue;
             }
             break;
@@ -402,7 +402,7 @@ class UiContainer extends UiComponent implements UiContainerMarker {
         var5 = Pixelate.field_H ? 1 : 0;
         try {
           var3 = new IntrusiveDequeCursor(this.children);
-          var4 = (UiComponent) (var3.d(0));
+          var4 = (UiComponent) (var3.first(0));
           if (param1 != 27) {
             this.containsFocus(false);
           }
@@ -410,7 +410,7 @@ class UiContainer extends UiComponent implements UiContainerMarker {
             if (var4.focusNext(param0, 27)) {
               return true;
             }
-            var4 = (UiComponent) (var3.first((byte) -104));
+            var4 = (UiComponent) (var3.next((byte) -104));
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -439,11 +439,11 @@ class UiContainer extends UiComponent implements UiContainerMarker {
         var9 = Pixelate.field_H ? 1 : 0;
         try {
           var7 = new IntrusiveDequeCursor(this.children);
-          var8 = (UiComponent) (var7.d(param3));
+          var8 = (UiComponent) (var7.first(param3));
           while (var8 != null) {
             if (var8.isLinked(0)) {
               var8.handlePointerRelease(param0, param1 + this.field_z, param2, 0, param4 + this.field_p, param5);
-              var8 = (UiComponent) (var7.first((byte) -104));
+              var8 = (UiComponent) (var7.next((byte) -104));
               continue;
             }
             break;
@@ -510,7 +510,7 @@ class UiContainer extends UiComponent implements UiContainerMarker {
         }
         IntrusiveDequeCursor var5 = new IntrusiveDequeCursor(this.children);
         int var7 = 101 % ((param3 - 70) / 49);
-        UiComponent var6 = (UiComponent) (var5.b(-1));
+        UiComponent var6 = (UiComponent) (var5.last(-1));
         while (var6 != null) {
           var6.drawLayer(this.field_p + param0, param1, this.field_z + param2, (byte) -68);
           var6 = (UiComponent) (var5.previous(-91));
@@ -527,13 +527,13 @@ class UiContainer extends UiComponent implements UiContainerMarker {
         if (param0 <= 16) {
           return (String) null;
         }
-        var3 = (UiComponent) (var2.d(0));
+        var3 = (UiComponent) (var2.first(0));
         while (var3 != null) {
           var4 = var3.getTooltip((byte) 36);
           if (var4 != null) {
             return var4;
           }
-          var3 = (UiComponent) (var2.first((byte) -104));
+          var3 = (UiComponent) (var2.next((byte) -104));
         }
         return null;
     }
@@ -541,12 +541,12 @@ class UiContainer extends UiComponent implements UiContainerMarker {
     UiComponent getFocusedChild(int param0) {
         int var4 = Pixelate.field_H ? 1 : 0;
         IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.children);
-        UiComponent var3_ref_ng = (UiComponent) (var2.d(0));
+        UiComponent var3_ref_ng = (UiComponent) (var2.first(0));
         while (var3_ref_ng != null) {
           if (var3_ref_ng.containsFocus(true)) {
             return var3_ref_ng;
           }
-          var3_ref_ng = (UiComponent) (var2.first((byte) -104));
+          var3_ref_ng = (UiComponent) (var2.next((byte) -104));
         }
         int var3 = 125 % ((-51 - param0) / 39);
         return null;
@@ -560,13 +560,13 @@ class UiContainer extends UiComponent implements UiContainerMarker {
           field_H = (String) null;
         }
         IntrusiveDequeCursor var3 = new IntrusiveDequeCursor(this.children);
-        UiComponent var4 = (UiComponent) (var3.d(0));
+        UiComponent var4 = (UiComponent) (var3.first(0));
         while (var4 != null) {
           var5 = var4.getTopLayer(58);
           if (var2 < var5) {
             var2 = var5;
           }
-          var4 = (UiComponent) (var3.first((byte) -104));
+          var4 = (UiComponent) (var3.next((byte) -104));
         }
         return var2;
     }
@@ -574,10 +574,10 @@ class UiContainer extends UiComponent implements UiContainerMarker {
     private final void clearFocus(int param0) {
         int var4 = Pixelate.field_H ? 1 : 0;
         IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.children);
-        UiComponent var3 = (UiComponent) (var2.d(param0 ^ param0));
+        UiComponent var3 = (UiComponent) (var2.first(param0 ^ param0));
         while (var3 != null) {
           var3.refreshLayout((byte) 51);
-          var3 = (UiComponent) (var2.first((byte) -104));
+          var3 = (UiComponent) (var2.next((byte) -104));
         }
     }
 
@@ -595,7 +595,7 @@ class UiContainer extends UiComponent implements UiContainerMarker {
         int var15_int = 0;
         RuntimeException var15 = null;
         try {
-          TextButton.a(param13, NodeHashTable.field_c, param2, param11, new sb(param4), AudioService.field_d, MouseWheelHandler.field_d, mh.field_a, new sb(param8), param6, param11, param10, param7, param6, param10, param14, ScoreMarkerDemo.field_k, 108, PlayerBoard.field_n, param5);
+          TextButton.configureButtonStyles(param13, NodeHashTable.field_c, param2, param11, new sb(param4), AudioService.field_d, MouseWheelHandler.field_d, mh.field_a, new sb(param8), param6, param11, param10, param7, param6, param10, param14, ScoreMarkerDemo.field_k, 108, PlayerBoard.field_n, param5);
           var15_int = 75 % ((param12 + 21) / 34);
           PlayerController.openMessageMenu(param0, param9, param1, 0, param3);
           return;

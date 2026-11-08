@@ -88,7 +88,7 @@ final class DisplayNameForm extends UiContainer implements NameSuggestionListene
         RuntimeException var6 = null;
         try {
           if (param0 == this.field_N) {
-            IntrusiveDequeCursor.b(true);
+            IntrusiveDequeCursor.openBlankLoginForm(true);
           } else {
             if (param0 == this.field_P) {
               this.e((byte) 8);
@@ -126,7 +126,7 @@ final class DisplayNameForm extends UiContainer implements NameSuggestionListene
           if (param0) {
             field_K = (String) null;
           }
-          var3 = param1.a(1);
+          var3 = param1.getValidationSource(1);
           if (var3 == null) {
             return true;
           }
@@ -149,12 +149,12 @@ final class DisplayNameForm extends UiContainer implements NameSuggestionListene
 
     public final void onMoreSuggestionsRequested(byte param0) {
         if (param0 >= 12) {
-          ((NameAvailabilityValidator) (this.field_O.a(1))).f(63);
+          ((NameAvailabilityValidator) (this.field_O.getValidationSource(1))).f(63);
           return;
         }
         UiComponent var3 = (UiComponent) null;
         this.onFocusedKey(-89, 53, (UiComponent) null, 'e');
-        ((NameAvailabilityValidator) (this.field_O.a(1))).f(63);
+        ((NameAvailabilityValidator) (this.field_O.getValidationSource(1))).f(63);
     }
 
     private final int appendValidatedField(int param0, UiComponent param1, int param2, String param3, byte param4, String param5, int param6) {
@@ -174,7 +174,7 @@ final class DisplayNameForm extends UiContainer implements NameSuggestionListene
         try {
           var11 = new LabeledField(20, param2, param0 + 120, 25, param1, false, 120, 3, he.field_d, 16777215, param5);
           this.addChild(var11, 80);
-          var9 = new ValidationHelpWidget(((ValidationProvider) ((Object) param1)).a(1), param3, 126, param2 + var11.field_C, 25 + param0, param6);
+          var9 = new ValidationHelpWidget(((ValidationProvider) ((Object) param1)).getValidationSource(1), param3, 126, param2 + var11.field_C, 25 + param0, param6);
           var9.field_n = (UiListener) (this);
           var10 = 105 % ((param4 + 19) / 35);
           this.addChild(var9, 80);

@@ -59,11 +59,11 @@ final class pe {
     final static boolean a(boolean param0) {
         Js5ArchiveManager.field_e = true;
         if (!param0) {
-          mc.field_q = 15000L + hm.a(64);
+          mc.field_q = 15000L + hm.monotonicMillis(64);
           return el.field_b == 11 ? true : false;
         }
         pe.a(-106, 76, -70L);
-        mc.field_q = 15000L + hm.a(64);
+        mc.field_q = 15000L + hm.monotonicMillis(64);
         return el.field_b == 11 ? true : false;
     }
 

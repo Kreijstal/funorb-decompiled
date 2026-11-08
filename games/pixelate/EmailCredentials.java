@@ -9,7 +9,7 @@ class EmailCredentials extends LoginCredentials {
     static Sprite field_i;
     static int field_k;
 
-    final static int c(int param0) {
+    final static int getMessageMenuHeight(int param0) {
         int var1 = -70 % ((param0 - 39) / 33);
         return nf.field_c;
     }
@@ -21,7 +21,7 @@ class EmailCredentials extends LoginCredentials {
         return QuickChatMenu.field_Nb;
     }
 
-    final static boolean a(int param0, int param1, int param2) {
+    final static boolean handleChatInputKey(int param0, int param1, int param2) {
         StringBuilder discarded$0 = null;
         int var3;
         int var4;
@@ -82,7 +82,7 @@ class EmailCredentials extends LoginCredentials {
               var5_ref_String = mp.field_a.toString();
               var8 = var5_ref_String;
               var8Lifetime2 = var5_ref_String;
-              if (EmailValidator.a(var5_ref_String, 1)) {
+              if (EmailValidator.containsAccountName(var5_ref_String, 1)) {
                 var14 = (String) null;
                 var13 = (String) null;
                 MidiPcmStream.appendChatMessage(0, (String) null, (String) null, (byte) -76, 2, mp.field_c);
@@ -97,7 +97,7 @@ class EmailCredentials extends LoginCredentials {
                 LoginMethod.field_c != null) {
                 var6 = 1;
               }
-              if (IterableNodeHashTable.a(var6, 0) == 2) {
+              if (IterableNodeHashTable.getChatFilterMode(var6, 0) == 2) {
                 Js5ArchiveManager.setChatFilterMode(1, -26931, var6, param2);
               }
               dg.a(true, ce.field_d, -1, var5_ref_String, CheckboxPainter.field_k, param0);
@@ -139,7 +139,7 @@ class EmailCredentials extends LoginCredentials {
           var32 = ModalStack.field_J;
           var8Lifetime1 = var32;
           var8Lifetime1Lifetime1 = var32;
-          var17 = th.a(2, var32);
+          var17 = th.prefixWithCrown(2, var32);
           var8Lifetime1Lifetime2 = var17;
           var8Lifetime1Lifetime3 = var17;
           var33 = var17;
@@ -176,7 +176,7 @@ class EmailCredentials extends LoginCredentials {
             break regionExit1;
           }
           var44 = (CharSequence) ((Object) CheckboxPainter.field_k);
-          var40 = AlphaContainer.a(dg.field_b, 116, new String[]{UiComponent.a(var44, -1)});
+          var40 = AlphaContainer.a(dg.field_b, 116, new String[]{UiComponent.normalizeBase37Name(var44, -1)});
           var41 = AlphaContainer.a(sk.field_c, 43, new String[]{var17});
           var10 = AccountMessagePanel.field_Q.textWidth(var40);
           var11 = AccountMessagePanel.field_Q.textWidth(var41);
@@ -205,7 +205,7 @@ class EmailCredentials extends LoginCredentials {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_i = null;
         field_h = null;
         if (param0 < 44) {
@@ -213,7 +213,7 @@ class EmailCredentials extends LoginCredentials {
         }
     }
 
-    final static wm a(int param0, int param1) {
+    final static wm findReportReason(int param0, int param1) {
         int var3 = 0;
         wm[] var2;
         int var4;
@@ -222,7 +222,7 @@ class EmailCredentials extends LoginCredentials {
         if (param1 > -50) {
           return (wm) null;
         }
-        var5 = Puzzle.b((byte) 62);
+        var5 = Puzzle.getReportReasons((byte) 62);
         var2 = var5;
         for (var3 = 0; var5.length > var3; var3++) {
           if (var5[var3].field_b == param0) {

@@ -38,7 +38,7 @@ final class HighscoresScreen extends MenuScreen {
           var14 = param5;
           param7.drawText(var14, 70, param4, param9, param0);
           var15 = Integer.toString(param3);
-          param7.drawCentered(var15, aj.field_o[0], param4, param9, param0);
+          param7.drawCentered(var15, ReflectionCheckRequest.field_o[0], param4, param9, param0);
           if (param2 != 540) {
             field_p = (rh) null;
           }
@@ -49,13 +49,13 @@ final class HighscoresScreen extends MenuScreen {
           }
           var16 = stackIn_11_0;
           var13 = var16;
-          param7.drawCentered(var16, aj.field_o[1], param4, param9, param0);
+          param7.drawCentered(var16, ReflectionCheckRequest.field_o[1], param4, param9, param0);
           var17 = param10 + "%";
-          param7.drawCentered(var17, aj.field_o[2], param4, param9, param0);
+          param7.drawCentered(var17, ReflectionCheckRequest.field_o[2], param4, param9, param0);
           var18 = param1 + "%";
-          param7.drawCentered(var18, aj.field_o[3], param4, param9, param0);
+          param7.drawCentered(var18, ReflectionCheckRequest.field_o[3], param4, param9, param0);
           var19 = param6 + "%";
-          param7.drawCentered(var19, aj.field_o[4], param4, param9, param0);
+          param7.drawCentered(var19, ReflectionCheckRequest.field_o[4], param4, param9, param0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -79,7 +79,7 @@ final class HighscoresScreen extends MenuScreen {
 
     final int getRowY(int param0, int param1) {
         int var3 = 51 % ((param0 + 13) / 37);
-        if (ArrayWidgetContainer.a((byte) 64)) {
+        if (ArrayWidgetContainer.isAccountUiActive((byte) 64)) {
           return this.field_d + param1 * this.field_i;
         }
         if (param1 < 2) {
@@ -93,7 +93,7 @@ final class HighscoresScreen extends MenuScreen {
         if (param1 != 90) {
           this.getRowRight(-116, false);
           this.field_a = 640 - this.field_m;
-          if (ArrayWidgetContainer.a((byte) 123)) {
+          if (ArrayWidgetContainer.isAccountUiActive((byte) 123)) {
             return -(this.d(param0, 29) >> 1) + 320;
           }
           if (2 <= param0) {
@@ -105,7 +105,7 @@ final class HighscoresScreen extends MenuScreen {
           return this.field_a - this.d(1, 28);
         }
         this.field_a = 640 - this.field_m;
-        if (ArrayWidgetContainer.a((byte) 123)) {
+        if (ArrayWidgetContainer.isAccountUiActive((byte) 123)) {
           return -(this.d(param0, 29) >> 1) + 320;
         }
         if (2 <= param0) {
@@ -273,10 +273,10 @@ final class HighscoresScreen extends MenuScreen {
           var16 = var17;
           var3 = var17.maxAscent + var17.maxDescent;
           if (WhirlpoolHasher.field_f == null &&
-            !ArrayWidgetContainer.a((byte) 112)) {
+            !ArrayWidgetContainer.isAccountUiActive((byte) 112)) {
             WhirlpoolHasher.field_f = cn.a(0, 7, 10, -119);
           }
-          if (ArrayWidgetContainer.a((byte) 83)) {
+          if (ArrayWidgetContainer.isAccountUiActive((byte) 83)) {
             var4 = ScoreMarkerDemo.field_h;
           } else {
             if (WhirlpoolHasher.field_f.field_u) {
@@ -286,11 +286,11 @@ final class HighscoresScreen extends MenuScreen {
                 var7 = 150 + var6;
                 var8 = 16777215;
                 var9 = 0;
-                var21.drawCentered(MarkerSliderPainter.field_b, aj.field_o[0], var7, var8, var9);
-                var21.drawCentered(TextHotspotWidget.field_N, aj.field_o[1], var7, var8, var9);
-                var21.drawCentered(wa.field_d, aj.field_o[2], var7, var8, var9);
-                var21.drawCentered(ab.field_e, aj.field_o[3], var7, var8, var9);
-                var21.drawCentered(IntrusiveNode.field_d, aj.field_o[4], var7, var8, var9);
+                var21.drawCentered(MarkerSliderPainter.field_b, ReflectionCheckRequest.field_o[0], var7, var8, var9);
+                var21.drawCentered(TextHotspotWidget.field_N, ReflectionCheckRequest.field_o[1], var7, var8, var9);
+                var21.drawCentered(wa.field_d, ReflectionCheckRequest.field_o[2], var7, var8, var9);
+                var21.drawCentered(ab.field_e, ReflectionCheckRequest.field_o[3], var7, var8, var9);
+                var21.drawCentered(IntrusiveNode.field_d, ReflectionCheckRequest.field_o[4], var7, var8, var9);
                 var4 = SpriteState.field_z;
                 var7 = var7 + (var6 + 4);
                 var22 = WhirlpoolHasher.field_f.field_o[d.field_c];
@@ -346,11 +346,11 @@ final class HighscoresScreen extends MenuScreen {
                 var7 = 150 + var6;
                 var8 = 16777215;
                 var9 = 0;
-                var21.drawCentered(MarkerSliderPainter.field_b, aj.field_o[0], var7, var8, var9);
-                var21.drawCentered(TextHotspotWidget.field_N, aj.field_o[1], var7, var8, var9);
-                var21.drawCentered(wa.field_d, aj.field_o[2], var7, var8, var9);
-                var21.drawCentered(ab.field_e, aj.field_o[3], var7, var8, var9);
-                var21.drawCentered(IntrusiveNode.field_d, aj.field_o[4], var7, var8, var9);
+                var21.drawCentered(MarkerSliderPainter.field_b, ReflectionCheckRequest.field_o[0], var7, var8, var9);
+                var21.drawCentered(TextHotspotWidget.field_N, ReflectionCheckRequest.field_o[1], var7, var8, var9);
+                var21.drawCentered(wa.field_d, ReflectionCheckRequest.field_o[2], var7, var8, var9);
+                var21.drawCentered(ab.field_e, ReflectionCheckRequest.field_o[3], var7, var8, var9);
+                var21.drawCentered(IntrusiveNode.field_d, ReflectionCheckRequest.field_o[4], var7, var8, var9);
                 var4 = SpriteState.field_z;
                 var7 = var7 + (var6 + 4);
                 var22 = WhirlpoolHasher.field_f.field_o[d.field_c];
@@ -381,8 +381,8 @@ final class HighscoresScreen extends MenuScreen {
         var16Lifetime1 = var24;
         var3Lifetime1 = var24.maxAscent + var24.maxDescent;
         if (WhirlpoolHasher.field_f == null) {
-          if (ArrayWidgetContainer.a((byte) 112)) {
-            if (ArrayWidgetContainer.a((byte) 83)) {
+          if (ArrayWidgetContainer.isAccountUiActive((byte) 112)) {
+            if (ArrayWidgetContainer.isAccountUiActive((byte) 83)) {
               var4Lifetime1 = ScoreMarkerDemo.field_h;
             } else {
               if (WhirlpoolHasher.field_f.field_u) {
@@ -393,11 +393,11 @@ final class HighscoresScreen extends MenuScreen {
                   var7Lifetime1 = 150 + var6Lifetime1;
                   var8Lifetime1 = 16777215;
                   var9Lifetime1 = 0;
-                  var25.drawCentered(MarkerSliderPainter.field_b, aj.field_o[0], var7Lifetime1, var8Lifetime1, var9Lifetime1);
-                  var25.drawCentered(TextHotspotWidget.field_N, aj.field_o[1], var7Lifetime1, var8Lifetime1, var9Lifetime1);
-                  var25.drawCentered(wa.field_d, aj.field_o[2], var7Lifetime1, var8Lifetime1, var9Lifetime1);
-                  var25.drawCentered(ab.field_e, aj.field_o[3], var7Lifetime1, var8Lifetime1, var9Lifetime1);
-                  var25.drawCentered(IntrusiveNode.field_d, aj.field_o[4], var7Lifetime1, var8Lifetime1, var9Lifetime1);
+                  var25.drawCentered(MarkerSliderPainter.field_b, ReflectionCheckRequest.field_o[0], var7Lifetime1, var8Lifetime1, var9Lifetime1);
+                  var25.drawCentered(TextHotspotWidget.field_N, ReflectionCheckRequest.field_o[1], var7Lifetime1, var8Lifetime1, var9Lifetime1);
+                  var25.drawCentered(wa.field_d, ReflectionCheckRequest.field_o[2], var7Lifetime1, var8Lifetime1, var9Lifetime1);
+                  var25.drawCentered(ab.field_e, ReflectionCheckRequest.field_o[3], var7Lifetime1, var8Lifetime1, var9Lifetime1);
+                  var25.drawCentered(IntrusiveNode.field_d, ReflectionCheckRequest.field_o[4], var7Lifetime1, var8Lifetime1, var9Lifetime1);
                   var4Lifetime1 = SpriteState.field_z;
                   var7Lifetime1 = var7Lifetime1 + (var6Lifetime1 + 4);
                   var26 = WhirlpoolHasher.field_f.field_o[d.field_c];
@@ -455,11 +455,11 @@ final class HighscoresScreen extends MenuScreen {
                   var7Lifetime1 = 150 + var6Lifetime1;
                   var8Lifetime1 = 16777215;
                   var9Lifetime1 = 0;
-                  var29.drawCentered(MarkerSliderPainter.field_b, aj.field_o[0], var7Lifetime1, var8Lifetime1, var9Lifetime1);
-                  var29.drawCentered(TextHotspotWidget.field_N, aj.field_o[1], var7Lifetime1, var8Lifetime1, var9Lifetime1);
-                  var29.drawCentered(wa.field_d, aj.field_o[2], var7Lifetime1, var8Lifetime1, var9Lifetime1);
-                  var29.drawCentered(ab.field_e, aj.field_o[3], var7Lifetime1, var8Lifetime1, var9Lifetime1);
-                  var29.drawCentered(IntrusiveNode.field_d, aj.field_o[4], var7Lifetime1, var8Lifetime1, var9Lifetime1);
+                  var29.drawCentered(MarkerSliderPainter.field_b, ReflectionCheckRequest.field_o[0], var7Lifetime1, var8Lifetime1, var9Lifetime1);
+                  var29.drawCentered(TextHotspotWidget.field_N, ReflectionCheckRequest.field_o[1], var7Lifetime1, var8Lifetime1, var9Lifetime1);
+                  var29.drawCentered(wa.field_d, ReflectionCheckRequest.field_o[2], var7Lifetime1, var8Lifetime1, var9Lifetime1);
+                  var29.drawCentered(ab.field_e, ReflectionCheckRequest.field_o[3], var7Lifetime1, var8Lifetime1, var9Lifetime1);
+                  var29.drawCentered(IntrusiveNode.field_d, ReflectionCheckRequest.field_o[4], var7Lifetime1, var8Lifetime1, var9Lifetime1);
                   var4Lifetime1 = SpriteState.field_z;
                   var7Lifetime1 = var7Lifetime1 + (var6Lifetime1 + 4);
                   var30 = WhirlpoolHasher.field_f.field_o[d.field_c];
@@ -488,7 +488,7 @@ final class HighscoresScreen extends MenuScreen {
           }
           WhirlpoolHasher.field_f = cn.a(0, 7, 10, -119);
         }
-        if (ArrayWidgetContainer.a((byte) 83)) {
+        if (ArrayWidgetContainer.isAccountUiActive((byte) 83)) {
           var4Lifetime2 = ScoreMarkerDemo.field_h;
         } else {
           if (WhirlpoolHasher.field_f.field_u) {
@@ -498,11 +498,11 @@ final class HighscoresScreen extends MenuScreen {
               var7Lifetime2 = 150 + var6Lifetime2;
               var8Lifetime2 = 16777215;
               var9Lifetime2 = 0;
-              var37.drawCentered(MarkerSliderPainter.field_b, aj.field_o[0], var7Lifetime2, var8Lifetime2, var9Lifetime2);
-              var37.drawCentered(TextHotspotWidget.field_N, aj.field_o[1], var7Lifetime2, var8Lifetime2, var9Lifetime2);
-              var37.drawCentered(wa.field_d, aj.field_o[2], var7Lifetime2, var8Lifetime2, var9Lifetime2);
-              var37.drawCentered(ab.field_e, aj.field_o[3], var7Lifetime2, var8Lifetime2, var9Lifetime2);
-              var37.drawCentered(IntrusiveNode.field_d, aj.field_o[4], var7Lifetime2, var8Lifetime2, var9Lifetime2);
+              var37.drawCentered(MarkerSliderPainter.field_b, ReflectionCheckRequest.field_o[0], var7Lifetime2, var8Lifetime2, var9Lifetime2);
+              var37.drawCentered(TextHotspotWidget.field_N, ReflectionCheckRequest.field_o[1], var7Lifetime2, var8Lifetime2, var9Lifetime2);
+              var37.drawCentered(wa.field_d, ReflectionCheckRequest.field_o[2], var7Lifetime2, var8Lifetime2, var9Lifetime2);
+              var37.drawCentered(ab.field_e, ReflectionCheckRequest.field_o[3], var7Lifetime2, var8Lifetime2, var9Lifetime2);
+              var37.drawCentered(IntrusiveNode.field_d, ReflectionCheckRequest.field_o[4], var7Lifetime2, var8Lifetime2, var9Lifetime2);
               var4Lifetime2 = SpriteState.field_z;
               var7Lifetime2 = var7Lifetime2 + (var6Lifetime2 + 4);
               var38 = WhirlpoolHasher.field_f.field_o[d.field_c];
@@ -558,11 +558,11 @@ final class HighscoresScreen extends MenuScreen {
               var7Lifetime2 = 150 + var6Lifetime2;
               var8Lifetime2 = 16777215;
               var9Lifetime2 = 0;
-              var37.drawCentered(MarkerSliderPainter.field_b, aj.field_o[0], var7Lifetime2, var8Lifetime2, var9Lifetime2);
-              var37.drawCentered(TextHotspotWidget.field_N, aj.field_o[1], var7Lifetime2, var8Lifetime2, var9Lifetime2);
-              var37.drawCentered(wa.field_d, aj.field_o[2], var7Lifetime2, var8Lifetime2, var9Lifetime2);
-              var37.drawCentered(ab.field_e, aj.field_o[3], var7Lifetime2, var8Lifetime2, var9Lifetime2);
-              var37.drawCentered(IntrusiveNode.field_d, aj.field_o[4], var7Lifetime2, var8Lifetime2, var9Lifetime2);
+              var37.drawCentered(MarkerSliderPainter.field_b, ReflectionCheckRequest.field_o[0], var7Lifetime2, var8Lifetime2, var9Lifetime2);
+              var37.drawCentered(TextHotspotWidget.field_N, ReflectionCheckRequest.field_o[1], var7Lifetime2, var8Lifetime2, var9Lifetime2);
+              var37.drawCentered(wa.field_d, ReflectionCheckRequest.field_o[2], var7Lifetime2, var8Lifetime2, var9Lifetime2);
+              var37.drawCentered(ab.field_e, ReflectionCheckRequest.field_o[3], var7Lifetime2, var8Lifetime2, var9Lifetime2);
+              var37.drawCentered(IntrusiveNode.field_d, ReflectionCheckRequest.field_o[4], var7Lifetime2, var8Lifetime2, var9Lifetime2);
               var4Lifetime2 = SpriteState.field_z;
               var7Lifetime2 = var7Lifetime2 + (var6Lifetime2 + 4);
               var38 = WhirlpoolHasher.field_f.field_o[d.field_c];
@@ -620,7 +620,7 @@ final class HighscoresScreen extends MenuScreen {
     final int getRowRight(int param0, boolean param1) {
         if (param1) {
           this.onCancel((byte) -54);
-          if (ArrayWidgetContainer.a((byte) 115)) {
+          if (ArrayWidgetContainer.isAccountUiActive((byte) 115)) {
             return (this.d(param0, 53) >> 1) + 320;
           }
           if (param0 >= 2) {
@@ -631,7 +631,7 @@ final class HighscoresScreen extends MenuScreen {
           }
           return this.field_a;
         }
-        if (ArrayWidgetContainer.a((byte) 115)) {
+        if (ArrayWidgetContainer.isAccountUiActive((byte) 115)) {
           return (this.d(param0, 53) >> 1) + 320;
         }
         if (param0 >= 2) {
@@ -675,7 +675,7 @@ final class HighscoresScreen extends MenuScreen {
         if (param0 > -116) {
           field_q = (Sprite) null;
           var4 = StripedProgressBar.field_N;
-          if (!ArrayWidgetContainer.a((byte) 117)) {
+          if (!ArrayWidgetContainer.isAccountUiActive((byte) 117)) {
             if (param2 == 1) {
               var4 = StripedProgressBar.field_S;
             }
@@ -687,7 +687,7 @@ final class HighscoresScreen extends MenuScreen {
           return;
         }
         var4Lifetime1 = StripedProgressBar.field_N;
-        if (ArrayWidgetContainer.a((byte) 117)) {
+        if (ArrayWidgetContainer.isAccountUiActive((byte) 117)) {
           var4Lifetime1 = StripedProgressBar.field_S;
           super.drawItemRow((byte) 35, var4Lifetime1, param1, param2);
           return;

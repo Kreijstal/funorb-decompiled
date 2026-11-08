@@ -21,7 +21,7 @@ abstract class Js5Transport {
 
     abstract boolean pollTransport(boolean param0);
 
-    public static void c(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 == -53) {
           field_d = null;
           field_j = null;
@@ -29,13 +29,13 @@ abstract class Js5Transport {
           return;
         }
         ResourceArchive var2 = (ResourceArchive) null;
-        Js5Transport.a((SoundCache) null, 104, (ResourceArchive) null);
+        Js5Transport.loadSkinSounds((SoundCache) null, 104, (ResourceArchive) null);
         field_d = null;
         field_j = null;
         field_i = null;
     }
 
-    abstract void b(byte param0);
+    abstract void closeTransport(byte param0);
 
     abstract void attachTransport(Object param0, boolean param1, int param2);
 
@@ -50,7 +50,7 @@ abstract class Js5Transport {
         if (param0 != 34) {
           return 117;
         }
-        return this.field_l.b(param0 + 67) + this.field_p.b(118);
+        return this.field_l.size(param0 + 67) + this.field_p.size(118);
     }
 
     final boolean isPendingFull(byte param0) {
@@ -89,10 +89,10 @@ abstract class Js5Transport {
 
     final int getInFlightRequestCount(int param0) {
         int var2 = 23 % ((58 - param0) / 55);
-        return this.field_e.b(113) + this.field_f.b(102);
+        return this.field_e.size(113) + this.field_f.size(102);
     }
 
-    final static void a(SoundCache param0, int param1, ResourceArchive param2) {
+    final static void loadSkinSounds(SoundCache param0, int param1, ResourceArchive param2) {
         int var3_int = 0;
         String var4 = null;
         int var5 = Pixelate.field_H ? 1 : 0;

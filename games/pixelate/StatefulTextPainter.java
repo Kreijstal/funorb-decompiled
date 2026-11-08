@@ -22,7 +22,7 @@ final class StatefulTextPainter extends TextWidgetPainter {
         }
     }
 
-    final WidgetStyleLayer a(int param0, int param1) {
+    final WidgetStyleLayer createStateLayer(int param0, int param1) {
         if (param1 != 7177) {
           StatefulTextPainter var4 = (StatefulTextPainter) null;
           this.copyStatesTo((StatefulTextPainter) null, true, true);
@@ -32,7 +32,7 @@ final class StatefulTextPainter extends TextWidgetPainter {
         return dupTemp$0;
     }
 
-    final static void a(byte param0, LobbyGame param1) {
+    final static void insertLobbyGameSorted(byte param0, LobbyGame param1) {
         LobbyGame var2 = null;
         int var3 = 0;
         int stackIn_9_0 = 0;
@@ -119,7 +119,7 @@ final class StatefulTextPainter extends TextWidgetPainter {
           var11 = (TextButton) (stackIn_3_0);
           if (param1 != -124) {
             var10 = (LobbyGame) null;
-            StatefulTextPainter.a((byte) 95, (LobbyGame) null);
+            StatefulTextPainter.insertLobbyGameSorted((byte) 95, (LobbyGame) null);
           }
           hp.a(param3 + param0.field_z, param0.field_p + param2 + param0.field_C, param0.field_E + param0.field_z + param3, (byte) -120, param0.field_p + param2);
           if (var11 != null) {
@@ -264,7 +264,7 @@ final class StatefulTextPainter extends TextWidgetPainter {
         }
     }
 
-    final static void a(int param0, int param1, Vector3 param2, int param3, Vector3 param4, Vector3 param5, Vector3 param6, int param7, byte param8, int param9) {
+    final static void fillProjectedQuad(int param0, int param1, Vector3 param2, int param3, Vector3 param4, Vector3 param5, Vector3 param6, int param7, byte param8, int param9) {
         int var10_int = 0;
         int var11 = 0;
         int var12 = 0;
@@ -304,10 +304,10 @@ final class StatefulTextPainter extends TextWidgetPainter {
           var18 = new int[]{var10_int, var11, var12, var13, var14, var15, var16, var17};
           PolygonFiller.fillPolygon(var18, 12632256);
           for (var19 = 0; var19 <= param1; var19++) {
-            el.a((var17 - var11) * var19 / param1 + var11, var19 * (var14 - var12) / param1 + var12, 8421504, -20, var10_int + (-var10_int + var16) * var19 / param1, (-var13 + var15) * var19 / param1 + var13, 3.0f);
+            el.drawThickLine((var17 - var11) * var19 / param1 + var11, var19 * (var14 - var12) / param1 + var12, 8421504, -20, var10_int + (-var10_int + var16) * var19 / param1, (-var13 + var15) * var19 / param1 + var13, 3.0f);
           }
           for (var19Lifetime1 = 0; param3 >= var19Lifetime1; var19Lifetime1++) {
-            el.a(var11 + var19Lifetime1 * (var13 - var11) / param3, var19Lifetime1 * (var14 - var16) / param3 + var16, 8421504, -79, (-var10_int + var12) * var19Lifetime1 / param3 + var10_int, var19Lifetime1 * (var15 - var17) / param3 + var17, 3.0f);
+            el.drawThickLine(var11 + var19Lifetime1 * (var13 - var11) / param3, var19Lifetime1 * (var14 - var16) / param3 + var16, 8421504, -79, (-var10_int + var12) * var19Lifetime1 / param3 + var10_int, var19Lifetime1 * (var15 - var17) / param3 + var17, 3.0f);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -347,7 +347,7 @@ final class StatefulTextPainter extends TextWidgetPainter {
         try {
           if (param0 <= 88) {
             LobbyGame var5 = (LobbyGame) null;
-            StatefulTextPainter.a((byte) 34, (LobbyGame) null);
+            StatefulTextPainter.insertLobbyGameSorted((byte) 34, (LobbyGame) null);
           }
           var4_int = param1;
           if (this.field_r[var4_int] == null) {
@@ -377,7 +377,7 @@ final class StatefulTextPainter extends TextWidgetPainter {
         try {
           if (!param1) {
             var8 = (Vector3) null;
-            StatefulTextPainter.a(-78, 30, (Vector3) null, 86, (Vector3) null, (Vector3) null, (Vector3) null, -17, (byte) 54, -98);
+            StatefulTextPainter.fillProjectedQuad(-78, 30, (Vector3) null, 86, (Vector3) null, (Vector3) null, (Vector3) null, -17, (byte) 54, -98);
           }
           super.copyStyleTo(param0, (byte) 126);
           if (param2) {
@@ -452,7 +452,7 @@ final class StatefulTextPainter extends TextWidgetPainter {
         }
     }
 
-    final void a(int param0, Sprite param1) {
+    final void setStateIcon(int param0, Sprite param1) {
         WidgetStyleLayer[] var7 = null;
         int var4 = 0;
         WidgetStyleLayer var5_ref_lf = null;

@@ -21,9 +21,9 @@ final class bl {
         if (param0 >= -22) {
           bl.releaseStatics(-59);
         }
-        IntrusiveDequeCursor.c(-1);
+        IntrusiveDequeCursor.tickLobbyHighlights(-1);
         if (null != LoginMethod.field_c) {
-          stackIn_8_0 = (ModalStack.a(true, LoginMethod.field_c.field_mc)) ? 1 : 0;
+          stackIn_8_0 = (ModalStack.isTwoOrMore(true, LoginMethod.field_c.field_mc)) ? 1 : 0;
         } else {
           stackIn_8_0 = 0;
         }
@@ -33,7 +33,7 @@ final class bl {
         stackIn_13_2 = (ValidationHelpWidget.field_Y) || (DateOfBirthValidator.field_i);
         stackIn_15_3 = var2;
         stackIn_16_4 = (50 >= ce.field_g) ? false : true;
-        wk.a(stackIn_11_0, stackIn_11_1, stackIn_13_2, stackIn_15_3 != 0, stackIn_16_4, param1, (byte) 116, true, 0, 13, 11, lp.field_i);
+        wk.a(stackIn_11_0, stackIn_11_1, stackIn_13_2, stackIn_15_3 != 0, stackIn_16_4, param1, (byte) 116, true, 0, 13, 11, DriftingParticle.field_i);
         if (of.field_c) {
           aa.field_f.writeOpcode(57, 15514);
           of.field_c = false;

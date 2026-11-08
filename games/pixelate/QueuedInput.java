@@ -8,15 +8,15 @@ final class QueuedInput extends IntrusiveNode {
     int field_k;
     int field_m;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_l = null;
         if (param0 != -5778) {
           PacketBuffer var2 = (PacketBuffer) null;
-          QueuedInput.a(-60, (PacketBuffer) null);
+          QueuedInput.readPackedRankingValues(-60, (PacketBuffer) null);
         }
     }
 
-    final static void a(int param0, int param1, byte param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    final static void blendInterpolatedHalfRgbSpan(int param0, int param1, byte param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         int[] var10 = null;
         RuntimeException var10_ref = null;
         int var11 = 0;
@@ -68,7 +68,7 @@ final class QueuedInput extends IntrusiveNode {
         }
     }
 
-    final static void a(String param0, int param1, java.applet.Applet param2) {
+    final static void writeSettingsCookie(String param0, int param1, java.applet.Applet param2) {
         try {
           RuntimeException stackIn_13_0 = null;
           StringBuilder stackIn_13_1 = null;
@@ -94,7 +94,7 @@ final class QueuedInput extends IntrusiveNode {
             try {
               if (param1 <= 124) {
                 var6 = (java.applet.Applet) null;
-                QueuedInput.a((String) null, -73, (java.applet.Applet) null);
+                QueuedInput.writeSettingsCookie((String) null, -73, (java.applet.Applet) null);
               }
               var7 = param2.getParameter("cookieprefix");
               var5 = var7;
@@ -108,7 +108,7 @@ final class QueuedInput extends IntrusiveNode {
               if (param0.length() == 0) {
                 var5Lifetime6 = var8 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
               } else {
-                var5Lifetime6 = var8 + "; Expires=" + SoundCache.a(10, hm.a(64) + 94608000000L) + "; Max-Age=" + 94608000L;
+                var5Lifetime6 = var8 + "; Expires=" + SoundCache.a(10, hm.monotonicMillis(64) + 94608000000L) + "; Max-Age=" + 94608000L;
               }
               JavaScriptBridge.evaluateScript(param2, (byte) -121, "document.cookie=\"" + var5Lifetime6 + "\"");
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
@@ -144,14 +144,14 @@ final class QueuedInput extends IntrusiveNode {
 
     final static void a(boolean param0, int param1, boolean param2) {
         if (param1 == -17130) {
-          vn.a(param1 ^ 17146, param0, param2, (String) null);
+          RisingBubble.showLoginDialog(param1 ^ 17146, param0, param2, (String) null);
           return;
         }
         field_l = (byte[]) null;
-        vn.a(param1 ^ 17146, param0, param2, (String) null);
+        RisingBubble.showLoginDialog(param1 ^ 17146, param0, param2, (String) null);
     }
 
-    final static boolean a(int param0, boolean param1) {
+    final static boolean fillIncomingBuffer(int param0, boolean param1) {
         try {
           if (param1) {
             field_l = (byte[]) null;
@@ -168,7 +168,7 @@ final class QueuedInput extends IntrusiveNode {
               var2_int = param0 - MusicCrossfadeStream.field_o.position;
             }
             NodeHashTableIterator.field_e.readFully(MusicCrossfadeStream.field_o.payload, MusicCrossfadeStream.field_o.position, (byte) 119, var2_int);
-            SpriteCheckboxPainter.field_c = hm.a(64);
+            SpriteCheckboxPainter.field_c = hm.monotonicMillis(64);
             MusicCrossfadeStream.field_o.position = MusicCrossfadeStream.field_o.position + var2_int;
             if (param0 > MusicCrossfadeStream.field_o.position) {
               return false;
@@ -179,7 +179,7 @@ final class QueuedInput extends IntrusiveNode {
           try {
             if (false) throw (IOException) null;
             if (var2_int >= 0 &&
-              CachedTextLayout.d(8) <= 30000L) {
+              CachedTextLayout.millisSinceLastPacket(8) <= 30000L) {
               return false;
             }
             na.a(true);
@@ -194,18 +194,18 @@ final class QueuedInput extends IntrusiveNode {
         }
     }
 
-    final static void a(int param0, PacketBuffer param1) {
+    final static void readPackedRankingValues(int param0, PacketBuffer param1) {
         int var2_int = 0;
         int var2_intLifetime1;
         int var2_intLifetime2;
         try {
           if (param0 > -111) {
-            QueuedInput.a(-27);
+            QueuedInput.releaseStatics(-27);
           }
-          aj.field_n = param1.readUnsignedShort((byte) -121) << 5;
+          ReflectionCheckRequest.field_n = param1.readUnsignedShort((byte) -121) << 5;
           var2_int = param1.readUnsignedByte(255);
           bq.field_c = (7 & var2_int) << 18;
-          aj.field_n = aj.field_n + (var2_int >> 3);
+          ReflectionCheckRequest.field_n = ReflectionCheckRequest.field_n + (var2_int >> 3);
           bq.field_c = bq.field_c + (param1.readUnsignedShort((byte) 47) << 2);
           var2_intLifetime1 = param1.readUnsignedByte(255);
           bq.field_c = bq.field_c + (var2_intLifetime1 >> 6);

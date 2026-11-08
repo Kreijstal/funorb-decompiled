@@ -118,7 +118,7 @@ final class NameSuggestionsPanel extends UiContainer implements ButtonListener {
     }
 
     final static void processWidgetInput(byte param0, int param1) {
-        ArrayWidgetContainer.l(84);
+        ArrayWidgetContainer.pollAccountUiResult(84);
         if (param0 >= -103) {
           field_M = (String) null;
         }
@@ -146,7 +146,7 @@ final class NameSuggestionsPanel extends UiContainer implements ButtonListener {
             var3_int = param1.length;
             this.suggestions = new String[var3_int];
             for (var4_int = 0; var3_int > var4_int; var4_int++) {
-              this.suggestions[var4_int] = UiComponent.a((CharSequence) ((Object) param1[var4_int]), -1).replace(' ', ' ');
+              this.suggestions[var4_int] = UiComponent.normalizeBase37Name((CharSequence) ((Object) param1[var4_int]), -1).replace(' ', ' ');
             }
             var4 = new LinkButtonPainter(he.field_d, 0, 1);
             this.buttons = new TextButton[1 + var3_int];

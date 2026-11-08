@@ -77,7 +77,7 @@ final class LabeledField extends SingleChildContainer {
             null != var4.field_Nb) {
             return true;
           }
-          stackIn_10_0 = (null != LoginMethod.field_c) && (null != JaggrabDownloader.a(param1, 14428));
+          stackIn_10_0 = (null != LoginMethod.field_c) && (null != JaggrabDownloader.findGamePlayer(param1, 14428));
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -164,14 +164,14 @@ final class LabeledField extends SingleChildContainer {
         if (null == ProxySocketConnector.field_n) {
           if (null == AccountTermsPanel.field_M) {
             if (param0) {
-              if (ArrayWidgetContainer.k(1)) {
+              if (ArrayWidgetContainer.handleAccountNamePromptKey(1)) {
                 return true;
               }
               stackIn_13_0 = (AsyncValidationResult.dispatchKeyInput(param3, param1, param2, 0));
               return stackIn_13_0;
             }
             LabeledField.releaseStatics((byte) 0);
-            if (ArrayWidgetContainer.k(1)) {
+            if (ArrayWidgetContainer.handleAccountNamePromptKey(1)) {
               return true;
             }
             if (!AsyncValidationResult.dispatchKeyInput(param3, param1, param2, 0)) {
@@ -179,7 +179,7 @@ final class LabeledField extends SingleChildContainer {
             }
             return true;
           }
-          if (AccountTermsPanel.field_M.j(-1)) {
+          if (AccountTermsPanel.field_M.handleEscapeKey(-1)) {
             AccountTermsPanel.field_M = null;
             ArchiveProvider.a(62);
             return true;
@@ -190,7 +190,7 @@ final class LabeledField extends SingleChildContainer {
             return true;
           }
           if (null != AccountTermsPanel.field_M &&
-            AccountTermsPanel.field_M.j(-1)) {
+            AccountTermsPanel.field_M.handleEscapeKey(-1)) {
             AccountTermsPanel.field_M = null;
             ArchiveProvider.a(62);
             return true;
@@ -199,7 +199,7 @@ final class LabeledField extends SingleChildContainer {
         if (!param0) {
           LabeledField.releaseStatics((byte) 0);
         }
-        if (ArrayWidgetContainer.k(1)) {
+        if (ArrayWidgetContainer.handleAccountNamePromptKey(1)) {
           return true;
         }
         if (AsyncValidationResult.dispatchKeyInput(param3, param1, param2, 0)) {

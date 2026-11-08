@@ -55,7 +55,7 @@ final class NodeHashTable {
         ra.field_e.addChild(DisplayNameRequestGlobals.field_a, (byte) 26);
         DisplayNameRequestGlobals.field_a.addChild(StripedProgressBar.field_O, (byte) 26);
         DisplayNameRequestGlobals.field_a.addChild(ContentTransitionDialog.field_eb, (byte) 26);
-        DebouncedValidator.a((byte) 32, param0);
+        DebouncedValidator.layoutLobbyComponents((byte) 32, param0);
     }
 
     final static byte[] readPackedByteArray(CipherPacketBuffer param0, byte[] param1, int param2, int param3) {

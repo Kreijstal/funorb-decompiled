@@ -79,15 +79,15 @@ final class WidgetStyleLayer {
         }
     }
 
-    final static boolean a(byte param0) {
-        aj var1 = null;
+    final static boolean areReflectionChecksReady(byte param0) {
+        ReflectionCheckRequest var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
         int var3 = 0;
         RuntimeException decompiledCaughtException = null;
         var3 = Pixelate.field_H ? 1 : 0;
         try {
-          var1 = (aj) (ScoreMarkerBar.field_o.first(1504642273));
+          var1 = (ReflectionCheckRequest) (ScoreMarkerBar.field_o.first(1504642273));
           if (var1 == null) {
             return false;
           }

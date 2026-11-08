@@ -11,7 +11,7 @@ final class dh {
         if (param0 != 58) {
           dh.releaseStatics(true);
           if (oo.field_b <= 0) {
-            if (0 < vn.field_g) {
+            if (0 < RisingBubble.field_g) {
               if (EmergentBehaviourBackground.field_o) {
                 SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.field_j, ui.field_i.screenY);
                 ra.field_e.drawFullScreen(param1, 0);
@@ -30,7 +30,7 @@ final class dh {
             return;
           }
           if (!LobbyPlayer.field_Wb) {
-            if (0 < vn.field_g) {
+            if (0 < RisingBubble.field_g) {
               if (!EmergentBehaviourBackground.field_o) {
                 return;
               }
@@ -50,7 +50,7 @@ final class dh {
           }
           SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.field_j, ui.field_i.screenY);
           TickClock.field_e.drawFullScreen(param1, 0);
-          if (0 >= vn.field_g &&
+          if (0 >= RisingBubble.field_g &&
             Checkbox.field_W <= 0) {
             return;
           }
@@ -65,7 +65,7 @@ final class dh {
           LobbyPlayer.field_Wb) {
           SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.field_j, ui.field_i.screenY);
           TickClock.field_e.drawFullScreen(param1, 0);
-          if (0 >= vn.field_g &&
+          if (0 >= RisingBubble.field_g &&
             Checkbox.field_W <= 0) {
             return;
           }
@@ -76,7 +76,7 @@ final class dh {
           ra.field_e.drawFullScreen(param1, 0);
           return;
         }
-        if (0 >= vn.field_g &&
+        if (0 >= RisingBubble.field_g &&
           Checkbox.field_W <= 0) {
           return;
         }

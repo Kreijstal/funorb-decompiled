@@ -68,7 +68,7 @@ final class AccountNamePrompt extends SceneWidget {
             this.field_Eb.length() > 0) {
             discarded$6 = this.field_Eb.append((char) var3);
           }
-          if (BoardParticle.a(-66, (char) var3)) {
+          if (BoardParticle.isAsciiLetter(-66, (char) var3)) {
             discarded$8 = this.field_Eb.append((char) var3);
             if (ke.field_a == 84) {
               if (this.field_Eb.length() <= 0) {
@@ -137,7 +137,7 @@ final class AccountNamePrompt extends SceneWidget {
             this.field_Eb.length() > 0) {
             discarded$3 = this.field_Eb.append((char) var3Lifetime1);
           }
-          if (BoardParticle.a(-66, (char) var3Lifetime1)) {
+          if (BoardParticle.isAsciiLetter(-66, (char) var3Lifetime1)) {
             discarded$5 = this.field_Eb.append((char) var3Lifetime1);
             if (ke.field_a == 84) {
               if (this.field_Eb.length() <= 0) {
@@ -205,7 +205,7 @@ final class AccountNamePrompt extends SceneWidget {
           this.field_Eb.length() > 0) {
           discarded$0 = this.field_Eb.append((char) var3Lifetime2);
         }
-        if (BoardParticle.a(-66, (char) var3Lifetime2)) {
+        if (BoardParticle.isAsciiLetter(-66, (char) var3Lifetime2)) {
           discarded$1 = this.field_Eb.append((char) var3Lifetime2);
           if (ke.field_a == 84) {
             if (this.field_Eb.length() <= 0) {
@@ -337,7 +337,7 @@ final class AccountNamePrompt extends SceneWidget {
           return this.completionState;
         }
         while (true) {
-          if (!DirectByteStorage.$cfr$intArgs$b$c4997cb15529(108)) {
+          if (!DirectByteStorage.pollKeyEvent(108)) {
             this.field_Lb.field_cb = this.field_Eb.toString();
             if (!param1) {
               return this.completionState;
@@ -355,7 +355,7 @@ final class AccountNamePrompt extends SceneWidget {
             this.field_Eb.length() > 0) {
             nk.padWithChar(this.field_Eb, -1 + this.field_Eb.length(), ' ', 16736352);
           }
-          if (aq.a(DualLinkDeque.field_f, (CharSequence) ((Object) this.field_Eb), (byte) -117)) {
+          if (aq.canAppendNameChar(DualLinkDeque.field_f, (CharSequence) ((Object) this.field_Eb), (byte) -117)) {
             discarded$0 = this.field_Eb.append(DualLinkDeque.field_f);
           } else {
             if (this.field_Eb.length() == 0 &&
@@ -420,7 +420,7 @@ final class AccountNamePrompt extends SceneWidget {
           var10 = var9_int + 10;
           var11 = 6 + 2 * fq.field_q;
           var12 = ui.a(param2, param0, var10, (byte) -1);
-          var13 = pj.a(var11, param1, param3, (byte) 67);
+          var13 = ScorePopup.fitVerticalPosition(var11, param1, param3, (byte) 67);
           this.setBounds(var13, var11, var12, 256, var10);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

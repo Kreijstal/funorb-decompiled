@@ -19,7 +19,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
     int field_d;
     int field_l;
 
-    private final void a(int param0, UiComponent param1, int param2, int param3) {
+    private final void drawText(int param0, UiComponent param1, int param2, int param3) {
         try {
           if (param0 > -71) {
             UiComponent var6 = (UiComponent) null;
@@ -31,9 +31,9 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
         }
     }
 
-    final static void a(int param0, byte param1) {
+    final static void sendLobbyGameSettings(int param0, byte param1) {
         if (param1 <= 124) {
-          TextWidgetPainter.a(117, (byte) 117);
+          TextWidgetPainter.sendLobbyGameSettings(117, (byte) 117);
         }
         CipherPacketBuffer var2 = aa.field_f;
         var2.writeOpcode(param0, 15514);
@@ -47,10 +47,10 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
         var2.backpatchByteLength(var2.position - var3, -1);
     }
 
-    public final int a(int param0) {
+    public final int getLineHeight(int param0) {
         if (param0 != -3) {
           java.awt.Canvas var3 = (java.awt.Canvas) null;
-          TextWidgetPainter.a(false, -120, (java.awt.Canvas) null);
+          TextWidgetPainter.renderStartupScreen(false, -120, (java.awt.Canvas) null);
         }
         return this.font.maxDescent + this.font.maxAscent;
     }
@@ -179,7 +179,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
           return;
         }
         try {
-          this.a(-115, param0, param2, param3);
+          this.drawText(-115, param0, param2, param3);
         } catch (RuntimeException runtimeException) {
           throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "uc.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
@@ -420,7 +420,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
               if (var10 != var12) {
                 stackIn_15_0 = var13.field_g[0];
               } else {
-                stackIn_15_0 = var19.b(true, var8);
+                stackIn_15_0 = var19.getCharacterX(true, var8);
               }
               var14 = stackIn_15_0;
               if (var12 != var11) {
@@ -430,10 +430,10 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
                   stackIn_20_0 = var13.field_g[-1 + var13.field_g.length];
                 }
               } else {
-                stackIn_20_0 = var19.b(true, var9);
+                stackIn_20_0 = var19.getCharacterX(true, var9);
               }
               var15 = stackIn_20_0;
-              Checkbox.field_X.a(this.field_o >>> 24, this.field_o, this.computeTextX(param5, param1, 2, var14), var13.field_d, var15 - var14, -90, param1.field_x + (param4 + param1.field_p + (this.field_k + var13.field_b)));
+              Checkbox.field_X.fillSelectionRect(this.field_o >>> 24, this.field_o, this.computeTextX(param5, param1, 2, var14), var13.field_d, var15 - var14, -90, param1.field_x + (param4 + param1.field_p + (this.field_k + var13.field_b)));
             }
             LinkButtonPainter.a((byte) 92);
             return;
@@ -532,7 +532,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
         }
     }
 
-    final static void a(boolean param0, int param1, java.awt.Canvas param2) {
+    final static void renderStartupScreen(boolean param0, int param1, java.awt.Canvas param2) {
         int var3_int = 0;
         int var4 = 0;
         int var5 = 0;
@@ -545,11 +545,11 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
         try {
           var3_int = 72 / ((param1 - 19) / 45);
           if (hf.field_q >= 10) {
-            if (RegistrationRequestDialog.q(22452)) {
+            if (RegistrationRequestDialog.isLogoAnimationFinished(22452)) {
               if (el.field_b != 0) {
-                DialWidget.a(-1913, param2);
+                DialWidget.renderLoadingScreen(-1913, param2);
               } else {
-                RegistrationRequestDialog.a(false, param0, 0);
+                RegistrationRequestDialog.drawDimmedAccountLayers(false, param0, 0);
                 fj.presentToCanvas(0, 0, (byte) -82, param2);
               }
             } else {
@@ -563,7 +563,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
               MusicPatch.field_s = false;
               var4 = 1;
             }
-            LoginDialog.a(true, var4 != 0, IndexedSpriteState.field_i, NodeHashTable.getUiLoadPercent(false), ConditionalTextValue.c(16422));
+            LoginDialog.a(true, var4 != 0, IndexedSpriteState.field_i, NodeHashTable.getUiLoadPercent(false), ConditionalTextValue.getLoadingStatusMessage(16422));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -584,7 +584,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
         this(param0, param1, param1, param2, param2, param3, param4, param5, param6, param7, -1, 2147483647, false);
     }
 
-    public final void a(int param0, int param1, byte param2, UiComponent param3, int param4) {
+    public final void drawCaret(int param0, int param1, byte param2, UiComponent param3, int param4) {
         TextLayout var7 = null;
         int var8 = 0;
         TextLayoutLine var9 = null;
@@ -598,12 +598,12 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
             var7 = this.getTextLayout(-86, param3);
             var8 = var7.getLineIndex(false, param4);
             var9 = var7.lines[var8];
-            var10 = var7.b(true, param4);
+            var10 = var7.getCharacterX(true, param4);
             var11 = this.computeTextX(param0, param3, 2, var10);
             var12 = this.getTextOriginY(param1, param3, (byte) 80) + Math.max(0, var9.field_b);
             var13 = this.getTextOriginY(param1, param3, (byte) -57) + Math.min(this.getAvailableTextHeight(101, param3), Math.min(var9.field_d, var7.lines.length <= 1 + var8 ? var9.field_d : var7.lines[1 + var8].field_b));
             hp.a(param0 + param3.field_z, param3.field_p + param1 + param3.field_C, param3.field_E + param0 + param3.field_z, (byte) -91, param1 + param3.field_p);
-            Checkbox.field_X.a(var12, var13, var11, var11, this.field_e, false);
+            Checkbox.field_X.drawCaretLine(var12, var13, var11, var11, this.field_e, false);
             LinkButtonPainter.a((byte) 92);
           }
         } catch (RuntimeException runtimeException) {
@@ -651,7 +651,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
         try {
           this.getTextLayout(-82, param1);
           if (param0 == 14871) {
-            stackIn_4_0 = param1.field_r.a(0) - (-this.field_h - this.field_c);
+            stackIn_4_0 = param1.field_r.getMaxLineWidth(0) - (-this.field_h - this.field_c);
             return stackIn_4_0;
           }
           stackIn_2_0 = -70;

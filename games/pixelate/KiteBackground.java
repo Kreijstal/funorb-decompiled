@@ -172,7 +172,7 @@ final class KiteBackground extends BackgroundScene {
         li.field_h = SocketConnector.loadRgbSpritesByName("members_benefits_screenshots", "benefits", (byte) 47, MenuInputState.field_d);
         bl.a(11833, PasswordFieldPainter.field_y, SoundCache.field_e);
         ni.a(MusicPatchPcmStream.field_p, 2, 40, 40, 80, false, -2400, 15, PieceTiming.field_e, 80, 0);
-        PictureStrip.a(-25960, li.field_h);
+        PictureStrip.setSlideshowSprites(-25960, li.field_h);
         sk.a(param0 ^ -3744, SpriteState.field_t);
         return true;
     }

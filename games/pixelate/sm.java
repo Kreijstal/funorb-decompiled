@@ -78,7 +78,7 @@ final class sm extends IntrusiveNode {
               var5 = ScoreMarkerDemo.requestAddIgnore(-34, (String) (var4), param0);
             }
             if (QuickChatCategoryCache.field_e == 3) {
-              var5 = aq.a((String) (var4), param0, (String) (var4), -20867);
+              var5 = aq.requestRemoveIgnore((String) (var4), param0, (String) (var4), -20867);
               var4 = var5;
               var4 = var5;
             }
@@ -130,7 +130,7 @@ final class sm extends IntrusiveNode {
           var5Lifetime1 = ScoreMarkerDemo.requestAddIgnore(-34, (String) (var4Lifetime1), param0);
         }
         if (QuickChatCategoryCache.field_e == 3) {
-          var5Lifetime1 = aq.a((String) (var4Lifetime1), param0, (String) (var4Lifetime1), -20867);
+          var5Lifetime1 = aq.requestRemoveIgnore((String) (var4Lifetime1), param0, (String) (var4Lifetime1), -20867);
         }
         if (var5Lifetime1 == null) {
           he.field_f = null;

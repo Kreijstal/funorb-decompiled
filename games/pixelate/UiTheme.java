@@ -36,7 +36,7 @@ final class UiTheme {
         field_h = null;
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, boolean param5) {
+    final void drawCaretLine(int param0, int param1, int param2, int param3, int param4, boolean param5) {
         if (!param5) {
           SoftwareRasterizer.drawLine(param3, param0, param2, param1, param4);
           return;
@@ -46,7 +46,7 @@ final class UiTheme {
         SoftwareRasterizer.drawLine(param3, param0, param2, param1, param4);
     }
 
-    static long a(long param0, long param1) {
+    static long longOr(long param0, long param1) {
         return param0 | param1;
     }
 
@@ -82,7 +82,7 @@ final class UiTheme {
         }
     }
 
-    final static boolean a(String param0, long param1, int param2, int param3, int[] param4) {
+    final static boolean openQuickChatForRecipient(String param0, long param1, int param2, int param3, int[] param4) {
         QuickChatMenu var6 = null;
         RuntimeException var6_ref = null;
         CharSequence var7 = null;
@@ -104,7 +104,7 @@ final class UiTheme {
           var7 = (CharSequence) ((Object) param0);
           fp.field_d = dh.a(var7, (byte) 26);
           fp.field_e = param1;
-          var6 = ThreeSliceButtonPainter.a(49, AccountMessagePanel.field_L, param4, RankingTableRequest.field_t, AccountNamePrompt.field_Ib);
+          var6 = ThreeSliceButtonPainter.buildQuickChatResponseMenu(49, AccountMessagePanel.field_L, param4, RankingTableRequest.field_t, AccountNamePrompt.field_Ib);
           mh.a(var6, (byte) 127);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -127,7 +127,7 @@ final class UiTheme {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    final void fillSelectionRect(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         SoftwareRasterizer.fillRectangleAlpha(param2, param6, param4, param3, param1, param0);
         int var8 = -61 / ((-21 - param5) / 44);
     }
@@ -296,9 +296,9 @@ final class UiTheme {
           this.field_n = 3;
           this.field_m = param1;
           this.field_g = 3;
-          var4.a(0, 7177).setTextColour(15658734, 15115).setFrameSprites(ClientException.a(8947848, 7829367, 10066329, 3), (byte) -65);
-          var4.a(1, 7177).setFrameSprites(ClientException.a(11184810, 13421772, 10066329, param0 ^ 7), (byte) -65);
-          var4.a(3, 7177).setFrameSprites(ClientException.a(8947848, 10066329, 7829367, 3), (byte) -65).setOffsetX((byte) 124, 1).setOffsetY(1, false);
+          var4.createStateLayer(0, 7177).setTextColour(15658734, 15115).setFrameSprites(ClientException.a(8947848, 7829367, 10066329, 3), (byte) -65);
+          var4.createStateLayer(1, 7177).setFrameSprites(ClientException.a(11184810, 13421772, 10066329, param0 ^ 7), (byte) -65);
+          var4.createStateLayer(3, 7177).setFrameSprites(ClientException.a(8947848, 10066329, 7829367, 3), (byte) -65).setOffsetX((byte) 124, 1).setOffsetY(1, false);
           var5 = new Sprite[9];
           var16 = new ArgbSprite(32, 32);
           var18 = var16;
@@ -306,22 +306,22 @@ final class UiTheme {
             var16.pixels[var7_int] = 1077952576;
           }
           var5[4] = (Sprite) ((Object) var18);
-          var4.a(4, 7177).setPaintsBaseLayer(true, true).setFrameSprites(var5, (byte) -65);
-          var4.a(5, 7177).setFrameSprites(og.a(0, true, 65793, 0, 0), (byte) -65).setPaintsBaseLayer(true, true).setTextColour(-1, 15115);
+          var4.createStateLayer(4, 7177).setPaintsBaseLayer(true, true).setFrameSprites(var5, (byte) -65);
+          var4.createStateLayer(5, 7177).setFrameSprites(og.a(0, true, 65793, 0, 0), (byte) -65).setPaintsBaseLayer(true, true).setTextColour(-1, 15115);
           this.field_r = (WidgetPainter) ((Object) var4);
           var6 = new StatefulTextPainter(var4, true);
           var6.field_l = 0;
           var7 = new StatefulTextPainter(var4, true);
           var7.field_l = 0;
           var7.setContentSprite(0, SecondaryNodeDeque.a(8947848, (byte) -128));
-          var7.a(1, 7177).setFrameSprites(SecondaryNodeDeque.a(11184810, (byte) -93), (byte) -65).setTextColour(2236962, 15115);
+          var7.createStateLayer(1, 7177).setFrameSprites(SecondaryNodeDeque.a(11184810, (byte) -93), (byte) -65).setTextColour(2236962, 15115);
           this.field_t = (WidgetPainter) ((Object) new CheckboxPainter(param1, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
           discarded$0 = new DialWidgetPainter(param1, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
           discarded$1 = new MarkerSliderPainter(param1, 16777215, -1, 125269879, 4473924, 3, 268435455);
           var8 = new StatefulTextPainter();
           var17.copyStyleTo(var8, (byte) 126);
-          var8.a(0, 7177).setFrameSprites(ClientException.a(15658734, 10066329, 7829367, 3), (byte) -65).setTextColour(1118481, 15115).setShadowColour(-1, (byte) -68);
-          var8.a(4, 7177).setPaintsBaseLayer(true, true).setFrameSprites(var5, (byte) -65);
+          var8.createStateLayer(0, 7177).setFrameSprites(ClientException.a(15658734, 10066329, 7829367, 3), (byte) -65).setTextColour(1118481, 15115).setShadowColour(-1, (byte) -68);
+          var8.createStateLayer(4, 7177).setPaintsBaseLayer(true, true).setFrameSprites(var5, (byte) -65);
           this.field_i = (WidgetPainter) ((Object) var8);
           var9 = new Sprite[9];
           var10 = new Sprite[9];
@@ -337,22 +337,22 @@ final class UiTheme {
           var13 = new Sprite(7, 4);
           var13.pixels = new int[]{8947848, 8947848, 8947848, 13421772, 8947848, 8947848, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772};
           var14 = new StatefulTextPainter(var4, true);
-          var14.a(param0 + 107, var13.copy());
+          var14.setStateIcon(param0 + 107, var13.copy());
           var13.rotateClockwise();
           var14Lifetime1 = new StatefulTextPainter(var4, true);
-          var14Lifetime1.a(79, var13.copy());
+          var14Lifetime1.setStateIcon(79, var13.copy());
           var13.rotateClockwise();
           var14Lifetime2 = new StatefulTextPainter(var4, true);
-          var14Lifetime2.a(-8, var13.copy());
+          var14Lifetime2.setStateIcon(-8, var13.copy());
           var13.rotateClockwise();
           var19 = new StatefulTextPainter(var4, true);
-          var19.a(param0 ^ -20, var13);
+          var19.setStateIcon(param0 ^ -20, var13);
         } catch (RuntimeException runtimeException) {
           throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "tg.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static byte[] a(boolean param0, boolean param1, Object param2) {
+    final static byte[] unwrapArchiveBytes(boolean param0, boolean param1, Object param2) {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
         ByteStorage var4 = null;

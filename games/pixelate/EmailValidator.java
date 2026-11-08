@@ -18,9 +18,9 @@ final class EmailValidator extends TextFieldValidator {
         RuntimeException decompiledCaughtException = null;
         try {
           if (!param1) {
-            EmailValidator.e(54);
+            EmailValidator.releaseStatics(54);
           }
-          stackIn_5_0 = (hm.a(0, param0) != null) ? 0 : 1;
+          stackIn_5_0 = (hm.validateEmailAddress(0, param0) != null) ? 0 : 1;
           var3_int = stackIn_5_0;
           if (var3_int != 0) {
             return qk.field_g;
@@ -45,14 +45,14 @@ final class EmailValidator extends TextFieldValidator {
         super(param0);
     }
 
-    final static void a(byte param0, int param1) {
+    final static void playPieceSound(byte param0, int param1) {
         mc.a(8 * NightToRememberBackground.field_o + param1, -127);
         if (param0 != 96) {
           field_n = (String) null;
         }
     }
 
-    public static void e(int param0) {
+    public static void releaseStatics(int param0) {
         field_p = null;
         field_m = null;
         field_o = null;
@@ -60,7 +60,7 @@ final class EmailValidator extends TextFieldValidator {
         int var1 = -73 / ((-35 - param0) / 59);
     }
 
-    final static boolean a(String param0, int param1) {
+    final static boolean containsAccountName(String param0, int param1) {
         RuntimeException var2 = null;
         boolean stackIn_10_0 = false;
         RuntimeException stackIn_13_0 = null;
@@ -90,7 +90,7 @@ final class EmailValidator extends TextFieldValidator {
         }
     }
 
-    final static String b(int param0, String param1) {
+    final static String reverseString(int param0, String param1) {
         int var4 = 0;
         int var2_int = 0;
         RuntimeException var2 = null;
@@ -124,7 +124,7 @@ final class EmailValidator extends TextFieldValidator {
         }
     }
 
-    final static void a(int param0, byte param1) {
+    final static void sortRankingRows(int param0, byte param1) {
         int var2_int = 0;
         int var3 = Pixelate.field_H ? 1 : 0;
         SingleChildContainer.sortRankedEntryRange(SecondaryNodeDeque.field_e, StatefulTextPainter.field_s, true, aa.field_o, 0, 127, param0);
@@ -144,7 +144,7 @@ final class EmailValidator extends TextFieldValidator {
         }
     }
 
-    final static String a(boolean param0, char param1, int param2) {
+    final static String repeatChar(boolean param0, char param1, int param2) {
         int var4 = 0;
         int var5 = Pixelate.field_H ? 1 : 0;
         char[] var6 = new char[param2];

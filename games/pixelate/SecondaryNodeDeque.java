@@ -45,7 +45,7 @@ final class SecondaryNodeDeque implements Iterable {
         int var9Lifetime1;
         var10 = Pixelate.field_H ? 1 : 0;
         try {
-          var7_int = un.a(param3, 108);
+          var7_int = un.padToByteBoundary(param3, 108);
           if (MatchingTextValidator.field_y == null) {
             MatchingTextValidator.field_y = new java.security.SecureRandom();
           }
@@ -130,7 +130,7 @@ final class SecondaryNodeDeque implements Iterable {
         Sprite[] var4 = new Sprite[9];
         Sprite[] var2 = var4;
         int var3 = -118 % ((param1 - 67) / 55);
-        var4[4] = cl.a(64, param0, (byte) -61);
+        var4[4] = cl.createSolidSprite(64, param0, (byte) -61);
         return var2;
     }
 
@@ -194,9 +194,9 @@ final class SecondaryNodeDeque implements Iterable {
                 var10 = var10 ^ 285L;
             }
             var12 = var2 ^ var10;
-            field_b[0][var0] = UiTheme.a(UiTheme.a(UiTheme.a(UiTheme.a(var10 << 24, UiTheme.a(UiTheme.a(UiTheme.a(var2 << 56, var2 << 48), var6 << 40), var2 << 32)), var8 << 16), var4 << 8), var12);
+            field_b[0][var0] = UiTheme.longOr(UiTheme.longOr(UiTheme.longOr(UiTheme.longOr(var10 << 24, UiTheme.longOr(UiTheme.longOr(UiTheme.longOr(var2 << 56, var2 << 48), var6 << 40), var2 << 32)), var8 << 16), var4 << 8), var12);
             for (var14 = 1; var14 < 8; var14++) {
-                field_b[var14][var0] = UiTheme.a(field_b[-1 + var14][var0] << 56, field_b[-1 + var14][var0] >>> 8);
+                field_b[var14][var0] = UiTheme.longOr(field_b[-1 + var14][var0] << 56, field_b[-1 + var14][var0] >>> 8);
             }
             var0++;
         }

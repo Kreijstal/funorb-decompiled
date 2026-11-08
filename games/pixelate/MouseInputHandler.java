@@ -43,7 +43,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         }
     }
 
-    final static boolean a(int param0, boolean param1) {
+    final static boolean pollGameSocketConnection(int param0, boolean param1) {
         try {
           long dupTemp$1 = 0L;
           IOException var2 = null;
@@ -57,8 +57,8 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           if (param0 == ra.field_b.field_b) {
             return false;
           }
-          dupTemp$1 = hm.a(64);
-          aj.field_m = dupTemp$1;
+          dupTemp$1 = hm.monotonicMillis(64);
+          ReflectionCheckRequest.field_m = dupTemp$1;
           SpriteCheckboxPainter.field_c = dupTemp$1;
           if (ra.field_b.field_b != 1) {
             GameModeSelectScreen.field_s = jm.field_q;
@@ -137,7 +137,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
     public static void releaseStatics(int param0) {
         field_a = null;
         if (param0 >= -43) {
-          MouseInputHandler.a(48, true);
+          MouseInputHandler.pollGameSocketConnection(48, true);
         }
     }
 
@@ -169,7 +169,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
             oi.field_c = 0;
             EditableTextWidget.field_X = param0.getX();
             IntrusiveNode.field_j = param0.getY();
-            hm.a(64);
+            hm.monotonicMillis(64);
             if (javax.swing.SwingUtilities.isRightMouseButton(param0)) {
               tl.field_a = 2;
               jm.field_o = 2;
@@ -255,7 +255,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         }
     }
 
-    final static IndexedSprite a(IndexedSprite param0, boolean param1, int[] param2) {
+    final static IndexedSprite createRepalettedSprite(IndexedSprite param0, boolean param1, int[] param2) {
         IndexedSprite var3 = null;
         RuntimeException var3_ref = null;
         IndexedSprite stackIn_2_0 = null;
@@ -302,14 +302,14 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         }
     }
 
-    final static ResourceArchive a(int param0, byte param1) {
+    final static ResourceArchive createLocalArchive(int param0, byte param1) {
         if (param1 != 124) {
           return (ResourceArchive) null;
         }
         return el.createResourceArchive(-115, true, false, param0, 1, false);
     }
 
-    final static void b(int param0) {
+    final static void tickTutorialPageTransition(int param0) {
         int fieldTemp$6 = 0;
         int fieldTemp$5 = 0;
         int fieldTemp$4 = 0;

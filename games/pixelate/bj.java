@@ -33,7 +33,7 @@ final class bj {
           var2 = 0 == JavaRandomHelpers.a(ea.field_b, -111, 4) ? 1 : 0;
           return mc.a(ea.field_b, 5, var2 != 0, param0, -52);
         }
-        return up.field_d[param0];
+        return PuzzleThumbnail.field_d[param0];
     }
 
     public static void releaseStatics(byte param0) {

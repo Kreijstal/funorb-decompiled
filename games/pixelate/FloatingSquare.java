@@ -276,7 +276,7 @@ final class FloatingSquare {
                 return true;
               }
               var3 = (String) (JavaScriptBridge.callWindowFunction("getcookies", (byte) -113, param1));
-              var4 = Puzzle.a(var3, (byte) -52, ';');
+              var4 = Puzzle.split(var3, (byte) -52, ';');
               for (var5 = 0; var5 < var4.length; var5++) {
                 var6 = var4[var5].indexOf('=');
                 if (0 <= var6 &&

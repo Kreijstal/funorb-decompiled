@@ -66,7 +66,7 @@ final class vf {
           if (Character.isISOControl(param1)) {
             return false;
           }
-          if (Puzzle.a(param1, (byte) 122)) {
+          if (Puzzle.isAsciiAlphanumeric(param1, (byte) 122)) {
             return true;
           }
           var2 = HighscoresScreen.field_r;
@@ -131,7 +131,7 @@ final class vf {
             1 != ValidatedTextWidget.field_db) {
             MouseWheelHandler.field_e.field_Gb.field_Ib.field_cb = FullscreenFocusCanvas.field_c;
             MouseWheelHandler.field_e.field_rb = false;
-            GrowableIntList.a(MouseWheelHandler.field_e.field_Fb, false);
+            GrowableIntList.resetChildLayouts(MouseWheelHandler.field_e.field_Fb, false);
             return;
           }
           MouseWheelHandler.field_e.field_rb = true;
@@ -182,11 +182,11 @@ final class vf {
             }
             if (var6.field_Ob != null &&
               var6.field_Ob.field_W) {
-              up.field_o = var6.field_Gb;
+              PuzzleThumbnail.field_o = var6.field_Gb;
             } else {
               if (var6.field_Pb.field_W &&
                 var11 != 0) {
-                up.field_o = var6.field_Fb;
+                PuzzleThumbnail.field_o = var6.field_Fb;
               }
             }
             if (var6.field_P != 0) {

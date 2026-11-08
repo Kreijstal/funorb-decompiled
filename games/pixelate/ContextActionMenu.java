@@ -17,7 +17,7 @@ final class ContextActionMenu extends SceneWidget {
     private Sprite[] field_Kb;
     private int itemCount;
 
-    final static String a(CharSequence[] param0, int param1, int param2, int param3) {
+    final static String joinCharSequenceRange(CharSequence[] param0, int param1, int param2, int param3) {
         int var6_int = 0;
         int var7 = 0;
         StringBuilder discarded$0 = null;
@@ -95,11 +95,11 @@ final class ContextActionMenu extends SceneWidget {
         }
     }
 
-    public static void b(byte param0) {
+    public static void clearStatics(byte param0) {
         field_Rb = null;
         if (param0 < 121) {
           CharSequence[] var2 = (CharSequence[]) null;
-          ContextActionMenu.a((CharSequence[]) null, -85, 35, 38);
+          ContextActionMenu.joinCharSequenceRange((CharSequence[]) null, -85, 35, 38);
         }
     }
 
@@ -124,11 +124,11 @@ final class ContextActionMenu extends SceneWidget {
         }
     }
 
-    final static Boolean c(byte param0) {
+    final static Boolean takePendingFlag(byte param0) {
         Boolean var1 = ArchiveIndex.field_j;
         if (param0 != 104) {
           CharSequence[] var2 = (CharSequence[]) null;
-          ContextActionMenu.a((CharSequence[]) null, 88, -25, -27);
+          ContextActionMenu.joinCharSequenceRange((CharSequence[]) null, 88, -25, -27);
         }
         ArchiveIndex.field_j = null;
         return var1;
@@ -169,7 +169,7 @@ final class ContextActionMenu extends SceneWidget {
         return this.field_Gb;
     }
 
-    final boolean j(int param0) {
+    final boolean isOpenHandlingEscape(int param0) {
         if (this.field_Gb != -2) {
           return false;
         }
@@ -222,7 +222,7 @@ final class ContextActionMenu extends SceneWidget {
           this.itemCount = 83;
         }
         for (var7 = 0; var7 < this.itemCount; var7++) {
-          var8 = this.items[var7].c(-25469, this.field_Lb, this.field_Nb);
+          var8 = this.items[var7].getPreferredWidth(-25469, this.field_Lb, this.field_Nb);
           if (var6 < var8) {
             var6 = var8;
           }
@@ -230,10 +230,10 @@ final class ContextActionMenu extends SceneWidget {
         var6 = var6 + 2 * this.field_Ob;
         var7Lifetime1 = this.field_Qb * this.itemCount + (this.field_Eb + this.field_Eb);
         var8Lifetime1 = ui.a(param4, param1, var6, (byte) -1);
-        var9 = pj.a(var7Lifetime1, param3, param0, (byte) 45);
+        var9 = ScorePopup.fitVerticalPosition(var7Lifetime1, param3, param0, (byte) 45);
         this.setBounds(var9, var7Lifetime1, var8Lifetime1, 256, var6);
         for (var10 = 0; var10 < this.itemCount; var10++) {
-          this.items[var10].a(this.field_Qb, this.field_Nb, this.field_Lb, this.field_Eb + this.field_Qb * var10, this.field_Ob, var6 - 2 * this.field_Ob, -2147483648);
+          this.items[var10].setBoundsAndLayout(this.field_Qb, this.field_Nb, this.field_Lb, this.field_Eb + this.field_Qb * var10, this.field_Ob, var6 - 2 * this.field_Ob, -2147483648);
         }
     }
 

@@ -380,7 +380,7 @@ final class GameResultsScreen extends MenuScreen {
           var5 = var6_int;
         }
         if (EditableTextWidget.field_R == null) {
-          EditableTextWidget.field_R = AccountRequestDialog.a(480, 123, (java.awt.Component) ((Object) new java.awt.Canvas()), 640);
+          EditableTextWidget.field_R = AccountRequestDialog.createRasterBuffer(480, 123, (java.awt.Component) ((Object) new java.awt.Canvas()), 640);
         }
         CanvasRasterBuffer var6 = ClientException.field_f;
         ClientException.field_f = EditableTextWidget.field_R;

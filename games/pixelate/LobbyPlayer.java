@@ -111,7 +111,7 @@ final class LobbyPlayer extends SceneWidget {
           }
         }
         if (!param0) {
-          PictureStrip.field_j = BoundedRandomAccessFile.a(80, -57, var8);
+          PictureStrip.field_j = BoundedRandomAccessFile.readCompressedChatText(80, -57, var8);
           HuffmanCodec.field_g = null;
           return new aa(param0);
         }
@@ -143,7 +143,7 @@ final class LobbyPlayer extends SceneWidget {
             LobbyPlayer.axisAngleRotation((Vector3) null, 99, -60);
           }
           DisplayNameRequestGlobals.setRequestedDisplayName(false, param1);
-          LoadingProgressDialog.a(false, TriangleMesh.field_e, -26027);
+          LoadingProgressDialog.showAccountRequestDialog(false, TriangleMesh.field_e, -26027);
         } catch (RuntimeException runtimeException) {
           throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "uj.I(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

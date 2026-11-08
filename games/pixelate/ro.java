@@ -9,7 +9,7 @@ final class ro {
     static int field_c;
     static String field_f;
 
-    final static void a(int param0, boolean param1) {
+    final static void sendChatFilterSettings(int param0, boolean param1) {
         CipherPacketBuffer var2 = aa.field_f;
         var2.writeOpcode(param0, 15514);
         var2.writeByte(160, 2);
@@ -18,7 +18,7 @@ final class ro {
           var2.writeByte(160, DelegatingCanvas.a((byte) -102));
           return;
         }
-        ro.b(16, true);
+        ro.advanceSlideshow(16, true);
         var2.writeByte(160, DelegatingCanvas.a((byte) -102));
     }
 
@@ -33,7 +33,7 @@ final class ro {
         field_b = null;
     }
 
-    final static void a(int param0, int param1) {
+    final static void sendStatsRequest(int param0, int param1) {
         CipherPacketBuffer var2 = aa.field_f;
         var2.writeOpcode(param1, 15514);
         if (param0 > 124) {
@@ -75,7 +75,7 @@ final class ro {
         }
     }
 
-    final static void a(boolean param0, Sprite[][] param1, int param2, int param3, ResourceArchive param4, String[] param5, int[] param6, String[][] param7, IndexedSprite[] param8, int param9, int[] param10, byte[] param11, String[][] param12, ResourceArchive param13, Sprite[][] param14, byte[] param15, ResourceArchive param16) {
+    final static void initializeLobbyUi(boolean param0, Sprite[][] param1, int param2, int param3, ResourceArchive param4, String[] param5, int[] param6, String[][] param7, IndexedSprite[] param8, int param9, int[] param10, byte[] param11, String[][] param12, ResourceArchive param13, Sprite[][] param14, byte[] param15, ResourceArchive param16) {
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_6_2 = null;
@@ -201,7 +201,7 @@ final class ro {
         }
     }
 
-    final static int b(int param0, boolean param1) {
+    final static int advanceSlideshow(int param0, boolean param1) {
         int stackIn_63_0 = 0;
         int stackIn_67_0 = 0;
         int stackIn_70_0 = 0;
@@ -302,7 +302,7 @@ final class ro {
             }
           }
           if (param1) {
-            NameSuggestionsPanel.field_I.updatePointer(el.a(ji.field_c, (byte) 126, BufferedRandomAccessFile.field_a), el.a(StatusBar.field_k, (byte) -77, ProxyAuthenticationException.field_d), -1);
+            NameSuggestionsPanel.field_I.updatePointer(el.hitTestChoiceIcons(ji.field_c, (byte) 126, BufferedRandomAccessFile.field_a), el.hitTestChoiceIcons(StatusBar.field_k, (byte) -77, ProxyAuthenticationException.field_d), -1);
             if (NameSuggestionsPanel.field_I.isActivated(19)) {
               if (NameSuggestionsPanel.field_I.selectedIndex == 0) {
                 stackIn_63_0 = 3;
@@ -314,7 +314,7 @@ final class ro {
               }
             }
             stackIn_70_0 = 116;
-            while (DirectByteStorage.$cfr$intArgs$b$c4997cb15529(stackIn_70_0)) {
+            while (DirectByteStorage.pollKeyEvent(stackIn_70_0)) {
               NameSuggestionsPanel.field_I.handleHorizontalNavigation(99, 0);
               if (NameSuggestionsPanel.field_I.isActivated(57)) {
                 if (NameSuggestionsPanel.field_I.selectedIndex == 0) {

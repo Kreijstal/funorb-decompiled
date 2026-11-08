@@ -139,11 +139,11 @@ final class AchievementsScreen extends MenuScreen {
           var12 = var4.textWidth(DisplayNameForm.field_K) + 120;
           var13 = var11;
           for (var14 = 0; var14 < ri.field_e[var5Lifetime1]; var14++) {
-            vn.field_c.drawTransparent((vn.field_c.field_A >> 1) * var14 + var12, -vn.field_c.field_B + (var13 + 4));
+            RisingBubble.field_c.drawTransparent((RisingBubble.field_c.field_A >> 1) * var14 + var12, -RisingBubble.field_c.field_B + (var13 + 4));
           }
         } else {
           var3.drawParagraph(th.field_a, 30, 280, 580, 400, 0, -1, 1, 0, 30);
-          if (ArrayWidgetContainer.a((byte) 109)) {
+          if (ArrayWidgetContainer.isAccountUiActive((byte) 109)) {
             var6 = 280 + this.field_d >> 1;
             var4.drawCentered(ScoreMarkerDemo.field_h, 320, var6, 16777215, 0);
           }
@@ -248,7 +248,7 @@ final class AchievementsScreen extends MenuScreen {
           return gd.field_i;
         }
         if (param0 == 37) {
-          return pj.field_a;
+          return ScorePopup.field_a;
         }
         return (Sprite) null;
     }

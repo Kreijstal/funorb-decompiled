@@ -18,12 +18,12 @@ abstract class TickClock {
 
     abstract int advanceTicks(boolean param0, long param1);
 
-    final static SceneWidget b(int param0) {
+    final static SceneWidget getIgnoreListContent(int param0) {
         if (param0 <= 101) {
-          TickClock.b(47);
-          return PairedTextColumns.c((byte) 123);
+          TickClock.getIgnoreListContent(47);
+          return PairedTextColumns.getIgnoreListContent((byte) 123);
         }
-        return PairedTextColumns.c((byte) 123);
+        return PairedTextColumns.getIgnoreListContent((byte) 123);
     }
 
     abstract void resynchronize(boolean param0);

@@ -138,7 +138,7 @@ final class DateOfBirthValidator extends DebouncedValidator implements TextInput
         try {
           var2_int = this.field_g.getDay((byte) 90);
           var3 = this.field_g.getMonthIndex(25);
-          var4 = this.field_g.c(param0);
+          var4 = this.field_g.getYear(param0);
           var5 = wa.currentYear(-80);
           if (1890 > var4) {
             stackIn_3_0 = sk.field_a;
@@ -173,9 +173,9 @@ final class DateOfBirthValidator extends DebouncedValidator implements TextInput
     public final boolean isInputEmpty(int param0) {
         if (param0 != -22265) {
           field_i = false;
-          return this.field_g.m(-1);
+          return this.field_g.isDateIncomplete(-1);
         }
-        return this.field_g.m(-1);
+        return this.field_g.isDateIncomplete(-1);
     }
 
     final String computeMessage(int param0) {
@@ -189,7 +189,7 @@ final class DateOfBirthValidator extends DebouncedValidator implements TextInput
         try {
           var2_int = this.field_g.getDay((byte) -84);
           var3 = this.field_g.getMonthIndex(25);
-          var4 = this.field_g.c(true);
+          var4 = this.field_g.getYear(true);
           var5 = wa.currentYear(-127);
           if (var4 >= 1890 &&
             var5 - 3 >= var4) {

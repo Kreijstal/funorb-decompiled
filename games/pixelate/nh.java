@@ -17,9 +17,9 @@ final class nh {
         var6 = Pixelate.field_H ? 1 : 0;
         var3 = -63 / ((param0 + 27) / 63);
         do {
-          var1 = TabbedPanel.a((byte) 41, 65536, -65536);
-          var2 = TabbedPanel.a((byte) 41, 65536, -65536);
-          var4 = TabbedPanel.a((byte) 41, 65536, -65536);
+          var1 = TabbedPanel.randomInRange((byte) 41, 65536, -65536);
+          var2 = TabbedPanel.randomInRange((byte) 41, 65536, -65536);
+          var4 = TabbedPanel.randomInRange((byte) 41, 65536, -65536);
         } while (0 == var1 &&
           0 == var2 &&
           var4 == 0);

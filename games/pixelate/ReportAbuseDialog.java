@@ -21,7 +21,7 @@ final class ReportAbuseDialog extends SceneWidget {
     static String field_Kb;
     private SceneWidget field_Qb;
 
-    final boolean j(int param0) {
+    final boolean handleEscapeKey(int param0) {
         if (-2 != this.field_Jb) {
           return false;
         }
@@ -264,7 +264,7 @@ final class ReportAbuseDialog extends SceneWidget {
             var23 = 13 + (var19 + 13);
             var24 = var17Lifetime5 + (24 + var22) + 10;
             var25 = ui.a(param2, param0, var23, (byte) -1);
-            var26 = pj.a(var24, param1, param3, (byte) 110);
+            var26 = ScorePopup.fitVerticalPosition(var24, param1, param3, (byte) 110);
             this.setBounds(var26, var24, var25, 256, var23);
             return;
           }
@@ -282,7 +282,7 @@ final class ReportAbuseDialog extends SceneWidget {
           var18Lifetime1 = 13 - (-var15_int - 13);
           var19Lifetime1 = 34 + var16Lifetime1;
           var20Lifetime1 = ui.a(param2, param0, var18Lifetime1, (byte) -1);
-          var21Lifetime1 = pj.a(var19Lifetime1, param1, param3, (byte) 32);
+          var21Lifetime1 = ScorePopup.fitVerticalPosition(var19Lifetime1, param1, param3, (byte) 32);
           this.setBounds(var21Lifetime1, var19Lifetime1, var20Lifetime1, 256, var18Lifetime1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -382,9 +382,9 @@ final class ReportAbuseDialog extends SceneWidget {
         }
     }
 
-    final static java.awt.Canvas b(byte param0) {
+    final static java.awt.Canvas getActiveCanvas(byte param0) {
         if (param0 > -68) {
-          ReportAbuseDialog.m(38);
+          ReportAbuseDialog.releaseStatics(38);
         }
         return ib.field_f == null ? NameAvailabilityValidator.field_u : (java.awt.Canvas) ((Object) ib.field_f);
     }
@@ -434,19 +434,19 @@ final class ReportAbuseDialog extends SceneWidget {
         return this.field_Jb;
     }
 
-    public static void m(int param0) {
+    public static void releaseStatics(int param0) {
         field_Kb = null;
         field_Gb = null;
         field_Hb = null;
         field_Mb = null;
         if (param0 != 1) {
-          ReportAbuseDialog.b((byte) -8);
+          ReportAbuseDialog.getActiveCanvas((byte) -8);
         }
         field_Rb = null;
         field_Vb = null;
     }
 
-    final static void a(int param0, ResourceArchive param1, IndexedSprite[] param2, int[] param3, ResourceArchive param4) {
+    final static void loadLobbyIcons(int param0, ResourceArchive param1, IndexedSprite[] param2, int[] param3, ResourceArchive param4) {
         Sprite[] dupTemp$0 = null;
         Sprite[] dupTemp$1 = null;
         Sprite[] dupTemp$2 = null;
@@ -558,8 +558,8 @@ final class ReportAbuseDialog extends SceneWidget {
           var12 = FallingPieceView.trimSpriteCanvases(false, SocketConnector.loadRgbSpritesByName("popup_mouseover", "lobby", (byte) 47, param1));
           var13 = SocketConnector.loadRgbSpritesByName("button", "lobby", (byte) 47, param1);
           var14 = FallingPieceView.trimSpriteCanvases(false, SocketConnector.loadRgbSpritesByName("tab_active", "lobby", (byte) 47, param1));
-          pj.field_i = new SceneWidget(0L, var8);
-          pj.field_i.field_zb = var14;
+          ScorePopup.field_i = new SceneWidget(0L, var8);
+          ScorePopup.field_i.field_zb = var14;
           Vector3.field_f = new SceneWidget(0L, (SceneWidget) null);
           Vector3.field_f.field_H = bi.loadSprite("lobby", "closebutton", param1, (byte) -127);
           Vector3.field_f.field_B = bi.loadSprite("lobby", "closebutton_mouseover", param1, (byte) -106);
@@ -685,10 +685,10 @@ final class ReportAbuseDialog extends SceneWidget {
           var17 = SocketConnector.loadRgbSpritesByName("checkbox", "lobby", (byte) 47, param1);
           um.field_q = new PairedTextColumns(0L, var17[1], var17[0], 1, dn.field_c, (String) null);
           LoginDialog.field_mb = new SceneWidget(0L, (SceneWidget) null);
-          LoginDialog.field_mb.field_zb = TextHotspotWidget.a(24414, bi.loadSprite("lobby", "slideregion", param1, (byte) -73));
-          LoginDialog.field_mb.field_ab = TextHotspotWidget.a(24414, bi.loadSprite("lobby", "slideregion_mouseover", param1, (byte) -123));
-          LoginDialog.field_mb.field_bb = TextHotspotWidget.a(24414, bi.loadSprite("lobby", "slideregion_mouseheld", param1, (byte) -64));
-          LoginDialog.field_mb.field_M = TextHotspotWidget.a(24414, bi.loadSprite("lobby", "slideregion_disabled", param1, (byte) -50));
+          LoginDialog.field_mb.field_zb = TextHotspotWidget.createCentreOnlyFrame(24414, bi.loadSprite("lobby", "slideregion", param1, (byte) -73));
+          LoginDialog.field_mb.field_ab = TextHotspotWidget.createCentreOnlyFrame(24414, bi.loadSprite("lobby", "slideregion_mouseover", param1, (byte) -123));
+          LoginDialog.field_mb.field_bb = TextHotspotWidget.createCentreOnlyFrame(24414, bi.loadSprite("lobby", "slideregion_mouseheld", param1, (byte) -64));
+          LoginDialog.field_mb.field_M = TextHotspotWidget.createCentreOnlyFrame(24414, bi.loadSprite("lobby", "slideregion_disabled", param1, (byte) -50));
           jn.field_p = new SceneWidget(0L, (SceneWidget) null);
           jn.field_p.field_zb = FallingPieceView.trimSpriteCanvases(false, SocketConnector.loadRgbSpritesByName("dragbar", "lobby", (byte) 47, param1));
           jn.field_p.field_ab = FallingPieceView.trimSpriteCanvases(false, SocketConnector.loadRgbSpritesByName("dragbar_mouseover", "lobby", (byte) 47, param1));
@@ -739,12 +739,12 @@ final class ReportAbuseDialog extends SceneWidget {
         }
     }
 
-    final boolean l(int param0) {
+    final boolean isMuteSelected(int param0) {
         ResourceArchive var3;
         boolean stackIn_6_0 = false;
         if (param0 != 2) {
           var3 = (ResourceArchive) null;
-          ReportAbuseDialog.a(-5, (ResourceArchive) null, (IndexedSprite[]) null, (int[]) null, (ResourceArchive) null);
+          ReportAbuseDialog.loadLobbyIcons(-5, (ResourceArchive) null, (IndexedSprite[]) null, (int[]) null, (ResourceArchive) null);
         }
         stackIn_6_0 = (this.muteControl != null) && (this.muteControl.field_U);
         return stackIn_6_0;
@@ -794,7 +794,7 @@ final class ReportAbuseDialog extends SceneWidget {
         }
     }
 
-    final String k(int param0) {
+    final String getEnteredText(int param0) {
         int discarded$0 = 0;
         if (param0 <= 102) {
           SceneWidget var3 = (SceneWidget) null;

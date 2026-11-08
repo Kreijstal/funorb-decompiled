@@ -11,7 +11,7 @@ final class DualLinkDeque {
     static char field_f;
     static String field_c;
 
-    final static void a(ResourceArchive param0, byte param1) {
+    final static void loadLogoJingle(ResourceArchive param0, byte param1) {
         VorbisSample var2 = null;
         try {
           if (param1 != 14) {
@@ -25,7 +25,7 @@ final class DualLinkDeque {
         }
     }
 
-    final int b(int param0) {
+    final int size(int param0) {
         int var2 = 0;
         DualLinkNode var3 = null;
         int var4 = Pixelate.field_H ? 1 : 0;
@@ -52,7 +52,7 @@ final class DualLinkDeque {
         field_c = null;
     }
 
-    final DualLinkNode a(byte param0) {
+    final DualLinkNode removeFirst(byte param0) {
         DualLinkNode var2 = this.field_b.secondaryNext;
         if (var2 == this.field_b) {
           return null;
@@ -65,23 +65,23 @@ final class DualLinkDeque {
         return var2;
     }
 
-    final static void d(int param0) {
+    final static void processUiLayerInput(int param0) {
         RuntimeException var1 = null;
         int var2 = 0;
         RuntimeException decompiledCaughtException = null;
         var2 = Pixelate.field_H ? 1 : 0;
         try {
-          if (!GreenGrowTheRushesBackground.e(114)) {
+          if (!GreenGrowTheRushesBackground.hasOpenNotice(114)) {
             if (null != ib.field_f &&
               ib.field_f.field_g) {
               ln.a(49);
-              NetworkGameClient.field_x.b(param0 - 55844, new AccountNoticeDialog(NetworkGameClient.field_x, LinkButtonPainter.field_c));
+              NetworkGameClient.field_x.showPanel(param0 - 55844, new AccountNoticeDialog(NetworkGameClient.field_x, LinkButtonPainter.field_c));
             }
             return;
           }
           NetworkGameClient.field_x.handlePointerEvents(qk.field_i, true, (byte) 99, nh.field_b);
-          NetworkGameClient.field_x.d((byte) 111);
-          while (DirectByteStorage.$cfr$intArgs$b$c4997cb15529(126)) {
+          NetworkGameClient.field_x.updatePanels((byte) 111);
+          while (DirectByteStorage.pollKeyEvent(126)) {
             NetworkGameClient.field_x.processKey(field_f, ke.field_a, false);
           }
           if (param0 == 49661) {
@@ -96,7 +96,7 @@ final class DualLinkDeque {
         }
     }
 
-    final DualLinkNode c(int param0) {
+    final DualLinkNode first(int param0) {
         if (param0 < 53) {
           return (DualLinkNode) null;
         }
@@ -124,7 +124,7 @@ final class DualLinkDeque {
         }
     }
 
-    final DualLinkNode a(int param0) {
+    final DualLinkNode next(int param0) {
         DualLinkNode var2 = this.field_a;
         if (var2 == this.field_b) {
           this.field_a = null;

@@ -24,7 +24,7 @@ final class LinkButtonPainter implements WidgetPainter {
           Throwable decompiledCaughtException = null;
           try {
             if (PlatformTaskDispatcher.field_p.startsWith("win") &&
-              la.a(param1, -31451)) {
+              la.openUrlWithShell(param1, -31451)) {
               return;
             }
             if (param2 > -31) {

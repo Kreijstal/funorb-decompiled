@@ -12,7 +12,7 @@ final class BoardParticle extends IntrusiveNode {
     private double field_s;
     private double field_p;
 
-    final void e(int param0) {
+    final void tick(int param0) {
         if (this.field_o > 0) {
           this.field_o = this.field_o - 1;
           return;
@@ -31,9 +31,9 @@ final class BoardParticle extends IntrusiveNode {
         }
     }
 
-    final void a(byte param0) {
+    final void draw(byte param0) {
         if (param0 >= -102) {
-          this.e(55);
+          this.tick(55);
         }
         if (0 < this.field_o) {
           return;
@@ -45,7 +45,7 @@ final class BoardParticle extends IntrusiveNode {
         SpriteEffectHelpers.drawGlowLine(this.field_r + var2, -var2 + this.field_k, this.field_r + var2, var2 + this.field_k, 7, this.field_n, LoginCredentials.field_e.field_g[this.field_l]);
     }
 
-    final static Sprite[] a(int param0, int param1, boolean param2, int param3) {
+    final static Sprite[] createSolidFrameSprites(int param0, int param1, boolean param2, int param3) {
         int var5 = 0;
         int var6 = Pixelate.field_H ? 1 : 0;
         if (!param2) {
@@ -53,29 +53,29 @@ final class BoardParticle extends IntrusiveNode {
         }
         Sprite[] var7 = new Sprite[9];
         Sprite[] var4 = var7;
-        var7[0] = cl.a(param0, param1, (byte) -87);
+        var7[0] = cl.createSolidSprite(param0, param1, (byte) -87);
         for (var5 = 1; var5 < 9; var5++) {
           var7[var5] = var7[0];
         }
-        var4[4] = cl.a(64, param3, (byte) -53);
+        var4[4] = cl.createSolidSprite(64, param3, (byte) -53);
         return var4;
     }
 
-    final static boolean a(byte param0, int param1) {
+    final static boolean isNonNegative(byte param0, int param1) {
         if (param0 != -104) {
-          BoardParticle.a(103, 85, false, -53);
+          BoardParticle.createSolidFrameSprites(103, 85, false, -53);
         }
         return 0 <= param1 ? true : false;
     }
 
     public static void releaseStatics(int param0) {
         if (param0 != 7) {
-          BoardParticle.a((byte) -48, 5);
+          BoardParticle.isNonNegative((byte) -48, 5);
         }
         field_q = null;
     }
 
-    final static boolean a(int param0, char param1) {
+    final static boolean isAsciiLetter(int param0, char param1) {
         boolean stackIn_10_0 = false;
         if (param0 != -66) {
           return true;

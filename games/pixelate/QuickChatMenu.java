@@ -104,7 +104,7 @@ final class QuickChatMenu extends SceneWidget {
           this.field_Gb = (QuickChatMenu[]) null;
         }
         for (var7 = 0; var7 < this.field_Mb; var7++) {
-          this.field_Sb[var7].a(this.field_Jb, param3, param2, this.field_Sb[var7].field_S, 0, this.field_Fb, param4 - 2147483554);
+          this.field_Sb[var7].setBoundsAndLayout(this.field_Jb, param3, param2, this.field_Sb[var7].field_S, 0, this.field_Fb, param4 - 2147483554);
         }
         if (this.openItemIndex != -1 &&
           this.field_Gb[this.openItemIndex] != null) {
@@ -358,7 +358,7 @@ final class QuickChatMenu extends SceneWidget {
             this.setOpenAnimationStep(0, (byte) -96);
             this.openItemIndex = param0;
             this.field_Pb = this.field_Gb[this.openItemIndex];
-            StripedProgressBar.a(this.field_Pb, true);
+            StripedProgressBar.attachQuickChatMenu(this.field_Pb, true);
             this.field_Pb.setOpenAnimationStep(12, (byte) -104);
           } else {
             if (-1 != this.field_Tb[param0]) {
@@ -368,14 +368,14 @@ final class QuickChatMenu extends SceneWidget {
                 LoginMethod.field_c != null) {
                 var6 = 1;
               }
-              if (IterableNodeHashTable.a(var6, 0) == 2) {
+              if (IterableNodeHashTable.getChatFilterMode(var6, 0) == 2) {
                 Js5ArchiveManager.setChatFilterMode(1, -26931, var6, param1);
               }
               var8 = (String) null;
               dg.a(true, ce.field_d, var5, (String) null, CheckboxPainter.field_k, param3);
               di.a(var5, fp.field_e, CheckboxPainter.field_k, (byte) 9, ce.field_d);
               ScoreMarkerDemo.closeQuickChatMenu(false);
-              SocketJs5Transport.d(-93);
+              SocketJs5Transport.resetRetryTimer(-93);
             } else {
               ScrollPaneWithFooter.j(-127);
               ScoreMarkerDemo.closeQuickChatMenu(false);

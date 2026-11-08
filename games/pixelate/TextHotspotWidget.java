@@ -75,7 +75,7 @@ class TextHotspotWidget extends TextButton {
           for (var11 = var8; var11 <= var9; var11++) {
             var12 = var4.lines[var11];
             if (var11 == var8) {
-              stackIn_10_0 = var4.b(true, var5);
+              stackIn_10_0 = var4.getCharacterX(true, var5);
             } else {
               stackIn_10_0 = var12.field_g[0];
             }
@@ -87,10 +87,10 @@ class TextHotspotWidget extends TextButton {
                 stackIn_15_0 = var12.field_g[-1 + var12.field_g.length];
               }
             } else {
-              stackIn_15_0 = var4.b(true, var2);
+              stackIn_15_0 = var4.getCharacterX(true, var2);
             }
             var14 = stackIn_15_0;
-            var15 = new ni(var7Lifetime1, var13, var12.field_b, -var13 + var14, Math.max(var3.a(param0 ^ -1832), -var12.field_b + var12.field_d));
+            var15 = new ni(var7Lifetime1, var13, var12.field_b, -var13 + var14, Math.max(var3.getLineHeight(param0 ^ -1832), -var12.field_b + var12.field_d));
             if (var10 != null) {
               ((ni) (var10)).field_l = var15;
             }
@@ -178,12 +178,12 @@ class TextHotspotWidget extends TextButton {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void setBoundsToPreferredWidth(int param0, int param1, int param2, int param3) {
         int var5 = 70 / ((-33 - param3) / 58);
         this.setBounds(param1, (byte) 28, param2, param0, ((WidgetTextLayout) ((Object) this.field_y)).getPreferredWidth((UiComponent) (this), 4592));
     }
 
-    final static void a(byte param0) {
+    final static void clearMouseHandler(byte param0) {
         Throwable decompiledCaughtException = null;
         Object var1 = null;
         if (param0 != -94) {
@@ -230,7 +230,7 @@ class TextHotspotWidget extends TextButton {
         }
     }
 
-    final static byte[] a(byte[] param0, int param1, int param2, int param3) {
+    final static byte[] whirlpoolDigest(byte[] param0, int param1, int param2, int param3) {
         int var5_int = 0;
         byte[] var4 = null;
         int var7 = 0;
@@ -319,7 +319,7 @@ class TextHotspotWidget extends TextButton {
         return null;
     }
 
-    final static Sprite[] a(int param0, Sprite param1) {
+    final static Sprite[] createCentreOnlyFrame(int param0, Sprite param1) {
         Sprite[] var2 = null;
         RuntimeException var2_ref = null;
         Sprite[] var3 = null;
@@ -351,7 +351,7 @@ class TextHotspotWidget extends TextButton {
         }
     }
 
-    final static void a(boolean param0, byte[] param1) {
+    final static void applyCompletedPuzzleMask(boolean param0, byte[] param1) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;

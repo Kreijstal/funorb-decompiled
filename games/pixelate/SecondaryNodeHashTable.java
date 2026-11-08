@@ -324,12 +324,12 @@ final class SecondaryNodeHashTable {
             if (param0 >= 0) {
               decompiledFrameRemainder0 = (Pixelate.field_G == GameModeSelectScreen.field_s);
               if ((decompiledFrameRemainder0) && (aa.field_f.position == 0 &&
-                hm.a(64) > (aj.field_m + 10000L))) {
+                hm.monotonicMillis(64) > (ReflectionCheckRequest.field_m + 10000L))) {
                 aa.field_f.writeOpcode(param0, 15514);
               }
             } else {
               if (aa.field_f.position == 0 &&
-                hm.a(64) > (aj.field_m + 10000L)) {
+                hm.monotonicMillis(64) > (ReflectionCheckRequest.field_m + 10000L)) {
                 aa.field_f.writeOpcode(param0, 15514);
               }
             }
@@ -337,7 +337,7 @@ final class SecondaryNodeHashTable {
               if (aa.field_f.position > 0) {
                 try {
                   NodeHashTableIterator.field_e.write(aa.field_f.position, -98, 0, aa.field_f.payload);
-                  aj.field_m = hm.a(64);
+                  ReflectionCheckRequest.field_m = hm.monotonicMillis(64);
                 } catch (java.io.IOException decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var2 = (IOException) (Object) decompiledCaughtException;

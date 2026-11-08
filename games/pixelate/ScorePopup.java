@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pj {
+final class ScorePopup {
     static Sprite field_a;
     private int field_h;
     private Sprite field_e;
@@ -13,7 +13,7 @@ final class pj {
     private int field_j;
     private int field_c;
 
-    final static void a(byte param0, boolean param1) {
+    final static void updateOverlayFadeCounters(byte param0, boolean param1) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -31,8 +31,8 @@ final class pj {
               oo.field_b = oo.field_b - 1;
               return;
             }
-            if (vn.field_g > 0) {
-              vn.field_g = vn.field_g - 1;
+            if (RisingBubble.field_g > 0) {
+              RisingBubble.field_g = RisingBubble.field_g - 1;
               return;
             }
             if (0 >= Checkbox.field_W) {
@@ -46,8 +46,8 @@ final class pj {
               oo.field_b = oo.field_b - 1;
               return;
             }
-            if (vn.field_g > 0) {
-              vn.field_g = vn.field_g - 1;
+            if (RisingBubble.field_g > 0) {
+              RisingBubble.field_g = RisingBubble.field_g - 1;
               return;
             }
             if (qh.field_c <= Checkbox.field_W) {
@@ -68,18 +68,18 @@ final class pj {
               Checkbox.field_W = Checkbox.field_W - 1;
               return;
             }
-            if (vn.field_g >= qh.field_c) {
+            if (RisingBubble.field_g >= qh.field_c) {
               return;
             }
-            if (vn.field_g == 0) {
+            if (RisingBubble.field_g == 0) {
               NodeHashTable.buildLobbyWidgetTree(true, -71);
             }
-            vn.field_g = vn.field_g + 1;
+            RisingBubble.field_g = RisingBubble.field_g + 1;
             return;
           }
           EmergentBehaviourBackground.field_o = false;
-          if (vn.field_g > 0) {
-            vn.field_g = vn.field_g - 1;
+          if (RisingBubble.field_g > 0) {
+            RisingBubble.field_g = RisingBubble.field_g - 1;
             return;
           }
           if (Checkbox.field_W > 0) {
@@ -101,7 +101,7 @@ final class pj {
         }
     }
 
-    final void a(String param0, int param1, int param2, int param3) {
+    final void start(String param0, int param1, int param2, int param3) {
         int var5_int = 0;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
@@ -141,7 +141,7 @@ final class pj {
         }
     }
 
-    final static int a(int param0, int param1, int param2, byte param3) {
+    final static int fitVerticalPosition(int param0, int param1, int param2, byte param3) {
         int stackIn_4_0 = 0;
         int stackIn_9_0 = 0;
         int stackIn_11_0 = 0;
@@ -168,7 +168,7 @@ final class pj {
         }
     }
 
-    final void a(byte param0) {
+    final void draw(byte param0) {
         int var3 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
@@ -200,7 +200,7 @@ final class pj {
         }
     }
 
-    final void a(int param0) {
+    final void tick(int param0) {
         RuntimeException var2 = null;
         int var3 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -229,7 +229,7 @@ final class pj {
           if (param0 <= -55) {
             return;
           }
-          pj.a(31, 2, 48, (byte) 8);
+          ScorePopup.fitVerticalPosition(31, 2, 48, (byte) 8);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -238,13 +238,13 @@ final class pj {
         }
     }
 
-    pj() {
+    ScorePopup() {
         this.field_h = 0;
         this.field_e = new Sprite(320, 21);
         this.field_f = true;
     }
 
-    public static void a(boolean param0) {
+    public static void clearStatics(boolean param0) {
         if (param0) {
           return;
         }

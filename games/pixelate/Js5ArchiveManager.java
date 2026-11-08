@@ -69,7 +69,7 @@ final class Js5ArchiveManager {
           stackIn_13_1 = (param1) && (!LobbyPlayer.field_Wb);
           ((SceneWidget) (Object) stackIn_12_0).drawFullScreen(stackIn_13_1, 0);
         }
-        if (!(vn.field_g <= 0) ||
+        if (!(RisingBubble.field_g <= 0) ||
           !(Checkbox.field_W <= 0)) {
           if (CheckboxPainter.field_j != null) {
             CheckboxPainter.field_j.drawOpaque(ff.field_h.field_D, 0);
@@ -174,7 +174,7 @@ final class Js5ArchiveManager {
         }
         for (var2 = 0; var2 < this.field_h.length; var2++) {
           if (null != this.field_h[var2]) {
-            this.field_h[var2].f((byte) 29);
+            this.field_h[var2].processGroupScan((byte) 29);
           }
         }
         var4 = 0;
@@ -266,7 +266,7 @@ final class Js5ArchiveManager {
         if (this.field_g.field_v) {
           return false;
         }
-        var10 = new PacketBuffer(this.field_g.h(0));
+        var10 = new PacketBuffer(this.field_g.getData(0));
         var10.position = 5;
         var3 = var10.readUnsignedByte(255);
         var10.position = var10.position + 72 * var3;
@@ -285,7 +285,7 @@ final class Js5ArchiveManager {
         if (var5.length != 65) {
           throw new RuntimeException();
         }
-        var15 = TextHotspotWidget.a(var10.payload, 5, 1761872464, -var13.length + var10.position - 5);
+        var15 = TextHotspotWidget.whirlpoolDigest(var10.payload, 5, 1761872464, -var13.length + var10.position - 5);
         for (var7 = 0; var7 < 64; var7++) {
           if (var15[var7] != var5[var7 + 1]) {
             throw new RuntimeException();
@@ -304,19 +304,19 @@ final class Js5ArchiveManager {
           param0 != LoginMethod.field_e) {
           LoginMethod.field_e = param0;
           DialWidget.field_P = true;
-          ro.a(param3, true);
+          ro.sendChatFilterSettings(param3, true);
         }
         if (param2 == 1 &&
           GradientOutlineTextPainter.field_v != param0) {
           DialWidget.field_P = true;
           GradientOutlineTextPainter.field_v = param0;
-          ro.a(param3, true);
+          ro.sendChatFilterSettings(param3, true);
         }
         if (2 == param2 &&
           param0 != ib.field_e) {
           DialWidget.field_P = true;
           ib.field_e = param0;
-          ro.a(param3, true);
+          ro.sendChatFilterSettings(param3, true);
         }
         if (param1 != -26931) {
           Js5ArchiveManager.releaseStatics((byte) -107);

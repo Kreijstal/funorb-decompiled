@@ -6,7 +6,7 @@ final class em {
     static String field_b;
     static String field_c;
 
-    final static void a(byte param0) {
+    final static void resetResultsKind(byte param0) {
         if (param0 > -13) {
           field_a = (String) null;
           DateOfBirthValidator.field_j = 0;
@@ -15,7 +15,7 @@ final class em {
         DateOfBirthValidator.field_j = 0;
     }
 
-    final static void a(byte param0, lc param1, int param2) {
+    final static void sendRankingQuery(byte param0, lc param1, int param2) {
         CipherPacketBuffer var3 = null;
         try {
           if (param0 != -7) {
@@ -31,7 +31,7 @@ final class em {
         }
     }
 
-    final static void a(Sprite[] param0, int param1) {
+    final static void setupPuzzleSelectGrid(Sprite[] param0, int param1) {
         int var3 = 0;
         int var2_int = 0;
         int var4 = 0;
@@ -53,7 +53,7 @@ final class em {
             field_b = (String) null;
           }
           for (var3 = 0; var3 < 50; var3++) {
-            ModalPanel.field_I[var3] = new up(var3);
+            ModalPanel.field_I[var3] = new PuzzleThumbnail(var3);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -73,7 +73,7 @@ final class em {
     final static void openContextMenu(String param0, long param1, String param2, int param3, SceneWidget param4, int param5, ScrollContainer param6, int[] param7, int param8) {
         try {
           if (param5 != -163) {
-            em.a((byte) 53);
+            em.resetResultsKind((byte) 53);
           }
           bj.field_d = param6;
           ProxySocketConnector.field_n = new ClientContextMenu(param4, param1, param2, param0, param3, param8, param7);
@@ -91,14 +91,14 @@ final class em {
         field_a = null;
     }
 
-    final static void a(PcmStreamMixer param0, int param1, int param2, ResourceArchive param3) {
+    final static void prepareLogoIntro(PcmStreamMixer param0, int param1, int param2, ResourceArchive param3) {
         try {
           ub.field_a = MenuInputState.getTargetFrameRate(true) * param2 / 1000;
-          DualLinkDeque.a(param3, (byte) 14);
+          DualLinkDeque.loadLogoJingle(param3, (byte) 14);
           dk.loadLogoMesh(false, param3);
           NameAvailabilityValidator.a(false, param3);
           OptionsScreen.initializeSpecularTable(260);
-          UiComponent.g(0);
+          UiComponent.renderLogoGlowSprite(0);
           GameModeCard.field_f = -ub.field_a + 0;
           int var4_int = 26 % ((param1 - 1) / 55);
         } catch (RuntimeException runtimeException) {

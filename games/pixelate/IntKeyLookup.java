@@ -56,20 +56,20 @@ final class IntKeyLookup {
     final static Sprite[] a(int param0, int param1, int param2, int param3, int param4) {
         Sprite[] var6 = new Sprite[9];
         Sprite[] var5 = var6;
-        Sprite dupTemp$0 = cl.a(param4, param3, (byte) -108);
+        Sprite dupTemp$0 = cl.createSolidSprite(param4, param3, (byte) -108);
         var6[6] = dupTemp$0;
         var5[3] = dupTemp$0;
         var5[2] = dupTemp$0;
         var5[1] = dupTemp$0;
         var5[0] = dupTemp$0;
-        Sprite dupTemp$1 = cl.a(param4, param0, (byte) -116);
+        Sprite dupTemp$1 = cl.createSolidSprite(param4, param0, (byte) -116);
         var6[8] = dupTemp$1;
         var5[7] = dupTemp$1;
         var5[param2] = dupTemp$1;
         if (param1 == 0) {
           return var5;
         }
-        var6[4] = cl.a(64, param1, (byte) -50);
+        var6[4] = cl.createSolidSprite(64, param1, (byte) -50);
         return var5;
     }
 

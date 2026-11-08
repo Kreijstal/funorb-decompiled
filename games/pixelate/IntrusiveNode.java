@@ -117,7 +117,7 @@ class IntrusiveNode {
           LoginForm.field_P = new SceneWidget(0L, AccountRequestDialog.field_mb, MusicPatchPcmStream.field_q);
           PasswordValidator.field_o = new SceneWidget(0L, AccountRequestDialog.field_mb, MatchController.field_b);
           SocketJs5Transport.field_t = new SceneWidget(0L, ni.field_s, df.field_m);
-          aj.field_k = new ScrollContainer(0L, new SceneWidget(0L, (SceneWidget) null), ff.field_g, ug.field_s);
+          ReflectionCheckRequest.field_k = new ScrollContainer(0L, new SceneWidget(0L, (SceneWidget) null), ff.field_g, ug.field_s);
           lg.field_c = new SceneWidget(0L, PicturePreview.field_k, DualLinkNode.field_m.toUpperCase());
           lg.field_c.field_rb = DialWidgetPainter.field_n;
           stackIn_8_0 = null;
@@ -145,7 +145,7 @@ class IntrusiveNode {
           }
           DiskCacheWorker.field_a.addChild(PasswordValidator.field_o, (byte) 26);
           DiskCacheWorker.field_a.addChild(SocketJs5Transport.field_t, (byte) 26);
-          DiskCacheWorker.field_a.addChild(aj.field_k, (byte) 26);
+          DiskCacheWorker.field_a.addChild(ReflectionCheckRequest.field_k, (byte) 26);
           if (DialWidgetPainter.field_n) {
             MidiPcmStream.field_E.addChild(lg.field_c, (byte) 26);
           }
@@ -271,7 +271,7 @@ class IntrusiveNode {
           Bzip2State.field_A.addChild(wm.field_d, (byte) 26);
           Bzip2State.field_A.addChild(ep.field_a, (byte) 26);
           Bzip2State.field_A.addChild(nk.field_e, (byte) 26);
-          ih.field_g = new SceneWidget(0L, pj.field_i, WhirlpoolHasher.field_k.toUpperCase());
+          ih.field_g = new SceneWidget(0L, ScorePopup.field_i, WhirlpoolHasher.field_k.toUpperCase());
           ContentTransitionDialog.field_eb = new SceneWidget(0L, nk.field_f, NameAvailabilityValidator.field_o.toUpperCase());
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

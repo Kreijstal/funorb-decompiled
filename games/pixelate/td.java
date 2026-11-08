@@ -18,7 +18,7 @@ final class td {
           if (param0 >= -97) {
             field_d = (String) null;
           }
-          stackIn_3_0 = DialWidget.a(-26629, 10, param1, true);
+          stackIn_3_0 = DialWidget.isValidInteger(-26629, 10, param1, true);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

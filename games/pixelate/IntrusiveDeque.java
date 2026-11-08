@@ -150,10 +150,10 @@ final class IntrusiveDeque {
         int var1 = 0;
         int var2 = 0;
         if (param0 < -13) {
-          var1 = la.a((byte) -59);
+          var1 = la.getLegacyMenuWidth((byte) -59);
           var2 = bl.a(true);
           he.field_a.a(-PacketBuffer.field_n + MenuScreen.field_h, (PacketBuffer.field_n << 1) + var2, -1, var1 + (GradientOutlineTextPainter.field_t << 1), LoadingProgressDialog.field_cb - GradientOutlineTextPainter.field_t);
-          Match.a(-14);
+          Match.drawLegacyMenu(-14);
           return;
         }
     }

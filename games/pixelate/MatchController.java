@@ -96,7 +96,7 @@ final class MatchController {
         this.field_a.puzzle.pictureIndex = this.field_a.puzzle.pictures.length;
         int fieldTemp$0 = this.field_a.field_r + 1;
         this.field_a.field_r = this.field_a.field_r + 1;
-        this.field_a.a(0, fieldTemp$0, DateOfBirthValidator.field_j);
+        this.field_a.startChallengeLevel(0, fieldTemp$0, DateOfBirthValidator.field_j);
         this.field_f = true;
         var6 = this.field_d;
         var2 = var6;
@@ -173,7 +173,7 @@ final class MatchController {
           stackIn_5_2 = gb.field_f[1];
           stackIn_6_3 = (HighscoresScreen.field_p == null) ? false : true;
           stackIn_8_4 = param0;
-          stackIn_8_5 = ArrayWidgetContainer.a((byte) 85);
+          stackIn_8_5 = ArrayWidgetContainer.isAccountUiActive((byte) 85);
           stackIn_9_6 = (EmailCredentials.field_k == 0) ? false : true;
           ((GameResultsScreen) (Object) stackIn_5_0).showSinglePlayerResults(stackIn_5_1, stackIn_5_2, stackIn_6_3, stackIn_8_4, stackIn_8_5, stackIn_9_6, gb.field_f[3], 2, gb.field_f[2], this.field_a.scores[0]);
         }
@@ -223,13 +223,13 @@ final class MatchController {
         if (0 == NameAvailabilityValidator.field_t &&
           this.field_n > 0) {
           this.field_n = this.field_n - 1;
-          this.field_e.a((byte) -87, this.field_n);
+          this.field_e.updateCountdown((byte) -87, this.field_n);
         }
         if (this.field_r &&
           this.field_n == 0 &&
           !var6.isBoardAnimating(param0 ^ 121)) {
           this.field_r = false;
-          this.field_e.b(param0 ^ -431);
+          this.field_e.setPictureLabel(param0 ^ -431);
           aa.field_f.writeOpcode(64, 15514);
         }
         if (this.field_u &&
@@ -268,7 +268,7 @@ final class MatchController {
     }
 
     private final void applyMatchResult(boolean param0) {
-        this.field_a.a(false, nf.field_a);
+        this.field_a.setWinner(false, nf.field_a);
         this.field_a.scores[1] = fo.field_g;
         this.field_a.scores[0] = IndexedSpriteState.field_k;
         this.showResults(false, 250, false);
@@ -442,8 +442,8 @@ final class MatchController {
         if (param0 != -110) {
           this.field_A = (PictureStrip) null;
         }
-        SocketJs5Transport.c(0);
-        this.field_e.a(-82);
+        SocketJs5Transport.tickScorePopups(0);
+        this.field_e.tick(-82);
         this.field_A.updateScroll(param0 - 16778);
     }
 
@@ -453,7 +453,7 @@ final class MatchController {
           var2 > 0 &&
           !this.field_l) {
           HighscoresScreen.field_p = new rh(0, 65535, ln.field_n, ScoreMarkerDemo.field_j, ra.field_a, PlayerController.field_r, new int[]{var2});
-          if (!ArrayWidgetContainer.a((byte) 120)) {
+          if (!ArrayWidgetContainer.isAccountUiActive((byte) 120)) {
             ValidationHelpWidget.a(HighscoresScreen.field_p, true, 3);
           }
         }
@@ -552,7 +552,7 @@ final class MatchController {
             }
           }
           if (param0) {
-            this.field_e.a((byte) 9);
+            this.field_e.draw((byte) 9);
           }
           if (DateOfBirthValidator.field_j == 2) {
             this.field_j.draw(2);
@@ -1124,7 +1124,7 @@ final class MatchController {
           this.field_a.puzzle.pictureIndex == 4) {
           var4.tickTimer(param0 - 77, var8.isBoardAnimating(-122));
         }
-        MouseInputHandler.b(5);
+        MouseInputHandler.tickTutorialPageTransition(5);
         if (null != aa.field_p &&
           aa.field_p.field_n &&
           aa.field_p.field_r != null) {
@@ -1162,7 +1162,7 @@ final class MatchController {
           if (50 == var3.field_f) {
             var8.showScorePopup(-20791, var3.field_f, true);
             gb.field_f[2] = gb.field_f[2] + 1;
-            IterableNodeHashTable.a((byte) -117);
+            IterableNodeHashTable.advanceBackgroundSkin((byte) -117);
           }
           var5 = var3.field_f;
           DialWidgetPainter.field_o = DialWidgetPainter.field_o + (var5 << 7);
@@ -1313,19 +1313,19 @@ final class MatchController {
           MenuInputState.field_e = stackIn_12_0;
           ScoreMarkerDemo.field_j = 13483;
           PlayerController.field_r = 16042;
-          UiComponent.i(0);
+          UiComponent.finishAllScorePopups(0);
           gb.field_f = new int[4];
-          WeightedLruCache.a(true);
+          WeightedLruCache.resetAnimationFrameCounter(true);
           if (DateOfBirthValidator.field_j != 0) {
             if (DateOfBirthValidator.field_j == 1) {
               this.field_a = new Match(param0, 0, DateOfBirthValidator.field_j, param3, 0, un.field_j.field_a);
-              aq.a(this.field_a.field_g, false);
+              aq.selectBackgroundSkin(this.field_a.field_g, false);
               this.createControllers(127);
               this.startNextRound(-100);
             } else {
               if (DateOfBirthValidator.field_j == 2) {
                 this.field_a = new Match(param0, param4, DateOfBirthValidator.field_j, param3, param5, param6);
-                aq.a(this.field_a.field_g, false);
+                aq.selectBackgroundSkin(this.field_a.field_g, false);
                 stackIn_20_0 = this;
                 stackIn_20_1 = null;
                 stackIn_20_2 = null;
@@ -1361,10 +1361,10 @@ final class MatchController {
               }
             }
           } else {
-            aq.a(true);
+            aq.shuffleSkinOrder(true);
             this.field_j = (StatusBar) ((Object) new TimerBar(90));
-            if (!ArrayWidgetContainer.a((byte) 95)) {
-              aa.field_p = PasswordValidator.a(3, (byte) -97, 1, 10, 0);
+            if (!ArrayWidgetContainer.isAccountUiActive((byte) 95)) {
+              aa.field_p = PasswordValidator.getRankingTableRequest(3, (byte) -97, 1, 10, 0);
             }
             this.field_a = new Match(param0, 0, DateOfBirthValidator.field_j, param3, 0, 0);
             BoardView.initializeTutorialPages(1, this.field_a);

@@ -22,7 +22,7 @@ final class gi {
             var3 = (String) null;
             gi.a((String) null, 39, (byte) -76);
           }
-          stackIn_3_0 = ContextActionMenu.a(param1, 0, param1.length, 21197);
+          stackIn_3_0 = ContextActionMenu.joinCharSequenceRange(param1, 0, param1.length, 21197);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

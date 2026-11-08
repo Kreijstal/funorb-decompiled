@@ -12,7 +12,7 @@ final class ri {
     static boolean field_b;
     static MusicCrossfadeStream field_a;
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_f = null;
         field_i = null;
         field_g = null;
@@ -21,29 +21,29 @@ final class ri {
         field_d = null;
         field_a = null;
         if (param0 != 10) {
-          ri.a(-3, (byte) 120);
+          ri.allocateChatHistory(-3, (byte) 120);
         }
     }
 
-    final static void a(String param0, boolean param1) {
+    final static void ignoreText(String param0, boolean param1) {
         try {
           if (!param1) {
             String var3 = (String) null;
-            ri.a((String) null, false);
+            ri.ignoreText((String) null, false);
           }
         } catch (RuntimeException runtimeException) {
           throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "ri.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final static boolean a(int param0) {
+    final static boolean alwaysTrue(int param0) {
         if (param0 >= -71) {
           return false;
         }
         return true;
     }
 
-    final static void a(int param0, byte param1) {
+    final static void allocateChatHistory(int param0, byte param1) {
         MenuScreen.field_e = new aa[param0 * 15];
         InputQueue.field_d = param0;
         MarkerSlider.field_O = new int[3];

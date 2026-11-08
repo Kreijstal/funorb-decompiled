@@ -315,7 +315,7 @@ final class ep {
         }
     }
 
-    final static boolean a(byte param0, String param1) {
+    final static boolean hasInvalidPasswordLength(byte param0, String param1) {
         RuntimeException var2 = null;
         String var3 = null;
         RuntimeException stackIn_12_0 = null;
@@ -325,7 +325,7 @@ final class ep {
         try {
           if (param0 != 34) {
             var3 = (String) null;
-            ep.a((byte) 64, (String) null);
+            ep.hasInvalidPasswordLength((byte) 64, (String) null);
           }
           if (param1 != null &&
             param1.length() >= cl.field_a) {
@@ -349,7 +349,7 @@ final class ep {
         }
     }
 
-    final static void c(int param0) {
+    final static void closeArchiveConnections(int param0) {
         try {
           int var1_int = 0;
           IOException iOException = null;
@@ -360,7 +360,7 @@ final class ep {
           var3 = Pixelate.field_H ? 1 : 0;
           try {
             if (Match.field_h != null) {
-              Match.field_h.b((byte) 119);
+              Match.field_h.closeTransport((byte) 119);
             }
             if (param0 != -26721) {
               return;
@@ -370,7 +370,7 @@ final class ep {
             }
             if (null != Js5NetworkRequest.field_G) {
               try {
-                Js5NetworkRequest.field_G.a(true);
+                Js5NetworkRequest.field_G.close(true);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 iOException = (IOException) (Object) decompiledCaughtException;
@@ -380,7 +380,7 @@ final class ep {
               for (var1_int = 0; ug.field_l.length > var1_int; var1_int++) {
                 if (null != ug.field_l[var1_int]) {
                   try {
-                    ug.field_l[var1_int].a(true);
+                    ug.field_l[var1_int].close(true);
                   } catch (java.io.IOException decompiledCaughtParameter1) {
                     decompiledCaughtException = decompiledCaughtParameter1;
                     var2 = (IOException) (Object) decompiledCaughtException;
@@ -402,7 +402,7 @@ final class ep {
         }
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = null;
         field_b = null;
         field_c = null;

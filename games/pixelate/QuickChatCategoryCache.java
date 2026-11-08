@@ -43,7 +43,7 @@ final class QuickChatCategoryCache {
         QuickChatCategory var3Lifetime2;
         byte[] var4Lifetime1;
         if (!param1) {
-          var3 = (QuickChatCategory) (this.field_h.a((long)param0, 0));
+          var3 = (QuickChatCategory) (this.field_h.get((long)param0, 0));
           if (var3 != null) {
             return var3;
           }
@@ -67,11 +67,11 @@ final class QuickChatCategoryCache {
           if (param0 >= 32768) {
             var6.applyGlobalIds((byte) 92);
           }
-          this.field_h.a((long)param0, var6, (byte) 109);
+          this.field_h.put((long)param0, var6, (byte) 109);
           return var6;
         }
         field_e = 75;
-        var3Lifetime1 = (QuickChatCategory) (this.field_h.a((long)param0, 0));
+        var3Lifetime1 = (QuickChatCategory) (this.field_h.get((long)param0, 0));
         if (var3Lifetime1 != null) {
           return var3Lifetime1;
         }
@@ -96,7 +96,7 @@ final class QuickChatCategoryCache {
         if (param0 >= 32768) {
           var5.applyGlobalIds((byte) 92);
         }
-        this.field_h.a((long)param0, var5, (byte) 109);
+        this.field_h.put((long)param0, var5, (byte) 109);
         return var5;
     }
 

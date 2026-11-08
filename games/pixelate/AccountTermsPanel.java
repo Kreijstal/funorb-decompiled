@@ -70,7 +70,7 @@ final class AccountTermsPanel extends UiContainer implements TextHotspotListener
         try {
           if (param0 == this.field_K) {
             th.a(8191);
-            this.field_O.p(-128);
+            this.field_O.close(-128);
           }
           if (param2 != 11) {
             field_L = (IconTextComponent[][]) null;
@@ -276,14 +276,14 @@ final class AccountTermsPanel extends UiContainer implements TextHotspotListener
                         var38 = -var37 + (MeshRasterState.field_d - 1);
                       }
                       if (var37 < 0) {
-                        QueuedInput.a(var37 + var38, var36Lifetime2, (byte) -105, param11, -(var40 * var37) + var25, var39, var41, var29 - var37 * var41, -(var37 * var39) + var21, var40);
+                        QueuedInput.blendInterpolatedHalfRgbSpan(var37 + var38, var36Lifetime2, (byte) -105, param11, -(var40 * var37) + var25, var39, var41, var29 - var37 * var41, -(var37 * var39) + var21, var40);
                       } else {
-                        QueuedInput.a(var38, var37 + var36Lifetime2, (byte) -108, param11, var25, var39, var41, var29, var21, var40);
+                        QueuedInput.blendInterpolatedHalfRgbSpan(var38, var37 + var36Lifetime2, (byte) -108, param11, var25, var39, var41, var29, var21, var40);
                       }
                     } else {
                       if (var37 >= 0 &&
                         MeshRasterState.field_d > var37) {
-                        QueuedInput.a(var38, var37 + var36Lifetime2, (byte) -104, param11, var25, 0, 0, var29, var21, 0);
+                        QueuedInput.blendInterpolatedHalfRgbSpan(var38, var37 + var36Lifetime2, (byte) -104, param11, var25, 0, 0, var29, var21, 0);
                       }
                     }
                   }
@@ -427,7 +427,7 @@ final class AccountTermsPanel extends UiContainer implements TextHotspotListener
                 if (0 == var37Lifetime1) {
                   if (var36Lifetime1 >= 0 &&
                     var36Lifetime1 < MeshRasterState.field_d) {
-                    QueuedInput.a(var37Lifetime1, var36Lifetime1 + var35Lifetime1, (byte) -114, param11, var25, 0, 0, var29, var21, 0);
+                    QueuedInput.blendInterpolatedHalfRgbSpan(var37Lifetime1, var36Lifetime1 + var35Lifetime1, (byte) -114, param11, var25, 0, 0, var29, var21, 0);
                   }
                 } else {
                   var38Lifetime1 = (var22 - var21) / var37Lifetime1;
@@ -437,9 +437,9 @@ final class AccountTermsPanel extends UiContainer implements TextHotspotListener
                     var37Lifetime1 = -var36Lifetime1 + (MeshRasterState.field_d - 1);
                   }
                   if (var36Lifetime1 >= 0) {
-                    QueuedInput.a(var37Lifetime1, var36Lifetime1 + var35Lifetime1, (byte) -108, param11, var25, var38Lifetime1, var40Lifetime1, var29, var21, var39Lifetime1);
+                    QueuedInput.blendInterpolatedHalfRgbSpan(var37Lifetime1, var36Lifetime1 + var35Lifetime1, (byte) -108, param11, var25, var38Lifetime1, var40Lifetime1, var29, var21, var39Lifetime1);
                   } else {
-                    QueuedInput.a(var36Lifetime1 + var37Lifetime1, var35Lifetime1, (byte) -118, param11, var25 - var36Lifetime1 * var39Lifetime1, var38Lifetime1, var40Lifetime1, -(var36Lifetime1 * var40Lifetime1) + var29, -(var38Lifetime1 * var36Lifetime1) + var21, var39Lifetime1);
+                    QueuedInput.blendInterpolatedHalfRgbSpan(var36Lifetime1 + var37Lifetime1, var35Lifetime1, (byte) -118, param11, var25 - var36Lifetime1 * var39Lifetime1, var38Lifetime1, var40Lifetime1, -(var36Lifetime1 * var40Lifetime1) + var29, -(var38Lifetime1 * var36Lifetime1) + var21, var39Lifetime1);
                   }
                 }
               }
@@ -494,7 +494,7 @@ final class AccountTermsPanel extends UiContainer implements TextHotspotListener
           this.field_N.setHotspotTooltip(IntrusiveNode.field_g, 0, 1);
           this.field_N.field_n = (UiListener) (this);
           this.field_N.field_E = this.field_E - 40;
-          this.field_N.a(26, this.field_E - 40, var3, -118);
+          this.field_N.setBoundsToPreferredWidth(26, this.field_E - 40, var3, -118);
           var3 = var3 + (15 + this.field_N.field_C);
           this.addChild(this.field_N, 80);
           var5 = 4;

@@ -36,7 +36,7 @@ final class jf {
           if (!param0) {
             field_c = (ScoreMarkerDemo) null;
           }
-          var2_long = hm.a(64);
+          var2_long = hm.monotonicMillis(64);
           if (0 != ij.field_s &&
             0 > AudioService.field_c) {
             var4_ref_ug = (ug) (id.field_d.first(1504642273));
@@ -58,7 +58,7 @@ final class jf {
           while (true) {
             if (AudioService.field_c < 0) {
               MusicCrossfadeStream.field_o.position = 0;
-              if (!QueuedInput.a(1, false)) {
+              if (!QueuedInput.fillIncomingBuffer(1, false)) {
                 return false;
               }
               AudioService.field_c = MusicCrossfadeStream.field_o.readOpcode((byte) 114);
@@ -151,7 +151,7 @@ final class jf {
             stackIn_24_0 = MarkerSlider.field_Q;
             return stackIn_24_0;
           }
-          if (ImageProducerRasterBuffer.a(-640, param0)) {
+          if (ImageProducerRasterBuffer.isFriend(-640, param0)) {
             stackIn_27_0 = AlphaContainer.a(EmergentBehaviourBackground.field_r, 85, new String[]{param0});
             return stackIn_27_0;
           }
@@ -208,7 +208,7 @@ final class jf {
             stackIn_7_0 = FullscreenFocusCanvas.field_a;
             return stackIn_7_0;
           }
-          var3 = Puzzle.a(param0, (byte) -96, '.');
+          var3 = Puzzle.split(param0, (byte) -96, '.');
           if (2 > var3.length) {
             stackIn_10_0 = ScrollPaneWithFooter.field_Kb;
             return stackIn_10_0;

@@ -220,12 +220,12 @@ final class LoginForm extends UiContainer implements TextInputListener, ButtonLi
                 break;
               }
               if (AccountRegistrationPanel.isLocalPlayerGameHost(param3 + 100)) {
-                up.field_o = ClientContextMenu.field_g;
+                PuzzleThumbnail.field_o = ClientContextMenu.field_g;
                 if (var26 == 0) {
                   break;
                 }
               }
-              up.field_o = AlphaContainer.a(IterableNodeHashTable.field_c, 96, new String[]{LoginMethod.field_c.field_pc});
+              PuzzleThumbnail.field_o = AlphaContainer.a(IterableNodeHashTable.field_c, 96, new String[]{LoginMethod.field_c.field_pc});
               break;
             }
           }
@@ -402,7 +402,7 @@ final class LoginForm extends UiContainer implements TextInputListener, ButtonLi
                 }
                 var8 = stackIn_240_0;
                 if (var8 != null) {
-                  up.field_o = var8;
+                  PuzzleThumbnail.field_o = var8;
                 }
               }
               var7_ref_loLifetime1.field_rb = var4_int != 0;
@@ -441,7 +441,7 @@ final class LoginForm extends UiContainer implements TextInputListener, ButtonLi
                   if (oo.field_e != null &&
                     null != oo.field_e[var7] &&
                     0 < (oo.field_e[var7][var9] & ~MatchController.field_t)) {
-                    var15 = cl.a((byte) -99, ~MatchController.field_t & oo.field_e[var7][var9]);
+                    var15 = cl.highestOneBit((byte) -99, ~MatchController.field_t & oo.field_e[var7][var9]);
                     var14 = 1;
                   }
                   if (null != jm.field_r &&
@@ -522,7 +522,7 @@ final class LoginForm extends UiContainer implements TextInputListener, ButtonLi
                       var17_int++;
                       continue;
                     }
-                    CachedTextLayout.a(var7, 0, (byte) 91, param0, -1, var9, param1, -1);
+                    CachedTextLayout.findValidSettingCombination(var7, 0, (byte) 91, param0, -1, var9, param1, -1);
                     if (wo.field_h >= 2 &&
                       EmailValidator.field_m[12]) {
                       PictureStrip.field_f = true;
@@ -672,7 +672,7 @@ final class LoginForm extends UiContainer implements TextInputListener, ButtonLi
                     }
                   }
                   if (null != var20) {
-                    up.field_o = (String) (var20);
+                    PuzzleThumbnail.field_o = (String) (var20);
                   }
                 }
                 boolean decompiledFrameRemainder2 = true;
@@ -736,7 +736,7 @@ final class LoginForm extends UiContainer implements TextInputListener, ButtonLi
           }
           if (stackIn_560_0 != 0 &&
             !param0) {
-            TextWidgetPainter.a(param2, (byte) 126);
+            TextWidgetPainter.sendLobbyGameSettings(param2, (byte) 126);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -819,24 +819,24 @@ final class LoginForm extends UiContainer implements TextInputListener, ButtonLi
                     if (var7 != 0) {
                       ScoreMarkerDemo.showAccountChoicePanel(param2 ^ 24507);
                       DraggableWidget.n(2147483647);
-                      id.a(param2 ^ 117);
+                      id.showRegistrationPanel(param2 ^ 117);
                     }
                   } else {
                     ScoreMarkerDemo.showAccountChoicePanel(param2 ^ 24507);
                     if (var7 != 0) {
                       DraggableWidget.n(2147483647);
-                      id.a(param2 ^ 117);
+                      id.showRegistrationPanel(param2 ^ 117);
                     }
                   }
                 } else {
                   DraggableWidget.n(2147483647);
                   if (var7 != 0) {
-                    id.a(param2 ^ 117);
+                    id.showRegistrationPanel(param2 ^ 117);
                   }
                 }
               }
             } else {
-              id.a(param2 ^ 117);
+              id.showRegistrationPanel(param2 ^ 117);
             }
           }
           if (param2 != 11) {
@@ -1318,11 +1318,11 @@ final class LoginForm extends UiContainer implements TextInputListener, ButtonLi
           }
           var2Lifetime62 = ContentTransitionDialog.getNamedTextFile("instructions1,0", (byte) 107);
           if (null != var2Lifetime62) {
-            up.field_a[0] = of.a(var2Lifetime62, 1);
+            PuzzleThumbnail.field_a[0] = of.a(var2Lifetime62, 1);
           }
           var2Lifetime63 = ContentTransitionDialog.getNamedTextFile("instructions1,1", (byte) -78);
           if (var2Lifetime63 != null) {
-            up.field_a[1] = of.a(var2Lifetime63, 1);
+            PuzzleThumbnail.field_a[1] = of.a(var2Lifetime63, 1);
           }
           var2Lifetime64 = ContentTransitionDialog.getNamedTextFile("instructions2,0", (byte) -10);
           if (var2Lifetime64 != null) {
@@ -1498,7 +1498,7 @@ final class LoginForm extends UiContainer implements TextInputListener, ButtonLi
           }
           var2Lifetime107 = ContentTransitionDialog.getNamedTextFile("comma_seperated_values", (byte) 119);
           if (null != var2Lifetime107) {
-            wl.field_f = of.a(var2Lifetime107, 1);
+            FireworkSpark.field_f = of.a(var2Lifetime107, 1);
           }
           var2Lifetime108 = ContentTransitionDialog.getNamedTextFile("name_resigned", (byte) -104);
           if (null != var2Lifetime108) {
@@ -1518,27 +1518,27 @@ final class LoginForm extends UiContainer implements TextInputListener, ButtonLi
           }
           var2Lifetime112 = ContentTransitionDialog.getNamedTextFile("gameoptnames,0,0", (byte) 108);
           if (null != var2Lifetime112) {
-            lp.field_c[0][0] = of.a(var2Lifetime112, 1);
+            DriftingParticle.field_c[0][0] = of.a(var2Lifetime112, 1);
           }
           var2Lifetime113 = ContentTransitionDialog.getNamedTextFile("gameoptnames,0,1", (byte) -10);
           if (null != var2Lifetime113) {
-            lp.field_c[0][1] = of.a(var2Lifetime113, 1);
+            DriftingParticle.field_c[0][1] = of.a(var2Lifetime113, 1);
           }
           var2Lifetime114 = ContentTransitionDialog.getNamedTextFile("gameoptnames,0,2", (byte) 118);
           if (null != var2Lifetime114) {
-            lp.field_c[0][2] = of.a(var2Lifetime114, 1);
+            DriftingParticle.field_c[0][2] = of.a(var2Lifetime114, 1);
           }
           var2Lifetime115 = ContentTransitionDialog.getNamedTextFile("gameoptnames,1,0", (byte) -18);
           if (null != var2Lifetime115) {
-            lp.field_c[1][0] = of.a(var2Lifetime115, 1);
+            DriftingParticle.field_c[1][0] = of.a(var2Lifetime115, 1);
           }
           var2Lifetime116 = ContentTransitionDialog.getNamedTextFile("gameoptnames,1,1", (byte) -30);
           if (null != var2Lifetime116) {
-            lp.field_c[1][1] = of.a(var2Lifetime116, 1);
+            DriftingParticle.field_c[1][1] = of.a(var2Lifetime116, 1);
           }
           var2Lifetime117 = ContentTransitionDialog.getNamedTextFile("gameoptnames,1,2", (byte) 109);
           if (var2Lifetime117 != null) {
-            lp.field_c[1][2] = of.a(var2Lifetime117, 1);
+            DriftingParticle.field_c[1][2] = of.a(var2Lifetime117, 1);
           }
           var2Lifetime118 = ContentTransitionDialog.getNamedTextFile("gameopttooltips,0,0", (byte) -114);
           if (null != var2Lifetime118) {
@@ -1808,7 +1808,7 @@ final class LoginForm extends UiContainer implements TextInputListener, ButtonLi
           }
           if (!this.field_I) {
             if (this.field_K) {
-              this.field_N.field_l = up.field_q;
+              this.field_N.field_l = PuzzleThumbnail.field_q;
               this.field_N.field_y = (WidgetPainter) ((Object) new LinkButtonPainter());
               if (var11 != 0) {
                 this.field_N.field_y = (WidgetPainter) ((Object) new LinkButtonPainter());

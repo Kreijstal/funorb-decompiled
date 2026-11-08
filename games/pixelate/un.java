@@ -16,7 +16,7 @@ final class un {
     byte[] field_b;
     int field_i;
 
-    final static void a(byte param0) {
+    final static void drawAchievementBanner(byte param0) {
         int var1 = 0;
         if (-1 != MatchController.field_q) {
           var1 = -ValidatedTextWidget.field_bb + 50;
@@ -29,10 +29,10 @@ final class un {
         if (param0 >= 21) {
           return;
         }
-        un.b((byte) 89);
+        un.releaseStatics((byte) 89);
     }
 
-    final static int a(int param0, int param1) {
+    final static int padToByteBoundary(int param0, int param1) {
         int var2 = 0;
         int var3 = -31 % ((param1 + 38) / 44);
         if ((param0 & 7) != 0) {
@@ -42,7 +42,7 @@ final class un {
         return var4;
     }
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_k = null;
         field_j = null;
         if (param0 != -6) {
@@ -53,7 +53,7 @@ final class un {
         field_c = null;
     }
 
-    final static void a(boolean param0) {
+    final static void clearPendingMessageFlag(boolean param0) {
         ek.field_c = false;
         if (!param0) {
           field_j = (PuzzlePieceQueue) null;

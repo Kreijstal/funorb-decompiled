@@ -36,7 +36,7 @@ final class OptionsScreen extends MenuScreen {
         int var4 = 0;
         int var5 = Pixelate.field_H ? 1 : 0;
         for (var4 = 0; ModalPanel.field_I.length > var4; var4++) {
-          ModalPanel.field_I[var4].c(-124);
+          ModalPanel.field_I[var4].hide(-124);
         }
         super.enterScreen(param0, 3, param2);
         this.field_v = 0;
@@ -108,7 +108,7 @@ final class OptionsScreen extends MenuScreen {
                 if (var4 >= 10) {
                   var5 = 0;
                   var6 = QuickChatMenu.field_Ib;
-                  if (!ArrayWidgetContainer.a((byte) 105)) {
+                  if (!ArrayWidgetContainer.isAccountUiActive((byte) 105)) {
                     var5 = 1;
                     var6 = InputQueue.field_a;
                   }
@@ -144,7 +144,7 @@ final class OptionsScreen extends MenuScreen {
           return;
         }
         for (var2 = 0; ModalPanel.field_I.length > var2; var2++) {
-          ModalPanel.field_I[var2].a(-25330);
+          ModalPanel.field_I[var2].draw(-25330);
         }
     }
 
@@ -317,7 +317,7 @@ final class OptionsScreen extends MenuScreen {
         int var3 = 0;
         int var4 = Pixelate.field_H ? 1 : 0;
         this.field_o = this.field_o + this.field_u;
-        this.field_o = this.field_o + PasswordFieldPainter.field_A * lp.field_i;
+        this.field_o = this.field_o + PasswordFieldPainter.field_A * DriftingParticle.field_i;
         if (this.field_o < 0) {
           this.field_o = 0;
         }
@@ -338,7 +338,7 @@ final class OptionsScreen extends MenuScreen {
         super.handleInput((byte) -100);
         int var2 = this.field_g.selectedIndex < 3 ? -1 : -3 + this.field_g.selectedIndex;
         for (var3 = 0; ModalPanel.field_I.length > var3; var3++) {
-          ModalPanel.field_I[var3].a(var3 == var2 ? true : false, 20);
+          ModalPanel.field_I[var3].fade(var3 == var2 ? true : false, 20);
         }
     }
 

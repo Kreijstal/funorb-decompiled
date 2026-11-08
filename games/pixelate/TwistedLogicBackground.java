@@ -11,7 +11,7 @@ final class TwistedLogicBackground extends BackgroundScene {
         if (param0 != 6388) {
           return -3;
         }
-        return ArrayWidgetContainer.l(72);
+        return ArrayWidgetContainer.pollAccountUiResult(72);
     }
 
     public static void releaseStatics(byte param0) {
@@ -27,7 +27,7 @@ final class TwistedLogicBackground extends BackgroundScene {
         if (!param0) {
           var4 = (jn) (this.field_n.first(1504642273));
           while (var4 != null) {
-            MusicPatch.a(var4, 1183261192);
+            MusicPatch.drawRotatingCube(var4, 1183261192);
             var4 = (jn) (this.field_n.next(1504642273));
           }
           return;
@@ -75,8 +75,8 @@ final class TwistedLogicBackground extends BackgroundScene {
         if (~fieldTemp$0 <= param0) {
           return;
         }
-        this.field_n.addLast(22125, new jn(TabbedPanel.a((byte) 41, 189440, -25600), -25600));
-        this.field_m = TabbedPanel.a((byte) 41, 75, 25);
+        this.field_n.addLast(22125, new jn(TabbedPanel.randomInRange((byte) 41, 189440, -25600), -25600));
+        this.field_m = TabbedPanel.randomInRange((byte) 41, 75, 25);
     }
 
     TwistedLogicBackground(String param0, Sprite[] param1) {
@@ -85,9 +85,9 @@ final class TwistedLogicBackground extends BackgroundScene {
         try {
           this.field_n = new IntrusiveDeque();
           for (var3_int = 0; 5 > var3_int; var3_int++) {
-            this.field_n.addLast(22125, new jn(TabbedPanel.a((byte) 41, 189440, -25600), TabbedPanel.a((byte) 41, 148480, -25600)));
+            this.field_n.addLast(22125, new jn(TabbedPanel.randomInRange((byte) 41, 189440, -25600), TabbedPanel.randomInRange((byte) 41, 148480, -25600)));
           }
-          this.field_m = TabbedPanel.a((byte) 41, 75, 25);
+          this.field_m = TabbedPanel.randomInRange((byte) 41, 75, 25);
         } catch (RuntimeException runtimeException) {
           throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "qi.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

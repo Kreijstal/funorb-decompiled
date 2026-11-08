@@ -183,7 +183,7 @@ final class AccountNoticeDialog extends ResizableModalPanel implements ButtonLis
         int var10Lifetime1;
         var12 = Pixelate.field_H ? 1 : 0;
         try {
-          cm.b(vn.field_g, param2 ^ 4743);
+          cm.b(RisingBubble.field_g, param2 ^ 4743);
           if (DraggableWidget.field_S != null) {
             wm.field_d.height = 0;
             var15 = wm.field_d;
@@ -195,7 +195,7 @@ final class AccountNoticeDialog extends ResizableModalPanel implements ButtonLis
             var6 = nk.field_e;
             nk.field_e.height = 0;
             var6.field_K = 0;
-            VerticalScrollbar.field_Qb.field_cb = vn.field_d.toUpperCase();
+            VerticalScrollbar.field_Qb.field_cb = RisingBubble.field_d.toUpperCase();
             var7 = (Bzip2State.field_A.field_K + 2) / 2;
             nk.field_e.setBounds(Bzip2State.field_A.height - 40, 40, 0, 256, -2 + var7);
             ep.field_a.setBounds(Bzip2State.field_A.height - 40, 40, var7, 256, Bzip2State.field_A.field_K - var7);
@@ -260,7 +260,7 @@ final class AccountNoticeDialog extends ResizableModalPanel implements ButtonLis
                   lc.field_t[var13] = false;
                   var13++;
                 }
-                CachedTextLayout.a(fj.field_b, 0, (byte) 91, true, -1, -1, DraggableWidget.field_S, -1);
+                CachedTextLayout.findValidSettingCombination(fj.field_b, 0, (byte) 91, true, -1, -1, DraggableWidget.field_S, -1);
                 if (!(wo.field_h < 2) &&
                   EmailValidator.field_m[12]) {
                   PictureStrip.field_f = true;
@@ -289,7 +289,7 @@ final class AccountNoticeDialog extends ResizableModalPanel implements ButtonLis
                       }
                     }
                   }
-                  up.field_o = "<col=A00000>" + IconTextComponent.field_Gb + "<br>" + ij.field_p + (String) (var9);
+                  PuzzleThumbnail.field_o = "<col=A00000>" + IconTextComponent.field_Gb + "<br>" + ij.field_p + (String) (var9);
                 }
               }
             } else {
@@ -338,7 +338,7 @@ final class AccountNoticeDialog extends ResizableModalPanel implements ButtonLis
           nd.field_b.field_g.processTabPresses((byte) -108);
           if (null != DraggableWidget.field_S) {
             if (0 != ValidatedTextWidget.field_kb.field_P) {
-              PairedTextColumns.a(1, param0);
+              PairedTextColumns.sendNoticeAcknowledgement(1, param0);
             }
             if (ep.field_a.field_P != 0) {
               if (!TriangleMesh.field_r) {

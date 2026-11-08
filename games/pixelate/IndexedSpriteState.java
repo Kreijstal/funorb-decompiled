@@ -38,9 +38,9 @@ abstract class IndexedSpriteState {
     final static SceneWidget a(int param0) {
         if (param0 != 1) {
           field_k = 60;
-          return la.b((byte) -110);
+          return la.getGameListContent((byte) -110);
         }
-        return la.b((byte) -110);
+        return la.getGameListContent((byte) -110);
     }
 
     final static el a(String param0, byte param1) {

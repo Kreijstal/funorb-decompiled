@@ -117,7 +117,7 @@ abstract class ArrayWidgetContainer extends UiComponent implements UiContainerMa
         }
     }
 
-    final static boolean a(byte param0) {
+    final static boolean isAccountUiActive(byte param0) {
         if (param0 < 56) {
           field_F = (fp) null;
         }
@@ -132,7 +132,7 @@ abstract class ArrayWidgetContainer extends UiComponent implements UiContainerMa
         }
     }
 
-    final static boolean k(int param0) {
+    final static boolean handleAccountNamePromptKey(int param0) {
         boolean stackIn_6_0 = false;
         if (param0 != 1) {
           return true;
@@ -239,7 +239,7 @@ abstract class ArrayWidgetContainer extends UiComponent implements UiContainerMa
         return null;
     }
 
-    final static void a(int param0, int param1) {
+    final static void setSoundVolume(int param0, int param1) {
         SocketJs5Transport.field_u = param0;
         if (null != MainMenuScreen.field_q) {
           MainMenuScreen.field_q.setMasterVolume((byte) 30, param0);
@@ -332,7 +332,7 @@ abstract class ArrayWidgetContainer extends UiComponent implements UiContainerMa
         }
     }
 
-    final static int l(int param0) {
+    final static int pollAccountUiResult(int param0) {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -346,8 +346,8 @@ abstract class ArrayWidgetContainer extends UiComponent implements UiContainerMa
         var2 = Pixelate.field_H ? 1 : 0;
         try {
           wa.field_c.handlePointerEvents(hf.field_w, true, (byte) 99, ph.field_o);
-          wa.field_c.d((byte) 112);
-          while (DirectByteStorage.$cfr$intArgs$b$c4997cb15529(120)) {
+          wa.field_c.updatePanels((byte) 112);
+          while (DirectByteStorage.pollKeyEvent(120)) {
             wa.field_c.processKey(DualLinkDeque.field_f, ke.field_a, false);
           }
           if (QuickChatPhraseCache.field_h != -1) {
@@ -357,7 +357,7 @@ abstract class ArrayWidgetContainer extends UiComponent implements UiContainerMa
             return stackIn_7_0;
           }
           if (param0 <= 51) {
-            ArrayWidgetContainer.a((byte) -82);
+            ArrayWidgetContainer.isAccountUiActive((byte) -82);
           }
           if (dk.field_c) {
             stackIn_12_0 = 3;
@@ -679,7 +679,7 @@ abstract class ArrayWidgetContainer extends UiComponent implements UiContainerMa
           var9 = this.children;
           var5 = var9;
           if (param1 != 3) {
-            ArrayWidgetContainer.a((byte) 125);
+            ArrayWidgetContainer.isAccountUiActive((byte) 125);
           }
           for (var6 = 0; var6 < var9.length; var6++) {
             var7 = var9[var6];

@@ -76,8 +76,8 @@ final class ValidationIndicator extends TextButton {
           BackgroundScene.setLegacyMenuFontMetrics(param17, false, param0, param7, param18);
           OptionsScreen.setLegacyMenuCentre(param8, param20, true);
           lg.a(param5, param2, -118, param3, param4, param1);
-          PictureStrip.a(param12, param13, 16, param10);
-          JaggrabDownloader.a((byte) -113, param19, param11, param14);
+          PictureStrip.setLegacyMenuFrame(param12, param13, 16, param10);
+          JaggrabDownloader.setMenuTextColours((byte) -113, param19, param11, param14);
           var21_int = -33 / ((param16 - 20) / 57);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

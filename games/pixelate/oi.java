@@ -26,7 +26,7 @@ final class oi {
             return false;
           }
           var8 = new RegistrationRequestDialog(wa.field_c, param0);
-          wa.field_c.b(-6183, var8);
+          wa.field_c.showPanel(-6183, var8);
           if (!og.a((byte) -96)) {
             MarkerSlider.field_X = Js5NetworkRequest.field_F;
             MouseWheelHandler.field_b = null;
@@ -36,7 +36,7 @@ final class oi {
             Match.field_s = param5;
             VerticalScrollbar.field_Nb = param6;
           } else {
-            var8.h((byte) -118);
+            var8.completeWithoutServer((byte) -118);
           }
           if (param4 < -86) {
             return true;

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class BouncedownBackground extends BackgroundScene {
-    private vn[] field_n;
+    private RisingBubble[] field_n;
     static ea field_o;
     static int field_m;
 
@@ -117,11 +117,11 @@ final class BouncedownBackground extends BackgroundScene {
     }
 
     final void render(boolean param0) {
-        vn[] var2;
+        RisingBubble[] var2;
         int var3;
-        vn var4;
+        RisingBubble var4;
         int var5;
-        vn[] var6;
+        RisingBubble[] var6;
         var5 = Pixelate.field_H ? 1 : 0;
         ArrayWidgetContainer.field_H.drawOpaque(0, 0);
         var6 = this.field_n;
@@ -129,30 +129,30 @@ final class BouncedownBackground extends BackgroundScene {
         if (!param0) {
           for (var3 = 0; var3 < var6.length; var3++) {
             var4 = var6[var3];
-            var4.a((byte) 123);
+            var4.draw((byte) 123);
           }
         } else {
           field_m = -17;
           for (var3 = 0; var3 < var6.length; var3++) {
             var4 = var6[var3];
-            var4.a((byte) 123);
+            var4.draw((byte) 123);
           }
         }
     }
 
     final void tick(int param0) {
         int var3 = 0;
-        vn[] var2;
-        vn var4;
+        RisingBubble[] var2;
+        RisingBubble var4;
         int var5;
-        vn[] var6;
+        RisingBubble[] var6;
         var5 = Pixelate.field_H ? 1 : 0;
         super.tick(param0);
         var6 = this.field_n;
         var2 = var6;
         for (var3 = 0; var3 < var6.length; var3++) {
           var4 = var6[var3];
-          var4.a(param0 + 127);
+          var4.tick(param0 + 127);
         }
     }
 
@@ -160,17 +160,17 @@ final class BouncedownBackground extends BackgroundScene {
         int var2;
         int var3;
         var3 = Pixelate.field_H ? 1 : 0;
-        this.field_n = new vn[5];
+        this.field_n = new RisingBubble[5];
         var2 = 0;
         if (param0 == -14116) {
           while (this.field_n.length > var2) {
-            this.field_n[var2] = new vn(100 * var2);
+            this.field_n[var2] = new RisingBubble(100 * var2);
             var2++;
           }
         } else {
           field_o = (ea) null;
           while (this.field_n.length > var2) {
-            this.field_n[var2] = new vn(100 * var2);
+            this.field_n[var2] = new RisingBubble(100 * var2);
             var2++;
           }
         }

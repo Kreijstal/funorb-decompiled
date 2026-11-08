@@ -14,7 +14,7 @@ final class MainMenuScreen extends MenuScreen {
           StrongCacheReference.beginLoginRequest(20);
           el.field_b = 11;
         } else {
-          if (!ri.a(-88)) {
+          if (!ri.alwaysTrue(-88)) {
             StrongCacheReference.beginLoginRequest(20);
             el.field_b = 11;
           }

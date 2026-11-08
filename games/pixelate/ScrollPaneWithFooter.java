@@ -17,18 +17,18 @@ final class ScrollPaneWithFooter extends SceneWidget {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, boolean param4, int param5, int param6, int param7) {
+    final void setBoundsAndLayout(int param0, int param1, int param2, int param3, boolean param4, int param5, int param6, int param7) {
         this.field_D = param0;
         this.field_S = param3;
         this.height = param7;
         this.field_K = param1;
-        this.a(param2, true, param6, param5);
+        this.layoutFooter(param2, true, param6, param5);
         if (param4) {
           ScrollPaneWithFooter.j(74);
         }
     }
 
-    final void a(int param0, boolean param1, int param2, int param3) {
+    final void layoutFooter(int param0, boolean param1, int param2, int param3) {
         int var5 = (param2 + this.field_K) / 2;
         int var6 = -param0 + this.height;
         if (param1) {
@@ -46,7 +46,7 @@ final class ScrollPaneWithFooter extends SceneWidget {
     }
 
     final static void j(int param0) {
-        ri.field_f = new hp(cm.field_o, pj.field_i, Vector3.field_f, TextFieldValidator.field_h, um.field_q, dn.field_c);
+        ri.field_f = new hp(cm.field_o, ScorePopup.field_i, Vector3.field_f, TextFieldValidator.field_h, um.field_q, dn.field_c);
         int var1 = 40 / ((param0 + 90) / 35);
     }
 
@@ -67,9 +67,9 @@ final class ScrollPaneWithFooter extends SceneWidget {
         }
     }
 
-    final static boolean k(int param0) {
+    final static boolean getRegistrationNewsletterOptIn(int param0) {
         if (param0 != 0) {
-          ScrollPaneWithFooter.k(-125);
+          ScrollPaneWithFooter.getRegistrationNewsletterOptIn(-125);
           return StripedProgressBar.field_J;
         }
         return StripedProgressBar.field_J;

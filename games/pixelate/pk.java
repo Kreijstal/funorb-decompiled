@@ -10,7 +10,7 @@ final class pk {
     static String[] field_d;
     static int[] field_a;
 
-    final static void a(byte[] param0, int param1, int[] param2, int param3, int param4) {
+    final static void orderFacesByGroup(byte[] param0, int param1, int[] param2, int param3, int param4) {
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
         byte dupTemp$2 = 0;
@@ -59,7 +59,7 @@ final class pk {
             break;
           }
           if (stackIn_13_0 <= 36) {
-            pk.b(1);
+            pk.isLobbyChatInputActive(1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -82,7 +82,7 @@ final class pk {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         try {
@@ -103,14 +103,14 @@ final class pk {
         }
     }
 
-    final static id a(boolean param0, int param1) {
+    final static id createDobResult(boolean param0, int param1) {
         id var2 = null;
         RuntimeException var2_ref = null;
         id stackIn_4_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 5731) {
-            pk.a(-111);
+            pk.clearSharedReferences(-111);
           }
           var2 = new id(true);
           var2.field_e = param0;
@@ -221,7 +221,7 @@ final class pk {
         }
     }
 
-    final static boolean b(int param0) {
+    final static boolean isLobbyChatInputActive(int param0) {
         RuntimeException var1 = null;
         RuntimeException decompiledCaughtException = null;
         try {
@@ -242,7 +242,7 @@ final class pk {
         }
     }
 
-    final static String a(byte param0) {
+    final static String buildChatInputPrompt(byte param0) {
         String stackIn_20_0 = null;
         String stackIn_60_0 = null;
         Object stackIn_96_0 = null;
@@ -294,7 +294,7 @@ final class pk {
             IntKeyLookup.a((String) null, 0, VerticalScrollbar.field_Ib, 24092, (String) (var2));
           } else {
             var3 = ModalStack.field_J;
-            var3 = th.a(2, var3);
+            var3 = th.prefixWithCrown(2, var3);
             var4 = "";
             var5 = "|";
             var6 = ce.field_d;

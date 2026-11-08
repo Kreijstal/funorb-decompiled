@@ -16,9 +16,9 @@ interface WidgetTextLayout {
 
     public abstract int getTextOriginY(int param0, UiComponent param1, byte param2);
 
-    public abstract int a(int param0);
+    public abstract int getLineHeight(int param0);
 
     public abstract int getPreferredWidth(UiComponent param0, int param1);
 
-    public abstract void a(int param0, int param1, byte param2, UiComponent param3, int param4);
+    public abstract void drawCaret(int param0, int param1, byte param2, UiComponent param3, int param4);
 }

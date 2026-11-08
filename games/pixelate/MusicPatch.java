@@ -15,14 +15,14 @@ final class MusicPatch extends IntrusiveNode {
     static String field_k;
     un[] field_l;
 
-    final static String b(byte param0) {
+    final static String getPendingNoticeText(byte param0) {
         if (param0 != 11) {
           field_q = (String) null;
         }
         return oo.field_a;
     }
 
-    final static void e(int param0) {
+    final static void decreaseMusicVolume(int param0) {
         int var2 = 0;
         int var1 = -63 / ((60 - param0) / 39);
         if (LinkButtonPainter.field_h > 32) {
@@ -36,7 +36,7 @@ final class MusicPatch extends IntrusiveNode {
         }
     }
 
-    final static void a(jn param0, int param1) {
+    final static void drawRotatingCube(jn param0, int param1) {
         Vector3 stackIn_12_0 = null;
         int stackIn_15_0 = 0;
         Vector3 stackIn_19_0 = null;
@@ -171,7 +171,7 @@ final class MusicPatch extends IntrusiveNode {
         }
     }
 
-    final static String a(CharSequence param0, int param1) {
+    final static String validateUsernameText(CharSequence param0, int param1) {
         RuntimeException var2 = null;
         String stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -180,7 +180,7 @@ final class MusicPatch extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 0) {
-            MusicPatch.b((byte) 30);
+            MusicPatch.getPendingNoticeText((byte) 30);
           }
           stackIn_3_0 = DropTargetWidget.a(param1 ^ 98, false, param0);
           return stackIn_3_0;
@@ -207,14 +207,14 @@ final class MusicPatch extends IntrusiveNode {
         field_q = null;
     }
 
-    final void a(boolean param0) {
+    final void releaseSamples(boolean param0) {
         if (param0) {
-          MusicPatch.b((byte) -17);
+          MusicPatch.getPendingNoticeText((byte) -17);
         }
         this.field_r = null;
     }
 
-    final static void a(byte param0) {
+    final static void shutdownConnectionAndInput(byte param0) {
         ln.a(param0 + 165);
         if (null != NameAvailabilityValidator.field_u) {
           MenuInputState.removeCanvasInputListeners(NameAvailabilityValidator.field_u, 0);
@@ -223,8 +223,8 @@ final class MusicPatch extends IntrusiveNode {
           return;
         }
         MusicCrossfadeStream.clearKeyboardHandler((byte) -109);
-        TextHotspotWidget.a((byte) -94);
-        ep.c(-26721);
+        TextHotspotWidget.clearMouseHandler((byte) -94);
+        ep.closeArchiveConnections(-26721);
         if (KiteBackground.b(true)) {
           aa.field_f.writeOpcode(1, 15514);
           SecondaryNodeHashTable.flushOutgoingPackets(0, param0 + 10091);

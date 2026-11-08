@@ -21,9 +21,9 @@ final class Puzzle {
     static String field_a;
     static String field_f;
 
-    final static wm[] b(byte param0) {
+    final static wm[] getReportReasons(byte param0) {
         if (param0 != 62) {
-          Puzzle.a('￑', (byte) 81);
+          Puzzle.isAsciiAlphanumeric('￑', (byte) 81);
         }
         return new wm[]{SectorCacheStore.field_f, ej.field_b, StatefulTextPainter.field_w, NumericDateInputWidget.field_T, NetworkGameClient.field_r, DualLinkNode.field_l, NetworkGameClient.field_C, ArchiveRequest.field_u, MenuInputState.field_f, of.field_e, ModalStack.field_M, QuickChatPhraseCache.field_d, GradientOutlineTextPainter.field_s, ThreeSliceButtonPainter.field_u};
     }
@@ -91,7 +91,7 @@ final class Puzzle {
         return fieldTemp$0 == this.pictures.length ? true : false;
     }
 
-    final static String[] a(String param0, byte param1, char param2) {
+    final static String[] split(String param0, byte param1, char param2) {
         int var7 = 0;
         int incrementValue$1 = 0;
         int var3_int = 0;
@@ -126,7 +126,7 @@ final class Puzzle {
           var4[var3_int] = param0.substring(var6);
           if (param1 > -28) {
             var10 = (String) null;
-            Puzzle.a((String) null, (byte) -32, 'k');
+            Puzzle.split((String) null, (byte) -32, 'k');
           }
           stackIn_10_0 = var4;
           return stackIn_10_0;
@@ -144,10 +144,10 @@ final class Puzzle {
         }
     }
 
-    final static boolean a(char param0, byte param1) {
+    final static boolean isAsciiAlphanumeric(char param0, byte param1) {
         boolean stackIn_13_0 = false;
         if (param1 < 44) {
-          Puzzle.a('ﾰ', (byte) -89);
+          Puzzle.isAsciiAlphanumeric('ﾰ', (byte) -89);
         }
         stackIn_13_0 = ((!(param0 < 48) &&
           !(param0 > 57)) ||
@@ -158,13 +158,13 @@ final class Puzzle {
         return stackIn_13_0;
     }
 
-    final static String a(int param0) {
+    final static String getLoginNameOrDefault(int param0) {
         String var1 = "";
         if (nf.field_b != null) {
           var1 = nf.field_b.getUsername(-24832);
         }
         if (param0 == var1.length()) {
-          var1 = DiskCacheRequest.b(false);
+          var1 = DiskCacheRequest.getLocalDisplayName(false);
         }
         if (var1.length() == 0) {
           var1 = cd.field_d;

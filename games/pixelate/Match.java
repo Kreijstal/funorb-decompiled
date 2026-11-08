@@ -36,7 +36,7 @@ final class Match {
         field_h = null;
     }
 
-    final static void a(int param0) {
+    final static void drawLegacyMenu(int param0) {
         int var3 = 0;
         int stackIn_19_0 = 0;
         int stackIn_22_0 = 0;
@@ -65,7 +65,7 @@ final class Match {
           var1_int = MenuScreen.field_h;
           var2 = 0;
           if (2 == CanvasRasterBuffer.field_h) {
-            var3_long = -pk.field_g + hm.a(64);
+            var3_long = -pk.field_g + hm.monotonicMillis(64);
             var2 = (int)((-var3_long + 10999L) / 1000L);
             if (var2 < 0) {
               var2 = 0;
@@ -220,7 +220,7 @@ final class Match {
           var15 = this.boards[param1];
           var6 = var15.applyAction(param0, (byte) -91) ? 1 : 0;
           if (param2 <= 25) {
-            Match.a((byte) -67, (String) null, -41L);
+            Match.openPrivateChatTo((byte) -67, (String) null, -41L);
           }
           if (var6 != 0) {
             var15.field_b = param3;
@@ -283,7 +283,7 @@ final class Match {
         return false;
     }
 
-    final void a(int param0, int param1, int param2) {
+    final void startChallengeLevel(int param0, int param1, int param2) {
         int var4 = 0;
         int var5;
         var5 = Pixelate.field_H ? 1 : 0;
@@ -300,18 +300,18 @@ final class Match {
         this.puzzle.pictureIndex = 0;
     }
 
-    final static void a(int param0, int param1, IndexedSprite[] param2) {
+    final static void createPuzzleModePuzzle(int param0, int param1, IndexedSprite[] param2) {
         try {
           if (param0 != 13728) {
             field_l = (Sprite[]) null;
           }
-          up.field_d[param1] = new Puzzle(param2[0].field_g, param2[0].field_d, up.field_c[param1], up.field_k[param1], up.field_f[param1], up.field_p[param1], up.field_e[param1], up.field_i[param1], param2);
+          PuzzleThumbnail.field_d[param1] = new Puzzle(param2[0].field_g, param2[0].field_d, PuzzleThumbnail.field_c[param1], PuzzleThumbnail.field_k[param1], PuzzleThumbnail.field_f[param1], PuzzleThumbnail.field_p[param1], PuzzleThumbnail.field_e[param1], PuzzleThumbnail.field_i[param1], param2);
         } catch (RuntimeException runtimeException) {
           throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "pm.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void a(boolean param0, int param1) {
+    final void setWinner(boolean param0, int param1) {
         this.field_j = param1;
         this.field_t = true;
         if (param0) {
@@ -319,7 +319,7 @@ final class Match {
         }
     }
 
-    final static void a(byte param0, String param1, long param2) {
+    final static void openPrivateChatTo(byte param0, String param1, long param2) {
         CharSequence var5 = null;
         try {
           CheckboxPainter.field_k = param1;

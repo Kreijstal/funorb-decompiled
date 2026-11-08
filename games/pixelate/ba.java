@@ -8,15 +8,15 @@ final class ba {
     static int field_f;
     private int field_b;
     private int field_a;
-    private wl[] field_e;
+    private FireworkSpark[] field_e;
     private int field_c;
 
-    final static SceneWidget a(int param0) {
+    final static SceneWidget getFriendListContent(int param0) {
         if (param0 != -26573) {
-          ba.a(77);
-          return PasswordValidator.b(false);
+          ba.getFriendListContent(77);
+          return PasswordValidator.getFriendListContent(false);
         }
-        return PasswordValidator.b(false);
+        return PasswordValidator.getFriendListContent(false);
     }
 
     final void b(int param0) {
@@ -26,14 +26,14 @@ final class ba {
         if (param0 == -904) {
           for (var2 = this.field_e.length - 1; var2 >= 0; var2--) {
             if (null != this.field_e[var2]) {
-              this.field_e[var2].b((byte) -121);
+              this.field_e[var2].draw((byte) -121);
             }
           }
         } else {
-          this.field_e = (wl[]) null;
+          this.field_e = (FireworkSpark[]) null;
           for (var2 = this.field_e.length - 1; var2 >= 0; var2--) {
             if (null != this.field_e[var2]) {
-              this.field_e[var2].b((byte) -121);
+              this.field_e[var2].draw((byte) -121);
             }
           }
         }
@@ -54,8 +54,8 @@ final class ba {
         var2 = param0 ? 1 : 0;
         for (var3 = this.field_e.length - 1; var3 >= 0; var3--) {
           if (null != this.field_e[var3]) {
-            this.field_e[var3].a(0, this.field_c);
-            var2 = var2 != 0 & this.field_e[var3].a((byte) -87) ? 1 : 0;
+            this.field_e[var3].advance(0, this.field_c);
+            var2 = var2 != 0 & this.field_e[var3].isOffScreen((byte) -87) ? 1 : 0;
           }
         }
         return var2 != 0;
@@ -67,9 +67,9 @@ final class ba {
           PlayerBoard.d(-90);
           this.field_b = JavaRandomHelpers.a(ea.field_b, -119, param2) + param0;
           this.field_a = param1 + JavaRandomHelpers.a(ea.field_b, -103, param3);
-          this.field_e = new wl[50 + JavaRandomHelpers.a(ea.field_b, -102, 5)];
+          this.field_e = new FireworkSpark[50 + JavaRandomHelpers.a(ea.field_b, -102, 5)];
           for (var6_int = this.field_e.length - 1; var6_int >= 0; var6_int--) {
-            this.field_e[var6_int] = new wl(this.field_b, this.field_a, JavaRandomHelpers.a(ea.field_b, -101, 1024), param4);
+            this.field_e[var6_int] = new FireworkSpark(this.field_b, this.field_a, JavaRandomHelpers.a(ea.field_b, -101, 1024), param4);
           }
           this.field_c = JavaRandomHelpers.a(ea.field_b, -100, 3) + 2;
         } catch (RuntimeException runtimeException) {

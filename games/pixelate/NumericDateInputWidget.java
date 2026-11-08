@@ -12,13 +12,13 @@ final class NumericDateInputWidget extends DateInputWidget {
     static long field_P;
     static Sprite[] field_W;
 
-    final int c(boolean param0) {
+    final int getYear(boolean param0) {
         NumberFormatException var2 = null;
         int stackIn_3_0 = 0;
         Throwable decompiledCaughtException = null;
         try {
           if (!param0) {
-            this.c(false);
+            this.getYear(false);
           }
           stackIn_3_0 = Integer.parseInt(this.field_Q.field_q);
           return stackIn_3_0;
@@ -29,7 +29,7 @@ final class NumericDateInputWidget extends DateInputWidget {
         }
     }
 
-    final static void a(String param0, java.applet.Applet param1, boolean param2) {
+    final static void setSessionCookie(String param0, java.applet.Applet param1, boolean param2) {
         try {
           Throwable throwable = null;
           String var3 = null;
@@ -134,7 +134,7 @@ final class NumericDateInputWidget extends DateInputWidget {
         }
     }
 
-    final boolean m(int param0) {
+    final boolean isDateIncomplete(int param0) {
         if (null == this.field_U.field_q) {
           return true;
         }
@@ -204,14 +204,14 @@ final class NumericDateInputWidget extends DateInputWidget {
           param0 = param0 + this.field_p;
           int var5 = -46 / ((param3 - 70) / 49);
           param2 = param2 + this.field_z;
-          this.a(ij.field_r, param0, param2, 0, this.field_U);
-          this.a(fc.field_b, param0, param2, 0, this.field_O);
-          this.a(ji.field_e, param0, param2, 0, this.field_Q);
+          this.drawCenteredLabel(ij.field_r, param0, param2, 0, this.field_U);
+          this.drawCenteredLabel(fc.field_b, param0, param2, 0, this.field_O);
+          this.drawCenteredLabel(ji.field_e, param0, param2, 0, this.field_Q);
           return;
         }
     }
 
-    private final void a(String param0, int param1, int param2, int param3, UiComponent param4) {
+    private final void drawCenteredLabel(String param0, int param1, int param2, int param3, UiComponent param4) {
         if (param3 != 0) {
           return;
         }

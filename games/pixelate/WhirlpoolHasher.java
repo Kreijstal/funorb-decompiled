@@ -90,7 +90,7 @@ final class WhirlpoolHasher {
         int var13Lifetime1;
         var19 = Pixelate.field_H ? 1 : 0;
         try {
-          var5_int = aq.a((byte) 32, 3 * (param0 - param3));
+          var5_int = aq.bitLength((byte) 32, 3 * (param0 - param3));
           var6 = 3 * param3;
           if (param2) {
             WhirlpoolHasher.createSpriteFromDecodeBuffers(-91);

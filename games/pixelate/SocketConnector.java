@@ -12,7 +12,7 @@ abstract class SocketConnector {
     static String field_d;
     static SecondaryNodeHashTable field_f;
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final static void layoutChatPanel(int param0, int param1, int param2, int param3, int param4, int param5) {
         int var12 = 0;
         int var6_int = 0;
         int var7 = 0;
@@ -66,9 +66,9 @@ abstract class SocketConnector {
         }
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 29731) {
-          SocketConnector.a(92, -16, -63);
+          SocketConnector.floorMod(92, -16, -63);
         }
         field_c = null;
         field_d = null;
@@ -126,21 +126,21 @@ abstract class SocketConnector {
 
     abstract java.net.Socket connect(int param0) throws IOException;
 
-    final static void c(int param0) {
+    final static void stopAudioService(int param0) {
         AudioService.b(param0 + 94);
         if (param0 != 5) {
-          SocketConnector.c(-107);
+          SocketConnector.stopAudioService(-107);
         }
     }
 
-    final java.net.Socket b(int param0) throws IOException {
+    final java.net.Socket openSocket(int param0) throws IOException {
         if (param0 != -2) {
-          SocketConnector.c(-110);
+          SocketConnector.stopAudioService(-110);
         }
         return new java.net.Socket(this.field_b, this.field_e);
     }
 
-    final static int a(int param0, int param1, int param2) {
+    final static int floorMod(int param0, int param1, int param2) {
         int var3 = -1 + param1 & param0 >> 31;
         if (param2 != -510336929) {
           return 68;

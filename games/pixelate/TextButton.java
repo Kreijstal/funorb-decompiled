@@ -60,7 +60,7 @@ class TextButton extends UiComponent {
             param0.blur(2);
             this.field_K = true;
             if (param1 != 27) {
-              TextButton.a(-64, (sb) null, 111, 79, (sb) null, 120, -16, 109, (sb) null, 39, -126, (BitmapFont) null, 33, -16, (BitmapFont) null, -57, -112, -56, 119, 16);
+              TextButton.configureButtonStyles(-64, (sb) null, 111, 79, (sb) null, 120, -16, 109, (sb) null, 39, -126, (BitmapFont) null, 33, -16, (BitmapFont) null, -57, -112, -56, 119, 16);
             }
             if (null != this.field_n &&
               this.field_n instanceof cc) {
@@ -210,7 +210,7 @@ class TextButton extends UiComponent {
         this(param0, Checkbox.field_X.field_r, param1);
     }
 
-    final static void a(TriangleMesh param0, int[] param1, boolean param2, int[] param3, byte param4, boolean param5, boolean param6) {
+    final static void projectAndBucketMesh(TriangleMesh param0, int[] param1, boolean param2, int[] param3, byte param4, boolean param5, boolean param6) {
         int stackIn_67_0 = 0;
         int stackIn_67_1 = 0;
         int stackIn_76_0 = 0;
@@ -290,7 +290,7 @@ class TextButton extends UiComponent {
           var22Lifetime1 = param3[1] - param1[1];
           var23Lifetime1 = -param1[2] + param3[2];
           if (param4 < 3) {
-            TextButton.a(112, (sb) null, 29, 72, (sb) null, 76, -127, -121, (sb) null, -76, 4, (BitmapFont) null, -119, 13, (BitmapFont) null, 46, -72, 8, -22, -67);
+            TextButton.configureButtonStyles(112, (sb) null, 29, 72, (sb) null, 76, -127, -121, (sb) null, -76, 4, (BitmapFont) null, -119, 13, (BitmapFont) null, 46, -72, 8, -22, -67);
           }
           var9 = var21Lifetime1 * param1[3] + param1[4] * var22Lifetime1 + var23Lifetime1 * param1[5] >> -Bzip2State.field_x + 16;
           var10 = var23Lifetime1 * param1[8] + (param1[7] * var22Lifetime1 + param1[6] * var21Lifetime1) >> 16 - Bzip2State.field_x;
@@ -462,7 +462,7 @@ class TextButton extends UiComponent {
         }
     }
 
-    final static void a(int param0, sb param1, int param2, int param3, sb param4, int param5, int param6, int param7, sb param8, int param9, int param10, BitmapFont param11, int param12, int param13, BitmapFont param14, int param15, int param16, int param17, int param18, int param19) {
+    final static void configureButtonStyles(int param0, sb param1, int param2, int param3, sb param4, int param5, int param6, int param7, sb param8, int param9, int param10, BitmapFont param11, int param12, int param13, BitmapFont param14, int param15, int param16, int param17, int param18, int param19) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -479,7 +479,7 @@ class TextButton extends UiComponent {
         try {
           SingleChildContainer.field_G = param11;
           DualLinkNode.field_o = param14;
-          el.a(param10, param13, param9, 93, param3);
+          el.setButtonMetrics(param10, param13, param9, 93, param3);
           SecondaryNodeDequeIterator.a(param5, param6, 7, param1);
           ScoreMarkerDemo.a(param2, param4, param0, 300, param12, param8);
           ug.a(param15, param19, -26104);
@@ -585,7 +585,7 @@ class TextButton extends UiComponent {
         }
     }
 
-    final static int[] a(int param0, int param1, byte param2) {
+    final static int[] buildRotationMatrix(int param0, int param1, byte param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -618,13 +618,13 @@ class TextButton extends UiComponent {
         }
     }
 
-    public static void j(int param0) {
+    public static void clearStatics(int param0) {
         try {
           field_J = null;
           field_G = null;
           field_L = null;
           if (param0 < 62) {
-            TextButton.a(8, (sb) null, 42, -55, (sb) null, 28, 88, -93, (sb) null, 77, 108, (BitmapFont) null, 5, -44, (BitmapFont) null, -125, -73, 115, -35, -117);
+            TextButton.configureButtonStyles(8, (sb) null, 42, -55, (sb) null, 28, 88, -93, (sb) null, 77, 108, (BitmapFont) null, 5, -44, (BitmapFont) null, -125, -73, 115, -35, -117);
           }
         } catch (RuntimeException runtimeException) {
           throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "qm.RA(" + param0 + ')');

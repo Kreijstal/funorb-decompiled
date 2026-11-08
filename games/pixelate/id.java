@@ -17,7 +17,7 @@ final class id {
         field_d = null;
     }
 
-    final static void a(byte param0, hf param1, int param2) {
+    final static void writeProgressRecord(byte param0, hf param1, int param2) {
         CipherPacketBuffer var5 = aa.field_f;
         var5.writeOpcode(param2, 15514);
         var5.position = var5.position + 1;
@@ -40,7 +40,7 @@ final class id {
         }
     }
 
-    final static void a(int param0) {
+    final static void showRegistrationPanel(int param0) {
         if (param0 < 40) {
           field_d = (IntrusiveDeque) null;
         }
@@ -48,7 +48,7 @@ final class id {
         ph.field_l.transitionToContent(ResourceArchive.field_b, -121);
     }
 
-    final static void b(int param0) {
+    final static void createGlowAndNoiseSprites(int param0) {
         int var2 = 0;
         int var1_int = 0;
         int var3 = 0;
@@ -62,7 +62,7 @@ final class id {
           for (var1_int = 0; var1_int < 2; var1_int++) {
             SocialListEntry.field_Hb[var1_int] = new Sprite(64, 64);
           }
-          ProxySocketConnector.a((byte) 99);
+          ProxySocketConnector.createPulseSprites((byte) 99);
           ClientException.field_f.bindRaster(19692);
           MatchController.field_p = new IndexedSprite[10];
           for (var1_intLifetime1 = 0; var1_intLifetime1 < MatchController.field_p.length; var1_intLifetime1++) {
@@ -84,7 +84,7 @@ final class id {
         }
     }
 
-    final static void a(boolean param0, byte param1) {
+    final static void startSlideshow(boolean param0, byte param1) {
         qk.field_e = 0;
         Vector3.field_b = 0;
         if (param1 <= 104) {
@@ -93,7 +93,7 @@ final class id {
         ReportAbuseDialog.field_Sb = 0;
         jn.field_q = ui.field_k;
         NameSuggestionsPanel.field_I = new MenuInputState(2);
-        NameSuggestionsPanel.field_I.initializeSelection(param0, el.a(StatusBar.field_k, (byte) -106, ProxyAuthenticationException.field_d), 17068, -1);
+        NameSuggestionsPanel.field_I.initializeSelection(param0, el.hitTestChoiceIcons(StatusBar.field_k, (byte) -106, ProxyAuthenticationException.field_d), 17068, -1);
     }
 
     id(boolean param0) {

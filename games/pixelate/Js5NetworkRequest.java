@@ -10,9 +10,9 @@ final class Js5NetworkRequest extends ArchiveRequest {
     static int field_I;
     static BackgroundScene[] field_C;
 
-    final int g(int param0) {
+    final int getProgressPercent(int param0) {
         if (param0 >= -92) {
-          Js5NetworkRequest.i(15);
+          Js5NetworkRequest.createRoundedPanelSprite(15);
           if (this.field_D != null) {
             return this.field_D.position * 100 / (-this.field_B + this.field_D.payload.length);
           }
@@ -24,14 +24,14 @@ final class Js5NetworkRequest extends ArchiveRequest {
         return 0;
     }
 
-    final static void a(int param0, boolean param1) {
+    final static void drawAccountLayers(int param0, boolean param1) {
         wa.field_c.drawLayers(0, 0, 120);
         if (param0 <= 73) {
           Js5NetworkRequest.releaseStatics((byte) 4);
         }
     }
 
-    final static TickClock j(int param0) {
+    final static TickClock createTickClock(int param0) {
         if (param0 != -30272) {
           field_G = (BufferedRandomAccessFile) null;
           return (TickClock) ((Object) new NanoTickClock());
@@ -39,7 +39,7 @@ final class Js5NetworkRequest extends ArchiveRequest {
         return (TickClock) ((Object) new NanoTickClock());
     }
 
-    final byte[] h(int param0) {
+    final byte[] getData(int param0) {
         if (this.field_v) {
           throw new RuntimeException();
         }
@@ -56,7 +56,7 @@ final class Js5NetworkRequest extends ArchiveRequest {
     Js5NetworkRequest() {
     }
 
-    final static void i(int param0) {
+    final static void createRoundedPanelSprite(int param0) {
         int var1 = 16777215;
         gb.field_b = new Sprite(108, 100);
         int var2 = 65793;

@@ -54,7 +54,7 @@ final class qn extends IntrusiveNode {
           try {
             try {
               var3 = (String) (JavaScriptBridge.callWindowFunction("getcookies", (byte) -114, param0));
-              var4 = Puzzle.a(var3, (byte) -61, ';');
+              var4 = Puzzle.split(var3, (byte) -61, ';');
               if (param2 != -85) {
                 stackIn_3_0 = (String) null;
                 return stackIn_3_0;

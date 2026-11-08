@@ -24,7 +24,7 @@ final class DiskCacheWorker implements Runnable {
           while (!this.field_e) {
             var2 = this.requests;
             synchronized (var2) {
-              var7 = (DiskCacheRequest) (this.requests.a((byte) 80));
+              var7 = (DiskCacheRequest) (this.requests.removeFirst((byte) 80));
               if (var7 != null) {
                 this.field_c = this.field_c - 1;
                 decompiledRegionSelector0 = 1;
@@ -137,7 +137,7 @@ final class DiskCacheWorker implements Runnable {
           var4.field_C = 1;
           var5 = this.requests;
           synchronized (var5) {
-            var6 = (DiskCacheRequest) (this.requests.c(72));
+            var6 = (DiskCacheRequest) (this.requests.first(72));
             while (var6 != null) {
               if (~var6.field_q == ~(long)param0 &&
                 param1 == var6.field_G &&
@@ -147,7 +147,7 @@ final class DiskCacheWorker implements Runnable {
                 stackIn_8_0 = var4;
                 return stackIn_8_0;
               }
-              var6 = (DiskCacheRequest) (this.requests.a(65151));
+              var6 = (DiskCacheRequest) (this.requests.next(65151));
             }
           }
           if (param2 < 53) {

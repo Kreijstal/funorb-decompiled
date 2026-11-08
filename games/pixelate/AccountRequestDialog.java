@@ -29,7 +29,7 @@ class AccountRequestDialog extends ContentTransitionDialog implements ButtonList
             return;
           }
           QuickChatMenu.setPendingUiResult(3, -2671);
-          this.p(-83);
+          this.close(-83);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -74,7 +74,7 @@ class AccountRequestDialog extends ContentTransitionDialog implements ButtonList
         }
     }
 
-    final void p(int param0) {
+    final void close(int param0) {
         if (!this.field_N) {
           return;
         }
@@ -102,14 +102,14 @@ class AccountRequestDialog extends ContentTransitionDialog implements ButtonList
         }
     }
 
-    final static void n(int param0) {
+    final static void stepOverlayFadeOut(int param0) {
         int var2;
         var2 = Pixelate.field_H ? 1 : 0;
         if (oo.field_b > 0) {
           oo.field_b = oo.field_b - 1;
         } else {
-          if (vn.field_g > 0) {
-            vn.field_g = vn.field_g - 1;
+          if (RisingBubble.field_g > 0) {
+            RisingBubble.field_g = RisingBubble.field_g - 1;
           } else {
             if (0 < Checkbox.field_W) {
               Checkbox.field_W = Checkbox.field_W - 1;
@@ -122,8 +122,8 @@ class AccountRequestDialog extends ContentTransitionDialog implements ButtonList
         if (param0 <= 76) {
           field_ub = (int[]) null;
         }
-        if (0 < vn.field_g) {
-          cm.b(vn.field_g, 4740);
+        if (0 < RisingBubble.field_g) {
+          cm.b(RisingBubble.field_g, 4740);
         }
         if (Checkbox.field_W <= 0) {
           return;
@@ -131,14 +131,14 @@ class AccountRequestDialog extends ContentTransitionDialog implements ButtonList
         cm.b(Checkbox.field_W, 4740);
     }
 
-    final void o(int param0) {
-        this.field_rb.a((byte) 125, param0, 4210752);
+    final void showNoticeContent(int param0) {
+        this.field_rb.setColours((byte) 125, param0, 4210752);
         AccountMessagePanel var2 = new AccountMessagePanel(this, this.field_wb, GameResultsScreen.field_D);
         var2.a(15, -1, sk.field_b);
         this.transitionToContent(var2, -118);
     }
 
-    final void a(int param0, int param1, String param2) {
+    final void installErrorContent(int param0, int param1, String param2) {
         boolean stackIn_7_1 = false;
         AccountMessagePanel stackIn_14_0 = null;
         int stackIn_14_1 = 0;
@@ -159,10 +159,10 @@ class AccountRequestDialog extends ContentTransitionDialog implements ButtonList
           this.field_vb = true;
           stackIn_7_1 = (param0 == 256);
           this.field_nb = stackIn_7_1;
-          this.field_rb.a((byte) 103, 8405024, 4210752);
+          this.field_rb.setColours((byte) 103, 8405024, 4210752);
           var6 = new AccountMessagePanel(this, this.field_wb, param2);
           if (param1 != 5804) {
-            AccountRequestDialog.n(117);
+            AccountRequestDialog.stepOverlayFadeOut(117);
           }
           if (5 == param0) {
             var6.a(11, -1, BackgroundScene.field_c);
@@ -224,7 +224,7 @@ class AccountRequestDialog extends ContentTransitionDialog implements ButtonList
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 == 13) {
-            this.p(-126);
+            this.close(-126);
             return true;
           }
           if (param1 == 3) {
@@ -246,7 +246,7 @@ class AccountRequestDialog extends ContentTransitionDialog implements ButtonList
         }
     }
 
-    final static CanvasRasterBuffer a(int param0, int param1, java.awt.Component param2, int param3) {
+    final static CanvasRasterBuffer createRasterBuffer(int param0, int param1, java.awt.Component param2, int param3) {
         try {
           Class var4 = null;
           Throwable var4_ref = null;

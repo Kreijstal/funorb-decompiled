@@ -24,7 +24,7 @@ final class dg {
             var8.writeString((byte) -41, param4);
           }
           if (param3 != null) {
-            DebouncedValidator.a(!param0 ? true : false, param3, var8);
+            DebouncedValidator.writeCompressedString(!param0 ? true : false, param3, var8);
           } else {
             var8.writeShort(1276387944, param2);
           }

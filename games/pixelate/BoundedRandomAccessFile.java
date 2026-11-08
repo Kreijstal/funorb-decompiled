@@ -12,7 +12,7 @@ final class BoundedRandomAccessFile {
     static FallingPieceView field_g;
     static ResourceArchive field_c;
 
-    final static String a(ResourceArchive param0, String param1, String param2, int param3, int param4) {
+    final static String formatProgressLabel(ResourceArchive param0, String param1, String param2, int param3, int param4) {
         RuntimeException var5 = null;
         QuickChatCategory var6 = null;
         String stackIn_3_0 = null;
@@ -105,7 +105,7 @@ final class BoundedRandomAccessFile {
         field_g = null;
     }
 
-    final static String a(int param0, int param1, PacketBuffer param2) {
+    final static String readCompressedChatText(int param0, int param1, PacketBuffer param2) {
         int var3_int = 0;
         Exception var3 = null;
         RuntimeException var3_ref = null;
@@ -151,10 +151,10 @@ final class BoundedRandomAccessFile {
         }
     }
 
-    final void b(int param0) throws IOException {
+    final void close(int param0) throws IOException {
         if (param0 != -5317) {
           PacketBuffer var3 = (PacketBuffer) null;
-          BoundedRandomAccessFile.a(-58, 20, (PacketBuffer) null);
+          BoundedRandomAccessFile.readCompressedChatText(-58, 20, (PacketBuffer) null);
           if (this.field_e != null) {
             this.field_e.close();
             this.field_e = null;
@@ -178,12 +178,12 @@ final class BoundedRandomAccessFile {
         }
     }
 
-    final static ConditionalTextValue a(byte param0) {
+    final static ConditionalTextValue createValidationStatusValue(byte param0) {
         int var1 = 125 / ((param0 - 14) / 56);
-        return new ConditionalTextValue(BlastFromThePastBackground.d(0), Matrix3.a(-5057));
+        return new ConditionalTextValue(BlastFromThePastBackground.d(0), Matrix3.isValidationPending(-5057));
     }
 
-    final long b(byte param0) throws IOException {
+    final long length(byte param0) throws IOException {
         int var2 = 69 % ((param0 - 56) / 58);
         return this.field_e.length();
     }
@@ -191,7 +191,7 @@ final class BoundedRandomAccessFile {
     protected final void finalize() throws Throwable {
         if (this.field_e != null) {
           System.out.println("");
-          this.b(-5317);
+          this.close(-5317);
         }
     }
 
@@ -219,11 +219,11 @@ final class BoundedRandomAccessFile {
         }
     }
 
-    final void a(int param0, byte[] param1, int param2, int param3) throws IOException {
+    final void write(int param0, byte[] param1, int param2, int param3) throws IOException {
         try {
           if (param3 > -68) {
             String var6 = (String) null;
-            BoundedRandomAccessFile.a((ResourceArchive) null, (String) null, (String) null, -29, 64);
+            BoundedRandomAccessFile.formatProgressLabel((ResourceArchive) null, (String) null, (String) null, -29, 64);
           }
           if (this.field_a + (long)param0 > this.field_f) {
             this.field_e.seek(this.field_f);

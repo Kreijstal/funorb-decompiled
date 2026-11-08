@@ -20,7 +20,7 @@ final class WeightedLruCache {
         if (this.field_a < param3) {
           throw new IllegalStateException();
         }
-        this.a(param2, (byte) 11);
+        this.removeByKey(param2, (byte) 11);
         if (!param1) {
           return;
         }
@@ -31,7 +31,7 @@ final class WeightedLruCache {
             this.removeEntry(var6, -26133);
           }
           var6_ref = new StrongCacheReference(param0, param3);
-          this.field_e.a(var6_ref, param2, -1);
+          this.field_e.put(var6_ref, param2, -1);
           this.field_g.addLast((byte) 99, var6_ref);
           ((CacheReference) ((Object) var6_ref)).field_q = 0L;
         } catch (RuntimeException runtimeException) {
@@ -39,25 +39,25 @@ final class WeightedLruCache {
         }
     }
 
-    final void a(long param0, Object param1, byte param2) {
+    final void put(long param0, Object param1, byte param2) {
         try {
           this.putWeighted(param1, true, param0, 1);
           if (param2 <= 75) {
-            WeightedLruCache.a(false);
+            WeightedLruCache.resetAnimationFrameCounter(false);
           }
         } catch (RuntimeException runtimeException) {
           throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "le.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
-    final static void a(boolean param0) {
+    final static void resetAnimationFrameCounter(boolean param0) {
         jd.field_r = 0;
         if (!param0) {
           WeightedLruCache.releaseStatics(-100);
         }
     }
 
-    private final void a(long param0, byte param1) {
+    private final void removeByKey(long param0, byte param1) {
         CacheReference var4 = (CacheReference) (this.field_e.findByKey(1, param0));
         if (param1 == 11) {
           this.removeEntry(var4, -26133);
@@ -67,7 +67,7 @@ final class WeightedLruCache {
         this.removeEntry(var4, -26133);
     }
 
-    final Object a(long param0, int param1) {
+    final Object get(long param0, int param1) {
         Object var5;
         StrongCacheReference var6;
         CacheReference var7;
@@ -86,7 +86,7 @@ final class WeightedLruCache {
           }
           if (var7.isSoft(true)) {
             var6 = new StrongCacheReference(var5, var7.field_t);
-            this.field_e.a(var6, var7.field_e, -1);
+            this.field_e.put(var6, var7.field_e, -1);
             this.field_g.addLast((byte) 83, var6);
             ((CacheReference) ((Object) var6)).field_q = 0L;
             var7.unlink(2779);
@@ -106,7 +106,7 @@ final class WeightedLruCache {
         }
         if (var7.isSoft(true)) {
           var6Lifetime1 = new StrongCacheReference(var5, var7.field_t);
-          this.field_e.a(var6Lifetime1, var7.field_e, -1);
+          this.field_e.put(var6Lifetime1, var7.field_e, -1);
           this.field_g.addLast((byte) 83, var6Lifetime1);
           ((CacheReference) ((Object) var6Lifetime1)).field_q = 0L;
           var7.unlink(2779);
@@ -149,7 +149,7 @@ final class WeightedLruCache {
         }
     }
 
-    final static int a(CharSequence param0, byte param1) {
+    final static int hashName(CharSequence param0, byte param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;

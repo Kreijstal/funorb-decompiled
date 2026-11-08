@@ -24,17 +24,17 @@ final class StripedProgressBar extends UiComponent {
     static SceneWidget field_O;
     static String field_X;
 
-    private final void d(byte param0) {
-        this.field_P = new Sprite[]{this.a(this.field_Z, this.field_I, (byte) -121), this.a(this.field_V, this.field_T, (byte) -125)};
+    private final void rebuildSprites(byte param0) {
+        this.field_P = new Sprite[]{this.buildStripeSprite(this.field_Z, this.field_I, (byte) -121), this.buildStripeSprite(this.field_V, this.field_T, (byte) -125)};
         if (param0 > 73) {
-          this.rightCapMask = this.c(true);
+          this.rightCapMask = this.buildEndMask(true);
           this.field_K = this.rightCapMask.copyFlippedHorizontal();
           this.capWorkSurface = new Sprite(this.field_C >> 1, this.field_C);
           return;
         }
         UiComponent var3 = (UiComponent) null;
         this.updatePointer(59, -16, -71, (UiComponent) null);
-        this.rightCapMask = this.c(true);
+        this.rightCapMask = this.buildEndMask(true);
         this.field_K = this.rightCapMask.copyFlippedHorizontal();
         this.capWorkSurface = new Sprite(this.field_C >> 1, this.field_C);
     }
@@ -52,7 +52,7 @@ final class StripedProgressBar extends UiComponent {
         }
     }
 
-    private final Sprite c(boolean param0) {
+    private final Sprite buildEndMask(boolean param0) {
         Sprite var11 = null;
         int var4 = 0;
         int var5 = 0;
@@ -99,7 +99,7 @@ final class StripedProgressBar extends UiComponent {
         return var10;
     }
 
-    final static void a(QuickChatMenu param0, boolean param1) {
+    final static void attachQuickChatMenu(QuickChatMenu param0, boolean param1) {
         if (!param1) {
           return;
         }
@@ -130,19 +130,19 @@ final class StripedProgressBar extends UiComponent {
         LinkButtonPainter.a((byte) 92);
     }
 
-    final void a(byte param0, int param1, int param2) {
+    final void setColours(byte param0, int param1, int param2) {
         this.field_Z = param1;
         this.field_V = (16711422 & param1) >> 1;
         if (param0 > 87) {
           this.field_I = param2;
           this.field_T = param2 >> 1 & 8355711;
-          this.d((byte) 120);
+          this.rebuildSprites((byte) 120);
           return;
         }
         field_O = (SceneWidget) null;
         this.field_I = param2;
         this.field_T = param2 >> 1 & 8355711;
-        this.d((byte) 120);
+        this.rebuildSprites((byte) 120);
     }
 
     final void updatePointer(int param0, int param1, int param2, UiComponent param3) {
@@ -179,13 +179,13 @@ final class StripedProgressBar extends UiComponent {
 
     final void setBounds(int param0, byte param1, int param2, int param3, int param4) {
         super.setBounds(param0, (byte) 94, param2, param3, param4);
-        this.d((byte) 96);
+        this.rebuildSprites((byte) 96);
         if (param1 < 19) {
           this.field_M = -109;
         }
     }
 
-    private final Sprite a(int param0, int param1, byte param2) {
+    private final Sprite buildStripeSprite(int param0, int param1, byte param2) {
         Sprite var16 = null;
         int var5 = 0;
         int var6 = 0;

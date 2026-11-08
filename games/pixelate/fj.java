@@ -38,7 +38,7 @@ final class fj {
           }
           em.openContextMenu(stackIn_2_0, stackIn_2_1, stackIn_2_2, stackIn_3_3, param0.field_q, -163, (ScrollContainer) null, (int[]) null, param0.field_j);
           if (0 == param0.field_j &&
-            !pk.b(121) &&
+            !pk.isLobbyChatInputActive(121) &&
             LoginMethod.field_c == null &&
             DraggableWidget.field_S == null) {
             if (!IsaacRandom.field_g) {
@@ -51,7 +51,7 @@ final class fj {
             var7.field_b.addAction(var8, (byte) -128, 20);
           }
           if (param0.field_j == 1 &&
-            !pk.b(120) &&
+            !pk.isLobbyChatInputActive(120) &&
             LoginMethod.field_c != null &&
             param0.field_b == LoginMethod.field_c.c((byte) 8)) {
             if (!IsaacRandom.field_g) {

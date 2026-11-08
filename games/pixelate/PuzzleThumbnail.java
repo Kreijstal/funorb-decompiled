@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class up {
+final class PuzzleThumbnail {
     static String field_o;
     static int[] field_e;
     private Sprite field_l;
@@ -14,7 +14,7 @@ final class up {
     static String field_q;
     static Puzzle[] field_d;
     static int[] field_i;
-    static pj[] field_n;
+    static ScorePopup[] field_n;
     static int[] field_h;
     static um field_g;
     static String[] field_a;
@@ -27,7 +27,7 @@ final class up {
         field_d = null;
         field_c = null;
         if (param0 < 59) {
-          up.releaseStatics((byte) 127);
+          PuzzleThumbnail.releaseStatics((byte) 127);
         }
         field_e = null;
         field_i = null;
@@ -39,7 +39,7 @@ final class up {
         field_n = null;
     }
 
-    final void a(boolean param0, int param1) {
+    final void fade(boolean param0, int param1) {
         if (!param0) {
           this.field_b = this.field_b - 20;
         } else {
@@ -49,30 +49,30 @@ final class up {
           this.field_b = 0;
         }
         if (param1 != 20) {
-          this.c(-100);
+          this.hide(-100);
         }
         if (this.field_b > 255) {
           this.field_b = 255;
         }
     }
 
-    final void c(int param0) {
+    final void hide(int param0) {
         this.field_b = 0;
         if (param0 > -90) {
           field_k = (int[]) null;
         }
     }
 
-    final void a(int param0) {
+    final void draw(int param0) {
         int var3 = 0;
         if (this.field_b == 0) {
           return;
         }
         if (param0 != -25330) {
-          this.a(false, 110);
+          this.fade(false, 110);
         }
         if (null == this.field_l) {
-          this.b(16);
+          this.renderThumbnail(16);
         }
         int var2 = (-this.field_b + 255) / 10;
         this.field_l.drawAlpha(-var2 + 80, 180, this.field_b);
@@ -84,7 +84,7 @@ final class up {
         }
     }
 
-    private final void b(int param0) {
+    private final void renderThumbnail(int param0) {
         int var7 = 0;
         int var8 = 0;
         int var9 = Pixelate.field_H ? 1 : 0;
@@ -95,7 +95,7 @@ final class up {
         this.field_l.makeRasterTarget();
         int var4 = param0 * (5 - var11.field_f);
         int var5 = (-var11.field_a + 5) * 16;
-        boolean[] var6 = ThreeSliceButtonPainter.a(var11, 21922);
+        boolean[] var6 = ThreeSliceButtonPainter.buildCellMask(var11, 21922);
         for (var7 = 0; var7 < var11.field_a; var7++) {
           for (var8 = 0; var8 < var11.field_f; var8++) {
             var3.field_k[!var6[var7 * var10.field_f + var8] ? 0 : 1].drawOpaque(var8 * 32 + var4, 32 * var7 + var5);
@@ -104,7 +104,7 @@ final class up {
         ClientException.field_f.bindRaster(param0 + 19676);
     }
 
-    up(int param0) {
+    PuzzleThumbnail(int param0) {
         this.field_b = 0;
         this.field_m = param0;
     }
@@ -179,9 +179,9 @@ final class up {
         field_p[9] = of.toFixedPoint(8.0, 65536);
         field_e[9] = 25;
         field_i[9] = 50;
-        field_n = new pj[25];
+        field_n = new ScorePopup[25];
         for (var0 = 0; var0 < field_n.length; var0++) {
-          field_n[var0] = new pj();
+          field_n[var0] = new ScorePopup();
         }
         field_j = 0;
         field_a = new String[]{"It's a falling block game - with a twist! Each coloured piece falls onto the grid, <col=FF9900>changing the colour</col> of four cells where it lands.", "Fill the whole grid with coloured tiles and try to create the <col=FF9900>target picture</col> as fast as you can."};

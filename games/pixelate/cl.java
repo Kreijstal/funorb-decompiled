@@ -18,7 +18,7 @@ final class cl {
         field_c = null;
         field_i = null;
         if (param0 != 938035464) {
-          cl.a(107, -93, (byte) 122);
+          cl.createSolidSprite(107, -93, (byte) 122);
         }
         field_h = null;
         field_f = null;
@@ -26,7 +26,7 @@ final class cl {
         field_e = null;
     }
 
-    final static void b(int param0) {
+    final static void readChatAvailabilityPacket(int param0) {
         if (param0 != 8231) {
           return;
         }
@@ -34,7 +34,7 @@ final class cl {
         IsaacRandom.field_g = 0 == MusicCrossfadeStream.field_o.readUnsignedByte(255) ? true : false;
     }
 
-    final static int a(int param0, byte[] param1, int param2, CharSequence param3, int param4, int param5) {
+    final static int encodeCp1252(int param0, byte[] param1, int param2, CharSequence param3, int param4, int param5) {
         int var7 = 0;
         int stackIn_69_0 = 0;
         RuntimeException stackIn_72_0 = null;
@@ -148,7 +148,7 @@ final class cl {
             }
           }
           if (param5 != -21809) {
-            cl.a(19, 73, (byte) -104);
+            cl.createSolidSprite(19, 73, (byte) -104);
           }
           stackIn_69_0 = var6_int;
           return stackIn_69_0;
@@ -172,7 +172,7 @@ final class cl {
         }
     }
 
-    final static Sprite a(int param0, int param1, byte param2) {
+    final static Sprite createSolidSprite(int param0, int param1, byte param2) {
         int var4 = 0;
         int var5 = Pixelate.field_H ? 1 : 0;
         if (param2 >= -40) {
@@ -186,12 +186,12 @@ final class cl {
         return var3;
     }
 
-    final static int a(byte param0, int param1) {
+    final static int highestOneBit(byte param0, int param1) {
         int var2 = param1 >>> 1;
         var2 = var2 | var2 >>> 1;
         var2 = var2 | var2 >>> 2;
         if (param0 > -97) {
-          cl.a((byte) -91, -19);
+          cl.highestOneBit((byte) -91, -19);
         }
         var2 = var2 | var2 >>> 4;
         var2 = var2 | var2 >>> 8;
@@ -199,10 +199,10 @@ final class cl {
         return param1 & ~var2;
     }
 
-    final static void a(byte param0, boolean param1) {
+    final static void drawOverlayLayers(byte param0, boolean param1) {
         int var2 = -93 / ((-55 - param0) / 55);
-        if (null != up.field_o) {
-          GameplayScreen.a(up.field_o, -2);
+        if (null != PuzzleThumbnail.field_o) {
+          GameplayScreen.a(PuzzleThumbnail.field_o, -2);
         }
         if (null != ProxySocketConnector.field_n) {
           ProxySocketConnector.field_n.setMenuFlag(param1, (byte) 20);
@@ -211,7 +211,7 @@ final class cl {
         if (AccountTermsPanel.field_M != null) {
           AccountTermsPanel.field_M.drawFullScreen(param1, 0);
         }
-        TextLayout.c(param1, -24721);
+        TextLayout.drawActivePopup(param1, -24721);
     }
 
     static {

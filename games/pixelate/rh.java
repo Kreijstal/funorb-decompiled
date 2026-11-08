@@ -36,7 +36,7 @@ final class rh extends IntrusiveNode {
           }
           if (param3 == 255) {
             stackIn_12_0 = !(um.field_r >= 13);
-            MouseWheelHandler.field_b = pk.a(stackIn_12_0, 5731);
+            MouseWheelHandler.field_b = pk.createDobResult(stackIn_12_0, 5731);
           } else {
             if (param3 >= 100 &&
               param3 <= 105) {

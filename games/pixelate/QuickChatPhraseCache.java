@@ -35,7 +35,7 @@ final class QuickChatPhraseCache {
         if (param0 != -21209) {
           return (QuickChatPhraseDefinition) null;
         }
-        var3 = (QuickChatPhraseDefinition) (this.field_i.a((long)param1, 0));
+        var3 = (QuickChatPhraseDefinition) (this.field_i.get((long)param1, 0));
         if (var3 != null) {
           return var3;
         }
@@ -49,9 +49,9 @@ final class QuickChatPhraseCache {
           var3Lifetime1.decode(param0 ^ 21212, new PacketBuffer(var4));
         }
         if (32768 <= param1) {
-          var3Lifetime1.g(126);
+          var3Lifetime1.markResponsesAsPhrases(126);
         }
-        this.field_i.a((long)param1, var3Lifetime1, (byte) 83);
+        this.field_i.put((long)param1, var3Lifetime1, (byte) 83);
         return var3Lifetime1;
     }
 

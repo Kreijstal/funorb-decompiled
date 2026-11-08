@@ -12,7 +12,7 @@ final class PairedTextColumns extends SceneWidget {
         field_Eb = null;
         field_Gb = null;
         if (param0 < 78) {
-          PairedTextColumns.b((byte) -20);
+          PairedTextColumns.getPlayerListContent((byte) -20);
         }
     }
 
@@ -24,7 +24,7 @@ final class PairedTextColumns extends SceneWidget {
         return this.field_Fb.getContentWidth(0) + param1 + this.field_Ib.getContentWidth(0);
     }
 
-    final static SceneWidget c(byte param0) {
+    final static SceneWidget getIgnoreListContent(byte param0) {
         if (param0 < 93) {
           return (SceneWidget) null;
         }
@@ -52,7 +52,7 @@ final class PairedTextColumns extends SceneWidget {
         this.layoutColumns(param4, false);
     }
 
-    final static void a(int param0, int param1) {
+    final static void sendNoticeAcknowledgement(int param0, int param1) {
         CipherPacketBuffer var2 = aa.field_f;
         var2.writeOpcode(param1, 15514);
         var2.writeByte(160, param0);
@@ -70,11 +70,11 @@ final class PairedTextColumns extends SceneWidget {
         }
     }
 
-    final static SceneWidget b(byte param0) {
+    final static SceneWidget getPlayerListContent(byte param0) {
         if (param0 <= 77) {
           return (SceneWidget) null;
         }
-        return fd.a(0);
+        return fd.getPlayerListContent(0);
     }
 
     private PairedTextColumns(long param0, SceneWidget param1, SceneWidget param2, String param3) {
@@ -95,7 +95,7 @@ final class PairedTextColumns extends SceneWidget {
         this(param0, param1.field_Fb, param1.field_Ib, param2);
     }
 
-    final static int a(int param0, byte param1, int param2) {
+    final static int getCrownLevel(int param0, byte param1, int param2) {
         if (param1 < 8) {
           field_Hb = -30;
           if (2 <= param0) {
@@ -134,7 +134,7 @@ final class PairedTextColumns extends SceneWidget {
         String var14 = null;
         ClientContextMenu var15 = null;
         try {
-          em.openContextMenu((String) null, 0L, (String) null, param2.c((byte) 8), param2, -163, aj.field_k, (int[]) null, -1);
+          em.openContextMenu((String) null, 0L, (String) null, param2.c((byte) 8), param2, -163, ReflectionCheckRequest.field_k, (int[]) null, -1);
           if (param2.field_dc && (param2.field_Tb == 2 ||
             !(wo.field_h < 2))) {
             var9 = ProxySocketConnector.field_n;

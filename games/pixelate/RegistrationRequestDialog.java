@@ -9,9 +9,9 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
     static int field_Cb;
     static int field_Bb;
 
-    final static void i(byte param0) {
+    final static void showDisplayNameForm(byte param0) {
         if (null != MainMenuScreen.field_r) {
-          MainMenuScreen.field_r.p(-108);
+          MainMenuScreen.field_r.close(-108);
         }
         aa.field_c = new DisplayNameForm();
         ph.field_l.transitionToContent(aa.field_c, -125);
@@ -30,7 +30,7 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
         }
     }
 
-    final static boolean q(int param0) {
+    final static boolean isLogoAnimationFinished(int param0) {
         if (param0 == 22452) {
           return GameModeCard.field_f > 250 ? true : false;
         }
@@ -42,14 +42,14 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
         id var2 = null;
         id var2Lifetime1;
         if (param0) {
-          this.h((byte) -120);
+          this.completeWithoutServer((byte) -120);
           if (!this.field_N) {
             return super.tickLayerAndCheckHidden(false);
           }
           if (this.field_xb) {
             return super.tickLayerAndCheckHidden(false);
           }
-          var2 = CachedArchiveProvider.d((byte) 52);
+          var2 = CachedArchiveProvider.takeRegistrationResult((byte) 52);
           if (var2 != null) {
             this.handleRegistrationResult(var2, -127, false);
             return super.tickLayerAndCheckHidden(false);
@@ -62,7 +62,7 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
         if (this.field_xb) {
           return super.tickLayerAndCheckHidden(false);
         }
-        var2Lifetime1 = CachedArchiveProvider.d((byte) 52);
+        var2Lifetime1 = CachedArchiveProvider.takeRegistrationResult((byte) 52);
         if (var2Lifetime1 != null) {
           this.handleRegistrationResult(var2Lifetime1, -127, false);
           return super.tickLayerAndCheckHidden(false);
@@ -153,24 +153,24 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
         }
     }
 
-    final static void a(boolean param0, boolean param1, int param2) {
+    final static void drawDimmedAccountLayers(boolean param0, boolean param1, int param2) {
         if (!param0) {
           SoftwareRasterizer.clear();
           if (param2 != 0) {
-            RegistrationRequestDialog.a(true, false, -123);
-            Js5NetworkRequest.a(param2 ^ 91, param0);
+            RegistrationRequestDialog.drawDimmedAccountLayers(true, false, -123);
+            Js5NetworkRequest.drawAccountLayers(param2 ^ 91, param0);
             return;
           }
-          Js5NetworkRequest.a(param2 ^ 91, param0);
+          Js5NetworkRequest.drawAccountLayers(param2 ^ 91, param0);
           return;
         }
         SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_j, SoftwareRasterizer.field_d, 0, 192);
         if (param2 != 0) {
-          RegistrationRequestDialog.a(true, false, -123);
-          Js5NetworkRequest.a(param2 ^ 91, param0);
+          RegistrationRequestDialog.drawDimmedAccountLayers(true, false, -123);
+          Js5NetworkRequest.drawAccountLayers(param2 ^ 91, param0);
           return;
         }
-        Js5NetworkRequest.a(param2 ^ 91, param0);
+        Js5NetworkRequest.drawAccountLayers(param2 ^ 91, param0);
     }
 
     public final void onAction(TextButton param0, int param1, int param2, int param3, int param4) {
@@ -183,18 +183,18 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
           return;
         }
         try {
-          this.p(-119);
+          this.close(-119);
         } catch (RuntimeException runtimeException) {
           throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "dm.Q(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
-    final void h(byte param0) {
+    final void completeWithoutServer(byte param0) {
         if (param0 <= -96) {
           this.handleRegistrationResult(pa.a(248, AudioService.field_b, (byte) -121), -127, true);
           return;
         }
-        RegistrationRequestDialog.a(true, false, -97);
+        RegistrationRequestDialog.drawDimmedAccountLayers(true, false, -97);
         this.handleRegistrationResult(pa.a(248, AudioService.field_b, (byte) -121), -127, true);
     }
 

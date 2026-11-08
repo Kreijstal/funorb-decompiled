@@ -43,7 +43,7 @@ final class MatchingTextValidator extends TextFieldValidator {
             this.describeText(-37, (String) null);
           }
           if (this.matchingField instanceof ValidationProvider) {
-            var3 = ((ValidationProvider) ((Object) this.matchingField)).a(1);
+            var3 = ((ValidationProvider) ((Object) this.matchingField)).getValidationSource(1);
             if (var3 != null) {
               if (var3.getState((byte) 68) == qk.field_g &&
                 !param1.equals(this.matchingField.field_q)) {
@@ -114,7 +114,7 @@ final class MatchingTextValidator extends TextFieldValidator {
             return stackIn_2_0;
           }
           if (this.matchingField instanceof ValidationProvider) {
-            var3 = ((ValidationProvider) ((Object) this.matchingField)).a(1);
+            var3 = ((ValidationProvider) ((Object) this.matchingField)).getValidationSource(1);
             if (var3 != null &&
               var3.getState((byte) 69) != qk.field_g) {
               stackIn_9_0 = sk.field_a;

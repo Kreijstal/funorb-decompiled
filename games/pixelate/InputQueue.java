@@ -65,7 +65,7 @@ final class InputQueue {
           if (var2 == 0) {
             if (null == GameResultsScreen.field_q) {
               GameResultsScreen.field_q = new SecondaryNodeHashTable(128);
-              aj.field_t = 0;
+              ReflectionCheckRequest.field_t = 0;
             }
             stackIn_11_0 = (var1.readUnsignedByte(255) != 1) ? 0 : 1;
             var3_int = stackIn_11_0;
@@ -92,8 +92,8 @@ final class InputQueue {
             if (var6 == null) {
               var6 = new SocialListEntry();
               GameResultsScreen.field_q.put(false, var6, (long)var8.hashCode());
-              fieldTemp$0 = aj.field_t;
-              aj.field_t = aj.field_t + 1;
+              fieldTemp$0 = ReflectionCheckRequest.field_t;
+              ReflectionCheckRequest.field_t = ReflectionCheckRequest.field_t + 1;
               var6.field_Kb = fieldTemp$0;
               bq.field_b.addLast(22125, var6);
             }
@@ -165,7 +165,7 @@ final class InputQueue {
           var7_ref = (SocialListEntry) (VerticalScrollbar.field_Hb.first(1504642273));
           scanLoop1: while (true) {
             if (null != var7_ref) {
-              stackOut_49_0 = DebouncedValidator.a((byte) 115, var6Lifetime1, var7_ref);
+              stackOut_49_0 = DebouncedValidator.comesBeforeFriend((byte) 115, var6Lifetime1, var7_ref);
               stackIn_60_0 = stackOut_49_0 ? 1 : 0;
               stackIn_50_0 = stackOut_49_0;
               if (var9 != 0) {

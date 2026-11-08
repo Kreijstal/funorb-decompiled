@@ -81,20 +81,20 @@ final class LoginMethod {
             for (var7_int = 1; var4 > var7_int; var7_int++) {
               lg.field_b[var7_int] = var15.readString(5);
             }
-            IconTextComponent.a(2147483647, var6, var4);
+            IconTextComponent.decodeRankingRows(2147483647, var6, var4);
             for (var7_intLifetime1 = 0; var4 > var7_intLifetime1; var7_intLifetime1++) {
-              QueuedInput.a(-112, var15);
+              QueuedInput.readPackedRankingValues(-112, var15);
               if (var7_intLifetime1 != 0) {
-                ui.a(aj.field_n, 0, of.field_g, of.field_b, var7_intLifetime1, bq.field_c);
+                ui.a(ReflectionCheckRequest.field_n, 0, of.field_g, of.field_b, var7_intLifetime1, bq.field_c);
               } else {
-                var3.field_v = aj.field_n;
+                var3.field_v = ReflectionCheckRequest.field_n;
                 var3.field_n = bq.field_c;
                 var3.field_m = of.field_g;
                 var3.field_p = of.field_b;
-                ui.a(aj.field_n, 0, of.field_g, of.field_b, var7_intLifetime1, bq.field_c);
+                ui.a(ReflectionCheckRequest.field_n, 0, of.field_g, of.field_b, var7_intLifetime1, bq.field_c);
               }
             }
-            EmailValidator.a(var6, (byte) 31);
+            EmailValidator.sortRankingRows(var6, (byte) 31);
             dupTemp$0 = new String[2][var6];
             var3.field_o = dupTemp$0;
             var7 = dupTemp$0;
@@ -470,7 +470,7 @@ final class LoginMethod {
             java.applet.Applet var4 = (java.applet.Applet) null;
             this.saveAsLastLoginMethod((java.applet.Applet) null, 6);
           }
-          MatchHud.a(param0, -75, this.field_b, "jagex-last-login-method", 31536000L);
+          MatchHud.setBrowserCookie(param0, -75, this.field_b, "jagex-last-login-method", 31536000L);
         } catch (RuntimeException runtimeException) {
           throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "io.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

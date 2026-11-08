@@ -8,7 +8,7 @@ final class mi extends MenuScreen {
 
     final void onCancel(byte param0) {
         if (param0 >= -13) {
-          mi.e(-14);
+          mi.tickAchievementBanner(-14);
         }
     }
 
@@ -18,7 +18,7 @@ final class mi extends MenuScreen {
         int var3 = null != HighscoresScreen.field_p ? 1 : 0;
         String var7 = EmailValidator.field_p;
         if (param0 != 11) {
-          mi.b(false);
+          mi.layoutLobbyPanels(false);
         }
         String var8 = var7 + " " + ub.replaceCharacter(AlphaContainer.a(PicturePreview.getUnsavedDataWarning(param0 - 99, false, var3 != 0, var2 != 0), param0 ^ 50, new String[]{ScoreMarkerDemo.field_i}), param0 - 11, "<br><br>", '#');
         BinaryBitmapFont var5 = qj.field_e;
@@ -26,7 +26,7 @@ final class mi extends MenuScreen {
         var5.drawParagraph(var8, 50, 150, 540, 10 * var6, 16777215, 0, 1, 0, var6);
     }
 
-    final static void e(int param0) {
+    final static void tickAchievementBanner(int param0) {
         int var1;
         int var2;
         ph var3;
@@ -55,11 +55,11 @@ final class mi extends MenuScreen {
           }
         }
         if (param0 >= -121) {
-          mi.a(71, 124, 48, -115);
+          mi.pickRandomPictures(71, 124, 48, -115);
         }
     }
 
-    final static IndexedSprite[] a(int param0, int param1, int param2, int param3) {
+    final static IndexedSprite[] pickRandomPictures(int param0, int param1, int param2, int param3) {
         int var8 = 0;
         IndexedSprite[] var4;
         int var5;
@@ -90,14 +90,14 @@ final class mi extends MenuScreen {
           var7[var8] = var11[var9];
         }
         if (param3 != 20) {
-          mi.b(true);
+          mi.layoutLobbyPanels(true);
         }
         return var7;
     }
 
     final static int fixedSine(int param0, int param1) {
         if (param0 != -4096) {
-          mi.a(126, 19, (byte) -117);
+          mi.legacyMenuOptionAt(126, 19, (byte) -117);
         }
         param1 = param1 & 8191;
         if (param1 >= 4096) {
@@ -110,7 +110,7 @@ final class mi extends MenuScreen {
         super(param0, param1, param2, param3, param4, param5);
     }
 
-    final static int a(boolean param0, byte param1, String param2, int param3, boolean param4, String param5) {
+    final static int performLoginRequest(boolean param0, byte param1, String param2, int param3, boolean param4, String param5) {
         try {
           int stackIn_4_0 = 0;
           int stackIn_30_0 = 0;
@@ -144,14 +144,14 @@ final class mi extends MenuScreen {
           var9 = Pixelate.field_H ? 1 : 0;
           try {
             if (null == NodeHashTableIterator.field_e &&
-              !MouseInputHandler.a(0, param4)) {
+              !MouseInputHandler.pollGameSocketConnection(0, param4)) {
               stackIn_4_0 = -1;
               return stackIn_4_0;
             }
             if (ij.field_o == GameModeSelectScreen.field_s) {
               if (param4) {
                 var10 = (String) null;
-                li.field_g = FloatingSquare.createLoginCredentials(param2, (String) null, false, vn.field_b, 83);
+                li.field_g = FloatingSquare.createLoginCredentials(param2, (String) null, false, RisingBubble.field_b, 83);
               } else {
                 li.field_g = NanoTickClock.createLoginCredentials(param2, false, -61, param5);
               }
@@ -162,7 +162,7 @@ final class mi extends MenuScreen {
               GameModeSelectScreen.field_s = cn.field_a;
             }
             if (GameModeSelectScreen.field_s == cn.field_a &&
-              QueuedInput.a(1, false)) {
+              QueuedInput.fillIncomingBuffer(1, false)) {
               var6_int = MusicCrossfadeStream.field_o.readUnsignedByte(255);
               MusicCrossfadeStream.field_o.position = 0;
               if (var6_int != 0) {
@@ -174,7 +174,7 @@ final class mi extends MenuScreen {
               }
             }
             if (GameModeSelectScreen.field_s == ke.field_b &&
-              QueuedInput.a(8, false)) {
+              QueuedInput.fillIncomingBuffer(8, false)) {
               NumericDateInputWidget.field_P = MusicCrossfadeStream.field_o.readLong(false);
               MusicCrossfadeStream.field_o.position = 0;
               LoginMethod.writeLoginPacket(param4, -67, li.field_g, param3, param0);
@@ -182,7 +182,7 @@ final class mi extends MenuScreen {
             }
             boolean decompiledFrameRemainder0 = true;
             if (BoardView.field_b == GameModeSelectScreen.field_s &&
-              QueuedInput.a(1, false)) {
+              QueuedInput.fillIncomingBuffer(1, false)) {
               var6_intLifetime1 = MusicCrossfadeStream.field_o.readUnsignedByte(255);
               ConditionalTextValue.field_a = null;
               MusicCrossfadeStream.field_o.position = 0;
@@ -208,7 +208,7 @@ final class mi extends MenuScreen {
             }
             if (e.field_d == GameModeSelectScreen.field_s &&
               MusicPatchNode.e(-18481)) {
-              vn.field_b = MusicCrossfadeStream.field_o.readLong(false);
+              RisingBubble.field_b = MusicCrossfadeStream.field_o.readLong(false);
               GameResultsScreen.field_t = param2;
               wo.field_h = MusicCrossfadeStream.field_o.readUnsignedByte(255);
               Js5NetworkRequest.field_I = MusicCrossfadeStream.field_o.readUnsignedByte(255);
@@ -255,7 +255,7 @@ final class mi extends MenuScreen {
               }
               qj.field_b = false;
               if (var6 != null) {
-                QueuedInput.a(var6, 126, AudioService.a(13867));
+                QueuedInput.writeSettingsCookie(var6, 126, AudioService.a(13867));
               }
               if (BufferedRandomAccessFile.field_j <= 0 &&
                 !Matrix3.field_a) {
@@ -267,7 +267,7 @@ final class mi extends MenuScreen {
                 }
               } else {
                 try {
-                  JavaScriptBridge.a(AudioService.a(13867), (byte) -37, new Object[]{PacketBuffer.decodeBase37Name(vn.field_b, -7067)}, "zap");
+                  JavaScriptBridge.a(AudioService.a(13867), (byte) -37, new Object[]{PacketBuffer.decodeBase37Name(RisingBubble.field_b, -7067)}, "zap");
                 } catch (java.lang.Throwable decompiledCaughtParameter1) {
                   decompiledCaughtException = decompiledCaughtParameter1;
                   var8_ref_Throwable = decompiledCaughtException;
@@ -304,7 +304,7 @@ final class mi extends MenuScreen {
             var6_intLifetime2 = 51 % ((-18 - param1) / 46);
             if (null == NodeHashTableIterator.field_e) {
               if (qj.field_b) {
-                if (CachedTextLayout.d(8) <= 30000L) {
+                if (CachedTextLayout.millisSinceLastPacket(8) <= 30000L) {
                   gi.field_b = TextTableInitializer.field_b;
                 } else {
                   gi.field_b = ValidationIndicator.field_N;
@@ -345,24 +345,24 @@ final class mi extends MenuScreen {
         }
     }
 
-    final static void a(boolean param0, float param1, int param2, String param3) {
+    final static void showLoadingProgress(boolean param0, float param1, int param2, String param3) {
         try {
           if (cn.field_b == null) {
             cn.field_b = new LoadingProgressDialog(wa.field_c, wp.field_a);
-            wa.field_c.b(-6183, cn.field_b);
+            wa.field_c.showPanel(-6183, cn.field_b);
           }
           if (param2 != -1) {
             field_o = false;
           }
           cn.field_b.setProgress(param3, param1, 7595, param0);
           SoftwareRasterizer.clear();
-          Js5NetworkRequest.a(94, true);
+          Js5NetworkRequest.drawAccountLayers(94, true);
         } catch (RuntimeException runtimeException) {
           throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "mi.I(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static int a(int param0, int param1, byte param2) {
+    final static int legacyMenuOptionAt(int param0, int param1, byte param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -386,7 +386,7 @@ final class mi extends MenuScreen {
               var6 = sb.a(3, vm.field_e[var3_int], true);
               var4 = var4 + LoadingProgressDialog.field_fb;
               var7 = -(var6 >> 1) + QuickChatCategory.field_u;
-              if (TextLayoutLine.a(param0, var4, 9, ValidatedTextWidget.field_fb + (bd.field_c << 1), var7 - AccountTermsPanel.field_J, param1, (AccountTermsPanel.field_J << 1) + var6)) {
+              if (TextLayoutLine.containsPoint(param0, var4, 9, ValidatedTextWidget.field_fb + (bd.field_c << 1), var7 - AccountTermsPanel.field_J, param1, (AccountTermsPanel.field_J << 1) + var6)) {
                 stackIn_8_0 = var5;
                 return stackIn_8_0;
               }
@@ -405,7 +405,7 @@ final class mi extends MenuScreen {
         }
     }
 
-    final static void b(boolean param0) {
+    final static void layoutLobbyPanels(boolean param0) {
         TextTableInitializer.field_g.setBounds(0, 18, 0, 256, -(!DialWidgetPainter.field_n ? 0 : 40 + DelegatingCanvas.field_b + 4) + StripedProgressBar.field_O.field_K);
         if (param0) {
           field_o = false;

@@ -12,7 +12,7 @@ final class DialWidget extends TextButton {
     int field_Q;
     static String field_S;
 
-    final static void a(int param0, java.awt.Canvas param1) {
+    final static void renderLoadingScreen(int param0, java.awt.Canvas param1) {
         try {
           if (11 == el.field_b) {
             Js5ArchiveManager.suppressReconnectRedirect(98);
@@ -20,21 +20,21 @@ final class DialWidget extends TextButton {
           if (param0 != -1913) {
             DialWidget.releaseStatics((byte) -51);
           }
-          mi.a(EmailCredentials.field_f, PicturePreview.field_o, -1, ThreeSliceButtonPainter.field_r);
+          mi.showLoadingProgress(EmailCredentials.field_f, PicturePreview.field_o, -1, ThreeSliceButtonPainter.field_r);
           fj.presentToCanvas(0, 0, (byte) 113, param1);
         } catch (RuntimeException runtimeException) {
           throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "si.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static double a(double param0, boolean param1) {
+    final static double sineLookup(double param0, boolean param1) {
         if (param1) {
           return -0.8130049379793588;
         }
         return TriangleMesh.field_f[(int)(param0 * 32768.0 / 3.141592653589793) & 65535];
     }
 
-    final static void a(int param0, byte[] param1, int param2, int param3, boolean param4, byte param5) {
+    final static void sendAccountChoicePacket(int param0, byte[] param1, int param2, int param3, boolean param4, byte param5) {
         CipherPacketBuffer var6 = aa.field_f;
         var6.writeOpcode(param0, 15514);
         var6.position = var6.position + 1;
@@ -118,7 +118,7 @@ final class DialWidget extends TextButton {
         throw new Error();
     }
 
-    final static boolean a(int param0, int param1, CharSequence param2, boolean param3) {
+    final static boolean isValidInteger(int param0, int param1, CharSequence param2, boolean param3) {
         int var8 = 0;
         int stackIn_40_0 = 0;
         RuntimeException stackIn_43_0 = null;
@@ -142,7 +142,7 @@ final class DialWidget extends TextButton {
             var5 = 0;
             if (param0 != -26629) {
               var12 = (CharSequence) null;
-              DialWidget.a(30, 48, (CharSequence) null, false);
+              DialWidget.isValidInteger(30, 48, (CharSequence) null, false);
             }
             var6 = 0;
             var7 = param2.length();

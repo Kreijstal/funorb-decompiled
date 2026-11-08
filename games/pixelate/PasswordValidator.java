@@ -87,7 +87,7 @@ final class PasswordValidator extends TextFieldValidator {
             field_m = 16;
           }
           var5 = var4;
-          if (ep.a((byte) 34, var5)) {
+          if (ep.hasInvalidPasswordLength((byte) 34, var5)) {
             stackIn_7_0 = MusicCrossfadeStream.field_y;
             return stackIn_7_0;
           }
@@ -134,7 +134,7 @@ final class PasswordValidator extends TextFieldValidator {
         }
     }
 
-    final static SceneWidget b(boolean param0) {
+    final static SceneWidget getFriendListContent(boolean param0) {
         if (param0) {
           return (SceneWidget) null;
         }
@@ -154,7 +154,7 @@ final class PasswordValidator extends TextFieldValidator {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 < 124) {
-            PasswordValidator.a(-44, -114);
+            PasswordValidator.animateLogoMeshes(-44, -114);
           }
           var3 = this.field_p.field_q.toLowerCase();
           var4 = param1.toLowerCase();
@@ -189,7 +189,7 @@ final class PasswordValidator extends TextFieldValidator {
         }
     }
 
-    final static void a(int param0, int param1) {
+    final static void animateLogoMeshes(int param0, int param1) {
         int var2;
         int var3;
         int var4;
@@ -254,7 +254,7 @@ final class PasswordValidator extends TextFieldValidator {
               var4 = 1;
               var5 = 1;
             }
-            ReportAbuseDialog.field_Hb = TextButton.a(var5 * var2, var4 * var2, (byte) 7);
+            ReportAbuseDialog.field_Hb = TextButton.buildRotationMatrix(var5 * var2, var4 * var2, (byte) 7);
             return;
           }
           if (120 > var3) {
@@ -311,7 +311,7 @@ final class PasswordValidator extends TextFieldValidator {
               var4Lifetime2 = 1;
               var5Lifetime2 = 1;
             }
-            ReportAbuseDialog.field_Hb = TextButton.a(var5Lifetime2 * var2, var4Lifetime2 * var2, (byte) 7);
+            ReportAbuseDialog.field_Hb = TextButton.buildRotationMatrix(var5Lifetime2 * var2, var4Lifetime2 * var2, (byte) 7);
             return;
           }
         }
@@ -362,7 +362,7 @@ final class PasswordValidator extends TextFieldValidator {
           var4Lifetime1 = 1;
           var5Lifetime1 = 1;
         }
-        ReportAbuseDialog.field_Hb = TextButton.a(var5Lifetime1 * var2, var4Lifetime1 * var2, (byte) 7);
+        ReportAbuseDialog.field_Hb = TextButton.buildRotationMatrix(var5Lifetime1 * var2, var4Lifetime1 * var2, (byte) 7);
     }
 
     PasswordValidator(EditableTextWidget param0, EditableTextWidget param1, EditableTextWidget param2) {
@@ -375,7 +375,7 @@ final class PasswordValidator extends TextFieldValidator {
         }
     }
 
-    final static RankingTableRequest a(int param0, byte param1, int param2, int param3, int param4) {
+    final static RankingTableRequest getRankingTableRequest(int param0, byte param1, int param2, int param3, int param4) {
         RankingTableRequest var5;
         int var6;
         int var7;
@@ -398,13 +398,13 @@ final class PasswordValidator extends TextFieldValidator {
         return var5Lifetime1;
     }
 
-    public static void e(int param0) {
+    public static void clearStatics(int param0) {
         field_r = null;
         field_q = null;
         field_s = null;
         field_o = null;
         if (param0 != -30055) {
-          PasswordValidator.a(-18, -13);
+          PasswordValidator.animateLogoMeshes(-18, -13);
         }
     }
 

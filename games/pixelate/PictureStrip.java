@@ -18,14 +18,14 @@ final class PictureStrip {
     private int field_o;
     private int field_b;
 
-    final static void a(int param0, sb param1, int param2, int param3) {
+    final static void setLegacyMenuFrame(int param0, sb param1, int param2, int param3) {
         try {
           PacketBuffer.field_n = param3;
           he.field_a = param1;
           GradientOutlineTextPainter.field_t = param0;
           if (param2 != 16) {
             sb var5 = (sb) null;
-            PictureStrip.a(-25, (sb) null, 81, -121);
+            PictureStrip.setLegacyMenuFrame(-25, (sb) null, 81, -121);
           }
         } catch (RuntimeException runtimeException) {
           throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "pb.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
@@ -41,7 +41,7 @@ final class PictureStrip {
         this.field_e = this.getTargetScroll((byte) -37);
     }
 
-    final static void a(int param0, Sprite[] param1) {
+    final static void setSlideshowSprites(int param0, Sprite[] param1) {
         RuntimeException var2 = null;
         sb var3 = null;
         RuntimeException stackIn_9_0 = null;
@@ -58,7 +58,7 @@ final class PictureStrip {
             return;
           }
           var3 = (sb) null;
-          PictureStrip.a(-62, (sb) null, 98, 74);
+          PictureStrip.setLegacyMenuFrame(-62, (sb) null, 98, 74);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -103,7 +103,7 @@ final class PictureStrip {
           return;
         }
         sb var2 = (sb) null;
-        PictureStrip.a(-41, (sb) null, 24, 65);
+        PictureStrip.setLegacyMenuFrame(-41, (sb) null, 24, 65);
         field_n = null;
         field_j = null;
         field_i = null;
@@ -139,7 +139,7 @@ final class PictureStrip {
         int var3 = 512 * (param1 - this.field_o + 100) / 100;
         if (param0) {
           Sprite[] var4 = (Sprite[]) null;
-          PictureStrip.a(31, (Sprite[]) null);
+          PictureStrip.setSlideshowSprites(31, (Sprite[]) null);
           if (var3 > 256) {
             return 256;
           }

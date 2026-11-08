@@ -48,7 +48,7 @@ final class JavaRandomHelpers {
           do {
             var4 = param0.nextInt();
           } while (var4 >= var3_int);
-          stackIn_13_0 = SocketConnector.a(var4, param2, -510336929);
+          stackIn_13_0 = SocketConnector.floorMod(var4, param2, -510336929);
           return stackIn_13_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

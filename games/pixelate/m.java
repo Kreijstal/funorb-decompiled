@@ -63,19 +63,19 @@ final class m extends IntrusiveNode {
           throw new IllegalStateException();
         }
         if (MainMenuScreen.field_r != null) {
-          MainMenuScreen.field_r.p(param0 ^ 15);
+          MainMenuScreen.field_r.close(param0 ^ 15);
         }
-        String var1 = Puzzle.a(0);
+        String var1 = Puzzle.getLoginNameOrDefault(0);
         nf.field_b = new LoginForm(var1, (String) null, true, false, false);
         if (param0 == -102) {
-          wa.field_c.b(param0 - 6081, ph.field_l);
+          wa.field_c.showPanel(param0 - 6081, ph.field_l);
           ph.field_l.transitionToContent(nf.field_b, param0 ^ 27);
           ph.field_l.finishAnimations(false);
           return;
         }
         java.applet.Applet var2 = (java.applet.Applet) null;
         m.openSubscribePage((java.applet.Applet) null, -43);
-        wa.field_c.b(param0 - 6081, ph.field_l);
+        wa.field_c.showPanel(param0 - 6081, ph.field_l);
         ph.field_l.transitionToContent(nf.field_b, param0 ^ 27);
         ph.field_l.finishAnimations(false);
     }

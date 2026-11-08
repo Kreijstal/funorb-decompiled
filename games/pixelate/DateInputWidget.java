@@ -9,11 +9,11 @@ abstract class DateInputWidget extends UiContainer implements ValidationProvider
     static String[] field_I;
     private DateOfBirthValidator field_K;
 
-    final static void a(int param0, PlatformTaskDispatcher param1, MusicCrossfadeStream param2, boolean param3, java.awt.Component param4, int param5) {
+    final static void initializeAudio(int param0, PlatformTaskDispatcher param1, MusicCrossfadeStream param2, boolean param3, java.awt.Component param4, int param5) {
         try {
           if (param5 <= 102) {
             java.awt.Component var7 = (java.awt.Component) null;
-            DateInputWidget.a(-5, (PlatformTaskDispatcher) null, (MusicCrossfadeStream) null, false, (java.awt.Component) null, -3);
+            DateInputWidget.initializeAudio(-5, (PlatformTaskDispatcher) null, (MusicCrossfadeStream) null, false, (java.awt.Component) null, -3);
           }
           HuffmanCodec.a(1024, param0, param3, param0, (byte) -110, param4, param1, param2);
         } catch (RuntimeException runtimeException) {
@@ -34,7 +34,7 @@ abstract class DateInputWidget extends UiContainer implements ValidationProvider
         RuntimeException var3_ref = null;
         try {
           var4 = -101 % ((-56 - param2) / 62);
-          var3 = EmailValidator.b(0, param1);
+          var3 = EmailValidator.reverseString(0, param1);
           if (-1 == param0.indexOf(param1) &&
             param0.indexOf(var3) == -1) {
             stackIn_12_0 = (param0.startsWith(param1)) || (param0.startsWith(var3)) || (param0.endsWith(param1)) || (param0.endsWith(var3));
@@ -86,9 +86,9 @@ abstract class DateInputWidget extends UiContainer implements ValidationProvider
 
     abstract int getMonthIndex(int param0);
 
-    abstract boolean m(int param0);
+    abstract boolean isDateIncomplete(int param0);
 
-    public final ValidationSource a(int param0) {
+    public final ValidationSource getValidationSource(int param0) {
         if (param0 != 1) {
           return (ValidationSource) null;
         }
@@ -97,7 +97,7 @@ abstract class DateInputWidget extends UiContainer implements ValidationProvider
 
     abstract int getDay(byte param0);
 
-    abstract int c(boolean param0);
+    abstract int getYear(boolean param0);
 
     DateInputWidget(int param0, int param1, int param2, int param3, WidgetPainter param4) {
         super(param0, param1, param2, param3, param4);

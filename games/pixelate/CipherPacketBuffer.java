@@ -128,7 +128,7 @@ final class CipherPacketBuffer extends PacketBuffer {
             } else {
               ScoreMarkerBar.field_z.field_Gb.field_Ib.field_cb = ih.field_d;
             }
-            GrowableIntList.a(ScoreMarkerBar.field_z.field_Fb, false);
+            GrowableIntList.resetChildLayouts(ScoreMarkerBar.field_z.field_Fb, false);
             decompiledFrameRemainder0 = (var19 != 0);
           }
           if (decompiledFrameRemainder0) {
@@ -219,11 +219,11 @@ final class CipherPacketBuffer extends PacketBuffer {
                   var6 = var7;
                   if (var7.field_Ob != null &&
                     var7.field_Ob.field_W) {
-                    up.field_o = var7.field_Gb;
+                    PuzzleThumbnail.field_o = var7.field_Gb;
                   } else if (0 == var7.field_P) {
                     if (var7.field_Pb.field_W &&
                       var15 != 0) {
-                      up.field_o = var7.field_Fb;
+                      PuzzleThumbnail.field_o = var7.field_Fb;
                     }
                   } else {
                     var16 = var7.field_Fb;
@@ -326,7 +326,7 @@ final class CipherPacketBuffer extends PacketBuffer {
             field_q = -19;
           }
           param2 = ub.replaceCharacter(param2, param1 ^ -47, "", '_');
-          var3 = EmailValidator.b(0, param0);
+          var3 = EmailValidator.reverseString(0, param0);
           stackIn_10_0 = (param2.indexOf(param0) != -1) || (param2.indexOf(var3) != -1);
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

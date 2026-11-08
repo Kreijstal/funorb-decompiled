@@ -18,7 +18,7 @@ final class PasswordFieldPainter extends GradientOutlineTextPainter {
           if (param1 != -472248767) {
             field_y = (Sprite) null;
           }
-          stackIn_3_0 = EmailValidator.a(false, '*', param0.field_q.length());
+          stackIn_3_0 = EmailValidator.repeatChar(false, '*', param0.field_q.length());
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

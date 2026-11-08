@@ -84,7 +84,7 @@ final class SectorCacheStore {
                   if (this.indexFile.length(param1 + 59) < (long)(6 + param3 * 6)) {
                     return false;
                   }
-                  this.indexFile.a((long)(6 * param3), 113);
+                  this.indexFile.seek((long)(6 * param3), 113);
                   this.indexFile.readFully(MusicCrossfadeStream.field_K, (byte) 24, 6, 0);
                   var7_int = (MusicCrossfadeStream.field_K[4] << 8 & 65280) + ((MusicCrossfadeStream.field_K[3] << 16 & 16711680) + (MusicCrossfadeStream.field_K[5] & 255));
                   if (var7_int <= 0 ||
@@ -106,7 +106,7 @@ final class SectorCacheStore {
                 MusicCrossfadeStream.field_K[3] = (byte)(var7_int >> 16);
                 MusicCrossfadeStream.field_K[1] = (byte)(param4 >> 8);
                 MusicCrossfadeStream.field_K[2] = (byte)param4;
-                this.indexFile.a((long)(param3 * 6), 118);
+                this.indexFile.seek((long)(param3 * 6), 118);
                 this.indexFile.write(6, 0, (byte) -106, MusicCrossfadeStream.field_K);
                 var8 = 0;
                 var9 = 0;
@@ -115,7 +115,7 @@ final class SectorCacheStore {
                     boolean decompiledFrameRemainder0 = true;
                     var10 = 0;
                     if (param0) {
-                      this.dataFile.a((long)(520 * var7_int), -101);
+                      this.dataFile.seek((long)(520 * var7_int), -101);
                       if (param3 <= 65535) {
                         try {
                           this.dataFile.readFully(MusicCrossfadeStream.field_K, (byte) 24, 8, 0);
@@ -182,7 +182,7 @@ final class SectorCacheStore {
                       MusicCrossfadeStream.field_K[3] = (byte)var9;
                       MusicCrossfadeStream.field_K[2] = (byte)(var9 >> 8);
                       MusicCrossfadeStream.field_K[6] = (byte)var10;
-                      this.dataFile.a((long)(var7_int * 520), 126);
+                      this.dataFile.seek((long)(var7_int * 520), 126);
                       this.dataFile.write(8, 0, (byte) -116, MusicCrossfadeStream.field_K);
                       var11 = param4 - var8;
                       if (512 < var11) {
@@ -201,7 +201,7 @@ final class SectorCacheStore {
                       MusicCrossfadeStream.field_K[1] = (byte)(param3 >> 16);
                       MusicCrossfadeStream.field_K[3] = (byte)param3;
                       MusicCrossfadeStream.field_K[0] = (byte)(param3 >> 24);
-                      this.dataFile.a((long)(520 * var7_int), -112);
+                      this.dataFile.seek((long)(520 * var7_int), -112);
                       this.dataFile.write(10, 0, (byte) -88, MusicCrossfadeStream.field_K);
                       var11 = param4 - var8;
                       if (var11 > 510) {
@@ -242,16 +242,16 @@ final class SectorCacheStore {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_g = null;
         field_f = null;
         if (param0 != 512) {
           PacketBuffer var2 = (PacketBuffer) null;
-          SectorCacheStore.a((byte) -3, (PacketBuffer) null);
+          SectorCacheStore.readBooleanByte((byte) -3, (PacketBuffer) null);
         }
     }
 
-    final static AsyncValidationResult a(String param0, byte param1) {
+    final static AsyncValidationResult startEmailValidation(String param0, byte param1) {
         RuntimeException var2 = null;
         AsyncValidationResult stackIn_6_0 = null;
         AsyncValidationResult stackIn_8_0 = null;
@@ -284,7 +284,7 @@ final class SectorCacheStore {
         }
     }
 
-    final static void a(byte param0) {
+    final static void serviceNoop(byte param0) {
         if (param0 < 110) {
           field_g = (String) null;
         }
@@ -294,7 +294,7 @@ final class SectorCacheStore {
         return "" + this.field_d;
     }
 
-    final static boolean a(byte param0, PacketBuffer param1) {
+    final static boolean readBooleanByte(byte param0, PacketBuffer param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -362,7 +362,7 @@ final class SectorCacheStore {
               if (this.indexFile.length(39) < (long)(6 * param1 + 6)) {
                 return null;
               }
-              this.indexFile.a((long)(param1 * 6), -108);
+              this.indexFile.seek((long)(param1 * 6), -108);
               this.indexFile.readFully(MusicCrossfadeStream.field_K, (byte) 24, 6, 0);
               var5_int = ((255 & MusicCrossfadeStream.field_K[0]) << 16) + ((65280 & MusicCrossfadeStream.field_K[1] << 8) + (255 & MusicCrossfadeStream.field_K[2]));
               var6 = ((255 & MusicCrossfadeStream.field_K[3]) << 16) - (-(MusicCrossfadeStream.field_K[4] << 8 & 65280) - (255 & MusicCrossfadeStream.field_K[5]));
@@ -386,7 +386,7 @@ final class SectorCacheStore {
                   stackIn_21_0 = null;
                   return (byte[]) (stackIn_21_0);
                 }
-                this.dataFile.a((long)(var6 * 520), 106);
+                this.dataFile.seek((long)(var6 * 520), 106);
                 var10 = var5_int - var8;
                 if (param1 <= 65535) {
                   var15 = 8;

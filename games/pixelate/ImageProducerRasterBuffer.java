@@ -22,7 +22,7 @@ final class ImageProducerRasterBuffer extends CanvasRasterBuffer implements java
         }
     }
 
-    final static boolean a(int param0, String param1) {
+    final static boolean isFriend(int param0, String param1) {
         RuntimeException var2 = null;
         String var3 = null;
         boolean stackIn_5_0 = false;
@@ -33,7 +33,7 @@ final class ImageProducerRasterBuffer extends CanvasRasterBuffer implements java
         try {
           if (param0 != -640) {
             var3 = (String) null;
-            ImageProducerRasterBuffer.a(54, (String) null);
+            ImageProducerRasterBuffer.isFriend(54, (String) null);
           }
           stackIn_5_0 = (DisplayNameForm.findFriend(param1, -99) != null);
           return stackIn_5_0;
@@ -53,14 +53,14 @@ final class ImageProducerRasterBuffer extends CanvasRasterBuffer implements java
 
     final void drawImage(java.awt.Graphics param0, boolean param1, int param2, int param3) {
         try {
-          this.b(param1);
+          this.publishPixels(param1);
           param0.drawImage(this.field_d, param3, param2, (java.awt.image.ImageObserver) (this));
         } catch (RuntimeException runtimeException) {
           throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "i.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
-    private final synchronized void b(boolean param0) {
+    private final synchronized void publishPixels(boolean param0) {
         if (null == this.field_p) {
           return;
         }
@@ -111,14 +111,14 @@ final class ImageProducerRasterBuffer extends CanvasRasterBuffer implements java
           this.field_e = new int[1 + param0 * param2];
           this.field_o = (java.awt.image.ColorModel) ((Object) new java.awt.image.DirectColorModel(32, 16711680, 65280, 255));
           this.field_d = param1.createImage((java.awt.image.ImageProducer) (this));
-          this.b(false);
+          this.publishPixels(false);
           param1.prepareImage(this.field_d, (java.awt.image.ImageObserver) (this));
           if (param3 > -51) {
-            ImageProducerRasterBuffer.a(-29, true, false, false, true, 57, -40, true, -122, -23);
+            ImageProducerRasterBuffer.updateLobbyPanels(-29, true, false, false, true, 57, -40, true, -122, -23);
           }
-          this.b(false);
+          this.publishPixels(false);
           param1.prepareImage(this.field_d, (java.awt.image.ImageObserver) (this));
-          this.b(false);
+          this.publishPixels(false);
           param1.prepareImage(this.field_d, (java.awt.image.ImageObserver) (this));
           this.bindRaster(19692);
         } catch (RuntimeException runtimeException) {
@@ -136,7 +136,7 @@ final class ImageProducerRasterBuffer extends CanvasRasterBuffer implements java
     ImageProducerRasterBuffer() {
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         field_m = null;
         field_n = null;
         if (param0 >= -19) {
@@ -181,7 +181,7 @@ final class ImageProducerRasterBuffer extends CanvasRasterBuffer implements java
             return stackIn_18_0;
           }
           if (param1 >= -66) {
-            ImageProducerRasterBuffer.c(49);
+            ImageProducerRasterBuffer.releaseStatics(49);
           }
           if (param0.equals("F")) {
             stackIn_24_0 = Float.TYPE;
@@ -211,13 +211,13 @@ final class ImageProducerRasterBuffer extends CanvasRasterBuffer implements java
         }
     }
 
-    final static void a(int param0, boolean param1, boolean param2, boolean param3, boolean param4, int param5, int param6, boolean param7, int param8, int param9) {
+    final static void updateLobbyPanels(int param0, boolean param1, boolean param2, boolean param3, boolean param4, int param5, int param6, boolean param7, int param8, int param9) {
         int var11;
         var11 = Pixelate.field_H ? 1 : 0;
         if (param4) {
           if (param4) {
             TextTableInitializer.field_c = WeightedLruCache.field_c;
-            pj.a((byte) 111, param4);
+            ScorePopup.updateOverlayFadeCounters((byte) 111, param4);
             if (param6 != -28362) {
               field_m = (String) null;
             }
@@ -226,7 +226,7 @@ final class ImageProducerRasterBuffer extends CanvasRasterBuffer implements java
             }
             nk.field_e.horizontalAlignment = 1;
             nk.field_e.field_C = ArchiveIndex.field_l.field_C;
-            if (vn.field_g > 0) {
+            if (RisingBubble.field_g > 0) {
               AccountNoticeDialog.a(param0, param7, 3, param4);
             }
             if (Checkbox.field_W > 0) {
@@ -236,15 +236,15 @@ final class ImageProducerRasterBuffer extends CanvasRasterBuffer implements java
               LoginMethod.field_c.field_ec <= LoginMethod.field_c.field_mc) {
               jm.field_b.field_Ib.field_cb = fo.field_m;
               StripedProgressBar.field_O.field_rb = false;
-              GrowableIntList.a(jm.field_b.content, false);
+              GrowableIntList.resetChildLayouts(jm.field_b.content, false);
             } else {
               StripedProgressBar.field_O.field_rb = true;
               jm.field_b.field_Ib.field_cb = null;
-              la.a(70, param0, jm.field_b, param8, param3);
+              la.layoutLobbyGameRows(70, param0, jm.field_b, param8, param3);
             }
           } else {
             TextTableInitializer.field_c = (-640 + ni.field_q) / 2;
-            pj.a((byte) 111, param4);
+            ScorePopup.updateOverlayFadeCounters((byte) 111, param4);
             if (param6 != -28362) {
               field_m = (String) null;
               if (0 < oo.field_b) {
@@ -252,7 +252,7 @@ final class ImageProducerRasterBuffer extends CanvasRasterBuffer implements java
               }
               nk.field_e.horizontalAlignment = 1;
               nk.field_e.field_C = ArchiveIndex.field_l.field_C;
-              if (vn.field_g > 0) {
+              if (RisingBubble.field_g > 0) {
                 AccountNoticeDialog.a(param0, param7, 3, param4);
               }
               if (Checkbox.field_W > 0) {
@@ -262,18 +262,18 @@ final class ImageProducerRasterBuffer extends CanvasRasterBuffer implements java
                 LoginMethod.field_c.field_ec <= LoginMethod.field_c.field_mc) {
                 jm.field_b.field_Ib.field_cb = fo.field_m;
                 StripedProgressBar.field_O.field_rb = false;
-                GrowableIntList.a(jm.field_b.content, false);
+                GrowableIntList.resetChildLayouts(jm.field_b.content, false);
               } else {
                 StripedProgressBar.field_O.field_rb = true;
                 jm.field_b.field_Ib.field_cb = null;
-                la.a(70, param0, jm.field_b, param8, param3);
+                la.layoutLobbyGameRows(70, param0, jm.field_b, param8, param3);
               }
             } else {
               if (0 < oo.field_b) {
                 AccountChoicePanel.a(2, param0, param7, param4);
                 nk.field_e.horizontalAlignment = 1;
                 nk.field_e.field_C = ArchiveIndex.field_l.field_C;
-                if (vn.field_g > 0) {
+                if (RisingBubble.field_g > 0) {
                   AccountNoticeDialog.a(param0, param7, 3, param4);
                 }
                 if (Checkbox.field_W > 0) {
@@ -283,16 +283,16 @@ final class ImageProducerRasterBuffer extends CanvasRasterBuffer implements java
                   LoginMethod.field_c.field_ec <= LoginMethod.field_c.field_mc) {
                   jm.field_b.field_Ib.field_cb = fo.field_m;
                   StripedProgressBar.field_O.field_rb = false;
-                  GrowableIntList.a(jm.field_b.content, false);
+                  GrowableIntList.resetChildLayouts(jm.field_b.content, false);
                 } else {
                   StripedProgressBar.field_O.field_rb = true;
                   jm.field_b.field_Ib.field_cb = null;
-                  la.a(70, param0, jm.field_b, param8, param3);
+                  la.layoutLobbyGameRows(70, param0, jm.field_b, param8, param3);
                 }
               } else {
                 nk.field_e.horizontalAlignment = 1;
                 nk.field_e.field_C = ArchiveIndex.field_l.field_C;
-                if (vn.field_g > 0) {
+                if (RisingBubble.field_g > 0) {
                   AccountNoticeDialog.a(param0, param7, 3, param4);
                   if (Checkbox.field_W > 0) {
                     CachedTextLayout.a(param1, param6 + 28363, param0, param4, param7);
@@ -301,11 +301,11 @@ final class ImageProducerRasterBuffer extends CanvasRasterBuffer implements java
                     LoginMethod.field_c.field_ec <= LoginMethod.field_c.field_mc) {
                     jm.field_b.field_Ib.field_cb = fo.field_m;
                     StripedProgressBar.field_O.field_rb = false;
-                    GrowableIntList.a(jm.field_b.content, false);
+                    GrowableIntList.resetChildLayouts(jm.field_b.content, false);
                   } else {
                     StripedProgressBar.field_O.field_rb = true;
                     jm.field_b.field_Ib.field_cb = null;
-                    la.a(70, param0, jm.field_b, param8, param3);
+                    la.layoutLobbyGameRows(70, param0, jm.field_b, param8, param3);
                   }
                 } else {
                   if (Checkbox.field_W > 0) {
@@ -314,16 +314,16 @@ final class ImageProducerRasterBuffer extends CanvasRasterBuffer implements java
                   if (!EmergentBehaviourBackground.field_o) {
                     StripedProgressBar.field_O.field_rb = true;
                     jm.field_b.field_Ib.field_cb = null;
-                    la.a(70, param0, jm.field_b, param8, param3);
+                    la.layoutLobbyGameRows(70, param0, jm.field_b, param8, param3);
                   } else {
                     if (LoginMethod.field_c.field_ec <= LoginMethod.field_c.field_mc) {
                       jm.field_b.field_Ib.field_cb = fo.field_m;
                       StripedProgressBar.field_O.field_rb = false;
-                      GrowableIntList.a(jm.field_b.content, false);
+                      GrowableIntList.resetChildLayouts(jm.field_b.content, false);
                     } else {
                       StripedProgressBar.field_O.field_rb = true;
                       jm.field_b.field_Ib.field_cb = null;
-                      la.a(70, param0, jm.field_b, param8, param3);
+                      la.layoutLobbyGameRows(70, param0, jm.field_b, param8, param3);
                     }
                   }
                 }
@@ -336,10 +336,10 @@ final class ImageProducerRasterBuffer extends CanvasRasterBuffer implements java
               ClientException.field_f.field_i == SoftwareRasterizer.field_d &&
               ClientException.field_f.field_a == SoftwareRasterizer.field_j) {
               if (LoginMethod.field_c != null) {
-                DebouncedValidator.a((byte) 32, false);
+                DebouncedValidator.layoutLobbyComponents((byte) 32, false);
               } else {
                 if (DraggableWidget.field_S != null) {
-                  DebouncedValidator.a((byte) 32, true);
+                  DebouncedValidator.layoutLobbyComponents((byte) 32, true);
                 } else {
                   PacketBuffer.b(false);
                 }
@@ -347,7 +347,7 @@ final class ImageProducerRasterBuffer extends CanvasRasterBuffer implements java
             }
             if (param4) {
               TextTableInitializer.field_c = WeightedLruCache.field_c;
-              pj.a((byte) 111, param4);
+              ScorePopup.updateOverlayFadeCounters((byte) 111, param4);
               if (param6 != -28362) {
                 field_m = (String) null;
               }
@@ -356,7 +356,7 @@ final class ImageProducerRasterBuffer extends CanvasRasterBuffer implements java
               }
               nk.field_e.horizontalAlignment = 1;
               nk.field_e.field_C = ArchiveIndex.field_l.field_C;
-              if (vn.field_g > 0) {
+              if (RisingBubble.field_g > 0) {
                 AccountNoticeDialog.a(param0, param7, 3, param4);
               }
               if (Checkbox.field_W > 0) {
@@ -366,15 +366,15 @@ final class ImageProducerRasterBuffer extends CanvasRasterBuffer implements java
                 LoginMethod.field_c.field_ec <= LoginMethod.field_c.field_mc) {
                 jm.field_b.field_Ib.field_cb = fo.field_m;
                 StripedProgressBar.field_O.field_rb = false;
-                GrowableIntList.a(jm.field_b.content, false);
+                GrowableIntList.resetChildLayouts(jm.field_b.content, false);
               } else {
                 StripedProgressBar.field_O.field_rb = true;
                 jm.field_b.field_Ib.field_cb = null;
-                la.a(70, param0, jm.field_b, param8, param3);
+                la.layoutLobbyGameRows(70, param0, jm.field_b, param8, param3);
               }
             } else {
               TextTableInitializer.field_c = (-640 + ni.field_q) / 2;
-              pj.a((byte) 111, param4);
+              ScorePopup.updateOverlayFadeCounters((byte) 111, param4);
               if (param6 != -28362) {
                 field_m = (String) null;
                 if (0 < oo.field_b) {
@@ -382,7 +382,7 @@ final class ImageProducerRasterBuffer extends CanvasRasterBuffer implements java
                 }
                 nk.field_e.horizontalAlignment = 1;
                 nk.field_e.field_C = ArchiveIndex.field_l.field_C;
-                if (vn.field_g > 0) {
+                if (RisingBubble.field_g > 0) {
                   AccountNoticeDialog.a(param0, param7, 3, param4);
                 }
                 if (Checkbox.field_W > 0) {
@@ -392,11 +392,11 @@ final class ImageProducerRasterBuffer extends CanvasRasterBuffer implements java
                   LoginMethod.field_c.field_ec <= LoginMethod.field_c.field_mc) {
                   jm.field_b.field_Ib.field_cb = fo.field_m;
                   StripedProgressBar.field_O.field_rb = false;
-                  GrowableIntList.a(jm.field_b.content, false);
+                  GrowableIntList.resetChildLayouts(jm.field_b.content, false);
                 } else {
                   StripedProgressBar.field_O.field_rb = true;
                   jm.field_b.field_Ib.field_cb = null;
-                  la.a(70, param0, jm.field_b, param8, param3);
+                  la.layoutLobbyGameRows(70, param0, jm.field_b, param8, param3);
                 }
               } else {
                 if (0 < oo.field_b) {
@@ -404,7 +404,7 @@ final class ImageProducerRasterBuffer extends CanvasRasterBuffer implements java
                 }
                 nk.field_e.horizontalAlignment = 1;
                 nk.field_e.field_C = ArchiveIndex.field_l.field_C;
-                if (vn.field_g > 0) {
+                if (RisingBubble.field_g > 0) {
                   AccountNoticeDialog.a(param0, param7, 3, param4);
                   if (Checkbox.field_W > 0) {
                     CachedTextLayout.a(param1, param6 + 28363, param0, param4, param7);
@@ -413,11 +413,11 @@ final class ImageProducerRasterBuffer extends CanvasRasterBuffer implements java
                     LoginMethod.field_c.field_ec <= LoginMethod.field_c.field_mc) {
                     jm.field_b.field_Ib.field_cb = fo.field_m;
                     StripedProgressBar.field_O.field_rb = false;
-                    GrowableIntList.a(jm.field_b.content, false);
+                    GrowableIntList.resetChildLayouts(jm.field_b.content, false);
                   } else {
                     StripedProgressBar.field_O.field_rb = true;
                     jm.field_b.field_Ib.field_cb = null;
-                    la.a(70, param0, jm.field_b, param8, param3);
+                    la.layoutLobbyGameRows(70, param0, jm.field_b, param8, param3);
                   }
                 } else {
                   if (Checkbox.field_W > 0) {
@@ -426,16 +426,16 @@ final class ImageProducerRasterBuffer extends CanvasRasterBuffer implements java
                   if (!EmergentBehaviourBackground.field_o) {
                     StripedProgressBar.field_O.field_rb = true;
                     jm.field_b.field_Ib.field_cb = null;
-                    la.a(70, param0, jm.field_b, param8, param3);
+                    la.layoutLobbyGameRows(70, param0, jm.field_b, param8, param3);
                   } else {
                     if (LoginMethod.field_c.field_ec <= LoginMethod.field_c.field_mc) {
                       jm.field_b.field_Ib.field_cb = fo.field_m;
                       StripedProgressBar.field_O.field_rb = false;
-                      GrowableIntList.a(jm.field_b.content, false);
+                      GrowableIntList.resetChildLayouts(jm.field_b.content, false);
                     } else {
                       StripedProgressBar.field_O.field_rb = true;
                       jm.field_b.field_Ib.field_cb = null;
-                      la.a(70, param0, jm.field_b, param8, param3);
+                      la.layoutLobbyGameRows(70, param0, jm.field_b, param8, param3);
                     }
                   }
                 }
@@ -445,10 +445,10 @@ final class ImageProducerRasterBuffer extends CanvasRasterBuffer implements java
             if (ClientException.field_f.field_i == SoftwareRasterizer.field_d &&
               ClientException.field_f.field_a == SoftwareRasterizer.field_j) {
               if (LoginMethod.field_c != null) {
-                DebouncedValidator.a((byte) 32, false);
+                DebouncedValidator.layoutLobbyComponents((byte) 32, false);
               } else {
                 if (DraggableWidget.field_S != null) {
-                  DebouncedValidator.a((byte) 32, true);
+                  DebouncedValidator.layoutLobbyComponents((byte) 32, true);
                 } else {
                   PacketBuffer.b(false);
                 }
@@ -456,7 +456,7 @@ final class ImageProducerRasterBuffer extends CanvasRasterBuffer implements java
             }
             if (param4) {
               TextTableInitializer.field_c = WeightedLruCache.field_c;
-              pj.a((byte) 111, param4);
+              ScorePopup.updateOverlayFadeCounters((byte) 111, param4);
               if (param6 != -28362) {
                 field_m = (String) null;
               }
@@ -465,7 +465,7 @@ final class ImageProducerRasterBuffer extends CanvasRasterBuffer implements java
               }
               nk.field_e.horizontalAlignment = 1;
               nk.field_e.field_C = ArchiveIndex.field_l.field_C;
-              if (vn.field_g > 0) {
+              if (RisingBubble.field_g > 0) {
                 AccountNoticeDialog.a(param0, param7, 3, param4);
               }
               if (Checkbox.field_W > 0) {
@@ -475,15 +475,15 @@ final class ImageProducerRasterBuffer extends CanvasRasterBuffer implements java
                 LoginMethod.field_c.field_ec <= LoginMethod.field_c.field_mc) {
                 jm.field_b.field_Ib.field_cb = fo.field_m;
                 StripedProgressBar.field_O.field_rb = false;
-                GrowableIntList.a(jm.field_b.content, false);
+                GrowableIntList.resetChildLayouts(jm.field_b.content, false);
               } else {
                 StripedProgressBar.field_O.field_rb = true;
                 jm.field_b.field_Ib.field_cb = null;
-                la.a(70, param0, jm.field_b, param8, param3);
+                la.layoutLobbyGameRows(70, param0, jm.field_b, param8, param3);
               }
             } else {
               TextTableInitializer.field_c = (-640 + ni.field_q) / 2;
-              pj.a((byte) 111, param4);
+              ScorePopup.updateOverlayFadeCounters((byte) 111, param4);
               if (param6 != -28362) {
                 field_m = (String) null;
                 if (0 < oo.field_b) {
@@ -491,7 +491,7 @@ final class ImageProducerRasterBuffer extends CanvasRasterBuffer implements java
                 }
                 nk.field_e.horizontalAlignment = 1;
                 nk.field_e.field_C = ArchiveIndex.field_l.field_C;
-                if (vn.field_g > 0) {
+                if (RisingBubble.field_g > 0) {
                   AccountNoticeDialog.a(param0, param7, 3, param4);
                 }
                 if (Checkbox.field_W > 0) {
@@ -501,18 +501,18 @@ final class ImageProducerRasterBuffer extends CanvasRasterBuffer implements java
                   LoginMethod.field_c.field_ec <= LoginMethod.field_c.field_mc) {
                   jm.field_b.field_Ib.field_cb = fo.field_m;
                   StripedProgressBar.field_O.field_rb = false;
-                  GrowableIntList.a(jm.field_b.content, false);
+                  GrowableIntList.resetChildLayouts(jm.field_b.content, false);
                 } else {
                   StripedProgressBar.field_O.field_rb = true;
                   jm.field_b.field_Ib.field_cb = null;
-                  la.a(70, param0, jm.field_b, param8, param3);
+                  la.layoutLobbyGameRows(70, param0, jm.field_b, param8, param3);
                 }
               } else {
                 if (0 < oo.field_b) {
                   AccountChoicePanel.a(2, param0, param7, param4);
                   nk.field_e.horizontalAlignment = 1;
                   nk.field_e.field_C = ArchiveIndex.field_l.field_C;
-                  if (vn.field_g > 0) {
+                  if (RisingBubble.field_g > 0) {
                     AccountNoticeDialog.a(param0, param7, 3, param4);
                   }
                   if (Checkbox.field_W > 0) {
@@ -522,16 +522,16 @@ final class ImageProducerRasterBuffer extends CanvasRasterBuffer implements java
                     LoginMethod.field_c.field_ec <= LoginMethod.field_c.field_mc) {
                     jm.field_b.field_Ib.field_cb = fo.field_m;
                     StripedProgressBar.field_O.field_rb = false;
-                    GrowableIntList.a(jm.field_b.content, false);
+                    GrowableIntList.resetChildLayouts(jm.field_b.content, false);
                   } else {
                     StripedProgressBar.field_O.field_rb = true;
                     jm.field_b.field_Ib.field_cb = null;
-                    la.a(70, param0, jm.field_b, param8, param3);
+                    la.layoutLobbyGameRows(70, param0, jm.field_b, param8, param3);
                   }
                 } else {
                   nk.field_e.horizontalAlignment = 1;
                   nk.field_e.field_C = ArchiveIndex.field_l.field_C;
-                  if (vn.field_g > 0) {
+                  if (RisingBubble.field_g > 0) {
                     AccountNoticeDialog.a(param0, param7, 3, param4);
                     if (Checkbox.field_W > 0) {
                       CachedTextLayout.a(param1, param6 + 28363, param0, param4, param7);
@@ -540,11 +540,11 @@ final class ImageProducerRasterBuffer extends CanvasRasterBuffer implements java
                       LoginMethod.field_c.field_ec <= LoginMethod.field_c.field_mc) {
                       jm.field_b.field_Ib.field_cb = fo.field_m;
                       StripedProgressBar.field_O.field_rb = false;
-                      GrowableIntList.a(jm.field_b.content, false);
+                      GrowableIntList.resetChildLayouts(jm.field_b.content, false);
                     } else {
                       StripedProgressBar.field_O.field_rb = true;
                       jm.field_b.field_Ib.field_cb = null;
-                      la.a(70, param0, jm.field_b, param8, param3);
+                      la.layoutLobbyGameRows(70, param0, jm.field_b, param8, param3);
                     }
                   } else {
                     if (Checkbox.field_W > 0) {
@@ -553,16 +553,16 @@ final class ImageProducerRasterBuffer extends CanvasRasterBuffer implements java
                     if (!EmergentBehaviourBackground.field_o) {
                       StripedProgressBar.field_O.field_rb = true;
                       jm.field_b.field_Ib.field_cb = null;
-                      la.a(70, param0, jm.field_b, param8, param3);
+                      la.layoutLobbyGameRows(70, param0, jm.field_b, param8, param3);
                     } else {
                       if (LoginMethod.field_c.field_ec <= LoginMethod.field_c.field_mc) {
                         jm.field_b.field_Ib.field_cb = fo.field_m;
                         StripedProgressBar.field_O.field_rb = false;
-                        GrowableIntList.a(jm.field_b.content, false);
+                        GrowableIntList.resetChildLayouts(jm.field_b.content, false);
                       } else {
                         StripedProgressBar.field_O.field_rb = true;
                         jm.field_b.field_Ib.field_cb = null;
-                        la.a(70, param0, jm.field_b, param8, param3);
+                        la.layoutLobbyGameRows(70, param0, jm.field_b, param8, param3);
                       }
                     }
                   }
@@ -572,7 +572,7 @@ final class ImageProducerRasterBuffer extends CanvasRasterBuffer implements java
           }
         }
         Pixelate.a(param3, (byte) 69, param8, param2, param5, param0, param9);
-        la.a(58, param0, Vector3.field_c, param8, param3);
+        la.layoutLobbyGameRows(58, param0, Vector3.field_c, param8, param3);
         AchievementsScreen.field_o = AchievementsScreen.field_o + 1;
     }
 

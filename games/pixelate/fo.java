@@ -47,9 +47,9 @@ final class fo {
         int var8 = this.field_l * 158 >> 12;
         this.field_r = this.field_p + (int)(Math.sin(var6) * (double)var8);
         this.field_o = this.field_i + (int)(Math.cos(var6) * (double)var8);
-        this.field_j[0].a(this.field_o, (byte) 48, this.field_r);
-        this.field_j[1].a(this.field_j[0].field_h, (byte) 48, this.field_j[0].field_g);
-        this.field_j[2].a(this.field_j[1].field_h, (byte) 48, this.field_j[1].field_g);
+        this.field_j[0].swingTo(this.field_o, (byte) 48, this.field_r);
+        this.field_j[1].swingTo(this.field_j[0].field_h, (byte) 48, this.field_j[0].field_g);
+        this.field_j[2].swingTo(this.field_j[1].field_h, (byte) 48, this.field_j[1].field_g);
     }
 
     final void b(int param0) {
@@ -63,7 +63,7 @@ final class fo {
         ki[] var2 = var6;
         for (var3 = 0; var3 < var6.length; var3++) {
           var9 = var6[var3];
-          var9.a(false);
+          var9.drawString(false);
         }
         ki[] var7 = this.field_j;
         var2 = var7;
@@ -71,7 +71,7 @@ final class fo {
         var3Lifetime1 = var8;
         while (var8 < var7.length) {
           var10 = var7[var8];
-          var10.b(3887);
+          var10.drawKite(3887);
           var8++;
         }
         SoftwareRasterizer.drawLine(this.field_p - 3, this.field_i - 5, 299 + this.field_d, this.field_q, 3355392);

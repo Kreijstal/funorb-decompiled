@@ -40,14 +40,14 @@ final class mc extends IntrusiveNode {
             stackIn_3_0 = AchievementsScreen.createPieceTiming(param3, (byte) 73);
           }
           var6 = stackIn_3_0;
-          var7 = el.a(param3, (byte) -24);
+          var7 = el.randomBorderFlags(param3, (byte) -24);
           if (param4 >= -31) {
             stackIn_5_0 = (Puzzle) null;
             return stackIn_5_0;
           }
           var8 = SpriteState.a(false, param3);
           var9 = GameResultsScreen.computeTimeBonusSeconds((byte) 124, param3);
-          var10 = mi.a(var12.field_d, param1, var12.field_j, 20);
+          var10 = mi.pickRandomPictures(var12.field_d, param1, var12.field_j, 20);
           var11 = new Puzzle(var12.field_j, var12.field_d, var7, var6.field_a, var6.field_b, var6.field_c, var9, var8, var10);
           var11.shufflePictures((byte) 58, UiTheme.field_f);
           stackIn_7_0 = var11;
@@ -355,7 +355,7 @@ final class mc extends IntrusiveNode {
                 } else {
                   if (ProxyAuthenticationException.field_d > 586) {
                     if (ScrollContainer.field_Kb.field_F + 586 <= ProxyAuthenticationException.field_d) {
-                      CachedTextLayout.e(param0 - 19320);
+                      CachedTextLayout.drawScreenshotSlideshow(param0 - 19320);
                       li.field_a[Vector3.field_b].drawTransparent(269, 340);
                       return;
                     }
@@ -368,7 +368,7 @@ final class mc extends IntrusiveNode {
               }
             }
           }
-          CachedTextLayout.e(param0 - 19320);
+          CachedTextLayout.drawScreenshotSlideshow(param0 - 19320);
           li.field_a[Vector3.field_b].drawTransparent(269, 340);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

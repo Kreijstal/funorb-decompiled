@@ -111,7 +111,7 @@ final class AgeValidator extends TextFieldValidator {
             field_p = true;
           }
           while (var4 != null) {
-            em.a((byte) -7, var4, param1);
+            em.sendRankingQuery((byte) -7, var4, param1);
             var4 = (lc) (LoginCredentials.field_c.next(1504642273));
           }
           return;

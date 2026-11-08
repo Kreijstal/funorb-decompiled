@@ -121,11 +121,11 @@ final class ScoreMarkerDemo {
             stackIn_9_0 = WeightedLruCache.field_d;
             return stackIn_9_0;
           }
-          if (ImageProducerRasterBuffer.a(-640, param1)) {
+          if (ImageProducerRasterBuffer.isFriend(-640, param1)) {
             stackIn_13_0 = AlphaContainer.a(SpriteState.field_H, 45, new String[]{param1});
             return stackIn_13_0;
           }
-          if (aj.field_t >= 100) {
+          if (ReflectionCheckRequest.field_t >= 100) {
             stackIn_17_0 = ViewportController.field_k;
             return stackIn_17_0;
           }

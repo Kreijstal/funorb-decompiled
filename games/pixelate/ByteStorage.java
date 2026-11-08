@@ -34,7 +34,7 @@ abstract class ByteStorage {
         try {
           TextLayout.field_a = param0;
           Checkbox.field_U = param3;
-          LoadingProgressDialog.a(param1, TriangleMesh.field_e, -26027);
+          LoadingProgressDialog.showAccountRequestDialog(param1, TriangleMesh.field_e, -26027);
         } catch (RuntimeException runtimeException) {
           throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "gf.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }

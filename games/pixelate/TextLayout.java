@@ -21,7 +21,7 @@ abstract class TextLayout {
           return -1;
         }
         if (this.lines.length == 1) {
-          return this.lines[0].a(param2, 27760);
+          return this.lines[0].characterIndexAt(param2, 27760);
         }
         int var4 = 0;
         if (param1 <= 116) {
@@ -31,7 +31,7 @@ abstract class TextLayout {
           var6 = this.lines[var5];
           if (param0 >= var6.field_b &&
             param0 <= var6.field_d) {
-            var7 = var6.a(param2, 27760);
+            var7 = var6.characterIndexAt(param2, 27760);
             if (var7 == -1) {
               return -1;
             }
@@ -42,7 +42,7 @@ abstract class TextLayout {
         return -1;
     }
 
-    final static void c(boolean param0, int param1) {
+    final static void drawActivePopup(boolean param0, int param1) {
         if (null != ri.field_f) {
           SoftwareRasterizer.darkenRectangle(SoftwareRasterizer.field_e, SoftwareRasterizer.field_f, -SoftwareRasterizer.field_e + SoftwareRasterizer.field_h, SoftwareRasterizer.field_a - SoftwareRasterizer.field_f);
           ri.field_f.drawFullScreen(param0, 0);
@@ -52,7 +52,7 @@ abstract class TextLayout {
         }
     }
 
-    final int b(boolean param0, int param1) {
+    final int getCharacterX(boolean param0, int param1) {
         int var4 = 0;
         TextLayoutLine var5 = null;
         int var6 = Pixelate.field_H ? 1 : 0;
@@ -71,7 +71,7 @@ abstract class TextLayout {
         return 0;
     }
 
-    final static void a(boolean param0, LobbyGame param1, byte param2, PacketBuffer param3) {
+    final static void readLobbyGameStatus(boolean param0, LobbyGame param1, byte param2, PacketBuffer param3) {
         int var8 = 0;
         LobbyGame stackIn_8_0 = null;
         boolean stackIn_9_1 = false;
@@ -138,7 +138,7 @@ abstract class TextLayout {
           var6 = stackIn_31_0;
           param3.readBytes(param1.field_Eb, 0, -77, param1.field_Eb.length);
           param1.field_bc = param3.readUnsignedShort((byte) -11);
-          param1.field_Lb = hm.a(64) - (long)param3.readInt(param2 - 120);
+          param1.field_Lb = hm.monotonicMillis(64) - (long)param3.readInt(param2 - 120);
           if (var5 == 0) {
             param1.field_nc = -1;
           } else {
@@ -191,7 +191,7 @@ abstract class TextLayout {
         return stackIn_7_0;
     }
 
-    final int a(int param0) {
+    final int getMaxLineWidth(int param0) {
         int var4 = 0;
         int var2;
         TextLayoutLine[] var3;
@@ -200,7 +200,7 @@ abstract class TextLayout {
         int var6;
         var7 = Pixelate.field_H ? 1 : 0;
         if (param0 != 0) {
-          this.a(-37);
+          this.getMaxLineWidth(-37);
         }
         var2 = -1;
         if (this.lines != null) {
@@ -208,7 +208,7 @@ abstract class TextLayout {
           for (var4 = 0; var4 < var3.length; var4++) {
             var5 = var3[var4];
             if (var5 != null) {
-              var6 = var5.a((byte) 86);
+              var6 = var5.getRightEdge((byte) 86);
               if (var6 > var2) {
                 var2 = var6;
               }

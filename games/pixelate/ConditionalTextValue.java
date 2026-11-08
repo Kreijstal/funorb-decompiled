@@ -12,7 +12,7 @@ final class ConditionalTextValue {
     static String field_a;
     static String field_c;
 
-    final String a(int param0) {
+    final String getText(int param0) {
         if (param0 != -30491) {
           field_c = (String) null;
           return this.field_f;
@@ -20,15 +20,15 @@ final class ConditionalTextValue {
         return this.field_f;
     }
 
-    final static boolean b(int param0) {
+    final static boolean isAccountNamePromptOpen(int param0) {
         if (param0 != -10093) {
-          ConditionalTextValue.b(-27);
+          ConditionalTextValue.isAccountNamePromptOpen(-27);
           return he.field_f != null ? true : false;
         }
         return he.field_f != null ? true : false;
     }
 
-    final static String c(int param0) {
+    final static String getLoadingStatusMessage(int param0) {
         if (hf.field_q < 2) {
           return td.field_d;
         }
@@ -54,7 +54,7 @@ final class ConditionalTextValue {
           return jd.field_p;
         }
         if (param0 != 16422) {
-          ConditionalTextValue.b(34);
+          ConditionalTextValue.isAccountNamePromptOpen(34);
         }
         if (!MatchingTextValidator.field_u.ensureAllGroupsAvailable((byte) 92)) {
           return em.field_a + " - " + MatchingTextValidator.field_u.getOverallProgress(0) + "%";
@@ -99,7 +99,7 @@ final class ConditionalTextValue {
         }
     }
 
-    final boolean b(byte param0) {
+    final boolean isPending(byte param0) {
         int var2 = -65 / ((59 - param0) / 43);
         return this.field_b;
     }

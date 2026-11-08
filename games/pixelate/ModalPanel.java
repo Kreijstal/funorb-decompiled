@@ -4,7 +4,7 @@
 abstract class ModalPanel extends UiContainer {
     static String field_O;
     private int field_J;
-    static up[] field_I;
+    static PuzzleThumbnail[] field_I;
     boolean field_N;
     private ModalStack field_M;
     static int[] field_L;
@@ -44,10 +44,10 @@ abstract class ModalPanel extends UiContainer {
 
     private final int getVisibilityAlpha(boolean param0) {
         if (!param0) {
-          return !this.field_N ? 0 : this == this.field_M.n(640) ? 256 : 0;
+          return !this.field_N ? 0 : this == this.field_M.getTopOpenPanel(640) ? 256 : 0;
         }
         field_L = (int[]) null;
-        return !this.field_N ? 0 : this == this.field_M.n(640) ? 256 : 0;
+        return !this.field_N ? 0 : this == this.field_M.getTopOpenPanel(640) ? 256 : 0;
     }
 
     ModalPanel(ModalStack param0, int param1, int param2) {
@@ -198,7 +198,7 @@ abstract class ModalPanel extends UiContainer {
     }
 
     static {
-        field_I = new up[50];
+        field_I = new PuzzleThumbnail[50];
         field_L = new int[4];
         field_O = "<%0> wants to join";
         field_K = false;

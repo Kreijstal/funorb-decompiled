@@ -21,7 +21,7 @@ final class JaggrabDownloader implements Runnable {
     static int field_a;
     private PlatformTask field_d;
 
-    final static void a(byte param0, int param1, int param2, int param3) {
+    final static void setMenuTextColours(byte param0, int param1, int param2, int param3) {
         ce.field_b = param1;
         if (param0 > -112) {
           field_f = (String) null;
@@ -33,7 +33,7 @@ final class JaggrabDownloader implements Runnable {
         MatchingTextValidator.field_s = param3;
     }
 
-    final static LobbyPlayer a(long param0, int param1) {
+    final static LobbyPlayer findGamePlayer(long param0, int param1) {
         if (param1 != 14428) {
           return (LobbyPlayer) null;
         }
@@ -84,14 +84,14 @@ final class JaggrabDownloader implements Runnable {
         field_f = null;
     }
 
-    final PacketBuffer a(int param0) {
+    final PacketBuffer getDownloadedBuffer(int param0) {
         if (this.field_n != param0) {
           return null;
         }
         return this.field_l;
     }
 
-    final synchronized boolean b(byte param0) {
+    final synchronized boolean poll(byte param0) {
         Throwable decompiledCaughtException = null;
         IOException var2 = null;
         OutputStream var3 = null;
@@ -186,7 +186,7 @@ final class JaggrabDownloader implements Runnable {
               break;
             }
             if (this.field_l.position == this.field_l.payload.length) {
-              throw JaggrabDownloader.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + this.field_l.payload.length + " " + this.field_b));
+              throw JaggrabDownloader.<RuntimeException>rethrowUnchecked(new Exception("HG1: " + this.field_l.payload.length + " " + this.field_b));
             }
             var1 = this;
             synchronized (var1) {
@@ -230,7 +230,7 @@ final class JaggrabDownloader implements Runnable {
     }
 
     @SuppressWarnings("unchecked")
-    private static <T extends Throwable> RuntimeException $cfr$sneakyThrow(Throwable throwable) throws T {
+    private static <T extends Throwable> RuntimeException rethrowUnchecked(Throwable throwable) throws T {
         throw (T) throwable;
     }
 }

@@ -268,7 +268,7 @@ final class PlayerBoard {
           this.pieceTones = (boolean[]) null;
         }
         for (var3Lifetime1 = 0; var3Lifetime1 < 4; var3Lifetime1++) {
-          this.pieceTones[var3Lifetime1] = vn.field_e[var2][var3Lifetime1];
+          this.pieceTones[var3Lifetime1] = RisingBubble.field_e[var2][var3Lifetime1];
         }
         if (DateOfBirthValidator.field_j != 1) {
           this.field_u = this.field_u + 1;

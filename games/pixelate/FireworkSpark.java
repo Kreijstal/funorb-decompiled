@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class wl {
+final class FireworkSpark {
     static String field_f;
     static volatile boolean field_i;
     private double[] field_e;
@@ -14,7 +14,7 @@ final class wl {
     static boolean field_b;
     private int[] field_g;
 
-    final void b(byte param0) {
+    final void draw(byte param0) {
         int var3 = 0;
         int var4 = Pixelate.field_H ? 1 : 0;
         int var2 = this.field_a * 240 / 255;
@@ -29,7 +29,7 @@ final class wl {
         }
     }
 
-    final boolean a(byte param0) {
+    final boolean isOffScreen(byte param0) {
         int var2;
         int var3;
         int var4;
@@ -39,14 +39,14 @@ final class wl {
         boolean stackIn_19_0 = false;
         var4 = Pixelate.field_H ? 1 : 0;
         if (param0 >= -7) {
-          wl.a(102);
+          FireworkSpark.constantOne(102);
         }
         var2 = 1;
         var3 = -1 + this.field_h.length;
         scanLoop1: while (true) {
           if (var3 >= 0) {
             stackIn_7_0 = var2;
-            stackIn_7_1 = $cfr$dcmpg(0.0, this.field_h[var3]);
+            stackIn_7_1 = compareDoubles(0.0, this.field_h[var3]);
             if (stackIn_7_1 < 0 &&
               640.0 > this.field_h[var3] &&
               this.field_e[var3] > 0.0 &&
@@ -70,7 +70,7 @@ final class wl {
         return stackIn_19_0;
     }
 
-    final static int a(int param0) {
+    final static int constantOne(int param0) {
         if (param0 != 23062) {
           field_i = true;
           return 1;
@@ -81,11 +81,11 @@ final class wl {
     public static void releaseStatics(boolean param0) {
         field_f = null;
         if (param0) {
-          wl.releaseStatics(false);
+          FireworkSpark.releaseStatics(false);
         }
     }
 
-    final void a(int param0, int param1) {
+    final void advance(int param0, int param1) {
         int var3 = 0;
         int var4 = Pixelate.field_H ? 1 : 0;
         for (var3 = 19; 0 < var3; var3--) {
@@ -98,7 +98,7 @@ final class wl {
         this.field_c = this.field_c + UiComponent.field_s;
     }
 
-    wl(int param0, int param1, int param2, int[] param3) {
+    FireworkSpark(int param0, int param1, int param2, int[] param3) {
         int var5_int = 0;
         double[] var6 = null;
         int var7 = 0;
@@ -117,7 +117,7 @@ final class wl {
             var6[var7] = -1000.0;
           }
           var5_double = (double)(JavaRandomHelpers.a(ea.field_b, -124, 10) + 15) / 10.0;
-          this.field_d = var5_double * DialWidget.a(3.141592653589793 * (double)param2 / 512.0, false);
+          this.field_d = var5_double * DialWidget.sineLookup(3.141592653589793 * (double)param2 / 512.0, false);
           this.field_c = var5_double * jn.sine((double)param2 * 3.141592653589793 / 512.0, 6802);
         } catch (RuntimeException runtimeException) {
           throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "wl.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
@@ -129,7 +129,7 @@ final class wl {
         field_i = false;
     }
 
-    private static int $cfr$dcmpg(double left, double right) {
+    private static int compareDoubles(double left, double right) {
         return left < right ? -1 : (left == right ? 0 : 1);
     }
 }

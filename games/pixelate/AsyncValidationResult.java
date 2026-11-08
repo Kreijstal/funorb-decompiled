@@ -43,13 +43,13 @@ final class AsyncValidationResult {
         if (un.field_l) {
           return AccountMessagePanel.b(102, param2, param1);
         }
-        if (DebouncedValidator.a(param1, param2, param3)) {
+        if (DebouncedValidator.handleChatShortcutKey(param1, param2, param3)) {
           return true;
         }
         if (IsaacRandom.field_g) {
           return false;
         }
-        return EmailCredentials.a(param0, -35, param1);
+        return EmailCredentials.handleChatInputKey(param0, -35, param1);
     }
 
     final boolean isComplete(int param0) {
@@ -64,11 +64,11 @@ final class AsyncValidationResult {
         wa.field_c.refreshPanelVisibility((byte) 54);
         int var1 = -119 / ((param0 + 55) / 51);
         if (null != cn.field_b) {
-          wa.field_c.b(-6183, cn.field_b);
+          wa.field_c.showPanel(-6183, cn.field_b);
           return;
         }
         cn.field_b = new LoadingProgressDialog(wa.field_c, wp.field_a);
-        wa.field_c.b(-6183, cn.field_b);
+        wa.field_c.showPanel(-6183, cn.field_b);
     }
 
     final boolean isSuccessful(int param0) {

@@ -47,10 +47,10 @@ final class ge {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var20 = null;
         try {
-          ReportAbuseDialog.a(param19 - 84, param2, param11, param18, param13);
+          ReportAbuseDialog.loadLobbyIcons(param19 - 84, param2, param11, param18, param13);
           ph.a(param2, (byte) -106);
           IntrusiveNode.a(param14, param2, param15, (byte) 126, param10, param16, param8, param4, args, param12, param6, param9, param5, param1, param3);
-          aj.a(param7, param2, param17, -94);
+          ReflectionCheckRequest.a(param7, param2, param17, -94);
           if (param19 != -41) {
             field_g = (Sprite) null;
           }

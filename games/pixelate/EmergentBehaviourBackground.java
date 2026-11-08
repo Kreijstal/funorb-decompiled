@@ -6,7 +6,7 @@ final class EmergentBehaviourBackground extends BackgroundScene {
     static String field_t;
     static boolean field_o;
     static String field_n;
-    private lp[] field_p;
+    private DriftingParticle[] field_p;
     private int field_s;
     static String field_m;
     static boolean field_q;
@@ -38,8 +38,8 @@ final class EmergentBehaviourBackground extends BackgroundScene {
         int var3 = 0;
         int discarded$1 = 0;
         int var2;
-        lp[] var3_ref_lp__;
-        lp var5;
+        DriftingParticle[] var3_ref_lp__;
+        DriftingParticle var5;
         int var6;
         var6 = Pixelate.field_H ? 1 : 0;
         var2 = 0;
@@ -51,7 +51,7 @@ final class EmergentBehaviourBackground extends BackgroundScene {
         var3_ref_lp__ = this.field_p;
         for (var4 = 0; var4 < var3_ref_lp__.length; var4++) {
           var5 = var3_ref_lp__[var4];
-          var5.a();
+          var5.draw();
         }
         for (var3 = 0; var3 < SoftwareRasterizer.field_k.length; var3++) {
           if (AccountRegistrationPanel.field_O < SoftwareRasterizer.field_k[var3]) {
@@ -156,9 +156,9 @@ final class EmergentBehaviourBackground extends BackgroundScene {
         int var3_int = 0;
         this.field_s = 0;
         try {
-          this.field_p = new lp[500];
+          this.field_p = new DriftingParticle[500];
           for (var3_int = 0; this.field_p.length > var3_int; var3_int++) {
-            this.field_p[var3_int] = new lp();
+            this.field_p[var3_int] = new DriftingParticle();
           }
           this.a(this.field_s, 0);
         } catch (RuntimeException runtimeException) {
@@ -168,14 +168,14 @@ final class EmergentBehaviourBackground extends BackgroundScene {
 
     final void tick(int param0) {
         int var3 = 0;
-        lp var4 = null;
+        DriftingParticle var4 = null;
         int var5 = Pixelate.field_H ? 1 : 0;
         super.tick(param0);
-        lp[] var6 = this.field_p;
-        lp[] var2 = var6;
+        DriftingParticle[] var6 = this.field_p;
+        DriftingParticle[] var2 = var6;
         for (var3 = 0; var6.length > var3; var3++) {
           var4 = var6[var3];
-          var4.b(-126);
+          var4.tick(-126);
         }
         int fieldTemp$0 = this.field_s + 1;
         this.field_s = this.field_s + 1;

@@ -16,7 +16,7 @@ final class fq extends MenuScreen {
 
     final int getRowY(int param0, int param1) {
         int var3 = -58 % ((-13 - param0) / 37);
-        if (ArrayWidgetContainer.a((byte) 88)) {
+        if (ArrayWidgetContainer.isAccountUiActive((byte) 88)) {
           return (this.field_i >> 1) + this.field_d;
         }
         if (param1 < 2) {
@@ -33,7 +33,7 @@ final class fq extends MenuScreen {
         if (param1 != 90) {
           return 74;
         }
-        if (ArrayWidgetContainer.a((byte) 62)) {
+        if (ArrayWidgetContainer.isAccountUiActive((byte) 62)) {
           return param0 != 0 ? 470 : 50;
         }
         int var3 = param0 > 1 ? -2 + param0 : param0;
@@ -45,7 +45,7 @@ final class fq extends MenuScreen {
         int var3;
         int var4;
         var4 = Pixelate.field_H ? 1 : 0;
-        if (ArrayWidgetContainer.a((byte) 115)) {
+        if (ArrayWidgetContainer.isAccountUiActive((byte) 115)) {
           this.field_g.handleHorizontalNavigation(53, 0);
           return;
         }
@@ -100,7 +100,7 @@ final class fq extends MenuScreen {
           fq.g((byte) 97);
         }
         stackIn_5_1 = 35;
-        if (ArrayWidgetContainer.a((byte) 101) &&
+        if (ArrayWidgetContainer.isAccountUiActive((byte) 101) &&
           param2 == 0) {
           stackIn_7_2 = StripedProgressBar.field_S;
         } else {
@@ -140,7 +140,7 @@ final class fq extends MenuScreen {
           if (param0.field_l != null) {
             um.field_o = param0.field_n;
             MusicCrossfadeStream.field_F = param0.field_k;
-            up.field_h = param0.field_l;
+            PuzzleThumbnail.field_h = param0.field_l;
             hm.field_b = param0.field_j;
           }
           vd.appendChatHistory(false, param0);
@@ -164,7 +164,7 @@ final class fq extends MenuScreen {
           field_q = -11;
         }
         int var3 = (-(2 * this.field_m) + 640) / 2;
-        if (!ArrayWidgetContainer.a((byte) 116)) {
+        if (!ArrayWidgetContainer.isAccountUiActive((byte) 116)) {
           return this.getRowLeft(param0, (byte) 90) + var3;
         }
         if (0 == param0) {
@@ -181,7 +181,7 @@ final class fq extends MenuScreen {
     }
 
     final static void g(byte param0) {
-        GreenGrowTheRushesBackground.a(AudioService.a(13867), -7624);
+        GreenGrowTheRushesBackground.setTuhstatbutCookie(AudioService.a(13867), -7624);
         if (param0 >= -46) {
           fq.g((byte) -70);
         }
@@ -213,11 +213,11 @@ final class fq extends MenuScreen {
           NumericDateInputWidget.field_W[5].drawTransparent(0, 45);
           this.drawRows((byte) -71);
           this.drawDefaultBackdrop((byte) -63);
-          if (ArrayWidgetContainer.a((byte) 74)) {
+          if (ArrayWidgetContainer.isAccountUiActive((byte) 74)) {
             var2 = wo.field_a;
           } else {
             if (aa.field_p == null) {
-              aa.field_p = PasswordValidator.a(3, (byte) 103, 1, 10, 0);
+              aa.field_p = PasswordValidator.getRankingTableRequest(3, (byte) 103, 1, 10, 0);
             }
             var3_ref_ob = PieceTiming.field_e;
             var4 = aa.field_p;
@@ -267,7 +267,7 @@ final class fq extends MenuScreen {
         }
         var3 = 225 + PieceTiming.field_e.maxAscent;
         PieceTiming.field_e.drawCentered(var2, 330, var3, 0, 0);
-        if (ArrayWidgetContainer.a((byte) 96)) {
+        if (ArrayWidgetContainer.isAccountUiActive((byte) 96)) {
           stackIn_28_0 = ScoreMarkerDemo.field_h;
         } else {
           stackIn_28_0 = MenuInputState.field_b;

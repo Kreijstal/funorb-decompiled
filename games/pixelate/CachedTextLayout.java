@@ -16,7 +16,7 @@ final class CachedTextLayout extends TextLayout {
     private boolean singleLineMode;
     private BitmapFont cachedFont;
 
-    final static void a(int param0, int param1, byte param2, boolean param3, int param4, int param5, LobbyGame param6, int param7) {
+    final static void findValidSettingCombination(int param0, int param1, byte param2, boolean param3, int param4, int param5, LobbyGame param6, int param7) {
         int stackIn_4_0 = 0;
         int stackIn_4_1 = 0;
         int stackIn_25_0 = 0;
@@ -253,7 +253,7 @@ final class CachedTextLayout extends TextLayout {
                       }
                       if (var12 != 0) {
                         var10Lifetime1 = 1;
-                        CachedTextLayout.a(param0, param1, (byte) 124, param3, param4, param5, param6, 1 + param7);
+                        CachedTextLayout.findValidSettingCombination(param0, param1, (byte) 124, param3, param4, param5, param6, 1 + param7);
                       }
                       if (PictureStrip.field_f) {
                         return;
@@ -278,7 +278,7 @@ final class CachedTextLayout extends TextLayout {
                       } else {
                         param4 = var11Lifetime1;
                       }
-                      CachedTextLayout.a(param0, param1, (byte) 83, param3, param4, param5, param6, param7 + 1);
+                      CachedTextLayout.findValidSettingCombination(param0, param1, (byte) 83, param3, param4, param5, param6, param7 + 1);
                       if (PictureStrip.field_f) {
                         return;
                       }
@@ -322,7 +322,7 @@ final class CachedTextLayout extends TextLayout {
         }
     }
 
-    final static void a(boolean param0, byte param1) {
+    final static void drawLobbyRoot(boolean param0, byte param1) {
         ui.field_i.drawFullScreen(param0, 0);
         if (param1 != 34) {
           field_n = (String) null;
@@ -862,11 +862,11 @@ final class CachedTextLayout extends TextLayout {
                   if (ep.field_a.field_R) {
                     boolean decompiledSharedTail0 = (0 != nd.field_b.field_g.selectedTab);
                     if (!decompiledSharedTail0) {
-                      up.field_o = CipherPacketBuffer.field_u;
+                      PuzzleThumbnail.field_o = CipherPacketBuffer.field_u;
                       decompiledSharedTail0 = (var19 != 0);
                     }
                     if (decompiledSharedTail0) {
-                      up.field_o = AlphaContainer.a(li.field_b, 107, new String[]{PairedTextColumns.field_Gb});
+                      PuzzleThumbnail.field_o = AlphaContainer.a(li.field_b, 107, new String[]{PairedTextColumns.field_Gb});
                     }
                   }
                   decompiledFrameRemainder3 = (var19 != 0);
@@ -929,11 +929,11 @@ final class CachedTextLayout extends TextLayout {
                     var14 = fg.field_b + (String) (var11);
                   }
                 }
-                up.field_o = "<col=A00000>" + var13_ref + "<br>" + var14;
+                PuzzleThumbnail.field_o = "<col=A00000>" + var13_ref + "<br>" + var14;
               }
             }
             if (0L != bo.field_e) {
-              var9 = (int)(-hm.a(64) + bo.field_e);
+              var9 = (int)(-hm.monotonicMillis(64) + bo.field_e);
               var9 = (var9 + 999) / 1000;
               if (var9 < 1) {
                 var9 = 1;
@@ -978,7 +978,7 @@ final class CachedTextLayout extends TextLayout {
         }
     }
 
-    final static void e(int param0) {
+    final static void drawScreenshotSlideshow(int param0) {
         Object stackIn_33_0 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
@@ -1065,11 +1065,11 @@ final class CachedTextLayout extends TextLayout {
         }
     }
 
-    final static long d(int param0) {
+    final static long millisSinceLastPacket(int param0) {
         if (param0 != 8) {
           field_j = (String) null;
         }
-        return -SpriteCheckboxPainter.field_c + hm.a(64);
+        return -SpriteCheckboxPainter.field_c + hm.monotonicMillis(64);
     }
 
     final void layoutLeftAlignedLine(BitmapFont param0, int param1, int param2, boolean param3, String param4) {

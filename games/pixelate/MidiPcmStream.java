@@ -219,7 +219,7 @@ final class MidiPcmStream extends PcmStream {
             var9 = (int)var8.field_e;
             var12 = (MusicPatch) (this.patches.get(-25484, (long)var9));
             if (var12 == null) {
-              var13 = TabbedPanel.a(param2, var9, -30805);
+              var13 = TabbedPanel.loadMusicPatch(param2, var9, -30805);
               if (var13 == null) {
                 var6_int = 0;
                 decompiledFrameRemainder0 = false;
@@ -1227,7 +1227,7 @@ final class MidiPcmStream extends PcmStream {
         }
         MusicPatch var4 = (MusicPatch) (this.patches.first((byte) -121));
         while (var4 != null) {
-          var4.a(false);
+          var4.releaseSamples(false);
           var4 = (MusicPatch) (this.patches.next(113));
         }
     }

@@ -163,7 +163,7 @@ final class VorbisCodebook {
           var2 = 0;
           var3_int = VorbisSample.readBits(5) + 1;
           while (var2 < this.field_d) {
-            var4_int = VorbisSample.readBits(aq.a((byte) 69, this.field_d - var2));
+            var4_int = VorbisSample.readBits(aq.bitLength((byte) 69, this.field_d - var2));
             for (var5 = 0; var5 < var4_int; var5++) {
               incrementValue$0 = var2;
               var2++;

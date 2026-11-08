@@ -19,7 +19,7 @@ abstract class MenuScreen {
 
     int getRowY(int param0, int param1) {
         if (this.field_l == 6 &&
-          !ArrayWidgetContainer.a((byte) 88)) {
+          !ArrayWidgetContainer.isAccountUiActive((byte) 88)) {
           if (param1 < 2) {
             return this.field_d;
           }
@@ -279,14 +279,14 @@ abstract class MenuScreen {
 
     int getRowRight(int param0, boolean param1) {
         if (this.field_l == 5 &&
-          !ArrayWidgetContainer.a((byte) 78)) {
+          !ArrayWidgetContainer.isAccountUiActive((byte) 78)) {
           return 3 <= param0 ? 380 : 200 + 200 * param0;
         }
         if (param1) {
           return 50;
         }
         if (this.field_l == 6 &&
-          !ArrayWidgetContainer.a((byte) 77)) {
+          !ArrayWidgetContainer.isAccountUiActive((byte) 77)) {
           return 2 <= param0 ? 380 : param0 * 240 + 300;
         }
         return this.field_a;
@@ -306,7 +306,7 @@ abstract class MenuScreen {
           return;
         }
         if (this.field_l == 6 &&
-          !ArrayWidgetContainer.a((byte) 84)) {
+          !ArrayWidgetContainer.isAccountUiActive((byte) 84)) {
           this.handleNavigationKeys((byte) 81);
         } else {
           this.field_g.handleVerticalNavigation((byte) -48);
@@ -318,11 +318,11 @@ abstract class MenuScreen {
           this.field_a = -74;
         }
         if (this.field_l == 5 &&
-          !ArrayWidgetContainer.a((byte) 125)) {
+          !ArrayWidgetContainer.isAccountUiActive((byte) 125)) {
           return param0 >= 3 ? 260 : 200 * param0 + 40;
         }
         if (6 == this.field_l &&
-          !ArrayWidgetContainer.a((byte) 66)) {
+          !ArrayWidgetContainer.isAccountUiActive((byte) 66)) {
           return 2 <= param0 ? 260 : 100 + 240 * param0;
         }
         return this.field_m;
@@ -538,7 +538,7 @@ abstract class MenuScreen {
         var3 = Pixelate.field_H ? 1 : 0;
         if (!ValidationState.field_c &&
           !LinkButtonPainter.field_d) {
-          while (DirectByteStorage.$cfr$intArgs$b$c4997cb15529(121)) {
+          while (DirectByteStorage.pollKeyEvent(121)) {
             if (ke.field_a == 13) {
               this.onCancel((byte) -16);
               continue;
@@ -602,7 +602,7 @@ abstract class MenuScreen {
                 } else {
                   if (1 == var6) {
                     if (!(!this.field_g.isActivated(38))) {
-                      if (ArrayWidgetContainer.a((byte) 66)) {
+                      if (ArrayWidgetContainer.isAccountUiActive((byte) 66)) {
                         MatchController.openTextPopup(param2, 0, -4, (byte) 91, QuickChatMenu.field_Ib);
                       } else {
                         var6 = param2 ? 1 : 0;
@@ -711,7 +711,7 @@ abstract class MenuScreen {
                             if (this.field_g.isLeftKey(-97) &&
                               LinkButtonPainter.field_h > 0) {
                               var5 = 1;
-                              MusicPatch.e(99);
+                              MusicPatch.decreaseMusicVolume(99);
                             }
                             if (this.field_g.isRightKey(102) &&
                               LinkButtonPainter.field_h < 256) {
@@ -726,22 +726,22 @@ abstract class MenuScreen {
                           } else {
                             if (var6 == 21) {
                               if (this.field_g.isHomeKey((byte) -94)) {
-                                ArrayWidgetContainer.a(0, -114);
+                                ArrayWidgetContainer.setSoundVolume(0, -114);
                               }
                               if (this.field_g.isEndKey(64)) {
-                                ArrayWidgetContainer.a(256, -54);
+                                ArrayWidgetContainer.setSoundVolume(256, -54);
                               }
                               if (this.field_g.isButtonHeld((byte) 35)) {
                                 var6 = -120 + (this.getRowLeft(param0, (byte) 90) + (this.getRowRight(param0, false) + Checkbox.field_T)) >> 1;
                                 var7_int = ProxyAuthenticationException.field_d - var6;
                                 var8 = var7_int * 256 / 120;
                                 if (var8 <= 0) {
-                                  ArrayWidgetContainer.a(0, -50);
+                                  ArrayWidgetContainer.setSoundVolume(0, -50);
                                 } else {
                                   if (256 <= var8) {
-                                    ArrayWidgetContainer.a(256, -63);
+                                    ArrayWidgetContainer.setSoundVolume(256, -63);
                                   } else {
-                                    ArrayWidgetContainer.a(var8, -109);
+                                    ArrayWidgetContainer.setSoundVolume(var8, -109);
                                   }
                                 }
                               }
@@ -749,7 +749,7 @@ abstract class MenuScreen {
                                 fc.a((byte) -65);
                               }
                               if (!(!this.field_g.isRightKey(102))) {
-                                ProxySocketConnector.e(-4767);
+                                ProxySocketConnector.increaseSoundVolume(-4767);
                               }
                               break regionExit1;
                             }
@@ -759,7 +759,7 @@ abstract class MenuScreen {
                                   ln.a(33);
                                 } else {
                                   var6 = param2 ? 1 : 0;
-                                  wl.field_b = false;
+                                  FireworkSpark.field_b = false;
                                   var7 = qj.field_e;
                                   QuickChatPhraseCache.a(((BitmapFont) ((Object) var7)).maxAscent + ((BitmapFont) ((Object) var7)).maxDescent, -879, ((BitmapFont) ((Object) var7)).maxAscent, 2, 320, 8, ab.field_c, var7, 240, bi.field_g, 8, var6 != 0);
                                 }
@@ -903,7 +903,7 @@ abstract class MenuScreen {
             }
           } else {
             if (this.field_g.isActivated(44)) {
-              em.a((byte) -101);
+              em.resetResultsKind((byte) -101);
               var6 = param2 ? 1 : 0;
               stackIn_52_0 = (gq.d(117)) ? 12 : 0;
               la.changeScreen(stackIn_52_0, -3, var6 != 0, -25528);

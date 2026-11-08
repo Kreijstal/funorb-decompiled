@@ -36,7 +36,7 @@ final class ln extends IntrusiveNode {
                 ln.a(122);
               }
               var4 = (String) (JavaScriptBridge.callWindowFunction("getcookies", (byte) -43, param0));
-              var5 = Puzzle.a(var4, (byte) -37, ';');
+              var5 = Puzzle.split(var4, (byte) -37, ';');
               for (var6 = 0; var6 < var5.length; var6++) {
                 var7 = var5[var6].indexOf('=');
                 if (var7 >= 0 &&
@@ -84,7 +84,7 @@ final class ln extends IntrusiveNode {
 
     ln(int param0) {
         this.field_o = PcmSampleStream.createAtRatePercent(SecondaryNodeDeque.field_f[param0], 100, NightToRememberBackground.field_m[param0]);
-        TextLayoutLine.a(-21317, this.field_o);
+        TextLayoutLine.playSoundEffect(-21317, this.field_o);
     }
 
     final static void a(int param0) {

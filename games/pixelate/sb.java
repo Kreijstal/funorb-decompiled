@@ -70,7 +70,7 @@ final class sb {
         StringBuilder discarded$1 = var7.append(var3.substring(0, var6));
         var3 = var3.substring(var6);
         while (var3.length() > 0) {
-          discarded$2 = var7.append(wl.field_f);
+          discarded$2 = var7.append(FireworkSpark.field_f);
           discarded$3 = var7.append(var3.substring(0, 3));
           var3 = var3.substring(3);
         }

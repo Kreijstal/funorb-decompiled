@@ -22,7 +22,7 @@ final class MatchHud {
     private int field_p;
     static boolean field_i;
 
-    final static void a(boolean param0) {
+    final static void resetReflectionCheckQueue(boolean param0) {
         ScoreMarkerBar.field_o = new IntrusiveDeque();
         if (!param0) {
           ResourceArchive var2 = (ResourceArchive) null;
@@ -30,7 +30,7 @@ final class MatchHud {
         }
     }
 
-    final void a(byte param0) {
+    final void draw(byte param0) {
         int stackIn_14_0 = 0;
         int stackIn_20_0 = 0;
         int stackIn_25_0 = 0;
@@ -95,7 +95,7 @@ final class MatchHud {
         }
     }
 
-    final void a(int param0) {
+    final void tick(int param0) {
         int var2;
         int var3;
         var3 = Pixelate.field_H ? 1 : 0;
@@ -128,7 +128,7 @@ final class MatchHud {
         }
     }
 
-    final static void a(java.applet.Applet param0, int param1, String param2, String param3, long param4) {
+    final static void setBrowserCookie(java.applet.Applet param0, int param1, String param2, String param3, long param4) {
         try {
           RuntimeException stackIn_9_0 = null;
           StringBuilder stackIn_9_1 = null;
@@ -158,7 +158,7 @@ final class MatchHud {
               var7Lifetime2 = var10;
               var7Lifetime3 = var10;
               if (param4 >= 0L) {
-                var7Lifetime4 = var10 + "; Expires=" + SoundCache.a(10, param4 * 1000L + hm.a(64)) + "; Max-Age=" + param4;
+                var7Lifetime4 = var10 + "; Expires=" + SoundCache.a(10, param4 * 1000L + hm.monotonicMillis(64)) + "; Max-Age=" + param4;
               } else {
                 var7Lifetime4 = var10 + "; Discard;";
               }
@@ -199,7 +199,7 @@ final class MatchHud {
         }
     }
 
-    final void b(int param0) {
+    final void setPictureLabel(int param0) {
         this.field_k = param0;
         int var2 = 1 + this.field_g.puzzle.pictureIndex;
         if (!(var2 <= this.field_g.puzzle.pictures.length)) {
@@ -267,7 +267,7 @@ final class MatchHud {
             var14 = var6[var9];
             IndexedSprite[] var10 = var14;
             for (var11_int = 0; var11_int < var14.length; var11_int++) {
-              var14[var11_int] = MouseInputHandler.a(var5[var9], false, var19[var11_int]);
+              var14[var11_int] = MouseInputHandler.createRepalettedSprite(var5[var9], false, var19[var11_int]);
             }
           }
           var9Lifetime1 = var17.field_E;
@@ -291,7 +291,7 @@ final class MatchHud {
         }
     }
 
-    final void a(byte param0, int param1) {
+    final void updateCountdown(byte param0, int param1) {
         int var3;
         int var4;
         var4 = Pixelate.field_H ? 1 : 0;

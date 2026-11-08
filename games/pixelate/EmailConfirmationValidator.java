@@ -105,7 +105,7 @@ final class EmailConfirmationValidator extends TextFieldValidator {
             return stackIn_5_0;
           }
           if (!param0.equals(this.checkedEmail)) {
-            var3 = SectorCacheStore.a(param0, (byte) -99);
+            var3 = SectorCacheStore.startEmailValidation(param0, (byte) -99);
             if (!var3.isComplete(121)) {
               stackIn_11_0 = UiTheme.field_j;
               return stackIn_11_0;

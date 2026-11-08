@@ -91,7 +91,7 @@ final class GrowableIntList {
         return MeshRasterState.field_h[param0 & 2047];
     }
 
-    final static void a(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int[] param9) {
+    final static void applyAlphaMaskDarken(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int[] param9) {
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
         RuntimeException stackIn_14_0 = null;
@@ -157,7 +157,7 @@ final class GrowableIntList {
         }
     }
 
-    final static void a(SceneWidget param0, boolean param1) {
+    final static void resetChildLayouts(SceneWidget param0, boolean param1) {
         SceneWidget var4 = null;
         SceneWidget var2 = null;
         int var3 = Pixelate.field_H ? 1 : 0;
@@ -204,7 +204,7 @@ final class GrowableIntList {
         }
     }
 
-    private final int a(int param0, byte param1) {
+    private final int nextCapacity(int param0, byte param1) {
         int var3;
         int var4;
         var4 = Pixelate.field_H ? 1 : 0;
@@ -227,7 +227,7 @@ final class GrowableIntList {
     }
 
     private final void resize(int param0, int param1) {
-        int[] var5 = new int[this.a(param1, (byte) 120)];
+        int[] var5 = new int[this.nextCapacity(param1, (byte) 120)];
         int[] var3 = var5;
         int var4 = 66 % ((55 - param0) / 63);
         ArraySupport.a(this.field_j, 0, var5, 0, this.field_j.length);

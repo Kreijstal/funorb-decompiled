@@ -70,7 +70,7 @@ final class BoardView {
         var6 = Pixelate.field_H ? 1 : 0;
         var7 = (BoardParticle) (this.field_q.first(1504642273));
         while (var7 != null) {
-          var7.e(-123);
+          var7.tick(-123);
           var7 = (BoardParticle) (this.field_q.next(1504642273));
         }
         if (param0 >= -18) {
@@ -456,7 +456,7 @@ final class BoardView {
         }
         var17 = (BoardParticle) (this.field_q.first(1504642273));
         while (var17 != null) {
-          var17.a((byte) -127);
+          var17.draw((byte) -127);
           var17 = (BoardParticle) (this.field_q.next(1504642273));
         }
         if (0 < this.field_v &&

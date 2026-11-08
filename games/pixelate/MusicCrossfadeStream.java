@@ -28,7 +28,7 @@ final class MusicCrossfadeStream extends PcmStream {
 
     final static void clearSessionAndReload(java.applet.Applet param0, int param1) {
         try {
-          NumericDateInputWidget.a("", param0, true);
+          NumericDateInputWidget.setSessionCookie("", param0, true);
           if (param1 != 22770) {
             MusicCrossfadeStream.getRegistrationAge((byte) -76);
           }
@@ -339,22 +339,22 @@ final class MusicCrossfadeStream extends PcmStream {
     }
 
     final static void drawScorePopups(int param0) {
-        pj[] var1 = null;
+        ScorePopup[] var1 = null;
         int var2 = 0;
-        pj var3 = null;
+        ScorePopup var3 = null;
         int var4 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1_ref = null;
         var4 = Pixelate.field_H ? 1 : 0;
         try {
-          var1 = up.field_n;
+          var1 = PuzzleThumbnail.field_n;
           var2 = 0;
           if (param0 <= 31) {
             field_E = (String) null;
           }
           while (var1.length > var2) {
             var3 = var1[var2];
-            var3.a((byte) -70);
+            var3.draw((byte) -70);
             var2++;
           }
           return;

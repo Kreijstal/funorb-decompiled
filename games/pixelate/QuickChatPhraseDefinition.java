@@ -23,7 +23,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
         var4 = Pixelate.field_H ? 1 : 0;
         try {
           if (param0 != -5) {
-            QuickChatPhraseDefinition.b((byte) -35);
+            QuickChatPhraseDefinition.saveProgress((byte) -35);
           }
           while (true) {
             var3_int = param1.readUnsignedByte(255);
@@ -76,7 +76,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
                 this.field_x = new int[var4_int];
                 for (var5 = 0; var5 < var4_int; var5++) {
                   var6 = param2.readUnsignedShort((byte) 52);
-                  var7 = EmailCredentials.a(var6, -52);
+                  var7 = EmailCredentials.findReportReason(var6, -52);
                   if (var7 != null) {
                     this.field_x[var5] = var6;
                     array$0 = new int[var7.field_e];
@@ -92,7 +92,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
               }
             }
           } else {
-            this.fragments = Puzzle.a(param2.readString(5), (byte) -117, '<');
+            this.fragments = Puzzle.split(param2.readString(5), (byte) -117, '<');
           }
           var4_intLifetime1 = -125 / ((param1 + 17) / 39);
           return;
@@ -110,32 +110,32 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
         }
     }
 
-    final static void b(byte param0) {
+    final static void saveProgress(byte param0) {
         byte[] var2 = null;
         if (param0 != 74) {
-          QuickChatPhraseDefinition.d((byte) -64);
+          QuickChatPhraseDefinition.clearStatics((byte) -64);
         }
-        if (ArrayWidgetContainer.a((byte) 83)) {
+        if (ArrayWidgetContainer.isAccountUiActive((byte) 83)) {
           ef.field_a = true;
         } else {
           var2 = bo.a(param0 ^ 181);
           byte[] var1 = var2;
-          hm.a(param0 + 41, var2, 6);
+          hm.queueSaveDataRequest(param0 + 41, var2, 6);
         }
     }
 
-    public static void d(byte param0) {
+    public static void clearStatics(byte param0) {
         field_v = null;
         field_A = null;
         field_t = null;
         field_z = null;
         if (param0 != -58) {
-          QuickChatPhraseDefinition.b((byte) -3);
+          QuickChatPhraseDefinition.saveProgress((byte) -3);
         }
         field_w = null;
     }
 
-    final void g(int param0) {
+    final void markResponsesAsPhrases(int param0) {
         int var2 = 0;
         int var3 = Pixelate.field_H ? 1 : 0;
         if (param0 <= 123) {
@@ -148,7 +148,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
         }
     }
 
-    final static void c(byte param0) {
+    final static void shutdownAudio(byte param0) {
         int var1 = 75 / ((20 - param0) / 48);
         if (MainMenuScreen.field_t != null) {
           MainMenuScreen.field_t.shutdown();

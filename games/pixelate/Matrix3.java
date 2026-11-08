@@ -87,7 +87,7 @@ final class Matrix3 {
             var4 = (byte[]) null;
             Matrix3.crc32((byte[]) null, 103, 27);
           }
-          if (ep.a((byte) 34, param0)) {
+          if (ep.hasInvalidPasswordLength((byte) 34, param0)) {
             return false;
           }
           if (param1.length() == 0) {
@@ -185,7 +185,7 @@ final class Matrix3 {
         }
     }
 
-    final static boolean a(int param0) {
+    final static boolean isValidationPending(int param0) {
         if (param0 == -5057) {
           return !an.field_e.isComplete(125) ? true : false;
         }
@@ -197,12 +197,12 @@ final class Matrix3 {
         mc var2 = new mc();
         if (param0 == 255) {
           StrongCacheReference.field_z.addLast(22125, var2);
-          ro.a(127, param1);
+          ro.sendStatsRequest(127, param1);
           return var2;
         }
         Matrix3.releaseStatics((byte) 74);
         StrongCacheReference.field_z.addLast(22125, var2);
-        ro.a(127, param1);
+        ro.sendStatsRequest(127, param1);
         return var2;
     }
 

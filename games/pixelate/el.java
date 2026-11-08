@@ -13,7 +13,7 @@ final class el {
         throw new IllegalStateException();
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4) {
+    final static void setButtonMetrics(int param0, int param1, int param2, int param3, int param4) {
         if (param3 >= 87) {
           StatefulTextPainter.field_q = param1;
           BouncedownBackground.field_m = param4;
@@ -28,7 +28,7 @@ final class el {
         ab.field_b = param2;
     }
 
-    final static int a(int param0, byte param1, int param2) {
+    final static int hitTestChoiceIcons(int param0, byte param1, int param2) {
         int var3;
         int var3Lifetime1;
         int var3Lifetime2;
@@ -87,7 +87,7 @@ final class el {
         return -1;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, float param6) {
+    final static void drawThickLine(int param0, int param1, int param2, int param3, int param4, int param5, float param6) {
         int[] var17 = new int[8];
         int[] var15 = var17;
         int[] var13 = var15;
@@ -163,7 +163,7 @@ final class el {
             }
             var8 = FloatingSquare.field_j.getArchiveSource(param2, 6, param3, (SectorCacheStore) (var6), (SectorCacheStore) (var7));
             if (param5) {
-              var8.a(true);
+              var8.requestGroupScan(true);
             }
             stackIn_16_0 = new ResourceArchive(var8, param1, param4);
             return stackIn_16_0;
@@ -179,7 +179,7 @@ final class el {
         }
     }
 
-    final static int a(int param0, byte param1) {
+    final static int randomBorderFlags(int param0, byte param1) {
         int var2;
         var2 = 0;
         var2 = var2 | 1;
@@ -190,7 +190,7 @@ final class el {
           var2 = var2 | 8;
         }
         if (param1 != -24) {
-          el.a(-13);
+          el.releaseStatics(-13);
         }
         if (JavaRandomHelpers.a(UiTheme.field_f, param1 ^ 110, 2) == 0) {
           var2 = var2 | 4;
@@ -201,7 +201,7 @@ final class el {
         return var2;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != -28464) {
           field_a = -93;
           field_c = null;

@@ -21,7 +21,7 @@ final class TextLayoutLine {
         field_f = null;
     }
 
-    final int a(int param0, int param1) {
+    final int characterIndexAt(int param0, int param1) {
         int var3 = 0;
         int var4;
         String var5;
@@ -37,15 +37,15 @@ final class TextLayoutLine {
             return -1 + this.field_g.length;
           }
           var5 = (String) null;
-          TextLayoutLine.a(-39, (ResourceArchive) null, (String) null, (String) null, (String) null);
+          TextLayoutLine.formatNamedGroupProgressLabel(-39, (ResourceArchive) null, (String) null, (String) null, (String) null);
           return -1 + this.field_g.length;
         }
         return 0;
     }
 
-    final int a(byte param0) {
+    final int getRightEdge(byte param0) {
         if (param0 != 86) {
-          this.a((byte) -107);
+          this.getRightEdge((byte) -107);
           if (this.field_g == null) {
             return 0;
           }
@@ -63,7 +63,7 @@ final class TextLayoutLine {
         return 0;
     }
 
-    final static cm a(int param0, PcmSampleStream param1) {
+    final static cm playSoundEffect(int param0, PcmSampleStream param1) {
         cm var2 = null;
         RuntimeException var2_ref = null;
         cm stackIn_3_0 = null;
@@ -94,7 +94,7 @@ final class TextLayoutLine {
         }
     }
 
-    final static boolean a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    final static boolean containsPoint(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         int var7 = 46 / ((-78 - param2) / 35);
         if (param4 > param0) {
           return false;
@@ -111,7 +111,7 @@ final class TextLayoutLine {
         return false;
     }
 
-    final static String a(int param0, ResourceArchive param1, String param2, String param3, String param4) {
+    final static String formatNamedGroupProgressLabel(int param0, ResourceArchive param1, String param2, String param3, String param4) {
         RuntimeException var5 = null;
         String stackIn_3_0 = null;
         String stackIn_7_0 = null;

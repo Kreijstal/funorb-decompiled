@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class lp {
+final class DriftingParticle {
     private int field_f;
     private int field_b;
     private int field_h;
@@ -14,14 +14,14 @@ final class lp {
     static int field_i;
     static String[][] field_c;
 
-    public static void a(byte param0) {
+    public static void clearStatics(byte param0) {
         field_c = (String[][]) null;
         if (param0 >= -110) {
           field_d = 127;
         }
     }
 
-    final static int a(int param0) {
+    final static int pollLegacyMenuSelection(int param0) {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -31,7 +31,7 @@ final class lp {
         var3 = Pixelate.field_H ? 1 : 0;
         try {
           var1_int = 0;
-          while (DirectByteStorage.$cfr$intArgs$b$c4997cb15529(107)) {
+          while (DirectByteStorage.pollKeyEvent(107)) {
             VerticalScrollbar.field_Gb.handleVerticalNavigation((byte) -48);
             if (!VerticalScrollbar.field_Gb.isActivated(121)) {
               continue;
@@ -50,7 +50,7 @@ final class lp {
             VerticalScrollbar.field_Gb.selectedIndex >= 0) {
             var2 = di.field_b[VerticalScrollbar.field_Gb.selectedIndex];
             if (2 == var2) {
-              un.a(true);
+              un.clearPendingMessageFlag(true);
             }
           }
           stackIn_15_0 = var2;
@@ -62,7 +62,7 @@ final class lp {
         }
     }
 
-    final void a() {
+    final void draw() {
         int var6 = 0;
         int var7 = 0;
         int incrementValue$0 = 0;
@@ -95,7 +95,7 @@ final class lp {
         }
     }
 
-    final void b(int param0) {
+    final void tick(int param0) {
         this.field_g = this.field_g + this.field_h;
         this.field_b = this.field_b + this.field_a;
         if (41943040 < this.field_g) {
@@ -115,7 +115,7 @@ final class lp {
         }
     }
 
-    lp() {
+    DriftingParticle() {
         this.field_g = JavaRandomHelpers.a(ea.field_b, -118, 640) << 16;
         this.field_b = JavaRandomHelpers.a(ea.field_b, -100, 480) << 16;
         this.field_e = JavaRandomHelpers.a(ea.field_b, -99, 90) + 10;

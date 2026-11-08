@@ -95,9 +95,9 @@ final class PlayerController {
         if (param2) {
           var4 = this.field_k.boards[this.field_j].pieceColumn;
           var5 = this.field_k.boards[this.field_j].pieceRow;
-          ki.a(this.field_f.field_t - (-32 - 32 * var4), -1, param1, var5 * 32 + (32 + this.field_f.field_u));
+          ki.spawnScorePopup(this.field_f.field_t - (-32 - 32 * var4), -1, param1, var5 * 32 + (32 + this.field_f.field_u));
         } else {
-          ki.a(this.field_i, -1, param1, this.field_s);
+          ki.spawnScorePopup(this.field_i, -1, param1, this.field_s);
         }
         if (param0 != -20791) {
           this.enqueueInput(-23, -70, 98);
@@ -107,7 +107,7 @@ final class PlayerController {
     final void restartPieceDrop(int param0) {
         if (!this.field_f.isAnimating(param0 ^ -40)) {
           this.field_f.playPictureCompleteEffect(param0 - 32);
-          EmailValidator.a((byte) 96, 7);
+          EmailValidator.playPieceSound((byte) 96, 7);
         }
         if (param0 != 93) {
           this.field_p = -49;
@@ -341,10 +341,10 @@ final class PlayerController {
           this.field_l = this.field_k.boards[this.field_j].isFullyPainted(param0 + 26745);
           if (50 != this.field_k.boards[this.field_j].field_f) {
             if (this.field_k.boards[this.field_j].field_f > 0) {
-              EmailValidator.a((byte) 96, 5);
+              EmailValidator.playPieceSound((byte) 96, 5);
             }
           } else {
-            EmailValidator.a((byte) 96, 6);
+            EmailValidator.playPieceSound((byte) 96, 6);
           }
         } else {
           if (param1 == 4) {
@@ -352,7 +352,7 @@ final class PlayerController {
               return false;
             }
             if (this.field_k.applyAction(param1, this.field_j, 127, this.field_e)) {
-              EmailValidator.a((byte) 96, 4);
+              EmailValidator.playPieceSound((byte) 96, 4);
               this.field_p = 1;
               return true;
             }
@@ -376,7 +376,7 @@ final class PlayerController {
               stackIn_13_0 = (!this.field_k.applyAction(param1, this.field_j, 117, this.field_e)) ? 0 : 1;
               var3 = stackIn_13_0;
               if (var3 != 0) {
-                EmailValidator.a((byte) 96, JavaRandomHelpers.a(ea.field_b, -101, 4) + 0);
+                EmailValidator.playPieceSound((byte) 96, JavaRandomHelpers.a(ea.field_b, -101, 4) + 0);
               }
             }
           }

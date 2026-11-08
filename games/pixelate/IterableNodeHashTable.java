@@ -10,15 +10,15 @@ final class IterableNodeHashTable implements Iterable {
     int field_a;
     static String field_d;
 
-    final static void a(int param0) {
+    final static void closePrivateChatInput(int param0) {
         ce.field_d = 0;
         oo.field_d = true;
         if (param0 != 7500) {
-          IterableNodeHashTable.a((byte) -13);
+          IterableNodeHashTable.advanceBackgroundSkin((byte) -13);
         }
     }
 
-    final static int a(int param0, int param1) {
+    final static int getChatFilterMode(int param0, int param1) {
         int var2 = param1;
         if (0 == param0) {
           var2 = LoginMethod.field_e;
@@ -55,7 +55,7 @@ final class IterableNodeHashTable implements Iterable {
         return var5;
     }
 
-    final void a(IntrusiveNode param0, long param1, int param2) {
+    final void put(IntrusiveNode param0, long param1, int param2) {
         IntrusiveNode var5 = null;
         try {
           if (param0.previous != null) {
@@ -102,7 +102,7 @@ final class IterableNodeHashTable implements Iterable {
         }
     }
 
-    final static void a(byte param0) {
+    final static void advanceBackgroundSkin(byte param0) {
         if (7500 > jd.field_r) {
           return;
         }

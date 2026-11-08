@@ -9,7 +9,7 @@ final class DiskCacheRequest extends ArchiveRequest {
     static boolean field_I;
     static PictureStrip field_H;
 
-    final static String b(boolean param0) {
+    final static String getLocalDisplayName(boolean param0) {
         if (param0) {
           field_F = -79;
           if (null == ModalStack.field_J) {
@@ -30,7 +30,7 @@ final class DiskCacheRequest extends ArchiveRequest {
         field_H = null;
     }
 
-    final int g(int param0) {
+    final int getProgressPercent(int param0) {
         if (this.field_v) {
           return 0;
         }
@@ -41,7 +41,7 @@ final class DiskCacheRequest extends ArchiveRequest {
         return 100;
     }
 
-    final static void a(byte param0, SceneWidget param1, int param2) {
+    final static void openChatFilterMenu(byte param0, SceneWidget param1, int param2) {
         ClientContextMenu var11 = null;
         Sprite var12 = null;
         String var13 = null;
@@ -144,10 +144,10 @@ final class DiskCacheRequest extends ArchiveRequest {
         }
     }
 
-    final byte[] h(int param0) {
+    final byte[] getData(int param0) {
         if (param0 != 0) {
           SceneWidget var3 = (SceneWidget) null;
-          DiskCacheRequest.a((byte) 66, (SceneWidget) null, -96);
+          DiskCacheRequest.openChatFilterMenu((byte) 66, (SceneWidget) null, -96);
           if (!this.field_v) {
             return this.field_D;
           }

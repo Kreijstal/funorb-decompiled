@@ -52,25 +52,25 @@ final class bd {
             var5 = ResourceArchive.field_f[var4_int];
             if (var5 != null) {
               if (var5.field_P != 0) {
-                DiskCacheRequest.a((byte) -13, var5, var4_int);
+                DiskCacheRequest.openChatFilterMenu((byte) -13, var5, var4_int);
               }
-              var6 = IterableNodeHashTable.a(var4_int, 0);
+              var6 = IterableNodeHashTable.getChatFilterMode(var4_int, 0);
               ResourceArchive.field_h[var4_int].field_H = Checkbox.field_V[var6];
               DelegatingCanvas.field_e[var4_int].field_cb = LoginCredentials.field_a[var6];
             }
           }
           if (0 != GradientOutlineTextPainter.field_u.field_P) {
-            AccountTermsPanel.field_M = new ReportAbuseDialog(GradientOutlineTextPainter.field_u.field_tb, GradientOutlineTextPainter.field_u.screenY, GradientOutlineTextPainter.field_u.field_K, GradientOutlineTextPainter.field_u.height, param3, cm.field_o, pj.field_i, Vector3.field_f, TextFieldValidator.field_h, um.field_q, dn.field_c, (String) null, 0L);
+            AccountTermsPanel.field_M = new ReportAbuseDialog(GradientOutlineTextPainter.field_u.field_tb, GradientOutlineTextPainter.field_u.screenY, GradientOutlineTextPainter.field_u.field_K, GradientOutlineTextPainter.field_u.height, param3, cm.field_o, ScorePopup.field_i, Vector3.field_f, TextFieldValidator.field_h, um.field_q, dn.field_c, (String) null, 0L);
           }
           var9 = CacheReference.rebuildChatHistoryWidgets((byte) -110, fq.field_q, param2, MouseWheelHandler.field_c);
           if (var9 != null) {
             fj.a(var9, (byte) 125);
           }
-          var8 = pk.a((byte) 88);
+          var8 = pk.buildChatInputPrompt((byte) 88);
           if (var8 == null) {
             return;
           }
-          up.field_o = var8;
+          PuzzleThumbnail.field_o = var8;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -91,7 +91,7 @@ final class bd {
           if (ra.field_g <= 0) {
             return false;
           }
-          if (!ri.a(-81)) {
+          if (!ri.alwaysTrue(-81)) {
             return true;
           }
           return false;
@@ -105,7 +105,7 @@ final class bd {
         if (ra.field_g <= 0) {
           return false;
         }
-        if (!ri.a(-81)) {
+        if (!ri.alwaysTrue(-81)) {
           return true;
         }
         return false;
@@ -132,7 +132,7 @@ final class bd {
         int var2 = Pixelate.field_H ? 1 : 0;
         DualLinkNode var1Lifetime1;
         try {
-          aj.field_t = 0;
+          ReflectionCheckRequest.field_t = 0;
           DialWidgetPainter.field_q = 0;
           LabeledField.field_L = null;
           if (param0 != -1) {

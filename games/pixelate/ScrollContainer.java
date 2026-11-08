@@ -49,7 +49,7 @@ final class ScrollContainer extends SceneWidget {
             var3_int = 1;
             if (param2 == 10) {
               var3_int = 0;
-              RegistrationRequestDialog.i((byte) -51);
+              RegistrationRequestDialog.showDisplayNameForm((byte) -51);
             }
             if (var3_int != 0) {
               if (NumericDateInputWidget.field_V) {
@@ -58,7 +58,7 @@ final class ScrollContainer extends SceneWidget {
               if (ke.field_d) {
                 param1 = IsaacRandom.field_a;
               }
-              MainMenuScreen.field_r.a(param2, 5804, param1);
+              MainMenuScreen.field_r.installErrorContent(param2, 5804, param1);
             }
             if (256 != param2 &&
               param2 != 10 &&

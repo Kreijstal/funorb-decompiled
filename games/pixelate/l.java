@@ -46,10 +46,10 @@ final class l extends MenuScreen {
           if (dk.field_b) {
             SoftwareRasterizer.darkenRectangle(nd.field_b.field_g.field_D, nd.field_b.field_g.field_S, nd.field_b.field_g.field_K, nd.field_b.field_g.height);
             nd.field_b.field_g.drawFullScreen(param1, 0);
-            CachedTextLayout.a(param1, (byte) 34);
+            CachedTextLayout.drawLobbyRoot(param1, (byte) 34);
             return;
           }
-          CachedTextLayout.a(param1, (byte) 34);
+          CachedTextLayout.drawLobbyRoot(param1, (byte) 34);
           return;
         }
         if (MarkerSlider.isOverlayOpen((byte) 127)) {
@@ -57,12 +57,12 @@ final class l extends MenuScreen {
         }
         Js5ArchiveManager.drawFrontEndOverlays((byte) 29, param1);
         if (!dk.field_b) {
-          CachedTextLayout.a(param1, (byte) 34);
+          CachedTextLayout.drawLobbyRoot(param1, (byte) 34);
           return;
         }
         SoftwareRasterizer.darkenRectangle(nd.field_b.field_g.field_D, nd.field_b.field_g.field_S, nd.field_b.field_g.field_K, nd.field_b.field_g.height);
         nd.field_b.field_g.drawFullScreen(param1, 0);
-        CachedTextLayout.a(param1, (byte) 34);
+        CachedTextLayout.drawLobbyRoot(param1, (byte) 34);
     }
 
     final void drawRow(byte param0, boolean param1, int param2) {

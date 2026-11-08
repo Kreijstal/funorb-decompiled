@@ -20,7 +20,7 @@ final class ki {
     private int field_o;
     private int field_i;
 
-    private final void a(byte param0) {
+    private final void updateTip(byte param0) {
         this.field_g = this.field_i + (int)((double)this.field_o * Math.sin(this.field_l));
         if (param0 <= -97) {
           this.field_h = this.field_p + (int)((double)this.field_o * Math.cos(this.field_l));
@@ -30,7 +30,7 @@ final class ki {
         this.field_h = this.field_p + (int)((double)this.field_o * Math.cos(this.field_l));
     }
 
-    final static void a(int param0) {
+    final static void readSavedDataPacket(int param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -104,7 +104,7 @@ final class ki {
         }
     }
 
-    final void a(int param0, byte param1, int param2) {
+    final void swingTo(int param0, byte param1, int param2) {
         int var4;
         int var5;
         double var6;
@@ -142,10 +142,10 @@ final class ki {
         if (this.field_q < -0.1) {
           this.field_q = -0.1;
         }
-        this.a((byte) -104);
+        this.updateTip((byte) -104);
     }
 
-    final void b(int param0) {
+    final void drawKite(int param0) {
         int var2 = 0;
         int var2Lifetime1;
         if (param0 == 3887) {
@@ -153,12 +153,12 @@ final class ki {
           ContentTransitionDialog.field_hb.rotateNearest(672, 160, this.field_g << 4, this.field_h << 4, var2, this.field_n);
           return;
         }
-        this.b(19);
+        this.drawKite(19);
         var2Lifetime1 = (int)(this.field_l * 32768.0 / 3.141592653589793);
         ContentTransitionDialog.field_hb.rotateNearest(672, 160, this.field_g << 4, this.field_h << 4, var2Lifetime1, this.field_n);
     }
 
-    final void a(boolean param0) {
+    final void drawString(boolean param0) {
         SoftwareRasterizer.drawLine(this.field_i, this.field_p, this.field_g, this.field_h, 6710784);
         if (!param0) {
           SoftwareRasterizer.drawLine(this.field_i + 1, this.field_p, 1 + this.field_g, this.field_h, 3355392);
@@ -181,7 +181,7 @@ final class ki {
         field_m = null;
     }
 
-    final static void a(int param0, int param1, int param2, int param3) {
+    final static void spawnScorePopup(int param0, int param1, int param2, int param3) {
         if (param1 == -1) {
           gq.a(param1 + 1, param3, param0, Integer.toString(param2));
           return;
@@ -196,7 +196,7 @@ final class ki {
         this.field_p = param1;
         this.field_l = -1.5707963267948966;
         this.field_i = param0;
-        this.a((byte) -112);
+        this.updateTip((byte) -112);
     }
 
     static {
