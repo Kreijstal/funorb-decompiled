@@ -81,7 +81,7 @@ final class ClubStateFactory {
           var10 = (int)(0.5f + var7 * (float)param1);
           var11 = (int)(7.0f * var8 + 0.5f);
           var12 = (int)(0.5f + var9 * 127.0f);
-          stackIn_34_0 = HuffmanCodec.a(var12, var10, -87, var11);
+          stackIn_34_0 = HuffmanCodec.packHslColor(var12, var10, -87, var11);
           return stackIn_34_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

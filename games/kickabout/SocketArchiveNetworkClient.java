@@ -71,7 +71,7 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
           }
           try {
             this.field_x.checkWriteError((byte) -113);
-            var2 = (NetworkArchiveRequest) (this.field_h.a(-116));
+            var2 = (NetworkArchiveRequest) (this.field_h.first(-116));
             var3_int = -71 % ((param0 - 30) / 37);
             while (var2 != null) {
               this.field_d.field_n = 0;
@@ -79,16 +79,16 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
               this.field_d.b((byte) 83, var2.field_l);
               this.field_x.write(this.field_d.field_f.length, (byte) -127, 0, this.field_d.field_f);
               this.field_b.addLast(127, var2);
-              var2 = (NetworkArchiveRequest) (this.field_h.b(0));
+              var2 = (NetworkArchiveRequest) (this.field_h.next(0));
             }
-            var2Lifetime1 = (NetworkArchiveRequest) (this.field_c.a(-117));
+            var2Lifetime1 = (NetworkArchiveRequest) (this.field_c.first(-117));
             while (var2Lifetime1 != null) {
               this.field_d.field_n = 0;
               this.field_d.writeByte(116, 0);
               this.field_d.b((byte) 18, var2Lifetime1.field_l);
               this.field_x.write(this.field_d.field_f.length, (byte) -127, 0, this.field_d.field_f);
               this.field_j.addLast(127, var2Lifetime1);
-              var2Lifetime1 = (NetworkArchiveRequest) (this.field_c.b(0));
+              var2Lifetime1 = (NetworkArchiveRequest) (this.field_c.next(0));
             }
             for (var2_int = 0; 100 > var2_int; var2_int++) {
               var3_intLifetime1 = this.field_x.available((byte) 63);
@@ -161,24 +161,24 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
                       var12 = ((long)var6 << 32) + (long)var7;
                       var14 = null;
                       if (var11 != 0) {
-                        var14_ref = (NetworkArchiveRequest) (this.field_j.a(-127));
+                        var14_ref = (NetworkArchiveRequest) (this.field_j.first(-127));
                         while (var14_ref != null) {
                           if (~var12 == ~var14_ref.field_l) {
                             decompiledFrameCompleted0 = false;
                             break;
                           }
-                          var14_ref = (NetworkArchiveRequest) (this.field_j.b(0));
+                          var14_ref = (NetworkArchiveRequest) (this.field_j.next(0));
                         }
                         decompiledFrameRemainder0 = !(decompiledFrameCompleted0);
                       }
                       if ((decompiledFrameRemainder0) &&
                         (decompiledFrameCompleted0)) {
-                        var14_ref = (NetworkArchiveRequest) (this.field_b.a(-115));
+                        var14_ref = (NetworkArchiveRequest) (this.field_b.first(-115));
                         while (var14_ref != null) {
                           if (~var12 == ~var14_ref.field_l) {
                             break;
                           }
-                          var14_ref = (NetworkArchiveRequest) (this.field_b.b(0));
+                          var14_ref = (NetworkArchiveRequest) (this.field_b.next(0));
                         }
                       }
                       if (var14_ref == null) {
@@ -235,13 +235,13 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
         }
     }
 
-    final static void a(byte param0, int param1) {
+    final static void enqueueMessageDialog(byte param0, int param1) {
         PopupDialog var5 = null;
         int var3 = Kickabout.field_G;
         try {
           if (param0 != 126) {
             ResourceArchive var4 = (ResourceArchive) null;
-            SocketArchiveNetworkClient.a(5, (ResourceArchive) null);
+            SocketArchiveNetworkClient.initializeSocialPanels(5, (ResourceArchive) null);
           }
           if (param1 == 28) {
             if (WidgetStyleFactory.field_c != null) {
@@ -396,7 +396,7 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
         this.field_g = (byte)(int)(1.0 + Math.random() * 255.0);
     }
 
-    final static void a(int param0, ResourceArchive param1) {
+    final static void initializeSocialPanels(int param0, ResourceArchive param1) {
         UiLayoutNode var6 = null;
         UiLayoutNode var7 = null;
         UiLayoutNode var3 = null;
@@ -418,7 +418,7 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
           RotaryDialPainter.field_d.field_Cb.field_zb.applyStyle(ConsoleEvaluationException.field_e, (byte) 87);
           if (param0 >= -59) {
             ResourceArchive var4 = (ResourceArchive) null;
-            SocketArchiveNetworkClient.a(-39, (ResourceArchive) null);
+            SocketArchiveNetworkClient.initializeSocialPanels(-39, (ResourceArchive) null);
           }
           RotaryDialPainter.field_d.field_Cb.field_zb.field_p = 1;
           var6 = RotaryDialPainter.field_d.field_Cb.field_zb;
@@ -487,11 +487,11 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
         field_u = null;
         if (param0 >= -89) {
           String var2 = (String) null;
-          SocketArchiveNetworkClient.a((String) null, -77);
+          SocketArchiveNetworkClient.containsLoginPassword((String) null, -77);
         }
     }
 
-    final static boolean a(String param0, int param1) {
+    final static boolean containsLoginPassword(String param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         boolean stackIn_7_0 = false;

@@ -64,14 +64,14 @@ final class StripedProgressBar extends UiWidget {
           var8 = new CipherPacketBuffer(param1.takeFileByName("", "logo.fo3d", 48));
           var10 = var8;
           var3 = var10.readUnsignedByte((byte) -109);
-          var10.p(-111);
+          var10.beginBitRead(-111);
           SaveChangesDialog.field_H = ModelMaterialDecoder.decodeMaterials(var10, (byte) -4);
           HighScoreSubmission.field_l = new int[var3][];
           TrinketCountSortCriterion.field_n = new TriangleMesh[var3];
           for (var4 = 0; var4 < var3; var4++) {
             TrinketCountSortCriterion.field_n[var4] = NanoTickClock.a((byte) 80, var8);
           }
-          var10.l((byte) -63);
+          var10.finishBitRead((byte) -63);
           if (param0 != 49) {
             field_y = -86;
           }
@@ -117,7 +117,7 @@ final class StripedProgressBar extends UiWidget {
             return;
           }
           var5_int = this.field_n + param1;
-          AuctionListing.a(var5_int - this.field_v.field_q, -22914, param1 + this.field_v.field_q, this.field_i + param3, param3);
+          AuctionListing.pushRasterClip(var5_int - this.field_v.field_q, -22914, param1 + this.field_v.field_q, this.field_i + param3, param3);
           for (var6 = param1 - this.field_H; var5_int > var6; var6 = var6 + param0.field_q) {
             param0.c(var6, param3);
           }
@@ -249,7 +249,7 @@ final class StripedProgressBar extends UiWidget {
           this.field_x = 38;
         }
         if (65536 > this.field_C) {
-          AuctionListing.a(var5 + this.field_n, -22914, var5 + (this.field_C * this.field_n >> 16), this.field_i + var6, var6);
+          AuctionListing.pushRasterClip(var5 + this.field_n, -22914, var5 + (this.field_C * this.field_n >> 16), this.field_i + var6, var6);
           this.drawStripedBar(this.field_z[1], var5, (byte) 124, var6);
           TeamManagementScreen.e(127);
         }

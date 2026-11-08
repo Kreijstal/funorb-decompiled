@@ -80,7 +80,7 @@ final class WaitForPlayersView extends MatchPhaseView {
           return;
         }
         if (!this.field_l) {
-          FootballerAiOverlaySupport.field_d.b(75, (byte) 74);
+          FootballerAiOverlaySupport.field_d.writeIsaacByte(75, (byte) 74);
           FootballerAiOverlaySupport.field_d.writeByte(121, 4);
           this.field_l = true;
           return;

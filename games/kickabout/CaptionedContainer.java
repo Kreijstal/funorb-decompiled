@@ -43,7 +43,7 @@ final class CaptionedContainer extends SingleChildContainer {
           if (decompiledFrameRemainder0) {
             if (!LoginPacketSupport.field_a) {
               if (TutorialCaptionSupport.field_e <= StreetSceneryLoader.field_i) {
-                stackIn_19_0 = (StreetSceneryLoader.field_i < TutorialCaptionSupport.field_e + GameModeDefinition.field_i) ? 1 : 0;
+                stackIn_19_0 = (StreetSceneryLoader.field_i < TutorialCaptionSupport.field_e + KitStyleDefinition.field_i) ? 1 : 0;
               } else {
                 stackIn_19_0 = 0;
               }

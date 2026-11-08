@@ -6,7 +6,7 @@ final class AchievementsScreen extends ButtonMenuScreen {
     static String field_A;
     static UiLayoutNode field_C;
 
-    final static boolean a(boolean param0) {
+    final static boolean hasJagexModeratorRights(boolean param0) {
         if (!param0) {
           return 2 <= ScrollContainer.field_Ib ? true : false;
         }
@@ -54,7 +54,7 @@ final class AchievementsScreen extends ButtonMenuScreen {
         MatchUiLayoutSupport.field_d.draw(46, false);
         ModalPanel.field_D.draw(97, false);
         ContextMenuItem.field_Ib.draw(param0 + 84, false);
-        AuctionListing.a(ContextMenuItem.field_Ib.field_F + ContextMenuItem.field_Ib.field_q, param0 - 22909, ContextMenuItem.field_Ib.field_F, ContextMenuItem.field_Ib.field_mb + ContextMenuItem.field_Ib.field_T, ContextMenuItem.field_Ib.field_T);
+        AuctionListing.pushRasterClip(ContextMenuItem.field_Ib.field_F + ContextMenuItem.field_Ib.field_q, param0 - 22909, ContextMenuItem.field_Ib.field_F, ContextMenuItem.field_Ib.field_mb + ContextMenuItem.field_Ib.field_T, ContextMenuItem.field_Ib.field_T);
         var3 = (UiLayoutNode) (ContextMenuItem.field_Ib.field_Db.field_jb.g(24009));
         while (var3 != null) {
           if (var3 instanceof SelectableTrinketIcon) {
@@ -83,7 +83,7 @@ final class AchievementsScreen extends ButtonMenuScreen {
         var9 = 230;
         SoftwareRasterizer.fillRoundedRectangleBlended(this.slideOffsetX + 135, 280, 244, 145, 8, 0, 148);
         if (-1 == var5) {
-          if (!PlayArea.a(100)) {
+          if (!PlayArea.isGuestSession(100)) {
             IsSixCommand.field_C.drawParagraph(StatChoiceDialog.field_K, var7, 250, var9, 200, 16777215, -1, 1, 1, 0);
           } else {
             IsSixCommand.field_C.drawParagraph(LineupPositionSupport.field_b, var7, 250, var9, 200, 16777215, -1, 1, 1, 0);
@@ -216,7 +216,7 @@ final class AchievementsScreen extends ButtonMenuScreen {
           ResourceArchive.field_g = true;
           return;
         }
-        AchievementsScreen.a(true);
+        AchievementsScreen.hasJagexModeratorRights(true);
         ResourceArchive.field_g = true;
     }
 
@@ -410,7 +410,7 @@ final class AchievementsScreen extends ButtonMenuScreen {
         if (param0 == -27) {
           return 88080384 + (100 * param1 + 500 << 16);
         }
-        AchievementsScreen.a(true);
+        AchievementsScreen.hasJagexModeratorRights(true);
         return 88080384 + (100 * param1 + 500 << 16);
     }
 
@@ -440,7 +440,7 @@ final class AchievementsScreen extends ButtonMenuScreen {
           if (var2 == null) {
             var2 = param0;
           }
-          var3 = (SocialPlayerRow) (HighScoreQuery.field_m.a(-3611, (long)var2.hashCode()));
+          var3 = (SocialPlayerRow) (HighScoreQuery.field_m.get(-3611, (long)var2.hashCode()));
           while (var3 != null) {
             var7 = (CharSequence) ((Object) var3.name);
             var4 = MatchAgent.a(0, var7);
@@ -451,7 +451,7 @@ final class AchievementsScreen extends ButtonMenuScreen {
               stackIn_18_0 = var3;
               return stackIn_18_0;
             }
-            var3 = (SocialPlayerRow) (HighScoreQuery.field_m.a((byte) 117));
+            var3 = (SocialPlayerRow) (HighScoreQuery.field_m.nextWithSameKey((byte) 117));
           }
           return null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -491,7 +491,7 @@ final class AchievementsScreen extends ButtonMenuScreen {
     }
 
     final int buttonCenterX(int param0, int param1) {
-        if (!PlayArea.a(100)) {
+        if (!PlayArea.isGuestSession(100)) {
           if (param1 == -22667) {
             return super.buttonCenterX(param0, -22667);
           }

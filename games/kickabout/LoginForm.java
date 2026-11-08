@@ -39,14 +39,14 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
 
     final static void tintSpriteForSurface(Sprite param0, int param1) {
         double[] var3 = null;
-        if (FormationMaskSupport.field_c == 0) {
+        if (KitPatternMaskSupport.field_c == 0) {
           return;
         }
         try {
           if (param1 != 20684) {
             field_B = (int[]) null;
           }
-          var3 = WorldSpriteDecoration.field_a[FormationMaskSupport.field_c];
+          var3 = WorldSpriteDecoration.field_a[KitPatternMaskSupport.field_c];
           double[] var2 = var3;
           SpritePixelSupport.adjustSpriteHsv(param0, var3[0], var3[1], var3[2]);
         } catch (RuntimeException runtimeException) {

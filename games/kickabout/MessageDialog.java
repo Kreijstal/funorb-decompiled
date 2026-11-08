@@ -135,7 +135,7 @@ class MessageDialog extends PopupDialog {
               var13 = stackIn_43_0[stackIn_44_1];
               var14 = InstrumentNoteMask.field_i * var13.field_o >> 8;
               var15 = var13.field_v * InstrumentNoteMask.field_i >> 8;
-              var13.drawScaledAveraged(SocialListLayoutSupport.worldToScreenX(param0 ^ 70, var8_ref_int__[var11]) - (var14 >> 1), IntKeyLookup.a((byte) -90, var9_ref_int__[var11]) - (var15 >> 1), var14, var15);
+              var13.drawScaledAveraged(SocialListLayoutSupport.worldToScreenX(param0 ^ 70, var8_ref_int__[var11]) - (var14 >> 1), IntKeyLookup.projectPitchY((byte) -90, var9_ref_int__[var11]) - (var15 >> 1), var14, var15);
             }
           }
           if (var2 != 0) {
@@ -164,7 +164,7 @@ class MessageDialog extends PopupDialog {
             }
             var8 = InstrumentNoteMask.field_i * var18.field_o >> 8;
             var9 = InstrumentNoteMask.field_i * var18.field_v >> 8;
-            var5_ref.drawScaledAveraged(SocialListLayoutSupport.worldToScreenX(0, var6) - (var8 >> 1), -(var9 >> 1) + IntKeyLookup.a((byte) -77, var7), var8, var9);
+            var5_ref.drawScaledAveraged(SocialListLayoutSupport.worldToScreenX(0, var6) - (var8 >> 1), -(var9 >> 1) + IntKeyLookup.projectPitchY((byte) -77, var7), var8, var9);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

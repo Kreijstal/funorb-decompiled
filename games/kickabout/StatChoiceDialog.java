@@ -138,7 +138,7 @@ final class StatChoiceDialog extends MessageDialog {
           this.field_H != -1 &&
           this.field_M[this.field_H] < 100) {
           if (!(AuctionLogEntry.field_h instanceof TeamManagementScreen)) {
-            if (!PlayArea.a(100)) {
+            if (!PlayArea.isGuestSession(100)) {
               var4 = new ManagerAction(3, new int[]{this.field_P, this.field_H});
               if (AuctionLogEntry.field_h instanceof MatchScreen &&
                 null != MachineTokenStorageSupport.field_e &&

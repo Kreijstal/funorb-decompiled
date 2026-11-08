@@ -76,11 +76,11 @@ final class FindingOpponentScreen extends ButtonMenuScreen {
 
     final static void g(byte param0) {
         if (param0 < -112) {
-          SoftwareDrawingSupport.drawCircleCrosshair(SocialListLayoutSupport.worldToScreenX(0, (int)CachedArchiveSource.field_C), IntKeyLookup.a((byte) -125, (int)AuctionLogEntry.field_f), 10, 16711680);
+          SoftwareDrawingSupport.drawCircleCrosshair(SocialListLayoutSupport.worldToScreenX(0, (int)CachedArchiveSource.field_C), IntKeyLookup.projectPitchY((byte) -125, (int)AuctionLogEntry.field_f), 10, 16711680);
           return;
         }
         FindingOpponentScreen.releaseStatics(70);
-        SoftwareDrawingSupport.drawCircleCrosshair(SocialListLayoutSupport.worldToScreenX(0, (int)CachedArchiveSource.field_C), IntKeyLookup.a((byte) -125, (int)AuctionLogEntry.field_f), 10, 16711680);
+        SoftwareDrawingSupport.drawCircleCrosshair(SocialListLayoutSupport.worldToScreenX(0, (int)CachedArchiveSource.field_C), IntKeyLookup.projectPitchY((byte) -125, (int)AuctionLogEntry.field_f), 10, 16711680);
     }
 
     private final void a(boolean param0) {

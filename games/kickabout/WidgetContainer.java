@@ -452,7 +452,7 @@ class WidgetContainer extends UiWidget implements UiContainerMarker {
         var10 = Kickabout.field_G;
         try {
           var6_int = -127 % ((param5 - 63) / 51);
-          AuctionListing.a(160 + param3, -22914, param3, param4 + 21, param4);
+          AuctionListing.pushRasterClip(160 + param3, -22914, param3, param4 + 21, param4);
           SoftwareRasterizer.fillRoundedRectangle(param3, param4, 160, 42, 10, 65793);
           TeamManagementScreen.e(123);
           if (param2 != null) {

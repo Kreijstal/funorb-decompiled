@@ -97,7 +97,7 @@ final class SoundCache {
           var5_int = param2 ^ (param0 >>> 12 | param0 << 4 & 65535);
           var5_int = var5_int | param0 << 16;
           var6 = (long)var5_int;
-          var8 = (PcmSample) (this.field_c.a(true, var6));
+          var8 = (PcmSample) (this.field_c.get(true, var6));
           if (var8 != null) {
             stackIn_3_0 = (PcmSample) (var8);
             return stackIn_3_0;
@@ -153,7 +153,7 @@ final class SoundCache {
           var5_int = (65524 & param2 << 4 | param2 >>> 12) ^ param3;
           var5_int = var5_int | param2 << 16;
           var6 = (long)var5_int ^ 4294967296L;
-          var8 = (PcmSample) (this.field_c.a(true, var6));
+          var8 = (PcmSample) (this.field_c.get(true, var6));
           if (param1 != 0) {
             this.field_f = (IntrusiveNodeHashTable) null;
           }
@@ -166,7 +166,7 @@ final class SoundCache {
             stackIn_9_0 = null;
             return (PcmSample) (stackIn_9_0);
           }
-          var9 = (VorbisSample) (this.field_f.a(true, var6));
+          var9 = (VorbisSample) (this.field_f.get(true, var6));
           if (var9 == null) {
             var9 = VorbisSample.loadNamed(this.field_d, param2, param3);
             if (var9 == null) {
@@ -264,7 +264,7 @@ final class SoundCache {
           if (param0 != 10) {
             this.field_d = (ResourceArchive) null;
           }
-          if (1 != this.field_e.a(true, param1)) {
+          if (1 != this.field_e.getFileIdCapacity(true, param1)) {
             throw new RuntimeException();
           }
           stackIn_8_0 = this.getSoundEffect(param1, param2, 0, (byte) -35);
@@ -297,7 +297,7 @@ final class SoundCache {
             stackIn_2_0 = this.getVorbisSample(param2, 0, 0, param0);
             return stackIn_2_0;
           }
-          if (this.field_d.a(true, param0) == 1) {
+          if (this.field_d.getFileIdCapacity(true, param0) == 1) {
             stackIn_5_0 = this.getVorbisSample(param2, 0, param0, 0);
             return stackIn_5_0;
           }

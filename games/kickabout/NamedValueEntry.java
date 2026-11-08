@@ -80,13 +80,13 @@ final class NamedValueEntry extends IntrusiveNode {
         CipherPacketBuffer var5 = null;
         int var3 = 35 / ((23 - param1) / 35);
         if (DelayedServerPacket.field_h != param0) {
-          var4 = (GameSetupPanel) (SortCriterion.field_f.a(-3611, (long)DelayedServerPacket.field_h));
+          var4 = (GameSetupPanel) (SortCriterion.field_f.get(-3611, (long)DelayedServerPacket.field_h));
           if (var4 != null) {
             var4.field_Kb = null;
           }
           DelayedServerPacket.field_h = param0;
           var5 = FootballerAiOverlaySupport.field_d;
-          var5.b(param2, (byte) -61);
+          var5.writeIsaacByte(param2, (byte) -61);
           var5.writeByte(107, 3);
           var5.writeByte(118, 11);
           var5.writeShort(-1207444472, param0);
@@ -146,7 +146,7 @@ final class NamedValueEntry extends IntrusiveNode {
             var12 = (String) null;
             NamedValueEntry.a((String) null, (byte) -120);
           }
-          AuctionListing.a(640, -22914, 0, 229 + var2, -var2 + 229);
+          AuctionListing.pushRasterClip(640, -22914, 0, 229 + var2, -var2 + 229);
           SoftwareRasterizer.fillRectangleAlpha(0, 229 - var2, 640, var2 << 1, 0, 128);
           if (var1_int >= 30) {
             var1_int -= 30;

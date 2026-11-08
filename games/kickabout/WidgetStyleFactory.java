@@ -240,11 +240,11 @@ final class WidgetStyleFactory {
             field_c = (PopupDialog) null;
           }
           var13 = new UiLayoutNode(0L, (UiLayoutNode) null);
-          var13.field_R = FormationMaskSupport.a(param4, 0, param11);
-          var13.field_S = FormationMaskSupport.a(param2, 0, param9);
-          var13.field_rb = FormationMaskSupport.a(param12, 0, param1);
-          var13.field_u = FormationMaskSupport.a(param8, 0, param0);
-          var13.field_tb = FormationMaskSupport.a(param7, 0, param6);
+          var13.field_R = KitPatternMaskSupport.createSolidNineSliceSprites(param4, 0, param11);
+          var13.field_S = KitPatternMaskSupport.createSolidNineSliceSprites(param2, 0, param9);
+          var13.field_rb = KitPatternMaskSupport.createSolidNineSliceSprites(param12, 0, param1);
+          var13.field_u = KitPatternMaskSupport.createSolidNineSliceSprites(param8, 0, param0);
+          var13.field_tb = KitPatternMaskSupport.createSolidNineSliceSprites(param7, 0, param6);
           var13.field_X = param5;
           var13.field_y = param10;
           stackIn_3_0 = var13;

@@ -12,7 +12,7 @@ final class ModelMaterial {
     static String field_f;
     static String[] field_e;
 
-    final static boolean testGameModeMask(byte[] param0, int param1, int param2, int param3) {
+    final static boolean testUnlockMask(byte[] param0, int param1, int param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;

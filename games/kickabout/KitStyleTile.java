@@ -13,7 +13,7 @@ final class KitStyleTile extends UiLayoutNode implements PopupCard {
     private int field_Ab;
     static ResourceArchive field_Bb;
     private int field_Fb;
-    GameModeDefinition field_Cb;
+    KitStyleDefinition field_Cb;
     private ClubState field_Hb;
 
     final static void j(int param0) {
@@ -181,7 +181,7 @@ final class KitStyleTile extends UiLayoutNode implements PopupCard {
         if (!this.field_Gb) {
           return;
         }
-        stackIn_9_0 = (this.field_Cb.field_m != this.field_Hb.field_w) ? 0 : 1;
+        stackIn_9_0 = (this.field_Cb.styleId != this.field_Hb.field_w) ? 0 : 1;
         var2 = stackIn_9_0;
         if (param0 != -24508) {
           return;
@@ -253,10 +253,10 @@ final class KitStyleTile extends UiLayoutNode implements PopupCard {
 
     final static void a(int param0, ResourceArchive param1, int param2, PcmStreamMixer param3) {
         try {
-          ButtonMenuScreen.field_l = GameSoundEffect.b((byte) 119) * param0 / 1000;
+          ButtonMenuScreen.field_l = GameSoundEffect.getTargetFramesPerSecond((byte) 119) * param0 / 1000;
           GameAppletShell.decodeLogoAudio(param1, (byte) 60);
           StripedProgressBar.a((byte) 49, param1);
-          CipherPacketBuffer.a(3, param1);
+          CipherPacketBuffer.loadSplitFinalFrameSprites(3, param1);
           RasterGammaSupport.initializeIntensityLookup(false);
           Trinket.d((byte) -128);
           PlayerStats.field_p = 0 - ButtonMenuScreen.field_l;
@@ -288,7 +288,7 @@ final class KitStyleTile extends UiLayoutNode implements PopupCard {
         if (null == this.field_Eb ||
           var3 != this.field_Fb ||
           this.field_Ab != var4) {
-          this.field_Eb = AuctionsHelpScreen.a(this.field_Cb.field_m, LongPlusOneCommand.field_B[var4], true, LongPlusOneCommand.field_B[var3]).createModelMesh(100, 4369, 20, -56, -20);
+          this.field_Eb = AuctionsHelpScreen.createKitMesh(this.field_Cb.styleId, LongPlusOneCommand.field_B[var4], true, LongPlusOneCommand.field_B[var3]).createModelMesh(100, 4369, 20, -56, -20);
           this.field_Fb = var3;
           this.field_Ab = var4;
         }
@@ -304,9 +304,9 @@ final class KitStyleTile extends UiLayoutNode implements PopupCard {
           }
         }
         if (this.field_gb) {
-          if (this.field_Cb.field_k != -1) {
-            if (GoalkeeperAiSupport.field_a[this.field_Cb.field_k] &&
-              !ClientPacketFlushSupport.isBitSet(this.field_Cb.field_k, 0, BufferedSocket.field_f)) {
+          if (this.field_Cb.achievementBitIndex != -1) {
+            if (GoalkeeperAiSupport.field_a[this.field_Cb.achievementBitIndex] &&
+              !ClientPacketFlushSupport.isBitSet(this.field_Cb.achievementBitIndex, 0, BufferedSocket.field_f)) {
               IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, MyKitScreen.field_W.toLowerCase());
             } else {
               stackIn_23_0 = -67;
@@ -316,10 +316,10 @@ final class KitStyleTile extends UiLayoutNode implements PopupCard {
               } else {
                 stackIn_24_2 = RenderedBall.field_R;
               }
-              IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(stackIn_23_0, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(stackIn_23_1, stackIn_24_2, new String[]{AvailabilityCheckRequest.field_c[this.field_Cb.field_k].toLowerCase()}));
+              IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(stackIn_23_0, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(stackIn_23_1, stackIn_24_2, new String[]{AvailabilityCheckRequest.field_c[this.field_Cb.achievementBitIndex].toLowerCase()}));
             }
           }
-          if (-1 != this.field_Cb.field_g) {
+          if (-1 != this.field_Cb.unlockBitIndex) {
             stackIn_29_0 = -67;
             stackIn_29_1 = -18;
             if (!this.field_Kb) {
@@ -329,21 +329,21 @@ final class KitStyleTile extends UiLayoutNode implements PopupCard {
             }
             IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(stackIn_29_0, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(stackIn_29_1, stackIn_30_2, new String[]{}));
           }
-          if (this.field_Cb.field_j) {
+          if (this.field_Cb.requiresJagexModeratorRights) {
             IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, BytePlusOneCommand.field_G);
           }
-          if (this.field_Cb.field_f != -1L) {
+          if (this.field_Cb.requiredAccessKey != -1L) {
             IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, AccountTermsPanel.field_C);
           }
         }
         if (this.field_sb == 1) {
           if (this.field_Ib) {
-            KitUnlockNoticeSupport.enqueueLockedKitNotice((byte) -98, this.field_Cb.field_k);
+            KitUnlockNoticeSupport.enqueueLockedKitNotice((byte) -98, this.field_Cb.achievementBitIndex);
           } else {
             if (!this.field_Kb) {
               LoginKind.a((byte) 81);
             } else {
-              SocketArchiveNetworkClient.a((byte) 126, 36);
+              SocketArchiveNetworkClient.enqueueMessageDialog((byte) 126, 36);
             }
           }
         }
@@ -376,12 +376,12 @@ final class KitStyleTile extends UiLayoutNode implements PopupCard {
               }
               var4 = param0.getCodeBase();
               var3 = SessionUrlSupport.decorateSessionUrl(param0, var4, 3).getFile();
-              AppletJavaScriptBridge.a(new Object[]{"home", var3 + "home.ws"}, param0, "updatelinks", 25449);
-              AppletJavaScriptBridge.a(new Object[]{"gamelist", var3 + "togamelist.ws"}, param0, "updatelinks", 25449);
-              AppletJavaScriptBridge.a(new Object[]{"serverlist", var3 + "toserverlist.ws"}, param0, "updatelinks", 25449);
-              AppletJavaScriptBridge.a(new Object[]{"options", var3 + "options.ws"}, param0, "updatelinks", 25449);
-              AppletJavaScriptBridge.a(new Object[]{"terms", var3 + "terms.ws"}, param0, "updatelinks", 25449);
-              AppletJavaScriptBridge.a(new Object[]{"privacy", var3 + "privacy.ws"}, param0, "updatelinks", 25449);
+              AppletJavaScriptBridge.callJavaScript(new Object[]{"home", var3 + "home.ws"}, param0, "updatelinks", 25449);
+              AppletJavaScriptBridge.callJavaScript(new Object[]{"gamelist", var3 + "togamelist.ws"}, param0, "updatelinks", 25449);
+              AppletJavaScriptBridge.callJavaScript(new Object[]{"serverlist", var3 + "toserverlist.ws"}, param0, "updatelinks", 25449);
+              AppletJavaScriptBridge.callJavaScript(new Object[]{"options", var3 + "options.ws"}, param0, "updatelinks", 25449);
+              AppletJavaScriptBridge.callJavaScript(new Object[]{"terms", var3 + "terms.ws"}, param0, "updatelinks", 25449);
+              AppletJavaScriptBridge.callJavaScript(new Object[]{"privacy", var3 + "privacy.ws"}, param0, "updatelinks", 25449);
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var2 = decompiledCaughtException;
@@ -406,7 +406,7 @@ final class KitStyleTile extends UiLayoutNode implements PopupCard {
         }
     }
 
-    KitStyleTile(ClubState param0, GameModeDefinition param1) {
+    KitStyleTile(ClubState param0, KitStyleDefinition param1) {
         this.field_Eb = null;
         this.field_Ib = false;
         this.field_Gb = false;
@@ -420,8 +420,8 @@ final class KitStyleTile extends UiLayoutNode implements PopupCard {
           this.addChild((byte) -128, this.field_Jb);
           this.field_q = 50;
           this.field_Jb.setBounds(true, 60, (this.field_q - 50 >> 1) - 5, 0, 60);
-          this.field_Ib = this.field_Cb.a(ScrollContainer.field_Ib, (byte) 54, BufferedSocket.field_f);
-          this.field_Kb = this.field_Cb.a(ScrollContainer.field_Ib, field_yb, (byte) -81);
+          this.field_Ib = this.field_Cb.isAchievementLocked(ScrollContainer.field_Ib, (byte) 54, BufferedSocket.field_f);
+          this.field_Kb = this.field_Cb.isUnlockMaskLocked(ScrollContainer.field_Ib, field_yb, (byte) -81);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "nt.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

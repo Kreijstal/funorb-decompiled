@@ -63,7 +63,7 @@ final class LobbyGameRecord {
               var1.field_Jb = var1.field_Jb - 1;
               if (var1.field_Jb == 0) {
                 var1.field_Mb = 0;
-                if (var1.h(-13356)) {
+                if (var1.isDetachedFromPlayerTable(-13356)) {
                   var1.c((byte) -109);
                 }
               }
@@ -79,7 +79,7 @@ final class LobbyGameRecord {
                 continue;
               }
               var1_ref.field_Ab = 0;
-              if (var1_ref.b(-7)) {
+              if (var1_ref.isDetachedFromGameTable(-7)) {
                 var1_ref.c((byte) -109);
               }
             }
@@ -91,7 +91,7 @@ final class LobbyGameRecord {
               var1Lifetime1.field_Jb = var1Lifetime1.field_Jb - 1;
               if (var1Lifetime1.field_Jb == 0) {
                 var1Lifetime1.field_Mb = 0;
-                if (var1Lifetime1.h(-13356)) {
+                if (var1Lifetime1.isDetachedFromPlayerTable(-13356)) {
                   var1Lifetime1.c((byte) -109);
                 }
               }

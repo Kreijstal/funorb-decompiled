@@ -58,7 +58,7 @@ abstract class AppScreen {
 
     abstract void updateScreen(byte param0, boolean param1);
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_a = null;
         if (param0 != 125) {
           return;
@@ -72,7 +72,7 @@ abstract class AppScreen {
           PainterStyle.field_e = param2;
           ScrollContainer.field_yb = param0;
           if (param8) {
-            AppScreen.a((byte) 44);
+            AppScreen.releaseStatics((byte) 44);
           }
           PlayerModelPreview.field_e = param4;
           GameSoundEffect.field_b = param7;
@@ -252,14 +252,14 @@ abstract class AppScreen {
               if (WeightedLruCache.field_d <= 0 &&
                 !LoginResponseUiSupport.field_f) {
                 try {
-                  AppletJavaScriptBridge.a(30858, "unzap", AppletContextSupport.getActiveApplet(-110));
+                  AppletJavaScriptBridge.callJavaScript(30858, "unzap", AppletContextSupport.getActiveApplet(-110));
                 } catch (java.lang.Throwable decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var8_ref_Throwable = decompiledCaughtException;
                 }
               } else {
                 try {
-                  AppletJavaScriptBridge.a(new Object[]{QuickChatPhraseDefinition.decodeBase37Name((byte) 112, DiagnosticsOverlaySupport.field_d)}, AppletContextSupport.getActiveApplet(param0 - 122), "zap", param0 + 25449);
+                  AppletJavaScriptBridge.callJavaScript(new Object[]{QuickChatPhraseDefinition.decodeBase37Name((byte) 112, DiagnosticsOverlaySupport.field_d)}, AppletContextSupport.getActiveApplet(param0 - 122), "zap", param0 + 25449);
                 } catch (java.lang.Throwable decompiledCaughtParameter1) {
                   decompiledCaughtException = decompiledCaughtParameter1;
                   var8_ref_Throwable = decompiledCaughtException;
@@ -345,7 +345,7 @@ abstract class AppScreen {
         try {
           java.net.URL var2 = null;
           if (param0 != 20338) {
-            AppScreen.a((byte) 126);
+            AppScreen.releaseStatics((byte) 126);
           }
           try {
             var2 = new java.net.URL(param1.getCodeBase(), "quit.ws");

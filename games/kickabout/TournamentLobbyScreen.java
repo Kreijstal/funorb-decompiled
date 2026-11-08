@@ -87,7 +87,7 @@ final class TournamentLobbyScreen extends AppScreen {
           }
           var2 = MonotonicClock.readCookie(0, "jagex-last-login-method", param0);
           if (var2 == null) {
-            stackIn_5_0 = GameModeDefinition.field_h;
+            stackIn_5_0 = KitStyleDefinition.field_h;
             return stackIn_5_0;
           }
           var3 = IsSixCommand.a(true);
@@ -98,7 +98,7 @@ final class TournamentLobbyScreen extends AppScreen {
               return stackIn_11_0;
             }
           }
-          stackIn_14_0 = GameModeDefinition.field_h;
+          stackIn_14_0 = KitStyleDefinition.field_h;
           return stackIn_14_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -205,7 +205,7 @@ final class TournamentLobbyScreen extends AppScreen {
         int var5 = 618;
         int var6 = this.field_n;
         var2 += 60;
-        AuctionListing.a(var5, -22914, var3, var6, var4);
+        AuctionListing.pushRasterClip(var5, -22914, var3, var6, var4);
         SoftwareRasterizer.fillRoundedRectangleBlended(-(-60 + this.field_A >> 1) + 320, 10 + var2, -60 + this.field_A, 30, 8, 65793, 128);
         ByteArrayPool.field_d.drawCentered(ProxyAuthenticationRequiredException.field_f.toUpperCase(), 320, var2 + 30, 16777215, -1);
         var2 += 120;
@@ -334,9 +334,9 @@ final class TournamentLobbyScreen extends AppScreen {
           }
         }
         if (param1) {
-          this.field_Z.a(-21174, this.tabIndexAt(ArrayWidgetContainer.field_x, 77, TutorialCaptionSupport.field_j), this.tabIndexAt(TrinketIcon.field_yb, 88, TabStrip.field_Eb));
+          this.field_Z.updatePointerSelection(-21174, this.tabIndexAt(ArrayWidgetContainer.field_x, 77, TutorialCaptionSupport.field_j), this.tabIndexAt(TrinketIcon.field_yb, 88, TabStrip.field_Eb));
           if (this.field_Z.selectedIndex >= 0 &&
-            this.field_Z.c(-1)) {
+            this.field_Z.isActivated(-1)) {
             this.selectStatTab(this.field_X[this.field_Z.selectedIndex].kind, false);
           }
         }
@@ -349,7 +349,7 @@ final class TournamentLobbyScreen extends AppScreen {
           var6 = stackIn_52_0;
           if (param1) {
             if (var6 != 0) {
-              stackIn_60_0 = (this.field_Z.c(-1)) ? 1 : 0;
+              stackIn_60_0 = (this.field_Z.isActivated(-1)) ? 1 : 0;
             } else {
               stackIn_60_0 = 0;
             }
@@ -358,7 +358,7 @@ final class TournamentLobbyScreen extends AppScreen {
           }
           var7_int = stackIn_60_0;
           if (var6 != 0) {
-            stackIn_66_0 = (this.field_Z.a(0)) ? 1 : 0;
+            stackIn_66_0 = (this.field_Z.isPointerHeld(0)) ? 1 : 0;
           } else {
             stackIn_66_0 = 0;
           }
@@ -569,7 +569,7 @@ final class TournamentLobbyScreen extends AppScreen {
           }
         }
         if (this.field_Z.selectedIndex >= 0 &&
-          this.field_Z.c(-1)) {
+          this.field_Z.isActivated(-1)) {
           this.selectStatTab(this.field_X[this.field_Z.selectedIndex].kind, false);
         }
         return true;
@@ -611,7 +611,7 @@ final class TournamentLobbyScreen extends AppScreen {
               this.field_X[var3] = new MenuButton(120, 7126504, var5[var3]);
             }
             this.field_Z = new MenuSelection(this.field_X.length);
-            this.field_Z.a(true, this.tabIndexAt(ArrayWidgetContainer.field_x, 98, TutorialCaptionSupport.field_j), (byte) -127);
+            this.field_Z.resetPointerSelection(true, this.tabIndexAt(ArrayWidgetContainer.field_x, 98, TutorialCaptionSupport.field_j), (byte) -127);
           }
           this.readPlayerNames(param0, false);
           this.a(-85, param0);
@@ -833,7 +833,7 @@ final class TournamentLobbyScreen extends AppScreen {
           stackIn_3_2 = this.field_r;
         }
         ((CoverageBitmapFont) (Object) stackIn_2_0).drawCentered(((StringBuilder) (Object) stackIn_2_1).append(stackIn_3_2).toString(), 320, 50, 16777215, -1);
-        AuctionListing.a(640, -22914, 0, 88, 60);
+        AuctionListing.pushRasterClip(640, -22914, 0, 88, 60);
         SoftwareRasterizer.fillRoundedRectangleBlended(224, 66, 372, 50, 8, 65793, 196);
         ByteArrayPool.field_d.drawCentered(LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, ClubStateFactory.field_e, new String[]{LobbyGameRecord.field_g[this.field_W].toLowerCase()}), 410, 82, 16777215, -1);
         var2 = 46;
@@ -857,7 +857,7 @@ final class TournamentLobbyScreen extends AppScreen {
             }
             stackIn_17_0 = (var8 != 0) ? 5592405 : 16777215;
             var9 = stackIn_17_0;
-            AuctionListing.a(var2 + var5, -22914, 20 + var2, var4 + 20, var4);
+            AuctionListing.pushRasterClip(var2 + var5, -22914, 20 + var2, var4 + 20, var4);
             if (-20 + var5 >= ByteArrayPool.field_d.stringWidth(var7)) {
               ByteArrayPool.field_d.drawCentered(var7, var2 + (var5 >> 1), var4 + 13, var9, -1);
             } else {
@@ -1160,7 +1160,7 @@ final class TournamentLobbyScreen extends AppScreen {
           var14 = this.field_T[this.field_T.length - 1];
           var15 = (var6 << 1) + (var6 >> 1);
           var12 = var12 + var15;
-          AuctionListing.a(var11 + var5, -22914, var11 - var5, -(var6 >> 1) + var12, -var6 + var12);
+          AuctionListing.pushRasterClip(var11 + var5, -22914, var11 - var5, -(var6 >> 1) + var12, -var6 + var12);
           SoftwareRasterizer.fillRoundedRectangleBlended(-(ByteArrayPool.field_d.stringWidth(WeightedLruCache.field_g) >> 1) + var11 - 10, var12 - var6, 20 + ByteArrayPool.field_d.stringWidth(WeightedLruCache.field_g), var6, 8, 65793, 128);
           ByteArrayPool.field_d.drawCentered(WeightedLruCache.field_g, var11, var12 + (-(var6 >> 1) - 4), -1, -1);
           TeamManagementScreen.e(126);
@@ -1208,7 +1208,7 @@ final class TournamentLobbyScreen extends AppScreen {
         String var8;
         int var9;
         var9 = Kickabout.field_G;
-        AuctionListing.a(-(this.field_A >> 1) + 320 + this.field_A, param0 - 22909, -(this.field_A >> 1) + 320, this.field_n + 20, 20);
+        AuctionListing.pushRasterClip(-(this.field_A >> 1) + 320 + this.field_A, param0 - 22909, -(this.field_A >> 1) + 320, this.field_n + 20, 20);
         if (0 != AudioOutputSupport.field_a) {
           if (AudioOutputSupport.field_a != 1) {
             if (AudioOutputSupport.field_a == 2) {
@@ -1228,14 +1228,14 @@ final class TournamentLobbyScreen extends AppScreen {
           return;
         }
         if (!this.field_K) {
-          AuctionListing.a(MarkerSliderPainter.field_n + var3 - 10, -22914, -10 + var3, var4, -18 + var4);
+          AuctionListing.pushRasterClip(MarkerSliderPainter.field_n + var3 - 10, -22914, -10 + var3, var4, -18 + var4);
           GuestLoginSupport.a((byte) -127, var4, var3);
           TeamManagementScreen.e(123);
         } else {
           var5 = Math.abs(255 - (int)(MonotonicClock.monotonicMillis(96) / 5L % 512L));
           var6 = 0;
           var7 = Math.abs(255 - var5) | Math.abs(-var5 + 255) << 8 | Math.abs(255 - var5) << 16;
-          AuctionListing.a(40 + (MarkerSliderPainter.field_n + var3), -22914, -2 + var3, var4, -16 + var4);
+          AuctionListing.pushRasterClip(40 + (MarkerSliderPainter.field_n + var3), -22914, -2 + var3, var4, -16 + var4);
           SoftwareRasterizer.fillRoundedRectangleBlended(var3, var4 - 11, 33 + MarkerSliderPainter.field_n, 20, 6, var6, FriendsListPanel.getHudOpacity(false, (byte) -96));
           ScrollPane.a(var4, -123, 14 + var3);
           ScrollPane.a(var4, param0 + 113, MarkerSliderPainter.field_n + (30 + var3));
@@ -1245,7 +1245,7 @@ final class TournamentLobbyScreen extends AppScreen {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_F = null;
         field_N = null;
         if (!param0) {
@@ -1315,7 +1315,7 @@ final class TournamentLobbyScreen extends AppScreen {
 
     final static void d(int param0) {
         if (param0 != -1) {
-          TournamentLobbyScreen.a(false);
+          TournamentLobbyScreen.releaseStatics(false);
         }
     }
 

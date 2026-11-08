@@ -76,7 +76,7 @@ class TextHotspotWidget extends TextButton {
         if (param0 != -105) {
           TextHotspotWidget.i(83);
         }
-        var2.b(param1, (byte) -80);
+        var2.writeIsaacByte(param1, (byte) -80);
         var2.writeByte(116, 1);
         var2.writeByte(param0 ^ -32, 2);
     }
@@ -100,14 +100,14 @@ class TextHotspotWidget extends TextButton {
 
     final static void a(int param0, String param1) {
         int var2_int = 0;
-        if (!AuctionLogEntry.e(15137)) {
+        if (!AuctionLogEntry.isLoggedInJagexModerator(15137)) {
           return;
         }
         try {
           if (param0 != -28153) {
             field_L = (Sprite) null;
           }
-          FootballerAiOverlaySupport.field_d.b(89, (byte) 77);
+          FootballerAiOverlaySupport.field_d.writeIsaacByte(89, (byte) 77);
           FootballerAiOverlaySupport.field_d.field_n = FootballerAiOverlaySupport.field_d.field_n + 2;
           var2_int = FootballerAiOverlaySupport.field_d.field_n;
           FootballerAiOverlaySupport.field_d.writeString(14190, param1);

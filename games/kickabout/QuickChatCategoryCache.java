@@ -17,7 +17,7 @@ final class QuickChatCategoryCache {
         var2 = Kickabout.field_G;
         if (SortCriterion.field_l != null) {
           if (SortCriterion.field_l.c(0)) {
-            ContextMenu.a(PlayerContextMenu.field_i.h((byte) -77), (byte) -88, 11);
+            ContextMenu.a(PlayerContextMenu.field_i.getGameId((byte) -77), (byte) -88, 11);
           } else {
             GameLoopApplet.b(15848, 11, 0);
           }
@@ -26,7 +26,7 @@ final class QuickChatCategoryCache {
             !MachineTokenStorageSupport.field_e.b(-21660)) {
             GameLoopApplet.b(param0 + 15848, 11, 0);
           } else {
-            ContextMenu.a(PlayerContextMenu.field_i.h((byte) 74), (byte) -114, 11);
+            ContextMenu.a(PlayerContextMenu.field_i.getGameId((byte) 74), (byte) -114, 11);
             QuickChatPhraseCache.field_d = true;
           }
         }
@@ -263,9 +263,9 @@ final class QuickChatCategoryCache {
           return var3;
         }
         if (param1 >= 32768) {
-          var4 = this.globalArchive.b(0, -32669, param1 & 32767);
+          var4 = this.globalArchive.takeFile(0, -32669, param1 & 32767);
         } else {
-          var4 = this.localArchive.b(0, -32669, param1);
+          var4 = this.localArchive.takeFile(0, -32669, param1);
         }
         var3 = new QuickChatCategory();
         if (var4 != null) {
@@ -291,10 +291,10 @@ final class QuickChatCategoryCache {
           this.localArchive = param1;
           this.globalArchive = param2;
           if (null != this.localArchive) {
-            this.localArchive.a(true, 0);
+            this.localArchive.getFileIdCapacity(true, 0);
           }
           if (this.globalArchive != null) {
-            this.globalArchive.a(true, 0);
+            this.globalArchive.getFileIdCapacity(true, 0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

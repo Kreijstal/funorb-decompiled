@@ -17,7 +17,7 @@ final class SquadPickerDialog extends MessageDialog {
     final static void a(int param0, String param1, boolean param2) {
         int fieldTemp$0 = 0;
         int var3_int = 0;
-        if (PlayArea.a(100)) {
+        if (PlayArea.isGuestSession(100)) {
           return;
         }
         if (PlayerContextMenu.field_f) {
@@ -25,7 +25,7 @@ final class SquadPickerDialog extends MessageDialog {
         }
         try {
           QuickChatPhraseDefinition.field_r = param1;
-          FootballerAiOverlaySupport.field_d.b(54, (byte) 89);
+          FootballerAiOverlaySupport.field_d.writeIsaacByte(54, (byte) 89);
           fieldTemp$0 = FootballerAiOverlaySupport.field_d.field_n + 1;
           FootballerAiOverlaySupport.field_d.field_n = FootballerAiOverlaySupport.field_d.field_n + 1;
           var3_int = fieldTemp$0;
@@ -51,7 +51,7 @@ final class SquadPickerDialog extends MessageDialog {
             this.field_H.sendSquadOrder(true);
             return;
           }
-          if (GameLoopApplet.field_E.a((byte) 95, GameLoopApplet.field_E.field_q[this.field_H.field_Fb])) {
+          if (GameLoopApplet.field_E.hasLogEntryForSlot((byte) 95, GameLoopApplet.field_E.field_q[this.field_H.field_Fb])) {
             this.field_H.sendSquadOrder(true);
             return;
           }
@@ -67,7 +67,7 @@ final class SquadPickerDialog extends MessageDialog {
           this.field_H.sendSquadOrder(true);
           return;
         }
-        if (GameLoopApplet.field_E.a((byte) 95, GameLoopApplet.field_E.field_q[this.field_H.field_Fb])) {
+        if (GameLoopApplet.field_E.hasLogEntryForSlot((byte) 95, GameLoopApplet.field_E.field_q[this.field_H.field_Fb])) {
           this.field_H.sendSquadOrder(true);
           return;
         }
@@ -108,8 +108,8 @@ final class SquadPickerDialog extends MessageDialog {
           this.field_H.k((byte) 84);
           if (-1 != this.field_H.field_Fb) {
             GameLoopApplet.field_E.squad[GameLoopApplet.field_E.field_q[this.field_H.field_Fb]].drawCentered(param2 + 35 + 105, 23, param1 + 320);
-            if (!GameLoopApplet.field_E.a((byte) -102, GameLoopApplet.field_E.field_q[this.field_H.field_Fb])) {
-              if (AuctionLogEntry.e(15137) &&
+            if (!GameLoopApplet.field_E.hasLogEntryForSlot((byte) -102, GameLoopApplet.field_E.field_q[this.field_H.field_Fb])) {
+              if (AuctionLogEntry.isLoggedInJagexModerator(15137) &&
                 !ScrollPane.h((byte) 5)) {
                 IsSixCommand.field_C.drawParagraph("Sorry, Moderators can't auction people...", param1 + 170, 210 + param2 + 35, 300, 40, 16777215, -1, 1, 1, 0);
                 return;
@@ -124,7 +124,7 @@ final class SquadPickerDialog extends MessageDialog {
             }
             IsSixCommand.field_C.drawCentered(PacketBuffer.field_j, 315 + param1, 245 + param2, 16777215, -1);
           }
-          if (!AuctionLogEntry.e(15137)) {
+          if (!AuctionLogEntry.isLoggedInJagexModerator(15137)) {
             if (this.field_H.field_Fb == -1) {
               IsSixCommand.field_C.drawParagraph(LeaguesHelpScreen.field_G, 170 + param1, 210 + param2 + 35, 300, 40, 16729156, -1, 1, 1, 0);
             } else {
@@ -156,8 +156,8 @@ final class SquadPickerDialog extends MessageDialog {
         this.field_H.k((byte) 84);
         if (-1 != this.field_H.field_Fb) {
           GameLoopApplet.field_E.squad[GameLoopApplet.field_E.field_q[this.field_H.field_Fb]].drawCentered(param2 + 35 + 105, 23, param1 + 320);
-          if (!GameLoopApplet.field_E.a((byte) -102, GameLoopApplet.field_E.field_q[this.field_H.field_Fb])) {
-            if (!AuctionLogEntry.e(15137)) {
+          if (!GameLoopApplet.field_E.hasLogEntryForSlot((byte) -102, GameLoopApplet.field_E.field_q[this.field_H.field_Fb])) {
+            if (!AuctionLogEntry.isLoggedInJagexModerator(15137)) {
               if (this.field_H.field_Fb != -1 &&
                 PasswordLoginCredentials.calculatePlayerValue(GameLoopApplet.field_E.squad[GameLoopApplet.field_E.field_q[this.field_H.field_Fb]], -576054046) == 0) {
                 IsSixCommand.field_C.drawParagraph(PlayArea.field_f, param1 + 170, 210 + (param2 + 35), 300, 40, 16777215, -1, 1, 1, 0);
@@ -183,7 +183,7 @@ final class SquadPickerDialog extends MessageDialog {
           }
           IsSixCommand.field_C.drawCentered(PacketBuffer.field_j, 315 + param1, 245 + param2, 16777215, -1);
         }
-        if (!AuctionLogEntry.e(15137)) {
+        if (!AuctionLogEntry.isLoggedInJagexModerator(15137)) {
           if (this.field_H.field_Fb == -1) {
             IsSixCommand.field_C.drawParagraph(LeaguesHelpScreen.field_G, 170 + param1, 210 + param2 + 35, 300, 40, 16729156, -1, 1, 1, 0);
           } else {
@@ -255,7 +255,7 @@ final class SquadPickerDialog extends MessageDialog {
         if (this.field_H.field_Fb == -1) {
           this.field_i[0].field_lb = false;
         } else {
-          if (GameLoopApplet.field_E.a((byte) 90, GameLoopApplet.field_E.field_q[this.field_H.field_Fb])) {
+          if (GameLoopApplet.field_E.hasLogEntryForSlot((byte) 90, GameLoopApplet.field_E.field_q[this.field_H.field_Fb])) {
             this.field_i[0].field_lb = false;
           } else {
             if (PasswordLoginCredentials.calculatePlayerValue(GameLoopApplet.field_E.squad[GameLoopApplet.field_E.field_q[this.field_H.field_Fb]], -576054046) != 0) {
@@ -265,7 +265,7 @@ final class SquadPickerDialog extends MessageDialog {
             }
           }
         }
-        if (!AuctionLogEntry.e(15137)) {
+        if (!AuctionLogEntry.isLoggedInJagexModerator(15137)) {
           return;
         }
         if (ScrollPane.h((byte) -128)) {

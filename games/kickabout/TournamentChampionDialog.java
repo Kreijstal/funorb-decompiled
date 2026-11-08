@@ -183,13 +183,13 @@ final class TournamentChampionDialog extends MessageDialog {
     }
 
     final static void b(int param0, int param1) {
-        if (PlayArea.a(100)) {
+        if (PlayArea.isGuestSession(100)) {
           return;
         }
         if (PlayerContextMenu.field_f) {
           return;
         }
-        FootballerAiOverlaySupport.field_d.b(77, (byte) 85);
+        FootballerAiOverlaySupport.field_d.writeIsaacByte(77, (byte) 85);
         FootballerAiOverlaySupport.field_d.writeByte(105, param0);
         BeveledTextPainter.field_t = param1;
         PlayerContextMenu.field_f = true;

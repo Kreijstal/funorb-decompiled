@@ -88,7 +88,7 @@ final class LookupRecordUpdate extends IntrusiveNode {
           var15 = FootballerPreview.a(-5275);
           if (IsSixCommand.field_B &&
             var15 != null) {
-            SoftwareRasterizer.fillRect(0, 0, 640, 480, ConsoleCommand.field_x[FormationMaskSupport.field_c][RankingsScreen.field_C]);
+            SoftwareRasterizer.fillRect(0, 0, 640, 480, ConsoleCommand.field_x[KitPatternMaskSupport.field_c][RankingsScreen.field_C]);
             var2_int = var15.field_v;
             var3 = var15.field_v;
             var4_int = -1 + AccountTermsPanel.screenToWorldX(0, 6784) / var2_int;
@@ -98,9 +98,9 @@ final class LookupRecordUpdate extends IntrusiveNode {
             for (var8 = var4_int; var8 < var5; var8++) {
               for (var9 = var6; var7 > var9; var9++) {
                 var10 = SocialListLayoutSupport.worldToScreenX(param0 ^ -48, var8 * var2_int);
-                var11 = IntKeyLookup.a((byte) -85, var9 * var3);
+                var11 = IntKeyLookup.projectPitchY((byte) -85, var9 * var3);
                 var12 = SocialListLayoutSupport.worldToScreenX(param0 + 48, var8 * var2_int + var2_int);
-                var13 = IntKeyLookup.a((byte) -97, var3 * var9 + var3);
+                var13 = IntKeyLookup.projectPitchY((byte) -97, var3 * var9 + var3);
                 SoftwareRasterizer.drawRectangle(var10, var11, var12 - var10, var13 - var11, 65793);
                 IsSixCommand.field_C.drawCentered('(' + Integer.toString(var8) + ',' + Integer.toString(var9) + ')', var10 + (-var10 + var12 >> 1), (-var11 + var13 >> 1) + var11, 16777215, 65793);
               }
@@ -192,7 +192,7 @@ final class LookupRecordUpdate extends IntrusiveNode {
               }
             }
           } else {
-            SoftwareRasterizer.fillRect(0, 0, 640, 480, ConsoleCommand.field_x[FormationMaskSupport.field_c][RankingsScreen.field_C]);
+            SoftwareRasterizer.fillRect(0, 0, 640, 480, ConsoleCommand.field_x[KitPatternMaskSupport.field_c][RankingsScreen.field_C]);
           }
           if (DebouncedValidationProvider.field_a != null) {
             var2_intLifetime2 = MySquadScreen.worldToScreenX(-29, -15);

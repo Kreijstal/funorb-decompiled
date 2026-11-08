@@ -87,7 +87,7 @@ final class MusicPatch extends IntrusiveNode {
           }
           SquadPickerDialog.field_Q.b(var1_int, var2, FriendsListPanel.getHudOpacity(false, (byte) 51));
           if (SocketArchiveNetworkClient.field_w != null) {
-            AuctionListing.a(1 + var1_int + PitchOptionTile.field_yb, param0 ^ -16754303, 1 + var1_int, 1 + var2 + IconLabel.field_Bb, 1 + var2);
+            AuctionListing.pushRasterClip(1 + var1_int + PitchOptionTile.field_yb, param0 ^ -16754303, 1 + var1_int, 1 + var2 + IconLabel.field_Bb, 1 + var2);
             for (var3_int = 0; 2 > var3_int; var3_int++) {
               if (TutorialScenerySupport.field_c != -2) {
                 stackIn_17_0 = (var3_int != SocketArchiveNetworkClient.field_w.field_g[TutorialScenerySupport.field_c].team) ? 0 : 1;

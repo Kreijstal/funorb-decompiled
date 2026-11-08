@@ -102,7 +102,7 @@ final class AudioService implements Runnable {
     }
 
     final static int pollResourceConnection(int param0) {
-        FriendsListPanel.field_Ab.a(0);
+        FriendsListPanel.field_Ab.serviceArchiveSources(0);
         if (!ParticipantStatus.field_t.pollResponses((byte) -46)) {
           return MyPitchScreen.pollServerConnection((byte) 66);
         }

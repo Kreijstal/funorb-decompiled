@@ -239,9 +239,9 @@ class ButtonMenuScreen extends AppScreen {
             decompiledFrameRemainder0 = false;
           }
           else {
-            this.buttonSelection.d(107);
+            this.buttonSelection.handleVerticalArrowKeys(107);
             if (0 <= this.buttonSelection.selectedIndex &&
-              this.buttonSelection.c(-1)) {
+              this.buttonSelection.isActivated(-1)) {
               this.buttons[this.buttonSelection.selectedIndex].activate(-1, false);
             }
           }
@@ -538,7 +538,7 @@ class ButtonMenuScreen extends AppScreen {
         }
         if (param1) {
           var3 = this.buttonIndexAt(ArrayWidgetContainer.field_x, TutorialCaptionSupport.field_j, (byte) 30);
-          this.buttonSelection.a(-21174, var3, this.buttonIndexAt(TrinketIcon.field_yb, TabStrip.field_Eb, (byte) 110));
+          this.buttonSelection.updatePointerSelection(-21174, var3, this.buttonIndexAt(TrinketIcon.field_yb, TabStrip.field_Eb, (byte) 110));
           if (var3 == -1) {
             stackIn_11_0 = -1;
           } else {
@@ -556,13 +556,13 @@ class ButtonMenuScreen extends AppScreen {
           stackIn_20_0 = (~var9 != ~this.buttonSelection.selectedIndex) ? 0 : 1;
           var4Lifetime1 = stackIn_20_0;
           if (var4Lifetime1 != 0) {
-            stackIn_26_0 = (this.buttonSelection.c(-1)) ? 1 : 0;
+            stackIn_26_0 = (this.buttonSelection.isActivated(-1)) ? 1 : 0;
           } else {
             stackIn_26_0 = 0;
           }
           var5 = stackIn_26_0;
           if (var4Lifetime1 != 0) {
-            stackIn_32_0 = (this.buttonSelection.a(0)) ? 1 : 0;
+            stackIn_32_0 = (this.buttonSelection.isPointerHeld(0)) ? 1 : 0;
           } else {
             stackIn_32_0 = 0;
           }
@@ -585,7 +585,7 @@ class ButtonMenuScreen extends AppScreen {
         int var5 = 0;
         MenuButton var6 = null;
         int var7 = Kickabout.field_G;
-        this.buttonSelection.a(-1, 0, param1, param2);
+        this.buttonSelection.restoreSelection(-1, 0, param1, param2);
         MenuButton[] var8 = this.buttons;
         MenuButton[] var4 = var8;
         for (var5 = 0; var5 < var8.length; var5++) {

@@ -6,7 +6,7 @@ final class IntKeyLookup {
     static String field_b;
     private int[] field_a;
 
-    final static int a(byte param0, int param1) {
+    final static int projectPitchY(byte param0, int param1) {
         if (param0 > -55) {
           return 67;
         }
@@ -45,7 +45,7 @@ final class IntKeyLookup {
     public static void releaseStatics(byte param0) {
         field_b = null;
         if (param0 != 94) {
-          IntKeyLookup.a((byte) -22, 76);
+          IntKeyLookup.projectPitchY((byte) -22, 76);
           field_c = null;
           return;
         }

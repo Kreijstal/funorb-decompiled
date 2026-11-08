@@ -26,7 +26,7 @@ final class OffscreenPlayerArrow {
         this.field_c = param2;
         this.field_k = false;
         var5 = SocialListLayoutSupport.worldToScreenX(0, this.field_i.field_kb >> 16);
-        var6 = IntKeyLookup.a((byte) -94, this.field_i.field_bb >> 16);
+        var6 = IntKeyLookup.projectPitchY((byte) -94, this.field_i.field_bb >> 16);
         if (param0 >= 10 &&
           param1 >= 10 &&
           630 >= param0 &&

@@ -1,19 +1,19 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class GameModeDefinition {
+final class KitStyleDefinition {
     static String field_a;
-    int field_m;
-    int field_g;
-    boolean field_j;
+    int styleId;
+    int unlockBitIndex;
+    boolean requiresJagexModeratorRights;
     static LoginMethod field_h;
     static int field_i;
     static String field_c;
-    int field_k;
+    int achievementBitIndex;
     static String field_d;
     static String field_b;
-    boolean[][][] field_l;
-    long field_f;
+    boolean[][][] patternMasks;
+    long requiredAccessKey;
     static String[] field_e;
 
     final static boolean isLeapYear(int param0, int param1) {
@@ -54,13 +54,13 @@ final class GameModeDefinition {
         return false;
     }
 
-    final boolean a(long param0, int param1, int param2) {
+    final boolean matchesAccessRequirements(long param0, int param1, int param2) {
         int var5 = 43 / ((25 - param1) / 53);
-        if (!this.field_j) {
-          if (this.field_f == -1L) {
+        if (!this.requiresJagexModeratorRights) {
+          if (this.requiredAccessKey == -1L) {
             return true;
           }
-          if (~this.field_f != ~param0) {
+          if (~this.requiredAccessKey != ~param0) {
             return false;
           }
           return true;
@@ -68,16 +68,16 @@ final class GameModeDefinition {
         if (param2 < 2) {
           return false;
         }
-        if (this.field_f == -1L) {
+        if (this.requiredAccessKey == -1L) {
           return true;
         }
-        if (~this.field_f != ~param0) {
+        if (~this.requiredAccessKey != ~param0) {
           return false;
         }
         return true;
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_a = null;
         field_b = null;
         if (param0) {
@@ -87,30 +87,30 @@ final class GameModeDefinition {
           field_d = null;
           return;
         }
-        GameModeDefinition.a(true);
+        KitStyleDefinition.releaseStatics(true);
         field_e = null;
         field_c = null;
         field_h = null;
         field_d = null;
     }
 
-    final boolean a(int param0) {
+    final boolean usesSecondColorForClashCheck(int param0) {
         if (param0 != -1) {
           return false;
         }
-        if (this.field_m == 0) {
+        if (this.styleId == 0) {
           return true;
         }
-        if (this.field_m == 13) {
+        if (this.styleId == 13) {
           return true;
         }
-        if (this.field_m != 23) {
+        if (this.styleId != 23) {
           return false;
         }
         return true;
     }
 
-    final boolean a(int param0, byte[] param1, byte param2) {
+    final boolean isUnlockMaskLocked(int param0, byte[] param1, byte param2) {
         RuntimeException var4 = null;
         boolean stackIn_10_0 = false;
         RuntimeException stackIn_13_0 = null;
@@ -121,10 +121,10 @@ final class GameModeDefinition {
           if (param2 > -8) {
             return true;
           }
-          if (this.field_g == -1) {
+          if (this.unlockBitIndex == -1) {
             return false;
           }
-          stackIn_10_0 = !(ModelMaterial.testGameModeMask(param1, this.field_g, param0, 3231));
+          stackIn_10_0 = !(ModelMaterial.testUnlockMask(param1, this.unlockBitIndex, param0, 3231));
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -140,7 +140,7 @@ final class GameModeDefinition {
         }
     }
 
-    final boolean a(int param0, byte param1, int[] param2) {
+    final boolean isAchievementLocked(int param0, byte param1, int[] param2) {
         RuntimeException var4 = null;
         boolean stackIn_10_0 = false;
         RuntimeException stackIn_13_0 = null;
@@ -149,11 +149,11 @@ final class GameModeDefinition {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 54) {
-            this.a(93L, 123, -46);
+            this.matchesAccessRequirements(93L, 123, -46);
           }
           if (param0 < 2 &&
-            this.field_k != -1) {
-            stackIn_10_0 = !(ClientPacketFlushSupport.isBitSet(this.field_k, 0, param2));
+            this.achievementBitIndex != -1) {
+            stackIn_10_0 = !(ClientPacketFlushSupport.isBitSet(this.achievementBitIndex, 0, param2));
             return stackIn_10_0;
           }
           return false;
@@ -171,13 +171,13 @@ final class GameModeDefinition {
         }
     }
 
-    GameModeDefinition(int param0, int param1, boolean param2, long param3, String param4) {
+    KitStyleDefinition(int param0, int param1, boolean param2, long param3, String param4) {
         try {
-          this.field_f = param3;
-          this.field_k = param0;
-          this.field_j = param2 ? true : false;
-          this.field_g = param1;
-          this.field_l = FormationMaskSupport.decodeFormationMask(21656, param4);
+          this.requiredAccessKey = param3;
+          this.achievementBitIndex = param0;
+          this.requiresJagexModeratorRights = param2 ? true : false;
+          this.unlockBitIndex = param1;
+          this.patternMasks = KitPatternMaskSupport.decodeKitPatternMask(21656, param4);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "rd.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }

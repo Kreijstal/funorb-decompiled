@@ -12,7 +12,7 @@ final class SoundEffect {
     }
 
     final static SoundEffect load(ResourceArchive param0, int param1, int param2) {
-        byte[] var3 = param0.b(param1, -32669, param2);
+        byte[] var3 = param0.takeFile(param1, -32669, param2);
         if (var3 == null) {
           return null;
         }

@@ -29,7 +29,7 @@ final class DemoIntegersCommand extends ConsoleCommand {
         try {
           var4_int = param0.getGroupId(param2, -1);
           if (param1 != 17369) {
-            DemoIntegersCommand.g(27);
+            DemoIntegersCommand.releaseStatics(27);
           }
           var5 = param0.getFileId((byte) -121, param3, var4_int);
           stackIn_3_0 = GoalStateAgent.a(var4_int, var5, param0, false);
@@ -82,7 +82,7 @@ final class DemoIntegersCommand extends ConsoleCommand {
           if (SharedPanelFactory.field_b <= 0) {
             return;
           }
-          WeightedLruCache.a(0);
+          WeightedLruCache.layoutAnimatedChatPanel(0);
           GrayscalePaletteSupport.field_a.updateInput(0, param0);
           if (null != PlayArea.field_a) {
             if (PacketBuffer.field_l) {
@@ -149,7 +149,7 @@ final class DemoIntegersCommand extends ConsoleCommand {
         }
     }
 
-    public static void g(int param0) {
+    public static void releaseStatics(int param0) {
         field_C = null;
         field_F = null;
         if (param0 != 0) {

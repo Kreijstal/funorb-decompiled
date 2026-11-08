@@ -21,10 +21,10 @@ abstract class ArchiveNetworkClient {
 
     final int countBackgroundRequests(int param0) {
         if (param0 == -21) {
-          return this.field_c.c(-1976587888) + this.field_j.c(-1976587888);
+          return this.field_c.size(-1976587888) + this.field_j.size(-1976587888);
         }
         this.countPriorityRequests(124);
-        return this.field_c.c(-1976587888) + this.field_j.c(-1976587888);
+        return this.field_c.size(-1976587888) + this.field_j.size(-1976587888);
     }
 
     final boolean isBackgroundQueueFull(int param0) {
@@ -45,7 +45,7 @@ abstract class ArchiveNetworkClient {
         return this.countPriorityRequests(0) >= 20 ? true : false;
     }
 
-    final static boolean a(String param0, int param1, String param2) {
+    final static boolean isAcceptablePassword(String param0, int param1, String param2) {
         RuntimeException var3 = null;
         RuntimeException stackIn_32_0 = null;
         StringBuilder stackIn_32_1 = null;
@@ -160,11 +160,11 @@ abstract class ArchiveNetworkClient {
 
     final int countPriorityRequests(int param0) {
         if (param0 == 0) {
-          return this.field_h.c(-1976587888) + this.field_b.c(-1976587888);
+          return this.field_h.size(-1976587888) + this.field_b.size(-1976587888);
         }
         Object var3 = (Object) null;
         this.attachSocket((Object) null, -67, false);
-        return this.field_h.c(-1976587888) + this.field_b.c(-1976587888);
+        return this.field_h.size(-1976587888) + this.field_b.size(-1976587888);
     }
 
     ArchiveNetworkClient() {

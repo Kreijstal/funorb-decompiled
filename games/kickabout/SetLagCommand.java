@@ -20,7 +20,7 @@ final class SetLagCommand extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
         try {
-          param2 = ArchiveManager.a('_', "", (byte) -125, param2);
+          param2 = ArchiveManager.replaceCharacter('_', "", (byte) -125, param2);
           if (param0 < 12) {
             return true;
           }
@@ -231,9 +231,9 @@ final class SetLagCommand extends ConsoleCommand {
               }
               var8 = new SectorCacheStore(param0, RandomAccessCacheFile.field_h, JaggrabDownloader.field_j[param0], 2097152);
             }
-            var9 = FriendsListPanel.field_Ab.a((SectorCacheStore) (var8), -122, param0, param4, (SectorCacheStore) (var7));
+            var9 = FriendsListPanel.field_Ab.getArchiveSource((SectorCacheStore) (var8), -122, param0, param4, (SectorCacheStore) (var7));
             if (param3) {
-              var9.b((byte) 55);
+              var9.requestAllGroups((byte) 55);
             }
             stackIn_14_0 = new ResourceArchive(var9, param5, param2);
             return stackIn_14_0;

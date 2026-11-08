@@ -16,9 +16,9 @@ final class QuickChatPhraseCache {
           return var3;
         }
         if (param1 >= 32768) {
-          var4 = this.field_b.b(1, -32669, param1 & 32767);
+          var4 = this.field_b.takeFile(1, -32669, param1 & 32767);
         } else {
-          var4 = this.field_a.b(1, -32669, param1);
+          var4 = this.field_a.takeFile(1, -32669, param1);
         }
         var3 = new QuickChatPhraseDefinition();
         if (var4 != null) {
@@ -56,12 +56,12 @@ final class QuickChatPhraseCache {
           this.field_a = param1;
           this.field_b = param2;
           if (this.field_a != null) {
-            this.field_a.a(true, 1);
+            this.field_a.getFileIdCapacity(true, 1);
           }
           if (null == this.field_b) {
             return;
           }
-          this.field_b.a(true, 1);
+          this.field_b.getFileIdCapacity(true, 1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

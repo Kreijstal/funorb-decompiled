@@ -180,7 +180,7 @@ abstract class TextFieldValidator extends DebouncedValidationProvider implements
         if (param0 != -1) {
           return false;
         }
-        if (PlayArea.a(100)) {
+        if (PlayArea.isGuestSession(100)) {
           return true;
         }
         if (WeightedLruCache.field_d > 0) {

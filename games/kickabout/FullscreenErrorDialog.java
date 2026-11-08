@@ -32,7 +32,7 @@ final class FullscreenErrorDialog extends ResizableModalPanel implements ButtonL
         if (BallAgent.field_u) {
           return -1;
         }
-        if (QuickChatKeysHelpPanel.field_Cb.a(param0, "park")) {
+        if (QuickChatKeysHelpPanel.field_Cb.ensurePackedGroupByName(param0, "park")) {
           BallAgent.field_u = true;
           LeaguesScreen.field_E = ServerTextTemplate.a("benches", "park", 2, QuickChatKeysHelpPanel.field_Cb);
           ConsoleCommand.field_w = QuickChatPhraseDefinition.loadSpriteByName("park", QuickChatKeysHelpPanel.field_Cb, (byte) 70, "hotdog");

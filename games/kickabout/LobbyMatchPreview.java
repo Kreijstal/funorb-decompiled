@@ -63,7 +63,7 @@ final class LobbyMatchPreview {
           DraggableWidget.field_K.b((-50 + PitchOptionTile.field_yb >> 1) + var2, (-20 + IconLabel.field_Bb >> 1) + var3, 96);
         }
         if (this.field_e.field_f == 4) {
-          AuctionListing.a(var2 + 1 + PitchOptionTile.field_yb, -22914, 1 + var2, IconLabel.field_Bb + var3 + 1, var3 + 1);
+          AuctionListing.pushRasterClip(var2 + 1 + PitchOptionTile.field_yb, -22914, 1 + var2, IconLabel.field_Bb + var3 + 1, var3 + 1);
           var4 = 0;
           var5 = 0;
           for (var6 = 0; var6 < 2; var6++) {
@@ -177,7 +177,7 @@ final class LobbyMatchPreview {
             if (QuickChatPhraseCache.field_d) {
               return;
             }
-            FootballerAiOverlaySupport.field_d.b(86, (byte) -69);
+            FootballerAiOverlaySupport.field_d.writeIsaacByte(86, (byte) -69);
             FootballerAiOverlaySupport.field_d.writeByte(121, this.field_k);
             QuickChatPhraseCache.field_d = true;
           }

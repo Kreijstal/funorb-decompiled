@@ -22,7 +22,7 @@ abstract class MatchAgent {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_d = null;
         if (param0 != -3) {
           CharSequence var2 = (CharSequence) null;

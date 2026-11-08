@@ -298,7 +298,7 @@ final class ScrollPane extends UiLayoutNode {
           WeightedLruCache.field_a = WeightedLruCache.field_j;
           return;
         }
-        if (!PlayArea.a(100)) {
+        if (!PlayArea.isGuestSession(100)) {
           if (PlayerPortraitCacheEntry.field_g != null) {
             LoginForm.submitHighScore((byte) 70, 3, PlayerPortraitCacheEntry.field_g);
           }

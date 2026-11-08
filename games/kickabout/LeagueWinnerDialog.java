@@ -150,13 +150,13 @@ final class LeagueWinnerDialog extends MessageDialog {
 
     final void handleResult(int param0, int param1) {
         super.handleResult(122, param1);
-        if (PlayArea.a(100)) {
+        if (PlayArea.isGuestSession(100)) {
           return;
         }
         if (param0 <= 60) {
           field_K = (String[]) null;
         }
-        FootballerAiOverlaySupport.field_d.b(78, (byte) 113);
+        FootballerAiOverlaySupport.field_d.writeIsaacByte(78, (byte) 113);
     }
 
     final static AccountInputValidationResult a(String param0, int param1) {

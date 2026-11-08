@@ -226,17 +226,17 @@ final class StatefulTextPainter extends TextWidgetPainter {
           }
           var9Lifetime1 = var17.field_w;
           ClientUiOverlay.pushRasterState(-12974);
-          var17.e();
+          var17.setRasterTarget();
           SoftwareRasterizer.desaturateRect(0, 0, SoftwareRasterizer.field_g, SoftwareRasterizer.field_f);
           var15 = new Sprite(var9Lifetime1, var9Lifetime1);
           var18 = var15;
-          var18.e();
+          var18.setRasterTarget();
           var17.d(0, 0);
           var11 = new Sprite(var9Lifetime1, var9Lifetime1);
-          var11.e();
+          var11.setRasterTarget();
           var17.d(-var17.field_q + var9Lifetime1, 0);
           var12 = new Sprite(-(2 * var9Lifetime1) + var17.field_q, var9Lifetime1);
-          var12.e();
+          var12.setRasterTarget();
           var17.d(-var9Lifetime1, 0);
           TeamManagementScreen.e(119);
           IntrusiveDequeCursor.field_a = new Sprite[]{var15, var12, var11};
@@ -292,7 +292,7 @@ final class StatefulTextPainter extends TextWidgetPainter {
             stackIn_3_0 = null;
           }
           var10 = (TextButton) (stackIn_3_0);
-          AuctionListing.a(param3.field_t + (param4 + param3.field_n), -22914, param3.field_t + param4, param3.field_i + (param2 + param3.field_g), param2 + param3.field_g);
+          AuctionListing.pushRasterClip(param3.field_t + (param4 + param3.field_n), -22914, param3.field_t + param4, param3.field_i + (param2 + param3.field_g), param2 + param3.field_g);
           if (var10 != null) {
             param1 = param1 & var10.field_y;
           }

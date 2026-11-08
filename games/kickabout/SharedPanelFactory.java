@@ -50,8 +50,8 @@ final class SharedPanelFactory {
           var1_int = 0;
           var2 = 0;
           while (TexturedPanelPainter.$cfr$intArgs$b$c4997cb15529(-59)) {
-            DirectByteStorage.field_k.d(param0 + 101);
-            if (DirectByteStorage.field_k.c(param0 + 2)) {
+            DirectByteStorage.field_k.handleVerticalArrowKeys(param0 + 101);
+            if (DirectByteStorage.field_k.isActivated(param0 + 2)) {
               var1_int = 1;
             }
             if (FixedQuaternion.field_e != 13) {
@@ -59,8 +59,8 @@ final class SharedPanelFactory {
             }
             var2 = 1;
           }
-          DirectByteStorage.field_k.a(-21174, ResourceArchive.a(BytePlusOneCommand.field_A, ArchiveManager.field_m, (byte) -96), ResourceArchive.a(HighScoreSubmission.field_q, ReceivedAuctionItem.field_y, (byte) -101));
-          if (DirectByteStorage.field_k.c(-1)) {
+          DirectByteStorage.field_k.updatePointerSelection(-21174, ResourceArchive.hitTestMenuAction(BytePlusOneCommand.field_A, ArchiveManager.field_m, (byte) -96), ResourceArchive.hitTestMenuAction(HighScoreSubmission.field_q, ReceivedAuctionItem.field_y, (byte) -101));
+          if (DirectByteStorage.field_k.isActivated(-1)) {
             var1_int = 1;
           }
           if (param0 != -3) {
@@ -105,10 +105,10 @@ final class SharedPanelFactory {
           return AccountChoicePanel.field_I;
         }
         if (param1 == 9) {
-          return GameModeDefinition.field_e;
+          return KitStyleDefinition.field_e;
         }
         if (10 == param1) {
-          return GameModeDefinition.field_e;
+          return KitStyleDefinition.field_e;
         }
         if (param1 == 8) {
           return ArchiveSource.field_d;

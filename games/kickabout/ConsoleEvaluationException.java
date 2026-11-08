@@ -41,7 +41,7 @@ final class ConsoleEvaluationException extends Exception {
         var3 = Kickabout.field_G;
         if (param1 == 0) {
           if (WeightedLruCache.field_d <= 0) {
-            if (!PlayArea.a(100)) {
+            if (!PlayArea.isGuestSession(100)) {
               var2 = 1;
             } else {
               var2 = 0;
@@ -77,7 +77,7 @@ final class ConsoleEvaluationException extends Exception {
         } else {
           ConsoleEvaluationException.releaseStatics(-109);
           if (WeightedLruCache.field_d <= 0) {
-            if (!PlayArea.a(100)) {
+            if (!PlayArea.isGuestSession(100)) {
               var2 = 1;
               if (ArchiveIndex.field_h == null &&
                 MeshObject.field_e) {

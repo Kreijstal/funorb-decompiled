@@ -149,7 +149,7 @@ final class JaggrabDownloader implements Runnable {
           if (TutorialCaptionSupport.field_e > StreetSceneryLoader.field_i) {
             return null;
           }
-          if (StreetSceneryLoader.field_i < GameModeDefinition.field_i + TutorialCaptionSupport.field_e) {
+          if (StreetSceneryLoader.field_i < KitStyleDefinition.field_i + TutorialCaptionSupport.field_e) {
             return EmailAvailabilityValidator.field_o;
           }
           return null;
@@ -160,7 +160,7 @@ final class JaggrabDownloader implements Runnable {
         if (TutorialCaptionSupport.field_e > StreetSceneryLoader.field_i) {
           return null;
         }
-        if (StreetSceneryLoader.field_i < GameModeDefinition.field_i + TutorialCaptionSupport.field_e) {
+        if (StreetSceneryLoader.field_i < KitStyleDefinition.field_i + TutorialCaptionSupport.field_e) {
           return EmailAvailabilityValidator.field_o;
         }
         return null;
@@ -185,7 +185,7 @@ final class JaggrabDownloader implements Runnable {
               break;
             }
             if (this.field_g.field_n == this.field_g.field_f.length) {
-              throw JaggrabDownloader.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + this.field_g.field_f.length + " " + this.field_k));
+              throw JaggrabDownloader.<RuntimeException>rethrowUnchecked(new Exception("HG1: " + this.field_g.field_f.length + " " + this.field_k));
             }
             var1 = this;
             synchronized (var1) {
@@ -265,7 +265,7 @@ final class JaggrabDownloader implements Runnable {
     }
 
     @SuppressWarnings("unchecked")
-    private static <T extends Throwable> RuntimeException $cfr$sneakyThrow(Throwable throwable) throws T {
+    private static <T extends Throwable> RuntimeException rethrowUnchecked(Throwable throwable) throws T {
         throw (T) throwable;
     }
 }

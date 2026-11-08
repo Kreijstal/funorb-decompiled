@@ -35,9 +35,9 @@ final class PlayArea {
 
     final void a(int param0, int param1) {
         int var3 = SocialListLayoutSupport.worldToScreenX(param0 ^ -2943, this.field_g >> 16);
-        int var4 = IntKeyLookup.a((byte) -123, this.field_b >> 16);
+        int var4 = IntKeyLookup.projectPitchY((byte) -123, this.field_b >> 16);
         int var5 = -var3 + SocialListLayoutSupport.worldToScreenX(param0 ^ param0, this.field_i >> 16);
-        int var6 = -var4 + IntKeyLookup.a((byte) -117, this.field_h >> 16);
+        int var6 = -var4 + IntKeyLookup.projectPitchY((byte) -117, this.field_h >> 16);
         SoftwareRasterizer.fillRectangleAlpha(var3, var4, var5, var6, param1, 50);
         SoftwareRasterizer.drawRectangle(var3, var4, var5, var6, param1);
     }
@@ -116,7 +116,7 @@ final class PlayArea {
         return stackIn_21_0;
     }
 
-    final static boolean a(int param0) {
+    final static boolean isGuestSession(int param0) {
         if (param0 != 100) {
           PlayArea.b(78);
           return GameSoundEffect.field_f;
@@ -128,7 +128,7 @@ final class PlayArea {
         this(param0, param1, param2, param3, 0, 0);
     }
 
-    final static void a(boolean param0) {
+    final static void showCurrentQuickChatMenu(boolean param0) {
         LocalizedTextLoader.showQuickChatMenu(ChatComposeSupport.field_h, (byte) -49);
         if (!param0) {
           field_e = (Sprite) null;

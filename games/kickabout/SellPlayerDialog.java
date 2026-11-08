@@ -203,7 +203,7 @@ final class SellPlayerDialog extends MessageDialog {
             var5 = var9;
             if (!var5[0]) {
               var5[0] = true;
-              if (PlayArea.a(100)) {
+              if (PlayArea.isGuestSession(100)) {
                 return;
               }
               var6Lifetime1 = 0;
@@ -212,7 +212,7 @@ final class SellPlayerDialog extends MessageDialog {
                   var6Lifetime1 = var6Lifetime1 | 1 << var7;
                 }
               }
-              FootballerAiOverlaySupport.field_d.b(69, (byte) 78);
+              FootballerAiOverlaySupport.field_d.writeIsaacByte(69, (byte) 78);
               FootballerAiOverlaySupport.field_d.writeInt(-78, var6Lifetime1);
             }
           }

@@ -35,7 +35,7 @@ final class ThreeCommand extends ConsoleCommand {
     }
 
     final static void a(boolean param0, int param1) {
-        if (WeightedLruCache.a(false)) {
+        if (WeightedLruCache.hasBlockingInputPopup(false)) {
           param0 = false;
         }
         if (param1 != 16355) {

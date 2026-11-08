@@ -9,9 +9,9 @@ abstract class WeightedCacheEntry extends DualLinkNode {
     static char[] field_p;
     static UiLayoutNode field_s;
 
-    abstract Object a(int param0);
+    abstract Object getValue(int param0);
 
-    abstract boolean h(byte param0);
+    abstract boolean isSoftReference(byte param0);
 
     WeightedCacheEntry(int param0) {
         this.field_o = param0;

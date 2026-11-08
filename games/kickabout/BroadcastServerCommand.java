@@ -8,7 +8,7 @@ final class BroadcastServerCommand extends ConsoleCommand {
     static String field_C;
     static String field_F;
 
-    final static Sprite a(int param0, byte param1, int param2) {
+    final static Sprite createSolidSprite(int param0, byte param1, int param2) {
         Sprite var6 = null;
         Sprite var3 = null;
         int var4 = 0;
@@ -77,7 +77,7 @@ final class BroadcastServerCommand extends ConsoleCommand {
             return stackIn_24_0;
           }
           var5 = FootballerAiOverlaySupport.field_d;
-          var5.b(param0, (byte) 93);
+          var5.writeIsaacByte(param0, (byte) 93);
           var5.field_n = var5.field_n + 1;
           var4 = var5.field_n;
           var5.writeByte(123, 0);

@@ -32,7 +32,7 @@ abstract class PopupDialog extends IntrusiveNode {
           return;
         }
         this.onUpdate(3, param1);
-        this.field_j.a(param0 ^ 4642, this.a(true, TutorialCaptionSupport.field_j, ArrayWidgetContainer.field_x), this.a(true, TabStrip.field_Eb, TrinketIcon.field_yb));
+        this.field_j.updatePointerSelection(param0 ^ 4642, this.a(true, TutorialCaptionSupport.field_j, ArrayWidgetContainer.field_x), this.a(true, TabStrip.field_Eb, TrinketIcon.field_yb));
         if (this.field_n == 0 &&
           0 == this.field_m) {
           ShopPlayerSlot.c(this.getOpenSoundId(false), -104);
@@ -177,7 +177,7 @@ abstract class PopupDialog extends IntrusiveNode {
             }
           }
           if (this.field_j.selectedIndex >= 0 &&
-            this.field_j.c(-1)) {
+            this.field_j.isActivated(-1)) {
             this.handleResult(114, this.field_j.selectedIndex);
             this.beginClose(19910);
           }
@@ -273,7 +273,7 @@ abstract class PopupDialog extends IntrusiveNode {
     private final void a(int param0, int param1, int param2) {
         int var4 = 0;
         int var5 = Kickabout.field_G;
-        AuctionListing.a(param1 + this.field_e, param0 - 22946, param1, param2 + this.field_r, param2);
+        AuctionListing.pushRasterClip(param1 + this.field_e, param0 - 22946, param1, param2 + this.field_r, param2);
         for (var4 = 0; this.field_e > var4; var4++) {
           TutorialScenerySupport.field_a.d(var4 + param1, param2 + this.field_r - 480);
         }

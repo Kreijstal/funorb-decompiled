@@ -342,7 +342,7 @@ final class HuffmanCodec {
         }
     }
 
-    final static short a(int param0, int param1, int param2, int param3) {
+    final static short packHslColor(int param0, int param1, int param2, int param3) {
         int var4 = -3 / ((param2 - 23) / 41);
         return (short)(param0 | (param1 << 10 | param3 << 7));
     }

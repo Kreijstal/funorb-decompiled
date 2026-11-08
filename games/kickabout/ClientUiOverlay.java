@@ -37,7 +37,7 @@ final class ClientUiOverlay implements OverlayLayer {
         int var3;
         int var4;
         int stackIn_6_0 = 0;
-        if (StrongCacheEntry.g(2368)) {
+        if (StrongCacheEntry.hasGameFocus(2368)) {
           stackIn_6_0 = ((8 & this.field_h) == 0) ? 1 : 0;
         } else {
           stackIn_6_0 = 0;
@@ -219,7 +219,7 @@ final class ClientUiOverlay implements OverlayLayer {
             stackIn_12_0 = null;
             return (SocialPlayerRow) (stackIn_12_0);
           }
-          var3 = (SocialPlayerRow) (AvailabilityCheckRequest.field_b.a(param1 ^ -3635, (long)var2.hashCode()));
+          var3 = (SocialPlayerRow) (AvailabilityCheckRequest.field_b.get(param1 ^ -3635, (long)var2.hashCode()));
           while (var3 != null) {
             var7 = (CharSequence) ((Object) var3.name);
             var4 = MatchAgent.a(param1 ^ 40, var7);
@@ -227,7 +227,7 @@ final class ClientUiOverlay implements OverlayLayer {
               stackIn_19_0 = var3;
               return stackIn_19_0;
             }
-            var3 = (SocialPlayerRow) (AvailabilityCheckRequest.field_b.a((byte) 103));
+            var3 = (SocialPlayerRow) (AvailabilityCheckRequest.field_b.nextWithSameKey((byte) 103));
           }
           return null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -320,11 +320,11 @@ final class ClientUiOverlay implements OverlayLayer {
           stackIn_25_11 = (this.capturesInput((byte) 121)) ? false : true;
           QuickChatMenuFactory.$cfr$intArgs$a$20586b1b86c8(stackIn_21_0, stackIn_21_1, stackIn_21_2, stackIn_22_3, stackIn_24_4, stackIn_24_5 != 0, stackIn_24_6, stackIn_24_7, stackIn_24_8, stackIn_24_9, stackIn_24_10, stackIn_25_11);
           if (SelectionMarkerSupport.field_e) {
-            FootballerAiOverlaySupport.field_d.b(50, (byte) 105);
+            FootballerAiOverlaySupport.field_d.writeIsaacByte(50, (byte) 105);
             SelectionMarkerSupport.field_e = false;
           }
           if (PlayerInputFactory.field_f) {
-            FootballerAiOverlaySupport.field_d.b(10, (byte) -97);
+            FootballerAiOverlaySupport.field_d.writeIsaacByte(10, (byte) -97);
             PlayerInputFactory.field_f = false;
           }
         } else {

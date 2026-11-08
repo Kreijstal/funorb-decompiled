@@ -82,13 +82,13 @@ class UiLayoutNode extends SharedWidgetFactory {
             }
           }
           TrinketCatalog.a(param0, 15, param2, param1, param3, false);
-          if (FormationMaskSupport.field_c == 0) {
+          if (KitPatternMaskSupport.field_c == 0) {
             RasterBuffer.a(75, HuffmanTextSupport.field_d, 15, 15);
           }
-          if (1 == FormationMaskSupport.field_c) {
+          if (1 == KitPatternMaskSupport.field_c) {
             RasterBuffer.a(116, ChatMessage.field_b, 15, 15);
           }
-          if (2 == FormationMaskSupport.field_c) {
+          if (2 == KitPatternMaskSupport.field_c) {
             RankingsRequest.a(15, 15, 124);
           }
           TeamManagementScreen.e(param0 ^ 122);
@@ -382,7 +382,7 @@ class UiLayoutNode extends SharedWidgetFactory {
           } else {
             if (AuctionLogEntry.field_m.length() > 0) {
               var4_ref_String = AuctionLogEntry.field_m.toString();
-              if (SocketArchiveNetworkClient.a(var4_ref_String, -125)) {
+              if (SocketArchiveNetworkClient.containsLoginPassword(var4_ref_String, -125)) {
                 TextButton.a((String) null, (String) null, 0, 2, ServerTextTemplate.field_i, -125);
                 TextButton.a((String) null, (String) null, 0, 2, PlayerInputFactory.field_e, -126);
               } else {

@@ -188,7 +188,7 @@ abstract class MatchPhaseView {
                 var24 = var23;
                 stackIn_57_0 = (!param4[-var21Lifetime1 + 12][var24]) ? var13Lifetime1 : var14;
                 var17 = stackIn_57_0;
-                var16Lifetime1 = HuffmanCodec.a(var22Lifetime1, var20Lifetime1, 114, 7);
+                var16Lifetime1 = HuffmanCodec.packHslColor(var22Lifetime1, var20Lifetime1, 114, 7);
                 for (var25 = 0; var25 < var33.length; var25++) {
                   if (~var16Lifetime1 == ~var33[var25]) {
                     var19[var25] = (short)var17;
@@ -207,7 +207,7 @@ abstract class MatchPhaseView {
                 var24Lifetime1 = 9 - var23Lifetime1;
                 stackIn_72_0 = (!param6[-var21Lifetime2 + 12][var24Lifetime1]) ? var13Lifetime1 : var14;
                 var17Lifetime1 = stackIn_72_0;
-                var16Lifetime2 = HuffmanCodec.a(var22Lifetime2, var20Lifetime2, 110, 6);
+                var16Lifetime2 = HuffmanCodec.packHslColor(var22Lifetime2, var20Lifetime2, 110, 6);
                 var28 = 0;
                 var25Lifetime1 = var28;
                 while (var33.length > var28) {
@@ -258,9 +258,9 @@ abstract class MatchPhaseView {
           return;
         }
         if (param1) {
-          this.field_i.a(-21174, this.hitTestButton(ArrayWidgetContainer.field_x, TutorialCaptionSupport.field_j, -74), this.hitTestButton(TrinketIcon.field_yb, TabStrip.field_Eb, -106));
+          this.field_i.updatePointerSelection(-21174, this.hitTestButton(ArrayWidgetContainer.field_x, TutorialCaptionSupport.field_j, -74), this.hitTestButton(TrinketIcon.field_yb, TabStrip.field_Eb, -106));
           if (this.field_i.selectedIndex >= 0 &&
-            this.field_i.c(-1)) {
+            this.field_i.isActivated(-1)) {
             this.onButtonClick(111, this.field_c[this.field_i.selectedIndex].kind);
           }
         }
@@ -273,7 +273,7 @@ abstract class MatchPhaseView {
           var4 = stackIn_16_0;
           if (param1) {
             if (var4 != 0) {
-              stackIn_24_0 = (this.field_i.c(-1)) ? 1 : 0;
+              stackIn_24_0 = (this.field_i.isActivated(-1)) ? 1 : 0;
             } else {
               stackIn_24_0 = 0;
             }
@@ -282,7 +282,7 @@ abstract class MatchPhaseView {
           }
           var5 = stackIn_24_0;
           if (var4 != 0) {
-            stackIn_30_0 = (this.field_i.a(0)) ? 1 : 0;
+            stackIn_30_0 = (this.field_i.isPointerHeld(0)) ? 1 : 0;
           } else {
             stackIn_30_0 = 0;
           }
@@ -301,7 +301,7 @@ abstract class MatchPhaseView {
           field_d = (IconLabel) null;
         }
         this.field_i = new MenuSelection(this.field_c.length);
-        this.field_i.a(true, this.hitTestButton(ArrayWidgetContainer.field_x, TutorialCaptionSupport.field_j, -93), (byte) -127);
+        this.field_i.resetPointerSelection(true, this.hitTestButton(ArrayWidgetContainer.field_x, TutorialCaptionSupport.field_j, -93), (byte) -127);
     }
 
     public static void releaseStatics(int param0) {
@@ -347,7 +347,7 @@ abstract class MatchPhaseView {
           }
         }
         if (this.field_i.selectedIndex >= 0) {
-          if (!this.field_i.c(-1)) {
+          if (!this.field_i.isActivated(-1)) {
             return true;
           }
           this.onButtonClick(101, this.field_c[this.field_i.selectedIndex].kind);
@@ -565,7 +565,7 @@ abstract class MatchPhaseView {
         var7Lifetime1 = var10;
         while (this.field_a.playerCount > var10) {
           var8 = this.field_a.field_g[var10].team;
-          AuctionListing.a(640, -22914, 2 + (var4[var8] + 160), 480, 0);
+          AuctionListing.pushRasterClip(640, -22914, 2 + (var4[var8] + 160), 480, 0);
           SoftwareRasterizer.fillRoundedRectangleBlended(var4[var8], var5[var8], 186, 21, 7, 65793, 128);
           TeamManagementScreen.e(123);
           if (this.field_a.participantStatus[var10].loadedPitch) {

@@ -102,8 +102,8 @@ final class RenderedBall extends BallAgent {
               LobbyPlayerRow.a(128, false, 240, ClientUiUpdateSupport.field_f + var7, var5Lifetime1);
             }
           } else {
-            if (FormationMaskSupport.field_c != 0) {
-              stackIn_32_0 = (FormationMaskSupport.field_c != 1) ? 2 : 1;
+            if (KitPatternMaskSupport.field_c != 0) {
+              stackIn_32_0 = (KitPatternMaskSupport.field_c != 1) ? 2 : 1;
             } else {
               stackIn_32_0 = 0;
             }
@@ -113,13 +113,13 @@ final class RenderedBall extends BallAgent {
             } else {
               var6 = (this.verticalVelocity >> 16) * 32;
             }
-            if (FormationMaskSupport.field_c == 0) {
+            if (KitPatternMaskSupport.field_c == 0) {
               var6 -= 40;
             }
-            if (FormationMaskSupport.field_c == 1) {
+            if (KitPatternMaskSupport.field_c == 1) {
               var6 -= 20;
             }
-            if (FormationMaskSupport.field_c == 2) {
+            if (KitPatternMaskSupport.field_c == 2) {
               var6 -= 40;
             }
             LobbyPlayerRow.a(128, false, 240, var6 + DemoIntegersCommand.field_E, var5Lifetime1);
@@ -393,7 +393,7 @@ final class RenderedBall extends BallAgent {
         int var5 = 4 * InstrumentNoteMask.field_i >> 8;
         int var6 = -1 + WhirlpoolHasher.field_d.length;
         int var7 = (var2Lifetime1 * (var6 >> 1) >> 8) + (var6 >> 1);
-        SpritePixelSupport.drawRadialShadow(SocialListLayoutSupport.worldToScreenX(0, this.field_N >> 16) + var4 << 4, IntKeyLookup.a((byte) -96, this.field_E >> 16) + var5 << 4, var3 << 4, var7, WhirlpoolHasher.field_d);
+        SpritePixelSupport.drawRadialShadow(SocialListLayoutSupport.worldToScreenX(0, this.field_N >> 16) + var4 << 4, IntKeyLookup.projectPitchY((byte) -96, this.field_E >> 16) + var5 << 4, var3 << 4, var7, WhirlpoolHasher.field_d);
     }
 
     final void a(MatchAgent param0, int param1, int param2, int param3) {
@@ -652,7 +652,7 @@ final class RenderedBall extends BallAgent {
         }
         int var2 = this.getRenderedScale(-1);
         int var3 = SocialListLayoutSupport.worldToScreenX(0, this.getRenderedX(param0 + 14899));
-        int var4 = IntKeyLookup.a((byte) -107, this.getRenderedY(true));
+        int var4 = IntKeyLookup.projectPitchY((byte) -107, this.getRenderedY(true));
         if (SocketArchiveNetworkClient.field_v != 1) {
           var2 = (var2 << 8) / InstrumentNoteMask.field_i;
           this.drawBall(300, var3, var4, var2, 300);

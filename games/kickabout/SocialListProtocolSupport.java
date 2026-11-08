@@ -74,12 +74,12 @@ final class SocialListProtocolSupport {
             if (var6 == null) {
               var6 = AchievementsScreen.a(var7, 145);
               if (var6 != null) {
-                HighScoreQuery.field_m.a(var6, (byte) -4, (long)var8.hashCode());
+                HighScoreQuery.field_m.put(var6, (byte) -4, (long)var8.hashCode());
               }
             }
             if (var6 == null) {
               var6 = new SocialPlayerRow();
-              HighScoreQuery.field_m.a(var6, (byte) -4, (long)var8.hashCode());
+              HighScoreQuery.field_m.put(var6, (byte) -4, (long)var8.hashCode());
               fieldTemp$0 = StripedProgressBar.field_y;
               StripedProgressBar.field_y = StripedProgressBar.field_y + 1;
               var6.listIndex = fieldTemp$0;
@@ -132,12 +132,12 @@ final class SocialListProtocolSupport {
           if (var6Lifetime1 == null) {
             var6Lifetime1 = ClientUiOverlay.a(var5Lifetime1, (byte) 40);
             if (null != var6Lifetime1) {
-              AvailabilityCheckRequest.field_b.a(var6Lifetime1, (byte) -4, (long)MatchAgent.a(0, (CharSequence) ((Object) var4_ref_StringLifetime1)).hashCode());
+              AvailabilityCheckRequest.field_b.put(var6Lifetime1, (byte) -4, (long)MatchAgent.a(0, (CharSequence) ((Object) var4_ref_StringLifetime1)).hashCode());
             }
           }
           if (null == var6Lifetime1) {
             var6Lifetime1 = new SocialPlayerRow();
-            AvailabilityCheckRequest.field_b.a(var6Lifetime1, (byte) -4, (long)MatchAgent.a(0, (CharSequence) ((Object) var4_ref_StringLifetime1)).hashCode());
+            AvailabilityCheckRequest.field_b.put(var6Lifetime1, (byte) -4, (long)MatchAgent.a(0, (CharSequence) ((Object) var4_ref_StringLifetime1)).hashCode());
             fieldTemp$1 = ListingRow.field_d;
             ListingRow.field_d = ListingRow.field_d + 1;
             var6Lifetime1.listIndex = fieldTemp$1;

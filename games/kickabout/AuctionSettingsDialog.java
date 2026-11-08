@@ -15,7 +15,7 @@ final class AuctionSettingsDialog extends MessageDialog {
         int stackIn_28_2 = 0;
         boolean decompiledFrameRemainder0 = true;
         super.handleResult(69, param1);
-        if (!PlayArea.a(100)) {
+        if (!PlayArea.isGuestSession(100)) {
           if (!NineSlicePanelPainter.field_e &&
             !ModelMaterialDecoder.field_g) {
             if (param0 <= 60) {
@@ -43,7 +43,7 @@ final class AuctionSettingsDialog extends MessageDialog {
                 AuctionBidDialog.field_L > 0) {
                 var3 = var3 | 4;
               }
-              FootballerAiOverlaySupport.field_d.b(51, (byte) 127);
+              FootballerAiOverlaySupport.field_d.writeIsaacByte(51, (byte) 127);
               FootballerAiOverlaySupport.field_d.writeByte(105, ArchiveNetworkClient.field_m);
               FootballerAiOverlaySupport.field_d.writeByte(126, GameMediaSupport.field_d);
               FootballerAiOverlaySupport.field_d.writeByte(109, var3);
@@ -238,7 +238,7 @@ final class AuctionSettingsDialog extends MessageDialog {
         SoftwareRasterizer.fillRoundedRectangleBlended(var4, var9, 260, 120, 10, 65793, 128);
         ByteArrayPool.field_d.drawCentered(InstrumentEnvelope.field_f.toLowerCase(), 130 + var4, 21 + var6, 16777215, -1);
         ByteArrayPool.field_d.drawCentered(Kickabout.field_F.toLowerCase(), var4 + 130, var9 + 21, 16777215, -1);
-        if (StrongCacheEntry.g(2368)) {
+        if (StrongCacheEntry.hasGameFocus(2368)) {
           stackIn_8_0 = (MonotonicClock.monotonicMillis(-51) % 500L < 250L) ? 1 : 0;
         } else {
           stackIn_8_0 = 0;

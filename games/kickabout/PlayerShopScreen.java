@@ -131,7 +131,7 @@ final class PlayerShopScreen extends TeamManagementScreen {
             if (RegistrationRequestState.field_h.hasEmptySquadSlot((byte) -86)) {
               PlayerMeshFactory.enqueueBuyPlayerDialog(6022, this.field_F[var7]);
             } else {
-              SocketArchiveNetworkClient.a((byte) 126, 0);
+              SocketArchiveNetworkClient.enqueueMessageDialog((byte) 126, 0);
             }
           }
           var7++;
@@ -212,7 +212,7 @@ final class PlayerShopScreen extends TeamManagementScreen {
         var3 = -1;
         scanLoop1: while (true) {
           if (6 >= var3) {
-            if (AuctionLogEntry.e(15137) ||
+            if (AuctionLogEntry.isLoggedInJagexModerator(15137) ||
               var3 != -1) {
               if (RegistrationRequestState.field_h.field_t < var3) {
                 break scanLoop1;

@@ -9,13 +9,13 @@ abstract class ArchiveSource {
     static GameSetupPanel field_b;
     static String field_a;
 
-    abstract int a(int param0, int param1);
+    abstract int getGroupProgress(int param0, int param1);
 
-    abstract ArchiveIndex a(int param0);
+    abstract ArchiveIndex getIndex(int param0);
 
-    abstract byte[] b(int param0, int param1);
+    abstract byte[] getGroupBytes(int param0, int param1);
 
-    final static Sprite a(ResourceArchive param0, int param1, byte param2, int param3) {
+    final static Sprite loadSprite(ResourceArchive param0, int param1, byte param2, int param3) {
         RuntimeException var4 = null;
         Sprite stackIn_5_0 = null;
         Sprite stackIn_7_0 = null;
@@ -47,7 +47,7 @@ abstract class ArchiveSource {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_f = null;
         if (param0) {
           return;

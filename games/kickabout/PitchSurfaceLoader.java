@@ -114,10 +114,10 @@ final class PitchSurfaceLoader {
           if (null == SquadPickerDialog.field_N) {
             return;
           }
-          var3 = (LobbyPlayerRow) (SquadPickerDialog.field_N.b((byte) 72));
+          var3 = (LobbyPlayerRow) (SquadPickerDialog.field_N.first((byte) 72));
           while (var3 != null) {
             var3.unlinkSecondary(57);
-            var3 = (LobbyPlayerRow) (SquadPickerDialog.field_N.a(0));
+            var3 = (LobbyPlayerRow) (SquadPickerDialog.field_N.next(0));
           }
           SquadPickerDialog.field_N = null;
           return;
@@ -165,7 +165,7 @@ final class PitchSurfaceLoader {
         if (param2 > -48) {
           PitchSurfaceLoader.a(22);
         }
-        if (!QuickChatKeysHelpPanel.field_Cb.a(false, var6)) {
+        if (!QuickChatKeysHelpPanel.field_Cb.ensurePackedGroupByName(false, var6)) {
           return QuickChatKeysHelpPanel.field_Cb.getGroupProgressByName(var6, -16248);
         }
         MeshObject.field_b[param1][param0] = SpriteResourceSupport.loadNamedSprite((byte) 113, var6, QuickChatKeysHelpPanel.field_Cb, "");

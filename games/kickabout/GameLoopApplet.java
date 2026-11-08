@@ -41,7 +41,7 @@ abstract class GameLoopApplet extends NetworkGameClient implements OverlayLayer 
           GameLoopApplet.n((byte) 32);
         }
         CipherPacketBuffer var3 = FootballerAiOverlaySupport.field_d;
-        var3.b(param1, (byte) -117);
+        var3.writeIsaacByte(param1, (byte) -117);
         var3.writeByte(param0 - 15721, 3);
         var3.writeByte(109, 10);
         var3.writeShort(-1207444472, param2);
@@ -97,7 +97,7 @@ abstract class GameLoopApplet extends NetworkGameClient implements OverlayLayer 
           }
         } else {
           if (!MouseWheelInput.field_b) {
-            if (!PlayArea.a(100)) {
+            if (!PlayArea.isGuestSession(100)) {
               if (NetworkGameClient.field_t.pollReady(-27598)) {
                 MouseWheelInput.field_b = true;
                 this.applyPendingNavigation(55);
@@ -110,7 +110,7 @@ abstract class GameLoopApplet extends NetworkGameClient implements OverlayLayer 
             this.dispatchInputEvents(18861);
           }
         }
-        if (!PlayArea.a(100)) {
+        if (!PlayArea.isGuestSession(100)) {
           while (true) {
             var5 = (AchievementSubmission) (FullscreenErrorDialog.field_R.removeFirst((byte) 127));
             if (var5 == null) {
@@ -163,7 +163,7 @@ abstract class GameLoopApplet extends NetworkGameClient implements OverlayLayer 
         int var3Lifetime1;
         var5 = Kickabout.field_G;
         var2 = 0;
-        if (!ArchiveManager.a(false)) {
+        if (!ArchiveManager.hasActiveModal(false)) {
           if (ServerTextTemplate.a(-4)) {
             if (MarkerSliderWidget.i(0)) {
               ScrollPane.h(-1);
@@ -275,7 +275,7 @@ abstract class GameLoopApplet extends NetworkGameClient implements OverlayLayer 
         int var4 = Kickabout.field_G;
         java.awt.Canvas var2 = DropTargetWidget.l(64);
         if (RegistrationUiSupport.c(608)) {
-          PlayingView.drawClientToCanvas(var2, StrongCacheEntry.g(2368), 0);
+          PlayingView.drawClientToCanvas(var2, StrongCacheEntry.hasGameFocus(2368), 0);
           return;
         }
         if (!CachedListingRow.field_h) {
@@ -283,7 +283,7 @@ abstract class GameLoopApplet extends NetworkGameClient implements OverlayLayer 
           return;
         }
         if (!MouseWheelInput.field_b &&
-          !PlayArea.a(100)) {
+          !PlayArea.isGuestSession(100)) {
           ValidationHelpWidget.a(100.0f, SumIntegersCommand.field_H, (byte) 30);
           FormationAgent.a(var2, -14142);
           return;

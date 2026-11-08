@@ -38,7 +38,7 @@ final class ClientProtocolStage {
         }
         TrinketCountSortCriterion.b((byte) 44);
         if (LinkTextPainter.b(0)) {
-          FootballerAiOverlaySupport.field_d.b(1, (byte) -106);
+          FootballerAiOverlaySupport.field_d.writeIsaacByte(1, (byte) -106);
           ClientPacketFlushSupport.flushPackets(0, false);
         }
         FormationView.b((byte) -116);

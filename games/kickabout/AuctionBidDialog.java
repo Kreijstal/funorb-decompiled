@@ -108,7 +108,7 @@ final class AuctionBidDialog extends MessageDialog {
 
     final void handleResult(int param0, int param1) {
         super.handleResult(82, param1);
-        if (PlayArea.a(100)) {
+        if (PlayArea.isGuestSession(100)) {
           return;
         }
         if (NineSlicePanelPainter.field_e) {
@@ -118,7 +118,7 @@ final class AuctionBidDialog extends MessageDialog {
           return;
         }
         if (0 == param1) {
-          FootballerAiOverlaySupport.field_d.b(this.field_J, (byte) 124);
+          FootballerAiOverlaySupport.field_d.writeIsaacByte(this.field_J, (byte) 124);
           FootballerAiOverlaySupport.field_d.writeLong(this.field_M, -1781890008);
           FootballerAiOverlaySupport.field_d.writeInt(-74, this.field_N);
           ParticipantStatus.playFadingSound(true, 128, 118, 49);

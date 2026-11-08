@@ -11,7 +11,7 @@ final class CipherPacketBuffer extends PacketBuffer {
     private IsaacRandom field_p;
     static char field_v;
 
-    public static void m(int param0) {
+    public static void releaseStatics(int param0) {
         field_r = null;
         field_t = null;
         field_q = null;
@@ -21,14 +21,14 @@ final class CipherPacketBuffer extends PacketBuffer {
         }
     }
 
-    final void p(int param0) {
+    final void beginBitRead(int param0) {
         if (param0 > -99) {
           field_t = (String[]) null;
         }
         this.field_o = this.field_n * 8;
     }
 
-    final static void a(int param0, ResourceArchive param1) {
+    final static void loadSplitFinalFrameSprites(int param0, ResourceArchive param1) {
         Sprite var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -38,10 +38,10 @@ final class CipherPacketBuffer extends PacketBuffer {
           var4 = var2.field_w;
           ClientUiOverlay.pushRasterState(-12974);
           AppScreen.field_a = new Sprite(var3, param0 * var4 / 4);
-          AppScreen.field_a.e();
+          AppScreen.field_a.setRasterTarget();
           var2.d(0, 0);
           SocialRowOrderSupport.field_e = new Sprite(var3, var4 - AppScreen.field_a.field_w);
-          SocialRowOrderSupport.field_e.e();
+          SocialRowOrderSupport.field_e.setRasterTarget();
           var2.d(0, -AppScreen.field_a.field_w);
           SocialRowOrderSupport.field_e.field_n = AppScreen.field_a.field_w;
           TeamManagementScreen.e(123);
@@ -50,20 +50,20 @@ final class CipherPacketBuffer extends PacketBuffer {
         }
     }
 
-    final void b(int param0, byte param1) {
+    final void writeIsaacByte(int param0, byte param1) {
         int fieldTemp$0 = this.field_n;
         this.field_n = this.field_n + 1;
         this.field_f[fieldTemp$0] = (byte)(param0 + this.field_p.nextInt((byte) 100));
         int var3 = -46 % ((param1 - 13) / 59);
     }
 
-    final void a(int param0, int param1, int param2) {
+    final void writeBits(int param0, int param1, int param2) {
         int fieldTemp$1 = 0;
         int fieldTemp$0 = 0;
         int var5;
         var5 = Kickabout.field_G;
         if (param1 < 34) {
-          CipherPacketBuffer.m(35);
+          CipherPacketBuffer.releaseStatics(35);
         }
         param2 = param2 & NamedValueContainer.field_b[param0];
         while (this.field_u < param0) {
@@ -86,7 +86,7 @@ final class CipherPacketBuffer extends PacketBuffer {
         }
     }
 
-    final static void o(int param0) {
+    final static void initializeExtendedKeyMappings(int param0) {
         NumericDateInputWidget.field_Q[47] = 73;
         NumericDateInputWidget.field_Q[45] = 26;
         NumericDateInputWidget.field_Q[46] = 72;
@@ -104,12 +104,12 @@ final class CipherPacketBuffer extends PacketBuffer {
         NumericDateInputWidget.field_Q[61] = 27;
     }
 
-    final void l(byte param0) {
+    final void finishBitRead(byte param0) {
         this.field_n = (7 + this.field_o) / 8;
         int var2 = 34 % ((param0 - 32) / 62);
     }
 
-    final void a(byte param0, int param1, byte[] param2, int param3) {
+    final void readIsaacBytes(byte param0, int param1, byte[] param2, int param3) {
         int var5_int = 0;
         int fieldTemp$0 = 0;
         RuntimeException stackIn_9_0 = null;
@@ -143,7 +143,7 @@ final class CipherPacketBuffer extends PacketBuffer {
         }
     }
 
-    final static void c(boolean param0) {
+    final static void layoutSharedChatControls(boolean param0) {
         UiLayoutNode stackIn_4_0 = null;
         boolean stackIn_5_1 = false;
         int stackIn_7_2;
@@ -168,7 +168,7 @@ final class CipherPacketBuffer extends PacketBuffer {
         var1 = LineupPositionSupport.field_c + 2;
         if (param0) {
           var4 = (ResourceArchive) null;
-          CipherPacketBuffer.a(-41, (ResourceArchive) null);
+          CipherPacketBuffer.loadSplitFinalFrameSprites(-41, (ResourceArchive) null);
         }
         stackIn_4_0 = TickClock.field_d;
         stackIn_5_1 = (param0) ? false : true;
@@ -211,9 +211,9 @@ final class CipherPacketBuffer extends PacketBuffer {
         LoginCredentials.field_b.setBounds(true, -var3 + AuctionPriceLimits.field_d.field_q, var3, -40 + AuctionPriceLimits.field_d.field_mb, 40);
     }
 
-    final static void k(int param0, int param1) {
+    final static void advanceLoadingProgress(int param0, int param1) {
         if (param0 != 61) {
-          CipherPacketBuffer.m(-70);
+          CipherPacketBuffer.releaseStatics(-70);
         }
         if (!(LoadingProgressSupport.field_c <= param1)) {
           return;
@@ -230,7 +230,7 @@ final class CipherPacketBuffer extends PacketBuffer {
         super(param0);
     }
 
-    final void n(int param0) {
+    final void beginBitWrite(int param0) {
         this.field_f[this.field_n] = (byte) 0;
         this.field_u = 8;
         if (param0 > -39) {
@@ -238,19 +238,19 @@ final class CipherPacketBuffer extends PacketBuffer {
         }
     }
 
-    final void b(boolean param0) {
+    final void finishBitWrite(boolean param0) {
         if (this.field_u < 8) {
           this.field_u = 8;
           this.field_n = this.field_n + 1;
         }
         if (param0) {
-          CipherPacketBuffer.k(-89, 18);
+          CipherPacketBuffer.advanceLoadingProgress(-89, 18);
         }
     }
 
-    final int k(byte param0) {
+    final int readIsaacByte(byte param0) {
         if (param0 <= 90) {
-          this.l((byte) 22);
+          this.finishBitRead((byte) 22);
         }
         int fieldTemp$0 = this.field_n;
         this.field_n = this.field_n + 1;

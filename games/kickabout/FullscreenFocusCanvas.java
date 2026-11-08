@@ -100,7 +100,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
             FullscreenFocusCanvas.releaseStatics((byte) 30);
           }
           LoadingProgressSupport.field_d = new MusicTrackMixer(3);
-          LoadingProgressSupport.field_d.a(param1 - 23, 128, 9);
+          LoadingProgressSupport.field_d.setChannelProgram(param1 - 23, 128, 9);
           var5 = 0;
           var3_intLifetime1 = var5;
           while (3 > var5) {

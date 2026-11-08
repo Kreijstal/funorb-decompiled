@@ -176,7 +176,7 @@ final class VerticalScrollbar extends UiLayoutNode {
         UiKeyRoutingSupport.field_c = new UiLayoutNode((long)param0, (UiLayoutNode) null);
         UiKeyRoutingSupport.field_c.addChild((byte) -127, (UiLayoutNode) (SocialUiState.field_d.tabs));
         UiKeyRoutingSupport.field_c.addChild((byte) -116, MouseWheelInput.field_a);
-        CipherPacketBuffer.c(false);
+        CipherPacketBuffer.layoutSharedChatControls(false);
     }
 
     final boolean pollScrollUp(int param0) {
@@ -200,7 +200,7 @@ final class VerticalScrollbar extends UiLayoutNode {
         return false;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_zb = (int[][]) null;
         int var1 = 42 / ((52 - param0) / 62);
         field_Eb = null;
@@ -555,7 +555,7 @@ final class VerticalScrollbar extends UiLayoutNode {
                 }
               } else {
                 var8 = new LobbyPlayerRow(var27, var28, var3);
-                SquadPickerDialog.field_N.a(var8, (byte) -4, var3);
+                SquadPickerDialog.field_N.put(var8, (byte) -4, var3);
               }
               var8.field_Ib = MonotonicClock.monotonicMillis(-93) - (long)((PacketBuffer) ((Object) var1)).readInt(4);
               var8.field_Qb = ((PacketBuffer) ((Object) var1)).readUnsignedShort((byte) 81);
@@ -600,10 +600,10 @@ final class VerticalScrollbar extends UiLayoutNode {
             }
             if (var2 == 8) {
               var3_int = ((PacketBuffer) ((Object) var1)).readUnsignedShort((byte) 81);
-              var4_ref_qb = (GameSetupPanel) (SortCriterion.field_f.a(-3611, (long)var3_int));
+              var4_ref_qb = (GameSetupPanel) (SortCriterion.field_f.get(-3611, (long)var3_int));
               if (var4_ref_qb == null) {
                 var4_ref_qb = new GameSetupPanel(UiKeyRoutingSupport.field_j);
-                SortCriterion.field_f.a(var4_ref_qb, (byte) -4, (long)var3_int);
+                SortCriterion.field_f.put(var4_ref_qb, (byte) -4, (long)var3_int);
               }
               GameModesHelpScreen.a(true, 116, var1, var4_ref_qb);
               FullscreenErrorDialog.a(var4_ref_qb, (byte) -119);
@@ -612,7 +612,7 @@ final class VerticalScrollbar extends UiLayoutNode {
             if (var2 == 9) {
               var3_intLifetime4 = ((PacketBuffer) ((Object) var1)).readUnsignedShort((byte) 81);
               var4 = ((PacketBuffer) ((Object) var1)).readUnsignedByte((byte) -108);
-              var31 = (GameSetupPanel) (SortCriterion.field_f.a(-3611, (long)var3_intLifetime4));
+              var31 = (GameSetupPanel) (SortCriterion.field_f.get(-3611, (long)var3_intLifetime4));
               if (var31 != null) {
                 if (var4 != 0) {
                   var31.field_Ab = var4;
@@ -638,7 +638,7 @@ final class VerticalScrollbar extends UiLayoutNode {
               if (var2 == 13) {
                 var3_intLifetime5 = ((PacketBuffer) ((Object) var1)).readUnsignedShort((byte) 81);
                 var4Lifetime1 = ((PacketBuffer) ((Object) var1)).readUnsignedByte((byte) -110);
-                var23_ref = (GameSetupPanel) (SortCriterion.field_f.a(-3611, (long)var3_intLifetime5));
+                var23_ref = (GameSetupPanel) (SortCriterion.field_f.get(-3611, (long)var3_intLifetime5));
                 if (var23_ref == null) {
                   return;
                 }
@@ -664,7 +664,7 @@ final class VerticalScrollbar extends UiLayoutNode {
                     var7 = TexturedPanelPainter.a(31253, var3Lifetime2);
                     if (var7 == null) {
                       var7 = new LobbyPlayerRow(var20, var21, var3Lifetime2);
-                      TrinketSlot.field_Eb.a(var7, (byte) -4, var3Lifetime2);
+                      TrinketSlot.field_Eb.put(var7, (byte) -4, var3Lifetime2);
                       PlayerContextMenu.field_i.field_gc = PlayerContextMenu.field_i.field_gc + 1;
                     }
                     var7.field_Qb = ((PacketBuffer) ((Object) var1)).readUnsignedShort((byte) 81);
@@ -758,7 +758,7 @@ final class VerticalScrollbar extends UiLayoutNode {
               return;
             }
             var3_intLifetime6 = ((PacketBuffer) ((Object) var1)).readUnsignedShort((byte) 81);
-            var17_ref = (GameSetupPanel) (SortCriterion.field_f.a(-3611, (long)var3_intLifetime6));
+            var17_ref = (GameSetupPanel) (SortCriterion.field_f.get(-3611, (long)var3_intLifetime6));
             var24 = var17_ref;
             if (var24 == null) {
               return;
@@ -777,7 +777,7 @@ final class VerticalScrollbar extends UiLayoutNode {
             var3_ref_he.unlinkSecondary(9);
             var3_ref_he = (LobbyPlayerRow) (ProxyAuthenticationRequiredException.field_d.c(33));
           }
-          var3_ref_heLifetime1 = (LobbyPlayerRow) (SquadPickerDialog.field_N.b((byte) 72));
+          var3_ref_heLifetime1 = (LobbyPlayerRow) (SquadPickerDialog.field_N.first((byte) 72));
           while (var3_ref_heLifetime1 != null) {
             if (var3_ref_heLifetime1.field_Gb ||
               var3_ref_heLifetime1.field_Fb) {
@@ -788,7 +788,7 @@ final class VerticalScrollbar extends UiLayoutNode {
               var3_ref_heLifetime1.field_Gb = false;
               PacketBuffer.a((byte) 81, var3_ref_heLifetime1);
             }
-            var3_ref_heLifetime1 = (LobbyPlayerRow) (SquadPickerDialog.field_N.a(param0 - 14));
+            var3_ref_heLifetime1 = (LobbyPlayerRow) (SquadPickerDialog.field_N.next(param0 - 14));
           }
           if (var2 == 1 &&
             null != PlayerContextMenu.field_i) {

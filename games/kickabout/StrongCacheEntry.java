@@ -15,7 +15,7 @@ final class StrongCacheEntry extends WeightedCacheEntry {
     static String[] field_D;
     static String field_A;
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_A = null;
         field_C = null;
         field_E = null;
@@ -28,14 +28,14 @@ final class StrongCacheEntry extends WeightedCacheEntry {
           field_z = null;
           return;
         }
-        StrongCacheEntry.b(-99);
+        StrongCacheEntry.releaseStatics(-99);
         field_B = null;
         field_w = null;
         field_D = null;
         field_z = null;
     }
 
-    final static boolean g(int param0) {
+    final static boolean hasGameFocus(int param0) {
         if (param0 != 2368) {
           return false;
         }
@@ -51,7 +51,7 @@ final class StrongCacheEntry extends WeightedCacheEntry {
         }
     }
 
-    final boolean h(byte param0) {
+    final boolean isSoftReference(byte param0) {
         if (param0 <= 105) {
           field_t = -26;
           return false;
@@ -59,7 +59,7 @@ final class StrongCacheEntry extends WeightedCacheEntry {
         return false;
     }
 
-    final Object a(int param0) {
+    final Object getValue(int param0) {
         if (param0 > -25) {
           field_t = 51;
           return this.field_x;

@@ -30,26 +30,26 @@ final class PanelSpriteFactory {
         int var7 = SoftwareRasterizer.field_g;
         int var8 = SoftwareRasterizer.field_f;
         Sprite var9 = new Sprite(param1, param0 - param1 * 2);
-        var9.e();
+        var9.setRasterTarget();
         SoftwareRasterizer.fillVerticalGradient(0, 0, param1, -(2 * param1) + param0, param3, param4);
         Sprite var10 = new Sprite(param1, param1);
-        var10.e();
+        var10.setRasterTarget();
         SoftwareRasterizer.fillRect(0, 0, param1, param1, param3);
         Sprite var11 = new Sprite(16, param1);
-        var11.e();
+        var11.setRasterTarget();
         SoftwareRasterizer.fillRect(0, 0, 16, param1, param3);
         if (param5 > 77) {
           var22 = new Sprite(param1, param1);
-          var22.e();
+          var22.setRasterTarget();
           SoftwareRasterizer.fillRect(0, 0, param1, param1, param4);
           var23 = new Sprite(16, param1);
-          var23.e();
+          var23.setRasterTarget();
           SoftwareRasterizer.fillRect(0, 0, 16, param1, param4);
           var14 = null;
           if (param2 > 0) {
             var24 = new Sprite(16, 16);
             var14 = var24;
-            var24.e();
+            var24.setRasterTarget();
             SoftwareRasterizer.fillRect(0, 0, 16, 16, param2);
           }
           SoftwareRasterizer.setRasterBuffer(var18, var7, var8);
@@ -57,16 +57,16 @@ final class PanelSpriteFactory {
         }
         field_a = (String[]) null;
         Sprite var19 = new Sprite(param1, param1);
-        var19.e();
+        var19.setRasterTarget();
         SoftwareRasterizer.fillRect(0, 0, param1, param1, param4);
         Sprite var20 = new Sprite(16, param1);
-        var20.e();
+        var20.setRasterTarget();
         SoftwareRasterizer.fillRect(0, 0, 16, param1, param4);
         var14 = null;
         if (param2 > 0) {
           var21 = new Sprite(16, 16);
           var14 = var21;
-          var21.e();
+          var21.setRasterTarget();
           SoftwareRasterizer.fillRect(0, 0, 16, 16, param2);
         }
         SoftwareRasterizer.setRasterBuffer(var18, var7, var8);

@@ -112,7 +112,7 @@ final class AuctionsScreen extends ButtonMenuScreen {
 
     final static void sendAuctionAction(int param0, int param1, byte param2) {
         CipherPacketBuffer var3 = FootballerAiOverlaySupport.field_d;
-        var3.b(param1, (byte) 127);
+        var3.writeIsaacByte(param1, (byte) 127);
         var3.writeByte(123, 3);
         int var4 = 127 / ((57 - param2) / 58);
         var3.writeByte(112, 8);
@@ -140,7 +140,7 @@ final class AuctionsScreen extends ButtonMenuScreen {
         stackIn_6_1 = (ModelMaterialDecoder.field_g) ? 0 : 1;
         stackIn_9_2 = (NineSlicePanelPainter.field_e) ? 0 : 1;
         stackIn_11_1 = stackIn_6_1 & stackIn_9_2;
-        stackIn_12_2 = (PlayArea.a(100)) ? 0 : 1;
+        stackIn_12_2 = (PlayArea.isGuestSession(100)) ? 0 : 1;
         param1 = stackIn_5_0 & (stackIn_11_1 & stackIn_12_2) != 0;
         this.field_G.updateTableInput(param1, false);
         this.field_L.field_s = this.slideOffsetX;
@@ -186,7 +186,7 @@ final class AuctionsScreen extends ButtonMenuScreen {
     final int buttonCenterX(int param0, int param1) {
         int var3;
         int stackIn_14_0 = 0;
-        if (PlayArea.a(100)) {
+        if (PlayArea.isGuestSession(100)) {
           var3 = 320;
           if (param0 == 1) {
             return var3 - (this.buttons[1].width + this.buttons[0].width >> 1);
@@ -389,7 +389,7 @@ final class AuctionsScreen extends ButtonMenuScreen {
           var3 = stackIn_8_0;
           IsSixCommand.field_C.drawCentered(var3, this.field_G.field_F + (this.field_G.field_q >> 1), (this.field_G.field_mb >> 1) + this.field_G.field_T, 16777215, -1);
         }
-        if (PlayArea.a(param0 ^ -97)) {
+        if (PlayArea.isGuestSession(param0 ^ -97)) {
           SoftwareRasterizer.fillRectangleAlpha(this.slideOffsetX, 48, 640, 383, 0, 196);
         }
         if (ModelMaterialDecoder.field_g ||
@@ -586,12 +586,12 @@ final class AuctionsScreen extends ButtonMenuScreen {
 
     private final void requestAuctionRefresh(int param0) {
         long var2 = 0L;
-        if (!PlayArea.a(100)) {
+        if (!PlayArea.isGuestSession(100)) {
           if (NineSlicePanelPainter.field_e ||
             ModelMaterialDecoder.field_g) {
             return;
           }
-          FootballerAiOverlaySupport.field_d.b(84, (byte) 112);
+          FootballerAiOverlaySupport.field_d.writeIsaacByte(84, (byte) 112);
           var2 = MonotonicClock.monotonicMillis(-79);
           if (param0 != 30353) {
             this.field_J = -31L;
@@ -635,11 +635,11 @@ final class AuctionsScreen extends ButtonMenuScreen {
               RankingsScreen.queueNewAuctionDialog(25);
               ShopPlayerSlot.c(49, 55);
             } else {
-              SocketArchiveNetworkClient.a((byte) 126, 33);
+              SocketArchiveNetworkClient.enqueueMessageDialog((byte) 126, 33);
               ShopPlayerSlot.c(53, -126);
             }
           } else {
-            SocketArchiveNetworkClient.a((byte) 126, 6);
+            SocketArchiveNetworkClient.enqueueMessageDialog((byte) 126, 6);
             ShopPlayerSlot.c(53, -120);
           }
         }
@@ -769,7 +769,7 @@ final class AuctionsScreen extends ButtonMenuScreen {
         if (param1 > -125) {
           return;
         }
-        if (!PlayArea.a(100)) {
+        if (!PlayArea.isGuestSession(100)) {
           if (NineSlicePanelPainter.field_e ||
             ModelMaterialDecoder.field_g) {
             return;
@@ -777,12 +777,12 @@ final class AuctionsScreen extends ButtonMenuScreen {
           if (this.field_D - 5 <= this.field_T.a(false)) {
             this.requestAuctionRefresh(30353);
           }
-          FootballerAiOverlaySupport.field_d.b(param0 ? 83 : 55, (byte) -91);
-          FootballerAiOverlaySupport.field_d.n(-115);
-          FootballerAiOverlaySupport.field_d.a(4, 79, this.field_U);
-          FootballerAiOverlaySupport.field_d.a(3, 93, this.field_F);
-          FootballerAiOverlaySupport.field_d.a(3, 79, this.field_C);
-          FootballerAiOverlaySupport.field_d.b(false);
+          FootballerAiOverlaySupport.field_d.writeIsaacByte(param0 ? 83 : 55, (byte) -91);
+          FootballerAiOverlaySupport.field_d.beginBitWrite(-115);
+          FootballerAiOverlaySupport.field_d.writeBits(4, 79, this.field_U);
+          FootballerAiOverlaySupport.field_d.writeBits(3, 93, this.field_F);
+          FootballerAiOverlaySupport.field_d.writeBits(3, 79, this.field_C);
+          FootballerAiOverlaySupport.field_d.finishBitWrite(false);
           FootballerAiOverlaySupport.field_d.writeMedium(-5 + this.field_D, (byte) 109);
           var3 = MonotonicClock.monotonicMillis(-111);
           this.field_P.field_lb = true;

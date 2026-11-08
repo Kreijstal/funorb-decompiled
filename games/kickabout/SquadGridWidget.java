@@ -99,7 +99,7 @@ final class SquadGridWidget extends UiLayoutNode {
               if (var3_ref_kq != this.field_Eb[var9]) {
                 if (!(AuctionLogEntry.field_h instanceof TeamManagementScreen)) {
                   this.field_Bb = this.field_Hb.createOrderSwapAction(var9, -123, var2);
-                  this.field_Hb.applyAction(this.field_Bb, AuctionLogEntry.e(15137), 0);
+                  this.field_Hb.applyAction(this.field_Bb, AuctionLogEntry.isLoggedInJagexModerator(15137), 0);
                 } else {
                   SquadOrderSupport.swapSquadOrder(var2, true, var9);
                 }
@@ -288,9 +288,9 @@ final class SquadGridWidget extends UiLayoutNode {
 
     final void sendSquadOrder(boolean param0) {
         int var2;
-        if (!PlayArea.a(100) &&
+        if (!PlayArea.isGuestSession(100) &&
           null != this.field_Bb) {
-          FootballerAiOverlaySupport.field_d.b(81, (byte) 84);
+          FootballerAiOverlaySupport.field_d.writeIsaacByte(81, (byte) 84);
           FootballerAiOverlaySupport.field_d.field_n = FootballerAiOverlaySupport.field_d.field_n + 2;
           var2 = FootballerAiOverlaySupport.field_d.field_n;
           FootballerAiOverlaySupport.field_d.writeByte(106, 1);
@@ -404,7 +404,7 @@ final class SquadGridWidget extends UiLayoutNode {
         RuntimeException decompiledCaughtException = null;
         var3 = Kickabout.field_G;
         try {
-          AuctionListing.a(640, -22914, 0, 480, 390);
+          AuctionListing.pushRasterClip(640, -22914, 0, 480, 390);
           var1_int = -SplashScreen.field_j + 480;
           if (param0 > -99) {
             return;
@@ -581,7 +581,7 @@ final class SquadGridWidget extends UiLayoutNode {
         ListingRowCache.a(var3, this.field_T, this.field_F, (byte) -96, var2);
         var5 = -84 % ((param0 + 35) / 60);
         var4 = null;
-        AuctionListing.a(this.field_F + this.field_q, -22914, this.field_F, this.field_mb + this.field_T, this.field_T);
+        AuctionListing.pushRasterClip(this.field_F + this.field_q, -22914, this.field_F, this.field_mb + this.field_T, this.field_T);
         for (var6 = 0; var6 < 9; var6++) {
           if (0 != this.field_Eb[var6].field_qb) {
             var4 = this.field_Eb[var6];
@@ -611,7 +611,7 @@ final class SquadGridWidget extends UiLayoutNode {
         AuctionsHelpScreen.field_F = new String[8];
         AuctionsHelpScreen.field_F[7] = DisplayModeSupport.field_c;
         PanelSpriteFactory.field_a = new String[]{RotaryDialWidget.field_F, MouseInputHandler.field_a};
-        GameModeDefinition.field_e = new String[]{RenderedFootballer.field_Q};
+        KitStyleDefinition.field_e = new String[]{RenderedFootballer.field_Q};
         AuctionsHelpScreen.field_F[1] = ChatInputState.field_f;
         AuctionsHelpScreen.field_F[4] = DisplayModeSupport.field_d;
         AuctionsHelpScreen.field_F[6] = SquadPickerDialog.field_M;
@@ -688,7 +688,7 @@ final class SquadGridWidget extends UiLayoutNode {
         if (param0 != -19) {
           return;
         }
-        PendingRequestAcknowledgement.field_g[28] = GameModeDefinition.field_b;
+        PendingRequestAcknowledgement.field_g[28] = KitStyleDefinition.field_b;
         PendingRequestAcknowledgement.field_g[26] = StrongCacheEntry.field_C;
         PendingRequestAcknowledgement.field_g[46] = TextLayout.field_b;
         ValidationState.field_d = new String[24];

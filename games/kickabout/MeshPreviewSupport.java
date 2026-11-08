@@ -14,13 +14,13 @@ final class MeshPreviewSupport {
           if (!SceneSpriteFactory.field_b.ensureIndex(-93)) {
             return 20;
           }
-          if (!SceneSpriteFactory.field_b.a(false, "commonui")) {
+          if (!SceneSpriteFactory.field_b.ensurePackedGroupByName(false, "commonui")) {
             return 40;
           }
           if (!SelectionMarkerSupport.field_c.ensureIndex(-58)) {
             return 50;
           }
-          if (!SelectionMarkerSupport.field_c.a(false, "commonui")) {
+          if (!SelectionMarkerSupport.field_c.ensurePackedGroupByName(false, "commonui")) {
             return 60;
           }
           if (!PlayerStats.field_k.ensureIndex(param0 - 179)) {
@@ -34,23 +34,23 @@ final class MeshPreviewSupport {
             if (!LoginRequiredDialog.field_H.ensureIndex(-94)) {
               return 14;
             }
-            if (!LoginRequiredDialog.field_H.a("", (byte) -120)) {
+            if (!LoginRequiredDialog.field_H.hasGroupName("", (byte) -120)) {
               return 29;
             }
-            if (!LoginRequiredDialog.field_H.a(false, "")) {
+            if (!LoginRequiredDialog.field_H.ensurePackedGroupByName(false, "")) {
               return 29;
             }
           }
           if (!SceneSpriteFactory.field_b.ensureIndex(-107)) {
             return 43;
           }
-          if (!SceneSpriteFactory.field_b.a(false, "commonui")) {
+          if (!SceneSpriteFactory.field_b.ensurePackedGroupByName(false, "commonui")) {
             return 57;
           }
           if (!SelectionMarkerSupport.field_c.ensureIndex(-66)) {
             return 71;
           }
-          if (!SelectionMarkerSupport.field_c.a(false, "commonui")) {
+          if (!SelectionMarkerSupport.field_c.ensurePackedGroupByName(false, "commonui")) {
             return 80;
           }
           if (!PlayerStats.field_k.ensureIndex(-106)) {
@@ -72,7 +72,7 @@ final class MeshPreviewSupport {
         RuntimeException var1 = null;
         var2 = Kickabout.field_G;
         try {
-          if (!ArchiveManager.a(false)) {
+          if (!ArchiveManager.hasActiveModal(false)) {
             if (null != SplashScreen.field_m &&
               SplashScreen.field_m.field_b) {
               UiWidget.leaveFullscreen(0);

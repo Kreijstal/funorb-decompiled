@@ -7,7 +7,7 @@ final class WriteIntegersCommand extends ConsoleCommand {
     static String field_D;
     static ModelMesh[] field_B;
 
-    public static void g(int param0) {
+    public static void releaseStatics(int param0) {
         field_D = null;
         field_B = null;
         field_E = null;

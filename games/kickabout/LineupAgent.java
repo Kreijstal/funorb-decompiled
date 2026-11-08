@@ -46,7 +46,7 @@ final class LineupAgent extends MatchAgent {
             }
           }
           this.readyMask = param0.readBits(8, 59);
-          param0.l((byte) 112);
+          param0.finishBitRead((byte) 112);
           var3_intLifetime1 = 0;
           if (param1) {
             field_g = true;
@@ -60,7 +60,7 @@ final class LineupAgent extends MatchAgent {
             }
             var3_intLifetime1++;
           }
-          param0.p(-104);
+          param0.beginBitRead(-104);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "wl.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -110,7 +110,7 @@ final class LineupAgent extends MatchAgent {
             return false;
           }
           if (!this.field_l &&
-            param1.a((byte) -113, param0)) {
+            param1.hasLogEntryForSlot((byte) -113, param0)) {
             return false;
           }
           if (param3 != 4) {
@@ -232,7 +232,7 @@ final class LineupAgent extends MatchAgent {
                     if (var13.isEmpty(-2)) {
                       return;
                     }
-                    if (param2.a((byte) 79, var8)) {
+                    if (param2.hasLogEntryForSlot((byte) 79, var8)) {
                       return;
                     }
                   } else {

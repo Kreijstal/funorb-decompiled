@@ -251,7 +251,7 @@ final class Trinket {
             return;
           }
           var2_int = SocialListLayoutSupport.worldToScreenX(0, param0.getRenderedX(1606384336));
-          var3 = IntKeyLookup.a((byte) -64, param0.field_bb >> 16);
+          var3 = IntKeyLookup.projectPitchY((byte) -64, param0.field_bb >> 16);
           if (param1 != 100) {
             return;
           }
@@ -342,7 +342,7 @@ final class Trinket {
           if (param0 != -128) {
             field_b = (ResourceArchive) null;
           }
-          ConsoleCommand.field_v.e();
+          ConsoleCommand.field_v.setRasterTarget();
           var1.drawHalfSize(0, 0);
           TeamManagementScreen.e(127);
           return;

@@ -38,9 +38,9 @@ final class AuctionListingDialog extends MessageDialog {
           return;
         }
         super.handleResult(62, param1);
-        if (!PlayArea.a(100) &&
+        if (!PlayArea.isGuestSession(100) &&
           this.field_G) {
-          FootballerAiOverlaySupport.field_d.b(60, (byte) 104);
+          FootballerAiOverlaySupport.field_d.writeIsaacByte(60, (byte) 104);
           this.field_J.writeToPacket(FootballerAiOverlaySupport.field_d, 5);
         }
         BuyPlayerDialog.field_K.addLast(this.field_J, 3);

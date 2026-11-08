@@ -208,7 +208,7 @@ final class MarkerSliderWidget extends TextButton {
 
     final static void a(int param0, int param1) {
         CipherPacketBuffer var2 = FootballerAiOverlaySupport.field_d;
-        var2.b(param0, (byte) -104);
+        var2.writeIsaacByte(param0, (byte) -104);
         var2.writeByte(106, 1);
         var2.writeByte(117, 1);
         if (param1 == 32361) {

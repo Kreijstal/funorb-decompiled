@@ -9,7 +9,7 @@ final class FixedQuaternion {
     private int field_d;
 
     private final void a(int param0) {
-        int var2 = EmailSyntaxValidator.a(-8905, (long)this.field_a, (long)this.field_a) + EmailSyntaxValidator.a(-8905, (long)this.field_b, (long)this.field_b) - (-EmailSyntaxValidator.a(-8905, (long)this.field_c, (long)this.field_c) - EmailSyntaxValidator.a(-8905, (long)this.field_d, (long)this.field_d));
+        int var2 = EmailSyntaxValidator.multiplyFixed16(-8905, (long)this.field_a, (long)this.field_a) + EmailSyntaxValidator.multiplyFixed16(-8905, (long)this.field_b, (long)this.field_b) - (-EmailSyntaxValidator.multiplyFixed16(-8905, (long)this.field_c, (long)this.field_c) - EmailSyntaxValidator.multiplyFixed16(-8905, (long)this.field_d, (long)this.field_d));
         if (param0 <= 34) {
           return;
         }
@@ -36,13 +36,13 @@ final class FixedQuaternion {
         int var4 = 0;
         int var5 = 0;
         try {
-          var3_int = EmailSyntaxValidator.a(-8905, (long)param0.field_a, (long)this.field_a) - (EmailSyntaxValidator.a(-8905, (long)param0.field_b, (long)this.field_b) - (-EmailSyntaxValidator.a(-8905, (long)param0.field_c, (long)this.field_c) - EmailSyntaxValidator.a(-8905, (long)param0.field_d, (long)this.field_d)));
-          var4 = EmailSyntaxValidator.a(-8905, (long)param0.field_a, (long)this.field_b) + (EmailSyntaxValidator.a(-8905, (long)param0.field_b, (long)this.field_a) + (EmailSyntaxValidator.a(-8905, (long)param0.field_c, (long)this.field_d) - EmailSyntaxValidator.a(-8905, (long)param0.field_d, (long)this.field_c)));
-          var5 = EmailSyntaxValidator.a(-8905, (long)param0.field_a, (long)this.field_c) - (EmailSyntaxValidator.a(-8905, (long)param0.field_b, (long)this.field_d) - EmailSyntaxValidator.a(-8905, (long)param0.field_c, (long)this.field_a)) + EmailSyntaxValidator.a(-8905, (long)param0.field_d, (long)this.field_b);
+          var3_int = EmailSyntaxValidator.multiplyFixed16(-8905, (long)param0.field_a, (long)this.field_a) - (EmailSyntaxValidator.multiplyFixed16(-8905, (long)param0.field_b, (long)this.field_b) - (-EmailSyntaxValidator.multiplyFixed16(-8905, (long)param0.field_c, (long)this.field_c) - EmailSyntaxValidator.multiplyFixed16(-8905, (long)param0.field_d, (long)this.field_d)));
+          var4 = EmailSyntaxValidator.multiplyFixed16(-8905, (long)param0.field_a, (long)this.field_b) + (EmailSyntaxValidator.multiplyFixed16(-8905, (long)param0.field_b, (long)this.field_a) + (EmailSyntaxValidator.multiplyFixed16(-8905, (long)param0.field_c, (long)this.field_d) - EmailSyntaxValidator.multiplyFixed16(-8905, (long)param0.field_d, (long)this.field_c)));
+          var5 = EmailSyntaxValidator.multiplyFixed16(-8905, (long)param0.field_a, (long)this.field_c) - (EmailSyntaxValidator.multiplyFixed16(-8905, (long)param0.field_b, (long)this.field_d) - EmailSyntaxValidator.multiplyFixed16(-8905, (long)param0.field_c, (long)this.field_a)) + EmailSyntaxValidator.multiplyFixed16(-8905, (long)param0.field_d, (long)this.field_b);
           if (param1 > -28) {
             this.a(122);
           }
-          this.field_d = EmailSyntaxValidator.a(-8905, (long)param0.field_a, (long)this.field_d) + EmailSyntaxValidator.a(-8905, (long)param0.field_b, (long)this.field_c) - (EmailSyntaxValidator.a(-8905, (long)param0.field_c, (long)this.field_b) - EmailSyntaxValidator.a(-8905, (long)param0.field_d, (long)this.field_a));
+          this.field_d = EmailSyntaxValidator.multiplyFixed16(-8905, (long)param0.field_a, (long)this.field_d) + EmailSyntaxValidator.multiplyFixed16(-8905, (long)param0.field_b, (long)this.field_c) - (EmailSyntaxValidator.multiplyFixed16(-8905, (long)param0.field_c, (long)this.field_b) - EmailSyntaxValidator.multiplyFixed16(-8905, (long)param0.field_d, (long)this.field_a));
           this.field_a = var3_int;
           this.field_c = var5;
           this.field_b = var4;
@@ -62,9 +62,9 @@ final class FixedQuaternion {
           var6 = VertexNormal.sine(param4, 3);
           var7 = StringCursor.cosAngle(param4, -127);
           this.field_a = var7;
-          this.field_b = EmailSyntaxValidator.a(-8905, (long)param3, (long)var6);
-          this.field_c = EmailSyntaxValidator.a(-8905, (long)param0, (long)var6);
-          this.field_d = EmailSyntaxValidator.a(-8905, (long)param2, (long)var6);
+          this.field_b = EmailSyntaxValidator.multiplyFixed16(-8905, (long)param3, (long)var6);
+          this.field_c = EmailSyntaxValidator.multiplyFixed16(-8905, (long)param0, (long)var6);
+          this.field_d = EmailSyntaxValidator.multiplyFixed16(-8905, (long)param2, (long)var6);
           return;
         }
         FixedQuaternion var8 = (FixedQuaternion) null;
@@ -72,9 +72,9 @@ final class FixedQuaternion {
         var6Lifetime1 = VertexNormal.sine(param4, 3);
         var7Lifetime1 = StringCursor.cosAngle(param4, -127);
         this.field_a = var7Lifetime1;
-        this.field_b = EmailSyntaxValidator.a(-8905, (long)param3, (long)var6Lifetime1);
-        this.field_c = EmailSyntaxValidator.a(-8905, (long)param0, (long)var6Lifetime1);
-        this.field_d = EmailSyntaxValidator.a(-8905, (long)param2, (long)var6Lifetime1);
+        this.field_b = EmailSyntaxValidator.multiplyFixed16(-8905, (long)param3, (long)var6Lifetime1);
+        this.field_c = EmailSyntaxValidator.multiplyFixed16(-8905, (long)param0, (long)var6Lifetime1);
+        this.field_d = EmailSyntaxValidator.multiplyFixed16(-8905, (long)param2, (long)var6Lifetime1);
     }
 
     final void toRotationMatrix(int param0, int[] param1) {
@@ -89,16 +89,16 @@ final class FixedQuaternion {
         int var11 = 0;
         int var12 = 0;
         try {
-          var3_int = EmailSyntaxValidator.a(-8905, (long)this.field_a, (long)this.field_a);
-          var4 = EmailSyntaxValidator.a(-8905, (long)this.field_a, (long)this.field_b);
-          var5 = EmailSyntaxValidator.a(-8905, (long)this.field_a, (long)this.field_c);
-          var6 = EmailSyntaxValidator.a(-8905, (long)this.field_a, (long)this.field_d);
-          var7 = EmailSyntaxValidator.a(-8905, (long)this.field_b, (long)this.field_b);
-          var8 = EmailSyntaxValidator.a(-8905, (long)this.field_b, (long)this.field_c);
-          var9 = EmailSyntaxValidator.a(-8905, (long)this.field_b, (long)this.field_d);
-          var10 = EmailSyntaxValidator.a(-8905, (long)this.field_c, (long)this.field_c);
-          var11 = EmailSyntaxValidator.a(param0 ^ -8897, (long)this.field_c, (long)this.field_d);
-          var12 = EmailSyntaxValidator.a(param0 ^ -8897, (long)this.field_d, (long)this.field_d);
+          var3_int = EmailSyntaxValidator.multiplyFixed16(-8905, (long)this.field_a, (long)this.field_a);
+          var4 = EmailSyntaxValidator.multiplyFixed16(-8905, (long)this.field_a, (long)this.field_b);
+          var5 = EmailSyntaxValidator.multiplyFixed16(-8905, (long)this.field_a, (long)this.field_c);
+          var6 = EmailSyntaxValidator.multiplyFixed16(-8905, (long)this.field_a, (long)this.field_d);
+          var7 = EmailSyntaxValidator.multiplyFixed16(-8905, (long)this.field_b, (long)this.field_b);
+          var8 = EmailSyntaxValidator.multiplyFixed16(-8905, (long)this.field_b, (long)this.field_c);
+          var9 = EmailSyntaxValidator.multiplyFixed16(-8905, (long)this.field_b, (long)this.field_d);
+          var10 = EmailSyntaxValidator.multiplyFixed16(-8905, (long)this.field_c, (long)this.field_c);
+          var11 = EmailSyntaxValidator.multiplyFixed16(param0 ^ -8897, (long)this.field_c, (long)this.field_d);
+          var12 = EmailSyntaxValidator.multiplyFixed16(param0 ^ -8897, (long)this.field_d, (long)this.field_d);
           param1[4] = var6 + (var8 - (-var6 - var8));
           param1[7] = -var12 + (var10 + var3_int - var7);
           param1[9] = var5 + (var9 + var5 + var9);

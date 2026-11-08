@@ -18,12 +18,12 @@ final class CheckboxLabelWidget extends UiLayoutNode {
           param1 = (int)(param0 * (long)param1 >> 16);
           return param1;
         }
-        CheckboxLabelWidget.a('￸', 47);
+        CheckboxLabelWidget.isBasicDisplayNameCharacter('￸', 47);
         param1 = (int)(param0 * (long)param1 >> 16);
         return param1;
     }
 
-    final static boolean a(char param0, int param1) {
+    final static boolean isBasicDisplayNameCharacter(char param0, int param1) {
         if (Character.isISOControl(param0)) {
           return false;
         }
@@ -45,7 +45,7 @@ final class CheckboxLabelWidget extends UiLayoutNode {
         if (param1 == 160) {
           return false;
         }
-        CheckboxLabelWidget.a('1', 48);
+        CheckboxLabelWidget.isBasicDisplayNameCharacter('1', 48);
         return false;
     }
 

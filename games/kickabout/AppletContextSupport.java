@@ -72,15 +72,15 @@ final class AppletContextSupport {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0.ensureIndex(-38) &&
-            param0.a(false, "commonui")) {
+            param0.ensurePackedGroupByName(false, "commonui")) {
             if (!param2.ensureIndex(-57)) {
               return false;
             }
-            if (!param2.a(false, "commonui")) {
+            if (!param2.ensurePackedGroupByName(false, "commonui")) {
               return false;
             }
             if (param3.ensureIndex(-124) &&
-              param3.a(false, "button.gif")) {
+              param3.ensurePackedGroupByName(false, "button.gif")) {
               if (!param1) {
                 var5 = (ResourceArchive) null;
                 AppletContextSupport.a((ResourceArchive) null, true, (ResourceArchive) null, (ResourceArchive) null);

@@ -322,7 +322,7 @@ final class GameModesHelpScreen extends PagedHelpScreen {
             break;
           }
           SoftwareRasterizer.fillRoundedRectangleBlended(this.slideOffsetX + 325, 178, 275, 225, 10, 65793, 140);
-          AuctionListing.a(this.slideOffsetX + 595, -22914, this.slideOffsetX + 330, 398, 183);
+          AuctionListing.pushRasterClip(this.slideOffsetX + 595, -22914, this.slideOffsetX + 330, 398, 183);
           var14Lifetime2 = 7;
           var15Lifetime1Lifetime1 = 110;
           var16Lifetime1 = 40;

@@ -16,7 +16,7 @@ abstract class SpriteState extends DualLinkNode {
 
     final static void a(int param0, int param1) {
         CipherPacketBuffer var2 = FootballerAiOverlaySupport.field_d;
-        var2.b(param1, (byte) 108);
+        var2.writeIsaacByte(param1, (byte) 108);
         var2.field_n = var2.field_n + 1;
         int var3 = var2.field_n;
         if (param0 != 6773) {
@@ -266,7 +266,7 @@ abstract class SpriteState extends DualLinkNode {
                   var18_ref = (LobbyPlayerRow) (var17.g(24009));
                   scanLoop4: while (true) {
                     if (var18_ref != null) {
-                      if (!var18_ref.h(-13356)) {
+                      if (!var18_ref.isDetachedFromPlayerTable(-13356)) {
                         if (var11_intLifetime1 != 0 &&
                           !var18_ref.field_Cb) {
                           var16Lifetime1Lifetime1 = 1;
@@ -371,7 +371,7 @@ abstract class SpriteState extends DualLinkNode {
           HighScoreQuery.field_l.tabs.processTabClicks((byte) 71);
           if (null != PlayerContextMenu.field_i) {
             if (TrinketUnlockNotice.field_b.field_sb != 0) {
-              ContextMenu.a(PlayerContextMenu.field_i.h((byte) 73), (byte) -108, param1);
+              ContextMenu.a(PlayerContextMenu.field_i.getGameId((byte) 73), (byte) -108, param1);
             }
             if (GoalStateAgent.field_k.field_sb != 0) {
               SelectionMarkerSupport.field_e = true;

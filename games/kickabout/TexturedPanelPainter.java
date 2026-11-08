@@ -30,7 +30,7 @@ final class TexturedPanelPainter extends NineSlicePanelPainter {
         if (param0 != 31253) {
           return (LobbyPlayerRow) null;
         }
-        return (LobbyPlayerRow) (TrinketSlot.field_Eb.a(param0 - 34864, param1));
+        return (LobbyPlayerRow) (TrinketSlot.field_Eb.get(param0 - 34864, param1));
     }
 
     final void drawPanel(int param0, int param1, int param2, int param3, int param4) {
@@ -76,7 +76,7 @@ final class TexturedPanelPainter extends NineSlicePanelPainter {
         int var1_int = 0;
         ManagerAction var2 = null;
         int var3 = Kickabout.field_G;
-        if (PlayArea.a(param0 + 156)) {
+        if (PlayArea.isGuestSession(param0 + 156)) {
           ClubStateFactory.applyPendingManagerActions(50);
           return;
         }
@@ -84,7 +84,7 @@ final class TexturedPanelPainter extends NineSlicePanelPainter {
           return;
         }
         try {
-          FootballerAiOverlaySupport.field_d.b(81, (byte) 99);
+          FootballerAiOverlaySupport.field_d.writeIsaacByte(81, (byte) 99);
           FootballerAiOverlaySupport.field_d.field_n = FootballerAiOverlaySupport.field_d.field_n + 2;
           var1_int = FootballerAiOverlaySupport.field_d.field_n;
           FootballerAiOverlaySupport.field_d.writeByte(109, MusicPatchNode.field_h.a(false));

@@ -100,16 +100,16 @@ final class FootballerAiOverlaySupport {
           }
           ParticipantStatus.updateFormationTargetPoint(param1, param2, (byte) 112, param0.field_r[param2]);
           var12 = SocialListLayoutSupport.worldToScreenX(param3 - 99, var5);
-          var13 = IntKeyLookup.a((byte) -96, var6);
+          var13 = IntKeyLookup.projectPitchY((byte) -96, var6);
           var14 = SocialListLayoutSupport.worldToScreenX(0, MatchingTextValidator.field_m[0]);
-          var15 = IntKeyLookup.a((byte) -76, MatchingTextValidator.field_m[1]);
+          var15 = IntKeyLookup.projectPitchY((byte) -76, MatchingTextValidator.field_m[1]);
           var16 = InstrumentNoteMask.field_i * 10 >> 8;
           var17 = (-1 + (1 << var30.aiWait) & (1 + param1) * ((1 + param2) * 19) + param0.aiTick) * InstrumentNoteMask.field_i >> 8;
           if (param3 != 99) {
             field_a = (int[]) null;
           }
           var18 = (1 << var30.aiWait) * InstrumentNoteMask.field_i >> 8;
-          var19 = param2 == 1 ? 13369344 : FormationMaskSupport.field_c != 2 ? 65793 : 16777215;
+          var19 = param2 == 1 ? 13369344 : KitPatternMaskSupport.field_c != 2 ? 65793 : 16777215;
           var20 = 24;
           var21 = 24;
           if ((10 & var30.directionMask) == 0) {
@@ -120,14 +120,14 @@ final class FootballerAiOverlaySupport {
           }
           var20 = InstrumentNoteMask.field_i * (var20 << 1) >> 8;
           var21 = InstrumentNoteMask.field_i * (var21 << 1) >> 8;
-          SoftwareDrawingSupport.drawRectangleOutline(SocialListLayoutSupport.worldToScreenX(0, var10), IntKeyLookup.a((byte) -126, var11), InstrumentNoteMask.field_i * var8 >> 8, InstrumentNoteMask.field_i * var9 >> 8, var19, 100);
+          SoftwareDrawingSupport.drawRectangleOutline(SocialListLayoutSupport.worldToScreenX(0, var10), IntKeyLookup.projectPitchY((byte) -126, var11), InstrumentNoteMask.field_i * var8 >> 8, InstrumentNoteMask.field_i * var9 >> 8, var19, 100);
           var22 = UiInputRoutingSupport.field_c[param2][-1 + param1];
           for (var23 = 0; 4 > var23; var23++) {
             for (var24 = 0; var24 < -1 + var22[var23].length; var24++) {
               var25 = SocialListLayoutSupport.worldToScreenX(param3 ^ 99, var22[var23][var24][0]);
-              var26 = IntKeyLookup.a((byte) -79, var22[var23][var24][1]);
+              var26 = IntKeyLookup.projectPitchY((byte) -79, var22[var23][var24][1]);
               var27 = SocialListLayoutSupport.worldToScreenX(0, var22[var23][var24 + 1][0]);
-              var28 = IntKeyLookup.a((byte) -99, var22[var23][var24 + 1][1]);
+              var28 = IntKeyLookup.projectPitchY((byte) -99, var22[var23][var24 + 1][1]);
               SoftwareRasterizer.drawLineBlendedInclusive(var25, var26, var27, var28, var19, 128);
             }
           }

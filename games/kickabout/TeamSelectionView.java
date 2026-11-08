@@ -84,11 +84,11 @@ final class TeamSelectionView extends MatchPhaseView {
             SoftwareRasterizer.drawLine(var8, 6 + var4Lifetime1, var7 + var8, var4Lifetime1 + var9 - 2, 13382451);
             SoftwareRasterizer.drawLine(var8 + var7, var4Lifetime1 + 6, var8, -2 + var4Lifetime1 + var9, 13382451);
           }
-          AuctionListing.a(76, -22914, 0, 480, 0);
+          AuctionListing.pushRasterClip(76, -22914, 0, 480, 0);
           SoftwareRasterizer.fillRoundedRectangleBlended(52, var4Lifetime1, 486, 21, 7, 65793, 128);
           TeamManagementScreen.e(120);
           MySquadScreen.field_U[this.field_a.field_g[var5].field_f].c(55, 1 + var4Lifetime1);
-          AuctionListing.a(640, -22914, 564, 480, 0);
+          AuctionListing.pushRasterClip(640, -22914, 564, 480, 0);
           SoftwareRasterizer.fillRoundedRectangleBlended(78, var4Lifetime1, 512, 21, 7, 65793, 128);
           TeamManagementScreen.e(121);
           var4Lifetime1 += 23;
@@ -182,7 +182,7 @@ final class TeamSelectionView extends MatchPhaseView {
           return;
         }
         if (this.field_f) {
-          FootballerAiOverlaySupport.field_d.b(72, (byte) -47);
+          FootballerAiOverlaySupport.field_d.writeIsaacByte(72, (byte) -47);
           FootballerAiOverlaySupport.field_d.writeByte(117, param1);
         }
     }

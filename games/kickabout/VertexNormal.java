@@ -71,7 +71,7 @@ final class VertexNormal {
           var7.unlinkSecondary(66);
           StripedProgressBar.field_y = StripedProgressBar.field_y - 1;
           var5 = FootballerAiOverlaySupport.field_d;
-          var5.b(param2, (byte) 110);
+          var5.writeIsaacByte(param2, (byte) 110);
           var5.field_n = var5.field_n + 1;
           var6 = var5.field_n;
           var5.writeByte(105, 3);

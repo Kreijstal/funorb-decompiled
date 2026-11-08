@@ -148,7 +148,7 @@ final class PlayerStats implements PopupCard {
 
     final static void a(int param0, int param1) {
         CipherPacketBuffer var2 = FootballerAiOverlaySupport.field_d;
-        var2.b(param0, (byte) 85);
+        var2.writeIsaacByte(param0, (byte) 85);
         var2.field_n = var2.field_n + 1;
         int var3 = var2.field_n;
         var2.writeByte(112, 2);

@@ -191,7 +191,7 @@ final class NanoTickClock extends TickClock {
         if (-1 == var1) {
           return;
         }
-        FootballerAiOverlaySupport.field_d.b(88, (byte) -46);
+        FootballerAiOverlaySupport.field_d.writeIsaacByte(88, (byte) -46);
         FootballerAiOverlaySupport.field_d.writeByte(127, var1);
         QuickChatPhraseCache.field_d = true;
     }

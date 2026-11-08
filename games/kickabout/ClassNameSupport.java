@@ -68,7 +68,7 @@ final class ClassNameSupport {
               if (!SetLagCommand.a((byte) 83, 1)) {
                 return false;
               }
-              DirectByteStorage.field_i = ByteArrayPool.field_e.k((byte) 107);
+              DirectByteStorage.field_i = ByteArrayPool.field_e.readIsaacByte((byte) 107);
               ByteArrayPool.field_e.field_n = 0;
               MusicVolumeSupport.field_b = param1[DirectByteStorage.field_i];
             }

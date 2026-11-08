@@ -63,7 +63,7 @@ final class MatchHudSupport {
           var4 = 0;
           if (0 != PortraitCacheOrder.field_d) {
             var3Lifetime2 = 0;
-            AuctionListing.a(param0 + (TextLayoutLine.field_e + LoginDialog.field_cb.field_q), -22914, TextLayoutLine.field_e + param0, -14 + (ArchiveNetworkClient.field_i - (-LoginDialog.field_cb.field_w - 2 * CachedArchiveSource.field_s)), ArchiveNetworkClient.field_i + 8);
+            AuctionListing.pushRasterClip(param0 + (TextLayoutLine.field_e + LoginDialog.field_cb.field_q), -22914, TextLayoutLine.field_e + param0, -14 + (ArchiveNetworkClient.field_i - (-LoginDialog.field_cb.field_w - 2 * CachedArchiveSource.field_s)), ArchiveNetworkClient.field_i + 8);
             var4Lifetime1 = RankingRowNode.field_Db;
             while (var4Lifetime1 > 0) {
               field_a[var4Lifetime1 % 10].c(TextLayoutLine.field_e + 140 + (-(var3Lifetime2 * field_a[0].field_q) + param0), 9 + (ArchiveNetworkClient.field_i - 2 * (-CachedArchiveSource.field_s + 18)));

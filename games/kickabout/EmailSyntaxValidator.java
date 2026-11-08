@@ -17,7 +17,7 @@ final class EmailSyntaxValidator extends TextFieldValidator {
         var1.addLast(new ThreeCommand("three", new Class[]{}, (String) null), param0 ^ 25);
         var1.addLast(new IsSixCommand("isSix", new Class[]{Integer.TYPE}, (String) null), param0 - 23);
         if (param0 != 26) {
-          EmailSyntaxValidator.a(42, -71L, -88L);
+          EmailSyntaxValidator.multiplyFixed16(42, -71L, -88L);
         }
         var1.addLast(new NotCommand("not", new Class[]{Boolean.TYPE}, (String) null), param0 - 23);
         var1.addLast(new IntDoubleCommand("intDouble", new Class[]{Integer.TYPE}, (String) null), 3);
@@ -66,7 +66,7 @@ final class EmailSyntaxValidator extends TextFieldValidator {
         }
     }
 
-    final static int a(int param0, long param1, long param2) {
+    final static int multiplyFixed16(int param0, long param1, long param2) {
         if (param0 != -8905) {
           EmailSyntaxValidator.e((byte) 58);
         }
@@ -134,7 +134,7 @@ final class EmailSyntaxValidator extends TextFieldValidator {
         }
     }
 
-    public static void f(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_k = null;
         field_l = null;
         if (param0 != -126) {

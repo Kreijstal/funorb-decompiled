@@ -60,7 +60,7 @@ final class ListingRowCache {
         int var4 = Kickabout.field_G;
         int var2 = 20 % ((param0 + 4) / 40);
         for (var3 = 0; 7 > var3; var3++) {
-          AuctionListingDialog.field_L[var3].a(true);
+          AuctionListingDialog.field_L[var3].clear(true);
           GoalSpriteLoader.field_f[var3] = 0;
         }
     }
@@ -126,7 +126,7 @@ final class ListingRowCache {
     private final void add(byte param0, ListingRow param1, long param2) {
         CachedListingRow var5 = null;
         try {
-          var5 = (CachedListingRow) (AuctionListingDialog.field_L[param1.category].a(true, (long)param1.rowId));
+          var5 = (CachedListingRow) (AuctionListingDialog.field_L[param1.category].get(true, (long)param1.rowId));
           if (var5 == null) {
             var5 = new CachedListingRow(param1, PlayerPortraitCacheEntry.millisToMinutes(-1090519040, param2));
             AuctionListingDialog.field_L[param1.category].put(var5, -116, (long)param1.rowId);
@@ -151,7 +151,7 @@ final class ListingRowCache {
         }
         int var4 = PlayerPortraitCacheEntry.millisToMinutes(-1090519040, MonotonicClock.monotonicMillis(85));
         for (var5 = 0; var5 < 7; var5++) {
-          var6 = (CachedListingRow) (AuctionListingDialog.field_L[var5].b(0));
+          var6 = (CachedListingRow) (AuctionListingDialog.field_L[var5].first(0));
           while (var6 != null) {
             var7 = 5;
             if (param1 > var6.field_g.rowId ||
@@ -166,7 +166,7 @@ final class ListingRowCache {
               var6.c((byte) -109);
               GoalSpriteLoader.field_f[var5] = GoalSpriteLoader.field_f[var5] - 1;
             }
-            var6 = (CachedListingRow) (AuctionListingDialog.field_L[var5].a(-1));
+            var6 = (CachedListingRow) (AuctionListingDialog.field_L[var5].next(-1));
           }
         }
     }
@@ -181,7 +181,7 @@ final class ListingRowCache {
         if (param2 >= 7) {
           return null;
         }
-        CachedListingRow var4 = (CachedListingRow) (AuctionListingDialog.field_L[param2].a(true, (long)param0));
+        CachedListingRow var4 = (CachedListingRow) (AuctionListingDialog.field_L[param2].get(true, (long)param0));
         return var4 == null ? null : var4.field_g;
     }
 

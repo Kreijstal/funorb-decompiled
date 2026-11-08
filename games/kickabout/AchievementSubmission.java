@@ -26,7 +26,7 @@ final class AchievementSubmission extends IntrusiveNode {
           }
           for (var1_int = 0; var1_int < AnimationSkeleton.field_g.length; var1_int++) {
             LocalizedTextLoader.field_c[var1_int] = new Sprite(94, 84);
-            var2 = AuctionsHelpScreen.a(var1_int, (int) ClubStateFactory.a(255, 63), true, (int) ClubStateFactory.a(65280, param0 - 65217)).createModelMesh(100, 728, 20, -56, -20);
+            var2 = AuctionsHelpScreen.createKitMesh(var1_int, (int) ClubStateFactory.a(255, 63), true, (int) ClubStateFactory.a(65280, param0 - 65217)).createModelMesh(100, 728, 20, -56, -20);
             MeshPreviewSupport.renderMeshPreview(var2, LocalizedTextLoader.field_c[var1_int], var1_int, 40);
           }
           return;
@@ -49,7 +49,7 @@ final class AchievementSubmission extends IntrusiveNode {
 
     final static void applyAndQueueManagerAction(ManagerAction param0, int param1) {
         try {
-          RegistrationRequestState.field_h.applyAction(param0, AuctionLogEntry.e(15137), 0);
+          RegistrationRequestState.field_h.applyAction(param0, AuctionLogEntry.isLoggedInJagexModerator(15137), 0);
           MusicPatchNode.field_h.addLast(param0, 3);
           if (param1 < 47) {
             field_h = (String) null;

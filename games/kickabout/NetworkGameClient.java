@@ -85,7 +85,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             SquadGridWidget.a(7, (byte) -128);
           }
           if (LookupRecordUpdate.field_h[8]) {
-            ResourceArchive.b(-1);
+            ResourceArchive.initializeReflectionCheckQueue(-1);
           }
         }
         return var2;
@@ -123,7 +123,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         TextFieldNode.b(ArchiveRequest.field_r, 31900);
         PlayerContextMenu.a(127, this.field_x, this.field_A, this.field_s, this.field_B, param7, param1, 5000, PlatformTaskState.field_c, ArchiveRequest.field_r, this.field_v, this.field_u, 5000, this.field_z);
         AppScreen.setServerConnectionParameters(this.field_z, param1, PlatformTaskState.field_c, ArchiveRequest.field_r, this.field_u, this.field_x, this.field_B, this.field_s, false);
-        CipherPacketBuffer.o(255);
+        CipherPacketBuffer.initializeExtendedKeyMappings(255);
         SoundStreamHandle.field_f = TutorialChoiceDialog.createMouseWheelInput((byte) 3);
         CanvasInputBindings.attachInputHandlers(RegistrationRequestState.field_d, (byte) -64);
         LeagueWinnerDialog.field_F = param4;
@@ -170,7 +170,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         if (QuickChatMenuBuilder.field_f != null) {
           var2 = QuickChatMenuBuilder.field_f;
           String var1 = var2;
-          ArchiveManager.a(126, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, EmailSyntaxValidator.field_j, new String[]{var2}));
+          ArchiveManager.showCenteredMessagePanel(126, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, EmailSyntaxValidator.field_j, new String[]{var2}));
           QuickChatMenuBuilder.field_f = null;
         }
         if (!param0) {
@@ -190,7 +190,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           SharedPanelFactory.field_b = SharedPanelFactory.field_b - 1;
         }
         if (!(SharedPanelFactory.field_b <= 0)) {
-          WeightedLruCache.a(0);
+          WeightedLruCache.layoutAnimatedChatPanel(0);
         }
     }
 
@@ -216,7 +216,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             return stackIn_6_0;
           }
           for (var4 = 0; var4 < param1.length(); var4++) {
-            if (!CheckboxLabelWidget.a(param1.charAt(var4), 160)) {
+            if (!CheckboxLabelWidget.isBasicDisplayNameCharacter(param1.charAt(var4), 160)) {
               stackIn_13_0 = GameOptionMenuSupport.field_c;
               return stackIn_13_0;
             }
@@ -375,7 +375,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           StatefulTextPainter.field_v = SoundStreamHandle.field_f.pollRotation((byte) -22);
         }
         if (WorldSpriteDecoration.b(-14954)) {
-          var3 = 1200 * GameSoundEffect.b((byte) 126);
+          var3 = 1200 * GameSoundEffect.getTargetFramesPerSecond((byte) 126);
           if (this.field_q ||
             !(FootballerAiOverlaySupport.getKeyboardIdleTicks(true) <= var3) &&
             !(var3 >= ConsoleTokenParser.getMouseIdleTicks(-126))) {
@@ -433,7 +433,7 @@ abstract class NetworkGameClient extends GameAppletShell {
                     if (RowRangeRequest.field_h == 5) {
                       LoginResponseUiSupport.showLoginResponse(SortCriterion.field_m, 5, -94);
                     } else {
-                      LoginResponseUiSupport.showLoginResponse(FormationMaskSupport.field_b, 256, 69);
+                      LoginResponseUiSupport.showLoginResponse(KitPatternMaskSupport.field_b, 256, 69);
                     }
                   } else {
                     LoginResponseUiSupport.showLoginResponse(DialogOverlay.field_h, 256, param0 ^ 102);
@@ -481,8 +481,8 @@ abstract class NetworkGameClient extends GameAppletShell {
         if (DateInputValidator.field_d == 2) {
           if (LoginRequiredDialog.field_H != null &&
             LoginRequiredDialog.field_H.ensureIndex(param0 ^ -43)) {
-            if (LoginRequiredDialog.field_H.a("", (byte) -81)) {
-              if (LoginRequiredDialog.field_H.a(false, "")) {
+            if (LoginRequiredDialog.field_H.hasGroupName("", (byte) -81)) {
+              if (LoginRequiredDialog.field_H.ensurePackedGroupByName(false, "")) {
                 AuctionListing.a(true, LoginRequiredDialog.field_H);
                 LoginRequiredDialog.field_H = null;
                 AnimationPlayer.a((byte) 51);
@@ -1252,7 +1252,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           }
           if (var4 == 4) {
             if (GrowableIntList.field_c) {
-              DiskCacheRequest.a(AppletContextSupport.getActiveApplet(108), param1);
+              DiskCacheRequest.clearSessionAndReload(AppletContextSupport.getActiveApplet(108), param1);
             } else {
               RasterGlowSupport.field_c = 10;
               GameSoundEffect.field_f = true;
@@ -1272,13 +1272,13 @@ abstract class NetworkGameClient extends GameAppletShell {
             this.field_u = -76;
           }
           if (var4 == 8) {
-            DiskCacheRequest.a(AppletContextSupport.getActiveApplet(124), param1);
+            DiskCacheRequest.clearSessionAndReload(AppletContextSupport.getActiveApplet(124), param1);
           }
           if (var4 == 9) {
             MatchScreen.openSupportPage(AppletContextSupport.getActiveApplet(-93), 0);
           }
           if (10 == var4) {
-            FootballerAiOverlaySupport.field_d.b(17, (byte) -87);
+            FootballerAiOverlaySupport.field_d.writeIsaacByte(17, (byte) -87);
           }
           if (var4 == 11) {
             MatchUiLayoutSupport.reloadAppletPage((byte) 125, AppletContextSupport.getActiveApplet(51));
@@ -1416,7 +1416,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         int var3 = (var2 & 1) != 0 ? 1 : 0;
         int var4 = MusicVolumeSupport.field_b - 1;
         byte[] var5 = new byte[var4];
-        ByteArrayPool.field_e.a((byte) -30, 0, var5, var4);
+        ByteArrayPool.field_e.readIsaacBytes((byte) -30, 0, var5, var4);
         AccountNameAvailabilityValidator.openExternalUrl(0, BlackFadeScreen.a(var5, true), var3 != 0, AppletContextSupport.getActiveApplet(55));
         int var6 = 115 % ((-74 - param0) / 48);
     }

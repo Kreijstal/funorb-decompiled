@@ -104,7 +104,7 @@ final class AnimationClip {
         }
         boolean decompiledFrameRemainder0 = true;
         stackIn_8_0 = ArchiveIndex.field_t;
-        if (param3 == FormationMaskSupport.field_c &&
+        if (param3 == KitPatternMaskSupport.field_c &&
           RankingsScreen.field_C == param0) {
           if (param2) {
             stackIn_7_1 = 0;
@@ -124,7 +124,7 @@ final class AnimationClip {
         PlayerArchetypeSortCriterion.field_r = -1;
         NanoTickClock.field_n = param2;
         RankingsScreen.field_C = param0;
-        FormationMaskSupport.field_c = param3;
+        KitPatternMaskSupport.field_c = param3;
     }
 
     private final void a(int param0, PacketBuffer param1, int param2) {
@@ -343,7 +343,7 @@ final class AnimationClip {
         this.field_h = -1;
         try {
           this.field_j = true;
-          var11 = param0.b(param1, -32669, param2);
+          var11 = param0.takeFile(param1, -32669, param2);
           var10 = var11;
           var9 = var10;
           var4 = var9;

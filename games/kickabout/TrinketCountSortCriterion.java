@@ -379,9 +379,9 @@ final class TrinketCountSortCriterion extends SortCriterion {
             var4Lifetime3++;
           }
           if (TextPromptState.field_a == 2) {
-            DirectByteStorage.field_k.a(-1, 0, -1, param0);
+            DirectByteStorage.field_k.restoreSelection(-1, 0, -1, param0);
           } else {
-            DirectByteStorage.field_k.a(ResourceArchive.a(BytePlusOneCommand.field_A, ArchiveManager.field_m, (byte) -127), param1 ^ 6, 0, param0);
+            DirectByteStorage.field_k.restoreSelection(ResourceArchive.hitTestMenuAction(BytePlusOneCommand.field_A, ArchiveManager.field_m, (byte) -127), param1 ^ 6, 0, param0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -395,7 +395,7 @@ final class TrinketCountSortCriterion extends SortCriterion {
     }
 
     final static void drawModalOverlay(int param0, boolean param1) {
-        if (!ArchiveManager.a(false)) {
+        if (!ArchiveManager.hasActiveModal(false)) {
           return;
         }
         if (param1) {

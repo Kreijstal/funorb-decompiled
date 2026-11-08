@@ -302,12 +302,12 @@ final class ArchivePreloader {
             return false;
           }
           if (0 <= var4.field_a &&
-            !var4.field_h.b((byte) 20, var4.field_a)) {
+            !var4.field_h.ensurePackedGroup((byte) 20, var4.field_a)) {
             this.a(-1, var4.field_h.getGroupProgress(var4.field_a, (byte) 56), var4);
             return false;
           }
           if (null != var4.field_g &&
-            !var4.field_h.a(false, var4.field_g)) {
+            !var4.field_h.ensurePackedGroupByName(false, var4.field_g)) {
             this.a(-1, var4.field_h.getGroupProgressByName(var4.field_g, -16248), var4);
             return false;
           }
@@ -315,7 +315,7 @@ final class ArchivePreloader {
             null == var4.field_g &&
             var4.field_c != null &&
             !var4.field_h.ensureAllGroupsAvailable(false)) {
-            this.a(param0 - 1183118481, var4.field_h.e(param0 ^ -1183116137), var4);
+            this.a(param0 - 1183118481, var4.field_h.getOverallProgress(param0 ^ -1183116137), var4);
             return false;
           }
           this.field_g = this.field_g + 1;

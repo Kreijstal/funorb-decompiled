@@ -384,7 +384,7 @@ final class MidiPcmStream extends PcmStream {
             var5 = (MusicPatchNode) (this.field_m.field_j.e(33));
           }
         }
-        var10 = (MusicPatch) (this.field_w.a(true, (long)this.channelPrograms[param3]));
+        var10 = (MusicPatch) (this.field_w.get(true, (long)this.channelPrograms[param3]));
         var11 = var10;
         if (var11 == null) {
           return;
@@ -560,10 +560,10 @@ final class MidiPcmStream extends PcmStream {
           if (param0 != 1) {
             this.field_m = (MusicPatchPcmStream) null;
           }
-          var8 = (InstrumentNoteMask) (param4.field_f.b(param0 - 1));
+          var8 = (InstrumentNoteMask) (param4.field_f.first(param0 - 1));
           while (var8 != null) {
             var9 = (int)var8.field_a;
-            var10 = (MusicPatch) (this.field_w.a(true, (long)var9));
+            var10 = (MusicPatch) (this.field_w.get(true, (long)var9));
             if (var10 == null) {
               var10 = ReceivedAuctionItemRow.a(param2, var9, 116);
               if (var10 != null) {
@@ -576,7 +576,7 @@ final class MidiPcmStream extends PcmStream {
               !var10.prepareSamples(param3, (int[]) (var7), (byte) 123, var8.field_g)) {
               var6_int = 0;
             }
-            var8 = (InstrumentNoteMask) (param4.field_f.a(param0 ^ -2));
+            var8 = (InstrumentNoteMask) (param4.field_f.next(param0 ^ -2));
           }
           if (var6_int != 0) {
             param4.releaseNoteMasks();
@@ -1074,7 +1074,7 @@ final class MidiPcmStream extends PcmStream {
               }
             }
           } else {
-            if (FormationMaskSupport.field_c == 0) {
+            if (KitPatternMaskSupport.field_c == 0) {
               stackIn_12_0 = var4;
               if (param0) {
                 stackIn_13_1 = 53;
@@ -1084,7 +1084,7 @@ final class MidiPcmStream extends PcmStream {
               var4 = stackIn_12_0 - (stackIn_13_1 * InstrumentNoteMask.field_i >> 8);
               var2 = IntrusiveNodeHashTable.field_g[6];
             }
-            if (FormationMaskSupport.field_c == 1) {
+            if (KitPatternMaskSupport.field_c == 1) {
               var2 = IntrusiveNodeHashTable.field_g[5];
               stackIn_18_0 = var4;
               stackIn_18_1 = InstrumentNoteMask.field_i;
@@ -1095,7 +1095,7 @@ final class MidiPcmStream extends PcmStream {
               }
               var4 = stackIn_18_0 - (stackIn_18_1 * stackIn_19_2 >> 8);
             }
-            if (FormationMaskSupport.field_c == 2) {
+            if (KitPatternMaskSupport.field_c == 2) {
               var2 = IntrusiveNodeHashTable.field_g[4];
               stackIn_24_0 = var4;
               if (param0) {
@@ -1113,7 +1113,7 @@ final class MidiPcmStream extends PcmStream {
               ListRow.a(-12376, MySquadScreen.worldToScreenX(-121, (-5 + MatchingTextValidator.field_k.field_o) * var6 - 32), var5, MatchingTextValidator.field_k);
             }
           }
-          if (FormationMaskSupport.field_c == 2) {
+          if (KitPatternMaskSupport.field_c == 2) {
             var5Lifetime1 = MySquadScreen.worldToScreenX(-105, -47);
             var6Lifetime1 = MySquadScreen.worldToScreenX(param1 + 94, 892);
             stackIn_48_0 = (!param0) ? 0 : 3;

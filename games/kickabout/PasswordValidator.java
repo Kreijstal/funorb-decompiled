@@ -68,7 +68,7 @@ final class PasswordValidator extends TextFieldValidator {
         }
     }
 
-    public static void c(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 != -96) {
           PasswordValidator.a(32, -1, 38, -7, 52, false);
         }
@@ -101,7 +101,7 @@ final class PasswordValidator extends TextFieldValidator {
             stackIn_5_0 = PitchOptionTile.field_Bb;
             return stackIn_5_0;
           }
-          if (!ArchiveNetworkClient.a(var4, param1 - 32336, var3)) {
+          if (!ArchiveNetworkClient.isAcceptablePassword(var4, param1 - 32336, var3)) {
             stackIn_9_0 = PitchOptionTile.field_Bb;
             return stackIn_9_0;
           }
@@ -153,10 +153,10 @@ final class PasswordValidator extends TextFieldValidator {
           var7 = (116 * FadingChatMessage.field_h >> 8) + 40;
           PacketBuffer.a(-68, AccountRegistrationResponse.field_j);
           SoftwareRasterizer.clearFramebuffer();
-          AuctionListing.a(var7, -22914, 0, SoftwareRasterizer.field_f, 0);
+          AuctionListing.pushRasterClip(var7, -22914, 0, SoftwareRasterizer.field_f, 0);
           SocialUiState.field_e.drawScaled(0, 0, SocialUiState.field_e.field_o * var7 / 140, SocialUiState.field_e.field_v);
           TeamManagementScreen.e(124);
-          AuctionListing.a(SoftwareRasterizer.field_g, -22914, var7, SoftwareRasterizer.field_f, 0);
+          AuctionListing.pushRasterClip(SoftwareRasterizer.field_g, -22914, var7, SoftwareRasterizer.field_f, 0);
           SocialUiState.field_e.d(-140 + var7, 0);
           TeamManagementScreen.e(param0 - 706856552);
           if (MouseWheelInput.field_f) {
@@ -226,7 +226,7 @@ final class PasswordValidator extends TextFieldValidator {
         if (param1) {
           field_j = (int[]) null;
         }
-        return (LobbyPlayerRow) (SquadPickerDialog.field_N.a(-3611, param0));
+        return (LobbyPlayerRow) (SquadPickerDialog.field_N.get(-3611, param0));
     }
 
     final static void a(int param0, int param1, int param2, boolean param3, byte param4) {

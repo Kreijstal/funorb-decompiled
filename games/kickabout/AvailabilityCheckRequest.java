@@ -24,7 +24,7 @@ final class AvailabilityCheckRequest {
         if (ValidationHelpWidget.field_T) {
           return -1;
         }
-        if (!QuickChatKeysHelpPanel.field_Cb.a(false, "stadium")) {
+        if (!QuickChatKeysHelpPanel.field_Cb.ensurePackedGroupByName(false, "stadium")) {
           return QuickChatKeysHelpPanel.field_Cb.getGroupProgressByName("stadium", -16248);
         }
         DiskCacheWorker.field_i = new ArgbSprite[4];

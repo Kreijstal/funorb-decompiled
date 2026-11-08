@@ -3,13 +3,13 @@
  */
 final class AnimationSkeleton extends IntrusiveNode {
     int[] field_r;
-    static GameModeDefinition[] field_f;
+    static KitStyleDefinition[] field_f;
     int field_j;
     int field_l;
     int[][] field_q;
     int[] field_o;
     static String field_n;
-    static GameModeDefinition[] field_g;
+    static KitStyleDefinition[] field_g;
     static Sprite field_h;
     private boolean[] field_i;
     static String field_p;
@@ -17,21 +17,21 @@ final class AnimationSkeleton extends IntrusiveNode {
     static int field_k;
     static int field_m;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_p = null;
         field_f = null;
         field_n = null;
         field_e = null;
         field_g = null;
         if (param0 != -1) {
-          AnimationSkeleton.a(66);
+          AnimationSkeleton.releaseStatics(66);
         }
         field_h = null;
     }
 
     final static void a(byte param0, TrinketSlot param1) {
         if (param0 != 100) {
-          field_g = (GameModeDefinition[]) null;
+          field_g = (KitStyleDefinition[]) null;
         }
         ThumbnailStateFactory.field_b = true;
         if (LoginMethod.a(false)) {
@@ -207,36 +207,36 @@ final class AnimationSkeleton extends IntrusiveNode {
     static {
         int var0 = 0;
         field_n = "Unfortunately there was a focus problem while setting fullscreen mode. You could try disabling any multiple monitor drivers or window enhancements, if you have any enabled.";
-        field_g = new GameModeDefinition[25];
-        field_g[0] = new GameModeDefinition(-1, -1, false, -1L, "fefffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
-        field_g[1] = new GameModeDefinition(-1, -1, false, -1L, "90000000000000000000000000000000000000000000000000000000000000000");
-        field_g[2] = new GameModeDefinition(-1, -1, false, -1L, "0e38f0e38f0e38f0e38f0e38f0e38f0ef70f1c70f1c70f1c70f1c70f1c70f1c70");
-        field_g[3] = new GameModeDefinition(27, -1, false, -1L, "00000000000000000000000000000000cffffffffffffffffffffffffffffffff");
-        field_g[4] = new GameModeDefinition(22, -1, false, -1L, "60f0c30f0c30f0c30f0c30f0c30f0c30f0c30f0c30f0c30f0c30f0c30f0c30f0c");
-        field_g[5] = new GameModeDefinition(24, -1, false, -1L, "00000000000000000cfffffffff30000000000000000000000ffffffffff00000");
-        field_g[6] = new GameModeDefinition(28, -1, false, -1L, "160e8832e87cd177c1e8832e87cd177cdf1830e083c177cd17832e883e177cd17");
-        field_g[7] = new GameModeDefinition(17, -1, false, -1L, "9000000000000008402100012480e100000000008402184000480128700000000");
-        field_g[8] = new GameModeDefinition(31, -1, false, -1L, "100000040830b0468112cc0e1870c0030000000010e0c2091648033870e1030c0");
-        field_g[9] = new GameModeDefinition(25, -1, false, -1L, "eefffef1f397ecc78f3f78fcc972f3efdffffbf7cf4e933f1efcf1e337e9cf8f7");
-        field_g[10] = new GameModeDefinition(-1, 2, false, -1L, "f080066a9966a9966a9966a9966a9966202891668916689166995669956699566");
-        field_g[11] = new GameModeDefinition(-1, 3, false, -1L, "60c70f1c70f1c70f1c70f108f0e38f0e38f0e38f0e38f0e38f0ef70f1c70f1c70");
-        field_g[12] = new GameModeDefinition(-1, 4, false, -1L, "7effffffffff3f387000000000000000cfffffffff30000000000000000000000");
-        field_g[13] = new GameModeDefinition(-1, 5, false, -1L, "7efefbffefbffefbffefbffefbffefbfffdf7ffdf7ffdf7ffdf7ffdf7ffdf7ffd");
-        field_g[14] = new GameModeDefinition(-1, 6, false, -1L, "00000fffffff30000cffff30000cffff30000cfffffff00000fffff00000fffff");
-        field_g[15] = new GameModeDefinition(-1, 7, false, -1L, "000000040030c10f0c70f3cf1ffcf7ff300000000020c0830f0e3cf8f3ffeffff");
-        field_g[16] = new GameModeDefinition(-1, 8, false, -1L, "800000000000000fffffcc033cc03300000000000000000cffff333cc033cc033");
-        field_g[17] = new GameModeDefinition(-1, 9, false, -1L, "80000000e1870e1870e1870e1870e1870e1870e1870e1870e1870e1870e1870e1");
-        field_g[18] = new GameModeDefinition(-1, 10, false, -1L, "8000000000030e1cf8f7fff3f78f0c1020000000030e1cf8f7fff3f78f0c10200");
-        field_g[19] = new GameModeDefinition(-1, 11, false, -1L, "0c0030c0030c003fffff0c0030c0030c060810608106081cffff3608106081060");
-        field_g[20] = new GameModeDefinition(-1, 12, false, -1L, "0000000000000e14801248012870000000000000000e148012480128700000000");
-        field_g[21] = new GameModeDefinition(-1, -1, true, -1L, "00000000000000048033cf0d24801200000000000000048033cf0d24b01248000");
-        field_g[22] = new GameModeDefinition(-1, -1, true, 1272878999115L, "000000000000000cf08103060c00f30000000000cf003060c081030cf00000000");
-        field_g[23] = new GameModeDefinition(-1, -1, true, 1272878132285L, "eefffffffffff0cfcf3ffcf3ffcf0cffffffffff70ecfbffcf70ff9ffef930fff");
-        field_g[24] = new GameModeDefinition(-1, -1, true, 47096495364430L, "00000000000000000000000000000000000870f34b0f38700087000cc0c0ec937");
+        field_g = new KitStyleDefinition[25];
+        field_g[0] = new KitStyleDefinition(-1, -1, false, -1L, "fefffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
+        field_g[1] = new KitStyleDefinition(-1, -1, false, -1L, "90000000000000000000000000000000000000000000000000000000000000000");
+        field_g[2] = new KitStyleDefinition(-1, -1, false, -1L, "0e38f0e38f0e38f0e38f0e38f0e38f0ef70f1c70f1c70f1c70f1c70f1c70f1c70");
+        field_g[3] = new KitStyleDefinition(27, -1, false, -1L, "00000000000000000000000000000000cffffffffffffffffffffffffffffffff");
+        field_g[4] = new KitStyleDefinition(22, -1, false, -1L, "60f0c30f0c30f0c30f0c30f0c30f0c30f0c30f0c30f0c30f0c30f0c30f0c30f0c");
+        field_g[5] = new KitStyleDefinition(24, -1, false, -1L, "00000000000000000cfffffffff30000000000000000000000ffffffffff00000");
+        field_g[6] = new KitStyleDefinition(28, -1, false, -1L, "160e8832e87cd177c1e8832e87cd177cdf1830e083c177cd17832e883e177cd17");
+        field_g[7] = new KitStyleDefinition(17, -1, false, -1L, "9000000000000008402100012480e100000000008402184000480128700000000");
+        field_g[8] = new KitStyleDefinition(31, -1, false, -1L, "100000040830b0468112cc0e1870c0030000000010e0c2091648033870e1030c0");
+        field_g[9] = new KitStyleDefinition(25, -1, false, -1L, "eefffef1f397ecc78f3f78fcc972f3efdffffbf7cf4e933f1efcf1e337e9cf8f7");
+        field_g[10] = new KitStyleDefinition(-1, 2, false, -1L, "f080066a9966a9966a9966a9966a9966202891668916689166995669956699566");
+        field_g[11] = new KitStyleDefinition(-1, 3, false, -1L, "60c70f1c70f1c70f1c70f108f0e38f0e38f0e38f0e38f0e38f0ef70f1c70f1c70");
+        field_g[12] = new KitStyleDefinition(-1, 4, false, -1L, "7effffffffff3f387000000000000000cfffffffff30000000000000000000000");
+        field_g[13] = new KitStyleDefinition(-1, 5, false, -1L, "7efefbffefbffefbffefbffefbffefbfffdf7ffdf7ffdf7ffdf7ffdf7ffdf7ffd");
+        field_g[14] = new KitStyleDefinition(-1, 6, false, -1L, "00000fffffff30000cffff30000cffff30000cfffffff00000fffff00000fffff");
+        field_g[15] = new KitStyleDefinition(-1, 7, false, -1L, "000000040030c10f0c70f3cf1ffcf7ff300000000020c0830f0e3cf8f3ffeffff");
+        field_g[16] = new KitStyleDefinition(-1, 8, false, -1L, "800000000000000fffffcc033cc03300000000000000000cffff333cc033cc033");
+        field_g[17] = new KitStyleDefinition(-1, 9, false, -1L, "80000000e1870e1870e1870e1870e1870e1870e1870e1870e1870e1870e1870e1");
+        field_g[18] = new KitStyleDefinition(-1, 10, false, -1L, "8000000000030e1cf8f7fff3f78f0c1020000000030e1cf8f7fff3f78f0c10200");
+        field_g[19] = new KitStyleDefinition(-1, 11, false, -1L, "0c0030c0030c003fffff0c0030c0030c060810608106081cffff3608106081060");
+        field_g[20] = new KitStyleDefinition(-1, 12, false, -1L, "0000000000000e14801248012870000000000000000e148012480128700000000");
+        field_g[21] = new KitStyleDefinition(-1, -1, true, -1L, "00000000000000048033cf0d24801200000000000000048033cf0d24b01248000");
+        field_g[22] = new KitStyleDefinition(-1, -1, true, 1272878999115L, "000000000000000cf08103060c00f30000000000cf003060c081030cf00000000");
+        field_g[23] = new KitStyleDefinition(-1, -1, true, 1272878132285L, "eefffffffffff0cfcf3ffcf3ffcf0cffffffffff70ecfbffcf70ff9ffef930fff");
+        field_g[24] = new KitStyleDefinition(-1, -1, true, 47096495364430L, "00000000000000000000000000000000000870f34b0f38700087000cc0c0ec937");
         for (var0 = 0; var0 < field_g.length; var0++) {
-          field_g[var0].field_m = var0;
+          field_g[var0].styleId = var0;
         }
-        field_f = new GameModeDefinition[]{field_g[0], field_g[1], field_g[2], field_g[10], field_g[11], field_g[12], field_g[13], field_g[14], field_g[15], field_g[16], field_g[17], field_g[18], field_g[19], field_g[20], field_g[3], field_g[4], field_g[5], field_g[6], field_g[7], field_g[8], field_g[9], field_g[21], field_g[22], field_g[23], field_g[24]};
+        field_f = new KitStyleDefinition[]{field_g[0], field_g[1], field_g[2], field_g[10], field_g[11], field_g[12], field_g[13], field_g[14], field_g[15], field_g[16], field_g[17], field_g[18], field_g[19], field_g[20], field_g[3], field_g[4], field_g[5], field_g[6], field_g[7], field_g[8], field_g[9], field_g[21], field_g[22], field_g[23], field_g[24]};
         field_p = "Exhibition game. No experience or league points are awarded.";
         field_k = 0;
     }

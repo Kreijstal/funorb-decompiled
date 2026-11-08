@@ -52,7 +52,7 @@ final class MainMenuScreen extends ButtonMenuScreen {
             SoftwareRasterizer.fillRoundedRectangleBlended(this.field_B.field_F, this.field_B.field_T, this.field_B.field_q, this.field_B.field_mb, 8, 0, this.field_E >> 1);
             return;
           }
-          if (PlayArea.a(100)) {
+          if (PlayArea.isGuestSession(100)) {
             SoftwareRasterizer.fillRoundedRectangleBlended(this.field_B.field_F, this.field_B.field_T, this.field_B.field_q, this.field_B.field_mb, 8, 0, this.field_E >> 1);
             return;
           }
@@ -68,7 +68,7 @@ final class MainMenuScreen extends ButtonMenuScreen {
           SoftwareRasterizer.fillRoundedRectangleBlended(this.field_B.field_F, this.field_B.field_T, this.field_B.field_q, this.field_B.field_mb, 8, 0, this.field_E >> 1);
           return;
         }
-        if (PlayArea.a(100)) {
+        if (PlayArea.isGuestSession(100)) {
           SoftwareRasterizer.fillRoundedRectangleBlended(this.field_B.field_F, this.field_B.field_T, this.field_B.field_q, this.field_B.field_mb, 8, 0, this.field_E >> 1);
           return;
         }
@@ -147,11 +147,11 @@ final class MainMenuScreen extends ButtonMenuScreen {
           return true;
         }
         if (param0 != 96) {
-          this.buttonSelection.b(-99);
+          this.buttonSelection.captureActivationKey(-99);
           if (this.buttonSelection.selectedIndex < 0) {
             return true;
           }
-          if (!this.buttonSelection.c(-1)) {
+          if (!this.buttonSelection.isActivated(-1)) {
             return true;
           }
           this.buttons[this.buttonSelection.selectedIndex].activate(-1, false);
@@ -267,23 +267,23 @@ final class MainMenuScreen extends ButtonMenuScreen {
             return;
           }
           AchievementSubmission.a((byte) -117);
-          if (PlayArea.a(100)) {
+          if (PlayArea.isGuestSession(100)) {
             ButtonMenuScreen.a(16144);
           } else {
             if (!GameLoopApplet.field_E.field_J[0]) {
-              SocketArchiveNetworkClient.a((byte) 126, 40);
+              SocketArchiveNetworkClient.enqueueMessageDialog((byte) 126, 40);
             } else {
               if (!GameLoopApplet.field_E.d((byte) 116)) {
-                SocketArchiveNetworkClient.a((byte) 126, 5);
+                SocketArchiveNetworkClient.enqueueMessageDialog((byte) 126, 5);
               } else {
-                FootballerAiOverlaySupport.field_d.b(90, (byte) 93);
+                FootballerAiOverlaySupport.field_d.writeIsaacByte(90, (byte) 93);
                 DelayedServerPacket.a(26, true, -2);
               }
             }
           }
           return;
         }
-        if (PlayArea.a(100)) {
+        if (PlayArea.isGuestSession(100)) {
           this.field_B.field_gb = false;
         }
         var3Lifetime1 = 46 % ((param0 - 38) / 60);
@@ -291,16 +291,16 @@ final class MainMenuScreen extends ButtonMenuScreen {
           return;
         }
         AchievementSubmission.a((byte) -117);
-        if (PlayArea.a(100)) {
+        if (PlayArea.isGuestSession(100)) {
           ButtonMenuScreen.a(16144);
         } else {
           if (!GameLoopApplet.field_E.field_J[0]) {
-            SocketArchiveNetworkClient.a((byte) 126, 40);
+            SocketArchiveNetworkClient.enqueueMessageDialog((byte) 126, 40);
           } else {
             if (!GameLoopApplet.field_E.d((byte) 116)) {
-              SocketArchiveNetworkClient.a((byte) 126, 5);
+              SocketArchiveNetworkClient.enqueueMessageDialog((byte) 126, 5);
             } else {
-              FootballerAiOverlaySupport.field_d.b(90, (byte) 93);
+              FootballerAiOverlaySupport.field_d.writeIsaacByte(90, (byte) 93);
               DelayedServerPacket.a(26, true, -2);
             }
           }

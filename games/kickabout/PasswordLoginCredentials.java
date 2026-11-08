@@ -243,7 +243,7 @@ final class PasswordLoginCredentials extends LoginCredentials {
         try {
           var9 = FootballerAiOverlaySupport.field_d;
           CipherPacketBuffer var6 = var9;
-          var9.b(param3, (byte) 104);
+          var9.writeIsaacByte(param3, (byte) 104);
           var9.field_n = var9.field_n + 1;
           int var8 = 39 / ((param1 - 14) / 61);
           var7 = var9.field_n;

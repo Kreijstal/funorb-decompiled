@@ -233,10 +233,10 @@ final class RenderedFootballer extends FootballerAgent {
           var9 = (String) null;
           RenderedFootballer.a((String) null, true, (byte) -48);
         }
-        if (FormationMaskSupport.field_c == 0) {
+        if (KitPatternMaskSupport.field_c == 0) {
           var2 = 74;
         } else {
-          var2 = (FormationMaskSupport.field_c != 1) ? 62 : 68;
+          var2 = (KitPatternMaskSupport.field_c != 1) ? 62 : 68;
         }
         var2 = var2 + ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(127, 2, MidiPcmStream.field_l);
         var3 = NotCommand.h(-2521);
@@ -255,16 +255,16 @@ final class RenderedFootballer extends FootballerAgent {
           if (var7 < 0) {
             var7 = 0;
           }
-          if (FormationMaskSupport.field_c == 0) {
+          if (KitPatternMaskSupport.field_c == 0) {
             var6 -= 20;
           }
           if (256 < var7) {
             var7 = 256;
           }
-          if (FormationMaskSupport.field_c == 1) {
+          if (KitPatternMaskSupport.field_c == 1) {
             var6 -= 8;
           }
-          if (FormationMaskSupport.field_c == 2) {
+          if (KitPatternMaskSupport.field_c == 2) {
             var6 += 10;
           }
           LobbyPlayerRow.a(var7, false, 240, ConsoleCommand.field_t + var6, var2);
@@ -310,7 +310,7 @@ final class RenderedFootballer extends FootballerAgent {
         var21 = Kickabout.field_G;
         var2 = 1900;
         var3 = SocialListLayoutSupport.worldToScreenX(0, this.getRenderedX(1606384336));
-        var4 = IntKeyLookup.a((byte) -119, this.h(1000));
+        var4 = IntKeyLookup.projectPitchY((byte) -119, this.h(1000));
         var5 = InstrumentNoteMask.field_i * 40 >> 8;
         var6 = InstrumentNoteMask.field_i * 70 >> 8;
         var7 = InstrumentNoteMask.field_i * 10 >> 8;
@@ -643,8 +643,8 @@ final class RenderedFootballer extends FootballerAgent {
         } else {
           var7Lifetime1 = 0;
           if (!this.field_db) {
-            if (FormationMaskSupport.field_c != 0) {
-              if (FormationMaskSupport.field_c == 1) {
+            if (KitPatternMaskSupport.field_c != 0) {
+              if (KitPatternMaskSupport.field_c == 1) {
                 var10 = 82;
               } else {
                 var10 = 80;
@@ -686,12 +686,12 @@ final class RenderedFootballer extends FootballerAgent {
             49 > this.actionTime) {
             var10Lifetime1 = -1;
             var11 = -1;
-            if (FormationMaskSupport.field_c == 0) {
+            if (KitPatternMaskSupport.field_c == 0) {
               var11 = 88;
               var10Lifetime1 = 85;
             } else {
-              if (FormationMaskSupport.field_c != 1) {
-                if (FormationMaskSupport.field_c == 2) {
+              if (KitPatternMaskSupport.field_c != 1) {
+                if (KitPatternMaskSupport.field_c == 2) {
                   var10Lifetime1 = 81;
                   var11 = 86;
                 }

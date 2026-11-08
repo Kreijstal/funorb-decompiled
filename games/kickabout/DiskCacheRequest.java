@@ -24,7 +24,7 @@ final class DiskCacheRequest extends ArchiveRequest {
         }
     }
 
-    final static void a(java.applet.Applet param0, boolean param1) {
+    final static void clearSessionAndReload(java.applet.Applet param0, boolean param1) {
         try {
           AccountNameAvailabilityValidator.writeSessionCookie(param0, "", (byte) 15);
           if (!param1) {
@@ -61,7 +61,7 @@ final class DiskCacheRequest extends ArchiveRequest {
         try {
           if (param0 != 0) {
             var3 = (java.applet.Applet) null;
-            DiskCacheRequest.a((java.applet.Applet) null, false);
+            DiskCacheRequest.clearSessionAndReload((java.applet.Applet) null, false);
           }
           stackIn_5_0 = (null != AchievementsScreen.a(param1, 145));
           return stackIn_5_0;

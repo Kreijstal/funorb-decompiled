@@ -42,7 +42,7 @@ final class MenuButton {
                 AuctionsScreen.startComputerMatch(10, true);
               }
             } else {
-              SocketArchiveNetworkClient.a((byte) 126, 5);
+              SocketArchiveNetworkClient.enqueueMessageDialog((byte) 126, 5);
             }
           } else {
             if (this.kind != 1) {
@@ -219,12 +219,12 @@ final class MenuButton {
                 }
               }
             } else {
-              if (!PlayArea.a(100)) {
+              if (!PlayArea.isGuestSession(100)) {
                 if (!GameLoopApplet.field_E.field_J[0]) {
-                  SocketArchiveNetworkClient.a((byte) 126, 26);
+                  SocketArchiveNetworkClient.enqueueMessageDialog((byte) 126, 26);
                 } else {
                   if (!GameLoopApplet.field_E.d((byte) 64)) {
-                    SocketArchiveNetworkClient.a((byte) 126, 5);
+                    SocketArchiveNetworkClient.enqueueMessageDialog((byte) 126, 5);
                   } else {
                     MouseWheelInput.a(-1822);
                   }
@@ -342,7 +342,7 @@ final class MenuButton {
         var6 = Kickabout.field_G;
         try {
           if (SocialListLayoutSupport.field_c == null) {
-            if (!QuickChatKeysHelpPanel.field_Cb.a(false, "stadium_icon")) {
+            if (!QuickChatKeysHelpPanel.field_Cb.ensurePackedGroupByName(false, "stadium_icon")) {
               return;
             }
             var7 = ModalStack.loadSpriteSheetByName(QuickChatKeysHelpPanel.field_Cb, 53, "stadium_icon", "park");
@@ -357,7 +357,7 @@ final class MenuButton {
             IntrusiveNodeHashTable.a(true, var4);
           }
           if (null == DirectByteStorage.field_g) {
-            if (!QuickChatKeysHelpPanel.field_Cb.a(false, "instructions")) {
+            if (!QuickChatKeysHelpPanel.field_Cb.ensurePackedGroupByName(false, "instructions")) {
               return;
             }
             var9 = QuickChatPhraseDefinition.loadSpriteByName("instructions", QuickChatKeysHelpPanel.field_Cb, (byte) 119, "arrowkey");
@@ -488,7 +488,7 @@ final class MenuButton {
         }
         DirectByteStorage.field_o.drawCentered(this.field_p, param1, 2 + param0, 16777215, -1);
         if (this.kind == 1 && (!GameLoopApplet.field_E.field_J[0] ||
-          PlayArea.a(100))) {
+          PlayArea.isGuestSession(100))) {
           param0 -= 4;
           SoftwareRasterizer.fillRectangleAlpha(-(this.width >> 1) + param1, -(this.height >> 1) + param0, this.width, this.height, 0, 128);
         }
@@ -599,7 +599,7 @@ final class MenuButton {
                 var6 = ArchiveIndex.field_m.copyArgb();
                 this.field_n[2] = (Sprite) ((Object) ArchiveIndex.field_m);
                 PacketBuffer.a(-104, var6);
-                AuctionListing.a(-3 + SoftwareRasterizer.field_g, -22914, 3, SoftwareRasterizer.field_f - 3, 3);
+                AuctionListing.pushRasterClip(-3 + SoftwareRasterizer.field_g, -22914, 3, SoftwareRasterizer.field_f - 3, 3);
                 PacketBuffer.a(103, var6);
                 var6.drawAdditive(0, 0, 60);
                 TeamManagementScreen.e(119);

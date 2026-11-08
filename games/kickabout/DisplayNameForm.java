@@ -239,9 +239,9 @@ final class DisplayNameForm extends WidgetContainer implements NameSuggestionLis
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 >= -35) {
-          DisplayNameForm.a((byte) 102);
+          DisplayNameForm.releaseStatics((byte) 102);
           field_F = null;
           return;
         }

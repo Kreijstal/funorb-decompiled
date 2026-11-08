@@ -111,7 +111,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
             PacketBuffer.a(98, var13);
           }
         }
-        AuctionListing.a(-3 + SoftwareRasterizer.field_g, -22914, 3, SoftwareRasterizer.field_f - 3, 3);
+        AuctionListing.pushRasterClip(-3 + SoftwareRasterizer.field_g, -22914, 3, SoftwareRasterizer.field_f - 3, 3);
         if (param2 == 0 &&
           var6 == 0) {
           var25 = new int[64];
@@ -144,7 +144,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
           var5 = var18;
           PacketBuffer.a(-45, var18);
           SoftwareDrawingSupport.drawSpriteWithBrightness(var19, 0, 0, 230);
-          AuctionListing.a(-3 + SoftwareRasterizer.field_g, -22914, 3, SoftwareRasterizer.field_f - 3, 3);
+          AuctionListing.pushRasterClip(-3 + SoftwareRasterizer.field_g, -22914, 3, SoftwareRasterizer.field_f - 3, 3);
           var23 = new int[64];
           var20 = var23;
           var8_ref_int__ = var20;
@@ -164,7 +164,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
           } else {
             if (!param0) {
               SocialListProtocolSupport.field_e.drawAdditive(0, 0, 16);
-              AuctionListing.a(SoftwareRasterizer.field_g - CaptionedContainer.field_K.field_o, -22914, 0, SoftwareRasterizer.field_f, 0);
+              AuctionListing.pushRasterClip(SoftwareRasterizer.field_g - CaptionedContainer.field_K.field_o, -22914, 0, SoftwareRasterizer.field_f, 0);
               for (var7 = SocialListProtocolSupport.field_e.field_o; SoftwareRasterizer.field_g - CaptionedContainer.field_K.field_o > var7; var7 = var7 + GameAppletShell.field_l.field_o) {
                 GameAppletShell.field_l.drawAdditive(var7, 0, 16);
               }

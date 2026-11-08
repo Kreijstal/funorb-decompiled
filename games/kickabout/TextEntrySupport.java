@@ -127,7 +127,7 @@ final class TextEntrySupport {
           var5 = (CharSequence) ((Object) param0);
           PlayerStatSortCriterion.field_o = MatchAgent.a(param1 ^ -70, var5);
           IntDoubleCommand.field_A = param2;
-          PlayArea.a(true);
+          PlayArea.showCurrentQuickChatMenu(true);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "rr.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }

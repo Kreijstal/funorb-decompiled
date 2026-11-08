@@ -78,7 +78,7 @@ final class TextInputUiSupport {
           }
           var2_int = -TickClock.field_a + 640 >> 1;
           var3 = 358;
-          AuctionListing.a(TickClock.field_a + var2_int, -22914, var2_int, var3 + 112, var3);
+          AuctionListing.pushRasterClip(TickClock.field_a + var2_int, -22914, var2_int, var3 + 112, var3);
           for (var4 = 0; TickClock.field_a > var4; var4++) {
             TutorialScenerySupport.field_a.d(var2_int + var4, var3 - 368);
           }
@@ -89,10 +89,10 @@ final class TextInputUiSupport {
           var2_int += 10;
           TeamManagementScreen.e(param0 ^ -7);
           var4Lifetime1 = 12 + ((TickClock.field_a + 640 >> 1) - 22);
-          AuctionListing.a(320, param0 - 22788, var2_int, 480, 0);
+          AuctionListing.pushRasterClip(320, param0 - 22788, var2_int, 480, 0);
           SoftwareRasterizer.fillRoundedRectangleBlended(var2_int, 388, 640, 72, 8, 65793, 128);
           TeamManagementScreen.e(122);
-          AuctionListing.a(var4Lifetime1, -22914, 320, 480, 0);
+          AuctionListing.pushRasterClip(var4Lifetime1, -22914, 320, 480, 0);
           SoftwareRasterizer.fillRoundedRectangleBlended(0, 388, var4Lifetime1, 72, 8, 65793, 128);
           TeamManagementScreen.e(122);
           var5 = AnimationSkeleton.a(false);
@@ -107,7 +107,7 @@ final class TextInputUiSupport {
               FriendRemovalSupport.field_e = 4;
             }
           }
-          AuctionListing.a(-20 + (var2_int + TickClock.field_a), param0 ^ 23036, var2_int + 22 - 12, 112 + var3, var3);
+          AuctionListing.pushRasterClip(-20 + (var2_int + TickClock.field_a), param0 ^ 23036, var2_int + 22 - 12, 112 + var3, var3);
           LoginKind.getPlayerPortrait(ThumbnailStateFactory.field_d.field_H[0], param0 ^ -126, ThumbnailStateFactory.field_d.field_P[0][FriendRemovalSupport.field_e].stats, ThumbnailStateFactory.field_d.field_Q[0], ThumbnailStateFactory.field_d.field_d[0], false).c(12 + var2_int, var3 + 40);
           TeamManagementScreen.e(120);
           return;

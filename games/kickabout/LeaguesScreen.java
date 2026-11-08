@@ -11,7 +11,7 @@ final class LeaguesScreen extends ButtonMenuScreen {
     static String[] field_F;
 
     final int buttonCenterX(int param0, int param1) {
-        if (PlayArea.a(100)) {
+        if (PlayArea.isGuestSession(100)) {
           if (param0 == 0) {
             return 25 + (this.buttons[0].width >> 1);
           }
@@ -70,7 +70,7 @@ final class LeaguesScreen extends ButtonMenuScreen {
         var8 = Kickabout.field_G;
         super.updateScreen((byte) -71, param1);
         stackIn_2_0 = param1;
-        stackIn_3_1 = (PlayArea.a(100)) ? false : true;
+        stackIn_3_1 = (PlayArea.isGuestSession(100)) ? false : true;
         param1 = stackIn_2_0 & stackIn_3_1;
         stackIn_5_0 = param1;
         stackIn_6_1 = (TextEntrySupport.field_f) ? false : true;
@@ -164,7 +164,7 @@ final class LeaguesScreen extends ButtonMenuScreen {
         int var7 = Kickabout.field_G;
         if (ContextMenu.field_Jb == null) {
           ContextMenu.field_Jb = IconLabel.field_zb;
-          if (PlayArea.a(100)) {
+          if (PlayArea.isGuestSession(100)) {
             ContextMenu.field_Jb = SectorCacheStore.field_g;
           }
         }
@@ -204,7 +204,7 @@ final class LeaguesScreen extends ButtonMenuScreen {
         MenuButton.field_e.addChild((byte) -126, (UiLayoutNode) (AuctionTableWidget.field_Hb));
         MenuButton.field_e.addChild((byte) -106, (UiLayoutNode) (DialogOverlay.field_b));
         MenuButton.field_e.addChild((byte) -112, ScrollPane.field_Cb);
-        if (!PlayArea.a(100)) {
+        if (!PlayArea.isGuestSession(100)) {
           ShopPlayerSlot.a(ArchiveSource.field_e, (byte) 74);
         }
     }
@@ -226,11 +226,11 @@ final class LeaguesScreen extends ButtonMenuScreen {
           LeaguesScreen.charToString('c', (byte) -84);
         }
         boolean discarded$3 = super.handleKey(param0, -11, param2);
-        if (!PlayArea.a(100) &&
+        if (!PlayArea.isGuestSession(100) &&
           DialogOverlay.field_b.handleKey(param0, param2, 875)) {
           return true;
         }
-        if (!PlayArea.a(100) &&
+        if (!PlayArea.isGuestSession(100) &&
           param0 == 84) {
           var4 = DialogOverlay.field_b.getText((byte) -16);
           if (var4.length() > 0) {
@@ -265,7 +265,7 @@ final class LeaguesScreen extends ButtonMenuScreen {
           var3 = AuctionTableWidget.field_Hb.field_Eb;
           SoftwareRasterizer.darkenRectangle(3 + (((UiLayoutNode) ((Object) var3)).field_F + this.slideOffsetX), ((UiLayoutNode) ((Object) var3)).field_T, ((UiLayoutNode) ((Object) var3)).field_q - 6, ((UiLayoutNode) ((Object) var3)).field_mb);
         }
-        AuctionListing.a(640, -22914, 0, 135, 60);
+        AuctionListing.pushRasterClip(640, -22914, 0, 135, 60);
         for (var3_int = 0; WelcomeDialog.field_H.length > var3_int; var3_int++) {
           stackIn_7_0 = (~AnimationSkeleton.field_k != ~var3_int) ? 0 : 1;
           var4 = stackIn_7_0;
@@ -294,10 +294,10 @@ final class LeaguesScreen extends ButtonMenuScreen {
         }
         stackIn_26_0 = MenuButton.field_e;
         stackIn_26_1 = 85;
-        stackIn_27_2 = (StrongCacheEntry.g(2368)) && (MonotonicClock.monotonicMillis(127) % 500L < 250L);
+        stackIn_27_2 = (StrongCacheEntry.hasGameFocus(2368)) && (MonotonicClock.monotonicMillis(127) % 500L < 250L);
         ((UiLayoutNode) (Object) stackIn_26_0).draw(stackIn_26_1, stackIn_27_2);
         if (AuctionTableWidget.field_Hb.field_Db.field_jb != null) {
-          AuctionListing.a(-2 + AuctionTableWidget.field_Hb.field_q + (AuctionTableWidget.field_Hb.field_F - 15), -22914, AuctionTableWidget.field_Hb.field_F, 12 + (AuctionTableWidget.field_Hb.field_T - (-AuctionTableWidget.field_Hb.field_mb + 15)), AuctionTableWidget.field_Hb.field_T);
+          AuctionListing.pushRasterClip(-2 + AuctionTableWidget.field_Hb.field_q + (AuctionTableWidget.field_Hb.field_F - 15), -22914, AuctionTableWidget.field_Hb.field_F, 12 + (AuctionTableWidget.field_Hb.field_T - (-AuctionTableWidget.field_Hb.field_mb + 15)), AuctionTableWidget.field_Hb.field_T);
           var7 = (RankingRowNode) (AuctionTableWidget.field_Hb.field_Db.field_jb.g(24009));
           while (var7 != null) {
             var7.b(-104);
@@ -307,7 +307,7 @@ final class LeaguesScreen extends ButtonMenuScreen {
         }
         if (AuctionTableWidget.field_Hb.field_Db.field_jb == null ||
           AuctionTableWidget.field_Hb.field_Db.field_jb.a(false) == 0) {
-          if (!PlayArea.a(100)) {
+          if (!PlayArea.isGuestSession(100)) {
             if (!PlayerContextMenu.field_f) {
               ByteArrayPool.field_d.drawCentered(PasswordValidator.field_k.toLowerCase(), 194 + this.slideOffsetX, 290, 16777215, -1);
             } else {
@@ -318,14 +318,14 @@ final class LeaguesScreen extends ButtonMenuScreen {
           }
         }
         SoftwareRasterizer.fillRectangleAlpha(AuctionTableWidget.field_Hb.field_F, 4 + (AuctionTableWidget.field_Hb.field_mb + AuctionTableWidget.field_Hb.field_T), 4 + AuctionTableWidget.field_Hb.field_q, 24, 0, 196);
-        AuctionListing.a(AuctionTableWidget.field_Hb.field_F + (AuctionTableWidget.field_Hb.field_q + 2), -22914, 1 + AuctionTableWidget.field_Hb.field_F, AuctionTableWidget.field_Hb.field_T + (AuctionTableWidget.field_Hb.field_mb + 4) + 24, 4 + (AuctionTableWidget.field_Hb.field_mb + AuctionTableWidget.field_Hb.field_T));
+        AuctionListing.pushRasterClip(AuctionTableWidget.field_Hb.field_F + (AuctionTableWidget.field_Hb.field_q + 2), -22914, 1 + AuctionTableWidget.field_Hb.field_F, AuctionTableWidget.field_Hb.field_T + (AuctionTableWidget.field_Hb.field_mb + 4) + 24, 4 + (AuctionTableWidget.field_Hb.field_mb + AuctionTableWidget.field_Hb.field_T));
         if (FadingSoundPlayer.field_w > 0) {
           ByteArrayPool.field_d.drawCentered(SectorCacheStore.field_e.toLowerCase(), (AuctionTableWidget.field_Hb.field_q >> 1) + AuctionTableWidget.field_Hb.field_F, 423, 16679959, -1);
         } else {
           ByteArrayPool.field_d.drawText(ContextMenu.field_Jb.toLowerCase(), SpriteBackgroundSupport.field_b + this.slideOffsetX, 423, 16679959, -1);
         }
         TeamManagementScreen.e(param0 + 128);
-        if (PlayArea.a(100) ||
+        if (PlayArea.isGuestSession(100) ||
           TextEntrySupport.field_f) {
           SoftwareRasterizer.darkenRectangle(this.slideOffsetX, 48, 450, 382);
           if (TextEntrySupport.field_f) {

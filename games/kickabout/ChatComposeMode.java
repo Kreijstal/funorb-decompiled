@@ -18,7 +18,7 @@ final class ChatComposeMode {
 
     final static void setComposeMode(int param0) {
         NodeHashTableIterator.field_b = param0;
-        PlayArea.a(true);
+        PlayArea.showCurrentQuickChatMenu(true);
     }
 
     static {

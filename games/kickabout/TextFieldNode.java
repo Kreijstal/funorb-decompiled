@@ -249,7 +249,7 @@ final class TextFieldNode extends UiLayoutNode {
         CipherPacketBuffer var3 = null;
         try {
           var3 = FootballerAiOverlaySupport.field_d;
-          var3.b(param2, (byte) 98);
+          var3.writeIsaacByte(param2, (byte) 98);
           if (!param0) {
             TextFieldNode.flushWithSimulatedLag(-62, -59);
           }

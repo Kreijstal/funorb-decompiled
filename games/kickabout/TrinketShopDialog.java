@@ -81,7 +81,7 @@ final class TrinketShopDialog extends MessageDialog {
         if (var11.field_Eb.isLinked((byte) -113)) {
           SoftwareRasterizer.darkenRectangle(var11.field_Eb.field_F + 3, var11.field_Eb.field_T, -6 + var11.field_Eb.field_q, var11.field_Eb.field_mb);
         }
-        AuctionListing.a(-2 + (var11.field_F - (-var11.field_q + 15)), -22914, 0, -2 + (var11.field_mb + var11.field_T) - 15, var11.field_T);
+        AuctionListing.pushRasterClip(-2 + (var11.field_F - (-var11.field_q + 15)), -22914, 0, -2 + (var11.field_mb + var11.field_T) - 15, var11.field_T);
         Object var5 = null;
         TrinketTile var6_ref_at = (TrinketTile) (this.field_L.field_Db.field_jb.g(24009));
         while (var6_ref_at != null) {
@@ -107,7 +107,7 @@ final class TrinketShopDialog extends MessageDialog {
           var9 = this.field_H.field_Cb.getHeight(15);
           SoftwareRasterizer.fillRoundedRectangleBlended(-(var8 >> 1) + var6 - 10, -(var9 >> 1) + (var7 - 10), 20 + var8, var9 + 40, 10, 65793, 128);
           this.field_H.field_Cb.drawCentered(var7, 23, var6);
-          IsSixCommand.field_C.drawCentered(this.field_H.field_Eb, var6, 20 + ((var9 >> 1) + var7), this.field_H.c(true), -1);
+          IsSixCommand.field_C.drawCentered(this.field_H.field_Eb, var6, 20 + ((var9 >> 1) + var7), this.field_H.getPriceTextColor(true), -1);
           if (!(this.field_H.field_Db <= RegistrationRequestState.field_h.field_x)) {
             IsSixCommand.field_C.drawCentered(AnimationFrameset.field_n, var6, 62 + ((var9 >> 1) + var7), 16777215, -1);
           }

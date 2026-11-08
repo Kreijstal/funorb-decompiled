@@ -83,15 +83,15 @@ final class PlayerStatSortCriterion extends SortCriterion {
         return 180;
     }
 
-    final static int a(boolean param0) {
+    final static int getCurrentDayOfMonth(boolean param0) {
         ClubStateFactory.setCalendarTime(MonotonicClock.monotonicMillis(-100), 0);
         if (param0) {
-          PlayerStatSortCriterion.b((byte) -67);
+          PlayerStatSortCriterion.releaseStatics((byte) -67);
         }
         return OverlayLayerSupport.field_a.get(5);
     }
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 != 85) {
           field_p = -51;
         }

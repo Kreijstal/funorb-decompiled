@@ -99,7 +99,7 @@ final class DisplayModeSupport {
           var26 = ClassDescriptorSupport.field_d[2];
           var29Lifetime1Lifetime4 = var26;
           var29Lifetime1Lifetime5 = var26;
-          var25 = GameModeDefinition.field_a;
+          var25 = KitStyleDefinition.field_a;
           var24.field_j.addItemWithIcon(var25, param1, 13, var26);
         }
         if (param2 == 2) {

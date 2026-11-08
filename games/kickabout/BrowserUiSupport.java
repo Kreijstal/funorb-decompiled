@@ -39,7 +39,7 @@ final class BrowserUiSupport {
     final static void notifyBrowserResize(int param0, int param1) {
         try {
           try {
-            AppletJavaScriptBridge.a(new Object[]{new Integer(param1)}, AppletContextSupport.getActiveApplet(-120), "resizing", 25449);
+            AppletJavaScriptBridge.callJavaScript(new Object[]{new Integer(param1)}, AppletContextSupport.getActiveApplet(-120), "resizing", 25449);
           } catch (Throwable throwable) {
           }
           if (param0 == 500) {

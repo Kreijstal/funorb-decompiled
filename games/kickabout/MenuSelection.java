@@ -16,19 +16,19 @@ final class MenuSelection {
 
     public static void releaseStatics(byte param0) {
         if (param0 != -22) {
-          MenuSelection.a(-29, -114, 127L);
+          MenuSelection.sendLobbyPlayerRemoval(-29, -114, 127L);
         }
         field_k = null;
         field_j = null;
         field_f = null;
     }
 
-    final static void a(int param0, int param1, long param2) {
+    final static void sendLobbyPlayerRemoval(int param0, int param1, long param2) {
         if (param0 < 57) {
           field_f = (int[]) null;
         }
         CipherPacketBuffer var4 = FootballerAiOverlaySupport.field_d;
-        var4.b(param1, (byte) 120);
+        var4.writeIsaacByte(param1, (byte) 120);
         var4.field_n = var4.field_n + 1;
         int var5 = var4.field_n;
         var4.writeByte(126, 7);
@@ -36,7 +36,7 @@ final class MenuSelection {
         var4.backpatchByteLength(62, -var5 + var4.field_n);
     }
 
-    final void a(int param0, int param1, int param2) {
+    final void updatePointerSelection(int param0, int param1, int param2) {
         if (this.itemCount <= param1) {
           throw new IllegalArgumentException();
         }
@@ -81,14 +81,14 @@ final class MenuSelection {
         }
     }
 
-    final boolean a(int param0) {
+    final boolean isPointerHeld(int param0) {
         if (param0 != 0) {
           return false;
         }
         return this.field_i != 0 ? true : false;
     }
 
-    final void a(int param0, int param1, int param2, boolean param3) {
+    final void restoreSelection(int param0, int param1, int param2, boolean param3) {
         this.field_g = param3 ? true : false;
         this.field_i = param1;
         if (!this.field_g) {
@@ -110,7 +110,7 @@ final class MenuSelection {
           this.selectedIndex = this.selectedIndex - 1;
         }
         if (!param1) {
-          this.b(-93);
+          this.captureActivationKey(-93);
         }
         if (0 == this.field_i) {
           this.field_b = FixedQuaternion.field_e;
@@ -142,7 +142,7 @@ final class MenuSelection {
         }
     }
 
-    final boolean c(int param0) {
+    final boolean isActivated(int param0) {
         boolean stackIn_8_0 = false;
         if (param0 != -1) {
           return true;
@@ -151,7 +151,7 @@ final class MenuSelection {
         return stackIn_8_0;
     }
 
-    final void d(int param0) {
+    final void handleVerticalArrowKeys(int param0) {
         this.field_b = 0;
         this.field_h = 0;
         if (this.field_i == 0) {
@@ -178,7 +178,7 @@ final class MenuSelection {
         }
     }
 
-    final void b(int param0) {
+    final void captureActivationKey(int param0) {
         this.field_h = 0;
         this.field_b = 0;
         if (param0 != -99) {
@@ -189,7 +189,7 @@ final class MenuSelection {
         }
     }
 
-    final void a(boolean param0, int param1, byte param2) {
+    final void resetPointerSelection(boolean param0, int param1, byte param2) {
         if (param2 != -127) {
           this.handleArrowKeys(-68, true);
         }

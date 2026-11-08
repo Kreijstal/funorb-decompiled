@@ -40,7 +40,7 @@ final class MonotonicClock {
           var7 = Kickabout.field_G;
           try {
             try {
-              var3 = (String) (AppletJavaScriptBridge.a(param0 ^ 30858, "getcookies", param2));
+              var3 = (String) (AppletJavaScriptBridge.callJavaScript(param0 ^ 30858, "getcookies", param2));
               var4 = FormationAgent.a(var3, param0 ^ 2, ';');
               for (var5 = param0; var4.length > var5; var5++) {
                 var6 = var4[var5].indexOf('=');

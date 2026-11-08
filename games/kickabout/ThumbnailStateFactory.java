@@ -27,7 +27,7 @@ final class ThumbnailStateFactory {
         RuntimeException decompiledCaughtException = null;
         var8 = Kickabout.field_G;
         try {
-          param2 = CachedArchiveSource.a((byte) -86, param2, param3);
+          param2 = CachedArchiveSource.resizeSpriteByJoiningEdges((byte) -86, param2, param3);
           var9 = new Sprite[2];
           var4 = var9;
           for (var5 = param0; var5 < 2; var5++) {

@@ -92,7 +92,7 @@ final class PitchDecorationSupport {
               if (RankingsScreen.field_C == 1) {
                 AccountNameAvailabilityValidator.field_l = new WorldSpriteSequence[30];
                 for (var1_int = 0; var1_int < AccountNameAvailabilityValidator.field_l.length; var1_int++) {
-                  stackIn_11_0 = (FormationMaskSupport.field_c != 2) ? -60 : -120;
+                  stackIn_11_0 = (KitPatternMaskSupport.field_c != 2) ? -60 : -120;
                   var2 = stackIn_11_0;
                   var2 = BytePlusOneCommand.a(29430, 15, var2);
                   var3 = 20 + var1_int * 45;

@@ -227,7 +227,7 @@ final class SocialTabsPanel {
             field_c = (ContextMenuItem[][]) null;
           }
           var5 = FootballerAiOverlaySupport.field_d;
-          var5.b(param1, (byte) -75);
+          var5.writeIsaacByte(param1, (byte) -75);
           var5.field_n = var5.field_n + 1;
           var4 = var5.field_n;
           var5.writeByte(125, 1);

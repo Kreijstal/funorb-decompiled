@@ -175,15 +175,15 @@ final class DebugConsole extends ConsolePanel {
             }
           }
           var15 = this.b(var6Lifetime2, (byte) -91);
-          var8 = new String[var15.c(-1976587888)];
+          var8 = new String[var15.size(-1976587888)];
           var9Lifetime1 = 0;
           var10Lifetime1 = 43 % ((-2 - param0) / 41);
-          var11 = (ConsoleCommand) (var15.a(-124));
+          var11 = (ConsoleCommand) (var15.first(-124));
           while (var11 != null) {
             incrementValue$0 = var9Lifetime1;
             var9Lifetime1++;
             var8[incrementValue$0] = var11.field_s;
-            var11 = (ConsoleCommand) (var15.b(0));
+            var11 = (ConsoleCommand) (var15.next(0));
           }
           stackIn_23_0 = var8;
           return stackIn_23_0;
@@ -496,7 +496,7 @@ final class DebugConsole extends ConsolePanel {
             }
           }
           var18 = this.b(var6Lifetime2, (byte) -124);
-          if (0 == var18.c(-1976587888)) {
+          if (0 == var18.size(-1976587888)) {
             return;
           }
           var8 = new StringBuilder();
@@ -504,17 +504,17 @@ final class DebugConsole extends ConsolePanel {
           var9 = var6Lifetime2.length();
           var10 = 1;
           var12 = 2147483647;
-          var13_ref_tm = (ConsoleCommand) (var18.a(-120));
+          var13_ref_tm = (ConsoleCommand) (var18.first(-120));
           while (var13_ref_tm != null) {
             if (var12 > var13_ref_tm.field_o.length()) {
               var12 = var13_ref_tm.field_o.length();
             }
-            var13_ref_tm = (ConsoleCommand) (var18.b(0));
+            var13_ref_tm = (ConsoleCommand) (var18.next(0));
           }
           while (var10 != 0) {
             if (var9 < var12) {
-              var13 = ((ConsoleCommand) (var18.a(-119))).field_o.charAt(var9);
-              var14 = (ConsoleCommand) (var18.b(0));
+              var13 = ((ConsoleCommand) (var18.first(-119))).field_o.charAt(var9);
+              var14 = (ConsoleCommand) (var18.next(0));
               while (var14 != null) {
                 stackIn_26_0 = var10;
                 if (var13 != var14.field_o.charAt(var9)) {
@@ -523,7 +523,7 @@ final class DebugConsole extends ConsolePanel {
                   stackIn_27_1 = 1;
                 }
                 var10 = stackIn_26_0 & stackIn_27_1;
-                var14 = (ConsoleCommand) (var18.b(0));
+                var14 = (ConsoleCommand) (var18.next(0));
               }
               var9++;
               if (var10 == 0) {
@@ -538,8 +538,8 @@ final class DebugConsole extends ConsolePanel {
           if (var12 == var6Lifetime2.length() + var8.length()) {
             discarded$1 = var8.append("()");
             var13Lifetime1++;
-            if (1 == var18.c(-1976587888) &&
-              ((ConsoleCommand) (var18.a(-121))).field_p.length == 0) {
+            if (1 == var18.size(-1976587888) &&
+              ((ConsoleCommand) (var18.first(-121))).field_p.length == 0) {
               var13Lifetime1++;
             }
           }
@@ -573,7 +573,7 @@ final class DebugConsole extends ConsolePanel {
         String var12 = null;
         PlayerContextMenu var13 = null;
         try {
-          BytePlusOneCommand.a(param1, false, ShopPlayerSlot.field_Jb, -1, (String) null, (int[]) null, 0L, (String) null, param1.h((byte) 77));
+          BytePlusOneCommand.a(param1, false, ShopPlayerSlot.field_Jb, -1, (String) null, (int[]) null, 0L, (String) null, param1.getGameId((byte) 77));
           if (param1.field_Cb && (param1.field_Mb == 2 ||
             !(2 > ScrollContainer.field_Ib))) {
             var7 = TextButton.field_v;

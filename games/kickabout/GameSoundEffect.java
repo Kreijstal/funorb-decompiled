@@ -56,7 +56,7 @@ final class GameSoundEffect {
     }
 
     final boolean loadSound(int param0) {
-        if (!SortCriterion.field_h.a(false, this.field_a)) {
+        if (!SortCriterion.field_h.ensurePackedGroupByName(false, this.field_a)) {
           return false;
         }
         if (param0 == 32) {
@@ -67,7 +67,7 @@ final class GameSoundEffect {
         return true;
     }
 
-    final static boolean a(int param0) {
+    final static boolean hasPendingManagerActions(int param0) {
         if (param0 != 64) {
           return false;
         }
@@ -97,7 +97,7 @@ final class GameSoundEffect {
         }
     }
 
-    final static int b(byte param0) {
+    final static int getTargetFramesPerSecond(byte param0) {
         int var1 = 47 / ((49 - param0) / 51);
         return (int)(1000000000L / LeagueWinnerDialog.field_H);
     }

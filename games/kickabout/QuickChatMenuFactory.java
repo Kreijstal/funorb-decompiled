@@ -29,7 +29,7 @@ final class QuickChatMenuFactory {
         int var4 = 0;
         try {
           var5 = FootballerAiOverlaySupport.field_d;
-          var5.b(param0, (byte) 114);
+          var5.writeIsaacByte(param0, (byte) 114);
           var5.field_n = var5.field_n + 1;
           var4 = var5.field_n;
           var5.writeByte(107, 1);
@@ -55,18 +55,18 @@ final class QuickChatMenuFactory {
         if (param3) {
           return (Sprite[]) null;
         }
-        Sprite dupTemp$0 = BroadcastServerCommand.a(param4, (byte) -96, param0);
+        Sprite dupTemp$0 = BroadcastServerCommand.createSolidSprite(param4, (byte) -96, param0);
         var6[6] = dupTemp$0;
         var5[3] = dupTemp$0;
         var5[2] = dupTemp$0;
         var5[1] = dupTemp$0;
         var5[0] = dupTemp$0;
-        Sprite dupTemp$1 = BroadcastServerCommand.a(param2, (byte) -96, param0);
+        Sprite dupTemp$1 = BroadcastServerCommand.createSolidSprite(param2, (byte) -96, param0);
         var6[8] = dupTemp$1;
         var5[7] = dupTemp$1;
         var5[5] = dupTemp$1;
         if (param1 != 0) {
-          var6[4] = BroadcastServerCommand.a(param1, (byte) -96, 64);
+          var6[4] = BroadcastServerCommand.createSolidSprite(param1, (byte) -96, 64);
         }
         return var5;
     }

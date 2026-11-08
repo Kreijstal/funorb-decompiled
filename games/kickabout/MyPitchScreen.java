@@ -67,8 +67,8 @@ final class MyPitchScreen extends TeamManagementScreen {
         boolean stackIn_13_1 = false;
         var7 = Kickabout.field_G;
         super.enterScreen(0, param1, param2);
-        this.field_F = ModelMaterial.testGameModeMask(KitStyleTile.field_yb, param0, ScrollContainer.field_Ib, 3231);
-        this.field_I = ModelMaterial.testGameModeMask(KitStyleTile.field_yb, 1, ScrollContainer.field_Ib, 3231);
+        this.field_F = ModelMaterial.testUnlockMask(KitStyleTile.field_yb, param0, ScrollContainer.field_Ib, 3231);
+        this.field_I = ModelMaterial.testUnlockMask(KitStyleTile.field_yb, 1, ScrollContainer.field_Ib, 3231);
         RankingRowNode.field_Gb.field_jb = new IntrusiveDeque();
         for (var4 = 0; 3 > var4; var4++) {
           for (var5 = 0; 4 > var5; var5++) {

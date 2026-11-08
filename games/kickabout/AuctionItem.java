@@ -56,7 +56,7 @@ class AuctionItem extends IntrusiveNode {
         }
         int var10 = LongPlusOneCommand.field_B[param1];
         int var11 = LongPlusOneCommand.field_B[param6];
-        boolean[][][] var12 = AnimationSkeleton.field_g[param0].field_l;
+        boolean[][][] var12 = AnimationSkeleton.field_g[param0].patternMasks;
         return MatchPhaseView.a(param9, param5, param3, var10, var12[0], param4, var12[1], (byte) -92, param2, param8, var11);
     }
 

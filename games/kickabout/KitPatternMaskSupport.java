@@ -1,19 +1,19 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class FormationMaskSupport {
+final class KitPatternMaskSupport {
     private static String[] field_a;
     static int field_c;
     static String field_b;
 
-    final static Sprite[] a(int param0, int param1, int param2) {
+    final static Sprite[] createSolidNineSliceSprites(int param0, int param1, int param2) {
         if (param1 != 0) {
           return (Sprite[]) null;
         }
-        return AuctionLogEntry.a(1, param2, param0, 124);
+        return AuctionLogEntry.createSolidNineSliceSprites(1, param2, param0, 124);
     }
 
-    final static boolean a(CharSequence param0, boolean param1) {
+    final static boolean isValidBasicDisplayName(CharSequence param0, boolean param1) {
         RuntimeException var2 = null;
         CommonGame var3 = null;
         boolean stackIn_3_0 = false;
@@ -24,9 +24,9 @@ final class FormationMaskSupport {
         try {
           if (!param1) {
             var3 = (CommonGame) null;
-            FormationMaskSupport.a(28, (CommonGame) null, 23);
+            KitPatternMaskSupport.buildMatchKitPreviewSprites(28, (CommonGame) null, 23);
           }
-          stackIn_3_0 = FadingChatMessage.a(false, param0, 0);
+          stackIn_3_0 = FadingChatMessage.isValidBasicDisplayName(false, param0, 0);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -50,7 +50,7 @@ final class FormationMaskSupport {
         field_b = null;
     }
 
-    final static void a(int param0, CommonGame param1, int param2) {
+    final static void buildMatchKitPreviewSprites(int param0, CommonGame param1, int param2) {
         int var4 = 0;
         int[] var3 = null;
         int var5 = 0;
@@ -94,7 +94,7 @@ final class FormationMaskSupport {
             var5 = DemoIntegersCommand.field_F.field_H[var4];
             var6 = DemoIntegersCommand.field_F.field_d[var4];
             var7 = DemoIntegersCommand.field_F.field_Q[var4];
-            var8 = AuctionsHelpScreen.a(var5, LongPlusOneCommand.field_B[var7], true, LongPlusOneCommand.field_B[var6]).createModelMesh(100, 4369, 20, -56, -20);
+            var8 = AuctionsHelpScreen.createKitMesh(var5, LongPlusOneCommand.field_B[var7], true, LongPlusOneCommand.field_B[var6]).createModelMesh(100, 4369, 20, -56, -20);
             GameSoundEffect.field_j[var4] = new Sprite(200, 200);
             PacketBuffer.a(param0 - 124, GameSoundEffect.field_j[var4]);
             TriangleRasterizer.useRasterClip();
@@ -120,7 +120,7 @@ final class FormationMaskSupport {
         }
     }
 
-    final static boolean[][][] decodeFormationMask(int param0, String param1) {
+    final static boolean[][][] decodeKitPatternMask(int param0, String param1) {
         int var4 = 0;
         int var6 = 0;
         boolean[][][] var2 = null;

@@ -29,7 +29,7 @@ final class ShopPlayerSlot extends ListRow {
         RuntimeException var3_ref = null;
         try {
           var3 = FootballerAiOverlaySupport.field_d;
-          var3.b(param0, (byte) -117);
+          var3.writeIsaacByte(param0, (byte) -117);
           var3.writeByte(113, param1.field_i);
           var3.writeShort(-1207444472, param1.field_f);
           if (param2 != -51265247) {
@@ -156,7 +156,7 @@ final class ShopPlayerSlot extends ListRow {
         }
         Sprite[] var3 = new Sprite[9];
         Sprite[] var2 = var3;
-        var3[4] = BroadcastServerCommand.a(param1, (byte) -96, 64);
+        var3[4] = BroadcastServerCommand.createSolidSprite(param1, (byte) -96, 64);
         return var2;
     }
 

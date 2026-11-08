@@ -349,7 +349,7 @@ final class MatchScreen extends AppScreen {
         if (param1 != 18) {
           this.resign(27);
         }
-        ScrollBar.k(0);
+        ScrollBar.clearFadingSounds(0);
         if (this.isSpectator(param1 ^ -20)) {
           return;
         }
@@ -359,7 +359,7 @@ final class MatchScreen extends AppScreen {
         }
     }
 
-    final void c(byte param0) {
+    final void drawParticipantPanels(byte param0) {
         if (param0 != 80) {
           return;
         }
@@ -456,7 +456,7 @@ final class MatchScreen extends AppScreen {
         return stackIn_6_0;
     }
 
-    private final void a(int param0, int[] param1, boolean param2, int[] param3, int[] param4) {
+    private final void separateClashingKitColors(int param0, int[] param1, boolean param2, int[] param3, int[] param4) {
         int var6_int = 0;
         int var7 = 0;
         int var8 = 0;
@@ -476,11 +476,11 @@ final class MatchScreen extends AppScreen {
         RuntimeException var6 = null;
         try {
           var6_int = -param0 + 1;
-          var7 = AnimationSkeleton.field_g[param4[var6_int]].a(-1) ? 1 : 0;
+          var7 = AnimationSkeleton.field_g[param4[var6_int]].usesSecondColorForClashCheck(-1) ? 1 : 0;
           if (param2) {
             return;
           }
-          var8 = AnimationSkeleton.field_g[param4[param0]].a(-1) ? 1 : 0;
+          var8 = AnimationSkeleton.field_g[param4[param0]].usesSecondColorForClashCheck(-1) ? 1 : 0;
           if (var7 == 0) {
             stackIn_5_0 = param1[var6_int];
           } else {
@@ -533,7 +533,7 @@ final class MatchScreen extends AppScreen {
     final void setTransitionProgress(int param0, boolean param1, int param2, AppScreen param3) {
         try {
           if (param2 > -28) {
-            this.c((byte) 62);
+            this.drawParticipantPanels((byte) 62);
           }
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "ap.F(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
@@ -650,7 +650,7 @@ final class MatchScreen extends AppScreen {
           field_x = (String) null;
         }
         if (this.isOnlineMatch) {
-          FootballerAiOverlaySupport.field_d.b(75, (byte) 112);
+          FootballerAiOverlaySupport.field_d.writeIsaacByte(75, (byte) 112);
           FootballerAiOverlaySupport.field_d.writeByte(118, param1);
         }
     }
@@ -793,7 +793,7 @@ final class MatchScreen extends AppScreen {
               stackIn_5_1 = this.field_i.field_g[this.localSeat].team;
             }
             var3_int = stackIn_4_0 - stackIn_5_1;
-            this.a(var3_int, this.field_i.field_d, false, this.field_i.field_Q, this.field_i.field_H);
+            this.separateClashingKitColors(var3_int, this.field_i.field_d, false, this.field_i.field_Q, this.field_i.field_H);
           }
           this.matchState.copyStateFrom(this.field_i, (byte) 122);
           this.createPhaseController(-2);
@@ -802,7 +802,7 @@ final class MatchScreen extends AppScreen {
           }
           if (this.matchState.phase > 0 &&
             this.matchState.phase < 5 && (RankingsScreen.field_C != this.matchState.tier ||
-            FormationMaskSupport.field_c != this.matchState.surface ||
+            KitPatternMaskSupport.field_c != this.matchState.surface ||
             !NanoTickClock.field_n)) {
             StringCursor.a(true, (byte) -125, this.matchState.tier, this.matchState.surface);
           }

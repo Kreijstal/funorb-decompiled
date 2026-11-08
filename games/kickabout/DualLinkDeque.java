@@ -8,7 +8,7 @@ final class DualLinkDeque {
     static double field_e;
     private DualLinkNode field_c;
 
-    final DualLinkNode a(int param0) {
+    final DualLinkNode first(int param0) {
         DualLinkNode var2 = this.field_a.field_f;
         if (var2 == this.field_a) {
           this.field_c = null;
@@ -21,7 +21,7 @@ final class DualLinkDeque {
         return var2;
     }
 
-    final int c(int param0) {
+    final int size(int param0) {
         int var4 = Kickabout.field_G;
         int var2 = 0;
         DualLinkNode var3 = this.field_a.field_f;
@@ -50,7 +50,7 @@ final class DualLinkDeque {
           param1.field_e.field_f = param1;
           param1.field_f.field_e = param1;
           if (param0 != 127) {
-            DualLinkDeque.d(-50);
+            DualLinkDeque.releaseStatics(-50);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -127,21 +127,21 @@ final class DualLinkDeque {
         return var2;
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         field_b = null;
         if (param0 != 1603) {
           field_d = false;
         }
     }
 
-    final DualLinkNode b(int param0) {
+    final DualLinkNode next(int param0) {
         DualLinkNode var2 = this.field_c;
         if (var2 == this.field_a) {
           this.field_c = null;
           return null;
         }
         if (param0 != 0) {
-          this.c(14);
+          this.size(14);
         }
         this.field_c = var2.field_f;
         return var2;

@@ -157,7 +157,7 @@ final class LobbyPlayerRow extends UiLayoutNode {
             IntrusiveDequeCursor.field_b.participantStatus[TrinketShopDialog.field_G].isActive(3511)) {
             var10 = (RenderedFootballer) (IntrusiveDequeCursor.field_b.getControlledFootballer((byte) -76, TrinketShopDialog.field_G));
             var2 = SocialListLayoutSupport.worldToScreenX(param0, var10.field_kb >> 16);
-            var3 = IntKeyLookup.a((byte) -119, var10.field_bb >> 16);
+            var3 = IntKeyLookup.projectPitchY((byte) -119, var10.field_bb >> 16);
             if (!TextHotspotWidget.a(var2, var3, param0 ^ 480)) {
               var2 = 320;
               var3 = 240;
@@ -198,7 +198,7 @@ final class LobbyPlayerRow extends UiLayoutNode {
         }
     }
 
-    final boolean h(int param0) {
+    final boolean isDetachedFromPlayerTable(int param0) {
         if (param0 != -13356) {
           this.field_Db = -100;
         }

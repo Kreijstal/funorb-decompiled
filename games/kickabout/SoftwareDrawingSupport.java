@@ -439,7 +439,7 @@ final class SoftwareDrawingSupport {
         int var11 = var9 == 0 ? 5592405 : 16777215;
         SoftwareRasterizer.fillRectangleAlpha(param3, param4, param5 - 20, param6 - 2 >> 1, 65793, 128);
         SoftwareRasterizer.fillRectangleAlpha(param3 + param5 - 19, param4, 20, param6 - 2 >> 1, 65793, 128);
-        AuctionListing.a(param3 + param5 - 20, -22914, param3, param4 + param6, param4);
+        AuctionListing.pushRasterClip(param3 + param5 - 20, -22914, param3, param4 + param6, param4);
         if (ByteArrayPool.field_d.stringWidth(param2) > param5 - 20) {
           var12 = (double)(IsSixCommand.field_C.stringWidth(param2) - (param5 - 30));
           var14 = -(int)(Math.sin(var7 / 1000.0) * var12 + var12 / 2.0);
@@ -455,7 +455,7 @@ final class SoftwareDrawingSupport {
         }
         SoftwareRasterizer.fillRectangleAlpha(param3, param4 + (param6 >> 1), param5 - 20, param6 - 2 >> 1, 65793, 128);
         SoftwareRasterizer.fillRectangleAlpha(param3 + param5 - 19, param4 + (param6 >> 1), 20, param6 - 2 >> 1, 65793, 128);
-        AuctionListing.a(param3 + param5 - 20, -22914, param3, param4 + param6, param4);
+        AuctionListing.pushRasterClip(param3 + param5 - 20, -22914, param3, param4 + param6, param4);
         if (ByteArrayPool.field_d.stringWidth(param1) > param5 - 20) {
           var12Lifetime1 = (double)(IsSixCommand.field_C.stringWidth(param1) - (param5 - 30));
           var14Lifetime1 = -(int)(Math.sin(var7 / 1000.0) * var12Lifetime1 + var12Lifetime1 / 2.0);
@@ -999,7 +999,7 @@ final class SoftwareDrawingSupport {
         int var6 = (int)(MonotonicClock.monotonicMillis(74) % 220L);
         var6 = (var6 << 2) / 220;
         field_g.d(param0 - 1, param1 - 1);
-        AuctionListing.a(param0 + param2, -22914, param0, param1 + 11, param1);
+        AuctionListing.pushRasterClip(param0 + param2, -22914, param0, param1 + 11, param1);
         field_h[param3][var6].d(param0, param1);
         TeamManagementScreen.e(127);
         SoftwareRasterizer.drawRectangle(param0 - 1, param1 - 1, 102, 13, 65793);

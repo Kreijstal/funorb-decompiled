@@ -153,10 +153,10 @@ final class ManagerAction extends IntrusiveNode {
         int var7_int = 0;
         try {
           var7_int = ByteArrayPool.field_d.stringWidth(param6) + 15;
-          AuctionListing.a(10, -22914, 0, 480, 0);
+          AuctionListing.pushRasterClip(10, -22914, 0, 480, 0);
           SoftwareRasterizer.fillRoundedRectangleBlended(param3 - var7_int, param4 - 17, var7_int + 20, 21, param0, 65793, 128);
           TeamManagementScreen.e(123);
-          AuctionListing.a(param3, -22914, 0, 480, 0);
+          AuctionListing.pushRasterClip(param3, -22914, 0, 480, 0);
           SoftwareRasterizer.fillRoundedRectangleBlended(-var7_int + param3, param4 - 17, 20 + var7_int, 21, 8, param1, param2);
           TeamManagementScreen.e(param0 + 113);
           ByteArrayPool.field_d.drawRightAligned(param6, param3, param4, param5, -1);
@@ -226,7 +226,7 @@ final class ManagerAction extends IntrusiveNode {
             var5 = (ResourceArchive) null;
             ManagerAction.a((String) null, (String) null, 74, (ResourceArchive) null);
           }
-          stackIn_7_0 = param0 + " - " + param3.e(-8185) + "%";
+          stackIn_7_0 = param0 + " - " + param3.getOverallProgress(-8185) + "%";
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

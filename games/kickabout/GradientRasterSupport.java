@@ -29,7 +29,7 @@ final class GradientRasterSupport {
         CipherPacketBuffer var2Lifetime1;
         if (param0 == 3) {
           var2 = FootballerAiOverlaySupport.field_d;
-          var2.b(param1, (byte) 119);
+          var2.writeIsaacByte(param1, (byte) 119);
           var2.writeByte(124, 2);
           var2.writeByte(param0 ^ 106, 4);
           var2.writeByte(124, AuctionLogEntry.a(1315216324));
@@ -37,7 +37,7 @@ final class GradientRasterSupport {
         }
         GradientRasterSupport.isNameSeparator(false, 'F');
         var2Lifetime1 = FootballerAiOverlaySupport.field_d;
-        var2Lifetime1.b(param1, (byte) 119);
+        var2Lifetime1.writeIsaacByte(param1, (byte) 119);
         var2Lifetime1.writeByte(124, 2);
         var2Lifetime1.writeByte(param0 ^ 106, 4);
         var2Lifetime1.writeByte(124, AuctionLogEntry.a(1315216324));

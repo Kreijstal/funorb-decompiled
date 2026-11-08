@@ -51,7 +51,7 @@ final class UiKeyRoutingSupport {
           return true;
         }
         if (null != TextButton.field_v &&
-          TextButton.field_v.a((byte) -52)) {
+          TextButton.field_v.consumeSelection((byte) -52)) {
           MusicPatchNode.closePlayerContextMenu(param0 ^ 21);
           return true;
         }

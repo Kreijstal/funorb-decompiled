@@ -26,7 +26,7 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
           DelayedServerPacket.a(MatchHudSupport.field_d, false, -2);
           return;
         }
-        if (FormationMaskSupport.field_c != ChatComposeSupport.field_g) {
+        if (KitPatternMaskSupport.field_c != ChatComposeSupport.field_g) {
           AnimationClip.a(FullscreenFailureReason.field_f, -76, TeamSelectionView.field_j, ChatComposeSupport.field_g);
         } else {
           if (FullscreenFailureReason.field_f != RankingsScreen.field_C) {
@@ -325,7 +325,7 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
               ColorQuantizationBox.field_f.field_a == SoftwareRasterizer.field_g) {
               if (null == PlayerContextMenu.field_i) {
                 if (ArchiveSource.field_b == null) {
-                  CipherPacketBuffer.c(false);
+                  CipherPacketBuffer.layoutSharedChatControls(false);
                   if (param4) {
                     AuctionsHelpScreen.field_H = ModalPanel.field_B;
                   } else {
@@ -418,7 +418,7 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
               ColorQuantizationBox.field_f.field_a == SoftwareRasterizer.field_g) {
               if (null == PlayerContextMenu.field_i) {
                 if (ArchiveSource.field_b == null) {
-                  CipherPacketBuffer.c(false);
+                  CipherPacketBuffer.layoutSharedChatControls(false);
                   if (param4) {
                     AuctionsHelpScreen.field_H = ModalPanel.field_B;
                   } else {
@@ -539,7 +539,7 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
         if (-2 == MatchHudSupport.field_d) {
           return;
         }
-        MachineTokenStorageSupport.field_e.c((byte) 80);
+        MachineTokenStorageSupport.field_e.drawParticipantPanels((byte) 80);
     }
 
     final static boolean a(int param0, int param1, int param2, int param3) {
@@ -552,16 +552,16 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
         if (NumericDateInputWidget.field_J == null) {
           if (!TextFieldNode.field_Wb) {
             if (DebugConsole.field_s) {
-              return NodeHashTableIterator.a(param3, param2 ^ -17866, param0);
+              return NodeHashTableIterator.handleQuickChatKey(param3, param2 ^ -17866, param0);
             }
             if (9 == FixedQuaternion.field_e) {
-              return NodeHashTableIterator.a(param3, param2 ^ -17866, param0);
+              return NodeHashTableIterator.handleQuickChatKey(param3, param2 ^ -17866, param0);
             }
             if (FixedQuaternion.field_e == 10) {
-              return NodeHashTableIterator.a(param3, param2 ^ -17866, param0);
+              return NodeHashTableIterator.handleQuickChatKey(param3, param2 ^ -17866, param0);
             }
             if (11 == FixedQuaternion.field_e) {
-              return NodeHashTableIterator.a(param3, param2 ^ -17866, param0);
+              return NodeHashTableIterator.handleQuickChatKey(param3, param2 ^ -17866, param0);
             }
             if (FixedQuaternion.field_e != 80) {
               return false;
@@ -589,16 +589,16 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
           }
           if (!TextFieldNode.field_Wb) {
             if (DebugConsole.field_s) {
-              return NodeHashTableIterator.a(param3, param2 ^ -17866, param0);
+              return NodeHashTableIterator.handleQuickChatKey(param3, param2 ^ -17866, param0);
             }
             if (9 == FixedQuaternion.field_e) {
-              return NodeHashTableIterator.a(param3, param2 ^ -17866, param0);
+              return NodeHashTableIterator.handleQuickChatKey(param3, param2 ^ -17866, param0);
             }
             if (FixedQuaternion.field_e == 10) {
-              return NodeHashTableIterator.a(param3, param2 ^ -17866, param0);
+              return NodeHashTableIterator.handleQuickChatKey(param3, param2 ^ -17866, param0);
             }
             if (11 == FixedQuaternion.field_e) {
-              return NodeHashTableIterator.a(param3, param2 ^ -17866, param0);
+              return NodeHashTableIterator.handleQuickChatKey(param3, param2 ^ -17866, param0);
             }
             if (FixedQuaternion.field_e != 80) {
               return false;

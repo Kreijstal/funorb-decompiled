@@ -210,7 +210,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
               stackIn_4_3 = var13.field_c[var7 + 1].field_g;
             }
             var12 = stackIn_3_0 + Math.min(stackIn_3_1, Math.min(stackIn_3_2, stackIn_4_3));
-            AuctionListing.a(param1 - (-param4.field_t - param4.field_n), -22914, param1 + param4.field_t, param4.field_i + (param2 + param4.field_g), param2 + param4.field_g);
+            AuctionListing.pushRasterClip(param1 - (-param4.field_t - param4.field_n), -22914, param1 + param4.field_t, param4.field_i + (param2 + param4.field_g), param2 + param4.field_g);
             GameSoundEffect.field_i.drawWidgetLine(this.field_i, var12, var10, var11, var10, param3);
             TeamManagementScreen.e(127);
           }
@@ -253,7 +253,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
         int var12Lifetime1;
         var13 = Kickabout.field_G;
         try {
-          AuctionListing.a(param2 + param4.field_t + param4.field_n, -22914, param2 + param4.field_t, param4.field_g + (param7 + param4.field_i), param4.field_g + param7);
+          AuctionListing.pushRasterClip(param2 + param4.field_t + param4.field_n, -22914, param2 + param4.field_t, param4.field_g + (param7 + param4.field_i), param4.field_g + param7);
           var9_int = this.contentWidth((byte) -124, param4);
           if (param3 <= 71) {
             this.field_o = 4;
@@ -762,7 +762,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
             }
             var10 = var18.lineIndexForCharacter(0, var8);
             var11 = var18.lineIndexForCharacter(0, var9);
-            AuctionListing.a(param3.field_n + (param3.field_t + param0), -22914, param3.field_t + param0, param3.field_i + param5 + param3.field_g, param3.field_g + param5);
+            AuctionListing.pushRasterClip(param3.field_n + (param3.field_t + param0), -22914, param3.field_t + param0, param3.field_i + param5 + param3.field_g, param3.field_g + param5);
             for (var12 = var10; var11 >= var12; var12++) {
               var13 = var17.field_c[var12];
               if (var12 != var10) {

@@ -129,7 +129,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
         }
     }
 
-    public static void h(byte param0) {
+    public static void releaseStatics(byte param0) {
         int var1 = 118 / ((-50 - param0) / 37);
         field_V = null;
         field_W = (long[][]) null;

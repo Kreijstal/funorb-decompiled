@@ -133,10 +133,10 @@ final class RankingsScreen extends ButtonMenuScreen {
 
     final static GameSetupPanel b(int param0, byte param1) {
         if (param1 == -52) {
-          return null != SortCriterion.field_f ? (GameSetupPanel) (SortCriterion.field_f.a(param1 - 3559, (long)param0)) : null;
+          return null != SortCriterion.field_f ? (GameSetupPanel) (SortCriterion.field_f.get(param1 - 3559, (long)param0)) : null;
         }
         field_B = (boolean[]) null;
-        return null != SortCriterion.field_f ? (GameSetupPanel) (SortCriterion.field_f.a(param1 - 3559, (long)param0)) : null;
+        return null != SortCriterion.field_f ? (GameSetupPanel) (SortCriterion.field_f.get(param1 - 3559, (long)param0)) : null;
     }
 
     private final void drawLoginRequiredText(byte param0) {
@@ -156,7 +156,7 @@ final class RankingsScreen extends ButtonMenuScreen {
     }
 
     final int buttonCenterX(int param0, int param1) {
-        if (PlayArea.a(100)) {
+        if (PlayArea.isGuestSession(100)) {
           if (param0 == 0) {
             return (this.buttons[0].width >> 1) + 25;
           }
@@ -207,7 +207,7 @@ final class RankingsScreen extends ButtonMenuScreen {
 
     final int buttonCenterY(int param0, int param1) {
         int var3 = -89 / ((param0 + 49) / 52);
-        if (PlayArea.a(100)) {
+        if (PlayArea.isGuestSession(100)) {
           return super.buttonCenterY(-101, param1);
         }
         if (2 != param1) {
@@ -235,11 +235,11 @@ final class RankingsScreen extends ButtonMenuScreen {
         String var13Lifetime2;
         String var13Lifetime1Lifetime1;
         var10 = Kickabout.field_G;
-        AuctionListing.a(374 + this.slideOffsetX, -22914, this.slideOffsetX + 10, 390, 80);
+        AuctionListing.pushRasterClip(374 + this.slideOffsetX, -22914, this.slideOffsetX + 10, 390, 80);
         SoftwareRasterizer.fillRoundedRectangleBlended(10 + this.slideOffsetX, 80, 364, 320, 10, 0, 128);
         TeamManagementScreen.e(126);
         super.drawScreen(param0, param1);
-        if (PlayArea.a(param0 ^ -97)) {
+        if (PlayArea.isGuestSession(param0 ^ -97)) {
           this.drawLoginRequiredText((byte) -4);
           return;
         }

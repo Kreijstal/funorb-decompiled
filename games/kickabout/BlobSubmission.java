@@ -91,7 +91,7 @@ final class BlobSubmission extends IntrusiveNode {
 
     final static void a(int param0, byte param1) {
         CipherPacketBuffer var2 = FootballerAiOverlaySupport.field_d;
-        var2.b(param0, (byte) 109);
+        var2.writeIsaacByte(param0, (byte) 109);
         var2.writeByte(127, 1);
         var2.writeByte(103, 3);
         if (param1 >= 76) {
@@ -128,7 +128,7 @@ final class BlobSubmission extends IntrusiveNode {
         int var6 = Kickabout.field_G;
         CipherPacketBuffer var7 = FootballerAiOverlaySupport.field_d;
         CipherPacketBuffer var8 = var7;
-        var8.b(param1, (byte) -58);
+        var8.writeIsaacByte(param1, (byte) -58);
         var8.field_n = var8.field_n + 1;
         int var4 = var8.field_n;
         if (param0 < 40) {

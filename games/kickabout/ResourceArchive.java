@@ -12,10 +12,10 @@ final class ResourceArchive {
     static ResourceArchive field_f;
     private ArchiveSource field_i;
 
-    final static void b(int param0) {
+    final static void initializeReflectionCheckQueue(int param0) {
         MarkerSliderWidget.field_N = new IntrusiveDeque();
         if (param0 != -1) {
-          ResourceArchive.a(4, 10, (byte) -102);
+          ResourceArchive.hitTestMenuAction(4, 10, (byte) -102);
         }
     }
 
@@ -73,7 +73,7 @@ final class ResourceArchive {
     }
 
     final synchronized boolean ensureFileAvailable(int param0, int param1, int param2) {
-        if (!this.a(param2, param0, true)) {
+        if (!this.isFileIdInRange(param2, param0, true)) {
           return false;
         }
         if (this.field_a[param2] != null &&
@@ -84,7 +84,7 @@ final class ResourceArchive {
           return true;
         }
         if (param1 < 36) {
-          this.a(false, (String) (this.field_e[4]));
+          this.ensurePackedGroupByName(false, (String) (this.field_e[4]));
         }
         this.loadPackedGroup(param2, (byte) 41);
         if (this.field_e[param2] != null) {
@@ -95,7 +95,7 @@ final class ResourceArchive {
 
     public static void releaseStatics(int param0) {
         if (param0 >= -83) {
-          ResourceArchive.a(0.31954155933475825, (byte) 102, 1.241292563355284, 0.9239833289377695);
+          ResourceArchive.moveProjectionTarget(0.31954155933475825, (byte) 102, 1.241292563355284, 0.9239833289377695);
         }
         field_f = null;
     }
@@ -138,7 +138,7 @@ final class ResourceArchive {
           if (!param2) {
             this.field_d = (ArchiveIndex) null;
           }
-          if (!this.a(param0, param3, param2)) {
+          if (!this.isFileIdInRange(param0, param3, param2)) {
             return null;
           }
           var5 = null;
@@ -190,9 +190,9 @@ final class ResourceArchive {
 
     private final synchronized void loadPackedGroup(int param0, byte param1) {
         if (this.field_b) {
-          this.field_e[param0] = this.field_i.b(param0, 4);
+          this.field_e[param0] = this.field_i.getGroupBytes(param0, 4);
         } else {
-          this.field_e[param0] = AuctionLogEntry.a(this.field_i.b(param0, 4), false, 136);
+          this.field_e[param0] = AuctionLogEntry.a(this.field_i.getGroupBytes(param0, 4), false, 136);
         }
         if (param1 < 31) {
           this.ensureFlatFileAvailable(-52, ((int[]) (this.field_e[5]))[1]);
@@ -228,7 +228,7 @@ final class ResourceArchive {
           }
           var7 = (CharSequence) ((Object) param0);
           var5 = this.field_d.field_s[var4_int].a(IntrusiveDeque.a(true, var7), -128);
-          stackIn_9_0 = this.b(var4_int, -32669, var5);
+          stackIn_9_0 = this.takeFile(var4_int, -32669, var5);
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -250,7 +250,7 @@ final class ResourceArchive {
         }
     }
 
-    private final synchronized boolean a(int param0, int param1, boolean param2) {
+    private final synchronized boolean isFileIdInRange(int param0, int param1, boolean param2) {
         if (!param2) {
           this.takeFileByName((String) (((Object[]) (this.field_e[6]))[2]), (String) (((Object[]) (this.field_e[5]))[6]), ((int[]) (((Object[]) (this.field_e[0]))[8]))[7]);
         }
@@ -269,7 +269,7 @@ final class ResourceArchive {
         return false;
     }
 
-    final boolean a(String param0, byte param1) {
+    final boolean hasGroupName(String param0, byte param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         CharSequence var4 = null;
@@ -305,7 +305,7 @@ final class ResourceArchive {
         }
     }
 
-    final synchronized int[] c(int param0, int param1) {
+    final synchronized int[] getFileIds(int param0, int param1) {
         int[] var6 = null;
         int var4 = 0;
         int var5 = Kickabout.field_G;
@@ -347,7 +347,7 @@ final class ResourceArchive {
           return null;
         }
         if (this.field_d.field_e.length == 1) {
-          return this.b(0, -32669, param1);
+          return this.takeFile(0, -32669, param1);
         }
         if (!this.isValidGroup((byte) 112, param1)) {
           return null;
@@ -356,14 +356,14 @@ final class ResourceArchive {
           return (byte[]) null;
         }
         if (this.field_d.field_e[param1] == 1) {
-          return this.b(param1, param0 - 32669, 0);
+          return this.takeFile(param1, param0 - 32669, 0);
         }
         throw new RuntimeException();
     }
 
-    final byte[] b(int param0, int param1, int param2) {
+    final byte[] takeFile(int param0, int param1, int param2) {
         if (param1 != -32669) {
-          this.a(((boolean[]) (this.field_e[17]))[4], -120);
+          this.getFileIdCapacity(((boolean[]) (this.field_e[17]))[4], -120);
         }
         return this.takeFile(param0, (int[]) null, true, param2);
     }
@@ -385,7 +385,7 @@ final class ResourceArchive {
         if (null != this.field_d) {
           return true;
         }
-        this.field_d = this.field_i.a(-24854);
+        this.field_d = this.field_i.getIndex(-24854);
         if (null == this.field_d) {
           return false;
         }
@@ -423,7 +423,7 @@ final class ResourceArchive {
         if (param1 != 56) {
           return -55;
         }
-        return this.field_i.a(6999, param0);
+        return this.field_i.getGroupProgress(6999, param0);
     }
 
     final int getFileId(byte param0, String param1, int param2) {
@@ -445,7 +445,7 @@ final class ResourceArchive {
           param1 = param1.toLowerCase();
           var5 = (CharSequence) ((Object) param1);
           var4_int = this.field_d.field_s[param2].a(IntrusiveDeque.a(true, var5), -78);
-          if (!this.a(param2, var4_int, true)) {
+          if (!this.isFileIdInRange(param2, var4_int, true)) {
             stackIn_7_0 = -1;
             return stackIn_7_0;
           }
@@ -468,7 +468,7 @@ final class ResourceArchive {
         }
     }
 
-    final boolean a(boolean param0, String param1) {
+    final boolean ensurePackedGroupByName(boolean param0, String param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         CharSequence var4 = null;
@@ -487,7 +487,7 @@ final class ResourceArchive {
           }
           var4 = (CharSequence) ((Object) param1);
           var3_int = this.field_d.field_q.a(IntrusiveDeque.a(true, var4), -123);
-          stackIn_7_0 = this.b((byte) 20, var3_int);
+          stackIn_7_0 = this.ensurePackedGroup((byte) 20, var3_int);
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -547,7 +547,7 @@ final class ResourceArchive {
         }
     }
 
-    final synchronized int e(int param0) {
+    final synchronized int getOverallProgress(int param0) {
         int var2;
         int var3;
         int var4;
@@ -575,7 +575,7 @@ final class ResourceArchive {
         return var4Lifetime1;
     }
 
-    final static void a(double param0, byte param1, double param2, double param3) {
+    final static void moveProjectionTarget(double param0, byte param1, double param2, double param3) {
         CachedArchiveSource.field_C = CachedArchiveSource.field_C + param2;
         if (param1 <= 125) {
           field_g = false;
@@ -609,7 +609,7 @@ final class ResourceArchive {
         }
     }
 
-    final static int a(int param0, int param1, byte param2) {
+    final static int hitTestMenuAction(int param0, int param1, byte param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -652,7 +652,7 @@ final class ResourceArchive {
         }
     }
 
-    final int a(boolean param0, int param1) {
+    final int getFileIdCapacity(boolean param0, int param1) {
         if (!this.isValidGroup((byte) 87, param1)) {
           return 0;
         }
@@ -903,7 +903,7 @@ final class ResourceArchive {
         }
     }
 
-    final synchronized boolean b(byte param0, int param1) {
+    final synchronized boolean ensurePackedGroup(byte param0, int param1) {
         if (!this.isValidGroup((byte) 97, param1)) {
           return false;
         }

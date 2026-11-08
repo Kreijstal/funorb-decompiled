@@ -291,7 +291,7 @@ final class PlayerContextMenu {
         }
     }
 
-    final boolean a(byte param0) {
+    final boolean consumeSelection(byte param0) {
         if (param0 != -52) {
           return false;
         }
@@ -321,7 +321,7 @@ final class PlayerContextMenu {
           if (param2 < -13) {
             return true;
           }
-          this.a((byte) 0);
+          this.consumeSelection((byte) 0);
           return true;
         }
         if (param0 == 5) {
@@ -333,7 +333,7 @@ final class PlayerContextMenu {
           if (param2 < -13) {
             return true;
           }
-          this.a((byte) 0);
+          this.consumeSelection((byte) 0);
           return true;
         }
         if (param0 == 6) {
@@ -345,7 +345,7 @@ final class PlayerContextMenu {
           if (param2 < -13) {
             return true;
           }
-          this.a((byte) 0);
+          this.consumeSelection((byte) 0);
           return true;
         }
         if (7 != param0) {
@@ -358,7 +358,7 @@ final class PlayerContextMenu {
         if (param2 < -13) {
           return true;
         }
-        this.a((byte) 0);
+        this.consumeSelection((byte) 0);
         return true;
     }
 
@@ -376,7 +376,7 @@ final class PlayerContextMenu {
         var5 = Kickabout.field_G;
         if (0 != param0) {
           if (1 == param0) {
-            MenuSelection.a(80, param1, this.field_b);
+            MenuSelection.sendLobbyPlayerRemoval(80, param1, this.field_b);
           } else {
             if (param0 == 2) {
               AuctionsScreen.sendAuctionAction(this.field_c, param1, (byte) -83);
@@ -643,7 +643,7 @@ final class PlayerContextMenu {
             if (0 == ConsoleTokenCursor.field_b) {
               this.field_j.addItem(param1 ^ 11, 12, PlayerInputFactory.field_d);
             }
-            this.field_j.addItem(param1 - 11, 13, GameModeDefinition.field_a);
+            this.field_j.addItem(param1 - 11, 13, KitStyleDefinition.field_a);
           }
           if (param0.field_c == 2) {
             if (0 == LoginResponseUiSupport.field_a) {

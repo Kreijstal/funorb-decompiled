@@ -24,7 +24,7 @@ final class AuctionsHelpScreen extends PagedHelpScreen {
         }
     }
 
-    final static MeshData a(int param0, int param1, boolean param2, int param3) {
+    final static MeshData createKitMesh(int param0, int param1, boolean param2, int param3) {
         int stackIn_7_0 = 0;
         int stackIn_24_0 = 0;
         boolean[][] var4;
@@ -59,11 +59,11 @@ final class AuctionsHelpScreen extends PagedHelpScreen {
         int var18Lifetime1;
         boolean[][] var27Lifetime1;
         var19 = Kickabout.field_G;
-        var25 = AnimationSkeleton.field_g[param0].field_l[0];
+        var25 = AnimationSkeleton.field_g[param0].patternMasks[0];
         var22 = var25;
         var20 = var22;
         var4 = var20;
-        var27 = AnimationSkeleton.field_g[param0].field_l[1];
+        var27 = AnimationSkeleton.field_g[param0].patternMasks[1];
         var24 = var27;
         var5 = var24;
         var6 = (short)param3;
@@ -78,7 +78,7 @@ final class AuctionsHelpScreen extends PagedHelpScreen {
             var17 = var16;
             stackIn_7_0 = (!var20[-var14 + 12][var17]) ? var6 : var7;
             var10 = stackIn_7_0;
-            var9 = HuffmanCodec.a(var15, var13, 120, 7);
+            var9 = HuffmanCodec.packHslColor(var15, var13, 120, 7);
             for (var18 = 0; var18 < var29.length; var18++) {
               if (var29[var18] == var9) {
                 var12[var18] = (short)var10;
@@ -96,7 +96,7 @@ final class AuctionsHelpScreen extends PagedHelpScreen {
             var17Lifetime1 = 9 - var16Lifetime1;
             stackIn_24_0 = (var5[-var14Lifetime1 + 12][var17Lifetime1]) ? var7 : var6;
             var10Lifetime1 = stackIn_24_0;
-            var9Lifetime1 = HuffmanCodec.a(var15Lifetime1, var13Lifetime1, 119, 6);
+            var9Lifetime1 = HuffmanCodec.packHslColor(var15Lifetime1, var13Lifetime1, 119, 6);
             var15Lifetime1 += 5;
             var21 = 0;
             var18Lifetime1 = var21;
@@ -188,8 +188,8 @@ final class AuctionsHelpScreen extends PagedHelpScreen {
         try {
           var1_int = 0;
           while (TexturedPanelPainter.$cfr$intArgs$b$c4997cb15529(-59)) {
-            CheckboxPainter.field_c.d(105);
-            if (!CheckboxPainter.field_c.c(-1)) {
+            CheckboxPainter.field_c.handleVerticalArrowKeys(105);
+            if (!CheckboxPainter.field_c.isActivated(-1)) {
               continue;
             }
             var1_int = 1;
@@ -197,8 +197,8 @@ final class AuctionsHelpScreen extends PagedHelpScreen {
           if (param0 >= -35) {
             AuctionsHelpScreen.releaseStatics(true);
           }
-          CheckboxPainter.field_c.a(-21174, PitchCoordinateSupport.hitTestMenuRows(ArchiveManager.field_m, BytePlusOneCommand.field_A, 16756), PitchCoordinateSupport.hitTestMenuRows(ReceivedAuctionItem.field_y, HighScoreSubmission.field_q, 16756));
-          if (CheckboxPainter.field_c.c(-1)) {
+          CheckboxPainter.field_c.updatePointerSelection(-21174, PitchCoordinateSupport.hitTestMenuRows(ArchiveManager.field_m, BytePlusOneCommand.field_A, 16756), PitchCoordinateSupport.hitTestMenuRows(ReceivedAuctionItem.field_y, HighScoreSubmission.field_q, 16756));
+          if (CheckboxPainter.field_c.isActivated(-1)) {
             var1_int = 1;
           }
           var2 = 0;

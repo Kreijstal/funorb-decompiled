@@ -13,7 +13,7 @@ final class AuctionLogEntry extends IntrusiveNode {
     int logType;
     static StringBuilder field_m;
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_h = null;
         field_j = null;
         if (param0 <= 46) {
@@ -82,7 +82,7 @@ final class AuctionLogEntry extends IntrusiveNode {
             var6 = (java.applet.Applet) null;
             AuctionLogEntry.openSubscribePage((java.applet.Applet) null, (byte) -14);
           }
-          stackIn_6_0 = SocialListProtocolSupport.createBinaryFont(12015, param1.b(param3, -32669, param2));
+          stackIn_6_0 = SocialListProtocolSupport.createBinaryFont(12015, param1.takeFile(param3, -32669, param2));
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -167,7 +167,7 @@ final class AuctionLogEntry extends IntrusiveNode {
             return stackIn_24_0;
           }
           if (param2 < 101) {
-            AuctionLogEntry.b(68);
+            AuctionLogEntry.releaseStatics(68);
           }
           if (param0 != 14) {
             return null;
@@ -196,17 +196,17 @@ final class AuctionLogEntry extends IntrusiveNode {
         MouseWheelInput.a((byte) -125, param0);
     }
 
-    final static Sprite[] a(int param0, int param1, int param2, int param3) {
+    final static Sprite[] createSolidNineSliceSprites(int param0, int param1, int param2, int param3) {
         int var5 = 0;
         int var7 = Kickabout.field_G;
         Sprite[] var8 = new Sprite[9];
         Sprite[] var4 = var8;
-        var8[0] = BroadcastServerCommand.a(param2, (byte) -96, param0);
+        var8[0] = BroadcastServerCommand.createSolidSprite(param2, (byte) -96, param0);
         for (var5 = 1; var5 < 9; var5++) {
           var8[var5] = var8[0];
         }
         int var6 = -119 % ((param3 - 38) / 60);
-        var8[4] = BroadcastServerCommand.a(param1, (byte) -96, 64);
+        var8[4] = BroadcastServerCommand.createSolidSprite(param1, (byte) -96, 64);
         return var4;
     }
 
@@ -229,12 +229,12 @@ final class AuctionLogEntry extends IntrusiveNode {
         }
     }
 
-    final static boolean e(int param0) {
+    final static boolean isLoggedInJagexModerator(int param0) {
         boolean stackIn_6_0 = false;
         if (param0 != 15137) {
           return false;
         }
-        stackIn_6_0 = (!PlayArea.a(100)) && (2 <= ScrollContainer.field_Ib);
+        stackIn_6_0 = (!PlayArea.isGuestSession(100)) && (2 <= ScrollContainer.field_Ib);
         return stackIn_6_0;
     }
 

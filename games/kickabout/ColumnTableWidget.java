@@ -316,7 +316,7 @@ class ColumnTableWidget extends UiLayoutNode {
             stackIn_10_0 = 1;
           }
           var4 = stackIn_10_0;
-          AuctionListing.a(var13.field_F + var13.field_q, -22914, var13.field_F, var13.field_T - (-var13.field_mb + 1), var13.field_T);
+          AuctionListing.pushRasterClip(var13.field_F + var13.field_q, -22914, var13.field_F, var13.field_T - (-var13.field_mb + 1), var13.field_T);
           stackIn_13_0 = (var4 != 0) ? 65793 : 5592405;
           var5_int = stackIn_13_0;
           SoftwareRasterizer.fillRoundedRectangleBlended(1 + var13.field_F, var13.field_T, -1 + var13.field_q, 40, 10, 16777215, 60);
@@ -348,7 +348,7 @@ class ColumnTableWidget extends UiLayoutNode {
           }
           ConsoleTokenCursor.field_d.drawCentered(var13.field_E, var6, var7, 16777215, var5_int);
         }
-        AuctionListing.a(this.field_Cb.field_q + this.field_Cb.field_F, -22914, this.field_Cb.field_F, this.field_Cb.field_mb + this.field_Cb.field_T, this.field_Cb.field_T);
+        AuctionListing.pushRasterClip(this.field_Cb.field_q + this.field_Cb.field_F, -22914, this.field_Cb.field_F, this.field_Cb.field_mb + this.field_Cb.field_T, this.field_Cb.field_T);
         var2Lifetime1 = 103 % ((param0 - 33) / 56);
         var14 = this.field_Fb;
         for (var4Lifetime1 = 0; var14.length > var4Lifetime1; var4Lifetime1++) {

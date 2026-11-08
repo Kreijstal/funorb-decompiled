@@ -322,7 +322,7 @@ final class LineupView extends MatchPhaseView {
           }
           BytePlusOneCommand.a(stackIn_2_0, stackIn_2_1, (ScrollPane) (stackIn_2_2), stackIn_2_3, stackIn_2_4, (int[]) (stackIn_2_5), stackIn_2_6, stackIn_2_7, stackIn_3_8);
           if (param0.field_c == 0 &&
-            !CachedArchiveSource.c((byte) -121) &&
+            !CachedArchiveSource.isPublicChatInputActive((byte) -121) &&
             null == PlayerContextMenu.field_i &&
             ArchiveSource.field_b == null) {
             if (!WriteIntegersCommand.field_C) {
@@ -335,9 +335,9 @@ final class LineupView extends MatchPhaseView {
             var7.field_j.addItem(0, 20, var8);
           }
           if (param0.field_c == 1 &&
-            !CachedArchiveSource.c((byte) -121) &&
+            !CachedArchiveSource.isPublicChatInputActive((byte) -121) &&
             PlayerContextMenu.field_i != null &&
-            param0.field_n == PlayerContextMenu.field_i.h((byte) -105)) {
+            param0.field_n == PlayerContextMenu.field_i.getGameId((byte) -105)) {
             if (!WriteIntegersCommand.field_C) {
               var9 = TextButton.field_v;
               var10 = LoginDialog.field_db;
@@ -466,7 +466,7 @@ final class LineupView extends MatchPhaseView {
         }
         if (this.field_v) {
           this.drawTeamParticipantRows(this.field_h, 240, (byte) -60, 412);
-          AuctionListing.a(640, -22914, 574, 480, 0);
+          AuctionListing.pushRasterClip(640, -22914, 574, 480, 0);
           var4Lifetime5 = 263;
           var11 = 0;
           var5_intLifetime1 = var11;
@@ -523,9 +523,9 @@ final class LineupView extends MatchPhaseView {
         RuntimeException var6_ref = null;
         var8 = Kickabout.field_G;
         try {
-          GameModeDefinition.field_c = param3.getParameter("overxgames");
-          if (null == GameModeDefinition.field_c) {
-            GameModeDefinition.field_c = "0";
+          KitStyleDefinition.field_c = param3.getParameter("overxgames");
+          if (null == KitStyleDefinition.field_c) {
+            KitStyleDefinition.field_c = "0";
           }
           RenderedFootballer.field_lb = param3.getParameter("overxachievements");
           if (null == RenderedFootballer.field_lb) {
@@ -581,7 +581,7 @@ final class LineupView extends MatchPhaseView {
           return;
         }
         if (this.field_f) {
-          FootballerAiOverlaySupport.field_d.b(74, (byte) 121);
+          FootballerAiOverlaySupport.field_d.writeIsaacByte(74, (byte) 121);
           FootballerAiOverlaySupport.field_d.writeShort(-1207444472, param1);
         }
     }

@@ -39,25 +39,25 @@ final class PlayerInputEvent extends DualLinkNode {
         if (!SceneSpriteFactory.field_b.ensureIndex(-78)) {
           return CommonGame.field_M;
         }
-        if (!SceneSpriteFactory.field_b.a(false, "commonui")) {
+        if (!SceneSpriteFactory.field_b.ensurePackedGroupByName(false, "commonui")) {
           return BufferedSocket.field_q + " - " + SceneSpriteFactory.field_b.getGroupProgressByName("commonui", -16248) + "%";
         }
         if (!SelectionMarkerSupport.field_c.ensureIndex(-122)) {
           return QuickChatMenuFactory.field_b;
         }
-        if (!SelectionMarkerSupport.field_c.a(false, "commonui")) {
+        if (!SelectionMarkerSupport.field_c.ensurePackedGroupByName(false, "commonui")) {
           return TextLine.field_l + " - " + SelectionMarkerSupport.field_c.getGroupProgressByName("commonui", -16248) + "%";
         }
         if (!PlayerStats.field_k.ensureIndex(-96)) {
           return TeamSelectionAgent.field_l;
         }
         if (!PlayerStats.field_k.ensureAllGroupsAvailable(false)) {
-          return SumIntegersCommand.field_H + " - " + PlayerStats.field_k.e(-8185) + "%";
+          return SumIntegersCommand.field_H + " - " + PlayerStats.field_k.getOverallProgress(-8185) + "%";
         }
         return RegistrationUiSupport.field_a;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 0) {
           return;
         }
@@ -113,7 +113,7 @@ final class PlayerInputEvent extends DualLinkNode {
             for (var6_int = 1; var6_int < var4; var6_int++) {
               FindingOpponentScreen.field_B[var6_int] = var14.readString(124);
             }
-            ArchiveManager.a(-20669, var4, var5);
+            ArchiveManager.prepareRankingStatistics(-20669, var4, var5);
             for (var6_intLifetime1 = 0; var6_intLifetime1 < var4; var6_intLifetime1++) {
               ByteStorage.a(var14, 542439655);
               if (var6_intLifetime1 == 0) {

@@ -87,16 +87,16 @@ final class AnimationFrameset extends DualLinkNode {
           return true;
         }
         if (null == this.pendingFrameBytes) {
-          if (!ListingRowCache.field_c.b((byte) 20, this.groupId)) {
+          if (!ListingRowCache.field_c.ensurePackedGroup((byte) 20, this.groupId)) {
             return false;
           }
-          var21 = ListingRowCache.field_c.c(this.groupId, 4);
+          var21 = ListingRowCache.field_c.getFileIds(this.groupId, 4);
           var17 = var21;
           var14 = var17;
           var2_ref_int__ = var14;
           this.pendingFrameBytes = new byte[var21.length][];
           for (var3_int = 0; var21.length > var3_int; var3_int++) {
-            this.pendingFrameBytes[var3_int] = ListingRowCache.field_c.b(this.groupId, -32669, var21[var3_int]);
+            this.pendingFrameBytes[var3_int] = ListingRowCache.field_c.takeFile(this.groupId, -32669, var21[var3_int]);
           }
         }
         var2 = 1;
@@ -115,9 +115,9 @@ final class AnimationFrameset extends DualLinkNode {
         }
         var5 = 57 % ((param0 - 36) / 42);
         var3 = new IntrusiveDeque();
-        var4 = ListingRowCache.field_c.a(true, this.groupId);
+        var4 = ListingRowCache.field_c.getFileIdCapacity(true, this.groupId);
         this.frames = new AnimationFrame[var4];
-        var29 = ListingRowCache.field_c.c(this.groupId, 4);
+        var29 = ListingRowCache.field_c.getFileIds(this.groupId, 4);
         for (var7 = 0; var29.length > var7; var7++) {
           var30 = this.pendingFrameBytes[var7];
           var9 = new PacketBuffer(var30);

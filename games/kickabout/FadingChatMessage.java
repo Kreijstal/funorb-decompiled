@@ -13,7 +13,7 @@ final class FadingChatMessage extends IntrusiveNode {
         CipherPacketBuffer var3 = null;
         try {
           var3 = FootballerAiOverlaySupport.field_d;
-          var3.b(param0, (byte) 73);
+          var3.writeIsaacByte(param0, (byte) 73);
           var3.writeByte(115, 5);
           var3.writeByte(118, 0);
           if (param1 <= 71) {
@@ -66,7 +66,7 @@ final class FadingChatMessage extends IntrusiveNode {
         }
     }
 
-    final static boolean a(boolean param0, CharSequence param1, int param2) {
+    final static boolean isValidBasicDisplayName(boolean param0, CharSequence param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -80,7 +80,7 @@ final class FadingChatMessage extends IntrusiveNode {
             return false;
           }
           for (var3_int = param2; var3_int < param1.length(); var3_int++) {
-            if (!CheckboxLabelWidget.a(param1.charAt(var3_int), 160)) {
+            if (!CheckboxLabelWidget.isBasicDisplayNameCharacter(param1.charAt(var3_int), 160)) {
               return false;
             }
           }

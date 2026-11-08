@@ -22,7 +22,7 @@ final class DualLinkHashTable {
         field_c = null;
     }
 
-    final DualLinkNode a(int param0) {
+    final DualLinkNode next(int param0) {
         int fieldTemp$1 = 0;
         int fieldTemp$0 = 0;
         int var3;
@@ -62,7 +62,7 @@ final class DualLinkHashTable {
         return var9;
     }
 
-    final void a(DualLinkNode param0, byte param1, long param2) {
+    final void put(DualLinkNode param0, byte param1, long param2) {
         DualLinkNode var5 = null;
         if (param0.field_e != null) {
           param0.unlinkSecondary(param1 ^ 74);
@@ -82,15 +82,15 @@ final class DualLinkHashTable {
         }
     }
 
-    final DualLinkNode b(byte param0) {
+    final DualLinkNode first(byte param0) {
         this.field_g = 0;
         if (param0 != 72) {
           return (DualLinkNode) null;
         }
-        return this.a(0);
+        return this.next(0);
     }
 
-    final DualLinkNode a(byte param0) {
+    final DualLinkNode nextWithSameKey(byte param0) {
         DualLinkNode var2;
         DualLinkNode var3;
         int var4;
@@ -151,7 +151,7 @@ final class DualLinkHashTable {
         }
     }
 
-    final DualLinkNode a(int param0, long param1) {
+    final DualLinkNode get(int param0, long param1) {
         DualLinkNode var4;
         DualLinkNode var5;
         int var6;

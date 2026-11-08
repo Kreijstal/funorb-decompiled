@@ -26,7 +26,7 @@ final class PasswordFieldPainter extends BeveledTextPainter {
 
     final static int getDaysInMonth(int param0, int param1, int param2) {
         if (param0 == 1) {
-          if (GameModeDefinition.isLeapYear(-16143, param1)) {
+          if (KitStyleDefinition.isLeapYear(-16143, param1)) {
             return 29;
           }
           if (param2 <= -123) {
@@ -141,8 +141,8 @@ final class PasswordFieldPainter extends BeveledTextPainter {
           if (!param0) {
             return 0;
           }
-          AuctionItem.field_l.a(-21174, MatchTextInputOverlay.hitTestPairedControls(ArchiveManager.field_m, BytePlusOneCommand.field_A, (byte) 98), MatchTextInputOverlay.hitTestPairedControls(ReceivedAuctionItem.field_y, HighScoreSubmission.field_q, (byte) 69));
-          if (AuctionItem.field_l.c(-1)) {
+          AuctionItem.field_l.updatePointerSelection(-21174, MatchTextInputOverlay.hitTestPairedControls(ArchiveManager.field_m, BytePlusOneCommand.field_A, (byte) 98), MatchTextInputOverlay.hitTestPairedControls(ReceivedAuctionItem.field_y, HighScoreSubmission.field_q, (byte) 69));
+          if (AuctionItem.field_l.isActivated(-1)) {
             if (AuctionItem.field_l.selectedIndex == 0) {
               stackIn_58_0 = 3;
               return stackIn_58_0;
@@ -159,7 +159,7 @@ final class PasswordFieldPainter extends BeveledTextPainter {
               return stackIn_77_0;
             }
             AuctionItem.field_l.handleArrowKeys(0, true);
-            if (AuctionItem.field_l.c(param1 ^ 586)) {
+            if (AuctionItem.field_l.isActivated(param1 ^ 586)) {
               if (AuctionItem.field_l.selectedIndex == 0) {
                 stackIn_69_0 = 3;
                 return stackIn_69_0;

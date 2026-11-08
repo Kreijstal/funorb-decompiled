@@ -222,7 +222,7 @@ final class ReceivedAuctionItem extends AuctionItem {
         if (QuickChatCategory.field_s) {
           return -1;
         }
-        if (!QuickChatKeysHelpPanel.field_Cb.a(false, "beach")) {
+        if (!QuickChatKeysHelpPanel.field_Cb.ensurePackedGroupByName(false, "beach")) {
           return QuickChatKeysHelpPanel.field_Cb.getGroupProgressByName("beach", -16248);
         }
         QuickChatCategory.field_s = true;

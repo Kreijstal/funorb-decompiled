@@ -37,7 +37,7 @@ final class SpriteButtonPainter extends TextWidgetPainter {
         SoftwareRasterizer.drawThickRectangle(PitchOptionTile.field_yb - (var5 >> 1), 0, var5, var6, 2, 16777215);
         SoftwareRasterizer.drawThickRectangle(PitchOptionTile.field_yb - (var2 >> 1), -1 + (-var4 + IconLabel.field_Bb) + IconLabel.field_Bb, var2, var4, 2, 16777215);
         SoftwareRasterizer.drawThickRectangle(PitchOptionTile.field_yb - (var5 >> 1), -var6 + (IconLabel.field_Bb + IconLabel.field_Bb), var5, var6, 2, 16777215);
-        AuctionListing.a(PitchOptionTile.field_yb + PitchOptionTile.field_yb, -22914, 0, -var4 + (IconLabel.field_Bb + IconLabel.field_Bb), var4);
+        AuctionListing.pushRasterClip(PitchOptionTile.field_yb + PitchOptionTile.field_yb, -22914, 0, -var4 + (IconLabel.field_Bb + IconLabel.field_Bb), var4);
         Sprite var8 = LoginMethod.a(2, var3, true, 16777215);
         var8.c(-var3 + PitchOptionTile.field_yb, -var3 + var6);
         var8.c(PitchOptionTile.field_yb - var3, -var3 + (IconLabel.field_Bb + IconLabel.field_Bb) - var6);

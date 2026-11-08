@@ -17,7 +17,7 @@ abstract class ByteStorage {
         try {
           int var3_int = -84 / ((param2 + 50) / 61);
           var4 = FootballerAiOverlaySupport.field_d;
-          var4.b(param0, (byte) -80);
+          var4.writeIsaacByte(param0, (byte) -80);
           var4.writeByte(125, 2);
           var4.writeByte(119, 0);
           var4.writeByte(108, param1.tableId);

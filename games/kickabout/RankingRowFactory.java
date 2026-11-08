@@ -77,7 +77,7 @@ final class RankingRowFactory {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5 = param1.b(param2, -32669, param0);
+          var5 = param1.takeFile(param2, -32669, param0);
           var4 = var5;
           if (param3 <= 95) {
             return true;

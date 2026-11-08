@@ -45,7 +45,7 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
             }
             try {
               var2 = "tuhstatbut";
-              var3 = (String) (AppletJavaScriptBridge.a(30858, "getcookies", param1));
+              var3 = (String) (AppletJavaScriptBridge.callJavaScript(30858, "getcookies", param1));
               var4 = FormationAgent.a(var3, 2, ';');
               for (var5 = 0; var4.length > var5; var5++) {
                 var6 = var4[var5].indexOf('=');

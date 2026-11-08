@@ -425,9 +425,9 @@ final class ScrollBar extends UiLayoutNode {
         this.field_Bb.field_lb = param3 < param2 ? true : false;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 >= -117) {
-          ScrollBar.k(91);
+          ScrollBar.clearFadingSounds(91);
           field_Db = null;
           field_Eb = null;
           return;
@@ -679,7 +679,7 @@ final class ScrollBar extends UiLayoutNode {
         return false;
     }
 
-    final static void k(int param0) {
+    final static void clearFadingSounds(int param0) {
         FadingSoundSupport.detachAllFadingSounds((byte) -99);
         if (param0 != 0) {
           field_Eb = (String) null;

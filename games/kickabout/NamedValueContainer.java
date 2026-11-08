@@ -123,7 +123,7 @@ final class NamedValueContainer {
         boolean stackIn_154_2 = false;
         String var3;
         String var3Lifetime1;
-        AuctionListing.a(SoftwareRasterizer.field_g + 640 >> 1, -22914, -640 + SoftwareRasterizer.field_g >> 1, SoftwareRasterizer.field_f, 0);
+        AuctionListing.pushRasterClip(SoftwareRasterizer.field_g + 640 >> 1, -22914, -640 + SoftwareRasterizer.field_g >> 1, SoftwareRasterizer.field_f, 0);
         if (0 < NotificationPanelPositionSupport.field_a) {
           if (IntrusiveDeque.field_e != null) {
             IntrusiveDeque.field_e.d(UiKeyRoutingSupport.field_c.field_s, 0);
@@ -504,7 +504,7 @@ final class NamedValueContainer {
               decompiledCaughtException = decompiledCaughtParameter1;
               var8 = decompiledCaughtException;
               param0.field_n = var5;
-              throw NamedValueContainer.<RuntimeException>$cfr$sneakyThrow(var8);
+              throw NamedValueContainer.<RuntimeException>rethrowUnchecked(var8);
             }
             if (decompiledRegionSelector1 == 0) {
               param0.field_n = var5;
@@ -552,7 +552,7 @@ final class NamedValueContainer {
     }
 
     @SuppressWarnings("unchecked")
-    private static <T extends Throwable> RuntimeException $cfr$sneakyThrow(Throwable throwable) throws T {
+    private static <T extends Throwable> RuntimeException rethrowUnchecked(Throwable throwable) throws T {
         throw (T) throwable;
     }
 }

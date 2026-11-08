@@ -151,7 +151,7 @@ final class TrinketSlot extends UiLayoutNode implements PopupCard {
                 var21 = var20;
                 stackIn_29_0 = (param2[-var18 + 12][var21]) ? var11 : var9Lifetime1;
                 var14 = stackIn_29_0;
-                var13Lifetime1 = HuffmanCodec.a(var19, var17Lifetime1, -67, 7);
+                var13Lifetime1 = HuffmanCodec.packHslColor(var19, var17Lifetime1, -67, 7);
                 var19 += 5;
                 for (var22 = 0; var30.length > var22; var22++) {
                   if (~var30[var22] == ~var13Lifetime1) {
@@ -170,7 +170,7 @@ final class TrinketSlot extends UiLayoutNode implements PopupCard {
                 var21Lifetime1 = 9 - var20Lifetime1;
                 stackIn_45_0 = (param4[12 - var18Lifetime1][var21Lifetime1]) ? var11 : var9Lifetime1;
                 var14Lifetime1 = stackIn_45_0;
-                var13Lifetime2 = HuffmanCodec.a(var19Lifetime1, var17Lifetime2, -45, 6);
+                var13Lifetime2 = HuffmanCodec.packHslColor(var19Lifetime1, var17Lifetime2, -45, 6);
                 var19Lifetime1 += 5;
                 var25 = 0;
                 var22Lifetime1 = var25;
@@ -222,7 +222,7 @@ final class TrinketSlot extends UiLayoutNode implements PopupCard {
         InstrumentEnvelope.field_a.writeByte(112, param2);
         InstrumentEnvelope.field_a.writeShort(-1207444472, param1);
         InstrumentEnvelope.field_a.rsaEncrypt(CascadingMenu.field_Nb, ManagerAction.field_h, 38);
-        FootballerAiOverlaySupport.field_d.b(18, (byte) -83);
+        FootballerAiOverlaySupport.field_d.writeIsaacByte(18, (byte) -83);
         int fieldTemp$0 = FootballerAiOverlaySupport.field_d.field_n + 1;
         FootballerAiOverlaySupport.field_d.field_n = FootballerAiOverlaySupport.field_d.field_n + 1;
         int var4 = fieldTemp$0;

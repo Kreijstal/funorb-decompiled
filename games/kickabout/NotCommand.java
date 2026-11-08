@@ -10,12 +10,12 @@ final class NotCommand extends ConsoleCommand {
 
     final static void g(byte param0) {
         if (param0 == -47) {
-          WeightedLruCache.a(0);
+          WeightedLruCache.layoutAnimatedChatPanel(0);
           SharedChatLayoutSupport.layoutChatAndSidePanels(param0 - 24776, ClassDescriptorSupport.field_d[0].field_o, BytePlusOneCommand.field_I, DiskCacheWorker.field_b, LineupPositionSupport.field_c, TeamSelectionAgent.field_f);
           return;
         }
         NotCommand.a(83, false, -82, 24, true, (byte) 68);
-        WeightedLruCache.a(0);
+        WeightedLruCache.layoutAnimatedChatPanel(0);
         SharedChatLayoutSupport.layoutChatAndSidePanels(param0 - 24776, ClassDescriptorSupport.field_d[0].field_o, BytePlusOneCommand.field_I, DiskCacheWorker.field_b, LineupPositionSupport.field_c, TeamSelectionAgent.field_f);
     }
 
@@ -33,7 +33,7 @@ final class NotCommand extends ConsoleCommand {
         int var7 = SoftwareRasterizer.field_g;
         int var8 = SoftwareRasterizer.field_f;
         Sprite var9 = new Sprite(16, param0);
-        var9.e();
+        var9.setRasterTarget();
         if (param5 == -46) {
           SoftwareRasterizer.fillVerticalGradient(0, 0, 16, param0, param2, param3);
           var10 = null;
@@ -41,7 +41,7 @@ final class NotCommand extends ConsoleCommand {
           if (param4) {
             var19 = var9.copy();
             var10 = var19;
-            var19.e();
+            var19.setRasterTarget();
             SoftwareRasterizer.drawHorizontalLine(0, 0, 5, 0);
             SoftwareRasterizer.drawHorizontalLine(0, 1, 3, 0);
             SoftwareRasterizer.drawHorizontalLine(0, 2, 2, 0);
@@ -51,7 +51,7 @@ final class NotCommand extends ConsoleCommand {
           if (param1) {
             var20 = var9.copy();
             var11 = var20;
-            var20.e();
+            var20.setRasterTarget();
             SoftwareRasterizer.drawHorizontalLine(11, 0, 5, 0);
             SoftwareRasterizer.drawHorizontalLine(13, 1, 3, 0);
             SoftwareRasterizer.drawHorizontalLine(14, 2, 2, 0);
@@ -68,7 +68,7 @@ final class NotCommand extends ConsoleCommand {
         if (param4) {
           var17 = var9.copy();
           var10 = var17;
-          var17.e();
+          var17.setRasterTarget();
           SoftwareRasterizer.drawHorizontalLine(0, 0, 5, 0);
           SoftwareRasterizer.drawHorizontalLine(0, 1, 3, 0);
           SoftwareRasterizer.drawHorizontalLine(0, 2, 2, 0);
@@ -78,7 +78,7 @@ final class NotCommand extends ConsoleCommand {
         if (param1) {
           var18 = var9.copy();
           var11 = var18;
-          var18.e();
+          var18.setRasterTarget();
           SoftwareRasterizer.drawHorizontalLine(11, 0, 5, 0);
           SoftwareRasterizer.drawHorizontalLine(13, 1, 3, 0);
           SoftwareRasterizer.drawHorizontalLine(14, 2, 2, 0);

@@ -53,7 +53,7 @@ final class AuctionListing extends IntrusiveNode {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4) {
+    final static void pushRasterClip(int param0, int param1, int param2, int param3, int param4) {
         try {
           ClientUiOverlay.pushRasterState(-12974);
           SoftwareRasterizer.intersectClip(param2, param4, param0, param3);
@@ -129,7 +129,7 @@ final class AuctionListing extends IntrusiveNode {
             field_l = (String[]) null;
           }
           var2 = FootballerAiOverlaySupport.field_d;
-          var2.b(param1, (byte) 83);
+          var2.writeIsaacByte(param1, (byte) 83);
           var2.writeByte(110, 1);
           var2.writeByte(123, 0);
           return;
@@ -307,7 +307,7 @@ final class AuctionListing extends IntrusiveNode {
                 }
                 var2 = HighScoreQuery.loadNamedResource((byte) -86, "error_js5connect");
                 if (var2 != null) {
-                  FormationMaskSupport.field_b = BlackFadeScreen.a(var2, true);
+                  KitPatternMaskSupport.field_b = BlackFadeScreen.a(var2, true);
                 }
                 var2 = HighScoreQuery.loadNamedResource((byte) -120, "login_gameupdated");
                 if (null != var2) {
@@ -683,7 +683,7 @@ final class AuctionListing extends IntrusiveNode {
                 }
                 var2 = HighScoreQuery.loadNamedResource((byte) -50, "mu_chat_game_hide");
                 if (null != var2) {
-                  GameModeDefinition.field_a = BlackFadeScreen.a(var2, true);
+                  KitStyleDefinition.field_a = BlackFadeScreen.a(var2, true);
                 }
                 var2 = HighScoreQuery.loadNamedResource((byte) -98, "mu_chat_pm_show_all");
                 if (null != var2) {

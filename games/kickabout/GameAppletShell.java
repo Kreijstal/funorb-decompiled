@@ -822,7 +822,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           this.field_e = true;
           System.out.println("error_game_" + param1);
           try {
-            AppletJavaScriptBridge.a(30858, "loggedout", AppletContextSupport.getActiveApplet(-90));
+            AppletJavaScriptBridge.callJavaScript(30858, "loggedout", AppletContextSupport.getActiveApplet(-90));
           } catch (Throwable throwable) {
           }
           try {

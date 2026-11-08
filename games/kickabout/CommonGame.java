@@ -71,7 +71,7 @@ final class CommonGame {
           if (param1 != -5) {
             CommonGame.b(false);
           }
-          param0.p(-103);
+          param0.beginBitRead(-103);
           this.phaseTime = LoadingProgressSupport.readFourRangeBits(param1 ^ -19886, 8, 0, 4, param0, 16) - 1;
           var3_int = 0;
           do {
@@ -136,7 +136,7 @@ final class CommonGame {
             }
             this.bigHeadMode = ContentTransitionDialog.a(param0, (byte) -39);
           }
-          param0.l((byte) 115);
+          param0.finishBitRead((byte) 115);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -2381,7 +2381,7 @@ final class CommonGame {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          FootballerAiOverlaySupport.field_d.b(param3, (byte) 77);
+          FootballerAiOverlaySupport.field_d.writeIsaacByte(param3, (byte) 77);
           FootballerAiOverlaySupport.field_d.field_n = FootballerAiOverlaySupport.field_d.field_n + 1;
           var7_int = FootballerAiOverlaySupport.field_d.field_n;
           FootballerAiOverlaySupport.field_d.writeLong(param1, -1781890008);
@@ -3024,7 +3024,7 @@ final class CommonGame {
         int var5Lifetime3Lifetime1;
         var7 = Kickabout.field_G;
         try {
-          param0.p(param2 ^ -118);
+          param0.beginBitRead(param2 ^ -118);
           var4_int = 0;
           do {
             if (var4_int >= this.playerCount) {
@@ -3095,7 +3095,7 @@ final class CommonGame {
                 var4_int++;
                 continue;
               }
-              param0.l((byte) 121);
+              param0.finishBitRead((byte) 121);
               stackIn_51_0 = 0;
               break;
             }
@@ -3114,7 +3114,7 @@ final class CommonGame {
               var4_int++;
             }
             if (decompiledFrameCompleted1) {
-              param0.p(-116);
+              param0.beginBitRead(-116);
             }
           }
           if (decompiledFrameCompleted1) {
@@ -3230,7 +3230,7 @@ final class CommonGame {
             }
             this.bigHeadMode = ContentTransitionDialog.a(param0, (byte) -39);
           }
-          param0.l((byte) 95);
+          param0.finishBitRead((byte) 95);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

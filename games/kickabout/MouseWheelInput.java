@@ -23,7 +23,7 @@ abstract class MouseWheelInput {
     }
 
     final static void a(byte param0, boolean param1) {
-        if (WeightedLruCache.a(false)) {
+        if (WeightedLruCache.hasBlockingInputPopup(false)) {
           param1 = false;
         }
         ScrollBar.a((byte) 123, param1);
@@ -251,7 +251,7 @@ abstract class MouseWheelInput {
     }
 
     final static void a(int param0) {
-        FootballerAiOverlaySupport.field_d.b(9, (byte) -52);
+        FootballerAiOverlaySupport.field_d.writeIsaacByte(9, (byte) -52);
         if (param0 != -1822) {
           MouseWheelInput.a(-16, -37);
           LoginText.field_e = true;

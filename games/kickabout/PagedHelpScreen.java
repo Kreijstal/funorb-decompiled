@@ -36,7 +36,7 @@ abstract class PagedHelpScreen extends ButtonMenuScreen {
     boolean handleKey(int param0, int param1, char param2) {
         this.buttonSelection.handleArrowKeys(1, true);
         if (this.buttonSelection.selectedIndex >= 0 &&
-          this.buttonSelection.c(-1)) {
+          this.buttonSelection.isActivated(-1)) {
           this.buttons[this.buttonSelection.selectedIndex].activate(-1, false);
           return true;
         }

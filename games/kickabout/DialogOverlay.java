@@ -345,7 +345,7 @@ final class DialogOverlay implements OverlayLayer {
             var12.field_q = ShopPlayerSlot.field_Jb.field_Ab.field_q;
             var31 = 0;
             var32 = var12.field_ec;
-            if (!var12.b(-7)) {
+            if (!var12.isDetachedFromGameTable(-7)) {
               boolean decompiledFrameRemainder1 = true;
               if (!var12.field_Cb) {
                 if (!var12.field_Xb &&
@@ -594,18 +594,18 @@ final class DialogOverlay implements OverlayLayer {
             }
             boolean decompiledFrameRemainder0 = true;
             if (0 != var12.field_sb &&
-              !var12.b(-7)) {
+              !var12.isDetachedFromGameTable(-7)) {
               if (var12.field_Lb.field_sb == 0) {
                 DebugConsole.a(15, var12, param4, var32);
               } else {
                 if (var12.field_Cb && (!var12.field_ic ||
                   !var12.field_Xb &&
                   !var12.field_hc)) {
-                  GameLoopApplet.b(15848, param2, var12.h((byte) 92));
+                  GameLoopApplet.b(15848, param2, var12.getGameId((byte) 92));
                   decompiledFrameRemainder0 = false;
                 }
                 else {
-                  AuctionsScreen.sendAuctionAction(var12.h((byte) -87), param2, (byte) -59);
+                  AuctionsScreen.sendAuctionAction(var12.getGameId((byte) -87), param2, (byte) -59);
                 }
               }
             }

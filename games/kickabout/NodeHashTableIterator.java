@@ -77,7 +77,7 @@ final class NodeHashTableIterator implements Iterator {
 
     public static void releaseStatics(int param0) {
         if (param0 != 1) {
-          NodeHashTableIterator.a(-70, -86, -1);
+          NodeHashTableIterator.handleQuickChatKey(-70, -86, -1);
           field_a = null;
           field_c = null;
           return;
@@ -89,7 +89,7 @@ final class NodeHashTableIterator implements Iterator {
     final static void a(int param0, int param1) {
         CipherPacketBuffer var2 = FootballerAiOverlaySupport.field_d;
         int var3 = -31 / ((param0 - 40) / 56);
-        var2.b(param1, (byte) 120);
+        var2.writeIsaacByte(param1, (byte) 120);
         var2.writeByte(106, 1);
         var2.writeByte(119, 0);
     }
@@ -126,13 +126,13 @@ final class NodeHashTableIterator implements Iterator {
         this.field_g = null;
     }
 
-    private final void b(int param0) {
+    private final void reset(int param0) {
         this.field_e = this.field_d.field_e[param0].field_d;
         this.field_f = 1;
         this.field_g = null;
     }
 
-    final static boolean a(int param0, int param1, int param2) {
+    final static boolean handleQuickChatKey(int param0, int param1, int param2) {
         if (~FixedQuaternion.field_e == param1) {
           ClientInteractionSupport.dismissQuickChat((byte) 124);
           return true;
@@ -154,7 +154,7 @@ final class NodeHashTableIterator implements Iterator {
         this.field_g = null;
         try {
           this.field_d = param0;
-          this.b(0);
+          this.reset(0);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "ov.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

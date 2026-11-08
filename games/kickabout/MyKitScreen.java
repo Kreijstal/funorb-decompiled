@@ -56,7 +56,7 @@ final class MyKitScreen extends TeamManagementScreen {
           }
           if (!var4_ref_nt.field_Ib &&
             !var4_ref_nt.field_Kb) {
-            ModalPanel.a(var4_ref_nt.field_Cb.field_m, (byte) -38);
+            ModalPanel.a(var4_ref_nt.field_Cb.styleId, (byte) -38);
           }
           var4_ref_nt = (KitStyleTile) (this.field_F.field_jb.c(33));
         }
@@ -103,11 +103,11 @@ final class MyKitScreen extends TeamManagementScreen {
     final void enterScreen(int param0, int param1, boolean param2) {
         int var6_int = 0;
         int var7 = 0;
-        GameModeDefinition[] var5_ref_rd__;
+        KitStyleDefinition[] var5_ref_rd__;
         int var5;
         UiLayoutNode var6;
         PlayerStats[] var6_array;
-        GameModeDefinition var7_ref_rd;
+        KitStyleDefinition var7_ref_rd;
         PlayerStats var8;
         int var9;
         PlayerStats[] var10;
@@ -122,7 +122,7 @@ final class MyKitScreen extends TeamManagementScreen {
         var5_ref_rd__ = AnimationSkeleton.field_f;
         for (var6_int = 0; var5_ref_rd__.length > var6_int; var6_int++) {
           var7_ref_rd = var5_ref_rd__[var6_int];
-          if (var7_ref_rd.a(RegistrationRequestState.field_h.field_e, param0 + 109, ScrollContainer.field_Ib)) {
+          if (var7_ref_rd.matchesAccessRequirements(RegistrationRequestState.field_h.field_e, param0 + 109, ScrollContainer.field_Ib)) {
             var11.addLast(new KitStyleTile(RegistrationRequestState.field_h, var7_ref_rd), 3);
           }
         }
@@ -275,7 +275,7 @@ final class MyKitScreen extends TeamManagementScreen {
           ByteArrayPool.field_d.drawText(ImageProducerRasterBuffer.field_j[var3], 6 + this.field_J[var3].field_F, -8 + this.field_J[var3].field_T, 16777215, -1);
         }
         this.field_P.draw(114, false);
-        AuctionListing.a(this.field_G.field_F + this.field_G.field_q, -22914, this.field_G.field_F, this.field_G.field_mb + this.field_G.field_T, this.field_G.field_T);
+        AuctionListing.pushRasterClip(this.field_G.field_F + this.field_G.field_q, -22914, this.field_G.field_F, this.field_G.field_mb + this.field_G.field_T, this.field_G.field_T);
         var7 = (KitStyleTile) (this.field_F.field_jb.g(24009));
         while (var7 != null) {
           var7.h(-24508);

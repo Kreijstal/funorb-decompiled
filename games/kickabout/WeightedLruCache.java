@@ -28,7 +28,7 @@ final class WeightedLruCache {
         this(param0, param0);
     }
 
-    final static void a(int param0) {
+    final static void layoutAnimatedChatPanel(int param0) {
         int var1 = TextPromptDialog.field_Bb * TextPromptDialog.field_Bb;
         int var2 = -(SharedPanelFactory.field_b * SharedPanelFactory.field_b) + var1;
         int var3 = ClientPacketFlushSupport.field_c + var2 * (-ClientPacketFlushSupport.field_c + VerticalScrollbar.field_Ab) / var1;
@@ -36,9 +36,9 @@ final class WeightedLruCache {
         RankingRowNode.a(124, PitchAppearanceSupport.field_b, 640, 5, DiskCacheWorker.field_b, VerticalScrollbar.field_Ab - 24, param0);
     }
 
-    final static boolean a(boolean param0) {
+    final static boolean hasBlockingInputPopup(boolean param0) {
         if (param0) {
-          WeightedLruCache.a(21);
+          WeightedLruCache.layoutAnimatedChatPanel(21);
           if (null != TextButton.field_v) {
             return true;
           }
@@ -85,7 +85,7 @@ final class WeightedLruCache {
           MatchHudSupport.field_g = MatchTextInputOverlay.field_c;
           LoginCredentials.field_e = 0;
           AuctionItem.field_l = new MenuSelection(2);
-          AuctionItem.field_l.a(MatchTextInputOverlay.hitTestPairedControls(ArchiveManager.field_m, BytePlusOneCommand.field_A, (byte) 42), 0, -1, param1);
+          AuctionItem.field_l.restoreSelection(MatchTextInputOverlay.hitTestPairedControls(ArchiveManager.field_m, BytePlusOneCommand.field_A, (byte) 42), 0, -1, param1);
           return;
         }
     }
@@ -135,14 +135,14 @@ final class WeightedLruCache {
           if (var7 == null) {
             return null;
           }
-          var9 = var7.a(-91);
+          var9 = var7.getValue(-91);
           if (var9 == null) {
             var7.c((byte) -109);
             var7.unlinkSecondary(62);
             this.field_f = this.field_f + var7.field_o;
             return null;
           }
-          if (var7.h((byte) 113)) {
+          if (var7.isSoftReference((byte) 113)) {
             var6 = new StrongCacheEntry(var9, var7.field_o);
             this.field_e.put(var6, param1 ^ -27, var7.field_a);
             this.field_i.addLast(-8545, var6);
@@ -159,14 +159,14 @@ final class WeightedLruCache {
         if (var7 == null) {
           return null;
         }
-        var8 = var7.a(-91);
+        var8 = var7.getValue(-91);
         if (var8 == null) {
           var7.c((byte) -109);
           var7.unlinkSecondary(62);
           this.field_f = this.field_f + var7.field_o;
           return null;
         }
-        if (var7.h((byte) 113)) {
+        if (var7.isSoftReference((byte) 113)) {
           var6Lifetime1 = new StrongCacheEntry(var8, var7.field_o);
           this.field_e.put(var6Lifetime1, param1 ^ -27, var7.field_a);
           this.field_i.addLast(-8545, var6Lifetime1);

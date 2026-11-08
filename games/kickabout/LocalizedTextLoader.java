@@ -3256,7 +3256,7 @@ final class LocalizedTextLoader {
                 }
                 var2 = DateOfBirthPanel.a("management_mouseover_pitch", -92);
                 if (var2 != null) {
-                  GameModeDefinition.field_b = BlackFadeScreen.a(var2, true);
+                  KitStyleDefinition.field_b = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("management_mouseover_shop", -124);
                 if (var2 != null) {
@@ -4138,7 +4138,7 @@ final class LocalizedTextLoader {
                 }
                 var2 = DateOfBirthPanel.a("tackles_and_kicks_text", -90);
                 if (null != var2) {
-                  GameModeDefinition.field_d = BlackFadeScreen.a(var2, true);
+                  KitStyleDefinition.field_d = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("tackles_text", -94);
                 if (null != var2) {

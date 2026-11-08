@@ -376,7 +376,7 @@ abstract class ConsolePanel implements OverlayLayer {
 
     private final UiLayoutNode createDefaultSpriteWidget(int param0, int param1) {
         UiLayoutNode var3 = new UiLayoutNode();
-        var3.field_R = FormationMaskSupport.a(param0, param1 ^ param1, 0);
+        var3.field_R = KitPatternMaskSupport.createSolidNineSliceSprites(param0, param1 ^ param1, 0);
         return var3;
     }
 
@@ -385,7 +385,7 @@ abstract class ConsolePanel implements OverlayLayer {
           this.field_o = (TextLine) null;
         }
         UiLayoutNode var4 = new UiLayoutNode(0L, (UiLayoutNode) null);
-        var4.field_R = FormationMaskSupport.a(param0, param1 - 200, param2);
+        var4.field_R = KitPatternMaskSupport.createSolidNineSliceSprites(param0, param1 - 200, param2);
         return var4;
     }
 
@@ -415,7 +415,7 @@ abstract class ConsolePanel implements OverlayLayer {
         int var2;
         boolean stackIn_10_0 = false;
         var1 = CalendarSupport.currentMonthIndex(2);
-        var2 = PlayerStatSortCriterion.a(false);
+        var2 = PlayerStatSortCriterion.getCurrentDayOfMonth(false);
         if (param0 < 45) {
           field_q = (UiLayoutNode) null;
         }

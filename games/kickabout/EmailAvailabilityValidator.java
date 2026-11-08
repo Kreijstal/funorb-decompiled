@@ -105,7 +105,7 @@ final class EmailAvailabilityValidator extends TextFieldValidator {
         }
     }
 
-    public static void g(int param0) {
+    public static void releaseStatics(int param0) {
         field_o = null;
         field_q = null;
         field_l = null;

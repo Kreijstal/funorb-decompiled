@@ -76,7 +76,7 @@ final class OverlayLayerSupport {
             byte[] var9 = (byte[]) null;
             OverlayLayerSupport.a(true, 43, -115, false, -33, (byte[]) null);
           }
-          var10.b(param1, (byte) 120);
+          var10.writeIsaacByte(param1, (byte) 120);
           var10.field_n = var10.field_n + 1;
           var7 = var10.field_n;
           var10.writeByte(124, 4);

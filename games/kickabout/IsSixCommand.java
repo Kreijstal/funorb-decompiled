@@ -13,10 +13,10 @@ final class IsSixCommand extends ConsoleCommand {
 
     final static LoginMethod[] a(boolean param0) {
         if (param0) {
-          return new LoginMethod[]{field_F, AccountRegistrationPanel.field_I, GameModeDefinition.field_h};
+          return new LoginMethod[]{field_F, AccountRegistrationPanel.field_I, KitStyleDefinition.field_h};
         }
         IsSixCommand.g(56);
-        return new LoginMethod[]{field_F, AccountRegistrationPanel.field_I, GameModeDefinition.field_h};
+        return new LoginMethod[]{field_F, AccountRegistrationPanel.field_I, KitStyleDefinition.field_h};
     }
 
     public static void g(int param0) {

@@ -10,9 +10,9 @@ final class IntrusiveNodeHashTable {
     private int field_b;
     static Sprite[] field_g;
 
-    final IntrusiveNode b(int param0) {
+    final IntrusiveNode first(int param0) {
         this.field_a = param0;
-        return this.a(-1);
+        return this.next(-1);
     }
 
     final void put(IntrusiveNode param0, int param1, long param2) {
@@ -33,7 +33,7 @@ final class IntrusiveNodeHashTable {
         }
     }
 
-    final IntrusiveNode a(boolean param0, long param1) {
+    final IntrusiveNode get(boolean param0, long param1) {
         IntrusiveNode var5 = null;
         int var6 = Kickabout.field_G;
         IntrusiveNode var4 = this.field_d[(int)(param1 & (long)(this.field_b - 1))];
@@ -64,7 +64,7 @@ final class IntrusiveNodeHashTable {
         CachedArchiveSource.field_s = 1;
     }
 
-    final void a(boolean param0) {
+    final void clear(boolean param0) {
         int var2 = 0;
         IntrusiveNode var3 = null;
         IntrusiveNode var4 = null;
@@ -94,7 +94,7 @@ final class IntrusiveNodeHashTable {
         }
     }
 
-    final IntrusiveNode a(int param0) {
+    final IntrusiveNode next(int param0) {
         int fieldTemp$0 = 0;
         IntrusiveNode var2;
         int var3;

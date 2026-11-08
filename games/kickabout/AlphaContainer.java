@@ -78,7 +78,7 @@ final class AlphaContainer extends SingleChildContainer {
         }
     }
 
-    public static void h(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_C = null;
         field_E = null;
         field_A = null;

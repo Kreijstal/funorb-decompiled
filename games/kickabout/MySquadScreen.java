@@ -37,12 +37,12 @@ final class MySquadScreen extends TeamManagementScreen {
           MessageDialog.field_A[var4] = null;
         }
         ValidationIndicator.field_F = false;
-        if (PlayArea.a(100)) {
+        if (PlayArea.isGuestSession(100)) {
         } else {
           if (!RegistrationRequestState.field_h.a(-4)) {
             ValidationIndicator.field_F = true;
           } else {
-            FootballerAiOverlaySupport.field_d.b(63, (byte) -86);
+            FootballerAiOverlaySupport.field_d.writeIsaacByte(63, (byte) -86);
           }
         }
         this.rebuildPlayerPanel(param0 - 46);
@@ -261,7 +261,7 @@ final class MySquadScreen extends TeamManagementScreen {
           var15_ref = var28;
           if (!ModelMaterialDecoder.field_g) {
             if (var15_ref != null &&
-              !PlayArea.a(param0 + 105)) {
+              !PlayArea.isGuestSession(param0 + 105)) {
               if (!ValidationIndicator.field_F) {
                 ReceivedAuctionItemRow.a(this.field_G.field_F + (this.field_G.field_q >> 1), -32, (this.field_G.field_mb >> 1) + this.field_G.field_T);
               } else {

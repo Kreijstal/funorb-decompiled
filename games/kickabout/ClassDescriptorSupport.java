@@ -128,7 +128,7 @@ final class ClassDescriptorSupport {
             return stackIn_20_0;
           }
           var5 = FootballerAiOverlaySupport.field_d;
-          var5.b(param1, (byte) 97);
+          var5.writeIsaacByte(param1, (byte) 97);
           var5.field_n = var5.field_n + 1;
           if (param2 <= 124) {
             stackIn_23_0 = (String) null;

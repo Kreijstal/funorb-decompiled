@@ -58,7 +58,7 @@ final class ClubState {
         if (this.canStartAuction(-3)) {
           for (var3 = 0; this.squad.length > var3; var3++) {
             if (!this.squad[var3].isEmpty(-2) &&
-              !this.a((byte) 45, var3)) {
+              !this.hasLogEntryForSlot((byte) 45, var3)) {
               return true;
             }
           }
@@ -66,7 +66,7 @@ final class ClubState {
         return false;
     }
 
-    final boolean a(byte param0, int param1) {
+    final boolean hasLogEntryForSlot(byte param0, int param1) {
         int var3 = -58 % ((param0 + 42) / 59);
         return this.findLogEntryBySlot((byte) -105, param1) != null ? true : false;
     }
@@ -535,7 +535,7 @@ final class ClubState {
         return var1Lifetime51;
     }
 
-    private final boolean a(int param0, int param1) {
+    private final boolean isClubFlagSet(int param0, int param1) {
         if (param0 != -2) {
           this.field_t = 42;
         }
@@ -695,7 +695,7 @@ final class ClubState {
         }
         for (var3 = 0; var3 < 9; var3++) {
           if (!this.squad[var3].isEmpty(-2) &&
-            !this.a((byte) -121, var3)) {
+            !this.hasLogEntryForSlot((byte) -121, var3)) {
             var2++;
           }
         }
@@ -903,7 +903,7 @@ final class ClubState {
                 if (this.squad[var5Lifetime1].isEmpty(param2 - 2)) {
                   throw new IllegalStateException("User tried to sell an empty player " + param0.toString());
                 }
-                if (this.a((byte) -112, var5Lifetime1)) {
+                if (this.hasLogEntryForSlot((byte) -112, var5Lifetime1)) {
                   throw new IllegalStateException("User tried to sell a player in auction " + param0.toString());
                 }
                 this.field_x = this.field_x + ImageProducerRasterBuffer.a(this.squad[var5Lifetime1], true);
@@ -933,7 +933,7 @@ final class ClubState {
                       throw new IllegalStateException("User tried to attach a trinket that is the wrong shape for the slot " + param0.toString());
                     }
                     if (72 == var9.field_h &&
-                      !this.a(-2, 0)) {
+                      !this.isClubFlagSet(-2, 0)) {
                       throw new IllegalStateException("User tried to attach Pumpkins trinket but they haven't unlocked the Halloween Achievement " + param0.toString());
                     }
                     if (this.field_x < var9.field_e) {

@@ -73,7 +73,7 @@ final class DraggableWidget extends SingleChildContainer {
             SoftwareDrawingSupport.outlineSpriteInPlace(LobbyGameRecord.field_m, 65793);
             SoftwareDrawingSupport.outlineSpriteInPlace(LobbyGameRecord.field_m, 16777215);
             SoftwareDrawingSupport.outlineSpriteInPlace(LobbyGameRecord.field_m, 7829367);
-            AuctionListing.a(95, -22914, 14, 88, 22);
+            AuctionListing.pushRasterClip(95, -22914, 14, 88, 22);
             var12 = new int[255];
             var11 = var12;
             var8 = var11;
@@ -94,7 +94,7 @@ final class DraggableWidget extends SingleChildContainer {
         }
     }
 
-    public static void h(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_F = null;
         int var1 = 35 / ((-16 - param0) / 63);
         field_I = null;

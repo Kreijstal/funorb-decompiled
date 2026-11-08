@@ -159,25 +159,25 @@ final class CheckboxPainter implements WidgetPainter {
         }
         if (FadingSoundPlayer.field_q) {
           AccountNameCheckState.advanceLoadingStep(0, 0);
-          var1 = PitchSurfaceLoader.loadPitchSurface(RankingsScreen.field_C, FormationMaskSupport.field_c, (byte) -110);
+          var1 = PitchSurfaceLoader.loadPitchSurface(RankingsScreen.field_C, KitPatternMaskSupport.field_c, (byte) -110);
           if (var1 != -1) {
             DelayedServerPacket.a(100, 9863, var1);
             return;
           }
-          if (!CachedListingRow.loadGoalScenery(63, FormationMaskSupport.field_c, RankingsScreen.field_C)) {
+          if (!CachedListingRow.loadGoalScenery(63, KitPatternMaskSupport.field_c, RankingsScreen.field_C)) {
             DelayedServerPacket.a(2, 9863, 1);
             return;
           }
           AccountNameCheckState.advanceLoadingStep(0, 1);
-          if (0 != FormationMaskSupport.field_c) {
-            if (FormationMaskSupport.field_c == 1) {
+          if (0 != KitPatternMaskSupport.field_c) {
+            if (KitPatternMaskSupport.field_c == 1) {
               var1Lifetime1 = ReceivedAuctionItem.b(123);
               if (var1Lifetime1 != -1) {
                 DelayedServerPacket.a(100, 9863, var1Lifetime1);
                 return;
               }
             } else {
-              if (FormationMaskSupport.field_c == 2) {
+              if (KitPatternMaskSupport.field_c == 2) {
                 var1Lifetime1 = StreetSceneryLoader.loadStreetScenery(-124);
                 if (var1Lifetime1 != -1) {
                   DelayedServerPacket.a(100, 9863, var1Lifetime1);
@@ -208,13 +208,13 @@ final class CheckboxPainter implements WidgetPainter {
             }
           }
           AccountNameCheckState.advanceLoadingStep(0, 3);
-          var1Lifetime3 = GrowableIntList.a(5464, FormationMaskSupport.field_c, RankingsScreen.field_C);
+          var1Lifetime3 = GrowableIntList.a(5464, KitPatternMaskSupport.field_c, RankingsScreen.field_C);
           if (var1Lifetime3 != -1) {
             DelayedServerPacket.a(100, 9863, var1Lifetime3);
             return;
           }
           AccountNameCheckState.advanceLoadingStep(0, 4);
-          if (!MyKitScreen.ensureSoundLoaded(120, TrinketPickerDialog.a(FormationMaskSupport.field_c, 121, NanoTickClock.field_n, RankingsScreen.field_C))) {
+          if (!MyKitScreen.ensureSoundLoaded(120, TrinketPickerDialog.a(KitPatternMaskSupport.field_c, 121, NanoTickClock.field_n, RankingsScreen.field_C))) {
             DelayedServerPacket.a(4, 9863, 0);
             return;
           }
@@ -269,13 +269,13 @@ final class CheckboxPainter implements WidgetPainter {
             AccountNameCheckState.advanceLoadingStep(0, 8);
             PitchDecorationSupport.buildPitchDecorations(true);
             AccountNameCheckState.advanceLoadingStep(0, 9);
-            if (0 == FormationMaskSupport.field_c) {
+            if (0 == KitPatternMaskSupport.field_c) {
               MusicPatchPcmStream.b(1);
             }
-            if (FormationMaskSupport.field_c == 1) {
+            if (KitPatternMaskSupport.field_c == 1) {
               GameResourceLoader.a((byte) -48);
             }
-            if (FormationMaskSupport.field_c == 2) {
+            if (KitPatternMaskSupport.field_c == 2) {
               MeshObject.a(11383);
             }
             AccountNameCheckState.advanceLoadingStep(0, 10);
@@ -297,7 +297,7 @@ final class CheckboxPainter implements WidgetPainter {
         RowRangeRequest var9 = null;
         var8 = Kickabout.field_G;
         try {
-          if (PlayArea.a(100)) {
+          if (PlayArea.isGuestSession(100)) {
             return;
           }
           if (PlayerContextMenu.field_f) {
@@ -349,7 +349,7 @@ final class CheckboxPainter implements WidgetPainter {
             var4_int++;
           }
           if (0 < var4_int) {
-            FootballerAiOverlaySupport.field_d.b(53, (byte) 118);
+            FootballerAiOverlaySupport.field_d.writeIsaacByte(53, (byte) 118);
             FootballerAiOverlaySupport.field_d.writeShort(-1207444472, 2 + 5 * var4_int);
             FootballerAiOverlaySupport.field_d.writeByte(121, var4_int);
             var9 = (RowRangeRequest) (FullscreenFocusCanvas.field_g.removeFirst((byte) 126));

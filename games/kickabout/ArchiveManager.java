@@ -20,14 +20,14 @@ final class ArchiveManager {
         field_f = null;
         field_e = null;
         if (param0 != -2147483648) {
-          ArchiveManager.a(-8, 21, -15);
+          ArchiveManager.prepareRankingStatistics(-8, 21, -15);
           field_j = null;
           return;
         }
         field_j = null;
     }
 
-    final static String a(char param0, String param1, byte param2, String param3) {
+    final static String replaceCharacter(char param0, String param1, byte param2, String param3) {
         StringBuilder discarded$3 = null;
         StringBuilder discarded$4 = null;
         StringBuilder discarded$5 = null;
@@ -104,7 +104,7 @@ final class ArchiveManager {
         this(param0, param1, (java.math.BigInteger) null, (java.math.BigInteger) null);
     }
 
-    final CachedArchiveSource a(SectorCacheStore param0, int param1, int param2, boolean param3, SectorCacheStore param4) {
+    final CachedArchiveSource getArchiveSource(SectorCacheStore param0, int param1, int param2, boolean param3, SectorCacheStore param4) {
         CachedArchiveSource stackIn_9_0 = null;
         CachedArchiveSource stackIn_11_0 = null;
         RuntimeException stackIn_14_0 = null;
@@ -161,7 +161,7 @@ final class ArchiveManager {
         }
     }
 
-    final static void a(int param0, String param1) {
+    final static void showCenteredMessagePanel(int param0, String param1) {
         int var2_int = 0;
         int var3 = 0;
         int var5 = 0;
@@ -183,7 +183,7 @@ final class ArchiveManager {
         }
     }
 
-    final void a(int param0) {
+    final void serviceArchiveSources(int param0) {
         int var2;
         int var3;
         int var2Lifetime1;
@@ -193,18 +193,18 @@ final class ArchiveManager {
         }
         for (var2 = param0; this.field_k.length > var2; var2++) {
           if (this.field_k[var2] != null) {
-            this.field_k[var2].d(18137);
+            this.field_k[var2].servicePrefetchQueue(18137);
           }
         }
         for (var2Lifetime1 = 0; this.field_k.length > var2Lifetime1; var2Lifetime1++) {
           if (null != this.field_k[var2Lifetime1]) {
-            this.field_k[var2Lifetime1].b(-44);
+            this.field_k[var2Lifetime1].serviceBackgroundRequests(-44);
           }
         }
         return;
     }
 
-    final static void a(int param0, int param1, int param2) {
+    final static void prepareRankingStatistics(int param0, int param1, int param2) {
         String var4;
         if (null == PlatformTaskState.field_e) {
           PlatformTaskState.field_e = new int[param1 * 2];
@@ -214,7 +214,7 @@ final class ArchiveManager {
           }
           if (param0 != -20669) {
             var4 = (String) null;
-            ArchiveManager.a('[', (String) null, (byte) 89, (String) null);
+            ArchiveManager.replaceCharacter('[', (String) null, (byte) 89, (String) null);
           }
           if (AccountMessagePanel.field_G == null ||
             !(param1 <= AccountMessagePanel.field_G.length)) {
@@ -305,7 +305,7 @@ final class ArchiveManager {
             }
             if (param0 != -20669) {
               var4 = (String) null;
-              ArchiveManager.a('[', (String) null, (byte) 89, (String) null);
+              ArchiveManager.replaceCharacter('[', (String) null, (byte) 89, (String) null);
             }
             if (AccountMessagePanel.field_G == null ||
               !(param1 <= AccountMessagePanel.field_G.length)) {
@@ -396,7 +396,7 @@ final class ArchiveManager {
             }
             if (param0 != -20669) {
               var4 = (String) null;
-              ArchiveManager.a('[', (String) null, (byte) 89, (String) null);
+              ArchiveManager.replaceCharacter('[', (String) null, (byte) 89, (String) null);
             }
             if (AccountMessagePanel.field_G == null ||
               !(param1 <= AccountMessagePanel.field_G.length)) {
@@ -570,7 +570,7 @@ final class ArchiveManager {
         return true;
     }
 
-    final static boolean a(boolean param0) {
+    final static boolean hasActiveModal(boolean param0) {
         if (param0) {
           return false;
         }

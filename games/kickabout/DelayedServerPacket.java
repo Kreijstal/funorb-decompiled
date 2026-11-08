@@ -62,7 +62,7 @@ final class DelayedServerPacket extends IntrusiveNode {
 
     final static void b(int param0) {
         if (param0 <= 25) {
-          DelayedServerPacket.a(111);
+          DelayedServerPacket.releaseStatics(111);
           DisplayNameUiSupport.field_c = MonotonicClock.monotonicMillis(82);
           MeshObject.field_d = 0;
           return;
@@ -95,7 +95,7 @@ final class DelayedServerPacket extends IntrusiveNode {
             return;
           }
           if (AuctionLogEntry.field_h instanceof TeamManagementScreen &&
-            GameSoundEffect.a(param2 + 66)) {
+            GameSoundEffect.hasPendingManagerActions(param2 + 66)) {
             RasterBuffer.a(false);
             return;
           }
@@ -105,7 +105,7 @@ final class DelayedServerPacket extends IntrusiveNode {
             var8 = MachineTokenStorageSupport.field_e.getGameOverEntries((byte) -123);
             if (var8 != null &&
               var8.a(false) > 0) {
-              FootballerAiOverlaySupport.field_d.b(81, (byte) 127);
+              FootballerAiOverlaySupport.field_d.writeIsaacByte(81, (byte) 127);
               FootballerAiOverlaySupport.field_d.field_n = FootballerAiOverlaySupport.field_d.field_n + 2;
               var4 = FootballerAiOverlaySupport.field_d.field_n;
               FootballerAiOverlaySupport.field_d.writeByte(param2 ^ -106, var8.a(false));
@@ -120,8 +120,8 @@ final class DelayedServerPacket extends IntrusiveNode {
           GameModesHelpScreen.field_G = DebouncedValidationProvider.a(param0, 24939);
           if (26 == AuctionLogEntry.field_h.screenId &&
             !(GameModesHelpScreen.field_G instanceof MatchScreen) &&
-            !PlayArea.a(param2 ^ -102)) {
-            FootballerAiOverlaySupport.field_d.b(91, (byte) 114);
+            !PlayArea.isGuestSession(param2 ^ -102)) {
+            FootballerAiOverlaySupport.field_d.writeIsaacByte(91, (byte) 114);
           }
           boolean decompiledFrameRemainder0 = true;
           if (AuctionLogEntry.field_h.screenId == 12) {
@@ -161,8 +161,8 @@ final class DelayedServerPacket extends IntrusiveNode {
               if (var5 > 255) {
                 var5 = 255;
               }
-              if (!PlayArea.a(100)) {
-                FootballerAiOverlaySupport.field_d.b(65, (byte) 119);
+              if (!PlayArea.isGuestSession(100)) {
+                FootballerAiOverlaySupport.field_d.writeIsaacByte(65, (byte) 119);
                 FootballerAiOverlaySupport.field_d.writeByte(103, var5);
                 FootballerAiOverlaySupport.field_d.writeByte(param2 ^ -113, var4Lifetime1);
                 FootballerAiOverlaySupport.field_d.writeByte(param2 + 119, var3_int);
@@ -244,7 +244,7 @@ final class DelayedServerPacket extends IntrusiveNode {
         AnimationClip.field_g.paintFrame((byte) 63);
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_g = null;
         field_i = null;
         int var1 = 43 / ((32 - param0) / 58);

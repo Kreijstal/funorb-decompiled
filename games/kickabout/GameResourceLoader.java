@@ -74,7 +74,7 @@ final class GameResourceLoader implements LoadingSequence {
         ResourceArchive var17 = IterableNodeHashTable.field_b;
         if (null != IterableNodeHashTable.field_c &&
           null != FixedVelocitySupport.field_b) {
-          CipherPacketBuffer.k(61, 0);
+          CipherPacketBuffer.advanceLoadingProgress(61, 0);
           if (null == SortCriterion.field_h) {
             ParticipantAgent.initializeGameSoundEffects(new SoundCache(IterableNodeHashTable.field_c, FixedVelocitySupport.field_b), FixedVelocitySupport.field_b, (byte) -100);
           }
@@ -84,7 +84,7 @@ final class GameResourceLoader implements LoadingSequence {
           return false;
         }
         if (HighScoreQuery.field_i != null) {
-          CipherPacketBuffer.k(61, 1);
+          CipherPacketBuffer.advanceLoadingProgress(61, 1);
           SpriteNumberPainter.loadPitchMusicTracks(HighScoreQuery.field_i, (byte) -122);
           HighScoreQuery.field_i = null;
           AnimationPlayer.a((byte) 53);
@@ -94,7 +94,7 @@ final class GameResourceLoader implements LoadingSequence {
           return false;
         }
         if (EntityAfterimage.field_b != null) {
-          CipherPacketBuffer.k(61, 2);
+          CipherPacketBuffer.advanceLoadingProgress(61, 2);
           SoftwareDrawingSupport.field_q = SpriteResourceSupport.loadNamedSprite((byte) 124, "lobby", QuickChatKeysHelpPanel.field_Cb, "logo");
           SoftwareDrawingSupport.field_p = ModalStack.loadSpriteSheetByName(QuickChatKeysHelpPanel.field_Cb, -28, "lobby", "time");
           SoftwareDrawingSupport.field_j = ModalStack.loadSpriteSheetByName(QuickChatKeysHelpPanel.field_Cb, -121, "lobby", "tournament_icons");
@@ -197,7 +197,7 @@ final class GameResourceLoader implements LoadingSequence {
           return false;
         }
         if (ResourceArchive.field_f != null) {
-          CipherPacketBuffer.k(61, 3);
+          CipherPacketBuffer.advanceLoadingProgress(61, 3);
           AuctionLogEntry.field_j = new Sprite(ResourceArchive.field_f.takeFileByName("background_guy.png", "", 36), (java.awt.Component) ((Object) DropTargetWidget.l(64)));
           TutorialScenerySupport.field_a = new Sprite(ResourceArchive.field_f.takeFileByName("background.png", "", 66), (java.awt.Component) ((Object) DropTargetWidget.l(64)));
           CachedListingRow.field_k = new Sprite(ResourceArchive.field_f.takeFileByName("splash.jpg", "", 8), (java.awt.Component) ((Object) DropTargetWidget.l(64)));
@@ -244,14 +244,14 @@ final class GameResourceLoader implements LoadingSequence {
           return false;
         }
         if (MySquadScreen.field_H != null) {
-          CipherPacketBuffer.k(61, 4);
+          CipherPacketBuffer.advanceLoadingProgress(61, 4);
           GameMediaSupport.installHuffmanCodec(new HuffmanCodec(MySquadScreen.field_H.takeFileByName("huffman", "", 93)), false);
           MySquadScreen.field_H = null;
           AnimationPlayer.a((byte) 78);
           return false;
         }
         if (null != Kickabout.field_J) {
-          CipherPacketBuffer.k(61, 5);
+          CipherPacketBuffer.advanceLoadingProgress(61, 5);
           MatchScreen.loadMatchSprites((byte) -34, Kickabout.field_J);
           Kickabout.field_J = null;
           AnimationPlayer.a((byte) 81);
@@ -260,7 +260,7 @@ final class GameResourceLoader implements LoadingSequence {
         if (KitStyleTile.field_Bb == null) {
           return true;
         }
-        CipherPacketBuffer.k(61, 6);
+        CipherPacketBuffer.advanceLoadingProgress(61, 6);
         SocialTabsPanel.loadCharacterAnimations(20113, ContextMenuItem.field_Eb, ListingRowCache.field_h, KitStyleTile.field_Bb);
         KitStyleTile.field_Bb = null;
         ContextMenuItem.field_Eb = null;
@@ -502,15 +502,15 @@ final class GameResourceLoader implements LoadingSequence {
         int var5;
         var5 = Kickabout.field_G;
         AnimationClip.a(0, -76, false, ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(79, 3, new Random()));
-        CipherPacketBuffer.k(param0 ^ 12774, 7);
+        CipherPacketBuffer.advanceLoadingProgress(param0 ^ 12774, 7);
         TriangleRasterizer.setBrightnessAndRebuildPalette(0.6000000238418579f);
         GrayscalePaletteSupport.initializeGrayscalePalette(false);
         Trinket.i(18);
         AchievementSubmission.buildTrinketPreviewSprites(65280);
-        CipherPacketBuffer.k(61, 8);
+        CipherPacketBuffer.advanceLoadingProgress(61, 8);
         TrinketCatalog.buildTrinketTable(param0 - 12854);
         LoadingProgressSupport.reportStageProgress(118, 2, 1);
-        CipherPacketBuffer.k(61, 9);
+        CipherPacketBuffer.advanceLoadingProgress(61, 9);
         LoadingProgressSupport.reportStageProgress(84, 6, 1);
         SoftwareDrawingSupport.buildSharedControlSprites();
         LoadingProgressSupport.reportStageProgress(-46, 6, 2);
@@ -520,7 +520,7 @@ final class GameResourceLoader implements LoadingSequence {
         ResizableModalPanel.buildRotatedStarSprites(96);
         LoadingProgressSupport.reportStageProgress(-49, 6, 5);
         GameLoopApplet.n((byte) -10);
-        CipherPacketBuffer.k(61, 10);
+        CipherPacketBuffer.advanceLoadingProgress(61, 10);
         TeamSelectionView.b((byte) -47);
         SocialTabsPanel.a((byte) -124);
         LoadingProgressSupport.reportStageProgress(127, 4, 1);
@@ -543,7 +543,7 @@ final class GameResourceLoader implements LoadingSequence {
           var3.addOutline(2130706432);
           MySquadScreen.field_U[var2] = (Sprite) ((Object) SpritePixelSupport.downscaleArgbByHalf(var3));
         }
-        CipherPacketBuffer.k(61, 11);
+        CipherPacketBuffer.advanceLoadingProgress(61, 11);
         if (param0 != 12763) {
           return;
         }
@@ -551,7 +551,7 @@ final class GameResourceLoader implements LoadingSequence {
         PitchAppearanceSupport.setProjectionTarget(256.0, 60, (double)MarkerSliderWidget.field_E[BufferedCacheFile.field_a], (double)ButtonMenuScreen.field_r[BufferedCacheFile.field_a]);
         SocialPlayerRow.resetCameraToTarget((byte) 51);
         DelayedServerPacket.a(-5, false, -2);
-        CipherPacketBuffer.k(61, 12);
+        CipherPacketBuffer.advanceLoadingProgress(61, 12);
         LoadingProgressSupport.reportStageProgress(-71, 4, 1);
         PlayerModelPreview.a(6, 10, (byte) 54, 20, 320, 320, 6, 18, 240, 13, IsSixCommand.field_C, ByteArrayPool.field_d, new TexturedPanelPainter(), 20, 16777215, 30, new GeneratedPanelPainter(true), 16777215, 9, new GeneratedPanelPainter(false), 16777215);
         LoadingProgressSupport.reportStageProgress(-57, 4, 2);
@@ -559,7 +559,7 @@ final class GameResourceLoader implements LoadingSequence {
         LoadingProgressSupport.reportStageProgress(75, 4, 3);
         ResizableModalPanel.setTargetFrameRate(param0 ^ 922092267, 50);
         Kickabout.prepareAccountChoiceSprites(param0 - 826888154);
-        CipherPacketBuffer.k(61, 13);
+        CipherPacketBuffer.advanceLoadingProgress(61, 13);
         OverlayLayerSupport.registerOverlay(false, new CheatCodeListener());
         OverlayLayerSupport.registerOverlay(false, new ClientUiOverlay());
         OverlayLayerSupport.registerOverlay(false, new DialogOverlay());
@@ -665,15 +665,15 @@ final class GameResourceLoader implements LoadingSequence {
         BlobSubmission.field_h.a(QuickChatKeysHelpPanel.field_Cb, HighScoreSubmission.field_j, param0 - 14181, "hud", CommonGame.field_M);
         BlobSubmission.field_h.a(QuickChatKeysHelpPanel.field_Cb, StrongCacheEntry.field_B, -6869, "lobby", CommonGame.field_M);
         BlobSubmission.field_h.a(var4, StrongCacheEntry.field_B, -6869, "lobby", CommonGame.field_M);
-        if (FormationMaskSupport.field_c == 0) {
+        if (KitPatternMaskSupport.field_c == 0) {
           BlobSubmission.field_h.a(QuickChatKeysHelpPanel.field_Cb, PlayerMeshFactory.field_c, param0 - 14181, "park", CommonGame.field_M);
           BlobSubmission.field_h.a(QuickChatKeysHelpPanel.field_Cb, PlayerMeshFactory.field_c, param0 - 14181, "park_surface0", CommonGame.field_M);
         }
-        if (FormationMaskSupport.field_c == 1) {
+        if (KitPatternMaskSupport.field_c == 1) {
           BlobSubmission.field_h.a(QuickChatKeysHelpPanel.field_Cb, FadingSoundSupport.field_b, -6869, "beach", CommonGame.field_M);
           BlobSubmission.field_h.a(QuickChatKeysHelpPanel.field_Cb, FadingSoundSupport.field_b, -6869, "beach_surface0", CommonGame.field_M);
         }
-        if (FormationMaskSupport.field_c == 2) {
+        if (KitPatternMaskSupport.field_c == 2) {
           BlobSubmission.field_h.a(QuickChatKeysHelpPanel.field_Cb, QuickChatMenuBuilder.field_d, param0 - 14181, "street", CommonGame.field_M);
           BlobSubmission.field_h.a(QuickChatKeysHelpPanel.field_Cb, QuickChatMenuBuilder.field_d, -6869, "beach_surface0", CommonGame.field_M);
         }

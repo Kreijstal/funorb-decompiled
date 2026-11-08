@@ -29,7 +29,7 @@ final class HelpTipDialog extends MessageDialog {
         boolean[] var7;
         var6 = Kickabout.field_G;
         super.handleResult(84, param1);
-        if (PlayArea.a(100)) {
+        if (PlayArea.isGuestSession(100)) {
           return;
         }
         var7 = GameLoopApplet.field_E.field_J;
@@ -41,14 +41,14 @@ final class HelpTipDialog extends MessageDialog {
           return;
         }
         var7[this.field_K] = true;
-        if (!PlayArea.a(100)) {
+        if (!PlayArea.isGuestSession(100)) {
           var4 = 0;
           for (var5 = 0; var7.length > var5; var5++) {
             if (var7[var5]) {
               var4 = var4 | 1 << var5;
             }
           }
-          FootballerAiOverlaySupport.field_d.b(69, (byte) 119);
+          FootballerAiOverlaySupport.field_d.writeIsaacByte(69, (byte) 119);
           FootballerAiOverlaySupport.field_d.writeInt(-57, var4);
         }
     }

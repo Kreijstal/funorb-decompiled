@@ -84,21 +84,21 @@ final class LongPlusOneCommand extends ConsoleCommand {
         int var16Lifetime1;
         SocialPlayerRow.a(param2, 0, param0.field_V);
         int var3_int = SocialListLayoutSupport.worldToScreenX(0, param0.field_V.pixelX(true));
-        int var4 = IntKeyLookup.a((byte) -110, param0.field_V.pixelY(879306160));
-        SoftwareRasterizer.drawLineBlendedInclusive(var3_int, var4, SocialListLayoutSupport.worldToScreenX(0, TriangleMesh.field_B[0]), IntKeyLookup.a((byte) -70, FootballerAiOverlaySupport.field_a[0]), 16777215, 64);
-        SoftwareRasterizer.drawLineBlendedInclusive(var3_int, var4, SocialListLayoutSupport.worldToScreenX(0, TriangleMesh.field_B[1]), IntKeyLookup.a((byte) -68, FootballerAiOverlaySupport.field_a[1]), 16777215, 64);
-        SoftwareRasterizer.drawLine(SocialListLayoutSupport.worldToScreenX(0, TriangleMesh.field_B[0]), IntKeyLookup.a((byte) -92, FootballerAiOverlaySupport.field_a[0]), SocialListLayoutSupport.worldToScreenX(0, TriangleMesh.field_B[1]), IntKeyLookup.a((byte) -98, FootballerAiOverlaySupport.field_a[1]), 16777215);
+        int var4 = IntKeyLookup.projectPitchY((byte) -110, param0.field_V.pixelY(879306160));
+        SoftwareRasterizer.drawLineBlendedInclusive(var3_int, var4, SocialListLayoutSupport.worldToScreenX(0, TriangleMesh.field_B[0]), IntKeyLookup.projectPitchY((byte) -70, FootballerAiOverlaySupport.field_a[0]), 16777215, 64);
+        SoftwareRasterizer.drawLineBlendedInclusive(var3_int, var4, SocialListLayoutSupport.worldToScreenX(0, TriangleMesh.field_B[1]), IntKeyLookup.projectPitchY((byte) -68, FootballerAiOverlaySupport.field_a[1]), 16777215, 64);
+        SoftwareRasterizer.drawLine(SocialListLayoutSupport.worldToScreenX(0, TriangleMesh.field_B[0]), IntKeyLookup.projectPitchY((byte) -92, FootballerAiOverlaySupport.field_a[0]), SocialListLayoutSupport.worldToScreenX(0, TriangleMesh.field_B[1]), IntKeyLookup.projectPitchY((byte) -98, FootballerAiOverlaySupport.field_a[1]), 16777215);
         if (param1 <= 22) {
           return;
         }
         try {
           var5 = SocialListLayoutSupport.worldToScreenX(0, TrinketSlot.field_zb[0]);
-          var6 = IntKeyLookup.a((byte) -102, TrinketSlot.field_zb[1]);
-          SoftwareRasterizer.drawLine(SocialListLayoutSupport.worldToScreenX(0, TriangleMesh.field_B[0] + TriangleMesh.field_B[1] >> 1), IntKeyLookup.a((byte) -86, FootballerAiOverlaySupport.field_a[0] + FootballerAiOverlaySupport.field_a[1] >> 1), var5, var6, 16777215);
+          var6 = IntKeyLookup.projectPitchY((byte) -102, TrinketSlot.field_zb[1]);
+          SoftwareRasterizer.drawLine(SocialListLayoutSupport.worldToScreenX(0, TriangleMesh.field_B[0] + TriangleMesh.field_B[1] >> 1), IntKeyLookup.projectPitchY((byte) -86, FootballerAiOverlaySupport.field_a[0] + FootballerAiOverlaySupport.field_a[1] >> 1), var5, var6, 16777215);
           SoftwareRasterizer.drawLine(-4 + var5, var6 - 4, var5 + 4, 4 + var6, 16776960);
           SoftwareRasterizer.drawLine(var5 - 4, var6 + 4, var5 + 4, var6 - 4, 16776960);
           var7 = param0.field_P[param2][0];
-          SoftwareRasterizer.drawHorizontalLineAlpha(SocialListLayoutSupport.worldToScreenX(0, 372), IntKeyLookup.a((byte) -110, var7.pixelY(true)), SocialListLayoutSupport.worldToScreenX(0, 523) - SocialListLayoutSupport.worldToScreenX(0, 372), 16776960, 128);
+          SoftwareRasterizer.drawHorizontalLineAlpha(SocialListLayoutSupport.worldToScreenX(0, 372), IntKeyLookup.projectPitchY((byte) -110, var7.pixelY(true)), SocialListLayoutSupport.worldToScreenX(0, 523) - SocialListLayoutSupport.worldToScreenX(0, 372), 16776960, 128);
           var8 = 4474111;
           var9 = var7.pixelX(-105) - param0.field_V.pixelX(true);
           var10 = var7.pixelY(true) - param0.field_V.pixelY(879306160);
@@ -107,9 +107,9 @@ final class LongPlusOneCommand extends ConsoleCommand {
             var8 = 16711680;
           }
           var12 = var11 * InstrumentNoteMask.field_i >> 8;
-          SoftwareRasterizer.drawCircle(SocialListLayoutSupport.worldToScreenX(0, var7.pixelX(-101)), IntKeyLookup.a((byte) -125, var7.pixelY(true)), var12, var8);
+          SoftwareRasterizer.drawCircle(SocialListLayoutSupport.worldToScreenX(0, var7.pixelX(-101)), IntKeyLookup.projectPitchY((byte) -125, var7.pixelY(true)), var12, var8);
           var12Lifetime1 = 28 * InstrumentNoteMask.field_i >> 8;
-          SoftwareRasterizer.drawCircle(SocialListLayoutSupport.worldToScreenX(0, var7.pixelX(-120)), IntKeyLookup.a((byte) -64, var7.pixelY(true)), var12Lifetime1, 16777215);
+          SoftwareRasterizer.drawCircle(SocialListLayoutSupport.worldToScreenX(0, var7.pixelX(-120)), IntKeyLookup.projectPitchY((byte) -64, var7.pixelY(true)), var12Lifetime1, 16777215);
           var12Lifetime2 = 250 * InstrumentNoteMask.field_i >> 8;
           var13 = 0 == param2 ? 1344 : 0;
           var9Lifetime1 = -param0.field_V.pixelX(true) + 448;
@@ -118,7 +118,7 @@ final class LongPlusOneCommand extends ConsoleCommand {
           if (var9Lifetime1 * var9Lifetime1 + var10Lifetime1 * var10Lifetime1 < 62500) {
             var14 = 16711680;
           }
-          SoftwareRasterizer.drawCircle(SocialListLayoutSupport.worldToScreenX(0, 448), IntKeyLookup.a((byte) -65, var13), var12Lifetime2, var14);
+          SoftwareRasterizer.drawCircle(SocialListLayoutSupport.worldToScreenX(0, 448), IntKeyLookup.projectPitchY((byte) -65, var13), var12Lifetime2, var14);
           if (-1 == param0.field_V.possessorTeam) {
             if (param0.field_V.velocityY == 0) {
             } else {
@@ -131,15 +131,15 @@ final class LongPlusOneCommand extends ConsoleCommand {
                 20 > var15) {
                 var16 = param0.field_V.positionX + var15 * param0.field_V.velocityX >> 16;
                 if (param2 != 1) {
-                  SoftwareRasterizer.drawVerticalLine(SocialListLayoutSupport.worldToScreenX(0, var16) - 10, IntKeyLookup.a((byte) -126, 1344), 20, 16776960);
+                  SoftwareRasterizer.drawVerticalLine(SocialListLayoutSupport.worldToScreenX(0, var16) - 10, IntKeyLookup.projectPitchY((byte) -126, 1344), 20, 16776960);
                 } else {
-                  SoftwareRasterizer.drawVerticalLine(-10 + SocialListLayoutSupport.worldToScreenX(0, var16), IntKeyLookup.a((byte) -118, 0), 20, 16711935);
+                  SoftwareRasterizer.drawVerticalLine(-10 + SocialListLayoutSupport.worldToScreenX(0, var16), IntKeyLookup.projectPitchY((byte) -118, 0), 20, 16711935);
                 }
               }
             }
           }
           var15Lifetime1 = SocialListLayoutSupport.worldToScreenX(0, var7.pixelX(-116));
-          var16Lifetime1 = IntKeyLookup.a((byte) -82, var7.pixelY(true));
+          var16Lifetime1 = IntKeyLookup.projectPitchY((byte) -82, var7.pixelY(true));
           SoftwareRasterizer.fillRectangleAlpha(var15Lifetime1 - 50, -6 + var16Lifetime1, 100, 12, 65793, 208);
           ConsoleTokenCursor.field_d.drawCentered("DMG=" + var7.field_o + "  A=" + var7.action + "  T=" + var7.actionTime, var15Lifetime1, var16Lifetime1 + 4, 16777215, -1);
         } catch (RuntimeException runtimeException) {

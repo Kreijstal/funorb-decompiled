@@ -36,7 +36,7 @@ final class ValidatedTextWidget extends TextInputWidget implements ValidationPro
         GrowableIntList.field_b = new ChatMessage[param1 * 15];
     }
 
-    public static void n(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_Z = null;
         if (param0 <= 40) {
           field_Y = (int[]) null;
@@ -65,7 +65,7 @@ final class ValidatedTextWidget extends TextInputWidget implements ValidationPro
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1) {
-            ValidatedTextWidget.n((byte) -2);
+            ValidatedTextWidget.releaseStatics((byte) -2);
           }
           var2 = new WorldDrawEntry(2);
           var2.field_h = param0;
@@ -108,7 +108,7 @@ final class ValidatedTextWidget extends TextInputWidget implements ValidationPro
           }
           var2Lifetime1 = new ManagerAction(6, new int[]{param1});
           if (param0 < 16) {
-            ValidatedTextWidget.n((byte) 103);
+            ValidatedTextWidget.releaseStatics((byte) 103);
           }
           AchievementSubmission.applyAndQueueManagerAction(var2Lifetime1, 71);
         } catch (RuntimeException runtimeException) {

@@ -20,7 +20,7 @@ class KeyedLoginCredentials extends LoginCredentials {
         try {
           var6 = FootballerAiOverlaySupport.field_d;
           var3 = var6;
-          var6.b(param1, (byte) 113);
+          var6.writeIsaacByte(param1, (byte) 113);
           var6.field_n = var6.field_n + 1;
           var4 = var6.field_n;
           var6.writeByte(116, 1);

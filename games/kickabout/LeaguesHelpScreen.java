@@ -191,7 +191,7 @@ final class LeaguesHelpScreen extends PagedHelpScreen {
             }
             if (var3 != null) {
               var5Lifetime1 = SocialListLayoutSupport.worldToScreenX(0, var2_ref_gm.field_kb >> 16);
-              var6 = IntKeyLookup.a((byte) -114, var2_ref_gm.field_bb >> 16);
+              var6 = IntKeyLookup.projectPitchY((byte) -114, var2_ref_gm.field_bb >> 16);
               if (InstrumentNoteMask.field_i == 256) {
                 var7 = var4 >> 1;
                 SoftwareDrawingSupport.drawWhiteAlphaMask((byte[]) (var3), -var7 + var5Lifetime1, -var7 + var6, var4);

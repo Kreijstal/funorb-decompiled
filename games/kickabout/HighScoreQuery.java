@@ -69,7 +69,7 @@ final class HighScoreQuery extends IntrusiveNode {
           return PlayArea.field_a.dispatchKeyInput(ClassDescriptorSupport.field_c, (byte) 127, FixedQuaternion.field_e);
         }
         if (DebugConsole.field_s) {
-          return NodeHashTableIterator.a(param1, -14, param0);
+          return NodeHashTableIterator.handleQuickChatKey(param1, -14, param0);
         }
         if (SaveChangesDialog.b(param3 + 20963, param0, param1)) {
           return true;

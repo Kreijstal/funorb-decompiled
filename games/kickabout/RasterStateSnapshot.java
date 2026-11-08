@@ -134,15 +134,15 @@ final class RasterStateSnapshot extends IntrusiveNode {
           BufferedSocket.field_h = null;
           GameplayHelpScreen.field_I.clear(22997);
           SharedChatLayoutSupport.field_b.clear(22997);
-          var1 = AvailabilityCheckRequest.field_b.b((byte) 72);
+          var1 = AvailabilityCheckRequest.field_b.first((byte) 72);
           while (var1 != null) {
             var1.unlinkSecondary(-104);
-            var1 = AvailabilityCheckRequest.field_b.a(0);
+            var1 = AvailabilityCheckRequest.field_b.next(0);
           }
-          var1Lifetime1 = HighScoreQuery.field_m.b((byte) 72);
+          var1Lifetime1 = HighScoreQuery.field_m.first((byte) 72);
           while (var1Lifetime1 != null) {
             var1Lifetime1.unlinkSecondary(param0 - 106);
-            var1Lifetime1 = HighScoreQuery.field_m.a(0);
+            var1Lifetime1 = HighScoreQuery.field_m.next(0);
           }
           PitchCoordinateSupport.field_d = param0;
         } catch (RuntimeException runtimeException) {

@@ -9,7 +9,7 @@ final class TrinketPickerDialog extends MessageDialog {
     private UiLayoutNode field_K;
     private TrinketIcon[] field_I;
 
-    public static void g(int param0) {
+    public static void releaseStatics(int param0) {
         field_J = null;
         if (param0 != 2) {
           field_H = (String) null;

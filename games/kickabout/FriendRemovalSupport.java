@@ -64,7 +64,7 @@ final class FriendRemovalSupport {
           var8.unlinkSecondary(25);
           ListingRow.field_d = ListingRow.field_d - 1;
           var9 = FootballerAiOverlaySupport.field_d;
-          var9.b(param0, (byte) -85);
+          var9.writeIsaacByte(param0, (byte) -85);
           var9.field_n = var9.field_n + 1;
           var5 = var9.field_n;
           var9.writeByte(123, 1);

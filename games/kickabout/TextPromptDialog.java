@@ -137,7 +137,7 @@ final class TextPromptDialog extends UiLayoutNode {
         return stackIn_6_0;
     }
 
-    public static void c(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_Ib = null;
         field_Hb = null;
         if (!param0) {
@@ -187,7 +187,7 @@ final class TextPromptDialog extends UiLayoutNode {
         return this.field_Ob;
     }
 
-    final String a(int param0) {
+    final String getText(int param0) {
         if (param0 != -15596) {
           this.field_Ob = -119;
         }

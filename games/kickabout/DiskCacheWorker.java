@@ -160,7 +160,7 @@ final class DiskCacheWorker implements Runnable {
             if (param0 != -913) {
               this.shutdown(-77);
             }
-            var6 = (DiskCacheRequest) (this.field_h.a(-125));
+            var6 = (DiskCacheRequest) (this.field_h.first(-125));
             while (var6 != null) {
               if (var6.field_l == (long)param2 &&
                 var6.field_v == param1 &&
@@ -170,7 +170,7 @@ final class DiskCacheWorker implements Runnable {
                 stackIn_10_0 = var4;
                 return stackIn_10_0;
               }
-              var6 = (DiskCacheRequest) (this.field_h.b(0));
+              var6 = (DiskCacheRequest) (this.field_h.next(0));
             }
           }
           var4.field_u = param1.a(param2, param0 + 66193);

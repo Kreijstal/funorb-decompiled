@@ -154,7 +154,7 @@ class Sprite extends SpriteState {
         }
     }
 
-    final void e() {
+    final void setRasterTarget() {
         SoftwareRasterizer.setRasterBuffer(this.field_y, this.field_q, this.field_w);
     }
 

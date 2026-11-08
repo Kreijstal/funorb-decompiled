@@ -682,7 +682,7 @@ final class GameplayHelpScreen extends PagedHelpScreen {
         IsSixCommand.field_C.drawParagraph(LineupPositionSupport.field_e, 70 + this.slideOffsetX, 126, 500, 40, 16777215, -1, 0, 1, 16);
         SoftwareRasterizer.fillRoundedRectangleBlended(this.slideOffsetX + 210, 178, 390, 225, 10, 65793, 140);
         this.field_E.draw(94, false);
-        AuctionListing.a(this.field_E.field_Gb.field_q + this.field_E.field_F, -22914, this.field_E.field_F, this.field_E.field_T + this.field_E.field_Gb.field_mb, this.field_E.field_T);
+        AuctionListing.pushRasterClip(this.field_E.field_Gb.field_q + this.field_E.field_F, -22914, this.field_E.field_F, this.field_E.field_T + this.field_E.field_Gb.field_mb, this.field_E.field_T);
         var3Lifetime2 = this.field_E.field_F + 10;
         var4 = 30 + this.field_E.field_Db.field_T;
         var5 = var4;

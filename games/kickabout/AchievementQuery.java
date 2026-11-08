@@ -65,16 +65,16 @@ final class AchievementQuery extends IntrusiveNode {
                   var9 = (ResourceArchive) null;
                   AchievementQuery.loadSpriteSheet(72, -51, (byte) 107, (ResourceArchive) null);
                 }
-                AuctionListing.a(var6, -22914, var5, var8, var7);
+                AuctionListing.pushRasterClip(var6, -22914, var5, var8, var7);
                 return;
               }
               if (param1 <= -95) {
-                AuctionListing.a(var6, -22914, var5, var8, var7);
+                AuctionListing.pushRasterClip(var6, -22914, var5, var8, var7);
                 return;
               }
               var9Lifetime2 = (ResourceArchive) null;
               AchievementQuery.loadSpriteSheet(72, -51, (byte) 107, (ResourceArchive) null);
-              AuctionListing.a(var6, -22914, var5, var8, var7);
+              AuctionListing.pushRasterClip(var6, -22914, var5, var8, var7);
               return;
             }
           }
@@ -93,7 +93,7 @@ final class AchievementQuery extends IntrusiveNode {
           var9Lifetime1 = (ResourceArchive) null;
           AchievementQuery.loadSpriteSheet(72, -51, (byte) 107, (ResourceArchive) null);
         }
-        AuctionListing.a(var6, -22914, var5, var8, var7);
+        AuctionListing.pushRasterClip(var6, -22914, var5, var8, var7);
     }
 
     public static void releaseStatics(int param0) {

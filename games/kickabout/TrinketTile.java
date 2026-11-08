@@ -16,7 +16,7 @@ final class TrinketTile extends UiLayoutNode {
     private String field_zb;
     int field_Db;
 
-    final int c(boolean param0) {
+    final int getPriceTextColor(boolean param0) {
         if (!param0) {
           ResourceArchive var3 = (ResourceArchive) null;
           TrinketTile.a((BitmapFont) null, (ResourceArchive) null, (byte) 38);
@@ -73,7 +73,7 @@ final class TrinketTile extends UiLayoutNode {
           var6 = SoftwareRasterizer.field_f;
           var16 = SoftwareRasterizer.field_a;
           IterableDualLinkDeque.field_g = new Sprite(10, 14);
-          IterableDualLinkDeque.field_g.e();
+          IterableDualLinkDeque.field_g.setRasterTarget();
           for (var8 = 2; var8 < 7; var8++) {
             SoftwareRasterizer.drawVerticalLine(var8, 1 + var8, -(var8 << 1) + 14, 16777215);
           }
@@ -139,7 +139,7 @@ final class TrinketTile extends UiLayoutNode {
         if (param0 != -76) {
           this.field_Db = 84;
         }
-        IsSixCommand.field_C.drawRightAligned(this.field_Eb, this.field_F + 160, -6 + this.field_T + this.field_mb, this.c(true), -1);
+        IsSixCommand.field_C.drawRightAligned(this.field_Eb, this.field_F + 160, -6 + this.field_T + this.field_mb, this.getPriceTextColor(true), -1);
     }
 
     static {

@@ -42,7 +42,7 @@ final class ClientPacketFlushSupport {
             ByteArrayPool.field_c == RegistrationRequestDialog.field_rb)) {
             if (0 == FootballerAiOverlaySupport.field_d.field_n &&
               (BlobSubmission.field_i + 10000L) < MonotonicClock.monotonicMillis(86)) {
-              FootballerAiOverlaySupport.field_d.b(param0, (byte) 101);
+              FootballerAiOverlaySupport.field_d.writeIsaacByte(param0, (byte) 101);
             }
             if (param1) {
               return;

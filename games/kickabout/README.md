@@ -2,8 +2,8 @@
 
 This directory is the single published Java tree. The scripts and reviewed rules live in dekobloko-work/readable; the current reverse dictionary is ../../decompilation/kickabout-naming.json.
 
-Resolved declarations: 545/545 classes and 2762/3957 methods have readable names; 440 constructors follow their class names.
-Remaining: 0 opaque class names and 1195 opaque method names. The complete naming goal is still in progress.
+Resolved declarations: 545/545 classes and 2909/3957 methods have readable names; 440 constructors follow their class names.
+Remaining: 0 opaque class names and 1048 opaque method names. The complete naming goal is still in progress.
 Audit with `node readable/naming-coverage.mjs kickabout` in dekobloko-work; it exits unsuccessfully while opaque names remain.
 
 Start with `CommonGame` for match phases and agents; `ParticipantAgent`, `TeamSelectionAgent`, `FormationAgent` and `LineupAgent` handle participant/team choices. `FootballerAgent`, `BallAgent` and `GoalStateAgent` hold play state.
@@ -11,6 +11,8 @@ Start with `CommonGame` for match phases and agents; `ParticipantAgent`, `TeamSe
 `LobbyMatchPreview`, `FootballerPreview` and `WorldDrawEntry` cover lobby previews and scene ordering. `MarkerSliderWidget`, `RotaryDialWidget` and their painters expose the custom controls. `QuickChatCategoryCache` / `QuickChatCategory` and `AnimationFrameset` describe shared definition loading.
 
 `ClubState`, `PlayerStats`, `ManagerAction` and auction classes describe manager mode. `ArchiveRequest` / `NetworkArchiveRequest`, `PacketBuffer`, `CipherPacketBuffer` and the applet hierarchy cover transport and loading. UI focus, hover, drag and drop have explicit listener contracts.
+
+`KitStyleDefinition` stores the kit pattern masks and achievement, unlock and JMod-rights requirements. `KitPatternMaskSupport` decodes those masks; `AuctionsHelpScreen.createKitMesh` applies them to the template mesh.
 
 `AchievementQuery` / `AchievementSubmission`, `LookupQuery` / `LookupRecordUpdate`, `HighScoreQuery` / `HighScoreSubmission` and `RankingsRequest` describe queued protocol operations. `PcmPlayerService`, `PcmMixerListener`, `PcmSampleStream` and `MidiPcmStream` expose scheduling, playback and MIDI control.
 

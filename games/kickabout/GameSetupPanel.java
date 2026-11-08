@@ -43,7 +43,7 @@ final class GameSetupPanel extends UiLayoutNode {
     int field_Wb;
     int field_Ob;
 
-    final int h(byte param0) {
+    final int getGameId(byte param0) {
         int var2 = 106 % ((35 - param0) / 37);
         return (int)this.getSecondaryKey((byte) 98);
     }
@@ -153,7 +153,7 @@ final class GameSetupPanel extends UiLayoutNode {
         }
     }
 
-    final boolean b(int param0) {
+    final boolean isDetachedFromGameTable(int param0) {
         if (param0 == -7) {
           return !this.isSecondaryLinked((byte) -60) ? true : false;
         }

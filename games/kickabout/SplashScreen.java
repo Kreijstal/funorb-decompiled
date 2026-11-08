@@ -207,7 +207,7 @@ final class SplashScreen extends AppScreen {
             }
             boolean decompiledFrameRemainder0 = true;
             var12.field_Lb.field_E = var20;
-            if (!var12.h(-13356)) {
+            if (!var12.isDetachedFromPlayerTable(-13356)) {
               var23_int = 16764006;
               var24_int = 16777215;
               if (var5_int != 0 &&
@@ -315,12 +315,12 @@ final class SplashScreen extends AppScreen {
               param0.field_Ab.positionAfter(true, 2, var12, (UiLayoutNode) (var11));
             }
             if (var12.field_sb != 0 &&
-              !var12.h(-13356)) {
+              !var12.isDetachedFromPlayerTable(-13356)) {
               if (var12.field_Tb.field_sb == 0) {
                 if (var12.field_Hb.field_sb == 0) {
                   AccountNameAvailabilityValidator.showLobbyPlayerContextMenu(ReceivedAuctionItem.field_y, HighScoreSubmission.field_q, 0, 95, 0, var12, param0);
                 } else {
-                  MenuSelection.a(64, param3, var12.field_Ab);
+                  MenuSelection.sendLobbyPlayerRemoval(64, param3, var12.field_Ab);
                 }
               } else {
                 IntTripleCommand.a(var12.field_Ab, param3, 122);
@@ -328,7 +328,7 @@ final class SplashScreen extends AppScreen {
             }
             var11 = var12;
             if (var12.field_Q) {
-              if (var12.h(-13356)) {
+              if (var12.isDetachedFromPlayerTable(-13356)) {
                 var12 = (LobbyPlayerRow) (var10.c(33));
                 continue;
               }

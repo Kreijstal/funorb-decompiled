@@ -139,7 +139,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
           }
           var4_int = param1.getGroupId(param0, -1);
           var5 = param1.getFileId((byte) -126, param3, var4_int);
-          stackIn_4_0 = ArchiveSource.a(param1, var4_int, (byte) 89, var5);
+          stackIn_4_0 = ArchiveSource.loadSprite(param1, var4_int, (byte) 89, var5);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

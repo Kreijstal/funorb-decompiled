@@ -25,7 +25,7 @@ final class StreetSceneryLoader extends IntrusiveNode {
         }
         if (param0 > -121) {
           StreetSceneryLoader.enqueuePromotionDialog(true, -119);
-          if (QuickChatKeysHelpPanel.field_Cb.a(false, "street")) {
+          if (QuickChatKeysHelpPanel.field_Cb.ensurePackedGroupByName(false, "street")) {
             ArchiveReconnectSupport.field_b = true;
             PlatformTaskState.field_b = ServerTextTemplate.a("cars", "street", 2, QuickChatKeysHelpPanel.field_Cb);
             AppletContextSupport.field_d = ServerTextTemplate.a("signs", "street", 2, QuickChatKeysHelpPanel.field_Cb);
@@ -34,7 +34,7 @@ final class StreetSceneryLoader extends IntrusiveNode {
           }
           return QuickChatKeysHelpPanel.field_Cb.getGroupProgressByName("street", -16248);
         }
-        if (QuickChatKeysHelpPanel.field_Cb.a(false, "street")) {
+        if (QuickChatKeysHelpPanel.field_Cb.ensurePackedGroupByName(false, "street")) {
           ArchiveReconnectSupport.field_b = true;
           PlatformTaskState.field_b = ServerTextTemplate.a("cars", "street", 2, QuickChatKeysHelpPanel.field_Cb);
           AppletContextSupport.field_d = ServerTextTemplate.a("signs", "street", 2, QuickChatKeysHelpPanel.field_Cb);

@@ -191,7 +191,7 @@ final class MusicTrackMixer extends PcmStream {
         }
     }
 
-    final void a(int param0, int param1, int param2) {
+    final void setChannelProgram(int param0, int param1, int param2) {
         int var4 = 0;
         int var5 = Kickabout.field_G;
         for (var4 = param0; this.field_k.length > var4; var4++) {
