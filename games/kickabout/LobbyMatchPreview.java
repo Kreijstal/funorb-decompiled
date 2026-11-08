@@ -48,7 +48,7 @@ final class LobbyMatchPreview {
           SoftwareRasterizer.clearFramebuffer();
           ByteArrayPool.field_d.drawParagraph(MusicPatchPcmStream.field_k.toUpperCase(), 0, 0, this.field_a, -32 + this.field_j >> 1, 16777215, -1, 1, 1, 0);
           ByteArrayPool.field_d.drawParagraph(MarkerSliderPainter.field_g.toUpperCase(), 0, -32 + this.field_j >> 1, this.field_a, -32 + this.field_j >> 1, 16777215, -1, 1, 1, 0);
-          TeamManagementScreen.e(121);
+          TeamManagementScreen.popRasterState(121);
           StreetSceneryLoader.field_j.drawAlpha(var2, var3, 96);
         }
         if (param0 < 63) {
@@ -59,7 +59,7 @@ final class LobbyMatchPreview {
           PacketBuffer.pushSpriteRaster(-45, DraggableWidget.field_K);
           SoftwareRasterizer.clearFramebuffer();
           ColorQuantizationBox.drawMatchTimer(this.field_e.field_h, 0, false, DraggableWidget.field_K.field_q, 0, -52);
-          TeamManagementScreen.e(119);
+          TeamManagementScreen.popRasterState(119);
           DraggableWidget.field_K.drawAlpha((-50 + PitchOptionTile.field_yb >> 1) + var2, (-20 + IconLabel.field_Bb >> 1) + var3, 96);
         }
         if (this.field_e.field_f == 4) {
@@ -85,7 +85,7 @@ final class LobbyMatchPreview {
           var5Lifetime2 = this.field_e.field_l >> 16;
           SoftwareRasterizer.fillCircle(var2 + 1 + var4Lifetime2, var5Lifetime2 + var3 + 1, 3, 16777215);
           SoftwareRasterizer.drawCircle(var4Lifetime2 + (var2 + 1), 1 + var3 + var5Lifetime2, 3, 65793);
-          TeamManagementScreen.e(119);
+          TeamManagementScreen.popRasterState(119);
         } else {
           if (0 > this.field_e.field_f) {
             ByteArrayPool.field_d.drawParagraph(DialogOverlay.field_d, 2 + this.field_l, this.field_b, PitchOptionTile.field_yb, IconLabel.field_Bb, 16777215, -1, 1, 1, 0);
@@ -134,7 +134,7 @@ final class LobbyMatchPreview {
         if (!QuickChatKeysHelpPanel.field_Cb.ensureFileAvailableByName("scenery", "bleachers", (byte) -10)) {
           return false;
         }
-        TeamSelectionAgent.field_p = ServerTextTemplate.a("bleachers", "scenery", 2, QuickChatKeysHelpPanel.field_Cb);
+        TeamSelectionAgent.field_p = ServerTextTemplate.loadSpriteSheetByName("bleachers", "scenery", 2, QuickChatKeysHelpPanel.field_Cb);
         return true;
     }
 

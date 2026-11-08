@@ -162,7 +162,7 @@ final class PlayerValueSortCriterion extends SortCriterion {
                     AuctionListing.pushRasterClip(-VertexNormal.field_c + (-ThumbnailStateFactory.field_c + 642) - 1, -22914, 0, 480, 0);
                     SoftwareRasterizer.fillRoundedRectangleBlended(642 - (ThumbnailStateFactory.field_c + (VertexNormal.field_c + var17)), var13 - VertexNormal.field_c + 3, var17 + 4, VertexNormal.field_c - 2, 6, 65793, param1);
                     ((BitmapFont) ((Object) var4)).drawText(AlphaContainer.field_A, 7 + (-ThumbnailStateFactory.field_c + 644 - VertexNormal.field_c - (2 + var17)), var13, 16777215, -1);
-                    TeamManagementScreen.e(119);
+                    TeamManagementScreen.popRasterState(119);
                   }
                 } else {
                   var17 = 644 + (-ThumbnailStateFactory.field_c + 10);

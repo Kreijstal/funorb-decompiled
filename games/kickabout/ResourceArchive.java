@@ -154,7 +154,7 @@ final class ResourceArchive {
             throw new RuntimeException("");
           }
           if (this.field_a[param0][param3] != null) {
-            var7 = DebouncedValidationProvider.a(this.field_a[param0][param3], false, 18828);
+            var7 = DebouncedValidationProvider.toByteArray(this.field_a[param0][param3], false, 18828);
             var5 = var7;
             if (var7 == null) {
               throw new RuntimeException("");
@@ -752,7 +752,7 @@ final class ResourceArchive {
             param1[1] != 0 ||
             param1[2] != 0 ||
             param1[3] != 0)) {
-            var35 = DebouncedValidationProvider.a(this.field_e[param0], true, 18828);
+            var35 = DebouncedValidationProvider.toByteArray(this.field_e[param0], true, 18828);
             var25 = var35;
             var9 = var25;
             var26 = new PacketBuffer(var35);
@@ -760,10 +760,10 @@ final class ResourceArchive {
             decompiledFrameRemainder0 = false;
           }
           else {
-            var9 = DebouncedValidationProvider.a(this.field_e[param0], false, param3 + 18826);
+            var9 = DebouncedValidationProvider.toByteArray(this.field_e[param0], false, param3 + 18826);
           }
           try {
-            var36 = FullscreenFailureReason.a(var9, (byte) -3);
+            var36 = FullscreenFailureReason.decompressArchiveContainer(var9, (byte) -3);
             var27 = var36;
             var23 = var27;
             var43 = var23;

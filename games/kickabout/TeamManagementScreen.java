@@ -107,7 +107,7 @@ abstract class TeamManagementScreen extends ButtonMenuScreen {
         IntrusiveNodeHashTable.a(RegistrationRequestState.field_h.field_x, 415422632);
     }
 
-    final static void e(int param0) {
+    final static void popRasterState(int param0) {
         RasterStateSnapshot var1 = (RasterStateSnapshot) (IntDoubleCommand.field_C.removeLast(-126));
         if (var1 == null) {
           throw new IllegalStateException();

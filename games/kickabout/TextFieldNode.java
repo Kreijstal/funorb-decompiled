@@ -42,7 +42,7 @@ final class TextFieldNode extends UiLayoutNode {
           this.field_Fb = var2;
           this.field_Mb = var2;
           var4 = this.field_Ub.toString().substring(var3, this.field_Ub.length());
-          PagedHelpScreen.a(var2, ' ', param0 - 11439, this.field_Ub);
+          PagedHelpScreen.resizeAndPad(var2, ' ', param0 - 11439, this.field_Ub);
           discarded$0 = this.field_Ub.append(var4);
           this.field_Lb.field_E = this.field_Ub.toString();
         }
@@ -153,7 +153,7 @@ final class TextFieldNode extends UiLayoutNode {
 
     final void clear(int param0) {
         int discarded$0 = 0;
-        PagedHelpScreen.a(0, ' ', -11407, this.field_Ub);
+        PagedHelpScreen.resizeAndPad(0, ' ', -11407, this.field_Ub);
         this.field_Mb = 0;
         this.field_Fb = 0;
         if (param0 != -19174) {
@@ -379,7 +379,7 @@ final class TextFieldNode extends UiLayoutNode {
               discarded$1 = this.field_Ub.append(param1);
             } else {
               var5 = this.field_Ub.toString().substring(this.field_Mb, this.field_Ub.length());
-              PagedHelpScreen.a(this.field_Mb, ' ', param2 - 12282, this.field_Ub);
+              PagedHelpScreen.resizeAndPad(this.field_Mb, ' ', param2 - 12282, this.field_Ub);
               discarded$2 = this.field_Ub.append(param1);
               discarded$3 = this.field_Ub.append(var5);
             }
@@ -583,7 +583,7 @@ final class TextFieldNode extends UiLayoutNode {
           }
           if (this.field_Mb != this.field_Ub.length()) {
             var4 = this.field_Ub.toString().substring(this.field_Mb, this.field_Ub.length());
-            PagedHelpScreen.a(this.field_Mb, ' ', -11407, this.field_Ub);
+            PagedHelpScreen.resizeAndPad(this.field_Mb, ' ', -11407, this.field_Ub);
             discarded$4 = this.field_Ub.append(param0);
             discarded$5 = this.field_Ub.append(var4);
           } else {

@@ -35,7 +35,7 @@ final class Checkbox extends TextButton {
         }
     }
 
-    final static BinaryBitmapFont a(String param0, ResourceArchive param1, int param2, String param3, ResourceArchive param4) {
+    final static BinaryBitmapFont loadBinaryFontByName(String param0, ResourceArchive param1, int param2, String param3, ResourceArchive param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -54,7 +54,7 @@ final class Checkbox extends TextButton {
         try {
           if (param2 <= 63) {
             var7 = (ResourceArchive) null;
-            Checkbox.a((String) null, (ResourceArchive) null, -54, (String) null, (ResourceArchive) null);
+            Checkbox.loadBinaryFontByName((String) null, (ResourceArchive) null, -54, (String) null, (ResourceArchive) null);
           }
           var5_int = param4.getGroupId(param3, -1);
           var6 = param4.getFileId((byte) -98, param0, var5_int);

@@ -196,7 +196,7 @@ final class PlayerContextMenu {
           return true;
         }
         if (param0 == 18) {
-          TextEntrySupport.a(this.field_k, (byte) -70, this.field_b);
+          TextEntrySupport.openPrivateQuickChat(this.field_k, (byte) -70, this.field_b);
           return true;
         }
         if (param0 == 11) {
@@ -436,7 +436,7 @@ final class PlayerContextMenu {
           discarded$14 = this.getDisplayName(126);
           return;
         }
-        var5 = RankingsScreen.b(this.field_c, (byte) -52);
+        var5 = RankingsScreen.findGameSetupPanel(this.field_c, (byte) -52);
         if (var5 == null) {
           if (param0 == 1) {
             return;
@@ -573,8 +573,8 @@ final class PlayerContextMenu {
             }
             if (PitchCoordinateSupport.field_d == 2) {
               var5 = this.getDisplayName(-26719);
-              var6 = ClientUiOverlay.a(this.field_k, (byte) 40);
-              var7 = DiskCacheRequest.a(0, this.field_k) ? 1 : 0;
+              var6 = ClientUiOverlay.findFriendByName(this.field_k, (byte) 40);
+              var7 = DiskCacheRequest.isIgnored(0, this.field_k) ? 1 : 0;
               if (var6 == null &&
                 var7 == 0) {
                 this.field_j.addItem(0, 4, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, DualLinkNode.field_m, new String[]{var5}));

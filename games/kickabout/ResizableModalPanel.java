@@ -123,7 +123,7 @@ abstract class ResizableModalPanel extends ModalPanel {
             PacketBuffer.pushSpriteRaster(123, PlayAreaMovementSupport.field_c[var4]);
             var5 = (var4 << 16) / 100;
             ArrayWidgetContainer.field_y.rotateBilinear(ArrayWidgetContainer.field_y.field_o << 3, ArrayWidgetContainer.field_y.field_v << 3, SoftwareRasterizer.field_g << 3, SoftwareRasterizer.field_f << 3, -var5, 4096);
-            TeamManagementScreen.e(127);
+            TeamManagementScreen.popRasterState(127);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

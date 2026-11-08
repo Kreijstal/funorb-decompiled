@@ -88,7 +88,7 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
             field_o = (String) null;
           }
           var5 = (CharSequence) ((Object) param1);
-          var3 = AuctionBidDialog.a(var5, false);
+          var3 = AuctionBidDialog.validateAccountName(var5, false);
           if (var3 != null) {
             stackIn_5_0 = var3;
             return stackIn_5_0;

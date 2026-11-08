@@ -192,7 +192,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
             PacketBuffer.pushSpriteRaster(70, this.field_Q);
           }
           var14.rotateBilinear(112, 144, var14.field_o << 4, var14.field_v << 4, -this.field_S << 10, 4096);
-          TeamManagementScreen.e(126);
+          TeamManagementScreen.popRasterState(126);
           this.field_Q.drawAdditive(-(var14.field_o >> 1) + var9, -var14.field_v + var10, 256);
         }
     }

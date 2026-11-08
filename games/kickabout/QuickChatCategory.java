@@ -72,7 +72,7 @@ final class QuickChatCategory extends DualLinkNode {
             }
           }
           if (param1) {
-            QuickChatCategory.a(true, 105, -26, -11);
+            QuickChatCategory.configurePitchReverb(true, 105, -26, -11);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -317,11 +317,11 @@ final class QuickChatCategory extends DualLinkNode {
         }
     }
 
-    final static void a(boolean param0, int param1, int param2, int param3) {
+    final static void configurePitchReverb(boolean param0, int param1, int param2, int param3) {
         if (!param0) {
           param3 = 0;
         }
-        ThreeCommand.a(ValidationState.field_c[param2][param3][2], -88, ValidationState.field_c[param2][param3][5], ValidationState.field_c[param2][param3][4], ValidationState.field_c[param2][param3][1], ValidationState.field_c[param2][param3][0], ValidationState.field_c[param2][param3][3]);
+        ThreeCommand.configureReverb(ValidationState.field_c[param2][param3][2], -88, ValidationState.field_c[param2][param3][5], ValidationState.field_c[param2][param3][4], ValidationState.field_c[param2][param3][1], ValidationState.field_c[param2][param3][0], ValidationState.field_c[param2][param3][3]);
         RegistrationRequestState.configureGameReverb(ValidationState.field_c[param2][param3][4], ValidationState.field_c[param2][param3][5], ValidationState.field_c[param2][param3][3], ValidationState.field_c[param2][param3][0], ValidationState.field_c[param2][param3][2], (byte) -113, ValidationState.field_c[param2][param3][1]);
         if (param1 != 8710) {
           FootballerAgent var5 = (FootballerAgent) null;

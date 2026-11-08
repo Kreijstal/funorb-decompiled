@@ -20,7 +20,7 @@ final class WorldSpriteDecoration {
         return stackIn_6_0;
     }
 
-    final static void a(SortCriterion param0, int param1, Object[] param2, int param3, int param4) {
+    final static void sortByCriterion(SortCriterion param0, int param1, Object[] param2, int param3, int param4) {
         int var8 = 0;
         int incrementValue$0 = 0;
         RuntimeException stackIn_15_0 = null;
@@ -57,8 +57,8 @@ final class WorldSpriteDecoration {
             }
             param2[param1] = param2[var6];
             param2[var6] = var7;
-            WorldSpriteDecoration.a(param0, -1 + var6, param2, param3 ^ 0, param4);
-            WorldSpriteDecoration.a(param0, param1, param2, 29921, var6 + 1);
+            WorldSpriteDecoration.sortByCriterion(param0, -1 + var6, param2, param3 ^ 0, param4);
+            WorldSpriteDecoration.sortByCriterion(param0, param1, param2, 29921, var6 + 1);
             return;
           }
           return;

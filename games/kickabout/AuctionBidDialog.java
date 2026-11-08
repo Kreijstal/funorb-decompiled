@@ -18,12 +18,12 @@ final class AuctionBidDialog extends MessageDialog {
           return;
         }
         CharSequence var2 = (CharSequence) null;
-        AuctionBidDialog.a((CharSequence) null, false);
+        AuctionBidDialog.validateAccountName((CharSequence) null, false);
         field_I = null;
         field_K = (int[][]) null;
     }
 
-    final static String a(CharSequence param0, boolean param1) {
+    final static String validateAccountName(CharSequence param0, boolean param1) {
         RuntimeException var2 = null;
         String stackIn_2_0 = null;
         String stackIn_4_0 = null;

@@ -83,7 +83,7 @@ public final class Kickabout extends GameLoopApplet {
           var6 = -var5 + 256;
           FormationAgent.field_f = var5 * SocialRowOrderSupport.getScreenPanelWidth(AuctionLogEntry.field_h, -4) + SocialRowOrderSupport.getScreenPanelWidth(GameModesHelpScreen.field_G, -4) * var6 >> 8;
           if (BuyPlayerDialog.field_I == 24) {
-            MeshObject.a((byte) 105);
+            MeshObject.finishScreenTransition((byte) 105);
           }
         }
         ImageProducerRasterBuffer.updateMenuCamera(true);
@@ -94,7 +94,7 @@ public final class Kickabout extends GameLoopApplet {
               var9.unlink((byte) -109);
               stackIn_59_0 = ColourSwatchTile.isAuctionListingUnqueued(param0 ^ -149, var9);
               if (stackIn_59_0) {
-                ContextMenu.a((byte) -25, var9, true);
+                ContextMenu.enqueueAuctionListingDialog((byte) -25, var9, true);
               }
               var9 = (AuctionListing) (GameLoopApplet.field_E.auctionListings.next(33));
               continue;
@@ -106,7 +106,7 @@ public final class Kickabout extends GameLoopApplet {
             var8.unlink((byte) -109);
             stackIn_59_0Lifetime1 = ColourSwatchTile.isAuctionListingUnqueued(140, var8);
             if (stackIn_59_0Lifetime1) {
-              ContextMenu.a((byte) -25, var8, false);
+              ContextMenu.enqueueAuctionListingDialog((byte) -25, var8, false);
             }
             var8 = (AuctionListing) (AccountNameCheckState.field_a.next(33));
           }
@@ -332,13 +332,13 @@ public final class Kickabout extends GameLoopApplet {
             if ((decompiledFrameRemainder2) &&
               (var5 != 0)) {
               if (param1 == 1) {
-                AnimationClip.a(RankingsScreen.field_C, param0 - 11592, false, KitPatternMaskSupport.field_c);
-                SelectionMarkerSupport.a(0);
+                AnimationClip.requestPitchTheme(RankingsScreen.field_C, param0 - 11592, false, KitPatternMaskSupport.field_c);
+                SelectionMarkerSupport.startPitchAudio(0);
                 return true;
               }
               if (2 == param1) {
-                AnimationClip.a(RankingsScreen.field_C, -76, true, KitPatternMaskSupport.field_c);
-                SelectionMarkerSupport.a(0);
+                AnimationClip.requestPitchTheme(RankingsScreen.field_C, -76, true, KitPatternMaskSupport.field_c);
+                SelectionMarkerSupport.startPitchAudio(0);
                 return true;
               }
               if (16 == param1) {
@@ -497,40 +497,40 @@ public final class Kickabout extends GameLoopApplet {
               return true;
             }
             if (param1 == 1) {
-              AnimationClip.a(0, param0 - 11592, NanoTickClock.field_n, KitPatternMaskSupport.field_c);
-              SelectionMarkerSupport.a(0);
+              AnimationClip.requestPitchTheme(0, param0 - 11592, NanoTickClock.field_n, KitPatternMaskSupport.field_c);
+              SelectionMarkerSupport.startPitchAudio(0);
               return true;
             }
             if (param1 == 2) {
-              AnimationClip.a(1, -76, NanoTickClock.field_n, KitPatternMaskSupport.field_c);
-              SelectionMarkerSupport.a(param0 - 11516);
+              AnimationClip.requestPitchTheme(1, -76, NanoTickClock.field_n, KitPatternMaskSupport.field_c);
+              SelectionMarkerSupport.startPitchAudio(param0 - 11516);
               return true;
             }
             if (param1 == 3) {
-              AnimationClip.a(2, -76, NanoTickClock.field_n, KitPatternMaskSupport.field_c);
-              SelectionMarkerSupport.a(0);
+              AnimationClip.requestPitchTheme(2, -76, NanoTickClock.field_n, KitPatternMaskSupport.field_c);
+              SelectionMarkerSupport.startPitchAudio(0);
               return true;
             }
             if (param1 == 4) {
-              AnimationClip.a(3, param0 ^ -11448, NanoTickClock.field_n, KitPatternMaskSupport.field_c);
-              SelectionMarkerSupport.a(0);
+              AnimationClip.requestPitchTheme(3, param0 ^ -11448, NanoTickClock.field_n, KitPatternMaskSupport.field_c);
+              SelectionMarkerSupport.startPitchAudio(0);
               return true;
             }
           }
           if (var5 != 0) {
             if (param1 == 1) {
-              AnimationClip.a(RankingsScreen.field_C, -76, NanoTickClock.field_n, 0);
-              SelectionMarkerSupport.a(param0 ^ 11516);
+              AnimationClip.requestPitchTheme(RankingsScreen.field_C, -76, NanoTickClock.field_n, 0);
+              SelectionMarkerSupport.startPitchAudio(param0 ^ 11516);
               return true;
             }
             if (param1 == 2) {
-              AnimationClip.a(RankingsScreen.field_C, -76, NanoTickClock.field_n, 1);
-              SelectionMarkerSupport.a(0);
+              AnimationClip.requestPitchTheme(RankingsScreen.field_C, -76, NanoTickClock.field_n, 1);
+              SelectionMarkerSupport.startPitchAudio(0);
               return true;
             }
             if (param1 == 3) {
-              AnimationClip.a(RankingsScreen.field_C, param0 ^ -11448, NanoTickClock.field_n, 2);
-              SelectionMarkerSupport.a(0);
+              AnimationClip.requestPitchTheme(RankingsScreen.field_C, param0 ^ -11448, NanoTickClock.field_n, 2);
+              SelectionMarkerSupport.startPitchAudio(0);
               return true;
             }
           }
@@ -570,19 +570,19 @@ public final class Kickabout extends GameLoopApplet {
         if (var2 <= 16) {
           AuctionListing.pushRasterClip((var2 >> 1) + 195, -22914, 0, 480, 0);
           SoftwareRasterizer.fillRoundedRectangle(195, 350, 250, 15, 6, 268435455);
-          TeamManagementScreen.e(117);
+          TeamManagementScreen.popRasterState(117);
           AuctionListing.pushRasterClip(640, -22914, (var2 >> 1) + 195, 480, 0);
           SoftwareRasterizer.fillRoundedRectangle(-250 + (var2 + 195), 350, 250, 15, 6, 268435455);
-          TeamManagementScreen.e(122);
+          TeamManagementScreen.popRasterState(122);
         } else {
           SoftwareRasterizer.fillRoundedRectangle(195, 350, var2, 15, 6, 268435455);
         }
         AuctionListing.pushRasterClip(640, -22914, var3, 480, 0);
         ConsoleTokenCursor.field_d.drawCentered(SquadGridWidget.field_Db, 320, 362, 16777215, -1);
-        TeamManagementScreen.e(126);
+        TeamManagementScreen.popRasterState(126);
         AuctionListing.pushRasterClip(var3, -22914, 0, 480, 0);
         ConsoleTokenCursor.field_d.drawCentered(SquadGridWidget.field_Db, 320, 362, 65793, -1);
-        TeamManagementScreen.e(param0 ^ 39);
+        TeamManagementScreen.popRasterState(param0 ^ 39);
     }
 
     public Kickabout() {
@@ -985,14 +985,14 @@ public final class Kickabout extends GameLoopApplet {
               return true;
             }
             if (param0 == 9) {
-              MeshObject.a((byte) 87);
+              MeshObject.finishScreenTransition((byte) 87);
               LoginText.field_e = false;
               DelayedServerPacket.a(10, false, -2);
               GameQuickChatResolver.setServerMessageText(2, param1.readString(param2 - 98));
               return true;
             }
             if (param0 == 14) {
-              MeshObject.a((byte) 81);
+              MeshObject.finishScreenTransition((byte) 81);
               ConsoleTokenCursor.a(NetworkGameClient.getLobbyPlayerListContent(param2 ^ 1), 120, MatchHudSupport.ceilPowerOfTwo((byte) 6, 1250), MatchHudSupport.ceilPowerOfTwo((byte) 6, 16), AnimationPlayer.b(-116), UrlRequest.field_c, ClassNameSupport.getActiveLayoutChild(param2 ^ 1), 150, ArchiveSource.field_c.length, 1024);
               DropTargetWidget.initializeSocialLists(64, LoginRequiredDialog.h((byte) -64), ButtonMenuScreen.f((byte) -63));
               LoginText.field_e = false;
@@ -1070,7 +1070,7 @@ public final class Kickabout extends GameLoopApplet {
                 var28[var7Lifetime4] = PainterStyle.bitwiseOr(var51[var7Lifetime4], var52[var7Lifetime4]);
               }
               if (ResourceArchive.field_g) {
-                RasterBuffer.a(20164);
+                RasterBuffer.initializeTrinketCabinet(20164);
               }
               return true;
             }
@@ -1220,7 +1220,7 @@ public final class Kickabout extends GameLoopApplet {
               TextButton.field_B = true;
             }
             var4_intLifetime7 = param1.field_n;
-            MeshObject.a((byte) 72);
+            MeshObject.finishScreenTransition((byte) 72);
             stackIn_160_0 = (0 == param1.readUnsignedByte((byte) -106)) ? 0 : 1;
             var5Lifetime5 = stackIn_160_0;
             stackIn_163_0 = (0 == param1.readUnsignedByte((byte) -116)) ? 0 : 1;
@@ -1415,7 +1415,7 @@ public final class Kickabout extends GameLoopApplet {
           SocialRowOrderSupport.field_h.draw(var4Lifetime2, 0);
           AccountChoicePanel.field_B.draw(var4Lifetime2, 0);
         }
-        TeamManagementScreen.e(118);
+        TeamManagementScreen.popRasterState(118);
         if (AuctionLogEntry.field_h instanceof ButtonMenuScreen) {
           stackIn_74_0 = (ButtonMenuScreen) (AuctionLogEntry.field_h);
           stackIn_75_1 = (this.field_L) && (GameModesHelpScreen.field_G == null);
@@ -1477,7 +1477,7 @@ public final class Kickabout extends GameLoopApplet {
         PlatformTaskState.releaseStatics(param0 ^ -18184);
         GameOptionMenuSupport.releaseStatics(20177);
         LeagueRatingRequirements.releaseStatics(0);
-        IntValueNode.a(false);
+        IntValueNode.releaseStatics(false);
         IntrusiveDeque.releaseStatics(param0 - 133);
         SoftwareRasterizer.clearRasterState();
         InputLayoutState.releaseStatics(param0 ^ 8198);
@@ -1736,7 +1736,7 @@ public final class Kickabout extends GameLoopApplet {
         IntKeyLookup.releaseStatics((byte) 94);
         ByteStorage.releaseStatics((byte) 98);
         Bzip2Decoder.releaseStatics();
-        Bzip2State.b(3);
+        Bzip2State.releaseStatics(3);
         ReflectionCheck.releaseStatics(0);
         ByteArrayPool.releaseStatics((byte) 106);
         CheckboxPainter.releaseStatics((byte) 109);

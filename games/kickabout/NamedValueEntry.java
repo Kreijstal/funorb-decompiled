@@ -240,7 +240,7 @@ final class NamedValueEntry extends IntrusiveNode {
               SpriteNumberPainter.drawNumberDigits(119, var8, var3, 180, 355);
             }
           }
-          TeamManagementScreen.e(121);
+          TeamManagementScreen.popRasterState(121);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

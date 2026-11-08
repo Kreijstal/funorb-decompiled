@@ -73,7 +73,7 @@ final class ThreeCommand extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    final static void a(float param0, int param1, float param2, float param3, float param4, float param5, float param6) {
+    final static void configureReverb(float param0, int param1, float param2, float param3, float param4, float param5, float param6) {
         if (ServerMessageScreen.field_D == null) {
           TextFieldNode.field_Bb = new PcmStreamMixer();
           ServerMessageScreen.field_D = new ReverbPcmStream(TextFieldNode.field_Bb);

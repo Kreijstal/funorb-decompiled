@@ -130,7 +130,7 @@ final class ConsoleTokenParser {
                 }
               }
               if (var21 != null &&
-                SumIntegersCommand.a((byte) 78, var21)) {
+                SumIntegersCommand.isLocalPlayerName((byte) 78, var21)) {
                 var8[1][var13] = ArchiveSource.field_e;
                 var9[1][var13] = null;
                 var35[1][var13] = var22;

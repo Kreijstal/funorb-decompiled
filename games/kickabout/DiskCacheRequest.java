@@ -50,7 +50,7 @@ final class DiskCacheRequest extends ArchiveRequest {
     DiskCacheRequest() {
     }
 
-    final static boolean a(int param0, String param1) {
+    final static boolean isIgnored(int param0, String param1) {
         RuntimeException var2 = null;
         java.applet.Applet var3 = null;
         boolean stackIn_5_0 = false;

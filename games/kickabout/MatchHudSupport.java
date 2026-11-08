@@ -87,7 +87,7 @@ final class MatchHudSupport {
               ByteArrayPool.field_d.drawText(HuffmanCodec.field_b, -(var3Lifetime2Lifetime1 * field_a[0].field_q) + (TextLayoutLine.field_e + 140 + param0), 35 + ArchiveNetworkClient.field_i - 2 * (18 - CachedArchiveSource.field_s), 4521796, -1);
             }
             ByteArrayPool.field_d.drawText("-----------", 64 + TextLayoutLine.field_e, -(2 * (18 - CachedArchiveSource.field_s)) + 44 + ArchiveNetworkClient.field_i, 16777215, -1);
-            TeamManagementScreen.e(param1 ^ -12506);
+            TeamManagementScreen.popRasterState(param1 ^ -12506);
           }
           var4Lifetime2 = GoalStateAgent.field_l;
           var3Lifetime3 = 0;

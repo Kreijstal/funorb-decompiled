@@ -64,7 +64,7 @@ final class ValidationState {
           if (256 > var5) {
             SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_g, SoftwareRasterizer.field_f, 0, 256 - var5);
           }
-          TeamManagementScreen.e(122);
+          TeamManagementScreen.popRasterState(122);
           if (PlayerStats.field_p >= 150) {
             AppScreen.field_a.drawAlpha(var3 + 15, var4 + 10, var5);
           } else {
@@ -121,7 +121,7 @@ final class ValidationState {
         if (256 > var5Lifetime1) {
           SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_g, SoftwareRasterizer.field_f, 0, 256 - var5Lifetime1);
         }
-        TeamManagementScreen.e(122);
+        TeamManagementScreen.popRasterState(122);
         if (PlayerStats.field_p >= 150) {
           AppScreen.field_a.drawAlpha(var3Lifetime1 + 15, var4Lifetime1 + 10, var5Lifetime1);
           var6Lifetime1 = -125 + PlayerStats.field_p;

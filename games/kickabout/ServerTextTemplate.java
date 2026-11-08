@@ -14,7 +14,7 @@ final class ServerTextTemplate {
     static Sprite[] field_j;
     static boolean field_e;
 
-    final static IndexedSprite[] a(int param0, int param1, int param2, int param3, boolean param4, int param5) {
+    final static IndexedSprite[] buildStadiumCrowdFrames(int param0, int param1, int param2, int param3, boolean param4, int param5) {
         int var8_int = 0;
         int var10_int = 0;
         int stackIn_11_0 = 0;
@@ -71,7 +71,7 @@ final class ServerTextTemplate {
             var17.drawSpectatorFrame(var9Lifetime1, -2);
             var17 = (PlayerModelPreview) (var8.next(33));
           }
-          TeamManagementScreen.e(121);
+          TeamManagementScreen.popRasterState(121);
           var6[var9Lifetime1] = SoftwareDrawingSupport.toIndexedSprite(var10);
         }
         return var6;
@@ -159,7 +159,7 @@ final class ServerTextTemplate {
         return LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, ValidationState.field_d[this.field_b], var5);
     }
 
-    final static Sprite[] a(String param0, String param1, int param2, ResourceArchive param3) {
+    final static Sprite[] loadSpriteSheetByName(String param0, String param1, int param2, ResourceArchive param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;

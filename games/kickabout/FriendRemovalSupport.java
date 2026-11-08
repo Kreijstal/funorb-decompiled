@@ -46,7 +46,7 @@ final class FriendRemovalSupport {
             stackIn_7_0 = CanvasResizePolicy.field_t;
             return stackIn_7_0;
           }
-          var8 = ClientUiOverlay.a(param2, (byte) 40);
+          var8 = ClientUiOverlay.findFriendByName(param2, (byte) 40);
           if (var8 == null) {
             stackIn_11_0 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, AuctionPriceLimits.field_c, new String[]{param2});
             return stackIn_11_0;

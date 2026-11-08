@@ -139,7 +139,7 @@ final class ContextMenu extends UiLayoutNode {
         this(param0, param0.field_Ob, param0.field_Nb, param0.field_Lb, param0.field_Mb, param0.field_Hb, param0.field_Eb, param0.field_Fb, param0.field_Cb);
     }
 
-    final static void a(byte param0, AuctionListing param1, boolean param2) {
+    final static void enqueueAuctionListingDialog(byte param0, AuctionListing param1, boolean param2) {
         PopupDialog var3 = null;
         int var4 = 0;
         RuntimeException stackIn_13_0 = null;

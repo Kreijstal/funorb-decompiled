@@ -29,7 +29,7 @@ final class ClientProtocolStage {
     final static void disconnectAndLeaveFullscreen(boolean param0) {
         UiWidget.leaveFullscreen(0);
         if (null != RegistrationRequestState.field_d) {
-          SumIntegersCommand.a(-120, RegistrationRequestState.field_d);
+          SumIntegersCommand.detachCanvasInput(-120, RegistrationRequestState.field_d);
         }
         SelectionMarkerSupport.clearPlayerPreviewResource(98);
         MatchTextInputOverlay.clearSharedMouseHandler(-107);

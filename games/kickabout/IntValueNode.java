@@ -21,7 +21,7 @@ final class IntValueNode extends IntrusiveNode {
         return false;
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_h = null;
         field_e = null;
         field_f = null;

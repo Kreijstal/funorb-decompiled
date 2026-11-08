@@ -6,7 +6,7 @@ final class RankingsScreen extends ButtonMenuScreen {
     static boolean[] field_B;
     static int field_C;
 
-    final static Class a(Object param0, byte param1) {
+    final static Class getBoxedPrimitiveType(Object param0, byte param1) {
         RuntimeException var2 = null;
         Class stackIn_2_0 = null;
         Class stackIn_5_0 = null;
@@ -131,7 +131,7 @@ final class RankingsScreen extends ButtonMenuScreen {
         }
     }
 
-    final static GameSetupPanel b(int param0, byte param1) {
+    final static GameSetupPanel findGameSetupPanel(int param0, byte param1) {
         if (param1 == -52) {
           return null != SortCriterion.field_f ? (GameSetupPanel) (SortCriterion.field_f.get(param1 - 3559, (long)param0)) : null;
         }
@@ -176,7 +176,7 @@ final class RankingsScreen extends ButtonMenuScreen {
         return super.buttonCenterX(param0, -22667);
     }
 
-    final static void a(boolean param0) {
+    final static void captureMouse(boolean param0) {
         java.awt.Canvas var1 = null;
         java.awt.Canvas var1Lifetime1;
         if (!param0) {
@@ -237,7 +237,7 @@ final class RankingsScreen extends ButtonMenuScreen {
         var10 = Kickabout.field_G;
         AuctionListing.pushRasterClip(374 + this.slideOffsetX, -22914, this.slideOffsetX + 10, 390, 80);
         SoftwareRasterizer.fillRoundedRectangleBlended(10 + this.slideOffsetX, 80, 364, 320, 10, 0, 128);
-        TeamManagementScreen.e(126);
+        TeamManagementScreen.popRasterState(126);
         super.drawScreen(param0, param1);
         if (PlayArea.isGuestSession(param0 ^ -97)) {
           this.drawLoginRequiredText((byte) -4);
@@ -273,7 +273,7 @@ final class RankingsScreen extends ButtonMenuScreen {
           for (var9 = 0; var9 < 10; var9++) {
             if (null != var11[var9]) {
               var4Lifetime1 = 16777215;
-              if (SumIntegersCommand.a((byte) -101, var11[var9])) {
+              if (SumIntegersCommand.isLocalPlayerName((byte) -101, var11[var9])) {
                 var4Lifetime1 = 16750882;
                 var8 = 1;
               }

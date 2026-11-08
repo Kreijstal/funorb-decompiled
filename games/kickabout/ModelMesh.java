@@ -942,7 +942,7 @@ final class ModelMesh extends ModelMeshBase {
           }
         }
         if (field_l) {
-          PlayerStatSortCriterion.a(0, var7 - 1, -1, field_J, field_k);
+          PlayerStatSortCriterion.sortIntegerPairsDescending(0, var7 - 1, -1, field_J, field_k);
           if (this.field_w == null) {
             for (var8Lifetime2 = 0; var8Lifetime2 < var7; var8Lifetime2++) {
               this.drawFace(field_k[var8Lifetime2]);

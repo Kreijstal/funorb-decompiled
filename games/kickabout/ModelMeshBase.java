@@ -200,7 +200,7 @@ abstract class ModelMeshBase extends MeshObject {
 
     abstract void finishAnimation();
 
-    final void a(AnimationFrameset param0, int param1, AnimationFrameset param2, int param3, int param4, int param5, boolean param6) {
+    final void applyAnimationFrame(AnimationFrameset param0, int param1, AnimationFrameset param2, int param3, int param4, int param5, boolean param6) {
         if (param1 == -1) {
           return;
         }

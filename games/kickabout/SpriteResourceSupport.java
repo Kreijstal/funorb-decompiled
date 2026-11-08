@@ -72,11 +72,11 @@ final class SpriteResourceSupport {
           SoftwareRasterizer.fillCircle(54, 54, 51, 255);
           SoftwareRasterizer.fillCircle(54, 54, 43, 0);
           PitchCoordinateSupport.drawSpinnerSpokes(param1, 0, 124);
-          TeamManagementScreen.e(117);
+          TeamManagementScreen.popRasterState(117);
           var9 = new ArgbSprite(54, 54);
           PacketBuffer.pushSpriteRaster(-92, var9);
           var8.drawHalfSize(0, 0);
-          TeamManagementScreen.e(119);
+          TeamManagementScreen.popRasterState(119);
           for (var4 = 0; var9.field_y.length > var4; var4++) {
             var9.field_y[var4] = PainterStyle.bitwiseOr(var9.field_y[var4] << 24, 1118668);
           }
@@ -88,11 +88,11 @@ final class SpriteResourceSupport {
         SoftwareRasterizer.fillCircle(54, 54, 51, 255);
         SoftwareRasterizer.fillCircle(54, 54, 43, 0);
         PitchCoordinateSupport.drawSpinnerSpokes(param1, 0, 124);
-        TeamManagementScreen.e(117);
+        TeamManagementScreen.popRasterState(117);
         ArgbSprite var7 = new ArgbSprite(54, 54);
         PacketBuffer.pushSpriteRaster(-92, var7);
         var6.drawHalfSize(0, 0);
-        TeamManagementScreen.e(119);
+        TeamManagementScreen.popRasterState(119);
         for (var4Lifetime1 = 0; var7.field_y.length > var4Lifetime1; var4Lifetime1++) {
           var7.field_y[var4Lifetime1] = PainterStyle.bitwiseOr(var7.field_y[var4Lifetime1] << 24, 1118668);
         }

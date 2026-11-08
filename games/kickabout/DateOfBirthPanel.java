@@ -27,7 +27,7 @@ final class DateOfBirthPanel extends ArrayWidgetContainer implements ButtonListe
           return;
         }
         try {
-          TrinketSlot.a((byte) -113, this.field_G.getYear(-1), this.field_G.getMonthIndex((byte) 48), this.field_G.getDay(85));
+          TrinketSlot.sendDateOfBirth((byte) -113, this.field_G.getYear(-1), this.field_G.getMonthIndex((byte) 48), this.field_G.getDay(85));
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "ib.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }

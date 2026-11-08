@@ -29,7 +29,7 @@ abstract class AppScreen {
             stackIn_2_0 = (Sprite) null;
             return stackIn_2_0;
           }
-          TeamManagementScreen.e(123);
+          TeamManagementScreen.popRasterState(123);
           stackIn_4_0 = (Sprite) (param2);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

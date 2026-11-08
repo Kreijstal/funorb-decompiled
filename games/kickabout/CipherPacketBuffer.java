@@ -44,7 +44,7 @@ final class CipherPacketBuffer extends PacketBuffer {
           SocialRowOrderSupport.field_e.setRasterTarget();
           var2.drawOpaque(0, -AppScreen.field_a.field_w);
           SocialRowOrderSupport.field_e.field_n = AppScreen.field_a.field_w;
-          TeamManagementScreen.e(123);
+          TeamManagementScreen.popRasterState(123);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "ml.K(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

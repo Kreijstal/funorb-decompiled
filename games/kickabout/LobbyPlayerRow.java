@@ -75,7 +75,7 @@ final class LobbyPlayerRow extends UiLayoutNode {
         }
     }
 
-    final boolean a(LobbyPlayerRow param0, byte param1) {
+    final boolean precedes(LobbyPlayerRow param0, byte param1) {
         RuntimeException var3 = null;
         boolean stackIn_2_0 = false;
         int stackIn_3_1 = 0;
@@ -139,7 +139,7 @@ final class LobbyPlayerRow extends UiLayoutNode {
         return TutorialMessages.field_b;
     }
 
-    final static void i(int param0) {
+    final static void updateTeammateMarkerIntersections(int param0) {
         int var5 = 0;
         int var8 = 0;
         int var2 = 0;
@@ -223,7 +223,7 @@ final class LobbyPlayerRow extends UiLayoutNode {
             TextFieldNode.field_Bb.removeSubstream(param0);
           }
           if (!param1) {
-            LobbyPlayerRow.i(10);
+            LobbyPlayerRow.updateTeammateMarkerIntersections(10);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

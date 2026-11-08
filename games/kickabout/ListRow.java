@@ -18,7 +18,7 @@ abstract class ListRow extends UiLayoutNode {
         }
     }
 
-    boolean b(int param0) {
+    boolean isMessageRow(int param0) {
         if (param0 != 15377) {
           field_zb = (String) null;
           return false;
@@ -124,7 +124,7 @@ abstract class ListRow extends UiLayoutNode {
         }
     }
 
-    final static void a(int param0, int param1, int param2, Sprite param3) {
+    final static void drawPitchSprite(int param0, int param1, int param2, Sprite param3) {
         RuntimeException var4 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;

@@ -110,14 +110,14 @@ final class LeagueWinnerDialog extends MessageDialog {
                 JaggrabDownloader.field_h = TeamSelectionView.createRegistrationFailure(-124, param2, param1);
               } else {
                 var7 = args;
-                MusicPatchPcmStream.a(18267, var7);
+                MusicPatchPcmStream.setAccountNameSuggestions(18267, var7);
                 JaggrabDownloader.field_h = ArrayWidgetContainer.createNameSuggestionResponse(-117, args);
               }
             }
           } else {
             stackIn_7_0 = !(SocialUiState.field_b >= 13);
             JaggrabDownloader.field_h = SquadGridWidget.createTermsResponse(stackIn_7_0, param3 ^ -42);
-            MusicPatchPcmStream.a(param3 ^ -18268, (String[]) null);
+            MusicPatchPcmStream.setAccountNameSuggestions(param3 ^ -18268, (String[]) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

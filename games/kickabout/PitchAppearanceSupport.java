@@ -12,8 +12,8 @@ final class PitchAppearanceSupport {
         double[] var6 = null;
         double[] var5 = null;
         int var4 = Kickabout.field_G;
-        DateInputValidator.field_e = ServerTextTemplate.a(0, param1, param0 - 7, 11, true, 30);
-        ClientInteractionSupport.field_e = ServerTextTemplate.a(30, param1, param0 ^ 111, 11, false, 60);
+        DateInputValidator.field_e = ServerTextTemplate.buildStadiumCrowdFrames(0, param1, param0 - 7, 11, true, 30);
+        ClientInteractionSupport.field_e = ServerTextTemplate.buildStadiumCrowdFrames(30, param1, param0 ^ 111, 11, false, 60);
         DualLinkNode.field_h = SortCriterion.a(60, param1, true, (byte) -67, 80, 11);
         ModalPanel.field_G = SortCriterion.a(80, param1, false, (byte) -120, 95, 11);
         ClientPacketFlushSupport.field_f = (Sprite[]) ((Object) new ArgbSprite[4]);
@@ -44,10 +44,10 @@ final class PitchAppearanceSupport {
           TextLayoutLine.field_a = new Sprite(PlayerValueSortCriterion.field_p.field_o, LineupView.field_x.field_v);
           PacketBuffer.pushSpriteRaster(-70, GoalSpriteLoader.field_d);
           LoggedGoal.field_o.drawOpaque(SoftwareRasterizer.field_g - LoggedGoal.field_o.field_o, 0);
-          TeamManagementScreen.e(param0 + 158);
+          TeamManagementScreen.popRasterState(param0 + 158);
           PacketBuffer.pushSpriteRaster(-42, TextLayoutLine.field_a);
           PlayerValueSortCriterion.field_p.drawOpaque(0, -PlayerValueSortCriterion.field_p.field_v + SoftwareRasterizer.field_f);
-          TeamManagementScreen.e(118);
+          TeamManagementScreen.popRasterState(118);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "mj.D(" + param0 + ',' + param1 + ')');
         }

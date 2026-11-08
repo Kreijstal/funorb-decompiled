@@ -32,13 +32,13 @@ final class DefaultPlayerFactory {
         if (param0 > 104) {
           ContextMenu.setMusicFadeOutStep(1, (byte) 60, ReceivedAuctionItem.field_E[3]);
           ContextMenu.setMusicFadeOutStep(2, (byte) 60, ReceivedAuctionItem.field_E[5]);
-          NetworkArchiveRequest.a(0, Trinket.field_c, ReceivedAuctionItem.field_E[0], 2147483647);
+          NetworkArchiveRequest.playMusicTrackById(0, Trinket.field_c, ReceivedAuctionItem.field_E[0], 2147483647);
           return;
         }
         field_b = 48;
         ContextMenu.setMusicFadeOutStep(1, (byte) 60, ReceivedAuctionItem.field_E[3]);
         ContextMenu.setMusicFadeOutStep(2, (byte) 60, ReceivedAuctionItem.field_E[5]);
-        NetworkArchiveRequest.a(0, Trinket.field_c, ReceivedAuctionItem.field_E[0], 2147483647);
+        NetworkArchiveRequest.playMusicTrackById(0, Trinket.field_c, ReceivedAuctionItem.field_E[0], 2147483647);
     }
 
     static {
@@ -50,12 +50,12 @@ final class DefaultPlayerFactory {
         if (param0 > 104) {
           ContextMenu.setMusicFadeOutStep(1, (byte) 60, ReceivedAuctionItem.field_E[3]);
           ContextMenu.setMusicFadeOutStep(2, (byte) 60, ReceivedAuctionItem.field_E[5]);
-          NetworkArchiveRequest.a(0, Trinket.field_c, ReceivedAuctionItem.field_E[0], 2147483647);
+          NetworkArchiveRequest.playMusicTrackById(0, Trinket.field_c, ReceivedAuctionItem.field_E[0], 2147483647);
           return;
         }
         field_b = 48;
         ContextMenu.setMusicFadeOutStep(1, (byte) 60, ReceivedAuctionItem.field_E[3]);
         ContextMenu.setMusicFadeOutStep(2, (byte) 60, ReceivedAuctionItem.field_E[5]);
-        NetworkArchiveRequest.a(0, Trinket.field_c, ReceivedAuctionItem.field_E[0], 2147483647);
+        NetworkArchiveRequest.playMusicTrackById(0, Trinket.field_c, ReceivedAuctionItem.field_E[0], 2147483647);
     }
 }

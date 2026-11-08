@@ -76,7 +76,7 @@ final class AudioService implements Runnable {
             }
             ThreadSleepSupport.sleepMillis(10L, 1);
             Object var5 = (Object) null;
-            ReflectionCheck.a((byte) 41, this.field_f, (Object) null);
+            ReflectionCheck.pumpAwtEventQueue((byte) 41, this.field_f, (Object) null);
           }
         } catch (Exception exception) {
           String var6 = (String) null;

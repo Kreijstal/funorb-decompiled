@@ -333,7 +333,7 @@ final class StatChoiceDialog extends MessageDialog {
         if (param0 >= -11) {
           this.field_P = 5;
         }
-        TeamManagementScreen.e(123);
+        TeamManagementScreen.popRasterState(123);
         ClientPacketFlushSupport.field_b.drawHalfSize(40 + param1, param2 + 80);
         IsSixCommand.field_C.drawCentered(this.field_J.getDisplayName(100), param1 + 90, param2 + 190, 16777215, -1);
         SoftwareDrawingSupport.drawStatBar(param1 + 40, 200 + param2, this.field_J.experience, 3, true, 0);

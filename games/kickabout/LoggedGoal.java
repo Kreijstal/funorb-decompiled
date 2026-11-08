@@ -34,7 +34,7 @@ final class LoggedGoal extends IntrusiveNode {
           PacketBuffer.pushSpriteRaster(-49, PlayerShopScreen.field_R);
           var4_intLifetime1 = 88 / ((param3 + 76) / 44);
           param0.drawScaledAveraged(0, 0, 32, 32);
-          TeamManagementScreen.e(123);
+          TeamManagementScreen.popRasterState(123);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "ch.B(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }

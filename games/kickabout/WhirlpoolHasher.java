@@ -269,7 +269,7 @@ final class WhirlpoolHasher {
               }
               if (var9Lifetime1 == 99) {
                 SetLagCommand.readPacketBytes((byte) 51, PlayAreaMovementSupport.constantOne((byte) 40));
-                TutorialMessages.field_f = new Boolean(PlayerInputEvent.a(ByteArrayPool.field_e, (byte) 93));
+                TutorialMessages.field_f = new Boolean(PlayerInputEvent.readBooleanByte(ByteArrayPool.field_e, (byte) 93));
                 ByteArrayPool.field_e.field_n = 0;
               } else {
                 AppletContextSupport.field_b = var9Lifetime1;
@@ -425,7 +425,7 @@ final class WhirlpoolHasher {
         }
     }
 
-    final static void a(ResourceArchive param0, ResourceArchive param1, int param2) {
+    final static void validateArchiveSetupGuard(ResourceArchive param0, ResourceArchive param1, int param2) {
         try {
           if (param2 != 5198) {
             field_a = 1.2037987668274452;

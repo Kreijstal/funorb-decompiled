@@ -198,7 +198,7 @@ final class PasswordLoginCredentials extends LoginCredentials {
             AccountInputValidationResult.field_a = param1;
             SessionUrlSupport.field_f = param3;
           } else {
-            var8.t(17);
+            var8.showRegistrationFailure(17);
           }
           if (param0 >= 98) {
             return true;
@@ -296,7 +296,7 @@ final class PasswordLoginCredentials extends LoginCredentials {
           for (var3 = 0; param0.trinketIds.length > var3; var3++) {
             var2_int = var2_int + (GeneratedPanelPainter.field_g[param0.trinketIds[var3]].field_e >> 1);
           }
-          var3Lifetime1 = LoggedPossession.a(param1 + 576054974, param0);
+          var3Lifetime1 = LoggedPossession.weightedBaseStatScore(param1 + 576054974, param0);
           if (15 <= var3Lifetime1) {
             var2_int = (452 * ((var3Lifetime1 - 15) * (var3Lifetime1 - 15)) >> 5) + 10;
             for (var4 = 0; param0.trinketIds.length > var4; var4++) {

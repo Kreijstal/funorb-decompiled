@@ -16,7 +16,7 @@ final class LocalizedTextLoader {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 == 26300) {
-            stackIn_4_0 = MatchPhaseView.field_b + NineSlicePanelPainter.a((byte) -128, 0, (long)param0, true, ArchiveRequest.field_r);
+            stackIn_4_0 = MatchPhaseView.field_b + NineSlicePanelPainter.formatDecimal((byte) -128, 0, (long)param0, true, ArchiveRequest.field_r);
             return stackIn_4_0;
           }
           stackIn_2_0 = (String) null;

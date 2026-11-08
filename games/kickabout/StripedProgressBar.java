@@ -40,7 +40,7 @@ final class StripedProgressBar extends UiWidget {
             SoftwareRasterizer.setPixel(var5, var4, var8 << 8 | var8 | var8 << 16);
           }
         }
-        TeamManagementScreen.e(124);
+        TeamManagementScreen.popRasterState(124);
         return var3;
     }
 
@@ -121,13 +121,13 @@ final class StripedProgressBar extends UiWidget {
           for (var6 = param1 - this.field_H; var5_int > var6; var6 = var6 + param0.field_q) {
             param0.draw(var6, param3);
           }
-          TeamManagementScreen.e(param2 - 1);
+          TeamManagementScreen.popRasterState(param2 - 1);
           if (SoftwareRasterizer.field_b <= this.field_v.field_q + param1) {
             PacketBuffer.pushSpriteRaster(param2 ^ -84, this.field_I);
             param0.draw(-this.field_H, 0);
             param0.draw(this.field_G * 2 - this.field_H, 0);
             this.field_D.drawMultiply(0, 0);
-            TeamManagementScreen.e(117);
+            TeamManagementScreen.popRasterState(117);
             this.field_I.draw(param1, param3);
           }
           if (SoftwareRasterizer.field_c >= var5_int - this.field_v.field_q) {
@@ -137,7 +137,7 @@ final class StripedProgressBar extends UiWidget {
             param0.draw(-var7, 0);
             param0.draw(-var7 + 2 * this.field_G, 0);
             this.field_v.drawMultiply(0, 0);
-            TeamManagementScreen.e(120);
+            TeamManagementScreen.popRasterState(120);
             this.field_I.draw(-this.field_v.field_q + var5_int, param3);
             return;
           }
@@ -156,9 +156,9 @@ final class StripedProgressBar extends UiWidget {
         }
     }
 
-    final static void a(int param0) {
+    final static void resetAccountRequestState(int param0) {
         if (param0 != 0) {
-          StripedProgressBar.a(-7);
+          StripedProgressBar.resetAccountRequestState(-7);
         }
         DiagnosticsOverlaySupport.field_g = false;
         AuctionBidDialog.field_G = false;
@@ -217,7 +217,7 @@ final class StripedProgressBar extends UiWidget {
           SoftwareRasterizer.drawHorizontalLine(var7 + this.field_G, var6, this.field_G, var12Lifetime1);
           SoftwareRasterizer.drawHorizontalLine(-this.field_G + var7, var6, this.field_G, var12Lifetime1);
         }
-        TeamManagementScreen.e(122);
+        TeamManagementScreen.popRasterState(122);
         return var14;
     }
 
@@ -251,7 +251,7 @@ final class StripedProgressBar extends UiWidget {
         if (65536 > this.field_C) {
           AuctionListing.pushRasterClip(var5 + this.field_n, -22914, var5 + (this.field_C * this.field_n >> 16), this.field_i + var6, var6);
           this.drawStripedBar(this.field_z[1], var5, (byte) 124, var6);
-          TeamManagementScreen.e(127);
+          TeamManagementScreen.popRasterState(127);
         }
     }
 
@@ -263,7 +263,7 @@ final class StripedProgressBar extends UiWidget {
         RuntimeException var5 = null;
         try {
           if (param0 != 12) {
-            StripedProgressBar.a(27);
+            StripedProgressBar.resetAccountRequestState(27);
           }
           if (this.field_w) {
             this.field_H = this.field_H + 1;
@@ -297,7 +297,7 @@ final class StripedProgressBar extends UiWidget {
         this.field_I = new Sprite(this.field_i >> 1, this.field_i);
     }
 
-    final static int b(int param0, int param1, int param2, boolean param3) {
+    final static int pollAccountUiAction(int param0, int param1, int param2, boolean param3) {
         if (param1 != -1951459327) {
           return 80;
         }

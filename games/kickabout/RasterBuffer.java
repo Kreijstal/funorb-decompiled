@@ -61,12 +61,12 @@ abstract class RasterBuffer {
             if (3 == RankingsScreen.field_C) {
               var11 = param1[LoggedPossession.nextRandomInt((byte) -24, 3)];
               var4 = var11;
-              var5 = BytePlusOneCommand.a(29430, 10, 896 - var11.field_o >> 1);
-              var6 = BytePlusOneCommand.a(29430, 10, 50 - (var11.field_v >> 1));
+              var5 = BytePlusOneCommand.randomizeAround(29430, 10, 896 - var11.field_o >> 1);
+              var6 = BytePlusOneCommand.randomizeAround(29430, 10, 50 - (var11.field_v >> 1));
               var11.draw(var5 + param2, var6 + param3);
               var4.draw(param2 + var5, -var11.field_v - var6 + (1344 + param3));
-              var5Lifetime1 = BytePlusOneCommand.a(29430, 10, -var11.field_o + 896 >> 1);
-              var6 = BytePlusOneCommand.a(29430, 10, 1344 - var11.field_v >> 1);
+              var5Lifetime1 = BytePlusOneCommand.randomizeAround(29430, 10, -var11.field_o + 896 >> 1);
+              var6 = BytePlusOneCommand.randomizeAround(29430, 10, 1344 - var11.field_v >> 1);
               param1[LoggedPossession.nextRandomInt((byte) -24, 3)].draw(var5Lifetime1 + param2, param3 + var6);
             }
           } else {
@@ -75,14 +75,14 @@ abstract class RasterBuffer {
             for (var6 = 0; var6 < 3; var6++) {
               var13 = param1[var6];
               var7_ref_ut = var13;
-              var8 = BytePlusOneCommand.a(29430, 10, var12[var6] + (896 - var13.field_o >> 1));
-              var9 = BytePlusOneCommand.a(29430, 10, 60 - ((var13.field_v >> 1) - var14[var6]));
+              var8 = BytePlusOneCommand.randomizeAround(29430, 10, var12[var6] + (896 - var13.field_o >> 1));
+              var9 = BytePlusOneCommand.randomizeAround(29430, 10, 60 - ((var13.field_v >> 1) - var14[var6]));
               var13.draw(var8 + param2, var9 + param3);
               var7_ref_ut.draw(var8 + param2, -var13.field_v - var9 + (1344 + param3));
             }
             var6_ref_ut = param1[LoggedPossession.nextRandomInt((byte) -24, 3)];
-            var7 = BytePlusOneCommand.a(29430, 10, -var6_ref_ut.field_o + 896 >> 1);
-            var8 = BytePlusOneCommand.a(29430, 10, 1344 - var6_ref_ut.field_v >> 1);
+            var7 = BytePlusOneCommand.randomizeAround(29430, 10, -var6_ref_ut.field_o + 896 >> 1);
+            var8 = BytePlusOneCommand.randomizeAround(29430, 10, 1344 - var6_ref_ut.field_v >> 1);
             var6_ref_ut.draw(var7 + param2, var8 + param3);
           }
           if (param0 < 71) {
@@ -110,7 +110,7 @@ abstract class RasterBuffer {
         }
     }
 
-    final static void a(int param0) {
+    final static void initializeTrinketCabinet(int param0) {
         ContextMenuItem.field_Ib = new ScrollContainer("Cabinet", GameplayHelpScreen.createTrinketPickerGrid((byte) 15), ConsolePanel.field_q, ParticipantAgent.field_m);
         ContextMenuItem.field_Ib.setLayout(16, 100, 4, (byte) -114, 200, 300, 70);
         if (param0 != 20164) {
@@ -148,7 +148,7 @@ abstract class RasterBuffer {
             stackIn_4_0 = new String[]{};
             return stackIn_4_0;
           }
-          PagedHelpScreen.a(0, ' ', -11407, ClientPacketFlushSupport.field_a);
+          PagedHelpScreen.resizeAndPad(0, ' ', -11407, ClientPacketFlushSupport.field_a);
           var3_int = 0;
           var4 = 0;
           var5 = -1;
@@ -207,10 +207,10 @@ abstract class RasterBuffer {
         }
     }
 
-    final static void a(boolean param0) {
+    final static void enqueueSaveChangesDialog(boolean param0) {
         ScrollPane.field_Jb.addLast(new SaveChangesDialog(), 3);
         if (param0) {
-          RasterBuffer.a(false);
+          RasterBuffer.enqueueSaveChangesDialog(false);
         }
     }
 

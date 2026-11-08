@@ -224,7 +224,7 @@ final class TournamentLobbyScreen extends AppScreen {
         SoftwareDrawingSupport.drawStatisticsTable(250, var2, SortCriterion.field_g, this.field_Y, new String[]{"", "%"}, 160, 21, this.field_Q.length, this.field_Q, -1);
         var2 = var2 + this.field_Y.length * 32;
         var2 += 20;
-        TeamManagementScreen.e(117);
+        TeamManagementScreen.popRasterState(117);
         if (this.field_k != 0 &&
           this.field_h > this.field_k) {
           SoftwareRasterizer.fillRoundedRectangleBlended(this.field_m, this.field_u, 570, 12, 3, this.field_i ? 11184810 : this.field_s, 128);
@@ -275,7 +275,7 @@ final class TournamentLobbyScreen extends AppScreen {
         var14 = QuickChatMenuBuilder.getNewestChatMessage(17475);
         var4 = -84 / ((param0 - 38) / 60);
         if (this.field_g != var14) {
-          stackIn_12_1 = (!QuickChatCategoryCache.field_e) && (this.field_g != var14) && (!SumIntegersCommand.a((byte) -66, var14.field_q));
+          stackIn_12_1 = (!QuickChatCategoryCache.field_e) && (this.field_g != var14) && (!SumIntegersCommand.isLocalPlayerName((byte) -66, var14.field_q));
           this.field_K = stackIn_12_1;
           this.field_g = var14;
         } else {
@@ -839,7 +839,7 @@ final class TournamentLobbyScreen extends AppScreen {
         var2 = 46;
         SoftwareRasterizer.fillRoundedRectangleBlended(var2, 66, 175, 50, 8, 65793, 196);
         ByteArrayPool.field_d.drawCentered(TexturedPanelPainter.field_g, var2 + 87, 82, 16777215, -1);
-        TeamManagementScreen.e(120);
+        TeamManagementScreen.popRasterState(120);
         var3 = 17;
         var4 = -var3 + 88;
         var5 = 175;
@@ -865,7 +865,7 @@ final class TournamentLobbyScreen extends AppScreen {
               var12 = -(int)(var10 * Math.sin((double)this.field_E / 50.0) - 5.0);
               ByteArrayPool.field_d.drawCentered(var7, var2 + (var5 >> 1) + var12, 13 + var4, var9, -1);
             }
-            TeamManagementScreen.e(param0 + 21236);
+            TeamManagementScreen.popRasterState(param0 + 21236);
             if (var8 != 0) {
               SoftwareRasterizer.drawLineBlendedInclusive(-(ByteArrayPool.field_d.stringWidth(var7) >> 1) + (var5 >> 1) + (var2 - 8), 8 + var4, 8 + ((var5 >> 1) + var2) + (ByteArrayPool.field_d.stringWidth(var7) >> 1), var4 + 8, 11141377, 196);
               SoftwareRasterizer.drawLineBlendedInclusive(-(ByteArrayPool.field_d.stringWidth(var7) >> 1) + ((var5 >> 1) + var2 - 8), var4 + 9, (var5 >> 1) + (var2 + (ByteArrayPool.field_d.stringWidth(var7) >> 1)) + 8, var4 + 9, 11141377, 196);
@@ -1163,7 +1163,7 @@ final class TournamentLobbyScreen extends AppScreen {
           AuctionListing.pushRasterClip(var11 + var5, -22914, var11 - var5, -(var6 >> 1) + var12, -var6 + var12);
           SoftwareRasterizer.fillRoundedRectangleBlended(-(ByteArrayPool.field_d.stringWidth(WeightedLruCache.field_g) >> 1) + var11 - 10, var12 - var6, 20 + ByteArrayPool.field_d.stringWidth(WeightedLruCache.field_g), var6, 8, 65793, 128);
           ByteArrayPool.field_d.drawCentered(WeightedLruCache.field_g, var11, var12 + (-(var6 >> 1) - 4), -1, -1);
-          TeamManagementScreen.e(126);
+          TeamManagementScreen.popRasterState(126);
           SoftwareRasterizer.fillRectangleAlpha(-(var5 >> 1) + var11, -(var6 >> 1) + var12, var5, var6, 65793, 128);
           WriteIntegersCommand.field_E[6].draw(var11 + (var5 >> 1) - (WriteIntegersCommand.field_E[6].field_o - 4), -(WriteIntegersCommand.field_E[6].field_v >> 1) + var12);
           var16 = var14.field_o;
@@ -1220,7 +1220,7 @@ final class TournamentLobbyScreen extends AppScreen {
         } else {
           this.drawCurrentRound(-21109);
         }
-        TeamManagementScreen.e(121);
+        TeamManagementScreen.popRasterState(121);
         this.drawTabButtons(param0 ^ 28);
         var3 = 70;
         var4 = -42 + GrayscalePaletteSupport.field_a.field_J;
@@ -1230,7 +1230,7 @@ final class TournamentLobbyScreen extends AppScreen {
         if (!this.field_K) {
           AuctionListing.pushRasterClip(MarkerSliderPainter.field_n + var3 - 10, -22914, -10 + var3, var4, -18 + var4);
           GuestLoginSupport.drawQuickChatToggleHint((byte) -127, var4, var3);
-          TeamManagementScreen.e(123);
+          TeamManagementScreen.popRasterState(123);
         } else {
           var5 = Math.abs(255 - (int)(MonotonicClock.monotonicMillis(96) / 5L % 512L));
           var6 = 0;
@@ -1241,7 +1241,7 @@ final class TournamentLobbyScreen extends AppScreen {
           ScrollPane.drawHalfSizePlayerMarker(var4, param0 + 113, MarkerSliderPainter.field_n + (30 + var3));
           var8 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, NanoTickClock.field_o, new String[]{TutorialScenerySupport.field_b[ClassDescriptorSupport.field_h]});
           ConsoleTokenCursor.field_d.drawText(var8, var3 + 20, var4, var7, -1);
-          TeamManagementScreen.e(118);
+          TeamManagementScreen.popRasterState(118);
         }
     }
 

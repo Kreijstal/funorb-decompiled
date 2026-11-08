@@ -15,7 +15,7 @@ final class CheatCodeListener implements OverlayLayer {
     private Sprite field_b;
     static String field_d;
 
-    private final void a(int param0, int param1) {
+    private final void buildFootballerPreviews(int param0, int param1) {
         int var4 = 0;
         boolean[][][] var11 = null;
         MeshData var6 = null;
@@ -34,7 +34,7 @@ final class CheatCodeListener implements OverlayLayer {
         }
     }
 
-    final static boolean d(int param0) {
+    final static boolean drawBlockingOverlays(int param0) {
         int var1;
         int var3;
         int stackIn_12_0 = 0;
@@ -50,7 +50,7 @@ final class CheatCodeListener implements OverlayLayer {
             if (NanoTickClock.c(2915)) {
               SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.field_g, SoftwareRasterizer.field_f);
               var1 = 1;
-              AudioOutputSupport.b(true);
+              AudioOutputSupport.drawFullscreenPrompt(true);
             }
           } else {
             var1 = 1;
@@ -76,7 +76,7 @@ final class CheatCodeListener implements OverlayLayer {
           }
         }
         if (param0 != -27302) {
-          CheatCodeListener.d(14);
+          CheatCodeListener.drawBlockingOverlays(14);
         }
         return var1 != 0;
     }
@@ -105,7 +105,7 @@ final class CheatCodeListener implements OverlayLayer {
             this.initializeFootballerPreviewBuffers(-98);
           }
           if (var4Lifetime1 != this.field_c) {
-            this.a(-18, var4Lifetime1);
+            this.buildFootballerPreviews(-18, var4Lifetime1);
           }
           this.field_f = 1;
         }
@@ -154,7 +154,7 @@ final class CheatCodeListener implements OverlayLayer {
           PacketBuffer.pushSpriteRaster(-102, this.field_b);
           SoftwareRasterizer.clearFramebuffer();
           this.field_i[var4].renderModel(var3, 0, SoftwareRasterizer.field_g >> 1, SoftwareRasterizer.field_f, (byte) -105);
-          TeamManagementScreen.e(120);
+          TeamManagementScreen.popRasterState(120);
           if (this.field_f > 136) {
             this.field_b.drawAlpha(-(this.field_b.field_o >> 1) + var8, -(this.field_b.field_v >> 1) + var9, 200 - this.field_f << 2);
           } else {

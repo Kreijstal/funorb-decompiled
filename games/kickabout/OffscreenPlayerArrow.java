@@ -160,7 +160,7 @@ final class OffscreenPlayerArrow {
             TriangleRasterizer.useRasterClip();
             TriangleRasterizer.drawFlatTriangle(TextInputWidget.field_P, TextInputWidget.field_P + (var7 << 1), (var5 << 1) + TextInputWidget.field_P, TextInputWidget.field_P, -(var6 << 1) + TextInputWidget.field_P, TextInputWidget.field_P - (var4 << 1), -16777216);
             TriangleRasterizer.drawFlatTriangle(TextInputWidget.field_P, TextInputWidget.field_P + (var9 << 1), (var5 << 1) + TextInputWidget.field_P, TextInputWidget.field_P, TextInputWidget.field_P - (var8 << 1), -(var4 << 1) + TextInputWidget.field_P, -16777216);
-            TeamManagementScreen.e(param0 + 116);
+            TeamManagementScreen.popRasterState(param0 + 116);
             PacketBuffer.pushSpriteRaster(param0 ^ 68, TextInputWidget.field_N);
             SoftwareRasterizer.clearFramebuffer();
             TriangleRasterizer.useRasterClip();
@@ -170,7 +170,7 @@ final class OffscreenPlayerArrow {
             TriangleRasterizer.drawFlatTriangle(TextInputWidget.field_P, (var9 << 1) + TextInputWidget.field_P, TextInputWidget.field_P + (var5 << 1), TextInputWidget.field_P, -(var8 << 1) + TextInputWidget.field_P, -(var4 << 1) + TextInputWidget.field_P, 68);
             SoftwareRasterizer.drawRadialGlow(-(var4 * 3 >> 1) + TextInputWidget.field_P << 4, TextInputWidget.field_P + (3 * var5 >> 1) << 4, 544, 18, PlayerSurnameSortCriterion.field_n);
             SoftwareRasterizer.drawRectangle(0, 0, SoftwareRasterizer.field_g, SoftwareRasterizer.field_f, 16711935);
-            TeamManagementScreen.e(param0 + 113);
+            TeamManagementScreen.popRasterState(param0 + 113);
             TriangleRasterizer.useRasterClip();
             for (var10_int = 0; var10_int < TextInputWidget.field_N.field_y.length; var10_int++) {
               TextInputWidget.field_N.field_y[var10_int] = PainterStyle.bitwiseOr(TextInputWidget.field_N.field_y[var10_int], UiWidget.field_e.field_y[var10_int]);

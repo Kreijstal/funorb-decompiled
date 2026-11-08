@@ -77,7 +77,7 @@ final class ClassDescriptorSupport {
         }
     }
 
-    final static boolean b(byte param0) {
+    final static boolean isGuardAtLeastTen(byte param0) {
         if (param0 < 10) {
           return false;
         }
@@ -107,7 +107,7 @@ final class ClassDescriptorSupport {
             stackIn_3_0 = SquadSlotWidget.field_Ib;
             return stackIn_3_0;
           }
-          if (SumIntegersCommand.a((byte) 86, param0)) {
+          if (SumIntegersCommand.isLocalPlayerName((byte) 86, param0)) {
             stackIn_7_0 = LoginText.field_g;
             return stackIn_7_0;
           }
@@ -115,7 +115,7 @@ final class ClassDescriptorSupport {
             stackIn_10_0 = TrinketSlot.field_Ab;
             return stackIn_10_0;
           }
-          if (DiskCacheRequest.a(0, param0)) {
+          if (DiskCacheRequest.isIgnored(0, param0)) {
             stackIn_13_0 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, FriendRemovalSupport.field_b, new String[]{param0});
             return stackIn_13_0;
           }

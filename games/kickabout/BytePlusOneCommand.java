@@ -26,7 +26,7 @@ final class BytePlusOneCommand extends ConsoleCommand {
         RuntimeException var10 = null;
         try {
           if (param1) {
-            BytePlusOneCommand.a(65, -77, 21);
+            BytePlusOneCommand.randomizeAround(65, -77, 21);
           }
           MatchHudSupport.field_f = param2;
           TextButton.field_v = new PlayerContextMenu(param0, param6, param4, param7, param8, param3, param5);
@@ -320,7 +320,7 @@ final class BytePlusOneCommand extends ConsoleCommand {
         }
     }
 
-    final static int a(int param0, int param1, int param2) {
+    final static int randomizeAround(int param0, int param1, int param2) {
         RuntimeException var3 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;

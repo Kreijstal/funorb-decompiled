@@ -8,7 +8,7 @@ abstract class DebouncedValidationProvider implements ValidationSource {
 
     abstract ValidationState evaluateValidationState(boolean param0);
 
-    final static byte[] a(Object param0, boolean param1, int param2) {
+    final static byte[] toByteArray(Object param0, boolean param1, int param2) {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
         ByteStorage var4 = null;
@@ -106,7 +106,7 @@ abstract class DebouncedValidationProvider implements ValidationSource {
         try {
           if (param1 != 79) {
             var3 = (Object) null;
-            DebouncedValidationProvider.a((Object) null, true, -58);
+            DebouncedValidationProvider.toByteArray((Object) null, true, -58);
           }
           if (param0 != null &&
             param0.length() >= IsaacRandom.field_c &&

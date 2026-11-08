@@ -163,7 +163,7 @@ final class NameSuggestionsPanel extends WidgetContainer implements ButtonListen
         if (param0 != -76) {
           field_B = (String) null;
         }
-        ClientUiUpdateSupport.field_a.a((byte) -118, (UiWidget) (CachedArchiveSource.field_u));
+        ClientUiUpdateSupport.field_a.transitionToContent((byte) -118, (UiWidget) (CachedArchiveSource.field_u));
     }
 
     final static TextWidgetPainter getDefaultTextPainter(byte param0) {

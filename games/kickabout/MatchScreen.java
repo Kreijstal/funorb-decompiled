@@ -340,7 +340,7 @@ final class MatchScreen extends AppScreen {
           PacketBuffer.pushSpriteRaster(-44, WorldSpriteSequence.field_h);
           LookupRecordUpdate.a((byte) -48);
           this.drawScreen(-5, false);
-          TeamManagementScreen.e(122);
+          TeamManagementScreen.popRasterState(122);
           this.field_E = 256;
         }
     }

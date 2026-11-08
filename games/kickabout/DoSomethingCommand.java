@@ -34,7 +34,7 @@ final class DoSomethingCommand extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 == 84) {
-            stackIn_4_0 = new ConsoleValue(Bzip2State.a(106, (String) (param1[0].field_d)));
+            stackIn_4_0 = new ConsoleValue(Bzip2State.replaceLowercaseTWithR(106, (String) (param1[0].field_d)));
             return stackIn_4_0;
           }
           stackIn_2_0 = (ConsoleValue) null;

@@ -99,7 +99,7 @@ final class PlayerStatSortCriterion extends SortCriterion {
         field_o = null;
     }
 
-    final static void a(int param0, int param1, int param2, int[] param3, int[] param4) {
+    final static void sortIntegerPairsDescending(int param0, int param1, int param2, int[] param3, int[] param4) {
         int var10 = 0;
         int stackIn_7_0 = 0;
         RuntimeException stackIn_17_0 = null;
@@ -147,8 +147,8 @@ final class PlayerStatSortCriterion extends SortCriterion {
             param3[var6] = var7;
             param4[param1] = param4[var6];
             param4[var6] = var8;
-            PlayerStatSortCriterion.a(param0, -1 + var6, param2 + 0, param3, param4);
-            PlayerStatSortCriterion.a(var6 + 1, param1, -1, param3, param4);
+            PlayerStatSortCriterion.sortIntegerPairsDescending(param0, -1 + var6, param2 + 0, param3, param4);
+            PlayerStatSortCriterion.sortIntegerPairsDescending(var6 + 1, param1, -1, param3, param4);
             return;
           }
           return;

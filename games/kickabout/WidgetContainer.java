@@ -454,7 +454,7 @@ class WidgetContainer extends UiWidget implements UiContainerMarker {
           var6_int = -127 % ((param5 - 63) / 51);
           AuctionListing.pushRasterClip(160 + param3, -22914, param3, param4 + 21, param4);
           SoftwareRasterizer.fillRoundedRectangle(param3, param4, 160, 42, 10, 65793);
-          TeamManagementScreen.e(123);
+          TeamManagementScreen.popRasterState(123);
           if (param2 != null) {
             ByteArrayPool.field_d.drawCentered(param2, 80 + param3, 17 + param4, 16777215, -1);
           }

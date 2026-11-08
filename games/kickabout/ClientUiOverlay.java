@@ -185,7 +185,7 @@ final class ClientUiOverlay implements OverlayLayer {
         }
     }
 
-    final static SocialPlayerRow a(String param0, byte param1) {
+    final static SocialPlayerRow findFriendByName(String param0, byte param1) {
         String var2 = null;
         SocialPlayerRow var3 = null;
         String var4 = null;
@@ -341,7 +341,7 @@ final class ClientUiOverlay implements OverlayLayer {
         field_c = null;
         if (param0) {
           String var2 = (String) null;
-          ClientUiOverlay.a((String) null, (byte) -45);
+          ClientUiOverlay.findFriendByName((String) null, (byte) -45);
         }
     }
 

@@ -38,7 +38,7 @@ abstract class GameLoopApplet extends NetworkGameClient implements OverlayLayer 
 
     final static void b(int param0, int param1, int param2) {
         if (param0 != 15848) {
-          GameLoopApplet.n((byte) 32);
+          GameLoopApplet.createTeamTintedHudSprites((byte) 32);
         }
         CipherPacketBuffer var3 = FootballerAiOverlaySupport.field_d;
         var3.writeIsaacByte(param1, (byte) -117);
@@ -55,7 +55,7 @@ abstract class GameLoopApplet extends NetworkGameClient implements OverlayLayer 
 
     public final boolean capturesInput(byte param0) {
         if (param0 < 63) {
-          GameLoopApplet.n((byte) -47);
+          GameLoopApplet.createTeamTintedHudSprites((byte) -47);
         }
         return true;
     }
@@ -298,14 +298,14 @@ abstract class GameLoopApplet extends NetworkGameClient implements OverlayLayer 
         if (!TextFieldNode.field_Rb) {
           this.r(10);
         } else {
-          CheatCodeListener.d(-27302);
+          CheatCodeListener.drawBlockingOverlays(-27302);
           WidgetStyleFactory.drawRasterToCanvas(27744, 0, 0, var2);
         }
     }
 
     abstract boolean handlePacket(int param0, CipherPacketBuffer param1, int param2);
 
-    final static void n(byte param0) {
+    final static void createTeamTintedHudSprites(byte param0) {
         int var1_int = 0;
         int var2 = 0;
         RuntimeException decompiledCaughtException = null;

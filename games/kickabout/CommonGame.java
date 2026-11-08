@@ -78,7 +78,7 @@ final class CommonGame {
             if (var3_int >= this.playerCount) {
               if (this.phase == 0) {
                 this.field_n.readSynchronizationMetadata(param0, 4);
-                this.field_n.a(param1 ^ 65, param0);
+                this.field_n.readSelectionState(param1 ^ 65, param0);
               }
               break;
             }
@@ -2065,7 +2065,7 @@ final class CommonGame {
             return;
           }
           if (this.phase == 0) {
-            this.field_n.a(false, param1);
+            this.field_n.clearParticipantSelection(false, param1);
             this.field_n.inheritControlSource((MatchAgent) (this.field_g[param1]), (byte) 84);
             if (Kickabout.field_G == 0) {
               return;
@@ -3177,7 +3177,7 @@ final class CommonGame {
               }
               this.field_n.readSynchronizationMetadata(param0, 4);
             }
-            this.field_n.a(74, param0);
+            this.field_n.readSelectionState(74, param0);
             break;
           }
           if (this.phase == 2) {

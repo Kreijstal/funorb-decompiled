@@ -81,8 +81,8 @@ final class DraggableWidget extends SingleChildContainer {
               var8[var9] = 65793 * var9;
             }
             SpritePixelSupport.drawGlowingLine(20, 40, -20 + SoftwareRasterizer.field_g, 40, 28, 40, var12);
-            TeamManagementScreen.e(119);
-            TeamManagementScreen.e(param6 + 123);
+            TeamManagementScreen.popRasterState(119);
+            TeamManagementScreen.popRasterState(param6 + 123);
             DualLinkNode.field_k = param0;
           }
           LobbyGameRecord.field_m.draw(param3 - 4, -4 + param2);

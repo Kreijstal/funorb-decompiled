@@ -97,7 +97,7 @@ final class ArchiveIndex {
         int var14Lifetime1Lifetime1;
         var17 = Kickabout.field_G;
         try {
-          var18 = new PacketBuffer(FullscreenFailureReason.a(param1, (byte) -3));
+          var18 = new PacketBuffer(FullscreenFailureReason.decompressArchiveContainer(param1, (byte) -3));
           var4 = var18.readUnsignedByte((byte) -107);
           if (5 <= var4 &&
             var4 <= 7) {
@@ -279,7 +279,7 @@ final class ArchiveIndex {
             if (param2.length != 64) {
               throw new RuntimeException();
             }
-            this.field_o = MusicTrackMixer.a(param0.length, param0, (byte) 91, 0);
+            this.field_o = MusicTrackMixer.whirlpoolDigest(param0.length, param0, (byte) 91, 0);
             for (var4_int = 0; 64 > var4_int; var4_int++) {
               if (param2[var4_int] != this.field_o[var4_int]) {
                 throw new RuntimeException();

@@ -539,7 +539,7 @@ final class CachedArchiveSource extends ArchiveSource {
                 if (null != this.field_z.field_k &&
                   this.field_z.field_k[param1] != null) {
                   var28 = this.field_z.field_k[param1];
-                  var27 = MusicTrackMixer.a(var18.length - 2, var18, (byte) 69, 0);
+                  var27 = MusicTrackMixer.whirlpoolDigest(var18.length - 2, var18, (byte) 69, 0);
                   for (var9 = 0; var9 < 64; var9++) {
                     if (var27[var9] != var28[var9]) {
                       throw new RuntimeException();
@@ -590,7 +590,7 @@ final class CachedArchiveSource extends ArchiveSource {
               if (null != this.field_z.field_k &&
                 null != this.field_z.field_k[param1]) {
                 var29 = this.field_z.field_k[param1];
-                var30 = MusicTrackMixer.a(-2 + var18.length, var18, (byte) 80, 0);
+                var30 = MusicTrackMixer.whirlpoolDigest(-2 + var18.length, var18, (byte) 80, 0);
                 var11 = 0;
                 var9 = var11;
                 while (var11 < 64) {
@@ -658,8 +658,8 @@ final class CachedArchiveSource extends ArchiveSource {
             CachedArchiveSource.isPublicChatInputActive((byte) 52);
           }
           param1.draw(-param1.field_o + SoftwareRasterizer.field_g, 0);
-          TeamManagementScreen.e(122);
-          TeamManagementScreen.e(125);
+          TeamManagementScreen.popRasterState(122);
+          TeamManagementScreen.popRasterState(125);
           stackIn_3_0 = var3;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -118,7 +118,7 @@ final class PlayerPortraitCacheEntry {
           PacketBuffer.pushSpriteRaster(-81, ConsoleCommand.field_u);
           SoftwareRasterizer.clearFramebuffer();
           var12.renderModel(var8[this.playerStats.archetype], 0, SoftwareRasterizer.field_g >> 1, var17[this.playerStats.archetype], (byte) -118);
-          TeamManagementScreen.e(122);
+          TeamManagementScreen.popRasterState(122);
           SoftwareDrawingSupport.downscaleByHalf(ConsoleCommand.field_u, this.portrait);
           var13 = (this.portrait.field_v - 2) * this.portrait.field_o;
           for (var14 = -this.portrait.field_o; 0 > var14; var14++) {

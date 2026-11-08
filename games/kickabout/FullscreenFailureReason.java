@@ -10,7 +10,7 @@ final class FullscreenFailureReason {
     static String field_b;
     static String field_c;
 
-    final static byte[] a(byte[] param0, byte param1) {
+    final static byte[] decompressArchiveContainer(byte[] param0, byte param1) {
         byte[] stackIn_9_0 = null;
         byte[] stackIn_23_0 = null;
         RuntimeException stackIn_26_0 = null;
@@ -90,7 +90,7 @@ final class FullscreenFailureReason {
           return;
         }
         byte[] var2 = (byte[]) null;
-        FullscreenFailureReason.a((byte[]) null, (byte) -12);
+        FullscreenFailureReason.decompressArchiveContainer((byte[]) null, (byte) -12);
         field_g = null;
         field_e = null;
         field_b = null;

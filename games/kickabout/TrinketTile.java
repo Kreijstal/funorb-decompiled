@@ -64,7 +64,7 @@ final class TrinketTile extends UiLayoutNode {
             UnreadMessagesScreen.reportClientError("QC2", (Throwable) null, 1);
             return;
           }
-          TeamSelectionAgent.a((byte) -45, var4);
+          TeamSelectionAgent.setUnknownQuickChatPhrase((byte) -45, var4);
           var12 = (BitmapFont) null;
           FullscreenErrorDialog.field_S = WidgetStyleFactory.createStyledWidget(5138823, 2245737, 1513239, true, 65793, (BitmapFont) null, 65793, 65793, 4020342, 8947848, 0, 1513239, 1127256);
           RegistrationRequestState.field_a = WidgetStyleFactory.createStyledWidget(0, 0, 0, true, 0, param0, 0, 0, 0, 0, 16764006, 0, 0);

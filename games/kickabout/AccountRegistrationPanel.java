@@ -128,7 +128,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
         } else if (1 == param2) {
           PacketBuffer.pushSpriteRaster(109, var5);
           var5.drawAdditive(0, 0, 60);
-          TeamManagementScreen.e(param1 + 174);
+          TeamManagementScreen.popRasterState(param1 + 174);
           var24 = new int[64];
           var21 = var24;
           var7_ref_int__ = var21;
@@ -137,8 +137,8 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
           }
           SpritePixelSupport.drawGlowingLine(4, 6, SoftwareRasterizer.field_g - 4, 6, 8, -40 + var24.length, var24);
         } else if (2 == param2) {
-          TeamManagementScreen.e(param1 ^ -69);
-          TeamManagementScreen.e(123);
+          TeamManagementScreen.popRasterState(param1 ^ -69);
+          TeamManagementScreen.popRasterState(123);
           var19 = var5;
           var18 = new Sprite(var5.field_o, var5.field_v);
           var5 = var18;
@@ -157,7 +157,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
             SpritePixelSupport.adjustSpriteHsv(var5, 0.0, 0.0, 0.7);
           }
         }
-        TeamManagementScreen.e(117);
+        TeamManagementScreen.popRasterState(117);
         if (param3 != -1) {
           if (param3 == -2) {
             MatchScreen.field_l.drawAdditive(0, 0, 16);
@@ -168,7 +168,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
               for (var7 = SocialListProtocolSupport.field_e.field_o; SoftwareRasterizer.field_g - CaptionedContainer.field_K.field_o > var7; var7 = var7 + GameAppletShell.field_l.field_o) {
                 GameAppletShell.field_l.drawAdditive(var7, 0, 16);
               }
-              TeamManagementScreen.e(124);
+              TeamManagementScreen.popRasterState(124);
               CaptionedContainer.field_K.drawAdditive(var5.field_o - CaptionedContainer.field_K.field_o, 0, 16);
             }
           }
@@ -178,7 +178,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
         if (param1 != -52) {
           field_D = (ChatMessage) null;
         }
-        TeamManagementScreen.e(117);
+        TeamManagementScreen.popRasterState(117);
         return var5;
     }
 

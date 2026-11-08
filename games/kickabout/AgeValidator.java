@@ -4,7 +4,7 @@
 final class AgeValidator extends TextFieldValidator {
     static int[] field_j;
 
-    final static void g(int param0) {
+    final static void snapshotKeyState(int param0) {
         Object var1 = null;
         int var2 = 0;
         int var4 = 0;

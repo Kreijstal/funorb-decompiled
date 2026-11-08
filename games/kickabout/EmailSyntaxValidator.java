@@ -88,11 +88,11 @@ final class EmailSyntaxValidator extends TextFieldValidator {
         if (param0 != -22976) {
           EmailSyntaxValidator.createBallCarrierOverlay(126);
         }
-        TeamManagementScreen.e(param0 ^ -22987);
+        TeamManagementScreen.popRasterState(param0 ^ -22987);
         ArgbSprite var2 = new ArgbSprite(54, 54);
         PacketBuffer.pushSpriteRaster(param0 ^ -23017, var2);
         var6.drawHalfSize(0, 0);
-        TeamManagementScreen.e(125);
+        TeamManagementScreen.popRasterState(125);
         int var5 = 0;
         var3Lifetime1 = var5;
         while (var5 < var2.field_y.length) {

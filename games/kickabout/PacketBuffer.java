@@ -478,7 +478,7 @@ class PacketBuffer extends IntrusiveNode {
         field_m = null;
         if (param0 != 88) {
           LobbyPlayerRow var2 = (LobbyPlayerRow) null;
-          PacketBuffer.a((byte) 23, (LobbyPlayerRow) null);
+          PacketBuffer.insertLobbyPlayerInOrder((byte) 23, (LobbyPlayerRow) null);
         }
     }
 
@@ -685,7 +685,7 @@ class PacketBuffer extends IntrusiveNode {
         }
     }
 
-    final static void a(byte param0, LobbyPlayerRow param1) {
+    final static void insertLobbyPlayerInOrder(byte param0, LobbyPlayerRow param1) {
         LobbyPlayerRow var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -700,7 +700,7 @@ class PacketBuffer extends IntrusiveNode {
           var3 = -54 / ((param0 + 29) / 55);
           var2 = (LobbyPlayerRow) (PasswordFieldPainter.field_B.first(24009));
           while (var2 != null) {
-            if (var2.a(param1, (byte) -82)) {
+            if (var2.precedes(param1, (byte) -82)) {
               var2 = (LobbyPlayerRow) (PasswordFieldPainter.field_B.next(33));
               continue;
             }

@@ -127,7 +127,7 @@ final class LeaguesScreen extends ButtonMenuScreen {
         if (var6 == 0) {
           var7 = ReceivedAuctionItem.floorDiv(18, -(AuctionTableWidget.field_Hb.field_Db.field_J + 5), (byte) -72);
           LineupView.field_y.evictExpired(30 + var7, -20 + var7, -108);
-          CheckboxPainter.a((byte) 125, -10 + var7, var7 + 20, var5);
+          CheckboxPainter.requestMissingRankingRows((byte) 125, -10 + var7, var7 + 20, var5);
           if (SquadGridWidget.field_Gb != var7 ||
             AnimationSkeleton.field_k != var5) {
             AnimationSkeleton.field_k = var5;
@@ -278,7 +278,7 @@ final class LeaguesScreen extends ButtonMenuScreen {
             WriteIntegersCommand.field_E[var3_int].draw(WelcomeDialog.field_H[var3_int].field_F + 4, WelcomeDialog.field_H[var3_int].field_T - 2);
           }
         }
-        TeamManagementScreen.e(param0 ^ -122);
+        TeamManagementScreen.popRasterState(param0 ^ -122);
         SoftwareRasterizer.fillRect(20 + AnimationSkeleton.field_k * 50 + this.slideOffsetX, 135, 48, 2, 0);
         SoftwareRasterizer.fillRect(20 + this.slideOffsetX, 137, 348, 26, 0);
         var3_ref = BroadcastServerCommand.field_C;
@@ -303,7 +303,7 @@ final class LeaguesScreen extends ButtonMenuScreen {
             var7.drawRankingRow(-104);
             var7 = (RankingRowNode) (AuctionTableWidget.field_Hb.field_Db.field_jb.next(param0 ^ -38));
           }
-          TeamManagementScreen.e(118);
+          TeamManagementScreen.popRasterState(118);
         }
         if (AuctionTableWidget.field_Hb.field_Db.field_jb == null ||
           AuctionTableWidget.field_Hb.field_Db.field_jb.size(false) == 0) {
@@ -324,7 +324,7 @@ final class LeaguesScreen extends ButtonMenuScreen {
         } else {
           ByteArrayPool.field_d.drawText(ContextMenu.field_Jb.toLowerCase(), SpriteBackgroundSupport.field_b + this.slideOffsetX, 423, 16679959, -1);
         }
-        TeamManagementScreen.e(param0 + 128);
+        TeamManagementScreen.popRasterState(param0 + 128);
         if (PlayArea.isGuestSession(100) ||
           TextEntrySupport.field_f) {
           SoftwareRasterizer.darkenRectangle(this.slideOffsetX, 48, 450, 382);

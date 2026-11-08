@@ -81,7 +81,7 @@ class UiLayoutNode extends SharedWidgetFactory {
               var10.drawOpaque(var7, var8);
             }
           }
-          TrinketCatalog.a(param0, 15, param2, param1, param3, false);
+          TrinketCatalog.createPitchLineAlphaNoise(param0, 15, param2, param1, param3, false);
           if (KitPatternMaskSupport.field_c == 0) {
             RasterBuffer.a(75, HuffmanTextSupport.field_d, 15, 15);
           }
@@ -91,7 +91,7 @@ class UiLayoutNode extends SharedWidgetFactory {
           if (2 == KitPatternMaskSupport.field_c) {
             RankingsRequest.a(15, 15, 124);
           }
-          TeamManagementScreen.e(param0 ^ 122);
+          TeamManagementScreen.popRasterState(param0 ^ 122);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "hd.S(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
@@ -404,7 +404,7 @@ class UiLayoutNode extends SharedWidgetFactory {
         if (FixedQuaternion.field_e == 85) {
           if (var3 != 0 &&
             AuctionLogEntry.field_m.length() > 0) {
-            PagedHelpScreen.a(-1 + AuctionLogEntry.field_m.length(), ' ', -11407, AuctionLogEntry.field_m);
+            PagedHelpScreen.resizeAndPad(-1 + AuctionLogEntry.field_m.length(), ' ', -11407, AuctionLogEntry.field_m);
           }
           return true;
         }
@@ -460,7 +460,7 @@ class UiLayoutNode extends SharedWidgetFactory {
             }
           }
           if (FootballerAgent.field_i.stringWidth(AuctionLogEntry.field_m.toString()) > var5Lifetime1) {
-            PagedHelpScreen.a(AuctionLogEntry.field_m.length() - 1, ' ', -11407, AuctionLogEntry.field_m);
+            PagedHelpScreen.resizeAndPad(AuctionLogEntry.field_m.length() - 1, ' ', -11407, AuctionLogEntry.field_m);
           }
         }
         return true;

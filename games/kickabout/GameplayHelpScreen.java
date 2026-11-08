@@ -186,7 +186,7 @@ final class GameplayHelpScreen extends PagedHelpScreen {
         if (this.pageIndex == 3) {
           for (var5Lifetime1 = 0; var5Lifetime1 < 9; var5Lifetime1++) {
             this.field_K[var5Lifetime1].updateInput(0, param1);
-            this.field_K[var5Lifetime1].a(31, 11, (byte) 126, 16, this.field_F[var5Lifetime1]);
+            this.field_K[var5Lifetime1].updatePlayerPreview(31, 11, (byte) 126, 16, this.field_F[var5Lifetime1]);
           }
           this.field_E.field_s = this.slideOffsetX + 220;
           this.field_E.updateInput(0, param1);
@@ -249,7 +249,7 @@ final class GameplayHelpScreen extends PagedHelpScreen {
           var4 = SoftwareRasterizer.field_g >> 1;
           var5 = SoftwareRasterizer.field_f - 15;
           RasterGammaSupport.field_b[var2].renderModel(var3, 128, var4, var5, (byte) -87);
-          TeamManagementScreen.e(param0 - 204);
+          TeamManagementScreen.popRasterState(param0 - 204);
           var6 = ChatMessage.field_f[var2][0] + this.slideOffsetX;
           var7 = ChatMessage.field_f[var2][1];
           if (var2 == ArchiveManager.field_d) {
@@ -522,7 +522,7 @@ final class GameplayHelpScreen extends PagedHelpScreen {
           PacketBuffer.pushSpriteRaster(param0 ^ -19, UrlRequest.field_k);
           SoftwareRasterizer.clearFramebuffer();
           CalendarSupport.field_a[var4].renderModel(950, 300, SoftwareRasterizer.field_g >> 1, (SoftwareRasterizer.field_f >> 1) + 60, (byte) -71);
-          TeamManagementScreen.e(param0 ^ 24);
+          TeamManagementScreen.popRasterState(param0 ^ 24);
           var6 = CalendarSupport.field_a[var4].directionMask;
           array$0 = new boolean[4];
           stackIn_12_0 = array$0;
@@ -672,7 +672,7 @@ final class GameplayHelpScreen extends PagedHelpScreen {
             var2 = var3;
           }
         }
-        ListingRowCache.a(-1, 178, 45 + this.slideOffsetX, (byte) -96, var2);
+        ListingRowCache.drawGridSelectionOverlay(-1, 178, 45 + this.slideOffsetX, (byte) -96, var2);
         for (var3Lifetime1 = 0; var3Lifetime1 < 9; var3Lifetime1++) {
           this.field_K[var3Lifetime1].field_s = this.slideOffsetX + 45 + var3Lifetime1 % 3 * 52;
           this.field_K[var3Lifetime1].updateInput(0, false);
@@ -698,7 +698,7 @@ final class GameplayHelpScreen extends PagedHelpScreen {
           this.field_E.field_Db.field_mb = var6Lifetime1;
           this.field_E.layoutScrollbars(15, 0, 0);
         }
-        TeamManagementScreen.e(param0 + 8617);
+        TeamManagementScreen.popRasterState(param0 + 8617);
     }
 
     GameplayHelpScreen() {

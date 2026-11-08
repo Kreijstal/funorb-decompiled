@@ -309,7 +309,7 @@ class UiWidget extends IntrusiveNode {
         if (null == SplashScreen.field_m) {
           return;
         }
-        SumIntegersCommand.a(param0 ^ -120, SplashScreen.field_m);
+        SumIntegersCommand.detachCanvasInput(param0 ^ -120, SplashScreen.field_m);
         if (param0 != 0) {
           UiWidget.releaseStatics((byte) 9);
         }

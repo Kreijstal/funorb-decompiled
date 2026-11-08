@@ -97,7 +97,7 @@ final class PlayerModelPreview extends IntrusiveNode {
         int var4 = 950;
         TriangleRasterizer.setProjectionCenter(128, 240);
         var5.drawOrthographic(0, this.field_n << 8, 0, 300, 0, 0, 0, var4);
-        TeamManagementScreen.e(param1 ^ -124);
+        TeamManagementScreen.popRasterState(param1 ^ -124);
         Cp1252EncodingSupport.field_d.drawHalfSize(-64 + this.field_g, this.field_i - 120);
     }
 

@@ -100,7 +100,7 @@ final class KitPatternMaskSupport {
             TriangleRasterizer.useRasterClip();
             TriangleRasterizer.setProjectionCenter(SoftwareRasterizer.field_g >> 1, 410);
             var8.drawOrthographic(0, var12[var4], 0, 0, 0, 0, 0, 350);
-            TeamManagementScreen.e(127);
+            TeamManagementScreen.popRasterState(127);
             SoftwareDrawingSupport.outlineSpriteInPlace(GameSoundEffect.field_j[var4], 65793);
             SoftwareDrawingSupport.outlineSpriteInPlace(GameSoundEffect.field_j[var4], 66049);
             SoftwareDrawingSupport.outlineSpriteInPlace(GameSoundEffect.field_j[var4], 65793);

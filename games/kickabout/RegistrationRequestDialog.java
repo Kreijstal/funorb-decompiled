@@ -22,7 +22,7 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
         field_qb = null;
     }
 
-    final static boolean a(int param0, java.applet.Applet param1) {
+    final static boolean hasTuhstatbutSetting(int param0, java.applet.Applet param1) {
         try {
           int var5 = 0;
           String var2 = null;
@@ -56,7 +56,7 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
               }
               if (param0 != 17) {
                 var8 = (java.applet.Applet) null;
-                RegistrationRequestDialog.a(100, (java.applet.Applet) null);
+                RegistrationRequestDialog.hasTuhstatbutSetting(100, (java.applet.Applet) null);
               }
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
@@ -92,7 +92,7 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
         }
     }
 
-    final void t(int param0) {
+    final void showRegistrationFailure(int param0) {
         this.a(true, TeamSelectionView.createRegistrationFailure(param0 ^ -105, GameSoundEffect.field_g, 248), (byte) -71);
         if (param0 != 17) {
           field_qb = (Sprite) null;
@@ -187,32 +187,32 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
           var5 = new AccountMessagePanel((AccountRequestDialog) (this), ConsoleLexer.field_b, var4);
           if (param1.success) {
             if (param1.needsTerms) {
-              this.a((byte) -126, (UiWidget) (new AccountTermsPanel(this)));
+              this.transitionToContent((byte) -126, (UiWidget) (new AccountTermsPanel(this)));
               return;
             }
-            var5.a(RowRangeRequest.field_g, (UiListener) (this), (byte) 79);
+            var5.appendButton(RowRangeRequest.field_g, (UiListener) (this), (byte) 79);
           } else {
             if (!this.field_nb) {
               if (param1.responseCode != 5) {
-                var5.a((byte) 55, -1, TextLineLayoutSupport.field_f);
+                var5.addActionButton((byte) 55, -1, TextLineLayoutSupport.field_f);
               } else {
-                var5.a((byte) 75, 11, MatchHudRoutingSupport.field_d);
-                var5.a((byte) 66, 17, AccountNameAvailabilityValidator.field_o);
+                var5.addActionButton((byte) 75, 11, MatchHudRoutingSupport.field_d);
+                var5.addActionButton((byte) 66, 17, AccountNameAvailabilityValidator.field_o);
               }
             } else {
-              var5.a(RowRangeRequest.field_g, (UiListener) (this), (byte) 79);
+              var5.appendButton(RowRangeRequest.field_g, (UiListener) (this), (byte) 79);
             }
             if (param1.responseCode != 3) {
               if (param1.responseCode != 6) {
-                this.a((byte) -122, (UiWidget) (var5));
+                this.transitionToContent((byte) -122, (UiWidget) (var5));
                 return;
               }
-              var5.a((byte) 114, 9, AccountNameAvailabilityValidator.field_p);
+              var5.addActionButton((byte) 114, 9, AccountNameAvailabilityValidator.field_p);
             } else {
-              var5.a((byte) 94, 7, WelcomeDialog.field_J);
+              var5.addActionButton((byte) 94, 7, WelcomeDialog.field_J);
             }
           }
-          this.a((byte) -122, (UiWidget) (var5));
+          this.transitionToContent((byte) -122, (UiWidget) (var5));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

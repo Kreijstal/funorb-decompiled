@@ -20,7 +20,7 @@ final class TrinketIcon extends UiLayoutNode {
         Sprite var2 = var3;
         PacketBuffer.pushSpriteRaster(-59, var3);
         ArchivePreloader.field_i[PacketBuffer.field_e[this.field_Bb]].drawQuarterSize(0, 0);
-        TeamManagementScreen.e(121);
+        TeamManagementScreen.popRasterState(121);
         this.field_N = var2;
         this.field_mb = 5 + var2.field_v + 5;
         this.field_B = 5;
@@ -28,7 +28,7 @@ final class TrinketIcon extends UiLayoutNode {
         this.field_q = 5 + (var2.field_o + 5);
     }
 
-    final static String a(String param0, boolean param1) {
+    final static String capitalizeFirstCharacter(String param0, boolean param1) {
         int var4 = 0;
         int var2_int = 0;
         RuntimeException var2 = null;
@@ -72,7 +72,7 @@ final class TrinketIcon extends UiLayoutNode {
         }
     }
 
-    final static void b(int param0, int param1) {
+    final static void setCameraVerticalOffset(int param0, int param1) {
         if (param0 != -5) {
           field_Ab = (String) null;
         }

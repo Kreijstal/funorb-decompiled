@@ -85,7 +85,7 @@ final class LoggedPossession {
 
     }
 
-    final static int a(int param0, PlayerStats param1) {
+    final static int weightedBaseStatScore(int param0, PlayerStats param1) {
         RuntimeException var2 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;

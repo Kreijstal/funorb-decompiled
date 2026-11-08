@@ -149,16 +149,16 @@ final class ManagerAction extends IntrusiveNode {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, String param6) {
+    final static void drawRightAlignedLabel(int param0, int param1, int param2, int param3, int param4, int param5, String param6) {
         int var7_int = 0;
         try {
           var7_int = ByteArrayPool.field_d.stringWidth(param6) + 15;
           AuctionListing.pushRasterClip(10, -22914, 0, 480, 0);
           SoftwareRasterizer.fillRoundedRectangleBlended(param3 - var7_int, param4 - 17, var7_int + 20, 21, param0, 65793, 128);
-          TeamManagementScreen.e(123);
+          TeamManagementScreen.popRasterState(123);
           AuctionListing.pushRasterClip(param3, -22914, 0, 480, 0);
           SoftwareRasterizer.fillRoundedRectangleBlended(-var7_int + param3, param4 - 17, 20 + var7_int, 21, 8, param1, param2);
-          TeamManagementScreen.e(param0 + 113);
+          TeamManagementScreen.popRasterState(param0 + 113);
           ByteArrayPool.field_d.drawRightAligned(param6, param3, param4, param5, -1);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "hn.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
@@ -204,7 +204,7 @@ final class ManagerAction extends IntrusiveNode {
         }
     }
 
-    final static String a(String param0, String param1, int param2, ResourceArchive param3) {
+    final static String formatArchiveLoadingStatus(String param0, String param1, int param2, ResourceArchive param3) {
         RuntimeException var4 = null;
         ResourceArchive var5 = null;
         String stackIn_3_0 = null;
@@ -224,7 +224,7 @@ final class ManagerAction extends IntrusiveNode {
           }
           if (param2 > -9) {
             var5 = (ResourceArchive) null;
-            ManagerAction.a((String) null, (String) null, 74, (ResourceArchive) null);
+            ManagerAction.formatArchiveLoadingStatus((String) null, (String) null, 74, (ResourceArchive) null);
           }
           stackIn_7_0 = param0 + " - " + param3.getOverallProgress(-8185) + "%";
           return stackIn_7_0;

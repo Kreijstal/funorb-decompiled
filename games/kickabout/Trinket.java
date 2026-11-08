@@ -344,7 +344,7 @@ final class Trinket {
           }
           ConsoleCommand.field_v.setRasterTarget();
           var1.drawHalfSize(0, 0);
-          TeamManagementScreen.e(127);
+          TeamManagementScreen.popRasterState(127);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

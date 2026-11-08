@@ -179,7 +179,7 @@ final class LoginMethod {
         PacketBuffer.pushSpriteRaster(56, var5);
         SoftwareRasterizer.fillCircle(param1, param1, param1, param3);
         SoftwareRasterizer.fillCircle(param1, param1, param1 - param0, 0);
-        TeamManagementScreen.e(120);
+        TeamManagementScreen.popRasterState(120);
         if (!param2) {
           LoginMethod.releaseStatics(8);
         }
@@ -189,7 +189,7 @@ final class LoginMethod {
     final static void a(int param0, int param1, int param2, int param3, int param4) {
         AchievementQuery.clipToGridCell(param2, -109, param1, param3 / param0, param3 % 3);
         SoftwareRasterizer.fillRoundedRectangleBlended(param2, param1, 156, 225, 10, 16777215, param4);
-        TeamManagementScreen.e(126);
+        TeamManagementScreen.popRasterState(126);
     }
 
     final static boolean shouldDelayTooltip(boolean param0) {
@@ -214,7 +214,7 @@ final class LoginMethod {
         if (param0 != 0) {
           LoginMethod.a(-68, -48, 74, 38, -61);
         }
-        stackIn_6_0 = (ClassDescriptorSupport.b((byte) 100)) && (ClientPacketFlushSupport.field_g);
+        stackIn_6_0 = (ClassDescriptorSupport.isGuardAtLeastTen((byte) 100)) && (ClientPacketFlushSupport.field_g);
         return stackIn_6_0;
     }
 

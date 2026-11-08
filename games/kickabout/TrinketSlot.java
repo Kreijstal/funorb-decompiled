@@ -213,7 +213,7 @@ final class TrinketSlot extends UiLayoutNode implements PopupCard {
         return 150;
     }
 
-    final static void a(byte param0, int param1, int param2, int param3) {
+    final static void sendDateOfBirth(byte param0, int param1, int param2, int param3) {
         InstrumentEnvelope.field_a.field_n = 0;
         InstrumentEnvelope.field_a.writeByte(122, 12);
         InstrumentEnvelope.field_a.writeInt(-43, TrinketUnlockNotice.field_d.nextInt());

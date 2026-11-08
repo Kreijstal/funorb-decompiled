@@ -24,7 +24,7 @@ final class TournamentChampionDialog extends MessageDialog {
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4 = ClientUiOverlay.a(param1, (byte) 40);
+          var4 = ClientUiOverlay.findFriendByName(param1, (byte) 40);
           if (param0) {
             return true;
           }

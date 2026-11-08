@@ -87,14 +87,14 @@ final class TextInputUiSupport {
             ByteArrayPool.field_d.drawText(param1.toLowerCase(), 20 + var2_int, var3 + 22, 16777215, -1);
           }
           var2_int += 10;
-          TeamManagementScreen.e(param0 ^ -7);
+          TeamManagementScreen.popRasterState(param0 ^ -7);
           var4Lifetime1 = 12 + ((TickClock.field_a + 640 >> 1) - 22);
           AuctionListing.pushRasterClip(320, param0 - 22788, var2_int, 480, 0);
           SoftwareRasterizer.fillRoundedRectangleBlended(var2_int, 388, 640, 72, 8, 65793, 128);
-          TeamManagementScreen.e(122);
+          TeamManagementScreen.popRasterState(122);
           AuctionListing.pushRasterClip(var4Lifetime1, -22914, 320, 480, 0);
           SoftwareRasterizer.fillRoundedRectangleBlended(0, 388, var4Lifetime1, 72, 8, 65793, 128);
-          TeamManagementScreen.e(122);
+          TeamManagementScreen.popRasterState(122);
           var5 = AnimationSkeleton.a(false);
           if (var5 != -1) {
             FriendRemovalSupport.field_e = 1;
@@ -109,7 +109,7 @@ final class TextInputUiSupport {
           }
           AuctionListing.pushRasterClip(-20 + (var2_int + TickClock.field_a), param0 ^ 23036, var2_int + 22 - 12, 112 + var3, var3);
           LoginKind.getPlayerPortrait(ThumbnailStateFactory.field_d.field_H[0], param0 ^ -126, ThumbnailStateFactory.field_d.field_P[0][FriendRemovalSupport.field_e].stats, ThumbnailStateFactory.field_d.field_Q[0], ThumbnailStateFactory.field_d.field_d[0], false).draw(12 + var2_int, var3 + 40);
-          TeamManagementScreen.e(120);
+          TeamManagementScreen.popRasterState(120);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

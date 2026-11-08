@@ -602,7 +602,7 @@ final class MenuButton {
                 AuctionListing.pushRasterClip(-3 + SoftwareRasterizer.field_g, -22914, 3, SoftwareRasterizer.field_f - 3, 3);
                 PacketBuffer.pushSpriteRaster(103, var6);
                 var6.drawAdditive(0, 0, 60);
-                TeamManagementScreen.e(119);
+                TeamManagementScreen.popRasterState(119);
                 var11 = new int[64];
                 var10 = var11;
                 var7 = var10;
@@ -610,8 +610,8 @@ final class MenuButton {
                   var7[var8] = 131586 * var8;
                 }
                 SpritePixelSupport.drawGlowingLine(4, 6, -4 + SoftwareRasterizer.field_g, 6, 8, -40 + var11.length, var11);
-                TeamManagementScreen.e(127);
-                TeamManagementScreen.e(125);
+                TeamManagementScreen.popRasterState(127);
+                TeamManagementScreen.popRasterState(125);
                 this.field_n[1] = (Sprite) ((Object) var6);
               } else {
                 this.field_n[0] = AccountRegistrationPanel.createButtonStateSprite(var4 != 0, (byte) -52, 0, var5, param1);

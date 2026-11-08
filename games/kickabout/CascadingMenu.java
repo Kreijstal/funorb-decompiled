@@ -300,7 +300,7 @@ final class CascadingMenu extends UiLayoutNode {
               PasswordLoginCredentials.sendChatPacket(var5, -128, NodeHashTableIterator.field_b, param3, TrinketTile.field_Kb, (String) null);
               ChatComposeSupport.prepareChatSend(TrinketTile.field_Kb, var5, IntDoubleCommand.field_A, NodeHashTableIterator.field_b, (byte) -51);
               PendingRequestAcknowledgement.closeQuickChat(125);
-              DelayedServerPacket.b(68);
+              DelayedServerPacket.resetChatSendLimiter(68);
             } else {
               HuffmanTextSupport.createQuickChatKeysHelpPanel(8);
               PendingRequestAcknowledgement.closeQuickChat(-123);

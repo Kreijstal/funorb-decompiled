@@ -9,7 +9,7 @@ final class MyPitchScreen extends TeamManagementScreen {
     static double field_G;
     private boolean field_F;
 
-    final static IndexedSprite a(ResourceArchive param0, String param1, boolean param2, String param3) {
+    final static IndexedSprite loadIndexedSpriteByName(ResourceArchive param0, String param1, boolean param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;

@@ -189,7 +189,7 @@ final class LineupView extends MatchPhaseView {
               stackIn_9_0 = GameLoopApplet.field_E.squad[var5];
             }
             var6 = stackIn_9_0;
-            var11.a(this.field_r, this.field_w, (byte) 125, this.field_B, var6);
+            var11.updatePlayerPreview(this.field_r, this.field_w, (byte) 125, this.field_B, var6);
             if (!this.field_a.field_e) {
               var11.updateAuctionStatusIcon((byte) -128, GameLoopApplet.field_E, var5);
             }
@@ -262,7 +262,7 @@ final class LineupView extends MatchPhaseView {
         for (var3Lifetime1 = 0; var3Lifetime1 < 4; var3Lifetime1++) {
           if (~this.field_a.field_i[this.field_h][var3Lifetime1] != ~this.field_g) {
             var12 = this.field_a.field_b[this.field_h][var3Lifetime1];
-            this.field_z[var3Lifetime1].a(this.field_r, this.field_w, (byte) 127, this.field_B, var12);
+            this.field_z[var3Lifetime1].updatePlayerPreview(this.field_r, this.field_w, (byte) 127, this.field_B, var12);
           }
         }
         if (param0 >= -92) {
@@ -431,7 +431,7 @@ final class LineupView extends MatchPhaseView {
           this.drawLineupSlotPlaceholder((byte) -108, true, var2, true);
         }
         if (this.isLocalParticipantActive((byte) 13)) {
-          ListingRowCache.a(-1, this.field_A.field_T, this.field_A.field_F, (byte) -96, var3);
+          ListingRowCache.drawGridSelectionOverlay(-1, this.field_A.field_T, this.field_A.field_F, (byte) -96, var3);
           stackIn_34_0 = this.field_o;
           stackIn_35_1 = (this.field_o.field_lb) && (!this.field_o.field_Gb);
           ((CheckboxLabelWidget) (Object) stackIn_34_0).a(stackIn_35_1, (byte) 46);
@@ -456,7 +456,7 @@ final class LineupView extends MatchPhaseView {
             PacketBuffer.pushSpriteRaster(67, QuickChatCommandType.field_b);
             SoftwareRasterizer.clearFramebuffer();
             ConsoleTokenCursor.field_d.drawCentered(this.field_a.field_S[var5_int].toLowerCase(), SoftwareRasterizer.field_g >> 1, -1 + SoftwareRasterizer.field_f, 16777062, -1);
-            TeamManagementScreen.e(param0 + 116);
+            TeamManagementScreen.popRasterState(param0 + 116);
             SoftwareDrawingSupport.outlineSpriteInPlace(QuickChatCommandType.field_b, 65793);
             QuickChatCommandType.field_b.draw(-(QuickChatCommandType.field_b.field_o >> 1) + var6, var7 - QuickChatCommandType.field_b.field_v);
           }
@@ -480,7 +480,7 @@ final class LineupView extends MatchPhaseView {
             }
             var11++;
           }
-          TeamManagementScreen.e(param0 ^ 124);
+          TeamManagementScreen.popRasterState(param0 ^ 124);
           if (this.isLocalParticipantActive((byte) 13)) {
             var6 = -1;
             var7 = -1;

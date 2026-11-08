@@ -54,9 +54,9 @@ final class TrinketPickerDialog extends MessageDialog {
         return 470;
     }
 
-    final static int a(int param0, int param1, boolean param2, int param3) {
+    final static int selectPitchMusicVariant(int param0, int param1, boolean param2, int param3) {
         if (param1 <= 40) {
-          TrinketPickerDialog.a(-66, -60, false, 126);
+          TrinketPickerDialog.selectPitchMusicVariant(-66, -60, false, 126);
         }
         if (param3 == 0 ||
           param3 == 1 ||

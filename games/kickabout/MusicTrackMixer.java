@@ -152,7 +152,7 @@ final class MusicTrackMixer extends PcmStream {
         return null;
     }
 
-    final void a(boolean param0, int param1, MusicTrack param2, int param3, int param4, int param5, int param6) {
+    final void playTrack(boolean param0, int param1, MusicTrack param2, int param3, int param4, int param5, int param6) {
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -199,7 +199,7 @@ final class MusicTrackMixer extends PcmStream {
         }
     }
 
-    final static byte[] a(int param0, byte[] param1, byte param2, int param3) {
+    final static byte[] whirlpoolDigest(int param0, byte[] param1, byte param2, int param3) {
         int var6_int = 0;
         byte[] var4 = null;
         int var5 = 0;

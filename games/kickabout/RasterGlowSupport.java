@@ -48,7 +48,7 @@ final class RasterGlowSupport {
     final static void returnToPreviousScreen(int param0, boolean param1) {
         int var2 = -25 % ((param0 - 38) / 59);
         if (GameModesHelpScreen.field_G != null) {
-          MeshObject.a((byte) 93);
+          MeshObject.finishScreenTransition((byte) 93);
         }
         DelayedServerPacket.a(AuctionLogEntry.field_h.previousScreenId, param1, -2);
     }

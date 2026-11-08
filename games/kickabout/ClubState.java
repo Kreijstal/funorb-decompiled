@@ -926,7 +926,7 @@ final class ClubState {
                     var9 = GeneratedPanelPainter.field_g[var7];
                     var10 = GeneratedPanelPainter.field_g[var21[var6Lifetime1]];
                     if (var9.field_h == 73 &&
-                      !ClassDescriptorSupport.b((byte) 115)) {
+                      !ClassDescriptorSupport.isGuardAtLeastTen((byte) 115)) {
                       throw new IllegalStateException("User tried to use the Halloween Costume trinket when we haven't released it yet " + param0.toString());
                     }
                     if (var9.field_k != var10.field_k) {

@@ -62,7 +62,7 @@ final class MatchTextInputOverlay implements OverlayLayer {
               PitchPurchaseSupport.field_b[var5] = new byte[8][];
               for (var8 = 0; var8 < 8; var8++) {
                 CanvasResizePolicy.a(var5, var12, var8 << 8, false, 2150);
-                PitchPurchaseSupport.field_b[var5][var8] = MatchingTextValidator.a(16, BuyPitchDialog.field_F);
+                PitchPurchaseSupport.field_b[var5][var8] = MatchingTextValidator.encodeSpriteMask(16, BuyPitchDialog.field_F);
               }
               var12.setClip(var6, (byte) -107);
               var8Lifetime1 = (2 + var6.field_e.length) / 3;
@@ -71,7 +71,7 @@ final class MatchTextInputOverlay implements OverlayLayer {
                 var12.setFrame(var9 * 3, -39);
                 for (var10 = 0; var10 < 8; var10++) {
                   CanvasResizePolicy.a(var5, var12, var10 << 8, false, 2150);
-                  BuyPitchDialog.field_K[var5][var9][var10] = MatchingTextValidator.a(16, BuyPitchDialog.field_F);
+                  BuyPitchDialog.field_K[var5][var9][var10] = MatchingTextValidator.encodeSpriteMask(16, BuyPitchDialog.field_F);
                 }
                 var4Lifetime1++;
                 DelayedServerPacket.updateLoadingProgress(var3, param0 + 13984, var4Lifetime1);

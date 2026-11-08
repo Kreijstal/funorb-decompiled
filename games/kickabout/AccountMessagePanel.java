@@ -76,7 +76,7 @@ final class AccountMessagePanel extends WidgetContainer implements ButtonListene
         field_I = null;
     }
 
-    private final void a(int param0, int param1) {
+    private final void ensureActionCapacity(int param0, int param1) {
         int var5 = 0;
         int var6 = Kickabout.field_G;
         if (this.field_N >= param1) {
@@ -99,7 +99,7 @@ final class AccountMessagePanel extends WidgetContainer implements ButtonListene
         this.field_B.drawParagraph(this.field_D, 14 + (param2 + this.field_t), 10 + (this.field_g + param3), -28 + this.field_n, this.field_i, 16777215, -1, 0, 0, this.field_B.field_G);
     }
 
-    final TextButton a(String param0, UiListener param1, byte param2) {
+    final TextButton appendButton(String param0, UiListener param1, byte param2) {
         TextButton var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
@@ -144,15 +144,15 @@ final class AccountMessagePanel extends WidgetContainer implements ButtonListene
         }
     }
 
-    final void a(byte param0, int param1, String param2) {
+    final void addActionButton(byte param0, int param1, String param2) {
         int var4_int = 0;
         try {
           var4_int = this.field_N;
-          this.a(0, var4_int + 1);
-          this.field_J[var4_int] = this.a(param2, (UiListener) (this), (byte) 79);
+          this.ensureActionCapacity(0, var4_int + 1);
+          this.field_J[var4_int] = this.appendButton(param2, (UiListener) (this), (byte) 79);
           if (param0 <= 53) {
             String var5 = (String) null;
-            this.a((byte) -105, -6, (String) null);
+            this.addActionButton((byte) -105, -6, (String) null);
           }
           this.field_M[var4_int] = param1;
         } catch (RuntimeException runtimeException) {

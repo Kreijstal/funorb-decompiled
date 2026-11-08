@@ -88,7 +88,7 @@ final class ListingRowCache {
         }
     }
 
-    final static void a(int param0, int param1, int param2, byte param3, int param4) {
+    final static void drawGridSelectionOverlay(int param0, int param1, int param2, byte param3, int param4) {
         int var5_int = 0;
         int var6 = 0;
         int var7 = 0;
@@ -103,7 +103,7 @@ final class ListingRowCache {
             for (var6 = 0; 3 > var6; var6++) {
               AchievementQuery.clipToGridCell(param2, -112, param1, var5_int, var6);
               SoftwareRasterizer.fillRoundedRectangleBlended(param2, param1, 156, 225, 10, 65793, 96);
-              TeamManagementScreen.e(126);
+              TeamManagementScreen.popRasterState(126);
             }
           }
           if (param0 == param4) {
@@ -173,7 +173,7 @@ final class ListingRowCache {
 
     final ListingRow get(int param0, byte param1, int param2) {
         if (param1 != 116) {
-          ListingRowCache.a(124, -44, -97, (byte) 89, -100);
+          ListingRowCache.drawGridSelectionOverlay(124, -44, -97, (byte) 89, -100);
         }
         if (param2 < 0) {
           return null;

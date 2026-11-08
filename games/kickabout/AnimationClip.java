@@ -95,7 +95,7 @@ final class AnimationClip {
         field_k = null;
     }
 
-    final static void a(int param0, int param1, boolean param2, int param3) {
+    final static void requestPitchTheme(int param0, int param1, boolean param2, int param3) {
         int stackIn_7_1 = 0;
         boolean stackIn_8_0 = false;
         boolean stackIn_10_1 = false;

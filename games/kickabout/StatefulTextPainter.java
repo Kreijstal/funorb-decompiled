@@ -192,7 +192,7 @@ final class StatefulTextPainter extends TextWidgetPainter {
           PitchDecorationSupport.field_a = ModalStack.loadSpriteSheetByName(param3, -120, "commonui", "frame_bottom");
           KeyedLoginCredentials.field_f = SpriteResourceSupport.loadNamedSprite((byte) 112, "commonui", param3, "jagex_logo_grey");
           IntrusiveDequeCursor.field_a = ModalStack.loadSpriteSheetByName(param3, -29, "commonui", "button");
-          LoggedPlayer.field_g = ServerTextTemplate.a("validation", "commonui", 2, param3);
+          LoggedPlayer.field_g = ServerTextTemplate.loadSpriteSheetByName("validation", "commonui", 2, param3);
           EmailSyntaxValidator.field_k = (BitmapFont) ((Object) RenderedFootballer.loadFontByName(param1, 10, "arezzo12", param3, "commonui"));
           ModelMaterial.field_a = (BitmapFont) ((Object) RenderedFootballer.loadFontByName(param1, 10, "arezzo14", param3, "commonui"));
           ConsoleLexer.field_b = (BitmapFont) ((Object) RenderedFootballer.loadFontByName(param1, 10, "arezzo14bold", param3, "commonui"));
@@ -200,7 +200,7 @@ final class StatefulTextPainter extends TextWidgetPainter {
           stackIn_3_0 = (ResourceArchive) (param3);
           stackIn_3_1 = "commonui";
           stackIn_4_2 = !(param2);
-          MyPitchScreen.a(stackIn_3_0, stackIn_3_1, stackIn_4_2, "dropdown");
+          MyPitchScreen.loadIndexedSpriteByName(stackIn_3_0, stackIn_3_1, stackIn_4_2, "dropdown");
           var5 = DemoIntegersCommand.a(param3, 17369, "commonui", "screen_options");
           ConsoleEvaluationException.field_d = new IndexedSprite[4];
           BallAgent.field_f = new IndexedSprite[4];
@@ -238,7 +238,7 @@ final class StatefulTextPainter extends TextWidgetPainter {
           var12 = new Sprite(-(2 * var9Lifetime1) + var17.field_q, var9Lifetime1);
           var12.setRasterTarget();
           var17.drawOpaque(-var9Lifetime1, 0);
-          TeamManagementScreen.e(119);
+          TeamManagementScreen.popRasterState(119);
           IntrusiveDequeCursor.field_a = new Sprite[]{var15, var12, var11};
           if (param2) {
             StatefulTextPainter.a(false, (CharSequence) null, 'ﾺ');
@@ -333,7 +333,7 @@ final class StatefulTextPainter extends TextWidgetPainter {
             }
           }
           this.field_x.paint(param3, this, param2, param4, 0);
-          TeamManagementScreen.e(127);
+          TeamManagementScreen.popRasterState(127);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

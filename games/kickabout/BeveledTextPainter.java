@@ -229,9 +229,9 @@ class BeveledTextPainter extends TextWidgetPainter {
           MatchHudSupport.field_c = 11;
           BytePlusOneCommand.field_I = 2;
           PitchAppearanceSupport.field_b = 2;
-          var7 = Checkbox.a("largefont", param0, 75, "lobby", param4);
-          ServerMessageScreen.field_E = Checkbox.a("generalfont", param0, 87, "lobby", param4);
-          CheckboxLabelWidget.field_Ab = Checkbox.a("chatfont", param0, 112, "lobby", param4);
+          var7 = Checkbox.loadBinaryFontByName("largefont", param0, 75, "lobby", param4);
+          ServerMessageScreen.field_E = Checkbox.loadBinaryFontByName("generalfont", param0, 87, "lobby", param4);
+          CheckboxLabelWidget.field_Ab = Checkbox.loadBinaryFontByName("chatfont", param0, 112, "lobby", param4);
           var7.setInlineImages(var5, var25);
           ServerMessageScreen.field_E.setInlineImages(var5, var25);
           CheckboxLabelWidget.field_Ab.setInlineImages(var5, var25);
@@ -479,7 +479,7 @@ class BeveledTextPainter extends TextWidgetPainter {
             var7 = var4 / 4 + var4;
             var12.drawScaledSilhouette(var7, var4 / 5 + var7, var6, var6, 65793 * var5);
           }
-          TeamManagementScreen.e(125);
+          TeamManagementScreen.popRasterState(125);
           if (!param1) {
             var9 = (CharSequence) null;
             BeveledTextPainter.a((CharSequence) null, (byte) 122);

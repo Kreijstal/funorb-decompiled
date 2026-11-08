@@ -142,7 +142,7 @@ final class IntTripleCommand extends ConsoleCommand {
     }
 
     final static void openAccountInterface(byte param0) {
-        StripedProgressBar.a(0);
+        StripedProgressBar.resetAccountRequestState(0);
         AuctionBidDialog.field_G = true;
         if (param0 != -54) {
           return;

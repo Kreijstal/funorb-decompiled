@@ -281,7 +281,7 @@ final class MyKitScreen extends TeamManagementScreen {
           var7.drawKitTile(-24508);
           var7 = (KitStyleTile) (this.field_F.field_jb.next(33));
         }
-        TeamManagementScreen.e(124);
+        TeamManagementScreen.popRasterState(124);
         for (var3Lifetime1 = 0; var3Lifetime1 < 2; var3Lifetime1++) {
           var4 = null;
           var5 = (ColourSwatchTile) (this.field_J[var3Lifetime1].field_jb.first(24009));

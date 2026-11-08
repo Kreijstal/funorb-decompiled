@@ -52,7 +52,7 @@ final class TriangleMesh {
 
     final static void showLoginDialog(byte param0, boolean param1, boolean param2, String param3) {
         try {
-          StripedProgressBar.a(param0 + 101);
+          StripedProgressBar.resetAccountRequestState(param0 + 101);
           RankingsRequest.field_l.deactivateAllModals(param0 + 225);
           if (param0 != -101) {
             field_R = (UiLayoutNode) null;
@@ -313,7 +313,7 @@ final class TriangleMesh {
     /* Full JVM integer arguments; original narrow signature preserved. */
     final static void showLoginDialog(int param0, boolean param1, boolean param2, String param3) {
         try {
-          StripedProgressBar.a(param0 + 101);
+          StripedProgressBar.resetAccountRequestState(param0 + 101);
           RankingsRequest.field_l.deactivateAllModals(param0 + 225);
           if (param0 != -101) {
             field_R = (UiLayoutNode) null;

@@ -318,7 +318,7 @@ final class VerticalScrollbar extends UiLayoutNode {
         return;
     }
 
-    final static void k(int param0) {
+    final static void drawFullscreenPromptRows(int param0) {
         int var3 = 0;
         boolean stackIn_11_0 = false;
         NineSlicePanelPainter stackIn_15_0 = null;
@@ -391,7 +391,7 @@ final class VerticalScrollbar extends UiLayoutNode {
         return 0 != this.field_Hb.field_qb ? true : false;
     }
 
-    final static void a(int param0, boolean param1, int param2, int param3, int param4, int param5, int param6) {
+    final static void sortRankingIndices(int param0, boolean param1, int param2, int param3, int param4, int param5, int param6) {
         int var11 = 0;
         int incrementValue$0 = 0;
         int stackIn_24_0 = 0;
@@ -444,15 +444,15 @@ final class VerticalScrollbar extends UiLayoutNode {
                 }
               }
             }
-            VerticalScrollbar.a(param0, param1, var8, var9, 1, param5, param6);
-            VerticalScrollbar.a(var10, param1, param2, param3, 1, param5, var8);
+            VerticalScrollbar.sortRankingIndices(param0, param1, var8, var9, 1, param5, param6);
+            VerticalScrollbar.sortRankingIndices(var10, param1, param2, param3, 1, param5, var8);
             return;
           }
           for (var7_intLifetime1 = -1 + param2; var7_intLifetime1 > param6; var7_intLifetime1--) {
             for (var8Lifetime1 = param6; var8Lifetime1 < var7_intLifetime1; var8Lifetime1++) {
               var9Lifetime1 = ByteStorage.field_d[var8Lifetime1];
               var10Lifetime1 = ByteStorage.field_d[1 + var8Lifetime1];
-              if (IntrusiveNode.a((byte) 8, param1, var9Lifetime1, var10Lifetime1)) {
+              if (IntrusiveNode.hasLowerRankingPriority((byte) 8, param1, var9Lifetime1, var10Lifetime1)) {
                 ByteStorage.field_d[var8Lifetime1] = var10Lifetime1;
                 ByteStorage.field_d[var8Lifetime1 + 1] = var9Lifetime1;
               }
@@ -566,7 +566,7 @@ final class VerticalScrollbar extends UiLayoutNode {
               stackIn_147_0.field_Cb = stackIn_148_1;
               var8.field_Sb = ((PacketBuffer) ((Object) var1)).readUnsignedByte((byte) -105);
               var8.field_Pb = ((PacketBuffer) ((Object) var1)).readUnsignedByte((byte) -110);
-              PacketBuffer.a((byte) 84, var8);
+              PacketBuffer.insertLobbyPlayerInOrder((byte) 84, var8);
               return;
             }
             if (var2 == 6) {
@@ -738,7 +738,7 @@ final class VerticalScrollbar extends UiLayoutNode {
                   } else {
                     var12.field_Gb = false;
                   }
-                  PacketBuffer.a((byte) 56, var19);
+                  PacketBuffer.insertLobbyPlayerInOrder((byte) 56, var19);
                 }
                 return;
               }
@@ -753,7 +753,7 @@ final class VerticalScrollbar extends UiLayoutNode {
                 } else {
                   var18.field_Gb = true;
                 }
-                PacketBuffer.a((byte) 72, var18);
+                PacketBuffer.insertLobbyPlayerInOrder((byte) 72, var18);
               }
               return;
             }
@@ -786,7 +786,7 @@ final class VerticalScrollbar extends UiLayoutNode {
                 var3_ref_heLifetime1.field_Fb = false;
               }
               var3_ref_heLifetime1.field_Gb = false;
-              PacketBuffer.a((byte) 81, var3_ref_heLifetime1);
+              PacketBuffer.insertLobbyPlayerInOrder((byte) 81, var3_ref_heLifetime1);
             }
             var3_ref_heLifetime1 = (LobbyPlayerRow) (SquadPickerDialog.field_N.next(param0 - 14));
           }

@@ -70,7 +70,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             MusicPatchNode.resendRequestAcknowledgements(0, 2);
           }
           if (LookupRecordUpdate.field_h[2]) {
-            SumIntegersCommand.a(115, 3);
+            SumIntegersCommand.resendHighScoreRequests(115, 3);
           }
           if (LookupRecordUpdate.field_h[3]) {
             LobbyGameRecord.a(4, -56);
@@ -365,7 +365,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           }
           ArchiveIndex.field_h.updateCanvasSize(0);
         }
-        AgeValidator.g(param0);
+        AgeValidator.snapshotKeyState(param0);
         BufferedCacheFile.snapshotMouseInput((byte) 58);
         if (!RegistrationUiSupport.c(608) &&
           11 != RasterGlowSupport.field_c) {
@@ -496,7 +496,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           }
         }
         if (DateInputValidator.field_d == 3 &&
-          AppletContextSupport.a(SceneSpriteFactory.field_b, true, SelectionMarkerSupport.field_c, PlayerStats.field_k) &&
+          AppletContextSupport.ensureAccountUiResources(SceneSpriteFactory.field_b, true, SelectionMarkerSupport.field_c, PlayerStats.field_k) &&
           LoggedGoal.ensureArchiveAvailable(-2, PlayerStats.field_k)) {
           IntValueNode.a(115);
           CachedArchiveSource.releaseStatics(param0 + 1);
@@ -535,7 +535,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         if (11 == DateInputValidator.field_d) {
           if (null != Trinket.field_b && (!Trinket.field_b.ensureIndex(-50) ||
             !Trinket.field_b.ensureAllGroupsAvailable(false))) {
-            ValidationHelpWidget.setLoadingStatus(0.0f, ManagerAction.a(TutorialMessages.field_e, HuffmanCodec.field_g, param0 - 25, Trinket.field_b), (byte) 30);
+            ValidationHelpWidget.setLoadingStatus(0.0f, ManagerAction.formatArchiveLoadingStatus(TutorialMessages.field_e, HuffmanCodec.field_g, param0 - 25, Trinket.field_b), (byte) 30);
             decompiledFrameRemainder0 = false;
           }
           else {
@@ -560,7 +560,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         }
         if (!param1 &&
           SquadGridWidget.field_Ib) {
-          SumIntegersCommand.a(-113, RegistrationRequestState.field_d);
+          SumIntegersCommand.detachCanvasInput(-113, RegistrationRequestState.field_d);
           this.replaceCanvas((byte) -88);
           CanvasInputBindings.attachInputHandlers(RegistrationRequestState.field_d, (byte) -64);
         }
@@ -1203,7 +1203,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           int var5_intLifetime1;
           int var5_intLifetime2;
           var8 = Kickabout.field_G;
-          var4 = StripedProgressBar.b(StatefulTextPainter.field_v, -1951459327, ArchiveRequest.field_r, param2);
+          var4 = StripedProgressBar.pollAccountUiAction(StatefulTextPainter.field_v, -1951459327, ArchiveRequest.field_r, param2);
           if (var4 == 0) {
             throw new IllegalStateException();
           }
@@ -1220,7 +1220,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             }
           }
           if (var4 == 2) {
-            var5_intLifetime1 = ContentTransitionDialog.a(12, LoginRequiredDialog.g((byte) -17), BigCommand.g(-26370), LongPlusOneCommand.h(10326), LobbyPlayerRow.getCurrentAccountNameText(320), PlayArea.b(820907312), this.field_r);
+            var5_intLifetime1 = ContentTransitionDialog.pollRegistrationRequest(12, LoginRequiredDialog.g((byte) -17), BigCommand.g(-26370), LongPlusOneCommand.h(10326), LobbyPlayerRow.getCurrentAccountNameText(320), PlayArea.b(820907312), this.field_r);
             if (var5_intLifetime1 != -1) {
               PlayerPortraitCacheEntry.completeAccountRegistration(ListingRowCache.field_b, ValidatedTextWidget.field_X, (byte) 122, var5_intLifetime1);
               ValidatedTextWidget.field_X = null;

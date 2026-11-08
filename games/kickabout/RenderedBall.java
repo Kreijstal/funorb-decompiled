@@ -661,7 +661,7 @@ final class RenderedBall extends BallAgent {
           SoftwareRasterizer.clearFramebuffer();
           var2 = (var2 << 7) / InstrumentNoteMask.field_i;
           this.drawBall(300, 64, 64, var2, 300);
-          TeamManagementScreen.e(118);
+          TeamManagementScreen.popRasterState(118);
           AvailabilityCheckRequest.field_f.drawHalfSize(var3 - 32, -32 + var4);
         }
     }

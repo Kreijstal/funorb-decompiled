@@ -17,17 +17,17 @@ final class AudioOutputSupport {
         return !WriteIntegersCommand.field_C ? true : false;
     }
 
-    final static void b(boolean param0) {
+    final static void drawFullscreenPrompt(boolean param0) {
         int var1 = IntTripleCommand.getFullscreenPromptWidth((byte) -118);
         int var2 = EmailSyntaxValidator.getFullscreenPromptHeight((byte) 18);
         if (param0) {
           IntValueNode.field_g.drawPanel(GameSoundEffect.field_k - TextLineLayoutSupport.field_d, var2 + (DelayedServerPacket.field_e << 1), SumIntegersCommand.field_I - DelayedServerPacket.field_e, var1 + (TextLineLayoutSupport.field_d << 1), 3);
-          VerticalScrollbar.k(0);
+          VerticalScrollbar.drawFullscreenPromptRows(0);
           return;
         }
         field_c = (String) null;
         IntValueNode.field_g.drawPanel(GameSoundEffect.field_k - TextLineLayoutSupport.field_d, var2 + (DelayedServerPacket.field_e << 1), SumIntegersCommand.field_I - DelayedServerPacket.field_e, var1 + (TextLineLayoutSupport.field_d << 1), 3);
-        VerticalScrollbar.k(0);
+        VerticalScrollbar.drawFullscreenPromptRows(0);
     }
 
     final static void shutdownAudioOutputs(int param0) {

@@ -118,7 +118,7 @@ final class LookupRecordUpdate extends IntrusiveNode {
               var3Lifetime1 = InstrumentNoteMask.field_i * var15.field_v >> 8;
               PacketBuffer.pushSpriteRaster(param0 ^ 10, MyKitScreen.field_S);
               var15.drawScaled(0, 0, var2_intLifetime1, var3Lifetime1);
-              TeamManagementScreen.e(118);
+              TeamManagementScreen.popRasterState(118);
             }
             stackIn_20_0 = (SessionUrlSupport.screenToWorldX(0, (byte) -1) >= 0) ? 0 : 1;
             var2_intLifetime1Lifetime1 = stackIn_20_0;
@@ -205,7 +205,7 @@ final class LookupRecordUpdate extends IntrusiveNode {
           }
           if (!FadingSoundPlayer.field_q) {
             if (RankingsScreen.field_C == 3) {
-              GameKeyHandler.a((byte) 92);
+              GameKeyHandler.drawStadiumBorder((byte) 92);
             }
             if (RankingsScreen.field_C == 2) {
               LoginForm.drawAnimatedPitchEdges((byte) -79);

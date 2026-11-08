@@ -11,12 +11,12 @@ final class LoginDialog extends ContentTransitionDialog {
         super(param0, param1, 33, 20, 30);
     }
 
-    final void a(byte param0, UiWidget param1) {
+    final void transitionToContent(byte param0, UiWidget param1) {
         try {
           if (param0 > -117) {
             field_cb = (Sprite) null;
           }
-          super.a((byte) -127, param1);
+          super.transitionToContent((byte) -127, param1);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "vo.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

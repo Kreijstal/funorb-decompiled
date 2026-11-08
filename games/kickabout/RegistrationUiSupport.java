@@ -52,7 +52,7 @@ final class RegistrationUiSupport {
             RegistrationUiSupport.buildLoadingSpinnerSprites((byte) -8);
           }
           VerticalScrollbar.initializeSocialTabs(0);
-          NotCommand.g((byte) -47);
+          NotCommand.layoutSharedChatPanels((byte) -47);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -221,14 +221,14 @@ final class RegistrationUiSupport {
               PacketBuffer.pushSpriteRaster(-110, var8);
               SoftwareRasterizer.clearFramebuffer();
               SoftwareRasterizer.fillRect(SoftwareRasterizer.field_g - 6 >> 1, 26, 6, 10, var5);
-              TeamManagementScreen.e(120);
+              TeamManagementScreen.popRasterState(120);
               var6 = (var4 << 16) / 6;
               var8.rotateNearest(608, 736, 608, 736, var6, 4096);
             }
             DialogOverlay.field_f[-var3 + 5] = new ArgbSprite(38, 46);
             SoftwareDrawingSupport.downscaleByHalf(var2, DialogOverlay.field_f[5 - var3]);
           }
-          TeamManagementScreen.e(param0 ^ -100);
+          TeamManagementScreen.popRasterState(param0 ^ -100);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

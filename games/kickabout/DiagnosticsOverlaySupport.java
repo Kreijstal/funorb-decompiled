@@ -183,7 +183,7 @@ final class DiagnosticsOverlaySupport {
 
     final static boolean c(byte param0) {
         int var1 = 42 % ((param0 + 20) / 57);
-        return RegistrationRequestDialog.a(17, AppletContextSupport.getActiveApplet(71));
+        return RegistrationRequestDialog.hasTuhstatbutSetting(17, AppletContextSupport.getActiveApplet(71));
     }
 
     public static void releaseStatics(int param0) {

@@ -68,7 +68,7 @@ final class TeamSelectionAgent extends MatchAgent {
         }
     }
 
-    final void a(boolean param0, int param1) {
+    final void clearParticipantSelection(boolean param0, int param1) {
         int dupTemp$0 = 0;
         int[] var3;
         int var4;
@@ -127,7 +127,7 @@ final class TeamSelectionAgent extends MatchAgent {
           }
         }
         if (param0 >= -96) {
-          this.a(false, -110);
+          this.clearParticipantSelection(false, -110);
         }
         return var2;
     }
@@ -163,7 +163,7 @@ final class TeamSelectionAgent extends MatchAgent {
         return stackIn_11_0;
     }
 
-    final static void a(byte param0, QuickChatCategory param1) {
+    final static void setUnknownQuickChatPhrase(byte param0, QuickChatCategory param1) {
         try {
           param1.phraseShortcuts = new char[]{(char)63};
           param1.phraseIds = new int[]{-1};
@@ -218,7 +218,7 @@ final class TeamSelectionAgent extends MatchAgent {
         field_g = null;
     }
 
-    final void a(int param0, CipherPacketBuffer param1) {
+    final void readSelectionState(int param0, CipherPacketBuffer param1) {
         int var3_int = 0;
         int var5 = Kickabout.field_G;
         try {

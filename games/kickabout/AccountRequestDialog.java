@@ -114,8 +114,8 @@ class AccountRequestDialog extends ContentTransitionDialog implements ButtonList
     final void r(int param0) {
         this.field_jb.setColors((byte) 21, 4210752, param0);
         AccountMessagePanel var2 = new AccountMessagePanel(this, this.field_eb, AchievementSubmission.field_m);
-        var2.a((byte) 99, 15, TeamManagementScreen.field_E);
-        this.a((byte) -124, (UiWidget) (var2));
+        var2.addActionButton((byte) 99, 15, TeamManagementScreen.field_E);
+        this.transitionToContent((byte) -124, (UiWidget) (var2));
     }
 
     final boolean handleKeyInput(char param0, byte param1, UiWidget param2, int param3) {
@@ -176,11 +176,11 @@ class AccountRequestDialog extends ContentTransitionDialog implements ButtonList
           var7 = new AccountMessagePanel(this, this.field_eb, param2);
           var4 = var7;
           if (param0 == 5) {
-            var7.a((byte) 72, 11, MatchHudRoutingSupport.field_d);
-            var7.a((byte) 104, 17, AccountNameAvailabilityValidator.field_o);
+            var7.addActionButton((byte) 72, 11, MatchHudRoutingSupport.field_d);
+            var7.addActionButton((byte) 104, 17, AccountNameAvailabilityValidator.field_o);
           } else {
             if (param0 == 256) {
-              var7.a(QuickChatCategoryCache.field_d, (UiListener) (this), (byte) 79);
+              var7.appendButton(QuickChatCategoryCache.field_d, (UiListener) (this), (byte) 79);
             } else {
               stackIn_10_0 = var7;
               stackIn_10_1 = 111;
@@ -190,29 +190,29 @@ class AccountRequestDialog extends ContentTransitionDialog implements ButtonList
               } else {
                 stackIn_11_3 = TextLineLayoutSupport.field_f;
               }
-              ((AccountMessagePanel) (Object) stackIn_10_0).a((byte) stackIn_10_1, stackIn_10_2, stackIn_11_3);
+              ((AccountMessagePanel) (Object) stackIn_10_0).addActionButton((byte) stackIn_10_1, stackIn_10_2, stackIn_11_3);
             }
           }
           if (param0 != 3) {
             if (param0 == 4) {
-              var7.a((byte) 96, 8, GameModesHelpScreen.field_O);
+              var7.addActionButton((byte) 96, 8, GameModesHelpScreen.field_O);
             } else {
               if (param0 == 6) {
-                var7.a((byte) 92, 9, AccountNameAvailabilityValidator.field_p);
+                var7.addActionButton((byte) 92, 9, AccountNameAvailabilityValidator.field_p);
               } else {
                 if (9 == param0) {
-                  var7.a(ThreeCommand.field_C, (UiListener) (this), (byte) 79);
+                  var7.appendButton(ThreeCommand.field_C, (UiListener) (this), (byte) 79);
                 }
               }
             }
           } else {
-            var7.a((byte) 54, 7, WelcomeDialog.field_J);
+            var7.addActionButton((byte) 54, 7, WelcomeDialog.field_J);
           }
           if (param1 < 96) {
             var6 = (java.awt.Point[]) null;
             AccountRequestDialog.addPolygonGroundMarkers((byte) -60, 109, (IntrusiveDeque) null, (java.awt.Point[]) null);
           }
-          this.a((byte) -120, (UiWidget) (var7));
+          this.transitionToContent((byte) -120, (UiWidget) (var7));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

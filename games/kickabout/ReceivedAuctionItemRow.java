@@ -106,11 +106,11 @@ final class ReceivedAuctionItemRow extends ListRow {
         }
         if (param0 != 0) {
           var6 = (ResourceArchive) null;
-          ReceivedAuctionItemRow.a((ResourceArchive) null, 41, 84);
+          ReceivedAuctionItemRow.loadMusicPatch((ResourceArchive) null, 41, 84);
         }
     }
 
-    final boolean b(int param0) {
+    final boolean isMessageRow(int param0) {
         boolean stackIn_6_0 = false;
         if (param0 != 15377) {
           this.field_Ib = (String) null;
@@ -270,7 +270,7 @@ final class ReceivedAuctionItemRow extends ListRow {
         DialogOverlay.field_f[var3].draw(param0 - 19, param2 - 23);
     }
 
-    final static MusicPatch a(ResourceArchive param0, int param1, int param2) {
+    final static MusicPatch loadMusicPatch(ResourceArchive param0, int param1, int param2) {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
         byte[] var4 = null;

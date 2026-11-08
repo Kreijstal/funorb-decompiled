@@ -41,13 +41,13 @@ final class SpriteButtonPainter extends TextWidgetPainter {
         Sprite var8 = LoginMethod.createRingSprite(2, var3, true, 16777215);
         var8.draw(-var3 + PitchOptionTile.field_yb, -var3 + var6);
         var8.draw(PitchOptionTile.field_yb - var3, -var3 + (IconLabel.field_Bb + IconLabel.field_Bb) - var6);
-        TeamManagementScreen.e(param0 ^ -363021514);
-        TeamManagementScreen.e(127);
+        TeamManagementScreen.popRasterState(param0 ^ -363021514);
+        TeamManagementScreen.popRasterState(127);
         SquadPickerDialog.field_Q = new Sprite(2 + PitchOptionTile.field_yb, 2 + IconLabel.field_Bb);
         PacketBuffer.pushSpriteRaster(param0 + 363021421, SquadPickerDialog.field_Q);
         SoftwareRasterizer.fillRect(0, 0, SoftwareRasterizer.field_g, SoftwareRasterizer.field_f, 65793);
         var7.drawHalfSize(1, 1);
-        TeamManagementScreen.e(125);
+        TeamManagementScreen.popRasterState(125);
     }
 
     public final void drawWidget(int param0, boolean param1, int param2, UiWidget param3, int param4) {

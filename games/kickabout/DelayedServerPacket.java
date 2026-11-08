@@ -10,7 +10,7 @@ final class DelayedServerPacket extends IntrusiveNode {
     long dueTime;
     static ArgbSprite field_g;
 
-    final static RasterBuffer a(int param0, int param1, int param2, java.awt.Component param3) {
+    final static RasterBuffer createRasterBuffer(int param0, int param1, int param2, java.awt.Component param3) {
         try {
           Class var4 = null;
           Throwable var4_ref = null;
@@ -60,7 +60,7 @@ final class DelayedServerPacket extends IntrusiveNode {
         }
     }
 
-    final static void b(int param0) {
+    final static void resetChatSendLimiter(int param0) {
         if (param0 <= 25) {
           DelayedServerPacket.releaseStatics(111);
           DisplayNameUiSupport.field_c = MonotonicClock.monotonicMillis(82);
@@ -89,14 +89,14 @@ final class DelayedServerPacket extends IntrusiveNode {
         var6 = Kickabout.field_G;
         try {
           if (null != GameModesHelpScreen.field_G) {
-            MeshObject.a((byte) 78);
+            MeshObject.finishScreenTransition((byte) 78);
           }
           if (AuctionLogEntry.field_h.screenId == param0) {
             return;
           }
           if (AuctionLogEntry.field_h instanceof TeamManagementScreen &&
             GameSoundEffect.hasPendingManagerActions(param2 + 66)) {
-            RasterBuffer.a(false);
+            RasterBuffer.enqueueSaveChangesDialog(false);
             return;
           }
           if (AuctionLogEntry.field_h instanceof MatchScreen &&

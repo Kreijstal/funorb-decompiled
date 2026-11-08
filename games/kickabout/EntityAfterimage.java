@@ -44,7 +44,7 @@ final class EntityAfterimage {
           SoftwareRasterizer.clearFramebuffer();
           var4_int = 486400 / InstrumentNoteMask.field_i;
           param0.renderModel(var4_int, 300, this.field_g, this.field_h, (byte) -74);
-          TeamManagementScreen.e(124);
+          TeamManagementScreen.popRasterState(124);
           if (param2) {
             return;
           }
@@ -111,7 +111,7 @@ final class EntityAfterimage {
           int var5 = 64 / ((-64 - param1) / 38);
           var4_int = (param2.getRenderedScale(-1) << 8) / InstrumentNoteMask.field_i;
           param2.drawBall(300, this.field_g, this.field_h, var4_int, 300);
-          TeamManagementScreen.e(123);
+          TeamManagementScreen.popRasterState(123);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "v.E(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

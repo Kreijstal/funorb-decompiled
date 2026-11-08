@@ -133,7 +133,7 @@ final class SocialNamePrompt extends UiLayoutNode {
           }
           if (FixedQuaternion.field_e == 85 &&
             0 < this.field_yb.length()) {
-            PagedHelpScreen.a(-1 + this.field_yb.length(), ' ', -11407, this.field_yb);
+            PagedHelpScreen.resizeAndPad(-1 + this.field_yb.length(), ' ', -11407, this.field_yb);
           }
           if (StatefulTextPainter.a(false, (CharSequence) ((Object) this.field_yb), ClassDescriptorSupport.field_c)) {
             discarded$1 = this.field_yb.append(ClassDescriptorSupport.field_c);
@@ -326,7 +326,7 @@ final class SocialNamePrompt extends UiLayoutNode {
           }
           return true;
         }
-        PagedHelpScreen.a(this.field_yb.length() - 1, ' ', -11407, this.field_yb);
+        PagedHelpScreen.resizeAndPad(this.field_yb.length() - 1, ' ', -11407, this.field_yb);
         if (this.field_yb.length() >= 12) {
           var2Lifetime2 = -60 % ((-76 - param0) / 48);
           if (FixedQuaternion.field_e == 84) {

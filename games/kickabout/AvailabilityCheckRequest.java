@@ -34,24 +34,24 @@ final class AvailabilityCheckRequest {
         DiskCacheWorker.field_i[2] = (ArgbSprite) (QuickChatPhraseDefinition.loadSpriteByName("stadium", QuickChatKeysHelpPanel.field_Cb, (byte) 46, "bot_left_seats"));
         DiskCacheWorker.field_i[3] = (ArgbSprite) (QuickChatPhraseDefinition.loadSpriteByName("stadium", QuickChatKeysHelpPanel.field_Cb, (byte) 115, "bot_right_seats"));
         AudioOutputSupport.field_e = new IndexedSprite[4][3];
-        AudioOutputSupport.field_e[0][0] = MyPitchScreen.a(QuickChatKeysHelpPanel.field_Cb, "stadium", true, "left_seats_1");
-        AudioOutputSupport.field_e[0][1] = MyPitchScreen.a(QuickChatKeysHelpPanel.field_Cb, "stadium", true, "left_seats_2");
-        AudioOutputSupport.field_e[0][2] = MyPitchScreen.a(QuickChatKeysHelpPanel.field_Cb, "stadium", true, "left_seats_3");
+        AudioOutputSupport.field_e[0][0] = MyPitchScreen.loadIndexedSpriteByName(QuickChatKeysHelpPanel.field_Cb, "stadium", true, "left_seats_1");
+        AudioOutputSupport.field_e[0][1] = MyPitchScreen.loadIndexedSpriteByName(QuickChatKeysHelpPanel.field_Cb, "stadium", true, "left_seats_2");
+        AudioOutputSupport.field_e[0][2] = MyPitchScreen.loadIndexedSpriteByName(QuickChatKeysHelpPanel.field_Cb, "stadium", true, "left_seats_3");
         MatchingTextValidator.field_k = QuickChatPhraseDefinition.loadSpriteByName("stadium", QuickChatKeysHelpPanel.field_Cb, (byte) 68, "ad_top");
         MusicPatchNode.field_m = QuickChatPhraseDefinition.loadSpriteByName("stadium", QuickChatKeysHelpPanel.field_Cb, (byte) 83, "ad_right");
         ManagerAction.field_f = QuickChatPhraseDefinition.loadSpriteByName("stadium", QuickChatKeysHelpPanel.field_Cb, (byte) 108, "ad_left");
-        AudioOutputSupport.field_e[1][0] = MyPitchScreen.a(QuickChatKeysHelpPanel.field_Cb, "stadium", true, "top_seats_1");
-        AudioOutputSupport.field_e[1][1] = MyPitchScreen.a(QuickChatKeysHelpPanel.field_Cb, "stadium", true, "top_seats_2");
-        AudioOutputSupport.field_e[1][2] = MyPitchScreen.a(QuickChatKeysHelpPanel.field_Cb, "stadium", true, "top_seats_3");
-        AudioOutputSupport.field_e[3][0] = MyPitchScreen.a(QuickChatKeysHelpPanel.field_Cb, "stadium", true, "bot_seats_1");
+        AudioOutputSupport.field_e[1][0] = MyPitchScreen.loadIndexedSpriteByName(QuickChatKeysHelpPanel.field_Cb, "stadium", true, "top_seats_1");
+        AudioOutputSupport.field_e[1][1] = MyPitchScreen.loadIndexedSpriteByName(QuickChatKeysHelpPanel.field_Cb, "stadium", true, "top_seats_2");
+        AudioOutputSupport.field_e[1][2] = MyPitchScreen.loadIndexedSpriteByName(QuickChatKeysHelpPanel.field_Cb, "stadium", true, "top_seats_3");
+        AudioOutputSupport.field_e[3][0] = MyPitchScreen.loadIndexedSpriteByName(QuickChatKeysHelpPanel.field_Cb, "stadium", true, "bot_seats_1");
         if (param0 != 28) {
           return -11;
         }
-        AudioOutputSupport.field_e[3][1] = MyPitchScreen.a(QuickChatKeysHelpPanel.field_Cb, "stadium", true, "bot_seats_2");
-        AudioOutputSupport.field_e[3][2] = MyPitchScreen.a(QuickChatKeysHelpPanel.field_Cb, "stadium", true, "bot_seats_3");
-        AudioOutputSupport.field_e[2][0] = MyPitchScreen.a(QuickChatKeysHelpPanel.field_Cb, "stadium", true, "right_seats_1");
-        AudioOutputSupport.field_e[2][1] = MyPitchScreen.a(QuickChatKeysHelpPanel.field_Cb, "stadium", true, "right_seats_2");
-        AudioOutputSupport.field_e[2][2] = MyPitchScreen.a(QuickChatKeysHelpPanel.field_Cb, "stadium", true, "right_seats_3");
+        AudioOutputSupport.field_e[3][1] = MyPitchScreen.loadIndexedSpriteByName(QuickChatKeysHelpPanel.field_Cb, "stadium", true, "bot_seats_2");
+        AudioOutputSupport.field_e[3][2] = MyPitchScreen.loadIndexedSpriteByName(QuickChatKeysHelpPanel.field_Cb, "stadium", true, "bot_seats_3");
+        AudioOutputSupport.field_e[2][0] = MyPitchScreen.loadIndexedSpriteByName(QuickChatKeysHelpPanel.field_Cb, "stadium", true, "right_seats_1");
+        AudioOutputSupport.field_e[2][1] = MyPitchScreen.loadIndexedSpriteByName(QuickChatKeysHelpPanel.field_Cb, "stadium", true, "right_seats_2");
+        AudioOutputSupport.field_e[2][2] = MyPitchScreen.loadIndexedSpriteByName(QuickChatKeysHelpPanel.field_Cb, "stadium", true, "right_seats_3");
         LineupView.field_s = new IndexedSprite[3][];
         LineupView.field_s[0] = DemoIntegersCommand.a(QuickChatKeysHelpPanel.field_Cb, TrinketShopDialog.bitwiseXor((int) param0, 17349), "stadium", "top_seats_1_mask");
         LineupView.field_s[1] = DemoIntegersCommand.a(QuickChatKeysHelpPanel.field_Cb, 17369, "stadium", "top_seats_2_mask");
@@ -218,7 +218,7 @@ final class AvailabilityCheckRequest {
         } else {
           if (param0 &&
             !ClassNameSupport.field_a) {
-            RankingsScreen.a(false);
+            RankingsScreen.captureMouse(false);
             if (!ClassNameSupport.field_a) {
               ArrayWidgetContainer.field_x = BytePlusOneCommand.field_A;
               TutorialCaptionSupport.field_j = ArchiveManager.field_m;

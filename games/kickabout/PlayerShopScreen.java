@@ -160,7 +160,7 @@ final class PlayerShopScreen extends TeamManagementScreen {
         }
     }
 
-    final static void a(boolean param0) {
+    final static void updateDashCooldownIndicators(boolean param0) {
         int var1_int = 0;
         FootballerAgent var2 = null;
         int var3 = 0;

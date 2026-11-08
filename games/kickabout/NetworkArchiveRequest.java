@@ -22,7 +22,7 @@ final class NetworkArchiveRequest extends ArchiveRequest {
             WorldSpriteSequence.field_f.closeDialog(-123);
           }
           IsSixCommand.field_E = new LoginForm(param0, param2, false, true, true);
-          ClientUiUpdateSupport.field_a.a((byte) -122, (UiWidget) (IsSixCommand.field_E));
+          ClientUiUpdateSupport.field_a.transitionToContent((byte) -122, (UiWidget) (IsSixCommand.field_E));
           if (param1 != 111) {
             field_y = true;
           }
@@ -81,12 +81,12 @@ final class NetworkArchiveRequest extends ArchiveRequest {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3) {
+    final static void playMusicTrackById(int param0, int param1, int param2, int param3) {
         if (param3 != 2147483647) {
           String var5 = (String) null;
           NetworkArchiveRequest.showLoginForm((String) null, (byte) 63, (String) null);
         }
-        ContentTransitionDialog.a(SceneSpriteFactory.field_a[param1], true, param0, LocalizedTextLoader.field_d[param1], param2, true);
+        ContentTransitionDialog.playMusicTrack(SceneSpriteFactory.field_a[param1], true, param0, LocalizedTextLoader.field_d[param1], param2, true);
     }
 
     final int progress(int param0) {

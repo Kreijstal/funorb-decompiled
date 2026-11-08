@@ -144,7 +144,7 @@ final class SocialTabsPanel {
         TournamentChampionDialog.field_F.layoutListAndButtons(2, TeamSelectionAgent.field_f, (byte) 19, 20);
     }
 
-    final static void a(byte param0) {
+    final static void initializeAbilityIndicatorMasks(byte param0) {
         int var2 = 0;
         int var5 = 0;
         int stackIn_6_0 = 0;
@@ -252,7 +252,7 @@ final class SocialTabsPanel {
         field_d = null;
     }
 
-    final static int[] a(int param0, int param1, int param2) {
+    final static int[] createPitchYawTransform(int param0, int param1, int param2) {
         int var3 = RotaryDialPainter.sine(param0, (byte) -23);
         int var4 = ClientUiUpdateSupport.cosine(param0, false);
         int var5 = RotaryDialPainter.sine(param2, (byte) -23);

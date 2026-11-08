@@ -62,7 +62,7 @@ final class AchievementsScreen extends ButtonMenuScreen {
           }
           var3 = (UiLayoutNode) (ContextMenuItem.field_Ib.field_Db.field_jb.next(33));
         }
-        TeamManagementScreen.e(117);
+        TeamManagementScreen.popRasterState(117);
         var18 = IsSixCommand.field_C;
         var21 = BufferedSocket.field_f;
         if (AuctionListing.field_e == -1) {

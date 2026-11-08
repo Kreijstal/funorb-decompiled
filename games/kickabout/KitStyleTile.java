@@ -241,7 +241,7 @@ final class KitStyleTile extends UiLayoutNode implements PopupCard {
           ConsoleTokenCursor.field_d.drawCentered("10", SoftwareRasterizer.field_g >> 1, SoftwareRasterizer.field_f - 2, -1, -1);
           SoftwareDrawingSupport.outlineSpriteInPlace(var8, -16711423);
           SoftwareDrawingSupport.outlineSpriteInPlace(var8, 1996554497);
-          TeamManagementScreen.e(122);
+          TeamManagementScreen.popRasterState(122);
           ((Sprite) ((Object) var8)).draw(-(((Sprite) ((Object) var8)).field_o >> 1) + var5, -(((Sprite) ((Object) var8)).field_v >> 1) + var6);
         }
         if (this.field_Ib) {

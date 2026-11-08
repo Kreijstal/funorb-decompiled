@@ -131,19 +131,19 @@ final class DisplayNameUiSupport {
           PlayerInputEvent.field_n = new DisplayNameForm();
           if (param0 > -8) {
             DisplayNameUiSupport.showDisplayNameForm((byte) -11);
-            ClientUiUpdateSupport.field_a.a((byte) -124, (UiWidget) (PlayerInputEvent.field_n));
+            ClientUiUpdateSupport.field_a.transitionToContent((byte) -124, (UiWidget) (PlayerInputEvent.field_n));
             return;
           }
-          ClientUiUpdateSupport.field_a.a((byte) -124, (UiWidget) (PlayerInputEvent.field_n));
+          ClientUiUpdateSupport.field_a.transitionToContent((byte) -124, (UiWidget) (PlayerInputEvent.field_n));
           return;
         }
         PlayerInputEvent.field_n = new DisplayNameForm();
         if (param0 <= -8) {
-          ClientUiUpdateSupport.field_a.a((byte) -124, (UiWidget) (PlayerInputEvent.field_n));
+          ClientUiUpdateSupport.field_a.transitionToContent((byte) -124, (UiWidget) (PlayerInputEvent.field_n));
           return;
         }
         DisplayNameUiSupport.showDisplayNameForm((byte) -11);
-        ClientUiUpdateSupport.field_a.a((byte) -124, (UiWidget) (PlayerInputEvent.field_n));
+        ClientUiUpdateSupport.field_a.transitionToContent((byte) -124, (UiWidget) (PlayerInputEvent.field_n));
     }
 
     static {

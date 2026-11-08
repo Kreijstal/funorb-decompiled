@@ -90,17 +90,17 @@ abstract class ContentTransitionDialog extends ResizableModalPanel {
         }
     }
 
-    final static void a(int param0, boolean param1, int param2, MusicTrack param3, int param4, boolean param5) {
+    final static void playMusicTrack(int param0, boolean param1, int param2, MusicTrack param3, int param4, boolean param5) {
         if (!param5) {
           MusicTrack var7 = (MusicTrack) null;
-          ContentTransitionDialog.a(-65, false, -66, (MusicTrack) null, -42, true);
+          ContentTransitionDialog.playMusicTrack(-65, false, -66, (MusicTrack) null, -42, true);
         }
         if (param2 < 0 ||
           param2 >= LoadingProgressSupport.field_d.field_o) {
           return;
         }
         try {
-          LoadingProgressSupport.field_d.a(param1, 1000000, param3, -9017, param2, param4, param0);
+          LoadingProgressSupport.field_d.playTrack(param1, 1000000, param3, -9017, param2, param4, param0);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "mu.D(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
         }
@@ -118,7 +118,7 @@ abstract class ContentTransitionDialog extends ResizableModalPanel {
         field_Y = null;
     }
 
-    void a(byte param0, UiWidget param1) {
+    void transitionToContent(byte param0, UiWidget param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -284,7 +284,7 @@ abstract class ContentTransitionDialog extends ResizableModalPanel {
         }
     }
 
-    final static int a(int param0, int param1, String param2, String param3, String param4, boolean param5, int param6) {
+    final static int pollRegistrationRequest(int param0, int param1, String param2, String param3, String param4, boolean param5, int param6) {
         LoginText var7 = null;
         RuntimeException var7_ref = null;
         LoginText var8 = null;

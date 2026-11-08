@@ -31,7 +31,7 @@ class NineSlicePanelPainter {
         }
     }
 
-    final static String a(byte param0, int param1, long param2, boolean param3, int param4) {
+    final static String formatDecimal(byte param0, int param1, long param2, boolean param3, int param4) {
         StringBuilder discarded$0 = null;
         StringBuilder discarded$4 = null;
         StringBuilder discarded$1 = null;

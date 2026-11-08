@@ -323,7 +323,7 @@ class ColumnTableWidget extends UiLayoutNode {
           if (var4 != 0) {
             SoftwareRasterizer.fillRoundedRectangleBlended(var13.field_F + 1, var13.field_T, -1 + var13.field_q, 40, 10, 2280703, 90);
           }
-          TeamManagementScreen.e(118);
+          TeamManagementScreen.popRasterState(118);
           var6 = (var13.field_q >> 1) + var13.field_F;
           var7 = -5 + (20 + var13.field_T);
           if (this.field_Db == var2) {
@@ -354,7 +354,7 @@ class ColumnTableWidget extends UiLayoutNode {
         for (var4Lifetime1 = 0; var14.length > var4Lifetime1; var4Lifetime1++) {
           var5 = var14[var4Lifetime1];
           var6Lifetime1 = -1;
-          if (!var5.b(15377)) {
+          if (!var5.isMessageRow(15377)) {
             var7Lifetime1 = var5.field_F;
             if (!var5.field_gb) {
               for (var8Lifetime1 = 0; var8Lifetime1 < this.field_Bb.length; var8Lifetime1++) {
@@ -383,7 +383,7 @@ class ColumnTableWidget extends UiLayoutNode {
           }
           var5.drawRow(0, var6Lifetime1);
         }
-        TeamManagementScreen.e(127);
+        TeamManagementScreen.popRasterState(127);
     }
 
     final int getSortDirection(byte param0) {

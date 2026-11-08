@@ -181,7 +181,7 @@ final class PlayingView extends MatchPhaseView {
         int var9;
         var9 = Kickabout.field_G;
         if (!this.field_E) {
-          SelectionMarkerSupport.a(0);
+          SelectionMarkerSupport.startPitchAudio(0);
           this.field_E = true;
         }
         if (40 > this.field_a.field_X.goalCount) {
@@ -1432,10 +1432,10 @@ final class PlayingView extends MatchPhaseView {
         IntTripleCommand.sortWorldDrawList(this.field_r, -22488);
         TextLineLayoutSupport.tickWorldEntries(7249);
         this.updateMatchAudio(2115);
-        GameKeyHandler.b(40);
+        GameKeyHandler.animateMatchMinimap(40);
         ArchiveIndex.advanceSelectionOverlayFrame(88);
-        LobbyPlayerRow.i(0);
-        PlayerShopScreen.a(false);
+        LobbyPlayerRow.updateTeammateMarkerIntersections(0);
+        PlayerShopScreen.updateDashCooldownIndicators(false);
     }
 
     private final void refreshFootballerSprites(int param0) {
@@ -1537,7 +1537,7 @@ final class PlayingView extends MatchPhaseView {
               var3_int = 1;
               PlatformTaskState.field_f = false;
             }
-            AgeValidator.a(var3_int != 0, -68, PlayerInputEvent.g((byte) 60), SumIntegersCommand.field_A, MeshPreviewSupport.getCommonUiLoadProgress((byte) 92));
+            AgeValidator.a(var3_int != 0, -68, PlayerInputEvent.getAccountLoadingStatus((byte) 60), SumIntegersCommand.field_A, MeshPreviewSupport.getCommonUiLoadProgress((byte) 92));
           } else {
             if (!TournamentChampionDialog.isLogoSequenceComplete(-86)) {
               SoftwareRasterizer.clearFramebuffer();

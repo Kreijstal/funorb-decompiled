@@ -27,14 +27,14 @@ final class MatchTransitionScreen extends ButtonMenuScreen {
           return;
         }
         if (KitPatternMaskSupport.field_c != ChatComposeSupport.field_g) {
-          AnimationClip.a(FullscreenFailureReason.field_f, -76, TeamSelectionView.field_j, ChatComposeSupport.field_g);
+          AnimationClip.requestPitchTheme(FullscreenFailureReason.field_f, -76, TeamSelectionView.field_j, ChatComposeSupport.field_g);
         } else {
           if (FullscreenFailureReason.field_f != RankingsScreen.field_C) {
-            AnimationClip.a(FullscreenFailureReason.field_f, -76, TeamSelectionView.field_j, ChatComposeSupport.field_g);
+            AnimationClip.requestPitchTheme(FullscreenFailureReason.field_f, -76, TeamSelectionView.field_j, ChatComposeSupport.field_g);
           } else {
             stackIn_9_0 = (NanoTickClock.field_n) ? 0 : 1;
             if (stackIn_9_0 == (TeamSelectionView.field_j ? 1 : 0)) {
-              AnimationClip.a(FullscreenFailureReason.field_f, -76, TeamSelectionView.field_j, ChatComposeSupport.field_g);
+              AnimationClip.requestPitchTheme(FullscreenFailureReason.field_f, -76, TeamSelectionView.field_j, ChatComposeSupport.field_g);
             }
           }
         }

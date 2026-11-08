@@ -87,7 +87,7 @@ final class SetLagCommand extends ConsoleCommand {
             stackIn_8_0 = (param1[var6].team == param3) ? 11184895 : 16755370;
             var8 = stackIn_8_0;
             ConsoleTokenCursor.field_d.drawCentered(var7, SoftwareRasterizer.field_g >> 1, -4 + SoftwareRasterizer.field_f, var8, -1);
-            TeamManagementScreen.e(117);
+            TeamManagementScreen.popRasterState(117);
             var5[var6].addOutline(65793);
           }
           stackIn_10_0 = var5;
@@ -199,7 +199,7 @@ final class SetLagCommand extends ConsoleCommand {
         String var1 = TextFieldNode.getSuggestedLoginName(-110);
         IsSixCommand.field_E = new LoginForm(var1, (String) null, param0, false, false);
         RankingsRequest.field_l.pushModal(ClientUiUpdateSupport.field_a, false);
-        ClientUiUpdateSupport.field_a.a((byte) -126, (UiWidget) (IsSixCommand.field_E));
+        ClientUiUpdateSupport.field_a.transitionToContent((byte) -126, (UiWidget) (IsSixCommand.field_E));
         ClientUiUpdateSupport.field_a.finishTransition(4000);
     }
 

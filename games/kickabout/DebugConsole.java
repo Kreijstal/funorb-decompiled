@@ -35,7 +35,7 @@ final class DebugConsole extends ConsolePanel {
                 this.completeCommandInput(5);
               }
               var7 = new ConsoleTokenCursor(var6);
-              var5 = AuctionTableWidget.a(var7, 1422);
+              var5 = AuctionTableWidget.parseConsoleExpression(var7, 1422);
               if (!var7.isAtEnd(6)) {
                 throw new ConsoleParseException(var7.readToken((byte) 114).field_f);
               }

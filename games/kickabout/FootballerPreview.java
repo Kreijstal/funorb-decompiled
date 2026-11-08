@@ -69,7 +69,7 @@ final class FootballerPreview {
           PacketBuffer.pushSpriteRaster(param0 + 39, SpriteResourceSupport.field_a);
           SoftwareRasterizer.clearFramebuffer();
           this.field_b.renderModel(1200, 300, 48, 90, (byte) -105);
-          TeamManagementScreen.e(127);
+          TeamManagementScreen.popRasterState(127);
           SpriteResourceSupport.field_a.drawHalfSize(param2 - param0, -47 + param1);
           if (FaceNormal.field_c) {
             this.field_b.field_R = var4;
@@ -80,7 +80,7 @@ final class FootballerPreview {
         PacketBuffer.pushSpriteRaster(param0 + 39, SpriteResourceSupport.field_a);
         SoftwareRasterizer.clearFramebuffer();
         this.field_b.renderModel(1200, 300, 48, 90, (byte) -105);
-        TeamManagementScreen.e(127);
+        TeamManagementScreen.popRasterState(127);
         SpriteResourceSupport.field_a.drawHalfSize(param2 - param0, -47 + param1);
         if (!FaceNormal.field_c) {
           return;

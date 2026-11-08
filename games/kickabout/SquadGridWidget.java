@@ -67,7 +67,7 @@ final class SquadGridWidget extends UiLayoutNode {
         for (var2 = 0; var2 < 9; var2++) {
           var3_ref_kq = this.field_Eb[var2];
           var4_int = this.field_Hb.field_q[var2];
-          var3_ref_kq.a(this.field_Hb.field_R, this.field_Hb.field_w, (byte) 127, this.field_Hb.field_k, this.field_Hb.squad[var4_int]);
+          var3_ref_kq.updatePlayerPreview(this.field_Hb.field_R, this.field_Hb.field_w, (byte) 127, this.field_Hb.field_k, this.field_Hb.squad[var4_int]);
           var3_ref_kq.updateAuctionStatusIcon((byte) 25, this.field_Hb, var4_int);
           if (!var3_ref_kq.field_Eb.isEmpty(-2) &&
             var3_ref_kq.field_qb != 0) {
@@ -226,7 +226,7 @@ final class SquadGridWidget extends UiLayoutNode {
               if (var10 < var7.length) {
                 var14 = var7[var10];
                 if (var14.field_a &&
-                  !SumIntegersCommand.a((byte) 121, var14.field_f)) {
+                  !SumIntegersCommand.isLocalPlayerName((byte) 121, var14.field_f)) {
                   var9 = var14.rowId;
                 } else {
                   var10++;
@@ -239,7 +239,7 @@ final class SquadGridWidget extends UiLayoutNode {
                 var10 = var13;
                 while (var7.length > var13) {
                   var15 = var7[var13];
-                  if (SumIntegersCommand.a((byte) 45, var15.field_f)) {
+                  if (SumIntegersCommand.isLocalPlayerName((byte) 45, var15.field_f)) {
                     var9 = var15.rowId;
                     break;
                   }
@@ -417,7 +417,7 @@ final class SquadGridWidget extends UiLayoutNode {
             }
             break;
           }
-          TeamManagementScreen.e(127);
+          TeamManagementScreen.popRasterState(127);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -578,7 +578,7 @@ final class SquadGridWidget extends UiLayoutNode {
             var3 = var4_int;
           }
         }
-        ListingRowCache.a(var3, this.field_T, this.field_F, (byte) -96, var2);
+        ListingRowCache.drawGridSelectionOverlay(var3, this.field_T, this.field_F, (byte) -96, var2);
         var5 = -84 % ((param0 + 35) / 60);
         var4 = null;
         AuctionListing.pushRasterClip(this.field_F + this.field_q, -22914, this.field_F, this.field_mb + this.field_T, this.field_T);
@@ -592,7 +592,7 @@ final class SquadGridWidget extends UiLayoutNode {
         if (var4 != null) {
           ((SquadSlotWidget) (var4)).h((byte) -118);
         }
-        TeamManagementScreen.e(121);
+        TeamManagementScreen.popRasterState(121);
     }
 
     final static AccountRegistrationResponse createTermsResponse(boolean param0, int param1) {
@@ -809,7 +809,7 @@ final class SquadGridWidget extends UiLayoutNode {
               if (var10 < var7.length) {
                 var14 = var7[var10];
                 if (var14.field_a &&
-                  !SumIntegersCommand.a((byte) 121, var14.field_f)) {
+                  !SumIntegersCommand.isLocalPlayerName((byte) 121, var14.field_f)) {
                   var9 = var14.rowId;
                 } else {
                   var10++;
@@ -822,7 +822,7 @@ final class SquadGridWidget extends UiLayoutNode {
                 var10 = var13;
                 while (var7.length > var13) {
                   var15 = var7[var13];
-                  if (SumIntegersCommand.a((byte) 45, var15.field_f)) {
+                  if (SumIntegersCommand.isLocalPlayerName((byte) 45, var15.field_f)) {
                     var9 = var15.rowId;
                     break;
                   }

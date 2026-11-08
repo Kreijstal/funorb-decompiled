@@ -383,7 +383,7 @@ abstract class MatchPhaseView {
         var7 = SoftwareRasterizer.field_f >> 1;
         ByteArrayPool.field_d.drawCentered(var5, var6, var7, 16777215, -1);
         AuctionSettingsDialog.field_H.draw(-16 + var6, var7 - 31);
-        TeamManagementScreen.e(124);
+        TeamManagementScreen.popRasterState(124);
         var8 = 256;
         if (param0 != -2351) {
           this.field_c = (MenuButton[]) null;
@@ -567,7 +567,7 @@ abstract class MatchPhaseView {
           var8 = this.field_a.field_g[var10].team;
           AuctionListing.pushRasterClip(640, -22914, 2 + (var4[var8] + 160), 480, 0);
           SoftwareRasterizer.fillRoundedRectangleBlended(var4[var8], var5[var8], 186, 21, 7, 65793, 128);
-          TeamManagementScreen.e(123);
+          TeamManagementScreen.popRasterState(123);
           if (this.field_a.participantStatus[var10].loadedPitch) {
             PitchDecorationSupport.field_l.draw(2 + (160 + var4[var8]), -4 + var5[var8]);
           }

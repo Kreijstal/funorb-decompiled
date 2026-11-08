@@ -88,7 +88,7 @@ final class SquadSlotWidget extends UiLayoutNode {
         var5[2] = 1400;
         var5[1] = 1400;
         this.field_Db.renderModel(var3[this.field_Eb.archetype], 0, SoftwareRasterizer.field_g >> 1, SoftwareRasterizer.field_f - 8, (byte) -122);
-        TeamManagementScreen.e(117);
+        TeamManagementScreen.popRasterState(117);
         if (this.field_zb) {
           SoftwareDrawingSupport.outlineSpriteInPlace(PortraitCacheOrder.field_b, 1);
           SoftwareDrawingSupport.outlineSpriteInPlace(PortraitCacheOrder.field_b, 2);
@@ -136,7 +136,7 @@ final class SquadSlotWidget extends UiLayoutNode {
         field_Bb = null;
     }
 
-    final void a(int param0, int param1, byte param2, int param3, PlayerStats param4) {
+    final void updatePlayerPreview(int param0, int param1, byte param2, int param3, PlayerStats param4) {
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         String stackIn_19_2 = null;

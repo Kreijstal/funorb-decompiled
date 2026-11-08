@@ -137,7 +137,7 @@ abstract class PopupDialog extends IntrusiveNode {
             var8.field_J = var10;
             var8.field_s = var9;
           }
-          TeamManagementScreen.e(119);
+          TeamManagementScreen.popRasterState(119);
           var7Lifetime1 = (this.field_m << 10) / CanvasResizePolicy.field_q.length;
           if (var7Lifetime1 > 256) {
             var7Lifetime1 = 256;
@@ -280,7 +280,7 @@ abstract class PopupDialog extends IntrusiveNode {
         AuctionLogEntry.field_j.drawScaledAdditive(param1 - 10, 15 + param2, AuctionLogEntry.field_j.field_o * 2 / 3, 2 * AuctionLogEntry.field_j.field_v / 3, param0);
         this.drawBody((byte) -29, param1, param2);
         SoftwareRasterizer.drawThickRectangle(param1, param2, this.field_e, this.field_r, 2, 65793);
-        TeamManagementScreen.e(124);
+        TeamManagementScreen.popRasterState(124);
     }
 
     PopupDialog() {

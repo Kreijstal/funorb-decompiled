@@ -26,7 +26,7 @@ final class IntKeyLookup {
         RuntimeException decompiledCaughtException = null;
         try {
           var2_int = 82 / ((54 - param1) / 32);
-          stackIn_3_0 = (null != ClientUiOverlay.a(param0, (byte) 40));
+          stackIn_3_0 = (null != ClientUiOverlay.findFriendByName(param0, (byte) 40));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -15,7 +15,7 @@ final class TrinketShopDialog extends MessageDialog {
         return param0 ^ param1;
     }
 
-    private final UiLayoutNode g(byte param0) {
+    private final UiLayoutNode createShopList(byte param0) {
         int var4 = 0;
         int var3;
         Trinket var5;
@@ -99,7 +99,7 @@ final class TrinketShopDialog extends MessageDialog {
         if (this.field_t != var5) {
           this.a(this.field_v, (PopupCard) (var5), (Sprite) null, -94, this.field_u);
         }
-        TeamManagementScreen.e(123);
+        TeamManagementScreen.popRasterState(123);
         if (null != this.field_H) {
           var6 = 130 + param1;
           var7 = 160 + param2;
@@ -173,7 +173,7 @@ final class TrinketShopDialog extends MessageDialog {
         this.field_K = 0;
         this.field_I = param1;
         CharSequence var5 = (CharSequence) ((Object) "trinkets");
-        this.field_L = new ScrollContainer(PitchDecorationSupport.hashString31(0, var5), this.g((byte) -119), ConsolePanel.field_q, TextEntrySupport.field_b, ParticipantAgent.field_m);
+        this.field_L = new ScrollContainer(PitchDecorationSupport.hashString31(0, var5), this.createShopList((byte) -119), ConsolePanel.field_q, TextEntrySupport.field_b, ParticipantAgent.field_m);
         this.field_L.setLayout(15, 0, 2, (byte) 2, 240, 210, 0);
         this.field_i[0].field_lb = false;
     }
@@ -188,7 +188,7 @@ final class TrinketShopDialog extends MessageDialog {
     final int dialogHeight(byte param0) {
         UiLayoutNode discarded$0 = null;
         if (param0 <= 75) {
-          discarded$0 = this.g((byte) 21);
+          discarded$0 = this.createShopList((byte) 21);
         }
         return 380;
     }
@@ -201,7 +201,7 @@ final class TrinketShopDialog extends MessageDialog {
         if (param1 == 0 &&
           null != this.field_H) {
           var3 = this.field_H.field_yb;
-          MatchingTextValidator.a(var3, this.field_I, (byte) 123, this.field_F);
+          MatchingTextValidator.queueTrinketChange(var3, this.field_I, (byte) 123, this.field_F);
           ShopPlayerSlot.playDefaultFadingSound(50, -110);
         } else {
           AchievementSubmission.playUiClickSound((byte) -120);

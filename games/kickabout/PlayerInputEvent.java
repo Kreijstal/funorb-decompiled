@@ -25,7 +25,7 @@ final class PlayerInputEvent extends DualLinkNode {
         return 1;
     }
 
-    final static String g(byte param0) {
+    final static String getAccountLoadingStatus(byte param0) {
         if (!(DateInputValidator.field_d >= 2)) {
           return SortCriterion.field_c;
         }
@@ -143,7 +143,7 @@ final class PlayerInputEvent extends DualLinkNode {
               var7[0][1 + var10 * 4] = AccountMessagePanel.field_G[var11];
               var7[0][2 + var10 * 4] = AgeValidator.field_j[var11];
               var7[0][3 + 4 * var10] = DropTargetWidget.field_B[var11];
-              if (SumIntegersCommand.a((byte) -89, FindingOpponentScreen.field_B[var11]) &&
+              if (SumIntegersCommand.isLocalPlayerName((byte) -89, FindingOpponentScreen.field_B[var11]) &&
                 DropTargetWidget.field_B[var11] + AccountMessagePanel.field_G[var11] + AgeValidator.field_j[var11] == 0) {
                 var6[0][var10] = null;
                 var10--;
@@ -161,7 +161,7 @@ final class PlayerInputEvent extends DualLinkNode {
               var7[1][1 + var13 * 4] = AccountMessagePanel.field_G[var11Lifetime1];
               var7[1][var13 * 4 + 2] = AgeValidator.field_j[var11Lifetime1];
               var7[1][4 * var13 + 3] = DropTargetWidget.field_B[var11Lifetime1];
-              if (SumIntegersCommand.a((byte) 52, FindingOpponentScreen.field_B[var11Lifetime1]) &&
+              if (SumIntegersCommand.isLocalPlayerName((byte) 52, FindingOpponentScreen.field_B[var11Lifetime1]) &&
                 AccountMessagePanel.field_G[var11Lifetime1] + AgeValidator.field_j[var11Lifetime1] + DropTargetWidget.field_B[var11Lifetime1] == 0) {
                 var6[1][var13] = null;
                 var13--;
@@ -182,7 +182,7 @@ final class PlayerInputEvent extends DualLinkNode {
         }
     }
 
-    final static boolean a(PacketBuffer param0, byte param1) {
+    final static boolean readBooleanByte(PacketBuffer param0, byte param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;

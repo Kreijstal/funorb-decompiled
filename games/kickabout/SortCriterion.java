@@ -114,7 +114,7 @@ abstract class SortCriterion {
               var8[2][var15].draw(var16_int, 0);
             }
           }
-          TeamManagementScreen.e(123);
+          TeamManagementScreen.popRasterState(123);
           var15_ref_kg = SoftwareDrawingSupport.toIndexedSprite(var23);
           for (var16_intLifetime2 = 0; var16_intLifetime2 < 6; var16_intLifetime2++) {
             var6[var16_intLifetime2] = var15_ref_kg;
@@ -171,7 +171,7 @@ abstract class SortCriterion {
               var8[2][var17Lifetime2].draw(var18Lifetime1, 0);
             }
           }
-          TeamManagementScreen.e(119);
+          TeamManagementScreen.popRasterState(119);
           var6[var15Lifetime2] = SoftwareDrawingSupport.toIndexedSprite(var16);
         }
         return var6;

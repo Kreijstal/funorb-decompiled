@@ -246,7 +246,7 @@ final class AuctionsScreen extends ButtonMenuScreen {
             SoftwareRasterizer.drawVerticalLine(var6_int, -(int)var4 + 17, (int)(2.0f * var4), 65793);
             var4 = var4 + var5;
           }
-          TeamManagementScreen.e(117);
+          TeamManagementScreen.popRasterState(117);
           var6 = new Sprite[4];
           for (var7_int = 0; 4 > var7_int; var7_int++) {
             var6[var7_int] = var3.copy();
@@ -275,7 +275,7 @@ final class AuctionsScreen extends ButtonMenuScreen {
               var14 = TutorialScenerySupport.field_b[var16[var10]].toLowerCase();
               ByteArrayPool.field_d.drawCentered(var14, (SoftwareRasterizer.field_g >> 1) + var12, 18 + var12, 65793, -1);
             }
-            TeamManagementScreen.e(120);
+            TeamManagementScreen.popRasterState(120);
             SpriteBackgroundSupport.fillTransparentBackground(var13, (byte) -51);
             var7[var8 >> 3][TextLayoutLine.bitwiseAnd(3, var8 >> 1)][TextLayoutLine.bitwiseAnd(var8, 1)] = var13;
           }

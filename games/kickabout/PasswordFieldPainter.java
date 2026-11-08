@@ -11,7 +11,7 @@ final class PasswordFieldPainter extends BeveledTextPainter {
     static byte[] field_x;
     static String[][] field_z;
 
-    final static void a(int param0, int param1) {
+    final static void queuePlayerSale(int param0, int param1) {
         ManagerAction var2 = null;
         ManagerAction var2Lifetime1;
         if (param0 == 65536) {

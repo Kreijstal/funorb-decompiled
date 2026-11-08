@@ -29,7 +29,7 @@ final class SumIntegersCommand extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    final static void a(int param0, java.awt.Canvas param1) {
+    final static void detachCanvasInput(int param0, java.awt.Canvas param1) {
         RuntimeException var2 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -87,7 +87,7 @@ final class SumIntegersCommand extends ConsoleCommand {
         }
     }
 
-    final static boolean a(byte param0, String param1) {
+    final static boolean isLocalPlayerName(byte param0, String param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         CharSequence var3 = null;
@@ -115,7 +115,7 @@ final class SumIntegersCommand extends ConsoleCommand {
         }
     }
 
-    final static void a(int param0, int param1) {
+    final static void resendHighScoreRequests(int param0, int param1) {
         int var3 = 0;
         int var4 = 0;
         HighScoreSubmission var5 = null;
@@ -146,7 +146,7 @@ final class SumIntegersCommand extends ConsoleCommand {
     final static TickClock createNanoTickClock(int param0) {
         if (param0 != 3) {
           String var2 = (String) null;
-          SumIntegersCommand.a((byte) 22, (String) null);
+          SumIntegersCommand.isLocalPlayerName((byte) 22, (String) null);
           return (TickClock) ((Object) new NanoTickClock());
         }
         return (TickClock) ((Object) new NanoTickClock());

@@ -9,7 +9,7 @@ final class MatchingTextValidator extends TextFieldValidator {
     static int[] field_m;
     static UiLayoutNode field_n;
 
-    final static void a(int param0, int param1, byte param2, int param3) {
+    final static void queueTrinketChange(int param0, int param1, byte param2, int param3) {
         ManagerAction var4 = null;
         ManagerAction var4Lifetime1;
         if (param2 < 93) {
@@ -157,7 +157,7 @@ final class MatchingTextValidator extends TextFieldValidator {
         }
     }
 
-    final static byte[] a(int param0, Sprite param1) {
+    final static byte[] encodeSpriteMask(int param0, Sprite param1) {
         int var5 = 0;
         int var6 = 0;
         int incrementValue$0 = 0;

@@ -87,7 +87,7 @@ final class Bzip2State {
             }
           }
           if (param13 != -15343) {
-            Bzip2State.b(-5);
+            Bzip2State.releaseStatics(-5);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -114,7 +114,7 @@ final class Bzip2State {
         }
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         try {
@@ -134,7 +134,7 @@ final class Bzip2State {
         }
     }
 
-    final static String a(int param0, String param1) {
+    final static String replaceLowercaseTWithR(int param0, String param1) {
         RuntimeException var2 = null;
         String stackIn_2_0 = null;
         String stackIn_4_0 = null;

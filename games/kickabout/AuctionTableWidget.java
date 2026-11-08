@@ -56,7 +56,7 @@ final class AuctionTableWidget extends ColumnTableWidget {
         field_Ib = null;
     }
 
-    final static ConsoleExpression a(ConsoleTokenCursor param0, int param1) throws ConsoleParseException {
+    final static ConsoleExpression parseConsoleExpression(ConsoleTokenCursor param0, int param1) throws ConsoleParseException {
         ConsoleExpression stackIn_3_0 = null;
         ConsoleExpression stackIn_10_0 = null;
         ConsoleExpression stackIn_23_0 = null;
@@ -101,7 +101,7 @@ final class AuctionTableWidget extends ColumnTableWidget {
                 return stackIn_23_0;
               }
               param0.field_a = param0.field_a - 1;
-              var5.field_j.addLast(AuctionTableWidget.a(param0, 1422), 3);
+              var5.field_j.addLast(AuctionTableWidget.parseConsoleExpression(param0, 1422), 3);
               if (param0.isAtEnd(6)) {
                 throw new ConsoleParseException(var5.field_f);
               }

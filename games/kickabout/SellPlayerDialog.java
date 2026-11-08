@@ -227,7 +227,7 @@ final class SellPlayerDialog extends MessageDialog {
     final void handleResult(int param0, int param1) {
         super.handleResult(97, param1);
         if (param1 == 0) {
-          PasswordFieldPainter.a(65536, this.field_I);
+          PasswordFieldPainter.queuePlayerSale(65536, this.field_I);
         }
         if (param0 < 60) {
           field_G = 77;
@@ -272,7 +272,7 @@ final class SellPlayerDialog extends MessageDialog {
           var5 = param1;
           while (true) {
             if (var5 >= var4.length) {
-              stackIn_18_0 = ValidatedTextWidget.a(param1 + 6, var3[var3.length - 1]);
+              stackIn_18_0 = ValidatedTextWidget.validateNonNumericText(param1 + 6, var3[var3.length - 1]);
               return stackIn_18_0;
             }
             var6 = var4[var5];

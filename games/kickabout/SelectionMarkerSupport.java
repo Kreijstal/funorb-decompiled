@@ -44,7 +44,7 @@ final class SelectionMarkerSupport {
           }
         }
         if (param0 != 98) {
-          SelectionMarkerSupport.a(65);
+          SelectionMarkerSupport.startPitchAudio(65);
         }
     }
 
@@ -75,11 +75,11 @@ final class SelectionMarkerSupport {
         field_c = (ResourceArchive) null;
     }
 
-    final static void a(int param0) {
+    final static void startPitchAudio(int param0) {
         ContextMenu.setMusicFadeOutStep(0, (byte) 60, ReceivedAuctionItem.field_E[1]);
         ScrollBar.clearFadingSounds(param0);
-        QuickChatCategory.a(NanoTickClock.field_n, param0 ^ 8710, KitPatternMaskSupport.field_c, RankingsScreen.field_C);
-        NetworkArchiveRequest.a(1, TrinketPickerDialog.a(KitPatternMaskSupport.field_c, param0 ^ 77, NanoTickClock.field_n, RankingsScreen.field_C), ReceivedAuctionItem.field_E[2], 2147483647);
+        QuickChatCategory.configurePitchReverb(NanoTickClock.field_n, param0 ^ 8710, KitPatternMaskSupport.field_c, RankingsScreen.field_C);
+        NetworkArchiveRequest.playMusicTrackById(1, TrinketPickerDialog.selectPitchMusicVariant(KitPatternMaskSupport.field_c, param0 ^ 77, NanoTickClock.field_n, RankingsScreen.field_C), ReceivedAuctionItem.field_E[2], 2147483647);
     }
 
     public static void releaseStatics(byte param0) {

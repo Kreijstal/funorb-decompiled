@@ -699,22 +699,22 @@ final class TrinketCatalog {
         NodeHashTableIterator.field_b = 0;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, boolean param5) {
+    final static void createPitchLineAlphaNoise(int param0, int param1, int param2, int param3, int param4, boolean param5) {
         SoftwareDrawingSupport.initializeAlphaNoise(param4, param2);
         SoftwareDrawingSupport.addRingAlphaNoise(448 + param1, param0 + 672, 134, param3);
         AuctionListing.pushRasterClip(param1 + 896, -22914, param1, 1344 + param0, param0 + 268);
         SoftwareDrawingSupport.addRingAlphaNoise(param1 + 448, 73 + param0, 241, param3);
-        TeamManagementScreen.e(124);
+        TeamManagementScreen.popRasterState(124);
         AuctionListing.pushRasterClip(param1 + 896, -22914, param1, 1076 + param0, param0);
         SoftwareDrawingSupport.addRingAlphaNoise(param1 + 448, param0 + 1344 - 482 + 168 + 241, 241, param3);
-        TeamManagementScreen.e(127);
+        TeamManagementScreen.popRasterState(127);
         AuctionListing.pushRasterClip(param1 + 896, -22914, param1, 1344 + param0, param0);
         SoftwareDrawingSupport.addRingAlphaNoise(param1 + param3, param3 + param0, 33, param3);
         SoftwareDrawingSupport.addRingAlphaNoise(-param3 + param1 + 896, param3 + param0, 33, param3);
         SoftwareDrawingSupport.addRingAlphaNoise(param3 + param1, 1344 + param0 - param3, 33, param3);
         if (!param5) {
           SoftwareDrawingSupport.addRingAlphaNoise(param1 + 896 - param3, param0 + 1344 - param3, 33, param3);
-          TeamManagementScreen.e(121);
+          TeamManagementScreen.popRasterState(121);
           SoftwareDrawingSupport.addRectangleBorderAlphaNoise(param1, param0, 896, 1344, param3);
           SoftwareDrawingSupport.addRectangleAlphaNoise(param1, (1344 - param3 >> 1) + param0, 896, param3);
           SoftwareDrawingSupport.addRectangleBorderAlphaNoise(314 + param1, param0, 268, 122, param3);

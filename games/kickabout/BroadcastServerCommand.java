@@ -55,7 +55,7 @@ final class BroadcastServerCommand extends ConsoleCommand {
             stackIn_6_0 = UiKeyRoutingSupport.field_h;
             return stackIn_6_0;
           }
-          if (SumIntegersCommand.a((byte) 82, param2)) {
+          if (SumIntegersCommand.isLocalPlayerName((byte) 82, param2)) {
             stackIn_10_0 = LoginText.field_g;
             return stackIn_10_0;
           }
@@ -72,7 +72,7 @@ final class BroadcastServerCommand extends ConsoleCommand {
             stackIn_20_0 = DraggableWidget.field_A;
             return stackIn_20_0;
           }
-          if (DiskCacheRequest.a(0, param2)) {
+          if (DiskCacheRequest.isIgnored(0, param2)) {
             stackIn_24_0 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, TrinketTile.field_Gb, new String[]{param2});
             return stackIn_24_0;
           }

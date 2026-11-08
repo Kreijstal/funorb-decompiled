@@ -29,7 +29,7 @@ final class ReflectionCheck extends IntrusiveNode {
         field_j = null;
     }
 
-    final static void a(byte param0, PlatformTaskDispatcher param1, Object param2) {
+    final static void pumpAwtEventQueue(byte param0, PlatformTaskDispatcher param1, Object param2) {
         int var3_int = 0;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;

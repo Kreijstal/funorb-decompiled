@@ -615,7 +615,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                 }
                 SingleChildContainer.detectMaximumHeapSize(-1);
                 this.replaceCanvas((byte) -105);
-                ColorQuantizationBox.field_f = DelayedServerPacket.a(105, SpriteNumberPainter.field_d, ReceivedAuctionItem.field_B, (java.awt.Component) ((Object) RegistrationRequestState.field_d));
+                ColorQuantizationBox.field_f = DelayedServerPacket.createRasterBuffer(105, SpriteNumberPainter.field_d, ReceivedAuctionItem.field_B, (java.awt.Component) ((Object) RegistrationRequestState.field_d));
                 this.onStartup((byte) -76);
                 SplashScreen.field_k = SumIntegersCommand.createNanoTickClock(3);
                 do {
@@ -636,7 +636,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                   do {
                     if (!(var3 < SectorCacheStore.field_b)) {
                       this.paintTimedFrame(-43);
-                      ReflectionCheck.a((byte) 41, PlatformTaskState.field_c, RegistrationRequestState.field_d);
+                      ReflectionCheck.pumpAwtEventQueue((byte) 41, PlatformTaskState.field_c, RegistrationRequestState.field_d);
                       break;
                     }
                     this.runTimedFrameStep(true);

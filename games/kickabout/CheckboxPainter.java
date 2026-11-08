@@ -140,7 +140,7 @@ final class CheckboxPainter implements WidgetPainter {
         field_b = null;
         field_o = null;
         if (param0 != 109) {
-          CheckboxPainter.a((byte) 112, -27, 55, -64);
+          CheckboxPainter.requestMissingRankingRows((byte) 112, -27, 55, -64);
         }
         field_c = null;
     }
@@ -214,7 +214,7 @@ final class CheckboxPainter implements WidgetPainter {
             return;
           }
           AccountNameCheckState.advanceLoadingStep(0, 4);
-          if (!MyKitScreen.ensureSoundLoaded(120, TrinketPickerDialog.a(KitPatternMaskSupport.field_c, 121, NanoTickClock.field_n, RankingsScreen.field_C))) {
+          if (!MyKitScreen.ensureSoundLoaded(120, TrinketPickerDialog.selectPitchMusicVariant(KitPatternMaskSupport.field_c, 121, NanoTickClock.field_n, RankingsScreen.field_C))) {
             DelayedServerPacket.updateLoadingProgress(4, 9863, 0);
             return;
           }
@@ -276,7 +276,7 @@ final class CheckboxPainter implements WidgetPainter {
               GameResourceLoader.a((byte) -48);
             }
             if (KitPatternMaskSupport.field_c == 2) {
-              MeshObject.a(11383);
+              MeshObject.buildPitchScenery(11383);
             }
             AccountNameCheckState.advanceLoadingStep(0, 10);
             MatchTextInputOverlay.setRenderDetail(-4121, RankingsScreen.field_C);
@@ -286,7 +286,7 @@ final class CheckboxPainter implements WidgetPainter {
         }
     }
 
-    final static void a(byte param0, int param1, int param2, int param3) {
+    final static void requestMissingRankingRows(byte param0, int param1, int param2, int param3) {
         int var7 = 0;
         RuntimeException decompiledCaughtException = null;
         int var4_int = 0;

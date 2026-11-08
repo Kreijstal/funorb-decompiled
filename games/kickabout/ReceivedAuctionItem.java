@@ -226,7 +226,7 @@ final class ReceivedAuctionItem extends AuctionItem {
           return QuickChatKeysHelpPanel.field_Cb.getGroupProgressByName("beach", -16248);
         }
         QuickChatCategory.field_s = true;
-        AccountRegistrationResponse.field_a = ServerTextTemplate.a("deckchairs", "beach", 2, QuickChatKeysHelpPanel.field_Cb);
+        AccountRegistrationResponse.field_a = ServerTextTemplate.loadSpriteSheetByName("deckchairs", "beach", 2, QuickChatKeysHelpPanel.field_Cb);
         CachedTextLayout.field_q = QuickChatPhraseDefinition.loadSpriteByName("beach", QuickChatKeysHelpPanel.field_Cb, (byte) 45, "parasol");
         NotificationPanelPositionSupport.field_c = QuickChatPhraseDefinition.loadSpriteByName("beach", QuickChatKeysHelpPanel.field_Cb, (byte) 92, "ball");
         AnimationSkeleton.field_h = QuickChatPhraseDefinition.loadSpriteByName("beach", QuickChatKeysHelpPanel.field_Cb, (byte) 68, "bucket");
@@ -234,7 +234,7 @@ final class ReceivedAuctionItem extends AuctionItem {
         FullscreenFocusCanvas.field_a = QuickChatPhraseDefinition.loadSpriteByName("beach", QuickChatKeysHelpPanel.field_Cb, (byte) 76, "starfish");
         BytePlusOneCommand.field_D = QuickChatPhraseDefinition.loadSpriteByName("beach", QuickChatKeysHelpPanel.field_Cb, (byte) 93, "icecream");
         int var1 = 88 % ((65 - param0) / 42);
-        ChatMessage.field_b = ServerTextTemplate.a("stains", "beach", 2, QuickChatKeysHelpPanel.field_Cb);
+        ChatMessage.field_b = ServerTextTemplate.loadSpriteSheetByName("stains", "beach", 2, QuickChatKeysHelpPanel.field_Cb);
         return -1;
     }
 

@@ -82,7 +82,7 @@ abstract class PagedHelpScreen extends ButtonMenuScreen {
         ByteArrayPool.field_d.drawRightAligned(var5, 580 + this.slideOffsetX, 101, 16777215, -1);
     }
 
-    final static StringBuilder a(int param0, char param1, int param2, StringBuilder param3) {
+    final static StringBuilder resizeAndPad(int param0, char param1, int param2, StringBuilder param3) {
         int var5 = 0;
         int var4_int = 0;
         RuntimeException var4 = null;
@@ -190,7 +190,7 @@ abstract class PagedHelpScreen extends ButtonMenuScreen {
         field_D = null;
         if (param0 != -29104) {
           StringBuilder var2 = (StringBuilder) null;
-          PagedHelpScreen.a(40, 'ﾄ', 84, (StringBuilder) null);
+          PagedHelpScreen.resizeAndPad(40, 'ﾄ', 84, (StringBuilder) null);
         }
     }
 

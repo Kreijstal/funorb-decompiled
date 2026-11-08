@@ -23,16 +23,16 @@ final class AppletContextSupport {
             if (!param3) {
               ContextMenu.setMusicFadeOutStep(2, (byte) 60, ReceivedAuctionItem.field_E[5]);
             } else {
-              NetworkArchiveRequest.a(2, 7, ReceivedAuctionItem.field_E[4], 2147483647);
+              NetworkArchiveRequest.playMusicTrackById(2, 7, ReceivedAuctionItem.field_E[4], 2147483647);
             }
             return;
           }
           if (param3) {
-            NetworkArchiveRequest.a(2, 5, ReceivedAuctionItem.field_E[4], 2147483647);
+            NetworkArchiveRequest.playMusicTrackById(2, 5, ReceivedAuctionItem.field_E[4], 2147483647);
             if (param0 != 3) {
               return;
             }
-            NetworkArchiveRequest.a(2, 7, ReceivedAuctionItem.field_E[4], 2147483647);
+            NetworkArchiveRequest.playMusicTrackById(2, 7, ReceivedAuctionItem.field_E[4], 2147483647);
             return;
           }
           ContextMenu.setMusicFadeOutStep(2, (byte) 60, ReceivedAuctionItem.field_E[5]);
@@ -45,7 +45,7 @@ final class AppletContextSupport {
             if (!param3) {
               ContextMenu.setMusicFadeOutStep(2, (byte) 60, ReceivedAuctionItem.field_E[5]);
             } else {
-              NetworkArchiveRequest.a(2, 5, ReceivedAuctionItem.field_E[4], 2147483647);
+              NetworkArchiveRequest.playMusicTrackById(2, 5, ReceivedAuctionItem.field_E[4], 2147483647);
             }
           }
         }
@@ -53,13 +53,13 @@ final class AppletContextSupport {
           return;
         }
         if (param3) {
-          NetworkArchiveRequest.a(2, 7, ReceivedAuctionItem.field_E[4], 2147483647);
+          NetworkArchiveRequest.playMusicTrackById(2, 7, ReceivedAuctionItem.field_E[4], 2147483647);
         } else {
           ContextMenu.setMusicFadeOutStep(2, (byte) 60, ReceivedAuctionItem.field_E[5]);
         }
     }
 
-    final static boolean a(ResourceArchive param0, boolean param1, ResourceArchive param2, ResourceArchive param3) {
+    final static boolean ensureAccountUiResources(ResourceArchive param0, boolean param1, ResourceArchive param2, ResourceArchive param3) {
         RuntimeException var4 = null;
         ResourceArchive var5 = null;
         RuntimeException stackIn_21_0 = null;
@@ -83,7 +83,7 @@ final class AppletContextSupport {
               param3.ensurePackedGroupByName(false, "button.gif")) {
               if (!param1) {
                 var5 = (ResourceArchive) null;
-                AppletContextSupport.a((ResourceArchive) null, true, (ResourceArchive) null, (ResourceArchive) null);
+                AppletContextSupport.ensureAccountUiResources((ResourceArchive) null, true, (ResourceArchive) null, (ResourceArchive) null);
               }
               return true;
             }
@@ -125,7 +125,7 @@ final class AppletContextSupport {
           return;
         }
         ResourceArchive var2 = (ResourceArchive) null;
-        AppletContextSupport.a((ResourceArchive) null, false, (ResourceArchive) null, (ResourceArchive) null);
+        AppletContextSupport.ensureAccountUiResources((ResourceArchive) null, false, (ResourceArchive) null, (ResourceArchive) null);
         field_a = null;
         field_c = null;
         field_d = null;

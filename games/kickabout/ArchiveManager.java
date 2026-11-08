@@ -542,7 +542,7 @@ final class ArchiveManager {
             if (var5.length != 65) {
               throw new RuntimeException();
             }
-            var16 = MusicTrackMixer.a(-5 + var10.field_n - var13.length, var10.field_f, (byte) 122, 5);
+            var16 = MusicTrackMixer.whirlpoolDigest(-5 + var10.field_n - var13.length, var10.field_f, (byte) 122, 5);
             for (var7 = 0; var7 < 64; var7++) {
               if (var5[var7 + 1] != var16[var7]) {
                 throw new RuntimeException();
@@ -559,7 +559,7 @@ final class ArchiveManager {
         if (var5.length != 65) {
           throw new RuntimeException();
         }
-        var17 = MusicTrackMixer.a(-5 + var10.field_n - var13.length, var10.field_f, (byte) 122, 5);
+        var17 = MusicTrackMixer.whirlpoolDigest(-5 + var10.field_n - var13.length, var10.field_f, (byte) 122, 5);
         for (var7Lifetime1 = 0; var7Lifetime1 < 64; var7Lifetime1++) {
           if (var5[var7Lifetime1 + 1] != var17[var7Lifetime1]) {
             throw new RuntimeException();

@@ -42,7 +42,7 @@ final class OverlayLayerSupport {
             var7 = var7 + var15[1];
           }
           var17[2].a(var7, 0);
-          TeamManagementScreen.e(122);
+          TeamManagementScreen.popRasterState(122);
           LoginForm.tintSpriteForSurface(var16, 20684);
           return var16;
         }
@@ -61,7 +61,7 @@ final class OverlayLayerSupport {
           var7Lifetime1 = var7Lifetime1 + var12[1];
         }
         var14[2].a(var7Lifetime1, 0);
-        TeamManagementScreen.e(122);
+        TeamManagementScreen.popRasterState(122);
         LoginForm.tintSpriteForSurface(var13, 20684);
         return var13;
     }

@@ -348,7 +348,7 @@ final class RenderedFootballer extends FootballerAgent {
           var15.drawText(var10.toString(), 20, var16, 16777215, -1);
           var16 += 10;
           var15.drawText(var11_ref_StringBuilder.toString(), 20, var16, 16777215, -1);
-          TeamManagementScreen.e(125);
+          TeamManagementScreen.popRasterState(125);
           var17Lifetime1 = var14.field_o * InstrumentNoteMask.field_i >> 8;
           var18 = InstrumentNoteMask.field_i * var14.field_v >> 8;
           var19 = -(var17Lifetime1 >> 1) + var3;
@@ -385,7 +385,7 @@ final class RenderedFootballer extends FootballerAgent {
           SoftwareRasterizer.clearFramebuffer();
           var2 = (var2 << 7) / InstrumentNoteMask.field_i;
           this.renderModel(var2, var8, 128, 190, (byte) -91);
-          TeamManagementScreen.e(119);
+          TeamManagementScreen.popRasterState(119);
           if (this.field_T) {
             SoftwareDrawingSupport.outlineSpriteInPlace(AvailabilityCheckRequest.field_f, -16777215);
             SoftwareDrawingSupport.outlineSpriteInPlace(AvailabilityCheckRequest.field_f, -16777214);
@@ -732,7 +732,7 @@ final class RenderedFootballer extends FootballerAgent {
         if (this.megamode) {
           if (7 == this.action &&
             this.actionTime == 1) {
-            TrinketIcon.b(-5, 10);
+            TrinketIcon.setCameraVerticalOffset(-5, 10);
           }
           var8 = var8 / 2.0;
           if (4 == this.action) {

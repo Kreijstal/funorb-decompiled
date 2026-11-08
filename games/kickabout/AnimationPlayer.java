@@ -199,7 +199,7 @@ final class AnimationPlayer {
           stackIn_5_2 = false;
           stackIn_6_3 = !(param1);
           var5 = ((ModelMeshBase) (Object) stackIn_5_0).copyForAnimation(stackIn_5_1, stackIn_5_2, stackIn_6_3);
-          var5.a(ModalStack.field_C, this.field_j, (AnimationFrameset) null, -1, 0, 0, param1);
+          var5.applyAnimationFrame(ModalStack.field_C, this.field_j, (AnimationFrameset) null, -1, 0, 0, param1);
           stackIn_7_0 = var5;
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

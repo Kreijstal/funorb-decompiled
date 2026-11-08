@@ -34,12 +34,12 @@ final class FullscreenErrorDialog extends ResizableModalPanel implements ButtonL
         }
         if (QuickChatKeysHelpPanel.field_Cb.ensurePackedGroupByName(param0, "park")) {
           BallAgent.field_u = true;
-          LeaguesScreen.field_E = ServerTextTemplate.a("benches", "park", 2, QuickChatKeysHelpPanel.field_Cb);
+          LeaguesScreen.field_E = ServerTextTemplate.loadSpriteSheetByName("benches", "park", 2, QuickChatKeysHelpPanel.field_Cb);
           ConsoleCommand.field_w = QuickChatPhraseDefinition.loadSpriteByName("park", QuickChatKeysHelpPanel.field_Cb, (byte) 70, "hotdog");
           PlayerMeshFactory.field_a = QuickChatPhraseDefinition.loadSpriteByName("park", QuickChatKeysHelpPanel.field_Cb, (byte) 59, "swing");
           RandomAccessCacheFile.field_c = QuickChatPhraseDefinition.loadSpriteByName("park", QuickChatKeysHelpPanel.field_Cb, (byte) 114, "slide");
-          ServerTextTemplate.field_j = ServerTextTemplate.a("trees", "park", 2, QuickChatKeysHelpPanel.field_Cb);
-          HuffmanTextSupport.field_d = ServerTextTemplate.a("stains", "park", 2, QuickChatKeysHelpPanel.field_Cb);
+          ServerTextTemplate.field_j = ServerTextTemplate.loadSpriteSheetByName("trees", "park", 2, QuickChatKeysHelpPanel.field_Cb);
+          HuffmanTextSupport.field_d = ServerTextTemplate.loadSpriteSheetByName("stains", "park", 2, QuickChatKeysHelpPanel.field_Cb);
           return -1;
         }
         return QuickChatKeysHelpPanel.field_Cb.getGroupProgressByName("park", -16248);

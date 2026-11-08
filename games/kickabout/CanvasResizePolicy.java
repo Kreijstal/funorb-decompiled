@@ -125,7 +125,7 @@ final class CanvasResizePolicy {
               var7.drawOrthographic(0, 0, 1280, 0, 0, 0, 0, param4);
             }
           }
-          TeamManagementScreen.e(124);
+          TeamManagementScreen.popRasterState(124);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

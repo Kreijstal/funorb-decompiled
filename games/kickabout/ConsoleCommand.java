@@ -61,7 +61,7 @@ abstract class ConsoleCommand extends DualLinkNode {
           }
           for (var4_int = 0; this.field_p.length > var4_int; var4_int++) {
             if (param0[var4_int].field_b) {
-              var5 = RankingsScreen.a(param0[var4_int].field_d, (byte) 127);
+              var5 = RankingsScreen.getBoxedPrimitiveType(param0[var4_int].field_d, (byte) 127);
               if (var5 == Boolean.TYPE &&
                 this.field_p[var4_int] != Boolean.TYPE) {
                 return false;

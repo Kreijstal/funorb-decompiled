@@ -116,7 +116,7 @@ final class TextEntrySupport {
         field_a = null;
     }
 
-    final static void a(String param0, byte param1, long param2) {
+    final static void openPrivateQuickChat(String param0, byte param1, long param2) {
         CharSequence var5 = null;
         try {
           TrinketTile.field_Kb = param0;

@@ -565,7 +565,7 @@ final class MidiPcmStream extends PcmStream {
             var9 = (int)var8.field_a;
             var10 = (MusicPatch) (this.field_w.get(true, (long)var9));
             if (var10 == null) {
-              var10 = ReceivedAuctionItemRow.a(param2, var9, 116);
+              var10 = ReceivedAuctionItemRow.loadMusicPatch(param2, var9, 116);
               if (var10 != null) {
                 this.field_w.put(var10, param0 ^ 124, (long)var9);
               } else {
@@ -1110,7 +1110,7 @@ final class MidiPcmStream extends PcmStream {
             3 == RankingsScreen.field_C) {
             var5 = PitchProjectionSupport.worldToScreenY(-87, (byte) -56);
             for (var6 = 0; var6 < 5; var6++) {
-              ListRow.a(-12376, MySquadScreen.worldToScreenX(-121, (-5 + MatchingTextValidator.field_k.field_o) * var6 - 32), var5, MatchingTextValidator.field_k);
+              ListRow.drawPitchSprite(-12376, MySquadScreen.worldToScreenX(-121, (-5 + MatchingTextValidator.field_k.field_o) * var6 - 32), var5, MatchingTextValidator.field_k);
             }
           }
           if (KitPatternMaskSupport.field_c == 2) {
@@ -1120,11 +1120,11 @@ final class MidiPcmStream extends PcmStream {
             var7 = stackIn_48_0;
             for (var8 = 0; 5 > var8; var8++) {
               var9 = PitchProjectionSupport.worldToScreenY(var8 * 290 - 40, (byte) -56);
-              ListRow.a(-12376, var5Lifetime1, var9, AppletContextSupport.field_d[0 + var7]);
-              ListRow.a(-12376, var6Lifetime1, var9, AppletContextSupport.field_d[1 + var7]);
+              ListRow.drawPitchSprite(-12376, var5Lifetime1, var9, AppletContextSupport.field_d[0 + var7]);
+              ListRow.drawPitchSprite(-12376, var6Lifetime1, var9, AppletContextSupport.field_d[1 + var7]);
             }
           }
-          ListRow.a(-12376, var3, var4, (Sprite) (var2));
+          ListRow.drawPitchSprite(-12376, var3, var4, (Sprite) (var2));
           if (param1 != -114) {
             field_M = (IntrusiveDeque) null;
           }
@@ -1132,7 +1132,7 @@ final class MidiPcmStream extends PcmStream {
             3 == RankingsScreen.field_C) {
             var5Lifetime2 = PitchProjectionSupport.worldToScreenY(1384, (byte) -56);
             for (var6Lifetime2 = 0; var6Lifetime2 < 5; var6Lifetime2++) {
-              ListRow.a(param1 - 12262, MySquadScreen.worldToScreenX(-126, var6Lifetime2 * (-5 + MatchingTextValidator.field_k.field_o) - 32), var5Lifetime2, MatchingTextValidator.field_k);
+              ListRow.drawPitchSprite(param1 - 12262, MySquadScreen.worldToScreenX(-126, var6Lifetime2 * (-5 + MatchingTextValidator.field_k.field_o) - 32), var5Lifetime2, MatchingTextValidator.field_k);
             }
             return;
           }

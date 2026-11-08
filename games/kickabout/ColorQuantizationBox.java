@@ -80,7 +80,7 @@ final class ColorQuantizationBox {
             field_f = (RasterBuffer) null;
           }
           if (var9 != 256) {
-            TeamManagementScreen.e(124);
+            TeamManagementScreen.popRasterState(124);
             AudioOutputSupport.field_b.drawScaledAdditive(param3 - var13, param1, var13, var14, 256);
           }
           return;

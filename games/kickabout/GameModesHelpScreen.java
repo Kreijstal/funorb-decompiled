@@ -257,7 +257,7 @@ final class GameModesHelpScreen extends PagedHelpScreen {
               var11 = var12;
             }
           }
-          ListingRowCache.a(-1, 178, this.slideOffsetX + 45, (byte) -96, var11);
+          ListingRowCache.drawGridSelectionOverlay(-1, 178, this.slideOffsetX + 45, (byte) -96, var11);
           for (var12Lifetime4 = 0; var12Lifetime4 < 9; var12Lifetime4++) {
             this.field_K[var12Lifetime4].field_s = this.slideOffsetX + 45 + var12Lifetime4 % 3 * 52;
             this.field_K[var12Lifetime4].updateInput(0, false);
@@ -415,7 +415,7 @@ final class GameModesHelpScreen extends PagedHelpScreen {
               var18 = var18 << 1;
             }
           }
-          TeamManagementScreen.e(125);
+          TeamManagementScreen.popRasterState(125);
         }
         if (3 == this.pageIndex) {
           for (var11Lifetime3 = 0; 2 > var11Lifetime3; var11Lifetime3++) {
@@ -458,7 +458,7 @@ final class GameModesHelpScreen extends PagedHelpScreen {
         if (this.pageIndex == 0) {
           for (var4_int = 0; 9 > var4_int; var4_int++) {
             this.field_K[var4_int].updateInput(0, param1);
-            this.field_K[var4_int].a(31, 11, (byte) 125, 16, this.field_M[var4_int]);
+            this.field_K[var4_int].updatePlayerPreview(31, 11, (byte) 125, 16, this.field_M[var4_int]);
           }
         }
         if (this.pageIndex == 2) {

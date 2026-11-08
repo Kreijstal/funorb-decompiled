@@ -128,9 +128,9 @@ final class SocialListProtocolSupport {
           }
           var4_ref_StringLifetime1 = var1.readString(34);
           var5Lifetime1 = var1.readString(-112);
-          var6Lifetime1 = ClientUiOverlay.a(var4_ref_StringLifetime1, (byte) 40);
+          var6Lifetime1 = ClientUiOverlay.findFriendByName(var4_ref_StringLifetime1, (byte) 40);
           if (var6Lifetime1 == null) {
-            var6Lifetime1 = ClientUiOverlay.a(var5Lifetime1, (byte) 40);
+            var6Lifetime1 = ClientUiOverlay.findFriendByName(var5Lifetime1, (byte) 40);
             if (null != var6Lifetime1) {
               AvailabilityCheckRequest.field_b.put(var6Lifetime1, (byte) -4, (long)MatchAgent.normalizeAccountName(0, (CharSequence) ((Object) var4_ref_StringLifetime1)).hashCode());
             }

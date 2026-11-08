@@ -277,7 +277,7 @@ final class GameOverView extends MatchPhaseView {
           AuctionListing.pushRasterClip(160 + var7, -22914, var7, var8 + 21, var8);
           SoftwareRasterizer.fillRoundedRectangle(var7, var8, 160, 42, 10, 65793);
           ByteArrayPool.field_d.drawCentered(DateOfBirthPanel.field_H, 80 + var7, 17 + var8, 16777215, -1);
-          TeamManagementScreen.e(124);
+          TeamManagementScreen.popRasterState(124);
           var8 += 40;
           var9 = 0;
           scanLoop1: while (true) {
@@ -338,7 +338,7 @@ final class GameOverView extends MatchPhaseView {
             AuctionListing.pushRasterClip(var7 + 160, param0 - 16800129, var7, var8 + 21, var8);
             SoftwareRasterizer.fillRoundedRectangle(var7, var8, 160, 42, 10, 65793);
             ByteArrayPool.field_d.drawCentered(DateOfBirthPanel.field_H, var7 + 80, var8 + 17, 16777215, -1);
-            TeamManagementScreen.e(117);
+            TeamManagementScreen.popRasterState(117);
             var8 += 40;
             break;
           }
@@ -449,7 +449,7 @@ final class GameOverView extends MatchPhaseView {
           var9 = this.drawGoalLogTable(var10_refLifetime1, var2_int, var9, true);
           if (this.field_P != 0 &&
             this.field_M > this.field_P) {
-            TeamManagementScreen.e(param0 - 16777091);
+            TeamManagementScreen.popRasterState(param0 - 16777091);
             AuctionListing.pushRasterClip(618, -22914, 22, 320, 110);
             stackIn_99_0 = this.field_x;
             stackIn_99_1 = this.field_B;
@@ -472,11 +472,11 @@ final class GameOverView extends MatchPhaseView {
               stackIn_104_4 = 11184810;
             }
             ((CoverageBitmapFont) (Object) stackIn_103_0).drawCentered(stackIn_103_1, stackIn_103_2, stackIn_103_3, stackIn_104_4, -1);
-            TeamManagementScreen.e(param0 - 16777088);
+            TeamManagementScreen.popRasterState(param0 - 16777088);
             AuctionListing.pushRasterClip(618, -22914, 22, 305, 110);
           }
           if (this.field_M != 0) {
-            TeamManagementScreen.e(119);
+            TeamManagementScreen.popRasterState(119);
             AuctionListing.pushRasterClip(618, -22914, 22, 320, 95);
             stackIn_111_0 = this.field_T;
             stackIn_111_1 = this.field_kb;
@@ -499,7 +499,7 @@ final class GameOverView extends MatchPhaseView {
               stackIn_116_4 = 11184810;
             }
             ((CoverageBitmapFont) (Object) stackIn_115_0).drawCentered(stackIn_115_1, stackIn_115_2, stackIn_115_3, stackIn_116_4, -1);
-            TeamManagementScreen.e(127);
+            TeamManagementScreen.popRasterState(127);
             AuctionListing.pushRasterClip(618, -22914, 22, 305, 110);
           }
           stackIn_121_0 = this.field_L;
@@ -553,7 +553,7 @@ final class GameOverView extends MatchPhaseView {
           var9 = var9 + ((1 + this.field_a.playerCount) * 25 + 140);
           if (this.field_lb != 0 &&
             this.field_lb < this.field_M) {
-            TeamManagementScreen.e(122);
+            TeamManagementScreen.popRasterState(122);
             AuctionListing.pushRasterClip(618, param0 ^ -16754303, 22, 320, 110);
             stackIn_147_0 = this.field_H;
             stackIn_147_1 = this.field_jb;
@@ -576,11 +576,11 @@ final class GameOverView extends MatchPhaseView {
               stackIn_152_4 = 11184810;
             }
             ((CoverageBitmapFont) (Object) stackIn_151_0).drawCentered(stackIn_151_1, stackIn_151_2, stackIn_151_3, stackIn_152_4, -1);
-            TeamManagementScreen.e(117);
+            TeamManagementScreen.popRasterState(117);
             AuctionListing.pushRasterClip(618, param0 ^ -16754303, 22, 305, 110);
           }
           if (this.field_M != 0) {
-            TeamManagementScreen.e(param0 ^ 16777090);
+            TeamManagementScreen.popRasterState(param0 ^ 16777090);
             AuctionListing.pushRasterClip(618, -22914, 22, 320, 95);
             stackIn_159_0 = this.field_v;
             stackIn_159_1 = this.field_A;
@@ -603,10 +603,10 @@ final class GameOverView extends MatchPhaseView {
               stackIn_164_4 = 65793;
             }
             ((CoverageBitmapFont) (Object) stackIn_163_0).drawCentered(stackIn_163_1, stackIn_163_2, stackIn_163_3, stackIn_164_4, -1);
-            TeamManagementScreen.e(param0 - 16777089);
+            TeamManagementScreen.popRasterState(param0 - 16777089);
             AuctionListing.pushRasterClip(618, param0 ^ -16754303, 22, 305, 110);
           }
-          TeamManagementScreen.e(127);
+          TeamManagementScreen.popRasterState(127);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1152,7 +1152,7 @@ final class GameOverView extends MatchPhaseView {
             var4 = this.buttonY(342, 3);
             AuctionListing.pushRasterClip(31 + var3, -22914, var3 - 31, var4 - 17, var4 - 37);
             SoftwareRasterizer.fillRoundedRectangleBlended(-30 + var3, var4 - 32, 60, 30, 8, 65793, 128);
-            TeamManagementScreen.e(param0 + 116);
+            TeamManagementScreen.popRasterState(param0 + 116);
             PlayerContextMenu.drawAnimatedPlayerMarker(var3 - 19, (byte) -82, -22 + var4);
             IsSixCommand.field_C.drawText(WeightedLruCache.field_b, -6 + var3, -16 + var4, 16777215, -1);
           }
@@ -1165,7 +1165,7 @@ final class GameOverView extends MatchPhaseView {
             var4Lifetime1 = this.buttonY(342, 0);
             AuctionListing.pushRasterClip(31 + var3Lifetime1, -22914, -31 + var3Lifetime1, var4Lifetime1 - 17, -37 + var4Lifetime1);
             SoftwareRasterizer.fillRoundedRectangleBlended(var3Lifetime1 - 30, -32 + var4Lifetime1, 60, 30, 8, 65793, 128);
-            TeamManagementScreen.e(126);
+            TeamManagementScreen.popRasterState(126);
             PlayerContextMenu.drawAnimatedPlayerMarker(var3Lifetime1 - 19, (byte) 99, var4Lifetime1 - 22);
             IsSixCommand.field_C.drawText(WeightedLruCache.field_b, var3Lifetime1 - 6, -16 + var4Lifetime1, 16777215, -1);
           }
@@ -1310,7 +1310,7 @@ final class GameOverView extends MatchPhaseView {
             ByteArrayPool.field_d.drawCentered(DateOfBirthPanel.field_H, var5_int + (var8 >> 1), param2 + 17, 16777215, -1);
             ByteArrayPool.field_d.drawCentered(ThumbnailStateFactory.field_e, var6 + (var9 >> 1), param2 + 17, 16777215, -1);
             ByteArrayPool.field_d.drawCentered(PlayAreaMovementSupport.field_e, var7 + (var9 >> 1), 17 + param2, 16777215, -1);
-            TeamManagementScreen.e(122);
+            TeamManagementScreen.popRasterState(122);
             var10 = 0;
             var11_ref_ch = (LoggedGoal) (param0.first(24009));
             while (null != var11_ref_ch) {
@@ -1507,13 +1507,13 @@ final class GameOverView extends MatchPhaseView {
                   ByteArrayPool.field_d.drawCentered(this.field_w[var5][var9], 80 + var7, var8, var12, -1);
                   if (var11 == 0) {
                     if (var10.field_k) {
-                      ManagerAction.a(8, 16777215, 90, var7, var8, 16777215, DiagnosticsOverlaySupport.field_e);
+                      ManagerAction.drawRightAlignedLabel(8, 16777215, 90, var7, var8, 16777215, DiagnosticsOverlaySupport.field_e);
                     }
                   } else {
-                    ManagerAction.a(8, 14492194, 110, var7, var8, 11184810, ReceivedAuctionItem.field_A);
+                    ManagerAction.drawRightAlignedLabel(8, 14492194, 110, var7, var8, 11184810, ReceivedAuctionItem.field_A);
                   }
                   if (var10.resigned) {
-                    LoginRequiredDialog.a(110, (byte) -101, 13421772, UiKeyRoutingSupport.field_g, var8, var7, 14492194);
+                    LoginRequiredDialog.drawLeftAlignedLabel(110, (byte) -101, 13421772, UiKeyRoutingSupport.field_g, var8, var7, 14492194);
                   }
                   var8 += 23;
                   var9++;
@@ -2040,7 +2040,7 @@ final class GameOverView extends MatchPhaseView {
               if (this.field_hb[var13] != -1) {
                 var14 = GameLoopApplet.field_E.squad[this.field_hb[var13]];
                 this.field_o[var13].updateInput(0, param1);
-                this.field_o[var13].a(this.field_a.field_Q[this.field_h], this.field_a.field_H[this.field_h], (byte) 126, this.field_a.field_d[this.field_h], var14);
+                this.field_o[var13].updatePlayerPreview(this.field_a.field_Q[this.field_h], this.field_a.field_H[this.field_h], (byte) 126, this.field_a.field_d[this.field_h], var14);
                 this.field_s[var13].updateInput(0, param1);
                 if (100 > var14.experience) {
                   this.field_s[var13].field_lb = false;

@@ -86,11 +86,11 @@ final class TeamSelectionView extends MatchPhaseView {
           }
           AuctionListing.pushRasterClip(76, -22914, 0, 480, 0);
           SoftwareRasterizer.fillRoundedRectangleBlended(52, var4Lifetime1, 486, 21, 7, 65793, 128);
-          TeamManagementScreen.e(120);
+          TeamManagementScreen.popRasterState(120);
           MySquadScreen.field_U[this.field_a.field_g[var5].field_f].draw(55, 1 + var4Lifetime1);
           AuctionListing.pushRasterClip(640, -22914, 564, 480, 0);
           SoftwareRasterizer.fillRoundedRectangleBlended(78, var4Lifetime1, 512, 21, 7, 65793, 128);
-          TeamManagementScreen.e(121);
+          TeamManagementScreen.popRasterState(121);
           var4Lifetime1 += 23;
           if (this.field_a.field_n.isReadyOrInactive(param0 ^ 8659, var5)) {
             PitchDecorationSupport.field_l.draw(564, var6.field_T - 4);

@@ -10,7 +10,7 @@ abstract class MeshObject {
     static String field_g;
     static BitmapFont field_f;
 
-    final static void a(int param0) {
+    final static void buildPitchScenery(int param0) {
         int incrementValue$45 = 0;
         int incrementValue$44 = 0;
         int incrementValue$43 = 0;
@@ -198,7 +198,7 @@ abstract class MeshObject {
         }
     }
 
-    final static void a(byte param0) {
+    final static void finishScreenTransition(byte param0) {
         RuntimeException decompiledCaughtException = null;
         int[] var1 = null;
         RuntimeException var1_ref = null;
@@ -283,7 +283,7 @@ abstract class MeshObject {
         field_a = null;
         field_b = (Sprite[][]) null;
         if (param0 > -5) {
-          MeshObject.a(117);
+          MeshObject.buildPitchScenery(117);
         }
     }
 

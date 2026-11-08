@@ -7,7 +7,7 @@ class IntrusiveNode {
     IntrusiveNode field_b;
     IntrusiveNode field_d;
 
-    final static boolean a(byte param0, boolean param1, int param2, int param3) {
+    final static boolean hasLowerRankingPriority(byte param0, boolean param1, int param2, int param3) {
         int var4;
         int var5;
         int var4Lifetime1;

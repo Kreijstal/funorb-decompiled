@@ -6,7 +6,7 @@ final class SaveChangesDialog extends MessageDialog {
     static boolean field_G;
     static Sprite[] field_F;
 
-    final static boolean b(int param0, int param1, int param2) {
+    final static boolean handleChatShortcut(int param0, int param1, int param2) {
         int var3 = null != ArchiveSource.field_b ? 1 : 0;
         if (FixedQuaternion.field_e == 9 &&
           PitchPurchaseSupport.canSendQuickChat(GameOverView.field_z, DefaultPlayerFactory.field_a, (byte) -64, PlayerShopScreen.field_S, PlayerModelPreview.field_r)) {

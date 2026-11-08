@@ -132,7 +132,7 @@ final class MusicPatch extends IntrusiveNode {
             var4Lifetime1 = var4Lifetime1 * 23 >> 8;
             SoftwareRasterizer.fillCircle(var4Lifetime1 + (1 + var1_int), var5Lifetime1 + (var2 + 1), 3, 16777215);
             SoftwareRasterizer.drawCircle(var4Lifetime1 + 1 + var1_int, 1 + (var2 + var5Lifetime1), 3, 65793);
-            TeamManagementScreen.e(125);
+            TeamManagementScreen.popRasterState(125);
             return;
           }
           return;
@@ -221,7 +221,7 @@ final class MusicPatch extends IntrusiveNode {
     }
 
     final static void showAccountChoice(byte param0) {
-        ClientUiUpdateSupport.field_a.a((byte) -124, (UiWidget) (new AccountChoicePanel()));
+        ClientUiUpdateSupport.field_a.transitionToContent((byte) -124, (UiWidget) (new AccountChoicePanel()));
         if (param0 > -119) {
           MusicPatch.tryAcquireChatSendPermit(114);
         }

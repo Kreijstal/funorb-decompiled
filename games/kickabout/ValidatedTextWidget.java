@@ -141,7 +141,7 @@ final class ValidatedTextWidget extends TextInputWidget implements ValidationPro
         return this.field_u;
     }
 
-    final static AccountInputValidationResult a(int param0, String param1) {
+    final static AccountInputValidationResult validateNonNumericText(int param0, String param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;

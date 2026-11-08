@@ -852,7 +852,7 @@ abstract class BitmapFont extends DualLinkNode {
         if (param0 == null) {
           return 0;
         }
-        PagedHelpScreen.a(0, ' ', -11407, field_C);
+        PagedHelpScreen.resizeAndPad(0, ' ', -11407, field_C);
         var4 = 0;
         var5 = 0;
         var6 = -1;

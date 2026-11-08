@@ -150,7 +150,7 @@ final class NamedValueContainer {
                 stackIn_24_2 = (param1) && (!TrinketCatalog.field_b);
                 ((UiLayoutNode) (Object) stackIn_23_0).draw(stackIn_23_1, stackIn_24_2);
               }
-              TeamManagementScreen.e(param0 + 62);
+              TeamManagementScreen.popRasterState(param0 + 62);
               return;
             }
             var3 = (String) null;
@@ -191,7 +191,7 @@ final class NamedValueContainer {
                 }
               }
             }
-            TeamManagementScreen.e(param0 + 62);
+            TeamManagementScreen.popRasterState(param0 + 62);
             return;
           }
           stackIn_63_0 = UiKeyRoutingSupport.field_c;
@@ -298,7 +298,7 @@ final class NamedValueContainer {
             }
           }
         }
-        TeamManagementScreen.e(param0 + 62);
+        TeamManagementScreen.popRasterState(param0 + 62);
     }
 
     final NamedValueEntry findEntry(int param0, String param1) {

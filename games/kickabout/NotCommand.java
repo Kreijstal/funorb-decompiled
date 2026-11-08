@@ -8,7 +8,7 @@ final class NotCommand extends ConsoleCommand {
     static String field_D;
     static char[] field_B;
 
-    final static void g(byte param0) {
+    final static void layoutSharedChatPanels(byte param0) {
         if (param0 == -47) {
           WeightedLruCache.layoutAnimatedChatPanel(0);
           SharedChatLayoutSupport.layoutChatAndSidePanels(param0 - 24776, ClassDescriptorSupport.field_d[0].field_o, BytePlusOneCommand.field_I, DiskCacheWorker.field_b, LineupPositionSupport.field_c, TeamSelectionAgent.field_f);
