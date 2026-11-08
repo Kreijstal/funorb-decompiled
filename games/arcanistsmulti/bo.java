@@ -78,11 +78,11 @@ final class bo {
           } else {
             stackIn_32_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
-    final static boolean a(boolean param0, int param1, byte param2, int param3) {
+    final static boolean isRankedBefore(boolean param0, int param1, byte param2, int param3) {
         int var4;
         int var5;
         int var4Lifetime1;
@@ -115,7 +115,7 @@ final class bo {
             }
             return !(param3 <= param1);
           }
-          bo.a(true, 73, (byte) 32, -114);
+          bo.isRankedBefore(true, 73, (byte) 32, -114);
           var4Lifetime3 = tj.field_u[param1] + (hc.field_e[param1] + PatchEnvelopeSet.field_o[param1]);
           var5Lifetime3 = tj.field_u[param3] + hc.field_e[param3] + PatchEnvelopeSet.field_o[param3];
           if (var5Lifetime3 > var4Lifetime3) {
@@ -149,7 +149,7 @@ final class bo {
           }
           return !(param3 <= param1);
         }
-        bo.a(true, 73, (byte) 32, -114);
+        bo.isRankedBefore(true, 73, (byte) 32, -114);
         var4Lifetime2 = tj.field_u[param1] + (hc.field_e[param1] + PatchEnvelopeSet.field_o[param1]);
         var5Lifetime2 = tj.field_u[param3] + hc.field_e[param3] + PatchEnvelopeSet.field_o[param3];
         if (var5Lifetime2 > var4Lifetime2) {

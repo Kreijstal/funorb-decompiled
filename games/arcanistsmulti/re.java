@@ -51,7 +51,7 @@ final class re extends kh {
           var7 = param4.textWidth(param0);
           var9.field_f[0] = -(var7 >> 1) + param1;
           var9.field_f[param0.length()] = param1 + (var7 >> 1);
-          be.a(0, var9, param0, param4, (byte) 35);
+          SectorCacheStore.a(0, var9, param0, param4, (byte) 35);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -69,7 +69,7 @@ final class re extends kh {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 
@@ -93,10 +93,10 @@ final class re extends kh {
           var10 = var9;
           var10.field_f[0] = -param2.textWidth(param4) + param0;
           var10.field_f[param4.length()] = param0;
-          be.a(0, var10, param4, param2, (byte) 35);
+          SectorCacheStore.a(0, var10, param4, param2, (byte) 35);
           int var7 = -84 / ((-47 - param1) / 49);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "re.N(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "re.N(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -138,7 +138,7 @@ final class re extends kh {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -166,7 +166,7 @@ final class re extends kh {
             try {
               var9 = "tuhstatbut";
               var3 = (String) (ei.a(param1, param0 + 171, "getcookies"));
-              var4 = eh.a(false, ';', var3);
+              var4 = ValidationState.split(false, ';', var3);
               if (param0 != -68) {
                 var8 = (java.applet.Applet) null;
                 re.a((byte) 30, (java.applet.Applet) null);
@@ -194,7 +194,7 @@ final class re extends kh {
             } else {
               stackIn_22_2 = "{...}";
             }
-            throw aa.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
+            throw aa.wrapException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -309,7 +309,7 @@ final class re extends kh {
               } else {
                 stackIn_43_0 = this.a(var13, false, param7, param1.textWidth(var13));
               }
-              be.a(stackIn_43_0, var14, var13, param1, (byte) 35);
+              SectorCacheStore.a(stackIn_43_0, var14, var13, param1, (byte) 35);
             }
             var11 = var11 + param3;
             this.field_f[var12Lifetime1] = var14;
@@ -331,7 +331,7 @@ final class re extends kh {
           } else {
             stackIn_52_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_48_0), ((StringBuilder) (Object) stackIn_51_1).append(stackIn_52_2).append(',').append(param7).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_48_0), ((StringBuilder) (Object) stackIn_51_1).append(stackIn_52_2).append(',').append(param7).append(')').toString());
         }
     }
 
@@ -370,7 +370,7 @@ final class re extends kh {
           var9 = var8;
           var8.field_f[0] = param4;
           var9.field_f[param0.length()] = param2.textWidth(param0) + param4;
-          be.a(0, var9, param0, param2, (byte) 35);
+          SectorCacheStore.a(0, var9, param0, param2, (byte) 35);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -388,7 +388,7 @@ final class re extends kh {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 

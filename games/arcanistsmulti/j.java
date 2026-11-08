@@ -60,7 +60,7 @@ final class j implements WidgetPainter {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var3), "j.F(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw aa.wrapException((Throwable) ((Object) var3), "j.F(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -102,7 +102,7 @@ final class j implements WidgetPainter {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -129,7 +129,7 @@ final class j implements WidgetPainter {
         if (param0) {
           j.a(121, 53, 31);
         }
-        ef.field_r = true;
+        SocketJs5Transport.field_r = true;
     }
 
     final static void a(int param0) {
@@ -140,10 +140,10 @@ final class j implements WidgetPainter {
         RuntimeException var1_ref = null;
         var4 = ArcanistsMulti.field_G ? 1 : 0;
         try {
-          var1 = ch.field_a;
+          var1 = CredentialKind.field_a;
           synchronized (var1) {
             hg.field_b = hg.field_b + 1;
-            vk.field_u = gn.field_b;
+            Js5NetworkRequest.field_u = gn.field_b;
             if (0 > ub.field_b) {
               for (var2 = 0; var2 < 112; var2++) {
                 ri.field_b[var2] = false;
@@ -169,7 +169,7 @@ final class j implements WidgetPainter {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = (RuntimeException) (Object) decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var1_ref), "j.B(" + param0 + ')');
+          throw aa.wrapException((Throwable) ((Object) var1_ref), "j.B(" + param0 + ')');
         }
     }
 
@@ -219,7 +219,7 @@ final class j implements WidgetPainter {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -227,7 +227,7 @@ final class j implements WidgetPainter {
         try {
           this.field_d = param0;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "j.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "j.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -238,11 +238,11 @@ final class j implements WidgetPainter {
           if (param3) {
             j.a(-101, 37, 87);
           }
-          wh.field_f = new e(ge.field_g, (String) null, MusicPatchPcmStream.field_s, param0, param2);
+          wh.field_f = new LoginPanel(ge.field_g, (String) null, MusicPatchPcmStream.field_s, param0, param2);
           g.field_e = new no(ClientException.field_b, wh.field_f);
           ClientException.field_b.b(g.field_e, 15637);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "j.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "j.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 

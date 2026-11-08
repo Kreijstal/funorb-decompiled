@@ -16,7 +16,7 @@ final class wg extends TextButton {
         return this.field_K;
     }
 
-    public static void d(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         if (!param0) {
           return;
         }
@@ -68,7 +68,7 @@ final class wg extends TextButton {
               return;
             }
             if (param1 != 2973) {
-              wg.d(false);
+              wg.releaseStatics(false);
             }
             var14 = param5 - param7;
             if (param7 != param3) {
@@ -222,7 +222,7 @@ final class wg extends TextButton {
           } else {
             stackIn_81_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_80_0), ((StringBuilder) (Object) stackIn_80_1).append(stackIn_81_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_80_0), ((StringBuilder) (Object) stackIn_80_1).append(stackIn_81_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(')').toString());
         }
     }
 
@@ -286,7 +286,7 @@ final class wg extends TextButton {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 

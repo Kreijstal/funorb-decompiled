@@ -80,7 +80,7 @@ final class le {
           }
           if (qg.field_c != -1) {
             var1_int = qg.field_c;
-            ee.a(-1, (byte) 30);
+            DebouncedValidator.a(-1, (byte) 30);
             stackIn_9_0 = var1_int;
             return stackIn_9_0;
           }
@@ -109,7 +109,7 @@ final class le {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var1), "le.KB(" + param0 + ')');
+          throw aa.wrapException((Throwable) ((Object) var1), "le.KB(" + param0 + ')');
         }
     }
 
@@ -120,9 +120,9 @@ final class le {
         RuntimeException var4 = null;
         try {
           if (this.field_V.b(param2) < 0) {
-            stackIn_4_0 = -an.field_f / 2;
+            stackIn_4_0 = -EmailLoginCredentials.field_f / 2;
           } else {
-            stackIn_4_0 = an.field_f / 2;
+            stackIn_4_0 = EmailLoginCredentials.field_f / 2;
           }
           var4_int = stackIn_4_0;
           if (-var4_int > IntrusiveDeque.field_c) {
@@ -145,7 +145,7 @@ final class le {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var4), "le.K(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw aa.wrapException((Throwable) ((Object) var4), "le.K(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -179,7 +179,7 @@ final class le {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param3).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -206,7 +206,7 @@ final class le {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var2), "le.BB(" + param0 + ')');
+          throw aa.wrapException((Throwable) ((Object) var2), "le.BB(" + param0 + ')');
         }
     }
 
@@ -239,7 +239,7 @@ final class le {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var2_ref), "le.U(" + param0 + ')');
+          throw aa.wrapException((Throwable) ((Object) var2_ref), "le.U(" + param0 + ')');
         }
     }
 
@@ -257,7 +257,7 @@ final class le {
         try {
           var5_int = n.field_g.field_nb;
           var6 = var5_int / 2 + this.field_V.field_H - param0;
-          for (var7 = 0; var7 < an.field_f; var7++) {
+          for (var7 = 0; var7 < EmailLoginCredentials.field_f; var7++) {
             var8 = (int)Math.abs(18.0 * Math.cos(3.141592653589793 * (double)(param3 + (var7 + ge.field_r * 4)) / 64.0));
             if (ge.field_r < 64) {
               var8 = var8 * (ge.field_r - 32) / 32;
@@ -274,7 +274,7 @@ final class le {
           if (param2 != 12224) {
             return;
           }
-          for (var7Lifetime1 = 0; an.field_f > var7Lifetime1; var7Lifetime1++) {
+          for (var7Lifetime1 = 0; EmailLoginCredentials.field_f > var7Lifetime1; var7Lifetime1++) {
             var8Lifetime1 = (int)Math.abs(20.0 * Math.sin(3.141592653589793 * (double)(param3 + (4 * ge.field_r + var7Lifetime1)) / 64.0));
             if (64 <= ge.field_r) {
               var8Lifetime1 = var8Lifetime1 * (-ge.field_r + 96) / 32;
@@ -286,18 +286,18 @@ final class le {
             }
             var8Lifetime1 += 8;
             var8Lifetime1 = (int)((double)var8Lifetime1 + (Math.sin((double)ge.field_r * 3.141592653589793 / 64.0) * 8.0 + 32.0));
-            SoftwareRasterizer.setClip(0, var6 - var8Lifetime1, an.field_f, an.field_j);
+            SoftwareRasterizer.setClip(0, var6 - var8Lifetime1, EmailLoginCredentials.field_f, EmailLoginCredentials.field_j);
             SoftwareRasterizer.fillVerticalGradient(var7Lifetime1, var6 - 64, 1, 128, (123361 | param1) >> 1, 0);
           }
           SoftwareRasterizer.resetClip();
-          if (an.field_j > var6 + 64) {
-            SoftwareRasterizer.fillRectangle(0, var6 + 64, an.field_f, -var6 - 64 + an.field_j, 0);
+          if (EmailLoginCredentials.field_j > var6 + 64) {
+            SoftwareRasterizer.fillRectangle(0, var6 + 64, EmailLoginCredentials.field_f, -var6 - 64 + EmailLoginCredentials.field_j, 0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var5), "le.T(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw aa.wrapException((Throwable) ((Object) var5), "le.T(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -322,7 +322,7 @@ final class le {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var2), "le.NA(" + param0 + ')');
+          throw aa.wrapException((Throwable) ((Object) var2), "le.NA(" + param0 + ')');
         }
     }
 
@@ -346,7 +346,7 @@ final class le {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var2), "le.DB(" + param0 + ')');
+          throw aa.wrapException((Throwable) ((Object) var2), "le.DB(" + param0 + ')');
         }
     }
 
@@ -525,7 +525,7 @@ final class le {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var5), "le.GB(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw aa.wrapException((Throwable) ((Object) var5), "le.GB(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -612,7 +612,7 @@ final class le {
             if (var16 != null) {
               var11_ref = (mi) (var16.first(12623));
               while (var11_ref != null) {
-                ((mi) (var11_ref)).a(-ol.field_g + (var9_int >> 1), 41, -IntrusiveDeque.field_c + (an.field_f >> 1));
+                ((mi) (var11_ref)).a(-ol.field_g + (var9_int >> 1), 41, -IntrusiveDeque.field_c + (EmailLoginCredentials.field_f >> 1));
                 var11_ref = (mi) (var16.next(0));
               }
             }
@@ -621,7 +621,7 @@ final class le {
               0 == (SpriteState.field_v & 16)) {
               var11_refLifetime3 = (mi) (var17.first(param5 + 12527));
               while (var11_refLifetime3 != null) {
-                ((mi) (var11_refLifetime3)).a((var9_int >> 1) - ol.field_g, -108, -IntrusiveDeque.field_c + (an.field_f >> 1));
+                ((mi) (var11_refLifetime3)).a((var9_int >> 1) - ol.field_g, -108, -IntrusiveDeque.field_c + (EmailLoginCredentials.field_f >> 1));
                 var11_refLifetime3 = (mi) (var17.next(0));
               }
             }
@@ -660,7 +660,7 @@ final class le {
                   }
                   var11_refLifetime1Lifetime1 = ((StringBuilder) (Object) stackIn_73_0).append(stackIn_74_1).append(var12).toString();
                 }
-                var12Lifetime2 = an.field_f / 2;
+                var12Lifetime2 = EmailLoginCredentials.field_f / 2;
                 mi.field_B.drawCentered(co.field_i, var12Lifetime2, 16, var9_intLifetime1, -1);
                 tj.field_t.drawCentered((String) (var11_refLifetime1Lifetime1), var12Lifetime2, 40, var9_intLifetime1, -1);
                 SoftwareRasterizer.blurRectangle(5, 5, var12Lifetime2 - 48, 0, 96, 44);
@@ -737,7 +737,7 @@ final class le {
                   }
                 }
                 if (var11_refLifetime2 != null) {
-                  var12Lifetime1 = -8 + an.field_f;
+                  var12Lifetime1 = -8 + EmailLoginCredentials.field_f;
                   mi.field_B.drawRightAlignedText((String) (var11_refLifetime2), -1 + var12Lifetime1, var9_intLifetime2, 0, 0);
                   mi.field_B.drawRightAlignedText((String) (var11_refLifetime2), 1 + var12Lifetime1, var9_intLifetime2, 0, 0);
                   mi.field_B.drawRightAlignedText((String) (var11_refLifetime2), var12Lifetime1, var9_intLifetime2 - 1, 0, 0);
@@ -778,7 +778,7 @@ final class le {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var8_ref = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var8_ref), "le.LA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw aa.wrapException((Throwable) ((Object) var8_ref), "le.LA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 
@@ -843,7 +843,7 @@ final class le {
           var2_int = stackIn_26_0;
           if (this.field_ab) {
             stackIn_32_0 = var2_int;
-            if (!ef.field_r &&
+            if (!SocketJs5Transport.field_r &&
               !pn.a((byte) 119) &&
               this.field_V.d(false) == this.field_I) {
               stackIn_33_1 = 1;
@@ -963,7 +963,7 @@ final class le {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var2), "le.J(" + param0 + ')');
+          throw aa.wrapException((Throwable) ((Object) var2), "le.J(" + param0 + ')');
         }
     }
 
@@ -1061,7 +1061,7 @@ final class le {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref2 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var2_ref2), "le.I(" + param0 + ')');
+          throw aa.wrapException((Throwable) ((Object) var2_ref2), "le.I(" + param0 + ')');
         }
     }
 
@@ -1074,7 +1074,7 @@ final class le {
           field_N = null;
           field_d = null;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "le.EB(" + param0 + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "le.EB(" + param0 + ')');
         }
     }
 
@@ -1209,7 +1209,7 @@ final class le {
             var6 = 30;
             var7Lifetime1 = -150 + (var3_int + ii.a((byte) -117));
             var8 = 0;
-            if ((-var7Lifetime1 + me.field_I + 24) * (-var7Lifetime1 + (me.field_I + 24)) + (-var6 + an.field_g) * (-var6 + an.field_g) < 1296) {
+            if ((-var7Lifetime1 + me.field_I + 24) * (-var7Lifetime1 + (me.field_I + 24)) + (-var6 + EmailLoginCredentials.field_g) * (-var6 + EmailLoginCredentials.field_g) < 1296) {
               mf.field_g = -4;
               var8 = 1;
               var9 = 100;
@@ -1250,9 +1250,9 @@ final class le {
               }
             }
             for (var9 = -20; var9 < 20; var9++) {
-              SoftwareRasterizer.setClip(0, 2 + (var7Lifetime1 + var9), an.field_f, 2 + (1 + var7Lifetime1 + var9));
+              SoftwareRasterizer.setClip(0, 2 + (var7Lifetime1 + var9), EmailLoginCredentials.field_f, 2 + (1 + var7Lifetime1 + var9));
               SoftwareRasterizer.fillCircle(var6, 2 + (-(var9 / 2) + var7Lifetime1), 20, 0);
-              SoftwareRasterizer.setClip(0, -1 + (var9 + (var7Lifetime1 + 2)), an.field_f, var9 + (var7Lifetime1 + 2));
+              SoftwareRasterizer.setClip(0, -1 + (var9 + (var7Lifetime1 + 2)), EmailLoginCredentials.field_f, var9 + (var7Lifetime1 + 2));
               stackIn_110_0 = var6;
               stackIn_110_1 = 2 - var9 / 2 + var7Lifetime1 - 1;
               stackIn_110_2 = 20;
@@ -1264,9 +1264,9 @@ final class le {
               SoftwareRasterizer.fillCircle(stackIn_110_0, stackIn_110_1, stackIn_110_2, stackIn_111_3);
             }
             for (var9 = -16; 16 > var9; var9++) {
-              SoftwareRasterizer.setClip(0, var9 + var7Lifetime1, an.field_f, var7Lifetime1 + (var9 + 1));
+              SoftwareRasterizer.setClip(0, var9 + var7Lifetime1, EmailLoginCredentials.field_f, var7Lifetime1 + (var9 + 1));
               SoftwareRasterizer.fillCircle(var6, var7Lifetime1 - var9 / 2, 16, 0);
-              SoftwareRasterizer.setClip(0, -1 + var9 + var7Lifetime1, an.field_f, var9 + var7Lifetime1);
+              SoftwareRasterizer.setClip(0, -1 + var9 + var7Lifetime1, EmailLoginCredentials.field_f, var9 + var7Lifetime1);
               stackIn_117_0 = var6;
               stackIn_117_1 = -1 + (-(var9 / 2) + var7Lifetime1);
               stackIn_117_2 = 16;
@@ -1359,7 +1359,7 @@ final class le {
               }
             }
             ((IndexedSprite) (Object) stackIn_153_0[stackIn_153_1]).draw(var6 - 16, var7Lifetime2 - 16);
-            var8 = var6 - an.field_g;
+            var8 = var6 - EmailLoginCredentials.field_g;
             var9 = -me.field_I + var7Lifetime2;
             if (var8 * var8 + var9 * var9 < 256) {
               if (!param1) {
@@ -1390,7 +1390,7 @@ final class le {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var3), "le.TA(" + param0 + ',' + param1 + ')');
+          throw aa.wrapException((Throwable) ((Object) var3), "le.TA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -1444,7 +1444,7 @@ final class le {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var3), "le.WA(" + param0 + ',' + param1 + ')');
+          throw aa.wrapException((Throwable) ((Object) var3), "le.WA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -1500,9 +1500,9 @@ final class le {
             this.field_K = 4;
             var3 = this.field_V.field_y >> this.field_K;
             var4 = this.field_V.field_H >> this.field_K;
-            var5 = an.field_j;
-            if (an.field_f > 8 + (var3 + 640)) {
-              if (640 + 2 * var3 + 8 <= an.field_f) {
+            var5 = EmailLoginCredentials.field_j;
+            if (EmailLoginCredentials.field_f > 8 + (var3 + 640)) {
+              if (640 + 2 * var3 + 8 <= EmailLoginCredentials.field_f) {
                 this.field_K = 3;
                 var3 = this.field_V.field_y >> this.field_K;
                 var4 = this.field_V.field_H >> this.field_K;
@@ -1512,18 +1512,18 @@ final class le {
             }
             var6 = 5;
             var7 = 1;
-            SoftwareRasterizer.drawRectangle(-var7 - var6 - var3 + an.field_f, -var7 + (-var6 - var4 + var5), var3 + 2 * var7, var7 * 2 + var4, 4799269);
+            SoftwareRasterizer.drawRectangle(-var7 - var6 - var3 + EmailLoginCredentials.field_f, -var7 + (-var6 - var4 + var5), var3 + 2 * var7, var7 * 2 + var4, 4799269);
             var7++;
-            SoftwareRasterizer.drawRectangle(-var7 - var6 + (-var3 + an.field_f), -var4 + (var5 + (-var6 - var7)), var3 + var7 * 2, 2 * var7 + var4, 8547138);
+            SoftwareRasterizer.drawRectangle(-var7 - var6 + (-var3 + EmailLoginCredentials.field_f), -var4 + (var5 + (-var6 - var7)), var3 + var7 * 2, 2 * var7 + var4, 8547138);
             var7++;
-            SoftwareRasterizer.drawRectangle(-var7 - var6 + (-var3 + an.field_f), var5 - (var4 - (-var6 - var7)), var3 + 2 * var7, var4 + var7 * 2, 11768360);
+            SoftwareRasterizer.drawRectangle(-var7 - var6 + (-var3 + EmailLoginCredentials.field_f), var5 - (var4 - (-var6 - var7)), var3 + 2 * var7, var4 + var7 * 2, 11768360);
             var7++;
-            SoftwareRasterizer.drawRectangle(-var7 + (-var3 + an.field_f - var6), -var7 - var6 + (var5 - var4), var3 + var7 * 2, var4 + var7 * 2, 0);
+            SoftwareRasterizer.drawRectangle(-var7 + (-var3 + EmailLoginCredentials.field_f - var6), -var7 - var6 + (var5 - var4), var3 + var7 * 2, var4 + var7 * 2, 0);
             var7++;
-            SoftwareRasterizer.setClip(an.field_f - (var3 + var6), -var4 + (var5 - var6), -var6 + an.field_f, -var6 + var5);
-            SoftwareRasterizer.fillVerticalGradient(-var6 - var3 + an.field_f, var5 - (var4 + var6), var3, var4, GzipDecoder.field_a, cg.field_Lb);
-            this.field_V.m((byte) 69).drawScaled(-var6 + (-var3 + an.field_f), -var4 + var5 - var6, var3, var4);
-            SoftwareRasterizer.drawRectangleAlpha(an.field_f - var3 - (var6 - (-(an.field_f >> 1) + IntrusiveDeque.field_c >> this.field_K)), (ol.field_g - (var5 >> 1) >> this.field_K) + var5 + (-var4 - var6), an.field_f >> this.field_K, var5 >> this.field_K, 16777215, 128);
+            SoftwareRasterizer.setClip(EmailLoginCredentials.field_f - (var3 + var6), -var4 + (var5 - var6), -var6 + EmailLoginCredentials.field_f, -var6 + var5);
+            SoftwareRasterizer.fillVerticalGradient(-var6 - var3 + EmailLoginCredentials.field_f, var5 - (var4 + var6), var3, var4, GzipDecoder.field_a, cg.field_Lb);
+            this.field_V.m((byte) 69).drawScaled(-var6 + (-var3 + EmailLoginCredentials.field_f), -var4 + var5 - var6, var3, var4);
+            SoftwareRasterizer.drawRectangleAlpha(EmailLoginCredentials.field_f - var3 - (var6 - (-(EmailLoginCredentials.field_f >> 1) + IntrusiveDeque.field_c >> this.field_K)), (ol.field_g - (var5 >> 1) >> this.field_K) + var5 + (-var4 - var6), EmailLoginCredentials.field_f >> this.field_K, var5 >> this.field_K, 16777215, 128);
             var8 = this.field_V.g((byte) 61);
             if (var8 != null &&
               !var8.isEmpty(true)) {
@@ -1534,7 +1534,7 @@ final class le {
                   var2_intLifetime1 = 0;
                   var10 = var9.g(false);
                   var2_intLifetime1 = nj.field_n[var10];
-                  var11_int = an.field_f + (-var3 - var6) + (var9.f(-99) >> this.field_K);
+                  var11_int = EmailLoginCredentials.field_f + (-var3 - var6) + (var9.f(-99) >> this.field_K);
                   var12_int = var5 - (var4 + var6 - (var9.i((byte) 110) - (var9.p(param0 - 8331) >> 1) >> this.field_K));
                   SoftwareRasterizer.fillCircle(var11_int, var12_int, 14 + (var9.p(-8323) >> 1) >> this.field_K, (var2_intLifetime1 | 8421504) ^ 8421504);
                   SoftwareRasterizer.fillCircle(var11_int, var12_int, var9.p(param0 - 8331) >> 1 >> this.field_K, var2_intLifetime1);
@@ -1572,7 +1572,7 @@ final class le {
                   if (var9Lifetime1.o(-22625) != 12 &&
                     null == var9Lifetime1.w(24501)) {
                     var14 = var9Lifetime1.y(param0 ^ 17579);
-                    var11[var14] = -var6 + an.field_f - var3 + (var9Lifetime1.f(-85) >> this.field_K);
+                    var11[var14] = -var6 + EmailLoginCredentials.field_f - var3 + (var9Lifetime1.f(-85) >> this.field_K);
                     var12[var14] = -var6 - var4 + (var5 - 8);
                     var13[var14] = mi.field_B.textWidth(this.field_V.field_k[var14]);
                     for (var15_int = 0; var15_int < var14; var15_int++) {
@@ -1585,7 +1585,7 @@ final class le {
                   }
                   var9Lifetime1 = (ml) (var8.next(0));
                 }
-                SoftwareRasterizer.setClip(-var6 + (-var3 + an.field_f), 0, -var6 + an.field_f, -var6 + var5);
+                SoftwareRasterizer.setClip(-var6 + (-var3 + EmailLoginCredentials.field_f), 0, -var6 + EmailLoginCredentials.field_f, -var6 + var5);
                 var9Lifetime1Lifetime1 = (ml) (var8.first(param0 + 12615));
                 while (var9Lifetime1Lifetime1 != null) {
                   if (var9Lifetime1Lifetime1.o(-22625) != 12 &&
@@ -1627,7 +1627,7 @@ final class le {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var2), "le.O(" + param0 + ')');
+          throw aa.wrapException((Throwable) ((Object) var2), "le.O(" + param0 + ')');
         }
     }
 
@@ -1636,7 +1636,7 @@ final class le {
         RuntimeException var2 = null;
         try {
           if (kh.field_c != null) {
-            fk.a(0, kh.field_c);
+            fk.drawTooltipBox(0, kh.field_c);
           }
           if (eo.field_c != null) {
             eo.field_c.a(param0 ^ -22718, param1);
@@ -1653,7 +1653,7 @@ final class le {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var2), "le.JA(" + param0 + ',' + param1 + ')');
+          throw aa.wrapException((Throwable) ((Object) var2), "le.JA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -1716,7 +1716,7 @@ final class le {
             if (1 == var6_int &&
               this.field_s == -1000 &&
               !this.field_V.c((byte) 89)) {
-              var7 = an.field_g;
+              var7 = EmailLoginCredentials.field_g;
               var8 = me.field_I;
               tg.field_b[5].toRgbSprite().drawCenteredRotatedScaledBilinear(var7, var8, this.field_P << 8, 4096 - Math.abs(this.field_P - 128));
             }
@@ -1732,7 +1732,7 @@ final class le {
             var8Lifetime1 = var6.i((byte) -5);
             if (this.field_s != -1000) {
               if (ti.field_N == 78) {
-                var9_int = -(go.field_j[29].field_g / 2) + ((an.field_f >> 1) + (this.field_s - param1));
+                var9_int = -(go.field_j[29].field_g / 2) + ((EmailLoginCredentials.field_f >> 1) + (this.field_s - param1));
                 var10 = (var4_int >> 1) + this.field_r - param2 - go.field_j[29].field_k;
                 if (!this.field_V.a(var6, this.field_r, this.field_s, -5)) {
                   go.field_j[29].toRgbSprite().drawSilhouette(var9_int, var10, 16711680);
@@ -1745,9 +1745,9 @@ final class le {
                 stackIn_152_0 = (this.field_V.b(this.field_s, var6, -16, this.field_r)) ? 65280 : 16711680;
                 var10Lifetime2 = stackIn_152_0;
                 ce.field_m.a(true);
-                SoftwareRasterizer.setClip(-param1 + (an.field_f >> 1), (var4_int >> 1) - param2, (an.field_f >> 1) + (-param1 + this.field_V.field_y), this.field_V.field_H - param2 + (var4_int >> 1));
+                SoftwareRasterizer.setClip(-param1 + (EmailLoginCredentials.field_f >> 1), (var4_int >> 1) - param2, (EmailLoginCredentials.field_f >> 1) + (-param1 + this.field_V.field_y), this.field_V.field_H - param2 + (var4_int >> 1));
                 SoftwareRasterizer.resetClip();
-                var11_int = -param1 + (this.field_s + (an.field_f >> 1));
+                var11_int = -param1 + (this.field_s + (EmailLoginCredentials.field_f >> 1));
                 var12 = -param2 + (this.field_r + ((var4_int >> 1) - (var9_intLifetime1 >> 1)));
                 SoftwareRasterizer.fillCircleAlpha(var11_int, var12, var9_intLifetime1 >> 1, var10Lifetime2, 128);
                 gn.a(var9_intLifetime1 >> 1, (byte) 100, 128 + Math.abs(-16 + (this.field_P & 31)) * 3, var11_int, var12);
@@ -1762,9 +1762,9 @@ final class le {
                 stackIn_25_0 = (this.field_V.a(this.field_s, this.field_V.field_H - 16, (byte) -75, var6)) ? 65280 : 16711680;
                 var10Lifetime3 = stackIn_25_0;
                 ce.field_m.a(true);
-                SoftwareRasterizer.setClip((an.field_f >> 1) - param1, (var4_int >> 1) - param2, this.field_V.field_y - param1 + (an.field_f >> 1), (var4_int >> 1) + (this.field_V.field_H - param2));
+                SoftwareRasterizer.setClip((EmailLoginCredentials.field_f >> 1) - param1, (var4_int >> 1) - param2, this.field_V.field_y - param1 + (EmailLoginCredentials.field_f >> 1), (var4_int >> 1) + (this.field_V.field_H - param2));
                 SoftwareRasterizer.resetClip();
-                var11_intLifetime1 = (an.field_f >> 1) + (this.field_s - param1);
+                var11_intLifetime1 = (EmailLoginCredentials.field_f >> 1) + (this.field_s - param1);
                 var12Lifetime1 = (var4_int >> 1) - param2 + this.field_V.field_H + (-16 - (var9_intLifetime2 >> 1));
                 SoftwareRasterizer.fillCircleAlpha(var11_intLifetime1, var12Lifetime1, var9_intLifetime2 >> 1, var10Lifetime3, 128);
                 gn.a(var9_intLifetime2 >> 1, (byte) 78, 3 * Math.abs(-16 + (this.field_P & 31)) + 128, var11_intLifetime1, var12Lifetime1);
@@ -1803,7 +1803,7 @@ final class le {
                   var9_intLifetime3 = stackIn_57_0;
                   ce.field_m.a(true);
                   var10Lifetime4 = 32;
-                  var11_intLifetime2 = (an.field_f >> 1) + (-param1 + this.field_s);
+                  var11_intLifetime2 = (EmailLoginCredentials.field_f >> 1) + (-param1 + this.field_s);
                   var12Lifetime2 = -(var10Lifetime4 >> 1) + (-param2 + this.field_r + (var4_int >> 1));
                   SoftwareRasterizer.fillCircleAlpha(var11_intLifetime2, var12Lifetime2, var10Lifetime4 >> 1, var9_intLifetime3, 128);
                   gn.a(var10Lifetime4 >> 1, (byte) 94, Math.abs((31 & this.field_P) - 16) * 3 + 128, var11_intLifetime2, var12Lifetime2);
@@ -1817,13 +1817,13 @@ final class le {
                   if (ti.field_N == 30) {
                     stackIn_77_0 = (this.field_V.a(this.field_s, var6, 30882, this.field_r)) ? 65280 : 16711680;
                     var9_intLifetime3Lifetime1 = stackIn_77_0;
-                    ByteStorage.field_e.drawSilhouette(-(ByteStorage.field_e.field_n >> 1) + ((an.field_f >> 1) - param1 + this.field_s), (var4_int >> 1) + (-param2 + (this.field_r - ByteStorage.field_e.field_w)), var9_intLifetime3Lifetime1);
-                    ByteStorage.field_e.drawAlpha(-param1 + this.field_s + (an.field_f >> 1) - (ByteStorage.field_e.field_n >> 1), -ByteStorage.field_e.field_w + (this.field_r - (param2 - (var4_int >> 1))), 128);
+                    ByteStorage.field_e.drawSilhouette(-(ByteStorage.field_e.field_n >> 1) + ((EmailLoginCredentials.field_f >> 1) - param1 + this.field_s), (var4_int >> 1) + (-param2 + (this.field_r - ByteStorage.field_e.field_w)), var9_intLifetime3Lifetime1);
+                    ByteStorage.field_e.drawAlpha(-param1 + this.field_s + (EmailLoginCredentials.field_f >> 1) - (ByteStorage.field_e.field_n >> 1), -ByteStorage.field_e.field_w + (this.field_r - (param2 - (var4_int >> 1))), 128);
                     return;
                   }
                   decompiledFrameRemainder0 = (ti.field_N != -1);
                   if (decompiledFrameRemainder0) {
-                    var9_intLifetime3Lifetime1 = -param1 + this.field_s + (an.field_f >> 1);
+                    var9_intLifetime3Lifetime1 = -param1 + this.field_s + (EmailLoginCredentials.field_f >> 1);
                     var10Lifetime4 = -param2 + this.field_r + (var4_int >> 1);
                     tg.field_b[5].toRgbSprite().drawCenteredRotatedScaledBilinear(var9_intLifetime3Lifetime1, var10Lifetime4, this.field_P << 8, -Math.abs(-128 + this.field_P) + 4096);
                     return;
@@ -1842,11 +1842,11 @@ final class le {
                   var9_intLifetime3Lifetime2 = stackIn_66_0;
                   ce.field_m.a(true);
                   var10Lifetime4 = 32;
-                  var11_intLifetime2Lifetime1 = (an.field_f >> 1) - param1 + var7Lifetime1;
+                  var11_intLifetime2Lifetime1 = (EmailLoginCredentials.field_f >> 1) - param1 + var7Lifetime1;
                   var12Lifetime2Lifetime1 = (var4_int >> 1) + var8Lifetime1 - param2 - (var6.p(-8323) + 32);
                   SoftwareRasterizer.fillCircleAlpha(var11_intLifetime2Lifetime1, var12Lifetime2Lifetime1, var10Lifetime4 >> 1, var9_intLifetime3Lifetime2, 128);
                   gn.a(var10Lifetime4 >> 1, (byte) 63, 128 + 3 * Math.abs((this.field_P & 31) - 16), var11_intLifetime2Lifetime1, var12Lifetime2Lifetime1);
-                  var13 = this.field_s - param1 + (an.field_f >> 1);
+                  var13 = this.field_s - param1 + (EmailLoginCredentials.field_f >> 1);
                   var14 = (var4_int >> 1) + (this.field_r - param2) - (var10Lifetime4 >> 1);
                   SoftwareRasterizer.fillCircleAlpha(var13, var14, var10Lifetime4 >> 1, var9_intLifetime3Lifetime2, 128);
                   gn.a(var10Lifetime4 >> 1, (byte) 125, 128 + Math.abs(-16 + (this.field_P & 31)) * 3, var13, var14);
@@ -1919,12 +1919,12 @@ final class le {
                 stackIn_144_0 = (this.field_V.a(false, var6, ti.field_N, this.field_r, this.field_s)) ? 65280 : 16711680;
                 var10Lifetime5 = stackIn_144_0;
                 ce.field_m.a(true);
-                SoftwareRasterizer.setClip(-param1 + (an.field_f >> 1), -param2 + (var4_int >> 1), (an.field_f >> 1) + (-param1 + this.field_V.field_y), (var4_int >> 1) + (-param2 + this.field_V.field_H));
-                var11_intLifetime3 = -param1 + (var7Lifetime1 + (an.field_f >> 1));
+                SoftwareRasterizer.setClip(-param1 + (EmailLoginCredentials.field_f >> 1), -param2 + (var4_int >> 1), (EmailLoginCredentials.field_f >> 1) + (-param1 + this.field_V.field_y), (var4_int >> 1) + (-param2 + this.field_V.field_H));
+                var11_intLifetime3 = -param1 + (var7Lifetime1 + (EmailLoginCredentials.field_f >> 1));
                 var12Lifetime3 = (var4_int >> 1) + var8Lifetime1 + (-param2 - (var9_intLifetime4 >> 1));
                 gn.a((var9_intLifetime4 >> 1) + 128, (byte) 88, -(128 + Math.abs(-16 + (31 & this.field_P)) * 3), var11_intLifetime3, var12Lifetime3);
                 SoftwareRasterizer.resetClip();
-                var13Lifetime1 = (an.field_f >> 1) + this.field_s - param1;
+                var13Lifetime1 = (EmailLoginCredentials.field_f >> 1) + this.field_s - param1;
                 var14Lifetime1 = -(var9_intLifetime4 >> 1) + ((var4_int >> 1) + (-param2 + this.field_r));
                 SoftwareRasterizer.fillCircleAlpha(var13Lifetime1, var14Lifetime1, var9_intLifetime4 >> 1, var10Lifetime5, 128);
                 gn.a(var9_intLifetime4 >> 1, (byte) 73, Math.abs(-16 + (31 & this.field_P)) * 3 + 128, var13Lifetime1, var14Lifetime1);
@@ -1945,24 +1945,24 @@ final class le {
                 ti.field_N != 114) {
                 return;
               }
-              var9 = uj.field_i[0];
+              var9 = ScreenDisplayMode.field_i[0];
               if (55 == ti.field_N) {
-                var9 = uj.field_i[1];
+                var9 = ScreenDisplayMode.field_i[1];
               }
               if (ti.field_N == 31) {
-                var9 = uj.field_i[2];
+                var9 = ScreenDisplayMode.field_i[2];
               }
               if (ti.field_N == 60) {
-                var9 = uj.field_i[3];
+                var9 = ScreenDisplayMode.field_i[3];
               }
               if (81 == ti.field_N) {
-                var9 = uj.field_i[4];
+                var9 = ScreenDisplayMode.field_i[4];
               }
               if (ti.field_N == 91) {
-                var9 = uj.field_i[5];
+                var9 = ScreenDisplayMode.field_i[5];
               }
               if (114 == ti.field_N) {
-                var9 = uj.field_i[6];
+                var9 = ScreenDisplayMode.field_i[6];
               }
               stackIn_194_0 = (!this.field_V.a(ti.field_N, var6.i((byte) 116), var6, (byte) 91, var6.f(45))) ? 16711680 : 65280;
               var10Lifetime1 = stackIn_194_0;
@@ -1971,16 +1971,16 @@ final class le {
               var9.drawSilhouette(8, 8, var10Lifetime1);
               SoftwareRasterizer.blurRectangle(5, 5, 0, 0, var11.field_n, var11.field_w);
               ce.field_m.a(true);
-              var11.drawAdditive(-param1 + (-(var9.field_n / 2) + var7Lifetime1 + (an.field_f >> 1) - 8), var8Lifetime1 + (-var9.field_w + (-param2 + (var4_int >> 1)) - 8), 256);
-              var9.drawSilhouette((an.field_f >> 1) + var7Lifetime1 + (-(var9.field_n / 2) - param1), (var4_int >> 1) + (var8Lifetime1 - var9.field_w - param2), var10Lifetime1);
-              var9.drawAlpha(-param1 + (var7Lifetime1 - var9.field_n / 2 + (an.field_f >> 1)), -param2 + var8Lifetime1 - (var9.field_w - (var4_int >> 1)), 128);
+              var11.drawAdditive(-param1 + (-(var9.field_n / 2) + var7Lifetime1 + (EmailLoginCredentials.field_f >> 1) - 8), var8Lifetime1 + (-var9.field_w + (-param2 + (var4_int >> 1)) - 8), 256);
+              var9.drawSilhouette((EmailLoginCredentials.field_f >> 1) + var7Lifetime1 + (-(var9.field_n / 2) - param1), (var4_int >> 1) + (var8Lifetime1 - var9.field_w - param2), var10Lifetime1);
+              var9.drawAlpha(-param1 + (var7Lifetime1 - var9.field_n / 2 + (EmailLoginCredentials.field_f >> 1)), -param2 + var8Lifetime1 - (var9.field_w - (var4_int >> 1)), 128);
             }
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var4), "le.AB(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw aa.wrapException((Throwable) ((Object) var4), "le.AB(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -2005,7 +2005,7 @@ final class le {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var2), "le.QA(" + param0 + ')');
+          throw aa.wrapException((Throwable) ((Object) var2), "le.QA(" + param0 + ')');
         }
     }
 
@@ -2022,7 +2022,7 @@ final class le {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var2), "le.OB(" + param0 + ')');
+          throw aa.wrapException((Throwable) ((Object) var2), "le.OB(" + param0 + ')');
         }
     }
 
@@ -2047,7 +2047,7 @@ final class le {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var2), "le.B(" + param0 + ')');
+          throw aa.wrapException((Throwable) ((Object) var2), "le.B(" + param0 + ')');
         }
     }
 
@@ -2069,7 +2069,7 @@ final class le {
           GzipDecoder.field_a = var2_int;
           cg.field_Lb = var3;
           SoftwareRasterizer.fillVerticalGradient(0, 0, 640, 480, var2_int, var3);
-          if (null == e.field_M[this.field_V.a(-31497)]) {
+          if (null == LoginPanel.field_M[this.field_V.a(-31497)]) {
             ue.field_d.field_f = 0;
             af.a(tj.a(115, new String[]{Integer.toString(this.field_V.a(-31497))}, "background<%0>"), "", 19412, ue.field_d).drawScaled(0, 0, 640, 480);
           }
@@ -2086,7 +2086,7 @@ final class le {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var2), "le.F(" + param0 + ')');
+          throw aa.wrapException((Throwable) ((Object) var2), "le.F(" + param0 + ')');
         }
     }
 
@@ -2107,7 +2107,7 @@ final class le {
           if (var5 != null) {
             var6 = (ml) (var5.first(12623));
             while (var6 != null) {
-              var6.a(2, -param2 + (var4_int >> 1), (an.field_f >> 1) - param0);
+              var6.a(2, -param2 + (var4_int >> 1), (EmailLoginCredentials.field_f >> 1) - param0);
               var6 = (ml) (var5.next(0));
             }
             return;
@@ -2116,7 +2116,7 @@ final class le {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var4), "le.AA(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw aa.wrapException((Throwable) ((Object) var4), "le.AA(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -2148,7 +2148,7 @@ final class le {
             return;
           }
           var3_int = n.field_g.field_nb;
-          var4 = -(an.field_f >> 1) + (IntrusiveDeque.field_c + an.field_g);
+          var4 = -(EmailLoginCredentials.field_f >> 1) + (IntrusiveDeque.field_c + EmailLoginCredentials.field_g);
           var5 = -(var3_int >> 1) + ol.field_g + me.field_I;
           if (this.field_u > 0) {
             var5 = this.field_c;
@@ -2202,9 +2202,9 @@ final class le {
                 var17 = var17 | (255 & var15 * 10) << 16;
               }
               if (10 >= var15) {
-                SoftwareRasterizer.fillCircleAlpha((an.field_f >> 1) + (var13 + var6 - IntrusiveDeque.field_c), var14 + var7 - (ol.field_g - (var3_int >> 1)), 1600 / (200 - var15 * 100 / 100), var17, var15);
+                SoftwareRasterizer.fillCircleAlpha((EmailLoginCredentials.field_f >> 1) + (var13 + var6 - IntrusiveDeque.field_c), var14 + var7 - (ol.field_g - (var3_int >> 1)), 1600 / (200 - var15 * 100 / 100), var17, var15);
               } else {
-                SoftwareRasterizer.fillCircleAlpha((an.field_f >> 1) + var6 - (-var13 + IntrusiveDeque.field_c), (var3_int >> 1) + var14 + var7 - ol.field_g, 1600 / (200 - var15 * 100 / 100), var17, 10);
+                SoftwareRasterizer.fillCircleAlpha((EmailLoginCredentials.field_f >> 1) + var6 - (-var13 + IntrusiveDeque.field_c), (var3_int >> 1) + var14 + var7 - ol.field_g, 1600 / (200 - var15 * 100 / 100), var17, 10);
               }
             }
             return;
@@ -2220,7 +2220,7 @@ final class le {
           } else {
             stackIn_42_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_41_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_41_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(')').toString());
         }
     }
 
@@ -2237,7 +2237,7 @@ final class le {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var5), "le.MB(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw aa.wrapException((Throwable) ((Object) var5), "le.MB(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -2249,7 +2249,7 @@ final class le {
           this.field_V.e(true);
           this.field_w.e(true);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "le.SA(" + param0 + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "le.SA(" + param0 + ')');
         }
     }
 
@@ -2263,7 +2263,7 @@ final class le {
           }
           ob.a(20, this.field_f, param2);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "le.L(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "le.L(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }
     }
 
@@ -2283,25 +2283,25 @@ final class le {
           if (0 < this.field_V.field_G) {
             var3 = 16711680;
           }
-          SoftwareRasterizer.fillRectangleAlpha((an.field_f >> 1) - IntrusiveDeque.field_c - 8, (var2_int >> 1) + (-ol.field_g - 8), 8, 8, var3, 64);
-          SoftwareRasterizer.fillRectangleAlpha(-IntrusiveDeque.field_c - (-(an.field_f >> 1) - this.field_V.field_y), -8 + (-ol.field_g + (var2_int >> 1)), 8, 8, var3, 64);
-          SoftwareRasterizer.setClip(-IntrusiveDeque.field_c + (an.field_f >> 1), -8 + (var2_int >> 1) + (-ol.field_g + param0), this.field_V.field_y + (-IntrusiveDeque.field_c + (an.field_f >> 1)), an.field_j);
+          SoftwareRasterizer.fillRectangleAlpha((EmailLoginCredentials.field_f >> 1) - IntrusiveDeque.field_c - 8, (var2_int >> 1) + (-ol.field_g - 8), 8, 8, var3, 64);
+          SoftwareRasterizer.fillRectangleAlpha(-IntrusiveDeque.field_c - (-(EmailLoginCredentials.field_f >> 1) - this.field_V.field_y), -8 + (-ol.field_g + (var2_int >> 1)), 8, 8, var3, 64);
+          SoftwareRasterizer.setClip(-IntrusiveDeque.field_c + (EmailLoginCredentials.field_f >> 1), -8 + (var2_int >> 1) + (-ol.field_g + param0), this.field_V.field_y + (-IntrusiveDeque.field_c + (EmailLoginCredentials.field_f >> 1)), EmailLoginCredentials.field_j);
           for (var4 = ((255 & SpriteState.field_v) >> 2) - 64; 8 + this.field_V.field_y >= var4; var4 += 64) {
-            SoftwareRasterizer.fillRectangleAlpha((an.field_f >> 1) + (-IntrusiveDeque.field_c + var4), (var2_int >> 1) + (0 - ol.field_g) - 8, 32, 8, var3, 64);
+            SoftwareRasterizer.fillRectangleAlpha((EmailLoginCredentials.field_f >> 1) + (-IntrusiveDeque.field_c + var4), (var2_int >> 1) + (0 - ol.field_g) - 8, 32, 8, var3, 64);
           }
-          SoftwareRasterizer.setClip(-IntrusiveDeque.field_c + (an.field_f >> 1) - 8, (var2_int >> 1) + 0 - ol.field_g, (an.field_f >> 1) + (-IntrusiveDeque.field_c + this.field_V.field_y) + 8, an.field_j);
+          SoftwareRasterizer.setClip(-IntrusiveDeque.field_c + (EmailLoginCredentials.field_f >> 1) - 8, (var2_int >> 1) + 0 - ol.field_g, (EmailLoginCredentials.field_f >> 1) + (-IntrusiveDeque.field_c + this.field_V.field_y) + 8, EmailLoginCredentials.field_j);
           for (var4Lifetime1 = -64 - ((SpriteState.field_v & 255) >> 2); var4Lifetime1 <= this.field_V.field_H; var4Lifetime1 += 64) {
-            SoftwareRasterizer.fillRectangleAlpha(-8 + (-IntrusiveDeque.field_c + 0) + (an.field_f >> 1), var4Lifetime1 - (ol.field_g - ((var2_int >> 1) - 4)), 8, 32, var3, 64);
+            SoftwareRasterizer.fillRectangleAlpha(-8 + (-IntrusiveDeque.field_c + 0) + (EmailLoginCredentials.field_f >> 1), var4Lifetime1 - (ol.field_g - ((var2_int >> 1) - 4)), 8, 32, var3, 64);
           }
           for (var4Lifetime2 = -64 + (SpriteState.field_v >> 2 & 63); var4Lifetime2 <= this.field_V.field_H; var4Lifetime2 += 64) {
-            SoftwareRasterizer.fillRectangleAlpha((an.field_f >> 1) + (this.field_V.field_y - IntrusiveDeque.field_c), -4 + ((var2_int >> 1) + (var4Lifetime2 - ol.field_g)), 8, 32, var3, 64);
+            SoftwareRasterizer.fillRectangleAlpha((EmailLoginCredentials.field_f >> 1) + (this.field_V.field_y - IntrusiveDeque.field_c), -4 + ((var2_int >> 1) + (var4Lifetime2 - ol.field_g)), 8, 32, var3, 64);
           }
           SoftwareRasterizer.resetClip();
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var2), "le.GA(" + param0 + ')');
+          throw aa.wrapException((Throwable) ((Object) var2), "le.GA(" + param0 + ')');
         }
     }
 
@@ -2326,7 +2326,7 @@ final class le {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var2), "le.JB(" + param0 + ')');
+          throw aa.wrapException((Throwable) ((Object) var2), "le.JB(" + param0 + ')');
         }
     }
 
@@ -2351,7 +2351,7 @@ final class le {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var2), "le.Q(" + param0 + ')');
+          throw aa.wrapException((Throwable) ((Object) var2), "le.Q(" + param0 + ')');
         }
     }
 
@@ -2398,7 +2398,7 @@ final class le {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -2423,7 +2423,7 @@ final class le {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var2), "le.E(" + param0 + ')');
+          throw aa.wrapException((Throwable) ((Object) var2), "le.E(" + param0 + ')');
         }
     }
 
@@ -2442,7 +2442,7 @@ final class le {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var2), "le.BA(" + param0 + ')');
+          throw aa.wrapException((Throwable) ((Object) var2), "le.BA(" + param0 + ')');
         }
     }
 
@@ -2461,7 +2461,7 @@ final class le {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var2), "le.RB(" + param0 + ')');
+          throw aa.wrapException((Throwable) ((Object) var2), "le.RB(" + param0 + ')');
         }
     }
 
@@ -2471,9 +2471,9 @@ final class le {
           if (param1 != -26449) {
             discarded$0 = this.q(-86);
           }
-          this.a(param0, an.field_j, 0, true, 0, 96, an.field_f);
+          this.a(param0, EmailLoginCredentials.field_j, 0, true, 0, 96, EmailLoginCredentials.field_f);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "le.FB(" + param0 + ',' + param1 + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "le.FB(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -2507,16 +2507,16 @@ final class le {
           SoftwareRasterizer.clear();
           var5_int = 0;
           param0 = param0 + ue.b((byte) -32);
-          var7 = an.field_j;
+          var7 = EmailLoginCredentials.field_j;
           var7Lifetime1 = n.field_g.field_nb;
           var8 = this.field_V.b(true);
-          var6 = -(param3 + 240) * (-an.field_j + 960) / 1440;
-          var5_intLifetime1 = (an.field_f - 1280) * (var8 + param0) / (2 * var8 + this.field_V.field_y);
+          var6 = -(param3 + 240) * (-EmailLoginCredentials.field_j + 960) / 1440;
+          var5_intLifetime1 = (EmailLoginCredentials.field_f - 1280) * (var8 + param0) / (2 * var8 + this.field_V.field_y);
           if (var6 > 0) {
             var6 = 0;
           }
-          if (960 < an.field_j) {
-            ij.field_Tb.drawScaled(var5_intLifetime1, 0, 1280, an.field_j);
+          if (960 < EmailLoginCredentials.field_j) {
+            ij.field_Tb.drawScaled(var5_intLifetime1, 0, 1280, EmailLoginCredentials.field_j);
           } else {
             ij.field_Tb.drawScaled(var5_intLifetime1, var6, 1280, 960);
           }
@@ -2524,7 +2524,7 @@ final class le {
           if (ge.field_r > 128) {
             ge.field_r = ge.field_r - 128;
           }
-          for (var9 = 0; an.field_f > var9; var9++) {
+          for (var9 = 0; EmailLoginCredentials.field_f > var9; var9++) {
             var10 = (int)Math.abs(Math.sin(3.141592653589793 * (double)(var9 + ge.field_r + param0) / 64.0) * 12.0);
             if (ge.field_r >= 64) {
               var10 = (96 - ge.field_r) * var10 / 32;
@@ -2538,7 +2538,7 @@ final class le {
             var10 = (int)((double)var10 + (8.0 * Math.sin(3.141592653589793 * (double)ge.field_r / 64.0) + 32.0));
             SoftwareRasterizer.drawVerticalLine(var9, -var10 + this.field_V.field_H + (-param3 + (var7Lifetime1 >> 1)), var10, (16449 | param2) >> 1);
           }
-          for (var9Lifetime1 = 0; an.field_f > var9Lifetime1; var9Lifetime1++) {
+          for (var9Lifetime1 = 0; EmailLoginCredentials.field_f > var9Lifetime1; var9Lifetime1++) {
             var10Lifetime1 = (int)Math.abs(Math.cos((double)(ge.field_r + (var9Lifetime1 + param0)) * 3.141592653589793 / 64.0) * 14.0);
             if (ge.field_r < 64) {
               var10Lifetime1 = var10Lifetime1 * (ge.field_r - 32) / 32;
@@ -2555,7 +2555,7 @@ final class le {
           if (param1 > -82) {
             this.field_V = (nf) null;
           }
-          for (var9Lifetime2 = 0; var9Lifetime2 < an.field_f; var9Lifetime2++) {
+          for (var9Lifetime2 = 0; var9Lifetime2 < EmailLoginCredentials.field_f; var9Lifetime2++) {
             var10Lifetime2 = (int)Math.abs(Math.sin(3.141592653589793 * (double)(var9Lifetime2 + ge.field_r * 2 + param0) / 64.0) * 16.0);
             if (ge.field_r < 64) {
               var10Lifetime2 = (ge.field_r - 32) * var10Lifetime2 / 32;
@@ -2571,13 +2571,13 @@ final class le {
           }
           if (td.e(true) &&
             this.field_T) {
-            this.field_V.m((byte) 69).drawScaled((an.field_f >> 1) - param0, -param3 + (var7Lifetime1 >> 1), this.field_V.field_y, this.field_V.field_H);
+            this.field_V.m((byte) 69).drawScaled((EmailLoginCredentials.field_f >> 1) - param0, -param3 + (var7Lifetime1 >> 1), this.field_V.field_y, this.field_V.field_H);
           } else {
             var9_ref_int__ = this.field_V.field_V.field_l;
             if (null != this.field_V.field_pb) {
               this.field_V.field_V.field_l = this.field_V.field_pb;
             }
-            this.field_V.field_V.draw((an.field_f >> 1) - param0, -param3 + (var7Lifetime1 >> 1));
+            this.field_V.field_V.draw((EmailLoginCredentials.field_f >> 1) - param0, -param3 + (var7Lifetime1 >> 1));
             this.field_V.field_V.field_l = var9_ref_int__;
           }
           if (null != this.field_V.field_V) {
@@ -2644,7 +2644,7 @@ final class le {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var5), "le.H(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw aa.wrapException((Throwable) ((Object) var5), "le.H(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -2681,7 +2681,7 @@ final class le {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -2712,7 +2712,7 @@ final class le {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
@@ -2772,7 +2772,7 @@ final class le {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var2), "le.S(" + param0 + ')');
+          throw aa.wrapException((Throwable) ((Object) var2), "le.S(" + param0 + ')');
         }
     }
 
@@ -2877,20 +2877,20 @@ final class le {
           }
           var4 = 0;
           if (!this.field_V.c((byte) 89) &&
-            !this.field_V.k(-45) && (!ef.field_r &&
+            !this.field_V.k(-45) && (!SocketJs5Transport.field_r &&
             !pn.a((byte) 110) ||
             !this.field_ab)) {
             var5 = this.field_V.field_y >> this.field_K;
             var6 = this.field_V.field_H >> this.field_K;
-            var7 = an.field_j;
-            if (var5 + 648 > an.field_f) {
+            var7 = EmailLoginCredentials.field_j;
+            if (var5 + 648 > EmailLoginCredentials.field_f) {
               var7 = var2_int;
             }
-            if (an.field_g >= -8 - var5 + an.field_f &&
+            if (EmailLoginCredentials.field_g >= -8 - var5 + EmailLoginCredentials.field_f &&
               me.field_I >= -8 + (-var6 + var7) &&
               me.field_I < var7) {
               if (PacketBuffer.field_m == 1) {
-                IntrusiveDeque.field_c = 4 - an.field_f + (var5 + an.field_g) << this.field_K;
+                IntrusiveDeque.field_c = 4 - EmailLoginCredentials.field_f + (var5 + EmailLoginCredentials.field_g) << this.field_K;
                 this.field_t = true;
                 ol.field_g = me.field_I - (-4 - var6) - var7 << this.field_K;
               }
@@ -2914,7 +2914,7 @@ final class le {
             !(this.field_z <= 1) || !this.field_ab) && (!this.field_V.a(true))) {
             if ((this.field_ab) &&
               (decompiledFrameRemainder0 = !(pn.a((byte) -51)))) {
-              decompiledFrameRemainder0 = !(ef.field_r);
+              decompiledFrameRemainder0 = !(SocketJs5Transport.field_r);
             }
             if ((decompiledFrameRemainder0) &&
               (!this.field_V.n(param0 + 4))) {
@@ -2933,7 +2933,7 @@ final class le {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var2), "le.P(" + param0 + ')');
+          throw aa.wrapException((Throwable) ((Object) var2), "le.P(" + param0 + ')');
         }
     }
 
@@ -2984,7 +2984,7 @@ final class le {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var4), "le.PA(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw aa.wrapException((Throwable) ((Object) var4), "le.PA(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -3069,9 +3069,9 @@ final class le {
                 }
               }
               if (var15 <= 25) {
-                SoftwareRasterizer.fillCircleAlpha(-IntrusiveDeque.field_c + var13 + (var6 + (an.field_f >> 1)), -ol.field_g + var7 + (var14 + (var5_int >> 1)), 1600 / (200 - 100 * var15 / 100), var17, 10 * var15);
+                SoftwareRasterizer.fillCircleAlpha(-IntrusiveDeque.field_c + var13 + (var6 + (EmailLoginCredentials.field_f >> 1)), -ol.field_g + var7 + (var14 + (var5_int >> 1)), 1600 / (200 - 100 * var15 / 100), var17, 10 * var15);
               } else {
-                SoftwareRasterizer.fillCircle(-IntrusiveDeque.field_c + var13 + var6 + (an.field_f >> 1), (var5_int >> 1) + (-ol.field_g + (var14 + var7)), 1600 / (200 - var15 * 100 / 100), var17);
+                SoftwareRasterizer.fillCircle(-IntrusiveDeque.field_c + var13 + var6 + (EmailLoginCredentials.field_f >> 1), (var5_int >> 1) + (-ol.field_g + (var14 + var7)), 1600 / (200 - var15 * 100 / 100), var17);
               }
             }
           }
@@ -3086,7 +3086,7 @@ final class le {
           } else {
             stackIn_47_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_46_0), ((StringBuilder) (Object) stackIn_46_1).append(stackIn_47_2).append(',').append(param3).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_46_0), ((StringBuilder) (Object) stackIn_46_1).append(stackIn_47_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -3103,7 +3103,7 @@ final class le {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var2), "le.LB(" + param0 + ')');
+          throw aa.wrapException((Throwable) ((Object) var2), "le.LB(" + param0 + ')');
         }
     }
 
@@ -3133,7 +3133,7 @@ final class le {
             param1 = false;
           }
           this.field_o = false;
-          if (!ef.field_r &&
+          if (!SocketJs5Transport.field_r &&
             !pn.a((byte) 111) && (ri.field_b[69] ||
             ri.field_b[ao.field_f])) {
             this.field_t = false;
@@ -3146,10 +3146,10 @@ final class le {
           if (this.field_Z > 0) {
             this.field_Z = this.field_Z - 1;
           }
-          if (!(an.field_g >= 0) ||
+          if (!(EmailLoginCredentials.field_g >= 0) ||
             !(me.field_I >= 0) ||
-            !(an.field_f > an.field_g) &&
-            !(me.field_I < an.field_j)) {
+            !(EmailLoginCredentials.field_f > EmailLoginCredentials.field_g) &&
+            !(me.field_I < EmailLoginCredentials.field_j)) {
             ti.field_N = -1;
           }
           this.field_P = this.field_P + 1;
@@ -3164,7 +3164,7 @@ final class le {
             this.field_j = this.field_j - g.field_a.field_n * 2;
           }
           var3_int = 0;
-          e.g((byte) -49);
+          LoginPanel.g((byte) -49);
           if (dm.h((byte) 97)) {
             this.c((byte) -106);
             if (!this.field_V.c((byte) 89) &&
@@ -3177,8 +3177,8 @@ final class le {
                 ob.field_Y.field_l) {
                 stackIn_50_0 = 1;
               } else {
-                if (an.field_f <= 640) {
-                  stackIn_50_0 = (an.field_j > 480) ? 1 : 0;
+                if (EmailLoginCredentials.field_f <= 640) {
+                  stackIn_50_0 = (EmailLoginCredentials.field_j > 480) ? 1 : 0;
                 } else {
                   stackIn_50_0 = 1;
                 }
@@ -3214,7 +3214,7 @@ final class le {
           if (this.field_I > 0 && (ri.field_b[69] ||
             ri.field_b[ao.field_f] ||
             ri.field_b[ig.field_g] ||
-            ri.field_b[im.field_g] ||
+            ri.field_b[UsernameCredentials.field_g] ||
             ri.field_b[84] ||
             ri.field_b[82] ||
             ri.field_b[81] ||
@@ -3344,7 +3344,7 @@ final class le {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var3), "le.IB(" + param0 + ',' + param1 + ')');
+          throw aa.wrapException((Throwable) ((Object) var3), "le.IB(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -3372,7 +3372,7 @@ final class le {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var2), "le.PB(" + param0 + ')');
+          throw aa.wrapException((Throwable) ((Object) var2), "le.PB(" + param0 + ')');
         }
     }
 
@@ -3486,7 +3486,7 @@ final class le {
           } else {
             stackIn_90_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_89_0), ((StringBuilder) (Object) stackIn_89_1).append(stackIn_90_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_89_0), ((StringBuilder) (Object) stackIn_89_1).append(stackIn_90_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -3530,7 +3530,7 @@ final class le {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var1), "le.DA(" + param0 + ')');
+          throw aa.wrapException((Throwable) ((Object) var1), "le.DA(" + param0 + ')');
         }
     }
 
@@ -3542,7 +3542,7 @@ final class le {
             this.field_Z = 120;
           }
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "le.MA(" + param0 + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "le.MA(" + param0 + ')');
         }
     }
 
@@ -3559,7 +3559,7 @@ final class le {
           var6 = ad.field_f;
           var4 = var6;
           var5 = param1;
-          var6[var5 >> 5] = fj.b(var6[var5 >> 5], 1 << dg.a(var5, 31));
+          var6[var5 >> 5] = fj.bitOr(var6[var5 >> 5], 1 << NameValidator.bitAnd(var5, 31));
           if (param0 != 79) {
             this.field_O = false;
           }
@@ -3571,7 +3571,7 @@ final class le {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4_ref = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var4_ref), "le.NB(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw aa.wrapException((Throwable) ((Object) var4_ref), "le.NB(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -3609,7 +3609,7 @@ final class le {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -3650,7 +3650,7 @@ final class le {
           if (param1 != 10) {
             this.a(41, 48, 1, -100);
           }
-          var4 = an.field_g - (-IntrusiveDeque.field_c + (an.field_f >> 1));
+          var4 = EmailLoginCredentials.field_g - (-IntrusiveDeque.field_c + (EmailLoginCredentials.field_f >> 1));
           var5 = -(var3_int >> 1) + me.field_I + ol.field_g;
           if (this.field_u > 0) {
             var4 = this.field_e;
@@ -3710,7 +3710,7 @@ final class le {
               stackIn_60_0 = 1;
             } else if (pn.a((byte) 127)) {
               stackIn_60_0 = 0;
-            } else if (!ef.field_r) {
+            } else if (!SocketJs5Transport.field_r) {
               stackIn_60_0 = 1;
             } else {
               stackIn_60_0 = 0;
@@ -3749,7 +3749,7 @@ final class le {
             }
             boolean decompiledFrameRemainder0 = true;
             var8 = stackIn_79_0;
-            if (var7 != 0 && (ri.field_b[im.field_g] ||
+            if (var7 != 0 && (ri.field_b[UsernameCredentials.field_g] ||
               ri.field_b[ud.field_w])) {
               stackIn_86_0 = 1;
               decompiledFrameRemainder0 = false;
@@ -3912,7 +3912,7 @@ final class le {
                   this.field_u = this.field_u + 1;
                   if (1 == this.field_u) {
                     this.field_c = -(var3_int >> 1) + ol.field_g + me.field_I;
-                    this.field_e = -(an.field_f >> 1) + IntrusiveDeque.field_c + an.field_g;
+                    this.field_e = -(EmailLoginCredentials.field_f >> 1) + IntrusiveDeque.field_c + EmailLoginCredentials.field_g;
                   }
                 }
                 if (ti.field_N >= 0 &&
@@ -4032,7 +4032,7 @@ final class le {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var3), "le.D(" + param0 + ',' + param1 + ')');
+          throw aa.wrapException((Throwable) ((Object) var3), "le.D(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -4052,7 +4052,7 @@ final class le {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var3), "le.W(" + param0 + ',' + param1 + ')');
+          throw aa.wrapException((Throwable) ((Object) var3), "le.W(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -4111,7 +4111,7 @@ final class le {
           } else {
             stackIn_46_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_45_0), ((StringBuilder) (Object) stackIn_45_1).append(stackIn_46_2).append(',').append(param1).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_45_0), ((StringBuilder) (Object) stackIn_45_1).append(stackIn_46_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -4198,7 +4198,7 @@ final class le {
           } else {
             stackIn_42_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_41_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_41_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(')').toString());
         }
     }
 
@@ -4223,7 +4223,7 @@ final class le {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var2), "le.IA(" + param0 + ')');
+          throw aa.wrapException((Throwable) ((Object) var2), "le.IA(" + param0 + ')');
         }
     }
 
@@ -4261,7 +4261,7 @@ final class le {
         var19 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           var3_int = n.field_g.field_nb;
-          var4 = an.field_g + (IntrusiveDeque.field_c - (an.field_f >> 1));
+          var4 = EmailLoginCredentials.field_g + (IntrusiveDeque.field_c - (EmailLoginCredentials.field_f >> 1));
           var5 = -(var3_int >> 1) + me.field_I + ol.field_g;
           if (0 < this.field_u) {
             var4 = this.field_e;
@@ -4376,9 +4376,9 @@ final class le {
                   var18 = var18 | 16711680 & var16 * 10 << 16;
                 }
                 if (var16 <= 25) {
-                  SoftwareRasterizer.fillCircleAlpha(-IntrusiveDeque.field_c + (var6 + var14 + (an.field_f >> 1)), (var3_int >> 1) - ol.field_g + var15 + var7, 1600 / (200 - var16 * 100 / 100), var18, var16);
+                  SoftwareRasterizer.fillCircleAlpha(-IntrusiveDeque.field_c + (var6 + var14 + (EmailLoginCredentials.field_f >> 1)), (var3_int >> 1) - ol.field_g + var15 + var7, 1600 / (200 - var16 * 100 / 100), var18, var16);
                 } else {
-                  SoftwareRasterizer.fillCircleAlpha((an.field_f >> 1) + (-IntrusiveDeque.field_c + var6) + var14, (var3_int >> 1) - ol.field_g + var15 + var7, 1600 / (200 - var16 * 100 / 100), var18, 25);
+                  SoftwareRasterizer.fillCircleAlpha((EmailLoginCredentials.field_f >> 1) + (-IntrusiveDeque.field_c + var6) + var14, (var3_int >> 1) - ol.field_g + var15 + var7, 1600 / (200 - var16 * 100 / 100), var18, 25);
                 }
               }
               return;
@@ -4386,13 +4386,13 @@ final class le {
             var15Lifetime1 = var8 / 2;
             var16Lifetime1 = 100 + var15Lifetime1;
             var14Lifetime1 = (var3_int >> 1) - ol.field_g + var10 * (var16Lifetime1 - 50) / var11 + (-var15Lifetime1 + var7);
-            var13Lifetime1 = (an.field_f >> 1) + (var9 * (-50 + var16Lifetime1) / var11 + var6) - IntrusiveDeque.field_c;
+            var13Lifetime1 = (EmailLoginCredentials.field_f >> 1) + (var9 * (-50 + var16Lifetime1) / var11 + var6) - IntrusiveDeque.field_c;
             tg.field_b[4].draw(-16 + var13Lifetime1, -16 + var14Lifetime1);
             var14Lifetime2 = (var3_int >> 1) + ((var16Lifetime1 - 50 - 16) * var10 / var11 - (var15Lifetime1 - var7 + ol.field_g));
-            var13Lifetime2 = -IntrusiveDeque.field_c + (var9 * (-50 + (var16Lifetime1 - 16)) / var11 + var6) + (an.field_f >> 1);
+            var13Lifetime2 = -IntrusiveDeque.field_c + (var9 * (-50 + (var16Lifetime1 - 16)) / var11 + var6) + (EmailLoginCredentials.field_f >> 1);
             tg.field_b[4].drawHalfSize(var13Lifetime2 - 8, var14Lifetime2 - 8);
             var14Lifetime3 = (var3_int >> 1) + var7 - var15Lifetime1 + (var10 * (-24 + (var16Lifetime1 - 50)) / var11 - ol.field_g);
-            var13Lifetime3 = -IntrusiveDeque.field_c + var6 + var9 * (-24 + var16Lifetime1 - 50) / var11 + (an.field_f >> 1);
+            var13Lifetime3 = -IntrusiveDeque.field_c + var6 + var9 * (-24 + var16Lifetime1 - 50) / var11 + (EmailLoginCredentials.field_f >> 1);
             tg.field_b[4].drawQuarterSize(var13Lifetime3 - 4, var14Lifetime3 - 4);
           }
           return;
@@ -4406,7 +4406,7 @@ final class le {
           } else {
             stackIn_109_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_108_0), ((StringBuilder) (Object) stackIn_108_1).append(stackIn_109_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_108_0), ((StringBuilder) (Object) stackIn_108_1).append(stackIn_109_2).append(')').toString());
         }
     }
 
@@ -4449,7 +4449,7 @@ final class le {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -4479,17 +4479,17 @@ final class le {
           var6 = (ml) (var5.first(param1 + 12623));
           while (var6 != null) {
             if (var6.y(17571) != this.field_bb) {
-              var6.c((var4_int >> 1) - param0, -param2 + (an.field_f >> 1), 1703903841);
+              var6.c((var4_int >> 1) - param0, -param2 + (EmailLoginCredentials.field_f >> 1), 1703903841);
             }
             var6 = (ml) (var5.next(0));
           }
           var6Lifetime1 = this.field_V.a(this.field_bb, true);
           if (var6Lifetime1 != null) {
-            var6Lifetime1.c((var4_int >> 1) - param0, (an.field_f >> 1) - param2, 1703903841);
+            var6Lifetime1.c((var4_int >> 1) - param0, (EmailLoginCredentials.field_f >> 1) - param2, 1703903841);
             if (this.field_u == 0 &&
               -1 != ti.field_N &&
               null == eb.field_b) {
-              var7 = -param2 + (an.field_f >> 1) + var6Lifetime1.f(-88);
+              var7 = -param2 + (EmailLoginCredentials.field_f >> 1) + var6Lifetime1.f(-88);
               var8 = -48 + (var4_int >> 1) - param0 + var6Lifetime1.i((byte) 115) + (-var6Lifetime1.p(-8323) - this.field_M);
               SoftwareRasterizer.fillCircle(var7, var8, 20, 16777215);
               gn.a(20, (byte) 99, 192, var7, var8);
@@ -4504,7 +4504,7 @@ final class le {
                 this.a(var6Lifetime1, 98);
                 return;
               }
-              var7Lifetime1 = -param2 + ((an.field_f >> 1) + var6Lifetime1.f(param1 ^ -82));
+              var7Lifetime1 = -param2 + ((EmailLoginCredentials.field_f >> 1) + var6Lifetime1.f(param1 ^ -82));
               var8Lifetime1 = -64 + var6Lifetime1.i((byte) 117) + (-param0 + ((var4_int >> 1) - var6Lifetime1.p(-8323))) - this.field_M;
               var9 = nj.field_n[this.field_V.d(false)];
               if (this.field_V.d(false) >= 0) {
@@ -4518,7 +4518,7 @@ final class le {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var4), "le.VA(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw aa.wrapException((Throwable) ((Object) var4), "le.VA(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -4612,7 +4612,7 @@ final class le {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var2), "le.C(" + param0 + ')');
+          throw aa.wrapException((Throwable) ((Object) var2), "le.C(" + param0 + ')');
         }
     }
 
@@ -4624,7 +4624,7 @@ final class le {
           this.field_F = param0 ? true : false;
           this.field_z = this.field_V.f(12955);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "le.R(" + param0 + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "le.R(" + param0 + ')');
         }
     }
 
@@ -4638,7 +4638,7 @@ final class le {
         int var6 = 0;
         ml var7 = null;
         try {
-          var2_int = -50 + an.field_f;
+          var2_int = -50 + EmailLoginCredentials.field_f;
           var3 = 10;
           var4 = -1;
           if (0 == this.field_V.a(param0 - 6154)) {
@@ -4689,7 +4689,7 @@ final class le {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var2), "le.HA(" + param0 + ')');
+          throw aa.wrapException((Throwable) ((Object) var2), "le.HA(" + param0 + ')');
         }
     }
 
@@ -4729,7 +4729,7 @@ final class le {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var9 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var9), "le.CB(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
+          throw aa.wrapException((Throwable) ((Object) var9), "le.CB(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 
@@ -4748,7 +4748,7 @@ final class le {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var2), "le.FA(" + param0 + ')');
+          throw aa.wrapException((Throwable) ((Object) var2), "le.FA(" + param0 + ')');
         }
     }
 
@@ -4782,7 +4782,7 @@ final class le {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -4907,7 +4907,7 @@ final class le {
             stackIn_32_0 = stackIn_28_0;
             stackIn_32_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(')').toString());
         }
     }
 

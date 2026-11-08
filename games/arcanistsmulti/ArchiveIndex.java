@@ -243,7 +243,7 @@ final class ArchiveIndex {
           } else {
             stackIn_107_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_106_0), ((StringBuilder) (Object) stackIn_106_1).append(stackIn_107_2).append(',').append(param1).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_106_0), ((StringBuilder) (Object) stackIn_106_1).append(stackIn_107_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -331,7 +331,7 @@ final class ArchiveIndex {
           } else {
             stackIn_37_2 = "{...}";
           }
-          throw aa.a((Throwable) (stackIn_36_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(')').toString());
+          throw aa.wrapException((Throwable) (stackIn_36_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(')').toString());
         }
     }
 
@@ -365,13 +365,13 @@ final class ArchiveIndex {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
     final static boolean b(int param0) {
         int var1 = 60 % ((8 - param0) / 48);
-        return re.a((byte) -68, cd.e(122));
+        return re.a((byte) -68, cd.getApplet(122));
     }
 
     final static void a(byte param0) {
@@ -395,7 +395,7 @@ final class ArchiveIndex {
               }
             }
           } else {
-            ce.field_g[12] = eh.field_d;
+            ce.field_g[12] = ValidationState.field_d;
           }
         } else {
           if ((1 << SpriteState.field_z.field_I & SpriteState.field_z.field_b) != 0) {
@@ -434,7 +434,7 @@ final class ArchiveIndex {
           }
           this.a(param0, 12);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "jk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "jk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

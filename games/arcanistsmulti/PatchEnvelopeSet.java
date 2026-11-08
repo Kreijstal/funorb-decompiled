@@ -108,7 +108,7 @@ final class PatchEnvelopeSet {
           } else {
             stackIn_38_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_37_0), ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(',').append(param2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_37_0), ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -130,7 +130,7 @@ final class PatchEnvelopeSet {
         ClientException.field_b.b(ci.field_c, param0 + 15637);
     }
 
-    final static void b(int param0) {
+    final static void closeNetworkResources(int param0) {
         try {
           int var1_int = 0;
           int var3 = ArcanistsMulti.field_G ? 1 : 0;
@@ -161,7 +161,7 @@ final class PatchEnvelopeSet {
               field_f = (String) null;
             }
           } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) ((Object) runtimeException), "ba.B(" + param0 + ')');
+            throw aa.wrapException((Throwable) ((Object) runtimeException), "ba.B(" + param0 + ')');
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -181,7 +181,7 @@ final class PatchEnvelopeSet {
         hb.f((byte) -102);
     }
 
-    final static String a(int param0, int param1, byte param2, byte[] param3) {
+    final static String decodeCp1252String(int param0, int param1, byte param2, byte[] param3) {
         int incrementValue$0 = 0;
         char[] var4 = null;
         int var5 = 0;
@@ -240,7 +240,7 @@ final class PatchEnvelopeSet {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 

@@ -28,9 +28,9 @@ final class pk implements Iterable {
           var4 = ln.field_I[var2];
           var5 = new int[var3];
           for (var6 = 0; var6 < var3; var6++) {
-            var5[var6] = ph.field_c[dg.a((int) var4[var6], 255)];
+            var5[var6] = ph.field_c[NameValidator.bitAnd((int) var4[var6], 255)];
           }
-          var1[var2] = new Sprite(pb.field_g, gn.field_a, hl.field_l[var2], be.field_d[var2], jg.field_p[var2], ho.field_i[var2], var5);
+          var1[var2] = new Sprite(pb.field_g, gn.field_a, hl.field_l[var2], SectorCacheStore.field_d[var2], jg.field_p[var2], ho.field_i[var2], var5);
         }
         CanvasRasterBuffer.a(-18229);
         return var1;
@@ -56,7 +56,7 @@ final class pk implements Iterable {
           param1.next.previous = param1;
           param1.key = param2;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "pk.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "pk.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -146,7 +146,7 @@ final class pk implements Iterable {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 

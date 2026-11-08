@@ -95,7 +95,7 @@ final class oo extends DualLinkNode {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -117,7 +117,7 @@ final class oo extends DualLinkNode {
     }
 
     final static void c(int param0) {
-        uh var1 = (uh) (lk.field_j.removeLast(true));
+        uh var1 = (uh) (Js5Transport.field_j.removeLast(true));
         if (var1 == null) {
           throw new IllegalStateException();
         }
@@ -159,14 +159,14 @@ final class oo extends DualLinkNode {
         }
         if (null != this.field_D) {
           for (var2 = 0; var2 < this.field_D.length; var2++) {
-            this.field_D[var2] = fj.b(this.field_D[var2], 32768);
+            this.field_D[var2] = fj.bitOr(this.field_D[var2], 32768);
           }
         }
         if (null != this.field_p) {
           var4 = 0;
           var2Lifetime1 = var4;
           while (this.field_p.length > var4) {
-            this.field_p[var4] = fj.b(this.field_p[var4], 32768);
+            this.field_p[var4] = fj.bitOr(this.field_p[var4], 32768);
             var4++;
           }
         }
@@ -202,7 +202,7 @@ final class oo extends DualLinkNode {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -212,7 +212,7 @@ final class oo extends DualLinkNode {
 
     final static void g(int param0) {
         PatchEnvelopeSet.c(0);
-        ee.a(param0, (byte) 30);
+        DebouncedValidator.a(param0, (byte) 30);
     }
 
     static {

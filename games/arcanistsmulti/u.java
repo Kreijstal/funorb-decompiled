@@ -218,7 +218,7 @@ final class u {
           } else {
             stackIn_72_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_68_0), ((StringBuilder) (Object) stackIn_71_1).append(stackIn_72_2).append(',').append(param5).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_68_0), ((StringBuilder) (Object) stackIn_71_1).append(stackIn_72_2).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -266,7 +266,7 @@ final class u {
             var14 = var12 + (-1 + (var11 + var13) >> 3);
             var8 = var8 + var11;
             var13 += 24;
-            dupTemp$0 = fj.b(var7_int, var10 >>> var13);
+            dupTemp$0 = fj.bitOr(var7_int, var10 >>> var13);
             var7_int = dupTemp$0;
             param0[var12] = (byte)dupTemp$0;
             if (var12 < var14) {
@@ -311,7 +311,7 @@ final class u {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -329,7 +329,7 @@ final class u {
           if (0 >= param2) {
             throw new IllegalArgumentException();
           }
-          if (uj.a(-2147483648, param2)) {
+          if (ScreenDisplayMode.a(-2147483648, param2)) {
             stackIn_5_0 = (int)(((long)param0.c((byte) -46) & 4294967295L) * (long)param2 >> 32);
             return stackIn_5_0;
           }
@@ -337,7 +337,7 @@ final class u {
           do {
             var4 = param0.c((byte) -46);
           } while (var3_int <= var4);
-          stackIn_10_0 = dh.a(var4, true, param2);
+          stackIn_10_0 = dh.floorMod(var4, true, param2);
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -349,7 +349,7 @@ final class u {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -433,7 +433,7 @@ final class u {
               var21 = ((PacketBuffer) ((Object) var1)).readString(-1);
               var20 = ((PacketBuffer) ((Object) var1)).readString(-1);
               var22 = ((PacketBuffer) ((Object) var1)).readString(-1);
-              var23 = fn.a(var3_long, 119);
+              var23 = fn.lookupEntry(var3_long, 119);
               var8_ref_cg = var23;
               stackIn_45_0 = (var20.equals("")) ? 0 : 1;
               var9 = stackIn_45_0;
@@ -460,7 +460,7 @@ final class u {
             if (6 == var2) {
               var3_longLifetime1 = ((PacketBuffer) ((Object) var1)).readLong(-943038560);
               var5 = ((PacketBuffer) ((Object) var1)).readUnsignedByte((byte) -96);
-              var24 = fn.a(var3_longLifetime1, 111);
+              var24 = fn.lookupEntry(var3_longLifetime1, 111);
               if (var24 != null) {
                 if (var24.field_Kb) {
                   oe.field_b = oe.field_b - 1;
@@ -613,7 +613,7 @@ final class u {
                 }
                 var3_longLifetime2 = ((PacketBuffer) ((Object) var1)).readLong(-943038560);
                 var5Lifetime1Lifetime1 = ((PacketBuffer) ((Object) var1)).readUnsignedByte((byte) 107);
-                var29 = fn.a(var3_longLifetime2, 123);
+                var29 = fn.lookupEntry(var3_longLifetime2, 123);
                 if (var29 != null) {
                   if (var5Lifetime1Lifetime1 != 0) {
                     var29.field_Eb = vd.field_i;
@@ -632,7 +632,7 @@ final class u {
                 return;
               }
               var3_longLifetime2Lifetime1 = ((PacketBuffer) ((Object) var1)).readLong(-943038560);
-              var30 = fn.a(var3_longLifetime2Lifetime1, 121);
+              var30 = fn.lookupEntry(var3_longLifetime2Lifetime1, 121);
               if (var30 != null) {
                 if (var2 != 14) {
                   if (!var30.field_Kb) {
@@ -716,7 +716,7 @@ final class u {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var1_ref), "u.D(" + param0 + ')');
+          throw aa.wrapException((Throwable) ((Object) var1_ref), "u.D(" + param0 + ')');
         }
     }
 
@@ -793,7 +793,7 @@ final class u {
                   if (var11 == var8) {
                     var12 = 1 << -var10 + 32;
                     if ((var12 & var11) == 0) {
-                      var3[var10] = fj.b(var12, var11);
+                      var3[var10] = fj.bitOr(var12, var11);
                       continue;
                     }
                     var3[var10] = var3[-1 + var10];
@@ -847,7 +847,7 @@ final class u {
           } else {
             stackIn_39_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(')').toString());
         }
     }
 
@@ -927,7 +927,7 @@ final class u {
           } else {
             stackIn_44_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_43_0), ((StringBuilder) (Object) stackIn_43_1).append(stackIn_44_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_43_0), ((StringBuilder) (Object) stackIn_43_1).append(stackIn_44_2).append(')').toString());
         }
     }
 

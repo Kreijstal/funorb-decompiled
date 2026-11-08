@@ -9,7 +9,7 @@ final class cc {
     static boolean[] field_d;
     static String field_c;
 
-    final static jm b(byte param0) {
+    final static jm getDefaultTextPainter(byte param0) {
         int var1 = 125 % ((34 - param0) / 49);
         if (field_f == null) {
           field_f = new jm(vc.field_e, 20, 0, 0, 0, 11579568, -1, 0, 0, vc.field_e.field_C, -1, 2147483647, true);
@@ -17,7 +17,7 @@ final class cc {
         return field_f;
     }
 
-    final static int a(int param0, int param1, int param2) {
+    final static int approximateAngle(int param0, int param1, int param2) {
         if (param2 > -86) {
           return -113;
         }
@@ -30,9 +30,9 @@ final class cc {
     final static boolean c(byte param0) {
         if (param0 != 118) {
           cc.c((byte) 58);
-          return eh.field_e != null ? true : false;
+          return ValidationState.field_e != null ? true : false;
         }
-        return eh.field_e != null ? true : false;
+        return ValidationState.field_e != null ? true : false;
     }
 
     public static void releaseStatics(byte param0) {

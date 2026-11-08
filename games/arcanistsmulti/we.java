@@ -15,7 +15,7 @@ final class we {
           Throwable decompiledCaughtException = null;
           IOException var2 = null;
           boolean decompiledFrameRemainder0 = true;
-          if (null != ch.field_c) {
+          if (null != CredentialKind.field_c) {
             if (0 <= param0) {
               decompiledFrameRemainder0 = (qc.field_c == ob.field_eb);
               if ((decompiledFrameRemainder0) && (he.field_e.position == 0 &&
@@ -34,7 +34,7 @@ final class we {
               }
               if (he.field_e.position > 0) {
                 try {
-                  ch.field_c.a(he.field_e.position, 0, (byte) 122, he.field_e.payload);
+                  CredentialKind.field_c.a(he.field_e.position, 0, (byte) 122, he.field_e.payload);
                   fo.field_d = qj.b(-26572);
                 } catch (java.io.IOException decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
@@ -81,7 +81,7 @@ final class we {
             }
             var1_int = 1;
           }
-          wl.field_S.a(ao.a(param0 + 31131, an.field_g, me.field_I), ao.a(param0 ^ -31131, pb.field_h, ja.field_s), -97);
+          wl.field_S.a(ao.a(param0 + 31131, EmailLoginCredentials.field_g, me.field_I), ao.a(param0 ^ -31131, pb.field_h, ja.field_s), -97);
           if (wl.field_S.b(true)) {
             var1_int = 1;
           }
@@ -90,7 +90,7 @@ final class we {
             0 <= wl.field_S.field_h) {
             var2 = cf.field_c[wl.field_S.field_h];
             if (var2 == 2) {
-              vk.c(false);
+              Js5NetworkRequest.c(false);
             }
           }
           stackIn_17_0 = var2;
@@ -98,7 +98,7 @@ final class we {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var1), "we.F(" + param0 + ')');
+          throw aa.wrapException((Throwable) ((Object) var1), "we.F(" + param0 + ')');
         }
     }
 
@@ -204,7 +204,7 @@ final class we {
           } else {
             stackIn_32_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param6).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param6).append(')').toString());
         }
     }
 

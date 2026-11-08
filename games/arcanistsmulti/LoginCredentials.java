@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class bd {
+abstract class LoginCredentials {
     static java.applet.Applet field_c;
     static int field_a;
     static String field_d;
@@ -16,9 +16,9 @@ abstract class bd {
         field_c = null;
     }
 
-    abstract void a(PacketBuffer param0, int param1);
+    abstract void writeTo(PacketBuffer param0, int param1);
 
-    final static boolean a(byte param0, String param1) {
+    final static boolean isLengthOutOfRange(byte param0, String param1) {
         RuntimeException var2 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
@@ -31,7 +31,7 @@ abstract class bd {
               return true;
             }
             if (param0 >= -50) {
-              bd.releaseStatics(117);
+              LoginCredentials.releaseStatics(117);
             }
             return false;
           }
@@ -46,11 +46,11 @@ abstract class bd {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
-    abstract ch a(int param0);
+    abstract CredentialKind getCredentialKind(int param0);
 
     static {
         field_a = 0;

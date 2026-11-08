@@ -30,14 +30,14 @@ final class vm {
         synchronized (var1) {
           PacketBuffer.field_m = rk.field_K;
           rf.field_o = rf.field_o + 1;
-          an.field_g = j.field_g;
+          EmailLoginCredentials.field_g = j.field_g;
           me.field_I = dd.field_i;
           ArchiveProvider.field_d = qa.field_g;
           qa.field_g = false;
-          re.field_r = eh.field_c;
+          re.field_r = ValidationState.field_c;
           pb.field_h = bo.field_e;
           ja.field_s = wd.field_j;
-          eh.field_c = param0;
+          ValidationState.field_c = param0;
         }
     }
 

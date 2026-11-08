@@ -40,7 +40,7 @@ final class bc {
             bc.a(4, -83);
           }
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "bc.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "bc.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

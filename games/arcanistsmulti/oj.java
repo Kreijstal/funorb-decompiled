@@ -29,7 +29,7 @@ final class oj {
         RuntimeException decompiledCaughtException = null;
         var6 = ArcanistsMulti.field_G ? 1 : 0;
         try {
-          var2 = fd.a(28, param1, "jagex-last-login-method");
+          var2 = fd.getCookie(28, param1, "jagex-last-login-method");
           if (var2 == null) {
             stackIn_3_0 = vh.field_f;
             return stackIn_3_0;
@@ -64,7 +64,7 @@ final class oj {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 
@@ -201,7 +201,7 @@ final class oj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var5), "oj.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw aa.wrapException((Throwable) ((Object) var5), "oj.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 

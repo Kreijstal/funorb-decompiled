@@ -139,7 +139,7 @@ final class ResourceArchive {
             stackIn_37_0 = var11_ref_RuntimeException;
             stackIn_37_1 = new StringBuilder();
             stackIn_38_2 = (param1 != null);
-            throw aa.a((Throwable) ((Object) stackIn_37_0), ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(" ").append(param3).append(" ").append(var9.length).append(" ").append(mj.a(var9.length, (byte) -112, var9)).append(" ").append(mj.a(-2 + var9.length, (byte) -86, var9)).append(" ").append(this.field_i.field_h[param3]).append(" ").append(this.field_i.field_p).toString());
+            throw aa.wrapException((Throwable) ((Object) stackIn_37_0), ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(" ").append(param3).append(" ").append(var9.length).append(" ").append(mj.a(var9.length, (byte) -112, var9)).append(" ").append(mj.a(-2 + var9.length, (byte) -86, var9)).append(" ").append(this.field_i.field_h[param3]).append(" ").append(this.field_i.field_p).toString());
           }
           if (this.field_h) {
             this.field_c[param3] = null;
@@ -265,7 +265,7 @@ final class ResourceArchive {
           } else {
             stackIn_106_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_105_0), ((StringBuilder) (Object) stackIn_105_1).append(stackIn_106_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_105_0), ((StringBuilder) (Object) stackIn_105_1).append(stackIn_106_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -307,7 +307,7 @@ final class ResourceArchive {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -386,7 +386,7 @@ final class ResourceArchive {
           return true;
         }
         if (!param0) {
-          ResourceArchive.a(((boolean[]) (this.field_c[0]))[14]);
+          ResourceArchive.releaseStatics(((boolean[]) (this.field_c[0]))[14]);
         }
         this.c(param1, -125);
         if (null != this.field_c[param1]) {
@@ -401,7 +401,7 @@ final class ResourceArchive {
         }
         int var1 = mb.j((byte) 19);
         int var2 = IntrusiveNodeHashTable.b(25117);
-        ol.field_f.a(-mj.field_r + bk.field_I, -tg.field_d + qe.field_o, -98, var1 + (mj.field_r << 1), (tg.field_d << 1) + var2);
+        ol.field_f.draw(-mj.field_r + bk.field_I, -tg.field_d + qe.field_o, -98, var1 + (mj.field_r << 1), (tg.field_d << 1) + var2);
         mn.d(-1);
     }
 
@@ -509,7 +509,7 @@ final class ResourceArchive {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -563,7 +563,7 @@ final class ResourceArchive {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -627,7 +627,7 @@ final class ResourceArchive {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 
@@ -662,15 +662,15 @@ final class ResourceArchive {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_d = null;
         field_g = null;
         if (param0) {
-          ResourceArchive.a(true);
+          ResourceArchive.releaseStatics(true);
         }
         field_a = null;
     }
@@ -773,7 +773,7 @@ final class ResourceArchive {
           } else {
             stackIn_31_2 = "{...}";
           }
-          throw aa.a((Throwable) (stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(')').toString());
+          throw aa.wrapException((Throwable) (stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(')').toString());
         }
     }
 
@@ -828,7 +828,7 @@ final class ResourceArchive {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -864,7 +864,7 @@ final class ResourceArchive {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -896,7 +896,7 @@ final class ResourceArchive {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -911,7 +911,7 @@ final class ResourceArchive {
           this.field_h = param1 ? true : false;
           this.field_e = param0;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "eg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "eg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

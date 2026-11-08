@@ -7,11 +7,11 @@ final class uf {
 
     final static void a(int param0, int param1, int param2, boolean param3, int param4, String param5, int param6, int param7) {
         try {
-          if (ch.field_d.field_U != 0) {
+          if (CredentialKind.field_d.field_U != 0) {
             if (wh.field_g) {
             } else {
-              if (!ld.field_p) {
-                ef.field_r = true;
+              if (!AlternateUsernameCredentials.field_p) {
+                SocketJs5Transport.field_r = true;
               } else {
                 gj.a((byte) -124);
               }
@@ -20,22 +20,22 @@ final class uf {
           if (param4 != -7361) {
             field_b = (String) null;
           }
-          if (ef.field_r) {
+          if (SocketJs5Transport.field_r) {
             fn.a(20, param5, param1, param1, (byte) -104, param2, param7, param0, param6);
             tm.field_d.b(param3, (byte) 52);
             if (param3) {
               if (hf.field_f.field_U != 0) {
-                ef.field_r = false;
+                SocketJs5Transport.field_r = false;
               }
               if (0 == ih.field_d.field_U) {
                 return;
               }
               ue.b(10);
-              ef.field_r = false;
+              SocketJs5Transport.field_r = false;
             }
           }
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "uf.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + param7 + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "uf.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + param7 + ')');
         }
     }
 

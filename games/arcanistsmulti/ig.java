@@ -53,7 +53,7 @@ final class ig {
           var7 = -10 + var5_int;
           if (param1.field_F > 0 &&
             param1.field_H != null) {
-            im.d(-24000);
+            UsernameCredentials.d(-24000);
           }
           ol.field_i = 0;
           var8 = 0;
@@ -152,7 +152,7 @@ final class ig {
           } else {
             stackIn_64_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_63_0), ((StringBuilder) (Object) stackIn_63_1).append(stackIn_64_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_63_0), ((StringBuilder) (Object) stackIn_63_1).append(stackIn_64_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -198,7 +198,7 @@ final class ig {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -211,7 +211,7 @@ final class ig {
           var4 = (nn) (this.field_c.a((byte) -79, param1));
           this.a(var4, 2147483647);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "ig.B(" + param0 + ',' + param1 + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "ig.B(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -237,7 +237,7 @@ final class ig {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -267,7 +267,7 @@ final class ig {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -318,7 +318,7 @@ final class ig {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4_ref = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var4_ref), "ig.D(" + param0 + ',' + param1 + ')');
+          throw aa.wrapException((Throwable) ((Object) var4_ref), "ig.D(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -330,7 +330,7 @@ final class ig {
           field_a = null;
           field_d = null;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "ig.A(" + param0 + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "ig.A(" + param0 + ')');
         }
     }
 
@@ -355,7 +355,7 @@ final class ig {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var2), "ig.F(" + param0 + ',' + param1 + ')');
+          throw aa.wrapException((Throwable) ((Object) var2), "ig.F(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -388,7 +388,7 @@ final class ig {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) runtimeException), "ig.<init>(" + param0 + ',' + param1 + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "ig.<init>(" + param0 + ',' + param1 + ')');
         }
     }
 

@@ -8,20 +8,20 @@ final class fj extends IntrusiveNode {
     static int field_j;
     int field_k;
 
-    final static void a(java.awt.Component param0, int param1) {
+    final static void detachKeyboardInput(java.awt.Component param0, int param1) {
         try {
-          param0.removeKeyListener(ch.field_a);
+          param0.removeKeyListener(CredentialKind.field_a);
           if (param1 <= 77) {
             field_j = -47;
           }
-          param0.removeFocusListener(ch.field_a);
+          param0.removeFocusListener(CredentialKind.field_a);
           ub.field_b = -1;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "fj.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "fj.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final static boolean a(int param0, CharSequence param1, boolean param2, int param3) {
+    final static boolean isIntegerInRadix(int param0, CharSequence param1, boolean param2, int param3) {
         int var8 = 0;
         int stackIn_41_0 = 0;
         RuntimeException stackIn_44_0 = null;
@@ -97,7 +97,7 @@ final class fj extends IntrusiveNode {
           } else {
             stackIn_45_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_44_0), ((StringBuilder) (Object) stackIn_44_1).append(stackIn_45_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_44_0), ((StringBuilder) (Object) stackIn_44_1).append(stackIn_45_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -108,16 +108,16 @@ final class fj extends IntrusiveNode {
           var3.writeOpcode((byte) -36, param2);
           if (param0 != -26971) {
             String var4 = (String) null;
-            fj.a((String) null, 34, (ResourceArchive) null, (String) null);
+            fj.loadSprite((String) null, 34, (ResourceArchive) null, (String) null);
           }
           var3.writeByte(param1.field_p, (byte) -41);
           var3.writeByte(param1.field_t, (byte) -85);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "fj.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "fj.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
-    final static Sprite a(String param0, int param1, ResourceArchive param2, String param3) {
+    final static Sprite loadSprite(String param0, int param1, ResourceArchive param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -160,11 +160,11 @@ final class fj extends IntrusiveNode {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
-    static int b(int param0, int param1) {
+    static int bitOr(int param0, int param1) {
         return param0 | param1;
     }
 
@@ -184,7 +184,7 @@ final class fj extends IntrusiveNode {
           vf.field_k.h(77);
         }
         String var1 = ho.b((byte) 103);
-        wh.field_f = new e(var1, (String) null, true, false, false);
+        wh.field_f = new LoginPanel(var1, (String) null, true, false, false);
         ClientException.field_b.b(g.field_e, 15637);
         g.field_e.a((byte) -92, (UiComponent) (wh.field_f));
         g.field_e.a(111);
@@ -198,7 +198,7 @@ final class fj extends IntrusiveNode {
         field_i = null;
     }
 
-    final static int a(int param0, int param1) {
+    final static int bitLength(int param0, int param1) {
         int var2;
         nk var3;
         int var2Lifetime1;

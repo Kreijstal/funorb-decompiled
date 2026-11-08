@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class lk {
+abstract class Js5Transport {
     tg field_b;
     static IntrusiveDeque field_j;
     static String field_l;
@@ -17,7 +17,7 @@ abstract class lk {
     volatile int field_o;
     byte field_a;
     volatile int field_i;
-    vk field_n;
+    Js5NetworkRequest field_n;
 
     final boolean c(byte param0) {
         int var2 = 68 / ((param0 + 24) / 40);
@@ -42,7 +42,7 @@ abstract class lk {
     }
 
     final static boolean f(int param0) {
-        if (!ef.field_r) {
+        if (!SocketJs5Transport.field_r) {
           return false;
         }
         if (~nj.field_c == param0) {
@@ -53,7 +53,7 @@ abstract class lk {
 
     final static boolean a(int param0, byte param1) {
         if (param1 > -3) {
-          lk.f(-108);
+          Js5Transport.f(-108);
           if (-1 == param0) {
             return true;
           }
@@ -112,7 +112,7 @@ abstract class lk {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -120,13 +120,13 @@ abstract class lk {
         try {
           tj.field_t.drawText(param2, param1 + 1, 1 + tj.field_t.field_C + param0, (16711422 & param3) >> 1, 4144959 & param3 >> 2);
           if (param5 >= -104) {
-            lk.f(68);
+            Js5Transport.f(68);
           }
           tj.field_t.drawText(param2, param1, tj.field_t.field_C + (param0 - 1), param3, param3);
           tj.field_t.drawText(param2, -1 + param1, tj.field_t.field_C + param0, param3, param3);
           tj.field_t.drawText(param2, param1, param0 + tj.field_t.field_C, param4, -1);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "lk.R(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "lk.R(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -139,17 +139,17 @@ abstract class lk {
         }
     }
 
-    final vk a(int param0, boolean param1, int param2, byte param3, byte param4) {
-        vk stackIn_3_0 = null;
+    final Js5NetworkRequest a(int param0, boolean param1, int param2, byte param3, byte param4) {
+        Js5NetworkRequest stackIn_3_0 = null;
         boolean stackIn_4_1 = false;
-        vk stackIn_15_0 = null;
+        Js5NetworkRequest stackIn_15_0 = null;
         boolean stackIn_16_1 = false;
         long var6;
-        vk var8;
-        vk var8Lifetime1;
+        Js5NetworkRequest var8;
+        Js5NetworkRequest var8Lifetime1;
         var6 = ((long)param2 << 32) + (long)param0;
         if (param3 == -80) {
-          var8 = new vk();
+          var8 = new Js5NetworkRequest();
           var8.field_y = param4;
           stackIn_15_0 = var8;
           stackIn_16_1 = (!param1) ? false : true;
@@ -169,7 +169,7 @@ abstract class lk {
           return var8;
         }
         this.c((byte) -127);
-        var8Lifetime1 = new vk();
+        var8Lifetime1 = new Js5NetworkRequest();
         var8Lifetime1.field_y = param4;
         stackIn_3_0 = var8Lifetime1;
         stackIn_4_1 = (!param1) ? false : true;
@@ -197,7 +197,7 @@ abstract class lk {
         return this.field_b.b((byte) -112) + this.field_g.b((byte) -68);
     }
 
-    lk() {
+    Js5Transport() {
         this.field_b = new tg();
         this.field_g = new tg();
         this.field_f = new tg();

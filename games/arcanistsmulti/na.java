@@ -53,7 +53,7 @@ final class na extends kc {
         return (int)this.b(false);
     }
 
-    public static void g(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 > 107) {
           field_lc = null;
           field_Tb = null;
@@ -190,7 +190,7 @@ final class na extends kc {
           } else {
             stackIn_86_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_85_0), ((StringBuilder) (Object) stackIn_85_1).append(stackIn_86_2).append(',').append(param1).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_85_0), ((StringBuilder) (Object) stackIn_85_1).append(stackIn_86_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -206,7 +206,7 @@ final class na extends kc {
     }
 
     final static void i(byte param0) {
-        UiContainer.a(1, cd.e(108));
+        UiContainer.a(1, cd.getApplet(108));
         int var1 = -86 % ((param0 + 14) / 33);
     }
 
@@ -231,7 +231,7 @@ final class na extends kc {
             vf.field_r = param1;
             gm.field_d = param0;
             ng.field_G = param11;
-            lk.field_d = param4;
+            Js5Transport.field_d = param4;
             if (param3 != 0) {
               field_gc = (String) null;
             }
@@ -264,7 +264,7 @@ final class na extends kc {
             } else {
               stackIn_19_2 = "{...}";
             }
-            throw aa.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param13).append(')').toString());
+            throw aa.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param13).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

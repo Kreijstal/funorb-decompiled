@@ -8,7 +8,7 @@ final class fc {
     static Sprite[] field_e;
     static boolean field_a;
 
-    final static void a(int param0, int[] param1, int param2, int param3, int param4, int param5, byte param6, byte[] param7, int param8, int param9) {
+    final static void blitByteMask(int param0, int[] param1, int param2, int param3, int param4, int param5, byte param6, byte[] param7, int param8, int param9) {
         int var11 = 0;
         int incrementValue$3 = 0;
         int incrementValue$4 = 0;
@@ -96,11 +96,11 @@ final class fc {
           } else {
             stackIn_34_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(',').append(param8).append(',').append(param9).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(',').append(param8).append(',').append(param9).append(')').toString());
         }
     }
 
-    final static void a(byte param0, kc param1) {
+    final static void resetChildOffsets(byte param0, kc param1) {
         int var3 = ArcanistsMulti.field_G ? 1 : 0;
         kc var4 = (kc) (param1.field_G.first(12623));
         if (param0 >= -60) {
@@ -119,7 +119,7 @@ final class fc {
           param1.field_db = 0;
           param1.field_B = 0;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "fc.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "fc.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -149,7 +149,7 @@ final class fc {
             return false;
           }
           var5 = -27 % ((param0 + 66) / 51);
-          e.a(var6, true);
+          LoginPanel.a(var6, true);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -161,7 +161,7 @@ final class fc {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 

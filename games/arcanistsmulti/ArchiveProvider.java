@@ -59,7 +59,7 @@ abstract class ArchiveProvider {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var1_ref), "tl.E(" + param0 + ')');
+          throw aa.wrapException((Throwable) ((Object) var1_ref), "tl.E(" + param0 + ')');
         }
     }
 
@@ -77,10 +77,10 @@ abstract class ArchiveProvider {
           if (!da.field_b.a("commonui", -24417)) {
             return 40;
           }
-          if (!ea.field_C.c(-10923)) {
+          if (!DiskCacheRequest.field_C.c(-10923)) {
             return 50;
           }
-          if (!ea.field_C.a("commonui", -24417)) {
+          if (!DiskCacheRequest.field_C.a("commonui", -24417)) {
             return 60;
           }
           if (!ho.field_g.c(-10923)) {
@@ -108,10 +108,10 @@ abstract class ArchiveProvider {
         if (!da.field_b.a("commonui", -24417)) {
           return 57;
         }
-        if (!ea.field_C.c(-10923)) {
+        if (!DiskCacheRequest.field_C.c(-10923)) {
           return 71;
         }
-        if (!ea.field_C.a("commonui", param0 ^ 24364)) {
+        if (!DiskCacheRequest.field_C.a("commonui", param0 ^ 24364)) {
           return 80;
         }
         if (!ho.field_g.c(-10923)) {

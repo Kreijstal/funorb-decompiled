@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ld extends im {
+final class AlternateUsernameCredentials extends UsernameCredentials {
     static ResourceArchive field_q;
     static boolean field_p;
     static String field_l;
@@ -13,13 +13,13 @@ final class ld extends im {
 
     final static PcmStreamMixer a(boolean param0) {
         if (param0) {
-          ld.c((byte) -35);
+          AlternateUsernameCredentials.c((byte) -35);
           return pc.field_e;
         }
         return pc.field_e;
     }
 
-    ld(long param0, String param1) {
+    AlternateUsernameCredentials(long param0, String param1) {
         super(param0, param1);
     }
 
@@ -30,13 +30,13 @@ final class ld extends im {
         if (!param1) {
           return var2;
         }
-        ld.a(15, true);
+        AlternateUsernameCredentials.a(15, true);
         return var2;
     }
 
-    final ch a(int param0) {
+    final CredentialKind getCredentialKind(int param0) {
         if (param0 != 0) {
-          return (ch) null;
+          return (CredentialKind) null;
         }
         return fe.field_n;
     }
@@ -68,7 +68,7 @@ final class ld extends im {
             field_o = (String) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "ld.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "ld.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

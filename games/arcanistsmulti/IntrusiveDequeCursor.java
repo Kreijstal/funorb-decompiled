@@ -64,7 +64,7 @@ final class IntrusiveDequeCursor {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -106,7 +106,7 @@ final class IntrusiveDequeCursor {
           }
           this.field_e = param1;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "oc.J(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "oc.J(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -121,7 +121,7 @@ final class IntrusiveDequeCursor {
         return var2;
     }
 
-    public static void b(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_a = null;
         field_h = null;
         field_d = null;
@@ -175,8 +175,8 @@ final class IntrusiveDequeCursor {
           var6_int = 16 - (-param3 - 485 - (2 + param1));
           lj.field_t.a(var6_int - 6, 3, 3, n.field_g.field_I - 6, (byte) -120);
           var7 = -5 + lj.field_t.field_I;
-          ch.field_d.a(2 + (485 + param3) + param1, 5, -param4 + var7, param4, (byte) -120);
-          SingleChildContainer.field_D.a(-sa.field_Cb.field_x - param3 + ch.field_d.field_x, param3, 0, param4, (byte) -120);
+          CredentialKind.field_d.a(2 + (485 + param3) + param1, 5, -param4 + var7, param4, (byte) -120);
+          SingleChildContainer.field_D.a(-sa.field_Cb.field_x - param3 + CredentialKind.field_d.field_x, param3, 0, param4, (byte) -120);
           sa.field_Cb.a(sa.field_Cb.field_x, param3 + SingleChildContainer.field_D.field_x, 0, param4, (byte) -120);
           var7 = var7 - (2 + param4);
           qo.field_f.a(5, param1, param1 + param3 + 487, false, 5, var7 - 5, 2);
@@ -210,7 +210,7 @@ final class IntrusiveDequeCursor {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var6), "oc.G(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw aa.wrapException((Throwable) ((Object) var6), "oc.G(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -250,7 +250,7 @@ final class IntrusiveDequeCursor {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -261,7 +261,7 @@ final class IntrusiveDequeCursor {
         try {
           this.field_e = param0;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "oc.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "oc.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bi extends EditableTextWidget implements el {
+final class bi extends EditableTextWidget implements ValidationProviderSource {
     static int field_I;
     private int field_V;
-    private pd field_T;
+    private ValidationProvider field_T;
     static kc field_U;
     static String field_W;
 
@@ -22,7 +22,7 @@ final class bi extends EditableTextWidget implements el {
           if (param0 > -103) {
             field_U = (kc) null;
           }
-          GzipDecoder.a(false, ld.field_m, -24595, param1, param1 + MouseInputHandler.field_b, param1 + param1, qa.field_m);
+          GzipDecoder.a(false, AlternateUsernameCredentials.field_m, -24595, param1, param1 + MouseInputHandler.field_b, param1 + param1, qa.field_m);
           if (param1 >= MouseInputHandler.field_b) {
             return;
           }
@@ -31,7 +31,7 @@ final class bi extends EditableTextWidget implements el {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var2), "bi.H(" + param0 + ',' + param1 + ')');
+          throw aa.wrapException((Throwable) ((Object) var2), "bi.H(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -62,7 +62,7 @@ final class bi extends EditableTextWidget implements el {
             stackIn_13_0 = (byte[]) (param2);
             return stackIn_13_0;
           }
-          stackIn_11_0 = dd.a(param2, 0);
+          stackIn_11_0 = dd.copyBytes(param2, 0);
           return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -74,7 +74,7 @@ final class bi extends EditableTextWidget implements el {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -85,7 +85,7 @@ final class bi extends EditableTextWidget implements el {
             return null;
           }
           if (this.field_q != null) {
-            ih.a(this.field_v - (this.field_V - an.field_g), me.field_I, (byte) 69);
+            ih.a(this.field_v - (this.field_V - EmailLoginCredentials.field_g), me.field_I, (byte) 69);
             return this.field_q;
           }
           return null;
@@ -94,7 +94,7 @@ final class bi extends EditableTextWidget implements el {
           return null;
         }
         if (this.field_q != null) {
-          ih.a(this.field_v - (this.field_V - an.field_g), me.field_I, (byte) 69);
+          ih.a(this.field_v - (this.field_V - EmailLoginCredentials.field_g), me.field_I, (byte) 69);
           return this.field_q;
         }
         return null;
@@ -103,15 +103,15 @@ final class bi extends EditableTextWidget implements el {
     final void updatePointer(UiComponent param0, int param1, int param2, int param3) {
         try {
           super.updatePointer(param0, param1, param2, param3);
-          this.field_V = an.field_g - (this.field_n + param1);
+          this.field_V = EmailLoginCredentials.field_g - (this.field_n + param1);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "bi.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "bi.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
-    public final pd a(int param0) {
+    public final ValidationProvider getValidationProvider(int param0) {
         if (param0 != 0) {
-          return (pd) null;
+          return (ValidationProvider) null;
         }
         return this.field_T;
     }
@@ -119,16 +119,16 @@ final class bi extends EditableTextWidget implements el {
     final void notifyTextChanged(int param0) {
         super.notifyTextChanged(param0);
         if (null != this.field_T) {
-          this.field_T.b(-17444);
+          this.field_T.restartDebounce(-17444);
         }
     }
 
-    final void a(pd param0, byte param1) {
+    final void a(ValidationProvider param0, byte param1) {
         try {
           this.field_T = param0;
           int var3_int = -16 / ((-87 - param1) / 37);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "bi.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "bi.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

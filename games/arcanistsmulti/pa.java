@@ -11,25 +11,25 @@ final class pa implements Runnable {
     static co field_g;
     static String field_f;
 
-    final ea a(be param0, int param1, int param2) {
-        ea var4 = null;
+    final DiskCacheRequest a(SectorCacheStore param0, int param1, int param2) {
+        DiskCacheRequest var4 = null;
         RuntimeException var4_ref = null;
         Object var5 = null;
-        ea var6 = null;
+        DiskCacheRequest var6 = null;
         int var8 = 0;
-        ea stackIn_8_0 = null;
-        ea stackIn_17_0 = null;
+        DiskCacheRequest stackIn_8_0 = null;
+        DiskCacheRequest stackIn_17_0 = null;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         String stackIn_21_2 = null;
         Throwable decompiledCaughtException = null;
         var8 = ArcanistsMulti.field_G ? 1 : 0;
         try {
-          var4 = new ea();
+          var4 = new DiskCacheRequest();
           var4.field_A = 1;
           var5 = this.field_e;
           synchronized (var5) {
-            var6 = (ea) (this.field_e.b(37));
+            var6 = (DiskCacheRequest) (this.field_e.b(37));
             while (var6 != null) {
               if (~(long)param1 == ~var6.secondaryKey &&
                 param0 == var6.field_x &&
@@ -39,10 +39,10 @@ final class pa implements Runnable {
                 stackIn_8_0 = var4;
                 return stackIn_8_0;
               }
-              var6 = (ea) (this.field_e.e(4));
+              var6 = (DiskCacheRequest) (this.field_e.e(4));
             }
           }
-          var4.field_z = param0.a(param1, -93);
+          var4.field_z = param0.readEntry(param1, -93);
           var4.field_p = false;
           if (param2 != -6833) {
             pa.c((byte) 25);
@@ -60,11 +60,11 @@ final class pa implements Runnable {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_f = null;
         if (param0 == 32336) {
           field_g = null;
@@ -78,11 +78,11 @@ final class pa implements Runnable {
         field_c = null;
     }
 
-    final ea a(int param0, int param1, byte[] param2, be param3) {
-        ea var5 = null;
+    final DiskCacheRequest a(int param0, int param1, byte[] param2, SectorCacheStore param3) {
+        DiskCacheRequest var5 = null;
         RuntimeException var5_ref = null;
-        ea stackIn_2_0 = null;
-        ea stackIn_4_0 = null;
+        DiskCacheRequest stackIn_2_0 = null;
+        DiskCacheRequest stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -91,10 +91,10 @@ final class pa implements Runnable {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 < 45) {
-            stackIn_2_0 = (ea) null;
+            stackIn_2_0 = (DiskCacheRequest) null;
             return stackIn_2_0;
           }
-          var5 = new ea();
+          var5 = new DiskCacheRequest();
           var5.field_q = false;
           var5.field_x = param3;
           var5.field_A = 2;
@@ -119,7 +119,7 @@ final class pa implements Runnable {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -146,9 +146,9 @@ final class pa implements Runnable {
         }
     }
 
-    private final void a(byte param0, ea param1) {
+    private final void a(byte param0, DiskCacheRequest param1) {
         RuntimeException var3 = null;
-        be var5 = null;
+        SectorCacheStore var5 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -164,8 +164,8 @@ final class pa implements Runnable {
           if (param0 >= 67) {
             return;
           }
-          var5 = (be) null;
-          this.a((be) null, 118, 120);
+          var5 = (SectorCacheStore) null;
+          this.a((SectorCacheStore) null, 118, 120);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -177,7 +177,7 @@ final class pa implements Runnable {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -186,7 +186,7 @@ final class pa implements Runnable {
           InterruptedException interruptedException = null;
           Object var2 = null;
           int var5 = 0;
-          ea var7 = null;
+          DiskCacheRequest var7 = null;
           int decompiledRegionSelector0 = 0;
           Throwable decompiledCaughtException = null;
           Exception var2_ref = null;
@@ -195,7 +195,7 @@ final class pa implements Runnable {
           while (!this.field_b) {
             var2 = this.field_e;
             synchronized (var2) {
-              var7 = (ea) (this.field_e.a((byte) 124));
+              var7 = (DiskCacheRequest) (this.field_e.a((byte) 124));
               if (var7 == null) {
                 try {
                   this.field_e.wait();
@@ -214,11 +214,11 @@ final class pa implements Runnable {
             }
             try {
               if (var7.field_A == 2) {
-                var7.field_x.a(var7.field_z, true, var7.field_z.length, (int)var7.secondaryKey);
+                var7.field_x.writeEntry(var7.field_z, true, var7.field_z.length, (int)var7.secondaryKey);
                 var7.field_p = false;
               } else {
                 if (var7.field_A == 3) {
-                  var7.field_z = var7.field_x.a((int)var7.secondaryKey, -61);
+                  var7.field_z = var7.field_x.readEntry((int)var7.secondaryKey, -61);
                   var7.field_p = false;
                 } else {
                   var7.field_p = false;
@@ -256,21 +256,21 @@ final class pa implements Runnable {
         return pe.f(0);
     }
 
-    final ea a(int param0, boolean param1, be param2) {
-        ea var4 = null;
+    final DiskCacheRequest a(int param0, boolean param1, SectorCacheStore param2) {
+        DiskCacheRequest var4 = null;
         RuntimeException var4_ref = null;
-        ea stackIn_2_0 = null;
-        ea stackIn_4_0 = null;
+        DiskCacheRequest stackIn_2_0 = null;
+        DiskCacheRequest stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (!param1) {
-            stackIn_2_0 = (ea) null;
+            stackIn_2_0 = (DiskCacheRequest) null;
             return stackIn_2_0;
           }
-          var4 = new ea();
+          var4 = new DiskCacheRequest();
           var4.field_A = 3;
           var4.secondaryKey = (long)param0;
           var4.field_q = false;
@@ -288,7 +288,7 @@ final class pa implements Runnable {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -307,7 +307,7 @@ final class pa implements Runnable {
           }
           this.field_h = (Thread) (var2.field_g);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "pa.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "pa.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

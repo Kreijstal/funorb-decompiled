@@ -5,7 +5,7 @@ final class fe extends IntrusiveNode {
     int[] field_i;
     boolean field_l;
     static Sprite field_o;
-    static ch field_n;
+    static CredentialKind field_n;
     static Sprite field_g;
     static String field_m;
     static String field_p;
@@ -599,7 +599,7 @@ final class fe extends IntrusiveNode {
         this.field_l = false;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_k = null;
         field_h = null;
         field_o = null;
@@ -623,7 +623,7 @@ final class fe extends IntrusiveNode {
     }
 
     static {
-        field_n = new ch(0);
+        field_n = new CredentialKind(0);
         field_m = "Reading Book of Stone";
         field_j = 4;
         field_k = "TAB - hide chat temporarily";

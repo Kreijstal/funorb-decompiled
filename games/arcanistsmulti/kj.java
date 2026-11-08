@@ -12,10 +12,10 @@ final class kj {
     final static void a(int param0) {
         if (param0 != 21744) {
           field_d = (String) null;
-          ee.a(4, (byte) 30);
+          DebouncedValidator.a(4, (byte) 30);
           return;
         }
-        ee.a(4, (byte) 30);
+        DebouncedValidator.a(4, (byte) 30);
     }
 
     public static void a(boolean param0) {

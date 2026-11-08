@@ -89,14 +89,14 @@ final class td extends UiContainer implements ButtonListener {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
     final static boolean a(int param0) {
         if (param0 > -76) {
           td.releaseStatics((byte) 111);
-          if (null == ch.field_c) {
+          if (null == CredentialKind.field_c) {
             return false;
           }
           if (ob.field_eb == qc.field_c) {
@@ -104,7 +104,7 @@ final class td extends UiContainer implements ButtonListener {
           }
           return false;
         }
-        if (null == ch.field_c) {
+        if (null == CredentialKind.field_c) {
           return false;
         }
         if (ob.field_eb == qc.field_c) {
@@ -140,7 +140,7 @@ final class td extends UiContainer implements ButtonListener {
           }
           var4 = (byte[]) (param0);
           if (param2) {
-            stackIn_9_0 = dd.a(var4, 0);
+            stackIn_9_0 = dd.copyBytes(var4, 0);
             return stackIn_9_0;
           }
           stackIn_7_0 = var4;
@@ -155,7 +155,7 @@ final class td extends UiContainer implements ButtonListener {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -202,7 +202,7 @@ final class td extends UiContainer implements ButtonListener {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -297,7 +297,7 @@ final class td extends UiContainer implements ButtonListener {
                     if (var16 <= 255) {
                       var19 = SoftwareRasterizer.field_l[var8];
                       var20 = (16711935 & var18) * var16 + var17 * (var19 & 16711935) >> 8 & 16711935;
-                      SoftwareRasterizer.field_l[var8] = var20 + dg.a(65280, dg.a(65280, var18) * var16 + dg.a(var19, 65280) * var17 >> 8);
+                      SoftwareRasterizer.field_l[var8] = var20 + NameValidator.bitAnd(65280, NameValidator.bitAnd(65280, var18) * var16 + NameValidator.bitAnd(var19, 65280) * var17 >> 8);
                     } else {
                       SoftwareRasterizer.field_l[var8] = var18;
                     }
@@ -321,7 +321,7 @@ final class td extends UiContainer implements ButtonListener {
           } else {
             stackIn_35_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_34_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_34_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 

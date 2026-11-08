@@ -58,11 +58,11 @@ final class eb implements WidgetPainter {
             eb.a(-82, (jg) null);
           }
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "eb.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "eb.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
-    final static void a(int param0, boolean param1) {
+    final static void setMusicVolume(int param0, boolean param1) {
         Bzip2State.field_A = param0;
         if (null != jl.field_h) {
           jl.field_h.a(param0, (byte) -66);
@@ -118,29 +118,29 @@ final class eb implements WidgetPainter {
           }
           ArcanistsMulti.a(stackIn_2_0, (int[]) (stackIn_2_1), (dn) (stackIn_2_2), stackIn_2_3, stackIn_2_4, stackIn_2_5, stackIn_3_6, param1.field_g, param1.field_a);
           if (param1.field_m == param0 &&
-            !lk.f(-1) &&
+            !Js5Transport.f(-1) &&
             DirectByteStorage.field_f == null &&
             null == om.field_x) {
-            if (!ld.field_p) {
+            if (!AlternateUsernameCredentials.field_p) {
               var5 = eo.field_c;
               var6 = jd.field_i;
               var5.field_l.a(14, var6, (byte) -26);
             }
             var7 = eo.field_c;
-            var8 = lk.field_h;
+            var8 = Js5Transport.field_h;
             var7.field_l.a(20, var8, (byte) -26);
           }
           if (param1.field_m == 1 &&
-            !lk.f(-1) &&
+            !Js5Transport.f(-1) &&
             null != DirectByteStorage.field_f &&
             param1.field_q == DirectByteStorage.field_f.h((byte) 78)) {
-            if (!ld.field_p) {
+            if (!AlternateUsernameCredentials.field_p) {
               var9 = eo.field_c;
-              var10 = vk.field_v;
+              var10 = Js5NetworkRequest.field_v;
               var9.field_l.a(14, var10, (byte) -26);
             }
             var11 = eo.field_c;
-            var12 = ef.field_s;
+            var12 = SocketJs5Transport.field_s;
             var11.field_l.a(20, var12, (byte) -26);
           }
           eo.field_c.a(3);
@@ -163,7 +163,7 @@ final class eb implements WidgetPainter {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
         }
     }
 
@@ -173,11 +173,11 @@ final class eb implements WidgetPainter {
         }
         mj.a(-6578, param0);
         if (null != kh.field_c) {
-          fk.a(0, kh.field_c);
+          fk.drawTooltipBox(0, kh.field_c);
         }
     }
 
-    final static void a(Sprite[] param0, int param1, int param2, int param3) {
+    final static void setFrameSprites(Sprite[] param0, int param1, int param2, int param3) {
         try {
           ol.field_f = new ec(param0);
           mj.field_r = param3;
@@ -185,7 +185,7 @@ final class eb implements WidgetPainter {
           tg.field_d = param1;
           ResourceArchive.b(403300833);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "eb.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "eb.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 

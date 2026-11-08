@@ -30,7 +30,7 @@ final class vc {
           param0.field_g = this.field_g;
           param0.field_h = this.field_h;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "vc.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "vc.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -42,7 +42,7 @@ final class vc {
         return this;
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_f = null;
         field_j = null;
         if (param0 == 202) {
@@ -51,7 +51,7 @@ final class vc {
           field_l = null;
           return;
         }
-        vc.b(58);
+        vc.releaseStatics(58);
         field_e = null;
         field_c = null;
         field_l = null;
@@ -95,7 +95,7 @@ final class vc {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -205,7 +205,7 @@ final class vc {
           } else {
             stackIn_34_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(',').append(param4).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -232,7 +232,7 @@ final class vc {
     final static void a(byte param0) {
         int var1 = (fh.field_g - 640) / 2;
         int var3 = -12 % ((-49 - param0) / 62);
-        int var2 = ea.field_F * ea.field_F;
+        int var2 = DiskCacheRequest.field_F * DiskCacheRequest.field_F;
         int var4 = -(ce.field_h * ce.field_h) + var2;
         k.field_d.a(199, -(199 * var4 / var2) + var1, 90, -94 + (-120 + SoftwareRasterizer.field_j), (byte) -120);
         fn.field_e.a(438, 202 + (var1 + 438 * var4 / var2), 0, -120 + SoftwareRasterizer.field_j - 4, (byte) -120);
@@ -298,7 +298,7 @@ final class vc {
           } else {
             stackIn_30_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 

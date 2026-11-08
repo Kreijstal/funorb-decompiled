@@ -30,11 +30,11 @@ final class ci {
         field_c = null;
     }
 
-    final static bd a(boolean param0, String param1, int param2, long param3, String param4) {
+    final static LoginCredentials createCredentials(boolean param0, String param1, int param2, long param3, String param4) {
         RuntimeException var6 = null;
-        ld stackIn_6_0 = null;
-        an stackIn_8_0 = null;
-        im stackIn_12_0 = null;
+        AlternateUsernameCredentials stackIn_6_0 = null;
+        EmailLoginCredentials stackIn_8_0 = null;
+        UsernameCredentials stackIn_12_0 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -44,18 +44,18 @@ final class ci {
         try {
           if (param3 == 0L &&
             param1 != null) {
-            stackIn_8_0 = new an(param1, param4);
-            return (bd) ((Object) stackIn_8_0);
+            stackIn_8_0 = new EmailLoginCredentials(param1, param4);
+            return (LoginCredentials) ((Object) stackIn_8_0);
           }
           if (param0) {
-            stackIn_6_0 = new ld(param3, param4);
-            return (bd) ((Object) stackIn_6_0);
+            stackIn_6_0 = new AlternateUsernameCredentials(param3, param4);
+            return (LoginCredentials) ((Object) stackIn_6_0);
           }
           if (param2 >= -49) {
             field_e = (Sprite) null;
           }
-          stackIn_12_0 = new im(param3, param4);
-          return (bd) ((Object) stackIn_12_0);
+          stackIn_12_0 = new UsernameCredentials(param3, param4);
+          return (LoginCredentials) ((Object) stackIn_12_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
@@ -72,7 +72,7 @@ final class ci {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 

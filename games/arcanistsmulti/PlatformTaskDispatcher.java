@@ -241,7 +241,7 @@ final class PlatformTaskDispatcher implements Runnable {
                           var3_int = var8.field_c;
                           var4 = var8.field_a;
                           if (this.field_j) {
-                            this.field_m.a(26899, var4, var3_int);
+                            this.field_m.setCursorPosition(26899, var4, var3_int);
                           } else {
                             Class.forName("CursorController").getDeclaredMethod("movemouse", new Class[]{Integer.TYPE, Integer.TYPE}).invoke(this.field_k, new Object[]{new Integer(var3_int), new Integer(var4)});
                           }
@@ -255,7 +255,7 @@ final class PlatformTaskDispatcher implements Runnable {
                           if (!this.field_j) {
                             Class.forName("CursorController").getDeclaredMethod("showcursor", new Class[]{java.awt.Component.class, Boolean.TYPE}).invoke(this.field_k, new Object[]{var11, new Boolean(var3_int != 0)});
                           } else {
-                            this.field_m.a(122, var11, var3_int != 0);
+                            this.field_m.updateCursorVisibility(122, var11, var3_int != 0);
                           }
                           break;
                         }

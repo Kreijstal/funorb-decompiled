@@ -10,7 +10,7 @@ final class pc {
     static int field_b;
     static String field_c;
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_d = null;
         if (param0) {
           return;
@@ -124,7 +124,7 @@ final class pc {
           } else {
             stackIn_33_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param7).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param7).append(')').toString());
         }
     }
 
@@ -239,7 +239,7 @@ final class pc {
           } else {
             stackIn_33_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param7).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param7).append(')').toString());
         }
     }
 }

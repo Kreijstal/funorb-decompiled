@@ -63,7 +63,7 @@ final class mf {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
         }
     }
 
@@ -104,11 +104,11 @@ final class mf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var2_ref), "mf.B(" + param0 + ',' + param1 + ')');
+          throw aa.wrapException((Throwable) ((Object) var2_ref), "mf.B(" + param0 + ',' + param1 + ')');
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_e = null;
         field_d = null;
         field_h = null;
@@ -117,7 +117,7 @@ final class mf {
           field_f = null;
           return;
         }
-        mf.a(25);
+        mf.releaseStatics(25);
         field_b = null;
         field_f = null;
     }

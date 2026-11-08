@@ -135,7 +135,7 @@ final class gf extends ob implements ButtonListener {
           } else {
             stackIn_46_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_45_1).append(stackIn_46_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_45_1).append(stackIn_46_2).append(')').toString());
         }
     }
 
@@ -155,7 +155,7 @@ final class gf extends ob implements ButtonListener {
           }
           this.field_kb = this.a((byte) 103, dd.field_e, (UiListener) (this));
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "gf.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "gf.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -382,7 +382,7 @@ final class gf extends ob implements ButtonListener {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -391,8 +391,8 @@ final class gf extends ob implements ButtonListener {
         kc var7 = null;
         kc var3 = null;
         try {
-          eb.field_d = fj.a("basic", param0 ^ -22556, param1, "display_name_changed");
-          nl.field_Gb = new hb(0L, oh.field_r, ln.field_T, vk.field_z);
+          eb.field_d = fj.loadSprite("basic", param0 ^ -22556, param1, "display_name_changed");
+          nl.field_Gb = new hb(0L, oh.field_r, ln.field_T, Js5NetworkRequest.field_z);
           dd.field_c = new hb(0L, oh.field_r, dm.field_I, wl.field_M);
           ec.field_d = new kc(0L, (kc) null);
           lj.field_j = new kc(0L, IntrusiveNode.field_c);
@@ -419,7 +419,7 @@ final class gf extends ob implements ButtonListener {
           dd.field_c.field_Db.field_Hb.field_gb = 1;
           var3.field_X = 1;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "gf.K(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "gf.K(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -478,7 +478,7 @@ final class gf extends ob implements ButtonListener {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -513,7 +513,7 @@ final class gf extends ob implements ButtonListener {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 

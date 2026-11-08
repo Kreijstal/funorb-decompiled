@@ -22,10 +22,10 @@ final class ln extends UiContainer implements pj, ButtonListener, ro {
     private bk field_F;
     private bi field_E;
 
-    private final boolean a(int param0, el param1) {
-        pd var3 = null;
+    private final boolean a(int param0, ValidationProviderSource param1) {
+        ValidationProvider var3 = null;
         RuntimeException var3_ref = null;
-        eh var4 = null;
+        ValidationState var4 = null;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         String stackIn_20_2 = null;
@@ -34,11 +34,11 @@ final class ln extends UiContainer implements pj, ButtonListener, ro {
           if (param0 < 43) {
             this.field_F = (bk) null;
           }
-          var3 = param1.a(0);
+          var3 = param1.getValidationProvider(0);
           if (var3 == null) {
             return true;
           }
-          var4 = var3.a(-83);
+          var4 = var3.getValidationState(-83);
           if (var4 == ra.field_k) {
             return false;
           }
@@ -59,7 +59,7 @@ final class ln extends UiContainer implements pj, ButtonListener, ro {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 
@@ -77,42 +77,42 @@ final class ln extends UiContainer implements pj, ButtonListener, ro {
     private final boolean h(int param0) {
         if (param0 != 0) {
           this.field_D = (bi) null;
-          if (!this.a(118, (el) (this.field_K))) {
+          if (!this.a(118, (ValidationProviderSource) (this.field_K))) {
             return false;
           }
-          if (!this.a(param0 + 91, (el) (this.field_N))) {
+          if (!this.a(param0 + 91, (ValidationProviderSource) (this.field_N))) {
             return false;
           }
-          if (!this.a(99, (el) (this.field_D))) {
+          if (!this.a(99, (ValidationProviderSource) (this.field_D))) {
             return false;
           }
-          if (!this.a(72, (el) (this.field_P))) {
+          if (!this.a(72, (ValidationProviderSource) (this.field_P))) {
             return false;
           }
-          if (!this.a(94, (el) (this.field_E))) {
+          if (!this.a(94, (ValidationProviderSource) (this.field_E))) {
             return false;
           }
-          if (this.a(80, (el) (this.field_H))) {
+          if (this.a(80, (ValidationProviderSource) (this.field_H))) {
             return true;
           }
           return false;
         }
-        if (!this.a(118, (el) (this.field_K))) {
+        if (!this.a(118, (ValidationProviderSource) (this.field_K))) {
           return false;
         }
-        if (!this.a(param0 + 91, (el) (this.field_N))) {
+        if (!this.a(param0 + 91, (ValidationProviderSource) (this.field_N))) {
           return false;
         }
-        if (!this.a(99, (el) (this.field_D))) {
+        if (!this.a(99, (ValidationProviderSource) (this.field_D))) {
           return false;
         }
-        if (!this.a(72, (el) (this.field_P))) {
+        if (!this.a(72, (ValidationProviderSource) (this.field_P))) {
           return false;
         }
-        if (!this.a(94, (el) (this.field_E))) {
+        if (!this.a(94, (ValidationProviderSource) (this.field_E))) {
           return false;
         }
-        if (this.a(80, (el) (this.field_H))) {
+        if (this.a(80, (ValidationProviderSource) (this.field_H))) {
           return true;
         }
         return false;
@@ -156,7 +156,7 @@ final class ln extends UiContainer implements pj, ButtonListener, ro {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -178,7 +178,7 @@ final class ln extends UiContainer implements pj, ButtonListener, ro {
           var4 = param0;
           ((EditableTextWidget) ((Object) var3)).setText(false, var4, false);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "ln.O(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "ln.O(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -194,14 +194,14 @@ final class ln extends UiContainer implements pj, ButtonListener, ro {
         this.field_F = new bk("", (UiListener) null, var1 != 0);
         this.field_C = new TextButton(wm.field_G, (UiListener) null);
         this.field_O = new TextButton(kn.field_rb, (UiListener) null);
-        this.field_K.field_q = eh.field_b;
+        this.field_K.field_q = ValidationState.field_b;
         this.field_N.field_q = ArchiveIndex.field_s;
         this.field_D.field_q = dn.field_Fb;
         this.field_P.field_q = ao.field_c;
         this.field_E.field_q = nk.field_j;
         this.field_H.field_q = lc.field_k;
         this.field_F.field_q = ce.field_l;
-        this.field_K.a(new dg(this.field_K), (byte) 18);
+        this.field_K.a(new NameValidator(this.field_K), (byte) 18);
         this.field_N.a(new ki(this.field_N), (byte) -127);
         this.field_D.a(new ja(this.field_D, this.field_N), (byte) -128);
         this.field_P.a(new ui(this.field_P, this.field_K, this.field_N), (byte) -127);
@@ -223,9 +223,9 @@ final class ln extends UiContainer implements pj, ButtonListener, ro {
         int var3 = 20;
         var3 = var3 + this.a(this.field_N, bk.field_K, var3, 170, 109);
         var3 = var3 + (5 + this.a("", this.field_D, 25, 20, 170, dn.field_Gb, var3));
-        var3 = var3 + this.a(this.field_P, eh.field_a, var3, 170, 126);
+        var3 = var3 + this.a(this.field_P, ValidationState.field_a, var3, 170, 126);
         var3 = var3 + (5 + this.a(var3, this.field_E, rm.field_p, 99, 170, le.field_A));
-        var3 = var3 + (5 + this.a(var3, this.field_K, bj.field_kb, -67, 170, ch.field_h));
+        var3 = var3 + (5 + this.a(var3, this.field_K, bj.field_kb, -67, 170, CredentialKind.field_h));
         var3 = var3 + this.a(ka.field_n, this.field_H, (byte) -71, 170, var3);
         ke var4 = new ke(46, var3, this.field_v - 90, 25, this.field_F, true, this.field_v - 120, 5, vc.field_e, 11579568, AudioService.field_c);
         this.addChild(-114, var4);
@@ -283,7 +283,7 @@ final class ln extends UiContainer implements pj, ButtonListener, ro {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -334,7 +334,7 @@ final class ln extends UiContainer implements pj, ButtonListener, ro {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -343,7 +343,7 @@ final class ln extends UiContainer implements pj, ButtonListener, ro {
           super.updatePointer(param0, param1, param2, param3);
           this.field_C.field_B = this.h(0);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "ln.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "ln.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -382,7 +382,7 @@ final class ln extends UiContainer implements pj, ButtonListener, ro {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -409,7 +409,7 @@ final class ln extends UiContainer implements pj, ButtonListener, ro {
         try {
           var10 = new ke(20, param6, 120 + param4, param2, param1, false, 120, 3, ia.field_c, 16777215, param5);
           this.addChild(-75, var10);
-          var9 = new sc(((el) ((Object) param1)).a(0), param0, 126, param6 + var10.field_k, param4 + 50, param3);
+          var9 = new sc(((ValidationProviderSource) ((Object) param1)).getValidationProvider(0), param0, 126, param6 + var10.field_k, param4 + 50, param3);
           var9.field_o = (UiListener) (this);
           this.addChild(-127, var9);
           stackIn_1_0 = var9.field_k + var10.field_k;
@@ -436,7 +436,7 @@ final class ln extends UiContainer implements pj, ButtonListener, ro {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param6).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -444,7 +444,7 @@ final class ln extends UiContainer implements pj, ButtonListener, ro {
         if (param0 != -7) {
           return;
         }
-        ((dg) (this.field_K.a(0))).e(126);
+        ((NameValidator) (this.field_K.getValidationProvider(0))).e(126);
     }
 
     private final int a(String param0, UiComponent param1, byte param2, int param3, int param4) {
@@ -466,7 +466,7 @@ final class ln extends UiContainer implements pj, ButtonListener, ro {
             return stackIn_2_0;
           }
           this.addChild(param2 ^ 13, var8);
-          var7 = new mk(((el) ((Object) param1)).a(0));
+          var7 = new mk(((ValidationProviderSource) ((Object) param1)).getValidationProvider(0));
           this.addChild(-94, var7);
           var7.setBounds(15, var8.field_j + (-15 + var8.field_k >> 1), 15, 3 + var8.field_v + var8.field_n, param2 - 48);
           stackIn_4_0 = var8.field_k;
@@ -487,7 +487,7 @@ final class ln extends UiContainer implements pj, ButtonListener, ro {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -526,7 +526,7 @@ final class ln extends UiContainer implements pj, ButtonListener, ro {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 

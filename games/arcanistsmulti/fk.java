@@ -196,7 +196,7 @@ final class fk extends IntrusiveNode {
           } else {
             stackIn_74_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_67_0), ((StringBuilder) (Object) stackIn_73_1).append(stackIn_74_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_67_0), ((StringBuilder) (Object) stackIn_73_1).append(stackIn_74_2).append(')').toString());
         }
     }
 
@@ -205,22 +205,22 @@ final class fk extends IntrusiveNode {
         int var3 = ArcanistsMulti.field_G ? 1 : 0;
         IndexedSprite[] var1 = new IndexedSprite[h.field_J];
         for (var2 = param0; h.field_J > var2; var2++) {
-          var1[var2] = new IndexedSprite(pb.field_g, gn.field_a, hl.field_l[var2], be.field_d[var2], jg.field_p[var2], ho.field_i[var2], ln.field_I[var2], ph.field_c);
+          var1[var2] = new IndexedSprite(pb.field_g, gn.field_a, hl.field_l[var2], SectorCacheStore.field_d[var2], jg.field_p[var2], ho.field_i[var2], ln.field_I[var2], ph.field_c);
         }
         CanvasRasterBuffer.a(-18229);
         return var1;
     }
 
-    final static void a(Sprite param0, int param1) {
+    final static void setSpriteRasterTarget(Sprite param0, int param1) {
         try {
           if (param1 != -23095) {
             Sprite var3 = (Sprite) null;
-            fk.a((Sprite) null, -12);
+            fk.setSpriteRasterTarget((Sprite) null, -12);
           }
-          ec.a(65280);
+          ec.pushClipState(65280);
           SoftwareRasterizer.setTarget(param0.field_A, param0.field_n, param0.field_w);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "fk.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "fk.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -293,11 +293,11 @@ final class fk extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var1), "fk.G(" + param0 + ')');
+          throw aa.wrapException((Throwable) ((Object) var1), "fk.G(" + param0 + ')');
         }
     }
 
-    final static void a(java.applet.Applet param0, boolean param1, String param2) {
+    final static void openUrl(java.applet.Applet param0, boolean param1, String param2) {
         try {
           java.net.URL var3 = null;
           RuntimeException stackIn_7_0 = null;
@@ -338,7 +338,7 @@ final class fk extends IntrusiveNode {
             } else {
               stackIn_11_2 = "{...}";
             }
-            throw aa.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+            throw aa.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -347,7 +347,7 @@ final class fk extends IntrusiveNode {
         }
     }
 
-    final static void a(int param0, String param1) {
+    final static void drawTooltipBox(int param0, String param1) {
         int var2_int = 0;
         int var3 = 0;
         int var4 = 0;
@@ -356,7 +356,7 @@ final class fk extends IntrusiveNode {
         int var7 = 0;
         int var8 = 0;
         try {
-          var2_int = an.field_g;
+          var2_int = EmailLoginCredentials.field_g;
           var3 = me.field_I;
           var4 = IntrusiveNode.field_c.field_Z.wrappedLineCount(param1, 500);
           var5 = 6 + IntrusiveNode.field_c.field_Z.getWrappedWidth(param1, 500);
@@ -367,7 +367,7 @@ final class fk extends IntrusiveNode {
           SoftwareRasterizer.fillRectangle(var7 + 1, 1 + var8, -2 + var5, -2 + var6, 16777088);
           IntrusiveNode.field_c.field_Z.drawParagraph(param1, var7 + 3, 1 + (var8 + IntrusiveDequeCursor.field_i - IntrusiveNode.field_c.field_Z.field_C), 500, 1000, 0, -1, param0, 0, ImageProducerRasterBuffer.field_r);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "fk.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "fk.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -378,7 +378,7 @@ final class fk extends IntrusiveNode {
           this.field_n = param1;
           this.field_m.setVolumeQ6(si.field_l * this.field_l + 128 >> 8);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "fk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "fk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

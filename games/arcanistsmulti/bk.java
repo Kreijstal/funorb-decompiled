@@ -23,7 +23,7 @@ final class bk extends TextButton {
         try {
           this.field_z = param2 ? true : false;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "bk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "bk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -65,7 +65,7 @@ final class bk extends TextButton {
         try {
           this.field_r = MusicCrossfadeStream.field_n.field_b;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "bk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "bk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -74,7 +74,7 @@ final class bk extends TextButton {
         int var2 = ArcanistsMulti.field_G ? 1 : 0;
         tg.field_e.a(-12619);
         for (var1_int = 0; 32 > var1_int; var1_int++) {
-          rl.field_l[var1_int] = 0L;
+          TextFieldValidator.field_l[var1_int] = 0L;
         }
         var1_int = 0;
         if (param0 != 2) {
@@ -85,9 +85,9 @@ final class bk extends TextButton {
             kn.field_tb[var1_int] = 0L;
             var1_int++;
           }
-          e.field_Q = 0;
+          LoginPanel.field_Q = 0;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "bk.C(" + param0 + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "bk.C(" + param0 + ')');
         }
     }
 
@@ -96,7 +96,7 @@ final class bk extends TextButton {
         try {
           this.field_r = MusicCrossfadeStream.field_n.field_b;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "bk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "bk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

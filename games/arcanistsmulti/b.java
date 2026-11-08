@@ -25,7 +25,7 @@ final class b {
         field_e = null;
     }
 
-    final static String a(byte param0, Throwable param1) throws IOException {
+    final static String describeThrowable(byte param0, Throwable param1) throws IOException {
         String var2;
         PrintWriter var4;
         int var5;

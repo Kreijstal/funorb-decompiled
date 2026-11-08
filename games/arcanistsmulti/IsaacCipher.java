@@ -12,7 +12,7 @@ final class IsaacCipher {
     private int[] field_e;
     static String field_h;
     static GameAppletShell field_k;
-    static eh field_c;
+    static ValidationState field_c;
     static int[][] field_d;
 
     final static void a(byte param0, int param1, int param2, int param3, BitmapFont param4, int param5, int param6, int param7, int param8, int param9, int param10, ec param11, int param12, BitmapFont param13, ec param14, int param15, int param16, int param17, int param18, ec param19, int param20) {
@@ -34,7 +34,7 @@ final class IsaacCipher {
           if (param0 < 85) {
             return;
           }
-          e.b(1, param8, param12, param1, param2);
+          LoginPanel.b(1, param8, param12, param1, param2);
           td.a(true, param17, param5);
           rc.a(param14, 120, param16, param15, param19, param18);
           lj.a(param10, param11, param7, 69);
@@ -74,22 +74,22 @@ final class IsaacCipher {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param20).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param20).append(')').toString());
         }
     }
 
     final static void a(int param0, PcmStreamMixer param1, ResourceArchive param2, int param3) {
         try {
           sn.field_G = param0 * gm.b(-2) / 1000;
-          ed.a((byte) -17, param2);
+          ed.loadJagexLogoSound((byte) -17, param2);
           ArcanistsMulti.a(param2, (byte) -80);
           int var4_int = 88 % ((81 - param3) / 36);
-          fl.a(-2389, param2);
+          fl.loadFinalFrameImage(-2389, param2);
           tm.a(5968);
           h.j(0);
           SoundCache.field_a = -sn.field_G + 0;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "ug.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "ug.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -122,10 +122,10 @@ final class IsaacCipher {
             }
           }
           this.field_a = this.field_a + this.field_g[255 & var2 + 128];
-          dupTemp$1 = this.field_a + (this.field_g[dg.a(var3 >> 2, 255)] + this.field_j);
+          dupTemp$1 = this.field_a + (this.field_g[NameValidator.bitAnd(var3 >> 2, 255)] + this.field_j);
           var4 = dupTemp$1;
           this.field_g[var2] = dupTemp$1;
-          dupTemp$2 = var3 + this.field_g[dg.a(var4, 261203) >> 8 >> 2];
+          dupTemp$2 = var3 + this.field_g[NameValidator.bitAnd(var4, 261203) >> 8 >> 2];
           this.field_j = dupTemp$2;
           this.field_e[var2] = dupTemp$2;
           var2++;
@@ -285,7 +285,7 @@ final class IsaacCipher {
           }
           this.a((byte) 126);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "ug.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "ug.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -305,7 +305,7 @@ final class IsaacCipher {
         field_f = "Show all game chat";
         field_k = null;
         field_h = "Players: <%0>/<%1>";
-        field_c = new eh();
+        field_c = new ValidationState();
         field_d = new int[][]{new int[]{255, 255, 51}, new int[]{255, 153, 0}, new int[]{255, 0, 0}, new int[]{102, 51, 0}, new int[]{153, 0, 102}, new int[]{153, 102, 204}, new int[]{153, 204, 255}, new int[]{0, 204, 204}, new int[]{0, 102, 153}, new int[]{0, 51, 102}, new int[]{51, 204, 102}, new int[]{51, 153, 51}, new int[]{255, 255, 255}, new int[]{204, 204, 204}, new int[]{102, 102, 102}, new int[]{70, 70, 70}};
     }
 }

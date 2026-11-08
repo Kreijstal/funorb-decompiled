@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bl extends ee implements TextInputListener, ak {
+final class bl extends DebouncedValidator implements TextInputListener, ak {
     static int[] field_i;
     mg field_h;
 
@@ -44,13 +44,13 @@ final class bl extends ee implements TextInputListener, ak {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var3), "bl.S(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw aa.wrapException((Throwable) ((Object) var3), "bl.S(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
     final static void d(byte param0) {
         String var2 = (String) null;
-        bb.a("", -3, (String) null);
+        bb.showLoginPanel("", -3, (String) null);
         int var1 = -117 / ((-16 - param0) / 36);
     }
 
@@ -180,29 +180,29 @@ final class bl extends ee implements TextInputListener, ak {
           } else {
             stackIn_41_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(')').toString());
         }
     }
 
     public final void onTextChanged(EditableTextWidget param0, int param1) {
         try {
-          this.b(-17444);
+          this.restartDebounce(-17444);
           if (param1 != -20626) {
             this.field_h = (mg) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "bl.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "bl.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     public final void a(ti param0, int param1) {
         try {
-          this.b(-17444);
+          this.restartDebounce(-17444);
           if (param1 != -6509) {
-            this.b((byte) -51);
+            this.computeState((byte) -51);
           }
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "bl.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "bl.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -234,11 +234,11 @@ final class bl extends ee implements TextInputListener, ak {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var1_ref), "bl.C(" + param0 + ')');
+          throw aa.wrapException((Throwable) ((Object) var1_ref), "bl.C(" + param0 + ')');
         }
     }
 
-    public final boolean a(byte param0) {
+    public final boolean isEmpty(byte param0) {
         if (param0 > -72) {
           this.field_h = (mg) null;
         }
@@ -256,7 +256,7 @@ final class bl extends ee implements TextInputListener, ak {
             this.field_h = (mg) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "bl.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "bl.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -268,11 +268,11 @@ final class bl extends ee implements TextInputListener, ak {
             bl.a((PcmSampleStream) null, 64);
           }
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "bl.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "bl.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final String a(boolean param0) {
+    final String computeMessage(boolean param0) {
         int var2_int = 0;
         NumberFormatException var2 = null;
         int var3 = 0;
@@ -303,16 +303,16 @@ final class bl extends ee implements TextInputListener, ak {
         return gl.field_d;
     }
 
-    final eh b(byte param0) {
+    final ValidationState computeState(byte param0) {
         int var2_int = 0;
         NumberFormatException var2 = null;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
         EditableTextWidget var6 = null;
-        eh stackIn_2_0 = null;
-        eh stackIn_5_0 = null;
-        eh stackIn_11_0 = null;
+        ValidationState stackIn_2_0 = null;
+        ValidationState stackIn_5_0 = null;
+        ValidationState stackIn_11_0 = null;
         Throwable decompiledCaughtException = null;
         try {
           var2_int = this.field_h.h(69);

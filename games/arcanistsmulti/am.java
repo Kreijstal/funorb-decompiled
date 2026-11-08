@@ -6,7 +6,7 @@ final class am {
     static String field_b;
     static kc field_c;
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_a = null;
         if (param0) {
           field_c = (kc) null;
@@ -52,7 +52,7 @@ final class am {
               for (var5_int = 0; var5_int < fj.field_h; var5_int++) {
                 UiContainer.field_z.payload[var5_int] = var4_ref_qe.field_k[var5_int];
               }
-              ve.field_m = nf.field_W;
+              ArchiveRequest.field_m = nf.field_W;
               nf.field_W = se.field_I;
               se.field_I = on.field_g;
               on.field_g = var4_ref_qe.field_g;
@@ -73,7 +73,7 @@ final class am {
               return false;
             }
             if (ob.field_ab == 0) {
-              ve.field_m = nf.field_W;
+              ArchiveRequest.field_m = nf.field_W;
               nf.field_W = se.field_I;
               se.field_I = on.field_g;
               on.field_g = so.field_d;
@@ -104,7 +104,7 @@ final class am {
           } else {
             stackIn_41_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_40_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_40_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(')').toString());
         }
     }
 

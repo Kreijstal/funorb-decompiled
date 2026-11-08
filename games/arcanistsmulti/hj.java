@@ -49,12 +49,12 @@ final class hj extends IOException {
           }
           ff.a((byte) 91, var4);
           var12 = (BitmapFont) null;
-          mj.field_z = ck.a(65793, 5138823, 65793, 8947848, 1513239, 4020342, 65793, (BitmapFont) null, 97, 0, 2245737, 1513239, 1127256);
+          mj.field_z = ck.createTextComponent(65793, 5138823, 65793, 8947848, 1513239, 4020342, 65793, (BitmapFont) null, 97, 0, 2245737, 1513239, 1127256);
           if (param2 != 3896) {
             return;
           }
-          gl.field_c = ck.a(0, 0, 0, 0, 0, 0, 0, param0, 112, 16764006, 0, 0, 0);
-          CipherPacketBuffer.field_p = ck.a(0, 0, 0, 0, 0, 0, 0, param0, 81, 16777215, 0, 0, 0);
+          gl.field_c = ck.createTextComponent(0, 0, 0, 0, 0, 0, 0, param0, 112, 16764006, 0, 0, 0);
+          CipherPacketBuffer.field_p = ck.createTextComponent(0, 0, 0, 0, 0, 0, 0, param0, 81, 16777215, 0, 0, 0);
           var5 = SoftwareRasterizer.field_e;
           var6 = SoftwareRasterizer.field_j;
           var16 = SoftwareRasterizer.field_l;
@@ -83,7 +83,7 @@ final class hj extends IOException {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -277,7 +277,7 @@ final class hj extends IOException {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var1), "hj.D(" + param0 + ')');
+          throw aa.wrapException((Throwable) ((Object) var1), "hj.D(" + param0 + ')');
         }
     }
 
@@ -450,7 +450,7 @@ final class hj extends IOException {
           } else {
             stackIn_61_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_57_0), ((StringBuilder) (Object) stackIn_60_1).append(stackIn_61_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_57_0), ((StringBuilder) (Object) stackIn_60_1).append(stackIn_61_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -486,7 +486,7 @@ final class hj extends IOException {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 

@@ -39,10 +39,10 @@ final class va implements WidgetPainter {
             if (var9 >= SoftwareRasterizer.field_c &&
               var9 < SoftwareRasterizer.field_k) {
               if (var7Lifetime1 > SoftwareRasterizer.field_i) {
-                SoftwareRasterizer.field_l[-1 + (SoftwareRasterizer.field_e * var9 + var7Lifetime1)] = dg.a(16711422, SoftwareRasterizer.field_l[SoftwareRasterizer.field_e * var9 + var7Lifetime1 - 1]) >> 1;
+                SoftwareRasterizer.field_l[-1 + (SoftwareRasterizer.field_e * var9 + var7Lifetime1)] = NameValidator.bitAnd(16711422, SoftwareRasterizer.field_l[SoftwareRasterizer.field_e * var9 + var7Lifetime1 - 1]) >> 1;
               }
               if (SoftwareRasterizer.field_h > var8Lifetime1 + var7Lifetime1) {
-                SoftwareRasterizer.field_l[var9 * SoftwareRasterizer.field_e + var7Lifetime1 + var8Lifetime1] = dg.a(16711422, SoftwareRasterizer.field_l[SoftwareRasterizer.field_e * var9 + var7Lifetime1 + var8Lifetime1]) >> 1;
+                SoftwareRasterizer.field_l[var9 * SoftwareRasterizer.field_e + var7Lifetime1 + var8Lifetime1] = NameValidator.bitAnd(16711422, SoftwareRasterizer.field_l[SoftwareRasterizer.field_e * var9 + var7Lifetime1 + var8Lifetime1]) >> 1;
               }
             }
             SoftwareRasterizer.drawHorizontalLine(var7Lifetime1, var9, var8Lifetime1, 0);
@@ -58,7 +58,7 @@ final class va implements WidgetPainter {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -103,7 +103,7 @@ final class va implements WidgetPainter {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param4).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param4).append(')').toString());
         }
     }
 

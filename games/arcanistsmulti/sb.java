@@ -31,8 +31,8 @@ final class sb {
         }
         rb var4 = (rb) (pb.field_m.first(12623));
         if (var4 != null) {
-          var2 = an.field_f / 2;
-          var3 = an.field_j - 10;
+          var2 = EmailLoginCredentials.field_f / 2;
+          var3 = EmailLoginCredentials.field_j - 10;
           if (var4.field_h < 25) {
             var3 = var3 + (12 + tj.field_t.field_C) * (-var4.field_h + 25) / 25;
           }
@@ -91,7 +91,7 @@ final class sb {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param3).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -136,7 +136,7 @@ final class sb {
           if (param1 >= -38) {
             return;
           }
-          uj.field_f.drawTransparent(0, lo.field_q + (var2_int - uj.field_f.field_w));
+          ScreenDisplayMode.field_f.drawTransparent(0, lo.field_q + (var2_int - ScreenDisplayMode.field_f.field_w));
           SoftwareRasterizer.resetClip();
           if (mf.field_g != -4) {
             mf.field_g = -1;
@@ -249,7 +249,7 @@ final class sb {
             var6 = mi.field_B.getWrappedWidth(IntrusiveNodeHashTable.field_f, ArrayWidgetContainer.field_A - 32);
             var7 = 32 + mi.field_B.field_C * mi.field_B.wrappedLineCount(IntrusiveNodeHashTable.field_f, -32 + var6);
             var6 += 32;
-            var8 = Math.min(-var6 + an.field_f, an.field_f / 2 + 54);
+            var8 = Math.min(-var6 + EmailLoginCredentials.field_f, EmailLoginCredentials.field_f / 2 + 54);
             SoftwareRasterizer.fillRectangleAlpha(-var4 + var8, var5Lifetime1 - var4, var6 + 2 * var4, var4 * 2 + var7, 16777215, 192);
             var4++;
             SoftwareRasterizer.drawRectangle(-var4 + var8, var5Lifetime1 - var4, 2 * var4 + var6, 2 * var4 + var7, 4799269);
@@ -266,7 +266,7 @@ final class sb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var2), "sb.B(" + param0 + ',' + param1 + ')');
+          throw aa.wrapException((Throwable) ((Object) var2), "sb.B(" + param0 + ',' + param1 + ')');
         }
     }
 

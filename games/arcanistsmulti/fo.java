@@ -15,7 +15,7 @@ final class fo {
     static String field_i;
     private static String field_z;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_g = null;
         if (param0 == 0) {
           field_f = null;
@@ -26,7 +26,7 @@ final class fo {
           field_c = null;
           return;
         }
-        fo.a(-82);
+        fo.releaseStatics(-82);
         field_f = null;
         field_b = null;
         field_e = null;

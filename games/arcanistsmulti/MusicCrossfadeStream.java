@@ -187,7 +187,7 @@ final class MusicCrossfadeStream extends PcmStream {
           } else {
             stackIn_56_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_55_0), ((StringBuilder) (Object) stackIn_55_1).append(stackIn_56_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_55_0), ((StringBuilder) (Object) stackIn_55_1).append(stackIn_56_2).append(')').toString());
         }
     }
 
@@ -344,7 +344,7 @@ final class MusicCrossfadeStream extends PcmStream {
           } else {
             stackIn_69_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_68_0), ((StringBuilder) (Object) stackIn_68_1).append(stackIn_69_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_68_0), ((StringBuilder) (Object) stackIn_68_1).append(stackIn_69_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -356,7 +356,7 @@ final class MusicCrossfadeStream extends PcmStream {
             MusicCrossfadeStream.a(-10, true);
           }
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "io.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "io.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -547,7 +547,7 @@ final class MusicCrossfadeStream extends PcmStream {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var2), "io.G(" + param0 + ',' + param1 + ')');
+          throw aa.wrapException((Throwable) ((Object) var2), "io.G(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -638,7 +638,7 @@ final class MusicCrossfadeStream extends PcmStream {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -652,23 +652,23 @@ final class MusicCrossfadeStream extends PcmStream {
         int var4 = ArcanistsMulti.field_G ? 1 : 0;
         int var2_intLifetime1;
         try {
-          ch.field_b = param0;
-          if (eh.field_e == null) {
-            eh.field_e = new Sprite(640, 480);
-            if (SoftwareRasterizer.field_l.length != eh.field_e.field_A.length) {
+          CredentialKind.field_b = param0;
+          if (ValidationState.field_e == null) {
+            ValidationState.field_e = new Sprite(640, 480);
+            if (SoftwareRasterizer.field_l.length != ValidationState.field_e.field_A.length) {
               var2_int = 0;
-              for (var3 = -eh.field_e.field_A.length; var3 < 0; var3++) {
-                eh.field_e.field_A[var2_int] = SoftwareRasterizer.field_l[var2_int];
+              for (var3 = -ValidationState.field_e.field_A.length; var3 < 0; var3++) {
+                ValidationState.field_e.field_A[var2_int] = SoftwareRasterizer.field_l[var2_int];
                 var2_int++;
               }
-              eh.field_e.makeRasterTarget();
+              ValidationState.field_e.makeRasterTarget();
               SoftwareRasterizer.blurRectangle(2, 2, 0, 0, 640, 480);
             }
           }
           var2_intLifetime1 = -44 % ((-45 - param1) / 34);
-          vf.field_g.a(true, 0, false, rl.a(me.field_I, an.field_g, -121));
+          vf.field_g.a(true, 0, false, TextFieldValidator.a(me.field_I, EmailLoginCredentials.field_g, -121));
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "io.H(" + param0 + ',' + param1 + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "io.H(" + param0 + ',' + param1 + ')');
         }
     }
 

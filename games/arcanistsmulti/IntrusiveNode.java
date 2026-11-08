@@ -154,7 +154,7 @@ class IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var1), "pg.OC(" + param0 + ')');
+          throw aa.wrapException((Throwable) ((Object) var1), "pg.OC(" + param0 + ')');
         }
     }
 

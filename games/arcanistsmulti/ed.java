@@ -48,7 +48,7 @@ class ed extends qk implements ButtonListener {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -82,7 +82,7 @@ class ed extends qk implements ButtonListener {
           this.field_ub.field_I = true;
           this.addChild(-105, this.field_ub);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "ed.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "ed.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -113,7 +113,7 @@ class ed extends qk implements ButtonListener {
             if (cb.field_b &&
               MusicCrossfadeStream.field_A) {
               if (hi.field_a &&
-                ef.field_r) {
+                SocketJs5Transport.field_r) {
                 stackIn_93_0 = 1;
               } else {
                 stackIn_93_0 = 0;
@@ -145,7 +145,7 @@ class ed extends qk implements ButtonListener {
             return;
           }
           if (hi.field_a &&
-            ef.field_r) {
+            SocketJs5Transport.field_r) {
             stackIn_74_0 = 1;
           } else {
             stackIn_74_0 = 0;
@@ -168,7 +168,7 @@ class ed extends qk implements ButtonListener {
           }
           return;
         }
-        SpriteState.field_z.a(param0, an.field_j, 0, true, 0, 96, an.field_f);
+        SpriteState.field_z.a(param0, EmailLoginCredentials.field_j, 0, true, 0, 96, EmailLoginCredentials.field_f);
         if (null == r.field_b) {
           var2Lifetime1 = 25 % ((38 - param1) / 34);
           if (!cb.field_b) {
@@ -178,7 +178,7 @@ class ed extends qk implements ButtonListener {
             return;
           }
           if (hi.field_a &&
-            ef.field_r) {
+            SocketJs5Transport.field_r) {
             stackIn_12_0 = 1;
           } else {
             stackIn_12_0 = 0;
@@ -202,7 +202,7 @@ class ed extends qk implements ButtonListener {
             stackIn_37_1 = (param0) && (gj.a(29372)) && (var3Lifetime1 == 0);
             ui.a(stackIn_36_0, stackIn_37_1);
           } else {
-            stackIn_50_0 = (!ef.field_r) ? 0 : 1;
+            stackIn_50_0 = (!SocketJs5Transport.field_r) ? 0 : 1;
             var3Lifetime1 = stackIn_50_0;
             stackIn_54_0 = 0;
             stackIn_55_1 = (param0) && (gj.a(29372)) && (var3Lifetime1 == 0);
@@ -281,7 +281,7 @@ class ed extends qk implements ButtonListener {
               ((me) (Object) stackIn_14_0).a(stackIn_15_1, (byte) 111, -1);
             }
           } else {
-            var6.a(ee.field_f, (byte) 106, 11);
+            var6.a(DebouncedValidator.field_f, (byte) 106, 11);
             var6.a(ki.field_u, (byte) 111, 17);
           }
           if (param2 != 3) {
@@ -289,7 +289,7 @@ class ed extends qk implements ButtonListener {
               var6.a(ad.field_e, (byte) -117, 8);
             } else {
               if (6 == param2) {
-                var6.a(ea.field_B, (byte) -114, 9);
+                var6.a(DiskCacheRequest.field_B, (byte) -114, 9);
               } else {
                 if (param2 == 9) {
                   var6.a(81, fk.field_j, (UiListener) (this));
@@ -297,7 +297,7 @@ class ed extends qk implements ButtonListener {
               }
             }
           } else {
-            var6.a(bd.field_b, (byte) 110, 7);
+            var6.a(LoginCredentials.field_b, (byte) 110, 7);
           }
           this.a((byte) -92, (UiComponent) (var6));
           return;
@@ -311,7 +311,7 @@ class ed extends qk implements ButtonListener {
           } else {
             stackIn_30_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -341,7 +341,7 @@ class ed extends qk implements ButtonListener {
         return ge.field_g;
     }
 
-    final static void a(byte param0, ResourceArchive param1) {
+    final static void loadJagexLogoSound(byte param0, ResourceArchive param1) {
         VorbisSample var2 = null;
         try {
           VorbisSample.decodeSetup(param1.a("", "headers.packvorbis", -1));
@@ -351,7 +351,7 @@ class ed extends qk implements ButtonListener {
           var2 = VorbisSample.loadNamed(param1, "jagex logo2.packvorbis", "");
           var2.decodeAllToPcm();
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "ed.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "ed.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -366,10 +366,10 @@ class ed extends qk implements ButtonListener {
             return;
           }
           if (!this.field_zb) {
-            fk.a(cd.e(104), false, "tochangedisplayname.ws");
+            fk.openUrl(cd.getApplet(104), false, "tochangedisplayname.ws");
             return;
           }
-          ee.a(3, (byte) 30);
+          DebouncedValidator.a(3, (byte) 30);
           this.h(77);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -382,7 +382,7 @@ class ed extends qk implements ButtonListener {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -397,7 +397,7 @@ class ed extends qk implements ButtonListener {
     }
 
     final static void j(int param0) {
-        int var1 = ea.field_F * ea.field_F;
+        int var1 = DiskCacheRequest.field_F * DiskCacheRequest.field_F;
         int var2 = -(jo.field_e * jo.field_e) + var1;
         int var3 = (-ma.field_N + vd.field_k) * var2 / var1 + ma.field_N;
         n.field_g.a(640, sa.field_Hb, var3, param0, (byte) -120);

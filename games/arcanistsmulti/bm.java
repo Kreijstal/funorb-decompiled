@@ -13,7 +13,7 @@ final class bm {
     static int field_f;
     private static String field_z;
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_d = null;
         field_e = null;
         field_a = null;
@@ -24,7 +24,7 @@ final class bm {
           field_g = null;
           return;
         }
-        bm.a(true);
+        bm.releaseStatics(true);
         field_g = null;
     }
 

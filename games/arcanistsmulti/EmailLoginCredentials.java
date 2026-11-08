@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class an extends bd {
+final class EmailLoginCredentials extends LoginCredentials {
     private String field_k;
     private String field_i;
     static ResourceArchive field_o;
@@ -14,13 +14,13 @@ final class an extends bd {
     static int[] field_h;
     static boolean field_l;
 
-    final void a(PacketBuffer param0, int param1) {
+    final void writeTo(PacketBuffer param0, int param1) {
         try {
           param0.writeVersionedString(this.field_k, (byte) -89);
           int var3_int = 124 / ((-35 - param1) / 36);
           param0.writeBase38Name((byte) 7, this.field_i);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "an.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "an.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -33,19 +33,19 @@ final class an extends bd {
         field_h = null;
     }
 
-    final ch a(int param0) {
+    final CredentialKind getCredentialKind(int param0) {
         if (param0 != 0) {
-          return (ch) null;
+          return (CredentialKind) null;
         }
         return k.field_q;
     }
 
-    an(String param0, String param1) {
+    EmailLoginCredentials(String param0, String param1) {
         try {
           this.field_k = param0;
           this.field_i = param1;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "an.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "an.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

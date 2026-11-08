@@ -62,14 +62,14 @@ class EditableTextWidget extends TextButton {
           }
           jf.field_e = true;
         }
-        if (!be.field_g) {
+        if (!SectorCacheStore.field_g) {
           if (null == ci.field_d) {
-            ci.field_d = ld.a(6, false);
+            ci.field_d = AlternateUsernameCredentials.a(6, false);
           }
           if (ci.field_d.field_k) {
             ec.a(ci.field_d.field_j, (byte) -49);
             ci.field_d = null;
-            be.field_g = true;
+            SectorCacheStore.field_g = true;
           }
         }
         if (!la.field_a &&
@@ -81,7 +81,7 @@ class EditableTextWidget extends TextButton {
           kg.field_a = true;
         }
         if (pe.field_Jb &&
-          be.field_g &&
+          SectorCacheStore.field_g &&
           kg.field_a &&
           jf.field_e) {
           wm.g(0);
@@ -150,7 +150,7 @@ class EditableTextWidget extends TextButton {
           if (this.field_t == 1) {
             if (this.field_r instanceof WidgetTextLayout) {
               var5 = (WidgetTextLayout) ((Object) this.field_r);
-              var6 = var5.b(param1, (UiComponent) (this), me.field_I, an.field_g, param3, param2 ^ 2364);
+              var6 = var5.b(param1, (UiComponent) (this), me.field_I, EmailLoginCredentials.field_g, param3, param2 ^ 2364);
               if (var6 != -1) {
                 if (this.field_R &&
                   var6 < this.field_O &&
@@ -173,7 +173,7 @@ class EditableTextWidget extends TextButton {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -238,7 +238,7 @@ class EditableTextWidget extends TextButton {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var1), "rn.L(" + param0 + ')');
+          throw aa.wrapException((Throwable) ((Object) var1), "rn.L(" + param0 + ')');
         }
     }
 
@@ -285,7 +285,7 @@ class EditableTextWidget extends TextButton {
           this.field_M = true;
           this.field_Q = qj.b(-26572);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "rn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "rn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -431,7 +431,7 @@ class EditableTextWidget extends TextButton {
           } else {
             stackIn_81_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_80_0), ((StringBuilder) (Object) stackIn_80_1).append(stackIn_81_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_80_0), ((StringBuilder) (Object) stackIn_80_1).append(stackIn_81_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -550,7 +550,7 @@ class EditableTextWidget extends TextButton {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -576,7 +576,7 @@ class EditableTextWidget extends TextButton {
         try {
           this.notifyTextChanged(-22706);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "rn.MA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "rn.MA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -607,32 +607,32 @@ class EditableTextWidget extends TextButton {
           }
           var5 = new vg();
           var5.field_f = (short)param1.readBits(28089, 16);
-          var5.field_b = eo.a(param1, var5.field_b, 16, 16);
-          var5.field_B = eo.a(param1, var5.field_B, 16, 16);
-          var5.field_L = eo.a(param1, var5.field_L, 16, 16);
+          var5.field_b = eo.readPackedShorts(param1, var5.field_b, 16, 16);
+          var5.field_B = eo.readPackedShorts(param1, var5.field_B, 16, 16);
+          var5.field_L = eo.readPackedShorts(param1, var5.field_L, 16, 16);
           var5.field_G = (short)param1.readBits(28089, 16);
-          var5.field_U = eo.a(param1, var5.field_U, 16, 16);
-          var5.field_T = eo.a(param1, var5.field_T, 16, 16);
-          var5.field_O = eo.a(param1, var5.field_O, 16, 16);
+          var5.field_U = eo.readPackedShorts(param1, var5.field_U, 16, 16);
+          var5.field_T = eo.readPackedShorts(param1, var5.field_T, 16, 16);
+          var5.field_O = eo.readPackedShorts(param1, var5.field_O, 16, 16);
           if (var3 != 0) {
             var5.field_A = (short)param1.readBits(28089, 16);
-            var5.field_r = eo.a(param1, var5.field_r, 16, 16);
-            var5.field_e = eo.a(param1, var5.field_e, 16, 16);
-            var5.field_S = eo.a(param1, var5.field_S, 16, 16);
-            var5.field_w = eo.a(param1, var5.field_w, 16, 16);
-            var5.field_q = eo.a(param1, var5.field_q, 16, 16);
-            var5.field_u = eo.a(param1, var5.field_u, 16, 16);
+            var5.field_r = eo.readPackedShorts(param1, var5.field_r, 16, 16);
+            var5.field_e = eo.readPackedShorts(param1, var5.field_e, 16, 16);
+            var5.field_S = eo.readPackedShorts(param1, var5.field_S, 16, 16);
+            var5.field_w = eo.readPackedShorts(param1, var5.field_w, 16, 16);
+            var5.field_q = eo.readPackedShorts(param1, var5.field_q, 16, 16);
+            var5.field_u = eo.readPackedShorts(param1, var5.field_u, 16, 16);
           }
           if (var4 != 0) {
             param1.readBits(28089, 16);
-            var5.field_Q = eo.a(param1, var5.field_Q, 16, 16);
-            var5.field_d = eo.a(param1, var5.field_d, 16, 16);
-            var5.field_D = eo.a(param1, var5.field_D, 16, 16);
-            var5.field_s = eo.a(param1, var5.field_s, 16, 16);
-            var5.field_h = eo.a(param1, var5.field_h, 16, 16);
+            var5.field_Q = eo.readPackedShorts(param1, var5.field_Q, 16, 16);
+            var5.field_d = eo.readPackedShorts(param1, var5.field_d, 16, 16);
+            var5.field_D = eo.readPackedShorts(param1, var5.field_D, 16, 16);
+            var5.field_s = eo.readPackedShorts(param1, var5.field_s, 16, 16);
+            var5.field_h = eo.readPackedShorts(param1, var5.field_h, 16, 16);
           }
           if (hd.a(param1, (byte) 126)) {
-            var5.field_z = eo.a(param1, var5.field_z, 16, 16);
+            var5.field_z = eo.readPackedShorts(param1, var5.field_z, 16, 16);
           }
           if (hd.a(param1, (byte) 120)) {
             var5.field_H = ub.a(3, param1, 16, var5.field_H);
@@ -660,7 +660,7 @@ class EditableTextWidget extends TextButton {
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(')').toString());
         }
     }
 
@@ -704,7 +704,7 @@ class EditableTextWidget extends TextButton {
           if (!(this.field_r instanceof WidgetTextLayout)) {
             return false;
           }
-          var9_int = ((WidgetTextLayout) ((Object) this.field_r)).b(param6, (UiComponent) (this), me.field_I, an.field_g, param3, 2454);
+          var9_int = ((WidgetTextLayout) ((Object) this.field_r)).b(param6, (UiComponent) (this), me.field_I, EmailLoginCredentials.field_g, param3, 2454);
           stackIn_5_1 = 81;
           if (var9_int != -1) {
             stackIn_6_2 = var9_int;
@@ -736,7 +736,7 @@ class EditableTextWidget extends TextButton {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 

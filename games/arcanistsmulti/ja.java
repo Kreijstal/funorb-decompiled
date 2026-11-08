@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ja extends rl {
+final class ja extends TextFieldValidator {
     static String field_t;
     private mn field_v;
     static int field_s;
@@ -21,7 +21,7 @@ final class ja extends rl {
         field_w = null;
     }
 
-    final String a(String param0, byte param1) {
+    final String messageForText(String param0, byte param1) {
         RuntimeException var3 = null;
         String stackIn_2_0 = null;
         String stackIn_5_0 = null;
@@ -32,15 +32,15 @@ final class ja extends rl {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.field_v.a(param0, -91) == ra.field_k) {
-            stackIn_2_0 = this.field_v.a(param0, (byte) -115);
+          if (this.field_v.validateText(param0, -91) == ra.field_k) {
+            stackIn_2_0 = this.field_v.messageForText(param0, (byte) -115);
             return stackIn_2_0;
           }
           if (param1 >= -114) {
             stackIn_5_0 = (String) null;
             return stackIn_5_0;
           }
-          if (this.a(param0, -90) != ra.field_k) {
+          if (this.validateText(param0, -90) != ra.field_k) {
             stackIn_10_0 = nh.field_v;
             return stackIn_10_0;
           }
@@ -56,23 +56,23 @@ final class ja extends rl {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    final eh a(String param0, int param1) {
+    final ValidationState validateText(String param0, int param1) {
         km var3 = null;
         int var3_int = 0;
         RuntimeException var3_ref = null;
-        eh stackIn_2_0 = null;
-        eh stackIn_7_0 = null;
-        eh stackIn_12_0 = null;
+        ValidationState stackIn_2_0 = null;
+        ValidationState stackIn_7_0 = null;
+        ValidationState stackIn_12_0 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.field_v.a(param0, 14) == ra.field_k) {
+          if (this.field_v.validateText(param0, 14) == ra.field_k) {
             stackIn_2_0 = ra.field_k;
             return stackIn_2_0;
           }
@@ -102,7 +102,7 @@ final class ja extends rl {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -121,7 +121,7 @@ final class ja extends rl {
         try {
           this.field_v = new mn(param0, param1);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "ja.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "ja.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

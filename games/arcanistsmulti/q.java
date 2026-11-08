@@ -55,7 +55,7 @@ final class q extends SingleChildContainer {
             so.field_i = null;
           }
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "q.IA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "q.IA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -64,13 +64,13 @@ final class q extends SingleChildContainer {
         Sprite[] var2Lifetime1;
         if (param1 == 0) {
           var2 = new Sprite[9];
-          var2[4] = ce.b(64, param0, MouseWheelHandler.a(param1, 21385));
+          var2[4] = ce.createFilledSprite(64, param0, MouseWheelHandler.a(param1, 21385));
           return var2;
         }
         kc var3 = (kc) null;
         q.a((kc) null, false, (kc) null, (kc) null, (kc) null);
         var2Lifetime1 = new Sprite[9];
-        var2Lifetime1[4] = ce.b(64, param0, MouseWheelHandler.a(param1, 21385));
+        var2Lifetime1[4] = ce.createFilledSprite(64, param0, MouseWheelHandler.a(param1, 21385));
         return var2Lifetime1;
     }
 
@@ -94,9 +94,9 @@ final class q extends SingleChildContainer {
           if (wd.field_a != null) {
             return;
           }
-          ef.field_r = param1;
+          SocketJs5Transport.field_r = param1;
           if (!wh.field_g) {
-            if (ld.field_p) {
+            if (AlternateUsernameCredentials.field_p) {
               var5 = ra.field_l;
             } else {
               var5 = aj.field_i;
@@ -156,7 +156,7 @@ final class q extends SingleChildContainer {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
         }
     }
 
@@ -165,7 +165,7 @@ final class q extends SingleChildContainer {
         try {
           this.field_B = param6;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "q.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "q.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ')');
         }
     }
 

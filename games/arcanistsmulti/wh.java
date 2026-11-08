@@ -11,7 +11,7 @@ final class wh {
     static IntrusiveDeque field_h;
     static boolean field_g;
     static IndexedSprite[] field_k;
-    static e field_f;
+    static LoginPanel field_f;
     static String field_j;
     static ResourceArchive field_l;
 
@@ -55,15 +55,15 @@ final class wh {
         int var4_int = 0;
         int var5 = ArcanistsMulti.field_G ? 1 : 0;
         if (param0 > -100) {
-          field_f = (e) null;
+          field_f = (LoginPanel) null;
         }
         int var1 = ho.field_i[0] * jg.field_p[0];
         byte[] var2 = ln.field_I[0];
         int[] var3 = new int[var1];
         for (var4_int = 0; var4_int < var1; var4_int++) {
-          var3[var4_int] = ph.field_c[dg.a(255, (int) var2[var4_int])];
+          var3[var4_int] = ph.field_c[NameValidator.bitAnd(255, (int) var2[var4_int])];
         }
-        Sprite var4 = new Sprite(pb.field_g, gn.field_a, hl.field_l[0], be.field_d[0], jg.field_p[0], ho.field_i[0], var3);
+        Sprite var4 = new Sprite(pb.field_g, gn.field_a, hl.field_l[0], SectorCacheStore.field_d[0], jg.field_p[0], ho.field_i[0], var3);
         CanvasRasterBuffer.a(-18229);
         return var4;
     }

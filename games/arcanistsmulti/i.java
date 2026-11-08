@@ -32,18 +32,18 @@ final class i {
         if (!dn.field_Ib[0]) {
           var8 = new int[var1];
           for (var5_int = 0; var5_int < var1; var5_int++) {
-            var8[var5_int] = ph.field_c[dg.a((int) var16[var5_int], 255)];
+            var8[var5_int] = ph.field_c[NameValidator.bitAnd((int) var16[var5_int], 255)];
           }
-          var3 = new Sprite(pb.field_g, gn.field_a, hl.field_l[0], be.field_d[0], jg.field_p[0], ho.field_i[0], var8);
+          var3 = new Sprite(pb.field_g, gn.field_a, hl.field_l[0], SectorCacheStore.field_d[0], jg.field_p[0], ho.field_i[0], var8);
         } else {
           var17 = vi.field_O[0];
           var13 = new int[var1];
           var11 = var13;
           var5 = var11;
           for (var6 = 0; var6 < var1; var6++) {
-            var5[var6] = fj.b(dg.a(255, (int) var17[var6]) << 24, ph.field_c[dg.a((int) var16[var6], 255)]);
+            var5[var6] = fj.bitOr(NameValidator.bitAnd(255, (int) var17[var6]) << 24, ph.field_c[NameValidator.bitAnd((int) var16[var6], 255)]);
           }
-          var3 = new ArgbSprite(pb.field_g, gn.field_a, hl.field_l[0], be.field_d[0], jg.field_p[0], ho.field_i[0], var13);
+          var3 = new ArgbSprite(pb.field_g, gn.field_a, hl.field_l[0], SectorCacheStore.field_d[0], jg.field_p[0], ho.field_i[0], var13);
         }
         CanvasRasterBuffer.a(-18229);
         return (Sprite) (var3);
@@ -130,7 +130,7 @@ final class i {
           }
           if (var10 > 0 &&
             0 < var9) {
-            fc.a(var7_int, param5.field_A, var11, 6725, var8, var12, param3, param0.field_m, var10, var9);
+            fc.blitByteMask(var7_int, param5.field_A, var11, 6725, var8, var12, param3, param0.field_m, var10, var9);
             return;
           }
           return;
@@ -156,7 +156,7 @@ final class i {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param6).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -186,7 +186,7 @@ final class i {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var1), "i.G(" + param0 + ')');
+          throw aa.wrapException((Throwable) ((Object) var1), "i.G(" + param0 + ')');
         }
     }
 
@@ -247,7 +247,7 @@ final class i {
             } else {
               stackIn_21_2 = "{...}";
             }
-            throw aa.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
+            throw aa.wrapException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -270,7 +270,7 @@ final class i {
           var4 = new kc[]{param1, ec.field_d, (kc) ((Object) dd.field_c)};
           this.field_c = new tn(0L, ub.field_c, var3, mn.field_t, var4, 0);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "i.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "i.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

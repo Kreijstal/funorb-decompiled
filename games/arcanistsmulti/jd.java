@@ -198,10 +198,10 @@ final class jd {
             }
           }
           this.field_h = this.field_h + this.field_f[var2 + 128 & 255];
-          dupTemp$1 = this.field_h + this.field_f[dg.a(var3 >> 2, 255)] + this.field_k;
+          dupTemp$1 = this.field_h + this.field_f[NameValidator.bitAnd(var3 >> 2, 255)] + this.field_k;
           var4 = dupTemp$1;
           this.field_f[var2] = dupTemp$1;
-          dupTemp$2 = var3 + this.field_f[dg.a(255, var4 >> 8 >> 2)];
+          dupTemp$2 = var3 + this.field_f[NameValidator.bitAnd(255, var4 >> 8 >> 2)];
           this.field_k = dupTemp$2;
           this.field_a[var2] = dupTemp$2;
         }
@@ -230,7 +230,7 @@ final class jd {
         do {
           var4 = this.c((byte) -46);
         } while (var3 < var4);
-        return dh.a(var4, true, param0);
+        return dh.floorMod(var4, true, param0);
     }
 
     final static int b(int param0) {
@@ -269,7 +269,7 @@ final class jd {
           }
           this.a(1046142536);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "jd.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "jd.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ki extends rl {
+final class ki extends TextFieldValidator {
     static String field_x;
     static int field_q;
     static String field_w;
@@ -11,13 +11,13 @@ final class ki extends rl {
     static ResourceArchive field_s;
     static int[] field_r;
 
-    final eh a(String param0, int param1) {
+    final ValidationState validateText(String param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
         int stackIn_3_0 = 0;
-        eh stackIn_6_0 = null;
-        eh stackIn_8_0 = null;
+        ValidationState stackIn_6_0 = null;
+        ValidationState stackIn_8_0 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
@@ -42,7 +42,7 @@ final class ki extends rl {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -61,7 +61,7 @@ final class ki extends rl {
         field_r = null;
     }
 
-    final String a(String param0, byte param1) {
+    final String messageForText(String param0, byte param1) {
         RuntimeException var3 = null;
         String var4 = null;
         String stackIn_4_0 = null;
@@ -73,9 +73,9 @@ final class ki extends rl {
         try {
           if (param1 >= -114) {
             var4 = (String) null;
-            this.a((String) null, -66);
+            this.validateText((String) null, -66);
           }
-          if (this.a(param0, 68) != ra.field_k) {
+          if (this.validateText(param0, 68) != ra.field_k) {
             stackIn_6_0 = nh.field_v;
             return stackIn_6_0;
           }
@@ -91,7 +91,7 @@ final class ki extends rl {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
         }
     }
 

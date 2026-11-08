@@ -59,7 +59,7 @@ final class rm {
             var4 = 0;
             var5 = 56;
             while (var4 < 8) {
-              this.field_j[var3Lifetime2] = kh.a(this.field_j[var3Lifetime2], mb.field_L[var4][dg.a(255, (int)(this.field_c[dg.a(7, -var4 + var3Lifetime2)] >>> var5))]);
+              this.field_j[var3Lifetime2] = kh.a(this.field_j[var3Lifetime2], mb.field_L[var4][NameValidator.bitAnd(255, (int)(this.field_c[NameValidator.bitAnd(7, -var4 + var3Lifetime2)] >>> var5))]);
               var4++;
               var5 -= 8;
             }
@@ -74,7 +74,7 @@ final class rm {
             var4Lifetime1 = var7;
             var5Lifetime1 = 56;
             while (8 > var7) {
-              this.field_j[var3Lifetime2Lifetime2] = kh.a(this.field_j[var3Lifetime2Lifetime2], mb.field_L[var7][dg.a((int)(this.field_f[dg.a(7, var3Lifetime2Lifetime2 - var7)] >>> var5Lifetime1), 255)]);
+              this.field_j[var3Lifetime2Lifetime2] = kh.a(this.field_j[var3Lifetime2Lifetime2], mb.field_L[var7][NameValidator.bitAnd((int)(this.field_f[NameValidator.bitAnd(7, var3Lifetime2Lifetime2 - var7)] >>> var5Lifetime1), 255)]);
               var7++;
               var5Lifetime1 -= 8;
             }
@@ -122,7 +122,7 @@ final class rm {
             var8 = 255 & param2[var5_int] << var6 | (255 & param2[var5_int + 1]) >>> -var6 + 8;
             if (var8 >= 0 &&
               256 > var8) {
-              this.field_b[this.field_n] = (byte)fj.b((int) this.field_b[this.field_n], var8 >>> var7);
+              this.field_b[this.field_n] = (byte)fj.bitOr((int) this.field_b[this.field_n], var8 >>> var7);
               this.field_n = this.field_n + 1;
               this.field_h = this.field_h + (-var7 + 8);
               if (512 == this.field_h) {
@@ -130,7 +130,7 @@ final class rm {
                 this.field_n = 0;
                 this.field_h = 0;
               }
-              this.field_b[this.field_n] = (byte)dg.a(255, var8 << -var7 + 8);
+              this.field_b[this.field_n] = (byte)NameValidator.bitAnd(255, var8 << -var7 + 8);
               var5_int++;
               param0 = param0 - 8L;
               this.field_h = this.field_h + var7;
@@ -140,7 +140,7 @@ final class rm {
           }
           if (param0 > 0L) {
             var8Lifetime1 = param2[var5_int] << var6 & 255;
-            this.field_b[this.field_n] = (byte)fj.b((int) this.field_b[this.field_n], var8Lifetime1 >>> var7);
+            this.field_b[this.field_n] = (byte)fj.bitOr((int) this.field_b[this.field_n], var8Lifetime1 >>> var7);
           } else {
             var8Lifetime1 = 0;
           }
@@ -155,7 +155,7 @@ final class rm {
               this.field_h = 0;
               this.field_n = 0;
             }
-            this.field_b[this.field_n] = (byte)dg.a(255, var8Lifetime1 << 8 - var7);
+            this.field_b[this.field_n] = (byte)NameValidator.bitAnd(255, var8Lifetime1 << 8 - var7);
             this.field_h = this.field_h + (int)param0;
           }
           return;
@@ -169,7 +169,7 @@ final class rm {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
         }
     }
 
@@ -187,7 +187,7 @@ final class rm {
         int var8 = 0;
         var8 = ArcanistsMulti.field_G ? 1 : 0;
         try {
-          this.field_b[this.field_n] = (byte)fj.b((int) this.field_b[this.field_n], 128 >>> dg.a(this.field_h, 7));
+          this.field_b[this.field_n] = (byte)fj.bitOr((int) this.field_b[this.field_n], 128 >>> NameValidator.bitAnd(this.field_h, 7));
           this.field_n = this.field_n + 1;
           if (32 < this.field_n) {
             while (this.field_n < 64) {
@@ -234,7 +234,7 @@ final class rm {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -261,17 +261,17 @@ final class rm {
                 param0.field_k == 0) {
                 var3Lifetime1 = wd.field_c[param0.field_m];
               } else {
-                var3Lifetime1 = an.field_h[param0.field_m];
+                var3Lifetime1 = EmailLoginCredentials.field_h[param0.field_m];
               }
             }
           } else {
             if (4 == param0.field_m) {
-              var3Lifetime1 = an.field_h[param0.field_m];
+              var3Lifetime1 = EmailLoginCredentials.field_h[param0.field_m];
             } else {
               if (param0.field_h == qf.field_a) {
                 var3Lifetime1 = wd.field_c[param0.field_m];
               } else {
-                var3Lifetime1 = an.field_h[param0.field_m];
+                var3Lifetime1 = EmailLoginCredentials.field_h[param0.field_m];
               }
             }
           }
@@ -287,7 +287,7 @@ final class rm {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -344,7 +344,7 @@ final class rm {
             }
             var4 = new byte[var3_int];
             param0.position = param0.position + kh.field_g.a(0, (byte) -126, var4, var3_int, param0.payload, param0.position);
-            var5 = PatchEnvelopeSet.a(0, var3_int, (byte) -124, var4);
+            var5 = PatchEnvelopeSet.decodeCp1252String(0, var3_int, (byte) -124, var4);
             if (param2 < -55) {
               stackIn_7_0 = var5;
               return stackIn_7_0;
@@ -367,7 +367,7 @@ final class rm {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -400,7 +400,7 @@ final class rm {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -425,7 +425,7 @@ final class rm {
           }
           var5_int = param4.c(param2, -48);
           var6 = param4.a(param0, (byte) 33, var5_int);
-          stackIn_3_0 = im.a(param4, var6, param1, 101, var5_int);
+          stackIn_3_0 = UsernameCredentials.a(param4, var6, param1, 101, var5_int);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -455,7 +455,7 @@ final class rm {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -475,7 +475,7 @@ final class rm {
         if (param0 != 1283220456) {
           rm.b(95);
         }
-        return new ql[]{ea.field_y, of.field_n, vh.field_f};
+        return new ql[]{DiskCacheRequest.field_y, of.field_n, vh.field_f};
     }
 
     static {

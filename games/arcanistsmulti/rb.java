@@ -21,11 +21,11 @@ final class rb extends IntrusiveNode {
         try {
           af.field_Hb = param2;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "rb.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "rb.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_o = null;
         field_m = null;
         if (param0 >= 25) {
@@ -230,7 +230,7 @@ final class rb extends IntrusiveNode {
           } else {
             stackIn_41_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(')').toString());
         }
     }
 
@@ -306,7 +306,7 @@ final class rb extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var1), "rb.F(" + param0 + ')');
+          throw aa.wrapException((Throwable) ((Object) var1), "rb.F(" + param0 + ')');
         }
     }
 
@@ -322,7 +322,7 @@ final class rb extends IntrusiveNode {
           SingleChildContainer.field_D.field_x = SingleChildContainer.field_D.field_x - sa.field_Cb.field_x;
           sa.field_Cb.field_T = sa.field_Cb.field_T - sa.field_Cb.field_x;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "rb.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "rb.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 
@@ -332,7 +332,7 @@ final class rb extends IntrusiveNode {
           this.field_j = param0;
           this.field_h = 150;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "rb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "rb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

@@ -37,7 +37,7 @@ final class sn extends UiContainer implements ro, ButtonListener {
           }
           var11 = new ke(20, param5, 120 + param6, 25, param3, false, 120, 3, ia.field_c, 16777215, param0);
           this.addChild(-108, var11);
-          var9 = new sc(((el) ((Object) param3)).a(0), param4, 126, param5 + var11.field_k, 25 + param6, param1);
+          var9 = new sc(((ValidationProviderSource) ((Object) param3)).getValidationProvider(0), param4, 126, param5 + var11.field_k, 25 + param6, param1);
           var9.field_o = (UiListener) (this);
           this.addChild(-113, var9);
           stackIn_3_0 = var9.field_k + var11.field_k;
@@ -64,14 +64,14 @@ final class sn extends UiContainer implements ro, ButtonListener {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
     final boolean handleKeyInput(UiComponent param0, byte param1, char param2, int param3) {
         boolean discarded$1 = false;
         RuntimeException var5 = null;
-        el var6 = null;
+        ValidationProviderSource var6 = null;
         boolean stackIn_5_0 = false;
         boolean stackIn_8_0 = false;
         RuntimeException stackIn_15_0 = null;
@@ -93,8 +93,8 @@ final class sn extends UiContainer implements ro, ButtonListener {
           if (param1 < -120) {
             return false;
           }
-          var6 = (el) null;
-          discarded$1 = this.a(42, (el) null);
+          var6 = (ValidationProviderSource) null;
+          discarded$1 = this.a(42, (ValidationProviderSource) null);
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -106,7 +106,7 @@ final class sn extends UiContainer implements ro, ButtonListener {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -149,7 +149,7 @@ final class sn extends UiContainer implements ro, ButtonListener {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param5).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -157,7 +157,7 @@ final class sn extends UiContainer implements ro, ButtonListener {
         if (param0 != 16777215) {
           field_H = (int[]) null;
         }
-        if (!this.a(315, (el) (this.field_D))) {
+        if (!this.a(315, (ValidationProviderSource) (this.field_D))) {
           return false;
         }
         return true;
@@ -167,7 +167,7 @@ final class sn extends UiContainer implements ro, ButtonListener {
         if (param0 != -7) {
           return;
         }
-        ((dg) (this.field_D.a(0))).e(127);
+        ((NameValidator) (this.field_D.getValidationProvider(0))).e(127);
     }
 
     public static void releaseStatics(byte param0) {
@@ -182,21 +182,21 @@ final class sn extends UiContainer implements ro, ButtonListener {
         field_J = null;
     }
 
-    private final boolean a(int param0, el param1) {
-        pd var3 = null;
+    private final boolean a(int param0, ValidationProviderSource param1) {
+        ValidationProvider var3 = null;
         RuntimeException var3_ref = null;
-        eh var4 = null;
+        ValidationState var4 = null;
         boolean stackIn_10_0 = false;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = param1.a(0);
+          var3 = param1.getValidationProvider(0);
           if (var3 == null) {
             return true;
           }
-          var4 = var3.a(param0 - 392);
+          var4 = var3.getValidationState(param0 - 392);
           if (param0 == 315) {
             stackIn_10_0 = (var4 == nn.field_s);
             return stackIn_10_0;
@@ -212,7 +212,7 @@ final class sn extends UiContainer implements ro, ButtonListener {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -221,10 +221,10 @@ final class sn extends UiContainer implements ro, ButtonListener {
         this.field_D = new bi("", (UiListener) null, 12);
         jm var1 = new jm(vc.field_e, 0, 0, 0, 0, 16777215, -1, 3, 0, ia.field_c.field_C, -1, 2147483647, true);
         UiComponent var2 = new UiComponent(wl.field_H, var1, (UiListener) null);
-        this.field_O = new TextButton(im.field_f, (UiListener) null);
+        this.field_O = new TextButton(UsernameCredentials.field_f, (UiListener) null);
         this.field_I = new TextButton(sa.field_Eb, (UiListener) null);
-        this.field_D.field_q = eh.field_b;
-        this.field_D.a(new dg(this.field_D), (byte) 69);
+        this.field_D.field_q = ValidationState.field_b;
+        this.field_D.a(new NameValidator(this.field_D), (byte) 69);
         this.field_O.field_B = false;
         this.field_O.field_r = (WidgetPainter) ((Object) new mm());
         this.field_I.field_r = (WidgetPainter) ((Object) new gm());
@@ -235,7 +235,7 @@ final class sn extends UiContainer implements ro, ButtonListener {
         var2.setBounds(50, var3, 270, 20, -85);
         this.addChild(-85, var2);
         var3 += 50;
-        var3 = var3 + (5 + this.a(var3, bj.field_kb, 170, this.field_D, ch.field_h, -124));
+        var3 = var3 + (5 + this.a(var3, bj.field_kb, 170, this.field_D, CredentialKind.field_h, -124));
         this.field_O.setBounds(40, var3, var5, -var5 + 496 >> 1, -67);
         this.field_I.setBounds(40, var3 + 15, 60, 3 + var4, -126);
         this.field_I.field_o = (UiListener) (this);
@@ -286,7 +286,7 @@ final class sn extends UiContainer implements ro, ButtonListener {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -297,13 +297,13 @@ final class sn extends UiContainer implements ro, ButtonListener {
         try {
           var3 = this.field_D;
           if (param1 != 90) {
-            el var5 = (el) null;
-            discarded$0 = this.a(77, (el) null);
+            ValidationProviderSource var5 = (ValidationProviderSource) null;
+            discarded$0 = this.a(77, (ValidationProviderSource) null);
           }
           var4 = param0;
           ((EditableTextWidget) ((Object) var3)).setText(false, var4, false);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "sn.O(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "sn.O(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -316,7 +316,7 @@ final class sn extends UiContainer implements ro, ButtonListener {
           super.updatePointer(param0, param1, param2 + 0, param3);
           this.field_O.field_B = this.a(16777215);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "sn.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "sn.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -497,7 +497,7 @@ final class sn extends UiContainer implements ro, ButtonListener {
           } else {
             stackIn_73_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_69_0), ((StringBuilder) (Object) stackIn_72_1).append(stackIn_73_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_69_0), ((StringBuilder) (Object) stackIn_72_1).append(stackIn_73_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
         }
     }
 

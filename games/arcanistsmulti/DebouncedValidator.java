@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class ee implements pd {
+abstract class DebouncedValidator implements ValidationProvider {
     static String field_c;
     static String field_a;
     static IndexedSprite[] field_b;
@@ -10,9 +10,9 @@ abstract class ee implements pd {
     static int[] field_d;
     static String field_f;
 
-    abstract String a(boolean param0);
+    abstract String computeMessage(boolean param0);
 
-    public static void c(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_c = null;
         field_a = null;
         field_g = null;
@@ -23,7 +23,7 @@ abstract class ee implements pd {
           return;
         }
         IndexedSprite var2 = (IndexedSprite) null;
-        ee.a((IndexedSprite) null, -106, -125, 14);
+        DebouncedValidator.a((IndexedSprite) null, -106, -125, 14);
         field_d = null;
         field_b = null;
         field_f = null;
@@ -116,33 +116,33 @@ abstract class ee implements pd {
           } else {
             stackIn_36_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
-    public final String c(int param0) {
+    public final String getValidationMessage(int param0) {
         if (param0 != 26146) {
           return (String) null;
         }
-        if (this.a((byte) -90)) {
+        if (this.isEmpty((byte) -90)) {
           return null;
         }
         if (qj.b(-26572) >= 350L + this.field_e) {
-          return this.a(true);
+          return this.computeMessage(true);
         }
         return null;
     }
 
-    public final void b(int param0) {
+    public final void restartDebounce(int param0) {
         if (param0 != -17444) {
-          ee.b(false);
+          DebouncedValidator.logMaxMemory(false);
           this.field_e = qj.b(-26572);
           return;
         }
         this.field_e = qj.b(-26572);
     }
 
-    final static void b(boolean param0) {
+    final static void logMaxMemory(boolean param0) {
         try {
           int decompiledRegionSelector0 = 0;
           Throwable decompiledCaughtException = null;
@@ -172,7 +172,7 @@ abstract class ee implements pd {
                   return;
                 }
                 var5 = (IndexedSprite) null;
-                ee.a((IndexedSprite) null, 125, 14, -99);
+                DebouncedValidator.a((IndexedSprite) null, 125, 14, -99);
                 return;
               }
             }
@@ -184,7 +184,7 @@ abstract class ee implements pd {
             return;
           }
           var5 = (IndexedSprite) null;
-          ee.a((IndexedSprite) null, 125, 14, -99);
+          DebouncedValidator.a((IndexedSprite) null, 125, 14, -99);
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -214,36 +214,36 @@ abstract class ee implements pd {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
         }
     }
 
-    abstract eh b(byte param0);
+    abstract ValidationState computeState(byte param0);
 
     final static void a(int param0, byte param1) {
         if (param1 != 30) {
-          ee.a(-79, (byte) -26);
+          DebouncedValidator.a(-79, (byte) -26);
           qg.field_c = param0;
           return;
         }
         qg.field_c = param0;
     }
 
-    public final eh a(int param0) {
-        if (this.a((byte) -82)) {
+    public final ValidationState getValidationState(int param0) {
+        if (this.isEmpty((byte) -82)) {
           return cg.field_Wb;
         }
         if (param0 > -65) {
-          this.b(-88);
+          this.restartDebounce(-88);
           if (!(this.field_e + 350L <= qj.b(-26572))) {
             return da.field_f;
           }
-          return this.b((byte) -66);
+          return this.computeState((byte) -66);
         }
         if (!(this.field_e + 350L <= qj.b(-26572))) {
           return da.field_f;
         }
-        return this.b((byte) -66);
+        return this.computeState((byte) -66);
     }
 
     static {

@@ -28,7 +28,7 @@ abstract class vi extends UiContainer {
           }
           AudioService.field_i = param1;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "vi.SA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "vi.SA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -50,7 +50,7 @@ abstract class vi extends UiContainer {
         sl.field_T = param1;
     }
 
-    public static void h(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 == 62) {
           field_O = (byte[][]) null;
           field_Q = null;
@@ -98,7 +98,7 @@ abstract class vi extends UiContainer {
           this.field_G = false;
           this.field_S = 0;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "vi.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "vi.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -128,7 +128,7 @@ abstract class vi extends UiContainer {
         if (param0 >= -52) {
           field_E = (Sprite[]) null;
         }
-        fk.a(ed.field_vb, -23095);
+        fk.setSpriteRasterTarget(ed.field_vb, -23095);
         SoftwareRasterizer.clear();
         this.a(0, (byte) -117, 0);
         super.drawLayer((byte) -117, -param1 - this.field_n, param2, -this.field_j - param3);

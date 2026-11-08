@@ -6,7 +6,7 @@ final class sc extends ej {
     static String field_S;
     static aj field_W;
     private int field_X;
-    private pd field_J;
+    private ValidationProvider field_J;
     private String field_ab;
     static String field_Z;
     static int[] field_U;
@@ -36,7 +36,7 @@ final class sc extends ej {
         Object var22 = null;
         Object var31 = null;
         int var13 = ArcanistsMulti.field_G ? 1 : 0;
-        eh var6 = this.field_J.a(-92);
+        ValidationState var6 = this.field_J.getValidationState(-92);
         int var9Lifetime1;
         int var9Lifetime2;
         int var10Lifetime1;
@@ -48,7 +48,7 @@ final class sc extends ej {
         int var11Lifetime1Lifetime1;
         int var12Lifetime1Lifetime1;
         if (da.field_f == var6) {
-          var17 = ea.field_D;
+          var17 = DiskCacheRequest.field_D;
           if (!var17.equals(this.field_g)) {
             this.field_g = var17;
             this.g((byte) 63);
@@ -57,7 +57,7 @@ final class sc extends ej {
           if (param0 > -52) {
             this.field_Y = (Sprite) null;
           }
-          var6 = this.field_J.a(-103);
+          var6 = this.field_J.getValidationState(-103);
           var35 = (WidgetTextLayout) ((Object) this.field_r);
           var9 = this.field_n + param1;
           var10 = var35.a(param3, -13372, (UiComponent) (this)) + (var35.a((UiComponent) (this), -126).a((byte) -58) >> 1);
@@ -80,7 +80,7 @@ final class sc extends ej {
           var12 = var21.field_w << 1;
           if (null == this.field_Y) {
             this.field_Y = new Sprite(var11, var12);
-            fk.a(this.field_Y, -23095);
+            fk.setSpriteRasterTarget(this.field_Y, -23095);
             var21.drawRotatedAboutPivot(112, 144, var21.field_n << 4, var21.field_w << 4, -this.field_X << 10, 4096);
             oo.c(-15405);
             this.field_Y.drawAdditive(-(var21.field_n >> 1) + var9, var10 - var21.field_w, 256);
@@ -88,14 +88,14 @@ final class sc extends ej {
           }
           if (var11 > this.field_Y.field_q) {
             this.field_Y = new Sprite(var11, var12);
-            fk.a(this.field_Y, -23095);
+            fk.setSpriteRasterTarget(this.field_Y, -23095);
             var21.drawRotatedAboutPivot(112, 144, var21.field_n << 4, var21.field_w << 4, -this.field_X << 10, 4096);
             oo.c(-15405);
             this.field_Y.drawAdditive(-(var21.field_n >> 1) + var9, var10 - var21.field_w, 256);
             return;
           }
           if (this.field_Y.field_y >= var12) {
-            fk.a(this.field_Y, -23095);
+            fk.setSpriteRasterTarget(this.field_Y, -23095);
             SoftwareRasterizer.clear();
             var21.drawRotatedAboutPivot(112, 144, var21.field_n << 4, var21.field_w << 4, -this.field_X << 10, 4096);
             oo.c(-15405);
@@ -103,16 +103,16 @@ final class sc extends ej {
             return;
           }
           this.field_Y = new Sprite(var11, var12);
-          fk.a(this.field_Y, -23095);
+          fk.setSpriteRasterTarget(this.field_Y, -23095);
           var21.drawRotatedAboutPivot(112, 144, var21.field_n << 4, var21.field_w << 4, -this.field_X << 10, 4096);
           oo.c(-15405);
           this.field_Y.drawAdditive(-(var21.field_n >> 1) + var9, var10 - var21.field_w, 256);
           return;
         }
         if (IsaacCipher.field_c == var6) {
-          var5 = ea.field_D;
+          var5 = DiskCacheRequest.field_D;
         } else {
-          var5 = this.field_J.c(26146);
+          var5 = this.field_J.getValidationMessage(26146);
           if (var5 == null) {
             var5 = this.field_ab;
           }
@@ -123,7 +123,7 @@ final class sc extends ej {
         }
         super.drawLayer((byte) -58, param1, param2, param3);
         if (param0 <= -52) {
-          var6 = this.field_J.a(-103);
+          var6 = this.field_J.getValidationState(-103);
           var36 = (WidgetTextLayout) ((Object) this.field_r);
           var9Lifetime1 = this.field_n + param1;
           var10Lifetime1 = var36.a(param3, -13372, (UiComponent) (this)) + (var36.a((UiComponent) (this), -126).a((byte) -58) >> 1);
@@ -133,7 +133,7 @@ final class sc extends ej {
             var12Lifetime1 = var23.field_w << 1;
             if (null == this.field_Y) {
               this.field_Y = new Sprite(var11Lifetime1, var12Lifetime1);
-              fk.a(this.field_Y, -23095);
+              fk.setSpriteRasterTarget(this.field_Y, -23095);
               var23.drawRotatedAboutPivot(112, 144, var23.field_n << 4, var23.field_w << 4, -this.field_X << 10, 4096);
               oo.c(-15405);
               this.field_Y.drawAdditive(-(var23.field_n >> 1) + var9Lifetime1, var10Lifetime1 - var23.field_w, 256);
@@ -141,14 +141,14 @@ final class sc extends ej {
             }
             if (var11Lifetime1 > this.field_Y.field_q) {
               this.field_Y = new Sprite(var11Lifetime1, var12Lifetime1);
-              fk.a(this.field_Y, -23095);
+              fk.setSpriteRasterTarget(this.field_Y, -23095);
               var23.drawRotatedAboutPivot(112, 144, var23.field_n << 4, var23.field_w << 4, -this.field_X << 10, 4096);
               oo.c(-15405);
               this.field_Y.drawAdditive(-(var23.field_n >> 1) + var9Lifetime1, var10Lifetime1 - var23.field_w, 256);
               return;
             }
             if (this.field_Y.field_y >= var12Lifetime1) {
-              fk.a(this.field_Y, -23095);
+              fk.setSpriteRasterTarget(this.field_Y, -23095);
               SoftwareRasterizer.clear();
               var23.drawRotatedAboutPivot(112, 144, var23.field_n << 4, var23.field_w << 4, -this.field_X << 10, 4096);
               oo.c(-15405);
@@ -156,7 +156,7 @@ final class sc extends ej {
               return;
             }
             this.field_Y = new Sprite(var11Lifetime1, var12Lifetime1);
-            fk.a(this.field_Y, -23095);
+            fk.setSpriteRasterTarget(this.field_Y, -23095);
             var23.drawRotatedAboutPivot(112, 144, var23.field_n << 4, var23.field_w << 4, -this.field_X << 10, 4096);
             oo.c(-15405);
             this.field_Y.drawAdditive(-(var23.field_n >> 1) + var9Lifetime1, var10Lifetime1 - var23.field_w, 256);
@@ -169,7 +169,7 @@ final class sc extends ej {
             var12Lifetime1Lifetime1 = var24.field_w << 1;
             if (null == this.field_Y) {
               this.field_Y = new Sprite(var11Lifetime1Lifetime1, var12Lifetime1Lifetime1);
-              fk.a(this.field_Y, -23095);
+              fk.setSpriteRasterTarget(this.field_Y, -23095);
               var24.drawRotatedAboutPivot(112, 144, var24.field_n << 4, var24.field_w << 4, -this.field_X << 10, 4096);
               oo.c(-15405);
               this.field_Y.drawAdditive(-(var24.field_n >> 1) + var9Lifetime1, var10Lifetime1 - var24.field_w, 256);
@@ -177,7 +177,7 @@ final class sc extends ej {
             }
             if (var11Lifetime1Lifetime1 > this.field_Y.field_q) {
               this.field_Y = new Sprite(var11Lifetime1Lifetime1, var12Lifetime1Lifetime1);
-              fk.a(this.field_Y, -23095);
+              fk.setSpriteRasterTarget(this.field_Y, -23095);
               var24.drawRotatedAboutPivot(112, 144, var24.field_n << 4, var24.field_w << 4, -this.field_X << 10, 4096);
               oo.c(-15405);
               this.field_Y.drawAdditive(-(var24.field_n >> 1) + var9Lifetime1, var10Lifetime1 - var24.field_w, 256);
@@ -185,13 +185,13 @@ final class sc extends ej {
             }
             if (this.field_Y.field_y < var12Lifetime1Lifetime1) {
               this.field_Y = new Sprite(var11Lifetime1Lifetime1, var12Lifetime1Lifetime1);
-              fk.a(this.field_Y, -23095);
+              fk.setSpriteRasterTarget(this.field_Y, -23095);
               var24.drawRotatedAboutPivot(112, 144, var24.field_n << 4, var24.field_w << 4, -this.field_X << 10, 4096);
               oo.c(-15405);
               this.field_Y.drawAdditive(-(var24.field_n >> 1) + var9Lifetime1, var10Lifetime1 - var24.field_w, 256);
               return;
             }
-            fk.a(this.field_Y, -23095);
+            fk.setSpriteRasterTarget(this.field_Y, -23095);
             SoftwareRasterizer.clear();
             var24.drawRotatedAboutPivot(112, 144, var24.field_n << 4, var24.field_w << 4, -this.field_X << 10, 4096);
             oo.c(-15405);
@@ -211,7 +211,7 @@ final class sc extends ej {
           return;
         }
         this.field_Y = (Sprite) null;
-        var6 = this.field_J.a(-103);
+        var6 = this.field_J.getValidationState(-103);
         WidgetTextLayout var37 = (WidgetTextLayout) ((Object) this.field_r);
         var9Lifetime2 = this.field_n + param1;
         var10Lifetime2 = var37.a(param3, -13372, (UiComponent) (this)) + (var37.a((UiComponent) (this), -126).a((byte) -58) >> 1);
@@ -234,7 +234,7 @@ final class sc extends ej {
         var12Lifetime2 = var34.field_w << 1;
         if (null == this.field_Y) {
           this.field_Y = new Sprite(var11Lifetime2, var12Lifetime2);
-          fk.a(this.field_Y, -23095);
+          fk.setSpriteRasterTarget(this.field_Y, -23095);
           var34.drawRotatedAboutPivot(112, 144, var34.field_n << 4, var34.field_w << 4, -this.field_X << 10, 4096);
           oo.c(-15405);
           this.field_Y.drawAdditive(-(var34.field_n >> 1) + var9Lifetime2, var10Lifetime2 - var34.field_w, 256);
@@ -242,14 +242,14 @@ final class sc extends ej {
         }
         if (var11Lifetime2 > this.field_Y.field_q) {
           this.field_Y = new Sprite(var11Lifetime2, var12Lifetime2);
-          fk.a(this.field_Y, -23095);
+          fk.setSpriteRasterTarget(this.field_Y, -23095);
           var34.drawRotatedAboutPivot(112, 144, var34.field_n << 4, var34.field_w << 4, -this.field_X << 10, 4096);
           oo.c(-15405);
           this.field_Y.drawAdditive(-(var34.field_n >> 1) + var9Lifetime2, var10Lifetime2 - var34.field_w, 256);
           return;
         }
         if (this.field_Y.field_y >= var12Lifetime2) {
-          fk.a(this.field_Y, -23095);
+          fk.setSpriteRasterTarget(this.field_Y, -23095);
           SoftwareRasterizer.clear();
           var34.drawRotatedAboutPivot(112, 144, var34.field_n << 4, var34.field_w << 4, -this.field_X << 10, 4096);
           oo.c(-15405);
@@ -257,7 +257,7 @@ final class sc extends ej {
           return;
         }
         this.field_Y = new Sprite(var11Lifetime2, var12Lifetime2);
-        fk.a(this.field_Y, -23095);
+        fk.setSpriteRasterTarget(this.field_Y, -23095);
         var34.drawRotatedAboutPivot(112, 144, var34.field_n << 4, var34.field_w << 4, -this.field_X << 10, 4096);
         oo.c(-15405);
         this.field_Y.drawAdditive(-(var34.field_n >> 1) + var9Lifetime2, var10Lifetime2 - var34.field_w, 256);
@@ -267,7 +267,7 @@ final class sc extends ej {
         if (!param0) {
           return;
         }
-        q.a(IntrusiveNode.field_c, false, be.field_l, mf.field_d, am.field_c);
+        q.a(IntrusiveNode.field_c, false, SectorCacheStore.field_l, mf.field_d, am.field_c);
     }
 
     final static void a(boolean param0, boolean param1, boolean param2) {
@@ -285,7 +285,7 @@ final class sc extends ej {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 >= 85) {
-            stackIn_4_0 = PatchEnvelopeSet.a(0, param1.length, (byte) -127, param1);
+            stackIn_4_0 = PatchEnvelopeSet.decodeCp1252String(0, param1.length, (byte) -127, param1);
             return stackIn_4_0;
           }
           stackIn_2_0 = (String) null;
@@ -300,7 +300,7 @@ final class sc extends ej {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -535,7 +535,7 @@ final class sc extends ej {
         return;
     }
 
-    public static void g(int param0) {
+    public static void releaseStatics(int param0) {
         field_Z = null;
         field_U = null;
         field_S = null;
@@ -564,10 +564,10 @@ final class sc extends ej {
           this.field_X = this.field_X + 1;
           super.updatePointer(param0, param1, param2 + 0, param3);
           if (param2 != 170) {
-            sc.g(-45);
+            sc.releaseStatics(-45);
           }
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "sc.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "sc.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -640,14 +640,14 @@ final class sc extends ej {
         uh.a(pn.field_c, param0 + 0);
     }
 
-    sc(pd param0, String param1, int param2, int param3, int param4, int param5) {
-        super(param1, cc.b((byte) -65));
+    sc(ValidationProvider param0, String param1, int param2, int param3, int param4, int param5) {
+        super(param1, cc.getDefaultTextPainter((byte) -65));
         try {
           this.field_J = param0;
           this.field_ab = param1;
           this.setBounds(param5, param3, param4, param2, -83);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "sc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "sc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -680,7 +680,7 @@ final class sc extends ej {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -705,7 +705,7 @@ final class sc extends ej {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -718,7 +718,7 @@ final class sc extends ej {
 
     final static int h(byte param0) {
         if (param0 != -34) {
-          sc.g(-11);
+          sc.releaseStatics(-11);
           return qc.field_a;
         }
         return qc.field_a;

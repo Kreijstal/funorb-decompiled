@@ -138,7 +138,7 @@ class PacketBuffer extends IntrusiveNode {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param3).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -223,7 +223,7 @@ class PacketBuffer extends IntrusiveNode {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -287,7 +287,7 @@ class PacketBuffer extends IntrusiveNode {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -321,7 +321,7 @@ class PacketBuffer extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var1_ref), "wk.AB(" + param0 + ')');
+          throw aa.wrapException((Throwable) ((Object) var1_ref), "wk.AB(" + param0 + ')');
         }
     }
 
@@ -436,7 +436,7 @@ class PacketBuffer extends IntrusiveNode {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -473,7 +473,7 @@ class PacketBuffer extends IntrusiveNode {
         if (var4 == 0) {
           return "";
         }
-        return PatchEnvelopeSet.a(var3, var4, (byte) -126, this.payload);
+        return PatchEnvelopeSet.decodeCp1252String(var3, var4, (byte) -126, this.payload);
     }
 
     final String readString(int obfuscationGuard) {
@@ -489,7 +489,7 @@ class PacketBuffer extends IntrusiveNode {
         if (obfuscationGuard == ~var3) {
           return "";
         }
-        return PatchEnvelopeSet.a(var2, var3, (byte) -124, this.payload);
+        return PatchEnvelopeSet.decodeCp1252String(var2, var3, (byte) -124, this.payload);
     }
 
     final void writeBase38Name(byte param0, String param1) {
@@ -551,7 +551,7 @@ class PacketBuffer extends IntrusiveNode {
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(')').toString());
         }
     }
 
@@ -643,7 +643,7 @@ class PacketBuffer extends IntrusiveNode {
           this.position = this.position + 1;
           this.payload[fieldTemp$0] = (byte) 0;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "wk.RA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "wk.RA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -669,7 +669,7 @@ class PacketBuffer extends IntrusiveNode {
           this.position = this.position + 1;
           this.payload[fieldTemp$1] = (byte) 0;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "wk.V(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "wk.V(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -685,7 +685,7 @@ class PacketBuffer extends IntrusiveNode {
         if (!param0) {
           return -101;
         }
-        int var3 = db.a(this.position, false, this.payload, param1);
+        int var3 = db.crc32(this.position, false, this.payload, param1);
         this.writeInt(var3, (byte) -101);
         return var3;
     }
@@ -706,7 +706,7 @@ class PacketBuffer extends IntrusiveNode {
         int var1_int = 0;
         int var3 = ArcanistsMulti.field_G ? 1 : 0;
         try {
-          da.a((byte) -101);
+          da.measureCaptionWidths((byte) -101);
           int var2 = 122 % ((param0 + 21) / 48);
           for (var1_int = 0; var1_int < 17; var1_int++) {
             ArchiveProvider.field_f[var1_int] = new lc(var1_int);
@@ -717,11 +717,11 @@ class PacketBuffer extends IntrusiveNode {
           sm.a(-107, 50);
           if (!lc.a((byte) 112)) {
             ce.field_i = tj.a(4, -21402);
-            ci.field_d = ld.a(6, false);
+            ci.field_d = AlternateUsernameCredentials.a(6, false);
           }
           bk.a(2);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "wk.FB(" + param0 + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "wk.FB(" + param0 + ')');
         }
     }
 
@@ -780,7 +780,7 @@ class PacketBuffer extends IntrusiveNode {
           this.writeShort(var8.length, (byte) -62);
           this.writeBytes(var8, 0, (byte) -86, var8.length);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "wk.AA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "wk.AA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -810,7 +810,7 @@ class PacketBuffer extends IntrusiveNode {
           this.payload = param0;
           this.position = 0;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "wk.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "wk.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -826,7 +826,7 @@ class PacketBuffer extends IntrusiveNode {
         ki.field_r[MouseInputHandler.field_b] = MouseInputHandler.field_b;
         nf.field_z[MouseInputHandler.field_b] = param4;
         if (!(ao.field_g <= param4)) {
-          ld.field_m = param4;
+          AlternateUsernameCredentials.field_m = param4;
         }
         if (param4 > tm.field_g) {
           qa.field_m = param4;
@@ -837,8 +837,8 @@ class PacketBuffer extends IntrusiveNode {
         int var6 = param3 + param5 + param1;
         int var7 = ~var6 != param0 ? param1 * 1000 / var6 : 0;
         lm.field_i[MouseInputHandler.field_b] = var7;
-        if (ld.field_m > var7) {
-          ld.field_m = var7;
+        if (AlternateUsernameCredentials.field_m > var7) {
+          AlternateUsernameCredentials.field_m = var7;
         }
         MouseInputHandler.field_b = MouseInputHandler.field_b + 1;
         if (!(var7 <= qa.field_m)) {
@@ -851,7 +851,7 @@ class PacketBuffer extends IntrusiveNode {
           field_k = (String) null;
         }
         this.position = this.position - 4;
-        int var2 = db.a(this.position, !param0 ? true : false, this.payload, 0);
+        int var2 = db.crc32(this.position, !param0 ? true : false, this.payload, 0);
         int var3 = this.readInt(-10674);
         if (var2 == var3) {
           return true;

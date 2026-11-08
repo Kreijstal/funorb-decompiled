@@ -41,7 +41,7 @@ final class ko extends IntrusiveNode {
             } else {
               stackIn_9_2 = "{...}";
             }
-            throw aa.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+            throw aa.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -138,7 +138,7 @@ final class ko extends IntrusiveNode {
             var28.field_l.a((byte) -32, 11, var29, var30);
             var31 = eo.field_c;
             var32 = ArchiveProvider.field_a[1];
-            var33 = lk.field_l;
+            var33 = Js5Transport.field_l;
             var31.field_l.a((byte) -32, 12, var32, var33);
             var34 = eo.field_c;
             var35 = ArchiveProvider.field_a[2];
@@ -166,7 +166,7 @@ final class ko extends IntrusiveNode {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -206,7 +206,7 @@ final class ko extends IntrusiveNode {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -281,7 +281,7 @@ final class ko extends IntrusiveNode {
               if (oh.a((byte) 117, var5) != 2) {
                 BufferedRandomAccessFile.a(-1, var4_ref_String, 82, param1, nj.field_c, so.field_p);
               } else {
-                ea.a(param2, 1, true, var5);
+                DiskCacheRequest.a(param2, 1, true, var5);
                 BufferedRandomAccessFile.a(-1, var4_ref_String, 82, param1, nj.field_c, so.field_p);
                 ue.b(10);
               }
@@ -403,7 +403,7 @@ final class ko extends IntrusiveNode {
             ko.a((nf) null, -45, 124, 15, (IndexedSprite) null, 88);
           }
           while (var4 < 8) {
-            var3[var4] = fj.b(param0[var4], param1[var4]);
+            var3[var4] = fj.bitOr(param0[var4], param1[var4]);
             var4++;
           }
           stackIn_6_0 = var3;
@@ -424,7 +424,7 @@ final class ko extends IntrusiveNode {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -443,7 +443,7 @@ final class ko extends IntrusiveNode {
           for (var2_int = 0; param1.length() > var2_int; var2_int++) {
             var3 = param1.charAt(var2_int);
             if (!uh.a((char) var3, (byte) -122) &&
-              !e.a(30, (char) var3)) {
+              !LoginPanel.a(30, (char) var3)) {
               return true;
             }
           }
@@ -459,7 +459,7 @@ final class ko extends IntrusiveNode {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -499,7 +499,7 @@ final class ko extends IntrusiveNode {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param5).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param5).append(')').toString());
         }
     }
 

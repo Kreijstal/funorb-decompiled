@@ -11,7 +11,7 @@ final class dm extends SingleChildContainer {
     static String field_F;
 
     final static void g(byte param0) {
-        eh.field_e = null;
+        ValidationState.field_e = null;
         int var1 = -115 / ((param0 - 8) / 53);
     }
 
@@ -32,7 +32,7 @@ final class dm extends SingleChildContainer {
         }
         if (param0 < -52) {
           var8 = new Sprite(this.field_B.field_v, this.field_B.field_k);
-          fk.a(var8, -23095);
+          fk.setSpriteRasterTarget(var8, -23095);
           this.field_B.drawLayer((byte) -128, 0, param2, 0);
           oo.c(-15405);
           var8.drawAlpha(param1 + this.field_n, this.field_j + param3, this.field_K);
@@ -40,7 +40,7 @@ final class dm extends SingleChildContainer {
         }
         dm.h((byte) -53);
         Sprite var7 = new Sprite(this.field_B.field_v, this.field_B.field_k);
-        fk.a(var7, -23095);
+        fk.setSpriteRasterTarget(var7, -23095);
         this.field_B.drawLayer((byte) -128, 0, param2, 0);
         oo.c(-15405);
         var7.drawAlpha(param1 + this.field_n, this.field_j + param3, this.field_K);
@@ -66,7 +66,7 @@ final class dm extends SingleChildContainer {
         return false;
     }
 
-    public static void c(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_E = null;
         field_J = null;
         field_F = null;
@@ -77,7 +77,7 @@ final class dm extends SingleChildContainer {
         field_I = null;
     }
 
-    final static Boolean f(int param0) {
+    final static Boolean takePendingFlag(int param0) {
         Boolean var1 = kj.field_e;
         if (param0 != 18727) {
           dm.h((byte) 104);
@@ -100,7 +100,7 @@ final class dm extends SingleChildContainer {
           this.field_B = param0;
           this.field_K = 256;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "dm.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "dm.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

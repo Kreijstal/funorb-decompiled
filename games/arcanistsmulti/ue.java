@@ -18,7 +18,7 @@ final class ue {
         nj.field_c = 0;
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_b = (int[][]) null;
         field_c = null;
         field_d = null;
@@ -44,7 +44,7 @@ final class ue {
           IntrusiveNodeHashTable.field_f = null;
           i.b(-120);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "ue.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "ue.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

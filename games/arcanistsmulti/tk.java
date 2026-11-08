@@ -32,7 +32,7 @@ final class tk extends DualLinkNode {
         var9 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           if (param2 == 1) {
-            this.field_n = eh.a(false, '<', param1.readString(-1));
+            this.field_n = ValidationState.split(false, '<', param1.readString(-1));
           } else {
             if (param2 == 2) {
               var4_int = param1.readUnsignedByte((byte) 120);
@@ -78,7 +78,7 @@ final class tk extends DualLinkNode {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -112,7 +112,7 @@ final class tk extends DualLinkNode {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -145,7 +145,7 @@ final class tk extends DualLinkNode {
         int var3 = ArcanistsMulti.field_G ? 1 : 0;
         if (null != this.field_u) {
           for (var2 = 0; this.field_u.length > var2; var2++) {
-            this.field_u[var2] = fj.b(this.field_u[var2], 32768);
+            this.field_u[var2] = fj.bitOr(this.field_u[var2], 32768);
           }
         }
         if (param0 > -122) {
@@ -203,7 +203,7 @@ final class tk extends DualLinkNode {
                 var5 = oe.a(var4, 29140, param2);
               }
               if (vd.field_h == 2) {
-                var5 = eh.a((byte) -48, param2, var4);
+                var5 = ValidationState.a((byte) -48, param2, var4);
               }
               if (vd.field_h == 3) {
                 var5 = hf.a(var4, var4, param2, param0 ^ 10068666);
@@ -267,7 +267,7 @@ final class tk extends DualLinkNode {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param6).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param6).append(')').toString());
         }
     }
 

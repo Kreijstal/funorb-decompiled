@@ -41,7 +41,7 @@ class jm implements WidgetPainter, WidgetTextLayout {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -252,7 +252,7 @@ class jm implements WidgetPainter, WidgetTextLayout {
           } else {
             stackIn_107_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_106_0), ((StringBuilder) (Object) stackIn_106_1).append(stackIn_107_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_106_0), ((StringBuilder) (Object) stackIn_106_1).append(stackIn_107_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
         }
     }
 
@@ -275,7 +275,7 @@ class jm implements WidgetPainter, WidgetTextLayout {
           param0.field_m = this.field_m;
           param0.field_h = this.field_h;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "jm.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "jm.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -318,7 +318,7 @@ class jm implements WidgetPainter, WidgetTextLayout {
             }
             var10 = var18.a((byte) -67, var8);
             var11 = var18.a((byte) 77, var9);
-            da.a(param2 + param1.field_n + param1.field_v, param1.field_j + param0 + param1.field_k, 123, param2 + param1.field_n, param1.field_j + param0);
+            da.clipToRectangle(param2 + param1.field_n + param1.field_v, param1.field_j + param0 + param1.field_k, 123, param2 + param1.field_n, param1.field_j + param0);
             for (var12 = var10; var12 <= var11; var12++) {
               var13 = var17.field_f[var12];
               if (~var12 == ~var10) {
@@ -353,7 +353,7 @@ class jm implements WidgetPainter, WidgetTextLayout {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -380,7 +380,7 @@ class jm implements WidgetPainter, WidgetTextLayout {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -406,12 +406,12 @@ class jm implements WidgetPainter, WidgetTextLayout {
             var10 = this.a(param2, 9293, var9, param4);
             var11 = this.a(param1, -13372, param4) + Math.max(0, var8.field_g);
             var12 = this.a(param1, -13372, param4) + Math.min(this.a(param4, false), Math.min(var8.field_e, var14.field_f.length > 1 + var7 ? var13.field_f[1 + var7].field_g : var8.field_e));
-            da.a(param4.field_n + param2 + param4.field_v, param4.field_k + param4.field_j + param1, 116, param2 + param4.field_n, param1 + param4.field_j);
+            da.clipToRectangle(param4.field_n + param2 + param4.field_v, param4.field_k + param4.field_j + param1, 116, param2 + param4.field_n, param1 + param4.field_j);
             MusicCrossfadeStream.field_n.a(var10, var10, var12, this.field_o, var11, (byte) 102);
             oo.c(-15405);
           }
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "jm.U(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "jm.U(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -433,7 +433,7 @@ class jm implements WidgetPainter, WidgetTextLayout {
             this.field_c = 110;
           }
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "jm.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "jm.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -463,7 +463,7 @@ class jm implements WidgetPainter, WidgetTextLayout {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -475,7 +475,7 @@ class jm implements WidgetPainter, WidgetTextLayout {
           }
           this.a(0, param3 + 23123, this.field_k, 0, param2, param0, param1, this.field_c);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "jm.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "jm.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -501,7 +501,7 @@ class jm implements WidgetPainter, WidgetTextLayout {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -530,7 +530,7 @@ class jm implements WidgetPainter, WidgetTextLayout {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -557,7 +557,7 @@ class jm implements WidgetPainter, WidgetTextLayout {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
         }
     }
 
@@ -634,7 +634,7 @@ class jm implements WidgetPainter, WidgetTextLayout {
           } else {
             stackIn_34_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
         }
     }
 
@@ -652,7 +652,7 @@ class jm implements WidgetPainter, WidgetTextLayout {
         int var12Lifetime1;
         var13 = ArcanistsMulti.field_G ? 1 : 0;
         try {
-          da.a(param4.field_v + (param4.field_n + param6), param5 - (-param4.field_j - param4.field_k), 121, param6 + param4.field_n, param4.field_j + param5);
+          da.clipToRectangle(param4.field_v + (param4.field_n + param6), param5 - (-param4.field_j - param4.field_k), 121, param6 + param4.field_n, param4.field_j + param5);
           if (param1 != 23034) {
             field_b = (String) null;
           }
@@ -703,7 +703,7 @@ class jm implements WidgetPainter, WidgetTextLayout {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
         }
     }
 
@@ -737,7 +737,7 @@ class jm implements WidgetPainter, WidgetTextLayout {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -767,20 +767,20 @@ class jm implements WidgetPainter, WidgetTextLayout {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
     final static void b(int param0) {
         int var1 = 0;
         if (Bzip2State.field_A <= 32) {
-          eb.a(0, false);
+          eb.setMusicVolume(0, false);
         } else {
           var1 = Bzip2State.field_A % 32;
           if (var1 == 0) {
             var1 = 32;
           }
-          eb.a(Bzip2State.field_A - var1, false);
+          eb.setMusicVolume(Bzip2State.field_A - var1, false);
         }
         if (param0 < 29) {
           jm.b(-66);
@@ -812,7 +812,7 @@ class jm implements WidgetPainter, WidgetTextLayout {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -844,7 +844,7 @@ class jm implements WidgetPainter, WidgetTextLayout {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -873,7 +873,7 @@ class jm implements WidgetPainter, WidgetTextLayout {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -893,7 +893,7 @@ class jm implements WidgetPainter, WidgetTextLayout {
           this.field_m = param1;
           this.field_k = param5;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "jm.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ',' + param10 + ',' + param11 + ',' + param12 + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "jm.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ',' + param10 + ',' + param11 + ',' + param12 + ')');
         }
     }
 

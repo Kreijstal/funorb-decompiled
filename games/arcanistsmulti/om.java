@@ -63,7 +63,7 @@ final class om extends UiComponent {
           var2 = var9.readUnsignedByte((byte) 105);
           var3 = var9.readUnsignedByte((byte) 89);
           if (var2 == 0) {
-            var4 = (aa) (ve.field_o.first(12623));
+            var4 = (aa) (ArchiveRequest.field_o.first(12623));
             if (var4 == null) {
               ka.b(false);
               return;
@@ -76,7 +76,7 @@ final class om extends UiComponent {
               var5 = var11.length << 2;
             }
             for (var7 = 0; var5 > var7; var7++) {
-              var6[var7 >> 2] = var6[var7 >> 2] + (var9.readUnsignedByte((byte) -119) << dg.a(768, var7 << 8));
+              var6[var7 >> 2] = var6[var7 >> 2] + (var9.readUnsignedByte((byte) -119) << NameValidator.bitAnd(768, var7 << 8));
             }
             var4.unlink(true);
             return;
@@ -105,7 +105,7 @@ final class om extends UiComponent {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var1), "om.G(" + param0 + ')');
+          throw aa.wrapException((Throwable) ((Object) var1), "om.G(" + param0 + ')');
         }
     }
 
@@ -125,7 +125,7 @@ final class om extends UiComponent {
           this.field_K = 98;
         }
         Sprite var14 = new Sprite(this.field_z * 2, this.field_k);
-        fk.a(var14, -23095);
+        fk.setSpriteRasterTarget(var14, -23095);
         int var5 = this.field_k >> 1;
         for (var6 = 0; this.field_k > var6; var6++) {
           var7 = (this.field_z * 2 - 1) * (var6 >> 1) % (this.field_z * 2);
@@ -154,7 +154,7 @@ final class om extends UiComponent {
         int var9 = ArcanistsMulti.field_G ? 1 : 0;
         int var2 = this.field_k >> 1;
         Sprite var3 = new Sprite(var2, this.field_k);
-        fk.a(var3, -23095);
+        fk.setSpriteRasterTarget(var3, -23095);
         if (param0 != 1) {
           this.setBounds(-3, -8, -52, -69, 66);
         }
@@ -203,7 +203,7 @@ final class om extends UiComponent {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -225,13 +225,13 @@ final class om extends UiComponent {
             this.a(-69, 9, (Sprite) null, -92);
           }
           var5_int = param0 + this.field_v;
-          da.a(-this.field_D.field_q + var5_int, this.field_k + param1, 122, this.field_D.field_q + param0, param1);
+          da.clipToRectangle(-this.field_D.field_q + var5_int, this.field_k + param1, 122, this.field_D.field_q + param0, param1);
           for (var6 = param0 - this.field_G; var6 < var5_int; var6 = var6 + param2.field_q) {
             param2.drawTransparent(var6, param1);
           }
           oo.c(-15405);
           if (SoftwareRasterizer.field_i <= this.field_D.field_q + param0) {
-            fk.a(this.field_A, -23095);
+            fk.setSpriteRasterTarget(this.field_A, -23095);
             param2.drawTransparent(-this.field_G, 0);
             param2.drawTransparent(-this.field_G + 2 * this.field_z, 0);
             this.field_F.drawMultiply(0, 0);
@@ -239,7 +239,7 @@ final class om extends UiComponent {
             this.field_A.drawTransparent(param0, param1);
           }
           if (-this.field_D.field_q + var5_int <= SoftwareRasterizer.field_h) {
-            fk.a(this.field_A, -23095);
+            fk.setSpriteRasterTarget(this.field_A, -23095);
             for (var7 = this.field_G + this.field_v - this.field_D.field_q; var7 > 2 * this.field_z; var7 = var7 - 2 * this.field_z) {
             }
             param2.drawTransparent(-var7, 0);
@@ -260,7 +260,7 @@ final class om extends UiComponent {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param3).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -300,7 +300,7 @@ final class om extends UiComponent {
         int var6 = this.field_j + param3;
         this.a(var5, var6, this.field_N[0], 0);
         if (this.field_O < 65536) {
-          da.a(this.field_v + var5, var6 + this.field_k, 122, (this.field_v * this.field_O >> 16) + var5, var6);
+          da.clipToRectangle(this.field_v + var5, var6 + this.field_k, 122, (this.field_v * this.field_O >> 16) + var5, var6);
           this.a(var5, var6, this.field_N[1], 0);
           oo.c(-15405);
         }
@@ -333,7 +333,7 @@ final class om extends UiComponent {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 

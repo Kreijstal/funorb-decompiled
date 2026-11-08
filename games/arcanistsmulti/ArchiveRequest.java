@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class ve extends DualLinkNode {
+abstract class ArchiveRequest extends DualLinkNode {
     volatile boolean field_p;
     static IntrusiveDeque field_o;
     boolean field_n;
@@ -55,15 +55,15 @@ abstract class ve extends DualLinkNode {
           boolean decompiledFrameRemainder0 = true;
           var20 = pk.a("lobby", 0, "crowns", param1);
           var5 = var20;
-          dg.field_u = var20.length;
+          NameValidator.field_u = var20.length;
           if (param3 != null) {
-            var6_array = new IndexedSprite[param3.length + dg.field_u];
-            for (var7_int = 0; var7_int < dg.field_u; var7_int++) {
+            var6_array = new IndexedSprite[param3.length + NameValidator.field_u];
+            for (var7_int = 0; var7_int < NameValidator.field_u; var7_int++) {
               var6_array[var7_int] = var20[var7_int];
             }
             var5 = var6_array;
             for (var7_int = 0; var7_int < param3.length; var7_int++) {
-              var6_array[var7_int + dg.field_u] = param3[var7_int];
+              var6_array[var7_int + NameValidator.field_u] = param3[var7_int];
             }
             var23 = new int[var5.length];
             var21 = var23;
@@ -80,14 +80,14 @@ abstract class ve extends DualLinkNode {
             var22 = var24;
             var6 = var22;
             var7_int = 0;
-            decompiledFrameRemainder0 = !(dg.field_u <= var7_int);
+            decompiledFrameRemainder0 = !(NameValidator.field_u <= var7_int);
             if (decompiledFrameRemainder0) {
               var23[var7_int] = 10;
               var7_int++;
             }
           }
           if (decompiledFrameRemainder0) {
-            while (dg.field_u > var7_int) {
+            while (NameValidator.field_u > var7_int) {
               var23[var7_int] = 10;
               var7_int++;
             }
@@ -95,11 +95,11 @@ abstract class ve extends DualLinkNode {
           if (param3 != null) {
             if (param2 == null) {
               for (var7_intLifetime1 = 0; var7_intLifetime1 < param3.length; var7_intLifetime1++) {
-                var6[var7_intLifetime1 + dg.field_u] = param3[var7_intLifetime1].field_k;
+                var6[var7_intLifetime1 + NameValidator.field_u] = param3[var7_intLifetime1].field_k;
               }
             } else {
               for (var7_intLifetime1 = 0; var7_intLifetime1 < param3.length; var7_intLifetime1++) {
-                var6[var7_intLifetime1 + dg.field_u] = param2[var7_intLifetime1];
+                var6[var7_intLifetime1 + NameValidator.field_u] = param2[var7_intLifetime1];
               }
             }
           }
@@ -109,10 +109,10 @@ abstract class ve extends DualLinkNode {
           IntrusiveDequeCursor.field_i = 11;
           ra.field_h = 2;
           var7 = rc.a(param4, -24755, "lobby", "largefont", param1);
-          ea.field_w = rc.a(param4, param0 - 24755, "lobby", "generalfont", param1);
+          DiskCacheRequest.field_w = rc.a(param4, param0 - 24755, "lobby", "generalfont", param1);
           th.field_k = rc.a(param4, -24755, "lobby", "chatfont", param1);
           var7.setInlineSprites(var5, var24);
-          ea.field_w.setInlineSprites(var5, var24);
+          DiskCacheRequest.field_w.setInlineSprites(var5, var24);
           th.field_k.setInlineSprites(var5, var24);
           var8 = new kc(0L, (kc) null);
           var8.field_z = ImageProducerRasterBuffer.field_r;
@@ -122,7 +122,7 @@ abstract class ve extends DualLinkNode {
           var9 = var8;
           var9.field_X = 1;
           var10 = new kc(0L, (kc) null);
-          var10.field_Z = (BitmapFont) ((Object) ea.field_w);
+          var10.field_Z = (BitmapFont) ((Object) DiskCacheRequest.field_w);
           var10.field_ob = 16777215;
           var10.field_z = ImageProducerRasterBuffer.field_r;
           var11 = var10;
@@ -139,11 +139,11 @@ abstract class ve extends DualLinkNode {
           var12 = ic.a(qe.a(param1, "popup_mouseover", "lobby", param0 ^ 93), (byte) -105);
           var13 = qe.a(param1, "button", "lobby", 63);
           var14 = ic.a(qe.a(param1, "tab_active", "lobby", 110), (byte) -85);
-          be.field_l = new kc(0L, var8);
-          be.field_l.field_v = var14;
+          SectorCacheStore.field_l = new kc(0L, var8);
+          SectorCacheStore.field_l.field_v = var14;
           wj.field_b = new kc(0L, (kc) null);
-          wj.field_b.field_W = fj.a("lobby", -22612, param1, "closebutton");
-          wj.field_b.field_lb = fj.a("lobby", -22612, param1, "closebutton_mouseover");
+          wj.field_b.field_W = fj.loadSprite("lobby", -22612, param1, "closebutton");
+          wj.field_b.field_lb = fj.loadSprite("lobby", -22612, param1, "closebutton_mouseover");
           dd.field_b = new kc(0L, var8);
           dd.field_b.field_v = rb.a(true, true, 652, 2039583, 3815994, 40);
           vf.field_u = new kc(0L, var10);
@@ -157,7 +157,7 @@ abstract class ve extends DualLinkNode {
           vf.field_i.field_v = rb.a(false, true, 652, 2039583, 3815994, 30);
           IntrusiveNode.field_c = new kc(0L, (kc) null);
           IntrusiveNode.field_c.field_ob = 13421772;
-          IntrusiveNode.field_c.field_Z = (BitmapFont) ((Object) ea.field_w);
+          IntrusiveNode.field_c.field_Z = (BitmapFont) ((Object) DiskCacheRequest.field_w);
           IntrusiveNode.field_c.field_z = ImageProducerRasterBuffer.field_r;
           IntrusiveNode.field_c.field_gb = 1;
           nj.field_d = new kc(0L, IntrusiveNode.field_c);
@@ -263,26 +263,26 @@ abstract class ve extends DualLinkNode {
           var17 = qe.a(param1, "checkbox", "lobby", 63);
           ec.field_g = new af(0L, var17[1], var17[0], 1, nj.field_d, (String) null);
           qe.field_m = new kc(0L, (kc) null);
-          qe.field_m.field_v = pm.a(115, fj.a("lobby", -22612, param1, "slideregion"));
-          qe.field_m.field_Ab = pm.a(82, fj.a("lobby", param0 ^ -22612, param1, "slideregion_mouseover"));
-          qe.field_m.field_xb = pm.a(param0 + 77, fj.a("lobby", -22612, param1, "slideregion_mouseheld"));
-          qe.field_m.field_K = pm.a(53, fj.a("lobby", param0 - 22612, param1, "slideregion_disabled"));
-          be.field_b = new kc(0L, (kc) null);
-          be.field_b.field_v = ic.a(qe.a(param1, "dragbar", "lobby", 113), (byte) -109);
-          be.field_b.field_Ab = ic.a(qe.a(param1, "dragbar_mouseover", "lobby", 85), (byte) -120);
-          be.field_b.field_xb = ic.a(qe.a(param1, "dragbar_mouseheld", "lobby", 73), (byte) -84);
-          be.field_b.field_K = ic.a(qe.a(param1, "dragbar_disabled", "lobby", 64), (byte) -102);
+          qe.field_m.field_v = pm.a(115, fj.loadSprite("lobby", -22612, param1, "slideregion"));
+          qe.field_m.field_Ab = pm.a(82, fj.loadSprite("lobby", param0 ^ -22612, param1, "slideregion_mouseover"));
+          qe.field_m.field_xb = pm.a(param0 + 77, fj.loadSprite("lobby", -22612, param1, "slideregion_mouseheld"));
+          qe.field_m.field_K = pm.a(53, fj.loadSprite("lobby", param0 - 22612, param1, "slideregion_disabled"));
+          SectorCacheStore.field_b = new kc(0L, (kc) null);
+          SectorCacheStore.field_b.field_v = ic.a(qe.a(param1, "dragbar", "lobby", 113), (byte) -109);
+          SectorCacheStore.field_b.field_Ab = ic.a(qe.a(param1, "dragbar_mouseover", "lobby", 85), (byte) -120);
+          SectorCacheStore.field_b.field_xb = ic.a(qe.a(param1, "dragbar_mouseheld", "lobby", 73), (byte) -84);
+          SectorCacheStore.field_b.field_K = ic.a(qe.a(param1, "dragbar_disabled", "lobby", 64), (byte) -102);
           pi.field_d = new kc(0L, (kc) null);
-          pi.field_d.field_W = fj.a("lobby", -22612, param1, "upbutton");
-          pi.field_d.field_lb = fj.a("lobby", param0 - 22612, param1, "upbutton_mouseover");
-          pi.field_d.field_vb = fj.a("lobby", -22612, param1, "upbutton_mouseheld");
-          pi.field_d.field_R = fj.a("lobby", -22612, param1, "upbutton_disabled");
+          pi.field_d.field_W = fj.loadSprite("lobby", -22612, param1, "upbutton");
+          pi.field_d.field_lb = fj.loadSprite("lobby", param0 - 22612, param1, "upbutton_mouseover");
+          pi.field_d.field_vb = fj.loadSprite("lobby", -22612, param1, "upbutton_mouseheld");
+          pi.field_d.field_R = fj.loadSprite("lobby", -22612, param1, "upbutton_disabled");
           db.field_b = new kc(0L, (kc) null);
-          db.field_b.field_W = fj.a("lobby", -22612, param1, "downbutton");
-          db.field_b.field_lb = fj.a("lobby", -22612, param1, "downbutton_mouseover");
-          db.field_b.field_vb = fj.a("lobby", -22612, param1, "downbutton_mouseheld");
-          db.field_b.field_R = fj.a("lobby", -22612, param1, "downbutton_disabled");
-          IntrusiveDeque.field_i = new in(0L, pi.field_d, db.field_b, qe.field_m, be.field_b);
+          db.field_b.field_W = fj.loadSprite("lobby", -22612, param1, "downbutton");
+          db.field_b.field_lb = fj.loadSprite("lobby", -22612, param1, "downbutton_mouseover");
+          db.field_b.field_vb = fj.loadSprite("lobby", -22612, param1, "downbutton_mouseheld");
+          db.field_b.field_R = fj.loadSprite("lobby", -22612, param1, "downbutton_disabled");
+          IntrusiveDeque.field_i = new in(0L, pi.field_d, db.field_b, qe.field_m, SectorCacheStore.field_b);
           oh.field_r = new hb(0L, (kc) null, am.field_c, IntrusiveDeque.field_i, hg.field_d, (String) null, (String) null);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -313,7 +313,7 @@ abstract class ve extends DualLinkNode {
           } else {
             stackIn_36_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(')').toString());
         }
     }
 
@@ -327,20 +327,20 @@ abstract class ve extends DualLinkNode {
           ce.field_o = param7;
           qe.field_h = param3;
           if (param0 > -55) {
-            ve.releaseStatics(116);
+            ArchiveRequest.releaseStatics(116);
           }
           jd.field_g = param8;
-          jl.field_c = (lk) ((Object) new ef());
+          jl.field_c = (Js5Transport) ((Object) new SocketJs5Transport());
           ed.field_yb = new pa(param4);
           mk.field_O = new Js5ArchiveManager(jl.field_c, ed.field_yb);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "ve.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ',' + param7 + ',' + (param8 != null ? "{...}" : "null") + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "ve.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ',' + param7 + ',' + (param8 != null ? "{...}" : "null") + ')');
         }
     }
 
-    abstract int e(byte param0);
+    abstract int getProgressPercent(byte param0);
 
-    abstract byte[] c(int param0);
+    abstract byte[] getData(int param0);
 
     public static void releaseStatics(int param0) {
         field_s = null;
@@ -370,7 +370,7 @@ abstract class ve extends DualLinkNode {
         var3Lifetime1 = 66 / ((param2 + 32) / 62);
     }
 
-    ve() {
+    ArchiveRequest() {
         this.field_p = true;
     }
 

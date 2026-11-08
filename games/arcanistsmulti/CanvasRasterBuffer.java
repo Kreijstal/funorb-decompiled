@@ -19,7 +19,7 @@ abstract class CanvasRasterBuffer {
     final static void a(int param0) {
         ho.field_i = null;
         ph.field_c = null;
-        be.field_d = null;
+        SectorCacheStore.field_d = null;
         jg.field_p = null;
         ln.field_I = (byte[][]) null;
         hl.field_l = null;
@@ -39,7 +39,7 @@ abstract class CanvasRasterBuffer {
 
     final static void a(boolean param0, int param1) {
         if (param1 != 14067) {
-          CanvasRasterBuffer.b(true);
+          CanvasRasterBuffer.releaseStatics(true);
         }
         if (!bj.g(false)) {
           return;
@@ -148,7 +148,7 @@ abstract class CanvasRasterBuffer {
             ih.field_b = stackIn_42_0 + stackIn_43_1;
           }
           qe.field_o = ub.field_g - (ih.field_b >> 1);
-          wl.field_S.a(param4, 0, false, ao.a(31128, an.field_g, me.field_I));
+          wl.field_S.a(param4, 0, false, ao.a(31128, EmailLoginCredentials.field_g, me.field_I));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -160,11 +160,11 @@ abstract class CanvasRasterBuffer {
           } else {
             stackIn_49_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_48_0), ((StringBuilder) (Object) stackIn_48_1).append(stackIn_49_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_48_0), ((StringBuilder) (Object) stackIn_48_1).append(stackIn_49_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
-    public static void b(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_b = null;
         field_i = null;
         field_k = null;

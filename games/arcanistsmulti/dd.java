@@ -13,7 +13,7 @@ final class dd {
     static dn field_h;
     static hb field_c;
 
-    final static boolean a(int param0, String param1, String param2) {
+    final static boolean isPasswordAcceptable(int param0, String param1, String param2) {
         RuntimeException var3 = null;
         RuntimeException stackIn_30_0 = null;
         StringBuilder stackIn_30_1 = null;
@@ -25,10 +25,10 @@ final class dd {
           if (ko.a(63, param1)) {
             return false;
           }
-          if (e.b(-12055, param1)) {
+          if (LoginPanel.b(-12055, param1)) {
             return false;
           }
-          if (bd.a((byte) -117, param1)) {
+          if (LoginCredentials.isLengthOutOfRange((byte) -117, param1)) {
             return false;
           }
           if (param2.length() == 0) {
@@ -63,11 +63,11 @@ final class dd {
           } else {
             stackIn_34_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = null;
         field_h = null;
         field_f = null;
@@ -77,13 +77,13 @@ final class dd {
           field_e = null;
           return;
         }
-        dd.a(-95);
+        dd.releaseStatics(-95);
         field_b = null;
         field_c = null;
         field_e = null;
     }
 
-    final static void a(int param0, int param1, Sprite[] param2, int param3, int param4) {
+    final static void drawThreeSliceBar(int param0, int param1, Sprite[] param2, int param3, int param4) {
         int var5_int = 0;
         int var6 = 0;
         int var7 = 0;
@@ -109,11 +109,11 @@ final class dd {
           }
           SoftwareRasterizer.restoreClip(sl.field_H);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "dd.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "dd.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
     }
 
-    final static byte[] a(byte[] param0, int param1) {
+    final static byte[] copyBytes(byte[] param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         byte[] var3 = null;
@@ -138,7 +138,7 @@ final class dd {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
         }
     }
 

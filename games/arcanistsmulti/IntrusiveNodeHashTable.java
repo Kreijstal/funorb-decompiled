@@ -97,7 +97,7 @@ final class IntrusiveNodeHashTable {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -160,7 +160,7 @@ final class IntrusiveNodeHashTable {
           if (var3 != null) {
             eo.field_c.a((byte) 72, false);
             var4 = eo.field_c;
-            var5_ref_String = vk.field_z;
+            var5_ref_String = Js5NetworkRequest.field_z;
             var4.field_l.a(5, var5_ref_String, (byte) -26);
             var4Lifetime2 = eo.field_c;
             var5 = pb.field_h;
@@ -174,7 +174,7 @@ final class IntrusiveNodeHashTable {
         if (var3Lifetime1 != null) {
           eo.field_c.a((byte) 72, false);
           var4Lifetime1 = eo.field_c;
-          var5_ref_StringLifetime1 = vk.field_z;
+          var5_ref_StringLifetime1 = Js5NetworkRequest.field_z;
           var4Lifetime1.field_l.a(5, var5_ref_StringLifetime1, (byte) -26);
           var4Lifetime1Lifetime1 = eo.field_c;
           var5Lifetime1 = pb.field_h;
@@ -240,7 +240,7 @@ final class IntrusiveNodeHashTable {
           } else {
             stackIn_31_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param1).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -282,7 +282,7 @@ final class IntrusiveNodeHashTable {
           }
           node.secondaryKey = key;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "mo.I(" + (node != null ? "{...}" : "null") + ',' + key + ',' + obfuscationGuard + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "mo.I(" + (node != null ? "{...}" : "null") + ',' + key + ',' + obfuscationGuard + ')');
         }
     }
 
@@ -368,7 +368,7 @@ final class IntrusiveNodeHashTable {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var1_ref), "mo.J(" + param0 + ')');
+          throw aa.wrapException((Throwable) ((Object) var1_ref), "mo.J(" + param0 + ')');
         }
     }
 

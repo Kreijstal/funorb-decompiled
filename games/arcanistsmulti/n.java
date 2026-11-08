@@ -11,7 +11,7 @@ final class n {
     static IntrusiveDequeCursor field_d;
     static String field_e;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_b = null;
         field_h = null;
         field_c = null;
@@ -39,7 +39,7 @@ final class n {
             nh.field_w.a(-15238, (java.awt.Component) ((Object) param0));
           }
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "n.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "n.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -74,7 +74,7 @@ final class n {
         if (SoundCache.field_a > 200) {
           var5 = (-SoundCache.field_a + 250 << 8) / 50;
         }
-        fk.a(rc.field_h, -23095);
+        fk.setSpriteRasterTarget(rc.field_h, -23095);
         MeshRasterState.useRasterClip();
         SoftwareRasterizer.clear();
         cg.f(252566882);
@@ -236,7 +236,7 @@ final class n {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 

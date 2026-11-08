@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class mg extends UiContainer implements el {
+abstract class mg extends UiContainer implements ValidationProviderSource {
     private bl field_D;
     static String field_F;
     static BitmapFont field_C;
@@ -32,18 +32,18 @@ abstract class mg extends UiContainer implements el {
           int var3_int = -119 / ((63 - param1) / 47);
           this.field_D.field_h = this;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "mg.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "mg.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     abstract int g(int param0);
 
-    public final pd a(int param0) {
+    public final ValidationProvider getValidationProvider(int param0) {
         if (param0 != 0) {
           field_C = (BitmapFont) null;
-          return (pd) ((Object) this.field_D);
+          return (ValidationProvider) ((Object) this.field_D);
         }
-        return (pd) ((Object) this.field_D);
+        return (ValidationProvider) ((Object) this.field_D);
     }
 
     abstract int e(boolean param0);

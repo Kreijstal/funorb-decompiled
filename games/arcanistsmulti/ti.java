@@ -34,7 +34,7 @@ final class ti extends UiContainer implements ButtonListener {
           this.addChild(-83, this.field_O);
           this.addChild(-74, this.field_E);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "ti.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "ti.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -174,7 +174,7 @@ final class ti extends UiContainer implements ButtonListener {
           } else {
             stackIn_62_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_61_0), ((StringBuilder) (Object) stackIn_61_1).append(stackIn_62_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_61_0), ((StringBuilder) (Object) stackIn_61_1).append(stackIn_62_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -206,7 +206,7 @@ final class ti extends UiContainer implements ButtonListener {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -346,7 +346,7 @@ final class ti extends UiContainer implements ButtonListener {
           } else {
             stackIn_71_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_64_0), ((StringBuilder) (Object) stackIn_70_1).append(stackIn_71_2).append(',').append(param6).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_64_0), ((StringBuilder) (Object) stackIn_70_1).append(stackIn_71_2).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -354,7 +354,7 @@ final class ti extends UiContainer implements ButtonListener {
         try {
           super.updatePointer(param0, param1, param2, param3);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "ti.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "ti.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -374,7 +374,7 @@ final class ti extends UiContainer implements ButtonListener {
           this.h(11149);
           this.field_D = param0;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "ti.P(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "ti.P(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -410,7 +410,7 @@ final class ti extends UiContainer implements ButtonListener {
         ce.field_g[8] = null;
         ce.field_g[27] = ie.field_Lb;
         ce.field_g[22] = he.field_g;
-        ce.field_g[15] = be.field_i;
+        ce.field_g[15] = SectorCacheStore.field_i;
         ce.field_g[24] = lh.field_a;
         ce.field_g[13] = gb.field_a;
         ce.field_g[25] = CipherPacketBuffer.field_q;
@@ -489,7 +489,7 @@ final class ti extends UiContainer implements ButtonListener {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -537,7 +537,7 @@ final class ti extends UiContainer implements ButtonListener {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -626,7 +626,7 @@ final class ti extends UiContainer implements ButtonListener {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -673,7 +673,7 @@ final class ti extends UiContainer implements ButtonListener {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 

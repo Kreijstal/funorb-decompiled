@@ -66,7 +66,7 @@ final class lc {
               var5_int++;
             }
           } else {
-            mi.field_B.drawParagraph(rl.field_i, param2, -48 + param0, 300, 80, 0, -1, 1, 1, mi.field_B.field_C);
+            mi.field_B.drawParagraph(TextFieldValidator.field_i, param2, -48 + param0, 300, 80, 0, -1, 1, 1, mi.field_B.field_C);
             mi.field_B.drawParagraph(aa.field_j, param2, param0 + 24, 300, 32, 0, -1, 1, 1, mi.field_B.field_C);
           }
           stackIn_28_0Lifetime1 = 97;
@@ -76,7 +76,7 @@ final class lc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var5), "lc.I(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw aa.wrapException((Throwable) ((Object) var5), "lc.I(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -175,7 +175,7 @@ final class lc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var3), "lc.V(" + param0 + ',' + param1 + ')');
+          throw aa.wrapException((Throwable) ((Object) var3), "lc.V(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -192,7 +192,7 @@ final class lc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var1), "lc.F(" + param0 + ')');
+          throw aa.wrapException((Throwable) ((Object) var1), "lc.F(" + param0 + ')');
         }
     }
 
@@ -218,7 +218,7 @@ final class lc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var2), "lc.C(" + param0 + ')');
+          throw aa.wrapException((Throwable) ((Object) var2), "lc.C(" + param0 + ')');
         }
     }
 
@@ -252,7 +252,7 @@ final class lc {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -553,7 +553,7 @@ final class lc {
                   mi.field_B.drawParagraph(var2, var10, var3 - 65, 286, 60, 0, -1, 0, 1, mi.field_B.field_C + mi.field_B.field_m);
                   var4 = var7;
                   SoftwareRasterizer.fillRectangleAlpha(var9, var3, var8, 60, 16777215, 128);
-                  SoftwareRasterizer.setClip(0, var3 + 60, an.field_f, an.field_j);
+                  SoftwareRasterizer.setClip(0, var3 + 60, EmailLoginCredentials.field_f, EmailLoginCredentials.field_j);
                   SoftwareRasterizer.fillRoundedRectangleBlended(var9, var3, var8, 105, 25, 16777215, 128);
                   SoftwareRasterizer.resetClip();
                   var2 = om.field_L;
@@ -685,12 +685,12 @@ final class lc {
                     if (46 != so.field_c[0]) {
                       pc.$cfr$intArgs$a$5f050b8899ac(kg.field_d[2], var3 + var15, kg.field_d[3], kg.field_d[0], -117, kg.field_d[1], h.field_I[0], var14 + var4);
                     }
-                    pc.$cfr$intArgs$a$5f050b8899ac(kg.field_d[2], var3 + var19, kg.field_d[3], kg.field_d[0], 20, kg.field_d[1], ea.field_u[so.field_c[2]], var4 + var18);
+                    pc.$cfr$intArgs$a$5f050b8899ac(kg.field_d[2], var3 + var19, kg.field_d[3], kg.field_d[0], 20, kg.field_d[1], DiskCacheRequest.field_u[so.field_c[2]], var4 + var18);
                     ce.field_m.a(true);
                     var21 = 320 + bi.field_I;
                     var22 = 350 + uc.field_a;
                     var20.drawHalfSize(var21, var22);
-                    SoftwareRasterizer.setClip(var21, 46 + var22, 64 + var21, an.field_j);
+                    SoftwareRasterizer.setClip(var21, 46 + var22, 64 + var21, EmailLoginCredentials.field_j);
                     kh.field_d.draw(var21 - 32, -92 + (10 + var22));
                     SoftwareRasterizer.resetClip();
                     mi.field_B.drawCentered("250", var21 + 32, var22 + 8, 16777215, -1);
@@ -723,7 +723,7 @@ final class lc {
                           var11 = new int[]{16711935, 16711680, 16746632, 16776960, 65535, 34816, 16777215, 4521762, 1364125, 16755302};
                           var2 = uh.field_q;
                           mi.field_B.drawParagraph(var2, var5, var3, var6, 352, 0, -1, 2, 0, mi.field_B.field_C + mi.field_B.field_m);
-                          var2 = tj.a(-115, new String[]{Integer.toString(var11[1], 16)}, ve.field_s);
+                          var2 = tj.a(-115, new String[]{Integer.toString(var11[1], 16)}, ArchiveRequest.field_s);
                           var3 = var3 + (2 + (mi.field_B.field_m + mi.field_B.field_C) * mi.field_B.drawParagraph(var2, var5, var3, 512, 352, 0, -1, 0, 0, mi.field_B.field_m + mi.field_B.field_C));
                           var2 = ik.field_a;
                           mi.field_B.drawParagraph(var2, var5, var3, var6, 352, 0, -1, 2, 0, mi.field_B.field_m + mi.field_B.field_C);
@@ -761,7 +761,7 @@ final class lc {
                           var3 = var3 + (8 + (mi.field_B.field_C + mi.field_B.field_m) * mi.field_B.drawParagraph(var2, var5, var3, 512, 352, 0, -1, 0, 0, mi.field_B.field_m + mi.field_B.field_C));
                         } else {
                           if (var12_int == 8) {
-                            var2 = an.field_m;
+                            var2 = EmailLoginCredentials.field_m;
                             var3 = var3 + (tj.field_t.field_C * tj.field_t.drawParagraph(var2, var5, var3, var6, 352, 16777215, 0, 0, 0, tj.field_t.field_C) + 8);
                             this.a(var3, var4, (byte) -102, 3);
                             var2 = ne.field_j;
@@ -862,7 +862,7 @@ final class lc {
                       var3 += 24;
                       var4 += 320;
                       var3 += 16;
-                      SoftwareRasterizer.setClip(0, var3, an.field_f, an.field_j);
+                      SoftwareRasterizer.setClip(0, var3, EmailLoginCredentials.field_f, EmailLoginCredentials.field_j);
                       fe.field_g.drawTransparent(bi.field_I + 43, var3 - 32);
                       fe.field_g.drawTransparent(106 + bi.field_I, -32 + var3);
                       SoftwareRasterizer.resetClip();
@@ -870,7 +870,7 @@ final class lc {
                       mi.field_B.drawText("= 1" + SingleChildContainer.field_x, 20 + var4, 20 + var3, 16776960, 0);
                       tg.field_b[8].draw(var4 + 100, -2 + var3);
                       mi.field_B.drawText("= 5" + CanvasRasterBuffer.field_g, 20 + var4 + 100, var3 + 20, 16776960, 0);
-                      var2 = an.field_n;
+                      var2 = EmailLoginCredentials.field_n;
                       var4 -= 320;
                       var2 = tj.a(127, new String[]{KeyboardInputHandler.field_l}, var2);
                       var3 -= 48;
@@ -883,7 +883,7 @@ final class lc {
                       rm.field_o[2].drawHalfSize(bi.field_I + 64, var3);
                       tk.field_x[4].drawHalfSize(56 + bi.field_I, var3);
                       var3 += 16;
-                      var3 = var3 + ((mi.field_B.field_m + mi.field_B.field_C) * mi.field_B.drawParagraph(var2, 136 + bi.field_I, var3, 440, an.field_j, 0, -1, 0, 0, mi.field_B.field_C + mi.field_B.field_m) + 16);
+                      var3 = var3 + ((mi.field_B.field_m + mi.field_B.field_C) * mi.field_B.drawParagraph(var2, 136 + bi.field_I, var3, 440, EmailLoginCredentials.field_j, 0, -1, 0, 0, mi.field_B.field_C + mi.field_B.field_m) + 16);
                     }
                   }
                 }
@@ -898,7 +898,7 @@ final class lc {
               var2 = cc.field_b;
               var2 = tj.a(118, new String[]{fn.field_g[84], fn.field_g[85], fn.field_g[82], fn.field_g[81]}, var2);
               var3 = var3 + (16 + (mi.field_B.field_m + mi.field_B.field_C) * mi.field_B.drawParagraph(var2, var5, var3, var6, 352, 0, -1, 0, 0, mi.field_B.field_m + mi.field_B.field_C));
-              var2 = ch.field_e;
+              var2 = CredentialKind.field_e;
               var3 = var3 + (tj.field_t.field_C * tj.field_t.drawParagraph(var2, var5, var3, var6, 352, 16777215, 0, 0, 0, tj.field_t.field_C) + 8);
               var2 = vf.field_p;
               var2 = tj.a(124, new String[]{fn.field_g[69], fn.field_g[ao.field_f]}, var2);
@@ -932,7 +932,7 @@ final class lc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var2_ref), "lc.GA(" + param0 + ')');
+          throw aa.wrapException((Throwable) ((Object) var2_ref), "lc.GA(" + param0 + ')');
         }
     }
 
@@ -952,7 +952,7 @@ final class lc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var3), "lc.S(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw aa.wrapException((Throwable) ((Object) var3), "lc.S(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -966,7 +966,7 @@ final class lc {
           if (this.field_l == 10) {
             param1 = 1;
           }
-          this.field_g.a(param0, param1, false, this.a((byte) 88, an.field_g, me.field_I));
+          this.field_g.a(param0, param1, false, this.a((byte) 88, EmailLoginCredentials.field_g, me.field_I));
           ke.field_K = -1;
           if (param2 >= -113) {
             field_r = (String) null;
@@ -977,7 +977,7 @@ final class lc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var4), "lc.AA(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw aa.wrapException((Throwable) ((Object) var4), "lc.AA(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -1272,7 +1272,7 @@ final class lc {
                         if (2 == this.field_h) {
                             /* Inlined CFG state: 25. */
                             {
-                                var4 = ea.field_u;
+                                var4 = DiskCacheRequest.field_u;
                                 statePc = 26;
                                 continue scanLoop1;
                             }
@@ -2193,7 +2193,7 @@ final class lc {
                         var9 = -(var14 >> 1) - 16;
                         var8 -= 2;
                         var7 += 2;
-                        var16 = -ea.field_u[so.field_c[2]].field_o + (-ea.field_u[so.field_c[2]].field_y + ea.field_u[so.field_c[2]].field_w);
+                        var16 = -DiskCacheRequest.field_u[so.field_c[2]].field_o + (-DiskCacheRequest.field_u[so.field_c[2]].field_y + DiskCacheRequest.field_u[so.field_c[2]].field_w);
                         if (var11 > var16) {
                             statePc = 131;
                         } else {
@@ -2385,7 +2385,7 @@ final class lc {
                 }
                 case 153: {
                     try {
-                        pc.$cfr$intArgs$a$5f050b8899ac(kg.field_d[2], var11 + var3, kg.field_d[3], kg.field_d[0], -95, kg.field_d[1], ea.field_u[so.field_c[2]], var9 + var2_int);
+                        pc.$cfr$intArgs$a$5f050b8899ac(kg.field_d[2], var11 + var3, kg.field_d[3], kg.field_d[0], -95, kg.field_d[1], DiskCacheRequest.field_u[so.field_c[2]], var9 + var2_int);
                         var18_int = 0;
                         statePc = 154;
                         continue scanLoop1;
@@ -2419,7 +2419,7 @@ final class lc {
                                 } else {
                                     /* Inlined CFG state: 158. */
                                     {
-                                        if (~(bi.field_I + 225) < ~an.field_g) {
+                                        if (~(bi.field_I + 225) < ~EmailLoginCredentials.field_g) {
                                             statePc = 172;
                                             continue scanLoop1;
                                         } else {
@@ -2429,7 +2429,7 @@ final class lc {
                                                 {
                                                 }
                                                 {
-                                                    if (~an.field_g <= ~(to.field_q.field_n + bi.field_I + 225)) {
+                                                    if (~EmailLoginCredentials.field_g <= ~(to.field_q.field_n + bi.field_I + 225)) {
                                                         statePc = 172;
                                                         continue scanLoop1;
                                                     } else {
@@ -6065,13 +6065,13 @@ final class lc {
                 }
                 case 650: {
                     try {
-                        if (~(var2_int + var23 * var22) < ~an.field_g) {
+                        if (~(var2_int + var23 * var22) < ~EmailLoginCredentials.field_g) {
                             statePc = 672;
                             continue scanLoop1;
                         } else {
                             /* Inlined CFG state: 651. */
                             {
-                                if (~an.field_g <= ~(32 + var2_int + var22 * var23)) {
+                                if (~EmailLoginCredentials.field_g <= ~(32 + var2_int + var22 * var23)) {
                                     statePc = 672;
                                     continue scanLoop1;
                                 } else {
@@ -6240,7 +6240,7 @@ final class lc {
                 }
                 case 679: {
                     try {
-                        if (kg.field_d[0] != ld.field_n[2]) {
+                        if (kg.field_d[0] != AlternateUsernameCredentials.field_n[2]) {
                             statePc = 684;
                             continue scanLoop1;
                         } else {
@@ -6250,7 +6250,7 @@ final class lc {
                                 {
                                 }
                                 {
-                                    kg.field_d[0] = ld.field_n[3];
+                                    kg.field_d[0] = AlternateUsernameCredentials.field_n[3];
                                     statePc = 684;
                                     continue scanLoop1;
                                 }
@@ -6306,10 +6306,10 @@ final class lc {
                         } else {
                             /* Inlined CFG state: 691. */
                             {
-                                if (kg.field_d[0] == ld.field_n[12]) {
+                                if (kg.field_d[0] == AlternateUsernameCredentials.field_n[12]) {
                                     /* Inlined CFG state: 695. */
                                     {
-                                        kg.field_d[0] = ld.field_n[13];
+                                        kg.field_d[0] = AlternateUsernameCredentials.field_n[13];
                                         statePc = 696;
                                         continue scanLoop1;
                                     }
@@ -6407,7 +6407,7 @@ final class lc {
                         } else {
                             /* Inlined CFG state: 709. */
                             {
-                                if (ld.field_n[12] != kg.field_d[0]) {
+                                if (AlternateUsernameCredentials.field_n[12] != kg.field_d[0]) {
                                     statePc = 714;
                                     continue scanLoop1;
                                 } else {
@@ -6417,7 +6417,7 @@ final class lc {
                                         {
                                         }
                                         {
-                                            kg.field_d[0] = ld.field_n[14];
+                                            kg.field_d[0] = AlternateUsernameCredentials.field_n[14];
                                             statePc = 714;
                                             continue scanLoop1;
                                         }
@@ -6475,10 +6475,10 @@ final class lc {
                         } else {
                             /* Inlined CFG state: 721. */
                             {
-                                if (ld.field_n[13] == kg.field_d[0]) {
+                                if (AlternateUsernameCredentials.field_n[13] == kg.field_d[0]) {
                                     /* Inlined CFG state: 725. */
                                     {
-                                        kg.field_d[0] = ld.field_n[14];
+                                        kg.field_d[0] = AlternateUsernameCredentials.field_n[14];
                                         statePc = 726;
                                         continue scanLoop1;
                                     }
@@ -6579,7 +6579,7 @@ final class lc {
                                 var25 = var24 * 8 + var23;
                                 var3 = uc.field_a + 319 + var24 * 16;
                                 var2_int = var23 * 16 + bi.field_I + 60;
-                                var26 = (ld.field_n[var25][0] << 16) + (ld.field_n[var25][2] + (ld.field_n[var25][1] << 8));
+                                var26 = (AlternateUsernameCredentials.field_n[var25][0] << 16) + (AlternateUsernameCredentials.field_n[var25][2] + (AlternateUsernameCredentials.field_n[var25][1] << 8));
                                 SoftwareRasterizer.fillRectangle(var2_int, var3, 15, 15, var26);
                                 stackIn_728_0 = -3;
                                 stackIn_732_0 = stackIn_728_0;
@@ -6761,7 +6761,7 @@ final class lc {
                 }
                 case 758: {
                     try {
-                        if (an.field_g < var2_int) {
+                        if (EmailLoginCredentials.field_g < var2_int) {
                             statePc = 773;
                             continue scanLoop1;
                         } else {
@@ -6777,7 +6777,7 @@ final class lc {
                                         {
                                         }
                                         {
-                                            if (~an.field_g <= ~(var2_int + 15)) {
+                                            if (~EmailLoginCredentials.field_g <= ~(var2_int + 15)) {
                                                 statePc = 773;
                                                 continue scanLoop1;
                                             } else {
@@ -6854,7 +6854,7 @@ final class lc {
                 }
                 case 773: {
                     try {
-                        if (ld.field_n[var25] == kg.field_d[0]) {
+                        if (AlternateUsernameCredentials.field_n[var25] == kg.field_d[0]) {
                             /* Inlined CFG state: 776. */
                             {
                                 SoftwareRasterizer.drawThickRectangleAlpha(var2_int - 1, var3 - 1, 17, 17, 2, 16777215, 128);
@@ -7136,7 +7136,7 @@ final class lc {
                 }
                 case 812: {
                     try {
-                        if (~an.field_g > ~var2_int) {
+                        if (~EmailLoginCredentials.field_g > ~var2_int) {
                             statePc = 827;
                             continue scanLoop1;
                         } else {
@@ -7152,7 +7152,7 @@ final class lc {
                                         {
                                         }
                                         {
-                                            if (~(15 + var2_int) >= ~an.field_g) {
+                                            if (~(15 + var2_int) >= ~EmailLoginCredentials.field_g) {
                                                 statePc = 827;
                                                 continue scanLoop1;
                                             } else {
@@ -7344,7 +7344,7 @@ final class lc {
                                 var28 = (IsaacCipher.field_d[var27][0] << 16) + (IsaacCipher.field_d[var27][2] + (IsaacCipher.field_d[var27][1] << 8));
                                 var3 = 16 * var26 + 319 + uc.field_a;
                                 SoftwareRasterizer.fillRectangle(var2_int, var3, 15, 15, var28);
-                                stackIn_839_0 = ~an.field_g;
+                                stackIn_839_0 = ~EmailLoginCredentials.field_g;
                                 stackIn_843_0 = stackIn_839_0;
                                 stackIn_839_1 = ~var2_int;
                                 stackIn_843_1 = stackIn_839_1;
@@ -7370,7 +7370,7 @@ final class lc {
                                                         {
                                                         }
                                                         {
-                                                            if (15 + var2_int <= an.field_g) {
+                                                            if (15 + var2_int <= EmailLoginCredentials.field_g) {
                                                                 statePc = 855;
                                                             } else {
                                                                 statePc = 848;
@@ -7518,7 +7518,7 @@ final class lc {
                                 var2_int = var25 * 16 + bi.field_I + 537;
                                 var28 = (hi.field_b[var27][0] << 16) + (hi.field_b[var27][1] << 8) + hi.field_b[var27][2];
                                 SoftwareRasterizer.fillRectangle(var2_int, var3, 15, 15, var28);
-                                stackIn_862_0 = ~an.field_g;
+                                stackIn_862_0 = ~EmailLoginCredentials.field_g;
                                 stackIn_866_0 = stackIn_862_0;
                                 stackIn_862_1 = ~var2_int;
                                 stackIn_866_1 = stackIn_862_1;
@@ -7544,7 +7544,7 @@ final class lc {
                                                         {
                                                         }
                                                         {
-                                                            if (~an.field_g <= ~(15 + var2_int)) {
+                                                            if (~EmailLoginCredentials.field_g <= ~(15 + var2_int)) {
                                                                 statePc = 878;
                                                             } else {
                                                                 statePc = 871;
@@ -7638,7 +7638,7 @@ final class lc {
                 }
                 case 884: {
                     var2 = (RuntimeException) ((Object) caughtException);
-                    throw aa.a((Throwable) ((Object) var2), "lc.P(" + param0 + ')');
+                    throw aa.wrapException((Throwable) ((Object) var2), "lc.P(" + param0 + ')');
                 }
                 case 885: {
                     return;
@@ -7772,7 +7772,7 @@ final class lc {
                           }
                           if (this.field_g.c((byte) -26)) {
                             var6 = this.d(41, param1) + (this.a(param1, (byte) 103) + (ff.field_c - 120)) >> 1;
-                            var7Lifetime1 = -var6 + an.field_g;
+                            var7Lifetime1 = -var6 + EmailLoginCredentials.field_g;
                             var8 = var7Lifetime1 * 256 / 120;
                             var5 = 1;
                             if (0 >= var8) {
@@ -7811,23 +7811,23 @@ final class lc {
                         if (decompiledFrameRemainder0) {
                           if (var6 == 21) {
                             if (this.field_g.a(-13722)) {
-                              eb.a(0, false);
+                              eb.setMusicVolume(0, false);
                             }
                             if (this.field_g.d((byte) 125)) {
-                              eb.a(256, false);
+                              eb.setMusicVolume(256, false);
                             }
                             if (this.field_g.c((byte) 85)) {
                               var6 = -120 + this.d(41, param1) - (-this.a(param1, (byte) 103) - ff.field_c) >> 1;
-                              var7Lifetime1Lifetime1 = -var6 + an.field_g;
+                              var7Lifetime1Lifetime1 = -var6 + EmailLoginCredentials.field_g;
                               var8Lifetime1 = 256 * var7Lifetime1Lifetime1 / 120;
                               if (var8Lifetime1 > 0) {
                                 if (var8Lifetime1 >= 256) {
-                                  eb.a(256, false);
+                                  eb.setMusicVolume(256, false);
                                 } else {
-                                  eb.a(var8Lifetime1, false);
+                                  eb.setMusicVolume(var8Lifetime1, false);
                                 }
                               } else {
-                                eb.a(0, param2);
+                                eb.setMusicVolume(0, param2);
                               }
                             }
                             if (this.field_g.b((byte) -40)) {
@@ -7940,7 +7940,7 @@ final class lc {
                                         } else {
                                           if (var6 == 19) {
                                             if (this.field_g.b(true)) {
-                                              im.a((byte) 79, cd.e(120));
+                                              UsernameCredentials.a((byte) 79, cd.getApplet(120));
                                               return;
                                             }
                                           } else {
@@ -7967,7 +7967,7 @@ final class lc {
                                         if ((this.field_l != 8 &&
                                           si.field_g != 6) &&
                                           (decompiledFrameRemainder0 = (10 == this.field_l))) {
-                                          ko.a(cd.e(103), (byte) -60);
+                                          ko.a(cd.getApplet(103), (byte) -60);
                                           return;
                                         }
                                         if (decompiledFrameRemainder0) {
@@ -8050,7 +8050,7 @@ final class lc {
             } else {
               if (this.field_g.b(true)) {
                 if (lc.a((byte) 112)) {
-                  ke.a(wd.field_h, param0, mi.field_B, 1, ve.field_t, 0, an.field_j / 2, 16, mi.field_B.field_o, 10, an.field_f / 2, ud.field_o, true, mi.field_B.field_o + mi.field_B.field_m, -21071);
+                  ke.a(wd.field_h, param0, mi.field_B, 1, ArchiveRequest.field_t, 0, EmailLoginCredentials.field_j / 2, 16, mi.field_B.field_o, 10, EmailLoginCredentials.field_f / 2, ud.field_o, true, mi.field_B.field_o + mi.field_B.field_m, -21071);
                 } else {
                   var6 = param0 ? 1 : 0;
                   gj.a(var6 != 0, true, -4, mn.field_r);
@@ -8067,7 +8067,7 @@ final class lc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var4), "lc.OA(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw aa.wrapException((Throwable) ((Object) var4), "lc.OA(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -8091,8 +8091,8 @@ final class lc {
           var2 = null;
           var3 = null;
           var4 = -32 + 3 * uc.field_a / 4 + 240;
-          fe.field_o.drawTransparent(-(fe.field_o.field_n / 2) + (an.field_f >> 1), -(fe.field_o.field_w / 2) - 20 + var4);
-          var5 = (an.field_f >> 1) - 120;
+          fe.field_o.drawTransparent(-(fe.field_o.field_n / 2) + (EmailLoginCredentials.field_f >> 1), -(fe.field_o.field_w / 2) - 20 + var4);
+          var5 = (EmailLoginCredentials.field_f >> 1) - 120;
           if (mj.field_p == 0) {
             var2 = aj.field_f;
             var3 = jo.field_d;
@@ -8160,18 +8160,18 @@ final class lc {
           }
           var6Lifetime1 = var4 - 144;
           if (var2 != null) {
-            tj.field_t.drawParagraph((String) (var2), (an.field_f >> 1) - 233, var6Lifetime1, 208, 288, 13158, 13158, 1, 0, tj.field_t.field_C + tj.field_t.field_m);
-            tj.field_t.drawParagraph((String) (var2), -232 + (an.field_f >> 1), var6Lifetime1 - 1, 208, 288, 13158, 13158, 1, 0, tj.field_t.field_m + tj.field_t.field_C);
-            tj.field_t.drawParagraph((String) (var2), (an.field_f >> 1) - 232, var6Lifetime1, 208, 288, 12569299, -1, 1, 0, tj.field_t.field_m + tj.field_t.field_C);
+            tj.field_t.drawParagraph((String) (var2), (EmailLoginCredentials.field_f >> 1) - 233, var6Lifetime1, 208, 288, 13158, 13158, 1, 0, tj.field_t.field_C + tj.field_t.field_m);
+            tj.field_t.drawParagraph((String) (var2), -232 + (EmailLoginCredentials.field_f >> 1), var6Lifetime1 - 1, 208, 288, 13158, 13158, 1, 0, tj.field_t.field_m + tj.field_t.field_C);
+            tj.field_t.drawParagraph((String) (var2), (EmailLoginCredentials.field_f >> 1) - 232, var6Lifetime1, 208, 288, 12569299, -1, 1, 0, tj.field_t.field_m + tj.field_t.field_C);
           }
           if (var3 != null) {
-            mi.field_B.drawParagraph((String) (var3), 16 + (an.field_f >> 1) + 8, var6Lifetime1, 224, 288, 0, -1, 1, 0, mi.field_B.field_m + mi.field_B.field_C);
+            mi.field_B.drawParagraph((String) (var3), 16 + (EmailLoginCredentials.field_f >> 1) + 8, var6Lifetime1, 224, 288, 0, -1, 1, 0, mi.field_B.field_m + mi.field_B.field_C);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.a((Throwable) (var2), "lc.E(" + param0 + ')');
+          throw aa.wrapException((Throwable) (var2), "lc.E(" + param0 + ')');
         }
     }
 
@@ -8221,7 +8221,7 @@ final class lc {
         var24 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           var26 = new boolean[]{false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, true, true, true, true, true, true, true, true, false, true, false, true, true, true, false, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false, false, false, false, false, false, false, false, false, false, true, true, false, false, false, false, false, false, true, true, true, true, false, true, false, true, false, false, false, true, true, true, param0, true, true, true, false, false, false};
-          if (lk.a(0, (byte) -116)) {
+          if (Js5Transport.a(0, (byte) -116)) {
             var26[55] = false;
           }
           var3 = new int[][][]{new int[][]{new int[]{13, 14}, new int[]{0, 2, 4}, new int[]{1, 3, 5}, new int[]{31, 47}, new int[]{49, 51, 53}, new int[]{50, 52}}, new int[][]{new int[]{46, 56, 87}, new int[]{43, 36, 37, 38, 35}, new int[]{57, 58, 59, 60, 61, 45}, new int[]{41, 44, 12, 72, 73}, new int[]{26, 27, 28, 29}, new int[]{48, 55}}, new int[][]{new int[]{54, 80}, new int[]{6, 7, 8, 9, 10, 11}, new int[]{16, 17, 32}, new int[]{18, 19, 20, 21, 23, 22}, new int[]{24, 25, 33}, new int[]{30}}, new int[][]{new int[]{42, 34, 40, 39, 15}, new int[]{62, 71, 79, 82, 86, 88}, new int[]{65, 66, 67, 69, 85, 92}, new int[]{63, 64, 68, 70, 94, 84}, new int[]{74, 78, 83, 81, 93, 89}, new int[]{91}}};
@@ -8236,7 +8236,7 @@ final class lc {
             var25[0] = ad.field_f[0];
             var32[1] = 0;
           }
-          var5 = lk.a(0, (byte) -33) ? 1 : 0;
+          var5 = Js5Transport.a(0, (byte) -33) ? 1 : 0;
           if ((65536 & var4[1]) != 0) {
             if (var5 == 0 &&
               (8388608 & var4[1]) == 0) {
@@ -8325,7 +8325,7 @@ final class lc {
             if (var17Lifetime1 != 0) {
               mi.field_B.drawCentered(rk.field_H, bi.field_I + 447, -8 + uc.field_a + (126 + var16Lifetime1), 0, -1);
             } else {
-              mi.field_B.drawCentered(ld.field_l, bi.field_I + 447, var16Lifetime1 + uc.field_a + 118, 16711680, -1);
+              mi.field_B.drawCentered(AlternateUsernameCredentials.field_l, bi.field_I + 447, var16Lifetime1 + uc.field_a + 118, 16711680, -1);
             }
             var18 = 126 + var16Lifetime1;
             if (var17Lifetime1 != 0) {
@@ -8351,16 +8351,16 @@ final class lc {
                 var18 = var18 + mi.field_B.field_C;
               }
               mi.field_B.drawCentered(lo.field_x, bi.field_I + 530, uc.field_a + 170, 0, -1);
-              mi.field_B.drawCentered("" + 100 * eh.field_g[var15Lifetime1], bi.field_I + 530, 185 + uc.field_a, 0, -1);
+              mi.field_B.drawCentered("" + 100 * ValidationState.field_g[var15Lifetime1], bi.field_I + 530, 185 + uc.field_a, 0, -1);
               mi.field_B.drawCentered(FullscreenFocusCanvas.field_c, 530 + bi.field_I, uc.field_a + 220, 0, -1);
               var21 = 514;
               var22 = 224;
-              if (10 == eh.field_g[var15Lifetime1]) {
+              if (10 == ValidationState.field_g[var15Lifetime1]) {
                 var21 -= 24;
               }
-              for (var23 = 0; var23 < eh.field_g[var15Lifetime1]; var23++) {
+              for (var23 = 0; var23 < ValidationState.field_g[var15Lifetime1]; var23++) {
                 ih.field_e.drawTransparent(var21 + bi.field_I, var22 + uc.field_a);
-                if (eh.field_g[var15Lifetime1] == 10) {
+                if (ValidationState.field_g[var15Lifetime1] == 10) {
                   ih.field_e.drawTransparent(var21 + bi.field_I + 32, uc.field_a + var22);
                 }
                 var21 -= 8;
@@ -8387,7 +8387,7 @@ final class lc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var2), "lc.M(" + param0 + ')');
+          throw aa.wrapException((Throwable) ((Object) var2), "lc.M(" + param0 + ')');
         }
     }
 
@@ -8403,19 +8403,19 @@ final class lc {
           SoftwareRasterizer.drawRectangle(-2 + param1, param0 - 2, 244, 123, 11833896);
           SoftwareRasterizer.drawRectangle(param1 - 1, param0 - 1, 242, 121, 0);
           SoftwareRasterizer.fillVerticalGradient(param1, param0, 240, 119, wm.a(param3, (byte) -122), ng.b((byte) -37, param3));
-          if (e.field_M[param3] == null) {
+          if (LoginPanel.field_M[param3] == null) {
             ue.field_d.field_f = 0;
-            e.field_M[param3] = af.a(tj.a(-46, new String[]{Integer.toString(param3)}, "background<%0>"), "", 19412, ue.field_d);
-            e.field_M[param3].drawHalfSize(param1, param0);
-            e.field_M[param3] = null;
+            LoginPanel.field_M[param3] = af.a(tj.a(-46, new String[]{Integer.toString(param3)}, "background<%0>"), "", 19412, ue.field_d);
+            LoginPanel.field_M[param3].drawHalfSize(param1, param0);
+            LoginPanel.field_M[param3] = null;
           } else {
-            e.field_M[param3].drawHalfSize(param1, param0);
+            LoginPanel.field_M[param3].drawHalfSize(param1, param0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var5), "lc.HA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw aa.wrapException((Throwable) ((Object) var5), "lc.HA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -8436,7 +8436,7 @@ final class lc {
           if (gm.field_f == 3) {
             var2_int += 20;
           }
-          var3 = an.field_f - var2_int;
+          var3 = EmailLoginCredentials.field_f - var2_int;
           SoftwareRasterizer.drawRectangle(-3 + var3, 3, var2_int, 48, 0);
           SoftwareRasterizer.drawRectangle(var3 - 2, 2, var2_int, 48, 6837813);
           SoftwareRasterizer.drawRectangle(-1 + var3, 1, var2_int, 48, 8547138);
@@ -8500,7 +8500,7 @@ final class lc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var2), "lc.T(" + param0 + ')');
+          throw aa.wrapException((Throwable) ((Object) var2), "lc.T(" + param0 + ')');
         }
     }
 
@@ -8517,7 +8517,7 @@ final class lc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var3), "lc.KA(" + param0 + ',' + param1 + ')');
+          throw aa.wrapException((Throwable) ((Object) var3), "lc.KA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -8536,7 +8536,7 @@ final class lc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var3), "lc.NA(" + param0 + ',' + param1 + ')');
+          throw aa.wrapException((Throwable) ((Object) var3), "lc.NA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -8597,8 +8597,8 @@ final class lc {
             var2 = r.field_b;
           }
           var3 = var2.field_V.s(0);
-          var6 = an.field_f / 2;
-          var7 = an.field_j / 2;
+          var6 = EmailLoginCredentials.field_f / 2;
+          var7 = EmailLoginCredentials.field_j / 2;
           for (var8_int = 0; var8_int < 300; var8_int++) {
             var4 = 3.141592653589793 * (double)var8_int * 2.0 / 300.0;
             var9_int = var6 + (int)(Math.sin(var4) * 240.0);
@@ -8625,7 +8625,7 @@ final class lc {
           var9 = new int[]{0, 255, 0};
           var10 = new int[]{0, 0, 255};
           var11 = new int[]{255, 255, 255};
-          var12 = new Sprite[][]{kc.field_kb, jd.field_j, ea.field_u, qe.field_i, hn.field_d, tj.field_A, bo.field_a, h.field_I, fn.field_b};
+          var12 = new Sprite[][]{kc.field_kb, jd.field_j, DiskCacheRequest.field_u, qe.field_i, hn.field_d, tj.field_A, bo.field_a, h.field_I, fn.field_b};
           var13 = new double[]{-0.75, 0.75, -0.5, 0.5, -0.25, 0.25};
           var14 = 0;
           while (true) {
@@ -8639,12 +8639,12 @@ final class lc {
             var16 = uc.field_a * 3 / 4 - (-240 - (int)(140.0 * Math.cos(var4Lifetime3)));
             var17 = nj.field_n[var14];
             for (var18 = -32; var18 < 32; var18++) {
-              SoftwareRasterizer.setClip(0, var16 + var18, an.field_f, var18 + var16 + 8);
+              SoftwareRasterizer.setClip(0, var16 + var18, EmailLoginCredentials.field_f, var18 + var16 + 8);
               SoftwareRasterizer.fillCircle(var15, -(var18 / 2) + var16, 32, 7891535);
               SoftwareRasterizer.drawCircleOutline(var15, -(var18 / 2) + var16, 32, 0);
             }
             for (var18Lifetime1 = -32; 32 > var18Lifetime1; var18Lifetime1++) {
-              SoftwareRasterizer.setClip(0, var18Lifetime1 + var16, an.field_f, 8 + (var18Lifetime1 + var16));
+              SoftwareRasterizer.setClip(0, var18Lifetime1 + var16, EmailLoginCredentials.field_f, 8 + (var18Lifetime1 + var16));
               SoftwareRasterizer.fillCircle(var15, -4 - var18Lifetime1 / 2 + var16, 28, 13484723);
               SoftwareRasterizer.drawCircleOutline(var15, -4 - var18Lifetime1 / 2 + var16, 28, 0);
             }
@@ -8768,7 +8768,7 @@ final class lc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var2_ref), "lc.Q(" + param0 + ')');
+          throw aa.wrapException((Throwable) ((Object) var2_ref), "lc.Q(" + param0 + ')');
         }
     }
 
@@ -8871,8 +8871,8 @@ final class lc {
             var2.field_V.field_d) {
             var4 = var4 & 1;
           }
-          var7 = an.field_f / 2;
-          var8 = an.field_j / 2;
+          var7 = EmailLoginCredentials.field_f / 2;
+          var8 = EmailLoginCredentials.field_j / 2;
           for (var9_int = 0; var9_int < 300; var9_int++) {
             var5 = (double)var9_int * 3.141592653589793 * 2.0 / 300.0;
             var10_int = var7 + (int)(Math.sin(var5) * 240.0);
@@ -8896,7 +8896,7 @@ final class lc {
           var10 = new int[]{0, 255, 0};
           var11 = new int[]{0, 0, 255};
           var12 = new int[]{255, 255, 255};
-          var13 = new Sprite[][]{kc.field_kb, jd.field_j, ea.field_u, qe.field_i, hn.field_d, tj.field_A, bo.field_a, h.field_I, fn.field_b};
+          var13 = new Sprite[][]{kc.field_kb, jd.field_j, DiskCacheRequest.field_u, qe.field_i, hn.field_d, tj.field_A, bo.field_a, h.field_I, fn.field_b};
           var14 = new StringBuilder(20);
           if (null != var2.field_w) {
             var2.field_V = var2.field_w;
@@ -8924,56 +8924,56 @@ final class lc {
             var16 = 0;
             incrementValue$5 = var16;
             var16++;
-            var15 = lk.a(var15, 10, incrementValue$5, lo.field_v);
+            var15 = Js5Transport.a(var15, 10, incrementValue$5, lo.field_v);
             incrementValue$6 = var16;
             var16++;
-            var15 = lk.a(var15, 10, incrementValue$6, tm.field_e);
+            var15 = Js5Transport.a(var15, 10, incrementValue$6, tm.field_e);
             incrementValue$7 = var16;
             var16++;
-            var15 = lk.a(var15, 10, incrementValue$7, qa.field_p);
+            var15 = Js5Transport.a(var15, 10, incrementValue$7, qa.field_p);
             incrementValue$8 = var16;
             var16++;
-            var15 = lk.a(var15, 10, incrementValue$8, ej.field_N);
+            var15 = Js5Transport.a(var15, 10, incrementValue$8, ej.field_N);
             incrementValue$9 = var16;
             var16++;
-            var15 = lk.a(var15, 10, incrementValue$9, ArchiveProvider.field_e);
+            var15 = Js5Transport.a(var15, 10, incrementValue$9, ArchiveProvider.field_e);
             incrementValue$10 = var16;
             var16++;
-            var15 = lk.a(var15, 10, incrementValue$10, be.field_a);
+            var15 = Js5Transport.a(var15, 10, incrementValue$10, SectorCacheStore.field_a);
             incrementValue$11 = var16;
             var16++;
-            var15 = lk.a(var15, 10, incrementValue$11, q.field_J);
+            var15 = Js5Transport.a(var15, 10, incrementValue$11, q.field_J);
             incrementValue$12 = var16;
             var16++;
-            var15 = lk.a(var15, 10, incrementValue$12, PacketBuffer.field_h);
+            var15 = Js5Transport.a(var15, 10, incrementValue$12, PacketBuffer.field_h);
             incrementValue$13 = var16;
             var16++;
-            var15 = lk.a(var15, 10, incrementValue$13, ed.field_Eb);
+            var15 = Js5Transport.a(var15, 10, incrementValue$13, ed.field_Eb);
             incrementValue$14 = var16;
             var16++;
-            var15 = lk.a(var15, 10, incrementValue$14, ob.field_X);
+            var15 = Js5Transport.a(var15, 10, incrementValue$14, ob.field_X);
             incrementValue$15 = var16;
             var16++;
-            var15 = lk.a(var15, 10, incrementValue$15, ao.field_a);
+            var15 = Js5Transport.a(var15, 10, incrementValue$15, ao.field_a);
             incrementValue$16 = var16;
             var16++;
-            var15 = lk.a(var15, 10, incrementValue$16, co.field_b);
+            var15 = Js5Transport.a(var15, 10, incrementValue$16, co.field_b);
             incrementValue$17 = var16;
             var16++;
-            var15 = lk.a(var15, 10, incrementValue$17, SoundCache.field_i);
+            var15 = Js5Transport.a(var15, 10, incrementValue$17, SoundCache.field_i);
             incrementValue$18 = var16;
             var16++;
-            var15 = lk.a(var15, 10, incrementValue$18, nj.field_i);
+            var15 = Js5Transport.a(var15, 10, incrementValue$18, nj.field_i);
             incrementValue$19 = var16;
             var16++;
-            var15 = lk.a(var15, 10, incrementValue$19, rk.field_S);
+            var15 = Js5Transport.a(var15, 10, incrementValue$19, rk.field_S);
             incrementValue$20 = var16;
             var16++;
-            var15 = lk.a(var15, 10, incrementValue$20, Js5ArchiveManager.field_a);
-            if (lk.a(0, (byte) -36)) {
+            var15 = Js5Transport.a(var15, 10, incrementValue$20, Js5ArchiveManager.field_a);
+            if (Js5Transport.a(0, (byte) -36)) {
               incrementValue$21 = var16;
               var16++;
-              var15 = lk.a(var15, 10, incrementValue$21, lj.field_q);
+              var15 = Js5Transport.a(var15, 10, incrementValue$21, lj.field_q);
             }
           } else {
             var15 = nj.field_b;
@@ -8981,7 +8981,7 @@ final class lc {
           var16Lifetime1 = 128 + 14 * mi.field_B.wrappedLineCount(var15, 256);
           var17 = SpriteState.field_v / 3 % var16Lifetime1 - 128;
           var18 = uc.field_a + 180;
-          SoftwareRasterizer.setClip(0, var18, an.field_f, 128 + var18);
+          SoftwareRasterizer.setClip(0, var18, EmailLoginCredentials.field_f, 128 + var18);
           mi.field_B.drawParagraph(var15, -128 + var7 - 1, -var17 - 1 + var18, 256, 256, 0, -1, 1, 0, 14);
           mi.field_B.drawParagraph(var15, var7 - 129, -var17 + var18 + 1, 256, 256, 0, -1, 1, 0, 14);
           mi.field_B.drawParagraph(var15, -128 + var7 + 1, -var17 + (var18 + 1), 256, 256, 0, -1, 1, 0, 14);
@@ -9020,7 +9020,7 @@ final class lc {
             var24 = nj.field_n[var20];
             if (var21 != 0) {
               for (var25 = -48; var25 < 48; var25++) {
-                SoftwareRasterizer.setClip(0, var25 + (var23 - 16), an.field_f, 24 + var23 + var25);
+                SoftwareRasterizer.setClip(0, var25 + (var23 - 16), EmailLoginCredentials.field_f, 24 + var23 + var25);
                 SoftwareRasterizer.fillCircle(var22, -4 + (-(var25 / 2) + var23 - 16), 28, 13484723);
                 gn.a(48, (byte) 90, 32, var22, -16 + (-(var25 / 2) + var23 - 4));
                 SoftwareRasterizer.drawCircleOutline(var22, -16 - var25 / 2 + var23 - 4, 28, 0);
@@ -9028,12 +9028,12 @@ final class lc {
               var23 -= 16;
             } else {
               for (var25 = -32; var25 < 32; var25++) {
-                SoftwareRasterizer.setClip(0, var23 + var25, an.field_f, 8 + var25 + var23);
+                SoftwareRasterizer.setClip(0, var23 + var25, EmailLoginCredentials.field_f, 8 + var25 + var23);
                 SoftwareRasterizer.fillCircle(var22, var23 - var25 / 2, 32, 7891535);
                 SoftwareRasterizer.drawCircleOutline(var22, -(var25 / 2) + var23, 32, 0);
               }
               for (var25 = -32; var25 < 32; var25++) {
-                SoftwareRasterizer.setClip(0, var23 + var25, an.field_f, var25 + var23 + 8);
+                SoftwareRasterizer.setClip(0, var23 + var25, EmailLoginCredentials.field_f, var25 + var23 + 8);
                 SoftwareRasterizer.fillCircle(var22, -4 + var23 - var25 / 2, 28, 13484723);
                 SoftwareRasterizer.drawCircleOutline(var22, -4 - var25 / 2 + var23, 28, 0);
               }
@@ -9126,7 +9126,7 @@ final class lc {
             } else {
               if ((~var2.field_a & var2.field_b) > 0) {
                 if ((1 << var20 & var2.field_a) != 0) {
-                  var29 = ea.field_I;
+                  var29 = DiskCacheRequest.field_I;
                 } else {
                   stackIn_137_0 = new StringBuilder().append(field_r);
                   if ((SpriteState.field_v & 11) >> 3 != 0) {
@@ -9181,7 +9181,7 @@ final class lc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var2_ref), "lc.JA(" + param0 + ')');
+          throw aa.wrapException((Throwable) ((Object) var2_ref), "lc.JA(" + param0 + ')');
         }
     }
 
@@ -9204,8 +9204,8 @@ final class lc {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param3 &&
-            an.field_g >= param4 &&
-            (param1 + param4) > an.field_g &&
+            EmailLoginCredentials.field_g >= param4 &&
+            (param1 + param4) > EmailLoginCredentials.field_g &&
             param6 <= me.field_I &&
             me.field_I < param5 + param6) {
             stackIn_16_0 = 1;
@@ -9273,7 +9273,7 @@ final class lc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var8 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var8), "lc.MA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw aa.wrapException((Throwable) ((Object) var8), "lc.MA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 
@@ -9373,7 +9373,7 @@ final class lc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var2), "lc.U(" + param0 + ')');
+          throw aa.wrapException((Throwable) ((Object) var2), "lc.U(" + param0 + ')');
         }
     }
 
@@ -9386,7 +9386,7 @@ final class lc {
             nj.field_e = null;
           }
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "lc.D(" + param0 + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "lc.D(" + param0 + ')');
         }
     }
 
@@ -9524,7 +9524,7 @@ final class lc {
               var17 = km.a(param2, wl.field_L[this.field_l].length, -1422079448, var16, var15Lifetime1);
             }
           }
-          lk.a(var9, var10, var5, var18, var17, param0 ^ -15);
+          Js5Transport.a(var9, var10, var5, var18, var17, param0 ^ -15);
           if (var4_int != 20 &&
             var4_int != 21) {
             return;
@@ -9544,7 +9544,7 @@ final class lc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var4), "lc.CA(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw aa.wrapException((Throwable) ((Object) var4), "lc.CA(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -9570,7 +9570,7 @@ final class lc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var3), "lc.G(" + param0 + ',' + param1 + ')');
+          throw aa.wrapException((Throwable) ((Object) var3), "lc.G(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -9743,8 +9743,8 @@ final class lc {
           SoftwareRasterizer.addHorizontalLineScaled(var6, var5 + 65 - 5, 558, 16777215, 128);
           var7 = var6 - vi.field_I.field_n;
           if (this.field_d > 0) {
-            if (var7 <= an.field_g &&
-              var6 > an.field_g &&
+            if (var7 <= EmailLoginCredentials.field_g &&
+              var6 > EmailLoginCredentials.field_g &&
               var5 <= me.field_I &&
               var5 + 65 > me.field_I) {
               vi.field_I.drawScaledWithOpacity(var7, var5, vi.field_I.field_n, 65, 16777215);
@@ -9761,8 +9761,8 @@ final class lc {
           var7Lifetime1 = var6 + 558;
           var8 = vi.field_I.copyFlippedHorizontal();
           if (this.field_d < -6 + var4.length) {
-            if (var7Lifetime1 <= an.field_g &&
-              an.field_g < (var7Lifetime1 + vi.field_I.field_n) &&
+            if (var7Lifetime1 <= EmailLoginCredentials.field_g &&
+              EmailLoginCredentials.field_g < (var7Lifetime1 + vi.field_I.field_n) &&
               var5 <= me.field_I &&
               (65 + var5) > me.field_I) {
               var8.drawScaledWithOpacity(var7Lifetime1, var5, vi.field_I.field_n, 65, 16777215);
@@ -10008,9 +10008,9 @@ final class lc {
                     }
                   }
                   SoftwareRasterizer.resetClip();
-                  if (an.field_g >= var14 &&
+                  if (EmailLoginCredentials.field_g >= var14 &&
                     var15Lifetime1 <= me.field_I &&
-                    an.field_g < (var14 + 39) &&
+                    EmailLoginCredentials.field_g < (var14 + 39) &&
                     var15Lifetime1 + 39 > me.field_I) {
                     this.field_m = 2;
                     this.field_i = var13_intLifetime1 + 2 * var12Lifetime1;
@@ -10172,9 +10172,9 @@ final class lc {
               var23 = 178 + uc.field_a - (-122 + (int)((double)var14 * Math.sin(var20_double)) + 16);
               if (this.field_h == 9 && (ArcanistsMulti.i((byte) -87) ||
                 !(ad.field_d > 0))) {
-                if (an.field_g < var22) {
+                if (EmailLoginCredentials.field_g < var22) {
                 } else if (var23 > me.field_I) {
-                } else if ((var22 + 32) <= an.field_g) {
+                } else if ((var22 + 32) <= EmailLoginCredentials.field_g) {
                 } else if (me.field_I >= (var23 + 32)) {
                 } else {
                   this.field_i = var13_intLifetime4 + var12Lifetime4;
@@ -10182,18 +10182,18 @@ final class lc {
                 }
               } else {
                 if (var16Lifetime3 != 0) {
-                  if (an.field_g >= var22 &&
+                  if (EmailLoginCredentials.field_g >= var22 &&
                     me.field_I >= var23 &&
-                    var22 + 32 > an.field_g &&
+                    var22 + 32 > EmailLoginCredentials.field_g &&
                     (var23 + 32) > me.field_I) {
                     this.field_m = 1;
                     this.field_i = var12Lifetime4 + var13_intLifetime4;
                     var18Lifetime2 += 4;
                   }
                 } else {
-                  if (an.field_g >= var22 &&
+                  if (EmailLoginCredentials.field_g >= var22 &&
                     me.field_I >= var23 &&
-                    an.field_g < (var22 + 32) &&
+                    EmailLoginCredentials.field_g < (var22 + 32) &&
                     me.field_I < (var23 + 32)) {
                     boolean decompiledFrameRemainder4 = true;
                     this.field_i = var13_intLifetime4 + var12Lifetime4;
@@ -10312,9 +10312,9 @@ final class lc {
             if (var16Lifetime3 == 0 &&
               0 < var17_intLifetime3 &&
               var3 >= var17_intLifetime3 && (var24Lifetime2 != 0 ||
-              this.field_h == 1) && (var22 <= an.field_g &&
+              this.field_h == 1) && (var22 <= EmailLoginCredentials.field_g &&
               var23 <= me.field_I &&
-              32 + var22 > an.field_g &&
+              32 + var22 > EmailLoginCredentials.field_g &&
               me.field_I < 32 + var23 &&
               !ArcanistsMulti.i((byte) -125))) {
               var25 = 3.141592653589793 * (double)(255 & SpriteState.field_v) / 128.0;
@@ -10401,7 +10401,7 @@ final class lc {
               }
             }
             boolean decompiledFrameRemainder0 = true;
-            if (an.field_g >= (bi.field_I + 557) &&
+            if (EmailLoginCredentials.field_g >= (bi.field_I + 557) &&
               (uc.field_a + 51) >= me.field_I &&
               !ArcanistsMulti.i((byte) -50)) {
               var13 = "";
@@ -10410,8 +10410,8 @@ final class lc {
               this.a(var15Lifetime3, var3, var14, 113);
             } else {
               if (this.field_m == 0) {
-                var14_ref_String = ee.field_c;
-                var13 = ld.field_k;
+                var14_ref_String = DebouncedValidator.field_c;
+                var13 = AlternateUsernameCredentials.field_k;
                 if (Math.abs(this.field_i) == 1) {
                   var13 = j.field_b;
                   var14_ref_String = gd.field_qb;
@@ -10535,7 +10535,7 @@ final class lc {
                         var13 = wd.field_k + var3;
                       }
                       if (7 == Math.abs(this.field_h)) {
-                        var13 = dg.field_q + var3;
+                        var13 = NameValidator.field_q + var3;
                         var14_ref_String = nf.field_e;
                       }
                       if (Math.abs(this.field_h) == 8) {
@@ -10588,8 +10588,8 @@ final class lc {
               ad.field_d < 10) {
               var14 = 308 + (bi.field_I + ad.field_d * 32);
               var15Lifetime3Lifetime1 = 400 + uc.field_a;
-              if (an.field_g >= (-16 + var14) &&
-                an.field_g <= (16 + var14) &&
+              if (EmailLoginCredentials.field_g >= (-16 + var14) &&
+                EmailLoginCredentials.field_g <= (16 + var14) &&
                 me.field_I >= -16 + var15Lifetime3Lifetime1 &&
                 me.field_I <= var15Lifetime3Lifetime1 + 16) {
                 this.field_m = 9;
@@ -10620,8 +10620,8 @@ final class lc {
                     rb.field_o[var14].drawTintedGrayscale(var15Lifetime3Lifetime2 - 15, -rb.field_o[var14].field_o + (var16Lifetime4Lifetime2 - rb.field_o[var14].field_y / 2), 16711680);
                   } else {
                     rb.field_o[var14].drawSilhouette(var15Lifetime3Lifetime2 - 15, -(rb.field_o[var14].field_y / 2) + (var16Lifetime4Lifetime2 - rb.field_o[var14].field_o), 0);
-                    if ((var15Lifetime3Lifetime2 - 16) <= an.field_g &&
-                      an.field_g <= 16 + var15Lifetime3Lifetime2 &&
+                    if ((var15Lifetime3Lifetime2 - 16) <= EmailLoginCredentials.field_g &&
+                      EmailLoginCredentials.field_g <= 16 + var15Lifetime3Lifetime2 &&
                       (-16 + var16Lifetime4Lifetime2) <= me.field_I &&
                       var16Lifetime4Lifetime2 + 16 >= me.field_I) {
                       var17_double = (double)(SpriteState.field_v & 255) * 3.141592653589793 / 128.0;
@@ -10703,7 +10703,7 @@ final class lc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var2), "lc.N(" + param0 + ')');
+          throw aa.wrapException((Throwable) ((Object) var2), "lc.N(" + param0 + ')');
         }
     }
 
@@ -10743,7 +10743,7 @@ final class lc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var3), "lc.L(" + param0 + ',' + param1 + ')');
+          throw aa.wrapException((Throwable) ((Object) var3), "lc.L(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -10881,7 +10881,7 @@ final class lc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var2), "lc.EA(" + param0 + ')');
+          throw aa.wrapException((Throwable) ((Object) var2), "lc.EA(" + param0 + ')');
         }
     }
 
@@ -10993,7 +10993,7 @@ final class lc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var3), "lc.IA(" + param0 + ',' + param1 + ')');
+          throw aa.wrapException((Throwable) ((Object) var3), "lc.IA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -11083,7 +11083,7 @@ final class lc {
           } else {
             stackIn_31_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(')').toString());
         }
     }
 
@@ -11140,7 +11140,7 @@ final class lc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var2), "lc.LA(" + param0 + ')');
+          throw aa.wrapException((Throwable) ((Object) var2), "lc.LA(" + param0 + ')');
         }
     }
 
@@ -11251,10 +11251,10 @@ final class lc {
               var4 = stackIn_42_0[stackIn_46_1];
             }
             var5 = 240;
-            var6 = an.field_f / 2;
-            var7 = an.field_j / 2;
+            var6 = EmailLoginCredentials.field_f / 2;
+            var7 = EmailLoginCredentials.field_j / 2;
             for (var8 = -var5; var8 < var5; var8++) {
-              SoftwareRasterizer.setClip(0, var8 + var7, an.field_f, var8 + var7 + 1);
+              SoftwareRasterizer.setClip(0, var8 + var7, EmailLoginCredentials.field_f, var8 + var7 + 1);
               SoftwareRasterizer.fillCircleAlpha(var6, -4 - var8 / 2 + var7, var5, var4, 192);
               gn.a(var5, (byte) 126, 100, var6, -(var8 / 2) + (var7 - 4));
             }
@@ -11265,15 +11265,15 @@ final class lc {
             this.field_l == 4) {
             ti.field_N = -1;
             for (var2_int = 0; var2_int < 256; var2_int++) {
-              SoftwareRasterizer.drawHorizontalLineAlpha(0, var2_int, an.field_f, 0, -var2_int + 256);
+              SoftwareRasterizer.drawHorizontalLineAlpha(0, var2_int, EmailLoginCredentials.field_f, 0, -var2_int + 256);
             }
           }
           if (14 != this.field_l) {
             boolean decompiledFrameRemainder0 = true;
             ce.field_m.a(true);
-            if (!qn.a(this.field_l, (byte) -32) && (!(640 >= an.field_f) ||
-              !(480 >= an.field_j))) {
-              sc.a(param0 ^ -47, an.field_j, an.field_f);
+            if (!qn.a(this.field_l, (byte) -32) && (!(640 >= EmailLoginCredentials.field_f) ||
+              !(480 >= EmailLoginCredentials.field_j))) {
+              sc.a(param0 ^ -47, EmailLoginCredentials.field_j, EmailLoginCredentials.field_f);
               decompiledFrameRemainder0 = false;
             }
             else {
@@ -11297,14 +11297,14 @@ final class lc {
             var3Lifetime1 = SpriteState.field_v / 2 % 2400;
             if (var3Lifetime1 < 1200) {
               var4Lifetime1 = var3Lifetime1 - 200;
-              var4Lifetime1 = an.field_f * var4Lifetime1 / 640;
+              var4Lifetime1 = EmailLoginCredentials.field_f * var4Lifetime1 / 640;
               for (var5Lifetime1 = 0; var5Lifetime1 < 3; var5Lifetime1++) {
                 rc.field_d[var2_intLifetime1].drawAlpha(-(120 * var5Lifetime1) + var4Lifetime1, var5Lifetime1 * 30 + 240, 32);
               }
             } else {
               rc.field_d[var2_intLifetime1].flipHorizontally();
               var4Lifetime1 = -var3Lifetime1 + 2200;
-              var4Lifetime1 = an.field_f * var4Lifetime1 / 640;
+              var4Lifetime1 = EmailLoginCredentials.field_f * var4Lifetime1 / 640;
               for (var5Lifetime1 = 0; 3 > var5Lifetime1; var5Lifetime1++) {
                 rc.field_d[var2_intLifetime1].drawAlpha(-(var5Lifetime1 * 120) + var4Lifetime1, -(30 * var5Lifetime1) + 200, 32);
               }
@@ -11371,10 +11371,10 @@ final class lc {
             if (so.field_c[0] != 46) {
               pc.$cfr$intArgs$a$5f050b8899ac(kg.field_d[2], var16 + (var6Lifetime1 - var11 / 2), kg.field_d[3], kg.field_d[0], -92, kg.field_d[1], h.field_I[0], var15 + var5Lifetime2);
             }
-            pc.$cfr$intArgs$a$5f050b8899ac(kg.field_d[2], var10Lifetime1 + (var16 - var11), kg.field_d[3], kg.field_d[0], -111, kg.field_d[1], ea.field_u[so.field_c[2]], var9 + var15);
+            pc.$cfr$intArgs$a$5f050b8899ac(kg.field_d[2], var10Lifetime1 + (var16 - var11), kg.field_d[3], kg.field_d[0], -111, kg.field_d[1], DiskCacheRequest.field_u[so.field_c[2]], var9 + var15);
             ce.field_m.a(true);
-            var18 = an.field_f - 256;
-            var19 = an.field_j - 128;
+            var18 = EmailLoginCredentials.field_f - 256;
+            var19 = EmailLoginCredentials.field_j - 128;
             SoftwareRasterizer.fillRectangleAlpha(var18, var19, 256, 128, 0, 192);
             SoftwareRasterizer.drawRectangle(-2 + var18, -2 + var19, 256, 128, 0);
             SoftwareRasterizer.drawRectangle(-1 + var18, var19 - 1, 256, 128, 4799269);
@@ -11391,7 +11391,7 @@ final class lc {
             } else {
               var20_ref = Integer.toString(var12);
             }
-            var20_ref = tj.a(param0 + 1, new String[]{var20_ref}, im.field_i);
+            var20_ref = tj.a(param0 + 1, new String[]{var20_ref}, UsernameCredentials.field_i);
             var17.drawHorizontalFlip(152 + var18, var19 - 104);
             mi.field_B.drawParagraph(var20_ref, 8 + var18, 8 + var19, 176, 112, 16777215, 0, 0, 0, mi.field_B.field_C + mi.field_B.field_m);
           }
@@ -11451,9 +11451,9 @@ final class lc {
             this.field_l != 13) {
             return;
           }
-          var3Lifetime4 = -208 + an.field_f;
-          var4Lifetime3 = an.field_j - 40;
-          var5Lifetime3 = 200 * (SingleChildContainer.field_C + jo.field_c + be.field_f) / 127;
+          var3Lifetime4 = -208 + EmailLoginCredentials.field_f;
+          var4Lifetime3 = EmailLoginCredentials.field_j - 40;
+          var5Lifetime3 = 200 * (SingleChildContainer.field_C + jo.field_c + SectorCacheStore.field_f) / 127;
           var6Lifetime2 = 11176106;
           var7Lifetime2 = 34;
           if (200 > var5Lifetime3) {
@@ -11470,7 +11470,7 @@ final class lc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var2_ref), "lc.FA(" + param0 + ')');
+          throw aa.wrapException((Throwable) ((Object) var2_ref), "lc.FA(" + param0 + ')');
         }
     }
 
@@ -11489,7 +11489,7 @@ final class lc {
             lc.a((byte) -10);
           }
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "lc.BA(" + param0 + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "lc.BA(" + param0 + ')');
         }
     }
 
@@ -11508,7 +11508,7 @@ final class lc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var3), "lc.J(" + param0 + ',' + param1 + ')');
+          throw aa.wrapException((Throwable) ((Object) var3), "lc.J(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -11519,7 +11519,7 @@ final class lc {
             lc.a((byte) -6);
           }
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "lc.W(" + param0 + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "lc.W(" + param0 + ')');
         }
     }
 
@@ -11544,7 +11544,7 @@ final class lc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var3), "lc.K(" + param0 + ',' + param1 + ')');
+          throw aa.wrapException((Throwable) ((Object) var3), "lc.K(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -11553,7 +11553,7 @@ final class lc {
           int var2_int = -61 % ((-38 - param0) / 46);
           this.field_g.a(82, 2);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "lc.H(" + param0 + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "lc.H(" + param0 + ')');
         }
     }
 
@@ -11601,7 +11601,7 @@ final class lc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var4), "lc.DA(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw aa.wrapException((Throwable) ((Object) var4), "lc.DA(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -11703,7 +11703,7 @@ final class lc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var3), "lc.O(" + param0 + ',' + param1 + ')');
+          throw aa.wrapException((Throwable) ((Object) var3), "lc.O(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -11722,7 +11722,7 @@ final class lc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var2), "lc.<init>(" + param0 + ')');
+          throw aa.wrapException((Throwable) ((Object) var2), "lc.<init>(" + param0 + ')');
         }
     }
 
@@ -11801,7 +11801,7 @@ final class lc {
                 this.a(false, this.field_g.field_h, false);
                 continue;
               }
-              this.field_g.a(this.a((byte) 88, an.field_g, me.field_I), this.a((byte) 88, pb.field_h, ja.field_s), -97);
+              this.field_g.a(this.a((byte) 88, EmailLoginCredentials.field_g, me.field_I), this.a((byte) 88, pb.field_h, ja.field_s), -97);
               stackIn_46_0Lifetime1 = this.field_g.field_h;
               stackIn_46_1Lifetime1 = -1;
               if (stackIn_46_0Lifetime1 == stackIn_46_1Lifetime1) {
@@ -11957,7 +11957,7 @@ final class lc {
                 this.field_n = 0;
               }
               if (this.field_m == 2) {
-                kg.field_d[0] = ld.field_n[this.field_i];
+                kg.field_d[0] = AlternateUsernameCredentials.field_n[this.field_i];
               }
               if (3 == this.field_m) {
                 kg.field_d[1] = ud.field_z[this.field_i];
@@ -11975,7 +11975,7 @@ final class lc {
                 so.field_c[3] = (int)(12.0 * Math.random());
                 so.field_c[4] = (int)(3.0 * (14.0 * Math.random()));
                 so.field_c[5] = (int)(3.0 * (14.0 * Math.random()));
-                kg.field_d[0] = ld.field_n[(int)(Math.random() * (double)ld.field_n.length)];
+                kg.field_d[0] = AlternateUsernameCredentials.field_n[(int)(Math.random() * (double)AlternateUsernameCredentials.field_n.length)];
                 kg.field_d[1] = ud.field_z[(int)(Math.random() * (double)ud.field_z.length)];
                 kg.field_d[2] = IsaacCipher.field_d[(int)(Math.random() * (double)IsaacCipher.field_d.length)];
                 stackIn_217_0 = kg.field_d;
@@ -11998,7 +11998,7 @@ final class lc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var2_ref), "lc.R(" + param0 + ')');
+          throw aa.wrapException((Throwable) ((Object) var2_ref), "lc.R(" + param0 + ')');
         }
     }
 

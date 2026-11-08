@@ -41,7 +41,7 @@ final class fn {
           var12 = var12 + param0;
           tm.field_d.a(var9_int, -(var9_int / 2) + param7, param8 - var12 / 2, var12, (byte) -120);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "fn.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "fn.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }
     }
 
@@ -55,7 +55,7 @@ final class fn {
         g.field_d = new jg[param0 * 15];
     }
 
-    final static int a(boolean param0, byte param1, CharSequence param2, int param3) {
+    final static int parseInteger(boolean param0, byte param1, CharSequence param2, int param3) {
         int var8 = 0;
         int stackIn_7_0 = 0;
         int stackIn_46_0 = 0;
@@ -136,7 +136,7 @@ final class fn {
           } else {
             stackIn_50_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_49_0), ((StringBuilder) (Object) stackIn_49_1).append(stackIn_50_2).append(',').append(param3).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_49_0), ((StringBuilder) (Object) stackIn_49_1).append(stackIn_50_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -160,11 +160,11 @@ final class fn {
         if (!param3) {
           sa.field_Hb = (fh.field_g - 640) / 2;
         } else {
-          sa.field_Hb = bd.field_a;
+          sa.field_Hb = LoginCredentials.field_a;
         }
         gl.a(param3, 0);
         if (ce.field_h > 0) {
-          eh.a(param1, param3, 4, param7);
+          ValidationState.a(param1, param3, 4, param7);
         }
         jf.field_d.field_X = 1;
         jf.field_d.field_t = j.field_f.field_t;
@@ -178,7 +178,7 @@ final class fn {
           DirectByteStorage.field_f.field_Rb >= DirectByteStorage.field_f.field_dc) {
           mj.field_s.field_ub = false;
           nj.field_m.field_Hb.field_rb = ck.field_f;
-          fc.a((byte) -103, nj.field_m.field_Cb);
+          fc.resetChildOffsets((byte) -103, nj.field_m.field_Cb);
         } else {
           nj.field_m.field_Hb.field_rb = null;
           mj.field_s.field_ub = true;
@@ -190,7 +190,7 @@ final class fn {
         sb.field_e = sb.field_e + 1;
     }
 
-    final static cg a(long param0, int param1) {
+    final static cg lookupEntry(long param0, int param1) {
         if (param1 < 109) {
           return (cg) null;
         }
@@ -374,7 +374,7 @@ final class fn {
                 var20 = "<img=" + (-1 + var12.field_Mb) + ">" + var33;
               }
             } else {
-              var20 = "<img=" + (var12.field_Mb - 4 + dg.field_u) + ">" + var33;
+              var20 = "<img=" + (var12.field_Mb - 4 + NameValidator.field_u) + ">" + var33;
             }
             boolean decompiledFrameRemainder0 = true;
             var12.field_Fb.field_rb = var20;
@@ -410,7 +410,7 @@ final class fn {
                   if (!var12.field_Kb) {
                     var12.field_Hb.field_rb = ah.field_a;
                   } else {
-                    var12.field_Fb.field_rb = tj.a(-37, new String[]{var20}, rl.field_n);
+                    var12.field_Fb.field_rb = tj.a(-37, new String[]{var20}, TextFieldValidator.field_n);
                     var12.field_Hb.field_rb = dh.field_Nb;
                     var12.field_Ub.field_rb = qc.field_f;
                   }
@@ -633,7 +633,7 @@ final class fn {
                   }
                 } else {
                   if (var26Lifetime1 != 0) {
-                    var24Lifetime2 = var34 + "<br>" + bd.field_d + (String) (var25);
+                    var24Lifetime2 = var34 + "<br>" + LoginCredentials.field_d + (String) (var25);
                   } else {
                     var24Lifetime2 = var34 + "<br>" + tj.a(-18, new String[]{(String) (var25)}, wl.field_I);
                   }
@@ -659,7 +659,7 @@ final class fn {
           } else {
             stackIn_217_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_216_0), ((StringBuilder) (Object) stackIn_216_1).append(stackIn_217_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_216_0), ((StringBuilder) (Object) stackIn_216_1).append(stackIn_217_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -676,7 +676,7 @@ final class fn {
           int var8 = 106 % ((param0 - 32) / 56);
           he.field_e.writeByteLengthAtMark(-var7_int + he.field_e.position, (byte) 43);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "fn.H(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "fn.H(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 

@@ -24,7 +24,7 @@ final class hf {
     private IndexedSprite[] field_i;
     private so field_d;
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         if (param0) {
           int[] var2 = (int[]) null;
           hf.a(91, (int[]) null, -18, -89, -119, 34, 118);
@@ -49,7 +49,7 @@ final class hf {
           tg.field_f[param3] = param4;
           sc.field_U[param3] = param0;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "hf.L(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "hf.L(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 
@@ -110,15 +110,15 @@ final class hf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var2_ref), "hf.D(" + param0 + ',' + param1 + ')');
+          throw aa.wrapException((Throwable) ((Object) var2_ref), "hf.D(" + param0 + ',' + param1 + ')');
         }
     }
 
     final static void c(int param0) {
         wh.field_g = false;
-        ld.field_p = UiContainer.field_z.readUnsignedByte((byte) 88) == 0 ? true : false;
+        AlternateUsernameCredentials.field_p = UiContainer.field_z.readUnsignedByte((byte) 88) == 0 ? true : false;
         if (param0 < 15) {
-          hf.a(true);
+          hf.releaseStatics(true);
         }
     }
 
@@ -138,7 +138,7 @@ final class hf {
         RuntimeException var9 = null;
         var12 = ArcanistsMulti.field_G ? 1 : 0;
         try {
-          ec.a(65280);
+          ec.pushClipState(65280);
           for (var9_int = param7; var9_int < param0; var9_int++) {
             SoftwareRasterizer.setClip(param2, var9_int, param1, 1 + var9_int);
             var10 = var9_int * param6.length / param0;
@@ -172,7 +172,7 @@ final class hf {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param7).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param7).append(')').toString());
         }
     }
 
@@ -204,32 +204,32 @@ final class hf {
           var2Lifetime1++;
         }
         this.c((byte) -101);
-        if (null != an.field_o &&
-          an.field_o.c(-10923) &&
-          an.field_o.a("members_expansion_screen", -24417) &&
-          an.field_o.a("arialish12", -24417) &&
-          an.field_o.a("pump32", -24417) &&
+        if (null != EmailLoginCredentials.field_o &&
+          EmailLoginCredentials.field_o.c(-10923) &&
+          EmailLoginCredentials.field_o.a("members_expansion_screen", -24417) &&
+          EmailLoginCredentials.field_o.a("arialish12", -24417) &&
+          EmailLoginCredentials.field_o.a("pump32", -24417) &&
           bb.field_a != null &&
           bb.field_a.c(-10923) &&
           bb.field_a.a("arialish12", -24417) &&
           bb.field_a.a("pump32", -24417)) {
-          be.field_j = af.a("frame", "members_expansion_screen", 19412, an.field_o);
-          cg.field_Ib = fj.a("members_expansion_screen", -22612, an.field_o, "arrow");
-          li.field_F = rc.a(bb.field_a, -24755, "arialish12", "", an.field_o);
-          fd.field_b = rm.a("", bb.field_a, "pump32", -119, an.field_o);
-          fd.field_f = cg.a("benefit_orbs", (byte) 113, an.field_o, "members_expansion_screen");
-          qf.field_b = cg.a("button_text", (byte) 116, an.field_o, "members_expansion_screen");
-          KeyboardInputHandler.field_c = nl.a((byte) 31, an.field_o, "button_highlights", "members_expansion_screen");
-          an.field_o = null;
+          SectorCacheStore.field_j = af.a("frame", "members_expansion_screen", 19412, EmailLoginCredentials.field_o);
+          cg.field_Ib = fj.loadSprite("members_expansion_screen", -22612, EmailLoginCredentials.field_o, "arrow");
+          li.field_F = rc.a(bb.field_a, -24755, "arialish12", "", EmailLoginCredentials.field_o);
+          fd.field_b = rm.a("", bb.field_a, "pump32", -119, EmailLoginCredentials.field_o);
+          fd.field_f = cg.a("benefit_orbs", (byte) 113, EmailLoginCredentials.field_o, "members_expansion_screen");
+          qf.field_b = cg.a("button_text", (byte) 116, EmailLoginCredentials.field_o, "members_expansion_screen");
+          KeyboardInputHandler.field_c = nl.a((byte) 31, EmailLoginCredentials.field_o, "button_highlights", "members_expansion_screen");
+          EmailLoginCredentials.field_o = null;
           bb.field_a = null;
         }
         this.b(16180917);
-        if (null == be.field_j) {
+        if (null == SectorCacheStore.field_j) {
           return;
         }
         this.field_e.drawTransparent(376, 339);
         this.field_k.drawTransparent(9, 9);
-        be.field_j.draw(0, 0);
+        SectorCacheStore.field_j.draw(0, 0);
         if (cg.field_Ib != null) {
           cg.field_Ib.drawTransparent(9, 257);
           cg.field_Ib.drawHorizontalFlip(558, 257);
@@ -237,15 +237,15 @@ final class hf {
             290 > me.field_I) {
             var2Lifetime2 = 40 + (40 * hg.a(this.field_p << 4, -52) >> 16);
             if (var2Lifetime2 > 0) {
-              if (an.field_g > 9 &&
-                an.field_g < 82) {
+              if (EmailLoginCredentials.field_g > 9 &&
+                EmailLoginCredentials.field_g < 82) {
                 cg.field_Ib.drawAdditive(8, 256, var2Lifetime2);
                 cg.field_Ib.drawAdditive(10, 256, var2Lifetime2);
                 cg.field_Ib.drawAdditive(8, 258, var2Lifetime2);
                 cg.field_Ib.drawAdditive(10, 258, var2Lifetime2);
               } else {
-                if (an.field_g > 558 &&
-                  631 > an.field_g) {
+                if (EmailLoginCredentials.field_g > 558 &&
+                  631 > EmailLoginCredentials.field_g) {
                   cg.field_Ib.flipHorizontally();
                   cg.field_Ib.drawAdditive(557, 256, var2Lifetime2);
                   cg.field_Ib.drawAdditive(559, 256, var2Lifetime2);
@@ -336,7 +336,7 @@ final class hf {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -345,7 +345,7 @@ final class hf {
           return;
         }
         try {
-          ko.a(cd.e(124), (byte) -108);
+          ko.a(cd.getApplet(124), (byte) -108);
         } catch (Exception exception) {
           exception.printStackTrace();
         }
@@ -367,7 +367,7 @@ final class hf {
         try {
           var7 = param3.getParameter("currency");
           if (var7 != null &&
-            fi.a((CharSequence) ((Object) var7), 10)) {
+            fi.isDecimalInteger((CharSequence) ((Object) var7), 10)) {
             this.field_u = GameAppletShell.a((CharSequence) ((Object) var7), 126);
           } else {
             this.field_u = 2;
@@ -413,7 +413,7 @@ final class hf {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
         }
     }
 
@@ -432,7 +432,7 @@ final class hf {
             return;
           }
           this.field_k = new Sprite(622, 47);
-          fk.a(this.field_k, -23095);
+          fk.setSpriteRasterTarget(this.field_k, -23095);
           SoftwareRasterizer.fillVerticalGradient(0, 0, 622, 47, 4540749, 65793);
           var2 = 16448250;
           var3 = 10068666;
@@ -445,7 +445,7 @@ final class hf {
           var11 = var13;
           var9 = var11;
           var5 = new Sprite(121, 122);
-          fk.a(var5, param0 ^ -16170116);
+          fk.setSpriteRasterTarget(var5, param0 ^ -16170116);
           SoftwareRasterizer.fillVerticalGradient(0, 0, var5.field_q, var5.field_y / 2, param0, 16306250);
           SoftwareRasterizer.fillVerticalGradient(0, var5.field_y / 2, var5.field_q, var5.field_y, 16306250, 15568919);
           var6 = vc.field_l;
@@ -455,7 +455,7 @@ final class hf {
           this.a(var5, 0.699999988079071f, 0, 127, var5.field_y / 3, var9, 12 + (var5.field_y / 2 - fd.field_b.field_C), fd.field_b, Js5ArchiveManager.field_f[this.field_u], var5.field_q);
           oo.c(-15405);
           this.field_e = new Sprite(121, 122);
-          fk.a(this.field_e, param0 - 16204012);
+          fk.setSpriteRasterTarget(this.field_e, param0 - 16204012);
           var5.drawCenteredRotatedScaledBilinear(this.field_e.field_q / 2, this.field_e.field_y / 2, -2048, 4096);
           oo.c(param0 - 16196322);
           return;
@@ -484,11 +484,11 @@ final class hf {
             return;
           }
           var13 = new Sprite(var11_int, var12);
-          fk.a(var13, -23095);
+          fk.setSpriteRasterTarget(var13, -23095);
           param0.drawScaled((int)((float)(-param2) / param1), (int)((float)(-param6) / param1), (int)((float)param0.field_q / param1), (int)((float)param0.field_y / param1));
           this.a(var12, var11_int, 0, param7, param8, param3 ^ 23061, param5, 0);
           oo.c(param3 - 15532);
-          fk.a(param0, -23095);
+          fk.setSpriteRasterTarget(param0, -23095);
           var13.drawScaledAveraged(param2, param6, param9, param4);
           oo.c(param3 ^ -15444);
           return;
@@ -520,7 +520,7 @@ final class hf {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param9).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param9).append(')').toString());
         }
     }
 
@@ -650,18 +650,18 @@ final class hf {
             vf.field_o < this.field_s &&
             ja.field_s > 257 &&
             ja.field_s < 290) {
-            if (an.field_g > 9 &&
-              82 > an.field_g) {
+            if (EmailLoginCredentials.field_g > 9 &&
+              82 > EmailLoginCredentials.field_g) {
               this.field_s = vf.field_o;
             }
-            if (558 < an.field_g &&
-              an.field_g < 631) {
+            if (558 < EmailLoginCredentials.field_g &&
+              EmailLoginCredentials.field_g < 631) {
               this.field_s = vf.field_o;
             }
           }
         }
         if (param0) {
-          this.field_d.a(this.a(an.field_g, 112, me.field_I), this.a(pb.field_h, 76, ja.field_s), -97);
+          this.field_d.a(this.a(EmailLoginCredentials.field_g, 112, me.field_I), this.a(pb.field_h, 76, ja.field_s), -97);
           var4Lifetime1 = 0;
           if (this.field_d.b(true)) {
             if (this.field_d.field_h == 0) {
@@ -689,7 +689,7 @@ final class hf {
     }
 
     private final int a(int param0, int param1, int param2) {
-        if (be.field_j == null) {
+        if (SectorCacheStore.field_j == null) {
           return -1;
         }
         if (param1 <= 72) {
@@ -802,7 +802,7 @@ final class hf {
           } else {
             stackIn_35_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(',').append(param4).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -813,7 +813,7 @@ final class hf {
         try {
           this.a(param2, -126, param1, param0, true, param3);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "hf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "hf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -15,11 +15,11 @@ final class tj extends ArchiveProvider {
     static int[] field_u;
     private int field_v;
     static kc field_o;
-    private be field_D;
-    private be field_F;
+    private SectorCacheStore field_D;
+    private SectorCacheStore field_F;
     private ArchiveIndex field_k;
-    private ve field_x;
-    private lk field_B;
+    private ArchiveRequest field_x;
+    private Js5Transport field_B;
     private IntrusiveDeque field_h;
     private int field_p;
     private IntrusiveDeque field_m;
@@ -45,7 +45,7 @@ final class tj extends ArchiveProvider {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var2_ref), "tj.L(" + param0 + ',' + param1 + ')');
+          throw aa.wrapException((Throwable) ((Object) var2_ref), "tj.L(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -58,7 +58,7 @@ final class tj extends ArchiveProvider {
           }
           this.field_l = true;
           if (param0 != 53) {
-            this.field_x = (ve) null;
+            this.field_x = (ArchiveRequest) null;
           }
           if (null == this.field_h) {
             this.field_h = new IntrusiveDeque();
@@ -67,13 +67,13 @@ final class tj extends ArchiveProvider {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var2), "tj.J(" + param0 + ')');
+          throw aa.wrapException((Throwable) ((Object) var2), "tj.J(" + param0 + ')');
         }
     }
 
     final void a(boolean param0) {
-        ve discarded$0 = null;
-        ve discarded$1 = null;
+        ArchiveRequest discarded$0 = null;
+        ArchiveRequest discarded$1 = null;
         IntrusiveNode var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -118,7 +118,7 @@ final class tj extends ArchiveProvider {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var2_ref), "tj.P(" + param0 + ')');
+          throw aa.wrapException((Throwable) ((Object) var2_ref), "tj.P(" + param0 + ')');
         }
     }
 
@@ -162,14 +162,14 @@ final class tj extends ArchiveProvider {
             if (var6 >= 0) {
               stackIn_6_0 = var6 + 2;
               for (var5 = stackIn_6_0; var3_int > var5; var5++) {
-                if (e.a(30, param2.charAt(var5))) {
+                if (LoginPanel.a(30, param2.charAt(var5))) {
                   continue;
                 }
                 break;
               }
               var13 = param2.substring(var6 + 2, var5);
               var7 = var13;
-              if (!fi.a((CharSequence) ((Object) var7), 10)) {
+              if (!fi.isDecimalInteger((CharSequence) ((Object) var7), 10)) {
                 continue;
               }
               if (var5 >= var3_int) {
@@ -197,13 +197,13 @@ final class tj extends ArchiveProvider {
               return stackIn_31_0;
             }
             for (var5Lifetime1 = var9 + 2; var3_int > var5Lifetime1; var5Lifetime1++) {
-              if (e.a(30, param2.charAt(var5Lifetime1))) {
+              if (LoginPanel.a(30, param2.charAt(var5Lifetime1))) {
                 continue;
               }
               break;
             }
             var10 = param2.substring(2 + var9, var5Lifetime1);
-            if (!fi.a((CharSequence) ((Object) var10), 10)) {
+            if (!fi.isDecimalInteger((CharSequence) ((Object) var10), 10)) {
               continue;
             }
             if (var5Lifetime1 >= var3_int) {
@@ -237,7 +237,7 @@ final class tj extends ArchiveProvider {
             stackIn_40_0 = stackIn_35_0;
             stackIn_40_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_40_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_40_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(')').toString());
         }
     }
 
@@ -264,7 +264,7 @@ final class tj extends ArchiveProvider {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -275,19 +275,19 @@ final class tj extends ArchiveProvider {
             field_t = (BinaryBitmapFont) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "tj.R(" + param0 + ',' + param1 + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "tj.R(" + param0 + ',' + param1 + ')');
         }
     }
 
     final void f(byte param0) {
-        ve discarded$3 = null;
-        ve discarded$2 = null;
-        ve discarded$1 = null;
-        ve discarded$0 = null;
+        ArchiveRequest discarded$3 = null;
+        ArchiveRequest discarded$2 = null;
+        ArchiveRequest discarded$1 = null;
+        ArchiveRequest discarded$0 = null;
         RuntimeException decompiledCaughtException = null;
         Object var2 = null;
         int var2_int = 0;
-        ve var2_ref = null;
+        ArchiveRequest var2_ref = null;
         RuntimeException var2_ref2 = null;
         IntrusiveNode var3 = null;
         int var4 = 0;
@@ -397,7 +397,7 @@ final class tj extends ArchiveProvider {
           }
           if (this.field_z &&
             this.field_r <= qj.b(-26572)) {
-            var2_ref = (ve) (this.field_n.a(10));
+            var2_ref = (ArchiveRequest) (this.field_n.a(10));
             while (var2_ref != null) {
               if (!var2_ref.field_p) {
                 if (!var2_ref.field_n) {
@@ -409,7 +409,7 @@ final class tj extends ArchiveProvider {
                   var2_ref.unlink(true);
                 }
               }
-              var2_ref = (ve) (this.field_n.c(-87));
+              var2_ref = (ArchiveRequest) (this.field_n.c(-87));
             }
             this.field_r = qj.b(-26572) + 1000L;
           }
@@ -420,7 +420,7 @@ final class tj extends ArchiveProvider {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref2 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var2_ref2), "tj.O(" + param0 + ')');
+          throw aa.wrapException((Throwable) ((Object) var2_ref2), "tj.O(" + param0 + ')');
         }
     }
 
@@ -451,13 +451,13 @@ final class tj extends ArchiveProvider {
               stackIn_11_0 = null;
               return (ArchiveIndex) (stackIn_11_0);
             }
-            this.field_x = (ve) ((Object) this.field_B.a(this.field_i, true, 255, (byte) -80, (byte) 0));
+            this.field_x = (ArchiveRequest) ((Object) this.field_B.a(this.field_i, true, 255, (byte) -80, (byte) 0));
           }
           if (this.field_x.field_p) {
             stackIn_15_0 = null;
             return (ArchiveIndex) (stackIn_15_0);
           }
-          var7 = this.field_x.c(-42);
+          var7 = this.field_x.getData(-42);
           var6 = var7;
           var5 = var6;
           var2 = var5;
@@ -465,7 +465,7 @@ final class tj extends ArchiveProvider {
             stackIn_18_0 = (ArchiveIndex) null;
             return stackIn_18_0;
           }
-          if (this.field_x instanceof ea) {
+          if (this.field_x instanceof DiskCacheRequest) {
             try {
               if (var5 == null) {
                 throw new RuntimeException();
@@ -481,7 +481,7 @@ final class tj extends ArchiveProvider {
               if (this.field_B.c((byte) 52)) {
                 this.field_x = null;
               } else {
-                this.field_x = (ve) ((Object) this.field_B.a(this.field_i, true, 255, (byte) -80, (byte) 0));
+                this.field_x = (ArchiveRequest) ((Object) this.field_B.a(this.field_i, true, 255, (byte) -80, (byte) 0));
               }
               stackIn_50_0 = null;
               return (ArchiveIndex) (stackIn_50_0);
@@ -500,7 +500,7 @@ final class tj extends ArchiveProvider {
               if (this.field_B.c((byte) -71)) {
                 this.field_x = null;
               } else {
-                this.field_x = (ve) ((Object) this.field_B.a(this.field_i, true, 255, (byte) -80, (byte) 0));
+                this.field_x = (ArchiveRequest) ((Object) this.field_B.a(this.field_i, true, 255, (byte) -80, (byte) 0));
               }
               stackIn_31_0 = null;
               return (ArchiveIndex) (stackIn_31_0);
@@ -518,7 +518,7 @@ final class tj extends ArchiveProvider {
         } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
           decompiledCaughtException = decompiledCaughtParameter2;
           var2_ref = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var2_ref), "tj.D(" + param0 + ')');
+          throw aa.wrapException((Throwable) ((Object) var2_ref), "tj.D(" + param0 + ')');
         }
     }
 
@@ -531,11 +531,11 @@ final class tj extends ArchiveProvider {
           qn.field_ob = null;
           mj.field_p = -1;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "tj.I(" + param0 + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "tj.I(" + param0 + ')');
         }
     }
 
-    private final ve a(int param0, int param1, int param2) {
+    private final ArchiveRequest a(int param0, int param1, int param2) {
         Object stackIn_38_0 = null;
         Object stackIn_67_0 = null;
         Object stackIn_75_0 = null;
@@ -552,7 +552,7 @@ final class tj extends ArchiveProvider {
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        ve var13 = null;
+        ArchiveRequest var13 = null;
         byte[] var14 = null;
         byte[] var19 = null;
         byte[] var28 = null;
@@ -561,7 +561,7 @@ final class tj extends ArchiveProvider {
         byte[] var31 = null;
         var11 = ArcanistsMulti.field_G ? 1 : 0;
         try {
-          var13 = (ve) (this.field_n.a((long)param2, -77));
+          var13 = (ArchiveRequest) (this.field_n.a((long)param2, -77));
           var4 = var13;
           if (var13 != null &&
             param0 == 0 &&
@@ -605,15 +605,15 @@ final class tj extends ArchiveProvider {
             }
             this.field_n.a((IntrusiveNode) (var4), true, (long)param2);
           }
-          if (((ve) (var4)).field_p) {
+          if (((ArchiveRequest) (var4)).field_p) {
             stackIn_38_0 = null;
-            return (ve) (stackIn_38_0);
+            return (ArchiveRequest) (stackIn_38_0);
           }
           var6 = 103 / ((param1 + 54) / 43);
-          var19 = ((ve) (var4)).c(-74);
+          var19 = ((ArchiveRequest) (var4)).getData(-74);
           var14 = var19;
           var5 = var14;
-          if (var4 instanceof ea) {
+          if (var4 instanceof DiskCacheRequest) {
             try {
               if (var5 != null &&
                 var19.length > 2) {
@@ -645,25 +645,25 @@ final class tj extends ArchiveProvider {
                   }
                   this.field_E[param2] = (byte) 1;
                 }
-                if (!((ve) (var4)).field_q) {
-                  ((ve) (var4)).unlink(true);
+                if (!((ArchiveRequest) (var4)).field_q) {
+                  ((ArchiveRequest) (var4)).unlink(true);
                 }
                 stackIn_106_0 = var4;
-                return (ve) (stackIn_106_0);
+                return (ArchiveRequest) (stackIn_106_0);
               }
               throw new RuntimeException();
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var7 = (Exception) (Object) decompiledCaughtException;
               this.field_E[param2] = (byte)-1;
-              ((ve) (var4)).unlink(true);
-              if (((ve) (var4)).field_q &&
+              ((ArchiveRequest) (var4)).unlink(true);
+              if (((ArchiveRequest) (var4)).field_q &&
                 !this.field_B.c((byte) 67)) {
                 var4 = this.field_B.a(param2, true, this.field_i, (byte) -80, (byte) 2);
                 this.field_n.a((IntrusiveNode) (var4), true, (long)param2);
               }
               stackIn_115_0 = null;
-              return (ve) (stackIn_115_0);
+              return (ArchiveRequest) (stackIn_115_0);
             }
           }
           try {
@@ -694,8 +694,8 @@ final class tj extends ArchiveProvider {
             decompiledCaughtException = decompiledCaughtParameter1;
             var7_ref = (RuntimeException) (Object) decompiledCaughtException;
             this.field_B.a((byte) 0);
-            ((ve) (var4)).unlink(true);
-            if (!((ve) (var4)).field_q) {
+            ((ArchiveRequest) (var4)).unlink(true);
+            if (!((ArchiveRequest) (var4)).field_q) {
               return null;
             }
             if (!this.field_B.c((byte) 16)) {
@@ -703,7 +703,7 @@ final class tj extends ArchiveProvider {
               this.field_n.a((IntrusiveNode) (var4), true, (long)param2);
             }
             stackIn_67_0 = null;
-            return (ve) (stackIn_67_0);
+            return (ArchiveRequest) (stackIn_67_0);
           }
           var5[var19.length - 2] = (byte)(this.field_k.field_y[param2] >>> 8);
           var5[-1 + var19.length] = (byte)this.field_k.field_y[param2];
@@ -713,20 +713,20 @@ final class tj extends ArchiveProvider {
               this.field_E[param2] = (byte) 1;
             }
           }
-          if (!((ve) (var4)).field_q) {
-            ((ve) (var4)).unlink(true);
+          if (!((ArchiveRequest) (var4)).field_q) {
+            ((ArchiveRequest) (var4)).unlink(true);
           }
           stackIn_75_0 = var4;
-          return (ve) (stackIn_75_0);
+          return (ArchiveRequest) (stackIn_75_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
           decompiledCaughtException = decompiledCaughtParameter2;
           var4 = (RuntimeException) (Object) decompiledCaughtException;
-          throw aa.a((Throwable) (var4), "tj.M(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw aa.wrapException((Throwable) (var4), "tj.M(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
     final byte[] a(int param0, boolean param1) {
-        ve var3 = null;
+        ArchiveRequest var3 = null;
         RuntimeException var3_ref = null;
         byte[] var4 = null;
         Object stackIn_2_0 = null;
@@ -738,14 +738,14 @@ final class tj extends ArchiveProvider {
             stackIn_2_0 = null;
             return (byte[]) (stackIn_2_0);
           }
-          var4 = var3.c(-108);
+          var4 = var3.getData(-108);
           var3.unlink(param1);
           stackIn_4_0 = var4;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var3_ref), "tj.F(" + param0 + ',' + param1 + ')');
+          throw aa.wrapException((Throwable) ((Object) var3_ref), "tj.F(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -760,33 +760,33 @@ final class tj extends ArchiveProvider {
           field_t = null;
           field_y = null;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "tj.N(" + param0 + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "tj.N(" + param0 + ')');
         }
     }
 
     final int a(int param0, byte param1) {
-        ve var3 = null;
+        ArchiveRequest var3 = null;
         RuntimeException var3_ref = null;
         int stackIn_6_0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = (ve) (this.field_n.a((long)param0, -43));
+          var3 = (ArchiveRequest) (this.field_n.a((long)param0, -43));
           if (param1 < 119) {
             this.f((byte) -99);
           }
           if (var3 == null) {
             return 0;
           }
-          stackIn_6_0 = var3.e((byte) -121);
+          stackIn_6_0 = var3.getProgressPercent((byte) -121);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var3_ref), "tj.G(" + param0 + ',' + param1 + ')');
+          throw aa.wrapException((Throwable) ((Object) var3_ref), "tj.G(" + param0 + ',' + param1 + ')');
         }
     }
 
-    tj(int param0, be param1, be param2, lk param3, pa param4, int param5, byte[] param6, int param7, boolean param8) {
+    tj(int param0, SectorCacheStore param1, SectorCacheStore param2, Js5Transport param3, pa param4, int param5, byte[] param6, int param7, boolean param8) {
         boolean stackIn_7_1 = false;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
@@ -831,7 +831,7 @@ final class tj extends ArchiveProvider {
           this.field_q = param5;
           this.field_B = param3;
           if (this.field_D != null) {
-            this.field_x = (ve) ((Object) this.field_s.a(this.field_D, this.field_i, -6833));
+            this.field_x = (ArchiveRequest) ((Object) this.field_s.a(this.field_D, this.field_i, -6833));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -880,7 +880,7 @@ final class tj extends ArchiveProvider {
             stackIn_30_0 = stackIn_26_0;
             stackIn_30_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param7).append(',').append(param8).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param7).append(',').append(param8).append(')').toString());
         }
     }
 

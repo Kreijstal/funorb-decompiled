@@ -6,7 +6,7 @@ final class fb {
     static String field_c;
     static IndexedSprite[] field_a;
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_a = null;
         if (param0) {
           return;
@@ -15,7 +15,7 @@ final class fb {
         field_c = null;
     }
 
-    final static String a(boolean param0, char param1, String param2, String param3) {
+    final static String replaceCharacter(boolean param0, char param1, String param2, String param3) {
         StringBuilder discarded$0 = null;
         StringBuilder discarded$1 = null;
         StringBuilder discarded$2 = null;
@@ -67,7 +67,7 @@ final class fb {
           }
           discarded$2 = var8.append(param2.substring(var9));
           if (param0) {
-            fb.a(false);
+            fb.releaseStatics(false);
           }
           stackIn_14_0 = var8.toString();
           return stackIn_14_0;
@@ -87,7 +87,7 @@ final class fb {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 

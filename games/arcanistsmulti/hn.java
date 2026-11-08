@@ -267,7 +267,7 @@ final class hn implements Runnable {
           }
           return true;
         }
-        if (be.field_g) {
+        if (SectorCacheStore.field_g) {
           if (kg.field_a) {
             return true;
           }
@@ -314,7 +314,7 @@ final class hn implements Runnable {
           this.field_n = param0;
           this.field_h = new PacketBuffer(param2);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "hn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "hn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

@@ -39,7 +39,7 @@ final class ao {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -84,7 +84,7 @@ final class ao {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
@@ -145,7 +145,7 @@ final class ao {
         int var2 = !fc.field_a ? 200 : 250;
         vc.field_j.a(-var2 + 363, 5 + var2, 5, 30, (byte) -120);
         jo.field_a.a(-10 + fn.field_e.field_x - 365, 370, 5, 30, (byte) -120);
-        ee.field_g.a(37, nn.field_p, -5 + (-5 + ad.field_c.field_x), false, 5, -5 + (ad.field_c.field_I - 5) - 32, 2);
+        DebouncedValidator.field_g.a(37, nn.field_p, -5 + (-5 + ad.field_c.field_x), false, 5, -5 + (ad.field_c.field_I - 5) - 32, 2);
         if (param0 <= -111) {
           var3 = (fn.field_e.field_x + 2) / 2;
           of.field_a.a(-2 + var3, 0, fn.field_e.field_I - 40, 40, (byte) -120);
@@ -205,7 +205,7 @@ final class ao {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var3), "ao.A(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw aa.wrapException((Throwable) ((Object) var3), "ao.A(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 

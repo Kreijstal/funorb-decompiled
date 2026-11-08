@@ -45,7 +45,7 @@ final class vl extends IntrusiveNode {
           for (var3 = 0; 4 > var3; var3++) {
             var4 = (int[][]) null;
             if (var3 == 0) {
-              var4 = ld.field_n;
+              var4 = AlternateUsernameCredentials.field_n;
             }
             if (var3 == 1) {
               var4 = ud.field_z;
@@ -94,7 +94,7 @@ final class vl extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var1_ref), "vl.C(" + param0 + ')');
+          throw aa.wrapException((Throwable) ((Object) var1_ref), "vl.C(" + param0 + ')');
         }
     }
 
@@ -103,7 +103,7 @@ final class vl extends IntrusiveNode {
           int var2_int = 72 % ((param0 - 77) / 38);
           co.field_f.a(param1, 9);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "vl.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "vl.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -167,7 +167,7 @@ final class vl extends IntrusiveNode {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
         }
     }
 

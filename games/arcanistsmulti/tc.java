@@ -36,7 +36,7 @@ final class tc extends ib {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -45,7 +45,7 @@ final class tc extends ib {
         h.field_K[9] = pa.field_c;
         h.field_K[20] = ByteStorage.field_b;
         h.field_K[18] = h.field_E;
-        h.field_K[19] = ve.field_r;
+        h.field_K[19] = ArchiveRequest.field_r;
         h.field_K[15] = gg.field_d;
         h.field_K[17] = lc.field_e;
         h.field_K[5] = aa.field_i;
@@ -92,7 +92,7 @@ final class tc extends ib {
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!ef.field_r) {
+          if (!SocketJs5Transport.field_r) {
             return false;
           }
           if (nj.field_c == 2 &&
@@ -117,7 +117,7 @@ final class tc extends ib {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(')').toString());
         }
     }
 

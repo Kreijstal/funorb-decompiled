@@ -86,7 +86,7 @@ final class h extends SingleChildContainer {
           gg.field_e = param0;
           uc.a(3);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "h.T(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "h.T(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -148,7 +148,7 @@ final class h extends SingleChildContainer {
         int var4 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           var1 = new Sprite(540, 140);
-          fk.a(var1, -23095);
+          fk.setSpriteRasterTarget(var1, -23095);
           MeshRasterState.useRasterClip();
           SoftwareRasterizer.clear();
           SoundCache.field_a = param0;
@@ -162,7 +162,7 @@ final class h extends SingleChildContainer {
           var1.drawHalfSize(0, 0);
           oo.c(-15405);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "h.G(" + param0 + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "h.G(" + param0 + ')');
         }
     }
 
@@ -195,7 +195,7 @@ final class h extends SingleChildContainer {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 

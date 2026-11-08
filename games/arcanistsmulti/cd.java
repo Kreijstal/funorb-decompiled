@@ -14,12 +14,12 @@ final class cd extends jm {
         }
     }
 
-    final static java.applet.Applet e(int param0) {
+    final static java.applet.Applet getApplet(int param0) {
         if (param0 <= 102) {
           return (java.applet.Applet) null;
         }
-        if (bd.field_c != null) {
-          return bd.field_c;
+        if (LoginCredentials.field_c != null) {
+          return LoginCredentials.field_c;
         }
         return (java.applet.Applet) ((Object) IsaacCipher.field_k);
     }
@@ -87,11 +87,11 @@ final class cd extends jm {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 >= 51) {
           field_q = null;
           field_p = null;
@@ -109,7 +109,7 @@ final class cd extends jm {
           this.field_g = ia.field_c;
           this.field_r = param0;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "cd.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "cd.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

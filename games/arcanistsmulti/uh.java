@@ -62,7 +62,7 @@ final class uh extends IntrusiveNode {
                     param15 = 255 & param15 >> 16;
                     incrementValue$1 = param11;
                     param11++;
-                    param14[incrementValue$1] = dg.a(param9[1] * param15, 65280) + (dg.a(param15 * param9[0] << 8, 16711703) + (dg.a(param9[2] * param15, 65466) >> 8));
+                    param14[incrementValue$1] = NameValidator.bitAnd(param9[1] * param15, 65280) + (NameValidator.bitAnd(param15 * param9[0] << 8, 16711703) + (NameValidator.bitAnd(param9[2] * param15, 65466) >> 8));
                     if (param14[param11 - 1] == 0) {
                       param14[-1 + param11] = 65792;
                     }
@@ -70,7 +70,7 @@ final class uh extends IntrusiveNode {
                     param15 = param15 >> 8 & 255;
                     incrementValue$2 = param11;
                     param11++;
-                    param14[incrementValue$2] = dg.a(param15 * param5[1], 65280) + ((dg.a(param5[0] * param15, 1812004608) << 8) + dg.a(255, param5[2] * param15 >> 8));
+                    param14[incrementValue$2] = NameValidator.bitAnd(param15 * param5[1], 65280) + ((NameValidator.bitAnd(param5[0] * param15, 1812004608) << 8) + NameValidator.bitAnd(255, param5[2] * param15 >> 8));
                     if (0 == param14[-1 + param11]) {
                       param14[-1 + param11] = 65792;
                     }
@@ -82,12 +82,12 @@ final class uh extends IntrusiveNode {
                         param15 = param15 * 2;
                         incrementValue$3 = param11;
                         param11++;
-                        param14[incrementValue$3] = (dg.a(param12[2] * param15, 65330) >> 8) + dg.a(param15 * param12[1], 65280) + (dg.a(param12[0] * param15, -1107230976) << 8);
+                        param14[incrementValue$3] = (NameValidator.bitAnd(param12[2] * param15, 65330) >> 8) + NameValidator.bitAnd(param15 * param12[1], 65280) + (NameValidator.bitAnd(param12[0] * param15, -1107230976) << 8);
                       } else {
                         param15 = 2 * (param15 - 127);
                         incrementValue$4 = param11;
                         param11++;
-                        param14[incrementValue$4] = dg.a((-param12[1] + 255) * param15 + 255 * param12[1], 65280) + ((dg.a(1275133696, 255 * param12[0] + (255 - param12[0]) * param15) << 8) + dg.a(param15 * (255 - param12[2]) + 255 * param12[2] >> 8, 255));
+                        param14[incrementValue$4] = NameValidator.bitAnd((-param12[1] + 255) * param15 + 255 * param12[1], 65280) + ((NameValidator.bitAnd(1275133696, 255 * param12[0] + (255 - param12[0]) * param15) << 8) + NameValidator.bitAnd(param15 * (255 - param12[2]) + 255 * param12[2] >> 8, 255));
                       }
                       if (0 == param14[-1 + param11]) {
                         param14[-1 + param11] = 65792;
@@ -99,7 +99,7 @@ final class uh extends IntrusiveNode {
                     param15 = param15 & 255;
                     incrementValue$6 = param11;
                     param11++;
-                    param14[incrementValue$6] = dg.a(param15 * param0[2] >> 8, 255) + dg.a(param15 * param0[1], 65280) + dg.a(16711759, param0[0] * param15 << 8);
+                    param14[incrementValue$6] = NameValidator.bitAnd(param15 * param0[2] >> 8, 255) + NameValidator.bitAnd(param15 * param0[1], 65280) + NameValidator.bitAnd(16711759, param0[0] * param15 << 8);
                     if (param14[-1 + param11] == 0) {
                       param14[param11 - 1] = 65792;
                     }
@@ -163,7 +163,7 @@ final class uh extends IntrusiveNode {
           } else {
             stackIn_81_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_60_0), ((StringBuilder) (Object) stackIn_80_1).append(stackIn_81_2).append(',').append(param15).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_60_0), ((StringBuilder) (Object) stackIn_80_1).append(stackIn_81_2).append(',').append(param15).append(')').toString());
         }
     }
 
@@ -225,7 +225,7 @@ final class uh extends IntrusiveNode {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -245,7 +245,7 @@ final class uh extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var2), "uh.G(" + param0 + ',' + param1 + ')');
+          throw aa.wrapException((Throwable) ((Object) var2), "uh.G(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -265,7 +265,7 @@ final class uh extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var1), "uh.E(" + param0 + ')');
+          throw aa.wrapException((Throwable) ((Object) var1), "uh.E(" + param0 + ')');
         }
     }
 
@@ -297,7 +297,7 @@ final class uh extends IntrusiveNode {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
         }
     }
 
@@ -308,9 +308,9 @@ final class uh extends IntrusiveNode {
           }
           ig.a(0, param0);
           int var2_int = 32 % ((param1 - 18) / 50);
-          cj.a(-127);
+          cj.drawModalDimOverlay(-127);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "uh.F(" + param0 + ',' + param1 + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "uh.F(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -322,7 +322,7 @@ final class uh extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         try {
           vi.field_F = param1;
-          ee.a(12, (byte) 30);
+          DebouncedValidator.a(12, (byte) 30);
           if (param0 <= 125) {
             field_l = (String) null;
           }
@@ -337,7 +337,7 @@ final class uh extends IntrusiveNode {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 

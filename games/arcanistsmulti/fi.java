@@ -23,7 +23,7 @@ final class fi {
         }
     }
 
-    final static boolean a(CharSequence param0, int param1) {
+    final static boolean isDecimalInteger(CharSequence param0, int param1) {
         RuntimeException var2 = null;
         boolean stackIn_4_0 = false;
         RuntimeException stackIn_7_0 = null;
@@ -32,7 +32,7 @@ final class fi {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 == 10) {
-            stackIn_4_0 = fj.a(97, param0, true, 10);
+            stackIn_4_0 = fj.isIntegerInRadix(97, param0, true, 10);
             return stackIn_4_0;
           }
           return false;
@@ -46,7 +46,7 @@ final class fi {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 

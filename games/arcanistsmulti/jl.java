@@ -11,7 +11,7 @@ final class jl {
     static String field_e;
     static String field_l;
     static kc field_a;
-    static lk field_c;
+    static Js5Transport field_c;
     static String field_b;
     static String[] field_g;
     private int field_m;
@@ -50,7 +50,7 @@ final class jl {
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
         }
     }
 
@@ -73,7 +73,7 @@ final class jl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var3), "jl.D(" + param0 + ',' + param1 + ')');
+          throw aa.wrapException((Throwable) ((Object) var3), "jl.D(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -93,7 +93,7 @@ final class jl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var3), "jl.F(" + param0 + ',' + param1 + ')');
+          throw aa.wrapException((Throwable) ((Object) var3), "jl.F(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -190,7 +190,7 @@ final class jl {
               var8 = stackIn_63_0;
               var4 = var4 + var3 + var8;
               if (!wh.field_g) {
-                if (ld.field_p) {
+                if (AlternateUsernameCredentials.field_p) {
                   var4 = "<col=999999>" + var4 + sb.field_b + "</col>";
                   var5 = "";
                   if (var10 != 0) {
@@ -205,7 +205,7 @@ final class jl {
               var9 = oo.field_x.textWidth(var4);
               if (!tk.f((byte) -113)) {
                 if (SingleChildContainer.field_D.field_C &&
-                  (-SingleChildContainer.field_D.field_V + an.field_g) < var9) {
+                  (-SingleChildContainer.field_D.field_V + EmailLoginCredentials.field_g) < var9) {
                   if (!wh.field_g) {
                     var1 = sb.field_b;
                   } else {
@@ -220,7 +220,7 @@ final class jl {
               }
             }
             rb.a(wd.field_c[var6], var4 + BitmapFont.escapeMarkup(hi.field_e.toString()), var7, var5, -126);
-            if (!ef.field_r) {
+            if (!SocketJs5Transport.field_r) {
               sa.field_Cb.field_C = false;
             }
             if (sa.field_Cb.field_C) {
@@ -232,7 +232,7 @@ final class jl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw aa.a((Throwable) (var1), "jl.G(" + param0 + ')');
+          throw aa.wrapException((Throwable) (var1), "jl.G(" + param0 + ')');
         }
     }
 
@@ -240,7 +240,7 @@ final class jl {
         try {
           this.a(false, param1 + this.field_m, param0);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "jl.B(" + param0 + ',' + param1 + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "jl.B(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -306,7 +306,7 @@ final class jl {
           } else {
             stackIn_40_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_39_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(',').append(param1).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_39_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -330,7 +330,7 @@ final class jl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var1), "jl.A(" + param0 + ')');
+          throw aa.wrapException((Throwable) ((Object) var1), "jl.A(" + param0 + ')');
         }
     }
 
@@ -372,7 +372,7 @@ final class jl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var2), "jl.I(" + param0 + ',' + param1 + ')');
+          throw aa.wrapException((Throwable) ((Object) var2), "jl.I(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -391,7 +391,7 @@ final class jl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var3_ref), "jl.E(" + param0 + ',' + param1 + ')');
+          throw aa.wrapException((Throwable) ((Object) var3_ref), "jl.E(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -410,7 +410,7 @@ final class jl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var2), "jl.L(" + param0 + ')');
+          throw aa.wrapException((Throwable) ((Object) var2), "jl.L(" + param0 + ')');
         }
     }
 
@@ -432,7 +432,7 @@ final class jl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var4), "jl.K(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw aa.wrapException((Throwable) ((Object) var4), "jl.K(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -475,7 +475,7 @@ final class jl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var3), "jl.H(" + param0 + ',' + param1 + ')');
+          throw aa.wrapException((Throwable) ((Object) var3), "jl.H(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -487,7 +487,7 @@ final class jl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var1), "jl.<init>()");
+          throw aa.wrapException((Throwable) ((Object) var1), "jl.<init>()");
         }
     }
 

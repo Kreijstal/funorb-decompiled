@@ -31,15 +31,15 @@ final class pe extends kc {
           if (param1 <= UiContainer.field_z.position) {
             return true;
           }
-          if (null == ch.field_c) {
+          if (null == CredentialKind.field_c) {
             return false;
           }
-          int var2_int = ch.field_c.b(0);
+          int var2_int = CredentialKind.field_c.b(0);
           if (var2_int > 0) {
             if (!(param1 - UiContainer.field_z.position >= var2_int)) {
               var2_int = param1 - UiContainer.field_z.position;
             }
-            ch.field_c.a(UiContainer.field_z.payload, (byte) -127, UiContainer.field_z.position, var2_int);
+            CredentialKind.field_c.a(UiContainer.field_z.payload, (byte) -127, UiContainer.field_z.position, var2_int);
             hi.field_d = qj.b(-26572);
             UiContainer.field_z.position = UiContainer.field_z.position + var2_int;
             if (param1 > UiContainer.field_z.position) {
@@ -172,10 +172,10 @@ final class pe extends kc {
           if (param3 != 0) {
             field_Db = (am) null;
           }
-          stackIn_5_0 = ee.field_g;
-          stackIn_6_1 = (dd.field_h == ee.field_g);
+          stackIn_5_0 = DebouncedValidator.field_g;
+          stackIn_6_1 = (dd.field_h == DebouncedValidator.field_g);
           var7_int = ((dn) (Object) stackIn_5_0).a(stackIn_6_1, (byte) 98, (2 + ImageProducerRasterBuffer.field_r) * 2, 2, param1 * (8 + ImageProducerRasterBuffer.field_r * 4), param6) ? 1 : 0;
-          var8 = ee.field_g.field_Cb.field_G;
+          var8 = DebouncedValidator.field_g.field_Cb.field_G;
           var9 = qj.b(-26572);
           var11 = null;
           var12 = (na) (var8.first(param3 + 12623));
@@ -344,7 +344,7 @@ final class pe extends kc {
             var30 = var12.field_Kb;
             var12.field_Kb.field_I = 0;
             var30.field_x = 0;
-            var12.field_x = ee.field_g.field_Cb.field_x;
+            var12.field_x = DebouncedValidator.field_g.field_Cb.field_x;
             var31 = 0;
             var32 = var12.field_ic;
             if (!var12.e(-55)) {
@@ -529,7 +529,7 @@ final class pe extends kc {
               var12.field_B = var31 - var12.field_I;
             }
             if (var13 != 0) {
-              ee.field_g.field_Cb.a((byte) 124, (kc) (var11), var12, 2);
+              DebouncedValidator.field_g.field_Cb.a((byte) 124, (kc) (var11), var12, 2);
             }
             for (var34_intLifetime2 = 0; var34_intLifetime2 < vf.field_l; var34_intLifetime2++) {
               if (var12.field_pc[var34_intLifetime2].field_C) {
@@ -602,7 +602,7 @@ final class pe extends kc {
                   decompiledFrameRemainder0 = false;
                 }
                 else {
-                  uj.a(var12.h((byte) 76), (byte) -122, param0);
+                  ScreenDisplayMode.a(var12.h((byte) 76), (byte) -122, param0);
                 }
               }
             }
@@ -612,7 +612,7 @@ final class pe extends kc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var7), "pe.S(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw aa.wrapException((Throwable) ((Object) var7), "pe.S(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 
@@ -645,7 +645,7 @@ final class pe extends kc {
         if (lo.e(false)) {
           return true;
         }
-        if (eh.a(false, param1, param3, param0)) {
+        if (ValidationState.a(false, param1, param3, param0)) {
           return true;
         }
         if (param2 <= 25) {
@@ -656,11 +656,11 @@ final class pe extends kc {
     }
 
     final static ho e(boolean param0) {
-        if (in.field_Gb == uj.field_h) {
+        if (in.field_Gb == ScreenDisplayMode.field_h) {
           throw new IllegalStateException();
         }
         if (pa.field_g == in.field_Gb) {
-          in.field_Gb = uj.field_h;
+          in.field_Gb = ScreenDisplayMode.field_h;
           return i.field_i;
         }
         if (!param0) {
@@ -778,10 +778,10 @@ final class pe extends kc {
             for (var20 = var13; var14 >= var20; var20 += 2) {
               var21 = var20 + var19 * param5.field_q;
               var22 = (param3 + (var19 >> 1)) * param1.field_hb - (-param0 - (var20 >> 1));
-              var17[0] = dg.a(param5.field_A[var21], 255);
-              var17[1] = dg.a(param5.field_A[1 + var21], 255);
-              var17[2] = dg.a(param5.field_A[param5.field_q + var21], 255);
-              var17[3] = dg.a(255, param5.field_A[1 + var21 + param5.field_q]);
+              var17[0] = NameValidator.bitAnd(param5.field_A[var21], 255);
+              var17[1] = NameValidator.bitAnd(param5.field_A[1 + var21], 255);
+              var17[2] = NameValidator.bitAnd(param5.field_A[param5.field_q + var21], 255);
+              var17[3] = NameValidator.bitAnd(255, param5.field_A[1 + var21 + param5.field_q]);
               var18 = param6.field_m[var22];
               for (var23 = 0; var23 < 4; var23++) {
                 if (var26[var23] != 0) {
@@ -814,7 +814,7 @@ final class pe extends kc {
           } else {
             stackIn_38_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(')').toString());
         }
     }
 
@@ -838,7 +838,7 @@ final class pe extends kc {
           this.field_Pb[this.field_Kb] = param0;
           this.field_Kb = this.field_Kb + 1;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "pe.J(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "pe.J(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -906,7 +906,7 @@ final class pe extends kc {
           this.field_Mb = param8;
           this.field_Eb = param6;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "pe.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "pe.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }
     }
 
@@ -923,7 +923,7 @@ final class pe extends kc {
           this.field_Pb[this.field_Kb] = param1;
           this.field_Kb = this.field_Kb + 1;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "pe.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "pe.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 

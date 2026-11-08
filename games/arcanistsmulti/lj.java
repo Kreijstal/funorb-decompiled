@@ -25,7 +25,7 @@ final class lj extends hg {
             lj.b(false);
           }
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "lj.Q(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "lj.Q(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -98,7 +98,7 @@ final class lj extends hg {
         Sprite var17;
         var6 = ArcanistsMulti.field_G ? 1 : 0;
         var2 = param1;
-        IntrusiveDeque.field_b = ea.field_E[var2];
+        IntrusiveDeque.field_b = DiskCacheRequest.field_E[var2];
         wm.field_H[var2] = null;
         wm.field_H[var2] = new Sprite(640, 480);
         wm.field_H[var2].makeRasterTarget();
@@ -127,7 +127,7 @@ final class lj extends hg {
           j.field_a.drawTransparent(eo.field_b[param1] - 110, -70 + var3);
           pe.field_Ib.drawTransparent(lm.field_e[param1] - 39, tg.field_f[param1] - 66);
           rg.field_a.drawTransparent(-150 + eo.field_b[param1], -80 + tg.field_f[param1]);
-          var5 = fj.a(ec.field_c, -22612, ue.field_d, "");
+          var5 = fj.loadSprite(ec.field_c, -22612, ue.field_d, "");
           if (ec.field_c.equals("underdark")) {
             var5.drawSilhouette(0, -8 + (-var5.field_y + 480), 16777215);
           } else {

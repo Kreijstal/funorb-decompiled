@@ -97,7 +97,7 @@ final class IntrusiveDeque {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -109,7 +109,7 @@ final class IntrusiveDeque {
             IntrusiveDeque.a((ResourceArchive) null, false, (ResourceArchive) null, (ResourceArchive) null);
           }
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "vn.O(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "vn.O(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -243,7 +243,7 @@ final class IntrusiveDeque {
           } else {
             stackIn_51_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_47_0), ((StringBuilder) (Object) stackIn_50_1).append(stackIn_51_2).append(',').append(param8).append(',').append(param9).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_47_0), ((StringBuilder) (Object) stackIn_50_1).append(stackIn_51_2).append(',').append(param8).append(',').append(param9).append(')').toString());
         }
     }
 
@@ -282,7 +282,7 @@ final class IntrusiveDeque {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -314,7 +314,7 @@ final class IntrusiveDeque {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(obfuscationGuard).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -360,7 +360,7 @@ final class IntrusiveDeque {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -388,7 +388,7 @@ final class IntrusiveDeque {
         return;
     }
 
-    public static void e(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_b = null;
         field_a = null;
         if (!param0) {
@@ -420,7 +420,7 @@ final class IntrusiveDeque {
           node.previous.next = node;
           node.next.previous = node;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "vn.B(" + (node != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "vn.B(" + (node != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
         }
     }
 
@@ -436,7 +436,7 @@ final class IntrusiveDeque {
         RuntimeException decompiledCaughtException = null;
         try {
           if (!param1) {
-            IntrusiveDeque.e(true);
+            IntrusiveDeque.releaseStatics(true);
           }
           if (param3.c(-10923) &&
             param3.a("commonui", -24417)) {
@@ -475,7 +475,7 @@ final class IntrusiveDeque {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
         }
     }
 

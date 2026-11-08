@@ -42,7 +42,7 @@ final class ge extends IntrusiveNode {
             stackIn_5_0 = (BinaryBitmapFont) null;
             return stackIn_5_0;
           }
-          var2 = new BinaryBitmapFont(param0, hl.field_l, be.field_d, jg.field_p, ho.field_i, ln.field_I);
+          var2 = new BinaryBitmapFont(param0, hl.field_l, SectorCacheStore.field_d, jg.field_p, ho.field_i, ln.field_I);
           CanvasRasterBuffer.a(-18229);
           stackIn_7_0 = var2;
           return stackIn_7_0;
@@ -56,7 +56,7 @@ final class ge extends IntrusiveNode {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
         }
     }
 

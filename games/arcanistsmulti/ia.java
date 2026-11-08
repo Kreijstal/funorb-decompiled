@@ -6,7 +6,7 @@ final class ia {
     static kc[] field_b;
     static kc field_a;
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_c = null;
         if (param0) {
           return;

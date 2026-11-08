@@ -148,7 +148,7 @@ final class pm {
           } else {
             stackIn_55_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_54_0), ((StringBuilder) (Object) stackIn_54_1).append(stackIn_55_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_54_0), ((StringBuilder) (Object) stackIn_54_1).append(stackIn_55_2).append(')').toString());
         }
     }
 
@@ -180,14 +180,14 @@ final class pm {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
-    final static void a(uj[] param0, int param1) {
+    final static void a(ScreenDisplayMode[] param0, int param1) {
         int var3 = 0;
         int var2_int = 0;
-        uj var4 = null;
+        ScreenDisplayMode var4 = null;
         int var5 = 0;
         int var6 = 0;
         RuntimeException stackIn_13_0 = null;
@@ -223,7 +223,7 @@ final class pm {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
         }
     }
 

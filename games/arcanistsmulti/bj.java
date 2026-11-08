@@ -50,7 +50,7 @@ final class bj extends ob implements ButtonListener {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -91,7 +91,7 @@ final class bj extends ob implements ButtonListener {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -107,7 +107,7 @@ final class bj extends ob implements ButtonListener {
             field_mb = false;
           }
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "bj.G(" + param0 + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "bj.G(" + param0 + ')');
         }
     }
 
@@ -131,7 +131,7 @@ final class bj extends ob implements ButtonListener {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var2), "bj.K(" + param0 + ',' + param1 + ')');
+          throw aa.wrapException((Throwable) ((Object) var2), "bj.K(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -148,7 +148,7 @@ final class bj extends ob implements ButtonListener {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var7), "bj.I(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw aa.wrapException((Throwable) ((Object) var7), "bj.I(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 
@@ -197,7 +197,7 @@ final class bj extends ob implements ButtonListener {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -241,7 +241,7 @@ final class bj extends ob implements ButtonListener {
           var5 = null;
           if (param1 == ~SpriteState.field_t) {
             ec.field_d.field_ub = true;
-            lj.field_j.field_rb = tj.a(param1 - 94, new String[]{ie.field_Nb}, e.field_C);
+            lj.field_j.field_rb = tj.a(param1 - 94, new String[]{ie.field_Nb}, LoginPanel.field_C);
             nl.field_Gb.field_Db.field_Hb.field_rb = null;
             var6 = null;
             var7 = (wa) (var4.first(param1 ^ -12622));
@@ -333,7 +333,7 @@ final class bj extends ob implements ButtonListener {
                       if (var7.field_Lb != null &&
                         !tc.a(eo.field_c.field_h, -31046) &&
                         !wh.field_g) {
-                        if (!ld.field_p) {
+                        if (!AlternateUsernameCredentials.field_p) {
                           var17 = eo.field_c;
                           var18 = tj.a(param1 ^ -125, new String[]{var16}, mb.field_S);
                           var17.field_l.a(8, var18, (byte) -26);
@@ -354,7 +354,7 @@ final class bj extends ob implements ButtonListener {
                 if (0 == nl.field_Gb.field_Jb.field_U) {
                   break scanLoop1;
                 }
-                tc.field_A = new dh(nl.field_Gb.field_Jb.field_V, nl.field_Gb.field_Jb.field_nb, nl.field_Gb.field_Jb.field_x, nl.field_Gb.field_Jb.field_I, dg.field_v, ck.field_a, IntrusiveNode.field_c, IntrusiveNode.field_c);
+                tc.field_A = new dh(nl.field_Gb.field_Jb.field_V, nl.field_Gb.field_Jb.field_nb, nl.field_Gb.field_Jb.field_x, nl.field_Gb.field_Jb.field_I, NameValidator.field_v, ck.field_a, IntrusiveNode.field_c, IntrusiveNode.field_c);
               }
               vd.field_h = 0;
               break;
@@ -376,14 +376,14 @@ final class bj extends ob implements ButtonListener {
             } else {
               nl.field_Gb.field_Db.field_Hb.field_rb = hn.field_l;
             }
-            fc.a((byte) -77, nl.field_Gb.field_Eb);
+            fc.resetChildOffsets((byte) -77, nl.field_Gb.field_Eb);
           }
           stackIn_98_0 = var5;
           return (wa) (stackIn_98_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var3), "bj.J(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw aa.wrapException((Throwable) ((Object) var3), "bj.J(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -419,7 +419,7 @@ final class bj extends ob implements ButtonListener {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -436,7 +436,7 @@ final class bj extends ob implements ButtonListener {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var1), "bj.H(" + param0 + ')');
+          throw aa.wrapException((Throwable) ((Object) var1), "bj.H(" + param0 + ')');
         }
     }
 
@@ -484,7 +484,7 @@ final class bj extends ob implements ButtonListener {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -528,7 +528,7 @@ final class bj extends ob implements ButtonListener {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -568,7 +568,7 @@ final class bj extends ob implements ButtonListener {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -587,7 +587,7 @@ final class bj extends ob implements ButtonListener {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var2), "bj.M(" + param0 + ')');
+          throw aa.wrapException((Throwable) ((Object) var2), "bj.M(" + param0 + ')');
         }
     }
 

@@ -76,7 +76,7 @@ final class hl extends IntrusiveNode {
                 var21 = 255 & var18;
                 if (0 < var17) {
                   if (var17 == 256) {
-                    var10[var11] = fj.b(fj.b(var19 << 16, var20 << 8), var21);
+                    var10[var11] = fj.bitOr(fj.bitOr(var19 << 16, var20 << 8), var21);
                     decompiledFrameRemainder0 = false;
                   }
                   else {
@@ -102,7 +102,7 @@ final class hl extends IntrusiveNode {
                   var21 = -var21 + 255;
                 }
                 if (decompiledFrameRemainder0) {
-                  var10[var11] = fj.b(fj.b(var19 << 16, var20 << 8), var21);
+                  var10[var11] = fj.bitOr(fj.bitOr(var19 << 16, var20 << 8), var21);
                 }
               }
             }
@@ -111,7 +111,7 @@ final class hl extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var5), "hl.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw aa.wrapException((Throwable) ((Object) var5), "hl.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 

@@ -31,7 +31,7 @@ final class nh extends nn {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -42,9 +42,9 @@ final class nh extends nn {
         }
         try {
           IntrusiveDeque.field_f = k.field_k[param1];
-          ld.field_o = fn.field_c[param1];
+          AlternateUsernameCredentials.field_o = fn.field_c[param1];
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "nh.J(" + param0 + ',' + param1 + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "nh.J(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -59,7 +59,7 @@ final class nh extends nn {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var2), "nh.F(" + param0 + ')');
+          throw aa.wrapException((Throwable) ((Object) var2), "nh.F(" + param0 + ')');
         }
     }
 
@@ -70,7 +70,7 @@ final class nh extends nn {
         try {
           vd.a(param1, 121, param2, param3);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "nh.G(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "nh.G(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -87,7 +87,7 @@ final class nh extends nn {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var2), "nh.B(" + param0 + ')');
+          throw aa.wrapException((Throwable) ((Object) var2), "nh.B(" + param0 + ')');
         }
     }
 
@@ -109,7 +109,7 @@ final class nh extends nn {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var1), "nh.H(" + param0 + ')');
+          throw aa.wrapException((Throwable) ((Object) var1), "nh.H(" + param0 + ')');
         }
     }
 
@@ -217,9 +217,9 @@ final class nh extends nn {
           }
           var4_ref_StringLifetime1 = var1.readString(-1);
           var5Lifetime1 = var1.readString(-1);
-          var6Lifetime1 = im.a(0, var4_ref_StringLifetime1);
+          var6Lifetime1 = UsernameCredentials.a(0, var4_ref_StringLifetime1);
           if (var6Lifetime1 == null) {
-            var6Lifetime1 = im.a(0, var5Lifetime1);
+            var6Lifetime1 = UsernameCredentials.a(0, var5Lifetime1);
             if (var6Lifetime1 != null) {
               ie.field_Qb.put(var6Lifetime1, (long)Js5ArchiveManager.a((CharSequence) ((Object) var4_ref_StringLifetime1), -13).hashCode(), (byte) 119);
             }
@@ -250,7 +250,7 @@ final class nh extends nn {
             break;
           }
           if (var7 != null) {
-            da.a(var7, 20, var6Lifetime1);
+            da.insertBefore(var7, 20, var6Lifetime1);
             if (var9 == 0) {
               return;
             }
@@ -260,7 +260,7 @@ final class nh extends nn {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var1_ref), "nh.I(" + param0 + ')');
+          throw aa.wrapException((Throwable) ((Object) var1_ref), "nh.I(" + param0 + ')');
         }
     }
 

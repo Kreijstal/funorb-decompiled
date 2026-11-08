@@ -215,7 +215,7 @@ final class ho {
             } else {
               stackIn_69_2 = "{...}";
             }
-            throw aa.a((Throwable) ((Object) stackIn_68_0), ((StringBuilder) (Object) stackIn_68_1).append(stackIn_69_2).append(')').toString());
+            throw aa.wrapException((Throwable) ((Object) stackIn_68_0), ((StringBuilder) (Object) stackIn_68_1).append(stackIn_69_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -237,7 +237,7 @@ final class ho {
         if (param0 != 0) {
           return;
         }
-        ld.c((byte) 13);
+        AlternateUsernameCredentials.c((byte) 13);
         db.field_a = null;
         gb.a(14);
     }
@@ -270,7 +270,7 @@ final class ho {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 

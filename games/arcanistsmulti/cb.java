@@ -41,7 +41,7 @@ final class cb {
             break;
           }
           if (var2 != null) {
-            da.a(var2, 20, param0);
+            da.insertBefore(var2, 20, param0);
             return;
           }
           vh.field_a.addLast(param0, -1);
@@ -56,7 +56,7 @@ final class cb {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
         }
     }
 

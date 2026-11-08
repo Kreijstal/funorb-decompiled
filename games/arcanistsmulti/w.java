@@ -28,7 +28,7 @@ final class w extends kc {
             IntrusiveDequeCursor.a(false);
           }
           tk.a(0, param4, param3);
-          ve.a(param1, param4, (byte) 59);
+          ArchiveRequest.a(param1, param4, (byte) 59);
           param4 = false;
         }
         if (param0 != 0) {
@@ -342,7 +342,7 @@ final class w extends kc {
           } else {
             stackIn_70_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_51_0), ((StringBuilder) (Object) stackIn_69_1).append(stackIn_70_2).append(',').append(param12).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_51_0), ((StringBuilder) (Object) stackIn_69_1).append(stackIn_70_2).append(',').append(param12).append(')').toString());
         }
     }
 
@@ -389,7 +389,7 @@ final class w extends kc {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -428,7 +428,7 @@ final class w extends kc {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
         try {
-          param0 = fb.a(false, '_', param0, "");
+          param0 = fb.replaceCharacter(false, '_', param0, "");
           if (param2 != 0) {
             field_Jb = (String) null;
           }
@@ -451,7 +451,7 @@ final class w extends kc {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -498,7 +498,7 @@ final class w extends kc {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 

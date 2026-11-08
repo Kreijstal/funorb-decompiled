@@ -62,7 +62,7 @@ abstract class hg {
             SpriteState.field_t != 1) {
             dd.field_c.field_ub = false;
             dd.field_c.field_Db.field_Hb.field_rb = hn.field_l;
-            fc.a((byte) -104, dd.field_c.field_Eb);
+            fc.resetChildOffsets((byte) -104, dd.field_c.field_Eb);
             return;
           }
           dd.field_c.field_Db.field_Hb.field_rb = null;
@@ -146,7 +146,7 @@ abstract class hg {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var3), "hg.C(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw aa.wrapException((Throwable) ((Object) var3), "hg.C(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -157,13 +157,13 @@ abstract class hg {
     final static void a(int param0, java.awt.Component param1) {
         try {
           param1.setFocusTraversalKeysEnabled(false);
-          param1.addKeyListener(ch.field_a);
+          param1.addKeyListener(CredentialKind.field_a);
           if (param0 != 1) {
             hg.a(36, -123);
           }
-          param1.addFocusListener(ch.field_a);
+          param1.addFocusListener(CredentialKind.field_a);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "hg.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "hg.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -233,7 +233,7 @@ abstract class hg {
         }
         mh.g((byte) 45);
         ng.a((byte) -23);
-        PatchEnvelopeSet.b(11670);
+        PatchEnvelopeSet.closeNetworkResources(11670);
         if (tm.a(!param0 ? true : false)) {
           he.field_e.writeOpcode((byte) -107, 1);
           we.a(0, (byte) 94);
@@ -251,9 +251,9 @@ abstract class hg {
           cf.field_b[2] = TextButton.field_A;
           cf.field_b[1] = u.field_d;
           cf.field_b[0] = GzipDecoder.field_e;
-          hj.a(ea.field_w, param0, 3896);
+          hj.a(DiskCacheRequest.field_w, param0, 3896);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "hg.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "hg.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 

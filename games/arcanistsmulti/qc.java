@@ -14,12 +14,12 @@ final class qc {
         hi.a(-123, param0);
         ob.field_Y.b(480, 8110, 640);
         ob.field_Y.a((byte) -119, 1024, 1280);
-        dh.a(rl.field_h, 9, 6);
-        dh.a(me.field_H, 9, 8);
+        dh.defineScreen(TextFieldValidator.field_h, 9, 6);
+        dh.defineScreen(me.field_H, 9, 8);
         if (!ArcanistsMulti.i((byte) -77)) {
-          dh.a(MidiPcmStream.field_l, 9, 1);
-          dh.a(ql.field_b, 9, 2);
-          dh.a(ResourceArchive.field_g, 9, 4);
+          dh.defineScreen(MidiPcmStream.field_l, 9, 1);
+          dh.defineScreen(ql.field_b, 9, 2);
+          dh.defineScreen(ResourceArchive.field_g, 9, 4);
         }
     }
 
@@ -101,7 +101,7 @@ final class qc {
           } else {
             stackIn_39_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(')').toString());
         }
     }
 

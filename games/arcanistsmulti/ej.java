@@ -57,7 +57,7 @@ class ej extends TextButton {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -101,7 +101,7 @@ class ej extends TextButton {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -227,7 +227,7 @@ class ej extends TextButton {
         boolean stackIn_25_1 = false;
         kc stackIn_28_0 = null;
         boolean stackIn_29_1 = false;
-        da.a(640 + SoftwareRasterizer.field_e >> 1, SoftwareRasterizer.field_j, param0 ^ -11846, -640 + SoftwareRasterizer.field_e >> 1, 0);
+        da.clipToRectangle(640 + SoftwareRasterizer.field_e >> 1, SoftwareRasterizer.field_j, param0 ^ -11846, -640 + SoftwareRasterizer.field_e >> 1, 0);
         if (ce.field_h > 0) {
           if (null != oo.field_t) {
             oo.field_t.drawOpaque(k.field_d.field_T, 0);
@@ -280,7 +280,7 @@ class ej extends TextButton {
 
     final static void a(int param0, int param1) {
         int var2 = (-640 + fh.field_g) / 2;
-        int var3 = ea.field_F * ea.field_F;
+        int var3 = DiskCacheRequest.field_F * DiskCacheRequest.field_F;
         if (param0 != 16) {
           return;
         }
@@ -311,7 +311,7 @@ class ej extends TextButton {
         try {
           this.field_r = param1;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "ej.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "ej.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -433,7 +433,7 @@ class ej extends TextButton {
             stackIn_13_4 = 16777215;
           }
           ((BinaryBitmapFont) (Object) stackIn_12_0).drawCentered(stackIn_12_1, stackIn_12_2, stackIn_12_3, stackIn_13_4, 0);
-          var10 = -an.field_g + var6;
+          var10 = -EmailLoginCredentials.field_g + var6;
           var11 = var7 - me.field_I;
           if (var11 * var11 + var10 * var10 < 81 &&
             param1) {
@@ -548,9 +548,9 @@ class ej extends TextButton {
                 }
               }
               if (param1 &&
-                an.field_g >= var3 - 12 &&
+                EmailLoginCredentials.field_g >= var3 - 12 &&
                 var4 - 12 <= me.field_I &&
-                an.field_g < var3 + 14 &&
+                EmailLoginCredentials.field_g < var3 + 14 &&
                 var4 + 14 > me.field_I) {
                 mf.field_g = var12;
               }
@@ -796,7 +796,7 @@ class ej extends TextButton {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var2), "ej.L(" + param0 + ',' + param1 + ')');
+          throw aa.wrapException((Throwable) ((Object) var2), "ej.L(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -826,7 +826,7 @@ class ej extends TextButton {
           super.updatePointer(param0, param1, param2 ^ 0, param3);
           this.field_K = null;
           if (this.field_w) {
-            var5_int = -param1 + (an.field_g - this.field_n);
+            var5_int = -param1 + (EmailLoginCredentials.field_g - this.field_n);
             var6 = -this.field_j + me.field_I - param3;
             this.field_K = this.a(var5_int, (byte) 102, var6);
           }
@@ -844,7 +844,7 @@ class ej extends TextButton {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 

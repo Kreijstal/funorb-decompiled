@@ -26,7 +26,7 @@ final class rg {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var1), "rg.B(" + param0 + ')');
+          throw aa.wrapException((Throwable) ((Object) var1), "rg.B(" + param0 + ')');
         }
     }
 
@@ -48,7 +48,7 @@ final class rg {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var3), "rg.C(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw aa.wrapException((Throwable) ((Object) var3), "rg.C(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -67,14 +67,14 @@ final class rg {
             pm.field_b = null;
             return true;
           }
-          if (!ef.field_r) {
+          if (!SocketJs5Transport.field_r) {
             if (!oj.field_i &&
               IntrusiveDeque.field_d != 9 &&
               IntrusiveDeque.field_d != 10 &&
               IntrusiveDeque.field_d != 11) {
               if (80 == IntrusiveDeque.field_d &&
                 tn.g((byte) 111)) {
-                ef.field_r = true;
+                SocketJs5Transport.field_r = true;
                 return true;
               }
               return false;
@@ -89,19 +89,19 @@ final class rg {
           if (IntrusiveDeque.field_d == 80 ||
             IntrusiveDeque.field_d == 84) {
             var4_int = 1;
-            ef.field_r = false;
+            SocketJs5Transport.field_r = false;
           }
           if (IntrusiveDeque.field_d == 13) {
             ue.b(10);
             var4_int = 1;
-            ef.field_r = false;
+            SocketJs5Transport.field_r = false;
           }
           stackIn_23_0 = var4_int;
           return stackIn_23_0 != 0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var4), "rg.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw aa.wrapException((Throwable) ((Object) var4), "rg.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -154,7 +154,7 @@ final class rg {
                 }
                 var2 = tj.a("exp_1_title", -98);
                 if (null != var2) {
-                  be.field_i = sc.a((byte) 97, var2);
+                  SectorCacheStore.field_i = sc.a((byte) 97, var2);
                 }
                 var2 = tj.a("exp1inst", -101);
                 if (null != var2) {
@@ -2254,7 +2254,7 @@ final class rg {
                 }
                 var2 = tj.a("keycode_walkright1", -72);
                 if (var2 != null) {
-                  im.field_g = var2[0] & 255;
+                  UsernameCredentials.field_g = var2[0] & 255;
                 }
                 var2 = tj.a("keycode_walkleft2", -123);
                 if (null != var2) {
@@ -2318,7 +2318,7 @@ final class rg {
                 }
                 var2 = tj.a("text_declined", -104);
                 if (var2 != null) {
-                  ea.field_I = sc.a((byte) 96, var2);
+                  DiskCacheRequest.field_I = sc.a((byte) 96, var2);
                 }
                 var2 = tj.a("gameoptlabels,0", -125);
                 if (null != var2) {
@@ -2510,7 +2510,7 @@ final class rg {
                 }
                 var2 = tj.a("rated_membersonly", -127);
                 if (var2 != null) {
-                  dg.field_t = sc.a((byte) 118, var2);
+                  NameValidator.field_t = sc.a((byte) 118, var2);
                 }
                 var2 = tj.a("wands_membersonly", -101);
                 if (var2 != null) {
@@ -2522,7 +2522,7 @@ final class rg {
                 }
                 var2 = tj.a("playratedgamesgoshdarnit", -109);
                 if (null != var2) {
-                  rl.field_i = sc.a((byte) 94, var2);
+                  TextFieldValidator.field_i = sc.a((byte) 94, var2);
                 }
                 var2 = tj.a("wandsavail", -87);
                 if (var2 != null) {
@@ -2542,7 +2542,7 @@ final class rg {
                 }
                 var2 = tj.a("timetickingdown", -113);
                 if (null != var2) {
-                  im.field_i = sc.a((byte) 119, var2);
+                  UsernameCredentials.field_i = sc.a((byte) 119, var2);
                 }
                 var2 = tj.a("dsc7", -98);
                 if (var2 != null) {
@@ -2646,7 +2646,7 @@ final class rg {
                 }
                 var2 = tj.a("naturedisc2", -84);
                 if (var2 != null) {
-                  dg.field_q = sc.a((byte) 107, var2);
+                  NameValidator.field_q = sc.a((byte) 107, var2);
                 }
                 var2 = tj.a("oceandisc2", -104);
                 if (null != var2) {
@@ -2712,11 +2712,11 @@ final class rg {
                 }
                 var2 = tj.a("arcanedisc", -82);
                 if (null != var2) {
-                  ld.field_k = sc.a((byte) 113, var2);
+                  AlternateUsernameCredentials.field_k = sc.a((byte) 113, var2);
                 }
                 var2 = tj.a("arcanebook", -98);
                 if (null != var2) {
-                  ee.field_c = sc.a((byte) 90, var2);
+                  DebouncedValidator.field_c = sc.a((byte) 90, var2);
                 }
                 var2 = tj.a("naturedisc", param1 ^ -124);
                 if (null != var2) {
@@ -2835,7 +2835,7 @@ final class rg {
                 }
                 var2 = tj.a("mostskill", -107);
                 if (var2 != null) {
-                  be.field_a = sc.a((byte) 111, var2);
+                  SectorCacheStore.field_a = sc.a((byte) 111, var2);
                 }
                 var2 = tj.a("mostkill", -86);
                 if (var2 != null) {
@@ -2935,7 +2935,7 @@ final class rg {
                 }
                 var2 = tj.a("ins42", -109);
                 if (null != var2) {
-                  an.field_m = sc.a((byte) 95, var2);
+                  EmailLoginCredentials.field_m = sc.a((byte) 95, var2);
                 }
                 var2 = tj.a("ins41", -108);
                 if (null != var2) {
@@ -2943,7 +2943,7 @@ final class rg {
                 }
                 var2 = tj.a("ins40", -125);
                 if (var2 != null) {
-                  an.field_n = sc.a((byte) 117, var2);
+                  EmailLoginCredentials.field_n = sc.a((byte) 117, var2);
                 }
                 var2 = tj.a("spacewands", -124);
                 if (var2 != null) {
@@ -3079,7 +3079,7 @@ final class rg {
                 }
                 var2 = tj.a("ins9", param1 ^ -76);
                 if (var2 != null) {
-                  ch.field_e = sc.a((byte) 103, var2);
+                  CredentialKind.field_e = sc.a((byte) 103, var2);
                 }
                 var2 = tj.a("ins8", -90);
                 if (var2 != null) {
@@ -3267,7 +3267,7 @@ final class rg {
                 }
                 var2 = tj.a("tut33", param1 - 122);
                 if (var2 != null) {
-                  uj.field_b = sc.a((byte) 121, var2);
+                  ScreenDisplayMode.field_b = sc.a((byte) 121, var2);
                 }
                 var2 = tj.a("tut32", -96);
                 if (null != var2) {
@@ -3291,7 +3291,7 @@ final class rg {
                 }
                 var2 = tj.a("tut27", param1 - 147);
                 if (var2 != null) {
-                  e.field_D = sc.a((byte) 104, var2);
+                  LoginPanel.field_D = sc.a((byte) 104, var2);
                 }
                 var2 = tj.a("tut26", -107);
                 if (null != var2) {
@@ -3307,7 +3307,7 @@ final class rg {
                 }
                 var2 = tj.a("tut23", param1 - 97);
                 if (var2 != null) {
-                  be.field_h = sc.a((byte) 108, var2);
+                  SectorCacheStore.field_h = sc.a((byte) 108, var2);
                 }
                 var2 = tj.a("tut22", -99);
                 if (null != var2) {
@@ -3435,7 +3435,7 @@ final class rg {
                 }
                 var2 = tj.a("unpack7", -103);
                 if (null != var2) {
-                  ld.field_j = sc.a((byte) 119, var2);
+                  AlternateUsernameCredentials.field_j = sc.a((byte) 119, var2);
                 }
                 var2 = tj.a("unpack6", -74);
                 if (var2 != null) {
@@ -3471,7 +3471,7 @@ final class rg {
                 }
                 var2 = tj.a("unpace1", -98);
                 if (var2 != null) {
-                  ee.field_a = sc.a((byte) 107, var2);
+                  DebouncedValidator.field_a = sc.a((byte) 107, var2);
                 }
                 var2 = tj.a("unpack0", -89);
                 if (var2 != null) {
@@ -3685,7 +3685,7 @@ final class rg {
                 }
                 var2 = tj.a("flamecaps", -116);
                 if (var2 != null) {
-                  ve.field_s = sc.a((byte) 87, var2);
+                  ArchiveRequest.field_s = sc.a((byte) 87, var2);
                 }
                 var2 = tj.a("whensummoning", -121);
                 if (var2 != null) {
@@ -3720,7 +3720,7 @@ final class rg {
                   } else {
                     stackIn_3096_2 = "{...}";
                   }
-                  throw aa.a((Throwable) ((Object) stackIn_3095_0), ((StringBuilder) (Object) stackIn_3095_1).append(stackIn_3096_2).append(',').append(param1).append(')').toString());
+                  throw aa.wrapException((Throwable) ((Object) stackIn_3095_0), ((StringBuilder) (Object) stackIn_3095_1).append(stackIn_3096_2).append(',').append(param1).append(')').toString());
                 }
                 if (var3 != 0) {
                   var4 = GameAppletShell.field_b;

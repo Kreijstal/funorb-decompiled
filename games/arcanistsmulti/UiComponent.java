@@ -70,7 +70,7 @@ class UiComponent extends IntrusiveNode {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param3).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -95,7 +95,7 @@ class UiComponent extends IntrusiveNode {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -191,7 +191,7 @@ class UiComponent extends IntrusiveNode {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -275,7 +275,7 @@ class UiComponent extends IntrusiveNode {
           if (0 == re.field_r) {
             if (0 == PacketBuffer.field_m &&
               la.field_f != 0) {
-              this.handlePointerRelease(me.field_I, -20592, an.field_g, param1, param0, this);
+              this.handlePointerRelease(me.field_I, -20592, EmailLoginCredentials.field_g, param1, param0, this);
               var8 = so.field_i;
               if (var8 != null) {
                 if (var8.field_o instanceof em) {
@@ -297,7 +297,7 @@ class UiComponent extends IntrusiveNode {
             if (var5 == 0) {
               if (0 == PacketBuffer.field_m &&
                 la.field_f != 0) {
-                this.handlePointerRelease(me.field_I, -20592, an.field_g, param1, param0, this);
+                this.handlePointerRelease(me.field_I, -20592, EmailLoginCredentials.field_g, param1, param0, this);
                 var9 = so.field_i;
                 if (var9 != null) {
                   if (!(var9.field_o instanceof em)) {
@@ -334,7 +334,7 @@ class UiComponent extends IntrusiveNode {
             qg.a(38, this.getTooltip(false));
             return param2;
           }
-          this.handlePointerRelease(me.field_I, -20592, an.field_g, param1, param0, this);
+          this.handlePointerRelease(me.field_I, -20592, EmailLoginCredentials.field_g, param1, param0, this);
           var10 = so.field_i;
           if (var10 != null) {
             if (var10.field_o instanceof em) {
@@ -355,7 +355,7 @@ class UiComponent extends IntrusiveNode {
           if (0 == re.field_r) {
             if (0 == PacketBuffer.field_m &&
               la.field_f != 0) {
-              this.handlePointerRelease(me.field_I, -20592, an.field_g, param1, param0, this);
+              this.handlePointerRelease(me.field_I, -20592, EmailLoginCredentials.field_g, param1, param0, this);
               var11 = so.field_i;
               if (var11 != null) {
                 if (var11.field_o instanceof em) {
@@ -376,7 +376,7 @@ class UiComponent extends IntrusiveNode {
           if (!this.handlePointerPress(ja.field_s, re.field_r, this, param1, 10, pb.field_h, param0)) {
             if (0 == PacketBuffer.field_m &&
               la.field_f != 0) {
-              this.handlePointerRelease(me.field_I, -20592, an.field_g, param1, param0, this);
+              this.handlePointerRelease(me.field_I, -20592, EmailLoginCredentials.field_g, param1, param0, this);
               var12 = so.field_i;
               if (var12 != null) {
                 if (!(var12.field_o instanceof em)) {
@@ -407,7 +407,7 @@ class UiComponent extends IntrusiveNode {
             qg.a(38, this.getTooltip(false));
             return param2;
           }
-          this.handlePointerRelease(me.field_I, -20592, an.field_g, param1, param0, this);
+          this.handlePointerRelease(me.field_I, -20592, EmailLoginCredentials.field_g, param1, param0, this);
           var13 = so.field_i;
           if (var13 != null) {
             if (var13.field_o instanceof em) {
@@ -424,11 +424,11 @@ class UiComponent extends IntrusiveNode {
           qg.a(38, this.getTooltip(false));
           return param2;
         }
-        this.handleMouseWheel(param1, param0, an.field_g, me.field_I, SingleChildContainer.field_y, 0, this);
+        this.handleMouseWheel(param1, param0, EmailLoginCredentials.field_g, me.field_I, SingleChildContainer.field_y, 0, this);
         if (0 == re.field_r) {
           if (0 == PacketBuffer.field_m &&
             la.field_f != 0) {
-            this.handlePointerRelease(me.field_I, -20592, an.field_g, param1, param0, this);
+            this.handlePointerRelease(me.field_I, -20592, EmailLoginCredentials.field_g, param1, param0, this);
             var14 = so.field_i;
             if (var14 != null) {
               if (var14.field_o instanceof em) {
@@ -464,7 +464,7 @@ class UiComponent extends IntrusiveNode {
           qg.a(38, this.getTooltip(false));
           return param2;
         }
-        this.handlePointerRelease(me.field_I, -20592, an.field_g, param1, param0, this);
+        this.handlePointerRelease(me.field_I, -20592, EmailLoginCredentials.field_g, param1, param0, this);
         var16 = so.field_i;
         if (var16 != null) {
           if (var16.field_o instanceof em) {
@@ -504,7 +504,7 @@ class UiComponent extends IntrusiveNode {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -515,7 +515,7 @@ class UiComponent extends IntrusiveNode {
           }
           this.field_t = 0;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "qm.IA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "qm.IA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -558,7 +558,7 @@ class UiComponent extends IntrusiveNode {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param3).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -589,7 +589,7 @@ class UiComponent extends IntrusiveNode {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -664,7 +664,7 @@ class UiComponent extends IntrusiveNode {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param3).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -693,7 +693,7 @@ class UiComponent extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         try {
-          var5_int = this.containsPoint((byte) -47, param3, me.field_I, param1, an.field_g) ? 1 : 0;
+          var5_int = this.containsPoint((byte) -47, param3, me.field_I, param1, EmailLoginCredentials.field_g) ? 1 : 0;
           if (param2 != 170) {
             field_p = (String) null;
           }
@@ -724,20 +724,20 @@ class UiComponent extends IntrusiveNode {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
     final static void attachInputListeners(java.awt.Canvas param0, byte param1) {
         try {
-          fj.a((java.awt.Component) ((Object) param0), 115);
+          fj.detachKeyboardInput((java.awt.Component) ((Object) param0), 115);
           so.a((java.awt.Component) ((Object) param0), 0);
           if (null != nh.field_w) {
             nh.field_w.a((java.awt.Component) ((Object) param0), (byte) -22);
           }
           int var2_int = 17 / ((-7 - param1) / 49);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "qm.KB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "qm.KB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -764,7 +764,7 @@ class UiComponent extends IntrusiveNode {
             this.field_k = var4.b(this, 1);
           }
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "qm.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "qm.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -779,7 +779,7 @@ class UiComponent extends IntrusiveNode {
           this.field_j = param1;
           this.field_o = param5;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "qm.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "qm.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 

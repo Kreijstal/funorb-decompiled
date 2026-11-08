@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class uj {
+final class ScreenDisplayMode {
     int field_d;
     int field_g;
     static Sprite field_f;
@@ -27,7 +27,7 @@ final class uj {
           if (param1 <= 0) {
             throw new IllegalArgumentException();
           }
-          if (uj.a(-2147483648, param1)) {
+          if (ScreenDisplayMode.a(-2147483648, param1)) {
             stackIn_5_0 = (int)((long)param1 * ((long)param0.c((byte) -46) & 4294967295L) >> 32);
             return stackIn_5_0;
           }
@@ -39,7 +39,7 @@ final class uj {
           do {
             var4 = param0.c((byte) -46);
           } while (var4 >= var3_int);
-          stackIn_12_0 = dh.a(var4, true, param1);
+          stackIn_12_0 = dh.floorMod(var4, true, param1);
           return stackIn_12_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -51,11 +51,11 @@ final class uj {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_h = null;
         field_f = null;
         field_c = null;
@@ -75,7 +75,7 @@ final class uj {
         var3.writeShort(param0, (byte) -93);
         if (param1 >= -92) {
           jd var4 = (jd) null;
-          uj.a((jd) null, 16, (byte) 39);
+          ScreenDisplayMode.a((jd) null, 16, (byte) 39);
           return;
         }
     }

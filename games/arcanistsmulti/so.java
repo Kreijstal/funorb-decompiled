@@ -462,7 +462,7 @@ final class so {
           param0.removeFocusListener(ob.field_hb);
           rk.field_K = param1;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "so.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "so.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -473,10 +473,10 @@ final class so {
 
     final static aj[] c(int param0) {
         if (param0 == 96) {
-          return new aj[]{sc.field_W, vk.field_B, IntrusiveDequeCursor.field_b, td.field_G, om.field_M, h.field_G, ib.field_q, gl.field_b, um.field_b, gg.field_b, fc.field_b, q.field_G, ng.field_I, GameAppletShell.field_e};
+          return new aj[]{sc.field_W, Js5NetworkRequest.field_B, IntrusiveDequeCursor.field_b, td.field_G, om.field_M, h.field_G, ib.field_q, gl.field_b, um.field_b, gg.field_b, fc.field_b, q.field_G, ng.field_I, GameAppletShell.field_e};
         }
         field_i = (se) null;
-        return new aj[]{sc.field_W, vk.field_B, IntrusiveDequeCursor.field_b, td.field_G, om.field_M, h.field_G, ib.field_q, gl.field_b, um.field_b, gg.field_b, fc.field_b, q.field_G, ng.field_I, GameAppletShell.field_e};
+        return new aj[]{sc.field_W, Js5NetworkRequest.field_B, IntrusiveDequeCursor.field_b, td.field_G, om.field_M, h.field_G, ib.field_q, gl.field_b, um.field_b, gg.field_b, fc.field_b, q.field_G, ng.field_I, GameAppletShell.field_e};
     }
 
     final void d(int param0) {
@@ -489,7 +489,7 @@ final class so {
         this.field_a = IntrusiveDeque.field_d;
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         if (param0) {
           field_g = null;
           field_b = null;

@@ -50,7 +50,7 @@ final class qn extends ob implements ButtonListener {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -96,19 +96,19 @@ final class qn extends ob implements ButtonListener {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(')').toString());
         }
     }
 
     final static void a(int param0, ResourceArchive param1, ResourceArchive param2) {
         try {
           bb.field_a = param2;
-          an.field_o = param1;
+          EmailLoginCredentials.field_o = param1;
           if (param0 != -24539) {
             qn.a(-80, (byte) 86);
           }
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "qn.K(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "qn.K(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -137,7 +137,7 @@ final class qn extends ob implements ButtonListener {
           }
           SpriteState.field_t = 0;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "qn.C(" + param0 + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "qn.C(" + param0 + ')');
         }
     }
 
@@ -156,7 +156,7 @@ final class qn extends ob implements ButtonListener {
         if (nj.field_c == 2) {
           var7 = KeyboardInputHandler.field_e;
         } else {
-          var7 = vk.field_v;
+          var7 = Js5NetworkRequest.field_v;
         }
         if (param1 <= -50) {
           uf.a(param5, param2, param6, param4, -7361, var7, param3, param0);
@@ -192,7 +192,7 @@ final class qn extends ob implements ButtonListener {
         return true;
     }
 
-    public static void h(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 == 1) {
           field_nb = null;
           field_lb = null;
@@ -238,7 +238,7 @@ final class qn extends ob implements ButtonListener {
               var3 = ki.field_w;
               if (ne.b(-22768)) {
                 this.field_k = this.field_k + 20;
-                var3 = ch.field_f;
+                var3 = CredentialKind.field_f;
               }
             }
           }
@@ -267,7 +267,7 @@ final class qn extends ob implements ButtonListener {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw aa.a((Throwable) (stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw aa.wrapException((Throwable) (stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 

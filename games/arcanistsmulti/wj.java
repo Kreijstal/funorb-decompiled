@@ -62,7 +62,7 @@ final class wj {
               dupTemp$1 = var2[var5] - 1;
               arrayValue$2 = this.field_d[var5];
               var2[var5] = dupTemp$1;
-              arrayValue$2[dupTemp$1] = (var3_int << 24) + dg.a(var4, 16777215);
+              arrayValue$2[dupTemp$1] = (var3_int << 24) + NameValidator.bitAnd(var4, 16777215);
               var3_int++;
               continue;
             }
@@ -97,37 +97,37 @@ final class wj {
               this.a(var7Lifetime1 + 131008, var6, var7Lifetime1, (byte) 114)) {
               incrementValue$5 = var5;
               var5++;
-              var3[dg.a(incrementValue$5, 511)] = var7Lifetime1 + 131008;
+              var3[NameValidator.bitAnd(incrementValue$5, 511)] = var7Lifetime1 + 131008;
             }
             if ((var7Lifetime1 & 511) < 448 &&
               this.a(131136 + var7Lifetime1, var6, var7Lifetime1, (byte) 114)) {
               incrementValue$6 = var5;
               var5++;
-              var3[dg.a(511, incrementValue$6)] = var7Lifetime1 + 131136;
+              var3[NameValidator.bitAnd(511, incrementValue$6)] = var7Lifetime1 + 131136;
             }
             if ((var7Lifetime1 & 63) >= 8 &&
               this.a(262136 + var7Lifetime1, var6, var7Lifetime1, (byte) 114)) {
               incrementValue$7 = var5;
               var5++;
-              var3[dg.a(incrementValue$7, 511)] = 262136 + var7Lifetime1;
+              var3[NameValidator.bitAnd(incrementValue$7, 511)] = 262136 + var7Lifetime1;
             }
             if ((63 & var7Lifetime1) < 56 &&
               this.a(var7Lifetime1 + 262152, var6, var7Lifetime1, (byte) 114)) {
               incrementValue$8 = var5;
               var5++;
-              var3[dg.a(511, incrementValue$8)] = 262152 + var7Lifetime1;
+              var3[NameValidator.bitAnd(511, incrementValue$8)] = 262152 + var7Lifetime1;
             }
             if ((var7Lifetime1 & 7) > 0 &&
               this.a(65535 + var7Lifetime1, var6, var7Lifetime1, (byte) 114)) {
               incrementValue$9 = var5;
               var5++;
-              var3[dg.a(511, incrementValue$9)] = var7Lifetime1 + 65535;
+              var3[NameValidator.bitAnd(511, incrementValue$9)] = var7Lifetime1 + 65535;
             }
             if ((var7Lifetime1 & 7) < 7 &&
               this.a(var7Lifetime1 + 65537, var6, var7Lifetime1, (byte) 114)) {
               incrementValue$10 = var5;
               var5++;
-              var3[dg.a(511, incrementValue$10)] = var7Lifetime1 + 65537;
+              var3[NameValidator.bitAnd(511, incrementValue$10)] = var7Lifetime1 + 65537;
             }
           }
           return;
@@ -141,7 +141,7 @@ final class wj {
           } else {
             stackIn_73_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_72_0), ((StringBuilder) (Object) stackIn_72_1).append(stackIn_73_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_72_0), ((StringBuilder) (Object) stackIn_72_1).append(stackIn_73_2).append(')').toString());
         }
     }
 
@@ -192,7 +192,7 @@ final class wj {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param14).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param14).append(')').toString());
         }
     }
 
@@ -211,7 +211,7 @@ final class wj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var1), "wj.C(" + param0 + ')');
+          throw aa.wrapException((Throwable) ((Object) var1), "wj.C(" + param0 + ')');
         }
     }
 
@@ -266,7 +266,7 @@ final class wj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var3), "wj.A(" + param0 + ',' + param1 + ')');
+          throw aa.wrapException((Throwable) ((Object) var3), "wj.A(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -309,7 +309,7 @@ final class wj {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -327,8 +327,8 @@ final class wj {
             param1[511 & param0] <= param0) {
             return false;
           }
-          this.field_d[dg.a(param0, 511)] = this.field_d[dg.a(511, param2)];
-          param1[dg.a(param0, 511)] = param0;
+          this.field_d[NameValidator.bitAnd(param0, 511)] = this.field_d[NameValidator.bitAnd(511, param2)];
+          param1[NameValidator.bitAnd(param0, 511)] = param0;
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -340,7 +340,7 @@ final class wj {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 

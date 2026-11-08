@@ -5,7 +5,7 @@ final class kn extends ob implements ButtonListener {
     static long[] field_tb;
     private boolean field_nb;
     private TextButton[] field_vb;
-    private uj[] field_V;
+    private ScreenDisplayMode[] field_V;
     private TextButton field_kb;
     private ti field_zb;
     static String field_sb;
@@ -77,7 +77,7 @@ final class kn extends ob implements ButtonListener {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -117,7 +117,7 @@ final class kn extends ob implements ButtonListener {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -146,7 +146,7 @@ final class kn extends ob implements ButtonListener {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
-        uj[] var3_ref_uj__ = null;
+        ScreenDisplayMode[] var3_ref_uj__ = null;
         int var4 = 0;
         int var5 = 0;
         String[] var5_ref_String__ = null;
@@ -154,7 +154,7 @@ final class kn extends ob implements ButtonListener {
         String var6 = null;
         TextButton var6_ref = null;
         UiComponent var7 = null;
-        uj var8 = null;
+        ScreenDisplayMode var8 = null;
         String var10 = null;
         Object stackIn_51_0Lifetime1;
         ua stackIn_51_1Lifetime1;
@@ -167,7 +167,7 @@ final class kn extends ob implements ButtonListener {
         int var2_intLifetime1;
         int var3Lifetime2;
         try {
-          this.field_V = aa.a(fi.field_d, (byte) 77);
+          this.field_V = aa.queryDisplayModes(fi.field_d, (byte) 77);
           if (this.field_V.length > 0) {
             for (var2_int = 0; var2_int < this.field_V.length; var2_int++) {
               if (null != this.field_V[var2_int]) {
@@ -192,7 +192,7 @@ final class kn extends ob implements ButtonListener {
               }
             }
             var3_ref_uj__ = this.field_V;
-            this.field_V = new uj[var2_int];
+            this.field_V = new ScreenDisplayMode[var2_int];
             var4 = 0;
             for (var5 = 0; var5 < var3_ref_uj__.length; var5++) {
               if (var3_ref_uj__[var5] != null) {
@@ -320,7 +320,7 @@ final class kn extends ob implements ButtonListener {
           } else {
             stackIn_81_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_80_0), ((StringBuilder) (Object) stackIn_80_1).append(stackIn_81_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_80_0), ((StringBuilder) (Object) stackIn_80_1).append(stackIn_81_2).append(')').toString());
         }
     }
 
@@ -376,7 +376,7 @@ final class kn extends ob implements ButtonListener {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -419,7 +419,7 @@ final class kn extends ob implements ButtonListener {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -434,7 +434,7 @@ final class kn extends ob implements ButtonListener {
         jg var9 = null;
         var7 = ArcanistsMulti.field_G ? 1 : 0;
         try {
-          if (jo.field_e < ea.field_F) {
+          if (jo.field_e < DiskCacheRequest.field_F) {
             jo.field_e = jo.field_e + 1;
           }
           if (vd.field_k != ce.field_m.field_m) {
@@ -468,7 +468,7 @@ final class kn extends ob implements ButtonListener {
             }
           }
           if (g.field_g.field_U != 0) {
-            db.field_a = new w(g.field_g.field_V, g.field_g.field_nb, g.field_g.field_x, g.field_g.field_I, param0, mf.field_d, be.field_l, wj.field_b, IntrusiveNode.field_c, ec.field_g, nj.field_d, (String) null, 0L);
+            db.field_a = new w(g.field_g.field_V, g.field_g.field_nb, g.field_g.field_x, g.field_g.field_I, param0, mf.field_d, SectorCacheStore.field_l, wj.field_b, IntrusiveNode.field_c, ec.field_g, nj.field_d, (String) null, 0L);
           }
           var9 = f.a(16711422, param1, ImageProducerRasterBuffer.field_r, dh.field_Gb);
           if (var9 != null) {
@@ -482,7 +482,7 @@ final class kn extends ob implements ButtonListener {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var4), "kn.R(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw aa.wrapException((Throwable) ((Object) var4), "kn.R(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -592,7 +592,7 @@ final class kn extends ob implements ButtonListener {
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(')').toString());
         }
     }
 
@@ -661,7 +661,7 @@ final class kn extends ob implements ButtonListener {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -817,14 +817,14 @@ final class kn extends ob implements ButtonListener {
           } else {
             stackIn_78_2 = "{...}";
           }
-          throw aa.a((Throwable) (stackIn_77_0), ((StringBuilder) (Object) stackIn_77_1).append(stackIn_78_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw aa.wrapException((Throwable) (stackIn_77_0), ((StringBuilder) (Object) stackIn_77_1).append(stackIn_78_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
     private final void a(TextButton param0, int param1) {
         TextButton var3 = null;
         int var4 = 0;
-        uj var5 = null;
+        ScreenDisplayMode var5 = null;
         TextButton stackIn_2_0 = null;
         boolean stackIn_3_1 = false;
         RuntimeException stackIn_18_0 = null;
@@ -871,7 +871,7 @@ final class kn extends ob implements ButtonListener {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(')').toString());
         }
     }
 

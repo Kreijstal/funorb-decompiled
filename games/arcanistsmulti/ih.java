@@ -20,7 +20,7 @@ final class ih {
     }
 
     final static void a(int param0, int param1, byte param2) {
-        rl.field_m = param0;
+        TextFieldValidator.field_m = param0;
         int var3 = -78 % ((param2 - 8) / 55);
         ln.field_J = param1;
     }

@@ -56,7 +56,7 @@ class UiContainer extends UiComponent implements UiContainerMarker {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
         }
     }
 
@@ -110,7 +110,7 @@ class UiContainer extends UiComponent implements UiContainerMarker {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -134,14 +134,14 @@ class UiContainer extends UiComponent implements UiContainerMarker {
         try {
           cb.field_a = true;
           if (param0 != 1) {
-            UiContainer.c(true);
+            UiContainer.releaseStatics(true);
           }
           var2 = "tuhstatbut";
           var3 = "rvnadlm";
           var4 = -1L;
           sm.a(var4, var2, param1, param0 - 15368, var3);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "df.QB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "df.QB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -193,7 +193,7 @@ class UiContainer extends UiComponent implements UiContainerMarker {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param3).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -249,7 +249,7 @@ class UiContainer extends UiComponent implements UiContainerMarker {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -279,7 +279,7 @@ class UiContainer extends UiComponent implements UiContainerMarker {
         int var2 = 2 / ((-54 - param0) / 54);
         mj.field_p = param1;
         pn.field_c = null;
-        co.c(112);
+        co.resetBattleState(112);
     }
 
     final void addChild(int param0, UiComponent param1) {
@@ -289,7 +289,7 @@ class UiContainer extends UiComponent implements UiContainerMarker {
         try {
           this.field_B.addLast(param1, -1);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "df.SB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "df.SB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -329,7 +329,7 @@ class UiContainer extends UiComponent implements UiContainerMarker {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -389,10 +389,10 @@ class UiContainer extends UiComponent implements UiContainerMarker {
           }
           if (var2 == 0) {
             var3 = var27.readUnsignedShort(-98);
-            var4_ref = (rf) (ef.field_u.first(12623));
+            var4_ref = (rf) (SocketJs5Transport.field_u.first(12623));
             while (var4_ref != null) {
               if (var3 != var4_ref.field_i) {
-                var4_ref = (rf) (ef.field_u.next(0));
+                var4_ref = (rf) (SocketJs5Transport.field_u.next(0));
                 continue;
               }
               break;
@@ -508,7 +508,7 @@ class UiContainer extends UiComponent implements UiContainerMarker {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var1), "df.NB(" + param0 + ')');
+          throw aa.wrapException((Throwable) ((Object) var1), "df.NB(" + param0 + ')');
         }
     }
 
@@ -586,7 +586,7 @@ class UiContainer extends UiComponent implements UiContainerMarker {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -640,7 +640,7 @@ class UiContainer extends UiComponent implements UiContainerMarker {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param3).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -679,11 +679,11 @@ class UiContainer extends UiComponent implements UiContainerMarker {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
-    public static void c(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         if (!param0) {
           UiContainer.a((byte) -32, -73);
         }
@@ -738,7 +738,7 @@ class UiContainer extends UiComponent implements UiContainerMarker {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param1).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -780,7 +780,7 @@ class UiContainer extends UiComponent implements UiContainerMarker {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 

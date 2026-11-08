@@ -6,7 +6,7 @@ final class eo {
     static int[] field_b;
     static ne field_c;
 
-    final static short[] a(CipherPacketBuffer param0, short[] param1, int param2, int param3) {
+    final static short[] readPackedShorts(CipherPacketBuffer param0, short[] param1, int param2, int param3) {
         int var4_int = 0;
         int var5 = 0;
         int var6 = 0;
@@ -61,7 +61,7 @@ final class eo {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 

@@ -39,7 +39,7 @@ final class KeyboardInputHandler implements java.awt.event.KeyListener, java.awt
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          if (null != ch.field_a) {
+          if (null != CredentialKind.field_a) {
             hg.field_b = 0;
             var2_int = param0.getKeyCode();
             if (0 <= var2_int &&
@@ -69,7 +69,7 @@ final class KeyboardInputHandler implements java.awt.event.KeyListener, java.awt
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -83,7 +83,7 @@ final class KeyboardInputHandler implements java.awt.event.KeyListener, java.awt
         int var3 = 0;
         int var3Lifetime1;
         try {
-          if (null != ch.field_a) {
+          if (null != CredentialKind.field_a) {
             hg.field_b = 0;
             var2_int = param0.getKeyCode();
             if (var2_int >= 0 &&
@@ -105,7 +105,7 @@ final class KeyboardInputHandler implements java.awt.event.KeyListener, java.awt
             }
             if (var2_int >= 0) {
               var3 = 1 + pi.field_a & 127;
-              if (var3 != vk.field_u) {
+              if (var3 != Js5NetworkRequest.field_u) {
                 v.field_p[pi.field_a] = var2_int;
                 qa.field_i[pi.field_a] = (char)0;
                 pi.field_a = var3;
@@ -130,7 +130,7 @@ final class KeyboardInputHandler implements java.awt.event.KeyListener, java.awt
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
         }
     }
 
@@ -154,15 +154,15 @@ final class KeyboardInputHandler implements java.awt.event.KeyListener, java.awt
         } else {
           if (-2 == param2 &&
             bi.field_I > 3) {
-            sc.a(2, an.field_j, an.field_f);
-            SoftwareRasterizer.fillRectangle(bi.field_I - 3, 0, 646, an.field_j, 0);
+            sc.a(2, EmailLoginCredentials.field_j, EmailLoginCredentials.field_f);
+            SoftwareRasterizer.fillRectangle(bi.field_I - 3, 0, 646, EmailLoginCredentials.field_j, 0);
           } else {
             if (-2 == param2) {
               SoftwareRasterizer.clear();
             } else {
               if (param3) {
                 ed.a(false, (byte) 81);
-                SoftwareRasterizer.darkenRectangle(0, 0, an.field_f, an.field_j);
+                SoftwareRasterizer.darkenRectangle(0, 0, EmailLoginCredentials.field_f, EmailLoginCredentials.field_j);
               }
               ArchiveProvider.field_f[param2].e((byte) -45);
             }
@@ -307,17 +307,17 @@ final class KeyboardInputHandler implements java.awt.event.KeyListener, java.awt
           } else {
             stackIn_76_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_72_0), ((StringBuilder) (Object) stackIn_75_1).append(stackIn_76_2).append(',').append(param5).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_72_0), ((StringBuilder) (Object) stackIn_75_1).append(stackIn_76_2).append(',').append(param5).append(')').toString());
         }
     }
 
     public final synchronized void focusLost(java.awt.event.FocusEvent param0) {
         try {
-          if (ch.field_a != null) {
+          if (CredentialKind.field_a != null) {
             ub.field_b = -1;
           }
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "ji.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "ji.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -325,12 +325,12 @@ final class KeyboardInputHandler implements java.awt.event.KeyListener, java.awt
         int var2_int = 0;
         int var3 = 0;
         try {
-          if (null != ch.field_a) {
+          if (null != CredentialKind.field_a) {
             var2_int = param0.getKeyChar();
             if (var2_int != 0 && var2_int != 65535 &&
               hf.a((char) var2_int, (byte) 123)) {
               var3 = 1 + pi.field_a & 127;
-              if (var3 != vk.field_u) {
+              if (var3 != Js5NetworkRequest.field_u) {
                 v.field_p[pi.field_a] = -1;
                 qa.field_i[pi.field_a] = (char)var2_int;
                 pi.field_a = var3;
@@ -339,7 +339,7 @@ final class KeyboardInputHandler implements java.awt.event.KeyListener, java.awt
           }
           param0.consume();
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "ji.keyTyped(" + (param0 != null ? "{...}" : "null") + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "ji.keyTyped(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

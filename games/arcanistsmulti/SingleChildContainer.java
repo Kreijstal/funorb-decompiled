@@ -35,7 +35,7 @@ abstract class SingleChildContainer extends UiComponent implements UiContainerMa
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -93,7 +93,7 @@ abstract class SingleChildContainer extends UiComponent implements UiContainerMa
           int var8Lifetime1;
           var9 = ArcanistsMulti.field_G ? 1 : 0;
           try {
-            if (null == ch.field_c &&
+            if (null == CredentialKind.field_c &&
               !ie.a(-62, param4)) {
               stackIn_4_0 = -1;
               return stackIn_4_0;
@@ -105,13 +105,13 @@ abstract class SingleChildContainer extends UiComponent implements UiContainerMa
             if (pc.field_g == ob.field_eb) {
               if (param4) {
                 var10 = (String) null;
-                fd.field_e = ci.a(false, (String) null, -95, fk.field_k, param5);
+                fd.field_e = ci.createCredentials(false, (String) null, -95, fk.field_k, param5);
               } else {
-                fd.field_e = cf.a(param3, param5, (byte) -128, false);
+                fd.field_e = cf.parseCredentials(param3, param5, (byte) -128, false);
               }
               he.field_e.position = 0;
               he.field_e.writeByte(14, (byte) -105);
-              he.field_e.writeByte(fd.field_e.a(0).field_g, (byte) -106);
+              he.field_e.writeByte(fd.field_e.getCredentialKind(0).field_g, (byte) -106);
               we.a(-1, (byte) 86);
               ob.field_eb = pe.field_Db;
             }
@@ -131,7 +131,7 @@ abstract class SingleChildContainer extends UiComponent implements UiContainerMa
               pe.a((byte) -86, 8)) {
               of.field_j = UiContainer.field_z.readLong(-943038560);
               UiContainer.field_z.position = 0;
-              dn.a(param4, fd.field_e, (byte) 116, param2, param0);
+              dn.writeLoginBlock(param4, fd.field_e, (byte) 116, param2, param0);
               ob.field_eb = co.field_h;
             }
             boolean decompiledFrameRemainder0 = true;
@@ -176,11 +176,11 @@ abstract class SingleChildContainer extends UiComponent implements UiContainerMa
                 stackIn_46_0 = ((4 & var7) != 0);
                 fd.field_a = stackIn_46_0;
                 stackIn_49_0 = (0 != (var7 & 2));
-                ld.field_p = stackIn_49_0;
+                AlternateUsernameCredentials.field_p = stackIn_49_0;
                 stackIn_52_0 = ((var7 & 8) != 0);
                 wh.field_g = stackIn_52_0;
                 if (wh.field_g) {
-                  ld.field_p = true;
+                  AlternateUsernameCredentials.field_p = true;
                 }
               }
               stackIn_58_0 = (0 != (16 & var7));
@@ -200,35 +200,35 @@ abstract class SingleChildContainer extends UiComponent implements UiContainerMa
               nm.field_b = Js5ArchiveManager.a(var11, -13);
               dd.field_j = UiContainer.field_z.readUnsignedByte((byte) 65);
               ob.field_eb = qc.field_c;
-              if (fd.field_e.a(0) == k.field_q) {
-                ea.field_y.a(cd.e(118), (byte) -93);
+              if (fd.field_e.getCredentialKind(0) == k.field_q) {
+                DiskCacheRequest.field_y.a(cd.getApplet(118), (byte) -93);
               } else {
-                if (fd.field_e.a(0) == MusicPatchPcmStream.field_m) {
-                  of.field_n.a(cd.e(120), (byte) -118);
+                if (fd.field_e.getCredentialKind(0) == MusicPatchPcmStream.field_m) {
+                  of.field_n.a(cd.getApplet(120), (byte) -118);
                 }
               }
               bb.field_h = false;
               if (var6 != null) {
-                jf.a(var6, cd.e(108), 0);
+                jf.a(var6, cd.getApplet(108), 0);
               }
               if (0 >= ah.field_c &&
                 !fd.field_a) {
                 try {
-                  ei.a(cd.e(125), 108, "unzap");
+                  ei.a(cd.getApplet(125), 108, "unzap");
                 } catch (java.lang.Throwable decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var8_ref_Throwable = decompiledCaughtException;
                 }
               } else {
                 try {
-                  ei.a("zap", cd.e(113), (byte) 114, new Object[]{rl.a(fk.field_k, 29424)});
+                  ei.a("zap", cd.getApplet(113), (byte) 114, new Object[]{TextFieldValidator.decodeBase37(fk.field_k, 29424)});
                 } catch (java.lang.Throwable decompiledCaughtParameter1) {
                   decompiledCaughtException = decompiledCaughtParameter1;
                   var8_ref_Throwable = decompiledCaughtException;
                 }
               }
               if (ah.field_c > 0) {
-                lk.field_d = true;
+                Js5Transport.field_d = true;
               }
               he.field_e.installCipher(-107, hj.field_a);
               for (var8Lifetime1 = 0; var8Lifetime1 < 4; var8Lifetime1++) {
@@ -255,7 +255,7 @@ abstract class SingleChildContainer extends UiComponent implements UiContainerMa
               stackIn_96_0 = on.field_g;
               return stackIn_96_0;
             }
-            if (null == ch.field_c) {
+            if (null == CredentialKind.field_c) {
               if (bb.field_h) {
                 if (rk.a(-68) <= 30000L) {
                   me.field_E = wl.field_R;
@@ -289,7 +289,7 @@ abstract class SingleChildContainer extends UiComponent implements UiContainerMa
             } else {
               stackIn_114_2 = "{...}";
             }
-            throw aa.a((Throwable) ((Object) stackIn_110_0), ((StringBuilder) (Object) stackIn_113_1).append(stackIn_114_2).append(')').toString());
+            throw aa.wrapException((Throwable) ((Object) stackIn_110_0), ((StringBuilder) (Object) stackIn_113_1).append(stackIn_114_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -358,7 +358,7 @@ abstract class SingleChildContainer extends UiComponent implements UiContainerMa
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param3).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -427,7 +427,7 @@ abstract class SingleChildContainer extends UiComponent implements UiContainerMa
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -462,7 +462,7 @@ abstract class SingleChildContainer extends UiComponent implements UiContainerMa
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -490,7 +490,7 @@ abstract class SingleChildContainer extends UiComponent implements UiContainerMa
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -517,7 +517,7 @@ abstract class SingleChildContainer extends UiComponent implements UiContainerMa
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -558,7 +558,7 @@ abstract class SingleChildContainer extends UiComponent implements UiContainerMa
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -584,7 +584,7 @@ abstract class SingleChildContainer extends UiComponent implements UiContainerMa
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -596,7 +596,7 @@ abstract class SingleChildContainer extends UiComponent implements UiContainerMa
           }
           mc.field_b = param1;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "wn.Q(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "wn.Q(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -622,7 +622,7 @@ abstract class SingleChildContainer extends UiComponent implements UiContainerMa
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -660,7 +660,7 @@ abstract class SingleChildContainer extends UiComponent implements UiContainerMa
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 

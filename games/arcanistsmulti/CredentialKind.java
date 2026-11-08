@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ch {
+final class CredentialKind {
     static k field_c;
     static String field_f;
     static int field_b;
@@ -15,11 +15,11 @@ final class ch {
         throw new IllegalStateException();
     }
 
-    ch(int param0) {
+    CredentialKind(int param0) {
         this.field_g = param0;
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_e = null;
         field_d = null;
         field_h = null;

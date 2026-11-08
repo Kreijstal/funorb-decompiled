@@ -167,22 +167,22 @@ final class lm {
           if ((decompiledFrameRemainder1) &&
             (ao.field_h.length >= 2)) {
             if (param0) {
-              stackIn_47_0 = (rl.field_o != -1) ? 1 : 0;
+              stackIn_47_0 = (TextFieldValidator.field_o != -1) ? 1 : 0;
             } else {
               stackIn_47_0 = 0;
             }
             var6Lifetime4 = stackIn_47_0;
             if (var6Lifetime4 != 0) {
-              var7 = rl.field_o;
+              var7 = TextFieldValidator.field_o;
               for (var8_int = 0; MidiPcmStream.field_E.length > var8_int; var8_int++) {
                 MidiPcmStream.field_E[var8_int] = (byte) 0;
               }
-              MidiPcmStream.field_E[var7 / 8] = (byte)fj.b((int) MidiPcmStream.field_E[var7 / 8], 1 << var7 % 8);
+              MidiPcmStream.field_E[var7 / 8] = (byte)fj.bitOr((int) MidiPcmStream.field_E[var7 / 8], 1 << var7 % 8);
             }
             stackIn_55_0 = (!param0) ? 0 : -1;
             for (var7 = stackIn_55_0; var7 < ao.field_h.length; var7++) {
               if (var6Lifetime4 != 0) {
-                stackIn_63_0 = (var7 != rl.field_o) ? 1 : 0;
+                stackIn_63_0 = (var7 != TextFieldValidator.field_o) ? 1 : 0;
               } else {
                 stackIn_63_0 = 0;
               }
@@ -216,7 +216,7 @@ final class lm {
                             MidiPcmStream.field_E[var9] = (byte) 0;
                           }
                         } else {
-                          MidiPcmStream.field_E[var7 / 8] = (byte)MouseWheelHandler.a((int) MidiPcmStream.field_E[var7 / 8], 1 << dg.a(7, var7));
+                          MidiPcmStream.field_E[var7 / 8] = (byte)MouseWheelHandler.a((int) MidiPcmStream.field_E[var7 / 8], 1 << NameValidator.bitAnd(7, var7));
                         }
                       }
                     } else {
@@ -379,9 +379,9 @@ final class lm {
                   }
                 }
                 if (param0) {
-                  if (null != rl.field_p) {
-                    if (null != rl.field_p[var7]) {
-                      stackIn_211_0 = (!rl.field_p[var7][var9]) ? 0 : 1;
+                  if (null != TextFieldValidator.field_p) {
+                    if (null != TextFieldValidator.field_p[var7]) {
+                      stackIn_211_0 = (!TextFieldValidator.field_p[var7][var9]) ? 0 : 1;
                     } else {
                       stackIn_211_0 = 0;
                     }
@@ -449,16 +449,16 @@ final class lm {
                 } else {
                   if (var9 == -1) {
                     for (var18 = var6Lifetime3; var18 < var30.length + (var6Lifetime3 - 1); var18++) {
-                      ng.field_D[var18 / 8] = (byte)dg.a((int) ng.field_D[var18 / 8], ~(1 << dg.a(7, var18)));
+                      ng.field_D[var18 / 8] = (byte)NameValidator.bitAnd((int) ng.field_D[var18 / 8], ~(1 << NameValidator.bitAnd(7, var18)));
                     }
                   } else {
-                    ng.field_D[(var9 + var6Lifetime3) / 8] = (byte)MouseWheelHandler.a((int) ng.field_D[(var9 + var6Lifetime3) / 8], 1 << dg.a(7, var6Lifetime3 + var9));
+                    ng.field_D[(var9 + var6Lifetime3) / 8] = (byte)MouseWheelHandler.a((int) ng.field_D[(var9 + var6Lifetime3) / 8], 1 << NameValidator.bitAnd(7, var6Lifetime3 + var9));
                   }
                 }
               }
               if (param0 &&
                 var16Lifetime1 != 0) {
-                ng.field_D[(var6Lifetime3 + var9) / 8] = (byte)dg.a((int) ng.field_D[(var6Lifetime3 + var9) / 8], ~(1 << dg.a(var6Lifetime3 + var9, 7)));
+                ng.field_D[(var6Lifetime3 + var9) / 8] = (byte)NameValidator.bitAnd((int) ng.field_D[(var6Lifetime3 + var9) / 8], ~(1 << NameValidator.bitAnd(var6Lifetime3 + var9, 7)));
               }
               if (0 <= var9 &&
                 var17.field_A) {
@@ -634,7 +634,7 @@ final class lm {
           } else {
             stackIn_354_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_353_0), ((StringBuilder) (Object) stackIn_353_1).append(stackIn_354_2).append(',').append(param3).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_353_0), ((StringBuilder) (Object) stackIn_353_1).append(stackIn_354_2).append(',').append(param3).append(')').toString());
         }
     }
 

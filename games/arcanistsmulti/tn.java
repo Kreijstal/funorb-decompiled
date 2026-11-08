@@ -93,7 +93,7 @@ final class tn extends kc {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param5).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -180,7 +180,7 @@ final class tn extends kc {
 
     final static boolean g(byte param0) {
         int var1 = 93 / ((49 - param0) / 60);
-        return !ld.field_p ? true : false;
+        return !AlternateUsernameCredentials.field_p ? true : false;
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15) {
@@ -188,23 +188,23 @@ final class tn extends kc {
         var17 = ArcanistsMulti.field_G ? 1 : 0;
         if (param3 >= param11) {
           if (param6 > param3) {
-            dh.a(param10, param5, 127, param6, param9, param13, param11, SoftwareRasterizer.field_l, param3, param2, param12, param7, param8, param0, param14, param15, param1);
+            dh.drawMeshTriangle(param10, param5, 127, param6, param9, param13, param11, SoftwareRasterizer.field_l, param3, param2, param12, param7, param8, param0, param14, param15, param1);
           } else {
             if (param6 <= param11) {
-              dh.a(param5, param7, 109, param3, param1, param0, param6, SoftwareRasterizer.field_l, param11, param13, param9, param10, param15, param2, param8, param14, param12);
+              dh.drawMeshTriangle(param5, param7, 109, param3, param1, param0, param6, SoftwareRasterizer.field_l, param11, param13, param9, param10, param15, param2, param8, param14, param12);
             } else {
-              dh.a(param5, param10, 97, param3, param12, param0, param11, SoftwareRasterizer.field_l, param6, param2, param9, param7, param14, param13, param8, param15, param1);
+              dh.drawMeshTriangle(param5, param10, 97, param3, param12, param0, param11, SoftwareRasterizer.field_l, param6, param2, param9, param7, param14, param13, param8, param15, param1);
             }
           }
         } else {
           if (param6 <= param11) {
             if (param3 >= param6) {
-              dh.a(param7, param5, 89, param11, param9, param2, param6, SoftwareRasterizer.field_l, param3, param13, param1, param10, param8, param0, param15, param14, param12);
+              dh.drawMeshTriangle(param7, param5, 89, param11, param9, param2, param6, SoftwareRasterizer.field_l, param3, param13, param1, param10, param8, param0, param15, param14, param12);
             } else {
-              dh.a(param7, param10, 95, param11, param12, param2, param3, SoftwareRasterizer.field_l, param6, param0, param1, param5, param14, param13, param15, param8, param9);
+              dh.drawMeshTriangle(param7, param10, 95, param11, param12, param2, param3, SoftwareRasterizer.field_l, param6, param0, param1, param5, param14, param13, param15, param8, param9);
             }
           } else {
-            dh.a(param10, param7, 127, param6, param1, param13, param3, SoftwareRasterizer.field_l, param11, param0, param12, param5, param15, param2, param14, param8, param9);
+            dh.drawMeshTriangle(param10, param7, 127, param6, param1, param13, param3, SoftwareRasterizer.field_l, param11, param0, param12, param5, param15, param2, param14, param8, param9);
           }
         }
         if (param4 >= -104) {

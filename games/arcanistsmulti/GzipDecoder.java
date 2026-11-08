@@ -108,7 +108,7 @@ final class GzipDecoder {
             for (var8Lifetime1 = param3; var7_intLifetime1 > var8Lifetime1; var8Lifetime1++) {
               var9Lifetime1 = ki.field_r[var8Lifetime1];
               var10Lifetime1 = ki.field_r[var8Lifetime1 + 1];
-              if (bo.a(param0, var9Lifetime1, (byte) -76, var10Lifetime1)) {
+              if (bo.isRankedBefore(param0, var9Lifetime1, (byte) -76, var10Lifetime1)) {
                 ki.field_r[var8Lifetime1] = var10Lifetime1;
                 ki.field_r[var8Lifetime1 + 1] = var9Lifetime1;
               }
@@ -118,7 +118,7 @@ final class GzipDecoder {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var7), "nb.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw aa.wrapException((Throwable) ((Object) var7), "nb.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 
@@ -133,9 +133,9 @@ final class GzipDecoder {
           var5 = (CharSequence) ((Object) param0);
           ua.field_S = Js5ArchiveManager.a(var5, -13);
           gg.field_e = param1;
-          ef.field_r = true;
+          SocketJs5Transport.field_r = true;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "nb.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "nb.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -186,7 +186,7 @@ final class GzipDecoder {
             } else {
               stackIn_19_2 = "{...}";
             }
-            throw aa.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+            throw aa.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

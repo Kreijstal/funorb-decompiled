@@ -58,7 +58,7 @@ final class Bzip2State {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var2), "ul.C(" + param0 + ',' + param1 + ')');
+          throw aa.wrapException((Throwable) ((Object) var2), "ul.C(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -74,7 +74,7 @@ final class Bzip2State {
         try {
           field_k = null;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "ul.A(" + param0 + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "ul.A(" + param0 + ')');
         }
     }
 
@@ -124,12 +124,12 @@ final class Bzip2State {
           hm.field_c = param5;
           wd.field_c[0] = 16764000;
           wd.field_c[4] = 16711935;
-          an.field_h[0] = 16764000;
+          EmailLoginCredentials.field_h[0] = 16764000;
           wd.field_c[4] = 16711935;
           ArchiveIndex.field_u = 8421504;
-          an.field_h[2] = 16736352;
-          an.field_h[3] = 16736511;
-          an.field_h[1] = 6356832;
+          EmailLoginCredentials.field_h[2] = 16736352;
+          EmailLoginCredentials.field_h[3] = 16736511;
+          EmailLoginCredentials.field_h[1] = 6356832;
           var12 = new Sprite(4, 4);
           var13 = var12.field_A;
           var14 = var12.field_A;
@@ -147,15 +147,15 @@ final class Bzip2State {
           var17.field_G = new IntrusiveDeque();
           qo.field_f = new dn(0L, var17, param1, param11);
           lj.field_t.a(qo.field_f, 96);
-          ch.field_d = new kc(0L, param6);
-          lj.field_t.a(ch.field_d, 61);
+          CredentialKind.field_d = new kc(0L, param6);
+          lj.field_t.a(CredentialKind.field_d, 61);
           SingleChildContainer.field_D = new kc(0L, param10);
           SingleChildContainer.field_D.field_Z = oo.field_x;
-          ch.field_d.a(SingleChildContainer.field_D, 24);
-          ch.field_d.e((byte) 20);
+          CredentialKind.field_d.a(SingleChildContainer.field_D, 24);
+          CredentialKind.field_d.e((byte) 20);
           sa.field_Cb = new kc(0L, (kc) null);
           sa.field_Cb.field_v = var16;
-          ch.field_d.a(sa.field_Cb, 112);
+          CredentialKind.field_d.a(sa.field_Cb, 112);
           ta.field_i = new kc[5];
           IntrusiveDequeCursor.field_f = new kc[5];
           ia.field_b = new kc[5];
@@ -281,7 +281,7 @@ final class Bzip2State {
           } else {
             stackIn_79_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_42_0), ((StringBuilder) (Object) stackIn_78_1).append(stackIn_79_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_42_0), ((StringBuilder) (Object) stackIn_78_1).append(stackIn_79_2).append(')').toString());
         }
     }
 
@@ -308,7 +308,7 @@ final class Bzip2State {
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 

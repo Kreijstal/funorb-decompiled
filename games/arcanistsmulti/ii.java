@@ -45,7 +45,7 @@ final class ii implements WidgetPainter {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -80,7 +80,7 @@ final class ii implements WidgetPainter {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param3).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -113,7 +113,7 @@ final class ii implements WidgetPainter {
               MusicCrossfadeStream.a(17, (byte) 31);
             }
             if (IntrusiveDeque.field_d == 13 &&
-              (ch.field_b & 64) > 0) {
+              (CredentialKind.field_b & 64) > 0) {
               stackIn_19_0 = 2;
               return stackIn_19_0;
             }
@@ -122,7 +122,7 @@ final class ii implements WidgetPainter {
               continue;
             }
           }
-          vf.field_g.a(rl.a(me.field_I, an.field_g, -123), rl.a(ja.field_s, pb.field_h, -74), -97);
+          vf.field_g.a(TextFieldValidator.a(me.field_I, EmailLoginCredentials.field_g, -123), TextFieldValidator.a(ja.field_s, pb.field_h, -74), -97);
           if (!vf.field_g.b(true)) {
           }
           var2 = 0;
@@ -131,7 +131,7 @@ final class ii implements WidgetPainter {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var1), "ii.E(" + param0 + ')');
+          throw aa.wrapException((Throwable) ((Object) var1), "ii.E(" + param0 + ')');
         }
     }
 

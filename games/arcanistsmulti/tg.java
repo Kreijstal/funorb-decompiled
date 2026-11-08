@@ -24,7 +24,7 @@ final class tg {
           }
           param0.secondaryNext.secondaryPrevious = param0;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "tg.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "tg.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

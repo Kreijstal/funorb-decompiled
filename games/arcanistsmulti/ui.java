@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ui extends rl {
+final class ui extends TextFieldValidator {
     static String field_u;
     private EditableTextWidget field_t;
     static String field_q;
@@ -10,7 +10,7 @@ final class ui extends rl {
     static boolean field_s;
     static String field_w;
 
-    final String a(String param0, byte param1) {
+    final String messageForText(String param0, byte param1) {
         RuntimeException var3 = null;
         String var4 = null;
         String var5 = null;
@@ -37,7 +37,7 @@ final class ui extends rl {
             return null;
           }
           var5 = var4;
-          if (bd.a((byte) -68, var5)) {
+          if (LoginCredentials.isLengthOutOfRange((byte) -68, var5)) {
             stackIn_8_0 = KeyboardInputHandler.field_i;
             return stackIn_8_0;
           }
@@ -45,7 +45,7 @@ final class ui extends rl {
             stackIn_11_0 = cm.field_h;
             return stackIn_11_0;
           }
-          if (e.b(-12055, var5)) {
+          if (LoginPanel.b(-12055, var5)) {
             stackIn_14_0 = ko.field_g;
             return stackIn_14_0;
           }
@@ -80,7 +80,7 @@ final class ui extends rl {
           } else {
             stackIn_36_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(',').append(param1).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -109,18 +109,18 @@ final class ui extends rl {
           this.field_t = param1;
           this.field_r = param2;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "ui.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "ui.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final eh a(String param0, int param1) {
+    final ValidationState validateText(String param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         String var4 = null;
         String var5 = null;
-        eh stackIn_2_0 = null;
-        eh stackIn_5_0 = null;
-        eh stackIn_9_0 = null;
+        ValidationState stackIn_2_0 = null;
+        ValidationState stackIn_5_0 = null;
+        ValidationState stackIn_9_0 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -133,7 +133,7 @@ final class ui extends rl {
             stackIn_2_0 = ra.field_k;
             return stackIn_2_0;
           }
-          if (!dd.a(99, var5, var4)) {
+          if (!dd.isPasswordAcceptable(99, var5, var4)) {
             stackIn_5_0 = ra.field_k;
             return stackIn_5_0;
           }
@@ -152,7 +152,7 @@ final class ui extends rl {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -200,7 +200,7 @@ final class ui extends rl {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -287,7 +287,7 @@ final class ui extends rl {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
         }
     }
 

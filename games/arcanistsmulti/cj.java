@@ -10,12 +10,12 @@ final class cj {
     static int field_d;
     static int[] field_g;
 
-    final static void b(int param0) {
+    final static void composeAgreementText(int param0) {
         int var1 = -65 / ((param0 + 81) / 41);
         qj.field_i = tc.field_C + " <b>" + ln.field_R + "</b> " + li.field_G + " <b>" + ki.field_t + "</b> " + we.field_d + "<br>" + "<br>" + ClientException.field_f;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, vg param4, int param5, int param6, int param7) {
+    final static void drawModel(int param0, int param1, int param2, int param3, vg param4, int param5, int param6, int param7) {
         int stackIn_15_0 = 0;
         int[] stackIn_17_0 = null;
         int stackIn_18_1 = 0;
@@ -174,7 +174,7 @@ final class cj {
               var32 = var30 & 65280;
               var33 = (16711781 & var32 * var28) >>> 8 | (-16711761 & var28 * var31) >>> 8;
               var33 = var33 + var29 * 65793;
-              c.a(var25, 83, (var33 & 16711422) >> 1, var23, var22, var27, var24, var26);
+              c.fillTriangle(var25, 83, (var33 & 16711422) >> 1, var23, var22, var27, var24, var26);
             } else {
               var28 = var55[var18];
               var29 = var55[var19];
@@ -214,11 +214,11 @@ final class cj {
           } else {
             stackIn_54_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_53_0), ((StringBuilder) (Object) stackIn_53_1).append(stackIn_54_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_53_0), ((StringBuilder) (Object) stackIn_53_1).append(stackIn_54_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
         }
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         if (!param0) {
           field_f = (IndexedSprite[]) null;
         }
@@ -229,7 +229,7 @@ final class cj {
         field_e = null;
     }
 
-    final static void a(int param0) {
+    final static void drawModalDimOverlay(int param0) {
         if (param0 < -98) {
           if (oj.field_i) {
             SoftwareRasterizer.darkenRectangle(SoftwareRasterizer.field_i, SoftwareRasterizer.field_c, SoftwareRasterizer.field_h - SoftwareRasterizer.field_i, SoftwareRasterizer.field_k - SoftwareRasterizer.field_c);
@@ -288,14 +288,14 @@ final class cj {
           var8 = param3.b(-68);
           var11_ref_StringLifetime2 = var8;
           var11_ref_StringLifetime3 = var8;
-          if (ch.field_c == null &&
+          if (CredentialKind.field_c == null &&
             !ie.a(-89, false)) {
             stackIn_6_0 = -1;
             return stackIn_6_0;
           }
           if (param1 != -91) {
             var14 = (vg) null;
-            cj.a(-75, -92, 61, -80, (vg) null, 40, 3, -5);
+            cj.drawModel(-75, -92, 61, -80, (vg) null, 40, 3, -5);
           }
           if (ob.field_eb == pc.field_g) {
             kj.field_e = null;
@@ -341,7 +341,7 @@ final class cj {
               he.field_e.writeByte(18, (byte) -114);
               he.field_e.position = he.field_e.position + 2;
               var10 = he.field_e.position;
-              var11_ref_StringLifetime4 = gb.a(cd.e(121), param1 ^ 32);
+              var11_ref_StringLifetime4 = gb.a(cd.getApplet(121), param1 ^ 32);
               if (var11_ref_StringLifetime4 == null) {
                 var11_ref_StringLifetime4 = "";
               }
@@ -362,7 +362,7 @@ final class cj {
               Bzip2State.field_M = new String[-100 + var9Lifetime1];
             } else {
               if (var9Lifetime1 == 248) {
-                UiContainer.a(1, cd.e(param1 ^ -40));
+                UiContainer.a(1, cd.getApplet(param1 ^ -40));
                 me.field_E = fo.field_c;
                 ka.b(false);
                 bb.field_h = false;
@@ -404,7 +404,7 @@ final class cj {
             } else {
               var9_ref_String = UiContainer.field_z.readOptionalString(-112);
               if (var9_ref_String != null) {
-                jf.a(var9_ref_String, cd.e(110), 0);
+                jf.a(var9_ref_String, cd.getApplet(110), 0);
               }
             }
             ka.b(false);
@@ -412,7 +412,7 @@ final class cj {
             stackIn_54_0 = on.field_g;
             return stackIn_54_0;
           }
-          if (null == ch.field_c) {
+          if (null == CredentialKind.field_c) {
             if (bb.field_h) {
               if (rk.a(-78) <= 30000L) {
                 me.field_E = wl.field_R;
@@ -452,7 +452,7 @@ final class cj {
           } else {
             stackIn_74_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_67_0), ((StringBuilder) (Object) stackIn_73_1).append(stackIn_74_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_67_0), ((StringBuilder) (Object) stackIn_73_1).append(stackIn_74_2).append(')').toString());
         }
     }
 

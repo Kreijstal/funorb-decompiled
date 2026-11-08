@@ -43,7 +43,7 @@ final class MusicPatch extends IntrusiveNode {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -54,7 +54,7 @@ final class MusicPatch extends IntrusiveNode {
         this.field_q = null;
     }
 
-    public static void b(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_o = null;
         field_g = null;
         field_i = null;
@@ -77,7 +77,7 @@ final class MusicPatch extends IntrusiveNode {
             var3 = (String) null;
             MusicPatch.a((String) null, (byte) -82);
           }
-          stackIn_3_0 = ld.field_q.a(param0, "", -1);
+          stackIn_3_0 = AlternateUsernameCredentials.field_q.a(param0, "", -1);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -89,7 +89,7 @@ final class MusicPatch extends IntrusiveNode {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -165,7 +165,7 @@ final class MusicPatch extends IntrusiveNode {
           } else {
             stackIn_31_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(')').toString());
         }
     }
 
@@ -433,7 +433,7 @@ final class MusicPatch extends IntrusiveNode {
               }
               var22 = var38.readVarInt(70);
             }
-            this.field_m[var23] = (short)(this.field_m[var23] + (dg.a(2, var22 - 1) << 14));
+            this.field_m[var23] = (short)(this.field_m[var23] + (NameValidator.bitAnd(2, var22 - 1) << 14));
             var20Lifetime2--;
             this.field_q[var23] = var22;
           }
@@ -679,7 +679,7 @@ final class MusicPatch extends IntrusiveNode {
           } else {
             stackIn_206_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_205_0), ((StringBuilder) (Object) stackIn_205_1).append(stackIn_206_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_205_0), ((StringBuilder) (Object) stackIn_205_1).append(stackIn_206_2).append(')').toString());
         }
     }
 

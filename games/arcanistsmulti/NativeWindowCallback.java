@@ -8,7 +8,7 @@ final class NativeWindowCallback extends com.ms.dll.Callback {
     private volatile int field_e;
     private volatile boolean field_d;
 
-    final void a(int param0, int param1, int param2) {
+    final void setCursorPosition(int param0, int param1, int param2) {
         com.ms.win32.User32.SetCursorPos(param2, param1);
         if (param0 != 26899) {
           this.field_b = false;
@@ -49,7 +49,7 @@ final class NativeWindowCallback extends com.ms.dll.Callback {
         return com.ms.win32.User32.CallWindowProc(this.field_e, param0, param1, param2, param3);
     }
 
-    final void a(int param0, java.awt.Component param1, boolean param2) {
+    final void updateCursorVisibility(int param0, java.awt.Component param1, boolean param2) {
         boolean stackIn_5_0 = false;
         int stackIn_6_1 = 0;
         boolean stackIn_23_1 = false;

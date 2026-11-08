@@ -10,7 +10,7 @@ final class ck {
     static ResourceArchive field_b;
     static String field_g;
 
-    final static kc a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, BitmapFont param7, int param8, int param9, int param10, int param11, int param12) {
+    final static kc createTextComponent(int param0, int param1, int param2, int param3, int param4, int param5, int param6, BitmapFont param7, int param8, int param9, int param10, int param11, int param12) {
         kc var13 = null;
         RuntimeException var13_ref = null;
         BitmapFont var14 = null;
@@ -24,7 +24,7 @@ final class ck {
           var13.field_v = fk.a(param0, 43, param4);
           if (param8 < 56) {
             var14 = (BitmapFont) null;
-            ck.a(-51, 34, -67, 14, 71, -24, 60, (BitmapFont) null, 32, -82, -98, 65, 2);
+            ck.createTextComponent(-51, 34, -67, 14, 71, -24, 60, (BitmapFont) null, 32, -82, -98, 65, 2);
           }
           var13.field_Ab = fk.a(param11, 58, param3);
           var13.field_xb = fk.a(param12, 38, param10);
@@ -44,11 +44,11 @@ final class ck {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(',').append(param11).append(',').append(param12).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(',').append(param11).append(',').append(param12).append(')').toString());
         }
     }
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_b = null;
         field_e = null;
         if (param0 > 84) {
@@ -72,12 +72,12 @@ final class ck {
         int var1Lifetime1;
         int var1Lifetime2;
         if (Bzip2State.field_A >= 224) {
-          eb.a(256, false);
+          eb.setMusicVolume(256, false);
           var1 = 50 % ((47 - param0) / 38);
           return;
         }
         var1Lifetime1 = Bzip2State.field_A % 32;
-        eb.a(32 + Bzip2State.field_A - var1Lifetime1, false);
+        eb.setMusicVolume(32 + Bzip2State.field_A - var1Lifetime1, false);
         var1Lifetime2 = 50 % ((47 - param0) / 38);
     }
 

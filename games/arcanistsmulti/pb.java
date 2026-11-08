@@ -35,7 +35,7 @@ final class pb extends IntrusiveNode {
         int var4Lifetime14;
         int var4Lifetime15;
         int var4Lifetime8Lifetime1;
-        eh.field_e.drawOpaque(0, 0);
+        ValidationState.field_e.drawOpaque(0, 0);
         int var1 = 32;
         int var2 = 80;
         wm.field_H[15].drawScaled(var2, bo.field_d, 160, 64);
@@ -50,22 +50,22 @@ final class pb extends IntrusiveNode {
         mc.field_b.drawParagraph(Integer.toString(var3Lifetime1), 464, 8 + bo.field_d, 32, 32, 16777215, 0, 1, 1, mc.field_b.field_C);
         mc.field_b.drawParagraph("Orb coins Banked", 496, bo.field_d, 64, 48, 16777215, 0, 1, 1, mc.field_b.field_C);
         wm.field_H[15].drawScaled(80, 128 + (64 + bo.field_d) + 32, 480, 64);
-        if ((1 & ch.field_b) <= 0) {
-          if ((ch.field_b & 2) > 0) {
+        if ((1 & CredentialKind.field_b) <= 0) {
+          if ((CredentialKind.field_b & 2) > 0) {
             mc.field_b.drawText("SHOW MEMBER MESSAGE", 32, var1, 16777215, 0);
             var1 += 16;
             var4 = 64 + (128 + bo.field_d + 32);
             wm.field_H[6].drawScaled(var2 + 16, var4 + 16, 216, 32);
             mc.field_b.drawParagraph("Purchase", var2 + 16, var4 + 16, 216, 32, 16777215, 0, 1, 1, mc.field_b.field_C);
           }
-          if ((ch.field_b & 4) > 0) {
+          if ((CredentialKind.field_b & 4) > 0) {
             mc.field_b.drawText("SHOW PURCHASE", 32, var1, 16777215, 0);
             var1 += 16;
             var4Lifetime11 = 64 + (32 + bo.field_d) + 128;
             wm.field_H[15].drawScaled(var2 + 16, 16 + var4Lifetime11, 216, 32);
             mc.field_b.drawParagraph("Purchase", var2 + 16, 16 + var4Lifetime11, 216, 32, 16777215, 0, 1, 1, mc.field_b.field_C);
           }
-          if (0 < (ch.field_b & 8)) {
+          if (0 < (CredentialKind.field_b & 8)) {
             mc.field_b.drawText("SHOW CONFIRM", 32, var1, 16777215, 0);
             var1 += 16;
             var4Lifetime12 = bo.field_d + 32 + 192;
@@ -75,7 +75,7 @@ final class pb extends IntrusiveNode {
             wm.field_H[15].drawScaled(240 + var2 + 16 - (24 + var5), 16 + var4Lifetime12, var5, 32);
             mc.field_b.drawParagraph("No", -var5 + (-8 + (var2 + 240)), var4Lifetime12 + 16, var5, 32, 16777215, 0, 1, 1, mc.field_b.field_C);
           }
-          if ((ch.field_b & 16) > 0) {
+          if ((CredentialKind.field_b & 16) > 0) {
             mc.field_b.drawText("SHOW WAIT", 32, var1, 16777215, 0);
             var1 += 16;
             var4Lifetime13 = 128 + (bo.field_d + 32) + 64;
@@ -86,13 +86,13 @@ final class pb extends IntrusiveNode {
           if (param0 != 2341) {
             pb.a(-26);
           }
-          if ((ch.field_b & 32) > 0) {
+          if ((CredentialKind.field_b & 32) > 0) {
             mc.field_b.drawText("SHOW COMPLETE", 32, var1, 16777215, 0);
             var1 += 16;
             var4Lifetime14 = 64 + (128 + bo.field_d) + 32;
             mc.field_b.drawParagraph("Purchase completed.", 16 + var2, var4Lifetime14, 216, 64, 16777215, 0, 1, 1, mc.field_b.field_C);
           }
-          if (!((ch.field_b & 64) <= 0)) {
+          if (!((CredentialKind.field_b & 64) <= 0)) {
             mc.field_b.drawText("SHOW EXIT", 32, var1, 16777215, 0);
             var1 += 16;
             var4Lifetime15 = bo.field_d + 160 + 64;
@@ -114,24 +114,24 @@ final class pb extends IntrusiveNode {
         int var7 = 320;
         wm.field_H[6].drawScaled(var6, var4Lifetime2, var7, var5Lifetime1);
         mc.field_b.drawParagraph(sn.field_L, var6, var4Lifetime2 + 32, var7, 32 + mc.field_b.field_C, 16777215, 0, 1, 1, mc.field_b.field_C);
-        if ((2 & ch.field_b) > 0) {
+        if ((2 & CredentialKind.field_b) > 0) {
           mc.field_b.drawParagraph("This item is only availiable to members.", var6, 64 + var4Lifetime2, var7, 80, 16777215, 0, 1, 1, mc.field_b.field_C);
           ii.field_d.drawQuarterSize(var6 - (-(var7 / 2) + 16), 80 + (var4Lifetime2 + 64));
-          if ((ch.field_b & 2) > 0) {
+          if ((CredentialKind.field_b & 2) > 0) {
             mc.field_b.drawText("SHOW MEMBER MESSAGE", 32, var1, 16777215, 0);
             var1 += 16;
             var4Lifetime2 = 64 + (128 + bo.field_d + 32);
             wm.field_H[6].drawScaled(var2 + 16, var4Lifetime2 + 16, 216, 32);
             mc.field_b.drawParagraph("Purchase", var2 + 16, var4Lifetime2 + 16, 216, 32, 16777215, 0, 1, 1, mc.field_b.field_C);
           }
-          if ((ch.field_b & 4) > 0) {
+          if ((CredentialKind.field_b & 4) > 0) {
             mc.field_b.drawText("SHOW PURCHASE", 32, var1, 16777215, 0);
             var1 += 16;
             var4Lifetime2 = 64 + (32 + bo.field_d) + 128;
             wm.field_H[15].drawScaled(var2 + 16, 16 + var4Lifetime2, 216, 32);
             mc.field_b.drawParagraph("Purchase", var2 + 16, 16 + var4Lifetime2, 216, 32, 16777215, 0, 1, 1, mc.field_b.field_C);
           }
-          if (0 < (ch.field_b & 8)) {
+          if (0 < (CredentialKind.field_b & 8)) {
             mc.field_b.drawText("SHOW CONFIRM", 32, var1, 16777215, 0);
             var1 += 16;
             var4Lifetime2 = bo.field_d + 32 + 192;
@@ -141,7 +141,7 @@ final class pb extends IntrusiveNode {
             wm.field_H[15].drawScaled(240 + var2 + 16 - (24 + var5Lifetime2), 16 + var4Lifetime2, var5Lifetime2, 32);
             mc.field_b.drawParagraph("No", -var5Lifetime2 + (-8 + (var2 + 240)), var4Lifetime2 + 16, var5Lifetime2, 32, 16777215, 0, 1, 1, mc.field_b.field_C);
           }
-          if ((ch.field_b & 16) > 0) {
+          if ((CredentialKind.field_b & 16) > 0) {
             mc.field_b.drawText("SHOW WAIT", 32, var1, 16777215, 0);
             var1 += 16;
             var4Lifetime2 = 128 + (bo.field_d + 32) + 64;
@@ -152,13 +152,13 @@ final class pb extends IntrusiveNode {
           if (param0 != 2341) {
             pb.a(-26);
           }
-          if ((ch.field_b & 32) > 0) {
+          if ((CredentialKind.field_b & 32) > 0) {
             mc.field_b.drawText("SHOW COMPLETE", 32, var1, 16777215, 0);
             var1 += 16;
             var4Lifetime2 = 64 + (128 + bo.field_d) + 32;
             mc.field_b.drawParagraph("Purchase completed.", 16 + var2, var4Lifetime2, 216, 64, 16777215, 0, 1, 1, mc.field_b.field_C);
           }
-          if (!((ch.field_b & 64) <= 0)) {
+          if (!((CredentialKind.field_b & 64) <= 0)) {
             mc.field_b.drawText("SHOW EXIT", 32, var1, 16777215, 0);
             var1 += 16;
             var4Lifetime2 = bo.field_d + 160 + 64;
@@ -173,21 +173,21 @@ final class pb extends IntrusiveNode {
           mc.field_b.drawParagraph("Orb coins to purchase", var6 + 32 + 32, var4Lifetime2, var7 - 80, 32 + mc.field_b.field_C, 16777215, 0, 1, 1, mc.field_b.field_C);
           ih.field_e.drawTransparent(var6 + 16, -16 + mc.field_b.field_C / 2 + var4Lifetime2 + 16);
           mc.field_b.drawParagraph(Integer.toString(cb.field_f), var6 + 16, 16 + (mc.field_b.field_C / 2 + (var4Lifetime2 - 16)), 32, 32, 16777215, 0, 1, 1, mc.field_b.field_C);
-          if ((ch.field_b & 2) > 0) {
+          if ((CredentialKind.field_b & 2) > 0) {
             mc.field_b.drawText("SHOW MEMBER MESSAGE", 32, var1, 16777215, 0);
             var1 += 16;
             var4Lifetime2 = 64 + (128 + bo.field_d + 32);
             wm.field_H[6].drawScaled(var2 + 16, var4Lifetime2 + 16, 216, 32);
             mc.field_b.drawParagraph("Purchase", var2 + 16, var4Lifetime2 + 16, 216, 32, 16777215, 0, 1, 1, mc.field_b.field_C);
           }
-          if ((ch.field_b & 4) > 0) {
+          if ((CredentialKind.field_b & 4) > 0) {
             mc.field_b.drawText("SHOW PURCHASE", 32, var1, 16777215, 0);
             var1 += 16;
             var4Lifetime2 = 64 + (32 + bo.field_d) + 128;
             wm.field_H[15].drawScaled(var2 + 16, 16 + var4Lifetime2, 216, 32);
             mc.field_b.drawParagraph("Purchase", var2 + 16, 16 + var4Lifetime2, 216, 32, 16777215, 0, 1, 1, mc.field_b.field_C);
           }
-          if (0 < (ch.field_b & 8)) {
+          if (0 < (CredentialKind.field_b & 8)) {
             mc.field_b.drawText("SHOW CONFIRM", 32, var1, 16777215, 0);
             var1 += 16;
             var4Lifetime2 = bo.field_d + 32 + 192;
@@ -197,7 +197,7 @@ final class pb extends IntrusiveNode {
             wm.field_H[15].drawScaled(240 + var2 + 16 - (24 + var5Lifetime3), 16 + var4Lifetime2, var5Lifetime3, 32);
             mc.field_b.drawParagraph("No", -var5Lifetime3 + (-8 + (var2 + 240)), var4Lifetime2 + 16, var5Lifetime3, 32, 16777215, 0, 1, 1, mc.field_b.field_C);
           }
-          if ((ch.field_b & 16) > 0) {
+          if ((CredentialKind.field_b & 16) > 0) {
             mc.field_b.drawText("SHOW WAIT", 32, var1, 16777215, 0);
             var1 += 16;
             var4Lifetime2 = 128 + (bo.field_d + 32) + 64;
@@ -208,13 +208,13 @@ final class pb extends IntrusiveNode {
           if (param0 != 2341) {
             pb.a(-26);
           }
-          if ((ch.field_b & 32) > 0) {
+          if ((CredentialKind.field_b & 32) > 0) {
             mc.field_b.drawText("SHOW COMPLETE", 32, var1, 16777215, 0);
             var1 += 16;
             var4Lifetime2 = 64 + (128 + bo.field_d) + 32;
             mc.field_b.drawParagraph("Purchase completed.", 16 + var2, var4Lifetime2, 216, 64, 16777215, 0, 1, 1, mc.field_b.field_C);
           }
-          if (!((ch.field_b & 64) <= 0)) {
+          if (!((CredentialKind.field_b & 64) <= 0)) {
             mc.field_b.drawText("SHOW EXIT", 32, var1, 16777215, 0);
             var1 += 16;
             var4Lifetime2 = bo.field_d + 160 + 64;
@@ -227,21 +227,21 @@ final class pb extends IntrusiveNode {
         mc.field_b.drawParagraph("Orb coins to purchase", var6 + 32 + 32, var4Lifetime3, var7 - 80, 32 + mc.field_b.field_C, 16777215, 0, 1, 1, mc.field_b.field_C);
         ih.field_e.drawTransparent(var6 + 16, -16 + mc.field_b.field_C / 2 + var4Lifetime3 + 16);
         mc.field_b.drawParagraph(Integer.toString(cb.field_f), var6 + 16, 16 + (mc.field_b.field_C / 2 + (var4Lifetime3 - 16)), 32, 32, 16777215, 0, 1, 1, mc.field_b.field_C);
-        if ((ch.field_b & 2) > 0) {
+        if ((CredentialKind.field_b & 2) > 0) {
           mc.field_b.drawText("SHOW MEMBER MESSAGE", 32, var1, 16777215, 0);
           var1 += 16;
           var4Lifetime4 = 64 + (128 + bo.field_d + 32);
           wm.field_H[6].drawScaled(var2 + 16, var4Lifetime4 + 16, 216, 32);
           mc.field_b.drawParagraph("Purchase", var2 + 16, var4Lifetime4 + 16, 216, 32, 16777215, 0, 1, 1, mc.field_b.field_C);
         }
-        if ((ch.field_b & 4) > 0) {
+        if ((CredentialKind.field_b & 4) > 0) {
           mc.field_b.drawText("SHOW PURCHASE", 32, var1, 16777215, 0);
           var1 += 16;
           var4Lifetime5 = 64 + (32 + bo.field_d) + 128;
           wm.field_H[15].drawScaled(var2 + 16, 16 + var4Lifetime5, 216, 32);
           mc.field_b.drawParagraph("Purchase", var2 + 16, 16 + var4Lifetime5, 216, 32, 16777215, 0, 1, 1, mc.field_b.field_C);
         }
-        if (0 < (ch.field_b & 8)) {
+        if (0 < (CredentialKind.field_b & 8)) {
           mc.field_b.drawText("SHOW CONFIRM", 32, var1, 16777215, 0);
           var1 += 16;
           var4Lifetime6 = bo.field_d + 32 + 192;
@@ -251,7 +251,7 @@ final class pb extends IntrusiveNode {
           wm.field_H[15].drawScaled(240 + var2 + 16 - (24 + var5Lifetime4), 16 + var4Lifetime6, var5Lifetime4, 32);
           mc.field_b.drawParagraph("No", -var5Lifetime4 + (-8 + (var2 + 240)), var4Lifetime6 + 16, var5Lifetime4, 32, 16777215, 0, 1, 1, mc.field_b.field_C);
         }
-        if ((ch.field_b & 16) > 0) {
+        if ((CredentialKind.field_b & 16) > 0) {
           mc.field_b.drawText("SHOW WAIT", 32, var1, 16777215, 0);
           var1 += 16;
           var4Lifetime7 = 128 + (bo.field_d + 32) + 64;
@@ -260,13 +260,13 @@ final class pb extends IntrusiveNode {
           mc.field_b.drawParagraph("Please wait for confirmation of your purchase.", 16 + var2, var4Lifetime7, 216, 64, 16777215, 0, 1, 1, mc.field_b.field_C);
         }
         if (param0 == 2341) {
-          if ((ch.field_b & 32) > 0) {
+          if ((CredentialKind.field_b & 32) > 0) {
             mc.field_b.drawText("SHOW COMPLETE", 32, var1, 16777215, 0);
             var1 += 16;
             var4Lifetime8 = 64 + (128 + bo.field_d) + 32;
             mc.field_b.drawParagraph("Purchase completed.", 16 + var2, var4Lifetime8, 216, 64, 16777215, 0, 1, 1, mc.field_b.field_C);
           }
-          if (!((ch.field_b & 64) <= 0)) {
+          if (!((CredentialKind.field_b & 64) <= 0)) {
             mc.field_b.drawText("SHOW EXIT", 32, var1, 16777215, 0);
             var1 += 16;
             var4Lifetime8Lifetime1 = bo.field_d + 160 + 64;
@@ -276,13 +276,13 @@ final class pb extends IntrusiveNode {
           return;
         }
         pb.a(-26);
-        if ((ch.field_b & 32) > 0) {
+        if ((CredentialKind.field_b & 32) > 0) {
           mc.field_b.drawText("SHOW COMPLETE", 32, var1, 16777215, 0);
           var1 += 16;
           var4Lifetime9 = 64 + (128 + bo.field_d) + 32;
           mc.field_b.drawParagraph("Purchase completed.", 16 + var2, var4Lifetime9, 216, 64, 16777215, 0, 1, 1, mc.field_b.field_C);
         }
-        if (!((ch.field_b & 64) <= 0)) {
+        if (!((CredentialKind.field_b & 64) <= 0)) {
           mc.field_b.drawText("SHOW EXIT", 32, var1, 16777215, 0);
           var1 += 16;
           var4Lifetime10 = bo.field_d + 160 + 64;
@@ -328,7 +328,7 @@ final class pb extends IntrusiveNode {
           param2.field_j = var6.readInt(-10674);
           var6.writeByteLengthAtMark(var6.position - var4, (byte) 43);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "pb.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "pb.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class fd {
-    static bd field_e;
+    static LoginCredentials field_e;
     static boolean field_a;
     static CoverageBitmapFont field_b;
     static boolean field_i;
@@ -26,7 +26,7 @@ final class fd {
         field_h = null;
     }
 
-    final static String a(boolean param0, fm param1) {
+    final static String getDisplayName(boolean param0, fm param1) {
         RuntimeException var2 = null;
         String stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -37,7 +37,7 @@ final class fd {
           if (param0) {
             fd.releaseStatics(-96);
           }
-          stackIn_3_0 = rl.a(param1.field_d, 29424);
+          stackIn_3_0 = TextFieldValidator.decodeBase37(param1.field_d, 29424);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -49,11 +49,11 @@ final class fd {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
-    final static String a(int param0, java.applet.Applet param1, String param2) {
+    final static String getCookie(int param0, java.applet.Applet param1, String param2) {
         try {
           String var3 = null;
           String[] var4 = null;
@@ -75,7 +75,7 @@ final class fd {
           try {
             try {
               var3 = (String) (ei.a(param1, 118, "getcookies"));
-              var4 = eh.a(false, ';', var3);
+              var4 = ValidationState.split(false, ';', var3);
               var5 = 0;
               var6 = -80 / ((param0 + 36) / 40);
               while (var5 < var4.length) {
@@ -109,7 +109,7 @@ final class fd {
             } else {
               stackIn_18_2 = "{...}";
             }
-            throw aa.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+            throw aa.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

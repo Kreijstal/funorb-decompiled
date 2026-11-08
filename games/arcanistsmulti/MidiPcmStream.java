@@ -210,7 +210,7 @@ final class MidiPcmStream extends PcmStream {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -369,7 +369,7 @@ final class MidiPcmStream extends PcmStream {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -445,7 +445,7 @@ final class MidiPcmStream extends PcmStream {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param4).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -558,7 +558,7 @@ final class MidiPcmStream extends PcmStream {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param20).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param20).append(')').toString());
         }
     }
 
@@ -632,67 +632,67 @@ final class MidiPcmStream extends PcmStream {
           var5Lifetime1 = param1 >> 8 & 127;
           var6Lifetime1 = (8387180 & param1) >> 16;
           if (0 == var5Lifetime1) {
-            this.field_n[var4Lifetime1] = dg.a(-2080769, this.field_n[var4Lifetime1]) + (var6Lifetime1 << 14);
+            this.field_n[var4Lifetime1] = NameValidator.bitAnd(-2080769, this.field_n[var4Lifetime1]) + (var6Lifetime1 << 14);
           }
           if (var5Lifetime1 == 32) {
-            this.field_n[var4Lifetime1] = (var6Lifetime1 << 7) + dg.a(-16257, this.field_n[var4Lifetime1]);
+            this.field_n[var4Lifetime1] = (var6Lifetime1 << 7) + NameValidator.bitAnd(-16257, this.field_n[var4Lifetime1]);
           }
           if (var5Lifetime1 == 1) {
-            this.field_I[var4Lifetime1] = dg.a(-16257, this.field_I[var4Lifetime1]) + (var6Lifetime1 << 7);
+            this.field_I[var4Lifetime1] = NameValidator.bitAnd(-16257, this.field_I[var4Lifetime1]) + (var6Lifetime1 << 7);
           }
           if (var5Lifetime1 == 33) {
-            this.field_I[var4Lifetime1] = dg.a(-128, this.field_I[var4Lifetime1]) + var6Lifetime1;
+            this.field_I[var4Lifetime1] = NameValidator.bitAnd(-128, this.field_I[var4Lifetime1]) + var6Lifetime1;
           }
           if (var5Lifetime1 == 5) {
-            this.field_P[var4Lifetime1] = dg.a(-16257, this.field_P[var4Lifetime1]) + (var6Lifetime1 << 7);
+            this.field_P[var4Lifetime1] = NameValidator.bitAnd(-16257, this.field_P[var4Lifetime1]) + (var6Lifetime1 << 7);
           }
           if (var5Lifetime1 == 37) {
-            this.field_P[var4Lifetime1] = dg.a(this.field_P[var4Lifetime1], -128) + var6Lifetime1;
+            this.field_P[var4Lifetime1] = NameValidator.bitAnd(this.field_P[var4Lifetime1], -128) + var6Lifetime1;
           }
           if (var5Lifetime1 == 7) {
-            this.field_y[var4Lifetime1] = (var6Lifetime1 << 7) + dg.a(this.field_y[var4Lifetime1], -16257);
+            this.field_y[var4Lifetime1] = (var6Lifetime1 << 7) + NameValidator.bitAnd(this.field_y[var4Lifetime1], -16257);
           }
           if (var5Lifetime1 == 39) {
-            this.field_y[var4Lifetime1] = var6Lifetime1 + dg.a(this.field_y[var4Lifetime1], -128);
+            this.field_y[var4Lifetime1] = var6Lifetime1 + NameValidator.bitAnd(this.field_y[var4Lifetime1], -128);
           }
           if (10 == var5Lifetime1) {
-            this.field_S[var4Lifetime1] = dg.a(-16257, this.field_S[var4Lifetime1]) + (var6Lifetime1 << 7);
+            this.field_S[var4Lifetime1] = NameValidator.bitAnd(-16257, this.field_S[var4Lifetime1]) + (var6Lifetime1 << 7);
           }
           if (var5Lifetime1 == 42) {
-            this.field_S[var4Lifetime1] = var6Lifetime1 + dg.a(-128, this.field_S[var4Lifetime1]);
+            this.field_S[var4Lifetime1] = var6Lifetime1 + NameValidator.bitAnd(-128, this.field_S[var4Lifetime1]);
           }
           if (var5Lifetime1 == 11) {
-            this.field_R[var4Lifetime1] = (var6Lifetime1 << 7) + dg.a(-16257, this.field_R[var4Lifetime1]);
+            this.field_R[var4Lifetime1] = (var6Lifetime1 << 7) + NameValidator.bitAnd(-16257, this.field_R[var4Lifetime1]);
           }
           if (var5Lifetime1 == 43) {
-            this.field_R[var4Lifetime1] = var6Lifetime1 + dg.a(-128, this.field_R[var4Lifetime1]);
+            this.field_R[var4Lifetime1] = var6Lifetime1 + NameValidator.bitAnd(-128, this.field_R[var4Lifetime1]);
           }
           if (var5Lifetime1 == 64) {
             if (var6Lifetime1 < 64) {
-              this.field_Q[var4Lifetime1] = dg.a(this.field_Q[var4Lifetime1], -2);
+              this.field_Q[var4Lifetime1] = NameValidator.bitAnd(this.field_Q[var4Lifetime1], -2);
             } else {
-              this.field_Q[var4Lifetime1] = fj.b(this.field_Q[var4Lifetime1], 1);
+              this.field_Q[var4Lifetime1] = fj.bitOr(this.field_Q[var4Lifetime1], 1);
             }
           }
           if (var5Lifetime1 == 65) {
             if (var6Lifetime1 >= 64) {
-              this.field_Q[var4Lifetime1] = fj.b(this.field_Q[var4Lifetime1], 2);
+              this.field_Q[var4Lifetime1] = fj.bitOr(this.field_Q[var4Lifetime1], 2);
             } else {
               this.a((byte) -62, var4Lifetime1);
-              this.field_Q[var4Lifetime1] = dg.a(this.field_Q[var4Lifetime1], -3);
+              this.field_Q[var4Lifetime1] = NameValidator.bitAnd(this.field_Q[var4Lifetime1], -3);
             }
           }
           if (99 == var5Lifetime1) {
-            this.field_V[var4Lifetime1] = (var6Lifetime1 << 7) + dg.a(127, this.field_V[var4Lifetime1]);
+            this.field_V[var4Lifetime1] = (var6Lifetime1 << 7) + NameValidator.bitAnd(127, this.field_V[var4Lifetime1]);
           }
           if (var5Lifetime1 == 98) {
-            this.field_V[var4Lifetime1] = dg.a(16256, this.field_V[var4Lifetime1]) + var6Lifetime1;
+            this.field_V[var4Lifetime1] = NameValidator.bitAnd(16256, this.field_V[var4Lifetime1]) + var6Lifetime1;
           }
           if (var5Lifetime1 == 101) {
-            this.field_V[var4Lifetime1] = dg.a(this.field_V[var4Lifetime1], 127) + (16384 + (var6Lifetime1 << 7));
+            this.field_V[var4Lifetime1] = NameValidator.bitAnd(this.field_V[var4Lifetime1], 127) + (16384 + (var6Lifetime1 << 7));
           }
           if (var5Lifetime1 == 100) {
-            this.field_V[var4Lifetime1] = var6Lifetime1 + (dg.a(16256, this.field_V[var4Lifetime1]) + 16384);
+            this.field_V[var4Lifetime1] = var6Lifetime1 + (NameValidator.bitAnd(16256, this.field_V[var4Lifetime1]) + 16384);
           }
           if (120 == var5Lifetime1) {
             this.a(var4Lifetime1, param0 ^ 27257);
@@ -706,27 +706,27 @@ final class MidiPcmStream extends PcmStream {
           if (6 == var5Lifetime1) {
             var7 = this.field_V[var4Lifetime1];
             if (var7 == 16384) {
-              this.field_J[var4Lifetime1] = (var6Lifetime1 << 7) + dg.a(-16257, this.field_J[var4Lifetime1]);
+              this.field_J[var4Lifetime1] = (var6Lifetime1 << 7) + NameValidator.bitAnd(-16257, this.field_J[var4Lifetime1]);
             }
           }
           if (var5Lifetime1 == 38) {
             var7Lifetime1 = this.field_V[var4Lifetime1];
             if (16384 == var7Lifetime1) {
-              this.field_J[var4Lifetime1] = var6Lifetime1 + dg.a(-128, this.field_J[var4Lifetime1]);
+              this.field_J[var4Lifetime1] = var6Lifetime1 + NameValidator.bitAnd(-128, this.field_J[var4Lifetime1]);
             }
           }
           if (var5Lifetime1 == 16) {
-            this.field_H[var4Lifetime1] = (var6Lifetime1 << 7) + dg.a(-16257, this.field_H[var4Lifetime1]);
+            this.field_H[var4Lifetime1] = (var6Lifetime1 << 7) + NameValidator.bitAnd(-16257, this.field_H[var4Lifetime1]);
           }
           if (48 == var5Lifetime1) {
-            this.field_H[var4Lifetime1] = var6Lifetime1 + dg.a(-128, this.field_H[var4Lifetime1]);
+            this.field_H[var4Lifetime1] = var6Lifetime1 + NameValidator.bitAnd(-128, this.field_H[var4Lifetime1]);
           }
           if (var5Lifetime1 == 81) {
             if (var6Lifetime1 < 64) {
               this.e(var4Lifetime1, param0 - 27298);
-              this.field_Q[var4Lifetime1] = dg.a(this.field_Q[var4Lifetime1], -5);
+              this.field_Q[var4Lifetime1] = NameValidator.bitAnd(this.field_Q[var4Lifetime1], -5);
             } else {
-              this.field_Q[var4Lifetime1] = fj.b(this.field_Q[var4Lifetime1], 4);
+              this.field_Q[var4Lifetime1] = fj.bitOr(this.field_Q[var4Lifetime1], 4);
             }
           }
           if (var5Lifetime1 == 17) {
@@ -781,7 +781,7 @@ final class MidiPcmStream extends PcmStream {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -837,7 +837,7 @@ final class MidiPcmStream extends PcmStream {
         int var6 = 0;
         var3Lifetime1 = var6;
         while (var6 < 16) {
-          this.field_n[var6] = dg.a(this.field_k[var6], -128);
+          this.field_n[var6] = NameValidator.bitAnd(this.field_k[var6], -128);
           var6++;
         }
     }
@@ -849,7 +849,7 @@ final class MidiPcmStream extends PcmStream {
         try {
           this.a(-61, param1, param2, true);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "gh.K(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "gh.K(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -858,7 +858,7 @@ final class MidiPcmStream extends PcmStream {
         if (param2 != 1319989672) {
           return;
         }
-        this.field_n[param1] = dg.a(-128, param0);
+        this.field_n[param1] = NameValidator.bitAnd(-128, param0);
         this.d(param2 - 1319989581, param0, param1);
     }
 
@@ -993,7 +993,7 @@ final class MidiPcmStream extends PcmStream {
           } else {
             stackIn_75_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_71_0), ((StringBuilder) (Object) stackIn_74_1).append(stackIn_75_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_71_0), ((StringBuilder) (Object) stackIn_74_1).append(stackIn_75_2).append(')').toString());
         }
     }
 
@@ -1074,7 +1074,7 @@ final class MidiPcmStream extends PcmStream {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
         }
     }
 
@@ -1168,7 +1168,7 @@ final class MidiPcmStream extends PcmStream {
           um.a("", param1, 13680);
           mc.a(param0 ^ 30451, param1);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "gh.U(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "gh.U(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -1208,7 +1208,7 @@ final class MidiPcmStream extends PcmStream {
           this.field_K = this.field_N.field_d[this.field_U];
           this.field_t = this.field_N.tickTime(this.field_K);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "gh.MA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "gh.MA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -1252,7 +1252,7 @@ final class MidiPcmStream extends PcmStream {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -1294,7 +1294,7 @@ final class MidiPcmStream extends PcmStream {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -1307,7 +1307,7 @@ final class MidiPcmStream extends PcmStream {
           int var2_int = 66 / ((param0 + 27) / 62);
           kh.field_g = param1;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "gh.GA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "gh.GA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

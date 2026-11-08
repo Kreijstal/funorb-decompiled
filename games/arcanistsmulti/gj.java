@@ -15,9 +15,9 @@ final class gj {
         th.field_f = param3;
         if (param1) {
           if (param2 == 0 &&
-            dg.field_s) {
+            NameValidator.field_s) {
             jm.field_b = co.field_d;
-            dg.field_s = false;
+            NameValidator.field_s = false;
             param2 = 9;
           }
           mn.field_r = param2;
@@ -32,9 +32,9 @@ final class gj {
         } else {
           field_b = (String) null;
           if (param2 == 0 &&
-            dg.field_s) {
+            NameValidator.field_s) {
             jm.field_b = co.field_d;
-            dg.field_s = false;
+            NameValidator.field_s = false;
             param2 = 9;
           }
           mn.field_r = param2;
@@ -49,7 +49,7 @@ final class gj {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_b = null;
         field_g = null;
         field_a = null;

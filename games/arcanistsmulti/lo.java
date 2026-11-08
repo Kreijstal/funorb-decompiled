@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lo extends rl {
+final class lo extends TextFieldValidator {
     static String field_x;
     static int field_q;
     static String[] field_u;
@@ -30,21 +30,21 @@ final class lo extends rl {
         super(param0);
     }
 
-    final eh a(String param0, int param1) {
+    final ValidationState validateText(String param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
         CharSequence var5 = null;
         CharSequence var6 = null;
-        eh stackIn_2_0 = null;
-        eh stackIn_7_0 = null;
+        ValidationState stackIn_2_0 = null;
+        ValidationState stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           var5 = (CharSequence) ((Object) param0);
-          if (!fi.a(var5, 10)) {
+          if (!fi.isDecimalInteger(var5, 10)) {
             stackIn_2_0 = ra.field_k;
             return stackIn_2_0;
           }
@@ -67,11 +67,11 @@ final class lo extends rl {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         field_t = null;
         field_r = null;
         field_y = null;
@@ -91,7 +91,7 @@ final class lo extends rl {
         field_u = null;
     }
 
-    final String a(String param0, byte param1) {
+    final String messageForText(String param0, byte param1) {
         RuntimeException var3 = null;
         String stackIn_2_0 = null;
         String stackIn_6_0 = null;
@@ -104,7 +104,7 @@ final class lo extends rl {
             stackIn_2_0 = (String) null;
             return stackIn_2_0;
           }
-          if (this.a(param0, -93) != ra.field_k) {
+          if (this.validateText(param0, -93) != ra.field_k) {
             return null;
           }
           stackIn_6_0 = gf.field_V;
@@ -119,7 +119,7 @@ final class lo extends rl {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
         }
     }
 

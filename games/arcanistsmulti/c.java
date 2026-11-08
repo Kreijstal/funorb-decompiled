@@ -6,7 +6,7 @@ final class c {
     static String field_c;
     static IndexedSprite[] field_a;
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    final static void fillTriangle(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         int var9;
         boolean decompiledFrameRemainder0 = true;
         var9 = ArcanistsMulti.field_G ? 1 : 0;
@@ -408,10 +408,10 @@ final class c {
                     if (tn.field_Ob.field_c.field_Mb != 0) {
                       kh.field_c = tj.a(param3 ^ 119, new String[]{ec.field_b}, q.field_O);
                       if (var19 != 0) {
-                        kh.field_c = ea.field_G;
+                        kh.field_c = DiskCacheRequest.field_G;
                       }
                     } else {
-                      kh.field_c = ea.field_G;
+                      kh.field_c = DiskCacheRequest.field_G;
                     }
                   }
                   decompiledFrameRemainder0 = (var19 != 0);
@@ -496,7 +496,7 @@ final class c {
               if (var9 < 1) {
                 var9 = 1;
               }
-              var8.field_rb = tj.a(113, new String[]{Integer.toString(var9)}, ef.field_v);
+              var8.field_rb = tj.a(113, new String[]{Integer.toString(var9)}, SocketJs5Transport.field_v);
             }
             aj.field_d.field_rb = tj.a(116, new String[]{Integer.toString(DirectByteStorage.field_f.field_Rb), Integer.toString(DirectByteStorage.field_f.field_dc)}, IsaacCipher.field_h);
           }
@@ -532,7 +532,7 @@ final class c {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var5), "c.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw aa.wrapException((Throwable) ((Object) var5), "c.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 

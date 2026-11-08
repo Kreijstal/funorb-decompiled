@@ -12,7 +12,7 @@ final class ec {
     static String field_c;
     static Sprite[] field_i;
 
-    final void a(int param0, int param1, int param2, int param3, int param4) {
+    final void draw(int param0, int param1, int param2, int param3, int param4) {
         gl.a(param4, param0, -27327, param3, this.field_f, param1);
         if (param2 >= -85) {
           field_d = (kc) null;
@@ -33,7 +33,7 @@ final class ec {
         field_a = null;
     }
 
-    final static void a(int param0) {
+    final static void pushClipState(int param0) {
         uh var1 = (uh) (km.field_a.removeLast(true));
         if (var1 == null) {
           var1 = new uh();
@@ -42,7 +42,7 @@ final class ec {
           return;
         }
         var1.a(SoftwareRasterizer.field_c, SoftwareRasterizer.field_l, (byte) 27, SoftwareRasterizer.field_k, SoftwareRasterizer.field_h, SoftwareRasterizer.field_j, SoftwareRasterizer.field_e, SoftwareRasterizer.field_i);
-        lk.field_j.addLast(var1, -1);
+        Js5Transport.field_j.addLast(var1, -1);
     }
 
     final static void a(byte[] param0, byte param1) {
@@ -82,7 +82,7 @@ final class ec {
           }
           if (34 == param0.length) {
             var2_int = 0;
-            kg.field_d[0] = ld.field_n[0];
+            kg.field_d[0] = AlternateUsernameCredentials.field_n[0];
             kg.field_d[2] = IsaacCipher.field_d[0];
             kg.field_d[1] = ud.field_z[0];
             kg.field_d[3] = hi.field_b[0];
@@ -93,11 +93,11 @@ final class ec {
             incrementValue$9 = var2_int;
             var2_int++;
             var3 = (param0[incrementValue$7] << 16 & 16711680) - (-(param0[incrementValue$8] << 8 & 65280) - (param0[incrementValue$9] & 255));
-            for (var4 = 0; ld.field_n.length > var4; var4++) {
-              if (~(ld.field_n[var4][0] << 16) == ~(var3 & 16711680) &&
-                ld.field_n[var4][1] << 8 == (65280 & var3) &&
-                (var3 & 255) == ld.field_n[var4][2]) {
-                kg.field_d[0] = ld.field_n[var4];
+            for (var4 = 0; AlternateUsernameCredentials.field_n.length > var4; var4++) {
+              if (~(AlternateUsernameCredentials.field_n[var4][0] << 16) == ~(var3 & 16711680) &&
+                AlternateUsernameCredentials.field_n[var4][1] << 8 == (65280 & var3) &&
+                (var3 & 255) == AlternateUsernameCredentials.field_n[var4][2]) {
+                kg.field_d[0] = AlternateUsernameCredentials.field_n[var4];
               }
             }
             incrementValue$10 = var2_int;
@@ -150,10 +150,10 @@ final class ec {
             for (var4 = 0; var4 < 16; var4++) {
               incrementValue$19 = var2_int;
               var2_int++;
-              b.field_f[var4] = dg.a((int) param0[incrementValue$19], 255);
+              b.field_f[var4] = NameValidator.bitAnd((int) param0[incrementValue$19], 255);
               if (255 != b.field_f[var4]) {
                 if (0 > b.field_f[var4]) {
-                  b.field_f[var4] = dg.a(b.field_f[var4], 255);
+                  b.field_f[var4] = NameValidator.bitAnd(b.field_f[var4], 255);
                 } else {
                   if (6 > b.field_f[var4]) {
                     if (b.field_f[var4] == 1) {
@@ -192,16 +192,16 @@ final class ec {
             if (var3 >= 0) {
               incrementValue$1 = var2_int;
               var2_int++;
-              kg.field_d[0] = ld.field_n[dg.a((int) param0[incrementValue$1], 255)];
+              kg.field_d[0] = AlternateUsernameCredentials.field_n[NameValidator.bitAnd((int) param0[incrementValue$1], 255)];
               incrementValue$2 = var2_int;
               var2_int++;
-              kg.field_d[1] = ud.field_z[dg.a(255, (int) param0[incrementValue$2])];
+              kg.field_d[1] = ud.field_z[NameValidator.bitAnd(255, (int) param0[incrementValue$2])];
               incrementValue$3 = var2_int;
               var2_int++;
-              kg.field_d[2] = IsaacCipher.field_d[dg.a((int) param0[incrementValue$3], 255)];
+              kg.field_d[2] = IsaacCipher.field_d[NameValidator.bitAnd((int) param0[incrementValue$3], 255)];
               incrementValue$4 = var2_int;
               var2_int++;
-              kg.field_d[3] = hi.field_b[dg.a(255, (int) param0[incrementValue$4])];
+              kg.field_d[3] = hi.field_b[NameValidator.bitAnd(255, (int) param0[incrementValue$4])];
               for (var4 = 0; var4 < 6; var4++) {
                 incrementValue$6 = var2_int;
                 var2_int++;
@@ -210,7 +210,7 @@ final class ec {
               for (var4 = 0; 16 > var4; var4++) {
                 incrementValue$5 = var2_int;
                 var2_int++;
-                b.field_f[var4] = dg.a(255, (int) param0[incrementValue$5]);
+                b.field_f[var4] = NameValidator.bitAnd(255, (int) param0[incrementValue$5]);
                 if (b.field_f[var4] == 255) {
                   b.field_f[var4] = -1;
                 }
@@ -231,7 +231,7 @@ final class ec {
           } else {
             stackIn_80_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_79_0), ((StringBuilder) (Object) stackIn_79_1).append(stackIn_80_2).append(',').append(param1).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_79_0), ((StringBuilder) (Object) stackIn_79_1).append(stackIn_80_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -239,7 +239,7 @@ final class ec {
         try {
           this.field_f = param0;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "ec.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "ec.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

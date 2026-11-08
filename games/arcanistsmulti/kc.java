@@ -426,7 +426,7 @@ class kc extends to {
           } else {
             stackIn_105_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_104_0), ((StringBuilder) (Object) stackIn_104_1).append(stackIn_105_2).append(',').append(param1).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_104_0), ((StringBuilder) (Object) stackIn_104_1).append(stackIn_105_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -468,7 +468,7 @@ class kc extends to {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param3).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -531,7 +531,7 @@ class kc extends to {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -657,7 +657,7 @@ class kc extends to {
           }
           this.field_U = 0;
         }
-        stackIn_30_1 = (!ui.field_v) && (an.field_g >= SoftwareRasterizer.field_i) && (SoftwareRasterizer.field_h > an.field_g) && (me.field_I >= SoftwareRasterizer.field_c) && (SoftwareRasterizer.field_k > me.field_I);
+        stackIn_30_1 = (!ui.field_v) && (EmailLoginCredentials.field_g >= SoftwareRasterizer.field_i) && (SoftwareRasterizer.field_h > EmailLoginCredentials.field_g) && (me.field_I >= SoftwareRasterizer.field_c) && (SoftwareRasterizer.field_k > me.field_I);
         this.field_A = stackIn_30_1;
         if (PacketBuffer.field_m == 0) {
           this.field_P = 0;
@@ -681,7 +681,7 @@ class kc extends to {
         if (~this.field_P != param3 &&
           this.field_H) {
           this.field_db = me.field_I + (-this.field_y - param1);
-          this.field_T = -param5 + (-this.field_cb + an.field_g);
+          this.field_T = -param5 + (-this.field_cb + EmailLoginCredentials.field_g);
           if (this.field_T < 0) {
             this.field_T = 0;
           }
@@ -784,7 +784,7 @@ class kc extends to {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 

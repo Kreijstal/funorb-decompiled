@@ -16,7 +16,7 @@ final class ce extends IntrusiveNode {
         throw new Error();
     }
 
-    public static void b(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_i = null;
         field_l = null;
         field_g = null;
@@ -27,7 +27,7 @@ final class ce extends IntrusiveNode {
         field_m = null;
     }
 
-    final static Sprite b(int param0, int param1, int param2) {
+    final static Sprite createFilledSprite(int param0, int param1, int param2) {
         Sprite var6 = null;
         Sprite var3 = null;
         int var4 = 0;
@@ -36,7 +36,7 @@ final class ce extends IntrusiveNode {
         Sprite var3Lifetime1;
         int var4Lifetime1;
         if (param2 != 21385) {
-          ce.b(true);
+          ce.releaseStatics(true);
         } else {
           var6 = new Sprite(param0, param0);
           var3 = var6;

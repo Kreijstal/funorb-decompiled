@@ -20,7 +20,7 @@ final class co {
         field_h = null;
         field_f = null;
         if (param0 > -42) {
-          co.c(8);
+          co.resetBattleState(8);
         }
         field_d = null;
         field_g = null;
@@ -28,7 +28,7 @@ final class co {
         field_b = null;
     }
 
-    final static int a(int param0) {
+    final static int countUnitsOfType40(int param0) {
         IntrusiveDeque var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -55,7 +55,7 @@ final class co {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var1_ref), "co.C(" + param0 + ')');
+          throw aa.wrapException((Throwable) ((Object) var1_ref), "co.C(" + param0 + ')');
         }
     }
 
@@ -63,7 +63,7 @@ final class co {
         throw new IllegalStateException();
     }
 
-    final static void c(int param0) {
+    final static void resetBattleState(int param0) {
         RuntimeException decompiledCaughtException = null;
         int var1_int = 0;
         RuntimeException var1 = null;
@@ -266,7 +266,7 @@ final class co {
           ce.field_m.a(true);
           qn.field_ob.field_z = gj.field_a[rk.field_O.field_F];
           if (param0 <= 103) {
-            co.c(-94);
+            co.resetBattleState(-94);
           }
           var6 = rk.field_O.a(0, true);
           if (var6 != null) {
@@ -279,7 +279,7 @@ final class co {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var1), "co.A(" + param0 + ')');
+          throw aa.wrapException((Throwable) ((Object) var1), "co.A(" + param0 + ')');
         }
     }
 

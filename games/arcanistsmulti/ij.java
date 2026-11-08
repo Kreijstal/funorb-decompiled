@@ -34,7 +34,7 @@ final class ij extends kc {
           hi.field_g = param2;
           bo.field_c = true;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "ij.K(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "ij.K(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -71,7 +71,7 @@ final class ij extends kc {
                 var6 = 1;
               }
               if (oh.a((byte) 122, var6) == 2) {
-                ea.a(param2, 1, true, var6);
+                DiskCacheRequest.a(param2, 1, true, var6);
               }
               var8 = (String) null;
               BufferedRandomAccessFile.a(var5, (String) null, 70, param1, nj.field_c, so.field_p);
@@ -264,7 +264,7 @@ final class ij extends kc {
           } else {
             stackIn_34_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
         }
     }
 

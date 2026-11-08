@@ -61,24 +61,24 @@ final class fl {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param3).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param3).append(')').toString());
         }
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         if (param0) {
           field_d = null;
           field_b = null;
           field_c = null;
           return;
         }
-        fl.a(false);
+        fl.releaseStatics(false);
         field_d = null;
         field_b = null;
         field_c = null;
     }
 
-    final static void a(int param0, ResourceArchive param1) {
+    final static void loadFinalFrameImage(int param0, ResourceArchive param1) {
         Sprite var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -89,7 +89,7 @@ final class fl {
           var2 = new Sprite(param1.a("", "final_frame.jpg", -1), (java.awt.Component) ((Object) on.field_c));
           var3 = var2.field_q;
           var4 = var2.field_y;
-          ec.a(65280);
+          ec.pushClipState(65280);
           mi.field_E = new Sprite(var3, 3 * var4 / 4);
           mi.field_E.makeRasterTarget();
           var2.drawOpaque(0, 0);
@@ -99,7 +99,7 @@ final class fl {
           gm.field_l.field_o = mi.field_E.field_y;
           oo.c(-15405);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "fl.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "fl.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

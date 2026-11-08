@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class ef extends lk {
+final class SocketJs5Transport extends Js5Transport {
     static String field_s;
     static int field_t;
     static String field_v;
@@ -88,12 +88,12 @@ final class ef extends lk {
           String stackIn_27_2 = null;
           Throwable decompiledCaughtException = null;
           Exception var4 = null;
-          vk var4_ref = null;
+          Js5NetworkRequest var4_ref = null;
           IOException var4_ref2 = null;
           RuntimeException var4_ref3 = null;
           Exception var5 = null;
           int var6 = 0;
-          vk var4_refLifetime1;
+          Js5NetworkRequest var4_refLifetime1;
           var6 = ArcanistsMulti.field_G ? 1 : 0;
           try {
             if (this.field_w != null) {
@@ -111,7 +111,7 @@ final class ef extends lk {
             this.field_n = null;
             this.field_e.position = 0;
             while (true) {
-              var4_ref = (vk) (this.field_g.a((byte) 118));
+              var4_ref = (Js5NetworkRequest) (this.field_g.a((byte) 118));
               if (var4_ref != null) {
                 this.field_b.a(var4_ref, 15893);
                 continue;
@@ -119,7 +119,7 @@ final class ef extends lk {
               break;
             }
             while (true) {
-              var4_refLifetime1 = (vk) (this.field_m.a((byte) 124));
+              var4_refLifetime1 = (Js5NetworkRequest) (this.field_m.a((byte) 124));
               if (var4_refLifetime1 != null) {
                 this.field_f.a(var4_refLifetime1, 15893);
                 continue;
@@ -163,7 +163,7 @@ final class ef extends lk {
             } else {
               stackIn_27_2 = "{...}";
             }
-            throw aa.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
+            throw aa.wrapException((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -172,7 +172,7 @@ final class ef extends lk {
         }
     }
 
-    final static IndexedSprite a(int[] param0, byte param1, IndexedSprite param2) {
+    final static IndexedSprite withPalette(int[] param0, byte param1, IndexedSprite param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         IndexedSprite var4 = null;
@@ -212,7 +212,7 @@ final class ef extends lk {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -223,7 +223,7 @@ final class ef extends lk {
           int stackIn_70_0 = 0;
           Throwable decompiledCaughtException = null;
           long var2_long = 0L;
-          vk var2 = null;
+          Js5NetworkRequest var2 = null;
           IOException var2_ref = null;
           int var3_int = 0;
           Exception var3 = null;
@@ -238,11 +238,11 @@ final class ef extends lk {
           int var11 = 0;
           long var12 = 0L;
           Object var14 = null;
-          vk var14_ref = null;
+          Js5NetworkRequest var14_ref = null;
           int var15 = 0;
           int var16 = 0;
           int var17 = 0;
-          vk var2Lifetime1;
+          Js5NetworkRequest var2Lifetime1;
           var16 = ArcanistsMulti.field_G ? 1 : 0;
           if (this.field_w != null) {
             var2_long = qj.b(-26572);
@@ -273,26 +273,26 @@ final class ef extends lk {
           }
           try {
             this.field_w.a(false);
-            var2 = (vk) (this.field_b.b(96));
+            var2 = (Js5NetworkRequest) (this.field_b.b(96));
             while (var2 != null) {
               this.field_c.position = 0;
               this.field_c.writeByte(1, (byte) -64);
               this.field_c.writeFiveByteValue((byte) -127, var2.secondaryKey);
               this.field_w.a(this.field_c.payload.length, 0, (byte) 116, this.field_c.payload);
               this.field_g.a(var2, 15893);
-              var2 = (vk) (this.field_b.e(-30));
+              var2 = (Js5NetworkRequest) (this.field_b.e(-30));
             }
             if (param0 != -3145) {
               this.c(80);
             }
-            var2Lifetime1 = (vk) (this.field_f.b(63));
+            var2Lifetime1 = (Js5NetworkRequest) (this.field_f.b(63));
             while (var2Lifetime1 != null) {
               this.field_c.position = 0;
               this.field_c.writeByte(0, (byte) -68);
               this.field_c.writeFiveByteValue((byte) -121, var2Lifetime1.secondaryKey);
               this.field_w.a(this.field_c.payload.length, 0, (byte) 116, this.field_c.payload);
               this.field_m.a(var2Lifetime1, 15893);
-              var2Lifetime1 = (vk) (this.field_f.e(param0 + 3265));
+              var2Lifetime1 = (Js5NetworkRequest) (this.field_f.e(param0 + 3265));
             }
             for (var2_int = 0; var2_int < 100; var2_int++) {
               var3_int = this.field_w.b(param0 ^ -3145);
@@ -365,24 +365,24 @@ final class ef extends lk {
                       var12 = (long)var7 + ((long)var6 << 32);
                       var14 = null;
                       if (var11 == 0) {
-                        var14_ref = (vk) (this.field_g.b(54));
+                        var14_ref = (Js5NetworkRequest) (this.field_g.b(54));
                         while (var14_ref != null) {
                           if (~var14_ref.secondaryKey == ~var12) {
                             decompiledFrameCompleted0 = false;
                             break;
                           }
-                          var14_ref = (vk) (this.field_g.e(124));
+                          var14_ref = (Js5NetworkRequest) (this.field_g.e(124));
                         }
                         decompiledFrameRemainder0 = !(decompiledFrameCompleted0);
                       }
                       if ((decompiledFrameRemainder0) &&
                         (decompiledFrameCompleted0)) {
-                        var14_ref = (vk) (this.field_m.b(54));
+                        var14_ref = (Js5NetworkRequest) (this.field_m.b(54));
                         while (var14_ref != null) {
                           if (~var12 == ~var14_ref.secondaryKey) {
                             break;
                           }
-                          var14_ref = (vk) (this.field_m.e(-6));
+                          var14_ref = (Js5NetworkRequest) (this.field_m.e(-6));
                         }
                       }
                       if (var14_ref == null) {
@@ -441,7 +441,7 @@ final class ef extends lk {
         }
     }
 
-    public ef() {
+    public SocketJs5Transport() {
     }
 
     private final void d(byte param0) {
@@ -486,7 +486,7 @@ final class ef extends lk {
         field_s = null;
         field_v = null;
         if (param0 != -1) {
-          ef.releaseStatics(65);
+          SocketJs5Transport.releaseStatics(65);
         }
     }
 

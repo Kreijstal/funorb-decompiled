@@ -107,7 +107,7 @@ final class gn {
                 var21 = var18 & 255;
                 if (0 < var17) {
                   if (var17 >= 256) {
-                    var10[var11] = fj.b(fj.b(var20 << 8, var19 << 16), var21);
+                    var10[var11] = fj.bitOr(fj.bitOr(var20 << 8, var19 << 16), var21);
                     decompiledFrameRemainder0 = false;
                   }
                   else {
@@ -133,7 +133,7 @@ final class gn {
                   var19 = 255;
                 }
                 if (decompiledFrameRemainder0) {
-                  var10[var11] = fj.b(fj.b(var20 << 8, var19 << 16), var21);
+                  var10[var11] = fj.bitOr(fj.bitOr(var20 << 8, var19 << 16), var21);
                 }
               }
             }
@@ -142,7 +142,7 @@ final class gn {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var5), "gn.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw aa.wrapException((Throwable) ((Object) var5), "gn.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -204,7 +204,7 @@ final class gn {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 

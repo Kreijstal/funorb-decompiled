@@ -111,7 +111,7 @@ final class dn extends kc {
           } else {
             stackIn_43_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_39_0), ((StringBuilder) (Object) stackIn_42_1).append(stackIn_43_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_39_0), ((StringBuilder) (Object) stackIn_42_1).append(stackIn_43_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -225,8 +225,8 @@ final class dn extends kc {
         if (param1 == 98) {
           return this.a(this.field_Hb.field_I, param0, param3, param4, -5368, param5, param2);
         }
-        bd var8 = (bd) null;
-        dn.a(true, (bd) null, (byte) -112, false, 112);
+        LoginCredentials var8 = (LoginCredentials) null;
+        dn.writeLoginBlock(true, (LoginCredentials) null, (byte) -112, false, 112);
         return this.a(this.field_Hb.field_I, param0, param3, param4, -5368, param5, param2);
     }
 
@@ -295,7 +295,7 @@ final class dn extends kc {
           this.field_Cb = param1;
           this.field_Hb.a(param1, 62);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "dn.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "dn.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -310,7 +310,7 @@ final class dn extends kc {
         }
     }
 
-    final static void a(boolean param0, bd param1, byte param2, boolean param3, int param4) {
+    final static void writeLoginBlock(boolean param0, LoginCredentials param1, byte param2, boolean param3, int param4) {
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         String stackIn_24_2 = null;
@@ -331,7 +331,7 @@ final class dn extends kc {
           jf.field_a.writeInt(hj.field_a[3], (byte) -101);
           i.a(jf.field_a, 24);
           jf.field_a.writeShort(param4, (byte) -62);
-          param1.a(jf.field_a, param2 - 55);
+          param1.writeTo(jf.field_a, param2 - 55);
           he.field_e.position = 0;
           if (!param0) {
             he.field_e.writeByte(16, (byte) -8);
@@ -343,7 +343,7 @@ final class dn extends kc {
           he.field_e.writeInt(gm.field_d, (byte) -101);
           he.field_e.writeLong(ho.field_c, (byte) 36);
           var6 = 0;
-          if (lk.field_d) {
+          if (Js5Transport.field_d) {
             var6 = var6 | 1;
           }
           if (fl.field_a) {
@@ -356,7 +356,7 @@ final class dn extends kc {
             var6 = var6 | 16;
           }
           he.field_e.writeByte(var6, (byte) -54);
-          var7 = gb.a(cd.e(param2 ^ 3), -120);
+          var7 = gb.a(cd.getApplet(param2 ^ 3), -120);
           if (var7 == null) {
             var7 = "";
           }
@@ -381,7 +381,7 @@ final class dn extends kc {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -402,7 +402,7 @@ final class dn extends kc {
         this.field_Eb.a(0, false, this.field_I, this.field_Cb.field_I, -this.field_Cb.field_db, param0, this.field_Hb.field_I, this.field_x - param0);
     }
 
-    final static void a(int param0, int param1, byte[] param2, int param3, int param4, boolean param5) {
+    final static void sendBytesPacket(int param0, int param1, byte[] param2, int param3, int param4, boolean param5) {
         CipherPacketBuffer var6 = null;
         int var7 = 0;
         int var8 = 0;
@@ -424,7 +424,7 @@ final class dn extends kc {
           var6.writeBytes(param2, 0, (byte) -86, param2.length);
           var6.writeByteLengthAtMark(var6.position - var7, (byte) 43);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "dn.F(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "dn.F(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 

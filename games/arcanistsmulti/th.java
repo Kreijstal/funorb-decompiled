@@ -41,7 +41,7 @@ final class th {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param3).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -117,15 +117,15 @@ final class th {
         try {
           SingleChildContainer.field_z = nj.a("", param3 + 133);
           SingleChildContainer.field_z.a(false, (byte) -59);
-          aa.a(param3 ^ -121, param2, param1, param0);
+          aa.loadCommonUiSprites(param3 ^ -121, param2, param1, param0);
           ci.a((byte) 50);
-          hb.field_Gb = uj.field_h;
-          in.field_Gb = uj.field_h;
+          hb.field_Gb = ScreenDisplayMode.field_h;
+          in.field_Gb = ScreenDisplayMode.field_h;
           if (param3 != -40) {
             field_c = (kc) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "th.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "th.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -305,7 +305,7 @@ final class th {
           } else {
             stackIn_53_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_49_0), ((StringBuilder) (Object) stackIn_52_1).append(stackIn_53_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_49_0), ((StringBuilder) (Object) stackIn_52_1).append(stackIn_53_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -319,7 +319,7 @@ final class th {
         if (param1 >= this.field_h.length) {
           return null;
         }
-        return fd.a(false, this.field_h[param1]);
+        return fd.getDisplayName(false, this.field_h[param1]);
     }
 
     private th() throws Throwable {

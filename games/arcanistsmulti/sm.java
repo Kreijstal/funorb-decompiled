@@ -22,7 +22,7 @@ final class sm {
           if (param0 != 22230) {
             return true;
           }
-          param2 = fb.a(false, '_', param2, "");
+          param2 = fb.replaceCharacter(false, '_', param2, "");
           var3 = pn.a(8671, param1);
           stackIn_8_0 = (param2.indexOf(param1) != -1) || (param2.indexOf(var3) != -1);
           return stackIn_8_0;
@@ -42,7 +42,7 @@ final class sm {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -110,7 +110,7 @@ final class sm {
             } else {
               stackIn_18_2 = "{...}";
             }
-            throw aa.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+            throw aa.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -149,7 +149,7 @@ final class sm {
           oh.field_k.setStream(jl.field_h);
           int var8_int = 110 % ((-25 - param0) / 48);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "sm.D(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "sm.D(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ')');
         }
     }
 

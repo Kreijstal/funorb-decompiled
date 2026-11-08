@@ -4,7 +4,7 @@
 abstract class nn extends DualLinkNode {
     static String field_t;
     static ij field_q;
-    static eh field_s;
+    static ValidationState field_s;
     static String field_m;
     static int field_p;
     static int[][] field_n;
@@ -26,7 +26,7 @@ abstract class nn extends DualLinkNode {
         if (param0 != -25) {
           nn.releaseStatics(-47);
         }
-        var6 = "(" + ve.field_m + " " + nf.field_W + " " + se.field_I + ") " + on.field_g;
+        var6 = "(" + ArchiveRequest.field_m + " " + nf.field_W + " " + se.field_I + ") " + on.field_g;
         var1 = var6;
         if (fj.field_h > 0) {
           var1 = var6 + ":";
@@ -122,7 +122,7 @@ abstract class nn extends DualLinkNode {
           fl.field_b = param7;
           pn.field_b = param13;
           lj.field_o = param6;
-          ef.field_t = param4;
+          SocketJs5Transport.field_t = param4;
           ao.field_h = param1;
           qa.field_o = param11;
           rk.field_I = param5;
@@ -142,7 +142,7 @@ abstract class nn extends DualLinkNode {
           vm.field_c[3] = lj.field_m;
           mj.field_s = new kc(0L, (kc) null);
           uc.field_d = new kc(0L, vf.field_u, hb.field_Bb);
-          nh.field_z = new kc(0L, vf.field_i, ef.field_q);
+          nh.field_z = new kc(0L, vf.field_i, SocketJs5Transport.field_q);
           nj.field_m = new dn(0L, new kc(0L, (kc) null), am.field_c, IntrusiveDeque.field_i);
           mj.field_s.a(uc.field_d, param14 + 87);
           if (fc.field_a) {
@@ -165,7 +165,7 @@ abstract class nn extends DualLinkNode {
           lo.field_r = new kc(0L, EditableTextWidget.field_S, CanvasRasterBuffer.field_h);
           vc.field_j = new kc(0L, EditableTextWidget.field_S, g.field_b);
           jo.field_a = new kc(0L, vf.field_i, kh.field_a);
-          ee.field_g = new dn(0L, new kc(0L, (kc) null), am.field_c, IntrusiveDeque.field_i);
+          DebouncedValidator.field_g = new dn(0L, new kc(0L, (kc) null), am.field_c, IntrusiveDeque.field_i);
           of.field_a = new kc(0L, ko.field_h, fi.field_f.toUpperCase());
           of.field_a.field_ub = fc.field_a;
           stackIn_5_0 = null;
@@ -193,7 +193,7 @@ abstract class nn extends DualLinkNode {
           }
           ad.field_c.a(vc.field_j, param14 + 47);
           ad.field_c.a(jo.field_a, 29);
-          ad.field_c.a(ee.field_g, 124);
+          ad.field_c.a(DebouncedValidator.field_g, 124);
           if (fc.field_a) {
             fn.field_e.a(of.field_a, 20);
           }
@@ -201,7 +201,7 @@ abstract class nn extends DualLinkNode {
           la.field_c = new kc(0L, IntrusiveNode.field_c);
           la.field_c.field_gb = 0;
           la.field_c.field_X = 1;
-          dm.field_E = new kc(0L, gn.field_c, im.field_f.toUpperCase());
+          dm.field_E = new kc(0L, gn.field_c, UsernameCredentials.field_f.toUpperCase());
           gm.field_h = new kc(0L, mf.field_d);
           gm.field_h.a(la.field_c, 110);
           gm.field_h.a(dm.field_E, 121);
@@ -214,7 +214,7 @@ abstract class nn extends DualLinkNode {
           aj.field_d = new kc(0L, IntrusiveNode.field_c);
           aj.field_d.field_X = 1;
           qc.field_d = new kc(0L, vf.field_u, hb.field_Bb);
-          hf.field_q = new kc(0L, vf.field_i, ef.field_q);
+          hf.field_q = new kc(0L, vf.field_i, SocketJs5Transport.field_q);
           lf.field_b = new dn(0L, new kc(0L, (kc) null), am.field_c, IntrusiveDeque.field_i);
           bk.field_M.a(aj.field_d, 30);
           bk.field_M.a(qc.field_d, 51);
@@ -255,7 +255,7 @@ abstract class nn extends DualLinkNode {
           }
           for (var17_intLifetime3 = 0; param2 > var17_intLifetime3; var17_intLifetime3++) {
             wd.field_g[var17_intLifetime3 + 4] = new kc(0L, mi.field_A, ob.field_bb[var17_intLifetime3]);
-            array$2 = new nl[1 + dg.a((int) gb.field_d[var17_intLifetime3], 255)];
+            array$2 = new nl[1 + NameValidator.bitAnd((int) gb.field_d[var17_intLifetime3], 255)];
             IndexedSpriteState.field_e[var17_intLifetime3 + 4] = array$2;
             IndexedSpriteState.field_e[4 + var17_intLifetime3][0] = new nl(0L, nf.field_j, (kc) null, nj.field_d, (Sprite) null, ij.field_Rb);
             for (var18 = 0; var18 < (gb.field_d[var17_intLifetime3] & 255); var18++) {
@@ -319,7 +319,7 @@ abstract class nn extends DualLinkNode {
           oh.field_h.a(go.field_d, 13);
           oh.field_h.a(CanvasRasterBuffer.field_k, 23);
           oh.field_h.a(jf.field_d, 110);
-          hf.field_t = new kc(0L, be.field_l, mb.field_O.toUpperCase());
+          hf.field_t = new kc(0L, SectorCacheStore.field_l, mb.field_O.toUpperCase());
           gj.field_d = new kc(0L, gn.field_c, f.field_i.toUpperCase());
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -392,7 +392,7 @@ abstract class nn extends DualLinkNode {
           } else {
             stackIn_107_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_76_0), ((StringBuilder) (Object) stackIn_106_1).append(stackIn_107_2).append(',').append(param14).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_76_0), ((StringBuilder) (Object) stackIn_106_1).append(stackIn_107_2).append(',').append(param14).append(')').toString());
         }
     }
 
@@ -446,7 +446,7 @@ abstract class nn extends DualLinkNode {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param3).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -458,7 +458,7 @@ abstract class nn extends DualLinkNode {
         field_t = "You are offering to draw.";
         field_p = 15;
         field_m = "Start Game";
-        field_s = new eh();
+        field_s = new ValidationState();
         field_n = new int[][]{new int[]{25, 26, 27}, new int[]{28, 29, 30}, new int[]{31, 32, 33}, new int[]{34, 35, 36}, new int[]{37, 38, 39}, new int[]{40, 41, 42}, new int[]{45, 46, 47}, new int[]{48, 49, 50}, new int[]{61, 62, 62}, new int[]{40, 41, 42}};
     }
 }

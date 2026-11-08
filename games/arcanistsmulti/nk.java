@@ -18,7 +18,7 @@ final class nk extends IntrusiveNode {
     boolean field_g;
     private static String field_z;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_j = null;
         field_q = null;
         field_n = null;
@@ -27,7 +27,7 @@ final class nk extends IntrusiveNode {
           field_o = null;
           return;
         }
-        nk.a(68);
+        nk.releaseStatics(68);
         field_m = (Sprite[][]) null;
         field_o = null;
     }

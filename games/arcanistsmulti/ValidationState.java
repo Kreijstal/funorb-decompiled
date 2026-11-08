@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class eh {
+final class ValidationState {
     static char[] field_f;
     static String field_a;
     static int[] field_g;
@@ -10,7 +10,7 @@ final class eh {
     static String field_b;
     static Sprite field_e;
 
-    final static String[] a(boolean param0, char param1, String param2) {
+    final static String[] split(boolean param0, char param1, String param2) {
         int var7 = 0;
         int incrementValue$1 = 0;
         int var3_int = 0;
@@ -57,7 +57,7 @@ final class eh {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -78,7 +78,7 @@ final class eh {
 
     final static boolean a(boolean param0, int param1, int param2, int param3) {
         if (param0) {
-          eh.b((byte) -111);
+          ValidationState.b((byte) -111);
         }
         if (wh.field_g) {
           return ln.field_U.processKey(ed.field_Bb, (byte) 123, IntrusiveDeque.field_d);
@@ -89,7 +89,7 @@ final class eh {
         if (rk.a((byte) -60, param3, param2)) {
           return true;
         }
-        if (ld.field_p) {
+        if (AlternateUsernameCredentials.field_p) {
           return false;
         }
         return ko.a(-110, param1, param2);
@@ -149,7 +149,7 @@ final class eh {
           var6.writeByte(2, (byte) -70);
           if (param0 >= -14) {
             var5 = (String) null;
-            eh.a(false, '￞', (String) null);
+            ValidationState.split(false, '￞', (String) null);
           }
           var6.writeString(param2, 23333);
           var6.writeByteLengthAtMark(-var4 + var6.position, (byte) 43);
@@ -165,7 +165,7 @@ final class eh {
           } else {
             stackIn_31_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(')').toString());
         }
     }
 
@@ -188,7 +188,7 @@ final class eh {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 18306) {
-            eh.releaseStatics((byte) 21);
+            ValidationState.releaseStatics((byte) 21);
           }
           stackIn_3_0 = param1.a(-27);
           return stackIn_3_0;
@@ -202,7 +202,7 @@ final class eh {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -258,10 +258,10 @@ final class eh {
         }
         if (0 != jl.field_a.field_U) {
           if (ao.field_h.length == 1 &&
-            ef.field_t != ao.field_h[0]) {
-            ef.field_t = ao.field_h[0];
+            SocketJs5Transport.field_t != ao.field_h[0]) {
+            SocketJs5Transport.field_t = ao.field_h[0];
           }
-          dn.a(param2 - 13218, 0, ml.field_m, param3, ef.field_t, true);
+          dn.sendBytesPacket(param2 - 13218, 0, ml.field_m, param3, SocketJs5Transport.field_t, true);
         }
         if (0 != dm.field_E.field_U) {
           IntrusiveNode.field_d = false;

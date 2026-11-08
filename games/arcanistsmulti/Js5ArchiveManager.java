@@ -4,10 +4,10 @@
 final class Js5ArchiveManager {
     private java.math.BigInteger field_i;
     private PacketBuffer field_d;
-    private lk field_l;
+    private Js5Transport field_l;
     private java.math.BigInteger field_j;
     static java.awt.Frame field_c;
-    private vk field_h;
+    private Js5NetworkRequest field_h;
     private tj[] field_b;
     static String[] field_f;
     private pa field_e;
@@ -40,7 +40,7 @@ final class Js5ArchiveManager {
         if (this.field_h.field_p) {
           return false;
         }
-        var10 = new PacketBuffer(this.field_h.c(-20));
+        var10 = new PacketBuffer(this.field_h.getData(-20));
         var10.position = 5;
         var3 = var10.readUnsignedByte((byte) 103);
         var10.position = var10.position + var3 * 72;
@@ -73,11 +73,11 @@ final class Js5ArchiveManager {
         return true;
     }
 
-    Js5ArchiveManager(lk param0, pa param1) {
+    Js5ArchiveManager(Js5Transport param0, pa param1) {
         this(param0, param1, (java.math.BigInteger) null, (java.math.BigInteger) null);
     }
 
-    final tj a(be param0, boolean param1, int param2, be param3, int param4) {
+    final tj a(SectorCacheStore param0, boolean param1, int param2, SectorCacheStore param3, int param4) {
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;
@@ -131,7 +131,7 @@ final class Js5ArchiveManager {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param4).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -146,7 +146,7 @@ final class Js5ArchiveManager {
         field_a = null;
     }
 
-    private Js5ArchiveManager(lk param0, pa param1, java.math.BigInteger param2, java.math.BigInteger param3) {
+    private Js5ArchiveManager(Js5Transport param0, pa param1, java.math.BigInteger param2, java.math.BigInteger param3) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -195,7 +195,7 @@ final class Js5ArchiveManager {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -300,7 +300,7 @@ final class Js5ArchiveManager {
           } else {
             stackIn_33_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param1).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param1).append(')').toString());
         }
     }
 

@@ -31,7 +31,7 @@ class ib extends jm {
         this(ia.field_c, param0);
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         if (param0) {
           field_p = null;
           field_q = null;
@@ -54,14 +54,14 @@ class ib extends jm {
         Throwable var2 = null;
         boolean stackIn_7_0 = false;
         Throwable decompiledCaughtException = null;
-        var1_ref = ch.field_a;
+        var1_ref = CredentialKind.field_a;
         synchronized (var1_ref) {
-          if (gn.field_b == vk.field_u) {
+          if (gn.field_b == Js5NetworkRequest.field_u) {
             return false;
           }
-          IntrusiveDeque.field_d = v.field_p[vk.field_u];
-          ed.field_Bb = qa.field_i[vk.field_u];
-          vk.field_u = 1 + vk.field_u & 127;
+          IntrusiveDeque.field_d = v.field_p[Js5NetworkRequest.field_u];
+          ed.field_Bb = qa.field_i[Js5NetworkRequest.field_u];
+          Js5NetworkRequest.field_u = 1 + Js5NetworkRequest.field_u & 127;
           if (param0) {
             ib.a(false, -118);
           }
@@ -97,7 +97,7 @@ class ib extends jm {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -134,7 +134,7 @@ class ib extends jm {
           }
           super.a(param0, param1, param2, param3, param4);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "ib.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "ib.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 

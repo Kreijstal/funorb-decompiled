@@ -18,9 +18,9 @@ final class qg extends RuntimeException {
         int var2_intLifetime1;
         var3 = ArcanistsMulti.field_G ? 1 : 0;
         try {
-          if (rl.field_m == -1 &&
+          if (TextFieldValidator.field_m == -1 &&
             ln.field_J == -1) {
-            rl.field_m = an.field_g;
+            TextFieldValidator.field_m = EmailLoginCredentials.field_g;
             ln.field_J = me.field_I;
           }
           boolean decompiledFrameRemainder0 = true;
@@ -61,7 +61,7 @@ final class qg extends RuntimeException {
                 oh.field_i = true;
               }
             }
-            IntrusiveNodeHashTable.field_p = rl.field_m;
+            IntrusiveNodeHashTable.field_p = TextFieldValidator.field_m;
             ka.field_p = ln.field_J;
           }
           var2_intLifetime1 = -49 / ((param0 + 45) / 60);
@@ -69,11 +69,11 @@ final class qg extends RuntimeException {
           if (!oh.field_i &&
             oa.field_e > DelegatingCanvas.field_f &&
             ArchiveProvider.field_d) {
-            IntrusiveNodeHashTable.field_p = rl.field_m;
+            IntrusiveNodeHashTable.field_p = TextFieldValidator.field_m;
             ka.field_p = ln.field_J;
             DelegatingCanvas.field_f = 0;
           }
-          rl.field_m = -1;
+          TextFieldValidator.field_m = -1;
           ln.field_J = -1;
           if (oh.field_i) {
             if (mk.field_Q != DelegatingCanvas.field_f) {
@@ -93,7 +93,7 @@ final class qg extends RuntimeException {
           } else {
             stackIn_44_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_43_0), ((StringBuilder) (Object) stackIn_43_1).append(stackIn_44_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_43_0), ((StringBuilder) (Object) stackIn_43_1).append(stackIn_44_2).append(')').toString());
         }
     }
 

@@ -33,7 +33,7 @@ final class he {
           vi.a((byte) 84, param1);
           jn.a(bj.field_qb, false, param0 - 2);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "he.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "he.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

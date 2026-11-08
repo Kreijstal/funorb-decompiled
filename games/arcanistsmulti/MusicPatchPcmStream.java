@@ -7,7 +7,7 @@ final class MusicPatchPcmStream extends PcmStream {
     IntrusiveDeque field_l;
     static wj[] field_p;
     static int field_o;
-    static ch field_m;
+    static CredentialKind field_m;
     PcmStreamMixer field_n;
     static Sprite field_k;
     static String field_r;
@@ -61,7 +61,7 @@ final class MusicPatchPcmStream extends PcmStream {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -162,7 +162,7 @@ final class MusicPatchPcmStream extends PcmStream {
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param5).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -248,7 +248,7 @@ final class MusicPatchPcmStream extends PcmStream {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -288,15 +288,15 @@ final class MusicPatchPcmStream extends PcmStream {
         u.field_k = false;
         field_s = false;
         if (param0 == -24225) {
-          ee.a(-1, (byte) 30);
-          in.field_Gb = uj.field_h;
-          hb.field_Gb = uj.field_h;
+          DebouncedValidator.a(-1, (byte) 30);
+          in.field_Gb = ScreenDisplayMode.field_h;
+          hb.field_Gb = ScreenDisplayMode.field_h;
           return;
         }
         MusicPatchPcmStream.b(true);
-        ee.a(-1, (byte) 30);
-        in.field_Gb = uj.field_h;
-        hb.field_Gb = uj.field_h;
+        DebouncedValidator.a(-1, (byte) 30);
+        in.field_Gb = ScreenDisplayMode.field_h;
+        hb.field_Gb = ScreenDisplayMode.field_h;
     }
 
     MusicPatchPcmStream(MidiPcmStream param0) {
@@ -305,12 +305,12 @@ final class MusicPatchPcmStream extends PcmStream {
         try {
           this.field_q = param0;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "hk.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "hk.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        field_m = new ch(2);
+        field_m = new CredentialKind(2);
         field_r = "Password is valid";
     }
 }

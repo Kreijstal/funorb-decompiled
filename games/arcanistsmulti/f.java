@@ -111,7 +111,7 @@ final class f extends IntrusiveNode {
             qo.field_f.field_Cb.field_bb = 0;
             NodeHashTable.field_j = true;
           }
-          if (ef.field_r &&
+          if (SocketJs5Transport.field_r &&
             tm.field_d != null) {
             NodeHashTable.field_j = true;
           }
@@ -129,7 +129,7 @@ final class f extends IntrusiveNode {
           qo.field_f.field_Cb.field_I = var7Lifetime1;
           qo.field_f.field_Cb.field_B = var7Lifetime1 - qo.field_f.field_Cb.field_I;
           if (!ui.field_s) {
-            if (ef.field_r &&
+            if (SocketJs5Transport.field_r &&
               tm.field_d != null) {
               NodeHashTable.field_j = true;
             }
@@ -145,7 +145,7 @@ final class f extends IntrusiveNode {
             qo.field_f.field_Cb.field_db = qo.field_f.field_Hb.field_I - qo.field_f.field_Cb.field_I;
             qo.field_f.field_Cb.field_bb = 0;
             NodeHashTable.field_j = true;
-            if (!ef.field_r) {
+            if (!SocketJs5Transport.field_r) {
               var9Lifetime2 = -qo.field_f.field_Cb.field_B - qo.field_f.field_Cb.field_I + qo.field_f.field_Hb.field_I;
               if (NodeHashTable.field_j) {
                 qo.field_f.field_Cb.field_bb = -qo.field_f.field_Cb.field_db + var9Lifetime2;
@@ -182,7 +182,7 @@ final class f extends IntrusiveNode {
         }
         qo.field_f.field_Cb.field_B = var7Lifetime1 - qo.field_f.field_Cb.field_I;
         if (!ui.field_s) {
-          if (ef.field_r &&
+          if (SocketJs5Transport.field_r &&
             tm.field_d != null) {
             NodeHashTable.field_j = true;
             var9Lifetime3 = -qo.field_f.field_Cb.field_B - qo.field_f.field_Cb.field_I + qo.field_f.field_Hb.field_I;
@@ -215,7 +215,7 @@ final class f extends IntrusiveNode {
         qo.field_f.field_Cb.field_db = qo.field_f.field_Hb.field_I - qo.field_f.field_Cb.field_I;
         qo.field_f.field_Cb.field_bb = 0;
         NodeHashTable.field_j = true;
-        if (!ef.field_r) {
+        if (!SocketJs5Transport.field_r) {
           var9Lifetime4 = -qo.field_f.field_Cb.field_B - qo.field_f.field_Cb.field_I + qo.field_f.field_Hb.field_I;
           if (!NodeHashTable.field_j) {
             qo.field_f.a(param2, param1 * 2 * param2, 9860, true);
@@ -262,7 +262,7 @@ final class f extends IntrusiveNode {
         try {
           this.field_k = param0;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "f.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "f.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

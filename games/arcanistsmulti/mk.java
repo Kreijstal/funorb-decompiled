@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class mk extends TextButton {
-    private pd field_T;
+    private ValidationProvider field_T;
     static String field_M;
     static String field_I;
     private int field_H;
@@ -40,7 +40,7 @@ final class mk extends TextButton {
 
     final String getTooltip(boolean param0) {
         if (this.field_w) {
-          return this.field_T.c(26146);
+          return this.field_T.getValidationMessage(26146);
         }
         if (!param0) {
           return null;
@@ -54,14 +54,14 @@ final class mk extends TextButton {
           this.field_H = this.field_H + 1;
           super.updatePointer(param0, param1, param2, param3);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "mk.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "mk.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
     final void drawLayer(byte param0, int param1, int param2, int param3) {
         int var5;
         int var6;
-        eh var8;
+        ValidationState var8;
         int var9;
         int var10;
         int var11;
@@ -81,25 +81,25 @@ final class mk extends TextButton {
         }
         var5 = param1 + (this.field_n + (this.field_v >> 1));
         var6 = this.field_j + param3 + (this.field_k >> 1);
-        var8 = this.field_T.a(-116);
+        var8 = this.field_T.getValidationState(-116);
         if (da.field_f == var8) {
           var16 = qk.field_lb[0];
           var9 = var16.field_n << 1;
           var10 = var16.field_w << 1;
           if (ArchiveIndex.field_o == null) {
             ArchiveIndex.field_o = new Sprite(var9, var10);
-            fk.a(ArchiveIndex.field_o, -23095);
+            fk.setSpriteRasterTarget(ArchiveIndex.field_o, -23095);
           } else {
             if (ArchiveIndex.field_o.field_q < var9) {
               ArchiveIndex.field_o = new Sprite(var9, var10);
-              fk.a(ArchiveIndex.field_o, -23095);
+              fk.setSpriteRasterTarget(ArchiveIndex.field_o, -23095);
             } else {
               if (var10 <= ArchiveIndex.field_o.field_y) {
-                fk.a(ArchiveIndex.field_o, -23095);
+                fk.setSpriteRasterTarget(ArchiveIndex.field_o, -23095);
                 SoftwareRasterizer.clear();
               } else {
                 ArchiveIndex.field_o = new Sprite(var9, var10);
-                fk.a(ArchiveIndex.field_o, -23095);
+                fk.setSpriteRasterTarget(ArchiveIndex.field_o, -23095);
               }
             }
           }
@@ -126,18 +126,18 @@ final class mk extends TextButton {
         var10Lifetime1 = var15.field_w << 1;
         if (ArchiveIndex.field_o == null) {
           ArchiveIndex.field_o = new Sprite(var9Lifetime1, var10Lifetime1);
-          fk.a(ArchiveIndex.field_o, -23095);
+          fk.setSpriteRasterTarget(ArchiveIndex.field_o, -23095);
         } else {
           if (ArchiveIndex.field_o.field_q < var9Lifetime1) {
             ArchiveIndex.field_o = new Sprite(var9Lifetime1, var10Lifetime1);
-            fk.a(ArchiveIndex.field_o, -23095);
+            fk.setSpriteRasterTarget(ArchiveIndex.field_o, -23095);
           } else {
             if (var10Lifetime1 <= ArchiveIndex.field_o.field_y) {
-              fk.a(ArchiveIndex.field_o, -23095);
+              fk.setSpriteRasterTarget(ArchiveIndex.field_o, -23095);
               SoftwareRasterizer.clear();
             } else {
               ArchiveIndex.field_o = new Sprite(var9Lifetime1, var10Lifetime1);
-              fk.a(ArchiveIndex.field_o, -23095);
+              fk.setSpriteRasterTarget(ArchiveIndex.field_o, -23095);
             }
           }
         }
@@ -167,15 +167,15 @@ final class mk extends TextButton {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
-    mk(pd param0) {
+    mk(ValidationProvider param0) {
         try {
           this.field_T = param0;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "mk.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "mk.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

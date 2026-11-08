@@ -11,12 +11,12 @@ final class cf {
     static String[] field_b;
     static boolean field_f;
 
-    final static bd a(String param0, String param1, byte param2, boolean param3) {
+    final static LoginCredentials parseCredentials(String param0, String param1, byte param2, boolean param3) {
         long var4_long = 0L;
         RuntimeException var4 = null;
         Object var6 = null;
         CharSequence var7 = null;
-        bd stackIn_6_0 = null;
+        LoginCredentials stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -33,9 +33,9 @@ final class cf {
             var6 = param0;
           } else {
             var7 = (CharSequence) ((Object) param0);
-            var4_long = be.a(var7, false);
+            var4_long = SectorCacheStore.encodeBase37(var7, false);
           }
-          stackIn_6_0 = ci.a(param3, (String) (var6), -62, var4_long, param1);
+          stackIn_6_0 = ci.createCredentials(param3, (String) (var6), -62, var4_long, param1);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -53,7 +53,7 @@ final class cf {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vk extends ve {
+final class Js5NetworkRequest extends ArchiveRequest {
     static aj field_B;
     static int field_u;
     PacketBuffer field_A;
@@ -15,7 +15,7 @@ final class vk extends ve {
         sb.field_a = param0 ? true : false;
     }
 
-    final int e(byte param0) {
+    final int getProgressPercent(byte param0) {
         if (this.field_A == null) {
           return 0;
         }
@@ -25,7 +25,7 @@ final class vk extends ve {
         return this.field_A.position * 100 / (-this.field_y + this.field_A.payload.length);
     }
 
-    final byte[] c(int param0) {
+    final byte[] getData(int param0) {
         if (param0 >= -11) {
           field_z = (String) null;
         }
@@ -46,7 +46,7 @@ final class vk extends ve {
         field_w = null;
     }
 
-    vk() {
+    Js5NetworkRequest() {
     }
 
     final static String a(boolean param0, CharSequence param1, int param2) {
@@ -92,7 +92,7 @@ final class vk extends ve {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(')').toString());
         }
     }
 

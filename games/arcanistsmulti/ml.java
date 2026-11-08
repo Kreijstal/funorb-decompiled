@@ -67,7 +67,7 @@ final class ml extends DualLinkNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var2), "ml.MB(" + param0 + ')');
+          throw aa.wrapException((Throwable) ((Object) var2), "ml.MB(" + param0 + ')');
         }
     }
 
@@ -85,7 +85,7 @@ final class ml extends DualLinkNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var2), "ml.JA(" + param0 + ')');
+          throw aa.wrapException((Throwable) ((Object) var2), "ml.JA(" + param0 + ')');
         }
     }
 
@@ -121,7 +121,7 @@ final class ml extends DualLinkNode {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -138,7 +138,7 @@ final class ml extends DualLinkNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var2), "ml.IB(" + param0 + ')');
+          throw aa.wrapException((Throwable) ((Object) var2), "ml.IB(" + param0 + ')');
         }
     }
 
@@ -191,7 +191,7 @@ final class ml extends DualLinkNode {
                 if (var6 == 0) {
                   break;
                 }
-                var7 = aj.a(this, -480, false, 114, this.field_L, var2_int);
+                var7 = aj.spawnProjectile(this, -480, false, 114, this.field_L, var2_int);
                 var7.field_F = var4_int;
                 var7.field_u = var3_int;
                 this.field_L.b(52, var7);
@@ -204,19 +204,19 @@ final class ml extends DualLinkNode {
             var2_intLifetime1 = (int)(Math.random() * (double)this.field_w.field_q);
             var3_intLifetime1 = (int)(Math.random() * (double)this.field_w.field_y);
             if (this.field_w.field_A[var3_intLifetime1 * this.field_w.field_q + var2_intLifetime1] != 0) {
-              var4 = aj.a((ml) null, -256 + (var3_intLifetime1 + this.field_db) + this.field_w.field_o, false, 109, this.field_L, -128 + this.field_w.field_x + (var2_intLifetime1 + this.field_lb));
+              var4 = aj.spawnProjectile((ml) null, -256 + (var3_intLifetime1 + this.field_db) + this.field_w.field_o, false, 109, this.field_L, -128 + this.field_w.field_x + (var2_intLifetime1 + this.field_lb));
               this.field_L.b(52, var4);
             }
           }
           if (this.field_jb == 25) {
-            var9 = aj.a((ml) null, this.field_db - (this.field_Y >> 1), false, 100, this.field_L, this.field_lb);
+            var9 = aj.spawnProjectile((ml) null, this.field_db - (this.field_Y >> 1), false, 100, this.field_L, this.field_lb);
             var3 = Math.random() * 6.28;
             var9.field_u = (int)((double)(12 * -this.field_E) + 16.0 * Math.sin(var3));
             var9.field_F = (int)(Math.cos(var3) * 16.0);
             this.field_L.b(52, var9);
           }
           if (this.field_jb == 19) {
-            var10 = aj.a((ml) null, this.field_db, false, 100, this.field_L, this.field_lb);
+            var10 = aj.spawnProjectile((ml) null, this.field_db, false, 100, this.field_L, this.field_lb);
             var3Lifetime1 = Math.random() * 6.28;
             var10.field_F = (int)(8.0 + Math.sin(var3Lifetime1) * 12.0);
             var10.field_u = (int)(16.0 * Math.cos(var3Lifetime1));
@@ -226,7 +226,7 @@ final class ml extends DualLinkNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var2), "ml.HA(" + param0 + ')');
+          throw aa.wrapException((Throwable) ((Object) var2), "ml.HA(" + param0 + ')');
         }
     }
 
@@ -245,7 +245,7 @@ final class ml extends DualLinkNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var2), "ml.WA(" + param0 + ')');
+          throw aa.wrapException((Throwable) ((Object) var2), "ml.WA(" + param0 + ')');
         }
     }
 
@@ -255,62 +255,62 @@ final class ml extends DualLinkNode {
         try {
           if (20 == this.field_jb) {
             this.field_q = 25;
-            this.field_Y = uj.field_i[0].field_w;
+            this.field_Y = ScreenDisplayMode.field_i[0].field_w;
             this.field_w = new Sprite(this.field_Y, this.field_Y);
             this.field_w.makeRasterTarget();
-            uj.field_i[0].drawSilhouette(this.field_Y / 2 - uj.field_i[0].field_n / 2, 0, 16777215);
+            ScreenDisplayMode.field_i[0].drawSilhouette(this.field_Y / 2 - ScreenDisplayMode.field_i[0].field_n / 2, 0, 16777215);
           }
           if (this.field_jb == 22) {
             this.field_q = 75;
-            this.field_Y = uj.field_i[1].field_w;
+            this.field_Y = ScreenDisplayMode.field_i[1].field_w;
             this.field_w = new Sprite(this.field_Y, this.field_Y);
             this.field_w.makeRasterTarget();
-            uj.field_i[1].drawSilhouette(-(uj.field_i[1].field_n / 2) + this.field_Y / 2, 0, 16777215);
+            ScreenDisplayMode.field_i[1].drawSilhouette(-(ScreenDisplayMode.field_i[1].field_n / 2) + this.field_Y / 2, 0, 16777215);
           }
           if (param0 != 6) {
             this.field_gb = (mi) null;
           }
           if (this.field_jb == 38) {
-            this.field_Y = uj.field_i[6].field_w;
+            this.field_Y = ScreenDisplayMode.field_i[6].field_w;
             this.field_q = 75;
             this.field_w = new Sprite(this.field_Y, this.field_Y);
             this.field_w.makeRasterTarget();
-            uj.field_i[6].drawSilhouette(-(uj.field_i[6].field_n / 2) + this.field_Y / 2, 0, 16777215);
+            ScreenDisplayMode.field_i[6].drawSilhouette(-(ScreenDisplayMode.field_i[6].field_n / 2) + this.field_Y / 2, 0, 16777215);
           }
           if (this.field_jb == 21) {
             this.field_q = 100;
-            this.field_Y = uj.field_i[2].field_w;
+            this.field_Y = ScreenDisplayMode.field_i[2].field_w;
             this.field_w = new Sprite(this.field_Y, this.field_Y);
             this.field_w.makeRasterTarget();
-            uj.field_i[2].drawSilhouette(this.field_Y / 2 - uj.field_i[2].field_n / 2, 0, 16777215);
+            ScreenDisplayMode.field_i[2].drawSilhouette(this.field_Y / 2 - ScreenDisplayMode.field_i[2].field_n / 2, 0, 16777215);
           }
           if (this.field_jb == 23) {
-            this.field_Y = uj.field_i[3].field_w;
+            this.field_Y = ScreenDisplayMode.field_i[3].field_w;
             this.field_q = 75;
             this.field_w = new Sprite(this.field_Y, this.field_Y);
             this.field_w.makeRasterTarget();
-            uj.field_i[3].drawSilhouette(-(uj.field_i[3].field_n / 2) + this.field_Y / 2, 0, 16777215);
+            ScreenDisplayMode.field_i[3].drawSilhouette(-(ScreenDisplayMode.field_i[3].field_n / 2) + this.field_Y / 2, 0, 16777215);
           }
           if (this.field_jb == 24) {
-            this.field_Y = uj.field_i[4].field_w;
+            this.field_Y = ScreenDisplayMode.field_i[4].field_w;
             this.field_q = 75;
             this.field_w = new Sprite(this.field_Y, this.field_Y);
             this.field_w.makeRasterTarget();
-            uj.field_i[4].drawSilhouette(-(uj.field_i[4].field_n / 2) + this.field_Y / 2, 0, 16777215);
+            ScreenDisplayMode.field_i[4].drawSilhouette(-(ScreenDisplayMode.field_i[4].field_n / 2) + this.field_Y / 2, 0, 16777215);
           }
           if (this.field_jb == 35) {
-            this.field_Y = -16 + (80 + uj.field_i[5].field_w);
+            this.field_Y = -16 + (80 + ScreenDisplayMode.field_i[5].field_w);
             this.field_q = 75;
             this.field_w = new Sprite(this.field_Y, this.field_Y);
             this.field_w.makeRasterTarget();
-            uj.field_i[5].drawSilhouette(this.field_Y / 2 - uj.field_i[5].field_n / 2, 64, 16777215);
+            ScreenDisplayMode.field_i[5].drawSilhouette(this.field_Y / 2 - ScreenDisplayMode.field_i[5].field_n / 2, 64, 16777215);
             SoftwareRasterizer.fillCircle(this.field_Y / 2, 80, 16, 16777215);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var2), "ml.EA(" + param0 + ')');
+          throw aa.wrapException((Throwable) ((Object) var2), "ml.EA(" + param0 + ')');
         }
     }
 
@@ -327,7 +327,7 @@ final class ml extends DualLinkNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var2), "ml.AB(" + param0 + ')');
+          throw aa.wrapException((Throwable) ((Object) var2), "ml.AB(" + param0 + ')');
         }
     }
 
@@ -400,9 +400,9 @@ final class ml extends DualLinkNode {
                   149 != var7_ref.field_I) {
                 }
                 if (param0) {
-                  var10 = aj.a(this, var7_ref.field_G, false, 154, this.field_L, var7_ref.field_v);
+                  var10 = aj.spawnProjectile(this, var7_ref.field_G, false, 154, this.field_L, var7_ref.field_v);
                   this.field_L.b(52, var10);
-                  var11 = aj.a(this, -48 + this.field_db, false, 108, this.field_L, this.field_lb);
+                  var11 = aj.spawnProjectile(this, -48 + this.field_db, false, 108, this.field_L, this.field_lb);
                   this.field_L.b(52, var11);
                 }
                 if (var7_ref.field_I != 157 &&
@@ -422,9 +422,9 @@ final class ml extends DualLinkNode {
                 if (param0) {
                   stackIn_53_1 = var7_ref.field_G;
                   stackIn_54_2 = !(param1);
-                  var12 = aj.a(this, stackIn_53_1, stackIn_54_2, 154, this.field_L, var7_ref.field_v);
+                  var12 = aj.spawnProjectile(this, stackIn_53_1, stackIn_54_2, 154, this.field_L, var7_ref.field_v);
                   this.field_L.b(52, var12);
-                  var13 = aj.a(this, this.field_db - 48, false, 108, this.field_L, this.field_lb);
+                  var13 = aj.spawnProjectile(this, this.field_db - 48, false, 108, this.field_L, this.field_lb);
                   this.field_L.b(52, var13);
                 }
                 var7_ref.f(0);
@@ -436,7 +436,7 @@ final class ml extends DualLinkNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var3), "ml.K(" + param0 + ',' + param1 + ')');
+          throw aa.wrapException((Throwable) ((Object) var3), "ml.K(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -476,7 +476,7 @@ final class ml extends DualLinkNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var2), "ml.DA(" + param0 + ')');
+          throw aa.wrapException((Throwable) ((Object) var2), "ml.DA(" + param0 + ')');
         }
     }
 
@@ -493,7 +493,7 @@ final class ml extends DualLinkNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var2), "ml.LB(" + param0 + ')');
+          throw aa.wrapException((Throwable) ((Object) var2), "ml.LB(" + param0 + ')');
         }
     }
 
@@ -510,7 +510,7 @@ final class ml extends DualLinkNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var2), "ml.H(" + param0 + ')');
+          throw aa.wrapException((Throwable) ((Object) var2), "ml.H(" + param0 + ')');
         }
     }
 
@@ -604,7 +604,7 @@ final class ml extends DualLinkNode {
           var5 = nj.field_n[this.field_u];
           if (this.field_jb == 39 &&
             this.field_F > 2.5) {
-            var36 = aj.a((ml) null, this.field_db + (-(this.p(-8323) / 2) + 13), false, 166, this.field_L, -(42 * this.field_E) + this.field_lb);
+            var36 = aj.spawnProjectile((ml) null, this.field_db + (-(this.p(-8323) / 2) + 13), false, 166, this.field_L, -(42 * this.field_E) + this.field_lb);
             var36.field_u = 20 * -this.field_E;
             var36.field_F = (int)(-5.0 + 15.0 * Math.random());
             this.field_L.b(52, var36);
@@ -614,34 +614,34 @@ final class ml extends DualLinkNode {
             this.field_F > 0.0) {
             if (!(1.0 > this.field_F)) {
               if (2.0 > this.field_F) {
-                var40 = aj.a((ml) null, -30 + this.field_db - (this.p(-8323) / 2 - 13), false, 166, this.field_L, this.field_lb + this.field_E * 22);
+                var40 = aj.spawnProjectile((ml) null, -30 + this.field_db - (this.p(-8323) / 2 - 13), false, 166, this.field_L, this.field_lb + this.field_E * 22);
                 var40.field_u = 30 * this.field_E;
                 var40.field_F = (int)(15.0 * Math.random() - 15.0);
                 this.field_L.b(52, var40);
               } else {
                 if (!(this.field_F < 3.0)) {
                   if (4.0 > this.field_F) {
-                    var39 = aj.a((ml) null, this.field_db + (-(this.p(param2 ^ -1703912164) / 2) + 13 - 5), false, 166, this.field_L, this.field_lb + this.field_E * 22);
+                    var39 = aj.spawnProjectile((ml) null, this.field_db + (-(this.p(param2 ^ -1703912164) / 2) + 13 - 5), false, 166, this.field_L, this.field_lb + this.field_E * 22);
                     var39.field_u = 30 * this.field_E;
                     var39.field_F = (int)(Math.random() * 15.0);
                     this.field_L.b(52, var39);
                   }
                 } else {
-                  var38 = aj.a((ml) null, -12 + (this.field_db - this.p(-8323) / 2), false, 166, this.field_L, this.field_lb - this.field_E * 22);
+                  var38 = aj.spawnProjectile((ml) null, -12 + (this.field_db - this.p(-8323) / 2), false, 166, this.field_L, this.field_lb - this.field_E * 22);
                   var38.field_u = 10 * -this.field_E;
                   var38.field_F = (int)(15.0 * Math.random() - 10.0);
                   this.field_L.b(52, var38);
                 }
               }
             } else {
-              var37 = aj.a((ml) null, 13 + this.field_db - this.p(param2 ^ -1703912164) / 2, false, 166, this.field_L, -(this.field_E * 22) + this.field_lb);
+              var37 = aj.spawnProjectile((ml) null, 13 + this.field_db - this.p(param2 ^ -1703912164) / 2, false, 166, this.field_L, -(this.field_E * 22) + this.field_lb);
               var37.field_u = -this.field_E * 10;
               var37.field_F = (int)(-5.0 + 15.0 * Math.random());
               this.field_L.b(52, var37);
             }
           }
           if (12 == this.field_jb) {
-            SoftwareRasterizer.setClip(param1, param0, this.field_L.field_y + param1, an.field_j);
+            SoftwareRasterizer.setClip(param1, param0, this.field_L.field_y + param1, EmailLoginCredentials.field_j);
             go.field_j[29].draw(-128 + var35[0], var35[1] - 256);
             SoftwareRasterizer.resetClip();
           }
@@ -662,13 +662,13 @@ final class ml extends DualLinkNode {
               SoftwareRasterizer.fillCircle(var41[0] + var9, var41[1] - var8, (int)(0.33 * (double)var7), 16711680);
             } else {
               if (this.field_jb == 20) {
-                uj.field_i[0].drawTransparent(-(uj.field_i[0].field_n / 2) + var41[0], var41[1] - this.field_Y);
+                ScreenDisplayMode.field_i[0].drawTransparent(-(ScreenDisplayMode.field_i[0].field_n / 2) + var41[0], var41[1] - this.field_Y);
                 if (this.field_I != null) {
                   this.field_I.drawHorizontalFlip(var41[0] - 16, var6 + var41[1] + (-(this.field_Y >> 1) - 32));
                 }
               } else {
                 if (this.field_jb == 22) {
-                  uj.field_i[1].drawTransparent(-(uj.field_i[1].field_n / 2) + var35[0], -this.field_Y + var35[1]);
+                  ScreenDisplayMode.field_i[1].drawTransparent(-(ScreenDisplayMode.field_i[1].field_n / 2) + var35[0], -this.field_Y + var35[1]);
                   if (this.field_I != null) {
                     this.field_I.drawHorizontalFlip(var35[0] - 16, var6 + (-32 + (var35[1] - (this.field_Y >> 1))));
                   }
@@ -678,7 +678,7 @@ final class ml extends DualLinkNode {
                       if (this.field_jb != 23) {
                         if (24 != this.field_jb) {
                           if (this.field_jb == 35) {
-                            uj.field_i[5].drawTransparent(-(uj.field_i[5].field_n / 2) + var41[0], -this.field_Y + var41[1] + 64);
+                            ScreenDisplayMode.field_i[5].drawTransparent(-(ScreenDisplayMode.field_i[5].field_n / 2) + var41[0], -this.field_Y + var41[1] + 64);
                             if (this.field_E == -1) {
                               if (null != this.field_B) {
                                 this.field_B.drawHorizontalFlip(-16 + (var41[0] - 8), -16 + (var41[1] - (this.field_Y >> 1)) + var6);
@@ -983,7 +983,7 @@ final class ml extends DualLinkNode {
                                     gn.a(12, (byte) 73, 128, -4 + (this.field_n - (var7 >> 2)) + var41[0], var6 + this.field_N + var41[1] + (-this.field_Y + 8));
                                     var8 = -4 - (var7 >> 2) + (this.field_n + (int)(-6.0 + 13.0 * Math.random()));
                                     var9 = -this.field_Y + 8 + this.field_N - (-var6 - (int)(-18.0 + 13.0 * Math.random()) - (-6 + Math.abs(-this.field_n + var8 + (var7 >> 2) + 4)));
-                                    var47 = aj.a((ml) null, this.field_db + var9, false, 109, this.field_L, this.field_lb + var8);
+                                    var47 = aj.spawnProjectile((ml) null, this.field_db + var9, false, 109, this.field_L, this.field_lb + var8);
                                     var47.field_y = 16;
                                     this.field_L.b(52, var47);
                                   }
@@ -1037,7 +1037,7 @@ final class ml extends DualLinkNode {
                                   gn.a(12, (byte) 117, 128, var41[0] + ((var7 >> 2) - this.field_n + 4), this.field_N + (8 + var41[1] + (-this.field_Y + var6)));
                                   var8 = -this.field_n + (var7 >> 2) - (-4 - (int)(13.0 * Math.random() - 6.0));
                                   var9 = this.field_N - this.field_Y + 8 - (-var6 - (int)(Math.random() * 13.0 - 18.0) - (-6 + Math.abs(-4 + (var8 - (var7 >> 2)) + this.field_n)));
-                                  var46 = aj.a((ml) null, this.field_db + var9, false, 109, this.field_L, this.field_lb + var8);
+                                  var46 = aj.spawnProjectile((ml) null, this.field_db + var9, false, 109, this.field_L, this.field_lb + var8);
                                   var46.field_y = 16;
                                   this.field_L.b(52, var46);
                                 }
@@ -1220,25 +1220,25 @@ final class ml extends DualLinkNode {
                             }
                           }
                         } else {
-                          uj.field_i[4].drawTransparent(var41[0] - uj.field_i[4].field_n / 2, -this.field_Y + var41[1]);
+                          ScreenDisplayMode.field_i[4].drawTransparent(var41[0] - ScreenDisplayMode.field_i[4].field_n / 2, -this.field_Y + var41[1]);
                           if (this.field_I != null) {
                             this.field_I.drawHorizontalFlip(var41[0] - 16, var6 + var41[1] - (this.field_Y >> 1) - 32);
                           }
                         }
                       } else {
-                        uj.field_i[3].drawTransparent(-(uj.field_i[3].field_n / 2) + var41[0], var41[1] - this.field_Y);
+                        ScreenDisplayMode.field_i[3].drawTransparent(-(ScreenDisplayMode.field_i[3].field_n / 2) + var41[0], var41[1] - this.field_Y);
                         if (this.field_I != null) {
                           this.field_I.drawHorizontalFlip(var41[0] - 16, var6 + (-32 + var41[1] - (this.field_Y >> 1)));
                         }
                       }
                     } else {
-                      uj.field_i[2].drawTransparent(-(uj.field_i[2].field_n / 2) + var41[0], -this.field_Y + var41[1]);
+                      ScreenDisplayMode.field_i[2].drawTransparent(-(ScreenDisplayMode.field_i[2].field_n / 2) + var41[0], -this.field_Y + var41[1]);
                       if (null != this.field_I) {
                         this.field_I.drawHorizontalFlip(-16 + var41[0], var41[1] - (this.field_Y >> 1) + (-32 + var6));
                       }
                     }
                   } else {
-                    uj.field_i[6].drawTransparent(-(uj.field_i[6].field_n / 2) + var35[0], -this.field_Y + var35[1]);
+                    ScreenDisplayMode.field_i[6].drawTransparent(-(ScreenDisplayMode.field_i[6].field_n / 2) + var35[0], -this.field_Y + var35[1]);
                     if (null != this.field_I) {
                       this.field_I.drawHorizontalFlip(-16 + var35[0], var6 - (this.field_Y >> 1) + var35[1] - 32);
                     }
@@ -1446,7 +1446,7 @@ final class ml extends DualLinkNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var4), "ml.PA(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw aa.wrapException((Throwable) ((Object) var4), "ml.PA(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -1462,7 +1462,7 @@ final class ml extends DualLinkNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var2), "ml.BB(" + param0 + ')');
+          throw aa.wrapException((Throwable) ((Object) var2), "ml.BB(" + param0 + ')');
         }
     }
 
@@ -1514,7 +1514,7 @@ final class ml extends DualLinkNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var2), "ml.SA(" + param0 + ')');
+          throw aa.wrapException((Throwable) ((Object) var2), "ml.SA(" + param0 + ')');
         }
     }
 
@@ -1531,7 +1531,7 @@ final class ml extends DualLinkNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var2), "ml.EB(" + param0 + ')');
+          throw aa.wrapException((Throwable) ((Object) var2), "ml.EB(" + param0 + ')');
         }
     }
 
@@ -1548,7 +1548,7 @@ final class ml extends DualLinkNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var2), "ml.KB(" + param0 + ')');
+          throw aa.wrapException((Throwable) ((Object) var2), "ml.KB(" + param0 + ')');
         }
     }
 
@@ -1605,7 +1605,7 @@ final class ml extends DualLinkNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var2), "ml.BA(" + param0 + ')');
+          throw aa.wrapException((Throwable) ((Object) var2), "ml.BA(" + param0 + ')');
         }
     }
 
@@ -1967,7 +1967,7 @@ final class ml extends DualLinkNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var2), "ml.MA(" + param0 + ')');
+          throw aa.wrapException((Throwable) ((Object) var2), "ml.MA(" + param0 + ')');
         }
     }
 
@@ -2118,7 +2118,7 @@ final class ml extends DualLinkNode {
                                 SoftwareRasterizer.fillCircle(this.field_Y >> 1, this.field_Y >> 1, this.field_Y >> 1, 16777215);
                               }
                               var25 = new int[]{28, 0, 29, 33, 47, 50, var7, 0, 0};
-                              var13_ref_qb____ = new Sprite[][]{kc.field_kb, jd.field_j, ea.field_u, qe.field_i, hn.field_d, tj.field_A, bo.field_a, h.field_I, fn.field_b};
+                              var13_ref_qb____ = new Sprite[][]{kc.field_kb, jd.field_j, DiskCacheRequest.field_u, qe.field_i, hn.field_d, tj.field_A, bo.field_a, h.field_I, fn.field_b};
                               if (kc.field_kb != null) {
                                 var23 = new int[]{204, 170, 238};
                                 var3 = var23;
@@ -2234,7 +2234,7 @@ final class ml extends DualLinkNode {
                                     }
                                     if (5 == this.field_jb) {
                                       this.field_Y = 64;
-                                      var11 = ea.field_v;
+                                      var11 = DiskCacheRequest.field_v;
                                       this.field_ib = 100;
                                     }
                                     if (1 == this.field_jb) {
@@ -2250,8 +2250,8 @@ final class ml extends DualLinkNode {
                                     if (this.field_jb == 36) {
                                       this.field_ib = 25;
                                       this.field_Y = 32;
-                                      var11 = e.field_I;
-                                      if (lk.a(0, (byte) -127)) {
+                                      var11 = LoginPanel.field_I;
+                                      if (Js5Transport.a(0, (byte) -127)) {
                                         this.field_U = true;
                                         this.field_ib = 75;
                                       }
@@ -2309,7 +2309,7 @@ final class ml extends DualLinkNode {
                                     }
                                     if (this.field_jb == 31) {
                                       this.field_Y = 64;
-                                      var11 = vk.field_w;
+                                      var11 = Js5NetworkRequest.field_w;
                                       this.field_ib = 100;
                                     }
                                     if (this.field_jb == 32) {
@@ -2406,7 +2406,7 @@ final class ml extends DualLinkNode {
                                   var16++;
                                 }
                               }
-                              var9 = new Sprite[][]{kc.field_kb, jd.field_j, ea.field_u, qe.field_i, hn.field_d, tj.field_A, bo.field_a, h.field_I, fn.field_b};
+                              var9 = new Sprite[][]{kc.field_kb, jd.field_j, DiskCacheRequest.field_u, qe.field_i, hn.field_d, tj.field_A, bo.field_a, h.field_I, fn.field_b};
                               if (kc.field_kb == null) {
                                 this.field_J = false;
                               } else {
@@ -2554,7 +2554,7 @@ final class ml extends DualLinkNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var3_ref), "ml.W(" + param0 + ',' + param1 + ')');
+          throw aa.wrapException((Throwable) ((Object) var3_ref), "ml.W(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -2576,7 +2576,7 @@ final class ml extends DualLinkNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var2), "ml.IA(" + param0 + ')');
+          throw aa.wrapException((Throwable) ((Object) var2), "ml.IA(" + param0 + ')');
         }
     }
 
@@ -2587,7 +2587,7 @@ final class ml extends DualLinkNode {
             this.t(8);
           }
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "ml.U(" + param0 + ',' + param1 + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "ml.U(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -2617,7 +2617,7 @@ final class ml extends DualLinkNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var2), "ml.TA(" + param0 + ')');
+          throw aa.wrapException((Throwable) ((Object) var2), "ml.TA(" + param0 + ')');
         }
     }
 
@@ -2636,7 +2636,7 @@ final class ml extends DualLinkNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var2), "ml.FB(" + param0 + ')');
+          throw aa.wrapException((Throwable) ((Object) var2), "ml.FB(" + param0 + ')');
         }
     }
 
@@ -2652,7 +2652,7 @@ final class ml extends DualLinkNode {
           }
           field_V = null;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "ml.NA(" + param0 + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "ml.NA(" + param0 + ')');
         }
     }
 
@@ -2673,7 +2673,7 @@ final class ml extends DualLinkNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var2), "ml.A(" + param0 + ')');
+          throw aa.wrapException((Throwable) ((Object) var2), "ml.A(" + param0 + ')');
         }
     }
 
@@ -2690,7 +2690,7 @@ final class ml extends DualLinkNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var2), "ml.LA(" + param0 + ')');
+          throw aa.wrapException((Throwable) ((Object) var2), "ml.LA(" + param0 + ')');
         }
     }
 
@@ -2743,14 +2743,14 @@ final class ml extends DualLinkNode {
             0 < 1 + (-1 + this.field_L.field_X[this.field_u]) % 5 - (this.field_L.field_X[this.field_u] - 1) / 5) {
             this.field_ib = 20 * ((this.field_L.field_X[this.field_u] - 1) % 5 + 1 - (-1 + this.field_L.field_X[this.field_u]) / 5);
             this.field_x = 0;
-            var8 = aj.a((ml) null, this.field_db - this.field_Y / 2, false, 103, this.field_L, this.field_lb);
+            var8 = aj.spawnProjectile((ml) null, this.field_db - this.field_Y / 2, false, 103, this.field_L, this.field_lb);
             this.field_L.b(52, var8);
             this.field_L.a(this, 0);
             this.field_lb = this.field_L.field_Ab[this.field_u];
             this.field_db = this.field_L.field_o[this.field_u];
             this.field_X = this.field_lb << 4;
             this.field_R = this.field_db << 4;
-            var9 = aj.a((ml) null, -(this.field_Y / 2) + this.field_db, false, 103, this.field_L, this.field_lb);
+            var9 = aj.spawnProjectile((ml) null, -(this.field_Y / 2) + this.field_db, false, 103, this.field_L, this.field_lb);
             this.field_L.b(52, var9);
             while ((this.field_L.field_X[this.field_u] - 1) % 5 + (1 - (-1 + this.field_L.field_X[this.field_u]) / 5) > 0) {
               this.field_L.field_X[this.field_u] = this.field_L.field_X[this.field_u] + 5;
@@ -2794,107 +2794,107 @@ final class ml extends DualLinkNode {
           regionExit1: {
             var4 = this.field_jb;
             if (var4 == 40) {
-              var10 = aj.a((ml) null, -(this.field_Y / 2) + this.field_db, false, 101, this.field_L, this.field_lb);
+              var10 = aj.spawnProjectile((ml) null, -(this.field_Y / 2) + this.field_db, false, 101, this.field_L, this.field_lb);
               this.field_L.b(52, var10);
             } else {
               if (var4 != 0 &&
                 var4 != 27) {
                 switch (var4) {
                   case 3:
-                    var12 = aj.a((ml) null, -(this.field_Y / 2) + this.field_db, false, 99, this.field_L, this.field_lb);
+                    var12 = aj.spawnProjectile((ml) null, -(this.field_Y / 2) + this.field_db, false, 99, this.field_L, this.field_lb);
                     this.field_L.b(52, var12);
                     break regionExit1;
                   case 7:
-                    var13 = aj.a((ml) null, -(this.field_Y / 2) + this.field_db, false, 103, this.field_L, this.field_lb);
+                    var13 = aj.spawnProjectile((ml) null, -(this.field_Y / 2) + this.field_db, false, 103, this.field_L, this.field_lb);
                     this.field_L.b(52, var13);
                     break regionExit1;
                   case 1:
-                    var14 = aj.a((ml) null, this.field_db - this.field_Y / 2, false, 89, this.field_L, this.field_lb);
+                    var14 = aj.spawnProjectile((ml) null, this.field_db - this.field_Y / 2, false, 89, this.field_L, this.field_lb);
                     this.field_L.b(52, var14);
                     break regionExit1;
                   case 5:
-                    var15 = aj.a((ml) null, -(this.field_Y / 2) + this.field_db, false, 94, this.field_L, this.field_lb);
+                    var15 = aj.spawnProjectile((ml) null, -(this.field_Y / 2) + this.field_db, false, 94, this.field_L, this.field_lb);
                     this.field_L.b(52, var15);
                     break regionExit1;
                   case 2:
-                    var16 = aj.a((ml) null, this.field_db - this.field_Y / 2, false, 89, this.field_L, this.field_lb);
+                    var16 = aj.spawnProjectile((ml) null, this.field_db - this.field_Y / 2, false, 89, this.field_L, this.field_lb);
                     this.field_L.b(52, var16);
                     break regionExit1;
                   case 11:
-                    var17 = aj.a((ml) null, this.field_db - this.field_Y / 2, false, 101, this.field_L, this.field_lb);
+                    var17 = aj.spawnProjectile((ml) null, this.field_db - this.field_Y / 2, false, 101, this.field_L, this.field_lb);
                     this.field_L.b(52, var17);
                     break regionExit1;
                   case 9:
-                    var18 = aj.a((ml) null, this.field_db - this.field_Y / 2, false, 108, this.field_L, this.field_lb);
+                    var18 = aj.spawnProjectile((ml) null, this.field_db - this.field_Y / 2, false, 108, this.field_L, this.field_lb);
                     this.field_L.b(52, var18);
                     break regionExit1;
                   case 17:
                     if (this.field_U) {
-                      var20 = aj.a((ml) null, this.field_db - this.field_Y / 2, false, 103, this.field_L, this.field_lb);
+                      var20 = aj.spawnProjectile((ml) null, this.field_db - this.field_Y / 2, false, 103, this.field_L, this.field_lb);
                       this.field_L.b(52, var20);
                       break regionExit1;
                     }
-                    var19 = aj.a((ml) null, -(this.field_Y / 2) + this.field_db, false, 108, this.field_L, this.field_lb);
+                    var19 = aj.spawnProjectile((ml) null, -(this.field_Y / 2) + this.field_db, false, 108, this.field_L, this.field_lb);
                     this.field_L.b(52, var19);
                     break regionExit1;
                   case 10:
-                    var21 = aj.a((ml) null, this.field_db - this.field_Y / 2, false, 108, this.field_L, this.field_lb);
+                    var21 = aj.spawnProjectile((ml) null, this.field_db - this.field_Y / 2, false, 108, this.field_L, this.field_lb);
                     this.field_L.b(52, var21);
                     break regionExit1;
                   case 6:
-                    var22 = aj.a((ml) null, -(this.field_Y / 2) + this.field_db, false, 103, this.field_L, this.field_lb);
+                    var22 = aj.spawnProjectile((ml) null, -(this.field_Y / 2) + this.field_db, false, 103, this.field_L, this.field_lb);
                     this.field_L.b(52, var22);
                     break regionExit1;
                   case 25:
-                    var23 = aj.a((ml) null, -(this.field_Y / 2) + this.field_db, false, 99, this.field_L, this.field_lb);
+                    var23 = aj.spawnProjectile((ml) null, -(this.field_Y / 2) + this.field_db, false, 99, this.field_L, this.field_lb);
                     this.field_L.b(52, var23);
                     break regionExit1;
                   case 4:
-                    var24 = aj.a((ml) null, -(this.field_Y / 2) + this.field_db, false, 94, this.field_L, this.field_lb);
+                    var24 = aj.spawnProjectile((ml) null, -(this.field_Y / 2) + this.field_db, false, 94, this.field_L, this.field_lb);
                     this.field_L.b(52, var24);
                     break regionExit1;
                   case 8:
-                    var25 = aj.a((ml) null, -(this.field_Y / 2) + this.field_db, false, 103, this.field_L, this.field_lb);
+                    var25 = aj.spawnProjectile((ml) null, -(this.field_Y / 2) + this.field_db, false, 103, this.field_L, this.field_lb);
                     this.field_L.b(52, var25);
                     break regionExit1;
                   case 13:
-                    var26 = aj.a((ml) null, this.field_db - this.field_Y / 2, false, 85, this.field_L, this.field_lb);
+                    var26 = aj.spawnProjectile((ml) null, this.field_db - this.field_Y / 2, false, 85, this.field_L, this.field_lb);
                     this.field_L.b(52, var26);
                     break regionExit1;
                   case 37:
-                    var27 = aj.a((ml) null, this.field_db - this.field_Y / 2, false, 163, this.field_L, this.field_lb);
+                    var27 = aj.spawnProjectile((ml) null, this.field_db - this.field_Y / 2, false, 163, this.field_L, this.field_lb);
                     this.field_L.b(52, var27);
                     break regionExit1;
                   case 39:
-                    var28 = aj.a(this.field_s, -10 + (-(this.field_Y / 2) + this.field_db), false, 159, this.field_L, -10 + this.field_lb);
+                    var28 = aj.spawnProjectile(this.field_s, -10 + (-(this.field_Y / 2) + this.field_db), false, 159, this.field_L, -10 + this.field_lb);
                     this.field_L.b(52, var28);
                     var28.field_u = -20;
                     var28.field_F = -20;
-                    var29 = aj.a(this.field_s, -(this.field_Y / 2) + this.field_db - 10, false, 159, this.field_L, this.field_lb + 10);
+                    var29 = aj.spawnProjectile(this.field_s, -(this.field_Y / 2) + this.field_db - 10, false, 159, this.field_L, this.field_lb + 10);
                     this.field_L.b(52, var29);
                     var29.field_u = 20;
                     var29.field_F = -20;
-                    var30 = aj.a(this.field_s, this.field_db - this.field_Y / 2 + 10, false, 159, this.field_L, this.field_lb + 10);
+                    var30 = aj.spawnProjectile(this.field_s, this.field_db - this.field_Y / 2 + 10, false, 159, this.field_L, this.field_lb + 10);
                     this.field_L.b(52, var30);
                     var30.field_u = 20;
                     var30.field_F = 20;
-                    var31 = aj.a(this.field_s, 10 + (this.field_db - this.field_Y / 2), false, 159, this.field_L, -10 + this.field_lb);
+                    var31 = aj.spawnProjectile(this.field_s, 10 + (this.field_db - this.field_Y / 2), false, 159, this.field_L, -10 + this.field_lb);
                     this.field_L.b(52, var31);
                     var31.field_u = -20;
                     var31.field_F = 20;
-                    var32 = aj.a((ml) null, this.field_db - this.field_Y / 2, false, 163, this.field_L, this.field_lb);
+                    var32 = aj.spawnProjectile((ml) null, this.field_db - this.field_Y / 2, false, 163, this.field_L, this.field_lb);
                     this.field_L.b(52, var32);
                     break regionExit1;
                   case 15:
-                    var33 = aj.a((ml) null, -(this.field_Y / 2) + this.field_db, false, 94, this.field_L, this.field_lb);
+                    var33 = aj.spawnProjectile((ml) null, -(this.field_Y / 2) + this.field_db, false, 94, this.field_L, this.field_lb);
                     this.field_L.b(52, var33);
                     break regionExit1;
                   case 14:
-                    var34 = aj.a((ml) null, -(this.field_Y / 2) + this.field_db, false, 99, this.field_L, this.field_lb);
+                    var34 = aj.spawnProjectile((ml) null, -(this.field_Y / 2) + this.field_db, false, 99, this.field_L, this.field_lb);
                     this.field_L.b(52, var34);
                     break regionExit1;
                   case 26:
-                    var35 = aj.a((ml) null, this.field_db - this.field_Y / 2, false, 103, this.field_L, this.field_lb);
+                    var35 = aj.spawnProjectile((ml) null, this.field_db - this.field_Y / 2, false, 103, this.field_L, this.field_lb);
                     this.field_L.b(52, var35);
                     break regionExit1;
                   case 12:
@@ -2911,35 +2911,35 @@ final class ml extends DualLinkNode {
                         var4 != 30) {
                         switch (var4) {
                           case 28:
-                            var40 = aj.a((ml) null, this.field_db - this.field_Y / 2, false, 130, this.field_L, this.field_lb);
+                            var40 = aj.spawnProjectile((ml) null, this.field_db - this.field_Y / 2, false, 130, this.field_L, this.field_lb);
                             this.field_L.b(52, var40);
                             break regionExit1;
                           case 34:
-                            var38 = aj.a((ml) null, -(this.field_Y / 2) + this.field_db, false, 146, this.field_L, this.field_lb);
+                            var38 = aj.spawnProjectile((ml) null, -(this.field_Y / 2) + this.field_db, false, 146, this.field_L, this.field_lb);
                             this.field_L.b(52, var38);
                             var38.field_y = 250;
                             break regionExit1;
                           default:
                             break regionExit1;
                           case 36:
-                            var39 = aj.a((ml) null, -(this.field_Y / 2) + this.field_db, false, 128, this.field_L, this.field_lb);
+                            var39 = aj.spawnProjectile((ml) null, -(this.field_Y / 2) + this.field_db, false, 128, this.field_L, this.field_lb);
                             this.field_L.b(52, var39);
                             break regionExit1;
                           case 32:
                             break;
                         }
                       }
-                      var41 = aj.a((ml) null, this.field_db - this.field_Y / 2, false, 130, this.field_L, this.field_lb);
+                      var41 = aj.spawnProjectile((ml) null, this.field_db - this.field_Y / 2, false, 130, this.field_L, this.field_lb);
                       this.field_L.b(52, var41);
                       break regionExit1;
                     }
-                    var36 = aj.a((ml) null, this.field_db - this.field_Y / 2, false, 154, this.field_L, this.field_lb);
+                    var36 = aj.spawnProjectile((ml) null, this.field_db - this.field_Y / 2, false, 154, this.field_L, this.field_lb);
                     this.field_L.b(52, var36);
                     break regionExit1;
                 }
               }
               this.b(-30225, 53);
-              var11 = aj.a((ml) null, this.field_db - this.field_Y / 2, false, 101, this.field_L, this.field_lb);
+              var11 = aj.spawnProjectile((ml) null, this.field_db - this.field_Y / 2, false, 101, this.field_L, this.field_lb);
               this.field_L.b(52, var11);
             }
           }
@@ -2949,7 +2949,7 @@ final class ml extends DualLinkNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var3), "ml.RA(" + param0 + ',' + param1 + ')');
+          throw aa.wrapException((Throwable) ((Object) var3), "ml.RA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -2968,7 +2968,7 @@ final class ml extends DualLinkNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var4), "ml.CB(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw aa.wrapException((Throwable) ((Object) var4), "ml.CB(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -2985,7 +2985,7 @@ final class ml extends DualLinkNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var2), "ml.OA(" + param0 + ')');
+          throw aa.wrapException((Throwable) ((Object) var2), "ml.OA(" + param0 + ')');
         }
     }
 
@@ -3053,160 +3053,160 @@ final class ml extends DualLinkNode {
               27 != var3) {
               switch (var3) {
                 case 3:
-                  var6 = aj.a((ml) null, -(this.field_Y / 2) + this.field_db, false, 99, this.field_L, this.field_lb);
+                  var6 = aj.spawnProjectile((ml) null, -(this.field_Y / 2) + this.field_db, false, 99, this.field_L, this.field_lb);
                   this.field_L.b(52, var6);
                   break;
                 case 7:
-                  var7 = aj.a((ml) null, this.field_db - this.field_Y, false, 103, this.field_L, this.field_lb);
+                  var7 = aj.spawnProjectile((ml) null, this.field_db - this.field_Y, false, 103, this.field_L, this.field_lb);
                   this.field_L.b(52, var7);
-                  var8 = aj.a((ml) null, this.field_db, false, 103, this.field_L, this.field_lb - this.field_Y / 2);
+                  var8 = aj.spawnProjectile((ml) null, this.field_db, false, 103, this.field_L, this.field_lb - this.field_Y / 2);
                   this.field_L.b(52, var8);
-                  var9 = aj.a((ml) null, this.field_db, false, 103, this.field_L, this.field_lb + this.field_Y / 2);
+                  var9 = aj.spawnProjectile((ml) null, this.field_db, false, 103, this.field_L, this.field_lb + this.field_Y / 2);
                   this.field_L.b(52, var9);
                   break;
                 case 1:
-                  var10 = aj.a((ml) null, -(this.field_Y / 2) + this.field_db, false, 89, this.field_L, this.field_lb);
+                  var10 = aj.spawnProjectile((ml) null, -(this.field_Y / 2) + this.field_db, false, 89, this.field_L, this.field_lb);
                   this.field_L.b(52, var10);
                   break;
                 case 5:
-                  var11 = aj.a((ml) null, this.field_db - this.field_Y, false, 94, this.field_L, this.field_lb);
+                  var11 = aj.spawnProjectile((ml) null, this.field_db - this.field_Y, false, 94, this.field_L, this.field_lb);
                   this.field_L.b(52, var11);
-                  var12 = aj.a((ml) null, this.field_db, false, 94, this.field_L, this.field_lb - this.field_Y / 2);
+                  var12 = aj.spawnProjectile((ml) null, this.field_db, false, 94, this.field_L, this.field_lb - this.field_Y / 2);
                   this.field_L.b(52, var12);
-                  var13 = aj.a((ml) null, this.field_db, false, 94, this.field_L, this.field_Y / 2 + this.field_lb);
+                  var13 = aj.spawnProjectile((ml) null, this.field_db, false, 94, this.field_L, this.field_Y / 2 + this.field_lb);
                   this.field_L.b(52, var13);
                   break;
                 case 2:
-                  var14 = aj.a((ml) null, this.field_db - this.field_Y, false, 89, this.field_L, this.field_lb);
+                  var14 = aj.spawnProjectile((ml) null, this.field_db - this.field_Y, false, 89, this.field_L, this.field_lb);
                   this.field_L.b(52, var14);
-                  var15 = aj.a((ml) null, this.field_db, false, 89, this.field_L, -(this.field_Y / 2) + this.field_lb);
+                  var15 = aj.spawnProjectile((ml) null, this.field_db, false, 89, this.field_L, -(this.field_Y / 2) + this.field_lb);
                   this.field_L.b(52, var15);
-                  var16 = aj.a((ml) null, this.field_db, false, 89, this.field_L, this.field_lb + this.field_Y / 2);
+                  var16 = aj.spawnProjectile((ml) null, this.field_db, false, 89, this.field_L, this.field_lb + this.field_Y / 2);
                   this.field_L.b(52, var16);
                   break;
                 case 11:
-                  var17 = aj.a((ml) null, -(this.field_Y / 2) + this.field_db, false, 101, this.field_L, this.field_lb);
+                  var17 = aj.spawnProjectile((ml) null, -(this.field_Y / 2) + this.field_db, false, 101, this.field_L, this.field_lb);
                   this.field_L.b(52, var17);
                   break;
                 case 9:
-                  var18 = aj.a((ml) null, this.field_db - this.field_Y, false, 108, this.field_L, this.field_lb);
+                  var18 = aj.spawnProjectile((ml) null, this.field_db - this.field_Y, false, 108, this.field_L, this.field_lb);
                   this.field_L.b(52, var18);
-                  var19 = aj.a((ml) null, this.field_db, false, 108, this.field_L, -(this.field_Y / 2) + this.field_lb);
+                  var19 = aj.spawnProjectile((ml) null, this.field_db, false, 108, this.field_L, -(this.field_Y / 2) + this.field_lb);
                   this.field_L.b(52, var19);
-                  var20 = aj.a((ml) null, this.field_db, false, 108, this.field_L, this.field_lb + this.field_Y / 2);
+                  var20 = aj.spawnProjectile((ml) null, this.field_db, false, 108, this.field_L, this.field_lb + this.field_Y / 2);
                   this.field_L.b(52, var20);
                   break;
                 case 17:
-                  var21 = aj.a((ml) null, this.field_db - this.field_Y / 2, false, 108, this.field_L, this.field_lb);
+                  var21 = aj.spawnProjectile((ml) null, this.field_db - this.field_Y / 2, false, 108, this.field_L, this.field_lb);
                   this.field_L.b(52, var21);
                   break;
                 case 10:
-                  var22 = aj.a((ml) null, this.field_db - this.field_Y / 2, false, 108, this.field_L, this.field_lb);
+                  var22 = aj.spawnProjectile((ml) null, this.field_db - this.field_Y / 2, false, 108, this.field_L, this.field_lb);
                   this.field_L.b(52, var22);
                   break;
                 case 6:
-                  var23 = aj.a((ml) null, -(this.field_Y / 2) + this.field_db, false, 103, this.field_L, this.field_lb);
+                  var23 = aj.spawnProjectile((ml) null, -(this.field_Y / 2) + this.field_db, false, 103, this.field_L, this.field_lb);
                   this.field_L.b(52, var23);
                   break;
                 case 25:
-                  var24 = aj.a((ml) null, this.field_db - this.field_Y / 2, false, 99, this.field_L, this.field_lb);
+                  var24 = aj.spawnProjectile((ml) null, this.field_db - this.field_Y / 2, false, 99, this.field_L, this.field_lb);
                   this.field_L.b(52, var24);
                   break;
                 case 4:
-                  var25 = aj.a((ml) null, this.field_db - this.field_Y / 2, false, 94, this.field_L, this.field_lb);
+                  var25 = aj.spawnProjectile((ml) null, this.field_db - this.field_Y / 2, false, 94, this.field_L, this.field_lb);
                   this.field_L.b(52, var25);
                   break;
                 case 8:
-                  var26 = aj.a((ml) null, -(this.field_Y / 2) + this.field_db, false, 103, this.field_L, this.field_lb);
+                  var26 = aj.spawnProjectile((ml) null, -(this.field_Y / 2) + this.field_db, false, 103, this.field_L, this.field_lb);
                   this.field_L.b(52, var26);
                   break;
                 case 37:
-                  var27 = aj.a((ml) null, this.field_db - this.field_Y / 2, false, 163, this.field_L, this.field_lb);
+                  var27 = aj.spawnProjectile((ml) null, this.field_db - this.field_Y / 2, false, 163, this.field_L, this.field_lb);
                   this.field_L.b(52, var27);
                   break;
                 case 39:
-                  var28 = aj.a((ml) null, -this.field_Y + this.field_db, false, 163, this.field_L, this.field_lb);
+                  var28 = aj.spawnProjectile((ml) null, -this.field_Y + this.field_db, false, 163, this.field_L, this.field_lb);
                   this.field_L.b(52, var28);
-                  var29 = aj.a((ml) null, this.field_db - this.field_Y / 2, false, 163, this.field_L, this.field_lb - this.field_Y / 2);
+                  var29 = aj.spawnProjectile((ml) null, this.field_db - this.field_Y / 2, false, 163, this.field_L, this.field_lb - this.field_Y / 2);
                   this.field_L.b(52, var29);
-                  var30 = aj.a((ml) null, this.field_db - this.field_Y / 2, false, 163, this.field_L, this.field_lb + this.field_Y / 2);
+                  var30 = aj.spawnProjectile((ml) null, this.field_db - this.field_Y / 2, false, 163, this.field_L, this.field_lb + this.field_Y / 2);
                   this.field_L.b(52, var30);
-                  var31 = aj.a((ml) null, this.field_db, false, 163, this.field_L, this.field_lb);
+                  var31 = aj.spawnProjectile((ml) null, this.field_db, false, 163, this.field_L, this.field_lb);
                   this.field_L.b(52, var31);
                   break;
                 case 13:
-                  var32 = aj.a((ml) null, this.field_db - this.field_Y, false, 85, this.field_L, this.field_lb);
+                  var32 = aj.spawnProjectile((ml) null, this.field_db - this.field_Y, false, 85, this.field_L, this.field_lb);
                   this.field_L.b(52, var32);
-                  var33 = aj.a((ml) null, -(this.field_Y / 2) + this.field_db, false, 85, this.field_L, -(this.field_Y / 2) + this.field_lb);
+                  var33 = aj.spawnProjectile((ml) null, -(this.field_Y / 2) + this.field_db, false, 85, this.field_L, -(this.field_Y / 2) + this.field_lb);
                   this.field_L.b(52, var33);
-                  var34 = aj.a((ml) null, -(this.field_Y / 2) + this.field_db, false, 85, this.field_L, this.field_Y / 2 + this.field_lb);
+                  var34 = aj.spawnProjectile((ml) null, -(this.field_Y / 2) + this.field_db, false, 85, this.field_L, this.field_Y / 2 + this.field_lb);
                   this.field_L.b(52, var34);
-                  var35 = aj.a((ml) null, this.field_db, false, 85, this.field_L, this.field_lb);
+                  var35 = aj.spawnProjectile((ml) null, this.field_db, false, 85, this.field_L, this.field_lb);
                   this.field_L.b(52, var35);
                   break;
                 case 15:
-                  var36 = aj.a((ml) null, this.field_db - this.field_Y, false, 94, this.field_L, this.field_lb);
+                  var36 = aj.spawnProjectile((ml) null, this.field_db - this.field_Y, false, 94, this.field_L, this.field_lb);
                   this.field_L.b(52, var36);
-                  var37 = aj.a((ml) null, -(this.field_Y / 2) + this.field_db, false, 94, this.field_L, this.field_lb - this.field_Y / 2);
+                  var37 = aj.spawnProjectile((ml) null, -(this.field_Y / 2) + this.field_db, false, 94, this.field_L, this.field_lb - this.field_Y / 2);
                   this.field_L.b(52, var37);
-                  var38 = aj.a((ml) null, this.field_db - this.field_Y / 2, false, 94, this.field_L, this.field_Y / 2 + this.field_lb);
+                  var38 = aj.spawnProjectile((ml) null, this.field_db - this.field_Y / 2, false, 94, this.field_L, this.field_Y / 2 + this.field_lb);
                   this.field_L.b(52, var38);
-                  var39 = aj.a((ml) null, this.field_db, false, 94, this.field_L, this.field_lb);
+                  var39 = aj.spawnProjectile((ml) null, this.field_db, false, 94, this.field_L, this.field_lb);
                   this.field_L.b(52, var39);
                   break;
                 case 14:
-                  var40 = aj.a((ml) null, this.field_db - this.field_Y, false, 99, this.field_L, this.field_lb);
+                  var40 = aj.spawnProjectile((ml) null, this.field_db - this.field_Y, false, 99, this.field_L, this.field_lb);
                   this.field_L.b(52, var40);
-                  var41 = aj.a((ml) null, this.field_db - this.field_Y / 2, false, 99, this.field_L, this.field_lb - this.field_Y / 2);
+                  var41 = aj.spawnProjectile((ml) null, this.field_db - this.field_Y / 2, false, 99, this.field_L, this.field_lb - this.field_Y / 2);
                   this.field_L.b(52, var41);
-                  var42 = aj.a((ml) null, -(this.field_Y / 2) + this.field_db, false, 99, this.field_L, this.field_lb + this.field_Y / 2);
+                  var42 = aj.spawnProjectile((ml) null, -(this.field_Y / 2) + this.field_db, false, 99, this.field_L, this.field_lb + this.field_Y / 2);
                   this.field_L.b(52, var42);
-                  var43 = aj.a((ml) null, this.field_db, false, 99, this.field_L, this.field_lb);
+                  var43 = aj.spawnProjectile((ml) null, this.field_db, false, 99, this.field_L, this.field_lb);
                   this.field_L.b(52, var43);
                   break;
                 case 26:
-                  var44 = aj.a((ml) null, this.field_db - this.field_Y / 2, false, 103, this.field_L, this.field_lb);
+                  var44 = aj.spawnProjectile((ml) null, this.field_db - this.field_Y / 2, false, 103, this.field_L, this.field_lb);
                   this.field_L.b(52, var44);
                   break;
                 case 12:
-                  var45 = aj.a((ml) null, -(this.field_Y / 2) + this.field_db, false, 108, this.field_L, this.field_lb);
+                  var45 = aj.spawnProjectile((ml) null, -(this.field_Y / 2) + this.field_db, false, 108, this.field_L, this.field_lb);
                   this.field_L.b(52, var45);
                   break;
                 case 28:
-                  var46 = aj.a((ml) null, this.field_db - this.field_Y / 2, false, 130, this.field_L, this.field_lb);
+                  var46 = aj.spawnProjectile((ml) null, this.field_db - this.field_Y / 2, false, 130, this.field_L, this.field_lb);
                   this.field_L.b(52, var46);
                   break;
                 case 32:
-                  var47 = aj.a((ml) null, -this.field_Y + this.field_db, false, 130, this.field_L, this.field_lb);
+                  var47 = aj.spawnProjectile((ml) null, -this.field_Y + this.field_db, false, 130, this.field_L, this.field_lb);
                   this.field_L.b(52, var47);
-                  var48 = aj.a((ml) null, this.field_db - this.field_Y / 2, false, 130, this.field_L, this.field_lb - this.field_Y / 2);
+                  var48 = aj.spawnProjectile((ml) null, this.field_db - this.field_Y / 2, false, 130, this.field_L, this.field_lb - this.field_Y / 2);
                   this.field_L.b(52, var48);
-                  var49 = aj.a((ml) null, -(this.field_Y / 2) + this.field_db, false, 130, this.field_L, this.field_lb + this.field_Y / 2);
+                  var49 = aj.spawnProjectile((ml) null, -(this.field_Y / 2) + this.field_db, false, 130, this.field_L, this.field_lb + this.field_Y / 2);
                   this.field_L.b(52, var49);
-                  var50 = aj.a((ml) null, this.field_db, false, 130, this.field_L, this.field_lb);
+                  var50 = aj.spawnProjectile((ml) null, this.field_db, false, 130, this.field_L, this.field_lb);
                   this.field_L.b(52, var50);
                   break;
                 case 33:
-                  var51 = aj.a((ml) null, this.field_db - this.field_Y / 2, false, 128, this.field_L, this.field_lb);
+                  var51 = aj.spawnProjectile((ml) null, this.field_db - this.field_Y / 2, false, 128, this.field_L, this.field_lb);
                   this.field_L.b(52, var51);
                   break;
                 default:
                   break;
                 case 34:
-                  var55 = aj.a((ml) null, -(this.field_Y / 2) + this.field_db, false, 131, this.field_L, this.field_lb);
+                  var55 = aj.spawnProjectile((ml) null, -(this.field_Y / 2) + this.field_db, false, 131, this.field_L, this.field_lb);
                   this.field_L.b(52, var55);
                   break;
                 case 31:
-                  var52 = aj.a((ml) null, this.field_db - this.field_Y, false, 154, this.field_L, this.field_lb);
+                  var52 = aj.spawnProjectile((ml) null, this.field_db - this.field_Y, false, 154, this.field_L, this.field_lb);
                   this.field_L.b(52, var52);
-                  var53 = aj.a((ml) null, this.field_db, false, 154, this.field_L, -(this.field_Y / 2) + this.field_lb);
+                  var53 = aj.spawnProjectile((ml) null, this.field_db, false, 154, this.field_L, -(this.field_Y / 2) + this.field_lb);
                   this.field_L.b(52, var53);
-                  var54 = aj.a((ml) null, this.field_db, false, 154, this.field_L, this.field_Y / 2 + this.field_lb);
+                  var54 = aj.spawnProjectile((ml) null, this.field_db, false, 154, this.field_L, this.field_Y / 2 + this.field_lb);
                   this.field_L.b(52, var54);
                   break;
               }
             } else {
-              var5 = aj.a((ml) null, this.field_db - this.field_Y / 2, false, 101, this.field_L, this.field_lb);
+              var5 = aj.spawnProjectile((ml) null, this.field_db - this.field_Y / 2, false, 101, this.field_L, this.field_lb);
               this.field_L.b(52, var5);
             }
           }
@@ -3215,7 +3215,7 @@ final class ml extends DualLinkNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var2), "ml.J(" + param0 + ')');
+          throw aa.wrapException((Throwable) ((Object) var2), "ml.J(" + param0 + ')');
         }
     }
 
@@ -3242,7 +3242,7 @@ final class ml extends DualLinkNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) runtimeException), "ml.CA(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "ml.CA(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -3261,7 +3261,7 @@ final class ml extends DualLinkNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var3), "ml.S(" + param0 + ',' + param1 + ')');
+          throw aa.wrapException((Throwable) ((Object) var3), "ml.S(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -3492,7 +3492,7 @@ final class ml extends DualLinkNode {
                 this.field_kb = stackIn_132_1;
               }
               this.field_eb = -5 - Math.abs(var11);
-              var15 = aj.a((ml) null, this.field_db, false, 101, this.field_L, this.field_lb);
+              var15 = aj.spawnProjectile((ml) null, this.field_db, false, 101, this.field_L, this.field_lb);
               this.field_L.b(52, var15);
               this.field_L.a(this.field_lb, this.field_Y * 2, (byte) 51, -(this.field_Y / 2) + this.field_db);
               this.field_z = true;
@@ -3548,7 +3548,7 @@ final class ml extends DualLinkNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var2), "ml.QA(" + param0 + ')');
+          throw aa.wrapException((Throwable) ((Object) var2), "ml.QA(" + param0 + ')');
         }
     }
 
@@ -3611,7 +3611,7 @@ final class ml extends DualLinkNode {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -3628,7 +3628,7 @@ final class ml extends DualLinkNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var2), "ml.AA(" + param0 + ')');
+          throw aa.wrapException((Throwable) ((Object) var2), "ml.AA(" + param0 + ')');
         }
     }
 
@@ -3644,7 +3644,7 @@ final class ml extends DualLinkNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var2), "ml.B(" + param0 + ')');
+          throw aa.wrapException((Throwable) ((Object) var2), "ml.B(" + param0 + ')');
         }
     }
 
@@ -3661,7 +3661,7 @@ final class ml extends DualLinkNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var2), "ml.GB(" + param0 + ')');
+          throw aa.wrapException((Throwable) ((Object) var2), "ml.GB(" + param0 + ')');
         }
     }
 
@@ -3794,7 +3794,7 @@ final class ml extends DualLinkNode {
                 this.field_z = true;
                 this.field_eb = -16;
                 if (((this.field_jb == 36)) && ((!(this.field_U) ||
-                  lk.a(0, (byte) -61)))) {
+                  Js5Transport.a(0, (byte) -61)))) {
                   this.field_kb = 0;
                 }
                 decompiledFrameRemainder0 = false;
@@ -3897,7 +3897,7 @@ final class ml extends DualLinkNode {
               }
             }
             if (36 == this.field_jb && (!this.field_U ||
-              lk.a(0, (byte) -88))) {
+              Js5Transport.a(0, (byte) -88))) {
               this.field_kb = 0;
               this.field_eb = -32;
             }
@@ -3945,7 +3945,7 @@ final class ml extends DualLinkNode {
               }
             }
             if (this.field_jb == 36 && (!this.field_U ||
-              lk.a(0, (byte) -23))) {
+              Js5Transport.a(0, (byte) -23))) {
               this.field_eb = -32;
               this.field_kb = 0;
             }
@@ -4025,7 +4025,7 @@ final class ml extends DualLinkNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var2), "ml.VA(" + param0 + ')');
+          throw aa.wrapException((Throwable) ((Object) var2), "ml.VA(" + param0 + ')');
         }
     }
 
@@ -4118,7 +4118,7 @@ final class ml extends DualLinkNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var2), "ml.UA(" + param0 + ')');
+          throw aa.wrapException((Throwable) ((Object) var2), "ml.UA(" + param0 + ')');
         }
     }
 
@@ -4145,7 +4145,7 @@ final class ml extends DualLinkNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var2), "ml.JB(" + param0 + ')');
+          throw aa.wrapException((Throwable) ((Object) var2), "ml.JB(" + param0 + ')');
         }
     }
 
@@ -4156,7 +4156,7 @@ final class ml extends DualLinkNode {
           }
           eb.a(param0, -105);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "ml.V(" + param0 + ',' + param1 + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "ml.V(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -4173,7 +4173,7 @@ final class ml extends DualLinkNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var2), "ml.T(" + param0 + ')');
+          throw aa.wrapException((Throwable) ((Object) var2), "ml.T(" + param0 + ')');
         }
     }
 
@@ -4255,7 +4255,7 @@ final class ml extends DualLinkNode {
             this.b(-30225, cf.field_a[param1]);
           }
           if (25 == this.field_jb) {
-            this.b(-30225, uj.field_c[param1]);
+            this.b(-30225, ScreenDisplayMode.field_c[param1]);
           }
           var3_int = -17 / ((param0 - 25) / 36);
           if (this.field_s != null) {
@@ -4266,7 +4266,7 @@ final class ml extends DualLinkNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var3), "ml.D(" + param0 + ',' + param1 + ')');
+          throw aa.wrapException((Throwable) ((Object) var3), "ml.D(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -4308,7 +4308,7 @@ final class ml extends DualLinkNode {
             } else {
               stackIn_10_2 = "{...}";
             }
-            throw aa.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+            throw aa.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -4394,7 +4394,7 @@ final class ml extends DualLinkNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var2), "ml.HB(" + param0 + ')');
+          throw aa.wrapException((Throwable) ((Object) var2), "ml.HB(" + param0 + ')');
         }
     }
 
@@ -4452,7 +4452,7 @@ final class ml extends DualLinkNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var2), "ml.F(" + param0 + ')');
+          throw aa.wrapException((Throwable) ((Object) var2), "ml.F(" + param0 + ')');
         }
     }
 
@@ -4501,7 +4501,7 @@ final class ml extends DualLinkNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var4), "ml.GA(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw aa.wrapException((Throwable) ((Object) var4), "ml.GA(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -4512,7 +4512,7 @@ final class ml extends DualLinkNode {
             this.y(111);
           }
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "ml.DB(" + param0 + ',' + param1 + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "ml.DB(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -4546,7 +4546,7 @@ final class ml extends DualLinkNode {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -4568,7 +4568,7 @@ final class ml extends DualLinkNode {
           }
           ko.field_j = param0;
           td.a(true, SoftwareRasterizer.field_j / 2, SoftwareRasterizer.field_e / 2);
-          e.b(1, param3.field_o, param0.field_m + param0.field_o, param0.field_o, param3.field_m + param3.field_o);
+          LoginPanel.b(1, param3.field_o, param0.field_m + param0.field_o, param0.field_o, param3.field_m + param3.field_o);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -4589,7 +4589,7 @@ final class ml extends DualLinkNode {
             stackIn_12_0 = stackIn_7_0;
             stackIn_12_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
@@ -4608,7 +4608,7 @@ final class ml extends DualLinkNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var3), "ml.FA(" + param0 + ',' + param1 + ')');
+          throw aa.wrapException((Throwable) ((Object) var3), "ml.FA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -4654,7 +4654,7 @@ final class ml extends DualLinkNode {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param5).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -4670,7 +4670,7 @@ final class ml extends DualLinkNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var2), "ml.E(" + param0 + ')');
+          throw aa.wrapException((Throwable) ((Object) var2), "ml.E(" + param0 + ')');
         }
     }
 
@@ -4730,7 +4730,7 @@ final class ml extends DualLinkNode {
             stackIn_11_0 = stackIn_6_0;
             stackIn_11_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 

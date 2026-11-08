@@ -152,8 +152,8 @@ abstract class ob extends vi {
           var8Lifetime1++;
         }
         ci.field_e.drawTransparent(-90 + (param0 + this.field_v), 10 + param2);
-        dd.a(2, 35 + param2, fk.field_g, this.field_v - 10, 5 + param0);
-        dd.a(param1 ^ -119, param2 + this.field_k - 22, vi.field_E, this.field_v, param0);
+        dd.drawThreeSliceBar(2, 35 + param2, fk.field_g, this.field_v - 10, 5 + param0);
+        dd.drawThreeSliceBar(param1 ^ -119, param2 + this.field_k - 22, vi.field_E, this.field_v, param0);
         var4Lifetime2 = this.field_k - 79;
         var6Lifetime2 = 127;
         var5Lifetime2 = 169;
@@ -169,7 +169,7 @@ abstract class ob extends vi {
         }
     }
 
-    public static void f(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_Y = null;
         field_hb = null;
         field_db = null;
@@ -253,7 +253,7 @@ abstract class ob extends vi {
           he.field_e.writeByte(param1.field_m, (byte) -111);
           he.field_e.writeByte(param1.field_h, (byte) -124);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "ob.KA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "ob.KA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

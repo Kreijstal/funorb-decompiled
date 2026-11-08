@@ -27,7 +27,7 @@ final class bb {
         String stackIn_25_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (uj.field_h != in.field_Gb) {
+          if (ScreenDisplayMode.field_h != in.field_Gb) {
             return false;
           }
           if (param4 != -30001) {
@@ -76,7 +76,7 @@ final class bb {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param6).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -371,11 +371,11 @@ final class bb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var1), "bb.E(" + param0 + ')');
+          throw aa.wrapException((Throwable) ((Object) var1), "bb.E(" + param0 + ')');
         }
     }
 
-    final static String b(byte param0) {
+    final static String getLoadingStatusText(byte param0) {
         if (ih.field_f < 2) {
           return field_e;
         }
@@ -383,7 +383,7 @@ final class bb {
           if (!lh.field_g.c(-10923)) {
             return IntrusiveDeque.field_f;
           }
-          return ld.field_o;
+          return AlternateUsernameCredentials.field_o;
         }
         if (!da.field_b.c(-10923)) {
           return sc.field_Z;
@@ -391,14 +391,14 @@ final class bb {
         if (!da.field_b.a("commonui", -24417)) {
           return gd.field_nb + " - " + da.field_b.b("commonui", 100) + "%";
         }
-        if (!ea.field_C.c(-10923)) {
+        if (!DiskCacheRequest.field_C.c(-10923)) {
           return wh.field_a;
         }
         if (param0 > -121) {
           return (String) null;
         }
-        if (!ea.field_C.a("commonui", -24417)) {
-          return ra.field_d + " - " + ea.field_C.b("commonui", 104) + "%";
+        if (!DiskCacheRequest.field_C.a("commonui", -24417)) {
+          return ra.field_d + " - " + DiskCacheRequest.field_C.b("commonui", 104) + "%";
         }
         if (!ho.field_g.c(-10923)) {
           return NodeHashTable.field_c;
@@ -409,7 +409,7 @@ final class bb {
         return PatchEnvelopeSet.field_f;
     }
 
-    final static void a(String param0, int param1, String param2) {
+    final static void showLoginPanel(String param0, int param1, String param2) {
         if (param1 != -3) {
           return;
         }
@@ -417,10 +417,10 @@ final class bb {
           if (vf.field_k != null) {
             vf.field_k.h(77);
           }
-          wh.field_f = new e(param0, param2, false, true, true);
+          wh.field_f = new LoginPanel(param0, param2, false, true, true);
           g.field_e.a((byte) -92, (UiComponent) (wh.field_f));
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "bb.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "bb.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class rl extends ee implements TextInputListener {
+abstract class TextFieldValidator extends DebouncedValidator implements TextInputListener {
     static int field_o;
     static int[] field_h;
     static boolean[][] field_p;
@@ -12,7 +12,7 @@ abstract class rl extends ee implements TextInputListener {
     static String field_j;
     static long[] field_l;
 
-    public final boolean a(byte param0) {
+    public final boolean isEmpty(byte param0) {
         if (param0 >= -72) {
           return false;
         }
@@ -31,15 +31,15 @@ abstract class rl extends ee implements TextInputListener {
             field_o = 48;
           }
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "rl.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "rl.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final String a(boolean param0) {
+    final String computeMessage(boolean param0) {
         if (!param0) {
           return (String) null;
         }
-        return this.a(this.field_k.field_g, (byte) -120);
+        return this.messageForText(this.field_k.field_g, (byte) -120);
     }
 
     final static boolean d(boolean param0) {
@@ -50,7 +50,7 @@ abstract class rl extends ee implements TextInputListener {
         return 250 < SoundCache.field_a ? true : false;
     }
 
-    public static void c(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_h = null;
         field_j = null;
         field_n = null;
@@ -60,23 +60,23 @@ abstract class rl extends ee implements TextInputListener {
           field_l = null;
           return;
         }
-        rl.d(true);
+        TextFieldValidator.d(true);
         field_i = null;
         field_l = null;
     }
 
     public final void onTextChanged(EditableTextWidget param0, int param1) {
         try {
-          this.b(-17444);
+          this.restartDebounce(-17444);
           if (param1 != -20626) {
             field_h = (int[]) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "rl.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "rl.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    abstract String a(String param0, byte param1);
+    abstract String messageForText(String param0, byte param1);
 
     final static int a(int param0, int param1, int param2) {
         if (param2 > -70) {
@@ -86,15 +86,15 @@ abstract class rl extends ee implements TextInputListener {
         return -1;
     }
 
-    rl(EditableTextWidget param0) {
+    TextFieldValidator(EditableTextWidget param0) {
         try {
           this.field_k = param0;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "rl.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "rl.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static String a(long param0, int param1) {
+    final static String decodeBase37(long param0, int param1) {
         StringBuilder discarded$0 = null;
         int var3;
         long var4;
@@ -133,19 +133,19 @@ abstract class rl extends ee implements TextInputListener {
         }
         var6.reverse();
         if (param1 != 29424) {
-          rl.c((byte) 46);
+          TextFieldValidator.releaseStatics((byte) 46);
         }
         var6.setCharAt(0, Character.toUpperCase(var6.charAt(0)));
         return var6.toString();
     }
 
-    abstract eh a(String param0, int param1);
+    abstract ValidationState validateText(String param0, int param1);
 
-    final eh b(byte param0) {
+    final ValidationState computeState(byte param0) {
         if (param0 != -66) {
-          return (eh) null;
+          return (ValidationState) null;
         }
-        return this.a(this.field_k.field_g, -108);
+        return this.validateText(this.field_k.field_g, -108);
     }
 
     static {

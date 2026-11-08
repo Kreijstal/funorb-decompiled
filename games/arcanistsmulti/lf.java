@@ -87,7 +87,7 @@ final class lf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var1), "lf.A(" + param0 + ')');
+          throw aa.wrapException((Throwable) ((Object) var1), "lf.A(" + param0 + ')');
         }
     }
 
@@ -109,7 +109,7 @@ final class lf {
         if (param0 != -4) {
           field_d = (String) null;
         }
-        dg.d((byte) -74);
+        NameValidator.d((byte) -74);
         jo.a(true);
     }
 

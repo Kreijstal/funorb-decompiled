@@ -32,7 +32,7 @@ final class me extends UiContainer implements ButtonListener {
           var4_int = this.field_J == null ? 0 : this.field_D.paragraphHeight(this.field_J, 260, this.field_D.field_C);
           this.setBounds(22 + var4_int, 0, 288, 0, -51);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "me.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "me.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -45,7 +45,7 @@ final class me extends UiContainer implements ButtonListener {
           this.field_S[var4_int] = param2;
           int var5 = 64 / ((71 - param1) / 35);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "me.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "me.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -90,7 +90,7 @@ final class me extends UiContainer implements ButtonListener {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -137,7 +137,7 @@ final class me extends UiContainer implements ButtonListener {
     }
 
     private final static IndexedSprite a(int param0) {
-        IndexedSprite var1 = new IndexedSprite(pb.field_g, gn.field_a, hl.field_l[0], be.field_d[0], jg.field_p[0], ho.field_i[0], ln.field_I[param0], ph.field_c);
+        IndexedSprite var1 = new IndexedSprite(pb.field_g, gn.field_a, hl.field_l[0], SectorCacheStore.field_d[0], jg.field_p[0], ho.field_i[0], ln.field_I[param0], ph.field_c);
         CanvasRasterBuffer.a(-18229);
         return var1;
     }
@@ -160,7 +160,7 @@ final class me extends UiContainer implements ButtonListener {
             if (null != ri.field_g.field_q) {
               bm.field_e = new BufferedRandomAccessFile(ri.field_g.field_q, 5200, 0);
               ri.field_g.field_q = null;
-              var6 = new be(255, bm.field_e, new BufferedRandomAccessFile(ri.field_g.field_e, 12000, 0), 2097152);
+              var6 = new SectorCacheStore(255, bm.field_e, new BufferedRandomAccessFile(ri.field_g.field_e, 12000, 0), 2097152);
             }
             if (bm.field_e != null) {
               if (bb.field_b == null) {
@@ -170,9 +170,9 @@ final class me extends UiContainer implements ButtonListener {
                 bb.field_b[param0] = new BufferedRandomAccessFile(ri.field_g.field_d[param0], 12000, 0);
                 ri.field_g.field_d[param0] = null;
               }
-              var7 = new be(param0, bm.field_e, bb.field_b[param0], 2097152);
+              var7 = new SectorCacheStore(param0, bm.field_e, bb.field_b[param0], 2097152);
             }
-            var8 = mk.field_O.a((be) (var6), param5, -113, (be) (var7), param0);
+            var8 = mk.field_O.a((SectorCacheStore) (var6), param5, -113, (SectorCacheStore) (var7), param0);
             if (param3) {
               var8.g((byte) 53);
             }
@@ -218,7 +218,7 @@ final class me extends UiContainer implements ButtonListener {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -244,7 +244,7 @@ final class me extends UiContainer implements ButtonListener {
             }
             var7 = this.field_S[var6_int];
             if (var7 != -1) {
-              ee.a(this.field_S[var6_int], (byte) 30);
+              DebouncedValidator.a(this.field_S[var6_int], (byte) 30);
             } else {
               this.field_G.h(77);
             }
@@ -261,7 +261,7 @@ final class me extends UiContainer implements ButtonListener {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 

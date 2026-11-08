@@ -48,7 +48,7 @@ class DualLinkNode extends IntrusiveNode {
             stackIn_8_0 = b.field_e;
             return stackIn_8_0;
           }
-          var3 = eh.a(false, '.', param1);
+          var3 = ValidationState.split(false, '.', param1);
           if (param0 != 32752) {
             stackIn_11_0 = (ri) null;
             return stackIn_11_0;
@@ -78,7 +78,7 @@ class DualLinkNode extends IntrusiveNode {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
         }
     }
 
@@ -111,7 +111,7 @@ class DualLinkNode extends IntrusiveNode {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 

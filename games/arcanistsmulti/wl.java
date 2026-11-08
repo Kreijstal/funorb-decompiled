@@ -125,7 +125,7 @@ final class wl extends mg {
           int var3_int = -113 / ((63 - param1) / 47);
           this.field_J.field_o = (UiListener) ((Object) param0);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "wl.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "wl.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -154,7 +154,7 @@ final class wl extends mg {
         this.a(param3, rc.field_g, this.field_J, -5187, param1);
     }
 
-    public static void k(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 == 0) {
           field_P = null;
           field_N = null;
@@ -210,7 +210,7 @@ final class wl extends mg {
         try {
           vc.field_e.drawCentered(param1, (param2.field_v >> 1) + (param4 + param2.field_n), -5 + (param2.field_j + param0), 16777215, -1);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "wl.M(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "wl.M(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -262,7 +262,7 @@ final class wl extends mg {
         int stackIn_3_0 = 0;
         Throwable decompiledCaughtException = null;
         if (!param0) {
-          wl.k(94);
+          wl.releaseStatics(94);
         }
         try {
           stackIn_3_0 = Integer.parseInt(this.field_J.field_g);
@@ -296,7 +296,7 @@ final class wl extends mg {
         try {
           this.setBounds(param5, param3, param4, param2, -58);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "wl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "wl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -319,7 +319,7 @@ final class wl extends mg {
           }
           this.addChild(-103, this.field_J);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "wl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "wl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

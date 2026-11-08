@@ -34,7 +34,7 @@ final class ol {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var1), "ol.A(" + param0 + ')');
+          throw aa.wrapException((Throwable) ((Object) var1), "ol.A(" + param0 + ')');
         }
     }
 
@@ -63,7 +63,7 @@ final class ol {
             var5 = var9;
             var6 = param0;
             var7 = param3;
-            var9[var6] = var7 + (dg.a(16711422, var9[var6]) >> 1);
+            var9[var6] = var7 + (NameValidator.bitAnd(16711422, var9[var6]) >> 1);
             param0++;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -76,7 +76,7 @@ final class ol {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -137,7 +137,7 @@ final class ol {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -149,7 +149,7 @@ final class ol {
           }
           this.field_d = param1;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "ol.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "ol.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -161,7 +161,7 @@ final class ol {
           this.field_h = param0;
           this.field_d = null;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "ol.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "ol.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

@@ -15,22 +15,22 @@ final class cn extends ArrayWidgetContainer implements ButtonListener {
     static String field_Q;
 
     public final void a(boolean param0, int param1, int param2, int param3, TextButton param4) {
-        if (this.field_P.a(0).a(-114) != nn.field_s) {
+        if (this.field_P.getValidationProvider(0).getValidationState(-114) != nn.field_s) {
           return;
         }
         try {
           qo.a(this.field_P.h(32), this.field_P.g(72), this.field_P.e(param0), (byte) -126);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "cn.U(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "cn.U(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
     final void updatePointer(UiComponent param0, int param1, int param2, int param3) {
         try {
           super.updatePointer(param0, param1, param2, param3);
-          this.field_L.field_B = this.field_P.a(0).a(param2 - 287) == nn.field_s ? true : false;
+          this.field_L.field_B = this.field_P.getValidationProvider(0).getValidationState(param2 - 287) == nn.field_s ? true : false;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "cn.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "cn.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -68,7 +68,7 @@ final class cn extends ArrayWidgetContainer implements ButtonListener {
         this.field_L.setBounds(30, 2 + (-30 + (20 + this.field_k) >> 1), 100, (-var2Lifetime1 + this.field_v >> 1) + 150, -118);
     }
 
-    public static void g(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_N = null;
         field_M = null;
         field_J = null;
@@ -123,7 +123,7 @@ final class cn extends ArrayWidgetContainer implements ButtonListener {
           }
           gb.field_f = 0;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "cn.F(" + param0 + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "cn.F(" + param0 + ')');
         }
     }
 

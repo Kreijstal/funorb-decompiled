@@ -37,7 +37,7 @@ final class ql {
           }
           vd.a(param0, (byte) -74);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "ql.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "ql.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -109,7 +109,7 @@ final class ql {
             if (var3_int == 0) {
               for (var10 = var9Lifetime1; param1 > var10; var10++) {
                 var11 = (-var9Lifetime1 + var10) % var6.field_y * var6.field_q;
-                var11 = dh.a(var11, true, var6.field_A.length);
+                var11 = dh.floorMod(var11, true, var6.field_A.length);
                 for (var12 = var8Lifetime1; param0 > var12; var12++) {
                   SoftwareRasterizer.addPixelScaled(var12, var10, 6035051, -(var6.field_A[var11] & 255) + 255 >> 2);
                   var11++;
@@ -122,7 +122,7 @@ final class ql {
             }
             for (var10Lifetime1 = var9Lifetime1; var10Lifetime1 < param1; var10Lifetime1 += 2) {
               var11Lifetime1 = var6.field_q * ((-var9Lifetime1 + var10Lifetime1) % var6.field_y);
-              var11Lifetime1 = dh.a(var11Lifetime1, true, var6.field_A.length);
+              var11Lifetime1 = dh.floorMod(var11Lifetime1, true, var6.field_A.length);
               for (var12Lifetime1 = var8Lifetime1; param0 > var12Lifetime1; var12Lifetime1 += 2) {
                 SoftwareRasterizer.addPixelScaled(var12Lifetime1 / 2, var10Lifetime1 / 2, 6035051, -(var6.field_A[var11Lifetime1] & 255) + 255 >> 2);
                 var11Lifetime1++;
@@ -141,7 +141,7 @@ final class ql {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var3), "ql.H(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw aa.wrapException((Throwable) ((Object) var3), "ql.H(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -166,14 +166,14 @@ final class ql {
         int var6 = ArcanistsMulti.field_G ? 1 : 0;
         Sprite[] var7 = new Sprite[9];
         Sprite[] var4 = var7;
-        var7[0] = ce.b(param0, param3, 21385);
+        var7[0] = ce.createFilledSprite(param0, param3, 21385);
         if (param1 < 69) {
           return (Sprite[]) null;
         }
         for (var5 = 1; var5 < 9; var5++) {
           var7[var5] = var7[0];
         }
-        var4[4] = ce.b(64, param2, 21385);
+        var4[4] = ce.createFilledSprite(64, param2, 21385);
         return var4;
     }
 
@@ -184,7 +184,7 @@ final class ql {
           }
           sm.a(31536000L, "jagex-last-login-method", param0, -15367, this.field_d);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "ql.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "ql.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -211,7 +211,7 @@ final class ql {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -236,7 +236,7 @@ final class ql {
         try {
           this.field_d = param0;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "ql.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "ql.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

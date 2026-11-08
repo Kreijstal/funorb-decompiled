@@ -42,7 +42,7 @@ final class gl {
             var13 = param5;
             var14 = param0;
             var15 = (16711422 & var18[var11]) >> 1;
-            var10[var11] = dg.a(255, var14 >> 17) - (-(dg.a(var13, 33423780) >> 9) - dg.a(16711680, var12 >> 1)) + var15;
+            var10[var11] = NameValidator.bitAnd(255, var14 >> 17) - (-(NameValidator.bitAnd(var13, 33423780) >> 9) - NameValidator.bitAnd(16711680, var12 >> 1)) + var15;
             param6 = param6 + param7;
             param1++;
             param0 = param0 + param8;
@@ -58,7 +58,7 @@ final class gl {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(')').toString());
         }
     }
 
@@ -152,7 +152,7 @@ final class gl {
             }
             var18 = var14;
             var19 = var15;
-            SoftwareRasterizer.saveClip(ee.field_d);
+            SoftwareRasterizer.saveClip(DebouncedValidator.field_d);
             if (var19 < var18) {
               var19 = param5 + var8 * param0 / (var9 + var8);
               var18 = param5 + var8 * param0 / (var9 + var8);
@@ -160,22 +160,22 @@ final class gl {
             if (null != param4[0]) {
               SoftwareRasterizer.intersectClip(param1, param5, var16, var18);
               param4[0].drawTransparent(param1, param5);
-              SoftwareRasterizer.restoreClip(ee.field_d);
+              SoftwareRasterizer.restoreClip(DebouncedValidator.field_d);
             }
             if (null != param4[2]) {
               SoftwareRasterizer.intersectClip(var17, param5, var10, var18);
               param4[2].drawTransparent(var13, param5);
-              SoftwareRasterizer.restoreClip(ee.field_d);
+              SoftwareRasterizer.restoreClip(DebouncedValidator.field_d);
             }
             if (null != param4[6]) {
               SoftwareRasterizer.intersectClip(param1, var19, var16, var11);
               param4[6].drawTransparent(param1, var15);
-              SoftwareRasterizer.restoreClip(ee.field_d);
+              SoftwareRasterizer.restoreClip(DebouncedValidator.field_d);
             }
             if (param4[8] != null) {
               SoftwareRasterizer.intersectClip(var17, var19, var10, var11);
               param4[8].drawTransparent(var13, var15);
-              SoftwareRasterizer.restoreClip(ee.field_d);
+              SoftwareRasterizer.restoreClip(DebouncedValidator.field_d);
             }
             if (param4[1] != null &&
               param4[1].field_n != 0) {
@@ -183,7 +183,7 @@ final class gl {
               for (var20 = var12; var20 < var13; var20 = var20 + param4[1].field_n) {
                 param4[1].drawTransparent(var20, param5);
               }
-              SoftwareRasterizer.restoreClip(ee.field_d);
+              SoftwareRasterizer.restoreClip(DebouncedValidator.field_d);
             }
             if (null != param4[7] &&
               param4[7].field_n != 0) {
@@ -191,7 +191,7 @@ final class gl {
               for (var20Lifetime1 = var12; var13 > var20Lifetime1; var20Lifetime1 = var20Lifetime1 + param4[7].field_n) {
                 param4[7].drawTransparent(var20Lifetime1, var15);
               }
-              SoftwareRasterizer.restoreClip(ee.field_d);
+              SoftwareRasterizer.restoreClip(DebouncedValidator.field_d);
             }
             if (null != param4[3] &&
               param4[3].field_w != 0) {
@@ -199,7 +199,7 @@ final class gl {
               for (var20Lifetime2 = var14; var20Lifetime2 < var15; var20Lifetime2 = var20Lifetime2 + param4[3].field_w) {
                 param4[3].drawTransparent(param1, var20Lifetime2);
               }
-              SoftwareRasterizer.restoreClip(ee.field_d);
+              SoftwareRasterizer.restoreClip(DebouncedValidator.field_d);
             }
             if (param4[5] != null &&
               param4[5].field_w != 0) {
@@ -207,7 +207,7 @@ final class gl {
               for (var20Lifetime3 = var14; var20Lifetime3 < var15; var20Lifetime3 = var20Lifetime3 + param4[5].field_w) {
                 param4[5].drawTransparent(var13, var20Lifetime3);
               }
-              SoftwareRasterizer.restoreClip(ee.field_d);
+              SoftwareRasterizer.restoreClip(DebouncedValidator.field_d);
             }
             if (null != param4[4] &&
               0 != param4[4].field_n &&
@@ -218,7 +218,7 @@ final class gl {
                   param4[4].drawTransparent(var21, var20Lifetime4);
                 }
               }
-              SoftwareRasterizer.restoreClip(ee.field_d);
+              SoftwareRasterizer.restoreClip(DebouncedValidator.field_d);
               return;
             }
             return;
@@ -234,7 +234,7 @@ final class gl {
           } else {
             stackIn_75_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_74_0), ((StringBuilder) (Object) stackIn_74_1).append(stackIn_75_2).append(',').append(param5).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_74_0), ((StringBuilder) (Object) stackIn_74_1).append(stackIn_75_2).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -268,7 +268,7 @@ final class gl {
                 if (oo.field_y > 0) {
                   oo.field_y = oo.field_y - 1;
                 } else {
-                  if (ce.field_h < ea.field_F) {
+                  if (ce.field_h < DiskCacheRequest.field_F) {
                     if (ce.field_h == 0) {
                       ik.a((byte) -85);
                     }
@@ -281,7 +281,7 @@ final class gl {
                 ce.field_h = ce.field_h - 1;
               } else {
                 if (oo.field_y <= 0) {
-                  if (ea.field_F > sm.field_a) {
+                  if (DiskCacheRequest.field_F > sm.field_a) {
                     if (0 == sm.field_a) {
                       ik.a(true, -115);
                     }
@@ -297,7 +297,7 @@ final class gl {
               if (sm.field_a > 0) {
                 sm.field_a = sm.field_a - 1;
               } else {
-                if (oo.field_y < ea.field_F) {
+                if (oo.field_y < DiskCacheRequest.field_F) {
                   if (oo.field_y == 0) {
                     ik.a(false, 95);
                   }

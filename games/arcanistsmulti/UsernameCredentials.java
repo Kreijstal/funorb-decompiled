@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class im extends bd {
+class UsernameCredentials extends LoginCredentials {
     static int field_g;
     static String field_i;
     static String field_f;
@@ -40,7 +40,7 @@ class im extends bd {
             } else {
               stackIn_7_2 = "{...}";
             }
-            throw aa.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+            throw aa.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -88,7 +88,7 @@ class im extends bd {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var1_ref), "im.P(" + param0 + ')');
+          throw aa.wrapException((Throwable) ((Object) var1_ref), "im.P(" + param0 + ')');
         }
     }
 
@@ -116,7 +116,7 @@ class im extends bd {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var1), "im.O(" + param0 + ')');
+          throw aa.wrapException((Throwable) ((Object) var1), "im.O(" + param0 + ')');
         }
     }
 
@@ -124,14 +124,14 @@ class im extends bd {
         try {
           ff.a(false, param2, (byte) -97, param0);
           if (param1 != 0) {
-            im.a((byte) -12);
+            UsernameCredentials.releaseStatics((byte) -12);
           }
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "im.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "im.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
-    ch a(int param0) {
+    CredentialKind getCredentialKind(int param0) {
         if (param0 != 0) {
           field_i = (String) null;
           return MusicPatchPcmStream.field_m;
@@ -169,7 +169,7 @@ class im extends bd {
           var6 = (CharSequence) ((Object) param1);
           var2 = Js5ArchiveManager.a(var6, -13);
           if (param0 != 0) {
-            im.a((byte) 70);
+            UsernameCredentials.releaseStatics((byte) 70);
           }
           if (var2 == null) {
             stackIn_12_0 = null;
@@ -200,17 +200,17 @@ class im extends bd {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
         }
     }
 
-    final void a(PacketBuffer param0, int param1) {
+    final void writeTo(PacketBuffer param0, int param1) {
         try {
           param0.writeLong(this.field_h, (byte) 109);
           int var3_int = 116 / ((-35 - param1) / 36);
           param0.writeBase38Name((byte) 7, this.field_e);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "im.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "im.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -221,7 +221,7 @@ class im extends bd {
           }
           sm.a(param4 ^ 22876, param5, param0, param1, param3, 1024, param2, param0);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "im.M(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "im.M(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -261,27 +261,27 @@ class im extends bd {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
-    im(long param0, String param1) {
+    UsernameCredentials(long param0, String param1) {
         try {
           this.field_e = param1;
           this.field_h = param0;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "im.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "im.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_f = null;
         if (param0 == -14) {
           field_i = null;
           return;
         }
         String var2 = (String) null;
-        im.a((String) null, -94, (String) null);
+        UsernameCredentials.a((String) null, -94, (String) null);
         field_i = null;
     }
 

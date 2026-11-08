@@ -7,7 +7,7 @@ final class aa extends IntrusiveNode {
     static String field_j;
     static String field_i;
 
-    final static void a(int param0, ResourceArchive param1, ResourceArchive param2, ResourceArchive param3) {
+    final static void loadCommonUiSprites(int param0, ResourceArchive param1, ResourceArchive param2, ResourceArchive param3) {
         Sprite var17 = null;
         IndexedSprite[] var5 = null;
         IndexedSprite[][] var6 = null;
@@ -28,7 +28,7 @@ final class aa extends IntrusiveNode {
         try {
           fk.field_g = qe.a(param3, "frame_top", "commonui", 87);
           vi.field_E = qe.a(param3, "frame_bottom", "commonui", 118);
-          ci.field_e = fj.a("commonui", -22612, param3, "jagex_logo_grey");
+          ci.field_e = fj.loadSprite("commonui", -22612, param3, "jagex_logo_grey");
           af.field_Jb = qe.a(param3, "button", "commonui", 86);
           qk.field_lb = nl.a((byte) 31, param3, "validation", "commonui");
           vc.field_e = (BitmapFont) ((Object) rm.a("arezzo12", param1, "commonui", -119, param3));
@@ -53,17 +53,17 @@ final class aa extends IntrusiveNode {
           var19[1][var8Lifetime1] = 2394342;
           var19[3][var8Lifetime1] = 4767999;
           if (param0 < 71) {
-            aa.b(false);
+            aa.releaseStatics(false);
           }
           for (var9 = 0; var9 < 3; var9++) {
             var14 = var6[var9];
             IndexedSprite[] var10 = var14;
             for (var11_int = 0; var14.length > var11_int; var11_int++) {
-              var14[var11_int] = ef.a(var19[var11_int], (byte) -59, var5[var9]);
+              var14[var11_int] = SocketJs5Transport.withPalette(var19[var11_int], (byte) -59, var5[var9]);
             }
           }
           var9Lifetime1 = var17.field_y;
-          ec.a(65280);
+          ec.pushClipState(65280);
           var17.makeRasterTarget();
           SoftwareRasterizer.grayscaleRectangle(0, 0, SoftwareRasterizer.field_e, SoftwareRasterizer.field_j);
           var15 = new Sprite(var9Lifetime1, var9Lifetime1);
@@ -79,11 +79,11 @@ final class aa extends IntrusiveNode {
           oo.c(-15405);
           af.field_Jb = new Sprite[]{var15, var12, var11};
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "aa.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "aa.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static ClientException a(Throwable param0, String param1) {
+    final static ClientException wrapException(Throwable param0, String param1) {
         ClientException var2 = null;
         if (!(param0 instanceof ClientException)) {
           var2 = new ClientException(param0, param1);
@@ -94,7 +94,7 @@ final class aa extends IntrusiveNode {
         return var2;
     }
 
-    public static void b(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_j = null;
         if (param0) {
           field_i = (String) null;
@@ -103,20 +103,20 @@ final class aa extends IntrusiveNode {
         field_h = null;
     }
 
-    final static uj[] a(PlatformTaskDispatcher param0, byte param1) {
+    final static ScreenDisplayMode[] queryDisplayModes(PlatformTaskDispatcher param0, byte param1) {
         int var5 = 0;
-        uj[] stackIn_4_0 = null;
-        uj[] stackIn_10_0 = null;
-        uj[] stackIn_13_0 = null;
-        uj[] stackIn_18_0 = null;
+        ScreenDisplayMode[] stackIn_4_0 = null;
+        ScreenDisplayMode[] stackIn_10_0 = null;
+        ScreenDisplayMode[] stackIn_13_0 = null;
+        ScreenDisplayMode[] stackIn_18_0 = null;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
         String stackIn_22_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         int[] var3 = null;
-        uj[] var4 = null;
-        uj var6 = null;
+        ScreenDisplayMode[] var4 = null;
+        ScreenDisplayMode var6 = null;
         int var7 = 0;
         PlatformTask var8 = null;
         int[] var9 = null;
@@ -124,7 +124,7 @@ final class aa extends IntrusiveNode {
         var7 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           if (!param0.a((byte) 46)) {
-            stackIn_4_0 = new uj[]{};
+            stackIn_4_0 = new ScreenDisplayMode[]{};
             return stackIn_4_0;
           }
           var8 = param0.b(-27886);
@@ -132,19 +132,19 @@ final class aa extends IntrusiveNode {
             ao.a(10L, 1);
           }
           if (var8.field_e == 2) {
-            stackIn_10_0 = new uj[]{};
+            stackIn_10_0 = new ScreenDisplayMode[]{};
             return stackIn_10_0;
           }
           var10 = (int[]) (var8.field_g);
           var9 = var10;
           var3 = var9;
           if (param1 < 59) {
-            stackIn_13_0 = (uj[]) null;
+            stackIn_13_0 = (ScreenDisplayMode[]) null;
             return stackIn_13_0;
           }
-          var4 = new uj[var10.length >> 2];
+          var4 = new ScreenDisplayMode[var10.length >> 2];
           for (var5 = 0; var4.length > var5; var5++) {
-            var6 = new uj();
+            var6 = new ScreenDisplayMode();
             var4[var5] = var6;
             var6.field_g = var3[var5 << 2];
             var6.field_e = var3[1 + (var5 << 2)];
@@ -163,7 +163,7 @@ final class aa extends IntrusiveNode {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param1).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param1).append(')').toString());
         }
     }
 

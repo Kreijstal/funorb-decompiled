@@ -16,7 +16,7 @@ final class no extends qk {
           }
           param0.addFocusListener(ob.field_hb);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "no.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "no.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -112,7 +112,7 @@ final class no extends qk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref2 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var1_ref2), "no.G(" + param0 + ')');
+          throw aa.wrapException((Throwable) ((Object) var1_ref2), "no.G(" + param0 + ')');
         }
     }
 
@@ -131,7 +131,7 @@ final class no extends qk {
         try {
           super.a(param0, param1);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "no.K(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "no.K(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

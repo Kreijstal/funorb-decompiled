@@ -77,9 +77,9 @@ final class rk extends TextButton {
                   var21 = var18;
                   var22 = 255 & g.field_a.field_A[var12];
                   var22 = (3 * var22 + 4352) / 20;
-                  IntrusiveDeque.field_b.field_A[var11] = dg.a(dg.a(16711680, var21) * var22 >> 8, 16711680) + (dg.a(16711874, dg.a(var21, 65280) * var22) >> 8) + dg.a(255, var22 * dg.a(255, var21) >> 8);
+                  IntrusiveDeque.field_b.field_A[var11] = NameValidator.bitAnd(NameValidator.bitAnd(16711680, var21) * var22 >> 8, 16711680) + (NameValidator.bitAnd(16711874, NameValidator.bitAnd(var21, 65280) * var22) >> 8) + NameValidator.bitAnd(255, var22 * NameValidator.bitAnd(255, var21) >> 8);
                   var22 = 256 - var22;
-                  IntrusiveDeque.field_b.field_A[var11] = IntrusiveDeque.field_b.field_A[var11] + (dg.a(var22 * dg.a(var10, 16711680) >> 8, 16711680) + (dg.a(65280, var22 * dg.a(65280, var10) >> 8) + (dg.a(65495, dg.a(var10, 255) * var22) >> 8)));
+                  IntrusiveDeque.field_b.field_A[var11] = IntrusiveDeque.field_b.field_A[var11] + (NameValidator.bitAnd(var22 * NameValidator.bitAnd(var10, 16711680) >> 8, 16711680) + (NameValidator.bitAnd(65280, var22 * NameValidator.bitAnd(65280, var10) >> 8) + (NameValidator.bitAnd(65495, NameValidator.bitAnd(var10, 255) * var22) >> 8)));
                   if (IntrusiveDeque.field_b.field_A[var11] == 0) {
                     IntrusiveDeque.field_b.field_A[var11] = 1;
                   }
@@ -89,9 +89,9 @@ final class rk extends TextButton {
                   var21 = var19;
                   var22Lifetime1 = 255 & sm.field_d.field_A[var13];
                   var22Lifetime1 = (var22Lifetime1 + 256) / 2;
-                  IntrusiveDeque.field_b.field_A[var11] = (dg.a(dg.a(var21, 255) * var22Lifetime1, 65435) >> 8) + (dg.a(16711680, dg.a(16711680, var21) * var22Lifetime1 >> 8) + (dg.a(dg.a(var21, 65280) * var22Lifetime1, 16711725) >> 8));
+                  IntrusiveDeque.field_b.field_A[var11] = (NameValidator.bitAnd(NameValidator.bitAnd(var21, 255) * var22Lifetime1, 65435) >> 8) + (NameValidator.bitAnd(16711680, NameValidator.bitAnd(16711680, var21) * var22Lifetime1 >> 8) + (NameValidator.bitAnd(NameValidator.bitAnd(var21, 65280) * var22Lifetime1, 16711725) >> 8));
                   var22Lifetime1 = -var22Lifetime1 + 256;
-                  IntrusiveDeque.field_b.field_A[var11] = IntrusiveDeque.field_b.field_A[var11] + (dg.a(65280, var22Lifetime1 * dg.a(var9, 65280) >> 8) + dg.a(dg.a(16711680, var9) * var22Lifetime1 >> 8, 16711680) + dg.a(255, var22Lifetime1 * dg.a(255, var9) >> 8));
+                  IntrusiveDeque.field_b.field_A[var11] = IntrusiveDeque.field_b.field_A[var11] + (NameValidator.bitAnd(65280, var22Lifetime1 * NameValidator.bitAnd(var9, 65280) >> 8) + NameValidator.bitAnd(NameValidator.bitAnd(16711680, var9) * var22Lifetime1 >> 8, 16711680) + NameValidator.bitAnd(255, var22Lifetime1 * NameValidator.bitAnd(255, var9) >> 8));
                   if (IntrusiveDeque.field_b.field_A[var11] == 0) {
                     IntrusiveDeque.field_b.field_A[var11] = 1;
                   }
@@ -181,7 +181,7 @@ final class rk extends TextButton {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var1), "rk.G(" + param0 + ')');
+          throw aa.wrapException((Throwable) ((Object) var1), "rk.G(" + param0 + ')');
         }
     }
 
@@ -277,7 +277,7 @@ final class rk extends TextButton {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 

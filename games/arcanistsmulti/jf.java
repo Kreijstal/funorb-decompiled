@@ -37,7 +37,7 @@ final class jf implements Iterator {
             break;
           }
           if (var3 != null) {
-            da.a(var3, 20, param0);
+            da.insertBefore(var3, 20, param0);
             return;
           }
           gm.field_j.addLast(param0, -1);
@@ -52,7 +52,7 @@ final class jf implements Iterator {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -155,7 +155,7 @@ final class jf implements Iterator {
             }
             ml.a(-122, param1);
           } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) ((Object) runtimeException), "jf.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+            throw aa.wrapException((Throwable) ((Object) runtimeException), "jf.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -183,7 +183,7 @@ final class jf implements Iterator {
           this.field_c = param0;
           this.a(-1);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "jf.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "jf.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

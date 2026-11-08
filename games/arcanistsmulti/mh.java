@@ -15,7 +15,7 @@ class mh extends TextButton {
             UiContainer.a((byte) 120, mj.field_p + 1);
           }
         } else {
-          if (co.a(-20675) == 0 &&
+          if (co.countUnitsOfType40(-20675) == 0 &&
             7 != mj.field_p) {
             gj.a(true, true, 14, mn.field_r);
             UiContainer.a((byte) 120, mj.field_p + 1);
@@ -50,7 +50,7 @@ class mh extends TextButton {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -58,7 +58,7 @@ class mh extends TextButton {
         try {
           this.field_J = param0;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "mh.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "mh.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -74,12 +74,12 @@ class mh extends TextButton {
         if (param0 != 45) {
           mh.i((byte) -22);
         }
-        if (null == ch.field_a) {
+        if (null == CredentialKind.field_a) {
           return;
         }
-        var1 = ch.field_a;
+        var1 = CredentialKind.field_a;
         synchronized (var1) {
-          ch.field_a = null;
+          CredentialKind.field_a = null;
         }
     }
 

@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ea extends ve {
+final class DiskCacheRequest extends ArchiveRequest {
     static String field_B;
-    be field_x;
+    SectorCacheStore field_x;
     static IndexedSprite[] field_v;
     byte[] field_z;
     static ResourceArchive field_C;
@@ -20,7 +20,7 @@ final class ea extends ve {
 
     final static void a(int param0, int param1, boolean param2, int param3) {
         if (!param2) {
-          ea.releaseStatics((byte) 111);
+          DiskCacheRequest.releaseStatics((byte) 111);
           if (0 == param3) {
             if (param1 == on.field_h) {
               if (param3 != 1) {
@@ -142,14 +142,14 @@ final class ea extends ve {
         }
     }
 
-    final byte[] c(int param0) {
+    final byte[] getData(int param0) {
         if (this.field_p) {
           throw new RuntimeException();
         }
         if (param0 <= -11) {
           return this.field_z;
         }
-        this.c(-122);
+        this.getData(-122);
         return this.field_z;
     }
 
@@ -168,7 +168,7 @@ final class ea extends ve {
         field_E = null;
     }
 
-    final int e(byte param0) {
+    final int getProgressPercent(byte param0) {
         if (param0 > -71) {
           field_B = (String) null;
           if (this.field_p) {
@@ -182,7 +182,7 @@ final class ea extends ve {
         return 100;
     }
 
-    ea() {
+    DiskCacheRequest() {
     }
 
     static {

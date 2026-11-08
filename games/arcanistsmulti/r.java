@@ -45,7 +45,7 @@ final class r {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -78,7 +78,7 @@ final class r {
           }
           if (pa.field_g == hb.field_Gb &&
             param0.equals(KeyboardInputHandler.field_j)) {
-            hb.field_Gb = uj.field_h;
+            hb.field_Gb = ScreenDisplayMode.field_h;
             stackIn_11_0 = fh.field_i;
             return stackIn_11_0;
           }
@@ -97,7 +97,7 @@ final class r {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
         }
     }
 

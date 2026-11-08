@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class be {
+final class SectorCacheStore {
     static String field_h;
     private int field_n;
     static int[] field_m;
@@ -19,7 +19,7 @@ final class be {
     private BufferedRandomAccessFile field_c;
     static kc field_l;
 
-    final boolean a(byte[] param0, boolean param1, int param2, int param3) {
+    final boolean writeEntry(byte[] param0, boolean param1, int param2, int param3) {
         Object var5 = null;
         RuntimeException var5_ref = null;
         int var6 = 0;
@@ -34,9 +34,9 @@ final class be {
           synchronized (var5) {
             if (param2 >= 0 &&
               param2 <= this.field_n) {
-              var6 = this.a(param3, param1, param2, (byte) -114, param0) ? 1 : 0;
+              var6 = this.writeEntrySectors(param3, param1, param2, (byte) -114, param0) ? 1 : 0;
               if (var6 == 0) {
-                var6 = this.a(param3, false, param2, (byte) -114, param0) ? 1 : 0;
+                var6 = this.writeEntrySectors(param3, false, param2, (byte) -114, param0) ? 1 : 0;
               }
               stackIn_8_0 = var6;
             } else {
@@ -54,11 +54,11 @@ final class be {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
-    final byte[] a(int param0, int param1) {
+    final byte[] readEntry(int param0, int param1) {
         try {
           int var16 = 0;
           int incrementValue$2 = 0;
@@ -96,7 +96,7 @@ final class be {
               this.field_e.a((long)(6 * param0), -116);
               if (param1 >= -56) {
                 var19 = (byte[]) null;
-                this.a((byte[]) null, true, -34, -67);
+                this.writeEntry((byte[]) null, true, -34, -67);
               }
               this.field_e.a(6, ae.field_c, (byte) -39, 0);
               var4_int = (255 & ae.field_c[2]) + (16711680 & ae.field_c[0] << 16) + ((ae.field_c[1] & 255) << 8);
@@ -208,7 +208,7 @@ final class be {
         return hg.field_b;
     }
 
-    private final boolean a(int param0, boolean param1, int param2, byte param3, byte[] param4) {
+    private final boolean writeEntrySectors(int param0, boolean param1, int param2, byte param3, byte[] param4) {
         try {
           RuntimeException stackIn_71_0 = null;
           StringBuilder stackIn_71_1 = null;
@@ -386,7 +386,7 @@ final class be {
             } else {
               stackIn_72_2 = "{...}";
             }
-            throw aa.a((Throwable) ((Object) stackIn_71_0), ((StringBuilder) (Object) stackIn_71_1).append(stackIn_72_2).append(')').toString());
+            throw aa.wrapException((Throwable) ((Object) stackIn_71_0), ((StringBuilder) (Object) stackIn_71_1).append(stackIn_72_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -457,11 +457,11 @@ final class be {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param4).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param4).append(')').toString());
         }
     }
 
-    final static long a(CharSequence param0, boolean param1) {
+    final static long encodeBase37(CharSequence param0, boolean param1) {
         int var5 = 0;
         long var2_long = 0L;
         int var4 = 0;
@@ -476,7 +476,7 @@ final class be {
         var7 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           if (param1) {
-            be.a(-40);
+            SectorCacheStore.a(-40);
           }
           var2_long = 0L;
           var4 = param0.length();
@@ -519,11 +519,11 @@ final class be {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param1).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    be(int param0, BufferedRandomAccessFile param1, BufferedRandomAccessFile param2, int param3) {
+    SectorCacheStore(int param0, BufferedRandomAccessFile param1, BufferedRandomAccessFile param2, int param3) {
         this.field_e = null;
         this.field_n = 65000;
         this.field_c = null;
@@ -533,7 +533,7 @@ final class be {
           this.field_k = param0;
           this.field_e = param2;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "be.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "be.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 

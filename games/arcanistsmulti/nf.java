@@ -222,7 +222,7 @@ final class nf {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -470,7 +470,7 @@ final class nf {
         IndexedSprite var20 = null;
         var19 = ArcanistsMulti.field_G ? 1 : 0;
         try {
-          var4_int = uj.a(param1, 8, (byte) -61) + 8 * this.field_O;
+          var4_int = ScreenDisplayMode.a(param1, 8, (byte) -61) + 8 * this.field_O;
           var6 = -115 % ((param2 + 59) / 54);
           var5 = go.field_j[var4_int];
           var7 = new Sprite(512, 512);
@@ -532,7 +532,7 @@ final class nf {
                     decompiledFrameRemainder1 = !((2 * var5.field_c) < (var12 + var11));
                   }
                   if (decompiledFrameRemainder1) {
-                    var4_int = uj.a(param1, 8, (byte) -26) + 8 * this.field_O;
+                    var4_int = ScreenDisplayMode.a(param1, 8, (byte) -26) + 8 * this.field_O;
                     var5 = go.field_j[var4_int];
                     break regionExit3;
                   }
@@ -657,7 +657,7 @@ final class nf {
                   var10 < 50) {
                   continue scanLoop2;
                 }
-                var4_int = uj.a(param1, 8, (byte) -83) + this.field_O * 8;
+                var4_int = ScreenDisplayMode.a(param1, 8, (byte) -83) + this.field_O * 8;
                 var20 = go.field_j[var4_int];
                 var8 = var8 + var20.field_h / 2;
                 stackIn_7_0 = 26;
@@ -665,7 +665,7 @@ final class nf {
                 if (stackIn_7_0 == stackIn_7_1) {
                   var8 += 24;
                 }
-                var8 = var8 + (32 + uj.a(param1, 128, (byte) -62));
+                var8 = var8 + (32 + ScreenDisplayMode.a(param1, 128, (byte) -62));
                 continue scanLoop1;
               }
             }
@@ -687,7 +687,7 @@ final class nf {
           } else {
             stackIn_117_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_113_0), ((StringBuilder) (Object) stackIn_116_1).append(stackIn_117_2).append(',').append(param2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_113_0), ((StringBuilder) (Object) stackIn_116_1).append(stackIn_117_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -844,12 +844,12 @@ final class nf {
           var34 = new int[6];
           var19 = var34;
           var5 = var19;
-          var5[0] = var4 * 3 / 2 + uj.a(param0, -(3 * var4) + (this.field_y >> 1), (byte) -90);
-          var5[1] = var34[0] - (uj.a(param0, var4 / 2, (byte) -39) + var4 / 2);
-          var5[2] = var4 / 2 + var34[0] + uj.a(param0, var4 / 2, (byte) -97);
-          var5[3] = 3 * var4 / 2 + (uj.a(param0, -(var4 * 3) + (this.field_y >> 1), (byte) -32) + (this.field_y >> 1));
-          var5[4] = -(var4 / 2) + (var34[3] - uj.a(param0, var4 / 2, (byte) -44));
-          var5[5] = var4 / 2 + var34[3] + uj.a(param0, var4 / 2, (byte) -83);
+          var5[0] = var4 * 3 / 2 + ScreenDisplayMode.a(param0, -(3 * var4) + (this.field_y >> 1), (byte) -90);
+          var5[1] = var34[0] - (ScreenDisplayMode.a(param0, var4 / 2, (byte) -39) + var4 / 2);
+          var5[2] = var4 / 2 + var34[0] + ScreenDisplayMode.a(param0, var4 / 2, (byte) -97);
+          var5[3] = 3 * var4 / 2 + (ScreenDisplayMode.a(param0, -(var4 * 3) + (this.field_y >> 1), (byte) -32) + (this.field_y >> 1));
+          var5[4] = -(var4 / 2) + (var34[3] - ScreenDisplayMode.a(param0, var4 / 2, (byte) -44));
+          var5[5] = var4 / 2 + var34[3] + ScreenDisplayMode.a(param0, var4 / 2, (byte) -83);
           var7 = var3_int;
           if (var7 < 257) {
             var7 = 257;
@@ -859,8 +859,8 @@ final class nf {
           var8 = var20;
           var35[3] = var7;
           var35[0] = var7;
-          var8[1] = 128 + uj.a(param0, var7 - 256, (byte) -113);
-          var8[4] = uj.a(param0, -256 + var7, (byte) -125) + 128;
+          var8[1] = 128 + ScreenDisplayMode.a(param0, var7 - 256, (byte) -113);
+          var8[4] = ScreenDisplayMode.a(param0, -256 + var7, (byte) -125) + 128;
           var8[2] = var35[0] - var35[1];
           var8[5] = var35[3] - var35[4];
           var9 = 0;
@@ -933,18 +933,18 @@ final class nf {
               }
               var25 = go.field_j[8 * this.field_O + 2];
               this.a(false, 3 + (var34[var10] - 128), this.field_V, true, -256 + this.field_H - var35[var10], var25.toRgbSprite());
-              var26 = go.field_j[uj.a(param0, 4, (byte) -39) - (-4 - this.field_O * 8)];
+              var26 = go.field_j[ScreenDisplayMode.a(param0, 4, (byte) -39) - (-4 - this.field_O * 8)];
               this.a(false, -192 + var34[var10] + 3, this.field_V, true, -160 + this.field_H, var26.toRgbSprite());
-              var27 = go.field_j[4 + (uj.a(param0, 4, (byte) -100) + this.field_O * 8)];
+              var27 = go.field_j[4 + (ScreenDisplayMode.a(param0, 4, (byte) -100) + this.field_O * 8)];
               this.a(false, 3 + (-64 + var34[var10]), this.field_V, true, this.field_H - 160, var27.toRgbSprite());
               var10++;
             } while (var18 == 0);
             while (var10 < 6) {
               var28 = go.field_j[this.field_O * 8 + 2];
               this.a(false, 3 + var34[var10] - 128, this.field_V, true, -256 + (this.field_H - var35[var10]), var28.toRgbSprite());
-              var29 = go.field_j[4 + (uj.a(param0, 4, (byte) -56) + this.field_O * 8)];
+              var29 = go.field_j[4 + (ScreenDisplayMode.a(param0, 4, (byte) -56) + this.field_O * 8)];
               this.a(false, 3 + (var34[var10] - 192), this.field_V, true, -160 + this.field_H, var29.toRgbSprite());
-              var30 = go.field_j[4 + (uj.a(param0, 4, (byte) -127) + 8 * this.field_O)];
+              var30 = go.field_j[4 + (ScreenDisplayMode.a(param0, 4, (byte) -127) + 8 * this.field_O)];
               this.a(false, 3 + (var34[var10] - 64), this.field_V, true, this.field_H - 160, var30.toRgbSprite());
               var10++;
               if (var18 == 0) {
@@ -960,9 +960,9 @@ final class nf {
               stackIn_48_0 = 1000;
               stackIn_48_1 = var13;
               if (stackIn_48_0 > stackIn_48_1) {
-                var33 = go.field_j[4 + (uj.a(param0, 4, (byte) -60) + this.field_O * 8)];
-                var14 = uj.a(param0, -256 + this.field_y, (byte) -115);
-                var15 = uj.a(param0, -256 + this.field_H, (byte) -68);
+                var33 = go.field_j[4 + (ScreenDisplayMode.a(param0, 4, (byte) -60) + this.field_O * 8)];
+                var14 = ScreenDisplayMode.a(param0, -256 + this.field_y, (byte) -115);
+                var15 = ScreenDisplayMode.a(param0, -256 + this.field_H, (byte) -68);
                 var16 = 1;
                 if (var18 != 0) {
                   return null;
@@ -1003,7 +1003,7 @@ final class nf {
           } else {
             stackIn_66_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_65_0), ((StringBuilder) (Object) stackIn_65_1).append(stackIn_66_2).append(',').append(param1).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_65_0), ((StringBuilder) (Object) stackIn_65_1).append(stackIn_66_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -1257,7 +1257,7 @@ final class nf {
           } else {
             stackIn_106_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_105_0), ((StringBuilder) (Object) stackIn_105_1).append(stackIn_106_2).append(',').append(param1).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_105_0), ((StringBuilder) (Object) stackIn_105_1).append(stackIn_106_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -1488,7 +1488,7 @@ final class nf {
           } else {
             stackIn_105_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_104_0), ((StringBuilder) (Object) stackIn_104_1).append(stackIn_105_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_104_0), ((StringBuilder) (Object) stackIn_104_1).append(stackIn_105_2).append(')').toString());
         }
     }
 
@@ -1560,14 +1560,14 @@ final class nf {
           var6_int = 0;
           do {
             if ((var11.length - 1) <= var6_int) {
-              var9[1 + uj.a(param1, -2 + var11.length, (byte) -71)] = this.field_H * 3 / 8 - uj.a(param1, 2 * this.field_H / 8, (byte) -104);
-              var9[uj.a(param1, -2 + var11.length, (byte) -103) + 1] = this.field_H * 3 / 8 - uj.a(param1, 2 * this.field_H / 8, (byte) -127);
-              var9[1 + uj.a(param1, -2 + var11.length, (byte) -119)] = this.field_H * 3 / 8 - uj.a(param1, 2 * this.field_H / 8, (byte) -91);
-              var9[uj.a(param1, var11.length - 2, (byte) -34) + 1] = this.field_H * 3 / param0 - uj.a(param1, this.field_H * 2 / 8, (byte) -59);
+              var9[1 + ScreenDisplayMode.a(param1, -2 + var11.length, (byte) -71)] = this.field_H * 3 / 8 - ScreenDisplayMode.a(param1, 2 * this.field_H / 8, (byte) -104);
+              var9[ScreenDisplayMode.a(param1, -2 + var11.length, (byte) -103) + 1] = this.field_H * 3 / 8 - ScreenDisplayMode.a(param1, 2 * this.field_H / 8, (byte) -127);
+              var9[1 + ScreenDisplayMode.a(param1, -2 + var11.length, (byte) -119)] = this.field_H * 3 / 8 - ScreenDisplayMode.a(param1, 2 * this.field_H / 8, (byte) -91);
+              var9[ScreenDisplayMode.a(param1, var11.length - 2, (byte) -34) + 1] = this.field_H * 3 / param0 - ScreenDisplayMode.a(param1, this.field_H * 2 / 8, (byte) -59);
               var9[0] = 64 + this.field_H;
               break;
             }
-            var9[var6_int] = 7 * this.field_H / 8 - uj.a(param1, this.field_H * 2 / 8, (byte) -113);
+            var9[var6_int] = 7 * this.field_H / 8 - ScreenDisplayMode.a(param1, this.field_H * 2 / 8, (byte) -113);
             var6_int++;
           } while (var8 == 0);
           var9[-1 + var11.length] = var11[0];
@@ -1596,7 +1596,7 @@ final class nf {
                   if (var4 == 0) {
                     stackIn_21_3 = 0;
                   } else {
-                    stackIn_21_3 = uj.a(param1, var4, (byte) -57);
+                    stackIn_21_3 = ScreenDisplayMode.a(param1, var4, (byte) -57);
                   }
                   stackIn_20_0[stackIn_20_1] = stackIn_20_2 + stackIn_21_3;
                   var6[2 * var7] = var5[var7];
@@ -1620,7 +1620,7 @@ final class nf {
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(')').toString());
         }
     }
 
@@ -1718,7 +1718,7 @@ final class nf {
             this.a((int[]) null, (byte) 67);
           }
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "nf.N(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "nf.N(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -1809,7 +1809,7 @@ final class nf {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -1836,7 +1836,7 @@ final class nf {
 
     final int l(int param0) {
         if (7 == this.field_O &&
-          lk.a(0, (byte) -52)) {
+          Js5Transport.a(0, (byte) -52)) {
           return 0;
         }
         if (param0 != 4) {
@@ -1899,7 +1899,7 @@ final class nf {
           var6 = 0;
           scanLoop1: while (true) {
             if (var17.length > var6) {
-              var5[var6] = this.field_H - (uj.a(param0, this.field_H / 3, (byte) -126) + Math.abs((this.field_y / 2 - this.field_y * var6 / var17.length) * this.field_H / this.field_y));
+              var5[var6] = this.field_H - (ScreenDisplayMode.a(param0, this.field_H / 3, (byte) -126) + Math.abs((this.field_y / 2 - this.field_y * var6 / var17.length) * this.field_H / this.field_y));
               var6++;
               if (var13 == 0) {
                 continue;
@@ -1929,7 +1929,7 @@ final class nf {
                       stackIn_11_1 = -1 + 2 * var6;
                       stackIn_11_2 = (var5[var6] + var5[-1 + var6]) / 2;
                       if (var4 > 0) {
-                        stackIn_17_3 = uj.a(param0, var4, (byte) -33);
+                        stackIn_17_3 = ScreenDisplayMode.a(param0, var4, (byte) -33);
                       } else {
                         stackIn_17_3 = 0;
                       }
@@ -1961,8 +1961,8 @@ final class nf {
               var18[1][-1 + var18[0].length] = var18[1][0];
               break;
             }
-            var18[0][var6] = (-(2 * uj.a(param0, 450, (byte) -74)) + 1400) / 3;
-            var18[1][var6] = 2 * (700 - uj.a(param0, 450, (byte) -27)) / 3;
+            var18[0][var6] = (-(2 * ScreenDisplayMode.a(param0, 450, (byte) -74)) + 1400) / 3;
+            var18[1][var6] = 2 * (700 - ScreenDisplayMode.a(param0, 450, (byte) -27)) / 3;
             var6++;
           } while (var13 == 0);
           var8 = 0;
@@ -2000,7 +2000,7 @@ final class nf {
                         if (0 >= var4Lifetime1) {
                           stackIn_43_3 = 0;
                         } else {
-                          stackIn_43_3 = uj.a(param0, var4Lifetime1, (byte) -37);
+                          stackIn_43_3 = ScreenDisplayMode.a(param0, var4Lifetime1, (byte) -37);
                         }
                         stackIn_37_0[stackIn_37_1] = stackIn_37_2 + (stackIn_43_3 - var4Lifetime1 / 2);
                         var9_ref_int__[var6 * 2] = var18[var8][var6];
@@ -2069,7 +2069,7 @@ final class nf {
           } else {
             stackIn_72_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_71_0), ((StringBuilder) (Object) stackIn_71_1).append(stackIn_72_2).append(',').append(param1).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_71_0), ((StringBuilder) (Object) stackIn_71_1).append(stackIn_72_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -2113,7 +2113,7 @@ final class nf {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -2132,24 +2132,24 @@ final class nf {
         Sprite var6 = null;
         RuntimeException var6_ref = null;
         try {
-          var6 = uj.field_i[0];
+          var6 = ScreenDisplayMode.field_i[0];
           if (param0 == 55) {
-            var6 = uj.field_i[1];
+            var6 = ScreenDisplayMode.field_i[1];
           }
           if (31 == param0) {
-            var6 = uj.field_i[2];
+            var6 = ScreenDisplayMode.field_i[2];
           }
           if (param0 == 60) {
-            var6 = uj.field_i[3];
+            var6 = ScreenDisplayMode.field_i[3];
           }
           if (param0 == 81) {
-            var6 = uj.field_i[4];
+            var6 = ScreenDisplayMode.field_i[4];
           }
           if (param0 == 91) {
-            var6 = uj.field_i[5];
+            var6 = ScreenDisplayMode.field_i[5];
           }
           if (param0 == 114) {
-            var6 = uj.field_i[6];
+            var6 = ScreenDisplayMode.field_i[6];
           }
           if (param1 < var6.field_w + 2) {
             return false;
@@ -2177,7 +2177,7 @@ final class nf {
           } else {
             stackIn_32_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -2217,7 +2217,7 @@ final class nf {
           this.a(param3, this.field_Jb, param2, param1, -126);
           this.a(param3, 117, param2, param1, this.field_V);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "nf.JB(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "nf.JB(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -2228,7 +2228,7 @@ final class nf {
             field_z = (int[]) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "nf.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "nf.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -2795,7 +2795,7 @@ final class nf {
             this.field_Gb = true;
             var3_ref.field_H = var3_ref.field_H - 1;
             if (var3_ref.field_H <= 0) {
-              var41 = aj.a((ml) null, var3_ref.field_G, false, 163, this, var3_ref.field_v);
+              var41 = aj.spawnProjectile((ml) null, var3_ref.field_G, false, 163, this, var3_ref.field_v);
               this.b(52, var41);
               var3_ref.a(50, 100, 100, param0 ^ 77);
               var3_ref.f(0);
@@ -2850,22 +2850,22 @@ final class nf {
           return;
         }
         var12 = new jd(new int[]{this.field_Q, this.field_jb});
-        var3 = uj.a(var12, 2, (byte) -68);
+        var3 = ScreenDisplayMode.a(var12, 2, (byte) -68);
         if (var3 != 0) {
-          var3 = -128 + this.field_y - uj.a(var12, (this.field_jb - this.l(4)) / this.field_q * 128 + 1, (byte) -57);
+          var3 = -128 + this.field_y - ScreenDisplayMode.a(var12, (this.field_jb - this.l(4)) / this.field_q * 128 + 1, (byte) -57);
           if (!(var3 >= 128)) {
-            var3 = 128 + uj.a(var12, -256 + this.field_y, (byte) -32);
+            var3 = 128 + ScreenDisplayMode.a(var12, -256 + this.field_y, (byte) -32);
             if (var11 != 0) {
-              var3 = 128 + uj.a(var12, 128 * ((this.field_jb - this.l(4)) / this.field_q) + 1, (byte) -66);
+              var3 = 128 + ScreenDisplayMode.a(var12, 128 * ((this.field_jb - this.l(4)) / this.field_q) + 1, (byte) -66);
               if ((-128 + this.field_y) < var3) {
-                var3 = uj.a(var12, -256 + this.field_y, (byte) -31) + 128;
+                var3 = ScreenDisplayMode.a(var12, -256 + this.field_y, (byte) -31) + 128;
               }
             }
           }
         } else {
-          var3 = 128 + uj.a(var12, 128 * ((this.field_jb - this.l(4)) / this.field_q) + 1, (byte) -66);
+          var3 = 128 + ScreenDisplayMode.a(var12, 128 * ((this.field_jb - this.l(4)) / this.field_q) + 1, (byte) -66);
           if ((-128 + this.field_y) < var3) {
-            var3 = uj.a(var12, -256 + this.field_y, (byte) -31) + 128;
+            var3 = ScreenDisplayMode.a(var12, -256 + this.field_y, (byte) -31) + 128;
           }
         }
         boolean decompiledFrameRemainder6 = true;
@@ -2933,8 +2933,8 @@ final class nf {
               stackIn_68_1Lifetime1 = this.field_mb;
               decompiledFrameRemainder6 = (stackIn_68_0Lifetime1 == stackIn_68_1Lifetime1);
               if (decompiledFrameRemainder6) {
-                this.field_mb = 128 + uj.a(var12, this.field_y - 256, (byte) -121);
-                this.field_t = 128 + uj.a(var12, this.field_H - 128, (byte) -32);
+                this.field_mb = 128 + ScreenDisplayMode.a(var12, this.field_y - 256, (byte) -121);
+                this.field_t = 128 + ScreenDisplayMode.a(var12, this.field_H - 128, (byte) -32);
                 decompiledFrameRemainder7 = false;
               }
             }
@@ -3111,7 +3111,7 @@ final class nf {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -3194,7 +3194,7 @@ final class nf {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
         }
     }
 
@@ -3364,7 +3364,7 @@ final class nf {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
@@ -3505,7 +3505,7 @@ final class nf {
           } else {
             stackIn_123_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_122_0), ((StringBuilder) (Object) stackIn_122_1).append(stackIn_123_2).append(',').append(param2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_122_0), ((StringBuilder) (Object) stackIn_122_1).append(stackIn_123_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -3810,7 +3810,7 @@ final class nf {
             stackIn_131_0 = -1;
             if (stackIn_131_0 == ~(1 & var12Lifetime1)) {
               if (0 != var3) {
-                var14Lifetime1 = uj.a(var24, var3, (byte) -110);
+                var14Lifetime1 = ScreenDisplayMode.a(var24, var3, (byte) -110);
                 fieldTemp$1 = this.field_nb;
                 this.field_nb = this.field_nb + 1;
                 this.a((byte) -123, new ml(var13Lifetime1, var28[var14Lifetime1], var29[var14Lifetime1], fieldTemp$1, this, var12Lifetime1));
@@ -3818,20 +3818,20 @@ final class nf {
                 var5[var14Lifetime1] = var28[var3];
                 var6[var14Lifetime1] = var29[var3];
               } else {
-                var14Lifetime1 = uj.a(var24, var12Lifetime1, (byte) -123);
+                var14Lifetime1 = ScreenDisplayMode.a(var24, var12Lifetime1, (byte) -123);
                 var25 = this.a(var14Lifetime1, true);
                 fieldTemp$2 = this.field_nb;
                 this.field_nb = this.field_nb + 1;
                 this.a((byte) -124, new ml(var13Lifetime1, var25.field_lb, -32 + var25.field_db, fieldTemp$2, this, var12Lifetime1));
               }
             } else if (var8 == 0) {
-              var14Lifetime1 = uj.a(var24, var12Lifetime1, (byte) -81);
+              var14Lifetime1 = ScreenDisplayMode.a(var24, var12Lifetime1, (byte) -81);
               var26 = this.a(var14Lifetime1, true);
               fieldTemp$3 = this.field_nb;
               this.field_nb = this.field_nb + 1;
               this.a((byte) -122, new ml(var13Lifetime1, var26.field_lb, var26.field_db - 32, fieldTemp$3, this, var12Lifetime1));
             } else {
-              var14Lifetime1 = uj.a(var24, var8, (byte) -53);
+              var14Lifetime1 = ScreenDisplayMode.a(var24, var8, (byte) -53);
               var8--;
               fieldTemp$4 = this.field_nb;
               this.field_nb = this.field_nb + 1;
@@ -3937,7 +3937,7 @@ final class nf {
               var9 = 27;
             }
             if (var3 != 0) {
-              var10 = uj.a(var24, var3, (byte) -79);
+              var10 = ScreenDisplayMode.a(var24, var3, (byte) -79);
               fieldTemp$7 = this.field_nb;
               this.field_nb = this.field_nb + 1;
               this.a((byte) -127, new ml(var9, var18[var10], var19[var10], fieldTemp$7, this, var8));
@@ -3945,7 +3945,7 @@ final class nf {
               var18[var10] = var18[var3];
               var19[var10] = var19[var3];
             } else {
-              var10 = uj.a(var24, var8, (byte) -124);
+              var10 = ScreenDisplayMode.a(var24, var8, (byte) -124);
               var27 = this.a(var10, true);
               fieldTemp$8 = this.field_nb;
               this.field_nb = this.field_nb + 1;
@@ -4063,7 +4063,7 @@ final class nf {
           } else {
             stackIn_44_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_43_0), ((StringBuilder) (Object) stackIn_43_1).append(stackIn_44_2).append(',').append(param2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_43_0), ((StringBuilder) (Object) stackIn_43_1).append(stackIn_44_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -4122,12 +4122,12 @@ final class nf {
           do {
             if (var5 >= (-1 + var16.length)) {
               var4[-1 + var16.length] = var16[0];
-              var5 = uj.a(param1, var16.length - 4, (byte) -103) + 2;
-              var4[var5] = this.field_H + (-100 - uj.a(param1, 250, (byte) -34));
+              var5 = ScreenDisplayMode.a(param1, var16.length - 4, (byte) -103) + 2;
+              var4[var5] = this.field_H + (-100 - ScreenDisplayMode.a(param1, 250, (byte) -34));
               var4[var5 - 1] = (var4[var5 - 1] + var16[var5]) / 2;
               break;
             }
-            var4[var5] = this.field_H / 2 - uj.a(param1, this.field_H / 2, (byte) -26);
+            var4[var5] = this.field_H / 2 - ScreenDisplayMode.a(param1, this.field_H / 2, (byte) -26);
             var5++;
           } while (var12 == 0);
           var4[1 + var5] = (var4[param0 + var5] + var16[var5]) / 2;
@@ -4150,7 +4150,7 @@ final class nf {
                   stackIn_10_1 = -1 + var5 * 2;
                   stackIn_10_2 = (var4[var5 - 1] + var4[var5]) / 2;
                   if (var3_int != 0) {
-                    stackIn_17_3 = uj.a(param1, var3_int, (byte) -30);
+                    stackIn_17_3 = ScreenDisplayMode.a(param1, var3_int, (byte) -30);
                   } else {
                     stackIn_17_3 = 0;
                   }
@@ -4170,12 +4170,12 @@ final class nf {
           var6_array = var14;
           var5 = 0;
           while (var17[0].length > var5) {
-            var17[0][var5] = this.field_H - uj.a(param1, this.field_H - 250, (byte) -103);
-            var17[1][var5] = this.field_H - uj.a(param1, -200 + this.field_H, (byte) -100);
-            var17[2][var5] = this.field_H - uj.a(param1, -150 + this.field_H, (byte) -107);
-            var17[3][var5] = this.field_H - uj.a(param1, this.field_H - 100, (byte) -121);
-            var17[4][var5] = this.field_H - uj.a(param1, -50 + this.field_H, (byte) -60);
-            var17[5][var5] = this.field_H - uj.a(param1, this.field_H, (byte) -60);
+            var17[0][var5] = this.field_H - ScreenDisplayMode.a(param1, this.field_H - 250, (byte) -103);
+            var17[1][var5] = this.field_H - ScreenDisplayMode.a(param1, -200 + this.field_H, (byte) -100);
+            var17[2][var5] = this.field_H - ScreenDisplayMode.a(param1, -150 + this.field_H, (byte) -107);
+            var17[3][var5] = this.field_H - ScreenDisplayMode.a(param1, this.field_H - 100, (byte) -121);
+            var17[4][var5] = this.field_H - ScreenDisplayMode.a(param1, -50 + this.field_H, (byte) -60);
+            var17[5][var5] = this.field_H - ScreenDisplayMode.a(param1, this.field_H, (byte) -60);
             var5++;
             if (var12 == 0) {
               continue;
@@ -4211,7 +4211,7 @@ final class nf {
                         if (var3_intLifetime1 == 0) {
                           stackIn_36_3 = 0;
                         } else {
-                          stackIn_36_3 = uj.a(param1, var3_intLifetime1, (byte) -78);
+                          stackIn_36_3 = ScreenDisplayMode.a(param1, var3_intLifetime1, (byte) -78);
                         }
                         stackIn_29_0[stackIn_29_1] = stackIn_29_2 + stackIn_36_3;
                         var8_ref_int__[2 * var5] = var17[var7][var5];
@@ -4344,7 +4344,7 @@ final class nf {
           } else {
             stackIn_109_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_108_0), ((StringBuilder) (Object) stackIn_108_1).append(stackIn_109_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_108_0), ((StringBuilder) (Object) stackIn_108_1).append(stackIn_109_2).append(')').toString());
         }
     }
 
@@ -4435,7 +4435,7 @@ final class nf {
           } else {
             stackIn_60_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_59_0), ((StringBuilder) (Object) stackIn_59_1).append(stackIn_60_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_59_0), ((StringBuilder) (Object) stackIn_59_1).append(stackIn_60_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -4565,7 +4565,7 @@ final class nf {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -4588,7 +4588,7 @@ final class nf {
           this.a(param2, (byte) -79, param0, this.field_Jb, param3);
           this.a(false, param2, this.field_V, true, param0, param3);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "nf.LC(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "nf.LC(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -4641,7 +4641,7 @@ final class nf {
         var16 = new jd(new int[]{this.field_Q, -1});
         this.field_O = this.field_xb;
         if (this.field_O == 9) {
-          this.field_O = dh.a(this.field_Q, true, 8);
+          this.field_O = dh.floorMod(this.field_Q, true, 8);
         }
         if (ed.field_Cb != -1) {
           this.field_O = ed.field_Cb;
@@ -4909,12 +4909,12 @@ final class nf {
           do {
             if (var5 >= var17.length - 1) {
               var4[-1 + var17.length] = var17[0];
-              var5 = uj.a(param1, -4 + var17.length, (byte) -80) + 2;
-              var4[var5] = -100 + this.field_H - uj.a(param1, 250, (byte) -82);
+              var5 = ScreenDisplayMode.a(param1, -4 + var17.length, (byte) -80) + 2;
+              var4[var5] = -100 + this.field_H - ScreenDisplayMode.a(param1, 250, (byte) -82);
               var4[var5 - 1] = (var17[var5] + var4[-1 + var5]) / 2;
               break;
             }
-            var4[var5] = this.field_H / 2 + 150 - uj.a(param1, -100 + this.field_H / 2, (byte) -24);
+            var4[var5] = this.field_H / 2 + 150 - ScreenDisplayMode.a(param1, -100 + this.field_H / 2, (byte) -24);
             var5++;
           } while (var12 == 0);
           var4[var5 + 1] = (var17[var5] + var4[1 + var5]) / 2;
@@ -4940,7 +4940,7 @@ final class nf {
                   if (0 == var3_int) {
                     stackIn_17_3 = 0;
                   } else {
-                    stackIn_17_3 = uj.a(param1, var3_int, (byte) -81);
+                    stackIn_17_3 = ScreenDisplayMode.a(param1, var3_int, (byte) -81);
                   }
                   stackIn_10_0[stackIn_10_1] = stackIn_10_2 - (-stackIn_17_3 + var3_int / 2);
                   var13[2 * var5] = var4[var5];
@@ -4990,12 +4990,12 @@ final class nf {
               var18[5][var18[0].length - 1] = var18[5][0];
               break;
             }
-            var18[0][var5] = this.field_H - 250 - uj.a(param1, this.field_H - 300, (byte) -73);
-            var18[1][var5] = -200 + (this.field_H - uj.a(param1, this.field_H - 250, (byte) -30));
-            var18[2][var5] = -150 + (this.field_H - uj.a(param1, -200 + this.field_H, (byte) -39));
-            var18[3][var5] = this.field_H - 100 - uj.a(param1, -150 + this.field_H, (byte) -122);
-            var18[4][var5] = this.field_H - 50 - uj.a(param1, -100 + this.field_H, (byte) -54);
-            var18[5][var5] = this.field_H - uj.a(param1, -50 + this.field_H, (byte) -117);
+            var18[0][var5] = this.field_H - 250 - ScreenDisplayMode.a(param1, this.field_H - 300, (byte) -73);
+            var18[1][var5] = -200 + (this.field_H - ScreenDisplayMode.a(param1, this.field_H - 250, (byte) -30));
+            var18[2][var5] = -150 + (this.field_H - ScreenDisplayMode.a(param1, -200 + this.field_H, (byte) -39));
+            var18[3][var5] = this.field_H - 100 - ScreenDisplayMode.a(param1, -150 + this.field_H, (byte) -122);
+            var18[4][var5] = this.field_H - 50 - ScreenDisplayMode.a(param1, -100 + this.field_H, (byte) -54);
+            var18[5][var5] = this.field_H - ScreenDisplayMode.a(param1, -50 + this.field_H, (byte) -117);
             var5++;
           } while (var12 == 0);
           var7Lifetime1 = 0;
@@ -5026,7 +5026,7 @@ final class nf {
                         stackIn_45_2 = -(var3_intLifetime1 / 2);
                         stackIn_51_3 = (var18[var7Lifetime1][-1 + var5] + var18[var7Lifetime1][var5]) / 2;
                         if (var3_intLifetime1 != 0) {
-                          stackIn_52_4 = uj.a(param1, var3_intLifetime1, (byte) -83);
+                          stackIn_52_4 = ScreenDisplayMode.a(param1, var3_intLifetime1, (byte) -83);
                         } else {
                           stackIn_52_4 = 0;
                         }
@@ -5156,7 +5156,7 @@ final class nf {
           } else {
             stackIn_120_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_119_0), ((StringBuilder) (Object) stackIn_119_1).append(stackIn_120_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_119_0), ((StringBuilder) (Object) stackIn_119_1).append(stackIn_120_2).append(')').toString());
         }
     }
 
@@ -5201,7 +5201,7 @@ final class nf {
           }
           this.field_B.put(param1, (long)param1.field_T, (byte) 110);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "nf.KD(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "nf.KD(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -5314,10 +5314,10 @@ final class nf {
                 if (stackIn_27_0 <= stackIn_27_1) {
                   var20 = var19 + param4.field_q * var18;
                   var21 = (var19 >> 1) + param0 + (param2 + (var18 >> 1)) * this.field_hb;
-                  var17[0] = param3.field_l[dg.a(255, (int) var30[var20])];
-                  var17[1] = param3.field_l[dg.a((int) var27[1 + var20], 255)];
-                  var17[2] = param3.field_l[dg.a((int) var27[var20 + param4.field_q], 255)];
-                  var17[3] = param3.field_l[dg.a(255, (int) var27[1 + var20])];
+                  var17[0] = param3.field_l[NameValidator.bitAnd(255, (int) var30[var20])];
+                  var17[1] = param3.field_l[NameValidator.bitAnd((int) var27[1 + var20], 255)];
+                  var17[2] = param3.field_l[NameValidator.bitAnd((int) var27[var20 + param4.field_q], 255)];
+                  var17[3] = param3.field_l[NameValidator.bitAnd(255, (int) var27[1 + var20])];
                   var22 = 0;
                   var23 = 0;
                   var24 = 0;
@@ -5327,14 +5327,14 @@ final class nf {
                     stackIn_27_0 = ~var31[var25];
                     stackIn_27_1 = -1;
                     if (stackIn_27_0 == stackIn_27_1) {
-                      var17[var25] = param3.field_l[dg.a(255, (int) param3.field_m[var21])];
+                      var17[var25] = param3.field_l[NameValidator.bitAnd(255, (int) param3.field_m[var21])];
                     }
                     var22 = var22 + (var31[var25] >> 16);
                     var24 = var24 + (255 & var31[var25]);
                     var23 = var23 + (var31[var25] >> 8 & 255);
                     var25++;
                   }
-                  param3.field_m[var21] = (byte)MusicPatchPcmStream.field_p[this.field_O].a(fj.b(fj.b(var23 >> 2 << 8, var22 >> 2 << 16), var24 >> 2), 510);
+                  param3.field_m[var21] = (byte)MusicPatchPcmStream.field_p[this.field_O].a(fj.bitOr(fj.bitOr(var23 >> 2 << 8, var22 >> 2 << 16), var24 >> 2), 510);
                   var19 += 2;
                   continue scanLoop2;
                 }
@@ -5362,7 +5362,7 @@ final class nf {
           } else {
             stackIn_44_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_40_0), ((StringBuilder) (Object) stackIn_43_1).append(stackIn_44_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_40_0), ((StringBuilder) (Object) stackIn_43_1).append(stackIn_44_2).append(')').toString());
         }
     }
 
@@ -5464,7 +5464,7 @@ final class nf {
               var20[0] = 0;
               break;
             }
-            var16[var5] = 10 * this.field_H / 8 - uj.a(param1, this.field_H, (byte) -65);
+            var16[var5] = 10 * this.field_H / 8 - ScreenDisplayMode.a(param1, this.field_H, (byte) -65);
             var5++;
           } while (var15 == 0);
           var16[var20.length - 1] = var20[0];
@@ -5508,7 +5508,7 @@ final class nf {
           var6 = stackIn_20_0;
           scanLoop2: while (true) {
             var5++;
-            var7_int = uj.a(param1, this.field_y / 2, (byte) -94) + this.field_y / 4;
+            var7_int = ScreenDisplayMode.a(param1, this.field_y / 2, (byte) -94) + this.field_y / 4;
             var8 = 2;
             scanLoop3: while (true) {
               var9 = this.field_y * var8 + var7_int;
@@ -5536,7 +5536,7 @@ final class nf {
               }
               break;
             }
-            var10 = (this.field_H - var8) * 64 / this.field_H + uj.a(param1, 16, (byte) -37);
+            var10 = (this.field_H - var8) * 64 / this.field_H + ScreenDisplayMode.a(param1, 16, (byte) -37);
             do {
               if (this.field_H > var8 &&
                 (32 + var10) < var8 &&
@@ -5568,9 +5568,9 @@ final class nf {
             stackIn_47_0 = -11;
             stackIn_47_1 = ~var5;
             if (stackIn_47_0 < stackIn_47_1) {
-              var7 = go.field_j[4 + (uj.a(param1, 4, (byte) -124) + this.field_O * 8)];
-              var11 = uj.a(param1, this.field_y - 256, (byte) -69);
-              var12 = uj.a(param1, -256 + this.field_H, (byte) -86);
+              var7 = go.field_j[4 + (ScreenDisplayMode.a(param1, 4, (byte) -124) + this.field_O * 8)];
+              var11 = ScreenDisplayMode.a(param1, this.field_y - 256, (byte) -69);
+              var12 = ScreenDisplayMode.a(param1, -256 + this.field_H, (byte) -86);
               var13 = 1;
               var14 = 0;
               while (var14 < var10) {
@@ -5606,7 +5606,7 @@ final class nf {
           } else {
             stackIn_66_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_65_0), ((StringBuilder) (Object) stackIn_65_1).append(stackIn_66_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_65_0), ((StringBuilder) (Object) stackIn_65_1).append(stackIn_66_2).append(')').toString());
         }
     }
 
@@ -5709,11 +5709,11 @@ final class nf {
                 stackIn_21_1 = ~var18;
                 if (stackIn_21_0 <= stackIn_21_1) {
                   var19 = var18 + param2.field_h * var17;
-                  var16[0] = param2.field_l[dg.a((int) param2.field_m[var19], 255)];
+                  var16[0] = param2.field_l[NameValidator.bitAnd((int) param2.field_m[var19], 255)];
                   var20 = this.field_hb * ((var17 >> 1) + param0) - (-(var18 >> 1) - param3);
-                  var16[1] = param2.field_l[dg.a(255, (int) param2.field_m[1 + var19])];
-                  var16[2] = param2.field_l[dg.a(255, (int) param2.field_m[param2.field_h + var19])];
-                  var16[3] = param2.field_l[dg.a(255, (int) param2.field_m[1 + var19])];
+                  var16[1] = param2.field_l[NameValidator.bitAnd(255, (int) param2.field_m[1 + var19])];
+                  var16[2] = param2.field_l[NameValidator.bitAnd(255, (int) param2.field_m[param2.field_h + var19])];
+                  var16[3] = param2.field_l[NameValidator.bitAnd(255, (int) param2.field_m[1 + var19])];
                   var21 = 0;
                   var22 = 0;
                   var23 = 0;
@@ -5723,14 +5723,14 @@ final class nf {
                     stackIn_21_0 = -1;
                     stackIn_21_1 = ~var27[var24];
                     if (stackIn_21_0 == stackIn_21_1) {
-                      var16[var24] = param1.field_l[dg.a((int) param1.field_m[var20], 255)];
+                      var16[var24] = param1.field_l[NameValidator.bitAnd((int) param1.field_m[var20], 255)];
                     }
                     var23 = var23 + (var27[var24] & 255);
                     var22 = var22 + ((var27[var24] & 65305) >> 8);
                     var21 = var21 + (var27[var24] >> 16);
                     var24++;
                   }
-                  param1.field_m[var20] = (byte)MusicPatchPcmStream.field_p[this.field_O].a(fj.b(var23 >> 2, fj.b(var21 >> 2 << 16, var22 >> 2 << 8)), 510);
+                  param1.field_m[var20] = (byte)MusicPatchPcmStream.field_p[this.field_O].a(fj.bitOr(var23 >> 2, fj.bitOr(var21 >> 2 << 16, var22 >> 2 << 8)), 510);
                   var18 += 2;
                   continue scanLoop2;
                 }
@@ -5758,7 +5758,7 @@ final class nf {
           } else {
             stackIn_38_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_34_0), ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_34_0), ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -5978,7 +5978,7 @@ final class nf {
           } else {
             stackIn_84_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_83_0), ((StringBuilder) (Object) stackIn_83_1).append(stackIn_84_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_83_0), ((StringBuilder) (Object) stackIn_83_1).append(stackIn_84_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -6026,7 +6026,7 @@ final class nf {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -6211,7 +6211,7 @@ final class nf {
               this.field_fb[var6] = var5;
             }
             var6++;
-            if (lk.a(0, (byte) -63) && (-1 == this.field_fb[var6] ||
+            if (Js5Transport.a(0, (byte) -63) && (-1 == this.field_fb[var6] ||
               this.field_b[this.field_fb[var6]] < this.field_b[var5]) && this.field_b[var5] >= 1) {
               this.field_fb[var6] = var5;
             }
@@ -6398,42 +6398,42 @@ final class nf {
               var25[19] = 64 + this.field_H;
               break;
             }
-            var25[var5] = 64 + (this.field_H - uj.a(param1, 256, (byte) -123));
+            var25[var5] = 64 + (this.field_H - ScreenDisplayMode.a(param1, 256, (byte) -123));
             var5++;
           } while (var24 == 0);
-          var6 = uj.a(param1, 5, (byte) -110) + 1;
-          var7 = -2 + (uj.a(param1, 5, (byte) -90) + 10);
-          var8 = -6 + uj.a(param1, 5, (byte) -80) + 20;
+          var6 = ScreenDisplayMode.a(param1, 5, (byte) -110) + 1;
+          var7 = -2 + (ScreenDisplayMode.a(param1, 5, (byte) -90) + 10);
+          var8 = -6 + ScreenDisplayMode.a(param1, 5, (byte) -80) + 20;
           if (var6 <= 1) {
-            var25[3 + var6] = this.field_H * 6 / 8 - uj.a(param1, this.field_H * 3 / 8, (byte) -69);
+            var25[3 + var6] = this.field_H * 6 / 8 - ScreenDisplayMode.a(param1, this.field_H * 3 / 8, (byte) -69);
           }
           if (var6 > 1 ||
             var24 != 0) {
-            var25[-1 + var6] = this.field_H * 6 / 8 - uj.a(param1, 5 * this.field_H / 8, (byte) -28);
+            var25[-1 + var6] = this.field_H * 6 / 8 - ScreenDisplayMode.a(param1, 5 * this.field_H / 8, (byte) -28);
           }
-          var25[var6] = 6 * this.field_H / 8 - uj.a(param1, this.field_H * 5 / 8, (byte) -30);
-          var25[var6 + 1] = this.field_H * 6 / 8 - uj.a(param1, this.field_H * 5 / 8, (byte) -23);
-          var25[var6 + 2] = 6 * this.field_H / 8 - uj.a(param1, 4 * this.field_H / 8, (byte) -27);
+          var25[var6] = 6 * this.field_H / 8 - ScreenDisplayMode.a(param1, this.field_H * 5 / 8, (byte) -30);
+          var25[var6 + 1] = this.field_H * 6 / 8 - ScreenDisplayMode.a(param1, this.field_H * 5 / 8, (byte) -23);
+          var25[var6 + 2] = 6 * this.field_H / 8 - ScreenDisplayMode.a(param1, 4 * this.field_H / 8, (byte) -27);
           var9 = var27[var6];
-          var25[var8 - 1] = 6 * this.field_H / 8 - uj.a(param1, this.field_H * 5 / 8, (byte) -54);
-          var25[var8 - 2] = this.field_H * 6 / 8 - uj.a(param1, 4 * this.field_H / 8, (byte) -93);
-          var25[var8] = 6 * this.field_H / 8 - uj.a(param1, 5 * this.field_H / 8, (byte) -97);
+          var25[var8 - 1] = 6 * this.field_H / 8 - ScreenDisplayMode.a(param1, this.field_H * 5 / 8, (byte) -54);
+          var25[var8 - 2] = this.field_H * 6 / 8 - ScreenDisplayMode.a(param1, 4 * this.field_H / 8, (byte) -93);
+          var25[var8] = 6 * this.field_H / 8 - ScreenDisplayMode.a(param1, 5 * this.field_H / 8, (byte) -97);
           if (var8 >= 17) {
-            var25[var8 - 3] = 6 * this.field_H / 8 - uj.a(param1, 3 * this.field_H / 8, (byte) -115);
+            var25[var8 - 3] = 6 * this.field_H / 8 - ScreenDisplayMode.a(param1, 3 * this.field_H / 8, (byte) -115);
           }
           if (var8 < 17 ||
             var24 != 0) {
-            var25[1 + var8] = 6 * this.field_H / 8 - uj.a(param1, this.field_H * 5 / 8, (byte) -57);
+            var25[1 + var8] = 6 * this.field_H / 8 - ScreenDisplayMode.a(param1, this.field_H * 5 / 8, (byte) -57);
           }
           var10 = var27[var8];
-          var25[-2 + var7] = 6 * this.field_H / 8 - uj.a(param1, this.field_H * 3 / 8, (byte) -100);
-          var25[-1 + var7] = 6 * this.field_H / 8 - uj.a(param1, this.field_H * 4 / 8, (byte) -95);
-          var25[var7] = 6 * this.field_H / 8 - uj.a(param1, 5 * this.field_H / 8, (byte) -74);
+          var25[-2 + var7] = 6 * this.field_H / 8 - ScreenDisplayMode.a(param1, this.field_H * 3 / 8, (byte) -100);
+          var25[-1 + var7] = 6 * this.field_H / 8 - ScreenDisplayMode.a(param1, this.field_H * 4 / 8, (byte) -95);
+          var25[var7] = 6 * this.field_H / 8 - ScreenDisplayMode.a(param1, 5 * this.field_H / 8, (byte) -74);
           if (param0 != -22070) {
             this.field_y = 13;
           }
-          var25[1 + var7] = 6 * this.field_H / 8 - uj.a(param1, this.field_H * 4 / 8, (byte) -114);
-          var25[var7 + 2] = 6 * this.field_H / 8 - uj.a(param1, this.field_H * 3 / 8, (byte) -30);
+          var25[1 + var7] = 6 * this.field_H / 8 - ScreenDisplayMode.a(param1, this.field_H * 4 / 8, (byte) -114);
+          var25[var7 + 2] = 6 * this.field_H / 8 - ScreenDisplayMode.a(param1, this.field_H * 3 / 8, (byte) -30);
           var11 = var27[var7];
           var25[(var7 + var6) / 2] = 64 + this.field_H;
           var25[(var7 + var8) / 2] = this.field_H + 64;
@@ -6525,7 +6525,7 @@ final class nf {
               var19 = -var14 + var15;
               break;
             }
-            var18.field_A[var19] = 65793 * dg.a(var18.field_A[var19], 255);
+            var18.field_A[var19] = 65793 * NameValidator.bitAnd(var18.field_A[var19], 255);
             var19++;
           } while (var24 == 0);
           boolean decompiledFrameCompleted0 = true;
@@ -6574,7 +6574,7 @@ final class nf {
           } else {
             stackIn_71_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_70_0), ((StringBuilder) (Object) stackIn_70_1).append(stackIn_71_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_70_0), ((StringBuilder) (Object) stackIn_70_1).append(stackIn_71_2).append(')').toString());
         }
     }
 
@@ -6662,7 +6662,7 @@ final class nf {
               var4[var9.length - 2] = var4[-2 + var9.length] / 2;
               break;
             }
-            var4[var5] = this.field_H * 6 / 8 - uj.a(param0, this.field_H * 5 / 8, (byte) -125);
+            var4[var5] = this.field_H * 6 / 8 - ScreenDisplayMode.a(param0, this.field_H * 5 / 8, (byte) -125);
             var5++;
           } while (var7 == 0);
           var4[var9.length - 1] = var9[0];
@@ -6711,7 +6711,7 @@ final class nf {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param1).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -6729,7 +6729,7 @@ final class nf {
         if (param2 != -83) {
           this.a(1, (byte) 42, 71, (IndexedSprite) null, (Sprite) null);
         }
-        return ee.a(this.field_Jb, param0, param1, 96);
+        return DebouncedValidator.a(this.field_Jb, param0, param1, 96);
     }
 
     private final void p(byte param0) {
@@ -6858,7 +6858,7 @@ final class nf {
           } else {
             stackIn_33_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(')').toString());
         }
     }
 
@@ -7684,11 +7684,11 @@ final class nf {
             this.a((byte) 80, var10, var4);
             var24_ref_mlLifetime5 = new ml(28, -32 + var8, var9, this.h(-81), this, var12);
             this.a((byte) -124, var24_ref_mlLifetime5);
-            var25 = aj.a(var24_ref_mlLifetime5, var24_ref_mlLifetime5.field_db, false, 138, this, var24_ref_mlLifetime5.field_lb);
+            var25 = aj.spawnProjectile(var24_ref_mlLifetime5, var24_ref_mlLifetime5.field_db, false, 138, this, var24_ref_mlLifetime5.field_lb);
             this.b(52, var25);
             var24_ref_mlLifetime5Lifetime1 = new ml(28, 32 + var8, var9, this.h(-98), this, var12);
             this.a((byte) -124, var24_ref_mlLifetime5Lifetime1);
-            var25Lifetime20 = aj.a(var24_ref_mlLifetime5Lifetime1, var24_ref_mlLifetime5Lifetime1.field_db, false, 138, this, var24_ref_mlLifetime5Lifetime1.field_lb);
+            var25Lifetime20 = aj.spawnProjectile(var24_ref_mlLifetime5Lifetime1, var24_ref_mlLifetime5Lifetime1.field_db, false, 138, this, var24_ref_mlLifetime5Lifetime1.field_lb);
             this.b(52, var25Lifetime20);
             var8 = -1000;
             this.field_D = true;
@@ -7910,7 +7910,7 @@ final class nf {
             this.i((byte) 86);
             var11Lifetime2 = 0;
             this.field_D = true;
-            var24_ref_miLifetime9 = aj.a(var12, var12.field_db - var12.field_Y / 2, false, 103, this, var12.field_lb);
+            var24_ref_miLifetime9 = aj.spawnProjectile(var12, var12.field_db - var12.field_Y / 2, false, 103, this, var12.field_lb);
             this.b(52, var24_ref_miLifetime9);
             var24_ref_miLifetime9Lifetime1 = j.a(var12, -(var12.field_Y / 2) + var12.field_db, (byte) -107, this, var10, var12.field_lb, 111);
             var24_ref_miLifetime9Lifetime1.field_H = 4;
@@ -7925,7 +7925,7 @@ final class nf {
             this.i((byte) 86);
             this.field_D = true;
             var11Lifetime3 = 0;
-            var24_ref_miLifetime10 = aj.a(var12, -(var12.field_Y / 2) + var12.field_db, false, 108, this, var12.field_lb);
+            var24_ref_miLifetime10 = aj.spawnProjectile(var12, -(var12.field_Y / 2) + var12.field_db, false, 108, this, var12.field_lb);
             this.b(52, var24_ref_miLifetime10);
           }
           if (91 == var10) {
@@ -7937,7 +7937,7 @@ final class nf {
             this.i((byte) 86);
             this.field_D = true;
             var11Lifetime4 = 0;
-            var24_ref_miLifetime11 = aj.a(var12, var12.field_db - var12.field_Y / 2, false, 154, this, var12.field_lb);
+            var24_ref_miLifetime11 = aj.spawnProjectile(var12, var12.field_db - var12.field_Y / 2, false, 154, this, var12.field_lb);
             this.b(52, var24_ref_miLifetime11);
           }
           boolean decompiledFrameCompleted10 = true;
@@ -7992,7 +7992,7 @@ final class nf {
                 break;
               }
               if (stackIn_456_0 == stackIn_456_1) {
-                var25Lifetime3 = aj.a(this.a(var24_ref_mlLifetime22.field_u, true), var24_ref_mlLifetime22.field_db, false, 101, this, var24_ref_mlLifetime22.field_lb);
+                var25Lifetime3 = aj.spawnProjectile(this.a(var24_ref_mlLifetime22.field_u, true), var24_ref_mlLifetime22.field_db, false, 101, this, var24_ref_mlLifetime22.field_lb);
                 this.b(52, var25Lifetime3);
                 var25Lifetime3Lifetime1 = j.a(var12, var24_ref_mlLifetime22.field_db, (byte) 38, this, var10, var24_ref_mlLifetime22.field_lb, 74);
                 var25Lifetime3Lifetime1.field_y = -(var24_ref_mlLifetime22.field_ib / 2) + 20;
@@ -8196,7 +8196,7 @@ final class nf {
               if (stackIn_541_0 != null &&
                 !var24_ref_mlLifetime23.field_U &&
                 var24_ref_mlLifetime23.field_jb != 12) {
-                var25Lifetime5 = aj.a(this.a(var24_ref_mlLifetime23.field_u, true), var24_ref_mlLifetime23.field_db, false, 103, this, var24_ref_mlLifetime23.field_lb);
+                var25Lifetime5 = aj.spawnProjectile(this.a(var24_ref_mlLifetime23.field_u, true), var24_ref_mlLifetime23.field_db, false, 103, this, var24_ref_mlLifetime23.field_lb);
                 this.b(52, var25Lifetime5);
                 var25Lifetime5Lifetime1 = j.a(var12, var24_ref_mlLifetime23.field_db, (byte) 40, this, var10, var24_ref_mlLifetime23.field_lb, 55);
                 this.b(52, var25Lifetime5Lifetime1);
@@ -8215,7 +8215,7 @@ final class nf {
               var12.field_eb = -50;
               var12.field_jb = 18;
               var12.field_z = true;
-              var24_ref_miLifetime17 = aj.a(var12, var12.field_db - (var12.field_Y >> 1), false, 108, this, var12.field_lb);
+              var24_ref_miLifetime17 = aj.spawnProjectile(var12, var12.field_db - (var12.field_Y >> 1), false, 108, this, var12.field_lb);
               this.b(52, var24_ref_miLifetime17);
               this.field_D = true;
             }
@@ -8286,7 +8286,7 @@ final class nf {
             var24_ref_miLifetime17Lifetime1 = j.a(var12, var12.field_db, (byte) 32, this, var10, var12.field_lb, 111);
             var24_ref_miLifetime17Lifetime1.field_H = 4;
             this.b(52, var24_ref_miLifetime17Lifetime1);
-            var24_ref_miLifetime17Lifetime2 = aj.a((ml) null, var12.field_db - var12.field_Y / 2, false, 103, this, var12.field_lb);
+            var24_ref_miLifetime17Lifetime2 = aj.spawnProjectile((ml) null, var12.field_db - var12.field_Y / 2, false, 103, this, var12.field_lb);
             this.b(52, var24_ref_miLifetime17Lifetime2);
             this.field_D = true;
           }
@@ -8459,9 +8459,9 @@ final class nf {
           boolean decompiledFrameCompleted1 = true;
           if (var10 == 5) {
             this.a((byte) 80, var10, var4);
-            var25Lifetime11 = aj.a(var12, var9, false, 101, this, var8);
+            var25Lifetime11 = aj.spawnProjectile(var12, var9, false, 101, this, var8);
             this.b(52, var25Lifetime11);
-            var25Lifetime11Lifetime1 = aj.a(var12, -32 - var12.field_Y + var12.field_db, false, 101, this, var12.field_lb);
+            var25Lifetime11Lifetime1 = aj.spawnProjectile(var12, -32 - var12.field_Y + var12.field_db, false, 101, this, var12.field_lb);
             this.b(52, var25Lifetime11Lifetime1);
             var25Lifetime11Lifetime2 = (mi) (this.field_Kb.first(12623));
             while (var25Lifetime11Lifetime2 != null) {
@@ -8503,9 +8503,9 @@ final class nf {
                 }
               }
             }
-            var25Lifetime12 = aj.a(var12, var9, false, 101, this, var8);
+            var25Lifetime12 = aj.spawnProjectile(var12, var9, false, 101, this, var8);
             this.b(52, var25Lifetime12);
-            var25Lifetime12Lifetime1 = aj.a(var12, var12.field_db, false, 101, this, var12.field_lb);
+            var25Lifetime12Lifetime1 = aj.spawnProjectile(var12, var12.field_db, false, 101, this, var12.field_lb);
             this.b(52, var25Lifetime12Lifetime1);
             this.a((byte) 80, var10, var4);
             this.a(var12, 0);
@@ -8536,9 +8536,9 @@ final class nf {
             var12.field_kb = 0;
           }
           if (var10 == 150) {
-            var25Lifetime13 = aj.a(var12, var12.field_db, false, 137, this, var8);
+            var25Lifetime13 = aj.spawnProjectile(var12, var12.field_db, false, 137, this, var8);
             this.b(52, var25Lifetime13);
-            var25Lifetime13Lifetime1 = aj.a(var12, var12.field_db, false, 137, this, var12.field_lb);
+            var25Lifetime13Lifetime1 = aj.spawnProjectile(var12, var12.field_db, false, 137, this, var12.field_lb);
             this.b(52, var25Lifetime13Lifetime1);
             this.a((byte) 80, var10, var4);
             this.a(var12, 0);
@@ -8574,7 +8574,7 @@ final class nf {
           if (var10 == 139) {
             var12.field_ib = 0;
             var12.field_x = 1;
-            var25Lifetime14 = aj.a(var12, var12.field_db, false, 101, this, var12.field_lb);
+            var25Lifetime14 = aj.spawnProjectile(var12, var12.field_db, false, 101, this, var12.field_lb);
             this.b(52, var25Lifetime14);
             var25Lifetime14.a(0, 0, 32, 8);
           }
@@ -8586,7 +8586,7 @@ final class nf {
           boolean decompiledFrameRemainder0 = true;
           boolean decompiledFrameCompleted0 = true;
           if (var10 == 132) {
-            var25Lifetime15 = aj.a(var12, var12.field_db, false, 108, this, var12.field_lb);
+            var25Lifetime15 = aj.spawnProjectile(var12, var12.field_db, false, 108, this, var12.field_lb);
             this.b(52, var25Lifetime15);
             var26Lifetime5 = var12.field_lb;
             var27Lifetime3 = var12.field_db;
@@ -8645,7 +8645,7 @@ final class nf {
             stackIn_689_1 = var12;
           }
           if (decompiledFrameRemainder0) {
-            var25Lifetime15Lifetime1 = aj.a(stackIn_689_0, stackIn_689_1.field_db, false, 86, this, var12.field_lb);
+            var25Lifetime15Lifetime1 = aj.spawnProjectile(stackIn_689_0, stackIn_689_1.field_db, false, 86, this, var12.field_lb);
             this.b(52, var25Lifetime15Lifetime1);
             this.a(var12.field_s, 0);
             if (var12.field_s.i((byte) -3) > this.field_H) {
@@ -8669,7 +8669,7 @@ final class nf {
             this.i((byte) 86);
             var11Lifetime7 = 0;
             this.field_D = true;
-            var25Lifetime16 = aj.a(var12, -(var12.field_Y / 2) + var12.field_db, false, 101, this, var12.field_lb);
+            var25Lifetime16 = aj.spawnProjectile(var12, -(var12.field_Y / 2) + var12.field_db, false, 101, this, var12.field_lb);
             this.b(52, var25Lifetime16);
           }
           if (var10 == 114) {
@@ -8681,7 +8681,7 @@ final class nf {
             this.i((byte) 86);
             var11Lifetime8 = 0;
             this.field_D = true;
-            var25Lifetime17 = aj.a(var12, -(var12.field_Y / 2) + var12.field_db, false, 86, this, var12.field_lb);
+            var25Lifetime17 = aj.spawnProjectile(var12, -(var12.field_Y / 2) + var12.field_db, false, 86, this, var12.field_lb);
             this.b(52, var25Lifetime17);
           }
           if (55 == var10) {
@@ -8693,7 +8693,7 @@ final class nf {
             this.i((byte) 86);
             var11Lifetime9 = 0;
             this.field_D = true;
-            var25Lifetime18 = aj.a(var12, var12.field_db - var12.field_Y / 2, false, 94, this, var12.field_lb);
+            var25Lifetime18 = aj.spawnProjectile(var12, var12.field_db - var12.field_Y / 2, false, 94, this, var12.field_lb);
             this.b(52, var25Lifetime18);
           }
           if (var10 == 31) {
@@ -8705,7 +8705,7 @@ final class nf {
             this.i((byte) 86);
             this.field_D = true;
             var11Lifetime10 = 0;
-            var25Lifetime19 = aj.a(var12, var12.field_db - var12.field_Y / 2, false, 89, this, var12.field_lb);
+            var25Lifetime19 = aj.spawnProjectile(var12, var12.field_db - var12.field_Y / 2, false, 89, this, var12.field_lb);
             this.b(52, var25Lifetime19);
           }
           if (30 == var10) {
@@ -8737,7 +8737,7 @@ final class nf {
           } else {
             stackIn_718_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_717_0), ((StringBuilder) (Object) stackIn_717_1).append(stackIn_718_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_717_0), ((StringBuilder) (Object) stackIn_717_1).append(stackIn_718_2).append(')').toString());
         }
     }
 
@@ -8781,14 +8781,14 @@ final class nf {
           var7 = 0;
           do {
             if (var7 >= -1 + var15.length) {
-              var13[1 + uj.a(param1, var15.length - 2, (byte) -26)] = 32 + this.field_H;
-              var13[uj.a(param1, var15.length - 2, (byte) -111) + 1] = this.field_H + 32;
-              var13[uj.a(param1, -2 + var15.length, (byte) -111) + 1] = this.field_H + 32;
-              var13[1 + uj.a(param1, var15.length - 2, (byte) -81)] = 32 + this.field_H;
+              var13[1 + ScreenDisplayMode.a(param1, var15.length - 2, (byte) -26)] = 32 + this.field_H;
+              var13[ScreenDisplayMode.a(param1, var15.length - 2, (byte) -111) + 1] = this.field_H + 32;
+              var13[ScreenDisplayMode.a(param1, -2 + var15.length, (byte) -111) + 1] = this.field_H + 32;
+              var13[1 + ScreenDisplayMode.a(param1, var15.length - 2, (byte) -81)] = 32 + this.field_H;
               var13[0] = this.field_H + 64;
               break;
             }
-            var13[var7] = 7 * this.field_H / 8 - uj.a(param1, this.field_H * 2 / 8, (byte) -25);
+            var13[var7] = 7 * this.field_H / 8 - ScreenDisplayMode.a(param1, this.field_H * 2 / 8, (byte) -25);
             var7++;
           } while (var12 == 0);
           var13[-1 + var15.length] = var15[0];
@@ -8818,7 +8818,7 @@ final class nf {
                   if (var4 == 0) {
                     stackIn_21_3 = 0;
                   } else {
-                    stackIn_21_3 = uj.a(param1, var4, (byte) -62);
+                    stackIn_21_3 = ScreenDisplayMode.a(param1, var4, (byte) -62);
                   }
                   stackIn_20_0[stackIn_20_1] = stackIn_20_2 + stackIn_21_3;
                   var6_ref_int__[2 * var7] = var5[var7];
@@ -8835,7 +8835,7 @@ final class nf {
             var7 = 0;
             scanLoop1: while (true) {
               var7++;
-              var8 = uj.a(param1, this.field_y, (byte) -36);
+              var8 = ScreenDisplayMode.a(param1, this.field_y, (byte) -36);
               var9 = 2;
               var10 = var8 + this.field_y * var9;
               scanLoop2: while (true) {
@@ -8863,7 +8863,7 @@ final class nf {
                   }
                 }
                 stackIn_36_0 = 64 * (-var9 + this.field_H) / this.field_H;
-                stackIn_36_1 = uj.a(param1, 16, (byte) -34);
+                stackIn_36_1 = ScreenDisplayMode.a(param1, 16, (byte) -34);
                 break;
               }
               var11 = stackIn_36_0 + stackIn_36_1;
@@ -8897,7 +8897,7 @@ final class nf {
           } else {
             stackIn_52_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_51_0), ((StringBuilder) (Object) stackIn_51_1).append(stackIn_52_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_51_0), ((StringBuilder) (Object) stackIn_51_1).append(stackIn_52_2).append(')').toString());
         }
     }
 
@@ -9191,7 +9191,7 @@ final class nf {
           } else {
             stackIn_237_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_236_0), ((StringBuilder) (Object) stackIn_236_1).append(stackIn_237_2).append(',').append(param2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_236_0), ((StringBuilder) (Object) stackIn_236_1).append(stackIn_237_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -9202,7 +9202,7 @@ final class nf {
           }
           this.field_I.a(param1, 15893);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "nf.W(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "nf.W(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -9380,7 +9380,7 @@ final class nf {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -9771,7 +9771,7 @@ final class nf {
           } else {
             stackIn_113_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_100_0), ((StringBuilder) (Object) stackIn_112_1).append(stackIn_113_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_100_0), ((StringBuilder) (Object) stackIn_112_1).append(stackIn_113_2).append(')').toString());
         }
     }
 

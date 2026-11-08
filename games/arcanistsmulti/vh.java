@@ -101,7 +101,7 @@ final class vh {
           } else {
             stackIn_30_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param3).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -114,12 +114,12 @@ final class vh {
           }
           int var5_int = 115 % ((8 - param1) / 44);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "vh.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "vh.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4) {
-        da.a(param1, param0, 126, param4, param3);
+        da.clipToRectangle(param1, param0, 126, param4, param3);
         if (param2 != 3) {
           this.a(35, 119, -25, 90, 75, 85, 23);
         }
@@ -145,7 +145,7 @@ final class vh {
           SoftwareRasterizer.fillRectangle(var7 + 1, var8 + 1, var5_int + 4, 4 + var6, this.field_c);
           this.field_q.drawText(param2, var7 + 3, 3 + (var8 + this.field_q.field_o), this.field_v, param0);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "vh.L(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "vh.L(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -227,7 +227,7 @@ final class vh {
           } else {
             stackIn_30_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param3).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -320,7 +320,7 @@ final class vh {
           var19 = new mj(var4, true);
           var19.a(0, var13);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "vh.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "vh.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -364,7 +364,7 @@ final class vh {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -378,12 +378,12 @@ final class vh {
         StringBuilder stackIn_43_1 = null;
         String stackIn_44_2 = null;
         RuntimeException decompiledCaughtException = null;
-        uj[] var6 = null;
+        ScreenDisplayMode[] var6 = null;
         RuntimeException var6_ref = null;
         int var7_int = 0;
         java.awt.Frame var7 = null;
         int var9 = 0;
-        uj[] var10 = null;
+        ScreenDisplayMode[] var10 = null;
         PlatformTask var11 = null;
         var9 = ArcanistsMulti.field_G ? 1 : 0;
         try {
@@ -395,7 +395,7 @@ final class vh {
             return (java.awt.Frame) (stackIn_5_0);
           }
           if (0 == param5) {
-            var10 = aa.a(param1, (byte) 109);
+            var10 = aa.queryDisplayModes(param1, (byte) 109);
             var6 = var10;
             if (var6 == null) {
               return null;
@@ -441,7 +441,7 @@ final class vh {
           } else {
             stackIn_44_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_43_0), ((StringBuilder) (Object) stackIn_43_1).append(stackIn_44_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_43_0), ((StringBuilder) (Object) stackIn_43_1).append(stackIn_44_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 

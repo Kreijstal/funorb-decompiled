@@ -14,7 +14,7 @@ final class li extends UiContainer implements ButtonListener {
     final static void a(int param0, int param1) {
         try {
           try {
-            ei.a("resizing", cd.e(113), (byte) 114, new Object[]{new Integer(param0)});
+            ei.a("resizing", cd.getApplet(113), (byte) 114, new Object[]{new Integer(param0)});
           } catch (Throwable throwable) {
           }
           if (param1 != 0) {
@@ -76,7 +76,7 @@ final class li extends UiContainer implements ButtonListener {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -84,18 +84,18 @@ final class li extends UiContainer implements ButtonListener {
         int var9 = 0;
         int var10 = ArcanistsMulti.field_G ? 1 : 0;
         int var9Lifetime1;
-        if (an.field_f <= 0 ||
-          an.field_j <= 0) {
+        if (EmailLoginCredentials.field_f <= 0 ||
+          EmailLoginCredentials.field_j <= 0) {
           return;
         }
         int var1_int = PacketBuffer.field_l.field_w;
         int var2 = PacketBuffer.field_l.field_n;
         int var3 = km.field_e.field_n;
-        int var4 = -var3 + an.field_f;
+        int var4 = -var3 + EmailLoginCredentials.field_f;
         int var5 = km.field_e.field_w;
-        int var6 = -var5 + an.field_j;
-        int var7 = an.field_f - var1_int;
-        int var8 = an.field_j - var1_int;
+        int var6 = -var5 + EmailLoginCredentials.field_j;
+        int var7 = EmailLoginCredentials.field_f - var1_int;
+        int var8 = EmailLoginCredentials.field_j - var1_int;
         km.field_e.drawTransparent(0, 0);
         km.field_e.drawHorizontalFlip(var4, 0);
         km.field_e.drawVerticalFlip(0, var6);
@@ -104,19 +104,19 @@ final class li extends UiContainer implements ButtonListener {
         }
         try {
           km.field_e.drawRotated180(var4, var6);
-          SoftwareRasterizer.setClip(var3, 0, var4, an.field_j);
+          SoftwareRasterizer.setClip(var3, 0, var4, EmailLoginCredentials.field_j);
           for (var9 = var3; var4 > var9; var9 = var9 + var2) {
             PacketBuffer.field_l.drawTransparent(var9, 0);
             PacketBuffer.field_l.drawVerticalFlip(var9, var8);
           }
-          SoftwareRasterizer.setClip(0, var5, an.field_f, var6);
+          SoftwareRasterizer.setClip(0, var5, EmailLoginCredentials.field_f, var6);
           for (var9Lifetime1 = var5; var9Lifetime1 < var6; var9Lifetime1 = var9Lifetime1 + var2) {
             MusicPatchPcmStream.field_k.drawTransparent(0, var9Lifetime1);
             MusicPatchPcmStream.field_k.drawHorizontalFlip(var7, var9Lifetime1);
           }
           SoftwareRasterizer.resetClip();
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "li.F(" + param0 + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "li.F(" + param0 + ')');
         }
     }
 
@@ -163,7 +163,7 @@ final class li extends UiContainer implements ButtonListener {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -172,7 +172,7 @@ final class li extends UiContainer implements ButtonListener {
         try {
           this.field_D = param0;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "li.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "li.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -226,7 +226,7 @@ final class li extends UiContainer implements ButtonListener {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(')').toString());
         }
     }
 

@@ -31,7 +31,7 @@ abstract class ud extends GameAppletShell {
         gm.field_f = this.field_n;
         nh.a(false, gm.field_f);
         na.a(this.field_B, param2, this.field_l, 0, this.field_s, this.field_q, param4, this.field_x, gm.field_f, 5000, this.field_v, this.field_C, fi.field_d, param0);
-        ve.a((byte) -81, gm.field_f, this.field_C, this.field_x, fi.field_d, param2, this.field_B, this.field_l, this.field_q);
+        ArchiveRequest.a((byte) -81, gm.field_f, this.field_C, this.field_x, fi.field_d, param2, this.field_B, this.field_l, this.field_q);
         TextButton.initializeKeyCodeMap((byte) -60);
         nh.field_w = qj.a((byte) -86);
         n.a(on.field_c, (byte) 122);
@@ -58,14 +58,14 @@ abstract class ud extends GameAppletShell {
         cc.field_d[6] = true;
     }
 
-    public static void d(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_u = null;
         field_D = null;
         field_o = null;
         field_r = null;
         field_y = null;
         if (!param0) {
-          ud.d(true);
+          ud.releaseStatics(true);
         }
         field_p = null;
         field_z = (int[][]) null;
@@ -149,7 +149,7 @@ abstract class ud extends GameAppletShell {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -176,13 +176,13 @@ abstract class ud extends GameAppletShell {
             throw new IllegalStateException();
           }
           if (var4 == 1) {
-            var5_int = e.a(nl.f((byte) 13), -67, h.g((byte) 126));
+            var5_int = LoginPanel.a(nl.f((byte) 13), -67, h.g((byte) 126));
             if (var5_int != -1) {
               fl.a(20657, me.field_E, Bzip2State.field_M, var5_int);
               Bzip2State.field_M = null;
               me.field_E = null;
             }
-            var10 = dm.f(18727);
+            var10 = dm.takePendingFlag(18727);
             if (var10 != null) {
               wh.a((byte) 117, var10.booleanValue());
             }
@@ -219,37 +219,37 @@ abstract class ud extends GameAppletShell {
             }
           }
           if (var4 == 4) {
-            if (!lk.field_d) {
+            if (!Js5Transport.field_d) {
               qe.field_p = true;
               fj.field_j = 10;
             } else {
-              MidiPcmStream.a(2, cd.e(120));
+              MidiPcmStream.a(2, cd.getApplet(120));
             }
           }
           if (5 == var4) {
-            im.a((byte) 125, cd.e(121));
+            UsernameCredentials.a((byte) 125, cd.getApplet(121));
           }
           if (6 == var4 &&
             lh.field_n) {
             fj.field_j = 10;
           }
           if (var4 == 7) {
-            hc.a(cd.e(116), 27901);
+            hc.a(cd.getApplet(116), 27901);
           }
           if (var4 == 8) {
-            MidiPcmStream.a(2, cd.e(118));
+            MidiPcmStream.a(2, cd.getApplet(118));
           }
           if (var4 == 9) {
-            g.a(cd.e(122), -10400);
+            g.a(cd.getApplet(122), -10400);
           }
           if (10 == var4) {
             he.field_e.writeOpcode((byte) -68, 17);
           }
           if (var4 == 11) {
-            mc.a(30449, cd.e(122));
+            mc.a(30449, cd.getApplet(122));
           }
           if (var4 == 12) {
-            fk.a(cd.e(116), false, ArchiveProvider.b((byte) 121));
+            fk.openUrl(cd.getApplet(116), false, ArchiveProvider.b((byte) 121));
           }
           if (var4 == 13) {
             try {
@@ -263,7 +263,7 @@ abstract class ud extends GameAppletShell {
                   stackIn_71_1 = !(param0);
                   bc.a((String) (stackIn_70_0), stackIn_71_1);
                 } else {
-                  var7 = PatchEnvelopeSet.a(0, var11.position, (byte) -123, var11.payload);
+                  var7 = PatchEnvelopeSet.decodeCp1252String(0, var11.position, (byte) -123, var11.payload);
                   stackIn_66_0 = var7;
                   stackIn_67_1 = !(param0);
                   bc.a(stackIn_66_0, stackIn_67_1);
@@ -310,7 +310,7 @@ abstract class ud extends GameAppletShell {
           discarded$1 = this.a(false, false, ka.field_m != null ? true : false);
         } else {
           if (ih.field_f >= 10) {
-            if (!rl.d(true)) {
+            if (!TextFieldValidator.d(true)) {
               wm.g((byte) 27);
             } else {
               if (0 != fj.field_j) {
@@ -408,7 +408,7 @@ abstract class ud extends GameAppletShell {
         if (param0 != -18075) {
           return;
         }
-        um.a(var2, cd.e(105), param0 ^ -29675);
+        um.a(var2, cd.getApplet(105), param0 ^ -29675);
     }
 
     final void g(int param0) {
@@ -481,7 +481,7 @@ abstract class ud extends GameAppletShell {
               UiContainer.d(false);
             }
           } else {
-            eh.b((byte) -128);
+            ValidationState.b((byte) -128);
           }
           return;
         }
@@ -529,12 +529,12 @@ abstract class ud extends GameAppletShell {
         if (td.a(-97)) {
           var3 = gm.b(-2) * 1200;
           if (this.field_A ||
-            !(be.a(1497225488) <= var3) &&
+            !(SectorCacheStore.a(1497225488) <= var3) &&
             !(ao.a(true) <= var3)) {
             this.field_A = false;
             ka.b(false);
             fk.d(-11);
-            oa.a(true, 2, rl.field_j);
+            oa.a(true, 2, TextFieldValidator.field_j);
             hm.b(0);
             kg.field_f = true;
             tn.field_Hb = 15000L + qj.b(-26572);
@@ -627,9 +627,9 @@ abstract class ud extends GameAppletShell {
             lh.field_g = BufferedRandomAccessFile.a(ce.field_n, (byte) 65);
           }
           da.field_b = v.a((byte) -93, false, true, cj.field_d, 1);
-          ea.field_C = v.a((byte) -93, false, true, dm.field_H, 1);
+          DiskCacheRequest.field_C = v.a((byte) -93, false, true, dm.field_H, 1);
           ho.field_g = v.a((byte) -93, false, true, u.field_g, 1);
-          field_D = ea.field_C;
+          field_D = DiskCacheRequest.field_C;
           ih.field_f = 2;
           rc.field_a = da.field_b;
         }
@@ -651,13 +651,13 @@ abstract class ud extends GameAppletShell {
           }
         }
         if (ih.field_f == 3 &&
-          IntrusiveDeque.a(ho.field_g, param0, ea.field_C, da.field_b) &&
-          eh.a(18306, ho.field_g)) {
+          IntrusiveDeque.a(ho.field_g, param0, DiskCacheRequest.field_C, da.field_b) &&
+          ValidationState.a(18306, ho.field_g)) {
           rk.f(-73);
-          cj.b(-128);
+          cj.composeAgreementText(-128);
           ArrayWidgetContainer.field_C = hn.field_l;
           lh.field_n = false;
-          th.a(da.field_b, ho.field_g, ea.field_C, (byte) -40, lk.field_d);
+          th.a(da.field_b, ho.field_g, DiskCacheRequest.field_C, (byte) -40, Js5Transport.field_d);
           if (af.field_Ib ||
             null != Bzip2State.field_y) {
             stackIn_101_0 = !(af.field_Ib);
@@ -669,12 +669,12 @@ abstract class ud extends GameAppletShell {
             oo.g(4);
           }
           if (null == Js5ArchiveManager.field_k) {
-            Js5ArchiveManager.field_k = ld.a(false);
+            Js5ArchiveManager.field_k = AlternateUsernameCredentials.a(false);
             mb.field_P = sc.h((byte) -34);
           }
           IsaacCipher.a(mb.field_P, Js5ArchiveManager.field_k, ho.field_g, 121);
           ho.field_g = null;
-          ea.field_C = null;
+          DiskCacheRequest.field_C = null;
           da.field_b = null;
           ArcanistsMulti.a((java.applet.Applet) (this), -1);
           bk.a(2);
@@ -690,7 +690,7 @@ abstract class ud extends GameAppletShell {
         if (ih.field_f == 11) {
           if (null != va.field_c && (!va.field_c.c(-10923) ||
             !va.field_c.a(-49))) {
-            rb.a(qe.a(ld.field_o, 87, va.field_c, IntrusiveDeque.field_f), false, 0.0f);
+            rb.a(qe.a(AlternateUsernameCredentials.field_o, 87, va.field_c, IntrusiveDeque.field_f), false, 0.0f);
             decompiledFrameRemainder0 = false;
           }
           else {
@@ -720,7 +720,7 @@ abstract class ud extends GameAppletShell {
           n.a(on.field_c, (byte) 125);
         }
         if (cc.field_d[8]) {
-          im.c(-99);
+          UsernameCredentials.c(-99);
         }
     }
 
@@ -734,7 +734,7 @@ abstract class ud extends GameAppletShell {
           discarded$0 = this.a(false, true, false);
         }
         UiContainer.field_z.a(var5, (byte) 108, 0, var4);
-        DelegatingCanvas.a(sc.a((byte) 113, var5), cd.e(127), var3 != 0, (byte) -116);
+        DelegatingCanvas.a(sc.a((byte) 113, var5), cd.getApplet(127), var3 != 0, (byte) -116);
     }
 
     final void a(boolean param0, boolean param1, boolean param2, boolean param3, boolean param4, byte param5, boolean param6) {

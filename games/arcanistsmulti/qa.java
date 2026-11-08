@@ -19,18 +19,18 @@ final class qa extends IntrusiveNode {
         if (param4 != 123) {
           return (Sprite[]) null;
         }
-        Sprite dupTemp$0 = ce.b(param2, param3, 21385);
+        Sprite dupTemp$0 = ce.createFilledSprite(param2, param3, 21385);
         var6[6] = dupTemp$0;
         var5[3] = dupTemp$0;
         var5[2] = dupTemp$0;
         var5[1] = dupTemp$0;
         var5[0] = dupTemp$0;
-        Sprite dupTemp$1 = ce.b(param2, param1, param4 + 21262);
+        Sprite dupTemp$1 = ce.createFilledSprite(param2, param1, param4 + 21262);
         var5[8] = dupTemp$1;
         var5[7] = dupTemp$1;
         var5[5] = dupTemp$1;
         if (param0 != 0) {
-          var5[4] = ce.b(64, param0, MouseWheelHandler.a((int) param4, 21490));
+          var5[4] = ce.createFilledSprite(64, param0, MouseWheelHandler.a((int) param4, 21490));
         }
         return var5;
     }
@@ -336,13 +336,13 @@ final class qa extends IntrusiveNode {
           if (go.field_i == 2) {
             hi.field_h.a(param0, -1, false, -1);
           } else {
-            hi.field_h.a(param0, 0, false, bl.a(me.field_I, (byte) 70, an.field_g));
+            hi.field_h.a(param0, 0, false, bl.a(me.field_I, (byte) 70, EmailLoginCredentials.field_g));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var3), "qa.A(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw aa.wrapException((Throwable) ((Object) var3), "qa.A(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -397,7 +397,7 @@ final class qa extends IntrusiveNode {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
         }
     }
 

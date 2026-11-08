@@ -94,11 +94,11 @@ final class dh extends kc {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
-    final static void a(int[] param0, int param1, int param2) {
+    final static void defineScreen(int[] param0, int param1, int param2) {
         try {
           wl.field_L[param2] = param0;
           ArchiveProvider.field_f[param2] = new lc(param2);
@@ -106,11 +106,11 @@ final class dh extends kc {
             dh.releaseStatics((byte) 121);
           }
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "dh.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "dh.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
-    final static void a(ResourceArchive param0, byte param1) {
+    final static void loadSceneSprites(ResourceArchive param0, byte param1) {
         int var5 = 0;
         Object stackIn_45_0 = null;
         StringBuilder stackIn_45_1 = null;
@@ -188,22 +188,22 @@ final class dh extends kc {
             go.field_j[var3_intLifetime3].field_l = (int[]) (((Object[]) (var2))[var3_intLifetime3 / 8]);
           }
           kh.field_d = ti.field_I[3];
-          ByteStorage.field_e = fj.a("", -22612, param0, "slab");
-          uj.field_i = new Sprite[7];
-          uj.field_i[0] = fj.a("", param1 - 22546, param0, "spells_universal_tower_64x32");
+          ByteStorage.field_e = fj.loadSprite("", -22612, param0, "slab");
+          ScreenDisplayMode.field_i = new Sprite[7];
+          ScreenDisplayMode.field_i[0] = fj.loadSprite("", param1 - 22546, param0, "spells_universal_tower_64x32");
           if (param1 != -66) {
             field_Kb = (String[]) null;
           }
-          uj.field_i[1] = fj.a("", -22612, param0, "icecastle");
-          uj.field_i[2] = fj.a("", -22612, param0, "fortress");
-          uj.field_i[3] = fj.a("", -22612, param0, "den");
-          uj.field_i[4] = fj.a("", -22612, param0, "light");
-          var3 = fj.a("", param1 - 22546, param0, "nature");
-          uj.field_i[5] = new Sprite(80, 95);
-          uj.field_i[5].makeRasterTarget();
+          ScreenDisplayMode.field_i[1] = fj.loadSprite("", -22612, param0, "icecastle");
+          ScreenDisplayMode.field_i[2] = fj.loadSprite("", -22612, param0, "fortress");
+          ScreenDisplayMode.field_i[3] = fj.loadSprite("", -22612, param0, "den");
+          ScreenDisplayMode.field_i[4] = fj.loadSprite("", -22612, param0, "light");
+          var3 = fj.loadSprite("", param1 - 22546, param0, "nature");
+          ScreenDisplayMode.field_i[5] = new Sprite(80, 95);
+          ScreenDisplayMode.field_i[5].makeRasterTarget();
           SoftwareRasterizer.drawCircleOutline(40, 16, 16, 1);
           var3.drawTransparent(0, 16);
-          uj.field_i[6] = fj.a("", MouseWheelHandler.a((int) param1, 22546), param0, "clocktower");
+          ScreenDisplayMode.field_i[6] = fj.loadSprite("", MouseWheelHandler.a((int) param1, 22546), param0, "clocktower");
           gj.field_f = pk.a("", 0, "16", param0);
           tg.field_b = pk.a("", 0, "32", param0);
           tk.field_x = qe.a(param0, "64", "", 122);
@@ -220,7 +220,7 @@ final class dh extends kc {
           } else {
             stackIn_46_2 = "{...}";
           }
-          throw aa.a((Throwable) (stackIn_45_0), ((StringBuilder) (Object) stackIn_45_1).append(stackIn_46_2).append(',').append(param1).append(')').toString());
+          throw aa.wrapException((Throwable) (stackIn_45_0), ((StringBuilder) (Object) stackIn_45_1).append(stackIn_46_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -260,7 +260,7 @@ final class dh extends kc {
         }
         this.field_Ob.field_rb = this.field_Ib.toString();
         if (param0) {
-          dh.a(120, -69, 53, 92, -36, 113, 49, (int[]) null, 83, -103, -7, -17, -113, 48, -117, -23, 64);
+          dh.drawMeshTriangle(120, -69, 53, 92, -36, 113, 49, (int[]) null, 83, -103, -7, -17, -113, 48, -117, -23, 64);
         }
         if (param1) {
           stackIn_26_0 = ~re.field_r;
@@ -273,7 +273,7 @@ final class dh extends kc {
         return this.field_Eb;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int[] param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15, int param16) {
+    final static void drawMeshTriangle(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int[] param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15, int param16) {
         int var17_int = 0;
         int var18 = 0;
         int var19 = 0;
@@ -603,7 +603,7 @@ final class dh extends kc {
           } else {
             stackIn_78_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_77_0), ((StringBuilder) (Object) stackIn_77_1).append(stackIn_78_2).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(',').append(param11).append(',').append(param12).append(',').append(param13).append(',').append(param14).append(',').append(param15).append(',').append(param16).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_77_0), ((StringBuilder) (Object) stackIn_77_1).append(stackIn_78_2).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(',').append(param11).append(',').append(param12).append(',').append(param13).append(',').append(param14).append(',').append(param15).append(',').append(param16).append(')').toString());
         }
     }
 
@@ -629,13 +629,13 @@ final class dh extends kc {
             discarded$2 = this.field_Ib.append((char) var2);
           }
           if (uh.a((char) var2, (byte) -127) ||
-            e.a(30, (char) var2)) {
+            LoginPanel.a(30, (char) var2)) {
             discarded$3 = this.field_Ib.append((char) var2);
           }
         }
         if (param0 <= 61) {
           var3 = (int[]) null;
-          dh.a((int[]) null, 117, 95);
+          dh.defineScreen((int[]) null, 117, 95);
         }
         if (IntrusiveDeque.field_d == 84) {
           if (this.field_Ib.length() <= 0) {
@@ -652,10 +652,10 @@ final class dh extends kc {
         return true;
     }
 
-    final static int a(int param0, boolean param1, int param2) {
+    final static int floorMod(int param0, boolean param1, int param2) {
         if (!param1) {
           int[] var4 = (int[]) null;
-          dh.a((int[]) null, 52, -9);
+          dh.defineScreen((int[]) null, 52, -9);
         }
         int var3 = -1 + param2 & param0 >> 31;
         return var3 + (param0 + (param0 >>> 31)) % param2;

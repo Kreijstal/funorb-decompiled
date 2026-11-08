@@ -209,7 +209,7 @@ final class ma extends ArrayWidgetContainer implements ButtonListener {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -314,7 +314,7 @@ final class ma extends ArrayWidgetContainer implements ButtonListener {
           } else {
             stackIn_51_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_50_0), ((StringBuilder) (Object) stackIn_50_1).append(stackIn_51_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_50_0), ((StringBuilder) (Object) stackIn_50_1).append(stackIn_51_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -359,7 +359,7 @@ final class ma extends ArrayWidgetContainer implements ButtonListener {
             this.field_cb.field_F == 1) {
             if (!this.field_Y) {
               if (this.field_Q) {
-                if (an.field_g > param1 - (-this.field_db.field_n - (this.field_db.field_v >> 1))) {
+                if (EmailLoginCredentials.field_g > param1 - (-this.field_db.field_n - (this.field_db.field_v >> 1))) {
                   this.b((byte) -125, this.field_Z + this.field_V);
                 } else {
                   this.b((byte) -127, -this.field_V + this.field_Z);
@@ -373,7 +373,7 @@ final class ma extends ArrayWidgetContainer implements ButtonListener {
                   this.a(param2 - 780737641, -this.field_bb + this.field_L);
                 }
               } else {
-                var5_intLifetime1 = -this.field_n + (an.field_g - param1) + (-(this.field_db.field_v >> 1) - this.field_db.field_n);
+                var5_intLifetime1 = -this.field_n + (EmailLoginCredentials.field_g - param1) + (-(this.field_db.field_v >> 1) - this.field_db.field_n);
                 var6 = me.field_I - param3 - (this.field_j - (-this.field_db.field_j - (this.field_db.field_k >> 1)));
                 if (Math.abs(var6) <= Math.abs(var5_intLifetime1)) {
                   if (var5_intLifetime1 <= 0) {
@@ -402,7 +402,7 @@ final class ma extends ArrayWidgetContainer implements ButtonListener {
           } else {
             stackIn_41_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_40_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_40_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -628,7 +628,7 @@ final class ma extends ArrayWidgetContainer implements ButtonListener {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(',').append(param11).append(',').append(param12).append(',').append(param13).append(',').append(param14).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(',').append(param11).append(',').append(param12).append(',').append(param13).append(',').append(param14).append(')').toString());
         }
     }
 
@@ -766,7 +766,7 @@ final class ma extends ArrayWidgetContainer implements ButtonListener {
               param1.readBits(28089, 12);
               var4[var5] = var6;
             } else {
-              var6_int = param1.readBits(28089, fj.a(-1 + var5, 29797));
+              var6_int = param1.readBits(28089, fj.bitLength(-1 + var5, 29797));
               var4[var5] = var4[var6_int];
             }
           }
@@ -783,7 +783,7 @@ final class ma extends ArrayWidgetContainer implements ButtonListener {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -820,7 +820,7 @@ final class ma extends ArrayWidgetContainer implements ButtonListener {
           var3 = new rb(param0, param1);
           pb.field_m.addLast(var3, -1);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "ma.Q(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "ma.Q(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -936,7 +936,7 @@ final class ma extends ArrayWidgetContainer implements ButtonListener {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
         }
     }
 

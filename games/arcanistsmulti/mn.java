@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mn extends rl {
+final class mn extends TextFieldValidator {
     static String field_w;
     static String field_v;
     static String field_q;
@@ -12,22 +12,22 @@ final class mn extends rl {
     private EditableTextWidget field_u;
     static String field_x;
 
-    final eh a(String param0, int param1) {
+    final ValidationState validateText(String param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
-        pd var4 = null;
-        eh stackIn_5_0 = null;
-        eh stackIn_9_0 = null;
+        ValidationProvider var4 = null;
+        ValidationState stackIn_5_0 = null;
+        ValidationState stackIn_9_0 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           var3_int = 85 % ((param1 + 50) / 36);
-          if (this.field_u instanceof el) {
-            var4 = ((el) ((Object) this.field_u)).a(0);
+          if (this.field_u instanceof ValidationProviderSource) {
+            var4 = ((ValidationProviderSource) ((Object) this.field_u)).getValidationProvider(0);
             if (var4 != null &&
-              var4.a(-88) != nn.field_s) {
+              var4.getValidationState(-88) != nn.field_s) {
               stackIn_5_0 = ra.field_k;
               return stackIn_5_0;
             }
@@ -48,7 +48,7 @@ final class mn extends rl {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -112,7 +112,7 @@ final class mn extends rl {
               }
               var9 = stackIn_18_0;
               if (var9 != null) {
-                var9.a(var8 - f.field_h, var2, param0 ^ 114, var7 + (f.field_h << 1), tm.field_b + (FullscreenFocusCanvas.field_d << 1));
+                var9.draw(var8 - f.field_h, var2, param0 ^ 114, var7 + (f.field_h << 1), tm.field_b + (FullscreenFocusCanvas.field_d << 1));
               }
               var2 = var2 + FullscreenFocusCanvas.field_d;
             }
@@ -128,7 +128,7 @@ final class mn extends rl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var1), "mn.D(" + param0 + ')');
+          throw aa.wrapException((Throwable) ((Object) var1), "mn.D(" + param0 + ')');
         }
     }
 
@@ -137,12 +137,12 @@ final class mn extends rl {
         try {
           this.field_u = param1;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "mn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "mn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final String a(String param0, byte param1) {
-        pd var3 = null;
+    final String messageForText(String param0, byte param1) {
+        ValidationProvider var3 = null;
         RuntimeException var3_ref = null;
         String var4 = null;
         String stackIn_7_0 = null;
@@ -154,15 +154,15 @@ final class mn extends rl {
         String stackIn_20_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.field_u instanceof el) {
-            var3 = ((el) ((Object) this.field_u)).a(0);
+          if (this.field_u instanceof ValidationProviderSource) {
+            var3 = ((ValidationProviderSource) ((Object) this.field_u)).getValidationProvider(0);
             if (var3 != null) {
-              if (var3.a(-69) == nn.field_s &&
+              if (var3.getValidationState(-69) == nn.field_s &&
                 !param0.equals(this.field_u.field_g)) {
                 stackIn_7_0 = lf.field_i;
                 return stackIn_7_0;
               }
-              stackIn_9_0 = var3.c(26146);
+              stackIn_9_0 = var3.getValidationMessage(26146);
               return stackIn_9_0;
             }
           }
@@ -174,7 +174,7 @@ final class mn extends rl {
             return null;
           }
           var4 = (String) null;
-          this.a((String) null, (byte) -98);
+          this.messageForText((String) null, (byte) -98);
           stackIn_16_0 = null;
           return (String) (stackIn_16_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -187,7 +187,7 @@ final class mn extends rl {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -206,7 +206,7 @@ final class mn extends rl {
         if (param0 < 78) {
           mn.e(18);
         }
-        ef.field_r = true;
+        SocketJs5Transport.field_r = true;
         hf.field_f = null;
         ih.field_d = null;
     }

@@ -88,7 +88,7 @@ final class gb implements Iterable {
               var9 = param0.getParameter("cookieprefix");
               var3 = var9 + "settings";
               var4 = (String) (ei.a(param0, 119, "getcookies"));
-              var5 = eh.a(false, ';', var4);
+              var5 = ValidationState.split(false, ';', var4);
               for (var6 = 0; var5.length > var6; var6++) {
                 var7 = var5[var6].indexOf('=');
                 if (var7 >= 0 &&
@@ -117,7 +117,7 @@ final class gb implements Iterable {
             } else {
               stackIn_21_2 = "{...}";
             }
-            throw aa.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
+            throw aa.wrapException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -150,7 +150,7 @@ final class gb implements Iterable {
           param1.secondaryPrevious.secondaryNext = param1;
           param1.secondaryNext.secondaryPrevious = param1;
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "gb.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "gb.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

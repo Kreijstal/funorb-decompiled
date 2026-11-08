@@ -49,7 +49,7 @@ final class rc {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -112,7 +112,7 @@ final class rc {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -125,7 +125,7 @@ final class rc {
             field_n = (String) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "rc.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "rc.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
         }
     }
 
@@ -154,8 +154,8 @@ final class rc {
         int var3Lifetime1;
         if (param1 == -30218) {
           ma.field_N = param0;
-          if (ea.field_F != jo.field_e) {
-            var2 = ea.field_F * ea.field_F;
+          if (DiskCacheRequest.field_F != jo.field_e) {
+            var2 = DiskCacheRequest.field_F * DiskCacheRequest.field_F;
             var3 = var2 - jo.field_e * jo.field_e;
             param0 = param0 + var3 * (vd.field_k - param0) / var2;
           }
@@ -166,8 +166,8 @@ final class rc {
         CharSequence var4 = (CharSequence) null;
         rc.a((byte) 20, (CharSequence) null, -57);
         ma.field_N = param0;
-        if (ea.field_F != jo.field_e) {
-          var2Lifetime1 = ea.field_F * ea.field_F;
+        if (DiskCacheRequest.field_F != jo.field_e) {
+          var2Lifetime1 = DiskCacheRequest.field_F * DiskCacheRequest.field_F;
           var3Lifetime1 = var2Lifetime1 - jo.field_e * jo.field_e;
           param0 = param0 + var3Lifetime1 * (vd.field_k - param0) / var2Lifetime1;
         }
@@ -194,7 +194,7 @@ final class rc {
         RuntimeException decompiledCaughtException = null;
         try {
           var3_int = -52 % ((param0 - 7) / 60);
-          stackIn_1_0 = fn.a(true, (byte) -40, param1, param2);
+          stackIn_1_0 = fn.parseInteger(true, (byte) -40, param1, param2);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -206,7 +206,7 @@ final class rc {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param2).append(')').toString());
         }
     }
 

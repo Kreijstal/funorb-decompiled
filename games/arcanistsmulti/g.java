@@ -10,7 +10,7 @@ final class g {
     static no field_e;
     static String field_b;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 == 30586) {
           field_d = null;
           field_e = null;
@@ -21,7 +21,7 @@ final class g {
           field_f = null;
           return;
         }
-        g.a(-51);
+        g.releaseStatics(-51);
         field_d = null;
         field_e = null;
         field_g = null;
@@ -64,7 +64,7 @@ final class g {
             } else {
               stackIn_9_2 = "{...}";
             }
-            throw aa.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+            throw aa.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

@@ -51,7 +51,7 @@ final class tm {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var1), "tm.C(" + param0 + ')');
+          throw aa.wrapException((Throwable) ((Object) var1), "tm.C(" + param0 + ')');
         }
     }
 
@@ -72,7 +72,7 @@ final class tm {
         if (!param0) {
           tm.a(126, (byte) -31);
         }
-        stackIn_6_0 = (null != ch.field_c) && (ob.field_eb.a((byte) 74));
+        stackIn_6_0 = (null != CredentialKind.field_c) && (ob.field_eb.a((byte) 74));
         return stackIn_6_0;
     }
 

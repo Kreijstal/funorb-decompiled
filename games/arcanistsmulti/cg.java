@@ -7,7 +7,7 @@ final class cg extends kc {
     int field_Vb;
     int field_Eb;
     kc field_Fb;
-    static eh field_Wb;
+    static ValidationState field_Wb;
     kc field_Ub;
     int field_Bb;
     int field_Mb;
@@ -34,11 +34,11 @@ final class cg extends kc {
           var5 = (CharSequence) ((Object) this.field_Tb);
           Js5ArchiveManager.a(var5, -13);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "cg.F(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "cg.F(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
-    final static boolean a(byte param0, uj param1, uj param2) {
+    final static boolean a(byte param0, ScreenDisplayMode param1, ScreenDisplayMode param2) {
         RuntimeException var3 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
@@ -76,7 +76,7 @@ final class cg extends kc {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 
@@ -118,7 +118,7 @@ final class cg extends kc {
         int var13Lifetime1;
         var19 = ArcanistsMulti.field_G ? 1 : 0;
         try {
-          an.field_e = new int[]{0, 0, -8144, 65536, 0, 0, 0, -65536, 0, 0, 0, 65536};
+          EmailLoginCredentials.field_e = new int[]{0, 0, -8144, 65536, 0, 0, 0, -65536, 0, 0, 0, 65536};
           var1_int = oo.field_u.length;
           var21 = new int[var1_int];
           var20 = var21;
@@ -130,24 +130,24 @@ final class cg extends kc {
             var5 = var4_ref_vg.field_k + var4_ref_vg.field_i >> 1;
             var6 = var4_ref_vg.field_v + var4_ref_vg.field_R >> 1;
             var7 = var4_ref_vg.field_N + var4_ref_vg.field_P >> 1;
-            var8 = an.field_e[9] >> 2;
-            var9 = an.field_e[10] >> 2;
-            var10_int = an.field_e[11] >> 2;
+            var8 = EmailLoginCredentials.field_e[9] >> 2;
+            var9 = EmailLoginCredentials.field_e[10] >> 2;
+            var10_int = EmailLoginCredentials.field_e[11] >> 2;
             var11 = var9 * tn.field_Gb[4] + (var8 * tn.field_Gb[3] + tn.field_Gb[5] * var10_int) >> 14;
             var12 = var10_int * tn.field_Gb[8] + tn.field_Gb[6] * var8 + tn.field_Gb[7] * var9 >> 14;
             var13 = var10_int * tn.field_Gb[11] + var8 * tn.field_Gb[9] + tn.field_Gb[10] * var9 >> 14;
             var2[var3] = var13 * var7 + (var6 * var12 + var11 * var5) >> 16;
           }
-          var3Lifetime1 = an.field_e[9] >> 8;
-          var4 = an.field_e[10] >> 8;
-          var5Lifetime1 = an.field_e[11] >> 8;
+          var3Lifetime1 = EmailLoginCredentials.field_e[9] >> 8;
+          var4 = EmailLoginCredentials.field_e[10] >> 8;
+          var5Lifetime1 = EmailLoginCredentials.field_e[11] >> 8;
           var6Lifetime1 = SoundCache.field_a << 4;
           var7Lifetime1 = 0;
           var8Lifetime1 = of.a(param0 - 252566934, var6Lifetime1) >> 8;
           var9Lifetime1 = j.a(var6Lifetime1, -108) >> 8;
-          if (an.field_g != -1 &&
+          if (EmailLoginCredentials.field_g != -1 &&
             me.field_I != -1) {
-            var7Lifetime1 = -320 + an.field_g;
+            var7Lifetime1 = -320 + EmailLoginCredentials.field_g;
             var9Lifetime1 = -128;
             var8Lifetime1 = 240 - me.field_I;
           }
@@ -159,7 +159,7 @@ final class cg extends kc {
           var13Lifetime1 = -var4 + var8Lifetime1;
           var14 = -var5Lifetime1 + var9Lifetime1;
           if (param0 != 252566882) {
-            cg.e(false);
+            cg.releaseStatics(false);
           }
           var10Lifetime1 = 256.0 / Math.sqrt((double)(var14 * var14 + var12Lifetime1 * var12Lifetime1 + var13Lifetime1 * var13Lifetime1));
           var13Lifetime1 = (int)((double)var13Lifetime1 * var10Lifetime1);
@@ -178,18 +178,18 @@ final class cg extends kc {
             for (var18 = 0; var18 < 3; var18++) {
               tn.field_Gb[var18] = tn.field_Gb[var18] + gn.field_g[var15][var18];
             }
-            to.a((byte) -61, an.field_e, tn.field_Gb, true, var17, false, false);
-            cj.a(var8Lifetime1, var13Lifetime1, var12Lifetime1, 20133, var17, var9Lifetime1, var7Lifetime1, var14);
+            to.a((byte) -61, EmailLoginCredentials.field_e, tn.field_Gb, true, var17, false, false);
+            cj.drawModel(var8Lifetime1, var13Lifetime1, var12Lifetime1, 20133, var17, var9Lifetime1, var7Lifetime1, var14);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw aa.a((Throwable) ((Object) var1), "cg.A(" + param0 + ')');
+          throw aa.wrapException((Throwable) ((Object) var1), "cg.A(" + param0 + ')');
         }
     }
 
-    public static void e(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_Rb = null;
         if (!param0) {
           return;
@@ -208,7 +208,7 @@ final class cg extends kc {
           var6 = (CharSequence) ((Object) this.field_Tb);
           Js5ArchiveManager.a(var6, -13);
         } catch (RuntimeException runtimeException) {
-          throw aa.a((Throwable) ((Object) runtimeException), "cg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw aa.wrapException((Throwable) ((Object) runtimeException), "cg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -255,7 +255,7 @@ final class cg extends kc {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
         }
     }
 
@@ -302,7 +302,7 @@ final class cg extends kc {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -316,6 +316,6 @@ final class cg extends kc {
 
     static {
         field_Rb = "You have not yet unlocked this option for use.";
-        field_Wb = new eh();
+        field_Wb = new ValidationState();
     }
 }

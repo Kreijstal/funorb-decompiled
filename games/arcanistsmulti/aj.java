@@ -12,7 +12,7 @@ final class aj {
     static int field_g;
     static i field_h;
 
-    final static mi a(nf param0, int param1) {
+    final static mi acquireProjectile(nf param0, int param1) {
         mi var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
@@ -42,7 +42,7 @@ final class aj {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -70,7 +70,7 @@ final class aj {
         field_b = null;
     }
 
-    final static mi a(ml param0, int param1, boolean param2, int param3, nf param4, int param5) {
+    final static mi spawnProjectile(ml param0, int param1, boolean param2, int param3, nf param4, int param5) {
         RuntimeException var6 = null;
         mi stackIn_2_0 = null;
         mi stackIn_4_0 = null;
@@ -103,7 +103,7 @@ final class aj {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param5).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param5).append(')').toString());
         }
     }
 

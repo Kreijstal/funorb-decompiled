@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dg extends rl {
+final class NameValidator extends TextFieldValidator {
     private String field_r;
     static String field_v;
     static String field_q;
@@ -23,21 +23,21 @@ final class dg extends rl {
         field_v = null;
     }
 
-    final eh a(String param0, int param1) {
+    final ValidationState validateText(String param0, int param1) {
         ho var3 = null;
         int var3_int = 0;
         RuntimeException var3_ref = null;
         CharSequence var4 = null;
-        eh stackIn_2_0 = null;
-        eh stackIn_8_0 = null;
-        eh stackIn_13_0 = null;
+        ValidationState stackIn_2_0 = null;
+        ValidationState stackIn_8_0 = null;
+        ValidationState stackIn_13_0 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           var4 = (CharSequence) ((Object) param0);
-          if (!ee.a((byte) 127, var4)) {
+          if (!DebouncedValidator.a((byte) 127, var4)) {
             stackIn_2_0 = ra.field_k;
             return stackIn_2_0;
           }
@@ -69,7 +69,7 @@ final class dg extends rl {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -97,16 +97,16 @@ final class dg extends rl {
         ed.j(120);
     }
 
-    static int a(int param0, int param1) {
+    static int bitAnd(int param0, int param1) {
         return param0 & param1;
     }
 
-    dg(EditableTextWidget param0) {
+    NameValidator(EditableTextWidget param0) {
         super(param0);
         this.field_w = false;
     }
 
-    final String a(String param0, byte param1) {
+    final String messageForText(String param0, byte param1) {
         String var3 = null;
         RuntimeException var3_ref = null;
         ho var4 = null;
@@ -155,7 +155,7 @@ final class dg extends rl {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
         }
     }
 

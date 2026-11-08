@@ -18,7 +18,7 @@ abstract class go {
 
     abstract java.net.Socket b(byte param0) throws IOException;
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         if (param0) {
           return;
         }
@@ -51,7 +51,7 @@ abstract class go {
         var6 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           if (param1 != -82) {
-            go.a(true);
+            go.releaseStatics(true);
           }
           var2_int = param0.length();
           var3 = new byte[var2_int];
@@ -164,7 +164,7 @@ abstract class go {
           } else {
             stackIn_73_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_72_0), ((StringBuilder) (Object) stackIn_72_1).append(stackIn_73_2).append(',').append(param1).append(')').toString());
+          throw aa.wrapException((Throwable) ((Object) stackIn_72_0), ((StringBuilder) (Object) stackIn_72_1).append(stackIn_73_2).append(',').append(param1).append(')').toString());
         }
     }
 
