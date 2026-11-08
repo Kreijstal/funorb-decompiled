@@ -15,7 +15,7 @@ final class ValidationIndicator extends TextButton {
           }
           super.updatePointer(param0 ^ 0, param1, param2, param3);
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "vc.L(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "vc.L(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -52,7 +52,7 @@ final class ValidationIndicator extends TextButton {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -72,10 +72,10 @@ final class ValidationIndicator extends TextButton {
         int var21_int = 0;
         RuntimeException var21 = null;
         try {
-          ValidationState.a((byte) -109, param15, param9, param6);
+          ValidationState.configureLegacyMenu((byte) -109, param15, param9, param6);
           BackgroundScene.setLegacyMenuFontMetrics(param17, false, param0, param7, param18);
           OptionsScreen.setLegacyMenuCentre(param8, param20, true);
-          lg.a(param5, param2, -118, param3, param4, param1);
+          lg.setMenuButtonStyle(param5, param2, -118, param3, param4, param1);
           PictureStrip.setLegacyMenuFrame(param12, param13, 16, param10);
           JaggrabDownloader.setMenuTextColours((byte) -113, param19, param11, param14);
           var21_int = -33 / ((param16 - 20) / 57);
@@ -114,7 +114,7 @@ final class ValidationIndicator extends TextButton {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param16).append(',').append(param17).append(',').append(param18).append(',').append(param19).append(',').append(param20).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param16).append(',').append(param17).append(',').append(param18).append(',').append(param19).append(',').append(param20).append(')').toString());
         }
     }
 
@@ -147,18 +147,18 @@ final class ValidationIndicator extends TextButton {
           var11 = var17.field_B << 1;
           if (null == QuickChatPhraseCache.field_k) {
             QuickChatPhraseCache.field_k = new Sprite(var10, var11);
-            Checkbox.a(-83, QuickChatPhraseCache.field_k);
+            Checkbox.renderToSprite(-83, QuickChatPhraseCache.field_k);
           } else {
             if (var10 > QuickChatPhraseCache.field_k.field_F) {
               QuickChatPhraseCache.field_k = new Sprite(var10, var11);
-              Checkbox.a(-83, QuickChatPhraseCache.field_k);
+              Checkbox.renderToSprite(-83, QuickChatPhraseCache.field_k);
             } else {
               if (QuickChatPhraseCache.field_k.field_E >= var11) {
-                Checkbox.a(-71, QuickChatPhraseCache.field_k);
+                Checkbox.renderToSprite(-71, QuickChatPhraseCache.field_k);
                 SoftwareRasterizer.clear();
               } else {
                 QuickChatPhraseCache.field_k = new Sprite(var10, var11);
-                Checkbox.a(-83, QuickChatPhraseCache.field_k);
+                Checkbox.renderToSprite(-83, QuickChatPhraseCache.field_k);
               }
             }
           }
@@ -173,7 +173,7 @@ final class ValidationIndicator extends TextButton {
             var14.drawAdditive(var5 - (var14.field_F >> 1), -(var14.field_E >> 1) + var7, 256);
             return;
           }
-          if (qk.field_g != var9) {
+          if (RetroBlock.field_g != var9) {
             return;
           }
           var15 = CanvasRasterBuffer.field_g[1];
@@ -185,18 +185,18 @@ final class ValidationIndicator extends TextButton {
         var11Lifetime1 = var16.field_B << 1;
         if (null == QuickChatPhraseCache.field_k) {
           QuickChatPhraseCache.field_k = new Sprite(var10Lifetime1, var11Lifetime1);
-          Checkbox.a(-83, QuickChatPhraseCache.field_k);
+          Checkbox.renderToSprite(-83, QuickChatPhraseCache.field_k);
         } else {
           if (var10Lifetime1 > QuickChatPhraseCache.field_k.field_F) {
             QuickChatPhraseCache.field_k = new Sprite(var10Lifetime1, var11Lifetime1);
-            Checkbox.a(-83, QuickChatPhraseCache.field_k);
+            Checkbox.renderToSprite(-83, QuickChatPhraseCache.field_k);
           } else {
             if (QuickChatPhraseCache.field_k.field_E >= var11Lifetime1) {
-              Checkbox.a(-71, QuickChatPhraseCache.field_k);
+              Checkbox.renderToSprite(-71, QuickChatPhraseCache.field_k);
               SoftwareRasterizer.clear();
             } else {
               QuickChatPhraseCache.field_k = new Sprite(var10Lifetime1, var11Lifetime1);
-              Checkbox.a(-83, QuickChatPhraseCache.field_k);
+              Checkbox.renderToSprite(-83, QuickChatPhraseCache.field_k);
             }
           }
         }
@@ -221,7 +221,7 @@ final class ValidationIndicator extends TextButton {
         try {
           this.field_P = param0;
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "vc.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "vc.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -17,7 +17,7 @@ final class fc {
         field_c = null;
     }
 
-    final static void a(SceneWidget param0, int param1, SceneWidget param2) {
+    final static void bindLobbyLists(SceneWidget param0, int param1, SceneWidget param2) {
         if (param0.children == null) {
           param0.children = new IntrusiveDeque();
         }
@@ -36,9 +36,9 @@ final class fc {
           }
           bq.field_b = param2.children;
           VerticalScrollbar.field_Hb = param0.children;
-          bd.a((byte) -1);
+          bd.clearSocialLists((byte) -1);
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "fc.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "fc.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -55,7 +55,7 @@ final class fc {
           try {
             try {
               var2 = new java.net.URL(param0.getCodeBase(), "tosupport.ws");
-              param0.getAppletContext().showDocument(lg.a(false, param0, var2), "_top");
+              param0.getAppletContext().showDocument(lg.withSessionParameters(false, param0, var2), "_top");
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var2_ref2 = (Exception) (Object) decompiledCaughtException;
@@ -77,7 +77,7 @@ final class fc {
             } else {
               stackIn_9_2 = "{...}";
             }
-            throw aa.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+            throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -86,7 +86,7 @@ final class fc {
         }
     }
 
-    final static void a(byte param0) {
+    final static void decreaseSoundVolume(byte param0) {
         int var1 = 0;
         int var1Lifetime1;
         if (param0 >= -30) {

@@ -31,7 +31,7 @@ final class bj {
           }
           int var3 = 85 / ((0 - param1) / 35);
           var2 = 0 == JavaRandomHelpers.a(ea.field_b, -111, 4) ? 1 : 0;
-          return mc.a(ea.field_b, 5, var2 != 0, param0, -52);
+          return mc.generatePuzzle(ea.field_b, 5, var2 != 0, param0, -52);
         }
         return PuzzleThumbnail.field_d[param0];
     }

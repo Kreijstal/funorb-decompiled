@@ -36,7 +36,7 @@ final class TimerBar extends StatusBar {
           if (ce.field_d == 2 &&
             null != fp.field_d) {
             var3 = (CharSequence) ((Object) param1);
-            if (fp.field_d.equals(dh.a(var3, (byte) 26))) {
+            if (fp.field_d.equals(dh.normalizeDisplayName(var3, (byte) 26))) {
               return true;
             }
           }
@@ -51,7 +51,7 @@ final class TimerBar extends StatusBar {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -87,7 +87,7 @@ final class TimerBar extends StatusBar {
             if (this.field_s < (this.field_r >> 2) + 20 &&
               this.field_s % 30 == 0) {
               this.setFlashIntensity(255);
-              mc.a(129, -120);
+              mc.playSoundEffect(129, -120);
             } else {
               if (-20 + this.field_r > this.field_s &&
                 this.field_s % (this.field_r >> 2) == 0) {
@@ -96,7 +96,7 @@ final class TimerBar extends StatusBar {
             }
           } else {
             this.field_s = 0;
-            mc.a(130, -123);
+            mc.playSoundEffect(130, -123);
             if (this.field_s >= (this.field_r >> 2) + 20) {
               if (-20 + this.field_r > this.field_s &&
                 this.field_s % (this.field_r >> 2) == 0) {
@@ -110,7 +110,7 @@ final class TimerBar extends StatusBar {
                 }
               } else {
                 this.setFlashIntensity(255);
-                mc.a(129, -120);
+                mc.playSoundEffect(129, -120);
               }
             }
           }
@@ -132,11 +132,11 @@ final class TimerBar extends StatusBar {
         var3Lifetime1 = -68 % ((-83 - param0) / 37);
         if (this.field_s <= 0) {
           this.field_s = 0;
-          mc.a(130, -123);
+          mc.playSoundEffect(130, -123);
           if (this.field_s < (this.field_r >> 2) + 20 &&
             this.field_s % 30 == 0) {
             this.setFlashIntensity(255);
-            mc.a(129, -120);
+            mc.playSoundEffect(129, -120);
           } else {
             if (-20 + this.field_r > this.field_s &&
               this.field_s % (this.field_r >> 2) == 0) {
@@ -152,7 +152,7 @@ final class TimerBar extends StatusBar {
           } else {
             if (this.field_s % 30 == 0) {
               this.setFlashIntensity(255);
-              mc.a(129, -120);
+              mc.playSoundEffect(129, -120);
             } else {
               if (-20 + this.field_r > this.field_s &&
                 this.field_s % (this.field_r >> 2) == 0) {

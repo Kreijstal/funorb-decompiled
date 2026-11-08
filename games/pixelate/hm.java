@@ -9,19 +9,19 @@ final class hm {
     static String field_d;
     static int field_b;
 
-    final static og queueSaveDataRequest(int param0, byte[] param1, int param2) {
-        og var3 = null;
+    final static SaveDataRequest queueSaveDataRequest(int param0, byte[] param1, int param2) {
+        SaveDataRequest var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
-        og stackIn_1_0 = null;
+        SaveDataRequest stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = new og(param1);
+          var3 = new SaveDataRequest(param1);
           wk.field_g.addLast(22125, var3);
-          dq.a(param2, -18989, var3);
+          dq.sendSaveDataRequest(param2, -18989, var3);
           var4 = 55 / ((param0 - 68) / 46);
           stackIn_1_0 = var3;
           return stackIn_1_0;
@@ -35,7 +35,7 @@ final class hm {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -63,9 +63,9 @@ final class hm {
             }
             var3 = param1.substring(param0, var2_int);
             var4 = param1.substring(var2_int + 1);
-            var5 = wf.a(false, var3);
+            var5 = wf.validateEmailLocalPart(false, var3);
             if (var5 == null) {
-              stackIn_12_0 = jf.a(var4, param0 ^ -4384);
+              stackIn_12_0 = jf.validateEmailDomain(var4, param0 ^ -4384);
               return stackIn_12_0;
             }
             stackIn_10_0 = var5;
@@ -83,7 +83,7 @@ final class hm {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 

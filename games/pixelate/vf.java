@@ -6,7 +6,7 @@ final class vf {
     static String field_b;
     static String field_a;
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         if (param0 > -104) {
           java.applet.Applet var2 = (java.applet.Applet) null;
           vf.reloadPage((java.applet.Applet) null, 33);
@@ -16,7 +16,7 @@ final class vf {
         field_b = null;
     }
 
-    final static void a(byte param0) {
+    final static void clearFaceGroupCounts(byte param0) {
         int[] var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -47,7 +47,7 @@ final class vf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw aa.addExceptionContext((Throwable) ((Object) var1_ref), "vf.E(" + param0 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) var1_ref), "vf.E(" + param0 + ')');
         }
     }
 
@@ -92,11 +92,11 @@ final class vf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw aa.addExceptionContext((Throwable) ((Object) var2_ref), "vf.A(" + param0 + ',' + param1 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) var2_ref), "vf.A(" + param0 + ',' + param1 + ')');
         }
     }
 
-    final static void a(boolean param0, int param1, int param2) {
+    final static void updateIgnoreListControls(boolean param0, int param1, int param2) {
         ScrollContainer stackIn_3_0 = null;
         boolean stackIn_3_1 = false;
         boolean stackIn_4_2 = false;
@@ -215,7 +215,7 @@ final class vf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw aa.addExceptionContext((Throwable) ((Object) var3), "vf.B(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) var3), "vf.B(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -247,7 +247,7 @@ final class vf {
                 var4Lifetime2 = var4Lifetime2 + var2.substring(var3);
               }
               var5 = new java.net.URL(param0.getCodeBase(), var4Lifetime2);
-              param0.getAppletContext().showDocument(lg.a(false, param0, var5), "_self");
+              param0.getAppletContext().showDocument(lg.withSessionParameters(false, param0, var5), "_self");
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var2_ref = (Exception) (Object) decompiledCaughtException;
@@ -264,7 +264,7 @@ final class vf {
             } else {
               stackIn_11_2 = "{...}";
             }
-            throw aa.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+            throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

@@ -15,7 +15,7 @@ final class mc extends IntrusiveNode {
     static String field_o;
     static long field_q;
 
-    final static Puzzle a(Random param0, int param1, boolean param2, int param3, int param4) {
+    final static Puzzle generatePuzzle(Random param0, int param1, boolean param2, int param3, int param4) {
         RuntimeException var5 = null;
         PieceTiming var6 = null;
         int var7 = 0;
@@ -45,7 +45,7 @@ final class mc extends IntrusiveNode {
             stackIn_5_0 = (Puzzle) null;
             return stackIn_5_0;
           }
-          var8 = SpriteState.a(false, param3);
+          var8 = SpriteState.computePictureScore(false, param3);
           var9 = GameResultsScreen.computeTimeBonusSeconds((byte) 124, param3);
           var10 = mi.pickRandomPictures(var12.field_d, param1, var12.field_j, 20);
           var11 = new Puzzle(var12.field_j, var12.field_d, var7, var6.field_a, var6.field_b, var6.field_c, var9, var8, var10);
@@ -62,11 +62,11 @@ final class mc extends IntrusiveNode {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
-    final static void e(int param0) {
+    final static void drawBenefitsScreen(int param0) {
         Sprite var1 = null;
         int var1_int = 0;
         int var2 = 0;
@@ -147,24 +147,24 @@ final class mc extends IntrusiveNode {
             var13 = new Sprite(195, 221);
             var6 = var13.field_F / 2;
             var13.makeRasterTarget();
-            EmailConfirmationValidator.field_r.drawCentered(AlphaContainer.a(MusicCrossfadeStream.field_s, param0 + 24, new String[]{FallingPieceView.field_g}), var6, 40, 16777215, -1);
-            QuickChatCategory.field_A.drawCentered(AlphaContainer.a(TimerBarDemo.field_n, 76, new String[]{FallingPieceView.field_g}), var6, 60, 16777215, -1);
-            EmailConfirmationValidator.field_r.drawCentered(AlphaContainer.a(ab.field_d, 73, new String[]{bl.field_g}), var6, 110, 16777215, -1);
-            QuickChatCategory.field_A.drawCentered(AlphaContainer.a(BoardView.field_l, 44, new String[]{bl.field_g}), var6, 130, 16777215, -1);
+            EmailConfirmationValidator.field_r.drawCentered(AlphaContainer.formatTemplate(MusicCrossfadeStream.field_s, param0 + 24, new String[]{FallingPieceView.field_g}), var6, 40, 16777215, -1);
+            QuickChatCategory.field_A.drawCentered(AlphaContainer.formatTemplate(TimerBarDemo.field_n, 76, new String[]{FallingPieceView.field_g}), var6, 60, 16777215, -1);
+            EmailConfirmationValidator.field_r.drawCentered(AlphaContainer.formatTemplate(ab.field_d, 73, new String[]{bl.field_g}), var6, 110, 16777215, -1);
+            QuickChatCategory.field_A.drawCentered(AlphaContainer.formatTemplate(BoardView.field_l, 44, new String[]{bl.field_g}), var6, 130, 16777215, -1);
             EmailConfirmationValidator.field_r.drawCentered(UiComponent.field_w, var6, 180, 16777215, -1);
             QuickChatCategory.field_A.drawCentered(ri.field_d, var6, 200, 16777215, -1);
             MenuScreen.drawSpriteOutline(0, 0, 1, var13, var13.field_F, -1, 3, var13.field_E);
             SpriteCheckboxPainter.field_a.makeRasterTarget();
             var13.drawTransparent(-SpriteCheckboxPainter.field_a.field_D + 18, 241 - SpriteCheckboxPainter.field_a.field_y);
             for (var7 = 0; MarkerSlider.field_S.length > var7; var7++) {
-              li.field_a[var7].makeRasterTarget();
-              QuickChatCategory.field_A.drawParagraph(MarkerSlider.field_S[var7], 3, 3, -6 + li.field_a[var7].field_F, li.field_a[var7].field_E - 6, ug.field_k, -1, 1, 1, QuickChatCategory.field_A.maxDescent + QuickChatCategory.field_A.maxAscent);
-              MenuScreen.drawSpriteOutline(0, 0, 1, li.field_a[var7], li.field_a[var7].field_F, -1, 3, li.field_a[var7].field_E);
+              FireworkDisplay.field_a[var7].makeRasterTarget();
+              QuickChatCategory.field_A.drawParagraph(MarkerSlider.field_S[var7], 3, 3, -6 + FireworkDisplay.field_a[var7].field_F, FireworkDisplay.field_a[var7].field_E - 6, ug.field_k, -1, 1, 1, QuickChatCategory.field_A.maxDescent + QuickChatCategory.field_A.maxAscent);
+              MenuScreen.drawSpriteOutline(0, 0, 1, FireworkDisplay.field_a[var7], FireworkDisplay.field_a[var7].field_F, -1, 3, FireworkDisplay.field_a[var7].field_E);
             }
             MarkerSlider.field_S = null;
             ph.field_n = ro.field_b.copy();
             ph.field_n.makeRasterTarget();
-            nh.a(SoftwareRasterizer.field_d * 2 / 3, 64, 0, 0, 126, SoftwareRasterizer.field_j);
+            nh.fillHorizontalFadeSpan(SoftwareRasterizer.field_d * 2 / 3, 64, 0, 0, 126, SoftwareRasterizer.field_j);
             SoftwareRasterizer.setTarget(var28, var2, var3);
             SoftwareRasterizer.restoreClip(ClientContextMenu.field_f);
             PictureStrip.field_n = null;
@@ -182,7 +182,7 @@ final class mc extends IntrusiveNode {
             var2Lifetime1 = SoftwareRasterizer.field_j;
             var3Lifetime1 = SoftwareRasterizer.field_d;
             SoftwareRasterizer.saveClip(ClientContextMenu.field_f);
-            var15 = AlphaContainer.a(jm.field_p, 93, new String[]{wp.field_b[gb.field_c]});
+            var15 = AlphaContainer.formatTemplate(Cloud.field_p, 93, new String[]{wp.field_b[gb.field_c]});
             var5 = EmailConfirmationValidator.field_r.getWrappedWidth(var15, mp.field_f);
             var6Lifetime1 = EmailConfirmationValidator.field_r.paragraphHeight(var15, mp.field_f, EmailConfirmationValidator.field_r.maxAscent + EmailConfirmationValidator.field_r.maxDescent);
             var7Lifetime1 = (mp.field_f - var5) / 2 + bl.field_c;
@@ -249,7 +249,7 @@ final class mc extends IntrusiveNode {
             var3Lifetime2 = SoftwareRasterizer.field_d;
             SoftwareRasterizer.saveClip(ClientContextMenu.field_f);
             var17 = new Sprite(412, 43);
-            var5_ref_String = AlphaContainer.a(dk.field_f, param0 + 18, new String[]{IntrusiveNode.field_i});
+            var5_ref_String = AlphaContainer.formatTemplate(dk.field_f, param0 + 18, new String[]{IntrusiveNode.field_i});
             IntrusiveNode.field_i = null;
             var17.makeRasterTarget();
             QuickChatCategory.field_A.drawParagraph(var5_ref_String, 3, 3, var17.field_F - 6, -6 + var17.field_E, 16777215, -1, 0, 1, QuickChatCategory.field_A.maxAscent + QuickChatCategory.field_A.maxDescent);
@@ -289,7 +289,7 @@ final class mc extends IntrusiveNode {
           }
           if (param0 != 12) {
             var11 = (Random) null;
-            mc.a((Random) null, 44, true, 73, 110);
+            mc.generatePuzzle((Random) null, 44, true, 73, 110);
           }
           qf.field_c.drawTransparent(0, 0);
           if (ni.field_m != null) {
@@ -304,7 +304,7 @@ final class mc extends IntrusiveNode {
             }
             var1.drawTransparent(0, 0);
             stackIn_51_0 = 40;
-            stackIn_51_1 = qk.field_e;
+            stackIn_51_1 = RetroBlock.field_e;
             if (NameSuggestionsPanel.field_I.selectedIndex == 0) {
               stackIn_52_2 = 4;
             } else {
@@ -324,19 +324,19 @@ final class mc extends IntrusiveNode {
             stackIn_57_0 = ui.field_b;
             stackIn_57_1 = AlphaContainer.field_K;
             stackIn_58_2 = (NameSuggestionsPanel.field_I.selectedIndex == 0);
-            r.a(stackIn_57_0, stackIn_57_1, stackIn_58_2, param0 ^ -44);
+            r.drawChoiceIconWithHighlight(stackIn_57_0, stackIn_57_1, stackIn_58_2, param0 ^ -44);
           }
           if (wo.field_c != null &&
             AccountChoicePanel.field_O != null) {
             wo.field_c.drawTransparent(434, 390);
             ResizableModalPanel.field_P.drawTransparent(0, 0);
             if (NameSuggestionsPanel.field_I.selectedIndex == 1) {
-              nh.a(wo.field_c.field_E * 7 / 12, 64, 436, 392, 121, wo.field_c.field_F - 4);
+              nh.fillHorizontalFadeSpan(wo.field_c.field_E * 7 / 12, 64, 436, 392, 121, wo.field_c.field_F - 4);
             }
             stackIn_66_0 = DraggableWidget.field_Q;
             stackIn_66_1 = JaggrabDownloader.field_a;
             stackIn_67_2 = (NameSuggestionsPanel.field_I.selectedIndex == 1);
-            r.a(stackIn_66_0, stackIn_66_1, stackIn_67_2, -40);
+            r.drawChoiceIconWithHighlight(stackIn_66_0, stackIn_66_1, stackIn_67_2, -40);
           }
           if (ScrollContainer.field_Kb != null) {
             var1_int = 357 - ScrollContainer.field_Kb.field_B / 2;
@@ -344,7 +344,7 @@ final class mc extends IntrusiveNode {
             hf.field_m.drawTransparent(586, var1_int);
             if (StatusBar.field_k > var1_int &&
               ScrollContainer.field_Kb.field_E + var1_int > StatusBar.field_k) {
-              var2Lifetime5 = (40 * GrowableIntList.b(qk.field_e << 4, 0) >> 16) + 40;
+              var2Lifetime5 = (40 * GrowableIntList.b(RetroBlock.field_e << 4, 0) >> 16) + 40;
               if (var2Lifetime5 > 0) {
                 if (ProxyAuthenticationException.field_d > -ScrollContainer.field_Kb.field_F + 269 &&
                   ProxyAuthenticationException.field_d < 269) {
@@ -356,7 +356,7 @@ final class mc extends IntrusiveNode {
                   if (ProxyAuthenticationException.field_d > 586) {
                     if (ScrollContainer.field_Kb.field_F + 586 <= ProxyAuthenticationException.field_d) {
                       CachedTextLayout.drawScreenshotSlideshow(param0 - 19320);
-                      li.field_a[Vector3.field_b].drawTransparent(269, 340);
+                      FireworkDisplay.field_a[Vector3.field_b].drawTransparent(269, 340);
                       return;
                     }
                     hf.field_m.drawAdditive(585, -1 + var1_int, var2Lifetime5);
@@ -369,22 +369,22 @@ final class mc extends IntrusiveNode {
             }
           }
           CachedTextLayout.drawScreenshotSlideshow(param0 - 19320);
-          li.field_a[Vector3.field_b].drawTransparent(269, 340);
+          FireworkDisplay.field_a[Vector3.field_b].drawTransparent(269, 340);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw aa.addExceptionContext((Throwable) ((Object) var1_ref), "mc.D(" + param0 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) var1_ref), "mc.D(" + param0 + ')');
         }
     }
 
-    final static PcmSampleStream a(int param0, int param1) {
-        ln var2 = null;
+    final static PcmSampleStream playSoundEffect(int param0, int param1) {
+        SoundVoice var2 = null;
         if (SoundCache.field_b.size(0) < 5) {
           if (param1 >= -117) {
-            mc.a(17, -35);
+            mc.playSoundEffect(17, -35);
           }
-          var2 = new ln(param0);
+          var2 = new SoundVoice(param0);
           SoundCache.field_b.addLast(22125, var2);
           return var2.field_o;
         }

@@ -16,7 +16,7 @@ final class qh {
         try {
           ri.field_a.selectTrack(1000000, !param3 ? true : false, param1, (byte) 124, param2, 256);
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "qh.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "qh.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 

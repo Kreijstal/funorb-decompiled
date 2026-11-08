@@ -45,7 +45,7 @@ final class MatchingTextValidator extends TextFieldValidator {
           if (this.matchingField instanceof ValidationProvider) {
             var3 = ((ValidationProvider) ((Object) this.matchingField)).getValidationSource(1);
             if (var3 != null) {
-              if (var3.getState((byte) 68) == qk.field_g &&
+              if (var3.getState((byte) 68) == RetroBlock.field_g &&
                 !param1.equals(this.matchingField.field_q)) {
                 stackIn_7_0 = sk.field_d;
                 return stackIn_7_0;
@@ -69,7 +69,7 @@ final class MatchingTextValidator extends TextFieldValidator {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 
@@ -94,7 +94,7 @@ final class MatchingTextValidator extends TextFieldValidator {
         try {
           this.matchingField = param1;
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "qo.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "qo.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -116,13 +116,13 @@ final class MatchingTextValidator extends TextFieldValidator {
           if (this.matchingField instanceof ValidationProvider) {
             var3 = ((ValidationProvider) ((Object) this.matchingField)).getValidationSource(1);
             if (var3 != null &&
-              var3.getState((byte) 69) != qk.field_g) {
+              var3.getState((byte) 69) != RetroBlock.field_g) {
               stackIn_9_0 = sk.field_a;
               return stackIn_9_0;
             }
           }
           if (param0.equals(this.matchingField.field_q)) {
-            stackIn_13_0 = qk.field_g;
+            stackIn_13_0 = RetroBlock.field_g;
           } else {
             stackIn_13_0 = sk.field_a;
           }
@@ -137,7 +137,7 @@ final class MatchingTextValidator extends TextFieldValidator {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(')').toString());
         }
     }
 

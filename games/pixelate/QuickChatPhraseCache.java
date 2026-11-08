@@ -17,18 +17,18 @@ final class QuickChatPhraseCache {
     static Sprite field_f;
     static String field_n;
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, Sprite[] param6, BitmapFont param7, int param8, Sprite[] param9, int param10, boolean param11) {
+    final static void configureQuickChatStyle(int param0, int param1, int param2, int param3, int param4, int param5, Sprite[] param6, BitmapFont param7, int param8, Sprite[] param9, int param10, boolean param11) {
         try {
           if (param1 != -879) {
             field_h = 78;
           }
           StrongCacheReference.a(param8, param11, param10, param5, param7, param6, param4, param0, param9, param2, param7, (byte) 122, param3, param0, param2);
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "u.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ',' + (param7 != null ? "{...}" : "null") + ',' + param8 + ',' + (param9 != null ? "{...}" : "null") + ',' + param10 + ',' + param11 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "u.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ',' + (param7 != null ? "{...}" : "null") + ',' + param8 + ',' + (param9 != null ? "{...}" : "null") + ',' + param10 + ',' + param11 + ')');
         }
     }
 
-    final QuickChatPhraseDefinition a(int param0, int param1) {
+    final QuickChatPhraseDefinition getPhrase(int param0, int param1) {
         QuickChatPhraseDefinition var3;
         byte[] var4;
         QuickChatPhraseDefinition var3Lifetime1;
@@ -116,11 +116,11 @@ final class QuickChatPhraseCache {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
-    final static void a(boolean param0, int param1) {
+    final static void playSkinMusic(boolean param0, int param1) {
         qh.a((byte) -110, 10, bj.field_c[param1], true);
         if (param0) {
           QuickChatPhraseCache.releaseStatics(-24);

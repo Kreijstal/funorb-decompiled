@@ -43,12 +43,12 @@ final class LobbyGame extends SceneWidget {
     boolean field_hc;
     SceneWidget field_lc;
 
-    final int c(byte param0) {
+    final int getGameId(byte param0) {
         if (param0 != 8) {
           this.field_Eb = (byte[]) null;
-          return (int)this.a(true);
+          return (int)this.getSecondaryKey(true);
         }
-        return (int)this.a(true);
+        return (int)this.getSecondaryKey(true);
     }
 
     LobbyGame(int param0) {
@@ -56,12 +56,12 @@ final class LobbyGame extends SceneWidget {
         this.field_Eb = new byte[param0];
     }
 
-    final boolean j(int param0) {
+    final boolean isUnlisted(int param0) {
         if (param0 == 433) {
-          return !this.f(0) ? true : false;
+          return !this.isSecondaryLinked(0) ? true : false;
         }
         this.field_Wb = (SceneWidget) null;
-        return !this.f(0) ? true : false;
+        return !this.isSecondaryLinked(0) ? true : false;
     }
 
     public static void releaseStatics(byte param0) {
@@ -179,7 +179,7 @@ final class LobbyGame extends SceneWidget {
           } else {
             stackIn_79_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_78_0), ((StringBuilder) (Object) stackIn_78_1).append(stackIn_79_2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_78_0), ((StringBuilder) (Object) stackIn_78_1).append(stackIn_79_2).append(')').toString());
         }
     }
 

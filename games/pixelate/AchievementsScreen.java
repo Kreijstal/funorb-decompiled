@@ -11,7 +11,7 @@ final class AchievementsScreen extends MenuScreen {
 
     final void enterScreen(int param0, int param1, boolean param2) {
         jn.field_v = -1;
-        jm.field_j = -1;
+        Cloud.field_j = -1;
         super.enterScreen(param0, param1, param2);
     }
 
@@ -105,7 +105,7 @@ final class AchievementsScreen extends MenuScreen {
             var2 == 0) && this.isAchievementVisible(var5, (byte) 97)) {
             var7 = this.getIconX(var5, (byte) -54);
             var8 = this.getIconY(-111, var5);
-            if (var5 == jm.field_j) {
+            if (var5 == Cloud.field_j) {
               SoftwareRasterizer.fillRoundedRectangleBlended(var7 - 3, -3 + var8, 38, 38, 6, 0, 128);
             }
             if (var5 == jn.field_v) {
@@ -114,10 +114,10 @@ final class AchievementsScreen extends MenuScreen {
             var6_ref_tf.drawQuarterSize(var7, var8);
           }
         }
-        if (jm.field_j == -1) {
+        if (Cloud.field_j == -1) {
           stackIn_24_0 = jn.field_v;
         } else {
-          stackIn_24_0 = jm.field_j;
+          stackIn_24_0 = Cloud.field_j;
         }
         var5Lifetime1 = stackIn_24_0;
         if (-1 != var5Lifetime1) {
@@ -243,7 +243,7 @@ final class AchievementsScreen extends MenuScreen {
         if (this.isAchievementUnlocked((byte) 66, param1)) {
           return oo.field_c[param1];
         }
-        if (gq.d(param0 ^ 96) &&
+        if (gq.isOfflineOrAccountUi(param0 ^ 96) &&
           TwistedLogicBackground.field_p[param1]) {
           return gd.field_i;
         }
@@ -274,11 +274,11 @@ final class AchievementsScreen extends MenuScreen {
         jn.field_v = this.achievementAt(4, ProxyAuthenticationException.field_d, StatusBar.field_k);
         if (jn.field_v != -1 &&
           IntrusiveDequeCursor.field_c == 1) {
-          mc.a(128, -126);
-          if (jn.field_v == jm.field_j) {
-            jm.field_j = -1;
+          mc.playSoundEffect(128, -126);
+          if (jn.field_v == Cloud.field_j) {
+            Cloud.field_j = -1;
           } else {
-            jm.field_j = jn.field_v;
+            Cloud.field_j = jn.field_v;
           }
         }
     }

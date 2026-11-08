@@ -87,7 +87,7 @@ final class MidiPcmStream extends PcmStream {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -139,7 +139,7 @@ final class MidiPcmStream extends PcmStream {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -176,7 +176,7 @@ final class MidiPcmStream extends PcmStream {
               if (var3.field_G.hasRemainingRampFrames()) {
                 this.field_N.field_o.a(var3.field_G);
               }
-              var3.a(false);
+              var3.releaseVoiceBuffers(false);
             }
             if (!(var3.field_v >= 0)) {
               this.field_G[var3.field_I][var3.field_A] = null;
@@ -266,7 +266,7 @@ final class MidiPcmStream extends PcmStream {
           } else {
             stackIn_30_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -314,7 +314,7 @@ final class MidiPcmStream extends PcmStream {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -326,15 +326,15 @@ final class MidiPcmStream extends PcmStream {
     }
 
     final static void appendChatMessage(int param0, String param1, String param2, byte param3, int param4, String param5) {
-        aa var6 = null;
+        ChatMessage var6 = null;
         if (param3 > -18) {
           return;
         }
         try {
-          var6 = new aa(param4, param2, param0, param1, param5);
+          var6 = new ChatMessage(param4, param2, param0, param1, param5);
           vd.appendChatHistory(false, var6);
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "ti.OA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "ti.OA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -525,19 +525,19 @@ final class MidiPcmStream extends PcmStream {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
     final static void pushRasterState(boolean param0) {
-        jd var1 = (jd) (ValidationIndicator.field_O.removeLast(-88));
+        RasterState var1 = (RasterState) (ValidationIndicator.field_O.removeLast(-88));
         if (var1 == null) {
-          var1 = new jd();
+          var1 = new RasterState();
         }
         if (param0) {
           MidiPcmStream.isAsciiDigit(-80, 'ￆ');
         }
-        var1.a(SoftwareRasterizer.field_k, SoftwareRasterizer.field_a, SoftwareRasterizer.field_d, SoftwareRasterizer.field_e, (byte) -102, SoftwareRasterizer.field_h, SoftwareRasterizer.field_f, SoftwareRasterizer.field_j);
+        var1.setRasterState(SoftwareRasterizer.field_k, SoftwareRasterizer.field_a, SoftwareRasterizer.field_d, SoftwareRasterizer.field_e, (byte) -102, SoftwareRasterizer.field_h, SoftwareRasterizer.field_f, SoftwareRasterizer.field_j);
         BirthDateEntryPanel.field_P.addLast(22125, var1);
     }
 
@@ -559,7 +559,7 @@ final class MidiPcmStream extends PcmStream {
           param1.field_E = AudioOutput.field_h / 100;
           if (param1.field_v >= 0 && (null == param1.field_G ||
             param1.field_G.isSamplePositionOutOfRange())) {
-            param1.a(param3);
+            param1.releaseVoiceBuffers(param3);
             param1.unlink(2779);
             if (param1.field_y > 0 &&
               this.notesByGroup[param1.field_I][param1.field_y] == param1) {
@@ -643,7 +643,7 @@ final class MidiPcmStream extends PcmStream {
           if (param1.field_G.hasRemainingRampFrames()) {
             this.field_N.field_o.a(param1.field_G);
           }
-          param1.a(param3);
+          param1.releaseVoiceBuffers(param3);
           if (param1.field_v >= 0) {
             param1.unlink(2779);
             if (param1.field_y > 0 &&
@@ -668,7 +668,7 @@ final class MidiPcmStream extends PcmStream {
           } else {
             stackIn_71_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_67_0), ((StringBuilder) (Object) stackIn_70_1).append(stackIn_71_2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_67_0), ((StringBuilder) (Object) stackIn_70_1).append(stackIn_71_2).append(')').toString());
         }
     }
 
@@ -715,7 +715,7 @@ final class MidiPcmStream extends PcmStream {
             this.releasePatchSamples(54);
           }
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "ti.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "ti.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -827,7 +827,7 @@ final class MidiPcmStream extends PcmStream {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -933,7 +933,7 @@ final class MidiPcmStream extends PcmStream {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -1016,7 +1016,7 @@ final class MidiPcmStream extends PcmStream {
           this.field_B = this.midiReader.trackTicks[this.field_U];
           this.nextEventTime = this.midiReader.tickTime(this.field_B);
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "ti.SA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "ti.SA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -1327,7 +1327,7 @@ final class MidiPcmStream extends PcmStream {
           this.setChannelGain(256, false, -1);
           this.resetState((byte) 106, true);
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "ti.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "ti.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -7,7 +7,7 @@ final class td {
     static String field_d;
     static BirthDateEntryPanel field_b;
 
-    final static boolean a(int param0, CharSequence param1) {
+    final static boolean isDecimalInteger(int param0, CharSequence param1) {
         RuntimeException var2 = null;
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_6_0 = null;
@@ -30,7 +30,7 @@ final class td {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -90,11 +90,11 @@ final class td {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
-    final static void a(int param0, IndexedSprite[] param1) {
+    final static void buildPuzzleModePictures(int param0, IndexedSprite[] param1) {
         int var5 = 0;
         int var6 = 0;
         RuntimeException stackIn_19_0 = null;
@@ -122,8 +122,8 @@ final class td {
               }
             }
           }
-          li.field_d = new Sprite(48, 48);
-          li.field_d.makeRasterTarget();
+          FireworkDisplay.field_d = new Sprite(48, 48);
+          FireworkDisplay.field_d.makeRasterTarget();
           if (param0 < 117) {
             var8 = (Sprite[]) null;
             td.drawThreeSliceBar(-3, 104, 72, (Sprite[]) null, (byte) -122, -90);
@@ -146,7 +146,7 @@ final class td {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 

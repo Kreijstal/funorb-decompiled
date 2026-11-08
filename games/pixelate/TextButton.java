@@ -29,7 +29,7 @@ class TextButton extends UiComponent {
             this.field_k = param2;
             if (this.field_n != null &&
               this.field_n instanceof ButtonPointerListener) {
-              ((ButtonPointerListener) (this.field_n)).a(param4, 118, param3, param2, this, param5, param6);
+              ((ButtonPointerListener) (this.field_n)).onButtonPressed(param4, 118, param3, param2, this, param5, param6);
             }
             return true;
           }
@@ -44,7 +44,7 @@ class TextButton extends UiComponent {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -64,7 +64,7 @@ class TextButton extends UiComponent {
             }
             if (null != this.field_n &&
               this.field_n instanceof cc) {
-              ((cc) (this.field_n)).a((UiComponent) (this), param1 ^ 44, this.field_K);
+              ((cc) (this.field_n)).onFocusChanged((UiComponent) (this), param1 ^ 44, this.field_K);
             }
             return true;
           }
@@ -79,7 +79,7 @@ class TextButton extends UiComponent {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param1).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -98,7 +98,7 @@ class TextButton extends UiComponent {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw aa.addExceptionContext((Throwable) ((Object) var5), "qm.NA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) var5), "qm.NA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -144,7 +144,7 @@ class TextButton extends UiComponent {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
         }
     }
 
@@ -175,7 +175,7 @@ class TextButton extends UiComponent {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 
@@ -188,7 +188,7 @@ class TextButton extends UiComponent {
         try {
           if (null != this.field_n &&
             this.field_n instanceof ButtonPointerListener) {
-            ((ButtonPointerListener) (this.field_n)).a(param4, (byte) 71, param0, param5, this, param1);
+            ((ButtonPointerListener) (this.field_n)).onButtonReleased(param4, (byte) 71, param0, param5, this, param1);
           }
           this.field_k = param3;
           return;
@@ -202,7 +202,7 @@ class TextButton extends UiComponent {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -441,7 +441,7 @@ class TextButton extends UiComponent {
           } else {
             stackIn_90_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_81_0), ((StringBuilder) (Object) stackIn_89_1).append(stackIn_90_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_81_0), ((StringBuilder) (Object) stackIn_89_1).append(stackIn_90_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -458,7 +458,7 @@ class TextButton extends UiComponent {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.addExceptionContext((Throwable) ((Object) var2), "qm.JA(" + param0 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) var2), "qm.JA(" + param0 + ')');
         }
     }
 
@@ -480,9 +480,9 @@ class TextButton extends UiComponent {
           SingleChildContainer.field_G = param11;
           DualLinkNode.field_o = param14;
           el.setButtonMetrics(param10, param13, param9, 93, param3);
-          SecondaryNodeDequeIterator.a(param5, param6, 7, param1);
+          SecondaryNodeDequeIterator.setLegacyMenuFrameAndPadding(param5, param6, 7, param1);
           ScoreMarkerDemo.a(param2, param4, param0, 300, param12, param8);
-          ug.a(param15, param19, -26104);
+          ug.setLegacyMenuOrigin(param15, param19, -26104);
           NanoTickClock.a(param7, param18, -14129, param16);
           if (param17 < 105) {
             field_L = (java.applet.Applet) null;
@@ -522,7 +522,7 @@ class TextButton extends UiComponent {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param15).append(',').append(param16).append(',').append(param17).append(',').append(param18).append(',').append(param19).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param15).append(',').append(param16).append(',').append(param17).append(',').append(param18).append(',').append(param19).append(')').toString());
         }
     }
 
@@ -541,7 +541,7 @@ class TextButton extends UiComponent {
             this.field_K = false;
             if (this.field_n != null &&
               this.field_n instanceof cc) {
-              ((cc) (this.field_n)).a((UiComponent) (this), param0 ^ 58, this.field_K);
+              ((cc) (this.field_n)).onFocusChanged((UiComponent) (this), param0 ^ 58, this.field_K);
             }
           }
           if (param0 != 2) {
@@ -551,7 +551,7 @@ class TextButton extends UiComponent {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.addExceptionContext((Throwable) ((Object) var2), "qm.OA(" + param0 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) var2), "qm.OA(" + param0 + ')');
         }
     }
 
@@ -581,7 +581,7 @@ class TextButton extends UiComponent {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param3).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -614,7 +614,7 @@ class TextButton extends UiComponent {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw aa.addExceptionContext((Throwable) ((Object) var3), "qm.TA(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) var3), "qm.TA(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -627,7 +627,7 @@ class TextButton extends UiComponent {
             TextButton.configureButtonStyles(8, (sb) null, 42, -55, (sb) null, 28, 88, -93, (sb) null, 77, 108, (BitmapFont) null, 5, -44, (BitmapFont) null, -125, -73, 115, -35, -117);
           }
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "qm.RA(" + param0 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "qm.RA(" + param0 + ')');
         }
     }
 
@@ -638,7 +638,7 @@ class TextButton extends UiComponent {
         try {
           this.field_y = Checkbox.field_X.field_s;
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "qm.<init>()");
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "qm.<init>()");
         }
     }
 

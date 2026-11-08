@@ -7,7 +7,7 @@ final class bq {
     static int field_d;
     static int field_c;
 
-    final static void a(boolean param0, byte param1, int param2) {
+    final static void buildLegacyMenu(boolean param0, byte param1, int param2) {
         int stackIn_23_0 = 0;
         int stackIn_26_0 = 0;
         String[] stackIn_33_0 = null;
@@ -59,29 +59,29 @@ final class bq {
           if (CanvasRasterBuffer.field_h == 0) {
             var3_int = qn.wrapText(l.field_t, MouseInputHandler.field_c, EmailConfirmationValidator.field_p, -128, StatusBar.field_j);
             var4 = var3_int + 3;
-            fo.field_a = new int[var4];
+            Kite.field_a = new int[var4];
             vm.field_e = new String[var4];
             for (var5 = 0; var4 > var5; var5++) {
-              fo.field_a[var5] = -1;
+              Kite.field_a[var5] = -1;
             }
             BackgroundScene.field_h = new int[2];
             for (var5 = 0; var3_int > var5; var5++) {
               vm.field_e[var5] = EmailConfirmationValidator.field_p[var5];
             }
             vm.field_e[-3 + var4] = "";
-            vm.field_e[var4 - 2] = ln.field_k;
-            fo.field_a[-2 + var4] = 0;
+            vm.field_e[var4 - 2] = SoundVoice.field_k;
+            Kite.field_a[-2 + var4] = 0;
             BackgroundScene.field_h[0] = 4;
             vm.field_e[-1 + var4] = TabbedPanel.field_Hb;
-            fo.field_a[-1 + var4] = 1;
+            Kite.field_a[-1 + var4] = 1;
             BackgroundScene.field_h[1] = 5;
           } else if (CanvasRasterBuffer.field_h == 1) {
             var3_int = qn.wrapText(l.field_t, MouseInputHandler.field_c, EmailConfirmationValidator.field_p, -102, StatusBar.field_j);
             var4 = 2 + var3_int;
-            fo.field_a = new int[var4];
+            Kite.field_a = new int[var4];
             vm.field_e = new String[var4];
             for (var5 = 0; var5 < var4; var5++) {
-              fo.field_a[var5] = -1;
+              Kite.field_a[var5] = -1;
             }
             BackgroundScene.field_h = new int[1];
             for (var5 = 0; var5 < var3_int; var5++) {
@@ -89,7 +89,7 @@ final class bq {
             }
             vm.field_e[-2 + var4] = "";
             vm.field_e[-1 + var4] = TabbedPanel.field_Hb;
-            fo.field_a[-1 + var4] = 0;
+            Kite.field_a[-1 + var4] = 0;
             BackgroundScene.field_h[0] = 5;
           } else if (CanvasRasterBuffer.field_h != 2) {
             if (3 == CanvasRasterBuffer.field_h) {
@@ -99,10 +99,10 @@ final class bq {
                 var3_int = qn.wrapText(el.field_c, MouseInputHandler.field_c, EmailConfirmationValidator.field_p, -115, StatusBar.field_j);
               }
               var4 = 2 + var3_int;
-              fo.field_a = new int[var4];
+              Kite.field_a = new int[var4];
               vm.field_e = new String[var4];
               for (var5 = 0; var5 < var4; var5++) {
-                fo.field_a[var5] = -1;
+                Kite.field_a[var5] = -1;
               }
               BackgroundScene.field_h = new int[1];
               for (var5 = 0; var5 < var3_int; var5++) {
@@ -110,15 +110,15 @@ final class bq {
               }
               vm.field_e[var4 - 2] = "";
               vm.field_e[var4 - 1] = TabbedPanel.field_Hb;
-              fo.field_a[var4 - 1] = 0;
+              Kite.field_a[var4 - 1] = 0;
               BackgroundScene.field_h[0] = 5;
             } else if (CanvasRasterBuffer.field_h == 4) {
               var3_int = qn.wrapText(l.field_o, MouseInputHandler.field_c, EmailConfirmationValidator.field_p, -118, StatusBar.field_j);
               var4 = 2 + var3_int;
               vm.field_e = new String[var4];
-              fo.field_a = new int[var4];
+              Kite.field_a = new int[var4];
               for (var5 = 0; var4 > var5; var5++) {
-                fo.field_a[var5] = -1;
+                Kite.field_a[var5] = -1;
               }
               BackgroundScene.field_h = new int[1];
               for (var5 = 0; var5 < var3_int; var5++) {
@@ -126,7 +126,7 @@ final class bq {
               }
               vm.field_e[-2 + var4] = "";
               vm.field_e[-1 + var4] = TabbedPanel.field_Hb;
-              fo.field_a[var4 - 1] = 0;
+              Kite.field_a[var4 - 1] = 0;
               BackgroundScene.field_h[0] = 5;
             } else {
               if (CanvasRasterBuffer.field_h != 5) {
@@ -134,10 +134,10 @@ final class bq {
               }
               var3_int = qn.wrapText(CanvasRasterBuffer.field_k, MouseInputHandler.field_c, EmailConfirmationValidator.field_p, -118, StatusBar.field_j);
               var4 = var3_int + 3;
-              fo.field_a = new int[var4];
+              Kite.field_a = new int[var4];
               vm.field_e = new String[var4];
               for (var5 = 0; var4 > var5; var5++) {
-                fo.field_a[var5] = -1;
+                Kite.field_a[var5] = -1;
               }
               BackgroundScene.field_h = new int[2];
               for (var5 = 0; var5 < var3_int; var5++) {
@@ -145,14 +145,14 @@ final class bq {
               }
               vm.field_e[var4 - 3] = "";
               vm.field_e[var4 - 2] = StatusBar.field_b;
-              fo.field_a[var4 - 2] = 0;
+              Kite.field_a[var4 - 2] = 0;
               BackgroundScene.field_h[0] = 3;
               vm.field_e[var4 - 1] = TabbedPanel.field_Hb;
-              fo.field_a[-1 + var4] = 1;
+              Kite.field_a[-1 + var4] = 1;
               BackgroundScene.field_h[1] = 5;
             }
           } else {
-            var3_int = qn.wrapText(AlphaContainer.a(DualLinkNode.field_n, 84, new String[]{"<br><%0><br>"}), MouseInputHandler.field_c, EmailConfirmationValidator.field_p, -128, StatusBar.field_j);
+            var3_int = qn.wrapText(AlphaContainer.formatTemplate(DualLinkNode.field_n, 84, new String[]{"<br><%0><br>"}), MouseInputHandler.field_c, EmailConfirmationValidator.field_p, -128, StatusBar.field_j);
             var4 = -1;
             for (var5 = 0; var5 < var3_int; var5++) {
               if (!"<%0>".equals(EmailConfirmationValidator.field_p[var5])) {
@@ -164,11 +164,11 @@ final class bq {
             if (var4 == -1) {
               throw new IllegalStateException();
             }
-            df.field_r = new String[var4];
-            ArraySupport.a(EmailConfirmationValidator.field_p, 0, df.field_r, 0, var4);
+            StatsRequest.field_r = new String[var4];
+            ArraySupport.copyReferences(EmailConfirmationValidator.field_p, 0, StatsRequest.field_r, 0, var4);
             GameModeSelectScreen.field_r = new String[-1 + (var3_int - var4)];
-            ArraySupport.a(EmailConfirmationValidator.field_p, var4 + 1, GameModeSelectScreen.field_r, 0, var3_int + (-var4 - 1));
-            var3_int = qn.wrapText(AlphaContainer.a(BirthDateEntryPanel.field_R, 44, new String[]{"<br><%0><br>"}), MouseInputHandler.field_c, EmailConfirmationValidator.field_p, -106, StatusBar.field_j);
+            ArraySupport.copyReferences(EmailConfirmationValidator.field_p, var4 + 1, GameModeSelectScreen.field_r, 0, var3_int + (-var4 - 1));
+            var3_int = qn.wrapText(AlphaContainer.formatTemplate(BirthDateEntryPanel.field_R, 44, new String[]{"<br><%0><br>"}), MouseInputHandler.field_c, EmailConfirmationValidator.field_p, -106, StatusBar.field_j);
             var4 = -1;
             for (var5 = 0; var5 < var3_int; var5++) {
               if (!"<%0>".equals(EmailConfirmationValidator.field_p[var5])) {
@@ -181,13 +181,13 @@ final class bq {
               throw new IllegalStateException();
             }
             jk.field_d = new String[var4];
-            ArraySupport.a(EmailConfirmationValidator.field_p, 0, jk.field_d, 0, var4);
+            ArraySupport.copyReferences(EmailConfirmationValidator.field_p, 0, jk.field_d, 0, var4);
             ContentTransitionDialog.field_jb = new String[-var4 + (var3_int - 1)];
-            ArraySupport.a(EmailConfirmationValidator.field_p, 1 + var4, ContentTransitionDialog.field_jb, 0, -1 + (-var4 + var3_int));
-            if (df.field_r.length < jk.field_d.length) {
+            ArraySupport.copyReferences(EmailConfirmationValidator.field_p, 1 + var4, ContentTransitionDialog.field_jb, 0, -1 + (-var4 + var3_int));
+            if (StatsRequest.field_r.length < jk.field_d.length) {
               stackIn_23_0 = jk.field_d.length;
             } else {
-              stackIn_23_0 = df.field_r.length;
+              stackIn_23_0 = StatsRequest.field_r.length;
             }
             var5 = stackIn_23_0;
             if (GameModeSelectScreen.field_r.length >= ContentTransitionDialog.field_jb.length) {
@@ -197,18 +197,18 @@ final class bq {
             }
             var6 = stackIn_26_0;
             var7 = var5 + (7 + var6);
-            fo.field_a = new int[var7];
+            Kite.field_a = new int[var7];
             vm.field_e = new String[var7];
             for (var8 = 0; var7 > var8; var8++) {
-              fo.field_a[var8] = -1;
+              Kite.field_a[var8] = -1;
             }
-            fo.field_a[1] = 0;
+            Kite.field_a[1] = 0;
             vm.field_e[0] = vf.field_c;
             vm.field_e[1] = MusicPatch.field_q;
             BackgroundScene.field_h = new int[2];
             vm.field_e[4] = DirectByteStorage.field_m;
             vm.field_e[5] = "";
-            fo.field_a[3] = 1;
+            Kite.field_a[3] = 1;
             vm.field_e[3] = vm.field_g;
             vm.field_e[2] = QuickChatPhraseCache.field_n;
             BackgroundScene.field_h[1] = 2;
@@ -224,7 +224,7 @@ final class bq {
               stackIn_33_0[stackIn_33_1] = stackIn_34_2;
             }
             vm.field_e[6 + var5] = null;
-            fo.field_a[6 + var5] = -2;
+            Kite.field_a[6 + var5] = -2;
             for (var8Lifetime3 = 0; var6 > var8Lifetime3; var8Lifetime3++) {
               stackIn_38_0 = vm.field_e;
               stackIn_38_1 = var8Lifetime3 + var5 + 7;
@@ -244,18 +244,18 @@ final class bq {
           for (var4Lifetime1 = 0; var4Lifetime1 < vm.field_e.length; var4Lifetime1++) {
             stackIn_89_0 = 3;
             stackIn_89_1 = vm.field_e[var4Lifetime1];
-            stackIn_90_2 = !(fo.field_a[var4Lifetime1] < 0);
-            var5Lifetime1 = sb.a(stackIn_89_0, stackIn_89_1, stackIn_90_2);
+            stackIn_90_2 = !(Kite.field_a[var4Lifetime1] < 0);
+            var5Lifetime1 = sb.measureMenuText(stackIn_89_0, stackIn_89_1, stackIn_90_2);
             if (var3_intLifetime1 < var5Lifetime1) {
               var3_intLifetime1 = var5Lifetime1;
             }
           }
           if (CanvasRasterBuffer.field_h == 2) {
-            var10 = df.field_r;
+            var10 = StatsRequest.field_r;
             var4_ref_String__ = var10;
             for (var5Lifetime2 = 0; var5Lifetime2 < var10.length; var5Lifetime2++) {
               var11 = var10[var5Lifetime2];
-              var7Lifetime1 = sb.a(3, var11, false);
+              var7Lifetime1 = sb.measureMenuText(3, var11, false);
               if (var7Lifetime1 > var3_intLifetime1) {
                 var3_intLifetime1 = var7Lifetime1;
               }
@@ -263,7 +263,7 @@ final class bq {
             var4_ref_String__Lifetime1 = GameModeSelectScreen.field_r;
             for (var5Lifetime2Lifetime1 = 0; var4_ref_String__Lifetime1.length > var5Lifetime2Lifetime1; var5Lifetime2Lifetime1++) {
               var12 = var4_ref_String__Lifetime1[var5Lifetime2Lifetime1];
-              var7Lifetime1Lifetime1 = sb.a(3, var12, false);
+              var7Lifetime1Lifetime1 = sb.measureMenuText(3, var12, false);
               if (var3_intLifetime1 < var7Lifetime1Lifetime1) {
                 var3_intLifetime1 = var7Lifetime1Lifetime1;
               }
@@ -277,7 +277,7 @@ final class bq {
           LoadingProgressDialog.field_cb = -(var3_intLifetime1 >> 1) + QuickChatCategory.field_u;
           for (var4Lifetime2 = 0; var4Lifetime2 < vm.field_e.length; var4Lifetime2++) {
             stackIn_115_0 = MouseInputHandler.field_b;
-            if (fo.field_a[var4Lifetime2] < 0) {
+            if (Kite.field_a[var4Lifetime2] < 0) {
               stackIn_116_1 = GameResultsScreen.field_r;
             } else {
               stackIn_116_1 = ValidatedTextWidget.field_fb;
@@ -289,11 +289,11 @@ final class bq {
           var4Lifetime3 = 0;
           var5Lifetime3 = MenuScreen.field_h;
           while (var4Lifetime3 < vm.field_e.length) {
-            var6Lifetime1 = fo.field_a[var4Lifetime3];
+            var6Lifetime1 = Kite.field_a[var4Lifetime3];
             if (var6Lifetime1 < 0) {
               var5Lifetime3 = var5Lifetime3 + GameResultsScreen.field_r;
             } else {
-              var7Lifetime2 = sb.a(3, vm.field_e[var4Lifetime3], true);
+              var7Lifetime2 = sb.measureMenuText(3, vm.field_e[var4Lifetime3], true);
               var8Lifetime1 = -(var7Lifetime2 >> 1) + QuickChatCategory.field_u;
               var5Lifetime3 = var5Lifetime3 + LoadingProgressDialog.field_fb;
               PuzzlePieceQueue.field_c[var4Lifetime3] = new int[4];
@@ -314,7 +314,7 @@ final class bq {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw aa.addExceptionContext((Throwable) ((Object) var3), "bq.C(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) var3), "bq.C(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -322,7 +322,7 @@ final class bq {
         return param0 | param1;
     }
 
-    final static boolean a(byte param0, int param1, int param2, boolean param3, int param4, int param5, int param6) {
+    final static boolean updateOverlayMenus(byte param0, int param1, int param2, boolean param3, int param4, int param5, int param6) {
         if (param0 != -124) {
           bq.releaseStatics((byte) -16);
         }
@@ -330,11 +330,11 @@ final class bq {
           vd.a(param3, param1, param4, (byte) -86);
           if (null != ProxySocketConnector.field_n &&
             ProxySocketConnector.field_n.updateAndRunSelectedAction(param4, param6, false, param5, param3)) {
-            ArchiveProvider.a(71);
+            ArchiveProvider.closeContextMenu(71);
             param3 = false;
           }
-          sm.a(param4, param3, 0);
-          gb.a((byte) 120, param3, param2);
+          sm.handleNameEntryResult(param4, param3, 0);
+          gb.updateReportAbuseDialog((byte) 120, param3, param2);
           param3 = false;
         }
         return param3;

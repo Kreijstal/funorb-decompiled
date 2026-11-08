@@ -12,7 +12,7 @@ final class ge {
     static String field_e;
     static el field_i;
 
-    final static void a(String[] args, int param1, ResourceArchive param2, byte[] param3, Sprite[][] param4, int param5, String[][] param6, ResourceArchive param7, byte[] param8, String[] param9, Sprite[][] param10, IndexedSprite[] param11, String[][] param12, ResourceArchive param13, String[] param14, int[] param15, int param16, boolean param17, int[] param18, byte param19) {
+    final static void initializeLobbyUi(String[] args, int param1, ResourceArchive param2, byte[] param3, Sprite[][] param4, int param5, String[][] param6, ResourceArchive param7, byte[] param8, String[] param9, Sprite[][] param10, IndexedSprite[] param11, String[][] param12, ResourceArchive param13, String[] param14, int[] param15, int param16, boolean param17, int[] param18, byte param19) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -48,13 +48,13 @@ final class ge {
         RuntimeException var20 = null;
         try {
           ReportAbuseDialog.loadLobbyIcons(param19 - 84, param2, param11, param18, param13);
-          ph.a(param2, (byte) -106);
-          IntrusiveNode.a(param14, param2, param15, (byte) 126, param10, param16, param8, param4, args, param12, param6, param9, param5, param1, param3);
-          ReflectionCheckRequest.a(param7, param2, param17, -94);
+          ph.loadSocialPanelWidgets(param2, (byte) -106);
+          IntrusiveNode.initializeLobbyWidgets(param14, param2, param15, (byte) 126, param10, param16, param8, param4, args, param12, param6, param9, param5, param1, param3);
+          ReflectionCheckRequest.initializeLobbyChatResources(param7, param2, param17, -94);
           if (param19 != -41) {
             field_g = (Sprite) null;
           }
-          AccountNamePrompt.j(1565);
+          AccountNamePrompt.initializeOptionLabels(1565);
           gd.a((byte) -7);
           BackgroundScene.a(0);
           return;
@@ -152,11 +152,11 @@ final class ge {
           } else {
             stackIn_49_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_48_1).append(stackIn_49_2).append(',').append(param19).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_48_1).append(stackIn_49_2).append(',').append(param19).append(')').toString());
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_b = null;
         field_h = null;
         field_i = null;
@@ -166,7 +166,7 @@ final class ge {
         field_d = null;
         if (param0 != -1) {
           int[] var2 = (int[]) null;
-          ge.a((String[]) null, -96, (ResourceArchive) null, (byte[]) null, (Sprite[][]) null, 52, (String[][]) null, (ResourceArchive) null, (byte[]) null, (String[]) null, (Sprite[][]) null, (IndexedSprite[]) null, (String[][]) null, (ResourceArchive) null, (String[]) null, (int[]) null, 27, true, (int[]) null, (byte) -67);
+          ge.initializeLobbyUi((String[]) null, -96, (ResourceArchive) null, (byte[]) null, (Sprite[][]) null, 52, (String[][]) null, (ResourceArchive) null, (byte[]) null, (String[]) null, (Sprite[][]) null, (IndexedSprite[]) null, (String[][]) null, (ResourceArchive) null, (String[]) null, (int[]) null, 27, true, (int[]) null, (byte) -67);
         }
         field_c = null;
     }
@@ -175,7 +175,7 @@ final class ge {
         throw new IllegalStateException();
     }
 
-    final static int a(rh param0, RankingTableRequest param1, int param2, int param3) {
+    final static int findTableRow(rh param0, RankingTableRequest param1, int param2, int param3) {
         int var6 = 0;
         int var7 = 0;
         int stackIn_7_0 = 0;
@@ -203,7 +203,7 @@ final class ge {
             for (var6 = 0; var6 < var5; var6++) {
               boolean decompiledFrameCompleted0 = true;
               if (param1.field_k[param2][var6] == param0.field_q &&
-                sm.a(param1.field_r[param2][var6], -1)) {
+                sm.isLocalPlayerName(param1.field_r[param2][var6], -1)) {
                 for (var7 = 0; var4_int > var7; var7++) {
                   if (param0.field_k[var7] != param1.field_l[param2][var4_int * var6 + var7]) {
                     decompiledFrameCompleted0 = false;
@@ -241,7 +241,7 @@ final class ge {
           } else {
             stackIn_32_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 

@@ -36,7 +36,7 @@ final class JavaRandomHelpers {
           if (0 >= param2) {
             throw new IllegalArgumentException();
           }
-          if (DateOfBirthValidator.a(param2, 1890)) {
+          if (DateOfBirthValidator.isPowerOfTwo(param2, 1890)) {
             stackIn_6_0 = (int)((long)param2 * (4294967295L & (long)param0.nextInt()) >> 32);
             return stackIn_6_0;
           }
@@ -60,7 +60,7 @@ final class JavaRandomHelpers {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 

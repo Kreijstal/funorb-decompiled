@@ -573,14 +573,14 @@ final class PlatformTaskDispatcher implements Runnable {
             exception = (Exception) (Object) decompiledCaughtException;
           }
         }
-        CacheFileLocator.a(field_r, 71, field_t);
+        CacheFileLocator.initializeCacheEnvironment(field_r, 71, field_t);
         if (this.field_x) {
           this.field_e = new BoundedRandomAccessFile(CacheFileLocator.resolveFile((String) null, field_t, true, "random.dat"), "rw", 25L);
-          this.cacheDataFile = new BoundedRandomAccessFile(CacheFileLocator.a("main_file_cache.dat2", (byte) -61), "rw", 314572800L);
-          this.field_m = new BoundedRandomAccessFile(CacheFileLocator.a("main_file_cache.idx255", (byte) -61), "rw", 1048576L);
+          this.cacheDataFile = new BoundedRandomAccessFile(CacheFileLocator.resolveCacheFile("main_file_cache.dat2", (byte) -61), "rw", 314572800L);
+          this.field_m = new BoundedRandomAccessFile(CacheFileLocator.resolveCacheFile("main_file_cache.idx255", (byte) -61), "rw", 1048576L);
           this.cacheIndexFiles = new BoundedRandomAccessFile[param2];
           for (var5_int = 0; var5_int < param2; var5_int++) {
-            this.cacheIndexFiles[var5_int] = new BoundedRandomAccessFile(CacheFileLocator.a("main_file_cache.idx" + var5_int, (byte) -61), "rw", 1048576L);
+            this.cacheIndexFiles[var5_int] = new BoundedRandomAccessFile(CacheFileLocator.resolveCacheFile("main_file_cache.idx" + var5_int, (byte) -61), "rw", 1048576L);
           }
           if (this.field_v) {
             try {

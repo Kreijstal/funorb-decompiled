@@ -32,7 +32,7 @@ final class ri {
             ri.ignoreText((String) null, false);
           }
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "ri.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "ri.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -44,7 +44,7 @@ final class ri {
     }
 
     final static void allocateChatHistory(int param0, byte param1) {
-        MenuScreen.field_e = new aa[param0 * 15];
+        MenuScreen.field_e = new ChatMessage[param0 * 15];
         InputQueue.field_d = param0;
         MarkerSlider.field_O = new int[3];
         int var2 = 20 / ((param1 + 94) / 32);

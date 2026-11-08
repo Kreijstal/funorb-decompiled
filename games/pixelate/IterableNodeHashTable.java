@@ -68,7 +68,7 @@ final class IterableNodeHashTable implements Iterable {
           param0.field_e = param1;
           param0.field_a.previous = param0;
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "kl.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "kl.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -103,16 +103,16 @@ final class IterableNodeHashTable implements Iterable {
     }
 
     final static void advanceBackgroundSkin(byte param0) {
-        if (7500 > jd.field_r) {
+        if (7500 > RasterState.field_r) {
           return;
         }
         int fieldTemp$0 = LoadingProgressDialog.field_hb + 1;
         LoadingProgressDialog.field_hb = LoadingProgressDialog.field_hb + 1;
-        if (fieldTemp$0 == jm.field_g.length) {
+        if (fieldTemp$0 == Cloud.field_g.length) {
           LoadingProgressDialog.field_hb = 0;
         }
-        HighscoresScreen.selectBackground(-89, jm.field_g[LoadingProgressDialog.field_hb]);
-        jd.field_r = 0;
+        HighscoresScreen.selectBackground(-89, Cloud.field_g[LoadingProgressDialog.field_hb]);
+        RasterState.field_r = 0;
         if (param0 <= -73) {
           return;
         }

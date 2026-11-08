@@ -22,13 +22,13 @@ final class AccountTermsPanel extends UiContainer implements TextHotspotListener
             return true;
           }
           if (param0 == 98) {
-            stackIn_6_0 = this.focusNextChild(0, param2);
+            stackIn_6_0 = this.focusPreviousChild(0, param2);
             return stackIn_6_0;
           }
           if (param0 != 99) {
             return false;
           }
-          stackIn_10_0 = this.b(10, param2);
+          stackIn_10_0 = this.focusNextChild(10, param2);
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -40,11 +40,11 @@ final class AccountTermsPanel extends UiContainer implements TextHotspotListener
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(')').toString());
         }
     }
 
-    private final String a(int param0) {
+    private final String getLinkCloseTag(int param0) {
         if (param0 >= -16) {
           TextHotspotWidget var3 = (TextHotspotWidget) null;
           this.onHotspotAction(15, 52, -1, (TextHotspotWidget) null);
@@ -52,12 +52,12 @@ final class AccountTermsPanel extends UiContainer implements TextHotspotListener
         return "</col></u>";
     }
 
-    public static void a(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_M = null;
         field_L = (IconTextComponent[][]) null;
         if (param0 <= 76) {
           int[] var2 = (int[]) null;
-          AccountTermsPanel.a(68, 58, 42, 23, 122, -39, -94, -82, 19, 50, 36, (int[]) null, -6, -18, 58, -21, 11);
+          AccountTermsPanel.rasterInterpolatedMeshTriangle(68, 58, 42, 23, 122, -39, -94, -82, 19, 50, 36, (int[]) null, -6, -18, 58, -21, 11);
         }
     }
 
@@ -86,7 +86,7 @@ final class AccountTermsPanel extends UiContainer implements TextHotspotListener
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -107,13 +107,13 @@ final class AccountTermsPanel extends UiContainer implements TextHotspotListener
           if (param0 != 0) {
             if (param0 != 1) {
               if (2 == param0) {
-                SpriteCheckboxPainter.a("conduct.ws", -33);
+                SpriteCheckboxPainter.requestOpenLinkNotice("conduct.ws", -33);
               }
             } else {
-              SpriteCheckboxPainter.a("privacy.ws", -120);
+              SpriteCheckboxPainter.requestOpenLinkNotice("privacy.ws", -120);
             }
           } else {
-            SpriteCheckboxPainter.a("terms.ws", 113);
+            SpriteCheckboxPainter.requestOpenLinkNotice("terms.ws", 113);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -126,19 +126,19 @@ final class AccountTermsPanel extends UiContainer implements TextHotspotListener
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
-    private final String e(byte param0) {
+    private final String getLinkOpenTag(byte param0) {
         String discarded$0 = null;
         if (param0 <= 26) {
-          discarded$0 = this.a(-21);
+          discarded$0 = this.getLinkCloseTag(-21);
         }
         return "<u=2164A2><col=2164A2>";
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int[] param11, int param12, int param13, int param14, int param15, int param16) {
+    final static void rasterInterpolatedMeshTriangle(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int[] param11, int param12, int param13, int param14, int param15, int param16) {
         int var17_int = 0;
         int var18 = 0;
         int var19 = 0;
@@ -199,7 +199,7 @@ final class AccountTermsPanel extends UiContainer implements TextHotspotListener
             }
             if (param4 != -94333456) {
               var43 = (int[]) null;
-              AccountTermsPanel.a(80, -41, -34, 88, 46, 16, 32, -5, -28, 26, -84, (int[]) null, -10, 45, -83, 113, 56);
+              AccountTermsPanel.rasterInterpolatedMeshTriangle(80, -41, -34, 88, 46, 16, 32, -5, -28, 26, -84, (int[]) null, -10, 45, -83, 113, 56);
             }
             var34 = -param10 + param1;
             if (param13 != param10) {
@@ -470,7 +470,7 @@ final class AccountTermsPanel extends UiContainer implements TextHotspotListener
           } else {
             stackIn_79_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_78_0), ((StringBuilder) (Object) stackIn_78_1).append(stackIn_79_2).append(',').append(param12).append(',').append(param13).append(',').append(param14).append(',').append(param15).append(',').append(param16).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_78_0), ((StringBuilder) (Object) stackIn_78_1).append(stackIn_79_2).append(',').append(param12).append(',').append(param13).append(',').append(param14).append(',').append(param15).append(',').append(param16).append(')').toString());
         }
     }
 
@@ -485,7 +485,7 @@ final class AccountTermsPanel extends UiContainer implements TextHotspotListener
           this.field_O = param0;
           this.field_K = new TextButton(MusicCrossfadeStream.field_J, (UiListener) null);
           this.field_K.field_y = (WidgetPainter) ((Object) new ThreeSliceButtonPainter());
-          var7 = AlphaContainer.a(IndexedSpriteState.field_e, 102, new String[]{this.e((byte) 62), this.a(-21)});
+          var7 = AlphaContainer.formatTemplate(IndexedSpriteState.field_e, 102, new String[]{this.getLinkOpenTag((byte) 62), this.getLinkCloseTag(-21)});
           var3 = 20;
           var4 = new TextWidgetPainter(he.field_d, 0, 0, 0, 0, 16777215, -1, 3, 0, he.field_d.maxAscent, -1, 2147483647, true);
           this.field_N = new TextHotspotWidget(var7, var4);
@@ -504,7 +504,7 @@ final class AccountTermsPanel extends UiContainer implements TextHotspotListener
           this.addChild(this.field_K, 80);
           this.setBounds(300, (byte) 117, 0, 0, var3 + 55 + var5);
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "hc.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "hc.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

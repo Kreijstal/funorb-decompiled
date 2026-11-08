@@ -37,7 +37,7 @@ final class RisingBubble {
         try {
           wa.field_c.showPanel(-6183, ph.field_l);
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "vn.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "vn.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -71,7 +71,7 @@ final class RisingBubble {
           }
           var5_int = param0.getGroupId(122, param1);
           var6 = param0.getFileId((byte) -95, param2, var5_int);
-          stackIn_3_0 = jf.a(param3, var5_int, param0, var6, (byte) 126);
+          stackIn_3_0 = jf.loadPaletteFont(param3, var5_int, param0, var6, (byte) 126);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -101,7 +101,7 @@ final class RisingBubble {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param4).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param4).append(')').toString());
         }
     }
 

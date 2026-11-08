@@ -42,7 +42,7 @@ final class LoadingStepTracker {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -54,7 +54,7 @@ final class LoadingStepTracker {
             LoadingStepTracker.copyBytes(true, (byte[]) null);
           }
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "re.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "re.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -86,14 +86,14 @@ final class LoadingStepTracker {
             LoadingStepTracker.releaseStatics(true);
           }
           var6 = (CharSequence) ((Object) param0);
-          var2 = dh.a(var6, (byte) 64);
+          var2 = dh.normalizeDisplayName(var6, (byte) 64);
           if (var2 == null) {
             return null;
           }
           var3 = (SocialListEntry) (vm.field_b.get(-11434, (long)var2.hashCode()));
           while (var3 != null) {
             var7 = (CharSequence) ((Object) var3.field_Fb);
-            var4 = dh.a(var7, (byte) 41);
+            var4 = dh.normalizeDisplayName(var7, (byte) 41);
             if (var4.equals(var2)) {
               stackIn_19_0 = var3;
               return stackIn_19_0;
@@ -111,7 +111,7 @@ final class LoadingStepTracker {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -174,7 +174,7 @@ final class LoadingStepTracker {
         try {
           var2_int = param1.length;
           var3 = new byte[var2_int];
-          ArraySupport.a(param1, 0, var3, 0, var2_int);
+          ArraySupport.copyBytes(param1, 0, var3, 0, var2_int);
           if (param0) {
             stackIn_4_0 = var3;
             return stackIn_4_0;
@@ -191,7 +191,7 @@ final class LoadingStepTracker {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -206,7 +206,7 @@ final class LoadingStepTracker {
         try {
           var1 = mc.field_r;
           synchronized (var1) {
-            qn.field_p = ln.field_p;
+            qn.field_p = SoundVoice.field_p;
             LinkButtonPainter.field_i = LinkButtonPainter.field_i + 1;
             if (0 > PauseMenuScreen.field_q) {
               for (var2 = 0; var2 < 112; var2++) {
@@ -225,13 +225,13 @@ final class LoadingStepTracker {
               }
             }
             var2Lifetime1 = 37 % ((param0 + 53) / 47);
-            ln.field_p = jd.field_s;
+            SoundVoice.field_p = RasterState.field_s;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = (RuntimeException) (Object) decompiledCaughtException;
-          throw aa.addExceptionContext((Throwable) ((Object) var1_ref), "re.I(" + param0 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) var1_ref), "re.I(" + param0 + ')');
         }
     }
 

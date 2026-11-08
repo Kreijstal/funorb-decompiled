@@ -22,7 +22,7 @@ final class AsyncValidationResult {
           }
           var1_int = 0;
           while (true) {
-            var2 = StatefulTextPainter.field_y.a(var1_int, false);
+            var2 = StatefulTextPainter.field_y.getCategory(var1_int, false);
             if (var2.field_y) {
               stackIn_6_0 = var2;
               return stackIn_6_0;
@@ -37,11 +37,11 @@ final class AsyncValidationResult {
     }
 
     final static boolean dispatchKeyInput(int param0, int param1, int param2, int param3) {
-        if (ln.field_q) {
+        if (SoundVoice.field_q) {
           return td.field_b.processKey(DualLinkDeque.field_f, ke.field_a, false);
         }
         if (un.field_l) {
-          return AccountMessagePanel.b(102, param2, param1);
+          return AccountMessagePanel.handleQuickChatKey(102, param2, param1);
         }
         if (DebouncedValidator.handleChatShortcutKey(param1, param2, param3)) {
           return true;
@@ -111,7 +111,7 @@ final class AsyncValidationResult {
         try {
           this.field_e = param0;
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "fl.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "fl.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

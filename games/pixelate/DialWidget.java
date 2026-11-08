@@ -23,7 +23,7 @@ final class DialWidget extends TextButton {
           mi.showLoadingProgress(EmailCredentials.field_f, PicturePreview.field_o, -1, ThreeSliceButtonPainter.field_r);
           fj.presentToCanvas(0, 0, (byte) 113, param1);
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "si.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "si.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -35,7 +35,7 @@ final class DialWidget extends TextButton {
     }
 
     final static void sendAccountChoicePacket(int param0, byte[] param1, int param2, int param3, boolean param4, byte param5) {
-        CipherPacketBuffer var6 = aa.field_f;
+        CipherPacketBuffer var6 = ChatMessage.field_f;
         var6.writeOpcode(param0, 15514);
         var6.position = var6.position + 1;
         int var7 = var6.position;
@@ -53,7 +53,7 @@ final class DialWidget extends TextButton {
           var6.writeBytes(param1.length, 0, -3493, param1);
           var6.backpatchByteLength(var6.position - var7, param5 + 75);
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "si.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "si.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -110,7 +110,7 @@ final class DialWidget extends TextButton {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -196,7 +196,7 @@ final class DialWidget extends TextButton {
           } else {
             stackIn_44_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_43_0), ((StringBuilder) (Object) stackIn_43_1).append(stackIn_44_2).append(',').append(param3).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_43_0), ((StringBuilder) (Object) stackIn_43_1).append(stackIn_44_2).append(',').append(param3).append(')').toString());
         }
     }
 

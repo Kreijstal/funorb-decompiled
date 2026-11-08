@@ -11,14 +11,14 @@ final class QuickChatCategoryCache {
     static int field_e;
     static int field_f;
 
-    final static int a(int param0) {
+    final static int getInputFrameCount(int param0) {
         if (param0 > -103) {
           return 88;
         }
         return LinkButtonPainter.field_i;
     }
 
-    final QuickChatCategory a(int param0, boolean param1) {
+    final QuickChatCategory getCategory(int param0, boolean param1) {
         ResourceArchive stackIn_7_0 = null;
         int stackIn_7_1 = 0;
         int stackIn_7_2 = 0;
@@ -100,7 +100,7 @@ final class QuickChatCategoryCache {
         return var5;
     }
 
-    final static void a(int param0, LobbyPlayer param1) {
+    final static void insertLobbyPlayerSorted(int param0, LobbyPlayer param1) {
         LobbyPlayer var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
@@ -140,7 +140,7 @@ final class QuickChatCategoryCache {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -190,7 +190,7 @@ final class QuickChatCategoryCache {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 

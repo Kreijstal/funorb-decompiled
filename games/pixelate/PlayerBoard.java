@@ -47,7 +47,7 @@ final class PlayerBoard {
         try {
           this.pieceColumn = param1.readUnsignedByte(param0 + 257);
           if (param0 != -2) {
-            PlayerBoard.d(-62);
+            PlayerBoard.boostGlow(-62);
           }
           this.pieceRow = param1.readUnsignedByte(255);
           this.field_u = param1.readUnsignedShort((byte) 76);
@@ -77,7 +77,7 @@ final class PlayerBoard {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
         }
     }
 
@@ -195,7 +195,7 @@ final class PlayerBoard {
         return true;
     }
 
-    final static int a(int param0, int param1) {
+    final static int scaledInverseSquareRoot(int param0, int param1) {
         int var2 = -19 % ((param1 - 71) / 53);
         return SecondaryNodeHashTable.inverseSquareRoot(param0, -1) >> 8;
     }
@@ -216,7 +216,7 @@ final class PlayerBoard {
         return var2 != 0;
     }
 
-    final static void d(int param0) {
+    final static void boostGlow(int param0) {
         if (param0 >= -72) {
           PlayerBoard.releaseStatics((byte) -16);
         }
@@ -330,11 +330,11 @@ final class PlayerBoard {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
-    final int b(byte param0) {
+    final int getBorderFlags(byte param0) {
         if (param0 >= -10) {
           return -115;
         }
@@ -399,7 +399,7 @@ final class PlayerBoard {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
         }
     }
 
@@ -422,7 +422,7 @@ final class PlayerBoard {
           }
           var5Lifetime1 = -8 % ((param1 + 13) / 43);
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "hd.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "hd.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

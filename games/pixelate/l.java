@@ -35,7 +35,7 @@ final class l extends MenuScreen {
         field_q = null;
     }
 
-    final static void b(int param0, boolean param1) {
+    final static void drawLobbyOverlays(int param0, boolean param1) {
         if (param0 != 19854) {
           PlatformTaskDispatcher var3 = (PlatformTaskDispatcher) null;
           l.initialisePacketBuffers(false, -75, -15, true, 99, -28L, (String) null, -112, -64, true, 118, -87, 71, (PlatformTaskDispatcher) null);
@@ -67,7 +67,7 @@ final class l extends MenuScreen {
 
     final void drawRow(byte param0, boolean param1, int param2) {
         if (param0 >= -116) {
-          l.b(116, true);
+          l.drawLobbyOverlays(116, true);
           if (param2 == 0) {
             this.drawMenuButton(param1, true);
             return;
@@ -100,7 +100,7 @@ final class l extends MenuScreen {
           PlatformTaskDispatcher var16 = null;
           try {
             MusicCrossfadeStream.field_o = new CipherPacketBuffer(param8);
-            aa.field_f = new CipherPacketBuffer(param2);
+            ChatMessage.field_f = new CipherPacketBuffer(param2);
             bj.field_a = param1;
             hf.field_n = param7;
             OptionsScreen.field_p = param13;
@@ -143,7 +143,7 @@ final class l extends MenuScreen {
             } else {
               stackIn_20_2 = "{...}";
             }
-            throw aa.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+            throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -152,7 +152,7 @@ final class l extends MenuScreen {
         }
     }
 
-    final static void b(boolean param0) {
+    final static void animateLobbySlide(boolean param0) {
         if (MatchingTextValidator.field_o != ClientException.field_f.field_i) {
           wa.field_i = wa.field_i + (ClientException.field_f.field_i - MatchingTextValidator.field_o);
           MatchingTextValidator.field_o = ClientException.field_f.field_i;
@@ -161,7 +161,7 @@ final class l extends MenuScreen {
           }
           if (param0) {
             if (!(HuffmanCodec.field_b <= 0)) {
-              r.b(-96);
+              r.layoutSlidingLobbyPanel(-96);
             }
             return;
           }
@@ -172,7 +172,7 @@ final class l extends MenuScreen {
         }
         if (param0) {
           if (!(HuffmanCodec.field_b <= 0)) {
-            r.b(-96);
+            r.layoutSlidingLobbyPanel(-96);
           }
           return;
         }

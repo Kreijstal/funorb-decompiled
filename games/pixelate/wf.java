@@ -7,7 +7,7 @@ final class wf {
     static int field_b;
     static String field_a;
 
-    final static void a(int param0, PacketBuffer param1) {
+    final static void writeMachineId(int param0, PacketBuffer param1) {
         try {
           int var4 = 0;
           byte[] var2 = null;
@@ -61,7 +61,7 @@ final class wf {
             } else {
               stackIn_20_2 = "{...}";
             }
-            throw aa.addExceptionContext((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+            throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -77,7 +77,7 @@ final class wf {
         }
     }
 
-    final static el a(boolean param0, String param1) {
+    final static el validateEmailLocalPart(boolean param0, String param1) {
         el stackIn_3_0 = null;
         el stackIn_6_0 = null;
         el stackIn_11_0 = null;
@@ -148,7 +148,7 @@ final class wf {
               }
             }
             if (decompiledFrameRemainder0) {
-              if (li.field_i.indexOf(var5Lifetime1) == -1) {
+              if (FireworkDisplay.field_i.indexOf(var5Lifetime1) == -1) {
                 stackIn_42_0 = DiskCacheWorker.field_f;
                 return stackIn_42_0;
               }
@@ -166,7 +166,7 @@ final class wf {
           } else {
             stackIn_50_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_49_0), ((StringBuilder) (Object) stackIn_49_1).append(stackIn_50_2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_49_0), ((StringBuilder) (Object) stackIn_49_1).append(stackIn_50_2).append(')').toString());
         }
     }
 

@@ -221,7 +221,7 @@ final class GameResultsScreen extends MenuScreen {
         this.field_u = !param1 ? qj.field_c : MouseInputHandler.field_a;
         this.field_G = 1;
         this.field_x = param5;
-        this.field_y = AlphaContainer.a(BoundedRandomAccessFile.field_b, param4 + 21, new String[]{Integer.toString(param2), Integer.toString(param6)});
+        this.field_y = AlphaContainer.formatTemplate(BoundedRandomAccessFile.field_b, param4 + 21, new String[]{Integer.toString(param2), Integer.toString(param6)});
         if (param4 != 34) {
           return;
         }
@@ -270,7 +270,7 @@ final class GameResultsScreen extends MenuScreen {
         } else {
           ro.field_e.render(false, param0 ^ 0);
           SoftwareRasterizer.darkenRectangle(0, 0, 640, 480);
-          rh.b((byte) -75);
+          rh.drawBackgroundSquares((byte) -75);
         }
     }
 
@@ -281,10 +281,10 @@ final class GameResultsScreen extends MenuScreen {
           discarded$0 = this.getRowTextWidth(-3, 100);
         }
         if (DateOfBirthValidator.field_j == 1) {
-          ArchiveIndex.a(this.field_x, (byte) 126);
+          ArchiveIndex.startPuzzleModeGame(this.field_x, (byte) 126);
           fc.field_e = 14;
           var3 = param0 ? 1 : 0;
-          la.changeScreen(!gq.d(121) ? 0 : 12, -3, var3 != 0, -25528);
+          la.changeScreen(!gq.isOfflineOrAccountUi(121) ? 0 : 12, -3, var3 != 0, -25528);
         } else {
           if (DateOfBirthValidator.field_j == 2) {
             ro.field_e.sendResultsDismissed(46);
@@ -307,7 +307,7 @@ final class GameResultsScreen extends MenuScreen {
         try {
           this.field_G = 2;
           if (param0 != null) {
-            this.field_w = AlphaContainer.a(TextButton.field_G, param1 ^ -47, new String[]{param0});
+            this.field_w = AlphaContainer.formatTemplate(TextButton.field_G, param1 ^ -47, new String[]{param0});
           } else {
             this.field_w = td.field_c;
           }
@@ -348,7 +348,7 @@ final class GameResultsScreen extends MenuScreen {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
         }
     }
 
@@ -423,7 +423,7 @@ final class GameResultsScreen extends MenuScreen {
             this.updateRematchLabel(79);
           }
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "hq.JA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "hq.JA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -445,7 +445,7 @@ final class GameResultsScreen extends MenuScreen {
         if (DateOfBirthValidator.field_j != 2) {
           var3 = this.field_I;
           var4 = param1 ? 1 : 0;
-          stackIn_8_0 = (!gq.d(104)) ? 0 : 12;
+          stackIn_8_0 = (!gq.isOfflineOrAccountUi(104)) ? 0 : 12;
           la.changeScreen(stackIn_8_0, var3, var4 != 0, -25528);
         } else {
           if (ValidationHelpWidget.field_Y) {
@@ -453,7 +453,7 @@ final class GameResultsScreen extends MenuScreen {
             la.changeScreen(MidiPcmStream.field_t, -5, var3 != 0, -25528);
           }
           if (DateOfBirthValidator.field_i) {
-            qj.a(false, 0, 11);
+            qj.sendGameJoinRequest(false, 0, 11);
           }
         }
         if (param0 != 12) {

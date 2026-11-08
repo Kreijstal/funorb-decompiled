@@ -45,7 +45,7 @@ abstract class DebouncedValidator implements ValidationSource {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -61,7 +61,7 @@ abstract class DebouncedValidator implements ValidationSource {
           MatchingTextValidator.field_n = wm.field_a;
           MarkerSlider.field_X = wm.field_a;
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "hn.U(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "hn.U(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 
@@ -85,7 +85,7 @@ abstract class DebouncedValidator implements ValidationSource {
               param2 <= 105) {
               var7 = param1;
               ro.setNameSuggestions(var7, 2);
-              SpriteCheckboxPainter.field_f = HowToPlayScreen.a((byte) -65, param1);
+              SpriteCheckboxPainter.field_f = HowToPlayScreen.createSuggestionsResult((byte) -65, param1);
             } else {
               SpriteCheckboxPainter.field_f = pa.a(param2, param3, (byte) -97);
             }
@@ -115,7 +115,7 @@ abstract class DebouncedValidator implements ValidationSource {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 
@@ -167,7 +167,7 @@ abstract class DebouncedValidator implements ValidationSource {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 
@@ -216,8 +216,8 @@ abstract class DebouncedValidator implements ValidationSource {
           } else {
             stackIn_6_0 = RisingBubble.field_g;
           }
-          cm.b(stackIn_6_0, 4740);
-          nd.field_b.a(ff.field_h.field_K, -42 + ff.field_h.height, 0, 0, param0 ^ 37);
+          cm.layoutSidePanels(stackIn_6_0, 4740);
+          nd.field_b.layoutSocialPanel(ff.field_h.field_K, -42 + ff.field_h.height, 0, 0, param0 ^ 37);
           MatchingTextValidator.field_q.setBounds(0, fq.field_q, 0, 256, vd.field_a.field_K);
           stackIn_8_0 = WeightedLruCache.field_h;
           stackIn_8_1 = 2 + fq.field_q;
@@ -346,7 +346,7 @@ abstract class DebouncedValidator implements ValidationSource {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.addExceptionContext((Throwable) ((Object) var2), "hn.V(" + param0 + ',' + param1 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) var2), "hn.V(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -398,7 +398,7 @@ abstract class DebouncedValidator implements ValidationSource {
         }
         int var3 = DraggableWidget.field_S != null ? 1 : 0;
         if (9 == ke.field_a &&
-          SpriteState.a(MusicCrossfadeStream.field_F, PuzzleThumbnail.field_h, um.field_o, hm.field_b, 500)) {
+          SpriteState.canOpenQuickChatResponses(MusicCrossfadeStream.field_F, PuzzleThumbnail.field_h, um.field_o, hm.field_b, 500)) {
           if (hm.field_b != 2 &&
             var3 != 0) {
             return false;
@@ -415,7 +415,7 @@ abstract class DebouncedValidator implements ValidationSource {
         if (11 == ke.field_a &&
           CheckboxPainter.field_r) {
           if (2 == BoardView.field_a &&
-            !LabeledField.a(true, ej.field_a, FloatingSquare.field_g)) {
+            !LabeledField.isPlayerReachable(true, ej.field_a, FloatingSquare.field_g)) {
             return false;
           }
           if (BoardView.field_a != 2 &&
@@ -426,7 +426,7 @@ abstract class DebouncedValidator implements ValidationSource {
             return true;
           }
           String var4 = (String) null;
-          dg.a(true, BoardView.field_a, ih.field_f, (String) null, FloatingSquare.field_g, param1);
+          dg.sendQuickChatMessage(true, BoardView.field_a, ih.field_f, (String) null, FloatingSquare.field_g, param1);
           return true;
         }
         return false;

@@ -137,10 +137,10 @@ final class ViewportController {
           }
         }
         if (BufferedRandomAccessFile.field_i != var3) {
-          this.field_s.a(var3, 127, var4);
+          this.field_s.resizeView(var3, 127, var4);
         } else {
           if (var4 != wp.field_c) {
-            this.field_s.a(var3, 127, var4);
+            this.field_s.resizeView(var3, 127, var4);
           }
         }
         if (this.field_n > 0) {
@@ -151,7 +151,7 @@ final class ViewportController {
     final FullscreenFocusCanvas enterFullscreen(boolean param0) {
         this.field_b = BufferedRandomAccessFile.field_i;
         this.field_l = wp.field_c;
-        this.field_s.a(this.field_q, 126, this.field_x);
+        this.field_s.resizeView(this.field_q, 126, this.field_x);
         FireworkSpark.field_i = param0 ? true : false;
         FullscreenFocusCanvas var2 = wo.openFullscreenWindow(mc.field_k, 150, this.field_x, 0, this.field_q, 0);
         if (var2 == null) {
@@ -161,7 +161,7 @@ final class ViewportController {
     }
 
     final void restoreSavedSize(int param0) {
-        this.field_s.a(this.field_b, 127, this.field_l);
+        this.field_s.resizeView(this.field_b, 127, this.field_l);
         int var2 = 99 % ((param0 + 17) / 62);
     }
 
@@ -214,7 +214,7 @@ final class ViewportController {
           this.field_p == wp.field_c) {
           return;
         }
-        this.field_s.a(this.field_i, 127, this.field_p);
+        this.field_s.resizeView(this.field_i, 127, this.field_p);
     }
 
     private ViewportController() throws Throwable {

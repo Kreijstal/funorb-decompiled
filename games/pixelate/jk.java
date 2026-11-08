@@ -24,7 +24,7 @@ final class jk {
         if (MarkerSlider.isOverlayOpen((byte) 120)) {
           param0 = false;
         }
-        dh.a((byte) 58, param0);
+        dh.drawAccountOverlays((byte) 58, param0);
         if (param1 != 83) {
           return;
         }

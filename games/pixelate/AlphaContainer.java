@@ -27,7 +27,7 @@ final class AlphaContainer extends SingleChildContainer {
           this.field_O = 256;
           this.child = param0;
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "sd.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "sd.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -46,14 +46,14 @@ final class AlphaContainer extends SingleChildContainer {
           return;
         }
         Sprite var7 = new Sprite(this.child.field_E, this.child.field_C);
-        Checkbox.a(-111, var7);
+        Checkbox.renderToSprite(-111, var7);
         int var6 = -5 % ((70 - param3) / 49);
         this.child.drawLayer(0, param1, 0, (byte) -79);
         LinkButtonPainter.a((byte) 92);
         var7.drawAlpha(this.field_z + param2, this.field_p + param0, this.field_O);
     }
 
-    final static String a(String param0, int param1, String[] param2) {
+    final static String formatTemplate(String param0, int param1, String[] param2) {
         StringBuilder discarded$2 = null;
         StringBuilder discarded$0 = null;
         StringBuilder discarded$1 = null;
@@ -97,7 +97,7 @@ final class AlphaContainer extends SingleChildContainer {
                 break;
               }
               var7_ref_String = param0.substring(var6_int + 2, var5);
-              if (!td.a(-128, (CharSequence) ((Object) var7_ref_String))) {
+              if (!td.isDecimalInteger(-128, (CharSequence) ((Object) var7_ref_String))) {
                 continue;
               }
               if (var5 >= var3_int) {
@@ -107,7 +107,7 @@ final class AlphaContainer extends SingleChildContainer {
                 continue;
               }
               var5++;
-              var8 = na.a((CharSequence) ((Object) var7_ref_String), (byte) -33);
+              var8 = na.parseDecimalInt((CharSequence) ((Object) var7_ref_String), (byte) -33);
               var4 = var4 + (param2[var8].length() + var6_int - var5);
               continue;
             }
@@ -135,7 +135,7 @@ final class AlphaContainer extends SingleChildContainer {
               break;
             }
             var9 = param0.substring(2 + var8Lifetime1, var5Lifetime1);
-            if (!td.a(-105, (CharSequence) ((Object) var9))) {
+            if (!td.isDecimalInteger(-105, (CharSequence) ((Object) var9))) {
               continue;
             }
             if (var3_int <= var5Lifetime1) {
@@ -145,7 +145,7 @@ final class AlphaContainer extends SingleChildContainer {
               continue;
             }
             var5Lifetime1++;
-            var10 = na.a((CharSequence) ((Object) var9), (byte) -33);
+            var10 = na.parseDecimalInt((CharSequence) ((Object) var9), (byte) -33);
             discarded$0 = var6.append(param0.substring(var7, var8Lifetime1));
             discarded$1 = var6.append(param2[var10]);
             var7 = var5Lifetime1;
@@ -166,18 +166,18 @@ final class AlphaContainer extends SingleChildContainer {
           } else {
             stackIn_39_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(')').toString());
         }
     }
 
-    final static void a(byte param0, rh param1, int param2) {
+    final static void sendHighscoreSubmission(byte param0, rh param1, int param2) {
         CipherPacketBuffer var7 = null;
         CipherPacketBuffer var8 = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = Pixelate.field_H ? 1 : 0;
         try {
-          var7 = aa.field_f;
+          var7 = ChatMessage.field_f;
           var8 = var7;
           var8.writeOpcode(param2, 15514);
           var8.position = var8.position + 1;
@@ -200,7 +200,7 @@ final class AlphaContainer extends SingleChildContainer {
           var8.appendCrc32(var4, (byte) 86);
           var8.backpatchByteLength(var8.position - var4, -1);
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "sd.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "sd.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -268,7 +268,7 @@ final class AlphaContainer extends SingleChildContainer {
           }
           if (param0 != -95) {
             var16 = (String[]) null;
-            AlphaContainer.a((String) null, 80, (String[]) null);
+            AlphaContainer.formatTemplate((String) null, 80, (String[]) null);
           }
           for (var4Lifetime1 = 0; var4Lifetime1 < SocialListEntry.field_Qb; var4Lifetime1++) {
             e.field_b[var4Lifetime1] = var18.readUnsignedShort((byte) -122);
@@ -308,7 +308,7 @@ final class AlphaContainer extends SingleChildContainer {
               }
               if ((var11 & 2) != 0) {
                 for (var12 = 0; var12 < var7; var12++) {
-                  dupTemp$1 = var18.readByte(DraggableWidget.a((int) param0, -95));
+                  dupTemp$1 = var18.readByte(DraggableWidget.intXor((int) param0, -95));
                   var9[var12] = dupTemp$1;
                   var13 = dupTemp$1;
                   stackIn_31_0 = var10;
@@ -356,12 +356,12 @@ final class AlphaContainer extends SingleChildContainer {
           } else {
             stackIn_55_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_54_0), ((StringBuilder) (Object) stackIn_54_1).append(stackIn_55_2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_54_0), ((StringBuilder) (Object) stackIn_54_1).append(stackIn_55_2).append(')').toString());
         }
     }
 
-    final static void a(boolean param0, int param1) {
-        CipherPacketBuffer var2 = aa.field_f;
+    final static void sendSavedDataRequest(boolean param0, int param1) {
+        CipherPacketBuffer var2 = ChatMessage.field_f;
         if (!param0) {
           return;
         }

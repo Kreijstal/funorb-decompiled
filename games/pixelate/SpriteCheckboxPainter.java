@@ -9,28 +9,28 @@ final class SpriteCheckboxPainter implements WidgetPainter {
     static boolean field_d;
     static int field_b;
 
-    final static void a(byte param0, int param1, m param2) {
+    final static void sendListRequest(byte param0, int param1, ListRequest param2) {
         CipherPacketBuffer var3 = null;
         try {
           if (param0 != -31) {
             SpriteCheckboxPainter.releaseStatics(-63);
           }
-          var3 = aa.field_f;
+          var3 = ChatMessage.field_f;
           var3.writeOpcode(param1, 15514);
           var3.writeByte(160, param2.field_m);
           var3.writeShort(param0 + 1276387975, param2.field_k);
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "jc.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "jc.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static void a(String param0, int param1) {
+    final static void requestOpenLinkNotice(String param0, int param1) {
         try {
           int var2_int = 31 % ((param1 + 78) / 35);
           oo.field_a = param0;
           QuickChatMenu.setPendingUiResult(12, -2671);
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "jc.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "jc.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -58,7 +58,7 @@ final class SpriteCheckboxPainter implements WidgetPainter {
           if (!param0.containsFocus(true)) {
             return;
           }
-          ValidatedTextWidget.a(var6_int + 2, 2 + var7, (byte) -128, param0.field_E - 4, param0.field_C - 4);
+          ValidatedTextWidget.drawDottedRectangle(var6_int + 2, 2 + var7, (byte) -128, param0.field_E - 4, param0.field_C - 4);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -70,7 +70,7 @@ final class SpriteCheckboxPainter implements WidgetPainter {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 

@@ -114,7 +114,7 @@ final class SocketJs5Transport extends Js5Transport {
             } else {
               stackIn_30_2 = "{...}";
             }
-            throw aa.addExceptionContext((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+            throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param1).append(',').append(param2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -179,7 +179,7 @@ final class SocketJs5Transport extends Js5Transport {
             return false;
           }
           try {
-            this.transport.b((byte) -106);
+            this.transport.checkWriteError((byte) -106);
             var2 = (Js5NetworkRequest) (this.field_e.first(61));
             while (var2 != null) {
               this.field_b.position = 0;
@@ -199,7 +199,7 @@ final class SocketJs5Transport extends Js5Transport {
               var2Lifetime1 = (Js5NetworkRequest) (this.field_l.next(65151));
             }
             for (var2_int = 0; var2_int < 100; var2_int++) {
-              var3_int = this.transport.a(-73);
+              var3_int = this.transport.available(-73);
               if (0 > var3_int) {
                 throw new IOException();
               }
@@ -227,7 +227,7 @@ final class SocketJs5Transport extends Js5Transport {
                     var17 = 0;
                     var7 = var17;
                     while (var17 < var6) {
-                      this.field_c.field_D.payload[this.field_c.field_D.position + var17] = (byte)DraggableWidget.a((int) this.field_c.field_D.payload[this.field_c.field_D.position + var17], (int) this.field_a);
+                      this.field_c.field_D.payload[this.field_c.field_D.position + var17] = (byte)DraggableWidget.intXor((int) this.field_c.field_D.payload[this.field_c.field_D.position + var17], (int) this.field_a);
                       var17++;
                     }
                   }
@@ -250,7 +250,7 @@ final class SocketJs5Transport extends Js5Transport {
                   this.transport.readFully(this.field_g.payload, this.field_g.position, (byte) 119, var5);
                   if (0 != this.field_a) {
                     for (var6 = 0; var5 > var6; var6++) {
-                      this.field_g.payload[var6 + this.field_g.position] = (byte)DraggableWidget.a((int) this.field_g.payload[var6 + this.field_g.position], (int) this.field_a);
+                      this.field_g.payload[var6 + this.field_g.position] = (byte)DraggableWidget.intXor((int) this.field_g.payload[var6 + this.field_g.position], (int) this.field_a);
                     }
                   }
                   this.field_g.position = this.field_g.position + var5;
@@ -408,7 +408,7 @@ final class SocketJs5Transport extends Js5Transport {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw aa.addExceptionContext((Throwable) ((Object) var1_ref), "wn.E(" + param0 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) var1_ref), "wn.E(" + param0 + ')');
         }
     }
 

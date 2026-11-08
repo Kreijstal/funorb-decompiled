@@ -64,7 +64,7 @@ final class MatchController {
           this.field_r = true;
         }
         this.field_d[param0].field_c = false;
-        gq.a(0, 200, 320, AlphaContainer.a(TextButton.field_G, 35, new String[]{this.field_a.playerNames[param0]}));
+        gq.startScorePopup(0, 200, 320, AlphaContainer.formatTemplate(TextButton.field_G, 35, new String[]{this.field_a.playerNames[param0]}));
     }
 
     private final void advanceChallengePicture(int param0) {
@@ -178,7 +178,7 @@ final class MatchController {
           ((GameResultsScreen) (Object) stackIn_5_0).showSinglePlayerResults(stackIn_5_1, stackIn_5_2, stackIn_6_3, stackIn_8_4, stackIn_8_5, stackIn_9_6, gb.field_f[3], 2, gb.field_f[2], this.field_a.scores[0]);
         }
         if (DateOfBirthValidator.field_j != 1) {
-          dg.a(1, (byte) -97);
+          dg.playMenuMusic(1, (byte) -97);
         }
         if (param1 != 250) {
           this.field_h = false;
@@ -230,7 +230,7 @@ final class MatchController {
           !var6.isBoardAnimating(param0 ^ 121)) {
           this.field_r = false;
           this.field_e.setPictureLabel(param0 ^ -431);
-          aa.field_f.writeOpcode(64, 15514);
+          ChatMessage.field_f.writeOpcode(64, 15514);
         }
         if (this.field_u &&
           this.field_x > 0) {
@@ -269,7 +269,7 @@ final class MatchController {
 
     private final void applyMatchResult(boolean param0) {
         this.field_a.setWinner(false, nf.field_a);
-        this.field_a.scores[1] = fo.field_g;
+        this.field_a.scores[1] = Kite.field_g;
         this.field_a.scores[0] = IndexedSpriteState.field_k;
         this.showResults(false, 250, false);
         if (!param0) {
@@ -284,7 +284,7 @@ final class MatchController {
         if (!AgeValidator.field_p) {
           throw new IllegalStateException();
         }
-        aa.field_f.writeOpcode(60, 15514);
+        ChatMessage.field_f.writeOpcode(60, 15514);
     }
 
     final void receiveMatchResult(int param0, int param1, int param2, boolean param3) {
@@ -302,7 +302,7 @@ final class MatchController {
         if (param3) {
           this.applyMatchResult(true);
         }
-        fo.field_g = param2;
+        Kite.field_g = param2;
         nf.field_a = param1;
     }
 
@@ -319,7 +319,7 @@ final class MatchController {
         if (!AgeValidator.field_p) {
           throw new IllegalStateException();
         }
-        aa.field_f.writeOpcode(61, 15514);
+        ChatMessage.field_f.writeOpcode(61, 15514);
         if (param0 <= 2) {
           this.field_w = 3;
         }
@@ -350,7 +350,7 @@ final class MatchController {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -401,7 +401,7 @@ final class MatchController {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -438,7 +438,7 @@ final class MatchController {
           this.handleKey(82, (byte) 123);
         }
         LoginCredentials.field_e.tick(param0 + 109);
-        ih.a(false);
+        ih.tickTutorial(false);
         if (param0 != -110) {
           this.field_A = (PictureStrip) null;
         }
@@ -452,9 +452,9 @@ final class MatchController {
         if (null == HighscoresScreen.field_p &&
           var2 > 0 &&
           !this.field_l) {
-          HighscoresScreen.field_p = new rh(0, 65535, ln.field_n, ScoreMarkerDemo.field_j, ra.field_a, PlayerController.field_r, new int[]{var2});
+          HighscoresScreen.field_p = new rh(0, 65535, SoundVoice.field_n, ScoreMarkerDemo.field_j, ra.field_a, PlayerController.field_r, new int[]{var2});
           if (!ArrayWidgetContainer.isAccountUiActive((byte) 120)) {
-            ValidationHelpWidget.a(HighscoresScreen.field_p, true, 3);
+            ValidationHelpWidget.queueHighscoreSubmission(HighscoresScreen.field_p, true, 3);
           }
         }
         if (param0 != 17945) {
@@ -478,7 +478,7 @@ final class MatchController {
           QueuedInput.field_l = param6;
           jk.field_c = param5;
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "ii.U(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "ii.U(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -566,7 +566,7 @@ final class MatchController {
             var5_long = Runtime.getRuntime().freeMemory();
             PieceTiming.field_e.drawRightAlignedText((var3 - var5_long) / 1024L + " kB / " + var3 / 1024L + " kB", 610, 100, 0, 0);
           }
-          if (li.field_e) {
+          if (FireworkDisplay.field_e) {
             var17 = qj.field_e;
             var4 = var17.maxDescent + var17.maxAscent;
             var5 = 30;
@@ -706,7 +706,7 @@ final class MatchController {
             }
           }
           var5 = var4;
-          stackIn_10_0 = (!gq.d(83)) ? 0 : 12;
+          stackIn_10_0 = (!gq.isOfflineOrAccountUi(83)) ? 0 : 12;
           la.changeScreen(stackIn_10_0, var5, false, -25528);
           return;
         }
@@ -731,8 +731,8 @@ final class MatchController {
                         } else {
                           if (param0 != 8) {
                             if (9 == param0) {
-                              stackIn_57_0 = !(li.field_e);
-                              li.field_e = stackIn_57_0;
+                              stackIn_57_0 = !(FireworkDisplay.field_e);
+                              FireworkDisplay.field_e = stackIn_57_0;
                             } else {
                               if (11 != param0) {
                                 if (12 == param0) {
@@ -820,7 +820,7 @@ final class MatchController {
               this.field_a.field_b = false;
               this.field_a.field_o = 0;
             }
-            jd.a(0);
+            RasterState.resetTutorialPage(0);
           }
           if (var4Lifetime1 != -1 &&
             !this.field_d[this.field_z].field_l) {
@@ -880,7 +880,7 @@ final class MatchController {
     private final void advanceIntegrityCounters(int param0) {
         ra.field_a = ra.field_a + 7;
         IntKeyLookup.field_f = IntKeyLookup.field_f + sb.field_a;
-        ln.field_n = ln.field_n + 7;
+        SoundVoice.field_n = SoundVoice.field_n + 7;
         IconTextComponent.field_Mb = IconTextComponent.field_Mb + 1;
         if (param0 <= 93) {
           this.tickPuzzleMode(-83);
@@ -901,9 +901,9 @@ final class MatchController {
         try {
           TimerBarDemo.field_q = param2;
           int var5_int = 55 / ((2 - param3) / 55);
-          UiContainer.a(param0, param4, 5, param1, ab.field_c, 320, PieceTiming.field_e.maxAscent, 10, bi.field_g, true, PieceTiming.field_e, PieceTiming.field_e.maxDescent + PieceTiming.field_e.maxAscent, (byte) 27, 15, 240);
+          UiContainer.openStyledMessageMenu(param0, param4, 5, param1, ab.field_c, 320, PieceTiming.field_e.maxAscent, 10, bi.field_g, true, PieceTiming.field_e, PieceTiming.field_e.maxDescent + PieceTiming.field_e.maxAscent, (byte) 27, 15, 240);
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "ii.HA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "ii.HA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -1083,7 +1083,7 @@ final class MatchController {
           this.field_a.readState(param1, (byte) 123);
           this.createControllers(param0 ^ 102);
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "ii.O(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "ii.O(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -1125,11 +1125,11 @@ final class MatchController {
           var4.tickTimer(param0 - 77, var8.isBoardAnimating(-122));
         }
         MouseInputHandler.tickTutorialPageTransition(5);
-        if (null != aa.field_p &&
-          aa.field_p.field_n &&
-          aa.field_p.field_r != null) {
-          this.field_e.field_f = di.formatThousands(false, aa.field_p.field_l[1][0]);
-          aa.field_p = null;
+        if (null != ChatMessage.field_p &&
+          ChatMessage.field_p.field_n &&
+          ChatMessage.field_p.field_r != null) {
+          this.field_e.field_f = di.formatThousands(false, ChatMessage.field_p.field_l[1][0]);
+          ChatMessage.field_p = null;
         }
         if (var4.isExpired(false)) {
           gb.field_f[1] = gb.field_f[1] + this.field_a.boards[0].piecesPlaced;
@@ -1166,7 +1166,7 @@ final class MatchController {
           }
           var5 = var3.field_f;
           DialWidgetPainter.field_o = DialWidgetPainter.field_o + (var5 << 7);
-          ln.field_n = ln.field_n + var5 * ScoreMarkerDemo.field_j;
+          SoundVoice.field_n = SoundVoice.field_n + var5 * ScoreMarkerDemo.field_j;
           if (this.field_a.scores[0] >= 10000) {
             this.awardAchievement(0, (byte) 58, 255);
           }
@@ -1292,7 +1292,7 @@ final class MatchController {
           AgeValidator.field_p = stackIn_4_0;
           EmailCredentials.field_k = 0;
           DialWidgetPainter.field_o = 2359467;
-          ln.field_n = 1426010794;
+          SoundVoice.field_n = 1426010794;
           ra.field_a = 1947508858;
           this.field_z = param1;
           IconTextComponent.field_Mb = 34851;
@@ -1364,7 +1364,7 @@ final class MatchController {
             aq.shuffleSkinOrder(true);
             this.field_j = (StatusBar) ((Object) new TimerBar(90));
             if (!ArrayWidgetContainer.isAccountUiActive((byte) 95)) {
-              aa.field_p = PasswordValidator.getRankingTableRequest(3, (byte) -97, 1, 10, 0);
+              ChatMessage.field_p = PasswordValidator.getRankingTableRequest(3, (byte) -97, 1, 10, 0);
             }
             this.field_a = new Match(param0, 0, DateOfBirthValidator.field_j, param3, 0, 0);
             BoardView.initializeTutorialPages(1, this.field_a);
@@ -1382,7 +1382,7 @@ final class MatchController {
           } else {
             stackIn_33_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 

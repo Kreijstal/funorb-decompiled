@@ -192,7 +192,7 @@ final class GameModeSelectScreen extends MenuScreen {
                 }
                 var2 = vd.getGameTextFile("mu_x_removed", param0 ^ 31873);
                 if (var2 != null) {
-                  li.field_j = of.a(var2, param0 ^ 31872);
+                  FireworkDisplay.field_j = of.a(var2, param0 ^ 31872);
                 }
                 var2 = vd.getGameTextFile("mu_x_dropped_out", 0);
                 if (var2 != null) {
@@ -284,7 +284,7 @@ final class GameModeSelectScreen extends MenuScreen {
                 }
                 var2 = vd.getGameTextFile("mu_gamelist_elapsed_time", 0);
                 if (null != var2) {
-                  df.field_m = of.a(var2, 1);
+                  StatsRequest.field_m = of.a(var2, 1);
                 }
                 var2 = vd.getGameTextFile("mu_play_rated", 0);
                 if (var2 != null) {
@@ -296,7 +296,7 @@ final class GameModeSelectScreen extends MenuScreen {
                 }
                 var2 = vd.getGameTextFile("mu_options", 0);
                 if (null != var2) {
-                  og.field_n = of.a(var2, param0 ^ 31872);
+                  SaveDataRequest.field_n = of.a(var2, param0 ^ 31872);
                 }
                 var2 = vd.getGameTextFile("mu_options_whocanjoin", 0);
                 if (var2 != null) {
@@ -436,7 +436,7 @@ final class GameModeSelectScreen extends MenuScreen {
                 }
                 var2 = vd.getGameTextFile("mu_chat_game_friends_only", param0 ^ 31873);
                 if (null != var2) {
-                  m.field_l = of.a(var2, 1);
+                  ListRequest.field_l = of.a(var2, 1);
                 }
                 var2 = vd.getGameTextFile("mu_chat_game_friends", param0 ^ 31873);
                 if (var2 != null) {
@@ -520,7 +520,7 @@ final class GameModeSelectScreen extends MenuScreen {
                 }
                 var2 = vd.getGameTextFile("game_full", param0 - 31873);
                 if (var2 != null) {
-                  fo.field_m = of.a(var2, 1);
+                  Kite.field_m = of.a(var2, 1);
                 }
                 var2 = vd.getGameTextFile("join_requests_one", 0);
                 if (null != var2) {
@@ -612,7 +612,7 @@ final class GameModeSelectScreen extends MenuScreen {
                 }
                 var2 = vd.getGameTextFile("status_full", param0 - 31873);
                 if (null != var2) {
-                  ki.field_b = of.a(var2, 1);
+                  KiteTailSegment.field_b = of.a(var2, 1);
                 }
                 var2 = vd.getGameTextFile("players_in_game", 0);
                 if (null != var2) {
@@ -696,7 +696,7 @@ final class GameModeSelectScreen extends MenuScreen {
                 }
                 var2 = vd.getGameTextFile("no_options_available", 0);
                 if (var2 != null) {
-                  ln.field_l = of.a(var2, 1);
+                  SoundVoice.field_l = of.a(var2, 1);
                 }
                 var2 = vd.getGameTextFile("reportabuse", param0 ^ 31873);
                 if (null != var2) {
@@ -800,7 +800,7 @@ final class GameModeSelectScreen extends MenuScreen {
                 }
                 var2 = vd.getGameTextFile("gameopt_cannotbecombined1", param0 - 31873);
                 if (null != var2) {
-                  ki.field_a = of.a(var2, 1);
+                  KiteTailSegment.field_a = of.a(var2, 1);
                 }
                 var2 = vd.getGameTextFile("gameopt_cannotbecombined2", 0);
                 if (null != var2) {
@@ -832,7 +832,7 @@ final class GameModeSelectScreen extends MenuScreen {
                 }
                 var2 = vd.getGameTextFile("gameopt_playerneeds1ratedgame", param0 ^ 31873);
                 if (null != var2) {
-                  jm.field_k = of.a(var2, param0 ^ 31872);
+                  Cloud.field_k = of.a(var2, param0 ^ 31872);
                 }
                 var2 = vd.getGameTextFile("gameopt_youneed1ratedgame", param0 ^ 31873);
                 if (null != var2) {
@@ -872,7 +872,7 @@ final class GameModeSelectScreen extends MenuScreen {
                 }
                 var2 = vd.getGameTextFile("gameopt_playersdontqualify_selectgametab", 0);
                 if (var2 != null) {
-                  li.field_b = of.a(var2, 1);
+                  FireworkDisplay.field_b = of.a(var2, 1);
                 }
                 var2 = vd.getGameTextFile("gameopt_unselectedoptions", 0);
                 if (null != var2) {
@@ -1354,7 +1354,7 @@ final class GameModeSelectScreen extends MenuScreen {
                 }
                 var2 = vd.getGameTextFile("monthnames,5", param0 - 31873);
                 if (var2 != null) {
-                  dh.field_c[5] = of.a(var2, DraggableWidget.a(param0, 31872));
+                  dh.field_c[5] = of.a(var2, DraggableWidget.intXor(param0, 31872));
                 }
                 var2 = vd.getGameTextFile("monthnames,6", 0);
                 if (null != var2) {
@@ -1362,7 +1362,7 @@ final class GameModeSelectScreen extends MenuScreen {
                 }
                 var2 = vd.getGameTextFile("monthnames,7", 0);
                 if (null != var2) {
-                  dh.field_c[7] = of.a(var2, DraggableWidget.a(param0, 31872));
+                  dh.field_c[7] = of.a(var2, DraggableWidget.intXor(param0, 31872));
                 }
                 var2 = vd.getGameTextFile("monthnames,8", 0);
                 if (null != var2) {
@@ -1618,7 +1618,7 @@ final class GameModeSelectScreen extends MenuScreen {
                 }
                 var2 = vd.getGameTextFile("create_alert_passcontainsemail", param0 ^ 31873);
                 if (null != var2) {
-                  ki.field_c = of.a(var2, 1);
+                  KiteTailSegment.field_c = of.a(var2, 1);
                 }
                 var2 = vd.getGameTextFile("create_alert_passcontainsname_partial", param0 ^ 31873);
                 if (var2 != null) {
@@ -1786,7 +1786,7 @@ final class GameModeSelectScreen extends MenuScreen {
                 }
                 var2 = vd.getGameTextFile("waitingfor_extradata", 0);
                 if (var2 != null) {
-                  jd.field_p = of.a(var2, 1);
+                  RasterState.field_p = of.a(var2, 1);
                 }
                 var2 = vd.getGameTextFile("waitingfor_languages", 0);
                 if (null != var2) {
@@ -2488,11 +2488,11 @@ final class GameModeSelectScreen extends MenuScreen {
                 }
                 var2 = vd.getGameTextFile("quickchat_shortcut_help,4", 0);
                 if (var2 != null) {
-                  TextLayout.field_c[4] = of.a(var2, DraggableWidget.a(param0, 31872));
+                  TextLayout.field_c[4] = of.a(var2, DraggableWidget.intXor(param0, 31872));
                 }
                 var2 = vd.getGameTextFile("quickchat_shortcut_help,5", 0);
                 if (null != var2) {
-                  TextLayout.field_c[5] = of.a(var2, DraggableWidget.a(param0, 31872));
+                  TextLayout.field_c[5] = of.a(var2, DraggableWidget.intXor(param0, 31872));
                 }
                 var2 = vd.getGameTextFile("quickchat_shortcut_keys,0", 0);
                 if (null != var2) {
@@ -2500,7 +2500,7 @@ final class GameModeSelectScreen extends MenuScreen {
                 }
                 var2 = vd.getGameTextFile("quickchat_shortcut_keys,1", 0);
                 if (var2 != null) {
-                  SpriteState.field_I[1] = of.a(var2, DraggableWidget.a(param0, 31872));
+                  SpriteState.field_I[1] = of.a(var2, DraggableWidget.intXor(param0, 31872));
                 }
                 var2 = vd.getGameTextFile("quickchat_shortcut_keys,2", 0);
                 if (var2 != null) {
@@ -2556,7 +2556,7 @@ final class GameModeSelectScreen extends MenuScreen {
                 }
                 var2 = vd.getGameTextFile("benefits_price", 0);
                 if (var2 != null) {
-                  jm.field_p = of.a(var2, 1);
+                  Cloud.field_p = of.a(var2, 1);
                 }
                 var2 = vd.getGameTextFile("members_expansion_benefits,0", param0 ^ 31873);
                 if (var2 != null) {
@@ -2680,7 +2680,7 @@ final class GameModeSelectScreen extends MenuScreen {
                 }
                 var2 = vd.getGameTextFile("fs_button_members", 0);
                 if (null != var2) {
-                  ln.field_k = of.a(var2, param0 ^ 31872);
+                  SoundVoice.field_k = of.a(var2, param0 ^ 31872);
                 }
                 var2 = vd.getGameTextFile("fs_unavailable", param0 ^ 31873);
                 if (var2 != null) {
@@ -2852,7 +2852,7 @@ final class GameModeSelectScreen extends MenuScreen {
                 }
                 var2 = vd.getGameTextFile("mustlogin2,3", 0);
                 if (null != var2) {
-                  fp.field_a[3] = of.a(var2, DraggableWidget.a(param0, 31872));
+                  fp.field_a[3] = of.a(var2, DraggableWidget.intXor(param0, 31872));
                 }
                 var2 = vd.getGameTextFile("mustlogin2,4", 0);
                 if (var2 != null) {
@@ -2864,7 +2864,7 @@ final class GameModeSelectScreen extends MenuScreen {
                 }
                 var2 = vd.getGameTextFile("mustlogin2,6", param0 - 31873);
                 if (null != var2) {
-                  fp.field_a[6] = of.a(var2, DraggableWidget.a(param0, 31872));
+                  fp.field_a[6] = of.a(var2, DraggableWidget.intXor(param0, 31872));
                 }
                 var2 = vd.getGameTextFile("mustlogin2,7", 0);
                 if (var2 != null) {
@@ -2908,7 +2908,7 @@ final class GameModeSelectScreen extends MenuScreen {
                 }
                 var2 = vd.getGameTextFile("mustlogin4,2", param0 ^ 31873);
                 if (null != var2) {
-                  TextTableInitializer.field_a[2] = of.a(var2, DraggableWidget.a(param0, 31872));
+                  TextTableInitializer.field_a[2] = of.a(var2, DraggableWidget.intXor(param0, 31872));
                 }
                 var2 = vd.getGameTextFile("mustlogin4,3", 0);
                 if (null != var2) {
@@ -2974,7 +2974,7 @@ final class GameModeSelectScreen extends MenuScreen {
                 }
                 var2 = vd.getGameTextFile("subscription_cost_monthly,2", 0);
                 if (var2 != null) {
-                  wp.field_b[2] = of.a(var2, DraggableWidget.a(param0, 31872));
+                  wp.field_b[2] = of.a(var2, DraggableWidget.intXor(param0, 31872));
                 }
                 var2 = vd.getGameTextFile("subscription_cost_monthly,3", 0);
                 if (var2 != null) {
@@ -3043,7 +3043,7 @@ final class GameModeSelectScreen extends MenuScreen {
                   } else {
                     stackIn_2603_2 = "{...}";
                   }
-                  throw aa.addExceptionContext((Throwable) ((Object) stackIn_2602_0), ((StringBuilder) (Object) stackIn_2602_1).append(stackIn_2603_2).append(')').toString());
+                  throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_2602_0), ((StringBuilder) (Object) stackIn_2602_1).append(stackIn_2603_2).append(')').toString());
                 }
                 if (var3 != 0) {
                   var4 = GameApplet.field_l;
@@ -3072,7 +3072,7 @@ final class GameModeSelectScreen extends MenuScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw aa.addExceptionContext((Throwable) ((Object) var1), "uk.E(" + param0 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) var1), "uk.E(" + param0 + ')');
         }
     }
 
@@ -3126,7 +3126,7 @@ final class GameModeSelectScreen extends MenuScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.addExceptionContext((Throwable) ((Object) var2), "uk.C(" + param0 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) var2), "uk.C(" + param0 + ')');
         }
     }
 
@@ -3320,7 +3320,7 @@ final class GameModeSelectScreen extends MenuScreen {
               var32 = 65280 & var30;
               var33 = (var28 * var31 & -16711857) >>> 8 | (16711885 & var28 * var32) >>> 8;
               var33 = var33 + 65793 * var29;
-              ln.a(var26, var25, var24, var23, var27, 8355711 & var33 >> 1, 100, var22);
+              SoundVoice.rasterTriangle(var26, var25, var24, var23, var27, 8355711 & var33 >> 1, 100, var22);
             } else {
               var28 = var8_array[var18];
               var29 = var8_array[var19];
@@ -3342,7 +3342,7 @@ final class GameModeSelectScreen extends MenuScreen {
               var38 = var38 + var32 * 65793;
               var37 = var37 + var31 * 65793;
               var39 = var39 + 65793 * var33;
-              wa.a(var27, var25, var24, var39 >> 16, var37 >> 16, var23, 255 & var38, 255 & var38 >> 8, var26, var37 & 255, var22, -128, 255 & var39, 255 & var39 >> 8, (65289 & var37) >> 8, var38 >> 16);
+              wa.rasterSortedShadedTriangle(var27, var25, var24, var39 >> 16, var37 >> 16, var23, 255 & var38, 255 & var38 >> 8, var26, var37 & 255, var22, -128, 255 & var39, 255 & var39 >> 8, (65289 & var37) >> 8, var38 >> 16);
             }
             var13Lifetime1++;
           }
@@ -3357,7 +3357,7 @@ final class GameModeSelectScreen extends MenuScreen {
           } else {
             stackIn_85_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_84_0), ((StringBuilder) (Object) stackIn_84_1).append(stackIn_85_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_84_0), ((StringBuilder) (Object) stackIn_84_1).append(stackIn_85_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
         }
     }
 
@@ -3368,7 +3368,7 @@ final class GameModeSelectScreen extends MenuScreen {
             this.draw(57);
           }
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "uk.L(" + param0 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "uk.L(" + param0 + ')');
         }
     }
 
@@ -3379,7 +3379,7 @@ final class GameModeSelectScreen extends MenuScreen {
           this.field_o.resetHighlight((byte) -84);
           super.enterScreen(param0, 0, param2);
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "uk.F(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "uk.F(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -3409,7 +3409,7 @@ final class GameModeSelectScreen extends MenuScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.addExceptionContext((Throwable) ((Object) var2), "uk.O(" + param0 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) var2), "uk.O(" + param0 + ')');
         }
     }
 
@@ -3451,7 +3451,7 @@ final class GameModeSelectScreen extends MenuScreen {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -3482,7 +3482,7 @@ final class GameModeSelectScreen extends MenuScreen {
           if (this.field_p != var2) {
             stackIn_16_0 = ge.field_a;
           } else {
-            stackIn_16_0 = jm.field_s;
+            stackIn_16_0 = Cloud.field_s;
           }
           var3 = stackIn_16_0;
           var2.drawDescriptionBanner(-18879, var3);
@@ -3490,7 +3490,7 @@ final class GameModeSelectScreen extends MenuScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw aa.addExceptionContext((Throwable) ((Object) var2_ref), "uk.H(" + param0 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) var2_ref), "uk.H(" + param0 + ')');
         }
     }
 
@@ -3522,7 +3522,7 @@ final class GameModeSelectScreen extends MenuScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw aa.addExceptionContext((Throwable) ((Object) var4), "uk.N(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) var4), "uk.N(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -3556,7 +3556,7 @@ final class GameModeSelectScreen extends MenuScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw aa.addExceptionContext((Throwable) ((Object) var4), "uk.A(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) var4), "uk.A(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 

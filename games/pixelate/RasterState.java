@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jd extends IntrusiveNode {
+final class RasterState extends IntrusiveNode {
     static int field_s;
     static String field_p;
     int field_w;
@@ -25,7 +25,7 @@ final class jd extends IntrusiveNode {
         field_o = (byte[][][]) null;
     }
 
-    final void a(int[] param0, int param1, int param2, int param3, byte param4, int param5, int param6, int param7) {
+    final void setRasterState(int[] param0, int param1, int param2, int param3, byte param4, int param5, int param6, int param7) {
         try {
           this.field_w = param3;
           this.field_t = param0;
@@ -36,14 +36,14 @@ final class jd extends IntrusiveNode {
           this.field_u = param2;
           if (param4 >= -99) {
             int[] var10 = (int[]) null;
-            this.a((int[]) null, 104, -115, 98, (byte) -50, -62, -94, 1);
+            this.setRasterState((int[]) null, 104, -115, 98, (byte) -50, -62, -94, 1);
           }
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "jd.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "jd.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 
-    final static void a(int param0) {
+    final static void resetTutorialPage(int param0) {
         if (param0 != 0) {
           return;
         }
@@ -51,7 +51,7 @@ final class jd extends IntrusiveNode {
         AlphaContainer.field_N = false;
     }
 
-    jd() {
+    RasterState() {
     }
 
     static {

@@ -44,7 +44,7 @@ final class GrowableIntList {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw aa.addExceptionContext((Throwable) ((Object) var3), "wd.I(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) var3), "wd.I(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -55,7 +55,7 @@ final class GrowableIntList {
             return;
           }
           if (this.field_a != param1) {
-            ArraySupport.a(this.field_j, 1 + param1, this.field_j, param1, -param1 + this.field_a);
+            ArraySupport.copyInts(this.field_j, 1 + param1, this.field_j, param1, -param1 + this.field_a);
           }
           this.field_a = this.field_a - 1;
           return;
@@ -153,7 +153,7 @@ final class GrowableIntList {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 
@@ -181,7 +181,7 @@ final class GrowableIntList {
           param0.field_S = 0;
           param0.pendingHeightDelta = 0;
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "wd.K(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "wd.K(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -230,7 +230,7 @@ final class GrowableIntList {
         int[] var5 = new int[this.nextCapacity(param1, (byte) 120)];
         int[] var3 = var5;
         int var4 = 66 % ((55 - param0) / 63);
-        ArraySupport.a(this.field_j, 0, var5, 0, this.field_j.length);
+        ArraySupport.copyInts(this.field_j, 0, var5, 0, this.field_j.length);
         this.field_j = var5;
     }
 

@@ -50,7 +50,7 @@ final class CipherPacketBuffer extends PacketBuffer {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -69,11 +69,11 @@ final class CipherPacketBuffer extends PacketBuffer {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw aa.addExceptionContext((Throwable) ((Object) var3), "pc.WA(" + param0 + ',' + param1 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) var3), "pc.WA(" + param0 + ',' + param1 + ')');
         }
     }
 
-    final static SocialListEntry a(int param0, boolean param1, byte param2) {
+    final static SocialListEntry updateFriendListControls(int param0, boolean param1, byte param2) {
         ScrollContainer stackIn_4_0 = null;
         boolean stackIn_4_1 = false;
         boolean stackIn_5_2 = false;
@@ -133,7 +133,7 @@ final class CipherPacketBuffer extends PacketBuffer {
           }
           if (decompiledFrameRemainder0) {
             wa.field_f.field_rb = true;
-            SceneWidget.field_E.field_cb = AlphaContainer.a(ke.field_e, 78, new String[]{LabeledField.field_L});
+            SceneWidget.field_E.field_cb = AlphaContainer.formatTemplate(ke.field_e, 78, new String[]{LabeledField.field_L});
             ScoreMarkerBar.field_z.field_Gb.field_Ib.field_cb = null;
             var6 = null;
             var7 = (SocialListEntry) (var4.first(1504642273));
@@ -231,14 +231,14 @@ final class CipherPacketBuffer extends PacketBuffer {
                     var5 = var7;
                     if (var7.field_Nb != null &&
                       !TimerBar.isPrivateChatTarget(75, ProxySocketConnector.field_n.field_h) &&
-                      !ln.field_q) {
+                      !SoundVoice.field_q) {
                       if (!IsaacRandom.field_g) {
                         var17 = ProxySocketConnector.field_n;
-                        var18 = AlphaContainer.a(nf.field_e, 46, new String[]{var16});
+                        var18 = AlphaContainer.formatTemplate(nf.field_e, 46, new String[]{var16});
                         var17.field_b.addAction(var18, (byte) -105, 8);
                       }
                       var17Lifetime1 = ProxySocketConnector.field_n;
-                      var18Lifetime1 = AlphaContainer.a(TextTableInitializer.field_f, 101, new String[]{var16});
+                      var18Lifetime1 = AlphaContainer.formatTemplate(TextTableInitializer.field_f, 101, new String[]{var16});
                       var17Lifetime1.field_b.addAction(var18Lifetime1, (byte) -102, 18);
                     }
                   }
@@ -269,7 +269,7 @@ final class CipherPacketBuffer extends PacketBuffer {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw aa.addExceptionContext((Throwable) ((Object) var3), "pc.TA(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) var3), "pc.TA(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -277,7 +277,7 @@ final class CipherPacketBuffer extends PacketBuffer {
         try {
           this.position = (param0 + this.field_r) / 8;
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "pc.BB(" + param0 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "pc.BB(" + param0 + ')');
         }
     }
 
@@ -303,7 +303,7 @@ final class CipherPacketBuffer extends PacketBuffer {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -311,7 +311,7 @@ final class CipherPacketBuffer extends PacketBuffer {
         super(param0);
     }
 
-    final static boolean a(String param0, byte param1, String param2) {
+    final static boolean containsForwardOrReversed(String param0, byte param1, String param2) {
         String var3 = null;
         RuntimeException var3_ref = null;
         boolean stackIn_10_0 = false;
@@ -345,7 +345,7 @@ final class CipherPacketBuffer extends PacketBuffer {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 
@@ -354,14 +354,14 @@ final class CipherPacketBuffer extends PacketBuffer {
         RuntimeException var2 = null;
         try {
           if (param0 >= -2) {
-            CipherPacketBuffer.a((String) null, (byte) -7, (String) null);
+            CipherPacketBuffer.containsForwardOrReversed((String) null, (byte) -7, (String) null);
           }
           this.field_r = this.position * 8;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.addExceptionContext((Throwable) ((Object) var2), "pc.VA(" + param0 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) var2), "pc.VA(" + param0 + ')');
         }
     }
 
@@ -381,7 +381,7 @@ final class CipherPacketBuffer extends PacketBuffer {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.addExceptionContext((Throwable) ((Object) var2), "pc.UA(" + param0 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) var2), "pc.UA(" + param0 + ')');
         }
     }
 
@@ -431,11 +431,11 @@ final class CipherPacketBuffer extends PacketBuffer {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw aa.addExceptionContext((Throwable) ((Object) var3), "pc.DB(" + param0 + ',' + param1 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) var3), "pc.DB(" + param0 + ',' + param1 + ')');
         }
     }
 
-    public static void m(int param0) {
+    public static void clearSharedReferences(int param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         try {
@@ -450,7 +450,7 @@ final class CipherPacketBuffer extends PacketBuffer {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw aa.addExceptionContext((Throwable) ((Object) var1), "pc.SA(" + param0 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) var1), "pc.SA(" + param0 + ')');
         }
     }
 

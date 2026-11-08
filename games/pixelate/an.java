@@ -8,7 +8,7 @@ final class an {
     static AsyncValidationResult field_e;
     static BoardView field_b;
 
-    final static void a(BitmapFont param0, int param1, byte param2, TextLayoutLine param3, String param4) {
+    final static void populateCaretPositions(BitmapFont param0, int param1, byte param2, TextLayoutLine param3, String param4) {
         int var7 = 0;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
@@ -26,7 +26,7 @@ final class an {
         var9 = Pixelate.field_H ? 1 : 0;
         try {
           if (param2 != -92) {
-            an.a(-43);
+            an.noOperation(-43);
           }
           var5_int = 0;
           var6 = -1;
@@ -70,17 +70,17 @@ final class an {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
         }
     }
 
-    final static void a(int param0) {
+    final static void noOperation(int param0) {
         if (param0 != 0) {
           field_d = (String) null;
         }
     }
 
-    public static void b(int param0) {
+    public static void clearStatics(int param0) {
         field_d = null;
         field_c = null;
         if (param0 == -1) {

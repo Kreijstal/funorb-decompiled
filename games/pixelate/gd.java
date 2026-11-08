@@ -28,7 +28,7 @@ final class gd {
         }
         GreenGrowTheRushesBackground.field_n.addChild(cl.field_g.field_g, (byte) 26);
         GreenGrowTheRushesBackground.field_n.addChild(ValidatedTextWidget.field_cb, (byte) 26);
-        PacketBuffer.b(false);
+        PacketBuffer.layoutLobbyPanels(false);
     }
 
     public static void releaseStatics(int param0) {

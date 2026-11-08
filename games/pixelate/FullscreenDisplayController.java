@@ -5,7 +5,7 @@ final class FullscreenDisplayController {
     private java.awt.DisplayMode field_a;
     private java.awt.GraphicsDevice field_b;
 
-    private final void a(boolean param0, java.awt.Frame param1) {
+    private final void setFullscreenWindow(boolean param0, java.awt.Frame param1) {
         this.field_b.setFullScreenWindow((java.awt.Window) ((Object) param1));
         if (param0) {
           this.field_a = (java.awt.DisplayMode) null;
@@ -38,7 +38,7 @@ final class FullscreenDisplayController {
         }
         param0.setUndecorated(true);
         param0.enableInputMethods(false);
-        this.a(false, param0);
+        this.setFullscreenWindow(false, param0);
         if (0 == param4) {
           var6 = this.field_a.getRefreshRate();
           var7 = this.field_b.getDisplayModes();
@@ -83,7 +83,7 @@ final class FullscreenDisplayController {
             return;
           }
         }
-        throw FullscreenDisplayController.<RuntimeException>$cfr$sneakyThrow(new Exception());
+        throw FullscreenDisplayController.<RuntimeException>rethrowUnchecked(new Exception());
     }
 
     public final void exit() {
@@ -94,11 +94,11 @@ final class FullscreenDisplayController {
           }
           this.field_a = null;
         }
-        this.a(false, (java.awt.Frame) null);
+        this.setFullscreenWindow(false, (java.awt.Frame) null);
     }
 
     @SuppressWarnings("unchecked")
-    private static <T extends Throwable> RuntimeException $cfr$sneakyThrow(Throwable throwable) throws T {
+    private static <T extends Throwable> RuntimeException rethrowUnchecked(Throwable throwable) throws T {
         throw (T) throwable;
     }
 }

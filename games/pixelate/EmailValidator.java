@@ -23,7 +23,7 @@ final class EmailValidator extends TextFieldValidator {
           stackIn_5_0 = (hm.validateEmailAddress(0, param0) != null) ? 0 : 1;
           var3_int = stackIn_5_0;
           if (var3_int != 0) {
-            return qk.field_g;
+            return RetroBlock.field_g;
           }
           stackIn_8_0 = sk.field_a;
           return stackIn_8_0;
@@ -37,7 +37,7 @@ final class EmailValidator extends TextFieldValidator {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -46,7 +46,7 @@ final class EmailValidator extends TextFieldValidator {
     }
 
     final static void playPieceSound(byte param0, int param1) {
-        mc.a(8 * NightToRememberBackground.field_o + param1, -127);
+        mc.playSoundEffect(8 * NightToRememberBackground.field_o + param1, -127);
         if (param0 != 96) {
           field_n = (String) null;
         }
@@ -86,7 +86,7 @@ final class EmailValidator extends TextFieldValidator {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -120,14 +120,14 @@ final class EmailValidator extends TextFieldValidator {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
     final static void sortRankingRows(int param0, byte param1) {
         int var2_int = 0;
         int var3 = Pixelate.field_H ? 1 : 0;
-        SingleChildContainer.sortRankedEntryRange(SecondaryNodeDeque.field_e, StatefulTextPainter.field_s, true, aa.field_o, 0, 127, param0);
+        SingleChildContainer.sortRankedEntryRange(SecondaryNodeDeque.field_e, StatefulTextPainter.field_s, true, ChatMessage.field_o, 0, 127, param0);
         for (var2_int = 0; var2_int < SecondaryNodeDeque.field_e; var2_int++) {
           ArchiveRequest.field_A[param0 + var2_int] = var2_int;
         }
@@ -140,7 +140,7 @@ final class EmailValidator extends TextFieldValidator {
             SecondaryNodeDeque.field_e = param0;
           }
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "bc.K(" + param0 + ',' + param1 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "bc.K(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -186,7 +186,7 @@ final class EmailValidator extends TextFieldValidator {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 

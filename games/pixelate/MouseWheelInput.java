@@ -9,7 +9,7 @@ final class MouseWheelInput extends MouseWheelHandler implements java.awt.event.
         param0.consume();
     }
 
-    final void a(java.awt.Component param0, int param1) {
+    final void attach(java.awt.Component param0, int param1) {
         if (param1 >= -86) {
           this.field_f = 98;
           param0.addMouseWheelListener((java.awt.event.MouseWheelListener) (this));
@@ -18,21 +18,21 @@ final class MouseWheelInput extends MouseWheelHandler implements java.awt.event.
         param0.addMouseWheelListener((java.awt.event.MouseWheelListener) (this));
     }
 
-    final void attach(int param0, java.awt.Component param1) {
+    final void detach(int param0, java.awt.Component param1) {
         if (param0 != 18421) {
           return;
         }
         param1.removeMouseWheelListener((java.awt.event.MouseWheelListener) (this));
     }
 
-    final synchronized int b(boolean param0) {
+    final synchronized int pollRotation(boolean param0) {
         int var2 = this.field_f;
         this.field_f = 0;
         if (param0) {
           return var2;
         }
         java.awt.Component var3 = (java.awt.Component) null;
-        this.attach(-71, (java.awt.Component) null);
+        this.detach(-71, (java.awt.Component) null);
         return var2;
     }
 

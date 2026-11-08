@@ -75,7 +75,7 @@ final class WidgetStyleLayer {
           } else {
             stackIn_30_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(')').toString());
         }
     }
 
@@ -110,7 +110,7 @@ final class WidgetStyleLayer {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw aa.addExceptionContext((Throwable) ((Object) var1_ref), "lf.I(" + param0 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) var1_ref), "lf.I(" + param0 + ')');
         }
     }
 
@@ -138,7 +138,7 @@ final class WidgetStyleLayer {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -167,7 +167,7 @@ final class WidgetStyleLayer {
         RuntimeException var6_ref = null;
         int var7 = 0;
         try {
-          dk.a(param2.field_E, param1 + param2.field_z, (byte) 75, param2.field_C, param0 + param2.field_p, this.field_k);
+          dk.drawNineSliceFrame(param2.field_E, param1 + param2.field_z, (byte) 75, param2.field_C, param0 + param2.field_p, this.field_k);
           if (null != this.field_j) {
             var6_int = this.field_d + (param2.field_z + param1);
             var7 = param2.field_p + param0 + this.field_h;
@@ -236,7 +236,7 @@ final class WidgetStyleLayer {
           } else {
             stackIn_33_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(')').toString());
         }
     }
 
@@ -279,7 +279,7 @@ final class WidgetStyleLayer {
           param0.field_c = this.field_c;
           param0.field_k = this.field_k;
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "lf.J(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "lf.J(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

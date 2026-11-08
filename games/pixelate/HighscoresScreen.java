@@ -73,7 +73,7 @@ final class HighscoresScreen extends MenuScreen {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(')').toString());
         }
     }
 
@@ -94,30 +94,30 @@ final class HighscoresScreen extends MenuScreen {
           this.getRowRight(-116, false);
           this.field_a = 640 - this.field_m;
           if (ArrayWidgetContainer.isAccountUiActive((byte) 123)) {
-            return -(this.d(param0, 29) >> 1) + 320;
+            return -(this.getRowTextWidth(param0, 29) >> 1) + 320;
           }
           if (2 <= param0) {
-            return -(this.d(param0, 29) >> 1) + 320;
+            return -(this.getRowTextWidth(param0, 29) >> 1) + 320;
           }
           if (param0 == 0) {
             return this.field_m;
           }
-          return this.field_a - this.d(1, 28);
+          return this.field_a - this.getRowTextWidth(1, 28);
         }
         this.field_a = 640 - this.field_m;
         if (ArrayWidgetContainer.isAccountUiActive((byte) 123)) {
-          return -(this.d(param0, 29) >> 1) + 320;
+          return -(this.getRowTextWidth(param0, 29) >> 1) + 320;
         }
         if (2 <= param0) {
-          return -(this.d(param0, 29) >> 1) + 320;
+          return -(this.getRowTextWidth(param0, 29) >> 1) + 320;
         }
         if (param0 == 0) {
           return this.field_m;
         }
-        return this.field_a - this.d(1, 28);
+        return this.field_a - this.getRowTextWidth(1, 28);
     }
 
-    private final int d(int param0, int param1) {
+    private final int getRowTextWidth(int param0, int param1) {
         String var3 = PacketBuffer.field_o[this.field_k[param0]];
         int var4 = 96 / ((param1 + 50) / 50);
         return 20 + PieceTiming.field_e.textWidth(var3);
@@ -133,7 +133,7 @@ final class HighscoresScreen extends MenuScreen {
         sm var5_ref_sm = null;
         int var5 = 0;
         int var6_int = 0;
-        df var6 = null;
+        StatsRequest var6 = null;
         int[] var7 = null;
         int var8 = 0;
         int var9 = 0;
@@ -149,7 +149,7 @@ final class HighscoresScreen extends MenuScreen {
           if (var3 == 0) {
             var5_ref_sm = (sm) (MusicPatchNode.field_J.first(1504642273));
             if (var5_ref_sm == null) {
-              na.a(true);
+              na.closeGameSocket(true);
               return;
             }
             var6_int = -var11.position + BackgroundScene.field_b;
@@ -178,7 +178,7 @@ final class HighscoresScreen extends MenuScreen {
           }
           if (var3 == 1) {
             var5 = var11.readSignedSmart(-20729);
-            var6 = (df) (he.field_b.first(1504642273));
+            var6 = (StatsRequest) (he.field_b.first(1504642273));
             while (true) {
               boolean decompiledFrameRemainder0 = true;
               if (var6 != null) {
@@ -186,7 +186,7 @@ final class HighscoresScreen extends MenuScreen {
                 decompiledFrameRemainder0 = (var9 == 0);
                 if ((decompiledFrameRemainder0) && (stackIn_27_0 != var6.field_p ||
                   var6.field_k != var5)) {
-                  var6 = (df) (he.field_b.next(1504642273));
+                  var6 = (StatsRequest) (he.field_b.next(1504642273));
                   continue;
                 }
               }
@@ -200,17 +200,17 @@ final class HighscoresScreen extends MenuScreen {
                 }
                 stackIn_27_0 = 1;
               }
-              na.a(stackIn_27_0 != 0);
+              na.closeGameSocket(stackIn_27_0 != 0);
               return;
             }
           }
-          CheckboxPainter.reportClientError(1, "LR1: " + jm.b(-35), (Throwable) null);
-          na.a(true);
+          CheckboxPainter.reportClientError(1, "LR1: " + Cloud.describePacketHistory(-35), (Throwable) null);
+          na.closeGameSocket(true);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw aa.addExceptionContext((Throwable) ((Object) var1), "wh.I(" + param0 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) var1), "wh.I(" + param0 + ')');
         }
     }
 
@@ -274,7 +274,7 @@ final class HighscoresScreen extends MenuScreen {
           var3 = var17.maxAscent + var17.maxDescent;
           if (WhirlpoolHasher.field_f == null &&
             !ArrayWidgetContainer.isAccountUiActive((byte) 112)) {
-            WhirlpoolHasher.field_f = cn.a(0, 7, 10, -119);
+            WhirlpoolHasher.field_f = cn.getRankingQuery(0, 7, 10, -119);
           }
           if (ArrayWidgetContainer.isAccountUiActive((byte) 83)) {
             var4 = ScoreMarkerDemo.field_h;
@@ -303,7 +303,7 @@ final class HighscoresScreen extends MenuScreen {
                       if (null != var22[var13]) {
                         var23 = var22[var13];
                         var8 = 16777215;
-                        if (sm.a(var23, param0 - 12)) {
+                        if (sm.isLocalPlayerName(var23, param0 - 12)) {
                           var12 = 1;
                           var8 = 16711680;
                         }
@@ -411,7 +411,7 @@ final class HighscoresScreen extends MenuScreen {
                         if (null != var26[var13Lifetime1]) {
                           var27 = var26[var13Lifetime1];
                           var8Lifetime1 = 16777215;
-                          if (sm.a(var27, param0 - 12)) {
+                          if (sm.isLocalPlayerName(var27, param0 - 12)) {
                             var12Lifetime1 = 1;
                             var8Lifetime1 = 16711680;
                           }
@@ -486,7 +486,7 @@ final class HighscoresScreen extends MenuScreen {
             var24.drawParagraph(var4Lifetime1, 50, 150, 540, 200, 0, -1, 1, 1, var3Lifetime1);
             return;
           }
-          WhirlpoolHasher.field_f = cn.a(0, 7, 10, -119);
+          WhirlpoolHasher.field_f = cn.getRankingQuery(0, 7, 10, -119);
         }
         if (ArrayWidgetContainer.isAccountUiActive((byte) 83)) {
           var4Lifetime2 = ScoreMarkerDemo.field_h;
@@ -515,7 +515,7 @@ final class HighscoresScreen extends MenuScreen {
                     if (null != var38[var13Lifetime2]) {
                       var39 = var38[var13Lifetime2];
                       var8Lifetime2 = 16777215;
-                      if (sm.a(var39, param0 - 12)) {
+                      if (sm.isLocalPlayerName(var39, param0 - 12)) {
                         var12Lifetime2 = 1;
                         var8Lifetime2 = 16711680;
                       }
@@ -610,7 +610,7 @@ final class HighscoresScreen extends MenuScreen {
           fq.field_o.field_d = RegistrationRequestDialog.field_Cb;
           NightToRememberBackground.field_o = param1;
           DebouncedValidator.field_d = 0;
-          QuickChatPhraseCache.a(false, 2 + param1);
+          QuickChatPhraseCache.playSkinMusic(false, 2 + param1);
           var2Lifetime1 = 20 / ((10 - param0) / 32);
           return;
         }
@@ -621,24 +621,24 @@ final class HighscoresScreen extends MenuScreen {
         if (param1) {
           this.onCancel((byte) -54);
           if (ArrayWidgetContainer.isAccountUiActive((byte) 115)) {
-            return (this.d(param0, 53) >> 1) + 320;
+            return (this.getRowTextWidth(param0, 53) >> 1) + 320;
           }
           if (param0 >= 2) {
-            return (this.d(param0, 53) >> 1) + 320;
+            return (this.getRowTextWidth(param0, 53) >> 1) + 320;
           }
           if (param0 == 0) {
-            return this.field_m + this.d(0, -103);
+            return this.field_m + this.getRowTextWidth(0, -103);
           }
           return this.field_a;
         }
         if (ArrayWidgetContainer.isAccountUiActive((byte) 115)) {
-          return (this.d(param0, 53) >> 1) + 320;
+          return (this.getRowTextWidth(param0, 53) >> 1) + 320;
         }
         if (param0 >= 2) {
-          return (this.d(param0, 53) >> 1) + 320;
+          return (this.getRowTextWidth(param0, 53) >> 1) + 320;
         }
         if (param0 == 0) {
-          return this.field_m + this.d(0, -103);
+          return this.field_m + this.getRowTextWidth(0, -103);
         }
         return this.field_a;
     }
@@ -656,14 +656,14 @@ final class HighscoresScreen extends MenuScreen {
         super(param0, param1, param2, param3, param4, param5);
     }
 
-    final static void a(java.math.BigInteger param0, PacketBuffer param1, java.math.BigInteger param2, PacketBuffer param3, int param4) {
+    final static void writeEncryptedBlock(java.math.BigInteger param0, PacketBuffer param1, java.math.BigInteger param2, PacketBuffer param3, int param4) {
         try {
           SecondaryNodeDeque.writeEncryptedPayload(param0, true, 0, param3.position, param2, param1, param3.payload);
           if (param4 != 12556) {
             field_s = (String) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "wh.E(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "wh.E(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 

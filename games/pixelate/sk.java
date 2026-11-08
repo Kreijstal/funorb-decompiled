@@ -8,14 +8,14 @@ final class sk {
     static String field_b;
     static String field_c;
 
-    final static void a(int param0, Sprite param1) {
+    final static void setBenefitsLogo(int param0, Sprite param1) {
         try {
           jf.field_a = param1;
           if (param0 >= -45) {
             sk.releaseStatics((byte) -101);
           }
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "sk.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "sk.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -28,18 +28,18 @@ final class sk {
         int var1 = -34 % ((40 - param0) / 58);
     }
 
-    final static void a(boolean param0, int param1, int param2, boolean param3, int param4, int param5, int param6, byte param7, boolean param8, int param9, boolean param10, int param11, boolean param12, int param13) {
+    final static void updateLobbyFrame(boolean param0, int param1, int param2, boolean param3, int param4, int param5, int param6, byte param7, boolean param8, int param9, boolean param10, int param11, boolean param12, int param13) {
         PuzzleThumbnail.field_o = null;
-        ug.a(2586);
-        param12 = bq.a((byte) -124, param2, param6, param12, param13, param11, param5);
+        ug.showRemovedFromGameNotice(2586);
+        param12 = bq.updateOverlayMenus((byte) -124, param2, param6, param12, param13, param11, param5);
         ImageProducerRasterBuffer.updateLobbyPanels(param5, param10, param8, param0, param3, param1, -28362, param12, param4, param9);
-        HuffmanCodec.a(param0, 0, param4);
-        bd.a((byte) -64, param12, param4, param11);
+        HuffmanCodec.openFriendContextMenu(param0, 0, param4);
+        bd.updateChatPanel((byte) -64, param12, param4, param11);
         if (param7 <= -112) {
           return;
         }
         Sprite var15 = (Sprite) null;
-        sk.a(75, (Sprite) null);
+        sk.setBenefitsLogo(75, (Sprite) null);
     }
 
     static {

@@ -5,12 +5,12 @@ abstract class CacheReference extends DualLinkNode {
     int field_t;
     static String field_u;
 
-    final static aa rebuildChatHistoryWidgets(byte param0, int param1, int param2, int param3) {
+    final static ChatMessage rebuildChatHistoryWidgets(byte param0, int param1, int param2, int param3) {
         Object var4;
         int var5;
         int var6;
         int var7;
-        aa var8_ref_aa;
+        ChatMessage var8_ref_aa;
         int var9;
         int var10_int;
         int var13;
@@ -29,8 +29,8 @@ abstract class CacheReference extends DualLinkNode {
         String var10;
         String var11;
         int var12;
-        aa var14;
-        aa var16;
+        ChatMessage var14;
+        ChatMessage var16;
         int var7Lifetime1;
         int var9Lifetime1;
         int var9Lifetime2;
@@ -47,10 +47,10 @@ abstract class CacheReference extends DualLinkNode {
         for (var7 = -1 + AlphaContainer.field_L; var7 >= 0; var7--) {
           var8_ref_aa = MenuScreen.field_e[var7];
           var9 = 0;
-          if (!ln.field_q &&
+          if (!SoundVoice.field_q &&
             var5 < InputQueue.field_d) {
             var10_int = IterableNodeHashTable.getChatFilterMode(var8_ref_aa.field_j, 0);
-            if (var8_ref_aa.a((byte) -54) >= var10_int && (var8_ref_aa.field_a ||
+            if (var8_ref_aa.getVisibilityLevel((byte) -54) >= var10_int && (var8_ref_aa.field_a ||
               !ImageProducerRasterBuffer.isFriend(-640, var8_ref_aa.field_n))) {
               var9 = 1;
             }
@@ -65,7 +65,7 @@ abstract class CacheReference extends DualLinkNode {
               }
               var10 = TextWidgetPainter.formatChatPrefix(var8_ref_aa, -77);
               var11 = var10 + BitmapFont.escapeMarkup(var8_ref_aa.field_g);
-              var12 = lc.a(var8_ref_aa, false);
+              var12 = RankingQuery.getChatMessageColour(var8_ref_aa, false);
               var8_ref_aa.field_q = new SceneWidget(0L, oi.field_e, var11);
               var8_ref_aa.field_q.field_y = ((16711423 & oi.field_e.field_y) >> 1) + (var12 - (var12 >> 1 & 8355711));
               var8_ref_aa.field_q.field_N = var12;
@@ -117,7 +117,7 @@ abstract class CacheReference extends DualLinkNode {
             stackIn_44_0 = (var9Lifetime1 == l.field_p.content.field_S + l.field_p.content.pendingYDelta);
             MatchingTextValidator.field_z = stackIn_44_0;
           }
-          return (aa) (var4);
+          return (ChatMessage) (var4);
         }
         for (var8Lifetime1 = 0; AlphaContainer.field_L > var8Lifetime1; var8Lifetime1++) {
           var16 = MenuScreen.field_e[var8Lifetime1];
@@ -155,7 +155,7 @@ abstract class CacheReference extends DualLinkNode {
               stackIn_105_0 = (var9Lifetime2 == l.field_p.content.field_S + l.field_p.content.pendingYDelta);
               MatchingTextValidator.field_z = stackIn_105_0;
             }
-            return (aa) (var4);
+            return (ChatMessage) (var4);
           }
           var9Lifetime2Lifetime1 = -l.field_p.content.pendingHeightDelta - l.field_p.content.height + l.field_p.field_Ib.height;
           if (!MatchingTextValidator.field_z) {
@@ -168,7 +168,7 @@ abstract class CacheReference extends DualLinkNode {
             stackIn_115_0 = (var9Lifetime2Lifetime1 == l.field_p.content.field_S + l.field_p.content.pendingYDelta);
             MatchingTextValidator.field_z = stackIn_115_0;
           }
-          return (aa) (var4);
+          return (ChatMessage) (var4);
         }
         l.field_p.content.height = var7Lifetime1;
         l.field_p.content.pendingHeightDelta = var7Lifetime1 - l.field_p.content.height;
@@ -214,13 +214,13 @@ abstract class CacheReference extends DualLinkNode {
             }
           }
         }
-        return (aa) (var4);
+        return (ChatMessage) (var4);
     }
 
     final static void notifyPageResizing(int param0, byte param1) {
         try {
           try {
-            JavaScriptBridge.a(AudioService.a(13867), (byte) -64, new Object[]{new Integer(param0)}, "resizing");
+            JavaScriptBridge.a(AudioService.getApplet(13867), (byte) -64, new Object[]{new Integer(param0)}, "resizing");
           } catch (Throwable throwable) {
           }
           if (param1 > 69) {

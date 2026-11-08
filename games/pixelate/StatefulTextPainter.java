@@ -18,7 +18,7 @@ final class StatefulTextPainter extends TextWidgetPainter {
         try {
           param0.copyStatesTo(this, true, param1);
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "w.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "w.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -72,7 +72,7 @@ final class StatefulTextPainter extends TextWidgetPainter {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -121,7 +121,7 @@ final class StatefulTextPainter extends TextWidgetPainter {
             var10 = (LobbyGame) null;
             StatefulTextPainter.insertLobbyGameSorted((byte) 95, (LobbyGame) null);
           }
-          hp.a(param3 + param0.field_z, param0.field_p + param2 + param0.field_C, param0.field_E + param0.field_z + param3, (byte) -120, param0.field_p + param2);
+          hp.pushClipRegion(param3 + param0.field_z, param0.field_p + param2 + param0.field_C, param0.field_E + param0.field_z + param3, (byte) -120, param0.field_p + param2);
           if (var11 != null) {
             param4 = param4 & var11.field_H;
           }
@@ -173,7 +173,7 @@ final class StatefulTextPainter extends TextWidgetPainter {
           } else {
             stackIn_32_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -260,7 +260,7 @@ final class StatefulTextPainter extends TextWidgetPainter {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
         }
     }
 
@@ -338,7 +338,7 @@ final class StatefulTextPainter extends TextWidgetPainter {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(')').toString());
         }
     }
 
@@ -355,7 +355,7 @@ final class StatefulTextPainter extends TextWidgetPainter {
           }
           this.field_r[param1].field_k = param2;
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "w.G(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "w.G(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -400,7 +400,7 @@ final class StatefulTextPainter extends TextWidgetPainter {
             }
             return;
           }
-          ArraySupport.a(this.field_r, 0, param0.field_r, 0, 6);
+          ArraySupport.copyReferences(this.field_r, 0, param0.field_r, 0, 6);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -412,7 +412,7 @@ final class StatefulTextPainter extends TextWidgetPainter {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -448,7 +448,7 @@ final class StatefulTextPainter extends TextWidgetPainter {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -468,7 +468,7 @@ final class StatefulTextPainter extends TextWidgetPainter {
           }
           int var5 = -110 / ((-69 - param0) / 40);
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "w.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "w.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

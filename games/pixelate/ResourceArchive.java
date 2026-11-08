@@ -33,7 +33,7 @@ final class ResourceArchive {
           }
           param1 = param1.toLowerCase();
           var4 = (CharSequence) ((Object) param1);
-          var3_int = this.index.groupNameLookup.a(WeightedLruCache.hashName(var4, (byte) 103), (byte) -67);
+          var3_int = this.index.groupNameLookup.get(WeightedLruCache.hashName(var4, (byte) 103), (byte) -67);
           if (param0 < 114) {
             stackIn_5_0 = 73;
             return stackIn_5_0;
@@ -54,7 +54,7 @@ final class ResourceArchive {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -78,7 +78,7 @@ final class ResourceArchive {
           }
           param1 = param1.toLowerCase();
           var4 = (CharSequence) ((Object) param1);
-          var3_int = this.index.groupNameLookup.a(WeightedLruCache.hashName(var4, (byte) 104), (byte) -67);
+          var3_int = this.index.groupNameLookup.get(WeightedLruCache.hashName(var4, (byte) 104), (byte) -67);
           stackIn_7_0 = this.getGroupProgress(var3_int, (byte) -78);
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -91,7 +91,7 @@ final class ResourceArchive {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -135,7 +135,7 @@ final class ResourceArchive {
           }
           param1 = param1.toLowerCase();
           var4 = (CharSequence) ((Object) param1);
-          var3_int = this.index.groupNameLookup.a(WeightedLruCache.hashName(var4, (byte) -111), (byte) -67);
+          var3_int = this.index.groupNameLookup.get(WeightedLruCache.hashName(var4, (byte) -111), (byte) -67);
           if (param0 <= 124) {
             return false;
           }
@@ -153,7 +153,7 @@ final class ResourceArchive {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -210,7 +210,7 @@ final class ResourceArchive {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -237,12 +237,12 @@ final class ResourceArchive {
           param1 = param1.toLowerCase();
           param2 = param2.toLowerCase();
           var6 = (CharSequence) ((Object) param1);
-          var4_int = this.index.groupNameLookup.a(WeightedLruCache.hashName(var6, (byte) -125), (byte) -67);
+          var4_int = this.index.groupNameLookup.get(WeightedLruCache.hashName(var6, (byte) -125), (byte) -67);
           if (!this.isGroupValid(var4_int, -1)) {
             return false;
           }
           var7 = (CharSequence) ((Object) param2);
-          var5 = this.index.fileNameLookups[var4_int].a(WeightedLruCache.hashName(var7, (byte) 77), (byte) -67);
+          var5 = this.index.fileNameLookups[var4_int].get(WeightedLruCache.hashName(var7, (byte) 77), (byte) -67);
           stackIn_10_0 = this.isFileAvailable(var4_int, var5, -2);
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -261,7 +261,7 @@ final class ResourceArchive {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -444,7 +444,7 @@ final class ResourceArchive {
             stackIn_34_0 = var11_ref_RuntimeException;
             stackIn_34_1 = new StringBuilder();
             stackIn_35_2 = (param2 != null);
-            throw aa.addExceptionContext((Throwable) ((Object) stackIn_34_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(" ").append(param1).append(" ").append(var9.length).append(" ").append(Matrix3.crc32(var9, 126, var9.length)).append(" ").append(Matrix3.crc32(var9, 125, var9.length - 2)).append(" ").append(this.index.field_k[param1]).append(" ").append(this.index.field_o).toString());
+            throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_34_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(" ").append(param1).append(" ").append(var9.length).append(" ").append(Matrix3.crc32(var9, 126, var9.length)).append(" ").append(Matrix3.crc32(var9, 125, var9.length - 2)).append(" ").append(this.index.field_k[param1]).append(" ").append(this.index.field_o).toString());
           }
           if (this.discardPackedGroups) {
             this.packedGroups[param1] = null;
@@ -491,7 +491,7 @@ final class ResourceArchive {
                     var21 = var34[var20];
                   }
                   if (var21 == param0) {
-                    ArraySupport.a(var43, var17Lifetime4, var44, var14Lifetime1, var19Lifetime2);
+                    ArraySupport.copyBytes(var43, var17Lifetime4, var44, var14Lifetime1, var19Lifetime2);
                     var14Lifetime1 = var14Lifetime1 + var19Lifetime2;
                   }
                   var17Lifetime4 = var17Lifetime4 + var19Lifetime2;
@@ -530,7 +530,7 @@ final class ResourceArchive {
               var18Lifetime1 = 0;
               for (var19Lifetime1 = 0; var5_int > var19Lifetime1; var19Lifetime1++) {
                 var18Lifetime1 = var18Lifetime1 + var29.readInt(0);
-                ArraySupport.a(var43, var16Lifetime3, var39[var19Lifetime1], var38[var19Lifetime1], var18Lifetime1);
+                ArraySupport.copyBytes(var43, var16Lifetime3, var39[var19Lifetime1], var38[var19Lifetime1], var18Lifetime1);
                 var16Lifetime3 = var16Lifetime3 + var18Lifetime1;
                 var14_ref_int__[var19Lifetime1] = var14_ref_int__[var19Lifetime1] + var18Lifetime1;
               }
@@ -570,7 +570,7 @@ final class ResourceArchive {
           } else {
             stackIn_105_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_104_0), ((StringBuilder) (Object) stackIn_104_1).append(stackIn_105_2).append(',').append(param3).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_104_0), ((StringBuilder) (Object) stackIn_104_1).append(stackIn_105_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -631,7 +631,7 @@ final class ResourceArchive {
           } else {
             stackIn_30_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) (stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) (stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -648,7 +648,7 @@ final class ResourceArchive {
             var3 = (Object) null;
             ResourceArchive.a((PlatformTaskDispatcher) null, (Object) null, (byte) 25);
           }
-          stackIn_3_0 = DialWidgetPainter.a(param1, (byte) -70, false);
+          stackIn_3_0 = DialWidgetPainter.isValidSocialName(param1, (byte) -70, false);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -660,7 +660,7 @@ final class ResourceArchive {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -727,7 +727,7 @@ final class ResourceArchive {
           }
           param0 = param0.toLowerCase();
           var4 = (CharSequence) ((Object) param0);
-          var3_int = this.index.groupNameLookup.a(WeightedLruCache.hashName(var4, (byte) -97), (byte) -67);
+          var3_int = this.index.groupNameLookup.get(WeightedLruCache.hashName(var4, (byte) -97), (byte) -67);
           if (param1 == -1) {
             stackIn_7_0 = this.ensureGroupLoaded(var3_int, false);
             return stackIn_7_0;
@@ -743,7 +743,7 @@ final class ResourceArchive {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -758,7 +758,7 @@ final class ResourceArchive {
           this.discardPackedGroups = param1 ? true : false;
           this.field_e = param2;
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "fm.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "fm.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -828,7 +828,7 @@ final class ResourceArchive {
           }
           param1 = param1.toLowerCase();
           var5 = (CharSequence) ((Object) param1);
-          var4_int = this.index.fileNameLookups[param2].a(WeightedLruCache.hashName(var5, (byte) 110), (byte) -67);
+          var4_int = this.index.fileNameLookups[param2].get(WeightedLruCache.hashName(var5, (byte) 110), (byte) -67);
           if (this.isValidFileSlot(var4_int, 0, param2)) {
             return var4_int;
           }
@@ -844,7 +844,7 @@ final class ResourceArchive {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -910,12 +910,12 @@ final class ResourceArchive {
           param2 = param2.toLowerCase();
           param1 = param1.toLowerCase();
           var6 = (CharSequence) ((Object) param2);
-          var4_int = this.index.groupNameLookup.a(WeightedLruCache.hashName(var6, (byte) 67), (byte) -67);
+          var4_int = this.index.groupNameLookup.get(WeightedLruCache.hashName(var6, (byte) 67), (byte) -67);
           if (!this.isGroupValid(var4_int, -1)) {
             return null;
           }
           var7 = (CharSequence) ((Object) param1);
-          var5 = this.index.fileNameLookups[var4_int].a(WeightedLruCache.hashName(var7, (byte) 61), (byte) -67);
+          var5 = this.index.fileNameLookups[var4_int].get(WeightedLruCache.hashName(var7, (byte) 61), (byte) -67);
           stackIn_9_0 = this.getFile(var4_int, var5, true);
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -934,7 +934,7 @@ final class ResourceArchive {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 

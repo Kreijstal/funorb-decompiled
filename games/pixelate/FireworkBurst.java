@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class ba {
+final class FireworkBurst {
     static BitmapFont field_d;
     static int field_f;
     private int field_b;
@@ -13,13 +13,13 @@ final class ba {
 
     final static SceneWidget getFriendListContent(int param0) {
         if (param0 != -26573) {
-          ba.getFriendListContent(77);
+          FireworkBurst.getFriendListContent(77);
           return PasswordValidator.getFriendListContent(false);
         }
         return PasswordValidator.getFriendListContent(false);
     }
 
-    final void b(int param0) {
+    final void draw(int param0) {
         int var2;
         int var3;
         var3 = Pixelate.field_H ? 1 : 0;
@@ -42,11 +42,11 @@ final class ba {
     public static void releaseStatics(int param0) {
         field_d = null;
         if (param0 != 3) {
-          ba.releaseStatics(105);
+          FireworkBurst.releaseStatics(105);
         }
     }
 
-    final boolean a(boolean param0) {
+    final boolean advance(boolean param0) {
         int var3 = 0;
         int var2;
         int var4;
@@ -61,10 +61,10 @@ final class ba {
         return var2 != 0;
     }
 
-    ba(int param0, int param1, int param2, int param3, int[] param4) {
+    FireworkBurst(int param0, int param1, int param2, int param3, int[] param4) {
         int var6_int = 0;
         try {
-          PlayerBoard.d(-90);
+          PlayerBoard.boostGlow(-90);
           this.field_b = JavaRandomHelpers.a(ea.field_b, -119, param2) + param0;
           this.field_a = param1 + JavaRandomHelpers.a(ea.field_b, -103, param3);
           this.field_e = new FireworkSpark[50 + JavaRandomHelpers.a(ea.field_b, -102, 5)];
@@ -73,7 +73,7 @@ final class ba {
           }
           this.field_c = JavaRandomHelpers.a(ea.field_b, -100, 3) + 2;
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "ba.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "ba.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 

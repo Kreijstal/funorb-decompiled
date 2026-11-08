@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class df extends IntrusiveNode {
+final class StatsRequest extends IntrusiveNode {
     int field_p;
     int field_q;
     int field_o;
@@ -29,7 +29,7 @@ final class df extends IntrusiveNode {
             if (var9 != null) {
               var9.field_Ub = null;
             }
-            var4 = aa.field_f;
+            var4 = ChatMessage.field_f;
             var4.writeOpcode(param2, param0 ^ 15513);
             var4.writeByte(160, 3);
             var4.writeByte(160, 11);
@@ -46,7 +46,7 @@ final class df extends IntrusiveNode {
           if (var7 != null) {
             var7.field_Ub = null;
           }
-          var4Lifetime1 = aa.field_f;
+          var4Lifetime1 = ChatMessage.field_f;
           var4Lifetime1.writeOpcode(param2, param0 ^ 15513);
           var4Lifetime1.writeByte(160, 3);
           var4Lifetime1.writeByte(160, 11);
@@ -65,7 +65,7 @@ final class df extends IntrusiveNode {
         field_m = null;
     }
 
-    private df() throws Throwable {
+    private StatsRequest() throws Throwable {
         throw new Error();
     }
 

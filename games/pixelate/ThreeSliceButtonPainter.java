@@ -49,7 +49,7 @@ final class ThreeSliceButtonPainter extends TextWidgetPainter {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -89,7 +89,7 @@ final class ThreeSliceButtonPainter extends TextWidgetPainter {
           var9 = (char)param0;
           try {
             for (var10_int = 0; var10_int < var5_int; var10_int++) {
-              var11 = jd.field_k.a(-21209, param2[var10_int]);
+              var11 = RasterState.field_k.getPhrase(-21209, param2[var10_int]);
               var6[var10_int] = var11.getPreview((byte) -54);
               var9 = (char)(var9 + 1);
               var7[var10_int] = (char)var9;
@@ -131,7 +131,7 @@ final class ThreeSliceButtonPainter extends TextWidgetPainter {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
         }
     }
 
@@ -156,7 +156,7 @@ final class ThreeSliceButtonPainter extends TextWidgetPainter {
           PacketBuffer.field_n = param1;
           IntrusiveDeque.h(-126);
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "ad.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "ad.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -214,7 +214,7 @@ final class ThreeSliceButtonPainter extends TextWidgetPainter {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -222,7 +222,7 @@ final class ThreeSliceButtonPainter extends TextWidgetPainter {
         this.field_v = param2;
         this.field_q = param1;
         this.field_t = param0;
-        this.font = ba.field_d;
+        this.font = FireworkBurst.field_d;
         this.field_s = fc.field_d;
     }
 

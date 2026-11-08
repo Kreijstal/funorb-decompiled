@@ -10,7 +10,7 @@ final class ph extends IntrusiveNode {
     static Sprite field_n;
     static int field_o;
 
-    final static int e(int param0) {
+    final static int pollServerConnection(int param0) {
         try {
           int stackIn_14_0 = 0;
           int stackIn_26_0 = 0;
@@ -55,7 +55,7 @@ final class ph extends IntrusiveNode {
               ViewportController.field_a = 30000L + hm.monotonicMillis(64);
             }
             if (AchievementsScreen.field_q == 3) {
-              if (ConditionalTextValue.field_d.a(-120) <= 0) {
+              if (ConditionalTextValue.field_d.available(-120) <= 0) {
                 if (ViewportController.field_a < hm.monotonicMillis(64)) {
                   stackIn_30_0 = ce.a((byte) -124, -2);
                   return stackIn_30_0;
@@ -103,7 +103,7 @@ final class ph extends IntrusiveNode {
         field_m = null;
     }
 
-    final static void a(ResourceArchive param0, byte param1) {
+    final static void loadSocialPanelWidgets(ResourceArchive param0, byte param1) {
         RuntimeException var2 = null;
         SceneWidget var3 = null;
         SceneWidget var5 = null;
@@ -151,7 +151,7 @@ final class ph extends IntrusiveNode {
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(param1).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(param1).append(')').toString());
         }
     }
 

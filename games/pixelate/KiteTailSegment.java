@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ki {
+final class KiteTailSegment {
     static int field_e;
     private double field_l;
     static String field_a;
@@ -36,7 +36,7 @@ final class ki {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
-        og var4_ref_og = null;
+        SaveDataRequest var4_ref_og = null;
         Object var5 = null;
         int var6 = 0;
         byte[] var8 = null;
@@ -53,15 +53,15 @@ final class ki {
           var2 = var10.readUnsignedByte(255);
           if (var2 != 0) {
             if (1 != var2) {
-              CheckboxPainter.reportClientError(1, "A1: " + jm.b(-26), (Throwable) null);
-              na.a(true);
+              CheckboxPainter.reportClientError(1, "A1: " + Cloud.describePacketHistory(-26), (Throwable) null);
+              na.closeGameSocket(true);
               return;
             }
             var3 = var10.readInt(0);
-            var4_ref_og = (og) (wk.field_g.first(1504642273));
+            var4_ref_og = (SaveDataRequest) (wk.field_g.first(1504642273));
             while (var4_ref_og != null) {
               if (var4_ref_og.field_m != var3) {
-                var4_ref_og = (og) (wk.field_g.next(1504642273));
+                var4_ref_og = (SaveDataRequest) (wk.field_g.next(1504642273));
                 continue;
               }
               break;
@@ -70,12 +70,12 @@ final class ki {
               var4_ref_og.unlink(2779);
               return;
             }
-            na.a(true);
+            na.closeGameSocket(true);
             return;
           }
           var9 = (um) (bq.field_a.first(1504642273));
           if (var9 == null) {
-            na.a(true);
+            na.closeGameSocket(true);
             return;
           }
           var4 = var10.readUnsignedByte(255);
@@ -90,7 +90,7 @@ final class ki {
           }
           var10.position = var10.position + 4;
           if (!var10.verifyCrc32((byte) 124)) {
-            na.a(true);
+            na.closeGameSocket(true);
             return;
           }
           var9.field_p = true;
@@ -100,7 +100,7 @@ final class ki {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw aa.addExceptionContext((Throwable) ((Object) var1), "ki.E(" + param0 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) var1), "ki.E(" + param0 + ')');
         }
     }
 
@@ -183,14 +183,14 @@ final class ki {
 
     final static void spawnScorePopup(int param0, int param1, int param2, int param3) {
         if (param1 == -1) {
-          gq.a(param1 + 1, param3, param0, Integer.toString(param2));
+          gq.startScorePopup(param1 + 1, param3, param0, Integer.toString(param2));
           return;
         }
-        ki.releaseStatics(-60);
-        gq.a(param1 + 1, param3, param0, Integer.toString(param2));
+        KiteTailSegment.releaseStatics(-60);
+        gq.startScorePopup(param1 + 1, param3, param0, Integer.toString(param2));
     }
 
-    ki(int param0, int param1, int param2, int param3) {
+    KiteTailSegment(int param0, int param1, int param2, int param3) {
         this.field_o = param2;
         this.field_n = param3;
         this.field_p = param1;

@@ -30,7 +30,7 @@ final class LoadingProgressDialog extends ResizableModalPanel {
         try {
           this.field_gb = param1;
           if (null != this.field_gb) {
-            var3_int = ba.field_d.paragraphHeight(this.field_gb, 260, ba.field_d.maxAscent);
+            var3_int = FireworkBurst.field_d.paragraphHeight(this.field_gb, 260, FireworkBurst.field_d.maxAscent);
             this.centerWithSize(150 + var3_int, (byte) -110, 300);
           }
           this.activityBar = new StripedProgressBar(13, 50, 274, 30, 15, 2113632, 4210752);
@@ -39,7 +39,7 @@ final class LoadingProgressDialog extends ResizableModalPanel {
           this.field_ab = false;
           this.addChild(this.activityBar, 80);
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "ko.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "ko.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -60,21 +60,21 @@ final class LoadingProgressDialog extends ResizableModalPanel {
         if (!param2) {
           field_ib = (String) null;
           super.drawDialogBackground(param0, param1, param2);
-          ba.field_d.drawCentered(this.field_kb, param0 + (this.field_E >> 1), param1 + 103, 16777215, -1);
+          FireworkBurst.field_d.drawCentered(this.field_kb, param0 + (this.field_E >> 1), param1 + 103, 16777215, -1);
           if (this.field_gb != null) {
             SoftwareRasterizer.drawHorizontalLine(param0 + 20, 120 + param1 - 7, 260, 8421504);
-            ba.field_d.drawParagraph(this.field_gb, 20 + param0, 128 + param1, 260, 100, 16777215, -1, 1, 0, ba.field_d.maxAscent);
+            FireworkBurst.field_d.drawParagraph(this.field_gb, 20 + param0, 128 + param1, 260, 100, 16777215, -1, 1, 0, FireworkBurst.field_d.maxAscent);
             return;
           }
           return;
         }
         super.drawDialogBackground(param0, param1, param2);
-        ba.field_d.drawCentered(this.field_kb, param0 + (this.field_E >> 1), param1 + 103, 16777215, -1);
+        FireworkBurst.field_d.drawCentered(this.field_kb, param0 + (this.field_E >> 1), param1 + 103, 16777215, -1);
         if (this.field_gb == null) {
           return;
         }
         SoftwareRasterizer.drawHorizontalLine(param0 + 20, 120 + param1 - 7, 260, 8421504);
-        ba.field_d.drawParagraph(this.field_gb, 20 + param0, 128 + param1, 260, 100, 16777215, -1, 1, 0, ba.field_d.maxAscent);
+        FireworkBurst.field_d.drawParagraph(this.field_gb, 20 + param0, 128 + param1, 260, 100, 16777215, -1, 1, 0, FireworkBurst.field_d.maxAscent);
     }
 
     final void setProgress(String param0, float param1, int param2, boolean param3) {
@@ -116,7 +116,7 @@ final class LoadingProgressDialog extends ResizableModalPanel {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -128,10 +128,10 @@ final class LoadingProgressDialog extends ResizableModalPanel {
             String var4 = (String) null;
             LoadingProgressDialog.showAccountRequestDialog(true, (String) null, -84);
           }
-          MainMenuScreen.field_r = new AccountRequestDialog(wa.field_c, ba.field_d, param1, MainMenuScreen.field_s, ke.field_d);
+          MainMenuScreen.field_r = new AccountRequestDialog(wa.field_c, FireworkBurst.field_d, param1, MainMenuScreen.field_s, ke.field_d);
           wa.field_c.showPanel(param2 ^ 32140, MainMenuScreen.field_r);
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "ko.Q(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "ko.Q(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

@@ -75,7 +75,7 @@ final class Match {
             return;
           }
           for (var3 = 0; vm.field_e.length > var3; var3++) {
-            var4 = fo.field_a[var3];
+            var4 = Kite.field_a[var3];
             if (var4 >= 0) {
               if (var4 == ScoreMarkerDemo.field_c.selectedIndex) {
                 var5 = IndexedSpriteState.field_l;
@@ -88,8 +88,8 @@ final class Match {
             var6 = vm.field_e[var3];
             if (CanvasRasterBuffer.field_h == 2 &&
               1 == var2) {
-              if (jk.field_d.length <= df.field_r.length) {
-                stackIn_19_0 = df.field_r.length;
+              if (jk.field_d.length <= StatsRequest.field_r.length) {
+                stackIn_19_0 = StatsRequest.field_r.length;
               } else {
                 stackIn_19_0 = jk.field_d.length;
               }
@@ -102,8 +102,8 @@ final class Match {
               var8 = stackIn_22_0;
               if (var3 >= 6 &&
                 var3 < 6 + var7) {
-                if (0 <= var3 - (6 - df.field_r.length + var7)) {
-                  stackIn_27_0 = df.field_r[df.field_r.length + (-6 + (var3 - var7))];
+                if (0 <= var3 - (6 - StatsRequest.field_r.length + var7)) {
+                  stackIn_27_0 = StatsRequest.field_r[StatsRequest.field_r.length + (-6 + (var3 - var7))];
                 } else {
                   stackIn_27_0 = "";
                 }
@@ -125,7 +125,7 @@ final class Match {
             stackIn_38_0 = 3;
             stackIn_38_1 = var6;
             stackIn_39_2 = !(var4 < 0);
-            var7Lifetime1 = sb.a(stackIn_38_0, stackIn_38_1, stackIn_39_2);
+            var7Lifetime1 = sb.measureMenuText(stackIn_38_0, stackIn_38_1, stackIn_39_2);
             var8Lifetime1 = QuickChatCategory.field_u - (var7Lifetime1 >> 1);
             if (var4 >= 0) {
               if (var4 == ScoreMarkerDemo.field_c.selectedIndex) {
@@ -136,7 +136,7 @@ final class Match {
               var9 = stackIn_44_0;
               var1_int = var1_int + LoadingProgressDialog.field_fb;
               if (var9 != null) {
-                var9.a(var1_int, ValidatedTextWidget.field_fb + (bd.field_c << 1), -1, var7Lifetime1 + (AccountTermsPanel.field_J << 1), -AccountTermsPanel.field_J + var8Lifetime1);
+                var9.draw(var1_int, ValidatedTextWidget.field_fb + (bd.field_c << 1), -1, var7Lifetime1 + (AccountTermsPanel.field_J << 1), -AccountTermsPanel.field_J + var8Lifetime1);
               }
               var1_int = var1_int + bd.field_c;
             }
@@ -152,7 +152,7 @@ final class Match {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw aa.addExceptionContext((Throwable) ((Object) var1), "pm.F(" + param0 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) var1), "pm.F(" + param0 + ')');
         }
     }
 
@@ -179,7 +179,7 @@ final class Match {
             this.field_j = -84;
           }
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "pm.J(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "pm.J(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -307,7 +307,7 @@ final class Match {
           }
           PuzzleThumbnail.field_d[param1] = new Puzzle(param2[0].field_g, param2[0].field_d, PuzzleThumbnail.field_c[param1], PuzzleThumbnail.field_k[param1], PuzzleThumbnail.field_f[param1], PuzzleThumbnail.field_p[param1], PuzzleThumbnail.field_e[param1], PuzzleThumbnail.field_i[param1], param2);
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "pm.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "pm.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -325,14 +325,14 @@ final class Match {
           CheckboxPainter.field_k = param1;
           ce.field_d = 2;
           var5 = (CharSequence) ((Object) param1);
-          fp.field_d = dh.a(var5, (byte) 38);
+          fp.field_d = dh.normalizeDisplayName(var5, (byte) 38);
           if (param0 < 32) {
             field_s = (String) null;
           }
           oo.field_d = true;
           fp.field_e = param2;
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "pm.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "pm.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -381,7 +381,7 @@ final class Match {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 

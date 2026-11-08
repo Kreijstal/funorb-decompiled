@@ -70,7 +70,7 @@ final class FloatingSquare {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -129,7 +129,7 @@ final class FloatingSquare {
         }
         var4 = 320 - (int)this.field_h;
         var5 = 240 - (int)this.field_a;
-        this.field_c = (float)PlayerBoard.a(var4 * var4 + var5 * var5, param0 + 23096);
+        this.field_c = (float)PlayerBoard.scaledInverseSquareRoot(var4 * var4 + var5 * var5, param0 + 23096);
         var6 = this.field_d / this.field_c;
         this.field_i = var6 * (float)var4;
         if (param0 != -22970) {
@@ -206,14 +206,14 @@ final class FloatingSquare {
           param2.discardPackedGroups = false;
           param2.field_e = 0;
           StatefulTextPainter.field_y = new QuickChatCategoryCache(var3_int, param2, param2);
-          jd.field_k = new QuickChatPhraseCache(var3_int, param2, param2, new dn());
+          RasterState.field_k = new QuickChatPhraseCache(var3_int, param2, param2, new dn());
           var4 = AsyncValidationResult.findRootQuickChatCategory(-3060);
           if (var4 == null) {
             var11 = (Throwable) null;
             CheckboxPainter.reportClientError(1, "QC2", (Throwable) null);
             return;
           }
-          oo.a(-1, var4);
+          oo.setSinglePhraseCategory(-1, var4);
           var12 = (BitmapFont) null;
           AccountMessagePanel.field_L = ResizableModalPanel.createThemedWidget(65793, 4020342, 65793, (BitmapFont) null, 1513239, 0, 8947848, param0, 21, 1513239, 2245737, 5138823, 1127256);
           RankingTableRequest.field_t = ResizableModalPanel.createThemedWidget(0, 0, 0, param1, 0, 16764006, 0, 0, 21, 0, 0, 0, 0);
@@ -246,7 +246,7 @@ final class FloatingSquare {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 
@@ -300,7 +300,7 @@ final class FloatingSquare {
             } else {
               stackIn_23_2 = "{...}";
             }
-            throw aa.addExceptionContext((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
+            throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

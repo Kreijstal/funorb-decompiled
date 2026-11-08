@@ -26,7 +26,7 @@ final class ib {
           try {
             try {
               var4 = param0.getCodeBase();
-              var3 = lg.a(param1, param0, var4).getFile();
+              var3 = lg.withSessionParameters(param1, param0, var4).getFile();
               JavaScriptBridge.a(param0, (byte) -62, new Object[]{"home", var3 + "home.ws"}, "updatelinks");
               JavaScriptBridge.a(param0, (byte) -115, new Object[]{"gamelist", var3 + "togamelist.ws"}, "updatelinks");
               JavaScriptBridge.a(param0, (byte) 108, new Object[]{"serverlist", var3 + "toserverlist.ws"}, "updatelinks");
@@ -49,7 +49,7 @@ final class ib {
             } else {
               stackIn_7_2 = "{...}";
             }
-            throw aa.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+            throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -59,7 +59,7 @@ final class ib {
     }
 
     final static void b(int param0) {
-        mh.a(ContextActionMenu.field_Rb, (byte) 95);
+        mh.openQuickChatMenu(ContextActionMenu.field_Rb, (byte) 95);
         if (param0 != 20558) {
           ib.releaseStatics(-8);
         }

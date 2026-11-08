@@ -5,18 +5,18 @@ final class BlastFromThePastBackground extends BackgroundScene {
     static int[][] field_p;
     static SceneWidget field_n;
     static String[] field_m;
-    private qk[] field_o;
+    private RetroBlock[] field_o;
 
     final void tick(int param0) {
         int var3 = 0;
-        qk var4 = null;
+        RetroBlock var4 = null;
         int var5 = Pixelate.field_H ? 1 : 0;
         super.tick(param0);
-        qk[] var6 = this.field_o;
-        qk[] var2 = var6;
+        RetroBlock[] var6 = this.field_o;
+        RetroBlock[] var2 = var6;
         for (var3 = 0; var3 < var6.length; var3++) {
           var4 = var6[var3];
-          var4.c(148);
+          var4.tick(148);
         }
     }
 
@@ -32,29 +32,29 @@ final class BlastFromThePastBackground extends BackgroundScene {
     BlastFromThePastBackground(String param0, Sprite[] param1) {
         super(param0, param1);
         try {
-          this.c((byte) 97);
+          this.createBlocks((byte) 97);
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "wc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "wc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final void render(boolean param0) {
         int var3 = 0;
-        qk var4 = null;
+        RetroBlock var4 = null;
         int var5 = Pixelate.field_H ? 1 : 0;
         ThreeSliceButtonPainter.field_w.drawOpaque(0, 0);
-        qk[] var6 = this.field_o;
-        qk[] var2 = var6;
+        RetroBlock[] var6 = this.field_o;
+        RetroBlock[] var2 = var6;
         for (var3 = 0; var3 < var6.length; var3++) {
           var4 = var6[var3];
-          var4.b(73);
+          var4.draw(73);
         }
         if (param0) {
           BlastFromThePastBackground.releaseStatics((byte) 76);
         }
     }
 
-    final static String d(int param0) {
+    final static String getAccountStatusText(int param0) {
         if (param0 != 0) {
           field_n = (SceneWidget) null;
         }
@@ -70,13 +70,13 @@ final class BlastFromThePastBackground extends BackgroundScene {
         return Checkbox.field_U;
     }
 
-    private final void c(byte param0) {
-        this.field_o = new qk[2];
+    private final void createBlocks(byte param0) {
+        this.field_o = new RetroBlock[2];
         if (param0 < 91) {
           this.tick(-106);
         }
-        this.field_o[0] = new qk(0);
-        this.field_o[1] = new qk(7);
+        this.field_o[0] = new RetroBlock(0);
+        this.field_o[1] = new RetroBlock(7);
     }
 
     static {

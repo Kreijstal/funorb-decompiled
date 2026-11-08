@@ -5,7 +5,7 @@ final class mh {
     static int field_b;
     static int field_a;
 
-    final static void a(QuickChatMenu param0, byte param1) {
+    final static void openQuickChatMenu(QuickChatMenu param0, byte param1) {
         if (param0 == null) {
           return;
         }
@@ -18,11 +18,11 @@ final class mh {
           DraggableWidget.field_I.addChild(bo.field_h, (byte) 26);
           un.field_l = true;
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "mh.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "mh.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3) {
+    final static void drawBarTexture(int param0, int param1, int param2, int param3) {
         int var10 = 0;
         int var10Lifetime1;
         int var10Lifetime2;

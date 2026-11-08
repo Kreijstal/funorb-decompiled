@@ -85,7 +85,7 @@ final class PlayerController {
         if (param0 != -59) {
           PlayerController.canPollServerConnection((byte) 49);
         }
-        stackIn_7_0 = (10 <= el.field_b) && (!IconTextComponent.field_Nb) && (!PauseMenuScreen.b(true));
+        stackIn_7_0 = (10 <= el.field_b) && (!IconTextComponent.field_Nb) && (!PauseMenuScreen.isGameConnectionOpen(true));
         return stackIn_7_0;
     }
 
@@ -95,9 +95,9 @@ final class PlayerController {
         if (param2) {
           var4 = this.field_k.boards[this.field_j].pieceColumn;
           var5 = this.field_k.boards[this.field_j].pieceRow;
-          ki.spawnScorePopup(this.field_f.field_t - (-32 - 32 * var4), -1, param1, var5 * 32 + (32 + this.field_f.field_u));
+          KiteTailSegment.spawnScorePopup(this.field_f.field_t - (-32 - 32 * var4), -1, param1, var5 * 32 + (32 + this.field_f.field_u));
         } else {
-          ki.spawnScorePopup(this.field_i, -1, param1, this.field_s);
+          KiteTailSegment.spawnScorePopup(this.field_i, -1, param1, this.field_s);
         }
         if (param0 != -20791) {
           this.enqueueInput(-23, -70, 98);
@@ -157,7 +157,7 @@ final class PlayerController {
           if (param1) {
             stackIn_4_0 = td.field_a;
           } else {
-            stackIn_4_0 = ln.field_k;
+            stackIn_4_0 = SoundVoice.field_k;
           }
           var6 = stackIn_4_0;
           if (ProxyAuthenticationException.field_g == 0) {
@@ -205,7 +205,7 @@ final class PlayerController {
             stackIn_25_0 = AccountRegistrationPanel.field_J[var8Lifetime1];
             stackIn_25_1 = 8192;
             stackIn_26_2 = !(ProxyAuthenticationException.field_e[var8Lifetime1] < 0);
-            var9Lifetime1 = ArchiveProvider.a(stackIn_25_0, stackIn_25_1, stackIn_26_2);
+            var9Lifetime1 = ArchiveProvider.measureMessageText(stackIn_25_0, stackIn_25_1, stackIn_26_2);
             if (ProxyAuthenticationException.field_e[var8Lifetime1] != -1) {
               var9Lifetime1 = var9Lifetime1 + ProxyAuthenticationException.field_a * 2;
             }
@@ -215,7 +215,7 @@ final class PlayerController {
           }
           qn.field_o = -(var7Lifetime1 >> 1) + bq.field_d;
           LinkButtonPainter.field_e = -(var7Lifetime1 >> 1) + (bq.field_d + var7Lifetime1);
-          nf.field_c = (WidgetStyleLayer.field_b + ki.field_e << 1) * VerticalScrollbar.field_Gb.field_h;
+          nf.field_c = (WidgetStyleLayer.field_b + KiteTailSegment.field_e << 1) * VerticalScrollbar.field_Gb.field_h;
           for (var8Lifetime2 = param3; AccountRegistrationPanel.field_J.length > var8Lifetime2; var8Lifetime2++) {
             stackIn_36_0 = nf.field_c;
             if (ProxyAuthenticationException.field_e[var8Lifetime2] >= 0) {
@@ -226,7 +226,7 @@ final class PlayerController {
             nf.field_c = stackIn_36_0 + stackIn_37_1;
           }
           ce.field_c = -(nf.field_c >> 1) + qh.field_b;
-          VerticalScrollbar.field_Gb.initializeSelection(param0, NameAvailabilityValidator.a(false, ProxyAuthenticationException.field_d, StatusBar.field_k), param3 ^ 17068, 0);
+          VerticalScrollbar.field_Gb.initializeSelection(param0, NameAvailabilityValidator.messageMenuOptionAt(false, ProxyAuthenticationException.field_d, StatusBar.field_k), param3 ^ 17068, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -238,7 +238,7 @@ final class PlayerController {
           } else {
             stackIn_43_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_42_0), ((StringBuilder) (Object) stackIn_42_1).append(stackIn_43_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_42_0), ((StringBuilder) (Object) stackIn_42_1).append(stackIn_43_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -440,7 +440,7 @@ final class PlayerController {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 

@@ -17,11 +17,11 @@ class GradientOutlineTextPainter extends TextWidgetPainter {
           }
           super.drawWidget(param0, param1, param2, param3, param4);
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "gh.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "gh.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
-    final static void d(int param0) {
+    final static void writeReflectionCheckResponses(int param0) {
         int fieldTemp$0 = 0;
         RuntimeException decompiledCaughtException = null;
         CipherPacketBuffer var1 = null;
@@ -30,23 +30,23 @@ class GradientOutlineTextPainter extends TextWidgetPainter {
         int var3 = 0;
         var3 = Pixelate.field_H ? 1 : 0;
         try {
-          var1 = aa.field_f;
+          var1 = ChatMessage.field_f;
           if (param0 != 8) {
-            GradientOutlineTextPainter.d(110);
+            GradientOutlineTextPainter.writeReflectionCheckResponses(110);
           }
           while (WidgetStyleLayer.areReflectionChecksReady((byte) -91)) {
             var1.writeOpcode(8, 15514);
             fieldTemp$0 = var1.position + 1;
             var1.position = var1.position + 1;
             var2 = fieldTemp$0;
-            AudioService.a(var1, -20);
-            aa.field_f.backpatchByteLength(var1.position - var2, param0 ^ -9);
+            AudioService.writeReflectionCheckReplies(var1, -20);
+            ChatMessage.field_f.backpatchByteLength(var1.position - var2, param0 ^ -9);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw aa.addExceptionContext((Throwable) ((Object) var1_ref), "gh.B(" + param0 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) var1_ref), "gh.B(" + param0 + ')');
         }
     }
 
@@ -61,7 +61,7 @@ class GradientOutlineTextPainter extends TextWidgetPainter {
         field_r = null;
     }
 
-    final static void a(byte param0) {
+    final static void detectMaxMemoryMb(byte param0) {
         try {
           int decompiledRegionSelector0 = 0;
           Throwable decompiledCaughtException = null;
@@ -89,7 +89,7 @@ class GradientOutlineTextPainter extends TextWidgetPainter {
                 if (param0 == 90) {
                   return;
                 }
-                GradientOutlineTextPainter.d(-108);
+                GradientOutlineTextPainter.writeReflectionCheckResponses(-108);
                 return;
               }
             }
@@ -100,7 +100,7 @@ class GradientOutlineTextPainter extends TextWidgetPainter {
           if (param0 == 90) {
             return;
           }
-          GradientOutlineTextPainter.d(-108);
+          GradientOutlineTextPainter.writeReflectionCheckResponses(-108);
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {

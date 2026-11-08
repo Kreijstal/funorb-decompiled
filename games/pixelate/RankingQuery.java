@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lc extends IntrusiveNode {
+final class RankingQuery extends IntrusiveNode {
     int field_p;
     boolean field_u;
     static boolean[] field_t;
@@ -15,21 +15,21 @@ final class lc extends IntrusiveNode {
     String[][] field_o;
     static String[][] field_l;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 == 90) {
           field_t = null;
           field_l = (String[][]) null;
           field_q = null;
           return;
         }
-        aa var2 = (aa) null;
-        lc.a((aa) null, false);
+        ChatMessage var2 = (ChatMessage) null;
+        RankingQuery.getChatMessageColour((ChatMessage) null, false);
         field_t = null;
         field_l = (String[][]) null;
         field_q = null;
     }
 
-    final static int a(aa param0, boolean param1) {
+    final static int getChatMessageColour(ChatMessage param0, boolean param1) {
         int var2_int = 0;
         int var3 = 0;
         int stackIn_16_0 = 0;
@@ -79,11 +79,11 @@ final class lc extends IntrusiveNode {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    lc() {
+    RankingQuery() {
     }
 
     static {

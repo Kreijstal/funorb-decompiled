@@ -5,15 +5,15 @@ final class sb {
     static int field_a;
     private Sprite[] field_b;
 
-    final void a(int param0, int param1, int param2, int param3, int param4) {
-        dk.a(param3, param4, (byte) 75, param1, param0, this.field_b);
+    final void draw(int param0, int param1, int param2, int param3, int param4) {
+        dk.drawNineSliceFrame(param3, param4, (byte) 75, param1, param0, this.field_b);
         if (param2 != -1) {
           String var7 = (String) null;
-          sb.a(107, (String) null, false);
+          sb.measureMenuText(107, (String) null, false);
         }
     }
 
-    final static int a(int param0, String param1, boolean param2) {
+    final static int measureMenuText(int param0, String param1, boolean param2) {
         RuntimeException var3 = null;
         int stackIn_4_0 = 0;
         int stackIn_6_0 = 0;
@@ -41,7 +41,7 @@ final class sb {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -49,11 +49,11 @@ final class sb {
         try {
           this.field_b = param0;
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "sb.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "sb.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static String a(int param0, int param1) {
+    final static String formatScore(int param0, int param1) {
         StringBuilder discarded$2 = null;
         StringBuilder discarded$3 = null;
         int var8 = Pixelate.field_H ? 1 : 0;

@@ -140,7 +140,7 @@ final class TabbedPanel extends SceneWidget {
                   }
                   var17.field_r[var5] = var6_int;
                   var17.field_q[var5] = var9;
-                  var17.field_l[var5] = param3.requestDeclaredField(var8, ImageProducerRasterBuffer.loadClassOrPrimitive(var15, DraggableWidget.a(param0, 121)), (byte) -94);
+                  var17.field_l[var5] = param3.requestDeclaredField(var8, ImageProducerRasterBuffer.loadClassOrPrimitive(var15, DraggableWidget.intXor(param0, 121)), (byte) -94);
                 }
               } catch (java.lang.ClassNotFoundException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
@@ -182,7 +182,7 @@ final class TabbedPanel extends SceneWidget {
             } else {
               stackIn_40_2 = "{...}";
             }
-            throw aa.addExceptionContext((Throwable) ((Object) stackIn_36_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(')').toString());
+            throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_36_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -267,7 +267,7 @@ final class TabbedPanel extends SceneWidget {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param5).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -331,7 +331,7 @@ final class TabbedPanel extends SceneWidget {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 

@@ -58,7 +58,7 @@ final class BoundedRandomAccessFile {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -92,7 +92,7 @@ final class BoundedRandomAccessFile {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -147,7 +147,7 @@ final class BoundedRandomAccessFile {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -180,7 +180,7 @@ final class BoundedRandomAccessFile {
 
     final static ConditionalTextValue createValidationStatusValue(byte param0) {
         int var1 = 125 / ((param0 - 14) / 56);
-        return new ConditionalTextValue(BlastFromThePastBackground.d(0), Matrix3.isValidationPending(-5057));
+        return new ConditionalTextValue(BlastFromThePastBackground.getAccountStatusText(0), Matrix3.isValidationPending(-5057));
     }
 
     final long length(byte param0) throws IOException {
@@ -215,7 +215,7 @@ final class BoundedRandomAccessFile {
           }
           this.field_e.seek(0L);
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "lj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "lj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -233,7 +233,7 @@ final class BoundedRandomAccessFile {
           this.field_e.write(param1, param2, param0);
           this.field_a = this.field_a + (long)param0;
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "lj.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "lj.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -302,7 +302,7 @@ final class BoundedRandomAccessFile {
           var11 = new QuickChatMenu[var7];
           if (param4.subcategoryIds != null) {
             for (var12 = 0; param4.subcategoryIds.length > var12; var12++) {
-              var13_ref_qe = StatefulTextPainter.field_y.a(param4.subcategoryIds[var12], false);
+              var13_ref_qe = StatefulTextPainter.field_y.getCategory(param4.subcategoryIds[var12], false);
               var8[var12] = var13_ref_qe.field_C;
               var9[var12] = param4.field_x[var12];
               var11[var12] = BoundedRandomAccessFile.buildQuickChatCategoryMenu(param0, param1, -113, param3, var13_ref_qe);
@@ -318,7 +318,7 @@ final class BoundedRandomAccessFile {
                 var9[var14 + var12Lifetime1] = param4.field_t[var14];
                 var10[var12Lifetime1 + var14] = param4.phraseIds[var14];
               } else {
-                var16 = jd.field_k.a(-21209, var15);
+                var16 = RasterState.field_k.getPhrase(-21209, var15);
                 var8[var14 + var12Lifetime1] = var16.getPreview((byte) -54);
                 var9[var12Lifetime1 + var14] = param4.field_t[var14];
                 if (0 >= var9[var14 + var12Lifetime1]) {
@@ -359,7 +359,7 @@ final class BoundedRandomAccessFile {
           } else {
             stackIn_42_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(')').toString());
         }
     }
 

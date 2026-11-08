@@ -127,7 +127,7 @@ final class ScoreMarkerBar extends StatusBar {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw aa.addExceptionContext((Throwable) ((Object) var1), "ma.B(" + param0 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) var1), "ma.B(" + param0 + ')');
         }
     }
 
@@ -341,7 +341,7 @@ final class ScoreMarkerBar extends StatusBar {
           this.field_m = param3;
           this.field_w = param1 ? true : false;
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "ma.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "ma.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 

@@ -1,5 +1,5 @@
 # Reading Pixelate
 
-This pass names 267 reviewed classes in 397 source files. Unresolved roles keep their original names.
+This pass names 280 reviewed classes in 397 source files. Unresolved roles keep their original names.
 
 Start at `Pixelate`; the shared engine (nodes, hash tables, canvases, applet shell) uses the same role names as other FunOrb games.

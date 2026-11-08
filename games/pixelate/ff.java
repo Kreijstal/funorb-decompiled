@@ -39,7 +39,7 @@ final class ff {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -74,7 +74,7 @@ final class ff {
         var6 = Pixelate.field_H ? 1 : 0;
         try {
           var10 = (CharSequence) ((Object) param1);
-          if (!Bzip2State.a((byte) -126, var10)) {
+          if (!Bzip2State.isValidPlayerName((byte) -126, var10)) {
             stackIn_4_0 = qn.field_n;
             return stackIn_4_0;
           }
@@ -84,7 +84,7 @@ final class ff {
           }
           var8 = LoadingStepTracker.findFriend(param1, -1);
           if (var8 == null) {
-            stackIn_11_0 = AlphaContainer.a(AccountMessagePanel.field_R, 41, new String[]{param1});
+            stackIn_11_0 = AlphaContainer.formatTemplate(AccountMessagePanel.field_R, 41, new String[]{param1});
             return stackIn_11_0;
           }
           VerticalScrollbar.field_Hb.traverseFrom(var8, param2 + 1504642379);
@@ -102,7 +102,7 @@ final class ff {
             field_d = -123L;
           }
           DialWidgetPainter.field_q = DialWidgetPainter.field_q - 1;
-          var9 = aa.field_f;
+          var9 = ChatMessage.field_f;
           var9.writeOpcode(param0, 15514);
           var9.position = var9.position + 1;
           var5 = var9.position;
@@ -121,7 +121,7 @@ final class ff {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -171,7 +171,7 @@ final class ff {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 

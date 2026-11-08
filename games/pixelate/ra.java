@@ -89,14 +89,14 @@ final class ra {
         return var10;
     }
 
-    final static boolean a(byte param0) {
+    final static boolean isPrivateRecipientFriend(byte param0) {
         if (param0 >= -79) {
           return false;
         }
-        return LabeledField.a(true, fp.field_e, fp.field_d);
+        return LabeledField.isPlayerReachable(true, fp.field_e, fp.field_d);
     }
 
-    final static void a(int param0, int param1, boolean param2, int param3) {
+    final static void updateQuickChatInput(int param0, int param1, boolean param2, int param3) {
         if (!un.field_l) {
           return;
         }
@@ -107,7 +107,7 @@ final class ra {
         }
         if (IntrusiveDequeCursor.field_c != 0 &&
           var4 == 0) {
-          SoundCache.a(true);
+          SoundCache.closeQuickChatIfOpen(true);
           param2 = false;
         }
         if (param2) {

@@ -11,7 +11,7 @@ final class SecondaryNodeDeque implements Iterable {
     static String field_d;
     static PcmSample[] field_f;
 
-    final DualLinkNode a(int param0) {
+    final DualLinkNode removeFirst(int param0) {
         if (param0 < 57) {
           return (DualLinkNode) null;
         }
@@ -108,7 +108,7 @@ final class SecondaryNodeDeque implements Iterable {
           } else {
             stackIn_32_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(')').toString());
         }
     }
 
@@ -126,7 +126,7 @@ final class SecondaryNodeDeque implements Iterable {
         return (Iterator) ((Object) new SecondaryNodeDequeIterator(this));
     }
 
-    final static Sprite[] a(int param0, byte param1) {
+    final static Sprite[] createSolidCentreFrame(int param0, byte param1) {
         Sprite[] var4 = new Sprite[9];
         Sprite[] var2 = var4;
         int var3 = -118 % ((param1 - 67) / 55);
@@ -147,11 +147,11 @@ final class SecondaryNodeDeque implements Iterable {
           param1.secondaryPrevious.secondaryNext = param1;
           param1.secondaryNext.secondaryPrevious = param1;
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "pg.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "pg.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static boolean b(int param0) {
+    final static boolean pollMasterIndex(int param0) {
         if (param0 != 916440577) {
           byte[] var2 = (byte[]) null;
           SecondaryNodeDeque.writeEncryptedPayload((java.math.BigInteger) null, false, 32, -117, (java.math.BigInteger) null, (PacketBuffer) null, (byte[]) null);
@@ -203,7 +203,7 @@ final class SecondaryNodeDeque implements Iterable {
         field_c[0] = 0L;
         for (var0 = 1; var0 <= 10; var0++) {
             var1 = (var0 - 1) * 8;
-            field_c[var0] = fp.xor(fp.xor(fp.xor(fp.xor(FullscreenFocusCanvas.a(4278190080L, field_b[4][4 + var1]), fp.xor(FullscreenFocusCanvas.a(1095216660480L, field_b[3][var1 + 3]), fp.xor(FullscreenFocusCanvas.a(field_b[2][var1 + 2], 280375465082880L), fp.xor(FullscreenFocusCanvas.a(-72057594037927936L, field_b[0][var1]), FullscreenFocusCanvas.a(field_b[1][var1 + 1], 71776119061217280L))))), FullscreenFocusCanvas.a(field_b[5][5 + var1], 16711680L)), FullscreenFocusCanvas.a(65280L, field_b[6][var1 + 6])), FullscreenFocusCanvas.a(field_b[7][var1 + 7], 255L));
+            field_c[var0] = fp.xor(fp.xor(fp.xor(fp.xor(FullscreenFocusCanvas.longAnd(4278190080L, field_b[4][4 + var1]), fp.xor(FullscreenFocusCanvas.longAnd(1095216660480L, field_b[3][var1 + 3]), fp.xor(FullscreenFocusCanvas.longAnd(field_b[2][var1 + 2], 280375465082880L), fp.xor(FullscreenFocusCanvas.longAnd(-72057594037927936L, field_b[0][var1]), FullscreenFocusCanvas.longAnd(field_b[1][var1 + 1], 71776119061217280L))))), FullscreenFocusCanvas.longAnd(field_b[5][5 + var1], 16711680L)), FullscreenFocusCanvas.longAnd(65280L, field_b[6][var1 + 6])), FullscreenFocusCanvas.longAnd(field_b[7][var1 + 7], 255L));
         }
         field_f = new PcmSample[132];
         field_d = "Achievements";

@@ -9,7 +9,7 @@ final class gb {
     static int field_d;
     static int field_c;
 
-    final static boolean a(String param0, String param1, int param2) {
+    final static boolean containsForwardOrReversed(String param0, String param1, int param2) {
         String var3 = null;
         boolean stackIn_5_0 = false;
         RuntimeException stackIn_8_0 = null;
@@ -40,7 +40,7 @@ final class gb {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -67,7 +67,7 @@ final class gb {
         field_e = null;
     }
 
-    final static void a(byte param0, boolean param1, int param2) {
+    final static void updateReportAbuseDialog(byte param0, boolean param1, int param2) {
         int var3 = 0;
         int var4 = 0;
         if (param0 < 107) {
@@ -78,10 +78,10 @@ final class gb {
           if (var3 != -2) {
             if (var3 != -1) {
               var4 = AccountTermsPanel.field_M.isMuteSelected(2) ? 1 : 0;
-              cm.a(89, var4 != 0, AccountTermsPanel.field_M.field_Ub, AccountTermsPanel.field_M.getEnteredText(123), var3, param2);
+              cm.sendPlayerReport(89, var4 != 0, AccountTermsPanel.field_M.field_Ub, AccountTermsPanel.field_M.getEnteredText(123), var3, param2);
             }
             AccountTermsPanel.field_M = null;
-            ArchiveProvider.a(116);
+            ArchiveProvider.closeContextMenu(116);
           }
         }
     }

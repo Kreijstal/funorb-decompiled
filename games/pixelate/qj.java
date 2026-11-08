@@ -8,7 +8,7 @@ final class qj {
     static long field_d;
     static String field_c;
 
-    final static void a(String param0, long param1, byte param2) {
+    final static void openPrivateChat(String param0, long param1, byte param2) {
         CharSequence var5 = null;
         CheckboxPainter.field_k = param0;
         if (param2 != 8) {
@@ -17,19 +17,19 @@ final class qj {
         try {
           ce.field_d = 2;
           var5 = (CharSequence) ((Object) param0);
-          fp.field_d = dh.a(var5, (byte) 74);
+          fp.field_d = dh.normalizeDisplayName(var5, (byte) 74);
           fp.field_e = param1;
           ib.b(param2 ^ 20550);
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "qj.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "qj.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
-    final static void a(boolean param0, int param1, int param2) {
+    final static void sendGameJoinRequest(boolean param0, int param1, int param2) {
         CipherPacketBuffer var3 = null;
         CipherPacketBuffer var3Lifetime1;
         if (!param0) {
-          var3 = aa.field_f;
+          var3 = ChatMessage.field_f;
           var3.writeOpcode(param2, 15514);
           var3.writeByte(160, 3);
           var3.writeByte(160, 10);
@@ -37,7 +37,7 @@ final class qj {
           return;
         }
         qj.releaseStaticReferences(false);
-        var3Lifetime1 = aa.field_f;
+        var3Lifetime1 = ChatMessage.field_f;
         var3Lifetime1.writeOpcode(param2, 15514);
         var3Lifetime1.writeByte(160, 3);
         var3Lifetime1.writeByte(160, 10);

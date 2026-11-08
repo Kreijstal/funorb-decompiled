@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class qk {
+final class RetroBlock {
     static int field_e;
     private int field_b;
     private int field_h;
@@ -14,7 +14,7 @@ final class qk {
     static int[] field_c;
     static SceneWidget field_d;
 
-    final void b(int param0) {
+    final void draw(int param0) {
         int var2 = 0;
         if (this.field_f < 12) {
           var2 = 120 - this.field_f * 10;
@@ -24,10 +24,10 @@ final class qk {
         if (param0 >= 43) {
           return;
         }
-        this.b(105);
+        this.draw(105);
     }
 
-    final void c(int param0) {
+    final void tick(int param0) {
         int fieldTemp$0 = this.field_f;
         this.field_f = this.field_f + 1;
         if (fieldTemp$0 > 30) {
@@ -35,9 +35,9 @@ final class qk {
           this.field_a = this.field_a + 1;
         }
         if (this.field_a > 14) {
-          this.d(-16289);
+          this.respawn(-16289);
           if (param0 != 148) {
-            this.d(6);
+            this.respawn(6);
             return;
           }
           return;
@@ -45,7 +45,7 @@ final class qk {
         if (param0 == 148) {
           return;
         }
-        this.d(6);
+        this.respawn(6);
     }
 
     public static void releaseStatics(int param0) {
@@ -56,7 +56,7 @@ final class qk {
           return;
         }
         String var2 = (String) null;
-        qk.replaceAll((String) null, (String) null, (String) null, -71);
+        RetroBlock.replaceAll((String) null, (String) null, (String) null, -71);
         field_d = null;
         field_c = null;
         field_g = null;
@@ -72,11 +72,11 @@ final class qk {
         if (param3 < -122) {
           return param0;
         }
-        qk.releaseStatics(-3);
+        RetroBlock.releaseStatics(-3);
         return param0;
     }
 
-    private final void d(int param0) {
+    private final void respawn(int param0) {
         this.field_f = 0;
         if (param0 == -16289) {
           this.field_h = JavaRandomHelpers.a(ea.field_b, -104, 6);
@@ -86,8 +86,8 @@ final class qk {
         }
     }
 
-    qk(int param0) {
-        this.d(-16289);
+    RetroBlock(int param0) {
+        this.respawn(-16289);
         this.field_a = param0;
     }
 

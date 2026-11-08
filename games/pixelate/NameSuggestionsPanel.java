@@ -44,13 +44,13 @@ final class NameSuggestionsPanel extends UiContainer implements ButtonListener {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
     public static void releaseStatics(int param0) {
         if (param0 != 16) {
-          NameSuggestionsPanel.a(true, -63);
+          NameSuggestionsPanel.updateActivePopup(true, -63);
         }
         field_M = null;
         field_N = null;
@@ -85,13 +85,13 @@ final class NameSuggestionsPanel extends UiContainer implements ButtonListener {
             return true;
           }
           if (98 == param0) {
-            stackIn_6_0 = this.focusNextChild(0, param2);
+            stackIn_6_0 = this.focusPreviousChild(0, param2);
             return stackIn_6_0;
           }
           if (param0 != 99) {
             return false;
           }
-          stackIn_10_0 = this.b(10, param2);
+          stackIn_10_0 = this.focusNextChild(10, param2);
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -103,13 +103,13 @@ final class NameSuggestionsPanel extends UiContainer implements ButtonListener {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(')').toString());
         }
     }
 
-    final static void a(boolean param0, int param1) {
+    final static void updateActivePopup(boolean param0, int param1) {
         if (null != ri.field_f &&
-          ri.field_f.b(-85, param0)) {
+          ri.field_f.updateAndCheckClosed(-85, param0)) {
           ri.field_f = null;
         }
         if (param1 <= 56) {
@@ -175,11 +175,11 @@ final class NameSuggestionsPanel extends UiContainer implements ButtonListener {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 
-    final static void l(int param0) {
+    final static void reopenLoginForm(int param0) {
         String var2 = (String) null;
         FallingPieceView.openLoginForm(nk.field_b, -116, (String) null);
         if (param0 != 20700) {
@@ -192,7 +192,7 @@ final class NameSuggestionsPanel extends UiContainer implements ButtonListener {
         try {
           this.field_K = param0;
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "a.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "a.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

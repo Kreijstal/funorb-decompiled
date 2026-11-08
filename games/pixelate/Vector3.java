@@ -14,15 +14,15 @@ final class Vector3 {
     static SceneWidget field_e;
 
     final static void sendInputEvent(int param0, int param1, int param2) {
-        aa.field_f.writeOpcode(58, 15514);
+        ChatMessage.field_f.writeOpcode(58, 15514);
         if (param1 == -18656) {
-          aa.field_f.writeShort(1276387944, param2);
-          aa.field_f.writeByte(160, param0);
+          ChatMessage.field_f.writeShort(1276387944, param2);
+          ChatMessage.field_f.writeByte(160, param0);
           return;
         }
         Vector3.sendInputEvent(-17, -36, -89);
-        aa.field_f.writeShort(1276387944, param2);
-        aa.field_f.writeByte(160, param0);
+        ChatMessage.field_f.writeShort(1276387944, param2);
+        ChatMessage.field_f.writeByte(160, param0);
     }
 
     final static char foldAccountNameChar(int param0, char param1) {
@@ -276,7 +276,7 @@ final class Vector3 {
                 var4 = (String) null;
                 Vector3.openRelativeUrl((byte) -4, (java.applet.Applet) null, (String) null);
               }
-              var3 = lg.a(false, param1, var3);
+              var3 = lg.withSessionParameters(false, param1, var3);
               LinkButtonPainter.openUrlInNewWindow(true, var3.toString(), -72, param1);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
@@ -300,7 +300,7 @@ final class Vector3 {
             } else {
               stackIn_12_2 = "{...}";
             }
-            throw aa.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+            throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

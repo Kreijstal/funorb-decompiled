@@ -15,7 +15,7 @@ final class jf {
         }
     }
 
-    final static boolean a(boolean param0, int[] param1) {
+    final static boolean pollIncomingPacket(boolean param0, int[] param1) {
         int var5_int = 0;
         int var6 = 0;
         RuntimeException stackIn_38_0 = null;
@@ -65,7 +65,7 @@ final class jf {
               MusicCrossfadeStream.field_o.position = 0;
               BackgroundScene.field_b = param1[AudioService.field_c];
             }
-            if (!MusicPatchNode.e(-18481)) {
+            if (!MusicPatchNode.readPacketHeader(-18481)) {
               return false;
             }
             if (0 == ij.field_s) {
@@ -100,7 +100,7 @@ final class jf {
           } else {
             stackIn_39_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(')').toString());
         }
     }
 
@@ -123,7 +123,7 @@ final class jf {
         CharSequence var6 = null;
         try {
           var6 = (CharSequence) ((Object) param0);
-          if (!Bzip2State.a((byte) -126, var6)) {
+          if (!Bzip2State.isValidPlayerName((byte) -126, var6)) {
             stackIn_3_0 = qn.field_n;
             return stackIn_3_0;
           }
@@ -131,12 +131,12 @@ final class jf {
             stackIn_6_0 = Bzip2State.field_C;
             return stackIn_6_0;
           }
-          if (sm.a(param0, -1)) {
+          if (sm.isLocalPlayerName(param0, -1)) {
             stackIn_9_0 = GrowableIntList.field_h;
             return stackIn_9_0;
           }
-          if (CanvasRasterBuffer.a(param0, (byte) 37)) {
-            stackIn_13_0 = AlphaContainer.a(BufferedSocket.field_b, 34, new String[]{param0});
+          if (CanvasRasterBuffer.isFriendName(param0, (byte) 37)) {
+            stackIn_13_0 = AlphaContainer.formatTemplate(BufferedSocket.field_b, 34, new String[]{param0});
             return stackIn_13_0;
           }
           if (DialWidgetPainter.field_q >= 100 &&
@@ -152,10 +152,10 @@ final class jf {
             return stackIn_24_0;
           }
           if (ImageProducerRasterBuffer.isFriend(-640, param0)) {
-            stackIn_27_0 = AlphaContainer.a(EmergentBehaviourBackground.field_r, 85, new String[]{param0});
+            stackIn_27_0 = AlphaContainer.formatTemplate(EmergentBehaviourBackground.field_r, 85, new String[]{param0});
             return stackIn_27_0;
           }
-          var5 = aa.field_f;
+          var5 = ChatMessage.field_f;
           var5.writeOpcode(param1, 15514);
           var5.position = var5.position + 1;
           var4 = var5.position;
@@ -174,11 +174,11 @@ final class jf {
           } else {
             stackIn_33_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
-    final static el a(String param0, int param1) {
+    final static el validateEmailDomain(String param0, int param1) {
         int var5 = 0;
         int var2_int = 0;
         RuntimeException var2 = null;
@@ -220,7 +220,7 @@ final class jf {
           }
           for (var5 = 0; var5 < var4.length; var5++) {
             var6 = var4[var5];
-            var7 = IndexedSpriteState.a(var6, (byte) 120);
+            var7 = IndexedSpriteState.validateEmailLabel(var6, (byte) 120);
             if (var7 != null) {
               stackIn_19_0 = var7;
               return stackIn_19_0;
@@ -238,11 +238,11 @@ final class jf {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param1).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    final static PaletteBitmapFont a(ResourceArchive param0, int param1, ResourceArchive param2, int param3, byte param4) {
+    final static PaletteBitmapFont loadPaletteFont(ResourceArchive param0, int param1, ResourceArchive param2, int param3, byte param4) {
         RuntimeException var5 = null;
         String var6 = null;
         Object stackIn_4_0 = null;
@@ -280,7 +280,7 @@ final class jf {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 

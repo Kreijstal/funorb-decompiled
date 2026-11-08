@@ -15,7 +15,7 @@ final class d {
         field_d = null;
     }
 
-    final static void a(int param0) {
+    final static void restartLogin(int param0) {
         if (param0 != -17540) {
           field_b = -91;
           if (IconTextComponent.field_Nb) {
@@ -50,7 +50,7 @@ final class d {
               if (param0 != 0) {
                 return;
               }
-              param1.getAppletContext().showDocument(lg.a(false, param1, var2), "_top");
+              param1.getAppletContext().showDocument(lg.withSessionParameters(false, param1, var2), "_top");
               return;
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
@@ -68,7 +68,7 @@ final class d {
             } else {
               stackIn_9_2 = "{...}";
             }
-            throw aa.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+            throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -77,7 +77,7 @@ final class d {
         }
     }
 
-    final static void a(ResourceArchive param0, ResourceArchive param1, boolean param2, byte[] param3, String[][] param4, int param5, IndexedSprite[] param6, int[] param7, String[] param8, int param9, boolean param10, String[][] param11, int param12, int[] param13, Sprite[][] param14, ResourceArchive param15, String[] param16, byte[] param17, Sprite[][] param18) {
+    final static void initializeLobbyUi(ResourceArchive param0, ResourceArchive param1, boolean param2, byte[] param3, String[][] param4, int param5, IndexedSprite[] param6, int[] param7, String[] param8, int param9, boolean param10, String[][] param11, int param12, int[] param13, Sprite[][] param14, ResourceArchive param15, String[] param16, byte[] param17, Sprite[][] param18) {
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_6_2 = null;
@@ -112,9 +112,9 @@ final class d {
         String[] var20 = null;
         try {
           var20 = (String[]) null;
-          ge.a(param8, param12, param1, param17, param14, param5, param4, param15, param3, (String[]) null, param18, param6, param11, param0, param16, param7, 1, param10, param13, (byte) -41);
+          ge.initializeLobbyUi(param8, param12, param1, param17, param14, param5, param4, param15, param3, (String[]) null, param18, param6, param11, param0, param16, param7, 1, param10, param13, (byte) -41);
           if (!param2) {
-            d.a((ResourceArchive) null, (ResourceArchive) null, true, (byte[]) null, (String[][]) null, -25, (IndexedSprite[]) null, (int[]) null, (String[]) null, -85, true, (String[][]) null, 103, (int[]) null, (Sprite[][]) null, (ResourceArchive) null, (String[]) null, (byte[]) null, (Sprite[][]) null);
+            d.initializeLobbyUi((ResourceArchive) null, (ResourceArchive) null, true, (byte[]) null, (String[][]) null, -25, (IndexedSprite[]) null, (int[]) null, (String[]) null, -85, true, (String[][]) null, 103, (int[]) null, (Sprite[][]) null, (ResourceArchive) null, (String[]) null, (byte[]) null, (Sprite[][]) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -205,7 +205,7 @@ final class d {
           } else {
             stackIn_45_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_44_1).append(stackIn_45_2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_44_1).append(stackIn_45_2).append(')').toString());
         }
     }
 

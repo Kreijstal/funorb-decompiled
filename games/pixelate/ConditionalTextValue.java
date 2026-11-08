@@ -51,7 +51,7 @@ final class ConditionalTextValue {
           return CipherPacketBuffer.field_x + " - " + LoginMethod.field_g.getGroupProgressByName(param0 ^ 16463, "commonui") + "%";
         }
         if (!MatchingTextValidator.field_u.ensureIndex(-3)) {
-          return jd.field_p;
+          return RasterState.field_p;
         }
         if (param0 != 16422) {
           ConditionalTextValue.isAccountNamePromptOpen(34);
@@ -95,7 +95,7 @@ final class ConditionalTextValue {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
         }
     }
 

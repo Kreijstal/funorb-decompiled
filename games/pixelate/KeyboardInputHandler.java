@@ -43,7 +43,7 @@ final class KeyboardInputHandler implements java.awt.event.KeyListener, java.awt
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -65,7 +65,7 @@ final class KeyboardInputHandler implements java.awt.event.KeyListener, java.awt
           DisplayNameForm.field_J = new DiskCacheWorker(param4);
           FloatingSquare.field_j = new Js5ArchiveManager(Match.field_h, DisplayNameForm.field_J);
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "rp.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ',' + param8 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "rp.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ',' + param8 + ')');
         }
     }
 
@@ -126,7 +126,7 @@ final class KeyboardInputHandler implements java.awt.event.KeyListener, java.awt
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -136,7 +136,7 @@ final class KeyboardInputHandler implements java.awt.event.KeyListener, java.awt
             PauseMenuScreen.field_q = -1;
           }
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "rp.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "rp.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -156,18 +156,18 @@ final class KeyboardInputHandler implements java.awt.event.KeyListener, java.awt
             var2_int = param0.getKeyChar();
             if (var2_int != 0 &&
               var2_int != 65535 &&
-              ArchiveIndex.a((char) var2_int, (byte) 111)) {
-              var3 = 127 & 1 + jd.field_s;
+              ArchiveIndex.isTypeableChar((char) var2_int, (byte) 111)) {
+              var3 = 127 & 1 + RasterState.field_s;
               if (qn.field_p != var3) {
-                ArchiveRequest.field_z[jd.field_s] = -1;
-                ResourceArchive.field_d[jd.field_s] = (char)var2_int;
-                jd.field_s = var3;
+                ArchiveRequest.field_z[RasterState.field_s] = -1;
+                ResourceArchive.field_d[RasterState.field_s] = (char)var2_int;
+                RasterState.field_s = var3;
               }
             }
           }
           param0.consume();
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "rp.keyTyped(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "rp.keyTyped(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -202,11 +202,11 @@ final class KeyboardInputHandler implements java.awt.event.KeyListener, java.awt
               }
             }
             if (var2_int >= 0) {
-              var3 = 127 & 1 + jd.field_s;
+              var3 = 127 & 1 + RasterState.field_s;
               if (qn.field_p != var3) {
-                ArchiveRequest.field_z[jd.field_s] = var2_int;
-                ResourceArchive.field_d[jd.field_s] = (char)0;
-                jd.field_s = var3;
+                ArchiveRequest.field_z[RasterState.field_s] = var2_int;
+                ResourceArchive.field_d[RasterState.field_s] = (char)0;
+                RasterState.field_s = var3;
               }
             }
             var3Lifetime1 = param0.getModifiers();
@@ -234,7 +234,7 @@ final class KeyboardInputHandler implements java.awt.event.KeyListener, java.awt
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
         }
     }
 

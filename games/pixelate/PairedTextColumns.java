@@ -53,7 +53,7 @@ final class PairedTextColumns extends SceneWidget {
     }
 
     final static void sendNoticeAcknowledgement(int param0, int param1) {
-        CipherPacketBuffer var2 = aa.field_f;
+        CipherPacketBuffer var2 = ChatMessage.field_f;
         var2.writeOpcode(param1, 15514);
         var2.writeByte(160, param0);
         var2.writeByte(160, 1);
@@ -66,7 +66,7 @@ final class PairedTextColumns extends SceneWidget {
           this.field_Fb.field_z = param1;
           this.field_Fb.field_H = param2;
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "fb.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "fb.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -87,7 +87,7 @@ final class PairedTextColumns extends SceneWidget {
           this.addChild(this.field_Ib, (byte) 26);
           this.markTreeDirty(-257);
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "fb.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "fb.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -134,22 +134,22 @@ final class PairedTextColumns extends SceneWidget {
         String var14 = null;
         ClientContextMenu var15 = null;
         try {
-          em.openContextMenu((String) null, 0L, (String) null, param2.c((byte) 8), param2, -163, ReflectionCheckRequest.field_k, (int[]) null, -1);
+          em.openContextMenu((String) null, 0L, (String) null, param2.getGameId((byte) 8), param2, -163, ReflectionCheckRequest.field_k, (int[]) null, -1);
           if (param2.field_dc && (param2.field_Tb == 2 ||
             !(wo.field_h < 2))) {
             var9 = ProxySocketConnector.field_n;
-            var10 = AlphaContainer.a(ReportAbuseDialog.field_Kb, 103, new String[]{param1});
+            var10 = AlphaContainer.formatTemplate(ReportAbuseDialog.field_Kb, 103, new String[]{param1});
             var9.field_b.addAction(var10, (byte) -112, 10);
           }
           ProxySocketConnector.field_n.addLobbyGameActions(-107);
           if (param0) {
             if (NameAvailabilityValidator.field_r == ProxySocketConnector.field_n.field_m) {
               var13 = ProxySocketConnector.field_n;
-              var14 = AlphaContainer.a(DateInputWidget.field_M, 77, new String[]{param1});
+              var14 = AlphaContainer.formatTemplate(DateInputWidget.field_M, 77, new String[]{param1});
               var13.field_b.addAction(var14, (byte) -111, 16);
             } else {
               var11 = ProxySocketConnector.field_n;
-              var12 = AlphaContainer.a(AlphaContainer.field_J, 89, new String[]{param1});
+              var12 = AlphaContainer.formatTemplate(AlphaContainer.field_J, 89, new String[]{param1});
               var11.field_b.addAction(var12, (byte) -61, 15);
             }
           }
@@ -175,7 +175,7 @@ final class PairedTextColumns extends SceneWidget {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param3).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param3).append(')').toString());
         }
     }
 

@@ -12,22 +12,22 @@ final class MeshRasterState {
     static int field_d;
     private static int[] field_f;
 
-    final static void a() {
-        MeshRasterState.a(SoftwareRasterizer.field_e, SoftwareRasterizer.field_f, SoftwareRasterizer.field_h, SoftwareRasterizer.field_a);
+    final static void useRasterClip() {
+        MeshRasterState.setClip(SoftwareRasterizer.field_e, SoftwareRasterizer.field_f, SoftwareRasterizer.field_h, SoftwareRasterizer.field_a);
     }
 
-    private final static void b() {
+    private final static void centerProjection() {
         field_b = field_d / 2;
         field_i = field_e / 2;
     }
 
-    private final static void a(int param0, int param1, int param2, int param3) {
+    private final static void setClip(int param0, int param1, int param2, int param3) {
         int var5 = 0;
         field_d = param2 - param0;
         field_e = param3 - param1;
-        MeshRasterState.b();
+        MeshRasterState.centerProjection();
         if (field_g.length < field_e) {
-          field_g = new int[DropTargetWidget.a(-1879863704, field_e)];
+          field_g = new int[DropTargetWidget.nextPowerOfTwo(-1879863704, field_e)];
         }
         int var4 = param1 * SoftwareRasterizer.field_j + param0;
         for (var5 = 0; var5 < field_e; var5++) {

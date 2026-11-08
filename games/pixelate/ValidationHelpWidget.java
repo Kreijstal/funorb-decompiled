@@ -17,7 +17,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
         return null;
     }
 
-    final static void a(Sprite param0, Sprite param1, int param2) {
+    final static void setBackgroundAndShadow(Sprite param0, Sprite param1, int param2) {
         int var5 = 0;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
@@ -72,7 +72,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -133,7 +133,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
               var26.drawAdditive(var9, var10 - (var26.field_E >> 1), 256);
               return;
             }
-            if (var6Lifetime1 != qk.field_g) {
+            if (var6Lifetime1 != RetroBlock.field_g) {
               return;
             }
             var25 = CanvasRasterBuffer.field_g[1];
@@ -145,17 +145,17 @@ final class ValidationHelpWidget extends TextHotspotWidget {
           var13 = var27.field_B << 1;
           if (null == this.field_Z) {
             this.field_Z = new Sprite(var12, var13);
-            Checkbox.a(-119, this.field_Z);
+            Checkbox.renderToSprite(-119, this.field_Z);
           } else {
             if (this.field_Z.field_F < var12) {
               this.field_Z = new Sprite(var12, var13);
-              Checkbox.a(-119, this.field_Z);
+              Checkbox.renderToSprite(-119, this.field_Z);
             } else {
               if (this.field_Z.field_E < var13) {
                 this.field_Z = new Sprite(var12, var13);
-                Checkbox.a(-119, this.field_Z);
+                Checkbox.renderToSprite(-119, this.field_Z);
               } else {
-                Checkbox.a(-72, this.field_Z);
+                Checkbox.renderToSprite(-72, this.field_Z);
                 SoftwareRasterizer.clear();
               }
             }
@@ -180,11 +180,11 @@ final class ValidationHelpWidget extends TextHotspotWidget {
           if (null != this.field_Z &&
             this.field_Z.field_F >= var12Lifetime1 &&
             this.field_Z.field_E >= var13Lifetime1) {
-            Checkbox.a(-72, this.field_Z);
+            Checkbox.renderToSprite(-72, this.field_Z);
             SoftwareRasterizer.clear();
           } else {
             this.field_Z = new Sprite(var12Lifetime1, var13Lifetime1);
-            Checkbox.a(-119, this.field_Z);
+            Checkbox.renderToSprite(-119, this.field_Z);
           }
           var19.drawRotatedAboutPivot(112, 144, var19.field_A << 4, var19.field_B << 4, -this.field_X << 10, 4096);
           LinkButtonPainter.a((byte) 92);
@@ -197,7 +197,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
             var22.drawAdditive(var9Lifetime1, var10Lifetime1 - (var22.field_E >> 1), 256);
             return;
           }
-          if (var6Lifetime2 != qk.field_g) {
+          if (var6Lifetime2 != RetroBlock.field_g) {
             return;
           }
           var21 = CanvasRasterBuffer.field_g[1];
@@ -211,11 +211,11 @@ final class ValidationHelpWidget extends TextHotspotWidget {
         if (null != this.field_Z &&
           this.field_Z.field_F >= var12Lifetime2 &&
           this.field_Z.field_E >= var13Lifetime2) {
-          Checkbox.a(-72, this.field_Z);
+          Checkbox.renderToSprite(-72, this.field_Z);
           SoftwareRasterizer.clear();
         } else {
           this.field_Z = new Sprite(var12Lifetime2, var13Lifetime2);
-          Checkbox.a(-119, this.field_Z);
+          Checkbox.renderToSprite(-119, this.field_Z);
         }
         var20.drawRotatedAboutPivot(112, 144, var20.field_A << 4, var20.field_B << 4, -this.field_X << 10, 4096);
         LinkButtonPainter.a((byte) 92);
@@ -223,15 +223,15 @@ final class ValidationHelpWidget extends TextHotspotWidget {
         return;
     }
 
-    final static void a(rh param0, boolean param1, int param2) {
+    final static void queueHighscoreSubmission(rh param0, boolean param1, int param2) {
         try {
           MenuScreen.field_b.addLast(22125, param0);
-          AlphaContainer.a((byte) -52, param0, param2);
+          AlphaContainer.sendHighscoreSubmission((byte) -52, param0, param2);
           if (!param1) {
-            ValidationHelpWidget.c(false);
+            ValidationHelpWidget.releaseStatics(false);
           }
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "md.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "md.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -257,11 +257,11 @@ final class ValidationHelpWidget extends TextHotspotWidget {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    public static void c(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_V = null;
         if (param0) {
           field_Y = false;
@@ -269,13 +269,13 @@ final class ValidationHelpWidget extends TextHotspotWidget {
     }
 
     ValidationHelpWidget(ValidationSource param0, String param1, int param2, int param3, int param4, int param5) {
-        super(param1, ih.a((byte) 45));
+        super(param1, ih.getHelpTextPainter((byte) 45));
         try {
           this.field_ab = param1;
           this.field_W = param0;
           this.setBounds(param4, (byte) 121, param3, param2, param5);
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "md.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "md.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -287,7 +287,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
           }
           super.updatePointer(param0 + 0, param1, param2, param3);
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "md.L(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "md.L(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 

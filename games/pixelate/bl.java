@@ -10,7 +10,7 @@ final class bl {
     static int field_c;
     static int field_b;
 
-    final static void a(int param0, boolean param1) {
+    final static void updateLobbyHighlightsAndLayout(int param0, boolean param1) {
         int var2;
         int stackIn_8_0 = 0;
         int stackIn_11_0 = 0;
@@ -33,13 +33,13 @@ final class bl {
         stackIn_13_2 = (ValidationHelpWidget.field_Y) || (DateOfBirthValidator.field_i);
         stackIn_15_3 = var2;
         stackIn_16_4 = (50 >= ce.field_g) ? false : true;
-        wk.a(stackIn_11_0, stackIn_11_1, stackIn_13_2, stackIn_15_3 != 0, stackIn_16_4, param1, (byte) 116, true, 0, 13, 11, DriftingParticle.field_i);
+        wk.updateLobbyChat(stackIn_11_0, stackIn_11_1, stackIn_13_2, stackIn_15_3 != 0, stackIn_16_4, param1, (byte) 116, true, 0, 13, 11, DriftingParticle.field_i);
         if (of.field_c) {
-          aa.field_f.writeOpcode(57, 15514);
+          ChatMessage.field_f.writeOpcode(57, 15514);
           of.field_c = false;
         }
         if (fc.field_a) {
-          aa.field_f.writeOpcode(10, 15514);
+          ChatMessage.field_f.writeOpcode(10, 15514);
           fc.field_a = false;
         }
     }
@@ -55,7 +55,7 @@ final class bl {
         field_g = null;
     }
 
-    final static int a(boolean param0) {
+    final static int getLegacyMenuWidth(boolean param0) {
         if (!param0) {
           bl.releaseStatics(-26);
         }
@@ -87,7 +87,7 @@ final class bl {
         }
     }
 
-    final static void a(int param0, Sprite param1, String param2) {
+    final static void setBenefitsBorderAndCaption(int param0, Sprite param1, String param2) {
         try {
           if (param0 != 11833) {
             field_g = (String) null;
@@ -95,7 +95,7 @@ final class bl {
           qf.field_c = param1;
           IntrusiveNode.field_i = param2;
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "bl.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "bl.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

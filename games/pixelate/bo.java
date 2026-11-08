@@ -15,32 +15,32 @@ final class bo {
     static int[] field_c;
     static long field_e;
 
-    final static void a(int param0, int param1) {
+    final static void resendSaveDataRequests(int param0, int param1) {
         IntrusiveNode var2 = null;
         int var3 = 0;
-        og var4 = null;
+        SaveDataRequest var4 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2_ref = null;
         var3 = Pixelate.field_H ? 1 : 0;
         try {
-          var4 = (og) (wk.field_g.first(1504642273));
+          var4 = (SaveDataRequest) (wk.field_g.first(1504642273));
           while (var4 != null) {
-            dq.a(param0, -18989, var4);
-            var4 = (og) (wk.field_g.next(param1 + 1504642266));
+            dq.sendSaveDataRequest(param0, -18989, var4);
+            var4 = (SaveDataRequest) (wk.field_g.next(param1 + 1504642266));
           }
           if (param1 != 7) {
             field_k = (String) null;
           }
           var2 = bq.field_a.first(1504642273);
           while (var2 != null) {
-            AlphaContainer.a(true, param0);
+            AlphaContainer.sendSavedDataRequest(true, param0);
             var2 = bq.field_a.next(1504642273);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw aa.addExceptionContext((Throwable) ((Object) var2_ref), "bo.D(" + param0 + ',' + param1 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) var2_ref), "bo.D(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -57,28 +57,28 @@ final class bo {
         }
     }
 
-    final static byte[] a(int param0) {
+    final static byte[] packCompletedPuzzleMask(int param0) {
         byte[] var2 = new byte[8];
         byte[] var1 = var2;
-        var2[6] = (byte)(int)FullscreenFocusCanvas.a(255L, CheckboxPainter.field_h >> 48);
-        var2[2] = (byte)(int)FullscreenFocusCanvas.a((long)param0, CheckboxPainter.field_h >> 16);
-        var2[3] = (byte)(int)FullscreenFocusCanvas.a(CheckboxPainter.field_h >> 24, 255L);
-        var2[5] = (byte)(int)FullscreenFocusCanvas.a(CheckboxPainter.field_h >> 40, 255L);
-        var2[1] = (byte)(int)FullscreenFocusCanvas.a(255L, CheckboxPainter.field_h >> 8);
-        var2[0] = (byte)(int)FullscreenFocusCanvas.a(CheckboxPainter.field_h >> 0, 255L);
-        var2[4] = (byte)(int)FullscreenFocusCanvas.a(255L, CheckboxPainter.field_h >> 32);
-        var2[7] = (byte)(int)FullscreenFocusCanvas.a(255L, CheckboxPainter.field_h >> 56);
+        var2[6] = (byte)(int)FullscreenFocusCanvas.longAnd(255L, CheckboxPainter.field_h >> 48);
+        var2[2] = (byte)(int)FullscreenFocusCanvas.longAnd((long)param0, CheckboxPainter.field_h >> 16);
+        var2[3] = (byte)(int)FullscreenFocusCanvas.longAnd(CheckboxPainter.field_h >> 24, 255L);
+        var2[5] = (byte)(int)FullscreenFocusCanvas.longAnd(CheckboxPainter.field_h >> 40, 255L);
+        var2[1] = (byte)(int)FullscreenFocusCanvas.longAnd(255L, CheckboxPainter.field_h >> 8);
+        var2[0] = (byte)(int)FullscreenFocusCanvas.longAnd(CheckboxPainter.field_h >> 0, 255L);
+        var2[4] = (byte)(int)FullscreenFocusCanvas.longAnd(255L, CheckboxPainter.field_h >> 32);
+        var2[7] = (byte)(int)FullscreenFocusCanvas.longAnd(255L, CheckboxPainter.field_h >> 56);
         return var2;
     }
 
-    final static int a(byte param0, int param1, int param2) {
+    final static int getDaysInMonth(byte param0, int param1, int param2) {
         int var3 = 0;
         int var3Lifetime1;
         if (param2 != 1) {
           var3 = 54 / ((43 - param0) / 45);
           return gb.field_e[param2];
         }
-        if (NodeHashTableIterator.a(false, param1)) {
+        if (NodeHashTableIterator.isLeapYear(false, param1)) {
           return 29;
         }
         var3Lifetime1 = 54 / ((43 - param0) / 45);

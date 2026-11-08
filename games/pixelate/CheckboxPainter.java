@@ -48,7 +48,7 @@ final class CheckboxPainter implements WidgetPainter {
           try {
             var3 = "";
             if (param2 != null) {
-              var3 = DateOfBirthValidator.a(param2, (byte) 120);
+              var3 = DateOfBirthValidator.formatThrowable(param2, (byte) 120);
             }
             if (param1 != null) {
               if (param2 != null) {
@@ -57,13 +57,13 @@ final class CheckboxPainter implements WidgetPainter {
               var3 = var3 + param1;
             }
             FallingPieceView.printError(var3, 0);
-            var7 = qk.replaceAll(var3, ":", "%3a", -123);
-            var8 = qk.replaceAll(var7, "@", "%40", -128);
+            var7 = RetroBlock.replaceAll(var3, ":", "%3a", -123);
+            var8 = RetroBlock.replaceAll(var7, "@", "%40", -128);
             if (param0 != 1) {
               CheckboxPainter.a(-53);
             }
-            var9 = qk.replaceAll(var8, "&", "%26", -126);
-            var10 = qk.replaceAll(var9, "#", "%23", -127);
+            var9 = RetroBlock.replaceAll(var8, "&", "%26", -126);
+            var10 = RetroBlock.replaceAll(var9, "#", "%23", -127);
             if (null == TextButton.field_L) {
               return;
             }
@@ -159,7 +159,7 @@ final class CheckboxPainter implements WidgetPainter {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -201,7 +201,7 @@ final class CheckboxPainter implements WidgetPainter {
           this.checkboxHeight = param7;
           this.field_b = param1;
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "jo.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "jo.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ')');
         }
     }
 

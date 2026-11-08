@@ -6,10 +6,10 @@ final class fq extends MenuScreen {
     static String field_p;
     static int field_q;
 
-    public static void f(byte param0) {
+    public static void clearStatics(byte param0) {
         field_p = null;
         if (param0 > -120) {
-          fq.g((byte) 46);
+          fq.markTuhstatbutCookie((byte) 46);
         }
         field_o = null;
     }
@@ -97,7 +97,7 @@ final class fq extends MenuScreen {
         int stackIn_5_1 = 0;
         Sprite stackIn_7_2 = null;
         if (param0 >= -116) {
-          fq.g((byte) 97);
+          fq.markTuhstatbutCookie((byte) 97);
         }
         stackIn_5_1 = 35;
         if (ArrayWidgetContainer.isAccountUiActive((byte) 101) &&
@@ -109,9 +109,9 @@ final class fq extends MenuScreen {
         super.drawItemRow((byte) stackIn_5_1, stackIn_7_2, param1, param2);
     }
 
-    final static void a(aa param0, byte param1) {
+    final static void acceptChatMessage(ChatMessage param0, byte param1) {
         int var2_int = 0;
-        aa var3 = null;
+        ChatMessage var3 = null;
         int var4 = 0;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
@@ -155,7 +155,7 @@ final class fq extends MenuScreen {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param1).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -180,10 +180,10 @@ final class fq extends MenuScreen {
         }
     }
 
-    final static void g(byte param0) {
-        GreenGrowTheRushesBackground.setTuhstatbutCookie(AudioService.a(13867), -7624);
+    final static void markTuhstatbutCookie(byte param0) {
+        GreenGrowTheRushesBackground.setTuhstatbutCookie(AudioService.getApplet(13867), -7624);
         if (param0 >= -46) {
-          fq.g((byte) -70);
+          fq.markTuhstatbutCookie((byte) -70);
         }
     }
 
@@ -216,17 +216,17 @@ final class fq extends MenuScreen {
           if (ArrayWidgetContainer.isAccountUiActive((byte) 74)) {
             var2 = wo.field_a;
           } else {
-            if (aa.field_p == null) {
-              aa.field_p = PasswordValidator.getRankingTableRequest(3, (byte) 103, 1, 10, 0);
+            if (ChatMessage.field_p == null) {
+              ChatMessage.field_p = PasswordValidator.getRankingTableRequest(3, (byte) 103, 1, 10, 0);
             }
             var3_ref_ob = PieceTiming.field_e;
-            var4 = aa.field_p;
+            var4 = ChatMessage.field_p;
             if (var4.field_n) {
               if (var4.field_r != null) {
                 var2 = wo.field_a;
                 var5 = var4.field_r[of.field_a];
                 var20 = var4.field_l[of.field_a];
-                var7 = ge.a(HighscoresScreen.field_p, var4, of.field_a, -7402);
+                var7 = ge.findTableRow(HighscoresScreen.field_p, var4, of.field_a, -7402);
                 var8 = 16777215;
                 var9 = 0;
                 var10 = 16711680;

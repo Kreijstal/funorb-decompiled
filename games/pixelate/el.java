@@ -115,7 +115,7 @@ final class el {
         var13[7] = var12 + param5;
         var13[4] = param1 - var11;
         var13[6] = param1 + var11;
-        int[] var18 = ep.a(var17, -1);
+        int[] var18 = ep.clipPolygonToRaster(var17, -1);
         int[] var16 = var18;
         int[] var14 = var16;
         var7 = var14;

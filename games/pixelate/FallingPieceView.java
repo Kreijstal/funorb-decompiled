@@ -52,7 +52,7 @@ final class FallingPieceView {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
@@ -88,7 +88,7 @@ final class FallingPieceView {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
@@ -138,7 +138,7 @@ final class FallingPieceView {
           param3.writeShort(1276387944, param0);
           param3.writeByte(160, param2);
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "al.C(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "al.C(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 
@@ -146,7 +146,7 @@ final class FallingPieceView {
         if (param1 != 0) {
           return;
         }
-        System.out.println("Error: " + qk.replaceAll(param0, "%0a", "\n", -127));
+        System.out.println("Error: " + RetroBlock.replaceAll(param0, "%0a", "\n", -127));
     }
 
     FallingPieceView(Puzzle param0, PlayerBoard param1, BoardView param2) {
@@ -160,7 +160,7 @@ final class FallingPieceView {
           this.field_a = param0.field_n;
           this.updatePreviewPosition(-127);
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "al.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "al.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -258,7 +258,7 @@ final class FallingPieceView {
         if (null == fq.field_o) {
           stackIn_27_0 = 0;
         } else {
-          stackIn_27_0 = fo.field_t;
+          stackIn_27_0 = Kite.field_t;
         }
         var21 = stackIn_27_0;
         if (var21 == 0) {
@@ -378,7 +378,7 @@ final class FallingPieceView {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 

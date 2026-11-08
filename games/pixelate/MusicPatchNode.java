@@ -29,7 +29,7 @@ final class MusicPatchNode extends IntrusiveNode {
     int field_I;
     static Sprite field_s;
 
-    final static void a(java.awt.Component param0, int param1) {
+    final static void attachKeyboardListeners(java.awt.Component param0, int param1) {
         try {
           param0.setFocusTraversalKeysEnabled(false);
           if (param1 <= 34) {
@@ -38,11 +38,11 @@ final class MusicPatchNode extends IntrusiveNode {
           param0.addKeyListener(mc.field_r);
           param0.addFocusListener(mc.field_r);
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "in.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "in.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final static boolean e(int param0) {
+    final static boolean readPacketHeader(int param0) {
         if (-1 == BackgroundScene.field_b) {
           if (!QueuedInput.fillIncomingBuffer(1, false)) {
             return false;
@@ -64,7 +64,7 @@ final class MusicPatchNode extends IntrusiveNode {
         return QueuedInput.fillIncomingBuffer(BackgroundScene.field_b, false);
     }
 
-    final void a(boolean param0) {
+    final void releaseVoiceBuffers(boolean param0) {
         this.field_G = null;
         this.field_q = null;
         this.field_F = null;

@@ -32,11 +32,11 @@ final class vd {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    final static void appendChatHistory(boolean param0, aa param1) {
+    final static void appendChatHistory(boolean param0, ChatMessage param1) {
         int dupTemp$3 = 0;
         int dupTemp$0 = 0;
         int var3 = 0;
@@ -59,17 +59,17 @@ final class vd {
           }
           for (var2_intLifetime1 = 0; var2_intLifetime1 < AlphaContainer.field_L; var2_intLifetime1++) {
             if (param1.field_j == MenuScreen.field_e[var2_intLifetime1].field_j) {
-              dupTemp$3 = MenuScreen.field_e[var2_intLifetime1].a((byte) 123);
+              dupTemp$3 = MenuScreen.field_e[var2_intLifetime1].getVisibilityLevel((byte) 123);
               MarkerSlider.field_O[dupTemp$3] = MarkerSlider.field_O[dupTemp$3] + 1;
             }
           }
-          dupTemp$0 = param1.a((byte) -87);
+          dupTemp$0 = param1.getVisibilityLevel((byte) -87);
           MarkerSlider.field_O[dupTemp$0] = MarkerSlider.field_O[dupTemp$0] + 1;
           var2_intLifetime2 = 0;
           for (var3 = 0; var3 < AlphaContainer.field_L; var3++) {
             boolean decompiledFrameRemainder0 = true;
             if (MenuScreen.field_e[var3].field_j == param1.field_j) {
-              var4 = MenuScreen.field_e[var3].a((byte) -27);
+              var4 = MenuScreen.field_e[var3].getVisibilityLevel((byte) -27);
               if (MarkerSlider.field_O[var4] > InputQueue.field_d) {
                 MarkerSlider.field_O[var4] = MarkerSlider.field_O[var4] - 1;
                 decompiledFrameRemainder0 = false;
@@ -99,7 +99,7 @@ final class vd {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
         }
     }
 
@@ -112,11 +112,11 @@ final class vd {
     }
 
     final static void a(boolean param0, int param1, int param2, byte param3) {
-        NameSuggestionsPanel.a(param0, 99);
+        NameSuggestionsPanel.updateActivePopup(param0, 99);
         if (param3 != -86) {
           field_d = (String[]) null;
         }
-        ra.a(param2, param1, param0, -32268);
+        ra.updateQuickChatInput(param2, param1, param0, -32268);
     }
 
     final static void createFloatingSquares(boolean param0) {
@@ -128,7 +128,7 @@ final class vd {
         var2 = Pixelate.field_H ? 1 : 0;
         try {
           for (var1_int = 0; var1_int < 24; var1_int++) {
-            jm.field_d[var1_int] = new FloatingSquare();
+            Cloud.field_d[var1_int] = new FloatingSquare();
           }
           if (!param0) {
             var3 = (String) null;
@@ -138,7 +138,7 @@ final class vd {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw aa.addExceptionContext((Throwable) ((Object) var1), "vd.A(" + param0 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) var1), "vd.A(" + param0 + ')');
         }
     }
 

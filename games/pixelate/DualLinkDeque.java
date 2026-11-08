@@ -21,7 +21,7 @@ final class DualLinkDeque {
           var2 = VorbisSample.load(param0, "jagex logo2.packvorbis", "");
           var2.decodeAllToPcm();
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "nj.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "nj.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -74,12 +74,12 @@ final class DualLinkDeque {
           if (!GreenGrowTheRushesBackground.hasOpenNotice(114)) {
             if (null != ib.field_f &&
               ib.field_f.field_g) {
-              ln.a(49);
+              SoundVoice.closeFullscreenCanvas(49);
               NetworkGameClient.field_x.showPanel(param0 - 55844, new AccountNoticeDialog(NetworkGameClient.field_x, LinkButtonPainter.field_c));
             }
             return;
           }
-          NetworkGameClient.field_x.handlePointerEvents(qk.field_i, true, (byte) 99, nh.field_b);
+          NetworkGameClient.field_x.handlePointerEvents(RetroBlock.field_i, true, (byte) 99, nh.field_b);
           NetworkGameClient.field_x.updatePanels((byte) 111);
           while (DirectByteStorage.pollKeyEvent(126)) {
             NetworkGameClient.field_x.processKey(field_f, ke.field_a, false);
@@ -92,7 +92,7 @@ final class DualLinkDeque {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw aa.addExceptionContext((Throwable) ((Object) var1), "nj.E(" + param0 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) var1), "nj.E(" + param0 + ')');
         }
     }
 
@@ -120,7 +120,7 @@ final class DualLinkDeque {
           param1.secondaryNext.secondaryPrevious = param1;
           int var3_int = -65 % ((31 - param0) / 45);
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "nj.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "nj.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

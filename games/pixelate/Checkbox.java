@@ -21,7 +21,7 @@ final class Checkbox extends TextButton {
         try {
           this.field_M = param2 ? true : false;
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "h.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "h.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -30,7 +30,7 @@ final class Checkbox extends TextButton {
         try {
           this.field_y = field_X.field_t;
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "h.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "h.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -39,7 +39,7 @@ final class Checkbox extends TextButton {
         try {
           this.field_y = field_X.field_t;
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "h.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "h.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -48,7 +48,7 @@ final class Checkbox extends TextButton {
         super.activate(param0, param1, param2, param3);
     }
 
-    final static void a(int param0, Sprite param1) {
+    final static void renderToSprite(int param0, Sprite param1) {
         try {
           MidiPcmStream.pushRasterState(false);
           SoftwareRasterizer.setTarget(param1.pixels, param1.field_A, param1.field_B);
@@ -56,16 +56,16 @@ final class Checkbox extends TextButton {
             field_V = (Sprite[]) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "h.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "h.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static LoginMethod[] a(byte param0) {
+    final static LoginMethod[] getLoginMethods(byte param0) {
         if (param0 == -8) {
           return new LoginMethod[]{ig.field_e, vm.field_a, cd.field_c};
         }
         Sprite var2 = (Sprite) null;
-        Checkbox.a(-96, (Sprite) null);
+        Checkbox.renderToSprite(-96, (Sprite) null);
         return new LoginMethod[]{ig.field_e, vm.field_a, cd.field_c};
     }
 

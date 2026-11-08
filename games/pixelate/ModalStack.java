@@ -41,7 +41,7 @@ final class ModalStack extends SingleChildContainer {
           var3.field_N = true;
           var3.focusNext((UiComponent) (this), 27);
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "kn.J(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "kn.J(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

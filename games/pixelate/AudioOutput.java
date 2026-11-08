@@ -50,7 +50,7 @@ class AudioOutput {
         if (field_o) {
           var3 = var3 << 1;
         }
-        ArraySupport.a(param0, 0, var3);
+        ArraySupport.clearInts(param0, 0, var3);
         this.field_m = this.field_m - param1;
         if (this.rootStream != null &&
           this.field_m <= 0) {

@@ -73,7 +73,7 @@ final class SecondaryNodeHashTable {
           param1.secondaryNext.secondaryPrevious = param1;
           param1.field_q = param2;
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "vg.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "vg.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -103,7 +103,7 @@ final class SecondaryNodeHashTable {
         if (param1 < 10) {
           stackIn_5_0 = 0;
         } else {
-          stackIn_5_0 = RankingTableRequest.a(param1, (byte) 118);
+          stackIn_5_0 = RankingTableRequest.chooseGridBand(param1, (byte) 118);
         }
         var2 = stackIn_5_0;
         if (var2 == 0) {
@@ -323,27 +323,27 @@ final class SecondaryNodeHashTable {
           if (null != NodeHashTableIterator.field_e) {
             if (param0 >= 0) {
               decompiledFrameRemainder0 = (Pixelate.field_G == GameModeSelectScreen.field_s);
-              if ((decompiledFrameRemainder0) && (aa.field_f.position == 0 &&
+              if ((decompiledFrameRemainder0) && (ChatMessage.field_f.position == 0 &&
                 hm.monotonicMillis(64) > (ReflectionCheckRequest.field_m + 10000L))) {
-                aa.field_f.writeOpcode(param0, 15514);
+                ChatMessage.field_f.writeOpcode(param0, 15514);
               }
             } else {
-              if (aa.field_f.position == 0 &&
+              if (ChatMessage.field_f.position == 0 &&
                 hm.monotonicMillis(64) > (ReflectionCheckRequest.field_m + 10000L)) {
-                aa.field_f.writeOpcode(param0, 15514);
+                ChatMessage.field_f.writeOpcode(param0, 15514);
               }
             }
             if (decompiledFrameRemainder0) {
-              if (aa.field_f.position > 0) {
+              if (ChatMessage.field_f.position > 0) {
                 try {
-                  NodeHashTableIterator.field_e.write(aa.field_f.position, -98, 0, aa.field_f.payload);
+                  NodeHashTableIterator.field_e.write(ChatMessage.field_f.position, -98, 0, ChatMessage.field_f.payload);
                   ReflectionCheckRequest.field_m = hm.monotonicMillis(64);
                 } catch (java.io.IOException decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var2 = (IOException) (Object) decompiledCaughtException;
-                  na.a(true);
+                  na.closeGameSocket(true);
                 }
-                aa.field_f.position = 0;
+                ChatMessage.field_f.position = 0;
               }
               if (param1 == 10000) {
                 return;
@@ -352,7 +352,7 @@ final class SecondaryNodeHashTable {
               return;
             }
           }
-          aa.field_f.position = 0;
+          ChatMessage.field_f.position = 0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {

@@ -11,22 +11,22 @@ final class qn extends IntrusiveNode {
     byte[] field_r;
     static int field_o;
 
-    final static int e(int param0) {
+    final static int serviceArchiveConnection(int param0) {
         FloatingSquare.field_j.maintainArchives((byte) -2);
         if (param0 != 59) {
-          qn.a(-63);
+          qn.releaseStatics(-63);
         }
         if (Match.field_h.pollTransport(false)) {
           return 0;
         }
-        return ph.e(param0 + 25901);
+        return ph.pollServerConnection(param0 + 25901);
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_n = null;
         field_m = null;
         if (param0 != -1) {
-          qn.e(52);
+          qn.serviceArchiveConnection(52);
         }
         field_q = null;
         field_l = null;
@@ -89,7 +89,7 @@ final class qn extends IntrusiveNode {
             } else {
               stackIn_21_2 = "{...}";
             }
-            throw aa.addExceptionContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param2).append(')').toString());
+            throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -102,7 +102,7 @@ final class qn extends IntrusiveNode {
         try {
           this.field_r = param0;
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "qn.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "qn.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -146,7 +146,7 @@ final class qn extends IntrusiveNode {
           var7 = 0;
           var8 = param0.length();
           if (param3 >= -99) {
-            qn.e(-2);
+            qn.serviceArchiveConnection(-2);
           }
           for (var9 = 0; var9 < var8; var9++) {
             var10 = param0.charAt(var9);
@@ -198,7 +198,7 @@ final class qn extends IntrusiveNode {
           } else {
             stackIn_39_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(')').toString());
         }
     }
 

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ArraySupport {
-    final static void a(byte[] param0, int param1, byte[] param2, int param3, int param4) {
+    final static void copyBytes(byte[] param0, int param1, byte[] param2, int param3, int param4) {
         if (param0 != param2) {
           param4 = param4 + param1;
           param4 -= 7;
@@ -84,7 +84,7 @@ final class ArraySupport {
         }
     }
 
-    final static void a(int[] param0, int param1, int[] param2, int param3, int param4) {
+    final static void copyInts(int[] param0, int param1, int[] param2, int param3, int param4) {
         if (param0 != param2) {
           param4 = param4 + param1;
           param4 -= 7;
@@ -166,7 +166,7 @@ final class ArraySupport {
         }
     }
 
-    final static void a(int[] param0, int param1, int param2) {
+    final static void clearInts(int[] param0, int param1, int param2) {
         param2 = param1 + param2 - 7;
         while (param1 < param2) {
           param0[param1++] = 0;
@@ -184,7 +184,7 @@ final class ArraySupport {
         }
     }
 
-    final static void a(Object[] param0, int param1, Object[] param2, int param3, int param4) {
+    final static void copyReferences(Object[] param0, int param1, Object[] param2, int param3, int param4) {
         if (param0 != param2) {
           param4 = param4 + param1;
           param4 -= 7;

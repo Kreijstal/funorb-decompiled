@@ -2,5 +2,5 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 interface o {
-    public abstract void a(int param0, int param1, int param2);
+    public abstract void resizeView(int param0, int param1, int param2);
 }

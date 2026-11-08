@@ -29,7 +29,7 @@ final class InputQueue {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw aa.addExceptionContext((Throwable) ((Object) var2_ref), "ee.D(" + param0 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) var2_ref), "ee.D(" + param0 + ')');
         }
     }
 
@@ -79,7 +79,7 @@ final class InputQueue {
             }
             var6 = DisplayNameForm.findFriend(var4_ref_String, -106);
             var7 = var1.readString(5);
-            var8 = dh.a((CharSequence) ((Object) var4_ref_String), (byte) 100);
+            var8 = dh.normalizeDisplayName((CharSequence) ((Object) var4_ref_String), (byte) 100);
             if (null == var8) {
               var8 = var4_ref_String;
             }
@@ -116,11 +116,11 @@ final class InputQueue {
               return;
             }
             if (4 != var2) {
-              CheckboxPainter.reportClientError(1, "F1: " + jm.b(-8), (Throwable) null);
+              CheckboxPainter.reportClientError(1, "F1: " + Cloud.describePacketHistory(-8), (Throwable) null);
               if (param0 >= -89) {
                 return;
               }
-              na.a(true);
+              na.closeGameSocket(true);
               return;
             }
             ValidatedTextWidget.field_db = 1;
@@ -144,12 +144,12 @@ final class InputQueue {
           if (null == var6Lifetime1) {
             var6Lifetime1 = LoadingStepTracker.findFriend(var5Lifetime1, -1);
             if (null != var6Lifetime1) {
-              vm.field_b.put(false, var6Lifetime1, (long)dh.a((CharSequence) ((Object) var4_ref_StringLifetime1), (byte) 29).hashCode());
+              vm.field_b.put(false, var6Lifetime1, (long)dh.normalizeDisplayName((CharSequence) ((Object) var4_ref_StringLifetime1), (byte) 29).hashCode());
             }
           }
           if (null == var6Lifetime1) {
             var6Lifetime1 = new SocialListEntry();
-            vm.field_b.put(false, var6Lifetime1, (long)dh.a((CharSequence) ((Object) var4_ref_StringLifetime1), (byte) 70).hashCode());
+            vm.field_b.put(false, var6Lifetime1, (long)dh.normalizeDisplayName((CharSequence) ((Object) var4_ref_StringLifetime1), (byte) 70).hashCode());
             fieldTemp$1 = DialWidgetPainter.field_q;
             DialWidgetPainter.field_q = DialWidgetPainter.field_q + 1;
             var6Lifetime1.field_Kb = fieldTemp$1;
@@ -190,7 +190,7 @@ final class InputQueue {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw aa.addExceptionContext((Throwable) ((Object) var1_ref), "ee.C(" + param0 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) var1_ref), "ee.C(" + param0 + ')');
         }
     }
 
@@ -201,7 +201,7 @@ final class InputQueue {
         try {
           this.field_b.clear(77);
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "ee.G(" + param0 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "ee.G(" + param0 + ')');
         }
     }
 
@@ -228,7 +228,7 @@ final class InputQueue {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
-          throw aa.addExceptionContext((Throwable) ((Object) var3_ref), "ee.F(" + param0 + ',' + param1 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) var3_ref), "ee.F(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -245,7 +245,7 @@ final class InputQueue {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw aa.addExceptionContext((Throwable) ((Object) var1), "ee.H(" + param0 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) var1), "ee.H(" + param0 + ')');
         }
     }
 
@@ -275,7 +275,7 @@ final class InputQueue {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw aa.addExceptionContext((Throwable) (var4), "ee.E(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) (var4), "ee.E(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -300,7 +300,7 @@ final class InputQueue {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "ee.<init>()");
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "ee.<init>()");
         }
     }
 
@@ -317,7 +317,7 @@ final class InputQueue {
           var2 = 1;
           while (var2 < DateInputWidget.field_N.length) {
             var3 = DateInputWidget.field_N[var2];
-            ArraySupport.a(nd.field_c, var2 << 4, nd.field_c, var1_int, var3);
+            ArraySupport.copyInts(nd.field_c, var2 << 4, nd.field_c, var1_int, var3);
             var1_int = var1_int + var3;
             var2++;
             if (var4 != 0) {
@@ -328,7 +328,7 @@ final class InputQueue {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "ee.A(" + param0 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "ee.A(" + param0 + ')');
         }
     }
 
@@ -339,7 +339,7 @@ final class InputQueue {
             this.enqueue(-120, 48, 81);
           }
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "ee.B(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "ee.B(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 

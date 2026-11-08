@@ -12,7 +12,7 @@ final class IntKeyLookup {
     static int field_e;
     static int field_f;
 
-    final static void a(String param0, int param1, int param2, int param3, String param4) {
+    final static void setChatTabLabel(String param0, int param1, int param2, int param3, String param4) {
         if (param3 != 24092) {
           return;
         }
@@ -26,11 +26,11 @@ final class IntKeyLookup {
           nf.field_d.field_K = nf.field_d.field_K - rh.field_y.field_K;
           rh.field_y.field_D = rh.field_y.field_D - rh.field_y.field_K;
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "ap.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "ap.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final int a(int param0, byte param1) {
+    final int get(int param0, byte param1) {
         int var3;
         int var4;
         int var5;
@@ -53,7 +53,7 @@ final class IntKeyLookup {
         }
     }
 
-    final static Sprite[] a(int param0, int param1, int param2, int param3, int param4) {
+    final static Sprite[] createSolidBorderFrame(int param0, int param1, int param2, int param3, int param4) {
         Sprite[] var6 = new Sprite[9];
         Sprite[] var5 = var6;
         Sprite dupTemp$0 = cl.createSolidSprite(param4, param3, (byte) -108);
@@ -111,7 +111,7 @@ final class IntKeyLookup {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 

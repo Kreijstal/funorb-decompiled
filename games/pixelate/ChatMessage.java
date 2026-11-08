@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class aa {
+final class ChatMessage {
     long field_k;
     SceneWidget field_q;
     static RankingTableRequest field_p;
@@ -20,7 +20,7 @@ final class aa {
     String field_g;
     int field_i;
 
-    final int a(byte param0) {
+    final int getVisibilityLevel(byte param0) {
         int var2 = 0;
         int var2Lifetime1;
         if (this.field_a) {
@@ -37,7 +37,7 @@ final class aa {
           if (2 != ValidatedTextWidget.field_db) {
             return 0;
           }
-          if (CanvasRasterBuffer.a(this.field_n, (byte) 37)) {
+          if (CanvasRasterBuffer.isFriendName(this.field_n, (byte) 37)) {
             return 1;
           }
           return 0;
@@ -49,13 +49,13 @@ final class aa {
         if (2 != ValidatedTextWidget.field_db) {
           return 0;
         }
-        if (CanvasRasterBuffer.a(this.field_n, (byte) 37)) {
+        if (CanvasRasterBuffer.isFriendName(this.field_n, (byte) 37)) {
           return 1;
         }
         return 0;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_c = null;
         if (param0 < -126) {
           field_p = null;
@@ -63,7 +63,7 @@ final class aa {
           return;
         }
         String var2 = (String) null;
-        aa.addExceptionContext((Throwable) null, (String) null);
+        ChatMessage.addExceptionContext((Throwable) null, (String) null);
         field_p = null;
         field_f = null;
     }
@@ -79,7 +79,7 @@ final class aa {
         return var2;
     }
 
-    aa(boolean param0) {
+    ChatMessage(boolean param0) {
         this.field_b = OptionsScreen.field_s;
         this.field_n = OptionsScreen.field_t;
         this.field_h = cl.field_h;
@@ -98,7 +98,7 @@ final class aa {
         this.field_g = PictureStrip.field_j;
     }
 
-    aa(int param0, String param1, int param2, String param3, String param4) {
+    ChatMessage(int param0, String param1, int param2, String param3, String param4) {
         try {
           this.field_i = 0;
           this.field_d = 0;
@@ -113,7 +113,7 @@ final class aa {
           this.field_n = param1;
           this.field_l = null;
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "aa.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "aa.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 

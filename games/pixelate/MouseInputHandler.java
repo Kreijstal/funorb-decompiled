@@ -29,17 +29,17 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
     public final synchronized void focusLost(java.awt.event.FocusEvent param0) {
         try {
           if (fj.field_c != null) {
-            jm.field_o = 0;
+            Cloud.field_o = 0;
           }
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "wb.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "wb.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -61,11 +61,11 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           ReflectionCheckRequest.field_m = dupTemp$1;
           SpriteCheckboxPainter.field_c = dupTemp$1;
           if (ra.field_b.field_b != 1) {
-            GameModeSelectScreen.field_s = jm.field_q;
+            GameModeSelectScreen.field_s = Cloud.field_q;
           } else {
             try {
               NodeHashTableIterator.field_e = new BufferedSocket((java.net.Socket) (ra.field_b.field_e), OptionsScreen.field_p);
-              aa.field_f.position = 0;
+              ChatMessage.field_f.position = 0;
               var4 = MusicCrossfadeStream.field_o;
               var5 = var4;
               GameModeSelectScreen.field_s = ij.field_o;
@@ -74,12 +74,12 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
               BirthDateEntryPanel.field_G = stackIn_11_0;
               gb.field_d = stackIn_11_0;
               MarkerSlider.field_U = stackIn_11_0;
-              FallingPieceView.a(CipherPacketBuffer.field_q, (byte) 66, bj.field_a, aa.field_f, hf.field_n);
+              FallingPieceView.a(CipherPacketBuffer.field_q, (byte) 66, bj.field_a, ChatMessage.field_f, hf.field_n);
               SecondaryNodeHashTable.flushOutgoingPackets(-1, 10000);
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var2 = (IOException) (Object) decompiledCaughtException;
-              GameModeSelectScreen.field_s = jm.field_q;
+              GameModeSelectScreen.field_s = Cloud.field_q;
               ra.field_b = null;
               return true;
             }
@@ -102,7 +102,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
             QuickChatPhraseCache.field_j = true;
           }
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "wb.mouseDragged(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "wb.mouseDragged(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -130,7 +130,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -153,7 +153,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
             QuickChatPhraseCache.field_j = true;
           }
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "wb.mouseMoved(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "wb.mouseMoved(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -172,10 +172,10 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
             hm.monotonicMillis(64);
             if (javax.swing.SwingUtilities.isRightMouseButton(param0)) {
               tl.field_a = 2;
-              jm.field_o = 2;
+              Cloud.field_o = 2;
             } else {
               tl.field_a = 1;
-              jm.field_o = 1;
+              Cloud.field_o = 1;
             }
             var2_int = param0.getModifiers();
             if ((var2_int & 4) == 0) {
@@ -200,7 +200,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -213,7 +213,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
             QuickChatPhraseCache.field_j = true;
           }
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "wb.mouseEntered(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "wb.mouseEntered(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -227,7 +227,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         try {
           if (null != fj.field_c) {
             oi.field_c = 0;
-            jm.field_o = 0;
+            Cloud.field_o = 0;
             QuickChatPhraseCache.field_j = true;
             var2_int = param0.getModifiers();
             if ((var2_int & 16) == 0) {
@@ -251,7 +251,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
@@ -298,7 +298,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 

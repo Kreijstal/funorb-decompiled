@@ -18,7 +18,7 @@ final class rh extends IntrusiveNode {
     static String field_w;
     static String field_r;
 
-    final static void a(boolean param0, String param1, String[] param2, int param3) {
+    final static void handleRegistrationResult(boolean param0, String param1, String[] param2, int param3) {
         int var5 = 0;
         boolean stackIn_12_0 = false;
         RuntimeException stackIn_16_0 = null;
@@ -40,7 +40,7 @@ final class rh extends IntrusiveNode {
           } else {
             if (param3 >= 100 &&
               param3 <= 105) {
-              MouseWheelHandler.field_b = HowToPlayScreen.a((byte) 117, param2);
+              MouseWheelHandler.field_b = HowToPlayScreen.createSuggestionsResult((byte) 117, param2);
               return;
             }
             MouseWheelHandler.field_b = pa.a(param3, param1, (byte) -120);
@@ -62,11 +62,11 @@ final class rh extends IntrusiveNode {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param3).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param3).append(')').toString());
         }
     }
 
-    final static void b(byte param0) {
+    final static void drawBackgroundSquares(byte param0) {
         int var1 = -5 % ((param0 - 16) / 63);
         QuickChatMenu.drawFloatingSquares(false, 93);
     }
@@ -97,7 +97,7 @@ final class rh extends IntrusiveNode {
           this.field_k = param6;
           this.field_s = param2;
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "rh.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "rh.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
         }
     }
 

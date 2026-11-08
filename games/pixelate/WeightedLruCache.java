@@ -27,7 +27,7 @@ final class WeightedLruCache {
         try {
           this.remainingCapacity = this.remainingCapacity - param3;
           while (this.remainingCapacity < 0) {
-            var6 = (CacheReference) (this.field_g.a(113));
+            var6 = (CacheReference) (this.field_g.removeFirst(113));
             this.removeEntry(var6, -26133);
           }
           var6_ref = new StrongCacheReference(param0, param3);
@@ -35,7 +35,7 @@ final class WeightedLruCache {
           this.field_g.addLast((byte) 99, var6_ref);
           ((CacheReference) ((Object) var6_ref)).field_q = 0L;
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "le.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "le.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -46,12 +46,12 @@ final class WeightedLruCache {
             WeightedLruCache.resetAnimationFrameCounter(false);
           }
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "le.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "le.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
     final static void resetAnimationFrameCounter(boolean param0) {
-        jd.field_r = 0;
+        RasterState.field_r = 0;
         if (!param0) {
           WeightedLruCache.releaseStatics(-100);
         }
@@ -145,7 +145,7 @@ final class WeightedLruCache {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -183,7 +183,7 @@ final class WeightedLruCache {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 

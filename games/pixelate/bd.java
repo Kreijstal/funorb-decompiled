@@ -12,10 +12,10 @@ final class bd {
         if (param0 == 70) {
           return;
         }
-        bd.a((byte) -62, false, -83, 24);
+        bd.updateChatPanel((byte) -62, false, -83, 24);
     }
 
-    final static void a(byte param0, boolean param1, int param2, int param3) {
+    final static void updateChatPanel(byte param0, boolean param1, int param2, int param3) {
         int var4_int = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
@@ -23,7 +23,7 @@ final class bd {
         int var6 = 0;
         int var7 = 0;
         String var8 = null;
-        aa var9 = null;
+        ChatMessage var9 = null;
         var7 = Pixelate.field_H ? 1 : 0;
         try {
           if (MatchingTextValidator.field_o != ClientException.field_f.field_i) {
@@ -39,10 +39,10 @@ final class bd {
           if (HuffmanCodec.field_b <= 0) {
             return;
           }
-          r.b(-96);
+          r.layoutSlidingLobbyPanel(-96);
           ui.field_i.updateInputFullScreen(-28476, param1);
           if (td.field_b != null) {
-            if (!ln.field_q) {
+            if (!SoundVoice.field_q) {
               td.field_b = null;
             } else {
               td.field_b.handlePointerEvents(ui.field_i.screenY, param1, (byte) 99, ui.field_i.field_tb);
@@ -64,7 +64,7 @@ final class bd {
           }
           var9 = CacheReference.rebuildChatHistoryWidgets((byte) -110, fq.field_q, param2, MouseWheelHandler.field_c);
           if (var9 != null) {
-            fj.a(var9, (byte) 125);
+            fj.openChatMessageContextMenu(var9, (byte) 125);
           }
           var8 = pk.buildChatInputPrompt((byte) 88);
           if (var8 == null) {
@@ -75,11 +75,11 @@ final class bd {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw aa.addExceptionContext((Throwable) ((Object) var4), "bd.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) var4), "bd.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
-    final static boolean a(boolean param0) {
+    final static boolean shouldShowBootstrapLoadingScreen(boolean param0) {
         if (!param0) {
           field_a = (Sprite) null;
           if (hf.field_q < 20) {
@@ -111,7 +111,7 @@ final class bd {
         return false;
     }
 
-    final boolean b(int param0) {
+    final boolean isConnectionActive(int param0) {
         if (param0 != -21) {
           return true;
         }
@@ -127,7 +127,7 @@ final class bd {
         return true;
     }
 
-    final static void a(byte param0) {
+    final static void clearSocialLists(byte param0) {
         DualLinkNode var1 = null;
         int var2 = Pixelate.field_H ? 1 : 0;
         DualLinkNode var1Lifetime1;
@@ -152,7 +152,7 @@ final class bd {
           }
           ValidatedTextWidget.field_db = 0;
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "bd.A(" + param0 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "bd.A(" + param0 + ')');
         }
     }
 

@@ -48,7 +48,7 @@ final class TriangleMesh {
     short[] field_S;
     short field_j;
 
-    final void a(int param0, int param1, int param2, boolean param3, int param4) {
+    final void scaleVertices(int param0, int param1, int param2, boolean param3, int param4) {
         int var7 = Pixelate.field_H ? 1 : 0;
         int var6 = 0;
         if (!param3) {
@@ -60,7 +60,7 @@ final class TriangleMesh {
           this.vertexZ[var6] = (short)(this.vertexZ[var6] * param1 / param4);
           var6++;
         }
-        this.a(-125);
+        this.invalidateBounds(-125);
     }
 
     public static void releaseStatics(byte param0) {
@@ -142,17 +142,17 @@ final class TriangleMesh {
           this.vertexY[var5] = (short)(this.vertexY[var5] + param2);
           this.vertexZ[var5] = (short)(this.vertexZ[var5] + param1);
         }
-        this.a(-126);
+        this.invalidateBounds(-126);
     }
 
-    private final void a(int param0) {
+    private final void invalidateBounds(int param0) {
         if (param0 >= -122) {
           return;
         }
         this.field_Q = false;
     }
 
-    final static int b(byte param0) {
+    final static int pollMessageMenuSelection(byte param0) {
         int stackIn_31_0 = 0;
         RuntimeException decompiledCaughtException = null;
         int var1_int = 0;
@@ -178,7 +178,7 @@ final class TriangleMesh {
           }
           ScoreMarkerDemo.field_c.updatePointer(mi.legacyMenuOptionAt(BufferedRandomAccessFile.field_a, ji.field_c, (byte) -82), mi.legacyMenuOptionAt(ProxyAuthenticationException.field_d, StatusBar.field_k, (byte) -73), -1);
           if (param0 <= 74) {
-            TriangleMesh.b((byte) -77);
+            TriangleMesh.pollMessageMenuSelection((byte) -77);
           }
           if (ScoreMarkerDemo.field_c.isActivated(17)) {
             var1_int = 1;
@@ -189,12 +189,12 @@ final class TriangleMesh {
             var3 = BackgroundScene.field_h[ScoreMarkerDemo.field_c.selectedIndex];
             if (var3 == 2 ||
               var3 == 5) {
-              dh.a(0);
+              dh.closeLegacyMenu(0);
             }
           } else {
             if (var2 != 0 &&
               CanvasRasterBuffer.field_h != 2) {
-              dh.a(0);
+              dh.closeLegacyMenu(0);
             }
           }
           if (0 == var3 &&
@@ -203,7 +203,7 @@ final class TriangleMesh {
             var6 = (int)((10999L - var4) / 1000L);
             if (var6 <= 0) {
               var3 = 2;
-              bq.a(true, (byte) -65, 5);
+              bq.buildLegacyMenu(true, (byte) -65, 5);
             }
           }
           stackIn_31_0 = var3;
@@ -211,7 +211,7 @@ final class TriangleMesh {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw aa.addExceptionContext((Throwable) ((Object) var1), "rl.B(" + param0 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) var1), "rl.B(" + param0 + ')');
         }
     }
 

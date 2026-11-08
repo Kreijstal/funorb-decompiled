@@ -15,7 +15,7 @@ final class RankingTableRequest extends IntrusiveNode {
     int field_m;
     long[][] field_k;
 
-    final static int a(int param0, byte param1) {
+    final static int chooseGridBand(int param0, byte param1) {
         int var5 = 0;
         int var2_int = 0;
         RuntimeException var2 = null;
@@ -57,11 +57,11 @@ final class RankingTableRequest extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.addExceptionContext((Throwable) ((Object) var2), "ue.C(" + param0 + ',' + param1 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) var2), "ue.C(" + param0 + ',' + param1 + ')');
         }
     }
 
-    final static boolean a(byte param0) {
+    final static boolean hasPendingPopupWidget(byte param0) {
         int var1 = -8 % ((18 - param0) / 51);
         return ResizableModalPanel.field_W != null ? true : false;
     }
@@ -75,7 +75,7 @@ final class RankingTableRequest extends IntrusiveNode {
         }
     }
 
-    final static void b(int param0, byte param1) {
+    final static void resendProgressRecords(int param0, byte param1) {
         IntrusiveNode var2 = null;
         int var3 = 0;
         hf var4 = null;
@@ -100,7 +100,7 @@ final class RankingTableRequest extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw aa.addExceptionContext((Throwable) ((Object) var2_ref), "ue.B(" + param0 + ',' + param1 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) var2_ref), "ue.B(" + param0 + ',' + param1 + ')');
         }
     }
 

@@ -73,7 +73,7 @@ final class NodeHashTableIterator implements Iterator {
         return false;
     }
 
-    final static boolean a(boolean param0, int param1) {
+    final static boolean isLeapYear(boolean param0, int param1) {
         if (param1 < 0) {
           return 0 == (1 + param1) % 4 ? true : false;
         }
@@ -95,7 +95,7 @@ final class NodeHashTableIterator implements Iterator {
         return true;
     }
 
-    private final void a(byte param0) {
+    private final void reset(byte param0) {
         this.field_b = 1;
         this.field_d = null;
         this.field_a = this.field_g.field_e[0].field_a;
@@ -109,9 +109,9 @@ final class NodeHashTableIterator implements Iterator {
         this.field_d = null;
         try {
           this.field_g = param0;
-          this.a((byte) -39);
+          this.reset((byte) -39);
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "sh.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "sh.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

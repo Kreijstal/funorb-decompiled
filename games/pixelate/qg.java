@@ -21,7 +21,7 @@ final class qg {
         CipherPacketBuffer var3 = null;
         CipherPacketBuffer var3Lifetime1;
         if (!param2) {
-          var3 = aa.field_f;
+          var3 = ChatMessage.field_f;
           var3.writeOpcode(param1, 15514);
           var3.writeByte(160, 3);
           var3.writeByte(160, 9);
@@ -29,7 +29,7 @@ final class qg {
           return;
         }
         field_c = (String) null;
-        var3Lifetime1 = aa.field_f;
+        var3Lifetime1 = ChatMessage.field_f;
         var3Lifetime1.writeOpcode(param1, 15514);
         var3Lifetime1.writeByte(160, 3);
         var3Lifetime1.writeByte(160, 9);

@@ -46,7 +46,7 @@ final class AccountMessagePanel extends UiContainer implements ButtonListener {
         this.field_S = var3;
         this.buttonCount = param1;
         if (param0 > -57) {
-          AccountMessagePanel.b(94, 86, 20);
+          AccountMessagePanel.handleQuickChatKey(94, 86, 20);
         }
     }
 
@@ -61,7 +61,7 @@ final class AccountMessagePanel extends UiContainer implements ButtonListener {
           var4_int = this.field_N == null ? 0 : this.field_O.paragraphHeight(this.field_N, 260, this.field_O.maxAscent);
           this.setBounds(288, (byte) 55, 0, 0, 22 + var4_int);
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "vl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "vl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -102,11 +102,11 @@ final class AccountMessagePanel extends UiContainer implements ButtonListener {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
-    final void a(int param0, int param1, String param2) {
+    final void addActionButton(int param0, int param1, String param2) {
         int var4_int = 0;
         try {
           var4_int = this.buttonCount;
@@ -114,7 +114,7 @@ final class AccountMessagePanel extends UiContainer implements ButtonListener {
           this.field_S[var4_int] = this.appendButton(1707, (UiListener) (this), param2);
           this.field_I[var4_int] = param0;
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "vl.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "vl.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -157,14 +157,14 @@ final class AccountMessagePanel extends UiContainer implements ButtonListener {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
-    final static boolean b(int param0, int param1, int param2) {
+    final static boolean handleQuickChatKey(int param0, int param1, int param2) {
         boolean stackIn_9_0 = false;
         if (ke.field_a == 13) {
-          SoundCache.a(true);
+          SoundCache.closeQuickChatIfOpen(true);
           return true;
         }
         if (param0 == ke.field_a) {

@@ -80,11 +80,11 @@ final class DialWidgetPainter implements WidgetPainter {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
-    final static void b(int param0) {
+    final static void tickFloatingSquares(int param0) {
         int var2 = 0;
         FloatingSquare[] var1 = null;
         FloatingSquare var3 = null;
@@ -94,7 +94,7 @@ final class DialWidgetPainter implements WidgetPainter {
         RuntimeException var1_ref = null;
         var4 = Pixelate.field_H ? 1 : 0;
         try {
-          var5 = jm.field_d;
+          var5 = Cloud.field_d;
           var1 = var5;
           for (var2 = param0; var2 < var5.length; var2++) {
             var3 = var5[var2];
@@ -104,11 +104,11 @@ final class DialWidgetPainter implements WidgetPainter {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw aa.addExceptionContext((Throwable) ((Object) var1_ref), "f.C(" + param0 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) var1_ref), "f.C(" + param0 + ')');
         }
     }
 
-    final static boolean a(CharSequence param0, byte param1, boolean param2) {
+    final static boolean isValidSocialName(CharSequence param0, byte param1, boolean param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -129,7 +129,7 @@ final class DialWidgetPainter implements WidgetPainter {
             if (param0.length() <= var3_int) {
               return true;
             }
-            if (HuffmanCodec.a(param0.charAt(var3_int), -67)) {
+            if (HuffmanCodec.isNameChar(param0.charAt(var3_int), -67)) {
               var3_int++;
               continue;
             }
@@ -146,7 +146,7 @@ final class DialWidgetPainter implements WidgetPainter {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -179,7 +179,7 @@ final class DialWidgetPainter implements WidgetPainter {
           this.field_k = param5;
           this.field_r = param3;
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "f.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "f.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 

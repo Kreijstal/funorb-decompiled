@@ -31,7 +31,7 @@ final class dn implements hj {
           var8 = 111 / ((75 - param1) / 39);
           var7 = new ConditionalTextValue(param6);
           var9 = new ConditionalTextValue(param0);
-          stackIn_1_0 = cn.a(param3, param2, -124, param5, var9, param4, var7);
+          stackIn_1_0 = cn.performAccountServerRequest(param3, param2, -124, param5, var9, param4, var7);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -55,7 +55,7 @@ final class dn implements hj {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 

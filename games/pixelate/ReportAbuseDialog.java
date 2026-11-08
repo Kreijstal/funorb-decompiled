@@ -263,7 +263,7 @@ final class ReportAbuseDialog extends SceneWidget {
             this.field_Qb.field_zb = OptionsScreen.buildNineSliceSprites(8421504, 16, 11579568, this.field_Qb.height, 2105376, 3);
             var23 = 13 + (var19 + 13);
             var24 = var17Lifetime5 + (24 + var22) + 10;
-            var25 = ui.a(param2, param0, var23, (byte) -1);
+            var25 = ui.fitHorizontalPosition(param2, param0, var23, (byte) -1);
             var26 = ScorePopup.fitVerticalPosition(var24, param1, param3, (byte) 110);
             this.setBounds(var26, var24, var25, 256, var23);
             return;
@@ -281,7 +281,7 @@ final class ReportAbuseDialog extends SceneWidget {
           this.field_Qb.field_zb = OptionsScreen.buildNineSliceSprites(8421504, 16, 11579568, this.field_Qb.height, 2105376, 3);
           var18Lifetime1 = 13 - (-var15_int - 13);
           var19Lifetime1 = 34 + var16Lifetime1;
-          var20Lifetime1 = ui.a(param2, param0, var18Lifetime1, (byte) -1);
+          var20Lifetime1 = ui.fitHorizontalPosition(param2, param0, var18Lifetime1, (byte) -1);
           var21Lifetime1 = ScorePopup.fitVerticalPosition(var19Lifetime1, param1, param3, (byte) 32);
           this.setBounds(var21Lifetime1, var19Lifetime1, var20Lifetime1, 256, var18Lifetime1);
           return;
@@ -331,7 +331,7 @@ final class ReportAbuseDialog extends SceneWidget {
           } else {
             stackIn_70_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_51_0), ((StringBuilder) (Object) stackIn_69_1).append(stackIn_70_2).append(',').append(param12).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_51_0), ((StringBuilder) (Object) stackIn_69_1).append(stackIn_70_2).append(',').append(param12).append(')').toString());
         }
     }
 
@@ -378,7 +378,7 @@ final class ReportAbuseDialog extends SceneWidget {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -550,7 +550,7 @@ final class ReportAbuseDialog extends SceneWidget {
           LoginMethod.field_f = new SceneWidget(0L, var8);
           LoginMethod.field_f.field_zb = FallingPieceView.trimSpriteCanvases(false, SocketConnector.loadRgbSpritesByName("heading", "lobby", (byte) 47, param1));
           ProxySocketConnector.field_k = new SceneWidget(0L, (SceneWidget) null);
-          ProxySocketConnector.field_k.field_zb = AccountNamePrompt.a(false, false, 4210752, 120, true, 8421504);
+          ProxySocketConnector.field_k.field_zb = AccountNamePrompt.buildCrownSprites(false, false, 4210752, 120, true, 8421504);
           ConditionalTextValue.field_g = new SceneWidget(0L, (SceneWidget) null);
           ConditionalTextValue.field_g.field_zb = OptionsScreen.buildNineSliceSprites(6316128, 16, 6316128, 114, 1, 3);
           SoundCache.field_c = new SceneWidget(0L, (SceneWidget) null);
@@ -564,16 +564,16 @@ final class ReportAbuseDialog extends SceneWidget {
           Vector3.field_f.field_H = bi.loadSprite("lobby", "closebutton", param1, (byte) -127);
           Vector3.field_f.field_B = bi.loadSprite("lobby", "closebutton_mouseover", param1, (byte) -106);
           ff.field_j = new SceneWidget(0L, var8);
-          ff.field_j.field_zb = AccountNamePrompt.a(true, true, 2039583, 40, true, 3815994);
+          ff.field_j.field_zb = AccountNamePrompt.buildCrownSprites(true, true, 2039583, 40, true, 3815994);
           QuickChatPhraseCache.field_l = new SceneWidget(0L, var10);
           QuickChatPhraseCache.field_l.field_C = 2;
-          QuickChatPhraseCache.field_l.field_zb = AccountNamePrompt.a(true, false, 2039583, 30, true, 3815994);
+          QuickChatPhraseCache.field_l.field_zb = AccountNamePrompt.buildCrownSprites(true, false, 2039583, 30, true, 3815994);
           AccountRequestDialog.field_mb = new SceneWidget(0L, var10);
           AccountRequestDialog.field_mb.field_C = 2;
-          AccountRequestDialog.field_mb.field_zb = AccountNamePrompt.a(false, false, 2039583, 30, true, 3815994);
+          AccountRequestDialog.field_mb.field_zb = AccountNamePrompt.buildCrownSprites(false, false, 2039583, 30, true, 3815994);
           ni.field_s = new SceneWidget(0L, var10);
           ni.field_s.field_C = 2;
-          ni.field_s.field_zb = AccountNamePrompt.a(false, true, 2039583, 30, true, 3815994);
+          ni.field_s.field_zb = AccountNamePrompt.buildCrownSprites(false, true, 2039583, 30, true, 3815994);
           TextFieldValidator.field_h = new SceneWidget(0L, (SceneWidget) null);
           TextFieldValidator.field_h.verticalAlignment = 1;
           TextFieldValidator.field_h.field_N = 13421772;
@@ -590,31 +590,31 @@ final class ReportAbuseDialog extends SceneWidget {
           var15.field_mb = fq.field_q;
           var15.font = (BitmapFont) ((Object) var7);
           ArchiveIndex.field_l = new SceneWidget(0L, TextFieldValidator.field_h);
-          ArchiveIndex.field_l.field_zb = AccountNamePrompt.a(false, false, 2236962, 16, true, 2236962);
+          ArchiveIndex.field_l.field_zb = AccountNamePrompt.buildCrownSprites(false, false, 2236962, 16, true, 2236962);
           ArchiveIndex.field_l.field_C = 2;
-          qk.field_d = new SceneWidget(0L, TextFieldValidator.field_h);
-          qk.field_d.field_zb = AccountNamePrompt.a(false, false, 1513239, 16, true, 1513239);
-          qk.field_d.field_C = 2;
+          RetroBlock.field_d = new SceneWidget(0L, TextFieldValidator.field_h);
+          RetroBlock.field_d.field_zb = AccountNamePrompt.buildCrownSprites(false, false, 1513239, 16, true, 1513239);
+          RetroBlock.field_d.field_C = 2;
           if (param0 >= -117) {
             return;
           }
           of.field_i = new SceneWidget(0L, ArchiveIndex.field_l);
           of.field_i.applyStyle(-27813, dn.field_c);
-          SceneWidget.field_T = new SceneWidget(0L, qk.field_d);
+          SceneWidget.field_T = new SceneWidget(0L, RetroBlock.field_d);
           SceneWidget.field_T.applyStyle(-27813, dn.field_c);
           var16 = SocketConnector.loadRgbSpritesByName("button_mouseover", "lobby", (byte) 47, param1);
           NameSuggestionsPanel.field_O = new ContextActionMenu(SoundCache.field_c, var12, TextFieldValidator.field_h, dn.field_c, 3, 2, PlayerBoard.field_q, 3, fq.field_q);
-          lc.field_q = new SceneWidget(0L, dn.field_c);
-          lc.field_q.selectedOffsetX = 1;
-          lc.field_q.field_Q = 1;
-          lc.field_q.field_hb = 1;
-          lc.field_q.field_ab = var16;
-          lc.field_q.field_zb = var13;
-          lc.field_q.field_V = 1;
-          lc.field_q.field_bb = SocketConnector.loadRgbSpritesByName("button_mouseheld", "lobby", (byte) 47, param1);
-          lc.field_q.field_eb = SocketConnector.loadRgbSpritesByName("button_active", "lobby", (byte) 47, param1);
-          lc.field_q.field_M = SocketConnector.loadRgbSpritesByName("button_disabled", "lobby", (byte) 47, param1);
-          lc.field_q.horizontalAlignment = 1;
+          RankingQuery.field_q = new SceneWidget(0L, dn.field_c);
+          RankingQuery.field_q.selectedOffsetX = 1;
+          RankingQuery.field_q.field_Q = 1;
+          RankingQuery.field_q.field_hb = 1;
+          RankingQuery.field_q.field_ab = var16;
+          RankingQuery.field_q.field_zb = var13;
+          RankingQuery.field_q.field_V = 1;
+          RankingQuery.field_q.field_bb = SocketConnector.loadRgbSpritesByName("button_mouseheld", "lobby", (byte) 47, param1);
+          RankingQuery.field_q.field_eb = SocketConnector.loadRgbSpritesByName("button_active", "lobby", (byte) 47, param1);
+          RankingQuery.field_q.field_M = SocketConnector.loadRgbSpritesByName("button_disabled", "lobby", (byte) 47, param1);
+          RankingQuery.field_q.horizontalAlignment = 1;
           ab.field_a = new SceneWidget(0L, dn.field_c);
           ab.field_a.horizontalAlignment = 1;
           ab.field_a.field_zb = FallingPieceView.trimSpriteCanvases(false, SocketConnector.loadRgbSpritesByName("tab_inactive", "lobby", (byte) 47, param1));
@@ -735,7 +735,7 @@ final class ReportAbuseDialog extends SceneWidget {
           } else {
             stackIn_37_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(')').toString());
         }
     }
 
@@ -790,7 +790,7 @@ final class ReportAbuseDialog extends SceneWidget {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 

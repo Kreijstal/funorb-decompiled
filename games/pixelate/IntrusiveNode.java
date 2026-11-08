@@ -13,7 +13,7 @@ class IntrusiveNode {
     static String field_i;
     IntrusiveNode previous;
 
-    final static void a(String[] args, ResourceArchive param1, int[] param2, byte param3, Sprite[][] param4, int param5, byte[] param6, Sprite[][] param7, String[] param8, String[][] param9, String[][] param10, String[] param11, int param12, int param13, byte[] param14) {
+    final static void initializeLobbyWidgets(String[] args, ResourceArchive param1, int[] param2, byte param3, Sprite[][] param4, int param5, byte[] param6, Sprite[][] param7, String[] param8, String[][] param9, String[][] param10, String[] param11, int param12, int param13, byte[] param14) {
         IconTextComponent[] array$0 = null;
         IconTextComponent[] array$1 = null;
         IconTextComponent[] array$2 = null;
@@ -92,16 +92,16 @@ class IntrusiveNode {
           StripedProgressBar.field_O = new SceneWidget(0L, (SceneWidget) null);
           TextTableInitializer.field_g = new SceneWidget(0L, QuickChatPhraseCache.field_l, qn.field_m);
           l.field_s = new SceneWidget(0L, ni.field_s, rh.field_m);
-          jm.field_b = new ScrollContainer(0L, new SceneWidget(0L, (SceneWidget) null), ff.field_g, ug.field_s);
+          Cloud.field_b = new ScrollContainer(0L, new SceneWidget(0L, (SceneWidget) null), ff.field_g, ug.field_s);
           StripedProgressBar.field_O.addChild(TextTableInitializer.field_g, (byte) 26);
           if (DialWidgetPainter.field_n) {
             StripedProgressBar.field_O.addChild(l.field_s, (byte) 26);
           }
-          StripedProgressBar.field_O.addChild(jm.field_b, (byte) 26);
-          jm.field_b.field_Ib.applyStyle(-27813, TextFieldValidator.field_h);
-          var23 = jm.field_b.field_Ib;
+          StripedProgressBar.field_O.addChild(Cloud.field_b, (byte) 26);
+          Cloud.field_b.field_Ib.applyStyle(-27813, TextFieldValidator.field_h);
+          var23 = Cloud.field_b.field_Ib;
           var24 = var23;
-          jm.field_b.field_Ib.verticalAlignment = 1;
+          Cloud.field_b.field_Ib.verticalAlignment = 1;
           var24.horizontalAlignment = 1;
           ValidatedTextWidget.field_lb = new SceneWidget(0L, TextFieldValidator.field_h);
           ValidatedTextWidget.field_lb.horizontalAlignment = 1;
@@ -110,13 +110,13 @@ class IntrusiveNode {
           DiskCacheWorker.field_a = new SceneWidget(0L, ff.field_a);
           BlastFromThePastBackground.field_n = new SceneWidget(0L, QuickChatPhraseCache.field_l, OptionsScreen.field_w);
           if (param3 < 108) {
-            IntrusiveNode.d(41);
+            IntrusiveNode.releaseStatics(41);
           }
           IsaacRandom.field_b = new SceneWidget(0L, AccountRequestDialog.field_mb, ViewportController.field_u);
           LoginDialog.field_pb = new SceneWidget(0L, AccountRequestDialog.field_mb, nk.field_c);
           LoginForm.field_P = new SceneWidget(0L, AccountRequestDialog.field_mb, MusicPatchPcmStream.field_q);
           PasswordValidator.field_o = new SceneWidget(0L, AccountRequestDialog.field_mb, MatchController.field_b);
-          SocketJs5Transport.field_t = new SceneWidget(0L, ni.field_s, df.field_m);
+          SocketJs5Transport.field_t = new SceneWidget(0L, ni.field_s, StatsRequest.field_m);
           ReflectionCheckRequest.field_k = new ScrollContainer(0L, new SceneWidget(0L, (SceneWidget) null), ff.field_g, ug.field_s);
           lg.field_c = new SceneWidget(0L, PicturePreview.field_k, DualLinkNode.field_m.toUpperCase());
           lg.field_c.field_rb = DialWidgetPainter.field_n;
@@ -150,12 +150,12 @@ class IntrusiveNode {
             MidiPcmStream.field_E.addChild(lg.field_c, (byte) 26);
           }
           MidiPcmStream.field_E.addChild(MusicPatchNode.field_p, (byte) 26);
-          jm.field_h = new SceneWidget(0L, TextFieldValidator.field_h);
-          jm.field_h.verticalAlignment = 0;
-          jm.field_h.horizontalAlignment = 1;
+          Cloud.field_h = new SceneWidget(0L, TextFieldValidator.field_h);
+          Cloud.field_h.verticalAlignment = 0;
+          Cloud.field_h.horizontalAlignment = 1;
           DelegatingCanvas.field_h = new SceneWidget(0L, nk.field_f, ig.field_c.toUpperCase());
           TickClock.field_e = new SceneWidget(0L, cm.field_o);
-          TickClock.field_e.addChild(jm.field_h, (byte) 26);
+          TickClock.field_e.addChild(Cloud.field_h, (byte) 26);
           TickClock.field_e.addChild(DelegatingCanvas.field_h, (byte) 26);
           an.field_a = new SceneWidget(0L, ff.field_g);
           an.field_a.applyStyle(-27813, TextFieldValidator.field_h);
@@ -177,16 +177,16 @@ class IntrusiveNode {
           ValidatedTextWidget.field_kb = new SceneWidget(0L, LoginForm.field_R, ra.field_f.toUpperCase());
           VerticalScrollbar.field_Qb = new SceneWidget(0L, LoginMethod.field_f);
           dc.field_a = new SceneWidget(0L, ff.field_a);
-          sm.field_m = new SceneWidget(0L, ff.field_j, og.field_n.toUpperCase());
+          sm.field_m = new SceneWidget(0L, ff.field_j, SaveDataRequest.field_n.toUpperCase());
           AccountTermsPanel.field_L = new IconTextComponent[param12 + 4][];
           dh.field_b = new SceneWidget[param12 + 4];
-          dh.field_b[0] = new SceneWidget(0L, qk.field_d, cd.field_f);
+          dh.field_b[0] = new SceneWidget(0L, RetroBlock.field_d, cd.field_f);
           AccountTermsPanel.field_L[0] = new IconTextComponent[6];
           for (var17_int = 0; 5 > var17_int; var17_int++) {
             AccountTermsPanel.field_L[0][var17_int + 1] = new IconTextComponent(0L, EmailValidator.field_o, (SceneWidget) null, dn.field_c, DraggableWidget.field_P[var17_int], AchievementsScreen.field_p[var17_int]);
           }
           if (LinkButtonPainter.field_a.length >= 2) {
-            dh.field_b[1] = new SceneWidget(0L, qk.field_d, pk.field_e);
+            dh.field_b[1] = new SceneWidget(0L, RetroBlock.field_d, pk.field_e);
             array$0 = new IconTextComponent[LinkButtonPainter.field_a.length + 1];
             AccountTermsPanel.field_L[1] = array$0;
             AccountTermsPanel.field_L[1][0] = new IconTextComponent(0L, EmailValidator.field_o, (SceneWidget) null, dn.field_c, (Sprite) null, fg.field_a);
@@ -194,10 +194,10 @@ class IntrusiveNode {
               AccountTermsPanel.field_L[1][var17_intLifetime1 + 1] = new IconTextComponent(0L, EmailValidator.field_o, (SceneWidget) null, dn.field_c, (Sprite) null, Integer.toString(LinkButtonPainter.field_a[var17_intLifetime1]));
             }
           }
-          dh.field_b[2] = new SceneWidget(0L, qk.field_d, LobbyGame.field_Xb);
+          dh.field_b[2] = new SceneWidget(0L, RetroBlock.field_d, LobbyGame.field_Xb);
           AccountTermsPanel.field_L[2] = new IconTextComponent[]{new IconTextComponent(0L, EmailValidator.field_o, (SceneWidget) null, dn.field_c, (Sprite) null, fg.field_a), new IconTextComponent(0L, EmailValidator.field_o, (SceneWidget) null, dn.field_c, PuzzlePieceQueue.field_d[0], ValidatedTextWidget.field_eb), new IconTextComponent(0L, EmailValidator.field_o, (SceneWidget) null, dn.field_c, PuzzlePieceQueue.field_d[1], ij.field_t)};
           if (ff.field_i > 1) {
-            dh.field_b[3] = new SceneWidget(0L, qk.field_d, MatchController.field_c);
+            dh.field_b[3] = new SceneWidget(0L, RetroBlock.field_d, MatchController.field_c);
             array$1 = new IconTextComponent[1 + ff.field_i];
             AccountTermsPanel.field_L[3] = array$1;
             AccountTermsPanel.field_L[3][0] = new IconTextComponent(0L, EmailValidator.field_o, (SceneWidget) null, dn.field_c, (Sprite) null, fg.field_a);
@@ -206,7 +206,7 @@ class IntrusiveNode {
             }
           }
           for (var17_intLifetime3 = 0; param12 > var17_intLifetime3; var17_intLifetime3++) {
-            dh.field_b[4 + var17_intLifetime3] = new SceneWidget(0L, qk.field_d, jk.field_e[var17_intLifetime3]);
+            dh.field_b[4 + var17_intLifetime3] = new SceneWidget(0L, RetroBlock.field_d, jk.field_e[var17_intLifetime3]);
             array$2 = new IconTextComponent[1 + cm.bitAnd(255, (int) PasswordValidator.field_s[var17_intLifetime3])];
             AccountTermsPanel.field_L[4 + var17_intLifetime3] = array$2;
             AccountTermsPanel.field_L[var17_intLifetime3 + 4][0] = new IconTextComponent(0L, EmailValidator.field_o, (SceneWidget) null, dn.field_c, (Sprite) null, fg.field_a);
@@ -344,11 +344,11 @@ class IntrusiveNode {
           } else {
             stackIn_110_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_79_0), ((StringBuilder) (Object) stackIn_109_1).append(stackIn_110_2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_79_0), ((StringBuilder) (Object) stackIn_109_1).append(stackIn_110_2).append(')').toString());
         }
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         field_g = null;
         field_d = null;
         field_i = null;

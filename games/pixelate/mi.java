@@ -20,7 +20,7 @@ final class mi extends MenuScreen {
         if (param0 != 11) {
           mi.layoutLobbyPanels(false);
         }
-        String var8 = var7 + " " + ub.replaceCharacter(AlphaContainer.a(PicturePreview.getUnsavedDataWarning(param0 - 99, false, var3 != 0, var2 != 0), param0 ^ 50, new String[]{ScoreMarkerDemo.field_i}), param0 - 11, "<br><br>", '#');
+        String var8 = var7 + " " + ub.replaceCharacter(AlphaContainer.formatTemplate(PicturePreview.getUnsavedDataWarning(param0 - 99, false, var3 != 0, var2 != 0), param0 ^ 50, new String[]{ScoreMarkerDemo.field_i}), param0 - 11, "<br><br>", '#');
         BinaryBitmapFont var5 = qj.field_e;
         int var6 = 1 + var5.maxDescent + var5.maxAscent;
         var5.drawParagraph(var8, 50, 150, 540, 10 * var6, 16777215, 0, 1, 0, var6);
@@ -31,25 +31,25 @@ final class mi extends MenuScreen {
         int var2;
         ph var3;
         var2 = Pixelate.field_H ? 1 : 0;
-        if (0 == ki.field_f) {
+        if (0 == KiteTailSegment.field_f) {
           if (MatchController.field_q != -1) {
             MatchController.field_q = -1;
           }
           var3 = (ph) (AccountRegistrationPanel.field_Y.removeFirst(-28918));
           if (var3 != null) {
             MatchController.field_q = var3.field_k;
-            ki.field_f = 300;
+            KiteTailSegment.field_f = 300;
             MatchHud.field_a = qj.field_e.textWidth(GameApplet.field_n[MatchController.field_q]) + 56;
             ValidatedTextWidget.field_bb = 50 + MatchHud.field_a;
           }
         } else {
-          ki.field_f = ki.field_f - 1;
-          if (ki.field_f < 16) {
-            var1 = 16 - ki.field_f;
+          KiteTailSegment.field_f = KiteTailSegment.field_f - 1;
+          if (KiteTailSegment.field_f < 16) {
+            var1 = 16 - KiteTailSegment.field_f;
             ValidatedTextWidget.field_bb = var1 * (var1 * (50 + MatchHud.field_a)) >> 8;
           } else {
-            if (284 < ki.field_f) {
-              var1 = ki.field_f - 284;
+            if (284 < KiteTailSegment.field_f) {
+              var1 = KiteTailSegment.field_f - 284;
               ValidatedTextWidget.field_bb = var1 * (MatchHud.field_a + 50) * var1 >> 8;
             }
           }
@@ -151,13 +151,13 @@ final class mi extends MenuScreen {
             if (ij.field_o == GameModeSelectScreen.field_s) {
               if (param4) {
                 var10 = (String) null;
-                li.field_g = FloatingSquare.createLoginCredentials(param2, (String) null, false, RisingBubble.field_b, 83);
+                FireworkDisplay.field_g = FloatingSquare.createLoginCredentials(param2, (String) null, false, RisingBubble.field_b, 83);
               } else {
-                li.field_g = NanoTickClock.createLoginCredentials(param2, false, -61, param5);
+                FireworkDisplay.field_g = NanoTickClock.createLoginCredentials(param2, false, -61, param5);
               }
-              aa.field_f.position = 0;
-              aa.field_f.writeByte(160, 14);
-              aa.field_f.writeByte(160, li.field_g.getCredentialKind(-27096).field_a);
+              ChatMessage.field_f.position = 0;
+              ChatMessage.field_f.writeByte(160, 14);
+              ChatMessage.field_f.writeByte(160, FireworkDisplay.field_g.getCredentialKind(-27096).field_a);
               SecondaryNodeHashTable.flushOutgoingPackets(-1, 10000);
               GameModeSelectScreen.field_s = cn.field_a;
             }
@@ -177,7 +177,7 @@ final class mi extends MenuScreen {
               QueuedInput.fillIncomingBuffer(8, false)) {
               NumericDateInputWidget.field_P = MusicCrossfadeStream.field_o.readLong(false);
               MusicCrossfadeStream.field_o.position = 0;
-              LoginMethod.writeLoginPacket(param4, -67, li.field_g, param3, param0);
+              LoginMethod.writeLoginPacket(param4, -67, FireworkDisplay.field_g, param3, param0);
               GameModeSelectScreen.field_s = BoardView.field_b;
             }
             boolean decompiledFrameRemainder0 = true;
@@ -195,7 +195,7 @@ final class mi extends MenuScreen {
                   decompiledFrameRemainder0 = false;
                 }
                 else {
-                  na.a(true);
+                  na.closeGameSocket(true);
                   qj.field_b = false;
                   stackIn_30_0 = var6_intLifetime1;
                   return stackIn_30_0;
@@ -207,7 +207,7 @@ final class mi extends MenuScreen {
               }
             }
             if (e.field_d == GameModeSelectScreen.field_s &&
-              MusicPatchNode.e(-18481)) {
+              MusicPatchNode.readPacketHeader(-18481)) {
               RisingBubble.field_b = MusicCrossfadeStream.field_o.readLong(false);
               GameResultsScreen.field_t = param2;
               wo.field_h = MusicCrossfadeStream.field_o.readUnsignedByte(255);
@@ -224,10 +224,10 @@ final class mi extends MenuScreen {
                 stackIn_44_0 = (0 != (var7 & 2));
                 IsaacRandom.field_g = stackIn_44_0;
                 stackIn_47_0 = ((8 & var7) != 0);
-                ln.field_q = stackIn_47_0;
+                SoundVoice.field_q = stackIn_47_0;
                 stackIn_50_0 = ((4 & var7) != 0);
                 Matrix3.field_a = stackIn_50_0;
-                if (ln.field_q) {
+                if (SoundVoice.field_q) {
                   IsaacRandom.field_g = true;
                 }
               }
@@ -243,31 +243,31 @@ final class mi extends MenuScreen {
               }
               ModalStack.field_J = MusicCrossfadeStream.field_o.readString(5);
               var11 = (CharSequence) ((Object) ModalStack.field_J);
-              LobbyGame.field_Hb = dh.a(var11, (byte) 54);
+              LobbyGame.field_Hb = dh.normalizeDisplayName(var11, (byte) 54);
               ra.field_g = MusicCrossfadeStream.field_o.readUnsignedByte(255);
               GameModeSelectScreen.field_s = Pixelate.field_G;
-              if (li.field_g.getCredentialKind(-27096) == l.field_r) {
-                ig.field_e.saveAsLastLoginMethod(AudioService.a(13867), -80419032);
+              if (FireworkDisplay.field_g.getCredentialKind(-27096) == l.field_r) {
+                ig.field_e.saveAsLastLoginMethod(AudioService.getApplet(13867), -80419032);
               } else {
-                if (li.field_g.getCredentialKind(-27096) == QuickChatMenu.field_Nb) {
-                  vm.field_a.saveAsLastLoginMethod(AudioService.a(13867), -80419032);
+                if (FireworkDisplay.field_g.getCredentialKind(-27096) == QuickChatMenu.field_Nb) {
+                  vm.field_a.saveAsLastLoginMethod(AudioService.getApplet(13867), -80419032);
                 }
               }
               qj.field_b = false;
               if (var6 != null) {
-                QueuedInput.writeSettingsCookie(var6, 126, AudioService.a(13867));
+                QueuedInput.writeSettingsCookie(var6, 126, AudioService.getApplet(13867));
               }
               if (BufferedRandomAccessFile.field_j <= 0 &&
                 !Matrix3.field_a) {
                 try {
-                  JavaScriptBridge.callWindowFunction("unzap", (byte) -56, AudioService.a(13867));
+                  JavaScriptBridge.callWindowFunction("unzap", (byte) -56, AudioService.getApplet(13867));
                 } catch (java.lang.Throwable decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var8_ref_Throwable = decompiledCaughtException;
                 }
               } else {
                 try {
-                  JavaScriptBridge.a(AudioService.a(13867), (byte) -37, new Object[]{PacketBuffer.decodeBase37Name(RisingBubble.field_b, -7067)}, "zap");
+                  JavaScriptBridge.a(AudioService.getApplet(13867), (byte) -37, new Object[]{PacketBuffer.decodeBase37Name(RisingBubble.field_b, -7067)}, "zap");
                 } catch (java.lang.Throwable decompiledCaughtParameter1) {
                   decompiledCaughtException = decompiledCaughtParameter1;
                   var8_ref_Throwable = decompiledCaughtException;
@@ -276,7 +276,7 @@ final class mi extends MenuScreen {
               if (BufferedRandomAccessFile.field_j > 0) {
                 LobbyPlayer.field_Lb = true;
               }
-              aa.field_f.initCipher(0, ModalPanel.field_L);
+              ChatMessage.field_f.initCipher(0, ModalPanel.field_L);
               for (var8Lifetime1 = 0; var8Lifetime1 < 4; var8Lifetime1++) {
                 ModalPanel.field_L[var8Lifetime1] = ModalPanel.field_L[var8Lifetime1] + 50;
               }
@@ -285,8 +285,8 @@ final class mi extends MenuScreen {
               return stackIn_79_0;
             }
             if (IndexedSpriteState.field_b == GameModeSelectScreen.field_s &&
-              MusicPatchNode.e(-18481)) {
-              na.a(true);
+              MusicPatchNode.readPacketHeader(-18481)) {
+              na.closeGameSocket(true);
               if (TextLayoutLine.field_e == 7 &&
                 !qj.field_b) {
                 qj.field_b = true;
@@ -336,7 +336,7 @@ final class mi extends MenuScreen {
             } else {
               stackIn_110_2 = "{...}";
             }
-            throw aa.addExceptionContext((Throwable) ((Object) stackIn_106_0), ((StringBuilder) (Object) stackIn_109_1).append(stackIn_110_2).append(')').toString());
+            throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_106_0), ((StringBuilder) (Object) stackIn_109_1).append(stackIn_110_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -358,7 +358,7 @@ final class mi extends MenuScreen {
           SoftwareRasterizer.clear();
           Js5NetworkRequest.drawAccountLayers(94, true);
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "mi.I(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "mi.I(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -381,9 +381,9 @@ final class mi extends MenuScreen {
             field_o = true;
           }
           while (var3_int < vm.field_e.length) {
-            var5 = fo.field_a[var3_int];
+            var5 = Kite.field_a[var3_int];
             if (var5 >= 0) {
-              var6 = sb.a(3, vm.field_e[var3_int], true);
+              var6 = sb.measureMenuText(3, vm.field_e[var3_int], true);
               var4 = var4 + LoadingProgressDialog.field_fb;
               var7 = -(var6 >> 1) + QuickChatCategory.field_u;
               if (TextLayoutLine.containsPoint(param0, var4, 9, ValidatedTextWidget.field_fb + (bd.field_c << 1), var7 - AccountTermsPanel.field_J, param1, (AccountTermsPanel.field_J << 1) + var6)) {
@@ -401,7 +401,7 @@ final class mi extends MenuScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw aa.addExceptionContext((Throwable) ((Object) var3), "mi.M(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) var3), "mi.M(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -411,7 +411,7 @@ final class mi extends MenuScreen {
           field_o = false;
         }
         l.field_s.setBounds(0, 18, -40 + (-DelegatingCanvas.field_b + (StripedProgressBar.field_O.field_K - 2)), 256, 42 + DelegatingCanvas.field_b);
-        jm.field_b.setBoundsAndLayout(0, 2, (byte) 102, StripedProgressBar.field_O.field_K, 20, StripedProgressBar.field_O.height - 20, DelegatingCanvas.field_b);
+        Cloud.field_b.setBoundsAndLayout(0, 2, (byte) 102, StripedProgressBar.field_O.field_K, 20, StripedProgressBar.field_O.height - 20, DelegatingCanvas.field_b);
     }
 
     static {

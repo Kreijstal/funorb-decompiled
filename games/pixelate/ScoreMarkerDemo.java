@@ -36,7 +36,7 @@ final class ScoreMarkerDemo {
             return;
           }
           this.field_a[0] = 0;
-          this.field_a[1] = 300 + JavaRandomHelpers.a(ea.field_b, DraggableWidget.a(param0, -327), 300);
+          this.field_a[1] = 300 + JavaRandomHelpers.a(ea.field_b, DraggableWidget.intXor(param0, -327), 300);
           this.field_d = 0;
           if (param0 != 300) {
             ScoreMarkerDemo.showAccountChoicePanel(43);
@@ -75,19 +75,19 @@ final class ScoreMarkerDemo {
             sb var7 = (sb) null;
             ScoreMarkerDemo.a(-68, (sb) null, -42, 67, -94, (sb) null);
           }
-          ki.field_e = param0;
+          KiteTailSegment.field_e = param0;
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "mj.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "mj.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static String formatPageNumber(int param0, int param1) {
         if (param0 == 4067) {
-          return param1 + 1 + "/" + ln.field_m.length;
+          return param1 + 1 + "/" + SoundVoice.field_m.length;
         }
         sb var3 = (sb) null;
         ScoreMarkerDemo.a(112, (sb) null, -11, -57, 97, (sb) null);
-        return param1 + 1 + "/" + ln.field_m.length;
+        return param1 + 1 + "/" + SoundVoice.field_m.length;
     }
 
     final static String requestAddIgnore(int param0, String param1, int param2) {
@@ -109,11 +109,11 @@ final class ScoreMarkerDemo {
         RuntimeException decompiledCaughtException = null;
         try {
           var7 = (CharSequence) ((Object) param1);
-          if (!Bzip2State.a((byte) -128, var7)) {
+          if (!Bzip2State.isValidPlayerName((byte) -128, var7)) {
             stackIn_3_0 = qn.field_n;
             return stackIn_3_0;
           }
-          if (sm.a(param1, -1)) {
+          if (sm.isLocalPlayerName(param1, -1)) {
             stackIn_6_0 = GrowableIntList.field_h;
             return stackIn_6_0;
           }
@@ -122,18 +122,18 @@ final class ScoreMarkerDemo {
             return stackIn_9_0;
           }
           if (ImageProducerRasterBuffer.isFriend(-640, param1)) {
-            stackIn_13_0 = AlphaContainer.a(SpriteState.field_H, 45, new String[]{param1});
+            stackIn_13_0 = AlphaContainer.formatTemplate(SpriteState.field_H, 45, new String[]{param1});
             return stackIn_13_0;
           }
           if (ReflectionCheckRequest.field_t >= 100) {
             stackIn_17_0 = ViewportController.field_k;
             return stackIn_17_0;
           }
-          if (CanvasRasterBuffer.a(param1, (byte) 37)) {
-            stackIn_20_0 = AlphaContainer.a(ArchiveProvider.field_b, 89, new String[]{param1});
+          if (CanvasRasterBuffer.isFriendName(param1, (byte) 37)) {
+            stackIn_20_0 = AlphaContainer.formatTemplate(ArchiveProvider.field_b, 89, new String[]{param1});
             return stackIn_20_0;
           }
-          var6 = aa.field_f;
+          var6 = ChatMessage.field_f;
           var6.writeOpcode(param2, 15514);
           var6.position = var6.position + 1;
           var4 = var6.position;
@@ -153,7 +153,7 @@ final class ScoreMarkerDemo {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -177,14 +177,14 @@ final class ScoreMarkerDemo {
         un.field_l = param0 ? true : false;
         if (null == bo.field_h) {
           if (0 != ce.field_d) {
-            nd.a((byte) -124);
+            nd.clearChatInput((byte) -124);
           }
           di.field_a = 0;
           return;
         }
         bo.field_h.resetSelection(17872);
         if (0 != ce.field_d) {
-          nd.a((byte) -124);
+          nd.clearChatInput((byte) -124);
         }
         di.field_a = 0;
     }

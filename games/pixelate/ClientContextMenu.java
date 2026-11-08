@@ -72,31 +72,31 @@ final class ClientContextMenu {
             var6 = ImageProducerRasterBuffer.isFriend(-640, this.field_h) ? 1 : 0;
             if (var5 == null &&
               var6 == 0) {
-              this.field_b.addAction(AlphaContainer.a(ji.field_d, 52, new String[]{var7}), (byte) -106, 4);
-              this.field_b.addAction(AlphaContainer.a(ff.field_e, 18, new String[]{var7}), (byte) -53, 6);
+              this.field_b.addAction(AlphaContainer.formatTemplate(ji.field_d, 52, new String[]{var7}), (byte) -106, 4);
+              this.field_b.addAction(AlphaContainer.formatTemplate(ff.field_e, 18, new String[]{var7}), (byte) -53, 6);
               if (param1 != null &&
                 param0 != 2 &&
-                !ln.field_q) {
+                !SoundVoice.field_q) {
                 this.field_j = param1;
-                this.field_b.addAction(AlphaContainer.a(NodeHashTable.field_d, 61, new String[]{var7}), (byte) -80, 19);
+                this.field_b.addAction(AlphaContainer.formatTemplate(NodeHashTable.field_d, 61, new String[]{var7}), (byte) -80, 19);
               }
             }
             if (var5 != null) {
               if (!TimerBar.isPrivateChatTarget(57, this.field_h) &&
-                !ln.field_q) {
+                !SoundVoice.field_q) {
                 if (!IsaacRandom.field_g) {
-                  this.field_b.addAction(AlphaContainer.a(nf.field_e, 105, new String[]{var7}), (byte) -119, 8);
+                  this.field_b.addAction(AlphaContainer.formatTemplate(nf.field_e, 105, new String[]{var7}), (byte) -119, 8);
                 }
-                this.field_b.addAction(AlphaContainer.a(TextTableInitializer.field_f, 83, new String[]{var7}), (byte) -33, 18);
+                this.field_b.addAction(AlphaContainer.formatTemplate(TextTableInitializer.field_f, 83, new String[]{var7}), (byte) -33, 18);
                 if (param1 != null) {
                   this.field_j = param1;
-                  this.field_b.addAction(AlphaContainer.a(NodeHashTable.field_d, 22, new String[]{var7}), (byte) -95, 19);
+                  this.field_b.addAction(AlphaContainer.formatTemplate(NodeHashTable.field_d, 22, new String[]{var7}), (byte) -95, 19);
                 }
               }
-              this.field_b.addAction(AlphaContainer.a(ni.field_p, 18, new String[]{var7}), (byte) -33, 5);
+              this.field_b.addAction(AlphaContainer.formatTemplate(ni.field_p, 18, new String[]{var7}), (byte) -33, 5);
             }
             if (var6 != 0) {
-              this.field_b.addAction(AlphaContainer.a(DelegatingCanvas.field_a, param2 + 72, new String[]{var7}), (byte) -77, 7);
+              this.field_b.addAction(AlphaContainer.formatTemplate(DelegatingCanvas.field_a, param2 + 72, new String[]{var7}), (byte) -77, 7);
               return;
             }
           }
@@ -111,7 +111,7 @@ final class ClientContextMenu {
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -119,7 +119,7 @@ final class ClientContextMenu {
         if (!hf.b((byte) 100)) {
           return;
         }
-        bq.a(false, (byte) -110, 4);
+        bq.buildLegacyMenu(false, (byte) -110, 4);
         if (param0 != -53) {
           field_d = (PcmStreamMixer) null;
         }
@@ -144,7 +144,7 @@ final class ClientContextMenu {
           return true;
         }
         if (param0 == 1) {
-          pe.a(7, param1, this.field_l);
+          pe.sendPlayerAction(7, param1, this.field_l);
           if (param2 == 7490) {
             return true;
           }
@@ -168,7 +168,7 @@ final class ClientContextMenu {
           return true;
         }
         if (param0 == 10) {
-          qj.a(false, this.field_m, param1);
+          qj.sendGameJoinRequest(false, this.field_m, param1);
           if (param2 == 7490) {
             return true;
           }
@@ -176,7 +176,7 @@ final class ClientContextMenu {
           return true;
         }
         if (param0 == 15) {
-          df.a(param2 ^ 7489, this.field_m, param1);
+          StatsRequest.a(param2 ^ 7489, this.field_m, param1);
           if (param2 == 7490) {
             return true;
           }
@@ -186,7 +186,7 @@ final class ClientContextMenu {
         if (param0 != 16) {
           return false;
         }
-        df.a(3, 0, param1);
+        StatsRequest.a(3, 0, param1);
         if (param2 == 7490) {
           return true;
         }
@@ -256,7 +256,7 @@ final class ClientContextMenu {
         var5 = this.getTargetDisplayName((byte) 27);
         if (var4 != null) {
           if (!LoginMethod.field_c.field_dc) {
-            this.field_b.addAction(AlphaContainer.a(vf.field_b, 123, new String[]{var5}), (byte) -112, 1);
+            this.field_b.addAction(AlphaContainer.formatTemplate(vf.field_b, 123, new String[]{var5}), (byte) -112, 1);
             if (param1 == -98) {
               return;
             }
@@ -270,7 +270,7 @@ final class ClientContextMenu {
             discarded$1 = this.handleGameMembershipAction(48, 58, -125);
             return;
           }
-          this.field_b.addAction(AlphaContainer.a(vf.field_b, 123, new String[]{var5}), (byte) -112, 1);
+          this.field_b.addAction(AlphaContainer.formatTemplate(vf.field_b, 123, new String[]{var5}), (byte) -112, 1);
           if (param1 == -98) {
             return;
           }
@@ -299,7 +299,7 @@ final class ClientContextMenu {
           return;
         }
         if (var7.field_Vb) {
-          this.field_b.addAction(AlphaContainer.a(ResourceArchive.field_j, param1 + 180, new String[]{var5}), (byte) -111, 1);
+          this.field_b.addAction(AlphaContainer.formatTemplate(ResourceArchive.field_j, param1 + 180, new String[]{var5}), (byte) -111, 1);
           if (param1 == -98) {
             return;
           }
@@ -307,7 +307,7 @@ final class ClientContextMenu {
           return;
         }
         if (!param0) {
-          this.field_b.addAction(AlphaContainer.a(ImageProducerRasterBuffer.field_m, 67, new String[]{var5}), (byte) -83, 0);
+          this.field_b.addAction(AlphaContainer.formatTemplate(ImageProducerRasterBuffer.field_m, 67, new String[]{var5}), (byte) -83, 0);
           if (param1 == -98) {
             return;
           }
@@ -315,15 +315,15 @@ final class ClientContextMenu {
           return;
         }
         if (!var7.field_Jb) {
-          this.field_b.addAction(AlphaContainer.a(ImageProducerRasterBuffer.field_m, 67, new String[]{var5}), (byte) -83, 0);
+          this.field_b.addAction(AlphaContainer.formatTemplate(ImageProducerRasterBuffer.field_m, 67, new String[]{var5}), (byte) -83, 0);
           if (param1 == -98) {
             return;
           }
           discarded$6 = this.handleGameMembershipAction(48, 58, -125);
           return;
         }
-        this.field_b.addAction(AlphaContainer.a(ValidationHelpWidget.field_V, 59, new String[]{var5}), (byte) -70, 0);
-        this.field_b.addAction(AlphaContainer.a(SoundCache.field_f, 101, new String[]{var5}), (byte) -41, 1);
+        this.field_b.addAction(AlphaContainer.formatTemplate(ValidationHelpWidget.field_V, 59, new String[]{var5}), (byte) -70, 0);
+        this.field_b.addAction(AlphaContainer.formatTemplate(SoundCache.field_f, 101, new String[]{var5}), (byte) -41, 1);
         if (param1 == -98) {
           return;
         }
@@ -335,7 +335,7 @@ final class ClientContextMenu {
         CipherPacketBuffer var3 = null;
         CipherPacketBuffer var3Lifetime1;
         if (param1 == -925) {
-          var3 = aa.field_f;
+          var3 = ChatMessage.field_f;
           var3.writeOpcode(param0, 15514);
           var3.writeByte(160, 3);
           var3.writeByte(160, 8);
@@ -343,7 +343,7 @@ final class ClientContextMenu {
           return;
         }
         field_e = (String) null;
-        var3Lifetime1 = aa.field_f;
+        var3Lifetime1 = ChatMessage.field_f;
         var3Lifetime1.writeOpcode(param0, 15514);
         var3Lifetime1.writeByte(160, 3);
         var3Lifetime1.writeByte(160, 8);
@@ -412,7 +412,7 @@ final class ClientContextMenu {
         return false;
     }
 
-    final void addChatFilterActions(byte param0, aa param1) {
+    final void addChatFilterActions(byte param0, ChatMessage param1) {
         if (param0 <= 66) {
           this.field_l = 31L;
         }
@@ -429,7 +429,7 @@ final class ClientContextMenu {
           }
           if (1 == param1.field_j) {
             if (0 == GradientOutlineTextPainter.field_v) {
-              this.field_b.addAction(m.field_l, (byte) -97, 12);
+              this.field_b.addAction(ListRequest.field_l, (byte) -97, 12);
             }
             this.field_b.addAction(NameAvailabilityValidator.field_n, (byte) -106, 13);
           }
@@ -440,7 +440,7 @@ final class ClientContextMenu {
             this.field_b.addAction(sf.field_a, (byte) -62, 13);
           }
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "wi.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "wi.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -466,7 +466,7 @@ final class ClientContextMenu {
           Match.openPrivateChatTo((byte) 85, this.field_h, this.field_l);
         } else {
           if (param0 == 18) {
-            qj.a(this.field_h, this.field_l, (byte) 8);
+            qj.openPrivateChat(this.field_h, this.field_l, (byte) 8);
           } else {
             if (param0 == 11) {
               Js5ArchiveManager.setChatFilterMode(0, -26931, this.field_k, param2);
@@ -529,20 +529,20 @@ final class ClientContextMenu {
         }
         var4 = var3.field_pc;
         if (var3.field_cc) {
-          this.field_b.addAction(AlphaContainer.a(fp.field_b, 97, new String[]{var4}), (byte) -105, 2);
-          this.field_b.addAction(AlphaContainer.a(oi.field_a, 52, new String[]{var4}), (byte) -118, 3);
+          this.field_b.addAction(AlphaContainer.formatTemplate(fp.field_b, 97, new String[]{var4}), (byte) -105, 2);
+          this.field_b.addAction(AlphaContainer.formatTemplate(oi.field_a, 52, new String[]{var4}), (byte) -118, 3);
           return;
         }
         if (var3.field_hc) {
-          this.field_b.addAction(AlphaContainer.a(SecondaryNodeHashTable.field_f, 53, new String[]{var4}), (byte) -106, 2);
+          this.field_b.addAction(AlphaContainer.formatTemplate(SecondaryNodeHashTable.field_f, 53, new String[]{var4}), (byte) -106, 2);
         } else {
           if (!var3.field_Ob &&
             var3.field_Mb) {
             if (!var3.field_dc) {
-              this.field_b.addAction(AlphaContainer.a(PlayerBoard.field_o, 87, new String[]{var4}), (byte) -32, 2);
+              this.field_b.addAction(AlphaContainer.formatTemplate(PlayerBoard.field_o, 87, new String[]{var4}), (byte) -32, 2);
             } else {
               if (var3.field_hc) {
-                this.field_b.addAction(AlphaContainer.a(PlayerBoard.field_o, 87, new String[]{var4}), (byte) -32, 2);
+                this.field_b.addAction(AlphaContainer.formatTemplate(PlayerBoard.field_o, 87, new String[]{var4}), (byte) -32, 2);
               }
             }
           }
@@ -550,7 +550,7 @@ final class ClientContextMenu {
         if (!var3.field_Ob) {
           return;
         }
-        this.field_b.addAction(AlphaContainer.a(AccountNamePrompt.field_Jb, 46, new String[]{var4}), (byte) -96, 3);
+        this.field_b.addAction(AlphaContainer.formatTemplate(AccountNamePrompt.field_Jb, 46, new String[]{var4}), (byte) -96, 3);
     }
 
     ClientContextMenu(SceneWidget param0, long param1, String param2, String param3, int param4, int param5, int[] param6) {
@@ -565,7 +565,7 @@ final class ClientContextMenu {
           this.field_i = param3;
           this.field_m = param4;
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "wi.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "wi.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -582,7 +582,7 @@ final class ClientContextMenu {
           }
           var3 = this.getTargetDisplayName((byte) 43);
           String var2 = var3;
-          this.field_b.addAction(AlphaContainer.a(IndexedSpriteState.field_j, param0 - 8830, new String[]{var3}), (byte) -72, 17);
+          this.field_b.addAction(AlphaContainer.formatTemplate(IndexedSpriteState.field_j, param0 - 8830, new String[]{var3}), (byte) -72, 17);
         }
         if (param0 == 8893) {
           return;

@@ -15,7 +15,7 @@ final class ig {
         return String.valueOf(param1);
     }
 
-    final static id a(int param0, String param1) {
+    final static id takeAccountRequestResult(int param0, String param1) {
         RuntimeException var2 = null;
         Object stackIn_4_0 = null;
         id stackIn_8_0 = null;
@@ -53,7 +53,7 @@ final class ig {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -66,7 +66,7 @@ final class ig {
         field_d = null;
     }
 
-    final static void a(int param0) {
+    final static void pumpAudio(int param0) {
         int var1_int = 0;
         cm var2 = null;
         int var3 = 0;
@@ -106,7 +106,7 @@ final class ig {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw aa.addExceptionContext((Throwable) ((Object) var1), "ig.B(" + param0 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) var1), "ig.B(" + param0 + ')');
         }
     }
 

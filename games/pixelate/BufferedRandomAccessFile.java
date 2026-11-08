@@ -52,7 +52,7 @@ final class BufferedRandomAccessFile {
             if (this.field_g != -1L &&
               ((long)param0 + this.position) > (this.field_g + (long)this.writeBuffer.length)) {
               var5_int = (int)((long)this.writeBuffer.length + (this.field_g - this.position));
-              ArraySupport.a(param3, param1, this.writeBuffer, (int)(this.position - this.field_g), var5_int);
+              ArraySupport.copyBytes(param3, param1, this.writeBuffer, (int)(this.position - this.field_g), var5_int);
               param1 = param1 + var5_int;
               param0 = param0 - var5_int;
               this.position = this.position + (long)var5_int;
@@ -69,7 +69,7 @@ final class BufferedRandomAccessFile {
               if (-1L == this.field_g) {
                 this.field_g = this.position;
               }
-              ArraySupport.a(param3, param1, this.writeBuffer, (int)(this.position - this.field_g), param0);
+              ArraySupport.copyBytes(param3, param1, this.writeBuffer, (int)(this.position - this.field_g), param0);
               this.position = this.position + (long)param0;
               if (-this.field_g + this.position > (long)this.writeBufferLength) {
                 this.writeBufferLength = (int)(-this.field_g + this.position);
@@ -108,7 +108,7 @@ final class BufferedRandomAccessFile {
             if (var5_long > -1L &&
               var5_long < var7) {
               var9 = (int)(-var5_long + var7);
-              ArraySupport.a(param3, (int)((long)param1 + var5_long - this.position), this.readBuffer, (int)(var5_long - this.field_f), var9);
+              ArraySupport.copyBytes(param3, (int)((long)param1 + var5_long - this.position), this.readBuffer, (int)(var5_long - this.field_f), var9);
             }
             this.position = this.position + (long)param0;
             return;
@@ -128,7 +128,7 @@ final class BufferedRandomAccessFile {
           } else {
             stackIn_54_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_53_0), ((StringBuilder) (Object) stackIn_53_1).append(stackIn_54_2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_53_0), ((StringBuilder) (Object) stackIn_53_1).append(stackIn_54_2).append(')').toString());
         }
     }
 
@@ -160,7 +160,7 @@ final class BufferedRandomAccessFile {
             if (this.field_g != -1L &&
               this.field_g <= this.position &&
               ((long)param2 + this.position) <= ((long)this.writeBufferLength + this.field_g)) {
-              ArraySupport.a(this.writeBuffer, (int)(-this.field_g + this.position), param0, param3, param2);
+              ArraySupport.copyBytes(this.writeBuffer, (int)(-this.field_g + this.position), param0, param3, param2);
               this.position = this.position + (long)param2;
               return;
             }
@@ -173,7 +173,7 @@ final class BufferedRandomAccessFile {
               if (var9_int > param2) {
                 var9_int = param2;
               }
-              ArraySupport.a(this.readBuffer, (int)(this.position - this.field_f), param0, param3, var9_int);
+              ArraySupport.copyBytes(this.readBuffer, (int)(this.position - this.field_f), param0, param3, var9_int);
               param3 = param3 + var9_int;
               this.position = this.position + (long)var9_int;
               param2 = param2 - var9_int;
@@ -204,7 +204,7 @@ final class BufferedRandomAccessFile {
               if (this.readLength < var9_intLifetime1Lifetime1) {
                 var9_intLifetime1Lifetime1 = this.readLength;
               }
-              ArraySupport.a(this.readBuffer, 0, param0, param3, var9_intLifetime1Lifetime1);
+              ArraySupport.copyBytes(this.readBuffer, 0, param0, param3, var9_intLifetime1Lifetime1);
               param3 = param3 + var9_intLifetime1Lifetime1;
               this.position = this.position + (long)var9_intLifetime1Lifetime1;
               param2 = param2 - var9_intLifetime1Lifetime1;
@@ -250,7 +250,7 @@ final class BufferedRandomAccessFile {
               if (-1L < var9 &&
                 var11 > var9) {
                 var13 = (int)(-var9 + var11);
-                ArraySupport.a(this.writeBuffer, (int)(-this.field_g + var9), param0, (int)(-var5_long + var9) + var7, var13);
+                ArraySupport.copyBytes(this.writeBuffer, (int)(-this.field_g + var9), param0, (int)(-var5_long + var9) + var7, var13);
                 if (var11 > this.position) {
                   param2 = (int)((long)param2 - (-this.position + var11));
                   this.position = var11;
@@ -277,7 +277,7 @@ final class BufferedRandomAccessFile {
           } else {
             stackIn_66_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_65_0), ((StringBuilder) (Object) stackIn_65_1).append(stackIn_66_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_65_0), ((StringBuilder) (Object) stackIn_65_1).append(stackIn_66_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -350,7 +350,7 @@ final class BufferedRandomAccessFile {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -401,7 +401,7 @@ final class BufferedRandomAccessFile {
           if (var2 > -1L &&
             var2 < var4) {
             var6 = (int)(var4 - var2);
-            ArraySupport.a(this.writeBuffer, (int)(var2 - this.field_g), this.readBuffer, (int)(-this.field_f + var2), var6);
+            ArraySupport.copyBytes(this.writeBuffer, (int)(var2 - this.field_g), this.readBuffer, (int)(-this.field_f + var2), var6);
           }
           this.writeBufferLength = 0;
           this.field_g = -1L;
@@ -433,7 +433,7 @@ final class BufferedRandomAccessFile {
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(param1).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -478,7 +478,7 @@ final class BufferedRandomAccessFile {
           this.readBuffer = new byte[param1];
           this.position = 0L;
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "uo.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "uo.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

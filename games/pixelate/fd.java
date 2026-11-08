@@ -11,7 +11,7 @@ final class fd {
         if (param0 != 0) {
           return (SceneWidget) null;
         }
-        return jm.field_b.content;
+        return Cloud.field_b.content;
     }
 
     final synchronized static byte[] a(int param0, int param1) {
@@ -51,40 +51,40 @@ final class fd {
             return var2_ref_byte__;
           }
           if (param1 != 30000) {
-            if (null == jd.field_o) {
+            if (null == RasterState.field_o) {
               return new byte[param1];
             }
             for (var2 = 0; an.field_c.length > var2; var2++) {
               if (param1 == an.field_c[var2] &&
                 DialWidgetPainter.field_p[var2] > 0) {
                 dupTemp$10 = DialWidgetPainter.field_p[var2] - 1;
-                arrayValue$11 = jd.field_o[var2];
+                arrayValue$11 = RasterState.field_o[var2];
                 DialWidgetPainter.field_p[var2] = dupTemp$10;
                 var3 = arrayValue$11[dupTemp$10];
-                jd.field_o[var2][DialWidgetPainter.field_p[var2]] = null;
+                RasterState.field_o[var2][DialWidgetPainter.field_p[var2]] = null;
                 return var3;
               }
             }
             return new byte[param1];
           }
-          if (0 < jd.field_n) {
-            fieldTemp$14 = jd.field_n - 1;
-            jd.field_n = jd.field_n - 1;
+          if (0 < RasterState.field_n) {
+            fieldTemp$14 = RasterState.field_n - 1;
+            RasterState.field_n = RasterState.field_n - 1;
             var2_ref_byte__Lifetime4 = CipherPacketBuffer.field_w[fieldTemp$14];
-            CipherPacketBuffer.field_w[jd.field_n] = null;
+            CipherPacketBuffer.field_w[RasterState.field_n] = null;
             return var2_ref_byte__Lifetime4;
           }
-          if (null == jd.field_o) {
+          if (null == RasterState.field_o) {
             return new byte[param1];
           }
           for (var2Lifetime3 = 0; an.field_c.length > var2Lifetime3; var2Lifetime3++) {
             if (param1 == an.field_c[var2Lifetime3] &&
               DialWidgetPainter.field_p[var2Lifetime3] > 0) {
               dupTemp$12 = DialWidgetPainter.field_p[var2Lifetime3] - 1;
-              arrayValue$13 = jd.field_o[var2Lifetime3];
+              arrayValue$13 = RasterState.field_o[var2Lifetime3];
               DialWidgetPainter.field_p[var2Lifetime3] = dupTemp$12;
               var3Lifetime3 = arrayValue$13[dupTemp$12];
-              jd.field_o[var2Lifetime3][DialWidgetPainter.field_p[var2Lifetime3]] = null;
+              RasterState.field_o[var2Lifetime3][DialWidgetPainter.field_p[var2Lifetime3]] = null;
               return var3Lifetime3;
             }
           }
@@ -106,40 +106,40 @@ final class fd {
           return var2_ref_byte__Lifetime2;
         }
         if (param1 != 30000) {
-          if (null == jd.field_o) {
+          if (null == RasterState.field_o) {
             return new byte[param1];
           }
           for (var2Lifetime1 = 0; an.field_c.length > var2Lifetime1; var2Lifetime1++) {
             if (param1 == an.field_c[var2Lifetime1] &&
               DialWidgetPainter.field_p[var2Lifetime1] > 0) {
               dupTemp$3 = DialWidgetPainter.field_p[var2Lifetime1] - 1;
-              arrayValue$4 = jd.field_o[var2Lifetime1];
+              arrayValue$4 = RasterState.field_o[var2Lifetime1];
               DialWidgetPainter.field_p[var2Lifetime1] = dupTemp$3;
               var3Lifetime1 = arrayValue$4[dupTemp$3];
-              jd.field_o[var2Lifetime1][DialWidgetPainter.field_p[var2Lifetime1]] = null;
+              RasterState.field_o[var2Lifetime1][DialWidgetPainter.field_p[var2Lifetime1]] = null;
               return var3Lifetime1;
             }
           }
           return new byte[param1];
         }
-        if (0 < jd.field_n) {
-          fieldTemp$7 = jd.field_n - 1;
-          jd.field_n = jd.field_n - 1;
+        if (0 < RasterState.field_n) {
+          fieldTemp$7 = RasterState.field_n - 1;
+          RasterState.field_n = RasterState.field_n - 1;
           var2_ref_byte__Lifetime3 = CipherPacketBuffer.field_w[fieldTemp$7];
-          CipherPacketBuffer.field_w[jd.field_n] = null;
+          CipherPacketBuffer.field_w[RasterState.field_n] = null;
           return var2_ref_byte__Lifetime3;
         }
-        if (null == jd.field_o) {
+        if (null == RasterState.field_o) {
           return new byte[param1];
         }
         for (var2Lifetime2 = 0; an.field_c.length > var2Lifetime2; var2Lifetime2++) {
           if (param1 == an.field_c[var2Lifetime2] &&
             DialWidgetPainter.field_p[var2Lifetime2] > 0) {
             dupTemp$5 = DialWidgetPainter.field_p[var2Lifetime2] - 1;
-            arrayValue$6 = jd.field_o[var2Lifetime2];
+            arrayValue$6 = RasterState.field_o[var2Lifetime2];
             DialWidgetPainter.field_p[var2Lifetime2] = dupTemp$5;
             var3Lifetime2 = arrayValue$6[dupTemp$5];
-            jd.field_o[var2Lifetime2][DialWidgetPainter.field_p[var2Lifetime2]] = null;
+            RasterState.field_o[var2Lifetime2][DialWidgetPainter.field_p[var2Lifetime2]] = null;
             return var3Lifetime2;
           }
         }

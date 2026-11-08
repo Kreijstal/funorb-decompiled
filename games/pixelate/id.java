@@ -18,7 +18,7 @@ final class id {
     }
 
     final static void writeProgressRecord(byte param0, hf param1, int param2) {
-        CipherPacketBuffer var5 = aa.field_f;
+        CipherPacketBuffer var5 = ChatMessage.field_f;
         var5.writeOpcode(param2, 15514);
         var5.position = var5.position + 1;
         int var4 = var5.position;
@@ -36,7 +36,7 @@ final class id {
           var5.appendCrc32(var4, (byte) 84);
           var5.backpatchByteLength(var5.position - var4, -1);
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "id.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "id.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -80,12 +80,12 @@ final class id {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw aa.addExceptionContext((Throwable) ((Object) var1), "id.D(" + param0 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) var1), "id.D(" + param0 + ')');
         }
     }
 
     final static void startSlideshow(boolean param0, byte param1) {
-        qk.field_e = 0;
+        RetroBlock.field_e = 0;
         Vector3.field_b = 0;
         if (param1 <= 104) {
           return;

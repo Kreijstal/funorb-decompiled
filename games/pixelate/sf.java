@@ -23,7 +23,7 @@ final class sf {
           }
           id.field_b = 0;
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "sf.B(" + param0 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "sf.B(" + param0 + ')');
         }
     }
 

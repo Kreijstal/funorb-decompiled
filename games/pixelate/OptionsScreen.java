@@ -355,7 +355,7 @@ final class OptionsScreen extends MenuScreen {
           if (param0 != 260) {
             field_p = (PlatformTaskDispatcher) null;
           }
-          MeshRasterState.a();
+          MeshRasterState.useRasterClip();
           Bzip2State.field_x = 11;
           nk.field_d = new int[260];
           for (var1_int = 0; var1_int < 256; var1_int++) {
@@ -372,7 +372,7 @@ final class OptionsScreen extends MenuScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw aa.addExceptionContext((Throwable) ((Object) var1), "op.B(" + param0 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) var1), "op.B(" + param0 + ')');
         }
     }
 
@@ -402,13 +402,13 @@ final class OptionsScreen extends MenuScreen {
             if (0 == this.field_o) {
               this.field_r = 1;
             }
-            jm.field_i[this.field_r].drawTransparent(IconTextComponent.field_Jb, 150);
+            Cloud.field_i[this.field_r].drawTransparent(IconTextComponent.field_Jb, 150);
           } else {
             if (var4 != 31) {
               if (var4 == 32) {
                 SoftwareRasterizer.setClip(0, 182, 640, 350);
                 var5 = -2 + param2;
-                var6 = ki.field_m + ' ' + var5;
+                var6 = KiteTailSegment.field_m + ' ' + var5;
                 var7 = this.getRowLeft(param2, (byte) 90);
                 var8 = this.getRowRight(param2, false);
                 var9 = var7 + var8 >> 1;
@@ -433,7 +433,7 @@ final class OptionsScreen extends MenuScreen {
               if (DirectByteStorage.field_k == this.field_o) {
                 this.field_v = 1;
               }
-              jm.field_i[this.field_v + 4].drawTransparent(IconTextComponent.field_Jb, 355);
+              Cloud.field_i[this.field_v + 4].drawTransparent(IconTextComponent.field_Jb, 355);
             }
           }
         } else {
@@ -458,7 +458,7 @@ final class OptionsScreen extends MenuScreen {
           this.field_r = 0;
           this.field_v = 0;
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "op.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "op.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 

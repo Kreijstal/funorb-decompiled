@@ -77,7 +77,7 @@ final class IntrusiveDequeCursor {
               var1_ref.field_Rb = var1_ref.field_Rb - 1;
               if (var1_ref.field_Rb == 0) {
                 var1_ref.field_Qb = 0;
-                if (var1_ref.j(433)) {
+                if (var1_ref.isUnlisted(433)) {
                   var1_ref.unlink(2779);
                 }
               }
@@ -104,7 +104,7 @@ final class IntrusiveDequeCursor {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref2 = decompiledCaughtException;
-          throw aa.addExceptionContext((Throwable) ((Object) var1_ref2), "nm.I(" + param0 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) var1_ref2), "nm.I(" + param0 + ')');
         }
     }
 
@@ -146,7 +146,7 @@ final class IntrusiveDequeCursor {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -209,7 +209,7 @@ final class IntrusiveDequeCursor {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -245,7 +245,7 @@ final class IntrusiveDequeCursor {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -270,8 +270,8 @@ final class IntrusiveDequeCursor {
           wo.getScreen(126, fc.field_e).releaseScreenAssets(true);
         }
         fc.field_e = MidiPcmStream.field_t;
-        if (og.field_l) {
-          og.field_l = false;
+        if (SaveDataRequest.field_l) {
+          SaveDataRequest.field_l = false;
           MatchingTextValidator.field_r = null;
           ro.field_e = null;
         }
@@ -285,8 +285,8 @@ final class IntrusiveDequeCursor {
         }
         if (mi.field_o) {
           SceneWidget.closeTransientDialogs(param0 ^ 0);
-          ArchiveIndex.a(23949);
-          bd.a((byte) -1);
+          ArchiveIndex.clearLobbyState(23949);
+          bd.clearSocialLists((byte) -1);
           mi.field_o = false;
         }
     }
@@ -295,7 +295,7 @@ final class IntrusiveDequeCursor {
         try {
           this.deque = param0;
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "nm.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "nm.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

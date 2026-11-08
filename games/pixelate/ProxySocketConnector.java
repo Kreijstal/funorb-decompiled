@@ -113,7 +113,7 @@ final class ProxySocketConnector extends SocketConnector {
           } else {
             stackIn_33_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param3).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -142,18 +142,18 @@ final class ProxySocketConnector extends SocketConnector {
           if (var6 == null) {
             gb.field_c = 2;
           } else {
-            if (!td.a(param0 - 12, (CharSequence) ((Object) var6))) {
+            if (!td.isDecimalInteger(param0 - 12, (CharSequence) ((Object) var6))) {
               gb.field_c = 2;
             } else {
-              gb.field_c = na.a((CharSequence) ((Object) var6), (byte) -33);
+              gb.field_c = na.parseDecimalInt((CharSequence) ((Object) var6), (byte) -33);
             }
           }
           MusicPatchNode.field_t = param2;
           gq.field_n = param1;
           ug.field_k = param3;
-          li.field_a = new Sprite[param5.length];
+          FireworkDisplay.field_a = new Sprite[param5.length];
           for (var7 = 0; param5.length > var7; var7++) {
-            li.field_a[var7] = new Sprite(317, 34);
+            FireworkDisplay.field_a[var7] = new Sprite(317, 34);
           }
           if (param0 != -94) {
             field_h = (int[]) null;
@@ -176,7 +176,7 @@ final class ProxySocketConnector extends SocketConnector {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
         }
     }
 
@@ -228,14 +228,14 @@ final class ProxySocketConnector extends SocketConnector {
               SoftwareRasterizer.field_k[var7] = 16777215 - SoftwareRasterizer.field_k[var7];
             }
             for (var7Lifetime1 = 0; var7Lifetime1 < 5; var7Lifetime1++) {
-              SoftwareRasterizer.b();
+              SoftwareRasterizer.softenRaster();
             }
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw aa.addExceptionContext((Throwable) ((Object) var1), "eg.D(" + param0 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) var1), "eg.D(" + param0 + ')');
         }
     }
 
@@ -406,7 +406,7 @@ final class ProxySocketConnector extends SocketConnector {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param4).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -495,7 +495,7 @@ final class ProxySocketConnector extends SocketConnector {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param1).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param1).append(')').toString());
         }
     }
 

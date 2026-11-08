@@ -43,7 +43,7 @@ final class PcmStreamMixer extends PcmStream {
           var3 = (PcmMixerListener) (this.listeners.first(1504642273));
           var4 = var3;
           synchronized (var4) {
-            var5 = var3.a(this);
+            var5 = var3.poll(this);
             if (var5 >= 0) {
               var3.field_k = var5;
               this.insertListener(var3.field_a, var3);
@@ -81,7 +81,7 @@ final class PcmStreamMixer extends PcmStream {
           var5 = (PcmMixerListener) (this.listeners.first(1504642273));
           var6 = var5;
           synchronized (var6) {
-            var7 = var5.a(this);
+            var7 = var5.poll(this);
             if (var7 >= 0) {
               var5.field_k = var7;
               this.insertListener(var5.field_a, var5);
@@ -139,7 +139,7 @@ final class PcmStreamMixer extends PcmStream {
 
     private final void removeListener(PcmMixerListener param0) {
         param0.unlink(2779);
-        param0.a();
+        param0.onMixed();
         IntrusiveNode var2 = this.listeners.sentinel.field_a;
         if (var2 == this.listeners.sentinel) {
           this.field_q = -1;

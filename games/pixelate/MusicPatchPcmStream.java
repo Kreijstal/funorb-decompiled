@@ -9,7 +9,7 @@ final class MusicPatchPcmStream extends PcmStream {
     private MidiPcmStream sequencer;
     PcmStreamMixer field_o;
 
-    final static ConditionalTextValue e(int param0) {
+    final static ConditionalTextValue createAccountStatusValue(int param0) {
         String var1 = null;
         String var1Lifetime1;
         if (param0 == 100) {
@@ -52,7 +52,7 @@ final class MusicPatchPcmStream extends PcmStream {
         return (PcmStream) ((Object) var1.field_G);
     }
 
-    final static void a(int param0, byte param1) {
+    final static void setLobbyPanelX(int param0, byte param1) {
         int var2 = 0;
         int var3 = 0;
         wa.field_i = param0;
@@ -62,9 +62,9 @@ final class MusicPatchPcmStream extends PcmStream {
           param0 = param0 + var3 * (MatchingTextValidator.field_o - param0) / var2;
         }
         ui.field_i.setBounds(param0, 120, TextTableInitializer.field_c, 256, 640);
-        ArchiveProvider.a(MatchingTextValidator.field_o - 24, (byte) 123, 640, PlayerBoard.field_q, 5, 0, MouseWheelHandler.field_c);
+        ArchiveProvider.layoutQuickChatRoot(MatchingTextValidator.field_o - 24, (byte) 123, 640, PlayerBoard.field_q, 5, 0, MouseWheelHandler.field_c);
         if (param1 != 112) {
-          MusicPatchPcmStream.e(92);
+          MusicPatchPcmStream.createAccountStatusValue(92);
           return;
         }
     }
@@ -117,7 +117,7 @@ final class MusicPatchPcmStream extends PcmStream {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -220,7 +220,7 @@ final class MusicPatchPcmStream extends PcmStream {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -228,14 +228,14 @@ final class MusicPatchPcmStream extends PcmStream {
         return 0;
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_p = null;
         field_t = null;
         field_q = null;
         if (param0 >= 101) {
           return;
         }
-        MusicPatchPcmStream.e(-33);
+        MusicPatchPcmStream.createAccountStatusValue(-33);
     }
 
     private final void skipNote(int param0, int param1, MusicPatchNode param2) {
@@ -285,7 +285,7 @@ final class MusicPatchPcmStream extends PcmStream {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 
@@ -295,7 +295,7 @@ final class MusicPatchPcmStream extends PcmStream {
         try {
           this.sequencer = param0;
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "km.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "km.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

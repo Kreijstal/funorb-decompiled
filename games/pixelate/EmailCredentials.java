@@ -73,7 +73,7 @@ class EmailCredentials extends LoginCredentials {
           var3 = 0;
         }
         if (ce.field_d == 2 &&
-          !ra.a((byte) -96)) {
+          !ra.isPrivateRecipientFriend((byte) -96)) {
           var3 = 0;
         }
         if (ke.field_a == 84) {
@@ -89,7 +89,7 @@ class EmailCredentials extends LoginCredentials {
                 var16 = (String) null;
                 var15 = (String) null;
                 MidiPcmStream.appendChatMessage(0, (String) null, (String) null, (byte) -21, 2, fd.field_d);
-                nd.a((byte) -23);
+                nd.clearChatInput((byte) -23);
                 return true;
               }
               var6 = ce.field_d;
@@ -100,16 +100,16 @@ class EmailCredentials extends LoginCredentials {
               if (IterableNodeHashTable.getChatFilterMode(var6, 0) == 2) {
                 Js5ArchiveManager.setChatFilterMode(1, -26931, var6, param2);
               }
-              dg.a(true, ce.field_d, -1, var5_ref_String, CheckboxPainter.field_k, param0);
-              nd.a((byte) -23);
+              dg.sendQuickChatMessage(true, ce.field_d, -1, var5_ref_String, CheckboxPainter.field_k, param0);
+              nd.clearChatInput((byte) -23);
             } else {
-              nd.a((byte) -23);
+              nd.clearChatInput((byte) -23);
             }
           } else {
             if (ce.field_d == 0) {
               return true;
             }
-            nd.a((byte) 77);
+            nd.clearChatInput((byte) 77);
           }
           return true;
         }
@@ -158,13 +158,13 @@ class EmailCredentials extends LoginCredentials {
                 break regionExit1;
               }
               if (!TickClock.field_b) {
-                var37 = "[" + AlphaContainer.a(HowToPlayScreen.field_q, 49, new String[]{LoginMethod.field_c.field_pc}) + "] ";
+                var37 = "[" + AlphaContainer.formatTemplate(HowToPlayScreen.field_q, 49, new String[]{LoginMethod.field_c.field_pc}) + "] ";
                 var38 = var37 + var33 + ": ";
                 var6Lifetime1 = var6Lifetime1 - AccountMessagePanel.field_Q.textWidth(var38);
                 break regionExit1;
               }
               if (TextLayoutLine.field_f == null) {
-                var35 = "[" + AlphaContainer.a(HowToPlayScreen.field_q, 49, new String[]{LoginMethod.field_c.field_pc}) + "] ";
+                var35 = "[" + AlphaContainer.formatTemplate(HowToPlayScreen.field_q, 49, new String[]{LoginMethod.field_c.field_pc}) + "] ";
                 var36 = var35 + var33 + ": ";
                 var6Lifetime1 = var6Lifetime1 - AccountMessagePanel.field_Q.textWidth(var36);
                 break regionExit1;
@@ -176,8 +176,8 @@ class EmailCredentials extends LoginCredentials {
             break regionExit1;
           }
           var44 = (CharSequence) ((Object) CheckboxPainter.field_k);
-          var40 = AlphaContainer.a(dg.field_b, 116, new String[]{UiComponent.normalizeBase37Name(var44, -1)});
-          var41 = AlphaContainer.a(sk.field_c, 43, new String[]{var17});
+          var40 = AlphaContainer.formatTemplate(dg.field_b, 116, new String[]{UiComponent.normalizeBase37Name(var44, -1)});
+          var41 = AlphaContainer.formatTemplate(sk.field_c, 43, new String[]{var17});
           var10 = AccountMessagePanel.field_Q.textWidth(var40);
           var11 = AccountMessagePanel.field_Q.textWidth(var41);
           if (var11 >= var10) {
@@ -201,7 +201,7 @@ class EmailCredentials extends LoginCredentials {
           param1.writeLong(false, this.field_g);
           param1.writeBase38Name(-129, this.field_j);
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "go.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "go.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -237,7 +237,7 @@ class EmailCredentials extends LoginCredentials {
           this.field_j = param1;
           this.field_g = param0;
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "go.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "go.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

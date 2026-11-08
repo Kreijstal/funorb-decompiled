@@ -23,7 +23,7 @@ final class ValidatedTextWidget extends EditableTextWidget implements Validation
           super.updatePointer(param0, param1, param2, param3);
           this.field_hb = ProxyAuthenticationException.field_d - (this.field_z + param2);
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "gk.L(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "gk.L(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -34,7 +34,7 @@ final class ValidatedTextWidget extends EditableTextWidget implements Validation
         return this.field_gb;
     }
 
-    final static void a(int param0, int param1, byte param2, int param3, int param4) {
+    final static void drawDottedRectangle(int param0, int param1, byte param2, int param3, int param4) {
         int stackIn_6_0 = 0;
         int stackIn_9_0 = 0;
         int stackIn_12_0 = 0;
@@ -143,7 +143,7 @@ final class ValidatedTextWidget extends EditableTextWidget implements Validation
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw aa.addExceptionContext((Throwable) ((Object) var5), "gk.W(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) var5), "gk.W(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -158,14 +158,14 @@ final class ValidatedTextWidget extends EditableTextWidget implements Validation
         field_cb = null;
     }
 
-    final void a(byte param0, ValidationSource param1) {
+    final void setValidationSource(byte param0, ValidationSource param1) {
         try {
           if (param0 <= 16) {
             this.field_hb = 89;
           }
           this.field_gb = param1;
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "gk.BA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "gk.BA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -311,7 +311,7 @@ final class ValidatedTextWidget extends EditableTextWidget implements Validation
           } else {
             stackIn_73_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_72_0), ((StringBuilder) (Object) stackIn_72_1).append(stackIn_73_2).append(',').append(param1).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_72_0), ((StringBuilder) (Object) stackIn_72_1).append(stackIn_73_2).append(',').append(param1).append(')').toString());
         }
     }
 

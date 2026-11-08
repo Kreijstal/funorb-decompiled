@@ -73,7 +73,7 @@ final class GreenGrowTheRushesBackground extends BackgroundScene {
           var4 = -1L;
           MatchHud.setBrowserCookie(param0, 78, var3, var2, var4);
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "ql.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "ql.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -93,9 +93,9 @@ final class GreenGrowTheRushesBackground extends BackgroundScene {
             if (var2 == 1) {
               wp.field_a = MainMenuScreen.field_o;
             } else {
-              wp.field_a = AlphaContainer.a(SpriteState.field_v, 63, new String[]{Integer.toString(var2)});
+              wp.field_a = AlphaContainer.formatTemplate(SpriteState.field_v, 63, new String[]{Integer.toString(var2)});
             }
-            wp.field_a = gi.a(0, new CharSequence[]{(CharSequence) ((Object) wp.field_a), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) GameApplet.field_d)});
+            wp.field_a = gi.joinCharSequences(0, new CharSequence[]{(CharSequence) ((Object) wp.field_a), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) GameApplet.field_d)});
           }
           MainMenuScreen.field_r.close(-100);
           AsyncValidationResult.showLoadingProgressDialog((byte) 81);

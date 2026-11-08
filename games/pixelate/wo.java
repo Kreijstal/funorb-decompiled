@@ -21,7 +21,7 @@ final class wo {
           var4 = new SceneWidget[]{param1, wa.field_f, (SceneWidget) ((Object) MouseWheelHandler.field_e)};
           this.field_g = new TabbedPanel(0L, ab.field_a, var3, AccountMessagePanel.field_J, var4, 0);
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "wo.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "wo.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -60,7 +60,7 @@ final class wo {
             var4_int = 1;
           }
           if (param3 == 116) {
-            stackIn_11_0 = mc.a(param2, param1, var4_int != 0, MarkerSlider.field_Y[param0], -67);
+            stackIn_11_0 = mc.generatePuzzle(param2, param1, var4_int != 0, MarkerSlider.field_Y[param0], -67);
             return stackIn_11_0;
           }
           stackIn_9_0 = (Puzzle) null;
@@ -75,11 +75,11 @@ final class wo {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param3).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param3).append(')').toString());
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4) {
+    final void layoutSocialPanel(int param0, int param1, int param2, int param3, int param4) {
         int var6 = 24;
         int var7 = param4;
         this.field_g.setBoundsAndLayout(-19360, param2, var7, param0, param1, var6, param3);
@@ -104,18 +104,18 @@ final class wo {
         field_c = null;
     }
 
-    final static void c(int param0, int param1) {
+    final static void sendSubtypeThreeRequest(int param0, int param1) {
         CipherPacketBuffer var2 = null;
         CipherPacketBuffer var2Lifetime1;
         if (param0 == -1) {
-          var2 = aa.field_f;
+          var2 = ChatMessage.field_f;
           var2.writeOpcode(param1, 15514);
           var2.writeByte(160, 1);
           var2.writeByte(160, 3);
           return;
         }
         field_f = (byte[][]) null;
-        var2Lifetime1 = aa.field_f;
+        var2Lifetime1 = ChatMessage.field_f;
         var2Lifetime1.writeOpcode(param1, 15514);
         var2Lifetime1.writeByte(160, 1);
         var2Lifetime1.writeByte(160, 3);
@@ -140,7 +140,7 @@ final class wo {
           ArrayWidgetContainer.field_J = PieceTiming.field_e.textWidth(IntrusiveDeque.field_e);
           Js5Transport.field_n = PieceTiming.field_e.textWidth(SoundCache.field_j);
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "wo.A(" + param0 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "wo.A(" + param0 + ')');
         }
     }
 
@@ -183,7 +183,7 @@ final class wo {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 

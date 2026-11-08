@@ -11,7 +11,7 @@ public class CacheFileLocator {
     private static String field_b;
     private static Hashtable field_d;
 
-    public static void a(String param0, int param1, int param2) {
+    public static void initializeCacheEnvironment(String param0, int param1, int param2) {
         Exception exception = null;
         Throwable decompiledCaughtException = null;
         field_a = param2;
@@ -38,7 +38,7 @@ public class CacheFileLocator {
         throw new Error();
     }
 
-    public static File a(String param0, byte param1) {
+    public static File resolveCacheFile(String param0, byte param1) {
         if (param1 != -61) {
           field_b = (String) null;
           return CacheFileLocator.resolveFile(field_b, field_a, true, param0);

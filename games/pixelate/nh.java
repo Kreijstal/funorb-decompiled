@@ -37,7 +37,7 @@ final class nh {
         }
     }
 
-    final static void a(byte param0) {
+    final static void buildFontColourPalettes(byte param0) {
         int var1 = PieceTiming.field_e.findNearestBasePaletteIndex(16711680);
         int var2 = PieceTiming.field_e.findNearestBasePaletteIndex(16777215);
         if (param0 <= 54) {
@@ -121,11 +121,11 @@ final class nh {
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param1).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final static void fillHorizontalFadeSpan(int param0, int param1, int param2, int param3, int param4, int param5) {
         RuntimeException decompiledCaughtException = null;
         int var6_int = 0;
         RuntimeException var6 = null;
@@ -182,7 +182,7 @@ final class nh {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw aa.addExceptionContext((Throwable) ((Object) var6), "nh.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) var6), "nh.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 

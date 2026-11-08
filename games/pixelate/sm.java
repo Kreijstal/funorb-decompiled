@@ -9,7 +9,7 @@ final class sm extends IntrusiveNode {
     static SceneWidget field_m;
     static String field_k;
 
-    final static boolean a(String param0, int param1) {
+    final static boolean isLocalPlayerName(String param0, int param1) {
         RuntimeException var2 = null;
         CharSequence var3 = null;
         boolean stackIn_4_0 = false;
@@ -22,7 +22,7 @@ final class sm extends IntrusiveNode {
             return true;
           }
           var3 = (CharSequence) ((Object) param0);
-          stackIn_4_0 = LobbyGame.field_Hb.equals(dh.a(var3, (byte) 72));
+          stackIn_4_0 = LobbyGame.field_Hb.equals(dh.normalizeDisplayName(var3, (byte) 72));
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -34,11 +34,11 @@ final class sm extends IntrusiveNode {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    final static void a(int param0, boolean param1, int param2) {
+    final static void handleNameEntryResult(int param0, boolean param1, int param2) {
         int var3;
         Object var4;
         Object var5;
@@ -63,7 +63,7 @@ final class sm extends IntrusiveNode {
             !he.field_f.field_cb.equals("")) {
             if (91 != he.field_f.field_cb.charAt(0)) {
               var7 = (CharSequence) ((Object) he.field_f.field_cb);
-              var4 = dh.a(var7, (byte) 26);
+              var4 = dh.normalizeDisplayName(var7, (byte) 26);
             } else {
               var4 = he.field_f.field_cb;
             }
@@ -115,7 +115,7 @@ final class sm extends IntrusiveNode {
         }
         if (91 != he.field_f.field_cb.charAt(0)) {
           var8 = (CharSequence) ((Object) he.field_f.field_cb);
-          var4Lifetime1 = dh.a(var8, (byte) 26);
+          var4Lifetime1 = dh.normalizeDisplayName(var8, (byte) 26);
         } else {
           var4Lifetime1 = he.field_f.field_cb;
         }

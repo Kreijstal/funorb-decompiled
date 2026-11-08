@@ -10,10 +10,10 @@ final class ef {
     static String field_d;
     static int field_f;
 
-    final static void a(int param0) {
-        m var1 = (m) (LoginDialog.field_nb.first(1504642273));
+    final static void readListAcknowledgement(int param0) {
+        ListRequest var1 = (ListRequest) (LoginDialog.field_nb.first(1504642273));
         if (var1 == null) {
-          na.a(true);
+          na.closeGameSocket(true);
           return;
         }
         CipherPacketBuffer var2 = MusicCrossfadeStream.field_o;
@@ -23,11 +23,11 @@ final class ef {
         var2.readInt(0);
         var1.unlink(2779);
         if (param0 != -14439) {
-          ef.b(false);
+          ef.readHighscorePacket(false);
         }
     }
 
-    final static void b(boolean param0) {
+    final static void readHighscorePacket(boolean param0) {
         int var8_int = 0;
         String[][] dupTemp$0 = null;
         long[][] dupTemp$1 = null;
@@ -81,7 +81,7 @@ final class ef {
               break;
             }
             if (var4 == null) {
-              na.a(true);
+              na.closeGameSocket(true);
               return;
             }
             var5 = var28.readUnsignedByte(255);
@@ -135,7 +135,7 @@ final class ef {
                     }
                   }
                   if (var21 != null &&
-                    sm.a(var21, -1)) {
+                    sm.isLocalPlayerName(var21, -1)) {
                     var8[1][var13] = ModalStack.field_J;
                     var9[1][var13] = null;
                     var10[1][var13] = var22;
@@ -178,14 +178,14 @@ final class ef {
               break;
             }
             if (var6_ref_rh == null) {
-              na.a(!param0);
+              na.closeGameSocket(!param0);
               return;
             }
             var6_ref_rh.field_q = var4_long;
             var6_ref_rh.unlink(2779);
           } else {
-            CheckboxPainter.reportClientError(1, "HS1: " + jm.b(-63), (Throwable) null);
-            na.a(!param0);
+            CheckboxPainter.reportClientError(1, "HS1: " + Cloud.describePacketHistory(-63), (Throwable) null);
+            na.closeGameSocket(!param0);
           }
           if (param0) {
             ef.releaseStatics(false);
@@ -194,7 +194,7 @@ final class ef {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw aa.addExceptionContext((Throwable) ((Object) var1), "ef.C(" + param0 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) var1), "ef.C(" + param0 + ')');
         }
     }
 

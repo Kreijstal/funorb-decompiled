@@ -52,7 +52,7 @@ final class BoardView {
           GameApplet.field_i = -1;
           AlphaContainer.field_N = true;
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "kk.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "kk.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -107,7 +107,7 @@ final class BoardView {
           this.field_v > 0 &&
           this.field_r == 0) {
           if (this.field_v == 2) {
-            mc.a(131, -125);
+            mc.playSoundEffect(131, -125);
           }
           fieldTemp$2 = this.field_v;
           this.field_v = this.field_v + 1;
@@ -203,7 +203,7 @@ final class BoardView {
         return this.field_i == 0 ? true : false;
     }
 
-    final static CoverageBitmapFont a(ResourceArchive param0, String param1, int param2, String param3, ResourceArchive param4) {
+    final static CoverageBitmapFont loadCoverageFontByName(ResourceArchive param0, String param1, int param2, String param3, ResourceArchive param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -254,7 +254,7 @@ final class BoardView {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -302,7 +302,7 @@ final class BoardView {
                 if (fq.field_o == null) {
                   stackIn_29_0 = 0;
                 } else {
-                  stackIn_29_0 = fo.field_t;
+                  stackIn_29_0 = Kite.field_t;
                 }
                 var12 = stackIn_29_0;
                 if (var12 == 0) {
@@ -472,11 +472,11 @@ final class BoardView {
         }
     }
 
-    final static void a(byte param0, boolean param1) {
+    final static void drawAllOverlays(byte param0, boolean param1) {
         if (param0 != -61) {
           field_y = -99;
         }
-        l.b(19854, param1);
+        l.drawLobbyOverlays(19854, param1);
         jk.a(param1, (byte) 83);
     }
 
@@ -530,7 +530,7 @@ final class BoardView {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw aa.addExceptionContext((Throwable) ((Object) var5), "kk.K(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) var5), "kk.K(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -559,7 +559,7 @@ final class BoardView {
           this.field_q = new IntrusiveDeque();
           this.field_c = new Sprite(this.field_h * 32, 32 * this.field_j);
           this.field_z = 1;
-          var4_int = this.field_B.b((byte) -60);
+          var4_int = this.field_B.getBorderFlags((byte) -60);
           if ((2 & var4_int) == 0) {
             stackIn_4_1 = 0;
           } else {
@@ -605,7 +605,7 @@ final class BoardView {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 

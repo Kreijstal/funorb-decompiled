@@ -10,7 +10,7 @@ final class ih {
     static Sprite[] field_a;
     static int field_f;
 
-    final static TextWidgetPainter a(byte param0) {
+    final static TextWidgetPainter getHelpTextPainter(byte param0) {
         int var1 = 116 % ((3 - param0) / 36);
         if (Js5Transport.field_d == null) {
           Js5Transport.field_d = new TextWidgetPainter(ep.field_b, 20, 0, 0, 0, 11579568, -1, 0, 0, ep.field_b.maxAscent, -1, 2147483647, true);
@@ -30,7 +30,7 @@ final class ih {
         field_g = null;
     }
 
-    final static void a(boolean param0) {
+    final static void tickTutorial(boolean param0) {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         if (param0) {
@@ -42,9 +42,9 @@ final class ih {
           fieldTemp$0 = DebouncedValidator.field_d + 1;
           DebouncedValidator.field_d = DebouncedValidator.field_d + 1;
           if (fieldTemp$0 < ce.field_f) {
-            fo.field_t = DebouncedValidator.field_d - 128;
-            fo.field_t = fo.field_t < 0 ? 0 : 6 * fo.field_t;
-            fo.field_t = fo.field_t > 256 ? 256 : fo.field_t;
+            Kite.field_t = DebouncedValidator.field_d - 128;
+            Kite.field_t = Kite.field_t < 0 ? 0 : 6 * Kite.field_t;
+            Kite.field_t = Kite.field_t > 256 ? 256 : Kite.field_t;
             if (SpriteCheckboxPainter.field_d) {
               return;
             }
@@ -57,9 +57,9 @@ final class ih {
           LoginCredentials.field_e = fq.field_o;
           DebouncedValidator.field_d = 0;
           fq.field_o = null;
-          fo.field_t = DebouncedValidator.field_d - 128;
-          fo.field_t = fo.field_t < 0 ? 0 : 6 * fo.field_t;
-          fo.field_t = fo.field_t > 256 ? 256 : fo.field_t;
+          Kite.field_t = DebouncedValidator.field_d - 128;
+          Kite.field_t = Kite.field_t < 0 ? 0 : 6 * Kite.field_t;
+          Kite.field_t = Kite.field_t > 256 ? 256 : Kite.field_t;
           if (SpriteCheckboxPainter.field_d) {
             return;
           }
@@ -77,9 +77,9 @@ final class ih {
             LoginCredentials.field_e = fq.field_o;
             DebouncedValidator.field_d = 0;
             fq.field_o = null;
-            fo.field_t = DebouncedValidator.field_d - 128;
-            fo.field_t = fo.field_t < 0 ? 0 : 6 * fo.field_t;
-            fo.field_t = fo.field_t > 256 ? 256 : fo.field_t;
+            Kite.field_t = DebouncedValidator.field_d - 128;
+            Kite.field_t = Kite.field_t < 0 ? 0 : 6 * Kite.field_t;
+            Kite.field_t = Kite.field_t > 256 ? 256 : Kite.field_t;
             if (!SpriteCheckboxPainter.field_d &&
               DebouncedValidator.field_d < ce.field_f - 2) {
               DebouncedValidator.field_d = -2 + ce.field_f;
@@ -87,9 +87,9 @@ final class ih {
             }
             return;
           }
-          fo.field_t = DebouncedValidator.field_d - 128;
-          fo.field_t = fo.field_t < 0 ? 0 : 6 * fo.field_t;
-          fo.field_t = fo.field_t > 256 ? 256 : fo.field_t;
+          Kite.field_t = DebouncedValidator.field_d - 128;
+          Kite.field_t = Kite.field_t < 0 ? 0 : 6 * Kite.field_t;
+          Kite.field_t = Kite.field_t > 256 ? 256 : Kite.field_t;
           if (!SpriteCheckboxPainter.field_d &&
             DebouncedValidator.field_d < ce.field_f - 2) {
             DebouncedValidator.field_d = -2 + ce.field_f;

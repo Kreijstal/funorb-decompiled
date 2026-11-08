@@ -20,7 +20,7 @@ final class qf {
         if (param0 != 21983) {
           return;
         }
-        MusicPatchPcmStream.a(param1, (byte) 112);
+        MusicPatchPcmStream.setLobbyPanelX(param1, (byte) 112);
     }
 
     final static void initialiseKeyMap(int param0) {

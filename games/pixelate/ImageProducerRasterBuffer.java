@@ -18,7 +18,7 @@ final class ImageProducerRasterBuffer extends CanvasRasterBuffer implements java
           param0.setColorModel(this.field_o);
           param0.setHints(14);
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "i.addConsumer(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "i.addConsumer(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -47,7 +47,7 @@ final class ImageProducerRasterBuffer extends CanvasRasterBuffer implements java
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -56,7 +56,7 @@ final class ImageProducerRasterBuffer extends CanvasRasterBuffer implements java
           this.publishPixels(param1);
           param0.drawImage(this.field_d, param3, param2, (java.awt.image.ImageObserver) (this));
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "i.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "i.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -78,7 +78,7 @@ final class ImageProducerRasterBuffer extends CanvasRasterBuffer implements java
         try {
           this.addConsumer(param0);
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "i.startProduction(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "i.startProduction(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -100,7 +100,7 @@ final class ImageProducerRasterBuffer extends CanvasRasterBuffer implements java
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -122,7 +122,7 @@ final class ImageProducerRasterBuffer extends CanvasRasterBuffer implements java
           param1.prepareImage(this.field_d, (java.awt.image.ImageObserver) (this));
           this.bindRaster(19692);
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "i.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "i.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -207,7 +207,7 @@ final class ImageProducerRasterBuffer extends CanvasRasterBuffer implements java
           } else {
             stackIn_37_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_36_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(',').append(param1).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_36_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -227,20 +227,20 @@ final class ImageProducerRasterBuffer extends CanvasRasterBuffer implements java
             nk.field_e.horizontalAlignment = 1;
             nk.field_e.field_C = ArchiveIndex.field_l.field_C;
             if (RisingBubble.field_g > 0) {
-              AccountNoticeDialog.a(param0, param7, 3, param4);
+              AccountNoticeDialog.updateGameSetupPanel(param0, param7, 3, param4);
             }
             if (Checkbox.field_W > 0) {
               CachedTextLayout.a(param1, param6 + 28363, param0, param4, param7);
             }
             if (EmergentBehaviourBackground.field_o &&
               LoginMethod.field_c.field_ec <= LoginMethod.field_c.field_mc) {
-              jm.field_b.field_Ib.field_cb = fo.field_m;
+              Cloud.field_b.field_Ib.field_cb = Kite.field_m;
               StripedProgressBar.field_O.field_rb = false;
-              GrowableIntList.resetChildLayouts(jm.field_b.content, false);
+              GrowableIntList.resetChildLayouts(Cloud.field_b.content, false);
             } else {
               StripedProgressBar.field_O.field_rb = true;
-              jm.field_b.field_Ib.field_cb = null;
-              la.layoutLobbyGameRows(70, param0, jm.field_b, param8, param3);
+              Cloud.field_b.field_Ib.field_cb = null;
+              la.layoutLobbyGameRows(70, param0, Cloud.field_b, param8, param3);
             }
           } else {
             TextTableInitializer.field_c = (-640 + ni.field_q) / 2;
@@ -253,20 +253,20 @@ final class ImageProducerRasterBuffer extends CanvasRasterBuffer implements java
               nk.field_e.horizontalAlignment = 1;
               nk.field_e.field_C = ArchiveIndex.field_l.field_C;
               if (RisingBubble.field_g > 0) {
-                AccountNoticeDialog.a(param0, param7, 3, param4);
+                AccountNoticeDialog.updateGameSetupPanel(param0, param7, 3, param4);
               }
               if (Checkbox.field_W > 0) {
                 CachedTextLayout.a(param1, param6 + 28363, param0, param4, param7);
               }
               if (EmergentBehaviourBackground.field_o &&
                 LoginMethod.field_c.field_ec <= LoginMethod.field_c.field_mc) {
-                jm.field_b.field_Ib.field_cb = fo.field_m;
+                Cloud.field_b.field_Ib.field_cb = Kite.field_m;
                 StripedProgressBar.field_O.field_rb = false;
-                GrowableIntList.resetChildLayouts(jm.field_b.content, false);
+                GrowableIntList.resetChildLayouts(Cloud.field_b.content, false);
               } else {
                 StripedProgressBar.field_O.field_rb = true;
-                jm.field_b.field_Ib.field_cb = null;
-                la.layoutLobbyGameRows(70, param0, jm.field_b, param8, param3);
+                Cloud.field_b.field_Ib.field_cb = null;
+                la.layoutLobbyGameRows(70, param0, Cloud.field_b, param8, param3);
               }
             } else {
               if (0 < oo.field_b) {
@@ -274,38 +274,38 @@ final class ImageProducerRasterBuffer extends CanvasRasterBuffer implements java
                 nk.field_e.horizontalAlignment = 1;
                 nk.field_e.field_C = ArchiveIndex.field_l.field_C;
                 if (RisingBubble.field_g > 0) {
-                  AccountNoticeDialog.a(param0, param7, 3, param4);
+                  AccountNoticeDialog.updateGameSetupPanel(param0, param7, 3, param4);
                 }
                 if (Checkbox.field_W > 0) {
                   CachedTextLayout.a(param1, param6 + 28363, param0, param4, param7);
                 }
                 if (EmergentBehaviourBackground.field_o &&
                   LoginMethod.field_c.field_ec <= LoginMethod.field_c.field_mc) {
-                  jm.field_b.field_Ib.field_cb = fo.field_m;
+                  Cloud.field_b.field_Ib.field_cb = Kite.field_m;
                   StripedProgressBar.field_O.field_rb = false;
-                  GrowableIntList.resetChildLayouts(jm.field_b.content, false);
+                  GrowableIntList.resetChildLayouts(Cloud.field_b.content, false);
                 } else {
                   StripedProgressBar.field_O.field_rb = true;
-                  jm.field_b.field_Ib.field_cb = null;
-                  la.layoutLobbyGameRows(70, param0, jm.field_b, param8, param3);
+                  Cloud.field_b.field_Ib.field_cb = null;
+                  la.layoutLobbyGameRows(70, param0, Cloud.field_b, param8, param3);
                 }
               } else {
                 nk.field_e.horizontalAlignment = 1;
                 nk.field_e.field_C = ArchiveIndex.field_l.field_C;
                 if (RisingBubble.field_g > 0) {
-                  AccountNoticeDialog.a(param0, param7, 3, param4);
+                  AccountNoticeDialog.updateGameSetupPanel(param0, param7, 3, param4);
                   if (Checkbox.field_W > 0) {
                     CachedTextLayout.a(param1, param6 + 28363, param0, param4, param7);
                   }
                   if (EmergentBehaviourBackground.field_o &&
                     LoginMethod.field_c.field_ec <= LoginMethod.field_c.field_mc) {
-                    jm.field_b.field_Ib.field_cb = fo.field_m;
+                    Cloud.field_b.field_Ib.field_cb = Kite.field_m;
                     StripedProgressBar.field_O.field_rb = false;
-                    GrowableIntList.resetChildLayouts(jm.field_b.content, false);
+                    GrowableIntList.resetChildLayouts(Cloud.field_b.content, false);
                   } else {
                     StripedProgressBar.field_O.field_rb = true;
-                    jm.field_b.field_Ib.field_cb = null;
-                    la.layoutLobbyGameRows(70, param0, jm.field_b, param8, param3);
+                    Cloud.field_b.field_Ib.field_cb = null;
+                    la.layoutLobbyGameRows(70, param0, Cloud.field_b, param8, param3);
                   }
                 } else {
                   if (Checkbox.field_W > 0) {
@@ -313,17 +313,17 @@ final class ImageProducerRasterBuffer extends CanvasRasterBuffer implements java
                   }
                   if (!EmergentBehaviourBackground.field_o) {
                     StripedProgressBar.field_O.field_rb = true;
-                    jm.field_b.field_Ib.field_cb = null;
-                    la.layoutLobbyGameRows(70, param0, jm.field_b, param8, param3);
+                    Cloud.field_b.field_Ib.field_cb = null;
+                    la.layoutLobbyGameRows(70, param0, Cloud.field_b, param8, param3);
                   } else {
                     if (LoginMethod.field_c.field_ec <= LoginMethod.field_c.field_mc) {
-                      jm.field_b.field_Ib.field_cb = fo.field_m;
+                      Cloud.field_b.field_Ib.field_cb = Kite.field_m;
                       StripedProgressBar.field_O.field_rb = false;
-                      GrowableIntList.resetChildLayouts(jm.field_b.content, false);
+                      GrowableIntList.resetChildLayouts(Cloud.field_b.content, false);
                     } else {
                       StripedProgressBar.field_O.field_rb = true;
-                      jm.field_b.field_Ib.field_cb = null;
-                      la.layoutLobbyGameRows(70, param0, jm.field_b, param8, param3);
+                      Cloud.field_b.field_Ib.field_cb = null;
+                      la.layoutLobbyGameRows(70, param0, Cloud.field_b, param8, param3);
                     }
                   }
                 }
@@ -341,7 +341,7 @@ final class ImageProducerRasterBuffer extends CanvasRasterBuffer implements java
                 if (DraggableWidget.field_S != null) {
                   DebouncedValidator.layoutLobbyComponents((byte) 32, true);
                 } else {
-                  PacketBuffer.b(false);
+                  PacketBuffer.layoutLobbyPanels(false);
                 }
               }
             }
@@ -357,20 +357,20 @@ final class ImageProducerRasterBuffer extends CanvasRasterBuffer implements java
               nk.field_e.horizontalAlignment = 1;
               nk.field_e.field_C = ArchiveIndex.field_l.field_C;
               if (RisingBubble.field_g > 0) {
-                AccountNoticeDialog.a(param0, param7, 3, param4);
+                AccountNoticeDialog.updateGameSetupPanel(param0, param7, 3, param4);
               }
               if (Checkbox.field_W > 0) {
                 CachedTextLayout.a(param1, param6 + 28363, param0, param4, param7);
               }
               if (EmergentBehaviourBackground.field_o &&
                 LoginMethod.field_c.field_ec <= LoginMethod.field_c.field_mc) {
-                jm.field_b.field_Ib.field_cb = fo.field_m;
+                Cloud.field_b.field_Ib.field_cb = Kite.field_m;
                 StripedProgressBar.field_O.field_rb = false;
-                GrowableIntList.resetChildLayouts(jm.field_b.content, false);
+                GrowableIntList.resetChildLayouts(Cloud.field_b.content, false);
               } else {
                 StripedProgressBar.field_O.field_rb = true;
-                jm.field_b.field_Ib.field_cb = null;
-                la.layoutLobbyGameRows(70, param0, jm.field_b, param8, param3);
+                Cloud.field_b.field_Ib.field_cb = null;
+                la.layoutLobbyGameRows(70, param0, Cloud.field_b, param8, param3);
               }
             } else {
               TextTableInitializer.field_c = (-640 + ni.field_q) / 2;
@@ -383,20 +383,20 @@ final class ImageProducerRasterBuffer extends CanvasRasterBuffer implements java
                 nk.field_e.horizontalAlignment = 1;
                 nk.field_e.field_C = ArchiveIndex.field_l.field_C;
                 if (RisingBubble.field_g > 0) {
-                  AccountNoticeDialog.a(param0, param7, 3, param4);
+                  AccountNoticeDialog.updateGameSetupPanel(param0, param7, 3, param4);
                 }
                 if (Checkbox.field_W > 0) {
                   CachedTextLayout.a(param1, param6 + 28363, param0, param4, param7);
                 }
                 if (EmergentBehaviourBackground.field_o &&
                   LoginMethod.field_c.field_ec <= LoginMethod.field_c.field_mc) {
-                  jm.field_b.field_Ib.field_cb = fo.field_m;
+                  Cloud.field_b.field_Ib.field_cb = Kite.field_m;
                   StripedProgressBar.field_O.field_rb = false;
-                  GrowableIntList.resetChildLayouts(jm.field_b.content, false);
+                  GrowableIntList.resetChildLayouts(Cloud.field_b.content, false);
                 } else {
                   StripedProgressBar.field_O.field_rb = true;
-                  jm.field_b.field_Ib.field_cb = null;
-                  la.layoutLobbyGameRows(70, param0, jm.field_b, param8, param3);
+                  Cloud.field_b.field_Ib.field_cb = null;
+                  la.layoutLobbyGameRows(70, param0, Cloud.field_b, param8, param3);
                 }
               } else {
                 if (0 < oo.field_b) {
@@ -405,19 +405,19 @@ final class ImageProducerRasterBuffer extends CanvasRasterBuffer implements java
                 nk.field_e.horizontalAlignment = 1;
                 nk.field_e.field_C = ArchiveIndex.field_l.field_C;
                 if (RisingBubble.field_g > 0) {
-                  AccountNoticeDialog.a(param0, param7, 3, param4);
+                  AccountNoticeDialog.updateGameSetupPanel(param0, param7, 3, param4);
                   if (Checkbox.field_W > 0) {
                     CachedTextLayout.a(param1, param6 + 28363, param0, param4, param7);
                   }
                   if (EmergentBehaviourBackground.field_o &&
                     LoginMethod.field_c.field_ec <= LoginMethod.field_c.field_mc) {
-                    jm.field_b.field_Ib.field_cb = fo.field_m;
+                    Cloud.field_b.field_Ib.field_cb = Kite.field_m;
                     StripedProgressBar.field_O.field_rb = false;
-                    GrowableIntList.resetChildLayouts(jm.field_b.content, false);
+                    GrowableIntList.resetChildLayouts(Cloud.field_b.content, false);
                   } else {
                     StripedProgressBar.field_O.field_rb = true;
-                    jm.field_b.field_Ib.field_cb = null;
-                    la.layoutLobbyGameRows(70, param0, jm.field_b, param8, param3);
+                    Cloud.field_b.field_Ib.field_cb = null;
+                    la.layoutLobbyGameRows(70, param0, Cloud.field_b, param8, param3);
                   }
                 } else {
                   if (Checkbox.field_W > 0) {
@@ -425,17 +425,17 @@ final class ImageProducerRasterBuffer extends CanvasRasterBuffer implements java
                   }
                   if (!EmergentBehaviourBackground.field_o) {
                     StripedProgressBar.field_O.field_rb = true;
-                    jm.field_b.field_Ib.field_cb = null;
-                    la.layoutLobbyGameRows(70, param0, jm.field_b, param8, param3);
+                    Cloud.field_b.field_Ib.field_cb = null;
+                    la.layoutLobbyGameRows(70, param0, Cloud.field_b, param8, param3);
                   } else {
                     if (LoginMethod.field_c.field_ec <= LoginMethod.field_c.field_mc) {
-                      jm.field_b.field_Ib.field_cb = fo.field_m;
+                      Cloud.field_b.field_Ib.field_cb = Kite.field_m;
                       StripedProgressBar.field_O.field_rb = false;
-                      GrowableIntList.resetChildLayouts(jm.field_b.content, false);
+                      GrowableIntList.resetChildLayouts(Cloud.field_b.content, false);
                     } else {
                       StripedProgressBar.field_O.field_rb = true;
-                      jm.field_b.field_Ib.field_cb = null;
-                      la.layoutLobbyGameRows(70, param0, jm.field_b, param8, param3);
+                      Cloud.field_b.field_Ib.field_cb = null;
+                      la.layoutLobbyGameRows(70, param0, Cloud.field_b, param8, param3);
                     }
                   }
                 }
@@ -450,7 +450,7 @@ final class ImageProducerRasterBuffer extends CanvasRasterBuffer implements java
                 if (DraggableWidget.field_S != null) {
                   DebouncedValidator.layoutLobbyComponents((byte) 32, true);
                 } else {
-                  PacketBuffer.b(false);
+                  PacketBuffer.layoutLobbyPanels(false);
                 }
               }
             }
@@ -466,20 +466,20 @@ final class ImageProducerRasterBuffer extends CanvasRasterBuffer implements java
               nk.field_e.horizontalAlignment = 1;
               nk.field_e.field_C = ArchiveIndex.field_l.field_C;
               if (RisingBubble.field_g > 0) {
-                AccountNoticeDialog.a(param0, param7, 3, param4);
+                AccountNoticeDialog.updateGameSetupPanel(param0, param7, 3, param4);
               }
               if (Checkbox.field_W > 0) {
                 CachedTextLayout.a(param1, param6 + 28363, param0, param4, param7);
               }
               if (EmergentBehaviourBackground.field_o &&
                 LoginMethod.field_c.field_ec <= LoginMethod.field_c.field_mc) {
-                jm.field_b.field_Ib.field_cb = fo.field_m;
+                Cloud.field_b.field_Ib.field_cb = Kite.field_m;
                 StripedProgressBar.field_O.field_rb = false;
-                GrowableIntList.resetChildLayouts(jm.field_b.content, false);
+                GrowableIntList.resetChildLayouts(Cloud.field_b.content, false);
               } else {
                 StripedProgressBar.field_O.field_rb = true;
-                jm.field_b.field_Ib.field_cb = null;
-                la.layoutLobbyGameRows(70, param0, jm.field_b, param8, param3);
+                Cloud.field_b.field_Ib.field_cb = null;
+                la.layoutLobbyGameRows(70, param0, Cloud.field_b, param8, param3);
               }
             } else {
               TextTableInitializer.field_c = (-640 + ni.field_q) / 2;
@@ -492,20 +492,20 @@ final class ImageProducerRasterBuffer extends CanvasRasterBuffer implements java
                 nk.field_e.horizontalAlignment = 1;
                 nk.field_e.field_C = ArchiveIndex.field_l.field_C;
                 if (RisingBubble.field_g > 0) {
-                  AccountNoticeDialog.a(param0, param7, 3, param4);
+                  AccountNoticeDialog.updateGameSetupPanel(param0, param7, 3, param4);
                 }
                 if (Checkbox.field_W > 0) {
                   CachedTextLayout.a(param1, param6 + 28363, param0, param4, param7);
                 }
                 if (EmergentBehaviourBackground.field_o &&
                   LoginMethod.field_c.field_ec <= LoginMethod.field_c.field_mc) {
-                  jm.field_b.field_Ib.field_cb = fo.field_m;
+                  Cloud.field_b.field_Ib.field_cb = Kite.field_m;
                   StripedProgressBar.field_O.field_rb = false;
-                  GrowableIntList.resetChildLayouts(jm.field_b.content, false);
+                  GrowableIntList.resetChildLayouts(Cloud.field_b.content, false);
                 } else {
                   StripedProgressBar.field_O.field_rb = true;
-                  jm.field_b.field_Ib.field_cb = null;
-                  la.layoutLobbyGameRows(70, param0, jm.field_b, param8, param3);
+                  Cloud.field_b.field_Ib.field_cb = null;
+                  la.layoutLobbyGameRows(70, param0, Cloud.field_b, param8, param3);
                 }
               } else {
                 if (0 < oo.field_b) {
@@ -513,38 +513,38 @@ final class ImageProducerRasterBuffer extends CanvasRasterBuffer implements java
                   nk.field_e.horizontalAlignment = 1;
                   nk.field_e.field_C = ArchiveIndex.field_l.field_C;
                   if (RisingBubble.field_g > 0) {
-                    AccountNoticeDialog.a(param0, param7, 3, param4);
+                    AccountNoticeDialog.updateGameSetupPanel(param0, param7, 3, param4);
                   }
                   if (Checkbox.field_W > 0) {
                     CachedTextLayout.a(param1, param6 + 28363, param0, param4, param7);
                   }
                   if (EmergentBehaviourBackground.field_o &&
                     LoginMethod.field_c.field_ec <= LoginMethod.field_c.field_mc) {
-                    jm.field_b.field_Ib.field_cb = fo.field_m;
+                    Cloud.field_b.field_Ib.field_cb = Kite.field_m;
                     StripedProgressBar.field_O.field_rb = false;
-                    GrowableIntList.resetChildLayouts(jm.field_b.content, false);
+                    GrowableIntList.resetChildLayouts(Cloud.field_b.content, false);
                   } else {
                     StripedProgressBar.field_O.field_rb = true;
-                    jm.field_b.field_Ib.field_cb = null;
-                    la.layoutLobbyGameRows(70, param0, jm.field_b, param8, param3);
+                    Cloud.field_b.field_Ib.field_cb = null;
+                    la.layoutLobbyGameRows(70, param0, Cloud.field_b, param8, param3);
                   }
                 } else {
                   nk.field_e.horizontalAlignment = 1;
                   nk.field_e.field_C = ArchiveIndex.field_l.field_C;
                   if (RisingBubble.field_g > 0) {
-                    AccountNoticeDialog.a(param0, param7, 3, param4);
+                    AccountNoticeDialog.updateGameSetupPanel(param0, param7, 3, param4);
                     if (Checkbox.field_W > 0) {
                       CachedTextLayout.a(param1, param6 + 28363, param0, param4, param7);
                     }
                     if (EmergentBehaviourBackground.field_o &&
                       LoginMethod.field_c.field_ec <= LoginMethod.field_c.field_mc) {
-                      jm.field_b.field_Ib.field_cb = fo.field_m;
+                      Cloud.field_b.field_Ib.field_cb = Kite.field_m;
                       StripedProgressBar.field_O.field_rb = false;
-                      GrowableIntList.resetChildLayouts(jm.field_b.content, false);
+                      GrowableIntList.resetChildLayouts(Cloud.field_b.content, false);
                     } else {
                       StripedProgressBar.field_O.field_rb = true;
-                      jm.field_b.field_Ib.field_cb = null;
-                      la.layoutLobbyGameRows(70, param0, jm.field_b, param8, param3);
+                      Cloud.field_b.field_Ib.field_cb = null;
+                      la.layoutLobbyGameRows(70, param0, Cloud.field_b, param8, param3);
                     }
                   } else {
                     if (Checkbox.field_W > 0) {
@@ -552,17 +552,17 @@ final class ImageProducerRasterBuffer extends CanvasRasterBuffer implements java
                     }
                     if (!EmergentBehaviourBackground.field_o) {
                       StripedProgressBar.field_O.field_rb = true;
-                      jm.field_b.field_Ib.field_cb = null;
-                      la.layoutLobbyGameRows(70, param0, jm.field_b, param8, param3);
+                      Cloud.field_b.field_Ib.field_cb = null;
+                      la.layoutLobbyGameRows(70, param0, Cloud.field_b, param8, param3);
                     } else {
                       if (LoginMethod.field_c.field_ec <= LoginMethod.field_c.field_mc) {
-                        jm.field_b.field_Ib.field_cb = fo.field_m;
+                        Cloud.field_b.field_Ib.field_cb = Kite.field_m;
                         StripedProgressBar.field_O.field_rb = false;
-                        GrowableIntList.resetChildLayouts(jm.field_b.content, false);
+                        GrowableIntList.resetChildLayouts(Cloud.field_b.content, false);
                       } else {
                         StripedProgressBar.field_O.field_rb = true;
-                        jm.field_b.field_Ib.field_cb = null;
-                        la.layoutLobbyGameRows(70, param0, jm.field_b, param8, param3);
+                        Cloud.field_b.field_Ib.field_cb = null;
+                        la.layoutLobbyGameRows(70, param0, Cloud.field_b, param8, param3);
                       }
                     }
                   }
@@ -571,7 +571,7 @@ final class ImageProducerRasterBuffer extends CanvasRasterBuffer implements java
             }
           }
         }
-        Pixelate.a(param3, (byte) 69, param8, param2, param5, param0, param9);
+        Pixelate.updateLobbyGameList(param3, (byte) 69, param8, param2, param5, param0, param9);
         la.layoutLobbyGameRows(58, param0, Vector3.field_c, param8, param3);
         AchievementsScreen.field_o = AchievementsScreen.field_o + 1;
     }
@@ -597,7 +597,7 @@ final class ImageProducerRasterBuffer extends CanvasRasterBuffer implements java
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 

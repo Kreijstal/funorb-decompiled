@@ -42,7 +42,7 @@ final class BirthDateEntryPanel extends ArrayWidgetContainer implements ButtonLi
         try {
           super.updatePointer(param0 ^ 0, param1, param2, param3);
           stackIn_2_0 = this.field_O;
-          stackIn_3_1 = (this.field_Q.getValidationSource(1).getState((byte) 88) == qk.field_g);
+          stackIn_3_1 = (this.field_Q.getValidationSource(1).getState((byte) 88) == RetroBlock.field_g);
           stackIn_2_0.field_H = stackIn_3_1;
           if (param0 == 40) {
             return;
@@ -60,21 +60,21 @@ final class BirthDateEntryPanel extends ArrayWidgetContainer implements ButtonLi
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
     public final void onAction(TextButton param0, int param1, int param2, int param3, int param4) {
-        if (this.field_Q.getValidationSource(1).getState((byte) 69) != qk.field_g) {
+        if (this.field_Q.getValidationSource(1).getState((byte) 69) != RetroBlock.field_g) {
           return;
         }
         try {
-          ui.a(123, this.field_Q.getDay((byte) 83), this.field_Q.getYear(true), this.field_Q.getMonthIndex(25));
+          ui.writeBirthDatePacket(123, this.field_Q.getDay((byte) 83), this.field_Q.getYear(true), this.field_Q.getMonthIndex(25));
           if (param2 != 11) {
             field_R = (String) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "oj.Q(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "oj.Q(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 

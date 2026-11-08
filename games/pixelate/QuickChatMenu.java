@@ -31,7 +31,7 @@ final class QuickChatMenu extends SceneWidget {
         var6 = Pixelate.field_H ? 1 : 0;
         try {
           var2_int = -84 / ((29 - param1) / 52);
-          var3 = jm.field_d;
+          var3 = Cloud.field_d;
           for (var4 = 0; var3.length > var4; var4++) {
             var5 = var3[var4];
             var5.draw(100, param0);
@@ -40,7 +40,7 @@ final class QuickChatMenu extends SceneWidget {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.addExceptionContext((Throwable) ((Object) var2), "te.E(" + param0 + ',' + param1 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) var2), "te.E(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -82,9 +82,9 @@ final class QuickChatMenu extends SceneWidget {
         }
         try {
           param1.removeFocusListener(fj.field_c);
-          jm.field_o = 0;
+          Cloud.field_o = 0;
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "te.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "te.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -191,7 +191,7 @@ final class QuickChatMenu extends SceneWidget {
         if (param0 != 0) {
           return 100;
         }
-        return ba.field_f;
+        return FireworkBurst.field_f;
     }
 
     final boolean hasPressedItem(int param0) {
@@ -319,7 +319,7 @@ final class QuickChatMenu extends SceneWidget {
           } else {
             stackIn_34_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
         }
     }
 
@@ -372,7 +372,7 @@ final class QuickChatMenu extends SceneWidget {
                 Js5ArchiveManager.setChatFilterMode(1, -26931, var6, param1);
               }
               var8 = (String) null;
-              dg.a(true, ce.field_d, var5, (String) null, CheckboxPainter.field_k, param3);
+              dg.sendQuickChatMessage(true, ce.field_d, var5, (String) null, CheckboxPainter.field_k, param3);
               di.a(var5, fp.field_e, CheckboxPainter.field_k, (byte) 9, ce.field_d);
               ScoreMarkerDemo.closeQuickChatMenu(false);
               SocketJs5Transport.resetRetryTimer(-93);

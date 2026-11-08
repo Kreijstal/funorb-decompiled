@@ -5,7 +5,7 @@ final class cn {
     static bd field_a;
     static LoadingProgressDialog field_b;
 
-    final static int a(String param0, int param1, int param2, boolean param3, ConditionalTextValue param4, int param5, ConditionalTextValue param6) {
+    final static int performAccountServerRequest(String param0, int param1, int param2, boolean param3, ConditionalTextValue param4, int param5, ConditionalTextValue param6) {
         int var12 = 0;
         int stackIn_5_0 = 0;
         PacketBuffer stackIn_13_0 = null;
@@ -58,7 +58,7 @@ final class cn {
             field_a = (bd) null;
           }
           if (GameModeSelectScreen.field_s == ij.field_o) {
-            aa.field_f.position = 0;
+            ChatMessage.field_f.position = 0;
             ArchiveIndex.field_j = null;
             if (param0 != null) {
               var9 = 0;
@@ -68,23 +68,23 @@ final class cn {
               }
               GameModeSelectScreen.field_v.writeInt(Bzip2State.field_d.nextInt(), -49);
               GameModeSelectScreen.field_v.writeInt(Bzip2State.field_d.nextInt(), -62);
-              GameModeSelectScreen.field_v.a((byte) -66, var14);
-              GameModeSelectScreen.field_v.a((byte) -66, var8);
+              GameModeSelectScreen.field_v.writeVersionedString((byte) -66, var14);
+              GameModeSelectScreen.field_v.writeVersionedString((byte) -66, var8);
               var15 = (CharSequence) ((Object) param0);
-              GameModeSelectScreen.field_v.a((byte) -66, la.normalizeAccountName((byte) 10, var15));
+              GameModeSelectScreen.field_v.writeVersionedString((byte) -66, la.normalizeAccountName((byte) 10, var15));
               GameModeSelectScreen.field_v.writeShort(1276387944, param1);
               GameModeSelectScreen.field_v.writeByte(160, param5);
               GameModeSelectScreen.field_v.writeByte(160, var9);
-              aa.field_f.writeByte(160, 18);
-              aa.field_f.position = aa.field_f.position + 2;
-              var10 = aa.field_f.position;
-              var11_ref_StringLifetime2 = ln.a(AudioService.a(13867), (byte) -85);
+              ChatMessage.field_f.writeByte(160, 18);
+              ChatMessage.field_f.position = ChatMessage.field_f.position + 2;
+              var10 = ChatMessage.field_f.position;
+              var11_ref_StringLifetime2 = SoundVoice.readSettingsCookie(AudioService.getApplet(13867), (byte) -85);
               if (var11_ref_StringLifetime2 == null) {
                 var11_ref_StringLifetime2 = "";
               }
-              aa.field_f.writeString((byte) -41, var11_ref_StringLifetime2);
-              HighscoresScreen.a(AgeValidator.field_m, aa.field_f, SceneWidgetNode.field_t, GameModeSelectScreen.field_v, 12556);
-              aa.field_f.backpatchShortLength(7519, aa.field_f.position - var10);
+              ChatMessage.field_f.writeString((byte) -41, var11_ref_StringLifetime2);
+              HighscoresScreen.writeEncryptedBlock(AgeValidator.field_m, ChatMessage.field_f, SceneWidgetNode.field_t, GameModeSelectScreen.field_v, 12556);
+              ChatMessage.field_f.backpatchShortLength(7519, ChatMessage.field_f.position - var10);
             } else {
               GameModeSelectScreen.field_v.position = 0;
               GameModeSelectScreen.field_v.writeInt(Bzip2State.field_d.nextInt(), -90);
@@ -96,7 +96,7 @@ final class cn {
               } else {
                 stackIn_14_2 = var14;
               }
-              ((PacketBuffer) (Object) stackIn_13_0).a((byte) stackIn_13_1, stackIn_14_2);
+              ((PacketBuffer) (Object) stackIn_13_0).writeVersionedString((byte) stackIn_13_1, stackIn_14_2);
               stackIn_16_0 = GameModeSelectScreen.field_v;
               stackIn_16_1 = -66;
               if (param4.isPending((byte) 127)) {
@@ -104,12 +104,12 @@ final class cn {
               } else {
                 stackIn_17_2 = "";
               }
-              ((PacketBuffer) (Object) stackIn_16_0).a((byte) stackIn_16_1, stackIn_17_2);
-              aa.field_f.writeByte(160, 16);
-              aa.field_f.position = aa.field_f.position + 1;
-              var9 = aa.field_f.position;
-              HighscoresScreen.a(AgeValidator.field_m, aa.field_f, SceneWidgetNode.field_t, GameModeSelectScreen.field_v, 12556);
-              aa.field_f.backpatchByteLength(aa.field_f.position - var9, -1);
+              ((PacketBuffer) (Object) stackIn_16_0).writeVersionedString((byte) stackIn_16_1, stackIn_17_2);
+              ChatMessage.field_f.writeByte(160, 16);
+              ChatMessage.field_f.position = ChatMessage.field_f.position + 1;
+              var9 = ChatMessage.field_f.position;
+              HighscoresScreen.writeEncryptedBlock(AgeValidator.field_m, ChatMessage.field_f, SceneWidgetNode.field_t, GameModeSelectScreen.field_v, 12556);
+              ChatMessage.field_f.backpatchByteLength(ChatMessage.field_f.position - var9, -1);
             }
             SecondaryNodeHashTable.flushOutgoingPackets(-1, 10000);
             GameModeSelectScreen.field_s = TextLayoutLine.field_c;
@@ -124,9 +124,9 @@ final class cn {
               GameModeSelectScreen.field_s = EditableTextWidget.field_Z;
             } else {
               if (248 == var9Lifetime1) {
-                GreenGrowTheRushesBackground.setTuhstatbutCookie(AudioService.a(13867), -7624);
+                GreenGrowTheRushesBackground.setTuhstatbutCookie(AudioService.getApplet(13867), -7624);
                 gi.field_b = ph.field_m;
-                na.a(true);
+                na.closeGameSocket(true);
                 qj.field_b = false;
                 stackIn_33_0 = var9Lifetime1;
                 return stackIn_33_0;
@@ -152,7 +152,7 @@ final class cn {
                 for (var12 = 0; var12 < var11; var12++) {
                   MatchController.field_y[var12] = MusicCrossfadeStream.field_o.readNullCircumfixedString(122);
                 }
-                na.a(true);
+                na.closeGameSocket(true);
                 qj.field_b = false;
                 stackIn_45_0 = 100 + var11;
                 return stackIn_45_0;
@@ -160,16 +160,16 @@ final class cn {
             }
           }
           if (GameModeSelectScreen.field_s == StatusBar.field_l &&
-            MusicPatchNode.e(-18481)) {
+            MusicPatchNode.readPacketHeader(-18481)) {
             if (TextLayoutLine.field_e == 255) {
               var9_ref_String = MusicCrossfadeStream.field_o.readOptionalString((byte) 40);
               if (var9_ref_String != null) {
-                QueuedInput.writeSettingsCookie(var9_ref_String, 126, AudioService.a(13867));
+                QueuedInput.writeSettingsCookie(var9_ref_String, 126, AudioService.getApplet(13867));
               }
             } else {
               gi.field_b = MusicCrossfadeStream.field_o.readString(5);
             }
-            na.a(true);
+            na.closeGameSocket(true);
             qj.field_b = false;
             stackIn_56_0 = TextLayoutLine.field_e;
             return stackIn_56_0;
@@ -214,7 +214,7 @@ final class cn {
           } else {
             stackIn_76_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_69_0), ((StringBuilder) (Object) stackIn_75_1).append(stackIn_76_2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_69_0), ((StringBuilder) (Object) stackIn_75_1).append(stackIn_76_2).append(')').toString());
         }
     }
 
@@ -226,7 +226,7 @@ final class cn {
         field_b = null;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int[] param5, boolean param6, int param7, int param8) {
+    final static void rasterFlatMeshTriangle(int param0, int param1, int param2, int param3, int param4, int[] param5, boolean param6, int param7, int param8) {
         RuntimeException stackIn_76_0 = null;
         StringBuilder stackIn_76_1 = null;
         String stackIn_77_2 = null;
@@ -418,22 +418,22 @@ final class cn {
           } else {
             stackIn_77_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_76_0), ((StringBuilder) (Object) stackIn_76_1).append(stackIn_77_2).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_76_0), ((StringBuilder) (Object) stackIn_76_1).append(stackIn_77_2).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(')').toString());
         }
     }
 
-    final static lc a(int param0, int param1, int param2, int param3) {
+    final static RankingQuery getRankingQuery(int param0, int param1, int param2, int param3) {
         int var5 = Pixelate.field_H ? 1 : 0;
-        lc var4 = (lc) (LoginCredentials.field_c.first(1504642273));
+        RankingQuery var4 = (RankingQuery) (LoginCredentials.field_c.first(1504642273));
         while (var4 != null) {
           if (~param0 == ~var4.field_k) {
             return var4;
           }
-          var4 = (lc) (LoginCredentials.field_c.next(1504642273));
+          var4 = (RankingQuery) (LoginCredentials.field_c.next(1504642273));
         }
-        var4 = new lc();
+        var4 = new RankingQuery();
         if (param3 > -16) {
-          cn.a(59, -14, -85, -23);
+          cn.getRankingQuery(59, -14, -85, -23);
         }
         var4.field_k = param0;
         var4.field_s = param2;

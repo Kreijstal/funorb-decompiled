@@ -16,9 +16,9 @@ abstract class CanvasRasterBuffer {
 
     abstract void drawImage(java.awt.Graphics param0, boolean param1, int param2, int param3);
 
-    final static boolean b(int param0) {
+    final static boolean hasPopupOrQuickChat(int param0) {
         if (param0 != 12742) {
-          CanvasRasterBuffer.b(-110);
+          CanvasRasterBuffer.hasPopupOrQuickChat(-110);
           if (ri.field_f == null) {
             return un.field_l ? true : false;
           }
@@ -33,7 +33,7 @@ abstract class CanvasRasterBuffer {
         return true;
     }
 
-    final static boolean a(String param0, byte param1) {
+    final static boolean isFriendName(String param0, byte param1) {
         RuntimeException var2 = null;
         boolean stackIn_5_0 = false;
         RuntimeException stackIn_8_0 = null;
@@ -56,7 +56,7 @@ abstract class CanvasRasterBuffer {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 

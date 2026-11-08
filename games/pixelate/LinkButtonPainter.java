@@ -55,7 +55,7 @@ final class LinkButtonPainter implements WidgetPainter {
             } else {
               stackIn_16_2 = "{...}";
             }
-            throw aa.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+            throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -65,7 +65,7 @@ final class LinkButtonPainter implements WidgetPainter {
     }
 
     final static void a(byte param0) {
-        jd var1 = (jd) (BirthDateEntryPanel.field_P.removeLast(param0 - 174));
+        RasterState var1 = (RasterState) (BirthDateEntryPanel.field_P.removeLast(param0 - 174));
         if (param0 != 92) {
           field_i = -106;
           if (var1 == null) {
@@ -106,7 +106,7 @@ final class LinkButtonPainter implements WidgetPainter {
           this.font = param0;
           this.verticalAlignment = param2;
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "ia.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "ia.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -155,7 +155,7 @@ final class LinkButtonPainter implements WidgetPainter {
             } else {
               var10 = var10 + (param0.field_C - var8);
             }
-            ValidatedTextWidget.a(var9 - 2, var10 + 2, (byte) -128, 4 + var7, var8);
+            ValidatedTextWidget.drawDottedRectangle(var9 - 2, var10 + 2, (byte) -128, 4 + var7, var8);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -168,7 +168,7 @@ final class LinkButtonPainter implements WidgetPainter {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 

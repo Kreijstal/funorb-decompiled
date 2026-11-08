@@ -6,7 +6,7 @@ final class BouncedownBackground extends BackgroundScene {
     static ea field_o;
     static int field_m;
 
-    final static void a(Sprite[] param0, int param1, Sprite[] param2, int param3, BitmapFont param4, int param5, int param6, BitmapFont param7, int param8, int param9, byte param10, int param11, int param12, int param13, int param14, int param15, Sprite[] param16, int param17, int param18, int param19, int param20) {
+    final static void configureMenuStyles(Sprite[] param0, int param1, Sprite[] param2, int param3, BitmapFont param4, int param5, int param6, BitmapFont param7, int param8, int param9, byte param10, int param11, int param12, int param13, int param14, int param15, Sprite[] param16, int param17, int param18, int param19, int param20) {
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
@@ -59,20 +59,20 @@ final class BouncedownBackground extends BackgroundScene {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param17).append(',').append(param18).append(',').append(param19).append(',').append(param20).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param17).append(',').append(param18).append(',').append(param19).append(',').append(param20).append(')').toString());
         }
     }
 
     BouncedownBackground(String param0, Sprite[] param1) {
         super(param0, param1);
         try {
-          this.d(-14116);
+          this.createBubbles(-14116);
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "da.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "da.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static void e(int param0) {
+    final static void clearFaceDepthBuckets(int param0) {
         int[] var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -103,7 +103,7 @@ final class BouncedownBackground extends BackgroundScene {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw aa.addExceptionContext((Throwable) ((Object) var1_ref), "da.F(" + param0 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) var1_ref), "da.F(" + param0 + ')');
         }
     }
 
@@ -156,7 +156,7 @@ final class BouncedownBackground extends BackgroundScene {
         }
     }
 
-    private final void d(int param0) {
+    private final void createBubbles(int param0) {
         int var2;
         int var3;
         var3 = Pixelate.field_H ? 1 : 0;
@@ -176,7 +176,7 @@ final class BouncedownBackground extends BackgroundScene {
         }
     }
 
-    final static int a(byte[] param0, byte param1, int param2, int param3) {
+    final static int crc32(byte[] param0, byte param1, int param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -212,7 +212,7 @@ final class BouncedownBackground extends BackgroundScene {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 

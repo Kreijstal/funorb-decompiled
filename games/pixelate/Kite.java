@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class fo {
+final class Kite {
     private int field_l;
     private int[] field_c;
     static int[] field_a;
@@ -14,7 +14,7 @@ final class fo {
     private int field_n;
     private int field_e;
     static int field_g;
-    private ki[] field_j;
+    private KiteTailSegment[] field_j;
     private int field_d;
     private int field_f;
     private int[] field_h;
@@ -27,7 +27,7 @@ final class fo {
     private int[] field_s;
     private int field_i;
 
-    final void a(int param0) {
+    final void tick(int param0) {
         int fieldTemp$0 = this.field_e + 1;
         this.field_e = this.field_e + 1;
         if (fieldTemp$0 >= 400) {
@@ -52,20 +52,20 @@ final class fo {
         this.field_j[2].swingTo(this.field_j[1].field_h, (byte) 48, this.field_j[1].field_g);
     }
 
-    final void b(int param0) {
-        ki var9 = null;
-        ki var10 = null;
+    final void draw(int param0) {
+        KiteTailSegment var9 = null;
+        KiteTailSegment var10 = null;
         int var3 = 0;
         int var5 = Pixelate.field_H ? 1 : 0;
         int var3Lifetime1;
         IntrusiveDequeCursor.field_f.rotateNearest(1600, 2272, this.field_p << 4, this.field_i << 4, this.field_k, this.field_l);
-        ki[] var6 = this.field_j;
-        ki[] var2 = var6;
+        KiteTailSegment[] var6 = this.field_j;
+        KiteTailSegment[] var2 = var6;
         for (var3 = 0; var3 < var6.length; var3++) {
           var9 = var6[var3];
           var9.drawString(false);
         }
-        ki[] var7 = this.field_j;
+        KiteTailSegment[] var7 = this.field_j;
         var2 = var7;
         int var8 = 0;
         var3Lifetime1 = var8;
@@ -79,7 +79,7 @@ final class fo {
         SoftwareRasterizer.drawLine(-1 + this.field_p, -5 + this.field_i, 300 + this.field_d + param0, this.field_q, 3355392);
     }
 
-    final static boolean a(byte param0) {
+    final static boolean isMessageMenuPending(byte param0) {
         if (param0 < 12) {
           field_m = (String) null;
         }
@@ -93,7 +93,7 @@ final class fo {
         field_m = null;
     }
 
-    fo(int param0, int param1, int param2, int param3, int param4) {
+    Kite(int param0, int param1, int param2, int param3, int param4) {
         double var9_double = 0.0;
         double var10_double = 0.0;
         int var8 = 0;
@@ -125,12 +125,12 @@ final class fo {
           this.field_b[var9] = (int)((double)var8Lifetime1 * Math.sin(2.0 * var10_double));
           this.field_s[var9] = (int)(Math.cos(var10_double * 2.0) * (double)var8Lifetime1);
         }
-        this.field_j = new ki[3];
+        this.field_j = new KiteTailSegment[3];
         var9Lifetime1 = this.field_l * 40 >> 12;
         int var10 = 3000 * this.field_l >> 12;
-        this.field_j[0] = new ki(this.field_r, this.field_o, var9Lifetime1, var10);
-        this.field_j[1] = new ki(this.field_r, this.field_o, var9Lifetime1, (int)((double)var10 * 0.9));
-        this.field_j[2] = new ki(this.field_r, this.field_o, var9Lifetime1, (int)((double)var10 * 0.8));
+        this.field_j[0] = new KiteTailSegment(this.field_r, this.field_o, var9Lifetime1, var10);
+        this.field_j[1] = new KiteTailSegment(this.field_r, this.field_o, var9Lifetime1, (int)((double)var10 * 0.9));
+        this.field_j[2] = new KiteTailSegment(this.field_r, this.field_o, var9Lifetime1, (int)((double)var10 * 0.8));
     }
 
     static {

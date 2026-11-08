@@ -30,7 +30,7 @@ final class ArchiveIndex {
         field_l = null;
     }
 
-    final static void a(int param0) {
+    final static void clearLobbyState(int param0) {
         LobbyPlayer var3 = null;
         int var2 = Pixelate.field_H ? 1 : 0;
         try {
@@ -64,11 +64,11 @@ final class ArchiveIndex {
             QuickChatCategoryCache.field_d = null;
           }
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "kj.C(" + param0 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "kj.C(" + param0 + ')');
         }
     }
 
-    final static boolean a(char param0, byte param1) {
+    final static boolean isTypeableChar(char param0, byte param1) {
         char[] var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
@@ -108,7 +108,7 @@ final class ArchiveIndex {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw aa.addExceptionContext((Throwable) ((Object) var2_ref), "kj.F(" + param0 + ',' + param1 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) var2_ref), "kj.F(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -323,21 +323,21 @@ final class ArchiveIndex {
           } else {
             stackIn_101_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_100_0), ((StringBuilder) (Object) stackIn_100_1).append(stackIn_101_2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_100_0), ((StringBuilder) (Object) stackIn_100_1).append(stackIn_101_2).append(')').toString());
         }
     }
 
-    final static void a(int param0, byte param1) {
+    final static void startPuzzleModeGame(int param0, byte param1) {
         DateOfBirthValidator.field_j = 1;
         un.field_j = gd.field_e[param0];
         un.field_j.reset(false);
         if (param1 < 124) {
           Sprite var3 = (Sprite) null;
-          ArchiveIndex.a(-60, (Sprite) null, 85, -59, 28, 57);
+          ArchiveIndex.drawHorizontalFadeSprite(-60, (Sprite) null, 85, -59, 28, 57);
         }
     }
 
-    final static void a(int param0, Sprite param1, int param2, int param3, int param4, int param5) {
+    final static void drawHorizontalFadeSprite(int param0, Sprite param1, int param2, int param3, int param4, int param5) {
         int incrementValue$0 = 0;
         RuntimeException stackIn_32_0 = null;
         StringBuilder stackIn_32_1 = null;
@@ -445,7 +445,7 @@ final class ArchiveIndex {
           } else {
             stackIn_33_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -469,7 +469,7 @@ final class ArchiveIndex {
           }
           this.decode(-89, param0);
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "kj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "kj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

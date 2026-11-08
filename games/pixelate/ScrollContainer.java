@@ -21,7 +21,7 @@ final class ScrollContainer extends SceneWidget {
           this.content = param1;
           this.field_Ib.addChild(param1, (byte) 26);
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "gp.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "gp.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -53,7 +53,7 @@ final class ScrollContainer extends SceneWidget {
             }
             if (var3_int != 0) {
               if (NumericDateInputWidget.field_V) {
-                param1 = AlphaContainer.a(vf.field_a, 79, new String[]{param1});
+                param1 = AlphaContainer.formatTemplate(vf.field_a, 79, new String[]{param1});
               }
               if (ke.field_d) {
                 param1 = IsaacRandom.field_a;
@@ -80,7 +80,7 @@ final class ScrollContainer extends SceneWidget {
           } else {
             stackIn_32_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param2).append(')').toString());
         }
     }
 

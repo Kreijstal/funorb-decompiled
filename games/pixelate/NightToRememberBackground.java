@@ -2,17 +2,17 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class NightToRememberBackground extends BackgroundScene {
-    private li field_q;
+    private FireworkDisplay field_q;
     static boolean field_n;
     static int[] field_m;
     static String field_r;
-    private li field_p;
+    private FireworkDisplay field_p;
     static int field_o;
 
     final void tick(int param0) {
         super.tick(param0);
-        this.field_p.a(440, 100, (byte) 116, 120, 0);
-        this.field_q.a(440, 100, (byte) 116, 120, 0);
+        this.field_p.launchBurst(440, 100, (byte) 116, 120, 0);
+        this.field_q.launchBurst(440, 100, (byte) 116, 120, 0);
         lg.field_a = lg.field_a - 4;
         if (!(0 <= lg.field_a)) {
           lg.field_a = 0;
@@ -22,9 +22,9 @@ final class NightToRememberBackground extends BackgroundScene {
     final void render(boolean param0) {
         ClientException.field_g.drawOpaque(0, 0);
         int var2 = lg.field_a >> 3;
-        SoftwareRasterizer.f(0, 0, 640, 480, 17, (var2 << 8) + (var2 * 2 + 34) + (var2 << 16));
-        this.field_p.b((byte) -123);
-        this.field_q.b((byte) -123);
+        SoftwareRasterizer.fillVerticalGradientAdditive(0, 0, 640, 480, 17, (var2 << 8) + (var2 * 2 + 34) + (var2 << 16));
+        this.field_p.draw((byte) -123);
+        this.field_q.draw((byte) -123);
         Pixelate.field_E.drawTransparent(0, -Pixelate.field_E.field_B + 480);
         if (param0) {
           return;
@@ -120,8 +120,8 @@ final class NightToRememberBackground extends BackgroundScene {
             var6Lifetime1Lifetime1 = var8Lifetime1 | var7Lifetime1 | var9;
             var17[var5Lifetime1] = var6Lifetime1Lifetime1;
           }
-          this.field_p = new li(2, 47, var14);
-          this.field_q = new li(1, 47, var17);
+          this.field_p = new FireworkDisplay(2, 47, var14);
+          this.field_q = new FireworkDisplay(1, 47, var17);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -139,7 +139,7 @@ final class NightToRememberBackground extends BackgroundScene {
           } else {
             stackIn_35_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(')').toString());
         }
     }
 

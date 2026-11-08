@@ -25,7 +25,7 @@ final class DirectByteStorage extends ByteStorage {
             var3 = (hf) null;
             DirectByteStorage.queueProgressRecord(42, (hf) null, -69);
           }
-          if (ln.field_p == qn.field_p) {
+          if (SoundVoice.field_p == qn.field_p) {
             return false;
           }
           ke.field_a = ArchiveRequest.field_z[qn.field_p];
@@ -69,7 +69,7 @@ final class DirectByteStorage extends ByteStorage {
           dh.field_a.addLast(22125, param1);
           id.writeProgressRecord((byte) -109, param1, param2);
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "bh.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "bh.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -82,7 +82,7 @@ final class DirectByteStorage extends ByteStorage {
           this.buffer.position(0);
           this.buffer.put(param0);
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "bh.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "bh.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -105,7 +105,7 @@ final class DirectByteStorage extends ByteStorage {
             var3 = (hf) null;
             DirectByteStorage.queueProgressRecord(42, (hf) null, -69);
           }
-          if (ln.field_p == qn.field_p) {
+          if (SoundVoice.field_p == qn.field_p) {
             return false;
           }
           ke.field_a = ArchiveRequest.field_z[qn.field_p];

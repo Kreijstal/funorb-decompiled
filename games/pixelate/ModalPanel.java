@@ -57,7 +57,7 @@ abstract class ModalPanel extends UiContainer {
           this.field_N = false;
           this.field_J = 0;
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "ud.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "ud.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -88,7 +88,7 @@ abstract class ModalPanel extends UiContainer {
         }
         if (null == fd.field_a) {
           fd.field_a = new Sprite(this.field_E, this.field_C);
-          Checkbox.a(-90, fd.field_a);
+          Checkbox.renderToSprite(-90, fd.field_a);
           SoftwareRasterizer.clear();
           this.drawDialogBackground(0, 0, true);
           super.drawLayer(-this.field_p - param0, param1, -param2 - this.field_z, (byte) -61);
@@ -99,7 +99,7 @@ abstract class ModalPanel extends UiContainer {
         }
         if (fd.field_a.field_F < this.field_E) {
           fd.field_a = new Sprite(this.field_E, this.field_C);
-          Checkbox.a(-90, fd.field_a);
+          Checkbox.renderToSprite(-90, fd.field_a);
           SoftwareRasterizer.clear();
           this.drawDialogBackground(0, 0, true);
           super.drawLayer(-this.field_p - param0, param1, -param2 - this.field_z, (byte) -61);
@@ -110,7 +110,7 @@ abstract class ModalPanel extends UiContainer {
         }
         if (this.field_C > fd.field_a.field_E) {
           fd.field_a = new Sprite(this.field_E, this.field_C);
-          Checkbox.a(-90, fd.field_a);
+          Checkbox.renderToSprite(-90, fd.field_a);
           SoftwareRasterizer.clear();
           this.drawDialogBackground(0, 0, true);
           super.drawLayer(-this.field_p - param0, param1, -param2 - this.field_z, (byte) -61);
@@ -119,7 +119,7 @@ abstract class ModalPanel extends UiContainer {
           fd.field_a.drawAlpha(this.field_z + param2, this.field_p + param0, this.field_J);
           return;
         }
-        Checkbox.a(-90, fd.field_a);
+        Checkbox.renderToSprite(-90, fd.field_a);
         SoftwareRasterizer.clear();
         this.drawDialogBackground(0, 0, true);
         super.drawLayer(-this.field_p - param0, param1, -param2 - this.field_z, (byte) -61);

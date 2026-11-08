@@ -28,8 +28,8 @@ abstract class SocketConnector {
         var14 = Pixelate.field_H ? 1 : 0;
         try {
           var6_int = 8 + (param5 + param1 + 8) + 487;
-          ki.field_k.setBounds(3, ui.field_i.height - 6, param0, 256, -6 + var6_int);
-          var7 = ki.field_k.height - 5;
+          KiteTailSegment.field_k.setBounds(3, ui.field_i.height - 6, param0, 256, -6 + var6_int);
+          var7 = KiteTailSegment.field_k.height - 5;
           StripedProgressBar.field_U.setBounds(var7 - param2, param2, 5, 256, 487 + param1 + param5);
           nf.field_d.setBounds(0, param2, param1, 256, -rh.field_y.field_K - param1 + StripedProgressBar.field_U.field_K);
           var7 = var7 - (2 + param2);
@@ -62,7 +62,7 @@ abstract class SocketConnector {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw aa.addExceptionContext((Throwable) ((Object) var6), "eh.M(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) var6), "eh.M(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -120,14 +120,14 @@ abstract class SocketConnector {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
     abstract java.net.Socket connect(int param0) throws IOException;
 
     final static void stopAudioService(int param0) {
-        AudioService.b(param0 + 94);
+        AudioService.finishAccountUiStep(param0 + 94);
         if (param0 != 5) {
           SocketConnector.stopAudioService(-107);
         }

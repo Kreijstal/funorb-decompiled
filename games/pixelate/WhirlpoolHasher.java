@@ -10,7 +10,7 @@ final class WhirlpoolHasher {
     static String field_k;
     private byte[] inputBlock;
     private long[] field_d;
-    static lc field_f;
+    static RankingQuery field_f;
     private byte[] bitLength;
     static int[] field_a;
     private long[] field_b;
@@ -49,7 +49,7 @@ final class WhirlpoolHasher {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "ca.C(" + param0 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "ca.C(" + param0 + ')');
         }
     }
 
@@ -96,10 +96,10 @@ final class WhirlpoolHasher {
             WhirlpoolHasher.createSpriteFromDecodeBuffers(-91);
           }
           var7 = var5_int - 10;
-          BouncedownBackground.e(-98);
+          BouncedownBackground.clearFaceDepthBuckets(-98);
           if (param1.field_B > 0 &&
             null != param1.field_n) {
-            vf.a((byte) -37);
+            vf.clearFaceGroupCounts((byte) -37);
           }
           mp.field_b = 0;
           var8 = 0;
@@ -198,7 +198,7 @@ final class WhirlpoolHasher {
           } else {
             stackIn_69_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_68_0), ((StringBuilder) (Object) stackIn_68_1).append(stackIn_69_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_68_0), ((StringBuilder) (Object) stackIn_68_1).append(stackIn_69_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -228,7 +228,7 @@ final class WhirlpoolHasher {
               var2_int = 0;
               break;
             }
-            this.field_c[var2_int] = fp.xor(fp.xor(FullscreenFocusCanvas.a(65280L, (long)this.inputBlock[var3 + 6] << 8), fp.xor(fp.xor(FullscreenFocusCanvas.a((long)this.inputBlock[4 + var3], 255L) << 24, fp.xor(fp.xor(fp.xor(FullscreenFocusCanvas.a((long)this.inputBlock[1 + var3], 255L) << 48, (long)this.inputBlock[var3] << 56), FullscreenFocusCanvas.a(280375465082880L, (long)this.inputBlock[2 + var3] << 40)), FullscreenFocusCanvas.a((long)this.inputBlock[3 + var3], 255L) << 32)), FullscreenFocusCanvas.a((long)this.inputBlock[var3 + 5] << 16, 16711680L))), FullscreenFocusCanvas.a((long)this.inputBlock[7 + var3], 255L));
+            this.field_c[var2_int] = fp.xor(fp.xor(FullscreenFocusCanvas.longAnd(65280L, (long)this.inputBlock[var3 + 6] << 8), fp.xor(fp.xor(FullscreenFocusCanvas.longAnd((long)this.inputBlock[4 + var3], 255L) << 24, fp.xor(fp.xor(fp.xor(FullscreenFocusCanvas.longAnd((long)this.inputBlock[1 + var3], 255L) << 48, (long)this.inputBlock[var3] << 56), FullscreenFocusCanvas.longAnd(280375465082880L, (long)this.inputBlock[2 + var3] << 40)), FullscreenFocusCanvas.longAnd((long)this.inputBlock[3 + var3], 255L) << 32)), FullscreenFocusCanvas.longAnd((long)this.inputBlock[var3 + 5] << 16, 16711680L))), FullscreenFocusCanvas.longAnd((long)this.inputBlock[7 + var3], 255L));
             var2_int++;
             var3 += 8;
           } while (var6 == 0);
@@ -309,7 +309,7 @@ final class WhirlpoolHasher {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.addExceptionContext((Throwable) ((Object) var2), "ca.F(" + param0 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) var2), "ca.F(" + param0 + ')');
         }
     }
 
@@ -344,7 +344,7 @@ final class WhirlpoolHasher {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw aa.addExceptionContext((Throwable) ((Object) var1), "ca.E(" + param0 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) var1), "ca.E(" + param0 + ')');
         }
     }
 
@@ -447,7 +447,7 @@ final class WhirlpoolHasher {
           } else {
             stackIn_41_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_40_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_40_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -488,7 +488,7 @@ final class WhirlpoolHasher {
               if (param2 != 16157) {
                 return;
               }
-              ArraySupport.a(this.bitLength, 0, this.inputBlock, 32, 32);
+              ArraySupport.copyBytes(this.bitLength, 0, this.inputBlock, 32, 32);
               this.processBlock((byte) 41);
               break;
             }
@@ -525,7 +525,7 @@ final class WhirlpoolHasher {
           } else {
             stackIn_30_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -544,7 +544,7 @@ final class WhirlpoolHasher {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw aa.addExceptionContext((Throwable) ((Object) var1), "ca.A(" + param0 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) var1), "ca.A(" + param0 + ')');
         }
     }
 

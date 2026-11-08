@@ -12,7 +12,7 @@ final class LoginMethod {
 
     final static void resendQueuedListRequests(int param0, int param1) {
         int var3 = 0;
-        m var4 = null;
+        ListRequest var4 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         var3 = Pixelate.field_H ? 1 : 0;
@@ -20,16 +20,16 @@ final class LoginMethod {
           if (param1 != -20304) {
             field_d = 56L;
           }
-          var4 = (m) (LoginDialog.field_nb.first(1504642273));
+          var4 = (ListRequest) (LoginDialog.field_nb.first(1504642273));
           while (var4 != null) {
-            SpriteCheckboxPainter.a((byte) -31, param0, var4);
-            var4 = (m) (LoginDialog.field_nb.next(1504642273));
+            SpriteCheckboxPainter.sendListRequest((byte) -31, param0, var4);
+            var4 = (ListRequest) (LoginDialog.field_nb.next(1504642273));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.addExceptionContext((Throwable) ((Object) var2), "io.A(" + param0 + ',' + param1 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) var2), "io.A(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -39,7 +39,7 @@ final class LoginMethod {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         int var2 = 0;
-        lc var3 = null;
+        RankingQuery var3 = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
@@ -61,16 +61,16 @@ final class LoginMethod {
         try {
           var15 = MusicCrossfadeStream.field_o;
           var2 = var15.readUnsignedByte(255);
-          var3 = (lc) (LoginCredentials.field_c.first(1504642273));
+          var3 = (RankingQuery) (LoginCredentials.field_c.first(1504642273));
           while (var3 != null) {
             if (~var2 != ~var3.field_k) {
-              var3 = (lc) (LoginCredentials.field_c.next(1504642273));
+              var3 = (RankingQuery) (LoginCredentials.field_c.next(1504642273));
               continue;
             }
             break;
           }
           if (var3 == null) {
-            na.a(true);
+            na.closeGameSocket(true);
             return;
           }
           var5 = 106 / ((-61 - param0) / 53);
@@ -85,13 +85,13 @@ final class LoginMethod {
             for (var7_intLifetime1 = 0; var4 > var7_intLifetime1; var7_intLifetime1++) {
               QueuedInput.readPackedRankingValues(-112, var15);
               if (var7_intLifetime1 != 0) {
-                ui.a(ReflectionCheckRequest.field_n, 0, of.field_g, of.field_b, var7_intLifetime1, bq.field_c);
+                ui.appendRankingRow(ReflectionCheckRequest.field_n, 0, of.field_g, of.field_b, var7_intLifetime1, bq.field_c);
               } else {
                 var3.field_v = ReflectionCheckRequest.field_n;
                 var3.field_n = bq.field_c;
                 var3.field_m = of.field_g;
                 var3.field_p = of.field_b;
-                ui.a(ReflectionCheckRequest.field_n, 0, of.field_g, of.field_b, var7_intLifetime1, bq.field_c);
+                ui.appendRankingRow(ReflectionCheckRequest.field_n, 0, of.field_g, of.field_b, var7_intLifetime1, bq.field_c);
               }
             }
             EmailValidator.sortRankingRows(var6, (byte) 31);
@@ -111,7 +111,7 @@ final class LoginMethod {
               var8[0][1 + var11 * 4] = TextWidgetPainter.field_b[var12];
               var8[0][4 * var11 + 2] = VerticalScrollbar.field_Fb[var12];
               var8[0][3 + var11 * 4] = GradientOutlineTextPainter.field_q[var12];
-              if (sm.a(lg.field_b[var12], -1) &&
+              if (sm.isLocalPlayerName(lg.field_b[var12], -1) &&
                 GradientOutlineTextPainter.field_q[var12] + TextWidgetPainter.field_b[var12] + VerticalScrollbar.field_Fb[var12] == 0) {
                 var7[0][var11] = null;
                 var11--;
@@ -129,7 +129,7 @@ final class LoginMethod {
               var8[1][1 + 4 * var14] = TextWidgetPainter.field_b[var12Lifetime1];
               var8[1][4 * var14 + 2] = VerticalScrollbar.field_Fb[var12Lifetime1];
               var8[1][4 * var14 + 3] = GradientOutlineTextPainter.field_q[var12Lifetime1];
-              if (sm.a(lg.field_b[var12Lifetime1], -1) &&
+              if (sm.isLocalPlayerName(lg.field_b[var12Lifetime1], -1) &&
                 TextWidgetPainter.field_b[var12Lifetime1] + (VerticalScrollbar.field_Fb[var12Lifetime1] + GradientOutlineTextPainter.field_q[var12Lifetime1]) == 0) {
                 var7[1][var14] = null;
                 var14--;
@@ -144,7 +144,7 @@ final class LoginMethod {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw aa.addExceptionContext((Throwable) ((Object) var1), "io.B(" + param0 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) var1), "io.B(" + param0 + ')');
         }
     }
 
@@ -177,8 +177,8 @@ final class LoginMethod {
           if (GameModeCard.field_f > 200) {
             var5 = (250 - GameModeCard.field_f << 8) / 50;
           }
-          Checkbox.a(-113, LoadingStepTracker.field_b);
-          MeshRasterState.a();
+          Checkbox.renderToSprite(-113, LoadingStepTracker.field_b);
+          MeshRasterState.useRasterClip();
           SoftwareRasterizer.clear();
           ScoreMarkerBar.renderLogoMeshes((byte) 106);
           if (256 > var5) {
@@ -228,8 +228,8 @@ final class LoginMethod {
         if (GameModeCard.field_f > 200) {
           var5 = (250 - GameModeCard.field_f << 8) / 50;
         }
-        Checkbox.a(-113, LoadingStepTracker.field_b);
-        MeshRasterState.a();
+        Checkbox.renderToSprite(-113, LoadingStepTracker.field_b);
+        MeshRasterState.useRasterClip();
         SoftwareRasterizer.clear();
         ScoreMarkerBar.renderLogoMeshes((byte) 106);
         if (256 > var5) {
@@ -369,7 +369,7 @@ final class LoginMethod {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -397,19 +397,19 @@ final class LoginMethod {
           GameModeSelectScreen.field_v.writeInt(ModalPanel.field_L[1], -71);
           GameModeSelectScreen.field_v.writeInt(ModalPanel.field_L[2], -68);
           GameModeSelectScreen.field_v.writeInt(ModalPanel.field_L[3], -48);
-          wf.a(1, GameModeSelectScreen.field_v);
+          wf.writeMachineId(1, GameModeSelectScreen.field_v);
           GameModeSelectScreen.field_v.writeShort(1276387944, param3);
           param2.writePayload((byte) -12, GameModeSelectScreen.field_v);
-          aa.field_f.position = 0;
+          ChatMessage.field_f.position = 0;
           if (param0) {
-            aa.field_f.writeByte(160, 18);
+            ChatMessage.field_f.writeByte(160, 18);
           } else {
-            aa.field_f.writeByte(160, 16);
+            ChatMessage.field_f.writeByte(160, 16);
           }
-          aa.field_f.position = aa.field_f.position + 2;
-          var5_int = aa.field_f.position;
-          aa.field_f.writeInt(ra.field_c, -118);
-          aa.field_f.writeLong(false, hf.field_t);
+          ChatMessage.field_f.position = ChatMessage.field_f.position + 2;
+          var5_int = ChatMessage.field_f.position;
+          ChatMessage.field_f.writeInt(ra.field_c, -118);
+          ChatMessage.field_f.writeLong(false, hf.field_t);
           var6 = 0;
           if (LobbyPlayer.field_Lb) {
             var6 = var6 | 1;
@@ -423,21 +423,21 @@ final class LoginMethod {
           if (ConditionalTextValue.field_a != null) {
             var6 = var6 | 16;
           }
-          aa.field_f.writeByte(160, var6);
-          var7 = ln.a(AudioService.a(13867), (byte) -85);
+          ChatMessage.field_f.writeByte(160, var6);
+          var7 = SoundVoice.readSettingsCookie(AudioService.getApplet(13867), (byte) -85);
           if (var7 == null) {
             var7 = "";
           }
-          aa.field_f.writeString((byte) -41, var7);
+          ChatMessage.field_f.writeString((byte) -41, var7);
           if (ConditionalTextValue.field_a != null) {
-            aa.field_f.a((byte) -66, ConditionalTextValue.field_a);
+            ChatMessage.field_f.writeVersionedString((byte) -66, ConditionalTextValue.field_a);
           }
           if (param1 >= -40) {
             var8 = (BinaryBitmapFont) null;
             LoginMethod.setSmallFont((BinaryBitmapFont) null, (byte) 105);
           }
-          HighscoresScreen.a(AgeValidator.field_m, aa.field_f, SceneWidgetNode.field_t, GameModeSelectScreen.field_v, 12556);
-          aa.field_f.backpatchShortLength(7519, aa.field_f.position - var5_int);
+          HighscoresScreen.writeEncryptedBlock(AgeValidator.field_m, ChatMessage.field_f, SceneWidgetNode.field_t, GameModeSelectScreen.field_v, 12556);
+          ChatMessage.field_f.backpatchShortLength(7519, ChatMessage.field_f.position - var5_int);
           SecondaryNodeHashTable.flushOutgoingPackets(-1, 10000);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -450,7 +450,7 @@ final class LoginMethod {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -460,7 +460,7 @@ final class LoginMethod {
           pe.field_c = DelegatingCanvas.field_d.maxDescent + DelegatingCanvas.field_d.maxAscent;
           int var2_int = -116 / ((70 - param1) / 48);
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "io.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "io.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -472,7 +472,7 @@ final class LoginMethod {
           }
           MatchHud.setBrowserCookie(param0, -75, this.field_b, "jagex-last-login-method", 31536000L);
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "io.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "io.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -492,7 +492,7 @@ final class LoginMethod {
         try {
           this.field_b = param0;
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "io.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "io.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -88,7 +88,7 @@ final class IntrusiveDeque {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -151,8 +151,8 @@ final class IntrusiveDeque {
         int var2 = 0;
         if (param0 < -13) {
           var1 = la.getLegacyMenuWidth((byte) -59);
-          var2 = bl.a(true);
-          he.field_a.a(-PacketBuffer.field_n + MenuScreen.field_h, (PacketBuffer.field_n << 1) + var2, -1, var1 + (GradientOutlineTextPainter.field_t << 1), LoadingProgressDialog.field_cb - GradientOutlineTextPainter.field_t);
+          var2 = bl.getLegacyMenuWidth(true);
+          he.field_a.draw(-PacketBuffer.field_n + MenuScreen.field_h, (PacketBuffer.field_n << 1) + var2, -1, var1 + (GradientOutlineTextPainter.field_t << 1), LoadingProgressDialog.field_cb - GradientOutlineTextPainter.field_t);
           Match.drawLegacyMenu(-14);
           return;
         }
@@ -207,7 +207,7 @@ final class IntrusiveDeque {
           param1.previous.field_a = param1;
           param1.field_a.previous = param1;
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "bb.K(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "bb.K(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -235,7 +235,7 @@ final class IntrusiveDeque {
           param1.previous.field_a = param1;
           param1.field_a.previous = param1;
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "bb.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "bb.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -6,7 +6,7 @@ final class fj {
     static int field_a;
     static int field_b;
 
-    final static void a(aa param0, byte param1) {
+    final static void openChatMessageContextMenu(ChatMessage param0, byte param1) {
         String stackIn_2_0 = null;
         long stackIn_2_1 = 0L;
         String stackIn_2_2 = null;
@@ -53,7 +53,7 @@ final class fj {
           if (param0.field_j == 1 &&
             !pk.isLobbyChatInputActive(120) &&
             LoginMethod.field_c != null &&
-            param0.field_b == LoginMethod.field_c.c((byte) 8)) {
+            param0.field_b == LoginMethod.field_c.getGameId((byte) 8)) {
             if (!IsaacRandom.field_g) {
               var9 = ProxySocketConnector.field_n;
               var10 = InputQueue.field_c;
@@ -86,7 +86,7 @@ final class fj {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param1).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -122,11 +122,11 @@ final class fj {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
-    final static void a(boolean param0, int param1) {
+    final static void setSlideshowSpeed(boolean param0, int param1) {
         if (!param0) {
           ui.field_a = param1 * 400 / 150;
           ui.field_j = (param1 << 16) / 150;
@@ -135,10 +135,10 @@ final class fj {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStatics(byte param0) {
         if (param0 < 112) {
-          aa var2 = (aa) null;
-          fj.a((aa) null, (byte) -67);
+          ChatMessage var2 = (ChatMessage) null;
+          fj.openChatMessageContextMenu((ChatMessage) null, (byte) -67);
           field_c = null;
           return;
         }

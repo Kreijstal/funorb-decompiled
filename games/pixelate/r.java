@@ -6,16 +6,16 @@ final class r {
     static int field_a;
     static String field_b;
 
-    final static void b(int param0) {
+    final static void layoutSlidingLobbyPanel(int param0) {
         int var3 = -76 % ((param0 - 21) / 44);
         int var1 = qh.field_c * qh.field_c;
         int var2 = -(HuffmanCodec.field_b * HuffmanCodec.field_b) + var1;
         int var4 = var2 * (MatchingTextValidator.field_o - wa.field_i) / var1 + wa.field_i;
         ui.field_i.setBounds(var4, 120, TextTableInitializer.field_c, 256, 640);
-        ArchiveProvider.a(-24 + MatchingTextValidator.field_o, (byte) 116, 640, PlayerBoard.field_q, 5, 0, MouseWheelHandler.field_c);
+        ArchiveProvider.layoutQuickChatRoot(-24 + MatchingTextValidator.field_o, (byte) 116, 640, PlayerBoard.field_q, 5, 0, MouseWheelHandler.field_c);
     }
 
-    final static void a(int param0, int param1, boolean param2, int param3) {
+    final static void drawChoiceIconWithHighlight(int param0, int param1, boolean param2, int param3) {
         int var4;
         AccountChoicePanel.field_O.drawTransparent(param1, param0);
         if (param3 != -40) {
@@ -24,7 +24,7 @@ final class r {
         if (!param2) {
           return;
         }
-        var4 = qk.field_e % AccountChoicePanel.field_O.field_F * 2;
+        var4 = RetroBlock.field_e % AccountChoicePanel.field_O.field_F * 2;
         if (AccountChoicePanel.field_O.field_F <= var4) {
           var4 = AccountChoicePanel.field_O.field_F + (-var4 + AccountChoicePanel.field_O.field_F);
         }
@@ -47,8 +47,8 @@ final class r {
         field_b = null;
     }
 
-    final static void a(int param0, int param1) {
-        CipherPacketBuffer var2 = aa.field_f;
+    final static void sendGameOptionSelection(int param0, int param1) {
+        CipherPacketBuffer var2 = ChatMessage.field_f;
         var2.writeOpcode(param1, param0 ^ 15514);
         var2.position = var2.position + 1;
         int var3 = var2.position;

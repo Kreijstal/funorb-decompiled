@@ -26,7 +26,7 @@ final class aq {
         RuntimeException decompiledCaughtException = null;
         try {
           var8 = (CharSequence) ((Object) param0);
-          if (!Bzip2State.a((byte) -128, var8)) {
+          if (!Bzip2State.isValidPlayerName((byte) -128, var8)) {
             stackIn_2_0 = qn.field_n;
             return stackIn_2_0;
           }
@@ -39,13 +39,13 @@ final class aq {
           }
           var7 = DisplayNameForm.findFriend(param2, 114);
           if (var7 == null) {
-            stackIn_10_0 = AlphaContainer.a(ug.field_p, param3 + 20935, new String[]{param2});
+            stackIn_10_0 = AlphaContainer.formatTemplate(ug.field_p, param3 + 20935, new String[]{param2});
             return stackIn_10_0;
           }
           var7.unlink(param3 ^ -23386);
           var7.unlinkSecondary(param3 + 20884);
           ReflectionCheckRequest.field_t = ReflectionCheckRequest.field_t - 1;
-          var5 = aa.field_f;
+          var5 = ChatMessage.field_f;
           var5.writeOpcode(param1, 15514);
           var5.position = var5.position + 1;
           var6 = var5.position;
@@ -70,7 +70,7 @@ final class aq {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param3).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -87,23 +87,23 @@ final class aq {
           if (!param0) {
             aq.shuffleSkinOrder(false);
           }
-          jm.field_g = new int[var1_int];
+          Cloud.field_g = new int[var1_int];
           for (var2 = 0; var1_int > var2; var2++) {
-            jm.field_g[var2] = var2;
+            Cloud.field_g[var2] = var2;
           }
           var6 = 1;
           var2Lifetime1 = var6;
           while (var1_int > var6) {
             var3 = var6 + JavaRandomHelpers.a(ea.field_b, -109, var1_int - var6);
-            var4 = jm.field_g[var6];
-            jm.field_g[var6] = jm.field_g[var3];
-            jm.field_g[var3] = var4;
+            var4 = Cloud.field_g[var6];
+            Cloud.field_g[var6] = Cloud.field_g[var3];
+            Cloud.field_g[var3] = var4;
             var6++;
           }
           LoadingProgressDialog.field_hb = 0;
-          aq.selectBackgroundSkin(jm.field_g[LoadingProgressDialog.field_hb], !param0 ? true : false);
+          aq.selectBackgroundSkin(Cloud.field_g[LoadingProgressDialog.field_hb], !param0 ? true : false);
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "aq.C(" + param0 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "aq.C(" + param0 + ')');
         }
     }
 
@@ -153,7 +153,7 @@ final class aq {
         if (!param1) {
           NightToRememberBackground.field_o = param0;
           DebouncedValidator.field_d = 0;
-          dg.a(param0 + 2, (byte) -100);
+          dg.playMenuMusic(param0 + 2, (byte) -100);
           return;
         }
     }
@@ -194,7 +194,7 @@ final class aq {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param2).append(')').toString());
         }
     }
 

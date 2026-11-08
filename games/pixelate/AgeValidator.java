@@ -22,7 +22,7 @@ final class AgeValidator extends TextFieldValidator {
         RuntimeException decompiledCaughtException = null;
         try {
           var4 = (CharSequence) ((Object) param0);
-          if (!td.a(-106, var4)) {
+          if (!td.isDecimalInteger(-106, var4)) {
             stackIn_3_0 = sk.field_a;
             return stackIn_3_0;
           }
@@ -31,10 +31,10 @@ final class AgeValidator extends TextFieldValidator {
             return stackIn_6_0;
           }
           var5 = (CharSequence) ((Object) param0);
-          var3_int = na.a(var5, (byte) -33);
+          var3_int = na.parseDecimalInt(var5, (byte) -33);
           if (var3_int > 0 &&
             var3_int <= 130) {
-            stackIn_13_0 = qk.field_g;
+            stackIn_13_0 = RetroBlock.field_g;
             return stackIn_13_0;
           }
           stackIn_11_0 = sk.field_a;
@@ -49,7 +49,7 @@ final class AgeValidator extends TextFieldValidator {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -85,40 +85,40 @@ final class AgeValidator extends TextFieldValidator {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
-    public static void e(int param0) {
+    public static void releaseStatics(int param0) {
         field_n = null;
         field_m = null;
         field_o = null;
         if (param0 == -1) {
           return;
         }
-        AgeValidator.a((byte) -3, -69);
+        AgeValidator.resendRankingQueries((byte) -3, -69);
     }
 
-    final static void a(byte param0, int param1) {
+    final static void resendRankingQueries(byte param0, int param1) {
         int var3 = 0;
-        lc var4 = null;
+        RankingQuery var4 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         var3 = Pixelate.field_H ? 1 : 0;
         try {
-          var4 = (lc) (LoginCredentials.field_c.first(1504642273));
+          var4 = (RankingQuery) (LoginCredentials.field_c.first(1504642273));
           if (param0 >= -112) {
             field_p = true;
           }
           while (var4 != null) {
             em.sendRankingQuery((byte) -7, var4, param1);
-            var4 = (lc) (LoginCredentials.field_c.next(1504642273));
+            var4 = (RankingQuery) (LoginCredentials.field_c.next(1504642273));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.addExceptionContext((Throwable) ((Object) var2), "ag.A(" + param0 + ',' + param1 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) var2), "ag.A(" + param0 + ',' + param1 + ')');
         }
     }
 

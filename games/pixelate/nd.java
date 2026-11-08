@@ -6,13 +6,13 @@ final class nd {
     static wo field_b;
     static int[] field_c;
 
-    final static void a(byte param0) {
+    final static void clearChatInput(byte param0) {
         mp.field_a.setLength(0);
         ce.field_d = 0;
         int var1 = 117 / ((param0 + 84) / 38);
     }
 
-    final static void b(byte param0) {
+    final static void buildHowToPlayDemo(byte param0) {
         PlayerBoard var5 = null;
         PlayerBoard var6 = null;
         int var8 = 0;
@@ -21,7 +21,7 @@ final class nd {
         int var9 = Pixelate.field_H ? 1 : 0;
         int var4_intLifetime1;
         int var7Lifetime1;
-        ln.field_m[7][3] = "mod_zeph";
+        SoundVoice.field_m[7][3] = "mod_zeph";
         Puzzle var10 = new Puzzle(3, 3, 0, 0, 0, 262144, 0, 0, new IndexedSprite[]{});
         Puzzle var2 = new Puzzle(3, 3, 0, 0, 0, 65536, 0, 0, FallingPieceView.field_c[4][3]);
         var2.pictureIndex = 1;
@@ -84,11 +84,11 @@ final class nd {
           an.field_b.setAnimationTimers(0, 0, 0, (byte) -98, 0);
           DiskCacheRequest.field_H.snapToTarget(-18577);
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "nd.A(" + param0 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "nd.A(" + param0 + ')');
         }
     }
 
-    final static void a(int param0) {
+    final static void initializeMenuButtonWidths(int param0) {
         ConditionalTextValue.field_h = PieceTiming.field_e;
         Checkbox.field_T = 10 + ConditionalTextValue.field_h.textWidth(PacketBuffer.field_o[20]);
         if (param0 != 3) {
@@ -106,7 +106,7 @@ final class nd {
         field_c = null;
         field_b = null;
         if (param0 < 5) {
-          nd.b((byte) 108);
+          nd.buildHowToPlayDemo((byte) 108);
         }
     }
 

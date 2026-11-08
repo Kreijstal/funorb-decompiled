@@ -14,11 +14,11 @@ final class LoginDialog extends ContentTransitionDialog {
             field_pb = (SceneWidget) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "on.R(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "on.R(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final static String a(int param0, String param1, int param2) {
+    final static String formatPlayerRemovalMessage(int param0, String param1, int param2) {
         String stackIn_3_0 = null;
         String stackIn_6_0 = null;
         String stackIn_9_0 = null;
@@ -37,43 +37,43 @@ final class LoginDialog extends ContentTransitionDialog {
         RuntimeException var3 = null;
         try {
           if (param0 == 1) {
-            stackIn_3_0 = AlphaContainer.a(StatusBar.field_f, param2 + 17311, new String[]{param1});
+            stackIn_3_0 = AlphaContainer.formatTemplate(StatusBar.field_f, param2 + 17311, new String[]{param1});
             return stackIn_3_0;
           }
           if (param0 == 2) {
-            stackIn_6_0 = AlphaContainer.a(SpriteState.field_w, param2 + 17402, new String[]{param1});
+            stackIn_6_0 = AlphaContainer.formatTemplate(SpriteState.field_w, param2 + 17402, new String[]{param1});
             return stackIn_6_0;
           }
           if (param0 == 3) {
-            stackIn_9_0 = AlphaContainer.a(CachedArchiveProvider.field_v, param2 + 17298, new String[]{param1});
+            stackIn_9_0 = AlphaContainer.formatTemplate(CachedArchiveProvider.field_v, param2 + 17298, new String[]{param1});
             return stackIn_9_0;
           }
           if (param0 == 4) {
-            stackIn_12_0 = AlphaContainer.a(KeyboardInputHandler.field_b, 85, new String[]{param1});
+            stackIn_12_0 = AlphaContainer.formatTemplate(KeyboardInputHandler.field_b, 85, new String[]{param1});
             return stackIn_12_0;
           }
           if (param0 == 5) {
-            stackIn_16_0 = AlphaContainer.a(JaggrabDownloader.field_p, 38, new String[]{param1});
+            stackIn_16_0 = AlphaContainer.formatTemplate(JaggrabDownloader.field_p, 38, new String[]{param1});
             return stackIn_16_0;
           }
           if (param0 == 6) {
-            stackIn_19_0 = AlphaContainer.a(EmailConfirmationValidator.field_n, 123, new String[]{param1});
+            stackIn_19_0 = AlphaContainer.formatTemplate(EmailConfirmationValidator.field_n, 123, new String[]{param1});
             return stackIn_19_0;
           }
           if (param0 == 7) {
-            stackIn_22_0 = AlphaContainer.a(ClientContextMenu.field_e, 41, new String[]{param1});
+            stackIn_22_0 = AlphaContainer.formatTemplate(ClientContextMenu.field_e, 41, new String[]{param1});
             return stackIn_22_0;
           }
           if (param0 == 8) {
-            stackIn_25_0 = AlphaContainer.a(an.field_d, param2 ^ -17206, new String[]{param1});
+            stackIn_25_0 = AlphaContainer.formatTemplate(an.field_d, param2 ^ -17206, new String[]{param1});
             return stackIn_25_0;
           }
           if (param0 == 11) {
-            stackIn_29_0 = AlphaContainer.a(SecondaryNodeHashTable.field_e, param2 ^ -17208, new String[]{param1});
+            stackIn_29_0 = AlphaContainer.formatTemplate(SecondaryNodeHashTable.field_e, param2 ^ -17208, new String[]{param1});
             return stackIn_29_0;
           }
           if (param0 == 12) {
-            stackIn_32_0 = AlphaContainer.a(li.field_j, 59, new String[]{param1});
+            stackIn_32_0 = AlphaContainer.formatTemplate(FireworkDisplay.field_j, 59, new String[]{param1});
             return stackIn_32_0;
           }
           if (param2 != -17279) {
@@ -82,7 +82,7 @@ final class LoginDialog extends ContentTransitionDialog {
           if (13 != param0) {
             return null;
           }
-          stackIn_38_0 = AlphaContainer.a(un.field_c, 118, new String[]{param1});
+          stackIn_38_0 = AlphaContainer.formatTemplate(un.field_c, 118, new String[]{param1});
           return stackIn_38_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -94,7 +94,7 @@ final class LoginDialog extends ContentTransitionDialog {
           } else {
             stackIn_42_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_41_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(',').append(param2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_41_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -114,7 +114,7 @@ final class LoginDialog extends ContentTransitionDialog {
         field_nb = null;
     }
 
-    final static CoverageBitmapFont a(byte[] param0, int param1) {
+    final static CoverageBitmapFont decodeCoverageFont(byte[] param0, int param1) {
         CoverageBitmapFont var2 = null;
         RuntimeException var2_ref = null;
         byte[] var3 = null;
@@ -133,7 +133,7 @@ final class LoginDialog extends ContentTransitionDialog {
           LoadingStepTracker.clearSpriteDecodeBuffers(140);
           if (param1 <= 25) {
             var3 = (byte[]) null;
-            LoginDialog.a((byte[]) null, -110);
+            LoginDialog.decodeCoverageFont((byte[]) null, -110);
           }
           stackIn_6_0 = var2;
           return stackIn_6_0;
@@ -147,11 +147,11 @@ final class LoginDialog extends ContentTransitionDialog {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    final static void a(boolean param0, boolean param1, java.awt.Color param2, int param3, String param4) {
+    final static void drawAwtLoadingBar(boolean param0, boolean param1, java.awt.Color param2, int param3, String param4) {
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         String stackIn_24_2 = null;
@@ -240,7 +240,7 @@ final class LoginDialog extends ContentTransitionDialog {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
         }
     }
 

@@ -42,7 +42,7 @@ final class Bzip2State {
     int[][] field_B;
     static int[] field_e;
 
-    final static boolean a(byte param0, CharSequence param1) {
+    final static boolean isValidPlayerName(byte param0, CharSequence param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -76,11 +76,11 @@ final class Bzip2State {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 
-    final static void a(boolean param0, int param1) {
+    final static void toggleFullscreen(boolean param0, int param1) {
         int var2;
         int var3;
         var3 = Pixelate.field_H ? 1 : 0;
@@ -92,7 +92,7 @@ final class Bzip2State {
                 return;
               }
               if (dg.field_a) {
-                bq.a(param0, (byte) -89, var2);
+                bq.buildLegacyMenu(param0, (byte) -89, var2);
               }
               return;
             }
@@ -138,7 +138,7 @@ final class Bzip2State {
           return;
         }
         if (dg.field_a) {
-          bq.a(param0, (byte) -89, var2);
+          bq.buildLegacyMenu(param0, (byte) -89, var2);
         }
     }
 

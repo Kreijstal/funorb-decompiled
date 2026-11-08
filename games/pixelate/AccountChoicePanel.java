@@ -51,7 +51,7 @@ final class AccountChoicePanel extends UiContainer implements ButtonListener {
           stackIn_21_2 = (param2) && (!param3) && (LobbyPlayer.field_Wb);
           ((SceneWidget) (Object) stackIn_20_0).updateInputFullScreen(stackIn_20_1, stackIn_21_2);
         } else {
-          ValidatedTextWidget.field_lb.field_cb = AlphaContainer.a(oi.field_d, 89, new String[]{Integer.toString(gi.field_a)});
+          ValidatedTextWidget.field_lb.field_cb = AlphaContainer.formatTemplate(oi.field_d, 89, new String[]{Integer.toString(gi.field_a)});
           if (param0 != 2) {
             return;
           }
@@ -74,16 +74,16 @@ final class AccountChoicePanel extends UiContainer implements ButtonListener {
         }
         if (lg.field_c.field_P != 0) {
           if (fe.field_a) {
-            AudioService.a(83, param1);
+            AudioService.sendSubtypeZeroRequest(83, param1);
           } else {
             if (0 < BufferedRandomAccessFile.field_j) {
-              AudioService.a(83, param1);
+              AudioService.sendSubtypeZeroRequest(83, param1);
             } else {
               if (2 > wo.field_h) {
                 PlayerBoard.field_g = true;
               } else {
                 if (EmailValidator.field_m[12]) {
-                  AudioService.a(83, param1);
+                  AudioService.sendSubtypeZeroRequest(83, param1);
                 } else {
                   PlayerBoard.field_g = true;
                 }
@@ -124,13 +124,13 @@ final class AccountChoicePanel extends UiContainer implements ButtonListener {
             return true;
           }
           if (98 == param0) {
-            stackIn_6_0 = this.focusNextChild(0, param2);
+            stackIn_6_0 = this.focusPreviousChild(0, param2);
             return stackIn_6_0;
           }
           if (param0 != 99) {
             return false;
           }
-          stackIn_9_0 = this.b(10, param2);
+          stackIn_9_0 = this.focusNextChild(10, param2);
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -142,7 +142,7 @@ final class AccountChoicePanel extends UiContainer implements ButtonListener {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param3).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -182,7 +182,7 @@ final class AccountChoicePanel extends UiContainer implements ButtonListener {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 

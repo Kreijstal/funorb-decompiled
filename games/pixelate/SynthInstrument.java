@@ -123,7 +123,7 @@ final class SynthInstrument {
         int var17Lifetime3;
         int var17Lifetime1Lifetime1;
         int var17Lifetime2Lifetime1;
-        ArraySupport.a(field_c, 0, param0);
+        ArraySupport.clearInts(field_c, 0, param0);
         if (param1 < 10) {
           return field_c;
         }

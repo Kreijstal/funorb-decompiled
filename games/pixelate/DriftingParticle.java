@@ -38,7 +38,7 @@ final class DriftingParticle {
             }
             var1_int = 1;
           }
-          VerticalScrollbar.field_Gb.updatePointer(NameAvailabilityValidator.a(false, BufferedRandomAccessFile.field_a, ji.field_c), NameAvailabilityValidator.a(false, ProxyAuthenticationException.field_d, StatusBar.field_k), -1);
+          VerticalScrollbar.field_Gb.updatePointer(NameAvailabilityValidator.messageMenuOptionAt(false, BufferedRandomAccessFile.field_a, ji.field_c), NameAvailabilityValidator.messageMenuOptionAt(false, ProxyAuthenticationException.field_d, StatusBar.field_k), -1);
           if (param0 != 2) {
             field_d = 101;
           }
@@ -58,7 +58,7 @@ final class DriftingParticle {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw aa.addExceptionContext((Throwable) ((Object) var1), "lp.A(" + param0 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) var1), "lp.A(" + param0 + ')');
         }
     }
 

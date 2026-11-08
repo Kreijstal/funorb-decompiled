@@ -25,7 +25,7 @@ class AccountRequestDialog extends ContentTransitionDialog implements ButtonList
             field_ub = (int[]) null;
           }
           if (!this.field_nb) {
-            Vector3.openRelativeUrl((byte) 71, AudioService.a(13867), "tochangedisplayname.ws");
+            Vector3.openRelativeUrl((byte) 71, AudioService.getApplet(13867), "tochangedisplayname.ws");
             return;
           }
           QuickChatMenu.setPendingUiResult(3, -2671);
@@ -41,7 +41,7 @@ class AccountRequestDialog extends ContentTransitionDialog implements ButtonList
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -70,7 +70,7 @@ class AccountRequestDialog extends ContentTransitionDialog implements ButtonList
           this.field_rb.field_Y = true;
           this.addChild(this.field_rb, 80);
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "vk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "vk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -83,21 +83,21 @@ class AccountRequestDialog extends ContentTransitionDialog implements ButtonList
           TextButton var3 = (TextButton) null;
           this.onAction((TextButton) null, -114, -9, 49, 73);
           if (this.field_pb) {
-            m.a((byte) -102);
+            ListRequest.a((byte) -102);
             return;
           }
           if (this.field_ob) {
-            NameSuggestionsPanel.l(20700);
+            NameSuggestionsPanel.reopenLoginForm(20700);
             return;
           }
           return;
         }
         if (this.field_pb) {
-          m.a((byte) -102);
+          ListRequest.a((byte) -102);
           return;
         }
         if (this.field_ob) {
-          NameSuggestionsPanel.l(20700);
+          NameSuggestionsPanel.reopenLoginForm(20700);
           return;
         }
     }
@@ -123,18 +123,18 @@ class AccountRequestDialog extends ContentTransitionDialog implements ButtonList
           field_ub = (int[]) null;
         }
         if (0 < RisingBubble.field_g) {
-          cm.b(RisingBubble.field_g, 4740);
+          cm.layoutSidePanels(RisingBubble.field_g, 4740);
         }
         if (Checkbox.field_W <= 0) {
           return;
         }
-        cm.b(Checkbox.field_W, 4740);
+        cm.layoutSidePanels(Checkbox.field_W, 4740);
     }
 
     final void showNoticeContent(int param0) {
         this.field_rb.setColours((byte) 125, param0, 4210752);
         AccountMessagePanel var2 = new AccountMessagePanel(this, this.field_wb, GameResultsScreen.field_D);
-        var2.a(15, -1, sk.field_b);
+        var2.addActionButton(15, -1, sk.field_b);
         this.transitionToContent(var2, -118);
     }
 
@@ -165,8 +165,8 @@ class AccountRequestDialog extends ContentTransitionDialog implements ButtonList
             AccountRequestDialog.stepOverlayFadeOut(117);
           }
           if (5 == param0) {
-            var6.a(11, -1, BackgroundScene.field_c);
-            var6.a(17, -1, FullscreenFocusCanvas.field_e);
+            var6.addActionButton(11, -1, BackgroundScene.field_c);
+            var6.addActionButton(17, -1, FullscreenFocusCanvas.field_e);
           } else {
             if (param0 != 256) {
               stackIn_14_0 = var6;
@@ -177,17 +177,17 @@ class AccountRequestDialog extends ContentTransitionDialog implements ButtonList
               } else {
                 stackIn_15_3 = bo.field_k;
               }
-              ((AccountMessagePanel) (Object) stackIn_14_0).a(stackIn_14_1, stackIn_14_2, stackIn_15_3);
+              ((AccountMessagePanel) (Object) stackIn_14_0).addActionButton(stackIn_14_1, stackIn_14_2, stackIn_15_3);
             } else {
               var6.appendButton(1707, (UiListener) (this), bo.field_k);
             }
           }
           if (param0 == 3) {
-            var6.a(7, param1 - 5805, gd.field_d);
+            var6.addActionButton(7, param1 - 5805, gd.field_d);
           } else {
             if (param0 != 4) {
               if (param0 == 6) {
-                var6.a(9, -1, TextTableInitializer.field_d);
+                var6.addActionButton(9, -1, TextTableInitializer.field_d);
               } else {
                 if (param0 != 9) {
                   this.transitionToContent(var6, -124);
@@ -196,7 +196,7 @@ class AccountRequestDialog extends ContentTransitionDialog implements ButtonList
                 var6.appendButton(1707, (UiListener) (this), RankingTableRequest.field_q);
               }
             } else {
-              var6.a(8, -1, StripedProgressBar.field_X);
+              var6.addActionButton(8, -1, StripedProgressBar.field_X);
             }
           }
           this.transitionToContent(var6, -124);
@@ -211,7 +211,7 @@ class AccountRequestDialog extends ContentTransitionDialog implements ButtonList
           } else {
             stackIn_31_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(')').toString());
         }
     }
 
@@ -242,7 +242,7 @@ class AccountRequestDialog extends ContentTransitionDialog implements ButtonList
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param3).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -286,7 +286,7 @@ class AccountRequestDialog extends ContentTransitionDialog implements ButtonList
             } else {
               stackIn_7_2 = "{...}";
             }
-            throw aa.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param3).append(')').toString());
+            throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param3).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

@@ -42,7 +42,7 @@ final class LabeledField extends SingleChildContainer {
           return;
         }
         String var2 = (String) null;
-        LabeledField.a(true, 1L, (String) null);
+        LabeledField.isPlayerReachable(true, 1L, (String) null);
         field_Q = null;
         field_P = null;
         field_L = null;
@@ -60,7 +60,7 @@ final class LabeledField extends SingleChildContainer {
         int var8 = -35 % ((70 - param3) / 49);
     }
 
-    final static boolean a(boolean param0, long param1, String param2) {
+    final static boolean isPlayerReachable(boolean param0, long param1, String param2) {
         SocialListEntry var4 = null;
         RuntimeException var4_ref = null;
         boolean stackIn_10_0 = false;
@@ -89,7 +89,7 @@ final class LabeledField extends SingleChildContainer {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -155,11 +155,11 @@ final class LabeledField extends SingleChildContainer {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 
-    final static boolean a(boolean param0, int param1, int param2, int param3) {
+    final static boolean dispatchKeyInput(boolean param0, int param1, int param2, int param3) {
         boolean stackIn_13_0 = false;
         if (null == ProxySocketConnector.field_n) {
           if (null == AccountTermsPanel.field_M) {
@@ -181,18 +181,18 @@ final class LabeledField extends SingleChildContainer {
           }
           if (AccountTermsPanel.field_M.handleEscapeKey(-1)) {
             AccountTermsPanel.field_M = null;
-            ArchiveProvider.a(62);
+            ArchiveProvider.closeContextMenu(62);
             return true;
           }
         } else {
           if (ProxySocketConnector.field_n.isMenuOpen(-105)) {
-            ArchiveProvider.a(-99);
+            ArchiveProvider.closeContextMenu(-99);
             return true;
           }
           if (null != AccountTermsPanel.field_M &&
             AccountTermsPanel.field_M.handleEscapeKey(-1)) {
             AccountTermsPanel.field_M = null;
-            ArchiveProvider.a(62);
+            ArchiveProvider.closeContextMenu(62);
             return true;
           }
         }

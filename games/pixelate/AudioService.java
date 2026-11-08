@@ -14,7 +14,7 @@ final class AudioService implements Runnable {
     volatile AudioOutput[] field_h;
     static String field_b;
 
-    final static void a(CipherPacketBuffer param0, int param1) {
+    final static void writeReflectionCheckReplies(CipherPacketBuffer param0, int param1) {
         try {
           int var5 = 0;
           int var10_int = 0;
@@ -69,7 +69,7 @@ final class AudioService implements Runnable {
             var3 = 0;
             var4 = 0;
             if (param1 != -20) {
-              AudioService.a(-40, -96);
+              AudioService.sendSubtypeZeroRequest(-40, -96);
             }
             while (var4 < var16_ref.field_s) {
               if (null != var16_ref.field_l[var4]) {
@@ -213,7 +213,7 @@ final class AudioService implements Runnable {
             } else {
               stackIn_68_2 = "{...}";
             }
-            throw aa.addExceptionContext((Throwable) ((Object) stackIn_67_0), ((StringBuilder) (Object) stackIn_67_1).append(stackIn_68_2).append(',').append(param1).append(')').toString());
+            throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_67_0), ((StringBuilder) (Object) stackIn_67_1).append(stackIn_68_2).append(',').append(param1).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -222,7 +222,7 @@ final class AudioService implements Runnable {
         }
     }
 
-    final static java.applet.Applet a(int param0) {
+    final static java.applet.Applet getApplet(int param0) {
         if (bd.field_b != null) {
           return bd.field_b;
         }
@@ -232,7 +232,7 @@ final class AudioService implements Runnable {
         return (java.applet.Applet) ((Object) DropTargetWidget.field_I);
     }
 
-    final static void b(int param0) {
+    final static void finishAccountUiStep(int param0) {
         if (null != wa.field_c) {
           wa.field_c.removeDismissedPanels((byte) -22);
         }
@@ -284,8 +284,8 @@ final class AudioService implements Runnable {
         this.field_f = false;
     }
 
-    final static void a(int param0, int param1) {
-        CipherPacketBuffer var2 = aa.field_f;
+    final static void sendSubtypeZeroRequest(int param0, int param1) {
+        CipherPacketBuffer var2 = ChatMessage.field_f;
         int var3 = 77 % ((29 - param0) / 46);
         var2.writeOpcode(param1, 15514);
         var2.writeByte(160, 1);

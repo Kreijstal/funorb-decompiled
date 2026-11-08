@@ -8,7 +8,7 @@ final class oi {
     static String field_a;
     static String field_d;
 
-    final static boolean a(AccountRegistrationPanel param0, int param1, boolean param2, String param3, byte param4, String param5, String param6) {
+    final static boolean startRegistrationSubmission(AccountRegistrationPanel param0, int param1, boolean param2, String param3, byte param4, String param5, String param6) {
         RuntimeException var7 = null;
         RegistrationRequestDialog var8 = null;
         RuntimeException stackIn_16_0 = null;
@@ -27,7 +27,7 @@ final class oi {
           }
           var8 = new RegistrationRequestDialog(wa.field_c, param0);
           wa.field_c.showPanel(-6183, var8);
-          if (!og.a((byte) -96)) {
+          if (!SaveDataRequest.hasTuhstatbutCookie((byte) -96)) {
             MarkerSlider.field_X = Js5NetworkRequest.field_F;
             MouseWheelHandler.field_b = null;
             StripedProgressBar.field_J = param2;
@@ -71,19 +71,19 @@ final class oi {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
         }
     }
 
-    final static void a(String param0, String param1, byte param2) {
+    final static void submitLoginCredentials(String param0, String param1, byte param2) {
         try {
           if (param2 != -33) {
             String var4 = (String) null;
-            oi.a((AccountRegistrationPanel) null, -20, true, (String) null, (byte) -44, (String) null, (String) null);
+            oi.startRegistrationSubmission((AccountRegistrationPanel) null, -20, true, (String) null, (byte) -44, (String) null, (String) null);
           }
-          ByteStorage.a(param1, false, 32, param0);
+          ByteStorage.startLoginWithCredentials(param1, false, 32, param0);
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "oi.B(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "oi.B(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -97,7 +97,7 @@ final class oi {
         field_d = null;
     }
 
-    final static void a(int param0, int param1, int param2, byte param3, LobbyPlayer param4, int param5, ScrollContainer param6) {
+    final static void openPlayerContextMenu(int param0, int param1, int param2, byte param3, LobbyPlayer param4, int param5, ScrollContainer param6) {
         ClientContextMenu var8 = null;
         int var9 = 0;
         int var10 = 0;
@@ -116,7 +116,7 @@ final class oi {
           var12 = param1;
           var8.field_b.layoutPopup(var12, var9, 28, var10, var11);
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "oi.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "oi.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
         }
     }
 

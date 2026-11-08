@@ -32,10 +32,10 @@ final class NameAvailabilityValidator extends TextFieldValidator {
             return stackIn_3_0;
           }
           if (param0 > -76) {
-            NameAvailabilityValidator.a(true, 49, -104);
+            NameAvailabilityValidator.messageMenuOptionAt(true, 49, -104);
           }
           if (!param1.equals(this.checkedName)) {
-            var4 = ig.a(200, param1);
+            var4 = ig.takeAccountRequestResult(200, param1);
             if (var4 == null) {
               return null;
             }
@@ -61,11 +61,11 @@ final class NameAvailabilityValidator extends TextFieldValidator {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 
-    final void f(int param0) {
+    final void clearCheckedName(int param0) {
         this.checkedName = null;
         int var2 = -118 / ((param0 + 56) / 56);
     }
@@ -75,7 +75,7 @@ final class NameAvailabilityValidator extends TextFieldValidator {
         this.accepted = false;
     }
 
-    final static int a(boolean param0, int param1, int param2) {
+    final static int messageMenuOptionAt(boolean param0, int param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -95,14 +95,14 @@ final class NameAvailabilityValidator extends TextFieldValidator {
           while (var3_int < AccountRegistrationPanel.field_J.length) {
             var5 = ProxyAuthenticationException.field_e[var3_int];
             if (var5 >= 0) {
-              var6 = ArchiveProvider.a(AccountRegistrationPanel.field_J[var3_int], 8192, true);
-              var4 = var4 + ki.field_e;
+              var6 = ArchiveProvider.measureMessageText(AccountRegistrationPanel.field_J[var3_int], 8192, true);
+              var4 = var4 + KiteTailSegment.field_e;
               var7 = bq.field_d - (var6 >> 1);
               if (TextLayoutLine.containsPoint(param1, var4, 59, (WidgetStyleLayer.field_b << 1) + dk.field_d, -ProxyAuthenticationException.field_a + var7, param2, (ProxyAuthenticationException.field_a << 1) + var6)) {
                 stackIn_7_0 = var5;
                 return stackIn_7_0;
               }
-              var4 = var4 + ((WidgetStyleLayer.field_b << 1) + ki.field_e + dk.field_d);
+              var4 = var4 + ((WidgetStyleLayer.field_b << 1) + KiteTailSegment.field_e + dk.field_d);
             } else {
               var4 = var4 + BouncedownBackground.field_m;
             }
@@ -111,18 +111,18 @@ final class NameAvailabilityValidator extends TextFieldValidator {
           if (param0) {
             stackIn_12_0 = true;
             stackIn_12_1 = 50;
-            NameAvailabilityValidator.a(stackIn_12_0, stackIn_12_1, 69);
+            NameAvailabilityValidator.messageMenuOptionAt(stackIn_12_0, stackIn_12_1, 69);
           }
           stackIn_14_0 = -1;
           return stackIn_14_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw aa.addExceptionContext((Throwable) ((Object) var3), "ec.C(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) var3), "ec.C(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
-    final static void a(boolean param0, ResourceArchive param1) {
+    final static void loadFinalFrame(boolean param0, ResourceArchive param1) {
         Sprite var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -140,7 +140,7 @@ final class NameAvailabilityValidator extends TextFieldValidator {
           MusicPatchNode.field_s.field_y = th.field_b.field_E;
           LinkButtonPainter.a((byte) 92);
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "ec.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "ec.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -178,7 +178,7 @@ final class NameAvailabilityValidator extends TextFieldValidator {
             return stackIn_5_0;
           }
           if (!param0.equals(this.checkedName)) {
-            var3 = ig.a(200, param0);
+            var3 = ig.takeAccountRequestResult(200, param0);
             if (var3 != null &&
               null == var3.field_c) {
               this.checkedName = param0;
@@ -189,7 +189,7 @@ final class NameAvailabilityValidator extends TextFieldValidator {
             }
           }
           if (this.accepted) {
-            stackIn_17_0 = qk.field_g;
+            stackIn_17_0 = RetroBlock.field_g;
           } else {
             stackIn_17_0 = sk.field_a;
           }
@@ -204,7 +204,7 @@ final class NameAvailabilityValidator extends TextFieldValidator {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
         }
     }
 

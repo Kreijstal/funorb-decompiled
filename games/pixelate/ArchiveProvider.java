@@ -21,7 +21,7 @@ abstract class ArchiveProvider {
         field_c = null;
     }
 
-    final static void a(int param0, byte param1, int param2, int param3, int param4, int param5, int param6) {
+    final static void layoutQuickChatRoot(int param0, byte param1, int param2, int param3, int param4, int param5, int param6) {
         if (param1 <= 110) {
           ArchiveProvider.releaseStatics((byte) -3);
           DraggableWidget.field_I.setBounds(param5, param0, param4, 256, param2);
@@ -38,7 +38,7 @@ abstract class ArchiveProvider {
         bo.field_h.layoutMenu(param0, param6 - di.field_a, param3, param6, (byte) -94, param0);
     }
 
-    final static void a(int param0) {
+    final static void closeContextMenu(int param0) {
         int var1 = 0;
         int var1Lifetime1;
         int var1Lifetime2;
@@ -60,7 +60,7 @@ abstract class ArchiveProvider {
         var1Lifetime2 = -128 / ((-64 - param0) / 33);
     }
 
-    final static int a(String param0, int param1, boolean param2) {
+    final static int measureMessageText(String param0, int param1, boolean param2) {
         RuntimeException var3 = null;
         int stackIn_4_0 = 0;
         int stackIn_6_0 = 0;
@@ -88,7 +88,7 @@ abstract class ArchiveProvider {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 

@@ -64,7 +64,7 @@ final class QueuedInput extends IntrusiveNode {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(')').toString());
         }
     }
 
@@ -108,7 +108,7 @@ final class QueuedInput extends IntrusiveNode {
               if (param0.length() == 0) {
                 var5Lifetime6 = var8 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
               } else {
-                var5Lifetime6 = var8 + "; Expires=" + SoundCache.a(10, hm.monotonicMillis(64) + 94608000000L) + "; Max-Age=" + 94608000L;
+                var5Lifetime6 = var8 + "; Expires=" + SoundCache.formatCookieDate(10, hm.monotonicMillis(64) + 94608000000L) + "; Max-Age=" + 94608000L;
               }
               JavaScriptBridge.evaluateScript(param2, (byte) -121, "document.cookie=\"" + var5Lifetime6 + "\"");
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
@@ -133,7 +133,7 @@ final class QueuedInput extends IntrusiveNode {
             } else {
               stackIn_17_2 = "{...}";
             }
-            throw aa.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+            throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -162,7 +162,7 @@ final class QueuedInput extends IntrusiveNode {
           if (null == NodeHashTableIterator.field_e) {
             return false;
           }
-          int var2_int = NodeHashTableIterator.field_e.a(-70);
+          int var2_int = NodeHashTableIterator.field_e.available(-70);
           if (var2_int > 0) {
             if (!(-MusicCrossfadeStream.field_o.position + param0 >= var2_int)) {
               var2_int = param0 - MusicCrossfadeStream.field_o.position;
@@ -182,9 +182,9 @@ final class QueuedInput extends IntrusiveNode {
               CachedTextLayout.millisSinceLastPacket(8) <= 30000L) {
               return false;
             }
-            na.a(true);
+            na.closeGameSocket(true);
           } catch (IOException iOException) {
-            na.a(true);
+            na.closeGameSocket(true);
           }
           return false;
         } catch (RuntimeException | Error decompiledUncheckedException) {
@@ -216,7 +216,7 @@ final class QueuedInput extends IntrusiveNode {
           of.field_g = of.field_g + (var2_intLifetime2 >> 1);
           of.field_b = of.field_b + param1.readUnsignedShort((byte) 96);
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "rd.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "rd.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -9,11 +9,11 @@ abstract class MouseWheelHandler {
     static id field_b;
     private static String field_z;
 
-    abstract void attach(int param0, java.awt.Component param1);
+    abstract void detach(int param0, java.awt.Component param1);
 
-    abstract int b(boolean param0);
+    abstract int pollRotation(boolean param0);
 
-    abstract void a(java.awt.Component param0, int param1);
+    abstract void attach(java.awt.Component param0, int param1);
 
     public static void releaseStatics(boolean param0) {
         if (param0) {

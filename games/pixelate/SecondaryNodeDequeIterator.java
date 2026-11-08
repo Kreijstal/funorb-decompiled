@@ -30,17 +30,17 @@ final class SecondaryNodeDequeIterator implements Iterator {
         int var1 = 121 / ((-48 - param0) / 51);
     }
 
-    final static void a(int param0, int param1, int param2, sb param3) {
+    final static void setLegacyMenuFrameAndPadding(int param0, int param1, int param2, sb param3) {
         try {
           MouseWheelHandler.field_d = param1;
           if (param2 != 7) {
             sb var5 = (sb) null;
-            SecondaryNodeDequeIterator.a(-44, 85, 83, (sb) null);
+            SecondaryNodeDequeIterator.setLegacyMenuFrameAndPadding(-44, 85, 83, (sb) null);
           }
           NodeHashTable.field_c = param3;
           AudioService.field_d = param0;
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "nb.A(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "nb.A(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -56,7 +56,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
         this.field_e = null;
     }
 
-    final static void a(int param0, Sprite[] param1, byte param2) {
+    final static void buildSkinTileSprites(int param0, Sprite[] param1, byte param2) {
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
         String stackIn_26_2 = null;
@@ -120,7 +120,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -131,7 +131,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
           this.field_f = this.field_d.field_a.secondaryNext;
           this.field_e = null;
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "nb.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "nb.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

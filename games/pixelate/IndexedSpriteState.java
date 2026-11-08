@@ -35,7 +35,7 @@ abstract class IndexedSpriteState {
         field_i = null;
     }
 
-    final static SceneWidget a(int param0) {
+    final static SceneWidget getGameListContent(int param0) {
         if (param0 != 1) {
           field_k = 60;
           return la.getGameListContent((byte) -110);
@@ -43,7 +43,7 @@ abstract class IndexedSpriteState {
         return la.getGameListContent((byte) -110);
     }
 
-    final static el a(String param0, byte param1) {
+    final static el validateEmailLabel(String param0, byte param1) {
         int var2_int = 0;
         int var3 = 0;
         int var4 = 0;
@@ -98,7 +98,7 @@ abstract class IndexedSpriteState {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param1).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param1).append(')').toString());
         }
     }
 

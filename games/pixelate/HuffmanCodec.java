@@ -99,7 +99,7 @@ final class HuffmanCodec {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param5).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -111,12 +111,12 @@ final class HuffmanCodec {
         field_d = null;
     }
 
-    final static void a(boolean param0, int param1, int param2) {
+    final static void openFriendContextMenu(boolean param0, int param1, int param2) {
         ClientContextMenu var4 = null;
         String var5_ref_String = null;
         int var5 = 0;
         int var6 = 0;
-        SocialListEntry var3 = CipherPacketBuffer.a(param2, param0, (byte) 113);
+        SocialListEntry var3 = CipherPacketBuffer.updateFriendListControls(param2, param0, (byte) 113);
         ClientContextMenu var4Lifetime1;
         if (var3 != null) {
           ProxySocketConnector.field_n.addGameMemberActions(false, (byte) -98);
@@ -128,7 +128,7 @@ final class HuffmanCodec {
           var6 = ji.field_c;
           var4Lifetime1.field_b.layoutPopup(0, var5, 115, var6, 0);
         }
-        vf.a(param0, param1, param2);
+        vf.updateIgnoreListControls(param0, param1, param2);
     }
 
     HuffmanCodec(byte[] param0) {
@@ -231,30 +231,30 @@ final class HuffmanCodec {
           } else {
             stackIn_39_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(')').toString());
         }
     }
 
-    final static void a(int param0, int param1, boolean param2, int param3, byte param4, java.awt.Component param5, PlatformTaskDispatcher param6, MusicCrossfadeStream param7) {
+    final static void createAudioOutputs(int param0, int param1, boolean param2, int param3, byte param4, java.awt.Component param5, PlatformTaskDispatcher param6, MusicCrossfadeStream param7) {
         try {
           if (param4 > -91) {
-            HuffmanCodec.a('ﾢ', 24);
+            HuffmanCodec.isNameChar('ﾢ', 24);
           }
           AudioOutput.configure(param1, param2, 10);
           MainMenuScreen.field_t = AudioOutput.create(param6, param5, 0, param3);
           ib.field_h = AudioOutput.create(param6, param5, 1, param0);
           ClientContextMenu.field_d = new PcmStreamMixer();
-          ba.field_f = param0;
+          FireworkBurst.field_f = param0;
           ib.field_h.setStream(ClientContextMenu.field_d);
           ri.field_a = param7;
           ri.field_a.setVolume(SocketJs5Transport.field_u, (byte) 2);
           MainMenuScreen.field_t.setStream(ri.field_a);
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "oh.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ',' + (param7 != null ? "{...}" : "null") + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "oh.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ',' + (param7 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static boolean a(char param0, int param1) {
+    final static boolean isNameChar(char param0, int param1) {
         if (Character.isISOControl(param0)) {
           return false;
         }
@@ -470,7 +470,7 @@ final class HuffmanCodec {
           } else {
             stackIn_70_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_66_0), ((StringBuilder) (Object) stackIn_69_1).append(stackIn_70_2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_66_0), ((StringBuilder) (Object) stackIn_69_1).append(stackIn_70_2).append(')').toString());
         }
     }
 

@@ -45,7 +45,7 @@ final class AccountNoticeDialog extends ResizableModalPanel implements ButtonLis
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -57,10 +57,10 @@ final class AccountNoticeDialog extends ResizableModalPanel implements ButtonLis
         RuntimeException var6 = null;
         try {
           if (param0 == this.field_ab) {
-            this.g(true);
+            this.close(true);
           }
           if (param2 != 11) {
-            AccountNoticeDialog.a(-85, true, 100, false);
+            AccountNoticeDialog.updateGameSetupPanel(-85, true, 100, false);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -73,11 +73,11 @@ final class AccountNoticeDialog extends ResizableModalPanel implements ButtonLis
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
-    private final void g(boolean param0) {
+    private final void close(boolean param0) {
         if (!param0) {
           this.field_ab = (TextButton) null;
         }
@@ -141,11 +141,11 @@ final class AccountNoticeDialog extends ResizableModalPanel implements ButtonLis
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) (stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) (stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
-    final static void a(int param0, boolean param1, int param2, boolean param3) {
+    final static void updateGameSetupPanel(int param0, boolean param1, int param2, boolean param3) {
         int stackIn_11_0 = 0;
         String stackIn_25_0 = null;
         SceneWidget stackIn_34_0 = null;
@@ -183,7 +183,7 @@ final class AccountNoticeDialog extends ResizableModalPanel implements ButtonLis
         int var10Lifetime1;
         var12 = Pixelate.field_H ? 1 : 0;
         try {
-          cm.b(RisingBubble.field_g, param2 ^ 4743);
+          cm.layoutSidePanels(RisingBubble.field_g, param2 ^ 4743);
           if (DraggableWidget.field_S != null) {
             wm.field_d.height = 0;
             var15 = wm.field_d;
@@ -243,21 +243,21 @@ final class AccountNoticeDialog extends ResizableModalPanel implements ButtonLis
               } else {
                 stackIn_38_1 = AccountRequestDialog.field_sb;
               }
-              stackIn_37_0.field_cb = AlphaContainer.a(stackIn_38_1, 59, new String[]{ep.field_a.field_cb});
+              stackIn_37_0.field_cb = AlphaContainer.formatTemplate(stackIn_38_1, 59, new String[]{ep.field_a.field_cb});
               ValidatedTextWidget.field_kb.field_rb = true;
               nk.field_e.field_cb = dn.field_b;
               PictureStrip.field_f = true;
               if (null != Checkbox.field_Z) {
                 ib.field_b = false;
                 if (null == TimerBarDemo.field_o) {
-                  lc.field_t = new boolean[fj.field_b];
+                  RankingQuery.field_t = new boolean[fj.field_b];
                   TimerBarDemo.field_o = new byte[fj.field_b];
                 }
                 PictureStrip.field_f = false;
                 var13 = 0;
                 var9_intLifetime1 = var13;
                 while (fj.field_b > var13) {
-                  lc.field_t[var13] = false;
+                  RankingQuery.field_t[var13] = false;
                   var13++;
                 }
                 CachedTextLayout.findValidSettingCombination(fj.field_b, 0, (byte) 91, true, -1, -1, DraggableWidget.field_S, -1);
@@ -278,7 +278,7 @@ final class AccountNoticeDialog extends ResizableModalPanel implements ButtonLis
                     var9 = var11Lifetime1;
                   }
                   for (var10Lifetime1 = 0; var10Lifetime1 < fj.field_b; var10Lifetime1++) {
-                    if (lc.field_t[var10Lifetime1]) {
+                    if (RankingQuery.field_t[var10Lifetime1]) {
                       var11_ref = "<col=A00000>" + jk.field_e[var10Lifetime1] + "</col>";
                       var9 = var11_ref;
                       var9 = var11_ref;
@@ -342,18 +342,18 @@ final class AccountNoticeDialog extends ResizableModalPanel implements ButtonLis
             }
             if (ep.field_a.field_P != 0) {
               if (!TriangleMesh.field_r) {
-                r.a(param2 - 3, param0);
+                r.sendGameOptionSelection(param2 - 3, param0);
               } else {
-                wo.c(-1, param0);
+                wo.sendSubtypeThreeRequest(-1, param0);
               }
             }
-            LoginForm.a(true, DraggableWidget.field_S, param0, -1);
+            LoginForm.updateGameOptionsPanel(true, DraggableWidget.field_S, param0, -1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw aa.addExceptionContext((Throwable) ((Object) var4), "ic.R(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) var4), "ic.R(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 

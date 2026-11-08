@@ -35,11 +35,11 @@ abstract class ResizableModalPanel extends ModalPanel {
           if (param8 != 21) {
             ResizableModalPanel.getLegacyMenuHeight(40);
           }
-          var13.field_zb = wk.a(param9, param0, 1);
-          var13.field_ab = wk.a(param6, param4, 1);
-          var13.field_bb = wk.a(param10, param12, 1);
-          var13.field_eb = wk.a(param11, param1, 1);
-          var13.field_M = wk.a(param2, param7, 1);
+          var13.field_zb = wk.createSolidFrame(param9, param0, 1);
+          var13.field_ab = wk.createSolidFrame(param6, param4, 1);
+          var13.field_bb = wk.createSolidFrame(param10, param12, 1);
+          var13.field_eb = wk.createSolidFrame(param11, param1, 1);
+          var13.field_M = wk.createSolidFrame(param2, param7, 1);
           var13.font = param3;
           var13.field_N = param5;
           stackIn_3_0 = var13;
@@ -54,7 +54,7 @@ abstract class ResizableModalPanel extends ModalPanel {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(',').append(param11).append(',').append(param12).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(',').append(param11).append(',').append(param12).append(')').toString());
         }
     }
 

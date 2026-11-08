@@ -10,7 +10,7 @@ final class ro {
     static String field_f;
 
     final static void sendChatFilterSettings(int param0, boolean param1) {
-        CipherPacketBuffer var2 = aa.field_f;
+        CipherPacketBuffer var2 = ChatMessage.field_f;
         var2.writeOpcode(param0, 15514);
         var2.writeByte(160, 2);
         var2.writeByte(160, 4);
@@ -34,7 +34,7 @@ final class ro {
     }
 
     final static void sendStatsRequest(int param0, int param1) {
-        CipherPacketBuffer var2 = aa.field_f;
+        CipherPacketBuffer var2 = ChatMessage.field_f;
         var2.writeOpcode(param1, 15514);
         if (param0 > 124) {
           var2.writeByte(160, 1);
@@ -56,10 +56,10 @@ final class ro {
           if (param1 != 2) {
             return;
           }
-          if (aa.field_c == null) {
+          if (ChatMessage.field_c == null) {
             return;
           }
-          aa.field_c.field_S.setSuggestions((byte) -90, args);
+          ChatMessage.field_c.field_S.setSuggestions((byte) -90, args);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -71,7 +71,7 @@ final class ro {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -109,7 +109,7 @@ final class ro {
         String[] var19 = null;
         try {
           var19 = (String[]) null;
-          d.a(param16, param13, true, param11, param7, param2, param8, param6, (String[]) null, 1, param0, param12, param9, param10, param1, param4, param5, param15, param14);
+          d.initializeLobbyUi(param16, param13, true, param11, param7, param2, param8, param6, (String[]) null, 1, param0, param12, param9, param10, param1, param4, param5, param15, param14);
           if (param3 != -15690) {
             var18 = (String[]) null;
             ro.setNameSuggestions((String[]) null, -104);
@@ -197,7 +197,7 @@ final class ro {
           } else {
             stackIn_42_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(')').toString());
         }
     }
 
@@ -220,14 +220,14 @@ final class ro {
           ReportAbuseDialog.field_Sb = ReportAbuseDialog.field_Sb + 65536;
           while (fp.a(true, ui.field_j, ReportAbuseDialog.field_Sb) >= 65536) {
             ReportAbuseDialog.field_Sb = ReportAbuseDialog.field_Sb - ui.field_j;
-            qk.field_e = qk.field_e + 1;
+            RetroBlock.field_e = RetroBlock.field_e + 1;
           }
           var2_int = -1;
           if (Matrix3.field_g != null) {
             var2_int = Matrix3.field_g.length;
           } else {
-            if (li.field_a != null) {
-              var2_int = li.field_a.length;
+            if (FireworkDisplay.field_a != null) {
+              var2_int = FireworkDisplay.field_a.length;
             }
           }
           if (-1 != var2_int) {
@@ -339,7 +339,7 @@ final class ro {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.addExceptionContext((Throwable) ((Object) var2), "ro.D(" + param0 + ',' + param1 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) var2), "ro.D(" + param0 + ',' + param1 + ')');
         }
     }
 

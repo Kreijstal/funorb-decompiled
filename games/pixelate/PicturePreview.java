@@ -66,7 +66,7 @@ final class PicturePreview extends IntrusiveNode {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -124,7 +124,7 @@ final class PicturePreview extends IntrusiveNode {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -190,7 +190,7 @@ final class PicturePreview extends IntrusiveNode {
           return;
         }
         if (null != fq.field_o) {
-          stackIn_5_0 = fo.field_t;
+          stackIn_5_0 = Kite.field_t;
         } else {
           stackIn_5_0 = 0;
         }
@@ -251,7 +251,7 @@ final class PicturePreview extends IntrusiveNode {
           this.field_s = param0.field_a;
           this.field_l = new Sprite(16 * this.field_n, 16 * this.field_s);
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "bf.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "bf.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

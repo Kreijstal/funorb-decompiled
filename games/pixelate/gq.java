@@ -13,7 +13,7 @@ final class gq extends EmailCredentials {
         return BouncedownBackground.field_o;
     }
 
-    final static void a(int param0, int param1, int param2, String param3) {
+    final static void startScorePopup(int param0, int param1, int param2, String param3) {
         int var4_int = 0;
         int var5 = 0;
         RuntimeException stackIn_10_0 = null;
@@ -46,7 +46,7 @@ final class gq extends EmailCredentials {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -54,7 +54,7 @@ final class gq extends EmailCredentials {
         super(param0, param1);
     }
 
-    public static void e(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 100) {
           field_n = 92;
         }
@@ -62,7 +62,7 @@ final class gq extends EmailCredentials {
         field_m = null;
     }
 
-    final static boolean d(int param0) {
+    final static boolean isOfflineOrAccountUi(int param0) {
         boolean stackIn_7_0 = false;
         if (param0 <= 55) {
           field_m = (String) null;

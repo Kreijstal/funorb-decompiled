@@ -86,7 +86,7 @@ final class IconTextComponent extends SceneWidget {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
         }
     }
 
@@ -363,7 +363,7 @@ final class IconTextComponent extends SceneWidget {
             }
           }
         }
-        aa.field_o = -2147483648;
+        ChatMessage.field_o = -2147483648;
         StatefulTextPainter.field_s = param0;
         qn.field_k = -2147483648;
         SecondaryNodeDeque.field_e = 0;

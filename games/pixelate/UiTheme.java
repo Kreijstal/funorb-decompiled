@@ -78,7 +78,7 @@ final class UiTheme {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -93,7 +93,7 @@ final class UiTheme {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!SpriteState.a(param1, param4, param0, param2, 500)) {
+          if (!SpriteState.canOpenQuickChatResponses(param1, param4, param0, param2, 500)) {
             return false;
           }
           if (param3 == ~param2) {
@@ -102,10 +102,10 @@ final class UiTheme {
           ce.field_d = param2;
           CheckboxPainter.field_k = param0;
           var7 = (CharSequence) ((Object) param0);
-          fp.field_d = dh.a(var7, (byte) 26);
+          fp.field_d = dh.normalizeDisplayName(var7, (byte) 26);
           fp.field_e = param1;
           var6 = ThreeSliceButtonPainter.buildQuickChatResponseMenu(49, AccountMessagePanel.field_L, param4, RankingTableRequest.field_t, AccountNamePrompt.field_Ib);
-          mh.a(var6, (byte) 127);
+          mh.openQuickChatMenu(var6, (byte) 127);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -123,7 +123,7 @@ final class UiTheme {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -170,7 +170,7 @@ final class UiTheme {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -252,7 +252,7 @@ final class UiTheme {
           } else {
             stackIn_33_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -307,14 +307,14 @@ final class UiTheme {
           }
           var5[4] = (Sprite) ((Object) var18);
           var4.createStateLayer(4, 7177).setPaintsBaseLayer(true, true).setFrameSprites(var5, (byte) -65);
-          var4.createStateLayer(5, 7177).setFrameSprites(og.a(0, true, 65793, 0, 0), (byte) -65).setPaintsBaseLayer(true, true).setTextColour(-1, 15115);
+          var4.createStateLayer(5, 7177).setFrameSprites(SaveDataRequest.buildBevelFrame(0, true, 65793, 0, 0), (byte) -65).setPaintsBaseLayer(true, true).setTextColour(-1, 15115);
           this.field_r = (WidgetPainter) ((Object) var4);
           var6 = new StatefulTextPainter(var4, true);
           var6.field_l = 0;
           var7 = new StatefulTextPainter(var4, true);
           var7.field_l = 0;
-          var7.setContentSprite(0, SecondaryNodeDeque.a(8947848, (byte) -128));
-          var7.createStateLayer(1, 7177).setFrameSprites(SecondaryNodeDeque.a(11184810, (byte) -93), (byte) -65).setTextColour(2236962, 15115);
+          var7.setContentSprite(0, SecondaryNodeDeque.createSolidCentreFrame(8947848, (byte) -128));
+          var7.createStateLayer(1, 7177).setFrameSprites(SecondaryNodeDeque.createSolidCentreFrame(11184810, (byte) -93), (byte) -65).setTextColour(2236962, 15115);
           this.field_t = (WidgetPainter) ((Object) new CheckboxPainter(param1, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
           discarded$0 = new DialWidgetPainter(param1, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
           discarded$1 = new MarkerSliderPainter(param1, 16777215, -1, 125269879, 4473924, 3, 268435455);
@@ -348,7 +348,7 @@ final class UiTheme {
           var19 = new StatefulTextPainter(var4, true);
           var19.setStateIcon(param0 ^ -20, var13);
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "tg.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "tg.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -397,7 +397,7 @@ final class UiTheme {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 

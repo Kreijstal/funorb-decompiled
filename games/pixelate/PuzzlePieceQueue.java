@@ -88,7 +88,7 @@ final class PuzzlePieceQueue {
         }
         if (!TextHotspotWidget.field_U) {
           if (null == PuzzleThumbnail.field_g) {
-            PuzzleThumbnail.field_g = ni.a(6, -90);
+            PuzzleThumbnail.field_g = ni.queueSavedDataRequest(6, -90);
           }
           if (PuzzleThumbnail.field_g.field_p) {
             TextHotspotWidget.applyCompletedPuzzleMask(false, PuzzleThumbnail.field_g.field_n);
@@ -102,7 +102,7 @@ final class PuzzlePieceQueue {
         if (LoadingStep.field_a &&
           TextHotspotWidget.field_U) {
           SocketConnector.stopAudioService(5);
-          ni.a(-31470);
+          ni.refreshScreenItems(-31470);
           if (fc.field_e == 9 &&
             EmailCredentials.field_k == 0) {
             fc.field_e = 5;
@@ -147,7 +147,7 @@ final class PuzzlePieceQueue {
         var5 = Pixelate.field_H ? 1 : 0;
         SoftwareRasterizer.drawRoundedRectangle(535, -15 + this.field_o, 62, 15 + this.field_b + 15, 6, 0);
         SoftwareRasterizer.fillRoundedRectangleBlended(535, -15 + this.field_o, 62, 15 + (this.field_b + 15), 6, 0, 128);
-        li.field_d.drawAdditive(542, this.field_g - 8, 256);
+        FireworkDisplay.field_d.drawAdditive(542, this.field_g - 8, 256);
         var2 = this.field_o;
         if (param0 != 550) {
           this.field_l = -112;
@@ -202,7 +202,7 @@ final class PuzzlePieceQueue {
           this.field_j = param3;
           this.field_b = this.field_i.length * 37 - 5;
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "so.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "so.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -30,7 +30,7 @@ final class cl {
         if (param0 != 8231) {
           return;
         }
-        ln.field_q = false;
+        SoundVoice.field_q = false;
         IsaacRandom.field_g = 0 == MusicCrossfadeStream.field_o.readUnsignedByte(255) ? true : false;
     }
 
@@ -168,7 +168,7 @@ final class cl {
           } else {
             stackIn_76_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_72_0), ((StringBuilder) (Object) stackIn_75_1).append(stackIn_76_2).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_72_0), ((StringBuilder) (Object) stackIn_75_1).append(stackIn_76_2).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 

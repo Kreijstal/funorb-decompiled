@@ -278,16 +278,16 @@ final class VerticalScrollbar extends SceneWidget {
 
     final static void resendQueuedRequests(int param0, int param1) {
         int var3 = 0;
-        df var4 = null;
+        StatsRequest var4 = null;
         sm var5 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         var3 = Pixelate.field_H ? 1 : 0;
         try {
-          var4 = (df) (he.field_b.first(param0 + 1504642273));
+          var4 = (StatsRequest) (he.field_b.first(param0 + 1504642273));
           while (var4 != null) {
-            Pixelate.a(param1, (byte) 109, var4);
-            var4 = (df) (he.field_b.next(1504642273));
+            Pixelate.sendStatsRequest(param1, (byte) 109, var4);
+            var4 = (StatsRequest) (he.field_b.next(1504642273));
           }
           if (param0 != 0) {
             field_Hb = (IntrusiveDeque) null;
@@ -301,7 +301,7 @@ final class VerticalScrollbar extends SceneWidget {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.addExceptionContext((Throwable) ((Object) var2), "vp.E(" + param0 + ',' + param1 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) var2), "vp.E(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -389,7 +389,7 @@ final class VerticalScrollbar extends SceneWidget {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 

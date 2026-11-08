@@ -10,7 +10,7 @@ final class TextTableInitializer {
     static String field_b;
     static String field_d;
 
-    final static void a(int param0) {
+    final static void initializeMenuLabels(int param0) {
         int var1_int = 0;
         int var2 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -25,13 +25,13 @@ final class TextTableInitializer {
           PacketBuffer.field_o[7] = ge.field_b;
           PacketBuffer.field_o[9] = ih.field_e;
           PacketBuffer.field_o[6] = wk.field_f;
-          PacketBuffer.field_o[0] = jm.field_s;
+          PacketBuffer.field_o[0] = Cloud.field_s;
           PacketBuffer.field_o[28] = TabbedPanel.field_Nb;
           PacketBuffer.field_o[1] = CheckboxPainter.field_c;
           PacketBuffer.field_o[11] = FallingPieceView.field_d;
           PacketBuffer.field_o[29] = ge.field_a;
           if (param0 != -29810) {
-            TextTableInitializer.a(false, -69);
+            TextTableInitializer.drawFrontEndOverlays(false, -69);
           }
           PacketBuffer.field_o[8] = null;
           PacketBuffer.field_o[5] = cm.field_l;
@@ -59,7 +59,7 @@ final class TextTableInitializer {
           BlastFromThePastBackground.field_m[1] = ro.field_f;
           BlastFromThePastBackground.field_m[7] = qf.field_d;
           dn.field_a = new String[][]{hm.field_f, MatchingTextValidator.field_t, um.field_l, PauseMenuScreen.field_p, ui.field_h, qg.field_d};
-          ln.field_m = new String[][]{PuzzleThumbnail.field_a, ScrollContainer.field_Hb, qh.field_d, wk.field_i, GameApplet.field_k, NumericDateInputWidget.field_R, GameModeSelectScreen.field_q, vd.field_d};
+          SoundVoice.field_m = new String[][]{PuzzleThumbnail.field_a, ScrollContainer.field_Hb, qh.field_d, wk.field_i, GameApplet.field_k, NumericDateInputWidget.field_R, GameModeSelectScreen.field_q, vd.field_d};
           BlastFromThePastBackground.field_m[0] = DraggableWidget.field_L;
           BlastFromThePastBackground.field_m[5] = wa.field_e;
           for (var1_int = 0; var1_int < BlastFromThePastBackground.field_m.length; var1_int++) {
@@ -71,25 +71,25 @@ final class TextTableInitializer {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw aa.addExceptionContext((Throwable) ((Object) var1), "ho.A(" + param0 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) var1), "ho.A(" + param0 + ')');
         }
     }
 
-    final static void a(boolean param0, int param1) {
-        BoardView.a((byte) -61, param0);
+    final static void drawFrontEndOverlays(boolean param0, int param1) {
+        BoardView.drawAllOverlays((byte) -61, param0);
         if (param1 != 12402) {
           return;
         }
         cl.drawOverlayLayers((byte) 95, param0);
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_f = null;
         field_b = null;
         field_a = null;
         field_d = null;
         if (param0 != 11799) {
-          TextTableInitializer.a(-116);
+          TextTableInitializer.initializeMenuLabels(-116);
         }
         field_g = null;
     }

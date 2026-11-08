@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class jm {
+final class Cloud {
     double field_m;
     static int field_j;
     int field_n;
@@ -25,7 +25,7 @@ final class jm {
     int field_t;
     static boolean[][] field_r;
 
-    final void a(byte param0) {
+    final void respawn(byte param0) {
         this.field_c = -60 + JavaRandomHelpers.a(ea.field_b, -126, 480);
         this.field_l = JavaRandomHelpers.a(ea.field_b, -126, 50);
         this.field_e = (double)this.field_l / 100.0 + 0.3;
@@ -58,7 +58,7 @@ final class jm {
         field_p = null;
     }
 
-    final static String b(int param0) {
+    final static String describePacketHistory(int param0) {
         int var2 = 0;
         String var1;
         int var3;
@@ -93,13 +93,13 @@ final class jm {
           }
         }
         if (param0 >= -4) {
-          jm.b(-28);
+          Cloud.describePacketHistory(-28);
         }
         return var1;
     }
 
-    jm() {
-        this.a((byte) -107);
+    Cloud() {
+        this.respawn((byte) -107);
         this.field_m = (double)(JavaRandomHelpers.a(ea.field_b, -114, 640) - 100);
     }
 

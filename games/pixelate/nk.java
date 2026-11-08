@@ -31,7 +31,7 @@ final class nk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw aa.addExceptionContext((Throwable) ((Object) var1), "nk.E(" + param0 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) var1), "nk.E(" + param0 + ')');
         }
     }
 
@@ -97,14 +97,14 @@ final class nk {
           var16 = new Sprite[9];
           var16[4] = var12;
           ui.field_i = new SceneWidget(0L, param0);
-          ki.field_k = new SceneWidget(0L, param3);
-          ui.field_i.addChild(ki.field_k, (byte) 26);
+          KiteTailSegment.field_k = new SceneWidget(0L, param3);
+          ui.field_i.addChild(KiteTailSegment.field_k, (byte) 26);
           var17 = new SceneWidget(0L, (SceneWidget) null);
           var17.children = new IntrusiveDeque();
           l.field_p = new ScrollContainer(0L, var17, param8, param2);
-          ki.field_k.addChild(l.field_p, (byte) 26);
+          KiteTailSegment.field_k.addChild(l.field_p, (byte) 26);
           StripedProgressBar.field_U = new SceneWidget(0L, param5);
-          ki.field_k.addChild(StripedProgressBar.field_U, (byte) 26);
+          KiteTailSegment.field_k.addChild(StripedProgressBar.field_U, (byte) 26);
           nf.field_d = new SceneWidget(0L, param10);
           nf.field_d.font = AccountMessagePanel.field_Q;
           StripedProgressBar.field_U.addChild(nf.field_d, (byte) 26);
@@ -166,10 +166,10 @@ final class nk {
             GradientOutlineTextPainter.field_u = new SceneWidget(0L, param7);
             GradientOutlineTextPainter.field_u.field_cb = nd.field_a;
             ui.field_i.addChild(GradientOutlineTextPainter.field_u, (byte) 26);
-            stackIn_34_0 = PauseMenuScreen.b(true) ? 1 : 0;
+            stackIn_34_0 = PauseMenuScreen.isGameConnectionOpen(true) ? 1 : 0;
           }
           if (stackIn_34_0 != 0 &&
-            !ln.field_q) {
+            !SoundVoice.field_q) {
             return;
           }
           td.field_b = new BirthDateEntryPanel(0, 0, 0, 0);
@@ -238,7 +238,7 @@ final class nk {
           } else {
             stackIn_81_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_44_0), ((StringBuilder) (Object) stackIn_80_1).append(stackIn_81_2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_44_0), ((StringBuilder) (Object) stackIn_80_1).append(stackIn_81_2).append(')').toString());
         }
     }
 
@@ -250,12 +250,12 @@ final class nk {
             nk.releaseStatics(true);
           }
           ModalStack.field_J = MusicCrossfadeStream.field_o.readString(5);
-          LobbyGame.field_Hb = dh.a((CharSequence) ((Object) ModalStack.field_J), (byte) 44);
+          LobbyGame.field_Hb = dh.normalizeDisplayName((CharSequence) ((Object) ModalStack.field_J), (byte) 44);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw aa.addExceptionContext((Throwable) ((Object) var1), "nk.G(" + param0 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) var1), "nk.G(" + param0 + ')');
         }
     }
 
@@ -296,7 +296,7 @@ final class nk {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -359,7 +359,7 @@ final class nk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw aa.addExceptionContext((Throwable) ((Object) var2_ref), "nk.F(" + param0 + ',' + param1 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) var2_ref), "nk.F(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -367,7 +367,7 @@ final class nk {
         try {
           an.field_e.complete(param0 + param0, param1);
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "nk.A(" + param0 + ',' + param1 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "nk.A(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -379,7 +379,7 @@ final class nk {
             field_a = (IntrusiveDeque) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "nk.D(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "nk.D(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 

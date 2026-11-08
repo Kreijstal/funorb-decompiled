@@ -17,7 +17,7 @@ abstract class StatusBar {
 
     final static void sendNameRequest(long param0, int param1, int param2) {
         int var5 = 0;
-        CipherPacketBuffer var4 = aa.field_f;
+        CipherPacketBuffer var4 = ChatMessage.field_f;
         int var5Lifetime1;
         var4.writeOpcode(param1, 15514);
         if (param2 == -26231) {
@@ -98,7 +98,7 @@ abstract class StatusBar {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -130,8 +130,8 @@ abstract class StatusBar {
         SoftwareRasterizer.drawHorizontalLine(var6, param2, -(2 * ui.field_f.field_A) + param3, 0);
         SoftwareRasterizer.drawHorizontalLine(var6, 25 + param2 - 1, param3 - 2 * ui.field_f.field_A, 0);
         int var8 = this.field_e >> 16;
-        mh.a(param2, gd.field_h[param1], var8 - hp.field_Gb.field_A, 0);
-        mh.a(param2, gd.field_h[param1], var8, 0);
+        mh.drawBarTexture(param2, gd.field_h[param1], var8 - hp.field_Gb.field_A, 0);
+        mh.drawBarTexture(param2, gd.field_h[param1], var8, 0);
         SoftwareRasterizer.saveClip(PicturePreview.field_r);
         SoftwareRasterizer.setClip(0, 0, 320, 480);
         NameAvailabilityValidator.field_q.drawAlpha(var5 + 2, param2, 128);

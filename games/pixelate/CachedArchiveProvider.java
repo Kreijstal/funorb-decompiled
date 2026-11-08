@@ -47,7 +47,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
-          throw aa.addExceptionContext((Throwable) ((Object) var3_ref), "gg.B(" + param0 + ',' + param1 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) var3_ref), "gg.B(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -100,7 +100,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw aa.addExceptionContext((Throwable) ((Object) var2_ref), "gg.H(" + param0 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) var2_ref), "gg.H(" + param0 + ')');
         }
     }
 
@@ -295,7 +295,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
         } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
           decompiledCaughtException = decompiledCaughtParameter2;
           var4 = (RuntimeException) (Object) decompiledCaughtException;
-          throw aa.addExceptionContext((Throwable) (var4), "gg.L(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) (var4), "gg.L(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -319,7 +319,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
-          throw aa.addExceptionContext((Throwable) ((Object) var3_ref), "gg.D(" + param0 + ',' + param1 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) var3_ref), "gg.D(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -333,7 +333,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
             this.pendingScanGroups = new IntrusiveDeque();
           }
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "gg.J(" + param0 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "gg.J(" + param0 + ')');
         }
     }
 
@@ -489,7 +489,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
             stackIn_47_0 = stackIn_43_0;
             stackIn_47_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_47_0), ((StringBuilder) (Object) stackIn_46_1).append(stackIn_47_2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_47_0), ((StringBuilder) (Object) stackIn_46_1).append(stackIn_47_2).append(')').toString());
         }
     }
 
@@ -636,7 +636,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref2 = decompiledCaughtException;
-          throw aa.addExceptionContext((Throwable) ((Object) var2_ref2), "gg.O(" + param0 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) var2_ref2), "gg.O(" + param0 + ')');
         }
     }
 
@@ -730,7 +730,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
         } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
           decompiledCaughtException = decompiledCaughtParameter2;
           var2_ref = decompiledCaughtException;
-          throw aa.addExceptionContext((Throwable) ((Object) var2_ref), "gg.C(" + param0 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) var2_ref), "gg.C(" + param0 + ')');
         }
     }
 
@@ -743,7 +743,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
           field_z = null;
           field_v = null;
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "gg.N(" + param0 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "gg.N(" + param0 + ')');
         }
     }
 
@@ -769,7 +769,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw aa.addExceptionContext((Throwable) ((Object) var1), "gg.K(" + param0 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) var1), "gg.K(" + param0 + ')');
         }
     }
 
@@ -781,7 +781,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
         try {
           NameSuggestionsPanel.field_L = null;
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "gg.M(" + param0 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "gg.M(" + param0 + ')');
         }
     }
 
@@ -879,7 +879,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
             stackIn_32_0 = stackIn_28_0;
             stackIn_32_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param7).append(',').append(param8).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param7).append(',').append(param8).append(')').toString());
         }
     }
 

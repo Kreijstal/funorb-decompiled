@@ -30,7 +30,7 @@ final class PasswordFieldPainter extends GradientOutlineTextPainter {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -64,7 +64,7 @@ final class PasswordFieldPainter extends GradientOutlineTextPainter {
               if (param0 != 93) {
                 return;
               }
-              param1.getAppletContext().showDocument(lg.a(false, param1, var2), "_top");
+              param1.getAppletContext().showDocument(lg.withSessionParameters(false, param1, var2), "_top");
               return;
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
@@ -82,7 +82,7 @@ final class PasswordFieldPainter extends GradientOutlineTextPainter {
             } else {
               stackIn_9_2 = "{...}";
             }
-            throw aa.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+            throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

@@ -167,7 +167,7 @@ final class MusicPatch extends IntrusiveNode {
           } else {
             stackIn_40_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_39_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(',').append(param1).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_39_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -182,7 +182,7 @@ final class MusicPatch extends IntrusiveNode {
           if (param1 != 0) {
             MusicPatch.getPendingNoticeText((byte) 30);
           }
-          stackIn_3_0 = DropTargetWidget.a(param1 ^ 98, false, param0);
+          stackIn_3_0 = DropTargetWidget.validateAccountName(param1 ^ 98, false, param0);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -194,7 +194,7 @@ final class MusicPatch extends IntrusiveNode {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -215,7 +215,7 @@ final class MusicPatch extends IntrusiveNode {
     }
 
     final static void shutdownConnectionAndInput(byte param0) {
-        ln.a(param0 + 165);
+        SoundVoice.closeFullscreenCanvas(param0 + 165);
         if (null != NameAvailabilityValidator.field_u) {
           MenuInputState.removeCanvasInputListeners(NameAvailabilityValidator.field_u, 0);
         }
@@ -226,10 +226,10 @@ final class MusicPatch extends IntrusiveNode {
         TextHotspotWidget.clearMouseHandler((byte) -94);
         ep.closeArchiveConnections(-26721);
         if (KiteBackground.b(true)) {
-          aa.field_f.writeOpcode(1, 15514);
+          ChatMessage.field_f.writeOpcode(1, 15514);
           SecondaryNodeHashTable.flushOutgoingPackets(0, param0 + 10091);
         }
-        na.a(true);
+        na.closeGameSocket(true);
     }
 
     MusicPatch(byte[] param0) {
@@ -744,7 +744,7 @@ final class MusicPatch extends IntrusiveNode {
           } else {
             stackIn_205_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_204_0), ((StringBuilder) (Object) stackIn_204_1).append(stackIn_205_2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_204_0), ((StringBuilder) (Object) stackIn_204_1).append(stackIn_205_2).append(')').toString());
         }
     }
 
@@ -821,7 +821,7 @@ final class MusicPatch extends IntrusiveNode {
           } else {
             stackIn_31_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(')').toString());
         }
     }
 

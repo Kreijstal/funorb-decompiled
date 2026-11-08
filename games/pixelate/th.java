@@ -33,7 +33,7 @@ final class th {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -57,12 +57,12 @@ final class th {
 
     final static void a(int param0) {
         if (param0 == 8191) {
-          ByteStorage.a(Match.field_s, true, 32, nk.field_b);
+          ByteStorage.startLoginWithCredentials(Match.field_s, true, 32, nk.field_b);
           ke.field_d = true;
           return;
         }
         th.a(17);
-        ByteStorage.a(Match.field_s, true, 32, nk.field_b);
+        ByteStorage.startLoginWithCredentials(Match.field_s, true, 32, nk.field_b);
         ke.field_d = true;
     }
 

@@ -42,7 +42,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -106,7 +106,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
         }
     }
 
@@ -118,7 +118,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
         if (ArrayWidgetContainer.isAccountUiActive((byte) 83)) {
           ef.field_a = true;
         } else {
-          var2 = bo.a(param0 ^ 181);
+          var2 = bo.packCompletedPuzzleMask(param0 ^ 181);
           byte[] var1 = var2;
           hm.queueSaveDataRequest(param0 + 41, var2, 6);
         }

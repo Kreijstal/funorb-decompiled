@@ -517,7 +517,7 @@ final class SoftwareRasterizer {
         SoftwareRasterizer.drawVerticalLine(param0 + param2 - 1, param1, param3, param4);
     }
 
-    final static void f(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final static void fillVerticalGradientAdditive(int param0, int param1, int param2, int param3, int param4, int param5) {
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
@@ -1184,9 +1184,9 @@ final class SoftwareRasterizer {
         var29 = field_c;
         var26 = var29;
         var11 = var26;
-        ArraySupport.a(var27, 0, param8);
-        ArraySupport.a(var28, 0, param8);
-        ArraySupport.a(var29, 0, param8);
+        ArraySupport.clearInts(var27, 0, param8);
+        ArraySupport.clearInts(var28, 0, param8);
+        ArraySupport.clearInts(var29, 0, param8);
         var12 = 16384 / (2 * param3 + 1);
         var13 = param4 - param3;
         if (var13 < 0) {
@@ -1771,7 +1771,7 @@ final class SoftwareRasterizer {
         }
     }
 
-    final static void b() {
+    final static void softenRaster() {
         int var1 = 0;
         int var0 = 0;
         int var2 = field_j * field_d;

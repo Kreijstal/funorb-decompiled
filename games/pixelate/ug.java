@@ -12,7 +12,7 @@ final class ug extends IntrusiveNode {
     static int field_k;
     static String field_p;
 
-    final static void a(int param0, int param1, int param2) {
+    final static void setLegacyMenuOrigin(int param0, int param1, int param2) {
         qh.field_b = param0;
         if (param2 != -26104) {
           return;
@@ -20,18 +20,18 @@ final class ug extends IntrusiveNode {
         bq.field_d = param1;
     }
 
-    final static void a(int param0) {
+    final static void showRemovedFromGameNotice(int param0) {
         String var2 = null;
         if (null != wo.field_b) {
           var2 = wo.field_b;
           String var1 = var2;
-          LoginCredentials.a(AlphaContainer.a(ek.field_d, 113, new String[]{var2}), false);
+          LoginCredentials.a(AlphaContainer.formatTemplate(ek.field_d, 113, new String[]{var2}), false);
           wo.field_b = null;
         }
         if (param0 == 2586) {
           return;
         }
-        ug.a(20);
+        ug.showRemovedFromGameNotice(20);
     }
 
     ug(long param0, int param1, byte[] param2) {
@@ -40,7 +40,7 @@ final class ug extends IntrusiveNode {
           this.field_m = param1;
           this.field_r = param2;
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "ug.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "ug.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

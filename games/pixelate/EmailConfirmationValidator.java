@@ -12,7 +12,7 @@ final class EmailConfirmationValidator extends TextFieldValidator {
     private String checkedEmail;
     static String field_m;
 
-    public static void f(int param0) {
+    public static void releaseStatics(int param0) {
         field_s = null;
         field_u = null;
         if (param0 == 16) {
@@ -22,7 +22,7 @@ final class EmailConfirmationValidator extends TextFieldValidator {
           field_r = null;
           return;
         }
-        EmailConfirmationValidator.e(-78);
+        EmailConfirmationValidator.getGameMemberListContent(-78);
         field_m = null;
         field_p = null;
         field_n = null;
@@ -62,7 +62,7 @@ final class EmailConfirmationValidator extends TextFieldValidator {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -73,11 +73,11 @@ final class EmailConfirmationValidator extends TextFieldValidator {
         try {
           this.matchingValidator = new MatchingTextValidator(param0, param1);
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "kc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "kc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static SceneWidget e(int param0) {
+    final static SceneWidget getGameMemberListContent(int param0) {
         if (param0 != 16) {
           return (SceneWidget) null;
         }
@@ -116,7 +116,7 @@ final class EmailConfirmationValidator extends TextFieldValidator {
           if (!this.field_q) {
             stackIn_16_0 = sk.field_a;
           } else {
-            stackIn_16_0 = qk.field_g;
+            stackIn_16_0 = RetroBlock.field_g;
           }
           return stackIn_16_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -129,7 +129,7 @@ final class EmailConfirmationValidator extends TextFieldValidator {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(')').toString());
         }
     }
 

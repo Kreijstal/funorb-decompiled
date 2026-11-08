@@ -9,7 +9,7 @@ final class oo {
     static int field_b;
     static int[][] field_e;
 
-    public static void a(boolean param0) {
+    public static void clearStatics(boolean param0) {
         field_a = null;
         field_c = null;
         if (!param0) {
@@ -20,12 +20,12 @@ final class oo {
         field_e = (int[][]) null;
     }
 
-    final static void a(int param0, QuickChatCategory param1) {
+    final static void setSinglePhraseCategory(int param0, QuickChatCategory param1) {
         try {
           param1.field_t = new char[]{(char)63};
           param1.phraseIds = new int[]{param0};
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "oo.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "oo.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

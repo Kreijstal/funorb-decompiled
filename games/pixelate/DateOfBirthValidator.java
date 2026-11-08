@@ -14,20 +14,20 @@ final class DateOfBirthValidator extends DebouncedValidator implements TextInput
           int var3_int = -49 / ((-30 - param0) / 60);
           this.markEdited(2048);
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "oa.P(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "oa.P(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    public static void b(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         if (!param0) {
-          DateOfBirthValidator.a(-73, -28);
+          DateOfBirthValidator.isPowerOfTwo(-73, -28);
           field_h = null;
           return;
         }
         field_h = null;
     }
 
-    final static String a(Throwable param0, byte param1) throws IOException {
+    final static String formatThrowable(Throwable param0, byte param1) throws IOException {
         ClientException var14 = null;
         String var8_ref_String = null;
         int var9 = 0;
@@ -117,7 +117,7 @@ final class DateOfBirthValidator extends DebouncedValidator implements TextInput
         return var2Lifetime2;
     }
 
-    final static boolean a(int param0, int param1) {
+    final static boolean isPowerOfTwo(int param0, int param1) {
         if (param1 == 1890) {
           return (-param0 & param0) == param0 ? true : false;
         }
@@ -148,7 +148,7 @@ final class DateOfBirthValidator extends DebouncedValidator implements TextInput
             stackIn_7_0 = sk.field_a;
             return stackIn_7_0;
           }
-          if (!dq.a(var2_int, var3, -2, var4)) {
+          if (!dq.isValidDate(var2_int, var3, -2, var4)) {
             stackIn_10_0 = sk.field_a;
             return stackIn_10_0;
           }
@@ -157,7 +157,7 @@ final class DateOfBirthValidator extends DebouncedValidator implements TextInput
           var2 = (NumberFormatException) (Object) decompiledCaughtException;
           return sk.field_a;
         }
-        return qk.field_g;
+        return RetroBlock.field_g;
     }
 
     public final void onTextChanged(EditableTextWidget param0, int param1) {
@@ -166,7 +166,7 @@ final class DateOfBirthValidator extends DebouncedValidator implements TextInput
             this.field_g = (DateInputWidget) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "oa.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "oa.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -193,11 +193,11 @@ final class DateOfBirthValidator extends DebouncedValidator implements TextInput
           var5 = wa.currentYear(-127);
           if (var4 >= 1890 &&
             var5 - 3 >= var4) {
-            if (dq.a(var2_int, var3, param0 + param0, var4)) {
+            if (dq.isValidDate(var2_int, var3, param0 + param0, var4)) {
               return null;
             }
           } else {
-            stackIn_4_0 = AlphaContainer.a(TextLayout.field_d, 120, new String[]{"1890", Integer.toString(-3 + var5)});
+            stackIn_4_0 = AlphaContainer.formatTemplate(TextLayout.field_d, 120, new String[]{"1890", Integer.toString(-3 + var5)});
             return stackIn_4_0;
           }
         } catch (java.lang.NumberFormatException decompiledCaughtParameter0) {

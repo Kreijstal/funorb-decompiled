@@ -9,7 +9,7 @@ final class na {
         int var1 = 80 / ((51 - param0) / 39);
     }
 
-    final static int a(CharSequence param0, byte param1) {
+    final static int parseDecimalInt(CharSequence param0, byte param1) {
         RuntimeException var2 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -32,11 +32,11 @@ final class na {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    final static void a(boolean param0) {
+    final static void closeGameSocket(boolean param0) {
         if (NodeHashTableIterator.field_e != null) {
           NodeHashTableIterator.field_e.close(-1);
           NodeHashTableIterator.field_e = null;

@@ -52,14 +52,14 @@ final class DisplayNameForm extends UiContainer implements NameSuggestionListene
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param5).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param5).append(')').toString());
         }
     }
 
-    private final boolean g(byte param0) {
+    private final boolean isNameFieldReady(byte param0) {
         boolean discarded$0 = false;
         if (param0 != -59) {
-          discarded$0 = this.g((byte) -57);
+          discarded$0 = this.isNameFieldReady((byte) -57);
           if (this.passesSubmissionGate(false, this.field_O)) {
             return true;
           }
@@ -74,9 +74,9 @@ final class DisplayNameForm extends UiContainer implements NameSuggestionListene
     final void updatePointer(int param0, int param1, int param2, UiComponent param3) {
         try {
           super.updatePointer(param0, param1, param2, param3);
-          this.field_P.field_H = this.g((byte) -59);
+          this.field_P.field_H = this.isNameFieldReady((byte) -59);
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "fh.L(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "fh.L(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -91,7 +91,7 @@ final class DisplayNameForm extends UiContainer implements NameSuggestionListene
             IntrusiveDequeCursor.openBlankLoginForm(true);
           } else {
             if (param0 == this.field_P) {
-              this.e((byte) 8);
+              this.submitDisplayName((byte) 8);
             }
           }
           if (param2 == 11) {
@@ -109,7 +109,7 @@ final class DisplayNameForm extends UiContainer implements NameSuggestionListene
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -131,7 +131,7 @@ final class DisplayNameForm extends UiContainer implements NameSuggestionListene
             return true;
           }
           var4 = var3.getState((byte) 93);
-          stackIn_8_0 = (var4 == qk.field_g);
+          stackIn_8_0 = (var4 == RetroBlock.field_g);
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -143,18 +143,18 @@ final class DisplayNameForm extends UiContainer implements NameSuggestionListene
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
     public final void onMoreSuggestionsRequested(byte param0) {
         if (param0 >= 12) {
-          ((NameAvailabilityValidator) (this.field_O.getValidationSource(1))).f(63);
+          ((NameAvailabilityValidator) (this.field_O.getValidationSource(1))).clearCheckedName(63);
           return;
         }
         UiComponent var3 = (UiComponent) null;
         this.onFocusedKey(-89, 53, (UiComponent) null, 'e');
-        ((NameAvailabilityValidator) (this.field_O.getValidationSource(1))).f(63);
+        ((NameAvailabilityValidator) (this.field_O.getValidationSource(1))).clearCheckedName(63);
     }
 
     private final int appendValidatedField(int param0, UiComponent param1, int param2, String param3, byte param4, String param5, int param6) {
@@ -202,7 +202,7 @@ final class DisplayNameForm extends UiContainer implements NameSuggestionListene
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param6).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -215,28 +215,28 @@ final class DisplayNameForm extends UiContainer implements NameSuggestionListene
           int var5 = 75 % ((34 - param1) / 59);
           ((EditableTextWidget) ((Object) var3)).setText(false, (byte) 87, var4);
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "fh.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "fh.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    private final void e(byte param0) {
+    private final void submitDisplayName(byte param0) {
         int discarded$0 = 0;
         if (param0 != 8) {
           String var3 = (String) null;
           discarded$0 = this.appendStandardValidatedField((byte) 21, -50, (String) null, (UiComponent) null, (String) null, -110);
-          if (this.g((byte) -59)) {
+          if (this.isNameFieldReady((byte) -59)) {
             LobbyPlayer.submitDisplayName(-1710418464, this.field_O.field_q);
             return;
           }
           return;
         }
-        if (this.g((byte) -59)) {
+        if (this.isNameFieldReady((byte) -59)) {
           LobbyPlayer.submitDisplayName(-1710418464, this.field_O.field_q);
           return;
         }
     }
 
-    public static void f(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_M = null;
         if (param0 > 120) {
           field_I = null;
@@ -263,7 +263,7 @@ final class DisplayNameForm extends UiContainer implements NameSuggestionListene
         this.field_P = new TextButton(ig.field_c, (UiListener) null);
         this.field_N = new TextButton(IntrusiveNode.field_f, (UiListener) null);
         this.field_O.field_l = StatusBar.field_i;
-        this.field_O.a((byte) 57, new NameAvailabilityValidator(this.field_O));
+        this.field_O.setValidationSource((byte) 57, new NameAvailabilityValidator(this.field_O));
         this.field_P.field_H = false;
         this.field_P.field_y = (WidgetPainter) ((Object) new ThreeSliceButtonPainter());
         this.field_N.field_y = (WidgetPainter) ((Object) new LinkButtonPainter());
@@ -310,14 +310,14 @@ final class DisplayNameForm extends UiContainer implements NameSuggestionListene
           }
           var3 = -109 % ((13 - param1) / 46);
           var7 = (CharSequence) ((Object) param0);
-          var2 = dh.a(var7, (byte) 118);
+          var2 = dh.normalizeDisplayName(var7, (byte) 118);
           if (var2 == null) {
             var2 = param0;
           }
           var4 = (SocialListEntry) (GameResultsScreen.field_q.get(-11434, (long)var2.hashCode()));
           while (var4 != null) {
             var8 = (CharSequence) ((Object) var4.field_Fb);
-            var5 = dh.a(var8, (byte) 27);
+            var5 = dh.normalizeDisplayName(var8, (byte) 27);
             if (var5 == null) {
               var5 = var4.field_Fb;
             }
@@ -338,7 +338,7 @@ final class DisplayNameForm extends UiContainer implements NameSuggestionListene
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -358,13 +358,13 @@ final class DisplayNameForm extends UiContainer implements NameSuggestionListene
             field_K = (String) null;
           }
           if (param0 == 98) {
-            stackIn_9_0 = this.focusNextChild(0, param2);
+            stackIn_9_0 = this.focusPreviousChild(0, param2);
             return stackIn_9_0;
           }
           if (param0 != 99) {
             return false;
           }
-          stackIn_12_0 = this.b(10, param2);
+          stackIn_12_0 = this.focusNextChild(10, param2);
           return stackIn_12_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -376,7 +376,7 @@ final class DisplayNameForm extends UiContainer implements NameSuggestionListene
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param3).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param3).append(')').toString());
         }
     }
 

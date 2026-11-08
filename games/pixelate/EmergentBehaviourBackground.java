@@ -12,7 +12,7 @@ final class EmergentBehaviourBackground extends BackgroundScene {
     static boolean field_q;
     static Sprite field_u;
 
-    private final void a(int param0, int param1) {
+    private final void setColourStep(int param0, int param1) {
         param0 = (16711935 - (param0 & 16711935) & 133695482) >> 3 | (65280 - (65280 & param0) & 522245) >> 3;
         int var3 = (16711680 & param0) >> 16;
         int var4 = (param0 & 65280) >> 8;
@@ -27,7 +27,7 @@ final class EmergentBehaviourBackground extends BackgroundScene {
           var5 = 1;
         }
         LobbyPlayer.field_Ob = -param0;
-        int var6 = this.a(255 / var4, 255 / var3, 255 / var5, param1 + 3);
+        int var6 = this.min3(255 / var4, 255 / var3, 255 / var5, param1 + 3);
         TabbedPanel.field_Gb = var6 * LobbyPlayer.field_Ob + 16777215;
         AccountRegistrationPanel.field_O = 3 * LobbyPlayer.field_Ob + 16777215;
     }
@@ -63,11 +63,11 @@ final class EmergentBehaviourBackground extends BackgroundScene {
           }
         }
         if (param0) {
-          discarded$1 = this.a(-32, -63, -42, -97);
+          discarded$1 = this.min3(-32, -63, -42, -97);
         }
     }
 
-    final static short[] a(short[] param0, byte param1, CipherPacketBuffer param2, int param3) {
+    final static short[] readBitPackedShorts(short[] param0, byte param1, CipherPacketBuffer param2, int param3) {
         int var4_int = 0;
         int var5 = 0;
         int var6 = 0;
@@ -125,11 +125,11 @@ final class EmergentBehaviourBackground extends BackgroundScene {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param3).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param3).append(')').toString());
         }
     }
 
-    private final int a(int param0, int param1, int param2, int param3) {
+    private final int min3(int param0, int param1, int param2, int param3) {
         if (param1 < param0 &&
           param1 < param2) {
           return param1;
@@ -160,9 +160,9 @@ final class EmergentBehaviourBackground extends BackgroundScene {
           for (var3_int = 0; this.field_p.length > var3_int; var3_int++) {
             this.field_p[var3_int] = new DriftingParticle();
           }
-          this.a(this.field_s, 0);
+          this.setColourStep(this.field_s, 0);
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "bm.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "bm.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -182,7 +182,7 @@ final class EmergentBehaviourBackground extends BackgroundScene {
         if (fieldTemp$0 >= Js5ArchiveManager.field_i.length) {
           this.field_s = 0;
         }
-        this.a(Js5ArchiveManager.field_i[this.field_s], 0);
+        this.setColourStep(Js5ArchiveManager.field_i[this.field_s], 0);
     }
 
     static {

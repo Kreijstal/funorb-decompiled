@@ -20,7 +20,7 @@ final class wm {
           param1[3] = param1[1];
           param1[1] = var2_int != 0;
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "wm.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "wm.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

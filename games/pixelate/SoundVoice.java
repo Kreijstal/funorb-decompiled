@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ln extends IntrusiveNode {
+final class SoundVoice extends IntrusiveNode {
     static boolean field_q;
     static int field_n;
     static String field_l;
@@ -10,7 +10,7 @@ final class ln extends IntrusiveNode {
     static String field_k;
     PcmSampleStream field_o;
 
-    final static String a(java.applet.Applet param0, byte param1) {
+    final static String readSettingsCookie(java.applet.Applet param0, byte param1) {
         try {
           int var6 = 0;
           String var3 = null;
@@ -33,7 +33,7 @@ final class ln extends IntrusiveNode {
               var9 = param0.getParameter("cookieprefix");
               var3 = var9 + "settings";
               if (param1 != -85) {
-                ln.a(122);
+                SoundVoice.closeFullscreenCanvas(122);
               }
               var4 = (String) (JavaScriptBridge.callWindowFunction("getcookies", (byte) -43, param0));
               var5 = Puzzle.split(var4, (byte) -37, ';');
@@ -64,7 +64,7 @@ final class ln extends IntrusiveNode {
             } else {
               stackIn_20_2 = "{...}";
             }
-            throw aa.addExceptionContext((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(')').toString());
+            throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -82,12 +82,12 @@ final class ln extends IntrusiveNode {
         field_k = null;
     }
 
-    ln(int param0) {
+    SoundVoice(int param0) {
         this.field_o = PcmSampleStream.createAtRatePercent(SecondaryNodeDeque.field_f[param0], 100, NightToRememberBackground.field_m[param0]);
         TextLayoutLine.playSoundEffect(-21317, this.field_o);
     }
 
-    final static void a(int param0) {
+    final static void closeFullscreenCanvas(int param0) {
         if (param0 <= 11) {
           return;
         }
@@ -95,7 +95,7 @@ final class ln extends IntrusiveNode {
           return;
         }
         MenuInputState.removeCanvasInputListeners(ib.field_f, 0);
-        ib.field_f.a(6511, mc.field_k);
+        ib.field_f.closeFrame(6511, mc.field_k);
         ib.field_f = null;
         if (GzipDecoder.field_c != null) {
           GzipDecoder.field_c.restoreSavedSize(-101);
@@ -103,7 +103,7 @@ final class ln extends IntrusiveNode {
         NameAvailabilityValidator.field_u.requestFocus();
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    final static void rasterTriangle(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         int var9;
         var9 = Pixelate.field_H ? 1 : 0;
         if (param6 != 100) {
@@ -112,22 +112,22 @@ final class ln extends IntrusiveNode {
         if (param1 <= param3) {
           if (param3 >= param4) {
             if (param1 >= param4) {
-              cn.a(param2, param1, param3, param5, param7, SoftwareRasterizer.field_k, false, param0, param4);
+              cn.rasterFlatMeshTriangle(param2, param1, param3, param5, param7, SoftwareRasterizer.field_k, false, param0, param4);
             } else {
-              cn.a(param0, param4, param3, param5, param7, SoftwareRasterizer.field_k, false, param2, param1);
+              cn.rasterFlatMeshTriangle(param0, param4, param3, param5, param7, SoftwareRasterizer.field_k, false, param2, param1);
             }
           } else {
-            cn.a(param7, param3, param4, param5, param0, SoftwareRasterizer.field_k, false, param2, param1);
+            cn.rasterFlatMeshTriangle(param7, param3, param4, param5, param0, SoftwareRasterizer.field_k, false, param2, param1);
           }
         } else {
           if (param4 <= param1) {
             if (param4 <= param3) {
-              cn.a(param7, param3, param1, param5, param2, SoftwareRasterizer.field_k, false, param0, param4);
+              cn.rasterFlatMeshTriangle(param7, param3, param1, param5, param2, SoftwareRasterizer.field_k, false, param0, param4);
             } else {
-              cn.a(param0, param4, param1, param5, param2, SoftwareRasterizer.field_k, false, param7, param3);
+              cn.rasterFlatMeshTriangle(param0, param4, param1, param5, param2, SoftwareRasterizer.field_k, false, param7, param3);
             }
           } else {
-            cn.a(param2, param1, param4, param5, param0, SoftwareRasterizer.field_k, false, param7, param3);
+            cn.rasterFlatMeshTriangle(param2, param1, param4, param5, param0, SoftwareRasterizer.field_k, false, param7, param3);
           }
         }
     }

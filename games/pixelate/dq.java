@@ -7,7 +7,7 @@ final class dq {
     static String field_a;
     static String[][] field_b;
 
-    final static boolean a(int param0, int param1, int param2, int param3) {
+    final static boolean isValidDate(int param0, int param1, int param2, int param3) {
         if (param1 < 0) {
           return false;
         }
@@ -17,7 +17,7 @@ final class dq {
         if (param2 < ~param0) {
           return false;
         }
-        if (bo.a((byte) -57, param3, param1) >= param0) {
+        if (bo.getDaysInMonth((byte) -57, param3, param1) >= param0) {
           return true;
         }
         return false;
@@ -27,14 +27,14 @@ final class dq {
         throw new IllegalStateException();
     }
 
-    final static void a(int param0, int param1, og param2) {
+    final static void sendSaveDataRequest(int param0, int param1, SaveDataRequest param2) {
         CipherPacketBuffer var5 = null;
         int var4 = 0;
         try {
           if (param1 != -18989) {
             field_c = (String) null;
           }
-          var5 = aa.field_f;
+          var5 = ChatMessage.field_f;
           CipherPacketBuffer var3 = var5;
           var5.writeOpcode(param0, 15514);
           var5.position = var5.position + 1;
@@ -51,7 +51,7 @@ final class dq {
           param2.field_m = var5.readInt(param1 + 18989);
           var5.backpatchByteLength(var5.position - var4, param1 + 18988);
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "dq.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "dq.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -108,7 +108,7 @@ final class dq {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 

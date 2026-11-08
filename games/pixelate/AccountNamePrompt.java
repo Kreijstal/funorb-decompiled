@@ -251,7 +251,7 @@ final class AccountNamePrompt extends SceneWidget {
         return true;
     }
 
-    final static Sprite[] a(boolean param0, boolean param1, int param2, int param3, boolean param4, int param5) {
+    final static Sprite[] buildCrownSprites(boolean param0, boolean param1, int param2, int param3, boolean param4, int param5) {
         Sprite var19 = null;
         Sprite var20 = null;
         Sprite var17 = null;
@@ -419,7 +419,7 @@ final class AccountNamePrompt extends SceneWidget {
           this.field_Lb.setBounds(3 + fq.field_q, fq.field_q, 5, 256, var9_int);
           var10 = var9_int + 10;
           var11 = 6 + 2 * fq.field_q;
-          var12 = ui.a(param2, param0, var10, (byte) -1);
+          var12 = ui.fitHorizontalPosition(param2, param0, var10, (byte) -1);
           var13 = ScorePopup.fitVerticalPosition(var11, param1, param3, (byte) 67);
           this.setBounds(var13, var11, var12, 256, var10);
           return;
@@ -451,11 +451,11 @@ final class AccountNamePrompt extends SceneWidget {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
-    final static void j(int param0) {
+    final static void initializeOptionLabels(int param0) {
         cd.field_e = new String[d.field_b];
         cd.field_e[17] = IntKeyLookup.field_i;
         cd.field_e[20] = NodeHashTableIterator.field_c;

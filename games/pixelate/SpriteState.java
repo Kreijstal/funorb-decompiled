@@ -37,7 +37,7 @@ abstract class SpriteState extends DualLinkNode {
         field_x = null;
     }
 
-    final static boolean a(long param0, int[] param1, String param2, int param3, int param4) {
+    final static boolean canOpenQuickChatResponses(long param0, int[] param1, String param2, int param3, int param4) {
         RuntimeException var6 = null;
         boolean stackIn_8_0 = false;
         RuntimeException stackIn_11_0 = null;
@@ -52,7 +52,7 @@ abstract class SpriteState extends DualLinkNode {
           }
           boolean decompiledFrameRemainder0 = true;
           if (param1 != null && (param3 != 2 ||
-            LabeledField.a(true, param0, param2))) {
+            LabeledField.isPlayerReachable(true, param0, param2))) {
             stackIn_8_0 = true;
             decompiledFrameRemainder0 = false;
           }
@@ -76,11 +76,11 @@ abstract class SpriteState extends DualLinkNode {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
-    final static int a(boolean param0, int param1) {
+    final static int computePictureScore(boolean param0, int param1) {
         double var2 = 0.0;
         int var4 = 0;
         double var2Lifetime1;

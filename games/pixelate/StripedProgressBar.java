@@ -66,7 +66,7 @@ final class StripedProgressBar extends UiComponent {
         int var8Lifetime1;
         if (param0) {
           var11 = new Sprite(var2, this.field_C);
-          Checkbox.a(-72, var11);
+          Checkbox.renderToSprite(-72, var11);
           for (var4 = 0; this.field_C > var4; var4++) {
             for (var5 = 0; var2 > var5; var5++) {
               var6 = (double)var5 * (double)var5 / (double)((this.field_C - var4) * var4);
@@ -83,7 +83,7 @@ final class StripedProgressBar extends UiComponent {
         }
         this.drawLayer(-24, 16, 122, (byte) -10);
         Sprite var10 = new Sprite(var2, this.field_C);
-        Checkbox.a(-72, var10);
+        Checkbox.renderToSprite(-72, var10);
         for (var4Lifetime1 = 0; this.field_C > var4Lifetime1; var4Lifetime1++) {
           for (var5Lifetime1 = 0; var2 > var5Lifetime1; var5Lifetime1++) {
             var6Lifetime1 = (double)var5Lifetime1 * (double)var5Lifetime1 / (double)((this.field_C - var4Lifetime1) * var4Lifetime1);
@@ -106,7 +106,7 @@ final class StripedProgressBar extends UiComponent {
         try {
           DraggableWidget.field_I.addChild(param0, (byte) 26);
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "oc.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "oc.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -125,7 +125,7 @@ final class StripedProgressBar extends UiComponent {
         if (65536 <= this.field_Q) {
           return;
         }
-        hp.a(var6 + (this.field_E * this.field_Q >> 16), this.field_C + var7, var6 + this.field_E, (byte) -126, var7);
+        hp.pushClipRegion(var6 + (this.field_E * this.field_Q >> 16), this.field_C + var7, var6 + this.field_E, (byte) -126, var7);
         this.drawStripedBar(this.field_P[1], 1177347297, var6, var7);
         LinkButtonPainter.a((byte) 92);
     }
@@ -173,7 +173,7 @@ final class StripedProgressBar extends UiComponent {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -212,7 +212,7 @@ final class StripedProgressBar extends UiComponent {
         int var12Lifetime1Lifetime1;
         if (param2 < -119) {
           var16 = new Sprite(2 * this.field_M, this.field_C);
-          Checkbox.a(-66, var16);
+          Checkbox.renderToSprite(-66, var16);
           var5 = this.field_C >> 1;
           for (var6 = 0; this.field_C > var6; var6++) {
             var7 = (2 * this.field_M - 1) * (var6 >> 1) % (2 * this.field_M);
@@ -234,7 +234,7 @@ final class StripedProgressBar extends UiComponent {
         }
         field_U = (SceneWidget) null;
         Sprite var15 = new Sprite(2 * this.field_M, this.field_C);
-        Checkbox.a(-66, var15);
+        Checkbox.renderToSprite(-66, var15);
         var5Lifetime1 = this.field_C >> 1;
         for (var6Lifetime1 = 0; this.field_C > var6Lifetime1; var6Lifetime1++) {
           var7Lifetime1 = (2 * this.field_M - 1) * (var6Lifetime1 >> 1) % (2 * this.field_M);
@@ -271,13 +271,13 @@ final class StripedProgressBar extends UiComponent {
           if (param1 != 1177347297) {
             this.field_M = -54;
           }
-          hp.a(this.rightCapMask.field_F + param2, this.field_C + param3, var5_int - this.rightCapMask.field_F, (byte) -112, param3);
+          hp.pushClipRegion(this.rightCapMask.field_F + param2, this.field_C + param3, var5_int - this.rightCapMask.field_F, (byte) -112, param3);
           for (var6 = param2 - this.stripeOffset; var5_int > var6; var6 = var6 + param0.field_F) {
             param0.drawTransparent(var6, param3);
           }
           LinkButtonPainter.a((byte) 92);
           if (this.rightCapMask.field_F + param2 >= SoftwareRasterizer.field_e) {
-            Checkbox.a(-122, this.capWorkSurface);
+            Checkbox.renderToSprite(-122, this.capWorkSurface);
             param0.drawTransparent(-this.stripeOffset, 0);
             param0.drawTransparent(-this.stripeOffset + this.field_M * 2, 0);
             this.field_K.drawMultiply(0, 0);
@@ -287,7 +287,7 @@ final class StripedProgressBar extends UiComponent {
           if (-this.rightCapMask.field_F + var5_int > SoftwareRasterizer.field_h) {
             return;
           }
-          Checkbox.a(param1 - 1177347371, this.capWorkSurface);
+          Checkbox.renderToSprite(param1 - 1177347371, this.capWorkSurface);
           for (var7 = this.field_E - (this.rightCapMask.field_F - this.stripeOffset); this.field_M * 2 < var7; var7 = var7 - 2 * this.field_M) {
           }
           param0.drawTransparent(-var7, 0);
@@ -306,7 +306,7 @@ final class StripedProgressBar extends UiComponent {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 

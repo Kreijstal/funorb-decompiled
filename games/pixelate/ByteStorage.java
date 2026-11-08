@@ -27,7 +27,7 @@ abstract class ByteStorage {
         field_e = null;
     }
 
-    final static void a(String param0, boolean param1, int param2, String param3) {
+    final static void startLoginWithCredentials(String param0, boolean param1, int param2, String param3) {
         if (param2 != 32) {
           return;
         }
@@ -36,11 +36,11 @@ abstract class ByteStorage {
           Checkbox.field_U = param3;
           LoadingProgressDialog.showAccountRequestDialog(param1, TriangleMesh.field_e, -26027);
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "gf.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "gf.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static void a(int param0) {
+    final static void removeFinishedSounds(int param0) {
         IntrusiveNode var1 = null;
         IntrusiveNode var2 = null;
         int var3 = 0;
@@ -51,11 +51,11 @@ abstract class ByteStorage {
           if (param0 != -29949) {
             field_g = (int[]) null;
           }
-          ig.a(-56);
+          ig.pumpAudio(-56);
           var1 = SoundCache.field_b.first(1504642273);
-          while (var1 instanceof ln) {
+          while (var1 instanceof SoundVoice) {
             var2 = var1.field_a;
-            if (((ln) (var1)).field_o.isSamplePositionOutOfRange()) {
+            if (((SoundVoice) (var1)).field_o.isSamplePositionOutOfRange()) {
               var1.unlink(2779);
             }
             var1 = var2;
@@ -64,11 +64,11 @@ abstract class ByteStorage {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw aa.addExceptionContext((Throwable) ((Object) var1_ref), "gf.H(" + param0 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) var1_ref), "gf.H(" + param0 + ')');
         }
     }
 
-    final static boolean a(ResourceArchive param0, int param1, ResourceArchive param2, ResourceArchive param3) {
+    final static boolean areCommonUiArchivesReady(ResourceArchive param0, int param1, ResourceArchive param2, ResourceArchive param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         RuntimeException stackIn_17_0 = null;
@@ -118,7 +118,7 @@ abstract class ByteStorage {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
         }
     }
 

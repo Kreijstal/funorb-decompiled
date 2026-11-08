@@ -24,15 +24,15 @@ final class ni extends IntrusiveNode {
         }
     }
 
-    final static um a(int param0, int param1) {
+    final static um queueSavedDataRequest(int param0, int param1) {
         um var2 = new um();
         bq.field_a.addLast(22125, var2);
-        AlphaContainer.a(true, param0);
+        AlphaContainer.sendSavedDataRequest(true, param0);
         int var3 = -62 / ((param1 - 48) / 62);
         return var2;
     }
 
-    final static void a(Sprite param0, int param1, int param2, int param3, int param4, boolean param5, int param6, int param7, BitmapFont param8, int param9, int param10) {
+    final static void configurePopupStyle(Sprite param0, int param1, int param2, int param3, int param4, boolean param5, int param6, int param7, BitmapFont param8, int param9, int param10) {
         try {
           cl.field_d = param2;
           bl.field_c = param3;
@@ -41,20 +41,20 @@ final class ni extends IntrusiveNode {
           r.field_a = param7;
           VerticalScrollbar.field_Lb = param9;
           if (param5) {
-            ni.a(88);
+            ni.refreshScreenItems(88);
           }
           aq.field_a = param6;
           mp.field_f = param4;
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "ni.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + (param8 != null ? "{...}" : "null") + ',' + param9 + ',' + param10 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "ni.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + (param8 != null ? "{...}" : "null") + ',' + param9 + ',' + param10 + ')');
         }
     }
 
-    final static void a(int param0) {
+    final static void refreshScreenItems(int param0) {
         StripedProgressBar.field_H[5].setItems(ug.field_n, (byte) -24);
         StripedProgressBar.field_H[6].setItems(DualLinkNode.field_s, (byte) -24);
         StripedProgressBar.field_H[8].setItems(TextHotspotWidget.field_T, (byte) -24);
-        if (!gq.d(121)) {
+        if (!gq.isOfflineOrAccountUi(121)) {
           StripedProgressBar.field_H[1].setItems(BirthDateEntryPanel.field_N, (byte) -24);
           StripedProgressBar.field_H[2].setItems(VerticalScrollbar.field_Sb, (byte) -24);
           StripedProgressBar.field_H[4].setItems(UiComponent.field_m, (byte) -24);
@@ -63,7 +63,7 @@ final class ni extends IntrusiveNode {
           return;
         }
         BitmapFont var2 = (BitmapFont) null;
-        ni.a((Sprite) null, -53, -40, -46, -15, true, 64, 51, (BitmapFont) null, -14, -74);
+        ni.configurePopupStyle((Sprite) null, -53, -40, -46, -15, true, 64, 51, (BitmapFont) null, -14, -74);
     }
 
     final static int bitCount(byte param0, int param1) {

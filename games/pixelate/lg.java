@@ -7,7 +7,7 @@ final class lg {
     static String[] field_b;
     static int field_a;
 
-    final static String a(byte param0, String param1, int param2) {
+    final static String getJoinFailureMessage(byte param0, String param1, int param2) {
         RuntimeException var3 = null;
         String stackIn_3_0 = null;
         String stackIn_7_0 = null;
@@ -52,7 +52,7 @@ final class lg {
             return stackIn_26_0;
           }
           if (param2 == 14) {
-            stackIn_29_0 = AlphaContainer.a(Puzzle.field_m, 28, new String[]{param1});
+            stackIn_29_0 = AlphaContainer.formatTemplate(Puzzle.field_m, 28, new String[]{param1});
             return stackIn_29_0;
           }
           if (param0 > 113) {
@@ -71,7 +71,7 @@ final class lg {
           } else {
             stackIn_37_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_36_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(',').append(param2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_36_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -103,7 +103,7 @@ final class lg {
           var3_int = param2.length();
           if (var3_int >= 1 &&
             var3_int <= 12) {
-            var4 = dh.a(param2, (byte) 97);
+            var4 = dh.normalizeDisplayName(param2, (byte) 97);
             if (var4 != null &&
               var4.length() >= 1) {
               if (!MatchController.isNameSeparatorChar((byte) 122, var4.charAt(0)) &&
@@ -150,7 +150,7 @@ final class lg {
           } else {
             stackIn_40_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_39_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_39_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(')').toString());
         }
     }
 
@@ -173,14 +173,14 @@ final class lg {
         try {
           if (param1 != -18992) {
             var7 = (sb) null;
-            lg.a((sb) null, -23, -37, (sb) null, 119, 116);
+            lg.setMenuButtonStyle((sb) null, -23, -37, (sb) null, 119, 116);
           }
           var2 = qn.readCookie(param0, "jagex-last-login-method", (byte) -85);
           if (var2 == null) {
             stackIn_6_0 = cd.field_c;
             return stackIn_6_0;
           }
-          var3 = Checkbox.a((byte) -8);
+          var3 = Checkbox.getLoginMethods((byte) -8);
           for (var4 = 0; var4 < var3.length; var4++) {
             var5 = var3[var4];
             if (var5.hasName(var2, -66)) {
@@ -200,7 +200,7 @@ final class lg {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -232,11 +232,11 @@ final class lg {
           bj.field_c[16] = MusicTrack.load(param1, "", "skin15");
           bj.field_c[17] = MusicTrack.load(param1, "", "skin10");
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "lg.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "lg.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static void a(sb param0, int param1, int param2, sb param3, int param4, int param5) {
+    final static void setMenuButtonStyle(sb param0, int param1, int param2, sb param3, int param4, int param5) {
         try {
           bd.field_c = param5;
           MarkerSlider.field_N = param3;
@@ -247,11 +247,11 @@ final class lg {
           AccountTermsPanel.field_J = param1;
           AudioService.field_e = param0;
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "lg.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "lg.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
         }
     }
 
-    final static java.net.URL a(boolean param0, java.applet.Applet param1, java.net.URL param2) {
+    final static java.net.URL withSessionParameters(boolean param0, java.applet.Applet param1, java.net.URL param2) {
         Object var3 = null;
         Object var4 = null;
         CharSequence var5 = null;
@@ -297,7 +297,7 @@ final class lg {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) (stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) (stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 

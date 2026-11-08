@@ -15,9 +15,9 @@ abstract class DateInputWidget extends UiContainer implements ValidationProvider
             java.awt.Component var7 = (java.awt.Component) null;
             DateInputWidget.initializeAudio(-5, (PlatformTaskDispatcher) null, (MusicCrossfadeStream) null, false, (java.awt.Component) null, -3);
           }
-          HuffmanCodec.a(1024, param0, param3, param0, (byte) -110, param4, param1, param2);
+          HuffmanCodec.createAudioOutputs(1024, param0, param3, param0, (byte) -110, param4, param1, param2);
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "kb.O(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "kb.O(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
         }
     }
 
@@ -57,7 +57,7 @@ abstract class DateInputWidget extends UiContainer implements ValidationProvider
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -69,7 +69,7 @@ abstract class DateInputWidget extends UiContainer implements ValidationProvider
             field_M = (String) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "kb.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "kb.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

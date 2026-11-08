@@ -88,7 +88,7 @@ class SceneWidget extends SceneWidgetNode {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -240,7 +240,7 @@ class SceneWidget extends SceneWidgetNode {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
@@ -353,9 +353,9 @@ class SceneWidget extends SceneWidgetNode {
         var21 = this.field_w + var19;
         var22 = var20 + this.field_I;
         if (!this.field_A) {
-          dk.a(this.field_K, this.field_tb, (byte) 75, this.height, this.screenY, var16);
+          dk.drawNineSliceFrame(this.field_K, this.field_tb, (byte) 75, this.height, this.screenY, var16);
         } else {
-          dk.a(param4, param1, (byte) 75, param8, param7, var16);
+          dk.drawNineSliceFrame(param4, param1, (byte) 75, param8, param7, var16);
         }
         if (var17 != null) {
           var23_int = this.field_tb + var21;
@@ -548,7 +548,7 @@ class SceneWidget extends SceneWidgetNode {
     }
 
     final static void closeTransientDialogs(int param0) {
-        ArchiveProvider.a(-117);
+        ArchiveProvider.closeContextMenu(-117);
         BufferedRandomAccessFile.closeAccountNamePrompt(false);
         AccountTermsPanel.field_M = null;
         ScoreMarkerDemo.closeQuickChatMenu(false);
@@ -702,7 +702,7 @@ class SceneWidget extends SceneWidgetNode {
           } else {
             stackIn_105_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_104_0), ((StringBuilder) (Object) stackIn_104_1).append(stackIn_105_2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_104_0), ((StringBuilder) (Object) stackIn_104_1).append(stackIn_105_2).append(')').toString());
         }
     }
 
@@ -806,7 +806,7 @@ class SceneWidget extends SceneWidgetNode {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 

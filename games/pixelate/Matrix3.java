@@ -80,7 +80,7 @@ final class Matrix3 {
           if (IntrusiveDequeCursor.containsNonAlphanumeric(param0, 24)) {
             return false;
           }
-          if (cm.a(param0, param2 ^ -98)) {
+          if (cm.isAllSameChar(param0, param2 ^ -98)) {
             return false;
           }
           if (param2 != -4) {
@@ -96,10 +96,10 @@ final class Matrix3 {
           if (DateInputWidget.containsTextOrReverse(param0, param1, (byte) -123)) {
             return false;
           }
-          if (CipherPacketBuffer.a(param0, (byte) -47, param1)) {
+          if (CipherPacketBuffer.containsForwardOrReversed(param0, (byte) -47, param1)) {
             return false;
           }
-          if (!gb.a(param0, param1, 95)) {
+          if (!gb.containsForwardOrReversed(param0, param1, 95)) {
             return true;
           }
           return false;
@@ -119,7 +119,7 @@ final class Matrix3 {
           } else {
             stackIn_34_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(',').append(param2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -152,7 +152,7 @@ final class Matrix3 {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -166,7 +166,7 @@ final class Matrix3 {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 >= 124) {
-            stackIn_4_0 = BouncedownBackground.a(param0, (byte) 110, 0, param2);
+            stackIn_4_0 = BouncedownBackground.crc32(param0, (byte) 110, 0, param2);
             return stackIn_4_0;
           }
           stackIn_2_0 = -91;
@@ -181,7 +181,7 @@ final class Matrix3 {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -213,7 +213,7 @@ final class Matrix3 {
           }
           this.field_f = param0;
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "wg.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "wg.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -276,7 +276,7 @@ final class Matrix3 {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 

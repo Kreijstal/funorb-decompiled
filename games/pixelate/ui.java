@@ -26,7 +26,7 @@ final class ui {
         field_i = null;
     }
 
-    final static int a(int param0, int param1, int param2, byte param3) {
+    final static int fitHorizontalPosition(int param0, int param1, int param2, byte param3) {
         if (SoftwareRasterizer.field_j >= param2 + param1) {
           return param1;
         }
@@ -92,11 +92,11 @@ final class ui {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3) {
+    final static void writeBirthDatePacket(int param0, int param1, int param2, int param3) {
         int fieldTemp$0 = 0;
         int var4 = 0;
         GameModeSelectScreen.field_v.position = 0;
@@ -108,17 +108,17 @@ final class ui {
           GameModeSelectScreen.field_v.writeByte(160, param3);
           GameModeSelectScreen.field_v.writeShort(1276387944, param2);
           GameModeSelectScreen.field_v.rsaEncrypt(SceneWidgetNode.field_t, AgeValidator.field_m, 0);
-          aa.field_f.writeOpcode(18, 15514);
-          fieldTemp$0 = aa.field_f.position + 1;
-          aa.field_f.position = aa.field_f.position + 1;
+          ChatMessage.field_f.writeOpcode(18, 15514);
+          fieldTemp$0 = ChatMessage.field_f.position + 1;
+          ChatMessage.field_f.position = ChatMessage.field_f.position + 1;
           var4 = fieldTemp$0;
-          aa.field_f.writeBytes(GameModeSelectScreen.field_v.position, 0, -3493, GameModeSelectScreen.field_v.payload);
-          aa.field_f.backpatchByteLength(-var4 + aa.field_f.position, -1);
+          ChatMessage.field_f.writeBytes(GameModeSelectScreen.field_v.position, 0, -3493, GameModeSelectScreen.field_v.payload);
+          ChatMessage.field_f.backpatchByteLength(-var4 + ChatMessage.field_f.position, -1);
           return;
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final static void appendRankingRow(int param0, int param1, int param2, int param3, int param4, int param5) {
         int stackIn_9_0 = 0;
         int var6;
         int var7;
@@ -128,7 +128,7 @@ final class ui {
         if (StatefulTextPainter.field_s > param3) {
           ro.field_a = param3;
         }
-        if (param3 > aa.field_o) {
+        if (param3 > ChatMessage.field_o) {
           qn.field_k = param3;
         }
         TextWidgetPainter.field_b[SecondaryNodeDeque.field_e] = param0;
@@ -153,7 +153,7 @@ final class ui {
 
     static {
         field_h = new String[]{"The <col=ffff00>timer bar</col> is slowly draining at the bottom of the screen.", "Complete pictures as quickly as you can to <col=ffff00>bump</col> it back up.<br>The game is over when it disappears."};
-        fj.a(false, 50);
+        fj.setSlideshowSpeed(false, 50);
         field_g = "Quick Chat Help";
         field_d = "Login: ";
     }

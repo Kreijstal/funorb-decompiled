@@ -78,7 +78,7 @@ final class pk {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -99,7 +99,7 @@ final class pk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw aa.addExceptionContext((Throwable) ((Object) var1), "pk.F(" + param0 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) var1), "pk.F(" + param0 + ')');
         }
     }
 
@@ -119,7 +119,7 @@ final class pk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw aa.addExceptionContext((Throwable) ((Object) var2_ref), "pk.D(" + param0 + ',' + param1 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) var2_ref), "pk.D(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -149,32 +149,32 @@ final class pk {
           var4 = StrongCacheReference.readBit(param0, -32) ? 1 : 0;
           var5 = new TriangleMesh();
           var5.vertexCount = (short)param0.readBits(16, (byte) -34);
-          var5.vertexX = EmergentBehaviourBackground.a(var5.vertexX, (byte) -128, param0, 16);
-          var5.vertexY = EmergentBehaviourBackground.a(var5.vertexY, (byte) -128, param0, 16);
-          var5.vertexZ = EmergentBehaviourBackground.a(var5.vertexZ, (byte) -128, param0, 16);
+          var5.vertexX = EmergentBehaviourBackground.readBitPackedShorts(var5.vertexX, (byte) -128, param0, 16);
+          var5.vertexY = EmergentBehaviourBackground.readBitPackedShorts(var5.vertexY, (byte) -128, param0, 16);
+          var5.vertexZ = EmergentBehaviourBackground.readBitPackedShorts(var5.vertexZ, (byte) -128, param0, 16);
           var5.field_j = (short)param0.readBits(16, (byte) -34);
-          var5.field_h = EmergentBehaviourBackground.a(var5.field_h, (byte) -128, param0, 16);
-          var5.field_I = EmergentBehaviourBackground.a(var5.field_I, (byte) -128, param0, 16);
-          var5.field_o = EmergentBehaviourBackground.a(var5.field_o, (byte) -128, param0, 16);
+          var5.field_h = EmergentBehaviourBackground.readBitPackedShorts(var5.field_h, (byte) -128, param0, 16);
+          var5.field_I = EmergentBehaviourBackground.readBitPackedShorts(var5.field_I, (byte) -128, param0, 16);
+          var5.field_o = EmergentBehaviourBackground.readBitPackedShorts(var5.field_o, (byte) -128, param0, 16);
           if (var3 != 0) {
             var5.field_a = (short)param0.readBits(16, (byte) -34);
-            var5.field_K = EmergentBehaviourBackground.a(var5.field_K, (byte) -128, param0, 16);
-            var5.field_q = EmergentBehaviourBackground.a(var5.field_q, (byte) -128, param0, 16);
-            var5.field_p = EmergentBehaviourBackground.a(var5.field_p, (byte) -128, param0, 16);
-            var5.field_J = EmergentBehaviourBackground.a(var5.field_J, (byte) -128, param0, 16);
-            var5.field_s = EmergentBehaviourBackground.a(var5.field_s, (byte) -128, param0, 16);
-            var5.field_i = EmergentBehaviourBackground.a(var5.field_i, (byte) -128, param0, 16);
+            var5.field_K = EmergentBehaviourBackground.readBitPackedShorts(var5.field_K, (byte) -128, param0, 16);
+            var5.field_q = EmergentBehaviourBackground.readBitPackedShorts(var5.field_q, (byte) -128, param0, 16);
+            var5.field_p = EmergentBehaviourBackground.readBitPackedShorts(var5.field_p, (byte) -128, param0, 16);
+            var5.field_J = EmergentBehaviourBackground.readBitPackedShorts(var5.field_J, (byte) -128, param0, 16);
+            var5.field_s = EmergentBehaviourBackground.readBitPackedShorts(var5.field_s, (byte) -128, param0, 16);
+            var5.field_i = EmergentBehaviourBackground.readBitPackedShorts(var5.field_i, (byte) -128, param0, 16);
           }
           if (var4 != 0) {
             param0.readBits(16, (byte) -34);
-            var5.field_D = EmergentBehaviourBackground.a(var5.field_D, (byte) -128, param0, 16);
-            var5.field_L = EmergentBehaviourBackground.a(var5.field_L, (byte) -128, param0, 16);
-            var5.field_S = EmergentBehaviourBackground.a(var5.field_S, (byte) -128, param0, 16);
-            var5.field_d = EmergentBehaviourBackground.a(var5.field_d, (byte) -128, param0, 16);
-            var5.field_z = EmergentBehaviourBackground.a(var5.field_z, (byte) -128, param0, 16);
+            var5.field_D = EmergentBehaviourBackground.readBitPackedShorts(var5.field_D, (byte) -128, param0, 16);
+            var5.field_L = EmergentBehaviourBackground.readBitPackedShorts(var5.field_L, (byte) -128, param0, 16);
+            var5.field_S = EmergentBehaviourBackground.readBitPackedShorts(var5.field_S, (byte) -128, param0, 16);
+            var5.field_d = EmergentBehaviourBackground.readBitPackedShorts(var5.field_d, (byte) -128, param0, 16);
+            var5.field_z = EmergentBehaviourBackground.readBitPackedShorts(var5.field_z, (byte) -128, param0, 16);
           }
           if (StrongCacheReference.readBit(param0, -32)) {
-            var5.field_l = EmergentBehaviourBackground.a(var5.field_l, (byte) -128, param0, 16);
+            var5.field_l = EmergentBehaviourBackground.readBitPackedShorts(var5.field_l, (byte) -128, param0, 16);
           }
           if (StrongCacheReference.readBit(param0, -32)) {
             var5.field_n = NodeHashTable.readPackedByteArray(param0, var5.field_n, 16, param1 ^ -122);
@@ -217,7 +217,7 @@ final class pk {
           } else {
             stackIn_41_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_40_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(',').append(param1).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_40_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -238,7 +238,7 @@ final class pk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw aa.addExceptionContext((Throwable) ((Object) var1), "pk.A(" + param0 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) var1), "pk.A(" + param0 + ')');
         }
     }
 
@@ -267,18 +267,18 @@ final class pk {
             var2 = AccountChoicePanel.field_P;
           }
           if (ce.field_d == 2 &&
-            !ra.a((byte) -99)) {
-            if (CanvasRasterBuffer.a(fp.field_d, (byte) 37)) {
-              var2 = AlphaContainer.a(GameApplet.field_m, 34, new String[]{CheckboxPainter.field_k});
+            !ra.isPrivateRecipientFriend((byte) -99)) {
+            if (CanvasRasterBuffer.isFriendName(fp.field_d, (byte) 37)) {
+              var2 = AlphaContainer.formatTemplate(GameApplet.field_m, 34, new String[]{CheckboxPainter.field_k});
               if (var10 != 0) {
-                var2 = AlphaContainer.a(fg.field_d, 34, new String[]{CheckboxPainter.field_k});
+                var2 = AlphaContainer.formatTemplate(fg.field_d, 34, new String[]{CheckboxPainter.field_k});
               }
             } else {
-              var2 = AlphaContainer.a(fg.field_d, 34, new String[]{CheckboxPainter.field_k});
+              var2 = AlphaContainer.formatTemplate(fg.field_d, 34, new String[]{CheckboxPainter.field_k});
             }
             if (un.field_l) {
               MidiPcmStream.appendChatMessage(0, (String) null, (String) null, (byte) -82, 2, (String) (var2));
-              SoundCache.a(true);
+              SoundCache.closeQuickChatIfOpen(true);
             }
           }
           if (param0 <= 59) {
@@ -291,7 +291,7 @@ final class pk {
             var2 = NameSuggestionsPanel.field_M;
           }
           if (null != var2) {
-            IntKeyLookup.a((String) null, 0, VerticalScrollbar.field_Ib, 24092, (String) (var2));
+            IntKeyLookup.setChatTabLabel((String) null, 0, VerticalScrollbar.field_Ib, 24092, (String) (var2));
           } else {
             var3 = ModalStack.field_J;
             var3 = th.prefixWithCrown(2, var3);
@@ -300,8 +300,8 @@ final class pk {
             var6 = ce.field_d;
             var7 = 0;
             if (2 == var6) {
-              var4 = AlphaContainer.a(dg.field_b, 73, new String[]{CheckboxPainter.field_k});
-              var8 = AlphaContainer.a(sk.field_c, 69, new String[]{var3});
+              var4 = AlphaContainer.formatTemplate(dg.field_b, 73, new String[]{CheckboxPainter.field_k});
+              var8 = AlphaContainer.formatTemplate(sk.field_c, 69, new String[]{var3});
               var7 = -485 + (nf.field_d.field_K + rh.field_y.field_K + AccountMessagePanel.field_Q.textWidth(var8) - AccountMessagePanel.field_Q.textWidth(var4));
               if (var7 < 0) {
                 var7 = 0;
@@ -317,7 +317,7 @@ final class pk {
                 if (null != LoginMethod.field_c) {
                   if (!TickClock.field_b ||
                     TextLayoutLine.field_f == null) {
-                    var4 = "[" + AlphaContainer.a(HowToPlayScreen.field_q, 40, new String[]{LoginMethod.field_c.field_pc}) + "] ";
+                    var4 = "[" + AlphaContainer.formatTemplate(HowToPlayScreen.field_q, 40, new String[]{LoginMethod.field_c.field_pc}) + "] ";
                     if (var10 != 0) {
                       var4 = "[" + TextLayoutLine.field_f + "] ";
                     }
@@ -327,14 +327,14 @@ final class pk {
                   var6 = 1;
                 }
               }
-              if (RankingTableRequest.a((byte) 81)) {
+              if (RankingTableRequest.hasPendingPopupWidget((byte) 81)) {
                 stackIn_60_0 = ": ";
               } else {
                 stackIn_60_0 = "<img=3>: ";
               }
               var8Lifetime1 = stackIn_60_0;
               var4 = var4 + var3 + var8Lifetime1;
-              boolean decompiledSharedTail0 = !(ln.field_q);
+              boolean decompiledSharedTail0 = !(SoundVoice.field_q);
               if (!decompiledSharedTail0) {
                 var5 = "";
                 var4 = "<col=999999>" + var4 + ef.field_d + "</col>";
@@ -346,10 +346,10 @@ final class pk {
                 var4 = "<col=999999>" + var4 + JaggrabDownloader.field_i + "</col>";
               }
               var9 = AccountMessagePanel.field_Q.textWidth(var4);
-              if (!RankingTableRequest.a((byte) 124)) {
+              if (!RankingTableRequest.hasPendingPopupWidget((byte) 124)) {
                 if (nf.field_d.field_W &&
                   (-nf.field_d.field_tb + ProxyAuthenticationException.field_d) < var9) {
-                  if (!ln.field_q) {
+                  if (!SoundVoice.field_q) {
                     var1 = JaggrabDownloader.field_i;
                   } else {
                     var1 = "Broken!";
@@ -357,17 +357,17 @@ final class pk {
                 }
                 if (nf.field_d.field_P != 0 &&
                   nf.field_d.field_ub < var9 &&
-                  !ln.field_q) {
+                  !SoundVoice.field_q) {
                   SceneWidget.c(true);
                 }
               }
             }
-            IntKeyLookup.a(var5, var7, ib.field_i[var6], 24092, var4 + BitmapFont.escapeMarkup(mp.field_a.toString()));
+            IntKeyLookup.setChatTabLabel(var5, var7, ib.field_i[var6], 24092, var4 + BitmapFont.escapeMarkup(mp.field_a.toString()));
             if (!oo.field_d) {
               rh.field_y.field_W = false;
             }
             if (rh.field_y.field_W) {
-              var1 = AlphaContainer.a(MatchHud.field_m, 78, new String[]{var3, CheckboxPainter.field_k});
+              var1 = AlphaContainer.formatTemplate(MatchHud.field_m, 78, new String[]{var3, CheckboxPainter.field_k});
             }
           }
           stackIn_96_0 = var1;
@@ -375,7 +375,7 @@ final class pk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw aa.addExceptionContext((Throwable) (var1), "pk.E(" + param0 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) (var1), "pk.E(" + param0 + ')');
         }
     }
 

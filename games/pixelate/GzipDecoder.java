@@ -8,7 +8,7 @@ final class GzipDecoder {
     static ViewportController field_c;
     static String field_b;
 
-    final static void a(int param0) {
+    final static void centreMessageMenu(int param0) {
         int var3 = 0;
         String stackIn_12_0 = null;
         int stackIn_12_1 = 0;
@@ -50,7 +50,7 @@ final class GzipDecoder {
             stackIn_12_0 = var6;
             stackIn_12_1 = 8192;
             stackIn_13_2 = !(var4 < 0);
-            var7 = ArchiveProvider.a(stackIn_12_0, stackIn_12_1, stackIn_13_2);
+            var7 = ArchiveProvider.measureMessageText(stackIn_12_0, stackIn_12_1, stackIn_13_2);
             var8 = bq.field_d - (var7 >> 1);
             if (var4 >= 0) {
               if (VerticalScrollbar.field_Gb.selectedIndex != var4) {
@@ -59,15 +59,15 @@ final class GzipDecoder {
                 stackIn_18_0 = Matrix3.field_d;
               }
               var9 = stackIn_18_0;
-              var2 = var2 + ki.field_e;
+              var2 = var2 + KiteTailSegment.field_e;
               if (var9 != null) {
-                var9.a(var2, dk.field_d + (WidgetStyleLayer.field_b << 1), -1, (ProxyAuthenticationException.field_a << 1) + var7, var8 - ProxyAuthenticationException.field_a);
+                var9.draw(var2, dk.field_d + (WidgetStyleLayer.field_b << 1), -1, (ProxyAuthenticationException.field_a << 1) + var7, var8 - ProxyAuthenticationException.field_a);
               }
               var2 = var2 + WidgetStyleLayer.field_b;
             }
             if (var4 >= 0) {
               SingleChildContainer.field_G.drawText(var6, var8, var2 + StatefulTextPainter.field_q, var5, -1);
-              var2 = var2 + (dk.field_d + WidgetStyleLayer.field_b + ki.field_e);
+              var2 = var2 + (dk.field_d + WidgetStyleLayer.field_b + KiteTailSegment.field_e);
             } else {
               DualLinkNode.field_o.drawText(var6, var8, ab.field_b + var2, var5, -1);
               var2 = var2 + BouncedownBackground.field_m;
@@ -77,7 +77,7 @@ final class GzipDecoder {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw aa.addExceptionContext((Throwable) ((Object) var1), "vh.B(" + param0 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) var1), "vh.B(" + param0 + ')');
         }
     }
 
@@ -100,7 +100,7 @@ final class GzipDecoder {
             }
             this.inflater.reset();
           } catch (RuntimeException runtimeException) {
-            throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "vh.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "vh.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -109,9 +109,9 @@ final class GzipDecoder {
         }
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != -8) {
-          GzipDecoder.a(-33);
+          GzipDecoder.centreMessageMenu(-33);
         }
         field_b = null;
         field_c = null;

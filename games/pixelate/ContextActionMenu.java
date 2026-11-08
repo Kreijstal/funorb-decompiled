@@ -91,7 +91,7 @@ final class ContextActionMenu extends SceneWidget {
           } else {
             stackIn_31_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -120,7 +120,7 @@ final class ContextActionMenu extends SceneWidget {
           }
           this.itemCount = this.itemCount + 1;
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "pi.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "pi.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -144,7 +144,7 @@ final class ContextActionMenu extends SceneWidget {
           this.field_Mb[this.itemCount] = param1;
           this.itemCount = this.itemCount + 1;
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "pi.E(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "pi.E(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -196,7 +196,7 @@ final class ContextActionMenu extends SceneWidget {
           this.field_Ob = param4;
           this.field_Pb = param2;
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "pi.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "pi.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }
     }
 
@@ -211,7 +211,7 @@ final class ContextActionMenu extends SceneWidget {
         int var8Lifetime1;
         var11 = Pixelate.field_H ? 1 : 0;
         if (this.itemCount == 0) {
-          this.items[this.itemCount] = new IconTextComponent(0L, (SceneWidget) null, (SceneWidget) null, this.field_Pb, (Sprite) null, ln.field_l);
+          this.items[this.itemCount] = new IconTextComponent(0L, (SceneWidget) null, (SceneWidget) null, this.field_Pb, (Sprite) null, SoundVoice.field_l);
           this.items[this.itemCount].verticalAlignment = 1;
           this.addChild(this.items[this.itemCount], (byte) 26);
           this.field_Mb[this.itemCount] = -1;
@@ -229,7 +229,7 @@ final class ContextActionMenu extends SceneWidget {
         }
         var6 = var6 + 2 * this.field_Ob;
         var7Lifetime1 = this.field_Qb * this.itemCount + (this.field_Eb + this.field_Eb);
-        var8Lifetime1 = ui.a(param4, param1, var6, (byte) -1);
+        var8Lifetime1 = ui.fitHorizontalPosition(param4, param1, var6, (byte) -1);
         var9 = ScorePopup.fitVerticalPosition(var7Lifetime1, param3, param0, (byte) 45);
         this.setBounds(var9, var7Lifetime1, var8Lifetime1, 256, var6);
         for (var10 = 0; var10 < this.itemCount; var10++) {

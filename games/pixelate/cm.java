@@ -9,7 +9,7 @@ final class cm extends IntrusiveNode {
     static SceneWidget field_o;
     PcmSampleStream field_n;
 
-    final static boolean a(String param0, int param1) {
+    final static boolean isAllSameChar(String param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -45,11 +45,11 @@ final class cm extends IntrusiveNode {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    final static void b(int param0, int param1) {
+    final static void layoutSidePanels(int param0, int param1) {
         int var2 = (ni.field_q - 640) / 2;
         int var3 = qh.field_c * qh.field_c;
         int var4 = -(param0 * param0) + var3;
@@ -73,7 +73,7 @@ final class cm extends IntrusiveNode {
         int var3Lifetime1;
         var2 = 255 & param0;
         if (param1 != 63) {
-          cm.e(47);
+          cm.snapshotMouseState(47);
           if (var2 == 0) {
             throw new IllegalArgumentException("" + Integer.toString(var2, 16));
           }
@@ -117,40 +117,40 @@ final class cm extends IntrusiveNode {
           return;
         }
         String var2 = (String) null;
-        cm.a((String) null, -122);
+        cm.isAllSameChar((String) null, -122);
         field_l = null;
         field_o = null;
     }
 
-    final static void a(int param0, boolean param1, long param2, String param3, int param4, int param5) {
+    final static void sendPlayerReport(int param0, boolean param1, long param2, String param3, int param4, int param5) {
         int var8 = 0;
         try {
           int var7_int = -86 % ((-33 - param0) / 49);
-          aa.field_f.writeOpcode(param5, 15514);
-          aa.field_f.position = aa.field_f.position + 1;
-          var8 = aa.field_f.position;
-          aa.field_f.writeLong(false, param2);
-          aa.field_f.writeString((byte) -41, param3);
-          aa.field_f.writeByte(160, param4);
-          aa.field_f.writeByte(160, param1 ? 1 : 0);
-          aa.field_f.backpatchByteLength(aa.field_f.position - var8, -1);
+          ChatMessage.field_f.writeOpcode(param5, 15514);
+          ChatMessage.field_f.position = ChatMessage.field_f.position + 1;
+          var8 = ChatMessage.field_f.position;
+          ChatMessage.field_f.writeLong(false, param2);
+          ChatMessage.field_f.writeString((byte) -41, param3);
+          ChatMessage.field_f.writeByte(160, param4);
+          ChatMessage.field_f.writeByte(160, param1 ? 1 : 0);
+          ChatMessage.field_f.backpatchByteLength(ChatMessage.field_f.position - var8, -1);
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "cm.G(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "cm.G(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
         }
     }
 
-    final static void e(int param0) {
+    final static void snapshotMouseState(int param0) {
         String var3 = null;
         Throwable decompiledCaughtException = null;
         Object var1 = null;
         if (param0 >= -84) {
           var3 = (String) null;
-          cm.a(-64, true, 36L, (String) null, -110, -88);
+          cm.sendPlayerReport(-64, true, 36L, (String) null, -110, -88);
         }
         var1 = fj.field_c;
         synchronized (var1) {
           oi.field_c = oi.field_c + 1;
-          ef.field_b = jm.field_o;
+          ef.field_b = Cloud.field_o;
           ProxyAuthenticationException.field_d = QuickChatPhraseCache.field_b;
           StatusBar.field_k = ra.field_d;
           SocialListEntry.field_Jb = QuickChatPhraseCache.field_j;
@@ -169,7 +169,7 @@ final class cm extends IntrusiveNode {
           this.field_k = param1;
           this.field_n.setVolumeQ6(128 + LinkButtonPainter.field_h * this.field_p >> 8);
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "cm.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "cm.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

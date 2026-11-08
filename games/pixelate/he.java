@@ -17,7 +17,7 @@ final class he {
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = aa.field_f;
+          var3 = ChatMessage.field_f;
           var3.writeOpcode(param1, 15514);
           var3.writeByte(160, 2);
           var3.writeByte(160, 0);
@@ -37,7 +37,7 @@ final class he {
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
         }
     }
 
@@ -70,12 +70,12 @@ final class he {
           if (param0 != 0) {
             field_e = (String) null;
           }
-          MusicPatchNode.a((java.awt.Component) ((Object) param1), 57);
+          MusicPatchNode.attachKeyboardListeners((java.awt.Component) ((Object) param1), 57);
           StrongCacheReference.attachMouseInput((byte) -128, (java.awt.Component) ((Object) param1));
           if (ScrollContainer.field_Lb == null) {
             return;
           }
-          ScrollContainer.field_Lb.a((java.awt.Component) ((Object) param1), -97);
+          ScrollContainer.field_Lb.attach((java.awt.Component) ((Object) param1), -97);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -87,7 +87,7 @@ final class he {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 

@@ -10,14 +10,14 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
     volatile boolean field_g;
     static String field_c;
 
-    final void a(int param0, PlatformTaskDispatcher param1) {
+    final void closeFrame(int param0, PlatformTaskDispatcher param1) {
         try {
           dc.a((byte) -124, this.field_f, param1);
           if (param0 != 6511) {
             FullscreenFocusCanvas.releaseStatics((byte) 114);
           }
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "mk.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "mk.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -44,7 +44,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
     public final void paint(java.awt.Graphics param0) {
     }
 
-    static long a(long param0, long param1) {
+    static long longAnd(long param0, long param1) {
         return param0 & param1;
     }
 
@@ -52,7 +52,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
         try {
           this.field_g = true;
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "mk.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "mk.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

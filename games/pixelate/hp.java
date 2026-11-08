@@ -7,14 +7,14 @@ final class hp extends SceneWidget {
     static String[] field_Hb;
     static Sprite field_Gb;
 
-    final static SceneWidget j(int param0) {
+    final static SceneWidget getGameMemberListContent(int param0) {
         if (param0 != 0) {
-          hp.a(41, 47, -28, (byte) -84, 63);
+          hp.pushClipRegion(41, 47, -28, (byte) -84, 63);
         }
-        return EmailConfirmationValidator.e(16);
+        return EmailConfirmationValidator.getGameMemberListContent(16);
     }
 
-    final boolean b(int param0, boolean param1) {
+    final boolean updateAndCheckClosed(int param0, boolean param1) {
         boolean stackIn_9_0 = false;
         if (param0 > -43) {
           field_Fb = (String) null;
@@ -32,10 +32,10 @@ final class hp extends SceneWidget {
         return stackIn_9_0;
     }
 
-    final static void a(int param0, int param1, int param2, byte param3, int param4) {
+    final static void pushClipRegion(int param0, int param1, int param2, byte param3, int param4) {
         MidiPcmStream.pushRasterState(false);
         if (param3 > -83) {
-          hp.j(-32);
+          hp.getGameMemberListContent(-32);
         }
         SoftwareRasterizer.intersectClip(param0, param4, param2, param1);
     }
@@ -142,7 +142,7 @@ final class hp extends SceneWidget {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
         }
     }
 

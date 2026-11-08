@@ -9,7 +9,7 @@ final class dk {
     static boolean field_c;
     static String field_f;
 
-    final static Sprite a(int param0, ResourceArchive param1, int param2, int param3) {
+    final static Sprite loadSprite(int param0, ResourceArchive param1, int param2, int param3) {
         RuntimeException var4 = null;
         Object stackIn_2_0 = null;
         Sprite stackIn_5_0 = null;
@@ -39,11 +39,11 @@ final class dk {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
-    final static String a(String param0, int param1, String param2, ResourceArchive param3) {
+    final static String formatArchiveProgressLabel(String param0, int param1, String param2, ResourceArchive param3) {
         RuntimeException var4 = null;
         ResourceArchive var5 = null;
         String stackIn_2_0 = null;
@@ -63,7 +63,7 @@ final class dk {
           }
           if (param1 != 0) {
             var5 = (ResourceArchive) null;
-            dk.a(-69, (ResourceArchive) null, 92, 117);
+            dk.loadSprite(-69, (ResourceArchive) null, 92, 117);
           }
           stackIn_6_0 = param0 + " - " + param3.getOverallProgress(0) + "%";
           return stackIn_6_0;
@@ -89,7 +89,7 @@ final class dk {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -98,7 +98,7 @@ final class dk {
         field_e = null;
         if (param0 >= -81) {
           ResourceArchive var2 = (ResourceArchive) null;
-          dk.a((String) null, 119, (String) null, (ResourceArchive) null);
+          dk.formatArchiveProgressLabel((String) null, 119, (String) null, (ResourceArchive) null);
         }
         field_a = (Sprite[][]) null;
     }
@@ -136,7 +136,7 @@ final class dk {
           var4Lifetime1 = var10;
           while (var10 < var3) {
             var5 = FloatingSquare.field_b[var10];
-            var5.a(6, 6, 6, true, 1);
+            var5.scaleVertices(6, 6, 6, true, 1);
             var5.ensureBounds((byte) -17);
             var6 = new int[]{var5.field_b + var5.field_c >> 1, var5.field_F + var5.field_t >> 1, var5.field_x + var5.field_g >> 1};
             BlastFromThePastBackground.field_p[var10] = var6;
@@ -145,7 +145,7 @@ final class dk {
           }
           if (param0) {
             var8 = (Sprite[]) null;
-            dk.a(53, -11, (byte) -74, -9, -26, (Sprite[]) null);
+            dk.drawNineSliceFrame(53, -11, (byte) -74, -9, -26, (Sprite[]) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -158,11 +158,11 @@ final class dk {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
-    final static void a(int param0, int param1, byte param2, int param3, int param4, Sprite[] param5) {
+    final static void drawNineSliceFrame(int param0, int param1, byte param2, int param3, int param4, Sprite[] param5) {
         int var21 = 0;
         int stackIn_10_0 = 0;
         int stackIn_13_0 = 0;
@@ -238,7 +238,7 @@ final class dk {
             }
             var18 = var14;
             var19 = var15;
-            SoftwareRasterizer.saveClip(qk.field_c);
+            SoftwareRasterizer.saveClip(RetroBlock.field_c);
             if (var18 > var19) {
               var19 = param3 * var8 / (var9 + var8) + param4;
               var18 = param3 * var8 / (var9 + var8) + param4;
@@ -246,12 +246,12 @@ final class dk {
             if (null != param5[0]) {
               SoftwareRasterizer.intersectClip(param1, param4, var16, var18);
               param5[0].drawTransparent(param1, param4);
-              SoftwareRasterizer.restoreClip(qk.field_c);
+              SoftwareRasterizer.restoreClip(RetroBlock.field_c);
             }
             if (param5[2] != null) {
               SoftwareRasterizer.intersectClip(var17, param4, var10, var18);
               param5[2].drawTransparent(var13, param4);
-              SoftwareRasterizer.restoreClip(qk.field_c);
+              SoftwareRasterizer.restoreClip(RetroBlock.field_c);
             }
             if (param2 != 75) {
               return;
@@ -259,12 +259,12 @@ final class dk {
             if (param5[6] != null) {
               SoftwareRasterizer.intersectClip(param1, var19, var16, var11);
               param5[6].drawTransparent(param1, var15);
-              SoftwareRasterizer.restoreClip(qk.field_c);
+              SoftwareRasterizer.restoreClip(RetroBlock.field_c);
             }
             if (null != param5[8]) {
               SoftwareRasterizer.intersectClip(var17, var19, var10, var11);
               param5[8].drawTransparent(var13, var15);
-              SoftwareRasterizer.restoreClip(qk.field_c);
+              SoftwareRasterizer.restoreClip(RetroBlock.field_c);
             }
             if (param5[1] != null &&
               0 != param5[1].field_A) {
@@ -272,7 +272,7 @@ final class dk {
               for (var20 = var12; var20 < var13; var20 = var20 + param5[1].field_A) {
                 param5[1].drawTransparent(var20, param4);
               }
-              SoftwareRasterizer.restoreClip(qk.field_c);
+              SoftwareRasterizer.restoreClip(RetroBlock.field_c);
             }
             if (null != param5[7] &&
               param5[7].field_A != 0) {
@@ -280,7 +280,7 @@ final class dk {
               for (var20Lifetime1 = var12; var13 > var20Lifetime1; var20Lifetime1 = var20Lifetime1 + param5[7].field_A) {
                 param5[7].drawTransparent(var20Lifetime1, var15);
               }
-              SoftwareRasterizer.restoreClip(qk.field_c);
+              SoftwareRasterizer.restoreClip(RetroBlock.field_c);
             }
             if (param5[3] != null &&
               param5[3].field_B != 0) {
@@ -288,7 +288,7 @@ final class dk {
               for (var20Lifetime2 = var14; var20Lifetime2 < var15; var20Lifetime2 = var20Lifetime2 + param5[3].field_B) {
                 param5[3].drawTransparent(param1, var20Lifetime2);
               }
-              SoftwareRasterizer.restoreClip(qk.field_c);
+              SoftwareRasterizer.restoreClip(RetroBlock.field_c);
             }
             if (null != param5[5] &&
               param5[5].field_B != 0) {
@@ -296,7 +296,7 @@ final class dk {
               for (var20Lifetime3 = var14; var15 > var20Lifetime3; var20Lifetime3 = var20Lifetime3 + param5[5].field_B) {
                 param5[5].drawTransparent(var13, var20Lifetime3);
               }
-              SoftwareRasterizer.restoreClip(qk.field_c);
+              SoftwareRasterizer.restoreClip(RetroBlock.field_c);
             }
             if (param5[4] != null &&
               param5[4].field_A != 0 &&
@@ -307,7 +307,7 @@ final class dk {
                   param5[4].drawTransparent(var21, var20Lifetime4);
                 }
               }
-              SoftwareRasterizer.restoreClip(qk.field_c);
+              SoftwareRasterizer.restoreClip(RetroBlock.field_c);
               return;
             }
             return;
@@ -323,7 +323,7 @@ final class dk {
           } else {
             stackIn_76_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_75_0), ((StringBuilder) (Object) stackIn_75_1).append(stackIn_76_2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_75_0), ((StringBuilder) (Object) stackIn_75_1).append(stackIn_76_2).append(')').toString());
         }
     }
 

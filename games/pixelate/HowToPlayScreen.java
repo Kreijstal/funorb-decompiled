@@ -63,7 +63,7 @@ final class HowToPlayScreen extends MenuScreen {
         this.field_g.captureKeyCode((byte) -71);
     }
 
-    final static id a(byte param0, String[] param1) {
+    final static id createSuggestionsResult(byte param0, String[] param1) {
         id var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
@@ -88,18 +88,18 @@ final class HowToPlayScreen extends MenuScreen {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
         }
     }
 
-    final void b(boolean param0, boolean param1) {
+    final void showNextPage(boolean param0, boolean param1) {
         int var3 = 0;
         this.field_r = this.field_r + 1;
         if (param0) {
           this.getRowLeft(-73, (byte) -53);
         }
         if (!param1 &&
-          ln.field_m.length - 1 == this.field_r) {
+          SoundVoice.field_m.length - 1 == this.field_r) {
           var3 = ke.field_a;
           ke.field_a = 96;
           this.field_g.handleHorizontalNavigation(84, 1);
@@ -158,7 +158,7 @@ final class HowToPlayScreen extends MenuScreen {
         stackIn_10_0 = ((param1 != 0 ||
           this.field_r != 0) &&
           (2 != param1 ||
-          this.field_r != -1 + ln.field_m.length));
+          this.field_r != -1 + SoundVoice.field_m.length));
         return stackIn_10_0;
     }
 
@@ -198,7 +198,7 @@ final class HowToPlayScreen extends MenuScreen {
         var7 = 200;
         if (this.field_r != 0) {
           if (1 == this.field_r) {
-            var7 = var7 + var5.drawParagraph(ln.field_m[this.field_r][0], 50, var7, 540, 400, 16777215, 0, 0, 0, var6) * var6;
+            var7 = var7 + var5.drawParagraph(SoundVoice.field_m[this.field_r][0], 50, var7, 540, 400, 16777215, 0, 0, 0, var6) * var6;
             var8 = new Puzzle(3, 3, 0, 0, 0, 262144, 0, 0, new IndexedSprite[]{});
             var9 = new PlayerBoard(var8);
             var10 = new BoardView(var9, 320, 350);
@@ -213,9 +213,9 @@ final class HowToPlayScreen extends MenuScreen {
           } else {
             if (this.field_r != 2) {
               if (this.field_r == 3) {
-                var7 = var7 + var6 * var5.drawParagraph(ln.field_m[this.field_r][0], 50, var7, 270, 400, 16777215, 0, 0, 0, var6);
+                var7 = var7 + var6 * var5.drawParagraph(SoundVoice.field_m[this.field_r][0], 50, var7, 270, 400, 16777215, 0, 0, 0, var6);
                 var7 += 10;
-                var7 = var7 + var6 * var5.drawParagraph(ln.field_m[this.field_r][1], 50, var7, 540, 400, 16777215, 0, 0, 0, var6);
+                var7 = var7 + var6 * var5.drawParagraph(SoundVoice.field_m[this.field_r][1], 50, var7, 540, 400, 16777215, 0, 0, 0, var6);
                 SpriteState.field_u.draw(2);
                 for (var8_int = 3; 0 <= var8_int; var8_int--) {
                   stackIn_29_0 = (var8_int % 2 != 0) ? 0 : 20;
@@ -230,9 +230,9 @@ final class HowToPlayScreen extends MenuScreen {
                 }
               } else {
                 if (4 == this.field_r) {
-                  var7 = var7 + var6 * var5.drawParagraph(ln.field_m[this.field_r][0], 260, var7, 270, 400, 16777215, 0, 0, 0, var6);
+                  var7 = var7 + var6 * var5.drawParagraph(SoundVoice.field_m[this.field_r][0], 260, var7, 270, 400, 16777215, 0, 0, 0, var6);
                   var7 += 10;
-                  var7 = var7 + var6 * var5.drawParagraph(ln.field_m[this.field_r][1], 260, var7, 270, 400, 16777215, 0, 0, 0, var6);
+                  var7 = var7 + var6 * var5.drawParagraph(SoundVoice.field_m[this.field_r][1], 260, var7, 270, 400, 16777215, 0, 0, 0, var6);
                   for (var8_int = 0; var8_int < 8; var8_int++) {
                     Js5NetworkRequest.field_C[var8_int].field_a[1].drawOpaque(280 + 30 * var8_int, 350);
                     Js5NetworkRequest.field_C[var8_int].field_a[0].drawOpaque(var8_int * 30 + 270, 340);
@@ -240,16 +240,16 @@ final class HowToPlayScreen extends MenuScreen {
                   ug.field_q.draw((byte) 50);
                 } else {
                   if (this.field_r == 5) {
-                    var7 = var7 + var6 * var5.drawParagraph(ln.field_m[this.field_r][0], 50, var7 - 10, 380, 150, 16777215, 0, 0, 1, var6);
+                    var7 = var7 + var6 * var5.drawParagraph(SoundVoice.field_m[this.field_r][0], 50, var7 - 10, 380, 150, 16777215, 0, 0, 1, var6);
                     MatchingTextValidator.field_v.drawTransparent(470, 160);
                   } else {
                     if (6 != this.field_r) {
                       if (this.field_r == 7) {
                         var7 += 10;
-                        var7 = var7 + var6 * var5.drawParagraph(ln.field_m[this.field_r][0], 50, var7, 540, 150, 16777215, 0, 0, 0, var6);
+                        var7 = var7 + var6 * var5.drawParagraph(SoundVoice.field_m[this.field_r][0], 50, var7, 540, 150, 16777215, 0, 0, 0, var6);
                         var8_int = 70;
                         jf.field_c.draw((byte) -8);
-                        var4.drawText(ln.field_m[this.field_r][1], var8_int, 314, 0, -1);
+                        var4.drawText(SoundVoice.field_m[this.field_r][1], var8_int, 314, 0, -1);
                         var9_int = 2;
                         if (640 - var8_int > ProxyAuthenticationException.field_d &&
                           -var8_int + 640 - 170 < ProxyAuthenticationException.field_d &&
@@ -257,10 +257,10 @@ final class HowToPlayScreen extends MenuScreen {
                           StatusBar.field_k > 290) {
                           var9_int++;
                         }
-                        var4.drawRightAlignedText(ln.field_m[this.field_r][var9_int], -var8_int + 640, 314, 0, -1);
+                        var4.drawRightAlignedText(SoundVoice.field_m[this.field_r][var9_int], -var8_int + 640, 314, 0, -1);
                       }
                     } else {
-                      var7 = var7 + var6 * var5.drawParagraph(ln.field_m[this.field_r][0], 50, var7, 540, 150, 16777215, 0, 0, 0, var6);
+                      var7 = var7 + var6 * var5.drawParagraph(SoundVoice.field_m[this.field_r][0], 50, var7, 540, 150, 16777215, 0, 0, 0, var6);
                       SoftwareRasterizer.setClip(0, 0, 640, 389);
                       PasswordValidator.field_r.draw(false);
                       an.field_b.draw(false);
@@ -278,20 +278,20 @@ final class HowToPlayScreen extends MenuScreen {
               var10_int = 30;
               var11 = 50;
               var7 += 30;
-              var4.drawRightAlignedText(ln.field_m[this.field_r][0], var8_int, var7 - 3, 0, -1);
-              var5.drawCentered(ln.field_m[this.field_r][4], (var11 >> 1) + var8_int - (-var10_int - pk.field_c[0].field_A), -4 + var7, 16777215, 0);
+              var4.drawRightAlignedText(SoundVoice.field_m[this.field_r][0], var8_int, var7 - 3, 0, -1);
+              var5.drawCentered(SoundVoice.field_m[this.field_r][4], (var11 >> 1) + var8_int - (-var10_int - pk.field_c[0].field_A), -4 + var7, 16777215, 0);
               pk.field_c[0].drawTransparent(var8_int + var10_int, -pk.field_c[0].field_B + var7);
               pk.field_c[1].drawTransparent(var11 + var10_int + (var8_int + pk.field_c[0].field_A), var7 - pk.field_c[1].field_B);
               var7 = var7 + var9_int;
-              var4.drawRightAlignedText(ln.field_m[this.field_r][1], var8_int, 2 + var7, 0, -1);
-              var5.drawCentered(ln.field_m[this.field_r][4], (var11 >> 1) + (pk.field_c[0].field_A + var8_int) + var10_int, -4 + var7, 16777215, 0);
+              var4.drawRightAlignedText(SoundVoice.field_m[this.field_r][1], var8_int, 2 + var7, 0, -1);
+              var5.drawCentered(SoundVoice.field_m[this.field_r][4], (var11 >> 1) + (pk.field_c[0].field_A + var8_int) + var10_int, -4 + var7, 16777215, 0);
               CachedTextLayout.field_p[0].drawTransparent(var10_int + var8_int, var7 - CachedTextLayout.field_p[0].field_B);
               CachedTextLayout.field_p[1].drawTransparent(var11 + (var10_int + var8_int) + pk.field_c[0].field_A, -CachedTextLayout.field_p[1].field_B + var7);
               var7 = var7 + var9_int;
-              var4.drawRightAlignedText(ln.field_m[this.field_r][2], var8_int, var7 + 2, 0, -1);
+              var4.drawRightAlignedText(SoundVoice.field_m[this.field_r][2], var8_int, var7 + 2, 0, -1);
               CachedTextLayout.field_p[2].drawTransparent(var8_int + var10_int, -CachedTextLayout.field_p[0].field_B + var7);
               var7 = var7 + var9_int;
-              var4.drawRightAlignedText(ln.field_m[this.field_r][3], var8_int, 4 + var7, 0, -1);
+              var4.drawRightAlignedText(SoundVoice.field_m[this.field_r][3], var8_int, 4 + var7, 0, -1);
               CachedTextLayout.field_p[3].drawTransparent(var8_int + var10_int, -CachedTextLayout.field_p[0].field_B + var7);
               var12 = 6;
               Js5NetworkRequest.field_C[var12].field_f[0].drawTransparent(70, 160);
@@ -299,9 +299,9 @@ final class HowToPlayScreen extends MenuScreen {
             }
           }
         } else {
-          var7 = var7 + var5.drawParagraph(ln.field_m[this.field_r][0], 50, var7, 270, 400, 16777215, 0, 0, 0, var6) * var6;
+          var7 = var7 + var5.drawParagraph(SoundVoice.field_m[this.field_r][0], 50, var7, 270, 400, 16777215, 0, 0, 0, var6) * var6;
           var7 += 10;
-          var7 = var7 + var6 * var5.drawParagraph(ln.field_m[this.field_r][1], 50, var7, 270, 400, 16777215, 0, 0, 0, var6);
+          var7 = var7 + var6 * var5.drawParagraph(SoundVoice.field_m[this.field_r][1], 50, var7, 270, 400, 16777215, 0, 0, 0, var6);
           SpriteState.field_C.draw(false);
           QuickChatMenu.field_Qb.draw(50, 0, 0);
         }
@@ -311,7 +311,7 @@ final class HowToPlayScreen extends MenuScreen {
         LoginCredentials.field_e = var2;
     }
 
-    final void a(boolean param0, int param1) {
+    final void showPreviousPage(boolean param0, int param1) {
         int var3 = 0;
         this.field_r = this.field_r - 1;
         if (!param0 &&

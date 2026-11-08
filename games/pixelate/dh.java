@@ -7,7 +7,7 @@ final class dh {
     static String[] field_c;
     static SceneWidget[] field_b;
 
-    final static void a(byte param0, boolean param1) {
+    final static void drawAccountOverlays(byte param0, boolean param1) {
         if (param0 != 58) {
           dh.releaseStatics(true);
           if (oo.field_b <= 0) {
@@ -87,10 +87,10 @@ final class dh {
         ra.field_e.drawFullScreen(param1, 0);
     }
 
-    final static void a(int param0) {
+    final static void closeLegacyMenu(int param0) {
         ContentTransitionDialog.field_jb = null;
         GameModeSelectScreen.field_r = null;
-        df.field_r = null;
+        StatsRequest.field_r = null;
         if (param0 == 0) {
           sm.field_l = false;
           jk.field_d = null;
@@ -106,14 +106,14 @@ final class dh {
         field_c = null;
         field_d = null;
         if (!param0) {
-          dh.a((byte) 60, true);
+          dh.drawAccountOverlays((byte) 60, true);
           field_a = null;
           return;
         }
         field_a = null;
     }
 
-    final static String a(CharSequence param0, byte param1) {
+    final static String normalizeDisplayName(CharSequence param0, byte param1) {
         int var6 = 0;
         StringBuilder discarded$0 = null;
         Object stackIn_3_0 = null;
@@ -185,7 +185,7 @@ final class dh {
           } else {
             stackIn_35_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_34_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(',').append(param1).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_34_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(',').append(param1).append(')').toString());
         }
     }
 

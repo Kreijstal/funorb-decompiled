@@ -4,9 +4,9 @@
 abstract class PcmMixerListener extends IntrusiveNode {
     int field_k;
 
-    abstract void a();
+    abstract void onMixed();
 
-    abstract int a(PcmStreamMixer param0);
+    abstract int poll(PcmStreamMixer param0);
 
     private PcmMixerListener() throws Throwable {
         throw new Error();

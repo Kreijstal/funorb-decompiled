@@ -13,8 +13,8 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
         if (null != MainMenuScreen.field_r) {
           MainMenuScreen.field_r.close(-108);
         }
-        aa.field_c = new DisplayNameForm();
-        ph.field_l.transitionToContent(aa.field_c, -125);
+        ChatMessage.field_c = new DisplayNameForm();
+        ph.field_l.transitionToContent(ChatMessage.field_c, -125);
         if (param0 == -51) {
           return;
         }
@@ -22,11 +22,11 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
     }
 
     RegistrationRequestDialog(ModalStack param0, AccountRegistrationPanel param1) {
-        super(param0, ba.field_d, hm.field_e, false, false);
+        super(param0, FireworkBurst.field_d, hm.field_e, false, false);
         try {
           this.field_Ab = param1;
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "dm.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "dm.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -97,7 +97,7 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
               var4 = param0.field_c;
               if (param0.field_a == 248) {
                 if (!param2) {
-                  fq.g((byte) -73);
+                  fq.markTuhstatbutCookie((byte) -73);
                 }
                 this.field_yb = true;
                 var4 = AudioService.field_b;
@@ -111,24 +111,24 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
           } else {
             var4 = ValidatedTextWidget.field_jb;
           }
-          var5 = new AccountMessagePanel((AccountRequestDialog) (this), ba.field_d, var4);
+          var5 = new AccountMessagePanel((AccountRequestDialog) (this), FireworkBurst.field_d, var4);
           if (!param0.field_g) {
             if (!this.field_yb) {
               if (param0.field_a != 5) {
-                var5.a(-1, -1, bo.field_f);
+                var5.addActionButton(-1, -1, bo.field_f);
               } else {
-                var5.a(11, -1, BackgroundScene.field_c);
-                var5.a(17, -1, FullscreenFocusCanvas.field_e);
+                var5.addActionButton(11, -1, BackgroundScene.field_c);
+                var5.addActionButton(17, -1, FullscreenFocusCanvas.field_e);
               }
             } else {
               var5.appendButton(1707, (UiListener) (this), MusicCrossfadeStream.field_J);
             }
             if (3 != param0.field_a) {
               if (param0.field_a == 6) {
-                var5.a(9, -1, TextTableInitializer.field_d);
+                var5.addActionButton(9, -1, TextTableInitializer.field_d);
               }
             } else {
-              var5.a(7, -1, gd.field_d);
+              var5.addActionButton(7, -1, gd.field_d);
             }
           } else {
             if (param0.field_e) {
@@ -149,7 +149,7 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
           } else {
             stackIn_34_2 = "{...}";
           }
-          throw aa.addExceptionContext((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -185,7 +185,7 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
         try {
           this.close(-119);
         } catch (RuntimeException runtimeException) {
-          throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "dm.Q(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) runtimeException), "dm.Q(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 

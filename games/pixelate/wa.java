@@ -58,7 +58,7 @@ final class wa {
         return var1;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15) {
+    final static void rasterSortedShadedTriangle(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15) {
         int var16;
         int var17;
         var17 = Pixelate.field_H ? 1 : 0;
@@ -66,27 +66,27 @@ final class wa {
         if (param5 >= param1) {
           if (param0 <= param5) {
             if (param0 <= param1) {
-              AccountTermsPanel.a(param9, param5, param8, param15, -94333456, param13, param7, param14, param6, param12, param0, SoftwareRasterizer.field_k, param10, param1, param2, param3, param4);
+              AccountTermsPanel.rasterInterpolatedMeshTriangle(param9, param5, param8, param15, -94333456, param13, param7, param14, param6, param12, param0, SoftwareRasterizer.field_k, param10, param1, param2, param3, param4);
             } else {
-              AccountTermsPanel.a(param9, param5, param2, param3, -94333456, param7, param13, param14, param12, param6, param1, SoftwareRasterizer.field_k, param10, param0, param8, param15, param4);
+              AccountTermsPanel.rasterInterpolatedMeshTriangle(param9, param5, param2, param3, -94333456, param7, param13, param14, param12, param6, param1, SoftwareRasterizer.field_k, param10, param0, param8, param15, param4);
             }
           } else {
-            AccountTermsPanel.a(param12, param0, param2, param4, -94333456, param7, param14, param13, param9, param6, param1, SoftwareRasterizer.field_k, param8, param5, param10, param15, param3);
+            AccountTermsPanel.rasterInterpolatedMeshTriangle(param12, param0, param2, param4, -94333456, param7, param14, param13, param9, param6, param1, SoftwareRasterizer.field_k, param8, param5, param10, param15, param3);
           }
         } else {
           if (param1 < param0) {
-            AccountTermsPanel.a(param12, param0, param10, param15, -94333456, param14, param7, param13, param6, param9, param5, SoftwareRasterizer.field_k, param8, param1, param2, param4, param3);
+            AccountTermsPanel.rasterInterpolatedMeshTriangle(param12, param0, param10, param15, -94333456, param14, param7, param13, param6, param9, param5, SoftwareRasterizer.field_k, param8, param1, param2, param4, param3);
           } else {
             if (param0 > param5) {
-              AccountTermsPanel.a(param6, param1, param10, param3, -94333456, param14, param13, param7, param12, param9, param5, SoftwareRasterizer.field_k, param2, param0, param8, param4, param15);
+              AccountTermsPanel.rasterInterpolatedMeshTriangle(param6, param1, param10, param3, -94333456, param14, param13, param7, param12, param9, param5, SoftwareRasterizer.field_k, param2, param0, param8, param4, param15);
             } else {
-              AccountTermsPanel.a(param6, param1, param8, param4, -94333456, param13, param14, param7, param9, param12, param0, SoftwareRasterizer.field_k, param2, param5, param10, param3, param15);
+              AccountTermsPanel.rasterInterpolatedMeshTriangle(param6, param1, param8, param4, -94333456, param13, param14, param7, param9, param12, param0, SoftwareRasterizer.field_k, param2, param5, param10, param3, param15);
             }
           }
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_e = null;
         field_g = null;
         field_f = null;

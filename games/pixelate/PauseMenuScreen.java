@@ -8,20 +8,20 @@ final class PauseMenuScreen extends MenuScreen {
 
     final void onCancel(byte param0) {
         if (param0 >= -13) {
-          PauseMenuScreen.b(false);
+          PauseMenuScreen.isGameConnectionOpen(false);
         }
     }
 
     final void handleInput(byte param0) {
-        int var2 = ro.advanceSlideshow(-36, !pe.a(false) ? true : false);
+        int var2 = ro.advanceSlideshow(-36, !pe.requestLeaveServer(false) ? true : false);
         if (param0 >= -64) {
           return;
         }
         if (3 == var2) {
           if (null != ib.field_f) {
-            ln.a(75);
+            SoundVoice.closeFullscreenCanvas(75);
           }
-          m.openSubscribePage(AudioService.a(13867), -60);
+          ListRequest.openSubscribePage(AudioService.getApplet(13867), -60);
         }
         if (var2 == 1) {
           la.changeScreen(MidiPcmStream.field_t, 0, false, -25528);
@@ -33,14 +33,14 @@ final class PauseMenuScreen extends MenuScreen {
 
     final void draw(int param0) {
         if (KiteBackground.loadMembersBenefitsAssets(3782)) {
-          mc.e(12);
+          mc.drawBenefitsScreen(12);
         }
         if (param0 != 11) {
           field_q = 43;
         }
     }
 
-    final static void e(int param0) {
+    final static void initializeChatColours(int param0) {
         int var1_int = 0;
         int var2 = 0;
         int var3 = 0;
@@ -79,7 +79,7 @@ final class PauseMenuScreen extends MenuScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw aa.addExceptionContext((Throwable) ((Object) var1), "ol.I(" + param0 + ')');
+          throw ChatMessage.addExceptionContext((Throwable) ((Object) var1), "ol.I(" + param0 + ')');
         }
     }
 
@@ -94,7 +94,7 @@ final class PauseMenuScreen extends MenuScreen {
         field_p = null;
     }
 
-    final static boolean b(boolean param0) {
+    final static boolean isGameConnectionOpen(boolean param0) {
         boolean stackIn_6_0 = false;
         if (!param0) {
           field_p = (String[]) null;
