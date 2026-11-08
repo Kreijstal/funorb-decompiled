@@ -10,7 +10,7 @@ final class kn extends hp implements hh {
     private String[] field_H;
     static int field_F;
 
-    public static void b(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_I = null;
         if (param0) {
           return;
@@ -90,11 +90,11 @@ final class kn extends hp implements hh {
         }
         Font var5 = ia.field_e;
         if (null != this.field_H) {
-          var5.a(ic.field_Q, param2 + this.field_k, param0 + this.field_j, this.field_i, 20, 16777215, -1, 0, 0, var5.field_I + var5.field_x);
+          var5.drawParagraph(ic.field_Q, param2 + this.field_k, param0 + this.field_j, this.field_i, 20, 16777215, -1, 0, 0, var5.field_I + var5.field_x);
         }
     }
 
-    final boolean a(int param0, int param1, UiWidget param2, char param3) {
+    final boolean requestKeyboardFocus(int param0, int param1, UiWidget param2, char param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         boolean stackIn_6_0 = false;
@@ -104,7 +104,7 @@ final class kn extends hp implements hh {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (super.a(-126, param1, param2, param3)) {
+          if (super.requestKeyboardFocus(-126, param1, param2, param3)) {
             return true;
           }
           if (98 == param1) {
@@ -131,7 +131,7 @@ final class kn extends hp implements hh {
         }
     }
 
-    public final void a(int param0, int param1, an param2, int param3, int param4) {
+    public final void onButtonActivated(int param0, int param1, an param2, int param3, int param4) {
         int var6_int = 0;
         int var7 = 0;
         RuntimeException stackIn_15_0 = null;

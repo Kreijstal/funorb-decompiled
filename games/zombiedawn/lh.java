@@ -71,7 +71,7 @@ final class lh extends pc {
           og var2Lifetime1;
           var16 = ZombieDawn.field_J;
           if (null != this.field_n) {
-            var2_long = pd.a(param0 - 22805);
+            var2_long = pd.monotonicTimeMillis(param0 - 22805);
             var4 = (int)(var2_long - this.field_g);
             if (var4 > 200) {
               var4 = 200;
@@ -375,7 +375,7 @@ final class lh extends pc {
             }
             var4_int = -50 % ((-1 - param2) / 63);
             this.field_i = 0;
-            this.field_g = pd.a(-22826);
+            this.field_g = pd.monotonicTimeMillis(-22826);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter3) {
             decompiledCaughtException = decompiledCaughtParameter3;

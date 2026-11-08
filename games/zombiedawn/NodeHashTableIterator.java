@@ -125,7 +125,7 @@ final class NodeHashTableIterator implements Iterator {
             }
             try {
               var2 = "tuhstatbut";
-              var3 = (String) (qe.a(param1, "getcookies", -109));
+              var3 = (String) (qe.callWindowFunction(param1, "getcookies", -109));
               if (param0 >= -111) {
                 field_g = (cg) null;
               }
@@ -185,7 +185,7 @@ final class NodeHashTableIterator implements Iterator {
         return true;
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_d = null;
         field_g = null;
         field_f = null;

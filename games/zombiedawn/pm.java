@@ -21,10 +21,10 @@ abstract class pm extends um implements ok {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_c = null;
         if (!param0) {
-          pm.a(true);
+          pm.releaseStatics(true);
           field_e = null;
           return;
         }
@@ -35,7 +35,7 @@ abstract class pm extends um implements ok {
         if (param0 > -48) {
           return (String) null;
         }
-        return this.a(this.field_d.field_o, (byte) -117);
+        return this.messageForText(this.field_d.field_o, (byte) -117);
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, Sprite[] param8, int param9, Sprite[] param10, Font param11, Sprite[] param12, byte param13, int param14) {
@@ -134,27 +134,27 @@ abstract class pm extends um implements ok {
         int var2 = ZombieDawn.field_J;
         LevelNavigation.field_a = new Sprite(60, 60);
         LevelNavigation.field_a.setAsRenderTarget();
-        Rasterizer.g(30, 30, 28, 4521728);
+        Rasterizer.fillCircle(30, 30, 28, 4521728);
         og.field_x = new Sprite[8];
         for (var1_int = 0; 8 > var1_int; var1_int++) {
           og.field_x[var1_int] = new Sprite(22, 22);
           og.field_x[var1_int].setAsRenderTarget();
-          Rasterizer.g(11, 11, 2 + var1_int, 5622784);
-          Rasterizer.g(11, 11, var1_int, 65793);
+          Rasterizer.fillCircle(11, 11, 2 + var1_int, 5622784);
+          Rasterizer.fillCircle(11, 11, var1_int, 65793);
         }
         if (param0 != 36) {
           return;
         }
         try {
-          cn.field_f.b(69);
+          cn.field_f.makeRasterTarget(69);
         } catch (RuntimeException runtimeException) {
           throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "pm.F(" + param0 + ')');
         }
     }
 
-    abstract rh a(String param0, int param1);
+    abstract rh validateText(String param0, int param1);
 
-    abstract String a(String param0, byte param1);
+    abstract String messageForText(String param0, byte param1);
 
     pm(tb param0) {
         try {
@@ -166,11 +166,11 @@ abstract class pm extends um implements ok {
 
     final rh c(byte param0) {
         if (param0 == -7) {
-          return this.a(this.field_d.field_o, param0 + 9);
+          return this.validateText(this.field_d.field_o, param0 + 9);
         }
         tb var3 = (tb) null;
         this.a((tb) null, 59);
-        return this.a(this.field_d.field_o, param0 + 9);
+        return this.validateText(this.field_d.field_o, param0 + 9);
     }
 
     static {

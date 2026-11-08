@@ -84,7 +84,7 @@ final class cj {
     final IntrusiveNode c(byte param0) {
         IntrusiveNode var2 = this.field_f.sentinel.previous;
         if (param0 > -113) {
-          cj.b(-19);
+          cj.releaseStatics(-19);
         }
         if (this.field_f.sentinel == var2) {
           this.field_b = null;
@@ -213,7 +213,7 @@ final class cj {
         og.b(-111, 17);
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_i = null;
         field_c = null;
         field_a = (String[][]) null;

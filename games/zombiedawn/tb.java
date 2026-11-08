@@ -141,7 +141,7 @@ class tb extends an {
                 this.field_N = var7;
               }
             }
-            this.field_M = pd.a(-22826);
+            this.field_M = pd.monotonicTimeMillis(-22826);
           }
         } catch (RuntimeException runtimeException) {
           throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "tb.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
@@ -165,7 +165,7 @@ class tb extends an {
           this.field_O = param2;
           this.a(false, true, param0);
           this.field_I = true;
-          this.field_M = pd.a(-22826);
+          this.field_M = pd.monotonicTimeMillis(-22826);
         } catch (RuntimeException runtimeException) {
           throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "tb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -208,7 +208,7 @@ class tb extends an {
             if (this.field_H != this.field_N) {
               var8.a(-118, this.field_H, param0, (UiWidget) (this), param2, this.field_N);
             }
-            var6 = pd.a(-22826);
+            var6 = pd.monotonicTimeMillis(-22826);
             if ((var6 - this.field_M) % 1000L < 500L) {
               var8.a(this.field_N, param2, param0, param3 ^ -39, (UiWidget) (this));
             }
@@ -216,11 +216,11 @@ class tb extends an {
         }
     }
 
-    public static void d(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_G = null;
         field_K = null;
         if (!param0) {
-          tb.d(true);
+          tb.releaseStatics(true);
         }
     }
 
@@ -312,7 +312,7 @@ class tb extends an {
         }
     }
 
-    private final void a(int param0, int param1) {
+    private final void moveCaret(int param0, int param1) {
         this.field_N = param0;
         if (!bo.field_p[param1]) {
           this.field_H = this.field_N;
@@ -367,8 +367,8 @@ class tb extends an {
             } else {
               stackIn_6_1 = 0;
             }
-            this.a(stackIn_6_1, 81);
-            var8_long = pd.a(param1 - 22827);
+            this.moveCaret(stackIn_6_1, 81);
+            var8_long = pd.monotonicTimeMillis(param1 - 22827);
             stackIn_9_1 = !(-this.field_J + var8_long >= 250L);
             this.field_F = stackIn_9_1;
             if (this.field_F) {
@@ -523,7 +523,7 @@ class tb extends an {
         return (byte) 9;
     }
 
-    final boolean a(int param0, int param1, UiWidget param2, char param3) {
+    final boolean requestKeyboardFocus(int param0, int param1, UiWidget param2, char param3) {
         int dupTemp$0 = 0;
         int stackIn_33_1 = 0;
         int stackIn_62_1 = 0;
@@ -534,7 +534,7 @@ class tb extends an {
         int var5_int = 0;
         RuntimeException var5 = null;
         try {
-          this.field_M = pd.a(-22826);
+          this.field_M = pd.monotonicTimeMillis(-22826);
           if (param3 == 60) {
             return false;
           }
@@ -576,17 +576,17 @@ class tb extends an {
                   } else {
                     stackIn_62_1 = this.b(true);
                   }
-                  this.a(stackIn_62_1, 81);
+                  this.moveCaret(stackIn_62_1, 81);
                   return true;
                 }
               } else {
                 if (param1 != 97) {
                   if (param1 == 102) {
-                    this.a(0, 81);
+                    this.moveCaret(0, 81);
                     return true;
                   }
                   if (param1 == 103) {
-                    this.a(this.field_o.length(), 81);
+                    this.moveCaret(this.field_o.length(), 81);
                     return true;
                   }
                   if (84 == param1) {
@@ -615,7 +615,7 @@ class tb extends an {
                     } else {
                       stackIn_33_1 = this.f((byte) 7);
                     }
-                    this.a(stackIn_33_1, 81);
+                    this.moveCaret(stackIn_33_1, 81);
                     return true;
                   }
                 }

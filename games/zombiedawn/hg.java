@@ -28,15 +28,15 @@ final class hg {
         try {
           var1 = new Sprite(540, 140);
           ki.a((byte) -122, var1);
-          en.c();
+          en.useRasterClip();
           Rasterizer.clear();
           LevelNavigation.field_x = 0;
           gk.j(30549);
-          var2 = var1.e();
+          var2 = var1.copySprite();
           int var3 = 1 / ((4 - param0) / 43);
           for (var4 = 0; var4 < 15; var4++) {
-            var2.h(-2, -2, 16777215);
-            Rasterizer.h(4, 4, 0, 0, 540, 140);
+            var2.drawSilhouette(-2, -2, 16777215);
+            Rasterizer.blurRectangle(4, 4, 0, 0, 540, 140);
           }
           wc.field_Pb.setAsRenderTarget();
           var1.drawHalfSize(0, 0);
@@ -46,7 +46,7 @@ final class hg {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 140) {
           field_a = (int[]) null;
         }

@@ -31,7 +31,7 @@ class tc extends vf {
             var3 = (var3 << 5) - var3 + tb.a(param0.charAt(var4), -8225);
           }
           if (param1 != 14) {
-            tc.c(23);
+            tc.releaseStatics(23);
           }
           stackIn_7_0 = var3;
           return stackIn_7_0;
@@ -109,7 +109,7 @@ class tc extends vf {
         }
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         field_y = null;
         field_w = null;
         field_x = null;

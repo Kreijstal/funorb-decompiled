@@ -73,7 +73,7 @@ final class fc extends qk {
             stackIn_6_0 = (this.field_Nb) ? 2 : 1;
             var5 = stackIn_6_0;
           }
-          ld.field_l[this.field_t][var5].b(var3_int - 24, var4 - 48);
+          ld.field_l[this.field_t][var5].drawTransparent(var3_int - 24, var4 - 48);
           if (0 < this.field_Gb) {
             var6 = var3_int - 3;
             if (!this.field_Nb) {
@@ -85,9 +85,9 @@ final class fc extends qk {
             field_Ob = -119;
           }
           if (b.field_h) {
-            Rasterizer.d(var3_int + 12, 24 + var4, 260, 16711680);
-            Rasterizer.e(var3_int, var4, 260 + var3_int, 260 + var4, 16711680);
-            Rasterizer.e(var3_int, var4, -260 + var3_int, 260 + var4, 16711680);
+            Rasterizer.drawCircleOutline(var3_int + 12, 24 + var4, 260, 16711680);
+            Rasterizer.drawLine(var3_int, var4, 260 + var3_int, 260 + var4, 16711680);
+            Rasterizer.drawLine(var3_int, var4, -260 + var3_int, 260 + var4, 16711680);
             bj.field_q.drawString(Integer.toString(var5), var3_int, var4, 16777215, 0);
             bj.field_q.drawString(Integer.toString(this.field_N), 20 + var3_int, var4, 16777215, 0);
             bj.field_q.drawString(Integer.toString(this.state), var3_int, -20 + var4, 16777215, 0);

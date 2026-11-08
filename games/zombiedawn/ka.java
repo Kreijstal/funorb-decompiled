@@ -41,11 +41,11 @@ final class ka {
             param2[0] <= 0) {
             return null;
           }
-          var9 = ml.a(this.field_g, param0, param1);
+          var9 = ml.load(this.field_g, param0, param1);
           if (var9 == null) {
             return null;
           }
-          var10 = var9.b();
+          var10 = var9.toPcmSample();
           var8Lifetime1 = var10;
           this.field_d.a(-99, var6, var8Lifetime1);
           if (param2 != null) {
@@ -104,7 +104,7 @@ final class ka {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_f = (byte[][]) null;
         field_a = null;
         field_h = null;
@@ -183,13 +183,13 @@ final class ka {
           }
           var9 = (mb) (this.field_c.a(var6, 100));
           if (var9 == null) {
-            var9 = mb.a(this.field_b, param2, param0);
+            var9 = mb.load(this.field_b, param2, param0);
             if (var9 == null) {
               return null;
             }
             this.field_c.a(-118, var6, var9);
           }
-          var8Lifetime1 = var9.a(param1);
+          var8Lifetime1 = var9.decodeToPcm(param1);
           if (var8Lifetime1 == null) {
             stackIn_17_0 = null;
             return (PcmSample) (stackIn_17_0);

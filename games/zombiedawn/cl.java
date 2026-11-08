@@ -11,7 +11,7 @@ final class cl implements wa {
         int var4 = 126 % ((param1 + 83) / 35);
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_c = (byte[][][]) null;
         field_b = null;
         if (param0 < 80) {

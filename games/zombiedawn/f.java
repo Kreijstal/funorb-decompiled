@@ -14,7 +14,7 @@ final class f {
     static int field_c;
     static Sprite field_d;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 > 4) {
           field_j = null;
           field_i = null;
@@ -49,7 +49,7 @@ final class f {
           var7 = pj.a(var6, 82, var5) * 5 >> 2;
           oe.field_c.h(var7);
           Rasterizer.setClip(var5, var6, var5 + ClientException.field_a, var6 + rh.field_a);
-          Rasterizer.a(param1.worldToScreenX(var3, (byte) -89) << 4, param1.worldToScreenY(var4, 0) << 4, pl.field_r, UiWidget.field_q, b.field_p);
+          Rasterizer.fillRadialPaletteCircle(param1.worldToScreenX(var3, (byte) -89) << 4, param1.worldToScreenY(var4, 0) << 4, pl.field_r, UiWidget.field_q, b.field_p);
           Rasterizer.resetClip();
         } catch (RuntimeException runtimeException) {
           throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "f.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

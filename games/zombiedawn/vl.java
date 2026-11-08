@@ -55,15 +55,15 @@ final class vl implements io {
           Rasterizer.fillRect(param3.field_k + param4, param2 + param3.field_j, param3.field_i, param3.field_n, this.field_e);
           var8 = this.field_h + param4 + param3.field_k;
           var9 = param2 - (-param3.field_j - this.field_c);
-          Rasterizer.f(var8, var9, this.field_l, this.field_n, 5592405);
+          Rasterizer.drawDropShadow(var8, var9, this.field_l, this.field_n, 5592405);
           Rasterizer.fillRect(var8, var9, this.field_l, this.field_n, var7);
           if (var11.field_x) {
-            Rasterizer.e(var8, var9, this.field_l + var8, this.field_n + var9, 1);
-            Rasterizer.e(this.field_l + var8, var9, var8, var9 + this.field_n, 1);
+            Rasterizer.drawLine(var8, var9, this.field_l + var8, this.field_n + var9, 1);
+            Rasterizer.drawLine(this.field_l + var8, var9, var8, var9 + this.field_n, 1);
           }
           if (null != this.field_d) {
             var10 = this.field_l + this.field_h + this.field_q;
-            this.field_d.a(param3.field_o, param3.field_k + param4 + var10, param2 + param3.field_j + this.field_j, param3.field_i - (this.field_q + var10), param3.field_n - (this.field_q << 1), this.field_i, this.field_g, this.field_o, this.field_a, 0);
+            this.field_d.drawParagraph(param3.field_o, param3.field_k + param4 + var10, param2 + param3.field_j + this.field_j, param3.field_i - (this.field_q + var10), param3.field_n - (this.field_q << 1), this.field_i, this.field_g, this.field_o, this.field_a, 0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -92,12 +92,12 @@ final class vl implements io {
             if (param1 >= 0) {
               decompiledFrameRemainder0 = (df.field_j == ic.field_T);
               if ((decompiledFrameRemainder0) && (dp.field_e.position == 0 &&
-                pd.a(-22826) > (10000L + hm.field_N))) {
+                pd.monotonicTimeMillis(-22826) > (10000L + hm.field_N))) {
                 dp.field_e.j(11, param1);
               }
             } else {
               if (dp.field_e.position == 0 &&
-                pd.a(-22826) > (10000L + hm.field_N)) {
+                pd.monotonicTimeMillis(-22826) > (10000L + hm.field_N)) {
                 dp.field_e.j(11, param1);
               }
             }
@@ -105,7 +105,7 @@ final class vl implements io {
               if (0 < dp.field_e.position) {
                 try {
                   sn.field_c.write(dp.field_e.position, true, 0, dp.field_e.payload);
-                  hm.field_N = pd.a(-22826);
+                  hm.field_N = pd.monotonicTimeMillis(-22826);
                 } catch (java.io.IOException decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var2 = (IOException) (Object) decompiledCaughtException;
@@ -124,7 +124,7 @@ final class vl implements io {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_m = null;
         field_p = null;
         field_b = null;

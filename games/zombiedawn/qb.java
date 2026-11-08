@@ -13,7 +13,7 @@ abstract class qb {
     static int[] field_c;
     int field_e;
 
-    abstract void a(int param0, int param1, int param2);
+    abstract void drawAlpha(int param0, int param1, int param2);
 
     final static String a(int param0, CharSequence param1) {
         int var4 = 0;
@@ -71,7 +71,7 @@ abstract class qb {
         }
     }
 
-    abstract void a(int param0, int param1);
+    abstract void draw(int param0, int param1);
 
     final static void a(boolean param0, int param1) {
         hn var2 = null;
@@ -123,7 +123,7 @@ abstract class qb {
         return 18;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_c = null;
         if (param0 != -6633) {
           qb.a(62, (byte) -7);

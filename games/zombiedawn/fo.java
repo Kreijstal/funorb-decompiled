@@ -6,7 +6,7 @@ final class fo {
     static String field_b;
     static String field_c;
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         if (!param0) {
           field_b = null;
           field_c = null;

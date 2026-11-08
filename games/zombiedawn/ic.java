@@ -45,7 +45,7 @@ final class ic extends tb implements mi {
         this.field_V.a(-7674);
     }
 
-    public static void l(int param0) {
+    public static void releaseStatics(int param0) {
         field_S = null;
         field_T = null;
         field_Q = null;

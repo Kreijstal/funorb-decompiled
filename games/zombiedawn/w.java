@@ -21,11 +21,11 @@ abstract class w {
         }
         try {
           nf.field_d.setAsRenderTarget();
-          ni.field_b[2].h(5, -5, 16777215);
-          ni.field_b[3].h(5, -5, 16777215);
-          Rasterizer.h(4, 4, 0, 0, Rasterizer.width, Rasterizer.height);
-          ni.field_b[2].h(5, -5, 0);
-          ni.field_b[3].h(5, -5, 0);
+          ni.field_b[2].drawSilhouette(5, -5, 16777215);
+          ni.field_b[3].drawSilhouette(5, -5, 16777215);
+          Rasterizer.blurRectangle(4, 4, 0, 0, Rasterizer.width, Rasterizer.height);
+          ni.field_b[2].drawSilhouette(5, -5, 0);
+          ni.field_b[3].drawSilhouette(5, -5, 0);
           mk.field_a = new Sprite[16];
           qp.field_c = new Sprite[mk.field_a.length];
           for (var2_int = 0; var2_int < mk.field_a.length; var2_int++) {
@@ -42,13 +42,13 @@ abstract class w {
           cn.field_i = so.a(fk.field_K);
           md.field_tb = so.a(tb.field_G);
           eb.field_b = so.a(rc.field_v);
-          cn.field_f.b(115);
+          cn.field_f.makeRasterTarget(115);
         } catch (RuntimeException runtimeException) {
           throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "w.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_a = null;
         if (param0 != -98) {
           Sprite[] var2 = (Sprite[]) null;

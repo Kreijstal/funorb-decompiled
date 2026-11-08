@@ -82,7 +82,7 @@ final class i extends pn implements hh {
         }
     }
 
-    public final void a(int param0, int param1, an param2, int param3, int param4) {
+    public final void onButtonActivated(int param0, int param1, an param2, int param3, int param4) {
         RuntimeException var6 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -183,7 +183,7 @@ final class i extends pn implements hh {
           if (ao.field_F.status == 0) {
             return false;
           }
-          dupTemp$1 = pd.a(-22826);
+          dupTemp$1 = pd.monotonicTimeMillis(-22826);
           hm.field_N = dupTemp$1;
           pi.field_i = dupTemp$1;
           if (!param1) {
@@ -222,7 +222,7 @@ final class i extends pn implements hh {
         }
     }
 
-    public static void m(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 == 10) {
           field_X = null;
           field_W = null;
@@ -230,7 +230,7 @@ final class i extends pn implements hh {
           field_T = null;
           return;
         }
-        i.m(34);
+        i.releaseStatics(34);
         field_X = null;
         field_W = null;
         field_U = null;
@@ -249,7 +249,7 @@ final class i extends pn implements hh {
             pj.a(param3, (byte) 113, param0, 1048576, param1);
           }
           if (param2 > -110) {
-            i.m(11);
+            i.releaseStatics(11);
           }
           if (uh.field_o == null) {
             return;
@@ -261,7 +261,7 @@ final class i extends pn implements hh {
               return;
             }
             uh.field_o.c(28013);
-            ExceptionWrapper.field_d.d();
+            ExceptionWrapper.field_d.flushDeviceSafely();
             te.field_kb = param3;
             if (te.field_kb != null) {
               uh.field_o.a((byte) -22, te.field_kb, param1);

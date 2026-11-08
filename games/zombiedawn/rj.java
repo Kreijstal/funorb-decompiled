@@ -185,7 +185,7 @@ final class rj extends PcmStream {
         var7.field_l = 0;
         var7.field_p = 0;
         if (0 != this.field_O[param3]) {
-          var7.field_E = PcmSampleStream.a(var6, this.a(-20165, var7), 0, this.a(var7, true));
+          var7.field_E = PcmSampleStream.createAtStepQ8(var6, this.a(-20165, var7), 0, this.a(var7, true));
           stackIn_18_1 = var7;
           stackIn_18_2 = -124;
           if (var11.field_j[param2] >= 0) {
@@ -197,7 +197,7 @@ final class rj extends PcmStream {
           }
           this.a(stackIn_18_1, stackIn_18_2, stackIn_19_3);
         } else {
-          var7.field_E = PcmSampleStream.a(var6, this.a(-20165, var7), this.a(var7, (byte) -111), this.a(var7, true));
+          var7.field_E = PcmSampleStream.createAtStepQ8(var6, this.a(-20165, var7), this.a(var7, (byte) -111), this.a(var7, true));
         }
         if (var11.field_j[param2] < 0) {
           var7.field_E.e(-1);
@@ -219,7 +219,7 @@ final class rj extends PcmStream {
     final synchronized void a(int param0, byte param1, int param2) {
         this.b(param2, false, param0);
         if (param1 >= -115) {
-          this.c((byte) 118);
+          this.isReady((byte) 118);
         }
     }
 
@@ -235,7 +235,7 @@ final class rj extends PcmStream {
           if (0 > param1 ||
             param1 == var3.field_z) {
             if (null != var3.field_E) {
-              var3.field_E.c(qf.field_p / 100);
+              var3.field_E.fadeOutAndUnlink(qf.field_p / 100);
               if (var3.field_E.f()) {
                 this.field_J.field_m.addSubstream(var3.field_E);
               }
@@ -299,7 +299,7 @@ final class rj extends PcmStream {
         }
     }
 
-    final synchronized int a() {
+    final synchronized int activity() {
         return 0;
     }
 
@@ -322,12 +322,12 @@ final class rj extends PcmStream {
             var4_int = var4_int << 8;
             if (var4_int <= var5) {
               var5 = -1 + var4_int - (-var4_int + var5);
-              param0.field_E.a(true);
+              param0.field_E.setReversePlayback(true);
             }
           } else {
             var5 = (int)((long)var4_int * (long)this.field_O[param0.field_z] >> 6);
           }
-          param0.field_E.d(var5);
+          param0.field_E.setPositionFixed(var5);
           var6Lifetime1 = -124 % ((param1 + 79) / 43);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -395,11 +395,11 @@ final class rj extends PcmStream {
         }
     }
 
-    final synchronized boolean c(byte param0) {
+    final synchronized boolean isReady(byte param0) {
         if (param0 != -34) {
           this.field_t = 28L;
         }
-        return this.field_w.a();
+        return this.field_w.isReady();
     }
 
     final synchronized PcmStream nextSubstream() {
@@ -420,19 +420,19 @@ final class rj extends PcmStream {
         var7 = ZombieDawn.field_J;
         try {
           this.a(param2, (byte) -71);
-          this.field_w.a(param0.field_i);
+          this.field_w.parse(param0.field_i);
           stackIn_4_1 = (param3);
           this.field_s = stackIn_4_1;
           this.field_K = 0L;
-          var5_int = this.field_w.d();
+          var5_int = this.field_w.trackCount();
           for (var6 = 0; var5_int > var6; var6++) {
-            this.field_w.f(var6);
+            this.field_w.seekTrack(var6);
             this.field_w.c(var6);
-            this.field_w.b(var6);
+            this.field_w.saveTrackPosition(var6);
           }
-          this.field_N = this.field_w.b();
+          this.field_N = this.field_w.nextTrack();
           this.field_v = this.field_w.field_f[this.field_N];
-          this.field_t = this.field_w.a(this.field_v);
+          this.field_t = this.field_w.tickTime(this.field_v);
           if (param1 >= -122) {
             var8 = (ka) null;
             this.a((wj) null, (byte) -81, (Js5Archive) null, -58, (ka) null);
@@ -472,7 +472,7 @@ final class rj extends PcmStream {
         int var12 = 0;
         var12 = ZombieDawn.field_J;
         try {
-          param0.b();
+          param0.buildPatchUsage();
           var8 = 121 / ((param1 + 78) / 32);
           var6_int = 1;
           var7 = null;
@@ -498,7 +498,7 @@ final class rj extends PcmStream {
             var9 = (bh) (param0.field_h.b((byte) 99));
           }
           if (var6_int != 0) {
-            param0.a();
+            param0.releasePatchUsage();
           }
           stackIn_19_0 = var6_int;
           return stackIn_19_0 != 0;
@@ -560,25 +560,25 @@ final class rj extends PcmStream {
               if (stackIn_24_0 > stackIn_24_1) {
                 this.field_N = -1;
                 this.field_v = this.field_P;
-                this.field_t = this.field_w.a(this.field_v);
+                this.field_t = this.field_w.tickTime(this.field_v);
               }
             }
             return;
           }
           while (~var3 == ~this.field_w.field_f[var2]) {
-            this.field_w.f(var2);
-            var6 = this.field_w.d(var2);
+            this.field_w.seekTrack(var2);
+            var6 = this.field_w.readMessage(var2);
             if (var6 != 1) {
               if (0 != (var6 & 128)) {
                 this.a((byte) -80, var6);
               }
               this.field_w.c(var2);
-              this.field_w.b(var2);
+              this.field_w.saveTrackPosition(var2);
               continue;
             }
-            this.field_w.c();
-            this.field_w.b(var2);
-            if (this.field_w.f()) {
+            this.field_w.markTrackDone();
+            this.field_w.saveTrackPosition(var2);
+            if (this.field_w.isDone()) {
               if (this.field_y != null) {
                 this.a((byte) -22, this.field_y, this.field_s);
                 this.a(false);
@@ -586,18 +586,18 @@ final class rj extends PcmStream {
               }
               if (this.field_s &&
                 0 != var3) {
-                this.field_w.a(var4);
+                this.field_w.reset(var4);
               } else {
                 this.a(true, 256);
-                this.field_w.e();
+                this.field_w.release();
                 return;
               }
             }
             break;
           }
-          var2 = this.field_w.b();
+          var2 = this.field_w.nextTrack();
           var3 = this.field_w.field_f[var2];
-          var4 = this.field_w.a(var3);
+          var4 = this.field_w.tickTime(var3);
         }
     }
 
@@ -666,7 +666,7 @@ final class rj extends PcmStream {
         int var7 = 0;
         var8 = ZombieDawn.field_J;
         try {
-          if (this.field_w.a()) {
+          if (this.field_w.isReady()) {
             var4_int = this.field_w.field_b * this.field_m / qf.field_p;
             while (true) {
               var5 = (long)param2 * (long)var4_int + this.field_K;
@@ -680,7 +680,7 @@ final class rj extends PcmStream {
               param1 = param1 + var7;
               this.a(false);
               param2 = param2 - var7;
-              if (this.field_w.a()) {
+              if (this.field_w.isReady()) {
                 continue;
               }
               this.field_J.fill(param0, param1, param2);
@@ -914,7 +914,7 @@ final class rj extends PcmStream {
               if (var6Lifetime2 < 64) {
                 this.field_l[var4Lifetime2] = eg.a(this.field_l[var4Lifetime2], -2);
               } else {
-                this.field_l[var4Lifetime2] = GameWorld.a(this.field_l[var4Lifetime2], 1);
+                this.field_l[var4Lifetime2] = GameWorld.intOr(this.field_l[var4Lifetime2], 1);
               }
             }
             if (var5Lifetime2 == 65) {
@@ -922,7 +922,7 @@ final class rj extends PcmStream {
                 this.a(0, var4Lifetime2);
                 this.field_l[var4Lifetime2] = eg.a(this.field_l[var4Lifetime2], -3);
               } else {
-                this.field_l[var4Lifetime2] = GameWorld.a(this.field_l[var4Lifetime2], 2);
+                this.field_l[var4Lifetime2] = GameWorld.intOr(this.field_l[var4Lifetime2], 2);
               }
             }
             if (var5Lifetime2 == 99) {
@@ -969,7 +969,7 @@ final class rj extends PcmStream {
                 this.c(95, var4Lifetime2);
                 this.field_l[var4Lifetime2] = eg.a(this.field_l[var4Lifetime2], -5);
               } else {
-                this.field_l[var4Lifetime2] = GameWorld.a(this.field_l[var4Lifetime2], 4);
+                this.field_l[var4Lifetime2] = GameWorld.intOr(this.field_l[var4Lifetime2], 4);
               }
             }
             if (var5Lifetime2 == 17) {
@@ -1002,7 +1002,7 @@ final class rj extends PcmStream {
             this.field_G = (lf[][]) null;
           }
           if (param2.field_k >= 0 && (param2.field_E == null ||
-            param2.field_E.l())) {
+            param2.field_E.isSamplePositionOutOfRange())) {
             param2.c((byte) 125);
             param2.unlink(-27598);
             if (param2.field_B > 0) {
@@ -1021,7 +1021,7 @@ final class rj extends PcmStream {
             }
             param2.field_j = var6_int;
           }
-          param2.field_E.f(this.a(param0 + 12299, param2));
+          param2.field_E.setSampleStepMagnitude(this.a(param0 + 12299, param2));
           var7 = param2.field_t;
           param2.field_o = param2.field_o + 1;
           var8 = 0;
@@ -1076,10 +1076,10 @@ final class rj extends PcmStream {
             }
           }
           if (var8 == 0) {
-            param2.field_E.a(param2.field_r, this.a(param2, (byte) -111), this.a(param2, true));
+            param2.field_E.rampVolumeAndPan(param2.field_r, this.a(param2, (byte) -111), this.a(param2, true));
             return false;
           }
-          param2.field_E.c(param2.field_r);
+          param2.field_E.fadeOutAndUnlink(param2.field_r);
           if (param3 != null) {
             param2.field_E.fill(param3, param1, param4);
           } else {
@@ -1175,7 +1175,7 @@ final class rj extends PcmStream {
     }
 
     private final synchronized void a(boolean param0, byte param1) {
-        this.field_w.e();
+        this.field_w.release();
         this.field_y = null;
         if (param1 != -71) {
           this.c(64);
@@ -1189,7 +1189,7 @@ final class rj extends PcmStream {
         int var6;
         int var5;
         var6 = ZombieDawn.field_J;
-        if (this.field_w.a()) {
+        if (this.field_w.isReady()) {
           var2 = this.field_m * this.field_w.field_b / qf.field_p;
           while (true) {
             var3 = this.field_K + (long)param0 * (long)var2;
@@ -1202,7 +1202,7 @@ final class rj extends PcmStream {
             this.field_J.skip(var5);
             param0 = param0 - var5;
             this.a(false);
-            if (!this.field_w.a()) {
+            if (!this.field_w.isReady()) {
               break;
             }
           }

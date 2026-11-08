@@ -12,7 +12,7 @@ final class nj extends pn implements hh {
         super(param0, 200, 200);
         UiWidget var3 = null;
         try {
-          this.field_V = pd.a(-22826);
+          this.field_V = pd.monotonicTimeMillis(-22826);
           var3 = new UiWidget(SecondaryNodeDequeIterator.field_c, (sk) null);
           var3.field_i = this.field_i;
           var3.field_n = 100;
@@ -34,7 +34,7 @@ final class nj extends pn implements hh {
         }
     }
 
-    final boolean a(int param0, int param1, UiWidget param2, char param3) {
+    final boolean requestKeyboardFocus(int param0, int param1, UiWidget param2, char param3) {
         int var5_int = 0;
         int var6 = 0;
         boolean stackIn_9_0 = false;
@@ -47,14 +47,14 @@ final class nj extends pn implements hh {
           var5_int = -59 % ((-83 - param0) / 32);
           var6 = param1;
           if (var6 == 99) {
-            this.field_W.a((byte) 115, (UiWidget) (this));
+            this.field_W.focusNext((byte) 115, (UiWidget) (this));
             return true;
           }
           if (var6 != 98) {
-            stackIn_9_0 = super.a(-127, param1, param2, param3);
+            stackIn_9_0 = super.requestKeyboardFocus(-127, param1, param2, param3);
             return stackIn_9_0;
           }
-          this.field_T.a((byte) 116, (UiWidget) (this));
+          this.field_T.focusNext((byte) 116, (UiWidget) (this));
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -82,9 +82,9 @@ final class nj extends pn implements hh {
         try {
           super.a(param0, (byte) 90, param2, param3);
           if (ll.field_a) {
-            param0.c((byte) 57);
+            param0.blur((byte) 57);
           }
-          var5_long = pd.a(-22826) - this.field_V;
+          var5_long = pd.monotonicTimeMillis(-22826) - this.field_V;
           var7 = (int)((10999L - var5_long) / 1000L);
           if (0 >= var7) {
             re.a((byte) -71);
@@ -164,14 +164,14 @@ final class nj extends pn implements hh {
         }
     }
 
-    public static void b(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_X = null;
         if (param0) {
-          nj.b(false);
+          nj.releaseStatics(false);
         }
     }
 
-    public final void a(int param0, int param1, an param2, int param3, int param4) {
+    public final void onButtonActivated(int param0, int param1, an param2, int param3, int param4) {
         RuntimeException var6 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;

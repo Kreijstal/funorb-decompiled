@@ -24,7 +24,7 @@ final class hn extends IntrusiveNode {
             ng.field_a.field_I.a(param1, (byte) 53);
           }
           if (param0) {
-            hn.c((byte) -67);
+            hn.releaseStatics((byte) -67);
           }
           if (ni.field_c == null) {
             return;
@@ -45,7 +45,7 @@ final class hn extends IntrusiveNode {
         }
     }
 
-    public static void c(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_q = null;
         int var1 = 94 / ((param0 + 33) / 38);
         field_p = null;

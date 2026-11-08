@@ -21,7 +21,7 @@ final class ek extends WorldObject {
         this.unlinkSecondary((byte) -56);
         td.field_c.addLast((IntrusiveNode) (this), 87);
         if (param0 != -18475) {
-          ek.i(112);
+          ek.releaseStatics(112);
         }
     }
 
@@ -103,7 +103,7 @@ final class ek extends WorldObject {
         }
     }
 
-    public static void i(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 0) {
           return;
         }

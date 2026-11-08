@@ -106,7 +106,7 @@ final class Zombie extends Mover {
             DualLinkNode.field_k[0].b(var3_int, var4, 128, 16711680);
           } else {
             if (this.field_tb) {
-              DualLinkNode.field_k[0].b(var3_int, var4);
+              DualLinkNode.field_k[0].drawTransparent(var3_int, var4);
             } else {
               if (this.field_qb) {
                 DualLinkNode.field_k[0].e(var3_int, var4, 96);
@@ -333,10 +333,10 @@ final class Zombie extends Mover {
           if (this.state == 8) {
             ki.a((byte) -99, md.field_vb);
             Rasterizer.clear();
-            DualLinkNode.field_k[cg.field_d[8] + this.field_G + this.field_Cb].b(0, 0);
+            DualLinkNode.field_k[cg.field_d[8] + this.field_G + this.field_Cb].drawTransparent(0, 0);
             pa.a(-21189);
             ho.a(md.field_vb, this.o((byte) -83), this.field_fb, -128);
-            md.field_vb.b(this.field_kb + var3_int, var4 + this.field_mb);
+            md.field_vb.drawTransparent(this.field_kb + var3_int, var4 + this.field_mb);
             return;
           }
           if (param0 > -76) {
@@ -355,7 +355,7 @@ final class Zombie extends Mover {
             }
           }
           if (null != this.field_U) {
-            if (this.field_U.l()) {
+            if (this.field_U.isSamplePositionOutOfRange()) {
               this.field_U = null;
             } else {
               this.field_U.h(pj.a(var4, 68, var3_int));
@@ -373,7 +373,7 @@ final class Zombie extends Mover {
               } else {
                 stackIn_37_2 = var3_int;
               }
-              so.a(stackIn_36_0, stackIn_36_1 + stackIn_37_2, var4 + 43);
+              so.drawTransparent(stackIn_36_0, stackIn_36_1 + stackIn_37_2, var4 + 43);
             }
             var5 = cg.field_d[this.state] + this.field_G;
             if (this.field_ob &&
@@ -386,7 +386,7 @@ final class Zombie extends Mover {
             ki.a((byte) -100, md.field_vb);
             Rasterizer.clear();
             if (this.field_S != 3) {
-              ad.field_g[this.field_t][var5].b(3, 3);
+              ad.field_g[this.field_t][var5].drawTransparent(3, 3);
             } else {
               ad.field_g[this.field_t][var5].drawMirrored(3, 3);
             }
@@ -409,17 +409,17 @@ final class Zombie extends Mover {
                   var6 = 48 + (-this.field_bb + 1000) / 2;
                 }
               }
-              md.field_vb.a(-((-48 + var6) / 2) + var3_int, var4 - (-48 + var6), var6, var6, 128);
+              md.field_vb.drawScaledWithOpacity(-((-48 + var6) / 2) + var3_int, var4 - (-48 + var6), var6, var6, 128);
             }
             if (0 >= this.field_Z) {
               if (this.field_eb &&
                 0L == (tp.field_p & 1L)) {
-                md.field_vb.h(-3 + var3_int, -3 + var4, 16777215);
+                md.field_vb.drawSilhouette(-3 + var3_int, -3 + var4, 16777215);
               } else {
-                md.field_vb.b(var3_int - 3, var4 - 3);
+                md.field_vb.drawTransparent(var3_int - 3, var4 - 3);
               }
             } else {
-              md.field_vb.d(var3_int - 3, -3 + var4, 142);
+              md.field_vb.drawTransparentWithOpacity(var3_int - 3, -3 + var4, 142);
             }
             if (kc.field_Q) {
               pc.field_k.drawStringCentered(s.a(1938762664, "<%0>,<%1>", new String[]{Integer.toString(this.field_B), Integer.toString(this.field_u)}), 24 + var3_int, var4 - 5, 16777215, 0);
@@ -427,7 +427,7 @@ final class Zombie extends Mover {
             if (nk.field_d) {
               var6Lifetime1 = param1.worldToScreenX(this.getX(true), (byte) -96);
               var7 = param1.worldToScreenY(this.getY(237239984), 0);
-              Rasterizer.d(var6Lifetime1, var7, 3, 16711935);
+              Rasterizer.drawCircleOutline(var6Lifetime1, var7, 3, 16711935);
             }
             if (b.field_h) {
               pc.field_k.drawStringCentered(s.a(1938762664, "<%0>", new String[]{Integer.toString(this.field_gb)}), var3_int + 24, var4 - 5, 16777215, 0);
@@ -705,7 +705,7 @@ final class Zombie extends Mover {
         }
     }
 
-    public static void w(int param0) {
+    public static void releaseStatics(int param0) {
         field_Fb = (Sprite[][]) null;
         if (param0 != 54) {
           field_nb = (int[]) null;
@@ -899,8 +899,8 @@ final class Zombie extends Mover {
           this.a(-104, -36, -28, 47, -27);
         }
         int var6 = 16711935;
-        Rasterizer.e(param2, param0, param4, param3, var6);
-        Rasterizer.g(param4, param3, 1, var6);
+        Rasterizer.drawLine(param2, param0, param4, param3, var6);
+        Rasterizer.fillCircle(param4, param3, 1, var6);
     }
 
     final void r(int param0) {

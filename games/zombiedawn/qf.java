@@ -24,26 +24,26 @@ class qf {
     private PcmStream[] field_h;
     private boolean field_e;
 
-    private final static void a(PcmStream param0) {
+    private final static void deactivateTree(PcmStream param0) {
         param0.active = false;
         if (param0.field_h != null) {
           param0.field_h.field_h = 0;
         }
         PcmStream var1 = param0.firstSubstream();
         while (var1 != null) {
-          qf.a(var1);
+          qf.deactivateTree(var1);
           var1 = param0.nextSubstream();
         }
     }
 
-    public static void c() {
+    public static void releaseStatics() {
         field_j = null;
     }
 
-    void h() {
+    void closeDevice() {
     }
 
-    final synchronized void g() {
+    final synchronized void serviceOutput() {
         try {
           Throwable decompiledCaughtException = null;
           long var1 = 0L;
@@ -53,15 +53,15 @@ class qf {
           if (this.field_k) {
             return;
           }
-          var1 = pd.a(-22826);
+          var1 = pd.monotonicTimeMillis(-22826);
           try {
             if (var1 > this.field_d + 6000L) {
               this.field_d = var1 - 6000L;
             }
             while (var1 > this.field_d + 5000L) {
-              this.b(256);
+              this.skipFrames(256);
               this.field_d = this.field_d + (long)(256000 / field_p);
-              var1 = pd.a(-22826);
+              var1 = pd.monotonicTimeMillis(-22826);
             }
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -76,11 +76,11 @@ class qf {
               if (var1 < this.field_o) {
                 return;
               }
-              this.a(this.field_g);
+              this.openDevice(this.field_g);
               this.field_o = 0L;
               this.field_e = true;
             }
-            var3_int = this.f();
+            var3_int = this.getQueuedFrames();
             if (this.field_m - var3_int > this.field_n) {
               this.field_n = this.field_m - var3_int;
             }
@@ -93,8 +93,8 @@ class qf {
               if (this.field_g > 16384) {
                 this.field_g = 16384;
               }
-              this.h();
-              this.a(this.field_g);
+              this.closeDevice();
+              this.openDevice(this.field_g);
               var3_int = 0;
               this.field_e = true;
               if (var4 + 256 > this.field_g) {
@@ -103,8 +103,8 @@ class qf {
               }
             }
             while (var3_int < var4) {
-              this.a(this.field_r, 256);
-              this.b();
+              this.mixBlock(this.field_r, 256);
+              this.writeMixBlock();
               var3_int += 256;
             }
             if (var1 > this.field_c) {
@@ -113,7 +113,7 @@ class qf {
               } else {
                 if (this.field_n == 0 &&
                   this.field_s == 0) {
-                  this.h();
+                  this.closeDevice();
                   this.field_o = var1 + 2000L;
                   return;
                 }
@@ -127,7 +127,7 @@ class qf {
           } catch (java.lang.Exception decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
             var3 = (Exception) (Object) decompiledCaughtException;
-            this.h();
+            this.closeDevice();
             this.field_o = var1 + 2000L;
           }
           return;
@@ -138,14 +138,14 @@ class qf {
         }
     }
 
-    final synchronized void d() {
+    final synchronized void flushDeviceSafely() {
         try {
           this.field_e = true;
           try {
-            this.e();
+            this.flushDevice();
           } catch (Exception exception) {
-            this.h();
-            this.field_o = pd.a(-22826) + 2000L;
+            this.closeDevice();
+            this.field_o = pd.monotonicTimeMillis(-22826) + 2000L;
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -154,11 +154,11 @@ class qf {
         }
     }
 
-    final synchronized void b(PcmStream param0) {
+    final synchronized void setStream(PcmStream param0) {
         this.field_f = param0;
     }
 
-    private final void a(PcmStream param0, int param1) {
+    private final void enqueueByPriority(PcmStream param0, int param1) {
         int var3 = param1 >> 5;
         PcmStream var4 = this.field_h[var3];
         if (var4 == null) {
@@ -170,7 +170,7 @@ class qf {
         param0.field_j = param1;
     }
 
-    final static qf a(PlatformTaskDispatcher param0, java.awt.Component param1, int param2, int param3) {
+    final static qf create(PlatformTaskDispatcher param0, java.awt.Component param1, int param2, int param3) {
         try {
           od var4 = null;
           Throwable var4_ref = null;
@@ -200,12 +200,12 @@ class qf {
               }
               ((qf) ((Object) stackIn_10_0)).field_r = new int[stackIn_10_1 * stackIn_11_2];
               ((qf) ((Object) var4)).field_u = param3;
-              ((qf) ((Object) var4)).a(param1);
+              ((qf) ((Object) var4)).initDevice(param1);
               ((qf) ((Object) var4)).field_g = (param3 & -1024) + 1024;
               if (((qf) ((Object) var4)).field_g > 16384) {
                 ((qf) ((Object) var4)).field_g = 16384;
               }
-              ((qf) ((Object) var4)).a(((qf) ((Object) var4)).field_g);
+              ((qf) ((Object) var4)).openDevice(((qf) ((Object) var4)).field_g);
               if (field_q > 0 &&
                 field_j == null) {
                 field_j = new cp();
@@ -234,7 +234,7 @@ class qf {
         }
     }
 
-    private final void a(int[] param0, int param1) {
+    private final void mixBlock(int[] param0, int param1) {
         int var3;
         int var4;
         int var5;
@@ -260,13 +260,13 @@ class qf {
         if (field_l) {
           var3 = var3 << 1;
         }
-        gp.a(param0, 0, var3);
+        gp.clearInts(param0, 0, var3);
         this.field_i = this.field_i - param1;
         if (this.field_f != null &&
           this.field_i <= 0) {
           this.field_i = this.field_i + (field_p >> 4);
-          qf.a(this.field_f);
-          this.a(this.field_f, this.field_f.b());
+          qf.deactivateTree(this.field_f);
+          this.enqueueByPriority(this.field_f, this.field_f.priority());
           var4 = 0;
           var5 = 255;
           var6 = 7;
@@ -297,7 +297,7 @@ class qf {
                       continue;
                     }
                     var11.active = true;
-                    var13 = var11.a();
+                    var13 = var11.activity();
                     var4 = var4 + var13;
                     if (var12 != null) {
                       var12.field_h = var12.field_h + var13;
@@ -309,7 +309,7 @@ class qf {
                     if (var14Lifetime2 != null) {
                       var15_int = var11.field_j;
                       while (var14Lifetime2 != null) {
-                        this.a(var14Lifetime2, var15_int * var14Lifetime2.b() >> 8);
+                        this.enqueueByPriority(var14Lifetime2, var15_int * var14Lifetime2.priority() >> 8);
                         var14Lifetime2 = var11.nextSubstream();
                       }
                     }
@@ -354,10 +354,10 @@ class qf {
         if (this.field_f != null) {
           this.field_f.fill(param0, 0, param1);
         }
-        this.field_d = pd.a(-22826);
+        this.field_d = pd.monotonicTimeMillis(-22826);
     }
 
-    private final void b(int param0) {
+    private final void skipFrames(int param0) {
         this.field_i = this.field_i - param0;
         if (this.field_i < 0) {
           this.field_i = 0;
@@ -368,10 +368,10 @@ class qf {
         }
     }
 
-    void b() throws Exception {
+    void writeMixBlock() throws Exception {
     }
 
-    final synchronized void a() {
+    final synchronized void shutdown() {
         int var2 = 0;
         int var1;
         if (field_j != null) {
@@ -392,22 +392,22 @@ class qf {
             field_j = null;
           }
         }
-        this.h();
+        this.closeDevice();
         this.field_r = null;
         this.field_k = true;
     }
 
-    int f() throws Exception {
+    int getQueuedFrames() throws Exception {
         return this.field_g;
     }
 
-    void a(int param0) throws Exception {
+    void openDevice(int param0) throws Exception {
     }
 
-    void a(java.awt.Component param0) throws Exception {
+    void initDevice(java.awt.Component param0) throws Exception {
     }
 
-    final static void a(int param0, boolean param1, int param2) {
+    final static void configure(int param0, boolean param1, int param2) {
         if (param0 < 8000 ||
           param0 > 48000) {
           throw new IllegalArgumentException();
@@ -417,13 +417,13 @@ class qf {
         field_q = param2;
     }
 
-    void e() throws Exception {
+    void flushDevice() throws Exception {
     }
 
     qf() {
         this.field_b = 32;
         this.field_k = false;
-        this.field_d = pd.a(-22826);
+        this.field_d = pd.monotonicTimeMillis(-22826);
         this.field_s = 0;
         this.field_m = 0;
         this.field_o = 0L;

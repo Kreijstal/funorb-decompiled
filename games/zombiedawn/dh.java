@@ -12,7 +12,7 @@ abstract class dh {
 
     abstract void a(java.awt.Graphics param0, int param1, int param2, byte param3);
 
-    final void b(int param0) {
+    final void makeRasterTarget(int param0) {
         int var2 = -12 % ((param0 + 53) / 62);
         Rasterizer.setBuffer(this.field_c, this.field_d, this.field_a);
     }
@@ -95,7 +95,7 @@ abstract class dh {
         rc.field_p = bb.field_f;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_e = null;
         if (param0 != 16) {
           dh.c(-103);

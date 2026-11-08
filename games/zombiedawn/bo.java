@@ -34,11 +34,11 @@ final class bo extends IntrusiveNode {
         return var1;
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         field_p = null;
         field_o = null;
         if (param0 != 7644) {
-          bo.c(-57);
+          bo.releaseStatics(-57);
         }
     }
 
@@ -116,14 +116,14 @@ final class bo extends IntrusiveNode {
           nm.field_b = true;
           if (param1 >= 0) {
             rc.field_w = me.field_Fb[vk.field_c][vf.field_f][sm.field_a];
-            var3 = bj.field_q.b(rc.field_w, 400);
+            var3 = bj.field_q.wrappedLineCount(rc.field_w, 400);
             te.field_bb = 20 + (20 + (var3 * (bj.field_q.field_I + bj.field_q.field_x) + 4));
             return;
           }
           var3Lifetime6 = param1;
           if (-2 == var3Lifetime6) {
             rc.field_w = so.a(jp.field_g);
-            var3Lifetime6 = bj.field_q.b(rc.field_w, 400);
+            var3Lifetime6 = bj.field_q.wrappedLineCount(rc.field_w, 400);
             te.field_bb = 20 + (20 + (var3Lifetime6 * (bj.field_q.field_I + bj.field_q.field_x) + 4));
             return;
           }
@@ -131,7 +131,7 @@ final class bo extends IntrusiveNode {
             throw new IllegalArgumentException("Illegal tutorial frame: " + param1);
           }
           rc.field_w = so.a(qg.field_g);
-          var3Lifetime7 = bj.field_q.b(rc.field_w, 400);
+          var3Lifetime7 = bj.field_q.wrappedLineCount(rc.field_w, 400);
           te.field_bb = 20 + (20 + (var3Lifetime7 * (bj.field_q.field_I + bj.field_q.field_x) + 4));
           return;
         }
@@ -139,14 +139,14 @@ final class bo extends IntrusiveNode {
           nm.field_b = true;
           if (param1 >= 0) {
             rc.field_w = me.field_Fb[vk.field_c][vf.field_f][sm.field_a];
-            var3Lifetime1 = bj.field_q.b(rc.field_w, 400);
+            var3Lifetime1 = bj.field_q.wrappedLineCount(rc.field_w, 400);
             te.field_bb = 20 + (20 + (var3Lifetime1 * (bj.field_q.field_I + bj.field_q.field_x) + 4));
             return;
           }
           var3Lifetime1Lifetime1 = param1;
           if (-2 == var3Lifetime1Lifetime1) {
             rc.field_w = so.a(jp.field_g);
-            var3Lifetime1Lifetime1 = bj.field_q.b(rc.field_w, 400);
+            var3Lifetime1Lifetime1 = bj.field_q.wrappedLineCount(rc.field_w, 400);
             te.field_bb = 20 + (20 + (var3Lifetime1Lifetime1 * (bj.field_q.field_I + bj.field_q.field_x) + 4));
             return;
           }
@@ -154,7 +154,7 @@ final class bo extends IntrusiveNode {
             throw new IllegalArgumentException("Illegal tutorial frame: " + param1);
           }
           rc.field_w = so.a(qg.field_g);
-          var3Lifetime1Lifetime2 = bj.field_q.b(rc.field_w, 400);
+          var3Lifetime1Lifetime2 = bj.field_q.wrappedLineCount(rc.field_w, 400);
           te.field_bb = 20 + (20 + (var3Lifetime1Lifetime2 * (bj.field_q.field_I + bj.field_q.field_x) + 4));
           return;
         }
@@ -162,14 +162,14 @@ final class bo extends IntrusiveNode {
           nm.field_b = true;
           if (param1 >= 0) {
             rc.field_w = me.field_Fb[vk.field_c][vf.field_f][sm.field_a];
-            var3Lifetime2 = bj.field_q.b(rc.field_w, 400);
+            var3Lifetime2 = bj.field_q.wrappedLineCount(rc.field_w, 400);
             te.field_bb = 20 + (20 + (var3Lifetime2 * (bj.field_q.field_I + bj.field_q.field_x) + 4));
             return;
           }
           var3Lifetime2Lifetime1 = param1;
           if (-2 == var3Lifetime2Lifetime1) {
             rc.field_w = so.a(jp.field_g);
-            var3Lifetime2Lifetime1 = bj.field_q.b(rc.field_w, 400);
+            var3Lifetime2Lifetime1 = bj.field_q.wrappedLineCount(rc.field_w, 400);
             te.field_bb = 20 + (20 + (var3Lifetime2Lifetime1 * (bj.field_q.field_I + bj.field_q.field_x) + 4));
             return;
           }
@@ -177,21 +177,21 @@ final class bo extends IntrusiveNode {
             throw new IllegalArgumentException("Illegal tutorial frame: " + param1);
           }
           rc.field_w = so.a(qg.field_g);
-          var3Lifetime2Lifetime2 = bj.field_q.b(rc.field_w, 400);
+          var3Lifetime2Lifetime2 = bj.field_q.wrappedLineCount(rc.field_w, 400);
           te.field_bb = 20 + (20 + (var3Lifetime2Lifetime2 * (bj.field_q.field_I + bj.field_q.field_x) + 4));
           return;
         }
         nm.field_b = false;
         if (param1 >= 0) {
           rc.field_w = me.field_Fb[vk.field_c][vf.field_f][sm.field_a];
-          var3Lifetime3 = bj.field_q.b(rc.field_w, 400);
+          var3Lifetime3 = bj.field_q.wrappedLineCount(rc.field_w, 400);
           te.field_bb = 20 + (20 + (var3Lifetime3 * (bj.field_q.field_I + bj.field_q.field_x) + 4));
           return;
         }
         var3Lifetime4 = param1;
         if (-2 == var3Lifetime4) {
           rc.field_w = so.a(jp.field_g);
-          var3Lifetime4 = bj.field_q.b(rc.field_w, 400);
+          var3Lifetime4 = bj.field_q.wrappedLineCount(rc.field_w, 400);
           te.field_bb = 20 + (20 + (var3Lifetime4 * (bj.field_q.field_I + bj.field_q.field_x) + 4));
           return;
         }
@@ -199,7 +199,7 @@ final class bo extends IntrusiveNode {
           throw new IllegalArgumentException("Illegal tutorial frame: " + param1);
         }
         rc.field_w = so.a(qg.field_g);
-        var3Lifetime5 = bj.field_q.b(rc.field_w, 400);
+        var3Lifetime5 = bj.field_q.wrappedLineCount(rc.field_w, 400);
         te.field_bb = 20 + (20 + (var3Lifetime5 * (bj.field_q.field_I + bj.field_q.field_x) + 4));
     }
 

@@ -27,7 +27,7 @@ final class nh extends hp implements hh {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 1) {
-            this.c((byte) -2);
+            this.blur((byte) -2);
           }
           stackIn_3_0 = super.a(param0, 1, param2, param3, param4, param5, param6);
           return stackIn_3_0;
@@ -45,7 +45,7 @@ final class nh extends hp implements hh {
         }
     }
 
-    public static void f(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_R = null;
         int var1 = -87 / ((64 - param0) / 49);
     }
@@ -152,7 +152,7 @@ final class nh extends hp implements hh {
         this.c(param2, param1, param3, param4, 81);
     }
 
-    final boolean a(int param0, int param1, UiWidget param2, char param3) {
+    final boolean requestKeyboardFocus(int param0, int param1, UiWidget param2, char param3) {
         boolean stackIn_56_0 = false;
         RuntimeException stackIn_59_0 = null;
         StringBuilder stackIn_59_1 = null;
@@ -242,7 +242,7 @@ final class nh extends hp implements hh {
             }
           }
           if (param1 != 80) {
-            stackIn_56_0 = super.a(-119, param1, param2, param3);
+            stackIn_56_0 = super.requestKeyboardFocus(-119, param1, param2, param3);
             return stackIn_56_0;
           }
           this.g((byte) -44);
@@ -261,9 +261,9 @@ final class nh extends hp implements hh {
         }
     }
 
-    final void c(byte param0) {
+    final void blur(byte param0) {
         this.field_S = false;
-        super.c(param0);
+        super.blur(param0);
     }
 
     final boolean e(byte param0) {
@@ -353,7 +353,7 @@ final class nh extends hp implements hh {
         }
     }
 
-    final boolean a(byte param0, UiWidget param1) {
+    final boolean focusNext(byte param0, UiWidget param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -363,7 +363,7 @@ final class nh extends hp implements hh {
           if (param0 < 67) {
             this.field_L = (Font) null;
           }
-          param1.c((byte) 57);
+          param1.blur((byte) 57);
           this.field_S = true;
           this.field_U = "";
           if (null != this.field_v &&
@@ -500,7 +500,7 @@ final class nh extends hp implements hh {
         return super.d(-89);
     }
 
-    public final void a(int param0, int param1, an param2, int param3, int param4) {
+    public final void onButtonActivated(int param0, int param1, an param2, int param3, int param4) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;

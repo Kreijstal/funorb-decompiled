@@ -123,7 +123,7 @@ final class em extends eh implements hh {
         }
     }
 
-    final boolean a(int param0, int param1, UiWidget param2, char param3) {
+    final boolean requestKeyboardFocus(int param0, int param1, UiWidget param2, char param3) {
         RuntimeException stackIn_45_0 = null;
         StringBuilder stackIn_45_1 = null;
         String stackIn_46_2 = null;
@@ -132,7 +132,7 @@ final class em extends eh implements hh {
         RuntimeException var5 = null;
         try {
           var5_int = 66 % ((param0 + 83) / 32);
-          if (super.a(-120, param1, param2, param3)) {
+          if (super.requestKeyboardFocus(-120, param1, param2, param3)) {
             return true;
           }
           if (this.field_T &&
@@ -444,7 +444,7 @@ final class em extends eh implements hh {
         }
     }
 
-    public final void a(int param0, int param1, an param2, int param3, int param4) {
+    public final void onButtonActivated(int param0, int param1, an param2, int param3, int param4) {
         int var7 = 0;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
@@ -518,7 +518,7 @@ final class em extends eh implements hh {
         }
     }
 
-    public static void g(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_K = null;
         if (param0 >= -19) {
           return;
@@ -619,7 +619,7 @@ final class em extends eh implements hh {
         this.a(var2Lifetime1 < var3Lifetime1 ? (this.field_F.field_k - var2Lifetime1 << 16) / (var3Lifetime1 - var2Lifetime1) : 0, 89);
     }
 
-    final boolean a(byte param0, UiWidget param1) {
+    final boolean focusNext(byte param0, UiWidget param1) {
         ij var3 = null;
         RuntimeException var3_ref = null;
         RuntimeException stackIn_12_0 = null;
@@ -634,7 +634,7 @@ final class em extends eh implements hh {
           if (var3 == null) {
             return false;
           }
-          if (!((UiWidget) ((Object) var3)).a((byte) 104, param1)) {
+          if (!((UiWidget) ((Object) var3)).focusNext((byte) 104, param1)) {
             return false;
           }
           return true;
@@ -669,7 +669,7 @@ final class em extends eh implements hh {
           this.field_I.field_i = -this.field_I.field_k + this.field_i;
         }
         if (param0 < 38) {
-          em.g((byte) 122);
+          em.releaseStatics((byte) 122);
           this.f((byte) -119);
           if (this.field_S == null) {
             this.field_I.field_j = 0;

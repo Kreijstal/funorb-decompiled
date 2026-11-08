@@ -75,9 +75,9 @@ class id extends WorldObject {
           if (this.field_E <= 0) {
             if (!this.field_P) {
               if (!this.field_J) {
-                tm.field_h[this.field_F].b(var3_int, var4);
+                tm.field_h[this.field_F].drawTransparent(var3_int, var4);
               } else {
-                tm.field_h[this.field_F].f(var3_int, var4);
+                tm.field_h[this.field_F].drawVerticalFlip(var3_int, var4);
               }
             } else {
               tm.field_h[this.field_F].drawMirrored(var3_int, var4);
@@ -85,9 +85,9 @@ class id extends WorldObject {
             if (this.field_O) {
               if (!this.field_P) {
                 if (!this.field_J) {
-                  tm.field_h[-8 + this.field_F].b(var3_int, -24 + var4);
+                  tm.field_h[-8 + this.field_F].drawTransparent(var3_int, -24 + var4);
                 } else {
-                  tm.field_h[-8 + this.field_F].f(var3_int, var4 - 24);
+                  tm.field_h[-8 + this.field_F].drawVerticalFlip(var3_int, var4 - 24);
                 }
               } else {
                 tm.field_h[this.field_F - 8].drawMirrored(var3_int, -24 + var4);
@@ -96,12 +96,12 @@ class id extends WorldObject {
           } else {
             if (ng.field_e &&
               this.field_E > 0) {
-              Rasterizer.g(8 + var3_int, 1 + var4, 14, bb.field_e[-1 + this.field_E]);
+              Rasterizer.fillCircle(8 + var3_int, 1 + var4, 14, bb.field_e[-1 + this.field_E]);
             }
             if (!this.field_P) {
-              tm.field_h[this.field_F].g(var3_int, var4, bb.field_e[this.field_E - 1]);
+              tm.field_h[this.field_F].drawTintedGrayscale(var3_int, var4, bb.field_e[this.field_E - 1]);
               if (this.field_O) {
-                tm.field_h[-8 + this.field_F].g(var3_int, -24 + var4, bb.field_e[this.field_E - 1]);
+                tm.field_h[-8 + this.field_F].drawTintedGrayscale(var3_int, -24 + var4, bb.field_e[this.field_E - 1]);
               }
             } else {
               so.a(tm.field_h[this.field_F], var3_int, var4, bb.field_e[-1 + this.field_E]);
@@ -128,9 +128,9 @@ class id extends WorldObject {
         }
     }
 
-    public static void i(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 >= -33) {
-          id.i(45);
+          id.releaseStatics(45);
         }
         field_L = null;
     }

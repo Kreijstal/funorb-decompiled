@@ -27,7 +27,7 @@ final class lf extends IntrusiveNode {
     int field_x;
     int field_i;
 
-    final static boolean a(String param0, String param1, int param2) {
+    final static boolean containsForwardOrReversed(String param0, String param1, int param2) {
         String var3 = null;
         boolean stackIn_14_0 = false;
         RuntimeException stackIn_17_0 = null;
@@ -87,7 +87,7 @@ final class lf extends IntrusiveNode {
         int[] var4 = (int[]) null;
         Rasterizer.setBuffer((int[]) null, 0, 0);
         cn.field_f = l.a(-1, param0, (java.awt.Component) ((Object) cj.field_d), param1);
-        cn.field_f.b(param2 - 129);
+        cn.field_f.makeRasterTarget(param2 - 129);
         ba.a(18002, param0 / 2, param1 / 2);
         pl.a(param1, param0, (byte) 50);
         ep.a(param0, param1, -21141);
@@ -103,7 +103,7 @@ final class lf extends IntrusiveNode {
           return;
         }
         String var3 = (String) null;
-        lf.a((String) null, (String) null, -37);
+        lf.containsForwardOrReversed((String) null, (String) null, -37);
         this.field_t = null;
         this.field_E = null;
     }

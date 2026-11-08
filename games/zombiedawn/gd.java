@@ -53,17 +53,17 @@ final class gd {
           ul.field_d = param0;
           return;
         }
-        gd.a((byte) -51);
+        gd.releaseStatics((byte) -51);
         te.field_eb = param0;
         ul.field_d = param0;
     }
 
     final static long a(int param0) {
         if (param0 > -99) {
-          gd.a((byte) -69);
-          return pd.a(-22826) - pi.field_i;
+          gd.releaseStatics((byte) -69);
+          return pd.monotonicTimeMillis(-22826) - pi.field_i;
         }
-        return pd.a(-22826) - pi.field_i;
+        return pd.monotonicTimeMillis(-22826) - pi.field_i;
     }
 
     private final void a(boolean param0) {
@@ -73,7 +73,7 @@ final class gd {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 > -25) {
           return;
         }

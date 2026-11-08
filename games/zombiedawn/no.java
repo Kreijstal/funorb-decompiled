@@ -52,12 +52,12 @@ final class no extends WorldObject {
           var8 = -1 + (var3_int + var6);
           Mover.$cfr$intArgs$a$3aedf8649552(var4, 99, 3 + var8, var4 + this.field_F, -2 + var7);
           var9 = 0;
-          Rasterizer.e(var7, var4, -var5 + var7, -2 + (var4 + this.field_F), var9);
-          Rasterizer.e(var7 + 1, var4, 1 + (-var5 + var7), this.field_F + var4, var9);
-          Rasterizer.e(var7 + 2, var4, 2 + (var7 - var5), -2 + var4 + this.field_F, var9);
-          Rasterizer.e(var8, var4, var8 - var5, -2 + (var4 + this.field_F), var9);
-          Rasterizer.e(var8 - 1, var4, -var5 + var8 - 1, this.field_F + var4, var9);
-          Rasterizer.e(var8 - 2, var4, var8 + (-var5 - 2), -2 + this.field_F + var4, var9);
+          Rasterizer.drawLine(var7, var4, -var5 + var7, -2 + (var4 + this.field_F), var9);
+          Rasterizer.drawLine(var7 + 1, var4, 1 + (-var5 + var7), this.field_F + var4, var9);
+          Rasterizer.drawLine(var7 + 2, var4, 2 + (var7 - var5), -2 + var4 + this.field_F, var9);
+          Rasterizer.drawLine(var8, var4, var8 - var5, -2 + (var4 + this.field_F), var9);
+          Rasterizer.drawLine(var8 - 1, var4, -var5 + var8 - 1, this.field_F + var4, var9);
+          Rasterizer.drawLine(var8 - 2, var4, var8 + (-var5 - 2), -2 + this.field_F + var4, var9);
           for (var10 = -3 + this.field_F + var4; var4 <= var10; var10 -= 7) {
             Rasterizer.drawHorizontalLine(var7 + 2, var10, -3 + 2 * var6, var9);
           }
@@ -81,10 +81,10 @@ final class no extends WorldObject {
         }
     }
 
-    public static void b(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_G = null;
         if (!param0) {
-          no.b(false);
+          no.releaseStatics(false);
           field_E = null;
           return;
         }

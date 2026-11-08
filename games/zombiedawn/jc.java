@@ -35,7 +35,7 @@ final class jc extends IntrusiveNode {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_n = null;
         field_l = null;
         field_p = null;
@@ -43,7 +43,7 @@ final class jc extends IntrusiveNode {
         field_t = null;
         field_r = null;
         if (param0 != 830) {
-          jc.a(-14);
+          jc.releaseStatics(-14);
         }
     }
 

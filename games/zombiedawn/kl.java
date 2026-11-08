@@ -28,65 +28,65 @@ final class kl extends al {
           this.d(-105);
           return;
         }
-        Rasterizer.c(-32 + vh.field_b, 0, 672 + vh.field_b, nh.field_P);
+        Rasterizer.intersectClip(-32 + vh.field_b, 0, 672 + vh.field_b, nh.field_P);
         if (260 <= this.field_m) {
           if (this.field_m >= 388) {
             if (this.field_m < 508) {
               nn.field_j.drawWithOffsets(var2, var3);
-              we.field_Ub.b(var2, 480 + (var3 - we.field_Ub.field_q));
+              we.field_Ub.drawTransparent(var2, 480 + (var3 - we.field_Ub.field_q));
             } else {
               if (this.field_m >= 1564) {
                 if (this.field_m < 1724) {
                   nn.field_j.drawWithOffsets(-264 + var2, var3);
-                  pg.field_t.b(var2 + 270, 200 + var3);
+                  pg.field_t.drawTransparent(var2 + 270, 200 + var3);
                 } else {
                   if (this.field_m >= 1852) {
                     if (this.field_m >= 2152) {
                     }
                   } else {
-                    nn.field_j.b(-264 + var2, var3);
-                    pg.field_t.b(var2 + 270, 200 + var3);
-                    Rasterizer.a(0, var3, bd.field_e, 550, 0, 2 * this.field_m - 3448);
+                    nn.field_j.drawTransparent(-264 + var2, var3);
+                    pg.field_t.drawTransparent(var2 + 270, 200 + var3);
+                    Rasterizer.fillRectangleBlended(0, var3, bd.field_e, 550, 0, 2 * this.field_m - 3448);
                   }
                 }
               } else {
                 var4 = -508 + this.field_m;
                 nn.field_j.drawWithOffsets(-(var4 >> 2) + var2, var3);
                 var5 = var4 * 3 >> 2;
-                we.field_Ub.b(-var5 + var2, var3 + 480 - we.field_Ub.field_q);
-                pg.field_t.b(1062 + (var2 - var5), 200 + var3);
+                we.field_Ub.drawTransparent(-var5 + var2, var3 + 480 - we.field_Ub.field_q);
+                pg.field_t.drawTransparent(1062 + (var2 - var5), 200 + var3);
               }
             }
           } else {
-            nn.field_j.b(var2, var3);
-            we.field_Ub.b(var2, -we.field_Ub.field_q + (480 + var3));
-            Rasterizer.a(0, var3, bd.field_e, 550, 0, -(2 * (-260 + this.field_m)) + 256);
+            nn.field_j.drawTransparent(var2, var3);
+            we.field_Ub.drawTransparent(var2, -we.field_Ub.field_q + (480 + var3));
+            Rasterizer.fillRectangleBlended(0, var3, bd.field_e, 550, 0, -(2 * (-260 + this.field_m)) + 256);
           }
         }
         this.d(-119);
-        Rasterizer.c(-32 + vh.field_b, 0, vh.field_b + 672, nh.field_P);
+        Rasterizer.intersectClip(-32 + vh.field_b, 0, vh.field_b + 672, nh.field_P);
         if (this.field_m > 120 &&
           this.field_m < 388) {
           bj.field_q.drawStringCentered(rg.field_L, bd.field_d, Math.min(510 + id.field_M, nh.field_P - 20), 16777215, 0);
         }
         if (640 < bd.field_e) {
           var4Lifetime1 = 8;
-          Rasterizer.g(-1 + vh.field_b, id.field_M, 550, 0, 4);
+          Rasterizer.drawVerticalLineAlpha(-1 + vh.field_b, id.field_M, 550, 0, 4);
           for (var5Lifetime1 = vh.field_b - 2; 0 < var5Lifetime1; var5Lifetime1--) {
             if (256 > var4Lifetime1) {
-              Rasterizer.g(var5Lifetime1, id.field_M, 550, 0, var4Lifetime1);
+              Rasterizer.drawVerticalLineAlpha(var5Lifetime1, id.field_M, 550, 0, var4Lifetime1);
               var4Lifetime1 += 8;
               continue;
             }
             break;
           }
           var4Lifetime1Lifetime1 = 8;
-          Rasterizer.g(640 + vh.field_b, id.field_M, 550, 0, 4);
+          Rasterizer.drawVerticalLineAlpha(640 + vh.field_b, id.field_M, 550, 0, 4);
           for (var5Lifetime1Lifetime1 = 640 + vh.field_b + 1; var5Lifetime1Lifetime1 < bd.field_e; var5Lifetime1Lifetime1++) {
             if (256 <= var4Lifetime1Lifetime1) {
               break;
             }
-            Rasterizer.g(var5Lifetime1Lifetime1, id.field_M, 550, 0, var4Lifetime1Lifetime1);
+            Rasterizer.drawVerticalLineAlpha(var5Lifetime1Lifetime1, id.field_M, 550, 0, var4Lifetime1Lifetime1);
             var4Lifetime1Lifetime1 += 8;
           }
         }
@@ -135,21 +135,21 @@ final class kl extends al {
             var7 = 180 + var4;
           }
           if (var9Lifetime1 != 0) {
-            sg.field_jb.a(gj.field_o[5], 60 + var2, var7, 520, 200, 0, 0, 1, 0, var8Lifetime1);
+            sg.field_jb.drawParagraph(gj.field_o[5], 60 + var2, var7, 520, 200, 0, 0, 1, 0, var8Lifetime1);
           }
           if (null == eg.field_n ||
             eg.field_n != var5) {
             this.a(var8Lifetime1, var7 - var4, 5, (String) (var5));
           }
           if (256 > var6) {
-            sg.field_jb.a((String) (var5), var2 + 60, var7, 520, 200, 0, 0, var6, 1, 0, var8Lifetime1);
+            sg.field_jb.drawParagraphAlpha((String) (var5), var2 + 60, var7, 520, 200, 0, 0, var6, 1, 0, var8Lifetime1);
             if (var9Lifetime1 == 0) {
-              so.b(lf.field_h, var2, var4, var6);
+              so.drawTransparent(lf.field_h, var2, var4, var6);
             }
           } else {
-            sg.field_jb.a((String) (var5), var2 + 60, var7, 520, 200, 0, 0, 1, 0, var8Lifetime1);
+            sg.field_jb.drawParagraph((String) (var5), var2 + 60, var7, 520, 200, 0, 0, 1, 0, var8Lifetime1);
             if (var9Lifetime1 == 0) {
-              so.a(lf.field_h, var2, var4);
+              so.drawTransparent(lf.field_h, var2, var4);
             }
           }
         }
@@ -158,10 +158,10 @@ final class kl extends al {
 
     final static void c(int param0) {
         if (null != ExceptionWrapper.field_d) {
-          ExceptionWrapper.field_d.a();
+          ExceptionWrapper.field_d.shutdown();
         }
         if (cf.field_fb != null) {
-          cf.field_fb.a();
+          cf.field_fb.shutdown();
         }
         if (param0 != -16861) {
           kl.e(-83, 78);
@@ -210,7 +210,7 @@ final class kl extends al {
         }
     }
 
-    final void a(al param0, int param1) {
+    final void onTextSubmitted(al param0, int param1) {
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -326,14 +326,14 @@ final class kl extends al {
         try {
           lf.field_h.setAsRenderTarget();
           Rasterizer.clear();
-          sg.field_jb.a(param3, 60, param1, 520, 200, 4, 0, 1, 0, param0);
+          sg.field_jb.drawParagraph(param3, 60, param1, 520, 200, 4, 0, 1, 0, param0);
           so.a(16777215);
           so.a(16777215);
           so.a(16777215);
           so.a(16777215);
-          Rasterizer.h(5, 5, 0, 0, 640, 480);
-          sg.field_jb.a(param3, 60, param1, 520, 200, param2, 0, 1, 0, param0);
-          cn.field_f.b(param2 + 11);
+          Rasterizer.blurRectangle(5, 5, 0, 0, 640, 480);
+          sg.field_jb.drawParagraph(param3, 60, param1, 520, 200, param2, 0, 1, 0, param0);
+          cn.field_f.makeRasterTarget(param2 + 11);
         } catch (RuntimeException runtimeException) {
           throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "kl.P(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
@@ -352,16 +352,16 @@ final class kl extends al {
         Sprite var2 = f.field_d;
         int var3 = 0;
         int var4 = 0;
-        var2.b(var3 + 10, var4 + 10);
+        var2.drawTransparent(var3 + 10, var4 + 10);
         for (var5 = 0; var5 < 3; var5++) {
           so.a(16777045);
         }
-        var2.d(10 + var3, 10 + var4, 0);
+        var2.drawTransparentWithOpacity(10 + var3, 10 + var4, 0);
         if (param1 != 16777045) {
           return;
         }
         try {
-          Rasterizer.h(2, 2, 0, 0, 195, 170);
+          Rasterizer.blurRectangle(2, 2, 0, 0, 195, 170);
           pa.a(-21189);
           ti.field_b = 3 * wd.field_z.length >> 2;
         } catch (RuntimeException runtimeException) {
@@ -369,7 +369,7 @@ final class kl extends al {
         }
     }
 
-    public static void e(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 != -112) {
           field_p = (cg) null;
         }

@@ -14,7 +14,7 @@ abstract class MouseWheelInput {
 
     abstract void detach(java.awt.Component param0, byte param1);
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = null;
         field_b = null;
         int var1 = 38 % ((25 - param0) / 56);

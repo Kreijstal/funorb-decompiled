@@ -112,21 +112,21 @@ final class t implements io {
           }
           var7 = var14.field_K + (param4 + param3.field_k);
           var8 = var14.field_G + param3.field_j + param2;
-          Rasterizer.g(var7, var8, var14.field_I, this.field_j);
+          Rasterizer.fillCircle(var7, var8, var14.field_I, this.field_j);
           if (-1 != var14.field_E) {
             var9 = 2.0 * (3.141592653589793 * (double)var14.field_E) / (double)var14.field_L;
             var11 = (int)(-Math.sin(var9) * (double)var14.field_I);
             var12 = (int)(Math.cos(var9) * (double)var14.field_I);
-            Rasterizer.g(var11 + var7, var8 + var12, 1, this.field_d);
+            Rasterizer.fillCircle(var11 + var7, var8 + var12, 1, this.field_d);
           }
-          Rasterizer.g(var7, var8, 2, 1);
+          Rasterizer.fillCircle(var7, var8, 2, 1);
           var9Lifetime1 = 2.0 * ((double)var14.field_J * 3.141592653589793) / (double)var14.field_L;
           var11Lifetime1 = (int)(-Math.sin(var9Lifetime1) * (double)var14.field_I);
           var12Lifetime1 = (int)(Math.cos(var9Lifetime1) * (double)var14.field_I);
-          Rasterizer.e(var7, var8, var7 + var11Lifetime1, var8 + var12Lifetime1, 1);
+          Rasterizer.drawLine(var7, var8, var7 + var11Lifetime1, var8 + var12Lifetime1, 1);
           if (null != this.field_g) {
             var13 = this.field_e + (var14.field_I + var14.field_K);
-            this.field_g.a(param3.field_o, var13 + param4 + param3.field_k, this.field_k + param3.field_j + param2, -this.field_e - (var13 - param3.field_i), param3.field_n - (this.field_e << 1), this.field_l, this.field_f, 1, 1, 0);
+            this.field_g.drawParagraph(param3.field_o, var13 + param4 + param3.field_k, this.field_k + param3.field_j + param2, -this.field_e - (var13 - param3.field_i), param3.field_n - (this.field_e << 1), this.field_l, this.field_f, 1, 1, 0);
           }
         } catch (RuntimeException runtimeException) {
           throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "t.A(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');

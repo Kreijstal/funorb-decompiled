@@ -16,7 +16,7 @@ abstract class um implements vc {
         try {
           if (gl.field_E.a(90) &&
             !param1.equals(gl.field_E.c(0))) {
-            gl.field_E = co.a(param1, -100);
+            gl.field_E = co.createNameCheckRequest(param1, -100);
           }
           if (param0 != 110) {
             var3 = (String) null;
@@ -39,7 +39,7 @@ abstract class um implements vc {
     }
 
     public final void a(int param0) {
-        this.field_b = pd.a(-22826);
+        this.field_b = pd.monotonicTimeMillis(-22826);
         if (param0 != -7674) {
           this.field_b = -52L;
         }
@@ -49,7 +49,7 @@ abstract class um implements vc {
         if (this.b(110)) {
           return null;
         }
-        if (pd.a(-22826) >= 350L + this.field_b) {
+        if (pd.monotonicTimeMillis(-22826) >= 350L + this.field_b) {
           int var2 = -9 / ((-33 - param0) / 57);
           return this.c(-111);
         }
@@ -66,7 +66,7 @@ abstract class um implements vc {
           if (this.b(121)) {
             return di.field_L;
           }
-          if (!(pd.a(-22826) >= this.field_b + 350L)) {
+          if (!(pd.monotonicTimeMillis(-22826) >= this.field_b + 350L)) {
             return se.field_l;
           }
           return this.c((byte) -7);
@@ -74,7 +74,7 @@ abstract class um implements vc {
         if (this.b(121)) {
           return di.field_L;
         }
-        if (!(pd.a(-22826) >= this.field_b + 350L)) {
+        if (!(pd.monotonicTimeMillis(-22826) >= this.field_b + 350L)) {
           return se.field_l;
         }
         return this.c((byte) -7);

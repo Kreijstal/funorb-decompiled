@@ -6,12 +6,12 @@ final class cm {
     static km[] field_b;
     static String field_a;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_c = null;
         field_b = null;
         field_a = null;
         if (param0 != 0) {
-          cm.a(61);
+          cm.releaseStatics(61);
         }
     }
 

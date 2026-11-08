@@ -10,7 +10,7 @@ final class oj {
     private float field_b;
     static String field_g;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_d = null;
         field_g = null;
         if (param0 != -14311) {
@@ -44,7 +44,7 @@ final class oj {
 
     final void a(Sprite param0, int param1, int param2, int param3, int param4, int param5) {
         try {
-          param0.b((int)this.field_a + param5 - 16, -16 + ((int)this.field_b + param2), param1);
+          param0.drawAdditive((int)this.field_a + param5 - 16, -16 + ((int)this.field_b + param2), param1);
           if (param4 > -92) {
             oj.b(-16);
           }

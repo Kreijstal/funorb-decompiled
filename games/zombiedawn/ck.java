@@ -43,7 +43,7 @@ final class ck extends IntrusiveNode {
           var3_int = param0.worldToScreenX(this.field_k, (byte) -91);
           var4 = param0.worldToScreenY(this.field_p, 0);
           if (param1 != 110) {
-            ck.d(-107);
+            ck.releaseStatics(-107);
           }
           if (null == this.field_j &&
             this.field_r == null) {
@@ -53,14 +53,14 @@ final class ck extends IntrusiveNode {
           }
           var5 = stackIn_7_0;
           if (this.field_j != null) {
-            if (this.field_j.l()) {
+            if (this.field_j.isSamplePositionOutOfRange()) {
               this.field_j = null;
             } else {
               this.field_j.h(var5);
             }
           }
           if (null != this.field_r) {
-            if (this.field_r.l()) {
+            if (this.field_r.isSamplePositionOutOfRange()) {
               this.field_r = null;
             } else {
               this.field_r.h(var5);
@@ -128,7 +128,7 @@ final class ck extends IntrusiveNode {
               var2_int = -fj.field_g.position + param1;
             }
             sn.field_c.readFully(fj.field_g.position, var2_int, fj.field_g.payload, 0);
-            pi.field_i = pd.a(-22826);
+            pi.field_i = pd.monotonicTimeMillis(-22826);
             fj.field_g.position = fj.field_g.position + var2_int;
             if (!(fj.field_g.position >= param1)) {
               return false;
@@ -155,7 +155,7 @@ final class ck extends IntrusiveNode {
         }
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 1) {
           ck.a((byte) 69, 71);
         }
@@ -187,7 +187,7 @@ final class ck extends IntrusiveNode {
           var3_int++;
         }
         if (this.field_r != null &&
-          this.field_r.l()) {
+          this.field_r.isSamplePositionOutOfRange()) {
           this.field_r = null;
         }
         stackIn_9_1 = this.field_q;
@@ -251,7 +251,7 @@ final class ck extends IntrusiveNode {
         int var3;
         var3 = ZombieDawn.field_J;
         if (param1 != 6836) {
-          ck.d(20);
+          ck.releaseStatics(20);
         }
         if (param0 == -2) {
           nm.field_b = false;

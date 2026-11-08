@@ -14,7 +14,7 @@ final class gg {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 56) {
-            gg.a((byte) -92);
+            gg.releaseStatics((byte) -92);
           }
           stackIn_3_0 = SpatialObject.a(param0, param0.length, 0, -73);
           return stackIn_3_0;
@@ -41,7 +41,7 @@ final class gg {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_a = null;
         if (param0 >= -85) {
           field_a = (char[]) null;

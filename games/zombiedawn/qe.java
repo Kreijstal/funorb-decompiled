@@ -16,7 +16,7 @@ final class qe {
         return ((Object[]) (((Object[]) (param0[19]))[4]))[0];
     }
 
-    final static Object a(java.applet.Applet param0, String param1, int param2) throws Throwable {
+    final static Object callWindowFunction(java.applet.Applet param0, String param1, int param2) throws Throwable {
         if (param2 >= -81) {
           return (Object) null;
         }

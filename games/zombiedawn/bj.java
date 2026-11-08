@@ -8,7 +8,7 @@ abstract class bj extends DualLinkNode {
 
     abstract Object d(byte param0);
 
-    public static void e(int param0) {
+    public static void releaseStatics(int param0) {
         field_q = null;
         field_p = null;
         if (param0 <= 37) {
@@ -37,7 +37,7 @@ abstract class bj extends DualLinkNode {
             throw new IllegalStateException("" + var2_int);
           }
           if (param1 >= -127) {
-            bj.e(95);
+            bj.releaseStatics(95);
           }
           var3 = dg.a(param0, false) ? 1 : 0;
           var4 = dg.a(param0, false) ? 1 : 0;

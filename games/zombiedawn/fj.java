@@ -22,7 +22,7 @@ final class fj extends pm {
             return stackIn_2_0;
           }
           Rasterizer.clear();
-          param0.b(3, 3);
+          param0.drawTransparent(3, 3);
           ho.a(md.field_vb, param3, param1, -109);
           pa.a(-21189);
           stackIn_4_0 = md.field_vb;
@@ -58,7 +58,7 @@ final class fj extends pm {
         }
     }
 
-    public static void e(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_h = null;
         field_i = null;
         field_g = null;
@@ -67,7 +67,7 @@ final class fj extends pm {
         }
     }
 
-    final String a(String param0, byte param1) {
+    final String messageForText(String param0, byte param1) {
         vc var3 = null;
         RuntimeException var3_ref = null;
         String var4 = null;
@@ -100,7 +100,7 @@ final class fj extends pm {
             return null;
           }
           var4 = (String) null;
-          this.a((String) null, (byte) -42);
+          this.messageForText((String) null, (byte) -42);
           stackIn_14_0 = null;
           return (String) (stackIn_14_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -117,7 +117,7 @@ final class fj extends pm {
         }
     }
 
-    final rh a(String param0, int param1) {
+    final rh validateText(String param0, int param1) {
         vc var3 = null;
         RuntimeException var3_ref = null;
         rh stackIn_5_0 = null;

@@ -4,7 +4,7 @@
 final class lj {
     private static ba field_a;
 
-    private final static void a(ba param0) {
+    private final static void decodeBlocks(ba param0) {
         int dupTemp$1 = 0;
         int dupTemp$0 = 0;
         int var1;
@@ -120,10 +120,10 @@ final class lj {
               }
             }
           }
-          lj.e(param0);
+          lj.buildSymbolMap(param0);
           var7 = param0.field_B + 2;
-          var8 = lj.a(3, param0);
-          var9 = lj.a(15, param0);
+          var8 = lj.readBits(3, param0);
+          var9 = lj.readBits(15, param0);
           var4 = 0;
           while (var4 < var9) {
             var5 = 0;
@@ -158,7 +158,7 @@ final class lj {
           }
           var6 = 0;
           while (var6 < var8) {
-            var17 = lj.a(5, param0);
+            var17 = lj.readBits(5, param0);
             var4 = 0;
             while (true) {
               if (var4 >= var7) {
@@ -192,7 +192,7 @@ final class lj {
                 var2 = param0.field_q[var6][var4];
               }
             }
-            lj.a(param0.field_t[var6], param0.field_C[var6], param0.field_H[var6], param0.field_q[var6], var2, var3, var7);
+            lj.buildHuffmanTables(param0.field_t[var6], param0.field_C[var6], param0.field_H[var6], param0.field_q[var6], var2, var3, var7);
             param0.field_a[var6] = var2;
           }
           var10 = param0.field_B + 1;
@@ -221,7 +221,7 @@ final class lj {
           }
           var12--;
           var18 = var22;
-          var19 = lj.a(var18, param0);
+          var19 = lj.readBits(var18, param0);
           while (var19 > ((int[]) (var23))[var18]) {
             var18++;
             var20 = lj.b(param0);
@@ -252,7 +252,7 @@ final class lj {
               param0.field_L = param0.field_L >> 8;
               param0.field_D = param0.field_D + 1;
               param0.field_J = var14;
-              lj.c(param0);
+              lj.emitBlock(param0);
               if (param0.field_D == param0.field_J + 1 &&
                 param0.field_y == 0) {
                 var26 = 1;
@@ -324,7 +324,7 @@ final class lj {
               }
               var12--;
               var18 = var22;
-              var19 = lj.a(var18, param0);
+              var19 = lj.readBits(var18, param0);
               while (var19 > ((int[]) (var23))[var18]) {
                 var18++;
                 var20 = lj.b(param0);
@@ -355,7 +355,7 @@ final class lj {
               }
               var12--;
               var18 = var22;
-              var19 = lj.a(var18, param0);
+              var19 = lj.readBits(var18, param0);
               while (var19 > ((int[]) (var23))[var18]) {
                 var18++;
                 var20 = lj.b(param0);
@@ -377,10 +377,10 @@ final class lj {
     }
 
     private final static byte d(ba param0) {
-        return (byte)lj.a(8, param0);
+        return (byte)lj.readBits(8, param0);
     }
 
-    private final static void c(ba param0) {
+    private final static void emitBlock(ba param0) {
         int var1;
         int var2;
         int var3;
@@ -511,11 +511,11 @@ final class lj {
         return;
     }
 
-    public static void a() {
+    public static void releaseStatics() {
         field_a = null;
     }
 
-    private final static int a(int param0, ba param1) {
+    private final static int readBits(int param0, ba param1) {
         int var2;
         while (param1.field_A < param0) {
           param1.field_K = param1.field_K << 8 | param1.field_G[param1.field_m] & 255;
@@ -531,7 +531,7 @@ final class lj {
         return var2;
     }
 
-    final static int a(byte[] param0, int param1, byte[] param2, int param3, int param4) {
+    final static int decompressInto(byte[] param0, int param1, byte[] param2, int param3, int param4) {
         int stackIn_2_0 = 0;
         Throwable decompiledCaughtException = null;
         Object var5 = null;
@@ -546,7 +546,7 @@ final class lj {
           field_a.field_K = 0;
           field_a.field_d = 0;
           field_a.field_p = 0;
-          lj.a(field_a);
+          lj.decodeBlocks(field_a);
           param1 = param1 - field_a.field_E;
           field_a.field_G = null;
           field_a.field_h = null;
@@ -556,10 +556,10 @@ final class lj {
     }
 
     private final static byte b(ba param0) {
-        return (byte)lj.a(1, param0);
+        return (byte)lj.readBits(1, param0);
     }
 
-    private final static void a(int[] param0, int[] param1, int[] param2, byte[] param3, int param4, int param5, int param6) {
+    private final static void buildHuffmanTables(int[] param0, int[] param1, int[] param2, byte[] param3, int param4, int param5, int param6) {
         int var9 = 0;
         int dupTemp$0 = 0;
         int var7;
@@ -604,7 +604,7 @@ final class lj {
         }
     }
 
-    private final static void e(ba param0) {
+    private final static void buildSymbolMap(ba param0) {
         int var1 = 0;
         param0.field_B = 0;
         for (var1 = 0; var1 < 256; var1++) {

@@ -24,7 +24,7 @@ final class r extends eh {
           var5.length > 0 &&
           0 < param1) {
           for (var6 = 0; var4 > var6; var6++) {
-            gp.a(this.field_B, param1 * var6, var5, var6 * param2, Math.min(param1, param2));
+            gp.copy(this.field_B, param1 * var6, var5, var6 * param2, Math.min(param1, param2));
           }
         }
         this.field_B = var5;
@@ -56,7 +56,7 @@ final class r extends eh {
             if (var5 < 0) {
               var4 = var4 + vl.field_r;
             } else {
-              var6 = tk.a(cj.field_h[var3_int], true, true);
+              var6 = tk.measureText(cj.field_h[var3_int], true, true);
               var7 = mo.field_b - (var6 >> 1);
               var4 = var4 + fe.field_H;
               if (bf.a(-lk.field_f + var7, param0 ^ 6199969, param2, var4, (lk.field_f << 1) + var6, (cn.field_h << 1) + Path.field_f, param1)) {
@@ -90,7 +90,7 @@ final class r extends eh {
         if (null != this.field_L && this.field_L.length > 0 && var10.length > 0 &&
           param2 > 0) {
           for (var6 = 0; var6 < var4; var6++) {
-            gp.a(this.field_L, param2 * var6, var5, var6 * param1, Math.min(param2, param1));
+            gp.copy(this.field_L, param2 * var6, var5, var6 * param1, Math.min(param2, param1));
           }
         }
         this.field_L = var5;
@@ -152,7 +152,7 @@ final class r extends eh {
         }
     }
 
-    final boolean a(int param0, int param1, UiWidget param2, char param3) {
+    final boolean requestKeyboardFocus(int param0, int param1, UiWidget param2, char param3) {
         int var5_int = 0;
         int var6 = 0;
         int var7 = 0;
@@ -167,7 +167,7 @@ final class r extends eh {
         RuntimeException var5 = null;
         var7 = ZombieDawn.field_J;
         try {
-          if (super.a(-42, param1, param2, param3)) {
+          if (super.requestKeyboardFocus(-42, param1, param2, param3)) {
             return true;
           }
           var5_int = 96 / ((-83 - param0) / 32);
@@ -212,9 +212,9 @@ final class r extends eh {
         try {
           var10 = new int[param5];
           int[] var8 = var10;
-          gp.a(var10, 0, param5, 1);
+          gp.fillInts(var10, 0, param5, 1);
           var9 = new int[param6];
-          gp.a(var9, 0, param6, 1);
+          gp.fillInts(var9, 0, param6, 1);
           this.a(var10, 0);
           this.a(84, var9);
         } catch (RuntimeException runtimeException) {
@@ -230,7 +230,7 @@ final class r extends eh {
         UiWidget[] var5 = new UiWidget[var4 * param1];
         if (this.field_B != null && 0 < this.field_B.length && var5.length > 0 &&
           param2 > 0) {
-          gp.a(this.field_B, 0, var5, 0, var4 * Math.min(param2, param1));
+          gp.copy(this.field_B, 0, var5, 0, var4 * Math.min(param2, param1));
         }
         this.field_B = var5;
     }
@@ -457,7 +457,7 @@ final class r extends eh {
         this.field_D = param2;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_J = null;
         field_I = null;
         if (param0 != 0) {
@@ -474,7 +474,7 @@ final class r extends eh {
         int[] var5 = new int[param1 * var4];
         if (null != this.field_L && this.field_L.length > 0 && var5.length > 0 &&
           param2 > 0) {
-          gp.a(this.field_L, 0, var5, 0, Math.min(param2, param1) * var4);
+          gp.copy(this.field_L, 0, var5, 0, Math.min(param2, param1) * var4);
         }
         this.field_L = var5;
     }

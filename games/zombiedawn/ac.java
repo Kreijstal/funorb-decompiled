@@ -158,8 +158,8 @@ final class ac extends al {
             ExceptionWrapper.field_a = Zombie.field_Db;
             this.a(-1, (byte) -115);
             cc.field_k.setAsRenderTarget();
-            Rasterizer.h(3, 3, 0, 0, 640, 341);
-            cn.field_f.b(-124);
+            Rasterizer.blurRectangle(3, 3, 0, 0, 640, 341);
+            cn.field_f.makeRasterTarget(-124);
             qn.field_b = 0;
             decompiledFrameRemainder0 = (var5 != 0);
           }
@@ -230,13 +230,13 @@ final class ac extends al {
     }
 
     private final void e(int param0, int param1) {
-        np.field_E.b(vh.field_b, param1 + (id.field_M + 5));
+        np.field_E.drawTransparent(vh.field_b, param1 + (id.field_M + 5));
         this.a(!this.a(2, -1, 123) ? true : false, 0, 82, param1);
         this.a(!this.a(3, -1, 123) ? true : false, 1, 82, param1);
         if (1 == bn.field_i &&
           to.field_b[0] < 13 &&
           to.field_b[1] == 0) {
-          bj.field_q.a(ch.field_c, qg.field_a[1] + (vh.field_b - 90), 170 + (to.field_c[1] + id.field_M), 240, 180, 16777215, 0, 1, 1, 0);
+          bj.field_q.drawParagraph(ch.field_c, qg.field_a[1] + (vh.field_b - 90), 170 + (to.field_c[1] + id.field_M), 240, 180, 16777215, 0, 1, 1, 0);
         }
         int var3 = -98 % ((param0 + 19) / 51);
     }
@@ -257,39 +257,39 @@ final class ac extends al {
         jb.field_a[0].e(qg.field_a[param1] + vh.field_b, 73 + to.field_c[param1] + (id.field_M + param3), 96);
         if (~param1 == ~bn.field_i) {
           var10.b(qg.field_a[param1] + vh.field_b, param3 + to.field_c[param1] + id.field_M, 248, 16776960);
-          var6.d(2 + (vh.field_b + qg.field_a[param1]), 1 + (param3 + id.field_M + to.field_c[param1]), 256);
-          cc.field_b.b(qg.field_a[param1] + (vh.field_b - 10), id.field_M + to.field_c[param1] + (-10 + param3), wd.field_z[ti.field_b]);
+          var6.drawTransparentWithOpacity(2 + (vh.field_b + qg.field_a[param1]), 1 + (param3 + id.field_M + to.field_c[param1]), 256);
+          cc.field_b.drawAdditive(qg.field_a[param1] + (vh.field_b - 10), id.field_M + to.field_c[param1] + (-10 + param3), wd.field_z[ti.field_b]);
           if (var9 != 0) {
             if (param0) {
-              var10.d(qg.field_a[param1] + vh.field_b, param3 + (to.field_c[param1] + id.field_M), 100);
-              var10.d(qg.field_a[param1] + vh.field_b, param3 + (id.field_M + to.field_c[param1]), 200);
-              var6.d(qg.field_a[param1] + (vh.field_b + 2), 1 + (id.field_M - (-to.field_c[param1] - param3)), 140);
+              var10.drawTransparentWithOpacity(qg.field_a[param1] + vh.field_b, param3 + (to.field_c[param1] + id.field_M), 100);
+              var10.drawTransparentWithOpacity(qg.field_a[param1] + vh.field_b, param3 + (id.field_M + to.field_c[param1]), 200);
+              var6.drawTransparentWithOpacity(qg.field_a[param1] + (vh.field_b + 2), 1 + (id.field_M - (-to.field_c[param1] - param3)), 140);
             } else {
-              var10.d(qg.field_a[param1] + vh.field_b, param3 + (id.field_M + to.field_c[param1]), 200);
-              var6.d(qg.field_a[param1] + (vh.field_b + 2), 1 + (id.field_M - (-to.field_c[param1] - param3)), 140);
+              var10.drawTransparentWithOpacity(qg.field_a[param1] + vh.field_b, param3 + (id.field_M + to.field_c[param1]), 200);
+              var6.drawTransparentWithOpacity(qg.field_a[param1] + (vh.field_b + 2), 1 + (id.field_M - (-to.field_c[param1] - param3)), 140);
             }
           }
         } else {
           if (param0) {
-            var10.d(qg.field_a[param1] + vh.field_b, param3 + (to.field_c[param1] + id.field_M), 100);
+            var10.drawTransparentWithOpacity(qg.field_a[param1] + vh.field_b, param3 + (to.field_c[param1] + id.field_M), 100);
             if (var9 != 0) {
-              var10.d(qg.field_a[param1] + vh.field_b, param3 + (id.field_M + to.field_c[param1]), 200);
-              var6.d(qg.field_a[param1] + (vh.field_b + 2), 1 + (id.field_M - (-to.field_c[param1] - param3)), 140);
+              var10.drawTransparentWithOpacity(qg.field_a[param1] + vh.field_b, param3 + (id.field_M + to.field_c[param1]), 200);
+              var6.drawTransparentWithOpacity(qg.field_a[param1] + (vh.field_b + 2), 1 + (id.field_M - (-to.field_c[param1] - param3)), 140);
             }
           } else {
-            var10.d(qg.field_a[param1] + vh.field_b, param3 + (id.field_M + to.field_c[param1]), 200);
-            var6.d(qg.field_a[param1] + (vh.field_b + 2), 1 + (id.field_M - (-to.field_c[param1] - param3)), 140);
+            var10.drawTransparentWithOpacity(qg.field_a[param1] + vh.field_b, param3 + (id.field_M + to.field_c[param1]), 200);
+            var6.drawTransparentWithOpacity(qg.field_a[param1] + (vh.field_b + 2), 1 + (id.field_M - (-to.field_c[param1] - param3)), 140);
           }
         }
         if (!param0 &&
           aa.field_a[param1] != 0) {
           stackIn_13_0 = (bn.field_i == param1) ? 2 : 0;
           var7 = stackIn_13_0;
-          sg.field_jb.b(q.field_G[param1], 8 + vh.field_b + qg.field_a[param1], var10.field_t + (param3 + to.field_c[param1] + (id.field_M + 20)), var7, -1, aa.field_a[param1]);
+          sg.field_jb.drawCenteredAlpha(q.field_G[param1], 8 + vh.field_b + qg.field_a[param1], var10.field_t + (param3 + to.field_c[param1] + (id.field_M + 20)), var7, -1, aa.field_a[param1]);
         }
         if (param0 &&
           param1 == this.b(true, ha.field_b, ei.field_K)) {
-          sg.field_jb.b(q.field_G[param1], 8 + (qg.field_a[param1] + vh.field_b), to.field_c[param1] + (id.field_M + param3) + (var11.field_t + 20), 0, -1, aa.field_a[param1]);
+          sg.field_jb.drawCenteredAlpha(q.field_G[param1], 8 + (qg.field_a[param1] + vh.field_b), to.field_c[param1] + (id.field_M + param3) + (var11.field_t + 20), 0, -1, aa.field_a[param1]);
         }
         if (param2 != 82) {
           field_o = (String) null;
@@ -301,20 +301,20 @@ final class ac extends al {
           }
           if (pd.field_a[param1] != -1 &&
             this.a(param1 + 3, -1, 117)) {
-            Human.field_tb.b(vh.field_b - (-qg.field_a[param1] - 55), id.field_M - (-to.field_c[param1] - param3 - 17));
+            Human.field_tb.drawTransparent(vh.field_b - (-qg.field_a[param1] - 55), id.field_M - (-to.field_c[param1] - param3 - 17));
           }
         }
         if (be.field_j <= 0) {
           var7Lifetime1 = IterableNodeHashTable.field_e;
           var8 = 12 + IterableNodeHashTable.field_e;
           if (param1 == 1) {
-            wd.field_y.b(vh.field_b + (qg.field_a[param1] + 2), param3 + (id.field_M + to.field_c[param1]) - 17, 50 + wd.field_z[var7Lifetime1] / 2);
+            wd.field_y.drawAdditive(vh.field_b + (qg.field_a[param1] + 2), param3 + (id.field_M + to.field_c[param1]) - 17, 50 + wd.field_z[var7Lifetime1] / 2);
           }
           if (var8 >= 50) {
             var8 -= 50;
           }
           if (param1 == 2) {
-            wd.field_y.b(2 + qg.field_a[param1] + vh.field_b, -17 + (param3 + id.field_M) + to.field_c[param1], 50 + wd.field_z[var8] / 2);
+            wd.field_y.drawAdditive(2 + qg.field_a[param1] + vh.field_b, -17 + (param3 + id.field_M) + to.field_c[param1], 50 + wd.field_z[var8] / 2);
           }
         }
     }
@@ -650,9 +650,9 @@ final class ac extends al {
             var3 = 256;
           }
           var4 = var2 >= 128 ? 2 * (-128 + var2) : 0;
-          cc.field_k.c(0, 80, var3, var4);
+          cc.field_k.drawWithVerticalAlphaGradient(0, 80, var3, var4);
         }
-        hk.field_H.b(vh.field_b, 80 + id.field_M);
+        hk.field_H.drawTransparent(vh.field_b, 80 + id.field_M);
         if (param0 >= -35) {
           this.field_s = (jp) null;
         }
@@ -664,7 +664,7 @@ final class ac extends al {
         cc.field_k.setAsRenderTarget();
         Rasterizer.clear();
         this.e(-122, 0);
-        cn.field_f.b(13);
+        cn.field_f.makeRasterTarget(13);
     }
 
     final void a(boolean param0, int param1, int param2) {

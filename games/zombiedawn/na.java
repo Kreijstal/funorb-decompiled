@@ -40,18 +40,18 @@ final class na {
                   return true;
                 }
                 if (param1) {
-                  if (this.field_b.a(param3 - 109242697) < (long)(6 + 6 * param0)) {
+                  if (this.field_b.length(param3 - 109242697) < (long)(6 + 6 * param0)) {
                     return false;
                   }
                   this.field_b.a(param3 ^ 109242696, (long)(param0 * 6));
                   this.field_b.a(6, false, 0, cg.field_c);
                   var7_int = (255 & cg.field_c[5]) + ((cg.field_c[3] & 255) << 16) + ((cg.field_c[4] & 255) << 8);
                   if (var7_int <= 0 ||
-                    !((long)var7_int <= this.field_a.a(-1) / 520L)) {
+                    !((long)var7_int <= this.field_a.length(-1) / 520L)) {
                     return false;
                   }
                 } else {
-                  var7_int = (int)((this.field_a.a(param3 - 109242697) + 519L) / 520L);
+                  var7_int = (int)((this.field_a.length(param3 - 109242697) + 519L) / 520L);
                   if (var7_int == 0) {
                     var7_int = 1;
                   }
@@ -109,7 +109,7 @@ final class na {
                         var9 == var12 &&
                         var13 == this.field_d) &&
                         (decompiledFrameRemainder0 = (!(var10 >= 0) ||
-                        !((long)var10 <= this.field_a.a(-1) / 520L)))) {
+                        !((long)var10 <= this.field_a.length(-1) / 520L)))) {
                         return false;
                       }
                       if (decompiledFrameRemainder0) {
@@ -118,7 +118,7 @@ final class na {
                     }
                     if (var10 == 0) {
                       param1 = false;
-                      var10 = (int)((519L + this.field_a.a(-1)) / 520L);
+                      var10 = (int)((519L + this.field_a.length(-1)) / 520L);
                       if (var10 == 0) {
                         var10++;
                       }
@@ -231,7 +231,7 @@ final class na {
           var3_ref = this.field_a;
           synchronized (var3_ref) {
             try {
-              if ((long)(6 * param1 + 6) > this.field_b.a(param0 ^ 65535)) {
+              if ((long)(6 * param1 + 6) > this.field_b.length(param0 ^ 65535)) {
                 return null;
               }
               this.field_b.a(0, (long)(param1 * 6));
@@ -251,7 +251,7 @@ final class na {
               if (var5 <= 0) {
                 return null;
               }
-              if ((this.field_a.a(-1) / 520L) < (long)var5) {
+              if ((this.field_a.length(-1) / 520L) < (long)var5) {
                 stackIn_17_0 = null;
                 return (byte[]) (stackIn_17_0);
               }
@@ -299,7 +299,7 @@ final class na {
                 if (0 > var12) {
                   return null;
                 }
-                if ((long)var12 > this.field_a.a(-1) / 520L) {
+                if ((long)var12 > this.field_a.length(-1) / 520L) {
                   stackIn_44_0 = null;
                   return (byte[]) (stackIn_44_0);
                 }
@@ -332,7 +332,7 @@ final class na {
         return "" + this.field_d;
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_c = null;
         if (param0 != 79) {
           na.a(113, '}');

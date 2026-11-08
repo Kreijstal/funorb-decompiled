@@ -21,7 +21,7 @@ final class ci {
         return 0;
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         if (param0) {
           field_b = (int[]) null;
           field_a = null;

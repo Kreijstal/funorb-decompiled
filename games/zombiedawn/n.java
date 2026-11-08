@@ -14,7 +14,7 @@ final class n extends IntrusiveNode {
     AsyncRequest[] field_n;
     int field_o;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_k = null;
         field_p = null;
         if (param0 != 128) {
@@ -32,7 +32,7 @@ final class n extends IntrusiveNode {
           Throwable decompiledCaughtException = null;
           try {
             if (param0 < 81) {
-              n.a(8);
+              n.releaseStatics(8);
             }
             stackIn_3_0 = (MouseWheelInput) (Class.forName("MouseWheelHandler").newInstance());
             return stackIn_3_0;

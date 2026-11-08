@@ -32,7 +32,7 @@ class al {
         }
     }
 
-    public static void c(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_f = null;
         field_c = null;
         field_a = null;
@@ -155,13 +155,13 @@ class al {
                     break;
                 }
               }
-              qk.field_Hb[0].a(-var2, -var3, bd.field_e + 2 * var2, nh.field_P + 2 * var3);
+              qk.field_Hb[0].drawScaled(-var2, -var3, bd.field_e + 2 * var2, nh.field_P + 2 * var3);
               of.a(11690);
               if (var5 == 0) {
                 break regionExit3;
               }
             }
-            qk.field_Hb[4].a(-var2, -var3, bd.field_e + var2 * 2, nh.field_P + var3 * 2);
+            qk.field_Hb[4].drawScaled(-var2, -var3, bd.field_e + var2 * 2, nh.field_P + var3 * 2);
             of.a(11690);
             if (var5 == 0) {
               break regionExit3;
@@ -190,9 +190,9 @@ class al {
         }
         lf.field_h.setAsRenderTarget();
         qk.field_Jb[var6Lifetime1].b((byte) 119);
-        cn.field_f.b(64);
+        cn.field_f.makeRasterTarget(64);
         int var7 = -57 / ((param1 + 72) / 47);
-        lf.field_h.c(0, 0, var4, var5);
+        lf.field_h.drawWithVerticalAlphaGradient(0, 0, var4, var5);
     }
 
     static long a(long param0, long param1) {
@@ -341,7 +341,7 @@ class al {
               Rasterizer.fillRect(var15, var9 / 2 + var4 - 1, 129, 6, 6815744);
               Rasterizer.fillRect(var15, -1 + var9 / 2 + var4, (var16 >> 1) + 1, 6, 13373713);
               Rasterizer.drawRectOutline(var15, -1 + (var4 + var9 / 2), 129, 6, var10);
-              Rasterizer.e(var15, var4 + (var9 / 2 - 1), 129, 6, 1, var10);
+              Rasterizer.drawRoundedRectangle(var15, var4 + (var9 / 2 - 1), 129, 6, 1, var10);
               stackIn_79_0 = ad.field_g[var17][var18];
               stackIn_79_1 = 0;
               stackIn_79_2 = 339;
@@ -349,8 +349,8 @@ class al {
               var19 = fj.a(stackIn_79_0, stackIn_79_1, stackIn_79_2, stackIn_80_3);
               var20 = 1;
               var21 = 1;
-              var19.h(var15 + (var16 >> 1) + (-1 + (-23 + var20)), var21 - 10 + var4 + 2, 1);
-              var19.b(var15 + ((var16 >> 1) - 24), 2 + var4 - 10);
+              var19.drawSilhouette(var15 + (var16 >> 1) + (-1 + (-23 + var20)), var21 - 10 + var4 + 2, 1);
+              var19.drawTransparent(var15 + ((var16 >> 1) - 24), 2 + var4 - 10);
             }
             if (var22 == 0) {
               return;
@@ -1203,7 +1203,7 @@ class al {
                         break regionExit1;
                       }
                       if (null != wh.field_e &&
-                        !wh.field_e.l()) {
+                        !wh.field_e.isSamplePositionOutOfRange()) {
                         break regionExit1;
                       }
                       wh.field_e = kh.a(47, false);
@@ -1562,7 +1562,7 @@ class al {
             var2Lifetime3++;
           }
           if (ed.field_b[this.field_d] != null) {
-            ed.field_b[this.field_d].b(vh.field_b, id.field_M / 2);
+            ed.field_b[this.field_d].drawTransparent(vh.field_b, id.field_M / 2);
           }
           return;
         }
@@ -1613,7 +1613,7 @@ class al {
           var2Lifetime2++;
         }
         if (ed.field_b[this.field_d] != null) {
-          ed.field_b[this.field_d].b(vh.field_b, id.field_M / 2);
+          ed.field_b[this.field_d].drawTransparent(vh.field_b, id.field_M / 2);
         }
         return;
     }
@@ -1673,7 +1673,7 @@ class al {
         }
     }
 
-    void a(al param0, int param1) {
+    void onTextSubmitted(al param0, int param1) {
         try {
           if (param1 < 70) {
             this.field_b = (jp) null;

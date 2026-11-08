@@ -16,7 +16,7 @@ final class km {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 21405) {
-            km.a((byte) 1);
+            km.releaseStatics((byte) 1);
           }
           stackIn_8_0 = (param1 > -48) && (param1 > -48) && ((float)param1 < (float)qj.field_d * 1.0f) && ((float)me.field_Bb * 1.0f > (float)param3);
           return stackIn_8_0;
@@ -34,10 +34,10 @@ final class km {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_b = null;
         if (param0 < 15) {
-          km.a((byte) -128);
+          km.releaseStatics((byte) -128);
         }
     }
 

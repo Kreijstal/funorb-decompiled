@@ -87,7 +87,7 @@ abstract class ll {
           var9Lifetime1 = var17.field_t;
           hk.i(1584);
           var17.setAsRenderTarget();
-          Rasterizer.a(0, 0, Rasterizer.width, Rasterizer.height);
+          Rasterizer.desaturateRectangle(0, 0, Rasterizer.width, Rasterizer.height);
           var15 = new Sprite(var9Lifetime1, var9Lifetime1);
           var18 = var15;
           var18.setAsRenderTarget();

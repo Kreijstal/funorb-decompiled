@@ -13,7 +13,7 @@ final class mc extends pm {
         super(param0);
     }
 
-    final rh a(String param0, int param1) {
+    final rh validateText(String param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         rh stackIn_2_0 = null;
@@ -78,20 +78,20 @@ final class mc extends pm {
         }
     }
 
-    public static void e(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 <= -3) {
           field_g = null;
           field_i = null;
           field_j = null;
           return;
         }
-        mc.e((byte) 2);
+        mc.releaseStatics((byte) 2);
         field_g = null;
         field_i = null;
         field_j = null;
     }
 
-    final String a(String param0, byte param1) {
+    final String messageForText(String param0, byte param1) {
         RuntimeException var3 = null;
         String stackIn_2_0 = null;
         String stackIn_5_0 = null;
@@ -101,7 +101,7 @@ final class mc extends pm {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.a(param0, 2) == MouseWheelInput.field_b) {
+          if (this.validateText(param0, 2) == MouseWheelInput.field_b) {
             stackIn_2_0 = ge.field_d;
             return stackIn_2_0;
           }

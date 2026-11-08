@@ -36,10 +36,10 @@ final class nc extends IntrusiveNode {
         }
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         field_p = null;
         if (param0 != -2135443998) {
-          nc.d(30);
+          nc.releaseStatics(30);
           field_r = null;
           field_k = null;
           return;
@@ -173,8 +173,8 @@ final class nc extends IntrusiveNode {
               stackIn_11_0 = -this.field_i + 256 >> 2;
             }
             var5 = stackIn_11_0;
-            Rasterizer.d(var3_int, var4, this.field_i, 0, var5);
-            so.b(Camera.field_o, -256 + var3_int, -256 + var4, this.field_l);
+            Rasterizer.fillCircleBlended(var3_int, var4, this.field_i, 0, var5);
+            so.drawTransparent(Camera.field_o, -256 + var3_int, -256 + var4, this.field_l);
             return;
           }
           return;

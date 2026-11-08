@@ -81,7 +81,7 @@ final class ad extends vg {
           this.field_m = true;
           this.field_l = param0;
           var6 = this.a(param2, false, param0, param1);
-          var6.field_e[0] = param4 - param2.b(param0);
+          var6.field_e[0] = param4 - param2.textWidth(param0);
           var6.field_e[param0.length()] = param4;
           ma.a(var6, 0, param0, param2, false);
           if (param3 != 83) {
@@ -233,7 +233,7 @@ final class ad extends vg {
           this.field_d = param4;
           this.field_p = 1;
           var7 = this.a(param4, false, param3, param2);
-          var8 = param4.b(param3);
+          var8 = param4.textWidth(param3);
           var7.field_e[0] = param0 - (var8 >> 1);
           var7.field_e[param3.length()] = param0 + (var8 >> 1);
           ma.a(var7, 0, param3, param4, false);
@@ -315,8 +315,8 @@ final class ad extends vg {
           this.field_k = param7;
           this.field_i = param2;
           this.field_n = param5;
-          var9 = new String[1 + param3.b(param0, param7)];
-          var10 = Math.max(1, param3.a(param0, new int[]{param7}, var9));
+          var9 = new String[1 + param3.wrappedLineCount(param0, param7)];
+          var10 = Math.max(1, param3.wrapText(param0, new int[]{param7}, var9));
           if (this.field_n == 3 &&
             var10 == 1) {
             this.field_n = 1;
@@ -374,10 +374,10 @@ final class ad extends vg {
             var14 = new oe(stackIn_65_2, stackIn_65_3, stackIn_66_4);
             var14.field_e[0] = 0;
             if (null != var13) {
-              var14.field_e[var13.length()] = param3.b(var13);
+              var14.field_e[var13.length()] = param3.textWidth(var13);
               stackIn_72_0 = var14;
               if (3 == param6) {
-                stackIn_73_1 = this.a(param3.b(var13), var13, param7, 25);
+                stackIn_73_1 = this.a(param3.textWidth(var13), var13, param7, 25);
               } else {
                 stackIn_73_1 = 0;
               }
@@ -648,7 +648,7 @@ final class ad extends vg {
           this.field_p = 0;
           var6 = this.a(param1, false, param2, param4);
           var6.field_e[0] = param3;
-          var6.field_e[param2.length()] = param1.b(param2) + param3;
+          var6.field_e[param2.length()] = param1.textWidth(param2) + param3;
           var7 = 91 % ((19 - param0) / 59);
           ma.a(var6, 0, param2, param1, false);
           return;

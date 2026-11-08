@@ -125,11 +125,11 @@ final class l extends ll {
         }
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_g = null;
         field_b = null;
         if (param0 != -1) {
-          l.b(19);
+          l.releaseStatics(19);
         }
     }
 

@@ -43,22 +43,22 @@ final class we extends qk {
         try {
           var3_int = param0.worldToScreenX(this.getX(true), (byte) -77);
           var4 = param0.worldToScreenY(this.getY(237239984), 0);
-          Rasterizer.d(var3_int, var4, this.field_Vb, 255);
-          Rasterizer.d(var3_int, var4, this.field_pb, 65535);
+          Rasterizer.drawCircleOutline(var3_int, var4, this.field_Vb, 255);
+          Rasterizer.drawCircleOutline(var3_int, var4, this.field_pb, 65535);
           if (this.field_Qb != null) {
-            Rasterizer.e(var3_int, var4, param0.worldToScreenX(this.field_Qb.getX(true), (byte) -63), param0.worldToScreenY(this.field_Qb.getY(param1 ^ 237235572), 0), 16711680);
+            Rasterizer.drawLine(var3_int, var4, param0.worldToScreenX(this.field_Qb.getX(true), (byte) -63), param0.worldToScreenY(this.field_Qb.getY(param1 ^ 237235572), 0), 16711680);
           }
           if (null != this.field_yb) {
             var5_int = param0.worldToScreenX(this.field_yb.getX(true), (byte) -81);
             var6 = param0.worldToScreenY(this.field_yb.getY(param1 + 237234924), param1 ^ 5060);
-            Rasterizer.e(var3_int, var4, var5_int, var6, 16776960);
+            Rasterizer.drawLine(var3_int, var4, var5_int, var6, 16776960);
             bj.field_q.drawString(Integer.toString(this.field_yb.state), var5_int, var6 - 48, 16777215, 0);
           }
           if (param1 != 5060) {
             var7 = (IntrusiveNode) null;
             we.a((IntrusiveNode) null, 97, (IntrusiveNode) null);
           }
-          Rasterizer.e(var3_int, var4, param0.worldToScreenX(this.targetX, (byte) -94), param0.worldToScreenY(this.targetY, param1 - 5060), 16711935);
+          Rasterizer.drawLine(var3_int, var4, param0.worldToScreenX(this.targetX, (byte) -94), param0.worldToScreenY(this.targetY, param1 - 5060), 16711935);
           var5 = Integer.toString(this.state);
           bj.field_q.drawString(var5, var3_int, var4 - 48, 16777215, 0);
           return;
@@ -76,7 +76,7 @@ final class we extends qk {
         }
     }
 
-    public static void x(int param0) {
+    public static void releaseStatics(int param0) {
         field_Sb = null;
         field_Rb = null;
         field_Tb = null;

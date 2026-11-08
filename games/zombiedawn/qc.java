@@ -17,7 +17,7 @@ final class qc {
           var1_int = je.field_b[0];
           for (var2 = param0; je.field_b.length > var2; var2++) {
             var3 = je.field_b[var2];
-            gp.a(uf.field_o, var2 << 4, uf.field_o, var1_int, var3);
+            gp.copy(uf.field_o, var2 << 4, uf.field_o, var1_int, var3);
             var1_int = var1_int + var3;
           }
           return;
@@ -61,7 +61,7 @@ final class qc {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 <= 42) {
           return;
         }

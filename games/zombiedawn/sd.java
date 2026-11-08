@@ -6,7 +6,7 @@ final class sd {
     static String field_c;
     static int field_b;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 < 40) {
           field_a = (String) null;
           field_a = null;

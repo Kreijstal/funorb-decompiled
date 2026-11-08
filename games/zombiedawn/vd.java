@@ -9,13 +9,13 @@ final class vd {
     static String field_c;
     private static String field_z;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = null;
         field_c = null;
         field_e = null;
         field_b = null;
         if (param0 != 128) {
-          vd.a(-116);
+          vd.releaseStatics(-116);
         }
     }
 

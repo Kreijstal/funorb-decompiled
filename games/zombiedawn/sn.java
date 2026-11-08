@@ -61,13 +61,13 @@ final class sn {
 
     final static Sprite a(int param0, double param1, byte param2) {
         if (param2 > -31) {
-          sn.a((byte) 27);
+          sn.releaseStatics((byte) 27);
         }
         Sprite var10 = new Sprite(640, 90);
         ki.a((byte) -97, var10);
         Sprite var5 = new Sprite(640, 90);
         ki.a((byte) -94, var5);
-        Rasterizer.f(0, 5, 640, 75, 16777215, 1);
+        Rasterizer.fillVerticalGradient(0, 5, 640, 75, 16777215, 1);
         pa.a(-21189);
         Sprite var6 = new Sprite(640, 90);
         ki.a((byte) -113, var6);
@@ -77,14 +77,14 @@ final class sn {
         ki.a((byte) -123, var7);
         int var8 = (int)(param1 * 640.0);
         int var9 = (int)(param1 * 90.0);
-        var6.d((640 - var8) / 2, 0, var8, var9);
-        var5.a(0, 0);
-        var7.d(16777215);
-        var7.d(16777215);
-        var7.d(1);
-        var7.d(1);
+        var6.drawScaledAveraged((640 - var8) / 2, 0, var8, var9);
+        var5.drawMultiply(0, 0);
+        var7.addOutline(16777215);
+        var7.addOutline(16777215);
+        var7.addOutline(1);
+        var7.addOutline(1);
         pa.a(-21189);
-        var7.b(0, 13);
+        var7.drawTransparent(0, 13);
         pa.a(-21189);
         return var10;
     }
@@ -136,7 +136,7 @@ final class sn {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_c = null;
         field_d = null;
         field_f = null;

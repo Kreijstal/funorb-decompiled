@@ -41,9 +41,9 @@ final class mk {
         og.b(-123, 4);
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 4) {
-          mk.b(-103);
+          mk.releaseStatics(-103);
           field_a = null;
           return;
         }

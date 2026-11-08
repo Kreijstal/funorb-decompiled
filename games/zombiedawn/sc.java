@@ -15,7 +15,7 @@ final class sc {
         return ep.field_l.a((byte) 0);
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 < 63) {
           return;
         }

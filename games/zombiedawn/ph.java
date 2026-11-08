@@ -13,7 +13,7 @@ final class ph {
         TileMap.field_i = null;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_b = null;
         field_a = null;
         if (param0 != -1) {
@@ -96,7 +96,7 @@ final class ph {
             var5 = param3.field_k[param2].length / var4_int;
             var6 = 0;
             if (param1 >= -69) {
-              ph.a(-98);
+              ph.releaseStatics(-98);
             }
             while (var6 < var5) {
               boolean decompiledFrameCompleted0 = true;

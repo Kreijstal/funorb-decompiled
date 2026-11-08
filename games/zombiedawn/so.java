@@ -10,11 +10,11 @@ final class so {
         Sprite var1 = new Sprite(param0.field_r, param0.field_q);
         var1.setAsRenderTarget();
         Rasterizer.clear();
-        param0.h(0, 0, 16777215);
+        param0.drawSilhouette(0, 0, 16777215);
         so.a(12303291);
         so.a(8947848);
         so.a(4473924);
-        param0.h(0, 0, 0);
+        param0.drawSilhouette(0, 0, 0);
         return var1;
     }
 
@@ -32,7 +32,7 @@ final class so {
         return args[pb.a(random, args.length, 1)];
     }
 
-    private final static void a(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    private final static void darkenByMaskAlpha(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int var11 = 0;
         int var12 = 0;
         int incrementValue$12 = 0;
@@ -56,7 +56,7 @@ final class so {
         }
     }
 
-    final static void b(Sprite param0, int param1, int param2, int param3) {
+    final static void drawTransparent(Sprite param0, int param1, int param2, int param3) {
         int var10 = 0;
         int var4 = param1 + param2 * Rasterizer.width;
         int var5 = 0;
@@ -95,7 +95,7 @@ final class so {
           var6 <= 0) {
           return;
         }
-        so.a(Rasterizer.pixels, param0.field_z, 0, var5, var4, var7, var6, var8, var9, param3);
+        so.darkenByMaskAlpha(Rasterizer.pixels, param0.field_z, 0, var5, var4, var7, var6, var8, var9, param3);
     }
 
     final static void b(IntrusiveDeque param0) {
@@ -118,7 +118,7 @@ final class so {
         }
     }
 
-    final static void a(Sprite param0, int param1, int param2) {
+    final static void drawTransparent(Sprite param0, int param1, int param2) {
         int var9 = 0;
         int var3 = param1 + param2 * Rasterizer.width;
         int var4 = 0;
@@ -157,7 +157,7 @@ final class so {
           var5 <= 0) {
           return;
         }
-        so.a(Rasterizer.pixels, param0.field_z, 0, var4, var3, var6, var5, var7, var8);
+        so.darkenByMaskAlpha(Rasterizer.pixels, param0.field_z, 0, var4, var3, var6, var5, var7, var8);
     }
 
     public static void a() {
@@ -204,7 +204,7 @@ final class so {
         var5.drawWithOffsets(0, 0);
     }
 
-    private final static void a(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    private final static void darkenByMaskAlpha(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         int var12 = 0;
         int var13 = 0;
         int incrementValue$12 = 0;
@@ -273,7 +273,7 @@ final class so {
           var6 <= 0) {
           return;
         }
-        so.b(Rasterizer.pixels, param0.field_z, 0, var5, var4, var7, var6, var8, var9, param3);
+        so.tintNeutralPixels(Rasterizer.pixels, param0.field_z, 0, var5, var4, var7, var6, var8, var9, param3);
     }
 
     private final static boolean a(IntrusiveDeque param0) {
@@ -292,7 +292,7 @@ final class so {
         return true;
     }
 
-    private final static void b(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    private final static void tintNeutralPixels(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         int var12 = 0;
         int var13 = 0;
         int incrementValue$14 = 0;

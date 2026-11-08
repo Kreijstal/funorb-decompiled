@@ -10,7 +10,7 @@ final class ui {
     static String field_c;
     static String field_a;
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 < 111) {
           return;
         }

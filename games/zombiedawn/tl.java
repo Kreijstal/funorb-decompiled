@@ -35,12 +35,12 @@ final class tl implements ug {
         }
         this.field_n = true;
         if (ul.field_b == (long)param0) {
-          ul.field_b = pd.a(-22826);
+          ul.field_b = pd.monotonicTimeMillis(-22826);
         }
         if (!this.a(false, param1, param0 ^ 95)) {
           return false;
         }
-        pd.a(-22826);
+        pd.monotonicTimeMillis(-22826);
         ul.field_b = 0L;
         this.field_n = !this.c((byte) 126) ? true : false;
         bb.field_a[param1] = true;
@@ -48,7 +48,7 @@ final class tl implements ug {
         return true;
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         int var1 = 56 / ((param0 - 0) / 50);
         field_e = null;
         field_k = null;
@@ -133,11 +133,11 @@ final class tl implements ug {
                 var5_int == 68 ||
                 47 == var5_int) && null == vb.field_D[var5_int]) {
                 var13 = "sfx";
-                var14 = ml.a(BufferedSocket.field_h, var13, tc.field_x[var4_int]);
+                var14 = ml.load(BufferedSocket.field_h, var13, tc.field_x[var4_int]);
                 if (var14 == null) {
                   return;
                 }
-                vb.field_D[tc.field_s[var4_int]] = var14.b();
+                vb.field_D[tc.field_s[var4_int]] = var14.toPcmSample();
               }
             }
           }
@@ -436,7 +436,7 @@ final class tl implements ug {
         try {
           if (null == w.field_a[param2]) {
             this.field_d = e.field_I;
-            w.field_a[param2] = wj.a(this.field_h, param0, "");
+            w.field_a[param2] = wj.load(this.field_h, param0, "");
             return false;
           }
           if (!cc.field_c[param2]) {
@@ -577,11 +577,11 @@ final class tl implements ug {
         }
         try {
           if (0L == vj.field_n) {
-            dupTemp$0 = pd.a(-22826);
+            dupTemp$0 = pd.monotonicTimeMillis(-22826);
             vj.field_n = dupTemp$0;
             ap.field_m = dupTemp$0;
           }
-          var6_long = pd.a(-22826);
+          var6_long = pd.monotonicTimeMillis(-22826);
           var8 = var6_long - ap.field_m;
           vj.field_n = var6_long;
           var10 = (float)var8 / (float)param0;
@@ -629,7 +629,7 @@ final class tl implements ug {
           var2 = this.field_r[0];
           if (this.field_a == 0) {
             this.field_a = this.field_p;
-            this.field_l = pd.a(-22826);
+            this.field_l = pd.monotonicTimeMillis(-22826);
             this.a(0.0f, 127, (String) null);
           }
           if (this.field_o == 0) {
@@ -640,7 +640,7 @@ final class tl implements ug {
             var3 = var3 + (this.field_o - HumanFactory.field_h[var2]);
           }
           this.a((-((float)var3 / (float)this.field_a) + 1.0f) * 100.0f, 127, (String) null);
-          pd.a(-22826);
+          pd.monotonicTimeMillis(-22826);
           if (this.a(0, var2)) {
             this.field_p = this.field_p - HumanFactory.field_h[var2];
             for (var4 = 0; var4 < -1 + this.field_f; var4++) {
@@ -655,7 +655,7 @@ final class tl implements ug {
             decompiledFrameRemainder0 = false;
           }
           else {
-            var4_long = pd.a(-22826);
+            var4_long = pd.monotonicTimeMillis(-22826);
             this.field_o = (int)((long)this.field_o - (var4_long - this.field_l));
             if (this.field_o < 1) {
               this.field_o = 1;
@@ -664,7 +664,7 @@ final class tl implements ug {
           }
         }
         if (param0 <= 37) {
-          tl.d(2);
+          tl.releaseStatics(2);
         }
     }
 
@@ -708,13 +708,13 @@ final class tl implements ug {
               }
               var7_ref_String = stackIn_12_0;
               if (tc.field_y[var5] == 0) {
-                var11 = ml.a(BufferedSocket.field_h, var7_ref_String, tc.field_x[var5]);
+                var11 = ml.load(BufferedSocket.field_h, var7_ref_String, tc.field_x[var5]);
                 var8 = var11;
                 if (var8 == null) {
                   BufferedSocket.field_h.a(-1, var7_ref_String);
                   return false;
                 }
-                vb.field_D[tc.field_s[var5]] = var11.b();
+                vb.field_D[tc.field_s[var5]] = var11.toPcmSample();
               } else {
                 var10 = mb.a(qn.field_i, var7_ref_String, tc.field_x[var5]);
                 var8_ref = var10;
@@ -722,7 +722,7 @@ final class tl implements ug {
                   qn.field_i.a(-1, var7_ref_String);
                   return false;
                 }
-                vb.field_D[tc.field_s[var5]] = var10.b();
+                vb.field_D[tc.field_s[var5]] = var10.decodeAllToPcm();
               }
             }
           }

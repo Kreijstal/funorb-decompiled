@@ -48,11 +48,11 @@ class an extends UiWidget {
         }
     }
 
-    public static void f(int param0) {
+    public static void releaseStatics(int param0) {
         field_y = null;
         field_B = null;
         if (param0 >= -110) {
-          an.f(114);
+          an.releaseStatics(114);
         }
     }
 
@@ -76,7 +76,7 @@ class an extends UiWidget {
         try {
           if (this.field_C &&
             this.b(param3, 21224, param2, param4, param0)) {
-            this.a((byte) 107, param6);
+            this.focusNext((byte) 107, param6);
             this.field_m = param5;
             if (null != this.field_v &&
               this.field_v instanceof pe) {
@@ -144,7 +144,7 @@ class an extends UiWidget {
         this.field_C = true;
     }
 
-    boolean a(int param0, int param1, UiWidget param2, char param3) {
+    boolean requestKeyboardFocus(int param0, int param1, UiWidget param2, char param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         RuntimeException stackIn_10_0 = null;
@@ -173,7 +173,7 @@ class an extends UiWidget {
         }
     }
 
-    boolean a(byte param0, UiWidget param1) {
+    boolean focusNext(byte param0, UiWidget param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
@@ -186,7 +186,7 @@ class an extends UiWidget {
           if (!this.field_D) {
             return false;
           }
-          param1.c((byte) 57);
+          param1.blur((byte) 57);
           if (param0 <= 67) {
             this.field_A = false;
           }
@@ -263,7 +263,7 @@ class an extends UiWidget {
         }
     }
 
-    final void c(byte param0) {
+    final void blur(byte param0) {
         Js5Archive var3 = null;
         Js5Archive var3Lifetime1;
         Js5Archive var3Lifetime2;
@@ -367,7 +367,7 @@ class an extends UiWidget {
           return;
         }
         if (this.field_v instanceof hh) {
-          ((hh) (this.field_v)).a(param2, -6, this, param3, param0);
+          ((hh) (this.field_v)).onButtonActivated(param2, -6, this, param3, param0);
           var5Lifetime1 = -25 / ((-12 - param1) / 56);
           return;
         }

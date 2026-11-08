@@ -17,7 +17,7 @@ final class ja {
         return lk.field_k;
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_c = null;
         if (param0) {
           java.awt.Color var2 = (java.awt.Color) null;
@@ -98,7 +98,7 @@ final class ja {
         int var6Lifetime1;
         var13 = ZombieDawn.field_J;
         try {
-          var5_int = param4.b(param2);
+          var5_int = param4.textWidth(param2);
           if (param3 >= var5_int &&
             -1 == param2.indexOf("<br>")) {
             param1[0] = param2;
@@ -115,7 +115,7 @@ final class ja {
             if (var10 == 32 ||
               var10 == 45) {
               var11 = param2.substring(var7, 1 + var9).trim();
-              var12 = param4.b(var11);
+              var12 = param4.textWidth(var11);
               if (param3 <= var12) {
                 var7 = 1 + var9;
                 incrementValue$1 = var6Lifetime1;

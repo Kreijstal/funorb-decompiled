@@ -5,11 +5,11 @@ final class wj extends IntrusiveNode {
     dl field_h;
     byte[] field_i;
 
-    final void a() {
+    final void releasePatchUsage() {
         this.field_h = null;
     }
 
-    final static wj a(Js5Archive param0, String param1, String param2) {
+    final static wj load(Js5Archive param0, String param1, String param2) {
         byte[] var3 = param0.a(param2, -105, param1);
         if (var3 == null) {
           return null;
@@ -539,7 +539,7 @@ final class wj extends IntrusiveNode {
         }
     }
 
-    final void b() {
+    final void buildPatchUsage() {
         int[] var1;
         int[] var2;
         jg var4;
@@ -579,25 +579,25 @@ final class wj extends IntrusiveNode {
         var19[9] = 128;
         var23[9] = 128;
         var4 = new jg(this.field_i);
-        var5 = var4.d();
+        var5 = var4.trackCount();
         for (var6 = 0; var6 < var5; var6++) {
-          var4.f(var6);
+          var4.seekTrack(var6);
           var4.c(var6);
-          var4.b(var6);
+          var4.saveTrackPosition(var6);
         }
         while (true) {
-          var6Lifetime1 = var4.b();
+          var6Lifetime1 = var4.nextTrack();
           var7 = var4.field_f[var6Lifetime1];
           while (true) {
             if (var4.field_f[var6Lifetime1] != var7) {
               break;
             }
-            var4.f(var6Lifetime1);
-            var8 = var4.d(var6Lifetime1);
+            var4.seekTrack(var6Lifetime1);
+            var8 = var4.readMessage(var6Lifetime1);
             if (var8 == 1) {
-              var4.c();
-              var4.b(var6Lifetime1);
-              if (var4.f()) {
+              var4.markTrackDone();
+              var4.saveTrackPosition(var6Lifetime1);
+              if (var4.isDone()) {
                 return;
               }
               break;
@@ -635,7 +635,7 @@ final class wj extends IntrusiveNode {
               }
             }
             var4.c(var6Lifetime1);
-            var4.b(var6Lifetime1);
+            var4.saveTrackPosition(var6Lifetime1);
           }
         }
     }

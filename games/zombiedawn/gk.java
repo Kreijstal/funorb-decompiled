@@ -35,15 +35,15 @@ final class gk extends WorldObject {
             if (!this.field_D) {
               if (!this.field_E) {
                 if (this.field_J) {
-                  o.field_d[this.field_t].f(var3_int, var4);
+                  o.field_d[this.field_t].drawVerticalFlip(var3_int, var4);
                 } else {
-                  o.field_d[this.field_t].b(var3_int, var4);
+                  o.field_d[this.field_t].drawTransparent(var3_int, var4);
                 }
               } else {
                 o.field_d[this.field_t].drawMirrored(var3_int, var4);
               }
             } else {
-              o.field_d[this.field_t].h(var3_int, var4, 2105376);
+              o.field_d[this.field_t].drawSilhouette(var3_int, var4, 2105376);
             }
             return;
           }
@@ -78,7 +78,7 @@ final class gk extends WorldObject {
         }
     }
 
-    public static void i(int param0) {
+    public static void releaseStatics(int param0) {
         field_I = null;
         field_F = null;
         if (param0 <= 110) {
@@ -103,9 +103,9 @@ final class gk extends WorldObject {
           if (!param2) {
             var4 = (byte[]) null;
             gk.a((byte) 57, (byte[]) null);
-            cn.field_f.b(57);
+            cn.field_f.makeRasterTarget(57);
           } else {
-            cn.field_f.b(57);
+            cn.field_f.makeRasterTarget(57);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

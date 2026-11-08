@@ -38,7 +38,7 @@ final class aa {
         return 0;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_f = null;
         field_g = null;
         field_a = null;
@@ -84,7 +84,7 @@ final class aa {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 <= 4) {
-            aa.a(31);
+            aa.releaseStatics(31);
           }
           var2 = new hn(param1, param1);
           fj.field_i.addFirst(0, var2);

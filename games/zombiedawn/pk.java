@@ -66,7 +66,7 @@ final class pk extends gl {
             var9 = this.field_L[var8];
             var10 = var9.toString();
             if (var8 == var7) {
-              Rasterizer.a(2 + var5, var6 + 4, -4 + this.field_i, this.field_I, 2188450, 128);
+              Rasterizer.fillRectangleBlended(2 + var5, var6 + 4, -4 + this.field_i, this.field_I, 2188450, 128);
             }
             var6 = var6 + this.field_I;
             this.field_H.drawString(var10, 2 + var5, var6, 10000536, -1);

@@ -248,7 +248,7 @@ abstract class WorldObject extends SpatialObject {
 
     final int getY(int param0) {
         if (param0 != 237239984) {
-          WorldObject.h(-58);
+          WorldObject.releaseStatics(-58);
           return this.field_x >> 16;
         }
         return this.field_x >> 16;
@@ -306,7 +306,7 @@ abstract class WorldObject extends SpatialObject {
 
     abstract void g(int param0);
 
-    public static void h(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 237239984) {
           field_w = (Sprite[]) null;
           field_w = null;

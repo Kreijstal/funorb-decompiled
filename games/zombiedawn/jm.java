@@ -71,7 +71,7 @@ final class jm extends tc {
         super(param0, param1);
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_B = null;
         if (param0) {
           field_B = (PlatformTaskDispatcher) null;

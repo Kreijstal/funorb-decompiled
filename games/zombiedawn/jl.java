@@ -15,7 +15,7 @@ final class jl extends bj {
         return this.field_t;
     }
 
-    public static void e(byte param0) {
+    public static void releaseStatics(byte param0) {
         int var1 = -65 / ((-62 - param0) / 44);
         field_u = null;
         field_v = null;
@@ -55,7 +55,7 @@ final class jl extends bj {
           if (param1 != 45) {
             field_u = (MouseWheelInput) null;
           }
-          gp.a(param0, 0, var3, 0, var2_int);
+          gp.copy(param0, 0, var3, 0, var2_int);
           stackIn_3_0 = var3;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

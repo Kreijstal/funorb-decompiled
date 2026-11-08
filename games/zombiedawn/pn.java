@@ -13,7 +13,7 @@ abstract class pn extends ei {
 
     void l(int param0) {
         if (param0 != -7476) {
-          pn.k(10);
+          pn.releaseStatics(10);
         }
     }
 
@@ -55,7 +55,7 @@ abstract class pn extends ei {
         int var12Lifetime1;
         int var13Lifetime1;
         var16 = ZombieDawn.field_J;
-        Rasterizer.f(6 + param0, param1 + 35, -12 + this.field_i, this.field_n - 40, 2105376, 0);
+        Rasterizer.fillVerticalGradient(6 + param0, param1 + 35, -12 + this.field_i, this.field_n - 40, 2105376, 0);
         var4 = 35;
         var5 = 211;
         var6 = 194;
@@ -125,7 +125,7 @@ abstract class pn extends ei {
           var7Lifetime1++;
           var8Lifetime1++;
         }
-        we.field_Tb.b(this.field_i + param0 - 90, 10 + param1);
+        we.field_Tb.drawTransparent(this.field_i + param0 - 90, 10 + param1);
         GameApplet.a(65, param0 + 5, ad.field_f, -10 + this.field_i, param1 + 35);
         GameApplet.a(79, param0, dp.field_b, this.field_i, param1 + this.field_n - 22);
         var6Lifetime2 = 127;
@@ -151,7 +151,7 @@ abstract class pn extends ei {
           gl.a(-753, (String) null, param0, param2);
           return;
         }
-        pn.k(-15);
+        pn.releaseStatics(-15);
         var4Lifetime1 = (String) null;
         gl.a(-753, (String) null, param0, param2);
     }
@@ -274,7 +274,7 @@ abstract class pn extends ei {
           }
           if (ac.field_m == 1562) {
             if (null != qj.field_f &&
-              !qj.field_f.l()) {
+              !qj.field_f.isSamplePositionOutOfRange()) {
               pc.a((byte) 13, qj.field_f);
             }
             ch.b(124);
@@ -374,7 +374,7 @@ abstract class pn extends ei {
         }
     }
 
-    public static void k(int param0) {
+    public static void releaseStatics(int param0) {
         field_R = null;
         int var1 = 47 % ((param0 - 29) / 37);
         field_M = null;

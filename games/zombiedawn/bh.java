@@ -35,7 +35,7 @@ final class bh extends IntrusiveNode {
         }
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         field_h = null;
         if (param0 < 69) {
           bh.a(-47);

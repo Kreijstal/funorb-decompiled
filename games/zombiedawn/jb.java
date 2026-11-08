@@ -28,7 +28,7 @@ final class jb implements io {
           var8 = Js5Archive.field_k[1];
           if (param3 instanceof an &&
             ((an) (param3)).field_x) {
-            var8.b(var6_int - (-1 - (-var8.field_r + param3.field_i >> 1)), 1 + var7 + (param3.field_n - var8.field_q >> 1), 256);
+            var8.drawAdditive(var6_int - (-1 - (-var8.field_r + param3.field_i >> 1)), 1 + var7 + (param3.field_n - var8.field_q >> 1), 256);
           }
           if (param3.e(-17741)) {
             TileMap.b(param3.field_i - 4, -4 + param3.field_n, var6_int + 2, param0 - 16777157, 2 + var7);
@@ -339,7 +339,7 @@ final class jb implements io {
         me.field_Db = -2147483648;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         int var1 = -81 / ((param0 - 37) / 47);
         field_d = null;
         field_a = null;
@@ -464,7 +464,7 @@ final class jb implements io {
           }
           return true;
         }
-        jb.a(-97);
+        jb.releaseStatics(-97);
         if (Character.isISOControl(param1)) {
           return false;
         }

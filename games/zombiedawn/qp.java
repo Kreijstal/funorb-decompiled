@@ -6,11 +6,11 @@ final class qp {
     static String field_a;
     static int[] field_b;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_a = null;
         field_c = null;
         if (param0 < 24) {
-          qp.a((byte) 47);
+          qp.releaseStatics((byte) 47);
           field_b = null;
           return;
         }

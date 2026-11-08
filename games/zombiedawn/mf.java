@@ -64,7 +64,7 @@ final class mf {
         vf.a(param1, this.field_b, param2, 3, param0, param4);
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 <= 122) {
           return;
         }

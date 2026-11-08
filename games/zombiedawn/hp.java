@@ -63,7 +63,7 @@ class hp extends UiWidget implements jf {
         }
     }
 
-    void c(byte param0) {
+    void blur(byte param0) {
         int var4 = ZombieDawn.field_J;
         if (param0 != 57) {
           return;
@@ -71,7 +71,7 @@ class hp extends UiWidget implements jf {
         cj var2 = new cj(this.field_x);
         UiWidget var3 = (UiWidget) (var2.c((byte) -115));
         while (var3 != null) {
-          var3.c((byte) 57);
+          var3.blur((byte) 57);
           var3 = (UiWidget) (var2.a((byte) 61));
         }
     }
@@ -102,7 +102,7 @@ class hp extends UiWidget implements jf {
               var6.a(var5, (byte) -128);
               var7 = (UiWidget) (var6.a(17));
               while (var7 != null) {
-                if (!var7.a((byte) 90, param1)) {
+                if (!var7.focusNext((byte) 90, param1)) {
                   var7 = (UiWidget) (var6.a(17));
                   continue;
                 }
@@ -167,7 +167,7 @@ class hp extends UiWidget implements jf {
         }
     }
 
-    boolean a(int param0, int param1, UiWidget param2, char param3) {
+    boolean requestKeyboardFocus(int param0, int param1, UiWidget param2, char param3) {
         RuntimeException var5 = null;
         int var6 = 0;
         UiWidget var7 = null;
@@ -187,7 +187,7 @@ class hp extends UiWidget implements jf {
           while (var7 != null) {
             if (var7.a((byte) 73)) {
               if (var7.e(-17741) &&
-                var7.a(43, param1, param2, param3)) {
+                var7.requestKeyboardFocus(43, param1, param2, param3)) {
                 return true;
               }
               var7 = (UiWidget) (var9.a((byte) 61));
@@ -280,7 +280,7 @@ class hp extends UiWidget implements jf {
               var5.a(-3549, var4);
               var6 = (UiWidget) (var5.a((byte) 61));
               while (var6 != null) {
-                if (!var6.a((byte) 96, param1)) {
+                if (!var6.focusNext((byte) 96, param1)) {
                   var6 = (UiWidget) (var5.a((byte) 61));
                   continue;
                 }
@@ -426,7 +426,7 @@ class hp extends UiWidget implements jf {
         }
     }
 
-    UiWidget d(byte param0) {
+    UiWidget findFocusedChild(byte param0) {
         cj var2;
         UiWidget var3;
         int var4;
@@ -451,10 +451,10 @@ class hp extends UiWidget implements jf {
         this.g(-115);
     }
 
-    public static void f(int param0) {
+    public static void releaseStatics(int param0) {
         field_B = null;
         if (param0 < 82) {
-          hp.f(-94);
+          hp.releaseStatics(-94);
         }
         field_y = null;
         field_A = null;
@@ -462,7 +462,7 @@ class hp extends UiWidget implements jf {
         field_E = null;
     }
 
-    boolean a(byte param0, UiWidget param1) {
+    boolean focusNext(byte param0, UiWidget param1) {
         cj var3 = null;
         RuntimeException var3_ref = null;
         UiWidget var4 = null;
@@ -479,7 +479,7 @@ class hp extends UiWidget implements jf {
           }
           var4 = (UiWidget) (var3.c((byte) -126));
           while (var4 != null) {
-            if (var4.a((byte) 100, param1)) {
+            if (var4.focusNext((byte) 100, param1)) {
               return true;
             }
             var4 = (UiWidget) (var3.a((byte) 61));
@@ -558,7 +558,7 @@ class hp extends UiWidget implements jf {
         if (param0 != -17741) {
           return false;
         }
-        return null != this.d((byte) 35) ? true : false;
+        return null != this.findFocusedChild((byte) 35) ? true : false;
     }
 
     final void a(UiWidget param0, int param1) {

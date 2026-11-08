@@ -4,7 +4,7 @@
 final class pd {
     static int[] field_a;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 != -117) {
           field_a = (int[]) null;
         }
@@ -145,7 +145,7 @@ final class pd {
         }
     }
 
-    final synchronized static long a(int param0) {
+    final synchronized static long monotonicTimeMillis(int param0) {
         if (param0 != -22826) {
           return -16L;
         }

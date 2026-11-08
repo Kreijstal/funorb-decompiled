@@ -25,7 +25,7 @@ final class dc {
         df.field_h = true;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 > -26) {
           return;
         }

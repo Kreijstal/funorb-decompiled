@@ -167,7 +167,7 @@ class PacketBuffer extends IntrusiveNode {
         this.position = this.position - 4;
         int var2 = ij.a(this.position, this.payload, (byte) 119, 0);
         if (param0 >= -65) {
-          PacketBuffer.e(-85);
+          PacketBuffer.releaseStatics(-85);
         }
         int var3 = this.readInt(-107);
         if (var2 != var3) {
@@ -176,7 +176,7 @@ class PacketBuffer extends IntrusiveNode {
         return true;
     }
 
-    public static void e(int param0) {
+    public static void releaseStatics(int param0) {
         field_k = null;
         if (param0 != 27291) {
           field_k = (mf) null;
@@ -470,7 +470,7 @@ class PacketBuffer extends IntrusiveNode {
               if (be.field_j <= 0 &&
                 !MouseInputHandler.field_c) {
                 try {
-                  qe.a(hc.a(0), "unzap", -108);
+                  qe.callWindowFunction(hc.a(0), "unzap", -108);
                 } catch (java.lang.Throwable decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var8_ref_Throwable = decompiledCaughtException;

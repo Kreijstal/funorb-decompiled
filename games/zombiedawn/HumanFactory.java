@@ -13,7 +13,7 @@ final class HumanFactory {
     static int[] field_h;
     boolean field_b;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_c = null;
         field_h = null;
         if (param0 != -25401) {

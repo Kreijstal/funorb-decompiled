@@ -137,7 +137,7 @@ final class bd {
         }
     }
 
-    final void a(byte[] param0, int param1, int param2) {
+    final void finishDigest(byte[] param0, int param1, int param2) {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         RuntimeException stackIn_15_0 = null;
@@ -151,7 +151,7 @@ final class bd {
         int var8 = 0;
         var8 = ZombieDawn.field_J;
         try {
-          this.field_k[this.field_g] = (byte)GameWorld.a((int) this.field_k[this.field_g], 128 >>> eg.a(this.field_b, 7));
+          this.field_k[this.field_g] = (byte)GameWorld.intOr((int) this.field_k[this.field_g], 128 >>> eg.a(this.field_b, 7));
           this.field_g = this.field_g + 1;
           if (param2 > -118) {
             this.b(-71);
@@ -170,7 +170,7 @@ final class bd {
             this.field_g = this.field_g + 1;
             this.field_k[fieldTemp$1] = (byte) 0;
           }
-          gp.a(this.field_c, 0, this.field_k, 32, 32);
+          gp.copy(this.field_c, 0, this.field_k, 32, 32);
           this.b(-9);
           var4_int = 0;
           var5 = param1;
@@ -326,7 +326,7 @@ final class bd {
             var8 = param1[var5_int] << var6 & 255 | (255 & param1[var5_int + 1]) >>> -var6 + 8;
             if (var8 >= 0 &&
               var8 < 256) {
-              this.field_k[this.field_g] = (byte)GameWorld.a((int) this.field_k[this.field_g], var8 >>> var7);
+              this.field_k[this.field_g] = (byte)GameWorld.intOr((int) this.field_k[this.field_g], var8 >>> var7);
               this.field_g = this.field_g + 1;
               this.field_b = this.field_b + (-var7 + 8);
               if (this.field_b == 512) {
@@ -344,7 +344,7 @@ final class bd {
           }
           if (param2 > 0L) {
             var8Lifetime1 = 255 & param1[var5_int] << var6;
-            this.field_k[this.field_g] = (byte)GameWorld.a((int) this.field_k[this.field_g], var8Lifetime1 >>> var7);
+            this.field_k[this.field_g] = (byte)GameWorld.intOr((int) this.field_k[this.field_g], var8Lifetime1 >>> var7);
           } else {
             var8Lifetime1 = 0;
           }

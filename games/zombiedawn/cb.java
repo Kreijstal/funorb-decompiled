@@ -53,7 +53,7 @@ class cb extends ce {
         return stackIn_9_0;
     }
 
-    public static void e(int param0) {
+    public static void releaseStatics(int param0) {
         field_N = null;
         if (param0 < 65) {
           cb.a(-56, 'N');
@@ -103,7 +103,7 @@ class cb extends ce {
         this(param0, param1, 0, 0, 0, 0, (String) null);
     }
 
-    private final void a(int param0, cb param1) {
+    private final void mergeDefinedProperties(int param0, cb param1) {
         RuntimeException stackIn_97_0 = null;
         StringBuilder stackIn_97_1 = null;
         String stackIn_98_2 = null;
@@ -257,7 +257,7 @@ class cb extends ce {
         this.field_W = -1;
         try {
           this.key = param0;
-          this.a(-2147483648, param1);
+          this.mergeDefinedProperties(-2147483648, param1);
           if (param6 != null) {
             this.field_Z = param6;
           }

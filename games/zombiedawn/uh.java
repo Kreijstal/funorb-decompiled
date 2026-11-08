@@ -76,14 +76,14 @@ final class uh {
               for (var16 = var7; var16 < var10; var16++) {
                 var17 = var3.worldToScreenX(24 * var16, (byte) -66);
                 var18 = var3.worldToScreenY(var15 * 24, 0);
-                Rasterizer.a(var17, var18, 24, 24, this.field_l, 128);
+                Rasterizer.fillRectangleBlended(var17, var18, 24, 24, this.field_l, 128);
               }
             }
             pa.a(-21189);
           } else {
             var5 = ha.field_b;
             var6 = ei.field_K;
-            Rasterizer.d(var5, var6, this.field_a, this.field_l, 128);
+            Rasterizer.fillCircleBlended(var5, var6, this.field_a, this.field_l, 128);
           }
         }
     }
@@ -189,8 +189,8 @@ final class uh {
         if (this.field_m != -1) {
           if (!this.field_e) {
             var2 = nh.field_P - 27;
-            so.a(qp.field_c[this.field_m], -100 + this.field_d, var2);
-            mk.field_a[this.field_m].b(this.field_d - 100, var2);
+            so.drawTransparent(qp.field_c[this.field_m], -100 + this.field_d, var2);
+            mk.field_a[this.field_m].drawTransparent(this.field_d - 100, var2);
           } else {
             bj.field_q.drawStringCentered(mc.field_j, bd.field_d, -10 + nh.field_P, 15658734, 1);
           }
@@ -212,7 +212,7 @@ final class uh {
         }
         var2Lifetime1 = this.c(param0 - 66);
         if (-1 != var2Lifetime1) {
-          kb.field_i[var2Lifetime1].b(3 + ha.field_b, ei.field_K + 12);
+          kb.field_i[var2Lifetime1].drawTransparent(3 + ha.field_b, ei.field_K + 12);
         }
     }
 
@@ -221,8 +221,8 @@ final class uh {
           if (param0 <= 82) {
             this.f(35);
           }
-          param2.b(-(param2.field_w / 2) + bd.field_d, 400);
-          so.a(param1, bd.field_d - param1.field_w / 2, 400);
+          param2.drawTransparent(-(param2.field_w / 2) + bd.field_d, 400);
+          so.drawTransparent(param1, bd.field_d - param1.field_w / 2, 400);
         } catch (RuntimeException runtimeException) {
           throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "uh.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -301,7 +301,7 @@ final class uh {
           this.field_l = 3390259;
         }
         if (param1 != -6126) {
-          uh.c((byte) -49);
+          uh.releaseStatics((byte) -49);
         }
     }
 
@@ -465,7 +465,7 @@ final class uh {
         return this.field_c;
     }
 
-    public static void c(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_o = null;
         field_h = null;
         if (param0 <= 59) {

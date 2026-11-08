@@ -21,7 +21,7 @@ final class ro {
         }
     }
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_a = null;
         if (param0 > -26) {
           mf var2 = (mf) null;

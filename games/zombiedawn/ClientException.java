@@ -33,9 +33,9 @@ final class ClientException extends RuntimeException {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 <= 28) {
-          ClientException.a((byte) -72);
+          ClientException.releaseStatics((byte) -72);
           field_d = null;
           return;
         }

@@ -170,9 +170,9 @@ final class ti {
               throw new IllegalStateException();
             }
             pn.field_R = new String[var4];
-            gp.a(jc.field_p, 0, pn.field_R, 0, var4);
+            gp.copy(jc.field_p, 0, pn.field_R, 0, var4);
             NodeHashTableIterator.field_b = new String[-1 - var4 + var3_int];
-            gp.a(jc.field_p, 1 + var4, NodeHashTableIterator.field_b, 0, var3_int - var4 - 1);
+            gp.copy(jc.field_p, 1 + var4, NodeHashTableIterator.field_b, 0, var3_int - var4 - 1);
             var4 = -1;
             var3_int = ja.a((byte) 16, jc.field_p, s.a(1938762664, ma.field_q, new String[]{"<br><%0><br>"}), di.field_O, ZombieDawn.field_K);
             for (var5 = 0; var3_int > var5; var5++) {
@@ -186,9 +186,9 @@ final class ti {
               throw new IllegalStateException();
             }
             dl.field_h = new String[var4];
-            gp.a(jc.field_p, 0, dl.field_h, 0, var4);
+            gp.copy(jc.field_p, 0, dl.field_h, 0, var4);
             bp.field_a = new String[-1 - var4 + var3_int];
-            gp.a(jc.field_p, var4 + 1, bp.field_a, 0, var3_int - (var4 + 1));
+            gp.copy(jc.field_p, var4 + 1, bp.field_a, 0, var3_int - (var4 + 1));
             if (dl.field_h.length <= pn.field_R.length) {
               stackIn_57_0 = pn.field_R.length;
             } else {
@@ -242,7 +242,7 @@ final class ti {
               }
               stackIn_72_0[stackIn_72_1] = stackIn_75_2;
             }
-            ge.field_f = pd.a(-22826);
+            ge.field_f = pd.monotonicTimeMillis(-22826);
           }
           i.field_W.field_h = qk.field_Kb.length;
           var3_intLifetime1 = 0;
@@ -250,7 +250,7 @@ final class ti {
             stackIn_88_0 = cj.field_h[var4Lifetime1];
             stackIn_88_1 = true;
             stackIn_89_2 = !(SpriteState.field_s[var4Lifetime1] < 0);
-            var5Lifetime1 = tk.a(stackIn_88_0, stackIn_88_1, stackIn_89_2);
+            var5Lifetime1 = tk.measureText(stackIn_88_0, stackIn_88_1, stackIn_89_2);
             if (var5Lifetime1 > var3_intLifetime1) {
               var3_intLifetime1 = var5Lifetime1;
             }
@@ -260,7 +260,7 @@ final class ti {
             var4_ref_String__ = var10;
             for (var5Lifetime2 = 0; var10.length > var5Lifetime2; var5Lifetime2++) {
               var11 = var10[var5Lifetime2];
-              var7Lifetime1 = tk.a(var11, true, false);
+              var7Lifetime1 = tk.measureText(var11, true, false);
               if (var7Lifetime1 > var3_intLifetime1) {
                 var3_intLifetime1 = var7Lifetime1;
               }
@@ -268,7 +268,7 @@ final class ti {
             var4_ref_String__Lifetime1 = NodeHashTableIterator.field_b;
             for (var5Lifetime2Lifetime1 = 0; var4_ref_String__Lifetime1.length > var5Lifetime2Lifetime1; var5Lifetime2Lifetime1++) {
               var12 = var4_ref_String__Lifetime1[var5Lifetime2Lifetime1];
-              var7Lifetime1Lifetime1 = tk.a(var12, true, false);
+              var7Lifetime1Lifetime1 = tk.measureText(var12, true, false);
               if (var3_intLifetime1 < var7Lifetime1Lifetime1) {
                 var3_intLifetime1 = var7Lifetime1Lifetime1;
               }
@@ -298,7 +298,7 @@ final class ti {
           while (cj.field_h.length > var4Lifetime3) {
             var6Lifetime1 = SpriteState.field_s[var4Lifetime3];
             if (var6Lifetime1 >= 0) {
-              var7Lifetime2 = tk.a(cj.field_h[var4Lifetime3], true, true);
+              var7Lifetime2 = tk.measureText(cj.field_h[var4Lifetime3], true, true);
               var5Lifetime3 = var5Lifetime3 + fe.field_H;
               var8Lifetime1 = mo.field_b - (var7Lifetime2 >> 1);
               hm.field_F[var4Lifetime3] = new int[4];
@@ -325,13 +325,13 @@ final class ti {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_c = null;
         field_d = null;
         field_g = null;
         field_f = null;
         if (param0 != 4) {
-          ti.a(126);
+          ti.releaseStatics(126);
         }
         field_e = null;
     }

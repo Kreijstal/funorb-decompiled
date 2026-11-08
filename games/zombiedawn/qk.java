@@ -37,7 +37,7 @@ class qk extends Human {
         return var3;
     }
 
-    public static void v(int param0) {
+    public static void releaseStatics(int param0) {
         field_Hb = null;
         if (param0 != 15213) {
           return;
@@ -54,11 +54,11 @@ class qk extends Human {
             return;
           }
           if (param4) {
-            qk.v(32);
+            qk.releaseStatics(32);
           }
           var5 = 3;
-          Rasterizer.a(param3, param0, param1, param2, 0, 96);
-          Rasterizer.h(var5, var5, param3, param0, param1, param2);
+          Rasterizer.fillRectangleBlended(param3, param0, param1, param2, 0, 96);
+          Rasterizer.blurRectangle(var5, var5, param3, param0, param1, param2);
           return;
         }
     }
@@ -341,14 +341,14 @@ class qk extends Human {
           if (param1 != 5060) {
             this.field_Fb = -109;
           }
-          Rasterizer.d(param0.worldToScreenX(this.getX(true), (byte) -98), param0.worldToScreenY(this.getY(237239984), 0), this.field_Eb, 16711680);
+          Rasterizer.drawCircleOutline(param0.worldToScreenX(this.getX(true), (byte) -98), param0.worldToScreenY(this.getY(237239984), 0), this.field_Eb, 16711680);
           var3 = Integer.toString(this.field_Ab);
           if (this.field_Ab > 100) {
             var3 = "oo";
           }
           bj.field_q.drawString(var3, param0.worldToScreenX(this.getX(true), (byte) -128), -48 + param0.worldToScreenY(this.getY(param1 ^ 237235572), 0), 16777215, 0);
           if (null != this.field_yb) {
-            Rasterizer.e(param0.worldToScreenX(this.getX(true), (byte) -93), param0.worldToScreenY(this.getY(237239984), 0), param0.worldToScreenX(this.field_yb.getX(true), (byte) -81), param0.worldToScreenY(this.field_yb.getY(param1 + 237234924), 0), 65280);
+            Rasterizer.drawLine(param0.worldToScreenX(this.getX(true), (byte) -93), param0.worldToScreenY(this.getY(237239984), 0), param0.worldToScreenX(this.field_yb.getX(true), (byte) -81), param0.worldToScreenY(this.field_yb.getY(param1 + 237234924), 0), 65280);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -385,29 +385,29 @@ class qk extends Human {
         if (this.field_S != 1) {
           if (this.field_S != 3) {
             if (0 == this.field_S) {
-              Rasterizer.d(param0 - 2, param2 - 54 + var7, var5, 0, 64);
-              Rasterizer.d(-2 + param0, -50 + param2, var6, 0, 128);
-              Rasterizer.a(-2 + param0 << 4, param2 - 54 + var7 << 4, var5 << 4, 250, dm.field_p);
-              Rasterizer.a(-2 + param0 << 4, param2 - 50 << 4, var6 << 4, 200, dm.field_r);
+              Rasterizer.fillCircleBlended(param0 - 2, param2 - 54 + var7, var5, 0, 64);
+              Rasterizer.fillCircleBlended(-2 + param0, -50 + param2, var6, 0, 128);
+              Rasterizer.fillRadialPaletteCircle(-2 + param0 << 4, param2 - 54 + var7 << 4, var5 << 4, 250, dm.field_p);
+              Rasterizer.fillRadialPaletteCircle(-2 + param0 << 4, param2 - 50 << 4, var6 << 4, 200, dm.field_r);
             } else {
               if (this.field_S == 2) {
-                Rasterizer.d(-2 + param0, param2 - 10 - var7, var5 - 1, 0, 64);
-                Rasterizer.d(param0 - 2, param2 - 16, var6 - 1, 0, 128);
-                Rasterizer.a(param0 - 2 << 4, param2 + (-10 - var7) << 4, var5 << 4, 250, dm.field_p);
-                Rasterizer.a(-2 + param0 << 4, param2 - 16 << 4, var6 << 4, 200, dm.field_r);
+                Rasterizer.fillCircleBlended(-2 + param0, param2 - 10 - var7, var5 - 1, 0, 64);
+                Rasterizer.fillCircleBlended(param0 - 2, param2 - 16, var6 - 1, 0, 128);
+                Rasterizer.fillRadialPaletteCircle(param0 - 2 << 4, param2 + (-10 - var7) << 4, var5 << 4, 250, dm.field_p);
+                Rasterizer.fillRadialPaletteCircle(-2 + param0 << 4, param2 - 16 << 4, var6 << 4, 200, dm.field_r);
               }
             }
           } else {
-            Rasterizer.d(var7 + (param0 - 23), -36 + param2, var5, 0, 64);
-            Rasterizer.d(-18 + param0, param2 - 36, var6, 0, 128);
-            Rasterizer.a(var7 + param0 - 23 << 4, param2 - 36 << 4, var5 << 4, 250, dm.field_p);
-            Rasterizer.a(-18 + param0 << 4, param2 - 36 << 4, var6 << 4, 200, dm.field_r);
+            Rasterizer.fillCircleBlended(var7 + (param0 - 23), -36 + param2, var5, 0, 64);
+            Rasterizer.fillCircleBlended(-18 + param0, param2 - 36, var6, 0, 128);
+            Rasterizer.fillRadialPaletteCircle(var7 + param0 - 23 << 4, param2 - 36 << 4, var5 << 4, 250, dm.field_p);
+            Rasterizer.fillRadialPaletteCircle(-18 + param0 << 4, param2 - 36 << 4, var6 << 4, 200, dm.field_r);
           }
         } else {
-          Rasterizer.d(-var7 + param0 + 22, -36 + param2, -1 + var5, 0, 64);
-          Rasterizer.d(param0 + 17, -36 + param2, -1 + var6, 0, 128);
-          Rasterizer.a(-var7 + (22 + param0) << 4, param2 - 36 << 4, var5 << 4, 250, dm.field_p);
-          Rasterizer.a(17 + param0 << 4, param2 - 36 << 4, var6 << 4, 200, dm.field_r);
+          Rasterizer.fillCircleBlended(-var7 + param0 + 22, -36 + param2, -1 + var5, 0, 64);
+          Rasterizer.fillCircleBlended(param0 + 17, -36 + param2, -1 + var6, 0, 128);
+          Rasterizer.fillRadialPaletteCircle(-var7 + (22 + param0) << 4, param2 - 36 << 4, var5 << 4, 250, dm.field_p);
+          Rasterizer.fillRadialPaletteCircle(17 + param0 << 4, param2 - 36 << 4, var6 << 4, 200, dm.field_r);
         }
     }
 

@@ -15,24 +15,24 @@ final class wn {
 
     final static void a(int param0, rj param1, int param2, java.awt.Component param3, PlatformTaskDispatcher param4, int param5, boolean param6, int param7) {
         try {
-          qf.a(param5, param6, 10);
-          ExceptionWrapper.field_d = qf.a(param4, param3, 0, param0);
-          cf.field_fb = qf.a(param4, param3, 1, param2);
+          qf.configure(param5, param6, 10);
+          ExceptionWrapper.field_d = qf.create(param4, param3, 0, param0);
+          cf.field_fb = qf.create(param4, param3, 1, param2);
           t.field_i = new PcmMixer();
           kg.field_f = 1000 * param2 / param5;
-          cf.field_fb.b(t.field_i);
+          cf.field_fb.setStream(t.field_i);
           if (param7 >= -104) {
             field_b = true;
           }
           uh.field_o = param1;
           uh.field_o.a(ce.field_u, (byte) -68);
-          ExceptionWrapper.field_d.b(uh.field_o);
+          ExceptionWrapper.field_d.setStream(uh.field_o);
         } catch (RuntimeException runtimeException) {
           throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "wn.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = null;
         if (param0 != 0) {
           PlatformTaskDispatcher var2 = (PlatformTaskDispatcher) null;

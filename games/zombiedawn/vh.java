@@ -123,7 +123,7 @@ final class vh {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         int var1 = 92 % ((param0 + 17) / 32);
         field_d = null;
         field_e = null;

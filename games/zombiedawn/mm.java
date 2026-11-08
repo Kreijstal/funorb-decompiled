@@ -57,7 +57,7 @@ final class mm extends IntrusiveNode {
         return false;
     }
 
-    public static void e(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_j = null;
         int var1 = -73 / ((param0 + 7) / 41);
         field_l = null;
@@ -132,7 +132,7 @@ final class mm extends IntrusiveNode {
           var3_int = param0.getX(true);
           var4 = param0.getY(237239984);
           if (param1 <= 49) {
-            mm.e((byte) 37);
+            mm.releaseStatics((byte) 37);
           }
           var5 = (pb) (this.field_h.b((byte) 26));
           while (true) {

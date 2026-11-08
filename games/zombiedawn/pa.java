@@ -193,10 +193,10 @@ abstract class pa extends UiWidget implements jf {
     final void a(int param0, int param1, int param2, int param3, int param4) {
         super.a(95, param1, param2, param3, param4);
         int var6 = 116 % ((param0 + 23) / 48);
-        this.b(true);
+        this.refreshChildLayout(true);
     }
 
-    public static void d(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_C = null;
         field_A = null;
         field_x = null;
@@ -227,7 +227,7 @@ abstract class pa extends UiWidget implements jf {
           if (param0 != 0) {
             field_y = (ul) null;
           }
-          stackIn_7_0 = (null != this.field_z) && (!this.field_z.e(-17741)) && (this.field_z.a((byte) 68, param1));
+          stackIn_7_0 = (null != this.field_z) && (!this.field_z.e(-17741)) && (this.field_z.focusNext((byte) 68, param1));
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -256,12 +256,12 @@ abstract class pa extends UiWidget implements jf {
         return var2;
     }
 
-    final void c(byte param0) {
+    final void blur(byte param0) {
         if (param0 != 57) {
           field_x = (va[]) null;
         }
         if (null != this.field_z) {
-          this.field_z.c((byte) 57);
+          this.field_z.blur((byte) 57);
         }
     }
 
@@ -283,7 +283,7 @@ abstract class pa extends UiWidget implements jf {
         return null != this.f(-6) ? true : false;
     }
 
-    final boolean a(int param0, int param1, UiWidget param2, char param3) {
+    final boolean requestKeyboardFocus(int param0, int param1, UiWidget param2, char param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         boolean stackIn_9_0 = false;
@@ -294,7 +294,7 @@ abstract class pa extends UiWidget implements jf {
         try {
           if (null != this.field_z &&
             this.field_z.e(-17741) &&
-            this.field_z.a(31, param1, param2, param3)) {
+            this.field_z.requestKeyboardFocus(31, param1, param2, param3)) {
             return true;
           }
           var5_int = param1;
@@ -333,7 +333,7 @@ abstract class pa extends UiWidget implements jf {
           if (param0 >= -8) {
             return true;
           }
-          stackIn_8_0 = (this.field_z != null) && (!this.field_z.e(-17741)) && (this.field_z.a((byte) 82, param1));
+          stackIn_8_0 = (this.field_z != null) && (!this.field_z.e(-17741)) && (this.field_z.focusNext((byte) 82, param1));
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -456,7 +456,7 @@ abstract class pa extends UiWidget implements jf {
         }
     }
 
-    final boolean a(byte param0, UiWidget param1) {
+    final boolean focusNext(byte param0, UiWidget param1) {
         RuntimeException var3 = null;
         boolean stackIn_6_0 = false;
         RuntimeException stackIn_9_0 = null;
@@ -467,7 +467,7 @@ abstract class pa extends UiWidget implements jf {
           if (param0 <= 67) {
             this.a(-106, -102, 57, -16, -81);
           }
-          stackIn_6_0 = (this.field_z != null) && (this.field_z.a((byte) 105, param1));
+          stackIn_6_0 = (this.field_z != null) && (this.field_z.focusNext((byte) 105, param1));
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -483,7 +483,7 @@ abstract class pa extends UiWidget implements jf {
         }
     }
 
-    void b(boolean param0) {
+    void refreshChildLayout(boolean param0) {
         if (this.field_z != null) {
           this.field_z.a(true);
         }

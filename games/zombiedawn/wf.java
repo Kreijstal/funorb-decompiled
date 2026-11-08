@@ -8,7 +8,7 @@ final class wf extends hm {
     private vc field_R;
     private int field_T;
 
-    final boolean a(byte param0, UiWidget param1) {
+    final boolean focusNext(byte param0, UiWidget param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -34,10 +34,10 @@ final class wf extends hm {
         }
     }
 
-    public static void h(int param0) {
+    public static void releaseStatics(int param0) {
         field_P = null;
         if (param0 < 62) {
-          wf.h(-102);
+          wf.releaseStatics(-102);
         }
     }
 
@@ -134,14 +134,14 @@ final class wf extends hm {
             gj.field_v != var6) {
             if (var6 == MouseWheelInput.field_b) {
               var20 = Js5Archive.field_k[2];
-              var20.b(var9, -(var20.field_t >> 1) + var10, 256);
+              var20.drawAdditive(var9, -(var20.field_t >> 1) + var10, 256);
               return;
             }
             if (mc.field_g != var6) {
               return;
             }
             var19 = Js5Archive.field_k[1];
-            var19.b(var9, -(var19.field_t >> 1) + var10, 256);
+            var19.drawAdditive(var9, -(var19.field_t >> 1) + var10, 256);
             return;
           }
           var21 = Js5Archive.field_k[0];
@@ -164,9 +164,9 @@ final class wf extends hm {
               }
             }
           }
-          var21.a(112, 144, var21.field_r << 4, var21.field_q << 4, -this.field_T << 10, 4096);
+          var21.drawRotatedAboutPivot(112, 144, var21.field_r << 4, var21.field_q << 4, -this.field_T << 10, 4096);
           pa.a(-21189);
-          this.field_O.b(-(var21.field_r >> 1) + var9, var10 - var21.field_q, 256);
+          this.field_O.drawAdditive(-(var21.field_r >> 1) + var9, var10 - var21.field_q, 256);
           return;
         }
         if (var6 == gj.field_v) {
@@ -184,14 +184,14 @@ final class wf extends hm {
             gj.field_v != var6) {
             if (var6 == MouseWheelInput.field_b) {
               var25 = Js5Archive.field_k[2];
-              var25.b(var9Lifetime1, -(var25.field_t >> 1) + var10Lifetime1, 256);
+              var25.drawAdditive(var9Lifetime1, -(var25.field_t >> 1) + var10Lifetime1, 256);
               return;
             }
             if (mc.field_g != var6) {
               return;
             }
             var24 = Js5Archive.field_k[1];
-            var24.b(var9Lifetime1, -(var24.field_t >> 1) + var10Lifetime1, 256);
+            var24.drawAdditive(var9Lifetime1, -(var24.field_t >> 1) + var10Lifetime1, 256);
             return;
           }
           var26 = Js5Archive.field_k[0];
@@ -214,9 +214,9 @@ final class wf extends hm {
               }
             }
           }
-          var26.a(112, 144, var26.field_r << 4, var26.field_q << 4, -this.field_T << 10, 4096);
+          var26.drawRotatedAboutPivot(112, 144, var26.field_r << 4, var26.field_q << 4, -this.field_T << 10, 4096);
           pa.a(-21189);
-          this.field_O.b(-(var26.field_r >> 1) + var9Lifetime1, var10Lifetime1 - var26.field_q, 256);
+          this.field_O.drawAdditive(-(var26.field_r >> 1) + var9Lifetime1, var10Lifetime1 - var26.field_q, 256);
           return;
         }
         var5 = this.field_R.b((byte) 78);
@@ -234,14 +234,14 @@ final class wf extends hm {
             gj.field_v != var6Lifetime1) {
             if (var6Lifetime1 == MouseWheelInput.field_b) {
               var37 = Js5Archive.field_k[2];
-              var37.b(var9Lifetime2, -(var37.field_t >> 1) + var10Lifetime2, 256);
+              var37.drawAdditive(var9Lifetime2, -(var37.field_t >> 1) + var10Lifetime2, 256);
               return;
             }
             if (mc.field_g != var6Lifetime1) {
               return;
             }
             var36 = Js5Archive.field_k[1];
-            var36.b(var9Lifetime2, -(var36.field_t >> 1) + var10Lifetime2, 256);
+            var36.drawAdditive(var9Lifetime2, -(var36.field_t >> 1) + var10Lifetime2, 256);
             return;
           }
           var38 = Js5Archive.field_k[0];
@@ -260,9 +260,9 @@ final class wf extends hm {
             this.field_O = new Sprite(var11Lifetime2, var12Lifetime2);
             ki.a((byte) -118, this.field_O);
           }
-          var38.a(112, 144, var38.field_r << 4, var38.field_q << 4, -this.field_T << 10, 4096);
+          var38.drawRotatedAboutPivot(112, 144, var38.field_r << 4, var38.field_q << 4, -this.field_T << 10, 4096);
           pa.a(-21189);
-          this.field_O.b(-(var38.field_r >> 1) + var9Lifetime2, var10Lifetime2 - var38.field_q, 256);
+          this.field_O.drawAdditive(-(var38.field_r >> 1) + var9Lifetime2, var10Lifetime2 - var38.field_q, 256);
           return;
         }
         var27 = this.field_Q;
@@ -298,22 +298,22 @@ final class wf extends hm {
               }
             }
           }
-          var29.a(112, 144, var29.field_r << 4, var29.field_q << 4, -this.field_T << 10, 4096);
+          var29.drawRotatedAboutPivot(112, 144, var29.field_r << 4, var29.field_q << 4, -this.field_T << 10, 4096);
           pa.a(-21189);
-          this.field_O.b(-(var29.field_r >> 1) + var9Lifetime3, var10Lifetime3 - var29.field_q, 256);
+          this.field_O.drawAdditive(-(var29.field_r >> 1) + var9Lifetime3, var10Lifetime3 - var29.field_q, 256);
           return;
         }
         if (gj.field_v != var6Lifetime2) {
           if (var6Lifetime2 == MouseWheelInput.field_b) {
             var34 = Js5Archive.field_k[2];
-            var34.b(var9Lifetime3, -(var34.field_t >> 1) + var10Lifetime3, 256);
+            var34.drawAdditive(var9Lifetime3, -(var34.field_t >> 1) + var10Lifetime3, 256);
             return;
           }
           if (mc.field_g != var6Lifetime2) {
             return;
           }
           var33 = Js5Archive.field_k[1];
-          var33.b(var9Lifetime3, -(var33.field_t >> 1) + var10Lifetime3, 256);
+          var33.drawAdditive(var9Lifetime3, -(var33.field_t >> 1) + var10Lifetime3, 256);
           return;
         }
         var30 = Js5Archive.field_k[0];
@@ -337,9 +337,9 @@ final class wf extends hm {
             }
           }
         }
-        var30.a(112, 144, var30.field_r << 4, var30.field_q << 4, -this.field_T << 10, 4096);
+        var30.drawRotatedAboutPivot(112, 144, var30.field_r << 4, var30.field_q << 4, -this.field_T << 10, 4096);
         pa.a(-21189);
-        this.field_O.b(-(var30.field_r >> 1) + var9Lifetime3, var10Lifetime3 - var30.field_q, 256);
+        this.field_O.drawAdditive(-(var30.field_r >> 1) + var9Lifetime3, var10Lifetime3 - var30.field_q, 256);
     }
 
     final String d(int param0) {

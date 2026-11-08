@@ -166,7 +166,7 @@ class IntrusiveDeque {
         return null;
     }
 
-    public static void c(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_a = null;
         if (param0 > -20) {
           return;

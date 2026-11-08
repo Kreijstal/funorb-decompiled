@@ -39,9 +39,9 @@ final class hf extends an {
           try {
             try {
               if (!param0) {
-                hf.d((byte) -83);
+                hf.releaseStatics((byte) -83);
               }
-              var3 = (String) (qe.a(param1, "getcookies", -91));
+              var3 = (String) (qe.callWindowFunction(param1, "getcookies", -91));
               var4 = PacketBuffer.split(';', var3, -126);
               for (var5 = 0; var5 < var4.length; var5++) {
                 var6 = var4[var5].indexOf('=');
@@ -206,7 +206,7 @@ final class hf extends an {
         }
     }
 
-    public static void d(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 >= -8) {
           return;
         }

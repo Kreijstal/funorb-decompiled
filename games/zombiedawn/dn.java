@@ -52,7 +52,7 @@ final class dn extends pa {
         return null;
     }
 
-    public static void h(int param0) {
+    public static void releaseStatics(int param0) {
         field_D = null;
         field_E = null;
         field_J = null;
@@ -306,7 +306,7 @@ final class dn extends pa {
             var13 = var16;
             var6 = var13;
             for (var7 = 0; var3 > var7; var7++) {
-              var6[var7] = GameWorld.a(j.field_a[eg.a((int) var20[var7], 255)], eg.a((int) var22[var7], 255) << 24);
+              var6[var7] = GameWorld.intOr(j.field_a[eg.a((int) var20[var7], 255)], eg.a((int) var22[var7], 255) << 24);
             }
             var1[var2] = (Sprite) ((Object) new cd(gl.field_F, Zombie.field_pb, sl.field_d[var2], bo.field_o[var2], bn.field_c[var2], uf.field_n[var2], var16));
           }
@@ -327,7 +327,7 @@ final class dn extends pa {
         var3 = (ei) (var2.c((byte) -116));
         while (var3 != null) {
           if (var3.field_H) {
-            return var3.d((byte) 35);
+            return var3.findFocusedChild((byte) 35);
           }
           var3 = (ei) (var2.a((byte) 61));
         }
@@ -359,7 +359,7 @@ final class dn extends pa {
           var3 = (ei) (param0);
           this.field_H.addLast(var3, -112);
           var3.field_H = param1 ? true : false;
-          var3.a((byte) 107, (UiWidget) (this));
+          var3.focusNext((byte) 107, (UiWidget) (this));
         } catch (RuntimeException runtimeException) {
           throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "dn.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -382,7 +382,7 @@ final class dn extends pa {
     final static boolean i(int param0) {
         boolean stackIn_7_0 = false;
         if (param0 != -19301) {
-          dn.h(28);
+          dn.releaseStatics(28);
         }
         stackIn_7_0 = (fl.field_a >= 10) && (!i.field_Y) && (!ng.a((byte) -64));
         return stackIn_7_0;

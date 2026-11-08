@@ -8,7 +8,7 @@ final class kb extends pm {
     static String[] field_j;
     static Sprite[] field_i;
 
-    final String a(String param0, byte param1) {
+    final String messageForText(String param0, byte param1) {
         RuntimeException var3 = null;
         String stackIn_5_0 = null;
         RuntimeException stackIn_9_0 = null;
@@ -19,7 +19,7 @@ final class kb extends pm {
           if (param1 > -94) {
             field_i = (Sprite[]) null;
           }
-          if (this.a(param0, 2) != MouseWheelInput.field_b) {
+          if (this.validateText(param0, 2) != MouseWheelInput.field_b) {
             return null;
           }
           stackIn_5_0 = sa.field_Z;
@@ -42,7 +42,7 @@ final class kb extends pm {
         super(param0);
     }
 
-    final rh a(String param0, int param1) {
+    final rh validateText(String param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         String var4 = null;
@@ -57,7 +57,7 @@ final class kb extends pm {
         try {
           if (param1 != 2) {
             var4 = (String) null;
-            this.a((String) null, (byte) 5);
+            this.messageForText((String) null, (byte) 5);
           }
           var5 = (CharSequence) ((Object) param0);
           if (!sj.a((byte) -101, var5)) {
@@ -86,7 +86,7 @@ final class kb extends pm {
         }
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         field_f = null;
         field_g = null;
         field_i = null;

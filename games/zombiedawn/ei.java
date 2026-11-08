@@ -49,8 +49,8 @@ abstract class ei extends hp {
         }
     }
 
-    final UiWidget d(byte param0) {
-        UiWidget var2 = super.d(param0);
+    final UiWidget findFocusedChild(byte param0) {
+        UiWidget var2 = super.findFocusedChild(param0);
         if (var2 != null) {
           return var2;
         }
@@ -492,7 +492,7 @@ abstract class ei extends hp {
         return stackIn_12_0;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_G = null;
         if (param0 < 99) {
           field_G = (int[]) null;

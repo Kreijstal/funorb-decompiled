@@ -66,7 +66,7 @@ final class gj {
             if (param3.field_i == 2) {
               var7 = var7 + (param1.field_n - this.field_x.field_q);
             }
-            this.field_x.b(var6_int, var7);
+            this.field_x.drawTransparent(var6_int, var7);
           }
           var6 = param3.b(12307, param1);
           if (param0 != 0) {
@@ -98,7 +98,7 @@ final class gj {
             } else {
               stackIn_28_8 = 256;
             }
-            ((Font) (Object) stackIn_21_0).a(stackIn_21_1, stackIn_24_2, stackIn_27_3, stackIn_27_4, stackIn_27_5, stackIn_27_6, stackIn_27_7, stackIn_28_8, param3.field_h, param3.field_i, param3.field_n);
+            ((Font) (Object) stackIn_21_0).drawParagraphAlpha(stackIn_21_1, stackIn_24_2, stackIn_27_3, stackIn_27_4, stackIn_27_5, stackIn_27_6, stackIn_27_7, stackIn_28_8, param3.field_h, param3.field_i, param3.field_n);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -250,7 +250,7 @@ final class gj {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_u = null;
         field_w = (String[][]) null;
         field_m = null;
@@ -287,7 +287,7 @@ final class gj {
         return this;
     }
 
-    final void a(byte param0, gj param1) {
+    final void copyTo(byte param0, gj param1) {
         param1.field_h = this.field_h;
         param1.field_t = this.field_t;
         param1.field_r = this.field_r;
@@ -359,7 +359,7 @@ final class gj {
             if (var7 > 255) {
               var7 = 255;
             }
-            field_b[var4][var3] = GameWorld.a(GameWorld.a(var5 << 16, var6 << 8), var7);
+            field_b[var4][var3] = GameWorld.intOr(GameWorld.intOr(var5 << 16, var6 << 8), var7);
           }
         }
         field_c = "Zombies remaining: ";

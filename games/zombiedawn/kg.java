@@ -19,7 +19,7 @@ final class kg extends pm {
         field_g = null;
     }
 
-    final String a(String param0, byte param1) {
+    final String messageForText(String param0, byte param1) {
         RuntimeException var3 = null;
         String var4 = null;
         String var5 = null;
@@ -46,7 +46,7 @@ final class kg extends pm {
             return (String) (stackIn_2_0);
           }
           var5 = var4;
-          if (tk.a((byte) 84, var5)) {
+          if (tk.hasInvalidPasswordLength((byte) 84, var5)) {
             stackIn_6_0 = ci.field_a;
             return stackIn_6_0;
           }
@@ -69,7 +69,7 @@ final class kg extends pm {
             stackIn_21_0 = dp.field_g;
             return stackIn_21_0;
           }
-          if (lf.a(var6, var5, -7235)) {
+          if (lf.containsForwardOrReversed(var6, var5, -7235)) {
             stackIn_24_0 = kb.field_h;
             return stackIn_24_0;
           }
@@ -112,7 +112,7 @@ final class kg extends pm {
         try {
           if (param1 != 1) {
             var8 = (String) null;
-            this.a((String) null, (byte) 125);
+            this.messageForText((String) null, (byte) 125);
           }
           var9 = this.field_j.field_o.toLowerCase();
           var4 = param0.toLowerCase();
@@ -158,7 +158,7 @@ final class kg extends pm {
         }
     }
 
-    final rh a(String param0, int param1) {
+    final rh validateText(String param0, int param1) {
         String var3 = null;
         RuntimeException var3_ref = null;
         String var4 = null;

@@ -5,10 +5,10 @@ final class ua {
     static String field_b;
     static int[] field_a;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = null;
         if (param0 != -20441) {
-          ua.a(-73);
+          ua.releaseStatics(-73);
           field_b = null;
           return;
         }
@@ -32,7 +32,7 @@ final class ua {
           var2 = new tj(param1, sl.field_d, bo.field_o, bn.field_c, uf.field_n, j.field_a, vj.field_m);
           no.f((byte) -54);
           if (param0 >= -126) {
-            ua.a(18);
+            ua.releaseStatics(18);
           }
           stackIn_6_0 = var2;
           return stackIn_6_0;

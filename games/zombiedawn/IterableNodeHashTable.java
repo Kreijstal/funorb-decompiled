@@ -77,7 +77,7 @@ final class IterableNodeHashTable implements Iterable {
           if (param0 != 96) {
             field_b = 21;
           }
-          stackIn_3_0 = aa.a(106, PcmSampleStream.a(param1, 100, 96));
+          stackIn_3_0 = aa.a(106, PcmSampleStream.createAtRatePercent(param1, 100, 96));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

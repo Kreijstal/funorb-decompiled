@@ -50,7 +50,7 @@ final class dm extends DualLinkNode {
         int var3 = ZombieDawn.field_J;
         if (this.field_u != null) {
           for (var2 = 0; this.field_u.length > var2; var2++) {
-            this.field_u[var2] = GameWorld.a(this.field_u[var2], 32768);
+            this.field_u[var2] = GameWorld.intOr(this.field_u[var2], 32768);
           }
         }
         if (param0 != -76) {
@@ -170,15 +170,15 @@ final class dm extends DualLinkNode {
         field_p = new int[256];
         field_r = new int[256];
         for (var0 = 0; field_p.length > var0; var0++) {
-          field_p[var0] = GameWorld.a(field_p[var0], var0 << 16);
-          field_p[var0] = GameWorld.a(field_p[var0], var0 / 3 << 8);
+          field_p[var0] = GameWorld.intOr(field_p[var0], var0 << 16);
+          field_p[var0] = GameWorld.intOr(field_p[var0], var0 / 3 << 8);
         }
         int var1 = 0;
         var0Lifetime1 = var1;
         while (field_r.length > var1) {
-          field_r[var1] = GameWorld.a(field_r[var1], var1 << 16);
-          field_r[var1] = GameWorld.a(field_r[var1], var1 << 8);
-          field_r[var1] = GameWorld.a(field_r[var1], var1);
+          field_r[var1] = GameWorld.intOr(field_r[var1], var1 << 16);
+          field_r[var1] = GameWorld.intOr(field_r[var1], var1 << 8);
+          field_r[var1] = GameWorld.intOr(field_r[var1], var1);
           var1++;
         }
     }

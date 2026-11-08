@@ -322,12 +322,12 @@ final class qo extends vf {
                   param2.field_u[var5] = dupTemp$0;
                   stackIn_9_2 = dupTemp$0;
                 }
-                ((gj) (Object) stackIn_8_0).a((byte) stackIn_8_1, stackIn_9_2);
+                ((gj) (Object) stackIn_8_0).copyTo((byte) stackIn_8_1, stackIn_9_2);
               }
             }
             return;
           }
-          gp.a(this.field_u, 0, param2.field_u, 0, 6);
+          gp.copy(this.field_u, 0, param2.field_u, 0, 6);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -379,7 +379,7 @@ final class qo extends vf {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 >= -51) {
           return;
         }

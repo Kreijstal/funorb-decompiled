@@ -226,12 +226,12 @@ final class kc extends id {
             if (this.field_H) {
               this.field_W = jp.$cfr$intArgs$a$c44adeabe1a9(127, 96);
               var2 = 30;
-              this.field_W.f(-(var2 / 2) + so.randomInt(var2) + 256);
+              this.field_W.setSampleStepMagnitude(-(var2 / 2) + so.randomInt(var2) + 256);
               this.field_W.h(ge.field_c / 2);
             } else {
               if (this.field_W != null) {
                 this.field_W.e(0);
-                this.field_W.i(-1);
+                this.field_W.setPosition(-1);
                 this.field_W.h(0);
                 this.field_W = null;
               }
@@ -259,12 +259,12 @@ final class kc extends id {
           if (this.field_H) {
             this.field_W = jp.$cfr$intArgs$a$c44adeabe1a9(127, 96);
             var2Lifetime1 = 30;
-            this.field_W.f(-(var2Lifetime1 / 2) + so.randomInt(var2Lifetime1) + 256);
+            this.field_W.setSampleStepMagnitude(-(var2Lifetime1 / 2) + so.randomInt(var2Lifetime1) + 256);
             this.field_W.h(ge.field_c / 2);
           } else {
             if (this.field_W != null) {
               this.field_W.e(0);
-              this.field_W.i(-1);
+              this.field_W.setPosition(-1);
               this.field_W.h(0);
               this.field_W = null;
             }
@@ -377,7 +377,7 @@ final class kc extends id {
             Rasterizer.drawHorizontalLine(var6, 1 + var7, this.field_T - var8, var4);
           }
           var7 -= 12;
-          tm.field_h[this.field_F + 1].b(this.field_T + var6 + (-var8 - 24), var7);
+          tm.field_h[this.field_F + 1].drawTransparent(this.field_T + var6 + (-var8 - 24), var7);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

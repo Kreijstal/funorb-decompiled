@@ -176,7 +176,7 @@ final class Js5Archive {
                     var21 = var35[var20];
                   }
                   if (var21 == param1) {
-                    gp.a(var44, var17, var45, var14_intLifetime1, var19);
+                    gp.copy(var44, var17, var45, var14_intLifetime1, var19);
                     var14_intLifetime1 = var14_intLifetime1 + var19;
                   }
                   var17 = var17 + var19;
@@ -214,7 +214,7 @@ final class Js5Archive {
                 var18 = 0;
                 for (var19 = 0; var5_int > var19; var19++) {
                   var18 = var18 + var32.readInt(-48);
-                  gp.a(var44, var16, var41[var19], var40[var19], var18);
+                  gp.copy(var44, var16, var41[var19], var40[var19], var18);
                   var14[var19] = var14[var19] + var18;
                   var16 = var16 + var18;
                 }
@@ -659,7 +659,7 @@ final class Js5Archive {
         return this.a((int[]) null, param2, param1, param0 ^ 77);
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_k = null;
         field_i = null;
         field_a = null;

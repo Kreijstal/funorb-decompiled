@@ -65,7 +65,7 @@ final class gb extends WorldObject {
             var5 <= me.field_Bb) {
             if (ng.field_e &&
               this.field_C) {
-              Rasterizer.g(12 + var4, var5 + 12, 14, 16711680);
+              Rasterizer.fillCircle(12 + var4, var5 + 12, 14, 16711680);
             }
             if (this.field_F) {
               var6 = -1 + var4 + 12;
@@ -76,14 +76,14 @@ final class gb extends WorldObject {
                 var8 = (this.field_E + var11 * 6) % 120;
                 var12 = var11 * var9;
                 var13 = var11 * var10;
-                Rasterizer.d(gj.field_u[var8] + var6, gj.field_e[var8] + var7, 6, 0, var12);
-                Rasterizer.a(gj.field_u[var8] + var6 << 4, gj.field_e[var8] + var7 << 4, 96, var13, gj.field_b[this.field_t]);
+                Rasterizer.fillCircleBlended(gj.field_u[var8] + var6, gj.field_e[var8] + var7, 6, 0, var12);
+                Rasterizer.fillRadialPaletteCircle(gj.field_u[var8] + var6 << 4, gj.field_e[var8] + var7 << 4, 96, var13, gj.field_b[this.field_t]);
                 var8 = (var8 + 60) % 120;
-                Rasterizer.d(gj.field_u[var8] + var6, gj.field_e[var8] + var7, 6, 0, var12);
-                Rasterizer.a(gj.field_u[var8] + var6 << 4, var7 + gj.field_e[var8] << 4, 96, var13, gj.field_b[this.field_t]);
+                Rasterizer.fillCircleBlended(gj.field_u[var8] + var6, gj.field_e[var8] + var7, 6, 0, var12);
+                Rasterizer.fillRadialPaletteCircle(gj.field_u[var8] + var6 << 4, var7 + gj.field_e[var8] << 4, 96, var13, gj.field_b[this.field_t]);
               }
             }
-            kb.field_i[this.field_t].b(var4, var5);
+            kb.field_i[this.field_t].drawTransparent(var4, var5);
             return;
           }
           return;

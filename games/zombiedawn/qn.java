@@ -135,7 +135,7 @@ final class qn {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = null;
         field_i = null;
         field_g = null;
@@ -163,7 +163,7 @@ final class qn {
         }
     }
 
-    final long b(int param0) throws IOException {
+    final long length(int param0) throws IOException {
         int var2 = 106 % ((param0 - 30) / 37);
         return this.field_c.length();
     }

@@ -202,7 +202,7 @@ final class vj extends al {
         return super.b(param0, true);
     }
 
-    public static void e(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_m = (byte[][]) null;
         if (param0 != 112) {
           field_t = (int[]) null;
@@ -246,16 +246,16 @@ final class vj extends al {
           this.field_r = new Sprite(100, 100);
           ki.a((byte) -92, this.field_r);
           Rasterizer.clear();
-          jb.field_a[1].b(25, 25);
+          jb.field_a[1].drawTransparent(25, 25);
           for (var3 = 0; var3 < 5; var3++) {
             so.a(4424743);
           }
-          Rasterizer.h(2, 2, 0, 0, 100, 100);
+          Rasterizer.blurRectangle(2, 2, 0, 0, 100, 100);
           pa.a(-21189);
           this.field_u = new Sprite(100, 100);
           ki.a((byte) -94, this.field_u);
           Rasterizer.clear();
-          jb.field_a[1].b(25, 25);
+          jb.field_a[1].drawTransparent(25, 25);
           for (var3Lifetime3 = 0; var3Lifetime3 < 2; var3Lifetime3++) {
             so.a(16777215);
           }
@@ -267,16 +267,16 @@ final class vj extends al {
           for (var5_int = 0; 2 > var5_int; var5_int++) {
             if (qm.field_b == var5_int) {
               if (var5_int == this.field_b.field_d) {
-                this.field_u.b(var4 - 25, var3Lifetime1 - 25);
+                this.field_u.drawTransparent(var4 - 25, var3Lifetime1 - 25);
               }
-              this.field_r.b(var4 - 25, var3Lifetime1 - 25, 240);
-              jb.field_a[var5_int + 1].b(var4, var3Lifetime1);
+              this.field_r.drawAdditive(var4 - 25, var3Lifetime1 - 25, 240);
+              jb.field_a[var5_int + 1].drawTransparent(var4, var3Lifetime1);
             } else {
               if (this.field_b.field_d == var5_int) {
-                this.field_u.b(-25 + var4, -25 + var3Lifetime1);
-                jb.field_a[1 + var5_int].d(var4, var3Lifetime1, 240);
+                this.field_u.drawTransparent(-25 + var4, -25 + var3Lifetime1);
+                jb.field_a[1 + var5_int].drawTransparentWithOpacity(var4, var3Lifetime1, 240);
               } else {
-                jb.field_a[1 + var5_int].d(var4, var3Lifetime1, 192);
+                jb.field_a[1 + var5_int].drawTransparentWithOpacity(var4, var3Lifetime1, 192);
               }
             }
             var3Lifetime1 += 90;

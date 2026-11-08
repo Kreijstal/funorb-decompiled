@@ -30,7 +30,7 @@ final class jk {
         if (this.field_e.length <= this.field_c) {
           var9 = new j[2 * this.field_c];
           j[] var7 = var9;
-          gp.a(this.field_e, 0, var9, 0, this.field_c);
+          gp.copy(this.field_e, 0, var9, 0, this.field_c);
           this.field_e = var9;
         }
         if (param4 != 25324) {
@@ -66,7 +66,7 @@ final class jk {
           return;
         }
         if (param0) {
-          Rasterizer.a(0, 0, Rasterizer.width, Rasterizer.height, 0, 192);
+          Rasterizer.fillRectangleBlended(0, 0, Rasterizer.width, Rasterizer.height, 0, 192);
         }
         if (!param1) {
           wo.field_xb.a(0, 0, 0);
@@ -190,7 +190,7 @@ final class jk {
         }
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         field_g = null;
         if (param0 <= 19) {
           field_g = (String) null;

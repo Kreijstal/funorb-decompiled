@@ -25,7 +25,7 @@ final class te extends id {
     private int field_H;
     static int[] field_T;
 
-    public static void f(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 != 105) {
           return;
         }
@@ -152,7 +152,7 @@ final class te extends id {
                   if (this.field_P) {
                     var13.drawMirrored(-100 + (var5 - this.field_Y[var9Lifetime1]), var6 + this.field_W[var9Lifetime1]);
                   } else {
-                    var16.b(var5 + this.field_Y[var9Lifetime1], var6 + this.field_W[var9Lifetime1]);
+                    var16.drawTransparent(var5 + this.field_Y[var9Lifetime1], var6 + this.field_W[var9Lifetime1]);
                   }
                 }
               }
@@ -168,7 +168,7 @@ final class te extends id {
               var8Lifetime1Lifetime1 = dk.field_Tb[this.field_ab][this.field_H][1];
               var9_ref_vn = wh.field_a[var8Lifetime1Lifetime1][var7Lifetime2 - 1];
               if (!this.field_P) {
-                var9_ref_vn.b(var3_int, var4);
+                var9_ref_vn.drawTransparent(var3_int, var4);
               } else {
                 var9_ref_vn.drawMirrored(var3_int, var4);
               }
@@ -185,7 +185,7 @@ final class te extends id {
                   if (this.field_P) {
                     var13Lifetime1.drawMirrored(var5 - this.field_Y[var9Lifetime1Lifetime1] - 100, this.field_W[var9Lifetime1Lifetime1] + var6);
                   } else {
-                    var17.b(this.field_Y[var9Lifetime1Lifetime1] + var5, var6 + this.field_W[var9Lifetime1Lifetime1]);
+                    var17.drawTransparent(this.field_Y[var9Lifetime1Lifetime1] + var5, var6 + this.field_W[var9Lifetime1Lifetime1]);
                   }
                 }
               }

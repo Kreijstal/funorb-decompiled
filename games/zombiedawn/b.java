@@ -33,7 +33,7 @@ final class b extends IntrusiveNode {
         var7 = ZombieDawn.field_J;
         try {
           if (vm.field_w != 0) {
-            var2_long = pd.a(-22826);
+            var2_long = pd.monotonicTimeMillis(-22826);
             var4 = vm.field_w;
             if (vd.field_d != 0.0) {
               var4 = (int)((double)var4 + p.field_b.nextGaussian() * vd.field_d);
@@ -77,7 +77,7 @@ final class b extends IntrusiveNode {
         }
     }
 
-    public static void c(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_n = null;
         field_i = null;
         field_j = null;

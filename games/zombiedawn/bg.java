@@ -11,7 +11,7 @@ final class bg extends IntrusiveNode {
     static vk field_l;
     static Sprite[] field_o;
 
-    public static void c(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 != -44) {
           bg.a(-106, 54, false, -127);
         }

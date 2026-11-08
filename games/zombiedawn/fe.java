@@ -13,7 +13,7 @@ final class fe extends hp implements oa, hh {
     private md field_N;
     static int field_H;
 
-    final boolean a(int param0, int param1, UiWidget param2, char param3) {
+    final boolean requestKeyboardFocus(int param0, int param1, UiWidget param2, char param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         boolean stackIn_6_0 = false;
@@ -23,7 +23,7 @@ final class fe extends hp implements oa, hh {
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (super.a(-119, param1, param2, param3)) {
+          if (super.requestKeyboardFocus(-119, param1, param2, param3)) {
             return true;
           }
           if (98 == param1) {
@@ -135,7 +135,7 @@ final class fe extends hp implements oa, hh {
         }
     }
 
-    public final void a(int param0, int param1, an param2, int param3, int param4) {
+    public final void onButtonActivated(int param0, int param1, an param2, int param3, int param4) {
         String discarded$1 = null;
         RuntimeException var6 = null;
         RuntimeException stackIn_7_0 = null;
@@ -179,7 +179,7 @@ final class fe extends hp implements oa, hh {
         return "<u=2164A2><col=2164A2>";
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_F = null;
         field_G = null;
         field_L = null;

@@ -41,7 +41,7 @@ final class ao extends WorldObject {
         }
     }
 
-    public static void i(int param0) {
+    public static void releaseStatics(int param0) {
         field_I = null;
         int var1 = -63 % ((-43 - param0) / 34);
         field_G = null;
@@ -67,9 +67,9 @@ final class ao extends WorldObject {
           return;
         }
         try {
-          sg.field_jb.b(this.field_D, var3_int, var4, 3, -1, this.field_E);
+          sg.field_jb.drawCenteredAlpha(this.field_D, var3_int, var4, 3, -1, this.field_E);
           if (this.field_K != null) {
-            if (this.field_K.l()) {
+            if (this.field_K.isSamplePositionOutOfRange()) {
               this.field_H = null;
               this.field_K = null;
               return;

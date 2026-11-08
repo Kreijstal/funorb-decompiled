@@ -8,7 +8,7 @@ final class mh extends pa {
     static int field_G;
     static PlatformTaskDispatcher field_E;
 
-    public static void e(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_I = null;
         field_E = null;
         int var1 = -49 / ((65 - param0) / 51);

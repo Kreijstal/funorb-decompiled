@@ -13,11 +13,11 @@ final class bp {
     private PacketBuffer field_d;
     private pc field_f;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_j = null;
         field_h = null;
         if (param0 != -16785) {
-          bp.a(23);
+          bp.releaseStatics(23);
         }
         field_a = null;
     }
@@ -165,7 +165,7 @@ final class bp {
           var4++;
         }
         if (!param0) {
-          bp.a(79);
+          bp.releaseStatics(79);
         }
         return;
     }

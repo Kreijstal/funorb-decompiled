@@ -31,7 +31,7 @@ final class ub {
         return var2 + ":" + (10 <= var3 ? "" : "0") + var3;
     }
 
-    public static void c(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_j = null;
         field_h = null;
         if (param0 <= 59) {
@@ -57,16 +57,16 @@ final class ub {
           b.field_q = param0;
           qn.field_g.setAsRenderTarget();
           Rasterizer.clear();
-          bd.field_i[qd.field_e][b.field_q].b(10, 10);
+          bd.field_i[qd.field_e][b.field_q].drawTransparent(10, 10);
           for (var2_int = 0; 3 > var2_int; var2_int++) {
             so.a(16777045);
           }
-          bd.field_i[qd.field_e][b.field_q].d(10, 10, 0);
-          Rasterizer.h(2, 2, 0, 0, qn.field_g.field_w, qn.field_g.field_t);
-          cn.field_f.b(-115);
+          bd.field_i[qd.field_e][b.field_q].drawTransparentWithOpacity(10, 10, 0);
+          Rasterizer.blurRectangle(2, 2, 0, 0, qn.field_g.field_w, qn.field_g.field_t);
+          cn.field_f.makeRasterTarget(-115);
           rk.field_a = 3 * sn.field_f.length >> 2;
           if (param1 >= -25) {
-            ub.c((byte) 111);
+            ub.releaseStatics((byte) 111);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -142,13 +142,13 @@ final class ub {
           var4 = (int)((float)Rasterizer.height * this.field_p);
           si.field_Ub[5].setAsRenderTarget();
           Rasterizer.clear();
-          pl.field_p.a(Rasterizer.width - var3, 0, var3, var4);
+          pl.field_p.drawScaled(Rasterizer.width - var3, 0, var3, var4);
         }
         vh.field_e[5].setAsRenderTarget();
         Rasterizer.clear();
-        si.field_Ub[5].h(0, 0, 16777215);
+        si.field_Ub[5].drawSilhouette(0, 0, 16777215);
         oc.a((byte) 50);
-        si.field_Ub[5].h(0, param0, 0);
+        si.field_Ub[5].drawSilhouette(0, param0, 0);
     }
 
     private final void c(int param0) {
@@ -187,12 +187,12 @@ final class ub {
         }
         vh.field_e[2].setAsRenderTarget();
         Rasterizer.clear();
-        si.field_Ub[2].h(0, 0, 16777215);
+        si.field_Ub[2].drawSilhouette(0, 0, 16777215);
         oc.a((byte) -65);
         if (param0 >= -20) {
           this.field_k = 119;
         }
-        si.field_Ub[2].h(0, 0, 0);
+        si.field_Ub[2].drawSilhouette(0, 0, 0);
     }
 
     private final void d(int param0, int param1) {
@@ -201,9 +201,9 @@ final class ub {
         this.field_o.drawStringRightAligned(this.b(param0 - 73, param1), -5 + Rasterizer.width, 5 + this.field_o.field_I, param0, -1);
         vh.field_e[4].setAsRenderTarget();
         Rasterizer.clear();
-        si.field_Ub[4].h(0, 0, 16777215);
+        si.field_Ub[4].drawSilhouette(0, 0, 16777215);
         oc.a((byte) -78);
-        si.field_Ub[4].h(0, 0, 0);
+        si.field_Ub[4].drawSilhouette(0, 0, 0);
     }
 
     final void d(byte param0) {
@@ -240,7 +240,7 @@ final class ub {
             this.f(6);
           }
         }
-        cn.field_f.b(-117);
+        cn.field_f.makeRasterTarget(-117);
         if (!this.field_s &&
           !this.field_e &&
           !this.field_g &&
@@ -311,35 +311,35 @@ final class ub {
         }
         if (this.field_c) {
           var2Lifetime1 = -210 + bd.field_e;
-          so.a(vh.field_e[5], var2Lifetime1, 40);
-          si.field_Ub[5].b(var2Lifetime1, 40);
+          so.drawTransparent(vh.field_e[5], var2Lifetime1, 40);
+          si.field_Ub[5].drawTransparent(var2Lifetime1, 40);
         }
         var2Lifetime2 = -310 + bd.field_e;
-        so.a(vh.field_e[4], var2Lifetime2, 0);
-        si.field_Ub[4].b(var2Lifetime2, 0);
+        so.drawTransparent(vh.field_e[4], var2Lifetime2, 0);
+        si.field_Ub[4].drawTransparent(var2Lifetime2, 0);
         if (param0 >= -59) {
           this.c(54, 36);
         }
         if (!this.field_e &&
           !this.field_g) {
           var2Lifetime3 = -70 + nh.field_P;
-          so.a(vh.field_e[0], 0, var2Lifetime3);
-          si.field_Ub[0].b(5, 5 + var2Lifetime3);
+          so.drawTransparent(vh.field_e[0], 0, var2Lifetime3);
+          si.field_Ub[0].drawTransparent(5, 5 + var2Lifetime3);
           var2Lifetime3Lifetime1 = nh.field_P - 80;
-          so.a(vh.field_e[2], 70, var2Lifetime3Lifetime1);
-          si.field_Ub[2].b(70, var2Lifetime3Lifetime1);
+          so.drawTransparent(vh.field_e[2], 70, var2Lifetime3Lifetime1);
+          si.field_Ub[2].drawTransparent(70, var2Lifetime3Lifetime1);
           var2Lifetime3Lifetime2 = nh.field_P - 68;
           var3 = -48 + bd.field_e;
-          so.a(vh.field_e[1], var3, var2Lifetime3Lifetime2);
+          so.drawTransparent(vh.field_e[1], var3, var2Lifetime3Lifetime2);
           var3 -= 35;
-          si.field_Ub[1].b(var3, var2Lifetime3Lifetime2 + 5);
+          si.field_Ub[1].drawTransparent(var3, var2Lifetime3Lifetime2 + 5);
           var3Lifetime1 = -170 + bd.field_e;
           var2Lifetime3Lifetime3 = -55 + nh.field_P;
-          so.a(vh.field_e[3], var3Lifetime1, var2Lifetime3Lifetime3);
-          si.field_Ub[3].b(var3Lifetime1, var2Lifetime3Lifetime3);
+          so.drawTransparent(vh.field_e[3], var3Lifetime1, var2Lifetime3Lifetime3);
+          si.field_Ub[3].drawTransparent(var3Lifetime1, var2Lifetime3Lifetime3);
         } else {
-          si.field_Ub[6].b(220 + vh.field_b, -55 + nh.field_P);
-          so.a(vh.field_e[6], vh.field_b + 220, -55 + nh.field_P);
+          si.field_Ub[6].drawTransparent(220 + vh.field_b, -55 + nh.field_P);
+          so.drawTransparent(vh.field_e[6], vh.field_b + 220, -55 + nh.field_P);
         }
     }
 
@@ -405,9 +405,9 @@ final class ub {
         pa.a(-21189);
         ki.a((byte) -93, vh.field_e[6]);
         Rasterizer.clear();
-        si.field_Ub[6].h(0, 0, 16777215);
+        si.field_Ub[6].drawSilhouette(0, 0, 16777215);
         oc.a((byte) -104);
-        si.field_Ub[6].h(0, 0, 0);
+        si.field_Ub[6].drawSilhouette(0, 0, 0);
         pa.a(-21189);
     }
 
@@ -417,9 +417,9 @@ final class ub {
         this.field_o.drawStringRightAligned(Integer.toString(this.field_k), -5 + Rasterizer.width, this.field_o.field_I + 5, 1, 65793);
         vh.field_e[3].setAsRenderTarget();
         Rasterizer.clear();
-        si.field_Ub[3].h(0, 0, 16777215);
+        si.field_Ub[3].drawSilhouette(0, 0, 16777215);
         oc.a((byte) -83);
-        si.field_Ub[3].h(param0, 0, 0);
+        si.field_Ub[3].drawSilhouette(param0, 0, 0);
     }
 
     final void a(boolean param0, boolean param1) {
@@ -480,7 +480,7 @@ final class ub {
           this.d(3, param0);
           this.field_m = param0;
         }
-        cn.field_f.b(124);
+        cn.field_f.makeRasterTarget(124);
     }
 
     ub(int param0) {
@@ -504,7 +504,7 @@ final class ub {
         this.a(0);
         this.d(3, this.field_m);
         this.d((byte) -106);
-        cn.field_f.b(-123);
+        cn.field_f.makeRasterTarget(-123);
     }
 
     static {

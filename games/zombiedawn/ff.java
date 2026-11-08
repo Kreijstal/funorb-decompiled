@@ -37,7 +37,7 @@ final class ff {
             try {
               var10 = param0.getParameter("cookieprefix");
               var3 = var10 + "settings";
-              var4 = (String) (qe.a(param0, "getcookies", -102));
+              var4 = (String) (qe.callWindowFunction(param0, "getcookies", -102));
               var5 = PacketBuffer.split(';', var4, -125);
               var6 = 30 / ((param1 + 23) / 59);
               for (var7 = 0; var5.length > var7; var7++) {

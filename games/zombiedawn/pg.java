@@ -35,19 +35,19 @@ final class pg extends al {
         if (nh.field_P != 480) {
           var2 = -5 + nh.field_P;
           for (var3 = 6; var3 < var2; var3 += 130) {
-            lo.field_i.b(vh.field_b + this.field_q, var3);
+            lo.field_i.drawTransparent(vh.field_b + this.field_q, var3);
           }
           for (var3Lifetime1 = 6; var3Lifetime1 < var2; var3Lifetime1 += 128) {
-            mo.field_a.b(640 + vh.field_b - this.field_q, var3Lifetime1);
+            mo.field_a.drawTransparent(640 + vh.field_b - this.field_q, var3Lifetime1);
           }
         } else {
-          lo.field_i.b(this.field_q + vh.field_b, 136);
-          lo.field_i.b(this.field_q + vh.field_b, 6);
-          mo.field_a.b(640 + (vh.field_b - this.field_q), 6);
-          mo.field_a.b(-this.field_q + vh.field_b + 640, 134);
+          lo.field_i.drawTransparent(this.field_q + vh.field_b, 136);
+          lo.field_i.drawTransparent(this.field_q + vh.field_b, 6);
+          mo.field_a.drawTransparent(640 + (vh.field_b - this.field_q), 6);
+          mo.field_a.drawTransparent(-this.field_q + vh.field_b + 640, 134);
         }
         Rasterizer.resetClip();
-        ql.field_g.b(vh.field_b, id.field_M / 2);
+        ql.field_g.drawTransparent(vh.field_b, id.field_M / 2);
         super.a((byte) -112);
     }
 
@@ -79,9 +79,9 @@ final class pg extends al {
           var4 = var11;
           for (var5 = 0; var12.length > var5; var5++) {
             var10 = vk.field_b[var12[var5]];
-            var7 = sg.field_jb.b(var10);
+            var7 = sg.field_jb.textWidth(var10);
             if (var12[var5] == 37) {
-              var8 = sg.field_jb.b(wl.field_a[1]);
+              var8 = sg.field_jb.textWidth(wl.field_a[1]);
               if (var7 < var8) {
                 var6 = wl.field_a[1];
                 var7 = var8;
@@ -136,7 +136,7 @@ final class pg extends al {
           try {
             try {
               if (!param0) {
-                pg.d(68);
+                pg.releaseStatics(68);
               }
               var8 = param1.getParameter("cookiehost");
               var7 = var8;
@@ -147,7 +147,7 @@ final class pg extends al {
               if (0L > param2) {
                 var7Lifetime4 = var9 + "; Discard;";
               } else {
-                var7Lifetime4 = var9 + "; Expires=" + jb.a(2147483647, pd.a(-22826) + param2 * 1000L) + "; Max-Age=" + param2;
+                var7Lifetime4 = var9 + "; Expires=" + jb.a(2147483647, pd.monotonicTimeMillis(-22826) + param2 * 1000L) + "; Max-Age=" + param2;
               }
               qe.a("document.cookie=\"" + var7Lifetime4 + "\"", param1, (byte) 125);
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
@@ -199,7 +199,7 @@ final class pg extends al {
         }
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != -5) {
           String var2 = (String) null;
           pg.a(true, (java.applet.Applet) null, 14L, (String) null, (String) null);

@@ -60,86 +60,86 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           if (param1 == 0) {
             param0[param2].setAsRenderTarget();
             param0[param4].drawWithOffsets(0, 0);
-            Rasterizer.a(0, 0, 24, 24, 0, 128);
-            cn.field_f.b(-124);
+            Rasterizer.fillRectangleBlended(0, 0, 24, 24, 0, 128);
+            cn.field_f.makeRasterTarget(-124);
           } else {
             if (param1 == 1) {
               param0[param2].setAsRenderTarget();
               param0[param4].drawWithOffsets(0, 0);
               for (var5_int = 0; var5_int < 24; var5_int++) {
-                Rasterizer.g(var5_int, 0, 24, 0, 5 * var5_int);
+                Rasterizer.drawVerticalLineAlpha(var5_int, 0, 24, 0, 5 * var5_int);
               }
-              cn.field_f.b(-124);
+              cn.field_f.makeRasterTarget(-124);
               return;
             }
             if (param1 == 2) {
               param0[param2].setAsRenderTarget();
               param0[param4].drawWithOffsets(0, 0);
               for (var5_intLifetime1 = 0; 24 > var5_intLifetime1; var5_intLifetime1++) {
-                Rasterizer.g(var5_intLifetime1, 0, 24, 0, -(var5_intLifetime1 * 5) + 120);
+                Rasterizer.drawVerticalLineAlpha(var5_intLifetime1, 0, 24, 0, -(var5_intLifetime1 * 5) + 120);
               }
-              cn.field_f.b(-124);
+              cn.field_f.makeRasterTarget(-124);
               return;
             }
             if (param1 == 3) {
               param0[param2].setAsRenderTarget();
               param0[param4].drawWithOffsets(0, 0);
               for (var5_intLifetime2 = 0; var5_intLifetime2 < 24; var5_intLifetime2++) {
-                Rasterizer.a(0, var5_intLifetime2, 24, 0, 5 * var5_intLifetime2);
+                Rasterizer.drawHorizontalLineAlpha(0, var5_intLifetime2, 24, 0, 5 * var5_intLifetime2);
               }
-              cn.field_f.b(-124);
+              cn.field_f.makeRasterTarget(-124);
               return;
             }
             if (param1 == 4) {
               param0[param2].setAsRenderTarget();
               param0[param4].drawWithOffsets(0, 0);
               for (var5_intLifetime3 = 0; var5_intLifetime3 < 24; var5_intLifetime3++) {
-                Rasterizer.a(0, var5_intLifetime3, 24, 0, -(var5_intLifetime3 * 5) + 120);
+                Rasterizer.drawHorizontalLineAlpha(0, var5_intLifetime3, 24, 0, -(var5_intLifetime3 * 5) + 120);
               }
-              cn.field_f.b(-124);
+              cn.field_f.makeRasterTarget(-124);
               return;
             }
             if (6 == param1) {
               param0[param2].setAsRenderTarget();
               param0[param4].drawWithOffsets(0, 0);
               for (var5_intLifetime4 = 0; 24 > var5_intLifetime4; var5_intLifetime4++) {
-                Rasterizer.a(var5_intLifetime4 + 1, var5_intLifetime4, -var5_intLifetime4 + 24, 0, var5_intLifetime4 * 5);
-                Rasterizer.g(var5_intLifetime4, var5_intLifetime4, 24 - var5_intLifetime4, 0, 5 * var5_intLifetime4);
+                Rasterizer.drawHorizontalLineAlpha(var5_intLifetime4 + 1, var5_intLifetime4, -var5_intLifetime4 + 24, 0, var5_intLifetime4 * 5);
+                Rasterizer.drawVerticalLineAlpha(var5_intLifetime4, var5_intLifetime4, 24 - var5_intLifetime4, 0, 5 * var5_intLifetime4);
               }
-              cn.field_f.b(-124);
+              cn.field_f.makeRasterTarget(-124);
               return;
             }
             if (param1 == 8) {
               param0[param2].setAsRenderTarget();
               param0[param4].drawWithOffsets(0, 0);
               for (var5_intLifetime5 = 0; var5_intLifetime5 < 24; var5_intLifetime5++) {
-                Rasterizer.a(0, var5_intLifetime5, var5_intLifetime5 + 1, 0, -(5 * var5_intLifetime5) + 120);
-                Rasterizer.g(var5_intLifetime5, 0, var5_intLifetime5, 0, -(5 * var5_intLifetime5) + 120);
+                Rasterizer.drawHorizontalLineAlpha(0, var5_intLifetime5, var5_intLifetime5 + 1, 0, -(5 * var5_intLifetime5) + 120);
+                Rasterizer.drawVerticalLineAlpha(var5_intLifetime5, 0, var5_intLifetime5, 0, -(5 * var5_intLifetime5) + 120);
               }
-              cn.field_f.b(-124);
+              cn.field_f.makeRasterTarget(-124);
               return;
             }
             if (param1 == 7) {
               param0[param2].setAsRenderTarget();
               param0[param4].drawWithOffsets(0, 0);
               for (var5_intLifetime6 = 0; var5_intLifetime6 < 24; var5_intLifetime6++) {
-                Rasterizer.a(0, var5_intLifetime6, 24 - var5_intLifetime6, 0, var5_intLifetime6 * 5);
-                Rasterizer.g(var5_intLifetime6, -var5_intLifetime6 + 24, var5_intLifetime6, 0, 120 - var5_intLifetime6 * 5);
+                Rasterizer.drawHorizontalLineAlpha(0, var5_intLifetime6, 24 - var5_intLifetime6, 0, var5_intLifetime6 * 5);
+                Rasterizer.drawVerticalLineAlpha(var5_intLifetime6, -var5_intLifetime6 + 24, var5_intLifetime6, 0, 120 - var5_intLifetime6 * 5);
               }
-              cn.field_f.b(-124);
+              cn.field_f.makeRasterTarget(-124);
               return;
             }
             if (param1 == 5) {
               param0[param2].setAsRenderTarget();
               param0[param4].drawWithOffsets(0, 0);
               for (var5_intLifetime7 = 0; var5_intLifetime7 < 24; var5_intLifetime7++) {
-                Rasterizer.a(24 - var5_intLifetime7, var5_intLifetime7, var5_intLifetime7, 0, -(var5_intLifetime7 * 5) + 120);
-                Rasterizer.g(var5_intLifetime7, 0, 24 - var5_intLifetime7, 0, 5 * var5_intLifetime7);
+                Rasterizer.drawHorizontalLineAlpha(24 - var5_intLifetime7, var5_intLifetime7, var5_intLifetime7, 0, -(var5_intLifetime7 * 5) + 120);
+                Rasterizer.drawVerticalLineAlpha(var5_intLifetime7, 0, 24 - var5_intLifetime7, 0, 5 * var5_intLifetime7);
               }
-              cn.field_f.b(-124);
+              cn.field_f.makeRasterTarget(-124);
               return;
             }
-            cn.field_f.b(-124);
+            cn.field_f.makeRasterTarget(-124);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -221,7 +221,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
             wc.field_Ob = 0;
             ep.field_m = param0.getX();
             pf.field_c = param0.getY();
-            pd.a(-22826);
+            pd.monotonicTimeMillis(-22826);
             if (!javax.swing.SwingUtilities.isRightMouseButton(param0)) {
               DualLinkNode.field_j = 1;
               IntrusiveNode.field_c = 1;
@@ -319,10 +319,10 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_e = null;
         if (param0 != -14380) {
-          MouseInputHandler.a(-106);
+          MouseInputHandler.releaseStatics(-106);
         }
     }
 

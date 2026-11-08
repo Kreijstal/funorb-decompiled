@@ -8,7 +8,7 @@ final class hc {
 
     final static java.applet.Applet a(int param0) {
         if (param0 != 0) {
-          hc.a((byte) -61);
+          hc.releaseStatics((byte) -61);
           if (null != bh.field_i) {
             return bh.field_i;
           }
@@ -96,7 +96,7 @@ final class hc {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_b = null;
         field_c = null;
         field_a = null;

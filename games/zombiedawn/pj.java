@@ -89,7 +89,7 @@ abstract class pj extends DualLinkNode {
         this.field_q = true;
     }
 
-    public static void f(int param0) {
+    public static void releaseStatics(int param0) {
         field_p = null;
         field_u = null;
         if (param0 != 32) {

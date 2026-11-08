@@ -34,7 +34,7 @@ final class nm {
         return true;
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_e = null;
         if (param0 > -19) {
           nm.c(-1);

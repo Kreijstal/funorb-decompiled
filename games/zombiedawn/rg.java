@@ -85,14 +85,14 @@ final class rg extends pa {
         }
     }
 
-    public static void g(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 == 13885) {
           field_J = null;
           field_K = null;
           field_L = null;
           return;
         }
-        rg.g(109);
+        rg.releaseStatics(109);
         field_J = null;
         field_K = null;
         field_L = null;
@@ -125,7 +125,7 @@ final class rg extends pa {
         }
     }
 
-    final void b(boolean param0) {
+    final void refreshChildLayout(boolean param0) {
         this.field_z.a(param0);
     }
 
@@ -142,8 +142,8 @@ final class rg extends pa {
           }
           var3 = new Sprite(var2_int, var2_int);
           var3.setAsRenderTarget();
-          hm.field_E.d(0, 0, var2_int, var2_int);
-          cn.field_f.b(44);
+          hm.field_E.drawScaledAveraged(0, 0, var2_int, var2_int);
+          cn.field_f.makeRasterTarget(44);
           hm.field_E = var3;
         } catch (RuntimeException runtimeException) {
           throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "rg.BA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

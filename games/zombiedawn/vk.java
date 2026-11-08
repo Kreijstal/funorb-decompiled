@@ -43,7 +43,7 @@ final class vk {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         int var1 = 22 / ((-31 - param0) / 57);
         field_d = null;
         field_b = null;

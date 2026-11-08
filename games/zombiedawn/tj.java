@@ -5,7 +5,7 @@ final class tj extends Font {
     private byte[][] field_D;
     int[][] field_O;
 
-    private final static void a(int param0, int[] param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10) {
+    private final static void blitPaletteGlyphAlpha(int param0, int[] param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10) {
         int var12 = 0;
         int var13 = 0;
         int incrementValue$16 = 0;
@@ -36,8 +36,8 @@ final class tj extends Font {
         }
     }
 
-    final int d(int param0) {
-        return tj.a(this.field_O[0], param0);
+    final int findNearestBasePaletteIndex(int param0) {
+        return tj.findNearestPaletteIndex(this.field_O[0], param0);
     }
 
     tj(byte[] param0, int[] param1, int[] param2, int[] param3, int[] param4, int[] param5, byte[][] param6) {
@@ -48,7 +48,7 @@ final class tj extends Font {
         this.field_O[0] = param5;
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, boolean param7) {
+    final void drawGlyphAlpha(int param0, int param1, int param2, int param3, int param4, int param5, int param6, boolean param7) {
         int var9;
         int var10;
         int var11;
@@ -88,15 +88,15 @@ final class tj extends Font {
         if (param3 > 0 &&
           param4 > 0) {
           if (!param7) {
-            tj.a(0, Rasterizer.pixels, this.field_D[param0], this.field_O[param5], var12, var9, param3, param4, var10, var11, param6);
+            tj.blitPaletteGlyphAlpha(0, Rasterizer.pixels, this.field_D[param0], this.field_O[param5], var12, var9, param3, param4, var10, var11, param6);
           } else {
-            oi.a(Rasterizer.pixels, this.field_D[param0], param5, var12, var9, param3, param4, var10, var11, param6);
+            oi.blitBinaryGlyphWithAlpha(Rasterizer.pixels, this.field_D[param0], param5, var12, var9, param3, param4, var10, var11, param6);
           }
           return;
         }
     }
 
-    private final static void a(int param0, int[] param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    private final static void blitPaletteGlyph(int param0, int[] param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         int var11 = 0;
         int incrementValue$3 = 0;
         byte dupTemp$4 = 0;
@@ -183,7 +183,7 @@ final class tj extends Font {
         }
     }
 
-    private final static int a(int[] param0, int param1) {
+    private final static int findNearestPaletteIndex(int[] param0, int param1) {
         int var4 = 0;
         int var2;
         int var3;
@@ -208,7 +208,7 @@ final class tj extends Font {
         return var2;
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5, boolean param6) {
+    final void drawGlyph(int param0, int param1, int param2, int param3, int param4, int param5, boolean param6) {
         int var8;
         int var9;
         int var10;
@@ -248,9 +248,9 @@ final class tj extends Font {
         if (param3 > 0 &&
           param4 > 0) {
           if (!param6) {
-            tj.a(0, Rasterizer.pixels, this.field_D[param0], this.field_O[param5], var11, var8, param3, param4, var9, var10);
+            tj.blitPaletteGlyph(0, Rasterizer.pixels, this.field_D[param0], this.field_O[param5], var11, var8, param3, param4, var9, var10);
           } else {
-            oi.a(Rasterizer.pixels, this.field_D[param0], param5, var11, var8, param3, param4, var9, var10);
+            oi.blitBinaryGlyph(Rasterizer.pixels, this.field_D[param0], param5, var11, var8, param3, param4, var9, var10);
           }
           return;
         }

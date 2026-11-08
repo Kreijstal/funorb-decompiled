@@ -56,7 +56,7 @@ abstract class pc {
           l.field_g = vj.field_p[param0];
           return;
         }
-        pc.b(true);
+        pc.releaseStatics(true);
         cj.field_e = te.field_Q[param0];
         l.field_g = vj.field_p[param0];
     }
@@ -75,7 +75,7 @@ abstract class pc {
         try {
           t.field_i.removeSubstream(param1);
           if (param0 != 13) {
-            pc.b(false);
+            pc.releaseStatics(false);
           }
         } catch (RuntimeException runtimeException) {
           throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "pc.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -90,7 +90,7 @@ abstract class pc {
         return this.e(-1216122784) >= 20 ? true : false;
     }
 
-    public static void b(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_k = null;
         if (!param0) {
           field_k = (oi) null;

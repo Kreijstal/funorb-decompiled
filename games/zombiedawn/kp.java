@@ -12,7 +12,7 @@ final class kp extends rf {
         }
     }
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 > -45) {
           kp.a(-104, (byte) -43);
           field_f = null;

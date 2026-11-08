@@ -14,7 +14,7 @@ final class ta {
         int var1_intLifetime1;
         var4 = ZombieDawn.field_J;
         try {
-          en.c();
+          en.useRasterClip();
           jj.field_H = new int[260];
           f.field_a = 11;
           if (param0 != 255) {
@@ -38,7 +38,7 @@ final class ta {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         if (param0) {
           return;
         }

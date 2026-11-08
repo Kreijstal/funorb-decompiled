@@ -82,7 +82,7 @@ final class rk {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_b = null;
         if (param0 != 16) {
           java.awt.Component var2 = (java.awt.Component) null;

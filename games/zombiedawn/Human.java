@@ -414,7 +414,7 @@ abstract class Human extends Mover {
             var3_int = -24 + param1.worldToScreenX(this.getX(true), (byte) -81);
             var4 = param1.worldToScreenY(this.getY(237239984), 0) - 48;
             if (null != this.field_U) {
-              if (this.field_U.l()) {
+              if (this.field_U.isSamplePositionOutOfRange()) {
                 this.field_U = null;
               } else {
                 this.field_U.h(pj.a(var4, 84, var3_int));
@@ -436,13 +436,13 @@ abstract class Human extends Mover {
                 } else {
                   stackIn_21_2 = -3 + var3_int;
                 }
-                so.a(stackIn_20_0, stackIn_20_1 + stackIn_21_2, 43 + var4);
+                so.drawTransparent(stackIn_20_0, stackIn_20_1 + stackIn_21_2, 43 + var4);
               }
               if (this.field_z > 0) {
                 Math.abs(ip.field_p[0].field_w * WorldObject.a(1311979239, (int)tp.field_p << 6) >> 16);
                 var5 = 6 * WorldObject.a(1311979239, (int)tp.field_p << 6) >> 16;
                 var6 = rd.a(true, (int)tp.field_p << 7) * 3 >> 16;
-                ip.field_p[0].g(var5 + 24 + (var3_int - 7), 2 + (var4 + var6), bb.field_e[-1 + this.field_z]);
+                ip.field_p[0].drawTintedGrayscale(var5 + 24 + (var3_int - 7), 2 + (var4 + var6), bb.field_e[-1 + this.field_z]);
               }
               var5Lifetime1 = cg.field_d[this.state] + this.field_G;
               var6Lifetime1 = var3_int;
@@ -466,17 +466,17 @@ abstract class Human extends Mover {
                   this.field_S != 2) {
                   ld.field_l[this.field_t][var5Lifetime1].drawMirrored(var3_int, var4);
                 } else {
-                  ld.field_l[this.field_t][var5Lifetime1].b(var3_int, var4);
+                  ld.field_l[this.field_t][var5Lifetime1].drawTransparent(var3_int, var4);
                 }
               } else {
                 if (this.field_S == 2) {
-                  ld.field_l[this.field_t][var5Lifetime1 + 2].b(var3_int, var4);
+                  ld.field_l[this.field_t][var5Lifetime1 + 2].drawTransparent(var3_int, var4);
                 } else {
                   if (this.field_S == 0) {
-                    ld.field_l[this.field_t][var5Lifetime1 + 4].b(var3_int, var4);
+                    ld.field_l[this.field_t][var5Lifetime1 + 4].drawTransparent(var3_int, var4);
                   } else {
                     if (this.field_S == 3) {
-                      ld.field_l[this.field_t][var5Lifetime1].b(var3_int, var4);
+                      ld.field_l[this.field_t][var5Lifetime1].drawTransparent(var3_int, var4);
                     } else {
                       if (this.field_S == 1) {
                         ld.field_l[this.field_t][var5Lifetime1].drawMirrored(var3_int, var4);
@@ -518,14 +518,14 @@ abstract class Human extends Mover {
                   pa.a(-21189);
                   var4 = var7;
                   var3_int = var6Lifetime1;
-                  dn.field_E.b(var3_int, var4);
+                  dn.field_E.drawTransparent(var3_int, var4);
                   decompiledFrameRemainder0 = false;
                 }
                 else {
                   pa.a(-21189);
                   var4 = var7;
                   var3_int = var6Lifetime1;
-                  dn.field_E.d(var3_int, var4, 142);
+                  dn.field_E.drawTransparentWithOpacity(var3_int, var4, 142);
                 }
               }
               if (kc.field_Q) {
@@ -968,7 +968,7 @@ abstract class Human extends Mover {
         }
     }
 
-    public static void u(int param0) {
+    public static void releaseStatics(int param0) {
         field_tb = null;
         field_bb = null;
         if (param0 < 21) {

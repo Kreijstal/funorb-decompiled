@@ -37,7 +37,7 @@ final class ql extends pm {
         }
     }
 
-    final rh a(String param0, int param1) {
+    final rh validateText(String param0, int param1) {
         HumanFactory var3 = null;
         RuntimeException var3_ref = null;
         CharSequence var4 = null;
@@ -55,7 +55,7 @@ final class ql extends pm {
             return stackIn_2_0;
           }
           if (!param0.equals(this.field_i)) {
-            var3 = tm.a((byte) 51, param0);
+            var3 = tm.pollAccountNameCheck((byte) 51, param0);
             if (var3 != null &&
               null == var3.field_e) {
               this.field_i = param0;
@@ -88,7 +88,7 @@ final class ql extends pm {
         }
     }
 
-    public static void b(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_g = null;
         field_f = null;
         if (!param0) {
@@ -110,7 +110,7 @@ final class ql extends pm {
         this.field_i = null;
     }
 
-    final String a(String param0, byte param1) {
+    final String messageForText(String param0, byte param1) {
         String var3 = null;
         RuntimeException var3_ref = null;
         HumanFactory var4 = null;
@@ -133,7 +133,7 @@ final class ql extends pm {
             return stackIn_4_0;
           }
           if (!param0.equals(this.field_i)) {
-            var4 = tm.a((byte) 51, param0);
+            var4 = tm.pollAccountNameCheck((byte) 51, param0);
             if (var4 == null) {
               return null;
             }

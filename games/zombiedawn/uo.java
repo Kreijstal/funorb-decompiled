@@ -13,16 +13,16 @@ final class uo {
     static String field_a;
     private int field_g;
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != -1640531527) {
-          uo.c(-56);
+          uo.releaseStatics(-56);
         }
         field_a = null;
     }
 
     final static void a(boolean param0, int param1, boolean param2) {
         if (param0) {
-          Rasterizer.a(0, 0, Rasterizer.width, Rasterizer.height, 0, 192);
+          Rasterizer.fillRectangleBlended(0, 0, Rasterizer.width, Rasterizer.height, 0, 192);
         } else {
           Rasterizer.clear();
         }
@@ -223,7 +223,7 @@ final class uo {
         }
         this.a(true);
         if (param0 != 20196) {
-          uo.c(121);
+          uo.releaseStatics(121);
         }
         this.field_e = 256;
     }

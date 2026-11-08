@@ -9,7 +9,7 @@ final class od extends qf {
     private int field_w;
     private static String field_A;
 
-    final void b() {
+    final void writeMixBlock() {
         int var2 = 0;
         int var3 = 0;
         int var1 = 256;
@@ -27,14 +27,14 @@ final class od extends qf {
         this.field_v.write(this.field_x, 0, var1 << 1);
     }
 
-    final void h() {
+    final void closeDevice() {
         if (this.field_v != null) {
           this.field_v.close();
           this.field_v = null;
         }
     }
 
-    final int f() {
+    final int getQueuedFrames() {
         return this.field_w - (this.field_v.available() >> (field_l ? 2 : 1));
     }
 
@@ -42,7 +42,7 @@ final class od extends qf {
         this.field_y = false;
     }
 
-    final void e() throws javax.sound.sampled.LineUnavailableException {
+    final void flushDevice() throws javax.sound.sampled.LineUnavailableException {
         javax.sound.sampled.DataLine.Info var1 = null;
         this.field_v.flush();
         if (this.field_y) {
@@ -55,7 +55,7 @@ final class od extends qf {
         }
     }
 
-    final void a(int param0) throws javax.sound.sampled.LineUnavailableException {
+    final void openDevice(int param0) throws javax.sound.sampled.LineUnavailableException {
         javax.sound.sampled.DataLine.Info var2 = null;
         try {
           var2 = new javax.sound.sampled.DataLine.Info(javax.sound.sampled.SourceDataLine.class, this.field_z, param0 << (field_l ? 2 : 1));
@@ -65,7 +65,7 @@ final class od extends qf {
           this.field_w = param0;
         } catch (javax.sound.sampled.LineUnavailableException lineUnavailableException) {
           if (lc.a(param0, (byte) 121) != 1) {
-            this.a(cg.a(-922314526, param0));
+            this.openDevice(cg.a(-922314526, param0));
             return;
           }
           this.field_v = null;
@@ -73,7 +73,7 @@ final class od extends qf {
         }
     }
 
-    final void a(java.awt.Component param0) {
+    final void initDevice(java.awt.Component param0) {
         int var4 = 0;
         javax.sound.sampled.Mixer.Info[] var2;
         javax.sound.sampled.Mixer.Info[] var3;

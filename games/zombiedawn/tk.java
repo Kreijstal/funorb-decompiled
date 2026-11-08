@@ -11,7 +11,7 @@ final class tk {
     private boolean field_c;
     static String field_b;
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_g = null;
         field_e = null;
         int var1 = 8 / ((64 - param0) / 35);
@@ -57,7 +57,7 @@ final class tk {
     final boolean a(boolean param0) {
         if (param0) {
           String var3 = (String) null;
-          tk.a((String) null, false, true);
+          tk.measureText((String) null, false, true);
           return this.field_h;
         }
         return this.field_h;
@@ -71,7 +71,7 @@ final class tk {
         return this.field_f;
     }
 
-    final static int a(String param0, boolean param1, boolean param2) {
+    final static int measureText(String param0, boolean param1, boolean param2) {
         RuntimeException var3 = null;
         int stackIn_2_0 = 0;
         int stackIn_5_0 = 0;
@@ -86,10 +86,10 @@ final class tk {
             return stackIn_2_0;
           }
           if (param2) {
-            stackIn_7_0 = q.field_H.b(param0);
+            stackIn_7_0 = q.field_H.textWidth(param0);
             return stackIn_7_0;
           }
-          stackIn_5_0 = ZombieDawn.field_K.b(param0);
+          stackIn_5_0 = ZombieDawn.field_K.textWidth(param0);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -120,7 +120,7 @@ final class tk {
         }
     }
 
-    final static boolean a(byte param0, String param1) {
+    final static boolean hasInvalidPasswordLength(byte param0, String param1) {
         RuntimeException var2 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;

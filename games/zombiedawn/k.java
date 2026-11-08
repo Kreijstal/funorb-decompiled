@@ -6,7 +6,7 @@ final class k extends vf {
     static int field_t;
     private v[] field_s;
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         field_r = null;
         int var1 = -126 % ((48 - param0) / 63);
     }
@@ -58,7 +58,7 @@ final class k extends vf {
           if (param0 != 16777215) {
             k.a(-100, -115);
           }
-          var10.a(var11, var12);
+          var10.draw(var11, var12);
           this.field_m.drawStringCentered(this.b(12307, param3), var13, param2, var9, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -19,7 +19,7 @@ final class sf {
     private long field_f;
     private qn field_k;
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         field_n = null;
         field_j = null;
         if (param0 != 0) {
@@ -32,7 +32,7 @@ final class sf {
         if (param1 >= 0L) {
           this.field_e = param1;
           if (param0 != 0) {
-            this.a(-64);
+            this.length(-64);
           }
           return;
         }
@@ -41,13 +41,13 @@ final class sf {
 
     final void b(int param0) throws IOException {
         if (param0 != 463) {
-          sf.c(64);
+          sf.releaseStatics(64);
         }
         this.a((byte) -115);
         this.field_k.c(-88);
     }
 
-    final long a(int param0) {
+    final long length(int param0) {
         if (param0 != -1) {
           this.field_l = 45L;
         }
@@ -82,14 +82,14 @@ final class sf {
             if (this.field_h != -1L &&
               this.field_e >= this.field_h &&
               (this.field_h + (long)this.field_m) >= ((long)param0 + this.field_e)) {
-              gp.a(this.field_b, (int)(-this.field_h + this.field_e), param3, param2, param0);
+              gp.copy(this.field_b, (int)(-this.field_h + this.field_e), param3, param2, param0);
               this.field_e = this.field_e + (long)param0;
               return;
             }
             var5_long = this.field_e;
             var7 = param2;
             if (param1) {
-              this.a(105);
+              this.length(105);
             }
             var8 = param0;
             if (this.field_e >= this.field_l &&
@@ -98,7 +98,7 @@ final class sf {
               if (var9_int > param0) {
                 var9_int = param0;
               }
-              gp.a(this.field_i, (int)(-this.field_l + this.field_e), param3, param2, var9_int);
+              gp.copy(this.field_i, (int)(-this.field_l + this.field_e), param3, param2, var9_int);
               param2 = param2 + var9_int;
               this.field_e = this.field_e + (long)var9_int;
               param0 = param0 - var9_int;
@@ -129,7 +129,7 @@ final class sf {
               if (var9_intLifetime1Lifetime1 > this.field_a) {
                 var9_intLifetime1Lifetime1 = this.field_a;
               }
-              gp.a(this.field_i, 0, param3, param2, var9_intLifetime1Lifetime1);
+              gp.copy(this.field_i, 0, param3, param2, var9_intLifetime1Lifetime1);
               param0 = param0 - var9_intLifetime1Lifetime1;
               this.field_e = this.field_e + (long)var9_intLifetime1Lifetime1;
               param2 = param2 + var9_intLifetime1Lifetime1;
@@ -172,7 +172,7 @@ final class sf {
               if (-1L < var9 &&
                 var9 < var11) {
                 var13 = (int)(var11 - var9);
-                gp.a(this.field_b, (int)(var9 - this.field_h), param3, var7 + (int)(-var5_long + var9), var13);
+                gp.copy(this.field_b, (int)(var9 - this.field_h), param3, var7 + (int)(-var5_long + var9), var13);
                 if (var11 > this.field_e) {
                   param0 = (int)((long)param0 - (var11 - this.field_e));
                   this.field_e = var11;
@@ -237,7 +237,7 @@ final class sf {
             if (this.field_h != -1L &&
               (long)param3 + this.field_e > this.field_h + (long)this.field_b.length) {
               var5_int = (int)(this.field_h - (this.field_e - (long)this.field_b.length));
-              gp.a(param1, param2, this.field_b, (int)(-this.field_h + this.field_e), var5_int);
+              gp.copy(param1, param2, this.field_b, (int)(-this.field_h + this.field_e), var5_int);
               param2 = param2 + var5_int;
               this.field_e = this.field_e + (long)var5_int;
               param3 = param3 - var5_int;
@@ -247,14 +247,14 @@ final class sf {
             if (param3 <= this.field_b.length) {
               if (0 >= param3) {
                 if (param0 < 40) {
-                  sf.c(17);
+                  sf.releaseStatics(17);
                 }
                 return;
               }
               if (this.field_h == -1L) {
                 this.field_h = this.field_e;
               }
-              gp.a(param1, param2, this.field_b, (int)(this.field_e - this.field_h), param3);
+              gp.copy(param1, param2, this.field_b, (int)(this.field_e - this.field_h), param3);
               this.field_e = this.field_e + (long)param3;
               if ((-this.field_h + this.field_e) > (long)this.field_m) {
                 this.field_m = (int)(this.field_e - this.field_h);
@@ -293,7 +293,7 @@ final class sf {
             if (-1L < var5_long &&
               var7 > var5_long) {
               var9 = (int)(var7 - var5_long);
-              gp.a(param1, (int)(-this.field_e + (long)param2 + var5_long), this.field_i, (int)(-this.field_l + var5_long), var9);
+              gp.copy(param1, (int)(-this.field_e + (long)param2 + var5_long), this.field_i, (int)(-this.field_l + var5_long), var9);
             }
             this.field_e = this.field_e + (long)param3;
             return;
@@ -359,7 +359,7 @@ final class sf {
           if (var2 > -1L &&
             var4 > var2) {
             var6 = (int)(var4 - var2);
-            gp.a(this.field_b, (int)(var2 - this.field_h), this.field_i, (int)(-this.field_l + var2), var6);
+            gp.copy(this.field_b, (int)(var2 - this.field_h), this.field_i, (int)(-this.field_l + var2), var6);
           }
           this.field_m = 0;
           this.field_h = -1L;
@@ -389,7 +389,7 @@ final class sf {
           this.field_c = this.field_c + (long)var3;
         }
         if (!param0) {
-          this.a(-87);
+          this.length(-87);
         }
     }
 
@@ -400,7 +400,7 @@ final class sf {
         this.field_l = -1L;
         try {
           this.field_k = param0;
-          dupTemp$0 = param0.b(100);
+          dupTemp$0 = param0.length(100);
           this.field_f = dupTemp$0;
           this.field_g = dupTemp$0;
           this.field_i = new byte[param1];

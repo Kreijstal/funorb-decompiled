@@ -209,8 +209,8 @@ final class me extends wo {
         try {
           var3_int = param0.worldToScreenX(this.getX(true), (byte) -99);
           var4 = param0.worldToScreenY(this.getY(237239984), param1 ^ param1);
-          Rasterizer.d(var3_int, var4, this.field_pb, 65535);
-          Rasterizer.e(var3_int, var4, param0.worldToScreenX(this.targetX, (byte) -71), param0.worldToScreenY(this.targetY, 0), 16711935);
+          Rasterizer.drawCircleOutline(var3_int, var4, this.field_pb, 65535);
+          Rasterizer.drawLine(var3_int, var4, param0.worldToScreenX(this.targetX, (byte) -71), param0.worldToScreenY(this.targetY, 0), 16711935);
           for (var5 = 0; var5 < this.field_ub; var5++) {
             var6 = param0.worldToScreenX(this.field_jb[var5], (byte) -114);
             var7 = param0.worldToScreenY(this.field_gb[var5], 0);

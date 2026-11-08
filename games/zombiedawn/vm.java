@@ -92,7 +92,7 @@ final class vm extends vf {
           var1 = var6;
           var17 = hg.field_b.field_k;
           for (var3 = 0; var3 < 8; var3++) {
-            var6[var3] = GameWorld.a(var13[var3], var17[var3]);
+            var6[var3] = GameWorld.intOr(var13[var3], var17[var3]);
           }
           var14 = kg.field_g;
           var12 = var14;
@@ -171,7 +171,7 @@ final class vm extends vf {
           tm.a(param3.field_k + param4, 32421, (param3.field_n - this.field_s[0].field_q >> 1) + (param2 + param3.field_j), this.field_s, var7, param3.field_i);
           stackIn_18_0 = (param1) ? 16777215 : 7105644;
           var8 = stackIn_18_0;
-          this.field_m.a(param3.field_o, param3.field_k + param4, param3.field_j + (param2 - 2), param3.field_i, param3.field_n, var8, -1, 1, 1, this.field_m.field_I);
+          this.field_m.drawParagraph(param3.field_o, param3.field_k + param4, param3.field_j + (param2 - 2), param3.field_i, param3.field_n, var8, -1, 1, 1, this.field_m.field_I);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

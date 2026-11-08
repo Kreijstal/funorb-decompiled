@@ -29,7 +29,7 @@ final class Camera {
     private int field_a;
     boolean field_d;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 < 6) {
           field_z = (String) null;
         }

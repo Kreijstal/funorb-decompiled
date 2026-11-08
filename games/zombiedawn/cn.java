@@ -92,7 +92,7 @@ final class cn {
         ti.a(var2Lifetime2, 113, param0);
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = null;
         field_b = null;
         field_e = null;

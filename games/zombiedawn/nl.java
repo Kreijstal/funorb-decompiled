@@ -93,32 +93,32 @@ final class nl extends al {
             var9Lifetime1 = id.field_M + cg.field_g[var10];
             var8Lifetime1 = ld.field_k[var10] + vh.field_b;
             if (this.field_d == 6) {
-              Rasterizer.a(-3 + var8Lifetime1, -3 + var9Lifetime1, 38, 38, 6, 3355443, 128);
+              Rasterizer.fillRoundedRectangleBlended(-3 + var8Lifetime1, -3 + var9Lifetime1, 38, 38, 6, 3355443, 128);
               if (this.g(var10, -7)) {
                 if (this.field_q == var10) {
-                  Rasterizer.a(-3 + var8Lifetime1, var9Lifetime1 - 3, 38, 38, 6, 0, 128);
+                  Rasterizer.fillRoundedRectangleBlended(-3 + var8Lifetime1, var9Lifetime1 - 3, 38, 38, 6, 0, 128);
                 }
                 if (this.field_n == var10) {
-                  Rasterizer.e(-3 + var8Lifetime1, -3 + var9Lifetime1, 38, 38, 6, 16777215);
+                  Rasterizer.drawRoundedRectangle(-3 + var8Lifetime1, -3 + var9Lifetime1, 38, 38, 6, 16777215);
                 }
                 var11 = this.c(var10, true);
                 if (var11 == null) {
                   var11 = e.field_G;
                 }
-                var11.g(var8Lifetime1, var9Lifetime1);
+                var11.drawQuarterSize(var8Lifetime1, var9Lifetime1);
               }
             } else {
               if (this.field_q == var10) {
-                Rasterizer.a(-3 + var8Lifetime1, var9Lifetime1 - 3, 38, 38, 6, 0, 128);
+                Rasterizer.fillRoundedRectangleBlended(-3 + var8Lifetime1, var9Lifetime1 - 3, 38, 38, 6, 0, 128);
               }
               if (this.field_n == var10) {
-                Rasterizer.e(-3 + var8Lifetime1, -3 + var9Lifetime1, 38, 38, 6, 16777215);
+                Rasterizer.drawRoundedRectangle(-3 + var8Lifetime1, -3 + var9Lifetime1, 38, 38, 6, 16777215);
               }
               var11 = this.c(var10, true);
               if (var11 == null) {
                 var11 = e.field_G;
               }
-              var11.g(var8Lifetime1, var9Lifetime1);
+              var11.drawQuarterSize(var8Lifetime1, var9Lifetime1);
             }
           }
         }
@@ -138,8 +138,8 @@ final class nl extends al {
         if (var10Lifetime1 != -1 &&
           this.e(var10Lifetime1, -30858)) {
           var23 = this.c(var10Lifetime1, true);
-          var23.b(110 + vh.field_b, 140 + id.field_M - 32);
-          var6.a(var22[var10Lifetime1], vh.field_b + 260, id.field_M + 80, 300, 85, 0, 0, 1, 2, 35);
+          var23.drawTransparent(110 + vh.field_b, 140 + id.field_M - 32);
+          var6.drawParagraph(var22[var10Lifetime1], vh.field_b + 260, id.field_M + 80, 300, 85, 0, 0, 1, 2, 35);
           var12 = 280 + vh.field_b;
           var13 = -32 + id.field_M + 200;
           var14 = 280;
@@ -148,18 +148,18 @@ final class nl extends al {
           if (this.f(var10Lifetime1, -21) &&
             !this.g(var10Lifetime1, -7)) {
             var25 = ExceptionWrapper.field_f;
-            var7.a(var25, var12, var13, var14, var15, 16777215, 0, 0, 0, var16);
+            var7.drawParagraph(var25, var12, var13, var14, var15, 16777215, 0, 0, 0, var16);
           } else {
             var24 = var3[var10Lifetime1];
-            var18 = var16 * var7.a(var24, var12, var13, var14, var15, 16777215, 0, 0, 0, var16);
+            var18 = var16 * var7.drawParagraph(var24, var12, var13, var14, var15, 16777215, 0, 0, 0, var16);
             var13 = var13 + (6 + (var18 + var16));
             var19 = var5 + 100 * cb.field_N[var10Lifetime1];
             var7.drawString(var19, var12, var13, 16777215, 0);
-            var12 = var12 + (var7.b(var19) + 12);
+            var12 = var12 + (var7.textWidth(var19) + 12);
             var7.drawString(var4, var12, var13, 16777215, 0);
-            var12 = var12 + var7.b(var4);
+            var12 = var12 + var7.textWidth(var4);
             for (var20 = 0; var20 < cb.field_N[var10Lifetime1]; var20++) {
-              hm.field_E.b(var20 * (hm.field_E.field_r >> 1) + var12, var13 - hm.field_E.field_q + 2);
+              hm.field_E.drawTransparent(var20 * (hm.field_E.field_r >> 1) + var12, var13 - hm.field_E.field_q + 2);
             }
           }
         }
@@ -180,14 +180,14 @@ final class nl extends al {
         }
     }
 
-    public static void d(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_p = null;
         field_o = null;
         field_m = null;
         field_r = null;
         field_t = null;
         if (param0 <= 64) {
-          nl.d((byte) -77);
+          nl.releaseStatics((byte) -77);
         }
     }
 
@@ -456,7 +456,7 @@ final class nl extends al {
           var5.a(71);
           var5.a(true, var4, (long)(8 * param1));
           var6 = new byte[64];
-          var5.a(var6, 0, -128);
+          var5.finishDigest(var6, 0, -128);
           stackIn_9_0 = var6;
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

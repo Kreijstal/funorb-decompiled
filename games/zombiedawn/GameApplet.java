@@ -110,7 +110,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           lc.field_d = true;
           nd.field_b = true;
           rl.field_f = false;
-          qj.field_g = pd.a(-22826);
+          qj.field_g = pd.monotonicTimeMillis(-22826);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -183,15 +183,15 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             }
             var6 = param2[2].field_r;
             var7 = param2[1].field_r;
-            param2[0].b(param1, param4);
-            param2[2].b(-var6 + param1 + param3, param4);
+            param2[0].drawTransparent(param1, param4);
+            param2[2].drawTransparent(-var6 + param1 + param3, param4);
             Rasterizer.saveClip(HumanFactory.field_c);
-            Rasterizer.c(var5_int + param1, param4, -var6 + param3 + param1, param4 + param2[1].field_q);
+            Rasterizer.intersectClip(var5_int + param1, param4, -var6 + param3 + param1, param4 + param2[1].field_q);
             var8 = var5_int + param1;
             var9 = param1 + param3 - var6;
             param1 = var8;
             while (var9 > param1) {
-              param2[1].b(param1, param4);
+              param2[1].drawTransparent(param1, param4);
               param1 = param1 + var7;
               if (var10 != 0) {
                 return;
@@ -310,7 +310,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           return;
         }
         try {
-          mp.field_a = 4000L + pd.a(-22826);
+          mp.field_a = 4000L + pd.monotonicTimeMillis(-22826);
         } catch (RuntimeException runtimeException) {
           throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "ke.stop()");
         }
@@ -449,7 +449,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         RuntimeException decompiledCaughtException = null;
         int var6_int = 0;
         try {
-          var2_long = pd.a(-22826);
+          var2_long = pd.monotonicTimeMillis(-22826);
           if (param0 != 6) {
             this.d(120);
           }
@@ -496,7 +496,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         try {
           if (nh.field_J == this &&
             !qn.field_j) {
-            mp.field_a = pd.a(-22826);
+            mp.field_a = pd.monotonicTimeMillis(-22826);
             ld.a(5000L, (byte) 34);
             mh.field_E = null;
             this.a((byte) 96, false);
@@ -636,7 +636,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             !qn.field_j) {
             nd.field_b = true;
             if (gf.field_a &&
-              pd.a(-22826) - qj.field_g > 1000L) {
+              pd.monotonicTimeMillis(-22826) - qj.field_g > 1000L) {
               var2 = param0.getClipBounds();
               if (var2 != null) {
                 if (var2.width < ul.field_d) {
@@ -686,7 +686,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         Throwable decompiledCaughtException = null;
         Object var6 = null;
         try {
-          var2_long = pd.a(param0 - 22873);
+          var2_long = pd.monotonicTimeMillis(param0 - 22873);
           var4 = ZombieDawn.field_E[mc.field_f];
           ZombieDawn.field_E[mc.field_f] = var2_long;
           if (0L != var4 &&
@@ -731,7 +731,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             this.field_j = true;
             System.out.println("error_game_" + param0);
             try {
-              qe.a(hc.a(0), "loggedout", -90);
+              qe.callWindowFunction(hc.a(0), "loggedout", -90);
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var3 = decompiledCaughtException;
@@ -927,7 +927,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 do {
                   boolean decompiledFrameRemainder0 = true;
                   if (mp.field_a != 0L) {
-                    stackIn_93_0 = $cfr$lcmp(~mp.field_a, ~pd.a(-22826));
+                    stackIn_93_0 = compareLongs(~mp.field_a, ~pd.monotonicTimeMillis(-22826));
                     decompiledFrameRemainder0 = (var5 == 0);
                     if ((decompiledFrameRemainder0) &&
                       (stackIn_93_0 >= 0)) {
@@ -977,7 +977,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         field_h = 500;
     }
 
-    private static int $cfr$lcmp(long left, long right) {
+    private static int compareLongs(long left, long right) {
         return left < right ? -1 : (left == right ? 0 : 1);
     }
 }

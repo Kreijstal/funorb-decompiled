@@ -8,7 +8,7 @@ final class la extends java.awt.Canvas implements java.awt.event.FocusListener {
     static Sprite[] field_c;
     static uh field_d;
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 < 39) {
           Js5Archive var2 = (Js5Archive) null;
           la.a((Js5Archive) null, 13, (Js5Archive) null, (byte) 28, -8);

@@ -101,7 +101,7 @@ final class SpatialBucket {
         return null;
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         field_c = null;
         field_b = null;
         if (param0 != -12220) {
@@ -117,18 +117,18 @@ final class SpatialBucket {
         int var2 = 0;
         int var3 = ZombieDawn.field_J;
         try {
-          Zombie.field_nb[0] = sg.field_jb.d(16711680);
-          Zombie.field_nb[1] = sg.field_jb.d(7829248);
-          Zombie.field_nb[2] = sg.field_jb.d(16776960);
-          Zombie.field_nb[3] = sg.field_jb.d(30464);
-          Zombie.field_nb[4] = sg.field_jb.d(65280);
-          Zombie.field_nb[5] = sg.field_jb.d(30583);
-          Zombie.field_nb[6] = sg.field_jb.d(65535);
-          Zombie.field_nb[7] = sg.field_jb.d(119);
-          Zombie.field_nb[8] = sg.field_jb.d(255);
-          Zombie.field_nb[9] = sg.field_jb.d(16745473);
-          hm.field_L = sg.field_jb.d(16777215);
-          t.field_c = sg.field_jb.d(6710886);
+          Zombie.field_nb[0] = sg.field_jb.findNearestBasePaletteIndex(16711680);
+          Zombie.field_nb[1] = sg.field_jb.findNearestBasePaletteIndex(7829248);
+          Zombie.field_nb[2] = sg.field_jb.findNearestBasePaletteIndex(16776960);
+          Zombie.field_nb[3] = sg.field_jb.findNearestBasePaletteIndex(30464);
+          Zombie.field_nb[4] = sg.field_jb.findNearestBasePaletteIndex(65280);
+          Zombie.field_nb[5] = sg.field_jb.findNearestBasePaletteIndex(30583);
+          Zombie.field_nb[6] = sg.field_jb.findNearestBasePaletteIndex(65535);
+          Zombie.field_nb[7] = sg.field_jb.findNearestBasePaletteIndex(119);
+          Zombie.field_nb[8] = sg.field_jb.findNearestBasePaletteIndex(255);
+          Zombie.field_nb[9] = sg.field_jb.findNearestBasePaletteIndex(16745473);
+          hm.field_L = sg.field_jb.findNearestBasePaletteIndex(16777215);
+          t.field_c = sg.field_jb.findNearestBasePaletteIndex(6710886);
           var6 = sg.field_jb.field_O[0];
           var5 = var6;
           var4 = var5;
@@ -174,12 +174,12 @@ final class SpatialBucket {
           this.field_d = var2.field_q;
           return var2;
         }
-        SpatialBucket.c(43);
+        SpatialBucket.releaseStatics(43);
         this.field_d = var2.field_q;
         return var2;
     }
 
-    final void a(byte param0, SpatialObject param1) {
+    final void addLast(byte param0, SpatialObject param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;

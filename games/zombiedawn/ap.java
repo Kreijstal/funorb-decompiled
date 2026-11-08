@@ -24,7 +24,7 @@ final class ap extends al {
     private boolean field_y;
     private int field_v;
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         if (param0) {
           field_s = (String) null;
           field_w = null;
@@ -1055,7 +1055,7 @@ final class ap extends al {
           if (var8 == null) {
             return;
           }
-          var5 = var5 + (var4 * (1 + sg.field_jb.a(var8, vh.field_b + 40, var5, 560, 240, var2, var3, 1, 0, 30)) - 5);
+          var5 = var5 + (var4 * (1 + sg.field_jb.drawParagraph(var8, vh.field_b + 40, var5, 560, 240, var2, var3, 1, 0, 30)) - 5);
           if (param0 >= -35) {
             this.field_r = -90;
           }
@@ -1077,7 +1077,7 @@ final class ap extends al {
             if (var9 == null) {
               return;
             }
-            var5 = var5 + (var4 * (1 + sg.field_jb.a(var9, vh.field_b + 40, var5, 560, 240, var2, var3, 1, 0, 30)) - 5);
+            var5 = var5 + (var4 * (1 + sg.field_jb.drawParagraph(var9, vh.field_b + 40, var5, 560, 240, var2, var3, 1, 0, 30)) - 5);
             if (param0 >= -35) {
               this.field_r = -90;
             }
@@ -1100,7 +1100,7 @@ final class ap extends al {
                 if (var10 == null) {
                   return;
                 }
-                var5 = var5 + (var4 * (1 + sg.field_jb.a(var10, vh.field_b + 40, var5, 560, 240, var2, var3, 1, 0, 30)) - 5);
+                var5 = var5 + (var4 * (1 + sg.field_jb.drawParagraph(var10, vh.field_b + 40, var5, 560, 240, var2, var3, 1, 0, 30)) - 5);
                 regionExit1: {
                   if (param0 < -35) {
                     if (var5 < 205) {
@@ -1147,7 +1147,7 @@ final class ap extends al {
             if (var6 == null) {
               return;
             }
-            var5 = var5 + (var4 * (1 + sg.field_jb.a((String) (var6), vh.field_b + 40, var5, 560, 240, var2, var3, 1, 0, 30)) - 5);
+            var5 = var5 + (var4 * (1 + sg.field_jb.drawParagraph((String) (var6), vh.field_b + 40, var5, 560, 240, var2, var3, 1, 0, 30)) - 5);
             if (param0 >= -35) {
               this.field_r = -90;
               if (var5 < 205) {
@@ -1218,7 +1218,7 @@ final class ap extends al {
           if (640 != bd.field_e) {
             stackIn_18_0 = qk.field_Hb;
             stackIn_19_1 = (2 != this.field_x) ? 2 : 3;
-            ((Sprite) (Object) stackIn_18_0[stackIn_19_1]).a(0, 0, bd.field_e, nh.field_P);
+            ((Sprite) (Object) stackIn_18_0[stackIn_19_1]).drawScaled(0, 0, bd.field_e, nh.field_P);
           } else {
             if (nh.field_P == 480) {
               if (this.field_x == 2) {
@@ -1229,7 +1229,7 @@ final class ap extends al {
             } else {
               stackIn_23_0 = qk.field_Hb;
               stackIn_24_1 = (2 != this.field_x) ? 2 : 3;
-              ((Sprite) (Object) stackIn_23_0[stackIn_24_1]).a(0, 0, bd.field_e, nh.field_P);
+              ((Sprite) (Object) stackIn_23_0[stackIn_24_1]).drawScaled(0, 0, bd.field_e, nh.field_P);
             }
           }
         } else {
@@ -1237,7 +1237,7 @@ final class ap extends al {
           if (640 != bd.field_e) {
             stackIn_4_0 = qk.field_Hb;
             stackIn_5_1 = (2 != this.field_x) ? 2 : 3;
-            ((Sprite) (Object) stackIn_4_0[stackIn_5_1]).a(0, 0, bd.field_e, nh.field_P);
+            ((Sprite) (Object) stackIn_4_0[stackIn_5_1]).drawScaled(0, 0, bd.field_e, nh.field_P);
           } else {
             if (nh.field_P == 480) {
               if (this.field_x != 2) {
@@ -1248,7 +1248,7 @@ final class ap extends al {
             } else {
               stackIn_9_0 = qk.field_Hb;
               stackIn_10_1 = (2 != this.field_x) ? 2 : 3;
-              ((Sprite) (Object) stackIn_9_0[stackIn_10_1]).a(0, 0, bd.field_e, nh.field_P);
+              ((Sprite) (Object) stackIn_9_0[stackIn_10_1]).drawScaled(0, 0, bd.field_e, nh.field_P);
             }
           }
         }

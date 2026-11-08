@@ -13,7 +13,7 @@ class hm extends an {
     static int[][] field_F;
     static int field_J;
 
-    boolean a(byte param0, UiWidget param1) {
+    boolean focusNext(byte param0, UiWidget param1) {
         RuntimeException var3 = null;
         UiWidget var4 = null;
         RuntimeException stackIn_6_0 = null;
@@ -250,7 +250,7 @@ class hm extends an {
           this.a(-121, param1, param0, param3, ((ak) ((Object) this.field_h)).a(false, (UiWidget) (this)));
           return;
         }
-        hm.g(-53);
+        hm.releaseStatics(-53);
         this.a(-121, param1, param0, param3, ((ak) ((Object) this.field_h)).a(false, (UiWidget) (this)));
     }
 
@@ -361,7 +361,7 @@ class hm extends an {
         }
     }
 
-    public static void g(int param0) {
+    public static void releaseStatics(int param0) {
         field_E = null;
         field_H = null;
         field_M = null;

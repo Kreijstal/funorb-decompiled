@@ -21,7 +21,7 @@ class UiWidget extends IntrusiveNode {
     static boolean field_w;
     int field_i;
 
-    void c(byte param0) {
+    void blur(byte param0) {
         if (param0 != 57) {
           this.a((UiWidget) null, -6, 18, 10, -10, false, 55);
         }
@@ -53,7 +53,7 @@ class UiWidget extends IntrusiveNode {
         }
     }
 
-    boolean a(byte param0, UiWidget param1) {
+    boolean focusNext(byte param0, UiWidget param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -212,7 +212,7 @@ class UiWidget extends IntrusiveNode {
               og.a(this.d(-58), 0);
               return param2;
             }
-            this.c((byte) 57);
+            this.blur((byte) 57);
             if (var7 == 0) {
               he.field_b = kc.field_R;
               og.a(this.d(-58), 0);
@@ -224,7 +224,7 @@ class UiWidget extends IntrusiveNode {
               if (ci.field_d != 0) {
                 if (!this.a(nc.field_j, 1, param0, hp.field_D, param1, ci.field_d, this)) {
                   if (var5 != 0) {
-                    this.c((byte) 57);
+                    this.blur((byte) 57);
                     if (var7 != 0) {
                       param2 = false;
                     }
@@ -262,7 +262,7 @@ class UiWidget extends IntrusiveNode {
               param2 = false;
             } else {
               if (var5 != 0) {
-                this.c((byte) 57);
+                this.blur((byte) 57);
                 if (var7 != 0) {
                   param2 = false;
                   if (kc.field_R != 0) {
@@ -325,7 +325,7 @@ class UiWidget extends IntrusiveNode {
             og.a(this.d(-58), 0);
             return param2;
           }
-          this.c((byte) 57);
+          this.blur((byte) 57);
           if (var7 == 0) {
             he.field_b = kc.field_R;
             og.a(this.d(-58), 0);
@@ -433,7 +433,7 @@ class UiWidget extends IntrusiveNode {
           og.a(this.d(-58), 0);
           return param2;
         }
-        this.c((byte) 57);
+        this.blur((byte) 57);
         if (var7 == 0) {
           if (kc.field_R != 0) {
             he.field_b = kc.field_R;
@@ -634,7 +634,7 @@ class UiWidget extends IntrusiveNode {
         this(param0, se.field_j.field_n, param1);
     }
 
-    boolean a(int param0, int param1, UiWidget param2, char param3) {
+    boolean requestKeyboardFocus(int param0, int param1, UiWidget param2, char param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         RuntimeException stackIn_4_0 = null;
@@ -664,7 +664,7 @@ class UiWidget extends IntrusiveNode {
         if (!this.e(-17741)) {
           var4 = param0;
           if (var4 == 80) {
-            return this.a((byte) 76, this);
+            return this.focusNext((byte) 76, this);
           }
           if (param1 > 21) {
             return false;
@@ -672,12 +672,12 @@ class UiWidget extends IntrusiveNode {
           this.field_n = 58;
           return false;
         }
-        if (this.a(28, param0, this, param2)) {
+        if (this.requestKeyboardFocus(28, param0, this, param2)) {
           return true;
         }
         var4Lifetime1 = param0;
         if (var4Lifetime1 == 80) {
-          return this.a((byte) 76, this);
+          return this.focusNext((byte) 76, this);
         }
         if (param1 > 21) {
           return false;

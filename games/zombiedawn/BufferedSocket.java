@@ -127,7 +127,7 @@ final class BufferedSocket implements Runnable {
         return 0;
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 >= 72) {
           field_f = null;
           field_h = null;

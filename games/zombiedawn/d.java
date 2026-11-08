@@ -37,7 +37,7 @@ final class d {
         return false;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_d = null;
         field_c = null;
         field_a = null;
@@ -75,7 +75,7 @@ final class d {
           var1_int = IterableNodeHashTable.field_d;
           var2 = 0;
           if (pg.field_p == 2) {
-            var3_long = pd.a(-22826) - ge.field_f;
+            var3_long = pd.monotonicTimeMillis(-22826) - ge.field_f;
             var2 = (int)((10999L - var3_long) / 1000L);
             if (var2 < 0) {
               var2 = 0;
@@ -132,7 +132,7 @@ final class d {
             stackIn_39_0 = var6;
             stackIn_39_1 = true;
             stackIn_40_2 = !(0 > var4);
-            var7Lifetime1 = tk.a(stackIn_39_0, stackIn_39_1, stackIn_40_2);
+            var7Lifetime1 = tk.measureText(stackIn_39_0, stackIn_39_1, stackIn_40_2);
             var8Lifetime1 = mo.field_b - (var7Lifetime1 >> 1);
             if (var4 >= 0) {
               var1_int = var1_int + fe.field_H;

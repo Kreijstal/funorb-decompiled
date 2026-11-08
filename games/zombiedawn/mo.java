@@ -19,9 +19,9 @@ final class mo {
         return new String(var3);
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 > -74) {
-          mo.a(-60);
+          mo.releaseStatics(-60);
         }
         field_a = null;
     }

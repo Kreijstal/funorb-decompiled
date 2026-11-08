@@ -35,7 +35,7 @@ final class ng {
         return false;
     }
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_b = null;
         field_d = null;
         if (param0 > -125) {

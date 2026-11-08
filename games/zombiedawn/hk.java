@@ -186,20 +186,20 @@ final class hk extends WorldObject {
           var5 = -12 + tm.field_l[this.field_G] * 24;
           var6 = 24 * tm.field_i[this.field_G];
           if (this.field_M) {
-            jc.field_t[0].b(var3_int - 280, -60 + (-tm.field_k[this.field_G] + var4), 128);
-            jc.field_t[1].b(-280 + var3_int, var4 - tm.field_k[this.field_G], 128);
+            jc.field_t[0].drawAdditive(var3_int - 280, -60 + (-tm.field_k[this.field_G] + var4), 128);
+            jc.field_t[1].drawAdditive(-280 + var3_int, var4 - tm.field_k[this.field_G], 128);
             for (var7 = 0; tm.field_i[this.field_G] > var7; var7++) {
               var13 = 0;
               var8 = var13;
               while (tm.field_l[this.field_G] > var13) {
-                tm.field_h[8 * var13 + (tm.field_n[this.field_G] + var7)].b(var3_int + var7 * 24, var13 * 24 + var4 - var5);
+                tm.field_h[8 * var13 + (tm.field_n[this.field_G] + var7)].drawTransparent(var3_int + var7 * 24, var13 * 24 + var4 - var5);
                 var13++;
               }
             }
             return;
           }
-          jc.field_t[2].b(var3_int - 20, -60 + (-tm.field_k[this.field_G] + var4), 128);
-          jc.field_t[3].b(var3_int - 20, -tm.field_k[this.field_G] + var4, 128);
+          jc.field_t[2].drawAdditive(var3_int - 20, -60 + (-tm.field_k[this.field_G] + var4), 128);
+          jc.field_t[3].drawAdditive(var3_int - 20, -tm.field_k[this.field_G] + var4, 128);
           for (var7Lifetime1 = 0; var7Lifetime1 < tm.field_i[this.field_G]; var7Lifetime1++) {
             for (var8Lifetime1 = 0; var8Lifetime1 < tm.field_l[this.field_G]; var8Lifetime1++) {
               var9 = tm.field_n[this.field_G];
@@ -235,7 +235,7 @@ final class hk extends WorldObject {
             var10[var8] = pa.field_x[var8];
           }
           if (param1 != -23) {
-            hk.b(false);
+            hk.releaseStatics(false);
           }
           var7[var7.length - 1] = new va(param6, param0, param4, param2, param3, param5);
           pa.field_x = var7;
@@ -244,7 +244,7 @@ final class hk extends WorldObject {
         }
     }
 
-    public static void b(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         if (!param0) {
           field_P = (String) null;
         }

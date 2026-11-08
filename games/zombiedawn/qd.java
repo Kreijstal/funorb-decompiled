@@ -9,7 +9,7 @@ final class qd {
     static String field_d;
     static int[] field_c;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_c = null;
         field_d = null;
         if (param0 <= -40) {

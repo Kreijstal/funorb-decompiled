@@ -10,7 +10,7 @@ final class ee {
     private int[] field_g;
     private int field_f;
 
-    final void a(float[] param0, int param1, boolean param2) {
+    final void decodeResidue(float[] param0, int param1, boolean param2) {
         int var8 = 0;
         int var17 = 0;
         int var16 = 0;
@@ -50,7 +50,7 @@ final class ee {
           var9 = 0;
           while (var9 < var6) {
             if (var8 == 0) {
-              var10 = mb.field_i[this.field_a].a();
+              var10 = mb.field_i[this.field_a].decodeScalar();
               for (var11 = var4Lifetime1 - 1; var11 >= 0; var11--) {
                 if (var9 + var11 < var6) {
                   var7[var9 + var11] = var10 % this.field_d;
@@ -69,7 +69,7 @@ final class ee {
                 if (this.field_e != 0) {
                   var15 = 0;
                   while (var15 < this.field_b) {
-                    var28 = var14.b();
+                    var28 = var14.decodeVector();
                     for (var17 = 0; var17 < var14.field_d; var17++) {
                       param0[var13 + var15] = param0[var13 + var15] + var28[var17];
                       var15++;
@@ -78,7 +78,7 @@ final class ee {
                 } else {
                   var15 = this.field_b / var14.field_d;
                   for (var16 = 0; var16 < var15; var16++) {
-                    var27 = var14.b();
+                    var27 = var14.decodeVector();
                     for (var18 = 0; var18 < var14.field_d; var18++) {
                       param0[var13 + var16 + var18 * var15] = param0[var13 + var16 + var18 * var15] + var27[var18];
                     }
@@ -102,19 +102,19 @@ final class ee {
         int var5 = 0;
         int var2 = 0;
         int var2Lifetime1;
-        this.field_e = mb.d(16);
-        this.field_f = mb.d(24);
-        this.field_c = mb.d(24);
-        this.field_b = mb.d(24) + 1;
-        this.field_d = mb.d(6) + 1;
-        this.field_a = mb.d(8);
+        this.field_e = mb.readBits(16);
+        this.field_f = mb.readBits(24);
+        this.field_c = mb.readBits(24);
+        this.field_b = mb.readBits(24) + 1;
+        this.field_d = mb.readBits(6) + 1;
+        this.field_a = mb.readBits(8);
         int[] var1 = new int[this.field_d];
         for (var2 = 0; var2 < this.field_d; var2++) {
           var3 = 0;
-          var4 = mb.d(3);
-          var5 = mb.c() != 0 ? 1 : 0;
+          var4 = mb.readBits(3);
+          var5 = mb.readBit() != 0 ? 1 : 0;
           if (var5 != 0) {
-            var3 = mb.d(5);
+            var3 = mb.readBits(5);
           }
           var1[var2] = var3 << 3 | var4;
         }
@@ -122,7 +122,7 @@ final class ee {
         int var6 = 0;
         var2Lifetime1 = var6;
         while (var6 < this.field_d * 8) {
-          this.field_g[var6] = (var1[var6 >> 3] & 1 << (var6 & 7)) != 0 ? mb.d(8) : -1;
+          this.field_g[var6] = (var1[var6 >> 3] & 1 << (var6 & 7)) != 0 ? mb.readBits(8) : -1;
           var6++;
         }
     }

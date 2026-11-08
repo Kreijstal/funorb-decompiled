@@ -15,7 +15,7 @@ abstract class PcmStream extends IntrusiveNode {
         }
     }
 
-    int b() {
+    int priority() {
         return 255;
     }
 
@@ -23,7 +23,7 @@ abstract class PcmStream extends IntrusiveNode {
 
     abstract void fill(int[] param0, int param1, int param2);
 
-    abstract int a();
+    abstract int activity();
 
     abstract PcmStream firstSubstream();
 

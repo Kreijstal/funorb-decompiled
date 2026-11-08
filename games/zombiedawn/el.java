@@ -17,7 +17,7 @@ final class el implements io {
     private int field_c;
     static String field_i;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_m = null;
         if (param0 == -1) {
           field_i = null;
@@ -135,14 +135,14 @@ final class el implements io {
           }
           Rasterizer.fillRect(param4 + param3.field_k, param3.field_j + param2, param3.field_i, param3.field_n, this.field_b);
           if (param0 != 16777215) {
-            el.a(-79);
+            el.releaseStatics(-79);
           }
           var7 = -(var12.field_K * 2) + param3.field_i;
           var8 = param3.field_k + (param4 + var12.field_K);
           var9 = var12.field_G + (param2 + param3.field_j);
-          Rasterizer.e(var8, var9, var8 + var7, var9, this.field_l);
+          Rasterizer.drawLine(var8, var9, var8 + var7, var9, this.field_l);
           for (var10 = var12.a(-85) - 1; var10 >= 0; var10--) {
-            Rasterizer.g(var8 + var12.a((byte) 58, var10) * var7 / var12.b(false), var9, this.field_e, this.field_f);
+            Rasterizer.fillCircle(var8 + var12.a((byte) 58, var10) * var7 / var12.b(false), var9, this.field_e, this.field_f);
           }
           if (null == this.field_j) {
             return;

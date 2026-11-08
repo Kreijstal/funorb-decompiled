@@ -36,7 +36,7 @@ final class p {
         var2.writeByte(param0, 45);
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_c = null;
         field_b = null;
         if (param0) {
@@ -52,7 +52,7 @@ final class p {
           }
           return;
         }
-        p.a(true);
+        p.releaseStatics(true);
         if (sn.field_c != null) {
           sn.field_c.close(-126);
           sn.field_c = null;

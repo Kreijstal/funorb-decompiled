@@ -31,7 +31,7 @@ final class of {
     }
 
     final void a(int param0, int param1, byte param2, int param3, int param4, int param5) {
-        Rasterizer.e(param3, param4, param5, param0, param1);
+        Rasterizer.drawLine(param3, param4, param5, param0, param1);
         if (param2 != -14) {
           this.field_f = 122;
         }
@@ -132,7 +132,7 @@ final class of {
             var3 = nh.field_P - var1_int;
             for (var2 = var1_int; var2 < Rasterizer.clipRight; var2 = var2 + ch.field_a.field_w) {
               ch.field_a.drawWithOffsets(var2, 0);
-              ch.field_a.f(var2, var3);
+              ch.field_a.drawVerticalFlip(var2, var3);
             }
             Rasterizer.setClip(0, var1_int, bd.field_e, nh.field_P - var1_int);
             var2Lifetime1 = -var1_int + bd.field_e;
@@ -192,7 +192,7 @@ final class of {
         int var7 = 0;
         int var8 = 0;
         try {
-          var5_int = this.field_c.b(param0);
+          var5_int = this.field_c.textWidth(param0);
           var6 = this.field_c.field_x + this.field_c.field_w;
           if (param3 != 53) {
             this.a(60, -58, (byte) 14, 69, -115);
@@ -307,14 +307,14 @@ final class of {
           var13.field_z = new int[]{8947848, 8947848, 8947848, 13421772, 8947848, 8947848, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772};
           this.field_p = 10;
           var14 = new qo(var4, true);
-          var14.a(var13.e(), 0);
-          var13.b();
+          var14.a(var13.copySprite(), 0);
+          var13.rotateCounterClockwise();
           var14Lifetime1 = new qo(var4, true);
-          var14Lifetime1.a(var13.e(), param0 - 4);
-          var13.b();
+          var14Lifetime1.a(var13.copySprite(), param0 - 4);
+          var13.rotateCounterClockwise();
           var14Lifetime2 = new qo(var4, true);
-          var14Lifetime2.a(var13.e(), 0);
-          var13.b();
+          var14Lifetime2.a(var13.copySprite(), 0);
+          var13.rotateCounterClockwise();
           var19 = new qo(var4, true);
           var19.a(var13, 0);
         } catch (RuntimeException runtimeException) {
@@ -358,7 +358,7 @@ final class of {
             var7 = this.field_c.field_I + this.field_c.field_x;
           }
           var8 = Rasterizer.width >> 2;
-          var9 = this.field_c.b(param1);
+          var9 = this.field_c.textWidth(param1);
           var10 = this.field_c.field_I + this.field_c.field_x;
           var11 = 1;
           if (var9 > var8 ||
@@ -372,11 +372,11 @@ final class of {
               var13 = var9 / var8;
               var12 = 2 * ((var9 % var8 + var13 - 1) / var13) + var8;
             }
-            var11Lifetime1 = this.field_c.a(param1, new int[]{var12}, kb.field_j);
+            var11Lifetime1 = this.field_c.wrapText(param1, new int[]{var12}, kb.field_j);
             var9 = 0;
             var10 = var10 + var7 * (-1 + var11Lifetime1);
             for (var13Lifetime2 = 0; var13Lifetime2 < var11Lifetime1; var13Lifetime2++) {
-              var14 = this.field_c.b(kb.field_j[var13Lifetime2]);
+              var14 = this.field_c.textWidth(kb.field_j[var13Lifetime2]);
               if (var9 < var14) {
                 var9 = var14;
               }
@@ -392,7 +392,7 @@ final class of {
           }
           Rasterizer.drawRectOutline(var12, var13Lifetime1, var5_int + var9, var10 + var6, this.field_i);
           Rasterizer.fillRect(var12 + 1, var13Lifetime1 + 1, -2 + var9 + var5_int, var10 + var6 - 2, this.field_k);
-          this.field_c.a(param1, var12 + this.field_r, this.field_q + var13Lifetime1, var9, var10, this.field_j, -1, 0, param3, var7);
+          this.field_c.drawParagraph(param1, var12 + this.field_r, this.field_q + var13Lifetime1, var9, var10, this.field_j, -1, 0, param3, var7);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -409,7 +409,7 @@ final class of {
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, byte param5, int param6) {
-        Rasterizer.a(param3, param0, param2, param1, param6, param4);
+        Rasterizer.fillRectangleBlended(param3, param0, param2, param1, param6, param4);
         if (param5 > -88) {
           String var9 = (String) null;
           of.a((String) null, -19);

@@ -20,7 +20,7 @@ final class hb extends UiWidget {
     private final void g(int param0) {
         this.field_L = new Sprite[]{this.b(this.field_y, this.field_A, -69), this.b(this.field_z, this.field_x, -105)};
         this.field_K = this.a(-108);
-        this.field_J = this.field_K.d();
+        this.field_J = this.field_K.copyFlippedHorizontal();
         this.field_B = new Sprite(this.field_n >> 1, this.field_n);
         int var2 = -77 / ((param0 - 88) / 33);
     }
@@ -80,27 +80,27 @@ final class hb extends UiWidget {
           var5_int = this.field_i + param3;
           Mover.$cfr$intArgs$a$3aedf8649552(param0, 99, -this.field_K.field_w + var5_int, this.field_n + param0, this.field_K.field_w + param3);
           for (var6 = param3 - this.field_H; var5_int > var6; var6 = var6 + param1.field_w) {
-            param1.b(var6, param0);
+            param1.drawTransparent(var6, param0);
           }
           var7 = -32 / ((param2 - 34) / 50);
           pa.a(-21189);
           if (Rasterizer.clipLeft <= this.field_K.field_w + param3) {
             ki.a((byte) -118, this.field_B);
-            param1.b(-this.field_H, 0);
-            param1.b(-this.field_H + 2 * this.field_E, 0);
-            this.field_J.a(0, 0);
+            param1.drawTransparent(-this.field_H, 0);
+            param1.drawTransparent(-this.field_H + 2 * this.field_E, 0);
+            this.field_J.drawMultiply(0, 0);
             pa.a(-21189);
-            this.field_B.b(param3, param0);
+            this.field_B.drawTransparent(param3, param0);
           }
           if (-this.field_K.field_w + var5_int <= Rasterizer.clipRight) {
             ki.a((byte) -107, this.field_B);
             for (var7Lifetime1 = -this.field_K.field_w + (this.field_i + this.field_H); this.field_E * 2 < var7Lifetime1; var7Lifetime1 = var7Lifetime1 - this.field_E * 2) {
             }
-            param1.b(-var7Lifetime1, 0);
-            param1.b(-var7Lifetime1 + 2 * this.field_E, 0);
-            this.field_K.a(0, 0);
+            param1.drawTransparent(-var7Lifetime1, 0);
+            param1.drawTransparent(-var7Lifetime1 + 2 * this.field_E, 0);
+            this.field_K.drawMultiply(0, 0);
             pa.a(-21189);
-            this.field_B.b(var5_int - this.field_K.field_w, param0);
+            this.field_B.drawTransparent(var5_int - this.field_K.field_w, param0);
             return;
           }
           return;
@@ -129,7 +129,7 @@ final class hb extends UiWidget {
         this.g(52);
     }
 
-    public static void f(int param0) {
+    public static void releaseStatics(int param0) {
         field_G = null;
         field_D = null;
         if (param0 > -83) {

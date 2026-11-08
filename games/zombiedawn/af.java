@@ -27,14 +27,14 @@ final class af {
         throw new IllegalStateException();
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 == 25752) {
           field_c = null;
           field_a = null;
           field_d = null;
           return;
         }
-        af.a(-8);
+        af.releaseStatics(-8);
         field_c = null;
         field_a = null;
         field_d = null;

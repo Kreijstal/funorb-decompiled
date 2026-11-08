@@ -29,7 +29,7 @@ final class cp implements Runnable {
                 for (var1_int = 0; var1_int < 2; var1_int++) {
                   var2 = this.field_c[var1_int];
                   if (var2 != null) {
-                    var2.g();
+                    var2.serviceOutput();
                   }
                 }
                 ld.a(10L, (byte) 101);

@@ -15,7 +15,7 @@ final class lo extends IntrusiveNode {
     static String field_r;
     static int[] field_q;
 
-    public static void c(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_i = null;
         field_r = null;
         field_n = null;

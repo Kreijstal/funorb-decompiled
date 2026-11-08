@@ -20,7 +20,7 @@ class wo extends Human {
         RuntimeException var3 = null;
         var6 = ZombieDawn.field_J;
         try {
-          Rasterizer.d(param0.worldToScreenX(this.getX(true), (byte) -74), param0.worldToScreenY(this.getY(param1 ^ 237235572), 0), this.field_pb, 16711680);
+          Rasterizer.drawCircleOutline(param0.worldToScreenX(this.getX(true), (byte) -74), param0.worldToScreenY(this.getY(param1 ^ 237235572), 0), this.field_pb, 16711680);
           if (param1 != 5060) {
             field_xb = (dn) null;
           }
@@ -213,7 +213,7 @@ class wo extends Human {
         }
     }
 
-    public static void w(int param0) {
+    public static void releaseStatics(int param0) {
         field_yb = null;
         field_zb = null;
         field_xb = null;

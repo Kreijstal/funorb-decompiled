@@ -45,7 +45,7 @@ final class ed {
         field_c = (String) null;
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_c = null;
         int var1 = -115 / ((3 - param0) / 39);
         field_a = null;

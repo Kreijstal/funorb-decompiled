@@ -18,10 +18,10 @@ final class ko {
         this.field_e = param0.readUnsignedByte((byte) -120);
         this.field_d = param0.readInt(-105);
         this.field_g = param0.readInt(-58);
-        this.a(param0);
+        this.decodeSegments(param0);
     }
 
-    final void a() {
+    final void reset() {
         this.field_i = 0;
         this.field_f = 0;
         this.field_b = 0;
@@ -29,7 +29,7 @@ final class ko {
         this.field_a = 0;
     }
 
-    final int a(int param0) {
+    final int advance(int param0) {
         int fieldTemp$0 = 0;
         if (this.field_a >= this.field_i) {
           fieldTemp$0 = this.field_f;
@@ -48,7 +48,7 @@ final class ko {
         return this.field_j - this.field_b >> 15;
     }
 
-    final void a(PacketBuffer param0) {
+    final void decodeSegments(PacketBuffer param0) {
         int var2 = 0;
         this.field_k = param0.readUnsignedByte((byte) -120);
         this.field_h = new int[this.field_k];

@@ -121,7 +121,7 @@ final class rl {
           throw new ArrayIndexOutOfBoundsException(param0);
         }
         if (param0 != this.field_b) {
-          gp.a(this.field_c, param0 + 1, this.field_c, param0, this.field_b - param0);
+          gp.copy(this.field_c, param0 + 1, this.field_c, param0, this.field_b - param0);
           if (param1 == 1) {
             this.field_b = this.field_b - 1;
             return;
@@ -134,7 +134,7 @@ final class rl {
         }
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = null;
         int var1 = 62 / ((param0 - 17) / 40);
     }
@@ -163,7 +163,7 @@ final class rl {
     private final void a(boolean param0, int param1) {
         int[] var4 = new int[this.a(param1, -103)];
         int[] var3 = var4;
-        gp.a(this.field_c, 0, var4, 0, this.field_c.length);
+        gp.copy(this.field_c, 0, var4, 0, this.field_c.length);
         this.field_c = var4;
         if (param0) {
           return;

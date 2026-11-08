@@ -15,7 +15,7 @@ class sg extends ki implements hh {
     static int field_pb;
     static int[] field_fb;
 
-    public void a(int param0, int param1, an param2, int param3, int param4) {
+    public void onButtonActivated(int param0, int param1, an param2, int param3, int param4) {
         RuntimeException var6 = null;
         UiWidget var7 = null;
         RuntimeException stackIn_8_0 = null;
@@ -33,7 +33,7 @@ class sg extends ki implements hh {
             return;
           }
           var7 = (UiWidget) null;
-          this.a(105, -54, (UiWidget) null, 'ﾵ');
+          this.requestKeyboardFocus(105, -54, (UiWidget) null, 'ﾵ');
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -66,7 +66,7 @@ class sg extends ki implements hh {
         this.b(20, var2Lifetime1);
     }
 
-    final boolean a(int param0, int param1, UiWidget param2, char param3) {
+    final boolean requestKeyboardFocus(int param0, int param1, UiWidget param2, char param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         boolean stackIn_4_0 = false;
@@ -77,7 +77,7 @@ class sg extends ki implements hh {
         try {
           if (13 != param1) {
             var5_int = 11 / ((param0 + 83) / 32);
-            stackIn_4_0 = super.a(-115, param1, param2, param3);
+            stackIn_4_0 = super.requestKeyboardFocus(-115, param1, param2, param3);
             return stackIn_4_0;
           }
           this.h((byte) -8);
@@ -188,12 +188,12 @@ class sg extends ki implements hh {
         }
     }
 
-    public static void b(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_kb = null;
         field_jb = null;
         field_eb = null;
         if (param0) {
-          sg.b(true);
+          sg.releaseStatics(true);
           field_fb = null;
           return;
         }

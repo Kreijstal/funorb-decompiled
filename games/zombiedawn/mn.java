@@ -109,7 +109,7 @@ final class mn extends IntrusiveNode {
         if (var2_int == 0) {
           if (null != this.field_r &&
             0 == this.field_k) {
-            this.field_r.f(0, 1, 0);
+            this.field_r.adjustColourChannels(0, 1, 0);
           }
           if (this.field_h - 50 < this.field_o) {
             return false;
@@ -124,7 +124,7 @@ final class mn extends IntrusiveNode {
           if (var2_int == 2) {
             if (null != this.field_r &&
               this.field_k == 0) {
-              this.field_r.f(0, -1, 0);
+              this.field_r.adjustColourChannels(0, -1, 0);
             }
             if (this.field_n != null) {
               var3 = this.field_n.c((byte) 34);

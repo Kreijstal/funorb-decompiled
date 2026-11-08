@@ -16,13 +16,13 @@ final class sm {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 32564) {
-            sm.a(true);
+            sm.releaseStatics(true);
           }
           if (!param1) {
-            stackIn_6_0 = re.field_g.b(param2);
+            stackIn_6_0 = re.field_g.textWidth(param2);
             return stackIn_6_0;
           }
-          stackIn_4_0 = FunOrbApplet.field_m.b(param2);
+          stackIn_4_0 = FunOrbApplet.field_m.textWidth(param2);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -42,7 +42,7 @@ final class sm {
         throw new IllegalStateException();
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         if (!param0) {
           String var2 = (String) null;
           sm.a(22, false, (String) null);

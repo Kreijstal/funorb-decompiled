@@ -26,7 +26,7 @@ final class gf {
             return false;
           }
           var2_int = 26 % ((-18 - param1) / 33);
-          var3 = pd.a(-22826);
+          var3 = pd.monotonicTimeMillis(-22826);
           if (jh.field_h != 0 &&
             l.field_e < 0) {
             var5_ref_bg = (bg) (ui.field_f.b((byte) 26));
@@ -94,7 +94,7 @@ final class gf {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         if (!param0) {
           String var2 = (String) null;
           gf.a((Js5Archive) null, (String) null, -54, (String) null);

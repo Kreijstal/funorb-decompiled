@@ -12,7 +12,7 @@ final class jg {
     private int[] field_d;
     int field_b;
 
-    private final int e(int param0) {
+    private final int readNextMessage(int param0) {
         int var2;
         int var3;
         int var4;
@@ -26,7 +26,7 @@ final class jg {
         }
         if (var2 != 240 &&
           var2 != 247) {
-          return this.a(param0, var2);
+          return this.decodeMessagePayload(param0, var2);
         }
         var3 = this.field_g.readVarInt(true);
         if (var2 == 247 &&
@@ -38,14 +38,14 @@ final class jg {
             !(var4 > 252) || var4 == 254) {
             this.field_g.position = this.field_g.position + 1;
             this.field_d[param0] = var4;
-            return this.a(param0, var4);
+            return this.decodeMessagePayload(param0, var4);
           }
         }
         this.field_g.position = this.field_g.position + var3;
         return 0;
     }
 
-    final int b() {
+    final int nextTrack() {
         int var4 = 0;
         int var1;
         int var2;
@@ -63,11 +63,11 @@ final class jg {
         return var2;
     }
 
-    final void c() {
+    final void markTrackDone() {
         this.field_g.position = -1;
     }
 
-    final void e() {
+    final void release() {
         this.field_g.payload = null;
         this.field_a = null;
         this.field_i = null;
@@ -80,7 +80,7 @@ final class jg {
         this.field_f[param0] = this.field_f[param0] + var2;
     }
 
-    final void a(long param0) {
+    final void reset(long param0) {
         int var4 = 0;
         this.field_h = param0;
         int var3 = this.field_i.length;
@@ -93,23 +93,23 @@ final class jg {
         }
     }
 
-    final int d() {
+    final int trackCount() {
         return this.field_i.length;
     }
 
-    final void b(int param0) {
+    final void saveTrackPosition(int param0) {
         this.field_i[param0] = this.field_g.position;
     }
 
-    final void f(int param0) {
+    final void seekTrack(int param0) {
         this.field_g.position = this.field_i[param0];
     }
 
-    final boolean a() {
+    final boolean isReady() {
         return this.field_g.payload != null;
     }
 
-    private final int a(int param0, int param1) {
+    private final int decodeMessagePayload(int param0, int param1) {
         int var5 = 0;
         int var6 = 0;
         int var3 = 0;
@@ -146,16 +146,16 @@ final class jg {
         return var4Lifetime1;
     }
 
-    final long a(int param0) {
+    final long tickTime(int param0) {
         return this.field_h + (long)param0 * (long)this.field_e;
     }
 
-    final int d(int param0) {
-        int var2 = this.e(param0);
+    final int readMessage(int param0) {
+        int var2 = this.readNextMessage(param0);
         return var2;
     }
 
-    final void a(byte[] param0) {
+    final void parse(byte[] param0) {
         int var4 = 0;
         int var5 = 0;
         int var3Lifetime1;
@@ -187,7 +187,7 @@ final class jg {
         this.field_d = new int[var2];
     }
 
-    final boolean f() {
+    final boolean isDone() {
         int var2 = 0;
         int var1 = this.field_i.length;
         for (var2 = 0; var2 < var1; var2++) {
@@ -198,7 +198,7 @@ final class jg {
         return true;
     }
 
-    public static void g() {
+    public static void releaseStatics() {
         field_c = null;
     }
 
@@ -208,7 +208,7 @@ final class jg {
 
     jg(byte[] param0) {
         this.field_g = new PacketBuffer((byte[]) null);
-        this.a(param0);
+        this.parse(param0);
     }
 
     static {

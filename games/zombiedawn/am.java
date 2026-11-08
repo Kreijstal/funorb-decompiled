@@ -148,7 +148,7 @@ final class am extends PacketBuffer {
         super(param0);
     }
 
-    public static void j(int param0) {
+    public static void releaseStatics(int param0) {
         int var1 = -108 % ((-29 - param0) / 56);
         field_m = null;
     }

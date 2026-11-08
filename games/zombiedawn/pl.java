@@ -115,11 +115,11 @@ final class pl extends al {
           Rasterizer.clear();
           this.a(0, 0, param1 ^ 260);
           if (param0 >= 0) {
-            Rasterizer.h(3, 3, 0, 0, 640, 341);
+            Rasterizer.blurRectangle(3, 3, 0, 0, 640, 341);
             this.a(0, 0, 0, param0);
-            cn.field_f.b(125);
+            cn.field_f.makeRasterTarget(125);
           } else {
-            cn.field_f.b(125);
+            cn.field_f.makeRasterTarget(125);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -139,19 +139,19 @@ final class pl extends al {
         try {
           if (b.field_q == param2) {
             bd.field_i[qd.field_e][param2].b(param3 + sf.field_d[param2], param1 + gj.field_n[param2], 248, 16776960);
-            qn.field_g.b(-10 + (sf.field_d[param2] + param3), param1 + (-10 + gj.field_n[param2]), sn.field_f[rk.field_a]);
+            qn.field_g.drawAdditive(-10 + (sf.field_d[param2] + param3), param1 + (-10 + gj.field_n[param2]), sn.field_f[rk.field_a]);
           } else {
             if (param4) {
               jo.field_Tb[qd.field_e][param2].e(param3 + sf.field_d[param2], gj.field_n[param2] + param1, 100);
             } else {
-              bd.field_i[qd.field_e][param2].b(sf.field_d[param2] + param3, gj.field_n[param2] + param1);
+              bd.field_i[qd.field_e][param2].drawTransparent(sf.field_d[param2] + param3, gj.field_n[param2] + param1);
             }
           }
           if (!param4 &&
             n.field_k[param2] != 0) {
             stackIn_14_0 = (b.field_q == param2) ? 2 : 0;
             var6_int = stackIn_14_0;
-            sg.field_jb.b(cj.field_a[qd.field_e][param2], te.field_T[param2] + param3, SecondaryNodeDequeIterator.field_b[param2] + param1, var6_int, -1, n.field_k[param2]);
+            sg.field_jb.drawCenteredAlpha(cj.field_a[qd.field_e][param2], te.field_T[param2] + param3, SecondaryNodeDequeIterator.field_b[param2] + param1, var6_int, -1, n.field_k[param2]);
           }
           if (b.field_q == param2 &&
             !this.field_b.field_j) {
@@ -160,7 +160,7 @@ final class pl extends al {
             }
             if (cj.field_c[param2] != -1 &&
               this.b(param2 + 3, -1, 16777215)) {
-              af.field_d.b(cj.field_c[param2], param1 + no.field_G[param2]);
+              af.field_d.drawTransparent(cj.field_c[param2], param1 + no.field_G[param2]);
             }
           }
           if (param0 <= 68) {
@@ -569,9 +569,9 @@ final class pl extends al {
               stackIn_15_0 = 0;
             }
             var4 = stackIn_15_0;
-            i.field_T.c(vh.field_b, id.field_M + 80, var3, var4);
+            i.field_T.drawWithVerticalAlphaGradient(vh.field_b, id.field_M + 80, var3, var4);
           }
-          hk.field_H.b(vh.field_b + 0, 80 + id.field_M);
+          hk.field_H.drawTransparent(vh.field_b + 0, 80 + id.field_M);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -617,7 +617,7 @@ final class pl extends al {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
         try {
-          dc.field_a[qd.field_e].b(param1 - param2, 5 + param0);
+          dc.field_a[qd.field_e].drawTransparent(param1 - param2, 5 + param0);
           stackIn_3_0 = this;
           stackIn_3_1 = 70;
           stackIn_3_2 = param0;
@@ -735,19 +735,19 @@ final class pl extends al {
           var9 = 16777215;
           i.field_T.drawWithOffsets(param1, param2);
           var10 = 1;
-          Rasterizer.a(param1 + qo.field_s, 35 + param2, bm.field_c, 280, 0, 128);
+          Rasterizer.fillRectangleBlended(param1 + qo.field_s, 35 + param2, bm.field_c, 280, 0, 128);
           if (nc.field_k.field_r >= bm.field_c) {
-            nc.field_k.b(param1 + 195, 30 + param2);
+            nc.field_k.drawTransparent(param1 + 195, 30 + param2);
           } else {
             Rasterizer.setClip(0, 0, 320 + param1, nh.field_P);
-            nc.field_k.b(qo.field_s + param1, 30 + param2);
+            nc.field_k.drawTransparent(qo.field_s + param1, 30 + param2);
             Rasterizer.setClip(320 + param1, 0, bd.field_e, nh.field_P);
-            nc.field_k.b(param1 - (-j.field_d + nc.field_k.field_r), 30 + param2);
+            nc.field_k.drawTransparent(param1 - (-j.field_d + nc.field_k.field_r), 30 + param2);
             Rasterizer.resetClip();
           }
-          Rasterizer.g(param1 + wl.field_b, param2 + 47, 23, 23, 3, var5_int);
+          Rasterizer.fillRoundedRectangle(param1 + wl.field_b, param2 + 47, 23, 23, 3, var5_int);
           if (hm.field_J == -2) {
-            Rasterizer.e(wl.field_b + param1, 47 + param2, 23, 23, 3, 16764108);
+            Rasterizer.drawRoundedRectangle(wl.field_b + param1, 47 + param2, 23, 23, 3, 16764108);
           }
           bj.field_q.drawStringCentered("X", 11 + (param1 + wl.field_b), param2 + 64, var6, 65793);
           if (9 == param3) {
@@ -760,7 +760,7 @@ final class pl extends al {
               stackIn_22_3 = 0;
             }
             ((tj) (Object) stackIn_21_0).drawStringCentered(stackIn_21_1, stackIn_21_2 - stackIn_22_3, 85 + param2, 2, 65793);
-            bj.field_q.a(jk.field_h, param1 + 210, 118 + param2, -30 + nc.field_k.field_r, 120, 16777215, 65793, 1, 1, 20);
+            bj.field_q.drawParagraph(jk.field_h, param1 + 210, 118 + param2, -30 + nc.field_k.field_r, 120, 16777215, 65793, 1, 1, 20);
             return;
           }
           stackIn_27_0 = sg.field_jb;
@@ -807,8 +807,8 @@ final class pl extends al {
               var16Lifetime1 = var9;
             }
             if (var13 != 0) {
-              Rasterizer.c(5 + qo.field_s + param1, param2 + 118 - 25 + var12 * 29, bm.field_c - 10, 20, 0, 26112);
-              Rasterizer.c(5 + qo.field_s + param1, 29 * var12 + (param2 + 113), -10 + bm.field_c, 20, 26112, 0);
+              Rasterizer.fillVerticalGradientAdditive(5 + qo.field_s + param1, param2 + 118 - 25 + var12 * 29, bm.field_c - 10, 20, 0, 26112);
+              Rasterizer.fillVerticalGradientAdditive(5 + qo.field_s + param1, 29 * var12 + (param2 + 113), -10 + bm.field_c, 20, 26112, 0);
             }
             stackIn_65_0 = (var10 != 0) ? 0 : 1;
             var10 = stackIn_65_0;
@@ -847,8 +847,8 @@ final class pl extends al {
             rg.field_F = IterableNodeHashTable.field_b;
             this.f(-1, -257);
             i.field_T.setAsRenderTarget();
-            Rasterizer.h(3, 3, 0, 0, 640, 341);
-            cn.field_f.b(-128);
+            Rasterizer.blurRectangle(3, 3, 0, 0, 640, 341);
+            cn.field_f.makeRasterTarget(-128);
             ce.field_p = 0;
           }
           if (rg.field_F != -1) {
@@ -932,7 +932,7 @@ final class pl extends al {
             ce.field_p = 1;
             this.field_b.a(this.field_q.field_j, (byte) -114, this.b(true, ha.field_b, ei.field_K), 3);
             if (param1 != 9) {
-              stackIn_7_0 = sg.field_jb.b(gn.field_c[qd.field_e][param1]) + 80;
+              stackIn_7_0 = sg.field_jb.textWidth(gn.field_c[qd.field_e][param1]) + 80;
             } else {
               stackIn_7_0 = 0;
             }

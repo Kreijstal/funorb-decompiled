@@ -119,7 +119,7 @@ final class va {
               }
               if (1 == var3 ||
                 ZombieDawn.field_J != 0) {
-                lj.a(var6, var5, param1, var4, 9);
+                lj.decompressInto(var6, var5, param1, var4, 9);
               }
               stackIn_34_0 = var6;
               return stackIn_34_0;
@@ -354,7 +354,7 @@ final class va {
           }
           if (var3 == 0 &&
             2 == pg.field_p) {
-            var4 = -ge.field_f + pd.a(-22826);
+            var4 = -ge.field_f + pd.monotonicTimeMillis(-22826);
             var6 = (int)((10999L - var4) / 1000L);
             if (var6 <= 0) {
               ti.a(5, 87, true);

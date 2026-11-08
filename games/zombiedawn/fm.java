@@ -114,7 +114,7 @@ final class fm extends an {
         super.b(param0, -73, param2, param3);
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_H = null;
         field_G = null;
         field_I = null;
@@ -147,14 +147,14 @@ final class fm extends an {
           var2_int = 0;
           var3 = param0.length();
           while (var2_int < var3) {
-            if (vi.a(31153, param0.charAt(var2_int))) {
+            if (vi.isNameSeparator(31153, param0.charAt(var2_int))) {
               var2_int++;
               continue;
             }
             break;
           }
           while (var2_int < var3) {
-            if (vi.a(31153, param0.charAt(-1 + var3))) {
+            if (vi.isNameSeparator(31153, param0.charAt(-1 + var3))) {
               var3--;
               continue;
             }

@@ -267,7 +267,7 @@ final class sl {
         jc.field_n = dl.a(0, var5Lifetime1 * var2, var2 * var4Lifetime1);
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_d = null;
         field_a = null;
         field_b = null;

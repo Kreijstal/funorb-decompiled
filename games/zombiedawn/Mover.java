@@ -796,7 +796,7 @@ abstract class Mover extends WorldObject {
         return tk.field_e[var4];
     }
 
-    public static void i(int param0) {
+    public static void releaseStatics(int param0) {
         field_P = null;
         field_H = null;
         if (param0 != 0) {
@@ -806,7 +806,7 @@ abstract class Mover extends WorldObject {
 
     final static void a(int param0, byte param1, int param2, int param3, int param4) {
         hk.i(1584);
-        Rasterizer.c(param4, param0, param2, param3);
+        Rasterizer.intersectClip(param4, param0, param2, param3);
         if (param1 != 99) {
           field_P = (int[]) null;
         }
@@ -822,7 +822,7 @@ abstract class Mover extends WorldObject {
     /* Full JVM integer arguments; original narrow signature preserved. */
     final static void $cfr$intArgs$a$3aedf8649552(int param0, int param1, int param2, int param3, int param4) {
         hk.i(1584);
-        Rasterizer.c(param4, param0, param2, param3);
+        Rasterizer.intersectClip(param4, param0, param2, param3);
         if (param1 != 99) {
           field_P = (int[]) null;
         }

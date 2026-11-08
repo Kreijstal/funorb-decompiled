@@ -103,7 +103,7 @@ final class s extends IntrusiveNode {
           }
           if (ac.field_m == 1428) {
             if (qj.field_f != null &&
-              !qj.field_f.l()) {
+              !qj.field_f.isSamplePositionOutOfRange()) {
               pc.a((byte) 13, qj.field_f);
             }
             ch.b(73);
@@ -196,7 +196,7 @@ final class s extends IntrusiveNode {
         }
     }
 
-    public static void c(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_j = null;
         if (param0 <= -111) {
           return;

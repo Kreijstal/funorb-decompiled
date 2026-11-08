@@ -29,7 +29,7 @@ final class uf extends IntrusiveNode {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 > -17) {
           field_n = (int[]) null;
           field_n = null;
@@ -42,7 +42,7 @@ final class uf extends IntrusiveNode {
 
     final static int a(int param0, int param1) {
         if (param1 != 12832) {
-          uf.a(-45);
+          uf.releaseStatics(-45);
         }
         if ((long)param0 < 65536L) {
           if (256L > (long)param0) {

@@ -391,13 +391,13 @@ final class GameWorld {
           }
           var4 = Js5Archive.field_i;
           var5 = param1;
-          var4[var5 >> 5] = GameWorld.a(var4[var5 >> 5], 1 << eg.a(31, var5));
+          var4[var5 >> 5] = GameWorld.intOr(var4[var5 >> 5], 1 << eg.a(31, var5));
           var4Lifetime1 = kg.field_g;
           var5Lifetime1 = param1;
           if (param2 != -23) {
             this.field_q = -95;
           }
-          var4Lifetime1[var5Lifetime1 >> 5] = GameWorld.a(var4Lifetime1[var5Lifetime1 >> 5], 1 << eg.a(31, var5Lifetime1));
+          var4Lifetime1[var5Lifetime1 >> 5] = GameWorld.intOr(var4Lifetime1[var5Lifetime1 >> 5], 1 << eg.a(31, var5Lifetime1));
           this.field_ob.addFirst(0, new da(param1));
           if (!this.field_F) {
             Point.field_j.addFirst(0, new bo(param1, param0, this.field_c, this.field_C, this.field_eb, this.field_Z));
@@ -890,7 +890,7 @@ final class GameWorld {
             stackIn_14_0 = (5 * var4 + var3 * 3) % 9;
             if (var6 == 0) {
               if (stackIn_14_0 == 0) {
-                Rasterizer.e(var3, var4, var2_int + var3 - 3, -7 + var4, 6715272);
+                Rasterizer.drawLine(var3, var4, var2_int + var3 - 3, -7 + var4, 6715272);
               }
               var3 += 939;
               if (var3 <= bd.field_e) {
@@ -917,7 +917,7 @@ final class GameWorld {
             stackIn_27_0 = (2 * var3 + 4 * var4Lifetime1) % 7;
             if (var6 == 0) {
               if (stackIn_27_0 == 0) {
-                Rasterizer.e(var3, var4Lifetime1, var2_int + (var3 - 3), var4Lifetime1 - 5, 3364192);
+                Rasterizer.drawLine(var3, var4Lifetime1, var2_int + (var3 - 3), var4Lifetime1 - 5, 3364192);
               }
               var3 += 547;
               if (bd.field_e >= var3) {
@@ -935,7 +935,7 @@ final class GameWorld {
               return;
             }
             if ((4 * var5 + var3 * 2) % 7 == 0) {
-              Rasterizer.e(var3, var5, var3 - 4 + var2_int, -7 + var5, 5461344);
+              Rasterizer.drawLine(var3, var5, var3 - 4 + var2_int, -7 + var5, 5461344);
             }
             var3 += 375;
             if (var3 <= bd.field_e) {
@@ -1706,7 +1706,7 @@ final class GameWorld {
           }
           if (0 < this.field_fb) {
             var2_int = this.field_fb * (3 - Math.abs(-3 + this.field_h)) / 3;
-            Rasterizer.a(0, 0, bd.field_e, nh.field_P, 13421772, var2_int);
+            Rasterizer.fillRectangleBlended(0, 0, bd.field_e, nh.field_P, 13421772, var2_int);
             this.field_fb = this.field_fb - 14;
             if (var6 == 0) {
               return;
@@ -1730,7 +1730,7 @@ final class GameWorld {
             var5 = tp.$cfr$intArgs$b$3010b50b2764(40, 97);
             if (null != var5) {
               var5.h(var4 * ge.field_c >> 8);
-              var5.i(300 + var4 * 150);
+              var5.setPosition(300 + var4 * 150);
             }
             if (var6 == 0) {
               return;
@@ -2112,7 +2112,7 @@ final class GameWorld {
             } else {
               stackIn_28_1 = 4;
             }
-            ((Sprite) (Object) stackIn_27_0[stackIn_28_1]).b(var2_intLifetime1 - 44, -44 + var3);
+            ((Sprite) (Object) stackIn_27_0[stackIn_28_1]).drawTransparent(var2_intLifetime1 - 44, -44 + var3);
           }
           var2 = this.field_lb.b((byte) 26);
           while (null != var2) {
@@ -2249,7 +2249,7 @@ final class GameWorld {
             stackIn_108_1 = -6;
           }
           if (stackIn_108_0 == stackIn_108_1) {
-            hn.field_p.b(-this.camera.x + TileMap.field_q - 40, -this.camera.y + (qb.field_b - 40));
+            hn.field_p.drawTransparent(-this.camera.x + TileMap.field_q - 40, -this.camera.y + (qb.field_b - 40));
           }
           this.navigation.a(this.camera, 2, true, false);
           if (this.navigation.field_A.field_a == 6 &&
@@ -2332,7 +2332,7 @@ final class GameWorld {
             (decompiledFrameCompleted0)) {
             if (this.field_p &&
               !this.field_w) {
-              lb.field_eb[8].b(-12 + ha.field_b, ei.field_K - 12);
+              lb.field_eb[8].drawTransparent(-12 + ha.field_b, ei.field_K - 12);
             }
             if (this.field_p &&
               this.field_w) {
@@ -2356,8 +2356,8 @@ final class GameWorld {
                 var5_intLifetime1 = this.field_j;
               }
               Rasterizer.drawRectOutline(var4_int, var5_intLifetime1, var6_int, var7_int, 16777215);
-              Rasterizer.b(var4_int + 1, 1 + var5_intLifetime1, var6_int - 2, -2 + var7_int, 10066431, 32);
-              Rasterizer.a(2 + var4_int, 2 + var5_intLifetime1, -4 + var6_int, -4 + var7_int, 3355647, 32);
+              Rasterizer.drawRectangleOutlineAlpha(var4_int + 1, 1 + var5_intLifetime1, var6_int - 2, -2 + var7_int, 10066431, 32);
+              Rasterizer.fillRectangleBlended(2 + var4_int, 2 + var5_intLifetime1, -4 + var6_int, -4 + var7_int, 3355647, 32);
             }
             stackIn_180_0 = -1;
             stackIn_180_1 = ~this.field_ib;
@@ -2370,7 +2370,7 @@ final class GameWorld {
             this.d(param0 - 9934);
           }
           if (ql.field_j >= 0.0f) {
-            oj.field_f.b(this.camera.worldToScreenX(ek.field_I, (byte) -124), this.camera.worldToScreenY(-(int)ql.field_j + el.field_g, param0 ^ 9844));
+            oj.field_f.drawTransparent(this.camera.worldToScreenX(ek.field_I, (byte) -124), this.camera.worldToScreenY(-(int)ql.field_j + el.field_g, param0 ^ 9844));
           }
           var2 = this.field_i.b((byte) 26);
           do {
@@ -2416,8 +2416,8 @@ final class GameWorld {
             if (this.field_h == -1) {
               var5.drawStringCentered(kb.field_g[this.field_q], bd.field_d, 280, 16777215, 0);
             }
-            this.field_V.b(-(this.field_V.field_w / 2) + bd.field_d, nh.field_G - this.field_V.field_t);
-            so.a(this.field_t, bd.field_d + (-(this.field_V.field_w / 2) - 6), -6 + (-this.field_V.field_t + nh.field_G));
+            this.field_V.drawTransparent(-(this.field_V.field_w / 2) + bd.field_d, nh.field_G - this.field_V.field_t);
+            so.drawTransparent(this.field_t, bd.field_d + (-(this.field_V.field_w / 2) - 6), -6 + (-this.field_V.field_t + nh.field_G));
             Rasterizer.resetClip();
           }
           var7 = (da) (this.field_ob.b((byte) 26));
@@ -2425,7 +2425,7 @@ final class GameWorld {
             var8_intLifetime1 = 10;
             var9Lifetime1 = 10;
             var10_intLifetime1 = var7.field_k;
-            var11Lifetime1 = var5.b(hk.field_J[var10_intLifetime1]) + 70;
+            var11Lifetime1 = var5.textWidth(hk.field_J[var10_intLifetime1]) + 70;
             var12Lifetime1 = this.field_z;
             if (32 > var12Lifetime1 ||
               303 < var12Lifetime1) {
@@ -2434,14 +2434,14 @@ final class GameWorld {
               }
               var8_intLifetime1 = -310 + var12Lifetime1 * 10;
             }
-            Rasterizer.a(var8_intLifetime1, var9Lifetime1, var11Lifetime1, 40, 6, 0, 160);
-            Rasterizer.e(var8_intLifetime1, var9Lifetime1, var11Lifetime1, 40, 6, 7829367);
-            ed.field_a[var10_intLifetime1].g(var8_intLifetime1 + 9, var9Lifetime1 + 5);
+            Rasterizer.fillRoundedRectangleBlended(var8_intLifetime1, var9Lifetime1, var11Lifetime1, 40, 6, 0, 160);
+            Rasterizer.drawRoundedRectangle(var8_intLifetime1, var9Lifetime1, var11Lifetime1, 40, 6, 7829367);
+            ed.field_a[var10_intLifetime1].drawQuarterSize(var8_intLifetime1 + 9, var9Lifetime1 + 5);
             var5.drawString(hk.field_J[var10_intLifetime1], var8_intLifetime1 + 50, var9Lifetime1 + 25, 16777215, 3355443);
           }
           of.a(11690);
           if (al.field_e) {
-            Rasterizer.a(0, 22, 80, 105, 0, 128);
+            Rasterizer.fillRectangleBlended(0, 22, 80, 105, 0, 128);
             var6.drawString(Integer.toString(this.field_c), 5, 40, 16777215, 0);
             var6.drawString(Integer.toString(this.field_C), 5, 60, 16777215, 0);
             var6.drawString(Integer.toString(this.field_eb), 5, 80, 16777215, 0);
@@ -2451,7 +2451,7 @@ final class GameWorld {
           if (jp.field_m ||
             ac.field_r ||
             nk.field_d) {
-            Rasterizer.a(0, 0, 640, 17, 0, 100);
+            Rasterizer.fillRectangleBlended(0, 0, 640, 17, 0, 100);
           }
           if (jp.field_m) {
             pc.field_k.drawString("cam=(" + this.camera.x + ", " + this.camera.y + ") bk=" + ci.field_d + " k=" + kc.field_R + " mouse=(" + ha.field_b + "," + ei.field_K + ") trees=" + ap.field_u + " tree tiles=" + wg.field_n, 5, 13, 16777215, 0);
@@ -2871,7 +2871,7 @@ final class GameWorld {
             k.field_t == 20) {
             kh.a(122, false);
             var9 = kh.a(149, false);
-            var9.h(3 * var9.j() / 2);
+            var9.h(3 * var9.getTargetVolume() / 2);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -3064,7 +3064,7 @@ final class GameWorld {
         }
     }
 
-    static int a(int param0, int param1) {
+    static int intOr(int param0, int param1) {
         int stackIn_1_0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
@@ -3852,16 +3852,16 @@ final class GameWorld {
             var4_ref = gj.field_w[this.field_q][this.field_h];
           }
           var5 = sg.field_jb;
-          this.field_V = new Sprite(var5.b(var4_ref), var5.field_I + var5.field_x);
+          this.field_V = new Sprite(var5.textWidth(var4_ref), var5.field_I + var5.field_x);
           this.field_t = new Sprite(12 + this.field_V.field_w, 12 + this.field_V.field_t);
           this.field_V.setAsRenderTarget();
           this.field_N = 640;
           var5.drawStringCentered(var4_ref, this.field_V.field_w / 2, this.field_V.field_t - var5.field_x, 2, -1);
           this.field_t.setAsRenderTarget();
-          this.field_V.h(6, 6, 16777215);
-          Rasterizer.h(4, 4, 0, 0, Rasterizer.width, Rasterizer.height);
-          this.field_V.h(6, 6, 0);
-          cn.field_f.b(96);
+          this.field_V.drawSilhouette(6, 6, 16777215);
+          Rasterizer.blurRectangle(4, 4, 0, 0, Rasterizer.width, Rasterizer.height);
+          this.field_V.drawSilhouette(6, 6, 0);
+          cn.field_f.makeRasterTarget(96);
           stackIn_117_0 = !param0;
           stackIn_124_1 = (this.field_q == 0) && (this.field_h == 5);
           boolean decompiledFrameRemainder1 = true;
@@ -3880,7 +3880,7 @@ final class GameWorld {
                 stackIn_143_1 = 148;
               }
               var6_ref_fn = jp.$cfr$intArgs$a$c44adeabe1a9(stackIn_142_0, stackIn_143_1);
-              var6_ref_fn.h(2 * var6_ref_fn.j());
+              var6_ref_fn.h(2 * var6_ref_fn.getTargetVolume());
               if (2 == this.field_h ||
                 3 == this.field_h) {
                 jp.$cfr$intArgs$a$c44adeabe1a9(126, 145);
@@ -4288,7 +4288,7 @@ final class GameWorld {
                       var16++;
                     }
                     var16Lifetime1 = var12Lifetime1Lifetime1;
-                    this.navigation.field_A.field_h[var6Lifetime1][var7Lifetime1] = GameWorld.a(eg.a(-128, var8Lifetime1), var16Lifetime1);
+                    this.navigation.field_A.field_h[var6Lifetime1][var7Lifetime1] = GameWorld.intOr(eg.a(-128, var8Lifetime1), var16Lifetime1);
                   }
                   var7Lifetime1++;
                   continue;

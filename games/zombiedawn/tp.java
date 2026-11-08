@@ -160,13 +160,13 @@ final class tp extends PcmStream {
           }
           if (this.field_x) {
             if (this.field_A > 0 &&
-              !this.field_v.c((byte) -34)) {
+              !this.field_v.isReady((byte) -34)) {
               this.field_l = null;
               this.field_A = -this.field_A;
               this.field_x = false;
             } else {
               if (this.field_A < 0 &&
-                !this.field_t.c((byte) -34)) {
+                !this.field_t.isReady((byte) -34)) {
                 this.field_r = null;
                 this.field_A = -this.field_A;
                 this.field_x = false;
@@ -217,8 +217,8 @@ final class tp extends PcmStream {
               if (var5 != 256) {
                 if (this.field_z != null &&
                   var6 <= this.field_z.length) {
-                  gp.a(this.field_z, 0, var6);
-                  gp.a(this.field_q, 0, var6);
+                  gp.clearInts(this.field_z, 0, var6);
+                  gp.clearInts(this.field_q, 0, var6);
                 } else {
                   this.field_q = new int[var6];
                   this.field_z = new int[var6];
@@ -247,7 +247,7 @@ final class tp extends PcmStream {
             }
             if (null != this.field_z &&
               var6 <= this.field_z.length) {
-              gp.a(this.field_z, 0, var6);
+              gp.clearInts(this.field_z, 0, var6);
             } else {
               this.field_z = new int[var6];
               this.field_q = new int[var6];
@@ -288,9 +288,9 @@ final class tp extends PcmStream {
           return;
         }
         try {
-          mb.a(param1.a("", -121, "headers.packvorbis"));
+          mb.decodeSetup(param1.a("", -121, "headers.packvorbis"));
           var2 = mb.a(param1, "jagex logo2.packvorbis", "");
-          var2.b();
+          var2.decodeAllToPcm();
         } catch (RuntimeException runtimeException) {
           throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "tp.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -345,14 +345,14 @@ final class tp extends PcmStream {
         }
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 0) {
           return;
         }
         field_m = null;
     }
 
-    final synchronized int a() {
+    final synchronized int activity() {
         return 2;
     }
 
@@ -376,15 +376,15 @@ final class tp extends PcmStream {
           si.field_Ub[6] = new Sprite(200, 50);
           vh.field_e[6] = new Sprite(200, 50);
           vh.field_e[0].setAsRenderTarget();
-          si.field_Ub[0].h(5, 5, 16777215);
+          si.field_Ub[0].drawSilhouette(5, 5, 16777215);
           oc.a((byte) 70);
-          si.field_Ub[0].h(5, 5, 0);
+          si.field_Ub[0].drawSilhouette(5, 5, 0);
           vh.field_e[1].setAsRenderTarget();
-          si.field_Ub[1].h(-35, 5, 16777215);
+          si.field_Ub[1].drawSilhouette(-35, 5, 16777215);
           so.a(16777215);
           oc.a((byte) -115);
-          si.field_Ub[1].h(-35, 5, 0);
-          cn.field_f.b(89);
+          si.field_Ub[1].drawSilhouette(-35, 5, 0);
+          cn.field_f.makeRasterTarget(89);
         } catch (RuntimeException runtimeException) {
           throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "tp.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -475,13 +475,13 @@ final class tp extends PcmStream {
         }
         if (this.field_x) {
           if (0 < this.field_A &&
-            !this.field_v.c((byte) -34)) {
+            !this.field_v.isReady((byte) -34)) {
             this.field_l = null;
             this.field_x = false;
             this.field_A = -this.field_A;
           } else {
             if (this.field_A < 0 &&
-              !this.field_t.c((byte) -34)) {
+              !this.field_t.isReady((byte) -34)) {
               this.field_x = false;
               this.field_A = -this.field_A;
               this.field_r = null;

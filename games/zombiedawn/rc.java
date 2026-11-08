@@ -89,7 +89,7 @@ final class rc extends IntrusiveNode {
             qc.a(1);
           }
           if (param0 >= -67) {
-            rc.a(-5);
+            rc.releaseStatics(-5);
           }
           var54 = new int[param3.field_f];
           var49 = var54;
@@ -233,7 +233,7 @@ final class rc extends IntrusiveNode {
           var3 = null;
           var4 = null;
           if (param0 != -1) {
-            rc.a(48);
+            rc.releaseStatics(48);
           }
           if (null != nj.field_X &&
             !nj.field_X.equals(param1.getParameter("settings"))) {
@@ -274,7 +274,7 @@ final class rc extends IntrusiveNode {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_r = null;
         field_u = null;
         if (param0 != 0) {

@@ -25,7 +25,7 @@ abstract class qg {
 
     abstract java.net.Socket a(boolean param0) throws IOException;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_g = null;
         field_a = null;
         field_h = null;
@@ -72,7 +72,7 @@ abstract class qg {
               if (param2.length() == 0) {
                 var5Lifetime6 = var7 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
               } else {
-                var5Lifetime6 = var7 + "; Expires=" + jb.a(param0 ^ 2147483482, 94608000000L + pd.a(-22826)) + "; Max-Age=" + 94608000L;
+                var5Lifetime6 = var7 + "; Expires=" + jb.a(param0 ^ 2147483482, 94608000000L + pd.monotonicTimeMillis(-22826)) + "; Max-Age=" + 94608000L;
               }
               qe.a("document.cookie=\"" + var5Lifetime6 + "\"", param1, (byte) 63);
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
@@ -106,7 +106,7 @@ abstract class qg {
         }
     }
 
-    final java.net.Socket b(int param0) throws IOException {
+    final java.net.Socket connectDirect(int param0) throws IOException {
         if (param0 != 16076) {
           return (java.net.Socket) null;
         }

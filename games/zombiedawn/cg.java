@@ -49,7 +49,7 @@ final class cg {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_b = null;
         field_h = null;
         field_d = null;

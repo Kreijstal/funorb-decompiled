@@ -33,7 +33,7 @@ final class oe {
         ll.a(-67);
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         field_f = null;
         field_a = null;
         if (param0 != 15) {

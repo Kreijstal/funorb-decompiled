@@ -6,7 +6,7 @@ class gl extends an {
     static int field_F;
     static tk field_E;
 
-    final boolean a(byte param0, UiWidget param1) {
+    final boolean focusNext(byte param0, UiWidget param1) {
         RuntimeException var3 = null;
         boolean stackIn_4_0 = false;
         RuntimeException stackIn_8_0 = null;
@@ -15,7 +15,7 @@ class gl extends an {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 >= 67) {
-            stackIn_4_0 = this.field_G.a((byte) 99, param1);
+            stackIn_4_0 = this.field_G.focusNext((byte) 99, param1);
             return stackIn_4_0;
           }
           return true;

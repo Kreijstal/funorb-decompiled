@@ -16,7 +16,7 @@ final class nk {
 
     final static void a(Js5Archive param0, int param1, Js5Archive param2, Js5Archive param3, boolean param4) {
         try {
-          gl.field_E = co.a("", param1 - 118);
+          gl.field_E = co.createNameCheckRequest("", param1 - 118);
           gl.field_E.a(false, -54);
           ll.a(param2, param3, param0, -19041);
           if (param1 != -1) {
@@ -31,7 +31,7 @@ final class nk {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != -11486) {
           return;
         }
@@ -41,7 +41,7 @@ final class nk {
 
     final static boolean b(int param0) {
         lf.field_n = true;
-        Path.field_e = pd.a(-22826) + (long)param0;
+        Path.field_e = pd.monotonicTimeMillis(-22826) + (long)param0;
         return 11 == fl.field_a ? true : false;
     }
 

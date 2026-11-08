@@ -76,8 +76,8 @@ final class ij extends pa {
         }
     }
 
-    final void b(boolean param0) {
-        super.b(param0);
+    final void refreshChildLayout(boolean param0) {
+        super.refreshChildLayout(param0);
         this.field_z.a(29, 0, 0, this.field_i, this.field_n);
         this.field_G = this.field_j;
         this.field_Q = this.field_k;

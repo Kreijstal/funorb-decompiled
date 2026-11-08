@@ -49,32 +49,32 @@ final class np extends an {
           if (tm.field_m == null) {
             tm.field_m = new Sprite(var9, var10);
             ki.a((byte) -94, tm.field_m);
-            var15.a(112, 144, var15.field_r << 4, var15.field_q << 4, -this.field_F << 10, 4096);
+            var15.drawRotatedAboutPivot(112, 144, var15.field_r << 4, var15.field_q << 4, -this.field_F << 10, 4096);
             pa.a(-21189);
-            tm.field_m.b(-var15.field_r + var5, -var15.field_q + var6, 256);
+            tm.field_m.drawAdditive(-var15.field_r + var5, -var15.field_q + var6, 256);
             return;
           }
           if (tm.field_m.field_w < var9) {
             tm.field_m = new Sprite(var9, var10);
             ki.a((byte) -94, tm.field_m);
-            var15.a(112, 144, var15.field_r << 4, var15.field_q << 4, -this.field_F << 10, 4096);
+            var15.drawRotatedAboutPivot(112, 144, var15.field_r << 4, var15.field_q << 4, -this.field_F << 10, 4096);
             pa.a(-21189);
-            tm.field_m.b(-var15.field_r + var5, -var15.field_q + var6, 256);
+            tm.field_m.drawAdditive(-var15.field_r + var5, -var15.field_q + var6, 256);
             return;
           }
           if (var10 <= tm.field_m.field_t) {
             ki.a((byte) -86, tm.field_m);
             Rasterizer.clear();
-            var15.a(112, 144, var15.field_r << 4, var15.field_q << 4, -this.field_F << 10, 4096);
+            var15.drawRotatedAboutPivot(112, 144, var15.field_r << 4, var15.field_q << 4, -this.field_F << 10, 4096);
             pa.a(-21189);
-            tm.field_m.b(-var15.field_r + var5, -var15.field_q + var6, 256);
+            tm.field_m.drawAdditive(-var15.field_r + var5, -var15.field_q + var6, 256);
             return;
           }
           tm.field_m = new Sprite(var9, var10);
           ki.a((byte) -94, tm.field_m);
-          var15.a(112, 144, var15.field_r << 4, var15.field_q << 4, -this.field_F << 10, 4096);
+          var15.drawRotatedAboutPivot(112, 144, var15.field_r << 4, var15.field_q << 4, -this.field_F << 10, 4096);
           pa.a(-21189);
-          tm.field_m.b(-var15.field_r + var5, -var15.field_q + var6, 256);
+          tm.field_m.drawAdditive(-var15.field_r + var5, -var15.field_q + var6, 256);
           return;
         }
         if (gj.field_v == var8) {
@@ -84,47 +84,47 @@ final class np extends an {
           if (tm.field_m == null) {
             tm.field_m = new Sprite(var9Lifetime1, var10Lifetime1);
             ki.a((byte) -94, tm.field_m);
-            var16.a(112, 144, var16.field_r << 4, var16.field_q << 4, -this.field_F << 10, 4096);
+            var16.drawRotatedAboutPivot(112, 144, var16.field_r << 4, var16.field_q << 4, -this.field_F << 10, 4096);
             pa.a(-21189);
-            tm.field_m.b(-var16.field_r + var5, -var16.field_q + var6, 256);
+            tm.field_m.drawAdditive(-var16.field_r + var5, -var16.field_q + var6, 256);
             return;
           }
           if (tm.field_m.field_w < var9Lifetime1) {
             tm.field_m = new Sprite(var9Lifetime1, var10Lifetime1);
             ki.a((byte) -94, tm.field_m);
-            var16.a(112, 144, var16.field_r << 4, var16.field_q << 4, -this.field_F << 10, 4096);
+            var16.drawRotatedAboutPivot(112, 144, var16.field_r << 4, var16.field_q << 4, -this.field_F << 10, 4096);
             pa.a(-21189);
-            tm.field_m.b(-var16.field_r + var5, -var16.field_q + var6, 256);
+            tm.field_m.drawAdditive(-var16.field_r + var5, -var16.field_q + var6, 256);
             return;
           }
           if (var10Lifetime1 <= tm.field_m.field_t) {
             ki.a((byte) -86, tm.field_m);
             Rasterizer.clear();
-            var16.a(112, 144, var16.field_r << 4, var16.field_q << 4, -this.field_F << 10, 4096);
+            var16.drawRotatedAboutPivot(112, 144, var16.field_r << 4, var16.field_q << 4, -this.field_F << 10, 4096);
             pa.a(-21189);
-            tm.field_m.b(-var16.field_r + var5, -var16.field_q + var6, 256);
+            tm.field_m.drawAdditive(-var16.field_r + var5, -var16.field_q + var6, 256);
             return;
           }
           tm.field_m = new Sprite(var9Lifetime1, var10Lifetime1);
           ki.a((byte) -94, tm.field_m);
-          var16.a(112, 144, var16.field_r << 4, var16.field_q << 4, -this.field_F << 10, 4096);
+          var16.drawRotatedAboutPivot(112, 144, var16.field_r << 4, var16.field_q << 4, -this.field_F << 10, 4096);
           pa.a(-21189);
-          tm.field_m.b(-var16.field_r + var5, -var16.field_q + var6, 256);
+          tm.field_m.drawAdditive(-var16.field_r + var5, -var16.field_q + var6, 256);
           return;
         }
         if (var8 == MouseWheelInput.field_b) {
           var14 = Js5Archive.field_k[2];
-          var14.b(-(var14.field_w >> 1) + var5, -(var14.field_t >> 1) + var6, 256);
+          var14.drawAdditive(-(var14.field_w >> 1) + var5, -(var14.field_t >> 1) + var6, 256);
           return;
         }
         if (mc.field_g == var8) {
           var13 = Js5Archive.field_k[1];
-          var13.b(var5 - (var13.field_w >> 1), -(var13.field_t >> 1) + var6, 256);
+          var13.drawAdditive(var5 - (var13.field_w >> 1), -(var13.field_t >> 1) + var6, 256);
           return;
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 1569045130) {
           field_H = (ij) null;
           field_E = null;
@@ -164,7 +164,7 @@ final class np extends an {
         }
     }
 
-    final boolean a(byte param0, UiWidget param1) {
+    final boolean focusNext(byte param0, UiWidget param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;

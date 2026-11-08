@@ -25,7 +25,7 @@ final class lk extends pm {
         return (ln) ((Object) new ab());
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         field_k = null;
         field_j = null;
         if (param0 != 1029) {
@@ -33,7 +33,7 @@ final class lk extends pm {
         }
     }
 
-    final rh a(String param0, int param1) {
+    final rh validateText(String param0, int param1) {
         tk var3 = null;
         RuntimeException var3_ref = null;
         rh stackIn_2_0 = null;
@@ -44,7 +44,7 @@ final class lk extends pm {
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.field_h.a(param0, param1) == MouseWheelInput.field_b) {
+          if (this.field_h.validateText(param0, param1) == MouseWheelInput.field_b) {
             stackIn_2_0 = MouseWheelInput.field_b;
             return stackIn_2_0;
           }
@@ -88,7 +88,7 @@ final class lk extends pm {
         }
     }
 
-    final String a(String param0, byte param1) {
+    final String messageForText(String param0, byte param1) {
         RuntimeException var3 = null;
         String stackIn_4_0 = null;
         String stackIn_8_0 = null;
@@ -100,11 +100,11 @@ final class lk extends pm {
           if (param1 > -94) {
             field_k = (String) null;
           }
-          if (this.field_h.a(param0, 2) == MouseWheelInput.field_b) {
-            stackIn_4_0 = this.field_h.a(param0, (byte) -119);
+          if (this.field_h.validateText(param0, 2) == MouseWheelInput.field_b) {
+            stackIn_4_0 = this.field_h.messageForText(param0, (byte) -119);
             return stackIn_4_0;
           }
-          if (this.a(param0, 2) != MouseWheelInput.field_b) {
+          if (this.validateText(param0, 2) != MouseWheelInput.field_b) {
             return sd.field_c;
           }
           stackIn_8_0 = ng.field_d;

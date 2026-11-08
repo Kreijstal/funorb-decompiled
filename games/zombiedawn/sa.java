@@ -19,7 +19,7 @@ final class sa extends pn {
           rk.field_b.drawStringCentered(this.field_W, param0 + (this.field_i >> 1), 103 + param1, 16777215, -1);
           if (this.field_X != null) {
             Rasterizer.drawHorizontalLine(param0 + 20, -7 + (param1 + 120), 260, 8421504);
-            rk.field_b.a(this.field_X, 20 + param0, 8 + (120 + param1), 260, 100, 16777215, -1, 1, 0, rk.field_b.field_I);
+            rk.field_b.drawParagraph(this.field_X, 20 + param0, 8 + (120 + param1), 260, 100, 16777215, -1, 1, 0, rk.field_b.field_I);
             return;
           }
           return;
@@ -30,7 +30,7 @@ final class sa extends pn {
           return;
         }
         Rasterizer.drawHorizontalLine(param0 + 20, -7 + (param1 + 120), 260, 8421504);
-        rk.field_b.a(this.field_X, 20 + param0, 8 + (120 + param1), 260, 100, 16777215, -1, 1, 0, rk.field_b.field_I);
+        rk.field_b.drawParagraph(this.field_X, 20 + param0, 8 + (120 + param1), 260, 100, 16777215, -1, 1, 0, rk.field_b.field_I);
     }
 
     final static int a(CharSequence param0, byte param1, int param2) {
@@ -117,7 +117,7 @@ final class sa extends pn {
         try {
           this.field_X = param1;
           if (this.field_X != null) {
-            var3_int = rk.field_b.b(this.field_X, 260, rk.field_b.field_I);
+            var3_int = rk.field_b.paragraphHeight(this.field_X, 260, rk.field_b.field_I);
             this.a((byte) 94, var3_int + 150, 300);
           }
           this.field_V = new hb(13, 50, 274, 30, 15, 2113632, 4210752);
@@ -130,11 +130,11 @@ final class sa extends pn {
         }
     }
 
-    public static void g(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_bb = null;
         field_Y = null;
         if (param0 != 88) {
-          sa.g((byte) 102);
+          sa.releaseStatics((byte) 102);
           field_Z = null;
           return;
         }

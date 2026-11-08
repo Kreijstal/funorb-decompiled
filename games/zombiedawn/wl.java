@@ -5,9 +5,9 @@ final class wl {
     static int field_b;
     static String[] field_a;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 >= -79) {
-          wl.a((byte) -46);
+          wl.releaseStatics((byte) -46);
           field_a = null;
           return;
         }

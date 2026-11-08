@@ -14,9 +14,9 @@ final class je {
         return (0 != (param0 & 1) ? -param1 : param1) + ((param0 & 2) == 0 ? param3 : -param3);
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 2) {
-          je.a(-82);
+          je.releaseStatics(-82);
           field_b = null;
           return;
         }

@@ -23,7 +23,7 @@ final class kh implements io {
         return var2.field_j;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = null;
         int var1 = -5 % ((-18 - param0) / 41);
     }

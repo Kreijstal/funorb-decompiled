@@ -10,11 +10,11 @@ final class ge {
     static String field_a;
     private static String field_z;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_b = null;
         field_d = null;
         if (param0 != 256) {
-          ge.a(0);
+          ge.releaseStatics(0);
           field_a = null;
           return;
         }

@@ -16,7 +16,7 @@ final class df extends IntrusiveNode {
         return !gl.field_E.a(117) ? true : false;
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != -24231) {
           return;
         }

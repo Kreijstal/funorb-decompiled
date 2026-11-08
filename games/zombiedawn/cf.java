@@ -15,7 +15,7 @@ final class cf extends ki {
         }
     }
 
-    public static void m(int param0) {
+    public static void releaseStatics(int param0) {
         field_eb = null;
         if (param0 != 18072) {
           field_fb = (qf) null;

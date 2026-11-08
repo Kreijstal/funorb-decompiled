@@ -113,8 +113,8 @@ final class om extends w {
           var14 = 65280 & param3;
           for (var15 = 0; var15 < 16; var15++) {
             var16 = var15 * param4 >> 4;
-            var12[var15] = GameWorld.a(eg.a(-16711936, var16 * var13), eg.a(var16 * var14, 16711680)) >>> 8;
-            var12[31 - var15] = GameWorld.a(eg.a(var13 * var16, -16711936), eg.a(var14 * var16, 16711680)) >>> 8;
+            var12[var15] = GameWorld.intOr(eg.a(-16711936, var16 * var13), eg.a(var16 * var14, 16711680)) >>> 8;
+            var12[31 - var15] = GameWorld.intOr(eg.a(var13 * var16, -16711936), eg.a(var14 * var16, 16711680)) >>> 8;
           }
           var15Lifetime1 = var10 - var8_int;
           var16Lifetime1 = -var9 + var11;
@@ -541,7 +541,7 @@ final class om extends w {
           }
         }
         if (this.field_f &&
-          pd.a(-22826) >= this.field_u) {
+          pd.monotonicTimeMillis(-22826) >= this.field_u) {
           var2 = (pj) (this.field_p.a((byte) -113));
           while (var2 != null) {
             if (!var2.field_q) {
@@ -556,7 +556,7 @@ final class om extends w {
             }
             var2 = (pj) (this.field_p.b((byte) -40));
           }
-          this.field_u = 1000L + pd.a(-22826);
+          this.field_u = 1000L + pd.monotonicTimeMillis(-22826);
         }
     }
 

@@ -77,7 +77,7 @@ final class lb extends pn implements hh {
         }
     }
 
-    public static void h(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 > -63) {
           lb.m(9);
         }
@@ -85,7 +85,7 @@ final class lb extends pn implements hh {
         field_eb = null;
     }
 
-    public final void a(int param0, int param1, an param2, int param3, int param4) {
+    public final void onButtonActivated(int param0, int param1, an param2, int param3, int param4) {
         int stackIn_15_0 = 0;
         RuntimeException stackIn_28_0 = null;
         StringBuilder stackIn_28_1 = null;
@@ -196,7 +196,7 @@ final class lb extends pn implements hh {
         try {
           this.field_ib = param0;
           var4 = -49 / ((param1 + 40) / 47);
-          param0.a((byte) 68, (UiWidget) (this));
+          param0.focusNext((byte) 68, (UiWidget) (this));
           var3 = this.o(16);
           stackIn_2_0 = this.field_gb;
           stackIn_3_1 = (var3 != param0);
@@ -254,13 +254,13 @@ final class lb extends pn implements hh {
         try {
           super.a(param0, (byte) 88, param2, param3);
           if (ll.field_a) {
-            param0.c((byte) 57);
+            param0.blur((byte) 57);
             var9 = this.field_U;
             var5 = var9;
             for (var6 = 0; var6 < var9.length; var6++) {
               var7 = var9[var6];
               if (var7.field_l) {
-                var7.a((byte) 126, (UiWidget) (this));
+                var7.focusNext((byte) 126, (UiWidget) (this));
               }
             }
           }
@@ -292,7 +292,7 @@ final class lb extends pn implements hh {
         }
     }
 
-    final boolean a(int param0, int param1, UiWidget param2, char param3) {
+    final boolean requestKeyboardFocus(int param0, int param1, UiWidget param2, char param3) {
         boolean stackIn_73_0 = false;
         Object stackIn_76_0 = null;
         StringBuilder stackIn_76_1 = null;
@@ -342,19 +342,19 @@ final class lb extends pn implements hh {
             case 97:
               if (var5 == this.field_bb) {
                 if (null != this.field_W) {
-                  this.field_W.a((byte) 110, (UiWidget) (this));
+                  this.field_W.focusNext((byte) 110, (UiWidget) (this));
                 } else {
-                  this.field_V.a((byte) 111, (UiWidget) (this));
+                  this.field_V.focusNext((byte) 111, (UiWidget) (this));
                 }
                 return true;
               }
               if (var5 == this.field_W) {
-                this.field_V.a((byte) 85, (UiWidget) (this));
+                this.field_V.focusNext((byte) 85, (UiWidget) (this));
                 return true;
               }
               if (var5 == this.field_X &&
                 this.field_gb.field_C) {
-                this.field_gb.a((byte) 74, (UiWidget) (this));
+                this.field_gb.focusNext((byte) 74, (UiWidget) (this));
                 return true;
               }
               break;
@@ -365,39 +365,39 @@ final class lb extends pn implements hh {
                   break;
                 }
                 if (!this.field_gb.field_C) {
-                  this.field_X.a((byte) 68, (UiWidget) (this));
+                  this.field_X.focusNext((byte) 68, (UiWidget) (this));
                 } else {
-                  this.field_gb.a((byte) 92, (UiWidget) (this));
+                  this.field_gb.focusNext((byte) 92, (UiWidget) (this));
                 }
                 return true;
               }
-              this.field_X.a((byte) 116, (UiWidget) (this));
+              this.field_X.focusNext((byte) 116, (UiWidget) (this));
               return true;
             case 98:
               if (var5 == this.field_X) {
-                this.field_bb.a((byte) 89, (UiWidget) (this));
+                this.field_bb.focusNext((byte) 89, (UiWidget) (this));
                 return true;
               }
               if (this.field_gb == var5) {
-                this.field_V.a((byte) 102, (UiWidget) (this));
+                this.field_V.focusNext((byte) 102, (UiWidget) (this));
                 return true;
               }
               break;
             case 96:
               if (var5 == this.field_V) {
                 if (null != this.field_W) {
-                  this.field_W.a((byte) 125, (UiWidget) (this));
+                  this.field_W.focusNext((byte) 125, (UiWidget) (this));
                   return true;
                 }
-                this.field_bb.a((byte) 84, (UiWidget) (this));
+                this.field_bb.focusNext((byte) 84, (UiWidget) (this));
                 return true;
               }
               if (var5 == this.field_W) {
-                this.field_bb.a((byte) 125, (UiWidget) (this));
+                this.field_bb.focusNext((byte) 125, (UiWidget) (this));
                 return true;
               }
               if (var5 == this.field_gb) {
-                this.field_X.a((byte) 74, (UiWidget) (this));
+                this.field_X.focusNext((byte) 74, (UiWidget) (this));
                 return true;
               }
               break;
@@ -405,7 +405,7 @@ final class lb extends pn implements hh {
               break;
           }
           var6 = -79 / ((param0 + 83) / 32);
-          stackIn_73_0 = super.a(-118, param1, param2, param3);
+          stackIn_73_0 = super.requestKeyboardFocus(-118, param1, param2, param3);
           return stackIn_73_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -439,7 +439,7 @@ final class lb extends pn implements hh {
     final static boolean m(int param0) {
         boolean stackIn_6_0 = false;
         if (param0 >= -77) {
-          lb.h((byte) 52);
+          lb.releaseStatics((byte) 52);
         }
         stackIn_6_0 = (sn.field_c != null) && (ic.field_T.b(-44));
         return stackIn_6_0;

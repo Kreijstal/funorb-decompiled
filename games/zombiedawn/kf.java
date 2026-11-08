@@ -16,7 +16,7 @@ final class kf extends pn implements hh {
         this.field_H = false;
         if (param0 != 10) {
           an var3 = (an) null;
-          this.a(34, -113, (an) null, 107, 77);
+          this.onButtonActivated(34, -113, (an) null, 107, 77);
         }
     }
 
@@ -84,7 +84,7 @@ final class kf extends pn implements hh {
         }
     }
 
-    public final void a(int param0, int param1, an param2, int param3, int param4) {
+    public final void onButtonActivated(int param0, int param1, an param2, int param3, int param4) {
         RuntimeException var6 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -118,7 +118,7 @@ final class kf extends pn implements hh {
         }
     }
 
-    final boolean a(int param0, int param1, UiWidget param2, char param3) {
+    final boolean requestKeyboardFocus(int param0, int param1, UiWidget param2, char param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         boolean stackIn_11_0 = false;
@@ -129,18 +129,18 @@ final class kf extends pn implements hh {
         try {
           if (param1 == 98) {
             if (null == this.field_U) {
-              this.field_W.a((byte) 110, (UiWidget) (this));
+              this.field_W.focusNext((byte) 110, (UiWidget) (this));
               return true;
             }
-            this.field_U.a((byte) 100, (UiWidget) (this));
+            this.field_U.focusNext((byte) 100, (UiWidget) (this));
             return true;
           }
           var5_int = 122 / ((param0 + 83) / 32);
           if (param1 != 99) {
-            stackIn_11_0 = super.a(75, param1, param2, param3);
+            stackIn_11_0 = super.requestKeyboardFocus(75, param1, param2, param3);
             return stackIn_11_0;
           }
-          this.field_W.a((byte) 107, (UiWidget) (this));
+          this.field_W.focusNext((byte) 107, (UiWidget) (this));
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -156,12 +156,12 @@ final class kf extends pn implements hh {
         }
     }
 
-    public static void m(int param0) {
+    public static void releaseStatics(int param0) {
         field_T = null;
         field_V = null;
         field_Y = null;
         if (param0 != 4347) {
-          kf.m(-22);
+          kf.releaseStatics(-22);
           field_X = null;
           return;
         }

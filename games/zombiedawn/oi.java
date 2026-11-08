@@ -4,7 +4,7 @@
 final class oi extends Font {
     private byte[][] field_D;
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5, boolean param6) {
+    final void drawGlyph(int param0, int param1, int param2, int param3, int param4, int param5, boolean param6) {
         int var8;
         int var9;
         int var10;
@@ -44,15 +44,15 @@ final class oi extends Font {
         if (param3 > 0 &&
           param4 > 0) {
           if (Rasterizer.field_e == null) {
-            oi.a(Rasterizer.pixels, this.field_D[param0], param5, var11, var8, param3, param4, var9, var10);
+            oi.blitBinaryGlyph(Rasterizer.pixels, this.field_D[param0], param5, var11, var8, param3, param4, var9, var10);
           } else {
-            oi.a(Rasterizer.pixels, this.field_D[param0], param1, param2, param3, param4, param5, var11, var8, var9, var10, Rasterizer.field_e, Rasterizer.field_j);
+            oi.blitMaskedGlyph(Rasterizer.pixels, this.field_D[param0], param1, param2, param3, param4, param5, var11, var8, var9, var10, Rasterizer.field_e, Rasterizer.field_j);
           }
           return;
         }
     }
 
-    final static void a(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    final static void blitBinaryGlyphWithAlpha(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         int var10 = 0;
         int var11 = 0;
         int incrementValue$12 = 0;
@@ -81,7 +81,7 @@ final class oi extends Font {
         this.field_D = param5;
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, boolean param7) {
+    final void drawGlyphAlpha(int param0, int param1, int param2, int param3, int param4, int param5, int param6, boolean param7) {
         int var13 = 0;
         int var9 = param1 + param2 * Rasterizer.width;
         int var10 = Rasterizer.width - param3;
@@ -118,10 +118,10 @@ final class oi extends Font {
           param4 <= 0) {
           return;
         }
-        oi.a(Rasterizer.pixels, this.field_D[param0], param5, var12, var9, param3, param4, var10, var11, param6);
+        oi.blitBinaryGlyphWithAlpha(Rasterizer.pixels, this.field_D[param0], param5, var12, var9, param3, param4, var10, var11, param6);
     }
 
-    private final static void a(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int[] param11, int[] param12) {
+    private final static void blitMaskedGlyph(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int[] param11, int[] param12) {
         int var15 = 0;
         int var20 = 0;
         int incrementValue$1 = 0;
@@ -184,7 +184,7 @@ final class oi extends Font {
         }
     }
 
-    final static void a(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    final static void blitBinaryGlyph(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int var10 = 0;
         int var9;
         int var11;

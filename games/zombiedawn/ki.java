@@ -131,7 +131,7 @@ abstract class ki extends pn {
               }
             }
             if (param2 != -123) {
-              ki.g((byte) -94);
+              ki.releaseStatics((byte) -94);
             }
             stackIn_43_0 = var5;
             return stackIn_43_0 != 0;
@@ -170,7 +170,7 @@ abstract class ki extends pn {
         }
     }
 
-    boolean a(int param0, int param1, UiWidget param2, char param3) {
+    boolean requestKeyboardFocus(int param0, int param1, UiWidget param2, char param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         RuntimeException stackIn_13_0 = null;
@@ -178,16 +178,16 @@ abstract class ki extends pn {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (super.a(-122, param1, param2, param3)) {
+          if (super.requestKeyboardFocus(-122, param1, param2, param3)) {
             return true;
           }
           var5_int = 8 % ((param0 + 83) / 32);
           if (this.field_Y != null) {
             if (98 == param1) {
-              this.field_Y.a((byte) 121, param2);
+              this.field_Y.focusNext((byte) 121, param2);
             }
             if (99 == param1) {
-              this.field_Y.a((byte) 82, param2);
+              this.field_Y.focusNext((byte) 82, param2);
               return false;
             }
           }
@@ -280,7 +280,7 @@ abstract class ki extends pn {
         return true;
     }
 
-    public static void g(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 < 41) {
           Sprite var2 = (Sprite) null;
           ki.a((byte) 10, (Sprite) null);

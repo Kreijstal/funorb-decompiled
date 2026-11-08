@@ -65,7 +65,7 @@ final class ae {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         if (param0) {
           field_b = (String[]) null;
         }
@@ -142,7 +142,7 @@ final class ae {
           String var10 = null;
           var6 = ZombieDawn.field_J;
           if (param1 != 10331) {
-            ae.a(false);
+            ae.releaseStatics(false);
           }
           try {
             var3 = "";

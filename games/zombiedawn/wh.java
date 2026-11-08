@@ -57,7 +57,7 @@ final class wh implements wa {
             }
           }
           if (param1) {
-            wh.a(-70);
+            wh.releaseStatics(-70);
           }
           stackIn_12_0 = vl.field_m;
           return stackIn_12_0;
@@ -75,7 +75,7 @@ final class wh implements wa {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 0) {
           field_a = (Sprite[][]) null;
         }

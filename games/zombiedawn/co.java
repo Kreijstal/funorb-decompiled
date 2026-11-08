@@ -8,17 +8,17 @@ final class co {
     final static int b(int param0) {
         if (param0 != -13043) {
           String var2 = (String) null;
-          co.a((String) null, -49);
+          co.createNameCheckRequest((String) null, -49);
           return p.field_d;
         }
         return p.field_d;
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = null;
         if (param0 != 28186) {
           String var2 = (String) null;
-          co.a((String) null, -91);
+          co.createNameCheckRequest((String) null, -91);
         }
     }
 
@@ -78,7 +78,7 @@ final class co {
         return (id) (var6Lifetime1);
     }
 
-    final static tk a(String param0, int param1) {
+    final static tk createNameCheckRequest(String param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         tk stackIn_1_0 = null;
@@ -117,7 +117,7 @@ final class co {
           var1 = kn.field_L.b((byte) 26);
           while (var1 instanceof tm) {
             var2 = var1.previous;
-            if (((tm) (var1)).field_j.l()) {
+            if (((tm) (var1)).field_j.isSamplePositionOutOfRange()) {
               var1.unlink(-27598);
             }
             var1 = var2;
@@ -128,7 +128,7 @@ final class co {
           var1 = se.field_m.b((byte) 26);
           while (var1 instanceof tm) {
             var2Lifetime1 = var1.previous;
-            if (((tm) (var1)).field_j.l()) {
+            if (((tm) (var1)).field_j.isSamplePositionOutOfRange()) {
               var1.unlink(-27598);
             }
             var1 = var2Lifetime1;
@@ -136,7 +136,7 @@ final class co {
           var1 = DelegatingCanvas.field_e.b((byte) 26);
           while (var1 instanceof tm) {
             var2Lifetime2 = var1.previous;
-            if (((tm) (var1)).field_j.l()) {
+            if (((tm) (var1)).field_j.isSamplePositionOutOfRange()) {
               var1.unlink(-27598);
             }
             var1 = var2Lifetime2;

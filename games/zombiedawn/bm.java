@@ -7,7 +7,7 @@ final class bm {
     static cf field_d;
     private int[] field_b;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = null;
         if (param0 != 0) {
           bm.a((byte) -11, -100);

@@ -470,7 +470,7 @@ abstract class eh extends UiWidget implements jf {
         }
     }
 
-    final void c(byte param0) {
+    final void blur(byte param0) {
         int var3 = 0;
         UiWidget[] var2;
         UiWidget var4;
@@ -483,7 +483,7 @@ abstract class eh extends UiWidget implements jf {
         for (var3 = 0; var7.length > var3; var3++) {
           var4 = var7[var3];
           if (var4 != null) {
-            var4.c((byte) 57);
+            var4.blur((byte) 57);
           }
         }
         if (param0 != 57) {
@@ -492,7 +492,7 @@ abstract class eh extends UiWidget implements jf {
         }
     }
 
-    boolean a(byte param0, UiWidget param1) {
+    boolean focusNext(byte param0, UiWidget param1) {
         int var4 = 0;
         UiWidget[] var3 = null;
         RuntimeException var3_ref = null;
@@ -510,7 +510,7 @@ abstract class eh extends UiWidget implements jf {
           for (var4 = 0; var7.length > var4; var4++) {
             var5 = var7[var4];
             if (var5 != null &&
-              var5.a((byte) 88, param1)) {
+              var5.focusNext((byte) 88, param1)) {
               return true;
             }
           }
@@ -558,7 +558,7 @@ abstract class eh extends UiWidget implements jf {
               for (var4_int = var4_int - param1; var4_int >= 0; var4_int = var4_int - param1) {
                 var6 = this.field_B[var4_int];
                 if (var6 != null &&
-                  var6.a((byte) 109, param2)) {
+                  var6.focusNext((byte) 109, param2)) {
                   return true;
                 }
               }
@@ -676,7 +676,7 @@ abstract class eh extends UiWidget implements jf {
               for (var4_int = var4_int + param2; this.field_B.length > var4_int; var4_int = var4_int + param2) {
                 var6 = this.field_B[var4_int];
                 if (null != var6 &&
-                  var6.a((byte) 106, param1)) {
+                  var6.focusNext((byte) 106, param1)) {
                   return true;
                 }
               }
@@ -709,7 +709,7 @@ abstract class eh extends UiWidget implements jf {
         return null != this.d((byte) 100) ? true : false;
     }
 
-    boolean a(int param0, int param1, UiWidget param2, char param3) {
+    boolean requestKeyboardFocus(int param0, int param1, UiWidget param2, char param3) {
         int var7 = 0;
         UiWidget[] var5 = null;
         int var5_int = 0;
@@ -735,7 +735,7 @@ abstract class eh extends UiWidget implements jf {
             var8 = var10[var7];
             if (var8 != null &&
               var8.e(-17741) &&
-              var8.a(-123, param1, param2, param3)) {
+              var8.requestKeyboardFocus(-123, param1, param2, param3)) {
               return true;
             }
           }

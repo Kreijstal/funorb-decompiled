@@ -52,7 +52,7 @@ final class wd extends pj {
               return;
             }
             if (param6) {
-              wd.g(-39);
+              wd.releaseStatics(-39);
             }
             if (param1 >= en.field_g &&
               param2 >= en.field_g &&
@@ -230,7 +230,7 @@ final class wd extends pj {
         return 100;
     }
 
-    public static void g(int param0) {
+    public static void releaseStatics(int param0) {
         field_w = null;
         field_y = null;
         if (param0 != 1445852592) {

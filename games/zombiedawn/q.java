@@ -20,7 +20,7 @@ final class q extends pa {
         return var4;
     }
 
-    public static void c(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_H = null;
         if (param0) {
           field_H = (Font) null;
@@ -56,7 +56,7 @@ final class q extends pa {
           this.field_K = stackIn_4_1;
           this.field_E = param8;
           var12_int = this.field_D - this.field_I;
-          var13 = this.field_E.b(param10, var12_int, this.field_E.field_I) + this.field_I * 2;
+          var13 = this.field_E.paragraphHeight(param10, var12_int, this.field_E.field_I) + this.field_I * 2;
           if (param3 >= var13) {
             var13 = param3;
           } else {
@@ -104,7 +104,7 @@ final class q extends pa {
           return;
         }
         int var7 = this.field_K ? -(2 * this.field_I) + (-this.field_D + this.field_i) : 0;
-        this.field_E.a(this.field_F, this.field_I + (var5 + var7), this.field_I + var6, this.field_D - this.field_I, -(this.field_I * 2) + this.field_n, this.field_J, -1, !this.field_K ? 2 : 0, 1, this.field_E.field_I);
+        this.field_E.drawParagraph(this.field_F, this.field_I + (var5 + var7), this.field_I + var6, this.field_D - this.field_I, -(this.field_I * 2) + this.field_n, this.field_J, -1, !this.field_K ? 2 : 0, 1, this.field_E.field_I);
     }
 
     static {

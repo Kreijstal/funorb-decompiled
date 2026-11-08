@@ -66,7 +66,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
         return this.field_g != this.field_f.field_c;
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 != 48) {
           return;
         }

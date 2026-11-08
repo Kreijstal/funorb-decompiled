@@ -32,16 +32,16 @@ final class vb extends WorldObject {
             var4 = fm.a(param1, -70);
             if (var4 != null &&
               var4.length() >= 1) {
-              if (vi.a(param0 + 31153, var4.charAt(0))) {
+              if (vi.isNameSeparator(param0 + 31153, var4.charAt(0))) {
                 return false;
               }
-              if (vi.a(param0 ^ 31153, var4.charAt(var4.length() - 1))) {
+              if (vi.isNameSeparator(param0 ^ 31153, var4.charAt(var4.length() - 1))) {
                 return false;
               }
               var5 = 0;
               for (var6 = param0; var6 < param1.length(); var6++) {
                 var7 = param1.charAt(var6);
-                if (!vi.a(31153, (char) var7)) {
+                if (!vi.isNameSeparator(31153, (char) var7)) {
                   var5 = 0;
                 } else {
                   var5++;
@@ -146,10 +146,10 @@ final class vb extends WorldObject {
         this.d((byte) 126);
     }
 
-    public static void f(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_D = null;
         if (param0 > -72) {
-          vb.f((byte) 11);
+          vb.releaseStatics((byte) 11);
         }
     }
 

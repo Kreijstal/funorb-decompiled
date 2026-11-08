@@ -143,9 +143,9 @@ final class dp implements io {
             stackIn_7_0 = 3249872;
           }
           var6_int = stackIn_7_0;
-          this.field_f.a("<u=" + Integer.toString(var6_int, 16) + ">" + param3.field_o + "</u>", param3.field_k + param4, param2 + param3.field_j, param3.field_i, param3.field_n, var6_int, -1, this.field_c, this.field_d, this.field_f.field_I + this.field_f.field_x);
+          this.field_f.drawParagraph("<u=" + Integer.toString(var6_int, 16) + ">" + param3.field_o + "</u>", param3.field_k + param4, param2 + param3.field_j, param3.field_i, param3.field_n, var6_int, -1, this.field_c, this.field_d, this.field_f.field_I + this.field_f.field_x);
           if (param3.e(param0 ^ -16759476)) {
-            var7 = this.field_f.b(param3.field_o);
+            var7 = this.field_f.textWidth(param3.field_o);
             var8 = this.field_f.field_x + this.field_f.field_I;
             var9 = param3.field_k + param4;
             if (this.field_c != 2) {
@@ -180,7 +180,7 @@ final class dp implements io {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_g = null;
         field_b = null;
         field_e = null;
@@ -220,11 +220,11 @@ final class dp implements io {
           var5 = (-LevelNavigation.field_x + 250 << 8) / 50;
         }
         ki.a((byte) -102, ti.field_g);
-        en.c();
+        en.useRasterClip();
         Rasterizer.clear();
         gk.j(30549);
         if (var5 < 256) {
-          Rasterizer.a(0, 0, Rasterizer.width, Rasterizer.height, 0, 256 - var5);
+          Rasterizer.fillRectangleBlended(0, 0, Rasterizer.width, Rasterizer.height, 0, 256 - var5);
           pa.a(param1 ^ 32173);
           if (param1 != -12138) {
             dp.a(118, -83);
@@ -249,13 +249,13 @@ final class dp implements io {
             }
             if (var6 < 20) {
               var7Lifetime4 = var6 * 256 / 20;
-              wc.field_Pb.b(var3, var4, var7Lifetime4);
+              wc.field_Pb.drawAdditive(var3, var4, var7Lifetime4);
             } else {
               if (var6 >= 30) {
                 var7Lifetime4 = (-(256 * var6) + 12800) / 20;
-                wc.field_Pb.b(var3, var4, var7Lifetime4);
+                wc.field_Pb.drawAdditive(var3, var4, var7Lifetime4);
               } else {
-                wc.field_Pb.b(var3, var4, 256);
+                wc.field_Pb.drawAdditive(var3, var4, 256);
               }
             }
           }
@@ -282,13 +282,13 @@ final class dp implements io {
             var6Lifetime1 < 50) {
             if (var6Lifetime1 < 20) {
               var7Lifetime1 = var6Lifetime1 * 256 / 20;
-              wc.field_Pb.b(var3, var4, var7Lifetime1);
+              wc.field_Pb.drawAdditive(var3, var4, var7Lifetime1);
             } else {
               if (var6Lifetime1 >= 30) {
                 var7Lifetime1 = (-(256 * var6Lifetime1) + 12800) / 20;
-                wc.field_Pb.b(var3, var4, var7Lifetime1);
+                wc.field_Pb.drawAdditive(var3, var4, var7Lifetime1);
               } else {
-                wc.field_Pb.b(var3, var4, 256);
+                wc.field_Pb.drawAdditive(var3, var4, 256);
               }
             }
           }
@@ -303,13 +303,13 @@ final class dp implements io {
             var6Lifetime1 < 50) {
             if (var6Lifetime1 < 20) {
               var7Lifetime1 = var6Lifetime1 * 256 / 20;
-              wc.field_Pb.b(var3, var4, var7Lifetime1);
+              wc.field_Pb.drawAdditive(var3, var4, var7Lifetime1);
             } else {
               if (var6Lifetime1 < 30) {
-                wc.field_Pb.b(var3, var4, 256);
+                wc.field_Pb.drawAdditive(var3, var4, 256);
               } else {
                 var7Lifetime1 = (-(256 * var6Lifetime1) + 12800) / 20;
-                wc.field_Pb.b(var3, var4, var7Lifetime1);
+                wc.field_Pb.drawAdditive(var3, var4, var7Lifetime1);
               }
             }
           }

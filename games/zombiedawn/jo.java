@@ -130,14 +130,14 @@ final class jo extends qk {
         }
     }
 
-    public static void o(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_Nb = null;
         if (param0 <= -59) {
           field_Tb = (Sprite[][]) null;
           field_Ob = null;
           return;
         }
-        jo.o((byte) -101);
+        jo.releaseStatics((byte) -101);
         field_Tb = (Sprite[][]) null;
         field_Ob = null;
     }
@@ -195,7 +195,7 @@ final class jo extends qk {
         if (param0 > 95) {
           return;
         }
-        jo.o((byte) -102);
+        jo.releaseStatics((byte) -102);
     }
 
     final static int w(int param0) {
@@ -242,11 +242,11 @@ final class jo extends qk {
               var2_ref_de.writeInt(-116, wh.field_b);
               sb.field_a.write(13, true, 0, var2_ref_de.payload);
               jd.field_a = jd.field_a + 1;
-              ul.field_e = 30000L + pd.a(-22826);
+              ul.field_e = 30000L + pd.monotonicTimeMillis(-22826);
             }
             if (jd.field_a == 3) {
               if (sb.field_a.available((byte) -80) <= 0) {
-                if (pd.a(-22826) > ul.field_e) {
+                if (pd.monotonicTimeMillis(-22826) > ul.field_e) {
                   stackIn_30_0 = k.a(-2, 50);
                   return stackIn_30_0;
                 }
@@ -305,14 +305,14 @@ final class jo extends qk {
           }
           var3_int = param0.worldToScreenX(this.getX(true), (byte) -107);
           var4 = param0.worldToScreenY(this.getY(237239984), 0);
-          Rasterizer.d(var3_int, var4, this.field_Eb, 65535);
+          Rasterizer.drawCircleOutline(var3_int, var4, this.field_Eb, 65535);
           if (this.field_Rb != -1) {
-            Rasterizer.e(var3_int, var4, param0.worldToScreenX(this.field_Rb, (byte) -74), param0.worldToScreenY(this.field_Pb, 0), 16711680);
+            Rasterizer.drawLine(var3_int, var4, param0.worldToScreenX(this.field_Rb, (byte) -74), param0.worldToScreenY(this.field_Pb, 0), 16711680);
           }
           if (this.field_yb != null) {
             var5_int = param0.worldToScreenX(this.field_yb.getX(true), (byte) -59);
             var6 = param0.worldToScreenY(this.field_yb.getY(237239984), 0);
-            Rasterizer.e(var3_int, 10 + var4 - 48, var5_int, -48 + (var6 + 10), 16776960);
+            Rasterizer.drawLine(var3_int, 10 + var4 - 48, var5_int, -48 + (var6 + 10), 16776960);
             bj.field_q.drawString(Integer.toString(this.field_yb.state), var5_int, -48 + var6, 16777215, 0);
           }
           var5 = Integer.toString(this.state);
@@ -326,7 +326,7 @@ final class jo extends qk {
             Rasterizer.setPixel(var7, var8, 65280);
             var10++;
           }
-          Rasterizer.g(var3_int, var4, 3, 16776960);
+          Rasterizer.fillCircle(var3_int, var4, 3, 16776960);
           bj.field_q.drawString(var5Lifetime1, var3_int, -48 + var4, 16777215, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

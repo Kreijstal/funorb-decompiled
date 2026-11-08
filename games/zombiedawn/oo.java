@@ -75,7 +75,7 @@ final class oo extends id {
               if (var13 != 0) {
                 var14 = Zombie.field_Fb[6];
                 if (!this.field_V[var10][var12]) {
-                  var14[-1 + var13].b(var11, var9);
+                  var14[-1 + var13].drawTransparent(var11, var9);
                 } else {
                   var14[-1 + var13].drawMirrored(var11, var9);
                 }
@@ -292,16 +292,16 @@ final class oo extends id {
         }
         try {
           var7 = 128;
-          so.b(nh.field_R[1], 12 + var5, 6 + var6, var7);
+          so.drawTransparent(nh.field_R[1], 12 + var5, 6 + var6, var7);
         } catch (RuntimeException runtimeException) {
           throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "oo.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    public static void f(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_T = null;
         if (param0 <= 106) {
-          oo.f((byte) 91);
+          oo.releaseStatics((byte) 91);
         }
         field_S = null;
         field_U = null;
@@ -375,7 +375,7 @@ final class oo extends id {
                 if (0 != var13) {
                   var14 = Zombie.field_Fb[6];
                   if (!this.field_V[var10][var12]) {
-                    var14[-1 + var13].b(var11, var9);
+                    var14[-1 + var13].drawTransparent(var11, var9);
                   } else {
                     var14[var13 - 1].drawMirrored(var11, var9);
                   }
@@ -387,7 +387,7 @@ final class oo extends id {
             }
             return;
           }
-          this.field_W.b(var3_int, var4);
+          this.field_W.drawTransparent(var3_int, var4);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

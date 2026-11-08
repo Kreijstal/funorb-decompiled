@@ -42,7 +42,7 @@ final class ul {
         RuntimeException decompiledCaughtException = null;
         try {
           var2 = bj.field_q;
-          var3 = new Sprite(var2.b(param1), 27);
+          var3 = new Sprite(var2.textWidth(param1), 27);
           var3.setAsRenderTarget();
           if (param0) {
             ul.a(-121, (byte) 5);

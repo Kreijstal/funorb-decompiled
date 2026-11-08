@@ -28,21 +28,21 @@ final class dk extends wc {
         int var6 = var4 / 2;
         int var7 = -var4 + 8;
         if (this.field_cc == 2) {
-          Rasterizer.d(-var7 + param0 + 9, param2 - 15 - var7, var5 - 1, 0, 64);
-          Rasterizer.d(7 + param0, -20 + param2, -1 + var6, 0, 128);
-          Rasterizer.a(9 + param0 - var7 << 4, -var7 + (param2 - 15) << 4, var5 << 4, 250, dm.field_p);
-          Rasterizer.a(param0 + 7 << 4, -20 + param2 << 4, var6 << 4, 200, dm.field_r);
+          Rasterizer.fillCircleBlended(-var7 + param0 + 9, param2 - 15 - var7, var5 - 1, 0, 64);
+          Rasterizer.fillCircleBlended(7 + param0, -20 + param2, -1 + var6, 0, 128);
+          Rasterizer.fillRadialPaletteCircle(9 + param0 - var7 << 4, -var7 + (param2 - 15) << 4, var5 << 4, 250, dm.field_p);
+          Rasterizer.fillRadialPaletteCircle(param0 + 7 << 4, -20 + param2 << 4, var6 << 4, 200, dm.field_r);
         } else {
           if (this.field_cc != 1) {
-            Rasterizer.d(-2 + param0, -10 + (param2 - var7), var5 - 1, 0, 64);
-            Rasterizer.d(-2 + param0, -16 + param2, var6 - 1, 0, 128);
-            Rasterizer.a(param0 - 2 << 4, -var7 + param2 - 10 << 4, var5 << 4, 250, dm.field_p);
-            Rasterizer.a(param0 - 2 << 4, param2 - 16 << 4, var6 << 4, 200, dm.field_r);
+            Rasterizer.fillCircleBlended(-2 + param0, -10 + (param2 - var7), var5 - 1, 0, 64);
+            Rasterizer.fillCircleBlended(-2 + param0, -16 + param2, var6 - 1, 0, 128);
+            Rasterizer.fillRadialPaletteCircle(param0 - 2 << 4, -var7 + param2 - 10 << 4, var5 << 4, 250, dm.field_p);
+            Rasterizer.fillRadialPaletteCircle(param0 - 2 << 4, param2 - 16 << 4, var6 << 4, 200, dm.field_r);
           } else {
-            Rasterizer.d(var7 - 7 + param0, -var7 + (param2 - 15), -1 + var5, 0, 64);
-            Rasterizer.d(-4 + param0, param2 - 20, -1 + var6, 0, 128);
-            Rasterizer.a(var7 + (param0 - 7) << 4, param2 + (-15 - var7) << 4, var5 << 4, 250, dm.field_p);
-            Rasterizer.a(param0 - 4 << 4, param2 - 20 << 4, var6 << 4, 200, dm.field_r);
+            Rasterizer.fillCircleBlended(var7 - 7 + param0, -var7 + (param2 - 15), -1 + var5, 0, 64);
+            Rasterizer.fillCircleBlended(-4 + param0, param2 - 20, -1 + var6, 0, 128);
+            Rasterizer.fillRadialPaletteCircle(var7 + (param0 - 7) << 4, param2 + (-15 - var7) << 4, var5 << 4, 250, dm.field_p);
+            Rasterizer.fillRadialPaletteCircle(param0 - 4 << 4, param2 - 20 << 4, var6 << 4, 200, dm.field_r);
           }
         }
     }
@@ -194,7 +194,7 @@ final class dk extends wc {
         this.field_x = this.field_x - 2621440;
     }
 
-    public static void p(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 < 64) {
           field_Tb = (int[][][]) null;
         }
@@ -269,8 +269,8 @@ final class dk extends wc {
           } else {
             stackIn_30_2 = var3_int - 2;
           }
-          so.a(stackIn_29_0, stackIn_29_1 + stackIn_30_2, (this.field_Xb >> 16) + (var4 - 7));
-          ld.field_l[this.field_t][var5].b(-24 + var3_int, var6 - 48);
+          so.drawTransparent(stackIn_29_0, stackIn_29_1 + stackIn_30_2, (this.field_Xb >> 16) + (var4 - 7));
+          ld.field_l[this.field_t][var5].drawTransparent(-24 + var3_int, var6 - 48);
           var7 = new int[]{0, -16, 16};
           if (this.field_Gb > 0) {
             this.b(var3_int - 4 + var7[this.field_cc], (byte) -97, 15 + var6);

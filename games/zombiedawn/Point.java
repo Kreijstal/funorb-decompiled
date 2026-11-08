@@ -17,7 +17,7 @@ final class Point extends IntrusiveNode {
         return LevelNavigation.field_x > 250 ? true : false;
     }
 
-    public static void c(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 < -102) {
           field_j = null;
           field_i = null;
@@ -60,7 +60,7 @@ final class Point extends IntrusiveNode {
           var2 = new oi(param1, sl.field_d, bo.field_o, bn.field_c, uf.field_n, vj.field_m);
           no.f((byte) -87);
           if (param0 != -16491) {
-            Point.c((byte) -90);
+            Point.releaseStatics((byte) -90);
           }
           stackIn_6_0 = var2;
           return stackIn_6_0;

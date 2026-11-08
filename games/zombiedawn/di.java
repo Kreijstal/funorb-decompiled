@@ -12,7 +12,7 @@ final class di extends hp implements hh {
     static boolean field_J;
     static String field_I;
 
-    public static void b(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_I = null;
         field_L = null;
         if (!param0) {
@@ -178,11 +178,11 @@ final class di extends hp implements hh {
     final void a(int param0, int param1, int param2, int param3) {
         int var5 = this.field_k + param2;
         int var6 = this.field_j + param0;
-        ia.field_e.a(GameKeyHandler.field_b, 20 + var5, 20 + var6, this.field_i - 40, this.field_n - 50, 16777215, -1, 1, 0, ia.field_e.field_I);
+        ia.field_e.drawParagraph(GameKeyHandler.field_b, 20 + var5, 20 + var6, this.field_i - 40, this.field_n - 50, 16777215, -1, 1, 0, ia.field_e.field_I);
         super.a(param0, param1, param2, param3 + param3);
     }
 
-    public final void a(int param0, int param1, an param2, int param3, int param4) {
+    public final void onButtonActivated(int param0, int param1, an param2, int param3, int param4) {
         int var7 = 0;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
@@ -220,7 +220,7 @@ final class di extends hp implements hh {
         }
     }
 
-    final boolean a(int param0, int param1, UiWidget param2, char param3) {
+    final boolean requestKeyboardFocus(int param0, int param1, UiWidget param2, char param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         boolean stackIn_6_0 = false;
@@ -230,7 +230,7 @@ final class di extends hp implements hh {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (super.a(127, param1, param2, param3)) {
+          if (super.requestKeyboardFocus(127, param1, param2, param3)) {
             return true;
           }
           if (param1 == 98) {

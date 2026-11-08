@@ -114,7 +114,7 @@ final class og extends pj {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_z = null;
         if (param0) {
           return;

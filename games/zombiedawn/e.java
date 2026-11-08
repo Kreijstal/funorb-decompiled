@@ -18,7 +18,7 @@ final class e extends hp implements hh {
 
     final void a(int param0, int param1, int param2, int param3) {
         super.a(param0, param1, param2, param3 ^ 0);
-        this.field_L.a(this.field_Q, this.field_k + param2 + 14, this.field_j + (param0 + 10), this.field_i - 28, this.field_n, 16777215, -1, 0, param3, this.field_L.field_I);
+        this.field_L.drawParagraph(this.field_Q, this.field_k + param2 + 14, this.field_j + (param0 + 10), this.field_i - 28, this.field_n, 16777215, -1, 0, param3, this.field_L.field_I);
     }
 
     final an a(String param0, int param1, sk param2) {
@@ -123,14 +123,14 @@ final class e extends hp implements hh {
           this.field_L = param1;
           this.field_Q = param2;
           this.field_R = param0;
-          var4_int = this.field_Q != null ? this.field_L.b(this.field_Q, 260, this.field_L.field_I) : 0;
+          var4_int = this.field_Q != null ? this.field_L.paragraphHeight(this.field_Q, 260, this.field_L.field_I) : 0;
           this.a(44, 0, 0, 288, var4_int + 22);
         } catch (RuntimeException runtimeException) {
           throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "e.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
-    public static void b(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_S = null;
         field_I = null;
         if (!param0) {
@@ -139,7 +139,7 @@ final class e extends hp implements hh {
         field_G = null;
     }
 
-    public final void a(int param0, int param1, an param2, int param3, int param4) {
+    public final void onButtonActivated(int param0, int param1, an param2, int param3, int param4) {
         int var6_int = 0;
         int var7 = 0;
         int var8 = 0;

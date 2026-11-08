@@ -18,9 +18,9 @@ final class be extends im {
         }
     }
 
-    public static void c(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         if (!param0) {
-          be.c(true);
+          be.releaseStatics(true);
         }
         field_i = null;
     }

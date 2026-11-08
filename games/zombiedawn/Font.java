@@ -27,11 +27,11 @@ abstract class Font extends DualLinkNode {
     private static int field_v;
     private static String[] field_N;
 
-    final int a(String param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
-        return this.a(param0, param1, param2, param3, param4, param5, param6, 256, param7, param8, param9);
+    final int drawParagraph(String param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+        return this.drawParagraphAlpha(param0, param1, param2, param3, param4, param5, param6, 256, param7, param8, param9);
     }
 
-    private final void a(int param0, int param1, int param2) {
+    private final void resetStyle(int param0, int param1, int param2) {
         field_q = -1;
         field_u = -1;
         field_t = param1;
@@ -48,7 +48,7 @@ abstract class Font extends DualLinkNode {
         return this.field_r[tb.a(param0, -8225) & 255];
     }
 
-    private final static int a(byte[][] param0, byte[][] param1, int[] param2, int[] param3, int[] param4, int param5, int param6) {
+    private final static int computePairKerning(byte[][] param0, byte[][] param1, int[] param2, int[] param3, int[] param4, int param5, int param6) {
         int var18 = 0;
         int incrementValue$6 = 0;
         int incrementValue$7 = 0;
@@ -97,7 +97,7 @@ abstract class Font extends DualLinkNode {
         return -var13;
     }
 
-    private final void a(int param0, int param1) {
+    private final void resetOpaqueStyle(int param0, int param1) {
         field_q = -1;
         field_u = -1;
         field_t = param1;
@@ -110,7 +110,7 @@ abstract class Font extends DualLinkNode {
         field_y = 0;
     }
 
-    private final void a(String param0, int param1, int param2) {
+    private final void drawStyledText(String param0, int param1, int param2) {
         int var7 = 0;
         int stackIn_27_0 = 0;
         Throwable decompiledCaughtException = null;
@@ -147,7 +147,7 @@ abstract class Font extends DualLinkNode {
                           if (!var9_ref_String.equals("copy")) {
                             if (!var9_ref_String.equals("reg")) {
                               if (!var9_ref_String.startsWith("img=")) {
-                                this.a(var9_ref_String);
+                                this.applyStyleTag(var9_ref_String);
                               } else {
                                 try {
                                   var13 = (CharSequence) ((Object) var9_ref_String.substring(4));
@@ -160,9 +160,9 @@ abstract class Font extends DualLinkNode {
                                   }
                                   var12 = stackIn_27_0;
                                   if (field_v != 256) {
-                                    var11_ref_qb.a(param1, param2 + this.field_C - var12, field_v);
+                                    var11_ref_qb.drawAlpha(param1, param2 + this.field_C - var12, field_v);
                                   } else {
-                                    var11_ref_qb.a(param1, param2 + this.field_C - var12);
+                                    var11_ref_qb.draw(param1, param2 + this.field_C - var12);
                                   }
                                   param1 = param1 + var11_ref_qb.field_a;
                                   var5 = 0;
@@ -217,14 +217,14 @@ abstract class Font extends DualLinkNode {
               } else {
                 if (field_v != 256) {
                   if (field_F != -1) {
-                    this.a(var8, param1 + this.field_J[var8] + 1, param2 + this.field_H[var8] + 1, var9, var10, field_F, field_v, true);
+                    this.drawGlyphAlpha(var8, param1 + this.field_J[var8] + 1, param2 + this.field_H[var8] + 1, var9, var10, field_F, field_v, true);
                   }
-                  this.a(var8, param1 + this.field_J[var8], param2 + this.field_H[var8], var9, var10, field_p, field_v, false);
+                  this.drawGlyphAlpha(var8, param1 + this.field_J[var8], param2 + this.field_H[var8], var9, var10, field_p, field_v, false);
                 } else {
                   if (field_F != -1) {
-                    this.a(var8, param1 + this.field_J[var8] + 1, param2 + this.field_H[var8] + 1, var9, var10, field_F, true);
+                    this.drawGlyph(var8, param1 + this.field_J[var8] + 1, param2 + this.field_H[var8] + 1, var9, var10, field_F, true);
                   }
-                  this.a(var8, param1 + this.field_J[var8], param2 + this.field_H[var8], var9, var10, field_p, false);
+                  this.drawGlyph(var8, param1 + this.field_J[var8], param2 + this.field_H[var8], var9, var10, field_p, false);
                 }
               }
               param1 = param1 + this.field_r[var8];
@@ -242,7 +242,7 @@ abstract class Font extends DualLinkNode {
         }
     }
 
-    final int a(String param0, int[] param1, String[] param2) {
+    final int wrapText(String param0, int[] param1, String[] param2) {
         int var13 = 0;
         StringBuilder discarded$0 = null;
         StringBuilder discarded$1 = null;
@@ -436,7 +436,7 @@ abstract class Font extends DualLinkNode {
         return var11;
     }
 
-    private final void a(byte[] param0) {
+    private final void decodeFontMetrics(byte[] param0) {
         int var3_int = 0;
         int incrementValue$6 = 0;
         int incrementValue$5 = 0;
@@ -532,7 +532,7 @@ abstract class Font extends DualLinkNode {
               for (var8Lifetime2 = 0; var8Lifetime2 < 256; var8Lifetime2++) {
                 if (var8Lifetime2 != 32 &&
                   var8Lifetime2 != 160) {
-                  this.field_z[(var7Lifetime2 << 8) + var8Lifetime2] = (byte)Font.a(var15, var16, var17, this.field_r, var14, var7Lifetime2, var8Lifetime2);
+                  this.field_z[(var7Lifetime2 << 8) + var8Lifetime2] = (byte)Font.computePairKerning(var15, var16, var17, this.field_r, var14, var7Lifetime2, var8Lifetime2);
                 }
               }
             }
@@ -541,23 +541,23 @@ abstract class Font extends DualLinkNode {
         }
     }
 
-    final void b(String param0, int param1, int param2, int param3, int param4, int param5) {
+    final void drawCenteredAlpha(String param0, int param1, int param2, int param3, int param4, int param5) {
         if (param0 == null) {
           return;
         }
-        this.a(param3, param4, param5);
-        this.a(param0, param1 - this.b(param0) / 2, param2);
+        this.resetStyle(param3, param4, param5);
+        this.drawStyledText(param0, param1 - this.textWidth(param0) / 2, param2);
     }
 
     final void drawStringCentered(String param0, int param1, int param2, int param3, int param4) {
         if (param0 == null) {
           return;
         }
-        this.a(param3, param4);
-        this.a(param0, param1 - this.b(param0) / 2, param2);
+        this.resetOpaqueStyle(param3, param4);
+        this.drawStyledText(param0, param1 - this.textWidth(param0) / 2, param2);
     }
 
-    final int a(String param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10) {
+    final int drawParagraphAlpha(String param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10) {
         int[] var12;
         int var13;
         int var14;
@@ -566,7 +566,7 @@ abstract class Font extends DualLinkNode {
         if (param0 == null) {
           return 0;
         }
-        this.a(param5, param6, param7);
+        this.resetStyle(param5, param6, param7);
         if (param10 == 0) {
           param10 = this.field_C;
         }
@@ -575,7 +575,7 @@ abstract class Font extends DualLinkNode {
           param4 < param10 + param10) {
           var12 = null;
         }
-        var13 = this.a(param0, var12, field_N);
+        var13 = this.wrapText(param0, var12, field_N);
         if (param9 == 3 &&
           var13 == 1) {
           param9 = 1;
@@ -603,30 +603,30 @@ abstract class Font extends DualLinkNode {
             if (param8 != 1) {
               if (param8 != 2) {
                 if (var15Lifetime1 != var13 - 1) {
-                  this.a(field_N[var15Lifetime1], param3);
-                  this.a(field_N[var15Lifetime1], param1, var14);
+                  this.prepareJustification(field_N[var15Lifetime1], param3);
+                  this.drawStyledText(field_N[var15Lifetime1], param1, var14);
                   field_K = 0;
                 } else {
-                  this.a(field_N[var15Lifetime1], param1, var14);
+                  this.drawStyledText(field_N[var15Lifetime1], param1, var14);
                 }
                 var14 = var14 + param10;
               } else {
-                this.a(field_N[var15Lifetime1], param1 + param3 - this.b(field_N[var15Lifetime1]), var14);
+                this.drawStyledText(field_N[var15Lifetime1], param1 + param3 - this.textWidth(field_N[var15Lifetime1]), var14);
                 var14 = var14 + param10;
               }
             } else {
-              this.a(field_N[var15Lifetime1], param1 + (param3 - this.b(field_N[var15Lifetime1])) / 2, var14);
+              this.drawStyledText(field_N[var15Lifetime1], param1 + (param3 - this.textWidth(field_N[var15Lifetime1])) / 2, var14);
               var14 = var14 + param10;
             }
           } else {
-            this.a(field_N[var15Lifetime1], param1, var14);
+            this.drawStyledText(field_N[var15Lifetime1], param1, var14);
             var14 = var14 + param10;
           }
         }
         return var13;
     }
 
-    private final void a(String param0) {
+    private final void applyStyleTag(String param0) {
         Throwable decompiledCaughtException = null;
         Exception var2 = null;
         CharSequence var3 = null;
@@ -649,7 +649,7 @@ abstract class Font extends DualLinkNode {
                                 if (!param0.equals("shad")) {
                                   if (!param0.equals("/shad")) {
                                     if (param0.equals("br")) {
-                                      this.a(field_M, field_t, field_A);
+                                      this.resetStyle(field_M, field_t, field_A);
                                     }
                                   } else {
                                     field_F = field_t;
@@ -701,18 +701,18 @@ abstract class Font extends DualLinkNode {
         }
     }
 
-    final int b(String param0, int param1, int param2) {
+    final int paragraphHeight(String param0, int param1, int param2) {
         if (param2 == 0) {
           param2 = this.field_C;
         }
-        int var4 = this.a(param0, new int[]{param1}, field_N);
+        int var4 = this.wrapText(param0, new int[]{param1}, field_N);
         int var5 = (var4 - 1) * param2;
         return this.field_I + var5 + this.field_x;
     }
 
-    abstract void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, boolean param7);
+    abstract void drawGlyphAlpha(int param0, int param1, int param2, int param3, int param4, int param5, int param6, boolean param7);
 
-    public static void a() {
+    public static void releaseStatics() {
         field_G = null;
         field_N = null;
     }
@@ -721,25 +721,25 @@ abstract class Font extends DualLinkNode {
         if (param0 == null) {
           return;
         }
-        this.a(param3, param4);
-        this.a(param0, param1, param2);
+        this.resetOpaqueStyle(param3, param4);
+        this.drawStyledText(param0, param1, param2);
     }
 
-    final int b(String param0, int param1) {
-        return this.a(param0, new int[]{param1}, field_N);
+    final int wrappedLineCount(String param0, int param1) {
+        return this.wrapText(param0, new int[]{param1}, field_N);
     }
 
-    final void a(String param0, int param1, int param2, int param3, int param4, int param5) {
+    final void drawLeftAlpha(String param0, int param1, int param2, int param3, int param4, int param5) {
         if (param0 == null) {
           return;
         }
-        this.a(param3, param4, param5);
-        this.a(param0, param1, param2);
+        this.resetStyle(param3, param4, param5);
+        this.drawStyledText(param0, param1, param2);
     }
 
-    abstract void a(int param0, int param1, int param2, int param3, int param4, int param5, boolean param6);
+    abstract void drawGlyph(int param0, int param1, int param2, int param3, int param4, int param5, boolean param6);
 
-    private final void a(String param0, int param1) {
+    private final void prepareJustification(String param0, int param1) {
         int var6 = 0;
         int var3;
         int var4;
@@ -764,11 +764,11 @@ abstract class Font extends DualLinkNode {
           }
         }
         if (var3 > 0) {
-          field_K = (param1 - this.b(param0) << 8) / var3;
+          field_K = (param1 - this.textWidth(param0) << 8) / var3;
         }
     }
 
-    final int b(String param0) {
+    final int textWidth(String param0) {
         int var6 = 0;
         Throwable decompiledCaughtException = null;
         int var2 = 0;
@@ -862,8 +862,8 @@ abstract class Font extends DualLinkNode {
         if (param0 == null) {
           return;
         }
-        this.a(param3, param4);
-        this.a(param0, param1 - this.b(param0), param2);
+        this.resetOpaqueStyle(param3, param4);
+        this.drawStyledText(param0, param1 - this.textWidth(param0), param2);
     }
 
     Font(byte[] param0, int[] param1, int[] param2, int[] param3, int[] param4) {
@@ -875,7 +875,7 @@ abstract class Font extends DualLinkNode {
         this.field_H = param2;
         this.field_L = param3;
         this.field_E = param4;
-        this.a(param0);
+        this.decodeFontMetrics(param0);
         var6 = 2147483647;
         var7 = -2147483648;
         for (var8 = 0; var8 < 256; var8++) {

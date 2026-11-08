@@ -30,7 +30,7 @@ final class lm extends WorldObject {
         this.field_E = 0;
     }
 
-    public static void i(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 3) {
           lm.f((byte) -9);
           field_D = null;
@@ -68,7 +68,7 @@ final class lm extends WorldObject {
             lm.f((byte) -99);
           }
           var4 = param1.worldToScreenY(this.field_x >> 16, 0) - this.field_H;
-          ob.field_c[this.field_E].b(var3_int, var4);
+          ob.field_c[this.field_E].drawTransparent(var3_int, var4);
         } catch (RuntimeException runtimeException) {
           throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "lm.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

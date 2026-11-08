@@ -49,7 +49,7 @@ final class TileMap {
               var5 = (127 & this.tiles[var3_int][var4]) >> 0;
               var6 = ub.a(127, var5);
               if (var6 != null) {
-                this.field_h[var3_int][var4] = GameWorld.a(eg.a(this.field_h[var3_int][var4], -128), var6.field_g);
+                this.field_h[var3_int][var4] = GameWorld.intOr(eg.a(this.field_h[var3_int][var4], -128), var6.field_g);
                 this.field_e = true;
               }
               var4++;
@@ -621,12 +621,12 @@ final class TileMap {
                   stackIn_23_1 = ~(this.field_p[var3_int][var4Lifetime1] & 1);
                   if (stackIn_23_0 == stackIn_23_1) {
                     dupTemp$0 = this.field_p[var3_int];
-                    dupTemp$1 = GameWorld.a(this.field_p[var3_int][var4Lifetime1 + 1], 2);
+                    dupTemp$1 = GameWorld.intOr(this.field_p[var3_int][var4Lifetime1 + 1], 2);
                     arrayValue$2 = this.field_t[var3_int];
                     dupTemp$0[1 + var4Lifetime1] = dupTemp$1;
                     arrayValue$2[1 + var4Lifetime1] = dupTemp$1;
                     dupTemp$3 = this.field_p[var3_int];
-                    dupTemp$4 = GameWorld.a(this.field_p[var3_int][-1 + var4Lifetime1], 4);
+                    dupTemp$4 = GameWorld.intOr(this.field_p[var3_int][-1 + var4Lifetime1], 4);
                     arrayValue$5 = this.field_t[var3_int];
                     dupTemp$3[var4Lifetime1 - 1] = dupTemp$4;
                     arrayValue$5[var4Lifetime1 - 1] = dupTemp$4;
@@ -944,7 +944,7 @@ final class TileMap {
           if (tb.a(-10723, param1)) {
             return false;
           }
-          if (tk.a((byte) 84, param1)) {
+          if (tk.hasInvalidPasswordLength((byte) 84, param1)) {
             return false;
           }
           if (param2.length() == 0) {
@@ -953,7 +953,7 @@ final class TileMap {
           if (param0 > -7) {
             return true;
           }
-          if (lf.a(param2, param1, -7235)) {
+          if (lf.containsForwardOrReversed(param2, param1, -7235)) {
             return false;
           }
           if (ic.a(param1, param2, 0)) {
@@ -1760,7 +1760,7 @@ final class TileMap {
           } else {
             stackIn_4_2 = 0;
           }
-          stackIn_3_0[stackIn_3_1] = GameWorld.a(stackIn_4_2, eg.a(14, this.field_p[param2][param4]));
+          stackIn_3_0[stackIn_3_1] = GameWorld.intOr(stackIn_4_2, eg.a(14, this.field_p[param2][param4]));
           if (param1 != 14365) {
             discarded$0 = this.a((byte) 91, 88, -54);
           }
@@ -1772,7 +1772,7 @@ final class TileMap {
             } else {
               stackIn_14_2 = 1;
             }
-            stackIn_13_0[stackIn_13_1] = GameWorld.a(stackIn_14_2, eg.a(14, this.field_t[param2][param4]));
+            stackIn_13_0[stackIn_13_1] = GameWorld.intOr(stackIn_14_2, eg.a(14, this.field_t[param2][param4]));
           }
           if (this.field_p[param2].length > (1 + param4)) {
             stackIn_21_0 = this.field_p[param2];
@@ -1783,7 +1783,7 @@ final class TileMap {
             } else {
               stackIn_22_3 = 2;
             }
-            stackIn_21_0[stackIn_21_1] = GameWorld.a(stackIn_21_2, stackIn_22_3);
+            stackIn_21_0[stackIn_21_1] = GameWorld.intOr(stackIn_21_2, stackIn_22_3);
             if (!param3) {
               stackIn_28_0 = this.field_t[param2];
               stackIn_28_1 = param4 + 1;
@@ -1793,7 +1793,7 @@ final class TileMap {
               } else {
                 stackIn_29_3 = 2;
               }
-              stackIn_28_0[stackIn_28_1] = GameWorld.a(stackIn_28_2, stackIn_29_3);
+              stackIn_28_0[stackIn_28_1] = GameWorld.intOr(stackIn_28_2, stackIn_29_3);
             }
           }
           if (param4 - 1 > 0) {
@@ -1804,7 +1804,7 @@ final class TileMap {
             } else {
               stackIn_37_2 = 0;
             }
-            stackIn_36_0[stackIn_36_1] = GameWorld.a(stackIn_37_2, eg.a(-5, this.field_p[param2][-1 + param4]));
+            stackIn_36_0[stackIn_36_1] = GameWorld.intOr(stackIn_37_2, eg.a(-5, this.field_p[param2][-1 + param4]));
             if (!param3) {
               stackIn_43_0 = this.field_t[param2];
               stackIn_43_1 = param4 - 1;
@@ -1813,7 +1813,7 @@ final class TileMap {
               } else {
                 stackIn_44_2 = 0;
               }
-              stackIn_43_0[stackIn_43_1] = GameWorld.a(stackIn_44_2, eg.a(-5, this.field_t[param2][-1 + param4]));
+              stackIn_43_0[stackIn_43_1] = GameWorld.intOr(stackIn_44_2, eg.a(-5, this.field_t[param2][-1 + param4]));
             }
           }
           return;

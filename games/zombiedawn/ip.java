@@ -101,7 +101,7 @@ final class ip extends PcmStream {
               }
               var11 = param1.field_E;
               if (0 != this.field_n.field_O[param1.field_z]) {
-                param1.field_E = PcmSampleStream.a(param1.field_s, var11.m(), 0, var11.g());
+                param1.field_E = PcmSampleStream.createAtStepQ8(param1.field_s, var11.m(), 0, var11.g());
                 stackIn_13_0 = this.field_n;
                 stackIn_13_1 = (lf) (param1);
                 stackIn_13_2 = 124;
@@ -109,12 +109,12 @@ final class ip extends PcmStream {
                 ((rj) (Object) stackIn_13_0).a(stackIn_13_1, stackIn_13_2, stackIn_14_3);
                 param1.field_E.b(var9, var11.k());
               } else {
-                param1.field_E = PcmSampleStream.a(param1.field_s, var11.m(), var11.k(), var11.g());
+                param1.field_E = PcmSampleStream.createAtStepQ8(param1.field_s, var11.m(), var11.k(), var11.g());
               }
               if (param1.field_u.field_j[param1.field_i] < 0) {
                 param1.field_E.e(-1);
               }
-              var11.c(var9);
+              var11.fadeOutAndUnlink(var9);
               var11.fill(param0, param2, param5 - param2);
               if (!var11.f()) {
                 continue;
@@ -123,7 +123,7 @@ final class ip extends PcmStream {
             }
           }
           if (param3 != 0) {
-            this.a();
+            this.activity();
           }
           param1.field_E.fill(param0, param2, param4);
           return;
@@ -197,9 +197,9 @@ final class ip extends PcmStream {
             param0.field_D = 1048575 & param1 * var4_int + param0.field_D;
             if (var5 <= param1) {
               if (this.field_n.field_O[param0.field_z] == 0) {
-                param0.field_E = PcmSampleStream.a(param0.field_s, param0.field_E.m(), param0.field_E.k(), param0.field_E.g());
+                param0.field_E = PcmSampleStream.createAtStepQ8(param0.field_s, param0.field_E.m(), param0.field_E.k(), param0.field_E.g());
               } else {
-                param0.field_E = PcmSampleStream.a(param0.field_s, param0.field_E.m(), 0, param0.field_E.g());
+                param0.field_E = PcmSampleStream.createAtStepQ8(param0.field_s, param0.field_E.m(), 0, param0.field_E.g());
                 stackIn_9_0 = this.field_n;
                 stackIn_9_1 = (lf) (param0);
                 stackIn_9_2 = param2 ^ 26145;
@@ -274,12 +274,12 @@ final class ip extends PcmStream {
             var4 = fm.a(param2, -127);
             if (var4 != null &&
               var4.length() >= 1) {
-              if (!vi.a(31153, var4.charAt(0)) &&
-                !vi.a(31153, var4.charAt(-1 + var4.length()))) {
+              if (!vi.isNameSeparator(31153, var4.charAt(0)) &&
+                !vi.isNameSeparator(31153, var4.charAt(-1 + var4.length()))) {
                 var5 = 0;
                 for (var6 = 0; param2.length() > var6; var6++) {
                   var7 = param2.charAt(var6);
-                  if (vi.a(31153, (char) var7)) {
+                  if (vi.isNameSeparator(31153, (char) var7)) {
                     var5++;
                   } else {
                     var5 = 0;
@@ -382,7 +382,7 @@ final class ip extends PcmStream {
         return var3;
     }
 
-    public static void c(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_l = null;
         if (param0 != 10) {
           return;
@@ -417,7 +417,7 @@ final class ip extends PcmStream {
         }
     }
 
-    final int a() {
+    final int activity() {
         return 0;
     }
 

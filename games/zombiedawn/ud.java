@@ -6,7 +6,7 @@ final class ud implements io {
     static String field_a;
     private nh field_b;
 
-    final static qg a(String param0, byte param1, int param2) {
+    final static qg createProxyConnector(String param0, byte param1, int param2) {
         se var3 = null;
         RuntimeException var3_ref = null;
         se stackIn_3_0 = null;
@@ -65,8 +65,8 @@ final class ud implements io {
             this.field_b.field_L.drawString(var9, 2 + var6_int, (this.field_b.field_L.field_I + param3.field_n >> 1) + (var7 - 1), 10000536, -1);
             if (this.field_b.e(param0 ^ -16759476) &&
               var9.startsWith(this.field_b.field_U)) {
-              var10 = this.field_b.field_L.b(this.field_b.field_U);
-              Rasterizer.a(2 + var6_int, 2 + var7, var10, -4 + param3.field_n, 2188450, 100);
+              var10 = this.field_b.field_L.textWidth(this.field_b.field_U);
+              Rasterizer.fillRectangleBlended(2 + var6_int, 2 + var7, var10, -4 + param3.field_n, 2188450, 100);
             }
           }
           Rasterizer.resetClip();
@@ -98,7 +98,7 @@ final class ud implements io {
         try {
           var3 = new v(0, 0, 0);
           if (param2 != -27837) {
-            ud.a((byte) -120);
+            ud.releaseStatics((byte) -120);
           }
           var3.field_a = param0.field_a;
           var3.field_h = param0.field_h;
@@ -130,7 +130,7 @@ final class ud implements io {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_a = null;
         if (param0 != -105) {
           field_c = (java.awt.Color) null;

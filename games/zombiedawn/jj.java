@@ -11,7 +11,7 @@ final class jj extends WorldObject {
     static IntrusiveDeque field_D;
     private int field_I;
 
-    public static void j(int param0) {
+    public static void releaseStatics(int param0) {
         field_G = null;
         field_H = null;
         field_D = null;
@@ -82,13 +82,13 @@ final class jj extends WorldObject {
           Camera.field_o = new Sprite(512, 512);
           Camera.field_o.setAsRenderTarget();
           for (var1_int = 256; var1_int > 0; var1_int--) {
-            Rasterizer.g(256, 256, var1_int, -var1_int + 256);
+            Rasterizer.fillCircle(256, 256, var1_int, -var1_int + 256);
           }
           if (param0) {
-            jj.j(115);
-            cn.field_f.b(109);
+            jj.releaseStatics(115);
+            cn.field_f.makeRasterTarget(109);
           } else {
-            cn.field_f.b(109);
+            cn.field_f.makeRasterTarget(109);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -234,7 +234,7 @@ final class u {
         }
         if (0 != this.field_b) {
           if (!this.field_c) {
-            this.field_i[this.field_n].b(var3, nh.field_P - (this.field_l >> 4));
+            this.field_i[this.field_n].drawTransparent(var3, nh.field_P - (this.field_l >> 4));
             return;
           }
           this.field_i[this.field_n].drawMirrored(var3, -(this.field_l >> 4) + nh.field_P);
@@ -244,10 +244,10 @@ final class u {
         if (640 >= bd.field_e) {
           return;
         }
-        this.field_i[this.field_n].b(640 + this.field_j, -(this.field_l >> 4) + nh.field_P);
+        this.field_i[this.field_n].drawTransparent(640 + this.field_j, -(this.field_l >> 4) + nh.field_P);
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 < -2) {
           field_f = null;
           field_d = null;

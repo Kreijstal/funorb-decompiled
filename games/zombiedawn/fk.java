@@ -33,7 +33,7 @@ final class fk extends hp implements oa, hh, ri {
         return kl.a(this.field_P.field_o, 640, this, this.field_N.field_o, var2, this.field_G.field_o, this.field_O.field_x);
     }
 
-    final boolean a(int param0, int param1, UiWidget param2, char param3) {
+    final boolean requestKeyboardFocus(int param0, int param1, UiWidget param2, char param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         boolean stackIn_5_0 = false;
@@ -43,7 +43,7 @@ final class fk extends hp implements oa, hh, ri {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (super.a(-120, param1, param2, param3)) {
+          if (super.requestKeyboardFocus(-120, param1, param2, param3)) {
             return true;
           }
           var5_int = 61 / ((-83 - param0) / 32);
@@ -205,7 +205,7 @@ final class fk extends hp implements oa, hh, ri {
         }
     }
 
-    public static void e(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_K = null;
         if (param0 != -31) {
           return;
@@ -262,7 +262,7 @@ final class fk extends hp implements oa, hh, ri {
         }
     }
 
-    public final void a(int param0, int param1, an param2, int param3, int param4) {
+    public final void onButtonActivated(int param0, int param1, an param2, int param3, int param4) {
         boolean discarded$1 = false;
         RuntimeException var6 = null;
         RuntimeException stackIn_9_0 = null;

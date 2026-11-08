@@ -56,7 +56,7 @@ final class md extends sg implements hh {
         }
     }
 
-    public static void n(int param0) {
+    public static void releaseStatics(int param0) {
         field_qb = null;
         if (param0 != 54) {
           return;
@@ -78,7 +78,7 @@ final class md extends sg implements hh {
         var6 = ZombieDawn.field_J;
         try {
           if (param0) {
-            md.n(-43);
+            md.releaseStatics(-43);
           }
           this.field_rb = true;
           if (param1.field_b) {
@@ -182,7 +182,7 @@ final class md extends sg implements hh {
         }
     }
 
-    public final void a(int param0, int param1, an param2, int param3, int param4) {
+    public final void onButtonActivated(int param0, int param1, an param2, int param3, int param4) {
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;

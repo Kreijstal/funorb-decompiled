@@ -179,7 +179,7 @@ final class fh extends hp implements ri, hh {
         }
     }
 
-    final boolean a(int param0, int param1, UiWidget param2, char param3) {
+    final boolean requestKeyboardFocus(int param0, int param1, UiWidget param2, char param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         boolean stackIn_5_0 = false;
@@ -190,7 +190,7 @@ final class fh extends hp implements ri, hh {
         RuntimeException decompiledCaughtException = null;
         try {
           var5_int = -90 % ((param0 + 83) / 32);
-          if (super.a(-119, param1, param2, param3)) {
+          if (super.requestKeyboardFocus(-119, param1, param2, param3)) {
             return true;
           }
           if (param1 == 98) {
@@ -270,8 +270,8 @@ final class fh extends hp implements ri, hh {
         ei.a(0, 0, new int[]{19}, 12, true, -14237, 0, 0);
         ei.a(240, 400, new int[]{5, 39, 45, 46}, 13, false, -14237, 160, 428);
         oe.b(param0 ^ 1);
-        ff.field_b = sg.field_jb.b(vk.field_b[12]);
-        int var3 = sg.field_jb.b(vk.field_b[13]);
+        ff.field_b = sg.field_jb.textWidth(vk.field_b[12]);
+        int var3 = sg.field_jb.textWidth(vk.field_b[13]);
         if (!(var3 <= ff.field_b)) {
           ff.field_b = var3;
         }
@@ -353,7 +353,7 @@ final class fh extends hp implements ri, hh {
         int var2 = -91 % ((39 - param0) / 49);
     }
 
-    public final void a(int param0, int param1, an param2, int param3, int param4) {
+    public final void onButtonActivated(int param0, int param1, an param2, int param3, int param4) {
         RuntimeException var6 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;

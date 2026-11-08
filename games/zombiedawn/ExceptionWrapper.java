@@ -27,7 +27,7 @@ final class ExceptionWrapper implements Runnable {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 <= 37) {
-            ExceptionWrapper.a((byte) -26);
+            ExceptionWrapper.releaseStatics((byte) -26);
           }
           var5 = new wd();
           var5.field_x = param2;
@@ -224,7 +224,7 @@ final class ExceptionWrapper implements Runnable {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_j = (byte[][]) null;
         field_f = null;
         field_d = null;

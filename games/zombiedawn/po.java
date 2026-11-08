@@ -20,8 +20,8 @@ final class po extends Human {
         int var6 = 0;
         var6 = ZombieDawn.field_J;
         try {
-          Rasterizer.d(param0.worldToScreenX(this.getX(true), (byte) -124), param0.worldToScreenY(this.getY(237239984), 0), 250, 16711680);
-          Rasterizer.d(param0.worldToScreenX(this.getX(true), (byte) -79), param0.worldToScreenY(this.getY(237239984), param1 - 5060), 55, 16711935);
+          Rasterizer.drawCircleOutline(param0.worldToScreenX(this.getX(true), (byte) -124), param0.worldToScreenY(this.getY(237239984), 0), 250, 16711680);
+          Rasterizer.drawCircleOutline(param0.worldToScreenX(this.getX(true), (byte) -79), param0.worldToScreenY(this.getY(237239984), param1 - 5060), 55, 16711935);
           var3_int = 0;
           do {
             if (!(this.field_ub > var3_int)) {
@@ -37,7 +37,7 @@ final class po extends Human {
             var3_int++;
           } while (var6 == 0);
           if (null != this.field_yb) {
-            Rasterizer.e(param0.worldToScreenX(this.getX(true), (byte) -122), param0.worldToScreenY(this.getY(237239984), 0), param0.worldToScreenX(this.field_yb.getX(true), (byte) -60), param0.worldToScreenY(this.field_yb.getY(param1 + 237234924), 0), 65280);
+            Rasterizer.drawLine(param0.worldToScreenX(this.getX(true), (byte) -122), param0.worldToScreenY(this.getY(237239984), 0), param0.worldToScreenX(this.field_yb.getX(true), (byte) -60), param0.worldToScreenY(this.field_yb.getY(param1 + 237234924), 0), 65280);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

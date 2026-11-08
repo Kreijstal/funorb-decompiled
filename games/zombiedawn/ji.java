@@ -61,7 +61,7 @@ final class ji {
         return this.field_b;
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = null;
         int var1 = 78 % ((-75 - param0) / 36);
         field_c = null;

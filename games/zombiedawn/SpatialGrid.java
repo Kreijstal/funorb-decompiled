@@ -213,7 +213,7 @@ final class SpatialGrid {
           }
           var5 = this.a(true, param0, param3, 0);
           if (var5 != null) {
-            var5.a((byte) 65, param2);
+            var5.addLast((byte) 65, param2);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -230,7 +230,7 @@ final class SpatialGrid {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_g = null;
         int var1 = 6 / ((param0 + 48) / 33);
     }

@@ -51,9 +51,9 @@ class wc extends qk {
         }
     }
 
-    public static void o(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 != -73) {
-          wc.o((byte) -35);
+          wc.releaseStatics((byte) -35);
         }
         field_Pb = null;
         field_Nb = null;
@@ -87,15 +87,15 @@ class wc extends qk {
           if (param0 > -76) {
             this.g(30);
           }
-          ld.field_l[this.field_t][var6].b(-24 + var3_int, var5 - 48);
-          SecondaryNodeDequeIterator.field_h.b(-24 + var3_int, -44 + var4);
+          ld.field_l[this.field_t][var6].drawTransparent(-24 + var3_int, var5 - 48);
+          SecondaryNodeDequeIterator.field_h.drawTransparent(-24 + var3_int, -44 + var4);
           if (this.field_Gb > 0) {
             this.b(var3_int - 3, (byte) -99, var4);
           }
           if (b.field_h) {
-            Rasterizer.d(12 + var3_int, var4 + 24, 260, 16711680);
-            Rasterizer.e(var3_int, var4, var3_int + 260, var4 + 260, 16711680);
-            Rasterizer.e(var3_int, var4, var3_int - 260, 260 + var4, 16711680);
+            Rasterizer.drawCircleOutline(12 + var3_int, var4 + 24, 260, 16711680);
+            Rasterizer.drawLine(var3_int, var4, var3_int + 260, var4 + 260, 16711680);
+            Rasterizer.drawLine(var3_int, var4, var3_int - 260, 260 + var4, 16711680);
             bj.field_q.drawString(Integer.toString(this.field_G), var3_int, var4, 16777215, 0);
             bj.field_q.drawString(Integer.toString(this.field_N), 20 + var3_int, var4, 16777215, 0);
             bj.field_q.drawString(Integer.toString(this.state), var3_int, var4 - 20, 16777215, 0);
@@ -141,7 +141,7 @@ class wc extends qk {
             param0[var5 + 1] = var4;
           }
           if (param1 != 0) {
-            wc.o((byte) 86);
+            wc.releaseStatics((byte) 86);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

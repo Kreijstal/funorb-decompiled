@@ -34,7 +34,7 @@ final class vi {
         }
     }
 
-    final static boolean a(int param0, char param1) {
+    final static boolean isNameSeparator(int param0, char param1) {
         if (param0 != 31153) {
           return false;
         }
@@ -53,7 +53,7 @@ final class vi {
         return true;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 >= -11) {
           return;
         }

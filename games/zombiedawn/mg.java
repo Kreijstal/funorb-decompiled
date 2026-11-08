@@ -11,8 +11,8 @@ final class mg extends IntrusiveNode {
         int var2 = ZombieDawn.field_J;
         hn var1Lifetime1;
         try {
-          ExceptionWrapper.field_d.g();
-          cf.field_fb.g();
+          ExceptionWrapper.field_d.serviceOutput();
+          cf.field_fb.serviceOutput();
           if (param0 > -30) {
             field_j = 75;
           }
@@ -37,7 +37,7 @@ final class mg extends IntrusiveNode {
             }
           }
           if (uh.field_o != null &&
-            !uh.field_o.c((byte) -34)) {
+            !uh.field_o.isReady((byte) -34)) {
             te.field_kb = null;
             return;
           }

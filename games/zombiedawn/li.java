@@ -16,7 +16,7 @@ final class li implements Runnable {
     static v[] field_h;
     private int field_c;
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         int var1 = 121 / ((30 - param0) / 34);
         field_i = null;
         field_f = null;
@@ -139,7 +139,7 @@ final class li implements Runnable {
               stackIn_11_0 = -var4 + var2_int;
             }
             var6 = stackIn_11_0 + 8;
-            Rasterizer.a(var5, -1 + var3, -var5 + var6, 3, 0, 128);
+            Rasterizer.fillRectangleBlended(var5, -1 + var3, -var5 + var6, 3, 0, 128);
             for (var7 = 0; var7 < 100; var7++) {
               if (0 < pl.field_t[var7].field_H) {
                 var8 = param1.worldToScreenX(pl.field_t[var7].getX(true), (byte) -108) + 4;
@@ -186,7 +186,7 @@ final class li implements Runnable {
               break;
             }
             if (this.field_a.position == this.field_a.payload.length) {
-              throw li.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + this.field_a.payload.length + " " + this.field_d));
+              throw li.<RuntimeException>rethrowUnchecked(new Exception("HG1: " + this.field_a.payload.length + " " + this.field_d));
             }
             var1 = this;
             synchronized (var1) {
@@ -212,8 +212,8 @@ final class li implements Runnable {
     }
 
     final static void a(boolean param0) {
-        Rasterizer.a(vh.field_b, id.field_M + 84, 640, 335, 0, 128);
-        hk.field_H.b(vh.field_b, id.field_M + 84);
+        Rasterizer.fillRectangleBlended(vh.field_b, id.field_M + 84, 640, 335, 0, 128);
+        hk.field_H.drawTransparent(vh.field_b, id.field_M + 84);
         if (param0) {
           field_h = (v[]) null;
         }
@@ -273,7 +273,7 @@ final class li implements Runnable {
     }
 
     @SuppressWarnings("unchecked")
-    private static <T extends Throwable> RuntimeException $cfr$sneakyThrow(Throwable throwable) throws T {
+    private static <T extends Throwable> RuntimeException rethrowUnchecked(Throwable throwable) throws T {
         throw (T) throwable;
     }
 }

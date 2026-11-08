@@ -125,7 +125,7 @@ final class ih extends hp implements ok, hh {
           this.field_j = 15;
           var7 = ia.field_e;
           if (this.field_P != null) {
-            this.field_j = this.field_j + (5 + var7.b(this.field_P, -40 + this.field_i, var7.field_I));
+            this.field_j = this.field_j + (5 + var7.paragraphHeight(this.field_P, -40 + this.field_i, var7.field_I));
           }
           var8 = qi.field_C;
           var9 = ne.a(hc.a(0), 0);
@@ -211,7 +211,7 @@ final class ih extends hp implements ok, hh {
 
     final void a(int param0, int param1, int param2, int param3) {
         if (this.field_P != null) {
-          ia.field_e.a(this.field_P, 20 + (param2 + this.field_k), param0 - (-this.field_j - 15), this.field_i - 40, this.field_n, 16777215, -1, 1, 0, ia.field_e.field_I);
+          ia.field_e.drawParagraph(this.field_P, 20 + (param2 + this.field_k), param0 - (-this.field_j - 15), this.field_i - 40, this.field_n, 16777215, -1, 1, 0, ia.field_e.field_I);
         }
         if (this.field_K != null) {
           Rasterizer.drawHorizontalLine(10 + param2, param0 + 134, -20 + this.field_i, 4210752);
@@ -261,7 +261,7 @@ final class ih extends hp implements ok, hh {
         RuntimeException var3 = null;
         try {
           if (param0 == this.field_N) {
-            this.field_M.a((byte) 125, (UiWidget) (this));
+            this.field_M.focusNext((byte) 125, (UiWidget) (this));
           }
           var3_int = -126 / ((param1 - 35) / 38);
           if (this.field_M == param0) {
@@ -282,7 +282,7 @@ final class ih extends hp implements ok, hh {
         }
     }
 
-    public final void a(int param0, int param1, an param2, int param3, int param4) {
+    public final void onButtonActivated(int param0, int param1, an param2, int param3, int param4) {
         int var7 = 0;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
@@ -328,7 +328,7 @@ final class ih extends hp implements ok, hh {
         }
     }
 
-    final boolean a(int param0, int param1, UiWidget param2, char param3) {
+    final boolean requestKeyboardFocus(int param0, int param1, UiWidget param2, char param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         boolean stackIn_5_0 = false;
@@ -338,7 +338,7 @@ final class ih extends hp implements ok, hh {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (super.a(-123, param1, param2, param3)) {
+          if (super.requestKeyboardFocus(-123, param1, param2, param3)) {
             return true;
           }
           if (param1 == 98) {
@@ -376,7 +376,7 @@ final class ih extends hp implements ok, hh {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_T = null;
         if (param0 != -31608) {
           ih.a(120, -75, true);

@@ -14,7 +14,7 @@ final class wg extends IntrusiveNode {
     static byte[][][] field_j;
     int field_k;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         int var1 = 74 % ((-19 - param0) / 33);
         field_l = null;
         field_o = null;
@@ -29,7 +29,7 @@ final class wg extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 != -28490) {
-            wg.a(-121);
+            wg.releaseStatics(-121);
           }
           if (ph.a(param3, 31043, param0, param1)) {
             return fe.b(true);

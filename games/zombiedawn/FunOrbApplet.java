@@ -126,7 +126,7 @@ abstract class FunOrbApplet extends GameApplet {
         }
     }
 
-    private final void g(int param0) {
+    private final void initializePacketLengths(int param0) {
         wh.field_d[10] = -1;
         wh.field_d[6] = -2;
         wh.field_d[12] = -1;
@@ -203,7 +203,7 @@ abstract class FunOrbApplet extends GameApplet {
             String var3 = (String) null;
             this.a(-31, 70, (String) null);
           }
-          Path.field_e = pd.a(-22826) + 15000L;
+          Path.field_e = pd.monotonicTimeMillis(-22826) + 15000L;
           return var2;
         }
         if (fl.field_a == 11 &&
@@ -372,7 +372,7 @@ abstract class FunOrbApplet extends GameApplet {
             Path.a(10, 2, qb.field_f);
             rh.a(-110);
             ja.field_b = true;
-            Path.field_e = 15000L + pd.a(-22826);
+            Path.field_e = 15000L + pd.monotonicTimeMillis(-22826);
           }
         }
         if (co.field_b == -1 ||
@@ -388,7 +388,7 @@ abstract class FunOrbApplet extends GameApplet {
           }
           if (co.field_b != -1 &&
             co.field_b != 0) {
-            Path.field_e = 15000L + pd.a(-22826);
+            Path.field_e = 15000L + pd.monotonicTimeMillis(-22826);
           }
         }
         if (co.field_b != -1 &&
@@ -438,7 +438,7 @@ abstract class FunOrbApplet extends GameApplet {
         if ((co.field_b != -1 &&
           co.field_b != 0 ||
           dn.i(-19301)) &&
-          pd.a(-22826) >= Path.field_e) {
+          pd.monotonicTimeMillis(-22826) >= Path.field_e) {
           ja.field_b = false;
           if (-1 != co.field_b &&
             0 != co.field_b) {
@@ -749,7 +749,7 @@ abstract class FunOrbApplet extends GameApplet {
         ho.field_b = param2;
         jh.field_k = param7;
         mp.field_d = param5;
-        this.g(17);
+        this.initializePacketLengths(17);
         BufferedSocket.b(-23148);
     }
 

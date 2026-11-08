@@ -96,7 +96,7 @@ final class lg {
         this(640, 480, 1280, 1024, 640, 480, 122, 16, param0);
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 != 49) {
           return;
         }

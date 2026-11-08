@@ -430,7 +430,7 @@ final class pi extends dh implements java.awt.image.ImageProducer, java.awt.imag
     pi() {
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         field_k = null;
         field_l = null;
         if (param0 != -1) {
@@ -526,7 +526,7 @@ final class pi extends dh implements java.awt.image.ImageProducer, java.awt.imag
           param2.prepareImage(this.field_f, (java.awt.image.ImageObserver) (this));
           this.a((byte) -128);
           param2.prepareImage(this.field_f, (java.awt.image.ImageObserver) (this));
-          this.b(-127);
+          this.makeRasterTarget(-127);
         } catch (RuntimeException runtimeException) {
           throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "pi.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }

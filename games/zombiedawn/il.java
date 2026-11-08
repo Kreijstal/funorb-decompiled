@@ -5,10 +5,10 @@ final class il {
     static String field_a;
     private static String field_z;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = null;
         if (param0 != 4466) {
-          il.a(87);
+          il.releaseStatics(87);
         }
     }
 

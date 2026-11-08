@@ -37,7 +37,7 @@ final class o {
           this.field_b = new Sprite(622, 47);
           ki.a((byte) -84, this.field_b);
           int var2 = 76 % ((param0 + 45) / 48);
-          Rasterizer.f(0, 0, 622, 47, 4540749, 65793);
+          Rasterizer.fillVerticalGradient(0, 0, 622, 47, 4540749, 65793);
           var3 = 16448250;
           var4 = 10068666;
           var16 = gk.a(var4, -107, var3);
@@ -50,8 +50,8 @@ final class o {
           var10 = var12;
           var6 = new Sprite(121, 122);
           ki.a((byte) -127, var6);
-          Rasterizer.f(0, 0, var6.field_w, var6.field_t / 2, 16180917, 16306250);
-          Rasterizer.f(0, var6.field_t / 2, var6.field_w, var6.field_t, 16306250, 15568919);
+          Rasterizer.fillVerticalGradient(0, 0, var6.field_w, var6.field_t / 2, 16180917, 16306250);
+          Rasterizer.fillVerticalGradient(0, var6.field_t / 2, var6.field_w, var6.field_t, 16306250, 15568919);
           var7 = an.field_y;
           var8 = se.field_i;
           this.a(var7, 0, (byte) 63, var6, var14, -16, ui.field_b, var6.field_w, 0.5f, var6.field_t);
@@ -60,7 +60,7 @@ final class o {
           pa.a(-21189);
           this.field_p = new Sprite(121, 122);
           ki.a((byte) -121, this.field_p);
-          var6.e(this.field_p.field_w / 2, this.field_p.field_t / 2, -2048, 4096);
+          var6.drawRotatedAboutCenter(this.field_p.field_w / 2, this.field_p.field_t / 2, -2048, 4096);
           pa.a(-21189);
           return;
         }
@@ -77,17 +77,17 @@ final class o {
         var5 = ZombieDawn.field_J;
         if (this.field_m == null) {
           if (tc.field_r != null) {
-            tc.field_r.a(ql.field_f, 9, 58, 622, 196, 16754688, -1, 1, 1, 0);
+            tc.field_r.drawParagraph(ql.field_f, 9, 58, 622, 196, 16754688, -1, 1, 1, 0);
           }
           return;
         }
         var6 = this.field_m[this.field_c];
         var2 = var6;
         if (var2 != null) {
-          var6.a(9, 58);
+          var6.draw(9, 58);
         } else {
           if (tc.field_r != null) {
-            tc.field_r.a(ql.field_f, 9, 58, 622, 196, 16754688, -1, 1, 1, 0);
+            tc.field_r.drawParagraph(ql.field_f, 9, 58, 622, 196, 16754688, -1, 1, 1, 0);
           }
         }
         if (this.field_i < ij.field_I) {
@@ -215,11 +215,11 @@ final class o {
             this.field_m = (v[]) null;
           }
           ki.a((byte) -83, var13);
-          param3.a((int)((float)(-param1) / param8), (int)((float)(-param5) / param8), (int)((float)param3.field_w / param8), (int)((float)param3.field_t / param8));
+          param3.drawScaled((int)((float)(-param1) / param8), (int)((float)(-param5) / param8), (int)((float)param3.field_w / param8), (int)((float)param3.field_t / param8));
           this.a(-1, 0, var11_int, 0, var12, param6, param4, param0);
           pa.a(-21189);
           ki.a((byte) -91, param3);
-          var13.d(param1, param5, param7, param9);
+          var13.drawScaledAveraged(param1, param5, param7, param9);
           pa.a(-21189);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -274,13 +274,13 @@ final class o {
         int var2Lifetime2;
         int var3Lifetime1;
         var4 = ZombieDawn.field_J;
-        Rasterizer.f(9, 9, 622, 47, 4540749, 65793);
+        Rasterizer.fillVerticalGradient(9, 9, 622, 47, 4540749, 65793);
         Rasterizer.fillRect(9, 257, 622, 33, 2585);
-        Rasterizer.f(9, 265, 622, 11, 2585, 1515566);
+        Rasterizer.fillVerticalGradient(9, 265, 622, 11, 2585, 1515566);
         var2 = 0;
         var3 = 14;
         while (var2 < 4) {
-          Rasterizer.f(var3, 331, 117, 90, 460551, 3881787);
+          Rasterizer.fillVerticalGradient(var3, 331, 117, 90, 460551, 3881787);
           var2++;
           var3 += 121;
         }
@@ -291,7 +291,7 @@ final class o {
         var2Lifetime1 = 0;
         var3Lifetime1 = 299;
         while (var2Lifetime1 < 2) {
-          Rasterizer.f(508, var3Lifetime1, 127, 42, 1130115, 3365268);
+          Rasterizer.fillVerticalGradient(508, var3Lifetime1, 127, 42, 1130115, 3365268);
           Rasterizer.fillRect(508, var3Lifetime1 + 42, 127, 42, 12410);
           var3Lifetime1 += 91;
           var2Lifetime1++;
@@ -320,11 +320,11 @@ final class o {
         if (null == li.field_i) {
           return;
         }
-        this.field_p.b(376, 339);
-        this.field_b.b(9, 9);
-        li.field_i.a(0, 0);
+        this.field_p.drawTransparent(376, 339);
+        this.field_b.drawTransparent(9, 9);
+        li.field_i.draw(0, 0);
         if (null != nl.field_r) {
-          nl.field_r.b(9, 257);
+          nl.field_r.drawTransparent(9, 257);
           nl.field_r.drawMirrored(558, 257);
           if (257 < ei.field_K &&
             ei.field_K < 290) {
@@ -332,41 +332,41 @@ final class o {
             if (var2Lifetime2 > 0) {
               if (ha.field_b > 9 &&
                 ha.field_b < 82) {
-                nl.field_r.b(8, 256, var2Lifetime2);
-                nl.field_r.b(10, 256, var2Lifetime2);
-                nl.field_r.b(8, 258, var2Lifetime2);
-                nl.field_r.b(10, 258, var2Lifetime2);
+                nl.field_r.drawAdditive(8, 256, var2Lifetime2);
+                nl.field_r.drawAdditive(10, 256, var2Lifetime2);
+                nl.field_r.drawAdditive(8, 258, var2Lifetime2);
+                nl.field_r.drawAdditive(10, 258, var2Lifetime2);
               } else {
                 if (558 < ha.field_b &&
                   ha.field_b < 631) {
-                  nl.field_r.c();
-                  nl.field_r.b(557, 256, var2Lifetime2);
-                  nl.field_r.b(559, 256, var2Lifetime2);
-                  nl.field_r.b(557, 258, var2Lifetime2);
-                  nl.field_r.b(559, 258, var2Lifetime2);
-                  nl.field_r.c();
+                  nl.field_r.flipHorizontal();
+                  nl.field_r.drawAdditive(557, 256, var2Lifetime2);
+                  nl.field_r.drawAdditive(559, 256, var2Lifetime2);
+                  nl.field_r.drawAdditive(557, 258, var2Lifetime2);
+                  nl.field_r.drawAdditive(559, 258, var2Lifetime2);
+                  nl.field_r.flipHorizontal();
                 }
               }
             }
           }
         }
-        this.field_g.b(16, 302);
-        tc.field_r.a(this.field_k[this.field_c], 9, 257, 622, 33, 16754688, -1, 1, 1, 0);
-        ck.field_i.b(30, 330);
-        tc.field_r.a(dl.field_a[0], 17, 428, 111, 35, 16754688, -1, 1, 1, 0);
-        tc.field_r.a(dl.field_a[1], 138, 428, 111, 35, 16754688, -1, 1, 1, 0);
-        tc.field_r.a(dl.field_a[2], 259, 428, 111, 35, 16754688, -1, 1, 1, 0);
-        bb.field_c.b(508 + (127 - bb.field_c.field_r) / 2, 315);
+        this.field_g.drawTransparent(16, 302);
+        tc.field_r.drawParagraph(this.field_k[this.field_c], 9, 257, 622, 33, 16754688, -1, 1, 1, 0);
+        ck.field_i.drawTransparent(30, 330);
+        tc.field_r.drawParagraph(dl.field_a[0], 17, 428, 111, 35, 16754688, -1, 1, 1, 0);
+        tc.field_r.drawParagraph(dl.field_a[1], 138, 428, 111, 35, 16754688, -1, 1, 1, 0);
+        tc.field_r.drawParagraph(dl.field_a[2], 259, 428, 111, 35, 16754688, -1, 1, 1, 0);
+        bb.field_c.drawTransparent(508 + (127 - bb.field_c.field_r) / 2, 315);
         if (this.field_a.field_d == 0) {
-          ng.field_c[0].b(508, 299);
+          ng.field_c[0].drawTransparent(508, 299);
         } else {
           if (this.field_a.field_d == 1) {
-            ng.field_c[1].b(508, 387);
+            ng.field_c[1].drawTransparent(508, 387);
           }
         }
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_l = null;
         field_n = null;
         field_d = null;
@@ -540,7 +540,7 @@ final class o {
             Rasterizer.setClip(param3, var9_int, param2, var9_int + 1);
             var10 = var9_int * param6.length / param4;
             var11 = param6[param6.length + (-var10 - 1)];
-            param5.a(param7, param3, param1, param2, param4, var11, -1, 1, 1, 0);
+            param5.drawParagraph(param7, param3, param1, param2, param4, var11, -1, 1, 1, 0);
           }
           pa.a(-21189);
         } catch (RuntimeException runtimeException) {

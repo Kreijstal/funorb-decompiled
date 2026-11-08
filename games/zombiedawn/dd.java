@@ -68,7 +68,7 @@ final class dd {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 == 68) {
           field_a = null;
           field_c = null;

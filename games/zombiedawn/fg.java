@@ -66,75 +66,75 @@ final class fg extends al {
             }
             var13 = 24;
             var12 = var9 + 20;
-            IntrusiveNode.field_a[1].b(-50 + var6, -8 + var12);
+            IntrusiveNode.field_a[1].drawTransparent(-50 + var6, -8 + var12);
             if (var8 != 0) {
               var13 = 20;
             }
-            var12 = var12 + (bj.field_q.a(gj.field_g[1][0], var6, var12, var11, 50, 16777215, 0, 0, 0, var2) * var2 + var13);
+            var12 = var12 + (bj.field_q.drawParagraph(gj.field_g[1][0], var6, var12, var11, 50, 16777215, 0, 0, 0, var2) * var2 + var13);
             var14 = var6 - 95;
             var15 = var12 - 20;
-            var12 = var12 + (bj.field_q.a(gj.field_g[1][1], var6, var12, var11, 50, 16777215, 0, 0, 0, var2) * var2 + var13);
-            lb.field_eb[3].b(var6 - 31, var12 + 3);
-            IntrusiveNode.field_a[3].b(-20 + var6, var12 + 15);
-            var12 = var12 + (var13 + bj.field_q.a(gj.field_g[1][2], var6, var12, var11, 50, 16777215, 0, 0, 0, var2) * var2);
-            IntrusiveNode.field_a[5].b(-46 + var6, var12 + 2);
-            var12 = var12 + (bj.field_q.a(gj.field_g[1][3], var6, var12, var11, 50, 16777215, 0, 0, 0, var2) * var2 + var13);
-            IntrusiveNode.field_a[6].b(var6 - 60, var12 - 7);
-            var12 = var12 + (var13 + var2 * bj.field_q.a(gj.field_g[1][4], var6, var12, var11, 50, 16777215, 0, 0, 0, var2));
-            IntrusiveNode.field_a[0].b(var14, var15);
+            var12 = var12 + (bj.field_q.drawParagraph(gj.field_g[1][1], var6, var12, var11, 50, 16777215, 0, 0, 0, var2) * var2 + var13);
+            lb.field_eb[3].drawTransparent(var6 - 31, var12 + 3);
+            IntrusiveNode.field_a[3].drawTransparent(-20 + var6, var12 + 15);
+            var12 = var12 + (var13 + bj.field_q.drawParagraph(gj.field_g[1][2], var6, var12, var11, 50, 16777215, 0, 0, 0, var2) * var2);
+            IntrusiveNode.field_a[5].drawTransparent(-46 + var6, var12 + 2);
+            var12 = var12 + (bj.field_q.drawParagraph(gj.field_g[1][3], var6, var12, var11, 50, 16777215, 0, 0, 0, var2) * var2 + var13);
+            IntrusiveNode.field_a[6].drawTransparent(var6 - 60, var12 - 7);
+            var12 = var12 + (var13 + var2 * bj.field_q.drawParagraph(gj.field_g[1][4], var6, var12, var11, 50, 16777215, 0, 0, 0, var2));
+            IntrusiveNode.field_a[0].drawTransparent(var14, var15);
             DualLinkNode.field_k[0].e(var14 - 8, -4 + var15, 128);
             DualLinkNode.field_k[0].e(13 + var14, var15 + 14, 128);
             DualLinkNode.field_k[0].e(var14 + 41, var15 + 11, 128);
             Rasterizer.drawRectOutline(var14 + 3, 14 + var15, 77, 47, 16777215);
-            Rasterizer.b(var14 + 4, 15 + var15, 75, 45, 10066431, 32);
-            Rasterizer.a(var14 + 5, var15 + 16, 73, 43, 3355647, 32);
+            Rasterizer.drawRectangleOutlineAlpha(var14 + 4, 15 + var15, 75, 45, 10066431, 32);
+            Rasterizer.fillRectangleBlended(var14 + 5, var15 + 16, 73, 43, 3355647, 32);
           } else {
             if (var20 == 2) {
               var13 = 32;
               var12 = var9 + 40;
               var2 -= 4;
-              lb.field_eb[8].b(var6 - 36, 4 + var12);
-              IntrusiveNode.field_a[3].b(-25 + var6, var12 + 15);
-              var12 = var12 + (var13 + var2 * bj.field_q.a(gj.field_g[this.field_n][0], var6, var12, 340, 50, 16777215, 0, 0, 0, var2));
-              IntrusiveNode.field_a[4].b(-110 + var6, var12 - 10);
+              lb.field_eb[8].drawTransparent(var6 - 36, 4 + var12);
+              IntrusiveNode.field_a[3].drawTransparent(-25 + var6, var12 + 15);
+              var12 = var12 + (var13 + var2 * bj.field_q.drawParagraph(gj.field_g[this.field_n][0], var6, var12, 340, 50, 16777215, 0, 0, 0, var2));
+              IntrusiveNode.field_a[4].drawTransparent(-110 + var6, var12 - 10);
               DualLinkNode.field_k[0].e(var6 - 54, var12 - 3, 128);
-              IntrusiveNode.field_a[3].b(-25 + var6, var12 + 30);
-              var12 = var12 + (var13 + bj.field_q.a(gj.field_g[this.field_n][1], var6, var12, 340, 50, 16777215, 0, 0, 0, var2) * var2);
-              IntrusiveNode.field_a[7].b(-63 + var6, 10 + var12);
-              var12 = var12 + (var13 + var2 * bj.field_q.a(gj.field_g[this.field_n][2], var6, var12, 340, 50, 16777215, 0, 0, 0, var2));
-              IntrusiveNode.field_a[9].b(var6 - 93, var12 + 10);
-              var12 = var12 + (var13 + var2 * bj.field_q.a(gj.field_g[this.field_n][3], var6, var12, 340, 50, 16777215, 0, 0, 0, var2));
+              IntrusiveNode.field_a[3].drawTransparent(-25 + var6, var12 + 30);
+              var12 = var12 + (var13 + bj.field_q.drawParagraph(gj.field_g[this.field_n][1], var6, var12, 340, 50, 16777215, 0, 0, 0, var2) * var2);
+              IntrusiveNode.field_a[7].drawTransparent(-63 + var6, 10 + var12);
+              var12 = var12 + (var13 + var2 * bj.field_q.drawParagraph(gj.field_g[this.field_n][2], var6, var12, 340, 50, 16777215, 0, 0, 0, var2));
+              IntrusiveNode.field_a[9].drawTransparent(var6 - 93, var12 + 10);
+              var12 = var12 + (var13 + var2 * bj.field_q.drawParagraph(gj.field_g[this.field_n][3], var6, var12, 340, 50, 16777215, 0, 0, 0, var2));
             } else {
               if (var20 != 3) {
                 if (var20 == 4) {
-                  var4 = bj.field_q.a(gj.field_g[this.field_n][0], var10, var9 + 20, var3, 440, 16777215, 0, 0, 0, var2);
+                  var4 = bj.field_q.drawParagraph(gj.field_g[this.field_n][0], var10, var9 + 20, var3, 440, 16777215, 0, 0, 0, var2);
                   var5 = var9 + (39 + var2 * var4);
                   for (var20 = 0; var20 < cc.field_h[this.field_n].length; var20++) {
                     var21 = cc.field_h[this.field_n][var20];
-                    kb.field_i[var21].b(var10, var5 + 5);
-                    var5 = var5 + (bj.field_q.a(gj.field_j[var21], vh.field_b + 60, var5, var3 - 40, 400, 16777215, 0, 0, 0, var2) * var2 + 15);
+                    kb.field_i[var21].drawTransparent(var10, var5 + 5);
+                    var5 = var5 + (bj.field_q.drawParagraph(gj.field_j[var21], vh.field_b + 60, var5, var3 - 40, 400, 16777215, 0, 0, 0, var2) * var2 + 15);
                   }
                 } else {
                   if (var20 == 5) {
                     var5 = 19 + var9;
                     for (var20 = 0; var20 < cc.field_h[this.field_n].length; var20++) {
                       var21Lifetime1 = cc.field_h[this.field_n][var20];
-                      kb.field_i[var21Lifetime1].b(var10, 5 + var5);
-                      var5 = var5 + (var2 * bj.field_q.a(gj.field_j[var21Lifetime1], var10 + 40, var5, var3 - 40, 400, 16777215, 0, 0, 0, var2) + 15);
+                      kb.field_i[var21Lifetime1].drawTransparent(var10, 5 + var5);
+                      var5 = var5 + (var2 * bj.field_q.drawParagraph(gj.field_j[var21Lifetime1], var10 + 40, var5, var3 - 40, 400, 16777215, 0, 0, 0, var2) + 15);
                     }
                   } else {
                     if (var20 == 6) {
                       var5 = 20 + var9;
                       for (var20 = 0; 4 > var20; var20++) {
-                        qn.field_k[var20].b(var10 + 8, var5 - 8);
-                        var5 = var5 + (var2 * bj.field_q.a(gj.field_p[var20], 80 + var10, var5, -80 + var3, 400, 16777215, 0, 0, 0, var2) + 20);
+                        qn.field_k[var20].drawTransparent(var10 + 8, var5 - 8);
+                        var5 = var5 + (var2 * bj.field_q.drawParagraph(gj.field_p[var20], 80 + var10, var5, -80 + var3, 400, 16777215, 0, 0, 0, var2) + 20);
                       }
                     } else {
                       if (var20 == 7) {
                         var5 = var9 + 20;
                         for (var20 = 4; qn.field_k.length > var20; var20++) {
-                          qn.field_k[var20].b(var10 + 8, -8 + var5);
-                          var5 = var5 + (var2 * bj.field_q.a(gj.field_p[var20], var10 + 80, var5, var3 - 80, 400, 16777215, 0, 0, 0, var2) + 20);
+                          qn.field_k[var20].drawTransparent(var10 + 8, -8 + var5);
+                          var5 = var5 + (var2 * bj.field_q.drawParagraph(gj.field_p[var20], var10 + 80, var5, var3 - 80, 400, 16777215, 0, 0, 0, var2) + 20);
                         }
                       } else {
                         if (var20 != 8 &&
@@ -142,8 +142,8 @@ final class fg extends al {
                           if (var20 == 10) {
                             var5 = var9 + 20;
                             for (var20 = 0; var20 < 4; var20++) {
-                              j.field_e[var20].b(var10 + 8, -8 + var5);
-                              var5 = var5 + (bj.field_q.a(gj.field_p[var20 + 8], 80 + var10, var5, -80 + var3, 400, 16777215, 0, 0, 0, var2) * var2 + 20);
+                              j.field_e[var20].drawTransparent(var10 + 8, -8 + var5);
+                              var5 = var5 + (bj.field_q.drawParagraph(gj.field_p[var20 + 8], 80 + var10, var5, -80 + var3, 400, 16777215, 0, 0, 0, var2) * var2 + 20);
                             }
                           } else {
                             if ((11 == var20)) {
@@ -159,17 +159,17 @@ final class fg extends al {
                               var19--;
                               var18--;
                               Rasterizer.drawRectOutline(var16 - var18, -var19 + var17, var18 * 2 + cn.field_c[0].field_w, 2 * var19 + cn.field_c[0].field_t, 0);
-                              cn.field_c[0].b(var16, var17);
-                              var4 = bj.field_q.a(gj.field_g[this.field_n][0], 195 + vh.field_b, 5 + var5, -170 + var3, 440, 16777215, 0, 0, 0, var2);
+                              cn.field_c[0].drawTransparent(var16, var17);
+                              var4 = bj.field_q.drawParagraph(gj.field_g[this.field_n][0], 195 + vh.field_b, 5 + var5, -170 + var3, 440, 16777215, 0, 0, 0, var2);
                             }
                           }
                         } else {
-                          var4 = bj.field_q.a(gj.field_g[this.field_n][0], var10, var9 + 20, var3, 440, 16777215, 0, 0, 0, var2);
+                          var4 = bj.field_q.drawParagraph(gj.field_g[this.field_n][0], var10, var9 + 20, var3, 440, 16777215, 0, 0, 0, var2);
                           var5 = 39 + var2 * var4 + var9;
                           for (var20 = 0; cc.field_h[this.field_n].length > var20; var20++) {
                             var21Lifetime2 = cc.field_h[this.field_n][var20];
-                            kb.field_i[var21Lifetime2].b(var10, 5 + var5);
-                            var5 = var5 + (15 + bj.field_q.a(gj.field_j[var21Lifetime2], var10 + 40, var5, var3 - 40, 400, 16777215, 0, 0, 0, var2) * var2);
+                            kb.field_i[var21Lifetime2].drawTransparent(var10, 5 + var5);
+                            var5 = var5 + (15 + bj.field_q.drawParagraph(gj.field_j[var21Lifetime2], var10 + 40, var5, var3 - 40, 400, 16777215, 0, 0, 0, var2) * var2);
                           }
                         }
                       }
@@ -179,12 +179,12 @@ final class fg extends al {
                 decompiledFrameRemainder0 = false;
               }
               else {
-                si.field_Ub[0].b(vh.field_b + 8, id.field_M + 148);
-                si.field_Ub[1].b(70 + vh.field_b, id.field_M + 230);
+                si.field_Ub[0].drawTransparent(vh.field_b + 8, id.field_M + 148);
+                si.field_Ub[1].drawTransparent(70 + vh.field_b, id.field_M + 230);
                 sg.field_jb.drawString("1/5", 90 + vh.field_b, 202 + id.field_M, 2, -1);
                 sg.field_jb.drawString("3", 80 + vh.field_b, 285 + id.field_M, 1, -1);
                 sg.field_jb.drawString("2:15", vh.field_b + 75, id.field_M + 365, 0, -1);
-                var4 = bj.field_q.a(gj.field_g[3][0], 155 + vh.field_b, 170 + id.field_M, var3 - 140, 440, 16777215, 0, 0, 0, var2);
+                var4 = bj.field_q.drawParagraph(gj.field_g[3][0], 155 + vh.field_b, 170 + id.field_M, var3 - 140, 440, 16777215, 0, 0, 0, var2);
               }
             }
           }
@@ -198,16 +198,16 @@ final class fg extends al {
           } else {
             stackIn_27_4 = var3;
           }
-          var4 = ((oi) (Object) stackIn_26_0).a(stackIn_26_1, stackIn_26_2, stackIn_26_3, stackIn_27_4, 440, 16777215, 0, 0, 0, var2);
+          var4 = ((oi) (Object) stackIn_26_0).drawParagraph(stackIn_26_1, stackIn_26_2, stackIn_26_3, stackIn_27_4, 440, 16777215, 0, 0, 0, var2);
           var5 = var4 * var2;
           if (var7 != 0) {
             var5 -= 20;
           }
           sg.field_jb.drawString(gj.field_k[0][1], var10, var5 + (var9 + 75), 0, 0);
-          bj.field_q.a(gj.field_g[0][1], var10, var5 + var9 + 95, var3, 440, 16777215, 0, 0, 0, var2);
+          bj.field_q.drawParagraph(gj.field_g[0][1], var10, var5 + var9 + 95, var3, 440, 16777215, 0, 0, 0, var2);
           if (var7 == 0) {
-            l.field_b[0].b(530 + vh.field_b, 150 + id.field_M);
-            l.field_b[1].b(vh.field_b + 230, id.field_M + 242);
+            l.field_b[0].drawTransparent(530 + vh.field_b, 150 + id.field_M);
+            l.field_b[1].drawTransparent(vh.field_b + 230, id.field_M + 242);
           }
         }
         bj.field_q.drawStringRightAligned(uk.a(1 + this.field_n, (byte) 58, 1 + this.a(true)), 634 + vh.field_b, id.field_M + 410, 16777215, 0);
@@ -255,7 +255,7 @@ final class fg extends al {
           var11 = var13;
           var5_ref_int__ = var11;
           for (var6 = 0; var1 > var6; var6++) {
-            var5_ref_int__[var6] = GameWorld.a(eg.a((int) var16[var6], 255) << 24, j.field_a[eg.a(255, (int) var17[var6])]);
+            var5_ref_int__[var6] = GameWorld.intOr(eg.a((int) var16[var6], 255) << 24, j.field_a[eg.a(255, (int) var17[var6])]);
           }
           var3 = new cd(gl.field_F, Zombie.field_pb, sl.field_d[0], bo.field_o[0], bn.field_c[0], uf.field_n[0], var13);
         }
@@ -351,7 +351,7 @@ final class fg extends al {
         }
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         field_m = null;
         if (param0 != -25585) {
           field_m = (vk) null;

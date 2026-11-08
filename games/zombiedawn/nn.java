@@ -46,7 +46,7 @@ final class nn extends IntrusiveNode {
         throw new Error();
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         field_j = null;
         if (param0 != 2) {
           nn.a(52);

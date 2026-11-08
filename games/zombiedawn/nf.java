@@ -22,9 +22,9 @@ final class nf {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 0) {
-          nf.a(-56);
+          nf.releaseStatics(-56);
           field_d = null;
           return;
         }
@@ -49,7 +49,7 @@ final class nf {
           }
           var7 = new la();
           if (param4) {
-            nf.a(-19);
+            nf.releaseStatics(-19);
           }
           var7.field_e = var8;
           var7.field_e.add((java.awt.Component) ((Object) var7));

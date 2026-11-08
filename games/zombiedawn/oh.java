@@ -7,7 +7,7 @@ final class oh extends cb {
     static String field_jb;
     String field_ib;
 
-    public static void g(int param0) {
+    public static void releaseStatics(int param0) {
         field_jb = null;
         if (param0 >= -1) {
           oh.d((byte) 87);

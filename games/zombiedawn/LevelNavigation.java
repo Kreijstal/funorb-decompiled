@@ -85,7 +85,7 @@ final class LevelNavigation {
         return false;
     }
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 > -83) {
           LevelNavigation.a((byte) 29);
         }
@@ -163,9 +163,9 @@ final class LevelNavigation {
                         var13.drawMirrored(var5_int, var6);
                       } else {
                         if ((536870912 & var10) <= 0) {
-                          var13.b(var5_int, var6);
+                          var13.drawTransparent(var5_int, var6);
                         } else {
-                          var13.f(var5_int, var6);
+                          var13.drawVerticalFlip(var5_int, var6);
                         }
                       }
                     }
@@ -176,13 +176,13 @@ final class LevelNavigation {
                       if ((-2147483648 & var10) != 0) {
                         if (param3) {
                           if ((var10 & 67108864) != 0) {
-                            Rasterizer.a(var5_int, var6, 24, 24, 65280, 128);
+                            Rasterizer.fillRectangleBlended(var5_int, var6, 24, 24, 65280, 128);
                           } else {
-                            Rasterizer.a(var5_int, var6, 24, 24, 16711935, 128);
+                            Rasterizer.fillRectangleBlended(var5_int, var6, 24, 24, 16711935, 128);
                           }
                         } else {
                           if ((var10 & 67108864) == 0) {
-                            Rasterizer.a(var5_int, var6, 24, 24, 0, 128);
+                            Rasterizer.fillRectangleBlended(var5_int, var6, 24, 24, 0, 128);
                           } else {
                             var11 = -1;
                             var12 = var10 >> 7 & 511;
@@ -202,7 +202,7 @@ final class LevelNavigation {
                               la.field_c.length > var11) {
                               la.field_c[var11].e(var5_int, var6, 128);
                             } else {
-                              Rasterizer.a(var5_int, var6, 24, 24, 0, 128);
+                              Rasterizer.fillRectangleBlended(var5_int, var6, 24, 24, 0, 128);
                               la.field_c[21].e(var5_int, 24 + var6, 128);
                             }
                           }
@@ -226,9 +226,9 @@ final class LevelNavigation {
                         var13 = var12_ref_vn;
                         if ((var10 & 268435456) <= 0) {
                           if ((134217728 & var10) <= 0) {
-                            var12_ref_vn.b(var5_int, var6);
+                            var12_ref_vn.drawTransparent(var5_int, var6);
                           } else {
-                            var12_ref_vn.f(var5_int, var6);
+                            var12_ref_vn.drawVerticalFlip(var5_int, var6);
                           }
                         } else {
                           var12_ref_vn.drawMirrored(var5_int, var6);
@@ -236,7 +236,7 @@ final class LevelNavigation {
                       }
                       if (dg.field_a) {
                         if (0 != (33554432 & var10)) {
-                          Rasterizer.a(var5_int, var6, 24, 24, 16744448, 128);
+                          Rasterizer.fillRectangleBlended(var5_int, var6, 24, 24, 16744448, 128);
                         }
                         if (var11 >= 0 &&
                           var11 < tm.field_h.length) {
@@ -767,7 +767,7 @@ final class LevelNavigation {
           if (24 + bd.field_e == GameLoopApplet.field_A.field_r &&
             GameLoopApplet.field_A.field_q == nh.field_P + 24) {
             if (0 > this.field_y) {
-              gp.a(GameLoopApplet.field_A.field_z, 0, GameLoopApplet.field_A.field_z.length, 0);
+              gp.fillInts(GameLoopApplet.field_A.field_z, 0, GameLoopApplet.field_A.field_z.length, 0);
             }
           } else {
             GameLoopApplet.field_A = null;
@@ -1230,20 +1230,20 @@ final class LevelNavigation {
                 var9Lifetime1 = param0.worldToScreenX(this.field_i[var8Lifetime1].x, (byte) -82);
                 var10Lifetime1 = param0.worldToScreenY(this.field_i[var8Lifetime1].y, 0);
                 if (this.field_w[var5Lifetime1][var8Lifetime1] > 0) {
-                  Rasterizer.d(var6Lifetime1, var7Lifetime1, var9Lifetime1, var10Lifetime1, 65280, 48);
+                  Rasterizer.drawLineBlendedInclusive(var6Lifetime1, var7Lifetime1, var9Lifetime1, var10Lifetime1, 65280, 48);
                 }
               }
               if (this.a(var4Lifetime1, this.field_i[var5Lifetime1].y, var3_intLifetime1, this.field_i[var5Lifetime1].x, 112) != -1) {
                 var8Lifetime1 = param0.worldToScreenX(var3_intLifetime1, (byte) -64);
                 var9Lifetime1 = param0.worldToScreenY(var4Lifetime1, 0);
-                Rasterizer.e(var6Lifetime1, var7Lifetime1, var8Lifetime1, var9Lifetime1, 16711680);
+                Rasterizer.drawLine(var6Lifetime1, var7Lifetime1, var8Lifetime1, var9Lifetime1, 16711680);
               }
             }
             for (var5Lifetime1Lifetime1 = 0; var5Lifetime1Lifetime1 < this.field_i.length; var5Lifetime1Lifetime1++) {
               var6Lifetime1Lifetime1 = bd.field_d - param0.x + this.field_i[var5Lifetime1Lifetime1].x;
               var7Lifetime1Lifetime1 = -param0.y + this.field_i[var5Lifetime1Lifetime1].y + nh.field_G;
-              Rasterizer.d(var6Lifetime1Lifetime1, var7Lifetime1Lifetime1, 2, 16711680, 256);
-              pc.field_k.a(Integer.toString(var5Lifetime1Lifetime1), var6Lifetime1Lifetime1, var7Lifetime1Lifetime1, 16777215, 0, 64);
+              Rasterizer.fillCircleBlended(var6Lifetime1Lifetime1, var7Lifetime1Lifetime1, 2, 16711680, 256);
+              pc.field_k.drawLeftAlpha(Integer.toString(var5Lifetime1Lifetime1), var6Lifetime1Lifetime1, var7Lifetime1Lifetime1, 16777215, 0, 64);
             }
             if (!this.field_t) {
               return;
@@ -1258,15 +1258,15 @@ final class LevelNavigation {
                 var9Lifetime1Lifetime1 = param0.worldToScreenX(this.field_C[var8Lifetime1Lifetime1].x, (byte) -75);
                 var10Lifetime1Lifetime1 = param0.worldToScreenY(this.field_C[var8Lifetime1Lifetime1].y, 0);
                 if (this.field_E[var5Lifetime1Lifetime2][var8Lifetime1Lifetime1] > 0) {
-                  Rasterizer.d(var6Lifetime1Lifetime2, var7Lifetime1Lifetime2, var9Lifetime1Lifetime1, var10Lifetime1Lifetime1, 16711680, 48);
+                  Rasterizer.drawLineBlendedInclusive(var6Lifetime1Lifetime2, var7Lifetime1Lifetime2, var9Lifetime1Lifetime1, var10Lifetime1Lifetime1, 16711680, 48);
                 }
               }
             }
             for (var5Lifetime1Lifetime3 = 0; var5Lifetime1Lifetime3 < this.field_C.length; var5Lifetime1Lifetime3++) {
               var6Lifetime1Lifetime3 = bd.field_d + (-param0.x + this.field_C[var5Lifetime1Lifetime3].x);
               var7Lifetime1Lifetime3 = this.field_C[var5Lifetime1Lifetime3].y + (-param0.y + nh.field_G);
-              Rasterizer.d(var6Lifetime1Lifetime3, var7Lifetime1Lifetime3, 2, 34952, 256);
-              pc.field_k.a(Integer.toString(var5Lifetime1Lifetime3), var6Lifetime1Lifetime3, var7Lifetime1Lifetime3, 2285021, 0, 64);
+              Rasterizer.fillCircleBlended(var6Lifetime1Lifetime3, var7Lifetime1Lifetime3, 2, 34952, 256);
+              pc.field_k.drawLeftAlpha(Integer.toString(var5Lifetime1Lifetime3), var6Lifetime1Lifetime3, var7Lifetime1Lifetime3, 2285021, 0, 64);
             }
             return;
           }

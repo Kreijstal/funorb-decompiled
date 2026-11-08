@@ -228,7 +228,7 @@ final class qi extends eh {
         }
     }
 
-    final boolean a(int param0, int param1, UiWidget param2, char param3) {
+    final boolean requestKeyboardFocus(int param0, int param1, UiWidget param2, char param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         RuntimeException stackIn_6_0 = null;
@@ -237,7 +237,7 @@ final class qi extends eh {
         RuntimeException decompiledCaughtException = null;
         try {
           var5_int = -78 % ((param0 + 83) / 32);
-          if (!super.a(-126, param1, param2, param3)) {
+          if (!super.requestKeyboardFocus(-126, param1, param2, param3)) {
             return false;
           }
           this.f((byte) 124);
@@ -270,10 +270,10 @@ final class qi extends eh {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_C = null;
         if (param0 != 0) {
-          qi.a(-32);
+          qi.releaseStatics(-32);
         }
         field_J = null;
         field_G = null;

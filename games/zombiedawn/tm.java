@@ -33,7 +33,7 @@ final class tm extends IntrusiveNode {
             param3[0].c(param0, param2, param4);
             param3[2].c(-var7 + (param5 + param0), param2, param4);
             Rasterizer.saveClip(HumanFactory.field_c);
-            Rasterizer.c(param0 + var6_int, param2, param5 + param0 - var7, param3[1].field_q + param2);
+            Rasterizer.intersectClip(param0 + var6_int, param2, param5 + param0 - var7, param3[1].field_q + param2);
             var9 = param0 + var6_int;
             var10 = param0 + param5 - var7;
             for (param0 = var9; param0 < var10; param0 = param0 + var8) {
@@ -129,7 +129,7 @@ final class tm extends IntrusiveNode {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_o = null;
         if (param0 == -5364) {
           field_m = null;
@@ -142,7 +142,7 @@ final class tm extends IntrusiveNode {
         }
     }
 
-    final static HumanFactory a(byte param0, String param1) {
+    final static HumanFactory pollAccountNameCheck(byte param0, String param1) {
         RuntimeException var2 = null;
         HumanFactory stackIn_8_0 = null;
         Object stackIn_10_0 = null;
@@ -183,7 +183,7 @@ final class tm extends IntrusiveNode {
     }
 
     tm(int param0) {
-        this.field_j = PcmSampleStream.a(vb.field_D[param0], 100, 256);
+        this.field_j = PcmSampleStream.createAtRatePercent(vb.field_D[param0], 100, 256);
         aa.a(120, this.field_j);
     }
 

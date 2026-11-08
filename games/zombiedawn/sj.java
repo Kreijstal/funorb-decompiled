@@ -69,11 +69,11 @@ final class sj {
             if (var6 != 0) {
               if ((65535 & var6) == 0) {
                 var7 = var6 >> 16;
-                var9[var5] = GameWorld.a(eg.a(var7 * eg.a(param0 >> 16, 255) << 8, 16711864), GameWorld.a(eg.a(var7 * eg.a(param0 >> 8, 255), 65280), eg.a(255, param0) * var7 >> 8));
+                var9[var5] = GameWorld.intOr(eg.a(var7 * eg.a(param0 >> 16, 255) << 8, 16711864), GameWorld.intOr(eg.a(var7 * eg.a(param0 >> 8, 255), 65280), eg.a(255, param0) * var7 >> 8));
               } else {
                 if ((var6 & 16711935) == 0) {
                   var7 = var6 >> 8;
-                  var9[var5] = GameWorld.a(GameWorld.a(var7 * eg.a(255, param2) >> 8, eg.a(var7 * eg.a(param2 >> 8, 255), 65280)), eg.a(16711709, eg.a(255, param2 >> 16) * var7 << 8));
+                  var9[var5] = GameWorld.intOr(GameWorld.intOr(var7 * eg.a(255, param2) >> 8, eg.a(var7 * eg.a(param2 >> 8, 255), 65280)), eg.a(16711709, eg.a(255, param2 >> 16) * var7 << 8));
                 }
               }
             }
@@ -93,7 +93,7 @@ final class sj {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 1222359528) {
           return;
         }

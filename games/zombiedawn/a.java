@@ -18,7 +18,7 @@ final class a {
     static int field_m;
     static int[] field_g;
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 <= 78) {
           return;
         }
@@ -40,7 +40,7 @@ final class a {
             a.a((byte) 123);
           }
           var4 = param0.worldToScreenY(this.field_o >> 16, 0) - (this.field_k >> 16);
-          SpatialBucket.field_b[this.field_b].b(-3 + var3_int, -3 + var4);
+          SpatialBucket.field_b[this.field_b].drawTransparent(-3 + var3_int, -3 + var4);
         } catch (RuntimeException runtimeException) {
           throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "a.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -60,7 +60,7 @@ final class a {
           so.a(sg.field_fb);
           return;
         }
-        a.b((byte) -23);
+        a.releaseStatics((byte) -23);
         this.field_j = (so.randomInt(1) << 16) + 65536;
         this.field_e = so.randomInt(32768) - 114688;
         this.field_a = true;

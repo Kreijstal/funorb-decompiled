@@ -17,7 +17,7 @@ final class en {
         field_i = field_d / 2;
     }
 
-    public static void a() {
+    public static void releaseStatics() {
         field_b = null;
         field_h = null;
         field_f = null;
@@ -25,7 +25,7 @@ final class en {
         field_c = null;
     }
 
-    private final static void a(int param0, int param1, int param2, int param3) {
+    private final static void setClip(int param0, int param1, int param2, int param3) {
         int var5 = 0;
         field_g = param2 - param0;
         field_d = param3 - param1;
@@ -40,8 +40,8 @@ final class en {
         }
     }
 
-    final static void c() {
-        en.a(Rasterizer.clipLeft, Rasterizer.clipTop, Rasterizer.clipRight, Rasterizer.clipBottom);
+    final static void useRasterClip() {
+        en.setClip(Rasterizer.clipLeft, Rasterizer.clipTop, Rasterizer.clipRight, Rasterizer.clipBottom);
     }
 
     static {

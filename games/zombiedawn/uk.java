@@ -6,7 +6,7 @@ final class uk {
     static String field_c;
     static String field_b;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != -21) {
           return;
         }
@@ -17,7 +17,7 @@ final class uk {
 
     final static boolean a(byte param0) {
         if (param0 != -44) {
-          uk.a(31);
+          uk.releaseStatics(31);
           if (ld.field_j < 20) {
             return true;
           }

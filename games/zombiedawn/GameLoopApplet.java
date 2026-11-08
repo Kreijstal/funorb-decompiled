@@ -307,7 +307,7 @@ abstract class GameLoopApplet extends FunOrbApplet implements GameLayer {
         return true;
     }
 
-    public static void j(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_C = null;
         field_B = null;
         if (param0 > -121) {
@@ -320,7 +320,7 @@ abstract class GameLoopApplet extends FunOrbApplet implements GameLayer {
 
     final static lo a(byte param0, int param1, int param2, int param3) {
         if (param0 > -104) {
-          GameLoopApplet.j((byte) -31);
+          GameLoopApplet.releaseStatics((byte) -31);
         }
         lo var4 = new lo();
         var4.field_k = param3;

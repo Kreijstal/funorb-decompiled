@@ -95,7 +95,7 @@ final class si extends qk {
             this.field_Tb = 0;
             return;
           }
-          if (!this.field_U.l()) {
+          if (!this.field_U.isSamplePositionOutOfRange()) {
             fieldTemp$12 = this.field_Tb;
             this.field_Tb = this.field_Tb + 1;
             if (fieldTemp$12 < 4) {
@@ -174,7 +174,7 @@ final class si extends qk {
           this.field_Tb = 0;
           return;
         }
-        if (this.field_U.l() &&
+        if (this.field_U.isSamplePositionOutOfRange() &&
           0L == tp.field_p % 3L) {
           this.field_U = dc.a((byte) 18, 85);
           fieldTemp$2 = this.field_Tb;
@@ -354,7 +354,7 @@ final class si extends qk {
           param1.field_Bb = param1.field_Bb + 1;
           var3_int = -77 / ((70 - param0) / 46);
           if (null != this.field_U &&
-            !this.field_U.l()) {
+            !this.field_U.isSamplePositionOutOfRange()) {
             return;
           }
           this.field_U = dc.a((byte) 18, 87);
@@ -386,15 +386,15 @@ final class si extends qk {
         try {
           var3_int = param0.worldToScreenX(this.getX(true), (byte) -80);
           var4 = param0.worldToScreenY(this.getY(param1 + 237234924), param1 ^ param1);
-          Rasterizer.d(var3_int, var4, this.field_Sb, 255);
-          Rasterizer.d(var3_int, var4, this.field_pb, 65535);
+          Rasterizer.drawCircleOutline(var3_int, var4, this.field_Sb, 255);
+          Rasterizer.drawCircleOutline(var3_int, var4, this.field_pb, 65535);
           if (null != this.field_Ob) {
-            Rasterizer.e(var3_int, var4, param0.worldToScreenX(this.field_Ob.getX(true), (byte) -106), param0.worldToScreenY(this.field_Ob.getY(237239984), 0), 16711680);
+            Rasterizer.drawLine(var3_int, var4, param0.worldToScreenX(this.field_Ob.getX(true), (byte) -106), param0.worldToScreenY(this.field_Ob.getY(237239984), 0), 16711680);
           }
           if (null != this.field_yb) {
             var5 = param0.worldToScreenX(this.field_yb.getX(true), (byte) -78);
             var6 = param0.worldToScreenY(this.field_yb.getY(param1 + 237234924), 0);
-            Rasterizer.e(var3_int, -48 + var4 + 10, var5, var6 - 38, 16776960);
+            Rasterizer.drawLine(var3_int, -48 + var4 + 10, var5, var6 - 38, 16776960);
             bj.field_q.drawString(Integer.toString(this.state), var3_int, var4 - 48, 16777215, 0);
             bj.field_q.drawString(Integer.toString(this.field_yb.state), var5, var6 - 48, 16777215, 0);
           }
@@ -526,7 +526,7 @@ final class si extends qk {
               if (this.field_U == null) {
                 this.field_U = dc.a((byte) 18, 86);
               } else {
-                if (this.field_U.l()) {
+                if (this.field_U.isSamplePositionOutOfRange()) {
                   this.field_U = dc.a((byte) 18, 86);
                 }
               }
@@ -542,10 +542,10 @@ final class si extends qk {
         field_Rb = -17;
     }
 
-    public static void w(int param0) {
+    public static void releaseStatics(int param0) {
         field_Qb = null;
         if (param0 != 255) {
-          si.w(-44);
+          si.releaseStatics(-44);
           field_Ub = null;
           return;
         }

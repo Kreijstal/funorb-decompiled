@@ -19,7 +19,7 @@ final class ai extends dh {
           var7 = java.awt.image.Raster.createWritableRaster(((java.awt.image.ColorModel) ((Object) var6)).createCompatibleSampleModel(this.field_d, this.field_a), (java.awt.image.DataBuffer) ((Object) var5), (java.awt.Point) null);
           this.field_f = (java.awt.Image) ((Object) new java.awt.image.BufferedImage((java.awt.image.ColorModel) ((Object) var6), var7, false, new Hashtable()));
           this.field_h = param2;
-          this.b(126);
+          this.makeRasterTarget(126);
           return;
         }
     }

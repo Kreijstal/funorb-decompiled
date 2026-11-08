@@ -13,7 +13,7 @@ final class se extends qg {
     static rh field_l;
     static of field_j;
 
-    private final java.net.Socket a(String param0, String param1, byte param2, int param3) throws IOException {
+    private final java.net.Socket connectHttpTunnel(String param0, String param1, byte param2, int param3) throws IOException {
         java.net.Socket stackIn_6_0 = null;
         java.net.Socket stackIn_12_0 = null;
         Object stackIn_27_0 = null;
@@ -140,7 +140,7 @@ final class se extends qg {
         }
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         field_m = null;
         field_j = null;
         if (param0 == 32) {
@@ -149,7 +149,7 @@ final class se extends qg {
           field_i = null;
           return;
         }
-        se.c(-126);
+        se.releaseStatics(-126);
         field_n = null;
         field_l = null;
         field_i = null;
@@ -259,7 +259,7 @@ final class se extends qg {
         } catch (java.net.URISyntaxException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = (java.net.URISyntaxException) (Object) decompiledCaughtException;
-          return this.b(16076);
+          return this.connectDirect(16076);
         }
         var3.addAll((Collection) ((Object) var4));
         var6_array = var3.toArray();
@@ -288,9 +288,9 @@ final class se extends qg {
           }
         }
         if (var7 != null) {
-          throw se.<RuntimeException>$cfr$sneakyThrow((Throwable) var7);
+          throw se.<RuntimeException>rethrowUnchecked((Throwable) var7);
         }
-        return this.b(16076);
+        return this.connectDirect(16076);
     }
 
     private final java.net.Socket a(java.net.Proxy param0, byte param1) throws IOException {
@@ -319,7 +319,7 @@ final class se extends qg {
         Class var14 = null;
         try {
           if (param0.type() == java.net.Proxy.Type.DIRECT) {
-            stackIn_2_0 = this.b(param1 ^ -16087);
+            stackIn_2_0 = this.connectDirect(param1 ^ -16087);
             return stackIn_2_0;
           }
           var3 = param0.address();
@@ -365,7 +365,7 @@ final class se extends qg {
             decompiledCaughtException = decompiledCaughtParameter0;
             var6_ref = (Exception) (Object) decompiledCaughtException;
           }
-          stackIn_15_0 = this.a((String) (var5), var4.getHostName(), (byte) 69, var4.getPort());
+          stackIn_15_0 = this.connectHttpTunnel((String) (var5), var4.getHostName(), (byte) 69, var4.getPort());
           return stackIn_15_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
@@ -390,7 +390,7 @@ final class se extends qg {
     }
 
     @SuppressWarnings("unchecked")
-    private static <T extends Throwable> RuntimeException $cfr$sneakyThrow(Throwable throwable) throws T {
+    private static <T extends Throwable> RuntimeException rethrowUnchecked(Throwable throwable) throws T {
         throw (T) throwable;
     }
 }
