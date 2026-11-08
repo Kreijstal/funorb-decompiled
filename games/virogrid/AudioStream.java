@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class AudioStream extends IntrusiveNode {
-    tj field_j;
+    AbstractAudioSample field_j;
     int field_i;
     volatile boolean field_g;
     AudioStream field_h;
@@ -15,7 +15,7 @@ abstract class AudioStream extends IntrusiveNode {
 
     abstract void mixInto(int[] param0, int param1, int param2);
 
-    final void a(int[] param0, int param1, int param2) {
+    final void process(int[] param0, int param1, int param2) {
         if (this.field_g) {
           this.mixInto(param0, param1, param2);
         } else {

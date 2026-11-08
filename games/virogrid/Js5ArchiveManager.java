@@ -1,0 +1,309 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class Js5ArchiveManager {
+    private CachedArchiveSource[] field_b;
+    static String field_e;
+    private java.math.BigInteger field_a;
+    private Js5Transport field_f;
+    static String field_d;
+    static String field_g;
+    private java.math.BigInteger field_j;
+    private DiskCacheWorker field_i;
+    private NetworkArchiveRequest field_h;
+    private PacketBuffer field_c;
+
+    public static void releaseStatics(int param0) {
+        if (param0 < 22) {
+          field_g = (String) null;
+        }
+        field_g = null;
+        field_e = null;
+        field_d = null;
+    }
+
+    Js5ArchiveManager(Js5Transport param0, DiskCacheWorker param1) {
+        this(param0, param1, (java.math.BigInteger) null, (java.math.BigInteger) null);
+    }
+
+    final static void updateLobbyPanels(int param0, boolean param1, boolean param2, int param3, boolean param4, int param5, int param6, boolean param7, boolean param8, int param9) {
+        int var10;
+        int var11;
+        var11 = Virogrid.field_F ? 1 : 0;
+        if (!param2 && (IterableDualLinkDeque.field_f != Rasterizer.field_e ||
+          Rasterizer.field_f != DualLinkDequeIterator.field_b) && (LoginPanel.field_M.field_b == Rasterizer.field_f &&
+          LoginPanel.field_M.field_c == Rasterizer.field_e)) {
+          if (null == AudioSetupHelpers.field_d) {
+            if (QueuedRequest.field_h != null) {
+              GameClock.layoutLobbyComponents(true, true);
+            } else {
+              UiTheme.layoutMainLobbyComponents(-124);
+            }
+          } else {
+            GameClock.layoutLobbyComponents(false, true);
+          }
+        }
+        if (!param2) {
+          BitwiseHelpers.field_f = (-640 + IterableDualLinkDeque.field_f) / 2;
+        } else {
+          BitwiseHelpers.field_f = RequestResendSupport.field_e;
+        }
+        LoginPanel.advanceLobbyTransitions(param2, -116);
+        if (0 < ClientServiceHelpers.field_d) {
+          LobbyControlHelpers.updateLobbyControls(param0, false, param2, param8);
+        }
+        BitCountAndDialogHelpers.field_b.field_z = QueuedResultSubmission.field_n.field_z;
+        BitCountAndDialogHelpers.field_b.field_lb = 1;
+        if (PendingHighscoreRequest.field_h > 0) {
+          IterableDualLinkDeque.updateGameSetupPanel(false, param2, param0, param8);
+        }
+        if (QuickChatPhraseDefinition.field_z > 0) {
+          DualLinkDeque.updateGameRoomPanel(param2, param0, (byte) 80, param8, param7);
+        }
+        if (QuickChatPhraseRegistry.field_h &&
+          AudioSetupHelpers.field_d.field_ic >= AudioSetupHelpers.field_d.field_vc) {
+          GameBoard.field_j.field_Eb.field_V = PendingScoreQuery.field_h;
+          BackgroundParticle.field_m.field_Y = false;
+          TextEncodingHelpers.resetChildLayouts(16377, GameBoard.field_j.field_Jb);
+        } else {
+          GameBoard.field_j.field_Eb.field_V = null;
+          BackgroundParticle.field_m.field_Y = true;
+          LobbyAndTextHelpers.updateLobbyGamePlayerList(param6, param0, GameBoard.field_j, param1, 21547);
+        }
+        LobbyGameListHelpers.updateLobbyGameList(param4, param6, param9, (byte) -106, param5, param0, param1);
+        LobbyAndTextHelpers.updateLobbyGamePlayerList(param6, param0, TriangleMesh.field_r, param1, 21547);
+        var10 = 92 / ((24 - param3) / 45);
+        SpriteState.field_y = SpriteState.field_y + 1;
+    }
+
+    final CachedArchiveSource openProvider(int param0, int param1, boolean param2, SectorCacheStore param3, SectorCacheStore param4) {
+        int var6_int = 0;
+        RuntimeException var6 = null;
+        int var7 = 0;
+        CachedArchiveSource var9 = null;
+        byte[] var13 = null;
+        CachedArchiveSource stackIn_9_0 = null;
+        CachedArchiveSource stackIn_11_0 = null;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        String stackIn_15_2 = null;
+        StringBuilder stackIn_17_1 = null;
+        String stackIn_18_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (null == this.field_c) {
+            throw new RuntimeException();
+          }
+          if (0 <= param1 &&
+            this.field_b.length > param1) {
+            if (null != this.field_b[param1]) {
+              stackIn_9_0 = this.field_b[param1];
+              return stackIn_9_0;
+            }
+            this.field_c.position = param0 * param1 + 6;
+            var6_int = this.field_c.readInt((byte) 120);
+            var7 = this.field_c.readInt((byte) 114);
+            var13 = new byte[64];
+            this.field_c.readBytes(0, 64, true, var13);
+            var9 = new CachedArchiveSource(param1, param4, param3, this.field_f, this.field_i, var6_int, var13, var7, param2);
+            this.field_b[param1] = var9;
+            stackIn_11_0 = var9;
+            return stackIn_11_0;
+          }
+          throw new RuntimeException();
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var6 = decompiledCaughtException;
+          stackIn_14_0 = var6;
+          stackIn_14_1 = new StringBuilder().append("ha.H(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+          if (param3 == null) {
+            stackIn_15_2 = "null";
+          } else {
+            stackIn_15_2 = "{...}";
+          }
+          stackIn_17_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',');
+          if (param4 == null) {
+            stackIn_18_2 = "null";
+          } else {
+            stackIn_18_2 = "{...}";
+          }
+          throw AsyncCheckResult.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+        }
+    }
+
+    final static int atan2Fixed(int param0, int param1, int param2) {
+        int var3 = 86 % ((param1 - 19) / 49);
+        if (param2 == 0) {
+          if (param0 == 0) {
+            return 0;
+          }
+          if (0 <= param0) {
+            return 2048;
+          }
+          return -2048;
+        }
+        if (0 > param2) {
+          if (param0 == 0) {
+            return 4096;
+          }
+          if (0 > param0) {
+            return -4096 + ProxySocketConnector.approximateAngle(-param2, -param0, -1550172208);
+          }
+          return 4096 - ProxySocketConnector.approximateAngle(-param2, param0, -1550172208);
+        }
+        if (0 == param0) {
+          return 0;
+        }
+        if (param0 >= 0) {
+          return ProxySocketConnector.approximateAngle(param2, param0, -1550172208);
+        }
+        return -ProxySocketConnector.approximateAngle(param2, -param0, -1550172208);
+    }
+
+    final static void openQuitPage(byte param0, java.applet.Applet param1) {
+        try {
+          java.net.URL var2 = null;
+          if (param0 != 39) {
+            field_d = (String) null;
+          }
+          try {
+            var2 = new java.net.URL(param1.getCodeBase(), "quit.ws");
+            param1.getAppletContext().showDocument(BoundedUrlRequest.appendSessionParameters(-1, param1, var2), "_top");
+          } catch (Exception exception) {
+            exception.printStackTrace();
+          }
+        } catch (RuntimeException | Error decompiledUncheckedException) {
+          throw decompiledUncheckedException;
+        } catch (Throwable decompiledCheckedException) {
+          throw new RuntimeException(decompiledCheckedException);
+        }
+    }
+
+    final void serviceProviders(byte param0) {
+        int var2;
+        int var3;
+        CachedArchiveSource stackIn_15_0 = null;
+        int var2Lifetime1;
+        var3 = Virogrid.field_F ? 1 : 0;
+        if (null == this.field_b) {
+          return;
+        }
+        for (var2 = 0; var2 < this.field_b.length; var2++) {
+          if (this.field_b[var2] != null) {
+            this.field_b[var2].processQueuedGroups(0);
+          }
+        }
+        if (param0 > -111) {
+          this.field_h = (NetworkArchiveRequest) null;
+        }
+        for (var2Lifetime1 = 0; var2Lifetime1 < this.field_b.length; var2Lifetime1++) {
+          stackIn_15_0 = this.field_b[var2Lifetime1];
+          if (stackIn_15_0 != null) {
+            this.field_b[var2Lifetime1].advanceBackgroundLoading((byte) -28);
+          }
+        }
+    }
+
+    final static void sendQueuedQuery(int param0, QueuedResultSubmission param1, byte param2) {
+        CipherPacketBuffer var5 = null;
+        int var4 = 0;
+        try {
+          var5 = IterableNodeHashTable.field_g;
+          var5.writeCipheredOpcode(param0, 8);
+          var5.position = var5.position + 1;
+          var4 = var5.position;
+          var5.writeByte(1, 84);
+          var5.writeByte(param1.field_p, 68);
+          var5.writeSignedSmart(param1.field_q, (byte) -102);
+          if (param2 >= -22) {
+            field_d = (String) null;
+          }
+          var5.writeInt(param1.field_o, (byte) -42);
+          var5.writeInt(param1.field_l, (byte) -42);
+          var5.writeInt(param1.field_j, (byte) -42);
+          var5.writeInt(param1.field_m, (byte) -42);
+          var5.writeCrc32((byte) -111, var4);
+          var5.backpatchByteLength(var5.position - var4, -1);
+        } catch (RuntimeException runtimeException) {
+          throw AsyncCheckResult.wrapException((Throwable) ((Object) runtimeException), "ha.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+        }
+    }
+
+    final boolean loadMasterIndex(byte param0) {
+        int var7 = 0;
+        int var3;
+        byte[] var4;
+        byte[] var5;
+        java.math.BigInteger var7_ref_java_math_BigInteger;
+        int var8;
+        PacketBuffer var10;
+        byte[] var11;
+        java.math.BigInteger var12;
+        byte[] var13;
+        byte[] var15;
+        var8 = Virogrid.field_F ? 1 : 0;
+        if (null != this.field_c) {
+          return true;
+        }
+        if (null == this.field_h) {
+          if (this.field_f.isPriorityQueueFull((byte) 113)) {
+            return false;
+          }
+          this.field_h = this.field_f.createRequest((byte) 0, 255, true, -1150070304, 255);
+        }
+        if (this.field_h.field_t) {
+          return false;
+        }
+        var10 = new PacketBuffer(this.field_h.getBytes((byte) 39));
+        var10.position = 5;
+        var3 = var10.readUnsignedByte(param0 + 11113);
+        var10.position = var10.position + 72 * var3;
+        if (param0 != 19) {
+          this.field_b = (CachedArchiveSource[]) null;
+        }
+        var13 = new byte[var10.payload.length - var10.position];
+        var11 = var13;
+        var4 = var11;
+        var10.readBytes(0, var13.length, true, var13);
+        if (this.field_j != null &&
+          this.field_a != null) {
+          var12 = new java.math.BigInteger(var13);
+          var7_ref_java_math_BigInteger = var12.modPow(this.field_j, this.field_a);
+          var5 = var7_ref_java_math_BigInteger.toByteArray();
+        } else {
+          var5 = var4;
+        }
+        if (var5.length != 65) {
+          throw new RuntimeException();
+        }
+        var15 = DigestHelpers.whirlpoolDigest(var10.payload, var10.position - (var13.length + 5), 5, false);
+        for (var7 = 0; 64 > var7; var7++) {
+          if (var15[var7] != var5[1 + var7]) {
+            throw new RuntimeException();
+          }
+        }
+        this.field_b = new CachedArchiveSource[var3];
+        this.field_c = var10;
+        return true;
+    }
+
+    private Js5ArchiveManager(Js5Transport param0, DiskCacheWorker param1, java.math.BigInteger param2, java.math.BigInteger param3) {
+        try {
+          this.field_a = param3;
+          this.field_i = param1;
+          this.field_f = param0;
+          this.field_j = param2;
+          if (!this.field_f.isPriorityQueueFull((byte) 113)) {
+            this.field_h = this.field_f.createRequest((byte) 0, 255, true, -1150070304, 255);
+          }
+        } catch (RuntimeException runtimeException) {
+          throw AsyncCheckResult.wrapException((Throwable) ((Object) runtimeException), "ha.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    static {
+        field_e = "Account created successfully!";
+        field_g = "Enter multiplayer lobby";
+        field_d = "Send private message to <%0>";
+    }
+}

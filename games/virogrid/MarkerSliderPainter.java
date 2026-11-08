@@ -1,0 +1,164 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class MarkerSliderPainter implements WidgetListener {
+    private int field_e;
+    private BitmapFont field_g;
+    private int field_f;
+    private int field_a;
+    static String field_j;
+    private int field_k;
+    private int field_b;
+    private int field_c;
+    static String field_i;
+    static String[] field_d;
+    static int field_l;
+    static int field_h;
+
+    public final void drawWidget(int param0, UiWidget param1, boolean param2, int param3, int param4) {
+        int var10 = 0;
+        UiWidget stackIn_6_0 = null;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
+        String stackIn_16_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var6 = null;
+        int var7 = 0;
+        int var8 = 0;
+        int var9 = 0;
+        int var11 = 0;
+        UiWidget var12 = null;
+        MarkerSlider var13 = null;
+        var11 = Virogrid.field_F ? 1 : 0;
+        try {
+          if (param4 != -23294) {
+            var12 = (UiWidget) null;
+            this.drawWidget(62, (UiWidget) null, true, -29, -102);
+          }
+          if (!(param1 instanceof MarkerSlider)) {
+            stackIn_6_0 = null;
+          } else {
+            stackIn_6_0 = (UiWidget) (param1);
+          }
+          var13 = (MarkerSlider) (stackIn_6_0);
+          if (var13 == null) {
+          }
+          Rasterizer.fillRectangle(param0 + param1.field_l, param3 + param1.field_u, param1.field_g, param1.field_m, this.field_k);
+          var7 = param1.field_g - var13.field_J * 2;
+          var8 = param1.field_l + (param0 + var13.field_J);
+          var9 = var13.field_K + param1.field_u + param3;
+          Rasterizer.drawLine(var8, var9, var8 + var7, var9, this.field_a);
+          for (var10 = -1 + var13.getMarkerCount((byte) -108); var10 >= 0; var10--) {
+            Rasterizer.fillCircle(var7 * var13.getMarkerPosition(-1, var10) / var13.getMaxValue(2147483647) + var8, var9, this.field_b, this.field_e);
+          }
+          if (this.field_g == null) {
+            return;
+          }
+          this.field_g.drawCentered(var13.field_n, var8 + var7 / 2, this.field_g.field_J + var9 + var13.field_K, this.field_f, this.field_c);
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var6 = decompiledCaughtException;
+          stackIn_15_0 = var6;
+          stackIn_15_1 = new StringBuilder().append("rj.E(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_16_2 = "null";
+          } else {
+            stackIn_16_2 = "{...}";
+          }
+          throw AsyncCheckResult.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+        }
+    }
+
+    final static void writePlayerAdmissionRequest(int param0, boolean param1, long param2) {
+        CipherPacketBuffer var4 = IterableNodeHashTable.field_g;
+        var4.writeCipheredOpcode(param0, 8);
+        var4.position = var4.position + 1;
+        int var5 = var4.position;
+        var4.writeByte(6, -119);
+        var4.writeLong((byte) 67, param2);
+        if (!param1) {
+          var4.backpatchByteLength(-var5 + var4.position, -1);
+          return;
+        }
+    }
+
+    final static void notifyBrowserResize(int param0, byte param1) {
+        try {
+          Throwable decompiledCaughtException = null;
+          Throwable var2 = null;
+          try {
+            JavaScriptBridge.callWithArguments(ContentTransitionDialog.getApplet((byte) 6), -8582, new Object[]{new Integer(param0)}, "resizing");
+            if (param1 >= -65) {
+              field_d = (String[]) null;
+            }
+          } catch (java.lang.Throwable decompiledCaughtParameter0) {
+            decompiledCaughtException = decompiledCaughtParameter0;
+            var2 = decompiledCaughtException;
+          }
+        } catch (RuntimeException | Error decompiledUncheckedException) {
+          throw decompiledUncheckedException;
+        } catch (Throwable decompiledCheckedException) {
+          throw new RuntimeException(decompiledCheckedException);
+        }
+    }
+
+    MarkerSliderPainter(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+        try {
+          this.field_k = param4;
+          this.field_c = param2;
+          this.field_b = param5;
+          this.field_g = param0;
+          this.field_a = param3;
+          this.field_f = param1;
+          this.field_e = param6;
+        } catch (RuntimeException runtimeException) {
+          throw AsyncCheckResult.wrapException((Throwable) ((Object) runtimeException), "rj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+        }
+    }
+
+    public static void releaseStatics(int param0) {
+        field_i = null;
+        if (param0 != 6) {
+          field_h = -10;
+          field_j = null;
+          field_d = null;
+          return;
+        }
+        field_j = null;
+        field_d = null;
+    }
+
+    final static void fillHalfBlendTriangle(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+        int var9 = Virogrid.field_F ? 1 : 0;
+        if (param4 >= -26) {
+          return;
+        }
+        if (param1 < param5) {
+          if (param7 > param5) {
+            ViewportController.drawFlatTriangle(param1, param6, param5, Rasterizer.field_d, param7, param0, param2, param3, (byte) -105);
+            return;
+          }
+          if (param7 > param1) {
+            ViewportController.drawFlatTriangle(param1, param6, param7, Rasterizer.field_d, param5, param3, param2, param0, (byte) 112);
+            return;
+          }
+          ViewportController.drawFlatTriangle(param7, param3, param1, Rasterizer.field_d, param5, param6, param2, param0, (byte) -58);
+          return;
+        }
+        if (param7 > param1) {
+          ViewportController.drawFlatTriangle(param5, param0, param1, Rasterizer.field_d, param7, param6, param2, param3, (byte) 75);
+          return;
+        }
+        if (param5 >= param7) {
+          ViewportController.drawFlatTriangle(param7, param3, param5, Rasterizer.field_d, param1, param0, param2, param6, (byte) -59);
+          return;
+        }
+        ViewportController.drawFlatTriangle(param5, param0, param7, Rasterizer.field_d, param1, param3, param2, param6, (byte) -68);
+    }
+
+    static {
+        field_i = "More suggestions";
+        field_j = "Inviting <%0>";
+    }
+}

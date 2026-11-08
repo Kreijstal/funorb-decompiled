@@ -15,26 +15,26 @@ abstract class SpriteState extends DualLinkNode {
     static String field_o;
     int field_w;
 
-    final static void e(boolean param0) {
-        ji.field_e.field_l = 0;
-        ji.field_e.field_b = 0;
+    final static void resetConnectionState(boolean param0) {
+        BoundedRandomAccessFile.field_e.field_l = 0;
+        BoundedRandomAccessFile.field_e.field_b = 0;
         if (!param0) {
           field_s = (String) null;
         }
     }
 
-    final static void b(byte param0) {
+    final static void noOperation(byte param0) {
         if (param0 != 29) {
           field_q = (String) null;
         }
     }
 
-    final static SpriteWidget d(boolean param0) {
+    final static SpriteWidget getSecondaryPanelContent(boolean param0) {
         if (!param0) {
           field_y = 78;
-          return lg.field_a.field_Lb;
+          return SharedTextGlobals.field_a.field_Lb;
         }
-        return lg.field_a.field_Lb;
+        return SharedTextGlobals.field_a.field_Lb;
     }
 
     public static void releaseStatics(int param0) {

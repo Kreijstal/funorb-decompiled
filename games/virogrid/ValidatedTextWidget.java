@@ -1,0 +1,137 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class ValidatedTextWidget extends EditableTextWidget implements ValidationProvider {
+    private TextValidator field_U;
+    static Sprite[] field_Y;
+    static String field_X;
+    static IconLabelWidget field_Z;
+    private int field_W;
+    static String field_V;
+
+    ValidatedTextWidget(String param0, UiListener param1, int param2) {
+        super(param0, param1, param2);
+    }
+
+    final String getTooltip(int param0) {
+        if (!this.field_p) {
+          return null;
+        }
+        if (this.field_h == null) {
+          return null;
+        }
+        SpriteWidget.setHoverPosition(this.field_g + (-this.field_W + StatefulWidgetPainter.field_u), IconTextComponent.field_Jb, -83);
+        if (param0 > 35) {
+          return this.field_h;
+        }
+        return (String) null;
+    }
+
+    public static void releaseStatics(int param0) {
+        field_X = null;
+        field_Z = null;
+        if (param0 == -1) {
+          field_V = null;
+          field_Y = null;
+          return;
+        }
+        field_Y = (Sprite[]) null;
+        field_V = null;
+        field_Y = null;
+    }
+
+    final static LogoAndLoginHelpers validateEmailAddress(String param0, int param1) {
+        int var2_int = 0;
+        RuntimeException var2 = null;
+        String var3 = null;
+        String var4 = null;
+        LogoAndLoginHelpers var5 = null;
+        LogoAndLoginHelpers stackIn_4_0 = null;
+        LogoAndLoginHelpers stackIn_8_0 = null;
+        LogoAndLoginHelpers stackIn_11_0 = null;
+        LogoAndLoginHelpers stackIn_14_0 = null;
+        LogoAndLoginHelpers stackIn_16_0 = null;
+        RuntimeException stackIn_19_0 = null;
+        StringBuilder stackIn_19_1 = null;
+        String stackIn_20_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (param0 != null &&
+            param0.length() != 0) {
+            var2_int = param0.indexOf('@');
+            if (var2_int == -1) {
+              stackIn_8_0 = PasswordFieldPainter.field_H;
+              return stackIn_8_0;
+            }
+            var3 = param0.substring(0, var2_int);
+            var4 = param0.substring(var2_int + 1);
+            if (param1 <= 6) {
+              stackIn_11_0 = (LogoAndLoginHelpers) null;
+              return stackIn_11_0;
+            }
+            var5 = NodeHashTableIterator.validateEmailLocalPart(var3, 0);
+            if (var5 == null) {
+              stackIn_16_0 = ArchiveLoadSequence.validateEmailDomain(28320, var4);
+              return stackIn_16_0;
+            }
+            stackIn_14_0 = var5;
+            return stackIn_14_0;
+          }
+          stackIn_4_0 = LobbyGameListHelpers.field_b;
+          return stackIn_4_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          stackIn_19_0 = var2;
+          stackIn_19_1 = new StringBuilder().append("vd.DA(");
+          if (param0 == null) {
+            stackIn_20_2 = "null";
+          } else {
+            stackIn_20_2 = "{...}";
+          }
+          throw AsyncCheckResult.wrapException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(')').toString());
+        }
+    }
+
+    final void notifyTextChanged(int param0) {
+        super.notifyTextChanged(param0);
+        if (null != this.field_U) {
+          this.field_U.restartDebounce(false);
+        }
+    }
+
+    final void setValidationSource(TextValidator param0, byte param1) {
+        try {
+          this.field_U = param0;
+          if (param1 <= 124) {
+            field_X = (String) null;
+          }
+        } catch (RuntimeException runtimeException) {
+          throw AsyncCheckResult.wrapException((Throwable) ((Object) runtimeException), "vd.W(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+        }
+    }
+
+    public final TextValidator getValidationSource(int param0) {
+        if (param0 != -1) {
+          return (TextValidator) null;
+        }
+        return this.field_U;
+    }
+
+    final void updatePointer(int param0, int param1, UiWidget param2, int param3) {
+        super.updatePointer(param0, 114, param2, param3);
+        if (param1 < 113) {
+          return;
+        }
+        try {
+          this.field_W = StatefulWidgetPainter.field_u - (this.field_l + param0);
+        } catch (RuntimeException runtimeException) {
+          throw AsyncCheckResult.wrapException((Throwable) ((Object) runtimeException), "vd.E(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+        }
+    }
+
+    static {
+        field_V = "This password contains repeated characters, and would be easy to guess";
+        field_X = null;
+    }
+}

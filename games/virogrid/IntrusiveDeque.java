@@ -5,14 +5,14 @@ final class IntrusiveDeque {
     static int field_d;
     static SpriteWidget field_a;
     static int field_h;
-    static ul field_b;
+    static LoginCredentialType field_b;
     static byte[] field_e;
     IntrusiveNode field_i;
     private IntrusiveNode field_c;
     static String field_g;
     static boolean field_f;
 
-    final IntrusiveNode b(boolean param0) {
+    final IntrusiveNode last(boolean param0) {
         IntrusiveNode var2 = null;
         IntrusiveNode var2Lifetime1;
         if (param0) {
@@ -34,7 +34,7 @@ final class IntrusiveDeque {
         return var2Lifetime1;
     }
 
-    final void a(boolean param0) {
+    final void clear(boolean param0) {
         IntrusiveNode var2;
         int var3;
         IntrusiveNode var4;
@@ -42,7 +42,7 @@ final class IntrusiveDeque {
         while (true) {
           var2 = this.field_i.previous;
           if (var2 != this.field_i) {
-            var2.a(false);
+            var2.unlink(false);
             continue;
           }
           break;
@@ -52,29 +52,29 @@ final class IntrusiveDeque {
           return;
         }
         var4 = (IntrusiveNode) null;
-        this.a(-4, (IntrusiveNode) null);
+        this.firstFrom(-4, (IntrusiveNode) null);
         return;
     }
 
-    final void b(IntrusiveNode param0, byte param1) {
+    final void addLast(IntrusiveNode param0, byte param1) {
         try {
           if (null != param0.next) {
-            param0.a(false);
+            param0.unlink(false);
           }
           param0.next = this.field_i;
           param0.previous = this.field_i.previous;
           param0.next.previous = param0;
           if (param1 != -45) {
             CharSequence var4 = (CharSequence) null;
-            IntrusiveDeque.a(-77, -60, false, (CharSequence) null);
+            IntrusiveDeque.parseInteger(-77, -60, false, (CharSequence) null);
           }
           param0.previous.next = param0;
         } catch (RuntimeException runtimeException) {
-          throw kg.a((Throwable) ((Object) runtimeException), "p.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw AsyncCheckResult.wrapException((Throwable) ((Object) runtimeException), "p.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final static int a(int param0, int param1, int param2, int param3) {
+    final static int fitHorizontalPosition(int param0, int param1, int param2, int param3) {
         if (Rasterizer.field_f >= param1 + param3 + param2) {
           return param2 + param3;
         }
@@ -84,29 +84,29 @@ final class IntrusiveDeque {
         return -param1 + Rasterizer.field_f;
     }
 
-    final IntrusiveNode d(int param0) {
+    final IntrusiveNode removeFirst(int param0) {
         IntrusiveNode var2 = this.field_i.previous;
         if (this.field_i == var2) {
           return null;
         }
         if (param0 == -29889) {
-          var2.a(false);
+          var2.unlink(false);
           return var2;
         }
         return (IntrusiveNode) null;
     }
 
-    final IntrusiveNode b(int param0) {
+    final IntrusiveNode removeLast(int param0) {
         int var2 = -93 / ((-46 - param0) / 34);
         IntrusiveNode var3 = this.field_i.next;
         if (this.field_i != var3) {
-          var3.a(false);
+          var3.unlink(false);
           return var3;
         }
         return null;
     }
 
-    final IntrusiveNode e(int param0) {
+    final IntrusiveNode previous(int param0) {
         IntrusiveNode var2 = null;
         IntrusiveNode var2Lifetime1;
         if (param0 != 9003) {
@@ -128,32 +128,32 @@ final class IntrusiveDeque {
         return var2Lifetime1;
     }
 
-    final static void a(int param0, int param1, boolean param2, int param3, int param4, lk param5, um param6) {
-        dj var7 = null;
+    final static void openPlayerContextMenu(int param0, int param1, boolean param2, int param3, int param4, LobbyPlayerEntry param5, ScrollPane param6) {
+        PlayerContextMenu var7 = null;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        ai.a(-1, param6, (int[]) null, param5.field_Eb, param5.field_Ob, param5.field_Nb, -1, param5, 60);
-        md.field_e.a(true, (byte) -126);
-        md.field_e.a(4, (int[]) null, 0);
-        md.field_e.a((byte) -110);
+        ContextMenuHelpers.openContextMenu(-1, param6, (int[]) null, param5.field_Eb, param5.field_Ob, param5.field_Nb, -1, param5, 60);
+        IntKeyLookup.field_e.addGameMemberActions(true, (byte) -126);
+        IntKeyLookup.field_e.addSocialActions(4, (int[]) null, 0);
+        IntKeyLookup.field_e.addReportAbuseAction((byte) -110);
         if (param2) {
           return;
         }
         try {
-          var7 = md.field_e;
+          var7 = IntKeyLookup.field_e;
           var8 = param1;
           var9 = param3;
           var10 = param4;
           var11 = param0;
-          var7.field_a.a(var11, 0, var10, var8, var9);
+          var7.field_a.openAt(var11, 0, var10, var8, var9);
         } catch (RuntimeException runtimeException) {
-          throw kg.a((Throwable) ((Object) runtimeException), "p.G(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ')');
+          throw AsyncCheckResult.wrapException((Throwable) ((Object) runtimeException), "p.G(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final IntrusiveNode a(int param0) {
+    final IntrusiveNode next(int param0) {
         IntrusiveNode var2 = this.field_c;
         if (var2 == this.field_i) {
           this.field_c = null;
@@ -163,12 +163,12 @@ final class IntrusiveDeque {
           this.field_c = var2.previous;
           return var2;
         }
-        this.b(true);
+        this.last(true);
         this.field_c = var2.previous;
         return var2;
     }
 
-    final static int a(int param0, int param1, int param2) {
+    final static int integerPower(int param0, int param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -199,11 +199,11 @@ final class IntrusiveDeque {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw kg.a((Throwable) ((Object) var3), "p.M(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw AsyncCheckResult.wrapException((Throwable) ((Object) var3), "p.M(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
-    final IntrusiveNode a(int param0, IntrusiveNode param1) {
+    final IntrusiveNode firstFrom(int param0, IntrusiveNode param1) {
         IntrusiveNode var3 = null;
         RuntimeException var3_ref = null;
         Object stackIn_7_0 = null;
@@ -239,11 +239,11 @@ final class IntrusiveDeque {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw kg.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw AsyncCheckResult.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
-    final IntrusiveNode a(byte param0) {
+    final IntrusiveNode first(byte param0) {
         IntrusiveNode var2 = this.field_i.previous;
         if (var2 == this.field_i) {
           this.field_c = null;
@@ -253,7 +253,7 @@ final class IntrusiveDeque {
         if (param0 < -20) {
           return var2;
         }
-        IntrusiveDeque.a(-111, 78, -112);
+        IntrusiveDeque.integerPower(-111, 78, -112);
         return var2;
     }
 
@@ -266,49 +266,49 @@ final class IntrusiveDeque {
           return;
         }
         CharSequence var2 = (CharSequence) null;
-        IntrusiveDeque.a(-2, 62, false, (CharSequence) null);
+        IntrusiveDeque.parseInteger(-2, 62, false, (CharSequence) null);
         field_g = null;
         field_b = null;
         field_a = null;
         field_e = null;
     }
 
-    final void a(IntrusiveNode param0, byte param1) {
+    final void addFirst(IntrusiveNode param0, byte param1) {
         try {
           if (param0.next != null) {
-            param0.a(false);
+            param0.unlink(false);
           }
           param0.next = this.field_i.next;
           param0.previous = this.field_i;
           if (param1 > -30) {
             IntrusiveNode var4 = (IntrusiveNode) null;
-            this.b((IntrusiveNode) null, (byte) 27);
+            this.addLast((IntrusiveNode) null, (byte) 27);
           }
           param0.next.previous = param0;
           param0.previous.next = param0;
         } catch (RuntimeException runtimeException) {
-          throw kg.a((Throwable) ((Object) runtimeException), "p.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw AsyncCheckResult.wrapException((Throwable) ((Object) runtimeException), "p.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final static Js5Archive a(int param0, int param1) {
+    final static Js5Archive createArchive(int param0, int param1) {
         if (param0 >= 32) {
-          return va.a(1, false, param1, -105, true, false);
+          return ArchiveFactoryHelpers.createResourceArchive(1, false, param1, -105, true, false);
         }
         field_e = (byte[]) null;
-        return va.a(1, false, param1, -105, true, false);
+        return ArchiveFactoryHelpers.createResourceArchive(1, false, param1, -105, true, false);
     }
 
-    final boolean b(byte param0) {
+    final boolean isEmpty(byte param0) {
         if (param0 > 7) {
           return this.field_i.previous == this.field_i ? true : false;
         }
         IntrusiveNode var3 = (IntrusiveNode) null;
-        this.a(-30, (IntrusiveNode) null);
+        this.firstFrom(-30, (IntrusiveNode) null);
         return this.field_i.previous == this.field_i ? true : false;
     }
 
-    final static int a(int param0, int param1, boolean param2, CharSequence param3) {
+    final static int parseInteger(int param0, int param1, boolean param2, CharSequence param3) {
         int var8 = 0;
         int stackIn_42_0 = 0;
         RuntimeException stackIn_45_0 = null;
@@ -387,7 +387,7 @@ final class IntrusiveDeque {
           } else {
             stackIn_46_2 = "{...}";
           }
-          throw kg.a((Throwable) ((Object) stackIn_45_0), ((StringBuilder) (Object) stackIn_45_1).append(stackIn_46_2).append(')').toString());
+          throw AsyncCheckResult.wrapException((Throwable) ((Object) stackIn_45_0), ((StringBuilder) (Object) stackIn_45_1).append(stackIn_46_2).append(')').toString());
         }
     }
 
@@ -399,7 +399,7 @@ final class IntrusiveDeque {
 
     static {
         field_h = 480;
-        field_b = new ul(2);
+        field_b = new LoginCredentialType(2);
         field_g = "Find opponents";
         field_f = false;
     }

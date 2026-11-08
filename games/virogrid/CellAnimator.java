@@ -3,7 +3,7 @@
  */
 final class CellAnimator {
     private GameBoard board;
-    bi field_j;
+    ChatShortcutHelpers field_j;
     int field_e;
     int selectedColumn;
     static Sprite[] ratedGameIcons;
@@ -26,7 +26,7 @@ final class CellAnimator {
         int var5;
         var5 = Virogrid.field_F ? 1 : 0;
         var2 = 2 % ((-69 - param0) / 55);
-        var3 = (CellFlip) (this.flips.a((byte) -87));
+        var3 = (CellFlip) (this.flips.first((byte) -87));
         while (var3 != null) {
           var4 = var3.phase;
           if (var4 != 0) {
@@ -36,7 +36,7 @@ final class CellAnimator {
                 var3.field_h = var3.field_h - 40;
                 if (var3.field_n < 0 &&
                   var3.field_h < 0) {
-                  vm.$cfr$intArgs$a$45c25716b3df(30, td.field_d[sh.a(4712, 5)]);
+                  SoundPlaybackHelpers.playSoundEffect(30, CanvasPresentHelpers.field_d[ProgressMessageDialog.randomInt(4712, 5)]);
                   stackIn_16_0 = this.displayedCells[var3.row];
                   stackIn_16_1 = var3.column;
                   if (!var3.newOwnerIsFirstPlayer) {
@@ -45,7 +45,7 @@ final class CellAnimator {
                     stackIn_17_2 = 0;
                   }
                   stackIn_16_0[stackIn_16_1] = (byte)stackIn_17_2;
-                  var3.a(false);
+                  var3.unlink(false);
                 }
                 if (var3.field_n < 0) {
                   var3.field_n = 0;
@@ -72,12 +72,12 @@ final class CellAnimator {
             var3.phase < 1) {
             return;
           }
-          var3 = (CellFlip) (this.flips.a(16213));
+          var3 = (CellFlip) (this.flips.next(16213));
         }
         return;
     }
 
-    private final boolean a(int param0, int param1, int param2) {
+    private final boolean isPendingPlacementAt(int param0, int param1, int param2) {
         boolean stackIn_7_0 = false;
         if (param2 >= -108) {
           this.syncWithBoard(false, -57);
@@ -86,28 +86,28 @@ final class CellAnimator {
         return stackIn_7_0;
     }
 
-    final static ka a(byte param0, int param1) {
+    final static PendingRequest createPendingRequest(byte param0, int param1) {
         if (param0 <= 63) {
           ratedGameIcons = (Sprite[]) null;
         }
-        ka var2 = new ka();
-        tf.field_a.a(var2, (byte) -50);
-        fn.a(param1, true);
+        PendingRequest var2 = new PendingRequest();
+        QuickChatOpenHelpers.field_a.addFirst(var2, (byte) -50);
+        LobbySessionHelpers.sendPendingRequestPacket(param1, true);
         return var2;
     }
 
-    final static int b(boolean param0) {
-        ql.field_q.b((byte) -116);
+    final static int pollArchiveLoading(boolean param0) {
+        DialWidgetPainter.field_q.serviceProviders((byte) -116);
         if (!param0) {
-          CellAnimator.a((byte) -1, 53);
+          CellAnimator.createPendingRequest((byte) -1, 53);
         }
-        if (!ji.field_e.d(-57)) {
-          return dk.b((byte) 108);
+        if (!BoundedRandomAccessFile.field_e.poll(-57)) {
+          return Js5Transport.pollServerConnection((byte) 108);
         }
         return 0;
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = null;
         field_i = null;
         if (param0 != -314) {
@@ -126,8 +126,8 @@ final class CellAnimator {
           }
         }
         this.field_j = null;
-        this.flips.a(param0);
-        this.board.a(this.field_h, this.board.currentPlayer, (byte) 14);
+        this.flips.clear(param0);
+        this.board.markMovableCells(this.field_h, this.board.currentPlayer, (byte) 14);
     }
 
     final void syncWithBoard(boolean param0, int param1) {
@@ -157,8 +157,8 @@ final class CellAnimator {
           stackIn_5_1 = this.board.lastMoveDestColumn;
           stackIn_5_2 = this.board.lastMoveDestRow;
           stackIn_6_3 = (this.board.cells[this.board.lastMoveDestRow][this.board.lastMoveDestColumn] == 0);
-          if (!this.a(stackIn_5_1, stackIn_5_2, stackIn_6_3, 16238)) {
-            this.a(this.board.lastMoveDestRow, (byte) 99, this.board.lastMoveDestColumn);
+          if (!this.hasFlipAt(stackIn_5_1, stackIn_5_2, stackIn_6_3, 16238)) {
+            this.queueFlipForCell(this.board.lastMoveDestRow, (byte) 99, this.board.lastMoveDestColumn);
           }
           var3 = -1 + this.board.lastMoveDestRow;
           if (var3 < 0) {
@@ -182,15 +182,15 @@ final class CellAnimator {
                 stackIn_28_1 = var8;
                 stackIn_28_2 = var7;
                 stackIn_29_3 = (this.board.cells[var7][var8] == 0);
-                if (!this.a(stackIn_28_1, stackIn_28_2, stackIn_29_3, 16238)) {
-                  this.a(var7, (byte) -119, var8);
+                if (!this.hasFlipAt(stackIn_28_1, stackIn_28_2, stackIn_29_3, 16238)) {
+                  this.queueFlipForCell(var7, (byte) -119, var8);
                 }
               }
             }
           }
         }
         if (param1 != 31626) {
-          discarded$0 = this.a(49, 29, 84);
+          discarded$0 = this.isPendingPlacementAt(49, 29, 84);
         }
         for (var3Lifetime1 = 0; var3Lifetime1 < this.displayedCells.length; var3Lifetime1++) {
           for (var4Lifetime1 = 0; this.displayedCells[0].length > var4Lifetime1; var4Lifetime1++) {
@@ -203,8 +203,8 @@ final class CellAnimator {
                   stackIn_54_1 = var4Lifetime1;
                   stackIn_54_2 = var3Lifetime1;
                   stackIn_55_3 = (this.board.cells[var3Lifetime1][var4Lifetime1] == 0);
-                  if (!this.a(stackIn_54_1, stackIn_54_2, stackIn_55_3, 16238)) {
-                    this.a(var3Lifetime1, (byte) -116, var4Lifetime1);
+                  if (!this.hasFlipAt(stackIn_54_1, stackIn_54_2, stackIn_55_3, 16238)) {
+                    this.queueFlipForCell(var3Lifetime1, (byte) -116, var4Lifetime1);
                   }
                 }
               }
@@ -214,49 +214,49 @@ final class CellAnimator {
         if (param0) {
           this.board.recountPieces((byte) -78);
         }
-        this.board.a(this.field_h, -this.board.currentPlayer + 1, (byte) 14);
+        this.board.markMovableCells(this.field_h, -this.board.currentPlayer + 1, (byte) 14);
     }
 
-    private final boolean a(int param0, int param1, boolean param2, int param3) {
+    private final boolean hasFlipAt(int param0, int param1, boolean param2, int param3) {
         int var6 = Virogrid.field_F ? 1 : 0;
         if (param3 != 16238) {
           return true;
         }
-        CellFlip var5 = (CellFlip) (this.flips.a((byte) -68));
+        CellFlip var5 = (CellFlip) (this.flips.first((byte) -68));
         while (var5 != null) {
           if (param2 == var5.newOwnerIsFirstPlayer &&
             param0 == var5.column &&
             var5.row == param1) {
             return true;
           }
-          var5 = (CellFlip) (this.flips.a(16213));
+          var5 = (CellFlip) (this.flips.next(16213));
         }
         return false;
     }
 
-    private final void a(int param0, byte param1, int param2) {
+    private final void queueFlipForCell(int param0, byte param1, int param2) {
         int var4;
         int var5;
         var5 = Virogrid.field_F ? 1 : 0;
         var4 = -48 % ((param1 + 36) / 54);
         if (this.board.cells[param0][param2] == 0) {
           if (this.field_b == 0 &&
-            this.a(param2, param0, -124)) {
-            this.flips.a(new CellFlip(this.field_j, true), (byte) -100);
+            this.isPendingPlacementAt(param2, param0, -124)) {
+            this.flips.addFirst(new CellFlip(this.field_j, true), (byte) -100);
             this.field_j = null;
           } else {
-            this.flips.a(new CellFlip(param2, param0, true), (byte) -41);
-            vm.$cfr$intArgs$a$45c25716b3df(30, tk.field_c[sh.a(4712, 5)]);
+            this.flips.addFirst(new CellFlip(param2, param0, true), (byte) -41);
+            SoundPlaybackHelpers.playSoundEffect(30, UrlRewriteHelpers.field_c[ProgressMessageDialog.randomInt(4712, 5)]);
           }
         } else {
           if (this.board.cells[param0][param2] == 1) {
             if (this.field_b == 1 &&
-              this.a(param2, param0, -111)) {
-              this.flips.a(new CellFlip(this.field_j, false), (byte) -75);
+              this.isPendingPlacementAt(param2, param0, -111)) {
+              this.flips.addFirst(new CellFlip(this.field_j, false), (byte) -75);
               this.field_j = null;
             } else {
-              this.flips.a(new CellFlip(param2, param0, false), (byte) -51);
-              vm.$cfr$intArgs$a$45c25716b3df(30, tk.field_c[sh.a(4712, 5)]);
+              this.flips.addFirst(new CellFlip(param2, param0, false), (byte) -51);
+              SoundPlaybackHelpers.playSoundEffect(30, UrlRewriteHelpers.field_c[ProgressMessageDialog.randomInt(4712, 5)]);
             }
           }
         }
@@ -279,9 +279,9 @@ final class CellAnimator {
           }
           this.field_h = new boolean[this.displayedCells.length][this.displayedCells[0].length];
           this.field_e = -1;
-          this.board.a(this.field_h, this.board.currentPlayer, (byte) 14);
+          this.board.markMovableCells(this.field_h, this.board.currentPlayer, (byte) 14);
         } catch (RuntimeException runtimeException) {
-          throw kg.a((Throwable) ((Object) runtimeException), "m.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw AsyncCheckResult.wrapException((Throwable) ((Object) runtimeException), "m.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

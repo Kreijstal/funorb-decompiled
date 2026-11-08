@@ -1,0 +1,144 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class StateToken {
+    static String field_d;
+    static String field_c;
+    static String field_a;
+    static String field_b;
+
+    public final String toString() {
+        throw new IllegalStateException();
+    }
+
+    public static void releaseStatics(int param0) {
+        if (param0 == 29137) {
+          field_c = null;
+          field_d = null;
+          field_b = null;
+          field_a = null;
+          return;
+        }
+        String var2 = (String) null;
+        StateToken.drawTooltipBox((byte) 35, (String) null);
+        field_c = null;
+        field_d = null;
+        field_b = null;
+        field_a = null;
+    }
+
+    final static void readAchievementResponse(byte param0) {
+        int var7 = 0;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var1 = null;
+        int var2 = 0;
+        int[] var3 = null;
+        int[] var4 = null;
+        CipherPacketBuffer var5 = null;
+        int var6 = 0;
+        int var8 = 0;
+        int[] var10 = null;
+        int[] var11 = null;
+        StatSubmission var12 = null;
+        CipherPacketBuffer var13 = null;
+        PendingRequest var14 = null;
+        int[] var15 = null;
+        Object var16 = null;
+        PendingRequest var16_ref = null;
+        int[] var17 = null;
+        var16 = null;
+        var8 = Virogrid.field_F ? 1 : 0;
+        try {
+          if (param0 != 97) {
+            return;
+          }
+          var13 = ProgressMessageDialog.field_qb;
+          var2 = var13.readUnsignedByte(11132);
+          if (var2 == 0) {
+            var11 = CommonUiHelpers.newEightInts(param0 ^ -30578);
+            var17 = var11;
+            var15 = var17;
+            var3 = var15;
+            var10 = var11;
+            var4 = var10;
+            var5 = var13;
+            var6 = ((PacketBuffer) ((Object) var5)).readUnsignedByte(param0 + 11035);
+            for (var7 = 0; var6 > var7; var7++) {
+              var10[var7] = ((PacketBuffer) ((Object) var5)).readInt((byte) 103);
+            }
+            var16_ref = (PendingRequest) (QuickChatOpenHelpers.field_a.first((byte) -24));
+            if (var16_ref == null) {
+              MenuInputState.closeGameConnection(false);
+              return;
+            }
+            var16_ref.field_h = var3;
+            var16_ref.field_g = var17[0];
+            var16_ref.field_l = true;
+            var16_ref.unlink(false);
+            return;
+          }
+          if (1 == var2) {
+            var12 = (StatSubmission) (RankingArraySupport.field_b.first((byte) -89));
+            if (var12 != null) {
+              var12.unlink(false);
+              return;
+            }
+            MenuInputState.closeGameConnection(false);
+            return;
+          }
+          if (2 != var2) {
+            IconLabelWidget.reportClientError("A1: " + ClientException.describePacketHistory(true), (Throwable) null, 1);
+            MenuInputState.closeGameConnection(false);
+            return;
+          }
+          var14 = (PendingRequest) (QuickChatOpenHelpers.field_a.first((byte) -127));
+          if (var14 == null) {
+            MenuInputState.closeGameConnection(false);
+            return;
+          }
+          var14.field_h = CommonUiHelpers.newEightInts(-30481);
+          var14.field_l = true;
+          var14.field_g = var14.field_h[0];
+          var14.unlink(false);
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw AsyncCheckResult.wrapException((Throwable) ((Object) var1), "ob.A(" + param0 + ')');
+        }
+    }
+
+    final static void drawTooltipBox(byte param0, String param1) {
+        int var2_int = 0;
+        int var3 = 0;
+        int var4 = 0;
+        int var5 = 0;
+        int var6 = 0;
+        int var7 = 0;
+        int var8 = 0;
+        try {
+          var2_int = StatefulWidgetPainter.field_u;
+          var3 = IconTextComponent.field_Jb;
+          var4 = LinkTextPainter.field_h.field_C.wrappedLineCount(param1, 500);
+          var5 = LinkTextPainter.field_h.field_C.getWrappedWidth(param1, 500) + 6;
+          if (param0 >= -31) {
+            StateToken.readAchievementResponse((byte) 79);
+          }
+          var6 = 2 + var4 * LobbySortHelpers.field_e;
+          var7 = ProgressMessageDialog.choosePopupX(0, 12, var2_int, var5);
+          var8 = IntrusiveDeque.fitHorizontalPosition(-1, var6, var3, 20);
+          Rasterizer.drawRectangle(var7, var8, var5, var6, 0);
+          Rasterizer.fillRectangle(var7 + 1, var8 + 1, var5 - 2, -2 + var6, 16777088);
+          LinkTextPainter.field_h.field_C.drawParagraph(param1, 3 + var7, -LinkTextPainter.field_h.field_C.field_H + var8 - (-1 - TriangleSortHelpers.field_e), 500, 1000, 0, -1, 0, 0, LobbySortHelpers.field_e);
+        } catch (RuntimeException runtimeException) {
+          throw AsyncCheckResult.wrapException((Throwable) ((Object) runtimeException), "ob.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    static {
+        field_c = "<%0> cannot join; the game has started.";
+        field_d = "Unfortunately there was a focus problem while setting fullscreen mode. You could try disabling any multiple monitor drivers or window enhancements, if you have any enabled, or try a different resolution.";
+        field_b = "Close";
+        field_a = "Clan";
+    }
+}

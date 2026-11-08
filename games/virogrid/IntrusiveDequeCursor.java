@@ -5,15 +5,15 @@ import java.io.*;
 
 final class IntrusiveDequeCursor {
     static String field_a;
-    static kf field_c;
+    static DualLinkHashTable field_c;
     private IntrusiveDeque field_g;
     private IntrusiveNode field_b;
     static SpriteWidget field_e;
-    static wg field_h;
+    static FrameSkin field_h;
     static String field_f;
     static String field_d;
 
-    final IntrusiveNode b(int param0, IntrusiveNode param1) {
+    final IntrusiveNode startForwardFrom(int param0, IntrusiveNode param1) {
         IntrusiveNode var3 = null;
         RuntimeException var3_ref = null;
         Object stackIn_5_0 = null;
@@ -34,7 +34,7 @@ final class IntrusiveDequeCursor {
             return (IntrusiveNode) (stackIn_5_0);
           }
           if (param0 != 1) {
-            IntrusiveDequeCursor.a(false);
+            IntrusiveDequeCursor.getSpanWidth(false);
           }
           this.field_b = var3.next;
           stackIn_9_0 = var3;
@@ -49,19 +49,19 @@ final class IntrusiveDequeCursor {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw kg.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw AsyncCheckResult.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
-    final static int a(boolean param0) {
+    final static int getSpanWidth(boolean param0) {
         if (param0) {
           IntrusiveDequeCursor.releaseStatics(-1);
-          return -gi.field_c + qg.field_g;
+          return -ArchiveBytesHelpers.field_c + RasterSnapshot.field_g;
         }
-        return -gi.field_c + qg.field_g;
+        return -ArchiveBytesHelpers.field_c + RasterSnapshot.field_g;
     }
 
-    final IntrusiveNode a(byte param0) {
+    final IntrusiveNode first(byte param0) {
         IntrusiveNode var2 = this.field_g.field_i.next;
         if (var2 == this.field_g.field_i) {
           this.field_b = null;
@@ -71,17 +71,17 @@ final class IntrusiveDequeCursor {
           this.field_b = var2.next;
           return var2;
         }
-        field_c = (kf) null;
+        field_c = (DualLinkHashTable) null;
         this.field_b = var2.next;
         return var2;
     }
 
-    final IntrusiveNode a(int param0) {
+    final IntrusiveNode nextForward(int param0) {
         IntrusiveNode var2 = null;
         IntrusiveNode var2Lifetime1;
         if (param0 != -1) {
           IntrusiveNode var3 = (IntrusiveNode) null;
-          this.b(83, (IntrusiveNode) null);
+          this.startForwardFrom(83, (IntrusiveNode) null);
           var2 = this.field_b;
           if (var2 == this.field_g.field_i) {
             this.field_b = null;
@@ -99,7 +99,7 @@ final class IntrusiveDequeCursor {
         return var2Lifetime1;
     }
 
-    final IntrusiveNode a(int param0, IntrusiveNode param1) {
+    final IntrusiveNode startBackwardFrom(int param0, IntrusiveNode param1) {
         IntrusiveNode var3 = null;
         RuntimeException var3_ref = null;
         Object stackIn_5_0 = null;
@@ -135,11 +135,11 @@ final class IntrusiveDequeCursor {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw kg.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw AsyncCheckResult.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
-    final static String a(int param0, Throwable param1) throws IOException {
+    final static String describeThrowable(int param0, Throwable param1) throws IOException {
         String var2;
         PrintWriter var4;
         int var9;
@@ -147,7 +147,7 @@ final class IntrusiveDequeCursor {
         String var11;
         int var12;
         int var13;
-        rg var14;
+        ClientException var14;
         StringWriter var15;
         String var20;
         BufferedReader var21;
@@ -199,8 +199,8 @@ final class IntrusiveDequeCursor {
         String var11Lifetime1Lifetime2;
         String var11Lifetime5Lifetime1;
         var13 = Virogrid.field_F ? 1 : 0;
-        if (param1 instanceof rg) {
-          var14 = (rg) ((Object) param1);
+        if (param1 instanceof ClientException) {
+          var14 = (ClientException) ((Object) param1);
           param1 = var14.field_a;
           var2 = var14.field_c + " | ";
           var11 = var2;
@@ -340,7 +340,7 @@ final class IntrusiveDequeCursor {
         try {
           this.field_g = param0;
         } catch (RuntimeException runtimeException) {
-          throw kg.a((Throwable) ((Object) runtimeException), "ma.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw AsyncCheckResult.wrapException((Throwable) ((Object) runtimeException), "ma.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -354,11 +354,11 @@ final class IntrusiveDequeCursor {
           field_d = null;
           return;
         }
-        IntrusiveDequeCursor.a(false);
+        IntrusiveDequeCursor.getSpanWidth(false);
         field_d = null;
     }
 
-    final IntrusiveNode b(int param0) {
+    final IntrusiveNode nextBackward(int param0) {
         IntrusiveNode var2 = this.field_b;
         if (var2 == this.field_g.field_i) {
           this.field_b = null;
@@ -369,7 +369,7 @@ final class IntrusiveDequeCursor {
           return var2;
         }
         IntrusiveNode var3 = (IntrusiveNode) null;
-        this.b(-37, (IntrusiveNode) null);
+        this.startForwardFrom(-37, (IntrusiveNode) null);
         this.field_b = var2.previous;
         return var2;
     }

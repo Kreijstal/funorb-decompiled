@@ -6,18 +6,18 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
     static SpriteWidget field_c;
     static int field_b;
     static String[][] field_a;
-    static dl field_e;
+    static ConnectionStage field_e;
 
     public final synchronized void mouseEntered(java.awt.event.MouseEvent param0) {
         try {
-          if (pm.field_l != null) {
-            ng.field_Q = 0;
-            ka.field_i = param0.getX();
-            sm.field_a = param0.getY();
-            wg.field_a = true;
+          if (MouseTrailPoint.field_l != null) {
+            ValidationMessageWidget.field_Q = 0;
+            PendingRequest.field_i = param0.getX();
+            LoadingProgressHelpers.field_a = param0.getY();
+            FrameSkin.field_a = true;
           }
         } catch (RuntimeException runtimeException) {
-          throw kg.a((Throwable) ((Object) runtimeException), "me.mouseEntered(" + (param0 != null ? "{...}" : "null") + ')');
+          throw AsyncCheckResult.wrapException((Throwable) ((Object) runtimeException), "me.mouseEntered(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -29,10 +29,10 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (null != pm.field_l) {
-            ng.field_Q = 0;
-            hc.field_d = 0;
-            wg.field_a = true;
+          if (null != MouseTrailPoint.field_l) {
+            ValidationMessageWidget.field_Q = 0;
+            ClockAndTextHelpers.field_d = 0;
+            FrameSkin.field_a = true;
             var2_int = param0.getModifiers();
             if ((var2_int & 8) == 0) {
             }
@@ -56,7 +56,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw kg.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw AsyncCheckResult.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -67,13 +67,13 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (null == pm.field_l) {
+          if (null == MouseTrailPoint.field_l) {
             return;
           }
-          ng.field_Q = 0;
-          ka.field_i = param0.getX();
-          sm.field_a = param0.getY();
-          wg.field_a = true;
+          ValidationMessageWidget.field_Q = 0;
+          PendingRequest.field_i = param0.getX();
+          LoadingProgressHelpers.field_a = param0.getY();
+          FrameSkin.field_a = true;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -85,11 +85,11 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw kg.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw AsyncCheckResult.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
-    final static boolean a(String param0, String param1, boolean param2) {
+    final static boolean containsForwardOrReversed(String param0, String param1, boolean param2) {
         String var3 = null;
         boolean stackIn_7_0 = false;
         RuntimeException stackIn_10_0 = null;
@@ -103,8 +103,8 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           if (!param2) {
             field_b = -1;
           }
-          param1 = re.a("", false, '_', param1);
-          var3 = od.b(0, param0);
+          param1 = LongAndTextLoginPayload.replaceCharacter("", false, '_', param1);
+          var3 = NetworkGameClient.reverseString(0, param0);
           stackIn_7_0 = (param1.indexOf(param0) != -1) || (param1.indexOf(var3) != -1);
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -123,7 +123,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw kg.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(')').toString());
+          throw AsyncCheckResult.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -149,7 +149,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw kg.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw AsyncCheckResult.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -160,13 +160,13 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (null == pm.field_l) {
+          if (null == MouseTrailPoint.field_l) {
             return;
           }
-          ng.field_Q = 0;
-          ka.field_i = -1;
-          sm.field_a = -1;
-          wg.field_a = true;
+          ValidationMessageWidget.field_Q = 0;
+          PendingRequest.field_i = -1;
+          LoadingProgressHelpers.field_a = -1;
+          FrameSkin.field_a = true;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -178,7 +178,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw kg.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw AsyncCheckResult.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -189,10 +189,10 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (pm.field_l == null) {
+          if (MouseTrailPoint.field_l == null) {
             return;
           }
-          hc.field_d = 0;
+          ClockAndTextHelpers.field_d = 0;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -204,7 +204,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw kg.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw AsyncCheckResult.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -216,17 +216,17 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (null != pm.field_l) {
-            ng.field_Q = 0;
-            ei.field_f = param0.getX();
-            hk.field_Mb = param0.getY();
-            hc.a(-9986);
+          if (null != MouseTrailPoint.field_l) {
+            ValidationMessageWidget.field_Q = 0;
+            MusicPlaybackHelpers.field_f = param0.getX();
+            IconTextComponent.field_Mb = param0.getY();
+            ClockAndTextHelpers.monotonicMillis(-9986);
             if (javax.swing.SwingUtilities.isRightMouseButton(param0)) {
-              we.field_g = 2;
-              hc.field_d = 2;
+              ClientEnvironmentHelpers.field_g = 2;
+              ClockAndTextHelpers.field_d = 2;
             } else {
-              we.field_g = 1;
-              hc.field_d = 1;
+              ClientEnvironmentHelpers.field_g = 1;
+              ClockAndTextHelpers.field_d = 1;
             }
             var2_int = param0.getModifiers();
             if ((var2_int & 4) != 0) {
@@ -235,7 +235,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
             }
             if ((var2_int & 16) == 0) {
             }
-            wg.field_a = true;
+            FrameSkin.field_a = true;
           }
           if (!param0.isPopupTrigger()) {
             return;
@@ -252,26 +252,26 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw kg.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw AsyncCheckResult.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
-    final static boolean b(int param0) {
+    final static boolean isPostLoginStage(int param0) {
         if (param0 <= 8) {
           String var2 = (String) null;
-          MouseInputHandler.a((String) null, (String) null, true);
-          if (j.field_l < 10) {
+          MouseInputHandler.containsForwardOrReversed((String) null, (String) null, true);
+          if (NodeHashTableIterator.field_l < 10) {
             return false;
           }
-          if (dj.field_n >= 13) {
+          if (PlayerContextMenu.field_n >= 13) {
             return true;
           }
           return false;
         }
-        if (j.field_l < 10) {
+        if (NodeHashTableIterator.field_l < 10) {
           return false;
         }
-        if (dj.field_n >= 13) {
+        if (PlayerContextMenu.field_n >= 13) {
           return true;
         }
         return false;
@@ -282,14 +282,14 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
 
     public final synchronized void mouseDragged(java.awt.event.MouseEvent param0) {
         try {
-          if (pm.field_l != null) {
-            ng.field_Q = 0;
-            ka.field_i = param0.getX();
-            sm.field_a = param0.getY();
-            wg.field_a = true;
+          if (MouseTrailPoint.field_l != null) {
+            ValidationMessageWidget.field_Q = 0;
+            PendingRequest.field_i = param0.getX();
+            LoadingProgressHelpers.field_a = param0.getY();
+            FrameSkin.field_a = true;
           }
         } catch (RuntimeException runtimeException) {
-          throw kg.a((Throwable) ((Object) runtimeException), "me.mouseDragged(" + (param0 != null ? "{...}" : "null") + ')');
+          throw AsyncCheckResult.wrapException((Throwable) ((Object) runtimeException), "me.mouseDragged(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -301,7 +301,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           field_c = null;
           return;
         }
-        MouseInputHandler.b(24);
+        MouseInputHandler.isPostLoginStage(24);
         field_d = null;
         field_a = (String[][]) null;
         field_c = null;
@@ -309,6 +309,6 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
 
     static {
         field_b = 0;
-        field_e = new dl();
+        field_e = new ConnectionStage();
     }
 }

@@ -3,8 +3,8 @@
  */
 final class Js5Archive {
     boolean field_b;
-    private sj field_c;
-    private ba field_i;
+    private ArchiveIndex field_c;
+    private ArchiveProvider field_i;
     static String[] field_j;
     private Object[][] field_f;
     static String field_m;
@@ -14,10 +14,10 @@ final class Js5Archive {
     static int field_d;
     static String field_g;
     static String field_h;
-    static rm field_l;
+    static IndexedSprite field_l;
     private Object[] field_a;
 
-    final boolean a(String param0, String param1, int param2) {
+    final boolean ensureFileAvailableByName(String param0, String param1, int param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -31,19 +31,19 @@ final class Js5Archive {
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!this.c(param2 ^ param2)) {
+          if (!this.ensureIndexLoaded(param2 ^ param2)) {
             return false;
           }
           param0 = param0.toLowerCase();
           param1 = param1.toLowerCase();
           var6 = (CharSequence) ((Object) param0);
-          var4_int = this.field_c.field_h.b(true, nf.a(6, var6));
-          if (!this.a((byte) 94, var4_int)) {
+          var4_int = this.field_c.field_h.lookup(true, TextDecodeHelpers.hashString(6, var6));
+          if (!this.isValidGroup((byte) 94, var4_int)) {
             return false;
           }
           var7 = (CharSequence) ((Object) param1);
-          var5 = this.field_c.field_u[var4_int].b(true, nf.a(6, var7));
-          stackIn_8_0 = this.a(var4_int, (byte) 125, var5);
+          var5 = this.field_c.field_u[var4_int].lookup(true, TextDecodeHelpers.hashString(6, var7));
+          stackIn_8_0 = this.isFileAvailable(var4_int, (byte) 125, var5);
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -61,23 +61,23 @@ final class Js5Archive {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw kg.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(')').toString());
+          throw AsyncCheckResult.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(')').toString());
         }
     }
 
-    final int d(byte param0, int param1) {
+    final int getFileCount(byte param0, int param1) {
         if (param0 <= 33) {
-          this.a(((byte[]) (this.field_a[2]))[1], (String) (this.field_a[12]));
+          this.ensureGroupAvailableByName(((byte[]) (this.field_a[2]))[1], (String) (this.field_a[12]));
         }
-        if (!this.a((byte) 101, param1)) {
+        if (!this.isValidGroup((byte) 101, param1)) {
           return 0;
         }
         return this.field_c.field_i[param1];
     }
 
-    final synchronized boolean c(int param0) {
+    final synchronized boolean ensureIndexLoaded(int param0) {
         if (this.field_c == null) {
-          this.field_c = this.field_i.a((byte) 64);
+          this.field_c = this.field_i.getIndex((byte) 64);
           if (null == this.field_c) {
             return false;
           }
@@ -85,13 +85,13 @@ final class Js5Archive {
           this.field_a = new Object[this.field_c.field_v];
         }
         if (param0 != 0) {
-          this.c((byte) 63, -6);
+          this.ensureGroupLoaded((byte) 63, -6);
           return true;
         }
         return true;
     }
 
-    final boolean a(byte param0, String param1) {
+    final boolean ensureGroupAvailableByName(byte param0, String param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         CharSequence var4 = null;
@@ -104,13 +104,13 @@ final class Js5Archive {
           if (param0 != -102) {
             field_j = (String[]) (this.field_a[0]);
           }
-          if (!this.c(0)) {
+          if (!this.ensureIndexLoaded(0)) {
             return false;
           }
           param1 = param1.toLowerCase();
           var4 = (CharSequence) ((Object) param1);
-          var3_int = this.field_c.field_h.b(true, nf.a(6, var4));
-          stackIn_6_0 = this.c((byte) -127, var3_int);
+          var3_int = this.field_c.field_h.lookup(true, TextDecodeHelpers.hashString(6, var4));
+          stackIn_6_0 = this.ensureGroupLoaded((byte) -127, var3_int);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -122,11 +122,11 @@ final class Js5Archive {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw kg.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw AsyncCheckResult.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
-    final static void a(String param0, java.applet.Applet param1, byte param2, boolean param3) {
+    final static void openExternalUrl(String param0, java.applet.Applet param1, byte param2, boolean param3) {
         try {
           RuntimeException stackIn_13_0 = null;
           StringBuilder stackIn_13_1 = null;
@@ -141,7 +141,7 @@ final class Js5Archive {
               return;
             }
             if (PlatformTaskDispatcher.field_x.startsWith("win") &&
-              ne.a(10448, param0)) {
+              StatusAndUrlHelpers.openUrlWithShell(10448, param0)) {
               return;
             }
             try {
@@ -149,7 +149,7 @@ final class Js5Archive {
             } catch (java.net.MalformedURLException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var4 = (java.net.MalformedURLException) (Object) decompiledCaughtException;
-              en.a("MGR1: " + param0, (Throwable) null, 1);
+              IconLabelWidget.reportClientError("MGR1: " + param0, (Throwable) null, 1);
             }
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
@@ -168,7 +168,7 @@ final class Js5Archive {
             } else {
               stackIn_17_2 = "{...}";
             }
-            throw kg.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+            throw AsyncCheckResult.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(',').append(param3).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -177,50 +177,50 @@ final class Js5Archive {
         }
     }
 
-    final int e(int param0) {
+    final int getGroupCount(int param0) {
         if (param0 <= 11) {
-          Js5Archive.a((String) (((Object[]) (this.field_a[7]))[1]), (java.applet.Applet) (this.field_a[35]), (byte) -84, false);
+          Js5Archive.openExternalUrl((String) (((Object[]) (this.field_a[7]))[1]), (java.applet.Applet) (this.field_a[35]), (byte) -84, false);
         }
-        if (!this.c(0)) {
+        if (!this.ensureIndexLoaded(0)) {
           return -1;
         }
         return this.field_c.field_i.length;
     }
 
-    private final synchronized boolean a(byte param0, int param1) {
-        if (!this.c(0)) {
+    private final synchronized boolean isValidGroup(byte param0, int param1) {
+        if (!this.ensureIndexLoaded(0)) {
           return false;
         }
         if (param0 <= 92) {
           String var4 = (String) null;
-          this.a((byte) -128, (String) null);
+          this.ensureGroupAvailableByName((byte) -128, (String) null);
         }
         if (param1 >= 0 &&
           this.field_c.field_i.length > param1 &&
           this.field_c.field_i[param1] != 0) {
           return true;
         }
-        if (!bk.field_a) {
+        if (!LoginCredentials.field_a) {
           return false;
         }
         throw new IllegalArgumentException(Integer.toString(param1));
     }
 
-    final static String d(int param0) {
+    final static String getActiveLoginIdentifier(int param0) {
         int var1 = -42 % ((param0 + 47) / 43);
-        if (pa.field_l == ao.field_Kb) {
-          return de.field_sb;
+        if (MusicVoiceMixer.field_l == ScrollPaneWithFooter.field_Kb) {
+          return LoginDialog.field_sb;
         }
-        if (!w.field_I.b(-73)) {
-          return w.field_I.a(32);
+        if (!ValidationIndicator.field_I.isComplete(-73)) {
+          return ValidationIndicator.field_I.getText(32);
         }
-        if (ao.field_Kb == MouseWheelInput.field_c) {
-          return w.field_I.a(32);
+        if (ScrollPaneWithFooter.field_Kb == MouseWheelInput.field_c) {
+          return ValidationIndicator.field_I.getText(32);
         }
-        return pm.field_g;
+        return MouseTrailPoint.field_g;
     }
 
-    private final synchronized boolean a(int param0, int param1, int param2, int[] param3) {
+    private final synchronized boolean unpackGroup(int param0, int param1, int param2, int[] param3) {
         Object[] array$0 = null;
         int var9_int = 0;
         int var20 = 0;
@@ -286,7 +286,7 @@ final class Js5Archive {
         int var19Lifetime2;
         var22 = Virogrid.field_F ? 1 : 0;
         try {
-          if (!this.a((byte) 112, param1)) {
+          if (!this.isValidGroup((byte) 112, param1)) {
             return false;
           }
           if (this.field_a[param1] == null) {
@@ -323,18 +323,18 @@ final class Js5Archive {
             0 != param3[1] ||
             0 != param3[2] ||
             param3[3] != 0)) {
-            var35 = gi.a(this.field_a[param1], true, (byte) -128);
+            var35 = ArchiveBytesHelpers.unwrapArchiveBytes(this.field_a[param1], true, (byte) -128);
             var25 = var35;
             var9 = var25;
             var26 = new PacketBuffer(var35);
-            var26.a(var26.payload.length, param3, 9843, 5);
+            var26.decryptXteaRange(var26.payload.length, param3, 9843, 5);
             decompiledFrameRemainder0 = false;
           }
           else {
-            var9 = gi.a(this.field_a[param1], false, (byte) -125);
+            var9 = ArchiveBytesHelpers.unwrapArchiveBytes(this.field_a[param1], false, (byte) -125);
           }
           try {
-            var36 = mc.a(var9, 117);
+            var36 = PopupInputHelpers.decompressContainer(var9, 117);
             var27 = var36;
             var23 = var27;
             var43 = var23;
@@ -344,7 +344,7 @@ final class Js5Archive {
             stackIn_34_0 = var11_ref_RuntimeException;
             stackIn_34_1 = new StringBuilder();
             stackIn_35_2 = (param3 != null);
-            throw kg.a((Throwable) ((Object) stackIn_34_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(" ").append(param1).append(" ").append(var9.length).append(" ").append(na.a(false, var9.length, var9)).append(" ").append(na.a(false, -2 + var9.length, var9)).append(" ").append(this.field_c.field_m[param1]).append(" ").append(this.field_c.field_q).toString());
+            throw AsyncCheckResult.wrapException((Throwable) ((Object) stackIn_34_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(" ").append(param1).append(" ").append(var9.length).append(" ").append(HelpPopup.computeCrc32(false, var9.length, var9)).append(" ").append(HelpPopup.computeCrc32(false, -2 + var9.length, var9)).append(" ").append(this.field_c.field_m[param1]).append(" ").append(this.field_c.field_q).toString());
           }
           if (this.field_b) {
             this.field_a[param1] = null;
@@ -391,7 +391,7 @@ final class Js5Archive {
                     var21 = var20;
                   }
                   if (param0 == var21) {
-                    ek.copy(var43, var17Lifetime4, var44, var14Lifetime1, var19Lifetime2);
+                    ArraySupport.copy(var43, var17Lifetime4, var44, var14Lifetime1, var19Lifetime2);
                     var14Lifetime1 = var14Lifetime1 + var19Lifetime2;
                   }
                   var17Lifetime4 = var17Lifetime4 + var19Lifetime2;
@@ -430,7 +430,7 @@ final class Js5Archive {
               var18Lifetime1 = 0;
               for (var19Lifetime1 = 0; var5_int > var19Lifetime1; var19Lifetime1++) {
                 var18Lifetime1 = var18Lifetime1 + var29.readInt((byte) 122);
-                ek.copy(var43, var16Lifetime3, var39[var19Lifetime1], var38[var19Lifetime1], var18Lifetime1);
+                ArraySupport.copy(var43, var16Lifetime3, var39[var19Lifetime1], var38[var19Lifetime1], var18Lifetime1);
                 var14_ref_int__[var19Lifetime1] = var14_ref_int__[var19Lifetime1] + var18Lifetime1;
                 var16Lifetime3 = var16Lifetime3 + var18Lifetime1;
               }
@@ -442,7 +442,7 @@ final class Js5Archive {
                 var18Lifetime2 = var17Lifetime3;
               }
               if (this.field_k == 0) {
-                var7[var18Lifetime2] = th.a(-3, var39[var17Lifetime3], false);
+                var7[var18Lifetime2] = QuickChatPhraseDefinition.wrapBytes(-3, var39[var17Lifetime3], false);
               } else {
                 var7[var18Lifetime2] = var39[var17Lifetime3];
               }
@@ -454,7 +454,7 @@ final class Js5Archive {
               var11 = var34[0];
             }
             if (this.field_k == 0) {
-              var7[var11] = th.a(-3, var43, false);
+              var7[var11] = QuickChatPhraseDefinition.wrapBytes(-3, var43, false);
             } else {
               var7[var11] = var36;
             }
@@ -470,15 +470,15 @@ final class Js5Archive {
           } else {
             stackIn_104_2 = "{...}";
           }
-          throw kg.a((Throwable) ((Object) stackIn_103_0), ((StringBuilder) (Object) stackIn_103_1).append(stackIn_104_2).append(')').toString());
+          throw AsyncCheckResult.wrapException((Throwable) ((Object) stackIn_103_0), ((StringBuilder) (Object) stackIn_103_1).append(stackIn_104_2).append(')').toString());
         }
     }
 
-    final synchronized int[] e(byte param0, int param1) {
+    final synchronized int[] getFileIds(byte param0, int param1) {
         int[] var6 = null;
         int var4 = 0;
         int var5 = Virogrid.field_F ? 1 : 0;
-        if (!this.a((byte) 103, param1)) {
+        if (!this.isValidGroup((byte) 103, param1)) {
           return null;
         }
         if (param0 < 124) {
@@ -495,7 +495,7 @@ final class Js5Archive {
         return var3;
     }
 
-    final int a(int param0, String param1) {
+    final int findGroupId(int param0, String param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         CharSequence var4 = null;
@@ -508,7 +508,7 @@ final class Js5Archive {
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!this.c(0)) {
+          if (!this.ensureIndexLoaded(0)) {
             stackIn_3_0 = -1;
             return stackIn_3_0;
           }
@@ -518,8 +518,8 @@ final class Js5Archive {
           }
           param1 = param1.toLowerCase();
           var4 = (CharSequence) ((Object) param1);
-          var3_int = this.field_c.field_h.b(true, nf.a(param0 + 7, var4));
-          if (this.a((byte) 103, var3_int)) {
+          var3_int = this.field_c.field_h.lookup(true, TextDecodeHelpers.hashString(param0 + 7, var4));
+          if (this.isValidGroup((byte) 103, var3_int)) {
             stackIn_11_0 = var3_int;
             return stackIn_11_0;
           }
@@ -535,11 +535,11 @@ final class Js5Archive {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw kg.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw AsyncCheckResult.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
-    final int a(int param0, int param1, String param2) {
+    final int getFileId(int param0, int param1, String param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         String var5 = null;
@@ -552,18 +552,18 @@ final class Js5Archive {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!this.a((byte) 95, param1)) {
+          if (!this.isValidGroup((byte) 95, param1)) {
             stackIn_3_0 = -1;
             return stackIn_3_0;
           }
           param2 = param2.toLowerCase();
           if (param0 >= -46) {
             var5 = (String) null;
-            this.a((byte) 121, (String) null);
+            this.ensureGroupAvailableByName((byte) 121, (String) null);
           }
           var6 = (CharSequence) ((Object) param2);
-          var4_int = this.field_c.field_u[param1].b(true, nf.a(6, var6));
-          if (this.b(var4_int, param1, 0)) {
+          var4_int = this.field_c.field_u[param1].lookup(true, TextDecodeHelpers.hashString(6, var6));
+          if (this.isValidFile(var4_int, param1, 0)) {
             stackIn_10_0 = var4_int;
             return stackIn_10_0;
           }
@@ -579,56 +579,56 @@ final class Js5Archive {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw kg.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw AsyncCheckResult.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
-    final synchronized boolean c(byte param0, int param1) {
-        if (!this.a((byte) 110, param1)) {
+    final synchronized boolean ensureGroupLoaded(byte param0, int param1) {
+        if (!this.isValidGroup((byte) 110, param1)) {
           return false;
         }
         if (this.field_a[param1] != null) {
           return true;
         }
         int var3 = -43 / ((-32 - param0) / 52);
-        this.a(-8003, param1);
+        this.loadPackedGroup(-8003, param1);
         if (null == this.field_a[param1]) {
           return false;
         }
         return true;
     }
 
-    final synchronized boolean a(boolean param0, int param1) {
-        if (!this.c(0)) {
+    final synchronized boolean isFlatFileAvailable(boolean param0, int param1) {
+        if (!this.ensureIndexLoaded(0)) {
           return false;
         }
         if (1 == this.field_c.field_i.length) {
-          return this.a(0, (byte) -10, param1);
+          return this.isFileAvailable(0, (byte) -10, param1);
         }
-        if (!this.a((byte) 105, param1)) {
+        if (!this.isValidGroup((byte) 105, param1)) {
           return false;
         }
         if (this.field_c.field_i[param1] == 1) {
-          return this.a(param1, (byte) 127, 0);
+          return this.isFileAvailable(param1, (byte) 127, 0);
         }
         if (!param0) {
-          this.a(true, -82);
+          this.isFlatFileAvailable(true, -82);
         }
         throw new RuntimeException();
     }
 
-    private final synchronized void a(int param0, int param1) {
+    private final synchronized void loadPackedGroup(int param0, int param1) {
         if (param0 != -8003) {
-          this.e(-98);
+          this.getGroupCount(-98);
         }
         if (this.field_b) {
-          this.field_a[param1] = this.field_i.b(param1, 122);
+          this.field_a[param1] = this.field_i.getPackedGroup(param1, 122);
         } else {
-          this.field_a[param1] = th.a(param0 + 8000, this.field_i.b(param1, 120), false);
+          this.field_a[param1] = QuickChatPhraseDefinition.wrapBytes(param0 + 8000, this.field_i.getPackedGroup(param1, 120), false);
         }
     }
 
-    final synchronized byte[] a(String param0, int param1, String param2) {
+    final synchronized byte[] getFileByName(String param0, int param1, String param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -644,24 +644,24 @@ final class Js5Archive {
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!this.c(0)) {
+          if (!this.ensureIndexLoaded(0)) {
             stackIn_2_0 = null;
             return (byte[]) (stackIn_2_0);
           }
           param0 = param0.toLowerCase();
           param2 = param2.toLowerCase();
           var6 = (CharSequence) ((Object) param0);
-          var4_int = this.field_c.field_h.b(true, nf.a(6, var6));
-          if (!this.a((byte) 97, var4_int)) {
+          var4_int = this.field_c.field_h.lookup(true, TextDecodeHelpers.hashString(6, var6));
+          if (!this.isValidGroup((byte) 97, var4_int)) {
             stackIn_5_0 = null;
             return (byte[]) (stackIn_5_0);
           }
           if (param1 != 100) {
-            this.b(-105, 124);
+            this.getFlatFile(-105, 124);
           }
           var7 = (CharSequence) ((Object) param2);
-          var5 = this.field_c.field_u[var4_int].b(true, nf.a(6, var7));
-          stackIn_9_0 = this.a(var4_int, var5, 0);
+          var5 = this.field_c.field_u[var4_int].lookup(true, TextDecodeHelpers.hashString(6, var7));
+          stackIn_9_0 = this.getFile(var4_int, var5, 0);
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -679,22 +679,22 @@ final class Js5Archive {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw kg.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw AsyncCheckResult.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
-    final synchronized byte[] b(int param0, int param1) {
-        if (!this.c(0)) {
+    final synchronized byte[] getFlatFile(int param0, int param1) {
+        if (!this.ensureIndexLoaded(0)) {
           return null;
         }
         if (this.field_c.field_i.length == 1) {
-          return this.a(0, param0, 0);
+          return this.getFile(0, param0, 0);
         }
-        if (!this.a((byte) 124, param0)) {
+        if (!this.isValidGroup((byte) 124, param0)) {
           return null;
         }
         if (1 == this.field_c.field_i[param0]) {
-          return this.a(param0, 0, param1 ^ 27034);
+          return this.getFile(param0, 0, param1 ^ 27034);
         }
         if (param1 != 27034) {
           return (byte[]) null;
@@ -702,7 +702,7 @@ final class Js5Archive {
         throw new RuntimeException();
     }
 
-    final synchronized int a(int param0) {
+    final synchronized int getOverallProgress(int param0) {
         int var2;
         int var3;
         int var4;
@@ -712,7 +712,7 @@ final class Js5Archive {
         if (param0 != -2677) {
           return -66;
         }
-        if (!this.c(0)) {
+        if (!this.ensureIndexLoaded(0)) {
           return 0;
         }
         var2 = 0;
@@ -720,7 +720,7 @@ final class Js5Archive {
         for (var4 = 0; this.field_a.length > var4; var4++) {
           if (this.field_c.field_n[var4] > 0) {
             var2 += 100;
-            var3 = var3 + this.b((byte) 106, var4);
+            var3 = var3 + this.getGroupProgress((byte) 106, var4);
           }
         }
         if (var2 == 0) {
@@ -733,7 +733,7 @@ final class Js5Archive {
     public static void releaseStatics(byte param0) {
         if (param0 != -104) {
           java.applet.Applet var2 = (java.applet.Applet) null;
-          Js5Archive.a((String) null, (java.applet.Applet) null, (byte) -81, true);
+          Js5Archive.openExternalUrl((String) null, (java.applet.Applet) null, (byte) -81, true);
         }
         field_j = null;
         field_g = null;
@@ -742,20 +742,20 @@ final class Js5Archive {
         field_l = null;
     }
 
-    final synchronized boolean b(int param0) {
+    final synchronized boolean areAllGroupsAvailable(int param0) {
         int var3 = 0;
         int var2;
         int var4;
         int var5;
         var5 = Virogrid.field_F ? 1 : 0;
-        if (!this.c(param0 ^ param0)) {
+        if (!this.ensureIndexLoaded(param0 ^ param0)) {
           return false;
         }
         var2 = 1;
         for (var3 = 0; this.field_c.field_c.length > var3; var3++) {
           var4 = this.field_c.field_c[var3];
           if (this.field_a[var4] == null) {
-            this.a(-8003, var4);
+            this.loadPackedGroup(-8003, var4);
             if (null == this.field_a[var4]) {
               var2 = 0;
             }
@@ -764,8 +764,8 @@ final class Js5Archive {
         return var2 != 0;
     }
 
-    final synchronized int b(byte param0, int param1) {
-        if (!this.a((byte) 119, param1)) {
+    final synchronized int getGroupProgress(byte param0, int param1) {
+        if (!this.isValidGroup((byte) 119, param1)) {
           return 0;
         }
         if (param0 <= 73) {
@@ -774,49 +774,49 @@ final class Js5Archive {
         if (this.field_a[param1] != null) {
           return 100;
         }
-        return this.field_i.a(-7, param1);
+        return this.field_i.getGroupProgress(-7, param1);
     }
 
-    final static ch[] a(int param0, PlatformTaskDispatcher param1) {
+    final static DisplayModeInfo[] listDisplayModes(int param0, PlatformTaskDispatcher param1) {
         int var5 = 0;
-        ch[] stackIn_3_0 = null;
-        ch[] stackIn_12_0 = null;
-        ch[] stackIn_17_0 = null;
+        DisplayModeInfo[] stackIn_3_0 = null;
+        DisplayModeInfo[] stackIn_12_0 = null;
+        DisplayModeInfo[] stackIn_17_0 = null;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         String stackIn_21_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         int[] var3 = null;
-        ch[] var4 = null;
-        ch var6 = null;
+        DisplayModeInfo[] var4 = null;
+        DisplayModeInfo var6 = null;
         int var7 = 0;
-        un var8 = null;
+        PlatformTask var8 = null;
         int[] var9 = null;
         int[] var10 = null;
         var7 = Virogrid.field_F ? 1 : 0;
         try {
-          if (!param1.b(-121)) {
-            stackIn_3_0 = new ch[]{};
+          if (!param1.isFullscreenAvailable(-121)) {
+            stackIn_3_0 = new DisplayModeInfo[]{};
             return stackIn_3_0;
           }
           if (param0 <= 30) {
-            field_l = (rm) null;
+            field_l = (IndexedSprite) null;
           }
-          var8 = param1.a((byte) -125);
+          var8 = param1.requestDisplayModes((byte) -125);
           while (var8.field_a == 0) {
-            mm.a(-27, 10L);
+            IsaacRandom.sleepMillis(-27, 10L);
           }
           if (var8.field_a == 2) {
-            stackIn_12_0 = new ch[]{};
+            stackIn_12_0 = new DisplayModeInfo[]{};
             return stackIn_12_0;
           }
           var10 = (int[]) (var8.field_f);
           var9 = var10;
           var3 = var9;
-          var4 = new ch[var10.length >> 2];
+          var4 = new DisplayModeInfo[var10.length >> 2];
           for (var5 = 0; var5 < var4.length; var5++) {
-            var6 = new ch();
+            var6 = new DisplayModeInfo();
             var4[var5] = var6;
             var6.field_c = var3[var5 << 2];
             var6.field_k = var3[1 + (var5 << 2)];
@@ -835,11 +835,11 @@ final class Js5Archive {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw kg.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw AsyncCheckResult.wrapException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 
-    final boolean a(String param0, boolean param1) {
+    final boolean hasGroupName(String param0, boolean param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         CharSequence var4 = null;
@@ -848,12 +848,12 @@ final class Js5Archive {
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!this.c(0)) {
+          if (!this.ensureIndexLoaded(0)) {
             return false;
           }
           param0 = param0.toLowerCase();
           var4 = (CharSequence) ((Object) param0);
-          var3_int = this.field_c.field_h.b(param1, nf.a(6, var4));
+          var3_int = this.field_c.field_h.lookup(param1, TextDecodeHelpers.hashString(6, var4));
           if (0 <= var3_int) {
             return true;
           }
@@ -868,11 +868,11 @@ final class Js5Archive {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw kg.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
+          throw AsyncCheckResult.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    final int a(String param0, int param1) {
+    final int getGroupProgressByName(String param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         CharSequence var4 = null;
@@ -883,17 +883,17 @@ final class Js5Archive {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!this.c(0)) {
+          if (!this.ensureIndexLoaded(0)) {
             stackIn_3_0 = 0;
             return stackIn_3_0;
           }
           param0 = param0.toLowerCase();
           if (param1 < 71) {
-            this.e(-48);
+            this.getGroupCount(-48);
           }
           var4 = (CharSequence) ((Object) param0);
-          var3_int = this.field_c.field_h.b(true, nf.a(6, var4));
-          stackIn_7_0 = this.b((byte) 85, var3_int);
+          var3_int = this.field_c.field_h.lookup(true, TextDecodeHelpers.hashString(6, var4));
+          stackIn_7_0 = this.getGroupProgress((byte) 85, var3_int);
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -905,12 +905,12 @@ final class Js5Archive {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw kg.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw AsyncCheckResult.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    private final synchronized boolean b(int param0, int param1, int param2) {
-        if (!this.c(param2 ^ 0)) {
+    private final synchronized boolean isValidFile(int param0, int param1, int param2) {
+        if (!this.ensureIndexLoaded(param2 ^ 0)) {
           return false;
         }
         if (param2 <= param1 &&
@@ -919,20 +919,20 @@ final class Js5Archive {
           param0 < this.field_c.field_i[param1]) {
           return true;
         }
-        if (!bk.field_a) {
+        if (!LoginCredentials.field_a) {
           return false;
         }
         throw new IllegalArgumentException(param1 + " " + param0);
     }
 
-    final byte[] a(int param0, int param1, int param2) {
+    final byte[] getFile(int param0, int param1, int param2) {
         if (param2 != 0) {
           return (byte[]) (this.field_a[14]);
         }
-        return this.a(125, param0, (int[]) null, param1);
+        return this.getFileWithKeys(125, param0, (int[]) null, param1);
     }
 
-    private final synchronized byte[] a(int param0, int param1, int[] param2, int param3) {
+    private final synchronized byte[] getFileWithKeys(int param0, int param1, int[] param2, int param3) {
         Object stackIn_2_0 = null;
         byte[] stackIn_16_0 = null;
         Object stackIn_31_0 = null;
@@ -943,15 +943,15 @@ final class Js5Archive {
         Object var5 = null;
         byte[] var7 = null;
         try {
-          if (!this.b(param3, param1, 0)) {
+          if (!this.isValidFile(param3, param1, 0)) {
             stackIn_2_0 = null;
             return (byte[]) (stackIn_2_0);
           }
           var5 = null;
           if ((this.field_f[param1] == null ||
-            null == this.field_f[param1][param3]) && !this.a(param3, param1, 63, param2)) {
-            this.a(-8003, param1);
-            if (!this.a(param3, param1, 108, param2)) {
+            null == this.field_f[param1][param3]) && !this.unpackGroup(param3, param1, 63, param2)) {
+            this.loadPackedGroup(-8003, param1);
+            if (!this.unpackGroup(param3, param1, 108, param2)) {
               return null;
             }
           }
@@ -963,7 +963,7 @@ final class Js5Archive {
             return stackIn_16_0;
           }
           if (this.field_f[param1][param3] != null) {
-            var7 = gi.a(this.field_f[param1][param3], false, (byte) -126);
+            var7 = ArchiveBytesHelpers.unwrapArchiveBytes(this.field_f[param1][param3], false, (byte) -126);
             var5 = var7;
             if (var7 == null) {
               throw new RuntimeException("");
@@ -993,12 +993,12 @@ final class Js5Archive {
           } else {
             stackIn_35_2 = "{...}";
           }
-          throw kg.a((Throwable) (stackIn_34_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(',').append(param3).append(')').toString());
+          throw AsyncCheckResult.wrapException((Throwable) (stackIn_34_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(',').append(param3).append(')').toString());
         }
     }
 
-    final synchronized boolean a(int param0, byte param1, int param2) {
-        if (!this.b(param2, param0, 0)) {
+    final synchronized boolean isFileAvailable(int param0, byte param1, int param2) {
+        if (!this.isValidFile(param2, param0, 0)) {
           return false;
         }
         if (this.field_f[param0] != null &&
@@ -1008,7 +1008,7 @@ final class Js5Archive {
         if (this.field_a[param0] != null) {
           return true;
         }
-        this.a(-8003, param0);
+        this.loadPackedGroup(-8003, param0);
         int var4 = 119 / ((74 - param1) / 50);
         if (null != this.field_a[param0]) {
           return true;
@@ -1016,7 +1016,7 @@ final class Js5Archive {
         return false;
     }
 
-    Js5Archive(ba param0, boolean param1, int param2) {
+    Js5Archive(ArchiveProvider param0, boolean param1, int param2) {
         this.field_c = null;
         try {
           if (param2 < 0 ||
@@ -1027,7 +1027,7 @@ final class Js5Archive {
           this.field_k = param2;
           this.field_i = param0;
         } catch (RuntimeException runtimeException) {
-          throw kg.a((Throwable) ((Object) runtimeException), "eh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw AsyncCheckResult.wrapException((Throwable) ((Object) runtimeException), "eh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

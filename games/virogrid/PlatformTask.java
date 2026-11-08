@@ -1,0 +1,16 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+public class PlatformTask {
+    public volatile int field_a;
+    public volatile Object field_f;
+    int field_b;
+    int field_c;
+    Object field_g;
+    public int field_e;
+    PlatformTask field_d;
+
+    PlatformTask() {
+        this.field_a = 0;
+    }
+}

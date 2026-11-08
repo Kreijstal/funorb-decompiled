@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class Model extends ll {
-    pg[] field_L;
-    s[] field_n;
+final class Model extends TextJoinHelpers {
+    LobbySortHelpers[] field_L;
+    InputSetupHelpers[] field_n;
     int[] field_l;
     private byte[] field_m;
-    s[] field_g;
+    InputSetupHelpers[] field_g;
     short[] field_q;
     private int[] field_Q;
     private byte[] field_D;
@@ -49,7 +49,7 @@ final class Model extends ll {
     private byte[] field_I;
 
     final static Model load(Js5Archive param0, String param1, String param2) {
-        byte[] var3 = param0.a(param1, 100, param2);
+        byte[] var3 = param0.getFileByName(param1, 100, param2);
         if (var3 == null) {
           return null;
         }
@@ -373,17 +373,17 @@ final class Model extends ll {
         }
     }
 
-    final void a(int param0, int param1, int param2) {
+    final void translate(int param0, int param1, int param2) {
         int var4 = 0;
         for (var4 = 0; var4 < this.field_t; var4++) {
           this.field_x[var4] = this.field_x[var4] + param0;
           this.field_o[var4] = this.field_o[var4] + param1;
           this.field_l[var4] = this.field_l[var4] + param2;
         }
-        this.c();
+        this.clearCaches();
     }
 
-    final void a() {
+    final void buildVertexGroups() {
         int[] array$2 = null;
         int dupTemp$0 = 0;
         int[] arrayValue$1 = null;
@@ -452,15 +452,15 @@ final class Model extends ll {
         }
     }
 
-    private final void c() {
+    private final void clearCaches() {
         this.field_n = null;
         this.field_g = null;
         this.field_L = null;
         this.field_T = false;
     }
 
-    final void d() {
-        pg dupTemp$0 = null;
+    final void computeNormals() {
+        LobbySortHelpers dupTemp$0 = null;
         int var1;
         int var2;
         int var3;
@@ -476,17 +476,17 @@ final class Model extends ll {
         int var13;
         int var14;
         int var15;
-        pg var16;
-        s var17;
-        s var18;
-        s var19;
+        LobbySortHelpers var16;
+        InputSetupHelpers var17;
+        InputSetupHelpers var18;
+        InputSetupHelpers var19;
         int var1Lifetime1;
         if (this.field_n != null) {
           return;
         }
-        this.field_n = new s[this.field_z];
+        this.field_n = new InputSetupHelpers[this.field_z];
         for (var1 = 0; var1 < this.field_z; var1++) {
-          this.field_n[var1] = new s();
+          this.field_n[var1] = new InputSetupHelpers();
         }
         var1Lifetime1 = 0;
         while (true) {
@@ -527,9 +527,9 @@ final class Model extends ll {
               if (var15 != 0) {
                 if (var15 == 1) {
                   if (this.field_L == null) {
-                    this.field_L = new pg[this.field_J];
+                    this.field_L = new LobbySortHelpers[this.field_J];
                   }
-                  dupTemp$0 = new pg();
+                  dupTemp$0 = new LobbySortHelpers();
                   this.field_L[var1Lifetime1] = dupTemp$0;
                   var16 = dupTemp$0;
                   var16.field_b = var11;
@@ -987,36 +987,36 @@ final class Model extends ll {
           this.field_o[var5] = this.field_o[var5] * param1 / param3;
           this.field_l[var5] = this.field_l[var5] * param2 / param3;
         }
-        this.c();
+        this.clearCaches();
     }
 
-    final cn a(int param0, int param1, int param2, int param3, int param4) {
-        return (cn) ((Object) new il(this, param0, param1, param2, param3, param4));
+    final ProjectedMeshBase createModel(int param0, int param1, int param2, int param3, int param4) {
+        return (ProjectedMeshBase) ((Object) new ModelMesh(this, param0, param1, param2, param3, param4));
     }
 
-    final void mergeFrom(ll param0, int param1, int param2, int param3, boolean param4) {
+    final void mergeFrom(TextJoinHelpers param0, int param1, int param2, int param3, boolean param4) {
         int var15 = 0;
-        s dupTemp$0 = null;
-        s dupTemp$1 = null;
+        InputSetupHelpers dupTemp$0 = null;
+        InputSetupHelpers dupTemp$1 = null;
         Model var6;
         int var7;
         int var9;
         int var10;
-        s var11;
+        InputSetupHelpers var11;
         int var12;
         int var13;
         int var14;
-        s var16;
-        s var17;
-        s var18;
+        InputSetupHelpers var16;
+        InputSetupHelpers var17;
+        InputSetupHelpers var18;
         int[] var22;
         int var10Lifetime1;
         int var10Lifetime1Lifetime1;
-        s var16Lifetime1;
-        s var16Lifetime2;
+        InputSetupHelpers var16Lifetime1;
+        InputSetupHelpers var16Lifetime2;
         var6 = (Model) (param0);
         var6.computeBounds();
-        var6.d();
+        var6.computeNormals();
         field_u = field_u + 1;
         var7 = 0;
         var22 = var6.field_x;
@@ -1042,20 +1042,20 @@ final class Model extends ll {
                       var12 == var6.field_o[var15] &&
                       var16Lifetime2.field_e != 0) {
                       if (this.field_g == null) {
-                        this.field_g = new s[this.field_z];
+                        this.field_g = new InputSetupHelpers[this.field_z];
                       }
                       if (var6.field_g == null) {
-                        var6.field_g = new s[var9];
+                        var6.field_g = new InputSetupHelpers[var9];
                       }
                       var17 = this.field_g[var10];
                       if (var17 == null) {
-                        dupTemp$0 = new s(var11);
+                        dupTemp$0 = new InputSetupHelpers(var11);
                         this.field_g[var10] = dupTemp$0;
                         var17 = dupTemp$0;
                       }
                       var18 = var6.field_g[var15];
                       if (var18 == null) {
-                        dupTemp$1 = new s(var16Lifetime2);
+                        dupTemp$1 = new InputSetupHelpers(var16Lifetime2);
                         var6.field_g[var15] = dupTemp$1;
                         var18 = dupTemp$1;
                       }

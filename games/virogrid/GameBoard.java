@@ -7,7 +7,7 @@ final class GameBoard {
     int field_b;
     int currentPlayer;
     boolean boardFilled;
-    static um field_j;
+    static ScrollPane field_j;
     int field_v;
     static boolean field_i;
     private int bestScore;
@@ -36,7 +36,7 @@ final class GameBoard {
     int[] candidateDestColumns;
     int[] candidateSourceColumns;
 
-    private final void a(int param0, int param1, byte param2) {
+    private final void initializeBoard(int param0, int param1, byte param2) {
         int var5 = 0;
         int var4;
         int var6;
@@ -326,7 +326,7 @@ final class GameBoard {
         return var10;
     }
 
-    private final boolean a(int param0, int param1) {
+    private final boolean isPlayerBlocked(int param0, int param1) {
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
@@ -431,7 +431,7 @@ final class GameBoard {
         this.candidateCount = this.candidateCount + 1;
     }
 
-    final void c(int param0, int param1) {
+    final void setEndReason(int param0, int param1) {
         int var3;
         this.boardFilled = false;
         this.playerWipedOut = false;
@@ -539,7 +539,7 @@ final class GameBoard {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw kg.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
+          throw AsyncCheckResult.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -642,7 +642,7 @@ final class GameBoard {
             }
           }
         }
-        if (this.a(-param3 + 1, param2 ^ -88)) {
+        if (this.isPlayerBlocked(-param3 + 1, param2 ^ -88)) {
           this.field_g = true;
           for (var13_intLifetime1 = 0; var13_intLifetime1 < this.cells.length; var13_intLifetime1++) {
             for (var14Lifetime1 = 0; this.cells[0].length > var14Lifetime1; var14Lifetime1++) {
@@ -696,7 +696,7 @@ final class GameBoard {
     }
 
     final void restart(int param0) {
-        this.a(this.cells.length, this.cells[0].length, (byte) -108);
+        this.initializeBoard(this.cells.length, this.cells[0].length, (byte) -108);
         this.finished = false;
         this.field_r = 0;
         this.field_D = param0;
@@ -711,7 +711,7 @@ final class GameBoard {
         this.setTurn(var2, 0, param0 + 21428);
     }
 
-    final void a(boolean[][] param0, int param1, byte param2) {
+    final void markMovableCells(boolean[][] param0, int param1, byte param2) {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
@@ -762,7 +762,7 @@ final class GameBoard {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw kg.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw AsyncCheckResult.wrapException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -899,9 +899,9 @@ final class GameBoard {
           this.currentPlayer = param2;
           this.playerNames = param1;
           this.sizeSetting = param3;
-          this.a(ra.gridSizes[this.sizeSetting], ra.gridSizes[this.sizeSetting], (byte) -108);
+          this.initializeBoard(ScoreSubmissionHelpers.gridSizes[this.sizeSetting], ScoreSubmissionHelpers.gridSizes[this.sizeSetting], (byte) -108);
         } catch (RuntimeException runtimeException) {
-          throw kg.a((Throwable) ((Object) runtimeException), "uf.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw AsyncCheckResult.wrapException((Throwable) ((Object) runtimeException), "uf.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 

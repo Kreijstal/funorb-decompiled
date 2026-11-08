@@ -1,0 +1,195 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+import java.io.*;
+
+final class IconLabelWidget extends SpriteWidget {
+    private SpriteWidget field_Ib;
+    static int[] field_Hb;
+    private SpriteWidget field_Gb;
+    static String field_Eb;
+    static int field_Jb;
+    static boolean field_Fb;
+    static int field_Kb;
+
+    public static void releaseStatics(int param0) {
+        field_Hb = null;
+        field_Eb = null;
+        if (param0 != 0) {
+          field_Eb = (String) null;
+        }
+    }
+
+    final void setBoundsAndLayoutChildren(int param0, int param1, int param2, byte param3, int param4, int param5) {
+        int var7 = -122 / ((25 - param3) / 37);
+        this.setGeometry(param2, param4, param0, (byte) -120, param5);
+        this.layoutChildren(param1, 106);
+    }
+
+    final static void reportClientError(String param0, Throwable param1, int param2) {
+        try {
+          PlatformTaskDispatcher stackIn_12_0;
+          java.net.URL stackIn_12_1;
+          java.net.URL stackIn_12_2;
+          java.net.URL stackIn_12_3;
+          StringBuilder stackIn_12_4;
+          java.net.URL stackIn_13_1;
+          java.net.URL stackIn_13_2;
+          String stackIn_13_5;
+          Throwable decompiledCaughtException = null;
+          String var3 = null;
+          Exception var3_ref = null;
+          PlatformTask var4 = null;
+          DataInputStream var5 = null;
+          int var6 = 0;
+          String var7 = null;
+          String var8 = null;
+          String var9 = null;
+          String var10 = null;
+          var6 = Virogrid.field_F ? 1 : 0;
+          try {
+            var3 = "";
+            if (param1 != null) {
+              var3 = IntrusiveDequeCursor.describeThrowable(40, param1);
+            }
+            if (param0 != null) {
+              if (param1 != null) {
+                var3 = var3 + " | ";
+              }
+              var3 = var3 + param0;
+            }
+            ChatPanelSetupHelpers.printEscapedError(var3, 0);
+            var7 = FadeLayer.replaceAll(var3, (byte) -33, "%3a", ":");
+            var8 = FadeLayer.replaceAll(var7, (byte) -33, "%40", "@");
+            var9 = FadeLayer.replaceAll(var8, (byte) -33, "%26", "&");
+            var10 = FadeLayer.replaceAll(var9, (byte) -33, "%23", "#");
+            if (RasterBuffer.field_m == null) {
+              return;
+            }
+            stackIn_12_0 = DialWidget.field_R;
+            stackIn_12_1 = null;
+            stackIn_12_2 = null;
+            stackIn_12_3 = RasterBuffer.field_m.getCodeBase();
+            stackIn_12_4 = new StringBuilder().append("clienterror.ws?c=").append(Bzip2State.field_v).append("&u=");
+            if (NanoTickClock.field_f == null) {
+              stackIn_13_1 = null;
+              stackIn_13_2 = null;
+              stackIn_13_5 = "" + CheckboxTickPainter.field_d;
+            } else {
+              stackIn_13_1 = null;
+              stackIn_13_2 = null;
+              stackIn_13_5 = NanoTickClock.field_f;
+            }
+            var4 = ((PlatformTaskDispatcher) (Object) stackIn_12_0).requestUrlStream(new java.net.URL(stackIn_12_3, ((StringBuilder) (Object) stackIn_12_4).append(stackIn_13_5).append("&v1=").append(PlatformTaskDispatcher.field_q).append("&v2=").append(PlatformTaskDispatcher.field_k).append("&e=").append(var10).toString()), true);
+            while (0 == var4.field_a) {
+              IsaacRandom.sleepMillis(-14, 1L);
+            }
+            if (var4.field_a == param2) {
+              var5 = (DataInputStream) (var4.field_f);
+              var5.read();
+              var5.close();
+            }
+          } catch (java.lang.Exception decompiledCaughtParameter0) {
+            decompiledCaughtException = decompiledCaughtParameter0;
+            var3_ref = (Exception) (Object) decompiledCaughtException;
+          }
+        } catch (RuntimeException | Error decompiledUncheckedException) {
+          throw decompiledUncheckedException;
+        } catch (Throwable decompiledCheckedException) {
+          throw new RuntimeException(decompiledCheckedException);
+        }
+    }
+
+    private IconLabelWidget(long param0, SpriteWidget param1, SpriteWidget param2, String param3) {
+        super(param0, (SpriteWidget) null);
+        try {
+          this.field_Ib = new SpriteWidget(0L, param1);
+          this.field_Gb = new SpriteWidget(0L, param2);
+          this.field_Gb.field_V = param3;
+          this.addChild(0, this.field_Ib);
+          this.addChild(0, this.field_Gb);
+          this.markTreeDirty((byte) 42);
+        } catch (RuntimeException runtimeException) {
+          throw AsyncCheckResult.wrapException((Throwable) ((Object) runtimeException), "en.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    final static int writeCompressedString(boolean param0, String param1, PacketBuffer param2) {
+        int var3_int = 0;
+        RuntimeException var3 = null;
+        byte[] var4 = null;
+        PacketBuffer var5 = null;
+        CharSequence var6 = null;
+        int stackIn_3_0 = 0;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        String stackIn_7_2 = null;
+        StringBuilder stackIn_9_1 = null;
+        String stackIn_10_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          var3_int = param2.position;
+          var6 = (CharSequence) ((Object) param1);
+          var4 = TextEncodingHelpers.encodeSingleByteText(1514, var6);
+          if (!param0) {
+            var5 = (PacketBuffer) null;
+            IconLabelWidget.writeCompressedString(true, (String) null, (PacketBuffer) null);
+          }
+          param2.writeSmart(var4.length, 30408);
+          param2.position = param2.position + ProxySocketConnector.field_k.compress(var4.length, param2.position, -7089, 0, var4, param2.payload);
+          stackIn_3_0 = -var3_int + param2.position;
+          return stackIn_3_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          stackIn_6_0 = var3;
+          stackIn_6_1 = new StringBuilder().append("en.A(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
+          }
+          stackIn_9_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',');
+          if (param2 == null) {
+            stackIn_10_2 = "null";
+          } else {
+            stackIn_10_2 = "{...}";
+          }
+          throw AsyncCheckResult.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+        }
+    }
+
+    final int getCombinedWidth(byte param0, int param1) {
+        int var3 = -9 / ((param0 + 62) / 61);
+        return param1 + this.field_Ib.measureNaturalWidth((byte) 48) + this.field_Gb.measureNaturalWidth((byte) 113);
+    }
+
+    private final void layoutChildren(int param0, int param1) {
+        this.field_Ib.setGeometry(0, this.field_ub, this.field_Ib.measureNaturalWidth((byte) 36), (byte) -47, 0);
+        int var3 = param0 + this.field_Ib.field_K;
+        this.field_Gb.setGeometry(var3, this.field_ub, -var3 + this.field_K, (byte) -107, 0);
+        int var4 = -128 % ((54 - param1) / 39);
+    }
+
+    IconLabelWidget(long param0, IconLabelWidget param1, String param2) {
+        this(param0, param1.field_Ib, param1.field_Gb, param2);
+    }
+
+    IconLabelWidget(long param0, Sprite param1, Sprite param2, int param3, SpriteWidget param4, String param5) {
+        this(param0, (SpriteWidget) null, param4, param5);
+        try {
+          this.field_Ib.field_D = param3;
+          this.field_Ib.field_jb = param1;
+          this.field_Ib.normalSprite = param2;
+        } catch (RuntimeException runtimeException) {
+          throw AsyncCheckResult.wrapException((Throwable) ((Object) runtimeException), "en.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    static {
+        field_Hb = new int[8192];
+        field_Jb = 0;
+        field_Fb = false;
+        field_Eb = "Previous";
+    }
+}

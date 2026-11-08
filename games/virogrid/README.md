@@ -1,5 +1,5 @@
 # Reading Virogrid
 
-This pass names 30 reviewed classes and 657 members in 347 source files. Unresolved roles keep their original names.
+This pass names 346 reviewed classes and 2423 members in 347 source files. Unresolved roles keep their original names.
 
 Start at `Virogrid`; the shared engine (nodes, deques, applet shell) uses the same role names as other FunOrb games.

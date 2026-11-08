@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class SpriteWidget extends ke {
+class SpriteWidget extends WidgetNode {
     int field_fb;
-    e field_C;
+    BitmapFont field_C;
     Sprite[] field_x;
     Sprite mouseHeldSprite;
     Sprite normalSprite;
@@ -11,7 +11,7 @@ class SpriteWidget extends ke {
     private int field_wb;
     int field_tb;
     int field_J;
-    static bg field_yb;
+    static ReportAbuseDialog field_yb;
     private int field_M;
     Sprite mouseOverSprite;
     int field_ab;
@@ -64,14 +64,14 @@ class SpriteWidget extends ke {
     int field_A;
     boolean field_ib;
 
-    final void a(boolean param0, int param1) {
-        this.a(param0, 0, Rasterizer.field_e, 0, 0, Rasterizer.field_f, false, false, false, false, true);
+    final void drawRoot(boolean param0, int param1) {
+        this.drawTree(param0, 0, Rasterizer.field_e, 0, 0, Rasterizer.field_f, false, false, false, false, true);
         if (param1 != 24960) {
           this.field_mb = true;
         }
     }
 
-    final void b(int param0, SpriteWidget param1) {
+    final void applyStyle(int param0, SpriteWidget param1) {
         boolean stackIn_94_1 = false;
         RuntimeException stackIn_101_0 = null;
         StringBuilder stackIn_101_1 = null;
@@ -80,7 +80,7 @@ class SpriteWidget extends ke {
         RuntimeException var3 = null;
         try {
           if (param0 != 18003) {
-            this.a(true, (byte) -11);
+            this.updateInputFullScreen(true, (byte) -11);
           }
           if (param1 != null) {
             if (param1.field_x != null) {
@@ -208,7 +208,7 @@ class SpriteWidget extends ke {
           } else {
             stackIn_102_2 = "{...}";
           }
-          throw kg.a((Throwable) ((Object) stackIn_101_0), ((StringBuilder) (Object) stackIn_101_1).append(stackIn_102_2).append(')').toString());
+          throw AsyncCheckResult.wrapException((Throwable) ((Object) stackIn_101_0), ((StringBuilder) (Object) stackIn_101_1).append(stackIn_102_2).append(')').toString());
         }
     }
 
@@ -216,13 +216,13 @@ class SpriteWidget extends ke {
         this(param0, param1, 0, 0, 0, 0, param2);
     }
 
-    final void a(boolean param0, byte param1) {
-        ch.field_b = !param0 ? true : false;
+    final void updateInputFullScreen(boolean param0, byte param1) {
+        DisplayModeInfo.field_b = !param0 ? true : false;
         if (param1 < 88) {
-          SpriteWidget.e(36);
+          SpriteWidget.getIdleTicks(36);
         }
-        vl.field_d = !param0 ? true : false;
-        this.a(Rasterizer.field_f, Rasterizer.field_e, 0, true, true, 0);
+        TextureCache.field_d = !param0 ? true : false;
+        this.updateInputTree(Rasterizer.field_f, Rasterizer.field_e, 0, true, true, 0);
     }
 
     public static void releaseStatics(int param0) {
@@ -233,18 +233,18 @@ class SpriteWidget extends ke {
         field_P = null;
     }
 
-    final void b(byte param0) {
+    final void markTreeDirty(byte param0) {
         SpriteWidget var4 = null;
         int var3 = Virogrid.field_F ? 1 : 0;
         if (param0 != 42) {
           return;
         }
         if (null != this.field_W) {
-          var4 = (SpriteWidget) (this.field_W.b(false));
+          var4 = (SpriteWidget) (this.field_W.last(false));
           while (var4 != null) {
             var4.field_mb = true;
-            var4.b((byte) 42);
-            var4 = (SpriteWidget) (this.field_W.e(9003));
+            var4.markTreeDirty((byte) 42);
+            var4 = (SpriteWidget) (this.field_W.previous(9003));
           }
         }
     }
@@ -253,7 +253,7 @@ class SpriteWidget extends ke {
         this(param0, param1, 0, 0, 0, 0, (String) null);
     }
 
-    final void a(int param0, SpriteWidget param1) {
+    final void addChild(int param0, SpriteWidget param1) {
         if (param0 != 0) {
           return;
         }
@@ -261,13 +261,13 @@ class SpriteWidget extends ke {
           if (this.field_W == null) {
             this.field_W = new IntrusiveDeque();
           }
-          this.field_W.a(param1, (byte) -36);
+          this.field_W.addFirst(param1, (byte) -36);
         } catch (RuntimeException runtimeException) {
-          throw kg.a((Throwable) ((Object) runtimeException), "km.U(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw AsyncCheckResult.wrapException((Throwable) ((Object) runtimeException), "km.U(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static void d(byte param0) {
+    final static void handleRankingResponse(byte param0) {
         int var8_int = 0;
         int var19 = 0;
         int incrementValue$0 = 0;
@@ -277,8 +277,8 @@ class SpriteWidget extends ke {
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
-        oc var4 = null;
-        hn var4_ref = null;
+        PendingScoreQuery var4 = null;
+        PendingHighscoreRequest var4_ref = null;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -297,43 +297,43 @@ class SpriteWidget extends ke {
         int var24 = 0;
         int var25 = 0;
         int var26 = 0;
-        hg var28 = null;
+        CipherPacketBuffer var28 = null;
         long[][] var35 = null;
         int[][] var36 = null;
         int var25Lifetime1;
         int var25Lifetime2;
         var26 = Virogrid.field_F ? 1 : 0;
         try {
-          var28 = sh.field_qb;
+          var28 = ProgressMessageDialog.field_qb;
           var2 = var28.readUnsignedByte(11132);
           if (var2 == 0) {
             var3 = var28.readUnsignedShort((byte) 87);
-            var4 = (oc) (fn.field_a.a((byte) -77));
+            var4 = (PendingScoreQuery) (LobbySessionHelpers.field_a.first((byte) -77));
             while (var4 != null) {
               if (var4.field_j != var3) {
-                var4 = (oc) (fn.field_a.a(16213));
+                var4 = (PendingScoreQuery) (LobbySessionHelpers.field_a.next(16213));
                 continue;
               }
               break;
             }
             if (var4 == null) {
-              tn.a(false);
+              MenuInputState.closeGameConnection(false);
               return;
             }
             var5 = var28.readUnsignedByte(11132);
             if (var5 != 0) {
               var6 = var4.field_g;
-              qd.field_m[0].field_g = mi.field_d;
-              qd.field_m[0].field_e = false;
+              MusicPatchEnvelope.field_m[0].field_g = DebouncedValidator.field_d;
+              MusicPatchEnvelope.field_m[0].field_e = false;
               var7 = var4.field_m;
-              qd.field_m[0].field_d = null;
+              MusicPatchEnvelope.field_m[0].field_d = null;
               for (var8_int = 1; var8_int < var5; var8_int++) {
-                qd.field_m[var8_int].field_g = var28.readString(param0 ^ -59);
-                qd.field_m[var8_int].field_e = false;
+                MusicPatchEnvelope.field_m[var8_int].field_g = var28.readString(param0 ^ -59);
+                MusicPatchEnvelope.field_m[var8_int].field_e = false;
                 if (var28.readUnsignedByte(11132) == 1) {
-                  qd.field_m[var8_int].field_d = var28.readString(param0 - 204);
+                  MusicPatchEnvelope.field_m[var8_int].field_d = var28.readString(param0 - 204);
                 } else {
-                  qd.field_m[var8_int].field_d = null;
+                  MusicPatchEnvelope.field_m[var8_int].field_d = null;
                 }
               }
               var8 = new String[3][var6];
@@ -350,12 +350,12 @@ class SpriteWidget extends ke {
               if (var18 > 0) {
                 for (var19 = 0; var18 > var19; var19++) {
                   var20 = var28.readUnsignedByte(11132);
-                  var21 = qd.field_m[var20].field_g;
-                  var22 = var28.e((byte) -60);
+                  var21 = MusicPatchEnvelope.field_m[var20].field_g;
+                  var22 = var28.readLong((byte) -60);
                   var24 = var28.position;
                   if (var19 < var6) {
                     var8[0][var12] = var21;
-                    var9[0][var12] = qd.field_m[var20].field_d;
+                    var9[0][var12] = MusicPatchEnvelope.field_m[var20].field_d;
                     var35[0][var12] = var22;
                     var12++;
                     for (var25 = 0; var25 < var7; var25++) {
@@ -365,8 +365,8 @@ class SpriteWidget extends ke {
                     }
                   }
                   if (var21 != null &&
-                    PacketBuffer.a(var21, true)) {
-                    var8[1][var13] = mi.field_d;
+                    PacketBuffer.isLocalPlayerName(var21, true)) {
+                    var8[1][var13] = DebouncedValidator.field_d;
                     var9[1][var13] = null;
                     var35[1][var13] = var22;
                     var13++;
@@ -378,10 +378,10 @@ class SpriteWidget extends ke {
                     }
                   }
                   if (var6 > var14 &&
-                    !qd.field_m[var20].field_e) {
-                    qd.field_m[var20].field_e = true;
+                    !MusicPatchEnvelope.field_m[var20].field_e) {
+                    MusicPatchEnvelope.field_m[var20].field_e = true;
                     var8[2][var14] = var21;
-                    var9[2][var14] = qd.field_m[var20].field_d;
+                    var9[2][var14] = MusicPatchEnvelope.field_m[var20].field_d;
                     var35[2][var14] = var22;
                     var14++;
                     var28.position = var24;
@@ -394,39 +394,39 @@ class SpriteWidget extends ke {
                 }
               }
             }
-            var4.a(false);
+            var4.unlink(false);
           } else if (var2 == 1) {
             var3 = var28.readUnsignedShort((byte) 83);
-            var28.e((byte) -60);
-            var4_ref = (hn) (qn.field_P.a((byte) -44));
+            var28.readLong((byte) -60);
+            var4_ref = (PendingHighscoreRequest) (DialWidget.field_P.first((byte) -44));
             while (var4_ref != null) {
               if (~var3 != ~var4_ref.field_j) {
-                var4_ref = (hn) (qn.field_P.a(16213));
+                var4_ref = (PendingHighscoreRequest) (DialWidget.field_P.next(16213));
                 continue;
               }
               break;
             }
             if (var4_ref == null) {
-              tn.a(false);
+              MenuInputState.closeGameConnection(false);
               return;
             }
-            var4_ref.a(false);
+            var4_ref.unlink(false);
           } else {
-            en.a("HS1: " + rg.a(true), (Throwable) null, 1);
-            tn.a(false);
+            IconLabelWidget.reportClientError("HS1: " + ClientException.describePacketHistory(true), (Throwable) null, 1);
+            MenuInputState.closeGameConnection(false);
           }
           if (param0 != 76) {
-            field_yb = (bg) null;
+            field_yb = (ReportAbuseDialog) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw kg.a((Throwable) ((Object) var1), "km.CA(" + param0 + ')');
+          throw AsyncCheckResult.wrapException((Throwable) ((Object) var1), "km.CA(" + param0 + ')');
         }
     }
 
-    final void a(int param0, int param1, int param2, byte param3, int param4) {
+    final void setGeometry(int param0, int param1, int param2, byte param3, int param4) {
         this.field_Cb = 0;
         this.field_tb = param0;
         this.field_ob = 0;
@@ -440,14 +440,14 @@ class SpriteWidget extends ke {
         this.field_M = 0;
     }
 
-    final static int e(int param0) {
+    final static int getIdleTicks(int param0) {
         if (param0 > -53) {
-          SpriteWidget.a(-109, -67, 3);
+          SpriteWidget.setHoverPosition(-109, -67, 3);
         }
-        return ng.field_Q;
+        return ValidationMessageWidget.field_Q;
     }
 
-    final int a(int param0, byte param1) {
+    final int measureContentWidth(int param0, byte param1) {
         SpriteWidget var4 = null;
         int var5 = 0;
         int var4_int = 0;
@@ -468,22 +468,22 @@ class SpriteWidget extends ke {
           }
         }
         if (param1 < 68) {
-          this.a(-4, -89, -47, true, false, 60);
+          this.updateInputTree(-4, -89, -47, true, false, 60);
         }
         if (null != this.field_W) {
-          var4 = (SpriteWidget) (this.field_W.a((byte) -46));
+          var4 = (SpriteWidget) (this.field_W.first((byte) -46));
           while (var4 != null) {
             var5 = var4.field_tb + var4.field_K;
             if (var5 > var3) {
               var3 = var5;
             }
-            var4 = (SpriteWidget) (this.field_W.a(16213));
+            var4 = (SpriteWidget) (this.field_W.next(16213));
           }
         }
         return var3;
     }
 
-    private final void a(int param0, int param1, int param2, boolean param3, boolean param4, int param5) {
+    private final void updateInputTree(int param0, int param1, int param2, boolean param3, boolean param4, int param5) {
         boolean stackIn_31_1 = false;
         boolean stackIn_39_1 = false;
         int var7;
@@ -538,49 +538,49 @@ class SpriteWidget extends ke {
         var11 = Rasterizer.field_h;
         Rasterizer.intersectClip(this.field_Bb, this.field_J, this.field_Bb + this.field_K, this.field_J + this.field_ub);
         var12 = 0;
-        if (!vl.field_d &&
+        if (!TextureCache.field_d &&
           param3 &&
-          oi.field_g != 0 &&
-          ii.field_b >= Rasterizer.field_i &&
-          Rasterizer.field_k > ii.field_b &&
-          a.field_y >= Rasterizer.field_g &&
-          Rasterizer.field_h > a.field_y) {
-          this.field_U = -this.field_J + a.field_y;
-          this.field_nb = oi.field_g;
+          MenuScreen.field_g != 0 &&
+          HuffmanCodec.field_b >= Rasterizer.field_i &&
+          Rasterizer.field_k > HuffmanCodec.field_b &&
+          PasswordFieldPainter.field_y >= Rasterizer.field_g &&
+          Rasterizer.field_h > PasswordFieldPainter.field_y) {
+          this.field_U = -this.field_J + PasswordFieldPainter.field_y;
+          this.field_nb = MenuScreen.field_g;
           var12 = 1;
-          this.field_w = oi.field_g;
-          this.field_Q = -this.field_Bb + ii.field_b;
+          this.field_w = MenuScreen.field_g;
+          this.field_Q = -this.field_Bb + HuffmanCodec.field_b;
         } else {
           this.field_nb = 0;
-          if (oi.field_g != 0) {
+          if (MenuScreen.field_g != 0) {
             this.field_w = 0;
           }
         }
-        stackIn_31_1 = (!ch.field_b) && (Rasterizer.field_i <= nl.field_u) && (Rasterizer.field_k > nl.field_u) && (hk.field_Jb >= Rasterizer.field_g) && (hk.field_Jb < Rasterizer.field_h);
+        stackIn_31_1 = (!DisplayModeInfo.field_b) && (Rasterizer.field_i <= StatefulWidgetPainter.field_u) && (Rasterizer.field_k > StatefulWidgetPainter.field_u) && (IconTextComponent.field_Jb >= Rasterizer.field_g) && (IconTextComponent.field_Jb < Rasterizer.field_h);
         this.field_G = stackIn_31_1;
-        if (0 == j.field_e) {
+        if (0 == NodeHashTableIterator.field_e) {
           this.field_w = 0;
         }
-        stackIn_39_1 = (this.field_G) && (j.field_e == this.field_w) && (param3);
+        stackIn_39_1 = (this.field_G) && (NodeHashTableIterator.field_e == this.field_w) && (param3);
         this.field_S = stackIn_39_1;
         if (this.field_W != null) {
-          var13 = (SpriteWidget) (this.field_W.b(false));
+          var13 = (SpriteWidget) (this.field_W.last(false));
           while (var13 != null) {
-            var13.a(this.field_ub, this.field_K, this.field_J, param3, param4, this.field_Bb);
-            var13 = (SpriteWidget) (this.field_W.e(9003));
+            var13.updateInputTree(this.field_ub, this.field_K, this.field_J, param3, param4, this.field_Bb);
+            var13 = (SpriteWidget) (this.field_W.previous(9003));
           }
         }
         if (this.field_G) {
-          ch.field_b = true;
+          DisplayModeInfo.field_b = true;
         }
         if (var12 != 0) {
-          vl.field_d = true;
+          TextureCache.field_d = true;
         }
         Rasterizer.setClip(var8, var9, var10, var11);
         if (this.field_w != 0 &&
           this.field_X) {
-          this.field_F = hk.field_Jb + (-this.field_U - param2);
-          this.field_tb = nl.field_u + (-this.field_Q - param5);
+          this.field_F = IconTextComponent.field_Jb + (-this.field_U - param2);
+          this.field_tb = StatefulWidgetPainter.field_u + (-this.field_Q - param5);
           if (this.field_tb < 0) {
             this.field_tb = 0;
           }
@@ -600,7 +600,7 @@ class SpriteWidget extends ke {
         }
     }
 
-    final void a(int param0, SpriteWidget param1, SpriteWidget param2, byte param3) {
+    final void positionAfter(int param0, SpriteWidget param1, SpriteWidget param2, byte param3) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -636,18 +636,18 @@ class SpriteWidget extends ke {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw kg.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param3).append(')').toString());
+          throw AsyncCheckResult.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param3).append(')').toString());
         }
     }
 
-    final int c(byte param0) {
+    final int measureNaturalWidth(byte param0) {
         if (param0 < 31) {
-          this.a(true, -46, -65, 118);
+          this.layoutChildren(true, -46, -65, 118);
         }
-        return this.a(2147483647, (byte) 105);
+        return this.measureContentWidth(2147483647, (byte) 105);
     }
 
-    private final void a(boolean param0, int param1, int param2, int param3, int param4, int param5, boolean param6, boolean param7, boolean param8, boolean param9, boolean param10) {
+    private final void drawTree(boolean param0, int param1, int param2, int param3, int param4, int param5, boolean param6, boolean param7, boolean param8, boolean param9, boolean param10) {
         boolean stackIn_5_0 = false;
         int var12;
         int var13;
@@ -753,9 +753,9 @@ class SpriteWidget extends ke {
         var21 = var19 + this.field_v;
         var22 = this.field_wb + var20;
         if (this.field_ib) {
-          tm.a(param4, param1, false, param2, param5, var16);
+          QueuedListRequest.drawNineSliceFrame(param4, param1, false, param2, param5, var16);
         } else {
-          tm.a(this.field_Bb, this.field_J, false, this.field_K, this.field_ub, var16);
+          QueuedListRequest.drawNineSliceFrame(this.field_Bb, this.field_J, false, this.field_K, this.field_ub, var16);
         }
         if (var17 != null) {
           var23_int = this.field_Bb + var21;
@@ -775,7 +775,7 @@ class SpriteWidget extends ke {
           if (256 <= this.field_Ab) {
             var17.drawTransparent(var23_int, var24);
           } else {
-            var17.a(var23_int, var24, this.field_Ab);
+            var17.drawWithOpacity(var23_int, var24, this.field_Ab);
           }
         }
         boolean decompiledFrameRemainder0 = true;
@@ -818,16 +818,16 @@ class SpriteWidget extends ke {
           }
         }
         if (null != this.field_W) {
-          var23_ref = (SpriteWidget) (this.field_W.a((byte) -49));
+          var23_ref = (SpriteWidget) (this.field_W.first((byte) -49));
           while (var23_ref != null) {
-            var23_ref.a(param0, var20 + this.field_J, this.field_K, 0, this.field_Bb + var19, this.field_ub, this.field_Z, param7, param8, param9, param10);
-            var23_ref = (SpriteWidget) (this.field_W.a(16213));
+            var23_ref.drawTree(param0, var20 + this.field_J, this.field_K, 0, this.field_Bb + var19, this.field_ub, this.field_Z, param7, param8, param9, param10);
+            var23_ref = (SpriteWidget) (this.field_W.next(16213));
           }
         }
         Rasterizer.setClip(var12, var13, var14, var15);
     }
 
-    final void a(boolean param0, int param1, int param2, int param3) {
+    final void layoutChildren(boolean param0, int param1, int param2, int param3) {
         SpriteWidget var10_ref_km = null;
         int var9 = 0;
         int var11 = Virogrid.field_F ? 1 : 0;
@@ -838,11 +838,11 @@ class SpriteWidget extends ke {
         int var9Lifetime1;
         if (!param0) {
           var9 = 0;
-          var10_ref_km = (SpriteWidget) (this.field_W.a((byte) -74));
+          var10_ref_km = (SpriteWidget) (this.field_W.first((byte) -74));
           while (var10_ref_km != null) {
             var10_ref_km.field_Cb = var9 - var10_ref_km.field_F;
             var9 = var9 + (var10_ref_km.field_ub + var10_ref_km.field_kb + param1);
-            var10_ref_km = (SpriteWidget) (this.field_W.a(16213));
+            var10_ref_km = (SpriteWidget) (this.field_W.next(16213));
           }
           var8 = -param1 + var9;
         }
@@ -866,9 +866,9 @@ class SpriteWidget extends ke {
         this.field_ub = var7;
     }
 
-    final static void a(int param0, int param1, int param2) {
-        uh.field_c = param0;
-        sk.field_d = param1;
+    final static void setHoverPosition(int param0, int param1, int param2) {
+        ConditionalTextValue.field_c = param0;
+        LoadingTextGlobals.field_d = param1;
         int var3 = -21 / ((-5 - param2) / 60);
     }
 
@@ -912,12 +912,12 @@ class SpriteWidget extends ke {
           this.field_K = param4;
           this.field_tb = param2;
           this.key = param0;
-          this.b(18003, param1);
+          this.applyStyle(18003, param1);
           if (param6 != null) {
             this.field_V = param6;
           }
         } catch (RuntimeException runtimeException) {
-          throw kg.a((Throwable) ((Object) runtimeException), "km.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
+          throw AsyncCheckResult.wrapException((Throwable) ((Object) runtimeException), "km.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
         }
     }
 

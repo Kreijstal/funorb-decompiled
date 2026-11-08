@@ -1,0 +1,27 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class DrawQueueGlobals {
+    static String field_e;
+    static boolean field_b;
+    static int[] field_c;
+    static int field_d;
+    static int field_a;
+    private static String field_z;
+
+    public static void releaseStatics(int param0) {
+        if (param0 > -47) {
+          DrawQueueGlobals.releaseStatics(35);
+          field_c = null;
+          field_e = null;
+          return;
+        }
+        field_c = null;
+        field_e = null;
+    }
+
+    static {
+        field_z = "ea.A(";
+        field_c = new int[8192];
+    }
+}

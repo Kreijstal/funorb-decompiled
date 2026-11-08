@@ -9,7 +9,7 @@ class IntrusiveNode {
     static String field_e;
     IntrusiveNode previous;
 
-    final boolean b(boolean param0) {
+    final boolean isLinked(boolean param0) {
         if (null == this.next) {
           return false;
         }
@@ -20,7 +20,7 @@ class IntrusiveNode {
         return true;
     }
 
-    final void a(boolean param0) {
+    final void unlink(boolean param0) {
         if (param0) {
           return;
         }

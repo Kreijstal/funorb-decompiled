@@ -1,0 +1,640 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class UiTheme {
+    int field_m;
+    int field_k;
+    WidgetListener field_i;
+    int field_g;
+    int field_s;
+    WidgetListener field_h;
+    WidgetListener field_j;
+    BitmapFont field_o;
+    static String textEndgameNopiecesYou;
+    WidgetListener field_l;
+    int field_n;
+    private boolean field_p;
+    int field_e;
+    static int field_r;
+    static int field_c;
+    int field_q;
+    static SpriteWidget field_a;
+    WidgetListener field_b;
+    private int field_d;
+
+    final static void layoutMainLobbyComponents(int param0) {
+        int var1_int = 0;
+        int var2 = 0;
+        int var3 = 0;
+        SpriteWidget stackIn_6_0 = null;
+        int stackIn_6_1 = 0;
+        int stackIn_7_2 = 0;
+        int stackIn_10_2;
+        int stackIn_10_3;
+        int stackIn_10_4;
+        int stackIn_11_5 = 0;
+        int stackIn_15_0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var1 = null;
+        try {
+          DualLinkDequeIterator.field_b = Rasterizer.field_f;
+          IterableDualLinkDeque.field_f = Rasterizer.field_e;
+          WidgetLayerStack.layoutLobbySlidePanels(-17491);
+          DecodedSpriteHelpers.field_b.layoutLobbyPanels(36, 0, 0, -2 + (WidgetContainer.field_y.field_ub - 40), WidgetContainer.field_y.field_K);
+          MusicPatchEnvelope.field_f.setGeometry(0, LobbySortHelpers.field_e, BackgroundParticle.field_k.field_K, (byte) -75, 0);
+          if (param0 >= -96) {
+            field_a = (SpriteWidget) null;
+          }
+          var1_int = LobbySortHelpers.field_e + 2;
+          stackIn_6_0 = BackgroundParticle.field_m;
+          stackIn_6_1 = 0;
+          if (DialWidgetPainter.field_d) {
+            stackIn_7_2 = var1_int;
+          } else {
+            stackIn_7_2 = 0;
+          }
+          stackIn_10_2 = -stackIn_7_2 + BackgroundParticle.field_k.field_ub;
+          stackIn_10_3 = BackgroundParticle.field_k.field_K;
+          stackIn_10_4 = -95;
+          if (!DialWidgetPainter.field_d) {
+            stackIn_11_5 = 0;
+          } else {
+            stackIn_11_5 = var1_int;
+          }
+          ((SpriteWidget) (Object) stackIn_6_0).setGeometry(stackIn_6_1, stackIn_10_2, stackIn_10_3, (byte) stackIn_10_4, stackIn_11_5);
+          MusicPatch.layoutTopBar(-20);
+          InputSetupHelpers.field_b.setGeometry(0, 40, WidgetContainer.field_y.field_K, (byte) -55, WidgetContainer.field_y.field_ub - 40);
+          ValidationMessageWidget.field_Z.setGeometry(0, 30, CipherPacketBuffer.field_p.field_K, (byte) -44, 0);
+          HotspotTextWidget.field_I.setGeometry(0, CipherPacketBuffer.field_p.field_ub - 40 - 32, CipherPacketBuffer.field_p.field_K, (byte) -116, 30);
+          DualLinkDequeIterator.field_c.setGeometry(5, 30, 68, (byte) -69, 5);
+          DialWidget.field_H.setGeometry(75, 30, 78, (byte) -46, 5);
+          LobbySessionHelpers.field_d.setGeometry(155, 30, 48, (byte) -126, 5);
+          IterableNodeHashTable.field_b.setGeometry(205, 30, 48, (byte) -103, 5);
+          stackIn_15_0 = (!DialWidgetPainter.field_d) ? 200 : 250;
+          var2 = stackIn_15_0;
+          SingleChildWidget.field_C.setGeometry(5 + var2, 30, 363 - var2, (byte) -69, 5);
+          DialWidget.field_J.setGeometry(370, 30, CipherPacketBuffer.field_p.field_K - 5 - 370, (byte) -114, 5);
+          DisplayModeInfo.field_a.setScrollPaneBounds(37, -123, -5 + HotspotTextWidget.field_I.field_K - 5, 2, -32 + (HotspotTextWidget.field_I.field_ub - 10), 5, PendingScoreQuery.field_k);
+          var3 = (CipherPacketBuffer.field_p.field_K + 2) / 2;
+          GrowableIntList.field_a.setGeometry(0, 40, var3 - 2, (byte) -59, CipherPacketBuffer.field_p.field_ub - 40);
+          if (!DialWidgetPainter.field_d) {
+            var3 = 0;
+          }
+          ResizableDialog.field_R.setGeometry(var3, 40, CipherPacketBuffer.field_p.field_K - var3, (byte) -124, -40 + CipherPacketBuffer.field_p.field_ub);
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw AsyncCheckResult.wrapException((Throwable) ((Object) var1), "id.I(" + param0 + ')');
+        }
+    }
+
+    public static void releaseStatics(byte param0) {
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var1 = null;
+        try {
+          if (param0 != 24) {
+            UiTheme.releaseStatics((byte) -115);
+          }
+          textEndgameNopiecesYou = null;
+          field_a = null;
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw AsyncCheckResult.wrapException((Throwable) ((Object) var1), "id.K(" + param0 + ')');
+        }
+    }
+
+    final void initializePainters(byte param0, BitmapFont param1) {
+        DialWidgetPainter discarded$6 = null;
+        MarkerSliderPainter discarded$7 = null;
+        Sprite dupTemp$8 = null;
+        RuntimeException runtimeException = null;
+        TextWidgetPainter var3 = null;
+        StatefulWidgetPainter var4 = null;
+        Sprite[] var5 = null;
+        ArgbSprite var6 = null;
+        StatefulWidgetPainter var6_ref = null;
+        int var7_int = 0;
+        StatefulWidgetPainter var7 = null;
+        StatefulWidgetPainter var8 = null;
+        Sprite[] var9 = null;
+        Sprite[] var10 = null;
+        StatefulWidgetPainter var11 = null;
+        StatefulWidgetPainter var12 = null;
+        Sprite var13 = null;
+        StatefulWidgetPainter var14 = null;
+        int var15 = 0;
+        RuntimeException stackIn_16_0 = null;
+        StringBuilder stackIn_16_1 = null;
+        String stackIn_17_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        StatefulWidgetPainter var14Lifetime1;
+        StatefulWidgetPainter var14Lifetime2;
+        StatefulWidgetPainter var14Lifetime3;
+        var15 = Virogrid.field_F ? 1 : 0;
+        try {
+          var3 = new TextWidgetPainter(param1, 2, 2, 2236962, 1, 1, 1, 2 + (param1.field_H + param1.field_G));
+          var3.field_c = 16777215;
+          this.field_j = (WidgetListener) ((Object) var3);
+          var4 = new StatefulWidgetPainter();
+          var3.copyStyleTo(0, var4);
+          this.field_s = 15658734;
+          var4.field_o = 11711154;
+          var4.field_t = 15658734;
+          this.field_m = 3;
+          this.field_q = 3;
+          this.field_k = -1;
+          this.field_o = param1;
+          this.field_d = 15658734;
+          this.field_n = 3;
+          this.field_e = 5592405;
+          this.field_g = 3;
+          var4.createStateStyle((byte) 119, 0).setTextColor(true, 15658734).setFrameSprites(-8779, CachedTextLayout.createBevelledFrameSprites(10066329, 8947848, 7829367, (byte) -103));
+          if (param0 <= 81) {
+            this.field_d = 10;
+          }
+          var4.createStateStyle((byte) 119, 1).setFrameSprites(-8779, CachedTextLayout.createBevelledFrameSprites(10066329, 11184810, 13421772, (byte) -82));
+          var4.createStateStyle((byte) 96, 3).setFrameSprites(-8779, CachedTextLayout.createBevelledFrameSprites(7829367, 8947848, 10066329, (byte) -116)).setOffsetX((byte) 64, 1).setOffsetY(1, 127);
+          var5 = new Sprite[9];
+          var6 = new ArgbSprite(32, 32);
+          var7_int = 0;
+          do {
+            if (!(var6.field_B.length > var7_int)) {
+              var5[4] = (Sprite) ((Object) var6);
+              var4.createStateStyle((byte) 123, 4).setFlushBeforeOverlay(true, 0).setFrameSprites(-8779, var5);
+              var4.createStateStyle((byte) 100, 5).setFrameSprites(-8779, DiskCacheWorker.createSprites(65793, (byte) 125, 0, 0, 0)).setFlushBeforeOverlay(true, 0).setTextColor(true, -1);
+              this.field_l = (WidgetListener) ((Object) var4);
+              break;
+            }
+            var6.field_B[var7_int] = 1077952576;
+            var7_int++;
+          } while (var15 == 0);
+          var6_ref = new StatefulWidgetPainter(var4, true);
+          var6_ref.field_j = 0;
+          var7 = new StatefulWidgetPainter(var4, true);
+          var7.field_j = 0;
+          var7.setAllFrameSprites(IntKeyLookup.createSolidCenterFrame(true, 8947848), 4);
+          var7.createStateStyle((byte) 86, 1).setFrameSprites(-8779, IntKeyLookup.createSolidCenterFrame(true, 11184810)).setTextColor(true, 2236962);
+          this.field_i = (WidgetListener) ((Object) new CheckboxPainter(param1, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
+          discarded$6 = new DialWidgetPainter(param1, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
+          discarded$7 = new MarkerSliderPainter(param1, 16777215, -1, 125269879, 4473924, 3, 268435455);
+          var8 = new StatefulWidgetPainter();
+          var3.copyStyleTo(0, var8);
+          var8.createStateStyle((byte) 78, 0).setFrameSprites(-8779, CachedTextLayout.createBevelledFrameSprites(7829367, 15658734, 10066329, (byte) -85)).setTextColor(true, 1118481).setTextShadowColor(-1, -26973);
+          var8.createStateStyle((byte) 109, 4).setFlushBeforeOverlay(true, 0).setFrameSprites(-8779, var5);
+          this.field_h = (WidgetListener) ((Object) var8);
+          var9 = new Sprite[9];
+          var10 = new Sprite[9];
+          var9[4] = new Sprite(2, 1);
+          var10[4] = new Sprite(1, 2);
+          dupTemp$8 = var9[4];
+          dupTemp$8.field_B = new int[]{6710886, 7829367};
+          var10[4].field_B = new int[]{6710886, 7829367};
+          var11 = new StatefulWidgetPainter();
+          var12 = new StatefulWidgetPainter();
+          var11.setStateFrameSprites(0, var9, (byte) -123);
+          var12.setStateFrameSprites(0, var10, (byte) -125);
+          var13 = new Sprite(7, 4);
+          var13.field_B = new int[]{8947848, 8947848, 8947848, 13421772, 8947848, 8947848, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772};
+          var14 = new StatefulWidgetPainter(var4, true);
+          var14.setContentSprite((byte) -119, var13.copy());
+          var13.rotateClockwise();
+          var14Lifetime1 = new StatefulWidgetPainter(var4, true);
+          var14Lifetime1.setContentSprite((byte) -121, var13.copy());
+          var13.rotateClockwise();
+          var14Lifetime2 = new StatefulWidgetPainter(var4, true);
+          var14Lifetime2.setContentSprite((byte) -114, var13.copy());
+          var13.rotateClockwise();
+          var14Lifetime3 = new StatefulWidgetPainter(var4, true);
+          var14Lifetime3.setContentSprite((byte) -122, var13);
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          runtimeException = decompiledCaughtException;
+          stackIn_16_0 = runtimeException;
+          stackIn_16_1 = new StringBuilder().append("id.J(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_17_2 = "null";
+          } else {
+            stackIn_17_2 = "{...}";
+          }
+          throw AsyncCheckResult.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+        }
+    }
+
+    final static String buildChatInputPrompt(int param0) {
+        String stackIn_3_0 = null;
+        String stackIn_66_0 = null;
+        Object stackIn_102_0 = null;
+        RuntimeException decompiledCaughtException = null;
+        Object var1 = null;
+        Object var2 = null;
+        String var3 = null;
+        String var4 = null;
+        String var5 = null;
+        int var6 = 0;
+        int var7 = 0;
+        String var8 = null;
+        int var9 = 0;
+        int var10 = 0;
+        String var8Lifetime1;
+        var10 = Virogrid.field_F ? 1 : 0;
+        try {
+          var1 = null;
+          if (param0 != 3063) {
+            stackIn_3_0 = (String) null;
+            return stackIn_3_0;
+          }
+          var2 = null;
+          if (ChatFilterHelpers.field_e == 0 &&
+            QueuedRequest.field_h != null) {
+            var2 = PendingSubmission.field_j;
+          }
+          if (ChatFilterHelpers.field_e == 2 &&
+            !NetworkArchiveRequest.isQuickChatRecipientAvailable(-117)) {
+            if (DisplayModeInfo.isKnownPlayer(TabbedPanel.field_Gb, (byte) -73)) {
+              var2 = MenuScreen.formatIndexedText(new String[]{ArchiveFactoryHelpers.field_d}, CameraAndLogoHelpers.field_b, 2);
+              if (var10 != 0) {
+                var2 = MenuScreen.formatIndexedText(new String[]{ArchiveFactoryHelpers.field_d}, FallingParticle.field_g, 2);
+              }
+            } else {
+              var2 = MenuScreen.formatIndexedText(new String[]{ArchiveFactoryHelpers.field_d}, FallingParticle.field_g, 2);
+            }
+            if (ChatPanelUpdateHelpers.field_e) {
+              ArrayWidgetContainer.addChatMessage((String) null, 0, false, (String) (var2), 2, (String) null);
+              TextDecodeHelpers.closeModalIfOpen((byte) -118);
+            }
+          }
+          if (null == var2 &&
+            !GameBoard.field_i &&
+            null == ArchiveLoadSequence.field_i) {
+            var2 = DialWidgetPainter.field_i;
+          }
+          boolean decompiledFrameRemainder0 = true;
+          if (null != var2) {
+            ClientEnvironmentHelpers.setChatInputPrompt(QueuedListRequest.field_n, (byte) 21, (String) (var2), 0, (String) null);
+            decompiledFrameRemainder0 = (var10 != 0);
+          }
+          if (decompiledFrameRemainder0) {
+            var3 = DebouncedValidator.field_d;
+            var3 = BirthDateInputWidget.prefixWithCrown(param0 ^ 2954, var3);
+            var4 = "";
+            var5 = "|";
+            var6 = ChatFilterHelpers.field_e;
+            var7 = 0;
+            if (var6 == 2) {
+              var4 = MenuScreen.formatIndexedText(new String[]{ArchiveFactoryHelpers.field_d}, AudioPumpThread.field_c, 2);
+              var8 = MenuScreen.formatIndexedText(new String[]{var3}, NanoTickClock.field_d, param0 - 3061);
+              var7 = EditableTextWidget.field_I.field_K + UsernameAvailabilityValidator.field_n.field_K - (485 - IconTextComponent.field_Ob.textWidth(var8) + IconTextComponent.field_Ob.textWidth(var4));
+              if (var7 < 0) {
+                var7 = 0;
+              }
+            }
+            if (var6 != 2 ||
+              var10 != 0) {
+              if (var6 == 0) {
+                if (AudioSetupHelpers.field_d == null &&
+                  DisplayModeInfo.field_e) {
+                  var4 = "[" + RankingArraySupport.field_a + "] ";
+                }
+                if (AudioSetupHelpers.field_d != null) {
+                  var6 = 1;
+                  boolean decompiledSharedTail0 = (!(ReflectionCheck.field_t) ||
+                    DirectByteStorage.field_e == null);
+                  if (!decompiledSharedTail0) {
+                    var4 = "[" + DirectByteStorage.field_e + "] ";
+                    decompiledSharedTail0 = (var10 != 0);
+                  }
+                  if (decompiledSharedTail0) {
+                    var4 = "[" + MenuScreen.formatIndexedText(new String[]{AudioSetupHelpers.field_d.field_Qb}, ScoreSubmissionHelpers.field_c, 2) + "] ";
+                  }
+                }
+              }
+              if (!NodeHashTable.isAccountOverlayOpen(124)) {
+                stackIn_66_0 = "<img=3>: ";
+              } else {
+                stackIn_66_0 = ": ";
+              }
+              var8Lifetime1 = stackIn_66_0;
+              var4 = var4 + var3 + var8Lifetime1;
+              if (!FrameSkin.field_f) {
+                if (RankingsRequest.field_n) {
+                  var4 = "<col=999999>" + var4 + PendingHighscoreRequest.field_p + "</col>";
+                  var5 = "";
+                  if (var10 != 0) {
+                    var4 = "<col=999999>" + var4 + TextureCache.field_g + "</col>";
+                    var5 = "";
+                  }
+                }
+              } else {
+                var4 = "<col=999999>" + var4 + TextureCache.field_g + "</col>";
+                var5 = "";
+              }
+              var9 = IconTextComponent.field_Ob.textWidth(var4);
+              if (!NodeHashTable.isAccountOverlayOpen(param0 ^ 2978)) {
+                if (UsernameAvailabilityValidator.field_n.field_S &&
+                  var9 > StatefulWidgetPainter.field_u - UsernameAvailabilityValidator.field_n.field_Bb) {
+                  if (!FrameSkin.field_f) {
+                    var1 = PendingHighscoreRequest.field_p;
+                  } else {
+                    var1 = "Broken!";
+                  }
+                }
+                if (0 != UsernameAvailabilityValidator.field_n.field_nb &&
+                  var9 > UsernameAvailabilityValidator.field_n.field_Q &&
+                  !FrameSkin.field_f) {
+                  QuickChatOpenHelpers.openPublicQuickChat((byte) 91);
+                }
+              }
+            }
+            ClientEnvironmentHelpers.setChatInputPrompt(FullscreenErrorDialog.field_eb[var6], (byte) 21, var4 + BitmapFont.escapeMarkup(MenuScreen.field_h.toString()), var7, var5);
+            if (!ArchiveLoadSequence.field_h) {
+              EditableTextWidget.field_I.field_S = false;
+            }
+            if (EditableTextWidget.field_I.field_S) {
+              var1 = MenuScreen.formatIndexedText(new String[]{var3, ArchiveFactoryHelpers.field_d}, MathAndCookieHelpers.field_b, 2);
+            }
+          }
+          stackIn_102_0 = var1;
+          return (String) (stackIn_102_0);
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw AsyncCheckResult.wrapException((Throwable) (var1), "id.G(" + param0 + ')');
+        }
+    }
+
+    final static int sineLookup(int param0, int param1) {
+        RuntimeException var2 = null;
+        int stackIn_10_0 = 0;
+        int stackIn_15_0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (param1 != 32) {
+            field_a = (SpriteWidget) null;
+          }
+          param0 = param0 & 8191;
+          if (param0 < 4096) {
+            if (param0 < 2048) {
+              stackIn_15_0 = AccountCreationSupport.field_h[param0];
+            } else {
+              stackIn_15_0 = AccountCreationSupport.field_h[-param0 + 4096];
+            }
+            return stackIn_15_0;
+          }
+          if (param0 < 6144) {
+            stackIn_10_0 = -AccountCreationSupport.field_h[param0 - 4096];
+          } else {
+            stackIn_10_0 = -AccountCreationSupport.field_h[8192 - param0];
+          }
+          return stackIn_10_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          throw AsyncCheckResult.wrapException((Throwable) ((Object) var2), "id.F(" + param0 + ',' + param1 + ')');
+        }
+    }
+
+    final static int getChatFilterSetting(int param0, byte param1) {
+        int var2_int = 0;
+        RuntimeException var2 = null;
+        int stackIn_10_0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (param1 < 54) {
+            field_a = (SpriteWidget) null;
+          }
+          var2_int = 0;
+          if (0 == param0) {
+            var2_int = LoginPanel.field_D;
+          }
+          if (param0 == 1) {
+            var2_int = TextFieldValidator.field_m;
+          }
+          if (param0 == 2) {
+            var2_int = BufferedSocket.field_t;
+          }
+          stackIn_10_0 = var2_int;
+          return stackIn_10_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          throw AsyncCheckResult.wrapException((Throwable) ((Object) var2), "id.B(" + param0 + ',' + param1 + ')');
+        }
+    }
+
+    private final void drawSingleLineTooltip(String param0, int param1, int param2, int param3) {
+        RuntimeException runtimeException = null;
+        int var5_int = 0;
+        int var6 = 0;
+        int var7 = 0;
+        int var8 = 0;
+        int var9 = 0;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        String stackIn_12_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          var5_int = this.field_o.textWidth(param0);
+          var6 = this.field_o.field_A + this.field_o.field_G;
+          var7 = param3;
+          if (6 + var5_int + var7 > Rasterizer.field_e) {
+            var7 = -6 + Rasterizer.field_e - var5_int;
+          }
+          var8 = 32 + param2 - this.field_o.field_A;
+          if (Rasterizer.field_f < var8 + (var6 + 6)) {
+            var8 = -6 + Rasterizer.field_f - var6;
+          }
+          Rasterizer.drawRectangle(var7, var8, var5_int + 6, var6 + 6, this.field_d);
+          Rasterizer.fillRectangle(var7 + 1, var8 + 1, 4 + var5_int, var6 + 4, this.field_e);
+          this.field_o.drawLeft(param0, 3 + var7, this.field_o.field_A + var8 + 3, this.field_d, -1);
+          var9 = 95 % ((37 - param1) / 46);
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          runtimeException = decompiledCaughtException;
+          stackIn_11_0 = runtimeException;
+          stackIn_11_1 = new StringBuilder().append("id.C(");
+          if (param0 == null) {
+            stackIn_12_2 = "null";
+          } else {
+            stackIn_12_2 = "{...}";
+          }
+          throw AsyncCheckResult.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+        }
+    }
+
+    final void drawTooltip(int param0, int param1, int param2, String param3) {
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        String stackIn_14_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var5 = null;
+        try {
+          if (param1 != 5) {
+            this.drawSingleLineTooltip((String) null, 37, -126, -115);
+          }
+          if (!this.field_p) {
+            this.drawSingleLineTooltip(param3, param1 - 55, param2, param0);
+            if (!Virogrid.field_F) {
+              return;
+            }
+          }
+          this.drawWrappedTooltip((byte) -110, param2, param3, param0);
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var5 = decompiledCaughtException;
+          stackIn_13_0 = var5;
+          stackIn_13_1 = new StringBuilder().append("id.H(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+          if (param3 == null) {
+            stackIn_14_2 = "null";
+          } else {
+            stackIn_14_2 = "{...}";
+          }
+          throw AsyncCheckResult.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+        }
+    }
+
+    private final void drawWrappedTooltip(byte param0, int param1, String param2, int param3) {
+        int stackIn_29_0 = 0;
+        int stackIn_29_1 = 0;
+        RuntimeException stackIn_39_0 = null;
+        StringBuilder stackIn_39_1 = null;
+        String stackIn_40_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int var5_int = 0;
+        RuntimeException var5 = null;
+        int var6 = 0;
+        int var7 = 0;
+        int var8 = 0;
+        int var9 = 0;
+        int var10 = 0;
+        int var11 = 0;
+        int var12 = 0;
+        int var13 = 0;
+        int var14 = 0;
+        int var15 = 0;
+        int var11Lifetime1;
+        int var13Lifetime1;
+        int var13Lifetime2;
+        var15 = Virogrid.field_F ? 1 : 0;
+        try {
+          var5_int = this.field_n + this.field_g;
+          var6 = this.field_m + this.field_q;
+          if (param0 != -110) {
+            return;
+          }
+          var7 = this.field_k;
+          if (var7 == -1) {
+            var7 = this.field_o.field_G + this.field_o.field_H;
+          }
+          boolean decompiledFrameCompleted0 = true;
+          var8 = Rasterizer.field_e >> 2;
+          var9 = this.field_o.textWidth(param2);
+          var10 = this.field_o.field_G + this.field_o.field_H;
+          var11 = 1;
+          if (var9 > var8 ||
+            param2.indexOf("<br>") != -1) {
+            if (var9 > var8) {
+              var13 = var9 / var8;
+              var12 = var8 + 2 * ((-1 + (var13 + var9 % var8)) / var13);
+            }
+            if (var9 <= var8 ||
+              var15 != 0) {
+              var12 = var8;
+            }
+            if (null == BufferedFile.field_d) {
+              BufferedFile.field_d = new String[16];
+            }
+            var11Lifetime1 = this.field_o.wrapText(param2, new int[]{var12}, BufferedFile.field_d);
+            var9 = 0;
+            var10 = var10 + var7 * (var11Lifetime1 - 1);
+            var13Lifetime2 = 0;
+            while (var13Lifetime2 < var11Lifetime1) {
+              var14 = this.field_o.textWidth(BufferedFile.field_d[var13Lifetime2]);
+              stackIn_29_0 = ~var9;
+              stackIn_29_1 = ~var14;
+              if (var15 != 0) {
+                decompiledFrameCompleted0 = false;
+                break;
+              }
+              if (stackIn_29_0 > stackIn_29_1) {
+                var9 = var14;
+              }
+              var13Lifetime2++;
+            }
+          }
+          if (decompiledFrameCompleted0) {
+            var12 = param3;
+            stackIn_29_0 = ~Rasterizer.field_e;
+            stackIn_29_1 = ~(var9 + var12 + var5_int);
+          }
+          if (stackIn_29_0 > stackIn_29_1) {
+            var12 = -var5_int + Rasterizer.field_e - var9;
+          }
+          var13Lifetime1 = 32 - this.field_o.field_A + param1;
+          if (Rasterizer.field_f < (var6 + var10 + var13Lifetime1)) {
+            var13Lifetime1 = -var6 + param1 - var10;
+          }
+          Rasterizer.drawRectangle(var12, var13Lifetime1, var5_int + var9, var10 + var6, this.field_s);
+          Rasterizer.fillRectangle(1 + var12, var13Lifetime1 + 1, var9 + var5_int - 2, var10 + var6 - 2, this.field_e);
+          this.field_o.drawParagraph(param2, var12 + this.field_g, this.field_q + var13Lifetime1, var9, var10, this.field_d, -1, 0, 0, var7);
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var5 = decompiledCaughtException;
+          stackIn_39_0 = var5;
+          stackIn_39_1 = new StringBuilder().append("id.E(").append(param0).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_40_2 = "null";
+          } else {
+            stackIn_40_2 = "{...}";
+          }
+          throw AsyncCheckResult.wrapException((Throwable) ((Object) stackIn_39_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(',').append(param3).append(')').toString());
+        }
+    }
+
+    final void fillRectangleAlpha(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var8 = null;
+        try {
+          if (param5 < 83) {
+            this.field_s = 102;
+          }
+          Rasterizer.fillRectangleAlpha(param4, param1, param3, param2, param6, param0);
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var8 = decompiledCaughtException;
+          throw AsyncCheckResult.wrapException((Throwable) ((Object) var8), "id.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+        }
+    }
+
+    final void drawLine(int param0, int param1, int param2, int param3, int param4, int param5) {
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var7 = null;
+        try {
+          if (param1 > -7) {
+            this.field_n = -91;
+          }
+          Rasterizer.drawLine(param3, param0, param4, param5, param2);
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var7 = decompiledCaughtException;
+          throw AsyncCheckResult.wrapException((Throwable) ((Object) var7), "id.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+        }
+    }
+
+    public UiTheme() {
+        this.field_p = true;
+    }
+
+    static {
+        textEndgameNopiecesYou = "You have no pieces left";
+        field_c = 500;
+    }
+}

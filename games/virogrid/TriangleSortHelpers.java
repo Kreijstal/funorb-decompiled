@@ -1,0 +1,75 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class TriangleSortHelpers {
+    static int field_h;
+    static int field_e;
+    static String textYourcolour;
+    static double field_c;
+    static int field_b;
+    static String field_j;
+    static String field_d;
+    static String field_g;
+    static boolean[][] field_i;
+    static String field_a;
+
+    final static void drawSortedTriangle(boolean param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15) {
+        int var17;
+        var17 = Virogrid.field_F ? 1 : 0;
+        if (param1 > param8) {
+          if (param1 < param10) {
+            ProgressMessageDialog.fillGouraudTriangle(Rasterizer.field_d, param11, param5, param15, param13, param3, param7, param10, param12, param14, param2, param9, param6, param4, param1, param8, 0);
+          } else {
+            if (param8 < param10) {
+              ProgressMessageDialog.fillGouraudTriangle(Rasterizer.field_d, param11, param12, param15, param13, param14, param4, param1, param5, param3, param6, param9, param2, param7, param10, param8, 0);
+            } else {
+              ProgressMessageDialog.fillGouraudTriangle(Rasterizer.field_d, param4, param13, param3, param12, param14, param11, param1, param5, param15, param6, param2, param9, param7, param8, param10, 0);
+            }
+          }
+        } else {
+          if (param8 < param10) {
+            ProgressMessageDialog.fillGouraudTriangle(Rasterizer.field_d, param7, param13, param14, param5, param3, param11, param10, param12, param15, param2, param6, param9, param4, param8, param1, 0);
+          } else {
+            if (param10 > param1) {
+              ProgressMessageDialog.fillGouraudTriangle(Rasterizer.field_d, param7, param12, param14, param5, param15, param4, param8, param13, param3, param9, param6, param2, param11, param10, param1, 0);
+            } else {
+              ProgressMessageDialog.fillGouraudTriangle(Rasterizer.field_d, param4, param5, param3, param12, param15, param7, param8, param13, param14, param9, param2, param6, param11, param1, param10, 0);
+            }
+          }
+        }
+        if (!param0) {
+          return;
+        }
+        field_e = -85;
+    }
+
+    final static void positionSlidingPanels(int param0, int param1) {
+        int var2 = (IterableDualLinkDeque.field_f - 640) / 2;
+        int var3 = EmailValidator.field_t * EmailValidator.field_t;
+        int var4 = var3 - param0 * param0;
+        ScrollPaneWithFooter.field_Eb.setGeometry(var2 - var4 * 199 / var3, -90 + (param1 + Rasterizer.field_f) - 120, 199, (byte) -67, 90);
+        CacheReference.field_r.setGeometry(var2 + 202 + 438 * var4 / var3, -124 + Rasterizer.field_f, 438, (byte) -95, 0);
+    }
+
+    public static void releaseStatics(int param0) {
+        field_j = null;
+        field_i = (boolean[][]) null;
+        field_a = null;
+        textYourcolour = null;
+        if (param0 != -24750) {
+          return;
+        }
+        field_g = null;
+        field_d = null;
+    }
+
+    static {
+        field_h = 0;
+        field_j = "<%0> has won!";
+        textYourcolour = "You are playing <%0>.";
+        field_d = "This is <%0>'s RuneScape clan if they have one.";
+        field_c = Math.sqrt(2.0) / 2.0;
+        field_a = null;
+        field_g = "Accept rematch";
+    }
+}

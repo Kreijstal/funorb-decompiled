@@ -1,0 +1,32 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class BitwiseHelpers {
+    static String field_a;
+    static LoginCredentialType field_e;
+    static java.awt.Font field_c;
+    static int field_d;
+    static int field_f;
+    static String field_b;
+
+    public static void releaseStatics(boolean param0) {
+        field_a = null;
+        if (!param0) {
+          return;
+        }
+        field_b = null;
+        field_c = null;
+        field_e = null;
+    }
+
+    static int bitOr(int param0, int param1) {
+        return param0 | param1;
+    }
+
+    static {
+        field_a = "Please try again in a few minutes.";
+        field_e = new LoginCredentialType(0);
+        field_f = 0;
+        field_b = "This option cannot be combined with the current '<%0>' setting.";
+    }
+}

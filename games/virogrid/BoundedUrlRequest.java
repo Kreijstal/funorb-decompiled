@@ -1,0 +1,496 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+import java.io.*;
+
+final class BoundedUrlRequest implements Runnable {
+    private PacketBuffer field_p;
+    private PlatformTask field_m;
+    static int field_s;
+    static String field_e;
+    static String field_k;
+    private PlatformTask field_q;
+    static ModelMesh field_l;
+    static String field_c;
+    static boolean[] field_j;
+    static int field_b;
+    private DataInputStream field_i;
+    private PlatformTaskDispatcher field_f;
+    static String field_n;
+    private int field_h;
+    static String[] field_o;
+    static SpriteWidget[] field_g;
+    static String[] field_t;
+    private PlatformTask field_d;
+    private java.net.URL field_r;
+    static String field_a;
+
+    final static void setMenuLayout(int param0, int param1, int param2, int[] param3, int param4, byte param5, int param6) {
+        DelegatingCanvas.field_j[param0] = param3;
+        DelegatingCanvas.field_b[param0] = param6;
+        DelegatingCanvas.field_h[param0] = param1;
+        DelegatingCanvas.field_f[param0] = param2;
+        if (param5 < 57) {
+          return;
+        }
+        try {
+          DelegatingCanvas.field_a[param0] = param4;
+        } catch (RuntimeException runtimeException) {
+          throw AsyncCheckResult.wrapException((Throwable) ((Object) runtimeException), "og.C(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+        }
+    }
+
+    final synchronized boolean poll(int param0) {
+        Throwable decompiledCaughtException = null;
+        IOException var2 = null;
+        OutputStream var3 = null;
+        java.net.Socket var4 = null;
+        CharSequence var5 = null;
+        if (this.field_h >= 2) {
+          return true;
+        }
+        if (this.field_h == 0) {
+          if (this.field_d == null) {
+            this.field_d = this.field_f.requestUrlStream(this.field_r, true);
+          }
+          if (this.field_d.field_a == 0) {
+            return false;
+          }
+          if (this.field_d.field_a != 1) {
+            this.field_h = this.field_h + 1;
+            this.field_d = null;
+            return false;
+          }
+        }
+        if (this.field_h == 1) {
+          if (null == this.field_q) {
+            this.field_q = this.field_f.openSocket(443, 27402, this.field_r.getHost());
+          }
+          if (this.field_q.field_a == 0) {
+            return false;
+          }
+          if (this.field_q.field_a != 1) {
+            this.field_h = this.field_h + 1;
+            this.field_q = null;
+            return false;
+          }
+        }
+        if (this.field_i != null) {
+          if (this.field_m == null) {
+            this.field_m = this.field_f.startThread(5, (Runnable) (this), 255);
+          }
+          if (param0 != 5038) {
+            this.field_m = (PlatformTask) null;
+          }
+          if (0 == this.field_m.field_a) {
+            return false;
+          }
+          if (1 == this.field_m.field_a) {
+            return false;
+          }
+          this.finalize();
+          this.field_h = this.field_h + 1;
+          return false;
+        }
+        try {
+          if (this.field_h == 0) {
+            this.field_i = (DataInputStream) (this.field_d.field_f);
+          }
+          if (1 == this.field_h) {
+            var4 = (java.net.Socket) (this.field_q.field_f);
+            var4.setSoTimeout(10000);
+            var3 = var4.getOutputStream();
+            var3.write(17);
+            var5 = (CharSequence) ((Object) ("JAGGRAB " + this.field_r.getFile() + "\n\n"));
+            var3.write(TextEncodingHelpers.encodeSingleByteText(param0 ^ 5700, var5));
+            this.field_i = new DataInputStream(var4.getInputStream());
+          }
+          this.field_p.position = 0;
+        } catch (java.io.IOException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = (IOException) (Object) decompiledCaughtException;
+          this.finalize();
+          this.field_h = this.field_h + 1;
+          if (this.field_m == null) {
+            this.field_m = this.field_f.startThread(5, (Runnable) (this), 255);
+          }
+          if (param0 == 5038) {
+            if (0 == this.field_m.field_a) {
+              return false;
+            }
+            if (1 == this.field_m.field_a) {
+              return false;
+            }
+            this.finalize();
+            this.field_h = this.field_h + 1;
+            return false;
+          }
+          this.field_m = (PlatformTask) null;
+          if (0 == this.field_m.field_a) {
+            return false;
+          }
+          if (1 == this.field_m.field_a) {
+            return false;
+          }
+          this.finalize();
+          this.field_h = this.field_h + 1;
+          return false;
+        }
+        if (this.field_m == null) {
+          this.field_m = this.field_f.startThread(5, (Runnable) (this), 255);
+        }
+        if (param0 != 5038) {
+          this.field_m = (PlatformTask) null;
+        }
+        if (0 == this.field_m.field_a) {
+          return false;
+        }
+        if (1 != this.field_m.field_a) {
+          this.finalize();
+          this.field_h = this.field_h + 1;
+        }
+        return false;
+    }
+
+    final static String requestRemoveIgnore(String param0, int param1, byte param2, String param3) {
+        RuntimeException var4 = null;
+        CipherPacketBuffer var5 = null;
+        int var6 = 0;
+        int var7 = 0;
+        SocialListEntry var8 = null;
+        CharSequence var9 = null;
+        String stackIn_3_0 = null;
+        String stackIn_7_0 = null;
+        String stackIn_10_0 = null;
+        Object stackIn_12_0 = null;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
+        String stackIn_16_2 = null;
+        StringBuilder stackIn_18_1 = null;
+        String stackIn_19_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          var9 = (CharSequence) ((Object) param3);
+          if (!CacheReference.isValidAccountName(var9, -1478)) {
+            stackIn_3_0 = StatSubmission.field_l;
+            return stackIn_3_0;
+          }
+          if (CachedArchiveSource.field_q != 2) {
+            stackIn_7_0 = RankingsRequest.field_l;
+            return stackIn_7_0;
+          }
+          var8 = ClientServiceHelpers.findFriendByName((byte) 75, param0);
+          if (var8 == null) {
+            stackIn_10_0 = MenuScreen.formatIndexedText(new String[]{param0}, PasswordFieldPainter.field_z, 2);
+            return stackIn_10_0;
+          }
+          var8.unlink(false);
+          var8.unlinkSecondary(102);
+          StrongCacheReference.field_z = StrongCacheReference.field_z - 1;
+          var6 = 24 % ((param2 + 33) / 45);
+          var5 = IterableNodeHashTable.field_g;
+          var5.writeCipheredOpcode(param1, 8);
+          var5.position = var5.position + 1;
+          var7 = var5.position;
+          var5.writeByte(3, 124);
+          var5.writeString(param3, (byte) -96);
+          var5.backpatchByteLength(-var7 + var5.position, -1);
+          stackIn_12_0 = null;
+          return (String) (stackIn_12_0);
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var4 = decompiledCaughtException;
+          stackIn_15_0 = var4;
+          stackIn_15_1 = new StringBuilder().append("og.A(");
+          if (param0 == null) {
+            stackIn_16_2 = "null";
+          } else {
+            stackIn_16_2 = "{...}";
+          }
+          stackIn_18_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(',');
+          if (param3 == null) {
+            stackIn_19_2 = "null";
+          } else {
+            stackIn_19_2 = "{...}";
+          }
+          throw AsyncCheckResult.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+        }
+    }
+
+    public final void run() {
+        try {
+          int var1_int = 0;
+          Object var1 = null;
+          Object var2 = null;
+          Throwable var3 = null;
+          int var4 = 0;
+          Throwable decompiledCaughtException = null;
+          var4 = Virogrid.field_F ? 1 : 0;
+          try {
+            while (this.field_p.payload.length > this.field_p.position) {
+              var1_int = this.field_i.read(this.field_p.payload, this.field_p.position, -this.field_p.position + this.field_p.payload.length);
+              if (var1_int >= 0) {
+                this.field_p.position = this.field_p.position + var1_int;
+                continue;
+              }
+              break;
+            }
+            if (this.field_p.position == this.field_p.payload.length) {
+              throw BoundedUrlRequest.<RuntimeException>rethrowUnchecked(new Exception("HG1: " + this.field_p.payload.length + " " + this.field_r));
+            }
+            var1 = this;
+            synchronized (var1) {
+              this.finalize();
+              this.field_h = 3;
+            }
+            return;
+          } catch (java.lang.Exception decompiledCaughtParameter0) {
+            decompiledCaughtException = decompiledCaughtParameter0;
+            var1 = (Exception) (Object) decompiledCaughtException;
+            var2 = this;
+            synchronized (var2) {
+              this.finalize();
+              this.field_h = this.field_h + 1;
+            }
+            return;
+          }
+        } catch (RuntimeException | Error decompiledUncheckedException) {
+          throw decompiledUncheckedException;
+        } catch (Throwable decompiledCheckedException) {
+          throw new RuntimeException(decompiledCheckedException);
+        }
+    }
+
+    final static String getLoginNameOrDefault(int param0) {
+        String var1;
+        int[] var2;
+        var1 = "";
+        if (param0 <= -47) {
+          if (QuickChatHelpHelpers.field_a != null) {
+            var1 = QuickChatHelpHelpers.field_a.getUsername(-3);
+          }
+          if (var1.length() == 0) {
+            var1 = LogoAndLoginHelpers.getLocalPlayerName((byte) -123);
+          }
+          if (var1.length() == 0) {
+            var1 = DirectByteStorage.field_f;
+          }
+          return var1;
+        }
+        var2 = (int[]) null;
+        BoundedUrlRequest.setMenuLayout(-2, -25, -21, (int[]) null, 58, (byte) 13, 49);
+        if (QuickChatHelpHelpers.field_a != null) {
+          var1 = QuickChatHelpHelpers.field_a.getUsername(-3);
+        }
+        if (var1.length() == 0) {
+          var1 = LogoAndLoginHelpers.getLocalPlayerName((byte) -123);
+        }
+        if (var1.length() == 0) {
+          var1 = DirectByteStorage.field_f;
+        }
+        return var1;
+    }
+
+    protected final void finalize() {
+        if (null != this.field_d) {
+          if (this.field_d.field_f != null) {
+            try {
+              ((DataInputStream) (this.field_d.field_f)).close();
+            } catch (Exception exception) {
+            }
+          }
+          this.field_d = null;
+        }
+        if (null != this.field_q) {
+          if (null != this.field_q.field_f) {
+            try {
+              ((java.net.Socket) (this.field_q.field_f)).close();
+            } catch (Exception exception) {
+            }
+          }
+          this.field_q = null;
+        }
+        if (this.field_i != null) {
+          try {
+            this.field_i.close();
+          } catch (Exception exception) {
+          }
+          this.field_i = null;
+        }
+        this.field_m = null;
+    }
+
+    final PacketBuffer getResponse(int param0) {
+        if (param0 != 18240) {
+          this.field_p = (PacketBuffer) null;
+          if (3 == this.field_h) {
+            return this.field_p;
+          }
+          return null;
+        }
+        if (3 == this.field_h) {
+          return this.field_p;
+        }
+        return null;
+    }
+
+    final static String requestRemoveFriend(String param0, boolean param1, int param2) {
+        String stackIn_3_0 = null;
+        String stackIn_6_0 = null;
+        String stackIn_9_0 = null;
+        Object stackIn_15_0 = null;
+        RuntimeException stackIn_18_0 = null;
+        StringBuilder stackIn_18_1 = null;
+        String stackIn_19_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var3 = null;
+        int var5 = 0;
+        int var6 = 0;
+        SocialListEntry var7 = null;
+        SocialListEntry var8 = null;
+        CipherPacketBuffer var9 = null;
+        CharSequence var10 = null;
+        var6 = Virogrid.field_F ? 1 : 0;
+        try {
+          var10 = (CharSequence) ((Object) param0);
+          if (!CacheReference.isValidAccountName(var10, -1478)) {
+            stackIn_3_0 = StatSubmission.field_l;
+            return stackIn_3_0;
+          }
+          if (CachedArchiveSource.field_q != 2) {
+            stackIn_6_0 = FullscreenSupport.field_c;
+            return stackIn_6_0;
+          }
+          var8 = NodeHashTableIterator.findListEntryByName(0, param0);
+          if (var8 == null) {
+            stackIn_9_0 = MenuScreen.formatIndexedText(new String[]{param0}, BoundedRandomAccessFile.field_c, 2);
+            return stackIn_9_0;
+          }
+          LoginMethod.field_f.firstFrom(480, var8);
+          if (!param1) {
+            field_k = (String) null;
+          }
+          while (true) {
+            var7 = (SocialListEntry) (LoginMethod.field_f.next(16213));
+            if (var7 != null) {
+              var7.field_Nb = var7.field_Nb - 1;
+              continue;
+            }
+            break;
+          }
+          var8.unlink(false);
+          var8.unlinkSecondary(20);
+          PatchNoteUsage.field_j = PatchNoteUsage.field_j - 1;
+          var9 = IterableNodeHashTable.field_g;
+          var9.writeCipheredOpcode(param2, 8);
+          var9.position = var9.position + 1;
+          var5 = var9.position;
+          var9.writeByte(1, -98);
+          var9.writeString(param0, (byte) -40);
+          var9.backpatchByteLength(-var5 + var9.position, -1);
+          stackIn_15_0 = null;
+          return (String) (stackIn_15_0);
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          stackIn_18_0 = var3;
+          stackIn_18_1 = new StringBuilder().append("og.D(");
+          if (param0 == null) {
+            stackIn_19_2 = "null";
+          } else {
+            stackIn_19_2 = "{...}";
+          }
+          throw AsyncCheckResult.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+        }
+    }
+
+    final static java.net.URL appendSessionParameters(int param0, java.applet.Applet param1, java.net.URL param2) {
+        Object var3 = null;
+        Object var4 = null;
+        java.net.URL stackIn_11_0 = null;
+        Object stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        String stackIn_15_2 = null;
+        StringBuilder stackIn_17_1 = null;
+        String stackIn_18_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          var3 = null;
+          if (param0 != -1) {
+            BoundedUrlRequest.getLoginNameOrDefault(-38);
+          }
+          var4 = null;
+          if (null != NamedTextResourceHelpers.field_a &&
+            !NamedTextResourceHelpers.field_a.equals(param1.getParameter("settings"))) {
+            var3 = NamedTextResourceHelpers.field_a;
+            var4 = var3;
+            var4 = var3;
+          }
+          if (null != WidgetStyleLayer.field_g &&
+            !WidgetStyleLayer.field_g.equals(param1.getParameter("session"))) {
+            var4 = WidgetStyleLayer.field_g;
+          }
+          stackIn_11_0 = UrlRewriteHelpers.rewriteUrlPathParameters(param2, (String) (var3), (String) (var4), -1, (byte) -31);
+          return stackIn_11_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          stackIn_14_0 = var3;
+          stackIn_14_1 = new StringBuilder().append("og.H(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_15_2 = "null";
+          } else {
+            stackIn_15_2 = "{...}";
+          }
+          stackIn_17_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',');
+          if (param2 == null) {
+            stackIn_18_2 = "null";
+          } else {
+            stackIn_18_2 = "{...}";
+          }
+          throw AsyncCheckResult.wrapException((Throwable) (stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+        }
+    }
+
+    public static void releaseStatics(int param0) {
+        field_g = null;
+        field_k = null;
+        field_l = null;
+        field_o = null;
+        if (param0 > 66) {
+          field_e = null;
+          field_c = null;
+          field_t = null;
+          field_j = null;
+          field_n = null;
+          field_a = null;
+          return;
+        }
+    }
+
+    BoundedUrlRequest(PlatformTaskDispatcher param0, java.net.URL param1, int param2) {
+        try {
+          this.field_f = param0;
+          this.field_r = param1;
+          this.field_p = new PacketBuffer(param2);
+        } catch (RuntimeException runtimeException) {
+          throw AsyncCheckResult.wrapException((Throwable) ((Object) runtimeException), "og.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+        }
+    }
+
+    static {
+        field_k = "Quit to website";
+        field_c = "Send private Quick Chat to <%0>";
+        field_n = "You have 1 unread message!";
+        field_o = new String[]{null, "Or click", "Or click", "Or click", "Or click", "Or click", "Or click", "Or click"};
+        field_t = new String[]{"By rating", "By win percentage"};
+        field_e = "<%0> is already on your friend list.";
+        field_j = new boolean[]{true, true, true, true, true, false, true, true, false, false};
+        field_a = "Add <%0> to ignore list";
+    }
+
+    @SuppressWarnings("unchecked")
+    private static <T extends Throwable> RuntimeException rethrowUnchecked(Throwable throwable) throws T {
+        throw (T) throwable;
+    }
+}

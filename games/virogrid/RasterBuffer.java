@@ -2,8 +2,8 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class RasterBuffer {
-    static um field_d;
-    static il field_j;
+    static ScrollPane field_d;
+    static ModelMesh field_j;
     static String field_k;
     static String[] gameOptionLabels;
     static String field_g;
@@ -16,18 +16,18 @@ abstract class RasterBuffer {
     static String field_i;
     static java.applet.Applet field_m;
 
-    abstract void a(int param0, int param1, byte param2, java.awt.Component param3);
+    abstract void initialize(int param0, int param1, byte param2, java.awt.Component param3);
 
-    final static void a(String param0, int param1) {
+    final static void requestOpenLink(String param0, int param1) {
         try {
-          rf.field_a = param0;
-          kf.a(param1, -1);
+          TriangleSortHelpers.field_a = param0;
+          DualLinkHashTable.setLoginResultCode(param1, -1);
         } catch (RuntimeException runtimeException) {
-          throw kg.a((Throwable) ((Object) runtimeException), "wf.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw AsyncCheckResult.wrapException((Throwable) ((Object) runtimeException), "wf.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_f = null;
         field_i = null;
         field_g = null;
@@ -42,39 +42,39 @@ abstract class RasterBuffer {
         field_d = null;
     }
 
-    final static boolean a(int param0, int param1, int param2, boolean param3, int param4, int param5, int param6) {
+    final static boolean rectContains(int param0, int param1, int param2, boolean param3, int param4, int param5, int param6) {
         String var8;
         boolean stackIn_8_0 = false;
         if (!param3) {
           var8 = (String) null;
-          RasterBuffer.a((String) null, -15);
+          RasterBuffer.requestOpenLink((String) null, -15);
         }
         stackIn_8_0 = (param0 <= param1) && (param1 < param2 + param0) && (param4 <= param5) && (param6 + param4 > param5);
         return stackIn_8_0;
     }
 
-    final static void a(int param0, e param1, int param2, e param3) {
+    final static void configureFonts(int param0, BitmapFont param1, int param2, BitmapFont param3) {
         try {
-          ti.field_g = param3;
+          LinkTextPainter.field_g = param3;
           if (param2 != 0) {
-            RasterBuffer.a(83, 51, -93, false, 111, -102, -46);
+            RasterBuffer.rectContains(83, 51, -93, false, 111, -102, -46);
           }
-          j.field_h = param1;
-          rf.field_b = param0;
-          bj.a(Rasterizer.field_e / 2, 23, Rasterizer.field_f / 2);
-          vb.a(param1.field_A, (byte) 90, param1.field_A + param1.field_G, param3.field_G + param3.field_A, param3.field_A);
+          NodeHashTableIterator.field_h = param1;
+          TriangleSortHelpers.field_b = param0;
+          DelayedPacket.setProjectionCentre(Rasterizer.field_e / 2, 23, Rasterizer.field_f / 2);
+          TextMetricsGlobals.setMenuTextMetrics(param1.field_A, (byte) 90, param1.field_A + param1.field_G, param3.field_G + param3.field_A, param3.field_A);
         } catch (RuntimeException runtimeException) {
-          throw kg.a((Throwable) ((Object) runtimeException), "wf.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw AsyncCheckResult.wrapException((Throwable) ((Object) runtimeException), "wf.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
-    abstract void a(byte param0, int param1, java.awt.Graphics param2, int param3);
+    abstract void drawImage(byte param0, int param1, java.awt.Graphics param2, int param3);
 
-    final static oj a(SpriteWidget param0, SpriteWidget param1, u param2, int param3, SpriteWidget param4) {
+    final static QuickChatMenu buildQuickChatCategoryMenu(SpriteWidget param0, SpriteWidget param1, QuickChatCategory param2, int param3, SpriteWidget param4) {
         int var14 = 0;
         int stackIn_7_0 = 0;
         int stackIn_10_0 = 0;
-        oj stackIn_28_0 = null;
+        QuickChatMenu stackIn_28_0 = null;
         RuntimeException stackIn_31_0 = null;
         StringBuilder stackIn_31_1 = null;
         String stackIn_32_2 = null;
@@ -92,14 +92,14 @@ abstract class RasterBuffer {
         String[] var8 = null;
         char[] var9 = null;
         int[] var10 = null;
-        oj[] var11 = null;
+        QuickChatMenu[] var11 = null;
         int var12 = 0;
-        u var13_ref_u = null;
+        QuickChatCategory var13_ref_u = null;
         int var13 = 0;
         int var15 = 0;
-        th var16 = null;
+        QuickChatPhraseDefinition var16 = null;
         int var17 = 0;
-        e var18 = null;
+        BitmapFont var18 = null;
         int[] var19 = null;
         char[] var20 = null;
         int[] var21 = null;
@@ -128,19 +128,19 @@ abstract class RasterBuffer {
           var20 = var22;
           var9 = var20;
           if (param3 != 49) {
-            var18 = (e) null;
-            RasterBuffer.a(96, (e) null, -35, (e) null);
+            var18 = (BitmapFont) null;
+            RasterBuffer.configureFonts(96, (BitmapFont) null, -35, (BitmapFont) null);
           }
           var21 = new int[var7];
           var19 = var21;
           var10 = var19;
-          var11 = new oj[var7];
+          var11 = new QuickChatMenu[var7];
           if (null != param2.field_x) {
             for (var12 = 0; param2.field_x.length > var12; var12++) {
-              var13_ref_u = dm.field_v.a(param2.field_x[var12], (byte) 61);
+              var13_ref_u = CacheReference.field_v.getCategory(param2.field_x[var12], (byte) 61);
               var8[var12] = var13_ref_u.field_v;
               var9[var12] = param2.field_p[var12];
-              var11[var12] = RasterBuffer.a(param0, param1, var13_ref_u, 49, param4);
+              var11[var12] = RasterBuffer.buildQuickChatCategoryMenu(param0, param1, var13_ref_u, 49, param4);
             }
           }
           if (param2.field_w != null) {
@@ -149,12 +149,12 @@ abstract class RasterBuffer {
             for (var14 = 0; var14 < param2.field_w.length; var14++) {
               var15 = param2.field_w[var14];
               if (-1 == var15) {
-                var8[var12Lifetime1 + var14] = je.field_G;
+                var8[var12Lifetime1 + var14] = WidgetLayerStack.field_G;
                 var9[var14 + var12Lifetime1] = param2.field_r[var14];
                 var10[var12Lifetime1 + var14] = param2.field_w[var14];
               } else {
-                var16 = cj.field_s.a((byte) 125, var15);
-                var8[var12Lifetime1 + var14] = var16.d(119);
+                var16 = ChatMessage.field_s.getDefinition((byte) 125, var15);
+                var8[var12Lifetime1 + var14] = var16.getPreviewText(119);
                 var9[var14 + var12Lifetime1] = param2.field_r[var14];
                 if (0 >= var9[var14 + var12Lifetime1]) {
                   var13 = (char)(var13 + 1);
@@ -164,7 +164,7 @@ abstract class RasterBuffer {
               }
             }
           }
-          stackIn_28_0 = new oj(0L, param1, param0, param4, var11, var21, var8, var22);
+          stackIn_28_0 = new QuickChatMenu(0L, param1, param0, param4, var11, var21, var8, var22);
           return stackIn_28_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -194,11 +194,11 @@ abstract class RasterBuffer {
           } else {
             stackIn_41_2 = "{...}";
           }
-          throw kg.a((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(')').toString());
+          throw AsyncCheckResult.wrapException((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(')').toString());
         }
     }
 
-    final static void a(java.applet.Applet param0, int param1) {
+    final static void updatePageLinks(java.applet.Applet param0, int param1) {
         try {
           RuntimeException stackIn_8_0 = null;
           StringBuilder stackIn_8_1 = null;
@@ -211,16 +211,16 @@ abstract class RasterBuffer {
           try {
             try {
               var4 = param0.getCodeBase();
-              var3 = og.a(-1, param0, var4).getFile();
+              var3 = BoundedUrlRequest.appendSessionParameters(-1, param0, var4).getFile();
               if (param1 != 49) {
                 return;
               }
-              q.a(param0, -8582, new Object[]{"home", var3 + "home.ws"}, "updatelinks");
-              q.a(param0, -8582, new Object[]{"gamelist", var3 + "togamelist.ws"}, "updatelinks");
-              q.a(param0, -8582, new Object[]{"serverlist", var3 + "toserverlist.ws"}, "updatelinks");
-              q.a(param0, -8582, new Object[]{"options", var3 + "options.ws"}, "updatelinks");
-              q.a(param0, param1 - 8631, new Object[]{"terms", var3 + "terms.ws"}, "updatelinks");
-              q.a(param0, param1 - 8631, new Object[]{"privacy", var3 + "privacy.ws"}, "updatelinks");
+              JavaScriptBridge.callWithArguments(param0, -8582, new Object[]{"home", var3 + "home.ws"}, "updatelinks");
+              JavaScriptBridge.callWithArguments(param0, -8582, new Object[]{"gamelist", var3 + "togamelist.ws"}, "updatelinks");
+              JavaScriptBridge.callWithArguments(param0, -8582, new Object[]{"serverlist", var3 + "toserverlist.ws"}, "updatelinks");
+              JavaScriptBridge.callWithArguments(param0, -8582, new Object[]{"options", var3 + "options.ws"}, "updatelinks");
+              JavaScriptBridge.callWithArguments(param0, param1 - 8631, new Object[]{"terms", var3 + "terms.ws"}, "updatelinks");
+              JavaScriptBridge.callWithArguments(param0, param1 - 8631, new Object[]{"privacy", var3 + "privacy.ws"}, "updatelinks");
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var2 = decompiledCaughtException;
@@ -236,7 +236,7 @@ abstract class RasterBuffer {
             } else {
               stackIn_9_2 = "{...}";
             }
-            throw kg.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+            throw AsyncCheckResult.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -245,10 +245,10 @@ abstract class RasterBuffer {
         }
     }
 
-    final void a(byte param0) {
+    final void bindAsRenderTarget(byte param0) {
         Rasterizer.setTarget(this.field_l, this.field_c, this.field_b);
         if (param0 != 29) {
-          this.a((byte) -120);
+          this.bindAsRenderTarget((byte) -120);
         }
     }
 

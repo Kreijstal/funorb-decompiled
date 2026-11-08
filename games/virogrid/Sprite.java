@@ -139,7 +139,7 @@ class Sprite extends SpriteState {
         }
     }
 
-    void a(int param0, int param1, int param2) {
+    void drawWithOpacity(int param0, int param1, int param2) {
         int var10 = 0;
         int var10Lifetime1;
         int var10Lifetime2;
@@ -1199,7 +1199,7 @@ class Sprite extends SpriteState {
         }
     }
 
-    void c(int param0, int param1, int param2) {
+    void drawRecoloredNeutral(int param0, int param1, int param2) {
         int var10 = 0;
         int var10Lifetime1;
         int var10Lifetime2;

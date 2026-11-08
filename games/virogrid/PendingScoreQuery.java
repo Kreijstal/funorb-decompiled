@@ -1,0 +1,34 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class PendingScoreQuery extends IntrusiveNode {
+    int field_j;
+    static boolean field_l;
+    int field_g;
+    static String field_i;
+    int field_m;
+    static long field_n;
+    static int field_k;
+    static String field_h;
+
+    public static void releaseStatics(boolean param0) {
+        if (param0) {
+          PendingScoreQuery.releaseStatics(false);
+          field_h = null;
+          field_i = null;
+          return;
+        }
+        field_h = null;
+        field_i = null;
+    }
+
+    private PendingScoreQuery() throws Throwable {
+        throw new Error();
+    }
+
+    static {
+        field_i = "You can join this game";
+        field_k = 15;
+        field_h = "Game full";
+    }
+}

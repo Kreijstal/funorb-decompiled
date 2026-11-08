@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-public final class Virogrid extends od {
+public final class Virogrid extends NetworkGameClient {
     private IntrusiveDeque field_I;
-    static co field_O;
+    static LoginMethod field_O;
     private int[] field_N;
     private int[] field_D;
     private int field_E;
@@ -19,61 +19,61 @@ public final class Virogrid extends od {
     public static boolean field_F;
 
     private final void initScene(int param0) {
-        jf dupTemp$2 = null;
+        GameOptions dupTemp$2 = null;
         int var2_int = 0;
         int var3 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         var3 = field_F ? 1 : 0;
         try {
-          bc.field_c = 3;
-          ln.field_g = 3;
-          co.field_l = 3;
-          dupTemp$2 = new jf();
-          gb.field_H = dupTemp$2;
-          ke.field_p = dupTemp$2;
-          ad.field_g = new double[]{1.0, 0.0, 0.0};
-          vm.field_d = new double[]{0.0, 0.0, -128.0};
-          da.field_k = new double[3];
-          gb.c((byte) -44);
-          ke.field_p.field_d = true;
-          ce.field_E = 0;
-          bi.field_c = new int[]{0, 154, 0, 65536, 0, 0, 0, 65536, 0, 0, 0, 65536};
-          gb.field_H.field_d = true;
-          c.field_d = new Sprite(640, 400);
-          we.field_e = new Sprite(640, 400);
-          mk.field_bb = new Sprite(200, 400);
+          ByteArrayPool.field_c = 3;
+          NodeHashTable.field_g = 3;
+          LoginMethod.field_l = 3;
+          dupTemp$2 = new GameOptions();
+          MarkerSlider.field_H = dupTemp$2;
+          WidgetNode.field_p = dupTemp$2;
+          QuickChatPhraseRegistry.field_g = new double[]{1.0, 0.0, 0.0};
+          SoundPlaybackHelpers.field_d = new double[]{0.0, 0.0, -128.0};
+          QueuedResultSubmission.field_k = new double[3];
+          MarkerSlider.updateCameraMatrix((byte) -44);
+          WidgetNode.field_p.field_d = true;
+          DraggableWidget.field_E = 0;
+          ChatShortcutHelpers.field_c = new int[]{0, 154, 0, 65536, 0, 0, 0, 65536, 0, 0, 0, 65536};
+          MarkerSlider.field_H.field_d = true;
+          DisplayNameHelpers.field_d = new Sprite(640, 400);
+          ClientEnvironmentHelpers.field_e = new Sprite(640, 400);
+          FullscreenErrorDialog.field_bb = new Sprite(200, 400);
           var2_int = 0;
           if (param0 <= 59) {
-            Virogrid.$cfr$intArgs$b$d65aded092bd(-64, false);
+            Virogrid.createDobResultReply(-64, false);
           }
           while (var2_int < 256) {
-            pj.field_d[var2_int] = rb.a(16711872, 143 * var2_int << 8);
-            pj.field_d[var2_int] = oh.a(pj.field_d[var2_int], rb.a(65280, var2_int * 191));
-            pj.field_d[var2_int] = oh.a(pj.field_d[var2_int], var2_int);
+            RenderTargetHelpers.field_d[var2_int] = WidgetFactoryHelpers.bitAnd(16711872, 143 * var2_int << 8);
+            RenderTargetHelpers.field_d[var2_int] = BitwiseHelpers.bitOr(RenderTargetHelpers.field_d[var2_int], WidgetFactoryHelpers.bitAnd(65280, var2_int * 191));
+            RenderTargetHelpers.field_d[var2_int] = BitwiseHelpers.bitOr(RenderTargetHelpers.field_d[var2_int], var2_int);
             var2_int++;
           }
-          jm.a(320, 240, -2);
-          qa.field_e = -1;
+          LobbyLayout.setViewportOrigin(320, 240, -2);
+          PacketRequestHelpers.field_e = -1;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw kg.a((Throwable) ((Object) var2), "Virogrid.BB(" + param0 + ')');
+          throw AsyncCheckResult.wrapException((Throwable) ((Object) var2), "Virogrid.BB(" + param0 + ')');
         }
     }
 
-    private final void e(byte param0) {
-        int var2_int = (id.field_r % 20480 << 12) % 83886080;
-        si.a(nk.field_K, new double[]{-768.0, 20.0, 0.0}, new double[]{0.0, 0.0, 1.0}, 700.0, 200.0, sj.field_j, 23967451 + var2_int, var2_int + 59918628, 0, 16711680, ke.field_p.field_k);
-        si.a(nk.field_K, new double[]{-768.0 + rf.field_c * 1800.0, 20.0, 300.0 + rf.field_c * 400.0}, new double[]{rf.field_c, 0.0, -rf.field_c}, 500.0, 200.0, sj.field_j, var2_int + 59918628, 83820544 + var2_int, 0, 16711680, ke.field_p.field_k);
+    private final void drawSpotlightProjections(byte param0) {
+        int var2_int = (UiTheme.field_r % 20480 << 12) % 83886080;
+        CameraProjectionMath.drawPerspectiveTexturedQuad(HotspotTextWidget.field_K, new double[]{-768.0, 20.0, 0.0}, new double[]{0.0, 0.0, 1.0}, 700.0, 200.0, ArchiveIndex.field_j, 23967451 + var2_int, var2_int + 59918628, 0, 16711680, WidgetNode.field_p.field_k);
+        CameraProjectionMath.drawPerspectiveTexturedQuad(HotspotTextWidget.field_K, new double[]{-768.0 + TriangleSortHelpers.field_c * 1800.0, 20.0, 300.0 + TriangleSortHelpers.field_c * 400.0}, new double[]{TriangleSortHelpers.field_c, 0.0, -TriangleSortHelpers.field_c}, 500.0, 200.0, ArchiveIndex.field_j, var2_int + 59918628, 83820544 + var2_int, 0, 16711680, WidgetNode.field_p.field_k);
         if (param0 != -62) {
           return;
         }
         try {
-          this.s(-1933);
+          this.updateGhostModelTransform(-1933);
         } catch (RuntimeException runtimeException) {
-          throw kg.a((Throwable) ((Object) runtimeException), "Virogrid.IB(" + param0 + ')');
+          throw AsyncCheckResult.wrapException((Throwable) ((Object) runtimeException), "Virogrid.IB(" + param0 + ')');
         }
     }
 
@@ -110,56 +110,56 @@ public final class Virogrid extends od {
         Sprite[][] var9 = null;
         var12 = field_F ? 1 : 0;
         try {
-          hd.standardFont = a.a("", param5, -110, "font", param4);
-          vg.smallFont = a.a("", param5, -95, "smallfont", param4);
-          mc.menuFont = a.a("", param5, -120, "menufont", param4);
-          re.tinyFont = a.a("", param5, -110, "tinyfont", param4);
-          var13 = sn.a(param5, "starfield", "", false);
-          sj.field_j = new Sprite(2560, 256);
-          sj.field_j.makeRasterTarget();
+          ReflectionCheckHelpers.standardFont = PasswordFieldPainter.loadFontByName("", param5, -110, "font", param4);
+          DropTargetWidget.smallFont = PasswordFieldPainter.loadFontByName("", param5, -95, "smallfont", param4);
+          PopupInputHelpers.menuFont = PasswordFieldPainter.loadFontByName("", param5, -120, "menufont", param4);
+          LongAndTextLoginPayload.tinyFont = PasswordFieldPainter.loadFontByName("", param5, -110, "tinyfont", param4);
+          var13 = PasswordValidator.loadSpriteByName(param5, "starfield", "", false);
+          ArchiveIndex.field_j = new Sprite(2560, 256);
+          ArchiveIndex.field_j.makeRasterTarget();
           var13.drawOpaque(0, 0);
           var13.drawOpaque(1280, 0);
-          ca.field_M.a((byte) 29);
-          Js5Archive.field_l = vc.a(param5, "logo", "", (byte) 114);
-          sn.a(param5, "splash", "", false);
-          tk.field_d = ke.a("walk1", "", param5, 32370);
-          GameSession.field_y = ke.a("walk2", "", param5, 32370);
-          wh.field_b = ke.a("walk3", "", param5, 32370);
-          vb.field_l = new Sprite(640, 480);
-          ib.frameSprites = b.a("", param5, 7, "frame");
-          RasterBuffer.a(100, mc.menuFont, 0, vg.smallFont);
-          en.field_Kb = 16777215;
-          la.field_k = 16777215;
-          sf.field_I = 16777215;
-          na.field_Hb = 8437759;
-          jl.field_E = 16777215;
-          ti.field_b = 8437759;
-          MouseWheelInput.achievementIcons = ke.a(32, param5, "", "achievements_large");
-          mj.unachievedIcon = sn.a(param2, "unachieved", "basic", false);
-          ad.orbCoinIcon = sn.a(param2, "orbcoin", "basic", false);
+          LoginPanel.field_M.bindAsRenderTarget((byte) 29);
+          Js5Archive.field_l = LoadingProgressDialog.loadIndexedSpriteByName(param5, "logo", "", (byte) 114);
+          PasswordValidator.loadSpriteByName(param5, "splash", "", false);
+          UrlRewriteHelpers.field_d = WidgetNode.loadIndexedSpritesByName("walk1", "", param5, 32370);
+          GameSession.field_y = WidgetNode.loadIndexedSpritesByName("walk2", "", param5, 32370);
+          ByteStorage.field_b = WidgetNode.loadIndexedSpritesByName("walk3", "", param5, 32370);
+          TextMetricsGlobals.field_l = new Sprite(640, 480);
+          MusicVolumeAndOverlayHelpers.frameSprites = RegistrationRequestDialog.loadFrameSprites("", param5, 7, "frame");
+          RasterBuffer.configureFonts(100, PopupInputHelpers.menuFont, 0, DropTargetWidget.smallFont);
+          IconLabelWidget.field_Kb = 16777215;
+          QueuedRequest.field_k = 16777215;
+          DialogMessagePane.field_I = 16777215;
+          HelpPopup.field_Hb = 8437759;
+          AccountChoicePanel.field_E = 16777215;
+          LinkTextPainter.field_b = 8437759;
+          MouseWheelInput.achievementIcons = WidgetNode.loadSpritesByName(32, param5, "", "achievements_large");
+          StrongCacheReference.unachievedIcon = PasswordValidator.loadSpriteByName(param2, "unachieved", "basic", false);
+          QuickChatPhraseRegistry.orbCoinIcon = PasswordValidator.loadSpriteByName(param2, "orbcoin", "basic", false);
           var8 = MouseWheelInput.achievementIcons.length;
-          vd.field_Y = new Sprite[var8];
-          qc.a(123);
+          ValidatedTextWidget.field_Y = new Sprite[var8];
+          ArchiveLoadSequence.saveRasterState(123);
           var9_int = -67 / ((param1 + 11) / 58);
           for (var10 = 0; var8 > var10; var10++) {
             var11 = new Sprite(32, 32);
             var11.makeRasterTarget();
             MouseWheelInput.achievementIcons[var10].drawScaledAveraged(0, 0, 32, 32);
-            vd.field_Y[var10] = var11;
+            ValidatedTextWidget.field_Y[var10] = var11;
           }
-          tn.field_b = new Sprite(32, 32);
-          tn.field_b.makeRasterTarget();
-          mj.unachievedIcon.drawScaledAveraged(0, 0, 32, 32);
-          ul.b((byte) 108);
-          kd.viewIcons = ke.a(32, param5, "", "viewicons");
-          discarded$0 = this.b(131586, -9105, 30136);
-          discarded$1 = this.b(263172, -9105, 6316128);
+          MenuInputState.field_b = new Sprite(32, 32);
+          MenuInputState.field_b.makeRasterTarget();
+          StrongCacheReference.unachievedIcon.drawScaledAveraged(0, 0, 32, 32);
+          LoginCredentialType.popRasterState((byte) 108);
+          EmailAvailabilityValidator.viewIcons = WidgetNode.loadSpritesByName(32, param5, "", "viewicons");
+          discarded$0 = this.createRadialGlowSprite(131586, -9105, 30136);
+          discarded$1 = this.createRadialGlowSprite(263172, -9105, 6316128);
           var9 = new Sprite[2][];
-          var9[0] = ke.a(32, param5, "", "turntime_icons");
-          var9[1] = ke.a(32, param5, "", "gridwidth_icons");
-          nn.a(var9, var9, 2, ra.field_e, CellAnimator.field_a, param3, param2, true, -27871, wc.gameOptionNames, wc.gameOptionNames, RasterBuffer.gameOptionLabels, wn.field_j, 2, ng.field_T);
-          ak.lobbyIcon = sn.a(param5, "lobbyicon", "", false);
-          fk.a(new vl(param0, param5, 8, 128));
+          var9[0] = WidgetNode.loadSpritesByName(32, param5, "", "turntime_icons");
+          var9[1] = WidgetNode.loadSpritesByName(32, param5, "", "gridwidth_icons");
+          ChatSettingsHelpers.initializeLobbyAssets(var9, var9, 2, ScoreSubmissionHelpers.field_e, CellAnimator.field_a, param3, param2, true, -27871, QuickChatCategoryCache.gameOptionNames, QuickChatCategoryCache.gameOptionNames, RasterBuffer.gameOptionLabels, MidiNote.field_j, 2, ValidationMessageWidget.field_T);
+          TextEncodingHelpers.lobbyIcon = PasswordValidator.loadSpriteByName(param5, "lobbyicon", "", false);
+          TriangleRasterizer.setTextureProvider(new TextureCache(param0, param5, 8, 128));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -207,22 +207,22 @@ public final class Virogrid extends od {
             stackIn_27_0 = stackIn_23_0;
             stackIn_27_2 = "{...}";
           }
-          throw kg.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
+          throw AsyncCheckResult.wrapException((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
         }
     }
 
-    final static ck b(byte param0, boolean param1) {
-        ck var2 = null;
+    final static AccountRequestReply createDobResult(byte param0, boolean param1) {
+        AccountRequestReply var2 = null;
         RuntimeException var2_ref = null;
-        ck stackIn_4_0 = null;
+        AccountRequestReply stackIn_4_0 = null;
         boolean stackIn_5_1 = false;
-        ck stackIn_6_0 = null;
+        AccountRequestReply stackIn_6_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != -32) {
-            field_O = (co) null;
+            field_O = (LoginMethod) null;
           }
-          var2 = new ck(true);
+          var2 = new AccountRequestReply(true);
           stackIn_4_0 = var2;
           stackIn_5_1 = (param1);
           stackIn_4_0.field_d = stackIn_5_1;
@@ -231,28 +231,28 @@ public final class Virogrid extends od {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw kg.a((Throwable) ((Object) var2_ref), "Virogrid.DB(" + param0 + ',' + param1 + ')');
+          throw AsyncCheckResult.wrapException((Throwable) ((Object) var2_ref), "Virogrid.DB(" + param0 + ',' + param1 + ')');
         }
     }
 
     final void initializeGame(boolean param0) {
-        i var3 = null;
-        i stackIn_3_0 = null;
+        MidiPcmStream var3 = null;
+        MidiPcmStream stackIn_3_0 = null;
         int stackIn_3_1 = 0;
         int stackIn_3_2 = 0;
         boolean stackIn_4_3;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          this.a(77, 14, 4, 0, 2, 1, false, 121);
-          var3 = new i();
+          this.initializeFramework(77, 14, 4, 0, 2, 1, false, 121);
+          var3 = new MidiPcmStream();
           stackIn_3_0 = var3;
           stackIn_3_1 = 128;
           stackIn_3_2 = 9;
           stackIn_4_3 = !(param0);
-          ((i) (Object) stackIn_3_0).a(stackIn_3_1, stackIn_3_2, stackIn_4_3);
-          pe.a((java.awt.Component) ((Object) UiWidget.field_v), var3, ei.field_c, param0, (byte) -18, 22050);
-          this.a(false, true, -118, true, false, false, false);
+          ((MidiPcmStream) (Object) stackIn_3_0).selectChannelBank(stackIn_3_1, stackIn_3_2, stackIn_4_3);
+          PlayingSound.initializeAudioOutput((java.awt.Component) ((Object) UiWidget.field_v), var3, MusicPlaybackHelpers.field_c, param0, (byte) -18, 22050);
+          this.configureResponseHandlers(false, true, -118, true, false, false, false);
           PacketBuffer.field_i[60] = 4;
           PacketBuffer.field_i[67] = 1;
           PacketBuffer.field_i[63] = 1;
@@ -265,13 +265,13 @@ public final class Virogrid extends od {
           PacketBuffer.field_i[57] = -2;
           PacketBuffer.field_i[58] = -2;
           PacketBuffer.field_i[66] = 1;
-          db.a((byte) 81, 200);
+          Bzip2State.allocateChatHistory((byte) 81, 200);
           this.initScene(114);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw kg.a((Throwable) ((Object) var2), "Virogrid.K(" + param0 + ')');
+          throw AsyncCheckResult.wrapException((Throwable) ((Object) var2), "Virogrid.K(" + param0 + ')');
         }
     }
 
@@ -284,191 +284,191 @@ public final class Virogrid extends od {
         int var3_intLifetime2;
         var4 = field_F ? 1 : 0;
         try {
-          a.b((byte) 69);
-          if (null == pj.field_c) {
+          PasswordFieldPainter.initializeMenuLabels((byte) 69);
+          if (null == RenderTargetHelpers.field_c) {
             if (param0 != -42) {
               this.field_L = (int[]) null;
             }
-            if (wm.field_w != null) {
-              al.a(mi.field_e, param0 ^ -37, 80.0f);
+            if (TriangleMesh.field_w != null) {
+              DateOfBirthValidator.setLoadingProgress(DebouncedValidator.field_e, param0 ^ -37, 80.0f);
               this.onCanvasCreated(true);
-              oi.musicTracks = new MusicTrack[4];
-              oi.musicTracks[0] = MusicTrack.load(wm.field_w, "", "ataxx titlescreen");
-              oi.musicTracks[1] = MusicTrack.load(wm.field_w, "", "tetralink ingame 1");
-              oi.musicTracks[2] = MusicTrack.load(wm.field_w, "", "tetralink ingame 2");
-              oi.musicTracks[3] = MusicTrack.load(wm.field_w, "", "tetralink ingame 3");
+              MenuScreen.musicTracks = new MusicTrack[4];
+              MenuScreen.musicTracks[0] = MusicTrack.load(TriangleMesh.field_w, "", "ataxx titlescreen");
+              MenuScreen.musicTracks[1] = MusicTrack.load(TriangleMesh.field_w, "", "tetralink ingame 1");
+              MenuScreen.musicTracks[2] = MusicTrack.load(TriangleMesh.field_w, "", "tetralink ingame 2");
+              MenuScreen.musicTracks[3] = MusicTrack.load(TriangleMesh.field_w, "", "tetralink ingame 3");
               for (var3_int = 0; var3_int < 4; var3_int++) {
-                vg.field_B.a(BufferedSocket.field_d, 0, af.field_g, oi.musicTracks[var3_int], 0);
+                DropTargetWidget.field_B.prepareTrack(BufferedSocket.field_d, 0, AccountCreationSupport.field_g, MenuScreen.musicTracks[var3_int], 0);
               }
-              vg.field_B.e(-1);
-              af.field_g = null;
+              DropTargetWidget.field_B.releasePatchSamples(-1);
+              AccountCreationSupport.field_g = null;
               BufferedSocket.field_d = null;
-              wm.field_w = null;
-              sb.a(-90);
+              TriangleMesh.field_w = null;
+              DiskCacheWorker.resetFrameTimingHistory(-90);
               return false;
             }
-            if (null != g.field_a) {
-              al.a(aj.field_l, 13, 90.0f);
+            if (null != ChatAndIgnoreHelpers.field_a) {
+              DateOfBirthValidator.setLoadingProgress(TextWidgetPainter.field_l, 13, 90.0f);
               this.onCanvasCreated(true);
-              this.loadGraphics(gn.field_G, (byte) -105, ge.field_c, s.field_a, g.field_a, oj.field_Fb);
-              s.field_a = null;
-              g.field_a = null;
-              sb.a(-82);
+              this.loadGraphics(CheckboxButton.field_G, (byte) -105, AccountDialogHelpers.field_c, InputSetupHelpers.field_a, ChatAndIgnoreHelpers.field_a, QuickChatMenu.field_Fb);
+              InputSetupHelpers.field_a = null;
+              ChatAndIgnoreHelpers.field_a = null;
+              DiskCacheWorker.resetFrameTimingHistory(-82);
               return false;
             }
-            if (null != wn.field_i) {
-              al.a(gl.field_i, 13, 95.0f);
+            if (null != MidiNote.field_i) {
+              DateOfBirthValidator.setLoadingProgress(SectorCacheStore.field_i, 13, 95.0f);
               this.onCanvasCreated(true);
-              this.a(1053, wn.field_i);
-              wn.field_i = null;
-              sb.a(param0 - 63);
+              this.loadSceneryModels(1053, MidiNote.field_i);
+              MidiNote.field_i = null;
+              DiskCacheWorker.resetFrameTimingHistory(param0 - 63);
               return false;
             }
-            if (null != md.field_h) {
-              cg.setSharedAnimationFrameset(8799, new ii(md.field_h.a("", 100, "huffman")));
-              md.field_h = null;
-              sb.a(param0 - 86);
+            if (null != IntKeyLookup.field_h) {
+              OverlayDrawHelpers.setSharedAnimationFrameset(8799, new HuffmanCodec(IntKeyLookup.field_h.getFileByName("", 100, "huffman")));
+              IntKeyLookup.field_h = null;
+              DiskCacheWorker.resetFrameTimingHistory(param0 - 86);
               return false;
             }
-            pn.a(false);
+            SocketJs5Transport.measureToggleLabelWidth(false);
             for (var3_intLifetime2 = 0; var3_intLifetime2 < 12; var3_intLifetime2++) {
-              al.field_j[var3_intLifetime2] = new oi(var3_intLifetime2);
+              DateOfBirthValidator.field_j[var3_intLifetime2] = new MenuScreen(var3_intLifetime2);
             }
-            hm.field_c = 10;
-            i.field_y = 10;
-            fh.a((byte) -89);
-            qc.a(50, (byte) 111);
-            bm.c(-111, 50);
-            ei.a(0, oi.musicTracks[0]);
-            id.field_r = 0;
+            GameClock.field_c = 10;
+            MidiPcmStream.field_y = 10;
+            CameraAndLogoHelpers.resetCameraDefaults((byte) -89);
+            ArchiveLoadSequence.setTargetFrameRate(50, (byte) 111);
+            CachedTextLayout.checkLoadingStageArgument(-111, 50);
+            MusicPlaybackHelpers.playMusicTrack(0, MenuScreen.musicTracks[0]);
+            UiTheme.field_r = 0;
             return true;
           }
-          if (ge.field_c.c(0) &&
-            ge.field_c.a((byte) -102, "basic")) {
-            if (ge.field_c.c(0) &&
-              ge.field_c.a((byte) -102, "kartika13")) {
-              if (s.field_a.c(0) &&
-                s.field_a.a((byte) -102, "kartika13")) {
-                if (ge.field_c.c(0) &&
-                  ge.field_c.a((byte) -102, "lobby")) {
-                  if (s.field_a.c(0) &&
-                    s.field_a.a((byte) -102, "lobby")) {
-                    if (pj.field_c.c(param0 + 42) &&
-                      pj.field_c.b(25867)) {
-                      if (sf.field_O.c(0) &&
-                        sf.field_O.b(param0 ^ -25891)) {
-                        if (BufferedSocket.field_d.c(0) &&
-                          BufferedSocket.field_d.b(25867)) {
-                          if (wm.field_w.c(param0 + 42) &&
-                            wm.field_w.b(param0 + 25909)) {
-                            if (oj.field_Fb.c(0) &&
-                              oj.field_Fb.b(25867)) {
-                              if (g.field_a.c(0) &&
-                                g.field_a.b(25867)) {
-                                if (md.field_h.c(param0 ^ -42) &&
-                                  md.field_h.b(25867)) {
-                                  if (wn.field_i.c(0) &&
-                                    wn.field_i.b(25867)) {
-                                    if (gn.field_G.c(param0 ^ -42) &&
-                                      gn.field_G.b(param0 + 25909)) {
-                                      if (ng.field_T.c(param0 + 42) &&
-                                        ng.field_T.b(param0 + 25909)) {
-                                        al.a(hn.field_u, 13, 78.0f);
+          if (AccountDialogHelpers.field_c.ensureIndexLoaded(0) &&
+            AccountDialogHelpers.field_c.ensureGroupAvailableByName((byte) -102, "basic")) {
+            if (AccountDialogHelpers.field_c.ensureIndexLoaded(0) &&
+              AccountDialogHelpers.field_c.ensureGroupAvailableByName((byte) -102, "kartika13")) {
+              if (InputSetupHelpers.field_a.ensureIndexLoaded(0) &&
+                InputSetupHelpers.field_a.ensureGroupAvailableByName((byte) -102, "kartika13")) {
+                if (AccountDialogHelpers.field_c.ensureIndexLoaded(0) &&
+                  AccountDialogHelpers.field_c.ensureGroupAvailableByName((byte) -102, "lobby")) {
+                  if (InputSetupHelpers.field_a.ensureIndexLoaded(0) &&
+                    InputSetupHelpers.field_a.ensureGroupAvailableByName((byte) -102, "lobby")) {
+                    if (RenderTargetHelpers.field_c.ensureIndexLoaded(param0 + 42) &&
+                      RenderTargetHelpers.field_c.areAllGroupsAvailable(25867)) {
+                      if (DialogMessagePane.field_O.ensureIndexLoaded(0) &&
+                        DialogMessagePane.field_O.areAllGroupsAvailable(param0 ^ -25891)) {
+                        if (BufferedSocket.field_d.ensureIndexLoaded(0) &&
+                          BufferedSocket.field_d.areAllGroupsAvailable(25867)) {
+                          if (TriangleMesh.field_w.ensureIndexLoaded(param0 + 42) &&
+                            TriangleMesh.field_w.areAllGroupsAvailable(param0 + 25909)) {
+                            if (QuickChatMenu.field_Fb.ensureIndexLoaded(0) &&
+                              QuickChatMenu.field_Fb.areAllGroupsAvailable(25867)) {
+                              if (ChatAndIgnoreHelpers.field_a.ensureIndexLoaded(0) &&
+                                ChatAndIgnoreHelpers.field_a.areAllGroupsAvailable(25867)) {
+                                if (IntKeyLookup.field_h.ensureIndexLoaded(param0 ^ -42) &&
+                                  IntKeyLookup.field_h.areAllGroupsAvailable(25867)) {
+                                  if (MidiNote.field_i.ensureIndexLoaded(0) &&
+                                    MidiNote.field_i.areAllGroupsAvailable(25867)) {
+                                    if (CheckboxButton.field_G.ensureIndexLoaded(param0 ^ -42) &&
+                                      CheckboxButton.field_G.areAllGroupsAvailable(param0 + 25909)) {
+                                      if (ValidationMessageWidget.field_T.ensureIndexLoaded(param0 + 42) &&
+                                        ValidationMessageWidget.field_T.areAllGroupsAvailable(param0 + 25909)) {
+                                        DateOfBirthValidator.setLoadingProgress(PendingHighscoreRequest.field_u, 13, 78.0f);
                                         if (!param1) {
                                           return false;
                                         }
-                                        ge.b(18887);
+                                        AccountDialogHelpers.closeAccountDialogs(18887);
                                         this.onCanvasCreated(true);
-                                        af.field_g = new jg(pj.field_c, sf.field_O);
-                                        af.field_g.a((byte) 86, "", "menu_select");
-                                        of.field_b = af.field_g.a((byte) 112, "", "tetralink_invalid_move");
-                                        tk.field_c = new ml[5];
-                                        td.field_d = new ml[5];
+                                        AccountCreationSupport.field_g = new SoundCache(RenderTargetHelpers.field_c, DialogMessagePane.field_O);
+                                        AccountCreationSupport.field_g.getSynthSoundByName((byte) 86, "", "menu_select");
+                                        LobbyControlHelpers.field_b = AccountCreationSupport.field_g.getSynthSoundByName((byte) 112, "", "tetralink_invalid_move");
+                                        UrlRewriteHelpers.field_c = new PcmSample[5];
+                                        CanvasPresentHelpers.field_d = new PcmSample[5];
                                         for (var3_intLifetime1 = 0; var3_intLifetime1 < 5; var3_intLifetime1++) {
-                                          tk.field_c[var3_intLifetime1] = af.field_g.a((byte) 84, "", "tetralink_drop_piece_" + (var3_intLifetime1 + 1));
-                                          td.field_d[var3_intLifetime1] = af.field_g.a((byte) 95, "", "tetralink_piece_inplace_" + (1 + var3_intLifetime1));
+                                          UrlRewriteHelpers.field_c[var3_intLifetime1] = AccountCreationSupport.field_g.getSynthSoundByName((byte) 84, "", "tetralink_drop_piece_" + (var3_intLifetime1 + 1));
+                                          CanvasPresentHelpers.field_d[var3_intLifetime1] = AccountCreationSupport.field_g.getSynthSoundByName((byte) 95, "", "tetralink_piece_inplace_" + (1 + var3_intLifetime1));
                                         }
-                                        qd.field_i = af.field_g.a((byte) 92, "", "tetralink_reset_board");
-                                        bg.field_Lb = af.field_g.a((byte) 119, "", "tetralink_second_tick");
-                                        wc.field_a = af.field_g.a((byte) 96, "", "tetralink_select_column");
-                                        u.field_t = af.field_g.a((byte) 110, "", "tetralink_start_game");
-                                        f.field_j = af.field_g.a((byte) 118, "", "tetralink_winning_line_sound_winner");
-                                        cg.field_d = af.field_g.a((byte) 82, "", "tetralink_winning_line_sound_loser");
-                                        af.field_g.a((byte) 90, "", "tetralink_title_appear");
-                                        ih.field_d = af.field_g.a((byte) 99, "", "tetralink_dissolve");
-                                        af.field_k = af.field_g.a((byte) 103, "", "tetralink_dissolve_in");
-                                        dj.field_f = new ml[3];
-                                        dj.field_f[0] = af.field_g.a("", 595749988, "tetralink_NASA_chatter_1");
-                                        dj.field_f[1] = af.field_g.a("", 595749988, "tetralink_NASA_chatter_2");
-                                        dj.field_f[2] = af.field_g.a("", 595749988, "tetralink_NASA_chatter_3");
-                                        pj.field_c = null;
-                                        sf.field_O = null;
-                                        sb.a(param0 + 15);
+                                        MusicPatchEnvelope.field_i = AccountCreationSupport.field_g.getSynthSoundByName((byte) 92, "", "tetralink_reset_board");
+                                        ReportAbuseDialog.field_Lb = AccountCreationSupport.field_g.getSynthSoundByName((byte) 119, "", "tetralink_second_tick");
+                                        QuickChatCategoryCache.field_a = AccountCreationSupport.field_g.getSynthSoundByName((byte) 96, "", "tetralink_select_column");
+                                        QuickChatCategory.field_t = AccountCreationSupport.field_g.getSynthSoundByName((byte) 110, "", "tetralink_start_game");
+                                        DualLinkDequeIterator.field_j = AccountCreationSupport.field_g.getSynthSoundByName((byte) 118, "", "tetralink_winning_line_sound_winner");
+                                        OverlayDrawHelpers.field_d = AccountCreationSupport.field_g.getSynthSoundByName((byte) 82, "", "tetralink_winning_line_sound_loser");
+                                        AccountCreationSupport.field_g.getSynthSoundByName((byte) 90, "", "tetralink_title_appear");
+                                        FullscreenState.field_d = AccountCreationSupport.field_g.getSynthSoundByName((byte) 99, "", "tetralink_dissolve");
+                                        AccountCreationSupport.field_k = AccountCreationSupport.field_g.getSynthSoundByName((byte) 103, "", "tetralink_dissolve_in");
+                                        PlayerContextMenu.field_f = new PcmSample[3];
+                                        PlayerContextMenu.field_f[0] = AccountCreationSupport.field_g.getVorbisSoundByName("", 595749988, "tetralink_NASA_chatter_1");
+                                        PlayerContextMenu.field_f[1] = AccountCreationSupport.field_g.getVorbisSoundByName("", 595749988, "tetralink_NASA_chatter_2");
+                                        PlayerContextMenu.field_f[2] = AccountCreationSupport.field_g.getVorbisSoundByName("", 595749988, "tetralink_NASA_chatter_3");
+                                        RenderTargetHelpers.field_c = null;
+                                        DialogMessagePane.field_O = null;
+                                        DiskCacheWorker.resetFrameTimingHistory(param0 + 15);
                                         return false;
                                       }
-                                      al.a(db.a(ng.field_T, sk.field_b, (byte) -118, gl.field_a), 13, 77.0f);
+                                      DateOfBirthValidator.setLoadingProgress(Bzip2State.formatLoadingProgress(ValidationMessageWidget.field_T, LoadingTextGlobals.field_b, (byte) -118, SectorCacheStore.field_a), 13, 77.0f);
                                       return false;
                                     }
-                                    al.a(uh.a("", vl.field_m, gn.field_H, param0 + 41, gn.field_G), 13, 75.0f);
+                                    DateOfBirthValidator.setLoadingProgress(ConditionalTextValue.formatArchiveProgress("", TextureCache.field_m, CheckboxButton.field_H, param0 + 41, CheckboxButton.field_G), 13, 75.0f);
                                     return false;
                                   }
-                                  al.a(uh.a("", pl.field_d, fa.field_m, -1, wn.field_i), 13, 75.0f);
+                                  DateOfBirthValidator.setLoadingProgress(ConditionalTextValue.formatArchiveProgress("", CredentialHelpers.field_d, PendingSubmission.field_m, -1, MidiNote.field_i), 13, 75.0f);
                                   return false;
                                 }
-                                al.a(uh.a("", sk.field_b, gl.field_a, -1, md.field_h), 13, 75.0f);
+                                DateOfBirthValidator.setLoadingProgress(ConditionalTextValue.formatArchiveProgress("", LoadingTextGlobals.field_b, SectorCacheStore.field_a, -1, IntKeyLookup.field_h), 13, 75.0f);
                                 return false;
                               }
-                              al.a(uh.a("", sb.field_a, aa.field_c, -1, g.field_a), 13, 75.0f);
+                              DateOfBirthValidator.setLoadingProgress(ConditionalTextValue.formatArchiveProgress("", DiskCacheWorker.field_a, QuickChatHelpHelpers.field_c, -1, ChatAndIgnoreHelpers.field_a), 13, 75.0f);
                               return false;
                             }
-                            al.a(uh.a("", sb.field_a, aa.field_c, -1, oj.field_Fb), param0 + 55, 75.0f);
+                            DateOfBirthValidator.setLoadingProgress(ConditionalTextValue.formatArchiveProgress("", DiskCacheWorker.field_a, QuickChatHelpHelpers.field_c, -1, QuickChatMenu.field_Fb), param0 + 55, 75.0f);
                             return false;
                           }
-                          al.a(uh.a("", nh.field_r, te.field_g, -1, wm.field_w), 13, 60.0f);
+                          DateOfBirthValidator.setLoadingProgress(ConditionalTextValue.formatArchiveProgress("", BufferedFile.field_r, ProxyAuthenticationRequiredException.field_g, -1, TriangleMesh.field_w), 13, 60.0f);
                           return false;
                         }
-                        al.a(pe.a(te.field_g, nh.field_r, BufferedSocket.field_d, 0, 0), 13, 45.0f);
+                        DateOfBirthValidator.setLoadingProgress(PlayingSound.formatArchiveGroupProgress(ProxyAuthenticationRequiredException.field_g, BufferedFile.field_r, BufferedSocket.field_d, 0, 0), 13, 45.0f);
                         return false;
                       }
-                      al.a(uh.a("", ee.field_d, bm.field_n, -1, sf.field_O), 13, 40.0f);
+                      DateOfBirthValidator.setLoadingProgress(ConditionalTextValue.formatArchiveProgress("", GuestPlayHelpers.field_d, CachedTextLayout.field_n, -1, DialogMessagePane.field_O), 13, 40.0f);
                       return false;
                     }
-                    al.a(uh.a("", ee.field_d, bm.field_n, -1, pj.field_c), param0 + 55, 20.0f);
+                    DateOfBirthValidator.setLoadingProgress(ConditionalTextValue.formatArchiveProgress("", GuestPlayHelpers.field_d, CachedTextLayout.field_n, -1, RenderTargetHelpers.field_c), param0 + 55, 20.0f);
                     return false;
                   }
-                  al.a(uh.a("lobby", we.field_j, mm.field_d, -1, s.field_a), 13, 17.0f);
+                  DateOfBirthValidator.setLoadingProgress(ConditionalTextValue.formatArchiveProgress("lobby", ClientEnvironmentHelpers.field_j, IsaacRandom.field_d, -1, InputSetupHelpers.field_a), 13, 17.0f);
                   return false;
                 }
-                al.a(uh.a("lobby", sb.field_a, aa.field_c, -1, ge.field_c), 13, 13.0f);
+                DateOfBirthValidator.setLoadingProgress(ConditionalTextValue.formatArchiveProgress("lobby", DiskCacheWorker.field_a, QuickChatHelpHelpers.field_c, -1, AccountDialogHelpers.field_c), 13, 13.0f);
                 return false;
               }
-              al.a(uh.a("roman20", we.field_j, mm.field_d, -1, s.field_a), param0 ^ -37, 12.0f);
+              DateOfBirthValidator.setLoadingProgress(ConditionalTextValue.formatArchiveProgress("roman20", ClientEnvironmentHelpers.field_j, IsaacRandom.field_d, -1, InputSetupHelpers.field_a), param0 ^ -37, 12.0f);
               return false;
             }
-            al.a(uh.a("kartika13", sb.field_a, aa.field_c, -1, ge.field_c), 13, 11.0f);
+            DateOfBirthValidator.setLoadingProgress(ConditionalTextValue.formatArchiveProgress("kartika13", DiskCacheWorker.field_a, QuickChatHelpHelpers.field_c, -1, AccountDialogHelpers.field_c), 13, 11.0f);
             return false;
           }
-          al.a(uh.a("basic", sb.field_a, aa.field_c, -1, ge.field_c), 13, 10.0f);
+          DateOfBirthValidator.setLoadingProgress(ConditionalTextValue.formatArchiveProgress("basic", DiskCacheWorker.field_a, QuickChatHelpHelpers.field_c, -1, AccountDialogHelpers.field_c), 13, 10.0f);
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw kg.a((Throwable) ((Object) var3), "Virogrid.EB(" + param0 + ',' + param1 + ')');
+          throw AsyncCheckResult.wrapException((Throwable) ((Object) var3), "Virogrid.EB(" + param0 + ',' + param1 + ')');
         }
     }
 
-    public static void u(int param0) {
+    public static void releaseStatics(int param0) {
         try {
           field_O = null;
           if (param0 != 240) {
-            field_O = (co) null;
+            field_O = (LoginMethod) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw kg.a((Throwable) ((Object) runtimeException), "Virogrid.HB(" + param0 + ')');
+          throw AsyncCheckResult.wrapException((Throwable) ((Object) runtimeException), "Virogrid.HB(" + param0 + ')');
         }
     }
 
-    private final void s(int param0) {
+    private final void updateGhostModelTransform(int param0) {
         RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
         RuntimeException var2 = null;
@@ -479,9 +479,9 @@ public final class Virogrid extends od {
         int var7 = 0;
         int var8 = 0;
         try {
-          if (db.b((byte) 13, 0) &&
-            0 < hj.field_h) {
-            var2_int = id.field_c - hj.field_h;
+          if (Bzip2State.hasFeatureBit((byte) 13, 0) &&
+            0 < AchievementNotice.field_h) {
+            var2_int = UiTheme.field_c - AchievementNotice.field_h;
             var3 = -700;
             var4 = 4 * var2_int - 1300;
             var5 = 200;
@@ -490,11 +490,11 @@ public final class Virogrid extends od {
               var3 = -20000 + var3 + var2_int * 200;
             }
             var6 = -2048;
-            var7 = id.a(var6, 32);
-            var8 = nf.a(21855, var6);
-            ae.field_e = new int[]{var3, var5, var4, var8, 0, -var7, 0, 65536, 0, var7, 0, var8};
-            ri.field_a.drawTransformed(pe.field_j, ae.field_e);
-            ri.field_a.c();
+            var7 = UiTheme.sineLookup(var6, 32);
+            var8 = TextDecodeHelpers.cosineLookup(21855, var6);
+            CheckboxTickPainter.field_e = new int[]{var3, var5, var4, var8, 0, -var7, 0, 65536, 0, var7, 0, var8};
+            TextLayoutLine.field_a.drawTransformed(PlayingSound.field_j, CheckboxTickPainter.field_e);
+            TextLayoutLine.field_a.tryComputeScreenBounds();
           }
           if (param0 != -1933) {
             this.field_D = (int[]) null;
@@ -503,11 +503,11 @@ public final class Virogrid extends od {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw kg.a((Throwable) ((Object) var2), "Virogrid.JB(" + param0 + ')');
+          throw AsyncCheckResult.wrapException((Throwable) ((Object) var2), "Virogrid.JB(" + param0 + ')');
         }
     }
 
-    private final void f(byte param0) {
+    private final void renderLowDetailFrame(byte param0) {
         int var2_int = 0;
         int var8 = 0;
         int[] stackIn_34_0 = null;
@@ -516,9 +516,9 @@ public final class Virogrid extends od {
         RuntimeException var2 = null;
         int var3 = 0;
         int[] var3_ref_int__ = null;
-        fl var3_ref_fl = null;
+        FallingParticle var3_ref_fl = null;
         int var4 = 0;
-        pm var4_ref_pm = null;
+        MouseTrailPoint var4_ref_pm = null;
         int[] var5_ref_int__ = null;
         int var5 = 0;
         int var6 = 0;
@@ -551,91 +551,91 @@ public final class Virogrid extends od {
         var8 = field_F ? 1 : 0;
         try {
           var2_int = 1;
-          if (hm.field_c == i.field_y &&
-            nf.field_g == pg.field_g) {
-            if (i.field_y != -2) {
-              dj.a(nf.field_g, true, -1, 3, i.field_y);
+          if (GameClock.field_c == MidiPcmStream.field_y &&
+            TextDecodeHelpers.field_g == LobbySortHelpers.field_g) {
+            if (MidiPcmStream.field_y != -2) {
+              PlayerContextMenu.renderScreenToSprites(TextDecodeHelpers.field_g, true, -1, 3, MidiPcmStream.field_y);
             } else {
-              ej.a(false, 25680);
+              LabeledChildWidget.clearScreen(false, 25680);
               var2_int = 0;
             }
           } else {
-            if (i.field_y != -2) {
-              if (hm.field_c == -2) {
-                if (we.field_l < 16) {
-                  dj.a(nf.field_g, false, -1, 3, i.field_y);
+            if (MidiPcmStream.field_y != -2) {
+              if (GameClock.field_c == -2) {
+                if (ClientEnvironmentHelpers.field_l < 16) {
+                  PlayerContextMenu.renderScreenToSprites(TextDecodeHelpers.field_g, false, -1, 3, MidiPcmStream.field_y);
                 } else {
                   var2_int = 0;
-                  ej.a(false, 25680);
+                  LabeledChildWidget.clearScreen(false, 25680);
                 }
               } else {
-                if (we.field_l < 16) {
-                  dj.a(nf.field_g, false, 1 + we.field_l, 3, i.field_y);
+                if (ClientEnvironmentHelpers.field_l < 16) {
+                  PlayerContextMenu.renderScreenToSprites(TextDecodeHelpers.field_g, false, 1 + ClientEnvironmentHelpers.field_l, 3, MidiPcmStream.field_y);
                 } else {
-                  dj.a(pg.field_g, false, 33 - we.field_l, 3, hm.field_c);
+                  PlayerContextMenu.renderScreenToSprites(LobbySortHelpers.field_g, false, 33 - ClientEnvironmentHelpers.field_l, 3, GameClock.field_c);
                 }
               }
             } else {
-              if (we.field_l < 16) {
+              if (ClientEnvironmentHelpers.field_l < 16) {
                 var2_int = 0;
-                ej.a(false, 25680);
+                LabeledChildWidget.clearScreen(false, 25680);
               } else {
-                dj.a(pg.field_g, false, -1, 3, hm.field_c);
+                PlayerContextMenu.renderScreenToSprites(LobbySortHelpers.field_g, false, -1, 3, GameClock.field_c);
               }
             }
           }
           if (var2_int != 0) {
-            if (null == ci.field_s ||
-              sj.field_o != cc.field_x) {
-              cc.field_x = sj.field_o;
-              lj.field_r = sg.field_i;
-              cf.field_c = sj.field_o;
-              vm.field_d[0] = (double)lj.field_r * Math.sin((double)cf.field_c);
-              vm.field_d[2] = (double)lj.field_r * Math.cos((double)cf.field_c);
-              gb.c((byte) -44);
-              ci.field_s = new Sprite(640, 480);
-              pj.a(ci.field_s, 256);
+            if (null == PasswordConfirmationValidator.field_s ||
+              ArchiveIndex.field_o != TextFieldPainter.field_x) {
+              TextFieldPainter.field_x = ArchiveIndex.field_o;
+              CheckboxPainter.field_r = PatchNoteUsage.field_i;
+              CommonUiHelpers.field_c = ArchiveIndex.field_o;
+              SoundPlaybackHelpers.field_d[0] = (double)CheckboxPainter.field_r * Math.sin((double)CommonUiHelpers.field_c);
+              SoundPlaybackHelpers.field_d[2] = (double)CheckboxPainter.field_r * Math.cos((double)CommonUiHelpers.field_c);
+              MarkerSlider.updateCameraMatrix((byte) -44);
+              PasswordConfirmationValidator.field_s = new Sprite(640, 480);
+              RenderTargetHelpers.setRenderTargetSprite(PasswordConfirmationValidator.field_s, 256);
               Rasterizer.fillRectangle(0, 0, 640, 480, 3158064);
-              var3 = j.field_b;
-              var4 = tm.field_g;
-              jm.a(320, 240, -2);
+              var3 = NodeHashTableIterator.field_b;
+              var4 = QueuedListRequest.field_g;
+              LobbyLayout.setViewportOrigin(320, 240, -2);
               var9 = new int[12];
               var20 = var9;
               var13 = var20;
               var5_ref_int__ = var13;
               for (var6 = 0; var6 < 3; var6++) {
-                var9[var6] = pe.field_j[var6] << 3;
+                var9[var6] = PlayingSound.field_j[var6] << 3;
               }
               var6Lifetime3 = 3;
               stackIn_34_0 = var5_ref_int__;
               while (stackIn_34_0.length > var6Lifetime3) {
-                var5_ref_int__[var6Lifetime3] = pe.field_j[var6Lifetime3];
+                var5_ref_int__[var6Lifetime3] = PlayingSound.field_j[var6Lifetime3];
                 var6Lifetime3++;
                 stackIn_34_0 = var20;
               }
-              this.e((byte) -62);
-              kg.field_c.drawTransformed(pe.field_j, bi.field_c);
-              nb.field_x.drawTransformed(pe.field_j, bi.field_c);
-              kf.field_c.drawTransformed(pe.field_j, bi.field_c);
-              cm.field_k.drawTransformed(pe.field_j, bi.field_c);
-              ba.field_c.drawTransformed(pe.field_j, bi.field_c);
-              RasterBuffer.field_j.drawTransformed(pe.field_j, bi.field_c);
-              th.field_y.drawTransformed(var20, bi.field_c);
-              pj.field_a.drawTransformed(var20, bi.field_c);
-              qg.field_h.drawTransformed(var20, bi.field_c);
-              jg.field_i.drawTransformed(var20, bi.field_c);
-              ee.field_a.drawTransformed(var20, bi.field_c);
-              og.field_l.drawTransformed(var20, bi.field_c);
-              ab.field_L.drawTransformed(var20, bi.field_c);
-              rc.field_o.drawTransformed(var20, bi.field_c);
-              hn.field_x.drawTransformed(var20, bi.field_c);
-              td.field_i.drawTransformed(var20, bi.field_c);
-              ul.b((byte) 109);
-              jm.a(var3, var4, -2);
+              this.drawSpotlightProjections((byte) -62);
+              AsyncCheckResult.field_c.drawTransformed(PlayingSound.field_j, ChatShortcutHelpers.field_c);
+              ArchiveRequest.field_x.drawTransformed(PlayingSound.field_j, ChatShortcutHelpers.field_c);
+              DualLinkHashTable.field_c.drawTransformed(PlayingSound.field_j, ChatShortcutHelpers.field_c);
+              LogoRenderHelpers.field_k.drawTransformed(PlayingSound.field_j, ChatShortcutHelpers.field_c);
+              ArchiveProvider.field_c.drawTransformed(PlayingSound.field_j, ChatShortcutHelpers.field_c);
+              RasterBuffer.field_j.drawTransformed(PlayingSound.field_j, ChatShortcutHelpers.field_c);
+              QuickChatPhraseDefinition.field_y.drawTransformed(var20, ChatShortcutHelpers.field_c);
+              RenderTargetHelpers.field_a.drawTransformed(var20, ChatShortcutHelpers.field_c);
+              RasterSnapshot.field_h.drawTransformed(var20, ChatShortcutHelpers.field_c);
+              SoundCache.field_i.drawTransformed(var20, ChatShortcutHelpers.field_c);
+              GuestPlayHelpers.field_a.drawTransformed(var20, ChatShortcutHelpers.field_c);
+              BoundedUrlRequest.field_l.drawTransformed(var20, ChatShortcutHelpers.field_c);
+              BirthDateEntryPanel.field_L.drawTransformed(var20, ChatShortcutHelpers.field_c);
+              MusicPatch.field_o.drawTransformed(var20, ChatShortcutHelpers.field_c);
+              PendingHighscoreRequest.field_x.drawTransformed(var20, ChatShortcutHelpers.field_c);
+              CanvasPresentHelpers.field_i.drawTransformed(var20, ChatShortcutHelpers.field_c);
+              LoginCredentialType.popRasterState((byte) 109);
+              LobbyLayout.setViewportOrigin(var3, var4, -2);
             }
-            ci.field_s.drawOpaque(0, tm.field_g - 240);
-            if (ke.field_p.field_m) {
-              var3Lifetime2 = id.field_r % 64;
+            PasswordConfirmationValidator.field_s.drawOpaque(0, QueuedListRequest.field_g - 240);
+            if (WidgetNode.field_p.field_m) {
+              var3Lifetime2 = UiTheme.field_r % 64;
               if (var3Lifetime2 >= 32) {
                 stackIn_43_0 = 48 - var3Lifetime2;
               } else {
@@ -654,17 +654,17 @@ public final class Virogrid extends od {
               var23 = new int[3];
               var16 = var23;
               var6_ref_int__ = var16;
-              var10[0] = (int)ao.field_Hb;
+              var10[0] = (int)ScrollPaneWithFooter.field_Hb;
               var21[0] = 50;
-              var10[1] = -(int)ao.field_Hb;
+              var10[1] = -(int)ScrollPaneWithFooter.field_Hb;
               var6_ref_int__[0] = (var3Lifetime2 >> 4) + 128;
               var21[1] = 50;
               var22[2] = 0;
               var6_ref_int__[1] = (var3Lifetime2 >> 4) + 128;
               var21[2] = 80;
               var23[2] = 128;
-              var7 = si.a(8437759);
-              qf.a(240, 0, 0, var29, var30, var23, var7, var7, var7);
+              var7 = CameraProjectionMath.rgbToPackedHsl(8437759);
+              ClippedTriangleRenderer.drawTriangle(240, 0, 0, var29, var30, var23, var7, var7, var7);
               var3Lifetime2 = var22[0];
               var10[0] = var22[1];
               var22[1] = var3Lifetime2;
@@ -674,52 +674,52 @@ public final class Virogrid extends od {
               var3Lifetime2 = var23[0];
               var6_ref_int__[0] = var23[1];
               var23[1] = var3Lifetime2;
-              qf.a(240, 0, 0, var29, var30, var23, var7, var7, var7);
+              ClippedTriangleRenderer.drawTriangle(240, 0, 0, var29, var30, var23, var7, var7, var7);
             }
-            if (ke.field_p.field_d) {
-              var26 = c.field_d.field_B;
+            if (WidgetNode.field_p.field_d) {
+              var26 = DisplayNameHelpers.field_d.field_B;
               var19 = var26;
               var12 = var19;
               var3_ref_int__ = var12;
-              if (co.field_h > 0) {
+              if (LoginMethod.field_h > 0) {
                 var6Lifetime1 = 256000;
                 while (var6Lifetime1 > 0) {
                   var6Lifetime1--;
                   var4Lifetime1 = 16711935 & var26[var6Lifetime1];
                   var5 = 65280 & var26[var6Lifetime1];
-                  var4Lifetime1 = var4Lifetime1 * (256 - co.field_h);
+                  var4Lifetime1 = var4Lifetime1 * (256 - LoginMethod.field_h);
                   var4Lifetime1 = var4Lifetime1 & -16711936;
-                  var5 = var5 * (256 - co.field_h);
+                  var5 = var5 * (256 - LoginMethod.field_h);
                   var5 = var5 & 16711680;
-                  var4Lifetime1 = var4Lifetime1 + (co.field_h * 16711935 & -16711936);
-                  var5 = var5 + (16711680 & co.field_h * 65280);
-                  var12[var6Lifetime1] = oh.a(var5, var4Lifetime1) >>> 8;
+                  var4Lifetime1 = var4Lifetime1 + (LoginMethod.field_h * 16711935 & -16711936);
+                  var5 = var5 + (16711680 & LoginMethod.field_h * 65280);
+                  var12[var6Lifetime1] = BitwiseHelpers.bitOr(var5, var4Lifetime1) >>> 8;
                 }
               }
-              pj.a(c.field_d, 256);
-              var4_ref_pm = (pm) (ImageProducerRasterBuffer.field_n.a((byte) -107));
+              RenderTargetHelpers.setRenderTargetSprite(DisplayNameHelpers.field_d, 256);
+              var4_ref_pm = (MouseTrailPoint) (ImageProducerRasterBuffer.field_n.first((byte) -107));
               while (var4_ref_pm != null) {
-                rk.a(var4_ref_pm.field_m, var4_ref_pm.field_h, var4_ref_pm.field_r << 3, 10000);
-                var4_ref_pm = (pm) (ImageProducerRasterBuffer.field_n.a(16213));
+                RasterEffectHelpers.drawBubbleDistortion(var4_ref_pm.field_m, var4_ref_pm.field_h, var4_ref_pm.field_r << 3, 10000);
+                var4_ref_pm = (MouseTrailPoint) (ImageProducerRasterBuffer.field_n.next(16213));
               }
-              ul.b((byte) 86);
-              c.field_d.drawTransparent(j.field_b - (c.field_d.field_w >> 1), -(c.field_d.field_p >> 1) + tm.field_g);
-              if (!(ke.field_p.field_f <= 0)) {
-                rk.drawGlowingLine(j.field_b - (c.field_d.field_w >> 1), tm.field_g - (c.field_d.field_p >> 1), (c.field_d.field_w >> 1) + j.field_b, -(c.field_d.field_p >> 1) + tm.field_g, 40, ke.field_p.field_f, pj.field_d);
-                rk.drawGlowingLine((c.field_d.field_w >> 1) + j.field_b, -(c.field_d.field_p >> 1) + tm.field_g, (c.field_d.field_w >> 1) + j.field_b, tm.field_g + (c.field_d.field_p >> 1), 40, ke.field_p.field_f, pj.field_d);
-                rk.drawGlowingLine((c.field_d.field_w >> 1) + j.field_b, tm.field_g + (c.field_d.field_p >> 1), -(c.field_d.field_w >> 1) + j.field_b, tm.field_g + (c.field_d.field_p >> 1), 40, ke.field_p.field_f, pj.field_d);
-                rk.drawGlowingLine(j.field_b - (c.field_d.field_w >> 1), tm.field_g + (c.field_d.field_p >> 1), j.field_b - (c.field_d.field_w >> 1), tm.field_g - (c.field_d.field_p >> 1), 40, ke.field_p.field_f, pj.field_d);
+              LoginCredentialType.popRasterState((byte) 86);
+              DisplayNameHelpers.field_d.drawTransparent(NodeHashTableIterator.field_b - (DisplayNameHelpers.field_d.field_w >> 1), -(DisplayNameHelpers.field_d.field_p >> 1) + QueuedListRequest.field_g);
+              if (!(WidgetNode.field_p.field_f <= 0)) {
+                RasterEffectHelpers.drawGlowingLine(NodeHashTableIterator.field_b - (DisplayNameHelpers.field_d.field_w >> 1), QueuedListRequest.field_g - (DisplayNameHelpers.field_d.field_p >> 1), (DisplayNameHelpers.field_d.field_w >> 1) + NodeHashTableIterator.field_b, -(DisplayNameHelpers.field_d.field_p >> 1) + QueuedListRequest.field_g, 40, WidgetNode.field_p.field_f, RenderTargetHelpers.field_d);
+                RasterEffectHelpers.drawGlowingLine((DisplayNameHelpers.field_d.field_w >> 1) + NodeHashTableIterator.field_b, -(DisplayNameHelpers.field_d.field_p >> 1) + QueuedListRequest.field_g, (DisplayNameHelpers.field_d.field_w >> 1) + NodeHashTableIterator.field_b, QueuedListRequest.field_g + (DisplayNameHelpers.field_d.field_p >> 1), 40, WidgetNode.field_p.field_f, RenderTargetHelpers.field_d);
+                RasterEffectHelpers.drawGlowingLine((DisplayNameHelpers.field_d.field_w >> 1) + NodeHashTableIterator.field_b, QueuedListRequest.field_g + (DisplayNameHelpers.field_d.field_p >> 1), -(DisplayNameHelpers.field_d.field_w >> 1) + NodeHashTableIterator.field_b, QueuedListRequest.field_g + (DisplayNameHelpers.field_d.field_p >> 1), 40, WidgetNode.field_p.field_f, RenderTargetHelpers.field_d);
+                RasterEffectHelpers.drawGlowingLine(NodeHashTableIterator.field_b - (DisplayNameHelpers.field_d.field_w >> 1), QueuedListRequest.field_g + (DisplayNameHelpers.field_d.field_p >> 1), NodeHashTableIterator.field_b - (DisplayNameHelpers.field_d.field_w >> 1), QueuedListRequest.field_g - (DisplayNameHelpers.field_d.field_p >> 1), 40, WidgetNode.field_p.field_f, RenderTargetHelpers.field_d);
               }
             }
-            var3_ref_fl = (fl) (sh.field_tb.a((byte) -108));
+            var3_ref_fl = (FallingParticle) (ProgressMessageDialog.field_tb.first((byte) -108));
             while (var3_ref_fl != null) {
               var4Lifetime2 = var3_ref_fl.field_n >> 12;
               var6Lifetime2 = 512 + (var3_ref_fl.field_m >> 12);
               var5Lifetime1 = var3_ref_fl.field_p >> 12;
               if (var6Lifetime2 > 0) {
-                Rasterizer.fillRadialPaletteCircle((var4Lifetime2 << 13) / var6Lifetime2 + (j.field_b << 4), (tm.field_g << 4) + (var5Lifetime1 << 13) / var6Lifetime2, 65536 / var6Lifetime2, var3_ref_fl.field_o * 5 / 3, pj.field_d);
+                Rasterizer.fillRadialPaletteCircle((var4Lifetime2 << 13) / var6Lifetime2 + (NodeHashTableIterator.field_b << 4), (QueuedListRequest.field_g << 4) + (var5Lifetime1 << 13) / var6Lifetime2, 65536 / var6Lifetime2, var3_ref_fl.field_o * 5 / 3, RenderTargetHelpers.field_d);
               }
-              var3_ref_fl = (fl) (sh.field_tb.a(16213));
+              var3_ref_fl = (FallingParticle) (ProgressMessageDialog.field_tb.next(16213));
             }
           }
           var3Lifetime1 = 14 / ((param0 + 76) / 33);
@@ -727,7 +727,7 @@ public final class Virogrid extends od {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw kg.a((Throwable) ((Object) var2), "Virogrid.LB(" + param0 + ')');
+          throw AsyncCheckResult.wrapException((Throwable) ((Object) var2), "Virogrid.LB(" + param0 + ')');
         }
     }
 
@@ -741,79 +741,79 @@ public final class Virogrid extends od {
         RuntimeException var2_ref = null;
         GameSession var3 = null;
         int var4 = 0;
-        hj var4_ref_hj = null;
+        AchievementNotice var4_ref_hj = null;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
         Object var8 = null;
         var7 = field_F ? 1 : 0;
         try {
-          if (null == ih.field_b) {
+          if (null == FullscreenState.field_b) {
             stackIn_5_0 = UiWidget.field_v;
           } else {
-            stackIn_5_0 = ih.field_b;
+            stackIn_5_0 = FullscreenState.field_b;
           }
           var8 = stackIn_5_0;
           var2 = var8;
-          if (j.a(-1)) {
-            cm.a((java.awt.Canvas) (var8), (byte) -47, mi.a((byte) -121));
+          if (NodeHashTableIterator.shouldShowBootstrapLoadingScreen(-1)) {
+            LogoRenderHelpers.drawClientToCanvas((java.awt.Canvas) (var8), (byte) -47, DebouncedValidator.hasInputFocus((byte) -121));
             return;
           }
-          if (!i.field_H) {
-            uh.a((byte) 46, (java.awt.Canvas) (var8));
+          if (!MidiPcmStream.field_H) {
+            ConditionalTextValue.drawLoadingScreen((byte) 46, (java.awt.Canvas) (var8));
             return;
           }
-          if (!jm.a((byte) -85)) {
-            al.a(sk.field_b, 13, 100.0f);
-            uh.a((byte) 83, (java.awt.Canvas) (var8));
+          if (!LobbyLayout.shouldRunGameScreen((byte) -85)) {
+            DateOfBirthValidator.setLoadingProgress(LoadingTextGlobals.field_b, 13, 100.0f);
+            ConditionalTextValue.drawLoadingScreen((byte) 83, (java.awt.Canvas) (var8));
             return;
           }
-          if (ke.field_p.field_g) {
-            this.e(true);
+          if (WidgetNode.field_p.field_g) {
+            this.renderHighDetailFrame(true);
           } else {
-            this.f((byte) 54);
+            this.renderLowDetailFrame((byte) 54);
           }
-          if (null != vg.field_I) {
-            stackIn_24_0 = vg.field_I;
+          if (null != DropTargetWidget.field_I) {
+            stackIn_24_0 = DropTargetWidget.field_I;
           } else {
-            stackIn_24_0 = ei.field_b;
+            stackIn_24_0 = MusicPlaybackHelpers.field_b;
           }
           var3 = stackIn_24_0;
           if (var3 != null) {
-            var3.c(-16, true);
-            fa.a(-30265);
-            if (ok.field_J &&
-              vm.field_e) {
-              ok.b(f.b(-844), 3410);
+            var3.drawGameOverlay(-16, true);
+            PendingSubmission.drawViewModePanel(-30265);
+            if (AccountTermsPanel.field_J &&
+              SoundPlaybackHelpers.field_e) {
+              AccountTermsPanel.drawSharedOverlays(DualLinkDequeIterator.isBlinkPhaseVisible(-844), 3410);
             }
           } else {
-            fa.a(-30265);
+            PendingSubmission.drawViewModePanel(-30265);
           }
-          if ((hm.field_c != i.field_y ||
-            pg.field_g != nf.field_g) &&
-            (-2 == i.field_y ||
-            -2 == hm.field_c) &&
-            we.field_l < 16) {
+          if ((GameClock.field_c != MidiPcmStream.field_y ||
+            LobbySortHelpers.field_g != TextDecodeHelpers.field_g) &&
+            (-2 == MidiPcmStream.field_y ||
+            -2 == GameClock.field_c) &&
+            ClientEnvironmentHelpers.field_l < 16) {
           }
-          if (!ok.field_J ||
-            !vm.field_e) {
-            ok.b(f.b(-844), 3410);
+          if (!AccountTermsPanel.field_J ||
+            !SoundPlaybackHelpers.field_e) {
+            AccountTermsPanel.drawSharedOverlays(DualLinkDequeIterator.isBlinkPhaseVisible(-844), 3410);
           }
-          if (ug.a(param0)) {
+          if (DigestHelpers.isFullscreenPromptOpen(param0)) {
             Rasterizer.darkenRectangle(0, 0, Rasterizer.field_e, Rasterizer.field_f);
             stackIn_66_0 = !param0;
-            var4 = IntrusiveDequeCursor.a(stackIn_66_0) + 24;
-            var5 = Virogrid.q(-80) + 26;
-            dg.b(var5, -124, var4);
-            qi.b(-5205);
+            var4 = IntrusiveDequeCursor.getSpanWidth(stackIn_66_0) + 24;
+            var5 = Virogrid.getLobbyContentHeight(-80) + 26;
+            StripedProgressBar.drawPulsingGlowFrame(var5, -124, var4);
+            PopupMenuDrawHelpers.drawPopupMenuItems(-5205);
           } else {
-            if (ak.b(-31609)) {
-              stackIn_61_0 = (ih.field_b != null) || (fe.field_Gb);
-              WidgetContainer.a(stackIn_61_0, -20248);
+            if (TextEncodingHelpers.beginReconnectGracePeriod(-31609)) {
+              stackIn_61_0 = (FullscreenState.field_b != null) || (NameEntryPopup.field_Gb);
+              WidgetContainer.drawModalOverlay(stackIn_61_0, -20248);
             } else {
-              if (!eg.a((byte) 47)) {
-                if (!this.field_I.b((byte) 64)) {
-                  var4_ref_hj = (hj) (this.field_I.a((byte) -103));
+              if (!MusicCrossfadeStream.isLoginRequestFlagged((byte) 47)) {
+                if (!this.field_I.isEmpty((byte) 64)) {
+                  var4_ref_hj = (AchievementNotice) (this.field_I.first((byte) -103));
                   var6 = this.field_A;
                   if (var6 < 80) {
                     var5 = -32 + var6 / 2;
@@ -824,49 +824,49 @@ public final class Virogrid extends od {
                       var5 = 8;
                     }
                   }
-                  vd.field_Y[var4_ref_hj.field_i].drawTransparent(8, var5);
-                  hd.standardFont.drawLeft(qk.achievementTitles[var4_ref_hj.field_i], 48, hd.standardFont.field_H + var5, 8437759, -1);
+                  ValidatedTextWidget.field_Y[var4_ref_hj.field_i].drawTransparent(8, var5);
+                  ReflectionCheckHelpers.standardFont.drawLeft(DualLinkDeque.achievementTitles[var4_ref_hj.field_i], 48, ReflectionCheckHelpers.standardFont.field_H + var5, 8437759, -1);
                 }
               } else {
-                var4 = 24 + rh.a(-16118);
-                var5 = pg.a(true) + 26;
-                dg.b(var5, -125, var4);
-                WhirlpoolDigest.a(false);
+                var4 = 24 + NamedTextResourceHelpers.getCenteredSpanWidth(-16118);
+                var5 = LobbySortHelpers.getListContentHeight(true) + 26;
+                StripedProgressBar.drawPulsingGlowFrame(var5, -125, var4);
+                WhirlpoolDigest.drawMessageDialogLines(false);
               }
             }
           }
-          if (tg.field_x != 0) {
-            ij.a(-119, (16 - wa.field_K) * 256 / 16);
+          if (TextButton.field_x != 0) {
+            BackgroundParticle.scaleRasterBrightness(-119, (16 - EditableTextWidget.field_K) * 256 / 16);
           }
-          if (hd.field_d >= 2) {
-            hd.standardFont.drawLeft(Integer.toString(mj.field_E), 4, 24, 16777215, -1);
+          if (ReflectionCheckHelpers.field_d >= 2) {
+            ReflectionCheckHelpers.standardFont.drawLeft(Integer.toString(StrongCacheReference.field_E), 4, 24, 16777215, -1);
           }
-          td.a(-30179, (java.awt.Canvas) (var8), 0, 0);
+          CanvasPresentHelpers.drawRasterToCanvas(-30179, (java.awt.Canvas) (var8), 0, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw kg.a((Throwable) ((Object) var2_ref), "Virogrid.J(" + param0 + ')');
+          throw AsyncCheckResult.wrapException((Throwable) ((Object) var2_ref), "Virogrid.J(" + param0 + ')');
         }
     }
 
-    private final static int q(int param0) {
+    private final static int getLobbyContentHeight(int param0) {
         int stackIn_1_0 = 0;
         RuntimeException decompiledCaughtException = null;
         int var1_int = 0;
         RuntimeException var1 = null;
         try {
           var1_int = -13 / ((param0 + 32) / 40);
-          stackIn_1_0 = sg.field_n;
+          stackIn_1_0 = PatchNoteUsage.field_n;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw kg.a((Throwable) ((Object) var1), "Virogrid.SA(" + param0 + ')');
+          throw AsyncCheckResult.wrapException((Throwable) ((Object) var1), "Virogrid.SA(" + param0 + ')');
         }
     }
 
-    private final void a(int param0, Js5Archive param1) {
+    private final void loadSceneryModels(int param0, Js5Archive param1) {
         Model var4 = null;
         Model var5 = null;
         Model var6 = null;
@@ -897,8 +897,8 @@ public final class Virogrid extends od {
         RuntimeException var3 = null;
         Model var26 = null;
         try {
-          fk.a(1.0f);
-          fk.a();
+          TriangleRasterizer.setBrightnessAndRebuildPalette(1.0f);
+          TriangleRasterizer.useRasterClip();
           if (param0 != 1053) {
             return;
           }
@@ -920,61 +920,61 @@ public final class Virogrid extends od {
           var18 = Model.load(param1, "", "scenery_game-screen_front-top");
           var19 = Model.load(param1, "", "scenery_game-screen_front-black");
           var20 = Model.load(param1, "", "scenery_game-screen_back-black");
-          this.a(var11, (byte) 69);
-          this.a(var12, (byte) 69);
-          this.a(var13, (byte) 69);
-          this.a(var14, (byte) 69);
-          this.a(var16, (byte) 69);
-          this.a(var17, (byte) 69);
-          this.a(var15, (byte) 69);
-          this.a(var18, (byte) 69);
-          this.a(var19, (byte) 69);
-          this.a(var20, (byte) 69);
-          this.field_J = this.a((byte) 124, var11);
-          this.field_K = this.a((byte) 118, var12);
-          this.field_D = this.a((byte) 94, var13);
-          this.field_B = this.a((byte) 116, var16);
-          this.field_C = this.a((byte) 74, var18);
-          this.field_L = this.a((byte) 116, var19);
-          this.field_M = this.a((byte) 64, var14);
-          this.field_G = this.a((byte) 69, var17);
-          this.field_H = this.a((byte) 107, var15);
-          this.field_N = this.a((byte) 69, var20);
+          this.scaleModelAboutTablePivot(var11, (byte) 69);
+          this.scaleModelAboutTablePivot(var12, (byte) 69);
+          this.scaleModelAboutTablePivot(var13, (byte) 69);
+          this.scaleModelAboutTablePivot(var14, (byte) 69);
+          this.scaleModelAboutTablePivot(var16, (byte) 69);
+          this.scaleModelAboutTablePivot(var17, (byte) 69);
+          this.scaleModelAboutTablePivot(var15, (byte) 69);
+          this.scaleModelAboutTablePivot(var18, (byte) 69);
+          this.scaleModelAboutTablePivot(var19, (byte) 69);
+          this.scaleModelAboutTablePivot(var20, (byte) 69);
+          this.field_J = this.getSceneryModelTransform((byte) 124, var11);
+          this.field_K = this.getSceneryModelTransform((byte) 118, var12);
+          this.field_D = this.getSceneryModelTransform((byte) 94, var13);
+          this.field_B = this.getSceneryModelTransform((byte) 116, var16);
+          this.field_C = this.getSceneryModelTransform((byte) 74, var18);
+          this.field_L = this.getSceneryModelTransform((byte) 116, var19);
+          this.field_M = this.getSceneryModelTransform((byte) 64, var14);
+          this.field_G = this.getSceneryModelTransform((byte) 69, var17);
+          this.field_H = this.getSceneryModelTransform((byte) 107, var15);
+          this.field_N = this.getSceneryModelTransform((byte) 69, var20);
           var21 = 96;
           var22 = 2260;
           var23 = 0;
           var24 = 256;
           var25 = 0;
-          if (db.b((byte) 13, 0)) {
+          if (Bzip2State.hasFeatureBit((byte) 13, 0)) {
             var26 = Model.load(param1, "", "ghost_untextured");
-            ri.field_a = (il) (var26.a(var21, var22, var23, var24, var25));
+            TextLayoutLine.field_a = (ModelMesh) (var26.createModel(var21, var22, var23, var24, var25));
             var23 = 64;
             var21 = 42;
           }
-          kf.field_c = (il) (var27.a(var21, var22, var23, var24, var25));
-          cm.field_k = (il) (var4.a(var21, var22, var23, var24, var25));
-          fl.field_s = (il) (var5.a(var21, var22, var23, var24, var25));
-          nb.field_x = (il) (var6.a(var21, var22, var23, var24, var25));
-          ba.field_c = (il) (var7.a(var21, var22, var23, var24, var25));
-          RasterBuffer.field_j = (il) (var8.a(var21, var22, var23, var24, var25));
-          kg.field_c = (il) (var9.a(var21, var22, var23, var24, var25));
-          lk.field_Qb = (il) (var10.a(var21, var22, var23, var24, var25));
-          var13.d();
-          var14.d();
+          DualLinkHashTable.field_c = (ModelMesh) (var27.createModel(var21, var22, var23, var24, var25));
+          LogoRenderHelpers.field_k = (ModelMesh) (var4.createModel(var21, var22, var23, var24, var25));
+          FallingParticle.field_s = (ModelMesh) (var5.createModel(var21, var22, var23, var24, var25));
+          ArchiveRequest.field_x = (ModelMesh) (var6.createModel(var21, var22, var23, var24, var25));
+          ArchiveProvider.field_c = (ModelMesh) (var7.createModel(var21, var22, var23, var24, var25));
+          RasterBuffer.field_j = (ModelMesh) (var8.createModel(var21, var22, var23, var24, var25));
+          AsyncCheckResult.field_c = (ModelMesh) (var9.createModel(var21, var22, var23, var24, var25));
+          LobbyPlayerEntry.field_Qb = (ModelMesh) (var10.createModel(var21, var22, var23, var24, var25));
+          var13.computeNormals();
+          var14.computeNormals();
           var14.mergeFrom(var13, 0, 0, 0, false);
-          var16.d();
-          var17.d();
+          var16.computeNormals();
+          var17.computeNormals();
           var17.mergeFrom(var16, 0, 0, 0, false);
-          th.field_y = (il) (var11.a(var21, var22, var23, var24, var25));
-          ee.field_a = (il) (var12.a(var21, var22, var23, var24, var25));
-          qg.field_h = (il) (var14.a(var21, var22, var23, var24, var25));
-          jg.field_i = (il) (var17.a(var21, var22, var23, var24, var25));
-          pj.field_a = (il) (var15.a(var21, var22, var23, var24, var25));
-          ab.field_L = (il) (var13.a(var21, var22, var23, var24, var25));
-          rc.field_o = (il) (var16.a(var21, var22, var23, var24, var25));
-          og.field_l = (il) (var18.a(var21, var22, var23, var24, var25));
-          hn.field_x = (il) (var20.a(var21, var22, var23, var24, var25));
-          td.field_i = (il) (var19.a(var21, var22, var23, var24, var25));
+          QuickChatPhraseDefinition.field_y = (ModelMesh) (var11.createModel(var21, var22, var23, var24, var25));
+          GuestPlayHelpers.field_a = (ModelMesh) (var12.createModel(var21, var22, var23, var24, var25));
+          RasterSnapshot.field_h = (ModelMesh) (var14.createModel(var21, var22, var23, var24, var25));
+          SoundCache.field_i = (ModelMesh) (var17.createModel(var21, var22, var23, var24, var25));
+          RenderTargetHelpers.field_a = (ModelMesh) (var15.createModel(var21, var22, var23, var24, var25));
+          BirthDateEntryPanel.field_L = (ModelMesh) (var13.createModel(var21, var22, var23, var24, var25));
+          MusicPatch.field_o = (ModelMesh) (var16.createModel(var21, var22, var23, var24, var25));
+          BoundedUrlRequest.field_l = (ModelMesh) (var18.createModel(var21, var22, var23, var24, var25));
+          PendingHighscoreRequest.field_x = (ModelMesh) (var20.createModel(var21, var22, var23, var24, var25));
+          CanvasPresentHelpers.field_i = (ModelMesh) (var19.createModel(var21, var22, var23, var24, var25));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -986,7 +986,7 @@ public final class Virogrid extends od {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw kg.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw AsyncCheckResult.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
@@ -1035,132 +1035,132 @@ public final class Virogrid extends od {
         int var3Lifetime2Lifetime2;
         var11 = field_F ? 1 : 0;
         try {
-          lj.c(param0 ^ -28791807);
-          tl.field_l = SpriteWidget.e(param0 ^ -125);
-          kh.a(false);
-          if (null != ih.field_b &&
-            ih.field_b.field_a) {
-            am.a((byte) -16);
-            qc.b((byte) -12);
+          CheckboxPainter.getKeyIdleTicks(param0 ^ -28791807);
+          DirectByteStorage.field_l = SpriteWidget.getIdleTicks(param0 ^ -125);
+          ClientServiceHelpers.serviceAudio(false);
+          if (null != FullscreenState.field_b &&
+            FullscreenState.field_b.field_a) {
+            FullscreenSupport.exitFullscreen((byte) -16);
+            ArchiveLoadSequence.rebuildPopupMenuIfOpen((byte) -12);
           }
-          stackIn_8_1 = (ih.field_b != null);
-          this.a(stackIn_8_1, 121);
-          if (i.field_w) {
+          stackIn_8_1 = (FullscreenState.field_b != null);
+          this.serviceFramework(stackIn_8_1, 121);
+          if (MidiPcmStream.field_w) {
             this.openArchives(param0 ^ 13);
-            i.field_w = false;
+            MidiPcmStream.field_w = false;
           }
-          id.field_r = id.field_r + 1;
-          if (id.field_r == 500 &&
-            10 == hm.field_c) {
-            BufferedSocket.a(12229, false);
+          UiTheme.field_r = UiTheme.field_r + 1;
+          if (UiTheme.field_r == 500 &&
+            10 == GameClock.field_c) {
+            BufferedSocket.enterMainMenu(12229, false);
           }
-          if (j.a(-1)) {
-            this.m(1);
-            if (j.a(-1)) {
-              if (MouseInputHandler.b(66)) {
+          if (NodeHashTableIterator.shouldShowBootstrapLoadingScreen(-1)) {
+            this.updateLoginFlow(1);
+            if (NodeHashTableIterator.shouldShowBootstrapLoadingScreen(-1)) {
+              if (MouseInputHandler.isPostLoginStage(66)) {
                 discarded$0 = this.advanceLoading((byte) -42, false);
               }
               return;
             }
           }
-          if (!i.field_H) {
-            jb.a(og.field_b, param0 + 45);
+          if (!MidiPcmStream.field_H) {
+            BirthDateInputWidget.updateLoginUi(BoundedUrlRequest.field_b, param0 + 45);
             if (this.advanceLoading((byte) -42, true)) {
-              i.field_H = true;
+              MidiPcmStream.field_H = true;
             }
           } else {
-            if (!jm.a((byte) 118)) {
-              ee.b(false);
+            if (!LobbyLayout.shouldRunGameScreen((byte) 118)) {
+              GuestPlayHelpers.pollStoredFlagsRequest(false);
             } else {
-              if (!ug.a(true)) {
-                if (ak.b(-31609)) {
-                  stackIn_50_1 = (ih.field_b != null);
-                  var2_int = this.c(stackIn_50_1, -120);
+              if (!DigestHelpers.isFullscreenPromptOpen(true)) {
+                if (TextEncodingHelpers.beginReconnectGracePeriod(-31609)) {
+                  stackIn_50_1 = (FullscreenState.field_b != null);
+                  var2_int = this.runAccountMenu(stackIn_50_1, -120);
                   if (1 == var2_int ||
                     var2_int == 2) {
-                    if (null != ih.field_b) {
-                      am.a((byte) -16);
+                    if (null != FullscreenState.field_b) {
+                      FullscreenSupport.exitFullscreen((byte) -16);
                     }
                     if (var2_int == 2) {
-                      ha.a((byte) 39, (java.applet.Applet) (this));
+                      Js5ArchiveManager.openQuitPage((byte) 39, (java.applet.Applet) (this));
                     }
                   }
-                  this.a(false, true);
+                  this.updateScreens(false, true);
                 } else {
-                  if (eg.a((byte) 47)) {
-                    if (tg.field_x == 0) {
-                      var2_int = d.f((byte) 57);
+                  if (MusicCrossfadeStream.isLoginRequestFlagged((byte) 47)) {
+                    if (TextButton.field_x == 0) {
+                      var2_int = TabbedPanel.pollMenuSelection((byte) 57);
                       if (1 == var2_int) {
-                        bj.field_n = true;
-                        gn.a((byte) -56, qe.field_l, 0);
+                        DelayedPacket.field_n = true;
+                        CheckboxButton.beginFadeToScreen((byte) -56, TextFieldValidator.field_l, 0);
                       }
-                      this.a(false, true);
+                      this.updateScreens(false, true);
                     } else {
-                      this.a(false, false);
+                      this.updateScreens(false, false);
                     }
                   } else {
-                    this.a(false, false);
+                    this.updateScreens(false, false);
                   }
                 }
               } else {
-                if (tg.field_x == 0) {
-                  var2_int = ca.a(2);
+                if (TextButton.field_x == 0) {
+                  var2_int = LoginPanel.pollMenuSelection(2);
                   if (var2_int == 2) {
-                    am.a((byte) -16);
+                    FullscreenSupport.exitFullscreen((byte) -16);
                   } else {
                     if (var2_int == 3) {
-                      a.field_D = false;
-                      GameSession.a(ib.frameSprites, hd.standardFont.field_A, 320, ib.frameSprites, 8, mc.menuFont, 2, hd.standardFont.field_A + hd.standardFont.field_G, 8, -16824, true, 240);
+                      PasswordFieldPainter.field_D = false;
+                      GameSession.applyLobbyTheme(MusicVolumeAndOverlayHelpers.frameSprites, ReflectionCheckHelpers.standardFont.field_A, 320, MusicVolumeAndOverlayHelpers.frameSprites, 8, PopupInputHelpers.menuFont, 2, ReflectionCheckHelpers.standardFont.field_A + ReflectionCheckHelpers.standardFont.field_G, 8, -16824, true, 240);
                     } else {
                       if (var2_int == 4) {
-                        a.field_D = true;
-                        gn.a((byte) 53, PacketBuffer.field_j, 0);
+                        PasswordFieldPainter.field_D = true;
+                        CheckboxButton.beginFadeToScreen((byte) 53, PacketBuffer.field_j, 0);
                       }
                     }
                   }
-                  this.a(false, true);
+                  this.updateScreens(false, true);
                 } else {
-                  this.a(false, false);
+                  this.updateScreens(false, false);
                 }
               }
             }
           }
           while (true) {
-            if (!kd.a(-122, PacketBuffer.field_i)) {
-              al.b(-1, param0);
-              if (i.field_y == -2) {
-                bl.field_B = true;
+            if (!EmailAvailabilityValidator.pollIncomingPacket(-122, PacketBuffer.field_i)) {
+              DateOfBirthValidator.flushPackets(-1, param0);
+              if (MidiPcmStream.field_y == -2) {
+                DiskArchiveRequest.field_B = true;
               }
-              if (bl.field_B) {
-                wc.field_j = 0;
+              if (DiskArchiveRequest.field_B) {
+                QuickChatCategoryCache.field_j = 0;
               }
-              if (eg.b((byte) -121)) {
-                var2_intLifetime1 = this.g(0);
+              if (MusicCrossfadeStream.isLobbyReady((byte) -121)) {
+                var2_intLifetime1 = this.pollReconnectAndResend(0);
                 if (var2_intLifetime1 == 0 ||
                   var2_intLifetime1 == 1) {
-                  ti.c(114);
+                  LinkTextPainter.resetReflectionCheckQueue(114);
                   if (var2_intLifetime1 != 1) {
-                    if (aj.field_a) {
-                      vm.field_e = false;
-                      mn.field_e = true;
-                      th.field_q = true;
-                      if (!dd.field_a) {
-                        gb.a(-2, 0, false, 0);
+                    if (TextWidgetPainter.field_a) {
+                      SoundPlaybackHelpers.field_e = false;
+                      DrawOfferMenuHelpers.field_e = true;
+                      QuickChatPhraseDefinition.field_q = true;
+                      if (!DecodedSpriteHelpers.field_a) {
+                        MarkerSlider.changeScreen(-2, 0, false, 0);
                       } else {
-                        kn.field_J = mi.textRemovedFromGame;
-                        gb.a(-2, 0, false, 9);
+                        FadeLayer.field_J = DebouncedValidator.textRemovedFromGame;
+                        MarkerSlider.changeScreen(-2, 0, false, 9);
                       }
-                      wm.c((byte) -86);
-                      ka.a(true, (byte) 87);
-                      al.field_j[i.field_y].a((byte) 120, 0, false);
-                      on.field_d = false;
-                      dd.field_a = false;
-                      aj.field_a = false;
+                      TriangleMesh.commitScreenChange((byte) -86);
+                      PendingRequest.createGameOptions(true, (byte) 87);
+                      DateOfBirthValidator.field_j[MidiPcmStream.field_y].updatePointerSelection((byte) 120, 0, false);
+                      LoginRsaKey.field_d = false;
+                      DecodedSpriteHelpers.field_a = false;
+                      TextWidgetPainter.field_a = false;
                     }
                     Js5Archive.field_e = false;
-                    qe.field_k = false;
+                    TextFieldValidator.field_k = false;
                   } else {
-                    qe.field_k = true;
+                    TextFieldValidator.field_k = true;
                     Js5Archive.field_e = true;
                   }
                 }
@@ -1168,118 +1168,118 @@ public final class Virogrid extends od {
                 if (2 == var2_intLifetime1) {
                   var3 = 1;
                 }
-                if (aj.field_a ||
-                  qe.field_k ||
+                if (TextWidgetPainter.field_a ||
+                  TextFieldValidator.field_k ||
                   Js5Archive.field_e) {
                   var3 = 1;
                 }
                 if (var3 != 0) {
-                  ve.c((byte) -121);
+                  EmailValidator.beginReconnect((byte) -121);
                 }
               }
               return;
             }
-            if (9 == ci.field_q) {
-              wm.c((byte) -86);
-              jk.field_c = 2;
-              ec.field_z = 3.1415927410125732f;
-              hm.field_c = 9;
-              qe.field_k = false;
-              em.field_c = 128.0f;
-              kn.field_J = sh.field_qb.readString(-117);
+            if (9 == PasswordConfirmationValidator.field_q) {
+              TriangleMesh.commitScreenChange((byte) -86);
+              BitCountAndDialogHelpers.field_c = 2;
+              SingleChildWidget.field_z = 3.1415927410125732f;
+              GameClock.field_c = 9;
+              TextFieldValidator.field_k = false;
+              TooltipAndOptionsHelpers.field_c = 128.0f;
+              FadeLayer.field_J = ProgressMessageDialog.field_qb.readString(-117);
               continue;
             }
-            if (ci.field_q == 14) {
-              vm.$cfr$intArgs$a$45c25716b3df(30, ih.field_d);
-              wm.c((byte) -86);
-              jj.a(ra.a(8742, 2), ci.j(param0 - 126), ra.field_e, 8, eg.d(1048576), 1024, 150, ra.a(8742, 2000), wn.field_j.length, ri.b((byte) 51));
-              dl.a(bf.a((byte) -96), (byte) -127, fa.c(16777215));
-              hm.field_c = -2;
-              qe.field_k = false;
-              aj.field_a = true;
+            if (PasswordConfirmationValidator.field_q == 14) {
+              SoundPlaybackHelpers.playSoundEffect(30, FullscreenState.field_d);
+              TriangleMesh.commitScreenChange((byte) -86);
+              WidgetStyleLayer.initializeLobbyState(ScoreSubmissionHelpers.nextPowerOfTwo(8742, 2), PasswordConfirmationValidator.getGameListContent(param0 - 126), ScoreSubmissionHelpers.field_e, 8, MusicCrossfadeStream.getGameMemberListContent(1048576), 1024, 150, ScoreSubmissionHelpers.nextPowerOfTwo(8742, 2000), MidiNote.field_j.length, TextLayoutLine.getBoardScrollContent((byte) 51));
+              ConnectionStage.bindLobbyLists(ReflectionCheck.getFriendListContent((byte) -96), (byte) -127, PendingSubmission.getDisplayNamePanelWidget(16777215));
+              GameClock.field_c = -2;
+              TextFieldValidator.field_k = false;
+              TextWidgetPainter.field_a = true;
               continue;
             }
-            if (ci.field_q == 15) {
-              if (aj.field_a) {
-                wm.c((byte) -86);
-                wm.b(param0 ^ 2);
-                fn.a((byte) -69);
-                hm.field_c = 0;
-                th.field_q = true;
-                mn.field_e = true;
-                vm.field_e = false;
-                dd.field_a = false;
-                aj.field_a = false;
-                on.field_d = false;
-                jm.a(320, 240, param0 ^ -2);
-                if (null != vg.field_I &&
-                  1 == vg.field_I.localPlayer) {
+            if (PasswordConfirmationValidator.field_q == 15) {
+              if (TextWidgetPainter.field_a) {
+                TriangleMesh.commitScreenChange((byte) -86);
+                TriangleMesh.closeAllPopups(param0 ^ 2);
+                LobbySessionHelpers.clearChatHistory((byte) -69);
+                GameClock.field_c = 0;
+                QuickChatPhraseDefinition.field_q = true;
+                DrawOfferMenuHelpers.field_e = true;
+                SoundPlaybackHelpers.field_e = false;
+                DecodedSpriteHelpers.field_a = false;
+                TextWidgetPainter.field_a = false;
+                LoginRsaKey.field_d = false;
+                LobbyLayout.setViewportOrigin(320, 240, param0 ^ -2);
+                if (null != DropTargetWidget.field_I &&
+                  1 == DropTargetWidget.field_I.localPlayer) {
                   stackIn_83_0 = 0.0;
                 } else {
                   stackIn_83_0 = 3.141592653589793;
                 }
-                sj.field_o = (float)stackIn_83_0;
-                BufferedSocket.a(false, (byte) -106);
-                vm.field_d[0] = (double)lj.field_r * Math.sin((double)cf.field_c);
-                vm.field_d[2] = (double)lj.field_r * Math.cos((double)cf.field_c);
-                ka.a(true, (byte) 87);
-                gb.c((byte) -44);
+                ArchiveIndex.field_o = (float)stackIn_83_0;
+                BufferedSocket.resetCameraTargets(false, (byte) -106);
+                SoundPlaybackHelpers.field_d[0] = (double)CheckboxPainter.field_r * Math.sin((double)CommonUiHelpers.field_c);
+                SoundPlaybackHelpers.field_d[2] = (double)CheckboxPainter.field_r * Math.cos((double)CommonUiHelpers.field_c);
+                PendingRequest.createGameOptions(true, (byte) 87);
+                MarkerSlider.updateCameraMatrix((byte) -44);
               }
               Js5Archive.field_e = false;
-              qe.field_k = false;
+              TextFieldValidator.field_k = false;
               continue;
             }
-            if (ci.field_q == 10 &&
-              aj.field_a) {
-              bj.a(-51);
+            if (PasswordConfirmationValidator.field_q == 10 &&
+              TextWidgetPainter.field_a) {
+              DelayedPacket.handleSocialListPacket(-51);
               continue;
             }
-            if (67 == ci.field_q) {
-              var2_intLifetime1Lifetime1 = sh.field_qb.readUnsignedByte(11132);
+            if (67 == PasswordConfirmationValidator.field_q) {
+              var2_intLifetime1Lifetime1 = ProgressMessageDialog.field_qb.readUnsignedByte(11132);
               var3Lifetime1 = 1 << var2_intLifetime1Lifetime1;
-              rn.field_c = rn.field_c | var3Lifetime1;
-              this.field_I.a(new hj(var2_intLifetime1Lifetime1), (byte) -61);
+              SocketConnector.field_c = SocketConnector.field_c | var3Lifetime1;
+              this.field_I.addFirst(new AchievementNotice(var2_intLifetime1Lifetime1), (byte) -61);
               continue;
             }
-            if (ci.field_q != 57 &&
-              ci.field_q != 58) {
-              if (ci.field_q == 59) {
-                if (dd.field_a ||
-                  on.field_d) {
-                  wm.c((byte) -86);
-                  if (dd.field_a) {
-                    vg.field_I.a((byte) -70, false);
+            if (PasswordConfirmationValidator.field_q != 57 &&
+              PasswordConfirmationValidator.field_q != 58) {
+              if (PasswordConfirmationValidator.field_q == 59) {
+                if (DecodedSpriteHelpers.field_a ||
+                  LoginRsaKey.field_d) {
+                  TriangleMesh.commitScreenChange((byte) -86);
+                  if (DecodedSpriteHelpers.field_a) {
+                    DropTargetWidget.field_I.leaveOfflineGame((byte) -70, false);
                   }
-                  ka.a(true, (byte) 87);
-                  bl.field_B = true;
-                  vm.field_e = false;
-                  hm.field_c = -2;
-                  th.field_q = true;
-                  dd.field_a = false;
-                  wc.field_j = 0;
-                  on.field_d = false;
+                  PendingRequest.createGameOptions(true, (byte) 87);
+                  DiskArchiveRequest.field_B = true;
+                  SoundPlaybackHelpers.field_e = false;
+                  GameClock.field_c = -2;
+                  QuickChatPhraseDefinition.field_q = true;
+                  DecodedSpriteHelpers.field_a = false;
+                  QuickChatCategoryCache.field_j = 0;
+                  LoginRsaKey.field_d = false;
                 }
                 Js5Archive.field_e = false;
                 continue;
               }
               var2 = null;
-              if (dd.field_a) {
-                var2 = vg.field_I;
+              if (DecodedSpriteHelpers.field_a) {
+                var2 = DropTargetWidget.field_I;
               } else {
-                if (on.field_d) {
-                  var2 = ei.field_b;
+                if (LoginRsaKey.field_d) {
+                  var2 = MusicPlaybackHelpers.field_b;
                 }
               }
               if (var2 != null) {
-                if (ci.field_q == 60) {
-                  var3Lifetime2 = sh.field_qb.readUnsignedByte(11132);
-                  var4_int = sh.field_qb.readUnsignedByte(11132);
-                  var5 = sh.field_qb.readUnsignedShort((byte) -92);
+                if (PasswordConfirmationValidator.field_q == 60) {
+                  var3Lifetime2 = ProgressMessageDialog.field_qb.readUnsignedByte(11132);
+                  var4_int = ProgressMessageDialog.field_qb.readUnsignedByte(11132);
+                  var5 = ProgressMessageDialog.field_qb.readUnsignedShort((byte) -92);
                   ((GameSession) (var2)).board.setTurn(var3Lifetime2, var4_int, 21428);
                   if (((GameSession) (var2)).board.field_v == -1) {
                     ((GameSession) (var2)).board.field_v = var3Lifetime2;
                   }
-                  ((GameSession) (var2)).board.a(((GameSession) (var2)).animator.field_h, ((GameSession) (var2)).board.currentPlayer, (byte) 14);
+                  ((GameSession) (var2)).board.markMovableCells(((GameSession) (var2)).animator.field_h, ((GameSession) (var2)).board.currentPlayer, (byte) 14);
                   ((GameSession) (var2)).turnTimer = var5 - 50;
                   if (1 <= ((GameSession) (var2)).turnTimer) {
                     continue;
@@ -1287,12 +1287,12 @@ public final class Virogrid extends od {
                   ((GameSession) (var2)).turnTimer = 1;
                   continue;
                 }
-                if (ci.field_q == 61) {
-                  var3Lifetime2Lifetime1 = sh.field_qb.readUnsignedByte(param0 ^ 11132);
-                  var4_intLifetime2 = sh.field_qb.readUnsignedByte(param0 + 11132);
-                  var5Lifetime1 = sh.field_qb.readUnsignedByte(param0 ^ 11132);
-                  var6 = sh.field_qb.readUnsignedByte(11132);
-                  var7 = sh.field_qb.readUnsignedByte(11132);
+                if (PasswordConfirmationValidator.field_q == 61) {
+                  var3Lifetime2Lifetime1 = ProgressMessageDialog.field_qb.readUnsignedByte(param0 ^ 11132);
+                  var4_intLifetime2 = ProgressMessageDialog.field_qb.readUnsignedByte(param0 + 11132);
+                  var5Lifetime1 = ProgressMessageDialog.field_qb.readUnsignedByte(param0 ^ 11132);
+                  var6 = ProgressMessageDialog.field_qb.readUnsignedByte(11132);
+                  var7 = ProgressMessageDialog.field_qb.readUnsignedByte(11132);
                   ((GameSession) (var2)).board.applyMove(var6, var7, (byte) 119, var3Lifetime2Lifetime1, var4_intLifetime2, var5Lifetime1);
                   ((GameSession) (var2)).animator.syncWithBoard(((GameSession) (var2)).online, 31626);
                   ((GameSession) (var2)).animator.selectedColumn = -1;
@@ -1300,118 +1300,118 @@ public final class Virogrid extends od {
                   ((GameSession) (var2)).animator.selectedRow = -1;
                   continue;
                 }
-                if (ci.field_q == 62) {
-                  var3Lifetime2Lifetime2 = sh.field_qb.readByte((byte) -72);
+                if (PasswordConfirmationValidator.field_q == 62) {
+                  var3Lifetime2Lifetime2 = ProgressMessageDialog.field_qb.readByte((byte) -72);
                   ((GameSession) (var2)).board.finishGame(-39, var3Lifetime2Lifetime2);
-                  ((GameSession) (var2)).board.c((int) sh.field_qb.readByte((byte) -103), 2);
+                  ((GameSession) (var2)).board.setEndReason((int) ProgressMessageDialog.field_qb.readByte((byte) -103), 2);
                   var4 = var2;
                   if (((GameSession) (var4)).localPlayer != -2) {
-                    ((GameSession) (var4)).a(false, -1, 22273, false);
+                    ((GameSession) (var4)).exitToScreen(false, -1, 22273, false);
                   }
                   ((GameSession) (var4)).field_n = 0;
                   continue;
                 }
-                if (ci.field_q == 63) {
-                  ((GameSession) (var2)).board.field_D = sh.field_qb.readUnsignedByte(11132);
-                  if (null == vg.field_I) {
+                if (PasswordConfirmationValidator.field_q == 63) {
+                  ((GameSession) (var2)).board.field_D = ProgressMessageDialog.field_qb.readUnsignedByte(11132);
+                  if (null == DropTargetWidget.field_I) {
                     continue;
                   }
-                  mn.a(false);
+                  DrawOfferMenuHelpers.updateDrawOfferMenuLabel(false);
                   continue;
                 }
-                if (64 == ci.field_q) {
-                  ((GameSession) (var2)).board.field_r = sh.field_qb.readUnsignedByte(11132);
+                if (64 == PasswordConfirmationValidator.field_q) {
+                  ((GameSession) (var2)).board.field_r = ProgressMessageDialog.field_qb.readUnsignedByte(11132);
                   continue;
                 }
-                if (ci.field_q == 65) {
-                  ((GameSession) (var2)).board.field_b = sh.field_qb.readUnsignedByte(param0 ^ 11132);
-                  if (null == vg.field_I) {
+                if (PasswordConfirmationValidator.field_q == 65) {
+                  ((GameSession) (var2)).board.field_b = ProgressMessageDialog.field_qb.readUnsignedByte(param0 ^ 11132);
+                  if (null == DropTargetWidget.field_I) {
                     continue;
                   }
-                  fe.g(1);
+                  NameEntryPopup.updateRematchMenuLabel(1);
                   continue;
                 }
-                if (66 == ci.field_q) {
-                  ((GameSession) (var2)).field_v = sh.field_qb.readUnsignedByte(11132);
-                  if (null == vg.field_I) {
+                if (66 == PasswordConfirmationValidator.field_q) {
+                  ((GameSession) (var2)).field_v = ProgressMessageDialog.field_qb.readUnsignedByte(11132);
+                  if (null == DropTargetWidget.field_I) {
                     continue;
                   }
-                  fe.g(1);
+                  NameEntryPopup.updateRematchMenuLabel(1);
                   continue;
                 }
               }
-              this.n(-108);
+              this.dispatchServerPacket(-108);
               continue;
             }
-            wm.c((byte) -86);
-            var2_intLifetime1Lifetime2 = sh.field_qb.readUnsignedByte(11132);
-            var3Lifetime3 = sh.field_qb.readUnsignedByte(11132);
-            stackIn_99_0 = (sh.field_qb.readUnsignedByte(11132) == 0) ? 0 : 1;
+            TriangleMesh.commitScreenChange((byte) -86);
+            var2_intLifetime1Lifetime2 = ProgressMessageDialog.field_qb.readUnsignedByte(11132);
+            var3Lifetime3 = ProgressMessageDialog.field_qb.readUnsignedByte(11132);
+            stackIn_99_0 = (ProgressMessageDialog.field_qb.readUnsignedByte(11132) == 0) ? 0 : 1;
             var4_intLifetime1 = stackIn_99_0;
             var5_ref_String__ = new String[2];
             for (var7Lifetime1 = 0; var5_ref_String__.length > var7Lifetime1; var7Lifetime1++) {
-              var5_ref_String__[var7Lifetime1] = sh.field_qb.i(15070);
+              var5_ref_String__[var7Lifetime1] = ProgressMessageDialog.field_qb.readZeroPrefixedString(15070);
             }
             var6Lifetime1 = -2;
-            var6Lifetime2 = sh.field_qb.readByte((byte) 62);
+            var6Lifetime2 = ProgressMessageDialog.field_qb.readByte((byte) 62);
             var6Lifetime2 = var6Lifetime2 - (var6Lifetime2 >>> 31);
             var7_ref_ic = new GameSession(true, var2_intLifetime1Lifetime2, var5_ref_String__, var6Lifetime2, var4_intLifetime1 != 0, var3Lifetime3, 0);
-            var7_ref_ic.board.readCells(sh.field_qb, (byte) 57);
+            var7_ref_ic.board.readCells(ProgressMessageDialog.field_qb, (byte) 57);
             var7_ref_ic.animator.resetToBoard(false);
-            if (ci.field_q != 57) {
-              ei.field_b = var7_ref_ic;
-              on.field_d = true;
+            if (PasswordConfirmationValidator.field_q != 57) {
+              MusicPlaybackHelpers.field_b = var7_ref_ic;
+              LoginRsaKey.field_d = true;
               var8 = var7_ref_ic.board.playerNames[0];
               var9 = var7_ref_ic.board.playerNames[1];
-              var14 = oi.a(new String[]{var8, var9}, lm.textPlayers, 2);
-              gf.a(mi.field_d, 0, false, var14, 1, var7_ref_ic.board.playerNames[0]);
+              var14 = MenuScreen.formatIndexedText(new String[]{var8, var9}, AudioPumpThread.textPlayers, 2);
+              ArrayWidgetContainer.addChatMessage(DebouncedValidator.field_d, 0, false, var14, 1, var7_ref_ic.board.playerNames[0]);
             } else {
-              dd.field_a = true;
-              vg.field_I = var7_ref_ic;
+              DecodedSpriteHelpers.field_a = true;
+              DropTargetWidget.field_I = var7_ref_ic;
               if (var7_ref_ic.field_t) {
                 var8 = var7_ref_ic.board.playerNames[0];
                 var9_int = 0;
-                while (PacketBuffer.a(var8, true)) {
+                while (PacketBuffer.isLocalPlayerName(var8, true)) {
                   var9_int++;
                   var8 = var7_ref_ic.board.playerNames[var9_int];
                 }
-                var12 = oi.a(new String[]{var8}, pc.textOpponent, 2);
-                gf.a(mi.field_d, 0, false, var12, 1, var7_ref_ic.board.playerNames[0]);
+                var12 = MenuScreen.formatIndexedText(new String[]{var8}, SpriteLoadHelpers.textOpponent, 2);
+                ArrayWidgetContainer.addChatMessage(DebouncedValidator.field_d, 0, false, var12, 1, var7_ref_ic.board.playerNames[0]);
               }
               array$1 = new String[1];
               stackIn_112_0 = array$1;
               stackIn_112_1 = array$1;
               stackIn_112_2 = 0;
               if (var6Lifetime2 != 0) {
-                stackIn_113_3 = pb.textColourWhite;
+                stackIn_113_3 = TextHotspot.textColourWhite;
               } else {
                 stackIn_113_3 = GameApplet.textColourBlue;
               }
               stackIn_112_1[stackIn_112_2] = stackIn_113_3;
-              var13 = oi.a(stackIn_112_0, rf.textYourcolour, 2);
-              gf.a(mi.field_d, 0, false, var13, 1, var7_ref_ic.board.playerNames[0]);
+              var13 = MenuScreen.formatIndexedText(stackIn_112_0, TriangleSortHelpers.textYourcolour, 2);
+              ArrayWidgetContainer.addChatMessage(DebouncedValidator.field_d, 0, false, var13, 1, var7_ref_ic.board.playerNames[0]);
             }
-            lj.b(122);
+            CheckboxPainter.setupNewGameScene(122);
             Js5Archive.field_e = false;
-            vm.field_e = true;
-            hm.field_c = -1;
+            SoundPlaybackHelpers.field_e = true;
+            GameClock.field_c = -1;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw kg.a((Throwable) (var2), "Virogrid.E(" + param0 + ')');
+          throw AsyncCheckResult.wrapException((Throwable) (var2), "Virogrid.E(" + param0 + ')');
         }
     }
 
     public final void init() {
         try {
-          this.a("virogrid", 15, (byte) 118);
+          this.initializeApplet("virogrid", 15, (byte) 118);
         } catch (RuntimeException runtimeException) {
-          throw kg.a((Throwable) ((Object) runtimeException), "Virogrid.init()");
+          throw AsyncCheckResult.wrapException((Throwable) ((Object) runtimeException), "Virogrid.init()");
         }
     }
 
-    private final int[] a(byte param0, Model param1) {
+    private final int[] getSceneryModelTransform(byte param0, Model param1) {
         RuntimeException var3 = null;
         int[] stackIn_3_0 = null;
         RuntimeException stackIn_7_0 = null;
@@ -1420,9 +1420,9 @@ public final class Virogrid extends od {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 <= 61) {
-            Virogrid.$cfr$intArgs$b$d65aded092bd(94, false);
+            Virogrid.createDobResultReply(94, false);
           }
-          stackIn_3_0 = bi.field_c;
+          stackIn_3_0 = ChatShortcutHelpers.field_c;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1434,27 +1434,27 @@ public final class Virogrid extends od {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw kg.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw AsyncCheckResult.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
-    private final void e(boolean param0) {
+    private final void renderHighDetailFrame(boolean param0) {
         int stackIn_36_0 = 0;
         int stackIn_40_0 = 0;
         int stackIn_46_0 = 0;
         int stackIn_80_0 = 0;
         int stackIn_89_0 = 0;
-        il stackIn_113_0 = null;
+        ModelMesh stackIn_113_0 = null;
         boolean stackIn_114_1 = false;
-        il stackIn_124_0 = null;
+        ModelMesh stackIn_124_0 = null;
         boolean stackIn_125_1 = false;
-        il stackIn_130_0 = null;
+        ModelMesh stackIn_130_0 = null;
         boolean stackIn_131_1 = false;
-        il stackIn_136_0 = null;
+        ModelMesh stackIn_136_0 = null;
         boolean stackIn_137_1 = false;
-        il stackIn_143_0 = null;
+        ModelMesh stackIn_143_0 = null;
         boolean stackIn_144_1 = false;
-        il stackIn_148_0 = null;
+        ModelMesh stackIn_148_0 = null;
         boolean stackIn_149_1 = false;
         RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
@@ -1474,7 +1474,7 @@ public final class Virogrid extends od {
         int var14 = 0;
         int var15 = 0;
         Object var16 = null;
-        fl var16_ref = null;
+        FallingParticle var16_ref = null;
         int var17 = 0;
         int[] var18 = null;
         int[] var19 = null;
@@ -1502,121 +1502,121 @@ public final class Virogrid extends od {
         var17 = field_F ? 1 : 0;
         try {
           var2_int = param0 ? 1 : 0;
-          if (i.field_y == hm.field_c &&
-            pg.field_g == nf.field_g) {
-            if (i.field_y != -2) {
-              lm.a(i.field_y, -1, true, nf.field_g, 0);
+          if (MidiPcmStream.field_y == GameClock.field_c &&
+            LobbySortHelpers.field_g == TextDecodeHelpers.field_g) {
+            if (MidiPcmStream.field_y != -2) {
+              AudioPumpThread.drawMenuScreen(MidiPcmStream.field_y, -1, true, TextDecodeHelpers.field_g, 0);
             } else {
-              ej.a(false, 25680);
+              LabeledChildWidget.clearScreen(false, 25680);
               var2_int = 0;
             }
           } else {
-            if (i.field_y != -2) {
-              if (hm.field_c != -2) {
-                if (we.field_l >= 16) {
-                  lm.a(hm.field_c, 1 + (-we.field_l + 32), false, pg.field_g, 0);
+            if (MidiPcmStream.field_y != -2) {
+              if (GameClock.field_c != -2) {
+                if (ClientEnvironmentHelpers.field_l >= 16) {
+                  AudioPumpThread.drawMenuScreen(GameClock.field_c, 1 + (-ClientEnvironmentHelpers.field_l + 32), false, LobbySortHelpers.field_g, 0);
                 } else {
-                  lm.a(i.field_y, we.field_l + 1, false, nf.field_g, 0);
+                  AudioPumpThread.drawMenuScreen(MidiPcmStream.field_y, ClientEnvironmentHelpers.field_l + 1, false, TextDecodeHelpers.field_g, 0);
                 }
               } else {
-                if (we.field_l >= 16) {
+                if (ClientEnvironmentHelpers.field_l >= 16) {
                   var2_int = 0;
-                  ej.a(false, 25680);
+                  LabeledChildWidget.clearScreen(false, 25680);
                 } else {
-                  lm.a(i.field_y, -1, false, nf.field_g, 0);
+                  AudioPumpThread.drawMenuScreen(MidiPcmStream.field_y, -1, false, TextDecodeHelpers.field_g, 0);
                 }
               }
             } else {
-              if (we.field_l >= 16) {
-                lm.a(hm.field_c, -1, false, pg.field_g, 0);
+              if (ClientEnvironmentHelpers.field_l >= 16) {
+                AudioPumpThread.drawMenuScreen(GameClock.field_c, -1, false, LobbySortHelpers.field_g, 0);
               } else {
                 var2_int = 0;
-                ej.a(false, 25680);
+                LabeledChildWidget.clearScreen(false, 25680);
               }
             }
           }
           boolean decompiledFrameRemainder0 = true;
           if (var2_int != 0) {
             Rasterizer.fillRectangle(0, 0, 640, 480, 3158064);
-            this.e((byte) -62);
-            pc.a(mk.field_bb, (byte) -86);
-            si.a(nk.field_K, new double[]{-110.0, 26.0, -410.0}, new double[]{-1.0, 0.0, 0.0}, 64.0, 114.0, mk.field_bb, 2621440, 10420224, 10485760, 26148864, ke.field_p.field_k);
-            lk.field_Qb.drawTransformed(pe.field_j, bi.field_c);
+            this.drawSpotlightProjections((byte) -62);
+            SpriteLoadHelpers.renderPieceModelsToSprite(FullscreenErrorDialog.field_bb, (byte) -86);
+            CameraProjectionMath.drawPerspectiveTexturedQuad(HotspotTextWidget.field_K, new double[]{-110.0, 26.0, -410.0}, new double[]{-1.0, 0.0, 0.0}, 64.0, 114.0, FullscreenErrorDialog.field_bb, 2621440, 10420224, 10485760, 26148864, WidgetNode.field_p.field_k);
+            LobbyPlayerEntry.field_Qb.drawTransformed(PlayingSound.field_j, ChatShortcutHelpers.field_c);
             var23 = new int[12];
             var18 = var23;
             var3 = var18;
             for (var4 = 0; var4 < 3; var4++) {
-              var3[var4] = pe.field_j[var4] << 3;
+              var3[var4] = PlayingSound.field_j[var4] << 3;
             }
             for (var4Lifetime1 = 3; var4Lifetime1 < var23.length; var4Lifetime1++) {
-              var3[var4Lifetime1] = pe.field_j[var4Lifetime1];
+              var3[var4Lifetime1] = PlayingSound.field_j[var4Lifetime1];
             }
-            stackIn_36_0 = (!(vm.field_d[2] > 0.0)) ? 0 : 1;
+            stackIn_36_0 = (!(SoundPlaybackHelpers.field_d[2] > 0.0)) ? 0 : 1;
             var4Lifetime2 = stackIn_36_0;
-            stackIn_40_0 = (!(0.0 < vm.field_d[0])) ? 0 : 1;
+            stackIn_40_0 = (!(0.0 < SoundPlaybackHelpers.field_d[0])) ? 0 : 1;
             var5 = stackIn_40_0;
-            if (!(72.0 < vm.field_d[0])) {
-              stackIn_46_0 = (vm.field_d[0] < -72.0) ? 1 : 0;
+            if (!(72.0 < SoundPlaybackHelpers.field_d[0])) {
+              stackIn_46_0 = (SoundPlaybackHelpers.field_d[0] < -72.0) ? 1 : 0;
             } else {
               stackIn_46_0 = 1;
             }
             var6 = stackIn_46_0;
-            if (we.field_c.field_F != this.field_E ||
-              da.field_k[0] != vm.field_d[0] ||
-              vm.field_d[1] != da.field_k[1] ||
-              vm.field_d[2] != da.field_k[2]) {
-              this.field_E = we.field_c.field_F;
-              da.field_k[1] = vm.field_d[1];
-              da.field_k[2] = vm.field_d[2];
-              da.field_k[0] = vm.field_d[0];
-              qc.a(118);
-              vb.field_l.makeRasterTarget();
+            if (ClientEnvironmentHelpers.field_c.field_F != this.field_E ||
+              QueuedResultSubmission.field_k[0] != SoundPlaybackHelpers.field_d[0] ||
+              SoundPlaybackHelpers.field_d[1] != QueuedResultSubmission.field_k[1] ||
+              SoundPlaybackHelpers.field_d[2] != QueuedResultSubmission.field_k[2]) {
+              this.field_E = ClientEnvironmentHelpers.field_c.field_F;
+              QueuedResultSubmission.field_k[1] = SoundPlaybackHelpers.field_d[1];
+              QueuedResultSubmission.field_k[2] = SoundPlaybackHelpers.field_d[2];
+              QueuedResultSubmission.field_k[0] = SoundPlaybackHelpers.field_d[0];
+              ArchiveLoadSequence.saveRasterState(118);
+              TextMetricsGlobals.field_l.makeRasterTarget();
               Rasterizer.fillRectangle(0, 0, 640, 480, 0);
-              kg.field_c.drawTransformed(pe.field_j, bi.field_c);
-              nb.field_x.drawTransformed(pe.field_j, bi.field_c);
-              kf.field_c.drawTransformed(pe.field_j, bi.field_c);
-              cm.field_k.drawTransformed(pe.field_j, bi.field_c);
-              ba.field_c.drawTransformed(pe.field_j, bi.field_c);
-              RasterBuffer.field_j.drawTransformed(pe.field_j, bi.field_c);
-              fl.field_s.drawTransformed(pe.field_j, bi.field_c);
+              AsyncCheckResult.field_c.drawTransformed(PlayingSound.field_j, ChatShortcutHelpers.field_c);
+              ArchiveRequest.field_x.drawTransformed(PlayingSound.field_j, ChatShortcutHelpers.field_c);
+              DualLinkHashTable.field_c.drawTransformed(PlayingSound.field_j, ChatShortcutHelpers.field_c);
+              LogoRenderHelpers.field_k.drawTransformed(PlayingSound.field_j, ChatShortcutHelpers.field_c);
+              ArchiveProvider.field_c.drawTransformed(PlayingSound.field_j, ChatShortcutHelpers.field_c);
+              RasterBuffer.field_j.drawTransformed(PlayingSound.field_j, ChatShortcutHelpers.field_c);
+              FallingParticle.field_s.drawTransformed(PlayingSound.field_j, ChatShortcutHelpers.field_c);
               if (var4Lifetime2 == 0) {
-                th.field_y.drawTransformed(var23, this.field_J);
-                pj.field_a.drawTransformed(var23, this.field_H);
+                QuickChatPhraseDefinition.field_y.drawTransformed(var23, this.field_J);
+                RenderTargetHelpers.field_a.drawTransformed(var23, this.field_H);
                 if (var5 == 0) {
                   if (var6 == 0) {
-                    qg.field_h.drawTransformed(var23, this.field_M);
+                    RasterSnapshot.field_h.drawTransformed(var23, this.field_M);
                   }
-                  jg.field_i.drawTransformed(var23, this.field_G);
+                  SoundCache.field_i.drawTransformed(var23, this.field_G);
                 } else {
                   if (var6 == 0) {
-                    jg.field_i.drawTransformed(var23, this.field_G);
+                    SoundCache.field_i.drawTransformed(var23, this.field_G);
                   }
-                  qg.field_h.drawTransformed(var23, this.field_M);
+                  RasterSnapshot.field_h.drawTransformed(var23, this.field_M);
                 }
               } else {
-                ee.field_a.drawTransformed(var23, this.field_K);
-                og.field_l.drawTransformed(var23, this.field_J);
+                GuestPlayHelpers.field_a.drawTransformed(var23, this.field_K);
+                BoundedUrlRequest.field_l.drawTransformed(var23, this.field_J);
                 if (var5 == 0) {
                   if (var6 == 0) {
-                    ab.field_L.drawTransformed(var23, this.field_D);
+                    BirthDateEntryPanel.field_L.drawTransformed(var23, this.field_D);
                   }
-                  rc.field_o.drawTransformed(var23, this.field_B);
+                  MusicPatch.field_o.drawTransformed(var23, this.field_B);
                 } else {
                   if (var6 == 0) {
-                    rc.field_o.drawTransformed(var23, this.field_B);
+                    MusicPatch.field_o.drawTransformed(var23, this.field_B);
                   }
-                  ab.field_L.drawTransformed(var23, this.field_D);
+                  BirthDateEntryPanel.field_L.drawTransformed(var23, this.field_D);
                 }
               }
               if (var4Lifetime2 == 0) {
-                td.field_i.drawTransformed(var23, this.field_L);
+                CanvasPresentHelpers.field_i.drawTransformed(var23, this.field_L);
               } else {
-                hn.field_x.drawTransformed(var23, this.field_N);
+                PendingHighscoreRequest.field_x.drawTransformed(var23, this.field_N);
               }
-              ul.b((byte) 116);
+              LoginCredentialType.popRasterState((byte) 116);
             }
-            vb.field_l.drawTransparent(0, 0);
-            var7 = id.field_r % 64;
+            TextMetricsGlobals.field_l.drawTransparent(0, 0);
+            var7 = UiTheme.field_r % 64;
             if (32 > var7) {
               stackIn_80_0 = -16 + var7;
             } else {
@@ -1624,7 +1624,7 @@ public final class Virogrid extends od {
             }
             var7Lifetime1 = stackIn_80_0;
             var7Lifetime1 = var7Lifetime1 << 2;
-            if (ke.field_p.field_d) {
+            if (WidgetNode.field_p.field_d) {
               var7Lifetime1 = 0;
             }
             var26 = new int[3];
@@ -1636,18 +1636,18 @@ public final class Virogrid extends od {
             var25 = new int[3];
             var20 = var25;
             var10 = var20;
-            var8[0] = (int)ao.field_Hb << 4;
+            var8[0] = (int)ScrollPaneWithFooter.field_Hb << 4;
             var24[0] = 800;
-            var8[1] = -(int)ao.field_Hb << 4;
+            var8[1] = -(int)ScrollPaneWithFooter.field_Hb << 4;
             var25[0] = var7Lifetime1;
             var24[1] = 800;
             var26[2] = 0;
             var25[1] = var7Lifetime1;
             var24[2] = 1280;
             var25[2] = 0;
-            si.a(pe.field_j, var26, var24, var25);
-            if (ke.field_p.field_m) {
-              var11 = id.field_r % 128;
+            CameraProjectionMath.transformTriangleToCamera(PlayingSound.field_j, var26, var24, var25);
+            if (WidgetNode.field_p.field_m) {
+              var11 = UiTheme.field_r % 128;
               if (var11 < 64) {
                 stackIn_89_0 = var11;
               } else {
@@ -1655,7 +1655,7 @@ public final class Virogrid extends od {
               }
               var11Lifetime2 = stackIn_89_0;
               var12 = 38784 + var11Lifetime2 * 2;
-              qf.a(240, 0, 0, var26, var24, var25, var12, var12, var12);
+              ClippedTriangleRenderer.drawTriangle(240, 0, 0, var26, var24, var25, var12, var12, var12);
               var7Lifetime2 = var26[0];
               var8[0] = var26[1];
               var26[1] = var7Lifetime2;
@@ -1665,102 +1665,102 @@ public final class Virogrid extends od {
               var7Lifetime2Lifetime2 = var25[0];
               var10[0] = var25[1];
               var25[1] = var7Lifetime2Lifetime2;
-              qf.a(240, 0, 0, var26, var24, var25, var12, var12, var12);
+              ClippedTriangleRenderer.drawTriangle(240, 0, 0, var26, var24, var25, var12, var12, var12);
             }
-            if (!ke.field_p.field_d) {
+            if (!WidgetNode.field_p.field_d) {
               System.out.println("Warning, drawing non-single plane");
             } else {
-              if (0.0 > nk.field_K[11]) {
-                var27 = new double[ad.field_g.length];
+              if (0.0 > HotspotTextWidget.field_K[11]) {
+                var27 = new double[QuickChatPhraseRegistry.field_g.length];
                 var22 = var27;
                 var11_ref_double__ = var22;
                 for (var12Lifetime1 = 0; var12Lifetime1 < var27.length; var12Lifetime1++) {
-                  var11_ref_double__[var12Lifetime1] = -ad.field_g[var12Lifetime1];
+                  var11_ref_double__[var12Lifetime1] = -QuickChatPhraseRegistry.field_g[var12Lifetime1];
                 }
-                si.a(nk.field_K, new double[]{0.0, 0.0, 0.0}, var11_ref_double__, (double)ao.field_Hb, (double)we.field_k, c.field_d, 7208960, 34668544, 0, 26148864, ke.field_p.field_k);
+                CameraProjectionMath.drawPerspectiveTexturedQuad(HotspotTextWidget.field_K, new double[]{0.0, 0.0, 0.0}, var11_ref_double__, (double)ScrollPaneWithFooter.field_Hb, (double)ClientEnvironmentHelpers.field_k, DisplayNameHelpers.field_d, 7208960, 34668544, 0, 26148864, WidgetNode.field_p.field_k);
               } else {
-                si.a(nk.field_K, new double[]{0.0, 0.0, 0.0}, ad.field_g, (double)ao.field_Hb, (double)we.field_k, c.field_d, 7208960, 34668544, 0, 26148864, ke.field_p.field_k);
+                CameraProjectionMath.drawPerspectiveTexturedQuad(HotspotTextWidget.field_K, new double[]{0.0, 0.0, 0.0}, QuickChatPhraseRegistry.field_g, (double)ScrollPaneWithFooter.field_Hb, (double)ClientEnvironmentHelpers.field_k, DisplayNameHelpers.field_d, 7208960, 34668544, 0, 26148864, WidgetNode.field_p.field_k);
               }
-              if (ke.field_p.field_f > 0) {
-                si.a(nk.field_K, new double[]{0.0, 0.0, 0.0}, ad.field_g, (double)ao.field_Hb, (double)we.field_k, pj.field_d, 40, ke.field_p.field_f);
+              if (WidgetNode.field_p.field_f > 0) {
+                CameraProjectionMath.drawGlowingQuadOutline(HotspotTextWidget.field_K, new double[]{0.0, 0.0, 0.0}, QuickChatPhraseRegistry.field_g, (double)ScrollPaneWithFooter.field_Hb, (double)ClientEnvironmentHelpers.field_k, RenderTargetHelpers.field_d, 40, WidgetNode.field_p.field_f);
               }
             }
-            var16_ref = (fl) (sh.field_tb.a((byte) -61));
+            var16_ref = (FallingParticle) (ProgressMessageDialog.field_tb.first((byte) -61));
             while (var16_ref != null) {
-              var11Lifetime1 = -(pe.field_j[0] << 6) + (var16_ref.field_n >> 8);
-              var7Lifetime3 = -(pe.field_j[2] << 6) + (var16_ref.field_m >> 8);
-              var12Lifetime2 = -(pe.field_j[1] << 6) + (var16_ref.field_p >> 8);
-              var13 = pe.field_j[5] * var7Lifetime3 + var12Lifetime2 * pe.field_j[4] + var11Lifetime1 * pe.field_j[3];
-              var15 = var7Lifetime3 * pe.field_j[11] + (var12Lifetime2 * pe.field_j[10] + var11Lifetime1 * pe.field_j[9]);
-              var14 = var7Lifetime3 * pe.field_j[8] + var12Lifetime2 * pe.field_j[7] + pe.field_j[6] * var11Lifetime1;
+              var11Lifetime1 = -(PlayingSound.field_j[0] << 6) + (var16_ref.field_n >> 8);
+              var7Lifetime3 = -(PlayingSound.field_j[2] << 6) + (var16_ref.field_m >> 8);
+              var12Lifetime2 = -(PlayingSound.field_j[1] << 6) + (var16_ref.field_p >> 8);
+              var13 = PlayingSound.field_j[5] * var7Lifetime3 + var12Lifetime2 * PlayingSound.field_j[4] + var11Lifetime1 * PlayingSound.field_j[3];
+              var15 = var7Lifetime3 * PlayingSound.field_j[11] + (var12Lifetime2 * PlayingSound.field_j[10] + var11Lifetime1 * PlayingSound.field_j[9]);
+              var14 = var7Lifetime3 * PlayingSound.field_j[8] + var12Lifetime2 * PlayingSound.field_j[7] + PlayingSound.field_j[6] * var11Lifetime1;
               var7Lifetime3Lifetime1 = var15 >> 22;
               if (var15 > 0) {
-                Rasterizer.fillRadialPaletteCircle((j.field_b << 4) + (var13 >> 9) / var7Lifetime3Lifetime1, (var14 >> 9) / var7Lifetime3Lifetime1 + (tm.field_g << 4), 16384 / var7Lifetime3Lifetime1, var16_ref.field_o * 5 / 3, pj.field_d);
+                Rasterizer.fillRadialPaletteCircle((NodeHashTableIterator.field_b << 4) + (var13 >> 9) / var7Lifetime3Lifetime1, (var14 >> 9) / var7Lifetime3Lifetime1 + (QueuedListRequest.field_g << 4), 16384 / var7Lifetime3Lifetime1, var16_ref.field_o * 5 / 3, RenderTargetHelpers.field_d);
               }
-              var16_ref = (fl) (sh.field_tb.a(16213));
+              var16_ref = (FallingParticle) (ProgressMessageDialog.field_tb.next(16213));
             }
             if (var4Lifetime2 == 0) {
-              stackIn_113_0 = ee.field_a;
+              stackIn_113_0 = GuestPlayHelpers.field_a;
               stackIn_114_1 = !(param0);
-              sj.a(stackIn_113_0, stackIn_114_1, var23, this.field_K);
-              sj.a(og.field_l, false, var23, this.field_C);
+              ArchiveIndex.drawModel(stackIn_113_0, stackIn_114_1, var23, this.field_K);
+              ArchiveIndex.drawModel(BoundedUrlRequest.field_l, false, var23, this.field_C);
               if (var5 == 0) {
-                sj.a(rc.field_o, false, var23, this.field_B);
+                ArchiveIndex.drawModel(MusicPatch.field_o, false, var23, this.field_B);
                 if (var6 != 0) {
-                  sj.a(qg.field_h, false, var23, this.field_M);
+                  ArchiveIndex.drawModel(RasterSnapshot.field_h, false, var23, this.field_M);
                 }
-                sj.a(ab.field_L, false, var23, this.field_D);
+                ArchiveIndex.drawModel(BirthDateEntryPanel.field_L, false, var23, this.field_D);
               } else {
-                sj.a(ab.field_L, false, var23, this.field_D);
+                ArchiveIndex.drawModel(BirthDateEntryPanel.field_L, false, var23, this.field_D);
                 if (var6 != 0) {
-                  sj.a(jg.field_i, false, var23, this.field_G);
+                  ArchiveIndex.drawModel(SoundCache.field_i, false, var23, this.field_G);
                 }
-                sj.a(rc.field_o, false, var23, this.field_B);
+                ArchiveIndex.drawModel(MusicPatch.field_o, false, var23, this.field_B);
               }
               decompiledFrameRemainder0 = false;
             }
             else {
-              stackIn_124_0 = th.field_y;
+              stackIn_124_0 = QuickChatPhraseDefinition.field_y;
               stackIn_125_1 = !(param0);
-              sj.a(stackIn_124_0, stackIn_125_1, var23, this.field_J);
-              sj.a(pj.field_a, false, var23, this.field_H);
+              ArchiveIndex.drawModel(stackIn_124_0, stackIn_125_1, var23, this.field_J);
+              ArchiveIndex.drawModel(RenderTargetHelpers.field_a, false, var23, this.field_H);
               if (var5 == 0) {
-                sj.a(jg.field_i, false, var23, this.field_G);
+                ArchiveIndex.drawModel(SoundCache.field_i, false, var23, this.field_G);
                 if (var6 != 0) {
-                  stackIn_130_0 = ab.field_L;
+                  stackIn_130_0 = BirthDateEntryPanel.field_L;
                   stackIn_131_1 = !(param0);
-                  sj.a(stackIn_130_0, stackIn_131_1, var23, this.field_D);
+                  ArchiveIndex.drawModel(stackIn_130_0, stackIn_131_1, var23, this.field_D);
                 }
-                sj.a(qg.field_h, false, var23, this.field_M);
+                ArchiveIndex.drawModel(RasterSnapshot.field_h, false, var23, this.field_M);
               } else {
-                stackIn_136_0 = qg.field_h;
+                stackIn_136_0 = RasterSnapshot.field_h;
                 stackIn_137_1 = !(param0);
-                sj.a(stackIn_136_0, stackIn_137_1, var23, this.field_M);
+                ArchiveIndex.drawModel(stackIn_136_0, stackIn_137_1, var23, this.field_M);
                 if (var6 != 0) {
-                  stackIn_143_0 = rc.field_o;
+                  stackIn_143_0 = MusicPatch.field_o;
                   stackIn_144_1 = !(param0);
-                  sj.a(stackIn_143_0, stackIn_144_1, var23, this.field_B);
+                  ArchiveIndex.drawModel(stackIn_143_0, stackIn_144_1, var23, this.field_B);
                 }
-                stackIn_148_0 = jg.field_i;
+                stackIn_148_0 = SoundCache.field_i;
                 stackIn_149_1 = !(param0);
-                sj.a(stackIn_148_0, stackIn_149_1, var23, this.field_G);
+                ArchiveIndex.drawModel(stackIn_148_0, stackIn_149_1, var23, this.field_G);
               }
             }
           }
-          if (i.field_y == 10 &&
-            hm.field_c == 10) {
-            ij.a((byte) 105);
+          if (MidiPcmStream.field_y == 10 &&
+            GameClock.field_c == 10) {
+            BackgroundParticle.drawBootSequenceText((byte) 105);
             return;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw kg.a((Throwable) ((Object) var2), "Virogrid.UA(" + param0 + ')');
+          throw AsyncCheckResult.wrapException((Throwable) ((Object) var2), "Virogrid.UA(" + param0 + ')');
         }
     }
 
-    private final void a(boolean param0, boolean param1) {
+    private final void updateScreens(boolean param0, boolean param1) {
         int fieldTemp$0 = 0;
         int stackIn_91_0 = 0;
         int stackIn_106_0 = 0;
@@ -1779,197 +1779,197 @@ public final class Virogrid extends od {
           if (param0) {
             return;
           }
-          if (tg.field_x == 0) {
+          if (TextButton.field_x == 0) {
             boolean decompiledFrameRemainder0 = true;
             var3_int = 0;
             var4 = 0;
             if (!param1) {
-              if (i.field_y == hm.field_c &&
-                pg.field_g == nf.field_g) {
-                if (i.field_y != -1) {
-                  if (i.field_y == -2) {
+              if (MidiPcmStream.field_y == GameClock.field_c &&
+                LobbySortHelpers.field_g == TextDecodeHelpers.field_g) {
+                if (MidiPcmStream.field_y != -1) {
+                  if (MidiPcmStream.field_y == -2) {
                     var3_int = 1;
                   } else {
-                    if (!(!mf.a(107, i.field_y))) {
-                      al.field_j[i.field_y].a((byte) -79);
+                    if (!(!NanoTickClock.isNonNegative(107, MidiPcmStream.field_y))) {
+                      DateOfBirthValidator.field_j[MidiPcmStream.field_y].handleInput((byte) -79);
                     }
                   }
                 } else {
-                  if (aj.field_a) {
+                  if (TextWidgetPainter.field_a) {
                     var3_int = 1;
                     var4 = 1;
                   } else {
-                    vg.field_I.tick(-104, true);
-                    while (nd.b((byte) -107)) {
-                      vg.field_I.d(117);
+                    DropTargetWidget.field_I.tick(-104, true);
+                    while (GrowableIntList.pollKeyEvent((byte) -107)) {
+                      DropTargetWidget.field_I.handleEscapeKey(117);
                     }
                   }
                 }
                 decompiledFrameRemainder0 = false;
               }
               else {
-                we.field_l = we.field_l + 1;
-                if (we.field_l == 32) {
-                  wm.c((byte) -86);
+                ClientEnvironmentHelpers.field_l = ClientEnvironmentHelpers.field_l + 1;
+                if (ClientEnvironmentHelpers.field_l == 32) {
+                  TriangleMesh.commitScreenChange((byte) -86);
                 }
               }
             }
-            if (aj.field_a &&
-              !qe.field_k &&
+            if (TextWidgetPainter.field_a &&
+              !TextFieldValidator.field_k &&
               !Js5Archive.field_e) {
-              bc.a(var3_int != 0, (byte) -120);
-              if (on.field_d) {
-                ei.field_b.tick(-103, var4 != 0);
+              ByteArrayPool.updateLobbyAndFlushRequests(var3_int != 0, (byte) -120);
+              if (LoginRsaKey.field_d) {
+                MusicPlaybackHelpers.field_b.tick(-103, var4 != 0);
               }
-              if (dd.field_a) {
-                vg.field_I.tick(-111, var4 != 0);
+              if (DecodedSpriteHelpers.field_a) {
+                DropTargetWidget.field_I.tick(-111, var4 != 0);
               }
-              while (nd.b((byte) -111)) {
-                if (bl.field_B) {
-                  ln.a(15, (byte) 104, 12, 13);
+              while (GrowableIntList.pollKeyEvent((byte) -111)) {
+                if (DiskArchiveRequest.field_B) {
+                  NodeHashTable.handleEscapeForOverlays(15, (byte) 104, 12, 13);
                 }
-                if (on.field_d) {
-                  ei.field_b.d(-114);
+                if (LoginRsaKey.field_d) {
+                  MusicPlaybackHelpers.field_b.handleEscapeKey(-114);
                 }
-                if (!dd.field_a) {
+                if (!DecodedSpriteHelpers.field_a) {
                   continue;
                 }
-                vg.field_I.d(-20);
+                DropTargetWidget.field_I.handleEscapeKey(-20);
               }
             }
-            if (!aj.field_a) {
-              mf.e(1);
+            if (!TextWidgetPainter.field_a) {
+              NanoTickClock.updateLobbyTransitions(1);
             }
-            var5 = we.field_c.field_F;
-            if (bl.field_B &&
-              aj.field_a) {
-              stackIn_91_0 = dh.field_r;
+            var5 = ClientEnvironmentHelpers.field_c.field_F;
+            if (DiskArchiveRequest.field_B &&
+              TextWidgetPainter.field_a) {
+              stackIn_91_0 = RankingsRequest.field_r;
             } else {
               stackIn_91_0 = 481;
             }
             var6 = stackIn_91_0;
-            tn.field_g = tn.field_g + (-tn.field_g + (float)var6) * 0.10000000149011612f;
-            if ((int)((double)tn.field_g + 0.5) != var5) {
-              sl.a(-118, (int)tn.field_g);
-              jm.a(320, ((int)(tn.field_g * 4.0f) + 240) / 9, -2);
+            MenuInputState.field_g = MenuInputState.field_g + (-MenuInputState.field_g + (float)var6) * 0.10000000149011612f;
+            if ((int)((double)MenuInputState.field_g + 0.5) != var5) {
+              WeightedLruCache.drawRootWidget(-118, (int)MenuInputState.field_g);
+              LobbyLayout.setViewportOrigin(320, ((int)(MenuInputState.field_g * 4.0f) + 240) / 9, -2);
             }
-            if (null != this.field_I.a((byte) -102)) {
+            if (null != this.field_I.first((byte) -102)) {
               fieldTemp$0 = this.field_A + 1;
               this.field_A = this.field_A + 1;
               if (fieldTemp$0 == 335) {
                 this.field_A = 0;
-                this.field_I.d(-29889);
+                this.field_I.removeFirst(-29889);
               }
             }
             if (!param1) {
-              li.a(param0);
+              ViewportController.updateGameScreen(param0);
             }
           } else {
-            if (tg.field_x == 1) {
-              wa.field_K = wa.field_K + 1;
-              if (wa.field_K == 16) {
-                if (!a.field_D) {
-                  dn.a(8192);
+            if (TextButton.field_x == 1) {
+              EditableTextWidget.field_K = EditableTextWidget.field_K + 1;
+              if (EditableTextWidget.field_K == 16) {
+                if (!PasswordFieldPainter.field_D) {
+                  InputDetachHelpers.returnToLoginStage(8192);
                 } else {
-                  ka.a(0);
+                  PendingRequest.openLoginPanelAtStage(0);
                 }
-                tg.field_x = 2;
+                TextButton.field_x = 2;
               }
             } else {
-              if (2 != tg.field_x) {
-                wa.field_K = wa.field_K - 1;
-                if (wa.field_K == 0) {
-                  tg.field_x = 0;
+              if (2 != TextButton.field_x) {
+                EditableTextWidget.field_K = EditableTextWidget.field_K - 1;
+                if (EditableTextWidget.field_K == 0) {
+                  TextButton.field_x = 0;
                 }
               } else {
-                if (!qm.i(20)) {
-                  hm.field_c = pm.field_k;
-                  wn.c(param0);
-                  if (a.field_D) {
-                    a.field_D = false;
-                    GameSession.a(ib.frameSprites, hd.standardFont.field_A, 320, ib.frameSprites, 8, mc.menuFont, 2, hd.standardFont.field_G + hd.standardFont.field_A, 8, -16824, false, 240);
+                if (!VerticalScrollbar.isGuestSession(20)) {
+                  GameClock.field_c = MouseTrailPoint.field_k;
+                  MidiNote.setGameViewFlag(param0);
+                  if (PasswordFieldPainter.field_D) {
+                    PasswordFieldPainter.field_D = false;
+                    GameSession.applyLobbyTheme(MusicVolumeAndOverlayHelpers.frameSprites, ReflectionCheckHelpers.standardFont.field_A, 320, MusicVolumeAndOverlayHelpers.frameSprites, 8, PopupInputHelpers.menuFont, 2, ReflectionCheckHelpers.standardFont.field_G + ReflectionCheckHelpers.standardFont.field_A, 8, -16824, false, 240);
                   }
-                  if (bj.field_n) {
-                    var3_int = bd.field_e;
-                    if (0 == hm.field_c ||
-                      i.field_y == 2 ||
-                      i.field_y == 3 ||
-                      4 == hm.field_c ||
-                      hm.field_c == 5) {
-                      var3_int = hm.field_c;
+                  if (DelayedPacket.field_n) {
+                    var3_int = LoginMethodHelpers.field_e;
+                    if (0 == GameClock.field_c ||
+                      MidiPcmStream.field_y == 2 ||
+                      MidiPcmStream.field_y == 3 ||
+                      4 == GameClock.field_c ||
+                      GameClock.field_c == 5) {
+                      var3_int = GameClock.field_c;
                     }
-                    gb.a(-2, var3_int, false, -4);
+                    MarkerSlider.changeScreen(-2, var3_int, false, -4);
                   }
-                  if (mf.a(86, hm.field_c)) {
-                    wm.c((byte) -86);
+                  if (NanoTickClock.isNonNegative(86, GameClock.field_c)) {
+                    TriangleMesh.commitScreenChange((byte) -86);
                   }
                 }
-                tg.field_x = 3;
+                TextButton.field_x = 3;
               }
             }
           }
-          if (-3 == hm.field_c) {
-            var8 = new String[]{mb.playernameHotseat1, em.playernameHotseat2};
-            vg.field_I = new GameSession(false, eg.field_y, var8, 0, false, ll.field_b, ce.field_I);
-            lj.b(101);
-            stackIn_106_0 = (!pn.field_x) ? 0 : 1;
+          if (-3 == GameClock.field_c) {
+            var8 = new String[]{ContentTransitionDialog.playernameHotseat1, TooltipAndOptionsHelpers.playernameHotseat2};
+            DropTargetWidget.field_I = new GameSession(false, MusicCrossfadeStream.field_y, var8, 0, false, TextJoinHelpers.field_b, DraggableWidget.field_I);
+            CheckboxPainter.setupNewGameScene(101);
+            stackIn_106_0 = (!SocketJs5Transport.field_x) ? 0 : 1;
             var4Lifetime1 = stackIn_106_0;
-            gb.a(-2, 0, var4Lifetime1 != 0, -1);
-            vm.field_e = true;
+            MarkerSlider.changeScreen(-2, 0, var4Lifetime1 != 0, -1);
+            SoundPlaybackHelpers.field_e = true;
           }
-          if (hm.field_c == -4) {
-            gk.field_g.g(9, 8);
-            qe.field_k = true;
-            hm.field_c = i.field_y;
+          if (GameClock.field_c == -4) {
+            IterableNodeHashTable.field_g.writeCipheredOpcode(9, 8);
+            TextFieldValidator.field_k = true;
+            GameClock.field_c = MidiPcmStream.field_y;
           }
-          if (-5 == hm.field_c) {
-            nn.a(wl.field_d.e((byte) -124), 11, (byte) -120);
+          if (-5 == GameClock.field_c) {
+            ChatSettingsHelpers.sendShortRequest(AudioSetupHelpers.field_d.getGameId((byte) -124), 11, (byte) -120);
             Js5Archive.field_e = true;
-            hm.field_c = i.field_y;
+            GameClock.field_c = MidiPcmStream.field_y;
           }
-          oj.e((byte) -75);
-          if (db.b((byte) 13, 0)) {
-            if (vg.field_I != null &&
-              vg.field_I.online &&
-              vg.field_I.field_t &&
-              vg.field_I.board.turnCount > sh.a(4712, 40000) &&
-              !vg.field_I.field_l) {
-              vg.field_I.field_l = true;
-              hj.field_h = id.field_c;
-              ca.field_G = c.field_a;
+          QuickChatMenu.updateCameraTransition((byte) -75);
+          if (Bzip2State.hasFeatureBit((byte) 13, 0)) {
+            if (DropTargetWidget.field_I != null &&
+              DropTargetWidget.field_I.online &&
+              DropTargetWidget.field_I.field_t &&
+              DropTargetWidget.field_I.board.turnCount > ProgressMessageDialog.randomInt(4712, 40000) &&
+              !DropTargetWidget.field_I.field_l) {
+              DropTargetWidget.field_I.field_l = true;
+              AchievementNotice.field_h = UiTheme.field_c;
+              LoginPanel.field_G = DisplayNameHelpers.field_a;
             }
-            if (hj.field_h <= 0) {
-              var3_intLifetime1 = 1 + c.field_a;
-              if (ca.field_G < var3_intLifetime1) {
-                ca.field_G = 0;
+            if (AchievementNotice.field_h <= 0) {
+              var3_intLifetime1 = 1 + DisplayNameHelpers.field_a;
+              if (LoginPanel.field_G < var3_intLifetime1) {
+                LoginPanel.field_G = 0;
               } else {
-                bm.d(var3_intLifetime1, 0);
+                CachedTextLayout.setMusicVolume(var3_intLifetime1, 0);
               }
             } else {
-              hj.field_h = hj.field_h - 1;
-              var3_intLifetime1 = c.field_a - 4;
+              AchievementNotice.field_h = AchievementNotice.field_h - 1;
+              var3_intLifetime1 = DisplayNameHelpers.field_a - 4;
               if (var3_intLifetime1 < 0) {
                 var3_intLifetime1 = 0;
               }
-              bm.d(var3_intLifetime1, 0);
-              if (0 == sh.a(4712, 20)) {
-                ed.a(sh.a(4712, 256), dj.field_f[sh.a(4712, 3)], -629134904, 96);
+              CachedTextLayout.setMusicVolume(var3_intLifetime1, 0);
+              if (0 == ProgressMessageDialog.randomInt(4712, 20)) {
+                ChecksumHelpers.playSampleAtVolume(ProgressMessageDialog.randomInt(4712, 256), PlayerContextMenu.field_f[ProgressMessageDialog.randomInt(4712, 3)], -629134904, 96);
               }
             }
           } else {
-            if (sh.a(4712, 1000) == 0) {
-              gi.a(dj.field_f[sh.a(4712, 3)], 100, 24);
+            if (ProgressMessageDialog.randomInt(4712, 1000) == 0) {
+              ArchiveBytesHelpers.playSound(PlayerContextMenu.field_f[ProgressMessageDialog.randomInt(4712, 3)], 100, 24);
             }
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw kg.a((Throwable) ((Object) var3), "Virogrid.FB(" + param0 + ',' + param1 + ')');
+          throw AsyncCheckResult.wrapException((Throwable) ((Object) var3), "Virogrid.FB(" + param0 + ',' + param1 + ')');
         }
     }
 
-    private final Sprite b(int param0, int param1, int param2) {
+    private final Sprite createRadialGlowSprite(int param0, int param1, int param2) {
         int var5 = 0;
         Sprite var4 = null;
         int var6 = 0;
@@ -1979,25 +1979,25 @@ public final class Virogrid extends od {
         var6 = field_F ? 1 : 0;
         try {
           var4 = new Sprite(57, 57);
-          pj.a(var4, 256);
+          RenderTargetHelpers.setRenderTargetSprite(var4, 256);
           Rasterizer.fillCircle(29, 29, 27, 263172);
           for (var5 = 23; var5 >= 0; var5--) {
             Rasterizer.fillCircle(29, 29, var5, param2 + var5 * param0);
           }
-          ul.b((byte) 93);
+          LoginCredentialType.popRasterState((byte) 93);
           if (param1 != -9105) {
-            this.e(true);
+            this.renderHighDetailFrame(true);
           }
           stackIn_8_0 = var4;
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4_ref = decompiledCaughtException;
-          throw kg.a((Throwable) ((Object) var4_ref), "Virogrid.WA(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw AsyncCheckResult.wrapException((Throwable) ((Object) var4_ref), "Virogrid.WA(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
-    final static void a(Js5Archive param0, byte param1) {
+    final static void loadFinalFrame(Js5Archive param0, byte param1) {
         RuntimeException runtimeException = null;
         Sprite var2 = null;
         int var3 = 0;
@@ -2008,19 +2008,19 @@ public final class Virogrid extends od {
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2 = new Sprite(param0.a("final_frame.jpg", 100, ""), (java.awt.Component) ((Object) UiWidget.field_v));
+          var2 = new Sprite(param0.getFileByName("final_frame.jpg", 100, ""), (java.awt.Component) ((Object) UiWidget.field_v));
           var3 = var2.field_w;
           var4 = var2.field_p;
-          lm.a(0);
+          AudioPumpThread.pushRasterState(0);
           var5 = 120 / ((33 - param1) / 33);
-          nd.field_d = new Sprite(var3, 3 * var4 / 4);
-          nd.field_d.makeRasterTarget();
+          GrowableIntList.field_d = new Sprite(var3, 3 * var4 / 4);
+          GrowableIntList.field_d.makeRasterTarget();
           var2.drawOpaque(0, 0);
-          dn.field_c = new Sprite(var3, -nd.field_d.field_p + var4);
-          dn.field_c.makeRasterTarget();
-          var2.drawOpaque(0, -nd.field_d.field_p);
-          dn.field_c.field_x = nd.field_d.field_p;
-          ai.a(true);
+          InputDetachHelpers.field_c = new Sprite(var3, -GrowableIntList.field_d.field_p + var4);
+          InputDetachHelpers.field_c.makeRasterTarget();
+          var2.drawOpaque(0, -GrowableIntList.field_d.field_p);
+          InputDetachHelpers.field_c.field_x = GrowableIntList.field_d.field_p;
+          ContextMenuHelpers.popRasterTarget(true);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -2032,345 +2032,345 @@ public final class Virogrid extends od {
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw kg.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(param1).append(')').toString());
+          throw AsyncCheckResult.wrapException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(param1).append(')').toString());
         }
     }
 
     private final void openArchives(int param0) {
         try {
-          if (null != uh.field_e) {
-            a.a(20, uh.field_e);
-            uh.field_e = null;
-            sb.a(-52);
+          if (null != ConditionalTextValue.field_e) {
+            PasswordFieldPainter.loadLocalizedText(20, ConditionalTextValue.field_e);
+            ConditionalTextValue.field_e = null;
+            DiskCacheWorker.resetFrameTimingHistory(-52);
           }
-          md.field_h = IntrusiveDeque.a(83, 3);
-          oj.field_Fb = IntrusiveDeque.a(117, 5);
-          g.field_a = IntrusiveDeque.a(98, 6);
-          pj.field_c = IntrusiveDeque.a(89, 7);
-          sf.field_O = IntrusiveDeque.a(param0 ^ 35, 8);
-          BufferedSocket.field_d = IntrusiveDeque.a(64, 9);
-          wm.field_w = IntrusiveDeque.a(97, 10);
-          wn.field_i = IntrusiveDeque.a(33, 11);
-          gn.field_G = IntrusiveDeque.a(param0 ^ 51, 12);
-          ng.field_T = IntrusiveDeque.a(81, param0);
+          IntKeyLookup.field_h = IntrusiveDeque.createArchive(83, 3);
+          QuickChatMenu.field_Fb = IntrusiveDeque.createArchive(117, 5);
+          ChatAndIgnoreHelpers.field_a = IntrusiveDeque.createArchive(98, 6);
+          RenderTargetHelpers.field_c = IntrusiveDeque.createArchive(89, 7);
+          DialogMessagePane.field_O = IntrusiveDeque.createArchive(param0 ^ 35, 8);
+          BufferedSocket.field_d = IntrusiveDeque.createArchive(64, 9);
+          TriangleMesh.field_w = IntrusiveDeque.createArchive(97, 10);
+          MidiNote.field_i = IntrusiveDeque.createArchive(33, 11);
+          CheckboxButton.field_G = IntrusiveDeque.createArchive(param0 ^ 51, 12);
+          ValidationMessageWidget.field_T = IntrusiveDeque.createArchive(81, param0);
         } catch (RuntimeException runtimeException) {
-          throw kg.a((Throwable) ((Object) runtimeException), "Virogrid.AB(" + param0 + ')');
+          throw AsyncCheckResult.wrapException((Throwable) ((Object) runtimeException), "Virogrid.AB(" + param0 + ')');
         }
     }
 
-    final void a(int param0) {
+    final void shutdownClientServices(int param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
           if (param0 >= -80) {
             this.field_L = (int[]) null;
           }
-          al.i(100);
-          if (null != ih.field_b) {
-            am.a((byte) -16);
+          DateOfBirthValidator.shutdownAudioPlayers(100);
+          if (null != FullscreenState.field_b) {
+            FullscreenSupport.exitFullscreen((byte) -16);
           }
-          ce.f(13633);
+          DraggableWidget.shutdownSession(13633);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw kg.a((Throwable) ((Object) var2), "Virogrid.C(" + param0 + ')');
+          throw AsyncCheckResult.wrapException((Throwable) ((Object) var2), "Virogrid.C(" + param0 + ')');
         }
     }
 
     final void shutdown(int param0) {
         int var3 = field_F ? 1 : 0;
         try {
-          Virogrid.u(240);
-          hj.a(17);
+          Virogrid.releaseStatics(240);
+          AchievementNotice.releaseStatics(17);
           IntrusiveNode.releaseStatics(-6325);
           IntrusiveDeque.releaseStatics(param0 - 32);
-          ud.releaseStatics((byte) -94);
-          fj.releaseStatics((byte) -99);
-          rh.releaseStatics(param0 ^ 57);
-          bn.releaseStatics((byte) -118);
-          rk.a(-97);
-          GameKeyHandler.a((byte) -110);
-          cg.a(-65);
-          nf.releaseStatics(-28637);
-          wd.releaseStatics(param0 ^ -8518);
-          em.a(-85);
-          od.releaseStatics(false);
-          rg.releaseStatics(param0 ^ 64);
-          GameApplet.b(param0 - 6490);
-          og.releaseStatics(param0 + 74);
+          ViewModeNoticeGlobals.releaseStatics((byte) -94);
+          RankingArraySupport.releaseStatics((byte) -99);
+          NamedTextResourceHelpers.releaseStatics(param0 ^ 57);
+          NameCharacterHelpers.releaseStatics((byte) -118);
+          RasterEffectHelpers.releaseStatics(-97);
+          GameKeyHandler.releaseStatics((byte) -110);
+          OverlayDrawHelpers.releaseStatics(-65);
+          TextDecodeHelpers.releaseStatics(-28637);
+          MathAndCookieHelpers.releaseStatics(param0 ^ -8518);
+          TooltipAndOptionsHelpers.releaseStatics(-85);
+          NetworkGameClient.releaseStatics(false);
+          ClientException.releaseStatics(param0 ^ 64);
+          GameApplet.releaseStatics(param0 - 6490);
+          BoundedUrlRequest.releaseStatics(param0 + 74);
           MouseInputHandler.releaseStatics(param0 + 0);
-          MouseWheelInput.b(3981);
+          MouseWheelInput.releaseStatics(3981);
           Rasterizer.releaseStatics();
           Js5Archive.releaseStatics((byte) -104);
-          e.releaseStatics();
-          ak.a(4472);
+          BitmapFont.releaseStatics();
+          TextEncodingHelpers.releaseStatics(4472);
           PacketBuffer.releaseStatics((byte) 110);
-          hc.a(true);
-          se.releaseStatics((byte) 79);
-          rb.a((byte) -13);
-          vm.a((byte) -106);
-          oh.releaseStatics(true);
-          td.a(6666);
-          kb.a(122);
-          pc.a(-30114);
-          ih.a(81);
-          cj.a(-99);
-          nm.releaseStatics(26523);
-          hm.releaseStatics(param0 ^ -126);
-          RasterBuffer.a(param0 ^ -28608);
-          qc.a((byte) 9);
-          h.releaseStatics(true);
-          li.releaseStatics((byte) 112);
-          jg.releaseStatics(28275);
-          dk.a(-124);
-          sb.releaseStatics(-851125662);
-          ha.releaseStatics(param0 + 79);
-          nh.releaseStatics(false);
+          ClockAndTextHelpers.releaseStatics(true);
+          LobbyJoinTextGlobals.releaseStatics((byte) 79);
+          WidgetFactoryHelpers.releaseStatics((byte) -13);
+          SoundPlaybackHelpers.releaseStatics((byte) -106);
+          BitwiseHelpers.releaseStatics(true);
+          CanvasPresentHelpers.releaseStatics(6666);
+          ChatPanelSetupHelpers.releaseStatics(122);
+          SpriteLoadHelpers.releaseStatics(-30114);
+          FullscreenState.releaseStatics(81);
+          ChatMessage.releaseStatics(-99);
+          PopupMenuHelpers.releaseStatics(26523);
+          GameClock.releaseStatics(param0 ^ -126);
+          RasterBuffer.releaseStatics(param0 ^ -28608);
+          ArchiveLoadSequence.releaseStatics((byte) 9);
+          FullscreenFocusCanvas.releaseStatics(true);
+          ViewportController.releaseStatics((byte) 112);
+          SoundCache.releaseStatics(28275);
+          Js5Transport.releaseStatics(-124);
+          DiskCacheWorker.releaseStatics(-851125662);
+          Js5ArchiveManager.releaseStatics(param0 + 79);
+          BufferedFile.releaseStatics(false);
           BufferedSocket.releaseStatics(-127);
-          oi.c(122);
+          MenuScreen.releaseStatics(122);
           GameSession.releaseStatics(23320);
-          pi.releaseStatics(param0 ^ -29216);
-          il.releaseStatics();
+          LobbyGameListHelpers.releaseStatics(param0 ^ -29216);
+          ModelMesh.releaseStatics();
           Model.releaseStatics();
           GameBoard.releaseStatics(98);
-          ee.b((byte) 119);
+          GuestPlayHelpers.releaseStatics((byte) 119);
           SpriteState.releaseStatics(0);
           DualLinkNode.releaseStatics(true);
-          bd.releaseStatics(95);
-          tn.releaseStatics(param0 + 31);
-          ke.releaseStatics(-51);
-          wg.a(0);
-          sd.a((byte) 113);
-          ah.releaseStatics((byte) -115);
-          ib.a(-60);
-          k.releaseStatics(1000);
-          we.releaseStatics((byte) -104);
-          gi.releaseStatics((byte) -103);
-          en.releaseStatics(0);
-          qm.j(124);
+          LoginMethodHelpers.releaseStatics(95);
+          MenuInputState.releaseStatics(param0 + 31);
+          WidgetNode.releaseStatics(-51);
+          FrameSkin.releaseStatics(0);
+          ChatFilterHelpers.releaseStatics((byte) 113);
+          IndexedSpriteState.releaseStatics((byte) -115);
+          MusicVolumeAndOverlayHelpers.releaseStatics(-60);
+          GameEntryHelpers.releaseStatics(1000);
+          ClientEnvironmentHelpers.releaseStatics((byte) -104);
+          ArchiveBytesHelpers.releaseStatics((byte) -103);
+          IconLabelWidget.releaseStatics(0);
+          VerticalScrollbar.releaseStatics(124);
           SpriteWidget.releaseStatics(param0 + 2147483647);
-          ga.releaseStatics(param0 ^ -91);
-          ao.g(-119);
-          dj.a(false);
-          um.g(0);
-          bg.releaseStatics(param0);
-          lk.releaseStatics((byte) 10);
-          an.releaseStatics((byte) 26);
-          pl.releaseStatics((byte) -120);
-          pj.a(false);
-          oe.releaseStatics(param0 + 0);
-          hk.releaseStatics(false);
-          jm.releaseStatics(param0 + 0);
-          he.g(7);
-          fk.releaseStatics();
-          vl.releaseStatics(false);
-          ll.releaseStatics((byte) -64);
-          pg.b(param0 + 8192);
-          s.a(-1);
-          i.a((byte) -78);
-          ln.releaseStatics(true);
-          wn.releaseStatics(79);
-          qj.releaseStatics();
-          pa.releaseStatics(true);
-          ua.releaseStatics();
-          eg.releaseStatics(param0 ^ -55);
-          ef.releaseStatics(-3);
-          kf.releaseStatics(-1);
-          vj.releaseStatics((byte) 17);
-          ea.releaseStatics(-74);
-          sj.releaseStatics((byte) 121);
-          jd.a(true);
-          ba.releaseStatics(14);
-          fh.a(10061);
-          vf.a(false);
-          je.releaseStatics(-202);
-          b.j((byte) -22);
-          vc.g((byte) 108);
-          de.releaseStatics(false);
-          sh.g(true);
-          qh.releaseStatics(8246);
-          jl.releaseStatics(15354);
-          ca.releaseStatics((byte) 15);
-          uh.releaseStatics(false);
-          id.a((byte) 24);
-          o.a((byte) 67);
-          ig.releaseStatics(-77);
-          ii.releaseStatics((byte) 6);
-          ac.a(-95);
-          qi.releaseStatics(25651);
-          of.releaseStatics((byte) 110);
-          lg.releaseStatics(param0 ^ -122);
-          ne.releaseStatics(false);
-          ul.releaseStatics((byte) -96);
-          bk.releaseStatics((byte) 122);
-          hg.f((byte) 103);
-          mm.releaseStatics(false);
-          dd.b((byte) -58);
-          CellAnimator.b(-314);
-          ia.a(44);
-          ab.releaseStatics(-16349);
-          va.releaseStatics(-91);
-          na.releaseStatics((byte) 56);
-          sk.releaseStatics((byte) -52);
-          qf.releaseStatics();
-          ff.releaseStatics();
-          nn.releaseStatics(53);
-          bf.releaseStatics(param0 ^ 20391);
-          ji.releaseStatics(-112);
-          am.releaseStatics((byte) 88);
-          ei.a(-59);
-          lb.b(7);
-          lm.a((byte) -94);
-          pn.c(true);
-          qk.c(2);
-          ub.releaseStatics(-121);
-          gl.a(param0 + 3);
-          bl.releaseStatics(false);
-          oa.releaseStatics((byte) -127);
-          c.releaseStatics(false);
-          nb.releaseStatics(-30419);
-          rf.a(-24750);
-          mk.releaseStatics(-16);
-          aj.releaseStatics(false);
-          gj.releaseStatics();
-          tf.releaseStatics(0);
-          wm.releaseStatics(0);
-          af.releaseStatics(99);
-          mn.a(0);
-          lh.releaseStatics(false);
-          sm.a(param0 - 1);
-          cf.releaseStatics(112);
-          ag.releaseStatics(25);
-          g.releaseStatics((byte) -108);
-          md.releaseStatics(46);
-          wh.releaseStatics(param0 - 23862);
-          bb.releaseStatics();
-          db.a(6);
-          bc.releaseStatics((byte) -101);
-          aa.releaseStatics(false);
-          lj.a(67);
-          nl.releaseStatics(120);
-          ql.releaseStatics((byte) -87);
-          rj.a(6);
-          ie.b(0);
+          ContextMenu.releaseStatics(param0 ^ -91);
+          ScrollPaneWithFooter.releaseStatics(-119);
+          PlayerContextMenu.releaseStatics(false);
+          ScrollPane.releaseStatics(0);
+          ReportAbuseDialog.releaseStatics(param0);
+          LobbyPlayerEntry.releaseStatics((byte) 10);
+          TextMeasureHelpers.releaseStatics((byte) 26);
+          CredentialHelpers.releaseStatics((byte) -120);
+          RenderTargetHelpers.releaseStatics(false);
+          SessionSeedHelpers.releaseStatics(param0 + 0);
+          IconTextComponent.releaseStatics(false);
+          LobbyLayout.releaseStatics(param0 + 0);
+          LobbyGame.releaseStatics(7);
+          TriangleRasterizer.releaseStatics();
+          TextureCache.releaseStatics(false);
+          TextJoinHelpers.releaseStatics((byte) -64);
+          LobbySortHelpers.releaseStatics(param0 + 8192);
+          InputSetupHelpers.releaseStatics(-1);
+          MidiPcmStream.releaseStatics((byte) -78);
+          NodeHashTable.releaseStatics(true);
+          MidiNote.releaseStatics(79);
+          MidiFileReader.releaseStatics();
+          MusicVoiceMixer.releaseStatics(true);
+          AudioOutput.releaseStatics();
+          MusicCrossfadeStream.releaseStatics(param0 ^ -55);
+          GameOptionHelpers.releaseStatics(-3);
+          DualLinkHashTable.releaseStatics(-1);
+          UiLayerInputHelpers.releaseStatics((byte) 17);
+          DrawQueueGlobals.releaseStatics(-74);
+          ArchiveIndex.releaseStatics((byte) 121);
+          GzipDecompressor.releaseStatics(true);
+          ArchiveProvider.releaseStatics(14);
+          CameraAndLogoHelpers.releaseStatics(10061);
+          EmailDomainValidationHelpers.releaseStatics(false);
+          WidgetLayerStack.releaseStatics(-202);
+          RegistrationRequestDialog.releaseStatics((byte) -22);
+          LoadingProgressDialog.releaseStatics((byte) 108);
+          LoginDialog.releaseStatics(false);
+          ProgressMessageDialog.releaseStatics(true);
+          AccountCreationForm.releaseStatics(8246);
+          AccountChoicePanel.releaseStatics(15354);
+          LoginPanel.releaseStatics((byte) 15);
+          ConditionalTextValue.releaseStatics(false);
+          UiTheme.releaseStatics((byte) 24);
+          RequestResendSupport.releaseStatics((byte) 67);
+          LogoIntroHelpers.releaseStatics(-77);
+          HuffmanCodec.releaseStatics((byte) 6);
+          ChatPanelUpdateHelpers.releaseStatics(-95);
+          PopupMenuDrawHelpers.releaseStatics(25651);
+          LobbyControlHelpers.releaseStatics((byte) 110);
+          SharedTextGlobals.releaseStatics(param0 ^ -122);
+          StatusAndUrlHelpers.releaseStatics(false);
+          LoginCredentialType.releaseStatics((byte) -96);
+          LoginCredentials.releaseStatics((byte) 122);
+          CipherPacketBuffer.releaseStatics((byte) 103);
+          IsaacRandom.releaseStatics(false);
+          DecodedSpriteHelpers.releaseStatics((byte) -58);
+          CellAnimator.releaseStatics(-314);
+          ViewControlStrings.releaseStatics(44);
+          BirthDateEntryPanel.releaseStatics(-16349);
+          ArchiveFactoryHelpers.releaseStatics(-91);
+          HelpPopup.releaseStatics((byte) 56);
+          LoadingTextGlobals.releaseStatics((byte) -52);
+          ClippedTriangleRenderer.releaseStatics();
+          StipplePatterns.releaseStatics();
+          ChatSettingsHelpers.releaseStatics(53);
+          ReflectionCheck.releaseStatics(param0 ^ 20391);
+          BoundedRandomAccessFile.releaseStatics(-112);
+          FullscreenSupport.releaseStatics((byte) 88);
+          MusicPlaybackHelpers.releaseStatics(-59);
+          LobbyAndTextHelpers.releaseStatics(7);
+          AudioPumpThread.releaseStatics((byte) -94);
+          SocketJs5Transport.releaseStatics(true);
+          DualLinkDeque.releaseStatics(2);
+          NetworkArchiveRequest.releaseStatics(-121);
+          SectorCacheStore.releaseStatics(param0 + 3);
+          DiskArchiveRequest.releaseStatics(false);
+          CachedArchiveSource.releaseStatics((byte) -127);
+          DisplayNameHelpers.releaseStatics(false);
+          ArchiveRequest.releaseStatics(-30419);
+          TriangleSortHelpers.releaseStatics(-24750);
+          FullscreenErrorDialog.releaseStatics(-16);
+          TextWidgetPainter.releaseStatics(false);
+          VorbisSample.releaseStatics();
+          QuickChatOpenHelpers.releaseStatics(0);
+          TriangleMesh.releaseStatics(0);
+          AccountCreationSupport.releaseStatics(99);
+          DrawOfferMenuHelpers.releaseStatics(0);
+          MouseHandlerSupport.releaseStatics(false);
+          LoadingProgressHelpers.releaseStatics(param0 - 1);
+          CommonUiHelpers.releaseStatics(112);
+          DelegatingCanvas.releaseStatics(25);
+          ChatAndIgnoreHelpers.releaseStatics((byte) -108);
+          IntKeyLookup.releaseStatics(46);
+          ByteStorage.releaseStatics(param0 - 23862);
+          Bzip2Decoder.releaseStatics();
+          Bzip2State.releaseStatics(6);
+          ByteArrayPool.releaseStatics((byte) -101);
+          QuickChatHelpHelpers.releaseStatics(false);
+          CheckboxPainter.releaseStatics(67);
+          StatefulWidgetPainter.releaseStatics(120);
+          DialWidgetPainter.releaseStatics((byte) -87);
+          MarkerSliderPainter.releaseStatics(6);
+          TextLayout.releaseStatics(0);
           UiWidget.releaseStatics(false);
-          tg.releaseStatics((byte) -78);
-          ec.releaseStatics(param0 - 3298);
-          dc.releaseStatics(-126);
-          gg.releaseStatics(-1);
+          TextButton.releaseStatics((byte) -78);
+          SingleChildWidget.releaseStatics(param0 - 3298);
+          ResizableDialog.releaseStatics(-126);
+          FadingModalPanel.releaseStatics(-1);
           WidgetContainer.releaseStatics(1);
           IntrusiveDequeCursor.releaseStatics(param0 ^ 0);
-          jk.a((byte) 110);
-          nj.releaseStatics();
-          tk.releaseStatics(0);
-          kh.releaseStatics((byte) 81);
-          qa.releaseStatics(8342);
-          mc.a(false);
-          oj.releaseStatics((byte) -111);
-          wc.a(param0 + 200);
-          ad.a(param0 + 90);
-          u.releaseStatics((byte) -11);
-          th.releaseStatics(-5);
-          sl.a(param0 + 1);
-          rn.releaseStatics((byte) -38);
-          te.releaseStatics((byte) 126);
-          mf.releaseStatics(-93);
+          BitCountAndDialogHelpers.releaseStatics((byte) 110);
+          VorbisFloor.releaseStatics();
+          UrlRewriteHelpers.releaseStatics(0);
+          ClientServiceHelpers.releaseStatics((byte) 81);
+          PacketRequestHelpers.releaseStatics(8342);
+          PopupInputHelpers.releaseStatics(false);
+          QuickChatMenu.releaseStatics((byte) -111);
+          QuickChatCategoryCache.releaseStatics(param0 + 200);
+          QuickChatPhraseRegistry.releaseStatics(param0 + 90);
+          QuickChatCategory.releaseStatics((byte) -11);
+          QuickChatPhraseDefinition.releaseStatics(-5);
+          WeightedLruCache.releaseStatics(param0 + 1);
+          SocketConnector.releaseStatics((byte) -38);
+          ProxyAuthenticationRequiredException.releaseStatics((byte) 126);
+          NanoTickClock.releaseStatics(-93);
           ImageProducerRasterBuffer.releaseStatics((byte) 104);
-          ug.releaseStatics(-97);
-          ch.a(0);
-          hl.releaseStatics();
-          sg.d(-2);
+          DigestHelpers.releaseStatics(-97);
+          DisplayModeInfo.releaseStatics(0);
+          SynthInstrument.releaseStatics();
+          PatchNoteUsage.releaseStatics(-2);
           WhirlpoolDigest.releaseStatics((byte) -54);
-          hd.a(3881);
-          d.e((byte) -73);
-          fe.h(32498);
-          ge.a(72);
-          rc.a(param0 - 24021);
-          qd.releaseStatics(true);
-          ej.releaseStatics(2);
-          vd.releaseStatics(-1);
-          wa.releaseStatics((byte) 39);
-          mb.h((byte) 126);
-          dg.a((byte) 41);
-          nk.releaseStatics(35);
-          w.releaseStatics(-116);
-          ng.releaseStatics(false);
-          gn.releaseStatics(true);
-          qe.releaseStatics((byte) -36);
-          fn.b((byte) 97);
-          ok.f(-100);
-          qn.releaseStatics((byte) -124);
-          gb.releaseStatics(117);
-          al.releaseStatics(-1);
-          jb.a((byte) -99);
-          gf.a((byte) 124);
-          dn.releaseStatics((byte) 112);
-          bm.releaseStatics(2797);
-          tl.releaseStatics((byte) -71);
-          nd.releaseStatics((byte) 114);
-          ce.releaseStatics((byte) 107);
-          vg.f(-114);
-          gk.a((byte) -127);
-          eb.releaseStatics(true);
-          dm.releaseStatics(-48);
-          lc.a(-26834);
-          mj.g(-108);
-          ph.d(param0 ^ 121);
-          bh.releaseStatics();
-          ed.a((byte) 51);
-          j.b(param0 ^ -116);
-          f.releaseStatics((byte) 103);
-          jf.releaseStatics((byte) -124);
-          ij.releaseStatics(-25621);
-          pm.releaseStatics(0);
-          fl.releaseStatics(-24488);
-          dh.releaseStatics(-128);
-          pe.releaseStatics((byte) -79);
-          la.a((byte) 108);
-          hf.releaseStatics(param0 ^ -125);
-          ti.releaseStatics(-88);
-          cc.b(false);
-          a.c(false);
-          ae.releaseStatics((byte) -125);
-          kn.releaseStatics(param0 ^ 0);
-          oc.releaseStatics(false);
-          hn.releaseStatics((byte) -9);
-          ai.b(false);
-          gh.d(false);
-          vb.b((byte) 112);
-          ka.releaseStatics(-85);
-          sa.releaseStatics((byte) -52);
-          kg.releaseStatics((byte) 123);
-          dl.releaseStatics(0);
-          bj.releaseStatics((byte) -62);
-          qg.a(114);
-          ob.releaseStatics(param0 + 29137);
-          sf.releaseStatics(100);
-          co.releaseStatics((byte) 103);
-          mh.b((byte) 51);
-          re.b(-120);
-          vi.releaseStatics(param0 + 31856);
-          bi.releaseStatics(46);
+          ReflectionCheckHelpers.releaseStatics(3881);
+          TabbedPanel.releaseStatics((byte) -73);
+          NameEntryPopup.releaseStatics(32498);
+          AccountDialogHelpers.releaseStatics(72);
+          MusicPatch.releaseStatics(param0 - 24021);
+          MusicPatchEnvelope.releaseStatics(true);
+          LabeledChildWidget.releaseStatics(2);
+          ValidatedTextWidget.releaseStatics(-1);
+          EditableTextWidget.releaseStatics((byte) 39);
+          ContentTransitionDialog.releaseStatics((byte) 126);
+          StripedProgressBar.releaseStatics((byte) 41);
+          HotspotTextWidget.releaseStatics(35);
+          ValidationIndicator.releaseStatics(-116);
+          ValidationMessageWidget.releaseStatics(false);
+          CheckboxButton.releaseStatics(true);
+          TextFieldValidator.releaseStatics((byte) -36);
+          LobbySessionHelpers.releaseStatics((byte) 97);
+          AccountTermsPanel.releaseStatics(-100);
+          DialWidget.releaseStatics((byte) -124);
+          MarkerSlider.releaseStatics(117);
+          DateOfBirthValidator.releaseStatics(-1);
+          BirthDateInputWidget.releaseStatics((byte) -99);
+          ArrayWidgetContainer.releaseStatics((byte) 124);
+          InputDetachHelpers.releaseStatics((byte) 112);
+          CachedTextLayout.releaseStatics(2797);
+          DirectByteStorage.releaseStatics((byte) -71);
+          GrowableIntList.releaseStatics((byte) 114);
+          DraggableWidget.releaseStatics((byte) 107);
+          DropTargetWidget.releaseStatics(-114);
+          IterableNodeHashTable.releaseStatics((byte) -127);
+          IterableDualLinkDeque.releaseStatics(true);
+          CacheReference.releaseStatics(-48);
+          TypeCode.releaseStatics(-26834);
+          StrongCacheReference.releaseStatics(-108);
+          ProxySocketConnector.releaseStatics(param0 ^ 121);
+          SoundFilter.releaseStatics();
+          ChecksumHelpers.releaseStatics((byte) 51);
+          NodeHashTableIterator.releaseStatics(param0 ^ -116);
+          DualLinkDequeIterator.releaseStatics((byte) 103);
+          GameOptions.releaseStatics((byte) -124);
+          BackgroundParticle.releaseStatics(-25621);
+          MouseTrailPoint.releaseStatics(0);
+          FallingParticle.releaseStatics(-24488);
+          RankingsRequest.releaseStatics(-128);
+          PlayingSound.releaseStatics((byte) -79);
+          QueuedRequest.releaseStatics((byte) 108);
+          ThreeSliceButtonPainter.releaseStatics(param0 ^ -125);
+          LinkTextPainter.releaseStatics(-88);
+          TextFieldPainter.releaseStatics(false);
+          PasswordFieldPainter.releaseStatics(false);
+          CheckboxTickPainter.releaseStatics((byte) -125);
+          FadeLayer.releaseStatics(param0 ^ 0);
+          PendingScoreQuery.releaseStatics(false);
+          PendingHighscoreRequest.releaseStatics((byte) -9);
+          ContextMenuHelpers.releaseStatics(false);
+          SocialListEntry.releaseStatics(false);
+          TextMetricsGlobals.releaseStatics((byte) 112);
+          PendingRequest.releaseStatics(-85);
+          StatSubmission.releaseStatics((byte) -52);
+          AsyncCheckResult.releaseStatics((byte) 123);
+          ConnectionStage.releaseStatics(0);
+          DelayedPacket.releaseStatics((byte) -62);
+          RasterSnapshot.releaseStatics(114);
+          StateToken.releaseStatics(param0 + 29137);
+          DialogMessagePane.releaseStatics(100);
+          LoginMethod.releaseStatics((byte) 103);
+          LongAndTextCredentials.releaseStatics((byte) 51);
+          LongAndTextLoginPayload.releaseStatics(-120);
+          PasswordLoginCredentials.releaseStatics(param0 + 31856);
+          ChatShortcutHelpers.releaseStatics(46);
           CellFlip.releaseStatics((byte) 21);
-          ra.a(false);
-          tm.releaseStatics(-74);
-          da.releaseStatics(param0 ^ 8355711);
-          cm.c(115);
-          fa.d(0);
-          jj.releaseStatics((byte) 74);
-          ri.b(2);
-          di.releaseStatics(46);
-          sn.releaseStatics((byte) -89);
-          ve.releaseStatics(true);
-          kd.c((byte) -124);
-          kk.releaseStatics((byte) -8);
-          ci.releaseStatics(-104);
-          on.a((byte) 120);
-          pb.a((byte) 111);
-          wl.releaseStatics((byte) -75);
-          mi.e(12);
-          hh.releaseStatics((byte) -124);
+          ScoreSubmissionHelpers.releaseStatics(false);
+          QueuedListRequest.releaseStatics(-74);
+          QueuedResultSubmission.releaseStatics(param0 ^ 8355711);
+          LogoRenderHelpers.releaseStatics(115);
+          PendingSubmission.releaseStatics(0);
+          WidgetStyleLayer.releaseStatics((byte) 74);
+          TextLayoutLine.releaseStatics(2);
+          UsernameAvailabilityValidator.releaseStatics(46);
+          PasswordValidator.releaseStatics((byte) -89);
+          EmailValidator.releaseStatics(true);
+          EmailAvailabilityValidator.releaseStatics((byte) -124);
+          AgeValidator.releaseStatics((byte) -8);
+          PasswordConfirmationValidator.releaseStatics(-104);
+          LoginRsaKey.releaseStatics((byte) 120);
+          TextHotspot.releaseStatics((byte) 111);
+          AudioSetupHelpers.releaseStatics((byte) -75);
+          DebouncedValidator.releaseStatics(12);
+          LogoAndLoginHelpers.releaseStatics((byte) -124);
           this.field_N = null;
           this.field_C = null;
           this.field_I = null;
@@ -2384,11 +2384,11 @@ public final class Virogrid extends od {
           this.field_J = null;
           this.field_M = null;
         } catch (RuntimeException runtimeException) {
-          throw kg.a((Throwable) ((Object) runtimeException), "Virogrid.F(" + param0 + ')');
+          throw AsyncCheckResult.wrapException((Throwable) ((Object) runtimeException), "Virogrid.F(" + param0 + ')');
         }
     }
 
-    private final void a(Model param0, byte param1) {
+    private final void scaleModelAboutTablePivot(Model param0, byte param1) {
         int[] discarded$1 = null;
         RuntimeException runtimeException = null;
         Model var4 = null;
@@ -2397,13 +2397,13 @@ public final class Virogrid extends od {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          param0.a(0, 154, 0);
+          param0.translate(0, 154, 0);
           if (param1 != 69) {
             var4 = (Model) null;
-            discarded$1 = this.a((byte) -76, (Model) null);
+            discarded$1 = this.getSceneryModelTransform((byte) -76, (Model) null);
           }
           param0.scaleVertices(256, 256, 256, 32);
-          param0.a(0, -154, 0);
+          param0.translate(0, -154, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -2415,7 +2415,7 @@ public final class Virogrid extends od {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw kg.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw AsyncCheckResult.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -2425,22 +2425,22 @@ public final class Virogrid extends od {
     }
 
     static {
-        field_O = new co("usename");
+        field_O = new LoginMethod("usename");
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static ck $cfr$intArgs$b$d65aded092bd(int param0, boolean param1) {
-        ck var2 = null;
+    final static AccountRequestReply createDobResultReply(int param0, boolean param1) {
+        AccountRequestReply var2 = null;
         RuntimeException var2_ref = null;
-        ck stackIn_4_0 = null;
+        AccountRequestReply stackIn_4_0 = null;
         boolean stackIn_5_1 = false;
-        ck stackIn_6_0 = null;
+        AccountRequestReply stackIn_6_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != -32) {
-            field_O = (co) null;
+            field_O = (LoginMethod) null;
           }
-          var2 = new ck(true);
+          var2 = new AccountRequestReply(true);
           stackIn_4_0 = var2;
           stackIn_5_1 = (param1);
           stackIn_4_0.field_d = stackIn_5_1;
@@ -2449,7 +2449,7 @@ public final class Virogrid extends od {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw kg.a((Throwable) ((Object) var2_ref), "Virogrid.DB(" + param0 + ',' + param1 + ')');
+          throw AsyncCheckResult.wrapException((Throwable) ((Object) var2_ref), "Virogrid.DB(" + param0 + ',' + param1 + ')');
         }
     }
 }

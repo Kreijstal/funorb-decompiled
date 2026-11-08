@@ -2,48 +2,48 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class MouseWheelInput {
-    static hh field_a;
+    static LogoAndLoginHelpers field_a;
     static String textViewcontrolsZoomin;
-    static ob field_c;
+    static StateToken field_c;
     static Sprite[] achievementIcons;
 
     abstract int pollRotation(int param0);
 
-    final static boolean a(int param0, int param1, int param2, int param3) {
+    final static boolean dispatchKeyInput(int param0, int param1, int param2, int param3) {
         if (param0 != -13079) {
-          field_c = (ob) null;
-          if (wg.field_f) {
-            return fh.field_c.a(um.field_Gb, nm.field_d, -99);
+          field_c = (StateToken) null;
+          if (FrameSkin.field_f) {
+            return CameraAndLogoHelpers.field_c.dispatchKeyInput(ScrollPane.field_Gb, PopupMenuHelpers.field_d, -99);
           }
-          if (ac.field_e) {
-            return vl.a((byte) 103, param3, param2);
+          if (ChatPanelUpdateHelpers.field_e) {
+            return TextureCache.handleQuickChatKey((byte) 103, param3, param2);
           }
-          if (bi.a(param3, param2, true)) {
+          if (ChatShortcutHelpers.handleChatShortcutKey(param3, param2, true)) {
             return true;
           }
-          if (!dh.field_n) {
-            return fn.a(param1, param2, (byte) -97);
+          if (!RankingsRequest.field_n) {
+            return LobbySessionHelpers.handleChatInputKey(param1, param2, (byte) -97);
           }
           return false;
         }
-        if (wg.field_f) {
-          return fh.field_c.a(um.field_Gb, nm.field_d, -99);
+        if (FrameSkin.field_f) {
+          return CameraAndLogoHelpers.field_c.dispatchKeyInput(ScrollPane.field_Gb, PopupMenuHelpers.field_d, -99);
         }
-        if (ac.field_e) {
-          return vl.a((byte) 103, param3, param2);
+        if (ChatPanelUpdateHelpers.field_e) {
+          return TextureCache.handleQuickChatKey((byte) 103, param3, param2);
         }
-        if (bi.a(param3, param2, true)) {
+        if (ChatShortcutHelpers.handleChatShortcutKey(param3, param2, true)) {
           return true;
         }
-        if (!dh.field_n) {
-          return fn.a(param1, param2, (byte) -97);
+        if (!RankingsRequest.field_n) {
+          return LobbySessionHelpers.handleChatInputKey(param1, param2, (byte) -97);
         }
         return false;
     }
 
-    abstract void b(int param0, java.awt.Component param1);
+    abstract void detach(int param0, java.awt.Component param1);
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = null;
         if (param0 != 3981) {
           return;
@@ -53,10 +53,10 @@ abstract class MouseWheelInput {
         achievementIcons = null;
     }
 
-    abstract void a(int param0, java.awt.Component param1);
+    abstract void attach(int param0, java.awt.Component param1);
 
     static {
         textViewcontrolsZoomin = "Zoom in";
-        field_a = new hh();
+        field_a = new LogoAndLoginHelpers();
     }
 }

@@ -9,7 +9,7 @@ final class BufferedSocket implements Runnable {
     private boolean field_l;
     private InputStream field_e;
     private OutputStream field_j;
-    private un field_n;
+    private PlatformTask field_n;
     static String field_g;
     private java.net.Socket field_q;
     static String field_b;
@@ -22,13 +22,13 @@ final class BufferedSocket implements Runnable {
     static int field_r;
     static int[] field_w;
     static int[] field_h;
-    static cj[] field_s;
+    static ChatMessage[] field_s;
     static String field_f;
     private int field_u;
     static int field_t;
     private PlatformTaskDispatcher field_o;
 
-    final void a(int param0, byte[] param1, int param2, int param3) throws IOException {
+    final void readFully(int param0, byte[] param1, int param2, int param3) throws IOException {
         int var5_int = 0;
         int var6 = 0;
         RuntimeException stackIn_12_0 = null;
@@ -39,7 +39,7 @@ final class BufferedSocket implements Runnable {
         var6 = Virogrid.field_F ? 1 : 0;
         try {
           if (param2 != -1) {
-            BufferedSocket.a(false);
+            BufferedSocket.layoutLobbyScreen(false);
           }
           if (this.field_l) {
             return;
@@ -63,11 +63,11 @@ final class BufferedSocket implements Runnable {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw kg.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw AsyncCheckResult.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
-    final static cj a(boolean param0, int param1) {
+    final static ChatMessage readChatMessage(boolean param0, int param1) {
         boolean stackIn_3_0 = false;
         int stackIn_9_0 = 0;
         int[] stackIn_23_0 = null;
@@ -77,65 +77,65 @@ final class BufferedSocket implements Runnable {
         int var5 = 0;
         Exception var6 = null;
         int var7 = 0;
-        hg var8 = null;
-        th var9 = null;
+        CipherPacketBuffer var8 = null;
+        QuickChatPhraseDefinition var9 = null;
         var7 = Virogrid.field_F ? 1 : 0;
-        var8 = sh.field_qb;
+        var8 = ProgressMessageDialog.field_qb;
         var3 = var8.readUnsignedByte(11132);
-        td.field_h = 127 & var3;
+        CanvasPresentHelpers.field_h = 127 & var3;
         stackIn_3_0 = (param1 != (128 & var3));
-        ea.field_b = stackIn_3_0;
-        va.field_b = var8.readUnsignedByte(11132);
-        hk.field_Kb = var8.e((byte) -60);
-        if (td.field_h != 2) {
-          eb.field_d = 0;
-          pl.field_b = 0;
+        DrawQueueGlobals.field_b = stackIn_3_0;
+        ArchiveFactoryHelpers.field_b = var8.readUnsignedByte(11132);
+        IconTextComponent.field_Kb = var8.readLong((byte) -60);
+        if (CanvasPresentHelpers.field_h != 2) {
+          IterableDualLinkDeque.field_d = 0;
+          CredentialHelpers.field_b = 0;
         } else {
-          eb.field_d = var8.readUnsignedShort((byte) -54);
-          pl.field_b = var8.readMedium(-25842);
+          IterableDualLinkDeque.field_d = var8.readUnsignedShort((byte) -54);
+          CredentialHelpers.field_b = var8.readMedium(-25842);
         }
         stackIn_9_0 = (1 != var8.readUnsignedByte(11132)) ? 0 : 1;
         var4 = stackIn_9_0;
-        vc.field_hb = var8.readString(-118);
+        LoadingProgressDialog.field_hb = var8.readString(-118);
         if (var4 == 0) {
-          vl.field_k = vc.field_hb;
+          TextureCache.field_k = LoadingProgressDialog.field_hb;
         } else {
-          vl.field_k = var8.readString(-118);
+          TextureCache.field_k = var8.readString(-118);
         }
-        if (td.field_h != 1 &&
-          4 != td.field_h) {
-          pb.field_l = null;
-          ef.field_b = 0;
+        if (CanvasPresentHelpers.field_h != 1 &&
+          4 != CanvasPresentHelpers.field_h) {
+          TextHotspot.field_l = null;
+          GameOptionHelpers.field_b = 0;
         } else {
-          ef.field_b = var8.readUnsignedShort((byte) 49);
-          pb.field_l = var8.readString(-127);
+          GameOptionHelpers.field_b = var8.readUnsignedShort((byte) 49);
+          TextHotspot.field_l = var8.readString(-127);
         }
         if (param0) {
           var5 = var8.readUnsignedShort((byte) -77);
           try {
-            var9 = cj.field_s.a((byte) 125, var5);
-            aa.field_f = var9.d(124);
-            if (vl.field_k.equals(mi.field_d)) {
+            var9 = ChatMessage.field_s.getDefinition((byte) 125, var5);
+            QuickChatHelpHelpers.field_f = var9.getPreviewText(124);
+            if (TextureCache.field_k.equals(DebouncedValidator.field_d)) {
               stackIn_23_0 = null;
             } else {
               stackIn_23_0 = var9.field_u;
             }
-            ne.field_e = stackIn_23_0;
+            StatusAndUrlHelpers.field_e = stackIn_23_0;
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var6 = (Exception) (Object) decompiledCaughtException;
-            en.a("CC1", (Throwable) ((Object) var6), 1);
-            ne.field_e = null;
-            aa.field_f = null;
+            IconLabelWidget.reportClientError("CC1", (Throwable) ((Object) var6), 1);
+            StatusAndUrlHelpers.field_e = null;
+            QuickChatHelpHelpers.field_f = null;
           }
         } else {
-          aa.field_f = hc.a(128, 80, var8);
-          ne.field_e = null;
+          QuickChatHelpHelpers.field_f = ClockAndTextHelpers.readCompressedChatText(128, 80, var8);
+          StatusAndUrlHelpers.field_e = null;
         }
-        return new cj(param0);
+        return new ChatMessage(param0);
     }
 
-    final static int a(int param0, int param1) {
+    final static int roundUpToMultipleOfEight(int param0, int param1) {
         int var2 = 0;
         if ((param1 & 7) != 0) {
           var2 = 8 - (param1 & 7);
@@ -145,7 +145,7 @@ final class BufferedSocket implements Runnable {
         return var3;
     }
 
-    final void c(int param0) throws IOException {
+    final void checkWriteError(int param0) throws IOException {
         if (param0 > -62) {
           this.field_l = true;
         }
@@ -158,7 +158,7 @@ final class BufferedSocket implements Runnable {
         }
     }
 
-    final void b(int param0) {
+    final void close(int param0) {
         try {
           int var4 = 0;
           var4 = Virogrid.field_F ? 1 : 0;
@@ -171,7 +171,7 @@ final class BufferedSocket implements Runnable {
           }
           if (null != this.field_n) {
             while (this.field_n.field_a == 0) {
-              mm.a(-64, 1L);
+              IsaacRandom.sleepMillis(-64, 1L);
             }
             if (this.field_n.field_a == 1) {
               try {
@@ -191,24 +191,24 @@ final class BufferedSocket implements Runnable {
         }
     }
 
-    final static void e(int param0) {
+    final static void skipPendingRequestReply(int param0) {
         if (param0 != -2) {
           return;
         }
-        la var1 = (la) (vi.field_h.a((byte) -34));
+        QueuedRequest var1 = (QueuedRequest) (PasswordLoginCredentials.field_h.first((byte) -34));
         if (var1 == null) {
-          tn.a(false);
+          MenuInputState.closeGameConnection(false);
           return;
         }
-        hg var2 = sh.field_qb;
+        CipherPacketBuffer var2 = ProgressMessageDialog.field_qb;
         var2.readInt((byte) 118);
         var2.readInt((byte) 102);
         var2.readInt((byte) 99);
         var2.readInt((byte) 102);
-        var1.a(false);
+        var1.unlink(false);
     }
 
-    final void a(byte[] param0, int param1, int param2, int param3) throws IOException {
+    final void write(byte[] param0, int param1, int param2, int param3) throws IOException {
         int var6 = 0;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
@@ -239,7 +239,7 @@ final class BufferedSocket implements Runnable {
               }
             }
             if (null == this.field_n) {
-              this.field_n = this.field_o.a(3, (Runnable) (this), param1 ^ 255);
+              this.field_n = this.field_o.startThread(3, (Runnable) (this), param1 ^ 255);
             }
             this.notifyAll();
           }
@@ -254,20 +254,20 @@ final class BufferedSocket implements Runnable {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw kg.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw AsyncCheckResult.wrapException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
-    final static void a(boolean param0) {
+    final static void layoutLobbyScreen(boolean param0) {
         if (!param0) {
           return;
         }
-        ib.b(-94);
-        nf.a(td.field_j, j.chatFilterIcons[0].field_u, pg.field_e, oc.field_k, -27, qi.field_d);
+        MusicVolumeAndOverlayHelpers.animateLobbyOverlayBounds(-94);
+        TextDecodeHelpers.layoutLobbyPanels(CanvasPresentHelpers.field_j, NodeHashTableIterator.chatFilterIcons[0].field_u, LobbySortHelpers.field_e, PendingScoreQuery.field_k, -27, PopupMenuDrawHelpers.field_d);
     }
 
     protected final void finalize() {
-        this.b(4155);
+        this.close(4155);
     }
 
     public static void releaseStatics(int param0) {
@@ -295,36 +295,36 @@ final class BufferedSocket implements Runnable {
         return this.field_e.available();
     }
 
-    final static void a(int param0, boolean param1) {
+    final static void enterMainMenu(int param0, boolean param1) {
         int var2;
         int var3;
         int stackIn_16_0 = 0;
-        ad.field_g[2] = 0.0;
-        ad.field_g[0] = 1.0;
-        BufferedSocket.a(false, (byte) -106);
-        mj.field_D = 262144;
-        ao.field_Hb = 52.5f;
-        we.field_k = 50.0f;
-        co.field_h = 0;
+        QuickChatPhraseRegistry.field_g[2] = 0.0;
+        QuickChatPhraseRegistry.field_g[0] = 1.0;
+        BufferedSocket.resetCameraTargets(false, (byte) -106);
+        StrongCacheReference.field_D = 262144;
+        ScrollPaneWithFooter.field_Hb = 52.5f;
+        ClientEnvironmentHelpers.field_k = 50.0f;
+        LoginMethod.field_h = 0;
         var2 = param1 ? 1 : 0;
-        var3 = bd.field_e;
-        if (hm.field_c == 0 ||
-          2 == i.field_y ||
-          i.field_y == 3 ||
-          4 == hm.field_c ||
-          hm.field_c == 5) {
-          var3 = hm.field_c;
+        var3 = LoginMethodHelpers.field_e;
+        if (GameClock.field_c == 0 ||
+          2 == MidiPcmStream.field_y ||
+          MidiPcmStream.field_y == 3 ||
+          4 == GameClock.field_c ||
+          GameClock.field_c == 5) {
+          var3 = GameClock.field_c;
         }
-        gb.a(-2, var3, var2 != 0, 0);
+        MarkerSlider.changeScreen(-2, var3, var2 != 0, 0);
         if (param0 != 12229) {
           field_h = (int[]) null;
         }
-        if (mj.field_E != 0 && (!(mj.field_E >= 10) ||
-          !(mj.field_E < 20))) {
-          stackIn_16_0 = (mj.field_E < 15) ? 2 : 3;
-          bc.field_c = stackIn_16_0;
-          co.field_l = stackIn_16_0;
-          ka.a(true, (byte) 87);
+        if (StrongCacheReference.field_E != 0 && (!(StrongCacheReference.field_E >= 10) ||
+          !(StrongCacheReference.field_E < 20))) {
+          stackIn_16_0 = (StrongCacheReference.field_E < 15) ? 2 : 3;
+          ByteArrayPool.field_c = stackIn_16_0;
+          LoginMethod.field_l = stackIn_16_0;
+          PendingRequest.createGameOptions(true, (byte) 87);
         }
     }
 
@@ -414,7 +414,7 @@ final class BufferedSocket implements Runnable {
             decompiledCaughtException = decompiledCaughtParameter4;
             var1_ref = (Exception) (Object) decompiledCaughtException;
             var7 = (String) null;
-            en.a((String) null, (Throwable) ((Object) var1_ref), 1);
+            IconLabelWidget.reportClientError((String) null, (Throwable) ((Object) var1_ref), 1);
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -427,17 +427,17 @@ final class BufferedSocket implements Runnable {
         this(param0, param1, 5000);
     }
 
-    final static void a(boolean param0, byte param1) {
-        ec.field_z = sj.field_o;
-        jk.field_c = 2;
+    final static void resetCameraTargets(boolean param0, byte param1) {
+        SingleChildWidget.field_z = ArchiveIndex.field_o;
+        BitCountAndDialogHelpers.field_c = 2;
         if (param0) {
-          kg.field_a = sg.field_i;
-          ai.field_c = sj.field_o;
+          AsyncCheckResult.field_a = PatchNoteUsage.field_i;
+          ContextMenuHelpers.field_c = ArchiveIndex.field_o;
         }
         if (param1 != -106) {
           return;
         }
-        em.field_c = sg.field_i;
+        TooltipAndOptionsHelpers.field_c = PatchNoteUsage.field_i;
     }
 
     final int readUnsignedByte(int param0) throws IOException {
@@ -464,7 +464,7 @@ final class BufferedSocket implements Runnable {
           this.field_j = this.field_q.getOutputStream();
           this.field_m = param2;
         } catch (RuntimeException runtimeException) {
-          throw kg.a((Throwable) ((Object) runtimeException), "el.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw AsyncCheckResult.wrapException((Throwable) ((Object) runtimeException), "el.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

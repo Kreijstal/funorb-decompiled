@@ -1,0 +1,135 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+import java.util.*;
+
+final class PopupInputHelpers {
+    static BinaryBitmapFont menuFont;
+    static int field_a;
+    static String field_e;
+    static Random field_c;
+    static String textViewcontrolsLeft;
+
+    final static byte[] decompressContainer(byte[] param0, int param1) {
+        byte[] stackIn_9_0 = null;
+        byte[] stackIn_23_0 = null;
+        RuntimeException stackIn_26_0 = null;
+        StringBuilder stackIn_26_1 = null;
+        String stackIn_27_2 = null;
+        Throwable decompiledCaughtException = null;
+        RuntimeException var2 = null;
+        int var3 = 0;
+        int var4 = 0;
+        int var5 = 0;
+        byte[] var5_ref_byte__ = null;
+        byte[] var6 = null;
+        Object var7 = null;
+        byte[] var9 = null;
+        PacketBuffer var10 = null;
+        byte[] var11 = null;
+        byte[] var12 = null;
+        byte[] var13 = null;
+        byte[] var14 = null;
+        try {
+          var10 = new PacketBuffer(param0);
+          if (param1 <= 110) {
+            var9 = (byte[]) null;
+            PopupInputHelpers.decompressContainer((byte[]) null, 98);
+          }
+          var3 = var10.readUnsignedByte(11132);
+          var4 = var10.readInt((byte) 93);
+          if (0 <= var4 && (LoginRsaKey.field_c == 0 ||
+            !(var4 > LoginRsaKey.field_c))) {
+            if (0 == var3) {
+              var13 = new byte[var4];
+              var11 = var13;
+              var5_ref_byte__ = var11;
+              var10.readBytes(0, var4, true, var13);
+              stackIn_9_0 = var5_ref_byte__;
+              return stackIn_9_0;
+            }
+            var5 = var10.readInt((byte) 123);
+            if (var5 >= 0 && (LoginRsaKey.field_c == 0 ||
+              !(LoginRsaKey.field_c < var5))) {
+              var14 = new byte[var5];
+              var12 = var14;
+              var6 = var12;
+              if (var3 != 1) {
+                var7 = ProxyAuthenticationRequiredException.field_b;
+                synchronized (var7) {
+                  ProxyAuthenticationRequiredException.field_b.inflateGzip((byte) 50, var14, var10);
+                }
+              } else {
+                Bzip2Decoder.decompressInto(var14, var5, param0, var4, 9);
+              }
+              stackIn_23_0 = var6;
+              return stackIn_23_0;
+            }
+            throw new RuntimeException();
+          }
+          throw new RuntimeException();
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = (RuntimeException) (Object) decompiledCaughtException;
+          stackIn_26_0 = var2;
+          stackIn_26_1 = new StringBuilder().append("mc.C(");
+          if (param0 == null) {
+            stackIn_27_2 = "null";
+          } else {
+            stackIn_27_2 = "{...}";
+          }
+          throw AsyncCheckResult.wrapException((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param1).append(')').toString());
+        }
+    }
+
+    final static boolean dispatchPopupInput(int param0, boolean param1, boolean param2, int param3, int param4, int param5, int param6) {
+        if (!param2) {
+          if (DelegatingCanvas.hasBlockingInputPopup(-117)) {
+            ReflectionCheckHelpers.updateLoadingDialogAndQuickChat(param0, (byte) -116, param6, param1);
+            if (IntKeyLookup.field_e != null &&
+              IntKeyLookup.field_e.processInput(param3, param5, param0, param1, (byte) 95)) {
+              DisplayModeInfo.closeContextMenu(true);
+              param1 = false;
+            }
+            RasterSnapshot.handleSocialNameEntry(7377, param1, param0);
+            ProxyAuthenticationRequiredException.updateReportAbuseDialog(param1, -121, param4);
+            param1 = false;
+          }
+          return param1;
+        }
+        field_c = (Random) null;
+        if (DelegatingCanvas.hasBlockingInputPopup(-117)) {
+          ReflectionCheckHelpers.updateLoadingDialogAndQuickChat(param0, (byte) -116, param6, param1);
+          if (IntKeyLookup.field_e != null &&
+            IntKeyLookup.field_e.processInput(param3, param5, param0, param1, (byte) 95)) {
+            DisplayModeInfo.closeContextMenu(true);
+            param1 = false;
+          }
+          RasterSnapshot.handleSocialNameEntry(7377, param1, param0);
+          ProxyAuthenticationRequiredException.updateReportAbuseDialog(param1, -121, param4);
+          param1 = false;
+        }
+        return param1;
+    }
+
+    public static void releaseStatics(boolean param0) {
+        textViewcontrolsLeft = null;
+        if (!param0) {
+          menuFont = null;
+          field_e = null;
+          field_c = null;
+          return;
+        }
+        PopupInputHelpers.dispatchPopupInput(44, true, false, -98, 124, 89, 122);
+        menuFont = null;
+        field_e = null;
+        field_c = null;
+    }
+
+    static {
+        field_a = -1;
+        field_e = "<%0> has lost connection.";
+        field_c = new Random();
+        textViewcontrolsLeft = "Rotate camera left";
+    }
+}

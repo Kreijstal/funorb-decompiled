@@ -11,7 +11,7 @@ class DualLinkNode extends IntrusiveNode {
     static SpriteWidget field_m;
     DualLinkNode field_k;
 
-    final void c(int param0) {
+    final void unlinkSecondary(int param0) {
         if (this.field_k == null) {
           return;
         }
@@ -24,7 +24,7 @@ class DualLinkNode extends IntrusiveNode {
         }
     }
 
-    final boolean a(int param0) {
+    final boolean isSecondaryLinked(int param0) {
         if (param0 == 1) {
           return this.field_k != null ? true : false;
         }
@@ -35,7 +35,7 @@ class DualLinkNode extends IntrusiveNode {
         return true;
     }
 
-    final void a(int param0, long param1) {
+    final void setSecondaryKey(int param0, long param1) {
         if (this.field_k != null) {
           throw new RuntimeException();
         }
@@ -45,24 +45,24 @@ class DualLinkNode extends IntrusiveNode {
         this.field_j = param1;
     }
 
-    final static void a(int param0, int param1) {
-        hg var2 = gk.field_g;
-        var2.g(param0, 8);
-        var2.a(1, param1 + 62);
-        var2.a(param1, 80);
+    final static void sendByteRequest(int param0, int param1) {
+        CipherPacketBuffer var2 = IterableNodeHashTable.field_g;
+        var2.writeCipheredOpcode(param0, 8);
+        var2.writeByte(1, param1 + 62);
+        var2.writeByte(param1, 80);
     }
 
-    final static void a(boolean param0, byte param1, boolean param2) {
+    final static void drawDimmedBackground(boolean param0, byte param1, boolean param2) {
         int var3 = 0;
         int var3Lifetime1;
         if (param0) {
           Rasterizer.fillRectangleAlpha(0, 0, Rasterizer.field_e, Rasterizer.field_f, 0, 192);
-          ci.b(param0, -126);
+          PasswordConfirmationValidator.drawDialogStack(param0, -126);
           var3 = -121 / ((79 - param1) / 35);
           return;
         }
         Rasterizer.clear();
-        ci.b(param0, -126);
+        PasswordConfirmationValidator.drawDialogStack(param0, -126);
         var3Lifetime1 = -121 / ((79 - param1) / 35);
     }
 
@@ -80,7 +80,7 @@ class DualLinkNode extends IntrusiveNode {
         field_l = null;
     }
 
-    final long a(byte param0) {
+    final long getSecondaryKey(byte param0) {
         if (param0 <= 12) {
           this.field_j = 6L;
           return this.field_j;

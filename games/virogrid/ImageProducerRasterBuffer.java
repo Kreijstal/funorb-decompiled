@@ -6,7 +6,7 @@ import java.util.*;
 final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.image.ImageProducer, java.awt.image.ImageObserver {
     private java.awt.image.ColorModel field_s;
     private java.awt.image.ImageConsumer field_o;
-    static wl field_r;
+    static AudioSetupHelpers field_r;
     static String field_p;
     static String field_q;
     static IntrusiveDeque field_n;
@@ -29,7 +29,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw kg.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw AsyncCheckResult.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -55,7 +55,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw kg.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw AsyncCheckResult.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -75,7 +75,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
         try {
           this.addConsumer(param0);
         } catch (RuntimeException runtimeException) {
-          throw kg.a((Throwable) ((Object) runtimeException), "gd.startProduction(" + (param0 != null ? "{...}" : "null") + ')');
+          throw AsyncCheckResult.wrapException((Throwable) ((Object) runtimeException), "gd.startProduction(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -86,7 +86,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
         return param0 == this.field_o;
     }
 
-    private final synchronized void b(int param0) {
+    private final synchronized void pushPixels(int param0) {
         if (null != this.field_o) {
           this.field_o.setPixels(0, 0, this.field_c, this.field_b, this.field_s, this.field_l, 0, this.field_c);
           this.field_o.imageComplete(param0);
@@ -102,11 +102,11 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
           param0.setColorModel(this.field_s);
           param0.setHints(14);
         } catch (RuntimeException runtimeException) {
-          throw kg.a((Throwable) ((Object) runtimeException), "gd.addConsumer(" + (param0 != null ? "{...}" : "null") + ')');
+          throw AsyncCheckResult.wrapException((Throwable) ((Object) runtimeException), "gd.addConsumer(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void a(int param0, int param1, byte param2, java.awt.Component param3) {
+    final void initialize(int param0, int param1, byte param2, java.awt.Component param3) {
         this.field_l = new int[param0 * param1 + 1];
         this.field_c = param1;
         this.field_b = param0;
@@ -116,28 +116,28 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
         try {
           this.field_s = (java.awt.image.ColorModel) ((Object) new java.awt.image.DirectColorModel(32, 16711680, 65280, 255));
           this.field_h = param3.createImage((java.awt.image.ImageProducer) (this));
-          this.b(2);
+          this.pushPixels(2);
           param3.prepareImage(this.field_h, (java.awt.image.ImageObserver) (this));
-          this.b(2);
+          this.pushPixels(2);
           param3.prepareImage(this.field_h, (java.awt.image.ImageObserver) (this));
-          this.b(2);
+          this.pushPixels(2);
           param3.prepareImage(this.field_h, (java.awt.image.ImageObserver) (this));
-          this.a((byte) 29);
+          this.bindAsRenderTarget((byte) 29);
         } catch (RuntimeException runtimeException) {
-          throw kg.a((Throwable) ((Object) runtimeException), "gd.A(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw AsyncCheckResult.wrapException((Throwable) ((Object) runtimeException), "gd.A(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void a(byte param0, int param1, java.awt.Graphics param2, int param3) {
+    final void drawImage(byte param0, int param1, java.awt.Graphics param2, int param3) {
         try {
           if (param0 <= 6) {
             java.awt.image.ImageConsumer var6 = (java.awt.image.ImageConsumer) null;
             this.requestTopDownLeftRightResend((java.awt.image.ImageConsumer) null);
           }
-          this.b(2);
+          this.pushPixels(2);
           param2.drawImage(this.field_h, param1, param3, (java.awt.image.ImageObserver) (this));
         } catch (RuntimeException runtimeException) {
-          throw kg.a((Throwable) ((Object) runtimeException), "gd.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw AsyncCheckResult.wrapException((Throwable) ((Object) runtimeException), "gd.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -145,7 +145,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
     }
 
     static {
-        field_r = new wl();
+        field_r = new AudioSetupHelpers();
         field_p = "Security";
         field_q = "Shortcut Reference";
         field_n = new IntrusiveDeque();

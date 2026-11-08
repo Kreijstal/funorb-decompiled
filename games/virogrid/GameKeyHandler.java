@@ -18,10 +18,10 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (w.field_L == null) {
+          if (ValidationIndicator.field_L == null) {
             return;
           }
-          ch.field_f = -1;
+          DisplayModeInfo.field_f = -1;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -33,14 +33,14 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw kg.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw AsyncCheckResult.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
-    final static int a(byte param0, int param1, boolean param2, String param3, String param4, String param5, int param6) {
-        uh var7 = null;
+    final static int submitAccountCreation(byte param0, int param1, boolean param2, String param3, String param4, String param5, int param6) {
+        ConditionalTextValue var7 = null;
         RuntimeException var7_ref = null;
-        uh var8 = null;
+        ConditionalTextValue var8 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -51,12 +51,12 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var7 = new uh(param3);
-          var8 = new uh(param4);
+          var7 = new ConditionalTextValue(param3);
+          var8 = new ConditionalTextValue(param4);
           if (param0 != 2) {
             field_c = false;
           }
-          stackIn_3_0 = wh.a(param6, param2, param1, true, param5, var7, var8);
+          stackIn_3_0 = ByteStorage.performAccountServerRequest(param6, param2, param1, true, param5, var7, var8);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -80,54 +80,54 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw kg.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param6).append(')').toString());
+          throw AsyncCheckResult.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param6).append(')').toString());
         }
     }
 
-    final static void a(int param0) {
-        ij.field_k = new SpriteWidget(0L, (SpriteWidget) null);
-        if (!ql.field_d) {
-          ij.field_k.a(0, ij.field_m);
-          dd.field_b = new jm(fj.field_a, ij.field_k);
+    final static void buildLobbyRoots(int param0) {
+        BackgroundParticle.field_k = new SpriteWidget(0L, (SpriteWidget) null);
+        if (!DialWidgetPainter.field_d) {
+          BackgroundParticle.field_k.addChild(0, BackgroundParticle.field_m);
+          DecodedSpriteHelpers.field_b = new LobbyLayout(RankingArraySupport.field_a, BackgroundParticle.field_k);
           WidgetContainer.field_y = new SpriteWidget(0L, (SpriteWidget) null);
-          WidgetContainer.field_y.a(0, dd.field_b.field_c);
-          WidgetContainer.field_y.a(param0, s.field_b);
-          id.b(param0 - 105);
+          WidgetContainer.field_y.addChild(0, DecodedSpriteHelpers.field_b.field_c);
+          WidgetContainer.field_y.addChild(param0, InputSetupHelpers.field_b);
+          UiTheme.layoutMainLobbyComponents(param0 - 105);
           return;
         }
-        ij.field_k.a(0, qd.field_f);
-        ij.field_k.a(0, ij.field_m);
-        dd.field_b = new jm(fj.field_a, ij.field_k);
+        BackgroundParticle.field_k.addChild(0, MusicPatchEnvelope.field_f);
+        BackgroundParticle.field_k.addChild(0, BackgroundParticle.field_m);
+        DecodedSpriteHelpers.field_b = new LobbyLayout(RankingArraySupport.field_a, BackgroundParticle.field_k);
         WidgetContainer.field_y = new SpriteWidget(0L, (SpriteWidget) null);
-        WidgetContainer.field_y.a(0, dd.field_b.field_c);
-        WidgetContainer.field_y.a(param0, s.field_b);
-        id.b(param0 - 105);
+        WidgetContainer.field_y.addChild(0, DecodedSpriteHelpers.field_b.field_c);
+        WidgetContainer.field_y.addChild(param0, InputSetupHelpers.field_b);
+        UiTheme.layoutMainLobbyComponents(param0 - 105);
     }
 
     public final void keyTyped(java.awt.event.KeyEvent param0) {
         int var2_int = 0;
         int var3 = 0;
         try {
-          if (w.field_L != null) {
+          if (ValidationIndicator.field_L != null) {
             var2_int = param0.getKeyChar();
             if (var2_int != 0 &&
               var2_int != 65535 &&
-              hc.a((char) var2_int, -1)) {
-              var3 = 127 & hh.field_e + 1;
-              if (var3 != ph.field_h) {
-                cj.field_o[hh.field_e] = -1;
-                hg.field_q[hh.field_e] = (char)var2_int;
-                hh.field_e = var3;
+              ClockAndTextHelpers.isTypeableCharacter((char) var2_int, -1)) {
+              var3 = 127 & LogoAndLoginHelpers.field_e + 1;
+              if (var3 != ProxySocketConnector.field_h) {
+                ChatMessage.field_o[LogoAndLoginHelpers.field_e] = -1;
+                CipherPacketBuffer.field_q[LogoAndLoginHelpers.field_e] = (char)var2_int;
+                LogoAndLoginHelpers.field_e = var3;
               }
             }
           }
           param0.consume();
         } catch (RuntimeException runtimeException) {
-          throw kg.a((Throwable) ((Object) runtimeException), "ld.keyTyped(" + (param0 != null ? "{...}" : "null") + ')');
+          throw AsyncCheckResult.wrapException((Throwable) ((Object) runtimeException), "ld.keyTyped(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         int var1 = 64 / ((15 - param0) / 44);
         field_g = null;
         field_h = null;
@@ -145,21 +145,21 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          if (null != w.field_L) {
-            um.field_Fb = 0;
+          if (null != ValidationIndicator.field_L) {
+            ScrollPane.field_Fb = 0;
             var2_int = param0.getKeyCode();
             if (var2_int >= 0 &&
-              var2_int < wd.field_c.length) {
-              var2_int = -129 & wd.field_c[var2_int];
+              var2_int < MathAndCookieHelpers.field_c.length) {
+              var2_int = -129 & MathAndCookieHelpers.field_c[var2_int];
             } else {
               var2_int = -1;
             }
-            if (ch.field_f >= 0 &&
+            if (DisplayModeInfo.field_f >= 0 &&
               0 <= var2_int) {
-              ab.field_H[ch.field_f] = ~var2_int;
-              ch.field_f = ch.field_f + 1 & 127;
-              if (ch.field_f == bf.field_i) {
-                ch.field_f = -1;
+              BirthDateEntryPanel.field_H[DisplayModeInfo.field_f] = ~var2_int;
+              DisplayModeInfo.field_f = DisplayModeInfo.field_f + 1 & 127;
+              if (DisplayModeInfo.field_f == ReflectionCheck.field_i) {
+                DisplayModeInfo.field_f = -1;
               }
             }
           }
@@ -175,17 +175,17 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw kg.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw AsyncCheckResult.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 
-    final static void a(int param0, int param1, int param2, wg param3) {
+    final static void ignoreLayoutResource(int param0, int param1, int param2, FrameSkin param3) {
         try {
           if (param0 != -1) {
-            GameKeyHandler.a((byte) -63);
+            GameKeyHandler.releaseStatics((byte) -63);
           }
         } catch (RuntimeException runtimeException) {
-          throw kg.a((Throwable) ((Object) runtimeException), "ld.C(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw AsyncCheckResult.wrapException((Throwable) ((Object) runtimeException), "ld.C(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -202,32 +202,32 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
         RuntimeException decompiledCaughtException = null;
         int var3Lifetime1;
         try {
-          if (w.field_L != null) {
-            um.field_Fb = 0;
+          if (ValidationIndicator.field_L != null) {
+            ScrollPane.field_Fb = 0;
             var2_int = param0.getKeyCode();
             if (var2_int >= 0 &&
-              wd.field_c.length > var2_int) {
-              var2_int = wd.field_c[var2_int];
+              MathAndCookieHelpers.field_c.length > var2_int) {
+              var2_int = MathAndCookieHelpers.field_c[var2_int];
               if ((128 & var2_int) != 0) {
                 var2_int = -1;
               }
             } else {
               var2_int = -1;
             }
-            if (ch.field_f >= 0 &&
+            if (DisplayModeInfo.field_f >= 0 &&
               0 <= var2_int) {
-              ab.field_H[ch.field_f] = var2_int;
-              ch.field_f = 1 + ch.field_f & 127;
-              if (bf.field_i == ch.field_f) {
-                ch.field_f = -1;
+              BirthDateEntryPanel.field_H[DisplayModeInfo.field_f] = var2_int;
+              DisplayModeInfo.field_f = 1 + DisplayModeInfo.field_f & 127;
+              if (ReflectionCheck.field_i == DisplayModeInfo.field_f) {
+                DisplayModeInfo.field_f = -1;
               }
             }
             if (var2_int >= 0) {
-              var3 = 1 + hh.field_e & 127;
-              if (ph.field_h != var3) {
-                cj.field_o[hh.field_e] = var2_int;
-                hg.field_q[hh.field_e] = (char)0;
-                hh.field_e = var3;
+              var3 = 1 + LogoAndLoginHelpers.field_e & 127;
+              if (ProxySocketConnector.field_h != var3) {
+                ChatMessage.field_o[LogoAndLoginHelpers.field_e] = var2_int;
+                CipherPacketBuffer.field_q[LogoAndLoginHelpers.field_e] = (char)0;
+                LogoAndLoginHelpers.field_e = var3;
               }
             }
             var3Lifetime1 = param0.getModifiers();
@@ -249,7 +249,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw kg.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
+          throw AsyncCheckResult.wrapException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
         }
     }
 

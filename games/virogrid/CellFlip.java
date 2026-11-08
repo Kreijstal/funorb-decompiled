@@ -14,70 +14,70 @@ final class CellFlip extends IntrusiveNode {
     int field_n;
     int row;
 
-    final static void a(int param0) {
+    final static void readSubmissionAcknowledgement(int param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
-        fa var4_ref_fa = null;
+        PendingSubmission var4_ref_fa = null;
         Object var5 = null;
         int var6 = 0;
-        cm var9 = null;
-        hg var10 = null;
+        LogoRenderHelpers var9 = null;
+        CipherPacketBuffer var10 = null;
         byte[] var14 = null;
         var6 = Virogrid.field_F ? 1 : 0;
         try {
           if (param0 != 26360) {
-            CellFlip.a(-72);
+            CellFlip.readSubmissionAcknowledgement(-72);
           }
-          var10 = sh.field_qb;
+          var10 = ProgressMessageDialog.field_qb;
           var2 = var10.readUnsignedByte(11132);
           if (var2 == 0) {
-            var9 = (cm) (di.field_v.a((byte) -51));
+            var9 = (LogoRenderHelpers) (UsernameAvailabilityValidator.field_v.first((byte) -51));
             if (var9 == null) {
-              tn.a(false);
+              MenuInputState.closeGameConnection(false);
               return;
             }
             var4 = var10.readUnsignedByte(11132);
             if (var4 != 0) {
               var14 = new byte[var4];
-              var10.a(0, var4, true, var14);
+              var10.readBytes(0, var4, true, var14);
             } else {
               var5 = null;
             }
             var10.position = var10.position + 4;
             if (var10.verifyChecksum(-29449)) {
-              var9.a(false);
+              var9.unlink(false);
               return;
             }
-            tn.a(false);
+            MenuInputState.closeGameConnection(false);
             return;
           }
           if (var2 != 1) {
-            en.a("A1: " + rg.a(true), (Throwable) null, 1);
-            tn.a(false);
+            IconLabelWidget.reportClientError("A1: " + ClientException.describePacketHistory(true), (Throwable) null, 1);
+            MenuInputState.closeGameConnection(false);
             return;
           }
           var3 = var10.readInt((byte) 122);
-          var4_ref_fa = (fa) (oi.field_a.a((byte) -65));
+          var4_ref_fa = (PendingSubmission) (MenuScreen.field_a.first((byte) -65));
           while (var4_ref_fa != null) {
             if (var3 != var4_ref_fa.field_i) {
-              var4_ref_fa = (fa) (oi.field_a.a(16213));
+              var4_ref_fa = (PendingSubmission) (MenuScreen.field_a.next(16213));
               continue;
             }
             break;
           }
           if (var4_ref_fa != null) {
-            var4_ref_fa.a(false);
+            var4_ref_fa.unlink(false);
             return;
           }
-          tn.a(false);
+          MenuInputState.closeGameConnection(false);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw kg.a((Throwable) ((Object) var1), "fb.A(" + param0 + ')');
+          throw AsyncCheckResult.wrapException((Throwable) ((Object) var1), "fb.A(" + param0 + ')');
         }
     }
 
@@ -104,7 +104,7 @@ final class CellFlip extends IntrusiveNode {
         this.column = param0;
     }
 
-    CellFlip(bi param0, boolean param1) {
+    CellFlip(ChatShortcutHelpers param0, boolean param1) {
         try {
           this.newOwnerIsFirstPlayer = param1 ? true : false;
           this.phase = 0;
@@ -113,7 +113,7 @@ final class CellFlip extends IntrusiveNode {
           this.field_n = 0;
           this.column = param0.field_a;
         } catch (RuntimeException runtimeException) {
-          throw kg.a((Throwable) ((Object) runtimeException), "fb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw AsyncCheckResult.wrapException((Throwable) ((Object) runtimeException), "fb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

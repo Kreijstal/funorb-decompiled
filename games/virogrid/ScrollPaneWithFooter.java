@@ -1,0 +1,81 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class ScrollPaneWithFooter extends SpriteWidget {
+    static String textEndgameNotimeYou;
+    SpriteWidget field_Lb;
+    ScrollPane field_Ib;
+    SpriteWidget field_Fb;
+    static StateToken field_Kb;
+    SpriteWidget field_Mb;
+    static String field_Jb;
+    static SpriteWidget field_Eb;
+    static boolean field_Gb;
+    static float field_Hb;
+
+    ScrollPaneWithFooter(long param0, SpriteWidget param1, SpriteWidget param2, VerticalScrollbar param3, SpriteWidget param4, String param5, String param6) {
+        super(param0, param1);
+        try {
+          this.field_Lb = new SpriteWidget(0L, (SpriteWidget) null);
+          this.field_Ib = new ScrollPane(0L, this.field_Lb, param2, param3);
+          this.field_Fb = new SpriteWidget(0L, param4);
+          this.field_Mb = new SpriteWidget(0L, param4);
+          this.field_Fb.field_V = param5;
+          this.field_Mb.field_V = param6;
+          this.addChild(0, this.field_Ib);
+          this.addChild(0, this.field_Fb);
+          this.addChild(0, this.field_Mb);
+        } catch (RuntimeException runtimeException) {
+          throw AsyncCheckResult.wrapException((Throwable) ((Object) runtimeException), "ao.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    final static SpriteWidget getPlayerListContent(boolean param0) {
+        if (!param0) {
+          ScrollPaneWithFooter.getPlayerListContent(false);
+          return GameBoard.field_j.field_Jb;
+        }
+        return GameBoard.field_j.field_Jb;
+    }
+
+    final void layoutPaneFooter(int param0, int param1, int param2, int param3) {
+        int var5 = (this.field_K + param1) / 2;
+        int var6 = -param2 + this.field_ub;
+        this.field_Ib.setScrollPaneBounds(0, -103, this.field_K, param1, -param1 + var6, 0, param0);
+        this.field_Fb.field_F = var6;
+        this.field_Fb.field_K = -param1 + var5;
+        this.field_Fb.field_tb = param3;
+        this.field_Fb.field_ub = param2;
+        this.field_Mb.field_ub = param2;
+        this.field_Mb.field_F = var6;
+        this.field_Mb.field_tb = var5;
+        this.field_Mb.field_K = this.field_K - var5;
+    }
+
+    final void setBoundsAndLayout(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+        this.field_tb = param1;
+        this.field_F = param5;
+        this.field_K = param0;
+        this.field_ub = param3;
+        this.layoutPaneFooter(param4, param2, param6, param7 ^ param7);
+    }
+
+    ScrollPaneWithFooter(long param0, ScrollPaneWithFooter param1, String param2, String param3) {
+        this(param0, param1, param1.field_Ib.field_Eb, param1.field_Ib.field_Hb, param1.field_Fb, param2, param3);
+    }
+
+    public static void releaseStatics(int param0) {
+        field_Jb = null;
+        textEndgameNotimeYou = null;
+        int var1 = 13 / ((-63 - param0) / 49);
+        field_Eb = null;
+        field_Kb = null;
+    }
+
+    static {
+        textEndgameNotimeYou = "You ran out of time";
+        field_Kb = new StateToken();
+        field_Jb = "<%0> has left the lobby.";
+        field_Hb = 0.0f;
+    }
+}
