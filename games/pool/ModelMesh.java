@@ -231,7 +231,7 @@ final class ModelMesh extends RenderableModel {
           var27++;
         }
         try {
-          this.a((var20 & var16) != 0, false, 0L, (int) this.boundingRadius, this.boundingRadius << 1);
+          this.drawVisibleFaces((var20 & var16) != 0, false, 0L, (int) this.boundingRadius, this.boundingRadius << 1);
         } catch (java.lang.Exception decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var21 = (Exception) (Object) decompiledCaughtException;
@@ -303,7 +303,7 @@ final class ModelMesh extends RenderableModel {
         this.boundsValid = true;
     }
 
-    private final void c(int param0) {
+    private final void drawNearClippedFace(int faceIndex) {
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;
@@ -355,28 +355,28 @@ final class ModelMesh extends RenderableModel {
         var2 = TriangleRasterizer.projectionCenterX;
         var3 = TriangleRasterizer.projectionCenterY;
         var4 = 0;
-        var5 = this.field_j[param0];
-        var6 = this.field_T[param0];
-        var7 = this.field_R[param0];
+        var5 = this.field_j[faceIndex];
+        var6 = this.field_T[faceIndex];
+        var7 = this.field_R[faceIndex];
         var8 = field_f[var5];
         var9 = field_f[var6];
         var10 = field_f[var7];
         if (this.field_bb != null) {
-          TriangleRasterizer.blendAlpha = this.field_bb[param0] & 255;
+          TriangleRasterizer.blendAlpha = this.field_bb[faceIndex] & 255;
         } else {
           TriangleRasterizer.blendAlpha = 0;
         }
         if (var8 < 50) {
           var11 = field_L[var5];
           var12 = field_db[var5];
-          var13 = this.field_W[param0] & 65535;
+          var13 = this.field_W[faceIndex] & 65535;
           if (var10 >= 50) {
             var14 = (50 - var8) * TriangleRasterizer.field_f[var10 - var8];
             field_H[var4] = var2 + (var11 + ((field_L[var7] - var11) * var14 >> 16) << 9) / 50;
             field_cb[var4] = var3 + (var12 + ((field_db[var7] - var12) * var14 >> 16) << 9) / 50;
             incrementValue$0 = var4;
             var4++;
-            field_p[incrementValue$0] = var13 + (((this.field_J[param0] & 65535) - var13) * var14 >> 16);
+            field_p[incrementValue$0] = var13 + (((this.field_J[faceIndex] & 65535) - var13) * var14 >> 16);
           }
           if (var9 >= 50) {
             var14Lifetime4 = (50 - var8) * TriangleRasterizer.field_f[var9 - var8];
@@ -384,26 +384,26 @@ final class ModelMesh extends RenderableModel {
             field_cb[var4] = var3 + (var12 + ((field_db[var6] - var12) * var14Lifetime4 >> 16) << 9) / 50;
             incrementValue$1 = var4;
             var4++;
-            field_p[incrementValue$1] = var13 + (((this.field_y[param0] & 65535) - var13) * var14Lifetime4 >> 16);
+            field_p[incrementValue$1] = var13 + (((this.field_y[faceIndex] & 65535) - var13) * var14Lifetime4 >> 16);
           }
         } else {
           field_H[var4] = field_X[var5];
           field_cb[var4] = field_v[var5];
           incrementValue$2 = var4;
           var4++;
-          field_p[incrementValue$2] = this.field_W[param0] & 65535;
+          field_p[incrementValue$2] = this.field_W[faceIndex] & 65535;
         }
         if (var9 < 50) {
           var11Lifetime1 = field_L[var6];
           var12Lifetime1 = field_db[var6];
-          var13Lifetime1 = this.field_y[param0] & 65535;
+          var13Lifetime1 = this.field_y[faceIndex] & 65535;
           if (var8 >= 50) {
             var14Lifetime1 = (50 - var9) * TriangleRasterizer.field_f[var8 - var9];
             field_H[var4] = var2 + (var11Lifetime1 + ((field_L[var5] - var11Lifetime1) * var14Lifetime1 >> 16) << 9) / 50;
             field_cb[var4] = var3 + (var12Lifetime1 + ((field_db[var5] - var12Lifetime1) * var14Lifetime1 >> 16) << 9) / 50;
             incrementValue$3 = var4;
             var4++;
-            field_p[incrementValue$3] = var13Lifetime1 + (((this.field_W[param0] & 65535) - var13Lifetime1) * var14Lifetime1 >> 16);
+            field_p[incrementValue$3] = var13Lifetime1 + (((this.field_W[faceIndex] & 65535) - var13Lifetime1) * var14Lifetime1 >> 16);
           }
           if (var10 >= 50) {
             var14Lifetime1Lifetime1 = (50 - var9) * TriangleRasterizer.field_f[var10 - var9];
@@ -411,26 +411,26 @@ final class ModelMesh extends RenderableModel {
             field_cb[var4] = var3 + (var12Lifetime1 + ((field_db[var7] - var12Lifetime1) * var14Lifetime1Lifetime1 >> 16) << 9) / 50;
             incrementValue$4 = var4;
             var4++;
-            field_p[incrementValue$4] = var13Lifetime1 + (((this.field_J[param0] & 65535) - var13Lifetime1) * var14Lifetime1Lifetime1 >> 16);
+            field_p[incrementValue$4] = var13Lifetime1 + (((this.field_J[faceIndex] & 65535) - var13Lifetime1) * var14Lifetime1Lifetime1 >> 16);
           }
         } else {
           field_H[var4] = field_X[var6];
           field_cb[var4] = field_v[var6];
           incrementValue$5 = var4;
           var4++;
-          field_p[incrementValue$5] = this.field_y[param0] & 65535;
+          field_p[incrementValue$5] = this.field_y[faceIndex] & 65535;
         }
         if (var10 < 50) {
           var11Lifetime2 = field_L[var7];
           var12Lifetime2 = field_db[var7];
-          var13Lifetime2 = this.field_J[param0] & 65535;
+          var13Lifetime2 = this.field_J[faceIndex] & 65535;
           if (var9 >= 50) {
             var14Lifetime2 = (50 - var10) * TriangleRasterizer.field_f[var9 - var10];
             field_H[var4] = var2 + (var11Lifetime2 + ((field_L[var6] - var11Lifetime2) * var14Lifetime2 >> 16) << 9) / 50;
             field_cb[var4] = var3 + (var12Lifetime2 + ((field_db[var6] - var12Lifetime2) * var14Lifetime2 >> 16) << 9) / 50;
             incrementValue$6 = var4;
             var4++;
-            field_p[incrementValue$6] = var13Lifetime2 + (((this.field_y[param0] & 65535) - var13Lifetime2) * var14Lifetime2 >> 16);
+            field_p[incrementValue$6] = var13Lifetime2 + (((this.field_y[faceIndex] & 65535) - var13Lifetime2) * var14Lifetime2 >> 16);
           }
           if (var8 >= 50) {
             var14Lifetime2Lifetime1 = (50 - var10) * TriangleRasterizer.field_f[var8 - var10];
@@ -438,14 +438,14 @@ final class ModelMesh extends RenderableModel {
             field_cb[var4] = var3 + (var12Lifetime2 + ((field_db[var5] - var12Lifetime2) * var14Lifetime2Lifetime1 >> 16) << 9) / 50;
             incrementValue$7 = var4;
             var4++;
-            field_p[incrementValue$7] = var13Lifetime2 + (((this.field_W[param0] & 65535) - var13Lifetime2) * var14Lifetime2Lifetime1 >> 16);
+            field_p[incrementValue$7] = var13Lifetime2 + (((this.field_W[faceIndex] & 65535) - var13Lifetime2) * var14Lifetime2Lifetime1 >> 16);
           }
         } else {
           field_H[var4] = field_X[var7];
           field_cb[var4] = field_v[var7];
           incrementValue$8 = var4;
           var4++;
-          field_p[incrementValue$8] = this.field_J[param0] & 65535;
+          field_p[incrementValue$8] = this.field_J[faceIndex] & 65535;
         }
         boolean decompiledFrameRemainder0 = true;
         var11Lifetime3 = field_H[0];
@@ -465,10 +465,10 @@ final class ModelMesh extends RenderableModel {
             TriangleRasterizer.clipHorizontalSpans = true;
           }
           if (this.field_Z != null &&
-            this.field_Z[param0] != -1) {
+            this.field_Z[faceIndex] != -1) {
             if (this.field_h != null &&
-              this.field_h[param0] != -1) {
-              var20 = this.field_h[param0] & 255;
+              this.field_h[faceIndex] != -1) {
+              var20 = this.field_h[faceIndex] & 255;
               var17 = this.field_ab[var20];
               var18 = this.field_n[var20];
               var19 = this.field_i[var20];
@@ -477,18 +477,18 @@ final class ModelMesh extends RenderableModel {
               var18 = var6;
               var19 = var7;
             }
-            if (this.field_J[param0] != -1) {
-              TriangleRasterizer.drawTexturedTriangle(var14Lifetime3, var15, var16, var11Lifetime3, var12Lifetime3, var13Lifetime3, field_p[0], field_p[1], field_p[2], field_L[var17], field_L[var18], field_L[var19], field_db[var17], field_db[var18], field_db[var19], field_f[var17], field_f[var18], field_f[var19], (int) this.field_Z[param0]);
+            if (this.field_J[faceIndex] != -1) {
+              TriangleRasterizer.drawTexturedTriangle(var14Lifetime3, var15, var16, var11Lifetime3, var12Lifetime3, var13Lifetime3, field_p[0], field_p[1], field_p[2], field_L[var17], field_L[var18], field_L[var19], field_db[var17], field_db[var18], field_db[var19], field_f[var17], field_f[var18], field_f[var19], (int) this.field_Z[faceIndex]);
             } else {
-              TriangleRasterizer.drawTexturedTriangle(var14Lifetime3, var15, var16, var11Lifetime3, var12Lifetime3, var13Lifetime3, this.field_W[param0], this.field_W[param0], this.field_W[param0], field_L[var17], field_L[var18], field_L[var19], field_db[var17], field_db[var18], field_db[var19], field_f[var17], field_f[var18], field_f[var19], (int) this.field_Z[param0]);
+              TriangleRasterizer.drawTexturedTriangle(var14Lifetime3, var15, var16, var11Lifetime3, var12Lifetime3, var13Lifetime3, this.field_W[faceIndex], this.field_W[faceIndex], this.field_W[faceIndex], field_L[var17], field_L[var18], field_L[var19], field_db[var17], field_db[var18], field_db[var19], field_f[var17], field_f[var18], field_f[var19], (int) this.field_Z[faceIndex]);
             }
             decompiledFrameRemainder0 = false;
           }
           else {
-            if (this.field_J[param0] != -1) {
+            if (this.field_J[faceIndex] != -1) {
               TriangleRasterizer.drawShadedTriangle(var14Lifetime3, var15, var16, var11Lifetime3, var12Lifetime3, var13Lifetime3, field_p[0], field_p[1], field_p[2]);
             } else {
-              TriangleRasterizer.drawFlatTriangle(var14Lifetime3, var15, var16, var11Lifetime3, var12Lifetime3, var13Lifetime3, TriangleRasterizer.colorPalette[this.field_W[param0] & 65535]);
+              TriangleRasterizer.drawFlatTriangle(var14Lifetime3, var15, var16, var11Lifetime3, var12Lifetime3, var13Lifetime3, TriangleRasterizer.colorPalette[this.field_W[faceIndex] & 65535]);
             }
           }
         }
@@ -506,10 +506,10 @@ final class ModelMesh extends RenderableModel {
           TriangleRasterizer.clipHorizontalSpans = true;
         }
         if (this.field_Z != null &&
-          this.field_Z[param0] != -1) {
+          this.field_Z[faceIndex] != -1) {
           if (this.field_h != null &&
-            this.field_h[param0] != -1) {
-            var20Lifetime1 = this.field_h[param0] & 255;
+            this.field_h[faceIndex] != -1) {
+            var20Lifetime1 = this.field_h[faceIndex] & 255;
             var17Lifetime1 = this.field_ab[var20Lifetime1];
             var18Lifetime1 = this.field_n[var20Lifetime1];
             var19Lifetime1 = this.field_i[var20Lifetime1];
@@ -518,20 +518,20 @@ final class ModelMesh extends RenderableModel {
             var18Lifetime1 = var6;
             var19Lifetime1 = var7;
           }
-          var20Lifetime1Lifetime1 = this.field_Z[param0];
-          if (this.field_J[param0] != -1) {
+          var20Lifetime1Lifetime1 = this.field_Z[faceIndex];
+          if (this.field_J[faceIndex] != -1) {
             TriangleRasterizer.drawTexturedTriangle(var14Lifetime3, var15, var16, var11Lifetime3, var12Lifetime3, var13Lifetime3, field_p[0], field_p[1], field_p[2], field_L[var17Lifetime1], field_L[var18Lifetime1], field_L[var19Lifetime1], field_db[var17Lifetime1], field_db[var18Lifetime1], field_db[var19Lifetime1], field_f[var17Lifetime1], field_f[var18Lifetime1], field_f[var19Lifetime1], var20Lifetime1Lifetime1);
             TriangleRasterizer.drawTexturedTriangle(var14Lifetime3, var16, field_cb[3], var11Lifetime3, var13Lifetime3, field_H[3], field_p[0], field_p[2], field_p[3], field_L[var17Lifetime1], field_L[var18Lifetime1], field_L[var19Lifetime1], field_db[var17Lifetime1], field_db[var18Lifetime1], field_db[var19Lifetime1], field_f[var17Lifetime1], field_f[var18Lifetime1], field_f[var19Lifetime1], var20Lifetime1Lifetime1);
           } else {
-            TriangleRasterizer.drawTexturedTriangle(var14Lifetime3, var15, var16, var11Lifetime3, var12Lifetime3, var13Lifetime3, this.field_W[param0], this.field_W[param0], this.field_W[param0], field_L[var17Lifetime1], field_L[var18Lifetime1], field_L[var19Lifetime1], field_db[var17Lifetime1], field_db[var18Lifetime1], field_db[var19Lifetime1], field_f[var17Lifetime1], field_f[var18Lifetime1], field_f[var19Lifetime1], var20Lifetime1Lifetime1);
-            TriangleRasterizer.drawTexturedTriangle(var14Lifetime3, var16, field_cb[3], var11Lifetime3, var13Lifetime3, field_H[3], this.field_W[param0], this.field_W[param0], this.field_W[param0], field_L[var17Lifetime1], field_L[var18Lifetime1], field_L[var19Lifetime1], field_db[var17Lifetime1], field_db[var18Lifetime1], field_db[var19Lifetime1], field_f[var17Lifetime1], field_f[var18Lifetime1], field_f[var19Lifetime1], var20Lifetime1Lifetime1);
+            TriangleRasterizer.drawTexturedTriangle(var14Lifetime3, var15, var16, var11Lifetime3, var12Lifetime3, var13Lifetime3, this.field_W[faceIndex], this.field_W[faceIndex], this.field_W[faceIndex], field_L[var17Lifetime1], field_L[var18Lifetime1], field_L[var19Lifetime1], field_db[var17Lifetime1], field_db[var18Lifetime1], field_db[var19Lifetime1], field_f[var17Lifetime1], field_f[var18Lifetime1], field_f[var19Lifetime1], var20Lifetime1Lifetime1);
+            TriangleRasterizer.drawTexturedTriangle(var14Lifetime3, var16, field_cb[3], var11Lifetime3, var13Lifetime3, field_H[3], this.field_W[faceIndex], this.field_W[faceIndex], this.field_W[faceIndex], field_L[var17Lifetime1], field_L[var18Lifetime1], field_L[var19Lifetime1], field_db[var17Lifetime1], field_db[var18Lifetime1], field_db[var19Lifetime1], field_f[var17Lifetime1], field_f[var18Lifetime1], field_f[var19Lifetime1], var20Lifetime1Lifetime1);
           }
         } else {
-          if (this.field_J[param0] != -1) {
+          if (this.field_J[faceIndex] != -1) {
             TriangleRasterizer.drawShadedTriangle(var14Lifetime3, var15, var16, var11Lifetime3, var12Lifetime3, var13Lifetime3, field_p[0], field_p[1], field_p[2]);
             TriangleRasterizer.drawShadedTriangle(var14Lifetime3, var16, field_cb[3], var11Lifetime3, var13Lifetime3, field_H[3], field_p[0], field_p[2], field_p[3]);
           } else {
-            var17Lifetime1 = TriangleRasterizer.colorPalette[this.field_W[param0] & 65535];
+            var17Lifetime1 = TriangleRasterizer.colorPalette[this.field_W[faceIndex] & 65535];
             TriangleRasterizer.drawFlatTriangle(var14Lifetime3, var15, var16, var11Lifetime3, var12Lifetime3, var13Lifetime3, var17Lifetime1);
             TriangleRasterizer.drawFlatTriangle(var14Lifetime3, var16, field_cb[3], var11Lifetime3, var13Lifetime3, field_H[3], var17Lifetime1);
           }
@@ -545,7 +545,7 @@ final class ModelMesh extends RenderableModel {
         return this.boundingRadius;
     }
 
-    final void a(int[] param0, int[] param1) {
+    final void drawWithTransforms(int[] cameraTransform, int[] modelTransform) {
         int var33_int = 0;
         int stackIn_15_0 = 0;
         int stackIn_21_0 = 0;
@@ -595,27 +595,27 @@ final class ModelMesh extends RenderableModel {
         if (!this.boundsValid) {
           this.calculateBounds();
         }
-        var3 = param1[0] - param0[0];
-        var4 = param1[1] - param0[1];
-        var5 = param1[2] - param0[2];
-        var6 = param0[3];
-        var7 = param0[4];
-        var8 = param0[5];
-        var9 = param0[6];
-        var10 = param0[7];
-        var11 = param0[8];
-        var12 = param0[9];
-        var13 = param0[10];
-        var14 = param0[11];
-        var15 = param1[3];
-        var16 = param1[4];
-        var17 = param1[5];
-        var18 = param1[6];
-        var19 = param1[7];
-        var20 = param1[8];
-        var21 = param1[9];
-        var22 = param1[10];
-        var23 = param1[11];
+        var3 = modelTransform[0] - cameraTransform[0];
+        var4 = modelTransform[1] - cameraTransform[1];
+        var5 = modelTransform[2] - cameraTransform[2];
+        var6 = cameraTransform[3];
+        var7 = cameraTransform[4];
+        var8 = cameraTransform[5];
+        var9 = cameraTransform[6];
+        var10 = cameraTransform[7];
+        var11 = cameraTransform[8];
+        var12 = cameraTransform[9];
+        var13 = cameraTransform[10];
+        var14 = cameraTransform[11];
+        var15 = modelTransform[3];
+        var16 = modelTransform[4];
+        var17 = modelTransform[5];
+        var18 = modelTransform[6];
+        var19 = modelTransform[7];
+        var20 = modelTransform[8];
+        var21 = modelTransform[9];
+        var22 = modelTransform[10];
+        var23 = modelTransform[11];
         var24 = var3 * var6 + var4 * var7 + var5 * var8 >> 16;
         var25 = var3 * var9 + var4 * var10 + var5 * var11 >> 16;
         var26 = var3 * var12 + var4 * var13 + var5 * var14 >> 16;
@@ -678,7 +678,7 @@ final class ModelMesh extends RenderableModel {
           }
         }
         try {
-          this.a((var32 & var28) != 0, false, 0L, (int) this.boundingRadius, this.boundingRadius << 1);
+          this.drawVisibleFaces((var32 & var28) != 0, false, 0L, (int) this.boundingRadius, this.boundingRadius << 1);
         } catch (java.lang.Exception decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var33 = (Exception) (Object) decompiledCaughtException;
@@ -749,7 +749,7 @@ final class ModelMesh extends RenderableModel {
         return this.minZ;
     }
 
-    private final void a(boolean param0, boolean param1, long param2, int param3, int param4) {
+    private final void drawVisibleFaces(boolean clipNearPlane, boolean hitTest, long selectionTag, int depthOffset, int depthBucketCount) {
         int incrementValue$12 = 0;
         int dupTemp$10 = 0;
         int[] arrayValue$11 = null;
@@ -825,7 +825,7 @@ final class ModelMesh extends RenderableModel {
         int var13Lifetime1Lifetime1;
         int var14_intLifetime1Lifetime1;
         int var15_intLifetime1Lifetime1;
-        if (param4 >= 1600) {
+        if (depthBucketCount >= 1600) {
           return;
         }
         var7 = 0;
@@ -847,7 +847,7 @@ final class ModelMesh extends RenderableModel {
               var12 = field_X[var9];
               var13 = field_X[var10];
               var14_int = field_X[var11];
-              if (param0 && (var12 == -5000 ||
+              if (clipNearPlane && (var12 == -5000 ||
                 var13 == -5000 ||
                 var14_int == -5000)) {
                 var15_int = field_L[var9];
@@ -876,7 +876,7 @@ final class ModelMesh extends RenderableModel {
                     var7++;
                     field_m[incrementValue$12] = var8Lifetime1;
                   } else {
-                    var27 = (field_x[var9] + field_x[var10] + field_x[var11]) / 3 + param3;
+                    var27 = (field_x[var9] + field_x[var10] + field_x[var11]) / 3 + depthOffset;
                     if (field_Y[var27] < 64) {
                       dupTemp$10 = field_Y[var27];
                       arrayValue$11 = field_o[var27];
@@ -903,12 +903,12 @@ final class ModelMesh extends RenderableModel {
                 }
                 break regionExit1;
               }
-              if (param1 &&
+              if (hitTest &&
                 this.isPointInTriangleBounds(LookupRetrySupport.field_b + TriangleRasterizer.projectionCenterX, ScrollPaneWithFooter.field_Rb + TriangleRasterizer.projectionCenterY, field_v[var9], field_v[var10], field_v[var11], var12, var13, var14_int)) {
                 fieldTemp$13 = Js5ArchiveManager.field_g;
                 Js5ArchiveManager.field_g = Js5ArchiveManager.field_g + 1;
-                TransformRotationSupport.field_d[fieldTemp$13] = param2;
-                param1 = false;
+                TransformRotationSupport.field_d[fieldTemp$13] = selectionTag;
+                hitTest = false;
               }
               if ((var12 - var13) * (field_v[var11] - field_v[var10]) - (field_v[var9] - field_v[var10]) * (var14_int - var13) > 0) {
                 field_I[var8Lifetime1] = false;
@@ -923,7 +923,7 @@ final class ModelMesh extends RenderableModel {
                   field_q[var8Lifetime1] = true;
                 }
                 if (!field_k) {
-                  var15_intLifetime2 = (field_x[var9] + field_x[var10] + field_x[var11]) / 3 + param3;
+                  var15_intLifetime2 = (field_x[var9] + field_x[var10] + field_x[var11]) / 3 + depthOffset;
                   if (field_Y[var15_intLifetime2] >= 64) {
                     var16Lifetime2 = field_Y[var15_intLifetime2];
                     if (var16Lifetime2 == 64) {
@@ -960,7 +960,7 @@ final class ModelMesh extends RenderableModel {
           TutorialController.sortParallelArrays(0, field_C, field_m, var7 - 1, (byte) 80);
           if (this.field_M == null) {
             for (var8Lifetime2 = 0; var8Lifetime2 < var7; var8Lifetime2++) {
-              this.b(field_m[var8Lifetime2]);
+              this.drawFace(field_m[var8Lifetime2]);
             }
             return;
           }
@@ -988,21 +988,21 @@ final class ModelMesh extends RenderableModel {
           }
         } else {
           if (this.field_M == null) {
-            for (var8Lifetime2 = param4 - 1; var8Lifetime2 >= 0; var8Lifetime2--) {
+            for (var8Lifetime2 = depthBucketCount - 1; var8Lifetime2 >= 0; var8Lifetime2--) {
               var9Lifetime1 = field_Y[var8Lifetime2];
               if (var9Lifetime1 > 0) {
                 stackIn_88_0 = (var9Lifetime1 <= 64) ? var9Lifetime1 : 64;
                 var10Lifetime1 = stackIn_88_0;
                 var45 = field_o[var8Lifetime2];
                 for (var12Lifetime1 = 0; var12Lifetime1 < var10Lifetime1; var12Lifetime1++) {
-                  this.b(var45[var12Lifetime1]);
+                  this.drawFace(var45[var12Lifetime1]);
                 }
               }
               if (var9Lifetime1 > 64) {
                 var10Lifetime1 = field_Y[var8Lifetime2] - 64 - 1;
                 var46 = field_E[var10Lifetime1];
                 for (var12Lifetime1 = 0; var12Lifetime1 < field_g[var10Lifetime1]; var12Lifetime1++) {
-                  this.b(var46[var12Lifetime1]);
+                  this.drawFace(var46[var12Lifetime1]);
                 }
               }
             }
@@ -1012,7 +1012,7 @@ final class ModelMesh extends RenderableModel {
             field_A[var8Lifetime2] = 0;
             field_F[var8Lifetime2] = 0;
           }
-          for (var8Lifetime2 = param4 - 1; var8Lifetime2 >= 0; var8Lifetime2--) {
+          for (var8Lifetime2 = depthBucketCount - 1; var8Lifetime2 >= 0; var8Lifetime2--) {
             var9Lifetime1 = field_Y[var8Lifetime2];
             if (var9Lifetime1 > 0) {
               if (var9Lifetime1 <= 64) {
@@ -1097,7 +1097,7 @@ final class ModelMesh extends RenderableModel {
             if (var11Lifetime2 > var8Lifetime3) {
               incrementValue$4 = var12Lifetime2;
               var12Lifetime2++;
-              this.b(var14[incrementValue$4]);
+              this.drawFace(var14[incrementValue$4]);
               if (var12Lifetime2 == var13Lifetime2 &&
                 var14 != field_l[11]) {
                 var12Lifetime2 = 0;
@@ -1118,7 +1118,7 @@ final class ModelMesh extends RenderableModel {
             if (var11Lifetime2 > var9Lifetime2) {
               incrementValue$5 = var12Lifetime2;
               var12Lifetime2++;
-              this.b(var14[incrementValue$5]);
+              this.drawFace(var14[incrementValue$5]);
               if (var12Lifetime2 == var13Lifetime2 &&
                 var14 != field_l[11]) {
                 var12Lifetime2 = 0;
@@ -1139,7 +1139,7 @@ final class ModelMesh extends RenderableModel {
             if (var11Lifetime2 > var10Lifetime2) {
               incrementValue$6 = var12Lifetime2;
               var12Lifetime2++;
-              this.b(var14[incrementValue$6]);
+              this.drawFace(var14[incrementValue$6]);
               if (var12Lifetime2 == var13Lifetime2 &&
                 var14 != field_l[11]) {
                 var12Lifetime2 = 0;
@@ -1161,14 +1161,14 @@ final class ModelMesh extends RenderableModel {
           var29 = 0;
           var19Lifetime1 = var29;
           while (var29 < var17Lifetime1) {
-            this.b(var49[var29]);
+            this.drawFace(var49[var29]);
             var29++;
           }
         }
         while (var11Lifetime2 != -1000) {
           incrementValue$3 = var12Lifetime2;
           var12Lifetime2++;
-          this.b(var14[incrementValue$3]);
+          this.drawFace(var14[incrementValue$3]);
           if (var12Lifetime2 == var13Lifetime2 &&
             var14 != field_l[11]) {
             var12Lifetime2 = 0;
@@ -1185,7 +1185,7 @@ final class ModelMesh extends RenderableModel {
         return;
     }
 
-    private final void b(int param0) {
+    private final void drawFace(int faceIndex) {
         int var2;
         int var3;
         int var4;
@@ -1193,24 +1193,24 @@ final class ModelMesh extends RenderableModel {
         int var6;
         int var7;
         int var8;
-        if (field_I[param0]) {
-          this.c(param0);
+        if (field_I[faceIndex]) {
+          this.drawNearClippedFace(faceIndex);
           return;
         }
-        var2 = this.field_j[param0];
-        var3 = this.field_T[param0];
-        var4 = this.field_R[param0];
-        TriangleRasterizer.clipHorizontalSpans = field_q[param0];
+        var2 = this.field_j[faceIndex];
+        var3 = this.field_T[faceIndex];
+        var4 = this.field_R[faceIndex];
+        TriangleRasterizer.clipHorizontalSpans = field_q[faceIndex];
         if (this.field_bb != null) {
-          TriangleRasterizer.blendAlpha = this.field_bb[param0] & 255;
+          TriangleRasterizer.blendAlpha = this.field_bb[faceIndex] & 255;
         } else {
           TriangleRasterizer.blendAlpha = 0;
         }
         if (this.field_Z != null &&
-          this.field_Z[param0] != -1) {
+          this.field_Z[faceIndex] != -1) {
           if (this.field_h != null &&
-            this.field_h[param0] != -1) {
-            var8 = this.field_h[param0] & 255;
+            this.field_h[faceIndex] != -1) {
+            var8 = this.field_h[faceIndex] & 255;
             var5 = this.field_ab[var8];
             var6 = this.field_n[var8];
             var7 = this.field_i[var8];
@@ -1219,16 +1219,16 @@ final class ModelMesh extends RenderableModel {
             var6 = var3;
             var7 = var4;
           }
-          if (this.field_J[param0] != -1) {
-            TriangleRasterizer.drawTexturedTriangle(field_v[var2], field_v[var3], field_v[var4], field_X[var2], field_X[var3], field_X[var4], this.field_W[param0], this.field_y[param0], this.field_J[param0], field_L[var5], field_L[var6], field_L[var7], field_db[var5], field_db[var6], field_db[var7], field_f[var5], field_f[var6], field_f[var7], (int) this.field_Z[param0]);
+          if (this.field_J[faceIndex] != -1) {
+            TriangleRasterizer.drawTexturedTriangle(field_v[var2], field_v[var3], field_v[var4], field_X[var2], field_X[var3], field_X[var4], this.field_W[faceIndex], this.field_y[faceIndex], this.field_J[faceIndex], field_L[var5], field_L[var6], field_L[var7], field_db[var5], field_db[var6], field_db[var7], field_f[var5], field_f[var6], field_f[var7], (int) this.field_Z[faceIndex]);
           } else {
-            TriangleRasterizer.drawTexturedTriangle(field_v[var2], field_v[var3], field_v[var4], field_X[var2], field_X[var3], field_X[var4], this.field_W[param0], this.field_W[param0], this.field_W[param0], field_L[var5], field_L[var6], field_L[var7], field_db[var5], field_db[var6], field_db[var7], field_f[var5], field_f[var6], field_f[var7], (int) this.field_Z[param0]);
+            TriangleRasterizer.drawTexturedTriangle(field_v[var2], field_v[var3], field_v[var4], field_X[var2], field_X[var3], field_X[var4], this.field_W[faceIndex], this.field_W[faceIndex], this.field_W[faceIndex], field_L[var5], field_L[var6], field_L[var7], field_db[var5], field_db[var6], field_db[var7], field_f[var5], field_f[var6], field_f[var7], (int) this.field_Z[faceIndex]);
           }
         } else {
-          if (this.field_J[param0] != -1) {
-            TriangleRasterizer.drawShadedTriangle(field_v[var2], field_v[var3], field_v[var4], field_X[var2], field_X[var3], field_X[var4], this.field_W[param0] & 65535, this.field_y[param0] & 65535, this.field_J[param0] & 65535);
+          if (this.field_J[faceIndex] != -1) {
+            TriangleRasterizer.drawShadedTriangle(field_v[var2], field_v[var3], field_v[var4], field_X[var2], field_X[var3], field_X[var4], this.field_W[faceIndex] & 65535, this.field_y[faceIndex] & 65535, this.field_J[faceIndex] & 65535);
           } else {
-            TriangleRasterizer.drawFlatTriangle(field_v[var2], field_v[var3], field_v[var4], field_X[var2], field_X[var3], field_X[var4], TriangleRasterizer.colorPalette[this.field_W[param0] & 65535]);
+            TriangleRasterizer.drawFlatTriangle(field_v[var2], field_v[var3], field_v[var4], field_X[var2], field_X[var3], field_X[var4], TriangleRasterizer.colorPalette[this.field_W[faceIndex] & 65535]);
           }
         }
     }

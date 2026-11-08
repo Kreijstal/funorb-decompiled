@@ -86,15 +86,15 @@ final class HighScoreSubmission extends IntrusiveNode {
         }
     }
 
-    final static boolean c(int param0) {
+    final static boolean hasInputOverlay(int obfuscationGuard) {
         int var1;
         boolean stackIn_7_0 = false;
-        var1 = 38 / ((param0 - 45) / 37);
+        var1 = 38 / ((obfuscationGuard - 45) / 37);
         stackIn_7_0 = (null != PlasmaBallSkin.field_m) || (OpacityWidget.isNamePopupOpen((byte) 86)) || (AccountMenuText.field_b != null) || (DraggableWidget.isQuickChatOverlayOpen(-1));
         return stackIn_7_0;
     }
 
-    final static boolean a(int param0, int param1, int param2) {
+    final static boolean handleChatShortcut(int param0, int param1, int param2) {
         int var3 = LookupRetrySupport.field_e != null ? 1 : 0;
         if (~IterableDualLinkDeque.field_a == param2 &&
           NineBallRules.canOpenQuickChatOptions(ProjectedVertex.field_s, DiskCacheWorker.field_g, 17, AppletContainerSupport.field_a, SupportPageLauncher.field_a)) {

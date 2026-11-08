@@ -93,7 +93,7 @@ final class WhirlpoolHasher {
         }
         int var1 = 37 / ((obfuscationGuard + 53) / 53);
         if (0 < HighscoresScreen.field_P) {
-          ProgressDialog.l(23323);
+          ProgressDialog.layoutBottomChatPanel(23323);
         }
     }
 

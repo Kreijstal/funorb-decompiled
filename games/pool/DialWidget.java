@@ -64,7 +64,7 @@ final class DialWidget extends ButtonWidget {
         if (var5 < 256) {
           SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height, 0, -var5 + 256);
         }
-        TriangleMesh.a(112);
+        TriangleMesh.popRasterSnapshot(112);
         if (LobbyPlayer.field_fc < 150) {
           LookupProtocolSupport.field_c.drawHalfSize(var3, var4);
           var6 = -125 + LobbyPlayer.field_fc;

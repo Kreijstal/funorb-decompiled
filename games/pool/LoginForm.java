@@ -405,7 +405,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
                   if (!this.field_O) {
                     VerticalScrollbar.requestLoginReset(15158);
                   } else {
-                    FullscreenFocusCanvas.a(true);
+                    FullscreenFocusCanvas.showAccountWelcomePanel(true);
                   }
                 }
               }

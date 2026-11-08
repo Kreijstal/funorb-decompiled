@@ -169,13 +169,13 @@ final class LogoMaterial {
         }
     }
 
-    final static void a(int param0, int param1, int param2) {
-        int var3 = 93 / ((-77 - param2) / 47);
-        BrowserCookieWriter.field_c = param1;
-        ClientInputResetSupport.field_e = param0;
+    final static void setClientNoticeCenter(int centerY, int centerX, int obfuscationGuard) {
+        int var3 = 93 / ((-77 - obfuscationGuard) / 47);
+        BrowserCookieWriter.field_c = centerX;
+        ClientInputResetSupport.field_e = centerY;
     }
 
-    final static boolean a(int param0, int param1, byte[] param2, int[][] param3) {
+    final static boolean matchesAnyGameOptionPattern(int playerCount, int obfuscationGuard, byte[] settings, int[][] patterns) {
         int var4_int = 0;
         int[] var5 = null;
         int var6 = 0;
@@ -189,27 +189,27 @@ final class LogoMaterial {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
         try {
-          if (param1 <= 122) {
+          if (obfuscationGuard <= 122) {
             return true;
           }
-          if (param3 == null) {
+          if (patterns == null) {
             return false;
           }
           var4_int = 0;
           scanLoop1: while (true) {
-            if (param3.length <= var4_int) {
+            if (patterns.length <= var4_int) {
               return false;
             }
-            var5 = param3[var4_int];
+            var5 = patterns[var4_int];
             var6 = 0;
             while (var5.length > var6) {
               boolean decompiledFrameRemainder0 = true;
               var7 = var5[var6];
               var8 = var5[var6 + 1];
               if (var7 != -1) {
-                decompiledFrameRemainder0 = (var8 != (255 & param2[var7]));
+                decompiledFrameRemainder0 = (var8 != (255 & settings[var7]));
               } else {
-                decompiledFrameRemainder0 = (var8 != param0);
+                decompiledFrameRemainder0 = (var8 != playerCount);
               }
               if (decompiledFrameRemainder0) {
                 var4_int++;
@@ -224,14 +224,14 @@ final class LogoMaterial {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
           stackIn_22_0 = var4;
-          stackIn_22_1 = new StringBuilder().append("nj.A(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_22_1 = new StringBuilder().append("nj.A(").append(playerCount).append(',').append(obfuscationGuard).append(',');
+          if (settings == null) {
             stackIn_23_2 = "null";
           } else {
             stackIn_23_2 = "{...}";
           }
           stackIn_25_1 = ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',');
-          if (param3 == null) {
+          if (patterns == null) {
             stackIn_26_2 = "null";
           } else {
             stackIn_26_2 = "{...}";
@@ -253,7 +253,7 @@ final class LogoMaterial {
         return 1;
     }
 
-    final static java.awt.Frame a(int param0, PlatformTaskDispatcher param1, int param2, boolean param3, int param4, int param5) {
+    final static java.awt.Frame openFullscreenFrame(int param0, PlatformTaskDispatcher param1, int param2, boolean param3, int param4, int param5) {
         int var8 = 0;
         Object stackIn_10_0 = null;
         Object stackIn_36_0 = null;
@@ -274,7 +274,7 @@ final class LogoMaterial {
         try {
           if (param3) {
             var10 = (PlatformTaskDispatcher) null;
-            LogoMaterial.a(-1, (PlatformTaskDispatcher) null, -62, true, 71, -112);
+            LogoMaterial.openFullscreenFrame(-1, (PlatformTaskDispatcher) null, -62, true, 71, -112);
           }
           if (!param1.supportsFullscreen((byte) 126)) {
             return null;
@@ -313,7 +313,7 @@ final class LogoMaterial {
           if (var12.field_f != 2) {
             return var7;
           }
-          TutorialSelectScreen.a(var7, param1, 24442);
+          TutorialSelectScreen.disposeFullscreenFrame(var7, param1, 24442);
           stackIn_40_0 = null;
           return (java.awt.Frame) (stackIn_40_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

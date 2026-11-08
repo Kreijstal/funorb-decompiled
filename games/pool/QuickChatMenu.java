@@ -204,7 +204,7 @@ final class QuickChatMenu extends UiComponent {
                 var6 = 1;
               }
               if (LobbyPanelLayoutSupport.getChatFilterMode(5, var6) == 2) {
-                TextInputPainter.a(1, var6, param2, (byte) -89);
+                TextInputPainter.setChatFilterMode(1, var6, param2, (byte) -89);
               }
               var7 = (String) null;
               AlternateLongAndTextLoginPayload.a((byte) 117, (String) null, param3, ArrayWidgetGroup.field_I, CookieDateSupport.field_b, var5);

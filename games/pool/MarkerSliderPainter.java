@@ -130,7 +130,7 @@ final class MarkerSliderPainter implements WidgetPainter {
         PacketDiagnosticsSupport.a(110, true, true);
     }
 
-    final static void a(MeshBuilder param0, byte param1) {
+    final static void recenterTextureTriangles(MeshBuilder mesh, byte obfuscationGuard) {
         int var5 = 0;
         RuntimeException runtimeException = null;
         int var2_int = 0;
@@ -159,23 +159,23 @@ final class MarkerSliderPainter implements WidgetPainter {
         RuntimeException decompiledCaughtException = null;
         var27 = Pool.field_O;
         try {
-          MeshBoundsSupport.computeMeshBounds(param0, -23109);
-          if (param1 != -37) {
+          MeshBoundsSupport.computeMeshBounds(mesh, -23109);
+          if (obfuscationGuard != -37) {
             MarkerSliderPainter.initializeAccountDialogs((byte) 33);
           }
-          var2_int = (param0.field_w + param0.field_D) / 2;
-          var3 = (param0.field_S + param0.field_y) / 2;
-          var4 = (param0.field_x + param0.field_V) / 2;
-          for (var5 = 0; var5 < param0.field_l; var5++) {
-            var6 = param0.vertexX[param0.field_p[var5]];
-            var7 = param0.vertexY[param0.field_p[var5]];
-            var8 = param0.vertexZ[param0.field_p[var5]];
-            var9 = -var6 + param0.vertexX[param0.field_H[var5]];
-            var10 = -var7 + param0.vertexY[param0.field_H[var5]];
-            var11 = -var8 + param0.vertexZ[param0.field_H[var5]];
-            var12 = -var6 + param0.vertexX[param0.field_C[var5]];
-            var13 = -var7 + param0.vertexY[param0.field_C[var5]];
-            var14 = param0.vertexZ[param0.field_C[var5]] - var8;
+          var2_int = (mesh.field_w + mesh.field_D) / 2;
+          var3 = (mesh.field_S + mesh.field_y) / 2;
+          var4 = (mesh.field_x + mesh.field_V) / 2;
+          for (var5 = 0; var5 < mesh.field_l; var5++) {
+            var6 = mesh.vertexX[mesh.field_p[var5]];
+            var7 = mesh.vertexY[mesh.field_p[var5]];
+            var8 = mesh.vertexZ[mesh.field_p[var5]];
+            var9 = -var6 + mesh.vertexX[mesh.field_H[var5]];
+            var10 = -var7 + mesh.vertexY[mesh.field_H[var5]];
+            var11 = -var8 + mesh.vertexZ[mesh.field_H[var5]];
+            var12 = -var6 + mesh.vertexX[mesh.field_C[var5]];
+            var13 = -var7 + mesh.vertexY[mesh.field_C[var5]];
+            var14 = mesh.vertexZ[mesh.field_C[var5]] - var8;
             var15 = Math.sqrt((double)(var11 * var11 + var9 * var9 + var10 * var10));
             var17 = Math.sqrt((double)(var12 * var12 + var13 * var13 + var14 * var14));
             var19 = (double)(var2_int - var6);
@@ -195,42 +195,42 @@ final class MarkerSliderPainter implements WidgetPainter {
                 var8 = var8 + var14 * var26;
                 var7 = var7 + var26 * var13;
               }
-              if (LobbyGame.isVertexUsedByDrawableFace(-3, param0, (int) param0.field_p[var5])) {
-                param0.field_p[var5] = (short)param0.addVertex(var6, var7, var8);
+              if (LobbyGame.isVertexUsedByDrawableFace(-3, mesh, (int) mesh.field_p[var5])) {
+                mesh.field_p[var5] = (short)mesh.addVertex(var6, var7, var8);
               } else {
-                param0.vertexX[param0.field_p[var5]] = var6;
-                param0.vertexY[param0.field_p[var5]] = var7;
-                param0.vertexZ[param0.field_p[var5]] = var8;
+                mesh.vertexX[mesh.field_p[var5]] = var6;
+                mesh.vertexY[mesh.field_p[var5]] = var7;
+                mesh.vertexZ[mesh.field_p[var5]] = var8;
               }
-              if (!LobbyGame.isVertexUsedByDrawableFace(-3, param0, (int) param0.field_p[var5])) {
-                param0.vertexX[param0.field_H[var5]] = var9 + var6;
-                param0.vertexY[param0.field_H[var5]] = var7 + var10;
-                param0.vertexZ[param0.field_H[var5]] = var8 + var11;
+              if (!LobbyGame.isVertexUsedByDrawableFace(-3, mesh, (int) mesh.field_p[var5])) {
+                mesh.vertexX[mesh.field_H[var5]] = var9 + var6;
+                mesh.vertexY[mesh.field_H[var5]] = var7 + var10;
+                mesh.vertexZ[mesh.field_H[var5]] = var8 + var11;
               } else {
-                param0.field_p[var5] = (short)param0.addVertex(var6 + var9, var7 + var10, var8 + var11);
+                mesh.field_p[var5] = (short)mesh.addVertex(var6 + var9, var7 + var10, var8 + var11);
               }
-              if (!LobbyGame.isVertexUsedByDrawableFace(-3, param0, (int) param0.field_p[var5])) {
-                param0.vertexX[param0.field_C[var5]] = var12 + var6;
-                param0.vertexY[param0.field_C[var5]] = var7 + var13;
-                param0.vertexZ[param0.field_C[var5]] = var14 + var8;
+              if (!LobbyGame.isVertexUsedByDrawableFace(-3, mesh, (int) mesh.field_p[var5])) {
+                mesh.vertexX[mesh.field_C[var5]] = var12 + var6;
+                mesh.vertexY[mesh.field_C[var5]] = var7 + var13;
+                mesh.vertexZ[mesh.field_C[var5]] = var14 + var8;
               } else {
-                param0.field_p[var5] = (short)param0.addVertex(var6 + var12, var13 + var7, var8 + var14);
+                mesh.field_p[var5] = (short)mesh.addVertex(var6 + var12, var13 + var7, var8 + var14);
               }
             }
           }
-          param0.clearCaches();
+          mesh.clearCaches();
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
           stackIn_28_0 = runtimeException;
           stackIn_28_1 = new StringBuilder().append("nd.B(");
-          if (param0 == null) {
+          if (mesh == null) {
             stackIn_29_2 = "null";
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 

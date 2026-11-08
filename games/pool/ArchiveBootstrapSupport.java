@@ -56,7 +56,7 @@ final class ArchiveBootstrapSupport {
         }
     }
 
-    final static void a(int param0, int param1, boolean param2, byte[] param3, int param4, boolean param5) {
+    final static void sendLobbyGameConfiguration(int param0, int param1, boolean param2, byte[] param3, int param4, boolean param5) {
         CipherPacketBuffer var6 = null;
         int var7 = 0;
         int var8 = 0;

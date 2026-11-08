@@ -202,7 +202,7 @@ final class FixedPointVectorSupport {
         }
     }
 
-    final static float[] a(int[] param0, byte param1) {
+    final static float[] fixed16ArrayToFloat(int[] values, byte obfuscationGuard) {
         RuntimeException var2 = null;
         float[] stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -210,22 +210,22 @@ final class FixedPointVectorSupport {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param1 != 1) {
+          if (obfuscationGuard != 1) {
             field_a = 96;
           }
-          stackIn_3_0 = TextLayout.a(16, param0, 97);
+          stackIn_3_0 = TextLayout.fixedArrayToFloat(16, values, 97);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
           stackIn_6_0 = var2;
           stackIn_6_1 = new StringBuilder().append("ol.A(");
-          if (param0 == null) {
+          if (values == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 

@@ -14,12 +14,12 @@ final class ProgressDialog extends ResizableDialog {
     static int[] field_mb;
     private boolean redHighlightActive;
 
-    final static void l(int param0) {
+    final static void layoutBottomChatPanel(int obfuscationGuard) {
         int var3 = 0;
         int var1 = BufferedFile.field_h * BufferedFile.field_h;
         int var2 = -(HighscoresScreen.field_P * HighscoresScreen.field_P) + var1;
         int var3Lifetime1;
-        if (param0 == 23323) {
+        if (obfuscationGuard == 23323) {
           var3 = StrongCacheEntry.field_J + (-StrongCacheEntry.field_J + AwtEventQueueSupport.field_g) * var2 / var1;
           IntLookupQuery.field_q.setBounds(var3, 2147483647, RasterSnapshot.field_u, 640, 120);
           Camera.layoutQuickChatOverlay(ByteArrayPool.field_b, AwtEventQueueSupport.field_g - 24, 0, 640, 5, 118, CueAim.field_j);
@@ -69,7 +69,7 @@ final class ProgressDialog extends ResizableDialog {
           field_hb = null;
           return;
         }
-        ProgressDialog.l(-78);
+        ProgressDialog.layoutBottomChatPanel(-78);
         field_gb = null;
         field_mb = null;
         field_hb = null;
@@ -130,8 +130,8 @@ final class ProgressDialog extends ResizableDialog {
         GameRules.field_c.field_a = 0;
     }
 
-    final static void m(int param0) {
-        if (param0 != 8421504) {
+    final static void closePlayerContextMenu(int obfuscationGuard) {
+        if (obfuscationGuard != 8421504) {
           field_gb = (Sprite) null;
           if (null != PlasmaBallSkin.field_m) {
             if (PlasmaBallSkin.field_m.field_i != null) {

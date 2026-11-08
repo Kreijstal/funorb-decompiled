@@ -117,7 +117,7 @@ final class RankingsScreen extends MenuScreen {
         RuntimeException decompiledCaughtException = null;
         try {
           var1_int = 0;
-          while (LabeledChildWidget.h(param0 + 119)) {
+          while (LabeledChildWidget.pollKeyEvent(param0 + 119)) {
             LookupProtocolSupport.field_f.navigateVertical(-15525);
             if (!LookupProtocolSupport.field_f.isPressActivated((byte) 119)) {
               continue;
@@ -279,14 +279,14 @@ final class RankingsScreen extends MenuScreen {
                         var38 = -1 + (TriangleRasterizer.clipWidth - var37);
                       }
                       if (var37 >= 0) {
-                        ThreeSliceButtonPainter.a(var29, var25, var40, var36Lifetime2 + var37, (byte) -117, var41, var21, var38, param16, var39);
+                        ThreeSliceButtonPainter.blendGradientSpanHalf(var29, var25, var40, var36Lifetime2 + var37, (byte) -117, var41, var21, var38, param16, var39);
                       } else {
-                        ThreeSliceButtonPainter.a(-(var37 * var41) + var29, -(var40 * var37) + var25, var40, var36Lifetime2, (byte) -117, var41, var21 - var39 * var37, var37 + var38, param16, var39);
+                        ThreeSliceButtonPainter.blendGradientSpanHalf(-(var37 * var41) + var29, -(var40 * var37) + var25, var40, var36Lifetime2, (byte) -117, var41, var21 - var39 * var37, var37 + var38, param16, var39);
                       }
                     } else {
                       if (var37 >= 0 &&
                         var37 < TriangleRasterizer.clipWidth) {
-                        ThreeSliceButtonPainter.a(var29, var25, 0, var36Lifetime2 + var37, (byte) -117, 0, var21, var38, param16, 0);
+                        ThreeSliceButtonPainter.blendGradientSpanHalf(var29, var25, 0, var36Lifetime2 + var37, (byte) -117, 0, var21, var38, param16, 0);
                       }
                     }
                   }
@@ -433,7 +433,7 @@ final class RankingsScreen extends MenuScreen {
                 if (0 == var37Lifetime1) {
                   if (var36Lifetime1 >= 0 &&
                     var36Lifetime1 < TriangleRasterizer.clipWidth) {
-                    ThreeSliceButtonPainter.a(var29, var25, 0, var36Lifetime1 + var35Lifetime1, (byte) -117, 0, var21, var37Lifetime1, param16, 0);
+                    ThreeSliceButtonPainter.blendGradientSpanHalf(var29, var25, 0, var36Lifetime1 + var35Lifetime1, (byte) -117, 0, var21, var37Lifetime1, param16, 0);
                   }
                 } else {
                   var38Lifetime1 = (var22 - var21) / var37Lifetime1;
@@ -443,9 +443,9 @@ final class RankingsScreen extends MenuScreen {
                     var37Lifetime1 = -var36Lifetime1 + TriangleRasterizer.clipWidth - 1;
                   }
                   if (var36Lifetime1 < 0) {
-                    ThreeSliceButtonPainter.a(-(var40Lifetime1 * var36Lifetime1) + var29, var25 - var36Lifetime1 * var39Lifetime1, var39Lifetime1, var35Lifetime1, (byte) -117, var40Lifetime1, var21 - var36Lifetime1 * var38Lifetime1, var37Lifetime1 + var36Lifetime1, param16, var38Lifetime1);
+                    ThreeSliceButtonPainter.blendGradientSpanHalf(-(var40Lifetime1 * var36Lifetime1) + var29, var25 - var36Lifetime1 * var39Lifetime1, var39Lifetime1, var35Lifetime1, (byte) -117, var40Lifetime1, var21 - var36Lifetime1 * var38Lifetime1, var37Lifetime1 + var36Lifetime1, param16, var38Lifetime1);
                   } else {
-                    ThreeSliceButtonPainter.a(var29, var25, var39Lifetime1, var35Lifetime1 + var36Lifetime1, (byte) -117, var40Lifetime1, var21, var37Lifetime1, param16, var38Lifetime1);
+                    ThreeSliceButtonPainter.blendGradientSpanHalf(var29, var25, var39Lifetime1, var35Lifetime1 + var36Lifetime1, (byte) -117, var40Lifetime1, var21, var37Lifetime1, param16, var38Lifetime1);
                   }
                 }
               }
@@ -1281,7 +1281,7 @@ final class RankingsScreen extends MenuScreen {
                   SoftwareRasterizer.fillRectangle(stackIn_18_0, stackIn_18_1, stackIn_18_2, stackIn_18_3, stackIn_19_4);
                   var3Lifetime2 = 13421772;
                   var9 = var5[var8];
-                  if (BallEvent.a((byte) 3, var9)) {
+                  if (BallEvent.isLocalPlayerName((byte) 3, var9)) {
                     var7 = 1;
                     var3Lifetime2 = 16777215;
                   }

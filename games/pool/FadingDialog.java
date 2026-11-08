@@ -16,7 +16,7 @@ abstract class FadingDialog extends WidgetContainer {
         createUnable = null;
         if (param0 != -1) {
           int[] var2 = (int[]) null;
-          FadingDialog.a(false, (int[]) null);
+          FadingDialog.hasNonzeroWord(false, (int[]) null);
         }
         mustloginNotloggedin = null;
         field_U = null;
@@ -32,14 +32,14 @@ abstract class FadingDialog extends WidgetContainer {
 
     abstract void drawDialogFrame(int param0, int param1, int param2);
 
-    final static void a(boolean param0, int param1) {
-        SlidingPanelSupport.drawSharedPanelRoot(0, param0);
+    final static void drawSharedPanelAndTooltip(boolean active, int obfuscationGuard) {
+        SlidingPanelSupport.drawSharedPanelRoot(0, active);
         if (null != CacheEntry.field_B) {
           MeshColorSupport.a(CacheEntry.field_B, 1259627265);
         }
-        if (param1 != 1) {
+        if (obfuscationGuard != 1) {
           int[] var3 = (int[]) null;
-          FadingDialog.a(true, (int[]) null);
+          FadingDialog.hasNonzeroWord(true, (int[]) null);
         }
     }
 
@@ -126,7 +126,7 @@ abstract class FadingDialog extends WidgetContainer {
                   }
                 }
                 for (var7_intLifetime1Lifetime1 = 0; var7_intLifetime1Lifetime1 < param3.length; var7_intLifetime1Lifetime1++) {
-                  var8_intLifetime1Lifetime1 = ButtonPainter.a(param2[var6].positionY, param3[var7_intLifetime1Lifetime1][0], param2[var6].velocityX, param2[var6].velocityY, param2[var6].lastAdvanceTime, 8, param2[var6].positionX, (byte) -121, param3[var7_intLifetime1Lifetime1][1]);
+                  var8_intLifetime1Lifetime1 = ButtonPainter.sweepCircleAgainstPoint(param2[var6].positionY, param3[var7_intLifetime1Lifetime1][0], param2[var6].velocityX, param2[var6].velocityY, param2[var6].lastAdvanceTime, 8, param2[var6].positionX, (byte) -121, param3[var7_intLifetime1Lifetime1][1]);
                   if (var8_intLifetime1Lifetime1 > param1) {
                     var5_int = AchievementNotice.addEarliestContact((byte) -123, var5_int, var7_intLifetime1Lifetime1, -1, -1, var6, var8_intLifetime1Lifetime1);
                   }
@@ -155,10 +155,10 @@ abstract class FadingDialog extends WidgetContainer {
               var9 = param2[var7.field_i];
               ContentTransitionDialog.applyBallCollisionImpulse(var7.field_u, var8, var9, (byte) 105);
               if (var8.field_q != null) {
-                var8.field_q.a(param2, (int) var7.field_i, param4 - 5);
+                var8.field_q.recordBallCollision(param2, (int) var7.field_i, param4 - 5);
               } else {
                 if (var9.field_q != null) {
-                  var9.field_q.a(param2, (int) var7.field_n, -5);
+                  var9.field_q.recordBallCollision(param2, (int) var7.field_n, -5);
                 }
               }
             }
@@ -166,14 +166,14 @@ abstract class FadingDialog extends WidgetContainer {
               var8.field_c = var8.field_c + 1;
               PasswordInputPainter.bounceBallOffCushion(var7.field_u, param0[var7.field_x], 117, var8);
               if (null != var8.field_q) {
-                var8.field_q.a((int) var7.field_x, -26401, var8);
+                var8.field_q.recordCushionCollision((int) var7.field_x, -26401, var8);
               }
             }
             if (var7.field_a != -1) {
               var8.field_c = var8.field_c + 1;
               GlowParticle.bounceBallOffPoint(param3[var7.field_a][0], (byte) -20, var7.field_u, var8, param3[var7.field_a][1]);
               if (var8.field_q != null) {
-                var8.field_q.a(var8, (int) var7.field_a, (byte) 5);
+                var8.field_q.recordPointCollision(var8, (int) var7.field_a, (byte) 5);
               }
             }
             var10++;
@@ -236,7 +236,7 @@ abstract class FadingDialog extends WidgetContainer {
         SoftwareRasterizer.clear();
         this.drawDialogFrame(0, 0, 260);
         super.renderWidget(param0, (byte) 48, -this.widgetX - param2, -this.widgetY - param3);
-        TriangleMesh.a(117);
+        TriangleMesh.popRasterSnapshot(117);
         ArchiveIndex.field_y.drawShadedGrayscale(this.widgetX + param2, param3 + this.widgetY, this.dialogOpacity);
         var5 = 121 / ((param1 + 42) / 53);
     }
@@ -252,7 +252,7 @@ abstract class FadingDialog extends WidgetContainer {
         }
     }
 
-    final static boolean a(boolean param0, int[] param1) {
+    final static boolean hasNonzeroWord(boolean obfuscationGuard, int[] words) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int[] var3 = null;
@@ -261,16 +261,16 @@ abstract class FadingDialog extends WidgetContainer {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0) {
+          if (obfuscationGuard) {
             var3 = (int[]) null;
-            FadingDialog.a(true, (int[]) null);
+            FadingDialog.hasNonzeroWord(true, (int[]) null);
           }
           var2_int = 0;
           while (true) {
             if (var2_int >= 8) {
               return false;
             }
-            if (param1[var2_int] == 0) {
+            if (words[var2_int] == 0) {
               var2_int++;
               continue;
             }
@@ -281,8 +281,8 @@ abstract class FadingDialog extends WidgetContainer {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
           stackIn_12_0 = var2;
-          stackIn_12_1 = new StringBuilder().append("oe.CC(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_12_1 = new StringBuilder().append("oe.CC(").append(obfuscationGuard).append(',');
+          if (words == null) {
             stackIn_13_2 = "null";
           } else {
             stackIn_13_2 = "{...}";

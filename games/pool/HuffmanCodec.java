@@ -495,7 +495,7 @@ final class HuffmanCodec {
                 DropTargetWidget.sendLobbyInviteRequest(param3, (byte) -127, var12.playerId);
               } else {
                 if (0 == var12.field_Zb.pressedButton) {
-                  MenuScreen.a(0, param2, 0, param4 ^ -9770, UsernameAvailabilityValidator.field_o, DialogLayer.field_W, var12);
+                  MenuScreen.openLobbyPlayerContextMenu(0, param2, 0, param4 ^ -9770, UsernameAvailabilityValidator.field_o, DialogLayer.field_W, var12);
                 } else {
                   CueStick.sendLobbyRemovalRequest(var12.playerId, param3, 0);
                 }

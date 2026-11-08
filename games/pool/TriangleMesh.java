@@ -61,26 +61,26 @@ final class TriangleMesh {
         return stackIn_6_0;
     }
 
-    final static void d(int param0) {
+    final static void initializeTableScenes(int obfuscationGuard) {
         BrowserCookieWriter.field_b = new TableScene[5];
         BrowserCookieWriter.field_b[0] = (TableScene) ((Object) new ModernTableScene());
         BrowserCookieWriter.field_b[1] = (TableScene) ((Object) new PlasmaTableScene());
         BrowserCookieWriter.field_b[2] = (TableScene) ((Object) new TikiTableScene());
         BrowserCookieWriter.field_b[3] = (TableScene) ((Object) new PolarTableScene());
-        if (param0 >= -75) {
+        if (obfuscationGuard >= -75) {
           return;
         }
         BrowserCookieWriter.field_b[4] = (TableScene) ((Object) new SpaceTableScene());
     }
 
-    final static void a(int param0) {
+    final static void popRasterSnapshot(int obfuscationGuard) {
         RasterSnapshot var1 = (RasterSnapshot) (AccountCreationForm.field_S.removeFirst(-1));
         if (var1 == null) {
           throw new IllegalStateException();
         }
         SoftwareRasterizer.setTarget(var1.pixels, var1.width, var1.height);
         SoftwareRasterizer.setClip(var1.clipLeft, var1.clipTop, var1.clipRight, var1.clipBottom);
-        if (param0 <= 111) {
+        if (obfuscationGuard <= 111) {
           field_t = (java.applet.Applet) null;
         }
         var1.pixels = null;

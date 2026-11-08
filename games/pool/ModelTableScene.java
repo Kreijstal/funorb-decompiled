@@ -34,7 +34,7 @@ abstract class ModelTableScene extends TableScene {
             param2[var8] = new int[param1[var8].length][3];
             for (var9 = 0; param1[var8].length > var9; var9++) {
               ModelOriginSupport.recenterModel(param2[var8][var9], 0, param1[var8][var9]);
-              MarkerSliderPainter.a(param1[var8][var9], (byte) -37);
+              MarkerSliderPainter.recenterTextureTriangles(param1[var8][var9], (byte) -37);
             }
           }
           if (param3 > -49) {

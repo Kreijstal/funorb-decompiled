@@ -13,7 +13,7 @@ final class GzipDecoder {
     static PcmStreamMixer field_c;
     static String raTitle;
 
-    final static AvailabilityQueryResult a(int param0, String param1) {
+    final static AvailabilityQueryResult createAvailabilityQuery(int obfuscationGuard, String text) {
         int var2_int = 0;
         RuntimeException var2 = null;
         AvailabilityQueryResult stackIn_1_0 = null;
@@ -22,15 +22,15 @@ final class GzipDecoder {
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2_int = -79 % ((51 - param0) / 49);
-          stackIn_1_0 = new AvailabilityQueryResult(param1);
+          var2_int = -79 % ((51 - obfuscationGuard) / 49);
+          stackIn_1_0 = new AvailabilityQueryResult(text);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
           stackIn_4_0 = var2;
-          stackIn_4_1 = new StringBuilder().append("oh.A(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_4_1 = new StringBuilder().append("oh.A(").append(obfuscationGuard).append(',');
+          if (text == null) {
             stackIn_5_2 = "null";
           } else {
             stackIn_5_2 = "{...}";

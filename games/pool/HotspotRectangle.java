@@ -144,7 +144,7 @@ final class HotspotRectangle extends IntrusiveNode {
     }
 
     final static void a(byte param0, boolean param1) {
-        ClientException.a(param1, (byte) 80);
+        ClientException.drawLobbyPanels(param1, (byte) 80);
         if (param0 != 55) {
           String var3 = (String) null;
           HotspotRectangle.reverseString((String) null, 95);

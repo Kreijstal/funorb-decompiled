@@ -99,12 +99,12 @@ final class IntKeyLookup {
         if (param5 != 33) {
           IntKeyLookup.releaseStatics(-79);
         }
-        if (HighScoreSubmission.c(-86)) {
+        if (HighScoreSubmission.hasInputOverlay(-86)) {
           ShotRecord.a(param6, param3, -40960, param4);
           if (PlasmaBallSkin.field_m != null &&
             PlasmaBallSkin.field_m.handleMenuSelection(param2, param1, param4, 25427, param3)) {
             param4 = false;
-            ProgressDialog.m(8421504);
+            ProgressDialog.closePlayerContextMenu(8421504);
           }
           ProxyConnectorSupport.pollSocialNamePopup(-31668, param3, param4);
           PlasmaBallSkin.updateReportAbuseDialog(true, param0, param4);
@@ -114,7 +114,7 @@ final class IntKeyLookup {
     }
 
     final static void a(boolean param0) {
-        TriangleMesh.d(-97);
+        TriangleMesh.initializeTableScenes(-97);
         GameRules.createBallSkins((byte) 118);
         if (!param0) {
           muChatGameFriendsOnly = (String) null;

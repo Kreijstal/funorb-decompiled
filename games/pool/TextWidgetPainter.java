@@ -155,7 +155,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
               var15 = stackIn_19_0;
               VerticalScrollbar.field_Sb.fillRectangleAlpha(var15 - var14, this.selectionColor >>> 24, var13.bottom, var13.top + this.field_f + (param5.widgetY + (param3 + param5.textOffsetY)), this.selectionColor, (byte) 124, this.textOriginX(var14, (byte) 11, param2, param5));
             }
-            TriangleMesh.a(121);
+            TriangleMesh.popRasterSnapshot(121);
             return;
           }
           return;
@@ -617,7 +617,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
             var12 = stackIn_3_0 + Math.min(stackIn_3_1, Math.min(stackIn_3_2, stackIn_4_3));
             QuickChatPhraseRegistry.pushRasterClip(param4.widgetX + param3, param4.widgetY + param1, param4.widgetX + param3 + param4.widgetWidth, (byte) -125, param4.widgetHeight + param4.widgetY + param1);
             VerticalScrollbar.field_Sb.drawLine(-1, var10, var12, this.caretColor, var10, var11);
-            TriangleMesh.a(param0 + 114);
+            TriangleMesh.popRasterSnapshot(param0 + 114);
           }
           if (param0 != 1) {
             var13 = (UiWidget) null;
@@ -754,7 +754,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
           } else {
             this.font.drawParagraph(this.getWidgetText(param7 ^ 21, param2), this.textOriginX(param3, (byte) 11, param6, param2), this.textOriginY(param2, param0, param5, (byte) 70), var9_int, var10, param1, param4, this.horizontalAlignment, this.verticalAlignment, this.field_b);
           }
-          TriangleMesh.a(114);
+          TriangleMesh.popRasterSnapshot(114);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

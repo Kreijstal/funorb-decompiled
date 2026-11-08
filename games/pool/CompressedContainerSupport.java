@@ -298,7 +298,7 @@ final class CompressedContainerSupport implements QuickChatResolverMarker {
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var6 = LogoMaterial.a(param3, param1, param0, false, param4, param5);
+          var6 = LogoMaterial.openFullscreenFrame(param3, param1, param0, false, param4, param5);
           if (null == var6) {
             stackIn_2_0 = null;
             return (FullscreenFocusCanvas) (stackIn_2_0);

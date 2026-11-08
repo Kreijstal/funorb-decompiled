@@ -104,7 +104,7 @@ final class BrowserCookieSupport {
             }
             try {
               if (param0 != 28) {
-                BrowserCookieSupport.a(true, true, -103, -121);
+                BrowserCookieSupport.updateLobbyBrowserControls(true, true, -103, -121);
               }
               var2 = "tuhstatbut";
               var3 = (String) (JavaScriptBridge.callWindowFunction((byte) -88, "getcookies", param1));
@@ -204,14 +204,14 @@ final class BrowserCookieSupport {
         field_d = null;
     }
 
-    final static void a(int param0, boolean param1, int param2, int param3) {
-        DualLinkNode.a(DualLinkNodeHashTable.field_i, CueAim.field_j, param0, param1, param2 + 21166, ArchiveIndex.field_x, param3);
+    final static void updateChatCompositionPanel(int param0, boolean param1, int param2, int param3) {
+        DualLinkNode.updateChatCompositionPanel(DualLinkNodeHashTable.field_i, CueAim.field_j, param0, param1, param2 + 21166, ArchiveIndex.field_x, param3);
         if (param2 != -17156) {
           accept = (String) null;
         }
     }
 
-    final static void a(boolean param0, boolean param1, int param2, int param3) {
+    final static void updateLobbyBrowserControls(boolean param0, boolean param1, int param2, int param3) {
         UiComponent stackIn_9_0 = null;
         boolean stackIn_10_1 = false;
         UiComponent stackIn_16_0 = null;
@@ -254,7 +254,7 @@ final class BrowserCookieSupport {
             PotEvent.field_l != DiskArchiveRequest.field_T[0]) {
             PotEvent.field_l = DiskArchiveRequest.field_T[0];
           }
-          ArchiveBootstrapSupport.a(param3, PotEvent.field_l, true, AccountStateQuery.field_u, 0, false);
+          ArchiveBootstrapSupport.sendLobbyGameConfiguration(param3, PotEvent.field_l, true, AccountStateQuery.field_u, 0, false);
         }
         if (param2 > -126) {
           BrowserCookieSupport.advanceScrollingChatLines(true, -43, -89);

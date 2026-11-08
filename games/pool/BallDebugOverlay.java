@@ -99,16 +99,16 @@ final class BallDebugOverlay implements SceneDrawable {
             if (this.field_a.velocityX != 0 ||
               this.field_a.velocityY != 0 ||
               this.field_a.velocityZ != 0) {
-              ProjectedLineSupport.drawProjectedLine(16711680, 1, param0, FixedPointVectorSupport.a(new int[]{this.field_a.positionX, this.field_a.positionY, this.field_a.positionZ}, (byte) 1), FixedPointVectorSupport.a(new int[]{this.field_a.positionX + this.field_a.velocityX * 40, this.field_a.positionY + this.field_a.velocityY * 40, this.field_a.positionZ}, (byte) 1));
+              ProjectedLineSupport.drawProjectedLine(16711680, 1, param0, FixedPointVectorSupport.fixed16ArrayToFloat(new int[]{this.field_a.positionX, this.field_a.positionY, this.field_a.positionZ}, (byte) 1), FixedPointVectorSupport.fixed16ArrayToFloat(new int[]{this.field_a.positionX + this.field_a.velocityX * 40, this.field_a.positionY + this.field_a.velocityY * 40, this.field_a.positionZ}, (byte) 1));
             }
             if (this.field_a.angularVelocityX != 0 ||
               this.field_a.angularVelocityY != 0 ||
               0 != this.field_a.angularVelocityZ) {
-              ProjectedLineSupport.drawProjectedLine(65280, 1, param0, FixedPointVectorSupport.a(new int[]{this.field_a.positionX, this.field_a.positionY, this.field_a.positionZ}, (byte) 1), FixedPointVectorSupport.a(new int[]{40 * this.field_a.angularVelocityX + this.field_a.positionX, this.field_a.positionY + this.field_a.angularVelocityY * 40, this.field_a.angularVelocityZ * 40 + this.field_a.positionZ}, (byte) 1));
+              ProjectedLineSupport.drawProjectedLine(65280, 1, param0, FixedPointVectorSupport.fixed16ArrayToFloat(new int[]{this.field_a.positionX, this.field_a.positionY, this.field_a.positionZ}, (byte) 1), FixedPointVectorSupport.fixed16ArrayToFloat(new int[]{40 * this.field_a.angularVelocityX + this.field_a.positionX, this.field_a.positionY + this.field_a.angularVelocityY * 40, this.field_a.angularVelocityZ * 40 + this.field_a.positionZ}, (byte) 1));
             }
             if (0 != this.field_a.field_l ||
               this.field_a.field_h != 0) {
-              ProjectedLineSupport.drawProjectedLine(16776960, 1, param0, FixedPointVectorSupport.a(new int[]{this.field_a.positionX, this.field_a.positionY, this.field_a.positionZ}, (byte) 1), FixedPointVectorSupport.a(new int[]{40 * this.field_a.field_l + this.field_a.positionX, this.field_a.positionY + this.field_a.field_h * 40, this.field_a.positionZ}, (byte) 1));
+              ProjectedLineSupport.drawProjectedLine(16776960, 1, param0, FixedPointVectorSupport.fixed16ArrayToFloat(new int[]{this.field_a.positionX, this.field_a.positionY, this.field_a.positionZ}, (byte) 1), FixedPointVectorSupport.fixed16ArrayToFloat(new int[]{40 * this.field_a.field_l + this.field_a.positionX, this.field_a.positionY + this.field_a.field_h * 40, this.field_a.positionZ}, (byte) 1));
             }
           }
           if (param1 != -32215) {

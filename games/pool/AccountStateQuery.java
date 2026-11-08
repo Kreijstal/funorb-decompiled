@@ -118,7 +118,7 @@ final class AccountStateQuery extends IntrusiveNode {
         if (param0 > -100) {
           return;
         }
-        MatchingTextValidator.field_u.a(StatefulTextPainter.field_s, -1);
+        MatchingTextValidator.field_u.releaseFullscreen(StatefulTextPainter.field_s, -1);
         MatchingTextValidator.field_u = null;
         if (null != PlasmaTableScene.field_gb) {
           PlasmaTableScene.field_gb.restorePreviousViewportSize(22472);

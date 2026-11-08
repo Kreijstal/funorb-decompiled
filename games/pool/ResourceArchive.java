@@ -557,7 +557,7 @@ final class ResourceArchive {
             throw new RuntimeException("");
           }
           if (this.field_c[param3][param2] != null) {
-            var7 = BallEvent.a(this.field_c[param3][param2], param1 ^ 19261, false);
+            var7 = BallEvent.unwrapByteStorage(this.field_c[param3][param2], param1 ^ 19261, false);
             var5 = var7;
             if (var7 == null) {
               throw new RuntimeException("");
@@ -860,7 +860,7 @@ final class ResourceArchive {
             param1[1] != 0 ||
             param1[2] != 0 ||
             param1[3] != 0)) {
-            var34 = BallEvent.a(this.field_l[param3], -19261, true);
+            var34 = BallEvent.unwrapByteStorage(this.field_l[param3], -19261, true);
             var24 = var34;
             var9 = var24;
             var25 = new PacketBuffer(var34);
@@ -868,7 +868,7 @@ final class ResourceArchive {
             decompiledFrameRemainder0 = false;
           }
           else {
-            var9 = BallEvent.a(this.field_l[param3], -19261, false);
+            var9 = BallEvent.unwrapByteStorage(this.field_l[param3], -19261, false);
           }
           try {
             var35 = CompressedContainerSupport.decompressContainer(param0, var9);

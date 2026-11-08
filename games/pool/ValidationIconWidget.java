@@ -135,7 +135,7 @@ final class ValidationIconWidget extends ButtonWidget {
             CueAim.pushSpriteRenderTarget(56, PasswordInputPainter.field_z);
           }
           var13.drawRotatedAboutPivot(112, 144, var13.field_w << 4, var13.field_y << 4, -this.animationTicks << 10, 4096);
-          TriangleMesh.a(112);
+          TriangleMesh.popRasterSnapshot(112);
           PasswordInputPainter.field_z.drawAdditive(-var13.field_w + var5, var6 - var13.field_y, 256);
         }
     }
@@ -167,7 +167,7 @@ final class ValidationIconWidget extends ButtonWidget {
             for (var6 = startRow; var6 < var5; var6++) {
               boolean decompiledFrameCompleted0 = true;
               if (submission.field_w == request.field_q[tableIndex][var6] &&
-                BallEvent.a((byte) 3, request.field_m[tableIndex][var6])) {
+                BallEvent.isLocalPlayerName((byte) 3, request.field_m[tableIndex][var6])) {
                 for (var7 = 0; var7 < var4_int; var7++) {
                   if (submission.field_z[var7] != request.field_z[tableIndex][var7 + var6 * var4_int]) {
                     decompiledFrameCompleted0 = false;

@@ -80,7 +80,7 @@ abstract class TextLayout {
         return this.field_b.length;
     }
 
-    final int a(int param0, byte param1, String param2, int param3) {
+    final int justificationSpaceAdvanceQ8(int textWidth, byte obfuscationGuard, String text, int targetWidth) {
         int var8 = 0;
         int var5_int = 0;
         int var6 = 0;
@@ -98,13 +98,13 @@ abstract class TextLayout {
         try {
           var5_int = 0;
           var6 = 0;
-          var7 = param2.length();
-          if (param1 != 105) {
+          var7 = text.length();
+          if (obfuscationGuard != 105) {
             stackIn_3_0 = -67;
             return stackIn_3_0;
           }
           for (var8 = 0; var8 < var7; var8++) {
-            var9 = param2.charAt(var8);
+            var9 = text.charAt(var8);
             if (var9 != 60) {
               if (var9 == 62) {
                 var6 = 0;
@@ -121,23 +121,23 @@ abstract class TextLayout {
           if (0 >= var5_int) {
             return 0;
           }
-          stackIn_20_0 = (param3 - param0 << 8) / var5_int;
+          stackIn_20_0 = (targetWidth - textWidth << 8) / var5_int;
           return stackIn_20_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
           stackIn_23_0 = var5;
-          stackIn_23_1 = new StringBuilder().append("op.F(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_23_1 = new StringBuilder().append("op.F(").append(textWidth).append(',').append(obfuscationGuard).append(',');
+          if (text == null) {
             stackIn_24_2 = "null";
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param3).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(targetWidth).append(')').toString());
         }
     }
 
-    final static float[] a(int param0, int[] param1, int param2) {
+    final static float[] fixedArrayToFloat(int fractionalBits, int[] values, int obfuscationGuard) {
         int var4 = 0;
         float[] var3 = null;
         RuntimeException var3_ref = null;
@@ -149,14 +149,14 @@ abstract class TextLayout {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var6 = new float[param1.length];
+          var6 = new float[values.length];
           var3 = var6;
-          if (param2 < 61) {
+          if (obfuscationGuard < 61) {
             var5 = (int[]) null;
             TextLayout.a((int[]) null, -54, (int[]) null, -45, (int[]) null, (byte) 22, 22, (int[]) null, (int[]) null, (byte) 2, (int[]) null);
           }
-          for (var4 = 0; param1.length > var4; var4++) {
-            var6[var4] = DebugTuningSupport.scaleByPowerOfTwo(-1, param0, param1[var4]);
+          for (var4 = 0; values.length > var4; var4++) {
+            var6[var4] = DebugTuningSupport.scaleByPowerOfTwo(-1, fractionalBits, values[var4]);
           }
           stackIn_6_0 = var6;
           return stackIn_6_0;
@@ -164,13 +164,13 @@ abstract class TextLayout {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
           stackIn_9_0 = var3_ref;
-          stackIn_9_1 = new StringBuilder().append("op.D(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_9_1 = new StringBuilder().append("op.D(").append(fractionalBits).append(',');
+          if (values == null) {
             stackIn_10_2 = "null";
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 

@@ -60,7 +60,7 @@ final class LobbyPlayer extends UiComponent {
             return (Sprite[]) (stackIn_2_0);
           }
           if (obfuscationGuard == 0) {
-            stackIn_7_0 = ContentTransitionDialog.l((byte) 65);
+            stackIn_7_0 = ContentTransitionDialog.createDecodedSprites((byte) 65);
             return stackIn_7_0;
           }
           stackIn_5_0 = (Sprite[]) null;

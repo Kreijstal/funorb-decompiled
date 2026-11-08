@@ -10,7 +10,7 @@ final class LoginResponse {
     boolean field_e;
     String[] field_c;
 
-    final static BinaryBitmapFont a(ResourceArchive param0, int param1, int param2, ResourceArchive param3, int param4) {
+    final static BinaryBitmapFont loadBinaryFont(ResourceArchive spriteArchive, int obfuscationGuard, int groupId, ResourceArchive metricsArchive, int fileId) {
         RuntimeException var5 = null;
         ResourceArchive var6 = null;
         BinaryBitmapFont stackIn_6_0 = null;
@@ -21,32 +21,32 @@ final class LoginResponse {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param1 <= 40) {
+          if (obfuscationGuard <= 40) {
             var6 = (ResourceArchive) null;
-            LoginResponse.a((ResourceArchive) null, -35, -8, (ResourceArchive) null, -32);
+            LoginResponse.loadBinaryFont((ResourceArchive) null, -35, -8, (ResourceArchive) null, -32);
           }
-          if (!TextLineLayout.a(param2, param0, param4, (byte) 121)) {
+          if (!TextLineLayout.a(groupId, spriteArchive, fileId, (byte) 121)) {
             return null;
           }
-          stackIn_6_0 = QuickChatHelpDialog.createDecodedBinaryFont((byte) 126, param3.getFileBytesUnkeyed(123, param4, param2));
+          stackIn_6_0 = QuickChatHelpDialog.createDecodedBinaryFont((byte) 126, metricsArchive.getFileBytesUnkeyed(123, fileId, groupId));
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
           stackIn_9_0 = var5;
           stackIn_9_1 = new StringBuilder().append("wc.B(");
-          if (param0 == null) {
+          if (spriteArchive == null) {
             stackIn_10_2 = "null";
           } else {
             stackIn_10_2 = "{...}";
           }
-          stackIn_12_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(',');
-          if (param3 == null) {
+          stackIn_12_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(obfuscationGuard).append(',').append(groupId).append(',');
+          if (metricsArchive == null) {
             stackIn_13_2 = "null";
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param4).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(fileId).append(')').toString());
         }
     }
 

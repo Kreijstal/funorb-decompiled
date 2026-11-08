@@ -216,7 +216,7 @@ abstract class MouseWheelInput {
                     }
                   }
                   if (var21 != null &&
-                    BallEvent.a((byte) 3, var21)) {
+                    BallEvent.isLocalPlayerName((byte) 3, var21)) {
                     var8[1][var13] = ResourceArchive.field_j;
                     var9[1][var13] = null;
                     var10[1][var13] = var22;

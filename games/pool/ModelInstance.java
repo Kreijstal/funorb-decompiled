@@ -403,7 +403,7 @@ final class ModelInstance implements SceneDrawable {
             this.a(6710886, param1);
             this.a(112, "Model too big - radixsize:" + (this.mesh.getBoundingRadius() << 1) + " maxmodelsize:" + ModelMesh.field_Y.length, param1);
           } else {
-            this.mesh.a(param1, this.transform);
+            this.mesh.drawWithTransforms(param1, this.transform);
           }
           if (param0 != 6710886) {
             mpXOffersrematch = (String) null;

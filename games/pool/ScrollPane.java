@@ -45,7 +45,7 @@ final class ScrollPane extends UiComponent {
         playerX2AreGroupName = null;
         ratedGame = null;
         if (param0 != 0) {
-          ScrollPane.a(65, (byte) -5, -15);
+          ScrollPane.setBallPreviewTranslation(65, (byte) -5, -15);
         }
         field_Lb = null;
     }
@@ -86,26 +86,26 @@ final class ScrollPane extends UiComponent {
         }
     }
 
-    final static void a(int param0, byte param1, int param2) {
-        if (param1 != 0) {
+    final static void setBallPreviewTranslation(int transitionDuration, byte obfuscationGuard, int transitionTick) {
+        if (obfuscationGuard != 0) {
           field_Ob = 7;
         }
-        LookupRetrySupport.field_h[0] = -140 + param2 * 280 / param0;
+        LookupRetrySupport.field_h[0] = -140 + transitionTick * 280 / transitionDuration;
     }
 
-    final static void a(byte param0, ResourceArchive param1) {
+    final static void loadSceneBackgrounds(byte obfuscationGuard, ResourceArchive archive) {
         int var2_int = 0;
         int var3 = Pool.field_O;
         try {
-          if (param0 <= 16) {
+          if (obfuscationGuard <= 16) {
             field_Tb = (QuickChatDynamicCommand) null;
           }
           for (var2_int = 0; BrowserCookieWriter.field_b.length > var2_int; var2_int++) {
-            BrowserCookieWriter.field_b[var2_int].loadBackdrop(5, param1);
+            BrowserCookieWriter.field_b[var2_int].loadBackdrop(5, archive);
           }
-          ChatMessage.field_l = new Sprite(param1.getFileByName(false, "menu-framed-background.jpg", ""), (java.awt.Component) ((Object) TimeTrialSelectScreen.field_K));
+          ChatMessage.field_l = new Sprite(archive.getFileByName(false, "menu-framed-background.jpg", ""), (java.awt.Component) ((Object) TimeTrialSelectScreen.field_K));
         } catch (RuntimeException runtimeException) {
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "of.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "of.A(" + obfuscationGuard + ',' + (archive != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -157,7 +157,7 @@ final class ScrollPane extends UiComponent {
         this.scrollbar.layoutScrollbar(this.content.height, this.viewport.height, false, -this.content.localY);
     }
 
-    final static void a(int param0, boolean param1, int param2) {
+    final static void drawScrollingChatLines(int left, boolean obfuscationGuard, int centerY) {
         int var8 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
@@ -177,11 +177,11 @@ final class ScrollPane extends UiComponent {
           }
           SoftwareRasterizer.saveClip(ByteRecordSubmission.field_t);
           var4 = var9.field_A;
-          param2 = param2 - (var4 >> 1);
-          SoftwareRasterizer.setClip(param0, param2, param0 + 230, var4 + param2);
+          centerY = centerY - (var4 >> 1);
+          SoftwareRasterizer.setClip(left, centerY, left + 230, var4 + centerY);
           var5 = 0;
           var6 = new IntrusiveDequeCursor(MatchingTextValidator.field_r);
-          if (param1) {
+          if (obfuscationGuard) {
             return;
           }
           var7 = (ChatMessageLine) (var6.last((byte) -92));
@@ -190,7 +190,7 @@ final class ScrollPane extends UiComponent {
               var5Lifetime1 = (int)((double)var7.field_p + 0.5);
               for (var8 = 0; var8 < var7.field_l; var8++) {
                 if (var5Lifetime1 < 230) {
-                  var7.renderedSprite.draw(var5Lifetime1 + param0, param2);
+                  var7.renderedSprite.draw(var5Lifetime1 + left, centerY);
                   var5Lifetime1 = var5Lifetime1 + (4 + var7.renderedSprite.field_z);
                   continue;
                 }
@@ -206,7 +206,7 @@ final class ScrollPane extends UiComponent {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var3), "of.W(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var3), "of.W(" + left + ',' + obfuscationGuard + ',' + centerY + ')');
         }
     }
 

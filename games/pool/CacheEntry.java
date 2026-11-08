@@ -76,11 +76,11 @@ abstract class CacheEntry extends DualLinkNode {
         }
     }
 
-    final static void g(int param0) {
+    final static void refreshConnectionDependentMenuItems(int obfuscationGuard) {
         DisplayModeSupport.field_c[16].setItems(FullscreenDisplayMode.field_m, true);
         DisplayModeSupport.field_c[15].setItems(UsernameAvailabilityValidator.field_t, true);
         DisplayModeSupport.field_c[17].setItems(LoginMethod.field_k, true);
-        int var1 = 125 % ((-17 - param0) / 34);
+        int var1 = 125 % ((-17 - obfuscationGuard) / 34);
         if (!LobbyPlayerLookupSupport.a(true)) {
           DisplayModeSupport.field_c[3].setItems(OpacityWidget.field_O, true);
           DisplayModeSupport.field_c[10].setItems(CanvasInputAttachmentSupport.field_h, true);
@@ -92,7 +92,7 @@ abstract class CacheEntry extends DualLinkNode {
         }
     }
 
-    final static void a(boolean param0, int param1, int param2) {
+    final static void showClientNotice(boolean pointerDriven, int obfuscationGuard, int noticeKind) {
         int stackIn_52_0 = 0;
         int stackIn_55_0 = 0;
         String[] stackIn_62_0 = null;
@@ -139,7 +139,7 @@ abstract class CacheEntry extends DualLinkNode {
         var9 = Pool.field_O;
         try {
           ChatMessageLine.field_o = true;
-          ClientException.field_h = param2;
+          ClientException.field_h = noticeKind;
           if (ClientException.field_h == 0) {
             var3_int = DualLinkNode.a(DraggableWidget.field_T, LoginRequestSupport.field_c, StatefulTextPainter.fsNonmember, TransformRotationSupport.field_f, 0);
             var4 = 3 + var3_int;
@@ -178,7 +178,7 @@ abstract class CacheEntry extends DualLinkNode {
           } else if (ClientException.field_h != 2) {
             if (ClientException.field_h == 3) {
               if (StatefulTextPainter.field_s.field_k) {
-                var3_int = DualLinkNode.a(DraggableWidget.field_T, LoginRequestSupport.field_c, LoginRequestSupport.fsUnavailable, TransformRotationSupport.field_f, param1 ^ 4);
+                var3_int = DualLinkNode.a(DraggableWidget.field_T, LoginRequestSupport.field_c, LoginRequestSupport.fsUnavailable, TransformRotationSupport.field_f, obfuscationGuard ^ 4);
               } else {
                 var3_int = DualLinkNode.a(DraggableWidget.field_T, LoginRequestSupport.field_c, ValidationIconWidget.fsUnavailableTrySignedApplet, TransformRotationSupport.field_f, 0);
               }
@@ -216,7 +216,7 @@ abstract class CacheEntry extends DualLinkNode {
               if (ClientException.field_h != 5) {
                 throw new IllegalArgumentException();
               }
-              var3_int = DualLinkNode.a(DraggableWidget.field_T, LoginRequestSupport.field_c, DebugTuningSupport.fsTimeout, TransformRotationSupport.field_f, param1 ^ 4);
+              var3_int = DualLinkNode.a(DraggableWidget.field_T, LoginRequestSupport.field_c, DebugTuningSupport.fsTimeout, TransformRotationSupport.field_f, obfuscationGuard ^ 4);
               var4 = 3 + var3_int;
               IterableNodeHashTable.field_c = new int[var4];
               TransformRotationSupport.field_j = new String[var4];
@@ -236,7 +236,7 @@ abstract class CacheEntry extends DualLinkNode {
               ByteStorage.field_c[1] = 5;
             }
           } else {
-            var3_int = DualLinkNode.a(DraggableWidget.field_T, LoginRequestSupport.field_c, AccountWelcomePanel.substituteTemplateArguments(new String[]{"<br><%0><br>"}, param1 - 5, MonotonicClock.fsAcceptCountdownSing), TransformRotationSupport.field_f, 0);
+            var3_int = DualLinkNode.a(DraggableWidget.field_T, LoginRequestSupport.field_c, AccountWelcomePanel.substituteTemplateArguments(new String[]{"<br><%0><br>"}, obfuscationGuard - 5, MonotonicClock.fsAcceptCountdownSing), TransformRotationSupport.field_f, 0);
             var4 = -1;
             for (var5 = 0; var5 < var3_int; var5++) {
               if (!"<%0>".equals(LoginRequestSupport.field_c[var5])) {
@@ -368,7 +368,7 @@ abstract class CacheEntry extends DualLinkNode {
           IntegerRecordProtocolSupport.field_b = new int[TransformRotationSupport.field_j.length][];
           var4Lifetime3 = 0;
           var5Lifetime3 = PasswordValidator.field_n;
-          if (param1 != 4) {
+          if (obfuscationGuard != 4) {
             return;
           }
           while (var4Lifetime3 < TransformRotationSupport.field_j.length) {
@@ -389,15 +389,15 @@ abstract class CacheEntry extends DualLinkNode {
             var4Lifetime3++;
           }
           if (ClientException.field_h != 2) {
-            LabeledChildWidget.field_W.initializeSelection(param0, 0, AlternateLongAndTextLoginPayload.a(ReflectionReplySupport.field_i, DebouncedValidationProvider.field_f, 0), true);
+            LabeledChildWidget.field_W.initializeSelection(pointerDriven, 0, AlternateLongAndTextLoginPayload.a(ReflectionReplySupport.field_i, DebouncedValidationProvider.field_f, 0), true);
           } else {
-            LabeledChildWidget.field_W.initializeSelection(param0, -1, -1, true);
+            LabeledChildWidget.field_W.initializeSelection(pointerDriven, -1, -1, true);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var3), "kk.D(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var3), "kk.D(" + pointerDriven + ',' + obfuscationGuard + ',' + noticeKind + ')');
         }
     }
 

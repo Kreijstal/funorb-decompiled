@@ -189,7 +189,7 @@ final class CueStick {
             this.field_l[0] = this.field_d[var3_int][0];
             this.field_l[1] = this.field_d[var3_int][1];
             this.field_l[2] = this.field_d[var3_int][2];
-            this.field_m[var3_int].a(param1, this.field_l);
+            this.field_m[var3_int].drawWithTransforms(param1, this.field_l);
           }
           if (param0 != 32624) {
             this.segmentOffsets = (double[]) null;
@@ -253,7 +253,7 @@ final class CueStick {
           stackIn_29_2 = (active) && (!AccountWelcomePanel.field_bb);
           ((UiComponent) (Object) stackIn_28_0).drawRoot((byte) stackIn_28_1, stackIn_29_2);
         }
-        TriangleMesh.a(114);
+        TriangleMesh.popRasterSnapshot(114);
     }
 
     public static void releaseStatics(byte param0) {

@@ -14,14 +14,14 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
     public final void focusGained(java.awt.event.FocusEvent param0) {
     }
 
-    final void a(PlatformTaskDispatcher param0, int param1) {
+    final void releaseFullscreen(PlatformTaskDispatcher dispatcher, int obfuscationGuard) {
         try {
-          TutorialSelectScreen.a(this.frame, param0, 24442);
-          if (param1 != -1) {
+          TutorialSelectScreen.disposeFullscreenFrame(this.frame, dispatcher, 24442);
+          if (obfuscationGuard != -1) {
             field_a = (Sprite) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "od.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "od.A(" + (dispatcher != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
         }
     }
 
@@ -187,8 +187,8 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
         return var5;
     }
 
-    final static void a(boolean param0) {
-        if (param0) {
+    final static void showAccountWelcomePanel(boolean obfuscationGuard) {
+        if (obfuscationGuard) {
           RasterSnapshot.field_n.replaceContent(new AccountWelcomePanel(), 30);
           return;
         }

@@ -43,7 +43,7 @@ final class QuickChatMenuSupport {
           param2.field_k = 0;
           DisplayNamePanel.field_N = new QuickChatCategoryCache(var3_int, param2, param2);
           UiComponentNode.field_x = new QuickChatPhraseRegistry(var3_int, param2, param2, new CompressedContainerSupport());
-          var4 = TranslatedUiText.c(2);
+          var4 = TranslatedUiText.findRootQuickChatCategory(2);
           if (var4 == null) {
             var11 = (Throwable) null;
             GrowableIntList.reportClientError((Throwable) null, "QC2", -8555);

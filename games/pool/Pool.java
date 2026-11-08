@@ -142,7 +142,7 @@ public final class Pool extends NetworkGameClient {
               } else {
                 if (!Base37Support.field_d) {
                   AccountContentDialog.field_ub.tick(false, true, (byte) -9);
-                  while (LabeledChildWidget.h(127)) {
+                  while (LabeledChildWidget.pollKeyEvent(127)) {
                     AccountContentDialog.field_ub.handleKeyTyped((byte) 101);
                   }
                 } else {
@@ -166,19 +166,19 @@ public final class Pool extends NetworkGameClient {
               ((PoolMatchController) (Object) stackIn_26_0).tick(stackIn_27_1, var4 != 0, (byte) -118);
             }
             if (MidiNoteMixer.field_v) {
-              BrowserCookieSupport.a(180, var4 != 0, param1 - 17156, 320);
+              BrowserCookieSupport.updateChatCompositionPanel(180, var4 != 0, param1 - 17156, 320);
               stackIn_32_0 = AccountContentDialog.field_ub;
               stackIn_33_1 = (IntLookupQuery.field_q.pressedButton != 0);
               ((PoolMatchController) (Object) stackIn_32_0).tick(stackIn_33_1, var4 != 0, (byte) -108);
             }
-            while (LabeledChildWidget.h(127)) {
+            while (LabeledChildWidget.pollKeyEvent(127)) {
               if (LookupProtocolSupport.field_b) {
                 if (MidiNoteMixer.field_v) {
                   if (KillerRules.handleChatOrQuickChatKey(15, 12, -1, 13)) {
                     continue;
                   }
                 } else {
-                  TimeTrialSelectScreen.a(false, 15, 13, 12);
+                  TimeTrialSelectScreen.handleInterfaceKeyPress(false, 15, 13, 12);
                 }
               }
               if (TransformSupport.field_e) {
@@ -338,7 +338,7 @@ public final class Pool extends NetworkGameClient {
           DateInputWidget.field_U = BufferedFile.field_h;
         }
         if (GameRules.field_b == -5) {
-          AccountCreationForm.a(HighscoresScreen.field_L.getGameId(20872), true, 11);
+          AccountCreationForm.sendLobbyGameCancellation(HighscoresScreen.field_L.getGameId(20872), true, 11);
           GameRules.field_b = MatchingTextValidator.field_w;
           LoginRequiredScreen.field_H = true;
         }
@@ -468,7 +468,7 @@ public final class Pool extends NetworkGameClient {
           } else {
             stackIn_50_1 = true;
           }
-          ContentTransitionDialog.a(stackIn_49_0, stackIn_50_1);
+          ContentTransitionDialog.drawAccountOverlay(stackIn_49_0, stackIn_50_1);
         } else {
           if (RenderingInitializationSupport.a((byte) -84) &&
             !LookupQuery.isClientNoticeOpen(1)) {
@@ -993,7 +993,7 @@ public final class Pool extends NetworkGameClient {
           }
           if (Bzip2DecoderState.field_c == 14) {
             PoolGameModel.applyPendingScreenTransition(-124);
-            SharedWidgetLayoutSupport.a(PackedColorSupport.getAccountDialogContent((byte) 1), 1024, AccountCreationForm.getLobbyGamePlayersContent((byte) 103), 150, ByteArrayNode.field_p, ByteArrayNode.nextPowerOfTwo(-17931, 8), ByteArrayNode.nextPowerOfTwo(-17931, 2000), SpaceTableScene.getChatScrollContent(true), 4, 13162);
+            SharedWidgetLayoutSupport.initializeLobbyCollections(PackedColorSupport.getAccountDialogContent((byte) 1), 1024, AccountCreationForm.getLobbyGamePlayersContent((byte) 103), 150, ByteArrayNode.field_p, ByteArrayNode.nextPowerOfTwo(-17931, 8), ByteArrayNode.nextPowerOfTwo(-17931, 2000), SpaceTableScene.getChatScrollContent(true), 4, 13162);
             NineSliceFrameSupport.a(LobbyPlayer.getNamePopupContent(0), VerticalScrollbar.getIgnoreListContent((byte) 13), -36);
             AlternateLongAndTextLoginPayload.field_p = false;
             LookupProtocolSupport.field_b = true;
@@ -1005,7 +1005,7 @@ public final class Pool extends NetworkGameClient {
           if (15 == Bzip2DecoderState.field_c) {
             if (Base37Support.field_d) {
               PoolGameModel.applyPendingScreenTransition(obfuscationGuard - 127);
-              DialogLayer.a(true);
+              DialogLayer.closeInputOverlays(true);
               IntrusiveDeque.clearChatHistory((byte) 74);
               GameRules.field_b = 0;
               TransformSupport.field_e = false;
@@ -1232,7 +1232,7 @@ public final class Pool extends NetworkGameClient {
             AccountContentDialog.field_ub = var7;
             IterableNodeHashTable.updateDrawOfferLabel(false);
             ModernTableScene.refreshRematchMenuLabel((byte) -119);
-            CueAim.a((byte) -109);
+            CueAim.initializeSharedChatComponents((byte) -109);
           }
           LoginRequiredScreen.field_H = false;
           if (var5Lifetime1 != 0) {
@@ -1253,7 +1253,7 @@ public final class Pool extends NetworkGameClient {
         if (ArrayWidgetGroup.field_H) {
           return LoginPayloadKind.a(15585, param2, param1);
         }
-        if (HighScoreSubmission.a(param1, param2, -10)) {
+        if (HighScoreSubmission.handleChatShortcut(param1, param2, -10)) {
           return true;
         }
         if (param3 != -80) {
@@ -1289,7 +1289,7 @@ public final class Pool extends NetworkGameClient {
         if (MatchingTextValidator.field_u != null &&
           MatchingTextValidator.field_u.focusLost) {
           AccountStateQuery.d((byte) -127);
-          DropTargetWidget.g((byte) 96);
+          DropTargetWidget.showFocusLossNoticeIfOpen((byte) 96);
         }
         stackIn_5_1 = -4;
         stackIn_6_2 = (null != MatchingTextValidator.field_u);
@@ -1311,7 +1311,7 @@ public final class Pool extends NetworkGameClient {
           }
         }
         if (!MeshSymmetrySupport.field_d) {
-          ModelOriginSupport.a(0, CompressedContainerSupport.field_d);
+          ModelOriginSupport.processAccountDialogInput(0, CompressedContainerSupport.field_d);
           if (this.loadResources(82, true)) {
             MeshSymmetrySupport.field_d = true;
           }
@@ -1598,7 +1598,7 @@ public final class Pool extends NetworkGameClient {
             MouseWheelInput.field_c = new CueStick();
             MouseWheelInput.field_c.buildSegments(2);
             SoundCache.loadGameSprites(0, ViewportController.field_q);
-            ScrollPane.a((byte) 27, MonotonicClock.field_h);
+            ScrollPane.loadSceneBackgrounds((byte) 27, MonotonicClock.field_h);
             Camera.field_j = WidgetStyleLayer.loadSprite("basic", (byte) 83, "locked", Under13NoticePanel.field_R);
             UsernameAvailabilityValidator.field_r = WidgetStyleLayer.loadSprite("basic", (byte) 122, "unachieved", Under13NoticePanel.field_R);
             TextInputPainter.field_u = WidgetStyleLayer.loadSprite("basic", (byte) 60, "orbcoin", Under13NoticePanel.field_R);

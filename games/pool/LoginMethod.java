@@ -82,7 +82,7 @@ final class LoginMethod {
         }
     }
 
-    final static void a(int param0, byte param1, int param2, int param3, Sprite param4, int param5) {
+    final static void drawSpriteWithHorizontalAlphaGradient(int leftAlpha, byte obfuscationGuard, int x, int y, Sprite sprite, int rightAlpha) {
         int incrementValue$0 = 0;
         RuntimeException stackIn_36_0 = null;
         StringBuilder stackIn_36_1 = null;
@@ -110,29 +110,29 @@ final class LoginMethod {
         int var14Lifetime3;
         var20 = Pool.field_O;
         try {
-          var6_int = (param5 - param0 << 8) / param4.field_w;
-          var7 = (param0 << 8) + param4.field_G * var6_int;
-          param2 = param2 + param4.field_G;
-          param3 = param3 + param4.field_B;
-          var8 = param2 + SoftwareRasterizer.width * param3;
+          var6_int = (rightAlpha - leftAlpha << 8) / sprite.field_w;
+          var7 = (leftAlpha << 8) + sprite.field_G * var6_int;
+          x = x + sprite.field_G;
+          y = y + sprite.field_B;
+          var8 = x + SoftwareRasterizer.width * y;
           var9 = 0;
-          var10 = param4.field_A;
-          var11 = param4.field_z;
+          var10 = sprite.field_A;
+          var11 = sprite.field_z;
           var12 = SoftwareRasterizer.width - var11;
           var13 = 0;
-          if (param3 < SoftwareRasterizer.clipTop) {
-            var14 = -param3 + SoftwareRasterizer.clipTop;
+          if (y < SoftwareRasterizer.clipTop) {
+            var14 = -y + SoftwareRasterizer.clipTop;
             var8 = var8 + var14 * SoftwareRasterizer.width;
             var9 = var9 + var11 * var14;
-            param3 = SoftwareRasterizer.clipTop;
+            y = SoftwareRasterizer.clipTop;
             var10 = var10 - var14;
           }
-          if (var10 + param3 > SoftwareRasterizer.clipBottom) {
-            var10 = var10 - (-SoftwareRasterizer.clipBottom + (var10 + param3));
+          if (var10 + y > SoftwareRasterizer.clipBottom) {
+            var10 = var10 - (-SoftwareRasterizer.clipBottom + (var10 + y));
           }
-          if (param2 < SoftwareRasterizer.clipLeft) {
-            var14Lifetime1 = -param2 + SoftwareRasterizer.clipLeft;
-            param2 = SoftwareRasterizer.clipLeft;
+          if (x < SoftwareRasterizer.clipLeft) {
+            var14Lifetime1 = -x + SoftwareRasterizer.clipLeft;
+            x = SoftwareRasterizer.clipLeft;
             var8 = var8 + var14Lifetime1;
             var13 = var13 + var14Lifetime1;
             var9 = var9 + var14Lifetime1;
@@ -140,21 +140,21 @@ final class LoginMethod {
             var7 = var7 + var6_int * var14Lifetime1;
             var12 = var12 + var14Lifetime1;
           }
-          if (param2 + var11 > SoftwareRasterizer.clipRight) {
-            var14Lifetime2 = param2 + (var11 - SoftwareRasterizer.clipRight);
+          if (x + var11 > SoftwareRasterizer.clipRight) {
+            var14Lifetime2 = x + (var11 - SoftwareRasterizer.clipRight);
             var12 = var12 + var14Lifetime2;
             var13 = var13 + var14Lifetime2;
             var11 = var11 - var14Lifetime2;
           }
           if (0 < var11 &&
             var10 > 0) {
-            if (param1 < 44) {
+            if (obfuscationGuard < 44) {
               var21 = (Sprite) null;
-              LoginMethod.a(26, (byte) 106, -29, 66, (Sprite) null, 59);
+              LoginMethod.drawSpriteWithHorizontalAlphaGradient(26, (byte) 106, -29, 66, (Sprite) null, 59);
             }
-            for (param3 = -var10; param3 < 0; param3++) {
+            for (y = -var10; y < 0; y++) {
               var14Lifetime3 = var7;
-              for (param2 = -var11; param2 < 0; param2++) {
+              for (x = -var11; x < 0; x++) {
                 var15 = var14Lifetime3 >> 8;
                 var14Lifetime3 = var14Lifetime3 + var6_int;
                 var16 = 256 - var15;
@@ -164,7 +164,7 @@ final class LoginMethod {
                 } else {
                   incrementValue$0 = var9;
                   var9++;
-                  var17 = param4.field_D[incrementValue$0];
+                  var17 = sprite.field_D[incrementValue$0];
                   if (0 != var17) {
                     if (var15 <= 255) {
                       var18 = SoftwareRasterizer.pixels[var8];
@@ -187,13 +187,13 @@ final class LoginMethod {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
           stackIn_36_0 = var6;
-          stackIn_36_1 = new StringBuilder().append("ml.F(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-          if (param4 == null) {
+          stackIn_36_1 = new StringBuilder().append("ml.F(").append(leftAlpha).append(',').append(obfuscationGuard).append(',').append(x).append(',').append(y).append(',');
+          if (sprite == null) {
             stackIn_37_2 = "null";
           } else {
             stackIn_37_2 = "{...}";
           }
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_36_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(',').append(param5).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_36_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(',').append(rightAlpha).append(')').toString());
         }
     }
 

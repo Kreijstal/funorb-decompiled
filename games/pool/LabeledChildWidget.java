@@ -46,7 +46,7 @@ final class LabeledChildWidget extends SingleChildWidget {
         this.labelFont.drawParagraph(this.labelText, this.padding + var8 + var5, this.padding + var6, -this.padding + this.labelWidth, this.widgetHeight - 2 * this.padding, this.labelColor, -1, this.labelAfterChild ? 0 : 2, 1, this.labelFont.maxAscent);
     }
 
-    final static boolean h(int param0) {
+    final static boolean pollKeyEvent(int ringMask) {
         Object var1 = null;
         Throwable var2 = null;
         boolean stackIn_6_0 = false;
@@ -58,13 +58,13 @@ final class LabeledChildWidget extends SingleChildWidget {
           }
           IterableDualLinkDeque.field_a = QuickChatCategoryCache.field_b[WireframeQuad.field_s];
           LoginMethod.field_b = MenuSelectionSupport.field_c[WireframeQuad.field_s];
-          WireframeQuad.field_s = param0 & WireframeQuad.field_s + 1;
+          WireframeQuad.field_s = ringMask & WireframeQuad.field_s + 1;
           stackIn_6_0 = true;
         }
         return stackIn_6_0;
     }
 
-    final static double[] a(int param0, double[] param1) {
+    final static double[] normalizeVectorInPlace(int obfuscationGuard, double[] vector) {
         double var2_double = 0.0;
         RuntimeException var2 = null;
         double var4 = 0.0;
@@ -78,30 +78,30 @@ final class LabeledChildWidget extends SingleChildWidget {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2_double = param1[0];
-          if (param0 > -121) {
+          var2_double = vector[0];
+          if (obfuscationGuard > -121) {
             stackIn_2_0 = (double[]) null;
             return stackIn_2_0;
           }
-          var4 = param1[1];
-          var6 = param1[2];
+          var4 = vector[1];
+          var6 = vector[2];
           var8 = var6 * var6 + (var4 * var4 + var2_double * var2_double);
           if (Math.abs(-1.0 + var8) < 1e-16) {
-            stackIn_5_0 = (double[]) (param1);
+            stackIn_5_0 = (double[]) (vector);
             return stackIn_5_0;
           }
           var8 = Math.sqrt(var8);
-          param1[1] = var4 / var8;
-          param1[2] = var6 / var8;
-          param1[0] = var2_double / var8;
-          stackIn_7_0 = (double[]) (param1);
+          vector[1] = var4 / var8;
+          vector[2] = var6 / var8;
+          vector[0] = var2_double / var8;
+          stackIn_7_0 = (double[]) (vector);
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
           stackIn_10_0 = var2;
-          stackIn_10_1 = new StringBuilder().append("n.B(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_10_1 = new StringBuilder().append("n.B(").append(obfuscationGuard).append(',');
+          if (vector == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";
@@ -121,18 +121,18 @@ final class LabeledChildWidget extends SingleChildWidget {
         return var3;
     }
 
-    final static String a(boolean param0, boolean param1, boolean param2, byte param3) {
-        if (param3 != 39) {
+    final static String selectLoginRequiredMessage(boolean firstCondition, boolean secondCondition, boolean thirdCondition, byte obfuscationGuard) {
+        if (obfuscationGuard != 39) {
           return (String) null;
         }
         int var4 = 0;
-        if (param0) {
+        if (firstCondition) {
           var4 += 4;
         }
-        if (param1) {
+        if (secondCondition) {
           var4 += 2;
         }
-        if (param2) {
+        if (thirdCondition) {
           var4++;
         }
         return LoginMethod.mustloginAlternate[var4];

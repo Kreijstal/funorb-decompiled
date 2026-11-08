@@ -300,7 +300,7 @@ final class IsaacCipher {
               var11[1] = mesh.vertexZ[mesh.field_H[var3Lifetime1]];
               var11[2] = mesh.vertexZ[mesh.field_C[var3Lifetime1]];
               PacketBuffer.computeTriangleBarycentrics(var31, var22, var23, var32, var25, var26, var27, (byte) 111, var28);
-              MenuScreen.a(var22, var27, var23, var28, var31, var26, var32, 0, var25);
+              MenuScreen.reconstructTextureTriangle(var22, var27, var23, var28, var31, var26, var32, 0, var25);
               mesh.field_k[var2_intLifetime1] = mesh.addTextureTriangle((short)mesh.addVertex(PauseMenuScreen.shiftLeft(0, -54264319, var25[0]), PauseMenuScreen.shiftLeft(0, -54264319, var27[0]), PauseMenuScreen.shiftLeft(0, -54264319, var22[0])), (short)mesh.addVertex(PauseMenuScreen.shiftLeft(0, TutorialFactory.bitwiseXor(startFace, -54264319), var25[1]), PauseMenuScreen.shiftLeft(0, -54264319, var27[1]), PauseMenuScreen.shiftLeft(0, -54264319, var22[1])), (short)mesh.addVertex(PauseMenuScreen.shiftLeft(0, -54264319, var25[2]), PauseMenuScreen.shiftLeft(0, -54264319, var27[2]), PauseMenuScreen.shiftLeft(0, -54264319, var22[2])));
             }
           }

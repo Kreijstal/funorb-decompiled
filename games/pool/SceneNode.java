@@ -199,7 +199,7 @@ final class SceneNode {
                 this.drawBoundingBox(param4, var10, this.field_c[var9], -78);
                 this.drawModelLabel(1, "Model too big - radixsize:" + (var10.getBoundingRadius() << 1) + " maxmodelsize:" + ModelMesh.field_Y.length + " numf:" + var10.field_P, var10, param4, this.field_c[var9]);
               } else {
-                var10.a(param4, this.field_c[var9]);
+                var10.drawWithTransforms(param4, this.field_c[var9]);
               }
             }
             var7_int--;
@@ -247,7 +247,7 @@ final class SceneNode {
             var6 = this.field_j[var5_int];
             var7 = this.field_e[var6];
             if (var7.getBoundingRadius() << 1 <= ModelMesh.field_Y.length) {
-              var7.a(param3, this.field_c[var6]);
+              var7.drawWithTransforms(param3, this.field_c[var6]);
             } else {
               this.drawBoundingBox(param3, var7, this.field_c[var6], -122);
               this.drawModelLabel(1, "Model too big - radixsize:" + (var7.getBoundingRadius() << 1) + " maxmodelsize:" + ModelMesh.field_Y.length + " numf:" + var7.field_P, var7, param3, this.field_c[var6]);

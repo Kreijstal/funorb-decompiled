@@ -56,7 +56,7 @@ final class SceneNodeFactory {
             var10.field_b = new SceneNode[var6];
             var6Lifetime1 = 0;
             for (var7Lifetime1 = 0; var5.length > var7Lifetime1; var7Lifetime1++) {
-              MarkerSliderPainter.a(var5[var7Lifetime1], (byte) -37);
+              MarkerSliderPainter.recenterTextureTriangles(var5[var7Lifetime1], (byte) -37);
               if (var5[var7Lifetime1].faceCount > 0) {
                 incrementValue$0 = var6Lifetime1;
                 var6Lifetime1++;

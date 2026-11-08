@@ -471,7 +471,7 @@ class ButtonWidget extends UiWidget {
           IntegerSyntaxSupport.field_e.field_i.processTabPresses(true);
           if (null != HighscoresScreen.field_L) {
             if (ContentTransitionDialog.field_ob.pressedButton != 0) {
-              AccountCreationForm.a(HighscoresScreen.field_L.getGameId(20872), true, param4);
+              AccountCreationForm.sendLobbyGameCancellation(HighscoresScreen.field_L.getGameId(20872), true, param4);
             }
             if (CanvasInputAttachmentSupport.field_b.pressedButton != 0) {
               AccountWelcomePanel.field_bb = true;

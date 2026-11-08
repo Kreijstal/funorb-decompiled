@@ -291,7 +291,7 @@ final class PoolGameModel {
                   param1[var4_int].inPlay = false;
                   param1[var4_int].motionState = 0;
                   if (param1[var4_int].field_q != null) {
-                    param1[var4_int].field_q.a(23655, param1[var4_int], var5);
+                    param1[var4_int].field_q.recordPocket(23655, param1[var4_int], var5);
                   }
                   param2.pottedBalls.addFirst((byte) -23, new PotEvent(var4_int, var5));
                 }
@@ -762,14 +762,14 @@ final class PoolGameModel {
                       if (0L == (LinkButtonPainter.field_i & 16L)) {
                         return false;
                       }
-                      ViewportController.drawProjectedCrosshair(FixedPointVectorSupport.a(new int[]{var18, var19_int, var20}, (byte) 1), 16724753, -128, AccountContentDialog.field_ub.viewMatrix);
+                      ViewportController.drawProjectedCrosshair(FixedPointVectorSupport.fixed16ArrayToFloat(new int[]{var18, var19_int, var20}, (byte) 1), 16724753, -128, AccountContentDialog.field_ub.viewMatrix);
                     }
                     return false;
                   }
                 }
                 if (((AccountContentDialog.field_ub != null)) &&
                   ((0L != (16L & LinkButtonPainter.field_i)))) {
-                  ViewportController.drawProjectedCrosshair(FixedPointVectorSupport.a(new int[]{var18, var19_int, var20}, (byte) 1), 16764057, -79, AccountContentDialog.field_ub.viewMatrix);
+                  ViewportController.drawProjectedCrosshair(FixedPointVectorSupport.fixed16ArrayToFloat(new int[]{var18, var19_int, var20}, (byte) 1), 16764057, -79, AccountContentDialog.field_ub.viewMatrix);
                 }
               }
               decompiledFrameRemainder0 = false;
@@ -802,7 +802,7 @@ final class PoolGameModel {
                     var29 = (long)DisplayModeSupport.field_e[2] + var23 * (long)DisplayModeSupport.field_e[11];
                     if (null != AccountContentDialog.field_ub &&
                       (LinkButtonPainter.field_i & 16L) != 0L) {
-                      ViewportController.drawProjectedCrosshair(FixedPointVectorSupport.a(new int[]{(int)var25, (int)var27, (int)var29}, (byte) 1), 16724753, 112, AccountContentDialog.field_ub.viewMatrix);
+                      ViewportController.drawProjectedCrosshair(FixedPointVectorSupport.fixed16ArrayToFloat(new int[]{(int)var25, (int)var27, (int)var29}, (byte) 1), 16724753, 112, AccountContentDialog.field_ub.viewMatrix);
                     }
                     return false;
                   }
@@ -818,7 +818,7 @@ final class PoolGameModel {
                   var31 = (long)DisplayModeSupport.field_e[11] * var25 + (long)DisplayModeSupport.field_e[2];
                   if (null != AccountContentDialog.field_ub &&
                     (LinkButtonPainter.field_i & 16L) != 0L) {
-                    ViewportController.drawProjectedCrosshair(FixedPointVectorSupport.a(new int[]{(int)var27, (int)var29, (int)var31}, (byte) 1), 16724753, param3 ^ -272, AccountContentDialog.field_ub.viewMatrix);
+                    ViewportController.drawProjectedCrosshair(FixedPointVectorSupport.fixed16ArrayToFloat(new int[]{(int)var27, (int)var29, (int)var31}, (byte) 1), 16724753, param3 ^ -272, AccountContentDialog.field_ub.viewMatrix);
                   }
                   return false;
                 }
@@ -1229,7 +1229,7 @@ final class PoolGameModel {
           ProxyAuthenticationRequiredException.field_a = false;
         }
         if (ClientUiResourceState.field_a) {
-          DialogLayer.a(true);
+          DialogLayer.closeInputOverlays(true);
           TransformSupport.clearLobbyState(0);
           DialogLayer.clearSocialLists(-121);
           ClientUiResourceState.field_a = false;

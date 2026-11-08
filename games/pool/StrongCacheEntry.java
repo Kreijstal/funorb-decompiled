@@ -141,7 +141,7 @@ final class StrongCacheEntry extends CacheEntry {
             }
           }
           while (true) {
-            if (!LabeledChildWidget.h(127)) {
+            if (!LabeledChildWidget.pollKeyEvent(127)) {
               stackIn_81_0 = 0;
               return stackIn_81_0;
             }

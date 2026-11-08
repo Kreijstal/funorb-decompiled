@@ -236,7 +236,7 @@ final class Quaternion {
     }
 
     final static void drawGameOverlays(boolean active, int obfuscationGuard) {
-        if (HighScoreSubmission.c(-26)) {
+        if (HighScoreSubmission.hasInputOverlay(-26)) {
           active = false;
         }
         DraggableWidget.a(-114, active);

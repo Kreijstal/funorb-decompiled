@@ -48,19 +48,19 @@ final class DropTargetWidget extends SingleChildWidget {
         var4.writeByteLengthPrefix(var4.position - var5, true);
     }
 
-    final static void g(byte param0) {
-        if (param0 != 96) {
+    final static void showFocusLossNoticeIfOpen(byte obfuscationGuard) {
+        if (obfuscationGuard != 96) {
           field_O = (BallDebugOverlay[]) null;
           if (!LookupQuery.isClientNoticeOpen(1)) {
             return;
           }
-          CacheEntry.a(false, 4, 4);
+          CacheEntry.showClientNotice(false, 4, 4);
           return;
         }
         if (!LookupQuery.isClientNoticeOpen(1)) {
           return;
         }
-        CacheEntry.a(false, 4, 4);
+        CacheEntry.showClientNotice(false, 4, 4);
     }
 
     final static String formatDecimalFixedPoint(long value, int maxFractionDigits, boolean obfuscationGuard, int fractionalBits) {

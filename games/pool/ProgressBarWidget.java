@@ -53,7 +53,7 @@ final class ProgressBarWidget extends UiWidget {
           SoftwareRasterizer.drawHorizontalLine(this.stripeWidth + var7, var6, this.stripeWidth, var12Lifetime1);
           SoftwareRasterizer.drawHorizontalLine(-this.stripeWidth + var7, var6, this.stripeWidth, var12Lifetime1);
         }
-        TriangleMesh.a(122);
+        TriangleMesh.popRasterSnapshot(122);
         return var13;
     }
 
@@ -122,7 +122,7 @@ final class ProgressBarWidget extends UiWidget {
         if (param0 != 16711422) {
           discarded$0 = this.buildStripeSprite(24, 48, (byte) -125);
         }
-        TriangleMesh.a(117);
+        TriangleMesh.popRasterSnapshot(117);
         return var3;
     }
 
@@ -144,13 +144,13 @@ final class ProgressBarWidget extends UiWidget {
           if (param0) {
             this.field_U = (Sprite) null;
           }
-          TriangleMesh.a(121);
+          TriangleMesh.popRasterSnapshot(121);
           if (SoftwareRasterizer.clipLeft <= param1 + this.field_U.field_z) {
             CueAim.pushSpriteRenderTarget(43, this.field_H);
             param3.draw(-this.stripeOffset, 0);
             param3.draw(-this.stripeOffset + 2 * this.stripeWidth, 0);
             this.field_F.drawMultiply(0, 0);
-            TriangleMesh.a(114);
+            TriangleMesh.popRasterSnapshot(114);
             this.field_H.draw(param1, param2);
           }
           if (var5_int - this.field_U.field_z <= SoftwareRasterizer.clipRight) {
@@ -160,7 +160,7 @@ final class ProgressBarWidget extends UiWidget {
             param3.draw(-var7, 0);
             param3.draw(this.stripeWidth * 2 - var7, 0);
             this.field_U.drawMultiply(0, 0);
-            TriangleMesh.a(121);
+            TriangleMesh.popRasterSnapshot(121);
             this.field_H.draw(var5_int - this.field_U.field_z, param2);
             return;
           }
@@ -204,7 +204,7 @@ final class ProgressBarWidget extends UiWidget {
           if (obfuscationGuard != 2) {
             field_R = (BitmapFont) null;
           }
-          stackIn_6_0 = (2 <= playerCount) && (!LogoMaterial.a(playerCount, 125, settings, LoginMethod.field_h));
+          stackIn_6_0 = (2 <= playerCount) && (!LogoMaterial.matchesAnyGameOptionPattern(playerCount, 125, settings, LoginMethod.field_h));
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -231,7 +231,7 @@ final class ProgressBarWidget extends UiWidget {
         if (this.fillFractionQ16 < 65536) {
           QuickChatPhraseRegistry.pushRasterClip(var5 + (this.widgetWidth * this.fillFractionQ16 >> 16), var7, this.widgetWidth + var5, (byte) -116, var7 + this.widgetHeight);
           this.drawRoundedStripes(false, var5, var7, this.stripeSprites[1]);
-          TriangleMesh.a(112);
+          TriangleMesh.popRasterSnapshot(112);
         }
     }
 

@@ -108,7 +108,7 @@ final class ChatInputSupport {
                   var6 = 1;
                 }
                 if (LobbyPanelLayoutSupport.getChatFilterMode(5, var6) == 2) {
-                  TextInputPainter.a(1, var6, param0, (byte) -4);
+                  TextInputPainter.setChatFilterMode(1, var6, param0, (byte) -4);
                 }
                 AlternateLongAndTextLoginPayload.a((byte) -116, var5_ref_String, param2, ArrayWidgetGroup.field_I, CookieDateSupport.field_b, -1);
               }

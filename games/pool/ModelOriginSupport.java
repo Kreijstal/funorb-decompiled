@@ -116,7 +116,7 @@ final class ModelOriginSupport extends IntrusiveNode {
         }
     }
 
-    final static void a(int param0, int param1) {
+    final static void processAccountDialogInput(int param0, int param1) {
         if (param0 != 0) {
           tutorialHide = (String) null;
         }

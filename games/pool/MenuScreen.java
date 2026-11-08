@@ -225,7 +225,7 @@ class MenuScreen extends MenuScreenBase {
         var3 = Pool.field_O;
         if (!AlternateLongAndTextLoginPayload.field_p &&
           !LoginRequiredScreen.field_H) {
-          while (LabeledChildWidget.h(param0 + 128)) {
+          while (LabeledChildWidget.pollKeyEvent(param0 + 128)) {
             if (IterableDualLinkDeque.field_a == 13) {
               this.navigateBack((byte) -30);
               continue;
@@ -250,19 +250,19 @@ class MenuScreen extends MenuScreenBase {
         field_y = null;
         if (param0 <= 101) {
           LobbyPlayer var2 = (LobbyPlayer) null;
-          MenuScreen.a(114, (ScrollPane) null, 91, 19, -106, 18, (LobbyPlayer) null);
+          MenuScreen.openLobbyPlayerContextMenu(114, (ScrollPane) null, 91, 19, -106, 18, (LobbyPlayer) null);
         }
         field_m = null;
     }
 
-    final void c(int param0, boolean param1) {
-        if (param0 != 12) {
+    final void startOrSelectLocalMatch(int obfuscationGuard, boolean animate) {
+        if (obfuscationGuard != 12) {
           return;
         }
         if (1 == DialWidget.field_W) {
-          this.requestLocalMatch(0, param1, 0);
+          this.requestLocalMatch(0, animate, 0);
         } else {
-          AccountCreationDialog.switchScreen(-3405, 7, 0, param1);
+          AccountCreationDialog.switchScreen(-3405, 7, 0, animate);
         }
     }
 
@@ -639,7 +639,7 @@ class MenuScreen extends MenuScreenBase {
                                                                           }
                                                                         }
                                                                         if (this.selection.isLeftArrow(-20421)) {
-                                                                          LinkButtonPainter.a(param0 ^ -16470);
+                                                                          LinkButtonPainter.decreaseMusicVolume(param0 ^ -16470);
                                                                         }
                                                                         if (!(!this.selection.isRightArrow(-1))) {
                                                                           CipherPacketBuffer.increaseMusicVolume(param0 + 4941);
@@ -1045,7 +1045,7 @@ class MenuScreen extends MenuScreenBase {
         }
     }
 
-    final static void a(int param0, ScrollPane param1, int param2, int param3, int param4, int param5, LobbyPlayer param6) {
+    final static void openLobbyPlayerContextMenu(int param0, ScrollPane param1, int param2, int param3, int param4, int param5, LobbyPlayer param6) {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
@@ -1100,7 +1100,7 @@ class MenuScreen extends MenuScreenBase {
         return this.buttonRight;
     }
 
-    final static void a(int[] param0, int[] param1, int[] param2, int[] param3, float[] param4, int[] param5, float[] param6, int param7, int[] param8) {
+    final static void reconstructTextureTriangle(int[] param0, int[] param1, int[] param2, int[] param3, float[] param4, int[] param5, float[] param6, int param7, int[] param8) {
         float var9_float = 0.0f;
         float var10 = 0.0f;
         float var11 = 0.0f;

@@ -18,7 +18,7 @@ final class TranslatedUiText {
     static byte[][][] field_l;
     static int field_a;
 
-    final static QuickChatCategoryDefinition c(int param0) {
+    final static QuickChatCategoryDefinition findRootQuickChatCategory(int obfuscationGuard) {
         int var1_int = 0;
         QuickChatCategoryDefinition var2 = null;
         QuickChatCategoryDefinition stackIn_5_0 = null;
@@ -40,8 +40,8 @@ final class TranslatedUiText {
           } catch (java.lang.IllegalArgumentException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var1 = (IllegalArgumentException) (Object) decompiledCaughtException;
-            if (param0 != 2) {
-              TranslatedUiText.a(94, (byte) 12);
+            if (obfuscationGuard != 2) {
+              TranslatedUiText.resendRankingsRequests(94, (byte) 12);
             }
             stackIn_11_0 = null;
             return (QuickChatCategoryDefinition) (stackIn_11_0);
@@ -49,18 +49,18 @@ final class TranslatedUiText {
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
           var1_ref = (RuntimeException) (Object) decompiledCaughtException;
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var1_ref), "nk.A(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var1_ref), "nk.A(" + obfuscationGuard + ')');
         }
     }
 
-    final static void b(int param0) {
+    final static void hideSocialNamePopup(int obfuscationGuard) {
         try {
           PasswordInputPainter.field_C = null;
-          if (param0 != -31384) {
+          if (obfuscationGuard != -31384) {
             TranslatedUiText.releaseStatics(103);
           }
         } catch (RuntimeException runtimeException) {
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "nk.F(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "nk.F(" + obfuscationGuard + ')');
         }
     }
 
@@ -91,7 +91,7 @@ final class TranslatedUiText {
         }
     }
 
-    final static void a(ResourceArchive param0, int param1) {
+    final static void loadLocalizedStrings(ResourceArchive archive, int obfuscationGuard) {
         class $CfrPartitionedBody {
             RuntimeException stackIn_2626_0;
             StringBuilder stackIn_2626_1;
@@ -1321,7 +1321,7 @@ final class TranslatedUiText {
                   Cp1252DecodingSupport.decodeBytesToString(var2, 127);
                 }
                 if (param1 != -21013) {
-                  TranslatedUiText.a((ResourceArchive) null, -20);
+                  TranslatedUiText.loadLocalizedStrings((ResourceArchive) null, -20);
                 }
                 var2 = DebouncedValidationProvider.loadNamedFile((byte) -70, "create_sameaccounttip_named");
                 if (var2 != null) {
@@ -3134,7 +3134,7 @@ final class TranslatedUiText {
                 }
             }
         }
-        $CfrPartitionedBody decompiledBody = new $CfrPartitionedBody(param0, param1);
+        $CfrPartitionedBody decompiledBody = new $CfrPartitionedBody(archive, obfuscationGuard);
         decompiledBody.run();
     }
 
@@ -3147,7 +3147,7 @@ final class TranslatedUiText {
           field_m = null;
           field_g = null;
           if (param0 != 0) {
-            TranslatedUiText.c(47);
+            TranslatedUiText.findRootQuickChatCategory(47);
           }
           field_b = null;
           field_o = null;
@@ -3162,7 +3162,7 @@ final class TranslatedUiText {
         }
     }
 
-    final static void a(int param0) {
+    final static void readByteRecordResponse(int obfuscationGuard) {
         int stackIn_21_0 = 0;
         RuntimeException decompiledCaughtException = null;
         CipherPacketBuffer var1 = null;
@@ -3177,7 +3177,7 @@ final class TranslatedUiText {
         int var6 = 0;
         var6 = Pool.field_O;
         try {
-          if (param0 <= 104) {
+          if (obfuscationGuard <= 104) {
             return;
           }
           var1 = PlayerContextMenu.field_e;
@@ -3241,11 +3241,11 @@ final class TranslatedUiText {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var1_ref), "nk.D(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var1_ref), "nk.D(" + obfuscationGuard + ')');
         }
     }
 
-    final static void a(int param0, byte param1) {
+    final static void resendRankingsRequests(int opcode, byte obfuscationGuard) {
         RuntimeException runtimeException = null;
         RankingsRequest var2 = null;
         int var3 = 0;
@@ -3254,20 +3254,20 @@ final class TranslatedUiText {
         try {
           var2 = (RankingsRequest) (AccountTextSupport.field_c.last((byte) 120));
           while (null != var2) {
-            RankingsProtocolSupport.sendRankingsRequest(var2, param0, (byte) -96);
+            RankingsProtocolSupport.sendRankingsRequest(var2, opcode, (byte) -96);
             var2 = (RankingsRequest) (AccountTextSupport.field_c.previous((byte) -5));
             if (var3 != 0) {
               return;
             }
           }
-          if (param1 != -91) {
+          if (obfuscationGuard != -91) {
             field_a = 119;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "nk.B(" + param0 + ',' + param1 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "nk.B(" + opcode + ',' + obfuscationGuard + ')');
         }
     }
 

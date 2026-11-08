@@ -187,9 +187,9 @@ final class MessageScreen extends MenuScreen {
               var2_int = (var7.field_w + 60) * SocketArchiveNetworkClient.field_u / QuickChatDynamicCommand.field_l;
               var3 = var2_int - 30;
               if (!InstructionsScreen.field_K) {
-                LoginMethod.a(var3 * -256 / 30, (byte) 63, 245, 199, var7, (var7.field_w - var3) * 256 / 30);
+                LoginMethod.drawSpriteWithHorizontalAlphaGradient(var3 * -256 / 30, (byte) 63, 245, 199, var7, (var7.field_w - var3) * 256 / 30);
               } else {
-                LoginMethod.a((-var3 + var7.field_w) * 256 / 30, (byte) 117, 245, 199, var7, var3 * -256 / 30);
+                LoginMethod.drawSpriteWithHorizontalAlphaGradient((-var3 + var7.field_w) * 256 / 30, (byte) 117, 245, 199, var7, var3 * -256 / 30);
               }
             }
           }

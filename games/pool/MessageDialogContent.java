@@ -446,7 +446,7 @@ final class MessageDialogContent extends WidgetContainer implements ButtonActiva
         try {
           ScrollPaneWithFooter.configureSharedTextStyle((byte) -83, param0, param2, param4);
           ByteRecordSubmission.configureClientNoticeMetrics(param12, true, param13, param5, param19);
-          LogoMaterial.a(param8, param9, -128);
+          LogoMaterial.setClientNoticeCenter(param8, param9, -128);
           if (param16 != 255) {
             field_P = 121;
           }

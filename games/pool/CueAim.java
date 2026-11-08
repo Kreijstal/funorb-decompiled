@@ -54,7 +54,7 @@ final class CueAim {
     final void disable(byte obfuscationGuard) {
         this.power = -1;
         if (obfuscationGuard < 61) {
-          CueAim.a((byte) 30);
+          CueAim.initializeSharedChatComponents((byte) 30);
         }
     }
 
@@ -282,9 +282,9 @@ final class CueAim {
         }
     }
 
-    final static void a(byte param0) {
+    final static void initializeSharedChatComponents(byte obfuscationGuard) {
         PasswordValidator.a(-124, AlternateLongAndTextLoginPayload.field_n, AlignedIconLabel.field_Lb, DiskArchiveRequest.field_J, AccountStateQuery.field_m);
-        if (param0 > -97) {
+        if (obfuscationGuard > -97) {
           TriangleMesh var2 = (TriangleMesh) null;
           CueAim.drawLitMeshFaces(-66, 60, (TriangleMesh) null, -82, -71, 60, 97, 51);
         }

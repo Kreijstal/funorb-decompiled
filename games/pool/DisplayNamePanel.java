@@ -256,7 +256,7 @@ final class DisplayNamePanel extends WidgetContainer implements UsernameSuggesti
           if (obfuscationGuard <= 12) {
             DisplayNamePanel.releaseStatics(true);
           }
-          stackIn_6_0 = ContentTransitionDialog.j((byte) -104);
+          stackIn_6_0 = ContentTransitionDialog.createDecodedSprite((byte) -104);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

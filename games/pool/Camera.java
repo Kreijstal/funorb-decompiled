@@ -39,7 +39,7 @@ final class Camera {
           if (!param1) {
             return;
           }
-          LabeledChildWidget.a(-126, var8);
+          LabeledChildWidget.normalizeVectorInPlace(-126, var8);
           var9 = new double[]{-this.targetX + this.eyeX, -this.targetY + this.eyeY, 0.0};
           var6 = var9;
           if (var4 < 0.04908738521234052) {
@@ -52,8 +52,8 @@ final class Camera {
               var6[1] = 1.0 - var4 + var9[1] * var4;
             }
           }
-          var16 = LabeledChildWidget.a(-128, LoginEncryptionSupport.crossProduct(2, var8, var9));
-          var17 = LabeledChildWidget.a(-126, LoginEncryptionSupport.crossProduct(2, var16, var8));
+          var16 = LabeledChildWidget.normalizeVectorInPlace(-128, LoginEncryptionSupport.crossProduct(2, var8, var9));
+          var17 = LabeledChildWidget.normalizeVectorInPlace(-126, LoginEncryptionSupport.crossProduct(2, var16, var8));
           param0[3] = ClassicBallSkin.doubleToFixed16(16, var16[0]);
           param0[4] = ClassicBallSkin.doubleToFixed16(16, var16[1]);
           param0[5] = ClassicBallSkin.doubleToFixed16(16, var16[2]);
@@ -167,11 +167,11 @@ final class Camera {
 
     final void focusOnCueBall(PoolMatchController param0, int param1) {
         try {
-          this.targetX = (double)WidgetStyleLayer.b(126, param0.gameModel.balls[0].positionX);
+          this.targetX = (double)WidgetStyleLayer.fixed16ToFloat(126, param0.gameModel.balls[0].positionX);
           if (param1 != 1) {
             field_j = (Sprite) null;
           }
-          this.targetY = (double)WidgetStyleLayer.b(param1 ^ 126, param0.gameModel.balls[0].positionY);
+          this.targetY = (double)WidgetStyleLayer.fixed16ToFloat(param1 ^ 126, param0.gameModel.balls[0].positionY);
           this.setOrbit(3.141592653589793 * (double)param0.cueAim.azimuth / 1024.0, 3.141592653589793 * (double)(param0.cueAim.polarAngle + 32) / 1024.0, 192.0, -6861);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "mm.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

@@ -66,7 +66,7 @@ final class PlayerContextMenu {
           if (param2 != 1) {
             if (2 != param2) {
               if (param2 == 3) {
-                AccountCreationForm.a(this.field_b, true, param1);
+                AccountCreationForm.sendLobbyGameCancellation(this.field_b, true, param1);
               } else {
                 if (param2 == 10) {
                   FaceNormal.sendSpectateRequest(this.field_b, 3, param1);
@@ -183,7 +183,7 @@ final class PlayerContextMenu {
               if (12 != param2) {
                 if (13 != param2) {
                   if (param2 == 14) {
-                    WidgetStyleLayer.a(true);
+                    WidgetStyleLayer.setChatComposerOpen(true);
                   } else {
                     if (param2 == 20) {
                       EmailValidator.c((byte) 41);
@@ -195,13 +195,13 @@ final class PlayerContextMenu {
                     }
                   }
                 } else {
-                  TextInputPainter.a(2, this.field_a, param0, (byte) -45);
+                  TextInputPainter.setChatFilterMode(2, this.field_a, param0, (byte) -45);
                 }
               } else {
-                TextInputPainter.a(1, this.field_a, param0, (byte) 126);
+                TextInputPainter.setChatFilterMode(1, this.field_a, param0, (byte) 126);
               }
             } else {
-              TextInputPainter.a(0, this.field_a, param0, (byte) 121);
+              TextInputPainter.setChatFilterMode(0, this.field_a, param0, (byte) 121);
             }
           }
         } else {

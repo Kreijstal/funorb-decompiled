@@ -11,9 +11,9 @@ final class CipherPacketBuffer extends PacketBuffer {
     static String multiconstOpen;
     static UiComponent field_z;
 
-    final static ResourceArchive a(boolean param0, int param1, int param2, int param3, boolean param4) {
+    final static ResourceArchive createCachedArchive(boolean param0, int param1, int param2, int param3, boolean param4) {
         if (param1 >= -2) {
-          CipherPacketBuffer.a(true, 72, 4, -38, true);
+          CipherPacketBuffer.createCachedArchive(true, 72, 4, -38, true);
         }
         return ParticleTrail.createCachedArchive(param2, param4, (byte) -56, param3, false, param0);
     }
@@ -83,7 +83,7 @@ final class CipherPacketBuffer extends PacketBuffer {
           QuickChatPhraseDefinition.setMusicVolume(32 + (TranslatedUiText.field_h - var1), obfuscationGuard ^ -3807027);
         }
         if (obfuscationGuard != -11529) {
-          CipherPacketBuffer.a(true, -4, 116, -60, false);
+          CipherPacketBuffer.createCachedArchive(true, -4, 116, -60, false);
         }
     }
 

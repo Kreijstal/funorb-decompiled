@@ -169,7 +169,7 @@ final class QuickChatCategoryCache {
             DiskCacheWorker.field_g = message.field_d;
             AppletContainerSupport.field_a = message.field_p;
           }
-          ClientException.a(-114, message);
+          ClientException.appendChatMessage(-114, message);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

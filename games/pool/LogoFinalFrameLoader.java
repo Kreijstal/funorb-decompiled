@@ -30,7 +30,7 @@ final class LogoFinalFrameLoader {
           ArchiveLoadStep.field_k.bindAsRenderTarget();
           var2.drawAt(0, -SpaceObject.field_k.field_A);
           ArchiveLoadStep.field_k.field_B = SpaceObject.field_k.field_A;
-          TriangleMesh.a(125);
+          TriangleMesh.popRasterSnapshot(125);
           if (param0 <= -48) {
             return;
           }

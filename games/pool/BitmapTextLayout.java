@@ -413,7 +413,7 @@ final class BitmapTextLayout extends TextLayout {
               stackIn_70_1 = var14;
               stackIn_70_2 = 6110;
               if (param0 == 3) {
-                stackIn_71_3 = this.a(param2.stringWidth(var13), (byte) 105, var13, param5);
+                stackIn_71_3 = this.justificationSpaceAdvanceQ8(param2.stringWidth(var13), (byte) 105, var13, param5);
               } else {
                 stackIn_71_3 = 0;
               }

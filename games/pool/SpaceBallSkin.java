@@ -24,7 +24,7 @@ final class SpaceBallSkin extends BallSkin {
           }
           DebugTuningSlider.field_h.bindAsRenderTarget();
           var1.drawHalfSize(0, 0);
-          TriangleMesh.a(126);
+          TriangleMesh.popRasterSnapshot(126);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "lm.E(" + obfuscationGuard + ')');
         }

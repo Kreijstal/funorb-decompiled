@@ -210,7 +210,7 @@ final class LocalGameSetupScreen extends MenuScreen {
                       } else {
                         if (this.selection.isPressActivated((byte) 64)) {
                           LookupProtocolSupport.field_e = 1 - LookupProtocolSupport.field_e;
-                          ByteStorage.d(param0 ^ 16424);
+                          ByteStorage.updateGuideToggleLabel(param0 ^ 16424);
                         }
                       }
                     }
@@ -244,7 +244,7 @@ final class LocalGameSetupScreen extends MenuScreen {
         } else {
           if (this.selection.isPressActivated((byte) 64) &&
             Pocket.areSelectedSettingsAllowed(0)) {
-            this.c(param0 ^ -16474, param1);
+            this.startOrSelectLocalMatch(param0 ^ -16474, param1);
           }
         }
         if (param0 != -16470) {
@@ -336,7 +336,7 @@ final class LocalGameSetupScreen extends MenuScreen {
         TextureCache.field_c.horizontalAlignment = 1;
         TextureCache.field_c.frameSprites = UsernameSuggestionsPanel.field_N;
         TextureCache.field_c.verticalAlignment = 1;
-        ByteStorage.d(-113);
+        ByteStorage.updateGuideToggleLabel(-113);
         CacheEntry.field_x.addChild(14, TextureCache.field_c);
         NineSliceFrame.field_a.addChild(-118, CacheEntry.field_x);
     }
@@ -446,7 +446,7 @@ final class LocalGameSetupScreen extends MenuScreen {
 
     final void onEnter(int param0, int param1, boolean param2) {
         super.onEnter(param0, param1, param2);
-        ByteStorage.d(param0 ^ -107);
+        ByteStorage.updateGuideToggleLabel(param0 ^ -107);
         KillerRules.updateKillerPlayerCountControls((byte) -45);
         this.updateRulesetSelection(4);
         PlayerContextMenu.updatePageControls(13);

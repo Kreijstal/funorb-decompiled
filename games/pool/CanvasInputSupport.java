@@ -167,7 +167,7 @@ final class CanvasInputSupport {
         try {
           var5_int = spriteArchive.getGroupId(groupName, -1);
           var6 = spriteArchive.getFileId(var5_int, obfuscationGuard, fileName);
-          stackIn_1_0 = LoginResponse.a(spriteArchive, 43, var5_int, metricsArchive, var6);
+          stackIn_1_0 = LoginResponse.loadBinaryFont(spriteArchive, 43, var5_int, metricsArchive, var6);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

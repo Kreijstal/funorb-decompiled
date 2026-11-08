@@ -159,7 +159,7 @@ final class PacketDiagnosticsSupport {
           }
           PlasmaTableScene.field_cb.processPointerFrame(-122, CollisionContact.field_p, true, RankingsScreen.field_M);
           PlasmaTableScene.field_cb.advanceDialogAnimations((byte) 122);
-          while (LabeledChildWidget.h(127)) {
+          while (LabeledChildWidget.pollKeyEvent(127)) {
             PlasmaTableScene.field_cb.dispatchKeyInputOrRequestFocus(-81, IterableDualLinkDeque.field_a, LoginMethod.field_b);
           }
           return;

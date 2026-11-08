@@ -114,7 +114,7 @@ final class IterableDualLinkDeque implements Iterable {
           return;
         }
         try {
-          IntegerSyntaxSupport.a(-58, param1);
+          IntegerSyntaxSupport.setRetainedLoginText(-58, param1);
           PacketAvailabilitySupport.a(false, DebouncedValidationProvider.loggingIn, -128);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "qi.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

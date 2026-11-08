@@ -27,7 +27,7 @@ final class TutorialSelectScreen extends MenuScreen {
         mpOfferrematchUnrated = null;
     }
 
-    final static void a(java.awt.Frame param0, PlatformTaskDispatcher param1, int param2) {
+    final static void disposeFullscreenFrame(java.awt.Frame frame, PlatformTaskDispatcher dispatcher, int obfuscationGuard) {
         AsyncRequest var3 = null;
         PlatformTaskDispatcher var4 = null;
         RuntimeException stackIn_11_0 = null;
@@ -38,12 +38,12 @@ final class TutorialSelectScreen extends MenuScreen {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
         try {
-          if (param2 != 24442) {
+          if (obfuscationGuard != 24442) {
             var4 = (PlatformTaskDispatcher) null;
-            TutorialSelectScreen.a((java.awt.Frame) null, (PlatformTaskDispatcher) null, 107);
+            TutorialSelectScreen.disposeFullscreenFrame((java.awt.Frame) null, (PlatformTaskDispatcher) null, 107);
           }
           while (true) {
-            var3 = param1.exitFullscreen(param0, false);
+            var3 = dispatcher.exitFullscreen(frame, false);
             while (var3.field_f == 0) {
               SoundCache.sleepMillis(-108, 10L);
             }
@@ -53,26 +53,26 @@ final class TutorialSelectScreen extends MenuScreen {
             }
             break;
           }
-          param0.setVisible(false);
-          param0.dispose();
+          frame.setVisible(false);
+          frame.dispose();
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
           stackIn_11_0 = var3_ref;
           stackIn_11_1 = new StringBuilder().append("og.E(");
-          if (param0 == null) {
+          if (frame == null) {
             stackIn_12_2 = "null";
           } else {
             stackIn_12_2 = "{...}";
           }
           stackIn_14_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',');
-          if (param1 == null) {
+          if (dispatcher == null) {
             stackIn_15_2 = "null";
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 

@@ -152,9 +152,9 @@ final class UsernameSuggestionsPanel extends WidgetContainer implements ButtonAc
         } else {
           RasterSnapshot.field_u = StrongCacheEntry.field_I;
         }
-        WidgetStyleLayer.a(param4, param5 ^ -13418);
+        WidgetStyleLayer.updateLobbyPanelTransitions(param4, param5 ^ -13418);
         if (NodeHashTableIterator.field_a > 0) {
-          BrowserCookieSupport.a(param4, param1, param5 - 13502, param9);
+          BrowserCookieSupport.updateLobbyBrowserControls(param4, param1, param5 - 13502, param9);
         }
         TextHotspotRegion.field_o.textInset = TimeTrialSelectScreen.field_M.textInset;
         TextHotspotRegion.field_o.horizontalAlignment = 1;
@@ -174,7 +174,7 @@ final class UsernameSuggestionsPanel extends WidgetContainer implements ButtonAc
           DebugTuningSlider.field_c.viewport.text = null;
           HuffmanCodec.a(param7, param0, DebugTuningSlider.field_c, param9, (byte) -83);
         }
-        SharedWidgetLayoutSupport.a(param3, 0, param9, param7, param6, param2, param0);
+        SharedWidgetLayoutSupport.updateLobbyGameRows(param3, 0, param9, param7, param6, param2, param0);
         HuffmanCodec.a(param7, param0, DualLinkDeque.field_f, param9, (byte) -83);
         MultiHandleSliderWidget.field_V = MultiHandleSliderWidget.field_V + 1;
     }

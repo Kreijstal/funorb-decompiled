@@ -1025,7 +1025,7 @@ final class SpaceTableScene extends ModelTableScene {
         try {
           var1_int = 0;
           var2 = 0;
-          while (LabeledChildWidget.h(127)) {
+          while (LabeledChildWidget.pollKeyEvent(127)) {
             LabeledChildWidget.field_W.navigateVertical(-15525);
             if (LabeledChildWidget.field_W.isPressActivated((byte) 126)) {
               var1_int = 1;
@@ -1056,7 +1056,7 @@ final class SpaceTableScene extends ModelTableScene {
                   var6 = (int)((10999L - var4) / 1000L);
                   if (var6 <= 0) {
                     var3 = 2;
-                    CacheEntry.a(true, 4, 5);
+                    CacheEntry.showClientNotice(true, 4, 5);
                   }
                 }
                 return var3;
@@ -1070,7 +1070,7 @@ final class SpaceTableScene extends ModelTableScene {
             var6Lifetime1 = (int)((10999L - var4Lifetime1) / 1000L);
             if (var6Lifetime1 <= 0) {
               var3 = 2;
-              CacheEntry.a(true, 4, 5);
+              CacheEntry.showClientNotice(true, 4, 5);
             }
           }
           stackIn_31_0 = var3;

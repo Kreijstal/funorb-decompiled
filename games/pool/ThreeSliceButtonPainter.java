@@ -74,7 +74,7 @@ final class ThreeSliceButtonPainter extends TextWidgetPainter {
         return ButtonPainter.field_b;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, byte param4, int param5, int param6, int param7, int[] param8, int param9) {
+    final static void blendGradientSpanHalf(int param0, int param1, int param2, int param3, byte param4, int param5, int param6, int param7, int[] param8, int param9) {
         int[] var10 = null;
         int var11 = 0;
         int var12 = 0;

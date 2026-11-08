@@ -312,18 +312,18 @@ final class NameEntryPopup extends UiComponent {
         if (0 > right &&
           0 > left &&
           var3 < 0L) {
-          throw new IllegalStateException("Overflow: Multiplied two negative numbers (?!) mul(" + right + "[" + WidgetStyleLayer.b(126, right) + ", " + Integer.toString(right, 16) + "], " + left + "[" + WidgetStyleLayer.b(126, left) + ", " + Integer.toString(left, 16) + "]) and got a negative number: " + var3 + "[" + PotEvent.fixed16ToDouble((byte) 89, var3) + ", " + Long.toString(var3, 16) + "]");
+          throw new IllegalStateException("Overflow: Multiplied two negative numbers (?!) mul(" + right + "[" + WidgetStyleLayer.fixed16ToFloat(126, right) + ", " + Integer.toString(right, 16) + "], " + left + "[" + WidgetStyleLayer.fixed16ToFloat(126, left) + ", " + Integer.toString(left, 16) + "]) and got a negative number: " + var3 + "[" + PotEvent.fixed16ToDouble((byte) 89, var3) + ", " + Long.toString(var3, 16) + "]");
         }
         if ((0 < right &&
           0 > left ||
           right < 0 &&
           left > 0) && var3 > 0L) {
-          throw new IllegalStateException("Overflow: Multiplied a negative and positive mul(" + right + "[" + WidgetStyleLayer.b(127, right) + ", " + Integer.toString(right, 16) + "], " + left + "[" + WidgetStyleLayer.b(126, left) + ", " + Integer.toString(left, 16) + "]) and got a positive number: " + var3 + "[" + PotEvent.fixed16ToDouble((byte) 89, var3) + ", " + Long.toString(var3, 16) + "]");
+          throw new IllegalStateException("Overflow: Multiplied a negative and positive mul(" + right + "[" + WidgetStyleLayer.fixed16ToFloat(127, right) + ", " + Integer.toString(right, 16) + "], " + left + "[" + WidgetStyleLayer.fixed16ToFloat(126, left) + ", " + Integer.toString(left, 16) + "]) and got a positive number: " + var3 + "[" + PotEvent.fixed16ToDouble((byte) 89, var3) + ", " + Long.toString(var3, 16) + "]");
         }
         if (right > 0 &&
           0 < left &&
           var3 < 0L) {
-          throw new IllegalStateException("Overflow: Multiplied two positive numbers mul(" + right + "[" + WidgetStyleLayer.b(126, right) + ", " + Integer.toString(right, 16) + "], " + left + "[" + WidgetStyleLayer.b(127, left) + ", " + Integer.toString(left, 16) + "]) and got a negative number: " + var3 + "[" + PotEvent.fixed16ToDouble((byte) 89, var3) + ", " + Long.toString(var3, 16) + "]");
+          throw new IllegalStateException("Overflow: Multiplied two positive numbers mul(" + right + "[" + WidgetStyleLayer.fixed16ToFloat(126, right) + ", " + Integer.toString(right, 16) + "], " + left + "[" + WidgetStyleLayer.fixed16ToFloat(127, left) + ", " + Integer.toString(left, 16) + "]) and got a negative number: " + var3 + "[" + PotEvent.fixed16ToDouble((byte) 89, var3) + ", " + Long.toString(var3, 16) + "]");
         }
         return (int)var3;
     }
@@ -337,7 +337,7 @@ final class NameEntryPopup extends UiComponent {
           return -46;
         }
         if (param0) {
-          while (LabeledChildWidget.h(127)) {
+          while (LabeledChildWidget.pollKeyEvent(127)) {
             if (85 == IterableDualLinkDeque.field_a &&
               this.nameBuffer.length() > 0) {
               TikiTableScene.resizeStringBuilder(' ', -1 + this.nameBuffer.length(), -2790, this.nameBuffer);

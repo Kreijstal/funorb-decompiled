@@ -134,9 +134,9 @@ final class ProjectedVertex {
             return;
           }
           if (HighscoresScreen.field_K) {
-            CacheEntry.g(47);
+            CacheEntry.refreshConnectionDependentMenuItems(47);
             if (MatchingTextValidator.field_w == 18) {
-              if (FadingDialog.a(false, SupportPageLauncher.field_c)) {
+              if (FadingDialog.hasNonzeroWord(false, SupportPageLauncher.field_c)) {
                 DisplayModeSupport.field_c[18].onEnter(0, 0, false);
               } else {
                 MatchingTextValidator.field_w = 16;

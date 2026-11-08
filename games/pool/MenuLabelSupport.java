@@ -95,7 +95,7 @@ final class MenuLabelSupport {
               var7[0][1 + 4 * var10] = MenuScreen.field_y[var11];
               var7[0][2 + var10 * 4] = TextInputPainter.field_s[var11];
               var7[0][var10 * 4 + 3] = LoginTextSupport.field_d[var11];
-              if (BallEvent.a((byte) 3, CollisionContact.field_e[var11]) &&
+              if (BallEvent.isLocalPlayerName((byte) 3, CollisionContact.field_e[var11]) &&
                 0 == TextInputPainter.field_s[var11] + MenuScreen.field_y[var11] + LoginTextSupport.field_d[var11]) {
                 var6[0][var10] = null;
                 var10--;
@@ -113,7 +113,7 @@ final class MenuLabelSupport {
               var7[1][4 * var14 + 1] = MenuScreen.field_y[var11Lifetime1];
               var7[1][2 + var14 * 4] = TextInputPainter.field_s[var11Lifetime1];
               var7[1][var14 * 4 + 3] = LoginTextSupport.field_d[var11Lifetime1];
-              if (BallEvent.a((byte) 3, CollisionContact.field_e[var11Lifetime1]) &&
+              if (BallEvent.isLocalPlayerName((byte) 3, CollisionContact.field_e[var11Lifetime1]) &&
                 LoginTextSupport.field_d[var11Lifetime1] + (MenuScreen.field_y[var11Lifetime1] + TextInputPainter.field_s[var11Lifetime1]) == 0) {
                 var6[1][var14] = null;
                 var14--;

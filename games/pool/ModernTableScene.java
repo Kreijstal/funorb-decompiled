@@ -638,12 +638,12 @@ final class ModernTableScene extends ModelTableScene {
         var10 = this.a(ResizableDialog.field_fb, var8, var39, -58, MarkerSliderPainter.field_m);
         for (var11 = 0; var11 < var4.length; var11++) {
           for (var12_int = 0; var12_int < var4[var11].length; var12_int++) {
-            MarkerSliderPainter.a(var4[var11][var12_int], (byte) -37);
+            MarkerSliderPainter.recenterTextureTriangles(var4[var11][var12_int], (byte) -37);
           }
         }
         for (var11Lifetime1 = 0; var8.length > var11Lifetime1; var11Lifetime1++) {
           for (var12_intLifetime1 = 0; var12_intLifetime1 < var8[var11Lifetime1].length; var12_intLifetime1++) {
-            MarkerSliderPainter.a(var8[var11Lifetime1][var12_intLifetime1], (byte) -37);
+            MarkerSliderPainter.recenterTextureTriangles(var8[var11Lifetime1][var12_intLifetime1], (byte) -37);
           }
         }
         ChatInputSupport.field_l = new ModelInstance[-1 * (-WidgetContainer.field_G + EightBallRules.field_e) + -1 * (WidgetStyleLayer.field_k - AccountMenuText.field_c) + (TableScene.field_I - IntrusiveNodeHashTable.field_l) * 3 + (TextureCache.field_l - AvailabilityQueryResult.field_d) * 3 + (-var3 + (var6 + this.field_O.length + var10 + (-var7 + -1 * (-ArchiveLoadSequence.field_a + DualLinkNode.field_u))))];

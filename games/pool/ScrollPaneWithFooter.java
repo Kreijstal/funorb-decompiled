@@ -121,7 +121,7 @@ final class ScrollPaneWithFooter extends UiComponent {
           DraggableWidget.field_T = param1;
           ProgressBarWidget.field_R = param3;
           TransformRotationSupport.field_f = param2;
-          LogoMaterial.a(SoftwareRasterizer.height / 2, SoftwareRasterizer.width / 2, 97);
+          LogoMaterial.setClientNoticeCenter(SoftwareRasterizer.height / 2, SoftwareRasterizer.width / 2, 97);
           if (param0 != -83) {
             field_Lb = (IntrusiveDeque) null;
           }

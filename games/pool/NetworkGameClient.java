@@ -348,7 +348,7 @@ abstract class NetworkGameClient extends GameApplet {
                 this.readSessionCookieResponse(6);
                 break;
               case 5:
-                TranslatedUiText.a(param0 - 14874);
+                TranslatedUiText.readByteRecordResponse(param0 - 14874);
                 break;
               case 3:
                 AlignedIconLabel.f(-104);
@@ -553,7 +553,7 @@ abstract class NetworkGameClient extends GameApplet {
               LookupProtocolSupport.advanceIntroTick(121);
             } else {
               if (PlasmaTableScene.field_ab != 0) {
-                ModelOriginSupport.a(0, CompressedContainerSupport.field_d);
+                ModelOriginSupport.processAccountDialogInput(0, CompressedContainerSupport.field_d);
               } else {
                 discarded$43 = this.serviceAccountActions(false, false, -124);
               }
@@ -763,9 +763,9 @@ abstract class NetworkGameClient extends GameApplet {
           if (ProgressBarWidget.field_S != 0) {
             QuickChatPhraseRegistry.field_a = ArchiveFactory.createResourceArchive(Atan2Support.field_d, (byte) 103);
           }
-          WorldPointProjectionSupport.field_d = CipherPacketBuffer.a(false, -4, 1, MeshColorSupport.field_a, true);
-          PolarTableScene.field_nb = CipherPacketBuffer.a(false, -49, 1, BrowserCookieSupport.field_g, true);
-          DualLinkNode.field_r = CipherPacketBuffer.a(false, -40, 1, TikiTableScene.field_eb, true);
+          WorldPointProjectionSupport.field_d = CipherPacketBuffer.createCachedArchive(false, -4, 1, MeshColorSupport.field_a, true);
+          PolarTableScene.field_nb = CipherPacketBuffer.createCachedArchive(false, -49, 1, BrowserCookieSupport.field_g, true);
+          DualLinkNode.field_r = CipherPacketBuffer.createCachedArchive(false, -40, 1, TikiTableScene.field_eb, true);
           QuickChatMenu.field_Zb = PolarTableScene.field_nb;
           QuickChatCategoryDefinition.field_y = 2;
           Under13NoticePanel.field_R = WorldPointProjectionSupport.field_d;
@@ -777,7 +777,7 @@ abstract class NetworkGameClient extends GameApplet {
               QuickChatPhraseRegistry.field_a = null;
             } else {
               if (QuickChatPhraseRegistry.field_a.ensureGroupAvailableByName("", param0 ^ -4)) {
-                TranslatedUiText.a(QuickChatPhraseRegistry.field_a, -21013);
+                TranslatedUiText.loadLocalizedStrings(QuickChatPhraseRegistry.field_a, -21013);
                 QuickChatPhraseRegistry.field_a = null;
                 ArrayWidgetGroup.resetFrameTiming(0);
               }
@@ -968,7 +968,7 @@ abstract class NetworkGameClient extends GameApplet {
             MeshBase.a(10, 6);
           }
           if (ButtonWidget.field_H[6]) {
-            TranslatedUiText.a(7, (byte) -91);
+            TranslatedUiText.resendRankingsRequests(7, (byte) -91);
           }
           if (ButtonWidget.field_H[8]) {
             MusicCrossfadeStream.c(946);

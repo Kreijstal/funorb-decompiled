@@ -93,7 +93,7 @@ class PacketBuffer extends IntrusiveNode {
         if (param0) {
           this.verifyChecksum(true);
         }
-        int var2 = ClientException.a(0, this.position, -1, this.payload);
+        int var2 = ClientException.crc32(0, this.position, -1, this.payload);
         int var3 = this.readInt(true);
         if (var3 == var2) {
           return true;
@@ -441,7 +441,7 @@ class PacketBuffer extends IntrusiveNode {
     }
 
     final int appendChecksum(int param0, int param1) {
-        int var3 = ClientException.a(param1, this.position, param0, this.payload);
+        int var3 = ClientException.crc32(param1, this.position, param0, this.payload);
         this.writeInt(true, var3);
         return var3;
     }

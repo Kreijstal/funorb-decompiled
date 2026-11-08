@@ -65,56 +65,56 @@ class TextInputPainter extends TextWidgetPainter {
         }
     }
 
-    final static void a(int param0, int param1, int param2, byte param3) {
+    final static void setChatFilterMode(int mode, int channel, int opcode, byte obfuscationGuard) {
         int var4;
         int var4Lifetime1;
-        if (param1 == 0) {
-          if (~param0 == ~BallDebugOverlay.field_i) {
-            var4 = 101 % ((59 - param3) / 59);
-            if (param1 != 1) {
-              if (2 == param1) {
-                if (~ResourceArchive.field_e == ~param0) {
+        if (channel == 0) {
+          if (~mode == ~BallDebugOverlay.field_i) {
+            var4 = 101 % ((59 - obfuscationGuard) / 59);
+            if (channel != 1) {
+              if (2 == channel) {
+                if (~ResourceArchive.field_e == ~mode) {
                   return;
                 }
                 LoginEncryptionSupport.field_c = true;
-                ResourceArchive.field_e = param0;
-                TransformSupport.sendChatFilterSettings(param2, 27712);
+                ResourceArchive.field_e = mode;
+                TransformSupport.sendChatFilterSettings(opcode, 27712);
               }
               return;
             }
-            if (param0 != FixedPointVectorSupport.field_e) {
-              FixedPointVectorSupport.field_e = param0;
+            if (mode != FixedPointVectorSupport.field_e) {
+              FixedPointVectorSupport.field_e = mode;
               LoginEncryptionSupport.field_c = true;
-              TransformSupport.sendChatFilterSettings(param2, 27712);
+              TransformSupport.sendChatFilterSettings(opcode, 27712);
             }
-            if (2 != param1) {
+            if (2 != channel) {
               return;
             }
-            if (~ResourceArchive.field_e != ~param0) {
+            if (~ResourceArchive.field_e != ~mode) {
               LoginEncryptionSupport.field_c = true;
-              ResourceArchive.field_e = param0;
-              TransformSupport.sendChatFilterSettings(param2, 27712);
+              ResourceArchive.field_e = mode;
+              TransformSupport.sendChatFilterSettings(opcode, 27712);
             }
             return;
           }
           LoginEncryptionSupport.field_c = true;
-          BallDebugOverlay.field_i = param0;
-          TransformSupport.sendChatFilterSettings(param2, 27712);
+          BallDebugOverlay.field_i = mode;
+          TransformSupport.sendChatFilterSettings(opcode, 27712);
         }
-        var4Lifetime1 = 101 % ((59 - param3) / 59);
-        if (param1 == 1 &&
-          param0 != FixedPointVectorSupport.field_e) {
-          FixedPointVectorSupport.field_e = param0;
+        var4Lifetime1 = 101 % ((59 - obfuscationGuard) / 59);
+        if (channel == 1 &&
+          mode != FixedPointVectorSupport.field_e) {
+          FixedPointVectorSupport.field_e = mode;
           LoginEncryptionSupport.field_c = true;
-          TransformSupport.sendChatFilterSettings(param2, 27712);
+          TransformSupport.sendChatFilterSettings(opcode, 27712);
         }
-        if (2 == param1) {
-          if (~ResourceArchive.field_e == ~param0) {
+        if (2 == channel) {
+          if (~ResourceArchive.field_e == ~mode) {
             return;
           }
           LoginEncryptionSupport.field_c = true;
-          ResourceArchive.field_e = param0;
-          TransformSupport.sendChatFilterSettings(param2, 27712);
+          ResourceArchive.field_e = mode;
+          TransformSupport.sendChatFilterSettings(opcode, 27712);
         }
     }
 
@@ -158,7 +158,7 @@ class TextInputPainter extends TextWidgetPainter {
             ViewportController.drawInterfaceOverlays(stackIn_146_0, (byte) 50);
             if (var3 != 0) {
               stackIn_158_0 = (param1) && (InputIdleSupport.isCaretBlinkOn((byte) 98));
-              FadingDialog.a(stackIn_158_0, 1);
+              FadingDialog.drawSharedPanelAndTooltip(stackIn_158_0, 1);
             }
           }
           if (null != AccountContentDialog.field_ub) {
@@ -200,7 +200,7 @@ class TextInputPainter extends TextWidgetPainter {
             ViewportController.drawInterfaceOverlays(stackIn_26_0, (byte) 50);
             if (var3 != 0) {
               stackIn_32_0 = (param1) && (InputIdleSupport.isCaretBlinkOn((byte) 98));
-              FadingDialog.a(stackIn_32_0, 1);
+              FadingDialog.drawSharedPanelAndTooltip(stackIn_32_0, 1);
             }
             if (null != AccountContentDialog.field_ub) {
               AccountContentDialog.field_ub.drawDebugOverlay(300, param1);
@@ -212,7 +212,7 @@ class TextInputPainter extends TextWidgetPainter {
               ViewportController.drawInterfaceOverlays(stackIn_45_0, (byte) 50);
               if (var3 != 0) {
                 stackIn_51_0 = (param1) && (InputIdleSupport.isCaretBlinkOn((byte) 98));
-                FadingDialog.a(stackIn_51_0, 1);
+                FadingDialog.drawSharedPanelAndTooltip(stackIn_51_0, 1);
               }
               if (null == AccountContentDialog.field_ub) {
                 if (null == TextWidgetPainter.field_e) {
@@ -240,7 +240,7 @@ class TextInputPainter extends TextWidgetPainter {
                 }
               } else {
                 stackIn_76_0 = (param1) && (InputIdleSupport.isCaretBlinkOn((byte) 98));
-                FadingDialog.a(stackIn_76_0, 1);
+                FadingDialog.drawSharedPanelAndTooltip(stackIn_76_0, 1);
                 if (null != AccountContentDialog.field_ub) {
                   AccountContentDialog.field_ub.drawDebugOverlay(300, param1);
                 }
@@ -258,7 +258,7 @@ class TextInputPainter extends TextWidgetPainter {
                   }
                 } else {
                   stackIn_100_0 = (param1) && (InputIdleSupport.isCaretBlinkOn((byte) 98));
-                  FadingDialog.a(stackIn_100_0, 1);
+                  FadingDialog.drawSharedPanelAndTooltip(stackIn_100_0, 1);
                   if (null != AccountContentDialog.field_ub) {
                     AccountContentDialog.field_ub.drawDebugOverlay(300, param1);
                   }
@@ -267,7 +267,7 @@ class TextInputPainter extends TextWidgetPainter {
                 ViewportController.drawInterfaceOverlays((var3 == 0), (byte) 50);
                 if (var3 != 0) {
                   stackIn_127_0 = (param1) && (InputIdleSupport.isCaretBlinkOn((byte) 98));
-                  FadingDialog.a(stackIn_127_0, 1);
+                  FadingDialog.drawSharedPanelAndTooltip(stackIn_127_0, 1);
                 }
                 if (null != AccountContentDialog.field_ub) {
                   AccountContentDialog.field_ub.drawDebugOverlay(300, param1);

@@ -10,7 +10,7 @@ final class ButtonPainter implements WidgetPainter {
         return (int)(0.5f + (float)(1 << param0) * param1);
     }
 
-    final static int a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, byte param7, int param8) {
+    final static int sweepCircleAgainstPoint(int y, int pointX, int velocityX, int velocityY, int startTimeQ16, int radius, int x, byte obfuscationGuard, int pointY) {
         int var9;
         int var10;
         int var11;
@@ -23,23 +23,23 @@ final class ButtonPainter implements WidgetPainter {
         long var23;
         int var25;
         int var26;
-        var9 = param6 - param1;
-        var11 = -92 / ((param7 + 46) / 51);
-        var10 = -param8 + param0;
-        if (FullscreenFocusCanvas.multiplyFixedChecked((long)var9, (long)param2, false) + FullscreenFocusCanvas.multiplyFixedChecked((long)var10, (long)param3, false) >= 0L) {
+        var9 = x - pointX;
+        var11 = -92 / ((obfuscationGuard + 46) / 51);
+        var10 = -pointY + y;
+        if (FullscreenFocusCanvas.multiplyFixedChecked((long)var9, (long)velocityX, false) + FullscreenFocusCanvas.multiplyFixedChecked((long)var10, (long)velocityY, false) >= 0L) {
           return -1;
         }
         var12 = IterableNodeHashTable.sqrtScaled256(-112, FullscreenFocusCanvas.multiplyFixedChecked((long)var9, (long)var9, false) + FullscreenFocusCanvas.multiplyFixedChecked((long)var10, (long)var10, false));
-        var14 = IterableNodeHashTable.sqrtScaled256(-99, FullscreenFocusCanvas.multiplyFixedChecked((long)param2, (long)param2, false) + FullscreenFocusCanvas.multiplyFixedChecked((long)param3, (long)param3, false));
-        if (0L < -(long)(param5 << 16) + (var12 - var14)) {
+        var14 = IterableNodeHashTable.sqrtScaled256(-99, FullscreenFocusCanvas.multiplyFixedChecked((long)velocityX, (long)velocityX, false) + FullscreenFocusCanvas.multiplyFixedChecked((long)velocityY, (long)velocityY, false));
+        if (0L < -(long)(radius << 16) + (var12 - var14)) {
           return -1;
         }
-        var16 = NameEntryPopup.multiplyFixed16(param2, false, param2) + NameEntryPopup.multiplyFixed16(param3, false, param3);
+        var16 = NameEntryPopup.multiplyFixed16(velocityX, false, velocityX) + NameEntryPopup.multiplyFixed16(velocityY, false, velocityY);
         if (var16 == 0) {
           return -1;
         }
-        var17 = (FullscreenFocusCanvas.multiplyFixedChecked((long)var9, (long)param2, false) + FullscreenFocusCanvas.multiplyFixedChecked((long)var10, (long)param3, false)) * 2L;
-        var19 = FullscreenFocusCanvas.multiplyFixedChecked((long)var9, (long)var9, false) + (FullscreenFocusCanvas.multiplyFixedChecked((long)var10, (long)var10, false) - (long)(param5 * param5 << 16));
+        var17 = (FullscreenFocusCanvas.multiplyFixedChecked((long)var9, (long)velocityX, false) + FullscreenFocusCanvas.multiplyFixedChecked((long)var10, (long)velocityY, false)) * 2L;
+        var19 = FullscreenFocusCanvas.multiplyFixedChecked((long)var9, (long)var9, false) + (FullscreenFocusCanvas.multiplyFixedChecked((long)var10, (long)var10, false) - (long)(radius * radius << 16));
         var21 = FullscreenFocusCanvas.multiplyFixedChecked(var17, var17, false) - 4L * FullscreenFocusCanvas.multiplyFixedChecked((long)var16, var19, false);
         if (var21 < 0L) {
           return -1;
@@ -62,30 +62,30 @@ final class ButtonPainter implements WidgetPainter {
               if (var25 <= 0) {
                 return -1;
               }
-              return param4;
+              return startTimeQ16;
             }
             if (var26 > 0) {
-              return param4;
+              return startTimeQ16;
             }
             if (var26 >= 0) {
               return -1;
             }
             if (var25 > 0) {
-              return param4;
+              return startTimeQ16;
             }
             return -1;
           }
-          if (65536 - param4 >= var26) {
-            return param4 + var26;
+          if (65536 - startTimeQ16 >= var26) {
+            return startTimeQ16 + var26;
           }
         } else {
-          if (var25 <= 65536 - param4 &&
+          if (var25 <= 65536 - startTimeQ16 &&
             var25 <= var26) {
-            return param4 + var25;
+            return startTimeQ16 + var25;
           }
           if (var26 > 0 &&
-            65536 - param4 >= var26) {
-            return param4 + var26;
+            65536 - startTimeQ16 >= var26) {
+            return startTimeQ16 + var26;
           }
         }
         if (var25 >= 0) {
@@ -101,12 +101,12 @@ final class ButtonPainter implements WidgetPainter {
               return -1;
             }
             if (var25 > 0) {
-              return param4;
+              return startTimeQ16;
             }
             return -1;
           }
         }
-        return param4;
+        return startTimeQ16;
     }
 
     public static void releaseStatics(int param0) {
@@ -114,7 +114,7 @@ final class ButtonPainter implements WidgetPainter {
           field_a = null;
           return;
         }
-        ButtonPainter.a(-121, 82, 21, -7, 28, 50, -82, (byte) 121, 119);
+        ButtonPainter.sweepCircleAgainstPoint(-121, 82, 21, -7, 28, 50, -82, (byte) 121, 119);
         field_a = null;
     }
 

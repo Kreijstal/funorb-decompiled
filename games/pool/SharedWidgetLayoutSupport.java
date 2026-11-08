@@ -6,7 +6,7 @@ final class SharedWidgetLayoutSupport {
     static String[] field_a;
     static int field_b;
 
-    final static void a(int param0, int param1, int param2, boolean param3, boolean param4, int param5, int param6) {
+    final static void updateLobbyGameRows(int param0, int param1, int param2, boolean param3, boolean param4, int param5, int param6) {
         int var18_int = 0;
         int var22_int = 0;
         UiComponent dupTemp$0 = null;
@@ -121,7 +121,7 @@ final class SharedWidgetLayoutSupport {
           var7_int = ((ScrollPane) (Object) stackIn_3_0).updateContentLayout(stackIn_3_1, stackIn_4_2, 2, (byte) -112, 2 * (ArchiveIndex.field_x + 2), (8 + 4 * ArchiveIndex.field_x) * param6) ? 1 : 0;
           if (param1 != 0) {
             var42 = (UiComponent) null;
-            SharedWidgetLayoutSupport.a((UiComponent) null, 35, (UiComponent) null, 120, (byte[]) null, 54, 24, (UiComponent) null, 88, -75);
+            SharedWidgetLayoutSupport.initializeLobbyCollections((UiComponent) null, 35, (UiComponent) null, 120, (byte[]) null, 54, 24, (UiComponent) null, 88, -75);
           }
           var8 = BufferedSocket.field_m.content.children;
           var9 = MonotonicClock.monotonicTimeMillis((byte) -120);
@@ -568,7 +568,7 @@ final class SharedWidgetLayoutSupport {
         }
     }
 
-    final static void a(UiComponent param0, int param1, UiComponent param2, int param3, byte[] param4, int param5, int param6, UiComponent param7, int param8, int param9) {
+    final static void initializeLobbyCollections(UiComponent param0, int param1, UiComponent param2, int param3, byte[] param4, int param5, int param6, UiComponent param7, int param8, int param9) {
         int var11 = 0;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
@@ -662,7 +662,7 @@ final class SharedWidgetLayoutSupport {
     public static void releaseStatics(int param0) {
         if (param0 != 0) {
           UiComponent var2 = (UiComponent) null;
-          SharedWidgetLayoutSupport.a((UiComponent) null, -99, (UiComponent) null, -55, (byte[]) null, -33, 73, (UiComponent) null, 92, -39);
+          SharedWidgetLayoutSupport.initializeLobbyCollections((UiComponent) null, -99, (UiComponent) null, -55, (byte[]) null, -33, 73, (UiComponent) null, 92, -39);
         }
         field_a = null;
     }

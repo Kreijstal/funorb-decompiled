@@ -218,7 +218,7 @@ final class NanoTickClock extends TickClock {
         if (obfuscationGuard != 1527590113) {
           return;
         }
-        int var2 = ContentTransitionDialog.k((byte) 59);
+        int var2 = ContentTransitionDialog.getSharedPanelHeight((byte) 59);
         VerticalScrollbar.field_Vb.draw((MusicPatchEnvelope.field_d << 1) + var1, AccountContentDialog.field_wb - ShotRecord.field_o, -6316, CacheEntry.field_z - MusicPatchEnvelope.field_d, (ShotRecord.field_o << 1) + var2);
         BirthDatePromptPanel.drawSharedChoicePanel(-9395);
     }

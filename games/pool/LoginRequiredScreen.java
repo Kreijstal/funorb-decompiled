@@ -23,7 +23,7 @@ final class LoginRequiredScreen extends MenuScreen {
           super.handleMenuAction(param0, param1, param2);
           return;
         }
-        TranslatedUiText.a((String) null, FadingDialog.a(false, SupportPageLauncher.field_c) ? 18 : 16, (byte) 121);
+        TranslatedUiText.a((String) null, FadingDialog.hasNonzeroWord(false, SupportPageLauncher.field_c) ? 18 : 16, (byte) 121);
     }
 
     final static void showAccountCreationForm(int obfuscationGuard) {
@@ -58,11 +58,11 @@ final class LoginRequiredScreen extends MenuScreen {
     final void drawScreen(int param0) {
         String var4 = null;
         super.drawScreen(91);
-        int var2 = FadingDialog.a(false, SupportPageLauncher.field_c) ? 1 : 0;
+        int var2 = FadingDialog.hasNonzeroWord(false, SupportPageLauncher.field_c) ? 1 : 0;
         int var3 = DebugSliderInputSupport.field_d != null ? 1 : 0;
         if (param0 > 36) {
           var4 = FadingDialog.mustloginNotloggedin;
-          var4 = var4 + " " + UiComponentNode.replaceChar('#', "<br><br>", AccountWelcomePanel.substituteTemplateArguments(new String[]{DebugTuningSupport.discard}, -1, LabeledChildWidget.a(var2 != 0, var3 != 0, false, (byte) 39)), 1);
+          var4 = var4 + " " + UiComponentNode.replaceChar('#', "<br><br>", AccountWelcomePanel.substituteTemplateArguments(new String[]{DebugTuningSupport.discard}, -1, LabeledChildWidget.selectLoginRequiredMessage(var2 != 0, var3 != 0, false, (byte) 39)), 1);
           this.renderParagraphSprite(CollisionContact.field_h, new int[]{CollisionContact.field_h.baselineHeight}, 140, -16097, var4, 280, 15658734);
           this.drawParagraphSprite(140, false);
           return;

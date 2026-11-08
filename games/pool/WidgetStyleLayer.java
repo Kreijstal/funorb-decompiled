@@ -24,7 +24,7 @@ final class WidgetStyleLayer {
         try {
           param1.alpha = this.alpha;
           if (param0 != 288) {
-            WidgetStyleLayer.b(85, -110);
+            WidgetStyleLayer.fixed16ToFloat(85, -110);
           }
           param1.flushBeforeApply = this.flushBeforeApply;
           param1.textColor = this.textColor;
@@ -48,20 +48,20 @@ final class WidgetStyleLayer {
         }
     }
 
-    final static float b(int param0, int param1) {
+    final static float fixed16ToFloat(int obfuscationGuard, int value) {
         RuntimeException var2 = null;
         float stackIn_3_0 = 0.0f;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0 <= 125) {
-            WidgetStyleLayer.b(3, -70);
+          if (obfuscationGuard <= 125) {
+            WidgetStyleLayer.fixed16ToFloat(3, -70);
           }
-          stackIn_3_0 = DebugTuningSupport.scaleByPowerOfTwo(-1, 16, param1);
+          stackIn_3_0 = DebugTuningSupport.scaleByPowerOfTwo(-1, 16, value);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var2), "pf.P(" + param0 + ',' + param1 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var2), "pf.P(" + obfuscationGuard + ',' + value + ')');
         }
     }
 
@@ -101,7 +101,7 @@ final class WidgetStyleLayer {
         }
     }
 
-    final static void a(int param0, int param1, int param2, BitmapFont param3, String param4) {
+    final static void drawHotspotTooltip(int backgroundColor, int textAndBorderColor, int innerWidthPadding, BitmapFont font, String text) {
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
@@ -116,33 +116,33 @@ final class WidgetStyleLayer {
         int var7 = 0;
         int var8 = 0;
         try {
-          var5_int = param3.stringWidth(param4);
-          var6 = param3.maxDescent + param3.field_L;
+          var5_int = font.stringWidth(text);
+          var6 = font.maxDescent + font.field_L;
           var7 = TimeTrialSelectScreen.field_H;
           if (6 + var7 + var5_int > SoftwareRasterizer.width) {
             var7 = -var5_int + SoftwareRasterizer.width - 6;
           }
-          var8 = 32 + (-param3.field_L + SceneNodeEntry.field_p);
+          var8 = 32 + (-font.field_L + SceneNodeEntry.field_p);
           if (SoftwareRasterizer.height < var8 + var6 + 6) {
             var8 = -6 - var6 + SoftwareRasterizer.height;
           }
-          SoftwareRasterizer.drawRectangle(var7, var8, var5_int + 6, var6 + 6, param1);
-          SoftwareRasterizer.fillRectangle(1 + var7, var8 + 1, var5_int + param2, 4 + var6, param0);
-          param3.drawLeft(param4, var7 + 3, param3.field_L + (var8 + 3), param1, -1);
+          SoftwareRasterizer.drawRectangle(var7, var8, var5_int + 6, var6 + 6, textAndBorderColor);
+          SoftwareRasterizer.fillRectangle(1 + var7, var8 + 1, var5_int + innerWidthPadding, 4 + var6, backgroundColor);
+          font.drawLeft(text, var7 + 3, font.field_L + (var8 + 3), textAndBorderColor, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
           stackIn_11_0 = var5;
-          stackIn_11_1 = new StringBuilder().append("pf.F(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-          if (param3 == null) {
+          stackIn_11_1 = new StringBuilder().append("pf.F(").append(backgroundColor).append(',').append(textAndBorderColor).append(',').append(innerWidthPadding).append(',');
+          if (font == null) {
             stackIn_12_2 = "null";
           } else {
             stackIn_12_2 = "{...}";
           }
           stackIn_15_0 = stackIn_11_0;
           stackIn_15_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',');
-          if (param4 == null) {
+          if (text == null) {
             stackIn_16_0 = stackIn_15_0;
             stackIn_16_2 = "null";
           } else {
@@ -153,19 +153,19 @@ final class WidgetStyleLayer {
         }
     }
 
-    final static void a(boolean param0, int param1) {
+    final static void updateLobbyPanelTransitions(boolean hidePanels, int obfuscationGuard) {
         RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
         var3 = Pool.field_O;
         try {
-          if (param0 ||
+          if (hidePanels ||
             HighscoresScreen.field_L == null) {
             AccountWelcomePanel.field_bb = false;
           }
-          var2_int = 110 % ((74 - param1) / 32);
-          if (param0) {
+          var2_int = 110 % ((74 - obfuscationGuard) / 32);
+          if (hidePanels) {
             if (NodeHashTableIterator.field_a > 0) {
               NodeHashTableIterator.field_a = NodeHashTableIterator.field_a - 1;
               return;
@@ -236,7 +236,7 @@ final class WidgetStyleLayer {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var2), "pf.N(" + param0 + ',' + param1 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var2), "pf.N(" + hidePanels + ',' + obfuscationGuard + ')');
         }
     }
 
@@ -278,7 +278,7 @@ final class WidgetStyleLayer {
             param2.textColor = this.textColor;
           }
           if (param3 >= -95) {
-            WidgetStyleLayer.b(-95, 89);
+            WidgetStyleLayer.fixed16ToFloat(-95, 89);
           }
           if (this.shadowColor >= -1) {
             param2.shadowColor = this.shadowColor;
@@ -447,12 +447,12 @@ final class WidgetStyleLayer {
         }
     }
 
-    final static void a(boolean param0) {
+    final static void setChatComposerOpen(boolean open) {
         try {
-          DualLinkNode.field_p = param0;
+          DualLinkNode.field_p = open;
           CookieDateSupport.field_b = 0;
         } catch (RuntimeException runtimeException) {
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "pf.I(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "pf.I(" + open + ')');
         }
     }
 

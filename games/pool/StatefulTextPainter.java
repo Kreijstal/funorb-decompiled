@@ -254,7 +254,7 @@ final class StatefulTextPainter extends TextWidgetPainter {
             }
           }
           this.workingLayer.draw(param3, param1, param4, this, 110);
-          TriangleMesh.a(121);
+          TriangleMesh.popRasterSnapshot(121);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

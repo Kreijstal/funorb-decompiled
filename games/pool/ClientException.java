@@ -14,25 +14,25 @@ final class ClientException extends RuntimeException {
     static long[] field_f;
     static boolean field_j;
 
-    final static void a(boolean param0, byte param1) {
-        if (param1 != 80) {
+    final static void drawLobbyPanels(boolean active, byte obfuscationGuard) {
+        if (obfuscationGuard != 80) {
           return;
         }
-        if (HighScoreSubmission.c(param1 ^ 48)) {
-          param0 = false;
+        if (HighScoreSubmission.hasInputOverlay(obfuscationGuard ^ 48)) {
+          active = false;
         }
-        CueStick.drawSlidingGamePanels(param0, 118);
+        CueStick.drawSlidingGamePanels(active, 118);
         if (ParticleTrail.field_f) {
           SoftwareRasterizer.darkenRectangle(IntegerSyntaxSupport.field_e.field_i.localX, IntegerSyntaxSupport.field_e.field_i.localY, IntegerSyntaxSupport.field_e.field_i.width, IntegerSyntaxSupport.field_e.field_i.height);
-          IntegerSyntaxSupport.field_e.field_i.drawRoot((byte) -79, param0);
+          IntegerSyntaxSupport.field_e.field_i.drawRoot((byte) -79, active);
         }
-        RankingsScreen.d(param1 ^ -5, param0);
+        RankingsScreen.d(obfuscationGuard ^ -5, active);
     }
 
     public static void releaseStatics(int param0) {
         if (param0 != 0) {
           byte[] var2 = (byte[]) null;
-          ClientException.a(0, -103, 105, (byte[]) null);
+          ClientException.crc32(0, -103, 105, (byte[]) null);
         }
         field_d = null;
         field_a = null;
@@ -189,7 +189,7 @@ final class ClientException extends RuntimeException {
         }
     }
 
-    final static int a(int param0, int param1, int param2, byte[] param3) {
+    final static int crc32(int startIndex, int endIndex, int finalXor, byte[] bytes) {
         int var5 = 0;
         int var4_int = 0;
         RuntimeException var4 = null;
@@ -200,18 +200,18 @@ final class ClientException extends RuntimeException {
         RuntimeException decompiledCaughtException = null;
         try {
           var4_int = -1;
-          for (var5 = param0; var5 < param1; var5++) {
-            var4_int = var4_int >>> 8 ^ KeyHandler.crcTable[255 & (var4_int ^ param3[var5])];
+          for (var5 = startIndex; var5 < endIndex; var5++) {
+            var4_int = var4_int >>> 8 ^ KeyHandler.crcTable[255 & (var4_int ^ bytes[var5])];
           }
-          var4_int = var4_int ^ param2;
+          var4_int = var4_int ^ finalXor;
           stackIn_4_0 = var4_int;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
           stackIn_7_0 = var4;
-          stackIn_7_1 = new StringBuilder().append("oa.D(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-          if (param3 == null) {
+          stackIn_7_1 = new StringBuilder().append("oa.D(").append(startIndex).append(',').append(endIndex).append(',').append(finalXor).append(',');
+          if (bytes == null) {
             stackIn_8_2 = "null";
           } else {
             stackIn_8_2 = "{...}";
@@ -220,7 +220,7 @@ final class ClientException extends RuntimeException {
         }
     }
 
-    final static void a(int param0, ChatMessage param1) {
+    final static void appendChatMessage(int obfuscationGuard, ChatMessage message) {
         int dupTemp$4 = 0;
         int dupTemp$0 = 0;
         int var3 = 0;
@@ -240,21 +240,21 @@ final class ClientException extends RuntimeException {
           for (var2_int = 0; var2_int < 3; var2_int++) {
             MusicPatch.field_l[var2_int] = 0;
           }
-          if (param0 > -30) {
+          if (obfuscationGuard > -30) {
             ClientException.releaseStatics(-9);
           }
           for (var2_intLifetime1 = 0; IntrusiveDequeCursor.field_e > var2_intLifetime1; var2_intLifetime1++) {
-            if (param1.field_p == RankingsProtocolSupport.field_e[var2_intLifetime1].field_p) {
+            if (message.field_p == RankingsProtocolSupport.field_e[var2_intLifetime1].field_p) {
               dupTemp$4 = RankingsProtocolSupport.field_e[var2_intLifetime1].b(14842);
               MusicPatch.field_l[dupTemp$4] = MusicPatch.field_l[dupTemp$4] + 1;
             }
           }
-          dupTemp$0 = param1.b(14842);
+          dupTemp$0 = message.b(14842);
           MusicPatch.field_l[dupTemp$0] = MusicPatch.field_l[dupTemp$0] + 1;
           var2_intLifetime2 = 0;
           for (var3 = 0; var3 < IntrusiveDequeCursor.field_e; var3++) {
             boolean decompiledFrameRemainder0 = true;
-            if (RankingsProtocolSupport.field_e[var3].field_p == param1.field_p) {
+            if (RankingsProtocolSupport.field_e[var3].field_p == message.field_p) {
               var4 = RankingsProtocolSupport.field_e[var3].b(14842);
               if (MusicPatch.field_l[var4] > QuickChatPhraseDefinition.field_E) {
                 MusicPatch.field_l[var4] = MusicPatch.field_l[var4] - 1;
@@ -271,14 +271,14 @@ final class ClientException extends RuntimeException {
           fieldTemp$1 = RankingsProtocolSupport.field_e;
           fieldTemp$2 = IntrusiveDequeCursor.field_e;
           IntrusiveDequeCursor.field_e = IntrusiveDequeCursor.field_e + 1;
-          fieldTemp$1[fieldTemp$2] = param1;
+          fieldTemp$1[fieldTemp$2] = message;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
           stackIn_23_0 = var2;
-          stackIn_23_1 = new StringBuilder().append("oa.E(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_23_1 = new StringBuilder().append("oa.E(").append(obfuscationGuard).append(',');
+          if (message == null) {
             stackIn_24_2 = "null";
           } else {
             stackIn_24_2 = "{...}";

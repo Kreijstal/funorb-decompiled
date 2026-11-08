@@ -9,7 +9,7 @@ final class BrowserCookieWriter {
     static int[][] field_e;
 
     final static void drawBallPreview(boolean enabled, int transitionDuration, int transitionTick) {
-        ScrollPane.a(transitionDuration, (byte) 0, transitionTick);
+        ScrollPane.setBallPreviewTranslation(transitionDuration, (byte) 0, transitionTick);
         AppletUrlSupport.field_e.toRotationMatrix(LookupRetrySupport.field_h, -59);
         if (!enabled) {
           return;

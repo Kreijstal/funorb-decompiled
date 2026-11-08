@@ -15,9 +15,9 @@ abstract class ContentTransitionDialog extends ResizableDialog {
     static UiComponent field_ob;
     private UiWidget pendingContent;
 
-    final static void a(int param0, boolean param1) {
-        ResourceArchive.drawAccountOverlay(param1, (byte) 108, true);
-        int var2 = 40 / ((-28 - param0) / 51);
+    final static void drawAccountOverlay(int obfuscationGuard, boolean active) {
+        ResourceArchive.drawAccountOverlay(active, (byte) 108, true);
+        int var2 = 40 / ((-28 - obfuscationGuard) / 51);
     }
 
     void replaceContent(UiWidget param0, int param1) {
@@ -166,9 +166,9 @@ abstract class ContentTransitionDialog extends ResizableDialog {
         }
     }
 
-    final static int k(byte param0) {
-        if (param0 != 59) {
-          ContentTransitionDialog.l((byte) -91);
+    final static int getSharedPanelHeight(byte obfuscationGuard) {
+        if (obfuscationGuard != 59) {
+          ContentTransitionDialog.createDecodedSprites((byte) -91);
         }
         return DialWidget.field_R;
     }
@@ -240,7 +240,7 @@ abstract class ContentTransitionDialog extends ResizableDialog {
         return super.settleDialogAnimation(false);
     }
 
-    final static Sprite j(byte param0) {
+    final static Sprite createDecodedSprite(byte obfuscationGuard) {
         int var5_int = 0;
         int var6 = 0;
         int var1;
@@ -254,7 +254,7 @@ abstract class ContentTransitionDialog extends ResizableDialog {
         byte[] var17;
         byte[] var18;
         var7 = Pool.field_O;
-        if (param0 >= -63) {
+        if (obfuscationGuard >= -63) {
           var8 = (Ball) null;
           ContentTransitionDialog.applyBallCollisionImpulse(101, (Ball) null, (Ball) null, (byte) 35);
         }
@@ -298,7 +298,7 @@ abstract class ContentTransitionDialog extends ResizableDialog {
         field_pb = (String[][]) null;
         field_ob = null;
         if (param0 != -45) {
-          ContentTransitionDialog.j((byte) 96);
+          ContentTransitionDialog.createDecodedSprite((byte) 96);
         }
     }
 
@@ -336,7 +336,7 @@ abstract class ContentTransitionDialog extends ResizableDialog {
         }
     }
 
-    final static Sprite[] l(byte param0) {
+    final static Sprite[] createDecodedSprites(byte obfuscationGuard) {
         int var2 = 0;
         int var6_int = 0;
         int var7 = 0;
@@ -349,8 +349,8 @@ abstract class ContentTransitionDialog extends ResizableDialog {
         byte[] var16;
         byte[] var17;
         var1 = new Sprite[PacketAvailabilitySupport.field_d];
-        if (param0 != 65) {
-          ContentTransitionDialog.k((byte) -62);
+        if (obfuscationGuard != 65) {
+          ContentTransitionDialog.getSharedPanelHeight((byte) -62);
         }
         for (var2 = 0; PacketAvailabilitySupport.field_d > var2; var2++) {
           var3 = LinkButtonPainter.field_a[var2] * AccountTextSupport.field_f[var2];

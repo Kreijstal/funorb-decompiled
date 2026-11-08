@@ -202,7 +202,7 @@ final class DiskCacheWorker implements Runnable {
 
     final static void updateLobbyFrame(int param0, int param1, boolean param2, int param3, boolean param4, boolean param5, boolean param6, boolean param7, int param8, int param9, int param10, int param11, int param12, int param13) {
         CacheEntry.field_B = null;
-        BallEvent.c((byte) 4);
+        BallEvent.showRemovedFromGameNotice((byte) 4);
         param6 = IntKeyLookup.a(param0, param3, param11, param9, param6, (byte) 33, param10);
         UsernameSuggestionsPanel.updateLobbyInterface(param1, param6, param8, param13, param5, 13375, param2, param4, param7, param3);
         int var14 = 36 / ((param12 + 84) / 37);

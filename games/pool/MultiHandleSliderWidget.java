@@ -133,7 +133,7 @@ final class MultiHandleSliderWidget extends ButtonWidget {
             stackIn_6_0 = AgeValidator.unableToAddFriend;
             return stackIn_6_0;
           }
-          if (BallEvent.a((byte) 3, param0)) {
+          if (BallEvent.isLocalPlayerName((byte) 3, param0)) {
             stackIn_10_0 = QuickChatHelpDialog.cannotAddYourself;
             return stackIn_10_0;
           }

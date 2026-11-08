@@ -227,10 +227,10 @@ final class TextureCache implements TextureProvider {
     final static int projectTablePointX(int param0, int param1, int param2) {
         if (param2 < 12) {
           TextureCache.pollArchiveLoading(26);
-          ScrollPane.a(param1, (byte) 0, param0);
+          ScrollPane.setBallPreviewTranslation(param1, (byte) 0, param0);
           return (LookupRetrySupport.field_h[0] << 9) / LookupRetrySupport.field_h[2] + 320;
         }
-        ScrollPane.a(param1, (byte) 0, param0);
+        ScrollPane.setBallPreviewTranslation(param1, (byte) 0, param0);
         return (LookupRetrySupport.field_h[0] << 9) / LookupRetrySupport.field_h[2] + 320;
     }
 

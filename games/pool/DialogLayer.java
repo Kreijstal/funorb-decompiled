@@ -105,7 +105,7 @@ final class DialogLayer extends SingleChildWidget {
           if (HighscoresScreen.field_P <= 0) {
             return;
           }
-          ProgressDialog.l(23323);
+          ProgressDialog.layoutBottomChatPanel(23323);
           IntLookupQuery.field_q.updateRoot(param1, false);
           if (null != ThemeSelectScreen.field_J) {
             if (!RankingsRequest.field_z) {
@@ -130,7 +130,7 @@ final class DialogLayer extends SingleChildWidget {
           }
           var9 = IntrusiveNodeHashTable.a(param0, (byte) -126, ArchiveIndex.field_x, CueAim.field_j);
           if (var9 != null) {
-            IntegerSyntaxSupport.a(var9, 122);
+            IntegerSyntaxSupport.openChatMessageContextMenu(var9, 122);
           }
           var8 = GlowParticle.updateChatHeader(1);
           if (var8 != null) {
@@ -232,11 +232,11 @@ final class DialogLayer extends SingleChildWidget {
         this.child = (UiWidget) ((Object) this.getTopOpenDialog(110));
     }
 
-    final static void a(boolean param0) {
-        ProgressDialog.m(8421504);
-        TranslatedUiText.b(-31384);
+    final static void closeInputOverlays(boolean obfuscationGuard) {
+        ProgressDialog.closePlayerContextMenu(8421504);
+        TranslatedUiText.hideSocialNamePopup(-31384);
         AccountMenuText.field_b = null;
-        if (!param0) {
+        if (!obfuscationGuard) {
           DialogLayer.hideQuickChatOverlay(114);
         }
         DialogLayer.hideQuickChatOverlay(15975);

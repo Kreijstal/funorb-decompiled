@@ -26,7 +26,7 @@ final class BallEvent {
         searchingForOpponentSingular = null;
     }
 
-    final static byte[] a(Object param0, int param1, boolean param2) {
+    final static byte[] unwrapByteStorage(Object storage, int obfuscationGuard, boolean copyArray) {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
         ByteStorage var4 = null;
@@ -39,23 +39,23 @@ final class BallEvent {
         String stackIn_18_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param1 != -19261) {
+          if (obfuscationGuard != -19261) {
             searchingForOpponentSingular = (String) null;
           }
-          if (param0 == null) {
+          if (storage == null) {
             stackIn_4_0 = null;
             return (byte[]) (stackIn_4_0);
           }
-          if (!(param0 instanceof byte[])) {
-            if (!(param0 instanceof ByteStorage)) {
+          if (!(storage instanceof byte[])) {
+            if (!(storage instanceof ByteStorage)) {
               throw new IllegalArgumentException();
             }
-            var4 = (ByteStorage) (param0);
+            var4 = (ByteStorage) (storage);
             stackIn_13_0 = var4.toByteArray(33);
             return stackIn_13_0;
           }
-          var3 = (byte[]) (param0);
-          if (param2) {
+          var3 = (byte[]) (storage);
+          if (copyArray) {
             stackIn_10_0 = BirthDatePromptPanel.copyByteArray(var3, (byte) 91);
             return stackIn_10_0;
           }
@@ -66,12 +66,12 @@ final class BallEvent {
           var3_ref = decompiledCaughtException;
           stackIn_17_0 = var3_ref;
           stackIn_17_1 = new StringBuilder().append("or.A(");
-          if (param0 == null) {
+          if (storage == null) {
             stackIn_18_2 = "null";
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(obfuscationGuard).append(',').append(copyArray).append(')').toString());
         }
     }
 
@@ -101,42 +101,42 @@ final class BallEvent {
         return "stop";
     }
 
-    final void a(boolean param0, Ball param1) {
+    final void recordStop(boolean obfuscationGuard, Ball ball) {
         try {
           this.eventKind = (byte) 1;
-          if (param0) {
+          if (obfuscationGuard) {
             inviteAcceptXsGame = (String) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "or.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "or.C(" + obfuscationGuard + ',' + (ball != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void a(int param0, int param1, Ball param2) {
+    final void recordCushionCollision(int segmentIndex, int obfuscationGuard, Ball ball) {
         this.eventKind = (byte) 3;
-        this.targetIndex = (byte)param0;
+        this.targetIndex = (byte)segmentIndex;
         this.field_i = new BallEvent((int) this.ballIndex, this);
-        if (param1 != -26401) {
+        if (obfuscationGuard != -26401) {
           return;
         }
         try {
-          param2.field_q = this.field_i;
+          ball.field_q = this.field_i;
         } catch (RuntimeException runtimeException) {
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "or.E(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "or.E(" + segmentIndex + ',' + obfuscationGuard + ',' + (ball != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void a(Ball[] param0, int param1, int param2) {
-        Ball var6 = param0[param1];
+    final void recordBallCollision(Ball[] balls, int otherBallIndex, int obfuscationGuard) {
+        Ball var6 = balls[otherBallIndex];
         Ball var4 = var6;
-        Ball var5 = param0[this.ballIndex];
+        Ball var5 = balls[this.ballIndex];
         this.field_i = new BallEvent((int) this.ballIndex, this);
-        if (param2 != -5) {
+        if (obfuscationGuard != -5) {
           return;
         }
         try {
-          this.field_d = new BallEvent(param1, this);
-          this.targetIndex = (byte)param1;
+          this.field_d = new BallEvent(otherBallIndex, this);
+          this.targetIndex = (byte)otherBallIndex;
           this.eventKind = (byte) 2;
           if (var6.field_q != null &&
             var6.field_q.eventKind == 0) {
@@ -147,25 +147,25 @@ final class BallEvent {
           var5.field_q = this.field_i;
           var4.field_q = this.field_d;
         } catch (RuntimeException runtimeException) {
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "or.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "or.G(" + (balls != null ? "{...}" : "null") + ',' + otherBallIndex + ',' + obfuscationGuard + ')');
         }
     }
 
-    final void a(Ball param0, int param1, byte param2) {
-        this.targetIndex = (byte)param1;
+    final void recordPointCollision(Ball ball, int pointIndex, byte obfuscationGuard) {
+        this.targetIndex = (byte)pointIndex;
         this.eventKind = (byte) 4;
         this.field_i = new BallEvent((int) this.ballIndex, this);
-        if (param2 != 5) {
+        if (obfuscationGuard != 5) {
           return;
         }
         try {
-          param0.field_q = this.field_i;
+          ball.field_q = this.field_i;
         } catch (RuntimeException runtimeException) {
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "or.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "or.F(" + (ball != null ? "{...}" : "null") + ',' + pointIndex + ',' + obfuscationGuard + ')');
         }
     }
 
-    final static boolean a(byte param0, String param1) {
+    final static boolean isLocalPlayerName(byte obfuscationGuard, String name) {
         RuntimeException var2 = null;
         CharSequence var3 = null;
         boolean stackIn_3_0 = false;
@@ -174,18 +174,18 @@ final class BallEvent {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0 != 3) {
+          if (obfuscationGuard != 3) {
             field_a = 37;
           }
-          var3 = (CharSequence) ((Object) param1);
+          var3 = (CharSequence) ((Object) name);
           stackIn_3_0 = HighScoreSubmission.field_y.equals(TutorialController.normalizeDisplayName(73, var3));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
           stackIn_6_0 = var2;
-          stackIn_6_1 = new StringBuilder().append("or.J(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_6_1 = new StringBuilder().append("or.J(").append(obfuscationGuard).append(',');
+          if (name == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
@@ -244,7 +244,7 @@ final class BallEvent {
         }
     }
 
-    final static void c(byte param0) {
+    final static void showRemovedFromGameNotice(byte obfuscationGuard) {
         String var2 = null;
         if (null != ServerListLauncher.field_d) {
           var2 = ServerListLauncher.field_d;
@@ -252,22 +252,22 @@ final class BallEvent {
           ChatMessage.a((byte) 75, AccountWelcomePanel.substituteTemplateArguments(new String[]{var2}, -1, LoginEncryptionSupport.youHaveBeenRemovedFromXsGame));
           ServerListLauncher.field_d = null;
         }
-        if (param0 == 4) {
+        if (obfuscationGuard == 4) {
           return;
         }
         inviteAcceptXsGame = (String) null;
     }
 
-    final void a(int param0, Ball param1, int param2) {
+    final void recordPocket(int obfuscationGuard, Ball ball, int pocketIndex) {
         try {
-          if (param0 != 23655) {
+          if (obfuscationGuard != 23655) {
             Ball var5 = (Ball) null;
-            this.a((Ball) null, 49, (byte) -122);
+            this.recordPointCollision((Ball) null, 49, (byte) -122);
           }
           this.eventKind = (byte) 5;
-          this.targetIndex = (byte)param2;
+          this.targetIndex = (byte)pocketIndex;
         } catch (RuntimeException runtimeException) {
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "or.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "or.B(" + obfuscationGuard + ',' + (ball != null ? "{...}" : "null") + ',' + pocketIndex + ')');
         }
     }
 

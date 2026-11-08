@@ -9,19 +9,19 @@ final class TimeTrialSelectScreen extends MenuScreen {
     static AccountProtocolStage field_I;
     static int[] field_L;
 
-    final static boolean a(boolean param0, int param1, int param2, int param3) {
+    final static boolean handleInterfaceKeyPress(boolean param0, int param1, int param2, int param3) {
         if (null != PlasmaBallSkin.field_m) {
           if (PlasmaBallSkin.field_m.handleCancelKey((byte) 111)) {
-            ProgressDialog.m(8421504);
+            ProgressDialog.closePlayerContextMenu(8421504);
             return true;
           }
           if (param0) {
-            TimeTrialSelectScreen.f(118);
+            TimeTrialSelectScreen.getShotPreviewSnapshotCount(118);
           }
           if (null != AccountMenuText.field_b &&
             AccountMenuText.field_b.handleCancelKey(13)) {
             AccountMenuText.field_b = null;
-            ProgressDialog.m(8421504);
+            ProgressDialog.closePlayerContextMenu(8421504);
             return true;
           }
           if (BirthDateValidator.handleNamePopupKey(-3)) {
@@ -36,7 +36,7 @@ final class TimeTrialSelectScreen extends MenuScreen {
           if (null != AccountMenuText.field_b &&
             AccountMenuText.field_b.handleCancelKey(13)) {
             AccountMenuText.field_b = null;
-            ProgressDialog.m(8421504);
+            ProgressDialog.closePlayerContextMenu(8421504);
             return true;
           }
           if (BirthDateValidator.handleNamePopupKey(-3)) {
@@ -47,7 +47,7 @@ final class TimeTrialSelectScreen extends MenuScreen {
           }
           return false;
         }
-        TimeTrialSelectScreen.f(118);
+        TimeTrialSelectScreen.getShotPreviewSnapshotCount(118);
         if (null == AccountMenuText.field_b) {
           if (BirthDateValidator.handleNamePopupKey(-3)) {
             return true;
@@ -59,7 +59,7 @@ final class TimeTrialSelectScreen extends MenuScreen {
         }
         if (AccountMenuText.field_b.handleCancelKey(13)) {
           AccountMenuText.field_b = null;
-          ProgressDialog.m(8421504);
+          ProgressDialog.closePlayerContextMenu(8421504);
           return true;
         }
         if (BirthDateValidator.handleNamePopupKey(-3)) {
@@ -75,11 +75,11 @@ final class TimeTrialSelectScreen extends MenuScreen {
         super(param0, param1, param2, param3, param4, param5, param6);
     }
 
-    final static int f(int param0) {
-        if (param0 == -1) {
+    final static int getShotPreviewSnapshotCount(int obfuscationGuard) {
+        if (obfuscationGuard == -1) {
           return Ball.field_B != null ? Ball.field_B.length : 0;
         }
-        TimeTrialSelectScreen.a(false, 38, 98, -101);
+        TimeTrialSelectScreen.handleInterfaceKeyPress(false, 38, 98, -101);
         return Ball.field_B != null ? Ball.field_B.length : 0;
     }
 

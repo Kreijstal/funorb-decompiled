@@ -679,7 +679,7 @@ final class PlasmaBallSkin extends BallSkin {
                 ValidationIconWidget.sendAbuseReport(var4 != 0, AccountMenuText.field_b.getReportedName(1), var3_int, param1, AccountMenuText.field_b.reportTargetId, -121);
               }
               AccountMenuText.field_b = null;
-              ProgressDialog.m(8421504);
+              ProgressDialog.closePlayerContextMenu(8421504);
             }
           }
           return;

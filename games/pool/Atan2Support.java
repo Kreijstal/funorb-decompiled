@@ -35,7 +35,7 @@ final class Atan2Support {
             stackIn_2_0 = ModelInstance.invalidName;
             return stackIn_2_0;
           }
-          if (BallEvent.a((byte) 3, name)) {
+          if (BallEvent.isLocalPlayerName((byte) 3, name)) {
             stackIn_6_0 = QuickChatHelpDialog.cannotAddYourself;
             return stackIn_6_0;
           }

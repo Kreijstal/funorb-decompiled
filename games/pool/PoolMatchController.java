@@ -383,7 +383,7 @@ final class PoolMatchController {
         try {
           if ((TutorialController.field_c & this.modeFlags) == 0) {
             if (NanoTickClock.isClientConnected(-119)) {
-              if (!FadingDialog.a(false, SupportPageLauncher.field_c) &&
+              if (!FadingDialog.hasNonzeroWord(false, SupportPageLauncher.field_c) &&
                 DebugSliderInputSupport.field_d == null) {
                 AccountCreationDialog.switchScreen(param0 - 3661, 21, 0, param1);
               } else {
@@ -398,7 +398,7 @@ final class PoolMatchController {
                 AccountCreationDialog.switchScreen(stackIn_30_0, stackIn_30_1, stackIn_31_2, var3_int != 0);
               }
             } else {
-              if (!FadingDialog.a(false, SupportPageLauncher.field_c)) {
+              if (!FadingDialog.hasNonzeroWord(false, SupportPageLauncher.field_c)) {
                 if (null == DebugSliderInputSupport.field_d) {
                   var3_int = param1 ? 1 : 0;
                   stackIn_21_0 = -3405;
@@ -724,7 +724,7 @@ final class PoolMatchController {
           var12 = new Sprite(var4.field_z - var9 * 2, var9);
           var12.bindAsRenderTarget();
           var4.drawAt(-var9, 0);
-          TriangleMesh.a(112);
+          TriangleMesh.popRasterSnapshot(112);
           BirthDatePromptPanel.field_S = new Sprite[]{var10_ref, var12, var11};
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -924,7 +924,7 @@ final class PoolMatchController {
           var6 = (var7 + 2) % 7621 + (-var7 + var6);
           GlowParticle.field_f = -var5 + var6;
           field_fb = ((field_fb >>> 16) + 2) % 30484 << 16 | field_fb & 65535;
-          var4_int = TimeTrialSelectScreen.f(-1);
+          var4_int = TimeTrialSelectScreen.getShotPreviewSnapshotCount(-1);
           if ((PolarObject.field_f & 255) < var4_int) {
             stackIn_7_0 = -256 & PolarObject.field_f;
             if (var4_int > 255) {
@@ -2160,9 +2160,9 @@ final class PoolMatchController {
                   this.tutorial.currentStep.field_q != null) {
                   this.tutorial.currentStep.drawOutline(15658734, 128, 9750);
                 }
-                WidgetStyleLayer.a(4144959, 15658734, param1 + 29427, CollisionContact.field_h, LoginPayload.field_e[var3_intLifetime1 - 256]);
+                WidgetStyleLayer.drawHotspotTooltip(4144959, 15658734, param1 + 29427, CollisionContact.field_h, LoginPayload.field_e[var3_intLifetime1 - 256]);
               } else {
-                WidgetStyleLayer.a(4144959, 15658734, 4, CollisionContact.field_h, DraggableWidget.field_S[var3_intLifetime1]);
+                WidgetStyleLayer.drawHotspotTooltip(4144959, 15658734, 4, CollisionContact.field_h, DraggableWidget.field_S[var3_intLifetime1]);
               }
             }
           }
@@ -2294,7 +2294,7 @@ final class PoolMatchController {
           if (param0 != -11934) {
             PoolMatchController.loadInterfaceAssets(-105, true, (ResourceArchive) null, (ResourceArchive) null, (ResourceArchive) null);
           }
-          TextInputValidator.field_j = GzipDecoder.a(-71, "");
+          TextInputValidator.field_j = GzipDecoder.createAvailabilityQuery(-71, "");
           TextInputValidator.field_j.complete(false, (byte) 120);
           PoolMatchController.loadCommonUiSprites(param3, -22764, param2, param4);
           MarkerSliderPainter.initializeAccountDialogs((byte) -124);
@@ -3548,7 +3548,7 @@ final class PoolMatchController {
             StatefulTextPainter.field_s.setCursorVisible(true, (byte) 106, (java.awt.Component) ((Object) TextLineLayout.getActiveCanvas((byte) -100)));
             return;
           }
-          if (!HighScoreSubmission.c(-62)) {
+          if (!HighScoreSubmission.hasInputOverlay(-62)) {
             if (0 != (this.modeFlags & TutorialController.field_c) &&
               DualLinkNode.field_p) {
               return;
@@ -3888,7 +3888,7 @@ final class PoolMatchController {
                 CollisionContact.field_h.drawLeftAlpha(var8, 4 + MidiPcmStream.field_H, AccountStateQuery.field_q, 16777215, 0, (UiComponentNode.sineFixed(var9, (byte) -64) >> 11) + 191);
               }
             }
-            ScrollPane.a(353, false, (Js5Transport.field_q.field_y >> 1) + ArrayWidgetGroup.field_M);
+            ScrollPane.drawScrollingChatLines(353, false, (Js5Transport.field_q.field_y >> 1) + ArrayWidgetGroup.field_M);
           }
           this.drawPowerBar(param0);
           if ((TutorialController.field_c & this.modeFlags) != 0 &&
@@ -8991,12 +8991,12 @@ final class PoolMatchController {
                   var10 = this.gameModel.balls[0];
                   var11 = (float)var10.horizontalSpeed(-8);
                   if (var10.inPlay) {
-                    this.cameraGoal.targetX = (double)WidgetStyleLayer.b(127, var10.positionX);
-                    this.cameraGoal.targetY = (double)WidgetStyleLayer.b(126, var10.positionY);
-                    this.cameraGoal.targetZ = (double)WidgetStyleLayer.b(127, var10.positionZ);
-                    this.cameraGoal.eyeX = (double)(WidgetStyleLayer.b(126, var10.positionX) - 80.0f * ((float)var10.velocityX / var11));
-                    this.cameraGoal.eyeY = (double)(WidgetStyleLayer.b(127, var10.positionY) - 80.0f * ((float)var10.velocityY / var11));
-                    this.cameraGoal.eyeZ = (double)(-24.0f + WidgetStyleLayer.b(126, var10.positionZ));
+                    this.cameraGoal.targetX = (double)WidgetStyleLayer.fixed16ToFloat(127, var10.positionX);
+                    this.cameraGoal.targetY = (double)WidgetStyleLayer.fixed16ToFloat(126, var10.positionY);
+                    this.cameraGoal.targetZ = (double)WidgetStyleLayer.fixed16ToFloat(127, var10.positionZ);
+                    this.cameraGoal.eyeX = (double)(WidgetStyleLayer.fixed16ToFloat(126, var10.positionX) - 80.0f * ((float)var10.velocityX / var11));
+                    this.cameraGoal.eyeY = (double)(WidgetStyleLayer.fixed16ToFloat(127, var10.positionY) - 80.0f * ((float)var10.velocityY / var11));
+                    this.cameraGoal.eyeZ = (double)(-24.0f + WidgetStyleLayer.fixed16ToFloat(126, var10.positionZ));
                   }
                 }
               } else {

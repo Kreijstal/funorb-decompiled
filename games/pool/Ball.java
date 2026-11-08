@@ -48,7 +48,7 @@ final class Ball {
         this.motionState = 0;
         if (this.field_q != null &&
           this.field_q.eventKind == 0) {
-          this.field_q.a(false, this);
+          this.field_q.recordStop(false, this);
         }
     }
 
@@ -423,7 +423,7 @@ final class Ball {
                       this.motionState = 2;
                       break regionExit1;
                     }
-                    throw new IllegalStateException("Overflow. Norm of " + WidgetStyleLayer.b(127, this.field_l) + ", " + WidgetStyleLayer.b(126, this.field_h) + " := " + PotEvent.fixed16ToDouble((byte) 89, var2));
+                    throw new IllegalStateException("Overflow. Norm of " + WidgetStyleLayer.fixed16ToFloat(127, this.field_l) + ", " + WidgetStyleLayer.fixed16ToFloat(126, this.field_h) + " := " + PotEvent.fixed16ToDouble((byte) 89, var2));
                   }
                   this.motionState = 2;
                   this.setRollingAngularVelocity((byte) -28);

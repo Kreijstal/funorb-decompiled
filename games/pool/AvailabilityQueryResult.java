@@ -95,7 +95,7 @@ final class AvailabilityQueryResult {
         }
         if (PlasmaTableScene.field_gb == null &&
           ButtonWidget.field_J) {
-          CacheEntry.a(param1, 4, var2);
+          CacheEntry.showClientNotice(param1, 4, var2);
         }
         if (param0 == -28038) {
           return;

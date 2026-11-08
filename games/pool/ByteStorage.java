@@ -38,17 +38,17 @@ abstract class ByteStorage {
 
     abstract byte[] toByteArray(int param0);
 
-    final static void d(int param0) {
+    final static void updateGuideToggleLabel(int obfuscationGuard) {
         if (LookupProtocolSupport.field_e != 0) {
           TextureCache.field_c.sprite = TransformRotationSupport.createTextLabelSprite(2, 0, BeveledFrameSpriteFactory.off);
-          if (param0 > -97) {
+          if (obfuscationGuard > -97) {
             ByteStorage.showEmptyLoginForm(111);
             return;
           }
           return;
         }
         TextureCache.field_c.sprite = TransformRotationSupport.createTextLabelSprite(3, 0, AppletUrlSupport.on);
-        if (param0 > -97) {
+        if (obfuscationGuard > -97) {
           ByteStorage.showEmptyLoginForm(111);
           return;
         }

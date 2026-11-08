@@ -12,7 +12,7 @@ final class LinkButtonPainter implements WidgetPainter {
     private BitmapFont font;
     static String field_e;
 
-    final static void a(int param0) {
+    final static void decreaseMusicVolume(int obfuscationGuard) {
         int var1 = 0;
         if (TranslatedUiText.field_h > 32) {
           var1 = TranslatedUiText.field_h % 32;
@@ -20,14 +20,14 @@ final class LinkButtonPainter implements WidgetPainter {
             var1 = 32;
           }
           QuickChatPhraseDefinition.setMusicVolume(TranslatedUiText.field_h - var1, 3815994);
-          if (param0 != 0) {
+          if (obfuscationGuard != 0) {
             LinkButtonPainter.releaseStatics(false);
             return;
           }
           return;
         }
-        QuickChatPhraseDefinition.setMusicVolume(0, param0 + 3815994);
-        if (param0 != 0) {
+        QuickChatPhraseDefinition.setMusicVolume(0, obfuscationGuard + 3815994);
+        if (obfuscationGuard != 0) {
           LinkButtonPainter.releaseStatics(false);
           return;
         }

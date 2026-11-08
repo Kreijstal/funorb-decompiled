@@ -13,7 +13,7 @@ final class IntegerSyntaxSupport {
         throw new IllegalStateException();
     }
 
-    final static void a(ChatMessage param0, int param1) {
+    final static void openChatMessageContextMenu(ChatMessage message, int obfuscationGuard) {
         String stackIn_2_0 = null;
         int stackIn_2_1 = 0;
         long stackIn_2_2 = 0L;
@@ -35,16 +35,16 @@ final class IntegerSyntaxSupport {
         String var13 = null;
         PlayerContextMenu var14 = null;
         try {
-          stackIn_2_0 = param0.field_j;
-          stackIn_2_1 = param0.field_p;
-          stackIn_2_2 = param0.field_b;
-          if (1 == param0.field_p) {
-            stackIn_3_3 = param0.field_o;
+          stackIn_2_0 = message.field_j;
+          stackIn_2_1 = message.field_p;
+          stackIn_2_2 = message.field_b;
+          if (1 == message.field_p) {
+            stackIn_3_3 = message.field_o;
           } else {
             stackIn_3_3 = 0;
           }
-          LogoFinalFrameLoader.openPlayerContextMenu(stackIn_2_0, stackIn_2_1, stackIn_2_2, stackIn_3_3, (ScrollPane) null, param0.field_q, param1 ^ 32614, param0.field_u, (int[]) null);
-          if (param0.field_p == 0 &&
+          LogoFinalFrameLoader.openPlayerContextMenu(stackIn_2_0, stackIn_2_1, stackIn_2_2, stackIn_3_3, (ScrollPane) null, message.field_q, obfuscationGuard ^ 32614, message.field_u, (int[]) null);
+          if (message.field_p == 0 &&
             !AccountStateQuery.c((byte) -75) &&
             HighscoresScreen.field_L == null &&
             LookupRetrySupport.field_e == null) {
@@ -57,10 +57,10 @@ final class IntegerSyntaxSupport {
             var9 = IntLookupQuery.quickchatLobby;
             var8.field_n.addAction(var9, 17130, 20);
           }
-          if (1 == param0.field_p &&
+          if (1 == message.field_p &&
             !AccountStateQuery.c((byte) -75) &&
             HighscoresScreen.field_L != null &&
-            param0.field_o == HighscoresScreen.field_L.getGameId(20872)) {
+            message.field_o == HighscoresScreen.field_L.getGameId(20872)) {
             if (!ViewportController.field_y) {
               var10 = PlasmaBallSkin.field_m;
               var11 = DialRenderer.messageGame;
@@ -72,28 +72,28 @@ final class IntegerSyntaxSupport {
           }
           PlasmaBallSkin.field_m.addInviteActions(2616);
           PlasmaBallSkin.field_m.addGameInviteActions((byte) 124, false);
-          if (param1 != 122) {
+          if (obfuscationGuard != 122) {
             IntegerSyntaxSupport.releaseStatics((byte) -50);
           }
-          PlasmaBallSkin.field_m.buildPlayerMenu(param0.field_p, param0.field_d, (byte) 64);
+          PlasmaBallSkin.field_m.buildPlayerMenu(message.field_p, message.field_d, (byte) 64);
           PlasmaBallSkin.field_m.addReportAbuseAction((byte) 95);
-          PlasmaBallSkin.field_m.addChatFilterActions(param0, false);
+          PlasmaBallSkin.field_m.addChatFilterActions(message, false);
           var14 = PlasmaBallSkin.field_m;
           var3 = DialogLayer.field_W;
           var4 = UsernameAvailabilityValidator.field_o;
-          var14.field_n.layoutAtAnchor(0, 0, var3, param1 - 122, var4);
+          var14.field_n.layoutAtAnchor(0, 0, var3, obfuscationGuard - 122, var4);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
           stackIn_25_0 = var2;
           stackIn_25_1 = new StringBuilder().append("na.D(");
-          if (param0 == null) {
+          if (message == null) {
             stackIn_26_2 = "null";
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -118,7 +118,7 @@ final class IntegerSyntaxSupport {
             var4_int = 0;
             if (param3 != 87) {
               var11 = (ChatMessage) null;
-              IntegerSyntaxSupport.a((ChatMessage) null, -79);
+              IntegerSyntaxSupport.openChatMessageContextMenu((ChatMessage) null, -79);
             }
             var5 = 0;
             var6 = 0;
@@ -180,14 +180,14 @@ final class IntegerSyntaxSupport {
         }
     }
 
-    final static void a(int param0, String param1) {
+    final static void setRetainedLoginText(int obfuscationGuard, String text) {
         try {
-          CheckboxWidget.field_N = param1;
-          if (param0 != -58) {
+          CheckboxWidget.field_N = text;
+          if (obfuscationGuard != -58) {
             IntegerSyntaxSupport.releaseStatics((byte) -95);
           }
         } catch (RuntimeException runtimeException) {
-          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "na.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "na.C(" + obfuscationGuard + ',' + (text != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -197,7 +197,7 @@ final class IntegerSyntaxSupport {
         connectionlostReconnecting = null;
         if (param0 != 43) {
           String var2 = (String) null;
-          IntegerSyntaxSupport.a(-87, (String) null);
+          IntegerSyntaxSupport.setRetainedLoginText(-87, (String) null);
         }
     }
 

@@ -30,7 +30,7 @@ final class AccountProtocolStage {
           var1_int = -124 / ((obfuscationGuard - 38) / 54);
           TabbedPane.field_Ub.processPointerFrame(-120, AvailabilityQueryResult.field_b, true, PasswordInputPainter.field_D);
           TabbedPane.field_Ub.advanceDialogAnimations((byte) 126);
-          while (LabeledChildWidget.h(127)) {
+          while (LabeledChildWidget.pollKeyEvent(127)) {
             TabbedPane.field_Ub.dispatchKeyInputOrRequestFocus(-81, IterableDualLinkDeque.field_a, LoginMethod.field_b);
           }
           if (Atan2Support.field_b != -1) {
