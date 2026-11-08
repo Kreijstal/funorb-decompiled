@@ -157,7 +157,7 @@ final class cn extends ng {
         var5 = var6;
         var2 = var5;
         if (param0 > -83) {
-          cn.d(-53);
+          cn.releaseStatics(-53);
         }
         if (this.field_l instanceof li) {
           try {
@@ -733,7 +733,7 @@ final class cn extends ng {
         return var4;
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 >= -103) {
           cn.a(-126, true, 28, (byte) -117);
         }

@@ -44,7 +44,7 @@ final class en extends IOException {
         }
     }
 
-    static long a(long param0, long param1) {
+    static long longAnd(long param0, long param1) {
         long stackIn_1_0 = 0L;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;

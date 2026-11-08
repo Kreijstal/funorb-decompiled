@@ -26,14 +26,14 @@ final class la {
         if (param1 > 21) {
           var4 = new int[this.a(param0, (byte) 104)];
           var3 = var4;
-          ArrayOperations.a(this.field_o, 0, var4, 0, this.field_o.length);
+          ArrayOperations.copy(this.field_o, 0, var4, 0, this.field_o.length);
           this.field_o = var4;
           return;
         }
         field_l = (IndexedSprite[]) null;
         var4Lifetime1 = new int[this.a(param0, (byte) 104)];
         var3Lifetime1 = var4Lifetime1;
-        ArrayOperations.a(this.field_o, 0, var4Lifetime1, 0, this.field_o.length);
+        ArrayOperations.copy(this.field_o, 0, var4Lifetime1, 0, this.field_o.length);
         this.field_o = var4Lifetime1;
     }
 
@@ -143,7 +143,7 @@ final class la {
           this.field_a = this.field_a - 1;
           return;
         }
-        ArrayOperations.a(this.field_o, param1 + 1, this.field_o, param1, -param1 + this.field_a);
+        ArrayOperations.copy(this.field_o, param1 + 1, this.field_o, param1, -param1 + this.field_a);
         var3Lifetime1 = -95 / ((param0 - 37) / 32);
         this.field_a = this.field_a - 1;
     }

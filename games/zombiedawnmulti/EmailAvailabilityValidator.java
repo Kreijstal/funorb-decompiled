@@ -130,7 +130,7 @@ final class EmailAvailabilityValidator extends TextInputValidator {
         }
     }
 
-    public static void h(int param0) {
+    public static void releaseStatics(int param0) {
         field_w = null;
         field_r = null;
         field_t = null;

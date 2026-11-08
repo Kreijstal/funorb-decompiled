@@ -107,7 +107,7 @@ final class aj extends GameEvent {
             if (var5 < 0) {
               var4 = var4 + ImageProducerRasterBuffer.field_l;
             } else {
-              var6 = vh.a(true, -121, eo.field_e[var3_int]);
+              var6 = vh.measureText(true, -121, eo.field_e[var3_int]);
               var7 = NetworkGameClient.field_x - (var6 >> 1);
               var4 = var4 + pb.field_b;
               if (IntrusiveDeque.a(param0, -GameCharacter.field_db + var7, param2, (GameCharacter.field_db << 1) + var6, var4, MusicPatch.field_n + (MessageDialog.field_tb << 1), 93)) {

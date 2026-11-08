@@ -196,7 +196,7 @@ final class lp extends IntrusiveNode {
             return;
           }
         }
-        rn.field_f = u.a(10386, ArrayWidgetGroup.field_J, 480, 0, 0, 640);
+        rn.field_f = u.openFullscreenWindow(10386, ArrayWidgetGroup.field_J, 480, 0, 0, 640);
         if (null == rn.field_f) {
           var2Lifetime1 = 3;
         } else {

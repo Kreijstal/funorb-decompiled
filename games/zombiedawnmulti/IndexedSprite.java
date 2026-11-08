@@ -5,7 +5,7 @@ final class IndexedSprite extends IndexedSpriteState {
     byte[] pixelIndices;
     int[] palette;
 
-    final void a() {
+    final void flipHorizontally() {
         int var3 = 0;
         int var4 = 0;
         int incrementValue$0 = 0;
@@ -22,7 +22,7 @@ final class IndexedSprite extends IndexedSpriteState {
         this.field_h = this.field_a - this.field_b - this.field_h;
     }
 
-    final void a(int param0, int param1, int param2) {
+    final void drawAlpha(int param0, int param1, int param2) {
         int var10 = 0;
         int var10Lifetime1;
         int var10Lifetime2;
@@ -96,7 +96,7 @@ final class IndexedSprite extends IndexedSpriteState {
         this.field_f = var3Lifetime3;
     }
 
-    final void a(int param0, int param1) {
+    final void draw(int param0, int param1) {
         int var9 = 0;
         int var9Lifetime1;
         int var9Lifetime2;
@@ -142,7 +142,7 @@ final class IndexedSprite extends IndexedSpriteState {
         }
     }
 
-    private final static void a(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11) {
+    private final static void blendPaletteRowsTowardColour(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11) {
         int var15 = 0;
         int var16 = 0;
         int incrementValue$11 = 0;
@@ -202,7 +202,7 @@ final class IndexedSprite extends IndexedSpriteState {
         }
     }
 
-    private final static void b(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11) {
+    private final static void copyPaletteRowsScaled(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11) {
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
@@ -299,7 +299,7 @@ final class IndexedSprite extends IndexedSpriteState {
         }
     }
 
-    final boolean b(int param0, int param1, int param2, int param3) {
+    final boolean isOpaqueAt(int param0, int param1, int param2, int param3) {
         boolean stackIn_11_0 = false;
         param2 = param2 - (param0 + this.field_j);
         if (param2 < 0) {
@@ -363,7 +363,7 @@ final class IndexedSprite extends IndexedSpriteState {
         }
     }
 
-    final void c(int param0, int param1, int param2, int param3) {
+    final void drawScaled(int param0, int param1, int param2, int param3) {
         int var13 = 0;
         int var15 = 0;
         int var5 = this.field_e;
@@ -417,7 +417,7 @@ final class IndexedSprite extends IndexedSpriteState {
           var7 = var7 + var11 * var15Lifetime2;
           var14 = var14 + var15Lifetime2;
         }
-        IndexedSprite.b(SoftwareRasterizer.pixels, this.pixelIndices, this.palette, var7, var8, var13Lifetime2, var14, param2, param3, var11, var12, var5);
+        IndexedSprite.copyPaletteRowsScaled(SoftwareRasterizer.pixels, this.pixelIndices, this.palette, var7, var8, var13Lifetime2, var14, param2, param3, var11, var12, var5);
     }
 
     final void b() {
@@ -475,7 +475,7 @@ final class IndexedSprite extends IndexedSpriteState {
         int var11Lifetime1;
         int var11Lifetime2;
         if (param2 == 256) {
-          this.a(param0, param1);
+          this.draw(param0, param1);
           return;
         }
         param0 = param0 + this.field_j;
@@ -515,12 +515,12 @@ final class IndexedSprite extends IndexedSpriteState {
           if (var7 <= 0) {
             return;
           }
-          IndexedSprite.a(SoftwareRasterizer.pixels, this.pixelIndices, this.palette, 0, var6, var5, var8, var7, var9, var10, param2, param3);
+          IndexedSprite.blendPaletteRowsTowardColour(SoftwareRasterizer.pixels, this.pixelIndices, this.palette, 0, var6, var5, var8, var7, var9, var10, param2, param3);
           return;
         }
     }
 
-    final void e(int param0, int param1) {
+    final void drawRunEncoded(int param0, int param1) {
         int var9 = 0;
         int var9Lifetime1;
         int var9Lifetime2;

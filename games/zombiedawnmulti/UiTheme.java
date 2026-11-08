@@ -109,7 +109,7 @@ final class UiTheme {
           this.field_e = 3;
           var4.createStateLayer(0, (byte) -36).b(15658734, 0).setFrameSprites(vn.a(43, 7829367, 10066329, 8947848), 2147483647);
           var4.createStateLayer(1, (byte) -36).setFrameSprites(vn.a(62, 13421772, 10066329, 11184810), 2147483647);
-          var4.createStateLayer(3, (byte) -36).setFrameSprites(vn.a(67, 10066329, 7829367, 8947848), 2147483647).a(1, 2147483647).a(1, (byte) 47);
+          var4.createStateLayer(3, (byte) -36).setFrameSprites(vn.a(67, 10066329, 7829367, 8947848), 2147483647).a(1, 2147483647).setOffsetX(1, (byte) 47);
           var5 = new Sprite[9];
           var17 = new ArgbSprite(32, 32);
           var19 = var17;

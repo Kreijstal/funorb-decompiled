@@ -81,7 +81,7 @@ final class hh {
         return true;
     }
 
-    final boolean a(int param0) {
+    final boolean isEndPressed(int param0) {
         if (param0 != 97) {
           return true;
         }

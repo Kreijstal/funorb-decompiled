@@ -54,7 +54,7 @@ class Sprite extends SpriteState {
         Sprite.drawHalfSizePixels(this.pixels, var5 * this.width + var3, (param1 + (var5 >> 1)) * SoftwareRasterizer.width + (param0 + (var3 >> 1)), (this.width << 1) - (var4 - var3) + (this.width & 1), SoftwareRasterizer.width - (var4 - var3 >> 1), this.width, var4 - var3 >> 1, var6 - var5 >> 1);
     }
 
-    final void f(int param0, int param1, int param2) {
+    final void drawSilhouette(int param0, int param1, int param2) {
         int var10 = 0;
         int var10Lifetime1;
         int var10Lifetime2;
@@ -128,7 +128,7 @@ class Sprite extends SpriteState {
           SoftwareRasterizer.clipRight = param0 + param2;
         }
         while (param0 < SoftwareRasterizer.clipRight) {
-          this.g(param0, param1);
+          this.drawTransparent(param0, param1);
           param0 = param0 + this.fullWidth;
         }
         SoftwareRasterizer.clipRight = var4;
@@ -162,7 +162,7 @@ class Sprite extends SpriteState {
         this.drawRotatedAboutPivot(var5, var6, param0, param1, param2, param3);
     }
 
-    final boolean b(int param0, int param1, int param2, int param3) {
+    final boolean isOpaqueAt(int param0, int param1, int param2, int param3) {
         boolean stackIn_11_0 = false;
         param2 = param2 - (param0 + this.offsetX);
         if (param2 < 0) {
@@ -186,7 +186,7 @@ class Sprite extends SpriteState {
           SoftwareRasterizer.clipBottom = param1 + param2;
         }
         while (param1 < SoftwareRasterizer.clipBottom) {
-          this.g(param0, param1);
+          this.drawTransparent(param0, param1);
           param1 = param1 + this.field_u;
         }
         SoftwareRasterizer.clipBottom = var4;
@@ -248,7 +248,7 @@ class Sprite extends SpriteState {
         }
     }
 
-    private final static void a(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11) {
+    private final static void blitScaled(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11) {
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
@@ -397,7 +397,7 @@ class Sprite extends SpriteState {
         }
     }
 
-    final void e(int param0, int param1) {
+    final void drawMultiply(int param0, int param1) {
         int var9 = 0;
         int var9Lifetime1;
         int var9Lifetime2;
@@ -983,7 +983,7 @@ class Sprite extends SpriteState {
         int var11Lifetime1;
         int var11Lifetime2;
         if (param2 == 256) {
-          this.g(param0, param1);
+          this.drawTransparent(param0, param1);
           return;
         }
         param0 = param0 + this.offsetX;
@@ -1103,7 +1103,7 @@ class Sprite extends SpriteState {
         this.fullWidth = var3Lifetime3;
     }
 
-    void i(int param0, int param1, int param2) {
+    void drawTintedGrayscale(int param0, int param1, int param2) {
         int var10 = 0;
         int var10Lifetime1;
         int var10Lifetime2;
@@ -1334,7 +1334,7 @@ class Sprite extends SpriteState {
         this.pixels = var2;
     }
 
-    void f(int param0, int param1, int param2, int param3) {
+    void drawScaled(int param0, int param1, int param2, int param3) {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -1401,7 +1401,7 @@ class Sprite extends SpriteState {
             var7 = var7 + var11 * var15Lifetime2;
             var14 = var14 + var15Lifetime2;
           }
-          Sprite.a(SoftwareRasterizer.pixels, this.pixels, 0, var7, var8, var13Lifetime2, var14, param2, param3, var11, var12, var5);
+          Sprite.blitScaled(SoftwareRasterizer.pixels, this.pixels, 0, var7, var8, var13Lifetime2, var14, param2, param3, var11, var12, var5);
           return;
         }
     }
@@ -1458,12 +1458,12 @@ class Sprite extends SpriteState {
         }
     }
 
-    void d(int param0, int param1, int param2) {
+    void drawTransparentWithOpacity(int param0, int param1, int param2) {
         int var10 = 0;
         int var10Lifetime1;
         int var10Lifetime2;
         if (param2 == 256) {
-          this.g(param0, param1);
+          this.drawTransparent(param0, param1);
           return;
         }
         param0 = param0 + this.offsetX;
@@ -1927,7 +1927,7 @@ class Sprite extends SpriteState {
         }
     }
 
-    void c(int param0, int param1) {
+    void drawOpaque(int param0, int param1) {
         int var9 = 0;
         int var9Lifetime1;
         int var9Lifetime2;
@@ -1973,7 +1973,7 @@ class Sprite extends SpriteState {
         }
     }
 
-    void a(int param0, int param1, int param2, int param3, int param4) {
+    void drawScaledAlpha(int param0, int param1, int param2, int param3, int param4) {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -2040,7 +2040,7 @@ class Sprite extends SpriteState {
             var8 = var8 + var12 * var16Lifetime2;
             var15 = var15 + var16Lifetime2;
           }
-          Sprite.a(SoftwareRasterizer.pixels, this.pixels, 0, var8, var9, var14Lifetime2, var15, param2, param3, var12, var13, var6, param4);
+          Sprite.blitScaledAlpha(SoftwareRasterizer.pixels, this.pixels, 0, var8, var9, var14Lifetime2, var15, param2, param3, var12, var13, var6, param4);
           return;
         }
     }
@@ -2072,7 +2072,7 @@ class Sprite extends SpriteState {
         }
     }
 
-    void g(int param0, int param1) {
+    void drawTransparent(int param0, int param1) {
         int var9 = 0;
         int var9Lifetime1;
         int var9Lifetime2;
@@ -2292,7 +2292,7 @@ class Sprite extends SpriteState {
         }
     }
 
-    private final static void a(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12) {
+    private final static void blitScaledAlpha(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12) {
         int var15 = 0;
         int var16 = 0;
         int var17 = 0;

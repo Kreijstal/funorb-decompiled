@@ -184,10 +184,10 @@ final class AgeValidator extends TextInputValidator {
                     var18 = 0;
                     var13Lifetime1 = var18;
                     while (var9 > var18) {
-                      var12[var18] = mq.a(var10[var18], (byte) -119);
+                      var12[var18] = mq.loadClassOrPrimitive(var10[var18], (byte) -119);
                       var18++;
                     }
-                    var19.field_l[var5] = param2.a(var12, false, mq.a(var21, (byte) -123), var22);
+                    var19.field_l[var5] = param2.a(var12, false, mq.loadClassOrPrimitive(var21, (byte) -123), var22);
                     var19.field_o[var5] = var23;
                   }
                 } else {
@@ -201,7 +201,7 @@ final class AgeValidator extends TextInputValidator {
                   }
                   var19.field_i[var5] = var6_int;
                   var19.field_q[var5] = var9;
-                  var19.field_m[var5] = param2.a((byte) -89, var16, mq.a(var17, (byte) -29));
+                  var19.field_m[var5] = param2.a((byte) -89, var16, mq.loadClassOrPrimitive(var17, (byte) -29));
                 }
               } catch (java.lang.ClassNotFoundException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;

@@ -333,7 +333,7 @@ final class MusicPatch extends IntrusiveNode {
               } else {
                 var20Lifetime2 = var18[var21++];
               }
-              var22 = var38.a(0);
+              var22 = var38.readVarInt(0);
             }
             this.field_g[var23] = (short)(this.field_g[var23] + (ScrollPane.b(2, -1 + var22) << 14));
             var20Lifetime2--;

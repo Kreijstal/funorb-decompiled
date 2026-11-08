@@ -9,26 +9,26 @@ final class VorbisCodebook {
     private float[][] field_d;
     int field_e;
 
-    private final static int a(int param0, int param1) {
+    private final static int lookup1Values(int param0, int param1) {
         int var2 = 0;
         for (var2 = (int)Math.pow((double)param0, 1.0 / (double)param1) + 1; og.a(var2, 200, param1) > param0; var2--) {
         }
         return var2;
     }
 
-    final float[] c() {
-        return this.field_d[this.a()];
+    final float[] decodeVector() {
+        return this.field_d[this.decodeScalar()];
     }
 
-    final int a() {
+    final int decodeScalar() {
         int var1 = 0;
         while (this.field_a[var1] >= 0) {
-          var1 = VorbisSample.b() != 0 ? this.field_a[var1] : var1 + 1;
+          var1 = VorbisSample.readBit() != 0 ? this.field_a[var1] : var1 + 1;
         }
         return ~this.field_a[var1];
     }
 
-    private final void b() {
+    private final void buildHuffmanTree() {
         int[] var2_ref_int__;
         int var2;
         int var3;
@@ -153,17 +153,17 @@ final class VorbisCodebook {
         int var2Lifetime1;
         int var5Lifetime1;
         int var8Lifetime1;
-        VorbisSample.a(24);
-        this.field_e = VorbisSample.a(16);
-        this.field_f = VorbisSample.a(24);
+        VorbisSample.readBits(24);
+        this.field_e = VorbisSample.readBits(16);
+        this.field_f = VorbisSample.readBits(24);
         this.field_c = new int[this.field_f];
-        stackIn_3_0 = (VorbisSample.b() == 0) ? 0 : 1;
+        stackIn_3_0 = (VorbisSample.readBit() == 0) ? 0 : 1;
         var1 = stackIn_3_0;
         if (var1 != 0) {
           var2 = 0;
-          var3_int = VorbisSample.a(5) + 1;
+          var3_int = VorbisSample.readBits(5) + 1;
           while (var2 < this.field_f) {
-            var4_int = VorbisSample.a(mb.a((byte) -31, this.field_f - var2));
+            var4_int = VorbisSample.readBits(mb.a((byte) -31, this.field_f - var2));
             for (var5 = 0; var5 < var4_int; var5++) {
               incrementValue$0 = var2;
               var2++;
@@ -172,36 +172,36 @@ final class VorbisCodebook {
             var3_int++;
           }
         } else {
-          stackIn_13_0 = (VorbisSample.b() == 0) ? 0 : 1;
+          stackIn_13_0 = (VorbisSample.readBit() == 0) ? 0 : 1;
           var2 = stackIn_13_0;
           var14 = 0;
           var3_int = var14;
           while (var14 < this.field_f) {
             if (var2 != 0 &&
-              VorbisSample.b() == 0) {
+              VorbisSample.readBit() == 0) {
               this.field_c[var14] = 0;
             } else {
-              this.field_c[var14] = VorbisSample.a(5) + 1;
+              this.field_c[var14] = VorbisSample.readBits(5) + 1;
             }
             var14++;
           }
         }
-        this.b();
-        var2Lifetime1 = VorbisSample.a(4);
+        this.buildHuffmanTree();
+        var2Lifetime1 = VorbisSample.readBits(4);
         if (var2Lifetime1 > 0) {
-          var3 = VorbisSample.d(VorbisSample.a(32));
-          var4 = VorbisSample.d(VorbisSample.a(32));
-          var5Lifetime1 = VorbisSample.a(4) + 1;
-          stackIn_25_0 = (VorbisSample.b() == 0) ? 0 : 1;
+          var3 = VorbisSample.unpackFloat(VorbisSample.readBits(32));
+          var4 = VorbisSample.unpackFloat(VorbisSample.readBits(32));
+          var5Lifetime1 = VorbisSample.readBits(4) + 1;
+          stackIn_25_0 = (VorbisSample.readBit() == 0) ? 0 : 1;
           var6 = stackIn_25_0;
           if (var2Lifetime1 != 1) {
             var7 = this.field_f * this.field_e;
           } else {
-            var7 = VorbisCodebook.a(this.field_f, this.field_e);
+            var7 = VorbisCodebook.lookup1Values(this.field_f, this.field_e);
           }
           this.field_b = new int[var7];
           for (var8 = 0; var8 < var7; var8++) {
-            this.field_b[var8] = VorbisSample.a(var5Lifetime1);
+            this.field_b[var8] = VorbisSample.readBits(var5Lifetime1);
           }
           this.field_d = new float[this.field_f][this.field_e];
           if (var2Lifetime1 != 1) {

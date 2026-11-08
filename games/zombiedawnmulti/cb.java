@@ -277,7 +277,7 @@ final class cb extends IntrusiveNode {
           var3.g(0, 0, 6707010);
           if (this.field_s == 0) {
             SoftwareRasterizer.fillRectAlpha(5, 5, -10 + this.field_k, this.field_h - 10, 0, 96);
-            pb.field_e.a(ro.field_N, this.field_k / 2, 32, 16777215, 0, 128);
+            pb.field_e.drawCenteredAlpha(ro.field_N, this.field_k / 2, 32, 16777215, 0, 128);
           } else {
             if (19 > this.field_m) {
               var4 = MarkerSliderPainter.field_b[this.field_m];
@@ -292,7 +292,7 @@ final class cb extends IntrusiveNode {
                 }
               }
             }
-            var4.g((var3.width - var4.width) / 2, (var3.height - var4.height) / 2 + 4);
+            var4.drawTransparent((var3.width - var4.width) / 2, (var3.height - var4.height) / 2 + 4);
           }
         } else {
           if (this.field_m < 44) {
@@ -301,7 +301,7 @@ final class cb extends IntrusiveNode {
             }
             if (this.field_s == 0) {
               SoftwareRasterizer.fillRectAlpha(5, 5, -10 + this.field_k, this.field_h - 10, 0, 96);
-              pb.field_e.a(ro.field_N, this.field_k / 2, 32, 16777215, 0, 128);
+              pb.field_e.drawCenteredAlpha(ro.field_N, this.field_k / 2, 32, 16777215, 0, 128);
             } else {
               if (19 > this.field_m) {
                 var4 = MarkerSliderPainter.field_b[this.field_m];
@@ -311,21 +311,21 @@ final class cb extends IntrusiveNode {
                 } else {
                   if (this.field_m > 38) {
                     var4 = MarkerSliderPainter.field_b[26 + (this.field_m - 44)];
-                    var4.g((var3.width - var4.width) / 2, (var3.height - var4.height) / 2 + 4);
+                    var4.drawTransparent((var3.width - var4.width) / 2, (var3.height - var4.height) / 2 + 4);
                     g.d();
                     return;
                   }
                   var4 = MarkerSliderPainter.field_b[-32 + (this.field_m + 19)];
                 }
               }
-              var4.g((var3.width - var4.width) / 2, (var3.height - var4.height) / 2 + 4);
+              var4.drawTransparent((var3.width - var4.width) / 2, (var3.height - var4.height) / 2 + 4);
             }
           } else {
             if (this.field_m <= 62) {
               var3.g(0, 0, 1922601);
               if (this.field_s == 0) {
                 SoftwareRasterizer.fillRectAlpha(5, 5, -10 + this.field_k, this.field_h - 10, 0, 96);
-                pb.field_e.a(ro.field_N, this.field_k / 2, 32, 16777215, 0, 128);
+                pb.field_e.drawCenteredAlpha(ro.field_N, this.field_k / 2, 32, 16777215, 0, 128);
               } else {
                 if (19 > this.field_m) {
                   var4 = MarkerSliderPainter.field_b[this.field_m];
@@ -340,7 +340,7 @@ final class cb extends IntrusiveNode {
                     }
                   }
                 }
-                var4.g((var3.width - var4.width) / 2, (var3.height - var4.height) / 2 + 4);
+                var4.drawTransparent((var3.width - var4.width) / 2, (var3.height - var4.height) / 2 + 4);
               }
             } else {
               if (!IntrusiveDequeCursor.a(this.field_m, false)) {
@@ -355,10 +355,10 @@ final class cb extends IntrusiveNode {
                   } else {
                     var4 = MarkerSliderPainter.field_b[this.field_m];
                   }
-                  var4.g((var3.width - var4.width) / 2, (var3.height - var4.height) / 2 + 4);
+                  var4.drawTransparent((var3.width - var4.width) / 2, (var3.height - var4.height) / 2 + 4);
                 } else {
                   SoftwareRasterizer.fillRectAlpha(5, 5, -10 + this.field_k, this.field_h - 10, 0, 96);
-                  pb.field_e.a(ro.field_N, this.field_k / 2, 32, 16777215, 0, 128);
+                  pb.field_e.drawCenteredAlpha(ro.field_N, this.field_k / 2, 32, 16777215, 0, 128);
                 }
               } else {
                 var3.g(0, 0, 4202528);
@@ -373,15 +373,15 @@ final class cb extends IntrusiveNode {
                         var4 = MarkerSliderPainter.field_b[26 + (this.field_m - 44)];
                       }
                     }
-                    var4.g((var3.width - var4.width) / 2, (var3.height - var4.height) / 2 + 4);
+                    var4.drawTransparent((var3.width - var4.width) / 2, (var3.height - var4.height) / 2 + 4);
                     g.d();
                     return;
                   }
                   var4 = MarkerSliderPainter.field_b[this.field_m];
-                  var4.g((var3.width - var4.width) / 2, (var3.height - var4.height) / 2 + 4);
+                  var4.drawTransparent((var3.width - var4.width) / 2, (var3.height - var4.height) / 2 + 4);
                 } else {
                   SoftwareRasterizer.fillRectAlpha(5, 5, -10 + this.field_k, this.field_h - 10, 0, 96);
-                  pb.field_e.a(ro.field_N, this.field_k / 2, 32, 16777215, 0, 128);
+                  pb.field_e.drawCenteredAlpha(ro.field_N, this.field_k / 2, 32, 16777215, 0, 128);
                 }
               }
             }

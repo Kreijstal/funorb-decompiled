@@ -26,7 +26,7 @@ abstract class qb {
         Throwable var2 = null;
         Throwable decompiledCaughtException = null;
         if (param0 != 31) {
-          qb.c((byte) -24);
+          qb.releaseStatics((byte) -24);
         }
         if (on.field_Z == null) {
           return;
@@ -48,7 +48,7 @@ abstract class qb {
     final static void a(int param0, byte param1, pd param2, int param3) {
         try {
           if (param1 > -101) {
-            qb.c((byte) 57);
+            qb.releaseStatics((byte) 57);
           }
           MusicPatch.field_l = param2;
           la.field_m = param0;
@@ -58,7 +58,7 @@ abstract class qb {
         }
     }
 
-    public static void c(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_e = null;
         if (param0 == -7) {
           field_o = null;

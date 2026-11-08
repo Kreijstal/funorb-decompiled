@@ -65,15 +65,15 @@ final class ak {
             try {
               var4 = param1.getCodeBase();
               var3 = DebouncedValidationProvider.a(param1, true, var4).getFile();
-              JavaScriptBridge.a(param1, "updatelinks", (byte) 23, new Object[]{"home", var3 + "home.ws"});
-              JavaScriptBridge.a(param1, "updatelinks", (byte) 23, new Object[]{"gamelist", var3 + "togamelist.ws"});
+              JavaScriptBridge.callFunctionWithArgs(param1, "updatelinks", (byte) 23, new Object[]{"home", var3 + "home.ws"});
+              JavaScriptBridge.callFunctionWithArgs(param1, "updatelinks", (byte) 23, new Object[]{"gamelist", var3 + "togamelist.ws"});
               if (param0 != 14158) {
                 field_a = (int[]) null;
               }
-              JavaScriptBridge.a(param1, "updatelinks", (byte) 23, new Object[]{"serverlist", var3 + "toserverlist.ws"});
-              JavaScriptBridge.a(param1, "updatelinks", (byte) 23, new Object[]{"options", var3 + "options.ws"});
-              JavaScriptBridge.a(param1, "updatelinks", (byte) 23, new Object[]{"terms", var3 + "terms.ws"});
-              JavaScriptBridge.a(param1, "updatelinks", (byte) 23, new Object[]{"privacy", var3 + "privacy.ws"});
+              JavaScriptBridge.callFunctionWithArgs(param1, "updatelinks", (byte) 23, new Object[]{"serverlist", var3 + "toserverlist.ws"});
+              JavaScriptBridge.callFunctionWithArgs(param1, "updatelinks", (byte) 23, new Object[]{"options", var3 + "options.ws"});
+              JavaScriptBridge.callFunctionWithArgs(param1, "updatelinks", (byte) 23, new Object[]{"terms", var3 + "terms.ws"});
+              JavaScriptBridge.callFunctionWithArgs(param1, "updatelinks", (byte) 23, new Object[]{"privacy", var3 + "privacy.ws"});
               return;
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
@@ -117,10 +117,10 @@ final class ak {
         SimHuman.field_fb.a(param3, param4, param1);
         vo.field_p.h(param3, -5 + param1 + param4, param0);
         GradientOutlineTextPainter.field_s.a(param0 + param3 - 5, param4, param1);
-        rp.field_r[0].c(param3, param4);
-        rp.field_r[1].c(param0 + param3 - 5, param4);
-        rp.field_r[2].c(param3, param2 + param4 + param1);
-        rp.field_r[3].c(param3 + param0 - 5, -5 + param4 + param1);
+        rp.field_r[0].drawOpaque(param3, param4);
+        rp.field_r[1].drawOpaque(param0 + param3 - 5, param4);
+        rp.field_r[2].drawOpaque(param3, param2 + param4 + param1);
+        rp.field_r[3].drawOpaque(param3 + param0 - 5, -5 + param4 + param1);
     }
 
     public final String toString() {

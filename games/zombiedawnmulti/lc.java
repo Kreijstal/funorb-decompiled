@@ -38,12 +38,12 @@ final class lc extends IntrusiveNode {
         return this.field_q;
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_i = null;
         field_l = null;
         field_n = null;
         if (param0 != 87) {
-          lc.a((byte) -116);
+          lc.releaseStatics((byte) -116);
         }
         field_m = null;
         field_g = null;
@@ -94,7 +94,7 @@ final class lc extends IntrusiveNode {
           }
           var7Lifetime1 = 3 * var3_int / 4;
           SoftwareRasterizer.fillRadialGlow(var4 << 4, var5 << 4, var3_int << 4, 33, var10);
-          MarkerSliderPainter.field_b[this.field_h].a(-var7Lifetime1 + var4, var5 - var7Lifetime1, var7Lifetime1 * 2, var7Lifetime1 * 2, 40 + var3_int);
+          MarkerSliderPainter.field_b[this.field_h].drawScaledAlpha(-var7Lifetime1 + var4, var5 - var7Lifetime1, var7Lifetime1 * 2, var7Lifetime1 * 2, 40 + var3_int);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -244,16 +244,16 @@ final class lc extends IntrusiveNode {
           var10.field_lb = 1;
           var11.field_R = 1;
           LevelFileCatalog.field_d = new UiComponent(0L, var8);
-          LevelFileCatalog.field_d.field_ab = hc.a(pb.a("lobby", param1, -256, "heading"), param0 + 12035);
+          LevelFileCatalog.field_d.field_ab = hc.resetSpriteOffsets(pb.a("lobby", param1, -256, "heading"), param0 + 12035);
           rb.field_d = new UiComponent(0L, (UiComponent) null);
           rb.field_d.field_ab = LabeledChildWidget.a(120, 8421504, 0, 4210752, false, false);
           NodeHashTableIterator.field_g = new UiComponent(0L, (UiComponent) null);
           NodeHashTableIterator.field_g.field_ab = tg.a(1, 114, 6316128, 3, 6316128, 108);
           kd.field_a = new UiComponent(0L, (UiComponent) null);
-          kd.field_a.field_ab = hc.a(pb.a("lobby", param1, param0 ^ 12285, "popup"), 0);
-          var12 = hc.a(pb.a("lobby", param1, -256, "popup_mouseover"), 0);
+          kd.field_a.field_ab = hc.resetSpriteOffsets(pb.a("lobby", param1, param0 ^ 12285, "popup"), 0);
+          var12 = hc.resetSpriteOffsets(pb.a("lobby", param1, -256, "popup_mouseover"), 0);
           var13 = pb.a("lobby", param1, -256, "button");
-          var14 = hc.a(pb.a("lobby", param1, -256, "tab_active"), 0);
+          var14 = hc.resetSpriteOffsets(pb.a("lobby", param1, -256, "tab_active"), 0);
           kc.field_c = new UiComponent(0L, var8);
           kc.field_c.field_ab = var14;
           jf.field_a = new UiComponent(0L, (UiComponent) null);
@@ -310,8 +310,8 @@ final class lc extends IntrusiveNode {
           ProgressDialog.field_gb.field_R = 1;
           ProxySocketConnector.field_i = new UiComponent(0L, cm.field_b);
           ProxySocketConnector.field_i.field_R = 1;
-          ProxySocketConnector.field_i.field_ab = hc.a(pb.a("lobby", param1, -256, "tab_inactive"), 0);
-          ProxySocketConnector.field_i.field_X = hc.a(pb.a("lobby", param1, -256, "tab_mouseover"), 0);
+          ProxySocketConnector.field_i.field_ab = hc.resetSpriteOffsets(pb.a("lobby", param1, -256, "tab_inactive"), 0);
+          ProxySocketConnector.field_i.field_X = hc.resetSpriteOffsets(pb.a("lobby", param1, -256, "tab_mouseover"), 0);
           ProxySocketConnector.field_i.field_gb = var14;
           aa.field_l = new UiComponent(0L, (UiComponent) null);
           aa.field_l.field_ab = tg.a(-1, 206, 1127256, 3, 1856141, 32);
@@ -336,43 +336,43 @@ final class lc extends IntrusiveNode {
           ra.field_j = new UiComponent(0L, tj.field_b);
           SpriteState.field_v = new UiComponent(0L, tj.field_b);
           uq.field_d = new UiComponent(0L, tj.field_b);
-          tj.field_b.field_ab = hc.a(pb.a("lobby", param1, param0 + 11779, "smallbutton"), 0);
-          tj.field_b.field_X = hc.a(pb.a("lobby", param1, -256, "smallbutton_mouseover"), 0);
-          dupTemp$0 = hc.a(pb.a("lobby", param1, -256, "smallbutton_active"), 0);
+          tj.field_b.field_ab = hc.resetSpriteOffsets(pb.a("lobby", param1, param0 + 11779, "smallbutton"), 0);
+          tj.field_b.field_X = hc.resetSpriteOffsets(pb.a("lobby", param1, -256, "smallbutton_mouseover"), 0);
+          dupTemp$0 = hc.resetSpriteOffsets(pb.a("lobby", param1, -256, "smallbutton_active"), 0);
           tj.field_b.field_gb = dupTemp$0;
           tj.field_b.field_S = dupTemp$0;
-          tj.field_b.field_Bb = hc.a(pb.a("lobby", param1, -256, "smallbutton_disabled"), 0);
-          GameWorld.field_n.field_ab = hc.a(pb.a("lobby", param1, -256, "mediumbutton"), 0);
-          GameWorld.field_n.field_X = hc.a(pb.a("lobby", param1, -256, "mediumbutton_mouseover"), param0 ^ param0);
-          GameWorld.field_n.field_S = hc.a(pb.a("lobby", param1, -256, "mediumbutton_mouseheld"), 0);
-          LinkButtonPainter.field_i.field_ab = hc.a(pb.a("lobby", param1, -256, "bigbutton"), 0);
-          LinkButtonPainter.field_i.field_X = hc.a(pb.a("lobby", param1, -256, "bigbutton_mouseover"), 0);
-          LinkButtonPainter.field_i.field_S = hc.a(pb.a("lobby", param1, -256, "bigbutton_mouseheld"), param0 ^ -12035);
-          LinkButtonPainter.field_i.field_Bb = hc.a(pb.a("lobby", param1, param0 ^ 12285, "bigbutton_disabled"), param0 + 12035);
-          fd.field_O.field_ab = hc.a(pb.a("lobby", param1, param0 ^ 12285, "greenbutton"), 0);
-          fd.field_O.field_X = hc.a(pb.a("lobby", param1, param0 + 11779, "greenbutton_mouseover"), 0);
-          fd.field_O.field_S = hc.a(pb.a("lobby", param1, param0 ^ 12285, "greenbutton_mouseheld"), 0);
-          de.field_f.field_ab = hc.a(pb.a("lobby", param1, param0 + 11779, "redbutton"), 0);
-          de.field_f.field_X = hc.a(pb.a("lobby", param1, -256, "redbutton_mouseover"), 0);
-          de.field_f.field_S = hc.a(pb.a("lobby", param1, -256, "redbutton_mouseheld"), 0);
-          DiskCacheWorker.field_c.field_ab = hc.a(pb.a("lobby", param1, -256, "backbutton"), param0 + 12035);
-          DiskCacheWorker.field_c.field_X = hc.a(pb.a("lobby", param1, -256, "backbutton_mouseover"), 0);
-          DiskCacheWorker.field_c.field_S = hc.a(pb.a("lobby", param1, param0 + 11779, "backbutton_mouseheld"), 0);
-          DiskCacheWorker.field_c.field_Bb = hc.a(pb.a("lobby", param1, -256, "backbutton_disabled"), 0);
-          uq.field_d.field_ab = hc.a(pb.a("lobby", param1, param0 + 11779, "gameoptionbutton"), param0 ^ -12035);
-          uq.field_d.field_X = hc.a(pb.a("lobby", param1, param0 + 11779, "gameoptionbutton_mouseover"), 0);
-          dupTemp$1 = hc.a(pb.a("lobby", param1, -256, "gameoptionbutton_active"), 0);
+          tj.field_b.field_Bb = hc.resetSpriteOffsets(pb.a("lobby", param1, -256, "smallbutton_disabled"), 0);
+          GameWorld.field_n.field_ab = hc.resetSpriteOffsets(pb.a("lobby", param1, -256, "mediumbutton"), 0);
+          GameWorld.field_n.field_X = hc.resetSpriteOffsets(pb.a("lobby", param1, -256, "mediumbutton_mouseover"), param0 ^ param0);
+          GameWorld.field_n.field_S = hc.resetSpriteOffsets(pb.a("lobby", param1, -256, "mediumbutton_mouseheld"), 0);
+          LinkButtonPainter.field_i.field_ab = hc.resetSpriteOffsets(pb.a("lobby", param1, -256, "bigbutton"), 0);
+          LinkButtonPainter.field_i.field_X = hc.resetSpriteOffsets(pb.a("lobby", param1, -256, "bigbutton_mouseover"), 0);
+          LinkButtonPainter.field_i.field_S = hc.resetSpriteOffsets(pb.a("lobby", param1, -256, "bigbutton_mouseheld"), param0 ^ -12035);
+          LinkButtonPainter.field_i.field_Bb = hc.resetSpriteOffsets(pb.a("lobby", param1, param0 ^ 12285, "bigbutton_disabled"), param0 + 12035);
+          fd.field_O.field_ab = hc.resetSpriteOffsets(pb.a("lobby", param1, param0 ^ 12285, "greenbutton"), 0);
+          fd.field_O.field_X = hc.resetSpriteOffsets(pb.a("lobby", param1, param0 + 11779, "greenbutton_mouseover"), 0);
+          fd.field_O.field_S = hc.resetSpriteOffsets(pb.a("lobby", param1, param0 ^ 12285, "greenbutton_mouseheld"), 0);
+          de.field_f.field_ab = hc.resetSpriteOffsets(pb.a("lobby", param1, param0 + 11779, "redbutton"), 0);
+          de.field_f.field_X = hc.resetSpriteOffsets(pb.a("lobby", param1, -256, "redbutton_mouseover"), 0);
+          de.field_f.field_S = hc.resetSpriteOffsets(pb.a("lobby", param1, -256, "redbutton_mouseheld"), 0);
+          DiskCacheWorker.field_c.field_ab = hc.resetSpriteOffsets(pb.a("lobby", param1, -256, "backbutton"), param0 + 12035);
+          DiskCacheWorker.field_c.field_X = hc.resetSpriteOffsets(pb.a("lobby", param1, -256, "backbutton_mouseover"), 0);
+          DiskCacheWorker.field_c.field_S = hc.resetSpriteOffsets(pb.a("lobby", param1, param0 + 11779, "backbutton_mouseheld"), 0);
+          DiskCacheWorker.field_c.field_Bb = hc.resetSpriteOffsets(pb.a("lobby", param1, -256, "backbutton_disabled"), 0);
+          uq.field_d.field_ab = hc.resetSpriteOffsets(pb.a("lobby", param1, param0 + 11779, "gameoptionbutton"), param0 ^ -12035);
+          uq.field_d.field_X = hc.resetSpriteOffsets(pb.a("lobby", param1, param0 + 11779, "gameoptionbutton_mouseover"), 0);
+          dupTemp$1 = hc.resetSpriteOffsets(pb.a("lobby", param1, -256, "gameoptionbutton_active"), 0);
           uq.field_d.field_gb = dupTemp$1;
           uq.field_d.field_S = dupTemp$1;
-          uq.field_d.field_Bb = hc.a(pb.a("lobby", param1, -256, "gameoptionbutton_disabled"), 0);
-          ra.field_j.field_ab = hc.a(pb.a("lobby", param1, param0 + 11779, "chatbutton"), 0);
-          ra.field_j.field_X = hc.a(pb.a("lobby", param1, -256, "chatbutton_mouseover"), 0);
-          dupTemp$2 = hc.a(pb.a("lobby", param1, param0 + 11779, "chatbutton_active"), param0 ^ -12035);
+          uq.field_d.field_Bb = hc.resetSpriteOffsets(pb.a("lobby", param1, -256, "gameoptionbutton_disabled"), 0);
+          ra.field_j.field_ab = hc.resetSpriteOffsets(pb.a("lobby", param1, param0 + 11779, "chatbutton"), 0);
+          ra.field_j.field_X = hc.resetSpriteOffsets(pb.a("lobby", param1, -256, "chatbutton_mouseover"), 0);
+          dupTemp$2 = hc.resetSpriteOffsets(pb.a("lobby", param1, param0 + 11779, "chatbutton_active"), param0 ^ -12035);
           ra.field_j.field_gb = dupTemp$2;
           ra.field_j.field_S = dupTemp$2;
-          SpriteState.field_v.field_ab = hc.a(pb.a("lobby", param1, -256, "chatfilterbutton"), 0);
-          SpriteState.field_v.field_X = hc.a(pb.a("lobby", param1, param0 + 11779, "chatfilterbutton_mouseover"), 0);
-          dupTemp$3 = hc.a(pb.a("lobby", param1, -256, "chatfilterbutton_active"), 0);
+          SpriteState.field_v.field_ab = hc.resetSpriteOffsets(pb.a("lobby", param1, -256, "chatfilterbutton"), 0);
+          SpriteState.field_v.field_X = hc.resetSpriteOffsets(pb.a("lobby", param1, param0 + 11779, "chatfilterbutton_mouseover"), 0);
+          dupTemp$3 = hc.resetSpriteOffsets(pb.a("lobby", param1, -256, "chatfilterbutton_active"), 0);
           SpriteState.field_v.field_gb = dupTemp$3;
           SpriteState.field_v.field_S = dupTemp$3;
           var17 = pb.a("lobby", param1, -256, "checkbox");
@@ -383,10 +383,10 @@ final class lc extends IntrusiveNode {
           MusicPatch.field_k.field_S = GameEvent.a(fl.a("lobby", "slideregion_mouseheld", param1, 11091), 27117);
           MusicPatch.field_k.field_Bb = GameEvent.a(fl.a("lobby", "slideregion_disabled", param1, 11091), 27117);
           qq.field_c = new UiComponent(0L, (UiComponent) null);
-          qq.field_c.field_ab = hc.a(pb.a("lobby", param1, -256, "dragbar"), 0);
-          qq.field_c.field_X = hc.a(pb.a("lobby", param1, -256, "dragbar_mouseover"), 0);
-          qq.field_c.field_S = hc.a(pb.a("lobby", param1, -256, "dragbar_mouseheld"), param0 + 12035);
-          qq.field_c.field_Bb = hc.a(pb.a("lobby", param1, -256, "dragbar_disabled"), param0 ^ -12035);
+          qq.field_c.field_ab = hc.resetSpriteOffsets(pb.a("lobby", param1, -256, "dragbar"), 0);
+          qq.field_c.field_X = hc.resetSpriteOffsets(pb.a("lobby", param1, -256, "dragbar_mouseover"), 0);
+          qq.field_c.field_S = hc.resetSpriteOffsets(pb.a("lobby", param1, -256, "dragbar_mouseheld"), param0 + 12035);
+          qq.field_c.field_Bb = hc.resetSpriteOffsets(pb.a("lobby", param1, -256, "dragbar_disabled"), param0 ^ -12035);
           mj.field_Mb = new UiComponent(0L, (UiComponent) null);
           mj.field_Mb.field_rb = fl.a("lobby", "upbutton", param1, 11091);
           mj.field_Mb.field_K = fl.a("lobby", "upbutton_mouseover", param1, 11091);

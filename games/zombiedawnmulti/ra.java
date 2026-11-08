@@ -67,7 +67,7 @@ final class ra extends IntrusiveNode {
         }
     }
 
-    public static void b(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_g = null;
         field_f = null;
         field_n = null;

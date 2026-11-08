@@ -57,7 +57,7 @@ final class mq extends MenuScreen {
         var6 = TranslatedUiText.field_e;
         var7 = pb.field_e;
         if (this.field_d == 6) {
-          var7.b(ContextMenu.field_Mb, 320, 300, 16777215, 0);
+          var7.drawCentered(ContextMenu.field_Mb, 320, 300, 16777215, 0);
         }
         var8 = ng.field_e;
         for (var9 = 0; sf.field_b > var9; var9++) {
@@ -76,8 +76,8 @@ final class mq extends MenuScreen {
             var12_ref_ri.drawQuarterSize(var10_int, var11);
           }
         }
-        var7.b(GameWorld.field_E, 320, var8 + 72, 16777215, 0);
-        var7.b(DialogLayer.field_G, 320, 18 + (40 + (var8 + 32)), 14540083, 0);
+        var7.drawCentered(GameWorld.field_E, 320, var8 + 72, 16777215, 0);
+        var7.drawCentered(DialogLayer.field_G, 320, 18 + (40 + (var8 + 32)), 14540083, 0);
         var9Lifetime1 = -1;
         if (this.field_t == -1) {
           if (-1 != this.field_n) {
@@ -88,7 +88,7 @@ final class mq extends MenuScreen {
         }
         if (var9Lifetime1 != -1) {
           var10 = this.g(0, var9Lifetime1);
-          var10.a(110, 140);
+          var10.draw(110, 140);
           var6.drawParagraph(var19[var9Lifetime1], 260, 105, 300, 85, 0, 0, 1, 2, 35);
           var11Lifetime1 = 280;
           var12 = 200;
@@ -102,7 +102,7 @@ final class mq extends MenuScreen {
           var7.c(var4, var11Lifetime1, var12, 16777215, 0);
           var11Lifetime1 = var11Lifetime1 + var7.textWidth(var4);
           for (var17 = 0; ra.field_n[var9Lifetime1] > var17; var17++) {
-            BufferedFile.field_k.g(var17 * (BufferedFile.field_k.fullWidth >> 1) + var11Lifetime1, 2 - BufferedFile.field_k.field_u + var12);
+            BufferedFile.field_k.drawTransparent(var17 * (BufferedFile.field_k.fullWidth >> 1) + var11Lifetime1, 2 - BufferedFile.field_k.field_u + var12);
           }
         }
     }
@@ -167,7 +167,7 @@ final class mq extends MenuScreen {
         return 320 - (this.field_k >> 1);
     }
 
-    final static Class a(String param0, byte param1) throws ClassNotFoundException {
+    final static Class loadClassOrPrimitive(String param0, byte param1) throws ClassNotFoundException {
         RuntimeException var2 = null;
         Class stackIn_2_0 = null;
         Class stackIn_6_0 = null;

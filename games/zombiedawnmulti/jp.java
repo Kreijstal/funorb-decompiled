@@ -62,7 +62,7 @@ final class jp {
           }
           if (decompiledFrameRemainder0) {
             var3 = ProgressDialog.field_lb;
-            var3 = nh.a(2, var3);
+            var3 = nh.prefixWithCrown(2, var3);
             var4 = "";
             var5 = "|";
             var6 = va.field_a;

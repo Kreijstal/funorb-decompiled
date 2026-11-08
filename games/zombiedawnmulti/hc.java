@@ -52,7 +52,7 @@ final class hc {
         field_b = null;
     }
 
-    final static Sprite[] a(Sprite[] param0, int param1) {
+    final static Sprite[] resetSpriteOffsets(Sprite[] param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         Sprite var3 = null;

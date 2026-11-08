@@ -19,7 +19,7 @@ final class ui extends IntrusiveNode {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          VorbisSample.b(param1.a("headers.packvorbis", "", false));
+          VorbisSample.decodeSetup(param1.a("headers.packvorbis", "", false));
           if (param0 != 7478) {
             field_k = (Sprite[]) null;
           }
@@ -154,7 +154,7 @@ final class ui extends IntrusiveNode {
             } else {
               stackIn_34_4 = 1;
             }
-            ((BinaryBitmapFont) (Object) stackIn_33_0).a(stackIn_33_1, stackIn_33_2, stackIn_33_3, stackIn_34_4, -1);
+            ((BinaryBitmapFont) (Object) stackIn_33_0).drawRightAligned(stackIn_33_1, stackIn_33_2, stackIn_33_3, stackIn_34_4, -1);
             SoftwareRasterizer.restoreClip(var13);
             if (hh.field_b &&
               HotspotTextWidget.field_N &&

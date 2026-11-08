@@ -130,7 +130,7 @@ final class BinaryBitmapFont extends BitmapFont {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5, boolean param6) {
+    final void drawGlyph(int param0, int param1, int param2, int param3, int param4, int param5, boolean param6) {
         int var8;
         int var9;
         int var10;

@@ -113,7 +113,7 @@ final class ArgbSprite extends Sprite {
           var5 <= 0) {
           return;
         }
-        ArgbSprite.e(SoftwareRasterizer.pixels, this.pixels, 0, var4, var3, var6, var5, var7, var8);
+        ArgbSprite.blendArgbReversedRows(SoftwareRasterizer.pixels, this.pixels, 0, var4, var3, var6, var5, var7, var8);
     }
 
     final void drawVerticalFlip(int param0, int param1) {
@@ -160,7 +160,7 @@ final class ArgbSprite extends Sprite {
         ArgbSprite.blendArgbRows(SoftwareRasterizer.pixels, this.pixels, 0, var4, var3, var6, var5, var7, var8);
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4) {
+    final void drawScaledAlpha(int param0, int param1, int param2, int param3, int param4) {
         int var14 = 0;
         int var16 = 0;
         int var14Lifetime1;
@@ -221,7 +221,7 @@ final class ArgbSprite extends Sprite {
         ArgbSprite.blitArgbScaledAlpha(SoftwareRasterizer.pixels, this.pixels, 0, var8, var9, var14Lifetime2, var15, param2, param3, var12, var13, var6, param4);
     }
 
-    final void i(int param0, int param1, int param2) {
+    final void drawTintedGrayscale(int param0, int param1, int param2) {
         int var10 = 0;
         int var10Lifetime1;
         int var10Lifetime2;
@@ -450,7 +450,7 @@ final class ArgbSprite extends Sprite {
         }
     }
 
-    final void c(int param0, int param1) {
+    final void drawOpaque(int param0, int param1) {
         int var9 = 0;
         int var9Lifetime1;
         int var9Lifetime2;
@@ -535,7 +535,7 @@ final class ArgbSprite extends Sprite {
           var5 <= 0) {
           return;
         }
-        ArgbSprite.e(SoftwareRasterizer.pixels, this.pixels, 0, var4, var3, var6, var5, var7, var8);
+        ArgbSprite.blendArgbReversedRows(SoftwareRasterizer.pixels, this.pixels, 0, var4, var3, var6, var5, var7, var8);
     }
 
     private final static void e(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
@@ -613,7 +613,7 @@ final class ArgbSprite extends Sprite {
         ArgbSprite.blitArgbAlpha(SoftwareRasterizer.pixels, this.pixels, 0, var5, var4, var7, var6, var8, var9, param2);
     }
 
-    private final static void e(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    private final static void blendArgbReversedRows(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int var10 = 0;
         int var11 = 0;
         int incrementValue$12 = 0;
@@ -641,7 +641,7 @@ final class ArgbSprite extends Sprite {
         }
     }
 
-    final void f(int param0, int param1, int param2, int param3) {
+    final void drawScaled(int param0, int param1, int param2, int param3) {
         int var13 = 0;
         int var15 = 0;
         int var13Lifetime1;
@@ -730,12 +730,12 @@ final class ArgbSprite extends Sprite {
         }
     }
 
-    final void d(int param0, int param1, int param2) {
+    final void drawTransparentWithOpacity(int param0, int param1, int param2) {
         int var10 = 0;
         int var10Lifetime1;
         int var10Lifetime2;
         if (param2 == 256) {
-          this.g(param0, param1);
+          this.drawTransparent(param0, param1);
           return;
         }
         param0 = param0 + this.offsetX;
@@ -822,7 +822,7 @@ final class ArgbSprite extends Sprite {
         ArgbSprite.blendShadedGrayscaleRows(SoftwareRasterizer.pixels, this.pixels, 0, var5, var4, var7, var6, var8, var9, param2);
     }
 
-    final void g(int param0, int param1) {
+    final void drawTransparent(int param0, int param1) {
         int var9 = 0;
         int var9Lifetime1;
         int var9Lifetime2;

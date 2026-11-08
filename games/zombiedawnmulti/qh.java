@@ -42,9 +42,9 @@ final class qh {
           var7 = param2.field_t[param0];
           var8 = cr.a(param0, param1 ^ 30026);
           ol.field_n.c(param4, param3, param5);
-          BirthDateValidator.field_p.a(param4 + 71, param3 + 17, param5);
+          BirthDateValidator.field_p.drawAlpha(param4 + 71, param3 + 17, param5);
           if (param5 < 255) {
-            BirthDateInputWidget.field_X.a(22 + param4, param3 + 77, param5);
+            BirthDateInputWidget.field_X.drawAlpha(22 + param4, param3 + 77, param5);
           } else {
             BirthDateInputWidget.field_X.drawFadedToColour(param4 + 22, param3 + 77, 150 + (on.a(PowerupEvent.field_m * 128, -18924) >> 11), 65535);
           }
@@ -56,7 +56,7 @@ final class qh {
             g.d();
           }
           if (param1 != -29990) {
-            qh.a(-92);
+            qh.releaseStatics(-92);
           }
           hh.field_h.c(param4 + 80, 36 + param3, param5);
           var9 = var7 * 31 / var8;
@@ -86,7 +86,7 @@ final class qh {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_f = null;
         field_d = null;
         field_b = null;

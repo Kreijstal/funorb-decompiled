@@ -60,7 +60,7 @@ final class rj extends SceneObject {
             !(480.0f * param1.zoom < (float)var4)) {
             if (!this.field_G) {
               if (!this.field_H) {
-                DisplayNamePanel.field_X[this.field_C].g(var3_int, var4);
+                DisplayNamePanel.field_X[this.field_C].drawTransparent(var3_int, var4);
               } else {
                 DisplayNamePanel.field_X[this.field_C].drawVerticalFlip(var3_int, var4);
               }

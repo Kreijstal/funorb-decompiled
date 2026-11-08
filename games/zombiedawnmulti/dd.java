@@ -10,7 +10,7 @@ final class dd implements dr {
     static Boolean field_d;
     static Sprite[][] field_f;
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_g = null;
         field_f = (Sprite[][]) null;
         field_c = null;
@@ -230,7 +230,7 @@ final class dd implements dr {
           if (param0 == 0) {
             return;
           }
-          dd.a(false);
+          dd.releaseStatics(false);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

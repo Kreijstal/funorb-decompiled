@@ -39,7 +39,7 @@ final class ResourceArchive {
           var6 = (CharSequence) ((Object) param0);
           var4_int = this.field_k.field_d.a(1481485697, kd.a(var6, -79));
           if (param2) {
-            ResourceArchive.b(((byte[]) (this.field_g[3]))[9]);
+            ResourceArchive.releaseStatics(((byte[]) (this.field_g[3]))[9]);
           }
           if (!this.b(var4_int, -120)) {
             return null;
@@ -152,11 +152,11 @@ final class ResourceArchive {
         }
     }
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_c = null;
         field_h = null;
         if (param0 != -35) {
-          ResourceArchive.b((byte) -55);
+          ResourceArchive.releaseStatics((byte) -55);
         }
         field_m = (String[][]) null;
         field_n = null;
@@ -383,7 +383,7 @@ final class ResourceArchive {
                     var21 = var20;
                   }
                   if (var21 == param3) {
-                    ArrayOperations.a(var43, var17, var44, var14_intLifetime1, var19);
+                    ArrayOperations.copy(var43, var17, var44, var14_intLifetime1, var19);
                     var14_intLifetime1 = var14_intLifetime1 + var19;
                   }
                   var17 = var17 + var19;
@@ -421,7 +421,7 @@ final class ResourceArchive {
                 var18 = 0;
                 for (var19 = 0; var19 < var5_int; var19++) {
                   var18 = var18 + var31.readInt(-1478490344);
-                  ArrayOperations.a(var43, var16, var40[var19], var39[var19], var18);
+                  ArrayOperations.copy(var43, var16, var40[var19], var39[var19], var18);
                   var16 = var16 + var18;
                   var14[var19] = var14[var19] + var18;
                 }
@@ -751,7 +751,7 @@ final class ResourceArchive {
 
     final synchronized byte[] a(byte param0, int param1) {
         if (param0 != -77) {
-          ResourceArchive.b((byte) -63);
+          ResourceArchive.releaseStatics((byte) -63);
         }
         if (!this.a((byte) -128)) {
           return null;

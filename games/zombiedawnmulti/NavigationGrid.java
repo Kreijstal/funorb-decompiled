@@ -457,7 +457,7 @@ final class NavigationGrid {
                 var15Lifetime1 = (var14Lifetime1 & 127) >> 0;
                 if (var15Lifetime1 >= 0 &&
                   rn.field_a.length > var15Lifetime1) {
-                  rn.field_a[var15Lifetime1].c(var3_int, var4);
+                  rn.field_a[var15Lifetime1].drawOpaque(var3_int, var4);
                 } else {
                   SoftwareRasterizer.fillRect(var3_int, var4, 24, 24, 7631988);
                 }
@@ -859,7 +859,7 @@ final class NavigationGrid {
                           if ((var10 & 134217728) > 0) {
                             var16.drawVerticalFlip(var5_int, var6);
                           } else {
-                            var16.g(var5_int, var6);
+                            var16.drawTransparent(var5_int, var6);
                           }
                         }
                       }
@@ -930,7 +930,7 @@ final class NavigationGrid {
                             if ((var10 & 536870912) > 0) {
                               var15.drawVerticalFlip(var5_int, var6);
                             } else {
-                              var15.g(var5_int, var6);
+                              var15.drawTransparent(var5_int, var6);
                             }
                           } else {
                             var15.drawHorizontalFlip(var5_int, var6);

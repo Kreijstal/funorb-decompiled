@@ -223,9 +223,9 @@ abstract class SingleChildWidget extends UiWidget implements ChildWidgetOwner {
         return var2;
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 != -39) {
-          SingleChildWidget.a((byte) 21);
+          SingleChildWidget.releaseStatics((byte) 21);
         }
         field_D = null;
         field_C = null;

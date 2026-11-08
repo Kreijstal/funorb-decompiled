@@ -55,7 +55,7 @@ final class CipherPacketBuffer extends PacketBuffer {
         var12 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           if (param0 < 31) {
-            CipherPacketBuffer.j(81);
+            CipherPacketBuffer.releaseStatics(81);
           }
           var13 = s.field_e;
           var15 = var13;
@@ -279,7 +279,7 @@ final class CipherPacketBuffer extends PacketBuffer {
         }
     }
 
-    public static void j(int param0) {
+    public static void releaseStatics(int param0) {
         field_t = null;
         field_u = null;
         field_s = null;

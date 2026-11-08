@@ -197,11 +197,11 @@ final class ol extends MenuScreen {
                 TranslatedUiText.field_e.c(DisplayNamePanel.field_J[0][1], 20, 210 + var5, 2, 0);
                 pb.field_e.drawParagraph(DisplayNamePanel.field_S[0][1], 20, 230 + var5, var3, 440, 16777215, 0, 0, 0, var2);
                 if (var7 != 0) {
-                  pb.field_e.a(ReportAbuseDialog.a(120, 1 + DisplayNamePanel.field_S.length, 1 + this.field_m), 620, 410, 16777215, 0);
+                  pb.field_e.drawRightAligned(ReportAbuseDialog.a(120, 1 + DisplayNamePanel.field_S.length, 1 + this.field_m), 620, 410, 16777215, 0);
                   break regionExit1;
                 }
-                AccountCreationDialog.field_Hb[0].g(530, 150);
-                AccountCreationDialog.field_Hb[1].g(230, 242);
+                AccountCreationDialog.field_Hb[0].drawTransparent(530, 150);
+                AccountCreationDialog.field_Hb[1].drawTransparent(230, 242);
                 if (var16 == 0) {
                   break;
                 }
@@ -212,19 +212,19 @@ final class ol extends MenuScreen {
                 TranslatedUiText.field_e.c(DisplayNamePanel.field_J[1][0], 20, 135, 2, 0);
                 stackIn_27_0 = (var7 == 0) ? 340 : 400;
                 var8 = stackIn_27_0;
-                TriangleMesh.field_N[1].g(-50 + var6, -8 + var9);
+                TriangleMesh.field_N[1].drawTransparent(-50 + var6, -8 + var9);
                 var9 = var9 + (var10 + var2 * pb.field_e.drawParagraph(DisplayNamePanel.field_S[1][0], var6, var9, var8, 50, 16777215, 0, 0, 0, var2));
                 var11 = var6 - 95;
                 var12 = -20 + var9;
                 var9 = var9 + (pb.field_e.drawParagraph(DisplayNamePanel.field_S[1][1], var6, var9, var8, 50, 16777215, 0, 0, 0, var2) * var2 + var10);
-                pp.field_q[3].a(-31 + var6, 3 + var9);
-                TriangleMesh.field_N[3].g(var6 - 20, var9 + 15);
+                pp.field_q[3].draw(-31 + var6, 3 + var9);
+                TriangleMesh.field_N[3].drawTransparent(var6 - 20, var9 + 15);
                 var9 = var9 + (var2 * pb.field_e.drawParagraph(DisplayNamePanel.field_S[1][2], var6, var9, var8, 50, 16777215, 0, 0, 0, var2) + var10);
-                TriangleMesh.field_N[5].g(-46 + var6, 2 + var9);
+                TriangleMesh.field_N[5].drawTransparent(-46 + var6, 2 + var9);
                 var9 = var9 + (var2 * pb.field_e.drawParagraph(DisplayNamePanel.field_S[1][3], var6, var9, var8, 50, 16777215, 0, 0, 0, var2) + var10);
-                TriangleMesh.field_N[6].g(-60 + var6, var9 - 20);
+                TriangleMesh.field_N[6].drawTransparent(-60 + var6, var9 - 20);
                 var9 = var9 + (var2 * pb.field_e.drawParagraph(DisplayNamePanel.field_S[1][4], var6, var9, var8, 50, 16777215, 0, 0, 0, var2) + var10);
-                TriangleMesh.field_N[0].g(var11, var12);
+                TriangleMesh.field_N[0].drawTransparent(var11, var12);
                 QuickChatCategoryRegistry.field_d[0].c(var11 - 8, var12 - 4, 128);
                 QuickChatCategoryRegistry.field_d[0].c(var11 + 13, var12 + 14, 128);
                 QuickChatCategoryRegistry.field_d[0].c(var11 + 41, var12 + 11, 128);
@@ -239,24 +239,24 @@ final class ol extends MenuScreen {
                 var2 -= 4;
                 var10 = 35;
                 TranslatedUiText.field_e.c(DisplayNamePanel.field_J[2][0], 20, 135, 2, 0);
-                pp.field_q[8].a(var6 - 36, var9 + 4);
-                TriangleMesh.field_N[3].g(-25 + var6, var9 + 15);
+                pp.field_q[8].draw(var6 - 36, var9 + 4);
+                TriangleMesh.field_N[3].drawTransparent(-25 + var6, var9 + 15);
                 var9 = var9 + (var10 + var2 * pb.field_e.drawParagraph(DisplayNamePanel.field_S[2][0], var6, var9, 340, 50, 16777215, 0, 0, 0, var2));
-                TriangleMesh.field_N[4].g(var6 - 110, -10 + var9);
+                TriangleMesh.field_N[4].drawTransparent(var6 - 110, -10 + var9);
                 QuickChatCategoryRegistry.field_d[0].c(-54 + var6, -3 + var9, 128);
-                TriangleMesh.field_N[3].g(var6 - 25, 30 + var9);
+                TriangleMesh.field_N[3].drawTransparent(var6 - 25, 30 + var9);
                 var9 = var9 + (var10 + var2 * pb.field_e.drawParagraph(DisplayNamePanel.field_S[2][1], var6, var9, 340, 50, 16777215, 0, 0, 0, var2));
-                TriangleMesh.field_N[7].g(var6 - 63, 10 + var9);
+                TriangleMesh.field_N[7].drawTransparent(var6 - 63, 10 + var9);
                 var9 = var9 + (var2 * pb.field_e.drawParagraph(DisplayNamePanel.field_S[2][2], var6, var9, 340, 50, 16777215, 0, 0, 0, var2) + var10);
-                TriangleMesh.field_N[9].g(var6 - 94, var9 + 10);
+                TriangleMesh.field_N[9].drawTransparent(var6 - 94, var9 + 10);
                 var9 = var9 + (var10 + var2 * pb.field_e.drawParagraph(DisplayNamePanel.field_S[2][3], var6, var9, 340, 50, 16777215, 0, 0, 0, var2));
                 if (var16 == 0) {
                   break;
                 }
               case 3:
                 TranslatedUiText.field_e.c(DisplayNamePanel.field_J[3][0], 20, 135, 2, 0);
-                rb.field_e[0].g(18, 148);
-                rb.field_e[1].g(8, 235);
+                rb.field_e[0].drawTransparent(18, 148);
+                rb.field_e[1].drawTransparent(8, 235);
                 TranslatedUiText.field_e.c("1/5", 100, 202, 2, -1);
                 TranslatedUiText.field_e.c("2:15", 85, 365, 0, -1);
                 var4 = pb.field_e.drawParagraph(DisplayNamePanel.field_S[3][0], 165, 170, var3 - 150, 440, 16777215, 0, 0, 0, -2 + var2);
@@ -290,7 +290,7 @@ final class ol extends MenuScreen {
                     var15 = 8;
                   }
                   if (-1 != var15) {
-                    MarkerSliderPainter.field_b[var15].g(20, var5 + 2);
+                    MarkerSliderPainter.field_b[var15].drawTransparent(20, var5 + 2);
                   }
                   var5 = var5 + (pb.field_e.drawParagraph(DisplayNamePanel.field_I[var14], 60, var5, -40 + var3, 400, 16777215, 0, 0, 0, var13) * var13 + 15);
                   var14++;
@@ -320,7 +320,7 @@ final class ol extends MenuScreen {
                     var15 = 35;
                   }
                   if (var15 != -1) {
-                    MarkerSliderPainter.field_b[var15].g(20, var5 + 2);
+                    MarkerSliderPainter.field_b[var15].drawTransparent(20, var5 + 2);
                   }
                   stackIn_68_0 = var5;
                   stackIn_68_1 = pb.field_e;
@@ -362,14 +362,14 @@ final class ol extends MenuScreen {
                   } else {
                     stackIn_82_1 = 3;
                   }
-                  ((Sprite) (Object) stackIn_81_0[stackIn_82_1]).g(28, -8 + var5);
+                  ((Sprite) (Object) stackIn_81_0[stackIn_82_1]).drawTransparent(28, -8 + var5);
                   var5 = var5 + (var2 * pb.field_e.drawParagraph(bh.field_b[var14], 100, var5, var3 - 80, 400, 16777215, 0, 0, 0, var2) + 20);
                   var14++;
                 }
               default:
                 break;
             }
-            pb.field_e.a(ReportAbuseDialog.a(120, 1 + DisplayNamePanel.field_S.length, 1 + this.field_m), 620, 410, 16777215, 0);
+            pb.field_e.drawRightAligned(ReportAbuseDialog.a(120, 1 + DisplayNamePanel.field_S.length, 1 + this.field_m), 620, 410, 16777215, 0);
           }
         }
     }

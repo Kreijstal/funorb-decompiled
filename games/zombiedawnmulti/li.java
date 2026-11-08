@@ -22,7 +22,7 @@ final class li extends qc {
         return this.field_D;
     }
 
-    public static void g(int param0) {
+    public static void releaseStatics(int param0) {
         field_E = null;
         field_z = null;
         if (param0 <= 60) {

@@ -87,7 +87,7 @@ final class qi {
         try {
           eo.a((java.awt.Component) ((Object) param1), 11);
           if (param0 != 100) {
-            qi.b((byte) 52);
+            qi.releaseStatics((byte) 52);
           }
           UnitStateEvent.a((java.awt.Component) ((Object) param1), 127);
           if (null == FullscreenFocusCanvas.field_a) {
@@ -112,11 +112,11 @@ final class qi {
     final static void a(boolean param0) {
         PowerupButton.a(4, 102);
         if (param0) {
-          qi.b((byte) -45);
+          qi.releaseStatics((byte) -45);
         }
     }
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_a = null;
         field_b = null;
         if (param0 != -17) {

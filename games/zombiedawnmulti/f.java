@@ -59,12 +59,12 @@ final class f {
         return var6;
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_b = null;
         if (param0 < -31) {
           return;
         }
-        f.a((byte) -51);
+        f.releaseStatics((byte) -51);
     }
 
     final IntrusiveNode a(int param0, long param1) {

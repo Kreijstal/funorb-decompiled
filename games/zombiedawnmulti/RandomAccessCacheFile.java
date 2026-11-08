@@ -23,7 +23,7 @@ final class RandomAccessCacheFile {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_i = null;
         field_h = null;
         field_a = null;
@@ -32,7 +32,7 @@ final class RandomAccessCacheFile {
           field_b = null;
           return;
         }
-        RandomAccessCacheFile.a((byte) -64);
+        RandomAccessCacheFile.releaseStatics((byte) -64);
         field_g = null;
         field_b = null;
     }
@@ -121,7 +121,7 @@ final class RandomAccessCacheFile {
           var12.setCharAt(0, Character.toUpperCase(var12.charAt(0)));
           return var12.toString();
         }
-        RandomAccessCacheFile.a((byte) 85);
+        RandomAccessCacheFile.releaseStatics((byte) 85);
         var13 = new StringBuilder(var3);
         var6 = var13;
         while (param0 != 0L) {

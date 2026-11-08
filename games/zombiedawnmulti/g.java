@@ -56,12 +56,12 @@ final class g {
         }
         if (var6 > 0 &&
           var5 > 0) {
-          g.a(SoftwareRasterizer.pixels, param0.pixels, 0, var4, var3, var6, var5, var7, var8);
+          g.darkenByMaskAlpha(SoftwareRasterizer.pixels, param0.pixels, 0, var4, var3, var6, var5, var7, var8);
           return;
         }
     }
 
-    public static void a() {
+    public static void releaseStatics() {
         field_b = null;
         field_c = null;
         field_a = null;
@@ -80,11 +80,11 @@ final class g {
         Sprite var1 = new Sprite(param0.fullWidth, param0.field_u);
         g.c(var1);
         SoftwareRasterizer.clear();
-        param0.f(0, 0, 16777215);
+        param0.drawSilhouette(0, 0, 16777215);
         g.a(12303291);
         g.a(8947848);
         g.a(4473924);
-        param0.f(0, 0, 0);
+        param0.drawSilhouette(0, 0, 0);
         g.d();
         return var1;
     }
@@ -132,7 +132,7 @@ final class g {
         }
         if (var7 > 0 &&
           var6 > 0) {
-          g.a(SoftwareRasterizer.pixels, param0.pixels, 0, var5, var4, var7, var6, var8, var9, param3);
+          g.darkenByMaskAlpha(SoftwareRasterizer.pixels, param0.pixels, 0, var5, var4, var7, var6, var8, var9, param3);
           return;
         }
     }
@@ -164,7 +164,7 @@ final class g {
         return true;
     }
 
-    private final static void a(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    private final static void darkenByMaskAlpha(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         int var12 = 0;
         int var13 = 0;
         int incrementValue$12 = 0;
@@ -250,7 +250,7 @@ final class g {
             }
           }
         }
-        var5.c(0, 0);
+        var5.drawOpaque(0, 0);
     }
 
     final static void a(IntrusiveDeque param0) {
@@ -266,7 +266,7 @@ final class g {
             var2 = var1_ref.previous;
             if (((SceneObject) (var1_ref)).positionY > ((SceneObject) (var2)).positionY) {
               var1_ref.unlink(true);
-              qc.a(var1_ref, var2, 0);
+              qc.insertBefore(var1_ref, var2, 0);
             }
             var1_ref = var2;
           }
@@ -355,7 +355,7 @@ final class g {
         g.a(SoftwareRasterizer.pixels, var5, param4, 0, 0, 0, 0, param2, param3, var6);
     }
 
-    private final static void a(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    private final static void darkenByMaskAlpha(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int var11 = 0;
         int var12 = 0;
         int incrementValue$12 = 0;

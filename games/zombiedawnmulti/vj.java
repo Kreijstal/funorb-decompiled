@@ -246,16 +246,16 @@ final class vj extends MenuScreen {
           var14 = var12 + PowerupEvent.field_m / var11 % var13;
           var21 = am.a(var14, this.field_o, var9, 1, this.field_n);
           og.h((byte) 110);
-          var21.g(47, 57);
+          var21.drawTransparent(47, 57);
           var22 = am.a(var14, this.field_o, 1, 1, this.field_n);
           og.h((byte) 117);
-          var22.g(17, 57);
+          var22.drawTransparent(17, 57);
           var23 = am.a(var14, this.field_l, var9, 1, this.field_s);
           og.h((byte) 118);
-          var23.g(47, 139);
+          var23.drawTransparent(47, 139);
           var24 = am.a(var14, this.field_l, 1, 1, this.field_s);
           og.h((byte) 113);
-          var24.g(17, 139);
+          var24.drawTransparent(17, 139);
           this.field_r.i(-31);
           return;
         }
@@ -294,16 +294,16 @@ final class vj extends MenuScreen {
           var14Lifetime1 = var12Lifetime1 + PowerupEvent.field_m / var11Lifetime1 % var13Lifetime1;
           var26 = am.a(var14Lifetime1, this.field_o, var9Lifetime1, 1, this.field_n);
           og.h((byte) 110);
-          var26.g(47, 57);
+          var26.drawTransparent(47, 57);
           var27 = am.a(var14Lifetime1, this.field_o, 1, 1, this.field_n);
           og.h((byte) 117);
-          var27.g(17, 57);
+          var27.drawTransparent(17, 57);
           var28 = am.a(var14Lifetime1, this.field_l, var9Lifetime1, 1, this.field_s);
           og.h((byte) 118);
-          var28.g(47, 139);
+          var28.drawTransparent(47, 139);
           var29 = am.a(var14Lifetime1, this.field_l, 1, 1, this.field_s);
           og.h((byte) 113);
-          var29.g(17, 139);
+          var29.drawTransparent(17, 139);
           this.field_r.i(-31);
           return;
         }
@@ -342,16 +342,16 @@ final class vj extends MenuScreen {
           var14Lifetime2 = var12Lifetime2 + PowerupEvent.field_m / var11Lifetime2 % var13Lifetime2;
           var31 = am.a(var14Lifetime2, this.field_o, var9Lifetime2, 1, this.field_n);
           og.h((byte) 110);
-          var31.g(47, 57);
+          var31.drawTransparent(47, 57);
           var32 = am.a(var14Lifetime2, this.field_o, 1, 1, this.field_n);
           og.h((byte) 117);
-          var32.g(17, 57);
+          var32.drawTransparent(17, 57);
           var33 = am.a(var14Lifetime2, this.field_l, var9Lifetime2, 1, this.field_s);
           og.h((byte) 118);
-          var33.g(47, 139);
+          var33.drawTransparent(47, 139);
           var34 = am.a(var14Lifetime2, this.field_l, 1, 1, this.field_s);
           og.h((byte) 113);
-          var34.g(17, 139);
+          var34.drawTransparent(17, 139);
           this.field_r.i(-31);
           return;
         }
@@ -390,16 +390,16 @@ final class vj extends MenuScreen {
           var14Lifetime3 = var12Lifetime3 + PowerupEvent.field_m / var11Lifetime3 % var13Lifetime3;
           var36 = am.a(var14Lifetime3, this.field_o, var9Lifetime3, 1, this.field_n);
           og.h((byte) 110);
-          var36.g(47, 57);
+          var36.drawTransparent(47, 57);
           var37 = am.a(var14Lifetime3, this.field_o, 1, 1, this.field_n);
           og.h((byte) 117);
-          var37.g(17, 57);
+          var37.drawTransparent(17, 57);
           var38 = am.a(var14Lifetime3, this.field_l, var9Lifetime3, 1, this.field_s);
           og.h((byte) 118);
-          var38.g(47, 139);
+          var38.drawTransparent(47, 139);
           var39 = am.a(var14Lifetime3, this.field_l, 1, 1, this.field_s);
           og.h((byte) 113);
-          var39.g(17, 139);
+          var39.drawTransparent(17, 139);
           this.field_r.i(-31);
           return;
         }
@@ -434,16 +434,16 @@ final class vj extends MenuScreen {
           var14Lifetime4 = var12Lifetime4 + PowerupEvent.field_m / var11Lifetime4 % var13Lifetime4;
           var41 = am.a(var14Lifetime4, this.field_o, var9Lifetime4, 1, this.field_n);
           og.h((byte) 110);
-          var41.g(47, 57);
+          var41.drawTransparent(47, 57);
           var42 = am.a(var14Lifetime4, this.field_o, 1, 1, this.field_n);
           og.h((byte) 117);
-          var42.g(17, 57);
+          var42.drawTransparent(17, 57);
           var43 = am.a(var14Lifetime4, this.field_l, var9Lifetime4, 1, this.field_s);
           og.h((byte) 118);
-          var43.g(47, 139);
+          var43.drawTransparent(47, 139);
           var44 = am.a(var14Lifetime4, this.field_l, 1, 1, this.field_s);
           og.h((byte) 113);
-          var44.g(17, 139);
+          var44.drawTransparent(17, 139);
           this.field_r.i(-31);
           return;
         }
@@ -474,16 +474,16 @@ final class vj extends MenuScreen {
           var14Lifetime5 = var12Lifetime5 + PowerupEvent.field_m / var11Lifetime5 % var13Lifetime5;
           var46 = am.a(var14Lifetime5, this.field_o, var9Lifetime5, 1, this.field_n);
           og.h((byte) 110);
-          var46.g(47, 57);
+          var46.drawTransparent(47, 57);
           var47 = am.a(var14Lifetime5, this.field_o, 1, 1, this.field_n);
           og.h((byte) 117);
-          var47.g(17, 57);
+          var47.drawTransparent(17, 57);
           var48 = am.a(var14Lifetime5, this.field_l, var9Lifetime5, 1, this.field_s);
           og.h((byte) 118);
-          var48.g(47, 139);
+          var48.drawTransparent(47, 139);
           var49 = am.a(var14Lifetime5, this.field_l, 1, 1, this.field_s);
           og.h((byte) 113);
-          var49.g(17, 139);
+          var49.drawTransparent(17, 139);
           this.field_r.i(-31);
           return;
         }
@@ -514,16 +514,16 @@ final class vj extends MenuScreen {
           var14Lifetime6 = var12Lifetime6 + PowerupEvent.field_m / var11Lifetime6 % var13Lifetime6;
           var51 = am.a(var14Lifetime6, this.field_o, var9Lifetime6, 1, this.field_n);
           og.h((byte) 110);
-          var51.g(47, 57);
+          var51.drawTransparent(47, 57);
           var52 = am.a(var14Lifetime6, this.field_o, 1, 1, this.field_n);
           og.h((byte) 117);
-          var52.g(17, 57);
+          var52.drawTransparent(17, 57);
           var53 = am.a(var14Lifetime6, this.field_l, var9Lifetime6, 1, this.field_s);
           og.h((byte) 118);
-          var53.g(47, 139);
+          var53.drawTransparent(47, 139);
           var54 = am.a(var14Lifetime6, this.field_l, 1, 1, this.field_s);
           og.h((byte) 113);
-          var54.g(17, 139);
+          var54.drawTransparent(17, 139);
           this.field_r.i(-31);
           return;
         }
@@ -554,16 +554,16 @@ final class vj extends MenuScreen {
           var14Lifetime7 = var12Lifetime7 + PowerupEvent.field_m / var11Lifetime7 % var13Lifetime7;
           var56 = am.a(var14Lifetime7, this.field_o, var9Lifetime7, 1, this.field_n);
           og.h((byte) 110);
-          var56.g(47, 57);
+          var56.drawTransparent(47, 57);
           var57 = am.a(var14Lifetime7, this.field_o, 1, 1, this.field_n);
           og.h((byte) 117);
-          var57.g(17, 57);
+          var57.drawTransparent(17, 57);
           var58 = am.a(var14Lifetime7, this.field_l, var9Lifetime7, 1, this.field_s);
           og.h((byte) 118);
-          var58.g(47, 139);
+          var58.drawTransparent(47, 139);
           var59 = am.a(var14Lifetime7, this.field_l, 1, 1, this.field_s);
           og.h((byte) 113);
-          var59.g(17, 139);
+          var59.drawTransparent(17, 139);
           this.field_r.i(-31);
           return;
         }
@@ -597,16 +597,16 @@ final class vj extends MenuScreen {
         var14Lifetime8 = var12Lifetime8 + PowerupEvent.field_m / var11Lifetime8 % var13Lifetime8;
         Sprite var61 = am.a(var14Lifetime8, this.field_o, var9Lifetime8, 1, this.field_n);
         og.h((byte) 110);
-        var61.g(47, 57);
+        var61.drawTransparent(47, 57);
         Sprite var62 = am.a(var14Lifetime8, this.field_o, 1, 1, this.field_n);
         og.h((byte) 117);
-        var62.g(17, 57);
+        var62.drawTransparent(17, 57);
         Sprite var63 = am.a(var14Lifetime8, this.field_l, var9Lifetime8, 1, this.field_s);
         og.h((byte) 118);
-        var63.g(47, 139);
+        var63.drawTransparent(47, 139);
         Sprite var64 = am.a(var14Lifetime8, this.field_l, 1, 1, this.field_s);
         og.h((byte) 113);
-        var64.g(17, 139);
+        var64.drawTransparent(17, 139);
         this.field_r.i(-31);
     }
 

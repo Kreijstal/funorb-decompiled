@@ -42,7 +42,7 @@ final class fk extends MenuScreen {
             param7 = (var12_int + param7 * 200) / (var12_int * 2);
           }
           if (param1 != -1) {
-            param2.a(param1 + 1 + ". ", 60, param9, param5, param3);
+            param2.drawRightAligned(param1 + 1 + ". ", 60, param9, param5, param3);
           }
           if ((param1 & 1) == 0) {
             SoftwareRasterizer.fillRectAlpha(30, 3 + param9, 580, 1 + (param2.maxDescent + param2.maxAscent), 0, 64);
@@ -50,7 +50,7 @@ final class fk extends MenuScreen {
           var14 = BitmapFont.truncateText(param2, param4, 200);
           param2.c(var14, 60, param9, param5, param3);
           var15 = Integer.toString(param0);
-          param2.b(var15, SpriteState.field_q[1], param9, param5, param3);
+          param2.drawCentered(var15, SpriteState.field_q[1], param9, param5, param3);
           if (var12_int >= 500) {
             stackIn_10_0 = "500+";
           } else {
@@ -58,16 +58,16 @@ final class fk extends MenuScreen {
           }
           var16 = stackIn_10_0;
           var13 = var16;
-          param2.b(var16, SpriteState.field_q[2], param9, param5, param3);
+          param2.drawCentered(var16, SpriteState.field_q[2], param9, param5, param3);
           var17 = param10 + "%";
           if (param8) {
             fk.releaseStatics(53);
           }
-          param2.b(var17, SpriteState.field_q[3], param9, param5, param3);
+          param2.drawCentered(var17, SpriteState.field_q[3], param9, param5, param3);
           var18 = param7 + "%";
-          param2.b(var18, SpriteState.field_q[4], param9, param5, param3);
+          param2.drawCentered(var18, SpriteState.field_q[4], param9, param5, param3);
           var19 = param6 + "%";
-          param2.b(var19, SpriteState.field_q[5], param9, param5, param3);
+          param2.drawCentered(var19, SpriteState.field_q[5], param9, param5, param3);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -166,12 +166,12 @@ final class fk extends MenuScreen {
                   SoftwareRasterizer.fillRectAlpha(30, -35 + var7, 186, 225, 0, 64);
                   SoftwareRasterizer.fillRectAlpha(SpriteState.field_q[2] - 58, -35 + var7, 111, 225, 0, 64);
                   SoftwareRasterizer.fillRectAlpha(-32 + SpriteState.field_q[4], var7 - 35, 65, 225, 0, 64);
-                  TranslatedUiText.field_e.b(ButtonWidget.field_C, SpriteState.field_q[0], var7, var10, 1);
-                  TranslatedUiText.field_e.b(ub.field_tb, SpriteState.field_q[1], var7, var10, 1);
-                  TranslatedUiText.field_e.b(ke.field_e, SpriteState.field_q[2], var7, var10, 1);
-                  TranslatedUiText.field_e.b("%W", SpriteState.field_q[3], var7, var10, 1);
-                  TranslatedUiText.field_e.b("%L", SpriteState.field_q[4], var7, var10, 1);
-                  TranslatedUiText.field_e.b("%D", SpriteState.field_q[5], var7, var10, 1);
+                  TranslatedUiText.field_e.drawCentered(ButtonWidget.field_C, SpriteState.field_q[0], var7, var10, 1);
+                  TranslatedUiText.field_e.drawCentered(ub.field_tb, SpriteState.field_q[1], var7, var10, 1);
+                  TranslatedUiText.field_e.drawCentered(ke.field_e, SpriteState.field_q[2], var7, var10, 1);
+                  TranslatedUiText.field_e.drawCentered("%W", SpriteState.field_q[3], var7, var10, 1);
+                  TranslatedUiText.field_e.drawCentered("%L", SpriteState.field_q[4], var7, var10, 1);
+                  TranslatedUiText.field_e.drawCentered("%D", SpriteState.field_q[5], var7, var10, 1);
                   ak.a(586, 231, -5, 27, var7 - 38);
                   var7 = var7 + (4 + var6);
                   var4 = GameKeyHandler.field_d;
@@ -226,12 +226,12 @@ final class fk extends MenuScreen {
                   SoftwareRasterizer.fillRectAlpha(30, -35 + var7Lifetime1, 186, 225, 0, 64);
                   SoftwareRasterizer.fillRectAlpha(SpriteState.field_q[2] - 58, -35 + var7Lifetime1, 111, 225, 0, 64);
                   SoftwareRasterizer.fillRectAlpha(-32 + SpriteState.field_q[4], var7Lifetime1 - 35, 65, 225, 0, 64);
-                  TranslatedUiText.field_e.b(ButtonWidget.field_C, SpriteState.field_q[0], var7Lifetime1, var10Lifetime1, 1);
-                  TranslatedUiText.field_e.b(ub.field_tb, SpriteState.field_q[1], var7Lifetime1, var10Lifetime1, 1);
-                  TranslatedUiText.field_e.b(ke.field_e, SpriteState.field_q[2], var7Lifetime1, var10Lifetime1, 1);
-                  TranslatedUiText.field_e.b("%W", SpriteState.field_q[3], var7Lifetime1, var10Lifetime1, 1);
-                  TranslatedUiText.field_e.b("%L", SpriteState.field_q[4], var7Lifetime1, var10Lifetime1, 1);
-                  TranslatedUiText.field_e.b("%D", SpriteState.field_q[5], var7Lifetime1, var10Lifetime1, 1);
+                  TranslatedUiText.field_e.drawCentered(ButtonWidget.field_C, SpriteState.field_q[0], var7Lifetime1, var10Lifetime1, 1);
+                  TranslatedUiText.field_e.drawCentered(ub.field_tb, SpriteState.field_q[1], var7Lifetime1, var10Lifetime1, 1);
+                  TranslatedUiText.field_e.drawCentered(ke.field_e, SpriteState.field_q[2], var7Lifetime1, var10Lifetime1, 1);
+                  TranslatedUiText.field_e.drawCentered("%W", SpriteState.field_q[3], var7Lifetime1, var10Lifetime1, 1);
+                  TranslatedUiText.field_e.drawCentered("%L", SpriteState.field_q[4], var7Lifetime1, var10Lifetime1, 1);
+                  TranslatedUiText.field_e.drawCentered("%D", SpriteState.field_q[5], var7Lifetime1, var10Lifetime1, 1);
                   ak.a(586, 231, -5, 27, var7Lifetime1 - 38);
                   var7Lifetime1 = var7Lifetime1 + (4 + var6Lifetime1);
                   var4Lifetime1 = GameKeyHandler.field_d;
@@ -294,12 +294,12 @@ final class fk extends MenuScreen {
         SoftwareRasterizer.fillRectAlpha(30, -35 + var7Lifetime2, 186, 225, 0, 64);
         SoftwareRasterizer.fillRectAlpha(SpriteState.field_q[2] - 58, -35 + var7Lifetime2, 111, 225, 0, 64);
         SoftwareRasterizer.fillRectAlpha(-32 + SpriteState.field_q[4], var7Lifetime2 - 35, 65, 225, 0, 64);
-        TranslatedUiText.field_e.b(ButtonWidget.field_C, SpriteState.field_q[0], var7Lifetime2, var10Lifetime2, 1);
-        TranslatedUiText.field_e.b(ub.field_tb, SpriteState.field_q[1], var7Lifetime2, var10Lifetime2, 1);
-        TranslatedUiText.field_e.b(ke.field_e, SpriteState.field_q[2], var7Lifetime2, var10Lifetime2, 1);
-        TranslatedUiText.field_e.b("%W", SpriteState.field_q[3], var7Lifetime2, var10Lifetime2, 1);
-        TranslatedUiText.field_e.b("%L", SpriteState.field_q[4], var7Lifetime2, var10Lifetime2, 1);
-        TranslatedUiText.field_e.b("%D", SpriteState.field_q[5], var7Lifetime2, var10Lifetime2, 1);
+        TranslatedUiText.field_e.drawCentered(ButtonWidget.field_C, SpriteState.field_q[0], var7Lifetime2, var10Lifetime2, 1);
+        TranslatedUiText.field_e.drawCentered(ub.field_tb, SpriteState.field_q[1], var7Lifetime2, var10Lifetime2, 1);
+        TranslatedUiText.field_e.drawCentered(ke.field_e, SpriteState.field_q[2], var7Lifetime2, var10Lifetime2, 1);
+        TranslatedUiText.field_e.drawCentered("%W", SpriteState.field_q[3], var7Lifetime2, var10Lifetime2, 1);
+        TranslatedUiText.field_e.drawCentered("%L", SpriteState.field_q[4], var7Lifetime2, var10Lifetime2, 1);
+        TranslatedUiText.field_e.drawCentered("%D", SpriteState.field_q[5], var7Lifetime2, var10Lifetime2, 1);
         ak.a(586, 231, -5, 27, var7Lifetime2 - 38);
         var7Lifetime2 = var7Lifetime2 + (4 + var6Lifetime2);
         var4Lifetime3 = GameKeyHandler.field_d;
@@ -386,14 +386,14 @@ final class fk extends MenuScreen {
             var5_int = param3[0].fullWidth;
             var6 = param3[2].fullWidth;
             var7 = param3[1].fullWidth;
-            param3[0].g(param0, param4);
-            param3[2].g(-var6 + (param1 + param0), param4);
+            param3[0].drawTransparent(param0, param4);
+            param3[2].drawTransparent(-var6 + (param1 + param0), param4);
             SoftwareRasterizer.saveClip(ki.field_d);
             SoftwareRasterizer.intersectClip(var5_int + param0, param4, -var6 + param0 + param1, param4 + param3[1].field_u);
             var8 = var5_int + param0;
             var9 = param0 + param1 - var6;
             for (param0 = var8; param0 < var9; param0 = param0 + var7) {
-              param3[1].g(param0, param4);
+              param3[1].drawTransparent(param0, param4);
             }
             SoftwareRasterizer.restoreClip(ki.field_d);
             if (!param2) {

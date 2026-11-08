@@ -39,7 +39,7 @@ final class PowerupBar {
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          param0.g(-(param0.width / 2) + 320, 400);
+          param0.drawTransparent(-(param0.width / 2) + 320, 400);
           if (param1 != 59) {
             return;
           }
@@ -295,10 +295,10 @@ final class PowerupBar {
             var3Lifetime1 = tg.field_e.powerupLevels[this.field_a];
             if (255 != var2_int) {
               g.a(AccountCreationForm.field_W[var2_int], this.field_f - 100, 453);
-              BirthDateEntryPanel.field_M[var2_int].g(-100 + this.field_f, 453);
+              BirthDateEntryPanel.field_M[var2_int].drawTransparent(-100 + this.field_f, 453);
               if (var3Lifetime1 != 255) {
                 g.a(AccountCreationForm.field_W[var3Lifetime1], -100 + this.field_f, 438);
-                BirthDateEntryPanel.field_M[var3Lifetime1].g(-100 + this.field_f, 438);
+                BirthDateEntryPanel.field_M[var3Lifetime1].drawTransparent(-100 + this.field_f, 438);
               }
             }
           }

@@ -671,7 +671,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         return (byte) var2Lifetime4;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 == -1) {
           field_c = null;
           field_e = null;

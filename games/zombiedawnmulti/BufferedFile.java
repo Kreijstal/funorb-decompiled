@@ -62,7 +62,7 @@ final class BufferedFile {
             if (-1L != this.field_m &&
               this.field_m <= this.field_h &&
               this.field_h + (long)param0 <= (long)this.field_a + this.field_m) {
-              ArrayOperations.a(this.field_f, (int)(this.field_h - this.field_m), param2, param1, param0);
+              ArrayOperations.copy(this.field_f, (int)(this.field_h - this.field_m), param2, param1, param0);
               this.field_h = this.field_h + (long)param0;
               return;
             }
@@ -76,7 +76,7 @@ final class BufferedFile {
               if (param0 < var10_int) {
                 var10_int = param0;
               }
-              ArrayOperations.a(this.field_i, (int)(-this.field_l + this.field_h), param2, param1, var10_int);
+              ArrayOperations.copy(this.field_i, (int)(-this.field_l + this.field_h), param2, param1, var10_int);
               this.field_h = this.field_h + (long)var10_int;
               param1 = param1 + var10_int;
               param0 = param0 - var10_int;
@@ -107,7 +107,7 @@ final class BufferedFile {
               if (var10_intLifetime1Lifetime1 > this.field_n) {
                 var10_intLifetime1Lifetime1 = this.field_n;
               }
-              ArrayOperations.a(this.field_i, 0, param2, param1, var10_intLifetime1Lifetime1);
+              ArrayOperations.copy(this.field_i, 0, param2, param1, var10_intLifetime1Lifetime1);
               param0 = param0 - var10_intLifetime1Lifetime1;
               param1 = param1 + var10_intLifetime1Lifetime1;
               this.field_h = this.field_h + (long)var10_intLifetime1Lifetime1;
@@ -150,7 +150,7 @@ final class BufferedFile {
               if (-1L < var10 &&
                 var12 > var10) {
                 var14 = (int)(-var10 + var12);
-                ArrayOperations.a(this.field_f, (int)(-this.field_m + var10), param2, (int)(-var6 + var10) + var8, var14);
+                ArrayOperations.copy(this.field_f, (int)(-this.field_m + var10), param2, (int)(-var6 + var10) + var8, var14);
                 if (this.field_h < var12) {
                   param0 = (int)((long)param0 - (var12 - this.field_h));
                   this.field_h = var12;
@@ -236,7 +236,7 @@ final class BufferedFile {
           if (var2 > -1L &&
             var4 > var2) {
             var6 = (int)(-var2 + var4);
-            ArrayOperations.a(this.field_f, (int)(-this.field_m + var2), this.field_i, (int)(-this.field_l + var2), var6);
+            ArrayOperations.copy(this.field_f, (int)(-this.field_m + var2), this.field_i, (int)(-this.field_l + var2), var6);
           }
           this.field_a = 0;
           this.field_m = -1L;
@@ -276,7 +276,7 @@ final class BufferedFile {
             if (this.field_m != (long)param0 &&
               this.field_h + (long)param1 > (long)this.field_f.length + this.field_m) {
               var5_int = (int)(-this.field_h + (this.field_m + (long)this.field_f.length));
-              ArrayOperations.a(param3, param2, this.field_f, (int)(this.field_h - this.field_m), var5_int);
+              ArrayOperations.copy(param3, param2, this.field_f, (int)(this.field_h - this.field_m), var5_int);
               param2 = param2 + var5_int;
               param1 = param1 - var5_int;
               this.field_h = this.field_h + (long)var5_int;
@@ -290,7 +290,7 @@ final class BufferedFile {
               if (this.field_m == -1L) {
                 this.field_m = this.field_h;
               }
-              ArrayOperations.a(param3, param2, this.field_f, (int)(this.field_h - this.field_m), param1);
+              ArrayOperations.copy(param3, param2, this.field_f, (int)(this.field_h - this.field_m), param1);
               this.field_h = this.field_h + (long)param1;
               if ((long)this.field_a < -this.field_m + this.field_h) {
                 this.field_a = (int)(this.field_h - this.field_m);
@@ -329,7 +329,7 @@ final class BufferedFile {
             if (var5_long > -1L &&
               var7 > var5_long) {
               var9 = (int)(var7 - var5_long);
-              ArrayOperations.a(param3, (int)(-this.field_h + (var5_long + (long)param2)), this.field_i, (int)(-this.field_l + var5_long), var9);
+              ArrayOperations.copy(param3, (int)(-this.field_h + (var5_long + (long)param2)), this.field_i, (int)(-this.field_l + var5_long), var9);
             }
             this.field_h = this.field_h + (long)param1;
             return;

@@ -57,7 +57,7 @@ final class NodeHashTableIterator implements Iterator {
             }
             var6 = eo.field_e[var3];
             stackIn_11_0 = !(var4 < 0);
-            var7 = vh.a(stackIn_11_0, -76, var6);
+            var7 = vh.measureText(stackIn_11_0, -76, var6);
             var8 = -(var7 >> 1) + NetworkGameClient.field_x;
             if (var4 >= 0) {
               var2 = var2 + pb.field_b;

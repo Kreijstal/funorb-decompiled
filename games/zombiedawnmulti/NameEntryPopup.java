@@ -72,7 +72,7 @@ final class NameEntryPopup extends UiComponent {
               if (!(HotspotTextWidget.field_Q <= 0) ||
                 !(InflaterDecompressor.field_a <= 0)) {
                 if (vm.field_lb != null) {
-                  vm.field_lb.c(JaggrabDownloader.field_i.field_x, 0);
+                  vm.field_lb.drawOpaque(JaggrabDownloader.field_i.field_x, 0);
                 }
                 stackIn_20_0 = JaggrabDownloader.field_i;
                 stackIn_21_1 = (param0) && (!io.field_b);
@@ -84,7 +84,7 @@ final class NameEntryPopup extends UiComponent {
               ql.a(true);
               return;
             }
-            vm.field_lb.c(qe.field_k.field_x, 0);
+            vm.field_lb.drawOpaque(qe.field_k.field_x, 0);
             stackIn_30_0 = qe.field_k;
             stackIn_31_1 = (param0) && (!ee.field_a);
             ((UiComponent) (Object) stackIn_30_0).c(stackIn_31_1, param1 ^ 7578);
@@ -94,7 +94,7 @@ final class NameEntryPopup extends UiComponent {
           }
           if (HotspotTextWidget.field_Q > 0) {
             if (vm.field_lb != null) {
-              vm.field_lb.c(JaggrabDownloader.field_i.field_x, 0);
+              vm.field_lb.drawOpaque(JaggrabDownloader.field_i.field_x, 0);
             }
             stackIn_57_0 = JaggrabDownloader.field_i;
             stackIn_58_1 = (param0) && (!io.field_b);
@@ -105,7 +105,7 @@ final class NameEntryPopup extends UiComponent {
           } else {
             if (InflaterDecompressor.field_a > 0) {
               if (vm.field_lb != null) {
-                vm.field_lb.c(JaggrabDownloader.field_i.field_x, 0);
+                vm.field_lb.drawOpaque(JaggrabDownloader.field_i.field_x, 0);
               }
               stackIn_44_0 = JaggrabDownloader.field_i;
               stackIn_45_1 = (param0) && (!io.field_b);
@@ -119,7 +119,7 @@ final class NameEntryPopup extends UiComponent {
           if (0 >= JaggrabDownloader.field_h) {
             if (HotspotTextWidget.field_Q > 0) {
               if (vm.field_lb != null) {
-                vm.field_lb.c(JaggrabDownloader.field_i.field_x, 0);
+                vm.field_lb.drawOpaque(JaggrabDownloader.field_i.field_x, 0);
               }
               stackIn_110_0 = JaggrabDownloader.field_i;
               stackIn_111_1 = (param0) && (!io.field_b);
@@ -130,7 +130,7 @@ final class NameEntryPopup extends UiComponent {
             } else {
               if (InflaterDecompressor.field_a > 0) {
                 if (vm.field_lb != null) {
-                  vm.field_lb.c(JaggrabDownloader.field_i.field_x, 0);
+                  vm.field_lb.drawOpaque(JaggrabDownloader.field_i.field_x, 0);
                 }
                 stackIn_124_0 = JaggrabDownloader.field_i;
                 stackIn_125_1 = (param0) && (!io.field_b);
@@ -142,7 +142,7 @@ final class NameEntryPopup extends UiComponent {
             }
           } else {
             if (null != vm.field_lb) {
-              vm.field_lb.c(qe.field_k.field_x, 0);
+              vm.field_lb.drawOpaque(qe.field_k.field_x, 0);
             }
             stackIn_70_0 = qe.field_k;
             stackIn_71_1 = (param0) && (!ee.field_a);
@@ -152,7 +152,7 @@ final class NameEntryPopup extends UiComponent {
             ((UiComponent) (Object) stackIn_74_0).c(stackIn_75_1, -1);
             if (HotspotTextWidget.field_Q > 0) {
               if (vm.field_lb != null) {
-                vm.field_lb.c(JaggrabDownloader.field_i.field_x, 0);
+                vm.field_lb.drawOpaque(JaggrabDownloader.field_i.field_x, 0);
               }
               stackIn_82_0 = JaggrabDownloader.field_i;
               stackIn_83_1 = (param0) && (!io.field_b);
@@ -163,7 +163,7 @@ final class NameEntryPopup extends UiComponent {
             } else {
               if (InflaterDecompressor.field_a > 0) {
                 if (vm.field_lb != null) {
-                  vm.field_lb.c(JaggrabDownloader.field_i.field_x, 0);
+                  vm.field_lb.drawOpaque(JaggrabDownloader.field_i.field_x, 0);
                 }
                 stackIn_96_0 = JaggrabDownloader.field_i;
                 stackIn_97_1 = (param0) && (!io.field_b);

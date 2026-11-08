@@ -66,7 +66,7 @@ final class WhirlpoolHasher {
             this.field_c = this.field_c + 1;
             this.field_m[fieldTemp$1] = (byte) 0;
           }
-          ArrayOperations.a(this.field_e, 0, this.field_m, 32, 32);
+          ArrayOperations.copy(this.field_e, 0, this.field_m, 32, 32);
           this.a(-2);
           var4_int = 0;
           if (param1 != 1) {
@@ -127,7 +127,7 @@ final class WhirlpoolHasher {
         }
         var3 = 0;
         while (var2 < 8) {
-          this.field_h[var2] = ScrollPane.a(en.a(255L, (long)this.field_m[7 + var3]), ScrollPane.a(en.a(255L, (long)this.field_m[6 + var3]) << 8, ScrollPane.a(en.a(255L, (long)this.field_m[var3 + 5]) << 16, ScrollPane.a(ScrollPane.a(ScrollPane.a(en.a(280375465082880L, (long)this.field_m[var3 + 2] << 40), ScrollPane.a((long)this.field_m[var3] << 56, en.a((long)this.field_m[var3 + 1], 255L) << 48)), en.a((long)this.field_m[var3 + 3] << 32, 1095216660480L)), en.a((long)this.field_m[var3 + 4] << 24, 4278190080L)))));
+          this.field_h[var2] = ScrollPane.a(en.longAnd(255L, (long)this.field_m[7 + var3]), ScrollPane.a(en.longAnd(255L, (long)this.field_m[6 + var3]) << 8, ScrollPane.a(en.longAnd(255L, (long)this.field_m[var3 + 5]) << 16, ScrollPane.a(ScrollPane.a(ScrollPane.a(en.longAnd(280375465082880L, (long)this.field_m[var3 + 2] << 40), ScrollPane.a((long)this.field_m[var3] << 56, en.longAnd((long)this.field_m[var3 + 1], 255L) << 48)), en.longAnd((long)this.field_m[var3 + 3] << 32, 1095216660480L)), en.longAnd((long)this.field_m[var3 + 4] << 24, 4278190080L)))));
           var2++;
           var3 += 8;
         }
@@ -371,7 +371,7 @@ final class WhirlpoolHasher {
           var17 = ProgressDialog.field_lb;
           var7 = var17;
           var7Lifetime1 = var17;
-          var16 = nh.a(2, var17);
+          var16 = nh.prefixWithCrown(2, var17);
           var7Lifetime2 = var16;
           var7Lifetime3 = var16;
           var19 = var16;

@@ -217,7 +217,7 @@ final class HuffmanCodec {
           GameSimulation.a((byte) 120);
           var2 = var1.copy();
           for (var3 = 0; var3 < 15; var3++) {
-            var2.f(-2, -2, 16777215);
+            var2.drawSilhouette(-2, -2, 16777215);
             SoftwareRasterizer.blurRectangle(4, 4, 0, 0, 540, 140);
           }
           kk.field_r.bindAsRenderTarget();
@@ -231,7 +231,7 @@ final class HuffmanCodec {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_h = null;
         field_g = null;
         field_f = null;

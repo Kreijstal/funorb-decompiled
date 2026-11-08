@@ -47,7 +47,7 @@ final class gj {
             var1 = var1.previous;
           }
           if (param0 != 6962) {
-            gj.a((byte) 105);
+            gj.releaseStatics((byte) 105);
           }
           var1 = jp.field_c.c(83);
           while (var1 instanceof wj) {
@@ -62,7 +62,7 @@ final class gj {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_c = null;
         if (param0 == 91) {
           field_b = null;
@@ -70,7 +70,7 @@ final class gj {
           field_a = null;
           return;
         }
-        gj.a((byte) -121);
+        gj.releaseStatics((byte) -121);
         field_b = null;
         field_d = null;
         field_a = null;

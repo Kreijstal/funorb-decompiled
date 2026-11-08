@@ -20,7 +20,7 @@ final class on extends TextInputWidget implements ValidationProviderSource {
         }
     }
 
-    public static void l(int param0) {
+    public static void releaseStatics(int param0) {
         field_bb = null;
         field_cb = null;
         field_Z = null;
@@ -33,7 +33,7 @@ final class on extends TextInputWidget implements ValidationProviderSource {
         if (!param0) {
           return null == af.field_h ? null : (jh) (af.field_h.a((long)param1, -22877));
         }
-        on.l(47);
+        on.releaseStatics(47);
         return null == af.field_h ? null : (jh) (af.field_h.a((long)param1, -22877));
     }
 

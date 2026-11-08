@@ -97,7 +97,7 @@ abstract class GameEvent extends IntrusiveNode {
         }
     }
 
-    public static void b(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         if (!param0) {
           field_g = null;
           field_h = null;

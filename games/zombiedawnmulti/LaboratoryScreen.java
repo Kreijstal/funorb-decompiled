@@ -36,15 +36,15 @@ final class LaboratoryScreen extends MenuScreen {
         }
         for (var4 = 0; var4 < 3; var4++) {
           var5 = var4 * 73;
-          s.field_c.a(420 + var5, 341);
-          if (s.field_c.b(var5 + 420, 341, MouseInputHandler.field_g, bo.field_d)) {
+          s.field_c.draw(420 + var5, 341);
+          if (s.field_c.isOpaqueAt(var5 + 420, 341, MouseInputHandler.field_g, bo.field_d)) {
             q.field_d = 5 + var4;
           }
           var6 = FullscreenFocusCanvas.field_k.field_s[var4];
           if (255 != var6 &&
             var6 < 63) {
             var7 = FullscreenFocusCanvas.field_k.d(var6, param2 + 2992) ? 1 : 0;
-            MarkerSliderPainter.field_b[var6 - 18].g(429 + var5, 357);
+            MarkerSliderPainter.field_b[var6 - 18].drawTransparent(429 + var5, 357);
             var8 = FullscreenFocusCanvas.field_k.field_t[var6];
             if (FullscreenFocusCanvas.field_k.d(var6, 53)) {
               var8 = cr.a(var6, -97);
@@ -62,7 +62,7 @@ final class LaboratoryScreen extends MenuScreen {
             SoftwareRasterizer.fillRect(stackIn_17_0, stackIn_17_1, stackIn_17_2, stackIn_17_3, stackIn_18_4);
             if (PortalView.i(51603) &&
               jk.a((byte) -70, var6)) {
-              LabeledChildWidget.field_E.a(var5 + 419, 345);
+              LabeledChildWidget.field_E.draw(var5 + 419, 345);
             }
           }
         }
@@ -126,7 +126,7 @@ final class LaboratoryScreen extends MenuScreen {
           }
           SoftwareRasterizer.fillRoundedRect(var2, 43, 120, 35, 10, var4);
           SoftwareRasterizer.fillRoundedRectGradient(var2 + 2, 45, 116, 31, 10, var5, var6_int);
-          pb.field_e.b(fl.field_b[var3], 60 + var2, 69, 16646020, -1);
+          pb.field_e.drawCentered(fl.field_b[var3], 60 + var2, 69, 16646020, -1);
           var2 += 141;
         }
         this.a(56, 86, 172, 18, (byte) -92);
@@ -401,7 +401,7 @@ final class LaboratoryScreen extends MenuScreen {
         }
         while (var6 < 5) {
           var7 = 50 * var6;
-          if (pf.field_a.b(84 + var7, 340, MouseInputHandler.field_g, bo.field_d)) {
+          if (pf.field_a.isOpaqueAt(84 + var7, 340, MouseInputHandler.field_g, bo.field_d)) {
             q.field_d = var6;
           }
           if (var5 > var6) {
@@ -409,7 +409,7 @@ final class LaboratoryScreen extends MenuScreen {
               pb.a(FullscreenFocusCanvas.field_k.field_m[var6], -20, lh.field_l)) {
               pf.field_a.drawFadedToColour(var7 + 84, 340, 128, 8388608);
             } else {
-              pf.field_a.a(var7 + 84, 340);
+              pf.field_a.draw(var7 + 84, 340);
             }
             var8 = FullscreenFocusCanvas.field_k.field_m[var6];
             var9 = FullscreenFocusCanvas.field_k.field_g[var6];
@@ -417,7 +417,7 @@ final class LaboratoryScreen extends MenuScreen {
               if (var8 < 63) {
                 var10 = FullscreenFocusCanvas.field_k.d(var8, 53) ? 1 : 0;
                 var11 = FullscreenFocusCanvas.field_k.d(var9, param1 ^ -67) ? 1 : 0;
-                MarkerSliderPainter.field_b[var8].g(90 + var7, 354);
+                MarkerSliderPainter.field_b[var8].drawTransparent(90 + var7, 354);
                 var12 = FullscreenFocusCanvas.field_k.field_t[var8];
                 if (var10 != 0) {
                   var12 = cr.a(var8, -111);
@@ -435,7 +435,7 @@ final class LaboratoryScreen extends MenuScreen {
                 SoftwareRasterizer.fillRect(stackIn_27_0, stackIn_27_1, stackIn_27_2, stackIn_27_3, stackIn_28_4);
                 if (var9 != 255) {
                   if (63 > var9) {
-                    MarkerSliderPainter.field_b[-13 + var9].g(90 + var7, 384);
+                    MarkerSliderPainter.field_b[-13 + var9].drawTransparent(90 + var7, 384);
                     if (var6 != q.field_d) {
                     }
                     var12Lifetime1 = FullscreenFocusCanvas.field_k.field_t[var9];
@@ -457,35 +457,35 @@ final class LaboratoryScreen extends MenuScreen {
                   if (FullscreenFocusCanvas.field_k.a(45, -126) &&
                     var8 != 255 &&
                     17 != var8) {
-                    LabeledChildWidget.field_E.a(84 + var7, 340);
+                    LabeledChildWidget.field_E.draw(84 + var7, 340);
                   }
                 } else {
                   if (FullscreenFocusCanvas.field_k.a(45, -126) &&
                     var8 != 255 &&
                     17 != var8) {
-                    LabeledChildWidget.field_E.a(84 + var7, 340);
+                    LabeledChildWidget.field_E.draw(84 + var7, 340);
                   }
                 }
               } else {
                 if (FullscreenFocusCanvas.field_k.a(45, -126) &&
                   var8 != 255 &&
                   17 != var8) {
-                  LabeledChildWidget.field_E.a(84 + var7, 340);
+                  LabeledChildWidget.field_E.draw(84 + var7, 340);
                 }
               }
             } else {
               if (FullscreenFocusCanvas.field_k.a(45, -126) &&
                 var8 != 255 &&
                 17 != var8) {
-                LabeledChildWidget.field_E.a(84 + var7, 340);
+                LabeledChildWidget.field_E.draw(84 + var7, 340);
               }
             }
             if (PortalView.i(51603) && (jk.a((byte) -51, var8) ||
               jk.a((byte) -103, var9))) {
-              LabeledChildWidget.field_E.a(84 + var7, 340);
+              LabeledChildWidget.field_E.draw(84 + var7, 340);
             }
           } else {
-            pf.field_a.a(var7 + 84, 340, 32);
+            pf.field_a.drawAlpha(var7 + 84, 340, 32);
           }
           var6++;
         }
@@ -809,7 +809,7 @@ final class LaboratoryScreen extends MenuScreen {
         SoftwareRasterizer.resetClip();
     }
 
-    public static void c(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_o = null;
         field_l = null;
         field_q = null;
@@ -821,7 +821,7 @@ final class LaboratoryScreen extends MenuScreen {
 
     private final void a(int param0, int param1, int param2, int param3, int param4, int param5) {
         SoftwareRasterizer.setClip(param5, param2, param4 + param5 + (param1 << 1), (param1 << 1) + param2 + param0);
-        IsaacRandom.field_h.c(param5, param2);
+        IsaacRandom.field_h.drawOpaque(param5, param2);
         SoftwareRasterizer.fillRectAlpha(param5, param2, param4 + (param1 << 1), param0 + (param1 << 1), 2560, 160);
         ak.a((param1 << 1) + param4, param0 + (param1 << 1), -5, param5, param2);
         SoftwareRasterizer.resetClip();
@@ -1127,7 +1127,7 @@ final class LaboratoryScreen extends MenuScreen {
           var5 = pb.field_e.measureWrappedHeight(cc.field_a, var4, 0);
           this.a(var5, var6, var3, -79, var4, var2);
           pb.field_e.drawParagraph(cc.field_a, var2 + var6, var6 + var3, var4, var5, 16777215, -1, 0, 0, 0);
-          lh.field_m.a(-3 + ((var6 << 1) + (var2 + var4)), 8 + var3);
+          lh.field_m.draw(-3 + ((var6 << 1) + (var2 + var4)), 8 + var3);
           if (this.field_p > 0) {
             var2Lifetime1 = 200;
             var4Lifetime1 = 390;
@@ -1135,10 +1135,10 @@ final class LaboratoryScreen extends MenuScreen {
             var5Lifetime1 = pb.field_e.measureWrappedHeight(uc.field_g, var4Lifetime1, 0);
             this.a(var5Lifetime1, var6, var3Lifetime1, -105, var4Lifetime1, var2Lifetime1);
             pb.field_e.drawParagraph(uc.field_g, var2Lifetime1 + var6, var3Lifetime1 + var6, var4Lifetime1, var5Lifetime1, 16777215, -1, 0, 0, 0);
-            ip.field_e.a(var2Lifetime1 + 50, var3Lifetime1 + 3 - ip.field_e.field_b);
-            oi.field_k.a(var2Lifetime1 + 50, var5Lifetime1 + var3Lifetime1 - 3 + (var6 << 1));
-            lh.field_m.a(var2Lifetime1 - (-var4Lifetime1 - (var6 << 1) + 3), var3Lifetime1 + (var5Lifetime1 >> 1));
-            AttackEvent.field_n.a(var2Lifetime1 + (-var6 - 1), (var5Lifetime1 >> 1) + var3Lifetime1);
+            ip.field_e.draw(var2Lifetime1 + 50, var3Lifetime1 + 3 - ip.field_e.field_b);
+            oi.field_k.draw(var2Lifetime1 + 50, var5Lifetime1 + var3Lifetime1 - 3 + (var6 << 1));
+            lh.field_m.draw(var2Lifetime1 - (-var4Lifetime1 - (var6 << 1) + 3), var3Lifetime1 + (var5Lifetime1 >> 1));
+            AttackEvent.field_n.draw(var2Lifetime1 + (-var6 - 1), (var5Lifetime1 >> 1) + var3Lifetime1);
           }
           if (this.field_p > 100) {
             var2Lifetime2 = 50;
@@ -1148,7 +1148,7 @@ final class LaboratoryScreen extends MenuScreen {
             var5Lifetime2Lifetime1 = pb.field_e.measureWrappedHeight(wq.field_d, var4Lifetime2, 0);
             this.a(var5Lifetime2Lifetime1, var6, var3Lifetime2, -126, var4Lifetime2, var2Lifetime2);
             pb.field_e.drawParagraph(wq.field_d, var6 + var2Lifetime2, var3Lifetime2 + var6, var4Lifetime2, var5Lifetime2Lifetime1, 16777215, -1, 0, 0, 0);
-            oi.field_k.a(var2Lifetime2 + 50, var5Lifetime2Lifetime1 + var3Lifetime2 + (-3 + (var6 << 1)));
+            oi.field_k.draw(var2Lifetime2 + 50, var5Lifetime2Lifetime1 + var3Lifetime2 + (-3 + (var6 << 1)));
           }
           if (this.field_p > 300) {
             var5Lifetime3 = 80;
@@ -1162,7 +1162,7 @@ final class LaboratoryScreen extends MenuScreen {
             var5Lifetime3Lifetime1 = pb.field_e.measureWrappedHeight(jf.field_c, var4Lifetime3, 0);
             this.a(var5Lifetime3Lifetime1, var6, var3Lifetime3, -71, var4Lifetime3, var2Lifetime3);
             pb.field_e.drawParagraph(jf.field_c, var6 + var2Lifetime3, var3Lifetime3 + var6, var4Lifetime3, var5Lifetime3Lifetime1, 16777215, -1, 0, 0, 0);
-            ip.field_e.a(50 + var2Lifetime3, -ip.field_e.field_b + (var3Lifetime3 + 3));
+            ip.field_e.draw(50 + var2Lifetime3, -ip.field_e.field_b + (var3Lifetime3 + 3));
           }
           if (this.field_p > 200) {
             var3Lifetime4 = 280;
@@ -1172,7 +1172,7 @@ final class LaboratoryScreen extends MenuScreen {
             var5Lifetime4Lifetime1 = pb.field_e.measureWrappedHeight(pi.field_h, var4Lifetime4, 0);
             this.a(var5Lifetime4Lifetime1, var6, var3Lifetime4, -118, var4Lifetime4, var2Lifetime4);
             pb.field_e.drawParagraph(pi.field_h, var2Lifetime4 + var6, var6 + var3Lifetime4, var4Lifetime4, var5Lifetime4Lifetime1, 16777215, -1, 0, 0, 0);
-            oi.field_k.a(80 + var2Lifetime4, var5Lifetime4Lifetime1 - 3 + (var3Lifetime4 + (var6 << 1)));
+            oi.field_k.draw(80 + var2Lifetime4, var5Lifetime4Lifetime1 - 3 + (var3Lifetime4 + (var6 << 1)));
           }
         }
     }

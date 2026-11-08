@@ -581,7 +581,7 @@ final class GameCharacter extends UnitView {
                 this.n(0);
                 this.s(2);
                 var12_ref_ja = nk.a(QuickChatCategoryRegistry.field_d[var6 + (gg.field_l[var5] + this.field_fb)], AlignedIconLabel.field_Ib, 255, MidiPcmStream.field_B);
-                var12_ref_ja.g(var7 + this.field_mb - 3, var8 + this.field_cb - 3);
+                var12_ref_ja.drawTransparent(var7 + this.field_mb - 3, var8 + this.field_cb - 3);
                 return;
               }
               if (!ei.field_f) {
@@ -643,7 +643,7 @@ final class GameCharacter extends UnitView {
                   }
                   var13 = -(var12 / 2) + 24;
                   if (var12 != 0) {
-                    DelayedPacket.field_n.f(var7 + var13, var8 + var13, var12, var12);
+                    DelayedPacket.field_n.drawScaled(var7 + var13, var8 + var13, var12, var12);
                   }
                 }
               }
@@ -768,8 +768,8 @@ final class GameCharacter extends UnitView {
                   var21 -= 3;
                 }
                 SoftwareRasterizer.clear();
-                var20_ref_ja.g(3, 3);
-                QuickChatHelpDialog.field_Hb[var16][var19].g(var21, var22);
+                var20_ref_ja.drawTransparent(3, 3);
+                QuickChatHelpDialog.field_Hb[var16][var19].drawTransparent(var21, var22);
                 var23 = SoftwareRasterizer.pixels;
                 var24 = 0;
                 while (var24 < var23.length) {
@@ -808,7 +808,7 @@ final class GameCharacter extends UnitView {
                 }
                 var20 = 3 + var8;
                 if (this.state == 23) {
-                  aa.field_h[var19].a(var7, var20);
+                  aa.field_h[var19].draw(var7, var20);
                 } else if (this.field_Nb > 0) {
                   var21 = pn.field_c.length;
                   var19 = -var21 + (1 + PowerupEvent.field_m / 4 % (-1 + var21 * 2));
@@ -822,7 +822,7 @@ final class GameCharacter extends UnitView {
                   } else {
                     stackIn_390_2 = -2;
                   }
-                  ((IndexedSprite) (Object) stackIn_389_0).a(stackIn_389_1 + stackIn_390_2, var20 - 7);
+                  ((IndexedSprite) (Object) stackIn_389_0).draw(stackIn_389_1 + stackIn_390_2, var20 - 7);
                 } else {
                   if (this.field_ub > 0) {
                     var21 = 72;
@@ -833,22 +833,22 @@ final class GameCharacter extends UnitView {
                     } else {
                       var21 = this.field_ub / 2 + 48;
                     }
-                    vb.field_b.a(var7 - 3 - (var21 - 48) / 2, -var21 + 48 - 3 + var8, var21, var21, 128);
+                    vb.field_b.drawScaledAlpha(var7 - 3 - (var21 - 48) / 2, -var21 + 48 - 3 + var8, var21, var21, 128);
                   }
                 }
                 if (this.state == 33) {
-                  vb.field_b.f(var13 + var7, var8 + var13, var12, var12);
+                  vb.field_b.drawScaled(var13 + var7, var8 + var13, var12, var12);
                 } else if (this.slowTicks <= 0) {
-                  vb.field_b.g(var7 - 3, var8 - 3);
+                  vb.field_b.drawTransparent(var7 - 3, var8 - 3);
                 } else {
-                  vb.field_b.d(-3 + var7, var8 - 3, 142);
+                  vb.field_b.drawTransparentWithOpacity(-3 + var7, var8 - 3, 142);
                 }
                 if (this.state == 23 ||
                   this.field_Nb > 0) {
                   g.c();
                   SoftwareRasterizer.setClip(var7, var20 + aa.field_h[var19].field_b / 2, 640, aa.field_h[var19].field_b + var20);
                   if (23 == this.state) {
-                    aa.field_h[var19].a(var7, var20);
+                    aa.field_h[var19].draw(var7, var20);
                   }
                   g.b();
                 }
@@ -866,7 +866,7 @@ final class GameCharacter extends UnitView {
                 }
                 else {
                   if (!(param1.zoom > 1.25f)) {
-                    QuickChatCategoryRegistry.field_d[0].g(var7, var8 + 3);
+                    QuickChatCategoryRegistry.field_d[0].drawTransparent(var7, var8 + 3);
                     if ((0 != this.field_Kb)) {
                       MatchingTextValidator.field_w.drawCharacter((char)(48 + this.field_Kb), 1 + (var7 - (-QuickChatCategoryRegistry.field_d[0].width - 9)), var8 + 7 + QuickChatCategoryRegistry.field_d[0].height + 1, 0);
                       MatchingTextValidator.field_w.drawCharacter((char)(48 + this.field_Kb), 9 + var7 + QuickChatCategoryRegistry.field_d[0].width, 7 + (var8 + QuickChatCategoryRegistry.field_d[0].height), 16777215);
@@ -874,8 +874,8 @@ final class GameCharacter extends UnitView {
                     decompiledFrameRemainder5 = false;
                   }
                   else {
-                    QuickChatCategoryRegistry.field_d[0].f(var7, var8 + 3, 1);
-                    QuickChatCategoryRegistry.field_d[0].f(var7, var8, 16777215);
+                    QuickChatCategoryRegistry.field_d[0].drawSilhouette(var7, var8 + 3, 1);
+                    QuickChatCategoryRegistry.field_d[0].drawSilhouette(var7, var8, 16777215);
                     if (0 != this.field_Kb) {
                       pb.field_e.drawCharacter((char)(this.field_Kb + 48), var7 - (-QuickChatCategoryRegistry.field_d[0].width - 9) + 1, QuickChatCategoryRegistry.field_d[0].height + (7 + (var8 + 1)), 0);
                       pb.field_e.drawCharacter((char)(48 + this.field_Kb), 9 + (QuickChatCategoryRegistry.field_d[0].width + var7), 7 + (var8 + QuickChatCategoryRegistry.field_d[0].height), 16777215);
@@ -1230,7 +1230,7 @@ final class GameCharacter extends UnitView {
             var9 = gg.field_l[var5_int] + var6;
             if (param2 >= 256) {
               if (this.facing != 1) {
-                wq.field_c[var8][var9].g(param0, param1);
+                wq.field_c[var8][var9].drawTransparent(param0, param1);
                 if (var10 != 0) {
                   wq.field_c[var8][var9].drawHorizontalFlip(param0, param1);
                   wq.field_c[var8][var9].c(param0, param1, param2);

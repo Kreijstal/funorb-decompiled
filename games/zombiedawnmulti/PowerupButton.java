@@ -186,7 +186,7 @@ final class PowerupButton {
           var9 = new int[4];
           SoftwareRasterizer.saveClip(var9);
           SoftwareRasterizer.setClip(8 + this.field_m, -var4 + (MarkerSliderPainter.field_b[this.field_n].height + 24) + (480 - this.field_h), MarkerSliderPainter.field_b[this.field_n].width + 8 + this.field_m, MarkerSliderPainter.field_b[this.field_n].height + (24 - this.field_h + 480));
-          MarkerSliderPainter.field_b[this.field_n].g(this.field_m + 8, -this.field_h + 504);
+          MarkerSliderPainter.field_b[this.field_n].drawTransparent(this.field_m + 8, -this.field_h + 504);
           SoftwareRasterizer.restoreClip(var9);
           return;
         }
@@ -194,11 +194,11 @@ final class PowerupButton {
           if (this.field_k) {
             LabeledChildWidget.field_H[this.field_a].drawAdditive(this.field_m, -this.field_h + 480, lh.field_b[this.field_i] + 96);
           }
-          MarkerSliderPainter.field_b[this.field_n].g(this.field_m + 8, -this.field_h + 480 + 24);
+          MarkerSliderPainter.field_b[this.field_n].drawTransparent(this.field_m + 8, -this.field_h + 480 + 24);
           if (this.field_k) {
             MarkerSliderPainter.field_b[this.field_n].drawAdditive(8 + this.field_m, 24 + (480 - this.field_h), 196 + lh.field_b[this.field_i]);
           }
-          LabeledChildWidget.field_H[3].g(this.field_m, 480 - this.field_h);
+          LabeledChildWidget.field_H[3].drawTransparent(this.field_m, 480 - this.field_h);
           return;
         }
         var4Lifetime1 = (this.field_i + this.field_m / 3) % 50;
@@ -207,34 +207,34 @@ final class PowerupButton {
           SoftwareRasterizer.fillCircleAlpha(MarkerSliderPainter.field_b[this.field_n].width / 2 + (this.field_m + 8), -this.field_h + 480 + (24 + MarkerSliderPainter.field_b[this.field_n].height / 2), 4 * lh.field_b[var4Lifetime1] / 8, 11206570, 118 - var4Lifetime1);
           if (this.field_k) {
             LabeledChildWidget.field_H[this.field_a].drawAdditive(this.field_m, -this.field_h + 480, lh.field_b[this.field_i] + 96);
-            MarkerSliderPainter.field_b[this.field_n].g(this.field_m + 8, -this.field_h + 480 + 24);
+            MarkerSliderPainter.field_b[this.field_n].drawTransparent(this.field_m + 8, -this.field_h + 480 + 24);
             if (this.field_k) {
               MarkerSliderPainter.field_b[this.field_n].drawAdditive(8 + this.field_m, 24 + (480 - this.field_h), 196 + lh.field_b[this.field_i]);
             }
-            LabeledChildWidget.field_H[3].g(this.field_m, 480 - this.field_h);
+            LabeledChildWidget.field_H[3].drawTransparent(this.field_m, 480 - this.field_h);
             return;
           }
-          MarkerSliderPainter.field_b[this.field_n].g(this.field_m + 8, -this.field_h + 480 + 24);
+          MarkerSliderPainter.field_b[this.field_n].drawTransparent(this.field_m + 8, -this.field_h + 480 + 24);
           if (this.field_k) {
             MarkerSliderPainter.field_b[this.field_n].drawAdditive(8 + this.field_m, 24 + (480 - this.field_h), 196 + lh.field_b[this.field_i]);
           }
-          LabeledChildWidget.field_H[3].g(this.field_m, 480 - this.field_h);
+          LabeledChildWidget.field_H[3].drawTransparent(this.field_m, 480 - this.field_h);
           return;
         }
         if (!this.field_k) {
-          MarkerSliderPainter.field_b[this.field_n].g(this.field_m + 8, -this.field_h + 480 + 24);
+          MarkerSliderPainter.field_b[this.field_n].drawTransparent(this.field_m + 8, -this.field_h + 480 + 24);
           if (this.field_k) {
             MarkerSliderPainter.field_b[this.field_n].drawAdditive(8 + this.field_m, 24 + (480 - this.field_h), 196 + lh.field_b[this.field_i]);
           }
-          LabeledChildWidget.field_H[3].g(this.field_m, 480 - this.field_h);
+          LabeledChildWidget.field_H[3].drawTransparent(this.field_m, 480 - this.field_h);
           return;
         }
         LabeledChildWidget.field_H[this.field_a].drawAdditive(this.field_m, -this.field_h + 480, lh.field_b[this.field_i] + 96);
-        MarkerSliderPainter.field_b[this.field_n].g(this.field_m + 8, -this.field_h + 480 + 24);
+        MarkerSliderPainter.field_b[this.field_n].drawTransparent(this.field_m + 8, -this.field_h + 480 + 24);
         if (this.field_k) {
           MarkerSliderPainter.field_b[this.field_n].drawAdditive(8 + this.field_m, 24 + (480 - this.field_h), 196 + lh.field_b[this.field_i]);
         }
-        LabeledChildWidget.field_H[3].g(this.field_m, 480 - this.field_h);
+        LabeledChildWidget.field_H[3].drawTransparent(this.field_m, 480 - this.field_h);
     }
 
     final void a(int param0, int param1, int param2) {

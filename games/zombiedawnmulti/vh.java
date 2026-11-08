@@ -33,7 +33,7 @@ final class vh extends UiComponent {
         }
     }
 
-    final static int a(boolean param0, int param1, String param2) {
+    final static int measureText(boolean param0, int param1, String param2) {
         RuntimeException var3 = null;
         int stackIn_4_0 = 0;
         int stackIn_6_0 = 0;
@@ -89,7 +89,7 @@ final class vh extends UiComponent {
         int var2;
         int var3;
         int var4;
-        this.field_Kb.c(this.field_x, this.field_Q);
+        this.field_Kb.drawOpaque(this.field_x, this.field_Q);
         SoftwareRasterizer.fillRectGradient(4 + this.field_zb + this.field_x, this.field_Q, 8, this.field_z, 16777215, 4671303);
         var4 = 18 / ((param0 - 16) / 42);
         var2 = -this.field_x + MouseInputHandler.field_g;

@@ -64,7 +64,7 @@ final class Bzip2Decoder {
         return (byte)Bzip2Decoder.readBits(1, param0);
     }
 
-    private final static void d(eb param0) {
+    private final static void decodeBlocks(eb param0) {
         int dupTemp$1 = 0;
         int dupTemp$0 = 0;
         int var1;
@@ -571,7 +571,7 @@ final class Bzip2Decoder {
         return (byte)Bzip2Decoder.readBits(8, param0);
     }
 
-    final static int a(byte[] param0, int param1, byte[] param2, int param3, int param4) {
+    final static int decompressInto(byte[] param0, int param1, byte[] param2, int param3, int param4) {
         int stackIn_2_0 = 0;
         Throwable decompiledCaughtException = null;
         Object var5 = null;
@@ -586,7 +586,7 @@ final class Bzip2Decoder {
           field_a.field_o = 0;
           field_a.field_F = 0;
           field_a.field_P = 0;
-          Bzip2Decoder.d(field_a);
+          Bzip2Decoder.decodeBlocks(field_a);
           param1 = param1 - field_a.field_K;
           field_a.field_r = null;
           field_a.field_k = null;
@@ -595,7 +595,7 @@ final class Bzip2Decoder {
         return stackIn_2_0;
     }
 
-    public static void a() {
+    public static void releaseStatics() {
         field_a = null;
     }
 

@@ -20,7 +20,7 @@ final class bg implements WidgetPainter {
     private int field_h;
     static String field_a;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_p = null;
         field_a = null;
         field_q = null;
@@ -33,7 +33,7 @@ final class bg implements WidgetPainter {
           field_o = null;
           return;
         }
-        bg.a((byte) -90);
+        bg.releaseStatics((byte) -90);
         field_o = null;
     }
 

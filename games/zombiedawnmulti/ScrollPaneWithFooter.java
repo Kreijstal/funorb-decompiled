@@ -89,7 +89,7 @@ final class ScrollPaneWithFooter extends UiComponent {
               DebouncedValidationProvider.field_e.drawParagraph(hj.field_e, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
             }
           } else {
-            var6.g(245, 199);
+            var6.drawTransparent(245, 199);
           }
           if (nf.field_a > lb.field_a) {
             var7 = QuickChatMenu.field_Ub[DebouncedValidationProvider.field_j];

@@ -30,7 +30,7 @@ final class dn {
             param1 = new byte[var4_int];
           }
           if (param2 >= -4) {
-            dn.a(-49);
+            dn.releaseStatics(-49);
           }
           var5 = param0.readBits(3, 14862);
           var6 = (byte)param0.readBits(8, 14862);
@@ -123,7 +123,7 @@ final class dn {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_b = null;
         if (param0 != 16130) {
           String var2 = (String) null;

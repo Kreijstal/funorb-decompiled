@@ -119,7 +119,7 @@ final class ck {
               }
               var8_ref_dm.field_Kb = bl.a((byte) 98) - (long)((PacketBuffer) ((Object) var1)).readInt(-1478490344);
               var8_ref_dm.field_Mb = ((PacketBuffer) ((Object) var1)).readUnsignedShort((byte) 69);
-              var10 = ((PacketBuffer) ((Object) var1)).a(param0 ^ -2061);
+              var10 = ((PacketBuffer) ((Object) var1)).readVarInt(param0 ^ -2061);
               stackIn_18_0 = var8_ref_dm;
               stackIn_19_1 = ((1 & var10) != 0);
               stackIn_18_0.field_Nb = stackIn_19_1;
@@ -229,7 +229,7 @@ final class ck {
                       JaggrabDownloader.field_c.field_cc = JaggrabDownloader.field_c.field_cc + 1;
                     }
                     var7.field_Mb = ((PacketBuffer) ((Object) var1)).readUnsignedShort((byte) 69);
-                    var8 = ((PacketBuffer) ((Object) var1)).a(0);
+                    var8 = ((PacketBuffer) ((Object) var1)).readVarInt(0);
                     var7.field_Sb = var8 >> 1;
                     stackIn_83_0 = var7;
                     stackIn_84_1 = ((1 & var8) != 0);
@@ -271,7 +271,7 @@ final class ck {
                   }
                   if (22 == var2) {
                     bc.field_e = ((PacketBuffer) ((Object) var1)).readUnsignedShort((byte) 69);
-                    LobbyPlayer.field_Zb = ((PacketBuffer) ((Object) var1)).a(param0 + 2061);
+                    LobbyPlayer.field_Zb = ((PacketBuffer) ((Object) var1)).readVarInt(param0 + 2061);
                     return;
                   }
                   if (var2 == 23) {

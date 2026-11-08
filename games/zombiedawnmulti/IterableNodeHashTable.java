@@ -108,7 +108,7 @@ final class IterableNodeHashTable implements Iterable {
         return (Iterator) ((Object) new NodeHashTableIterator(this));
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         if (param0) {
           byte[] var2 = (byte[]) null;
           IterableNodeHashTable.a((byte[]) null, -107);
@@ -143,14 +143,14 @@ final class IterableNodeHashTable implements Iterable {
         SoftwareRasterizer.fillRectGradient(0, 5, 640, 55, 16777215, 1);
         Sprite var5 = new Sprite(640, 75);
         var5.bindAsRenderTarget();
-        TertiaryLinkNode.field_r.b(sm.field_g[param2], 320, 65, 53248, 1);
+        TertiaryLinkNode.field_r.drawCentered(sm.field_g[param2], 320, 65, 53248, 1);
         Sprite var6 = new Sprite(640, 75);
         var6.bindAsRenderTarget();
         int var7 = (int)(param1 * 640.0);
         if (param0 >= 26) {
           var8 = (int)(75.0 * param1);
           var5.drawScaledAveraged((-var7 + 640) / 2, 0, var7, var8);
-          var9.e(0, 0);
+          var9.drawMultiply(0, 0);
           var6.addOutline(16777215);
           var6.addOutline(16777215);
           var6.addOutline(1);

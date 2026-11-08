@@ -29,7 +29,7 @@ final class jq {
         int var11 = 0;
         int var12 = 0;
         int var6 = 21 * param3 / param0;
-        field_c.a(param5 - 7, -14 + param1, param4);
+        field_c.drawAlpha(param5 - 7, -14 + param1, param4);
         if (null == uf.field_h) {
           uf.field_h = new Sprite(8, 21);
           g.c(uf.field_h);

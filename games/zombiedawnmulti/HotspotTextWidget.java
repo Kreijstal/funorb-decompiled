@@ -95,7 +95,7 @@ class HotspotTextWidget extends ButtonWidget {
               }
               var13 = var13 + var14;
             }
-            var21.g(-param4.offsetX, -param4.field_y);
+            var21.drawTransparent(-param4.offsetX, -param4.field_y);
             SoftwareRasterizer.setTarget(var30, var10, var11);
             SoftwareRasterizer.restoreClip(var29);
             return;

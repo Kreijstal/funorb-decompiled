@@ -19,7 +19,7 @@ final class CheckboxPainter implements WidgetPainter {
     static UiComponent[] field_k;
     private int field_b;
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_a = null;
         field_k = null;
         field_f = null;

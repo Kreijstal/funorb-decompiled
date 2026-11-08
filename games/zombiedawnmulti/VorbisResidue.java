@@ -50,7 +50,7 @@ final class VorbisResidue {
           var9 = 0;
           while (var9 < var6) {
             if (var8 == 0) {
-              var10 = VorbisSample.codebooks[this.classbookId].a();
+              var10 = VorbisSample.codebooks[this.classbookId].decodeScalar();
               for (var11 = var4Lifetime1 - 1; var11 >= 0; var11--) {
                 if (var9 + var11 < var6) {
                   var7[var9 + var11] = var10 % this.classificationCount;
@@ -69,7 +69,7 @@ final class VorbisResidue {
                 if (this.residueType != 0) {
                   var15 = 0;
                   while (var15 < this.partitionSize) {
-                    var28 = var14.c();
+                    var28 = var14.decodeVector();
                     for (var17 = 0; var17 < var14.field_e; var17++) {
                       param0[var13 + var15] = param0[var13 + var15] + var28[var17];
                       var15++;
@@ -78,7 +78,7 @@ final class VorbisResidue {
                 } else {
                   var15 = this.partitionSize / var14.field_e;
                   for (var16 = 0; var16 < var15; var16++) {
-                    var27 = var14.c();
+                    var27 = var14.decodeVector();
                     for (var18 = 0; var18 < var14.field_e; var18++) {
                       param0[var13 + var16 + var18 * var15] = param0[var13 + var16 + var18 * var15] + var27[var18];
                     }
@@ -102,19 +102,19 @@ final class VorbisResidue {
         int var5 = 0;
         int var2 = 0;
         int var2Lifetime1;
-        this.residueType = VorbisSample.a(16);
-        this.begin = VorbisSample.a(24);
-        this.end = VorbisSample.a(24);
-        this.partitionSize = VorbisSample.a(24) + 1;
-        this.classificationCount = VorbisSample.a(6) + 1;
-        this.classbookId = VorbisSample.a(8);
+        this.residueType = VorbisSample.readBits(16);
+        this.begin = VorbisSample.readBits(24);
+        this.end = VorbisSample.readBits(24);
+        this.partitionSize = VorbisSample.readBits(24) + 1;
+        this.classificationCount = VorbisSample.readBits(6) + 1;
+        this.classbookId = VorbisSample.readBits(8);
         int[] var1 = new int[this.classificationCount];
         for (var2 = 0; var2 < this.classificationCount; var2++) {
           var3 = 0;
-          var4 = VorbisSample.a(3);
-          var5 = VorbisSample.b() != 0 ? 1 : 0;
+          var4 = VorbisSample.readBits(3);
+          var5 = VorbisSample.readBit() != 0 ? 1 : 0;
           if (var5 != 0) {
-            var3 = VorbisSample.a(5);
+            var3 = VorbisSample.readBits(5);
           }
           var1[var2] = var3 << 3 | var4;
         }
@@ -122,7 +122,7 @@ final class VorbisResidue {
         int var6 = 0;
         var2Lifetime1 = var6;
         while (var6 < this.classificationCount * 8) {
-          this.cascadeBooks[var6] = (var1[var6 >> 3] & 1 << (var6 & 7)) != 0 ? VorbisSample.a(8) : -1;
+          this.cascadeBooks[var6] = (var1[var6 >> 3] & 1 << (var6 & 7)) != 0 ? VorbisSample.readBits(8) : -1;
           var6++;
         }
     }

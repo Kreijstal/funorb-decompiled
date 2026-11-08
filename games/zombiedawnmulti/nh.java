@@ -12,7 +12,7 @@ final class nh extends IntrusiveNode {
     static String field_h;
     int field_f;
 
-    final static String a(int param0, String param1) {
+    final static String prefixWithCrown(int param0, String param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         String stackIn_6_0 = null;

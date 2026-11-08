@@ -416,10 +416,10 @@ final class LevelActorSpawner extends LevelData {
           }
           MatchingTextValidator.field_v = new Sprite(var3, var4 * 3 / 4);
           MatchingTextValidator.field_v.bindAsRenderTarget();
-          var2.c(0, 0);
+          var2.drawOpaque(0, 0);
           GameScreen.field_s = new Sprite(var3, -MatchingTextValidator.field_v.height + var4);
           GameScreen.field_s.bindAsRenderTarget();
-          var2.c(0, -MatchingTextValidator.field_v.height);
+          var2.drawOpaque(0, -MatchingTextValidator.field_v.height);
           GameScreen.field_s.field_y = MatchingTextValidator.field_v.height;
           ql.a(true);
           return;

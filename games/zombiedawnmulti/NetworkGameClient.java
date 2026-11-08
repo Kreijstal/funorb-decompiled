@@ -211,7 +211,7 @@ abstract class NetworkGameClient extends GameApplet {
         }
     }
 
-    private final void l(int param0) {
+    private final void enableMessageGroup1(int param0) {
         wj.field_l[2] = true;
         if (param0 > -36) {
           this.field_q = -11;
@@ -663,8 +663,8 @@ abstract class NetworkGameClient extends GameApplet {
         }
         if (ClientException.field_i == 3 &&
           PortalView.areGraphicsArchivesReady(AccountCreationForm.field_L, param0 ^ -3795, ra.field_l, wm.field_V) &&
-          jo.a(wm.field_V, 0)) {
-          sc.releaseStatics(1);
+          jo.hasPlatformFullscreenSupport(wm.field_V, 0)) {
+          sc.clearPhaseImageAndCharacterFont(1);
           lc.a(62);
           hh.field_m = false;
           SimArmedHuman.field_Bb = hj.field_e;
@@ -791,7 +791,7 @@ abstract class NetworkGameClient extends GameApplet {
           this.e((byte) 119);
         }
         if (param3) {
-          this.l(-105);
+          this.enableMessageGroup1(-105);
         }
         if (param2) {
           this.d((byte) 40);

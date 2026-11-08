@@ -119,7 +119,7 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
         MusicPatch.field_n = param3;
     }
 
-    public static void n(int param0) {
+    public static void releaseStatics(int param0) {
         field_Ab = null;
         field_vb = null;
         if (param0 != 10) {

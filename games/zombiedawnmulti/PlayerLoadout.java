@@ -51,12 +51,12 @@ final class PlayerLoadout {
         this.powerupLevels = new int[5];
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_g = null;
         if (param0 == 39) {
           return;
         }
-        PlayerLoadout.a((byte) -21);
+        PlayerLoadout.releaseStatics((byte) -21);
     }
 
     static {

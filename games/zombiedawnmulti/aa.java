@@ -114,7 +114,7 @@ final class aa extends ii {
           return;
         }
         try {
-          bh.field_a.a(param1);
+          bh.field_a.removeSubStream(param1);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "aa.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

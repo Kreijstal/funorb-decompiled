@@ -23,7 +23,7 @@ final class kp extends MenuScreen {
             RasterBuffer.a(param1, (byte) -74);
           }
         } else {
-          kp.e(-1);
+          kp.releaseStatics(-1);
           if (param0 != 0) {
             if (param0 == 1) {
               if (param2 == qe.field_g) {
@@ -98,7 +98,7 @@ final class kp extends MenuScreen {
         ((BitmapFont) ((Object) var2)).drawParagraph(vh.field_Fb, var5, var6, var3, var4Lifetime1, this.field_m, this.field_p, 1, 1, 0);
     }
 
-    public static void e(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 == -29690) {
           field_o = null;
           field_n = (String[][]) null;

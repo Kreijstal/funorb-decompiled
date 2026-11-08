@@ -25,7 +25,7 @@ abstract class ii {
 
     abstract long a(byte param0);
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 == -26028) {
           field_c = null;
           field_a = null;

@@ -5,11 +5,11 @@ final class MusicTrack extends IntrusiveNode {
     byte[] field_g;
     f field_f;
 
-    final void b() {
+    final void releasePatchUsage() {
         this.field_f = null;
     }
 
-    final void a() {
+    final void buildPatchUsage() {
         int[] var1;
         int[] var2;
         MidiFileReader var4;
@@ -49,10 +49,10 @@ final class MusicTrack extends IntrusiveNode {
         var19[9] = 128;
         var23[9] = 128;
         var4 = new MidiFileReader(this.field_g);
-        var5 = var4.g();
+        var5 = var4.trackCount();
         for (var6 = 0; var6 < var5; var6++) {
           var4.seekTrack(var6);
-          var4.d(var6);
+          var4.readDelta(var6);
           var4.saveTrackPosition(var6);
         }
         while (true) {
@@ -104,7 +104,7 @@ final class MusicTrack extends IntrusiveNode {
                 var14.field_h[var11Lifetime2] = (byte) 1;
               }
             }
-            var4.d(var6Lifetime1);
+            var4.readDelta(var6Lifetime1);
             var4.saveTrackPosition(var6Lifetime1);
           }
         }
@@ -279,7 +279,7 @@ final class MusicTrack extends IntrusiveNode {
         var13Lifetime1 = param0.position;
         var14Lifetime1 = var2 + var5 + var6 + var7 + var8 + var9 + var10 + var11 + var12;
         for (var15Lifetime1 = 0; var15Lifetime1 < var14Lifetime1; var15Lifetime1++) {
-          param0.a(0);
+          param0.readVarInt(0);
         }
         var4 = var4 + (param0.position - var13Lifetime1);
         var15Lifetime2 = param0.position;
@@ -444,7 +444,7 @@ final class MusicTrack extends IntrusiveNode {
           var61 = var51.position;
           var62 = -1;
           while (true) {
-            var63 = param0.a(0);
+            var63 = param0.readVarInt(0);
             var51.g(0, var63);
             incrementValue$0 = var29Lifetime1;
             var29Lifetime1++;

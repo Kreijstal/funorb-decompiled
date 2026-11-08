@@ -193,7 +193,7 @@ final class PlatformTaskDispatcher implements Runnable {
                   case 16:
                   default:
                     if (!this.field_d) {
-                      throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(new Exception(""));
+                      throw PlatformTaskDispatcher.<RuntimeException>rethrowUnchecked(new Exception(""));
                     }
                     switch (var2_int) {
                       case 3:
@@ -241,21 +241,21 @@ final class PlatformTaskDispatcher implements Runnable {
                           Class.forName("AwtCursorBridge").getDeclaredMethod("setcustomcursor", new Class[]{java.awt.Component.class, int[].class, Integer.TYPE, Integer.TYPE, java.awt.Point.class}).invoke(this.field_x, new Object[]{var12[0], var12[1], new Integer(var8.field_c), new Integer(var8.field_b), var12[2]});
                         } else {
                           if (16 != var2_int) {
-                            throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(new Exception(""));
+                            throw PlatformTaskDispatcher.<RuntimeException>rethrowUnchecked(new Exception(""));
                           }
                           try {
                             if (!field_l.startsWith("win")) {
-                              throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(new Exception());
+                              throw PlatformTaskDispatcher.<RuntimeException>rethrowUnchecked(new Exception());
                             }
                             var13 = (String) (var8.field_a);
                             if (!var13.startsWith("http://") &&
                               !var13.startsWith("https://")) {
-                              throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(new Exception());
+                              throw PlatformTaskDispatcher.<RuntimeException>rethrowUnchecked(new Exception());
                             }
                             var4_ref_String = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789?&=,.%+-_#:/*";
                             for (var5 = 0; var13.length() > var5; var5++) {
                               if (-1 == var4_ref_String.indexOf((int) var13.charAt(var5))) {
-                                throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(new Exception());
+                                throw PlatformTaskDispatcher.<RuntimeException>rethrowUnchecked(new Exception());
                               }
                             }
                             Runtime.getRuntime().exec("cmd /c start \"j\" \"" + var13 + "\"");
@@ -264,7 +264,7 @@ final class PlatformTaskDispatcher implements Runnable {
                             decompiledCaughtException = decompiledCaughtParameter1;
                             var3_ref_Exception = (Exception) (Object) decompiledCaughtException;
                             var8.field_d = var3_ref_Exception;
-                            throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(var3_ref_Exception);
+                            throw PlatformTaskDispatcher.<RuntimeException>rethrowUnchecked(var3_ref_Exception);
                           }
                         }
                         break;
@@ -328,7 +328,7 @@ final class PlatformTaskDispatcher implements Runnable {
                     }
                     try {
                       if (false) throw (en) null;
-                      var8.field_d = wj.a((byte) 3, var8.field_c, (String) (var8.field_a)).b(4646);
+                      var8.field_d = wj.createProxyConnector((byte) 3, var8.field_c, (String) (var8.field_a)).b(4646);
                     } catch (en decompiledCaughtParameter2) {
                       decompiledCaughtException = decompiledCaughtParameter2;
                       var3_ref_en = (en) (Object) decompiledCaughtException;
@@ -631,7 +631,7 @@ final class PlatformTaskDispatcher implements Runnable {
     }
 
     @SuppressWarnings("unchecked")
-    private static <T extends Throwable> RuntimeException $cfr$sneakyThrow(Throwable throwable) throws T {
+    private static <T extends Throwable> RuntimeException rethrowUnchecked(Throwable throwable) throws T {
         throw (T) throwable;
     }
 }

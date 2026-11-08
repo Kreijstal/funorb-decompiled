@@ -1465,7 +1465,7 @@ final class SoftwareRasterizer {
         int var26Lifetime1;
         int var26Lifetime2;
         if (param4 == 0) {
-          SoftwareRasterizer.c(param0, param1, param2, param3, param5, param6);
+          SoftwareRasterizer.fillVerticalGradientAdditive(param0, param1, param2, param3, param5, param6);
           return;
         }
         if (param4 < 0) {
@@ -1731,7 +1731,7 @@ final class SoftwareRasterizer {
         }
     }
 
-    private final static void c(int param0, int param1, int param2, int param3, int param4, int param5) {
+    private final static void fillVerticalGradientAdditive(int param0, int param1, int param2, int param3, int param4, int param5) {
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;

@@ -82,7 +82,7 @@ class GameWorld {
         return g.a(param1, param0, this.hasUpgrade((byte) -81, 59, param2), this.hasUpgrade((byte) -92, 56, param2));
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_p = null;
         field_B = null;
         if (param0 != -6) {

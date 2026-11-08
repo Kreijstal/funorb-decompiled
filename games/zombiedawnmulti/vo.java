@@ -144,11 +144,11 @@ final class vo extends MenuScreen {
     }
 
     private final void b(int param0, int param1, int param2) {
-        jo.field_d.g(param0, param1);
+        jo.field_d.drawTransparent(param0, param1);
         SecondaryNodeDeque.field_e.centerX = param2 - param0;
         SecondaryNodeDeque.field_e.centerY = param1 - 80;
         kk.field_w.draw(param2 - 10021, SecondaryNodeDeque.field_e);
-        eq.field_c.a(param0 + 150, param1 + 50);
+        eq.field_c.draw(param0 + 150, param1 + 50);
     }
 
     final void a(boolean param0) {
@@ -166,25 +166,25 @@ final class vo extends MenuScreen {
           if (this.field_t >= 388) {
             if (508 > this.field_t) {
               this.b(0, 0, -115);
-              MessageDialogContent.field_P.a(0, 480 - MessageDialogContent.field_P.field_a);
+              MessageDialogContent.field_P.draw(0, 480 - MessageDialogContent.field_P.field_a);
             } else {
               if (this.field_t >= 1564) {
                 if (1724 > this.field_t) {
                   this.b(-264, 0, -115);
                   var2 = 924;
-                  bl.field_g.a(-var2 + 622, 0);
+                  bl.field_g.draw(-var2 + 622, 0);
                 } else {
                   if (this.field_t < 1852) {
                     var2 = 924;
                     this.b(-264, 0, -115);
-                    bl.field_g.a(622 - var2, 0);
+                    bl.field_g.draw(622 - var2, 0);
                     SoftwareRasterizer.fillRectAlpha(0, 0, 640, 480, 0, 2 * (-1724 + this.field_t));
                   } else {
                     if (this.field_t < 2152) {
                       this.g(520);
                       if ((!(this.field_t <= 120)) &&
                         (!(this.field_t >= 388))) {
-                        pb.field_e.b(QuickChatHelpDialog.field_Fb, 320, 460, 16777215, 0);
+                        pb.field_e.drawCentered(QuickChatHelpDialog.field_Fb, 320, 460, 16777215, 0);
                       }
                       decompiledFrameRemainder0 = false;
                     }
@@ -195,27 +195,27 @@ final class vo extends MenuScreen {
                 this.b(-(var2 >> 2), 0, -115);
                 var3 = var2 * 7 >> 3;
                 var4 = 9 * var2 >> 4;
-                MessageDialogContent.field_P.a(-var4, -MessageDialogContent.field_P.field_a + 480);
-                bl.field_g.a(-var3 + 622, 0);
+                MessageDialogContent.field_P.draw(-var4, -MessageDialogContent.field_P.field_a + 480);
+                bl.field_g.draw(-var3 + 622, 0);
               }
             }
           } else {
             this.b(0, 0, -115);
-            MessageDialogContent.field_P.a(0, -MessageDialogContent.field_P.field_a + 480);
+            MessageDialogContent.field_P.draw(0, -MessageDialogContent.field_P.field_a + 480);
             SoftwareRasterizer.fillRectAlpha(0, 0, 640, 480, 0, 256 - (-520 + 2 * this.field_t));
           }
           if (decompiledFrameRemainder0) {
             this.g(520);
             if (this.field_t > 120 &&
               this.field_t < 388) {
-              pb.field_e.b(QuickChatHelpDialog.field_Fb, 320, 460, 16777215, 0);
+              pb.field_e.drawCentered(QuickChatHelpDialog.field_Fb, 320, 460, 16777215, 0);
             }
           }
         } else {
           this.g(520);
           if (this.field_t > 120 &&
             this.field_t < 388) {
-            pb.field_e.b(QuickChatHelpDialog.field_Fb, 320, 460, 16777215, 0);
+            pb.field_e.drawCentered(QuickChatHelpDialog.field_Fb, 320, 460, 16777215, 0);
           }
         }
 

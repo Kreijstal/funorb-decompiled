@@ -49,7 +49,7 @@ final class nf {
           var4 = var3;
           for (var5 = 0; var5 < var4.length; var5++) {
             var6 = var4[var5];
-            var7 = DualLinkDeque.a((byte) 1, var6);
+            var7 = DualLinkDeque.validateDomainLabel((byte) 1, var6);
             if (var7 != null) {
               stackIn_18_0 = var7;
               return stackIn_18_0;

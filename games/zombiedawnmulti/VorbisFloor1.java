@@ -32,7 +32,7 @@ final class VorbisFloor1 {
         field_a = null;
     }
 
-    private final static int b(int[] param0, int param1) {
+    private final static int lowNeighbour(int[] param0, int param1) {
         int var5 = 0;
         int var2;
         int var3;
@@ -71,7 +71,7 @@ final class VorbisFloor1 {
         int var10;
         int var11;
         int var13;
-        stackIn_3_0 = (VorbisSample.b() == 0) ? 0 : 1;
+        stackIn_3_0 = (VorbisSample.readBit() == 0) ? 0 : 1;
         var1 = stackIn_3_0;
         if (var1 == 0) {
           return false;
@@ -80,8 +80,8 @@ final class VorbisFloor1 {
         System.arraycopy(this.xList, 0, field_b, 0, var2);
         var3 = field_i[this.multiplier - 1];
         var4 = mb.a((byte) -31, var3 - 1);
-        field_j[0] = VorbisSample.a(var4);
-        field_j[1] = VorbisSample.a(var4);
+        field_j[0] = VorbisSample.readBits(var4);
+        field_j[1] = VorbisSample.readBits(var4);
         var5 = 2;
         for (var6 = 0; var6 < this.field_d.length; var6++) {
           var7 = this.field_d[var6];
@@ -90,7 +90,7 @@ final class VorbisFloor1 {
           var10 = (1 << var9) - 1;
           var11 = 0;
           if (var9 > 0) {
-            var11 = VorbisSample.codebooks[this.field_e[var7]].a();
+            var11 = VorbisSample.codebooks[this.field_e[var7]].decodeScalar();
           }
           for (var12 = 0; var12 < var8; var12++) {
             var13 = this.field_l[var7][var11 & var10];
@@ -102,7 +102,7 @@ final class VorbisFloor1 {
             if (var13 < 0) {
               stackIn_14_2 = 0;
             } else {
-              stackIn_14_2 = VorbisSample.codebooks[var13].a();
+              stackIn_14_2 = VorbisSample.codebooks[var13].decodeScalar();
             }
             stackIn_13_0[stackIn_13_1] = stackIn_14_2;
           }
@@ -110,7 +110,7 @@ final class VorbisFloor1 {
         return true;
     }
 
-    private final static int a(int[] param0, int param1) {
+    private final static int highNeighbour(int[] param0, int param1) {
         int var5 = 0;
         int var2;
         int var3;
@@ -224,8 +224,8 @@ final class VorbisFloor1 {
         field_a[1] = true;
         var5[0] = true;
         for (var6 = 2; var6 < var3; var6++) {
-          var7 = VorbisFloor1.b(field_b, var6);
-          var8_int = VorbisFloor1.a(field_b, var6);
+          var7 = VorbisFloor1.lowNeighbour(field_b, var6);
+          var8_int = VorbisFloor1.highNeighbour(field_b, var6);
           var9 = this.interpolatePoint(field_b[var7], field_j[var7], field_b[var8_int], field_j[var8_int], field_b[var6]);
           var10 = field_j[var6];
           var11 = var4 - var9;
@@ -307,15 +307,15 @@ final class VorbisFloor1 {
         int var5Lifetime1;
         int var5Lifetime2;
         int var5Lifetime3;
-        var1 = VorbisSample.a(16);
+        var1 = VorbisSample.readBits(16);
         if (var1 != 1) {
           throw new RuntimeException();
         }
-        var2 = VorbisSample.a(5);
+        var2 = VorbisSample.readBits(5);
         var3 = 0;
         this.field_d = new int[var2];
         for (var4 = 0; var4 < var2; var4++) {
-          var5 = VorbisSample.a(4);
+          var5 = VorbisSample.readBits(4);
           this.field_d[var4] = var5;
           if (var5 >= var3) {
             var3 = var5 + 1;
@@ -326,12 +326,12 @@ final class VorbisFloor1 {
         this.field_e = new int[var3];
         this.field_l = new int[var3][];
         for (var4Lifetime1 = 0; var4Lifetime1 < var3; var4Lifetime1++) {
-          this.field_k[var4Lifetime1] = VorbisSample.a(3) + 1;
-          dupTemp$1 = VorbisSample.a(2);
+          this.field_k[var4Lifetime1] = VorbisSample.readBits(3) + 1;
+          dupTemp$1 = VorbisSample.readBits(2);
           this.field_c[var4Lifetime1] = dupTemp$1;
           var5Lifetime1 = dupTemp$1;
           if (var5Lifetime1 != 0) {
-            this.field_e[var4Lifetime1] = VorbisSample.a(8);
+            this.field_e[var4Lifetime1] = VorbisSample.readBits(8);
           }
           var5Lifetime1 = 1 << var5Lifetime1;
           var10 = new int[var5Lifetime1];
@@ -339,11 +339,11 @@ final class VorbisFloor1 {
           var6_ref_int__ = var9;
           this.field_l[var4Lifetime1] = var10;
           for (var7 = 0; var7 < var5Lifetime1; var7++) {
-            var6_ref_int__[var7] = VorbisSample.a(8) - 1;
+            var6_ref_int__[var7] = VorbisSample.readBits(8) - 1;
           }
         }
-        this.multiplier = VorbisSample.a(2) + 1;
-        var4Lifetime2 = VorbisSample.a(4);
+        this.multiplier = VorbisSample.readBits(2) + 1;
+        var4Lifetime2 = VorbisSample.readBits(4);
         var5Lifetime2 = 2;
         for (var6 = 0; var6 < var2; var6++) {
           var5Lifetime2 = var5Lifetime2 + this.field_k[this.field_d[var6]];
@@ -357,7 +357,7 @@ final class VorbisFloor1 {
           for (var8 = 0; var8 < this.field_k[var7Lifetime1]; var8++) {
             incrementValue$0 = var5Lifetime3;
             var5Lifetime3++;
-            this.xList[incrementValue$0] = VorbisSample.a(var4Lifetime2);
+            this.xList[incrementValue$0] = VorbisSample.readBits(var4Lifetime2);
           }
         }
         if (field_b != null &&

@@ -161,7 +161,7 @@ final class JaggrabDownloader implements Runnable {
               break;
             }
             if (this.field_g.position == this.field_g.payload.length) {
-              throw JaggrabDownloader.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + this.field_g.payload.length + " " + this.field_a));
+              throw JaggrabDownloader.<RuntimeException>rethrowUnchecked(new Exception("HG1: " + this.field_g.payload.length + " " + this.field_a));
             }
             var1 = this;
             synchronized (var1) {
@@ -260,7 +260,7 @@ final class JaggrabDownloader implements Runnable {
     }
 
     @SuppressWarnings("unchecked")
-    private static <T extends Throwable> RuntimeException $cfr$sneakyThrow(Throwable throwable) throws T {
+    private static <T extends Throwable> RuntimeException rethrowUnchecked(Throwable throwable) throws T {
         throw (T) throwable;
     }
 }

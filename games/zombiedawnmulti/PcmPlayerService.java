@@ -24,14 +24,14 @@ class PcmPlayerService {
     private boolean field_g;
     private int field_c;
 
-    private final static void b(PcmStream param0) {
+    private final static void deactivateTree(PcmStream param0) {
         param0.field_f = false;
         if (param0.field_i != null) {
           param0.field_i.field_f = 0;
         }
         PcmStream var1 = param0.firstSubStream();
         while (var1 != null) {
-          PcmPlayerService.b(var1);
+          PcmPlayerService.deactivateTree(var1);
           var1 = param0.d();
         }
     }
@@ -283,7 +283,7 @@ class PcmPlayerService {
     void flushDevice() throws Exception {
     }
 
-    public static void b() {
+    public static void releaseStatics() {
         field_q = null;
     }
 
@@ -318,7 +318,7 @@ class PcmPlayerService {
         if (this.field_s != null &&
           this.field_h <= 0) {
           this.field_h = this.field_h + (sampleRate >> 4);
-          PcmPlayerService.b(this.field_s);
+          PcmPlayerService.deactivateTree(this.field_s);
           this.addTimedStream(this.field_s, this.field_s.priority());
           var4 = 0;
           var5 = 255;

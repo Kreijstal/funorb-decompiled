@@ -201,7 +201,7 @@ abstract class HumanView extends UnitView {
                 var10 = aa.field_h[var9];
               }
               if (var10 != null) {
-                ((IndexedSprite) (var10)).a(var3_int, var8);
+                ((IndexedSprite) (var10)).draw(var3_int, var8);
               }
               if (var6 >= 0 &&
                 var6 < var7.length) {
@@ -211,7 +211,7 @@ abstract class HumanView extends UnitView {
                   if (var11 != 0) {
                     g.a(var7[var6]);
                   }
-                  var7[var6].d(var3_int, var4, 142);
+                  var7[var6].drawTransparentWithOpacity(var3_int, var4, 142);
                   if (var11 != 0) {
                     g.a(var7[var6]);
                   }
@@ -219,30 +219,30 @@ abstract class HumanView extends UnitView {
                   if (var11 != 0) {
                     var7[var6].drawHorizontalFlip(var3_int, var4);
                   } else {
-                    var7[var6].g(var3_int, var4);
+                    var7[var6].drawTransparent(var3_int, var4);
                   }
                 }
               }
               if (var10 != null) {
                 g.c();
                 SoftwareRasterizer.setClip(var3_int, ((IndexedSprite) (var10)).field_b / 2 + var8, 640, ((IndexedSprite) (var10)).field_b + var8);
-                ((IndexedSprite) (var10)).a(var3_int, var8);
+                ((IndexedSprite) (var10)).draw(var3_int, var8);
                 g.b();
               }
             }
           } else {
             if (this.facing == 2) {
-              var7[var6 + 2].g(var3_int, var4);
+              var7[var6 + 2].drawTransparent(var3_int, var4);
             } else {
               if (this.facing == 0) {
-                var7[4 + var6].g(var3_int, var4);
+                var7[4 + var6].drawTransparent(var3_int, var4);
               } else {
                 if (this.facing != 3) {
                   if (1 == this.facing) {
                     var7[var6].drawHorizontalFlip(var3_int, var4);
                   }
                 } else {
-                  var7[var6].g(var3_int, var4);
+                  var7[var6].drawTransparent(var3_int, var4);
                 }
               }
             }

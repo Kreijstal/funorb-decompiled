@@ -505,7 +505,7 @@ final class VerticalScrollbar extends UiComponent {
                 continue;
               }
               var1_ref.field_Vb = 0;
-              if (var1_ref.j(2)) {
+              if (var1_ref.isUnlisted(2)) {
                 var1_ref.unlink(true);
               }
             }

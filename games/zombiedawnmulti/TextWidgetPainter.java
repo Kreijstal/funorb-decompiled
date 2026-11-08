@@ -556,10 +556,10 @@ class TextWidgetPainter implements WidgetPainter, rk {
             if (0 != var12Lifetime1 &&
               var12Lifetime1 != 3) {
               if (1 == var12Lifetime1) {
-                this.field_j.b(this.d(param5, -9327), (var9_int >> 1) + this.textLeft(param6, param5, 15921, param7), this.contentWidth(param4, param2, 105, param5) + var11, param1, param0);
+                this.field_j.drawCentered(this.d(param5, -9327), (var9_int >> 1) + this.textLeft(param6, param5, 15921, param7), this.contentWidth(param4, param2, 105, param5) + var11, param1, param0);
               } else {
                 if ((var12Lifetime1 == 2)) {
-                  this.field_j.a(this.d(param5, -9327), var9_int + this.textLeft(param6, param5, 15921, param7), this.contentWidth(param4, param2, 105, param5) + var11, param1, param0);
+                  this.field_j.drawRightAligned(this.d(param5, -9327), var9_int + this.textLeft(param6, param5, 15921, param7), this.contentWidth(param4, param2, 105, param5) + var11, param1, param0);
                 }
               }
               decompiledFrameRemainder0 = false;

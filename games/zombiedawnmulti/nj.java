@@ -16,7 +16,7 @@ final class nj {
     int field_k;
     static IndexedSprite field_d;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 != 78) {
           nj.a(false, (byte) -38);
           field_d = null;

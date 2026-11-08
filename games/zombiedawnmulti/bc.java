@@ -8,7 +8,7 @@ final class bc {
     static String field_d;
     static String field_c;
 
-    final static void releaseStatics(int param0) {
+    final static void clearNameEntryPopupHolder(int param0) {
         gi.field_i = null;
         if (param0 != 10) {
           field_d = (String) null;
@@ -30,7 +30,7 @@ final class bc {
         if (param2 != -59) {
           bc.a((byte) 86);
         }
-        er.field_j.g(param0, param1);
+        er.field_j.drawTransparent(param0, param1);
         if (param3) {
           var4 = ClientException.field_c % er.field_j.width * 2;
           if (var4 >= er.field_j.width) {
@@ -88,7 +88,7 @@ final class bc {
         if (param2 != -59) {
           bc.a((byte) 86);
         }
-        er.field_j.g(param0, param1);
+        er.field_j.drawTransparent(param0, param1);
         if (param3) {
           var4 = ClientException.field_c % er.field_j.width * 2;
           if (var4 >= er.field_j.width) {

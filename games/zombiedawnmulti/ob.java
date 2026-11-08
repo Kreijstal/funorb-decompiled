@@ -53,7 +53,7 @@ final class ob extends DualLinkNode {
         var7 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           if (param0 >= -9) {
-            ob.c((byte) 74);
+            ob.releaseStatics((byte) 74);
           }
           if (1 != param2) {
             if (param2 == 2) {
@@ -252,12 +252,12 @@ final class ob extends DualLinkNode {
         return (char)var2;
     }
 
-    public static void c(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_A = null;
         field_C = null;
         field_t = null;
         if (param0 != -52) {
-          ob.c((byte) -29);
+          ob.releaseStatics((byte) -29);
           field_q = null;
           field_z = null;
           field_w = null;

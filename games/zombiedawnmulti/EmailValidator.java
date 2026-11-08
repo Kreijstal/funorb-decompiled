@@ -43,7 +43,7 @@ final class EmailValidator extends TextInputValidator {
         }
     }
 
-    public static void b(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_q = null;
         if (param0) {
           EmailValidator.a(-45, '\035');
@@ -66,7 +66,7 @@ final class EmailValidator extends TextInputValidator {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0) {
-            EmailValidator.b(true);
+            EmailValidator.releaseStatics(true);
           }
           stackIn_5_0 = (null != gi.a(4, param1)) ? 0 : 1;
           var3_int = stackIn_5_0;

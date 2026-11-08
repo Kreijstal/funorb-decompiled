@@ -246,9 +246,9 @@ final class eb {
               throw new IllegalStateException();
             }
             aa.field_n = new String[var4];
-            ArrayOperations.a(cq.field_e, 0, aa.field_n, 0, var4);
+            ArrayOperations.copy(cq.field_e, 0, aa.field_n, 0, var4);
             ik.field_a = new String[var3_int - var4 - 1];
-            ArrayOperations.a(cq.field_e, var4 + 1, ik.field_a, 0, var3_int - var4 - 1);
+            ArrayOperations.copy(cq.field_e, var4 + 1, ik.field_a, 0, var3_int - var4 - 1);
             var4 = -1;
             var3_int = mb.a(uq.field_f, false, vl.a(rn.field_g, new String[]{"<br><%0><br>"}, 2), cq.field_e, ib.field_b);
             for (var5 = 0; var5 < var3_int; var5++) {
@@ -262,9 +262,9 @@ final class eb {
               throw new IllegalStateException();
             }
             q.field_a = new String[var4];
-            ArrayOperations.a(cq.field_e, 0, q.field_a, 0, var4);
+            ArrayOperations.copy(cq.field_e, 0, q.field_a, 0, var4);
             ud.field_N = new String[var3_int - var4 - 1];
-            ArrayOperations.a(cq.field_e, var4 + 1, ud.field_N, 0, var3_int + (-var4 - 1));
+            ArrayOperations.copy(cq.field_e, var4 + 1, ud.field_N, 0, var3_int + (-var4 - 1));
             if (aa.field_n.length >= q.field_a.length) {
               stackIn_57_0 = aa.field_n.length;
             } else {
@@ -399,7 +399,7 @@ final class eb {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_L = null;
         if (!param0) {
           eb.a(-18, false, true);

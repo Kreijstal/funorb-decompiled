@@ -696,7 +696,7 @@ final class GameSimulation {
             stackIn_15_1 = ~var3.field_f;
             if (var4 == 0) {
               if (stackIn_15_0 <= stackIn_15_1) {
-                qc.a(param1, var3, 0);
+                qc.insertBefore(param1, var3, 0);
                 return;
               }
               var3 = (GameEvent) (this.eventQueue.c((byte) 123));
@@ -2003,7 +2003,7 @@ final class GameSimulation {
           g.field_a.setSeed((long)((param4 << 5) + param3 + param2));
           var6 = new SimUnit[this.entities.a(0)];
           var7 = new int[this.entities.a(0)];
-          ArrayOperations.a(var7, 0, var7.length, 32767);
+          ArrayOperations.fillInts(var7, 0, var7.length, 32767);
           if (param1 > -36) {
             field_r = (BufferedFile[]) null;
           }

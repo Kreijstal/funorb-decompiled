@@ -39,7 +39,7 @@ final class pn {
           }
           while (hl.field_e.length > var2) {
             var3 = hl.field_e[var2];
-            ArrayOperations.a(TranslatedUiText.field_f, var2 << 4, TranslatedUiText.field_f, var1_int, var3);
+            ArrayOperations.copy(TranslatedUiText.field_f, var2 << 4, TranslatedUiText.field_f, var1_int, var3);
             var1_int = var1_int + var3;
             var2++;
           }
@@ -51,7 +51,7 @@ final class pn {
         }
     }
 
-    final static boolean a(int param0, PlatformTaskDispatcher param1) {
+    final static boolean ensureArchiveAvailable(int param0, PlatformTaskDispatcher param1) {
         RuntimeException var2 = null;
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_6_0 = null;

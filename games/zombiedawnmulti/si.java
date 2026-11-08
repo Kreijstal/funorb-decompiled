@@ -484,13 +484,13 @@ final class si extends MenuScreen {
           if (null == this.field_l) {
             return;
           }
-          MatchingTextValidator.field_w.a(BirthDateValidator.field_o, 90, 134, 16777215, 1, var6);
-          MatchingTextValidator.field_w.a(LoginForm.field_N, 478, 134, 16777215, 1, var6);
+          MatchingTextValidator.field_w.drawCenteredAlpha(BirthDateValidator.field_o, 90, 134, 16777215, 1, var6);
+          MatchingTextValidator.field_w.drawCenteredAlpha(LoginForm.field_N, 478, 134, 16777215, 1, var6);
           var8_int = 555;
           if (this.field_z.field_i) {
-            MatchingTextValidator.field_w.a(IntrusiveDeque.field_d, var8_int, 122, 16777215, 1, var6);
+            MatchingTextValidator.field_w.drawCenteredAlpha(IntrusiveDeque.field_d, var8_int, 122, 16777215, 1, var6);
           }
-          MatchingTextValidator.field_w.a(bo.field_c, var8_int, 134, 16777215, 1, var6);
+          MatchingTextValidator.field_w.drawCenteredAlpha(bo.field_c, var8_int, 134, 16777215, 1, var6);
           var7 = var7 + (-5 + (1 + pb.field_e.drawParagraphAlpha(this.field_l, 0, 90, 640, 240, 65280, var3, var6, 1, 0, 30)) * var4);
           if (205 > var7) {
             var7 = 205;
@@ -518,14 +518,14 @@ final class si extends MenuScreen {
             } else {
               stackIn_34_4 = 0;
             }
-            ((PaletteBitmapFont) (Object) stackIn_33_0).a(stackIn_33_1, stackIn_33_2, stackIn_33_3, stackIn_34_4, var3, var6);
+            ((PaletteBitmapFont) (Object) stackIn_33_0).drawCenteredAlpha(stackIn_33_1, stackIn_33_2, stackIn_33_3, stackIn_34_4, var3, var6);
             if (var17 != 0) {
               SoftwareRasterizer.fillRoundedRect(33, var10 - 14, MatchingTextValidator.field_w.textWidth(ak.field_d) + 14, 15, 7, 16777215);
               SoftwareRasterizer.drawRoundedRect(33, -15 + var10, MatchingTextValidator.field_w.textWidth(ak.field_d) + 16, 17, 7, 65793);
               MatchingTextValidator.field_w.drawLeftAlpha(ak.field_d, 40, var10 - 2, 65793, -1, var6);
             }
             if (var16 != 0) {
-              MatchingTextValidator.field_w.a(io.field_d, 90, var10 + 24, 11184810, 1, var6);
+              MatchingTextValidator.field_w.drawCenteredAlpha(io.field_d, 90, var10 + 24, 11184810, 1, var6);
             } else {
               stackIn_40_0 = TranslatedUiText.field_e;
               stackIn_40_1 = Integer.toString(this.field_y[var13]);
@@ -536,9 +536,9 @@ final class si extends MenuScreen {
               } else {
                 stackIn_41_4 = 0;
               }
-              ((PaletteBitmapFont) (Object) stackIn_40_0).a(stackIn_40_1, stackIn_40_2, stackIn_40_3, stackIn_41_4, var3, var6);
+              ((PaletteBitmapFont) (Object) stackIn_40_0).drawCenteredAlpha(stackIn_40_1, stackIn_40_2, stackIn_40_3, stackIn_41_4, var3, var6);
             }
-            qb.field_h.a(135, 4 + var10, var6);
+            qb.field_h.drawAlpha(135, 4 + var10, var6);
             SoftwareRasterizer.setClip(138, 0, var15Lifetime2 + 138, 480);
             stackIn_45_0 = 140;
             stackIn_45_1 = 9 + var10;
@@ -558,7 +558,7 @@ final class si extends MenuScreen {
               var20 = stackIn_51_0;
               if (var20 != 0) {
                 MarkerSliderPainter.field_b[-18 + var19].c(var18, var10 + 5, var6);
-                if (MarkerSliderPainter.field_b[var19 - 18].b(var18, 5 + var10, MouseInputHandler.field_g, bo.field_d)) {
+                if (MarkerSliderPainter.field_b[var19 - 18].isOpaqueAt(var18, 5 + var10, MouseInputHandler.field_g, bo.field_d)) {
                   this.field_E = var19;
                 }
                 var18 += 28;
@@ -567,7 +567,7 @@ final class si extends MenuScreen {
             var19Lifetime1 = PortalEntryEvent.field_m.field_o[var13];
             var20Lifetime1 = PortalEntryEvent.field_m.field_v[var13];
             if (this.field_z.field_i) {
-              MatchingTextValidator.field_w.a(Integer.toString(var20Lifetime1), var8_int, 15 + var10, 16777215, 1, var6);
+              MatchingTextValidator.field_w.drawCenteredAlpha(Integer.toString(var20Lifetime1), var8_int, 15 + var10, 16777215, 1, var6);
               stackIn_65_0 = MatchingTextValidator.field_w;
               stackIn_65_1 = eb.a(var20Lifetime1 - var19Lifetime1, true, param0);
               stackIn_65_2 = var8_int - 2;
@@ -577,9 +577,9 @@ final class si extends MenuScreen {
               } else {
                 stackIn_66_4 = 16711680;
               }
-              ((BinaryBitmapFont) (Object) stackIn_65_0).a(stackIn_65_1, stackIn_65_2, stackIn_65_3, stackIn_66_4, 1, var6);
+              ((BinaryBitmapFont) (Object) stackIn_65_0).drawCenteredAlpha(stackIn_65_1, stackIn_65_2, stackIn_65_3, stackIn_66_4, 1, var6);
             } else {
-              MatchingTextValidator.field_w.a(Integer.toString(var20Lifetime1), var8_int, var10 + 22, 16777215, 1, var6);
+              MatchingTextValidator.field_w.drawCenteredAlpha(Integer.toString(var20Lifetime1), var8_int, var10 + 22, 16777215, 1, var6);
             }
             var21 = PortalEntryEvent.field_m.field_D[var13][0];
             var22 = PortalEntryEvent.field_m.field_D[var13][1];
@@ -604,7 +604,7 @@ final class si extends MenuScreen {
           }
           var7 = var7 + (1 + var4);
           if (!this.field_o) {
-            pb.field_e.a(vl.a(wi.field_o, new String[]{this.e(-95)}, 2), 320, 380, 16556032, var3, var6);
+            pb.field_e.drawCenteredAlpha(vl.a(wi.field_o, new String[]{this.e(-95)}, 2), 320, 380, 16556032, var3, var6);
           }
           if (this.field_n <= 0) {
             var7Lifetime2 = var2;
@@ -613,9 +613,9 @@ final class si extends MenuScreen {
           }
           if (!this.field_o) {
             if (this.field_z.field_i) {
-              pb.field_e.a(vl.a(QuickChatCategoryRegistry.field_g, new String[]{Integer.toString(this.field_t)}, 2), 320, 365, 16776960, var3, var6);
+              pb.field_e.drawCenteredAlpha(vl.a(QuickChatCategoryRegistry.field_g, new String[]{Integer.toString(this.field_t)}, 2), 320, 365, 16776960, var3, var6);
             } else {
-              pb.field_e.a(aa.field_p, 320, 410, 16777096, var3, var6);
+              pb.field_e.drawCenteredAlpha(aa.field_p, 320, 410, 16777096, var3, var6);
             }
           }
           this.f(var6, 96);
@@ -628,7 +628,7 @@ final class si extends MenuScreen {
             stackIn_87_0 = 255 - var5;
           }
           var6Lifetime1 = stackIn_87_0;
-          SingleChildWidget.field_C.a(-40, 233, var6Lifetime1);
+          SingleChildWidget.field_C.drawAlpha(-40, 233, var6Lifetime1);
           var7Lifetime1 = 0;
           var8 = new int[]{30, 239, 448};
           for (var9Lifetime1 = 0; 5 > var9Lifetime1; var9Lifetime1++) {
@@ -653,22 +653,22 @@ final class si extends MenuScreen {
             SoftwareRasterizer.fillRadialGlow(-176 + ((var9Lifetime1Lifetime2 / 11 + 25) * PowerupEvent.field_m + 1000 * var9Lifetime1Lifetime2) % 10560, 3952, 176, var6Lifetime1 * 125 >> 8, wp.field_f);
           }
           SoftwareRasterizer.resetClip();
-          rq.field_l.a(30, 231, var6Lifetime1);
-          rq.field_l.a(239, 231, var6Lifetime1);
-          rq.field_l.a(448, 231, var6Lifetime1);
+          rq.field_l.drawAlpha(30, 231, var6Lifetime1);
+          rq.field_l.drawAlpha(239, 231, var6Lifetime1);
+          rq.field_l.drawAlpha(448, 231, var6Lifetime1);
           var9Lifetime1Lifetime3 = 0;
           var10Lifetime1Lifetime2 = FullscreenFocusCanvas.field_k.g((byte) 125);
           for (var11Lifetime1 = 0; var11Lifetime1 < var10Lifetime1Lifetime2; var11Lifetime1++) {
             var12Lifetime1 = FullscreenFocusCanvas.field_k.field_m[var11Lifetime1];
             var13Lifetime1 = FullscreenFocusCanvas.field_k.field_g[var11Lifetime1];
-            na.field_I.a(-32 + CipherPacketBuffer.field_v[var11Lifetime1], 126, var6Lifetime1);
+            na.field_I.drawAlpha(-32 + CipherPacketBuffer.field_v[var11Lifetime1], 126, var6Lifetime1);
             if (255 != var12Lifetime1 &&
               63 > var12Lifetime1) {
-              pq.field_o.a(CipherPacketBuffer.field_v[var11Lifetime1], 166, var6Lifetime1);
+              pq.field_o.drawAlpha(CipherPacketBuffer.field_v[var11Lifetime1], 166, var6Lifetime1);
               for (var14Lifetime1 = 0; var14Lifetime1 < 8; var14Lifetime1++) {
                 SoftwareRasterizer.fillRadialGlow(10 + CipherPacketBuffer.field_v[var11Lifetime1] << 4, -(((var14Lifetime1 / 5 + 19) * PowerupEvent.field_m + var14Lifetime1 * 300) % 960) + 3728, 96, 125 * var6Lifetime1 >> 8, wp.field_f);
               }
-              w.field_z.a(CipherPacketBuffer.field_v[var11Lifetime1], 166, var6Lifetime1);
+              w.field_z.drawAlpha(CipherPacketBuffer.field_v[var11Lifetime1], 166, var6Lifetime1);
               mg.a(var12Lifetime1, var13Lifetime1, (byte) 46, 106, FullscreenFocusCanvas.field_k, var6Lifetime1, -28 + CipherPacketBuffer.field_v[var11Lifetime1]);
               var14Lifetime1Lifetime2 = FullscreenFocusCanvas.field_k.field_t[var12Lifetime1];
               var15Lifetime1 = cr.a(var12Lifetime1, -107);
@@ -702,13 +702,13 @@ final class si extends MenuScreen {
                 ((BinaryBitmapFont) (Object) stackIn_125_0).drawLeftAlpha(stackIn_125_1, stackIn_125_2, stackIn_125_3, stackIn_126_4, 1, var6Lifetime1);
               }
             } else {
-              tm.field_f.a(CipherPacketBuffer.field_v[var11Lifetime1], 166, var6Lifetime1);
+              tm.field_f.drawAlpha(CipherPacketBuffer.field_v[var11Lifetime1], 166, var6Lifetime1);
             }
           }
           for (var11Lifetime1Lifetime1 = 0; var11Lifetime1Lifetime1 < 3; var11Lifetime1Lifetime1++) {
             var12Lifetime1Lifetime1 = FullscreenFocusCanvas.field_k.field_s[var11Lifetime1Lifetime1];
             if (var12Lifetime1Lifetime1 != 255) {
-              PowerupCommand.field_m.a(38 + 209 * var11Lifetime1Lifetime1, 244, var6Lifetime1);
+              PowerupCommand.field_m.drawAlpha(38 + 209 * var11Lifetime1Lifetime1, 244, var6Lifetime1);
               SoftwareRasterizer.setClip(0, 0, 640, 366);
               for (var13Lifetime1Lifetime1 = 0; 16 > var13Lifetime1Lifetime1; var13Lifetime1Lifetime1++) {
                 SoftwareRasterizer.fillRadialGlow((48 + 209 * var11Lifetime1Lifetime1 << 4) + 8, 4000 + (PowerupEvent.field_m * (var13Lifetime1Lifetime1 / 5 + 19) + 300 * var13Lifetime1Lifetime1) % 1920, 112, 125 * var6Lifetime1 >> 8, wp.field_f);
@@ -716,7 +716,7 @@ final class si extends MenuScreen {
               for (var13Lifetime1Lifetime1Lifetime1 = 0; var13Lifetime1Lifetime1Lifetime1 < 8; var13Lifetime1Lifetime1Lifetime1++) {
                 SoftwareRasterizer.fillRadialGlow(((var13Lifetime1Lifetime1Lifetime1 / 5 + 19) * PowerupEvent.field_m + var13Lifetime1Lifetime1Lifetime1 * 300) % 720 + 8 + (209 * var11Lifetime1Lifetime1 + 48 << 4), 5744, 112, var6Lifetime1 * 125 >> 8, wp.field_f);
               }
-              TextInputWidget.field_N.a(var11Lifetime1Lifetime1 * 209 + 38, 244, var6Lifetime1);
+              TextInputWidget.field_N.drawAlpha(var11Lifetime1Lifetime1 * 209 + 38, 244, var6Lifetime1);
               SoftwareRasterizer.resetClip();
               qh.a(var12Lifetime1Lifetime1, -29990, FullscreenFocusCanvas.field_k, 280, var11Lifetime1Lifetime1 * 209 + 91, var6Lifetime1);
               var13Lifetime1Lifetime1Lifetime2 = FullscreenFocusCanvas.field_k.field_t[var12Lifetime1Lifetime1];
@@ -734,14 +734,14 @@ final class si extends MenuScreen {
               }
               ((BinaryBitmapFont) (Object) stackIn_144_0).drawLeftAlpha(stackIn_144_1, stackIn_144_2, stackIn_144_3, stackIn_145_4, 1, var6Lifetime1);
             } else {
-              DateInputWidget.field_J.a(38 + 209 * var11Lifetime1Lifetime1, 244, var6Lifetime1);
-              hn.field_i.a(var11Lifetime1Lifetime1 * 209 + 91, 280, var6Lifetime1);
+              DateInputWidget.field_J.drawAlpha(38 + 209 * var11Lifetime1Lifetime1, 244, var6Lifetime1);
+              hn.field_i.drawAlpha(var11Lifetime1Lifetime1 * 209 + 91, 280, var6Lifetime1);
             }
           }
-          ResourceArchive.field_f.a(93, 231, var6Lifetime1);
-          ResourceArchive.field_f.a(209, 231, var6Lifetime1);
-          ResourceArchive.field_f.a(329, 231, var6Lifetime1);
-          ResourceArchive.field_f.a(573, 231, var6Lifetime1);
+          ResourceArchive.field_f.drawAlpha(93, 231, var6Lifetime1);
+          ResourceArchive.field_f.drawAlpha(209, 231, var6Lifetime1);
+          ResourceArchive.field_f.drawAlpha(329, 231, var6Lifetime1);
+          ResourceArchive.field_f.drawAlpha(573, 231, var6Lifetime1);
         }
     }
 

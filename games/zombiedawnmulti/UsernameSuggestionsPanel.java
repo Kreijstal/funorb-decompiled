@@ -23,7 +23,7 @@ final class UsernameSuggestionsPanel extends WidgetContainer implements ButtonAc
             var4 = (hp) (JaggrabDownloader.field_l.b(6));
           }
           if (!param0) {
-            UsernameSuggestionsPanel.c(false);
+            UsernameSuggestionsPanel.releaseStatics(false);
           }
           var5 = (u) (DisplayNamePanel.field_T.c(59));
           while (var5 != null) {
@@ -134,7 +134,7 @@ final class UsernameSuggestionsPanel extends WidgetContainer implements ButtonAc
         return var4;
     }
 
-    public static void c(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         if (!param0) {
           UsernameSuggestionsPanel.b(true, -119);
         }

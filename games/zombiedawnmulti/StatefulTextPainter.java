@@ -50,7 +50,7 @@ final class StatefulTextPainter extends TextWidgetPainter {
               }
             }
           } else {
-            ArrayOperations.a(this.field_s, 0, param0.field_s, 0, 6);
+            ArrayOperations.copy(this.field_s, 0, param0.field_s, 0, 6);
           }
           if (param2 < -107) {
             return;

@@ -241,26 +241,26 @@ final class ProgressBarWidget extends UiWidget {
           }
           Camera.a(param2 + this.field_M.width, this.field_w + param3, (byte) 105, -this.field_M.width + var5_int, param3);
           for (var6 = param2 - this.field_J; var6 < var5_int; var6 = var6 + param1.width) {
-            param1.g(var6, param3);
+            param1.drawTransparent(var6, param3);
           }
           ql.a(true);
           if (SoftwareRasterizer.clipLeft <= this.field_M.width + param2) {
             r.a(0, this.field_C);
-            param1.g(-this.field_J, 0);
-            param1.g(this.field_D * 2 - this.field_J, 0);
-            this.field_O.e(0, 0);
+            param1.drawTransparent(-this.field_J, 0);
+            param1.drawTransparent(this.field_D * 2 - this.field_J, 0);
+            this.field_O.drawMultiply(0, 0);
             ql.a(true);
-            this.field_C.g(param2, param3);
+            this.field_C.drawTransparent(param2, param3);
           }
           if (SoftwareRasterizer.clipRight >= -this.field_M.width + var5_int) {
             r.a(0, this.field_C);
             for (var7 = -this.field_M.width + this.field_n + this.field_J; this.field_D * 2 < var7; var7 = var7 - 2 * this.field_D) {
             }
-            param1.g(-var7, 0);
-            param1.g(2 * this.field_D - var7, 0);
-            this.field_M.e(0, 0);
+            param1.drawTransparent(-var7, 0);
+            param1.drawTransparent(2 * this.field_D - var7, 0);
+            this.field_M.drawMultiply(0, 0);
             ql.a(true);
-            this.field_C.g(var5_int - this.field_M.width, param3);
+            this.field_C.drawTransparent(var5_int - this.field_M.width, param3);
             return;
           }
           return;

@@ -151,7 +151,7 @@ final class jh extends UiComponent {
         return (int)this.d(-108);
     }
 
-    final boolean j(int param0) {
+    final boolean isUnlisted(int param0) {
         if (param0 == 2) {
           return !this.c(0) ? true : false;
         }

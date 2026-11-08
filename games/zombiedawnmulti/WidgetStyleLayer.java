@@ -194,7 +194,7 @@ final class WidgetStyleLayer {
             if (param2.field_a == 2) {
               var7 = var7 + (-this.field_k.field_u + param3.field_w);
             }
-            this.field_k.g(var6_int, var7);
+            this.field_k.drawTransparent(var6_int, var7);
           }
           var6 = param2.d(param3, -9327);
           if (var6 != null &&
@@ -345,7 +345,7 @@ final class WidgetStyleLayer {
         return this;
     }
 
-    final WidgetStyleLayer a(int param0, byte param1) {
+    final WidgetStyleLayer setOffsetX(int param0, byte param1) {
         this.field_j = param0;
         if (param1 != 47) {
           return (WidgetStyleLayer) null;

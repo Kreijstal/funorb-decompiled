@@ -204,7 +204,7 @@ final class InfectionEvent extends GameEvent {
             }
             var4_ref = stackIn_4_0;
             if (param0 != 0) {
-              InfectionEvent.c(true);
+              InfectionEvent.releaseStatics(true);
             }
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -235,7 +235,7 @@ final class InfectionEvent extends GameEvent {
         }
     }
 
-    public static void c(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_j = null;
         if (!param0) {
           InfectionEvent.a(-121, -52, -61, false, 25, -17, -24);

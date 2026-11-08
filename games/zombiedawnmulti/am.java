@@ -6,7 +6,7 @@ final class am {
     static int field_b;
     static String field_a;
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = null;
         if (param0 != -7) {
           am.a(102, 53, -113, 106, 29);

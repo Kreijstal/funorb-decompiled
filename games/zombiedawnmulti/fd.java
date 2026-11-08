@@ -99,7 +99,7 @@ final class fd extends SceneObject {
               SimArmedHuman.field_Ab[this.field_P].drawHorizontalFlip(var3_int, var4);
             } else {
               if (!this.field_K) {
-                SimArmedHuman.field_Ab[this.field_P].g(var3_int, var4);
+                SimArmedHuman.field_Ab[this.field_P].drawTransparent(var3_int, var4);
               } else {
                 SimArmedHuman.field_Ab[this.field_P].drawVerticalFlip(var3_int, var4);
               }
@@ -108,7 +108,7 @@ final class fd extends SceneObject {
           if (this.field_J) {
             if (!this.field_H) {
               if (!this.field_K) {
-                SimArmedHuman.field_Ab[-8 + this.field_P].g(var3_int, -24 + var4);
+                SimArmedHuman.field_Ab[-8 + this.field_P].drawTransparent(var3_int, -24 + var4);
               } else {
                 SimArmedHuman.field_Ab[-8 + this.field_P].drawVerticalFlip(var3_int, -24 + var4);
               }
@@ -318,14 +318,14 @@ final class fd extends SceneObject {
               if (vl.field_h <= 0 &&
                 !CheckboxWidget.field_M) {
                 try {
-                  JavaScriptBridge.b(StatefulTextPainter.b(0), 13093, "unzap");
+                  JavaScriptBridge.callJavaScript(StatefulTextPainter.b(0), 13093, "unzap");
                 } catch (java.lang.Throwable decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var8_ref_Throwable = decompiledCaughtException;
                 }
               } else {
                 try {
-                  JavaScriptBridge.a(StatefulTextPainter.b(0), "zap", (byte) 23, new Object[]{RandomAccessCacheFile.a(ii.field_d, (byte) 26)});
+                  JavaScriptBridge.callFunctionWithArgs(StatefulTextPainter.b(0), "zap", (byte) 23, new Object[]{RandomAccessCacheFile.a(ii.field_d, (byte) 26)});
                 } catch (java.lang.Throwable decompiledCaughtParameter1) {
                   decompiledCaughtException = decompiledCaughtParameter1;
                   var8_ref_Throwable = decompiledCaughtException;

@@ -135,11 +135,11 @@ final class me {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_m = null;
         field_d = null;
         if (param0 != 119) {
-          me.a((byte) -96);
+          me.releaseStatics((byte) -96);
         }
         field_f = null;
         field_e = null;

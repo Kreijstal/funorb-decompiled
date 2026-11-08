@@ -14,7 +14,7 @@ final class TriangleRasterizer {
     private static int[] field_e;
     private static int[] field_f;
 
-    private final static void a(int param0, int param1, int param2, int param3) {
+    private final static void setClip(int param0, int param1, int param2, int param3) {
         int var5 = 0;
         field_i = param2 - param0;
         field_h = param3 - param1;
@@ -33,7 +33,7 @@ final class TriangleRasterizer {
         return field_a[0] % SoftwareRasterizer.width;
     }
 
-    public static void c() {
+    public static void releaseStatics() {
         field_a = null;
         field_b = null;
         field_f = null;
@@ -164,7 +164,7 @@ final class TriangleRasterizer {
     }
 
     final static void e() {
-        TriangleRasterizer.a(SoftwareRasterizer.clipLeft, SoftwareRasterizer.clipTop, SoftwareRasterizer.clipRight, SoftwareRasterizer.clipBottom);
+        TriangleRasterizer.setClip(SoftwareRasterizer.clipLeft, SoftwareRasterizer.clipTop, SoftwareRasterizer.clipRight, SoftwareRasterizer.clipBottom);
     }
 
     final static void drawFlatTriangle(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {

@@ -148,7 +148,7 @@ class MenuScreen {
                     pi.field_f.d(0, -pi.field_f.field_b + 480);
                   } else {
                     if (9 == this.field_d) {
-                      BufferedFile.field_e[4].c(0, 0);
+                      BufferedFile.field_e[4].drawOpaque(0, 0);
                     } else {
                       if (this.field_d == 11) {
                         SoftwareRasterizer.fillRect(0, 0, 640, 480, 65793);
@@ -167,16 +167,16 @@ class MenuScreen {
               }
               break regionExit1;
             }
-            BufferedFile.field_e[0].c(0, 0);
+            BufferedFile.field_e[0].drawOpaque(0, 0);
           } else {
-            BufferedFile.field_e[0].c(0, 0);
+            BufferedFile.field_e[0].drawOpaque(0, 0);
           }
         }
     }
 
     final void d(int param0) {
         if (null != ao.field_b[this.field_d]) {
-          ao.field_b[this.field_d].g(0, this.field_d == 15 ? 6 : 13);
+          ao.field_b[this.field_d].drawTransparent(0, this.field_d == 15 ? 6 : 13);
         }
         if (param0 != 4) {
           this.field_f = false;
@@ -288,7 +288,7 @@ class MenuScreen {
                                       tj.a(3273, 0);
                                     }
                                   }
-                                  if (this.field_g.a(97)) {
+                                  if (this.field_g.isEndPressed(97)) {
                                     if (db.field_c < 196) {
                                       var6 = db.field_c % 28;
                                       tj.a(3273, -var6 + (db.field_c + 28));
@@ -335,7 +335,7 @@ class MenuScreen {
                                         TertiaryLinkNode.a(var6 - var7, -103);
                                       }
                                     }
-                                    if (this.field_g.a(97)) {
+                                    if (this.field_g.isEndPressed(97)) {
                                       var6 = uk.field_S;
                                       if (var6 >= 175) {
                                         TertiaryLinkNode.a(200, -118);
@@ -607,10 +607,10 @@ class MenuScreen {
           var2 = 100 + TranslatedUiText.field_e.maxAscent;
           var3 = 4 + TranslatedUiText.field_e.maxDescent + TranslatedUiText.field_e.field_J;
           var4 = 16777215;
-          pb.field_e.b(af.field_a, 320, var2, var4, -1);
-          pb.field_e.b(FightEvent.a(vh.field_Mb, false, 118, gg.field_k), 320, var3 + var2, var4, -1);
-          pb.field_e.b(on.a(true, gg.field_k, vh.field_Mb, false), 320, var2 + (3 * var3 + 38), var4, -1);
-          pb.field_e.b(PortalEntryEvent.a(vh.field_Mb, gg.field_k, 4, false), 320, 76 + (var2 + var3 * 4), var4, -1);
+          pb.field_e.drawCentered(af.field_a, 320, var2, var4, -1);
+          pb.field_e.drawCentered(FightEvent.a(vh.field_Mb, false, 118, gg.field_k), 320, var3 + var2, var4, -1);
+          pb.field_e.drawCentered(on.a(true, gg.field_k, vh.field_Mb, false), 320, var2 + (3 * var3 + 38), var4, -1);
+          pb.field_e.drawCentered(PortalEntryEvent.a(vh.field_Mb, gg.field_k, 4, false), 320, 76 + (var2 + var3 * 4), var4, -1);
         }
         if (!param0) {
           this.a(-45);
@@ -941,7 +941,7 @@ class MenuScreen {
           var10 = stackIn_17_0;
           if (4 == var6 &&
             rn.field_f == null && (!(0 < vl.field_h) ||
-            !pn.a(-9, ArrayWidgetGroup.field_J))) {
+            !pn.ensureArchiveAvailable(-9, ArrayWidgetGroup.field_J))) {
             stackIn_25_0 = (param1) ? 7 : 6;
             var10 = stackIn_25_0;
           }
@@ -990,7 +990,7 @@ class MenuScreen {
           var12 = -TranslatedUiText.field_e.maxDescent + (-ZombieDawnMulti.field_I[0].field_u + var9) + (-ZombieDawnMulti.field_I[6].field_u - TranslatedUiText.field_e.maxAscent);
           if (var6 != 12 &&
             13 != var6) {
-            TranslatedUiText.field_e.b(var7Lifetime2, var5 + (var8 >> 1), ZombieDawnMulti.field_I[0].field_u + var4 + TranslatedUiText.field_e.maxAscent + (var12 >> 1), var10, 0);
+            TranslatedUiText.field_e.drawCentered(var7Lifetime2, var5 + (var8 >> 1), ZombieDawnMulti.field_I[0].field_u + var4 + TranslatedUiText.field_e.maxAscent + (var12 >> 1), var10, 0);
             return;
           }
           stackIn_59_0 = (var6 != 12) ? 200 : 224;
@@ -1007,7 +1007,7 @@ class MenuScreen {
           }
           var16 = stackIn_62_0;
           var16 = (var16 << 8) / var13;
-          SimHuman.field_eb.g((var16 >> 1) + (var15 - 1), var4);
+          SimHuman.field_eb.drawTransparent((var16 >> 1) + (var15 - 1), var4);
           return;
         }
     }

@@ -8,12 +8,12 @@ final class hf {
     static String field_b;
     private String field_d;
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_a = null;
         field_e = null;
         field_b = null;
         if (param0 != 45) {
-          hf.b((byte) -95);
+          hf.releaseStatics((byte) -95);
         }
     }
 

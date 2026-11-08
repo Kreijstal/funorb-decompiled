@@ -465,7 +465,7 @@ class UiComponent extends qo {
           if (256 > this.field_hb) {
             var17.c(var23_int, var24, this.field_hb);
           } else {
-            var17.g(var23_int, var24);
+            var17.drawTransparent(var23_int, var24);
           }
         }
         boolean decompiledFrameRemainder0 = true;
@@ -492,7 +492,7 @@ class UiComponent extends qo {
               this.field_yb.drawLeftAlpha(var23Lifetime2, var21 + (this.field_w + this.field_V), this.field_qb + (var22 + this.field_yb.maxAscent), var18, -1, this.field_Y);
             } else {
               if (1 == this.field_R) {
-                this.field_yb.a(var23Lifetime2, (this.field_zb - 2 * this.field_V) / 2 + (this.field_V + (this.field_w + var21)), this.field_yb.maxAscent + (this.field_qb + var22), var18, -1, this.field_Y);
+                this.field_yb.drawCenteredAlpha(var23Lifetime2, (this.field_zb - 2 * this.field_V) / 2 + (this.field_V + (this.field_w + var21)), this.field_yb.maxAscent + (this.field_qb + var22), var18, -1, this.field_Y);
               } else {
                 if (this.field_R != 2) {
                   this.field_yb.drawParagraphAlpha(var23Lifetime2, var21 + this.field_V + this.field_w, this.field_qb + var22, this.field_zb - 2 * this.field_V, this.field_z, var18, -1, this.field_Y, this.field_R, this.field_lb, this.field_J);
@@ -795,7 +795,7 @@ class UiComponent extends qo {
         int var4_intLifetime1;
         if (this.field_wb != null &&
           this.field_yb != null) {
-          var4_int = this.field_yb.c(this.field_wb, param1);
+          var4_int = this.field_yb.maxLineWidth(this.field_wb, param1);
           if (var3 < var4_int) {
             var3 = var4_int;
           }

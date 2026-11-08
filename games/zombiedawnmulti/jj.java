@@ -16,7 +16,7 @@ final class jj extends SceneObject {
     private int field_J;
     static long field_M;
 
-    public static void i(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 == 1) {
           field_L = null;
           field_I = null;
@@ -277,7 +277,7 @@ final class jj extends SceneObject {
               stackIn_10_1 = -5 + var3_int;
             }
             g.a(stackIn_9_0, stackIn_10_1 + 12, 43 + var4);
-            var8.g(var3_int, var4);
+            var8.drawTransparent(var3_int, var4);
           } else {
             var8.c(var3_int, var4, this.field_N);
           }

@@ -5,7 +5,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
     private java.awt.Component field_a;
     static byte[] field_b;
 
-    final static void a(int param0) {
+    final static void clearFaceDepthBuckets(int param0) {
         int[] var1 = null;
         int var2 = 0;
         int var3 = 0;

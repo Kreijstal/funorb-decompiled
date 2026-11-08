@@ -40,7 +40,7 @@ final class we extends IntrusiveNode {
           this.field_f = param0;
           this.field_m = param0.getVolume();
           this.field_h = param1;
-          this.field_f.d(this.field_m * db.field_c + 128 >> 8);
+          this.field_f.setInternalVolume(this.field_m * db.field_c + 128 >> 8);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "we.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

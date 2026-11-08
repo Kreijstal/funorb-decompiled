@@ -164,14 +164,14 @@ final class rq extends IntrusiveNode {
           SoftwareRasterizer.setClip(var1Lifetime1, var3Lifetime1, var2Lifetime1 + var1Lifetime1, var3Lifetime1 + hj.field_g);
           SoftwareRasterizer.fillRectAlpha(var1Lifetime1, var3Lifetime1, var2Lifetime1, hj.field_g, 2560, 160);
           g.a(IsaacRandom.field_h, 10, var3Lifetime1, 192);
-          InfectionEvent.field_j.g(10, var3Lifetime1);
+          InfectionEvent.field_j.drawTransparent(10, var3Lifetime1);
           InfectionEvent.field_j.drawVerticalFlip(10, -5 + (hj.field_g + var3Lifetime1));
-          SimHuman.field_fb.g(var1Lifetime1, var3Lifetime1);
+          SimHuman.field_fb.drawTransparent(var1Lifetime1, var3Lifetime1);
           SimHuman.field_fb.drawHorizontalFlip(-5 + (var2Lifetime1 + var1Lifetime1), var3Lifetime1);
-          rp.field_r[0].g(var1Lifetime1, var3Lifetime1);
-          rp.field_r[1].g(var2Lifetime1 + (var1Lifetime1 - 5), var3Lifetime1);
-          rp.field_r[2].g(var1Lifetime1, var3Lifetime1 + hj.field_g - 5);
-          rp.field_r[3].g(-5 + var1Lifetime1 + var2Lifetime1, var3Lifetime1 + hj.field_g - 5);
+          rp.field_r[0].drawTransparent(var1Lifetime1, var3Lifetime1);
+          rp.field_r[1].drawTransparent(var2Lifetime1 + (var1Lifetime1 - 5), var3Lifetime1);
+          rp.field_r[2].drawTransparent(var1Lifetime1, var3Lifetime1 + hj.field_g - 5);
+          rp.field_r[3].drawTransparent(-5 + var1Lifetime1 + var2Lifetime1, var3Lifetime1 + hj.field_g - 5);
           var4 = ei.field_g[ma.field_d][ml.field_Jb];
           if (ma.field_d == 21 &&
             1 == FullscreenFocusCanvas.field_k.b((byte) -1) &&
@@ -187,7 +187,7 @@ final class rq extends IntrusiveNode {
               stackIn_28_0 = ob.field_A;
             }
             var5 = stackIn_28_0;
-            pb.field_e.a(var5, 430, hj.field_g + var3Lifetime1 - 14, 10066329, 0);
+            pb.field_e.drawRightAligned(var5, 430, hj.field_g + var3Lifetime1 - 14, 10066329, 0);
           }
           g.b();
         }
@@ -217,18 +217,18 @@ final class rq extends IntrusiveNode {
           LabeledChildWidget.field_H = param0;
           ve.field_b = new Sprite(55, 130);
           ve.field_b.bindAsRenderTarget();
-          LabeledChildWidget.field_H[2].f(5, -5, param1);
-          LabeledChildWidget.field_H[3].f(5, -5, 16777215);
+          LabeledChildWidget.field_H[2].drawSilhouette(5, -5, param1);
+          LabeledChildWidget.field_H[3].drawSilhouette(5, -5, 16777215);
           SoftwareRasterizer.blurRectangle(4, 4, 0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height);
-          LabeledChildWidget.field_H[2].f(5, -5, 0);
-          LabeledChildWidget.field_H[3].f(5, -5, 0);
+          LabeledChildWidget.field_H[2].drawSilhouette(5, -5, 0);
+          LabeledChildWidget.field_H[3].drawSilhouette(5, -5, 0);
           BirthDateEntryPanel.field_M = new Sprite[39];
           AccountCreationForm.field_W = new Sprite[BirthDateEntryPanel.field_M.length];
           for (var2_int = 0; var2_int < BirthDateEntryPanel.field_M.length; var2_int++) {
             BirthDateEntryPanel.field_M[var2_int] = new Sprite(200, 25);
             BirthDateEntryPanel.field_M[var2_int].bindAsRenderTarget();
             var3 = lh.a((byte) -12, var2_int);
-            pb.field_e.b(var3, 100, 17, 16777215, -1);
+            pb.field_e.drawCentered(var3, 100, 17, 16777215, -1);
             AccountCreationForm.field_W[var2_int] = g.b(BirthDateEntryPanel.field_M[var2_int]);
           }
           SocketConnector.field_c = InflaterDecompressor.a(9, np.field_l);

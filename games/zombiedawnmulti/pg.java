@@ -95,7 +95,7 @@ final class pg {
         }
     }
 
-    public static void b(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_b = null;
         field_a = null;
         field_d = null;

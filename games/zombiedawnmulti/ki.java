@@ -49,14 +49,14 @@ final class ki {
 
     final boolean b(byte param0) {
         if (param0 > 3) {
-          return this.field_b.b(this.field_q, this.field_g, MouseInputHandler.field_g, bo.field_d);
+          return this.field_b.isOpaqueAt(this.field_q, this.field_g, MouseInputHandler.field_g, bo.field_d);
         }
         ki.releaseStatics(-41);
-        return this.field_b.b(this.field_q, this.field_g, MouseInputHandler.field_g, bo.field_d);
+        return this.field_b.isOpaqueAt(this.field_q, this.field_g, MouseInputHandler.field_g, bo.field_d);
     }
 
     final void a(boolean param0) {
-        this.field_b.c(this.field_q, this.field_g);
+        this.field_b.drawOpaque(this.field_q, this.field_g);
         if (!param0) {
           ki.a(-85);
         }
@@ -200,7 +200,7 @@ final class ki {
             SoftwareRasterizer.fillRect(2, 33, 133, 14, 65793);
             SoftwareRasterizer.fillRect(3, 34, var9, 12, var6);
             if (var7 != null) {
-              ((Sprite) (var7)).g(108, 5);
+              ((Sprite) (var7)).drawTransparent(108, 5);
             }
             if (!FullscreenFocusCanvas.field_k.c(127, param0)) {
               var10 = ro.field_N;
@@ -208,7 +208,7 @@ final class ki {
               var10 = gh.field_f[param0];
             }
             MatchingTextValidator.field_w.drawParagraph(var10, 6, 4, 95, 26, 16777215, -1, 0, 0, 0);
-            MatchingTextValidator.field_w.b(var8, 68, 45, 16777215, -1);
+            MatchingTextValidator.field_w.drawCentered(var8, 68, 45, 16777215, -1);
             g.d();
             return;
           }
@@ -233,7 +233,7 @@ final class ki {
             SoftwareRasterizer.fillRect(2, 33, 133, 14, 65793);
             SoftwareRasterizer.fillRect(3, 34, var9, 12, var6Lifetime3);
             if (var7 != null) {
-              ((Sprite) (var7)).g(108, 5);
+              ((Sprite) (var7)).drawTransparent(108, 5);
             }
             if (!FullscreenFocusCanvas.field_k.c(127, param0)) {
               var10Lifetime4 = ro.field_N;
@@ -242,7 +242,7 @@ final class ki {
               var8Lifetime3 = var10Lifetime4;
             }
             MatchingTextValidator.field_w.drawParagraph(var10Lifetime4, 6, 4, 95, 26, 16777215, -1, 0, 0, 0);
-            MatchingTextValidator.field_w.b(var8Lifetime3, 68, 45, 16777215, -1);
+            MatchingTextValidator.field_w.drawCentered(var8Lifetime3, 68, 45, 16777215, -1);
             g.d();
             return;
           }
@@ -259,7 +259,7 @@ final class ki {
           SoftwareRasterizer.fillRect(2, 33, 133, 14, 65793);
           SoftwareRasterizer.fillRect(3, 34, var9, 12, var6Lifetime3);
           if (var7 != null) {
-            ((Sprite) (var7)).g(108, 5);
+            ((Sprite) (var7)).drawTransparent(108, 5);
           }
           if (!FullscreenFocusCanvas.field_k.c(127, param0)) {
             var10Lifetime6 = ro.field_N;
@@ -269,7 +269,7 @@ final class ki {
             var8Lifetime3 = var10Lifetime6;
           }
           MatchingTextValidator.field_w.drawParagraph(var10Lifetime6, 6, 4, 95, 26, 16777215, -1, 0, 0, 0);
-          MatchingTextValidator.field_w.b(var8Lifetime3, 68, 45, 16777215, -1);
+          MatchingTextValidator.field_w.drawCentered(var8Lifetime3, 68, 45, 16777215, -1);
           g.d();
           return;
         }
@@ -300,7 +300,7 @@ final class ki {
             SoftwareRasterizer.fillRect(2, 33, 133, 14, 65793);
             SoftwareRasterizer.fillRect(3, 34, var9, 12, var6Lifetime1);
             if (var7 != null) {
-              ((Sprite) (var7)).g(108, 5);
+              ((Sprite) (var7)).drawTransparent(108, 5);
             }
             if (!FullscreenFocusCanvas.field_k.c(127, param0)) {
               var10Lifetime1 = ro.field_N;
@@ -308,7 +308,7 @@ final class ki {
               var10Lifetime1 = gh.field_f[param0];
             }
             MatchingTextValidator.field_w.drawParagraph(var10Lifetime1, 6, 4, 95, 26, 16777215, -1, 0, 0, 0);
-            MatchingTextValidator.field_w.b(var8Lifetime1, 68, 45, 16777215, -1);
+            MatchingTextValidator.field_w.drawCentered(var8Lifetime1, 68, 45, 16777215, -1);
             g.d();
             return;
           }
@@ -333,7 +333,7 @@ final class ki {
             SoftwareRasterizer.fillRect(2, 33, 133, 14, 65793);
             SoftwareRasterizer.fillRect(3, 34, var9, 12, var6Lifetime1Lifetime1);
             if (var7 != null) {
-              ((Sprite) (var7)).g(108, 5);
+              ((Sprite) (var7)).drawTransparent(108, 5);
             }
             if (!FullscreenFocusCanvas.field_k.c(127, param0)) {
               var10Lifetime1Lifetime1 = ro.field_N;
@@ -343,7 +343,7 @@ final class ki {
               var8Lifetime1Lifetime1 = var10Lifetime1Lifetime1;
             }
             MatchingTextValidator.field_w.drawParagraph(var10Lifetime1Lifetime1, 6, 4, 95, 26, 16777215, -1, 0, 0, 0);
-            MatchingTextValidator.field_w.b(var8Lifetime1Lifetime1, 68, 45, 16777215, -1);
+            MatchingTextValidator.field_w.drawCentered(var8Lifetime1Lifetime1, 68, 45, 16777215, -1);
             g.d();
             return;
           }
@@ -358,7 +358,7 @@ final class ki {
           SoftwareRasterizer.fillRect(2, 33, 133, 14, 65793);
           SoftwareRasterizer.fillRect(3, 34, var9, 12, var6Lifetime1Lifetime1);
           if (var7 != null) {
-            ((Sprite) (var7)).g(108, 5);
+            ((Sprite) (var7)).drawTransparent(108, 5);
           }
           if (!FullscreenFocusCanvas.field_k.c(127, param0)) {
             var10Lifetime1Lifetime2 = ro.field_N;
@@ -366,7 +366,7 @@ final class ki {
             var10Lifetime1Lifetime2 = gh.field_f[param0];
           }
           MatchingTextValidator.field_w.drawParagraph(var10Lifetime1Lifetime2, 6, 4, 95, 26, 16777215, -1, 0, 0, 0);
-          MatchingTextValidator.field_w.b(var8Lifetime1Lifetime1, 68, 45, 16777215, -1);
+          MatchingTextValidator.field_w.drawCentered(var8Lifetime1Lifetime1, 68, 45, 16777215, -1);
           g.d();
           return;
         }
@@ -389,7 +389,7 @@ final class ki {
           SoftwareRasterizer.fillRect(2, 33, 133, 14, 65793);
           SoftwareRasterizer.fillRect(3, 34, var9, 12, var6Lifetime2);
           if (var7 != null) {
-            ((Sprite) (var7)).g(108, 5);
+            ((Sprite) (var7)).drawTransparent(108, 5);
           }
           if (!FullscreenFocusCanvas.field_k.c(127, param0)) {
             var10Lifetime2 = ro.field_N;
@@ -397,7 +397,7 @@ final class ki {
             var10Lifetime2 = gh.field_f[param0];
           }
           MatchingTextValidator.field_w.drawParagraph(var10Lifetime2, 6, 4, 95, 26, 16777215, -1, 0, 0, 0);
-          MatchingTextValidator.field_w.b(var8Lifetime2, 68, 45, 16777215, -1);
+          MatchingTextValidator.field_w.drawCentered(var8Lifetime2, 68, 45, 16777215, -1);
           g.d();
           return;
         }
@@ -412,7 +412,7 @@ final class ki {
         SoftwareRasterizer.fillRect(2, 33, 133, 14, 65793);
         SoftwareRasterizer.fillRect(3, 34, var9, 12, var6Lifetime2);
         if (var7 != null) {
-          ((Sprite) (var7)).g(108, 5);
+          ((Sprite) (var7)).drawTransparent(108, 5);
         }
         if (!FullscreenFocusCanvas.field_k.c(127, param0)) {
           var10Lifetime3 = ro.field_N;
@@ -420,7 +420,7 @@ final class ki {
           var10Lifetime3 = gh.field_f[param0];
         }
         MatchingTextValidator.field_w.drawParagraph(var10Lifetime3, 6, 4, 95, 26, 16777215, -1, 0, 0, 0);
-        MatchingTextValidator.field_w.b(var8Lifetime2, 68, 45, 16777215, -1);
+        MatchingTextValidator.field_w.drawCentered(var8Lifetime2, 68, 45, 16777215, -1);
         g.d();
     }
 

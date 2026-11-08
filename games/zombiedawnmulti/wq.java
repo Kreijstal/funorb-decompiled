@@ -63,7 +63,7 @@ final class wq {
         return (int)(1000000000L / td.field_g);
     }
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 > 108) {
           field_b = null;
           field_d = null;

@@ -19,7 +19,7 @@ final class u extends IntrusiveNode {
         FullscreenFocusCanvas.field_b = var2;
         if (param1 != 5) {
           PlatformTaskDispatcher var4 = (PlatformTaskDispatcher) null;
-          u.a(-78, (PlatformTaskDispatcher) null, 25, -28, -35, -43);
+          u.openFullscreenWindow(-78, (PlatformTaskDispatcher) null, 25, -28, -35, -43);
           if (param0 == 51) {
             i.field_a.field_p = 2;
             i.field_a.field_n = i.field_a.field_n + 1;
@@ -285,7 +285,7 @@ final class u extends IntrusiveNode {
         }
     }
 
-    final static FullscreenFocusCanvas a(int param0, PlatformTaskDispatcher param1, int param2, int param3, int param4, int param5) {
+    final static FullscreenFocusCanvas openFullscreenWindow(int param0, PlatformTaskDispatcher param1, int param2, int param3, int param4, int param5) {
         java.awt.Frame var6 = null;
         RuntimeException var6_ref = null;
         FullscreenFocusCanvas var7 = null;

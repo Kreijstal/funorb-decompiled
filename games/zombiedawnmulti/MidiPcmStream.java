@@ -241,7 +241,7 @@ final class MidiPcmStream extends PcmStream {
           if (param1 >= -64) {
             MidiPcmStream.a(43, (byte) -76, 101);
           }
-          param2.field_C.c(var5);
+          param2.field_C.setSamplePositionFixed(var5);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -300,7 +300,7 @@ final class MidiPcmStream extends PcmStream {
               if ((var7 & 128) != 0) {
                 this.a(-5777, var7);
               }
-              this.field_p.d(var2);
+              this.field_p.readDelta(var2);
               this.field_p.saveTrackPosition(var2);
               continue;
             }
@@ -412,7 +412,7 @@ final class MidiPcmStream extends PcmStream {
           this.a(stackIn_18_1, (byte) -107, var7);
         }
         if (0 > var11.field_g[param0]) {
-          var7.field_C.g(-1);
+          var7.field_C.setLoopCount(-1);
         }
         if (0 <= var7.field_m) {
           var8 = this.field_t[param3][var7.field_m];
@@ -712,7 +712,7 @@ final class MidiPcmStream extends PcmStream {
         int var11 = 0;
         var11 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
-          param3.a();
+          param3.buildPatchUsage();
           var6_int = 1;
           var7 = null;
           if (0 < param2) {
@@ -743,7 +743,7 @@ final class MidiPcmStream extends PcmStream {
             var8 = (kg) (param3.field_f.b(-118));
           }
           if (var6_int != 0) {
-            param3.b();
+            param3.releasePatchUsage();
           }
           stackIn_21_0 = var6_int;
           return stackIn_21_0 != 0;
@@ -821,13 +821,13 @@ final class MidiPcmStream extends PcmStream {
         int var6 = 0;
         int var7 = ZombieDawnMulti.field_E ? 1 : 0;
         this.b(param0, -82);
-        this.field_p.a(param2.field_g);
+        this.field_p.parse(param2.field_g);
         this.field_L = param3 ? true : false;
         this.field_A = 0L;
-        int var5_int = this.field_p.g();
+        int var5_int = this.field_p.trackCount();
         for (var6 = 0; var5_int > var6; var6++) {
           this.field_p.seekTrack(var6);
-          this.field_p.d(var6);
+          this.field_p.readDelta(var6);
           this.field_p.saveTrackPosition(var6);
         }
         this.field_q = this.field_p.nextTrack();

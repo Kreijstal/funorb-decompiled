@@ -54,7 +54,7 @@ final class DualLinkDeque {
         return null;
     }
 
-    final static ma a(byte param0, String param1) {
+    final static ma validateDomainLabel(byte param0, String param1) {
         int var3 = 0;
         int var2_int = 0;
         int var4 = 0;
@@ -197,7 +197,7 @@ final class DualLinkDeque {
           param1.secondaryNext = this.field_e.secondaryNext;
           if (param0 != 29664) {
             String var4 = (String) null;
-            DualLinkDeque.a((byte) 122, (String) null);
+            DualLinkDeque.validateDomainLabel((byte) 122, (String) null);
           }
           param1.secondaryNext.secondaryPrevious = param1;
           param1.secondaryPrevious.secondaryNext = param1;

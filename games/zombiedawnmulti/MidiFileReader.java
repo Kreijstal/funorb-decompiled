@@ -26,9 +26,9 @@ final class MidiFileReader {
         }
         if (var2 != 240 &&
           var2 != 247) {
-          return this.a(param0, var2);
+          return this.decodeMessagePayload(param0, var2);
         }
-        var3 = this.buffer.a(0);
+        var3 = this.buffer.readVarInt(0);
         if (var2 == 247 &&
           var3 > 0) {
           var4 = this.buffer.payload[this.buffer.position] & 255;
@@ -38,7 +38,7 @@ final class MidiFileReader {
             !(var4 > 252) || var4 == 254) {
             this.buffer.position = this.buffer.position + 1;
             this.runningStatuses[param0] = var4;
-            return this.a(param0, var4);
+            return this.decodeMessagePayload(param0, var4);
           }
         }
         this.buffer.position = this.buffer.position + var3;
@@ -49,7 +49,7 @@ final class MidiFileReader {
         return this.timeOffset + (long)param0 * (long)this.tempoMicrosPerQuarter;
     }
 
-    public static void d() {
+    public static void releaseStatics() {
         field_c = null;
     }
 
@@ -70,7 +70,7 @@ final class MidiFileReader {
         this.trackPositions[param0] = this.buffer.position;
     }
 
-    final void a(byte[] param0) {
+    final void parse(byte[] param0) {
         int var4 = 0;
         int var5 = 0;
         int var3Lifetime1;
@@ -102,7 +102,7 @@ final class MidiFileReader {
         this.runningStatuses = new int[var2];
     }
 
-    final int g() {
+    final int trackCount() {
         return this.trackPositions.length;
     }
 
@@ -118,7 +118,7 @@ final class MidiFileReader {
           this.trackTicks[var4] = 0;
           this.runningStatuses[var4] = 0;
           this.buffer.position = this.trackStarts[var4];
-          this.d(var4);
+          this.readDelta(var4);
           this.trackPositions[var4] = this.buffer.position;
         }
     }
@@ -160,12 +160,12 @@ final class MidiFileReader {
         this.runningStatuses = null;
     }
 
-    final void d(int param0) {
-        int var2 = this.buffer.a(0);
+    final void readDelta(int param0) {
+        int var2 = this.buffer.readVarInt(0);
         this.trackTicks[param0] = this.trackTicks[param0] + var2;
     }
 
-    private final int a(int param0, int param1) {
+    private final int decodeMessagePayload(int param0, int param1) {
         int var5 = 0;
         int var6 = 0;
         int var3 = 0;
@@ -174,7 +174,7 @@ final class MidiFileReader {
         int var4Lifetime1;
         if (param1 == 255) {
           var3 = this.buffer.readUnsignedByte(31365);
-          var4 = this.buffer.a(0);
+          var4 = this.buffer.readVarInt(0);
           if (var3 == 47) {
             this.buffer.position = this.buffer.position + var4;
             return 1;
@@ -208,7 +208,7 @@ final class MidiFileReader {
 
     MidiFileReader(byte[] param0) {
         this.buffer = new PacketBuffer((byte[]) null);
-        this.a(param0);
+        this.parse(param0);
     }
 
     static {

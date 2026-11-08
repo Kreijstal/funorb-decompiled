@@ -4,7 +4,7 @@
 final class AntialiasedBitmapFont extends BitmapFont {
     private byte[][] field_O;
 
-    private final static void a(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    private final static void blitCoverage(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int var9 = 0;
         int var10 = 0;
         int incrementValue$11 = 0;
@@ -33,7 +33,7 @@ final class AntialiasedBitmapFont extends BitmapFont {
         }
     }
 
-    private final static void a(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    private final static void blitCoverageAlpha(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         int var10 = 0;
         int var11 = 0;
         int incrementValue$11 = 0;
@@ -102,7 +102,7 @@ final class AntialiasedBitmapFont extends BitmapFont {
         if (param3 > 0 &&
           param4 > 0) {
           if (!param7) {
-            AntialiasedBitmapFont.a(SoftwareRasterizer.pixels, this.field_O[param0], param5, var12, var9, param3, param4, var10, var11, param6);
+            AntialiasedBitmapFont.blitCoverageAlpha(SoftwareRasterizer.pixels, this.field_O[param0], param5, var12, var9, param3, param4, var10, var11, param6);
           } else {
             BinaryBitmapFont.blitBinaryGlyphWithAlpha(SoftwareRasterizer.pixels, this.field_O[param0], param5, var12, var9, param3, param4, var10, var11, param6);
           }
@@ -110,7 +110,7 @@ final class AntialiasedBitmapFont extends BitmapFont {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5, boolean param6) {
+    final void drawGlyph(int param0, int param1, int param2, int param3, int param4, int param5, boolean param6) {
         int var8;
         int var9;
         int var10;
@@ -150,7 +150,7 @@ final class AntialiasedBitmapFont extends BitmapFont {
         if (param3 > 0 &&
           param4 > 0) {
           if (!param6) {
-            AntialiasedBitmapFont.a(SoftwareRasterizer.pixels, this.field_O[param0], param5, var11, var8, param3, param4, var9, var10);
+            AntialiasedBitmapFont.blitCoverage(SoftwareRasterizer.pixels, this.field_O[param0], param5, var11, var8, param3, param4, var9, var10);
           } else {
             BinaryBitmapFont.blitBinaryGlyph(SoftwareRasterizer.pixels, this.field_O[param0], param5, var11, var8, param3, param4, var9, var10);
           }

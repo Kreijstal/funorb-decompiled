@@ -153,7 +153,7 @@ class PacketBuffer extends IntrusiveNode {
             throw new IllegalArgumentException("");
           }
           if (obfuscationGuard != 105) {
-            this.a(68);
+            this.readVarInt(68);
           }
           var4 = (CharSequence) ((Object) value);
           this.position = this.position + tg.a(this.position, var4, 0, obfuscationGuard ^ -151, this.payload, value.length());
@@ -576,7 +576,7 @@ class PacketBuffer extends IntrusiveNode {
         this.payload[fieldTemp$6] = (byte)(int)param0;
     }
 
-    final int a(int param0) {
+    final int readVarInt(int param0) {
         int fieldTemp$1 = 0;
         int var2;
         int var3;

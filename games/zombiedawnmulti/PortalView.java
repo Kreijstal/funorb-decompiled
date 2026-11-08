@@ -2585,11 +2585,11 @@ final class PortalView extends SceneObject {
           SoftwareRasterizer.clear();
           boolean decompiledSharedTail0 = (this.field_J == 1);
           if (!decompiledSharedTail0) {
-            na.field_H[this.field_C][var5].c((vn.field_h.width - this.field_Q) / 2, (-this.field_M + vn.field_h.height) / 2, this.field_Q, this.field_M);
+            na.field_H[this.field_C][var5].drawScaled((vn.field_h.width - this.field_Q) / 2, (-this.field_M + vn.field_h.height) / 2, this.field_Q, this.field_M);
             decompiledSharedTail0 = (var12 != 0);
           }
           if (decompiledSharedTail0) {
-            na.field_H[this.field_C][var5].a((-this.field_Q + vn.field_h.width) / 2, (vn.field_h.height - this.field_M) / 2);
+            na.field_H[this.field_C][var5].draw((-this.field_Q + vn.field_h.width) / 2, (vn.field_h.height - this.field_M) / 2);
           }
           g.d();
           var8 = vn.field_h.pixels;
@@ -2617,7 +2617,7 @@ final class PortalView extends SceneObject {
             break;
           }
           if (decompiledNaturalLoopExit0) {
-            vn.field_h.g(var3_int - vn.field_h.width / 2, var4 - vn.field_h.height / 2);
+            vn.field_h.drawTransparent(var3_int - vn.field_h.width / 2, var4 - vn.field_h.height / 2);
             if (vo.field_r == null) {
               vo.field_r = new Sprite(ud.field_Q.field_e, 2 * ud.field_Q.field_b);
             }

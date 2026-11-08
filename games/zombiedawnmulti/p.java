@@ -43,13 +43,13 @@ final class p {
     final static void a(int param0, int param1, boolean param2, int param3) {
         IndexedSpriteState.field_c = param0;
         if (param2) {
-          p.a(35);
+          p.releaseStatics(35);
         }
         kk.field_x = param1;
         DraggableWidget.field_N = param3;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_b = null;
         field_d = null;
         field_f = (long[][]) null;
@@ -112,7 +112,7 @@ final class p {
         field_d[0] = 0L;
         for (var0 = 1; 10 >= var0; var0++) {
             var1 = 8 * (-1 + var0);
-            field_d[var0] = ScrollPane.a(en.a(255L, field_f[7][var1 + 7]), ScrollPane.a(en.a(65280L, field_f[6][var1 + 6]), ScrollPane.a(ScrollPane.a(ScrollPane.a(ScrollPane.a(en.a(field_f[2][var1 + 2], 280375465082880L), ScrollPane.a(en.a(-72057594037927936L, field_f[0][var1]), en.a(field_f[1][var1 + 1], 71776119061217280L))), en.a(field_f[3][var1 + 3], 1095216660480L)), en.a(4278190080L, field_f[4][4 + var1])), en.a(field_f[5][5 + var1], 16711680L))));
+            field_d[var0] = ScrollPane.a(en.longAnd(255L, field_f[7][var1 + 7]), ScrollPane.a(en.longAnd(65280L, field_f[6][var1 + 6]), ScrollPane.a(ScrollPane.a(ScrollPane.a(ScrollPane.a(en.longAnd(field_f[2][var1 + 2], 280375465082880L), ScrollPane.a(en.longAnd(-72057594037927936L, field_f[0][var1]), en.longAnd(field_f[1][var1 + 1], 71776119061217280L))), en.longAnd(field_f[3][var1 + 3], 1095216660480L)), en.longAnd(4278190080L, field_f[4][4 + var1])), en.longAnd(field_f[5][5 + var1], 16711680L))));
         }
     }
 }

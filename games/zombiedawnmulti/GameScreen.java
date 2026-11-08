@@ -1019,14 +1019,14 @@ final class GameScreen {
             SoftwareRasterizer.resetClip();
           }
           if (1.0f == this.camera.zoom) {
-            ki.field_k.c(0, 0);
+            ki.field_k.drawOpaque(0, 0);
             if (var4 == 0) {
               return;
             }
           }
           var2_int = (int)(1280.0f / this.camera.zoom);
           var3 = (int)(960.0f / this.camera.zoom);
-          ki.field_k.f(0, 0, var2_int, var3);
+          ki.field_k.drawScaled(0, 0, var2_int, var3);
           if (1.2999999523162842f < this.camera.zoom) {
           }
           return;
@@ -2050,14 +2050,14 @@ final class GameScreen {
             this.onUnitEnteredPortal(95, (byte) 85, -97);
           }
           if (320 > param0) {
-            var5.g(param0 - 24, param2);
+            var5.drawTransparent(param0 - 24, param2);
             TranslatedUiText.field_e.c(PortalEntryEvent.field_m.field_b[param3], param0 + 24, 48 + param2, 0, 0);
             if (!ZombieDawnMulti.field_E) {
               return;
             }
           }
           var5.drawHorizontalFlip(param0 - 24, param2);
-          TranslatedUiText.field_e.a(PortalEntryEvent.field_m.field_b[param3], param0 - 24, 48 + param2, 0, 0);
+          TranslatedUiText.field_e.drawRightAligned(PortalEntryEvent.field_m.field_b[param3], param0 - 24, 48 + param2, 0, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -2112,7 +2112,7 @@ final class GameScreen {
               return;
             }
             if (param1.field_f > var3.field_f) {
-              qc.a(param1, var3, 0);
+              qc.insertBefore(param1, var3, 0);
               return;
             }
             var3 = (GameEvent) (this.eventQueue.c((byte) 97));
@@ -2543,12 +2543,12 @@ final class GameScreen {
           this.field_L = new Sprite(12 + this.field_y.width, this.field_y.height + 12);
           g.c(this.field_y);
           this.field_l = 640;
-          var9_ref2.b(var8_ref4, this.field_y.width / 2, this.field_y.height - var9_ref2.maxDescent, 2, -1);
+          var9_ref2.drawCentered(var8_ref4, this.field_y.width / 2, this.field_y.height - var9_ref2.maxDescent, 2, -1);
           this.field_L.bindAsRenderTarget();
           SoftwareRasterizer.fillRoundedRectAlpha(0, 0, this.field_L.width, this.field_L.height, 12, 8421504, 80);
-          this.field_y.f(6, param0, 16777215);
+          this.field_y.drawSilhouette(6, param0, 16777215);
           SoftwareRasterizer.blurRectangle(4, 4, 0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height);
-          this.field_y.f(6, 6, 0);
+          this.field_y.drawSilhouette(6, 6, 0);
           g.d();
           if (PortalEntryEvent.field_m.teamCount == 1) {
             this.field_l = 0;
@@ -3044,7 +3044,7 @@ final class GameScreen {
           }
           var6 = new UnitView[this.sceneObjects.a(0)];
           var7 = new int[this.sceneObjects.a(0)];
-          ArrayOperations.a(var7, 0, var7.length, 32767);
+          ArrayOperations.fillInts(var7, 0, var7.length, 32767);
           var8 = 0;
           var9_ref_br = this.sceneObjects.c(94);
           boolean decompiledNaturalLoopExit0 = false;
@@ -3705,7 +3705,7 @@ final class GameScreen {
                         } else {
                           var13 = 1;
                         }
-                        pb.field_e.a(LinkButtonPainter.field_b[var13], var11, -48 + var12, 14540253, 0, 253);
+                        pb.field_e.drawCenteredAlpha(LinkButtonPainter.field_b[var13], var11, -48 + var12, 14540253, 0, 253);
                       }
                     }
                     if (var8_int != 0 &&
@@ -3749,7 +3749,7 @@ final class GameScreen {
                 }
                 if (decompiledFrameCompleted0) {
                   g.d();
-                  UnitStateEvent.field_l.a(0, 0, 1280, 960, 104);
+                  UnitStateEvent.field_l.drawScaledAlpha(0, 0, 1280, 960, 104);
                 }
               }
               if (decompiledFrameCompleted0) {
@@ -3801,11 +3801,11 @@ final class GameScreen {
             if (var8_int > (var7 * 3)) {
               var8_int = var7 * 3;
             }
-            this.field_B.a(5, 40, 630, 400, 32 + var8_int);
+            this.field_B.drawScaledAlpha(5, 40, 630, 400, 32 + var8_int);
           }
           if (this.field_eb &&
             !this.field_w) {
-            pp.field_q[8].a(MouseInputHandler.field_g - 12, -12 + bo.field_d);
+            pp.field_q[8].draw(MouseInputHandler.field_g - 12, -12 + bo.field_d);
           }
           if (this.field_eb &&
             this.field_w) {
@@ -3838,14 +3838,14 @@ final class GameScreen {
           if (0 != PortalEntryEvent.field_m.phase) {
             if ((3 == PortalEntryEvent.field_m.phase) &&
               (decompiledFrameRemainder0 = !(this.field_d >= 225))) {
-              var8.b(tm.field_g, 320, 240, 2, -1);
+              var8.drawCentered(tm.field_g, 320, 240, 2, -1);
               decompiledFrameRemainder0 = (var20 != 0);
             }
             if (decompiledFrameRemainder0) {
               if (!DebouncedValidationProvider.field_h &&
                 PortalEntryEvent.field_m.phase == 1 &&
                 PortalEntryEvent.field_m.currentTick < 500) {
-                var8.b(NodeHashTableIterator.field_c, 320, 240, 0, -1);
+                var8.drawCentered(NodeHashTableIterator.field_c, 320, 240, 0, -1);
                 this.camera.field_f = false;
                 decompiledFrameRemainder0 = (var20 != 0);
               }
@@ -3854,28 +3854,28 @@ final class GameScreen {
                 var9_int = PortalEntryEvent.field_m.field_C - PortalEntryEvent.field_m.currentTick;
                 if (var9_int < 1550) {
                   if (DebouncedValidationProvider.field_h) {
-                    var8.b(ButtonWidget.field_E, 320, 120, 0, -1);
+                    var8.drawCentered(ButtonWidget.field_E, 320, 120, 0, -1);
                     if (var20 != 0) {
-                      var8.b(sm.field_f, 320, 120, 0, -1);
+                      var8.drawCentered(sm.field_f, 320, 120, 0, -1);
                       if (var9_int > 2750 &&
                         var9_int < 2950 &&
                         !DebouncedValidationProvider.field_h) {
-                        var8.b(ng.field_c, 320, 120, 0, -1);
+                        var8.drawCentered(ng.field_c, 320, 120, 0, -1);
                       }
                     }
                   } else {
-                    var8.b(sm.field_f, 320, 120, 0, -1);
+                    var8.drawCentered(sm.field_f, 320, 120, 0, -1);
                     if ((var20 != 0) && (var9_int > 2750 &&
                       var9_int < 2950 &&
                       !DebouncedValidationProvider.field_h)) {
-                      var8.b(ng.field_c, 320, 120, 0, -1);
+                      var8.drawCentered(ng.field_c, 320, 120, 0, -1);
                     }
                   }
                 } else {
                   if (var9_int > 2750 &&
                     var9_int < 2950 &&
                     !DebouncedValidationProvider.field_h) {
-                    var8.b(ng.field_c, 320, 120, 0, -1);
+                    var8.drawCentered(ng.field_c, 320, 120, 0, -1);
                   }
                 }
                 decompiledFrameRemainder0 = (var20 != 0);
@@ -3885,7 +3885,7 @@ final class GameScreen {
           if (decompiledFrameRemainder0) {
             if (this.field_l <= 0) {
               var9_ref = Under13NoticePanel.field_J;
-              TranslatedUiText.field_e.b(var9_ref, 320, 240, 0, -1);
+              TranslatedUiText.field_e.drawCentered(var9_ref, 320, 240, 0, -1);
               decompiledFrameRemainder0 = (var20 != 0);
             }
             if (decompiledFrameRemainder0) {
@@ -3906,14 +3906,14 @@ final class GameScreen {
                 stackIn_352_2 = var10;
               }
               SoftwareRasterizer.setClip(stackIn_348_0, stackIn_351_1, stackIn_352_2, 345);
-              InfectionEvent.field_j.c(var11 - 5, 75);
+              InfectionEvent.field_j.drawOpaque(var11 - 5, 75);
               InfectionEvent.field_j.drawVerticalFlip(-5 + var11, 340);
-              SimHuman.field_fb.c(var11 - 5, 75);
+              SimHuman.field_fb.drawOpaque(var11 - 5, 75);
               SimHuman.field_fb.drawHorizontalFlip(-5 - var11 + 640, 75);
-              rp.field_r[0].c(var11 - 5, 75);
-              rp.field_r[1].c(635 - var11, 75);
-              rp.field_r[2].c(var11 - 5, 340);
-              rp.field_r[3].c(635 - var11, 340);
+              rp.field_r[0].drawOpaque(var11 - 5, 75);
+              rp.field_r[1].drawOpaque(635 - var11, 75);
+              rp.field_r[2].drawOpaque(var11 - 5, 340);
+              rp.field_r[3].drawOpaque(635 - var11, 340);
               var12 = 0;
               var13 = 160;
               var14Lifetime1 = 90;
@@ -3936,7 +3936,7 @@ final class GameScreen {
                   }
                 }
               }
-              this.field_y.g(-(this.field_y.width / 2) + 320, 235 - this.field_y.height);
+              this.field_y.drawTransparent(-(this.field_y.width / 2) + 320, 235 - this.field_y.height);
               g.a(this.field_L, -(this.field_y.width / 2) + 320 - 6, 235 + (-this.field_y.height - 6));
               SoftwareRasterizer.resetClip();
             }
@@ -3948,7 +3948,7 @@ final class GameScreen {
               rq.a(9);
             }
           }
-          jq.field_e.e(0, 0);
+          jq.field_e.drawRunEncoded(0, 0);
           if (sc.field_a ||
             wj.field_n ||
             n.field_g) {
@@ -4641,7 +4641,7 @@ final class GameScreen {
           if (param1) {
             this.field_A = 96;
           }
-          ArrayOperations.a(param0, 0, PortalEntryEvent.field_m.teamScores, 0, param0.length);
+          ArrayOperations.copy(param0, 0, PortalEntryEvent.field_m.teamScores, 0, param0.length);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

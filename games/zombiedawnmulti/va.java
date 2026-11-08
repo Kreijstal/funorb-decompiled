@@ -80,7 +80,7 @@ final class va {
         return FightEvent.a(param1, -23936, param2, param3);
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 < 100) {
           va.a((byte) 9, -56, 96, -45);
           field_b = null;

@@ -147,7 +147,7 @@ final class qe {
             var14 = var6[var9];
             IndexedSprite[] var10 = var14;
             for (var11_int = 0; var11_int < var14.length; var11_int++) {
-              var14[var11_int] = nk.a(96, var19[var11_int], var5[var9]);
+              var14[var11_int] = nk.copyWithPalette(96, var19[var11_int], var5[var9]);
             }
           }
           var9Lifetime1 = var17.height;
@@ -157,13 +157,13 @@ final class qe {
           var15 = new Sprite(var9Lifetime1, var9Lifetime1);
           var18 = var15;
           var18.bindAsRenderTarget();
-          var17.c(0, 0);
+          var17.drawOpaque(0, 0);
           var11 = new Sprite(var9Lifetime1, var9Lifetime1);
           var11.bindAsRenderTarget();
-          var17.c(var9Lifetime1 - var17.width, 0);
+          var17.drawOpaque(var9Lifetime1 - var17.width, 0);
           var12 = new Sprite(-(var9Lifetime1 * 2) + var17.width, var9Lifetime1);
           var12.bindAsRenderTarget();
-          var17.c(-var9Lifetime1, 0);
+          var17.drawOpaque(-var9Lifetime1, 0);
           ql.a(true);
           ui.field_k = new Sprite[]{var15, var12, var11};
         } catch (RuntimeException runtimeException) {
@@ -194,13 +194,13 @@ final class qe {
           this.field_j &&
           this.field_l > 0) {
           g.a(jj.field_F[5], 430, 40);
-          rb.field_e[5].g(430, 40);
+          rb.field_e[5].drawTransparent(430, 40);
         }
         SoftwareRasterizer.fillRect(0, 440, 640, 40, 0);
         g.a(jj.field_F[0], 0, 410);
-        rb.field_e[0].g(5, 415);
+        rb.field_e[0].drawTransparent(5, 415);
         g.a(jj.field_F[2], 70, 400);
-        rb.field_e[2].g(70, 400);
+        rb.field_e[2].drawTransparent(70, 400);
         GameWorld var5 = PortalEntryEvent.field_m;
         if (2 <= kj.field_q) {
           MatchingTextValidator.field_w.c("L" + var5.field_r, 12, 468, 16777215, 1);
@@ -254,7 +254,7 @@ final class qe {
         SoftwareRasterizer.fillRectGradient(var11, 0, -var11 + var13, 38, 65793, 1981188);
         SoftwareRasterizer.drawVerticalLine(var13, 0, 38, 3102221);
         var14 = am.a(0, var18.field_D[param1][1], 0, 1, var18.field_D[param1][0]);
-        var14.g(var11, -1 + (-24 + var12));
+        var14.drawTransparent(var11, -1 + (-24 + var12));
         var21 = var18.field_b[param1];
         var22 = BitmapFont.truncateText(var9, var21, -2 + var10 - 48);
         ((BitmapFont) ((Object) var9)).c(var22, 48 + var11, var12, var8, 0);
@@ -269,7 +269,7 @@ final class qe {
             var17 = vl.a(bi.field_b, new String[]{Integer.toString(var5)}, param0 ^ -128);
           }
           ((BitmapFont) ((Object) var9)).c(var16, var11 + 48, 3 + (((BitmapFont) ((Object) var9)).baselineHeight + var12), var8, 0);
-          ((BitmapFont) ((Object) var9)).a(var17, var13, var12 + ((BitmapFont) ((Object) var9)).baselineHeight + 3, 16777215, 0);
+          ((BitmapFont) ((Object) var9)).drawRightAligned(var17, var13, var12 + ((BitmapFont) ((Object) var9)).baselineHeight + 3, 16777215, 0);
         }
         SoftwareRasterizer.drawHorizontalLine(var11, 38, 1 + var13, 2763045);
         SoftwareRasterizer.drawHorizontalLine(var11, 39, var13 + 1, 2763045);
@@ -289,12 +289,12 @@ final class qe {
           return;
         }
         SoftwareRasterizer.clear();
-        this.field_i.a(Integer.toString(this.field_h), -5 + SoftwareRasterizer.width, 5 + this.field_i.maxAscent, 1, 65793);
+        this.field_i.drawRightAligned(Integer.toString(this.field_h), -5 + SoftwareRasterizer.width, 5 + this.field_i.maxAscent, 1, 65793);
         jj.field_F[3].bindAsRenderTarget();
         SoftwareRasterizer.clear();
-        rb.field_e[3].f(0, 0, 16777215);
+        rb.field_e[3].drawSilhouette(0, 0, 16777215);
         FightEvent.d((byte) -18);
-        rb.field_e[3].f(0, 0, 0);
+        rb.field_e[3].drawSilhouette(0, 0, 0);
         g.b();
     }
 
@@ -302,15 +302,15 @@ final class qe {
         g.c();
         rb.field_e[4].bindAsRenderTarget();
         SoftwareRasterizer.clear();
-        this.field_i.a(this.a(param0, 98), SoftwareRasterizer.width - 5, 5 + this.field_i.maxAscent, 3, -1);
+        this.field_i.drawRightAligned(this.a(param0, 98), SoftwareRasterizer.width - 5, 5 + this.field_i.maxAscent, 3, -1);
         if (param1 != 2394342) {
           return;
         }
         jj.field_F[4].bindAsRenderTarget();
         SoftwareRasterizer.clear();
-        rb.field_e[4].f(0, 0, 16777215);
+        rb.field_e[4].drawSilhouette(0, 0, 16777215);
         FightEvent.d((byte) -18);
-        rb.field_e[4].f(0, 0, 0);
+        rb.field_e[4].drawSilhouette(0, 0, 0);
         g.b();
     }
 
@@ -326,15 +326,15 @@ final class qe {
         g.c();
         rb.field_e[6].bindAsRenderTarget();
         SoftwareRasterizer.clear();
-        this.field_i.b(vl.a(ra.field_g, new String[]{Integer.toString(this.field_m), Integer.toString(this.field_m + this.field_h)}, 2), SoftwareRasterizer.width / 2, 5 + this.field_i.maxAscent, 2, 65793);
+        this.field_i.drawCentered(vl.a(ra.field_g, new String[]{Integer.toString(this.field_m), Integer.toString(this.field_m + this.field_h)}, 2), SoftwareRasterizer.width / 2, 5 + this.field_i.maxAscent, 2, 65793);
         jj.field_F[6].bindAsRenderTarget();
         SoftwareRasterizer.clear();
         if (param0 != 30) {
           this.c(-19);
         }
-        rb.field_e[6].f(0, 0, 16777215);
+        rb.field_e[6].drawSilhouette(0, 0, 16777215);
         FightEvent.d((byte) -18);
-        rb.field_e[6].f(0, 0, 0);
+        rb.field_e[6].drawSilhouette(0, 0, 0);
         g.b();
     }
 
@@ -354,22 +354,22 @@ final class qe {
         if (this.field_n != 1.0f) {
           eg.field_D.bindAsRenderTarget();
           SoftwareRasterizer.clear();
-          this.field_i.a(this.d((byte) 51), -5 + SoftwareRasterizer.width, this.field_i.maxAscent + 5, 2, var2);
+          this.field_i.drawRightAligned(this.d((byte) 51), -5 + SoftwareRasterizer.width, this.field_i.maxAscent + 5, 2, var2);
           var3 = (int)((float)SoftwareRasterizer.width * this.field_n);
           var4 = (int)((float)SoftwareRasterizer.height * this.field_n);
           rb.field_e[5].bindAsRenderTarget();
           SoftwareRasterizer.clear();
-          eg.field_D.f(SoftwareRasterizer.width - var3, 0, var3, var4);
+          eg.field_D.drawScaled(SoftwareRasterizer.width - var3, 0, var3, var4);
         } else {
           rb.field_e[5].bindAsRenderTarget();
           SoftwareRasterizer.clear();
-          this.field_i.a(this.d((byte) -51), SoftwareRasterizer.width - 5, this.field_i.maxAscent + 5, 0, var2);
+          this.field_i.drawRightAligned(this.d((byte) -51), SoftwareRasterizer.width - 5, this.field_i.maxAscent + 5, 0, var2);
         }
         jj.field_F[5].bindAsRenderTarget();
         SoftwareRasterizer.clear();
-        rb.field_e[5].f(0, 0, 16777215);
+        rb.field_e[5].drawSilhouette(0, 0, 16777215);
         FightEvent.d((byte) -18);
-        rb.field_e[5].f(0, 0, 0);
+        rb.field_e[5].drawSilhouette(0, 0, 0);
         g.b();
     }
 
@@ -497,9 +497,9 @@ final class qe {
         }
         jj.field_F[2].bindAsRenderTarget();
         SoftwareRasterizer.clear();
-        rb.field_e[2].f(0, 0, 16777215);
+        rb.field_e[2].drawSilhouette(0, 0, 16777215);
         FightEvent.d((byte) -18);
-        rb.field_e[2].f(0, 0, 0);
+        rb.field_e[2].drawSilhouette(0, 0, 0);
         g.b();
     }
 

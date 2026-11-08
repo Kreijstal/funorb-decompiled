@@ -189,29 +189,29 @@ final class s {
             }
             if (null != param2[param1]) {
               SoftwareRasterizer.intersectClip(param3, param0, var16, var18);
-              param2[0].g(param3, param0);
+              param2[0].drawTransparent(param3, param0);
               SoftwareRasterizer.restoreClip(DualLinkNode.field_f);
             }
             if (param2[2] != null) {
               SoftwareRasterizer.intersectClip(var17, param0, var10, var18);
-              param2[2].g(var13, param0);
+              param2[2].drawTransparent(var13, param0);
               SoftwareRasterizer.restoreClip(DualLinkNode.field_f);
             }
             if (param2[6] != null) {
               SoftwareRasterizer.intersectClip(param3, var19, var16, var11);
-              param2[6].g(param3, var15);
+              param2[6].drawTransparent(param3, var15);
               SoftwareRasterizer.restoreClip(DualLinkNode.field_f);
             }
             if (param2[8] != null) {
               SoftwareRasterizer.intersectClip(var17, var19, var10, var11);
-              param2[8].g(var13, var15);
+              param2[8].drawTransparent(var13, var15);
               SoftwareRasterizer.restoreClip(DualLinkNode.field_f);
             }
             if (param2[1] != null &&
               param2[1].fullWidth != 0) {
               SoftwareRasterizer.intersectClip(var16, param0, var17, var18);
               for (var20 = var12; var20 < var13; var20 = var20 + param2[1].fullWidth) {
-                param2[1].g(var20, param0);
+                param2[1].drawTransparent(var20, param0);
               }
               SoftwareRasterizer.restoreClip(DualLinkNode.field_f);
             }
@@ -219,7 +219,7 @@ final class s {
               0 != param2[7].fullWidth) {
               SoftwareRasterizer.intersectClip(var16, var19, var17, var11);
               for (var20Lifetime1 = var12; var20Lifetime1 < var13; var20Lifetime1 = var20Lifetime1 + param2[7].fullWidth) {
-                param2[7].g(var20Lifetime1, var15);
+                param2[7].drawTransparent(var20Lifetime1, var15);
               }
               SoftwareRasterizer.restoreClip(DualLinkNode.field_f);
             }
@@ -227,7 +227,7 @@ final class s {
               param2[3].field_u != 0) {
               SoftwareRasterizer.intersectClip(param3, var18, var16, var19);
               for (var20Lifetime2 = var14; var20Lifetime2 < var15; var20Lifetime2 = var20Lifetime2 + param2[3].field_u) {
-                param2[3].g(param3, var20Lifetime2);
+                param2[3].drawTransparent(param3, var20Lifetime2);
               }
               SoftwareRasterizer.restoreClip(DualLinkNode.field_f);
             }
@@ -235,7 +235,7 @@ final class s {
               param2[5].field_u != 0) {
               SoftwareRasterizer.intersectClip(var17, var18, var10, var19);
               for (var20Lifetime3 = var14; var20Lifetime3 < var15; var20Lifetime3 = var20Lifetime3 + param2[5].field_u) {
-                param2[5].g(var13, var20Lifetime3);
+                param2[5].drawTransparent(var13, var20Lifetime3);
               }
               SoftwareRasterizer.restoreClip(DualLinkNode.field_f);
             }
@@ -247,7 +247,7 @@ final class s {
               SoftwareRasterizer.intersectClip(var16, var18, var17, var19);
               for (var20Lifetime4 = var14; var20Lifetime4 < var15; var20Lifetime4 = var20Lifetime4 + param2[4].field_u) {
                 for (var21 = var12; var13 > var21; var21 = var21 + param2[4].fullWidth) {
-                  param2[4].g(var21, var20Lifetime4);
+                  param2[4].drawTransparent(var21, var20Lifetime4);
                 }
               }
               SoftwareRasterizer.restoreClip(DualLinkNode.field_f);

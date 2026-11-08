@@ -433,7 +433,7 @@ final class tg implements Runnable {
               var10 = PowerupEvent.field_m / var7 % var9 + var8;
               var19 = nk.a(QuickChatHelpDialog.field_Hb[var6][var10], FullscreenFocusCanvas.field_k.field_c[0], 255, FullscreenFocusCanvas.field_k.field_p[0]);
               og.h((byte) 126);
-              var19.g(var4 - var18.field_zb / 4, var5);
+              var19.drawTransparent(var4 - var18.field_zb / 4, var5);
               var7Lifetime2 = 45;
               var6Lifetime2 = 1;
               var10Lifetime1 = (PowerupEvent.field_m + 3) / var7Lifetime2 % var9 + var8;
@@ -670,7 +670,7 @@ final class tg implements Runnable {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_a = null;
         field_g = null;
         field_d = null;

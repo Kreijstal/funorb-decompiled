@@ -30,36 +30,36 @@ final class SynthInstrument {
     private static int[] field_p;
     private static int[] field_n;
 
-    final void a(PacketBuffer param0) {
+    final void decode(PacketBuffer param0) {
         int var3 = 0;
         int var4 = 0;
         this.field_d = new SoundEnvelope();
-        this.field_d.b(param0);
+        this.field_d.decode(param0);
         this.field_f = new SoundEnvelope();
-        this.field_f.b(param0);
+        this.field_f.decode(param0);
         int var2 = param0.readUnsignedByte(31365);
         if (var2 != 0) {
           param0.position = param0.position - 1;
           this.field_r = new SoundEnvelope();
-          this.field_r.b(param0);
+          this.field_r.decode(param0);
           this.field_l = new SoundEnvelope();
-          this.field_l.b(param0);
+          this.field_l.decode(param0);
         }
         var2 = param0.readUnsignedByte(31365);
         if (var2 != 0) {
           param0.position = param0.position - 1;
           this.field_e = new SoundEnvelope();
-          this.field_e.b(param0);
+          this.field_e.decode(param0);
           this.field_s = new SoundEnvelope();
-          this.field_s.b(param0);
+          this.field_s.decode(param0);
         }
         var2 = param0.readUnsignedByte(31365);
         if (var2 != 0) {
           param0.position = param0.position - 1;
           this.field_a = new SoundEnvelope();
-          this.field_a.b(param0);
+          this.field_a.decode(param0);
           this.field_x = new SoundEnvelope();
-          this.field_x.b(param0);
+          this.field_x.decode(param0);
         }
         for (var3 = 0; var3 < 10; var3++) {
           var4 = param0.readUnsignedSmart((byte) -116);
@@ -76,7 +76,7 @@ final class SynthInstrument {
         this.field_h = param0.readUnsignedShort((byte) 69);
         this.field_j = new AudioFilter();
         this.field_q = new SoundEnvelope();
-        this.field_j.a(param0, this.field_q);
+        this.field_j.decode(param0, this.field_q);
     }
 
     private final int evaluateWaveform(int param0, int param1, int param2) {
@@ -98,7 +98,7 @@ final class SynthInstrument {
         return 0;
     }
 
-    final int[] a(int param0, int param1) {
+    final int[] synthesize(int param0, int param1) {
         int stackIn_41_0 = 0;
         double var3;
         int var5;

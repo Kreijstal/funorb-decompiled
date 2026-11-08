@@ -54,7 +54,7 @@ final class SoundEffect {
           if (this.instruments[var4] != null) {
             var5 = this.instruments[var4].field_b * 22050 / 1000;
             var6 = this.instruments[var4].field_h * 22050 / 1000;
-            var13 = this.instruments[var4].a(var5, this.instruments[var4].field_b);
+            var13 = this.instruments[var4].synthesize(var5, this.instruments[var4].field_b);
             for (var8 = 0; var8 < var5; var8++) {
               var9 = var3[var8 + var6] + (var13[var8] >> 8);
               if ((var9 + 128 & -256) != 0) {
@@ -76,7 +76,7 @@ final class SoundEffect {
           if (var3 != 0) {
             param0.position = param0.position - 1;
             this.instruments[var2] = new SynthInstrument();
-            this.instruments[var2].a(param0);
+            this.instruments[var2].decode(param0);
           }
         }
         this.field_b = param0.readUnsignedShort((byte) 69);

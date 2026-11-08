@@ -102,7 +102,7 @@ final class gk {
           var7Lifetime1 = 0;
           for (var8Lifetime1 = 0; var8Lifetime1 < eo.field_e.length; var8Lifetime1++) {
             stackIn_26_0 = !(dn.field_a[var8Lifetime1] < 0);
-            var9Lifetime1 = vh.a(stackIn_26_0, -36, eo.field_e[var8Lifetime1]);
+            var9Lifetime1 = vh.measureText(stackIn_26_0, -36, eo.field_e[var8Lifetime1]);
             if (-1 != dn.field_a[var8Lifetime1]) {
               var9Lifetime1 = var9Lifetime1 + GameCharacter.field_db * 2;
             }

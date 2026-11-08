@@ -237,7 +237,7 @@ final class InflaterDecompressor {
           var2 = pb.field_e;
           var3 = new Sprite(var2.textWidth(param1), 27);
           var3.bindAsRenderTarget();
-          var2.b(param1, var3.width / 2, 17, 16777215, -1);
+          var2.drawCentered(param1, var3.width / 2, 17, 16777215, -1);
           var4 = -13 % ((param0 + 44) / 43);
           stackIn_1_0 = var3;
           return stackIn_1_0;

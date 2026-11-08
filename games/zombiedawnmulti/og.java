@@ -383,7 +383,7 @@ final class og extends SimEntity {
             var12.field_zb = SimEntity.field_H.field_Gb.field_zb;
             var31 = 0;
             var32 = var12.field_Nb;
-            if (!var12.j(2)) {
+            if (!var12.isUnlisted(2)) {
               boolean decompiledFrameRemainder1 = true;
               if (var12.field_Fb) {
                 if (var12.field_Sb >= 0) {
@@ -626,7 +626,7 @@ final class og extends SimEntity {
             }
             boolean decompiledFrameRemainder0 = true;
             if (0 != var12.field_T) {
-              if (var12.j(2)) {
+              if (var12.isUnlisted(2)) {
                 var12 = (jh) (var8.b(6));
                 continue;
               }

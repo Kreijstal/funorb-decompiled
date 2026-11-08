@@ -25,35 +25,35 @@ abstract class qc extends DualLinkNode {
           if (0 != param4) {
             if (1 == param4) {
               param2[param3].bindAsRenderTarget();
-              param2[param0].c(0, 0);
+              param2[param0].drawOpaque(0, 0);
               for (var5_int = 0; var5_int < 24; var5_int++) {
                 SoftwareRasterizer.drawVerticalLineAlpha(var5_int, 0, 24, 0, var5_int * 5);
               }
             } else {
               if (param4 == 2) {
                 param2[param3].bindAsRenderTarget();
-                param2[param0].c(0, 0);
+                param2[param0].drawOpaque(0, 0);
                 for (var5_int = 0; var5_int < 24; var5_int++) {
                   SoftwareRasterizer.drawVerticalLineAlpha(var5_int, 0, 24, 0, -(5 * var5_int) + 120);
                 }
               } else {
                 if (3 == param4) {
                   param2[param3].bindAsRenderTarget();
-                  param2[param0].c(0, 0);
+                  param2[param0].drawOpaque(0, 0);
                   for (var5_int = 0; var5_int < 24; var5_int++) {
                     SoftwareRasterizer.drawHorizontalLineAlpha(0, var5_int, 24, 0, var5_int * 5);
                   }
                 } else {
                   if (param4 == 4) {
                     param2[param3].bindAsRenderTarget();
-                    param2[param0].c(0, 0);
+                    param2[param0].drawOpaque(0, 0);
                     for (var5_int = 0; var5_int < 24; var5_int++) {
                       SoftwareRasterizer.drawHorizontalLineAlpha(0, var5_int, 24, 0, -(5 * var5_int) + 120);
                     }
                   } else {
                     if (param4 == 6) {
                       param2[param3].bindAsRenderTarget();
-                      param2[param0].c(0, 0);
+                      param2[param0].drawOpaque(0, 0);
                       for (var5_int = 0; 24 > var5_int; var5_int++) {
                         SoftwareRasterizer.drawHorizontalLineAlpha(var5_int + 1, var5_int, 24 - var5_int, 0, 5 * var5_int);
                         SoftwareRasterizer.drawVerticalLineAlpha(var5_int, var5_int, -var5_int + 24, 0, var5_int * 5);
@@ -61,7 +61,7 @@ abstract class qc extends DualLinkNode {
                     } else {
                       if (param4 == 8) {
                         param2[param3].bindAsRenderTarget();
-                        param2[param0].c(0, 0);
+                        param2[param0].drawOpaque(0, 0);
                         for (var5_int = 0; 24 > var5_int; var5_int++) {
                           SoftwareRasterizer.drawHorizontalLineAlpha(0, var5_int, var5_int + 1, 0, -(var5_int * 5) + 120);
                           SoftwareRasterizer.drawVerticalLineAlpha(var5_int, 0, var5_int, 0, -(5 * var5_int) + 120);
@@ -69,7 +69,7 @@ abstract class qc extends DualLinkNode {
                       } else {
                         if (7 == param4) {
                           param2[param3].bindAsRenderTarget();
-                          param2[param0].c(0, 0);
+                          param2[param0].drawOpaque(0, 0);
                           for (var5_int = 0; var5_int < 24; var5_int++) {
                             SoftwareRasterizer.drawHorizontalLineAlpha(0, var5_int, 24 - var5_int, 0, 5 * var5_int);
                             SoftwareRasterizer.drawVerticalLineAlpha(var5_int, -var5_int + 24, var5_int, 0, -(5 * var5_int) + 120);
@@ -77,7 +77,7 @@ abstract class qc extends DualLinkNode {
                         } else {
                           if (param4 == 5) {
                             param2[param3].bindAsRenderTarget();
-                            param2[param0].c(0, 0);
+                            param2[param0].drawOpaque(0, 0);
                             for (var5_int = 0; var5_int < 24; var5_int++) {
                               SoftwareRasterizer.drawHorizontalLineAlpha(-var5_int + 24, var5_int, var5_int, 0, -(5 * var5_int) + 120);
                               SoftwareRasterizer.drawVerticalLineAlpha(var5_int, 0, 24 - var5_int, 0, var5_int * 5);
@@ -92,7 +92,7 @@ abstract class qc extends DualLinkNode {
             }
           } else {
             param2[param3].bindAsRenderTarget();
-            param2[param0].c(0, 0);
+            param2[param0].drawOpaque(0, 0);
             SoftwareRasterizer.fillRectAlpha(0, 0, 24, 24, 0, 128);
           }
           g.b();
@@ -116,7 +116,7 @@ abstract class qc extends DualLinkNode {
 
     abstract byte[] e(int param0);
 
-    final static void a(IntrusiveNode param0, IntrusiveNode param1, int param2) {
+    final static void insertBefore(IntrusiveNode param0, IntrusiveNode param1, int param2) {
         if (param2 != 0) {
           return;
         }
@@ -133,12 +133,12 @@ abstract class qc extends DualLinkNode {
         }
     }
 
-    public static void c(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_u = null;
         field_s = null;
         field_w = null;
         if (param0 < 97) {
-          qc.c((byte) 22);
+          qc.releaseStatics((byte) 22);
         }
     }
 

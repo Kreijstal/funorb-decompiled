@@ -9,13 +9,13 @@ final class bh {
     static int[] field_c;
     static String field_e;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_a = null;
         field_e = null;
         field_b = null;
         field_c = null;
         if (param0 >= -2) {
-          bh.a((byte) 84);
+          bh.releaseStatics((byte) 84);
         }
         field_d = null;
         field_f = null;

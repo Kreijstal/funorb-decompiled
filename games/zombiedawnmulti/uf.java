@@ -46,7 +46,7 @@ final class uf {
             } else {
               stackIn_4_1 = 6;
             }
-            ((IndexedSprite) (Object) stackIn_3_0[stackIn_4_1]).a(param0.worldToScreenX(this.field_e, -20126) - 12, -12 + param0.worldToScreenY(this.field_j, 111), this.field_a);
+            ((IndexedSprite) (Object) stackIn_3_0[stackIn_4_1]).drawAlpha(param0.worldToScreenX(this.field_e, -20126) - 12, -12 + param0.worldToScreenY(this.field_j, 111), this.field_a);
           }
           if (param1 < 33) {
             this.field_a = -63;

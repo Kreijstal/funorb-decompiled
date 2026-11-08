@@ -182,14 +182,14 @@ final class BufferedSocket implements Runnable {
           jj.field_F[6] = new Sprite(200, 50);
           g.c();
           jj.field_F[0].bindAsRenderTarget();
-          rb.field_e[0].f(5, 5, 16777215);
+          rb.field_e[0].drawSilhouette(5, 5, 16777215);
           FightEvent.d((byte) -18);
-          rb.field_e[0].f(5, 5, 0);
+          rb.field_e[0].drawSilhouette(5, 5, 0);
           jj.field_F[1].bindAsRenderTarget();
-          rb.field_e[1].f(-35, 5, 16777215);
+          rb.field_e[1].drawSilhouette(-35, 5, 16777215);
           g.a(16777215);
           FightEvent.d((byte) -18);
-          rb.field_e[1].f(-35, 5, 0);
+          rb.field_e[1].drawSilhouette(-35, 5, 0);
           g.b();
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ej.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');

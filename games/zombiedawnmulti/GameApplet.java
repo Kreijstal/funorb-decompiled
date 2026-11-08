@@ -142,7 +142,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             this.field_f = true;
             System.out.println("error_game_" + param1);
             try {
-              JavaScriptBridge.b(StatefulTextPainter.b(param0 ^ 27200), 13093, "loggedout");
+              JavaScriptBridge.callJavaScript(StatefulTextPainter.b(param0 ^ 27200), 13093, "loggedout");
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               throwable = decompiledCaughtException;
@@ -455,7 +455,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 do {
                   boolean decompiledFrameRemainder0 = true;
                   if (kj.field_n != 0L) {
-                    stackIn_100_0 = $cfr$lcmp(kj.field_n, bl.a((byte) 76));
+                    stackIn_100_0 = compareLongs(kj.field_n, bl.a((byte) 76));
                     decompiledFrameRemainder0 = (var5 == 0);
                     if ((decompiledFrameRemainder0) &&
                       (stackIn_100_0 <= 0)) {
@@ -927,7 +927,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         field_g = "Hide players in <%0>'s game";
     }
 
-    private static int $cfr$lcmp(long left, long right) {
+    private static int compareLongs(long left, long right) {
         return left < right ? -1 : (left == right ? 0 : 1);
     }
 }

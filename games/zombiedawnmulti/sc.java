@@ -241,7 +241,7 @@ final class sc {
         HotspotTextWidget.g(param0 + 114);
     }
 
-    final static void releaseStatics(int param0) {
+    final static void clearPhaseImageAndCharacterFont(int param0) {
         PhaseChangeEvent.field_i = null;
         if (param0 != 1) {
           field_j = (UiComponent) null;

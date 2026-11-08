@@ -305,9 +305,9 @@ final class mg extends SceneObject {
           jq.a(cr.a(param0, -83), 33 + param3, (byte) 2, param4.field_t[param0], param5, -16 + param6);
           if (param1 != 255) {
             jq.a(cr.a(param1, -100), param3 + 21, (byte) 2, param4.field_t[param1], param5, param6 - 39);
-            ((BitmapFont) ((Object) var8)).a(gh.field_f[param1], param6 + 29, 48 + param3, 16777215, 1, param5);
+            ((BitmapFont) ((Object) var8)).drawCenteredAlpha(gh.field_f[param1], param6 + 29, 48 + param3, 16777215, 1, param5);
           }
-          ((BitmapFont) ((Object) var8)).a(gh.field_f[param0], param6 + 29, 58 + param3, 16777215, 1, param5);
+          ((BitmapFont) ((Object) var8)).drawCenteredAlpha(gh.field_f[param0], param6 + 29, 58 + param3, 16777215, 1, param5);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "mg.K(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ')');
         }
@@ -374,7 +374,7 @@ final class mg extends SceneObject {
               SoftwareRasterizer.fillCircleAlpha(hp.field_l[var8] + var6, hp.field_g[var8] + var7, 6, 0, var11 * var9);
               SoftwareRasterizer.fillRadialGlow(hp.field_l[var8] + var6 << 4, var7 + hp.field_g[var8] << 4, 96, var10 * var11, hp.field_j[this.field_C]);
             }
-            MarkerSliderPainter.field_b[this.field_C].g(var4, var5);
+            MarkerSliderPainter.field_b[this.field_C].drawTransparent(var4, var5);
             return;
           }
           return;

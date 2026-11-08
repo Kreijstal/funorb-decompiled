@@ -101,7 +101,7 @@ final class ho extends MenuScreen {
           }
           if (param0.field_m > 0 &&
             param0.field_z != null) {
-            DelegatingCanvas.a(0);
+            DelegatingCanvas.clearFaceDepthBuckets(0);
           }
           AccountCreationDialog.field_Eb = 0;
           var8 = 0;
@@ -271,7 +271,7 @@ final class ho extends MenuScreen {
             try {
               boolean decompiledFrameCompleted0 = true;
               var2 = "tuhstatbut";
-              var3 = (String) (JavaScriptBridge.b(param0, 13093, "getcookies"));
+              var3 = (String) (JavaScriptBridge.callJavaScript(param0, 13093, "getcookies"));
               if (param1 != 61) {
                 ho.a(122, 9, (byte[]) null, 88);
               }
@@ -389,11 +389,11 @@ final class ho extends MenuScreen {
           SoftwareRasterizer.setClip(5, 5, 635, 475);
           GameKeyHandler.a(6, 3 + this.field_n, 469, 640 + (-this.field_n - this.field_n), (byte) 122);
           SoftwareRasterizer.resetClip();
-          vh.field_Lb.a(this.field_n, 136);
-          vh.field_Lb.a(this.field_n, 6);
-          LobbyPlayer.field_Wb.a(640 - this.field_n, 6);
-          LobbyPlayer.field_Wb.a(-this.field_n + 640, 134);
-          QuickChatHelpDialog.field_Jb.a(0, 0);
+          vh.field_Lb.draw(this.field_n, 136);
+          vh.field_Lb.draw(this.field_n, 6);
+          LobbyPlayer.field_Wb.draw(640 - this.field_n, 6);
+          LobbyPlayer.field_Wb.draw(-this.field_n + 640, 134);
+          QuickChatHelpDialog.field_Jb.draw(0, 0);
           super.a(param0);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ho.H(" + param0 + ')');

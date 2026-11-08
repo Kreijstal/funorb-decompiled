@@ -30,7 +30,7 @@ abstract class MouseWheelInput {
         LevelData.field_a.setBounds(-120 + (SoftwareRasterizer.height - 4), 0, 438, var2 + (202 + 438 * var4Lifetime1 / var3Lifetime1), -3344);
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_b = null;
         if (param0 <= 51) {
           MouseWheelInput.a(-72, false);

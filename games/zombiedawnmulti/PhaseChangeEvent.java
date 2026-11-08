@@ -21,7 +21,7 @@ final class PhaseChangeEvent extends GameEvent {
         }
     }
 
-    public static void c(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_i = null;
         field_j = null;
         if (param0) {

@@ -23,7 +23,7 @@ final class tj {
             if (!var2.field_h.b(param0 ^ 3277)) {
               var2.unlink(true);
             } else {
-              var2.field_f.d(128 + var2.field_m * db.field_c >> 8);
+              var2.field_f.setInternalVolume(128 + var2.field_m * db.field_c >> 8);
             }
             var2 = (we) (GameKeyHandler.field_e.b(6));
           }
@@ -36,7 +36,7 @@ final class tj {
           var2Lifetime1 = (we) (wc.field_K.c(119));
           while (var2Lifetime1 != null) {
             if (var2Lifetime1.field_h.b(param0 ^ 3277)) {
-              var2Lifetime1.field_f.d(128 + db.field_c * var2Lifetime1.field_m >> 8);
+              var2Lifetime1.field_f.setInternalVolume(128 + db.field_c * var2Lifetime1.field_m >> 8);
             } else {
               var2Lifetime1.unlink(true);
             }

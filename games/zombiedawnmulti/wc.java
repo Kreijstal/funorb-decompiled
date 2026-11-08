@@ -17,7 +17,7 @@ final class wc extends SceneObject {
 
     final static PcmSampleStream b(int param0, int param1) {
         wj var2 = new wj(param1);
-        var2.field_m.g(param0);
+        var2.field_m.setLoopCount(param0);
         fd.field_M.a(var2, false);
         return var2.field_m;
     }
@@ -66,7 +66,7 @@ final class wc extends SceneObject {
         }
     }
 
-    public static void g(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 == -66) {
           field_H = null;
           field_M = null;
@@ -262,7 +262,7 @@ final class wc extends SceneObject {
         try {
           var3_int = param1.worldToScreenX(this.getX(param0 ^ -10199), -20126);
           var4 = param1.worldToScreenY(this.getY(-109), 116);
-          TranslatedUiText.field_e.a(this.field_P, var3_int, var4, 3, -1, this.field_F);
+          TranslatedUiText.field_e.drawCenteredAlpha(this.field_P, var3_int, var4, 3, -1, this.field_F);
           if (null != this.field_R) {
             if (this.field_R.isSamplePositionOutOfRange()) {
               this.field_R = null;

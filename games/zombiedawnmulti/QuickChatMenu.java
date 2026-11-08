@@ -1072,7 +1072,7 @@ final class QuickChatMenu extends UiComponent {
         return var2 != 0;
     }
 
-    public static void h(int param0) {
+    public static void releaseStatics(int param0) {
         field_Lb = null;
         field_Rb = null;
         if (param0 >= -104) {
@@ -1175,7 +1175,7 @@ final class QuickChatMenu extends UiComponent {
         if (param0 != 1481707568) {
           field_Kb = -107L;
         }
-        bc.releaseStatics(10);
+        bc.clearNameEntryPopupHolder(10);
         bk.field_i = null;
         NavigationGrid.b(param0 - 1481675862);
     }

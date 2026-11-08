@@ -12,7 +12,7 @@ final class wj extends IntrusiveNode {
     static int field_g;
     static String field_f;
 
-    final static SocketConnector a(byte param0, int param1, String param2) {
+    final static SocketConnector createProxyConnector(byte param0, int param1, String param2) {
         ProxySocketConnector var3 = null;
         RuntimeException var3_ref = null;
         ProxySocketConnector stackIn_3_0 = null;
@@ -66,7 +66,7 @@ final class wj extends IntrusiveNode {
         nb.field_a.a(39, 0, 0);
         if (param1 >= -109) {
           String var3 = (String) null;
-          wj.a((byte) 68, -37, (String) null);
+          wj.createProxyConnector((byte) 68, -37, (String) null);
         }
     }
 

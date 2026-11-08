@@ -36,7 +36,7 @@ final class QuickChatCategoryRegistry {
         return var3;
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_d = null;
         field_e = null;
         field_a = null;

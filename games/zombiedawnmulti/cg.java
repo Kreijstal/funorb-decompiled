@@ -67,9 +67,9 @@ final class cg extends IntrusiveNode {
         }
     }
 
-    public static void c(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 > -33) {
-          cg.c((byte) -103);
+          cg.releaseStatics((byte) -103);
         }
         field_m = null;
         field_j = null;

@@ -54,7 +54,7 @@ final class BirthDateInputWidget extends DateInputWidget {
           return;
         }
         try {
-          DisplayNamePanel.field_H.b(param0, param3.field_y + param1 + (param3.field_n >> 1), param3.field_i + (param2 - 5), 16777215, -1);
+          DisplayNamePanel.field_H.drawCentered(param0, param3.field_y + param1 + (param3.field_n >> 1), param3.field_i + (param2 - 5), 16777215, -1);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "em.K(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }

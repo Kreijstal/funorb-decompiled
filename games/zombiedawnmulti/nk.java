@@ -63,7 +63,7 @@ final class nk extends IntrusiveNode {
           var5 = param1.readUnsignedShort((byte) 69);
           if (param0 != 20399) {
             var9 = (IndexedSprite) null;
-            nk.a(-34, (int[]) null, (IndexedSprite) null);
+            nk.copyWithPalette(-34, (int[]) null, (IndexedSprite) null);
           }
           var6 = param1.readUnsignedShort((byte) 69);
           var7 = param1.readUnsignedShort((byte) 69);
@@ -94,7 +94,7 @@ final class nk extends IntrusiveNode {
         }
     }
 
-    final static IndexedSprite a(int param0, int[] param1, IndexedSprite param2) {
+    final static IndexedSprite copyWithPalette(int param0, int[] param1, IndexedSprite param2) {
         IndexedSprite var3 = null;
         RuntimeException var3_ref = null;
         IndexedSprite stackIn_2_0 = null;
@@ -160,7 +160,7 @@ final class nk extends IntrusiveNode {
         try {
           g.c(vb.field_b);
           SoftwareRasterizer.clear();
-          param0.g(3, 3);
+          param0.drawTransparent(3, 3);
           var10 = SoftwareRasterizer.pixels;
           var9 = var10;
           var4 = var9;
@@ -274,7 +274,7 @@ final class nk extends IntrusiveNode {
         int var7 = (16766674 & param0) >> 16;
         if (param1 != 455739624) {
           IndexedSprite var13 = (IndexedSprite) null;
-          nk.a(-88, (int[]) null, (IndexedSprite) null);
+          nk.copyWithPalette(-88, (int[]) null, (IndexedSprite) null);
         }
         int var8 = param0 >> 8 & 255;
         int var9 = 255 & param0;
