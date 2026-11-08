@@ -144,11 +144,11 @@ final class OffscreenPlayerArrow {
           var2 = this.field_g + 155;
           var3 = 1600 - (1200 * var2 >> 8);
           var4 = we.cosine(this.field_a, false) * 40 >> 17;
-          var5 = ei.sine(this.field_a, (byte) -23) * 40 >> 17;
+          var5 = RotaryDialPainter.sine(this.field_a, (byte) -23) * 40 >> 17;
           var6 = we.cosine(this.field_a - var3, false) * var2 * 40 >> 24;
-          var7 = var2 * ei.sine(-var3 + this.field_a, (byte) -23) * 40 >> 24;
+          var7 = var2 * RotaryDialPainter.sine(-var3 + this.field_a, (byte) -23) * 40 >> 24;
           var8 = 40 * (var2 * we.cosine(var3 + this.field_a, false)) >> 24;
-          var9 = 40 * var2 * ei.sine(var3 + this.field_a, (byte) -23) >> 24;
+          var9 = 40 * var2 * RotaryDialPainter.sine(var3 + this.field_a, (byte) -23) >> 24;
           if (0 == SocketArchiveNetworkClient.field_v) {
             TriangleRasterizer.useRasterClip();
             TriangleRasterizer.setProjectionCenter(this.field_b, this.field_d);
@@ -166,9 +166,9 @@ final class OffscreenPlayerArrow {
             TriangleRasterizer.useRasterClip();
             TriangleRasterizer.setProjectionCenter(TextInputWidget.field_P, TextInputWidget.field_P);
             TriangleRasterizer.drawFlatTriangle(TextInputWidget.field_P, TextInputWidget.field_P + (var7 << 1), TextInputWidget.field_P + (var5 << 1), TextInputWidget.field_P, TextInputWidget.field_P - (var6 << 1), -(var4 << 1) + TextInputWidget.field_P, 153);
-            SoftwareRasterizer.a(-(3 * var4 >> 1) + TextInputWidget.field_P << 4, TextInputWidget.field_P + (3 * var5 >> 1) << 4, 544, 29, en.field_n);
+            SoftwareRasterizer.a(-(3 * var4 >> 1) + TextInputWidget.field_P << 4, TextInputWidget.field_P + (3 * var5 >> 1) << 4, 544, 29, PlayerSurnameSortCriterion.field_n);
             TriangleRasterizer.drawFlatTriangle(TextInputWidget.field_P, (var9 << 1) + TextInputWidget.field_P, TextInputWidget.field_P + (var5 << 1), TextInputWidget.field_P, -(var8 << 1) + TextInputWidget.field_P, -(var4 << 1) + TextInputWidget.field_P, 68);
-            SoftwareRasterizer.a(-(var4 * 3 >> 1) + TextInputWidget.field_P << 4, TextInputWidget.field_P + (3 * var5 >> 1) << 4, 544, 18, en.field_n);
+            SoftwareRasterizer.a(-(var4 * 3 >> 1) + TextInputWidget.field_P << 4, TextInputWidget.field_P + (3 * var5 >> 1) << 4, 544, 18, PlayerSurnameSortCriterion.field_n);
             SoftwareRasterizer.e(0, 0, SoftwareRasterizer.field_g, SoftwareRasterizer.field_f, 16711935);
             TeamManagementScreen.e(param0 + 113);
             TriangleRasterizer.useRasterClip();

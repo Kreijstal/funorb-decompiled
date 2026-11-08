@@ -86,9 +86,9 @@ class KeyedLoginCredentials extends LoginCredentials {
         return nj.monotonicMillis(108) - IterableDualLinkDeque.field_c;
     }
 
-    kj getLoginKind(byte param0) {
+    LoginKind getLoginKind(byte param0) {
         if (param0 > -77) {
-          return (kj) null;
+          return (LoginKind) null;
         }
         return MatchScreen.field_w;
     }

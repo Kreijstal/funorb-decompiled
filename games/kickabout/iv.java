@@ -45,9 +45,9 @@ class iv extends DualLinkNode {
           var4.field_R = LeaguesScreen.field_B;
           var5 = new UiLayoutNode();
           var6 = new UiLayoutNode();
-          var6.field_N = rk.field_g;
+          var6.field_N = WorldSpriteSequence.field_g;
           var7 = new UiLayoutNode();
-          var7.field_N = rk.field_g.copy();
+          var7.field_N = WorldSpriteSequence.field_g.copy();
           var7.field_N.flipVertically();
           ConsolePanel.field_q = new UiLayoutNode();
           ConsolePanel.field_q.field_y = 14540253;
@@ -262,7 +262,7 @@ class iv extends DualLinkNode {
           var17 = new String[27];
           var17[23] = us.field_g.toLowerCase();
           var17[24] = ii.field_h.toLowerCase();
-          var17[25] = oc.field_b.toLowerCase();
+          var17[25] = ArchivePreloadEntry.field_b.toLowerCase();
           var17[14] = pr.field_b.toLowerCase();
           var17[20] = ScrollPane.field_Gb;
           var17[9] = NotCommand.field_C;

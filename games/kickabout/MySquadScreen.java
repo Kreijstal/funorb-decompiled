@@ -116,12 +116,12 @@ final class MySquadScreen extends TeamManagementScreen {
             var7.h((byte) 30);
           }
           if (this.field_Q.field_sb == 1) {
-            dg.a((byte) -120, -1, ic.field_h.field_q[this.field_L.field_Fb], var4_ref_up);
+            NineSlicePanelPainter.a((byte) -120, -1, ic.field_h.field_q[this.field_L.field_Fb], var4_ref_up);
           }
           for (var5 = 0; this.field_K.length > var5; var5++) {
             if (1 == this.field_K[var5].field_sb) {
-              var6 = pa.field_g[var4_ref_up.trinketIds[var5]];
-              s.c(-1, ic.field_h.field_q[this.field_L.field_Fb], var5, var6.field_k);
+              var6 = GeneratedPanelPainter.field_g[var4_ref_up.trinketIds[var5]];
+              RotaryDialWidget.c(-1, ic.field_h.field_q[this.field_L.field_Fb], var5, var6.field_k);
             }
           }
         }
@@ -188,7 +188,7 @@ final class MySquadScreen extends TeamManagementScreen {
         }
         boolean decompiledFrameRemainder0 = true;
         SoftwareRasterizer.darkenRectangle(this.field_V.field_F, this.field_V.field_T, this.field_V.field_q, this.field_V.field_mb);
-        un.field_d.a(oc.field_b, 14 + this.field_V.field_F, 25 + this.field_V.field_T, 16777215, -1);
+        un.field_d.a(ArchivePreloadEntry.field_b, 14 + this.field_V.field_F, 25 + this.field_V.field_T, 16777215, -1);
         this.field_L.k((byte) -109);
         var4 = this.field_L.getSelectedSlot((byte) 21);
         var5 = IsSixCommand.field_C;
@@ -201,7 +201,7 @@ final class MySquadScreen extends TeamManagementScreen {
           stackIn_6_2 = var26;
           stackIn_6_3 = -107;
           stackIn_7_4 = !(TextFieldValidator.f(param0 ^ 4));
-          stackIn_11_2 = (((PlayerStats) (Object) stackIn_6_2).c((byte) stackIn_6_3, stackIn_7_4)) && (wn.a((byte) 47));
+          stackIn_11_2 = (((PlayerStats) (Object) stackIn_6_2).c((byte) stackIn_6_3, stackIn_7_4)) && (AccountRegistrationResponse.a((byte) 47));
           var7 = TriangleMesh.a(stackIn_6_0, stackIn_6_1, stackIn_11_2);
           var8 = -36 + this.field_I.field_F + this.field_I.field_q;
           var9 = this.field_I.field_T + 40;
@@ -363,7 +363,7 @@ final class MySquadScreen extends TeamManagementScreen {
           this.field_T = new TrinketSlot[var5.trinketIds.length];
           var6 = this.field_X.field_q - 150 * (-1 + var5.trinketIds.length) >> 1;
           for (var7 = 0; var7 < this.field_K.length; var7++) {
-            var8 = pa.field_g[var5.trinketIds[var7]];
+            var8 = GeneratedPanelPainter.field_g[var5.trinketIds[var7]];
             var9 = new TrinketSlot(var8, false);
             if (var8.isEmpty(256)) {
               stackIn_15_0 = TickClock.field_f;
@@ -406,7 +406,7 @@ final class MySquadScreen extends TeamManagementScreen {
         if (param0 != -38) {
           this.field_L = (SquadGridWidget) null;
         }
-        this.field_I.field_E = tr.field_g.toLowerCase();
+        this.field_I.field_E = ClientUiOverlay.field_g.toLowerCase();
         this.field_W.field_E = ConsoleTokenCursor.field_f.toLowerCase();
         this.field_P.field_E = ConsoleParseException.field_d.toLowerCase();
         this.field_G.field_E = ca.field_d.toLowerCase();

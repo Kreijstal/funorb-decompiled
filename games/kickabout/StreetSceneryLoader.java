@@ -6,7 +6,7 @@ final class StreetSceneryLoader extends IntrusiveNode {
     static HoverTooltip field_m;
     static Sprite field_j;
     static UiLayoutNode field_f;
-    static ff field_l;
+    static QuickChatCommandType field_l;
     static int field_g;
     static String field_e;
     static int field_i;
@@ -27,18 +27,18 @@ final class StreetSceneryLoader extends IntrusiveNode {
           StreetSceneryLoader.enqueuePromotionDialog(true, -119);
           if (QuickChatKeysHelpPanel.field_Cb.a(false, "street")) {
             vk.field_b = true;
-            oo.field_b = ng.a("cars", "street", 2, QuickChatKeysHelpPanel.field_Cb);
-            so.field_d = ng.a("signs", "street", 2, QuickChatKeysHelpPanel.field_Cb);
-            PacketBuffer.field_h = ng.a("cracks", "street", 2, QuickChatKeysHelpPanel.field_Cb);
+            oo.field_b = ServerTextTemplate.a("cars", "street", 2, QuickChatKeysHelpPanel.field_Cb);
+            so.field_d = ServerTextTemplate.a("signs", "street", 2, QuickChatKeysHelpPanel.field_Cb);
+            PacketBuffer.field_h = ServerTextTemplate.a("cracks", "street", 2, QuickChatKeysHelpPanel.field_Cb);
             return -1;
           }
           return QuickChatKeysHelpPanel.field_Cb.getGroupProgressByName("street", -16248);
         }
         if (QuickChatKeysHelpPanel.field_Cb.a(false, "street")) {
           vk.field_b = true;
-          oo.field_b = ng.a("cars", "street", 2, QuickChatKeysHelpPanel.field_Cb);
-          so.field_d = ng.a("signs", "street", 2, QuickChatKeysHelpPanel.field_Cb);
-          PacketBuffer.field_h = ng.a("cracks", "street", 2, QuickChatKeysHelpPanel.field_Cb);
+          oo.field_b = ServerTextTemplate.a("cars", "street", 2, QuickChatKeysHelpPanel.field_Cb);
+          so.field_d = ServerTextTemplate.a("signs", "street", 2, QuickChatKeysHelpPanel.field_Cb);
+          PacketBuffer.field_h = ServerTextTemplate.a("cracks", "street", 2, QuickChatKeysHelpPanel.field_Cb);
           return -1;
         }
         return QuickChatKeysHelpPanel.field_Cb.getGroupProgressByName("street", -16248);
@@ -62,7 +62,7 @@ final class StreetSceneryLoader extends IntrusiveNode {
 
     static {
         field_e = "Played";
-        field_l = new ff(15, 0, 1, 0);
+        field_l = new QuickChatCommandType(15, 0, 1, 0);
         field_i = 0;
         field_h = "LINE-UP";
     }

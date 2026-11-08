@@ -20,7 +20,7 @@ final class LongPlusOneCommand extends ConsoleCommand {
 
     final static String h(int param0) {
         if (PlayerModelPreview.field_f == wk.field_f) {
-          return wn.field_i;
+          return AccountRegistrationResponse.field_i;
         }
         if (param0 != 10326) {
           LongPlusOneCommand.h(113);

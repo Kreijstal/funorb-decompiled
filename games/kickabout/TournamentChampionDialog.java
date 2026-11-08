@@ -24,7 +24,7 @@ final class TournamentChampionDialog extends MessageDialog {
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4 = tr.a(param1, (byte) 40);
+          var4 = ClientUiOverlay.a(param1, (byte) 40);
           if (param0) {
             return true;
           }
@@ -32,7 +32,7 @@ final class TournamentChampionDialog extends MessageDialog {
             var4.field_zb != null) {
             return true;
           }
-          stackIn_11_0 = (null != PlayerContextMenu.field_i) && (nk.a(31253, param2) != null);
+          stackIn_11_0 = (null != PlayerContextMenu.field_i) && (TexturedPanelPainter.a(31253, param2) != null);
           return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

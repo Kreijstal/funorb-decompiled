@@ -82,11 +82,11 @@ final class GameSoundEffect {
         RuntimeException var1 = null;
         var3 = Kickabout.field_G;
         try {
-          NamedValueEntry.field_f = new vs[64];
+          NamedValueEntry.field_f = new PlayerPortraitCacheEntry[64];
           var1_int = 0;
           var2 = 74 % ((-30 - param0) / 62);
           while (NamedValueEntry.field_f.length > var1_int) {
-            NamedValueEntry.field_f[var1_int] = new vs();
+            NamedValueEntry.field_f[var1_int] = new PlayerPortraitCacheEntry();
             var1_int++;
           }
           return;

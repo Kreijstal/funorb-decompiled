@@ -635,7 +635,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
                 var18.operationErrors[var5] = -5;
               }
             }
-            nv.field_N.addLast(var18, 3);
+            MarkerSliderWidget.field_N.addLast(var18, 3);
             if (param2 != -1) {
               field_g = (String) null;
             }

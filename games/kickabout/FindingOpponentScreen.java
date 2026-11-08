@@ -7,7 +7,7 @@ final class FindingOpponentScreen extends ButtonMenuScreen {
     private int field_C;
     private UiLayoutNode field_A;
     static int field_D;
-    static wp[] field_F;
+    static LeaderboardParticipant[] field_F;
 
     final void buildWidgets(int param0) {
         this.field_A = eo.createRenderedButton("", 7126504, un.field_d, -1, false);
@@ -58,7 +58,7 @@ final class FindingOpponentScreen extends ButtonMenuScreen {
           if (param2 < -28) {
             return;
           }
-          field_F = (wp[]) null;
+          field_F = (LeaderboardParticipant[]) null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -120,9 +120,9 @@ final class FindingOpponentScreen extends ButtonMenuScreen {
     static {
         int var0 = 0;
         field_B = new String[255];
-        field_F = new wp[255];
+        field_F = new LeaderboardParticipant[255];
         for (var0 = 0; field_F.length > var0; var0++) {
-          field_F[var0] = new wp();
+          field_F[var0] = new LeaderboardParticipant();
         }
     }
 }

@@ -180,13 +180,13 @@ class AccountRequestDialog extends ContentTransitionDialog implements ButtonList
             var7.a((byte) 104, 17, AccountNameAvailabilityValidator.field_o);
           } else {
             if (param0 == 256) {
-              var7.a(bt.field_d, (UiListener) (this), (byte) 79);
+              var7.a(QuickChatCategoryCache.field_d, (UiListener) (this), (byte) 79);
             } else {
               stackIn_10_0 = var7;
               stackIn_10_1 = 111;
               stackIn_10_2 = -1;
               if (this.field_gb) {
-                stackIn_11_3 = bt.field_d;
+                stackIn_11_3 = QuickChatCategoryCache.field_d;
               } else {
                 stackIn_11_3 = is.field_f;
               }

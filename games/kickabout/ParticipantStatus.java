@@ -50,19 +50,19 @@ final class ParticipantStatus extends MatchAgent {
         }
     }
 
-    final static ak c(int param0) {
-        ak var1 = null;
+    final static WorldDrawEntry c(int param0) {
+        WorldDrawEntry var1 = null;
         RuntimeException var1_ref = null;
-        ak var2 = null;
-        ak stackIn_2_0 = null;
-        ak stackIn_4_0 = null;
+        WorldDrawEntry var2 = null;
+        WorldDrawEntry stackIn_2_0 = null;
+        WorldDrawEntry stackIn_4_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 0) {
-            stackIn_2_0 = (ak) null;
+            stackIn_2_0 = (WorldDrawEntry) null;
             return stackIn_2_0;
           }
-          var2 = new ak(5);
+          var2 = new WorldDrawEntry(5);
           var1 = var2;
           var2.field_e = ((ArgbSprite) (SpriteState.field_p[2])).copyArgb();
           stackIn_4_0 = var1;

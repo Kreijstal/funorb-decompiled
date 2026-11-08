@@ -29,8 +29,8 @@ final class fc {
           po.field_f = false;
           wq.field_g = false;
           int var3_int = 123 / ((param2 - 22) / 47);
-          if (null != rk.field_f) {
-            if (!rk.field_f.field_C) {
+          if (null != WorldSpriteSequence.field_f) {
+            if (!WorldSpriteSequence.field_f.field_C) {
               return;
             }
             var4 = 1;
@@ -55,7 +55,7 @@ final class fc {
               if (is.field_a) {
                 param0 = AccountTermsPanel.field_L;
               }
-              rk.field_f.a(param1, 101, param0);
+              WorldSpriteSequence.field_f.a(param1, 101, param0);
             }
             if (param1 != 256 &&
               param1 != 10 &&

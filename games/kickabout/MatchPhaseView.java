@@ -401,7 +401,7 @@ abstract class MatchPhaseView {
         } else {
           var10 = var10 * var8 >> 8;
           var9 = var8 * var9 >> 8;
-          PromotionDialog.field_G.e(var3 + (-(var9 >> 1) - 1), -1 + (var4 - (var10 >> 1)), var9, var10, 256);
+          PromotionDialog.field_G.drawScaledAdditive(var3 + (-(var9 >> 1) - 1), -1 + (var4 - (var10 >> 1)), var9, var10, 256);
         }
         return;
     }

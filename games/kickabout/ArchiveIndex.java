@@ -11,10 +11,10 @@ final class ArchiveIndex {
     private int[] field_l;
     int field_d;
     int field_p;
-    static wn field_a;
+    static AccountRegistrationResponse field_a;
     int[] field_e;
     static ArgbSprite field_m;
-    static kh field_h;
+    static CanvasResizePolicy field_h;
     int[] field_b;
     int[] field_c;
     int[][] field_r;

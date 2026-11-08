@@ -69,7 +69,7 @@ abstract class ArchiveNetworkClient {
           if (param2.length() == 0) {
             return true;
           }
-          if (j.a((byte) -125, param2, param0)) {
+          if (FootballerPreview.containsForwardOrReversed((byte) -125, param2, param0)) {
             return false;
           }
           if (SetLagCommand.a(63, param0, param2)) {
@@ -153,7 +153,7 @@ abstract class ArchiveNetworkClient {
           return;
         }
         ArrayWidgetContainer.field_v = param0;
-        du.field_k = param1;
+        MarkerSliderPainter.field_k = param1;
     }
 
     abstract boolean pollResponses(byte param0);

@@ -341,7 +341,7 @@ final class KitStyleTile extends UiLayoutNode implements PopupCard {
             br.a((byte) -98, this.field_Cb.field_k);
           } else {
             if (!this.field_Kb) {
-              kj.a((byte) 81);
+              LoginKind.a((byte) 81);
             } else {
               SocketArchiveNetworkClient.a((byte) 126, 36);
             }

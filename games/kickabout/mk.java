@@ -355,7 +355,7 @@ final class mk {
           IntrusiveDeque var4 = null;
           RuntimeException decompiledCaughtException = null;
           RuntimeException var1 = null;
-          ak var2 = null;
+          WorldDrawEntry var2 = null;
           var3 = Kickabout.field_G;
           try {
             var4 = new IntrusiveDeque();
@@ -387,7 +387,7 @@ final class mk {
                         }
                         var4.addLast(ss.field_b, 3);
                         var2 = ParticipantStatus.c(0);
-                        var2.a(896, 940, -51);
+                        var2.setSpritePosition(896, 940, -51);
                         var4.addLast(var2, param0 + 1625);
                       }
                     } else {

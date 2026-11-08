@@ -126,8 +126,8 @@ final class pc {
     }
 
     final static void a(byte param0) {
-        if (rk.field_f != null) {
-          rk.field_f.closeDialog(-85);
+        if (WorldSpriteSequence.field_f != null) {
+          WorldSpriteSequence.field_f.closeDialog(-85);
           PlayerInputEvent.field_n = new DisplayNameForm();
           if (param0 > -8) {
             pc.a((byte) -11);

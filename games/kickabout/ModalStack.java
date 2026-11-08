@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ModalStack extends SingleChildContainer {
-    static ef field_C;
+    static AnimationFrameset field_C;
     private IntrusiveDeque field_A;
     static String field_B;
 
@@ -128,17 +128,17 @@ final class ModalStack extends SingleChildContainer {
         String var18Lifetime1;
         var19 = Kickabout.field_G;
         try {
-          stackIn_4_0 = ei.field_d.field_Cb;
+          stackIn_4_0 = RotaryDialPainter.field_d.field_Cb;
           stackIn_4_1 = (sh.field_c * 3 + 6) * param2;
-          stackIn_5_2 = (ei.field_d.field_Cb == ig.field_f);
+          stackIn_5_2 = (RotaryDialPainter.field_d.field_Cb == ig.field_f);
           boolean decompiledFrameRemainder0 = true;
           var3_int = ((ScrollPane) (Object) stackIn_4_0).a(stackIn_4_1, stackIn_5_2, param0, 2, false, param1 + sh.field_c) ? 1 : 0;
-          var4 = ei.field_d.field_yb.field_jb;
+          var4 = RotaryDialPainter.field_d.field_yb.field_jb;
           var5 = null;
           if (ts.field_d == 2) {
             TriangleMesh.field_R.field_lb = true;
-            du.field_f.field_E = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, uf.field_d, new String[]{BufferedSocket.field_h});
-            ei.field_d.field_Cb.field_zb.field_E = null;
+            MarkerSliderPainter.field_f.field_E = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, uf.field_d, new String[]{BufferedSocket.field_h});
+            RotaryDialPainter.field_d.field_Cb.field_zb.field_E = null;
             var6 = null;
             var7 = (gg) (var4.g(24009));
             boolean decompiledNaturalLoopExit0 = false;
@@ -159,7 +159,7 @@ final class ModalStack extends SingleChildContainer {
                   var7.invalidateChildren(false);
                   var8 = 1;
                 }
-                var7.field_q = ei.field_d.field_yb.field_q;
+                var7.field_q = RotaryDialPainter.field_d.field_yb.field_q;
                 var9 = 0;
                 if (null != var7.field_zb) {
                   if (var7.field_zb != BufferedSocket.field_h) {
@@ -218,7 +218,7 @@ final class ModalStack extends SingleChildContainer {
                   var7.field_L = -var7.field_mb + var9;
                 }
                 if (var8 != 0) {
-                  ei.field_d.field_yb.positionAfter(true, 2, var7, (UiLayoutNode) (var6));
+                  RotaryDialPainter.field_d.field_yb.positionAfter(true, 2, var7, (UiLayoutNode) (var6));
                 }
                 var6 = var7;
                 if (var7.field_Fb != null &&
@@ -226,14 +226,14 @@ final class ModalStack extends SingleChildContainer {
                   UrlRequest.field_e = var7.field_Eb;
                 } else if (var7.field_sb != 0) {
                   var16 = var7.field_Gb;
-                  BytePlusOneCommand.a(var7, false, ei.field_d.field_Cb, -1, var16, (int[]) null, 0L, (String) null, -1);
+                  BytePlusOneCommand.a(var7, false, RotaryDialPainter.field_d.field_Cb, -1, var16, (int[]) null, 0L, (String) null, -1);
                   var5 = var7;
                   if (null != var7.field_zb &&
                     !BufferedCacheFile.a(118, TextButton.field_v.field_k) &&
                     !PacketBuffer.field_l) {
                     if (!WriteIntegersCommand.field_C) {
                       var17 = TextButton.field_v;
-                      var18 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, wp.field_a, new String[]{var16});
+                      var18 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, LeaderboardParticipant.field_a, new String[]{var16});
                       var17.field_j.addItem(param1 ^ 2, 8, var18);
                     }
                     var17Lifetime1 = TextButton.field_v;
@@ -252,30 +252,30 @@ final class ModalStack extends SingleChildContainer {
               break;
             }
             if (decompiledNaturalLoopExit0) {
-              stackIn_86_0 = ei.field_d.field_Eb;
+              stackIn_86_0 = RotaryDialPainter.field_d.field_Eb;
             }
             if (((UiLayoutNode) (stackIn_86_0)).field_sb != 0) {
-              StreetSceneryLoader.field_m = new HoverTooltip(ei.field_d.field_Eb.field_F, ei.field_d.field_Eb.field_T, ei.field_d.field_Eb.field_q, ei.field_d.field_Eb.field_mb, MainMenuScreen.field_G, StrongCacheEntry.field_u, ConsoleEvaluationException.field_e, ConsoleEvaluationException.field_e);
+              StreetSceneryLoader.field_m = new HoverTooltip(RotaryDialPainter.field_d.field_Eb.field_F, RotaryDialPainter.field_d.field_Eb.field_T, RotaryDialPainter.field_d.field_Eb.field_q, RotaryDialPainter.field_d.field_Eb.field_mb, MainMenuScreen.field_G, StrongCacheEntry.field_u, ConsoleEvaluationException.field_e, ConsoleEvaluationException.field_e);
               fs.field_b = 0;
             }
-            if (ei.field_d.field_zb.field_sb != 0) {
-              StreetSceneryLoader.field_m = new HoverTooltip(ei.field_d.field_zb.field_F, ei.field_d.field_zb.field_T, ei.field_d.field_zb.field_q, ei.field_d.field_zb.field_mb, TabStrip.field_yb, StrongCacheEntry.field_u, ConsoleEvaluationException.field_e, ConsoleEvaluationException.field_e);
+            if (RotaryDialPainter.field_d.field_zb.field_sb != 0) {
+              StreetSceneryLoader.field_m = new HoverTooltip(RotaryDialPainter.field_d.field_zb.field_F, RotaryDialPainter.field_d.field_zb.field_T, RotaryDialPainter.field_d.field_zb.field_q, RotaryDialPainter.field_d.field_zb.field_mb, TabStrip.field_yb, StrongCacheEntry.field_u, ConsoleEvaluationException.field_e, ConsoleEvaluationException.field_e);
               fs.field_b = 1;
             }
             decompiledFrameRemainder0 = false;
           }
           else {
-            du.field_f.field_E = uf.field_a;
+            MarkerSliderPainter.field_f.field_E = uf.field_a;
             TriangleMesh.field_R.field_lb = false;
             if (ts.field_d == 1) {
-              ei.field_d.field_Cb.field_zb.field_E = TutorialChoiceDialog.field_I;
+              RotaryDialPainter.field_d.field_Cb.field_zb.field_E = TutorialChoiceDialog.field_I;
               if (var19 != 0) {
-                ei.field_d.field_Cb.field_zb.field_E = CheckboxLabelWidget.field_yb;
+                RotaryDialPainter.field_d.field_Cb.field_zb.field_E = CheckboxLabelWidget.field_yb;
               }
             } else {
-              ei.field_d.field_Cb.field_zb.field_E = CheckboxLabelWidget.field_yb;
+              RotaryDialPainter.field_d.field_Cb.field_zb.field_E = CheckboxLabelWidget.field_yb;
             }
-            hl.a(true, ei.field_d.field_yb);
+            DateInputValidator.a(true, RotaryDialPainter.field_d.field_yb);
           }
           stackIn_103_0 = var5;
           return (gg) (stackIn_103_0);
@@ -479,7 +479,7 @@ final class ModalStack extends SingleChildContainer {
         RuntimeException var1 = null;
         try {
           if (param0 != -1) {
-            field_C = (ef) null;
+            field_C = (AnimationFrameset) null;
           }
           field_C = null;
           field_B = null;

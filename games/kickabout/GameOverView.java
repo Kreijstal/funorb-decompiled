@@ -245,7 +245,7 @@ final class GameOverView extends MatchPhaseView {
           var5 = this.field_u[this.field_h];
           var6 = this.field_u[1 - this.field_h];
           stackIn_4_0 = un.field_d;
-          stackIn_4_1 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, ei.field_c, new String[]{Integer.toString(var5)});
+          stackIn_4_1 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, RotaryDialPainter.field_c, new String[]{Integer.toString(var5)});
           stackIn_4_2 = -40 + var4;
           stackIn_4_3 = var3 + 46;
           if (var6 >= var5) {
@@ -259,7 +259,7 @@ final class GameOverView extends MatchPhaseView {
           }
           ((CoverageBitmapFont) (Object) stackIn_4_0).d(stackIn_4_1, stackIn_4_2, stackIn_4_3, stackIn_8_4, -1);
           stackIn_11_0 = un.field_d;
-          stackIn_11_1 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, ei.field_c, new String[]{Integer.toString(var6)});
+          stackIn_11_1 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, RotaryDialPainter.field_c, new String[]{Integer.toString(var6)});
           stackIn_11_2 = var4 - 40;
           stackIn_11_3 = 87 + var3;
           if (var5 >= var6) {
@@ -310,7 +310,7 @@ final class GameOverView extends MatchPhaseView {
                   SoftwareRasterizer.fillRectangleAlpha(var7, -17 + var8, 160, 21, var13, var14);
                   un.field_d.d(this.field_a.field_S[var9], var7 + 80, var8, var12, -1);
                   SoftwareRasterizer.fillRectangleAlpha(2 + var7 + 160, -17 + var8, 40, 21, var13, var14);
-                  un.field_d.d(LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, ei.field_c, new String[]{Integer.toString(this.field_k[var9])}), 160 + (var7 + 22), var8, var12, -1);
+                  un.field_d.d(LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, RotaryDialPainter.field_c, new String[]{Integer.toString(this.field_k[var9])}), 160 + (var7 + 22), var8, var12, -1);
                   var8 += 23;
                 }
                 var9++;
@@ -373,7 +373,7 @@ final class GameOverView extends MatchPhaseView {
                   SoftwareRasterizer.fillRectangleAlpha(var7, var8 - 17, 160, 21, var13Lifetime1, var14Lifetime1);
                   un.field_d.d(this.field_a.field_S[var9], var7 + 80, var8, var12Lifetime1, -1);
                   SoftwareRasterizer.fillRectangleAlpha(var7 - 42, var8 - 17, 40, 21, var13Lifetime1, var14Lifetime1);
-                  un.field_d.d(LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, ei.field_c, new String[]{Integer.toString(this.field_k[var9])}), -22 + var7, var8, var12Lifetime1, -1);
+                  un.field_d.d(LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, RotaryDialPainter.field_c, new String[]{Integer.toString(this.field_k[var9])}), -22 + var7, var8, var12Lifetime1, -1);
                   var8 += 23;
                 }
                 var9++;
@@ -751,7 +751,7 @@ final class GameOverView extends MatchPhaseView {
           var6 = AlphaContainer.field_D + "+" + ad.formatCurrencyAmount(this.field_G, 26300);
           var6 = var6 + "<br>" + ss.field_e + ad.formatCurrencyAmount(GameLoopApplet.field_E.field_x, 26300);
           wq.a(25, param1, param4, (byte) 32, var6, 140);
-          stackIn_30_0 = new StringBuilder().append(bt.field_c);
+          stackIn_30_0 = new StringBuilder().append(QuickChatCategoryCache.field_c);
           if (this.field_Y > 0) {
             stackIn_31_1 = "+";
           } else {
@@ -804,7 +804,7 @@ final class GameOverView extends MatchPhaseView {
             stackIn_20_0 = 1;
           }
           var6 = stackIn_20_0;
-          if (!var4[oc.field_e] &&
+          if (!var4[ArchivePreloadEntry.field_e] &&
             !var4[99] &&
             param2 != 99) {
             stackIn_30_0 = 0;
@@ -960,9 +960,9 @@ final class GameOverView extends MatchPhaseView {
             }
           }
           if (decompiledFrameCompleted3) {
-            ia.field_c = false;
+            FaceNormal.field_c = false;
             this.field_gb = new IntrusiveDeque();
-            this.field_Z = rl.field_u;
+            this.field_Z = PlayerArchetypeSortCriterion.field_u;
           }
           if (null != param0.field_X) {
             this.field_Z = ContentTransitionDialog.field_S;
@@ -1723,7 +1723,7 @@ final class GameOverView extends MatchPhaseView {
         StringBuilder stackIn_57_1 = null;
         String stackIn_58_2 = null;
         RuntimeException decompiledCaughtException = null;
-        cl[] var6 = null;
+        FullscreenDisplayMode[] var6 = null;
         PlatformTask var6_ref = null;
         RuntimeException var6_ref2 = null;
         int var7_int = 0;
@@ -1747,15 +1747,15 @@ final class GameOverView extends MatchPhaseView {
             while (true) {
               boolean decompiledFrameRemainder0 = true;
               if (var8 < var6.length) {
-                stackIn_36_0 = var6[var8].field_f;
+                stackIn_36_0 = var6[var8].width;
                 decompiledFrameRemainder0 = (var9 == 0);
                 if (decompiledFrameRemainder0) {
                   if (stackIn_36_0 == param1 &&
-                    ~param2 == ~var6[var8].field_b && ((param3 == 0 ||
-                    ~param3 == ~var6[var8].field_a) &&
+                    ~param2 == ~var6[var8].height && ((param3 == 0 ||
+                    ~param3 == ~var6[var8].refreshRate) &&
                     (var7_int == 0 ||
-                    !(var6[var8].field_e <= param5)))) {
-                    param5 = var6[var8].field_e;
+                    !(var6[var8].bitDepth <= param5)))) {
+                    param5 = var6[var8].bitDepth;
                     var7_int = 1;
                   }
                   var8++;
@@ -1856,10 +1856,10 @@ final class GameOverView extends MatchPhaseView {
               decompiledFrameRemainder1 = (var15 != 0);
             }
             if (decompiledFrameRemainder1) {
-              this.field_c[0].field_p = oh.field_g.toLowerCase();
+              this.field_c[0].field_p = WorldSpriteDecoration.field_g.toLowerCase();
               if (var15 != 0) {
                 if (0 != this.field_S) {
-                  this.field_c[1].field_p = oh.field_g.toLowerCase();
+                  this.field_c[1].field_p = WorldSpriteDecoration.field_g.toLowerCase();
                   this.field_c[1].field_p = ConsoleTokenCursor.field_f.toLowerCase();
                 } else {
                   this.field_c[1].field_p = ConsoleTokenCursor.field_f.toLowerCase();
@@ -1868,7 +1868,7 @@ final class GameOverView extends MatchPhaseView {
             }
           } else {
             if (0 != this.field_S) {
-              this.field_c[1].field_p = oh.field_g.toLowerCase();
+              this.field_c[1].field_p = WorldSpriteDecoration.field_g.toLowerCase();
               if (var15 != 0) {
                 this.field_c[1].field_p = ConsoleTokenCursor.field_f.toLowerCase();
               }
@@ -2060,7 +2060,7 @@ final class GameOverView extends MatchPhaseView {
                       sk.a(7, 16586, var14);
                       ShopPlayerSlot.c(49, -122);
                     } else {
-                      dg.a((byte) -120, var13, this.field_hb[var13], var14);
+                      NineSlicePanelPainter.a((byte) -120, var13, this.field_hb[var13], var14);
                       ShopPlayerSlot.c(49, -121);
                     }
                   } else {
@@ -2071,7 +2071,7 @@ final class GameOverView extends MatchPhaseView {
                       ShopPlayerSlot.c(49, 52);
                     }
                   }
-                  kj.a((byte) 61);
+                  LoginKind.a((byte) 61);
                 }
               }
               var13++;

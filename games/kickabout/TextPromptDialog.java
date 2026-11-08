@@ -97,22 +97,22 @@ final class TextPromptDialog extends UiLayoutNode {
         }
         AuctionSettingsDialog.field_G.field_Ab.field_L = var7Lifetime1 - AuctionSettingsDialog.field_G.field_Ab.field_mb;
         if (WidgetContainer.field_z) {
-          dg.field_a = true;
+          NineSlicePanelPainter.field_a = true;
           AuctionSettingsDialog.field_G.field_Ab.field_J = -AuctionSettingsDialog.field_G.field_Ab.field_mb + AuctionSettingsDialog.field_G.field_zb.field_mb;
           WidgetContainer.field_z = false;
           AuctionSettingsDialog.field_G.field_Ab.field_v = 0;
         }
         if (TextFieldNode.field_Wb &&
           ContentTransitionDialog.field_Y != null) {
-          dg.field_a = true;
+          NineSlicePanelPainter.field_a = true;
         }
         var9Lifetime1 = -AuctionSettingsDialog.field_G.field_Ab.field_mb + (-AuctionSettingsDialog.field_G.field_Ab.field_L + AuctionSettingsDialog.field_G.field_zb.field_mb);
-        if (dg.field_a) {
+        if (NineSlicePanelPainter.field_a) {
           AuctionSettingsDialog.field_G.field_Ab.field_v = var9Lifetime1 - AuctionSettingsDialog.field_G.field_Ab.field_J;
         }
         AuctionSettingsDialog.field_G.updateScroll(param1, param0 * param1 * 2, true, param2 ^ 26);
         stackIn_47_0 = (AuctionSettingsDialog.field_G.field_Ab.field_J + AuctionSettingsDialog.field_G.field_Ab.field_v == var9Lifetime1);
-        dg.field_a = stackIn_47_0;
+        NineSlicePanelPainter.field_a = stackIn_47_0;
         return (ChatMessage) (var4);
     }
 
@@ -338,7 +338,7 @@ final class TextPromptDialog extends UiLayoutNode {
             this.field_Fb.field_y = 16764006;
             this.field_Nb.addChild((byte) -105, this.field_Fb);
             this.field_Fb.field_V = "|";
-            if (!(bl.field_c < 5) ||
+            if (!(LobbyMatchPreview.field_c < 5) ||
               !(ScrollContainer.field_Ib < 2)) {
               regionExit1: {
                 stackIn_6_0 = this;
@@ -346,7 +346,7 @@ final class TextPromptDialog extends UiLayoutNode {
                 stackIn_6_2 = null;
                 stackIn_6_3 = 0L;
                 stackIn_6_4 = (IconLabel) (param9);
-                if (bl.field_c < 7) {
+                if (LobbyMatchPreview.field_c < 7) {
                   stackIn_7_0 = this;
                   stackIn_6_0Lifetime1 = stackIn_7_0;
                   if (2 > ScrollContainer.field_Ib) {

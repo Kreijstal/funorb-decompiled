@@ -5,7 +5,7 @@ final class LoginRequiredDialog extends MessageDialog {
     static ResourceArchive field_H;
     static UiLayoutNode field_G;
     static long field_I;
-    static kj field_K;
+    static LoginKind field_K;
     static String field_F;
     static String[] field_L;
     static String field_J;
@@ -13,9 +13,9 @@ final class LoginRequiredDialog extends MessageDialog {
     final static UiLayoutNode h(byte param0) {
         if (param0 >= -39) {
           LoginRequiredDialog.g(-104);
-          return ei.field_d.field_yb;
+          return RotaryDialPainter.field_d.field_yb;
         }
-        return ei.field_d.field_yb;
+        return RotaryDialPainter.field_d.field_yb;
     }
 
     final static void a(int param0, byte param1, int param2, String param3, int param4, int param5, int param6) {
@@ -54,7 +54,7 @@ final class LoginRequiredDialog extends MessageDialog {
           return;
         }
         if (0 == param1) {
-          ql.a((byte) 58, true, dg.field_f);
+          ql.a((byte) 58, true, NineSlicePanelPainter.field_f);
         }
     }
 
@@ -68,7 +68,7 @@ final class LoginRequiredDialog extends MessageDialog {
     }
 
     static {
-        field_K = new kj(3);
+        field_K = new LoginKind(3);
         field_F = "<%0> might change the options - wait and see.";
         field_J = "AWAY <%1> - <%0>  HOME";
         field_L = new String[]{"Without Ball", "With Ball"};

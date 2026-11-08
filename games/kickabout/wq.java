@@ -74,7 +74,7 @@ final class wq {
           if (SquadPickerDialog.field_K) {
             var1_int++;
           }
-          if (wp.field_f) {
+          if (LeaderboardParticipant.field_f) {
             var1_int++;
           }
           if (LineupAgent.field_g) {
@@ -110,7 +110,7 @@ final class wq {
             var2 += 20;
           }
           if (hr.field_k) {
-            var9 = nk.field_h + " fps / " + NumericDateInputWidget.field_T + " lps";
+            var9 = TexturedPanelPainter.field_h + " fps / " + NumericDateInputWidget.field_T + " lps";
             IsSixCommand.field_C.c(var9, 620, var2, 16777215, 0);
             var2 += 20;
           }
@@ -139,7 +139,7 @@ final class wq {
             IsSixCommand.field_C.c(var13, 620, var2, 16777215, 0);
             var2 += 20;
           }
-          if (wp.field_f) {
+          if (LeaderboardParticipant.field_f) {
             var14 = "Smoothing disabled";
             IsSixCommand.field_C.c(var14, 620, var2, 16777215, 0);
             var2 += 20;

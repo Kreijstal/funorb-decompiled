@@ -12,7 +12,7 @@ final class JaggrabDownloader implements Runnable {
     private PlatformTaskDispatcher field_a;
     private DataInputStream field_d;
     private int field_b;
-    static wn field_h;
+    static AccountRegistrationResponse field_h;
     private java.net.URL field_k;
     private PlatformTask field_i;
     static boolean field_c;

@@ -32,7 +32,7 @@ final class WelcomeDialog extends MessageDialog {
         if (param0 != 100) {
           WelcomeDialog.c(23, true);
         }
-        vs.a(true, param1, (byte) 39);
+        PlayerPortraitCacheEntry.a(true, param1, (byte) 39);
     }
 
     final void handleResult(int param0, int param1) {
@@ -41,7 +41,7 @@ final class WelcomeDialog extends MessageDialog {
           return;
         }
         if (param1 == 1) {
-          ql.a((byte) 29, true, dg.field_f);
+          ql.a((byte) 29, true, NineSlicePanelPainter.field_f);
         }
     }
 
@@ -145,7 +145,7 @@ final class WelcomeDialog extends MessageDialog {
           var11 = 40 + ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(-69, 4, var8) * 10;
           if (var9.archetype == 0) {
             stackIn_18_0 = var9;
-            stackIn_18_1 = ng.field_d[param4];
+            stackIn_18_1 = ServerTextTemplate.field_d[param4];
             stackIn_18_2 = 86;
             if (param4 == 0) {
               stackIn_19_3 = 6;
@@ -158,7 +158,7 @@ final class WelcomeDialog extends MessageDialog {
           }
           if (var9.archetype == 3) {
             stackIn_24_0 = var9;
-            stackIn_24_1 = ng.field_d[param4];
+            stackIn_24_1 = ServerTextTemplate.field_d[param4];
             stackIn_24_2 = -60;
             if (param4 == 0) {
               stackIn_25_3 = 6;
@@ -171,7 +171,7 @@ final class WelcomeDialog extends MessageDialog {
           }
           if (var9.archetype == 1) {
             stackIn_30_0 = var9;
-            stackIn_30_1 = ng.field_d[param4];
+            stackIn_30_1 = ServerTextTemplate.field_d[param4];
             stackIn_30_2 = -66;
             if (param4 == 0) {
               stackIn_31_3 = 6;
@@ -183,7 +183,7 @@ final class WelcomeDialog extends MessageDialog {
             var9.tackle = (-var11 + 100) * var9.power / 100;
           }
           if (2 == var9.archetype) {
-            var12 = ng.field_d[param4] + ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(-41, 11, var8);
+            var12 = ServerTextTemplate.field_d[param4] + ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(-41, 11, var8);
             var11 = ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(81, 3, var8) * 10 + 60;
             var9.tackle = var12 * var11 / 100;
             var11 = 60 + ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(-90, 3, var8) * 10;

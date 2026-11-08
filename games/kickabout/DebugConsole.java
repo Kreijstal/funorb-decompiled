@@ -7,7 +7,7 @@ final class DebugConsole extends ConsolePanel {
     static String field_w;
     private ConsoleCommand[] field_t;
     static Sprite[][] field_y;
-    static ff field_r;
+    static QuickChatCommandType field_r;
     static boolean field_s;
     static String field_x;
     static String field_u;
@@ -588,7 +588,7 @@ final class DebugConsole extends ConsolePanel {
               var11.field_j.addItem(param0 - 15, 15, var12);
             } else {
               var9 = TextButton.field_v;
-              var10 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, cl.field_h, new String[]{param3});
+              var10 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, FullscreenDisplayMode.field_h, new String[]{param3});
               var9.field_j.addItem(0, 16, var10);
             }
           }
@@ -703,7 +703,7 @@ final class DebugConsole extends ConsolePanel {
     }
 
     static {
-        field_r = new ff(10, 2, 2, 0);
+        field_r = new QuickChatCommandType(10, 2, 2, 0);
         field_u = "<%0> slot";
         field_s = false;
         field_v = "Please enter your date of birth to enable chat:";

@@ -6,7 +6,7 @@ abstract class TeamManagementScreen extends ButtonMenuScreen {
     static String field_D;
     static String field_E;
     static String[] field_C;
-    static dg field_B;
+    static NineSlicePanelPainter field_B;
 
     TeamManagementScreen() {
     }
@@ -125,7 +125,7 @@ abstract class TeamManagementScreen extends ButtonMenuScreen {
     void updateScreen(byte param0, boolean param1) {
         super.updateScreen((byte) -36, param1);
         int var3 = 31 / ((38 - param0) / 60);
-        tc.a(ic.field_h.field_x, 5464);
+        QuickChatCategory.a(ic.field_h.field_x, 5464);
     }
 
     public static void g(byte param0) {

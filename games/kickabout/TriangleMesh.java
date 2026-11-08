@@ -181,9 +181,9 @@ final class TriangleMesh {
             var4 = (IntrusiveDeque) null;
             TriangleMesh.a(-43, (IntrusiveDeque) null);
           }
-          while (var2 instanceof ak) {
-            if (var2.field_d instanceof ak) {
-              if (((ak) (var2)).a((byte) 126) <= ((ak) (var2.field_d)).a((byte) 112)) {
+          while (var2 instanceof WorldDrawEntry) {
+            if (var2.field_d instanceof WorldDrawEntry) {
+              if (((WorldDrawEntry) (var2)).getSortY((byte) 126) <= ((WorldDrawEntry) (var2.field_d)).getSortY((byte) 112)) {
                 var2 = var2.field_d;
                 continue;
               }
@@ -227,7 +227,7 @@ final class TriangleMesh {
             var5 = var6.field_R;
             var4 = var6.field_k;
           }
-          stackIn_4_0 = kj.a(var3_int, 0, param0, var5, var4, param2);
+          stackIn_4_0 = LoginKind.getPlayerPortrait(var3_int, 0, param0, var5, var4, param2);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -258,7 +258,7 @@ final class TriangleMesh {
             field_B = (int[]) null;
           }
           if (cu.a(param3, param1, param0, 112)) {
-            stackIn_6_0 = nv.a(-109, param4.b(param0, -32669, param3));
+            stackIn_6_0 = MarkerSliderWidget.a(-109, param4.b(param0, -32669, param3));
             return stackIn_6_0;
           }
           stackIn_4_0 = null;

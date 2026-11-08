@@ -15,7 +15,7 @@ abstract class PagedHelpScreen extends ButtonMenuScreen {
         if (this.pageIndex < 0) {
           this.pageIndex = 0;
         }
-        kj.a((byte) -103);
+        LoginKind.a((byte) -103);
     }
 
     final boolean isButtonVisible(int param0, byte param1) {
@@ -156,7 +156,7 @@ abstract class PagedHelpScreen extends ButtonMenuScreen {
         if (this.pageIndex >= var2) {
           this.pageIndex = var2 - 1;
         }
-        kj.a((byte) 58);
+        LoginKind.a((byte) 58);
         if (param0 != 21) {
           this.pageIndex = 21;
         }

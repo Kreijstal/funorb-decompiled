@@ -160,7 +160,7 @@ final class BufferedCacheFile {
         try {
           BytePlusOneCommand.a(CheckboxLabelWidget.field_Ab, kr.field_b, TrinketPickerDialog.field_F, uk.field_b, nj.field_d, param0, r.field_c, DoSomethingCommand.field_B, ul.field_c, ConsoleEvaluationException.field_e, 5, ip.field_c);
           il.field_d = ModalStack.a(param1, -127, "lobby", "chatfilter");
-          IntrusiveDeque.field_h[2] = pa.field_j;
+          IntrusiveDeque.field_h[2] = GeneratedPanelPainter.field_j;
           IntrusiveDeque.field_h[param3] = ClubState.field_Q;
           IntrusiveDeque.field_h[1] = ConsoleExpression.field_n;
           TrinketTile.a(ServerMessageScreen.field_E, param2, (byte) -32);

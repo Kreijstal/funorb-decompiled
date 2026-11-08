@@ -264,7 +264,7 @@ final class GameModesHelpScreen extends PagedHelpScreen {
             this.field_K[var12Lifetime4].h((byte) -123);
           }
           SoftwareRasterizer.fillRoundedRectangleBlended(40 + this.slideOffsetX, 120, 560, 50, 10, 65793, 140);
-          IsSixCommand.field_C.a(tr.field_c, this.slideOffsetX + 70, 126, 500, 40, 16777215, -1, 0, 1, 16);
+          IsSixCommand.field_C.a(ClientUiOverlay.field_c, this.slideOffsetX + 70, 126, 500, 40, 16777215, -1, 0, 1, 16);
           SoftwareRasterizer.fillRoundedRectangleBlended(210 + this.slideOffsetX, 178, 390, 225, 10, 65793, 140);
           var12Lifetime5 = 0;
           var13 = this.slideOffsetX + 230;
@@ -311,8 +311,8 @@ final class GameModesHelpScreen extends PagedHelpScreen {
           var6 = 230;
           var12Lifetime2 = this.slideOffsetX + 60;
           var13Lifetime2 = var4;
-          while (var11Lifetime2 < re.field_b.length) {
-            var14_ref_String = re.field_b[var11Lifetime2];
+          while (var11Lifetime2 < CheckboxPainter.field_b.length) {
+            var14_ref_String = CheckboxPainter.field_b[var11Lifetime2];
             var15Lifetime1 = IsSixCommand.field_C.paragraphHeight(var14_ref_String, var9, var10);
             if (var15Lifetime1 + var13Lifetime2 <= var4 + var6) {
               var11Lifetime2++;
@@ -540,7 +540,7 @@ final class GameModesHelpScreen extends PagedHelpScreen {
 
     static {
         field_F = new int[33][33][33];
-        field_H = (SortCriterion) ((Object) new en());
+        field_H = (SortCriterion) ((Object) new PlayerSurnameSortCriterion());
         field_N = 7;
         field_O = "Play free version";
     }

@@ -34,7 +34,7 @@ final class DisplayNameForm extends WidgetContainer implements NameSuggestionLis
         RuntimeException var8 = null;
         ValidationHelpWidget var9 = null;
         int var10 = 0;
-        cg var11 = null;
+        CaptionedContainer var11 = null;
         int stackIn_1_0 = 0;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
@@ -45,7 +45,7 @@ final class DisplayNameForm extends WidgetContainer implements NameSuggestionLis
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var11 = new cg(20, param5, param1 + 120, 25, param3, false, 120, 3, gf.field_a, 16777215, param0);
+          var11 = new CaptionedContainer(20, param5, param1 + 120, 25, param3, false, 120, 3, gf.field_a, 16777215, param0);
           this.a(-55, var11);
           var9 = new ValidationHelpWidget(((ValidationProvider) ((Object) param3)).a((byte) -120), param6, 126, var11.field_i + param5, param1 + 25, param2);
           var9.field_k = (UiListener) (this);
@@ -163,7 +163,7 @@ final class DisplayNameForm extends WidgetContainer implements NameSuggestionLis
         this.field_C.a(6, new AccountNameAvailabilityValidator(this.field_C));
         this.field_B.field_y = false;
         this.field_B.field_r = (WidgetPainter) ((Object) new op());
-        this.field_E.field_r = (WidgetPainter) ((Object) new cr());
+        this.field_E.field_r = (WidgetPainter) ((Object) new LinkTextPainter());
         this.field_C.field_r = (WidgetPainter) ((Object) new ri(10000536));
         int var3 = 20;
         int var4 = 4;

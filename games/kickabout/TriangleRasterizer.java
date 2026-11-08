@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class TriangleRasterizer {
-    static qf field_d;
+    static TextureProvider field_d;
     static int[] field_q;
     private static boolean field_n;
     private static float field_i;
@@ -514,12 +514,12 @@ final class TriangleRasterizer {
         int var41Lifetime3;
         int var41Lifetime4;
         int var41Lifetime1Lifetime1;
-        var43 = field_d.a(field_i, (byte) -108, param18);
+        var43 = field_d.getTexturePixels(field_i, (byte) -108, param18);
         var42 = var43;
         var19 = var42;
         if (var19 != null &&
           field_h <= 10) {
-          field_n = field_d.a(true, param18);
+          field_n = field_d.isLowDetailTexture(true, param18);
           stackIn_6_0 = (field_d.b(-27077, param18) == 0);
           field_c = stackIn_6_0;
           var20 = param4 - param3;
@@ -1101,7 +1101,7 @@ final class TriangleRasterizer {
           }
           return;
         }
-        var20Lifetime1 = field_d.a((byte) 79, param18);
+        var20Lifetime1 = field_d.getAverageTextureColor((byte) 79, param18);
         TriangleRasterizer.drawShadedTriangle(param0, param1, param2, param3, param4, param5, TriangleRasterizer.c(var20Lifetime1, param6), TriangleRasterizer.c(var20Lifetime1, param7), TriangleRasterizer.c(var20Lifetime1, param8));
     }
 

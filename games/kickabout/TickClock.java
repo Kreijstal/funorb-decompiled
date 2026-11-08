@@ -38,11 +38,11 @@ abstract class TickClock {
         if (param0 >= -82) {
           TickClock.releaseStatics((byte) 24);
           if (null != jl.field_f) {
-            ei.field_b = jl.field_f;
+            RotaryDialPainter.field_b = jl.field_f;
             WeightedCacheEntry.field_s = ButtonMenuScreen.field_n;
             ButtonMenuScreen.field_n = null;
-            ei.field_b.field_ab = -1;
-            ei.field_b.field_ub = -1;
+            RotaryDialPainter.field_b.field_ab = -1;
+            RotaryDialPainter.field_b.field_ub = -1;
             jl.field_f = null;
             Kickabout.field_H = null;
             return;
@@ -54,11 +54,11 @@ abstract class TickClock {
           Kickabout.field_H = null;
           return;
         }
-        ei.field_b = jl.field_f;
+        RotaryDialPainter.field_b = jl.field_f;
         WeightedCacheEntry.field_s = ButtonMenuScreen.field_n;
         ButtonMenuScreen.field_n = null;
-        ei.field_b.field_ab = -1;
-        ei.field_b.field_ub = -1;
+        RotaryDialPainter.field_b.field_ab = -1;
+        RotaryDialPainter.field_b.field_ub = -1;
         jl.field_f = null;
         Kickabout.field_H = null;
     }

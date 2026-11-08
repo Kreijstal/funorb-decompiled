@@ -44,7 +44,7 @@ final class ee {
           eo.a(PacketBuffer.field_g, -(var3 >> 1) + (-var5 + param1), -var6 + param2 - (var4 >> 1), var3, var4);
           return;
         }
-        PacketBuffer.field_g.e(param1 - var5 - (var3 >> 1), -var6 + (param2 - (var4 >> 1)), var3, var4, 256);
+        PacketBuffer.field_g.drawScaledAdditive(param1 - var5 - (var3 >> 1), -var6 + (param2 - (var4 >> 1)), var3, var4, 256);
     }
 
     final static void a(HuffmanCodec param0, boolean param1) {

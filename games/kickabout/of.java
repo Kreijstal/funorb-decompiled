@@ -38,15 +38,15 @@ final class of {
         var6 = Kickabout.field_G;
         try {
           var10 = (CharSequence) ((Object) param2);
-          if (!ef.a(var10, -9907)) {
+          if (!AnimationFrameset.isAllowedDisplayName(var10, -9907)) {
             stackIn_4_0 = SquadSlotWidget.field_Ib;
             return stackIn_4_0;
           }
           if (ts.field_d != 2) {
-            stackIn_7_0 = kh.field_t;
+            stackIn_7_0 = CanvasResizePolicy.field_t;
             return stackIn_7_0;
           }
-          var8 = tr.a(param2, (byte) 40);
+          var8 = ClientUiOverlay.a(param2, (byte) 40);
           if (var8 == null) {
             stackIn_11_0 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, af.field_c, new String[]{param2});
             return stackIn_11_0;

@@ -3,9 +3,9 @@
  */
 final class MeshData extends MeshObject {
     private byte[] field_N;
-    rn[] field_q;
+    VertexNormal[] field_q;
     short[] field_u;
-    ia[] field_J;
+    FaceNormal[] field_J;
     byte[] field_I;
     int[] field_L;
     short[] field_h;
@@ -22,7 +22,7 @@ final class MeshData extends MeshObject {
     private short[] field_S;
     int field_R;
     int field_m;
-    rn[] field_i;
+    VertexNormal[] field_i;
     short[] field_p;
     private byte[] field_E;
     int[] field_w;
@@ -401,7 +401,7 @@ final class MeshData extends MeshObject {
     }
 
     final void calculateNormals() {
-        ia dupTemp$0 = null;
+        FaceNormal dupTemp$0 = null;
         int var1;
         int var2;
         int var3;
@@ -417,17 +417,17 @@ final class MeshData extends MeshObject {
         int var13;
         int var14;
         int var15;
-        ia var16;
-        rn var17;
-        rn var18;
-        rn var19;
+        FaceNormal var16;
+        VertexNormal var17;
+        VertexNormal var18;
+        VertexNormal var19;
         int var1Lifetime1;
         if (this.field_i != null) {
           return;
         }
-        this.field_i = new rn[this.field_t];
+        this.field_i = new VertexNormal[this.field_t];
         for (var1 = 0; var1 < this.field_t; var1++) {
-          this.field_i[var1] = new rn();
+          this.field_i[var1] = new VertexNormal();
         }
         var1Lifetime1 = 0;
         while (true) {
@@ -468,31 +468,31 @@ final class MeshData extends MeshObject {
               if (var15 != 0) {
                 if (var15 == 1) {
                   if (this.field_J == null) {
-                    this.field_J = new ia[this.field_D];
+                    this.field_J = new FaceNormal[this.field_D];
                   }
-                  dupTemp$0 = new ia();
+                  dupTemp$0 = new FaceNormal();
                   this.field_J[var1Lifetime1] = dupTemp$0;
                   var16 = dupTemp$0;
-                  var16.field_f = var11;
-                  var16.field_a = var12;
-                  var16.field_g = var13;
+                  var16.x = var11;
+                  var16.y = var12;
+                  var16.z = var13;
                 }
               } else {
                 var17 = this.field_i[var2];
-                var17.field_a = var17.field_a + var11;
-                var17.field_b = var17.field_b + var12;
-                var17.field_f = var17.field_f + var13;
-                var17.field_g = var17.field_g + 1;
+                var17.x = var17.x + var11;
+                var17.y = var17.y + var12;
+                var17.z = var17.z + var13;
+                var17.contributions = var17.contributions + 1;
                 var18 = this.field_i[var3];
-                var18.field_a = var18.field_a + var11;
-                var18.field_b = var18.field_b + var12;
-                var18.field_f = var18.field_f + var13;
-                var18.field_g = var18.field_g + 1;
+                var18.x = var18.x + var11;
+                var18.y = var18.y + var12;
+                var18.z = var18.z + var13;
+                var18.contributions = var18.contributions + 1;
                 var19 = this.field_i[var4];
-                var19.field_a = var19.field_a + var11;
-                var19.field_b = var19.field_b + var12;
-                var19.field_f = var19.field_f + var13;
-                var19.field_g = var19.field_g + 1;
+                var19.x = var19.x + var11;
+                var19.y = var19.y + var12;
+                var19.z = var19.z + var13;
+                var19.contributions = var19.contributions + 1;
               }
               var1Lifetime1++;
               break;

@@ -63,16 +63,16 @@ abstract class PopupDialog extends IntrusiveNode {
               if (this.field_m > 0) {
                 this.field_m = this.field_m - 2;
               }
-              this.field_q = (this.field_m << 12) / kh.field_q.length;
+              this.field_q = (this.field_m << 12) / CanvasResizePolicy.field_q.length;
             }
           }
         } else {
           fieldTemp$0 = this.field_m + 1;
           this.field_m = this.field_m + 1;
-          if (fieldTemp$0 >= kh.field_q.length - 1) {
+          if (fieldTemp$0 >= CanvasResizePolicy.field_q.length - 1) {
             this.field_n = 1;
           }
-          this.field_q = kh.field_q[this.field_m];
+          this.field_q = CanvasResizePolicy.field_q[this.field_m];
         }
     }
 
@@ -138,7 +138,7 @@ abstract class PopupDialog extends IntrusiveNode {
             var8.field_s = var9;
           }
           TeamManagementScreen.e(119);
-          var7Lifetime1 = (this.field_m << 10) / kh.field_q.length;
+          var7Lifetime1 = (this.field_m << 10) / CanvasResizePolicy.field_q.length;
           if (var7Lifetime1 > 256) {
             var7Lifetime1 = 256;
           }
@@ -277,7 +277,7 @@ abstract class PopupDialog extends IntrusiveNode {
         for (var4 = 0; this.field_e > var4; var4++) {
           mk.field_a.d(var4 + param1, param2 + this.field_r - 480);
         }
-        AuctionLogEntry.field_j.e(param1 - 10, 15 + param2, AuctionLogEntry.field_j.field_o * 2 / 3, 2 * AuctionLogEntry.field_j.field_v / 3, param0);
+        AuctionLogEntry.field_j.drawScaledAdditive(param1 - 10, 15 + param2, AuctionLogEntry.field_j.field_o * 2 / 3, 2 * AuctionLogEntry.field_j.field_v / 3, param0);
         this.drawBody((byte) -29, param1, param2);
         SoftwareRasterizer.c(param1, param2, this.field_e, this.field_r, 2, 65793);
         TeamManagementScreen.e(124);

@@ -54,7 +54,7 @@ final class ig {
               var2_int += 2;
             }
           }
-          du.field_i.c(TextLayoutLine.field_e + param0, ArchiveNetworkClient.field_i + (18 + var2_int));
+          MarkerSliderPainter.field_i.c(TextLayoutLine.field_e + param0, ArchiveNetworkClient.field_i + (18 + var2_int));
           un.field_d.a(qn.field_c, 13 + TextLayoutLine.field_e + param0, var2_int / 2 + (20 + ArchiveNetworkClient.field_i), 16777215, -1);
           var3Lifetime1 = 0;
           if (param1 != -12452) {
@@ -123,7 +123,7 @@ final class ig {
         RenderedFootballer var6 = (RenderedFootballer) (et.field_d.field_P[param3][param2]);
         int var7 = !param0 ? 80 + TextLayoutLine.a(-6779, 480) : TextLayoutLine.a(-6779, 0) - 50;
         if (var6.positionY != var5 &&
-          tc.advanceToPoint(4, (byte) 106, var6.positionX, var6, var7 << 16)) {
+          QuickChatCategory.advanceToPoint(4, (byte) 106, var6.positionX, var6, var7 << 16)) {
           var6.setPosition(var4, false, 0, var5);
         }
     }
@@ -212,7 +212,7 @@ final class ig {
           if (!param0) {
             stackIn_20_0 = Trinket.field_j;
           } else {
-            stackIn_20_0 = cg.field_G;
+            stackIn_20_0 = CaptionedContainer.field_G;
           }
           var6 = stackIn_20_0;
           var20 = "[" + var19 + "]";
@@ -234,7 +234,7 @@ final class ig {
           }
           var9 = 20 + (var4 + var8Lifetime2 + 65);
           var10Lifetime1 = TextPromptDialog.field_yb * (var6.length + 1) + 20;
-          var11 = -6 + (-var10Lifetime1 + (473 - rn.field_c * vt.field_c.playerCount) - 22);
+          var11 = -6 + (-var10Lifetime1 + (473 - VertexNormal.field_c * vt.field_c.playerCount) - 22);
           SoftwareRasterizer.fillRoundedRectangleBlended(-var9 + 644, var11, var9, var10Lifetime1, 2, 0, param2);
           var12Lifetime1 = 619 - (var4 + 20);
           var13 = 6 + var11 + TextPromptDialog.field_yb;

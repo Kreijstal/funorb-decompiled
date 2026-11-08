@@ -55,10 +55,10 @@ final class ValidatedTextWidget extends TextInputWidget implements ValidationPro
         return this.field_V;
     }
 
-    final static ak a(RenderedBall param0, boolean param1) {
-        ak var2 = null;
+    final static WorldDrawEntry a(RenderedBall param0, boolean param1) {
+        WorldDrawEntry var2 = null;
         RuntimeException var2_ref = null;
-        ak stackIn_3_0 = null;
+        WorldDrawEntry stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -67,7 +67,7 @@ final class ValidatedTextWidget extends TextInputWidget implements ValidationPro
           if (param1) {
             ValidatedTextWidget.n((byte) -2);
           }
-          var2 = new ak(2);
+          var2 = new WorldDrawEntry(2);
           var2.field_h = param0;
           stackIn_3_0 = var2;
           return stackIn_3_0;

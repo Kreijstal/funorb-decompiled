@@ -163,10 +163,10 @@ final class TeamSelectionAgent extends MatchAgent {
         return stackIn_11_0;
     }
 
-    final static void a(byte param0, tc param1) {
+    final static void a(byte param0, QuickChatCategory param1) {
         try {
-          param1.field_p = new char[]{(char)63};
-          param1.field_n = new int[]{-1};
+          param1.phraseShortcuts = new char[]{(char)63};
+          param1.phraseIds = new int[]{-1};
           int var2_int = -66 % ((35 - param0) / 47);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "oe.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

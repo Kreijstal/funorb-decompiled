@@ -147,7 +147,7 @@ final class EmailSyntaxValidator extends TextFieldValidator {
         try {
           CipherPacketBuffer var2_ref_ml = null;
           if (ArrayWidgetContainer.field_A == null) {
-            ArrayWidgetContainer.field_A = LoginMethod.field_c.a(true, IntTripleCommand.field_E, rl.field_o);
+            ArrayWidgetContainer.field_A = LoginMethod.field_c.a(true, IntTripleCommand.field_E, PlayerArchetypeSortCriterion.field_o);
           }
           if (ArrayWidgetContainer.field_A.field_a == 0) {
             return false;
@@ -167,7 +167,7 @@ final class EmailSyntaxValidator extends TextFieldValidator {
               PagedHelpScreen.field_A = param0 ? -2 : -1;
               TeamSelectionView.field_n = param0 ? -2 : -1;
               SquadSlotWidget.field_Ab = param0 ? -2 : -1;
-              ImageProducerRasterBuffer.a(AuctionItem.field_g, il.field_g, or.field_d, -3210, s.field_E);
+              ImageProducerRasterBuffer.a(AuctionItem.field_g, il.field_g, or.field_d, -3210, RotaryDialWidget.field_E);
               c.a(-1, false);
             } catch (IOException iOException) {
               un.field_c = AudioService.field_h;

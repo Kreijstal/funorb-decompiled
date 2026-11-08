@@ -85,17 +85,17 @@ final class tl {
               return;
             }
             var6 = var4.field_g;
-            FindingOpponentScreen.field_F[0].field_d = null;
+            FindingOpponentScreen.field_F[0].secondaryName = null;
             var7 = var4.field_j;
-            FindingOpponentScreen.field_F[0].field_b = ArchiveSource.field_e;
-            FindingOpponentScreen.field_F[0].field_g = false;
+            FindingOpponentScreen.field_F[0].name = ArchiveSource.field_e;
+            FindingOpponentScreen.field_F[0].includedInUniqueView = false;
             for (var8_int = 1; var8_int < var5; var8_int++) {
-              FindingOpponentScreen.field_F[var8_int].field_b = var28.readString(param0 ^ 34);
-              FindingOpponentScreen.field_F[var8_int].field_g = false;
+              FindingOpponentScreen.field_F[var8_int].name = var28.readString(param0 ^ 34);
+              FindingOpponentScreen.field_F[var8_int].includedInUniqueView = false;
               if (1 == var28.readUnsignedByte((byte) -127)) {
-                FindingOpponentScreen.field_F[var8_int].field_d = var28.readString(-108);
+                FindingOpponentScreen.field_F[var8_int].secondaryName = var28.readString(-108);
               } else {
-                FindingOpponentScreen.field_F[var8_int].field_d = null;
+                FindingOpponentScreen.field_F[var8_int].secondaryName = null;
               }
             }
             var8 = new String[3][var6];
@@ -115,12 +115,12 @@ final class tl {
             }
             for (var19 = 0; var18 > var19; var19++) {
               var20 = var28.readUnsignedByte((byte) -118);
-              var21 = FindingOpponentScreen.field_F[var20].field_b;
+              var21 = FindingOpponentScreen.field_F[var20].name;
               var22 = var28.readLong((byte) -124);
               var24 = var28.field_n;
               if (var19 < var6) {
                 var8[0][var12] = var21;
-                var9[0][var12] = FindingOpponentScreen.field_F[var20].field_d;
+                var9[0][var12] = FindingOpponentScreen.field_F[var20].secondaryName;
                 var35[0][var12] = var22;
                 var12++;
                 for (var25 = 0; var25 < var7; var25++) {
@@ -143,10 +143,10 @@ final class tl {
                 }
               }
               if (var14 < var6 &&
-                !FindingOpponentScreen.field_F[var20].field_g) {
-                FindingOpponentScreen.field_F[var20].field_g = true;
+                !FindingOpponentScreen.field_F[var20].includedInUniqueView) {
+                FindingOpponentScreen.field_F[var20].includedInUniqueView = true;
                 var8[2][var14] = var21;
-                var9[2][var14] = FindingOpponentScreen.field_F[var20].field_d;
+                var9[2][var14] = FindingOpponentScreen.field_F[var20].secondaryName;
                 var35[2][var14] = var22;
                 var28.field_n = var24;
                 var14++;
@@ -163,10 +163,10 @@ final class tl {
           if (var2 == 1) {
             var3Lifetime1 = var28.readUnsignedShort((byte) 81);
             var28.readLong((byte) -124);
-            var4_ref = (sm) (ia.field_d.g(24009));
+            var4_ref = (sm) (FaceNormal.field_d.g(24009));
             while (var4_ref != null) {
               if (var3Lifetime1 != var4_ref.field_k) {
-                var4_ref = (sm) (ia.field_d.c(param0 + 31));
+                var4_ref = (sm) (FaceNormal.field_d.c(param0 + 31));
                 continue;
               }
               break;
@@ -178,7 +178,7 @@ final class tl {
             var4_ref.c((byte) -109);
             return;
           }
-          UnreadMessagesScreen.a("HS1: " + tr.b(0), (Throwable) null, 1);
+          UnreadMessagesScreen.a("HS1: " + ClientUiOverlay.describeCurrentPacket(0), (Throwable) null, 1);
           FormationView.b((byte) -116);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

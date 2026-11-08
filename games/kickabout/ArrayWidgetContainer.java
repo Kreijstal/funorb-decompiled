@@ -417,22 +417,22 @@ abstract class ArrayWidgetContainer extends UiWidget implements UiContainerMarke
         }
     }
 
-    final static wn a(int param0, String[] param1) {
-        wn var2 = null;
+    final static AccountRegistrationResponse a(int param0, String[] param1) {
+        AccountRegistrationResponse var2 = null;
         RuntimeException var2_ref = null;
-        wn stackIn_2_0 = null;
-        wn stackIn_4_0 = null;
+        AccountRegistrationResponse stackIn_2_0 = null;
+        AccountRegistrationResponse stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 > -108) {
-            stackIn_2_0 = (wn) null;
+            stackIn_2_0 = (AccountRegistrationResponse) null;
             return stackIn_2_0;
           }
-          var2 = new wn(false);
-          var2.field_f = param1;
+          var2 = new AccountRegistrationResponse(false);
+          var2.nameSuggestions = param1;
           stackIn_4_0 = var2;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

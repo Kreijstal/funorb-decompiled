@@ -42,7 +42,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                 if (var2.width < uk.field_a) {
                   return;
                 }
-                if (var2.height < vs.field_f) {
+                if (var2.height < PlayerPortraitCacheEntry.field_f) {
                   return;
                 }
               }
@@ -108,7 +108,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           if (0L != var4 &&
             var4 < var2_long) {
             var6_int = (int)(var2_long - var4);
-            nk.field_h = ((var6_int >> 1) + 32000) / var6_int;
+            TexturedPanelPainter.field_h = ((var6_int >> 1) + 32000) / var6_int;
           }
           CachedArchiveSource.field_E = 31 & CachedArchiveSource.field_E + 1;
           fieldTemp$1 = TeamSelectionView.field_q;
@@ -715,9 +715,9 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                 return;
               }
               ReceivedAuctionItem.field_B = param4;
-              vs.field_f = param4;
+              PlayerPortraitCacheEntry.field_f = param4;
               is.field_g = 0;
-              ei.field_e = param2;
+              RotaryDialPainter.field_e = param2;
               ug.field_a = so.a(31);
               dupTemp$0 = new PlatformTaskDispatcher(param6, param5, param0, true);
               oo.field_c = dupTemp$0;

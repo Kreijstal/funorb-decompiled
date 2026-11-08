@@ -91,7 +91,7 @@ final class pl {
                     }
                   }
                 } else {
-                  if (rn.field_d[param3] != var14) {
+                  if (VertexNormal.field_d[param3] != var14) {
                     break scanLoop1;
                   }
                 }
@@ -126,7 +126,7 @@ final class pl {
                 param0 = param0 + (255 & rp.field_x[param6]);
               } else {
                 var10_int = 0;
-                while (!(var10_int >= rn.field_d.length)) {
+                while (!(var10_int >= VertexNormal.field_d.length)) {
                   if ((er.field_h[var10_int / 8] & 1 << (7 & var10_int)) == 0) {
                     var10_int++;
                     continue;
@@ -142,7 +142,7 @@ final class pl {
               if (param6 != -1) {
                 stackIn_22_0 = -1 + var17.length;
               } else {
-                stackIn_22_0 = rn.field_d.length;
+                stackIn_22_0 = VertexNormal.field_d.length;
               }
               if (stackIn_22_0 <= var11) {
                 if (var10_intLifetime1 != 0) {
@@ -167,7 +167,7 @@ final class pl {
                 SumIntegersCommand.field_G[param6] = (byte)var11;
               }
               if (param6 == -1 &&
-                rn.field_d.length == 1) {
+                VertexNormal.field_d.length == 1) {
                 var12 = 1;
               } else {
                 var13_ref_vu = var8[var11 + 1];
@@ -186,7 +186,7 @@ final class pl {
                   if (param6 != -1) {
                     stackIn_37_0 = ((PlayerContextMenu.field_i.field_Eb[param6] & 255) != var11) ? 0 : 1;
                   } else {
-                    stackIn_37_0 = (rn.field_d[var11] != PlayerContextMenu.field_i.field_bc) ? 0 : 1;
+                    stackIn_37_0 = (VertexNormal.field_d[var11] != PlayerContextMenu.field_i.field_bc) ? 0 : 1;
                   }
                   var12 = stackIn_37_0;
                 }

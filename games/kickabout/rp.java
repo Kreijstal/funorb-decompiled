@@ -24,7 +24,7 @@ final class rp extends ri {
         ii.a(var2Lifetime1, 69);
     }
 
-    final static int a(int param0, int param1, int param2) {
+    final static int getDaysInMonth(int param0, int param1, int param2) {
         if (param0 == 1) {
           if (GameModeDefinition.isLeapYear(-16143, param1)) {
             return 29;
@@ -58,7 +58,7 @@ final class rp extends ri {
         try {
           TournamentChampionDialog.field_I = TournamentChampionDialog.field_I + 65536;
           if (param1 != -587) {
-            rp.b(-111);
+            rp.getQuickChatCommandTypes(-111);
           }
           while (UnreadMessagesScreen.a(vp.field_a, false, TournamentChampionDialog.field_I) >= 65536) {
             TournamentChampionDialog.field_I = TournamentChampionDialog.field_I - vp.field_a;
@@ -154,7 +154,7 @@ final class rp extends ri {
           }
           stackIn_64_0 = -59;
           while (true) {
-            if (!nk.$cfr$intArgs$b$c4997cb15529(stackIn_64_0)) {
+            if (!TexturedPanelPainter.$cfr$intArgs$b$c4997cb15529(stackIn_64_0)) {
               stackIn_77_0 = 0;
               return stackIn_77_0;
             }
@@ -215,12 +215,12 @@ final class rp extends ri {
         }
     }
 
-    final static ff[] b(int param0) {
+    final static QuickChatCommandType[] getQuickChatCommandTypes(int param0) {
         if (param0 == -27666) {
-          return new ff[]{DiskCacheWorker.field_c, IconLabel.field_yb, um.field_c, SocketArchiveNetworkClient.field_t, FormationAgent.field_h, ConsoleParseException.field_e, vp.field_o, MatchingTextValidator.field_j, DebugConsole.field_r, mn.field_e, cr.field_b, uq.field_d, BallAgent.field_z, StreetSceneryLoader.field_l};
+          return new QuickChatCommandType[]{DiskCacheWorker.field_c, IconLabel.field_yb, um.field_c, SocketArchiveNetworkClient.field_t, FormationAgent.field_h, ConsoleParseException.field_e, vp.field_o, MatchingTextValidator.field_j, DebugConsole.field_r, mn.field_e, LinkTextPainter.field_b, uq.field_d, BallAgent.field_z, StreetSceneryLoader.field_l};
         }
         field_A = true;
-        return new ff[]{DiskCacheWorker.field_c, IconLabel.field_yb, um.field_c, SocketArchiveNetworkClient.field_t, FormationAgent.field_h, ConsoleParseException.field_e, vp.field_o, MatchingTextValidator.field_j, DebugConsole.field_r, mn.field_e, cr.field_b, uq.field_d, BallAgent.field_z, StreetSceneryLoader.field_l};
+        return new QuickChatCommandType[]{DiskCacheWorker.field_c, IconLabel.field_yb, um.field_c, SocketArchiveNetworkClient.field_t, FormationAgent.field_h, ConsoleParseException.field_e, vp.field_o, MatchingTextValidator.field_j, DebugConsole.field_r, mn.field_e, LinkTextPainter.field_b, uq.field_d, BallAgent.field_z, StreetSceneryLoader.field_l};
     }
 
     rp(int param0) {
@@ -235,7 +235,7 @@ final class rp extends ri {
         field_D = null;
         field_x = null;
         if (param0 < 84) {
-          rp.a(114, -72, -26);
+          rp.getDaysInMonth(114, -72, -26);
           return;
         }
     }

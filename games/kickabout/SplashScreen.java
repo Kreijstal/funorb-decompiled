@@ -376,7 +376,7 @@ final class SplashScreen extends AppScreen {
                     if (1 == var25_int) {
                       var24Lifetime2 = BlackFadeScreen.field_k;
                     }
-                    var24Lifetime2 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, rn.field_h, new String[]{null, Integer.toString(var25_int)});
+                    var24Lifetime2 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, VertexNormal.field_h, new String[]{null, Integer.toString(var25_int)});
                   } else {
                     if (var12.field_Qb >= var6) {
                       if ((var8 & ~var12.field_Pb) != 0) {
@@ -466,7 +466,7 @@ final class SplashScreen extends AppScreen {
                   }
                 } else {
                   if (var26Lifetime1 == 0) {
-                    var24Lifetime2 = var34 + "<br>" + LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, ak.field_l, new String[]{(String) (var25)});
+                    var24Lifetime2 = var34 + "<br>" + LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, WorldDrawEntry.field_l, new String[]{(String) (var25)});
                   } else {
                     var24Lifetime2 = var34 + "<br>" + po.field_c + (String) (var25);
                   }

@@ -40,7 +40,7 @@ abstract class ContentTransitionDialog extends ResizableModalPanel {
           super.finishTransition(param0);
           return;
         }
-        if (wn.field_b != this.field_X) {
+        if (AccountRegistrationResponse.field_b != this.field_X) {
           this.a((byte) 127, this.field_V.field_i + (this.field_R + 12), 12 + this.field_V.field_n);
           this.b(this.field_V, 54);
         } else {
@@ -182,7 +182,7 @@ abstract class ContentTransitionDialog extends ResizableModalPanel {
           return;
         }
         this.field_T = 0;
-        this.field_X = wn.field_b;
+        this.field_X = AccountRegistrationResponse.field_b;
         this.b(this.field_V, 99);
         if (param0 == 4096) {
           this.field_ab.field_F = 0;
@@ -202,7 +202,7 @@ abstract class ContentTransitionDialog extends ResizableModalPanel {
             return super.advanceDialogAnimation(param0 + 0);
           }
           if (ValidationState.field_e != this.field_X) {
-            if (this.field_X != wn.field_b) {
+            if (this.field_X != AccountRegistrationResponse.field_b) {
               return super.advanceDialogAnimation(param0 + 0);
             }
             fieldTemp$0 = this.field_T + 1;
@@ -231,7 +231,7 @@ abstract class ContentTransitionDialog extends ResizableModalPanel {
           return super.advanceDialogAnimation(param0 + 0);
         }
         if (ValidationState.field_e != this.field_X) {
-          if (this.field_X != wn.field_b) {
+          if (this.field_X != AccountRegistrationResponse.field_b) {
             return super.advanceDialogAnimation(param0 + 0);
           }
           fieldTemp$2 = this.field_T + 1;

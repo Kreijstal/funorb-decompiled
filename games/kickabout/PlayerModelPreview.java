@@ -20,7 +20,7 @@ final class PlayerModelPreview extends IntrusiveNode {
     static vd field_f;
     static String field_k;
 
-    final static void a(int param0, int param1, byte param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, BitmapFont param10, BitmapFont param11, dg param12, int param13, int param14, int param15, dg param16, int param17, int param18, dg param19, int param20) {
+    final static void a(int param0, int param1, byte param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, BitmapFont param10, BitmapFont param11, NineSlicePanelPainter param12, int param13, int param14, int param15, NineSlicePanelPainter param16, int param17, int param18, NineSlicePanelPainter param19, int param20) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -41,7 +41,7 @@ final class PlayerModelPreview extends IntrusiveNode {
             field_q = (GameKeyHandler) null;
           }
           ClientException.a(param8, 0, param4);
-          rn.a(param19, param6, param16, param9, param15, -110);
+          VertexNormal.a(param19, param6, param16, param9, param15, -110);
           ConsoleCommand.a(param3, param1, false, param12);
           ArchiveNetworkClient.a(param20, param14, param17, 20);
           return;

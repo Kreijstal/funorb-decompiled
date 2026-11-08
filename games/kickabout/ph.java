@@ -21,12 +21,12 @@ final class ph {
         int var1 = IntTripleCommand.h((byte) -118);
         int var2 = EmailSyntaxValidator.e((byte) 18);
         if (param0) {
-          IntValueNode.field_g.a(GameSoundEffect.field_k - is.field_d, var2 + (DelayedServerPacket.field_e << 1), SumIntegersCommand.field_I - DelayedServerPacket.field_e, var1 + (is.field_d << 1), 3);
+          IntValueNode.field_g.drawPanel(GameSoundEffect.field_k - is.field_d, var2 + (DelayedServerPacket.field_e << 1), SumIntegersCommand.field_I - DelayedServerPacket.field_e, var1 + (is.field_d << 1), 3);
           VerticalScrollbar.k(0);
           return;
         }
         field_c = (String) null;
-        IntValueNode.field_g.a(GameSoundEffect.field_k - is.field_d, var2 + (DelayedServerPacket.field_e << 1), SumIntegersCommand.field_I - DelayedServerPacket.field_e, var1 + (is.field_d << 1), 3);
+        IntValueNode.field_g.drawPanel(GameSoundEffect.field_k - is.field_d, var2 + (DelayedServerPacket.field_e << 1), SumIntegersCommand.field_I - DelayedServerPacket.field_e, var1 + (is.field_d << 1), 3);
         VerticalScrollbar.k(0);
     }
 
@@ -75,7 +75,7 @@ final class ph {
     }
 
     final static void a(byte param0) {
-        if (!ng.a(-4)) {
+        if (!ServerTextTemplate.a(-4)) {
           return;
         }
         TrinketCountSortCriterion.a(false, 6, 4);

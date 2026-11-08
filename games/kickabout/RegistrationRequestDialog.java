@@ -100,8 +100,8 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
     }
 
     final boolean advanceDialogAnimation(int param0) {
-        wn var2 = null;
-        wn var2Lifetime1;
+        AccountRegistrationResponse var2 = null;
+        AccountRegistrationResponse var2Lifetime1;
         if (param0 != -1) {
           RegistrationRequestDialog.releaseStatics(-114);
           if (!this.field_C) {
@@ -133,11 +133,11 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
 
     public final void onAction(int param0, TextButton param1, int param2, byte param3, int param4) {
         if (this.field_nb) {
-          bl.a(false, true, (byte) -121);
+          LobbyMatchPreview.a(false, true, (byte) -121);
           return;
         }
         try {
-          oh.a(-87);
+          WorldSpriteDecoration.a(-87);
           this.closeDialog(-96);
           if (param3 <= 64) {
             field_rb = (r) null;
@@ -147,7 +147,7 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
         }
     }
 
-    private final void a(boolean param0, wn param1, byte param2) {
+    private final void a(boolean param0, AccountRegistrationResponse param1, byte param2) {
         RuntimeException stackIn_35_0 = null;
         StringBuilder stackIn_35_1 = null;
         String stackIn_36_2 = null;
@@ -159,15 +159,15 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
         var6 = Kickabout.field_G;
         try {
           this.field_pb = true;
-          if (!param1.field_g) {
-            if (param1.field_f != null) {
+          if (!param1.success) {
+            if (param1.nameSuggestions != null) {
               var4 = ModalStack.field_B;
               if (null != this.field_mb) {
                 this.field_mb.onRefreshSuggestions(-1);
               }
             } else {
-              var4 = param1.field_d;
-              if (param1.field_e == 248) {
+              var4 = param1.message;
+              if (param1.responseCode == 248) {
                 if (param0) {
                   var4 = GameSoundEffect.field_g;
                   this.field_nb = true;
@@ -185,15 +185,15 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
             return;
           }
           var5 = new AccountMessagePanel((AccountRequestDialog) (this), fj.field_b, var4);
-          if (param1.field_g) {
-            if (param1.field_c) {
+          if (param1.success) {
+            if (param1.needsTerms) {
               this.a((byte) -126, (UiWidget) (new AccountTermsPanel(this)));
               return;
             }
             var5.a(RowRangeRequest.field_g, (UiListener) (this), (byte) 79);
           } else {
             if (!this.field_nb) {
-              if (param1.field_e != 5) {
+              if (param1.responseCode != 5) {
                 var5.a((byte) 55, -1, is.field_f);
               } else {
                 var5.a((byte) 75, 11, ql.field_d);
@@ -202,8 +202,8 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
             } else {
               var5.a(RowRangeRequest.field_g, (UiListener) (this), (byte) 79);
             }
-            if (param1.field_e != 3) {
-              if (param1.field_e != 6) {
+            if (param1.responseCode != 3) {
+              if (param1.responseCode != 6) {
                 this.a((byte) -122, (UiWidget) (var5));
                 return;
               }

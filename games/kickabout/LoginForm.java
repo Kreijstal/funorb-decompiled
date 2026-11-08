@@ -46,7 +46,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
           if (param1 != 20684) {
             field_B = (int[]) null;
           }
-          var3 = oh.field_a[ih.field_c];
+          var3 = WorldSpriteDecoration.field_a[ih.field_c];
           double[] var2 = var3;
           nh.adjustSpriteHsv(param0, var3[0], var3[1], var3[2]);
         } catch (RuntimeException runtimeException) {
@@ -59,7 +59,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
           if (param0 != 70) {
             LoginForm.a((byte) -2);
           }
-          ia.field_d.addLast(param2, param0 - 67);
+          FaceNormal.field_d.addLast(param2, param0 - 67);
           mp.a(125, param1, param2);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "pd.G(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
@@ -210,8 +210,8 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
 
     LoginForm(String param0, String param1, boolean param2, boolean param3, boolean param4) {
         super(0, 0, 310, 190, (WidgetPainter) null);
-        cg dupTemp$0 = null;
-        cg dupTemp$1 = null;
+        CaptionedContainer dupTemp$0 = null;
+        CaptionedContainer dupTemp$1 = null;
         boolean stackIn_4_1 = false;
         boolean stackIn_7_1 = false;
         boolean stackIn_10_1 = false;
@@ -231,8 +231,8 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
         BitmapFont var7 = null;
         String var8 = null;
         LoginMethod var9 = null;
-        cg var12 = null;
-        cg var13 = null;
+        CaptionedContainer var12 = null;
+        CaptionedContainer var13 = null;
         try {
           this.field_D = param1;
           stackIn_4_1 = (param4);
@@ -265,7 +265,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
               this.field_L = new TextButton(ConsoleEvaluationException.field_f, (UiListener) (this));
             }
           } else {
-            this.field_K = new TextButton(bt.field_d, (UiListener) null);
+            this.field_K = new TextButton(QuickChatCategoryCache.field_d, (UiListener) null);
             this.field_F = new TextButton(AccountNameAvailabilityValidator.field_o, (UiListener) null);
             this.field_N.field_y = false;
           }
@@ -285,10 +285,10 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
           }
           if (!this.field_H) {
             if (!this.field_C) {
-              this.field_F.field_r = (WidgetPainter) ((Object) new cr());
+              this.field_F.field_r = (WidgetPainter) ((Object) new LinkTextPainter());
             } else {
               this.field_F.field_u = HelpTipDialog.field_G;
-              this.field_F.field_r = (WidgetPainter) ((Object) new cr());
+              this.field_F.field_r = (WidgetPainter) ((Object) new LinkTextPainter());
             }
           } else {
             this.field_F.field_u = DebugConsole.field_x;
@@ -307,11 +307,11 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
               var8 = ConsoleTokenCursor.field_c;
             }
           }
-          dupTemp$0 = new cg(10, this.field_g, -20 + this.field_n, 25, this.field_N, false, 80, 3, var7, 16777215, var8);
+          dupTemp$0 = new CaptionedContainer(10, this.field_g, -20 + this.field_n, 25, this.field_N, false, 80, 3, var7, 16777215, var8);
           var12 = dupTemp$0;
           this.a(-120, dupTemp$0);
           this.field_g = this.field_g + (((UiWidget) ((Object) var12)).field_i + 5);
-          dupTemp$1 = new cg(10, this.field_g, -20 + this.field_n, 25, this.field_J, false, 80, 3, var7, 16777215, TrinketTile.field_Ib);
+          dupTemp$1 = new CaptionedContainer(10, this.field_g, -20 + this.field_n, 25, this.field_J, false, 80, 3, var7, 16777215, TrinketTile.field_Ib);
           var13 = dupTemp$1;
           this.a(-55, dupTemp$1);
           this.field_K.field_k = (UiListener) (this);
@@ -401,7 +401,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
         RuntimeException var1 = null;
         var10 = Kickabout.field_G;
         try {
-          var12 = j.a(param0 ^ 5332);
+          var12 = FootballerPreview.a(param0 ^ 5332);
           var2 = MySquadScreen.c(param0 ^ 62, -var12.field_o - 15 + 120);
           var3 = MySquadScreen.c(-54, 10 + var12.field_o * 3 - 15);
           var4 = var12.field_v;
@@ -413,7 +413,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
           }
           for (var7 = 0; var7 < 4; var7++) {
             if ((var7 & 1) == 0) {
-              stackIn_8_0 = hl.field_e;
+              stackIn_8_0 = DateInputValidator.field_e;
             } else {
               stackIn_8_0 = DualLinkNode.field_h;
             }

@@ -109,7 +109,7 @@ final class gf {
             return;
           }
           if (2 != var3) {
-            UnreadMessagesScreen.a("A1: " + tr.b(0), (Throwable) null, 1);
+            UnreadMessagesScreen.a("A1: " + ClientUiOverlay.describeCurrentPacket(0), (Throwable) null, 1);
             FormationView.b((byte) -116);
             return;
           }

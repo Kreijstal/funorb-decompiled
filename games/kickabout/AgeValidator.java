@@ -36,7 +36,7 @@ final class AgeValidator extends TextFieldValidator {
                 GameplayHelpScreen.field_G[~var2] = false;
               }
             }
-            vb.field_b = du.field_j;
+            vb.field_b = MarkerSliderPainter.field_j;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -84,10 +84,10 @@ final class AgeValidator extends TextFieldValidator {
               param3 = new java.awt.Color(140, 17, 17);
             }
             try {
-              if (bt.field_i == null) {
-                bt.field_i = ic.field_d.createImage(304, 34);
+              if (QuickChatCategoryCache.field_i == null) {
+                QuickChatCategoryCache.field_i = ic.field_d.createImage(304, 34);
               }
-              var10 = bt.field_i.getGraphics();
+              var10 = QuickChatCategoryCache.field_i.getGraphics();
               var10.setColor(param3);
               var10.drawRect(0, 0, 303, 33);
               var10.fillRect(2, 2, param4 * 3, 30);
@@ -97,7 +97,7 @@ final class AgeValidator extends TextFieldValidator {
               var10.setFont(ar.field_b);
               var10.setColor(java.awt.Color.white);
               var10.drawString(param2, (-(param2.length() * 6) + 304) / 2, 22);
-              var9.drawImage(bt.field_i, f.field_d / 2 - 152, ReceivedAuctionItem.field_B / 2 - 18, (java.awt.image.ImageObserver) null);
+              var9.drawImage(QuickChatCategoryCache.field_i, f.field_d / 2 - 152, ReceivedAuctionItem.field_B / 2 - 18, (java.awt.image.ImageObserver) null);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var6 = (Exception) (Object) decompiledCaughtException;

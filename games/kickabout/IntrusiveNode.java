@@ -13,10 +13,10 @@ class IntrusiveNode {
         int var4Lifetime1;
         int var5Lifetime1;
         if (param1) {
-          if (bl.field_m[param2] < bl.field_m[param3]) {
+          if (LobbyMatchPreview.field_m[param2] < LobbyMatchPreview.field_m[param3]) {
             return true;
           }
-          if (bl.field_m[param2] > bl.field_m[param3]) {
+          if (LobbyMatchPreview.field_m[param2] > LobbyMatchPreview.field_m[param3]) {
             return false;
           }
           if (DialogOverlay.field_a[param3] > DialogOverlay.field_a[param2]) {
@@ -44,10 +44,10 @@ class IntrusiveNode {
         if (DialogOverlay.field_a[param2] > DialogOverlay.field_a[param3]) {
           return false;
         }
-        if (bl.field_m[param2] < bl.field_m[param3]) {
+        if (LobbyMatchPreview.field_m[param2] < LobbyMatchPreview.field_m[param3]) {
           return true;
         }
-        if (bl.field_m[param3] < bl.field_m[param2]) {
+        if (LobbyMatchPreview.field_m[param3] < LobbyMatchPreview.field_m[param2]) {
           return false;
         }
         var4Lifetime1 = AccountMessagePanel.field_G[param2] + (AgeValidator.field_j[param2] + DropTargetWidget.field_B[param2]);

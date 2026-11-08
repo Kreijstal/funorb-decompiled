@@ -128,7 +128,7 @@ final class DelayedServerPacket extends IntrusiveNode {
             if (sk.a((byte) 97) == GameLoopApplet.field_E.field_p &&
               IntrusiveNode.b((byte) -110) == GameLoopApplet.field_E.field_F) {
               stackIn_31_0 = (GameLoopApplet.field_E.field_A) ? 0 : 1;
-              if (stackIn_31_0 != (ei.field_n ? 1 : 0)) {
+              if (stackIn_31_0 != (RotaryDialPainter.field_n ? 1 : 0)) {
                 stackIn_35_0 = (GameLoopApplet.field_E.field_d) ? 0 : 1;
                 if (ByteStorage.field_c) {
                   stackIn_38_1 = 0;
@@ -144,7 +144,7 @@ final class DelayedServerPacket extends IntrusiveNode {
             }
             if (decompiledFrameRemainder0) {
               var3_int = 0;
-              if (ei.field_n) {
+              if (RotaryDialPainter.field_n) {
                 var3_int = var3_int | 1;
               }
               if (SocketArchiveNetworkClient.field_v == 1) {
@@ -170,7 +170,7 @@ final class DelayedServerPacket extends IntrusiveNode {
               GameLoopApplet.field_E.field_p = sk.a((byte) 97);
               GameLoopApplet.field_E.field_F = IntrusiveNode.b((byte) -95);
               GameLoopApplet.field_E.field_d = ByteStorage.field_c;
-              GameLoopApplet.field_E.field_A = ei.field_n;
+              GameLoopApplet.field_E.field_A = RotaryDialPainter.field_n;
             }
           }
           if (param2 != -2) {
@@ -228,19 +228,19 @@ final class DelayedServerPacket extends IntrusiveNode {
         }
         PlayerStats.field_b = var3 + 25L;
         float var5 = (float)param2 / (float)param0;
-        int var6 = vr.a(-2, rl.field_r);
-        int var7 = vr.a(-2, 1 + rl.field_r);
+        int var6 = vr.a(-2, PlayerArchetypeSortCriterion.field_r);
+        int var7 = vr.a(-2, 1 + PlayerArchetypeSortCriterion.field_r);
         if (param1 == 9863) {
           var8 = var7 - var6;
           TextInputWidget.field_R = (float)var6 + (float)var8 * var5;
-          SquadGridWidget.field_Db = dg.field_c + ": " + (int)TextInputWidget.field_R + "%";
+          SquadGridWidget.field_Db = NineSlicePanelPainter.field_c + ": " + (int)TextInputWidget.field_R + "%";
           AnimationClip.field_g.paintFrame((byte) 63);
           return;
         }
         field_h = -66;
         var8Lifetime1 = var7 - var6;
         TextInputWidget.field_R = (float)var6 + (float)var8Lifetime1 * var5;
-        SquadGridWidget.field_Db = dg.field_c + ": " + (int)TextInputWidget.field_R + "%";
+        SquadGridWidget.field_Db = NineSlicePanelPainter.field_c + ": " + (int)TextInputWidget.field_R + "%";
         AnimationClip.field_g.paintFrame((byte) 63);
     }
 

@@ -125,7 +125,7 @@ final class RenderedFootballer extends FootballerAgent {
             stackIn_7_2 = param3.field_Eb;
             stackIn_7_3 = -107;
             stackIn_8_4 = !(TextFieldValidator.f(param0 ^ 5185));
-            stackIn_12_2 = (((PlayerStats) (Object) stackIn_7_2).c((byte) stackIn_7_3, stackIn_8_4)) && (wn.a((byte) 83));
+            stackIn_12_2 = (((PlayerStats) (Object) stackIn_7_2).c((byte) stackIn_7_3, stackIn_8_4)) && (AccountRegistrationResponse.a((byte) 83));
             var4 = TriangleMesh.a(stackIn_7_0, stackIn_7_1, stackIn_12_2);
             var5 = param2.field_q + param2.field_F - 38;
             var6 = param2.field_T + 58;
@@ -371,7 +371,7 @@ final class RenderedFootballer extends FootballerAgent {
         var8 = 300;
         if (this.archetype == 4 &&
           15 == this.field_ob) {
-          stackIn_18_0 = ia.field_c;
+          stackIn_18_0 = FaceNormal.field_c;
           stackIn_19_1 = (this.pixelY(true) >= 672) ? false : true;
           if (stackIn_18_0 ^ stackIn_19_1) {
             var8 = 220;
@@ -586,7 +586,7 @@ final class RenderedFootballer extends FootballerAgent {
           var5 = stackIn_27_0;
         }
         var6Lifetime1 = (2048 + (var5 + this.computeFacingAngle((byte) 117))) % 2048;
-        if (ia.field_c) {
+        if (FaceNormal.field_c) {
           var6Lifetime1 += 1024;
           if (var6Lifetime1 >= 2048) {
             var6Lifetime1 -= 2048;
@@ -862,7 +862,7 @@ final class RenderedFootballer extends FootballerAgent {
             var3 = 999;
           }
           var4 = var3 * param0 / (-var3 + 1000);
-          return ia.field_c ? var2 + var4 : var2 - var4;
+          return FaceNormal.field_c ? var2 + var4 : var2 - var4;
         }
         return var2;
     }

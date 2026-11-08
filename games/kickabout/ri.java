@@ -266,9 +266,9 @@ class ri extends TextWidgetPainter {
           var14 = ClientException.a(ModalStack.a(param4, -122, "lobby", "tab_active"), (byte) 61);
           AccountTermsPanel.field_H = new UiLayoutNode(0L, var8);
           AccountTermsPanel.field_H.field_R = var14;
-          hl.field_f = new UiLayoutNode(0L, (UiLayoutNode) null);
-          hl.field_f.field_N = wa.a((byte) 127, "lobby", param4, "closebutton");
-          hl.field_f.field_vb = wa.a((byte) 114, "lobby", param4, "closebutton_mouseover");
+          DateInputValidator.field_f = new UiLayoutNode(0L, (UiLayoutNode) null);
+          DateInputValidator.field_f.field_N = wa.a((byte) 127, "lobby", param4, "closebutton");
+          DateInputValidator.field_f.field_vb = wa.a((byte) 114, "lobby", param4, "closebutton_mouseover");
           IntValueNode.field_i = new UiLayoutNode(0L, var8);
           IntValueNode.field_i.field_R = NotCommand.a(40, true, 3815994, 2039583, true, (byte) -46);
           TrinketIcon.field_zb = new UiLayoutNode(0L, var10);
@@ -388,10 +388,10 @@ class ri extends TextWidgetPainter {
           var17 = ModalStack.a(param4, -121, "lobby", "checkbox");
           MatchPhaseView.field_d = new IconLabel(0L, var17[1], var17[0], 1, ul.field_c, (String) null);
           ScrollPane.field_Hb = new UiLayoutNode(0L, (UiLayoutNode) null);
-          ScrollPane.field_Hb.field_R = kh.a((byte) -83, wa.a((byte) 98, "lobby", param4, "slideregion"));
-          ScrollPane.field_Hb.field_S = kh.a((byte) -96, wa.a((byte) 113, "lobby", param4, "slideregion_mouseover"));
-          ScrollPane.field_Hb.field_rb = kh.a((byte) -86, wa.a((byte) 116, "lobby", param4, "slideregion_mouseheld"));
-          ScrollPane.field_Hb.field_tb = kh.a((byte) -108, wa.a((byte) 127, "lobby", param4, "slideregion_disabled"));
+          ScrollPane.field_Hb.field_R = CanvasResizePolicy.centerOnlyPanelSlices((byte) -83, wa.a((byte) 98, "lobby", param4, "slideregion"));
+          ScrollPane.field_Hb.field_S = CanvasResizePolicy.centerOnlyPanelSlices((byte) -96, wa.a((byte) 113, "lobby", param4, "slideregion_mouseover"));
+          ScrollPane.field_Hb.field_rb = CanvasResizePolicy.centerOnlyPanelSlices((byte) -86, wa.a((byte) 116, "lobby", param4, "slideregion_mouseheld"));
+          ScrollPane.field_Hb.field_tb = CanvasResizePolicy.centerOnlyPanelSlices((byte) -108, wa.a((byte) 127, "lobby", param4, "slideregion_disabled"));
           ts.field_a = new UiLayoutNode(0L, (UiLayoutNode) null);
           ts.field_a.field_R = ClientException.a(ModalStack.a(param4, 108, "lobby", "dragbar"), (byte) 8);
           ts.field_a.field_S = ClientException.a(ModalStack.a(param4, 46, "lobby", "dragbar_mouseover"), (byte) -24);
@@ -477,7 +477,7 @@ class ri extends TextWidgetPainter {
             var5 = (-var4 + 12 << 7) / 13;
             var6 = param0.field_o - var4;
             var7 = var4 / 4 + var4;
-            var12.c(var7, var4 / 5 + var7, var6, var6, 65793 * var5);
+            var12.drawScaledSilhouette(var7, var4 / 5 + var7, var6, var6, 65793 * var5);
           }
           TeamManagementScreen.e(125);
           if (!param1) {
@@ -509,7 +509,7 @@ class ri extends TextWidgetPainter {
     public final void drawWidget(int param0, boolean param1, int param2, UiWidget param3, int param4) {
         try {
           if (param1) {
-            kj.a(12105912, param2 + param3.field_g, param3.field_t + param4, param3.field_i, param3.field_n);
+            LoginKind.drawBeveledFrame(12105912, param2 + param3.field_g, param3.field_t + param4, param3.field_i, param3.field_n);
           }
           super.drawWidget(-21, param1, param2, param3, param4);
           int var6_int = 92 % ((59 - param0) / 53);
@@ -571,29 +571,29 @@ class ri extends TextWidgetPainter {
             GoalStateAgent.field_k.field_mb = 0;
             var6 = GoalStateAgent.field_k;
             var6.field_q = 0;
-            nv.field_F.field_mb = 0;
-            var7 = nv.field_F;
+            MarkerSliderWidget.field_F.field_mb = 0;
+            var7 = MarkerSliderWidget.field_F;
             var7.field_q = 0;
             IterableDualLinkDeque.field_h.field_E = qn.field_d.toUpperCase();
             var8 = (2 + AuctionItem.field_p.field_q) / 2;
-            nv.field_F.setBounds(true, -2 + var8, 0, -40 + AuctionItem.field_p.field_mb, 40);
+            MarkerSliderWidget.field_F.setBounds(true, -2 + var8, 0, -40 + AuctionItem.field_p.field_mb, 40);
             GoalStateAgent.field_k.setBounds(true, -var8 + AuctionItem.field_p.field_q, var8, -40 + AuctionItem.field_p.field_mb, 40);
-            if (rn.field_d.length == 1 &&
-              rn.field_d[0] == 2) {
+            if (VertexNormal.field_d.length == 1 &&
+              VertexNormal.field_d[0] == 2) {
               var9 = 0;
             } else {
               var9 = 0;
               var10_int = 0;
               var11 = 0;
               while (true) {
-                if (var11 < rn.field_d.length) {
+                if (var11 < VertexNormal.field_d.length) {
                   stackIn_10_0 = ((er.field_h[var11 / 8] & 1 << (var11 & 7)) == 0) ? 0 : 1;
                   var12_int = stackIn_10_0;
                   if (var12_int != 0) {
                     var10_int++;
                   }
                   if (var12_int != 0 &&
-                    rn.field_d[var11] != 2) {
+                    VertexNormal.field_d[var11] != 2) {
                     var9 = 1;
                   } else {
                     var11++;
@@ -614,32 +614,32 @@ class ri extends TextWidgetPainter {
               if (var9 == 0) {
                 stackIn_54_0 = ea.field_g;
               } else {
-                stackIn_54_0 = rl.field_s;
+                stackIn_54_0 = PlayerArchetypeSortCriterion.field_s;
               }
               var15 = stackIn_54_0;
               var10 = var15;
               var10 = var15;
               var10 = var15;
-              var11Lifetime1 = nv.field_F.field_X.a(var15) + nv.field_F.field_X.charWidth('.') * 3;
+              var11Lifetime1 = MarkerSliderWidget.field_F.field_X.a(var15) + MarkerSliderWidget.field_F.field_X.charWidth('.') * 3;
               if (16 == (GameKeyHandler.field_c & 48)) {
                 var10 = var15 + ".";
               }
-              nv.field_F.field_A = 0;
-              nv.field_F.field_kb = (nv.field_F.field_q - var11Lifetime1) / 2;
+              MarkerSliderWidget.field_F.field_A = 0;
+              MarkerSliderWidget.field_F.field_kb = (MarkerSliderWidget.field_F.field_q - var11Lifetime1) / 2;
               if ((GameKeyHandler.field_c & 48) == 32) {
                 var10 = (String) (var10) + "..";
               }
               if (48 == (48 & GameKeyHandler.field_c)) {
                 var10 = (String) (var10) + "...";
               }
-              nv.field_F.field_E = (String) (var10);
+              MarkerSliderWidget.field_F.field_E = (String) (var10);
               GoalStateAgent.field_k.field_E = vt.field_a.toUpperCase();
             } else {
               stackIn_23_0 = GoalStateAgent.field_k;
               if (var9 != 0) {
                 stackIn_24_1 = AuctionListingDialog.field_F;
               } else {
-                stackIn_24_1 = wp.field_e;
+                stackIn_24_1 = LeaderboardParticipant.field_e;
               }
               stackIn_23_0.field_E = ((String) (Object) stackIn_24_1).toUpperCase();
               stackIn_26_0 = DialogOverlay.field_e;
@@ -650,7 +650,7 @@ class ri extends TextWidgetPainter {
                 stackIn_27_2 = vr.field_b;
               }
               stackIn_26_0.field_E = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(stackIn_26_1, stackIn_27_2, new String[]{GoalStateAgent.field_k.field_E});
-              nv.field_F.field_E = CheckboxLabelWidget.field_Db;
+              MarkerSliderWidget.field_F.field_E = CheckboxLabelWidget.field_Db;
               TrinketUnlockNotice.field_b.field_lb = true;
               tt.field_c = true;
               if (null != PlayArea.field_k) {
@@ -716,7 +716,7 @@ class ri extends TextWidgetPainter {
           if (null != ArchiveSource.field_b) {
             stackIn_78_0 = 0;
             if (stackIn_78_0 != TrinketUnlockNotice.field_b.field_sb) {
-              nv.a(param3, 32361);
+              MarkerSliderWidget.a(param3, 32361);
             }
             if (GoalStateAgent.field_k.field_sb != 0) {
               if (InstrumentNoteMask.field_k) {

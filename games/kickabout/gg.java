@@ -145,7 +145,7 @@ final class gg extends UiLayoutNode {
           }
           if (ConsoleValue.field_c.length != 0) {
             if (ConsoleValue.field_c.length == 1) {
-              stackIn_10_0 = cl.field_g;
+              stackIn_10_0 = FullscreenDisplayMode.field_g;
             } else {
               stackIn_10_0 = ka.field_d;
             }

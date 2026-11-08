@@ -55,7 +55,7 @@ final class AuctionListing extends IntrusiveNode {
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
         try {
-          tr.d(-12974);
+          ClientUiOverlay.pushRasterState(-12974);
           SoftwareRasterizer.intersectClip(param2, param4, param0, param3);
           if (param1 != -22914) {
             field_e = -72;
@@ -367,7 +367,7 @@ final class AuctionListing extends IntrusiveNode {
                 }
                 var2 = ni.a((byte) -96, "mu_chat_off");
                 if (null != var2) {
-                  pa.field_j = BlackFadeScreen.a(var2, true);
+                  GeneratedPanelPainter.field_j = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ni.a((byte) -50, "mu_chat_lobby");
                 if (null != var2) {
@@ -459,7 +459,7 @@ final class AuctionListing extends IntrusiveNode {
                 }
                 var2 = ni.a((byte) -127, "mu_request_declined");
                 if (null != var2) {
-                  vs.field_c = BlackFadeScreen.a(var2, true);
+                  PlayerPortraitCacheEntry.field_c = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ni.a((byte) -103, "mu_request_withdrawn");
                 if (null != var2) {
@@ -471,7 +471,7 @@ final class AuctionListing extends IntrusiveNode {
                 }
                 var2 = ni.a((byte) -113, "mu_lobby_name");
                 if (null != var2) {
-                  oh.field_h = BlackFadeScreen.a(var2, true);
+                  WorldSpriteDecoration.field_h = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ni.a((byte) -90, "mu_lobby_rating");
                 if (var2 != null) {
@@ -547,7 +547,7 @@ final class AuctionListing extends IntrusiveNode {
                 }
                 var2 = ni.a((byte) -99, "mu_options_dontmind");
                 if (null != var2) {
-                  ia.field_b = BlackFadeScreen.a(var2, true);
+                  FaceNormal.field_b = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ni.a((byte) -116, "mu_options_allow_spectate");
                 if (null != var2) {
@@ -587,11 +587,11 @@ final class AuctionListing extends IntrusiveNode {
                 }
                 var2 = ni.a((byte) -50, "rm_x_from_ignore");
                 if (null != var2) {
-                  wp.field_i = BlackFadeScreen.a(var2, param0);
+                  LeaderboardParticipant.field_i = BlackFadeScreen.a(var2, param0);
                 }
                 var2 = ni.a((byte) -112, "send_pm_to_x");
                 if (null != var2) {
-                  wp.field_a = BlackFadeScreen.a(var2, param0);
+                  LeaderboardParticipant.field_a = BlackFadeScreen.a(var2, param0);
                 }
                 var2 = ni.a((byte) -74, "send_qc_to_x");
                 if (null != var2) {
@@ -619,11 +619,11 @@ final class AuctionListing extends IntrusiveNode {
                 }
                 var2 = ni.a((byte) -115, "join_withdraw_request_xs_game");
                 if (null != var2) {
-                  ff.field_c = BlackFadeScreen.a(var2, true);
+                  QuickChatCommandType.field_c = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ni.a((byte) -75, "mu_gameopt_kick_x_from_this_game");
                 if (var2 != null) {
-                  rn.field_e = BlackFadeScreen.a(var2, true);
+                  VertexNormal.field_e = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ni.a((byte) -79, "mu_gameopt_withdraw_invite_to_x");
                 if (var2 != null) {
@@ -647,7 +647,7 @@ final class AuctionListing extends IntrusiveNode {
                 }
                 var2 = ni.a((byte) -125, "unable_to_send_message_password_a");
                 if (null != var2) {
-                  ng.field_i = BlackFadeScreen.a(var2, true);
+                  ServerTextTemplate.field_i = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ni.a((byte) -81, "unable_to_send_message_password_b");
                 if (var2 != null) {
@@ -671,7 +671,7 @@ final class AuctionListing extends IntrusiveNode {
                 }
                 var2 = ni.a((byte) -86, "mu_chat_game_show_all");
                 if (null != var2) {
-                  ef.field_p = BlackFadeScreen.a(var2, true);
+                  AnimationFrameset.field_p = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ni.a((byte) -94, "mu_chat_game_friends_only");
                 if (var2 != null) {
@@ -731,11 +731,11 @@ final class AuctionListing extends IntrusiveNode {
                 }
                 var2 = ni.a((byte) -59, "searching_for_opponents_plural");
                 if (var2 != null) {
-                  rl.field_s = BlackFadeScreen.a(var2, true);
+                  PlayerArchetypeSortCriterion.field_s = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ni.a((byte) -124, "find_opponent_singular");
                 if (null != var2) {
-                  wp.field_e = BlackFadeScreen.a(var2, true);
+                  LeaderboardParticipant.field_e = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ni.a((byte) -95, "find_opponents_plural");
                 if (null != var2) {
@@ -831,7 +831,7 @@ final class AuctionListing extends IntrusiveNode {
                 }
                 var2 = ni.a((byte) -82, "status_concluded");
                 if (var2 != null) {
-                  cr.field_f = BlackFadeScreen.a(var2, true);
+                  LinkTextPainter.field_f = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ni.a((byte) -102, "status_spectate");
                 if (null != var2) {
@@ -895,7 +895,7 @@ final class AuctionListing extends IntrusiveNode {
                 }
                 var2 = ni.a((byte) -78, "hide_players_in_xs_game");
                 if (var2 != null) {
-                  cl.field_h = BlackFadeScreen.a(var2, param0);
+                  FullscreenDisplayMode.field_h = BlackFadeScreen.a(var2, param0);
                 }
                 var2 = ni.a((byte) -126, "show_players_in_xs_game");
                 if (var2 != null) {
@@ -923,7 +923,7 @@ final class AuctionListing extends IntrusiveNode {
                 }
                 var2 = ni.a((byte) -89, "multiconst_friends");
                 if (var2 != null) {
-                  bl.field_h = BlackFadeScreen.a(var2, true);
+                  LobbyMatchPreview.field_h = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ni.a((byte) -63, "multiconst_similar_rating");
                 if (null != var2) {
@@ -1067,7 +1067,7 @@ final class AuctionListing extends IntrusiveNode {
                 }
                 var2 = ni.a((byte) -115, "gameopt_youneedratedgames");
                 if (null != var2) {
-                  rn.field_h = BlackFadeScreen.a(var2, param0);
+                  VertexNormal.field_h = BlackFadeScreen.a(var2, param0);
                 }
                 var2 = ni.a((byte) -83, "gameopt_playerneeds1ratedgame");
                 if (null != var2) {
@@ -1095,7 +1095,7 @@ final class AuctionListing extends IntrusiveNode {
                 }
                 var2 = ni.a((byte) -120, "gameopt_needchanging1");
                 if (null != var2) {
-                  ak.field_l = BlackFadeScreen.a(var2, true);
+                  WorldDrawEntry.field_l = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ni.a((byte) -70, "gameopt_needchanging2");
                 if (var2 != null) {
@@ -1253,7 +1253,7 @@ final class AuctionListing extends IntrusiveNode {
                 }
                 var2 = ni.a((byte) -71, "pleaselogin");
                 if (null != var2) {
-                  dg.field_f = BlackFadeScreen.a(var2, param0);
+                  NineSlicePanelPainter.field_f = BlackFadeScreen.a(var2, param0);
                 }
                 var2 = ni.a((byte) -95, "pleaselogin_member");
                 if (var2 != null) {
@@ -1365,7 +1365,7 @@ final class AuctionListing extends IntrusiveNode {
                 }
                 var2 = ni.a((byte) -58, "retry");
                 if (null != var2) {
-                  bt.field_d = BlackFadeScreen.a(var2, true);
+                  QuickChatCategoryCache.field_d = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ni.a((byte) -127, "back");
                 if (null != var2) {
@@ -1892,7 +1892,7 @@ final class AuctionListing extends IntrusiveNode {
                 }
                 var2 = ni.a((byte) -104, "create_alert_mismatch");
                 if (var2 != null) {
-                  rl.field_p = BlackFadeScreen.a(var2, param0);
+                  PlayerArchetypeSortCriterion.field_p = BlackFadeScreen.a(var2, param0);
                 }
                 var2 = ni.a((byte) -67, "create_passwordvalid");
                 if (var2 != null) {
@@ -1924,7 +1924,7 @@ final class AuctionListing extends IntrusiveNode {
                 }
                 var2 = ni.a((byte) -124, "unable_to_delete_friend");
                 if (null != var2) {
-                  kh.field_t = BlackFadeScreen.a(var2, true);
+                  CanvasResizePolicy.field_t = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ni.a((byte) -90, "unable_to_delete_ignore");
                 if (var2 != null) {
@@ -2004,7 +2004,7 @@ final class AuctionListing extends IntrusiveNode {
                 }
                 var2 = ni.a((byte) -106, "waitingfor_models");
                 if (null != var2) {
-                  bl.field_n = BlackFadeScreen.a(var2, true);
+                  LobbyMatchPreview.field_n = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ni.a((byte) -73, "waitingfor_fonts");
                 if (var2 != null) {
@@ -2278,7 +2278,7 @@ final class AuctionListing extends IntrusiveNode {
                 }
                 var2 = ni.a((byte) -94, "previous");
                 if (null != var2) {
-                  ei.field_f = BlackFadeScreen.a(var2, param0);
+                  RotaryDialPainter.field_f = BlackFadeScreen.a(var2, param0);
                 }
                 var2 = ni.a((byte) -70, "prev");
                 if (null != var2) {
@@ -2898,7 +2898,7 @@ final class AuctionListing extends IntrusiveNode {
                 }
                 var2 = ni.a((byte) -69, "fs_button_cancel");
                 if (var2 != null) {
-                  cr.field_g = BlackFadeScreen.a(var2, true);
+                  LinkTextPainter.field_g = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ni.a((byte) -83, "fs_accept_aftercancel");
                 if (var2 != null) {
@@ -3020,11 +3020,11 @@ final class AuctionListing extends IntrusiveNode {
                 }
                 var2 = ni.a((byte) -103, "rating_mode_long_name,0");
                 if (null != var2) {
-                  tr.field_f[0] = BlackFadeScreen.a(var2, true);
+                  ClientUiOverlay.field_f[0] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ni.a((byte) -82, "rating_mode_long_name,1");
                 if (null != var2) {
-                  tr.field_f[1] = BlackFadeScreen.a(var2, param0);
+                  ClientUiOverlay.field_f[1] = BlackFadeScreen.a(var2, param0);
                 }
                 var2 = ni.a((byte) -79, "graphics_config_fixed_size");
                 if (var2 != null) {

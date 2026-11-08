@@ -69,9 +69,9 @@ final class ListingRowCache {
         int var4;
         var4 = 115 / ((-39 - param0) / 47);
         if (param2 == 0 &&
-          param1 != ng.field_a) {
+          param1 != ServerTextTemplate.field_a) {
           WidgetContainer.field_z = true;
-          ng.field_a = param1;
+          ServerTextTemplate.field_a = param1;
           ca.a(3, param3);
         }
         if (param2 == 1 &&
@@ -128,12 +128,12 @@ final class ListingRowCache {
         try {
           var5 = (CachedListingRow) (AuctionListingDialog.field_L[param1.category].a(true, (long)param1.rowId));
           if (var5 == null) {
-            var5 = new CachedListingRow(param1, vs.a(-1090519040, param2));
+            var5 = new CachedListingRow(param1, PlayerPortraitCacheEntry.millisToMinutes(-1090519040, param2));
             AuctionListingDialog.field_L[param1.category].put(var5, -116, (long)param1.rowId);
             mt.field_f[param1.category] = mt.field_f[param1.category] + 1;
           } else {
             var5.field_g = param1;
-            var5.field_f = vs.a(-1090519040, param2);
+            var5.field_f = PlayerPortraitCacheEntry.millisToMinutes(-1090519040, param2);
           }
           int var6 = 2 / ((44 - param0) / 51);
         } catch (RuntimeException runtimeException) {
@@ -149,7 +149,7 @@ final class ListingRowCache {
         if (param2 > -83) {
           return;
         }
-        int var4 = vs.a(-1090519040, nj.monotonicMillis(85));
+        int var4 = PlayerPortraitCacheEntry.millisToMinutes(-1090519040, nj.monotonicMillis(85));
         for (var5 = 0; var5 < 7; var5++) {
           var6 = (CachedListingRow) (AuctionListingDialog.field_L[var5].b(0));
           while (var6 != null) {

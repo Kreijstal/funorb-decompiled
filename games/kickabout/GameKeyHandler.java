@@ -68,11 +68,11 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             var2_int = param0.getKeyChar();
             if (0 != var2_int && 65535 != var2_int &&
               DebugConsole.a((char) var2_int, (byte) 80)) {
-              var3 = du.field_j + 1 & 127;
+              var3 = MarkerSliderPainter.field_j + 1 & 127;
               if (var3 != LineupAgent.field_n) {
-                bt.field_a[du.field_j] = -1;
-                PlayerStats.field_a[du.field_j] = (char)var2_int;
-                du.field_j = var3;
+                QuickChatCategoryCache.field_a[MarkerSliderPainter.field_j] = -1;
+                PlayerStats.field_a[MarkerSliderPainter.field_j] = (char)var2_int;
+                MarkerSliderPainter.field_j = var3;
               }
             }
           }
@@ -121,7 +121,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
         try {
           var1_int = AuctionItem.field_f * 6 >> 8;
           var2 = 2 * DualLinkNode.field_h[0].field_i;
-          var3 = 3 * hl.field_e[0].field_a;
+          var3 = 3 * DateInputValidator.field_e[0].field_a;
           var4 = 146 * InstrumentNoteMask.field_i >> 8;
           var5 = InstrumentNoteMask.field_i * 140 >> 8;
           stackIn_4_0 = (qr.a(0, (byte) -1) >= -var2 + 896 >> 1) ? 0 : 1;
@@ -135,7 +135,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
           var10 = MySquadScreen.c(-75, 448);
           var11 = go.a(672, (byte) -56);
           var12 = DualLinkNode.field_h[0].field_i * InstrumentNoteMask.field_i >> 8;
-          var13 = InstrumentNoteMask.field_i * hl.field_e[0].field_a >> 8;
+          var13 = InstrumentNoteMask.field_i * DateInputValidator.field_e[0].field_a >> 8;
           var14 = var10 + (-(1 * var12) + 0);
           var15 = -(1 * var13) + (var11 - (var13 >> 1));
           var16 = var12 * 2 + var14;
@@ -167,7 +167,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
           for (var22Lifetime1 = 0; var22Lifetime1 < 3; var22Lifetime1++) {
             if (var6 != 0) {
               ListRow.a(-12376, -var21 + var14, var13 * var22Lifetime1 + var15, LoggedGoal.field_o);
-              AuctionsScreen.a(-840618968, -var19 + var14, hl.field_e[var1_int], var22Lifetime1 * var13 + var15);
+              AuctionsScreen.a(-840618968, -var19 + var14, DateInputValidator.field_e[var1_int], var22Lifetime1 * var13 + var15);
             }
             if (var8 != 0) {
               ListRow.a(-12376, var16, var13 * var22Lifetime1 + var15, mt.field_d);
@@ -230,11 +230,11 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
               }
             }
             if (var2_int >= 0) {
-              var3 = 127 & du.field_j + 1;
+              var3 = 127 & MarkerSliderPainter.field_j + 1;
               if (var3 != LineupAgent.field_n) {
-                bt.field_a[du.field_j] = var2_int;
-                PlayerStats.field_a[du.field_j] = (char)0;
-                du.field_j = var3;
+                QuickChatCategoryCache.field_a[MarkerSliderPainter.field_j] = var2_int;
+                PlayerStats.field_a[MarkerSliderPainter.field_j] = (char)0;
+                MarkerSliderPainter.field_j = var3;
               }
             }
             var3Lifetime1 = param0.getModifiers();

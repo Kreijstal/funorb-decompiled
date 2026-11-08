@@ -108,10 +108,10 @@ final class tt {
               var3 = var1.readString(111);
               BufferedSocket.field_h = ((String) (var3)).intern();
               var4 = var1.readUnsignedByte((byte) -115);
-              en.a(var4, -1);
+              PlayerSurnameSortCriterion.a(var4, -1);
               return;
             }
-            UnreadMessagesScreen.a("F1: " + tr.b(0), (Throwable) null, 1);
+            UnreadMessagesScreen.a("F1: " + ClientUiOverlay.describeCurrentPacket(0), (Throwable) null, 1);
             FormationView.b((byte) -116);
             if (param0 <= 38) {
               field_e = (Sprite) null;
@@ -128,9 +128,9 @@ final class tt {
           }
           var4_ref_StringLifetime1 = var1.readString(34);
           var5Lifetime1 = var1.readString(-112);
-          var6Lifetime1 = tr.a(var4_ref_StringLifetime1, (byte) 40);
+          var6Lifetime1 = ClientUiOverlay.a(var4_ref_StringLifetime1, (byte) 40);
           if (var6Lifetime1 == null) {
-            var6Lifetime1 = tr.a(var5Lifetime1, (byte) 40);
+            var6Lifetime1 = ClientUiOverlay.a(var5Lifetime1, (byte) 40);
             if (null != var6Lifetime1) {
               AvailabilityCheckRequest.field_b.a(var6Lifetime1, (byte) -4, (long)MatchAgent.a(0, (CharSequence) ((Object) var4_ref_StringLifetime1)).hashCode());
             }

@@ -61,7 +61,7 @@ final class AuctionLogEntry extends IntrusiveNode {
         if (param0 != 1315216324) {
           AuctionLogEntry.a(0);
         }
-        return fc.field_a + (ConsoleTokenCursor.field_b << 2) + (ng.field_a << 4);
+        return fc.field_a + (ConsoleTokenCursor.field_b << 2) + (ServerTextTemplate.field_a << 4);
     }
 
     final static BinaryBitmapFont a(int param0, ResourceArchive param1, int param2, int param3, ResourceArchive param4) {
@@ -159,7 +159,7 @@ final class AuctionLogEntry extends IntrusiveNode {
             return stackIn_16_0;
           }
           if (param0 == 10) {
-            stackIn_20_0 = vs.field_c;
+            stackIn_20_0 = PlayerPortraitCacheEntry.field_c;
             return stackIn_20_0;
           }
           if (param0 == 11) {

@@ -101,7 +101,7 @@ final class CascadingMenu extends UiLayoutNode {
         field_Nb = null;
         field_Mb = null;
         if (param0 < 26) {
-          CascadingMenu.a((byte) 45, 76);
+          CascadingMenu.getQuickChatCommandType((byte) 45, 76);
         }
         field_Ib = null;
     }
@@ -238,16 +238,16 @@ final class CascadingMenu extends UiLayoutNode {
         this.setSlideProgress(param0 ^ -5005, 12);
     }
 
-    final static ff a(byte param0, int param1) {
+    final static QuickChatCommandType getQuickChatCommandType(byte param0, int param1) {
         int var4 = 0;
         int var2;
-        ff[] var3;
+        QuickChatCommandType[] var3;
         int var5;
         var5 = Kickabout.field_G;
         var2 = -45 % ((param0 - 92) / 32);
-        var3 = rp.b(-27666);
+        var3 = rp.getQuickChatCommandTypes(-27666);
         for (var4 = 0; var3.length > var4; var4++) {
-          if (param1 == var3[var4].field_a) {
+          if (param1 == var3[var4].id) {
             return var3[var4];
           }
         }

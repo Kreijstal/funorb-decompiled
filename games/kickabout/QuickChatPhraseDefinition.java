@@ -23,7 +23,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
         RuntimeException var4 = null;
         int var5 = 0;
         int var6 = 0;
-        ff var7 = null;
+        QuickChatCommandType var7 = null;
         int var9 = 0;
         var9 = Kickabout.field_G;
         try {
@@ -43,12 +43,12 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
                 this.field_p = new int[var4_int];
                 for (var5 = 0; var5 < var4_int; var5++) {
                   var6 = param2.readUnsignedShort((byte) 81);
-                  var7 = CascadingMenu.a((byte) 127, var6);
+                  var7 = CascadingMenu.getQuickChatCommandType((byte) 127, var6);
                   if (var7 != null) {
                     this.field_p[var5] = var6;
-                    array$0 = new int[var7.field_d];
+                    array$0 = new int[var7.parameterCount];
                     this.field_t[var5] = array$0;
-                    for (var8 = 0; var8 < var7.field_d; var8++) {
+                    for (var8 = 0; var8 < var7.parameterCount; var8++) {
                       this.field_t[var5][var8] = param2.readUnsignedShort((byte) 81);
                     }
                   }

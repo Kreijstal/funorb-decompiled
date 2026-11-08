@@ -87,19 +87,19 @@ final class IntTripleCommand extends ConsoleCommand {
         IntrusiveDeque var5 = null;
         var4 = Kickabout.field_G;
         try {
-          if (ia.field_c) {
+          if (FaceNormal.field_c) {
             NodeHashTableIterator.a(param0, 0);
             return;
           }
           stackIn_7_0 = -27054;
           while (!TriangleMesh.a(stackIn_7_0, param0)) {
             var2 = param0.g(24009);
-            while (var2 instanceof ak) {
-              if (var2.field_d instanceof ak) {
+            while (var2 instanceof WorldDrawEntry) {
+              if (var2.field_d instanceof WorldDrawEntry) {
                 var3 = var2.field_d;
-                if (((ak) (var2)).a((byte) -13) > ((ak) (var3)).a((byte) 124)) {
+                if (((WorldDrawEntry) (var2)).getSortY((byte) -13) > ((WorldDrawEntry) (var3)).getSortY((byte) 124)) {
                   var2.c((byte) -109);
-                  pa.a(var2, var3, (byte) 126);
+                  GeneratedPanelPainter.a(var2, var3, (byte) 126);
                 }
                 var2 = var3;
                 continue;

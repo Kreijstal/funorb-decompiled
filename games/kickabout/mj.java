@@ -12,8 +12,8 @@ final class mj {
         double[] var6 = null;
         double[] var5 = null;
         int var4 = Kickabout.field_G;
-        hl.field_e = ng.a(0, param1, param0 - 7, 11, true, 30);
-        hq.field_e = ng.a(30, param1, param0 ^ 111, 11, false, 60);
+        DateInputValidator.field_e = ServerTextTemplate.a(0, param1, param0 - 7, 11, true, 30);
+        hq.field_e = ServerTextTemplate.a(30, param1, param0 ^ 111, 11, false, 60);
         DualLinkNode.field_h = SortCriterion.a(60, param1, true, (byte) -67, 80, 11);
         ModalPanel.field_G = SortCriterion.a(80, param1, false, (byte) -120, 95, 11);
         c.field_f = (Sprite[]) ((Object) new ArgbSprite[4]);
@@ -78,7 +78,7 @@ final class mj {
           mj.a(49);
         }
         PlayArea.field_d = param0 * 8.0;
-        if (ia.field_c) {
+        if (FaceNormal.field_c) {
           CachedArchiveSource.field_C = 896.0 - CachedArchiveSource.field_C;
           AuctionLogEntry.field_f = 1344.0 - AuctionLogEntry.field_f;
         }

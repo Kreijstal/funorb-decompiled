@@ -149,16 +149,16 @@ class TextHotspotWidget extends TextButton {
         }
     }
 
-    final static ak a(RenderedFootballer param0, int param1) {
-        ak var2 = null;
+    final static WorldDrawEntry a(RenderedFootballer param0, int param1) {
+        WorldDrawEntry var2 = null;
         RuntimeException var2_ref = null;
-        ak stackIn_1_0 = null;
+        WorldDrawEntry stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2 = new ak(param1);
+          var2 = new WorldDrawEntry(param1);
           var2.field_m = param0;
           stackIn_1_0 = var2;
           return stackIn_1_0;

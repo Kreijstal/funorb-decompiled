@@ -96,8 +96,8 @@ final class WidgetTheme {
         int var7_int = 0;
         StatefulTextPainter var6 = null;
         StatefulTextPainter var7 = null;
-        ei discarded$0 = null;
-        du discarded$1 = null;
+        RotaryDialPainter discarded$0 = null;
+        MarkerSliderPainter discarded$1 = null;
         StatefulTextPainter var8 = null;
         Sprite[] var9 = null;
         Sprite[] var10 = null;
@@ -149,9 +149,9 @@ final class WidgetTheme {
           var7.field_e = 0;
           var7.a(ShopPlayerSlot.a((byte) 26, 8947848), -23952);
           var7.a(1, -12085).a(true, ShopPlayerSlot.a((byte) 26, 11184810)).b(-2, 2236962);
-          this.field_o = (WidgetPainter) ((Object) new re(param0, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
-          discarded$0 = new ei(param0, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
-          discarded$1 = new du(param0, 16777215, -1, 125269879, 4473924, 3, 268435455);
+          this.field_o = (WidgetPainter) ((Object) new CheckboxPainter(param0, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
+          discarded$0 = new RotaryDialPainter(param0, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
+          discarded$1 = new MarkerSliderPainter(param0, 16777215, -1, 125269879, 4473924, 3, 268435455);
           var8 = new StatefulTextPainter();
           var17.copyStyleTo(var8, (byte) -87);
           var8.a(0, param1 ^ -8811).a(true, TrinketCountSortCriterion.a(10066329, 7829367, 15658734, (byte) -118)).b(-2, 1118481).a(-1, true);

@@ -119,7 +119,7 @@ abstract class LoginCredentials {
         return SetLagCommand.a((byte) -114, ms.field_b);
     }
 
-    abstract kj getLoginKind(byte param0);
+    abstract LoginKind getLoginKind(byte param0);
 
     abstract void writeCredentials(PacketBuffer param0, int param1);
 

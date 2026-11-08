@@ -22,10 +22,10 @@ final class LeaguesHelpScreen extends PagedHelpScreen {
           if (param1 != 31100) {
             field_G = (String) null;
           }
-          var2_int = ag.field_e;
+          var2_int = SoundStreamHandle.field_e;
           if (param0.field_c == 2) {
             if (param0.field_m) {
-              var2_intLifetime1 = ag.field_e;
+              var2_intLifetime1 = SoundStreamHandle.field_e;
             } else {
               if (param0.field_j == 0 &&
                 param0.field_p == 0) {
@@ -180,9 +180,9 @@ final class LeaguesHelpScreen extends PagedHelpScreen {
             var3 = null;
             var4 = 0;
             if (var2_ref_gm.dashCooldown > 0) {
-              var5 = Math.min(-1 + kj.field_b.length, 210 * var2_ref_gm.dashCooldown / var2_ref_gm.dashCooldown((byte) -99));
+              var5 = Math.min(-1 + LoginKind.field_b.length, 210 * var2_ref_gm.dashCooldown / var2_ref_gm.dashCooldown((byte) -99));
               var4 = 72;
-              var3 = kj.field_b[var5];
+              var3 = LoginKind.field_b[var5];
             } else {
               if (mn.field_b[var1_int] > 0) {
                 var4 = PlayerStatSortCriterion.field_n[-1 + mn.field_b[var1_int]];

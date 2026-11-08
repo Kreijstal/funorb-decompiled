@@ -16,7 +16,7 @@ final class ad {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 == 26300) {
-            stackIn_4_0 = MatchPhaseView.field_b + dg.a((byte) -128, 0, (long)param0, true, ArchiveRequest.field_r);
+            stackIn_4_0 = MatchPhaseView.field_b + NineSlicePanelPainter.a((byte) -128, 0, (long)param0, true, ArchiveRequest.field_r);
             return stackIn_4_0;
           }
           stackIn_2_0 = (String) null;
@@ -215,167 +215,167 @@ final class ad {
                 }
                 var2 = DateOfBirthPanel.a("standalone_loading_strings,0", -112);
                 if (var2 != null) {
-                  nv.field_I[0] = BlackFadeScreen.a(var2, true);
+                  MarkerSliderWidget.field_I[0] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("standalone_loading_strings,1", -99);
                 if (var2 != null) {
-                  nv.field_I[1] = BlackFadeScreen.a(var2, true);
+                  MarkerSliderWidget.field_I[1] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("standalone_loading_strings,2", -84);
                 if (null != var2) {
-                  nv.field_I[2] = BlackFadeScreen.a(var2, true);
+                  MarkerSliderWidget.field_I[2] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("standalone_loading_strings,3", -111);
                 if (var2 != null) {
-                  nv.field_I[3] = BlackFadeScreen.a(var2, true);
+                  MarkerSliderWidget.field_I[3] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("standalone_loading_strings,4", -99);
                 if (var2 != null) {
-                  nv.field_I[4] = BlackFadeScreen.a(var2, true);
+                  MarkerSliderWidget.field_I[4] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("standalone_loading_strings,5", -102);
                 if (null != var2) {
-                  nv.field_I[5] = BlackFadeScreen.a(var2, true);
+                  MarkerSliderWidget.field_I[5] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("standalone_loading_strings,6", -109);
                 if (var2 != null) {
-                  nv.field_I[6] = BlackFadeScreen.a(var2, true);
+                  MarkerSliderWidget.field_I[6] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("standalone_loading_strings,7", -114);
                 if (null != var2) {
-                  nv.field_I[7] = BlackFadeScreen.a(var2, true);
+                  MarkerSliderWidget.field_I[7] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("standalone_loading_strings,8", -128);
                 if (var2 != null) {
-                  nv.field_I[8] = BlackFadeScreen.a(var2, true);
+                  MarkerSliderWidget.field_I[8] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("standalone_loading_strings,9", -116);
                 if (var2 != null) {
-                  nv.field_I[9] = BlackFadeScreen.a(var2, true);
+                  MarkerSliderWidget.field_I[9] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("standalone_loading_strings,10", -110);
                 if (null != var2) {
-                  nv.field_I[10] = BlackFadeScreen.a(var2, true);
+                  MarkerSliderWidget.field_I[10] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("standalone_loading_strings,11", param1 ^ -91);
                 if (var2 != null) {
-                  nv.field_I[11] = BlackFadeScreen.a(var2, true);
+                  MarkerSliderWidget.field_I[11] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("standalone_loading_strings,12", -81);
                 if (null != var2) {
-                  nv.field_I[12] = BlackFadeScreen.a(var2, true);
+                  MarkerSliderWidget.field_I[12] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("standalone_loading_strings,13", -127);
                 if (var2 != null) {
-                  nv.field_I[13] = BlackFadeScreen.a(var2, true);
+                  MarkerSliderWidget.field_I[13] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("standalone_loading_strings,14", -103);
                 if (var2 != null) {
-                  nv.field_I[14] = BlackFadeScreen.a(var2, true);
+                  MarkerSliderWidget.field_I[14] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("standalone_loading_strings,15", -83);
                 if (null != var2) {
-                  nv.field_I[15] = BlackFadeScreen.a(var2, true);
+                  MarkerSliderWidget.field_I[15] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("standalone_loading_strings,16", -124);
                 if (null != var2) {
-                  nv.field_I[16] = BlackFadeScreen.a(var2, true);
+                  MarkerSliderWidget.field_I[16] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("standalone_loading_strings,17", -104);
                 if (var2 != null) {
-                  nv.field_I[17] = BlackFadeScreen.a(var2, true);
+                  MarkerSliderWidget.field_I[17] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("standalone_loading_strings,18", -90);
                 if (null != var2) {
-                  nv.field_I[18] = BlackFadeScreen.a(var2, true);
+                  MarkerSliderWidget.field_I[18] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("standalone_loading_strings,19", -92);
                 if (var2 != null) {
-                  nv.field_I[19] = BlackFadeScreen.a(var2, true);
+                  MarkerSliderWidget.field_I[19] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("standalone_loading_strings,20", -111);
                 if (null != var2) {
-                  nv.field_I[20] = BlackFadeScreen.a(var2, true);
+                  MarkerSliderWidget.field_I[20] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("standalone_loading_strings,21", param1 ^ -124);
                 if (null != var2) {
-                  nv.field_I[21] = BlackFadeScreen.a(var2, true);
+                  MarkerSliderWidget.field_I[21] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("standalone_loading_strings,22", param1 ^ -100);
                 if (var2 != null) {
-                  nv.field_I[22] = BlackFadeScreen.a(var2, true);
+                  MarkerSliderWidget.field_I[22] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("standalone_loading_strings,23", -111);
                 if (var2 != null) {
-                  nv.field_I[23] = BlackFadeScreen.a(var2, true);
+                  MarkerSliderWidget.field_I[23] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("standalone_loading_strings,24", -128);
                 if (null != var2) {
-                  nv.field_I[24] = BlackFadeScreen.a(var2, true);
+                  MarkerSliderWidget.field_I[24] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("standalone_loading_strings,25", param1 ^ -82);
                 if (null != var2) {
-                  nv.field_I[25] = BlackFadeScreen.a(var2, true);
+                  MarkerSliderWidget.field_I[25] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("standalone_loading_strings,26", param1 - 96);
                 if (null != var2) {
-                  nv.field_I[26] = BlackFadeScreen.a(var2, true);
+                  MarkerSliderWidget.field_I[26] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("standalone_loading_strings,27", -109);
                 if (null != var2) {
-                  nv.field_I[27] = BlackFadeScreen.a(var2, true);
+                  MarkerSliderWidget.field_I[27] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("standalone_loading_strings,28", -90);
                 if (var2 != null) {
-                  nv.field_I[28] = BlackFadeScreen.a(var2, true);
+                  MarkerSliderWidget.field_I[28] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("standalone_loading_strings,29", -101);
                 if (null != var2) {
-                  nv.field_I[29] = BlackFadeScreen.a(var2, true);
+                  MarkerSliderWidget.field_I[29] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("standalone_loading_strings,30", param1 - 121);
                 if (var2 != null) {
-                  nv.field_I[30] = BlackFadeScreen.a(var2, true);
+                  MarkerSliderWidget.field_I[30] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("standalone_loading_strings,31", -99);
                 if (null != var2) {
-                  nv.field_I[31] = BlackFadeScreen.a(var2, true);
+                  MarkerSliderWidget.field_I[31] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("standalone_loading_strings,32", -127);
                 if (var2 != null) {
-                  nv.field_I[32] = BlackFadeScreen.a(var2, true);
+                  MarkerSliderWidget.field_I[32] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("standalone_loading_strings,33", -101);
                 if (var2 != null) {
-                  nv.field_I[33] = BlackFadeScreen.a(var2, true);
+                  MarkerSliderWidget.field_I[33] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("standalone_loading_strings,34", param1 - 115);
                 if (var2 != null) {
-                  nv.field_I[34] = BlackFadeScreen.a(var2, true);
+                  MarkerSliderWidget.field_I[34] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("standalone_loading_strings,35", -95);
                 if (var2 != null) {
-                  nv.field_I[35] = BlackFadeScreen.a(var2, true);
+                  MarkerSliderWidget.field_I[35] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("standalone_loading_strings,36", param1 - 127);
                 if (var2 != null) {
-                  nv.field_I[36] = BlackFadeScreen.a(var2, true);
+                  MarkerSliderWidget.field_I[36] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("standalone_loading_strings,37", -113);
                 if (var2 != null) {
-                  nv.field_I[37] = BlackFadeScreen.a(var2, true);
+                  MarkerSliderWidget.field_I[37] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("standalone_loading_strings,38", -109);
                 if (null != var2) {
-                  nv.field_I[38] = BlackFadeScreen.a(var2, true);
+                  MarkerSliderWidget.field_I[38] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("standalone_loading_strings,39", param1 - 112);
                 if (null != var2) {
-                  nv.field_I[39] = BlackFadeScreen.a(var2, true);
+                  MarkerSliderWidget.field_I[39] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("standalone_loading_strings,40", -101);
                 if (null != var2) {
-                  nv.field_I[40] = BlackFadeScreen.a(var2, true);
+                  MarkerSliderWidget.field_I[40] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("achievement_names,0", param1 - 87);
                 if (var2 != null) {
@@ -979,7 +979,7 @@ final class ad {
                 }
                 var2 = DateOfBirthPanel.a("gold_league_winner_singular", -120);
                 if (null != var2) {
-                  cl.field_g = BlackFadeScreen.a(var2, true);
+                  FullscreenDisplayMode.field_g = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("gold_league_winner_plural", -106);
                 if (var2 != null) {
@@ -1027,41 +1027,41 @@ final class ad {
                 }
                 var2 = DateOfBirthPanel.a("gameoptnames,0,0", -112);
                 if (null != var2) {
-                  rk.field_e[0][0] = BlackFadeScreen.a(var2, true);
+                  WorldSpriteSequence.field_e[0][0] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("gameoptnames,0,1", -91);
                 if (null != var2) {
-                  rk.field_e[0][1] = BlackFadeScreen.a(var2, true);
+                  WorldSpriteSequence.field_e[0][1] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("gameoptnames,0,2", param1 ^ -101);
                 if (var2 != null) {
-                  rk.field_e[0][2] = BlackFadeScreen.a(var2, true);
+                  WorldSpriteSequence.field_e[0][2] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("gameoptnames,1,0", -84);
                 if (var2 != null) {
-                  rk.field_e[1][0] = BlackFadeScreen.a(var2, true);
+                  WorldSpriteSequence.field_e[1][0] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("gameoptnames,1,1", -110);
                 if (var2 != null) {
-                  rk.field_e[1][1] = BlackFadeScreen.a(var2, true);
+                  WorldSpriteSequence.field_e[1][1] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("gameoptnames,2,0", param1 ^ -126);
                 if (var2 != null) {
-                  rk.field_e[2][0] = BlackFadeScreen.a(var2, true);
+                  WorldSpriteSequence.field_e[2][0] = BlackFadeScreen.a(var2, true);
                 }
             }
             void runChunk1() throws java.lang.RuntimeException {
                 var2 = DateOfBirthPanel.a("gameoptnames,2,1", -120);
                 if (null != var2) {
-                  rk.field_e[2][1] = BlackFadeScreen.a(var2, true);
+                  WorldSpriteSequence.field_e[2][1] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("gameoptnames,3,0", param1 ^ -83);
                 if (var2 != null) {
-                  rk.field_e[3][0] = BlackFadeScreen.a(var2, true);
+                  WorldSpriteSequence.field_e[3][0] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("gameoptnames,3,1", param1 ^ -126);
                 if (var2 != null) {
-                  rk.field_e[3][1] = BlackFadeScreen.a(var2, true);
+                  WorldSpriteSequence.field_e[3][1] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("gameopttooltips,0,0", -124);
                 if (var2 != null) {
@@ -1137,7 +1137,7 @@ final class ad {
                 }
                 var2 = DateOfBirthPanel.a("keycode_down", -107);
                 if (var2 != null) {
-                  oc.field_e = 255 & var2[0];
+                  ArchivePreloadEntry.field_e = 255 & var2[0];
                 }
                 var2 = DateOfBirthPanel.a("keycode_toggle_chat", -99);
                 if (var2 != null) {
@@ -1165,11 +1165,11 @@ final class ad {
                 }
                 var2 = DateOfBirthPanel.a("controls_attached,0", -95);
                 if (var2 != null) {
-                  cg.field_G[0] = BlackFadeScreen.a(var2, true);
+                  CaptionedContainer.field_G[0] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("controls_attached,1", param1 - 85);
                 if (null != var2) {
-                  cg.field_G[1] = BlackFadeScreen.a(var2, true);
+                  CaptionedContainer.field_G[1] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("controls_detached,0", -116);
                 if (var2 != null) {
@@ -1213,7 +1213,7 @@ final class ad {
                 }
                 var2 = DateOfBirthPanel.a("ok", param1 - 90);
                 if (null != var2) {
-                  s.field_F = BlackFadeScreen.a(var2, true);
+                  RotaryDialWidget.field_F = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("awesome_exclamation", -116);
                 if (var2 != null) {
@@ -1257,7 +1257,7 @@ final class ad {
                 }
                 var2 = DateOfBirthPanel.a("formation_defensive", -101);
                 if (null != var2) {
-                  rl.field_t = BlackFadeScreen.a(var2, true);
+                  PlayerArchetypeSortCriterion.field_t = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("formation_slight_stagger", param1 - 111);
                 if (var2 != null) {
@@ -2010,7 +2010,7 @@ final class ad {
                 }
                 var2 = DateOfBirthPanel.a("menu_online_auctions", -109);
                 if (null != var2) {
-                  kj.field_c = BlackFadeScreen.a(var2, true);
+                  LoginKind.field_c = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("instructions_gameplay", -103);
                 if (null != var2) {
@@ -2202,7 +2202,7 @@ final class ad {
                 }
                 var2 = DateOfBirthPanel.a("title_finished2", -93);
                 if (var2 != null) {
-                  rl.field_u = BlackFadeScreen.a(var2, true);
+                  PlayerArchetypeSortCriterion.field_u = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("gameover_won", -96);
                 if (null != var2) {
@@ -2246,7 +2246,7 @@ final class ad {
                 }
                 var2 = DateOfBirthPanel.a("show", -124);
                 if (null != var2) {
-                  ag.field_l = BlackFadeScreen.a(var2, true);
+                  SoundStreamHandle.field_l = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("hide", -108);
                 if (var2 != null) {
@@ -2370,7 +2370,7 @@ final class ad {
                 }
                 var2 = DateOfBirthPanel.a("mouseover_autopass", -81);
                 if (var2 != null) {
-                  nv.field_G = BlackFadeScreen.a(var2, true);
+                  MarkerSliderWidget.field_G = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("click_for_help", -117);
                 if (var2 != null) {
@@ -2482,7 +2482,7 @@ final class ad {
                 }
                 var2 = DateOfBirthPanel.a("league_points_colon", -108);
                 if (null != var2) {
-                  bt.field_c = BlackFadeScreen.a(var2, true);
+                  QuickChatCategoryCache.field_c = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("money_colon", param1 ^ -120);
                 if (null != var2) {
@@ -3048,7 +3048,7 @@ final class ad {
                 }
                 var2 = DateOfBirthPanel.a("my_squad", -105);
                 if (null != var2) {
-                  oc.field_b = BlackFadeScreen.a(var2, true);
+                  ArchivePreloadEntry.field_b = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("palette_title,0", -102);
                 if (var2 != null) {
@@ -3064,7 +3064,7 @@ final class ad {
                 }
                 var2 = DateOfBirthPanel.a("team_results", param1 - 89);
                 if (var2 != null) {
-                  oh.field_g = BlackFadeScreen.a(var2, true);
+                  WorldSpriteDecoration.field_g = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("my_results", -87);
                 if (null != var2) {
@@ -3124,7 +3124,7 @@ final class ad {
                 }
                 var2 = DateOfBirthPanel.a("profile", -107);
                 if (null != var2) {
-                  tr.field_g = BlackFadeScreen.a(var2, true);
+                  ClientUiOverlay.field_g = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("stats", -119);
                 if (null != var2) {
@@ -3368,7 +3368,7 @@ final class ad {
                 }
                 var2 = DateOfBirthPanel.a("click_turn_off_buyout", -111);
                 if (null != var2) {
-                  pa.field_i = BlackFadeScreen.a(var2, true);
+                  GeneratedPanelPainter.field_i = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("click_turn_on_buyout", param1 - 109);
                 if (var2 != null) {
@@ -3468,7 +3468,7 @@ final class ad {
                 }
                 var2 = DateOfBirthPanel.a("insufficient_funds", -85);
                 if (null != var2) {
-                  ef.field_n = BlackFadeScreen.a(var2, true);
+                  AnimationFrameset.field_n = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("default_player_name", -100);
                 if (var2 != null) {
@@ -3572,31 +3572,31 @@ final class ad {
                 }
                 var2 = DateOfBirthPanel.a("instructions_gameplay9,0", param1 ^ -127);
                 if (var2 != null) {
-                  s.field_M[0] = BlackFadeScreen.a(var2, true);
+                  RotaryDialWidget.field_M[0] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("instructions_gameplay9,1", -115);
                 if (null != var2) {
-                  s.field_M[1] = BlackFadeScreen.a(var2, true);
+                  RotaryDialWidget.field_M[1] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("instructions_gameplay9,2", param1 - 119);
                 if (null != var2) {
-                  s.field_M[2] = BlackFadeScreen.a(var2, true);
+                  RotaryDialWidget.field_M[2] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("instructions_gameplay9,3", -125);
                 if (null != var2) {
-                  s.field_M[3] = BlackFadeScreen.a(var2, true);
+                  RotaryDialWidget.field_M[3] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("instructions_gameplay9,4", param1 - 81);
                 if (var2 != null) {
-                  s.field_M[4] = BlackFadeScreen.a(var2, true);
+                  RotaryDialWidget.field_M[4] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("instructions_gameplay9,5", -122);
                 if (null != var2) {
-                  s.field_M[5] = BlackFadeScreen.a(var2, true);
+                  RotaryDialWidget.field_M[5] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("instructions_gameplay9,6", -90);
                 if (null != var2) {
-                  s.field_M[6] = BlackFadeScreen.a(var2, true);
+                  RotaryDialWidget.field_M[6] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("instructions_gameplay10", -117);
                 if (null != var2) {
@@ -3604,35 +3604,35 @@ final class ad {
                 }
                 var2 = DateOfBirthPanel.a("instructions_gameplay11,0", -124);
                 if (null != var2) {
-                  bl.field_d[0] = BlackFadeScreen.a(var2, true);
+                  LobbyMatchPreview.field_d[0] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("instructions_gameplay11,1", param1 ^ -94);
                 if (null != var2) {
-                  bl.field_d[1] = BlackFadeScreen.a(var2, true);
+                  LobbyMatchPreview.field_d[1] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("instructions_gameplay11,2", -112);
                 if (var2 != null) {
-                  bl.field_d[2] = BlackFadeScreen.a(var2, true);
+                  LobbyMatchPreview.field_d[2] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("instructions_gameplay11,3", -84);
                 if (null != var2) {
-                  bl.field_d[3] = BlackFadeScreen.a(var2, true);
+                  LobbyMatchPreview.field_d[3] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("instructions_gameplay12,0", -115);
                 if (var2 != null) {
-                  ng.field_k[0] = BlackFadeScreen.a(var2, true);
+                  ServerTextTemplate.field_k[0] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("instructions_gameplay12,1", -100);
                 if (null != var2) {
-                  ng.field_k[1] = BlackFadeScreen.a(var2, true);
+                  ServerTextTemplate.field_k[1] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("instructions_gameplay12,2", -112);
                 if (null != var2) {
-                  ng.field_k[2] = BlackFadeScreen.a(var2, true);
+                  ServerTextTemplate.field_k[2] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("instructions_gameplay12,3", param1 ^ -103);
                 if (var2 != null) {
-                  ng.field_k[3] = BlackFadeScreen.a(var2, true);
+                  ServerTextTemplate.field_k[3] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("instructions_gameplay13", param1 ^ -91);
                 if (null != var2) {
@@ -3838,7 +3838,7 @@ final class ad {
                 }
                 var2 = DateOfBirthPanel.a("mouseover_lockmouse", -108);
                 if (null != var2) {
-                  vs.field_l = BlackFadeScreen.a(var2, true);
+                  PlayerPortraitCacheEntry.field_l = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("search", param1 ^ -86);
                 if (null != var2) {
@@ -3854,7 +3854,7 @@ final class ad {
                 }
                 var2 = DateOfBirthPanel.a("tournament_stats", -117);
                 if (var2 != null) {
-                  ia.field_h = BlackFadeScreen.a(var2, true);
+                  FaceNormal.field_h = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("tournament_returntolobby", -112);
                 if (var2 != null) {
@@ -4114,7 +4114,7 @@ final class ad {
                 }
                 var2 = DateOfBirthPanel.a("percentage_text", -113);
                 if (null != var2) {
-                  ei.field_c = BlackFadeScreen.a(var2, true);
+                  RotaryDialPainter.field_c = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("user_text", -123);
                 if (null != var2) {
@@ -4290,7 +4290,7 @@ final class ad {
                 }
                 var2 = DateOfBirthPanel.a("players_text", param1 - 95);
                 if (null != var2) {
-                  nk.field_g = BlackFadeScreen.a(var2, true);
+                  TexturedPanelPainter.field_g = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("games_inprogress", -80);
                 if (null != var2) {
@@ -4306,7 +4306,7 @@ final class ad {
                 }
                 var2 = DateOfBirthPanel.a("miniview_spectate", -106);
                 if (null != var2) {
-                  du.field_g = BlackFadeScreen.a(var2, true);
+                  MarkerSliderPainter.field_g = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("goals_and_posession", param1 ^ -101);
                 if (var2 != null) {
@@ -4330,7 +4330,7 @@ final class ad {
                 }
                 var2 = DateOfBirthPanel.a("tournament_game_chat_prefix", -86);
                 if (var2 != null) {
-                  wn.field_h = BlackFadeScreen.a(var2, true);
+                  AccountRegistrationResponse.field_h = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("nextround_string", -126);
                 if (var2 != null) {
@@ -4374,7 +4374,7 @@ final class ad {
                 }
                 var2 = DateOfBirthPanel.a("tournament_legitimatewin", -93);
                 if (null != var2) {
-                  cg.field_L = BlackFadeScreen.a(var2, true);
+                  CaptionedContainer.field_L = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("tournament_fullwin", param1 - 88);
                 if (null != var2) {
@@ -4410,7 +4410,7 @@ final class ad {
                 }
                 var2 = DateOfBirthPanel.a("tournament_draw_passes", param1 - 87);
                 if (null != var2) {
-                  ef.field_s = BlackFadeScreen.a(var2, true);
+                  AnimationFrameset.field_s = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("tournament_draw_passes2", param1 - 118);
                 if (null != var2) {
@@ -4454,7 +4454,7 @@ final class ad {
                 }
                 var2 = DateOfBirthPanel.a("instructions_gamemode0", -105);
                 if (null != var2) {
-                  tr.field_c = BlackFadeScreen.a(var2, true);
+                  ClientUiOverlay.field_c = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("instructions_gamemode1,0", -97);
                 if (null != var2) {
@@ -4478,15 +4478,15 @@ final class ad {
                 }
                 var2 = DateOfBirthPanel.a("instructions_gamemode4,0", -91);
                 if (var2 != null) {
-                  re.field_b[0] = BlackFadeScreen.a(var2, true);
+                  CheckboxPainter.field_b[0] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("instructions_gamemode4,1", -125);
                 if (var2 != null) {
-                  re.field_b[1] = BlackFadeScreen.a(var2, true);
+                  CheckboxPainter.field_b[1] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("instructions_gamemode4,2", -99);
                 if (var2 != null) {
-                  re.field_b[2] = BlackFadeScreen.a(var2, true);
+                  CheckboxPainter.field_b[2] = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("instructions_gamemode5", -89);
                 if (var2 != null) {

@@ -114,7 +114,7 @@ final class NumericDateInputWidget extends DateInputWidget {
         }
     }
 
-    final void a(hl param0, int param1) {
+    final void a(DateInputValidator param0, int param1) {
         try {
           super.a(param0, param1);
           this.field_L.field_k = (UiListener) ((Object) param0);

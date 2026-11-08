@@ -102,7 +102,7 @@ final class PlayerShopScreen extends TeamManagementScreen {
           this.field_O = this.field_O - 1;
         }
         var3 = this.field_J.h((byte) -38);
-        tc.a(ic.field_h.field_x, 5464);
+        QuickChatCategory.a(ic.field_h.field_x, 5464);
         this.field_J.a(param1, false);
         this.field_L.field_s = this.slideOffsetX;
         this.field_L.updateInput(0, param1);
@@ -257,7 +257,7 @@ final class PlayerShopScreen extends TeamManagementScreen {
     final void buildWidgets(int param0) {
         SortCriterion[] var3 = new SortCriterion[MainMenuScreen.field_D.length];
         SortCriterion[] var4 = var3;
-        var3[1] = vs.field_k;
+        var3[1] = PlayerPortraitCacheEntry.field_k;
         var3[2] = ClientException.field_a;
         var3[0] = GameModesHelpScreen.field_H;
         var3[4] = SortCriterion.field_k;
@@ -282,7 +282,7 @@ final class PlayerShopScreen extends TeamManagementScreen {
     final void drawScreen(int param0, boolean param1) {
         super.drawScreen(param0, param1);
         SoftwareRasterizer.fillRectangleAlpha(this.field_Q.field_F, this.field_Q.field_T, this.field_Q.field_q, this.field_Q.field_mb, 65793, 96);
-        un.field_d.a(oc.field_b, 14 + this.field_Q.field_F, this.field_Q.field_T + 25, 16777215, -1);
+        un.field_d.a(ArchivePreloadEntry.field_b, 14 + this.field_Q.field_F, this.field_Q.field_T + 25, 16777215, -1);
         this.field_T.k((byte) 55);
         SoftwareRasterizer.fillRectangleAlpha(this.field_G.field_F, this.field_G.field_T, this.field_G.field_q, this.field_G.field_mb, 65793, 96);
         un.field_d.a(MusicPatchNode.field_i, 14 + this.field_G.field_F, 21 + this.field_G.field_T, 16777215, -1);

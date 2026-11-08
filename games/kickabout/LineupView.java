@@ -228,7 +228,7 @@ final class LineupView extends MatchPhaseView {
                   for (var7 = 3; 0 <= var7; var7--) {
                     if (~this.field_a.field_i[this.field_h][var7] == ~this.field_g &&
                       this.a(false, this.field_t[var7])) {
-                      kj.a((byte) 45);
+                      LoginKind.a((byte) 45);
                       this.i(74, var5 + 1 << 2 | var7);
                     }
                   }
@@ -453,12 +453,12 @@ final class LineupView extends MatchPhaseView {
             var5_int = this.field_a.field_i[this.field_h][var4Lifetime4];
             var6 = (this.field_t[var4Lifetime4].field_q >> 1) + this.field_t[var4Lifetime4].field_F;
             var7 = -16 + this.field_t[var4Lifetime4].field_T + this.field_t[var4Lifetime4].field_mb;
-            PacketBuffer.a(67, ff.field_b);
+            PacketBuffer.a(67, QuickChatCommandType.field_b);
             SoftwareRasterizer.clearFramebuffer();
             ConsoleTokenCursor.field_d.d(this.field_a.field_S[var5_int].toLowerCase(), SoftwareRasterizer.field_g >> 1, -1 + SoftwareRasterizer.field_f, 16777062, -1);
             TeamManagementScreen.e(param0 + 116);
-            eo.a(ff.field_b, 65793);
-            ff.field_b.c(-(ff.field_b.field_o >> 1) + var6, var7 - ff.field_b.field_v);
+            eo.a(QuickChatCommandType.field_b, 65793);
+            QuickChatCommandType.field_b.c(-(QuickChatCommandType.field_b.field_o >> 1) + var6, var7 - QuickChatCommandType.field_b.field_v);
           }
         }
         if (this.field_l != -1) {

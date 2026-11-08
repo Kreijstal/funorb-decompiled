@@ -14,8 +14,8 @@ final class rf {
         int var7 = 0;
         int var8 = 0;
         ResourceArchive var9 = null;
-        ef var10 = null;
-        ef var11 = null;
+        AnimationFrameset var10 = null;
+        AnimationFrameset var11 = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         String stackIn_19_2 = null;
@@ -30,9 +30,9 @@ final class rf {
           HelpTipDialog.field_I = new AnimationClip[5][17];
           hq.field_b = new AnimationClip[5];
           GameKeyHandler.a(param1, param3, (byte) -69);
-          var10 = new ef(0);
+          var10 = new AnimationFrameset(0);
           var11 = var10;
-          while (!var11.g((byte) 103)) {
+          while (!var11.ensureLoaded((byte) 103)) {
           }
           pe.a((byte) 82, var10);
           HelpTipDialog.field_I[0][0] = new AnimationClip(param2, "characters", "ka_tank_aggressive_tackle");
@@ -136,11 +136,11 @@ final class rf {
         int var6 = 24;
         int var7 = 5;
         this.field_b.a(true, param3, param0, var6, var7, param2, param1);
-        du.field_f.setBounds(true, TriangleMesh.field_R.field_q, 0, 0, sh.field_c);
+        MarkerSliderPainter.field_f.setBounds(true, TriangleMesh.field_R.field_q, 0, 0, sh.field_c);
         int var8 = 17 % ((-10 - param4) / 63);
         AlphaContainer.field_E.setBounds(true, -2 - TeamSelectionAgent.field_f + (TriangleMesh.field_R.field_q - 80) - 2, 0, 2 + sh.field_c, 18);
         ph.field_f.setBounds(true, 82 + TeamSelectionAgent.field_f, -80 + (-TeamSelectionAgent.field_f + TriangleMesh.field_R.field_q) - 2, sh.field_c + 2, 18);
-        ei.field_d.a(TeamSelectionAgent.field_f, -sh.field_c + (TriangleMesh.field_R.field_mb - 22), 20, 20 + sh.field_c + 2, TriangleMesh.field_R.field_q, 92, 2, 0);
+        RotaryDialPainter.field_d.a(TeamSelectionAgent.field_f, -sh.field_c + (TriangleMesh.field_R.field_mb - 22), 20, 20 + sh.field_c + 2, TriangleMesh.field_R.field_q, 92, 2, 0);
         TournamentChampionDialog.field_F.a(2, TeamSelectionAgent.field_f, (byte) 19, 20);
     }
 
@@ -193,11 +193,11 @@ final class rf {
             }
             var14[var3Lifetime1] = var4Lifetime1Lifetime1;
           }
-          kj.field_b = new byte[210][];
+          LoginKind.field_b = new byte[210][];
           PlayerStatSortCriterion.field_n = new int[16];
           TrinketUnlockNotice.field_a = new byte[16][];
           for (var3Lifetime2 = 0; var3Lifetime2 < 210; var3Lifetime2++) {
-            kj.field_b[var3Lifetime2] = eo.a(var13, var3Lifetime2, 210);
+            LoginKind.field_b[var3Lifetime2] = eo.a(var13, var3Lifetime2, 210);
           }
           var4Lifetime2 = -20 % ((param0 + 71) / 47);
           for (var3Lifetime3 = 0; var3Lifetime3 < 16; var3Lifetime3++) {
@@ -253,9 +253,9 @@ final class rf {
     }
 
     final static int[] a(int param0, int param1, int param2) {
-        int var3 = ei.sine(param0, (byte) -23);
+        int var3 = RotaryDialPainter.sine(param0, (byte) -23);
         int var4 = we.cosine(param0, false);
-        int var5 = ei.sine(param2, (byte) -23);
+        int var5 = RotaryDialPainter.sine(param2, (byte) -23);
         int var6 = we.cosine(param2, false);
         int var7 = (int)((long)var5 * (long)var3 >> 16);
         int var8 = (int)((long)var6 * (long)var3 >> 16);

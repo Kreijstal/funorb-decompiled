@@ -11,12 +11,12 @@ final class AudioService implements Runnable {
     static long[] field_d;
     volatile PcmPlayerService[] field_b;
 
-    final static wn a(int param0, String param1) {
+    final static AccountRegistrationResponse a(int param0, String param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         Object stackIn_2_0 = null;
         Object stackIn_7_0 = null;
-        wn stackIn_9_0 = null;
+        AccountRegistrationResponse stackIn_9_0 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -25,9 +25,9 @@ final class AudioService implements Runnable {
           var2_int = 16 / ((param0 - 46) / 47);
           if (mj.field_a == PlayerModelPreview.field_f) {
             stackIn_2_0 = null;
-            return (wn) (stackIn_2_0);
+            return (AccountRegistrationResponse) (stackIn_2_0);
           }
-          if (mj.field_a == cr.field_d &&
+          if (mj.field_a == LinkTextPainter.field_d &&
             param1.equals(pr.field_c)) {
             mj.field_a = vj.field_a;
             stackIn_9_0 = JaggrabDownloader.field_h;
@@ -37,7 +37,7 @@ final class AudioService implements Runnable {
           pr.field_c = param1;
           JaggrabDownloader.field_h = null;
           stackIn_7_0 = null;
-          return (wn) (stackIn_7_0);
+          return (AccountRegistrationResponse) (stackIn_7_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;

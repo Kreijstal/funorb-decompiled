@@ -90,7 +90,7 @@ final class vb {
               AccountNameAvailabilityValidator.field_l = null;
             } else {
               if (RankingsScreen.field_C == 1) {
-                AccountNameAvailabilityValidator.field_l = new rk[30];
+                AccountNameAvailabilityValidator.field_l = new WorldSpriteSequence[30];
                 for (var1_int = 0; var1_int < AccountNameAvailabilityValidator.field_l.length; var1_int++) {
                   stackIn_11_0 = (ih.field_c != 2) ? -60 : -120;
                   var2 = stackIn_11_0;
@@ -101,11 +101,11 @@ final class vb {
                     var4 = 2;
                     var2 = 896 - var2;
                   }
-                  AccountNameAvailabilityValidator.field_l[var1_int] = new rk(var2, var3, var4);
+                  AccountNameAvailabilityValidator.field_l[var1_int] = new WorldSpriteSequence(var2, var3, var4);
                 }
               } else {
                 if (RankingsScreen.field_C == 2) {
-                  AccountNameAvailabilityValidator.field_l = new rk[34];
+                  AccountNameAvailabilityValidator.field_l = new WorldSpriteSequence[34];
                   var1_int = 0;
                   for (var2 = 0; var2 < 17; var2++) {
                     stackIn_21_0 = ~LoggedPossession.a((byte) -24, 3);
@@ -114,7 +114,7 @@ final class vb {
                       var3 = -170;
                       var4 = LoggedPossession.a((byte) -24, 5);
                       var5 = LoggedPossession.a((byte) -24, 100);
-                      AccountNameAvailabilityValidator.field_l[var2] = new rk(var4 + var1_int, var5 + var3, 0);
+                      AccountNameAvailabilityValidator.field_l[var2] = new WorldSpriteSequence(var4 + var1_int, var5 + var3, 0);
                     }
                     var1_int += 54;
                   }
@@ -124,7 +124,7 @@ final class vb {
                       var3 = 1424;
                       var4 = LoggedPossession.a((byte) -24, 5);
                       var5Lifetime1 = LoggedPossession.a((byte) -24, 100);
-                      AccountNameAvailabilityValidator.field_l[var2] = new rk(var1_int + var4, var3 + var5Lifetime1, 4);
+                      AccountNameAvailabilityValidator.field_l[var2] = new WorldSpriteSequence(var1_int + var4, var3 + var5Lifetime1, 4);
                     }
                     var1_int += 54;
                   }

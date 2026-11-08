@@ -440,7 +440,7 @@ final class PlayingView extends MatchPhaseView {
           stackIn_12_0 = 1;
         }
         var4 = stackIn_12_0;
-        if (var12[oc.field_e]) {
+        if (var12[ArchivePreloadEntry.field_e]) {
           stackIn_18_0 = 1;
         } else {
           stackIn_18_0 = (var12[99]) ? 1 : 0;
@@ -459,7 +459,7 @@ final class PlayingView extends MatchPhaseView {
         if (!this.field_f &&
           MyKitScreen.field_O) {
           if (!var12[TextPromptDialog.field_Kb] &&
-            !var12[oc.field_e] &&
+            !var12[ArchivePreloadEntry.field_e] &&
             !var12[PlayerContextMenu.field_e] &&
             !var12[IsSixCommand.field_A]) {
             if ((var12[98] ||
@@ -476,7 +476,7 @@ final class PlayingView extends MatchPhaseView {
         }
         if (this.field_l) {
           if (this.isLocalParticipantActive((byte) 13)) {
-            if (ia.field_c) {
+            if (FaceNormal.field_c) {
               var7 = var3;
               var3 = var5;
               var5 = var7;
@@ -675,7 +675,7 @@ final class PlayingView extends MatchPhaseView {
         RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
         RuntimeException var3 = null;
-        ak var4 = null;
+        WorldDrawEntry var4 = null;
         int var5 = 0;
         int var3_intLifetime1;
         var5 = Kickabout.field_G;
@@ -691,15 +691,15 @@ final class PlayingView extends MatchPhaseView {
             }
           }
           this.field_r.addLast(ValidatedTextWidget.a((RenderedBall) (this.field_a.field_V), false), 3);
-          this.field_r.addLast(re.a(true, 115), 3);
+          this.field_r.addLast(CheckboxPainter.a(true, 115), 3);
           var3_intLifetime1 = -88 / ((4 - param1) / 50);
-          this.field_r.addLast(re.a(false, 92), 3);
+          this.field_r.addLast(CheckboxPainter.a(false, 92), 3);
           if (param0 != null) {
-            var4 = (ak) (param0.g(24009));
+            var4 = (WorldDrawEntry) (param0.g(24009));
             while (var4 != null) {
               var4.c((byte) -109);
               this.field_r.addLast(var4, 3);
-              var4 = (ak) (param0.c(33));
+              var4 = (WorldDrawEntry) (param0.c(33));
             }
           }
           IntTripleCommand.a(this.field_r, -22488);
@@ -724,8 +724,8 @@ final class PlayingView extends MatchPhaseView {
         FadingSoundPlayer var4 = null;
         if (this.field_p <= 0 &&
           this.field_a.field_X.goalCount < 40 &&
-          !vs.a(90, 28) &&
-          !vs.a(117, 29)) {
+          !PlayerPortraitCacheEntry.isFadingSoundActive(90, 28) &&
+          !PlayerPortraitCacheEntry.isFadingSoundActive(117, 29)) {
           var2 = this.a((byte) -97, 2);
           var3 = 1 == var2 ? 1 + this.a((byte) -104, 2) : this.a((byte) -103, 3) + 3;
           var4 = ParticipantStatus.$cfr$intArgs$a$60f25194e713(false, -1, -65, 28 + var2);
@@ -775,7 +775,7 @@ final class PlayingView extends MatchPhaseView {
             field_K = (String) null;
           }
           stackIn_5_0 = param1;
-          stackIn_6_1 = !(wp.field_f);
+          stackIn_6_1 = !(LeaderboardParticipant.field_f);
           param1 = stackIn_5_0 & stackIn_6_1;
           param0.field_V = (BallAgent) ((Object) new RenderedBall(param0.field_V));
           stackIn_8_0 = (RenderedBall) (param0.field_V);
@@ -799,7 +799,7 @@ final class PlayingView extends MatchPhaseView {
                 var10 = var14_int >> 8 & 15;
                 var11 = (var14_int & 245) >> 4;
               }
-              if (wn.a((byte) 24)) {
+              if (AccountRegistrationResponse.a((byte) 24)) {
                 stackIn_22_0 = (param0.field_P[var4_int][var8].stats.c((byte) -107, param0.field_P[var4_int][var8].member)) ? 1 : 0;
               } else {
                 stackIn_22_0 = 0;
@@ -852,7 +852,7 @@ final class PlayingView extends MatchPhaseView {
           }
           if (2 == param1.eventType &&
             this.field_a.c(this.field_g, -7) &&
-            ei.field_n &&
+            RotaryDialPainter.field_n &&
             !MyKitScreen.field_O) {
             this.switchToPredictedReceiver(InstrumentNoteMask.createMouseEvent(param1.participant, param1.value, -115, param1.field_p, param1.field_o), -122);
             return;
@@ -943,7 +943,7 @@ final class PlayingView extends MatchPhaseView {
           var3 == -1) {
           return;
         }
-        if (ia.field_c) {
+        if (FaceNormal.field_c) {
           var2 = -var2;
           var3 = -var3;
         }
@@ -1108,7 +1108,7 @@ final class PlayingView extends MatchPhaseView {
             var4 = (var2 + 35) * var4 / 70;
             var6Lifetime1 = (var2 << 8) / 35;
           }
-          var3.e(-var4 + 640 >> 1, -var5 + 480 >> 1, var4, var5, var6Lifetime1);
+          var3.drawScaledAdditive(-var4 + 640 >> 1, -var5 + 480 >> 1, var4, var5, var6Lifetime1);
         }
     }
 
@@ -1162,7 +1162,7 @@ final class PlayingView extends MatchPhaseView {
           un.a(param0, this.field_h, 101);
           this.field_q = 172;
           stackIn_10_0 = (param0.field_g[var6_int].team == 1);
-          ia.field_c = stackIn_10_0;
+          FaceNormal.field_c = stackIn_10_0;
           ContextMenu.b(0, (byte) 60, ReceivedAuctionItem.field_E[1]);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1245,7 +1245,7 @@ final class PlayingView extends MatchPhaseView {
         int var3;
         RenderedFootballer var4_ref_gm;
         int var5;
-        ak var6;
+        WorldDrawEntry var6;
         int var2Lifetime1;
         int var2Lifetime2;
         int var2Lifetime3;
@@ -1269,10 +1269,10 @@ final class PlayingView extends MatchPhaseView {
         if (param0 != 1) {
           return;
         }
-        var6 = (ak) (this.field_r.g(24009));
+        var6 = (WorldDrawEntry) (this.field_r.g(24009));
         while (var6 != null) {
-          var6.b(192);
-          var6 = (ak) (this.field_r.c(33));
+          var6.draw(192);
+          var6 = (WorldDrawEntry) (this.field_r.c(33));
         }
         if (MyKitScreen.field_O) {
           MessageDialog.f(70);
@@ -1414,7 +1414,7 @@ final class PlayingView extends MatchPhaseView {
           this.pollLocalInput(16623);
         }
         if (this.field_g == this.field_a.field_V.field_j &&
-          ei.field_n) {
+          RotaryDialPainter.field_n) {
           this.switchToPredictedReceiver((PlayerInputEvent) null, -123);
         }
         this.a(true, this.field_a);
@@ -1481,7 +1481,7 @@ final class PlayingView extends MatchPhaseView {
               var7 >= 5) {
               var7 = 0;
             }
-            if (wn.a((byte) -86)) {
+            if (AccountRegistrationResponse.a((byte) -86)) {
               stackIn_27_0 = (this.field_a.field_P[var2][var6].stats.c((byte) -107, this.field_a.field_P[var2][var6].member)) ? 1 : 0;
             } else {
               stackIn_27_0 = 0;
@@ -1531,7 +1531,7 @@ final class PlayingView extends MatchPhaseView {
         RuntimeException var3 = null;
         var4 = Kickabout.field_G;
         try {
-          if (10 > hl.field_d) {
+          if (10 > DateInputValidator.field_d) {
             var3_int = 0;
             if (oo.field_f) {
               var3_int = 1;
@@ -1545,7 +1545,7 @@ final class PlayingView extends MatchPhaseView {
               su.a(27744, 0, 0, param0);
             } else {
               if (vj.field_c == 0) {
-                vs.a(false, param1, (byte) 39);
+                PlayerPortraitCacheEntry.a(false, param1, (byte) 39);
                 su.a(27744, 0, 0, param0);
               } else {
                 FormationAgent.a(param0, -14142);

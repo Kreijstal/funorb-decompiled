@@ -34,12 +34,12 @@ final class ve extends ResizableModalPanel implements ButtonListener {
         }
         if (QuickChatKeysHelpPanel.field_Cb.a(param0, "park")) {
           BallAgent.field_u = true;
-          LeaguesScreen.field_E = ng.a("benches", "park", 2, QuickChatKeysHelpPanel.field_Cb);
+          LeaguesScreen.field_E = ServerTextTemplate.a("benches", "park", 2, QuickChatKeysHelpPanel.field_Cb);
           ConsoleCommand.field_w = QuickChatPhraseDefinition.a("park", QuickChatKeysHelpPanel.field_Cb, (byte) 70, "hotdog");
           pi.field_a = QuickChatPhraseDefinition.a("park", QuickChatKeysHelpPanel.field_Cb, (byte) 59, "swing");
           RandomAccessCacheFile.field_c = QuickChatPhraseDefinition.a("park", QuickChatKeysHelpPanel.field_Cb, (byte) 114, "slide");
-          ng.field_j = ng.a("trees", "park", 2, QuickChatKeysHelpPanel.field_Cb);
-          gw.field_d = ng.a("stains", "park", 2, QuickChatKeysHelpPanel.field_Cb);
+          ServerTextTemplate.field_j = ServerTextTemplate.a("trees", "park", 2, QuickChatKeysHelpPanel.field_Cb);
+          gw.field_d = ServerTextTemplate.a("stains", "park", 2, QuickChatKeysHelpPanel.field_Cb);
           return -1;
         }
         return QuickChatKeysHelpPanel.field_Cb.getGroupProgressByName("park", -16248);
@@ -152,7 +152,7 @@ final class ve extends ResizableModalPanel implements ButtonListener {
         UiWidget var4 = null;
         try {
           var3 = null;
-          if (tr.field_b == param1) {
+          if (ClientUiOverlay.field_b == param1) {
             var3 = ValidatedTextWidget.field_bb;
           } else {
             if (param1 == PainterStyle.field_a) {

@@ -11,8 +11,8 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
     static UiLayoutNode field_d;
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
-        SoftwareRasterizer.fillRoundedRectangleBlended(param2 - 8, param4 - 11, du.field_n, 20, 6, param5, param1);
-        String var6 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, !bt.field_e ? ag.field_l : h.field_a, new String[]{mk.field_b[il.field_h]});
+        SoftwareRasterizer.fillRoundedRectangleBlended(param2 - 8, param4 - 11, MarkerSliderPainter.field_n, 20, 6, param5, param1);
+        String var6 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, !QuickChatCategoryCache.field_e ? SoundStreamHandle.field_l : h.field_a, new String[]{mk.field_b[il.field_h]});
         ConsoleTokenCursor.field_d.a(var6, param2, param4, param0, param3);
     }
 
@@ -267,8 +267,8 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
             field_a = (String) null;
           }
           is.field_a = param2;
-          rk.field_f = new AccountRequestDialog(wd.field_l, fj.field_b, param0, AuctionBidDialog.field_G, is.field_a);
-          wd.field_l.a(rk.field_f, false);
+          WorldSpriteSequence.field_f = new AccountRequestDialog(wd.field_l, fj.field_b, param0, AuctionBidDialog.field_G, is.field_a);
+          wd.field_l.a(WorldSpriteSequence.field_f, false);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "ku.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }

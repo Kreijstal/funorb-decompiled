@@ -27,17 +27,17 @@ final class PitchOptionTile extends UiLayoutNode implements PopupCard {
 
     final static wd a(int param0, byte param1, int param2, int param3) {
         int var5 = Kickabout.field_G;
-        wd var4 = (wd) (ak.field_i.g(param1 + 23909));
+        wd var4 = (wd) (WorldDrawEntry.field_i.g(param1 + 23909));
         while (var4 != null) {
           if (var4.field_k == param2) {
             return var4;
           }
-          var4 = (wd) (ak.field_i.c(33));
+          var4 = (wd) (WorldDrawEntry.field_i.c(33));
         }
         var4 = new wd();
         var4.field_p = param0;
         var4.field_k = param2;
-        ak.field_i.addLast(var4, 3);
+        WorldDrawEntry.field_i.addLast(var4, 3);
         if (param1 == 100) {
           TextFieldNode.a(true, var4, param3);
           return var4;
@@ -735,7 +735,7 @@ final class PitchOptionTile extends UiLayoutNode implements PopupCard {
           }
           if (this.field_sb == 1 &&
             this.i(param0 - 32834)) {
-            kj.a((byte) -111);
+            LoginKind.a((byte) -111);
           }
           return;
         }
@@ -770,7 +770,7 @@ final class PitchOptionTile extends UiLayoutNode implements PopupCard {
           }
           if (this.field_sb == 1 &&
             this.i(param0 - 32834)) {
-            kj.a((byte) -111);
+            LoginKind.a((byte) -111);
           }
           return;
         }
@@ -806,7 +806,7 @@ final class PitchOptionTile extends UiLayoutNode implements PopupCard {
               }
               if (this.field_sb == 1 &&
                 this.i(param0 - 32834)) {
-                kj.a((byte) -111);
+                LoginKind.a((byte) -111);
               }
               return;
             }
@@ -864,7 +864,7 @@ final class PitchOptionTile extends UiLayoutNode implements PopupCard {
         if (!this.i(param0 - 32834)) {
           return;
         }
-        kj.a((byte) -111);
+        LoginKind.a((byte) -111);
         return;
     }
 

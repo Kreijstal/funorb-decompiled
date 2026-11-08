@@ -39,7 +39,7 @@ final class GameplayHelpScreen extends PagedHelpScreen {
         var2 = 0;
         var3 = ca.field_f.length;
         if (!LoginMethod.b(param0 - 15) ||
-          !wn.a((byte) 50) &&
+          !AccountRegistrationResponse.a((byte) 50) &&
           !c.a(QuickChatKeysHelpPanel.field_Ab[32], 0, BufferedSocket.field_f)) {
           var3--;
         }
@@ -127,7 +127,7 @@ final class GameplayHelpScreen extends PagedHelpScreen {
             dupTemp$1 = bk.field_a[0];
             dupTemp$1.directionMask = dupTemp$1.directionMask | 2;
           }
-          if (field_G[oc.field_e]) {
+          if (field_G[ArchivePreloadEntry.field_e]) {
             dupTemp$2 = bk.field_a[0];
             dupTemp$2.directionMask = dupTemp$2.directionMask | 1;
           }
@@ -293,8 +293,8 @@ final class GameplayHelpScreen extends PagedHelpScreen {
           var5 = var5 + this.slideOffsetX;
           var6 = 146;
           SoftwareRasterizer.fillRoundedRectangleBlended(-10 + var5, 126, 265, 270, 10, 65793, 140);
-          while (s.field_M.length > var2) {
-            var7 = s.field_M[var2];
+          while (RotaryDialWidget.field_M.length > var2) {
+            var7 = RotaryDialWidget.field_M[var2];
             var8 = IsSixCommand.field_C.paragraphHeight(var7, 245, 16);
             if (var8 + var6 <= 396) {
               var2++;
@@ -349,8 +349,8 @@ final class GameplayHelpScreen extends PagedHelpScreen {
           var3 += 220;
         }
         SoftwareRasterizer.fillRoundedRectangleBlended(40 + this.slideOffsetX, 360, 430, 43, 10, 65793, 140);
-        if (ak.field_f != null) {
-          ak.field_f.c(120 + this.slideOffsetX, 363);
+        if (WorldDrawEntry.field_f != null) {
+          WorldDrawEntry.field_f.c(120 + this.slideOffsetX, 363);
         }
         if (param0 != -128) {
           GameplayHelpScreen.j((byte) 0);
@@ -634,7 +634,7 @@ final class GameplayHelpScreen extends PagedHelpScreen {
           SoftwareRasterizer.fillRoundedRectangleBlended(var2, 190, 275, 208, 10, 65793, 140);
           un.field_d.a(gf.field_e[var4].toLowerCase(), var2 + 10, 212, 16777215, -1);
           for (var5 = 0; var5 < 4; var5++) {
-            pa.field_g[var3[var4][var5]].d(false).c(110 + (var2 + var5 * 40), 200);
+            GeneratedPanelPainter.field_g[var3[var4][var5]].d(false).c(110 + (var2 + var5 * 40), 200);
           }
           var5Lifetime1 = 242;
           for (var6 = 0; var6 < hv.field_c[var4].length; var6++) {
@@ -687,10 +687,10 @@ final class GameplayHelpScreen extends PagedHelpScreen {
         var4 = 30 + this.field_E.field_Db.field_T;
         var5 = var4;
         for (var6 = 0; var6 < 4; var6++) {
-          un.field_d.a(bl.field_d[var6].toLowerCase(), var3Lifetime2 - 6, var5, 16777215, -1);
+          un.field_d.a(LobbyMatchPreview.field_d[var6].toLowerCase(), var3Lifetime2 - 6, var5, 16777215, -1);
           eo.a(200 + var3Lifetime2, -12 + var5, 10 + 17 * ((1 + var6) % 4) % 30, var6, true, 0);
           var5 += 6;
-          var5 = var5 + IsSixCommand.field_C.a(ng.field_k[var6], var3Lifetime2 - 5, var5, 340, 1000, 14540253, -1, 0, 0, 17) * 17;
+          var5 = var5 + IsSixCommand.field_C.a(ServerTextTemplate.field_k[var6], var3Lifetime2 - 5, var5, 340, 1000, 14540253, -1, 0, 0, 17) * 17;
           var5 += 50;
         }
         var6Lifetime1 = -10 - var4 + var5;

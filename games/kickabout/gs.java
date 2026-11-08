@@ -18,18 +18,18 @@ final class gs {
           return;
         }
         if (ArrayWidgetContainer.field_x != -1) {
-          bw.field_e[2].c(us.field_k + (-re.field_k + ArrayWidgetContainer.field_x - 6 + 1), -1 + (us.field_j - AvailabilityCheckRequest.field_h));
+          bw.field_e[2].c(us.field_k + (-CheckboxPainter.field_k + ArrayWidgetContainer.field_x - 6 + 1), -1 + (us.field_j - AvailabilityCheckRequest.field_h));
           bw.field_e[3].c(ArrayWidgetContainer.field_x + 6 - us.field_k, -AvailabilityCheckRequest.field_h + (us.field_j - 1));
-          bw.field_e[0].c(-AvailabilityCheckRequest.field_h + (ArrayWidgetContainer.field_x - 1), 1 + (us.field_k - 6) + (-re.field_k + us.field_j));
+          bw.field_e[0].c(-AvailabilityCheckRequest.field_h + (ArrayWidgetContainer.field_x - 1), 1 + (us.field_k - 6) + (-CheckboxPainter.field_k + us.field_j));
           bw.field_e[1].c(-AvailabilityCheckRequest.field_h + (ArrayWidgetContainer.field_x - 1), -us.field_k + 6 + us.field_j);
           return;
         }
         if (us.field_j == -1) {
           return;
         }
-        bw.field_e[2].c(us.field_k + (-re.field_k + ArrayWidgetContainer.field_x - 6 + 1), -1 + (us.field_j - AvailabilityCheckRequest.field_h));
+        bw.field_e[2].c(us.field_k + (-CheckboxPainter.field_k + ArrayWidgetContainer.field_x - 6 + 1), -1 + (us.field_j - AvailabilityCheckRequest.field_h));
         bw.field_e[3].c(ArrayWidgetContainer.field_x + 6 - us.field_k, -AvailabilityCheckRequest.field_h + (us.field_j - 1));
-        bw.field_e[0].c(-AvailabilityCheckRequest.field_h + (ArrayWidgetContainer.field_x - 1), 1 + (us.field_k - 6) + (-re.field_k + us.field_j));
+        bw.field_e[0].c(-AvailabilityCheckRequest.field_h + (ArrayWidgetContainer.field_x - 1), 1 + (us.field_k - 6) + (-CheckboxPainter.field_k + us.field_j));
         bw.field_e[1].c(-AvailabilityCheckRequest.field_h + (ArrayWidgetContainer.field_x - 1), -us.field_k + 6 + us.field_j);
     }
 
@@ -78,7 +78,7 @@ final class gs {
     final static void a(int param0) {
         ContextMenu.b(0, (byte) 60, ReceivedAuctionItem.field_E[1]);
         ScrollBar.k(param0);
-        tc.a(NanoTickClock.field_n, param0 ^ 8710, ih.field_c, RankingsScreen.field_C);
+        QuickChatCategory.a(NanoTickClock.field_n, param0 ^ 8710, ih.field_c, RankingsScreen.field_C);
         NetworkArchiveRequest.a(1, TrinketPickerDialog.a(ih.field_c, param0 ^ 77, NanoTickClock.field_n, RankingsScreen.field_C), ReceivedAuctionItem.field_E[2], 2147483647);
     }
 

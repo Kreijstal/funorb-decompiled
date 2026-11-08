@@ -118,7 +118,7 @@ class MessageDialog extends PopupDialog {
             var8_ref_int__ = new int[]{var6 - 60, var6 + 60, var6, var6};
             var9_ref_int__ = new int[]{var7, var7, -60 + var7, 60 + var7};
             stackIn_38_0 = AccountRegistrationPanel.field_C;
-            if (!cl.field_d) {
+            if (!FullscreenDisplayMode.field_d) {
               stackIn_39_1 = 1;
             } else {
               stackIn_39_1 = 0;
@@ -142,7 +142,7 @@ class MessageDialog extends PopupDialog {
             stackIn_49_0 = (4 != var3.action) ? 0 : 1;
             var4Lifetime1 = stackIn_49_0;
             stackIn_51_0 = DebugConsole.field_y;
-            if (!cl.field_d) {
+            if (!FullscreenDisplayMode.field_d) {
               stackIn_52_1 = 1;
             } else {
               stackIn_52_1 = 0;

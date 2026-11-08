@@ -81,7 +81,7 @@ final class ea {
           }
           if (var9 != 256) {
             TeamManagementScreen.e(124);
-            ph.field_b.e(param3 - var13, param1, var13, var14, 256);
+            ph.field_b.drawScaledAdditive(param3 - var13, param1, var13, var14, 256);
           }
           return;
         }

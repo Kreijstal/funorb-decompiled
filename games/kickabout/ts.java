@@ -44,7 +44,7 @@ final class ts {
             for (var6 = 0; var6 < 900; var6++) {
               var7 = param0 + (2048 * var5 + var6);
               var8 = 54 * we.cosine(var7, false) >> 16;
-              var9 = ei.sine(var7, (byte) -23) * -54 >> 16;
+              var9 = RotaryDialPainter.sine(var7, (byte) -23) * -54 >> 16;
               SoftwareRasterizer.drawLine(var3_int + var8, var4 + var9, var3_int - var8, -var9 + var4, param1);
             }
           }
@@ -83,12 +83,12 @@ final class ts {
           }
           var3_int = 0;
           var4 = SumIntegersCommand.field_I;
-          while (var3_int < j.field_a.length) {
+          while (var3_int < FootballerPreview.field_a.length) {
             var5 = WidgetContainer.field_x[var3_int];
             if (var5 < 0) {
               var4 = var4 + AccountMessagePanel.field_H;
             } else {
-              var6 = LoginText.a(true, j.field_a[var3_int], -23044);
+              var6 = LoginText.a(true, FootballerPreview.field_a[var3_int], -23044);
               var4 = var4 + of.field_a;
               var7 = -(var6 >> 1) + RasterStateSnapshot.field_k;
               if (LoginText.rectangleContains(-TextFieldNode.field_zb + var7, param0, param1, (byte) -124, var4, var6 + (TextFieldNode.field_zb << 1), (IsSixCommand.field_H << 1) + ScrollContainer.field_zb)) {

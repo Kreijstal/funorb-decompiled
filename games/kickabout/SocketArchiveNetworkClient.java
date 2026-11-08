@@ -5,7 +5,7 @@ import java.io.*;
 
 final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
     static int field_s;
-    static ff field_t;
+    static QuickChatCommandType field_t;
     private BufferedSocket field_x;
     static int field_v;
     static String field_r;
@@ -402,26 +402,26 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
         UiLayoutNode var3 = null;
         try {
           DirectByteStorage.field_n = wa.a((byte) 126, "basic", param1, "display_name_changed");
-          ei.field_d = new FriendsListPanel(0L, BroadcastServerCommand.field_D, le.field_a, ButtonMenuScreen.field_k);
+          RotaryDialPainter.field_d = new FriendsListPanel(0L, BroadcastServerCommand.field_D, le.field_a, ButtonMenuScreen.field_k);
           TournamentChampionDialog.field_F = new FriendsListPanel(0L, BroadcastServerCommand.field_D, CheatCodeListener.field_j, IsSixCommand.field_D);
           TriangleMesh.field_R = new UiLayoutNode(0L, (UiLayoutNode) null);
-          du.field_f = new UiLayoutNode(0L, ConsoleEvaluationException.field_e);
-          du.field_f.field_A = 1;
-          AlphaContainer.field_E = new UiLayoutNode(0L, TrinketIcon.field_zb, oh.field_h);
+          MarkerSliderPainter.field_f = new UiLayoutNode(0L, ConsoleEvaluationException.field_e);
+          MarkerSliderPainter.field_f.field_A = 1;
+          AlphaContainer.field_E = new UiLayoutNode(0L, TrinketIcon.field_zb, WorldSpriteDecoration.field_h);
           ph.field_f = new UiLayoutNode(0L, SquadPickerDialog.field_P, TextFieldNode.field_Vb);
           BlankScreen.field_h = new UiLayoutNode(0L, ul.field_c);
-          TriangleMesh.field_R.addChild((byte) -109, du.field_f);
+          TriangleMesh.field_R.addChild((byte) -109, MarkerSliderPainter.field_f);
           TriangleMesh.field_R.addChild((byte) -122, AlphaContainer.field_E);
           TriangleMesh.field_R.addChild((byte) -108, ph.field_f);
-          TriangleMesh.field_R.addChild((byte) -124, (UiLayoutNode) (ei.field_d));
+          TriangleMesh.field_R.addChild((byte) -124, (UiLayoutNode) (RotaryDialPainter.field_d));
           TriangleMesh.field_R.addChild((byte) -108, BlankScreen.field_h);
-          ei.field_d.field_Cb.field_zb.applyStyle(ConsoleEvaluationException.field_e, (byte) 87);
+          RotaryDialPainter.field_d.field_Cb.field_zb.applyStyle(ConsoleEvaluationException.field_e, (byte) 87);
           if (param0 >= -59) {
             ResourceArchive var4 = (ResourceArchive) null;
             SocketArchiveNetworkClient.a(-39, (ResourceArchive) null);
           }
-          ei.field_d.field_Cb.field_zb.field_p = 1;
-          var6 = ei.field_d.field_Cb.field_zb;
+          RotaryDialPainter.field_d.field_Cb.field_zb.field_p = 1;
+          var6 = RotaryDialPainter.field_d.field_Cb.field_zb;
           var7 = var6;
           var7.field_A = 1;
           TournamentChampionDialog.field_F.field_Cb.field_zb.applyStyle(ConsoleEvaluationException.field_e, (byte) -128);
@@ -534,7 +534,7 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
 
     static {
         field_v = 1;
-        field_t = new ff(4, 1, 1, 1);
+        field_t = new QuickChatCommandType(4, 1, 1, 1);
         field_r = "Names cannot start or end with space or underscore";
         field_u = "Accept invitation to <%0>'s game";
     }

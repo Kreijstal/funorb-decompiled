@@ -292,11 +292,11 @@ final class Trinket {
                 stackIn_49_0 = 2150;
               }
               var6 = stackIn_49_0;
-              kh.a(param0.field_U, param0.field_mb, param0.field_R, false, var6);
+              CanvasResizePolicy.a(param0.field_U, param0.field_mb, param0.field_R, false, var6);
               nh.a(BuyPitchDialog.field_F, var2_int - 48, var3 - 48);
               return;
             }
-            nh.a(var2_int << 4, var3 << 4, 28 * InstrumentNoteMask.field_i >> 4, 11, tr.field_e);
+            nh.a(var2_int << 4, var3 << 4, 28 * InstrumentNoteMask.field_i >> 4, 11, ClientUiOverlay.field_e);
             return;
           }
           return;
@@ -414,7 +414,7 @@ final class Trinket {
     final static void a(int param0, byte param1) {
         boolean stackIn_19_0 = false;
         RuntimeException decompiledCaughtException = null;
-        ag var2 = null;
+        SoundStreamHandle var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
         int var4 = 0;
@@ -423,18 +423,18 @@ final class Trinket {
         try {
           mn.field_a = param0;
           var3 = -110 / ((67 - param1) / 54);
-          var2 = (ag) (LoginCredentials.field_a.g(24009));
+          var2 = (SoundStreamHandle) (LoginCredentials.field_a.g(24009));
           scanLoop1: while (true) {
             boolean decompiledFrameCompleted0 = true;
             if (var2 != null) {
-              stackIn_19_0 = var2.field_k.isLinked((byte) -113);
+              stackIn_19_0 = var2.owner.isLinked((byte) -113);
               if (var4 != 0) {
                 while (true) {
                   if (stackIn_19_0) {
-                    var2.field_i.b(var2.field_j * mn.field_a + 128 >> 8);
+                    var2.stream.b(var2.baseVolume * mn.field_a + 128 >> 8);
                   }
                   var2.c((byte) -109);
-                  var2 = (ag) (IndexedSpriteState.field_c.c(33));
+                  var2 = (SoundStreamHandle) (IndexedSpriteState.field_c.c(33));
                   decompiledFrameCompleted0 = false;
                   break;
                 }
@@ -445,9 +445,9 @@ final class Trinket {
                 }
                 if (stackIn_19_0 ||
                   var4 != 0) {
-                  var2.field_i.b(128 + mn.field_a * var2.field_j >> 8);
+                  var2.stream.b(128 + mn.field_a * var2.baseVolume >> 8);
                 }
-                var2 = (ag) (LoginCredentials.field_a.c(33));
+                var2 = (SoundStreamHandle) (LoginCredentials.field_a.c(33));
                 if (var4 == 0) {
                   continue;
                 }
@@ -455,18 +455,18 @@ final class Trinket {
             }
             if ((decompiledFrameCompleted0) &&
               (IndexedSpriteState.field_c != null)) {
-              var2 = (ag) (IndexedSpriteState.field_c.g(24009));
+              var2 = (SoundStreamHandle) (IndexedSpriteState.field_c.g(24009));
               while (var2 != null) {
                 if (var4 != 0) {
                   break scanLoop1;
                 }
-                stackIn_19_0Lifetime1 = var2.field_k.isLinked((byte) -113);
+                stackIn_19_0Lifetime1 = var2.owner.isLinked((byte) -113);
                 if (stackIn_19_0Lifetime1) {
-                  var2.field_i.b(var2.field_j * mn.field_a + 128 >> 8);
+                  var2.stream.b(var2.baseVolume * mn.field_a + 128 >> 8);
                 } else {
                   var2.c((byte) -109);
                 }
-                var2 = (ag) (IndexedSpriteState.field_c.c(33));
+                var2 = (SoundStreamHandle) (IndexedSpriteState.field_c.c(33));
               }
             }
             wd.field_n[1] = param0;
@@ -568,13 +568,13 @@ final class Trinket {
             }
           }
           if (null == var2 &&
-            !dg.field_a &&
+            !NineSlicePanelPainter.field_a &&
             ContentTransitionDialog.field_Y == null) {
             var2 = et.field_a;
           }
           boolean decompiledFrameRemainder0 = true;
           if (null != var2) {
-            nv.a(0, ag.field_e, (String) (var2), (String) null, (byte) 34);
+            MarkerSliderWidget.a(0, SoundStreamHandle.field_e, (String) (var2), (String) null, (byte) 34);
             decompiledFrameRemainder0 = (var10 != 0);
           }
           if (decompiledFrameRemainder0) {
@@ -587,7 +587,7 @@ final class Trinket {
             if (var6 == 2) {
               var4 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, MySquadScreen.field_F, new String[]{TrinketTile.field_Kb});
               var8 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, UiLayoutNode.field_ib, new String[]{var3});
-              var7 = -485 + WeightedCacheEntry.field_s.field_q + (ei.field_b.field_q + (FootballerAgent.field_i.a(var8) - FootballerAgent.field_i.a(var4)));
+              var7 = -485 + WeightedCacheEntry.field_s.field_q + (RotaryDialPainter.field_b.field_q + (FootballerAgent.field_i.a(var8) - FootballerAgent.field_i.a(var4)));
               if (0 > var7) {
                 var7 = 0;
               }
@@ -632,22 +632,22 @@ final class Trinket {
               }
               var9 = FootballerAgent.field_i.a(var4);
               if (!vb.b(119)) {
-                if (ei.field_b.field_gb &&
-                  BytePlusOneCommand.field_A - ei.field_b.field_F < var9) {
+                if (RotaryDialPainter.field_b.field_gb &&
+                  BytePlusOneCommand.field_A - RotaryDialPainter.field_b.field_F < var9) {
                   if (!PacketBuffer.field_l) {
                     var1 = MidiPcmStream.field_t;
                   } else {
                     var1 = "Broken!";
                   }
                 }
-                if (ei.field_b.field_sb != 0 &&
-                  ei.field_b.field_bb < var9 &&
+                if (RotaryDialPainter.field_b.field_sb != 0 &&
+                  RotaryDialPainter.field_b.field_bb < var9 &&
                   !PacketBuffer.field_l) {
                   hp.b(0);
                 }
               }
             }
-            nv.a(var7, sg.field_c[var6], var4 + BitmapFont.escapeMarkup(AuctionLogEntry.field_m.toString()), var5, (byte) 34);
+            MarkerSliderWidget.a(var7, sg.field_c[var6], var4 + BitmapFont.escapeMarkup(AuctionLogEntry.field_m.toString()), var5, (byte) 34);
             if (!TextFieldNode.field_Wb) {
               WeightedCacheEntry.field_s.field_gb = false;
             }

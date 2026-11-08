@@ -14,7 +14,7 @@ final class hr extends IntrusiveNode {
     int field_n;
 
     final static void b(int param0) {
-        du.field_n = param0 + Math.max(ConsoleTokenCursor.field_d.a(ag.field_l), ConsoleTokenCursor.field_d.a(h.field_a));
+        MarkerSliderPainter.field_n = param0 + Math.max(ConsoleTokenCursor.field_d.a(SoundStreamHandle.field_l), ConsoleTokenCursor.field_d.a(h.field_a));
     }
 
     public static void a(int param0) {
@@ -42,10 +42,10 @@ final class hr extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         int var2_int = 0;
-        oh[] var2 = null;
+        WorldSpriteDecoration[] var2 = null;
         int var3 = 0;
         int var4_int = 0;
-        oh var4 = null;
+        WorldSpriteDecoration var4 = null;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -85,7 +85,7 @@ final class hr extends IntrusiveNode {
         int var9Lifetime1Lifetime1;
         var14 = Kickabout.field_G;
         try {
-          var15 = j.a(-5275);
+          var15 = FootballerPreview.a(-5275);
           if (IsSixCommand.field_B &&
             var15 != null) {
             SoftwareRasterizer.fillRect(0, 0, 640, 480, ConsoleCommand.field_x[ih.field_c][RankingsScreen.field_C]);
@@ -220,7 +220,7 @@ final class hr extends IntrusiveNode {
               var2_intLifetime3Lifetime1 = stackIn_85_0;
               for (var3Lifetime3 = 0; var3Lifetime3 < AccountNameAvailabilityValidator.field_l.length; var3Lifetime3++) {
                 if (AccountNameAvailabilityValidator.field_l[var3Lifetime3] != null) {
-                  AccountNameAvailabilityValidator.field_l[var3Lifetime3].a(var2_intLifetime3Lifetime1, true);
+                  AccountNameAvailabilityValidator.field_l[var3Lifetime3].drawFrame(var2_intLifetime3Lifetime1, true);
                 }
               }
             }
@@ -228,7 +228,7 @@ final class hr extends IntrusiveNode {
               var2 = IntValueNode.field_e;
               for (var3Lifetime3Lifetime1 = 0; var2.length > var3Lifetime3Lifetime1; var3Lifetime3Lifetime1++) {
                 var4 = var2[var3Lifetime3Lifetime1];
-                var4.a((byte) 125);
+                var4.draw((byte) 125);
               }
             }
           }

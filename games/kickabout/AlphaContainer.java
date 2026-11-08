@@ -34,7 +34,7 @@ final class AlphaContainer extends SingleChildContainer {
           var4 = stackIn_3_0[stackIn_4_1];
           var5 = new Sprite(var4.field_o, var4.field_v);
           PacketBuffer.a(-55, var5);
-          stackIn_6_0 = j.a(-5275);
+          stackIn_6_0 = FootballerPreview.a(-5275);
           if (!param0) {
             stackIn_7_1 = -10;
           } else {

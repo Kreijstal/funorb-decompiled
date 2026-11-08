@@ -119,9 +119,9 @@ final class IntrusiveDequeCursor {
           int var2_int = 50 % ((-82 - param0) / 42);
           bw.field_e[2].rotateClockwise();
           bw.field_e[3] = bw.field_e[2].copyFlippedHorizontally();
-          du.field_e = param1.field_q;
-          re.field_k = param1.field_w;
-          AvailabilityCheckRequest.field_h = du.field_e >> 1;
+          MarkerSliderPainter.field_e = param1.field_q;
+          CheckboxPainter.field_k = param1.field_w;
+          AvailabilityCheckRequest.field_h = MarkerSliderPainter.field_e >> 1;
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "nw.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

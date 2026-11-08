@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class DiskCacheWorker implements Runnable {
-    static ff field_c;
+    static QuickChatCommandType field_c;
     private DualLinkDeque field_h;
     static ArgbSprite[] field_i;
     int field_e;
@@ -287,6 +287,6 @@ final class DiskCacheWorker implements Runnable {
     }
 
     static {
-        field_c = new ff(0, 2, 2, 1);
+        field_c = new QuickChatCommandType(0, 2, 2, 1);
     }
 }

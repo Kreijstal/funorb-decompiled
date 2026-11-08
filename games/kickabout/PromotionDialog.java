@@ -64,7 +64,7 @@ final class PromotionDialog extends MessageDialog {
           wd.field_l.processPointerFrame(AuctionLogEntry.field_n, 31947, PacketBuffer.field_i, true);
           var1_int = -43 % ((param0 + 39) / 43);
           wd.field_l.n(2);
-          while (nk.$cfr$intArgs$b$c4997cb15529(-59)) {
+          while (TexturedPanelPainter.$cfr$intArgs$b$c4997cb15529(-59)) {
             wd.field_l.dispatchKeyInput(il.field_c, (byte) -88, FixedQuaternion.field_e);
           }
           if (BlackFadeScreen.field_j != -1) {

@@ -33,10 +33,10 @@ final class ReceivedAuctionItemRow extends ListRow {
           }
           var3 = stackIn_8_0;
           stackIn_18_0 = this.field_Cb;
-          stackIn_19_1 = (!PlayArea.a(100)) && (!dg.field_e) && (!ds.field_g) && (var3 == 0) && (!GameLoopApplet.field_E.hasOwnEntry(1, this.field_Hb.field_a)) && (this.field_Hb.field_r) && (!this.field_Hb.field_j) && (!this.field_Hb.field_h) && (!this.field_Hb.field_q);
+          stackIn_19_1 = (!PlayArea.a(100)) && (!NineSlicePanelPainter.field_e) && (!ds.field_g) && (var3 == 0) && (!GameLoopApplet.field_E.hasOwnEntry(1, this.field_Hb.field_a)) && (this.field_Hb.field_r) && (!this.field_Hb.field_j) && (!this.field_Hb.field_h) && (!this.field_Hb.field_q);
           stackIn_18_0.field_lb = stackIn_19_1;
           stackIn_29_0 = this.field_Jb;
-          stackIn_30_1 = (!PlayArea.a(100)) && (!dg.field_e) && (!ds.field_g) && (var3 == 0) && (!GameLoopApplet.field_E.hasOwnEntry(1, this.field_Hb.field_a)) && (-1L != this.field_Hb.field_k) && (!this.field_Hb.field_j) && (!this.field_Hb.field_h) && (!GameLoopApplet.field_E.hasBidOrBuyEntry(this.field_Hb.field_a, (byte) -79));
+          stackIn_30_1 = (!PlayArea.a(100)) && (!NineSlicePanelPainter.field_e) && (!ds.field_g) && (var3 == 0) && (!GameLoopApplet.field_E.hasOwnEntry(1, this.field_Hb.field_a)) && (-1L != this.field_Hb.field_k) && (!this.field_Hb.field_j) && (!this.field_Hb.field_h) && (!GameLoopApplet.field_E.hasBidOrBuyEntry(this.field_Hb.field_a, (byte) -79));
           stackIn_29_0.field_lb = stackIn_30_1;
           if (param1) {
             for (var4 = 0; var4 < this.field_Eb.length; var4++) {
@@ -168,7 +168,7 @@ final class ReceivedAuctionItemRow extends ListRow {
             stackIn_14_2 = var12;
             stackIn_14_3 = -107;
             stackIn_15_4 = !(TextFieldValidator.f(-1));
-            stackIn_19_2 = (((PlayerStats) (Object) stackIn_14_2).c((byte) stackIn_14_3, stackIn_15_4)) && (wn.a((byte) 1));
+            stackIn_19_2 = (((PlayerStats) (Object) stackIn_14_2).c((byte) stackIn_14_3, stackIn_15_4)) && (AccountRegistrationResponse.a((byte) 1));
             var5 = TriangleMesh.a(stackIn_14_0, stackIn_14_1, stackIn_19_2);
             if (var5 != null) {
               var5.c(1 + var4, this.field_T + 4);
@@ -394,7 +394,7 @@ final class ReceivedAuctionItemRow extends ListRow {
           var7 = this.field_mb >> 1;
           this.field_Eb = new TrinketSlot[this.field_Hb.playerStats.trinketIds.length];
           for (var8 = 0; this.field_Eb.length > var8; var8++) {
-            var9 = pa.field_g[this.field_Hb.playerStats.trinketIds[var8]];
+            var9 = GeneratedPanelPainter.field_g[this.field_Hb.playerStats.trinketIds[var8]];
             var10 = new TrinketSlot(var9, true);
             var11 = var6;
             var12 = var7;

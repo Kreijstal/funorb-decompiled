@@ -41,7 +41,7 @@ class TextInputWidget extends TextButton {
           if (param0) {
             field_E = (Sprite) null;
           }
-          var2_int = PlayerInputEvent.a(bl.field_c, (byte) -105, ScrollContainer.field_Ib);
+          var2_int = PlayerInputEvent.a(LobbyMatchPreview.field_c, (byte) -105, ScrollContainer.field_Ib);
           if (1 == var2_int) {
             param1 = "<img=0>" + param1;
           }
@@ -249,16 +249,16 @@ class TextInputWidget extends TextButton {
         this.m((byte) -85);
     }
 
-    final static ag a(PcmSampleStream param0, int param1) {
-        ag var2 = null;
+    final static SoundStreamHandle a(PcmSampleStream param0, int param1) {
+        SoundStreamHandle var2 = null;
         RuntimeException var2_ref = null;
-        ag stackIn_3_0 = null;
+        SoundStreamHandle stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2 = new ag(param0, param0);
+          var2 = new SoundStreamHandle(param0, param0);
           LoginCredentials.field_a.addLast(var2, 3);
           if (param1 <= 108) {
             field_U = (String) null;

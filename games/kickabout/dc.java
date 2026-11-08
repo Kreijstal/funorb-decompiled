@@ -8,7 +8,7 @@ final class dc {
     static int field_c;
 
     final static void moveToFront(int param0, byte param1) {
-        vs var2 = null;
+        PlayerPortraitCacheEntry var2 = null;
         int var3 = 0;
         int var4 = Kickabout.field_G;
         try {

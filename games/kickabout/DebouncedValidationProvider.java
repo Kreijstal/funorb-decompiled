@@ -152,7 +152,7 @@ abstract class DebouncedValidationProvider implements ValidationSource {
         if (0 > param0) {
           throw new IllegalStateException();
         }
-        return (AppScreen) ((Object) rn.a(-118, param0));
+        return (AppScreen) ((Object) VertexNormal.getMenuScreen(-118, param0));
     }
 
     abstract String evaluateValidationMessage(int param0);

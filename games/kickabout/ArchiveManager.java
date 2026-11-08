@@ -208,9 +208,9 @@ final class ArchiveManager {
         String var4;
         if (null == oo.field_e) {
           oo.field_e = new int[param1 * 2];
-          if (bl.field_m == null ||
-            !(bl.field_m.length >= param1)) {
-            bl.field_m = new int[2 * param1];
+          if (LobbyMatchPreview.field_m == null ||
+            !(LobbyMatchPreview.field_m.length >= param1)) {
+            LobbyMatchPreview.field_m = new int[2 * param1];
           }
           if (param0 != -20669) {
             var4 = (String) null;
@@ -299,9 +299,9 @@ final class ArchiveManager {
           }
         } else {
           if (param1 <= oo.field_e.length) {
-            if (bl.field_m == null ||
-              !(bl.field_m.length >= param1)) {
-              bl.field_m = new int[2 * param1];
+            if (LobbyMatchPreview.field_m == null ||
+              !(LobbyMatchPreview.field_m.length >= param1)) {
+              LobbyMatchPreview.field_m = new int[2 * param1];
             }
             if (param0 != -20669) {
               var4 = (String) null;
@@ -390,9 +390,9 @@ final class ArchiveManager {
             }
           } else {
             oo.field_e = new int[param1 * 2];
-            if (bl.field_m == null ||
-              !(bl.field_m.length >= param1)) {
-              bl.field_m = new int[2 * param1];
+            if (LobbyMatchPreview.field_m == null ||
+              !(LobbyMatchPreview.field_m.length >= param1)) {
+              LobbyMatchPreview.field_m = new int[2 * param1];
             }
             if (param0 != -20669) {
               var4 = (String) null;

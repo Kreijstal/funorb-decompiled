@@ -121,8 +121,8 @@ final class WhirlpoolHasher {
           var9_int = 495;
           var10 = 5;
           Kickabout.field_H.setBounds(true, var9_int - 10, 5, var10, param6);
-          ei.field_b.setBounds(true, Kickabout.field_H.field_q - WeightedCacheEntry.field_s.field_q, 0, 0, param6);
-          WeightedCacheEntry.field_s.setBounds(true, WeightedCacheEntry.field_s.field_q, ei.field_b.field_q, 0, param6);
+          RotaryDialPainter.field_b.setBounds(true, Kickabout.field_H.field_q - WeightedCacheEntry.field_s.field_q, 0, 0, param6);
+          WeightedCacheEntry.field_s.setBounds(true, WeightedCacheEntry.field_s.field_q, RotaryDialPainter.field_b.field_q, 0, param6);
           var10 = var10 + (param7 + param6);
           InstrumentEnvelope.field_c.setBounds(true, InstrumentEnvelope.field_c.getPreferredWidth((byte) -99), 5, var10, param3);
           var11 = MySquadScreen.field_N.getPreferredWidth((byte) -19);
@@ -325,8 +325,8 @@ final class WhirlpoolHasher {
               stackIn_65_0 = 249;
               return stackIn_65_0;
             }
-            var9Lifetime3 = rl.field_o;
-            rl.field_o = StrongCacheEntry.field_y;
+            var9Lifetime3 = PlayerArchetypeSortCriterion.field_o;
+            PlayerArchetypeSortCriterion.field_o = StrongCacheEntry.field_y;
             StrongCacheEntry.field_y = var9Lifetime3;
             ContextMenuItem.field_Db = true;
           }

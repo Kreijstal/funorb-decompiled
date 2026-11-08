@@ -4,7 +4,7 @@
 final class uq {
     static UiLayoutNode field_a;
     static UiLayoutNode field_b;
-    static ff field_d;
+    static QuickChatCommandType field_d;
     static int field_c;
     static String field_e;
     static String field_f;
@@ -32,7 +32,7 @@ final class uq {
 
     static {
         field_e = "INSTRUCTIONS";
-        field_d = new ff(13, 0, 1, 0);
+        field_d = new QuickChatCommandType(13, 0, 1, 0);
         field_f = "Centre";
     }
 }

@@ -5,7 +5,7 @@ final class ArchivePreloader {
     String field_a;
     static ArgbSprite[] field_i;
     private int field_c;
-    private oc[] field_d;
+    private ArchivePreloadEntry[] field_d;
     private int field_g;
     private int field_e;
     static String field_f;
@@ -24,7 +24,7 @@ final class ArchivePreloader {
         }
     }
 
-    private final void a(int param0, int param1, oc param2) {
+    private final void a(int param0, int param1, ArchivePreloadEntry param2) {
         float var4_float = 0.0f;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -290,7 +290,7 @@ final class ArchivePreloader {
 
     final boolean a(int param0) {
         int var3;
-        oc var4;
+        ArchivePreloadEntry var4;
         var3 = Kickabout.field_G;
         if (param0 != 1183118480) {
           this.field_h = 2.4517242908477783f;
@@ -336,11 +336,11 @@ final class ArchivePreloader {
 
     private final void a(int param0, ResourceArchive param1, String param2, String param3, String param4, int param5) {
         int fieldTemp$1 = 0;
-        oc[] var7 = null;
-        oc var7_ref = null;
-        oc var8 = null;
-        oc[] var9 = null;
-        oc var10 = null;
+        ArchivePreloadEntry[] var7 = null;
+        ArchivePreloadEntry var7_ref = null;
+        ArchivePreloadEntry var8 = null;
+        ArchivePreloadEntry[] var9 = null;
+        ArchivePreloadEntry var10 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -354,12 +354,12 @@ final class ArchivePreloader {
         RuntimeException var7_ref2 = null;
         try {
           if (this.field_d.length <= this.field_e) {
-            var9 = new oc[2 * this.field_e];
+            var9 = new ArchivePreloadEntry[2 * this.field_e];
             var7 = var9;
             ArrayOperations.copyReferences(this.field_d, 0, var9, 0, this.field_e);
             this.field_d = var9;
           }
-          var8 = new oc();
+          var8 = new ArchivePreloadEntry();
           var10 = var8;
           var7_ref = var10;
           var10.field_d = param4;
@@ -371,7 +371,7 @@ final class ArchivePreloader {
           this.field_e = this.field_e + 1;
           this.field_d[fieldTemp$1] = var8;
           if (param0 != 18476) {
-            this.field_d = (oc[]) null;
+            this.field_d = (ArchivePreloadEntry[]) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -429,7 +429,7 @@ final class ArchivePreloader {
     }
 
     ArchivePreloader(int param0) {
-        this.field_d = new oc[16];
+        this.field_d = new ArchivePreloadEntry[16];
         this.field_c = param0;
     }
 

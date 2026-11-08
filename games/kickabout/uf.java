@@ -45,7 +45,7 @@ final class uf {
         try {
           ri.a(param10, param16, param7 ^ -17016, param5, param6);
           SocketArchiveNetworkClient.a(-92, param6);
-          wp.a(param2, param11, param18, param19, param13, param17, param8, param0, param14, param6, param15, param12, param9, (byte) 117, param4);
+          LeaderboardParticipant.a(param2, param11, param18, param19, param13, param17, param8, param0, param14, param6, param15, param12, param9, (byte) 117, param4);
           BufferedCacheFile.a(param3, param6, param1, 0);
           StringCursor.b((byte) -124);
           if (param7 != 16971) {
@@ -156,13 +156,13 @@ final class uf {
         if (param0 != 608) {
           String[] var2 = (String[]) null;
           uf.a((Sprite[][]) null, (ResourceArchive) null, (int[]) null, true, (byte[]) null, (IndexedSprite[]) null, (ResourceArchive) null, 32, (String[][]) null, (String[][]) null, (ResourceArchive) null, (byte[]) null, (String[]) null, 71, (String[]) null, (Sprite[][]) null, (int[]) null, -120, 61, (String[]) null);
-          if (hl.field_d < 20) {
+          if (DateInputValidator.field_d < 20) {
             return true;
           }
           if (!hh.b((byte) 97)) {
             return true;
           }
-          if (rl.field_n <= 0) {
+          if (PlayerArchetypeSortCriterion.field_n <= 0) {
             return false;
           }
           if (!vr.d(1)) {
@@ -170,13 +170,13 @@ final class uf {
           }
           return false;
         }
-        if (hl.field_d < 20) {
+        if (DateInputValidator.field_d < 20) {
           return true;
         }
         if (!hh.b((byte) 97)) {
           return true;
         }
-        if (rl.field_n <= 0) {
+        if (PlayerArchetypeSortCriterion.field_n <= 0) {
           return false;
         }
         if (!vr.d(1)) {
@@ -248,14 +248,14 @@ final class uf {
         field_e = null;
     }
 
-    final static wn a(int param0) {
+    final static AccountRegistrationResponse a(int param0) {
         if (vj.field_a == wk.field_f) {
           throw new IllegalStateException();
         }
         if (param0 != -1460) {
-          return (wn) null;
+          return (AccountRegistrationResponse) null;
         }
-        if (wk.field_f == cr.field_d) {
+        if (wk.field_f == LinkTextPainter.field_d) {
           wk.field_f = vj.field_a;
           return ArchiveIndex.field_a;
         }

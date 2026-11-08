@@ -297,7 +297,7 @@ final class ShopPlayerSlot extends ListRow {
           var7 = this.field_mb >> 1;
           this.field_Ib = new TrinketSlot[this.field_Sb.trinketIds.length];
           for (var8 = 0; var8 < this.field_Ib.length; var8++) {
-            var9 = pa.field_g[this.field_Sb.trinketIds[var8]];
+            var9 = GeneratedPanelPainter.field_g[this.field_Sb.trinketIds[var8]];
             var10 = new TrinketSlot(var9, true);
             var11 = var6_intLifetime1;
             var12 = var7;

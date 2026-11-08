@@ -53,7 +53,7 @@ final class MenuSelection {
           this.field_i = WidgetContainer.field_A;
           this.field_h = WidgetContainer.field_A;
           this.selectedIndex = param2;
-          this.field_d = rl.field_q;
+          this.field_d = PlayerArchetypeSortCriterion.field_q;
         }
         if (this.field_i != 0 &&
           FootballerAgent.field_p != 0) {

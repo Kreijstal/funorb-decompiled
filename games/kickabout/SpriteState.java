@@ -100,15 +100,15 @@ abstract class SpriteState extends DualLinkNode {
             GoalStateAgent.field_k.field_mb = 0;
             var6 = GoalStateAgent.field_k;
             var6.field_q = 0;
-            nv.field_F.field_mb = 0;
-            var7 = nv.field_F;
+            MarkerSliderWidget.field_F.field_mb = 0;
+            var7 = MarkerSliderWidget.field_F;
             var7.field_q = 0;
             if (!ScrollPane.a(113)) {
               var9_ref_String = PlayerContextMenu.field_i.field_ec;
               IterableDualLinkDeque.field_h.field_E = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, AccountNameAvailabilityValidator.field_m, new String[]{var9_ref_String}).toUpperCase();
-              nv.field_F.setBounds(true, AuctionItem.field_p.field_q, 0, AuctionItem.field_p.field_mb - 40, 40);
-              nv.field_F.field_E = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, wa.field_c, new String[]{var9_ref_String});
-              var8 = nv.field_F;
+              MarkerSliderWidget.field_F.setBounds(true, AuctionItem.field_p.field_q, 0, AuctionItem.field_p.field_mb - 40, 40);
+              MarkerSliderWidget.field_F.field_E = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, wa.field_c, new String[]{var9_ref_String});
+              var8 = MarkerSliderWidget.field_F;
             } else {
               IterableDualLinkDeque.field_h.field_E = TabStrip.field_zb.toUpperCase();
               var9 = (AuctionItem.field_p.field_q + 2) / 2;

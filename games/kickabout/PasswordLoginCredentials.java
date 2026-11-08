@@ -7,7 +7,7 @@ final class PasswordLoginCredentials extends LoginCredentials {
     private String field_h;
     static int field_i;
 
-    final kj getLoginKind(byte param0) {
+    final LoginKind getLoginKind(byte param0) {
         if (param0 > -77) {
           PacketBuffer var3 = (PacketBuffer) null;
           this.writeCredentials((PacketBuffer) null, -96);
@@ -21,12 +21,12 @@ final class PasswordLoginCredentials extends LoginCredentials {
     }
 
     final static void b(byte param0) {
-        ag var1 = null;
+        SoundStreamHandle var1 = null;
         int var2 = 0;
         boolean stackIn_15_0 = false;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1_ref = null;
-        ag var1Lifetime1;
+        SoundStreamHandle var1Lifetime1;
         var2 = Kickabout.field_G;
         try {
           cb.field_d.d();
@@ -37,23 +37,23 @@ final class PasswordLoginCredentials extends LoginCredentials {
           ri.field_r = ri.field_r - 1;
           if (ri.field_r == 0) {
             ri.field_r = 200;
-            var1 = (ag) (LoginCredentials.field_a.g(param0 + 24037));
+            var1 = (SoundStreamHandle) (LoginCredentials.field_a.g(param0 + 24037));
             while (var1 != null) {
-              if (!var1.field_k.isLinked((byte) -113)) {
+              if (!var1.owner.isLinked((byte) -113)) {
                 var1.c((byte) -109);
               }
-              var1 = (ag) (LoginCredentials.field_a.c(param0 ^ -59));
+              var1 = (SoundStreamHandle) (LoginCredentials.field_a.c(param0 ^ -59));
             }
             if (null == IndexedSpriteState.field_c) {
               return;
             }
-            var1Lifetime1 = (ag) (IndexedSpriteState.field_c.g(24009));
+            var1Lifetime1 = (SoundStreamHandle) (IndexedSpriteState.field_c.g(24009));
             while (var1Lifetime1 != null) {
-              stackIn_15_0 = var1Lifetime1.field_k.isLinked((byte) -113);
+              stackIn_15_0 = var1Lifetime1.owner.isLinked((byte) -113);
               if (!stackIn_15_0) {
                 var1Lifetime1.c((byte) -109);
               }
-              var1Lifetime1 = (ag) (IndexedSpriteState.field_c.c(33));
+              var1Lifetime1 = (SoundStreamHandle) (IndexedSpriteState.field_c.c(33));
             }
           }
           return;
@@ -193,7 +193,7 @@ final class PasswordLoginCredentials extends LoginCredentials {
             ArchiveIndex.field_a = null;
             ArchiveManager.field_c = param2;
             tn.field_b = param5;
-            wn.field_i = param6;
+            AccountRegistrationResponse.field_i = param6;
             wk.field_f = PlayerModelPreview.field_f;
             ld.field_a = param1;
             qr.field_f = param3;
@@ -294,13 +294,13 @@ final class PasswordLoginCredentials extends LoginCredentials {
             field_i = 81;
           }
           for (var3 = 0; param0.trinketIds.length > var3; var3++) {
-            var2_int = var2_int + (pa.field_g[param0.trinketIds[var3]].field_e >> 1);
+            var2_int = var2_int + (GeneratedPanelPainter.field_g[param0.trinketIds[var3]].field_e >> 1);
           }
           var3Lifetime1 = LoggedPossession.a(param1 + 576054974, param0);
           if (15 <= var3Lifetime1) {
             var2_int = (452 * ((var3Lifetime1 - 15) * (var3Lifetime1 - 15)) >> 5) + 10;
             for (var4 = 0; param0.trinketIds.length > var4; var4++) {
-              var5 = pa.field_g[param0.trinketIds[var4]];
+              var5 = GeneratedPanelPainter.field_g[param0.trinketIds[var4]];
               var2_int = var2_int + Trinket.field_g[var5.field_k];
               var2_int = var2_int + (var5.field_e >> 2);
             }

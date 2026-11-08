@@ -81,7 +81,7 @@ final class DualLinkDequeIterator implements Iterator {
           var5Lifetime1 = il.a(var4, param1, (byte) 126);
         }
         if (fs.field_b == 3) {
-          var5Lifetime1 = rn.a(var4, 2, param1, var4);
+          var5Lifetime1 = VertexNormal.a(var4, 2, param1, var4);
         }
         if (var5Lifetime1 == null) {
           StreetSceneryLoader.field_m = null;

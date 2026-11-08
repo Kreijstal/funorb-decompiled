@@ -136,7 +136,7 @@ final class wa {
 
     final static void a(byte param0, String param1) {
         try {
-          wp.field_h = param1;
+          LeaderboardParticipant.field_h = param1;
           AuctionItem.field_e = 1;
           if (param0 != 52) {
             wa.a(34, 19);

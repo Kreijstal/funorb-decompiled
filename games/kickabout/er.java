@@ -69,7 +69,7 @@ final class er extends IntrusiveNode {
           if (param0) {
             field_l = false;
           }
-          stackIn_3_0 = s.a(param1, -119, param2, 0);
+          stackIn_3_0 = RotaryDialWidget.a(param1, -119, param2, 0);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

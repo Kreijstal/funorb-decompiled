@@ -9,7 +9,7 @@ final class ss {
     static String[] field_a;
     static String field_h;
     static String field_g;
-    static ak field_b;
+    static WorldDrawEntry field_b;
     static String field_e;
     static String field_d;
 

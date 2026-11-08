@@ -6,7 +6,7 @@ final class mn implements WidgetPainter {
     static String field_d;
     static int[] field_b;
     static int field_a;
-    static ff field_e;
+    static QuickChatCommandType field_e;
     static String field_f;
 
     public static void releaseStatics(byte param0) {
@@ -32,7 +32,7 @@ final class mn implements WidgetPainter {
           var7 = -123 / ((59 - param0) / 53);
           var6_int = param3.field_t + param4;
           var8 = param3.field_g + param2;
-          kj.a(12105912, var8, var6_int, param3.field_i, param3.field_n);
+          LoginKind.drawBeveledFrame(12105912, var8, var6_int, param3.field_i, param3.field_n);
           var9 = LoggedPlayer.field_g[1];
           if (param3 instanceof TextButton &&
             ((TextButton) (param3)).field_A) {
@@ -62,7 +62,7 @@ final class mn implements WidgetPainter {
         field_a = 256;
         field_b = new int[4];
         field_c = new ValidationState();
-        field_e = new ff(11, 0, 1, 2);
+        field_e = new QuickChatCommandType(11, 0, 1, 2);
         field_f = "Accept";
     }
 }

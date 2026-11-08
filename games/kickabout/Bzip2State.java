@@ -101,11 +101,11 @@ final class Bzip2State {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         try {
-          wn.field_j = new Sprite(tn.field_e.field_o, tn.field_e.field_v);
+          AccountRegistrationResponse.field_j = new Sprite(tn.field_e.field_o, tn.field_e.field_v);
           if (param0 > -32) {
             field_I = (HuffmanCodec) null;
           }
-          PacketBuffer.field_g = new Sprite(wn.field_j.field_o << 1, wn.field_j.field_o << 1);
+          PacketBuffer.field_g = new Sprite(AccountRegistrationResponse.field_j.field_o << 1, AccountRegistrationResponse.field_j.field_o << 1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

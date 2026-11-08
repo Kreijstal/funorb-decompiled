@@ -310,7 +310,7 @@ class Sprite extends SpriteState {
         }
     }
 
-    final void e(int param0, int param1, int param2, int param3, int param4) {
+    final void drawScaledAdditive(int param0, int param1, int param2, int param3, int param4) {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -1362,7 +1362,7 @@ class Sprite extends SpriteState {
         }
     }
 
-    final void c(int param0, int param1, int param2, int param3, int param4) {
+    final void drawScaledSilhouette(int param0, int param1, int param2, int param3, int param4) {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;

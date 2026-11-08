@@ -28,8 +28,8 @@ final class TrinketShopDialog extends MessageDialog {
         if (param0 > -46) {
           return (UiLayoutNode) null;
         }
-        for (var4 = 0; var4 < pa.field_g.length; var4++) {
-          var5 = pa.field_g[var4];
+        for (var4 = 0; var4 < GeneratedPanelPainter.field_g.length; var4++) {
+          var5 = GeneratedPanelPainter.field_g[var4];
           if (this.field_J == var5.field_k &&
             0 != var5.field_h && ((72 != var5.field_h ||
             (1 & ic.field_h.field_n >> 0) == 1) &&
@@ -46,13 +46,13 @@ final class TrinketShopDialog extends MessageDialog {
         return var8;
     }
 
-    final static ak b(boolean param0, int param1, int param2) {
-        ak var3 = new ak(0);
+    final static WorldDrawEntry b(boolean param0, int param1, int param2) {
+        WorldDrawEntry var3 = new WorldDrawEntry(0);
         var3.field_k = param1;
         if (!param0) {
-          return (ak) null;
+          return (WorldDrawEntry) null;
         }
-        var3.field_e = (4 & (param2 ^ param1)) != 0 ? re.field_o : AccountChoicePanel.field_K;
+        var3.field_e = (4 & (param2 ^ param1)) != 0 ? CheckboxPainter.field_o : AccountChoicePanel.field_K;
         var3.field_g = param2 - 4;
         return var3;
     }
@@ -109,7 +109,7 @@ final class TrinketShopDialog extends MessageDialog {
           this.field_H.field_Cb.drawCentered(var7, 23, var6);
           IsSixCommand.field_C.d(this.field_H.field_Eb, var6, 20 + ((var9 >> 1) + var7), this.field_H.c(true), -1);
           if (!(this.field_H.field_Db <= ic.field_h.field_x)) {
-            IsSixCommand.field_C.d(ef.field_n, var6, 62 + ((var9 >> 1) + var7), 16777215, -1);
+            IsSixCommand.field_C.d(AnimationFrameset.field_n, var6, 62 + ((var9 >> 1) + var7), 16777215, -1);
           }
         }
         this.field_L.draw(117, false);
@@ -152,7 +152,7 @@ final class TrinketShopDialog extends MessageDialog {
         var4 = (TrinketTile) (this.field_L.field_Db.field_jb.g(param0 + 24006));
         while (var4 != null) {
           if (1 == var4.field_sb) {
-            kj.a((byte) -98);
+            LoginKind.a((byte) -98);
             if (this.field_H != var4) {
               this.field_H = var4;
             } else {

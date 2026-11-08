@@ -78,7 +78,7 @@ final class DateOfBirthPanel extends ArrayWidgetContainer implements ButtonListe
     DateOfBirthPanel(int param0, int param1, int param2, int param3) {
         super(param0, param1, param2, param3, (WidgetPainter) null);
         this.field_G = new NumericDateInputWidget(new ri(10000536), field_E, 0, 0, 140, 25);
-        this.field_G.a(new hl(), -20274);
+        this.field_G.a(new DateInputValidator(), -20274);
         this.field_D = new TextButton(RowRangeRequest.field_g, (UiListener) (this));
         this.field_w = new UiWidget[]{(UiWidget) ((Object) this.field_G), (UiWidget) ((Object) this.field_D)};
         this.field_D.field_r = (WidgetPainter) ((Object) new op());

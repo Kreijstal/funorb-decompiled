@@ -277,21 +277,21 @@ final class TeamSelectionView extends MatchPhaseView {
         }
     }
 
-    final static wn a(int param0, String param1, int param2) {
-        wn var3 = null;
+    final static AccountRegistrationResponse a(int param0, String param1, int param2) {
+        AccountRegistrationResponse var3 = null;
         RuntimeException var3_ref = null;
-        wn stackIn_3_0 = null;
+        AccountRegistrationResponse stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = new wn(false);
-          var3.field_e = param2;
+          var3 = new AccountRegistrationResponse(false);
+          var3.responseCode = param2;
           if (param0 >= -118) {
             field_m = (String) null;
           }
-          var3.field_d = param1;
+          var3.message = param1;
           stackIn_3_0 = var3;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -389,12 +389,12 @@ final class TeamSelectionView extends MatchPhaseView {
           if (0 != this.field_o.field_sb) {
             this.field_o.updateInput(0, param1);
             this.a((byte) -109, 0);
-            kj.a((byte) 98);
+            LoginKind.a((byte) 98);
           }
           if (this.field_s.field_sb != 0) {
             this.field_s.updateInput(0, param1);
             this.a((byte) -111, 1);
-            kj.a((byte) -105);
+            LoginKind.a((byte) -105);
           }
           if (0 != this.field_l.field_sb) {
             this.a((byte) -118, 2);

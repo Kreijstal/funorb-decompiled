@@ -98,7 +98,7 @@ final class LeagueWinnerDialog extends MessageDialog {
         RuntimeException var4 = null;
         var5 = Kickabout.field_G;
         try {
-          mj.field_a = cr.field_d;
+          mj.field_a = LinkTextPainter.field_d;
           if (param3 != -1) {
             LeagueWinnerDialog.b(-9, -128);
           }

@@ -36,7 +36,7 @@ final class CipherPacketBuffer extends PacketBuffer {
           var2 = new Sprite(param1.takeFileByName("", "final_frame.jpg", 8), (java.awt.Component) ((Object) ic.field_d));
           var3 = var2.field_q;
           var4 = var2.field_w;
-          tr.d(-12974);
+          ClientUiOverlay.pushRasterState(-12974);
           AppScreen.field_a = new Sprite(var3, param0 * var4 / 4);
           AppScreen.field_a.e();
           var2.d(0, 0);
@@ -162,7 +162,7 @@ final class CipherPacketBuffer extends PacketBuffer {
         ResourceArchive var4;
         ea.field_a = SoftwareRasterizer.field_g;
         BufferedSocket.field_s = SoftwareRasterizer.field_f;
-        pa.b((byte) 92);
+        GeneratedPanelPainter.b((byte) 92);
         tn.field_d.a(0, ss.field_c.field_q, 0, -2 + ss.field_c.field_mb - 40, (byte) -123);
         ConsoleValue.field_a.setBounds(true, WhirlpoolHasher.field_m.field_q, 0, 0, sh.field_c);
         var1 = sh.field_c + 2;
@@ -189,7 +189,7 @@ final class CipherPacketBuffer extends PacketBuffer {
         ClientException.a(0);
         MouseWheelInput.field_a.setBounds(true, ss.field_c.field_q, 0, ss.field_c.field_mb - 40, 40);
         AuctionItem.field_o.setBounds(true, af.field_d.field_q, 0, 0, 30);
-        stackIn_13_0 = bt.field_b;
+        stackIn_13_0 = QuickChatCategoryCache.field_b;
         stackIn_14_1 = (param0) ? false : true;
         ((UiLayoutNode) (Object) stackIn_13_0).setBounds(stackIn_14_1, af.field_d.field_q, 0, 30, -2 + (-40 + (af.field_d.field_mb - 30)));
         PlayingView.field_w.setBounds(true, 68, 5, 5, 30);
@@ -202,7 +202,7 @@ final class CipherPacketBuffer extends PacketBuffer {
         stackIn_20_1 = (param0) ? false : true;
         ((UiLayoutNode) (Object) stackIn_19_0).setBounds(stackIn_20_1, -var2 + 363, var2 + 5, 5, 30);
         RegistrationRequestDialog.field_lb.setBounds(true, -370 + (-5 + af.field_d.field_q), 370, 5, 30);
-        ShopPlayerSlot.field_Jb.setLayout(2, 55, -10 + (bt.field_b.field_mb - 32), 37, 5, -5 + bt.field_b.field_q - 5, TeamSelectionAgent.field_f);
+        ShopPlayerSlot.field_Jb.setLayout(2, 55, -10 + (QuickChatCategoryCache.field_b.field_mb - 32), 37, 5, -5 + QuickChatCategoryCache.field_b.field_q - 5, TeamSelectionAgent.field_f);
         var3 = (2 + af.field_d.field_q) / 2;
         dr.field_d.setBounds(true, var3 - 2, 0, -40 + af.field_d.field_mb, 40);
         if (!NetworkArchiveRequest.field_t) {

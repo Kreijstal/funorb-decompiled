@@ -40,7 +40,7 @@ final class nc {
           if (param1 != -85) {
             return;
           }
-          rn.field_c = TextPromptDialog.field_yb + 6;
+          VertexNormal.field_c = TextPromptDialog.field_yb + 6;
           if (100 > et.field_c) {
             et.field_c = 100;
           }

@@ -12,7 +12,7 @@ final class MenuButton {
     int kind;
     private int field_k;
     private int field_a;
-    private j field_b;
+    private FootballerPreview field_b;
     int width;
     private Sprite[] field_n;
     static int[] field_q;
@@ -118,7 +118,7 @@ final class MenuButton {
                                                                     if (10 != this.kind) {
                                                                       if (this.kind != 11) {
                                                                         if (this.kind == 12) {
-                                                                          bt.a(param0 + 1);
+                                                                          QuickChatCategoryCache.a(param0 + 1);
                                                                         } else {
                                                                           if (this.kind == 55) {
                                                                             NanoTickClock.c((byte) -59);
@@ -147,11 +147,11 @@ final class MenuButton {
                                                                                       }
                                                                                     }
                                                                                   } else {
-                                                                                    stackIn_67_0 = !(ei.field_n);
-                                                                                    ei.field_n = stackIn_67_0;
+                                                                                    stackIn_67_0 = !(RotaryDialPainter.field_n);
+                                                                                    RotaryDialPainter.field_n = stackIn_67_0;
                                                                                   }
                                                                                 } else {
-                                                                                  ql.a((byte) 101, true, dg.field_f);
+                                                                                  ql.a((byte) 101, true, NineSlicePanelPainter.field_f);
                                                                                   op.field_v = 2147483647;
                                                                                 }
                                                                               } else {
@@ -272,7 +272,7 @@ final class MenuButton {
           this.activate(-1, true);
         }
         if (null != this.field_b) {
-          this.field_b.a(17 == this.kind ? sk.a((byte) 97) : IntrusiveNode.b((byte) -124), 1);
+          this.field_b.updatePose(17 == this.kind ? sk.a((byte) 97) : IntrusiveNode.b((byte) -124), 1);
         }
         if (this.field_r &&
           param2 &&
@@ -311,7 +311,7 @@ final class MenuButton {
           AccountTermsPanel.field_G = param4;
           AuctionItem.field_e = 3;
           MessageDialog.field_x = param0;
-          cr.field_c = param6;
+          LinkTextPainter.field_c = param6;
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "io.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ')');
         }
@@ -368,7 +368,7 @@ final class MenuButton {
             DirectByteStorage.field_g = QuickChatPhraseDefinition.a("instructions", QuickChatKeysHelpPanel.field_Cb, (byte) 78, "mouse");
             RegistrationRequestDialog.field_qb = QuickChatPhraseDefinition.a("instructions", QuickChatKeysHelpPanel.field_Cb, (byte) 108, "mouse_left");
             PlayerInputEvent.field_q = QuickChatPhraseDefinition.a("instructions", QuickChatKeysHelpPanel.field_Cb, (byte) 103, "mouse_right");
-            ak.field_f = QuickChatPhraseDefinition.a("instructions", QuickChatKeysHelpPanel.field_Cb, (byte) 106, "mouse_roller");
+            WorldDrawEntry.field_f = QuickChatPhraseDefinition.a("instructions", QuickChatKeysHelpPanel.field_Cb, (byte) 106, "mouse_roller");
           }
           if (param0 != 2) {
             field_l = 67;
@@ -406,10 +406,10 @@ final class MenuButton {
           param0 - (this.height >> 1) < us.field_j &&
           us.field_j < param0 + (this.height >> 1)) {
           if (49 == this.kind) {
-            IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, vs.field_l);
+            IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, PlayerPortraitCacheEntry.field_l);
           }
           if (32 == this.kind) {
-            IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, nv.field_G);
+            IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, MarkerSliderWidget.field_G);
           }
           if (37 == this.kind) {
             IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, InstrumentEnvelope.field_i);
@@ -448,7 +448,7 @@ final class MenuButton {
           }
         } else {
           stackIn_25_1 = TextHotspotWidget.field_K;
-          if (!ei.field_n) {
+          if (!RotaryDialPainter.field_n) {
             stackIn_26_2 = 0;
           } else {
             stackIn_26_2 = 1;
@@ -477,7 +477,7 @@ final class MenuButton {
             }
             SoftwareRasterizer.drawVerticalLine(1 + (var9 + var6), 1 + param0 - 2, 2, var10);
           }
-          this.field_b.a(24, param0 + 10, var6 + var8);
+          this.field_b.draw(24, param0 + 10, var6 + var8);
         }
         param0 += 4;
         if (var4 == 2) {
@@ -630,11 +630,11 @@ final class MenuButton {
         this.height = this.field_n[0].field_v;
         this.width = this.field_n[0].field_o;
         if (this.kind == 17) {
-          this.field_b = new j(0);
+          this.field_b = new FootballerPreview(0);
           this.field_r = true;
         }
         if (this.kind == 16) {
-          this.field_b = new j(1);
+          this.field_b = new FootballerPreview(1);
           this.field_r = true;
         }
     }

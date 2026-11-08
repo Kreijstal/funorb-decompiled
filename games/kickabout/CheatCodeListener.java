@@ -46,7 +46,7 @@ final class CheatCodeListener implements OverlayLayer {
           var1 = 1;
           gg.a(-32053);
         } else {
-          if (!ng.a(param0 ^ 27302)) {
+          if (!ServerTextTemplate.a(param0 ^ 27302)) {
             if (NanoTickClock.c(2915)) {
               SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.field_g, SoftwareRasterizer.field_f);
               var1 = 1;
@@ -58,7 +58,7 @@ final class CheatCodeListener implements OverlayLayer {
           }
         }
         if (PlayerStats.a((byte) -3) &&
-          !ng.a(param0 ^ 27302)) {
+          !ServerTextTemplate.a(param0 ^ 27302)) {
           stackIn_12_0 = 100;
           if (SplashScreen.field_m == null) {
             stackIn_13_1 = vb.field_k;
@@ -68,7 +68,7 @@ final class CheatCodeListener implements OverlayLayer {
           WelcomeDialog.c(stackIn_12_0, stackIn_13_1);
           var1 = 1;
         }
-        if (nv.i(0)) {
+        if (MarkerSliderWidget.i(0)) {
           var2 = (-1 + LoginDialog.field_bb << 8) / 16;
           if (0 < var2) {
             var1 = 1;

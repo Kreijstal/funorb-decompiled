@@ -192,7 +192,7 @@ final class StatefulTextPainter extends TextWidgetPainter {
           vb.field_a = ModalStack.a(param3, -120, "commonui", "frame_bottom");
           KeyedLoginCredentials.field_f = wa.a((byte) 112, "commonui", param3, "jagex_logo_grey");
           IntrusiveDequeCursor.field_a = ModalStack.a(param3, -29, "commonui", "button");
-          LoggedPlayer.field_g = ng.a("validation", "commonui", 2, param3);
+          LoggedPlayer.field_g = ServerTextTemplate.a("validation", "commonui", 2, param3);
           EmailSyntaxValidator.field_k = (BitmapFont) ((Object) RenderedFootballer.a(param1, 10, "arezzo12", param3, "commonui"));
           gf.field_a = (BitmapFont) ((Object) RenderedFootballer.a(param1, 10, "arezzo14", param3, "commonui"));
           fj.field_b = (BitmapFont) ((Object) RenderedFootballer.a(param1, 10, "arezzo14bold", param3, "commonui"));
@@ -225,7 +225,7 @@ final class StatefulTextPainter extends TextWidgetPainter {
             }
           }
           var9Lifetime1 = var17.field_w;
-          tr.d(-12974);
+          ClientUiOverlay.pushRasterState(-12974);
           var17.e();
           SoftwareRasterizer.desaturateRect(0, 0, SoftwareRasterizer.field_g, SoftwareRasterizer.field_f);
           var15 = new Sprite(var9Lifetime1, var9Lifetime1);

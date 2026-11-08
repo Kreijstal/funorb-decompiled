@@ -844,7 +844,7 @@ final class CommonGame {
                           this.field_V.a((MatchAgent) (var4_ref_nlLifetime2), (byte) 84);
                           var10Lifetime2 = pc.a(this.field_V.horizontalSpeedSquared(3), -524289) >> 8;
                           this.field_V.velocityX = (we.cosine(var8_intLifetime1, false) >> 8) * var10Lifetime2;
-                          this.field_V.velocityY = var10Lifetime2 * (ei.sine(var8_intLifetime1, (byte) -23) >> 8);
+                          this.field_V.velocityY = var10Lifetime2 * (RotaryDialPainter.sine(var8_intLifetime1, (byte) -23) >> 8);
                           this.field_V.stepPhysics((byte) -78, this.surface, this.field_B);
                           if (var4_ref_nlLifetime2.field_o < 15) {
                             var4_ref_nlLifetime2.field_o = var4_ref_nlLifetime2.field_o + 1;
@@ -2256,7 +2256,7 @@ final class CommonGame {
             field_D = (String) null;
           }
           var9 = (var7_int >> 8) * we.cosine(var8, false) >> 8;
-          var10 = (var7_int >> 8) * ei.sine(var8, (byte) -23) >> 8;
+          var10 = (var7_int >> 8) * RotaryDialPainter.sine(var8, (byte) -23) >> 8;
           if (param2 &&
             !param1 &&
             param0 > 32) {

@@ -46,12 +46,12 @@ abstract class ConsoleCommand extends DualLinkNode {
         RuntimeException var4 = null;
         Class var5 = null;
         int var6 = 0;
-        dg var7 = null;
+        NineSlicePanelPainter var7 = null;
         var6 = Kickabout.field_G;
         try {
           if (param1 != 2) {
-            var7 = (dg) null;
-            ConsoleCommand.a(58, 112, true, (dg) null);
+            var7 = (NineSlicePanelPainter) null;
+            ConsoleCommand.a(58, 112, true, (NineSlicePanelPainter) null);
           }
           if (!this.field_o.equals(param2)) {
             return false;
@@ -113,7 +113,7 @@ abstract class ConsoleCommand extends DualLinkNode {
           if (param0 != -16000) {
             return true;
           }
-          var4 = (ReflectionCheck) (nv.field_N.g(param0 ^ -25527));
+          var4 = (ReflectionCheck) (MarkerSliderWidget.field_N.g(param0 ^ -25527));
           var1 = var4;
           if (var1 == null) {
             return false;
@@ -142,7 +142,7 @@ abstract class ConsoleCommand extends DualLinkNode {
 
     abstract ConsoleValue execute(byte param0, ConsoleValue[] param1);
 
-    final static void a(int param0, int param1, boolean param2, dg param3) {
+    final static void a(int param0, int param1, boolean param2, NineSlicePanelPainter param3) {
         mt.field_a = param1;
         if (param2) {
           return;

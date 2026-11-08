@@ -116,7 +116,7 @@ abstract class GameLoopApplet extends NetworkGameClient implements OverlayLayer 
             if (var5 == null) {
               break;
             }
-            wp.a(4, var5, 77);
+            LeaderboardParticipant.a(4, var5, 77);
           }
         }
         if (param0 > -25) {
@@ -164,8 +164,8 @@ abstract class GameLoopApplet extends NetworkGameClient implements OverlayLayer 
         var5 = Kickabout.field_G;
         var2 = 0;
         if (!ArchiveManager.a(false)) {
-          if (ng.a(-4)) {
-            if (nv.i(0)) {
+          if (ServerTextTemplate.a(-4)) {
+            if (MarkerSliderWidget.i(0)) {
               ScrollPane.h(-1);
             } else {
               var3 = pg.a(-3);
@@ -204,20 +204,20 @@ abstract class GameLoopApplet extends NetworkGameClient implements OverlayLayer 
               }
             } else {
               if (NanoTickClock.c(2915)) {
-                if (!nv.i(0)) {
+                if (!MarkerSliderWidget.i(0)) {
                   var3 = AuctionsHelpScreen.g(-61);
                   if (var3 == 1) {
-                    ql.a((byte) 50, true, dg.field_f);
+                    ql.a((byte) 50, true, NineSlicePanelPainter.field_f);
                   }
                   this.update(-25, false);
                 } else {
                   ScrollPane.h(-1);
                 }
               } else {
-                if (!nv.i(0)) {
+                if (!MarkerSliderWidget.i(0)) {
                   var2 = 1;
                   var3 = -1;
-                  while (nk.$cfr$intArgs$b$c4997cb15529(-59)) {
+                  while (TexturedPanelPainter.$cfr$intArgs$b$c4997cb15529(-59)) {
                     if (-1 == FixedQuaternion.field_e) {
                       if (FixedQuaternion.field_e == -1 &&
                         -1 != var3) {

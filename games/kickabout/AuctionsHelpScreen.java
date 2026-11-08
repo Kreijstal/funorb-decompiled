@@ -187,9 +187,9 @@ final class AuctionsHelpScreen extends PagedHelpScreen {
         var3 = Kickabout.field_G;
         try {
           var1_int = 0;
-          while (nk.$cfr$intArgs$b$c4997cb15529(-59)) {
-            re.field_c.d(105);
-            if (!re.field_c.c(-1)) {
+          while (TexturedPanelPainter.$cfr$intArgs$b$c4997cb15529(-59)) {
+            CheckboxPainter.field_c.d(105);
+            if (!CheckboxPainter.field_c.c(-1)) {
               continue;
             }
             var1_int = 1;
@@ -197,14 +197,14 @@ final class AuctionsHelpScreen extends PagedHelpScreen {
           if (param0 >= -35) {
             AuctionsHelpScreen.c(true);
           }
-          re.field_c.a(-21174, ts.b(ArchiveManager.field_m, BytePlusOneCommand.field_A, 16756), ts.b(ReceivedAuctionItem.field_y, sm.field_q, 16756));
-          if (re.field_c.c(-1)) {
+          CheckboxPainter.field_c.a(-21174, ts.b(ArchiveManager.field_m, BytePlusOneCommand.field_A, 16756), ts.b(ReceivedAuctionItem.field_y, sm.field_q, 16756));
+          if (CheckboxPainter.field_c.c(-1)) {
             var1_int = 1;
           }
           var2 = 0;
           if (var1_int != 0 &&
-            re.field_c.selectedIndex >= 0) {
-            var2 = InstrumentEnvelope.field_d[re.field_c.selectedIndex];
+            CheckboxPainter.field_c.selectedIndex >= 0) {
+            var2 = InstrumentEnvelope.field_d[CheckboxPainter.field_c.selectedIndex];
             if (2 == var2) {
               ImageProducerRasterBuffer.c((byte) -77);
             }

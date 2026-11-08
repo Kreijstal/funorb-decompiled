@@ -59,7 +59,7 @@ final class FixedQuaternion {
         int var7Lifetime1;
         param4 = param4 >> 1;
         if (param1) {
-          var6 = rn.b(param4, 3);
+          var6 = VertexNormal.sine(param4, 3);
           var7 = StringCursor.a(param4, -127);
           this.field_a = var7;
           this.field_b = EmailSyntaxValidator.a(-8905, (long)param3, (long)var6);
@@ -69,7 +69,7 @@ final class FixedQuaternion {
         }
         FixedQuaternion var8 = (FixedQuaternion) null;
         this.a((FixedQuaternion) null, 27);
-        var6Lifetime1 = rn.b(param4, 3);
+        var6Lifetime1 = VertexNormal.sine(param4, 3);
         var7Lifetime1 = StringCursor.a(param4, -127);
         this.field_a = var7Lifetime1;
         this.field_b = EmailSyntaxValidator.a(-8905, (long)param3, (long)var6Lifetime1);

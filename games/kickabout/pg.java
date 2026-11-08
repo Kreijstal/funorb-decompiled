@@ -49,7 +49,7 @@ final class pg {
         try {
           var1_int = 0;
           var2 = 0;
-          while (nk.$cfr$intArgs$b$c4997cb15529(-59)) {
+          while (TexturedPanelPainter.$cfr$intArgs$b$c4997cb15529(-59)) {
             DirectByteStorage.field_k.d(param0 + 101);
             if (DirectByteStorage.field_k.c(param0 + 2)) {
               var1_int = 1;
@@ -72,14 +72,14 @@ final class pg {
             DirectByteStorage.field_k.selectedIndex >= 0) {
             var3 = sh.field_f[DirectByteStorage.field_k.selectedIndex];
             if (var3 == 2) {
-              oc.a((byte) -43);
+              ArchivePreloadEntry.clearAccountChoiceResources((byte) -43);
             } else if (var3 == 5) {
-              oc.a((byte) -43);
+              ArchivePreloadEntry.clearAccountChoiceResources((byte) -43);
             }
           } else {
             if (var2 != 0 &&
               ck.field_a != 2) {
-              oc.a((byte) -16);
+              ArchivePreloadEntry.clearAccountChoiceResources((byte) -16);
             }
           }
           if (var3 == 0 &&
@@ -190,18 +190,18 @@ final class pg {
             return stackIn_2_0;
           }
           var5_long = nj.monotonicMillis(51);
-          if (80L > -tr.field_d + var5_long) {
+          if (80L > -ClientUiOverlay.field_d + var5_long) {
             stackIn_5_0 = null;
             return (RenderedFootballer) (stackIn_5_0);
           }
-          tr.field_d = var5_long;
+          ClientUiOverlay.field_d = var5_long;
           stackIn_8_0 = (PlayerStats) (param2);
           stackIn_8_1 = param1;
           stackIn_8_2 = param4;
           stackIn_8_3 = (PlayerStats) (param2);
           stackIn_8_4 = -107;
           stackIn_9_5 = !(param2.f(13467));
-          stackIn_13_3 = (((PlayerStats) (Object) stackIn_8_3).c((byte) stackIn_8_4, stackIn_9_5)) && (wn.a((byte) 34));
+          stackIn_13_3 = (((PlayerStats) (Object) stackIn_8_3).c((byte) stackIn_8_4, stackIn_9_5)) && (AccountRegistrationResponse.a((byte) 34));
           stackIn_14_0 = mg.a(stackIn_8_0, stackIn_8_1, stackIn_8_2, stackIn_13_3, param0, (byte) 106);
           return stackIn_14_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -110,7 +110,7 @@ final class su {
         int var7;
         oo.field_e[AuctionsScreen.field_O] = param3;
         ByteStorage.field_d[AuctionsScreen.field_O] = AuctionsScreen.field_O;
-        bl.field_m[AuctionsScreen.field_O] = param4;
+        LobbyMatchPreview.field_m[AuctionsScreen.field_O] = param4;
         if (BlackFadeScreen.field_g >= param4) {
           if (er.field_k <= param4) {
             AccountMessagePanel.field_G[AuctionsScreen.field_O] = param5;

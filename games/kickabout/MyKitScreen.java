@@ -70,7 +70,7 @@ final class MyKitScreen extends TeamManagementScreen {
               } else {
                 AvailabilityCheckRequest.a(123, var6.field_yb);
               }
-              kj.a((byte) -117);
+              LoginKind.a((byte) -117);
             }
             var6 = (ColourSwatchTile) (var5.c(33));
           }
@@ -78,11 +78,11 @@ final class MyKitScreen extends TeamManagementScreen {
         var4Lifetime1 = 0;
         if (this.field_Y.field_sb == 1) {
           var4Lifetime1--;
-          kj.a((byte) -99);
+          LoginKind.a((byte) -99);
         }
         if (this.field_K.field_sb == 1) {
           var4Lifetime1++;
-          kj.a((byte) -116);
+          LoginKind.a((byte) -116);
         }
         if (FormationAgent.field_f < ArrayWidgetContainer.field_x &&
           StatefulTextPainter.field_v != 0) {
@@ -163,8 +163,8 @@ final class MyKitScreen extends TeamManagementScreen {
         int var3;
         int var4;
         int var5;
-        if (cg.field_D > 0) {
-          cg.field_D = cg.field_D - 1;
+        if (CaptionedContainer.field_D > 0) {
+          CaptionedContainer.field_D = CaptionedContainer.field_D - 1;
         }
         var2 = 0;
         if (1 == this.field_eb.field_qb) {
@@ -172,9 +172,9 @@ final class MyKitScreen extends TeamManagementScreen {
             this.field_F.field_fb = this.field_F.field_fb + 16;
             var2 = 1;
           }
-          if (cg.field_D == 0) {
+          if (CaptionedContainer.field_D == 0) {
             ShopPlayerSlot.c(59, 119);
-            cg.field_D = 8;
+            CaptionedContainer.field_D = 8;
           }
           this.field_R = this.field_R + 1;
         }
@@ -183,9 +183,9 @@ final class MyKitScreen extends TeamManagementScreen {
             this.field_F.field_fb = this.field_F.field_fb - 16;
             var2 = 1;
           }
-          if (cg.field_D == 0) {
+          if (CaptionedContainer.field_D == 0) {
             ShopPlayerSlot.c(60, 33);
-            cg.field_D = 8;
+            CaptionedContainer.field_D = 8;
           }
           this.field_R = this.field_R + 1;
         }
@@ -194,10 +194,10 @@ final class MyKitScreen extends TeamManagementScreen {
           this.field_X.field_gb) {
           this.field_F.field_fb = this.field_F.field_fb - 16 * var3;
           var2 = 1;
-          if (0 == cg.field_D) {
+          if (0 == CaptionedContainer.field_D) {
             stackIn_25_0 = (var3 > 0) ? 60 : 59;
             ShopPlayerSlot.c(stackIn_25_0, -125);
-            cg.field_D = 8;
+            CaptionedContainer.field_D = 8;
           }
         }
         stackIn_29_0 = (-(this.field_F.field_fb + this.field_F.field_s) > 0) ? 0 : 1;
@@ -414,7 +414,7 @@ final class MyKitScreen extends TeamManagementScreen {
           stackIn_19_0 = this;
           if (((PlayerStats) stackIn_15_6).c((byte) stackIn_15_7, stackIn_16_8)) {
             stackIn_19_0Lifetime1 = this;
-            if (wn.a((byte) 110)) {
+            if (AccountRegistrationResponse.a((byte) 110)) {
               stackIn_20_6 = true;
               decompiledFrameRemainder0 = false;
             }

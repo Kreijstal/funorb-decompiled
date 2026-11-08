@@ -104,7 +104,7 @@ final class DemoIntegersCommand extends ConsoleCommand {
             }
           }
           if (0 != uq.field_a.field_sb) {
-            ck.field_b = new TextPromptDialog(uq.field_a.field_F, uq.field_a.field_T, uq.field_a.field_q, uq.field_a.field_mb, param2, ChatMessage.field_e, AccountTermsPanel.field_H, hl.field_f, ConsoleEvaluationException.field_e, MatchPhaseView.field_d, ul.field_c, (String) null, 0L);
+            ck.field_b = new TextPromptDialog(uq.field_a.field_F, uq.field_a.field_T, uq.field_a.field_q, uq.field_a.field_mb, param2, ChatMessage.field_e, AccountTermsPanel.field_H, DateInputValidator.field_f, ConsoleEvaluationException.field_e, MatchPhaseView.field_d, ul.field_c, (String) null, 0L);
           }
           var9 = TextPromptDialog.a(param1, sh.field_c, (byte) 26, DiskCacheWorker.field_b);
           if (var9 != null) {
@@ -173,9 +173,9 @@ final class DemoIntegersCommand extends ConsoleCommand {
             return false;
           }
           var2 = param0.g(24009);
-          while (var2 instanceof ak) {
-            if (var2.field_d instanceof ak) {
-              if (((ak) (var2)).a((byte) -56) < ((ak) (var2.field_d)).a((byte) -9)) {
+          while (var2 instanceof WorldDrawEntry) {
+            if (var2.field_d instanceof WorldDrawEntry) {
+              if (((WorldDrawEntry) (var2)).getSortY((byte) -56) < ((WorldDrawEntry) (var2.field_d)).getSortY((byte) -9)) {
                 return false;
               }
               var2 = var2.field_d;

@@ -43,7 +43,7 @@ final class ArgbSprite extends Sprite {
           if (var6 <= 0) {
             return;
           }
-          ArgbSprite.c(SoftwareRasterizer.field_a, this.field_y, 0, var5, var4, var7, var6, var8, var9, param2);
+          ArgbSprite.blendShadedGrayscaleRows(SoftwareRasterizer.field_a, this.field_y, 0, var5, var4, var7, var6, var8, var9, param2);
           return;
         }
     }
@@ -89,12 +89,12 @@ final class ArgbSprite extends Sprite {
           if (var5 <= 0) {
             return;
           }
-          ArgbSprite.c(SoftwareRasterizer.field_a, this.field_y, 0, var4, var3, var6, var5, var7, var8);
+          ArgbSprite.blendArgbRows(SoftwareRasterizer.field_a, this.field_y, 0, var4, var3, var6, var5, var7, var8);
           return;
         }
     }
 
-    private final static void c(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    private final static void blendShadedGrayscaleRows(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         int var15 = 0;
         int var16 = 0;
         int incrementValue$6 = 0;
@@ -189,7 +189,7 @@ final class ArgbSprite extends Sprite {
           if (var5 <= 0) {
             return;
           }
-          ArgbSprite.c(SoftwareRasterizer.field_a, this.field_y, 0, var4, var3, var6, var5, var7, var8);
+          ArgbSprite.blendArgbRows(SoftwareRasterizer.field_a, this.field_y, 0, var4, var3, var6, var5, var7, var8);
           return;
         }
     }
@@ -325,7 +325,7 @@ final class ArgbSprite extends Sprite {
         super(param0, param1, param2, param3, param4, param5, param6);
     }
 
-    private final static void b(int param0, int param1, int param2, int[] param3, int[] param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13) {
+    private final static void addArgbRows(int param0, int param1, int param2, int[] param3, int[] param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13) {
         int incrementValue$12 = 0;
         int var14;
         for (param8 = -param10; param8 < 0; param8++) {
@@ -392,7 +392,7 @@ final class ArgbSprite extends Sprite {
           if (var6 <= 0) {
             return;
           }
-          ArgbSprite.b(0, 0, 0, SoftwareRasterizer.field_a, this.field_y, var5, 0, var4, 0, var7, var6, var8, var9, param2);
+          ArgbSprite.addArgbRows(0, 0, 0, SoftwareRasterizer.field_a, this.field_y, var5, 0, var4, 0, var7, var6, var8, var9, param2);
           return;
         }
     }
@@ -1219,7 +1219,7 @@ final class ArgbSprite extends Sprite {
         }
     }
 
-    private final static void c(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    private final static void blendArgbRows(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int var10 = 0;
         int var11 = 0;
         int incrementValue$12 = 0;
@@ -1364,7 +1364,7 @@ final class ArgbSprite extends Sprite {
           if (var5 <= 0) {
             return;
           }
-          ArgbSprite.c(SoftwareRasterizer.field_a, this.field_y, 0, var4, var3, var6, var5, var7, var8);
+          ArgbSprite.blendArgbRows(SoftwareRasterizer.field_a, this.field_y, 0, var4, var3, var6, var5, var7, var8);
           return;
         }
     }

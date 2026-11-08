@@ -3,7 +3,7 @@
  */
 final class ReflectionCheck extends IntrusiveNode {
     int[] operationTypes;
-    static kj field_j;
+    static LoginKind field_j;
     byte[][][] serializedArguments;
     int requestId;
     PlatformTask[] methodTasks;
@@ -91,7 +91,7 @@ final class ReflectionCheck extends IntrusiveNode {
 
     static {
         field_i = "Email (Login):";
-        field_j = new kj(0);
+        field_j = new LoginKind(0);
         field_g = 0;
     }
 }

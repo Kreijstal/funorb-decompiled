@@ -18,7 +18,7 @@ final class MatchScreen extends AppScreen {
     boolean field_g;
     boolean field_q;
     int field_B;
-    static kj field_w;
+    static LoginKind field_w;
     boolean field_s;
     boolean isOnlineMatch;
     private boolean stateReceived;
@@ -162,7 +162,7 @@ final class MatchScreen extends AppScreen {
         try {
           java.net.URL var2 = null;
           if (param1 != 0) {
-            field_w = (kj) null;
+            field_w = (LoginKind) null;
           }
           try {
             var2 = new java.net.URL(param0.getCodeBase(), "tosupport.ws");
@@ -207,7 +207,7 @@ final class MatchScreen extends AppScreen {
           this.field_i.tick(4);
         }
         SellPlayerDialog.g(-128);
-        re.b(101);
+        CheckboxPainter.b(101);
         this.phaseController.updateCamera(true);
         this.phaseController.update(-117, param1);
         if (this.isOnlineMatch &&
@@ -284,7 +284,7 @@ final class MatchScreen extends AppScreen {
           stackIn_16_1 = (param10);
           this.field_A = stackIn_16_1;
           this.field_n = param14;
-          bt.field_e = false;
+          QuickChatCategoryCache.field_e = false;
           stackIn_19_1 = (param4);
           this.field_s = stackIn_19_1;
           var21 = WelcomeDialog.field_F;
@@ -337,7 +337,7 @@ final class MatchScreen extends AppScreen {
           this.leaveMatch(true, 17);
         }
         if (null != this.phaseController) {
-          PacketBuffer.a(-44, rk.field_h);
+          PacketBuffer.a(-44, WorldSpriteSequence.field_h);
           hr.a((byte) -48);
           this.drawScreen(-5, false);
           TeamManagementScreen.e(122);
@@ -354,7 +354,7 @@ final class MatchScreen extends AppScreen {
           return;
         }
         if (!this.isOnlineMatch) {
-          ng.a(0, 115);
+          ServerTextTemplate.a(0, 115);
           DelayedServerPacket.a(18, param0, -2);
         }
     }
@@ -610,7 +610,7 @@ final class MatchScreen extends AppScreen {
         }
         us.drawTutorialCaption((byte) -121);
         if (0 < this.field_E) {
-          rk.field_h.b(0, 0, this.field_E);
+          WorldSpriteSequence.field_h.b(0, 0, this.field_E);
         }
         if (!MyKitScreen.field_O) {
           if (this.phaseController instanceof PlayingView) {
@@ -732,7 +732,7 @@ final class MatchScreen extends AppScreen {
           return true;
         }
         if (param0 == il.field_h) {
-          bt.field_e = !bt.field_e ? true : false;
+          QuickChatCategoryCache.field_e = !QuickChatCategoryCache.field_e ? true : false;
         }
         if (param1 > -5) {
           return false;
@@ -880,7 +880,7 @@ final class MatchScreen extends AppScreen {
     }
 
     static {
-        field_w = new kj(2);
+        field_w = new LoginKind(2);
         field_j = new IntrusiveDeque();
         field_p = null;
         field_x = "OK";

@@ -10,7 +10,7 @@ final class IntKeyLookup {
         if (param0 > -55) {
           return 67;
         }
-        if (ia.field_c) {
+        if (FaceNormal.field_c) {
           param1 = -param1 + 1344;
         }
         return go.a(param1, (byte) -56);
@@ -26,7 +26,7 @@ final class IntKeyLookup {
         RuntimeException decompiledCaughtException = null;
         try {
           var2_int = 82 / ((54 - param1) / 32);
-          stackIn_3_0 = (null != tr.a(param0, (byte) 40));
+          stackIn_3_0 = (null != ClientUiOverlay.a(param0, (byte) 40));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -56,11 +56,11 @@ final class IntKeyLookup {
         GameSoundEffect.field_i = LeaguesHelpScreen.h(-117);
         wd.field_l = new ModalStack();
         if (param0 < -59) {
-          bl.a(true, true, (byte) -72);
+          LobbyMatchPreview.a(true, true, (byte) -72);
           return;
         }
         IntKeyLookup.a(-98);
-        bl.a(true, true, (byte) -72);
+        LobbyMatchPreview.a(true, true, (byte) -72);
     }
 
     IntKeyLookup(int[] param0) {

@@ -321,7 +321,7 @@ final class VerticalScrollbar extends UiLayoutNode {
     final static void k(int param0) {
         int var3 = 0;
         boolean stackIn_11_0 = false;
-        dg stackIn_15_0 = null;
+        NineSlicePanelPainter stackIn_15_0 = null;
         RuntimeException decompiledCaughtException = null;
         int var1_int = 0;
         RuntimeException var1 = null;
@@ -331,7 +331,7 @@ final class VerticalScrollbar extends UiLayoutNode {
         String var6 = null;
         int var7 = 0;
         int var8 = 0;
-        dg var9 = null;
+        NineSlicePanelPainter var9 = null;
         int var10 = 0;
         var10 = Kickabout.field_G;
         try {
@@ -340,31 +340,31 @@ final class VerticalScrollbar extends UiLayoutNode {
           so.field_e = GameSoundEffect.field_k + var1_int;
           SumIntegersCommand.field_I = -(NameSuggestionsPanel.field_G >> 1) + GameResourceLoader.field_e;
           var2 = SumIntegersCommand.field_I;
-          for (var3 = param0; j.field_a.length > var3; var3++) {
+          for (var3 = param0; FootballerPreview.field_a.length > var3; var3++) {
             var4 = WidgetContainer.field_x[var3];
             if (0 > var4) {
-              var5 = du.field_a;
+              var5 = MarkerSliderPainter.field_a;
             } else {
-              if (re.field_c.selectedIndex == var4) {
+              if (CheckboxPainter.field_c.selectedIndex == var4) {
                 var5 = ParticipantStatus.field_w;
               } else {
                 var5 = ValidationHelpWidget.field_U;
               }
             }
-            var6 = j.field_a[var3];
+            var6 = FootballerPreview.field_a[var3];
             stackIn_11_0 = !(var4 < 0);
             var7 = LoginText.a(stackIn_11_0, var6, -23044);
             var8 = RasterStateSnapshot.field_k - (var7 >> 1);
             if (var4 >= 0) {
-              if (re.field_c.selectedIndex != var4) {
+              if (CheckboxPainter.field_c.selectedIndex != var4) {
                 stackIn_15_0 = TeamManagementScreen.field_B;
               } else {
-                stackIn_15_0 = oh.field_d;
+                stackIn_15_0 = WorldSpriteDecoration.field_d;
               }
               var9 = stackIn_15_0;
               var2 = var2 + of.field_a;
               if (var9 != null) {
-                var9.a(var8 - TextFieldNode.field_zb, ScrollContainer.field_zb + (IsSixCommand.field_H << 1), var2, (TextFieldNode.field_zb << 1) + var7, 3);
+                var9.drawPanel(var8 - TextFieldNode.field_zb, ScrollContainer.field_zb + (IsSixCommand.field_H << 1), var2, (TextFieldNode.field_zb << 1) + var7, 3);
               }
               var2 = var2 + IsSixCommand.field_H;
             }
@@ -372,7 +372,7 @@ final class VerticalScrollbar extends UiLayoutNode {
               UrlRequest.field_i.a(var6, var8, var2 + ClientException.field_f, var5, -1);
               var2 = var2 + AccountMessagePanel.field_H;
             } else {
-              UrlRequest.field_a.a(var6, var8, var2 + ag.field_g, var5, -1);
+              UrlRequest.field_a.a(var6, var8, var2 + SoundStreamHandle.field_g, var5, -1);
               var2 = var2 + (IsSixCommand.field_H + of.field_a + ScrollContainer.field_zb);
             }
           }
@@ -425,7 +425,7 @@ final class VerticalScrollbar extends UiLayoutNode {
             for (var11 = param6; var11 < param2; var11++) {
               var12 = ByteStorage.field_d[var11];
               if (param1) {
-                stackIn_24_0 = bl.field_m[var12];
+                stackIn_24_0 = LobbyMatchPreview.field_m[var12];
               } else {
                 stackIn_24_0 = DialogOverlay.field_a[var12];
               }
@@ -661,7 +661,7 @@ final class VerticalScrollbar extends UiLayoutNode {
                     var3Lifetime2 = ((PacketBuffer) ((Object) var1)).readLong((byte) -124);
                     var20 = ((PacketBuffer) ((Object) var1)).readString(-128);
                     var21 = ((PacketBuffer) ((Object) var1)).readString(-114);
-                    var7 = nk.a(31253, var3Lifetime2);
+                    var7 = TexturedPanelPainter.a(31253, var3Lifetime2);
                     if (var7 == null) {
                       var7 = new LobbyPlayerRow(var20, var21, var3Lifetime2);
                       TrinketSlot.field_Eb.a(var7, (byte) -4, var3Lifetime2);
@@ -681,7 +681,7 @@ final class VerticalScrollbar extends UiLayoutNode {
                   if (var2 == 19) {
                     var3Lifetime2 = ((PacketBuffer) ((Object) var1)).readLong((byte) -124);
                     var5Lifetime1 = ((PacketBuffer) ((Object) var1)).readUnsignedByte((byte) -126);
-                    var22 = nk.a(31253, var3Lifetime2);
+                    var22 = TexturedPanelPainter.a(31253, var3Lifetime2);
                     if (var22 == null) {
                       return;
                     }
@@ -717,7 +717,7 @@ final class VerticalScrollbar extends UiLayoutNode {
                     AnimationPlayer.field_c = ((PacketBuffer) ((Object) var1)).readLong((byte) -124);
                     return;
                   }
-                  UnreadMessagesScreen.a("L1: " + tr.b(0), (Throwable) null, param0 ^ 15);
+                  UnreadMessagesScreen.a("L1: " + ClientUiOverlay.describeCurrentPacket(0), (Throwable) null, param0 ^ 15);
                   FormationView.b((byte) -116);
                   return;
                 }

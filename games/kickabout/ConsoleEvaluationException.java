@@ -61,7 +61,7 @@ final class ConsoleEvaluationException extends Exception {
               }
               return;
             }
-            SplashScreen.field_m = ArchiveIndex.field_h.b(30182);
+            SplashScreen.field_m = ArchiveIndex.field_h.enterFullscreen(30182);
             ar.a(500, 2);
             if (null != SplashScreen.field_m) {
               var2 = 2;
@@ -97,7 +97,7 @@ final class ConsoleEvaluationException extends Exception {
           if (ArchiveIndex.field_h == null) {
             SplashScreen.field_m = gf.a(oo.field_c, param1 + 0, 480, 0, 640, 0);
           } else {
-            SplashScreen.field_m = ArchiveIndex.field_h.b(30182);
+            SplashScreen.field_m = ArchiveIndex.field_h.enterFullscreen(30182);
             ar.a(500, 2);
           }
           if (null == SplashScreen.field_m) {

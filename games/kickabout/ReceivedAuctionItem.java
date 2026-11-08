@@ -10,7 +10,7 @@ final class ReceivedAuctionItem extends AuctionItem {
     static String field_A;
     static int field_B;
     static String field_H;
-    static bt field_x;
+    static QuickChatCategoryCache field_x;
 
     final static ReceivedAuctionItem readAuctionItem(int param0, PacketBuffer param1) {
         ReceivedAuctionItem stackIn_15_0 = null;
@@ -203,7 +203,7 @@ final class ReceivedAuctionItem extends AuctionItem {
           }
           for (var1_int = 0; var1_int < NotCommand.field_F.playerCount; var1_int++) {
             if (NotCommand.field_F.participantStatus[var1_int].isActive(3511) &&
-              wp.field_c == NotCommand.field_F.field_g[var1_int].team) {
+              LeaderboardParticipant.field_c == NotCommand.field_F.field_g[var1_int].team) {
               var2 = (RenderedFootballer) (NotCommand.field_F.getControlledFootballer((byte) -60, var1_int));
               stackIn_14_0 = (RegistrationRequestDialog.field_kb != var1_int) ? 160 : 256;
               var3 = stackIn_14_0;
@@ -219,14 +219,14 @@ final class ReceivedAuctionItem extends AuctionItem {
     }
 
     final static int b(int param0) {
-        if (tc.field_s) {
+        if (QuickChatCategory.field_s) {
           return -1;
         }
         if (!QuickChatKeysHelpPanel.field_Cb.a(false, "beach")) {
           return QuickChatKeysHelpPanel.field_Cb.getGroupProgressByName("beach", -16248);
         }
-        tc.field_s = true;
-        wn.field_a = ng.a("deckchairs", "beach", 2, QuickChatKeysHelpPanel.field_Cb);
+        QuickChatCategory.field_s = true;
+        AccountRegistrationResponse.field_a = ServerTextTemplate.a("deckchairs", "beach", 2, QuickChatKeysHelpPanel.field_Cb);
         CachedTextLayout.field_q = QuickChatPhraseDefinition.a("beach", QuickChatKeysHelpPanel.field_Cb, (byte) 45, "parasol");
         ns.field_c = QuickChatPhraseDefinition.a("beach", QuickChatKeysHelpPanel.field_Cb, (byte) 92, "ball");
         AnimationSkeleton.field_h = QuickChatPhraseDefinition.a("beach", QuickChatKeysHelpPanel.field_Cb, (byte) 68, "bucket");
@@ -234,7 +234,7 @@ final class ReceivedAuctionItem extends AuctionItem {
         FullscreenFocusCanvas.field_a = QuickChatPhraseDefinition.a("beach", QuickChatKeysHelpPanel.field_Cb, (byte) 76, "starfish");
         BytePlusOneCommand.field_D = QuickChatPhraseDefinition.a("beach", QuickChatKeysHelpPanel.field_Cb, (byte) 93, "icecream");
         int var1 = 88 % ((65 - param0) / 42);
-        ChatMessage.field_b = ng.a("stains", "beach", 2, QuickChatKeysHelpPanel.field_Cb);
+        ChatMessage.field_b = ServerTextTemplate.a("stains", "beach", 2, QuickChatKeysHelpPanel.field_Cb);
         return -1;
     }
 

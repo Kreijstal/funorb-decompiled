@@ -114,7 +114,7 @@ final class BytePlusOneCommand extends ConsoleCommand {
           sg.field_c[0] = 16764000;
           sg.field_c[1] = 6356832;
           FootballerAgent.field_i = param0;
-          ag.field_e = 8421504;
+          SoundStreamHandle.field_e = 8421504;
           StringCursor.field_h[3] = 16736511;
           StringCursor.field_h[2] = 16736352;
           StringCursor.field_h[0] = 16764000;
@@ -139,9 +139,9 @@ final class BytePlusOneCommand extends ConsoleCommand {
           uf.field_b.addChild((byte) -110, (UiLayoutNode) (AuctionSettingsDialog.field_G));
           DebugConsole.field_z = new UiLayoutNode(0L, param11);
           uf.field_b.addChild((byte) -128, DebugConsole.field_z);
-          ei.field_b = new UiLayoutNode(0L, param9);
-          ei.field_b.field_X = FootballerAgent.field_i;
-          DebugConsole.field_z.addChild((byte) -116, ei.field_b);
+          RotaryDialPainter.field_b = new UiLayoutNode(0L, param9);
+          RotaryDialPainter.field_b.field_X = FootballerAgent.field_i;
+          DebugConsole.field_z.addChild((byte) -116, RotaryDialPainter.field_b);
           DebugConsole.field_z.invalidateChildren(false);
           WeightedCacheEntry.field_s = new UiLayoutNode(0L, (UiLayoutNode) null);
           WeightedCacheEntry.field_s.field_R = var16;
@@ -195,7 +195,7 @@ final class BytePlusOneCommand extends ConsoleCommand {
             uq.field_a = new UiLayoutNode(0L, param2);
             uq.field_a.field_E = ig.field_i;
             g.field_a.addChild((byte) -104, uq.field_a);
-            stackIn_31_0 = oh.b(-14954) ? 1 : 0;
+            stackIn_31_0 = WorldSpriteDecoration.b(-14954) ? 1 : 0;
           }
           if (stackIn_31_0 != 0 &&
             !PacketBuffer.field_l) {

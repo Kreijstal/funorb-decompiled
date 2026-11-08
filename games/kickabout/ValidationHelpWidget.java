@@ -152,7 +152,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
         var13 = Kickabout.field_G;
         var6 = this.field_R.getValidationState(-24407);
         if (var6 != mn.field_c &&
-          var6 != en.field_p) {
+          var6 != PlayerSurnameSortCriterion.field_p) {
           var5 = this.field_R.getValidationMessage(param1 - 90);
           if (var5 == null) {
             var5 = this.field_O;
@@ -170,7 +170,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
         var9 = param2 + this.field_t;
         var10 = var8.textOriginY(true, (UiWidget) (this), param3) + (var8.ensureTextLayout(5035, (UiWidget) (this)).a(-1761) >> 1);
         if (var6Lifetime1 != mn.field_c &&
-          var6Lifetime1 != en.field_p) {
+          var6Lifetime1 != PlayerSurnameSortCriterion.field_p) {
           if (PitchOptionTile.field_Bb == var6Lifetime1) {
             var15 = LoggedPlayer.field_g[2];
             var15.drawAdditive(var9, var10 - (var15.field_w >> 1), 256);

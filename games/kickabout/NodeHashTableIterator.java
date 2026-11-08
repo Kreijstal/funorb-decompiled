@@ -48,14 +48,14 @@ final class NodeHashTableIterator implements Iterator {
           }
           while (!DemoIntegersCommand.a(param0, false)) {
             var2_ref = param0.g(24009);
-            while (var2_ref instanceof ak) {
-              if (!(var2_ref.field_d instanceof ak)) {
+            while (var2_ref instanceof WorldDrawEntry) {
+              if (!(var2_ref.field_d instanceof WorldDrawEntry)) {
                 break;
               }
               var3 = var2_ref.field_d;
-              if (((ak) (var2_ref)).a((byte) 120) < ((ak) (var3)).a((byte) -73)) {
+              if (((WorldDrawEntry) (var2_ref)).getSortY((byte) 120) < ((WorldDrawEntry) (var3)).getSortY((byte) -73)) {
                 var2_ref.c((byte) -109);
-                pa.a(var2_ref, var3, (byte) 127);
+                GeneratedPanelPainter.a(var2_ref, var3, (byte) 127);
               }
               var2_ref = var3;
             }

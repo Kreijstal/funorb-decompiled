@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class MatchingTextValidator extends TextFieldValidator {
-    static ff field_j;
+    static QuickChatCommandType field_j;
     static String[] field_o;
     private TextInputWidget field_l;
     static Sprite field_k;
@@ -48,7 +48,7 @@ final class MatchingTextValidator extends TextFieldValidator {
           field_k = null;
           return;
         }
-        field_j = (ff) null;
+        field_j = (QuickChatCommandType) null;
         field_k = null;
     }
 
@@ -69,7 +69,7 @@ final class MatchingTextValidator extends TextFieldValidator {
             if (var3 != null) {
               if (var3.getValidationState(-24407) == LobbyPlayerRow.field_yb &&
                 !param1.equals(this.field_l.field_q)) {
-                stackIn_6_0 = rl.field_p;
+                stackIn_6_0 = PlayerArchetypeSortCriterion.field_p;
                 return stackIn_6_0;
               }
               stackIn_8_0 = var3.getValidationMessage(-67);
@@ -83,7 +83,7 @@ final class MatchingTextValidator extends TextFieldValidator {
           if (param1.equals(this.field_l.field_q)) {
             return null;
           }
-          stackIn_14_0 = rl.field_p;
+          stackIn_14_0 = PlayerArchetypeSortCriterion.field_p;
           return stackIn_14_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -127,7 +127,7 @@ final class MatchingTextValidator extends TextFieldValidator {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != -5) {
-            field_j = (ff) null;
+            field_j = (QuickChatCommandType) null;
           }
           if (this.field_l instanceof ValidationProvider) {
             var3 = ((ValidationProvider) ((Object) this.field_l)).a((byte) -113);
@@ -257,7 +257,7 @@ final class MatchingTextValidator extends TextFieldValidator {
     }
 
     static {
-        field_j = new ff(9, 0, 4, 1);
+        field_j = new QuickChatCommandType(9, 0, 4, 1);
         field_m = new int[2];
     }
 }

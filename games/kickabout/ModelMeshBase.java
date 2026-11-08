@@ -200,18 +200,18 @@ abstract class ModelMeshBase extends MeshObject {
 
     abstract void finishAnimation();
 
-    final void a(ef param0, int param1, ef param2, int param3, int param4, int param5, boolean param6) {
+    final void a(AnimationFrameset param0, int param1, AnimationFrameset param2, int param3, int param4, int param5, boolean param6) {
         if (param1 == -1) {
           return;
         }
         if (!this.beginAnimation()) {
           return;
         }
-        AnimationFrame var8 = param0.field_q[param1];
+        AnimationFrame var8 = param0.frames[param1];
         AnimationSkeleton var9 = var8.field_e;
         Object var10 = null;
         if (param2 != null) {
-          var10 = param2.field_q[param3];
+          var10 = param2.frames[param3];
           if (((AnimationFrame) (var10)).field_e != var9) {
             var10 = null;
           }

@@ -3,10 +3,10 @@
  */
 final class IntValueNode extends IntrusiveNode {
     static String field_h;
-    static oh[] field_e;
+    static WorldSpriteDecoration[] field_e;
     static String field_k;
     static String[] field_f;
-    static dg field_g;
+    static NineSlicePanelPainter field_g;
     int field_j;
     static UiLayoutNode field_i;
 
@@ -40,11 +40,11 @@ final class IntValueNode extends IntrusiveNode {
     final static void a(int param0) {
         if (param0 < 13) {
           IntValueNode.a(-87);
-          bt.field_i = null;
+          QuickChatCategoryCache.field_i = null;
           ar.field_b = null;
           return;
         }
-        bt.field_i = null;
+        QuickChatCategoryCache.field_i = null;
         ar.field_b = null;
     }
 

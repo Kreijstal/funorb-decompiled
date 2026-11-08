@@ -140,7 +140,7 @@ final class ql {
 
     final static void a(Object[] param0, SortCriterion param1, byte param2) {
         try {
-          oh.a(param1, -1 + param0.length, param0, 29921, 0);
+          WorldSpriteDecoration.a(param1, -1 + param0.length, param0, 29921, 0);
           int var3_int = -63 % ((77 - param2) / 37);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "ql.G(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');

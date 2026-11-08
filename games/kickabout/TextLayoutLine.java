@@ -23,7 +23,7 @@ final class TextLayoutLine {
 
     final static int a(int param0, int param1) {
         int var2 = ig.a(param1, param0 ^ -2167);
-        if (ia.field_c) {
+        if (FaceNormal.field_c) {
           var2 = -var2 + 1344;
         }
         if (param0 == -6779) {

@@ -270,7 +270,7 @@ class PacketBuffer extends IntrusiveNode {
 
     final boolean verifyCrc32(int param0) {
         this.field_n = this.field_n - 4;
-        int var2 = s.a(this.field_n, -109, this.field_f, param0);
+        int var2 = RotaryDialWidget.a(this.field_n, -109, this.field_f, param0);
         int var3 = this.readInt(4);
         if (var3 != var2) {
           return false;
@@ -513,7 +513,7 @@ class PacketBuffer extends IntrusiveNode {
     final static void a(int param0, Sprite param1) {
         try {
           int var2_int = 120 % ((param0 - 9) / 46);
-          tr.d(-12974);
+          ClientUiOverlay.pushRasterState(-12974);
           SoftwareRasterizer.a(param1.field_y, param1.field_o, param1.field_v);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "iw.JA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -628,7 +628,7 @@ class PacketBuffer extends IntrusiveNode {
         if (param1) {
           this.writeMedium(86, (byte) 85);
         }
-        int var3 = s.a(this.field_n, 117, this.field_f, param0);
+        int var3 = RotaryDialWidget.a(this.field_n, 117, this.field_f, param0);
         this.writeInt(-37, var3);
         return var3;
     }

@@ -164,16 +164,16 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
           } else {
             if (!param0) {
               tt.field_e.drawAdditive(0, 0, 16);
-              AuctionListing.a(SoftwareRasterizer.field_g - cg.field_K.field_o, -22914, 0, SoftwareRasterizer.field_f, 0);
-              for (var7 = tt.field_e.field_o; SoftwareRasterizer.field_g - cg.field_K.field_o > var7; var7 = var7 + GameAppletShell.field_l.field_o) {
+              AuctionListing.a(SoftwareRasterizer.field_g - CaptionedContainer.field_K.field_o, -22914, 0, SoftwareRasterizer.field_f, 0);
+              for (var7 = tt.field_e.field_o; SoftwareRasterizer.field_g - CaptionedContainer.field_K.field_o > var7; var7 = var7 + GameAppletShell.field_l.field_o) {
                 GameAppletShell.field_l.drawAdditive(var7, 0, 16);
               }
               TeamManagementScreen.e(124);
-              cg.field_K.drawAdditive(var5.field_o - cg.field_K.field_o, 0, 16);
+              CaptionedContainer.field_K.drawAdditive(var5.field_o - CaptionedContainer.field_K.field_o, 0, 16);
             }
           }
         } else {
-          kh.field_r.drawAdditive(0, 0, 16);
+          CanvasResizePolicy.field_r.drawAdditive(0, 0, 16);
         }
         if (param1 != -52) {
           field_D = (ChatMessage) null;
@@ -183,7 +183,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
     }
 
     private final int a(int param0, String param1, int param2, int param3, UiWidget param4) {
-        cg var6 = null;
+        CaptionedContainer var6 = null;
         RuntimeException var6_ref = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -196,7 +196,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
           if (param2 != 21621) {
             this.field_Q = (TextButton) null;
           }
-          var6 = new cg(20, param3, param0 + 120, 25, param4, false, 120, 3, gf.field_a, 16777215, param1);
+          var6 = new CaptionedContainer(20, param3, param0 + 120, 25, param4, false, 120, 3, gf.field_a, 16777215, param1);
           this.a(-54, var6);
           stackIn_3_0 = var6.field_i;
           return stackIn_3_0;
@@ -247,7 +247,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
         this.field_J.a(6, new AgeValidator(this.field_J));
         this.field_Q.field_y = false;
         this.field_Q.field_r = (WidgetPainter) ((Object) new op());
-        this.field_F.field_r = (WidgetPainter) ((Object) new cr());
+        this.field_F.field_r = (WidgetPainter) ((Object) new LinkTextPainter());
         this.field_E.field_r = (WidgetPainter) ((Object) new ri(10000536));
         ri dupTemp$0 = new ri(10000536);
         this.field_K.field_r = (WidgetPainter) ((Object) dupTemp$0);
@@ -265,7 +265,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
         var3 = var3 + (this.a(this.field_N, fa.field_h, 35, 170, var3, LongPlusOneCommand.field_A) + 5);
         var3 = var3 + (this.a(this.field_E, GoalStateAgent.field_f, 35, 170, var3, MusicPatch.field_i) + 5);
         var3 = var3 + this.a(var3, pl.field_a, 170, this.field_J, (byte) 117);
-        cg var4 = new cg(46, var3, -90 + this.field_n, 25, this.field_O, true, this.field_n - 120, 5, EmailSyntaxValidator.field_k, 11579568, StrongCacheEntry.field_v);
+        CaptionedContainer var4 = new CaptionedContainer(46, var3, -90 + this.field_n, 25, this.field_O, true, this.field_n - 120, 5, EmailSyntaxValidator.field_k, 11579568, StrongCacheEntry.field_v);
         this.a(-35, var4);
         var3 = var3 + var4.field_i;
         TextWidgetPainter var5 = new TextWidgetPainter(gf.field_a, 0, 0, 0, 0, 16777215, -1, 0, 0, gf.field_a.field_G, -1, 2147483647, true);
@@ -294,7 +294,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
     private final int a(int param0, boolean param1, String param2, UiWidget param3, int param4, String param5, int param6) {
         RuntimeException var8 = null;
         ValidationHelpWidget var9 = null;
-        cg var10 = null;
+        CaptionedContainer var10 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
         RuntimeException stackIn_7_0 = null;
@@ -306,7 +306,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var10 = new cg(20, param6, 120 + param4, 25, param3, false, 120, 3, gf.field_a, 16777215, param2);
+          var10 = new CaptionedContainer(20, param6, 120 + param4, 25, param3, false, 120, 3, gf.field_a, 16777215, param2);
           if (!param1) {
             stackIn_2_0 = -97;
             return stackIn_2_0;
@@ -431,7 +431,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
           field_I = (LoginMethod) null;
         }
         if (!(ns.field_a <= 0)) {
-          pa.b((byte) 82);
+          GeneratedPanelPainter.b((byte) 82);
         }
         if (fj.field_a > 0) {
           ConsoleEvaluationException.a(param0 + 19335, fj.field_a);
@@ -551,7 +551,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
     private final int a(int param0, String param1, int param2, UiWidget param3, byte param4) {
         int var6_int = 0;
         RuntimeException var6 = null;
-        cg var7 = null;
+        CaptionedContainer var7 = null;
         ValidationIndicator var8 = null;
         int stackIn_1_0 = 0;
         RuntimeException stackIn_4_0 = null;
@@ -562,7 +562,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
         RuntimeException decompiledCaughtException = null;
         try {
           var6_int = 94 / ((10 - param4) / 49);
-          var7 = new cg(20, param0, param2 + 120, 25, param3, false, 120, 3, gf.field_a, 16777215, param1);
+          var7 = new CaptionedContainer(20, param0, param2 + 120, 25, param3, false, 120, 3, gf.field_a, 16777215, param1);
           this.a(-111, var7);
           var8 = new ValidationIndicator(((ValidationProvider) ((Object) param3)).a((byte) -117));
           this.a(-48, var8);

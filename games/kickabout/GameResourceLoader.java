@@ -70,7 +70,7 @@ final class GameResourceLoader implements LoadingSequence {
         }
         SquadGridWidget.h((byte) -19);
         PlayerStats.e(-1456);
-        ResourceArchive var16 = kh.field_g;
+        ResourceArchive var16 = CanvasResizePolicy.field_g;
         ResourceArchive var17 = IterableNodeHashTable.field_b;
         if (null != IterableNodeHashTable.field_c &&
           null != d.field_b) {
@@ -122,28 +122,28 @@ final class GameResourceLoader implements LoadingSequence {
           tt.field_e = wa.a((byte) 122, "menu", QuickChatKeysHelpPanel.field_Cb, "button_left_shine");
           GameAppletShell.field_l = wa.a((byte) 106, "menu", QuickChatKeysHelpPanel.field_Cb, "button_middle_shine");
           sk.a(-109, 100, 20);
-          cg.field_K = wa.a((byte) 107, "menu", QuickChatKeysHelpPanel.field_Cb, "button_right_shine");
-          kh.field_r = wa.a((byte) 116, "menu", QuickChatKeysHelpPanel.field_Cb, "button_small_shine");
+          CaptionedContainer.field_K = wa.a((byte) 107, "menu", QuickChatKeysHelpPanel.field_Cb, "button_right_shine");
+          CanvasResizePolicy.field_r = wa.a((byte) 116, "menu", QuickChatKeysHelpPanel.field_Cb, "button_small_shine");
           MatchScreen.field_l = wa.a((byte) 101, "menu", QuickChatKeysHelpPanel.field_Cb, "button_large_shine");
           ig.field_a = ModalStack.a(QuickChatKeysHelpPanel.field_Cb, -119, "menu", "digifont");
           sk.a(90, 100, 25);
-          ArrayWidgetContainer.field_z = ng.a("swatch_overlay", "menu", 2, QuickChatKeysHelpPanel.field_Cb);
-          var7 = ng.a("arrows", "menu", 2, QuickChatKeysHelpPanel.field_Cb);
+          ArrayWidgetContainer.field_z = ServerTextTemplate.a("swatch_overlay", "menu", 2, QuickChatKeysHelpPanel.field_Cb);
+          var7 = ServerTextTemplate.a("arrows", "menu", 2, QuickChatKeysHelpPanel.field_Cb);
           eo.field_k = new ArgbSprite[]{(ArgbSprite) (var7[0]), (ArgbSprite) (var7[2]), (ArgbSprite) (var7[4])};
           eo.field_i = new ArgbSprite[]{(ArgbSprite) (var7[1]), (ArgbSprite) (var7[3]), (ArgbSprite) (var7[5])};
           sk.a(86, 100, 30);
           sk.a(103, 100, 35);
           sk.a(-94, 100, 40);
-          SocketArchiveNetworkClient.field_q = ng.a("digits", "hud", 2, QuickChatKeysHelpPanel.field_Cb);
+          SocketArchiveNetworkClient.field_q = ServerTextTemplate.a("digits", "hud", 2, QuickChatKeysHelpPanel.field_Cb);
           MouseInputHandler.field_g = ModalStack.a(QuickChatKeysHelpPanel.field_Cb, -121, "hud", "cones");
-          SpriteState.field_p = ng.a("tutorial", "hud", 2, QuickChatKeysHelpPanel.field_Cb);
+          SpriteState.field_p = ServerTextTemplate.a("tutorial", "hud", 2, QuickChatKeysHelpPanel.field_Cb);
           tn.field_e = wa.a((byte) 114, "hud", QuickChatKeysHelpPanel.field_Cb, "arrow");
           IntrusiveDequeCursor.a(-128, wa.a((byte) 114, "hud", QuickChatKeysHelpPanel.field_Cb, "cursor"));
           sk.a(86, 100, 45);
-          TickClock.field_k = ng.a("dialog_icon", "menu", 2, QuickChatKeysHelpPanel.field_Cb);
+          TickClock.field_k = ServerTextTemplate.a("dialog_icon", "menu", 2, QuickChatKeysHelpPanel.field_Cb);
           ArrayWidgetContainer.field_y = wa.a((byte) 107, "menu", QuickChatKeysHelpPanel.field_Cb, "star");
           sk.a(-48, 100, 60);
-          var8 = ng.a("trinkets", "menu", 2, QuickChatKeysHelpPanel.field_Cb);
+          var8 = ServerTextTemplate.a("trinkets", "menu", 2, QuickChatKeysHelpPanel.field_Cb);
           ScrollContainer.field_Fb = new ArgbSprite[4][6];
           var9 = 0;
           for (var10_int = 0; var10_int < 3; var10_int++) {
@@ -170,11 +170,11 @@ final class GameResourceLoader implements LoadingSequence {
           fc.field_h = (ArgbSprite) (QuickChatPhraseDefinition.a("menu", QuickChatKeysHelpPanel.field_Cb, (byte) 109, "lock_icon"));
           sk.a(90, 100, 80);
           RowRangeRequest.field_f = QuickChatPhraseDefinition.a("menu", QuickChatKeysHelpPanel.field_Cb, (byte) 78, "kit");
-          WriteIntegersCommand.field_E = ng.a("cups", "menu", 2, QuickChatKeysHelpPanel.field_Cb);
-          DelayedServerPacket.field_i = ng.a("cups_empty", "menu", 2, QuickChatKeysHelpPanel.field_Cb);
+          WriteIntegersCommand.field_E = ServerTextTemplate.a("cups", "menu", 2, QuickChatKeysHelpPanel.field_Cb);
+          DelayedServerPacket.field_i = ServerTextTemplate.a("cups_empty", "menu", 2, QuickChatKeysHelpPanel.field_Cb);
           sk.a(102, 100, 90);
           Trinket.field_d = (ArgbSprite) (QuickChatPhraseDefinition.a("menu", QuickChatKeysHelpPanel.field_Cb, (byte) 88, "shelf"));
-          rk.field_g = QuickChatPhraseDefinition.a("menu", QuickChatKeysHelpPanel.field_Cb, (byte) 76, "scroll_button");
+          WorldSpriteSequence.field_g = QuickChatPhraseDefinition.a("menu", QuickChatKeysHelpPanel.field_Cb, (byte) 76, "scroll_button");
           LeaguesScreen.field_B = this.a("menu", QuickChatKeysHelpPanel.field_Cb, (byte) 26, "scroll_bar");
           su.field_a = wa.a((byte) 106, "menu", QuickChatKeysHelpPanel.field_Cb, "mini_ball");
           sk.a(-91, 100, 95);
@@ -182,7 +182,7 @@ final class GameResourceLoader implements LoadingSequence {
           var11 = new Sprite[][]{eo.field_p, null, eo.field_m, eo.field_j};
           var12 = new Sprite[][]{eo.field_p, null, eo.field_m, eo.field_j};
           int[] var15 = (int[]) null;
-          uf.a(var11, StatefulTextPainter.field_y, ArchiveSource.field_c, true, ld.field_g, var10, var16, 16971, or.field_b, rk.field_e, var17, UrlRequest.field_c, rp.field_y, ld.field_h, Bzip2State.field_i, var12, (int[]) null, 8, 3, TextFieldValidator.field_i);
+          uf.a(var11, StatefulTextPainter.field_y, ArchiveSource.field_c, true, ld.field_g, var10, var16, 16971, or.field_b, WorldSpriteSequence.field_e, var17, UrlRequest.field_c, rp.field_y, ld.field_h, Bzip2State.field_i, var12, (int[]) null, 8, 3, TextFieldValidator.field_i);
           PlayArea.field_k = MusicPatchNode.field_k;
           IndexedSpriteState.field_e = FormationView.field_n;
           TextButton.field_z = MyKitScreen.field_Z;
@@ -205,12 +205,12 @@ final class GameResourceLoader implements LoadingSequence {
           sk.a(-114, 23, 2);
           LoginDialog.field_cb = nh.toMaskedSprite(new ArgbSprite(ResourceArchive.field_f.takeFileByName("bank_top.png", "", 3), (java.awt.Component) ((Object) DropTargetWidget.l(64))));
           AccountChoicePanel.field_C = nh.toMaskedSprite(new ArgbSprite(ResourceArchive.field_f.takeFileByName("bank_mid.png", "", 52), (java.awt.Component) ((Object) DropTargetWidget.l(64))));
-          du.field_i = nh.toMaskedSprite(new ArgbSprite(ResourceArchive.field_f.takeFileByName("bank_bot.png", "", 123), (java.awt.Component) ((Object) DropTargetWidget.l(64))));
+          MarkerSliderPainter.field_i = nh.toMaskedSprite(new ArgbSprite(ResourceArchive.field_f.takeFileByName("bank_bot.png", "", 123), (java.awt.Component) ((Object) DropTargetWidget.l(64))));
           TextHotspotWidget.field_L = nh.toMaskedSprite(new ArgbSprite(ResourceArchive.field_f.takeFileByName("button_lrg.png", "", 91), (java.awt.Component) ((Object) DropTargetWidget.l(64))));
           DirectByteStorage.field_m = nh.toMaskedSprite(new ArgbSprite(ResourceArchive.field_f.takeFileByName("button_sml.png", "", 81), (java.awt.Component) ((Object) DropTargetWidget.l(64))));
           sk.a(122, 23, 4);
           AccountChoicePanel.field_K = new ArgbSprite(ResourceArchive.field_f.takeFileByName("cone_1.png", "", 91), (java.awt.Component) ((Object) DropTargetWidget.l(64)));
-          re.field_o = new ArgbSprite(ResourceArchive.field_f.takeFileByName("cone_2.png", "", 91), (java.awt.Component) ((Object) DropTargetWidget.l(64)));
+          CheckboxPainter.field_o = new ArgbSprite(ResourceArchive.field_f.takeFileByName("cone_2.png", "", 91), (java.awt.Component) ((Object) DropTargetWidget.l(64)));
           PlayerContextMenu.field_m = nh.toMaskedSprite(new ArgbSprite(ResourceArchive.field_f.takeFileByName("button_left.png", "", 8), (java.awt.Component) ((Object) DropTargetWidget.l(64))));
           SetLagCommand.field_B = nh.toMaskedSprite(new ArgbSprite(ResourceArchive.field_f.takeFileByName("button_middle.png", "", 97), (java.awt.Component) ((Object) DropTargetWidget.l(64))));
           sk.a(-114, 23, 6);
@@ -340,87 +340,87 @@ final class GameResourceLoader implements LoadingSequence {
           var2 = nh.toMaskedSprite((ArgbSprite) (c.field_e));
           var3 = nh.toMaskedSprite((ArgbSprite) (CachedTextLayout.field_q));
           if (RankingsScreen.field_C == 0) {
-            IntValueNode.field_e = new oh[30];
+            IntValueNode.field_e = new WorldSpriteDecoration[30];
             var4 = 0;
             for (var5 = 0; 4 > var5; var5++) {
               var6 = LoggedPossession.a((byte) -24, 896 - var11.field_o);
               var7 = LoggedPossession.a((byte) -24, 1344 - var11.field_v);
               incrementValue$69 = var4;
               var4++;
-              IntValueNode.field_e[incrementValue$69] = new oh(var10, var6, var7);
+              IntValueNode.field_e[incrementValue$69] = new WorldSpriteDecoration(var10, var6, var7);
             }
             incrementValue$49 = var4;
             var4++;
-            IntValueNode.field_e[incrementValue$49] = new oh(ns.field_c, 50, -100);
+            IntValueNode.field_e[incrementValue$49] = new WorldSpriteDecoration(ns.field_c, 50, -100);
             incrementValue$50 = var4;
             var4++;
-            IntValueNode.field_e[incrementValue$50] = new oh(AnimationSkeleton.field_h, 80, -150);
+            IntValueNode.field_e[incrementValue$50] = new WorldSpriteDecoration(AnimationSkeleton.field_h, 80, -150);
             incrementValue$51 = var4;
             var4++;
-            IntValueNode.field_e[incrementValue$51] = new oh(AnimationSkeleton.field_h, 120, -105);
+            IntValueNode.field_e[incrementValue$51] = new WorldSpriteDecoration(AnimationSkeleton.field_h, 120, -105);
             incrementValue$52 = var4;
             var4++;
-            IntValueNode.field_e[incrementValue$52] = new oh(var3, -100, -170);
+            IntValueNode.field_e[incrementValue$52] = new WorldSpriteDecoration(var3, -100, -170);
             incrementValue$53 = var4;
             var4++;
-            IntValueNode.field_e[incrementValue$53] = new oh(var2, 530, -240);
+            IntValueNode.field_e[incrementValue$53] = new WorldSpriteDecoration(var2, 530, -240);
             incrementValue$54 = var4;
             var4++;
-            IntValueNode.field_e[incrementValue$54] = new oh(var3, 670, -170);
+            IntValueNode.field_e[incrementValue$54] = new WorldSpriteDecoration(var3, 670, -170);
             incrementValue$55 = var4;
             var4++;
-            IntValueNode.field_e[incrementValue$55] = new oh(var2, 790, -195);
+            IntValueNode.field_e[incrementValue$55] = new WorldSpriteDecoration(var2, 790, -195);
             incrementValue$56 = var4;
             var4++;
-            IntValueNode.field_e[incrementValue$56] = new oh(ns.field_c, 700, 1354);
+            IntValueNode.field_e[incrementValue$56] = new WorldSpriteDecoration(ns.field_c, 700, 1354);
             incrementValue$57 = var4;
             var4++;
-            IntValueNode.field_e[incrementValue$57] = new oh(AnimationSkeleton.field_h, 720, 1394);
+            IntValueNode.field_e[incrementValue$57] = new WorldSpriteDecoration(AnimationSkeleton.field_h, 720, 1394);
             incrementValue$58 = var4;
             var4++;
-            IntValueNode.field_e[incrementValue$58] = new oh(AnimationSkeleton.field_h, 780, 1374);
+            IntValueNode.field_e[incrementValue$58] = new WorldSpriteDecoration(AnimationSkeleton.field_h, 780, 1374);
             incrementValue$59 = var4;
             var4++;
-            IntValueNode.field_e[incrementValue$59] = new oh(var3, -171, 1037);
+            IntValueNode.field_e[incrementValue$59] = new WorldSpriteDecoration(var3, -171, 1037);
             incrementValue$60 = var4;
             var4++;
-            IntValueNode.field_e[incrementValue$60] = new oh(FullscreenFocusCanvas.field_a, -51, 1082);
+            IntValueNode.field_e[incrementValue$60] = new WorldSpriteDecoration(FullscreenFocusCanvas.field_a, -51, 1082);
             incrementValue$61 = var4;
             var4++;
-            IntValueNode.field_e[incrementValue$61] = new oh(FullscreenFocusCanvas.field_a, -30, 1105);
+            IntValueNode.field_e[incrementValue$61] = new WorldSpriteDecoration(FullscreenFocusCanvas.field_a, -30, 1105);
             incrementValue$62 = var4;
             var4++;
-            IntValueNode.field_e[incrementValue$62] = new oh(FullscreenFocusCanvas.field_a, -20, 1055);
+            IntValueNode.field_e[incrementValue$62] = new WorldSpriteDecoration(FullscreenFocusCanvas.field_a, -20, 1055);
             incrementValue$63 = var4;
             var4++;
-            IntValueNode.field_e[incrementValue$63] = new oh(ns.field_c, -68, 1143);
+            IntValueNode.field_e[incrementValue$63] = new WorldSpriteDecoration(ns.field_c, -68, 1143);
             for (var5Lifetime2 = 0; 7 > var5Lifetime2; var5Lifetime2++) {
               var6Lifetime2 = BytePlusOneCommand.a(29430, 40, 956);
               var7Lifetime2 = BytePlusOneCommand.a(29430, 70, var5Lifetime2 * 150 + 200);
               incrementValue$68 = var4;
               var4++;
-              IntValueNode.field_e[incrementValue$68] = new oh(c.field_e, var6Lifetime2, var7Lifetime2);
+              IntValueNode.field_e[incrementValue$68] = new WorldSpriteDecoration(c.field_e, var6Lifetime2, var7Lifetime2);
             }
             incrementValue$64 = var4;
             var4++;
-            IntValueNode.field_e[incrementValue$64] = new oh(var2, -111, 138);
+            IntValueNode.field_e[incrementValue$64] = new WorldSpriteDecoration(var2, -111, 138);
             incrementValue$65 = var4;
             var4++;
-            IntValueNode.field_e[incrementValue$65] = new oh(var2, -191, 290);
+            IntValueNode.field_e[incrementValue$65] = new WorldSpriteDecoration(var2, -191, 290);
             incrementValue$66 = var4;
             var4++;
-            IntValueNode.field_e[incrementValue$66] = new oh(var2, 30, 1324);
+            IntValueNode.field_e[incrementValue$66] = new WorldSpriteDecoration(var2, 30, 1324);
             incrementValue$67 = var4;
             var4++;
-            IntValueNode.field_e[incrementValue$67] = new oh(var2, 170, 1364);
+            IntValueNode.field_e[incrementValue$67] = new WorldSpriteDecoration(var2, 170, 1364);
             return;
           }
           if (RankingsScreen.field_C == 1) {
-            IntValueNode.field_e = new oh[34];
+            IntValueNode.field_e = new WorldSpriteDecoration[34];
             var4Lifetime1 = 0;
             incrementValue$40 = var4Lifetime1;
             var4Lifetime1++;
-            IntValueNode.field_e[incrementValue$40] = new oh(BytePlusOneCommand.field_D, 0, 1375);
+            IntValueNode.field_e[incrementValue$40] = new WorldSpriteDecoration(BytePlusOneCommand.field_D, 0, 1375);
             for (var5Lifetime1 = 0; 12 > var5Lifetime1; var5Lifetime1++) {
               var6Lifetime1 = BytePlusOneCommand.a(29430, 30, -300 + 100 * var5Lifetime1);
               var7Lifetime1 = BytePlusOneCommand.a(29430, 60, -290);
@@ -430,23 +430,23 @@ final class GameResourceLoader implements LoadingSequence {
               }
               incrementValue$48 = var4Lifetime1;
               var4Lifetime1++;
-              IntValueNode.field_e[incrementValue$48] = new oh(c.field_e, var6Lifetime1, var7Lifetime1);
+              IntValueNode.field_e[incrementValue$48] = new WorldSpriteDecoration(c.field_e, var6Lifetime1, var7Lifetime1);
             }
             incrementValue$41 = var4Lifetime1;
             var4Lifetime1++;
-            IntValueNode.field_e[incrementValue$41] = new oh(var3, -203, 169);
+            IntValueNode.field_e[incrementValue$41] = new WorldSpriteDecoration(var3, -203, 169);
             incrementValue$42 = var4Lifetime1;
             var4Lifetime1++;
-            IntValueNode.field_e[incrementValue$42] = new oh(AnimationSkeleton.field_h, -219, 292);
+            IntValueNode.field_e[incrementValue$42] = new WorldSpriteDecoration(AnimationSkeleton.field_h, -219, 292);
             incrementValue$43 = var4Lifetime1;
             var4Lifetime1++;
-            IntValueNode.field_e[incrementValue$43] = new oh(ns.field_c, 824, -60);
+            IntValueNode.field_e[incrementValue$43] = new WorldSpriteDecoration(ns.field_c, 824, -60);
             incrementValue$44 = var4Lifetime1;
             var4Lifetime1++;
-            IntValueNode.field_e[incrementValue$44] = new oh(AnimationSkeleton.field_h, 753, -69);
+            IntValueNode.field_e[incrementValue$44] = new WorldSpriteDecoration(AnimationSkeleton.field_h, 753, -69);
             incrementValue$45 = var4Lifetime1;
             var4Lifetime1++;
-            IntValueNode.field_e[incrementValue$45] = new oh(BytePlusOneCommand.field_D, 1030, 568);
+            IntValueNode.field_e[incrementValue$45] = new WorldSpriteDecoration(BytePlusOneCommand.field_D, 1030, 568);
             for (var5Lifetime1Lifetime1 = 0; var5Lifetime1Lifetime1 < 8; var5Lifetime1Lifetime1++) {
               var6Lifetime1Lifetime1 = BytePlusOneCommand.a(29430, 20, -170);
               var7Lifetime1Lifetime1 = -50 + var5Lifetime1Lifetime1 / 2 * 400;
@@ -455,27 +455,27 @@ final class GameResourceLoader implements LoadingSequence {
               }
               incrementValue$46 = var4Lifetime1;
               var4Lifetime1++;
-              IntValueNode.field_e[incrementValue$46] = new oh(wn.field_a[LoggedPossession.a((byte) -24, wn.field_a.length)], var6Lifetime1Lifetime1, var7Lifetime1Lifetime1);
+              IntValueNode.field_e[incrementValue$46] = new WorldSpriteDecoration(AccountRegistrationResponse.field_a[LoggedPossession.a((byte) -24, AccountRegistrationResponse.field_a.length)], var6Lifetime1Lifetime1, var7Lifetime1Lifetime1);
               incrementValue$47 = var4Lifetime1;
               var4Lifetime1++;
-              IntValueNode.field_e[incrementValue$47] = new oh(wn.field_a[LoggedPossession.a((byte) -24, wn.field_a.length)], -var6Lifetime1Lifetime1 + 876, var7Lifetime1Lifetime1);
+              IntValueNode.field_e[incrementValue$47] = new WorldSpriteDecoration(AccountRegistrationResponse.field_a[LoggedPossession.a((byte) -24, AccountRegistrationResponse.field_a.length)], -var6Lifetime1Lifetime1 + 876, var7Lifetime1Lifetime1);
             }
             return;
           }
           if (RankingsScreen.field_C == 2) {
-            IntValueNode.field_e = new oh[9];
-            IntValueNode.field_e[0] = new oh(var3, -142, 231);
-            IntValueNode.field_e[1] = new oh(c.field_e, -140, 549);
-            IntValueNode.field_e[2] = new oh(var3, -154, 1331);
-            IntValueNode.field_e[3] = new oh(c.field_e, -245, 1384);
-            IntValueNode.field_e[4] = new oh(c.field_e, 901, -252);
-            IntValueNode.field_e[5] = new oh(var3, 1095, 963);
-            IntValueNode.field_e[6] = new oh(c.field_e, 925, 1294);
-            IntValueNode.field_e[7] = new oh(BytePlusOneCommand.field_D, -131, 957);
-            IntValueNode.field_e[8] = new oh(BytePlusOneCommand.field_D, 924, 240);
+            IntValueNode.field_e = new WorldSpriteDecoration[9];
+            IntValueNode.field_e[0] = new WorldSpriteDecoration(var3, -142, 231);
+            IntValueNode.field_e[1] = new WorldSpriteDecoration(c.field_e, -140, 549);
+            IntValueNode.field_e[2] = new WorldSpriteDecoration(var3, -154, 1331);
+            IntValueNode.field_e[3] = new WorldSpriteDecoration(c.field_e, -245, 1384);
+            IntValueNode.field_e[4] = new WorldSpriteDecoration(c.field_e, 901, -252);
+            IntValueNode.field_e[5] = new WorldSpriteDecoration(var3, 1095, 963);
+            IntValueNode.field_e[6] = new WorldSpriteDecoration(c.field_e, 925, 1294);
+            IntValueNode.field_e[7] = new WorldSpriteDecoration(BytePlusOneCommand.field_D, -131, 957);
+            IntValueNode.field_e[8] = new WorldSpriteDecoration(BytePlusOneCommand.field_D, 924, 240);
           } else {
             if (RankingsScreen.field_C == 3) {
-              IntValueNode.field_e = new oh[]{};
+              IntValueNode.field_e = new WorldSpriteDecoration[]{};
             }
           }
           return;
@@ -547,13 +547,13 @@ final class GameResourceLoader implements LoadingSequence {
         if (param0 != 12763) {
           return;
         }
-        BufferedCacheFile.field_a = ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(-65, nv.field_E.length, new Random());
-        mj.a(256.0, 60, (double)nv.field_E[BufferedCacheFile.field_a], (double)ButtonMenuScreen.field_r[BufferedCacheFile.field_a]);
+        BufferedCacheFile.field_a = ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(-65, MarkerSliderWidget.field_E.length, new Random());
+        mj.a(256.0, 60, (double)MarkerSliderWidget.field_E[BufferedCacheFile.field_a], (double)ButtonMenuScreen.field_r[BufferedCacheFile.field_a]);
         gg.h((byte) 51);
         DelayedServerPacket.a(-5, false, -2);
         CipherPacketBuffer.k(61, 12);
         sk.a(-71, 4, 1);
-        PlayerModelPreview.a(6, 10, (byte) 54, 20, 320, 320, 6, 18, 240, 13, IsSixCommand.field_C, un.field_d, new nk(), 20, 16777215, 30, new pa(true), 16777215, 9, new pa(false), 16777215);
+        PlayerModelPreview.a(6, 10, (byte) 54, 20, 320, 320, 6, 18, 240, 13, IsSixCommand.field_C, un.field_d, new TexturedPanelPainter(), 20, 16777215, 30, new GeneratedPanelPainter(true), 16777215, 9, new GeneratedPanelPainter(false), 16777215);
         sk.a(-57, 4, 2);
         GameSoundEffect.a((byte) -94);
         sk.a(75, 4, 3);
@@ -561,7 +561,7 @@ final class GameResourceLoader implements LoadingSequence {
         Kickabout.t(param0 - 826888154);
         CipherPacketBuffer.k(61, 13);
         oa.registerOverlay(false, new CheatCodeListener());
-        oa.registerOverlay(false, new tr());
+        oa.registerOverlay(false, new ClientUiOverlay());
         oa.registerOverlay(false, new DialogOverlay());
         oa.registerOverlay(false, new vp());
         oa.registerOverlay(false, new TrinketUnlockNotice());
@@ -651,7 +651,7 @@ final class GameResourceLoader implements LoadingSequence {
         ContextMenuItem.field_Eb = ImageProducerRasterBuffer.a((byte) -126, 15);
         ListingRowCache.field_h = ImageProducerRasterBuffer.a((byte) -126, 16);
         ResourceArchive.field_f = ImageProducerRasterBuffer.a((byte) -126, 17);
-        ResourceArchive var4 = kh.field_g;
+        ResourceArchive var4 = CanvasResizePolicy.field_g;
         ResourceArchive var3 = IterableNodeHashTable.field_b;
         mp.field_h = new ArchivePreloader(55);
         mp.field_h.a(var4, BufferedSocket.field_q, -6869, "basic", CommonGame.field_M);
@@ -681,7 +681,7 @@ final class GameResourceLoader implements LoadingSequence {
         mp.field_h.a(TextLayoutLine.field_c, d.field_b, -100);
         mp.field_h.a(vp.field_j, (byte) -109, MyPitchScreen.field_H, SelectableTrinketIcon.field_yb);
         mp.field_h.a(ni.field_i, (byte) -123, MyPitchScreen.field_H, SelectableTrinketIcon.field_yb);
-        mp.field_h.a(Kickabout.field_J, (byte) -124, CachedTextLayout.field_d, bl.field_n);
+        mp.field_h.a(Kickabout.field_J, (byte) -124, CachedTextLayout.field_d, LobbyMatchPreview.field_n);
         mp.field_h.a(KitStyleTile.field_Bb, (byte) -122, vp.field_l, cu.field_b);
         mp.field_h.a(ContextMenuItem.field_Eb, (byte) -126, vp.field_l, cu.field_b);
         mp.field_h.a(ListingRowCache.field_h, (byte) -106, vp.field_l, cu.field_b);

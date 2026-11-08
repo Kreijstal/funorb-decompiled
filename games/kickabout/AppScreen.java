@@ -132,7 +132,7 @@ abstract class AppScreen {
                 var10 = (String) null;
                 FullscreenFocusCanvas.field_h = NamedValueContainer.a(param4, wq.field_d, (byte) 30, false, (String) null);
               } else {
-                FullscreenFocusCanvas.field_h = wp.a(-111, param4, false, param1);
+                FullscreenFocusCanvas.field_h = LeaderboardParticipant.a(-111, param4, false, param1);
               }
               or.field_d.field_n = 0;
               or.field_d.writeByte(108, 14);
@@ -190,7 +190,7 @@ abstract class AppScreen {
               wq.field_d = un.field_e.readLong((byte) -124);
               LoginMethod.field_e = param4;
               ScrollContainer.field_Ib = un.field_e.readUnsignedByte((byte) -118);
-              bl.field_c = un.field_e.readUnsignedByte((byte) -112);
+              LobbyMatchPreview.field_c = un.field_e.readUnsignedByte((byte) -112);
               WeightedLruCache.field_d = un.field_e.readUnsignedShort((byte) 81);
               var11 = un.field_e.a(true);
               var7 = un.field_e.readUnsignedByte((byte) -106);
@@ -236,7 +236,7 @@ abstract class AppScreen {
               ArchiveSource.field_e = un.field_e.readString(8);
               var12 = (CharSequence) ((Object) ArchiveSource.field_e);
               DebugConsole.field_w = MatchAgent.a(0, var12);
-              rl.field_n = un.field_e.readUnsignedByte((byte) -128);
+              PlayerArchetypeSortCriterion.field_n = un.field_e.readUnsignedByte((byte) -128);
               un.field_c = RegistrationRequestDialog.field_rb;
               if (FullscreenFocusCanvas.field_h.getLoginKind((byte) -109) != LoginRequiredDialog.field_K) {
                 if (FullscreenFocusCanvas.field_h.getLoginKind((byte) -115) == MatchScreen.field_w) {
@@ -307,8 +307,8 @@ abstract class AppScreen {
                 stackIn_113_0 = 3;
                 return stackIn_113_0;
               }
-              var6_intLifetime2 = rl.field_o;
-              rl.field_o = StrongCacheEntry.field_y;
+              var6_intLifetime2 = PlayerArchetypeSortCriterion.field_o;
+              PlayerArchetypeSortCriterion.field_o = StrongCacheEntry.field_y;
               StrongCacheEntry.field_y = var6_intLifetime2;
               ContextMenuItem.field_Db = true;
             }

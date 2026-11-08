@@ -11,7 +11,7 @@ final class r {
     final static int a(int param0, int param1) {
         int var2 = 0;
         if (param1 == param0) {
-          var2 = ng.field_a;
+          var2 = ServerTextTemplate.field_a;
         }
         if (param1 == 1) {
           var2 = ConsoleTokenCursor.field_b;
@@ -37,7 +37,7 @@ final class r {
           field_b = (String[]) null;
         }
         TrinketCountSortCriterion.b((byte) 44);
-        if (cr.b(0)) {
+        if (LinkTextPainter.b(0)) {
           or.field_d.b(1, (byte) -106);
           c.a(0, false);
         }

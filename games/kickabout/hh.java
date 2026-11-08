@@ -108,7 +108,7 @@ final class hh {
           if (10 > vj.field_c) {
             return false;
           }
-          if (13 <= hl.field_d) {
+          if (13 <= DateInputValidator.field_d) {
             return true;
           }
           return false;
@@ -116,7 +116,7 @@ final class hh {
         if (10 > vj.field_c) {
           return false;
         }
-        if (13 <= hl.field_d) {
+        if (13 <= DateInputValidator.field_d) {
           return true;
         }
         return false;

@@ -28,7 +28,7 @@ abstract class ArchiveSource {
             return null;
           }
           if (param2 > 4) {
-            stackIn_7_0 = oc.c((byte) 75);
+            stackIn_7_0 = ArchivePreloadEntry.buildFirstDecodedSprite((byte) 75);
             return stackIn_7_0;
           }
           stackIn_5_0 = (Sprite) null;

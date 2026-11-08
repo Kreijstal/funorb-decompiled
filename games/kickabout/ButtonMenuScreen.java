@@ -87,7 +87,7 @@ class ButtonMenuScreen extends AppScreen {
         if (this.screenId == 15) {
           var2 = 17;
         }
-        kj.a(63, var2);
+        LoginKind.enqueueHelpTipDialog(63, var2);
     }
 
     int buttonCenterX(int param0, int param1) {

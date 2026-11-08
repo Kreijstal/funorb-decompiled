@@ -23,7 +23,7 @@ final class ug {
     }
 
     final static int a(int param0, int param1) {
-        if (ia.field_c) {
+        if (FaceNormal.field_c) {
           param1 = -param1 + 896;
         }
         if (param0 != 0) {
@@ -84,7 +84,7 @@ final class ug {
             1 != ts.field_d) {
             TournamentChampionDialog.field_F.field_Cb.field_zb.field_E = CheckboxLabelWidget.field_yb;
             TournamentChampionDialog.field_F.field_lb = false;
-            hl.a(true, TournamentChampionDialog.field_F.field_yb);
+            DateInputValidator.a(true, TournamentChampionDialog.field_F.field_yb);
             return;
           }
           TournamentChampionDialog.field_F.field_lb = true;

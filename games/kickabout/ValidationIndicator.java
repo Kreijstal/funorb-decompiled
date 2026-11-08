@@ -91,7 +91,7 @@ final class ValidationIndicator extends TextButton {
           TournamentChampionDialog.field_G.drawAdditive(var5 - var15.field_o, var6 - var15.field_v, 256);
           return;
         }
-        if (var8 == en.field_p) {
+        if (var8 == PlayerSurnameSortCriterion.field_p) {
           var16 = LoggedPlayer.field_g[0];
           var9Lifetime1 = var16.field_o << 1;
           var10Lifetime1 = var16.field_v << 1;

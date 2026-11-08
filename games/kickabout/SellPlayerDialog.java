@@ -49,7 +49,7 @@ final class SellPlayerDialog extends MessageDialog {
             return;
           }
           if (HoverTooltip.field_Eb) {
-            if (bt.b(105)) {
+            if (QuickChatCategoryCache.advanceScriptedTutorialPlayers(105)) {
               HoverTooltip.field_Eb = false;
               et.field_d.participantStatus[0].controlledSlot = vb.field_d;
               LoggedPossession.a(false);
@@ -125,7 +125,7 @@ final class SellPlayerDialog extends MessageDialog {
             else {
               if (1 == et.field_d.field_V.possessorTeam &&
                 var4_ref_nl.action == 0) {
-                tc.advanceToPoint(12, (byte) 109, 11796480, var4_ref_nl, 36044800);
+                QuickChatCategory.advanceToPoint(12, (byte) 109, 11796480, var4_ref_nl, 36044800);
                 if (HoverTooltip.field_Eb &&
                   ld.field_f.action == 0) {
                   ld.field_f.directionMask = 0;

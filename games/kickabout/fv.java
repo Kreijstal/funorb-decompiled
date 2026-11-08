@@ -154,18 +154,18 @@ final class fv implements OverlayLayer {
         if (AuctionItem.field_e == 2) {
           var6 = new String[3];
           var6[0] = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, LoadingProgressDialog.field_Z, new String[]{ad.formatCurrencyAmount(ReflectionCheck.field_k, 26300)});
-          if (ag.field_h != 0) {
+          if (SoundStreamHandle.field_h != 0) {
             stackIn_20_0 = var6;
             stackIn_20_1 = 1;
-            if (0 >= ag.field_h) {
-              stackIn_21_2 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, DualLinkDequeIterator.field_b, new String[]{ad.formatCurrencyAmount(Math.abs(ag.field_h), 26300)});
+            if (0 >= SoundStreamHandle.field_h) {
+              stackIn_21_2 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, DualLinkDequeIterator.field_b, new String[]{ad.formatCurrencyAmount(Math.abs(SoundStreamHandle.field_h), 26300)});
             } else {
-              stackIn_21_2 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, ni.field_h, new String[]{ad.formatCurrencyAmount(Math.abs(ag.field_h), 26300)});
+              stackIn_21_2 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, ni.field_h, new String[]{ad.formatCurrencyAmount(Math.abs(SoundStreamHandle.field_h), 26300)});
             }
             stackIn_20_0[stackIn_20_1] = stackIn_21_2;
           }
-          if (ag.field_h != 0) {
-            var6[2] = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, PromotionDialog.field_F, new String[]{ad.formatCurrencyAmount(ag.field_h + ReflectionCheck.field_k, 26300)});
+          if (SoundStreamHandle.field_h != 0) {
+            var6[2] = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, PromotionDialog.field_F, new String[]{ad.formatCurrencyAmount(SoundStreamHandle.field_h + ReflectionCheck.field_k, 26300)});
           }
           var7 = 0;
           var8 = 0;
@@ -201,7 +201,7 @@ final class fv implements OverlayLayer {
             var3 = var24[1];
             var2 = var24[0];
             SoftwareRasterizer.fillRoundedRectangleBlended(var2 - 2, var3 - 2, 4 + var6_int, var7 + 4, 6, 65793, 200);
-            AccountTermsPanel.field_G.a((byte) 77, 3 + var2, ok.field_c, VerticalScrollbar.field_Ib, MessageDialog.field_x, cr.field_c, var3 + 3, CachedListingRow.field_j);
+            AccountTermsPanel.field_G.a((byte) 77, 3 + var2, ok.field_c, VerticalScrollbar.field_Ib, MessageDialog.field_x, LinkTextPainter.field_c, var3 + 3, CachedListingRow.field_j);
           } else {
             if (AuctionItem.field_e == 6) {
               var6_int = pc.field_a.getWidth(0) + 6;
@@ -213,13 +213,13 @@ final class fv implements OverlayLayer {
               pc.field_a.drawCentered((var7 >> 1) + var3, 23, var2 + (var6_int >> 1));
             } else {
               if (AuctionItem.field_e == 1) {
-                var6_int = ((BitmapFont) ((Object) var4)).b(wp.field_h, 200);
+                var6_int = ((BitmapFont) ((Object) var4)).b(LeaderboardParticipant.field_h, 200);
                 if (var6_int != 1) {
-                  var7 = 10 + ((BitmapFont) ((Object) var4)).maxLineWidth(wp.field_h, 200);
+                  var7 = 10 + ((BitmapFont) ((Object) var4)).maxLineWidth(LeaderboardParticipant.field_h, 200);
                   var8 = 12 * var6_int + 10;
                 } else {
                   var8 = 22;
-                  var7 = ((BitmapFont) ((Object) var4)).a(wp.field_h) + 10;
+                  var7 = ((BitmapFont) ((Object) var4)).a(LeaderboardParticipant.field_h) + 10;
                 }
                 var25 = GameModesHelpScreen.a(var2, var8, var7, 0, var3);
                 var3 = var25[1];
@@ -227,7 +227,7 @@ final class fv implements OverlayLayer {
                 SoftwareRasterizer.fillRectangleAlpha(3 + var2, var3 + 2, var7, var8, 65793, 128);
                 SoftwareRasterizer.e(var2 - 1, -1 + var3, 2 + var7, var8 + 2, 65793);
                 SoftwareRasterizer.fillRect(var2, var3, var7, var8, 16777185);
-                ((BitmapFont) ((Object) var4)).a(wp.field_h, 5 + var2, -2 + var3 + 5, var7 - 10, var8, 65793, -1, 0, 0, 12);
+                ((BitmapFont) ((Object) var4)).a(LeaderboardParticipant.field_h, 5 + var2, -2 + var3 + 5, var7 - 10, var8, 65793, -1, 0, 0, 12);
               }
             }
           }

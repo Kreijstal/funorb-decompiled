@@ -5,7 +5,7 @@ final class IconLabel extends UiLayoutNode {
     static String field_Eb;
     private UiLayoutNode field_Cb;
     private UiLayoutNode field_Db;
-    static ff field_yb;
+    static QuickChatCommandType field_yb;
     static String field_Ab;
     static int field_Bb;
     static String field_zb;
@@ -100,7 +100,7 @@ final class IconLabel extends UiLayoutNode {
             return;
           }
           if (var2 != 1) {
-            UnreadMessagesScreen.a("A1: " + tr.b(0), (Throwable) null, param0 + 1);
+            UnreadMessagesScreen.a("A1: " + ClientUiOverlay.describeCurrentPacket(0), (Throwable) null, param0 + 1);
             FormationView.b((byte) -116);
             return;
           }
@@ -164,7 +164,7 @@ final class IconLabel extends UiLayoutNode {
     static {
         field_Eb = "End Game";
         field_Ab = "Accept <%0> into this game";
-        field_yb = new ff(1, 2, 2, 0);
+        field_yb = new QuickChatCommandType(1, 2, 2, 0);
         field_zb = "nobody won the Diamond Division last week";
     }
 }

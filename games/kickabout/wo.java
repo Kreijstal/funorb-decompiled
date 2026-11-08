@@ -73,9 +73,9 @@ final class wo extends KeyedLoginCredentials {
         super(param0, param1);
     }
 
-    final kj getLoginKind(byte param0) {
+    final LoginKind getLoginKind(byte param0) {
         if (param0 > -77) {
-          return (kj) null;
+          return (LoginKind) null;
         }
         return ReflectionCheck.field_j;
     }

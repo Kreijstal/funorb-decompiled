@@ -316,7 +316,7 @@ class UiWidget extends IntrusiveNode {
         SplashScreen.field_m.a(oo.field_c, param0 + 9);
         SplashScreen.field_m = null;
         if (null != ArchiveIndex.field_h) {
-          ArchiveIndex.field_h.a(0);
+          ArchiveIndex.field_h.restoreSavedSize(0);
         }
         ic.field_d.requestFocus();
     }
@@ -412,7 +412,7 @@ class UiWidget extends IntrusiveNode {
           }
         }
         TextFieldNode.field_Ob = FootballerAgent.field_p;
-        cg.a(this.getTooltip(-1), (byte) -98);
+        CaptionedContainer.a(this.getTooltip(-1), (byte) -98);
         if (param1 == 31947) {
           return param3;
         }

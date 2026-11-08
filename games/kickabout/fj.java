@@ -15,7 +15,7 @@ final class fj {
     }
 
     final static void a(boolean param0, boolean param1) {
-        dg.field_e = !param1 ? true : false;
+        NineSlicePanelPainter.field_e = !param1 ? true : false;
         if (param0) {
           field_c = -78;
           return;

@@ -63,7 +63,7 @@ final class bq {
           IterableDualLinkDeque.field_h.setBounds(true, AuctionItem.field_p.field_q, 0, 0, 30);
           sg.field_a.setBounds(true, AuctionItem.field_p.field_q, 0, 30, -40 + (AuctionItem.field_p.field_mb - 2) - 30);
           var2_int = 3 + ss.field_j;
-          if (rn.field_d.length < 2) {
+          if (VertexNormal.field_d.length < 2) {
             var2_int--;
           }
           if (param1) {
@@ -84,7 +84,7 @@ final class bq {
           var5 = var4 + 5 + 2;
           for (var6 = 0; var6 < ss.field_j + 4; var6++) {
             if ((var6 != 1 ||
-              !(rn.field_d.length < 2)) && (var6 != 3 ||
+              !(VertexNormal.field_d.length < 2)) && (var6 != 3 ||
               !(MouseInputHandler.field_f <= 1))) {
               if (!param1 &&
                 var6 == 3) {

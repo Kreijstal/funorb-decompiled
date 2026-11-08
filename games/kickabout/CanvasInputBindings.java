@@ -9,8 +9,8 @@ final class CanvasInputBindings {
         }
         try {
           ModalStack.attachMouseInput(15282, (java.awt.Component) ((Object) param0));
-          if (ag.field_f != null) {
-            ag.field_f.attach((byte) -83, (java.awt.Component) ((Object) param0));
+          if (SoundStreamHandle.field_f != null) {
+            SoundStreamHandle.field_f.attach((byte) -83, (java.awt.Component) ((Object) param0));
           }
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "lp.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

@@ -11,7 +11,7 @@ final class SumIntegersCommand extends ConsoleCommand {
     static String field_H;
 
     final static void a(boolean param0, int param1) {
-        bl.a(param0, false, (byte) -57);
+        LobbyMatchPreview.a(param0, false, (byte) -57);
         if (param1 >= -89) {
           field_E = (String) null;
         }
@@ -41,10 +41,10 @@ final class SumIntegersCommand extends ConsoleCommand {
           if (param0 > -102) {
             return;
           }
-          if (null == ag.field_f) {
+          if (null == SoundStreamHandle.field_f) {
             return;
           }
-          ag.field_f.detach((byte) -68, (java.awt.Component) ((Object) param1));
+          SoundStreamHandle.field_f.detach((byte) -68, (java.awt.Component) ((Object) param1));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -124,10 +124,10 @@ final class SumIntegersCommand extends ConsoleCommand {
         RuntimeException var2 = null;
         var4 = Kickabout.field_G;
         try {
-          var5 = (sm) (ia.field_d.g(24009));
+          var5 = (sm) (FaceNormal.field_d.g(24009));
           while (var5 != null) {
             mp.a(50, param1, var5);
-            var5 = (sm) (ia.field_d.c(33));
+            var5 = (sm) (FaceNormal.field_d.c(33));
           }
           var3 = -93 % ((param0 - 72) / 43);
           var6 = (ni) (ProxyAuthenticationRequiredException.field_g.g(24009));

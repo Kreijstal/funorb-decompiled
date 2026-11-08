@@ -6,7 +6,7 @@ final class vp implements OverlayLayer {
     static String field_d;
     static ResourceArchive field_j;
     static String field_n;
-    static ff field_o;
+    static QuickChatCommandType field_o;
     static int field_f;
     static int field_c;
     static int field_a;
@@ -61,7 +61,7 @@ final class vp implements OverlayLayer {
               var12.a(var7, (byte) -107);
               cb.field_b[var5] = new byte[8][];
               for (var8 = 0; var8 < 8; var8++) {
-                kh.a(var5, var12, var8 << 8, false, 2150);
+                CanvasResizePolicy.a(var5, var12, var8 << 8, false, 2150);
                 cb.field_b[var5][var8] = MatchingTextValidator.a(16, BuyPitchDialog.field_F);
               }
               var12.a(var6, (byte) -107);
@@ -70,7 +70,7 @@ final class vp implements OverlayLayer {
               for (var9 = 0; var9 < var8Lifetime1; var9++) {
                 var12.a(var9 * 3, -39);
                 for (var10 = 0; var10 < 8; var10++) {
-                  kh.a(var5, var12, var10 << 8, false, 2150);
+                  CanvasResizePolicy.a(var5, var12, var10 << 8, false, 2150);
                   BuyPitchDialog.field_K[var5][var9][var10] = MatchingTextValidator.a(16, BuyPitchDialog.field_F);
                 }
                 var4Lifetime1++;
@@ -162,7 +162,7 @@ final class vp implements OverlayLayer {
               um.field_e.field_A && (!um.field_e.isSpectator(param0 ^ 25) ||
               um.field_e.b(-21660))) {
               NetworkArchiveRequest.h(param0 ^ 15419);
-              ReceivedAuctionItem.a(wn.field_h, param0 ^ 24);
+              ReceivedAuctionItem.a(AccountRegistrationResponse.field_h, param0 ^ 24);
               AuctionTableWidget.a(6356832, (byte) -25);
             }
           } else {
@@ -196,7 +196,7 @@ final class vp implements OverlayLayer {
     public final void paint(int param0) {
         int var2 = 83 % ((50 - param0) / 45);
         if (this.capturesInput((byte) 87)) {
-          ei.a((this.field_i & 8) == 0 ? true : false, false);
+          RotaryDialPainter.a((this.field_i & 8) == 0 ? true : false, false);
         }
     }
 
@@ -219,7 +219,7 @@ final class vp implements OverlayLayer {
     static {
         field_n = "Play rated game";
         field_d = "tournament lobby";
-        field_o = new ff(8, 0, 4, 1);
+        field_o = new QuickChatCommandType(8, 0, 4, 1);
         GameKeyHandler.b(50, (byte) -110);
         field_l = "Loading animations";
         field_g = "Public chat is unavailable while setting up a rated game.";

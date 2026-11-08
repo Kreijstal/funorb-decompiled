@@ -193,8 +193,8 @@ final class SetLagCommand extends ConsoleCommand {
         if (!AuctionBidDialog.field_G) {
           throw new IllegalStateException();
         }
-        if (null != rk.field_f) {
-          rk.field_f.closeDialog(-96);
+        if (null != WorldSpriteSequence.field_f) {
+          WorldSpriteSequence.field_f.closeDialog(-96);
         }
         String var1 = TextFieldNode.a(-110);
         IsSixCommand.field_E = new LoginForm(var1, (String) null, param0, false, false);

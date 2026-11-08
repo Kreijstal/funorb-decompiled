@@ -60,11 +60,11 @@ final class FriendsListPanel extends UiLayoutNode {
         }
     }
 
-    final static tc h(byte param0) {
+    final static QuickChatCategory h(byte param0) {
         int var1_int = 0;
-        tc var2 = null;
+        QuickChatCategory var2 = null;
         int var3 = 0;
-        tc stackIn_6_0 = null;
+        QuickChatCategory stackIn_6_0 = null;
         Throwable decompiledCaughtException = null;
         IllegalArgumentException var1 = null;
         var3 = Kickabout.field_G;
@@ -74,8 +74,8 @@ final class FriendsListPanel extends UiLayoutNode {
           }
           var1_int = 0;
           while (true) {
-            var2 = ReceivedAuctionItem.field_x.a(200, var1_int);
-            if (!var2.field_t) {
+            var2 = ReceivedAuctionItem.field_x.getCategory(200, var1_int);
+            if (!var2.tagFourEnabled) {
               var1_int++;
               continue;
             }

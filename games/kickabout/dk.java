@@ -17,7 +17,7 @@ final class dk extends IntrusiveNode {
         try {
           var4_int = 75 / ((72 - param2) / 47);
           if (cu.a(param1, param3, param0, 117)) {
-            return wp.a(-125);
+            return LeaderboardParticipant.a(-125);
           }
           return null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

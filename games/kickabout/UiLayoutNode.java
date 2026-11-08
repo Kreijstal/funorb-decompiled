@@ -73,7 +73,7 @@ class UiLayoutNode extends iv {
         int var9 = Kickabout.field_G;
         try {
           PacketBuffer.a(-123, DebouncedValidationProvider.field_a);
-          var10 = j.a(-5275);
+          var10 = FootballerPreview.a(-5275);
           var5 = var10.field_o;
           var6 = var10.field_v;
           for (var7 = 0; var7 < SoftwareRasterizer.field_g; var7 = var7 + var5) {
@@ -361,7 +361,7 @@ class UiLayoutNode extends iv {
         if (param0) {
           UiLayoutNode.g(-41);
         }
-        if (!dg.field_a &&
+        if (!NineSlicePanelPainter.field_a &&
           ContentTransitionDialog.field_Y == null) {
           var3 = 0;
         }
@@ -383,7 +383,7 @@ class UiLayoutNode extends iv {
             if (AuctionLogEntry.field_m.length() > 0) {
               var4_ref_String = AuctionLogEntry.field_m.toString();
               if (SocketArchiveNetworkClient.a(var4_ref_String, -125)) {
-                TextButton.a((String) null, (String) null, 0, 2, ng.field_i, -125);
+                TextButton.a((String) null, (String) null, 0, 2, ServerTextTemplate.field_i, -125);
                 TextButton.a((String) null, (String) null, 0, 2, mg.field_e, -126);
               } else {
                 var5 = NodeHashTableIterator.field_b;

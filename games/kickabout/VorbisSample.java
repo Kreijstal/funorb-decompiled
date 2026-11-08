@@ -24,7 +24,7 @@ final class VorbisSample extends IntrusiveNode {
     private static int field_C;
     private byte[] field_J;
     private static float[] field_w;
-    private static oq[] field_I;
+    private static VorbisMapping[] field_I;
     private static int[] field_L;
     private static int[] field_t;
     private int field_n;
@@ -295,9 +295,9 @@ final class VorbisSample extends IntrusiveNode {
           field_m[var4Lifetime1] = new VorbisResidue();
         }
         var4Lifetime2 = VorbisSample.readBits(6) + 1;
-        field_I = new oq[var4Lifetime2];
+        field_I = new VorbisMapping[var4Lifetime2];
         for (var5Lifetime1 = 0; var5Lifetime1 < var4Lifetime2; var5Lifetime1++) {
-          field_I[var5Lifetime1] = new oq();
+          field_I[var5Lifetime1] = new VorbisMapping();
         }
         var5Lifetime2 = VorbisSample.readBits(6) + 1;
         field_K = new boolean[var5Lifetime2];
@@ -425,7 +425,7 @@ final class VorbisSample extends IntrusiveNode {
         int var11;
         int var12;
         int var13;
-        oq var14;
+        VorbisMapping var14;
         int var15;
         int var16;
         int var17_int;
@@ -554,19 +554,19 @@ final class VorbisSample extends IntrusiveNode {
           var13 = var4 >> 1;
         }
         var14 = field_I[field_g[var2]];
-        var16 = var14.field_c;
-        var17_int = var14.field_a[var16];
+        var16 = var14.mux;
+        var17_int = var14.floorIds[var16];
         stackIn_22_0 = (field_y[var17_int].decodeFloor()) ? 0 : 1;
         var15 = stackIn_22_0;
         var16Lifetime1 = var15;
-        for (var17_intLifetime1 = 0; var17_intLifetime1 < var14.field_b; var17_intLifetime1++) {
-          var42 = field_m[var14.field_d[var17_intLifetime1]];
+        for (var17_intLifetime1 = 0; var17_intLifetime1 < var14.submapCount; var17_intLifetime1++) {
+          var42 = field_m[var14.residueIds[var17_intLifetime1]];
           var52 = field_j;
           var42.decodeResidue(var52, var4 >> 1, var16Lifetime1 != 0);
         }
         if (var15 == 0) {
-          var17_intLifetime2 = var14.field_c;
-          var18_int = var14.field_a[var17_intLifetime2];
+          var17_intLifetime2 = var14.mux;
+          var18_int = var14.floorIds[var17_intLifetime2];
           field_y[var18_int].applyFloor(field_j, var4 >> 1);
         }
         if (var15 != 0) {

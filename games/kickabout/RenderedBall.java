@@ -76,7 +76,7 @@ final class RenderedBall extends BallAgent {
           var4 = -this.field_K + this.field_E;
           this.field_K = this.field_E;
           this.field_O = this.field_N;
-          if (ia.field_c) {
+          if (FaceNormal.field_c) {
             var3_intLifetime1 = -var3_intLifetime1;
             var4 = -var4;
           }
@@ -321,7 +321,7 @@ final class RenderedBall extends BallAgent {
           var3 = 999;
         }
         int var4 = var3 * 1000 / (-var3 + 1000);
-        if (ia.field_c) {
+        if (FaceNormal.field_c) {
           return var4 + var2;
         }
         return -var4 + var2;
@@ -445,7 +445,7 @@ final class RenderedBall extends BallAgent {
     }
 
     private final void setRotationMatrix(byte param0, int param1, int param2) {
-        int var4 = ei.sine(param2, (byte) -23);
+        int var4 = RotaryDialPainter.sine(param2, (byte) -23);
         int var5 = we.cosine(param2, false);
         this.field_J = param1;
         this.field_D[3] = 65536;

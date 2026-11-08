@@ -28,13 +28,13 @@ final class bw {
         field_a = null;
     }
 
-    final static ak a(int param0, int param1, boolean param2, int param3, int param4, boolean param5) {
+    final static WorldDrawEntry a(int param0, int param1, boolean param2, int param3, int param4, boolean param5) {
         int var7 = 0;
         int var8 = Kickabout.field_G;
         if (param4 != 9103) {
-          return (ak) null;
+          return (WorldDrawEntry) null;
         }
-        ak var6 = new ak(4);
+        WorldDrawEntry var6 = new WorldDrawEntry(4);
         var6.field_e = ((ArgbSprite) (SpriteState.field_p[param5 ? 1 : 0])).copyArgb();
         if (param2) {
           var6.field_e.flipHorizontalInPlace();

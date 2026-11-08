@@ -8,7 +8,7 @@ final class NamedValueEntry extends IntrusiveNode {
     int field_e;
     String field_j;
     static String[] field_g;
-    static vs[] field_f;
+    static PlayerPortraitCacheEntry[] field_f;
 
     final static void steerTowardsPoint(int param0, int param1, FootballerAgent param2, int param3) {
         RuntimeException stackIn_29_0 = null;

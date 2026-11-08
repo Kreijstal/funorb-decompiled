@@ -530,9 +530,9 @@ final class CachedArchiveSource extends ArchiveSource {
             try {
               if (var5 != null &&
                 var18.length > 2) {
-                dg.field_b.reset();
-                dg.field_b.update(var5, 0, -2 + var18.length);
-                var6_int = (int)dg.field_b.getValue();
+                NineSlicePanelPainter.field_b.reset();
+                NineSlicePanelPainter.field_b.update(var5, 0, -2 + var18.length);
+                var6_int = (int)NineSlicePanelPainter.field_b.getValue();
                 if (this.field_z.field_c[param1] != var6_int) {
                   throw new RuntimeException();
                 }
@@ -581,9 +581,9 @@ final class CachedArchiveSource extends ArchiveSource {
           try {
             if (var5 != null &&
               var18.length > 2) {
-              dg.field_b.reset();
-              dg.field_b.update(var5, 0, var18.length - 2);
-              var6_int = (int)dg.field_b.getValue();
+              NineSlicePanelPainter.field_b.reset();
+              NineSlicePanelPainter.field_b.update(var5, 0, var18.length - 2);
+              var6_int = (int)NineSlicePanelPainter.field_b.getValue();
               if (var6_int != this.field_z.field_c[param1]) {
                 throw new RuntimeException();
               }

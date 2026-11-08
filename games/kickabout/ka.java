@@ -13,7 +13,7 @@ final class ka implements fg {
           return;
         }
         ReflectionCheck.field_k = param1;
-        ag.field_h = param0;
+        SoundStreamHandle.field_h = param0;
         if (param2 >= -68) {
           return;
         }

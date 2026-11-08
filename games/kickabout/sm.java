@@ -69,7 +69,7 @@ final class sm extends IntrusiveNode {
             return;
           }
           if (var3 != 1) {
-            UnreadMessagesScreen.a("LR1: " + tr.b(0), (Throwable) null, 1);
+            UnreadMessagesScreen.a("LR1: " + ClientUiOverlay.describeCurrentPacket(0), (Throwable) null, 1);
             FormationView.b((byte) -116);
             return;
           }

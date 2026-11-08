@@ -65,7 +65,7 @@ final class NameSuggestionsPanel extends WidgetContainer implements ButtonListen
         RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
         RuntimeException var3 = null;
-        cr var4 = null;
+        LinkTextPainter var4 = null;
         int var6 = 0;
         var6 = Kickabout.field_G;
         try {
@@ -80,7 +80,7 @@ final class NameSuggestionsPanel extends WidgetContainer implements ButtonListen
             if (param1 >= -27) {
               this.field_H = (String[]) null;
             }
-            var4 = new cr(gf.field_a, 0, 1);
+            var4 = new LinkTextPainter(gf.field_a, 0, 1);
             this.field_F = new TextButton[var3_int + 1];
             for (var5 = 0; var3_int > var5; var5++) {
               this.field_F[var5] = new TextButton(this.field_H[var5], (UiListener) (this));

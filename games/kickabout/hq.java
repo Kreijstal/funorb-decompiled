@@ -16,7 +16,7 @@ final class hq {
             return false;
           }
           if (!GameSoundEffect.field_f) {
-            return !oh.b(-14954) ? true : false;
+            return !WorldSpriteDecoration.b(-14954) ? true : false;
           }
           return false;
         }
@@ -24,7 +24,7 @@ final class hq {
           return false;
         }
         if (!GameSoundEffect.field_f) {
-          return !oh.b(-14954) ? true : false;
+          return !WorldSpriteDecoration.b(-14954) ? true : false;
         }
         return false;
     }

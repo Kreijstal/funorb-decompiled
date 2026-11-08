@@ -16,7 +16,7 @@ final class AuctionSettingsDialog extends MessageDialog {
         boolean decompiledFrameRemainder0 = true;
         super.handleResult(69, param1);
         if (!PlayArea.a(100)) {
-          if (!dg.field_e &&
+          if (!NineSlicePanelPainter.field_e &&
             !ds.field_g) {
             if (param0 <= 60) {
               return;
@@ -26,7 +26,7 @@ final class AuctionSettingsDialog extends MessageDialog {
               if (IndexedSpriteState.field_g < ad.field_f) {
                 return;
               }
-              if (ng.field_e) {
+              if (ServerTextTemplate.field_e) {
                 if (ad.field_f > AuctionBidDialog.field_L) {
                   return;
                 }
@@ -39,7 +39,7 @@ final class AuctionSettingsDialog extends MessageDialog {
               if (0 < ad.field_f) {
                 var3 = var3 | 1;
               }
-              if (ng.field_e &&
+              if (ServerTextTemplate.field_e &&
                 AuctionBidDialog.field_L > 0) {
                 var3 = var3 | 4;
               }
@@ -50,7 +50,7 @@ final class AuctionSettingsDialog extends MessageDialog {
               or.field_d.writeInt(-95, ad.field_f);
               stackIn_27_0 = or.field_d;
               stackIn_27_1 = -75;
-              if (!ng.field_e) {
+              if (!ServerTextTemplate.field_e) {
                 stackIn_28_2 = 0;
               } else {
                 stackIn_28_2 = AuctionBidDialog.field_L;
@@ -252,7 +252,7 @@ final class AuctionSettingsDialog extends MessageDialog {
         oa.field_b.field_J = 5 + (var8 - 13);
         oa.field_b.field_s = var4 + 10;
         SoftwareRasterizer.fillRectangleAlpha(oa.field_b.field_s + 85, 40 + oa.field_b.field_J, StatChoiceDialog.field_F.field_q + 4, -4 + StatChoiceDialog.field_F.field_mb, 7829367, 128);
-        if (ng.field_e) {
+        if (ServerTextTemplate.field_e) {
           IsSixCommand.field_C.a('£', oa.field_b.field_s + 91, 53 + oa.field_b.field_J, 16777215);
         }
         oa.field_b.draw(94, var10 != 0 & this.field_I);
@@ -261,7 +261,7 @@ final class AuctionSettingsDialog extends MessageDialog {
           IsSixCommand.field_C.d(IntDoubleCommand.field_E, var4 + 130, 75 + var6 - 8, 16711680, -1);
         } else {
           if (IndexedSpriteState.field_g >= ad.field_f) {
-            if (ng.field_e &&
+            if (ServerTextTemplate.field_e &&
               ad.field_f > AuctionBidDialog.field_L) {
               IsSixCommand.field_C.d(CheckboxLabelWidget.field_Eb, var4 + 130, -8 + var6 + 75, 16711680, -1);
             }
@@ -269,7 +269,7 @@ final class AuctionSettingsDialog extends MessageDialog {
             IsSixCommand.field_C.d(rr.field_d, 130 + var4, 75 + var6 - 8, 16711680, -1);
           }
         }
-        if (ng.field_e) {
+        if (ServerTextTemplate.field_e) {
           if (AuctionBidDialog.field_L < QuickChatPhraseCache.field_c) {
             IsSixCommand.field_C.d(IntDoubleCommand.field_E, 130 + var4, 75 + var8 - 8, 16711680, -1);
           } else {
@@ -302,8 +302,8 @@ final class AuctionSettingsDialog extends MessageDialog {
         if (param0 >= -109) {
           return true;
         }
-        while (var3 < ia.field_e.length) {
-          if (ia.field_e[var3] == param1) {
+        while (var3 < FaceNormal.field_e.length) {
+          if (FaceNormal.field_e[var3] == param1) {
             return true;
           }
           var3++;
@@ -317,7 +317,7 @@ final class AuctionSettingsDialog extends MessageDialog {
         UiLayoutNode var7 = null;
         UiLayoutNode var8 = null;
         ArchiveNetworkClient.field_m = param0;
-        ng.field_e = true;
+        ServerTextTemplate.field_e = true;
         wk.field_c = GameLoopApplet.field_E.squad[ArchiveNetworkClient.field_m];
         QuickChatPhraseCache.field_c = su.a((byte) -107, wk.field_c);
         IndexedSpriteState.field_g = af.a(wk.field_c, -31);
@@ -482,7 +482,7 @@ final class AuctionSettingsDialog extends MessageDialog {
           if (ad.field_f == IndexedSpriteState.field_g) {
             IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, BuyPitchDialog.field_H);
           } else {
-            if (ng.field_e &&
+            if (ServerTextTemplate.field_e &&
               ad.field_f == AuctionBidDialog.field_L) {
               IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, ad.field_a);
             } else {
@@ -498,7 +498,7 @@ final class AuctionSettingsDialog extends MessageDialog {
           }
         }
         if (Trinket.field_a.field_Q) {
-          if (ng.field_e) {
+          if (ServerTextTemplate.field_e) {
             if (AuctionBidDialog.field_L == IndexedSpriteState.field_g) {
               IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, SumIntegersCommand.field_E);
             } else {
@@ -509,7 +509,7 @@ final class AuctionSettingsDialog extends MessageDialog {
           }
         }
         if (hq.field_c.field_Q) {
-          if (ng.field_e) {
+          if (ServerTextTemplate.field_e) {
             if (QuickChatPhraseCache.field_c != AuctionBidDialog.field_L) {
               if (ad.field_f == AuctionBidDialog.field_L) {
                 IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, sd.field_e);
@@ -525,7 +525,7 @@ final class AuctionSettingsDialog extends MessageDialog {
         }
         stackIn_43_0 = AccountMessagePanel.field_L;
         stackIn_43_1 = ad.field_f;
-        if (ng.field_e) {
+        if (ServerTextTemplate.field_e) {
           stackIn_44_2 = AuctionBidDialog.field_L;
         } else {
           stackIn_44_2 = IndexedSpriteState.field_g;
@@ -537,30 +537,30 @@ final class AuctionSettingsDialog extends MessageDialog {
         stackIn_49_0.field_lb = stackIn_50_1;
         stackIn_52_0 = Trinket.field_a;
         stackIn_53_1 = (IndexedSpriteState.field_g <= AuctionBidDialog.field_L) ? false : true;
-        stackIn_52_0.field_lb = stackIn_53_1 & ng.field_e;
+        stackIn_52_0.field_lb = stackIn_53_1 & ServerTextTemplate.field_e;
         stackIn_55_0 = hq.field_c;
         stackIn_56_1 = (AuctionBidDialog.field_L <= ad.field_f) ? false : true;
-        stackIn_55_0.field_lb = stackIn_56_1 & ng.field_e;
+        stackIn_55_0.field_lb = stackIn_56_1 & ServerTextTemplate.field_e;
         if (kr.field_a.field_gb) {
           stackIn_60_0 = -67;
-          if (ng.field_e) {
-            stackIn_61_1 = pa.field_i;
+          if (ServerTextTemplate.field_e) {
+            stackIn_61_1 = GeneratedPanelPainter.field_i;
           } else {
             stackIn_61_1 = hh.field_c;
           }
           IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(stackIn_60_0, stackIn_61_1);
         }
         if (kr.field_a.field_sb == 1) {
-          stackIn_66_0 = !(ng.field_e);
-          ng.field_e = stackIn_66_0;
+          stackIn_66_0 = !(ServerTextTemplate.field_e);
+          ServerTextTemplate.field_e = stackIn_66_0;
           ShopPlayerSlot.c(61, -17);
-          if (ng.field_e) {
+          if (ServerTextTemplate.field_e) {
             StatChoiceDialog.field_F.setText(Integer.toString(AuctionBidDialog.field_L), -23174);
           } else {
             StatChoiceDialog.field_F.setText("", -23174);
           }
         }
-        kr.field_a.field_Gb = ng.field_e;
+        kr.field_a.field_Gb = ServerTextTemplate.field_e;
         if (UnreadMessagesScreen.field_A.field_sb == 1) {
           this.field_I = false;
           this.field_F = true;
@@ -569,7 +569,7 @@ final class AuctionSettingsDialog extends MessageDialog {
           this.field_F = false;
           this.field_I = true;
         }
-        if (!ng.field_e) {
+        if (!ServerTextTemplate.field_e) {
           this.field_I = false;
         }
         var3 = 0;
@@ -578,20 +578,20 @@ final class AuctionSettingsDialog extends MessageDialog {
         for (var6 = 0; var6 < 3; var6++) {
           if (AccountMessagePanel.field_L.field_qb == 1) {
             if (wo.field_o % var5 == 0) {
-              if (!ng.field_e) {
+              if (!ServerTextTemplate.field_e) {
                 stackIn_85_0 = IndexedSpriteState.field_g;
               } else {
                 stackIn_85_0 = AuctionBidDialog.field_L;
               }
               if (stackIn_85_0 > ad.field_f) {
                 ad.field_f = ad.field_f + 1;
-                if (ng.field_e) {
+                if (ServerTextTemplate.field_e) {
                   stackIn_89_0 = AuctionBidDialog.field_L;
                 } else {
                   stackIn_89_0 = IndexedSpriteState.field_g;
                 }
                 if (stackIn_89_0 < ad.field_f) {
-                  if (ng.field_e) {
+                  if (ServerTextTemplate.field_e) {
                     stackIn_93_0 = AuctionBidDialog.field_L;
                   } else {
                     stackIn_93_0 = IndexedSpriteState.field_g;
@@ -674,7 +674,7 @@ final class AuctionSettingsDialog extends MessageDialog {
             }
             ((TextFieldNode) (Object) stackIn_138_0).setText(stackIn_139_1, -23174);
           }
-          if (ng.field_e) {
+          if (ServerTextTemplate.field_e) {
             var8 = StatChoiceDialog.field_F.getText((byte) -16);
             if (var8 != null &&
               var8.length() > 0) {
@@ -711,7 +711,7 @@ final class AuctionSettingsDialog extends MessageDialog {
         boolean decompiledFrameRemainder0 = true;
         var6Lifetime2 = stackIn_163_0;
         if (var6Lifetime2 >= QuickChatPhraseCache.field_c &&
-          IndexedSpriteState.field_g >= var6Lifetime2 && (!ng.field_e ||
+          IndexedSpriteState.field_g >= var6Lifetime2 && (!ServerTextTemplate.field_e ||
           !(var6Lifetime2 > AuctionBidDialog.field_L))) {
           UnreadMessagesScreen.field_A.setTextColour(16777215, (byte) 120);
           decompiledFrameRemainder0 = false;
@@ -719,7 +719,7 @@ final class AuctionSettingsDialog extends MessageDialog {
         else {
           UnreadMessagesScreen.field_A.setTextColour(16711680, (byte) 125);
         }
-        if (ng.field_e) {
+        if (ServerTextTemplate.field_e) {
           if (StatChoiceDialog.field_F.getText((byte) -16) != null &&
             StatChoiceDialog.field_F.getText((byte) -16).length() > 0) {
             stackIn_176_0 = Integer.parseInt(StatChoiceDialog.field_F.getText((byte) -16));
@@ -742,7 +742,7 @@ final class AuctionSettingsDialog extends MessageDialog {
         stackIn_186_0 = var7Lifetime3;
         stackIn_187_1 = (QuickChatPhraseCache.field_c > ad.field_f) ? 0 : 1;
         var7Lifetime4 = stackIn_186_0 & stackIn_187_1;
-        if (ng.field_e) {
+        if (ServerTextTemplate.field_e) {
           stackIn_191_0 = var7Lifetime4;
           stackIn_192_1 = (AuctionBidDialog.field_L < ad.field_f) ? 0 : 1;
           var7Lifetime4 = stackIn_191_0 & stackIn_192_1;

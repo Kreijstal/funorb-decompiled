@@ -162,7 +162,7 @@ abstract class MatchAgent {
           var23 = null;
           var12 = Kickabout.field_G;
           try {
-            var13 = (ReflectionCheck) (nv.field_N.g(24009));
+            var13 = (ReflectionCheck) (MarkerSliderWidget.field_N.g(24009));
             var17 = var13;
             if (var17 == null) {
               return;

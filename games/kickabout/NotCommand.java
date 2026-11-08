@@ -146,7 +146,7 @@ final class NotCommand extends ConsoleCommand {
     }
 
     final static void a(byte param0, boolean param1) {
-        cl.field_d = param1 ? true : false;
+        FullscreenDisplayMode.field_d = param1 ? true : false;
         if (param0 != 50) {
           NotCommand.g(-123);
         }
@@ -161,7 +161,7 @@ final class NotCommand extends ConsoleCommand {
 
     /* Full JVM integer arguments; original narrow signature preserved. */
     final static void $cfr$intArgs$a$7ffe4b125357(int param0, boolean param1) {
-        cl.field_d = param1 ? true : false;
+        FullscreenDisplayMode.field_d = param1 ? true : false;
         if (param0 != 50) {
           NotCommand.g(-123);
         }

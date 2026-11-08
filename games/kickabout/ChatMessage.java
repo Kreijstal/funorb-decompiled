@@ -76,7 +76,7 @@ final class ChatMessage {
         this.field_g = ee.field_a;
         this.field_p = DateInputWidget.field_G;
         this.field_h = SortCriterion.field_d;
-        this.field_n = oh.field_f;
+        this.field_n = WorldSpriteDecoration.field_f;
         if (!param0) {
           this.field_r = null;
         } else {

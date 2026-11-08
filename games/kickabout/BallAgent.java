@@ -10,7 +10,7 @@ class BallAgent extends MatchAgent {
     int velocityY;
     int height;
     int highFriction;
-    static ff field_z;
+    static QuickChatCommandType field_z;
     int modelId;
     int positionX;
     static boolean field_u;
@@ -365,7 +365,7 @@ class BallAgent extends MatchAgent {
             if (this.height >= 65536) {
               stackIn_38_0 = sg.field_d[param1];
             } else {
-              stackIn_38_0 = en.field_q[param1];
+              stackIn_38_0 = PlayerSurnameSortCriterion.field_q[param1];
             }
           }
           var11 = stackIn_38_0;
@@ -405,7 +405,7 @@ class BallAgent extends MatchAgent {
     }
 
     static {
-        field_z = new ff(14, 0, 4, 1);
+        field_z = new QuickChatCommandType(14, 0, 4, 1);
         field_u = false;
         field_g = "Move";
         field_w = new String[][]{new String[]{"<img=0>Use the 'Bid' button on a lot to submit a bid. <col=ffff00>There are no refunds! Once submitted, your bid cannot be retracted.</col>", "<img=0>The bid price is automatically set by the auction house. To outbid somebody, you must offer 10% more than them.", "<img=0>If the option is available, click the 'Buyout' button to instantly purchase a character for a set price.", "<img=0>The Auction House takes a <col=ffff00>10%<nbsp>commission</col> on all auctions sold."}, new String[]{"<img=0>Characters you are bidding on appear in your team grid under a green hammer icon. They cannot be used in-game; the slot is reserved for them, should you win the auction.", "<img=0>Characters you are selling appear in your team grid under a red hammer icon. They cannot be used in-game."}};

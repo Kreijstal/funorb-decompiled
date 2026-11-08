@@ -103,7 +103,7 @@ final class il {
         RuntimeException decompiledCaughtException = null;
         try {
           var6 = (CharSequence) ((Object) param0);
-          if (!ef.a(var6, -9907)) {
+          if (!AnimationFrameset.isAllowedDisplayName(var6, -9907)) {
             stackIn_3_0 = SquadSlotWidget.field_Ib;
             return stackIn_3_0;
           }

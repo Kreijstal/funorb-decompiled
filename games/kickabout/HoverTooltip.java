@@ -102,7 +102,7 @@ final class HoverTooltip extends UiLayoutNode {
           return this.field_Fb;
         }
         while (true) {
-          if (!nk.$cfr$intArgs$b$c4997cb15529(-59)) {
+          if (!TexturedPanelPainter.$cfr$intArgs$b$c4997cb15529(-59)) {
             if (param0 == 84) {
               this.field_Db.field_E = this.field_yb.toString();
               if (!param1) {

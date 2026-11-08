@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ConsoleParseException extends Exception {
-    static ff field_e;
+    static QuickChatCommandType field_e;
     static String field_b;
     static String field_d;
     int field_f;
@@ -56,23 +56,23 @@ final class ConsoleParseException extends Exception {
             }
           }
           var7 = (String) null;
-          nv.a(0, ag.field_e, var5, (String) null, (byte) 34);
-          ei.field_b.field_ab = ag.field_e + (-((ag.field_e & 16711422) >> 1) + ((ArchiveRequest.field_o.field_ab & 16711422) >> 1));
-          ei.field_b.field_H = ag.field_e + (-((ag.field_e & 16711422) >> 1) + (8355711 & ArchiveRequest.field_o.field_H >> 1));
-          ei.field_b.field_ub = -((16711423 & ag.field_e) >> 1) + ag.field_e + (ArchiveRequest.field_o.field_ub >> 1 & 8355711);
+          MarkerSliderWidget.a(0, SoundStreamHandle.field_e, var5, (String) null, (byte) 34);
+          RotaryDialPainter.field_b.field_ab = SoundStreamHandle.field_e + (-((SoundStreamHandle.field_e & 16711422) >> 1) + ((ArchiveRequest.field_o.field_ab & 16711422) >> 1));
+          RotaryDialPainter.field_b.field_H = SoundStreamHandle.field_e + (-((SoundStreamHandle.field_e & 16711422) >> 1) + (8355711 & ArchiveRequest.field_o.field_H >> 1));
+          RotaryDialPainter.field_b.field_ub = -((16711423 & SoundStreamHandle.field_e) >> 1) + SoundStreamHandle.field_e + (ArchiveRequest.field_o.field_ub >> 1 & 8355711);
           ButtonMenuScreen.field_n = WeightedCacheEntry.field_s;
-          jl.field_f = ei.field_b;
+          jl.field_f = RotaryDialPainter.field_b;
           ContentTransitionDialog.field_Y = new UiLayoutNode(0L, param0);
           h.field_e = new UiLayoutNode(0L, param1);
           PagedHelpScreen.field_D = new UiLayoutNode(0L, (UiLayoutNode) null);
           Kickabout.field_H = new UiLayoutNode(0L, param4);
-          ei.field_b = new UiLayoutNode(0L, param3);
-          ei.field_b.field_X = FootballerAgent.field_i;
-          Kickabout.field_H.addChild((byte) -112, ei.field_b);
+          RotaryDialPainter.field_b = new UiLayoutNode(0L, param3);
+          RotaryDialPainter.field_b.field_X = FootballerAgent.field_i;
+          Kickabout.field_H.addChild((byte) -112, RotaryDialPainter.field_b);
           WeightedCacheEntry.field_s = new UiLayoutNode(0L, ButtonMenuScreen.field_n);
           Kickabout.field_H.addChild((byte) -126, WeightedCacheEntry.field_s);
           if (param2 != 14594) {
-            field_e = (ff) null;
+            field_e = (QuickChatCommandType) null;
           }
           InstrumentEnvelope.field_c = new UiLayoutNode(0L, ArchiveRequest.field_o, rr.field_h);
           MySquadScreen.field_N = new UiLayoutNode(0L, ArchiveRequest.field_o);
@@ -119,7 +119,7 @@ final class ConsoleParseException extends Exception {
     }
 
     static {
-        field_e = new ff(7, 0, 1, 1);
+        field_e = new QuickChatCommandType(7, 0, 1, 1);
         field_b = "You have been outbid on this auction. Your bid of <%0> was returned to you.";
         field_g = new String[]{"Waiting for text", "Warte auf Text", "En attente du texte", "Aguardando textos", "Op tekst wachten", "Esperando a texto"};
         field_d = "Experience";

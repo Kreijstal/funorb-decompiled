@@ -101,7 +101,7 @@ final class StatChoiceDialog extends MessageDialog {
             stackIn_10_5 = -107;
             if (!TextFieldValidator.f(-1)) {
               stackIn_10_0Lifetime1 = this;
-              if (wn.a((byte) -3)) {
+              if (AccountRegistrationResponse.a((byte) -3)) {
                 stackIn_11_0 = this;
                 stackIn_11_6 = true;
                 break regionExit1;

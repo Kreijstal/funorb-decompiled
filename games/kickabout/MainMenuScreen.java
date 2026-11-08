@@ -20,7 +20,7 @@ final class MainMenuScreen extends ButtonMenuScreen {
         try {
           RegistrationRequestDialog.field_kb = param1;
           NotCommand.field_F = param2;
-          wp.field_c = param0;
+          LeaderboardParticipant.field_c = param0;
           if (!param3) {
             MainMenuScreen.isScreenShown(20, -118);
           }

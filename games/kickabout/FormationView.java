@@ -199,11 +199,11 @@ final class FormationView extends MatchPhaseView {
           this.field_k.updateInput(0, param1);
           this.field_p.updateInput(0, param1);
           if (this.field_k.field_sb != 0) {
-            kj.a((byte) -121);
+            LoginKind.a((byte) -121);
             this.g(8, 0);
           }
           if (this.field_p.field_sb != 0) {
-            kj.a((byte) 49);
+            LoginKind.a((byte) 49);
             this.g(8, 1);
           }
         }

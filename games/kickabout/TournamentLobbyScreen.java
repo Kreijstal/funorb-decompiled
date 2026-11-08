@@ -21,7 +21,7 @@ final class TournamentLobbyScreen extends AppScreen {
     private int[] field_P;
     private int[] field_t;
     private int field_L;
-    private bl[] field_y;
+    private LobbyMatchPreview[] field_y;
     private int[] field_B;
     private int[] field_I;
     private boolean field_U;
@@ -275,11 +275,11 @@ final class TournamentLobbyScreen extends AppScreen {
         var14 = h.a(17475);
         var4 = -84 / ((param0 - 38) / 60);
         if (this.field_g != var14) {
-          stackIn_12_1 = (!bt.field_e) && (this.field_g != var14) && (!SumIntegersCommand.a((byte) -66, var14.field_q));
+          stackIn_12_1 = (!QuickChatCategoryCache.field_e) && (this.field_g != var14) && (!SumIntegersCommand.a((byte) -66, var14.field_q));
           this.field_K = stackIn_12_1;
           this.field_g = var14;
         } else {
-          if (bt.field_e) {
+          if (QuickChatCategoryCache.field_e) {
             this.field_K = false;
           } else {
             this.field_r = null;
@@ -292,17 +292,17 @@ final class TournamentLobbyScreen extends AppScreen {
           this.field_L = 400;
           this.field_C = 560;
         }
-        en.field_o = -1;
+        PlayerSurnameSortCriterion.field_o = -1;
         dc.field_c = -1;
         if (ph.field_a == 1) {
-          if (-1 == en.field_o) {
+          if (-1 == PlayerSurnameSortCriterion.field_o) {
             if (null != this.field_T) {
               stackIn_25_0 = this.field_T.length;
             } else {
               stackIn_25_0 = 0;
             }
           } else {
-            stackIn_25_0 = en.field_o;
+            stackIn_25_0 = PlayerSurnameSortCriterion.field_o;
           }
           var5_int = stackIn_25_0;
           this.field_L = 400;
@@ -398,7 +398,7 @@ final class TournamentLobbyScreen extends AppScreen {
               if (this.field_T.length > var5_intLifetime5) {
                 if (null != this.field_y[var13] &&
                   this.field_z) {
-                  this.field_y[var13].a(this.field_T[var5_intLifetime5], param1, -109);
+                  this.field_y[var13].update(this.field_T[var5_intLifetime5], param1, -109);
                 }
                 if (-1 == dc.field_c) {
                   var5_intLifetime5++;
@@ -512,8 +512,8 @@ final class TournamentLobbyScreen extends AppScreen {
           return true;
         }
         if (param0 == il.field_h) {
-          stackIn_10_0 = !(bt.field_e);
-          bt.field_e = stackIn_10_0;
+          stackIn_10_0 = !(QuickChatCategoryCache.field_e);
+          QuickChatCategoryCache.field_e = stackIn_10_0;
         }
         if (ph.field_a == 2) {
           var8 = GameplayHelpScreen.field_G;
@@ -528,7 +528,7 @@ final class TournamentLobbyScreen extends AppScreen {
             stackIn_20_0 = 1;
           }
           var5 = stackIn_20_0;
-          if (!var8[oc.field_e]) {
+          if (!var8[ArchivePreloadEntry.field_e]) {
             if (!var8[99]) {
               stackIn_28_0 = (param0 == 99) ? 1 : 0;
             } else {
@@ -600,7 +600,7 @@ final class TournamentLobbyScreen extends AppScreen {
         this.field_G = 32;
         this.field_s = 0;
         try {
-          bt.field_e = false;
+          QuickChatCategoryCache.field_e = false;
           hr.b(22);
           op.a(-363021503);
           var5 = new int[]{54, 53, 52, 12};
@@ -694,7 +694,7 @@ final class TournamentLobbyScreen extends AppScreen {
           var5Lifetime1 = stackIn_10_0;
           if (this.field_y == null ||
             this.field_y.length != var5Lifetime1) {
-            this.field_y = new bl[var5Lifetime1];
+            this.field_y = new LobbyMatchPreview[var5Lifetime1];
           }
           var6 = 4;
           stackIn_17_0 = (4 < this.field_y.length) ? 20 : 79;
@@ -734,7 +734,7 @@ final class TournamentLobbyScreen extends AppScreen {
                 }
                 var17 = stackIn_44_0;
                 var14 = var17;
-                this.field_y[var9] = new bl(this.field_T[var8], new String[]{var16, var17}, var11, -15 + var12, var8);
+                this.field_y[var9] = new LobbyMatchPreview(this.field_T[var8], new String[]{var16, var17}, var11, -15 + var12, var8);
                 if (dc.field_c == -1) {
                   var8++;
                 }
@@ -772,7 +772,7 @@ final class TournamentLobbyScreen extends AppScreen {
                 }
                 var19 = stackIn_63_0;
                 var14Lifetime1 = var19;
-                this.field_y[var9Lifetime1 + var6] = new bl(this.field_T[var8], new String[]{var18, var19}, var11Lifetime1, var12Lifetime1 - 15, var8);
+                this.field_y[var9Lifetime1 + var6] = new LobbyMatchPreview(this.field_T[var8], new String[]{var18, var19}, var11Lifetime1, var12Lifetime1 - 15, var8);
                 if (dc.field_c == -1) {
                   var8++;
                 }
@@ -838,7 +838,7 @@ final class TournamentLobbyScreen extends AppScreen {
         un.field_d.d(LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, wk.field_e, new String[]{LobbyGameRecord.field_g[this.field_W].toLowerCase()}), 410, 82, 16777215, -1);
         var2 = 46;
         SoftwareRasterizer.fillRoundedRectangleBlended(var2, 66, 175, 50, 8, 65793, 196);
-        un.field_d.d(nk.field_g, var2 + 87, 82, 16777215, -1);
+        un.field_d.d(TexturedPanelPainter.field_g, var2 + 87, 82, 16777215, -1);
         TeamManagementScreen.e(120);
         var3 = 17;
         var4 = -var3 + 88;
@@ -886,7 +886,7 @@ final class TournamentLobbyScreen extends AppScreen {
               if (null == this.field_y[var6Lifetime2]) {
                 ReceivedAuctionItemRow.a(410, -89, 250);
               } else {
-                this.field_y[var6Lifetime2].a(98);
+                this.field_y[var6Lifetime2].draw(98);
               }
             }
           }
@@ -971,8 +971,8 @@ final class TournamentLobbyScreen extends AppScreen {
         String var18;
         int var19;
         var19 = Kickabout.field_G;
-        if (en.field_o != -1) {
-          stackIn_5_0 = en.field_o;
+        if (PlayerSurnameSortCriterion.field_o != -1) {
+          stackIn_5_0 = PlayerSurnameSortCriterion.field_o;
         } else {
           if (this.field_T == null) {
             stackIn_5_0 = 0;
@@ -1052,14 +1052,14 @@ final class TournamentLobbyScreen extends AppScreen {
         for (var14_int = 0; var2 > var14_int; var14_int++) {
           if (null != this.field_T) {
             stackIn_49_0 = this.field_T;
-            if (en.field_o != -1) {
+            if (PlayerSurnameSortCriterion.field_o != -1) {
               stackIn_50_1 = 0;
             } else {
               stackIn_50_1 = var14_int;
             }
             if (stackIn_49_0[stackIn_50_1] != null) {
               stackIn_53_0 = this.field_T;
-              if (en.field_o == -1) {
+              if (PlayerSurnameSortCriterion.field_o == -1) {
                 stackIn_54_1 = var14_int;
               } else {
                 stackIn_54_1 = 0;
@@ -1228,17 +1228,17 @@ final class TournamentLobbyScreen extends AppScreen {
           return;
         }
         if (!this.field_K) {
-          AuctionListing.a(du.field_n + var3 - 10, -22914, -10 + var3, var4, -18 + var4);
+          AuctionListing.a(MarkerSliderPainter.field_n + var3 - 10, -22914, -10 + var3, var4, -18 + var4);
           cd.a((byte) -127, var4, var3);
           TeamManagementScreen.e(123);
         } else {
           var5 = Math.abs(255 - (int)(nj.monotonicMillis(96) / 5L % 512L));
           var6 = 0;
           var7 = Math.abs(255 - var5) | Math.abs(-var5 + 255) << 8 | Math.abs(255 - var5) << 16;
-          AuctionListing.a(40 + (du.field_n + var3), -22914, -2 + var3, var4, -16 + var4);
-          SoftwareRasterizer.fillRoundedRectangleBlended(var3, var4 - 11, 33 + du.field_n, 20, 6, var6, FriendsListPanel.a(false, (byte) -96));
+          AuctionListing.a(40 + (MarkerSliderPainter.field_n + var3), -22914, -2 + var3, var4, -16 + var4);
+          SoftwareRasterizer.fillRoundedRectangleBlended(var3, var4 - 11, 33 + MarkerSliderPainter.field_n, 20, 6, var6, FriendsListPanel.a(false, (byte) -96));
           ScrollPane.a(var4, -123, 14 + var3);
-          ScrollPane.a(var4, param0 + 113, du.field_n + (30 + var3));
+          ScrollPane.a(var4, param0 + 113, MarkerSliderPainter.field_n + (30 + var3));
           var8 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, NanoTickClock.field_o, new String[]{mk.field_b[il.field_h]});
           ConsoleTokenCursor.field_d.a(var8, var3 + 20, var4, var7, -1);
           TeamManagementScreen.e(118);

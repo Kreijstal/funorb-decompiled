@@ -4,7 +4,7 @@
 import java.io.*;
 
 final class TrinketCountSortCriterion extends SortCriterion {
-    static dg field_p;
+    static NineSlicePanelPainter field_p;
     static int[] field_q;
     static TriangleMesh[] field_n;
     static String field_o;
@@ -35,7 +35,7 @@ final class TrinketCountSortCriterion extends SortCriterion {
           var5 = ((ShopPlayerSlot) (param2)).field_Sb;
           var6 = var12.trinketIds.length;
           for (var7 = 0; var7 < var12.trinketIds.length; var7++) {
-            var8_ref_fn = pa.field_g[var11.trinketIds[var7]];
+            var8_ref_fn = GeneratedPanelPainter.field_g[var11.trinketIds[var7]];
             var6 = var6 + (var8_ref_fn.field_h + var8_ref_fn.field_k);
           }
           var7Lifetime1 = var5.trinketIds.length;
@@ -43,7 +43,7 @@ final class TrinketCountSortCriterion extends SortCriterion {
             field_n = (TriangleMesh[]) null;
           }
           for (var8 = 0; var5.trinketIds.length > var8; var8++) {
-            var9 = pa.field_g[var5.trinketIds[var8]];
+            var9 = GeneratedPanelPainter.field_g[var5.trinketIds[var8]];
             var7Lifetime1 = var7Lifetime1 + (var9.field_k + var9.field_h);
           }
           stackIn_10_0 = this.field_i << 31 ^ var6 - var7Lifetime1;
@@ -255,18 +255,18 @@ final class TrinketCountSortCriterion extends SortCriterion {
             }
             StrongCacheEntry.field_D = new String[var4];
             ArrayOperations.copyReferences(TeamManagementScreen.field_C, 0, StrongCacheEntry.field_D, 0, var4);
-            cg.field_E = new String[var3_int - var4 - 1];
-            ArrayOperations.copyReferences(TeamManagementScreen.field_C, 1 + var4, cg.field_E, 0, -var4 + (var3_int - 1));
+            CaptionedContainer.field_E = new String[var3_int - var4 - 1];
+            ArrayOperations.copyReferences(TeamManagementScreen.field_C, 1 + var4, CaptionedContainer.field_E, 0, -var4 + (var3_int - 1));
             if (StrongCacheEntry.field_D.length > TrinketIcon.field_Eb.length) {
               stackIn_22_0 = StrongCacheEntry.field_D.length;
             } else {
               stackIn_22_0 = TrinketIcon.field_Eb.length;
             }
             var5 = stackIn_22_0;
-            if (pg.field_a.length >= cg.field_E.length) {
+            if (pg.field_a.length >= CaptionedContainer.field_E.length) {
               stackIn_25_0 = pg.field_a.length;
             } else {
-              stackIn_25_0 = cg.field_E.length;
+              stackIn_25_0 = CaptionedContainer.field_E.length;
             }
             var6 = stackIn_25_0;
             var7 = var6 + 7 + var5;
@@ -285,7 +285,7 @@ final class TrinketCountSortCriterion extends SortCriterion {
             WeightedLruCache.field_c[4] = ChatMessage.field_k;
             sh.field_f[1] = 2;
             sh.field_f[0] = 5;
-            WeightedLruCache.field_c[3] = cr.field_g;
+            WeightedLruCache.field_c[3] = LinkTextPainter.field_g;
             for (var8Lifetime2 = 0; var8Lifetime2 < var5; var8Lifetime2++) {
               stackIn_32_0 = WeightedLruCache.field_c;
               stackIn_32_1 = var8Lifetime2 + 6;
@@ -302,9 +302,9 @@ final class TrinketCountSortCriterion extends SortCriterion {
               stackIn_37_0 = WeightedLruCache.field_c;
               stackIn_37_1 = var8Lifetime3 + var5 + 7;
               stackIn_37_2 = var8Lifetime3;
-              stackIn_37_3 = cg.field_E.length;
+              stackIn_37_3 = CaptionedContainer.field_E.length;
               if (stackIn_37_2 < stackIn_37_3) {
-                stackIn_40_2 = cg.field_E[var8Lifetime3];
+                stackIn_40_2 = CaptionedContainer.field_E[var8Lifetime3];
               } else {
                 stackIn_40_2 = "";
               }

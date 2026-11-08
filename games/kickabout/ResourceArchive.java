@@ -13,7 +13,7 @@ final class ResourceArchive {
     private ArchiveSource field_i;
 
     final static void b(int param0) {
-        nv.field_N = new IntrusiveDeque();
+        MarkerSliderWidget.field_N = new IntrusiveDeque();
         if (param0 != -1) {
           ResourceArchive.a(4, 10, (byte) -102);
         }

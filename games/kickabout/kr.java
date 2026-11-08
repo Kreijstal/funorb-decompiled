@@ -87,7 +87,7 @@ final class kr {
           var20 = il.field_d[0];
           var29Lifetime1 = var20;
           var29Lifetime1Lifetime1 = var20;
-          var19 = ef.field_p;
+          var19 = AnimationFrameset.field_p;
           var18.field_j.addItemWithIcon(var19, true, 11, var20);
           var21 = TextButton.field_v;
           var23 = il.field_d[1];
@@ -242,19 +242,19 @@ final class kr {
         }
     }
 
-    final static cl[] a(byte param0, PlatformTaskDispatcher param1) {
+    final static FullscreenDisplayMode[] a(byte param0, PlatformTaskDispatcher param1) {
         int var5 = 0;
-        cl[] stackIn_4_0 = null;
-        cl[] stackIn_10_0 = null;
-        cl[] stackIn_17_0 = null;
+        FullscreenDisplayMode[] stackIn_4_0 = null;
+        FullscreenDisplayMode[] stackIn_10_0 = null;
+        FullscreenDisplayMode[] stackIn_17_0 = null;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         String stackIn_21_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         int[] var3 = null;
-        cl[] var4 = null;
-        cl var6 = null;
+        FullscreenDisplayMode[] var4 = null;
+        FullscreenDisplayMode var6 = null;
         int var7 = 0;
         PlatformTask var8 = null;
         int[] var9 = null;
@@ -262,7 +262,7 @@ final class kr {
         var7 = Kickabout.field_G;
         try {
           if (!param1.hasFullscreenSupport(82)) {
-            stackIn_4_0 = new cl[]{};
+            stackIn_4_0 = new FullscreenDisplayMode[]{};
             return stackIn_4_0;
           }
           var8 = param1.b(true);
@@ -270,7 +270,7 @@ final class kr {
             aj.a(10L, 1);
           }
           if (2 == var8.field_a) {
-            stackIn_10_0 = new cl[]{};
+            stackIn_10_0 = new FullscreenDisplayMode[]{};
             return stackIn_10_0;
           }
           if (param0 < 122) {
@@ -279,14 +279,14 @@ final class kr {
           var10 = (int[]) (var8.field_b);
           var9 = var10;
           var3 = var9;
-          var4 = new cl[var10.length >> 2];
+          var4 = new FullscreenDisplayMode[var10.length >> 2];
           for (var5 = 0; var5 < var4.length; var5++) {
-            var6 = new cl();
+            var6 = new FullscreenDisplayMode();
             var4[var5] = var6;
-            var6.field_f = var3[var5 << 2];
-            var6.field_b = var3[1 + (var5 << 2)];
-            var6.field_e = var3[(var5 << 2) + 2];
-            var6.field_a = var3[3 + (var5 << 2)];
+            var6.width = var3[var5 << 2];
+            var6.height = var3[1 + (var5 << 2)];
+            var6.bitDepth = var3[(var5 << 2) + 2];
+            var6.refreshRate = var3[3 + (var5 << 2)];
           }
           stackIn_17_0 = var4;
           return stackIn_17_0;

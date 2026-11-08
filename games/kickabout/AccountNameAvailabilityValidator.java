@@ -5,13 +5,13 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
     private String field_k;
     static String field_p;
     static String field_m;
-    static rk[] field_l;
+    static WorldSpriteSequence[] field_l;
     static String field_o;
     private boolean field_j;
     static String field_n;
 
     final ValidationState validateText(String param0, int param1) {
-        wn var3 = null;
+        AccountRegistrationResponse var3 = null;
         RuntimeException var3_ref = null;
         CharSequence var4 = null;
         ValidationState stackIn_2_0 = null;
@@ -35,11 +35,11 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
           if (!param0.equals(this.field_k)) {
             var3 = AudioService.a(param1 - 86, param0);
             if (var3 != null &&
-              null == var3.field_d) {
+              null == var3.message) {
               this.field_k = param0;
-              this.field_j = var3.field_g;
+              this.field_j = var3.success;
             } else {
-              stackIn_12_0 = en.field_p;
+              stackIn_12_0 = PlayerSurnameSortCriterion.field_p;
               return stackIn_12_0;
             }
           }
@@ -73,7 +73,7 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
     final String describeText(byte param0, String param1) {
         String var3 = null;
         RuntimeException var3_ref = null;
-        wn var4 = null;
+        AccountRegistrationResponse var4 = null;
         CharSequence var5 = null;
         String stackIn_5_0 = null;
         Object stackIn_12_0 = null;
@@ -98,12 +98,12 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
             if (var4 == null) {
               return null;
             }
-            if (var4.field_d != null) {
+            if (var4.message != null) {
               stackIn_12_0 = null;
               return (String) (stackIn_12_0);
             }
             this.field_k = param1;
-            this.field_j = var4.field_g;
+            this.field_j = var4.success;
           }
           if (this.field_j) {
             stackIn_18_0 = Kickabout.field_I;
@@ -269,7 +269,7 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
         field_o = null;
         field_p = null;
         if (param0 > -29) {
-          field_l = (rk[]) null;
+          field_l = (WorldSpriteSequence[]) null;
         }
         field_n = null;
         field_l = null;
@@ -363,7 +363,7 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
               }
             }
           }
-          wp.a(IntTripleCommand.field_C, RandomAccessCacheFile.field_i, GameModesHelpScreen.field_F, 121, RenderedFootballer.field_fb, IntrusiveDeque.field_g);
+          LeaderboardParticipant.a(IntTripleCommand.field_C, RandomAccessCacheFile.field_i, GameModesHelpScreen.field_F, 121, RenderedFootballer.field_fb, IntrusiveDeque.field_g);
           ld.a(RandomAccessCacheFile.field_i, RenderedFootballer.field_fb, IntTripleCommand.field_C, GameModesHelpScreen.field_F, IntrusiveDeque.field_g, false);
           var14 = var26[0];
           var26[0].field_k = 0;
@@ -378,7 +378,7 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
           var16.field_l = 32;
           var8Lifetime1 = 1;
           while (var8Lifetime1 < hh.field_d) {
-            if (tr.a(var26[var8Lifetime1], false, var26[var10Lifetime1]) == 0) {
+            if (ClientUiOverlay.a(var26[var8Lifetime1], false, var26[var10Lifetime1]) == 0) {
               var8Lifetime1--;
               var5[var10Lifetime1] = 0.0;
             } else {

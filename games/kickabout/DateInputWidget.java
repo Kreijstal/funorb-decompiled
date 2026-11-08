@@ -3,7 +3,7 @@
  */
 abstract class DateInputWidget extends WidgetContainer implements ValidationProvider {
     static UiLayoutNode field_D;
-    private hl field_B;
+    private DateInputValidator field_B;
     static String field_H;
     static int field_G;
     static String field_E;
@@ -28,13 +28,13 @@ abstract class DateInputWidget extends WidgetContainer implements ValidationProv
         TeamSelectionView.a(param0, var7, param6, param3, param2, 73, param5, param1);
     }
 
-    void a(hl param0, int param1) {
+    void a(DateInputValidator param0, int param1) {
         try {
           this.field_B = param0;
           if (param1 != -20274) {
             DateInputWidget.a(-16);
           }
-          this.field_B.field_g = this;
+          this.field_B.dateInput = this;
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "cj.K(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

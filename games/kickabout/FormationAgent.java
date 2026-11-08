@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class FormationAgent extends MatchAgent {
-    static ff field_h;
+    static QuickChatCommandType field_h;
     static int field_j;
     int[] formationChoice;
     boolean[] formationConfirmed;
@@ -108,7 +108,7 @@ final class FormationAgent extends MatchAgent {
         RuntimeException decompiledCaughtException = null;
         try {
           var9 = (CharSequence) ((Object) param0);
-          var3_int = wn.a(param2, param1 - 2, var9);
+          var3_int = AccountRegistrationResponse.countCharacterFrom(param2, param1 - 2, var9);
           if (param1 != 2) {
             field_f = 25;
           }
@@ -228,7 +228,7 @@ final class FormationAgent extends MatchAgent {
     static {
         field_j = 1;
         field_f = 0;
-        field_h = new ff(6, 0, 4, 2);
+        field_h = new QuickChatCommandType(6, 0, 4, 2);
         field_l = -1;
         field_g = "in the Semi-Finals";
     }

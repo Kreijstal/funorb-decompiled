@@ -104,7 +104,7 @@ final class MusicPatch extends IntrusiveNode {
                 }
                 var8 = var11.field_kb >> 16;
                 var9 = var11.field_bb >> 16;
-                if (ia.field_c) {
+                if (FaceNormal.field_c) {
                   var8 = -var8 + 896;
                   var9 = -var9 + 1344;
                 }
@@ -124,7 +124,7 @@ final class MusicPatch extends IntrusiveNode {
               var5Lifetime1 = (var12.field_bb >> 16) + var12.directionY * var7Lifetime1;
               var4Lifetime1 = var12.directionX * var7Lifetime1 + (var12.field_kb >> 16);
             }
-            if (ia.field_c) {
+            if (FaceNormal.field_c) {
               var5Lifetime1 = -var5Lifetime1 + 1344;
               var4Lifetime1 = 896 - var4Lifetime1;
             }

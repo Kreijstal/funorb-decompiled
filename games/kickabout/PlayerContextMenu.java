@@ -20,7 +20,7 @@ final class PlayerContextMenu {
 
     private final boolean openFriendPrompt(int param0, int param1, int param2) {
         if (param2 == 17) {
-          ck.field_b = new TextPromptDialog(this.field_g.field_F, this.field_g.field_T, this.field_g.field_q, this.field_g.field_mb, param1, ChatMessage.field_e, AccountTermsPanel.field_H, hl.field_f, ConsoleEvaluationException.field_e, MatchPhaseView.field_d, ul.field_c, this.field_k, this.field_b);
+          ck.field_b = new TextPromptDialog(this.field_g.field_F, this.field_g.field_T, this.field_g.field_q, this.field_g.field_mb, param1, ChatMessage.field_e, AccountTermsPanel.field_H, DateInputValidator.field_f, ConsoleEvaluationException.field_e, MatchPhaseView.field_d, ul.field_c, this.field_k, this.field_b);
           return true;
         }
         if (param0 == -8985) {
@@ -63,10 +63,10 @@ final class PlayerContextMenu {
 
     final static int a(boolean param0, int param1, int param2) {
         if (param0) {
-          return en.b(PlayerContextMenu.b(param1, param2, (byte) 2), -25147);
+          return PlayerSurnameSortCriterion.b(PlayerContextMenu.b(param1, param2, (byte) 2), -25147);
         }
         field_e = -64;
-        return en.b(PlayerContextMenu.b(param1, param2, (byte) 2), -25147);
+        return PlayerSurnameSortCriterion.b(PlayerContextMenu.b(param1, param2, (byte) 2), -25147);
     }
 
     private final String getDisplayName(int param0) {
@@ -124,14 +124,14 @@ final class PlayerContextMenu {
           return;
         }
         var7 = PasswordValidator.a(this.field_b, false);
-        var4 = nk.a(param1 ^ 31253, this.field_b);
+        var4 = TexturedPanelPainter.a(param1 ^ 31253, this.field_b);
         var5 = this.getDisplayName(-26719);
         if (var4 != null) {
           if (!field_i.field_Cb) {
-            this.field_j.addItem(0, 1, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, rn.field_e, new String[]{var5}));
+            this.field_j.addItem(0, 1, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, VertexNormal.field_e, new String[]{var5}));
           } else {
             if (field_i.field_ac >= 0) {
-              this.field_j.addItem(0, 1, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, rn.field_e, new String[]{var5}));
+              this.field_j.addItem(0, 1, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, VertexNormal.field_e, new String[]{var5}));
             }
           }
         } else {
@@ -242,7 +242,7 @@ final class PlayerContextMenu {
             or.field_d = new CipherPacketBuffer(param12);
             AuctionItem.field_g = param9;
             GrowableIntList.field_c = param2;
-            s.field_E = param1;
+            RotaryDialWidget.field_E = param1;
             ResizableModalPanel.field_J = param4;
             if (param0 <= 119) {
               var16 = (String) null;
@@ -250,7 +250,7 @@ final class PlayerContextMenu {
             }
             ParticipantAgent.field_n = param5;
             il.field_g = param6;
-            rl.field_o = param3;
+            PlayerArchetypeSortCriterion.field_o = param3;
             il.field_f = param10;
             StrongCacheEntry.field_y = param11;
             LoginMethod.field_c = param8;
@@ -351,7 +351,7 @@ final class PlayerContextMenu {
         if (7 != param0) {
           return false;
         }
-        var11 = rn.a(this.field_a, 2, param1, this.field_k);
+        var11 = VertexNormal.a(this.field_a, 2, param1, this.field_k);
         if (var11 != null) {
           TextButton.a((String) null, this.field_k, 0, 2, var11, -128);
         }
@@ -463,7 +463,7 @@ final class PlayerContextMenu {
             discarded$11 = this.getDisplayName(126);
             return;
           }
-          this.field_j.addItem(param0 ^ 1, 3, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, ff.field_c, new String[]{var3}));
+          this.field_j.addItem(param0 ^ 1, 3, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, QuickChatCommandType.field_c, new String[]{var3}));
           if (param0 == 1) {
             return;
           }
@@ -478,7 +478,7 @@ final class PlayerContextMenu {
             discarded$9 = this.getDisplayName(126);
             return;
           }
-          this.field_j.addItem(param0 ^ 1, 3, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, ff.field_c, new String[]{var3}));
+          this.field_j.addItem(param0 ^ 1, 3, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, QuickChatCommandType.field_c, new String[]{var3}));
           if (param0 == 1) {
             return;
           }
@@ -493,7 +493,7 @@ final class PlayerContextMenu {
             discarded$7 = this.getDisplayName(126);
             return;
           }
-          this.field_j.addItem(param0 ^ 1, 3, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, ff.field_c, new String[]{var3}));
+          this.field_j.addItem(param0 ^ 1, 3, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, QuickChatCommandType.field_c, new String[]{var3}));
           if (param0 == 1) {
             return;
           }
@@ -509,7 +509,7 @@ final class PlayerContextMenu {
             discarded$1 = this.getDisplayName(126);
             return;
           }
-          this.field_j.addItem(param0 ^ 1, 3, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, ff.field_c, new String[]{var3}));
+          this.field_j.addItem(param0 ^ 1, 3, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, QuickChatCommandType.field_c, new String[]{var3}));
           if (param0 == 1) {
             return;
           }
@@ -524,7 +524,7 @@ final class PlayerContextMenu {
             discarded$5 = this.getDisplayName(126);
             return;
           }
-          this.field_j.addItem(param0 ^ 1, 3, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, ff.field_c, new String[]{var3}));
+          this.field_j.addItem(param0 ^ 1, 3, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, QuickChatCommandType.field_c, new String[]{var3}));
           if (param0 == 1) {
             return;
           }
@@ -539,7 +539,7 @@ final class PlayerContextMenu {
           discarded$3 = this.getDisplayName(126);
           return;
         }
-        this.field_j.addItem(param0 ^ 1, 3, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, ff.field_c, new String[]{var3}));
+        this.field_j.addItem(param0 ^ 1, 3, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, QuickChatCommandType.field_c, new String[]{var3}));
         if (param0 == 1) {
           return;
         }
@@ -573,7 +573,7 @@ final class PlayerContextMenu {
             }
             if (ts.field_d == 2) {
               var5 = this.getDisplayName(-26719);
-              var6 = tr.a(this.field_k, (byte) 40);
+              var6 = ClientUiOverlay.a(this.field_k, (byte) 40);
               var7 = DiskCacheRequest.a(0, this.field_k) ? 1 : 0;
               if (var6 == null &&
                 var7 == 0) {
@@ -590,7 +590,7 @@ final class PlayerContextMenu {
                 if (!BufferedCacheFile.a(121, this.field_k) &&
                   !PacketBuffer.field_l) {
                   if (!WriteIntegersCommand.field_C) {
-                    this.field_j.addItem(0, 8, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, wp.field_a, new String[]{var5}));
+                    this.field_j.addItem(0, 8, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, LeaderboardParticipant.field_a, new String[]{var5}));
                   }
                   this.field_j.addItem(0, 18, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, ee.field_c, new String[]{var5}));
                   if (param2 != null) {
@@ -601,7 +601,7 @@ final class PlayerContextMenu {
                 this.field_j.addItem(0, 5, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, Trinket.field_i, new String[]{var5}));
               }
               if (var7 != 0) {
-                this.field_j.addItem(0, 7, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, wp.field_i, new String[]{var5}));
+                this.field_j.addItem(0, 7, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, LeaderboardParticipant.field_i, new String[]{var5}));
                 return;
               }
             }
@@ -634,7 +634,7 @@ final class PlayerContextMenu {
           }
           this.field_l = param0.field_c;
           if (param0.field_c == 0) {
-            if (ng.field_a == 0) {
+            if (ServerTextTemplate.field_a == 0) {
               this.field_j.addItem(param1 - 11, 12, sd.field_c);
             }
             this.field_j.addItem(0, 13, ConsoleParseException.field_a);

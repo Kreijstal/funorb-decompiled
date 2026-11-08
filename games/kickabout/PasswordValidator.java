@@ -151,7 +151,7 @@ final class PasswordValidator extends TextFieldValidator {
           ReceivedAuctionItemRow.field_Kb = param1;
           var6_int = (100 * ReceivedAuctionItemRow.field_Kb >> 8) + 50;
           var7 = (116 * FadingChatMessage.field_h >> 8) + 40;
-          PacketBuffer.a(-68, wn.field_j);
+          PacketBuffer.a(-68, AccountRegistrationResponse.field_j);
           SoftwareRasterizer.clearFramebuffer();
           AuctionListing.a(var7, -22914, 0, SoftwareRasterizer.field_f, 0);
           tn.field_e.drawScaled(0, 0, tn.field_e.field_o * var7 / 140, tn.field_e.field_v);
@@ -175,10 +175,10 @@ final class PasswordValidator extends TextFieldValidator {
           if (param0 != 706856675) {
             field_j = (int[]) null;
           }
-          var9 = wn.field_j.field_o;
+          var9 = AccountRegistrationResponse.field_j.field_o;
           DelegatingCanvas.field_e = -(var9 * we.cosine(var8Lifetime1, false)) >> 17;
-          FormationView.field_m = var9 * ei.sine(var8Lifetime1, (byte) -23) >> 17;
-          wn.field_j.rotateNearest(wn.field_j.field_o << 3, wn.field_j.field_v << 3, SoftwareRasterizer.field_g << 3, SoftwareRasterizer.field_f << 3, var8Lifetime1 << 3, 4096);
+          FormationView.field_m = var9 * RotaryDialPainter.sine(var8Lifetime1, (byte) -23) >> 17;
+          AccountRegistrationResponse.field_j.rotateNearest(AccountRegistrationResponse.field_j.field_o << 3, AccountRegistrationResponse.field_j.field_v << 3, SoftwareRasterizer.field_g << 3, SoftwareRasterizer.field_f << 3, var8Lifetime1 << 3, 4096);
           TeamManagementScreen.e(118);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -290,7 +290,7 @@ final class PasswordValidator extends TextFieldValidator {
             stackIn_32_0 = jq.field_c;
             return stackIn_32_0;
           }
-          if (j.a((byte) 71, var6, var5)) {
+          if (FootballerPreview.containsForwardOrReversed((byte) 71, var6, var5)) {
             stackIn_22_0 = we.field_b;
             return stackIn_22_0;
           }

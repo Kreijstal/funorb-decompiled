@@ -9,9 +9,9 @@ final class vd {
     static int field_c;
 
     final static void a(int param0, int param1) {
-        if (param1 > rl.field_r) {
-          rl.field_r = param1;
-          dg.field_c = nv.field_I[ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(115, nv.field_I.length, MidiPcmStream.field_l)];
+        if (param1 > PlayerArchetypeSortCriterion.field_r) {
+          PlayerArchetypeSortCriterion.field_r = param1;
+          NineSlicePanelPainter.field_c = MarkerSliderWidget.field_I[ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(115, MarkerSliderWidget.field_I.length, MidiPcmStream.field_l)];
           DelayedServerPacket.a(1, param0 + 9863, param0);
           return;
         }

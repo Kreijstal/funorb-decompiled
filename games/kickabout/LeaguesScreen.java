@@ -99,7 +99,7 @@ final class LeaguesScreen extends ButtonMenuScreen {
             SquadGridWidget.field_Gb = 0;
             var5 = var7;
             AuctionTableWidget.field_Hb.field_Db.field_J = 0;
-            kj.a((byte) 80);
+            LoginKind.a((byte) 80);
             var6 = 1;
           }
         }
@@ -107,7 +107,7 @@ final class LeaguesScreen extends ButtonMenuScreen {
           DialogOverlay.field_b.getText((byte) -16).length() > 0) {
           ShopPlayerSlot.a(DialogOverlay.field_b.getText((byte) -16), (byte) 74);
           DialogOverlay.field_b.setText("", -23174);
-          kj.a((byte) -105);
+          LoginKind.a((byte) -105);
         }
         boolean decompiledFrameRemainder0 = true;
         if (PlayerContextMenu.field_f) {
@@ -127,7 +127,7 @@ final class LeaguesScreen extends ButtonMenuScreen {
         if (var6 == 0) {
           var7 = ReceivedAuctionItem.a(18, -(AuctionTableWidget.field_Hb.field_Db.field_J + 5), (byte) -72);
           LineupView.field_y.evictExpired(30 + var7, -20 + var7, -108);
-          re.a((byte) 125, -10 + var7, var7 + 20, var5);
+          CheckboxPainter.a((byte) 125, -10 + var7, var7 + 20, var5);
           if (SquadGridWidget.field_Gb != var7 ||
             AnimationSkeleton.field_k != var5) {
             AnimationSkeleton.field_k = var5;
@@ -183,7 +183,7 @@ final class LeaguesScreen extends ButtonMenuScreen {
         AuctionTableWidget.field_Hb.field_y = 16777215;
         AuctionTableWidget.field_Hb.field_p = 1;
         AuctionTableWidget.field_Hb.field_X = (BitmapFont) ((Object) ConsoleTokenCursor.field_d);
-        UiLayoutNode var4 = ag.a(16006912, param0 ^ param0);
+        UiLayoutNode var4 = SoundStreamHandle.a(16006912, param0 ^ param0);
         UiLayoutNode var5 = new UiLayoutNode();
         var5.field_y = 16777215;
         var5.field_B = 2;
@@ -236,7 +236,7 @@ final class LeaguesScreen extends ButtonMenuScreen {
           if (var4.length() > 0) {
             ShopPlayerSlot.a(DialogOverlay.field_b.getText((byte) -16), (byte) 74);
             DialogOverlay.field_b.setText("", -23174);
-            kj.a((byte) -115);
+            LoginKind.a((byte) -115);
           }
         }
         return true;

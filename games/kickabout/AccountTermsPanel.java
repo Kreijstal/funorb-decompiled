@@ -43,7 +43,7 @@ final class AccountTermsPanel extends WidgetContainer implements TextHotspotList
         if (null == ArchiveIndex.field_h) {
           return false;
         }
-        if (ArchiveIndex.field_h.e(0)) {
+        if (ArchiveIndex.field_h.canAutoResize(0)) {
           return true;
         }
         return false;
@@ -174,7 +174,7 @@ final class AccountTermsPanel extends WidgetContainer implements TextHotspotList
           if (param1 != this.field_I) {
             return;
           }
-          oh.a(-124);
+          WorldSpriteDecoration.a(-124);
           this.field_B.closeDialog(-87);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -202,7 +202,7 @@ final class AccountTermsPanel extends WidgetContainer implements TextHotspotList
 
     final static int a(int param0, int param1) {
         int var2 = qr.a(param0, (byte) -1);
-        if (ia.field_c) {
+        if (FaceNormal.field_c) {
           var2 = -var2 + 896;
         }
         if (param1 == 6784) {

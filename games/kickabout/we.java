@@ -82,7 +82,7 @@ final class we {
         UiLayoutNode stackIn_65_0 = null;
         int stackIn_65_1 = 0;
         boolean stackIn_66_2 = false;
-        pa.b((byte) 123);
+        GeneratedPanelPainter.b((byte) 123);
         if (mi.field_d >= 0) {
           ConsoleValue.field_a.field_E = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, StatefulTextPainter.field_r, new String[]{Integer.toString(mi.field_d)});
           stackIn_51_0 = ss.field_c;
@@ -137,9 +137,9 @@ final class we {
           }
         }
         if (LoginCredentials.field_b.field_sb != 0) {
-          if (1 == rn.field_d.length &&
-            rn.field_d[0] != ThreeCommand.field_D) {
-            ThreeCommand.field_D = rn.field_d[0];
+          if (1 == VertexNormal.field_d.length &&
+            VertexNormal.field_d[0] != ThreeCommand.field_D) {
+            ThreeCommand.field_D = VertexNormal.field_d[0];
           }
           oa.a(false, param3, ThreeCommand.field_D, true, 0, LeagueWinnerDialog.field_J);
         }

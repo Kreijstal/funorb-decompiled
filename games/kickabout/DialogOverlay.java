@@ -11,12 +11,12 @@ final class DialogOverlay implements OverlayLayer {
     static String field_c;
     static UiLayoutNode field_e;
 
-    final static ag a(PcmSampleStream param0, int param1) {
+    final static SoundStreamHandle a(PcmSampleStream param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
-        ag var3 = null;
+        SoundStreamHandle var3 = null;
         Object stackIn_2_0 = null;
-        ag stackIn_4_0 = null;
+        SoundStreamHandle stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -24,10 +24,10 @@ final class DialogOverlay implements OverlayLayer {
         try {
           if (null == IndexedSpriteState.field_c) {
             stackIn_2_0 = null;
-            return (ag) (stackIn_2_0);
+            return (SoundStreamHandle) (stackIn_2_0);
           }
           var2_int = 119 / ((72 - param1) / 33);
-          var3 = new ag(param0, param0);
+          var3 = new SoundStreamHandle(param0, param0);
           IndexedSpriteState.field_c.addLast(var3, 3);
           TextFieldNode.field_Bb.addSubStream(param0);
           stackIn_4_0 = var3;
@@ -362,7 +362,7 @@ final class DialogOverlay implements OverlayLayer {
                 }
               } else {
                 if (var12.field_ac >= 0) {
-                  var12.field_Ib.field_E = cr.field_f;
+                  var12.field_Ib.field_E = LinkTextPainter.field_f;
                 } else {
                   if (var12.field_ic && (var12.field_Xb ||
                     var12.field_hc)) {
@@ -421,7 +421,7 @@ final class DialogOverlay implements OverlayLayer {
                   stackIn_85_0 = 1;
                 }
                 var36 = stackIn_85_0;
-                stackIn_87_0 = nv.field_L;
+                stackIn_87_0 = MarkerSliderWidget.field_L;
                 if (var36 == 0) {
                   stackIn_88_1 = 0;
                 } else {
@@ -692,7 +692,7 @@ final class DialogOverlay implements OverlayLayer {
         boolean stackIn_22_0 = false;
         PcmSampleStream var5;
         var4 = Kickabout.field_G;
-        if (dg.field_e ||
+        if (NineSlicePanelPainter.field_e ||
           ds.field_g) {
           var3 = (PopupDialog) (ScrollPane.field_Jb.g(param0 ^ -24018));
           while (var3 != null) {

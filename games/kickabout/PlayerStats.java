@@ -31,7 +31,7 @@ final class PlayerStats implements PopupCard {
           int[] var3 = var7;
           for (var4 = 0; var4 < var7.length; var4++) {
             var5 = var7[var4];
-            if (pa.field_g[var5].isRangerClone(-32076)) {
+            if (GeneratedPanelPainter.field_g[var5].isRangerClone(-32076)) {
               return true;
             }
           }
@@ -56,7 +56,7 @@ final class PlayerStats implements PopupCard {
         int[] var3 = var7;
         for (var4 = 0; var4 < var7.length; var4++) {
           var5 = var7[var4];
-          if (pa.field_g[var5].isSlalom(false)) {
+          if (GeneratedPanelPainter.field_g[var5].isSlalom(false)) {
             return true;
           }
         }
@@ -233,7 +233,7 @@ final class PlayerStats implements PopupCard {
         int[] var4 = this.trinketIds;
         for (var5 = 0; var5 < var4.length; var5++) {
           var6 = var4[var5];
-          var3 = var3 + pa.field_g[var6].tackleBonus(126);
+          var3 = var3 + GeneratedPanelPainter.field_g[var6].tackleBonus(126);
         }
         var6Lifetime1 = 19 % ((10 - param0) / 50);
         return var3;
@@ -253,7 +253,7 @@ final class PlayerStats implements PopupCard {
         int[] var3 = var7;
         for (var4 = 0; var7.length > var4; var4++) {
           var5 = var7[var4];
-          if (pa.field_g[var5].isShinPads(-21636)) {
+          if (GeneratedPanelPainter.field_g[var5].isShinPads(-21636)) {
             return true;
           }
         }
@@ -282,7 +282,7 @@ final class PlayerStats implements PopupCard {
         }
         for (var5 = 0; var11.length > var5; var5++) {
           var6 = var11[var5];
-          var7 = pa.field_g[var6];
+          var7 = GeneratedPanelPainter.field_g[var6];
           if (param1 == 0 &&
             var7.isWhereAmI(true)) {
             return true;
@@ -448,7 +448,7 @@ final class PlayerStats implements PopupCard {
         }
         while (var5 < var4.length) {
           var6 = var4[var5];
-          var3 = var3 + pa.field_g[var6].speedBonus(param0 - 5102);
+          var3 = var3 + GeneratedPanelPainter.field_g[var6].speedBonus(param0 - 5102);
           var5++;
         }
         return var3;
@@ -470,7 +470,7 @@ final class PlayerStats implements PopupCard {
           var3 = var7;
           for (var4 = 0; var7.length > var4; var4++) {
             var5 = var7[var4];
-            if (pa.field_g[var5].isTankClone(59)) {
+            if (GeneratedPanelPainter.field_g[var5].isTankClone(59)) {
               return true;
             }
           }
@@ -496,8 +496,8 @@ final class PlayerStats implements PopupCard {
         var4 = this.trinketIds;
         for (var5 = 0; var4.length > var5; var5++) {
           var6 = var4[var5];
-          if (pa.field_g[var6].a((byte) -124) > var3) {
-            var3 = pa.field_g[var6].a((byte) -122);
+          if (GeneratedPanelPainter.field_g[var6].a((byte) -124) > var3) {
+            var3 = GeneratedPanelPainter.field_g[var6].a((byte) -122);
           }
         }
         return var3;
@@ -520,10 +520,10 @@ final class PlayerStats implements PopupCard {
         var3 = var7;
         for (var4 = 0; var7.length > var4; var4++) {
           var5 = var7[var4];
-          if (pa.field_g[var5].hasTackleProtection(115)) {
+          if (GeneratedPanelPainter.field_g[var5].hasTackleProtection(115)) {
             return true;
           }
-          if (pa.field_g[var5].isShinPads(-21636)) {
+          if (GeneratedPanelPainter.field_g[var5].isShinPads(-21636)) {
             return true;
           }
         }
@@ -667,7 +667,7 @@ final class PlayerStats implements PopupCard {
         }
         while (var3.length > var4) {
           var5 = var3[var4];
-          if (pa.field_g[var5].isActiveHorrorCostume(param0 - 9707)) {
+          if (GeneratedPanelPainter.field_g[var5].isActiveHorrorCostume(param0 - 9707)) {
             return true;
           }
           var4++;
@@ -694,7 +694,7 @@ final class PlayerStats implements PopupCard {
           int[] var3 = var7;
           for (var4 = 0; var7.length > var4; var4++) {
             var5 = var7[var4];
-            if (pa.field_g[var5].isHotshotClone(param1 + 161)) {
+            if (GeneratedPanelPainter.field_g[var5].isHotshotClone(param1 + 161)) {
               return true;
             }
           }
@@ -722,10 +722,10 @@ final class PlayerStats implements PopupCard {
         var3 = var7;
         for (var4 = 0; var7.length > var4; var4++) {
           var5 = var7[var4];
-          if (pa.field_g[var5].isSafeTacklerOrShinPads(param0)) {
+          if (GeneratedPanelPainter.field_g[var5].isSafeTacklerOrShinPads(param0)) {
             return false;
           }
-          if (pa.field_g[var5].isShinPads(-21636)) {
+          if (GeneratedPanelPainter.field_g[var5].isShinPads(-21636)) {
             return false;
           }
         }
@@ -736,18 +736,18 @@ final class PlayerStats implements PopupCard {
         int var3 = 0;
         int var4 = Kickabout.field_G;
         int var2 = param0;
-        var2 = ia.a(56082116, var2 ^ this.archetype);
-        var2 = ia.a(56082116, this.power ^ var2);
-        var2 = ia.a(56082116, var2 ^ this.tackle);
-        var2 = ia.a(56082116, this.speed ^ var2);
-        var2 = ia.a(56082116, var2 ^ this.experience);
-        var2 = ia.a(56082116, var2 ^ this.surnameIndex);
-        var2 = ia.a(56082116, var2 ^ this.initialIndex);
+        var2 = FaceNormal.rotateLeftFourBits(56082116, var2 ^ this.archetype);
+        var2 = FaceNormal.rotateLeftFourBits(56082116, this.power ^ var2);
+        var2 = FaceNormal.rotateLeftFourBits(56082116, var2 ^ this.tackle);
+        var2 = FaceNormal.rotateLeftFourBits(56082116, this.speed ^ var2);
+        var2 = FaceNormal.rotateLeftFourBits(56082116, var2 ^ this.experience);
+        var2 = FaceNormal.rotateLeftFourBits(56082116, var2 ^ this.surnameIndex);
+        var2 = FaceNormal.rotateLeftFourBits(56082116, var2 ^ this.initialIndex);
         for (var3 = 0; this.trinketIds.length > var3; var3++) {
-          var2 = ia.a(param0 + 56082116, var2 ^ this.trinketIds[var3]);
+          var2 = FaceNormal.rotateLeftFourBits(param0 + 56082116, var2 ^ this.trinketIds[var3]);
         }
-        var2 = ia.a(param0 ^ 56082116, this.appearance ^ var2);
-        var2 = ia.a(56082116, (!this.field_c ? 0 : 1) ^ var2);
+        var2 = FaceNormal.rotateLeftFourBits(param0 ^ 56082116, this.appearance ^ var2);
+        var2 = FaceNormal.rotateLeftFourBits(56082116, (!this.field_c ? 0 : 1) ^ var2);
         return var2;
     }
 
@@ -781,7 +781,7 @@ final class PlayerStats implements PopupCard {
         int[] var4 = this.trinketIds;
         for (var5 = 0; var4.length > var5; var5++) {
           var6 = var4[var5];
-          var3 = var3 + pa.field_g[var6].powerBonus((byte) 62);
+          var3 = var3 + GeneratedPanelPainter.field_g[var6].powerBonus((byte) 62);
         }
         return var3;
     }
@@ -971,7 +971,7 @@ final class PlayerStats implements PopupCard {
         stackIn_35_2 = this;
         if (this.c((byte) stackIn_31_6, stackIn_32_7)) {
           stackIn_35_2Lifetime1 = this;
-          if (wn.a((byte) -121)) {
+          if (AccountRegistrationResponse.a((byte) -121)) {
             stackIn_36_5 = true;
             decompiledFrameRemainder0 = false;
           }
@@ -979,7 +979,7 @@ final class PlayerStats implements PopupCard {
         if (decompiledFrameRemainder0) {
           stackIn_36_5 = false;
         }
-        var16 = kj.a(stackIn_31_0, stackIn_31_1, this, stackIn_31_3, stackIn_31_4, stackIn_36_5);
+        var16 = LoginKind.getPlayerPortrait(stackIn_31_0, stackIn_31_1, this, stackIn_31_3, stackIn_31_4, stackIn_36_5);
         if (var16 == null) {
           ReceivedAuctionItemRow.a(param1 + 24, -103, -19 + (param6 + 50));
         } else {
@@ -999,7 +999,7 @@ final class PlayerStats implements PopupCard {
               var23 = 0;
               var19 = var23;
               while (this.trinketIds.length > var23) {
-                var20 = pa.field_g[this.trinketIds[var23]];
+                var20 = GeneratedPanelPainter.field_g[this.trinketIds[var23]];
                 var21 = var20.d(false);
                 ((Sprite) ((Object) var21)).drawHalfSize(var17_int - (((Sprite) ((Object) var21)).field_o >> 2), -(((Sprite) ((Object) var21)).field_v >> 2) + var18);
                 ConsoleTokenCursor.field_d.a(var20.getName((byte) -1), 15 + var17_int, var18 + 4, 16777215, 65793);

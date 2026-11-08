@@ -59,7 +59,7 @@ abstract class IndexedSpriteState {
           return;
         }
         try {
-          wp.field_h = param1;
+          LeaderboardParticipant.field_h = param1;
           AuctionItem.field_e = 1;
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "qd.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -84,7 +84,7 @@ abstract class IndexedSpriteState {
           return;
         }
         try {
-          wp.field_h = param1;
+          LeaderboardParticipant.field_h = param1;
           AuctionItem.field_e = 1;
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "qd.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

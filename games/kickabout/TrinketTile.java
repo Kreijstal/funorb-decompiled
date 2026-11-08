@@ -34,7 +34,7 @@ final class TrinketTile extends UiLayoutNode {
         RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
         RuntimeException var3 = null;
-        tc var4 = null;
+        QuickChatCategory var4 = null;
         int var5 = 0;
         int var6 = 0;
         int var9 = 0;
@@ -53,7 +53,7 @@ final class TrinketTile extends UiLayoutNode {
           }
           param1.field_c = 0;
           param1.field_b = false;
-          ReceivedAuctionItem.field_x = new bt(var3_int, param1, param1);
+          ReceivedAuctionItem.field_x = new QuickChatCategoryCache(var3_int, param1, param1);
           TournamentLobbyScreen.field_j = new QuickChatPhraseCache(var3_int, param1, param1, new ka());
           if (param2 != -32) {
             TrinketTile.releaseStatics((byte) -19);
@@ -116,7 +116,7 @@ final class TrinketTile extends UiLayoutNode {
 
     TrinketTile(int param0) {
         this.field_yb = param0;
-        Trinket var3 = pa.field_g[this.field_yb];
+        Trinket var3 = GeneratedPanelPainter.field_g[this.field_yb];
         this.field_Cb = new TrinketSlot(new Trinket(var3.field_k, var3.field_h, var3.field_e), false);
         this.field_q = 5 + (this.field_Cb.field_q + 143);
         this.field_mb = 5 + this.field_Cb.field_mb + 5;

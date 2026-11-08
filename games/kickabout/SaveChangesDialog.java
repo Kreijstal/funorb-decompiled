@@ -27,7 +27,7 @@ final class SaveChangesDialog extends MessageDialog {
         if (11 == FixedQuaternion.field_e &&
           CommonGame.field_j) {
           if (PlayerShopScreen.field_K == 2 &&
-            !TournamentChampionDialog.a(false, oc.field_f, SectorCacheStore.field_c)) {
+            !TournamentChampionDialog.a(false, ArchivePreloadEntry.field_f, SectorCacheStore.field_c)) {
             return false;
           }
           if (2 != PlayerShopScreen.field_K &&
@@ -38,7 +38,7 @@ final class SaveChangesDialog extends MessageDialog {
             return true;
           }
           String var5 = (String) null;
-          PasswordLoginCredentials.a(vb.field_h, 101, PlayerShopScreen.field_K, param2, oc.field_f, (String) null);
+          PasswordLoginCredentials.a(vb.field_h, 101, PlayerShopScreen.field_K, param2, ArchivePreloadEntry.field_f, (String) null);
           return true;
         }
         return false;
@@ -52,7 +52,7 @@ final class SaveChangesDialog extends MessageDialog {
         int var4 = Kickabout.field_G;
         super.handleResult(127, param1);
         if (0 == param1) {
-          nk.c((byte) -56);
+          TexturedPanelPainter.c((byte) -56);
           DelayedServerPacket.a(13, true, -2);
         } else {
           if (param1 == 1) {

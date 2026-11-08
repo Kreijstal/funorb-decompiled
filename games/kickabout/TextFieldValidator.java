@@ -47,14 +47,14 @@ abstract class TextFieldValidator extends DebouncedValidationProvider implements
           hr.field_f = SortCriterion.field_d;
         }
         if (RegistrationRequestDialog.field_ob == 1) {
-          oh.field_f = var8.readUnsignedShort((byte) 81);
+          WorldSpriteDecoration.field_f = var8.readUnsignedShort((byte) 81);
           vp.field_e = var8.readString(42);
         } else {
           if (RegistrationRequestDialog.field_ob == 4) {
-            oh.field_f = var8.readUnsignedShort((byte) 81);
+            WorldSpriteDecoration.field_f = var8.readUnsignedShort((byte) 81);
             vp.field_e = var8.readString(42);
           } else {
-            oh.field_f = 0;
+            WorldSpriteDecoration.field_f = 0;
             vp.field_e = null;
           }
         }
@@ -234,14 +234,14 @@ abstract class TextFieldValidator extends DebouncedValidationProvider implements
           hr.field_f = SortCriterion.field_d;
         }
         if (RegistrationRequestDialog.field_ob == 1) {
-          oh.field_f = var8.readUnsignedShort((byte) 81);
+          WorldSpriteDecoration.field_f = var8.readUnsignedShort((byte) 81);
           vp.field_e = var8.readString(42);
         } else {
           if (RegistrationRequestDialog.field_ob == 4) {
-            oh.field_f = var8.readUnsignedShort((byte) 81);
+            WorldSpriteDecoration.field_f = var8.readUnsignedShort((byte) 81);
             vp.field_e = var8.readString(42);
           } else {
-            oh.field_f = 0;
+            WorldSpriteDecoration.field_f = 0;
             vp.field_e = null;
           }
         }

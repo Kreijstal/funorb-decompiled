@@ -7,7 +7,7 @@ final class pe {
     static String field_a;
 
     final static int a(byte param0) {
-        if (hl.field_d < 2) {
+        if (DateInputValidator.field_d < 2) {
           return 0;
         }
         if (ArchiveRequest.field_r == 0) {
@@ -85,7 +85,7 @@ final class pe {
             pe.b(104);
           }
           ValidatedTextWidget.field_Z.n(2);
-          while (nk.$cfr$intArgs$b$c4997cb15529(-59)) {
+          while (TexturedPanelPainter.$cfr$intArgs$b$c4997cb15529(-59)) {
             ValidatedTextWidget.field_Z.dispatchKeyInput(il.field_c, (byte) -91, FixedQuaternion.field_e);
           }
           return;
@@ -176,7 +176,7 @@ final class pe {
         }
     }
 
-    final static void a(byte param0, ef param1) {
+    final static void a(byte param0, AnimationFrameset param1) {
         if (param0 != 82) {
           return;
         }

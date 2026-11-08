@@ -111,7 +111,7 @@ final class AuctionBidDialog extends MessageDialog {
         if (PlayArea.a(100)) {
           return;
         }
-        if (dg.field_e) {
+        if (NineSlicePanelPainter.field_e) {
           return;
         }
         if (ds.field_g) {
@@ -123,7 +123,7 @@ final class AuctionBidDialog extends MessageDialog {
           or.field_d.writeInt(-74, this.field_N);
           ParticipantStatus.$cfr$intArgs$a$60f25194e713(true, 128, 118, 49);
           this.field_M = -1L;
-          ((AuctionsScreen) (rn.a(-108, 16))).field_H = -1L;
+          ((AuctionsScreen) (VertexNormal.getMenuScreen(-108, 16))).field_H = -1L;
           if (param0 >= 60) {
             return;
           }

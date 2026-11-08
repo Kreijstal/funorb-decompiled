@@ -9,7 +9,7 @@ final class h {
     static UiLayoutNode field_e;
     static String field_f;
 
-    final static CascadingMenu a(int param0, tc param1, UiLayoutNode param2, UiLayoutNode param3, UiLayoutNode param4) {
+    final static CascadingMenu a(int param0, QuickChatCategory param1, UiLayoutNode param2, UiLayoutNode param3, UiLayoutNode param4) {
         int var14 = 0;
         int stackIn_7_0 = 0;
         int stackIn_10_0 = 0;
@@ -34,7 +34,7 @@ final class h {
         int[] var10 = null;
         CascadingMenu[] var11 = null;
         int var12 = 0;
-        tc var13_ref_tc = null;
+        QuickChatCategory var13_ref_tc = null;
         int var13 = 0;
         int var15 = 0;
         QuickChatPhraseDefinition var16 = null;
@@ -49,14 +49,14 @@ final class h {
           if (param1 == null) {
             return null;
           }
-          if (param1.field_o != null) {
-            stackIn_7_0 = param1.field_o.length;
+          if (param1.subcategoryIds != null) {
+            stackIn_7_0 = param1.subcategoryIds.length;
           } else {
             stackIn_7_0 = 0;
           }
           var5_int = stackIn_7_0;
-          if (param1.field_n != null) {
-            stackIn_10_0 = param1.field_n.length;
+          if (param1.phraseIds != null) {
+            stackIn_10_0 = param1.phraseIds.length;
           } else {
             stackIn_10_0 = 0;
           }
@@ -74,32 +74,32 @@ final class h {
             stackIn_12_0 = (CascadingMenu) null;
             return stackIn_12_0;
           }
-          if (param1.field_o != null) {
-            for (var12 = 0; var12 < param1.field_o.length; var12++) {
-              var13_ref_tc = ReceivedAuctionItem.field_x.a(200, param1.field_o[var12]);
-              var8[var12] = var13_ref_tc.field_r;
-              var9[var12] = param1.field_q[var12];
+          if (param1.subcategoryIds != null) {
+            for (var12 = 0; var12 < param1.subcategoryIds.length; var12++) {
+              var13_ref_tc = ReceivedAuctionItem.field_x.getCategory(200, param1.subcategoryIds[var12]);
+              var8[var12] = var13_ref_tc.description;
+              var9[var12] = param1.subcategoryShortcuts[var12];
               var11[var12] = h.a(0, var13_ref_tc, param2, param3, param4);
             }
           }
-          if (null != param1.field_n) {
+          if (null != param1.phraseIds) {
             var12Lifetime1 = var5_int;
             var13 = 49;
-            for (var14 = 0; param1.field_n.length > var14; var14++) {
-              var15 = param1.field_n[var14];
+            for (var14 = 0; param1.phraseIds.length > var14; var14++) {
+              var15 = param1.phraseIds[var14];
               if (var15 == -1) {
                 var8[var14 + var12Lifetime1] = vp.field_b;
-                var9[var12Lifetime1 + var14] = param1.field_p[var14];
-                var10[var12Lifetime1 + var14] = param1.field_n[var14];
+                var9[var12Lifetime1 + var14] = param1.phraseShortcuts[var14];
+                var10[var12Lifetime1 + var14] = param1.phraseIds[var14];
               } else {
                 var16 = TournamentLobbyScreen.field_j.getPhrase(param0 ^ 6, var15);
                 var8[var14 + var12Lifetime1] = var16.getDisplayText((byte) -105);
-                var9[var14 + var12Lifetime1] = param1.field_p[var14];
+                var9[var14 + var12Lifetime1] = param1.phraseShortcuts[var14];
                 if (var9[var12Lifetime1 + var14] <= 0) {
                   var13 = (char)(var13 + 1);
                   var9[var14 + var12Lifetime1] = (char)var13;
                 }
-                var10[var12Lifetime1 + var14] = param1.field_n[var14];
+                var10[var12Lifetime1 + var14] = param1.phraseIds[var14];
               }
             }
           }

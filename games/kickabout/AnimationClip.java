@@ -121,7 +121,7 @@ final class AnimationClip {
         }
         ArchiveIndex.field_t = stackIn_8_0 | stackIn_10_1;
         FadingSoundPlayer.field_q = true;
-        rl.field_r = -1;
+        PlayerArchetypeSortCriterion.field_r = -1;
         NanoTickClock.field_n = param2;
         RankingsScreen.field_C = param0;
         ih.field_c = param3;

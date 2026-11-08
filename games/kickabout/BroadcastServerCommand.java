@@ -47,7 +47,7 @@ final class BroadcastServerCommand extends ConsoleCommand {
         CharSequence var6 = null;
         try {
           var6 = (CharSequence) ((Object) param2);
-          if (!ef.a(var6, param1 - 10007)) {
+          if (!AnimationFrameset.isAllowedDisplayName(var6, param1 - 10007)) {
             stackIn_2_0 = SquadSlotWidget.field_Ib;
             return stackIn_2_0;
           }

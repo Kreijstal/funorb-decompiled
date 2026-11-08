@@ -124,7 +124,7 @@ class AuctionItem extends IntrusiveNode {
           var5Lifetime1 = ImageProducerRasterBuffer.field_i[11] >> 8;
           var6Lifetime1 = PlayerStats.field_p << 4;
           var7Lifetime1 = 0;
-          var8Lifetime1 = ei.sine(var6Lifetime1, (byte) -23) >> 8;
+          var8Lifetime1 = RotaryDialPainter.sine(var6Lifetime1, (byte) -23) >> 8;
           var9Lifetime1 = we.cosine(var6Lifetime1, false) >> 8;
           var12Lifetime1 = -33 / ((-50 - param0) / 49);
           if (BytePlusOneCommand.field_A != -1 &&
@@ -158,7 +158,7 @@ class AuctionItem extends IntrusiveNode {
               hh.field_g[var19] = hh.field_g[var19] + sm.field_l[var16][var19];
             }
             Bzip2State.a(var18, false, hh.field_g, ImageProducerRasterBuffer.field_i, (byte) -96, false, true);
-            ei.a(var8Lifetime1, var7Lifetime1, var13Lifetime1, var9Lifetime1, var14, (byte) -125, var18, var15);
+            RotaryDialPainter.a(var8Lifetime1, var7Lifetime1, var13Lifetime1, var9Lifetime1, var14, (byte) -125, var18, var15);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

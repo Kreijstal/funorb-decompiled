@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class um {
-    static ff field_c;
+    static QuickChatCommandType field_c;
     static String field_f;
     static MatchScreen field_e;
     static boolean field_b;
@@ -51,7 +51,7 @@ final class um {
     }
 
     static {
-        field_c = new ff(2, 4, 4, 0);
+        field_c = new QuickChatCommandType(2, 4, 4, 0);
         field_g = "Yes";
         field_f = "Buyout is off";
     }
